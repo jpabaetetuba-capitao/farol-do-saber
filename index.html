@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚓ Farol do Saber</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <img
+        src="imagens/logo-farol.png"
+        alt="Farol do Saber"
+        class="logo">
+
+    <h1>⚓ Farol do Saber</h1>
+
+    <p>
+        Iluminando o caminho para a aprovação.
+    </p>
+
+</header>
+
+<nav>
+
+    <button onclick="mostrarTela('inicio')">
+        🏠 Início
+    </button>
+
+    <button onclick="mostrarTela('questoes')">
+        📚 Questões
+    </button>
+
+    <button onclick="mostrarTela('simulados')">
+        📝 Simulados
+    </button>
+
+    <button onclick="mostrarTela('estatisticas')">
+        📊 Estatísticas
+    </button>
+
+    <button onclick="mostrarTela('erros')">
+        ❌ Caderno de Erros
+    </button>
+
+</nav>
+
+<!-- TELA INICIAL -->
+
+<section id="inicio" class="tela ativa">
+
+    <div class="card">
+
+        <h2>Bem-vindo ao Farol do Saber</h2>
+
+        <p>
+            Sua plataforma offline para preparação em concursos.
+        </p>
+
+        <br>
+
+        <ul>
+
+            <li>📚 Banco de Questões</li>
+
+            <li>📝 Simulados</li>
+
+            <li>📊 Estatísticas de Desempenho</li>
+
+            <li>❌ Caderno de Erros</li>
+
+            <li>💾 Funcionamento Offline</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- QUESTÕES -->
+
+<section id="questoes" class="tela">
+
+    <div class="card">
+
+        <h2>Banco de Questões</h2>
+
+        <select id="disciplinaSelect">
+
+            <option value="">
+                Selecione uma disciplina
+            </option>
+
+            <option value="curriculo">
+                📚 Currículo e Planejamento
+            </option>
+
+            <option value="inclusiva">
+                ♿ Educação Inclusiva
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <button onclick="carregarDisciplina()">
+            🚀 Iniciar Disciplina
+        </button>
+
+    </div>
+
+    <div id="areaQuestao"></div>
+
+</section>
+
+<!-- SIMULADOS -->
+
+<section id="simulados" class="tela">
+
+    <div class="card">
+
+        <h2>Simulados</h2>
+
+        <p>
+            Em breve estarão disponíveis:
+        </p>
+
+        <br>
+
+        <button onclick="iniciarSimulado(10)">
+    Simulado 10 Questões
+</button>
+
+<button onclick="iniciarSimulado(20)">
+    Simulado 20 Questões
+</button>
+
+<button onclick="iniciarSimulado(50)">
+    Simulado 50 Questões
+</button>
+
+    </div>
+
+</section>
+
+<!-- ESTATÍSTICAS -->
+
+<section id="estatisticas" class="tela">
+
+    <div class="card">
+
+        <h2>📊 Estatísticas</h2>
+
+        <div id="estatisticasConteudo">
+
+            Nenhum dado disponível.
+
+        </div>
+<br>
+
+<button onclick="resetarProgresso()">
+    🗑 Resetar Progresso
+</button>
+
+    </div>
+
+</section>
+
+<!-- ERROS -->
+
+<section id="erros" class="tela">
+
+    <div class="card">
+
+        <h2>❌ Caderno de Erros</h2>
+
+        <div id="listaErros">
+
+            Nenhum erro registrado.
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BANCOS DE DADOS -->
+
+<script src="dados/curriculo.js"></script>
+
+<script src="dados/inclusiva.js"></script>
+
+<!-- SISTEMA -->
+
+<script src="app.js"></script>
+
+<footer>
+
+    <div class="card">
+
+        <center>
+
+            
+            <p>
+                Idealizado e desenvolvido por:
+            </p>
+
+            <strong>
+                Capitão João Paulo Silva
+            </strong>
+
+            <br><br>
+
+            <small>
+                Versão 0.2
+            </small>
+
+        </center>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>

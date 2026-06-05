@@ -1,0 +1,166 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    color:#333;
+    padding:15px;
+}
+
+header{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+header h1{
+    color:#1e88e5;
+    margin-bottom:8px;
+}
+
+header p{
+    color:#666;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+nav button{
+    border:none;
+    background:#1e88e5;
+    color:white;
+    padding:12px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+nav button:hover{
+    background:#1565c0;
+}
+
+.tela{
+    display:none;
+}
+
+.ativa{
+    display:block;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#1e88e5;
+}
+
+select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    border:none;
+    background:#43a047;
+    color:white;
+    padding:12px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:5px;
+}
+
+button:hover{
+    background:#2e7d32;
+}
+
+.questao{
+    margin-top:20px;
+}
+
+.alternativa{
+    display:block;
+    margin:10px 0;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.feedback-acerto{
+    background:#d4edda;
+    color:#155724;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
+}
+
+.feedback-erro{
+    background:#f8d7da;
+    color:#721c24;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
+}
+
+#estatisticasConteudo,
+#listaErros{
+    line-height:1.8;
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav button{
+        width:100%;
+    }
+
+    button{
+        width:100%;
+    }
+
+}
+
+footer{
+
+    margin-top:40px;
+
+}
+
+footer .card{
+
+    text-align:center;
+
+}
+
+.pergunta {
+    margin-top: 25px;
+}
+
+.logo {
+
+    width: 180px;
+
+    display: block;
+
+    margin: 0 auto 15px auto;
+
+}
