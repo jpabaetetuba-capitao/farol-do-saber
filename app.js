@@ -10,6 +10,20 @@ function mostrarTela(id) {
     });
 
     document.getElementById(id).classList.add("ativa");
+
+    localStorage.setItem(
+        "farol_telaAtual",
+        id
+    );
+
+    if(id === "questoes"){
+
+        document.getElementById(
+            "areaQuestao"
+        ).innerHTML = "";
+
+    }
+
 }
 
 // ==========================
@@ -17,8 +31,67 @@ function mostrarTela(id) {
 // ==========================
 
 const bancoQuestoes = {
+
+    bncc,
+
+    ldb,
+
+    eca,
+
+    pne,
+
+    fundeb,
+
+    lbi,
+
+    tea,
+
+    inclusiva,
+
+    etnicoRacial,
+
+    educacaoCampo,
+
     curriculo,
-    inclusiva
+
+    interpretacao,
+
+    generos,
+
+    funcoes,
+
+    coesao,
+
+    semantica,
+
+    figuras,
+
+    variacao,
+
+    classesPalavras,
+
+    formacaoPalavras,
+
+    sintaxe,
+
+    periodoComposto,
+
+    concordancia,
+
+    regencia,
+
+    crase,
+
+    vozesVerbais,
+
+    pontuacao,
+
+    ortografia,
+
+    acentuacao,
+
+    redacaoOficial
+
 };
 
 // ==========================
@@ -26,7 +99,10 @@ const bancoQuestoes = {
 // ==========================
 
 let disciplinaAtual = "";
+let assuntoAtual = "";
 let questaoAtual = 0;
+
+let progressoAssuntos = {};
 
 let acertos = 0;
 let erros = 0;
@@ -68,7 +144,13 @@ function salvarDados() {
         JSON.stringify(cadernoErros)
     );
 
+    localStorage.setItem(
+        "farol_progresso",
+        JSON.stringify(progressoAssuntos)
+    );
+
 }
+
 
 function carregarDados() {
 
@@ -87,25 +169,60 @@ function carregarDados() {
             localStorage.getItem("farol_caderno")
         ) || [];
 
+    progressoAssuntos =
+        JSON.parse(
+            localStorage.getItem("farol_progresso")
+        ) || {};
+
 }
+
 
 // ==========================
 // CARREGAR DISCIPLINA
 // ==========================
 
-function carregarDisciplina() {
+function abrirDisciplina(nome) {
 
-    disciplinaAtual =
-        document.getElementById("disciplinaSelect").value;
+if(nome === "ciencias"){
 
-    if (!disciplinaAtual) {
-        alert("Selecione uma disciplina.");
+    alert(
+        "🔒 Disciplina Premium.\n\nDisponível em breve."
+    );
+
+    return;
+
+}
+
+    disciplinaAtual = nome;
+
+    if (nome === "didatica") {
+
+        mostrarTela("didatica");
+
         return;
+
     }
 
-    questaoAtual = 0;
+    if (nome === "didatica") {
 
-    mostrarQuestao();
+        mostrarTela("didatica");
+
+        return;
+
+ }
+
+    if (nome === "portugues") {
+
+        mostrarTela("portugues");
+
+        return;
+
+    }
+
+    alert(
+        "Disciplina em desenvolvimento."
+    );
+
 }
 
 // ==========================
@@ -119,6 +236,7 @@ function mostrarQuestao() {
     const questoes = bancoQuestoes[disciplinaAtual];
 
     const q = questoes[questaoAtual];
+console.log("Questão carregada:", q);
 
 const percentual =
     Math.round(
@@ -129,6 +247,12 @@ const percentual =
     area.innerHTML = `
     
     <div class="card">
+
+<button onclick="voltarParaMapa()">
+    ⬅ Voltar
+</button>
+
+<br><br>
 
         <h3>
     Questão ${questaoAtual + 1} de ${questoes.length}
@@ -152,6 +276,28 @@ const percentual =
 </strong>
 
         <br>
+
+${q.texto ? `
+
+<div class="card texto-base">
+
+    <h3>
+        📄 Texto de Apoio
+    </h3>
+
+    <br>
+
+    <p>
+
+        ${q.texto}
+
+    </p>
+
+</div>
+
+<br>
+
+` : ""}
 
         <p class="pergunta">
     ${q.pergunta}
@@ -253,10 +399,73 @@ document
 
         erros++;
 
-        const nomeDisciplina =
-            disciplinaAtual === "curriculo"
-                ? "Currículo e Planejamento"
-                : "Educação Inclusiva";
+       const nomesBonitos = {
+
+    bncc: "📘 BNCC",
+
+    ldb: "📘 LDB",
+
+    eca: "📘 ECA",
+
+    pne: "📘 PNE",
+
+    fundeb: "📘 FUNDEB",
+
+    lbi: "📘 LBI",
+
+    tea: "📘 TEA",
+
+    inclusiva: "📘 Educação Inclusiva",
+
+    etnicoRacial: "📘 Relações Étnico-Raciais",
+
+    educacaoCampo: "📘 Educação do Campo",
+
+    curriculo: "📘 Currículo e Planejamento",
+
+    interpretacao: "📖 Interpretação de Textos",
+
+    generos: "📄 Gêneros Textuais",
+
+    funcoes: "📡 Funções da Linguagem",
+
+    coesao: "🔗 Coesão e Coerência",
+
+    semantica: "🧠 Semântica",
+
+    figuras: "🎭 Figuras de Linguagem",
+
+    variacao: "🌎 Variação Linguística",
+
+    classesPalavras: "📚 Classes de Palavras",
+
+    formacaoPalavras: "🏗 Formação de Palavras",
+
+    sintaxe: "📝 Sintaxe",
+
+    periodoComposto: "🔄 Período Simples e Composto",
+
+    concordancia: "📌 Concordância",
+
+    regencia: "🎯 Regência",
+
+    crase: "✍️ Crase",
+
+    vozesVerbais: "🗣️ Vozes Verbais",
+
+    pontuacao: "📍 Pontuação",
+
+    ortografia: "📖 Ortografia",
+
+    acentuacao: "🔠 Acentuação",
+
+    redacaoOficial: "🏛️ Redação Oficial"
+
+};
+
+const nomeDisciplina =
+    nomesBonitos[disciplinaAtual]
+    || disciplinaAtual;
 
         const indiceExistente =
             cadernoErros.findIndex(
@@ -315,6 +524,8 @@ document
     }
 
 atualizarEstatisticas();
+atualizarDashboard();
+atualizarPainelEstudos();
 atualizarCadernoErros();
 salvarDados();
 
@@ -328,24 +539,158 @@ function proximaQuestao() {
 
     questaoAtual++;
 
-    const total = bancoQuestoes[disciplinaAtual].length;
+    progressoAssuntos[disciplinaAtual] =
+        questaoAtual;
 
+atualizarPainelEstudos();
+
+salvarDados();
+
+    console.log(
+        "SALVOU:",
+        disciplinaAtual,
+        questaoAtual
+    );
+
+    console.log(
+        progressoAssuntos
+    );
+
+    const total =
+        bancoQuestoes[disciplinaAtual].length;
+
+  
     if (questaoAtual >= total) {
 
-        document.getElementById("areaQuestao").innerHTML = `
-        <div class="card">
+    const percentual =
+        Math.round(
+            (acertos / (acertos + erros)) * 100
+        );
 
-            <h2>🎉 Disciplina Concluída!</h2>
+    let classificacao = "";
+    let mensagem = "";
 
-            <br>
+    if (acertos >= 22) {
 
-            <p>Você concluiu todas as questões desta disciplina.</p>
+        classificacao = "🏆 EXCELENTE";
 
-        </div>
-        `;
+        mensagem =
+            "Parabéns! Você demonstrou excelente domínio do conteúdo. Continue revisando para manter esse alto desempenho.";
 
-        return;
     }
+
+    else if (acertos >= 18) {
+
+        classificacao = "🥇 MUITO BOM";
+
+        mensagem =
+            "Ótimo resultado! Você está muito próximo da excelência.";
+
+    }
+
+    else if (acertos >= 14) {
+
+        classificacao = "🥈 BOM";
+
+        mensagem =
+            "Bom desempenho. Continue reforçando os pontos em que apresentou dificuldade.";
+
+    }
+
+    else if (acertos >= 10) {
+
+        classificacao = "🥉 REGULAR";
+
+        mensagem =
+            "Você está no caminho certo, mas ainda precisa revisar alguns tópicos.";
+
+    }
+
+    else if (acertos >= 6) {
+
+        classificacao = "⚠️ PRECISA REFORÇAR";
+
+        mensagem =
+            "Recomenda-se revisar o mapa mental e refazer as questões.";
+
+    }
+
+    else {
+
+        classificacao = "🚨 REVISÃO NECESSÁRIA";
+
+        mensagem =
+            "Não desanime. Revise o conteúdo e tente novamente.";
+
+    }
+
+    document.getElementById(
+        "areaQuestao"
+    ).innerHTML = `
+
+    <div class="card">
+
+        <h2>
+            🎉 Assunto Concluído
+        </h2>
+
+        <br>
+
+        <strong>
+            Acertos:
+        </strong>
+
+        ${acertos}
+
+        <br><br>
+
+        <strong>
+            Erros:
+        </strong>
+
+        ${erros}
+
+        <br><br>
+
+        <strong>
+            Aproveitamento:
+        </strong>
+
+        ${percentual}%
+
+        <br><br>
+
+        <h3>
+            ${classificacao}
+        </h3>
+
+        <br>
+
+        <p>
+            ${mensagem}
+        </p>
+
+        <br><br>
+
+        <button onclick="refazerAssunto()">
+
+            🔄 Refazer Assunto
+
+        </button>
+
+       <button onclick="voltarParaAssuntos()">
+
+    📚 Voltar aos Assuntos
+
+</button>
+
+    </div>
+
+    `;
+
+    return;
+
+}
 
     mostrarQuestao();
 }
@@ -477,8 +822,11 @@ function resetarProgresso() {
     acertos = 0;
     erros = 0;
     cadernoErros = [];
+    progressoAssuntos = {};
 
     atualizarEstatisticas();
+    atualizarDashboard();
+    atualizarPainelEstudos();
     atualizarCadernoErros();
 
     alert("Progresso apagado com sucesso!");
@@ -491,13 +839,9 @@ function resetarProgresso() {
 
 function iniciarSimulado(qtd) {
 
-    const todasQuestoes = [
-
-        ...curriculo,
-
-        ...inclusiva
-
-    ];
+const todasQuestoes = Object.values(
+    bancoQuestoes
+).flat();
 
     questoesSimulado =
         [...todasQuestoes]
@@ -534,7 +878,7 @@ function mostrarQuestaoSimulado() {
             questoesSimulado.length) * 100
         );
 
-    mostrarTela("questoes");
+    mostrarTela("resolverQuestao");
 
     area.innerHTML = `
 
@@ -797,8 +1141,364 @@ function finalizarSimulado() {
 }
 
 // ==========================
+// ABRIR ASSUNTO
+// ==========================
+
+function abrirAssunto(assunto) {
+
+    assuntoAtual = assunto;
+
+console.log("Assunto:", assunto);
+console.log("Progresso:", progressoAssuntos);
+
+console.log(
+    "Valor deste assunto:",
+    progressoAssuntos[assunto]
+);
+
+const btnContinuar =
+    document.getElementById(
+        "btnContinuar"
+    );
+
+if (
+    progressoAssuntos[assunto] !== undefined
+) {
+
+    btnContinuar.style.display =
+        "inline-block";
+
+} else {
+
+    btnContinuar.style.display =
+        "none";
+
+}
+
+    const titulo =
+        document.getElementById(
+            "tituloMapa"
+        );
+
+    const imagem =
+        document.getElementById(
+            "imagemMapa"
+        );
+
+    switch (assunto) {
+
+        case "bncc":
+
+            titulo.innerHTML =
+                "📘 BNCC";
+
+            imagem.src =
+                "imagens/mapas/bncc.jpg";
+
+            break;
+
+    case "ldb":
+
+        titulo.innerHTML = "📘 LDB";
+        imagem.src = "imagens/mapas/ldb.jpg";
+        break;
+
+ case "eca":
+        titulo.innerHTML = "📘 ECA";
+        imagem.src = "imagens/mapas/eca.jpg";
+        break;
+
+    case "pne":
+        titulo.innerHTML = "📘 PNE";
+        imagem.src = "imagens/mapas/pne.jpg";
+        break;
+
+    case "fundeb":
+        titulo.innerHTML = "📘 FUNDEB";
+        imagem.src = "imagens/mapas/fundeb.jpg";
+        break;
+
+    case "lbi":
+        titulo.innerHTML = "📘 LBI";
+        imagem.src = "imagens/mapas/lbi.jpg";
+        break;
+
+    case "tea":
+        titulo.innerHTML = "📘 TEA";
+        imagem.src = "imagens/mapas/tea.jpg";
+        break;
+
+    case "inclusiva":
+        titulo.innerHTML = "📘 EDUCAÇÃO INCLUSIVA";
+        imagem.src = "imagens/mapas/inclusiva.jpg";
+        break;
+
+    case "etnicoRacial":
+        titulo.innerHTML = "📘 Relações Étnico-Raciais";
+        imagem.src = "imagens/mapas/etnicoRacial.jpg";
+        break;
+
+    case "educacaoCampo":
+        titulo.innerHTML = "📘 Educação do Campo";
+        imagem.src = "imagens/mapas/campo.jpg";
+        break;
+
+       case "gestao":
+        titulo.innerHTML = "📘 Gestão Democrática";
+        imagem.src = "imagens/mapas/gestao.jpg";
+        break;
+
+case "interpretacao":
+
+    titulo.innerHTML =
+        "📖 Interpretação de Textos";
+
+    imagem.src =
+        "imagens/mapas/texto.png";
+
+    break;
+
+case "generos":
+
+    titulo.innerHTML =
+        "📄 Tipologia e Gêneros Textuais";
+
+    imagem.src =
+        "imagens/mapas/generos.png";
+
+    break;
+
+case "funcoes":
+
+    titulo.innerHTML =
+        "📡 Funções da Linguagem";
+
+    imagem.src =
+        "imagens/mapas/funcoes.png";
+
+    break;
+
+case "coesao":
+
+    titulo.innerHTML =
+        "🔗 Coesão e Coerência";
+
+    imagem.src =
+        "imagens/mapas/coesao.png";
+
+    break;
+
+case "semantica":
+
+    titulo.innerHTML =
+        "🧠 Semântica";
+
+    imagem.src =
+        "imagens/mapas/semantica.png";
+
+    break;
+
+case "figuras":
+
+    titulo.innerHTML =
+        "🎭 Figuras de Linguagem";
+
+    imagem.src =
+        "imagens/mapas/figuras.png";
+
+    break;
+
+case "variacao":
+
+    titulo.innerHTML =
+        "🌎 Variação Linguística";
+
+    imagem.src =
+        "imagens/mapas/variacao.png";
+
+    break;
+
+case "classesPalavras":
+
+    titulo.innerHTML =
+        "📚 Classes de Palavras";
+
+    imagem.src =
+        "imagens/mapas/classesPalavras.png";
+
+    break;
+
+case "formacaoPalavras":
+
+    titulo.innerHTML =
+        "🏗 Formação de Palavras";
+
+    imagem.src =
+        "imagens/mapas/formacaoPalavras.png";
+
+    break;
+
+case "sintaxe":
+
+    titulo.innerHTML =
+        "📝 Sintaxe";
+
+    imagem.src =
+        "imagens/mapas/sintaxe.png";
+
+    break;
+
+case "periodoComposto":
+
+    titulo.innerHTML =
+        "🔄 Período Simples e Composto";
+
+    imagem.src =
+        "imagens/mapas/periodoComposto.png";
+
+    break;
+
+case "concordancia":
+
+    titulo.innerHTML =
+        "📌 Concordância";
+
+    imagem.src =
+        "imagens/mapas/concordancia.png";
+
+    break;
+
+case "regencia":
+
+    titulo.innerHTML =
+        "🎯 Regência";
+
+    imagem.src =
+        "imagens/mapas/regencia.png";
+
+    break;
+
+case "crase":
+
+    titulo.innerHTML =
+        "✍️ Crase";
+
+    imagem.src =
+        "imagens/mapas/crase.png";
+
+    break;
+
+case "vozesVerbais":
+
+    titulo.innerHTML =
+        "🗣️ Vozes Verbais";
+
+    imagem.src =
+        "imagens/mapas/vozesVerbais.png";
+
+    break;
+
+case "pontuacao":
+
+    titulo.innerHTML =
+        "📍 Pontuação";
+
+    imagem.src =
+        "imagens/mapas/pontuacao.png";
+
+    break;
+
+case "ortografia":
+
+    titulo.innerHTML =
+        "📖 Ortografia";
+
+    imagem.src =
+        "imagens/mapas/ortografia.png";
+
+    break;
+
+case "acentuacao":
+
+    titulo.innerHTML =
+        "🔠 Acentuação";
+
+    imagem.src =
+        "imagens/mapas/acentuacao.png";
+
+    break;
+
+case "redacaoOficial":
+
+    titulo.innerHTML =
+        "🏛️ Redação Oficial";
+
+    imagem.src =
+        "imagens/mapas/redacaoOficial.png";
+
+    break;
+
+    }
+
+    mostrarTela(
+        "telaMapaMental"
+    );
+
+}
+
+function iniciarBNCC() {
+
+    const revisado =
+        document.getElementById(
+            "liMapaBNCC"
+        ).checked;
+
+    if (!revisado) {
+
+        alert(
+            "Leia o mapa mental antes de continuar."
+        );
+
+        return;
+
+    }
+
+    alert(
+        "Banco de questões BNCC será conectado na próxima etapa."
+    );
+
+}
+
+// ==========================
 // INICIALIZAÇÃO
 // ==========================
+
+function iniciarQuestoesAssunto() {
+
+    const revisado =
+        document.getElementById(
+            "confirmacaoMapa"
+        ).checked;
+
+    if (!revisado) {
+
+        alert(
+            "Leia e revise o mapa mental antes de iniciar as questões."
+        );
+
+        return;
+
+    }
+
+    disciplinaAtual = assuntoAtual;
+
+    questaoAtual = 0;
+
+   mostrarTela("resolverQuestao");
+
+    mostrarQuestao();
+
+}
 
 window.onload = function () {
 
@@ -808,4 +1508,275 @@ window.onload = function () {
 
     atualizarCadernoErros();
 
+    atualizarDashboard();
+
+    atualizarPainelEstudos();
+
+    const telaSalva =
+        localStorage.getItem(
+            "farol_telaAtual"
+        );
+
+    if(telaSalva){
+
+        mostrarTela(
+            telaSalva
+        );
+
+    }
+
+}
+
+function atualizarDashboard() {
+
+    const respondidas =
+        acertos + erros;
+
+    const aproveitamento =
+        respondidas > 0
+        ? Math.round(
+            (acertos / respondidas) * 100
+        )
+        : 0;
+
+    document.getElementById("totalRespondidas").textContent =
+        respondidas;
+
+    document.getElementById("totalAcertos").textContent =
+        acertos;
+
+    document.getElementById("totalErros").textContent =
+        erros;
+
+    const campoAproveitamento =
+    document.getElementById("aproveitamento");
+
+campoAproveitamento.textContent =
+    aproveitamento + "%";
+
+if (aproveitamento < 50) {
+
+    campoAproveitamento.style.color =
+        "#c62828"; // vermelho
+
+}
+else if (aproveitamento < 70) {
+
+    campoAproveitamento.style.color =
+        "#f9a825"; // amarelo
+
+}
+else {
+
+    campoAproveitamento.style.color =
+        "#1565c0"; // azul
+
+}
+
+}
+
+function voltarParaMapa(){
+
+    abrirAssunto(
+        assuntoAtual
+    );
+
+}
+
+function voltarParaAssuntos(){
+
+    const assuntosPortugues = [
+
+        "interpretacao",
+        "generos",
+        "funcoes",
+        "coesao",
+        "semantica",
+        "figuras",
+        "variacao",
+        "classesPalavras",
+        "formacaoPalavras",
+        "sintaxe",
+        "periodoComposto",
+        "concordancia",
+        "regencia",
+        "crase",
+        "vozesVerbais",
+        "pontuacao",
+        "ortografia",
+        "acentuacao",
+        "redacaoOficial"
+
+    ];
+
+    if(
+        assuntosPortugues.includes(
+            assuntoAtual
+        )
+    ){
+
+        mostrarTela("portugues");
+
+    } else {
+
+        mostrarTela("didatica");
+
+    }
+
+}
+
+function continuarQuestoes(){
+
+    disciplinaAtual = assuntoAtual;
+
+    const total =
+        bancoQuestoes[assuntoAtual].length;
+
+    questaoAtual =
+        progressoAssuntos[assuntoAtual] || 0;
+
+    if(questaoAtual >= total){
+
+        alert("Este assunto já foi concluído.");
+        return;
+
+    }
+
+    mostrarTela("resolverQuestao");
+
+    mostrarQuestao();
+
+}
+
+function refazerAssunto(){
+
+    questaoAtual = 0;
+
+    progressoAssuntos[disciplinaAtual] = 0;
+
+    mostrarTela("resolverQuestao");
+
+    mostrarQuestao();
+
+
+}
+
+function atualizarPainelEstudos(){
+
+    let concluidos = 0;
+
+    let andamento = 0;
+
+    let ultimo = "Nenhum";
+
+    let proxima = "-";
+
+    for(let assunto in progressoAssuntos){
+
+        const total =
+            bancoQuestoes[assunto]
+            ?
+            bancoQuestoes[assunto].length
+            :
+            0;
+
+        const atual =
+            progressoAssuntos[assunto];
+
+        if(atual >= total){
+
+            concluidos++;
+
+        }else{
+
+            andamento++;
+
+            const nomesBonitos = {
+
+    bncc: "📘 BNCC",
+
+    ldb: "📘 LDB",
+
+    eca: "📘 ECA",
+
+    pne: "📘 PNE",
+
+    fundeb: "📘 FUNDEB",
+
+    lbi: "📘 LBI",
+
+    tea: "📘 TEA",
+
+    inclusiva: "📘 Educação Inclusiva",
+
+    etnicoRacial: "📘 Relações Étnico-Raciais",
+
+    educacaoCampo: "📘 Educação do Campo",
+
+    curriculo: "📘 Currículo e Planejamento",
+
+    interpretacao: "📖 Interpretação de Textos",
+
+    generos: "📄 Tipologia e Gêneros Textuais",
+
+    funcoes: "📡 Funções da Linguagem",
+
+    coesao: "🔗 Coesão e Coerência",
+
+    semantica: "🧠 Semântica",
+
+    figuras: "🎭 Figuras de Linguagem",
+
+    variacao: "🌎 Variação Linguística",
+
+    classesPalavras: "📚 Classes de Palavras",
+
+    formacaoPalavras: "🏗 Formação de Palavras",
+
+    sintaxe: "📝 Sintaxe",
+
+    periodoComposto: "🔄 Período Simples e Composto",
+
+    concordancia: "📌 Concordância",
+
+    regencia: "🎯 Regência",
+
+    crase: "✍️ Crase",
+
+    vozesVerbais: "🗣️ Vozes Verbais",
+
+    pontuacao: "📍 Pontuação",
+
+    ortografia: "📖 Ortografia",
+
+    acentuacao: "🔠 Acentuação",
+
+    redacaoOficial: "🏛️ Redação Oficial"
+
 };
+
+ultimo = nomesBonitos[assunto];
+
+            proxima = atual + 1;
+
+        }
+
+    }
+
+    document.getElementById(
+        "assuntosConcluidos"
+    ).textContent = concluidos;
+
+    document.getElementById(
+        "assuntosAndamento"
+    ).textContent = andamento;
+
+    document.getElementById(
+        "ultimoAssunto"
+    ).textContent = ultimo;
+
+    document.getElementById(
+        "proximaQuestaoPainel"
+    ).textContent = proxima;
+
+}
