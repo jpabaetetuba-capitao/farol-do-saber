@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚓ Farol do Saber</title>
+    <title>🗼 Farol do Saber</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,15 +13,11 @@
 
 <header>
 
-    <img
-        src="imagens/logo-farol.png"
-        alt="Farol do Saber"
-        class="logo">
-
-    <h1>⚓ Farol do Saber</h1>
+   
+    <h1>🗼 Farol do Saber</h1>
 
     <p>
-        Iluminando o caminho para a aprovação.
+        Iluminando o caminho para a sua aprovação.
     </p>
 
 </header>
@@ -50,33 +46,342 @@
 
 </nav>
 
-<!-- TELA INICIAL -->
+<!-- DIDÁTICA -->
 
-<section id="inicio" class="tela ativa">
+<section id="didatica" class="tela">
 
     <div class="card">
 
-        <h2>Bem-vindo ao Farol do Saber</h2>
+        <h2>📚 Didática e Legislação</h2>
 
         <p>
-            Sua plataforma offline para preparação em concursos.
+            Selecione um assunto:
         </p>
 
         <br>
 
-        <ul>
+        <div class="grid-assuntos">
 
-            <li>📚 Banco de Questões</li>
+<button class="btn-assunto" onclick="abrirAssunto('bncc')">
+📘 BNCC
+</button>
 
-            <li>📝 Simulados</li>
+<button class="btn-assunto" onclick="abrirAssunto('ldb')">
+📘 LDB
+</button>
 
-            <li>📊 Estatísticas de Desempenho</li>
+<button class="btn-assunto" onclick="abrirAssunto('eca')">
+📘 ECA
+</button>
 
-            <li>❌ Caderno de Erros</li>
+<button class="btn-assunto" onclick="abrirAssunto('pne')">
+📘 PNE
+</button>
 
-            <li>💾 Funcionamento Offline</li>
+<button class="btn-assunto" onclick="abrirAssunto('fundeb')">
+📘 FUNDEB
+</button>
 
-        </ul>
+<button class="btn-assunto" onclick="abrirAssunto('lbi')">
+♿ LBI
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('tea')">
+🧩 TEA
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('inclusiva')">
+♿ Inclusiva
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('etnicoRacial')">
+✊ Étnico-Racial
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('educacaoCampo')">
+🌱 Campo
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('quilombola')">
+🏘 Quilombola
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('indigena')">
+🪶 Indígena
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('didatica')">
+📚 Didática
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('planejamento')">
+📝 Planejamento
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('avaliacao')">
+📊 Avaliação
+</button>
+
+</div>
+
+    </div>
+
+</section>
+
+<section id="portugues" class="tela">
+
+    <div class="card">
+
+        <h2>📖 Língua Portuguesa</h2>
+
+        <p>
+            Selecione um assunto:
+        </p>
+
+        <br>
+
+        <div class="grid-assuntos">
+
+<button class="btn-assunto" onclick="abrirAssunto('interpretacao')">
+📖 Interpretação de Textos
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('generos')">
+📄 Tipologia e Gêneros Textuais
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('funcoes')">
+📡 Funções da Linguagem
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('coesao')">
+🔗 Coesão e Coerência
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('semantica')">
+🧠 Semântica
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('figuras')">
+🎭 Figuras de Linguagem
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('variacao')">
+🌎 Variação Linguística
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('classesPalavras')">
+📚 Classes de Palavras
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('formacaoPalavras')">
+🏗 Formação de Palavras
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('sintaxe')">
+📝 Sintaxe
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('periodoComposto')">
+🔄 Período Simples e Composto
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('concordancia')">
+📌 Concordância
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('regencia')">
+🎯 Regência
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('crase')">
+✍️ Crase
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('vozesVerbais')">
+🗣 Vozes Verbais
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('pontuacao')">
+📍 Pontuação
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('ortografia')">
+📖 Ortografia
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('acentuacao')">
+🔠 Acentuação
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('redacaoOficial')">
+🏛 Redação Oficial
+</button>
+
+</div>
+
+    </div>
+
+</section>
+
+<!-- MAPA MENTAL -->
+
+<section id="telaMapaMental" class="tela">
+
+    <div class="card">
+
+<button onclick="voltarParaAssuntos()">
+⬅ Voltar aos Assuntos
+</button>
+
+<br><br>
+
+        <h2 id="tituloMapa">
+            Assunto
+        </h2>
+
+        <br>
+
+        <img
+            id="imagemMapa"
+            src=""
+            style="
+                width:100%;
+                max-width:900px;
+                border-radius:10px;
+            ">
+
+        <br><br>
+
+<label>
+
+<input
+    type="checkbox"
+    id="confirmacaoMapa">
+
+Li e revisei o mapa mental.
+
+</label>
+
+<br><br>
+
+<button onclick="iniciarQuestoesAssunto()">
+
+    🚀 Iniciar Questões
+
+</button>
+
+<button
+    id="btnContinuar"
+    onclick="continuarQuestoes()">
+
+    ▶ Continuar de Onde Parei
+
+</button>
+
+</div>
+
+</section>
+
+<!-- TELA INICIAL -->
+
+<section id="inicio" class="tela ativa">
+
+<div class="luz-farol"></div>
+
+    <div class="dashboard-container">
+
+        <!-- DASHBOARD ESQUERDA -->
+
+        <div class="dashboard-card">
+
+            <h2>📊 Dashboard</h2>
+
+            <br>
+
+            <p>
+                Questões Respondidas:
+                <strong id="totalRespondidas">0</strong>
+            </p>
+
+            <br>
+
+            <p>
+                Acertos:
+                <strong
+                    id="totalAcertos"
+                    class="acertos">
+                    0
+                </strong>
+            </p>
+
+            <br>
+
+            <p>
+                Erros:
+                <strong
+                    id="totalErros"
+                    class="erros">
+                    0
+                </strong>
+            </p>
+
+            <br>
+
+            <p>
+                Aproveitamento:
+                <strong
+                    id="aproveitamento"
+                    class="aproveitamento">
+                    0%
+                </strong>
+            </p>
+
+        </div>
+
+        <!-- PAINEL DIREITA -->
+
+        <div class="dashboard-card">
+
+            <h2>📚 Estudos</h2>
+
+            <br>
+
+            <p>
+                Concluídos:
+                <strong id="assuntosConcluidos">
+                    0
+                </strong>
+            </p>
+
+            <br>
+
+            <p>
+                Em andamento:
+                <strong id="assuntosAndamento">
+                    0
+                </strong>
+            </p>
+
+            <br>
+
+            <p>
+                Último assunto:
+                <strong id="ultimoAssunto">
+                    Nenhum
+                </strong>
+            </p>
+
+            <br>
+
+            <p>
+                Próxima questão:
+                <strong id="proximaQuestaoPainel">
+                    -
+                </strong>
+            </p>
+
+        </div>
 
     </div>
 
@@ -90,31 +395,97 @@
 
         <h2>Banco de Questões</h2>
 
-        <select id="disciplinaSelect">
+        <div class="grid-disciplinas">
 
-            <option value="">
-                Selecione uma disciplina
-            </option>
+    <button class="btn-disciplina"
+        onclick="abrirDisciplina('portugues')">
+        📖 Português
+    </button>
 
-            <option value="curriculo">
-                📚 Currículo e Planejamento
-            </option>
+    <button class="btn-disciplina"
+        onclick="abrirDisciplina('informatica')">
+        💻 Informática
+    </button>
 
-            <option value="inclusiva">
-                ♿ Educação Inclusiva
-            </option>
+    <button class="btn-disciplina"
+        onclick="abrirDisciplina('etica')">
+        ⚖️ Ética
+    </button>
 
-        </select>
+    <button class="btn-disciplina"
+        onclick="abrirDisciplina('apoioEscolar')">
+        👨‍🏫 Apoio Escolar
+    </button>
 
-        <br><br>
+    <button class="btn-disciplina"
+        onclick="abrirDisciplina('didatica')">
+        📚 Didática e Legislação
+    </button>
 
-        <button onclick="carregarDisciplina()">
-            🚀 Iniciar Disciplina
-        </button>
+<button
+    class="btn-disciplina premium"
+    onclick="abrirDisciplina('ciencias')">
+
+    <div class="cadeado-premium">
+        🔒
+    </div>
+
+    <div>
+        Professor de Ciências
+    </div>
+
+</button>
+
+</div>
 
     </div>
 
+   </section>
+
+<section id="resolverQuestao" class="tela">
+
     <div id="areaQuestao"></div>
+
+</section>
+
+
+<section id="telaBNCC" class="tela">
+
+    <div class="card">
+
+        <h2>📘 BNCC</h2>
+
+        <img
+            src="imagens/mapas/bncc.jpg"
+            alt="Mapa Mental BNCC"
+            style="
+                width:100%;
+                max-width:1000px;
+                border-radius:10px;
+            ">
+
+        <br><br>
+
+        <label>
+
+            <input
+                type="checkbox"
+                id="liMapaBNCC">
+
+            Li e revisei o mapa mental.
+
+        </label>
+
+        <br><br>
+
+        <button
+            onclick="iniciarBNCC()">
+
+            🚀 Iniciar Questões
+
+        </button>
+
+    </div>
 
 </section>
 
@@ -191,9 +562,65 @@
 
 <!-- BANCOS DE DADOS -->
 
+<script src="dados/bncc.js"></script>
+
+<script src="dados/ldb.js"></script>
+
+<script src="dados/eca.js"></script>
+
+<script src="dados/pne.js"></script>
+
+<script src="dados/fundeb.js"></script>
+
+<script src="dados/lbi.js"></script>
+
+<script src="dados/tea.js"></script>
+
 <script src="dados/curriculo.js"></script>
 
 <script src="dados/inclusiva.js"></script>
+
+<script src="dados/etnicoRacial.js"></script>
+
+<script src="dados/educacaocampo.js"></script>
+
+<script src="dados/interpretacao.js"></script>
+
+<script src="dados/generos.js"></script>
+
+<script src="dados/funcoes.js"></script>
+
+<script src="dados/coesao.js"></script>
+
+<script src="dados/semantica.js"></script>
+
+<script src="dados/figuras.js"></script>
+
+<script src="dados/variacao.js"></script>
+
+<script src="dados/classesPalavras.js"></script>
+
+<script src="dados/formacaoPalavras.js"></script>
+
+<script src="dados/sintaxe.js"></script>
+
+<script src="dados/periodoComposto.js"></script>
+
+<script src="dados/concordancia.js"></script>
+
+<script src="dados/regencia.js"></script>
+
+<script src="dados/crase.js"></script>
+
+<script src="dados/vozesVerbais.js"></script>
+
+<script src="dados/pontuacao.js"></script>
+
+<script src="dados/ortografia.js"></script>
+
+<script src="dados/acentuacao.js"></script>
+
+<script src="dados/redacaoOficial.js"></script>
 
 <!-- SISTEMA -->
 
