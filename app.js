@@ -1897,6 +1897,8 @@ function voltarParaAssuntos(){
 function continuarQuestoes(){
 
     disciplinaAtual = assuntoAtual;
+questoesEmbaralhadas =
+    [...bancoQuestoes[disciplinaAtual]];
 
     const total =
         bancoQuestoes[assuntoAtual].length;
