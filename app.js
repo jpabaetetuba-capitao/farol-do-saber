@@ -452,7 +452,9 @@ if (Number(resposta.value) === q.correta) {
 
             <br>
 
-            <p>${q.feedbackAcerto}</p>
+            <div>
+${q.feedbackAcerto.trim()}
+</div>
 
             <br>
 
@@ -578,22 +580,16 @@ const nomeDisciplina =
         feedback.innerHTML = `
         <div class="feedback-erro">
 
-            <h3>❌ Resposta Incorreta!</h3>
+           <h3>❌ Resposta Incorreta!</h3>
 
-            <br>
+<strong>Resposta correta:</strong><br>
+${respostaCorreta}
 
-            <strong>Resposta correta:</strong>
+<div class="texto-feedback">
+${q.feedbackErro.trim().replace(/\n/g,"<br>")}
+</div>
 
-            <br><br>
-
-            ${respostaCorreta}
-
-            <br><br>
-
-            <p>${q.feedbackErro}</p>
-
-            <br>
-
+           
             <button onclick="proximaQuestao()">
                 Próxima
             </button>
