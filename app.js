@@ -1769,6 +1769,14 @@ window.onload = function () {
 
     atualizarPainelEstudos();
 
+    auth.onAuthStateChanged((user) => {
+
+    if(user){
+
+    document.body.classList.remove(
+        "login-ativo"
+    );
+
     const telaSalva =
         localStorage.getItem(
             "farol_telaAtual"
@@ -1780,9 +1788,30 @@ window.onload = function () {
             telaSalva
         );
 
+    }else{
+
+        mostrarTela(
+            "inicio"
+        );
+
     }
 
 }
+else{
+
+    document.body.classList.add(
+        "login-ativo"
+    );
+
+    mostrarTela(
+        "login"
+    );
+
+}
+
+});
+
+};
 
 function atualizarDashboard() {
 
@@ -2111,5 +2140,107 @@ ultimo = nomesBonitos[assunto];
     document.getElementById(
         "proximaQuestaoPainel"
     ).textContent = proxima;
+
+}
+
+async function criarConta(){
+
+    const email =
+        document.getElementById(
+            "emailLogin"
+        ).value;
+
+    const senha =
+        document.getElementById(
+            "senhaLogin"
+        ).value;
+
+    try{
+
+        const credencial =
+            await auth.createUserWithEmailAndPassword(
+                email,
+                senha
+            );
+
+        await db.collection("usuarios")
+        .doc(credencial.user.uid)
+        .set({
+
+            email: email,
+
+            aprovado: false
+
+        });
+
+        alert(
+            "Cadastro realizado. Aguarde aprovação."
+        );
+
+        await auth.signOut();
+
+    }
+    catch(erro){
+
+        alert(
+            erro.message
+        );
+
+    }
+
+}
+
+async function entrar(){
+
+    const email =
+        document.getElementById(
+            "emailLogin"
+        ).value;
+
+    const senha =
+        document.getElementById(
+            "senhaLogin"
+        ).value;
+
+    try{
+
+        const credencial =
+            await auth.signInWithEmailAndPassword(
+                email,
+                senha
+            );
+
+        const doc =
+            await db.collection("usuarios")
+            .doc(credencial.user.uid)
+            .get();
+
+        if(
+            !doc.exists ||
+            doc.data().aprovado !== true
+        ){
+
+            alert(
+                "⛔ Aguardando aprovação do administrador."
+            );
+
+            await auth.signOut();
+
+            return;
+
+        }
+
+        mostrarTela(
+            "inicio"
+        );
+
+    }
+    catch(erro){
+
+        alert(
+            erro.message
+        );
+
+    }
 
 }
