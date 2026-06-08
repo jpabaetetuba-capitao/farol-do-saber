@@ -2244,6 +2244,7 @@ async function entrar(){
         }
 
         mostrarTela("inicio");
+document.getElementById("login").style.display = "none";
 
     }
     catch(erro){
