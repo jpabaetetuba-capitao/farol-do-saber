@@ -90,7 +90,11 @@ const bancoQuestoes = {
 
     acentuacao,
 
-    redacaoOficial
+    redacaoOficial,
+
+    hardware,
+
+    software
 
 };
 
@@ -101,11 +105,19 @@ const bancoQuestoes = {
 let disciplinaAtual = "";
 let assuntoAtual = "";
 let questaoAtual = 0;
+let questaoExibida = null;
+let questoesEmbaralhadas = [];
 
 let progressoAssuntos = {};
 
 let acertos = 0;
 let erros = 0;
+
+let acertosAssunto = 0;
+let errosAssunto = 0;
+let medalhasOuro = 0;
+let medalhasPrata = 0;
+let medalhasBronze = 0;
 
 let cadernoErros = [];
 
@@ -139,6 +151,21 @@ function salvarDados() {
         erros
     );
 
+localStorage.setItem(
+    "farol_ouro",
+    medalhasOuro
+);
+
+localStorage.setItem(
+    "farol_prata",
+    medalhasPrata
+);
+
+localStorage.setItem(
+    "farol_bronze",
+    medalhasBronze
+);
+
     localStorage.setItem(
         "farol_caderno",
         JSON.stringify(cadernoErros)
@@ -163,6 +190,21 @@ function carregarDados() {
         Number(
             localStorage.getItem("farol_erros")
         ) || 0;
+
+medalhasOuro =
+Number(
+    localStorage.getItem("farol_ouro")
+) || 0;
+
+medalhasPrata =
+Number(
+    localStorage.getItem("farol_prata")
+) || 0;
+
+medalhasBronze =
+Number(
+    localStorage.getItem("farol_bronze")
+) || 0;
 
     cadernoErros =
         JSON.parse(
@@ -219,6 +261,14 @@ if(nome === "ciencias"){
 
     }
 
+if (nome === "informatica") {
+
+    mostrarTela("informatica");
+
+    return;
+
+}
+
     alert(
         "Disciplina em desenvolvimento."
     );
@@ -233,9 +283,13 @@ function mostrarQuestao() {
 
     const area = document.getElementById("areaQuestao");
 
-    const questoes = bancoQuestoes[disciplinaAtual];
+    const questoes =
+    questoesEmbaralhadas.length > 0
+    ? questoesEmbaralhadas
+    : bancoQuestoes[disciplinaAtual];
 
     const q = questoes[questaoAtual];
+questaoExibida = q;
 console.log("Questão carregada:", q);
 
 const percentual =
@@ -299,6 +353,15 @@ ${q.texto ? `
 
 ` : ""}
 
+${q.imagem ? `
+
+<img
+    src="${q.imagem}"
+    class="imagem-questao">
+
+<br><br>
+
+` : ""}
         <p class="pergunta">
     ${q.pergunta}
 </p>
@@ -344,8 +407,7 @@ function corrigirQuestao() {
         return;
     }
 
-    const q =
-        bancoQuestoes[disciplinaAtual][questaoAtual];
+const q = questaoExibida;
 
     const feedback =
         document.getElementById("feedback");
@@ -365,9 +427,10 @@ document
 
     });
 
-    if (Number(resposta.value) === q.correta) {
+if (Number(resposta.value) === q.correta) {
 
-        acertos++;
+    acertos++;
+    acertosAssunto++;
 
         feedback.innerHTML = `
         <div class="feedback-acerto">
@@ -398,6 +461,7 @@ document
     } else {
 
         erros++;
+errosAssunto++;
 
        const nomesBonitos = {
 
@@ -459,7 +523,9 @@ document
 
     acentuacao: "🔠 Acentuação",
 
-    redacaoOficial: "🏛️ Redação Oficial"
+    redacaoOficial: "🏛️ Redação Oficial",
+
+    hardware: "💻 Hardware"
 
 };
 
@@ -556,74 +622,89 @@ salvarDados();
         progressoAssuntos
     );
 
-    const total =
-        bancoQuestoes[disciplinaAtual].length;
+const total =
+    questoesEmbaralhadas.length > 0
+    ? questoesEmbaralhadas.length
+    : bancoQuestoes[disciplinaAtual].length;
 
   
     if (questaoAtual >= total) {
 
-    const percentual =
-        Math.round(
-            (acertos / (acertos + erros)) * 100
-        );
+const totalAssunto =
+    acertosAssunto + errosAssunto;
 
-    let classificacao = "";
-    let mensagem = "";
+const percentual =
+    totalAssunto > 0
+    ? Math.round(
+        (acertosAssunto / totalAssunto) * 100
+    )
+    : 0;
 
-    if (acertos >= 22) {
+let classificacao = "";
+let mensagem = "";
+let medalha = "";
 
-        classificacao = "🏆 EXCELENTE";
+if(percentual >= 90){
 
-        mensagem =
-            "Parabéns! Você demonstrou excelente domínio do conteúdo. Continue revisando para manter esse alto desempenho.";
+    classificacao = "🏆 EXCELENTE";
+medalha = "🥇 OURO";
+medalhasOuro++;
 
-    }
+    mensagem =
+    "Parabéns! Você demonstrou excelente domínio do conteúdo. Continue revisando para manter esse alto desempenho.";
 
-    else if (acertos >= 18) {
+}
+else if(percentual >= 75){
 
-        classificacao = "🥇 MUITO BOM";
+    classificacao = "🥈 MUITO BOM";
+ medalha = "🥈 PRATA";
+medalhasPrata++;
 
-        mensagem =
-            "Ótimo resultado! Você está muito próximo da excelência.";
+    mensagem =
+    "Ótimo resultado! Você está muito próximo da excelência.";
 
-    }
+}
+else if(percentual >= 60){
 
-    else if (acertos >= 14) {
+    classificacao = "🥉 BOM";
+medalha = "🥉 BRONZE";
+medalhasBronze++;
 
-        classificacao = "🥈 BOM";
+    mensagem =
+    "Bom desempenho. Continue reforçando os pontos em que apresentou dificuldade.";
 
-        mensagem =
-            "Bom desempenho. Continue reforçando os pontos em que apresentou dificuldade.";
+}
+else if(percentual >= 40){
 
-    }
+    classificacao = " 📚 REGULAR";
+  medalha = "📚 SEM MEDALHA";
 
-    else if (acertos >= 10) {
+    mensagem =
+    "Você está no caminho certo, mas ainda precisa revisar alguns tópicos.";
 
-        classificacao = "🥉 REGULAR";
+}
+else if(percentual >= 20){
 
-        mensagem =
-            "Você está no caminho certo, mas ainda precisa revisar alguns tópicos.";
+    classificacao = "⚠️ PRECISA REFORÇAR";
+ medalha = "📚 SEM MEDALHA";
 
-    }
+    mensagem =
+    "Recomenda-se revisar o mapa mental e refazer as questões.";
 
-    else if (acertos >= 6) {
+}
+else{
 
-        classificacao = "⚠️ PRECISA REFORÇAR";
+    classificacao = "🚨 REVISÃO NECESSÁRIA";
+medalha = "📚 SEM MEDALHA";
 
-        mensagem =
-            "Recomenda-se revisar o mapa mental e refazer as questões.";
 
-    }
+    mensagem =
+    "Não desanime. Revise o conteúdo e tente novamente.";
 
-    else {
+}
 
-        classificacao = "🚨 REVISÃO NECESSÁRIA";
-
-        mensagem =
-            "Não desanime. Revise o conteúdo e tente novamente.";
-
-    }
-
+salvarDados();
+atualizarDashboard();
     document.getElementById(
         "areaQuestao"
     ).innerHTML = `
@@ -637,28 +718,36 @@ salvarDados();
         <br>
 
         <strong>
-            Acertos:
-        </strong>
+    Acertos:
+</strong>
 
-        ${acertos}
+${acertosAssunto}
+
+<br><br>
+
+<strong>
+    Erros:
+</strong>
+
+${errosAssunto}
+
+<br><br>
+
+<strong>
+    Aproveitamento:
+</strong>
+
+${percentual}%
 
         <br><br>
 
-        <strong>
-            Erros:
-        </strong>
+<strong>
+🏅 Medalha:
+</strong>
 
-        ${erros}
+${medalha}
 
-        <br><br>
-
-        <strong>
-            Aproveitamento:
-        </strong>
-
-        ${percentual}%
-
-        <br><br>
+<br><br>
 
         <h3>
             ${classificacao}
@@ -1141,6 +1230,119 @@ function finalizarSimulado() {
 }
 
 // ==========================
+// SIMULADOS PERSONALIZADOS
+// ==========================
+
+function iniciarSimuladoPersonalizado(
+    banco,
+    quantidade
+){
+
+    questoesSimulado =
+
+        [...banco]
+        .sort(() => Math.random() - 0.5)
+        .slice(0, quantidade);
+
+    modoSimulado = true;
+
+    indiceSimulado = 0;
+
+    acertosSimulado = 0;
+
+    errosSimulado = 0;
+
+    mostrarQuestaoSimulado();
+
+}
+
+// ==========================
+// SIMULADOS POR DISCIPLINA
+// ==========================
+
+function iniciarSimuladoPortugues(){
+
+    const portugues = [
+
+        ...interpretacao,
+        ...generos,
+        ...funcoes,
+        ...coesao,
+        ...semantica,
+        ...figuras,
+        ...variacao,
+        ...classesPalavras,
+        ...formacaoPalavras,
+        ...sintaxe,
+        ...periodoComposto,
+        ...concordancia,
+        ...regencia,
+        ...crase,
+        ...vozesVerbais,
+        ...pontuacao,
+        ...ortografia,
+        ...acentuacao,
+        ...redacaoOficial
+
+    ];
+
+    iniciarSimuladoPersonalizado(
+        portugues,
+        30
+    );
+
+}
+
+function iniciarSimuladoInformatica(){
+
+    const informatica = [
+
+        ...hardware,
+        ...software
+
+    ];
+
+    iniciarSimuladoPersonalizado(
+        informatica,
+        30
+    );
+
+}
+
+function iniciarSimuladoDidatica(){
+
+    const didatica = [
+
+        ...bncc,
+        ...ldb,
+        ...eca,
+        ...pne,
+        ...fundeb,
+        ...lbi,
+        ...tea,
+        ...inclusiva,
+        ...etnicoRacial,
+        ...educacaoCampo
+
+    ];
+
+    iniciarSimuladoPersonalizado(
+        didatica,
+        30
+    );
+
+}
+
+function iniciarSimuladoApoioEscolar(){
+
+    alert(
+        "🚧 Simulado de Apoio Escolar em desenvolvimento."
+    );
+
+
+}
+
+// ==========================
 // ABRIR ASSUNTO
 // ==========================
 
@@ -1438,6 +1640,26 @@ case "redacaoOficial":
 
     break;
 
+case "hardware":
+
+    titulo.innerHTML =
+        "💻 Hardware";
+
+    imagem.src =
+        "imagens/mapas/hardware.png";
+
+    break;
+
+case "software":
+
+    titulo.innerHTML =
+        "⚙️ Software, Windows e Linux";
+
+    imagem.src =
+        "imagens/mapas/software.png";
+
+    break;
+
     }
 
     mostrarTela(
@@ -1490,13 +1712,26 @@ function iniciarQuestoesAssunto() {
 
     }
 
-    disciplinaAtual = assuntoAtual;
+disciplinaAtual = assuntoAtual;
 
-    questaoAtual = 0;
 
-   mostrarTela("resolverQuestao");
+localStorage.setItem(
+    "farol_ultimoAssunto",
+    assuntoAtual
+);
 
-    mostrarQuestao();
+acertosAssunto = 0;
+errosAssunto = 0;
+
+questaoAtual = 0;
+
+questoesEmbaralhadas =
+    [...bancoQuestoes[disciplinaAtual]]
+    .sort(() => Math.random() - 0.5);
+
+mostrarTela("resolverQuestao");
+
+mostrarQuestao();
 
 }
 
@@ -1573,6 +1808,18 @@ else {
 
 }
 
+document.getElementById(
+    "medalhasOuro"
+).textContent = medalhasOuro;
+
+document.getElementById(
+    "medalhasPrata"
+).textContent = medalhasPrata;
+
+document.getElementById(
+    "medalhasBronze"
+).textContent = medalhasBronze;
+
 }
 
 function voltarParaMapa(){
@@ -1609,6 +1856,18 @@ function voltarParaAssuntos(){
 
     ];
 
+    const assuntosInformatica = [
+
+        "hardware",
+        "software",
+        "arquivos",
+        "office",
+        "internet",
+        "redes",
+        "seguranca"
+
+    ];
+
     if(
         assuntosPortugues.includes(
             assuntoAtual
@@ -1617,7 +1876,17 @@ function voltarParaAssuntos(){
 
         mostrarTela("portugues");
 
-    } else {
+    }
+    else if(
+        assuntosInformatica.includes(
+            assuntoAtual
+        )
+    ){
+
+        mostrarTela("informatica");
+
+    }
+    else{
 
         mostrarTela("didatica");
 
@@ -1652,12 +1921,14 @@ function refazerAssunto(){
 
     questaoAtual = 0;
 
+    acertosAssunto = 0;
+    errosAssunto = 0;
+
     progressoAssuntos[disciplinaAtual] = 0;
 
     mostrarTela("resolverQuestao");
 
     mostrarQuestao();
-
 
 }
 
@@ -1668,6 +1939,11 @@ function atualizarPainelEstudos(){
     let andamento = 0;
 
     let ultimo = "Nenhum";
+
+const ultimoSalvo =
+    localStorage.getItem(
+        "farol_ultimoAssunto"
+    );
 
     let proxima = "-";
 
@@ -1751,7 +2027,11 @@ function atualizarPainelEstudos(){
 
     acentuacao: "🔠 Acentuação",
 
-    redacaoOficial: "🏛️ Redação Oficial"
+    redacaoOficial: "🏛️ Redação Oficial",
+
+    hardware: "💻 Hardware",
+
+    software: "⚙️ Software",
 
 };
 
@@ -1771,9 +2051,38 @@ ultimo = nomesBonitos[assunto];
         "assuntosAndamento"
     ).textContent = andamento;
 
+ if(ultimoSalvo){
+
+    const nomesBonitos = {
+
+        bncc: "📘 BNCC",
+        ldb: "📘 LDB",
+        eca: "📘 ECA",
+        pne: "📘 PNE",
+        fundeb: "📘 FUNDEB",
+        lbi: "📘 LBI",
+        tea: "📘 TEA",
+        inclusiva: "📘 Educação Inclusiva",
+        interpretacao: "📖 Interpretação de Textos",
+        semantica: "🧠 Semântica",
+        hardware: "💻 Hardware",
+        software: "⚙️ Software"
+
+    };
+
+    document.getElementById(
+        "ultimoAssunto"
+    ).textContent =
+        nomesBonitos[ultimoSalvo]
+        || ultimoSalvo;
+
+}else{
+
     document.getElementById(
         "ultimoAssunto"
     ).textContent = ultimo;
+
+}
 
     document.getElementById(
         "proximaQuestaoPainel"
