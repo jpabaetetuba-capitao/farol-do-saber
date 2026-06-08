@@ -2294,6 +2294,8 @@ catch(erro){
 
 }
 
+}
+
 async function sair(){
 
     await auth.signOut();
@@ -2397,5 +2399,7 @@ catch(erro){
     }
 
     alert(mensagem);
+
+}
 
 }
