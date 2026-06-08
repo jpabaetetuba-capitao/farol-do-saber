@@ -38,6 +38,8 @@ auth.onAuthStateChanged(async (user) => {
 
                 const dados = doc.data();
 
+console.log("NOME:", dados.nome);
+
                 const campoNome =
                     document.getElementById(
                         "nomeUsuario"
