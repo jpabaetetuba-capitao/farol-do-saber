@@ -107,7 +107,17 @@ const bancoQuestoes = {
 
     hardware,
 
-    software
+    software,
+
+    arquivos,
+
+    office,
+
+    internet,
+
+    redes,
+
+    seguranca
 
 };
 
@@ -453,7 +463,7 @@ if (Number(resposta.value) === q.correta) {
             <br>
 
             <div>
-${q.feedbackAcerto.trim()}
+${(q.feedbackAcerto || "").trim()}
 </div>
 
             <br>
@@ -540,7 +550,18 @@ errosAssunto++;
 
     redacaoOficial: "🏛️ Redação Oficial",
 
-    hardware: "💻 Hardware"
+    hardware: "💻 Hardware",
+
+    software: "⚙️ Software",
+    
+    office: "📊 Office e LibreOffice",
+
+    internet: "🌐 Internet e Correio Eletrônico",
+
+    redes: "🌐 Redes de Computadores",
+
+    seguranca: "🔒 Segurança da Informação"
+    
 
 };
 
@@ -586,7 +607,9 @@ const nomeDisciplina =
 ${respostaCorreta}
 
 <div class="texto-feedback">
-${q.feedbackErro.trim().replace(/\n/g,"<br>")}
+${(q.feedbackErro || "")
+    .trim()
+    .replace(/\n/g,"<br>")}
 </div>
 
            
@@ -1329,7 +1352,13 @@ function iniciarSimuladoInformatica(){
     const informatica = [
 
         ...hardware,
-        ...software
+        ...software,
+        ...arquivos,
+        ...arquivos,
+        ...office,
+        ...internet,
+        ...redes,
+        ...seguranca
 
     ];
 
@@ -1688,6 +1717,56 @@ case "software":
 
     imagem.src =
         "imagens/mapas/software.png";
+
+    break;
+
+case "arquivos":
+
+    titulo.innerHTML =
+        "🗂 Arquivos, Pastas e Backup";
+
+    imagem.src =
+        "imagens/mapas/arquivos.png";
+
+    break;
+
+case "office":
+
+    titulo.innerHTML =
+        "📊 Office e LibreOffice";
+
+    imagem.src =
+        "imagens/mapas/office.png";
+
+    break;
+
+case "internet":
+
+    titulo.innerHTML =
+        "🌐 Internet e Correio Eletrônico";
+
+    imagem.src =
+        "imagens/mapas/internet.png";
+
+    break;
+
+case "redes":
+
+    titulo.innerHTML =
+        "🌐 Redes de Computadores";
+
+    imagem.src =
+        "imagens/mapas/redes.png";
+
+    break;
+
+case "seguranca":
+
+    titulo.innerHTML =
+        "🔒 Segurança da Informação";
+
+    imagem.src =
+        "imagens/mapas/seguranca.png";
 
     break;
 
@@ -2095,6 +2174,16 @@ const ultimoSalvo =
 
     software: "⚙️ Software",
 
+    arquivos: "🗂 Arquivos, Pastas e Backup",
+
+    office: "📊 Office e LibreOffice",
+
+    internet: "🌐 Internet e Correio Eletrônico",
+
+    redes: "🌐 Redes de Computadores",
+
+    seguranca: "🔒 Segurança da Informação"
+
 };
 
 ultimo = nomesBonitos[assunto];
@@ -2128,7 +2217,12 @@ ultimo = nomesBonitos[assunto];
         interpretacao: "📖 Interpretação de Textos",
         semantica: "🧠 Semântica",
         hardware: "💻 Hardware",
-        software: "⚙️ Software"
+        software: "⚙️ Software",
+        arquivos: "🗂 Arquivos, Pastas e Backup",
+        office: "📊 Office e LibreOffice",
+        internet: "🌐 Internet e Correio Eletrônico",
+        redes: "🌐 Redes de Computadores",
+        seguranca: "🔒 Segurança da Informação"
 
     };
 
