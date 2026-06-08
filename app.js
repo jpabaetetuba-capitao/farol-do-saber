@@ -2260,3 +2260,91 @@ document.getElementById("login").style.display = "none";
     }
 
 }
+
+async function sair(){
+
+    await auth.signOut();
+
+    location.reload();
+
+}
+
+async function finalizarCadastro(){
+
+    const nome =
+        document.getElementById(
+            "nomeCadastro"
+        ).value.trim();
+
+    const email =
+        document.getElementById(
+            "emailCadastro"
+        ).value.trim();
+
+    const senha =
+        document.getElementById(
+            "senhaCadastro"
+        ).value;
+
+    const confirmar =
+        document.getElementById(
+            "confirmarSenhaCadastro"
+        ).value;
+
+    if(
+        !nome ||
+        !email ||
+        !senha ||
+        !confirmar
+    ){
+        alert(
+            "Preencha todos os campos."
+        );
+        return;
+    }
+
+    if(senha !== confirmar){
+
+        alert(
+            "As senhas não coincidem."
+        );
+
+        return;
+    }
+
+    try{
+
+        const credencial =
+            await auth.createUserWithEmailAndPassword(
+                email,
+                senha
+            );
+
+        await db.collection("usuarios")
+        .doc(credencial.user.uid)
+        .set({
+
+            nome: nome,
+            email: email,
+            dataCadastro: new Date()
+
+        });
+
+        alert(
+            "Cadastro realizado com sucesso!"
+        );
+
+        await auth.signOut();
+
+        mostrarTela("login");
+
+    }
+    catch(erro){
+
+        alert(
+            erro.message
+        );
+
+    }
+
+}
