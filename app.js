@@ -2202,6 +2202,8 @@ if(!email || !senha){
 
 async function entrar(){
 
+    alert("1 - Função iniciada");
+
     const email =
         document.getElementById(
             "emailLogin"
@@ -2220,10 +2222,16 @@ async function entrar(){
                 senha
             );
 
+        alert("2 - Login realizado");
+
         const doc =
             await db.collection("usuarios")
             .doc(credencial.user.uid)
             .get();
+
+        alert("3 - Documento encontrado: " + doc.exists);
+
+        alert("4 - Aprovado: " + doc.data().aprovado);
 
         if(
             !doc.exists ||
@@ -2240,15 +2248,15 @@ async function entrar(){
 
         }
 
-        mostrarTela(
-            "inicio"
-        );
+        alert("5 - Entrando no sistema");
+
+        mostrarTela("inicio");
 
     }
     catch(erro){
 
         alert(
-            erro.message
+            "ERRO: " + erro.message
         );
 
     }
