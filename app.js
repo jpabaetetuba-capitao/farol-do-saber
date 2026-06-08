@@ -999,6 +999,28 @@ function mostrarQuestaoSimulado() {
             ${percentual}% concluído
         </strong>
 
+${q.texto ? `
+
+<div class="card texto-base">
+
+    <h3>
+        📄 Texto de Apoio
+    </h3>
+
+    <br>
+
+    <p>
+
+        ${q.texto}
+
+    </p>
+
+</div>
+
+<br>
+
+` : ""}
+
         <p class="pergunta">
 
             ${q.pergunta}
