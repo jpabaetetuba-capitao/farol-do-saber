@@ -2155,6 +2155,16 @@ async function criarConta(){
             "senhaLogin"
         ).value;
 
+if(!email || !senha){
+
+    alert(
+        "Preencha e-mail e senha."
+    );
+
+    return;
+
+}
+
     try{
 
         const credencial =
