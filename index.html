@@ -43,8 +43,64 @@
             Entrar
         </button>
 
-        <button onclick="criarConta()">
-            Criar Conta
+        <button onclick="mostrarTela('cadastro')">
+    Criar Conta
+</button>
+
+    </div>
+
+</div>
+
+</section>
+
+<section id="cadastro" class="tela">
+
+<div class="login-container">
+
+    <div class="login-card">
+
+        <h2>📝 Criar Cadastro</h2>
+
+        <p>
+            Preencha os dados abaixo.
+        </p>
+
+        <br>
+
+        <input
+            type="text"
+            id="nomeCadastro"
+            placeholder="Nome completo">
+
+        <br><br>
+
+        <input
+            type="email"
+            id="emailCadastro"
+            placeholder="Seu e-mail">
+
+        <br><br>
+
+        <input
+            type="password"
+            id="senhaCadastro"
+            placeholder="Senha">
+
+        <br><br>
+
+        <input
+            type="password"
+            id="confirmarSenhaCadastro"
+            placeholder="Confirmar senha">
+
+        <br><br>
+
+        <button onclick="finalizarCadastro()">
+            Finalizar Cadastro
+        </button>
+
+        <button onclick="mostrarTela('login')">
+            Voltar
         </button>
 
     </div>
