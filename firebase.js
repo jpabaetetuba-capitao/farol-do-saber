@@ -19,3 +19,16 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
 const db = firebase.firestore();
+
+auth.onAuthStateChanged((user) => {
+
+    if(user){
+
+        document.getElementById("login")
+            .style.display = "none";
+
+        mostrarTela("inicio");
+
+    }
+
+});
