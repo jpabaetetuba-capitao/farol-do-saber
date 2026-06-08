@@ -141,9 +141,12 @@ button:hover{
 .feedback-acerto{
     background:#d4edda;
     color:#155724;
-    padding:15px;
+    padding:12px;
     border-radius:8px;
     margin-top:15px;
+    white-space: pre-line;
+   
+    
 }
 
 .feedback-erro{
@@ -152,6 +155,7 @@ button:hover{
     padding:15px;
     border-radius:8px;
     margin-top:15px;
+    white-space: pre-line;
 }
 
 #estatisticasConteudo,
