@@ -10,6 +10,19 @@ function mostrarTela(id) {
     });
 
     document.getElementById(id).classList.add("ativa");
+if(id === "cadastro"){
+
+    document.getElementById("login").style.display = "none";
+    document.getElementById("cadastro").style.display = "flex";
+
+}
+
+if(id === "login"){
+
+    document.getElementById("cadastro").style.display = "none";
+    document.getElementById("login").style.display = "flex";
+
+}
 
     localStorage.setItem(
         "farol_telaAtual",
