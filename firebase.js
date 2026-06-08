@@ -20,12 +20,46 @@ const auth = firebase.auth();
 
 const db = firebase.firestore();
 
-auth.onAuthStateChanged((user) => {
+auth.onAuthStateChanged(async (user) => {
 
     if(user){
 
         document.getElementById("login")
             .style.display = "none";
+
+        try{
+
+            const doc =
+                await db.collection("usuarios")
+                .doc(user.uid)
+                .get();
+
+            if(doc.exists){
+
+                const dados = doc.data();
+
+                const campoNome =
+                    document.getElementById(
+                        "nomeUsuario"
+                    );
+
+                if(campoNome){
+
+                    campoNome.innerHTML =
+                        "👋 Olá, " +
+                        dados.nome +
+                        "!";
+
+                }
+
+            }
+
+        }
+        catch(erro){
+
+            console.log(erro);
+
+        }
 
         mostrarTela("inicio");
 
