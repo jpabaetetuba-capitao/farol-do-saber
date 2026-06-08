@@ -2202,8 +2202,6 @@ if(!email || !senha){
 
 async function entrar(){
 
-    alert("1 - Função iniciada");
-
     const email =
         document.getElementById(
             "emailLogin"
@@ -2222,41 +2220,40 @@ async function entrar(){
                 senha
             );
 
-        alert("2 - Login realizado");
+        console.log(
+            "UID:",
+            credencial.user.uid
+        );
 
         const doc =
             await db.collection("usuarios")
             .doc(credencial.user.uid)
             .get();
 
-        alert("3 - Documento encontrado: " + doc.exists);
+        console.log(
+            "Existe?",
+            doc.exists
+        );
 
-        alert("4 - Aprovado: " + doc.data().aprovado);
+        if(doc.exists){
 
-        if(
-            !doc.exists ||
-            doc.data().aprovado !== true
-        ){
-
-            alert(
-                "⛔ Aguardando aprovação do administrador."
+            console.log(
+                doc.data()
             );
 
-            await auth.signOut();
-
-            return;
-
         }
-
-        alert("5 - Entrando no sistema");
 
         mostrarTela("inicio");
 
     }
     catch(erro){
 
+        console.error(
+            erro
+        );
+
         alert(
-            "ERRO: " + erro.message
+            erro.message
         );
 
     }
