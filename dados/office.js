@@ -15,7 +15,33 @@ const office = [
 
     correta: 2,
 
-    feedback: "O valor de R$ 6.710,00 corresponde à soma dos valores da coluna Total (E2 até E6). A função adequada é =SOMA(E2:E6).",
+    feedbackAcerto: `
+Muito bem!
+
+A função SOMA é utilizada para adicionar os valores de um intervalo de células.
+
+Como a célula E7 apresenta o total acumulado dos valores existentes entre E2 e E6, a fórmula correta é =SOMA(E2:E6).
+
+Essa é uma das funções mais utilizadas em planilhas eletrônicas.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+A função SOMA realiza a adição dos valores presentes no intervalo E2:E6.
+
+A letra A está incorreta porque MÉDIA calcula a média dos valores.
+
+A letra B está incorreta porque MÁXIMO retorna apenas o maior valor do intervalo.
+
+A letra D está incorreta porque CONT.SE realiza contagem baseada em critérios.
+
+A letra E está incorreta porque PROCV é utilizada para pesquisa de informações em tabelas.
+`,
+
+    dicaBanca: `
+As bancas costumam cobrar a diferença entre SOMA, MÉDIA, MÁXIMO, MÍNIMO e CONT.SE. Saber identificar a finalidade de cada função é fundamental.
+`,
 
     assunto: "office"
 },
@@ -35,10 +61,33 @@ const office = [
 
     correta: 2,
 
-    feedback: "A média é calculada somando todas as notas e dividindo pela quantidade de alunos. (8 + 6 + 10 + 7 + 9) ÷ 5 = 40 ÷ 5 = 8. A função MÉDIA é uma das mais cobradas em provas de Excel.",
+    feedbackAcerto: `
+Correto!
+
+A função MÉDIA calcula a média aritmética dos valores informados.
+
+Somando as notas e dividindo pela quantidade de alunos, obtém-se o resultado 8.
+
+A função MÉDIA é amplamente utilizada em planilhas acadêmicas, financeiras e administrativas.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+A soma das notas é 40.
+
+Dividindo 40 por 5 alunos, o resultado é 8.
+
+As demais alternativas apresentam valores incompatíveis com o cálculo realizado pela função MÉDIA.
+`,
+
+    dicaBanca: `
+Em concursos, é comum a banca apresentar uma tabela e exigir o cálculo manual do resultado da função MÉDIA.
+`,
 
     assunto: "office"
 },
+
 {
     pergunta: "Ao aplicar a função =MÁXIMO(B2:B6) aos dados apresentados na imagem, qual valor será retornado?",
 
@@ -54,10 +103,33 @@ const office = [
 
     correta: 1,
 
-    feedback: "A função MÁXIMO retorna o maior valor do intervalo analisado. Entre os valores apresentados, o maior é R$ 3.200,00, correspondente ao vendedor Carlos.\n\nDica de prova: a função MÁXIMO retorna o valor numérico, não o nome associado a ele.",
+    feedbackAcerto: `
+Excelente!
+
+A função MÁXIMO retorna o maior valor existente em um intervalo de células.
+
+Entre os valores apresentados na tabela, o maior é R$ 3.200,00.
+
+Essa função é muito utilizada em relatórios financeiros, vendas e análises estatísticas.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+A função MÁXIMO procura o maior valor numérico dentro do intervalo informado.
+
+Ao analisar os valores da tabela, verifica-se que R$ 3.200,00 é o maior deles.
+
+As demais alternativas representam valores existentes na planilha, mas não correspondem ao valor máximo.
+`,
+
+    dicaBanca: `
+Não confunda MÁXIMO com MAIOR. MÁXIMO retorna diretamente o maior valor encontrado no intervalo.
+`,
 
     assunto: "office"
 },
+
 {
     pergunta: "Considerando os dados apresentados na imagem, qual valor seria retornado pela função =MÍNIMO(A2:A6)?",
 
@@ -73,10 +145,33 @@ const office = [
 
     correta: 3,
 
-    feedback: "A função MÍNIMO retorna o menor valor existente no intervalo informado. Entre as temperaturas 28, 31, 25, 22 e 27, o menor valor é 22.\n\nDica de prova: não confunda a função MÍNIMO com MENOR. A função MÍNIMO retorna diretamente o menor valor do intervalo.",
+    feedbackAcerto: `
+Muito bem!
+
+A função MÍNIMO retorna o menor valor existente em um conjunto de dados.
+
+Comparando todos os valores apresentados na tabela, o menor deles é 22.
+
+Essa função é frequentemente utilizada para identificar menores preços, notas ou temperaturas.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra D.
+
+A função MÍNIMO retorna o menor valor encontrado no intervalo analisado.
+
+Entre os números apresentados, o menor valor é 22.
+
+As demais alternativas fazem parte da tabela, porém não representam o menor valor existente.
+`,
+
+    dicaBanca: `
+Questões envolvendo MÁXIMO e MÍNIMO costumam aparecer juntas para avaliar a interpretação de tabelas.
+`,
 
     assunto: "office"
 },
+
 {
     pergunta: "Considerando os dados apresentados na imagem, qual resultado será retornado pela função =CONT.SE(A2:A7;\"Aprovado\")?",
 
@@ -92,7 +187,29 @@ const office = [
 
     correta: 2,
 
-    feedback: "A função CONT.SE conta quantas células atendem ao critério informado. Na tabela existem quatro ocorrências da palavra 'Aprovado' (linhas 2, 4, 5 e 7), portanto o resultado será 4.\n\nDica de prova: CONT.SE conta apenas as células que correspondem exatamente ao critério especificado.",
+    feedbackAcerto: `
+Perfeito!
+
+A função CONT.SE realiza uma contagem baseada em um critério.
+
+Na tabela apresentada, a palavra 'Aprovado' aparece quatro vezes.
+
+Por esse motivo, o resultado retornado pela função será 4.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+A função CONT.SE conta quantas células atendem exatamente ao critério informado.
+
+Ao analisar a tabela, existem quatro ocorrências da palavra 'Aprovado'.
+
+As demais alternativas representam quantidades incorretas para o critério solicitado.
+`,
+
+    dicaBanca: `
+CONT.SE é uma das funções mais cobradas em concursos juntamente com SOMASE, MÉDIASE e PROCV.
+`,
 
     assunto: "office"
 },
@@ -111,10 +228,35 @@ const office = [
 
     correta: 1,
 
-    feedback: "A nota de Bruno é 4. Como 4 não é maior ou igual a 7, a condição da função SE é falsa e o resultado retornado será 'Reprovado'.\n\nDica de prova: a função SE possui a estrutura =SE(teste_lógico; valor_se_verdadeiro; valor_se_falso).",
+    feedbackAcerto: `
+Correto!
+
+A função SE realiza um teste lógico.
+
+Como a nota de Bruno é 4, a condição B2>=7 não é satisfeita.
+
+Dessa forma, a função retorna o valor definido para a condição falsa: 'Reprovado'.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+A função SE verifica se a nota é maior ou igual a 7.
+
+Como Bruno possui nota 4, a condição é falsa.
+
+Por isso, o resultado retornado é 'Reprovado'.
+
+As demais alternativas não correspondem ao valor configurado para a condição falsa da fórmula.
+`,
+
+    dicaBanca: `
+Memorize a estrutura da função SE: teste lógico, valor se verdadeiro e valor se falso.
+`,
 
     assunto: "office"
 },
+
 {
     pergunta: "Considere que a célula C2 contenha a fórmula =E(A2>=7;B2>=75%). Com base nos dados apresentados na imagem, qual será o resultado retornado para a primeira linha?",
 
@@ -130,10 +272,33 @@ const office = [
 
     correta: 0,
 
-    feedback: "A função E retorna VERDADEIRO somente quando todas as condições são verdadeiras. Na primeira linha, a nota é 8 (maior ou igual a 7) e a frequência é 90% (maior ou igual a 75%). Como ambas as condições são satisfeitas, o resultado será VERDADEIRO.\n\nDica de prova: a função E exige que todas as condições sejam verdadeiras para retornar VERDADEIRO.",
+    feedbackAcerto: `
+Muito bem!
+
+A função E retorna VERDADEIRO apenas quando todas as condições avaliadas são verdadeiras.
+
+Na situação apresentada, tanto a nota quanto a frequência atendem aos critérios estabelecidos.
+
+Por isso, o resultado retornado é VERDADEIRO.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra A.
+
+A função E exige que todas as condições sejam verdadeiras.
+
+Como a nota é maior ou igual a 7 e a frequência é maior ou igual a 75%, ambas as condições foram satisfeitas.
+
+Logo, o resultado retornado é VERDADEIRO.
+`,
+
+    dicaBanca: `
+Não confunda E com OU. A função E exige que todas as condições sejam verdadeiras.
+`,
 
     assunto: "office"
 },
+
 {
     pergunta: "Considerando os valores apresentados na planilha, qual será o resultado da fórmula =PROCV(\"Monitor\";A2:B6;2;FALSO)?",
 
@@ -149,10 +314,35 @@ const office = [
 
     correta: 1,
 
-    feedback: "A função PROCV procura o valor 'Monitor' na primeira coluna do intervalo A2:B6 e retorna o valor correspondente da segunda coluna. O valor associado ao produto Monitor é R$ 350,00.\n\nDica de prova: no PROCV, o valor procurado deve estar na primeira coluna da matriz de pesquisa.",
+    feedbackAcerto: `
+Excelente!
+
+A função PROCV localiza um valor na primeira coluna da tabela e retorna uma informação correspondente na mesma linha.
+
+Ao procurar o produto 'Monitor', a função retorna o valor associado de R$ 350,00.
+
+Essa é uma das funções mais cobradas em concursos públicos.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+A função PROCV procura o texto 'Monitor' na primeira coluna da tabela.
+
+Após localizar o produto, retorna o conteúdo da segunda coluna correspondente.
+
+O valor associado é R$ 350,00.
+
+As demais alternativas representam valores incorretos para a pesquisa realizada.
+`,
+
+    dicaBanca: `
+No PROCV, o valor procurado deve estar obrigatoriamente na primeira coluna da matriz de pesquisa.
+`,
 
     assunto: "office"
 },
+
 {
     pergunta: "Observando a planilha da imagem, qual função do Excel é a mais adequada para retornar automaticamente o nome 'Carlos' quando o código 103 é informado?",
 
@@ -168,10 +358,34 @@ const office = [
 
     correta: 2,
 
-    feedback: "A função PROCV (Procura Vertical) é utilizada para localizar um valor na primeira coluna de uma tabela e retornar uma informação correspondente em outra coluna. Na imagem, ao informar o código 103, a função retorna o nome Carlos.\n\nDica de prova: a PROCV é uma das funções mais cobradas em concursos, especialmente em situações de busca de códigos, matrículas, produtos e funcionários.",
+    feedbackAcerto: `
+Perfeito!
+
+A função PROCV é utilizada para localizar informações em tabelas.
+
+Ao informar o código 103, ela pesquisa a tabela e retorna automaticamente o nome correspondente.
+
+Esse tipo de busca é muito comum em cadastros, estoques e sistemas administrativos.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+A função PROCV realiza pesquisas verticais em tabelas.
+
+Nesse caso, ela localiza o código 103 e retorna o nome associado.
+
+As demais funções possuem outras finalidades:
+MÉDIA calcula médias, CONT.SE realiza contagens, MÁXIMO retorna o maior valor e SOMA efetua adições.
+`,
+
+    dicaBanca: `
+Questões envolvendo PROCV aparecem frequentemente associadas a tabelas de produtos, funcionários e alunos.
+`,
 
     assunto: "office"
 },
+
 {
     pergunta: "Observando a planilha apresentada na imagem, qual categoria possui o maior valor de despesa?",
 
@@ -187,11 +401,30 @@ const office = [
 
     correta: 2,
 
-    feedback: "Ao analisar os valores da tabela, verifica-se que a categoria Moradia possui a maior despesa, totalizando R$ 1.200,00. Questões desse tipo exigem interpretação da planilha e identificação do maior valor apresentado.",
+    feedbackAcerto: `
+Correto!
+
+Ao analisar os valores da tabela, verifica-se que a categoria Moradia apresenta a maior despesa.
+
+Questões desse tipo avaliam a capacidade de interpretar corretamente os dados apresentados em planilhas.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+Comparando os valores das categorias apresentadas, Moradia possui o maior valor de despesa.
+
+As demais categorias apresentam valores inferiores.
+
+Esse tipo de questão exige atenção à leitura dos dados da tabela.
+`,
+
+    dicaBanca: `
+Nem toda questão de Excel envolve fórmulas. Muitas bancas cobram apenas interpretação de planilhas e gráficos.
+`,
 
     assunto: "office"
-},
-{
+},{
     pergunta: "Observando a planilha apresentada na imagem, qual vendedor está associado ao produto 'Monitor'?",
 
     imagem: "imagens/questoes/excel11.png",
@@ -206,10 +439,29 @@ const office = [
 
     correta: 2,
 
-    feedback: "Ao analisar a linha correspondente ao produto 'Monitor', verifica-se que o vendedor associado é Carlos. Questões desse tipo avaliam a capacidade de localizar informações em tabelas e interpretar corretamente os dados apresentados.",
+    feedbackAcerto: `
+Muito bem!
+
+Ao localizar o produto 'Monitor' na tabela e analisar a mesma linha, verifica-se que o vendedor associado é Carlos.
+
+Questões desse tipo avaliam a capacidade de localizar informações e interpretar corretamente os dados apresentados.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+Ao observar a linha correspondente ao produto 'Monitor', verifica-se que o vendedor associado é Carlos.
+
+As demais alternativas correspondem a outros registros da tabela ou não possuem relação com o produto solicitado.
+`,
+
+    dicaBanca: `
+Bancas frequentemente apresentam tabelas simples para testar a interpretação de dados sem exigir o uso de fórmulas.
+`,
 
     assunto: "office"
 },
+
 {
     pergunta: "Observando a imagem do Microsoft Word, qual guia da Faixa de Opções está selecionada no momento?",
 
@@ -225,10 +477,29 @@ const office = [
 
     correta: 2,
 
-    feedback: "A guia 'Página Inicial' está destacada na Faixa de Opções. É nessa guia que se encontram os principais comandos de formatação de texto, como fonte, alinhamento, negrito, itálico e estilos.",
+    feedbackAcerto: `
+Excelente!
+
+A guia Página Inicial é a guia principal do Microsoft Word.
+
+Nela estão disponíveis comandos de formatação de texto, fonte, alinhamento, estilos, marcadores e edição básica do documento.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+A guia Página Inicial concentra os comandos mais utilizados do Word, como negrito, itálico, tamanho da fonte, alinhamento e estilos.
+
+As demais guias possuem funções específicas diferentes daquelas exibidas na imagem.
+`,
+
+    dicaBanca: `
+Questões sobre a Faixa de Opções costumam cobrar a localização dos comandos dentro das guias do Word.
+`,
 
     assunto: "office"
 },
+
 {
     pergunta: "Observando a imagem do Microsoft Word, qual recurso está sendo editado no documento?",
 
@@ -244,10 +515,31 @@ const office = [
 
     correta: 2,
 
-    feedback: "A imagem mostra a guia contextual 'Cabeçalho e Rodapé' ativa e as áreas de cabeçalho e rodapé destacadas no documento. Esse recurso é utilizado para inserir informações que serão exibidas em todas as páginas, como títulos, datas, logotipos e numeração de páginas.",
+    feedbackAcerto: `
+Correto!
+
+A imagem apresenta o modo de edição de Cabeçalho e Rodapé.
+
+Esse recurso permite inserir informações que serão repetidas automaticamente nas páginas do documento, como títulos, datas, logotipos e numeração.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+O Word está exibindo a área de Cabeçalho e Rodapé em modo de edição.
+
+Esse recurso é utilizado para inserir elementos que aparecem de forma repetida ao longo do documento.
+
+As demais alternativas não correspondem ao recurso mostrado na imagem.
+`,
+
+    dicaBanca: `
+Cabeçalho aparece na parte superior da página e Rodapé na parte inferior. Ambos podem conter textos, imagens e numeração.
+`,
 
     assunto: "office"
 },
+
 {
     pergunta: "Observando a imagem do Microsoft Word, qual recurso está sendo exibido na parte superior do documento?",
 
@@ -263,10 +555,31 @@ const office = [
 
     correta: 2,
 
-    feedback: "A imagem apresenta um Sumário Automático criado a partir dos estilos de títulos do Word. Esse recurso gera automaticamente a relação de capítulos, seções e respectivas páginas do documento.\n\nDica de prova: para que o Sumário Automático funcione corretamente, é necessário aplicar estilos como Título 1, Título 2 e Título 3 aos títulos do documento.",
+    feedbackAcerto: `
+Perfeito!
+
+O recurso exibido é um Sumário Automático.
+
+Ele é gerado a partir dos estilos de títulos aplicados ao documento e permite atualizar automaticamente a numeração das páginas.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+O Word gera o Sumário Automático utilizando os estilos de títulos definidos no documento.
+
+Esse recurso facilita a organização e navegação em textos longos.
+
+As demais alternativas representam recursos diferentes do exibido na imagem.
+`,
+
+    dicaBanca: `
+Sem utilizar os estilos Título 1, Título 2 e Título 3, o Word não consegue gerar corretamente um sumário automático.
+`,
 
     assunto: "office"
 },
+
 {
     pergunta: "A imagem do Microsoft Word exibe duas marcações pontilhadas identificadas como 'Quebra de Seção'. Qual é a principal finalidade desse recurso?",
 
@@ -282,11 +595,30 @@ const office = [
 
     correta: 1,
 
-    feedback: "As Quebras de Seção permitem dividir um documento em partes independentes. Cada seção pode possuir configurações próprias, como orientação da página (retrato ou paisagem), numeração, cabeçalhos, rodapés e margens diferentes.\n\nDica de concurso: a Quebra de Página apenas inicia uma nova página, enquanto a Quebra de Seção cria uma nova seção com configurações próprias. Essa diferença é muito cobrada em provas de informática.",
+    feedbackAcerto: `
+Muito bem!
 
-    assunto: 'office'
-},
-{
+As Quebras de Seção permitem dividir um documento em partes independentes.
+
+Cada seção pode possuir configurações próprias de margens, orientação da página, cabeçalhos, rodapés e numeração.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+A Quebra de Seção cria uma nova seção dentro do documento, permitindo configurações independentes para cada parte.
+
+Ela é diferente da Quebra de Página, que apenas inicia uma nova página sem criar uma nova seção.
+
+As demais alternativas não representam a finalidade desse recurso.
+`,
+
+    dicaBanca: `
+Uma das pegadinhas mais comuns é confundir Quebra de Página com Quebra de Seção.
+`,
+
+    assunto: "office"
+},{
     pergunta: "A imagem mostra duas Quebras de Seção diferentes no Microsoft Word: 'Próxima Página' e 'Página Ímpar'. Qual alternativa descreve corretamente a diferença entre elas?",
 
     imagem: "imagens/questoes/word05.png",
@@ -301,10 +633,31 @@ const office = [
 
     correta: 1,
 
-    feedback: "Correto! A Quebra de Seção 'Próxima Página' inicia a nova seção na página imediatamente seguinte. Já a Quebra de Seção 'Página Ímpar' força o início da nova seção na próxima página ímpar disponível, podendo inclusive inserir uma página em branco para manter essa regra.\n\nDica de concurso: as quebras Página Ímpar e Página Par são muito utilizadas em livros, apostilas e documentos que seguem padrão de impressão frente e verso. Bancas adoram cobrar essa diferença.",
+    feedbackAcerto: `
+Excelente!
 
-    assunto: 'office'
+A Quebra de Seção do tipo Próxima Página inicia a nova seção imediatamente na página seguinte.
+
+Já a opção Página Ímpar força o início da nova seção na próxima página ímpar disponível, podendo inclusive inserir uma página em branco para respeitar essa regra.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+A quebra Próxima Página inicia a nova seção na página seguinte.
+
+A quebra Página Ímpar inicia a nova seção obrigatoriamente em uma página ímpar.
+
+As demais alternativas apresentam características incorretas sobre o funcionamento das Quebras de Seção.
+`,
+
+    dicaBanca: `
+Questões sobre Quebras de Seção costumam aparecer em provas que cobram recursos avançados do Word.
+`,
+
+    assunto: "office"
 },
+
 {
     pergunta: "Observando a interface do Microsoft PowerPoint exibida na imagem, qual elemento localizado à esquerda da tela permite ao usuário visualizar e navegar rapidamente entre os slides da apresentação?",
 
@@ -320,10 +673,31 @@ const office = [
 
     correta: 2,
 
-    feedback: "Correto! O Painel de Miniaturas de Slides fica localizado à esquerda da janela do PowerPoint e exibe versões reduzidas dos slides da apresentação. Ele permite navegar rapidamente, reorganizar a ordem dos slides e selecionar um slide específico para edição.\n\nPegadinha de concurso: a Faixa de Opções (Ribbon) fica na parte superior e contém os comandos; já o Painel de Miniaturas serve exclusivamente para visualização e navegação entre os slides.",
+    feedbackAcerto: `
+Correto!
 
-    assunto: 'office'
+O Painel de Miniaturas de Slides exibe versões reduzidas dos slides da apresentação.
+
+Ele permite navegar rapidamente entre os slides, alterar a ordem deles e selecionar qualquer slide para edição.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+O Painel de Miniaturas de Slides fica localizado à esquerda da janela do PowerPoint.
+
+Sua principal função é facilitar a navegação e reorganização dos slides.
+
+As demais alternativas representam elementos diferentes da interface do programa.
+`,
+
+    dicaBanca: `
+Bancas gostam de cobrar a identificação visual dos componentes da interface do PowerPoint.
+`,
+
+    assunto: "office"
 },
+
 {
     pergunta: "Observando a apresentação exibida no Microsoft PowerPoint, qual recurso permite alterar rapidamente o modelo visual de todos os slides, incluindo cores, fontes e efeitos, mantendo a padronização da apresentação?",
 
@@ -339,10 +713,31 @@ const office = [
 
     correta: 2,
 
-    feedback: "Correto! Os Temas do PowerPoint aplicam um conjunto padronizado de cores, fontes, efeitos e estilos a toda a apresentação. Alterar o tema modifica rapidamente a aparência global dos slides sem a necessidade de formatar cada elemento individualmente.\n\nPegadinha de concurso: Layout altera apenas a disposição dos elementos em um slide específico. Tema altera o visual completo da apresentação.",
+    feedbackAcerto: `
+Muito bem!
 
-    assunto: 'office'
+Os Temas permitem alterar rapidamente o visual completo da apresentação.
+
+Ao aplicar um tema, cores, fontes, estilos e efeitos são atualizados automaticamente em todos os slides.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+Os Temas são conjuntos padronizados de cores, fontes e efeitos visuais.
+
+Eles permitem modificar a aparência global da apresentação sem editar slide por slide.
+
+As demais alternativas possuem funções diferentes.
+`,
+
+    dicaBanca: `
+Não confunda Tema com Layout. O Tema altera o visual geral; o Layout altera apenas a disposição dos elementos em um slide.
+`,
+
+    assunto: "office"
 },
+
 {
     pergunta: "Na apresentação exibida, observa-se uma imagem ocupando grande parte do slide de capa. Qual recurso do PowerPoint permite inserir fotografias, ilustrações e outros elementos gráficos diretamente em um slide?",
 
@@ -358,10 +753,31 @@ const office = [
 
     correta: 1,
 
-    feedback: "Correto! O comando Inserir Imagens, localizado na guia Inserir, permite adicionar fotografias, capturas de tela, ícones e outros recursos gráficos aos slides. Esses elementos são amplamente utilizados para tornar apresentações mais visuais e atrativas.\n\nPegadinha de concurso: Animações controlam movimentos dos objetos; Transições controlam a passagem entre slides. Nenhum desses recursos é utilizado para inserir imagens no slide.",
+    feedbackAcerto: `
+Perfeito!
 
-    assunto: 'office'
+O comando Inserir Imagens permite adicionar fotografias, figuras, capturas de tela e outros elementos gráficos aos slides.
+
+Esse recurso é fundamental para tornar apresentações mais visuais e atrativas.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+O comando Inserir Imagens está disponível na guia Inserir do PowerPoint.
+
+Ele permite adicionar elementos gráficos diretamente aos slides.
+
+As demais alternativas possuem funções relacionadas à navegação, efeitos ou organização da apresentação.
+`,
+
+    dicaBanca: `
+Animações e Transições não inserem imagens. Elas apenas aplicam efeitos aos objetos já existentes.
+`,
+
+    assunto: "office"
 },
+
 {
     pergunta: "A imagem mostra o Microsoft PowerPoint com um único slide em branco selecionado. Qual comando da guia Página Inicial permite inserir rapidamente um novo slide na apresentação?",
 
@@ -377,12 +793,30 @@ const office = [
 
     correta: 0,
 
-    feedback: "Correto! O comando Novo Slide, localizado no grupo Slides da guia Página Inicial, adiciona um novo slide à apresentação. Ao clicar na seta do botão, o usuário pode escolher diferentes layouts para o novo slide.\n\nPegadinha de concurso: Redefinir restaura o layout original do slide atual; Layout altera a estrutura de um slide existente; Novo Slide cria efetivamente um novo slide na apresentação.",
+    feedbackAcerto: `
+Excelente!
 
-    assunto: 'office'
-},
+O comando Novo Slide adiciona um novo slide à apresentação.
 
-{
+Além disso, permite escolher diferentes layouts para o slide que será criado.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra A.
+
+O comando Novo Slide é responsável por criar novos slides dentro da apresentação.
+
+Layout altera a estrutura de um slide existente e Redefinir restaura as configurações originais do slide atual.
+
+As demais opções não criam novos slides.
+`,
+
+    dicaBanca: `
+A diferença entre Novo Slide e Layout é frequentemente cobrada em concursos de informática.
+`,
+
+    assunto: "office"
+},{
     pergunta: "No Microsoft Excel, qual função é utilizada para retornar a quantidade de células que atendem a um único critério estabelecido pelo usuário?",
 
     alternativas: [
@@ -395,10 +829,35 @@ const office = [
 
     correta: 1,
 
-    feedback: "A função CONT.SE conta quantas células de um intervalo atendem a um critério específico. É amplamente cobrada em concursos juntamente com SOMASE e MÉDIASE.",
+    feedbackAcerto: `
+Correto!
 
-    assunto: 'office'
+A função CONT.SE é utilizada para contar quantas células atendem a um determinado critério.
+
+Ela é amplamente utilizada em relatórios, controles de estoque, pesquisas e planilhas administrativas.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+A função CONT.SE realiza contagem baseada em um critério definido pelo usuário.
+
+A função SOMASE realiza somas condicionais.
+
+PROCV realiza pesquisas em tabelas.
+
+MÉDIASE calcula médias condicionais.
+
+SE executa testes lógicos.
+`,
+
+    dicaBanca: `
+CONT.SE, SOMASE e MÉDIASE costumam aparecer juntas em provas de Excel e LibreOffice Calc.
+`,
+
+    assunto: "office"
 },
+
 {
     pergunta: "No Microsoft Word, o recurso utilizado para gerar automaticamente uma lista de títulos e subtítulos de um documento é denominado:",
 
@@ -412,10 +871,33 @@ const office = [
 
     correta: 2,
 
-    feedback: "O Sumário Automático é criado a partir dos estilos de título aplicados ao documento.",
+    feedbackAcerto: `
+Muito bem!
 
-    assunto: 'office'
+O Sumário Automático organiza os títulos e subtítulos do documento e gera automaticamente a relação de tópicos com suas respectivas páginas.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+O Sumário é criado a partir dos estilos de títulos aplicados ao documento.
+
+Legenda identifica figuras e tabelas.
+
+Nota de Rodapé adiciona observações complementares.
+
+Referência Cruzada cria ligações entre elementos do documento.
+
+Índice Remissivo possui finalidade diferente do sumário.
+`,
+
+    dicaBanca: `
+Sem utilizar os estilos Título 1, Título 2 e Título 3, o Word não consegue gerar corretamente um Sumário Automático.
+`,
+
+    assunto: "office"
 },
+
 {
     pergunta: "No PowerPoint, as transições são aplicadas:",
 
@@ -429,10 +911,31 @@ const office = [
 
     correta: 2,
 
-    feedback: "Transições controlam os efeitos visuais exibidos durante a mudança de um slide para outro.",
+    feedbackAcerto: `
+Excelente!
 
-    assunto: 'office'
+As transições controlam os efeitos visuais exibidos quando ocorre a mudança de um slide para outro durante a apresentação.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+Transições são aplicadas entre slides.
+
+Quando o efeito é aplicado a textos, imagens ou formas dentro do slide, estamos falando de Animações.
+
+Essa é uma das diferenças mais cobradas em concursos.
+`,
+
+    dicaBanca: `
+Transição = entre slides.
+
+Animação = dentro do slide.
+`,
+
+    assunto: "office"
 },
+
 {
     pergunta: "Qual função do Excel procura um valor na primeira coluna de uma tabela e retorna uma informação correspondente localizada na mesma linha?",
 
@@ -446,10 +949,32 @@ const office = [
 
     correta: 3,
 
-    feedback: "PROCV significa Procura Vertical e é uma das funções mais cobradas em provas de informática.",
+    feedbackAcerto: `
+Perfeito!
 
-    assunto: 'office'
+A função PROCV realiza buscas verticais em tabelas.
+
+Ela localiza um valor na primeira coluna e retorna uma informação correspondente na mesma linha.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra D.
+
+PROCV significa Procura Vertical.
+
+Essa função é utilizada para localizar informações em tabelas e retornar dados relacionados.
+
+As demais funções possuem finalidades diferentes:
+SE realiza testes lógicos, CONT.SE conta ocorrências, SOMASE soma valores condicionais e MÉDIA calcula médias.
+`,
+
+    dicaBanca: `
+PROCV é uma das funções mais cobradas em concursos públicos e processos seletivos.
+`,
+
+    assunto: "office"
 },
+
 {
     pergunta: "No Word, qual recurso permite inserir explicações ou observações complementares ao texto no rodapé da página?",
 
@@ -463,11 +988,30 @@ const office = [
 
     correta: 1,
 
-    feedback: "As notas de rodapé são utilizadas para comentários, referências e observações complementares.",
+    feedbackAcerto: `
+Correto!
 
-    assunto: 'office'
-},
-{
+As Notas de Rodapé permitem inserir observações, referências bibliográficas ou informações complementares vinculadas ao texto principal.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+As Notas de Rodapé aparecem na parte inferior da página e servem para complementar informações do texto.
+
+Comentários são utilizados durante revisões.
+
+Referências Cruzadas criam ligações internas no documento.
+
+As demais alternativas não possuem essa finalidade.
+`,
+
+    dicaBanca: `
+Não confunda Nota de Rodapé com Comentário. Ambos servem para observações, mas possuem objetivos diferentes.
+`,
+
+    assunto: "office"
+},{
     pergunta: "No Excel, a fórmula =SE(A1>=7;\"Aprovado\";\"Reprovado\") retornará:",
 
     alternativas: [
@@ -480,9 +1024,31 @@ const office = [
 
     correta: 2,
 
-    feedback: "A função SE executa testes lógicos retornando valores diferentes conforme a condição seja verdadeira ou falsa.",
+    feedbackAcerto: `
+Muito bem!
 
-    assunto: 'office'
+A função SE permite executar um teste lógico e retornar resultados diferentes conforme a condição seja verdadeira ou falsa.
+
+Se A1 for maior ou igual a 7, o resultado será "Aprovado".
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+A função SE avalia uma condição lógica.
+
+Quando A1 é maior ou igual a 7, retorna "Aprovado".
+
+Caso contrário, retorna "Reprovado".
+
+As demais alternativas não representam corretamente o comportamento da fórmula apresentada.
+`,
+
+    dicaBanca: `
+A estrutura da função SE é uma das mais cobradas em concursos: condição, valor verdadeiro e valor falso.
+`,
+
+    assunto: "office"
 },
 
 {
@@ -498,10 +1064,27 @@ const office = [
 
     correta: 3,
 
-    feedback: "A guia Animações permite configurar efeitos aplicados a textos, imagens, formas e outros objetos.",
+    feedbackAcerto: `
+Excelente!
 
-    assunto: 'office'
+A guia Animações contém os recursos responsáveis pelos efeitos aplicados a textos, imagens, formas e demais objetos de um slide.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra D.
+
+Os efeitos de entrada, saída, destaque e trajetória de movimento são configurados na guia Animações.
+
+As demais guias possuem funções diferentes relacionadas ao design, inserção ou visualização da apresentação.
+`,
+
+    dicaBanca: `
+Não confunda Animações com Transições. Animações atuam nos objetos; Transições atuam entre os slides.
+`,
+
+    assunto: "office"
 },
+
 {
     pergunta: "No Excel, qual operador é utilizado para representar uma condição lógica 'diferente de'?",
 
@@ -515,9 +1098,31 @@ const office = [
 
     correta: 2,
 
-    feedback: "O operador <> significa diferente de e é muito utilizado em funções lógicas e filtros.",
+    feedbackAcerto: `
+Correto!
 
-    assunto: 'office'
+O operador <> significa "diferente de".
+
+Ele é amplamente utilizado em funções lógicas, filtros e testes condicionais.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+No Excel, o operador <> representa a condição "diferente de".
+
+O símbolo = representa igualdade.
+
+Os símbolos > e < representam comparações de maior ou menor valor.
+
+Já <= e >= representam comparações compostas.
+`,
+
+    dicaBanca: `
+Questões sobre operadores lógicos costumam aparecer em conjunto com as funções SE, E e OU.
+`,
+
+    assunto: "office"
 },
 
 {
@@ -533,9 +1138,31 @@ const office = [
 
     correta: 1,
 
-    feedback: "Ctrl+B aplica ou remove a formatação em negrito do texto selecionado.",
+    feedbackAcerto: `
+Muito bem!
 
-    assunto: 'office'
+O atalho Ctrl + B ativa ou remove a formatação em negrito no texto selecionado.
+
+É um dos atalhos mais utilizados do Microsoft Word.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+Ctrl + B é utilizado para aplicar ou remover o negrito.
+
+Salvar normalmente utiliza Ctrl + S.
+
+Abrir documento utiliza Ctrl + O.
+
+As demais opções não correspondem ao atalho apresentado.
+`,
+
+    dicaBanca: `
+Atalhos de teclado aparecem com frequência em provas de informática e costumam gerar pegadinhas.
+`,
+
+    assunto: "office"
 },
 
 {
@@ -551,11 +1178,28 @@ const office = [
 
     correta: 1,
 
-    feedback: "O modo Apresentação de Slides exibe os slides em tela cheia para apresentação.",
+    feedbackAcerto: `
+Perfeito!
 
-    assunto: 'office'
-},
-{
+O modo Apresentação de Slides exibe os slides em tela cheia para que sejam apresentados ao público.
+
+É o modo utilizado durante palestras, aulas e reuniões.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+O modo Apresentação de Slides tem como finalidade exibir a apresentação em tela cheia.
+
+As demais alternativas correspondem a tarefas de edição realizadas antes da apresentação.
+`,
+
+    dicaBanca: `
+Lembre-se: F5 inicia a apresentação desde o primeiro slide e Shift + F5 inicia a partir do slide atual.
+`,
+
+    assunto: "office"
+},{
     pergunta: "No Excel, qual função permite somar valores que atendam simultaneamente a mais de um critério?",
 
     alternativas: [
@@ -568,10 +1212,33 @@ const office = [
 
     correta: 2,
 
-    feedback: "SOMASES permite múltiplos critérios simultâneos. Já SOMASE trabalha com apenas um critério.",
+    feedbackAcerto: `
+Excelente!
 
-    assunto: 'office'
+A função SOMASES permite realizar somas utilizando múltiplos critérios ao mesmo tempo.
+
+Ela é muito utilizada em relatórios financeiros, controles de vendas e análises gerenciais.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+A função SOMASES realiza somas condicionais utilizando dois ou mais critérios.
+
+A função SOMASE trabalha com apenas um critério.
+
+CONT.SE realiza contagens e PROCV executa pesquisas em tabelas.
+
+Já SOMA simplesmente adiciona valores sem aplicar condições.
+`,
+
+    dicaBanca: `
+A diferença entre SOMASE e SOMASES é bastante cobrada em concursos de informática.
+`,
+
+    assunto: "office"
 },
+
 {
     pergunta: "No Word, o recurso Mala Direta é utilizado principalmente para:",
 
@@ -585,10 +1252,32 @@ const office = [
 
     correta: 1,
 
-    feedback: "A Mala Direta combina uma fonte de dados com um documento-modelo para produzir cartas, etiquetas e e-mails personalizados.",
+    feedbackAcerto: `
+Muito bem!
 
-    assunto: 'office'
-},{
+A Mala Direta permite combinar um documento modelo com uma base de dados para gerar documentos personalizados.
+
+É amplamente utilizada para cartas, etiquetas, certificados e comunicados.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+A Mala Direta automatiza a criação de documentos personalizados para vários destinatários.
+
+Ela utiliza um documento principal e uma fonte de dados.
+
+As demais alternativas referem-se a recursos diferentes do Word.
+`,
+
+    dicaBanca: `
+Mala Direta é um dos recursos avançados mais cobrados em provas de Microsoft Word.
+`,
+
+    assunto: "office"
+},
+
+{
     pergunta: "No PowerPoint, qual recurso permite que alterações de layout e formatação sejam aplicadas a vários slides simultaneamente?",
 
     alternativas: [
@@ -601,10 +1290,30 @@ const office = [
 
     correta: 2,
 
-    feedback: "O Mestre de Slides controla elementos globais da apresentação, como logotipos, fontes e posicionamento de objetos.",
+    feedbackAcerto: `
+Correto!
 
-    assunto: 'office'
-},{
+O Mestre de Slides permite controlar elementos globais da apresentação.
+
+Ao modificar o Mestre, as alterações podem ser aplicadas automaticamente a vários slides.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+O Mestre de Slides é utilizado para padronizar layouts, fontes, logotipos e posicionamento de elementos.
+
+As demais alternativas possuem funções relacionadas à navegação ou efeitos visuais.
+`,
+
+    dicaBanca: `
+Questões sobre Mestre de Slides costumam aparecer associadas à padronização de apresentações corporativas.
+`,
+
+    assunto: "office"
+},
+
+{
     pergunta: "No Excel, qual resultado será retornado pela fórmula =E(5>3;8<10)?",
 
     alternativas: [
@@ -617,10 +1326,32 @@ const office = [
 
     correta: 1,
 
-    feedback: "A função E retorna VERDADEIRO somente quando todas as condições são verdadeiras.",
+    feedbackAcerto: `
+Perfeito!
 
-    assunto: 'office'
-},{
+A função E retorna VERDADEIRO quando todas as condições avaliadas são verdadeiras.
+
+Como 5 é maior que 3 e 8 é menor que 10, ambas as condições são satisfeitas.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+A função E exige que todas as condições sejam verdadeiras.
+
+Na expressão apresentada, as duas comparações são verdadeiras.
+
+Por isso, o resultado retornado é VERDADEIRO.
+`,
+
+    dicaBanca: `
+A função E normalmente aparece em conjunto com a função SE para criar regras de decisão mais complexas.
+`,
+
+    assunto: "office"
+},
+
+{
     pergunta: "No Word, qual recurso é mais adequado para garantir padronização automática de títulos, subtítulos e demais elementos do documento?",
 
     alternativas: [
@@ -633,9 +1364,29 @@ const office = [
 
     correta: 2,
 
-    feedback: "Os Estilos permitem aplicar formatações padronizadas e facilitam a criação de sumários automáticos.",
+    feedbackAcerto: `
+Excelente!
 
-    assunto: 'office'
+Os Estilos permitem aplicar formatações padronizadas de forma rápida e consistente.
+
+Além disso, são fundamentais para a criação de Sumários Automáticos.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+Os Estilos padronizam títulos, subtítulos e outros elementos do documento.
+
+Eles facilitam a organização do texto e permitem a geração automática de sumários.
+
+As demais alternativas não possuem essa finalidade principal.
+`,
+
+    dicaBanca: `
+Sempre que a questão mencionar padronização automática e Sumário Automático, pense em Estilos.
+`,
+
+    assunto: "office"
 },{
     pergunta: "No Excel, qual função retorna o maior valor encontrado em um intervalo de células?",
 
@@ -649,10 +1400,32 @@ const office = [
 
     correta: 2,
 
-    feedback: "A função MAX retorna o maior valor existente em um conjunto de dados.",
+    feedbackAcerto: `
+Muito bem!
 
-    assunto: 'office'
-},{
+A função MAX retorna o maior valor existente em um intervalo de células.
+
+Ela é amplamente utilizada para identificar maiores vendas, maiores notas, maiores preços e outros valores máximos em planilhas.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+A função MAX é utilizada para retornar o maior valor encontrado em um conjunto de dados.
+
+As demais alternativas não correspondem ao nome correto da função utilizada pelo Excel.
+
+Embora exista a função MAIOR, ela possui finalidade diferente e exige parâmetros adicionais.
+`,
+
+    dicaBanca: `
+Muitas bancas confundem MAX com MAIOR. MAX retorna o maior valor diretamente; MAIOR retorna o n-ésimo maior valor.
+`,
+
+    assunto: "office"
+},
+
+{
     pergunta: "No PowerPoint, qual modo de exibição apresenta miniaturas de todos os slides ao mesmo tempo, facilitando a reorganização da sequência da apresentação?",
 
     alternativas: [
@@ -665,10 +1438,32 @@ const office = [
 
     correta: 2,
 
-    feedback: "O modo Classificação de Slides permite visualizar e reorganizar rapidamente toda a apresentação.",
+    feedbackAcerto: `
+Excelente!
 
-    assunto: 'office'
-},{
+O modo Classificação de Slides exibe miniaturas de todos os slides simultaneamente.
+
+Isso facilita a visualização geral da apresentação e permite reorganizar rapidamente sua sequência.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+O modo Classificação de Slides mostra todos os slides em formato de miniaturas.
+
+Ele é utilizado principalmente para reorganizar a ordem da apresentação.
+
+As demais opções possuem finalidades diferentes dentro do PowerPoint.
+`,
+
+    dicaBanca: `
+Questões sobre modos de exibição costumam aparecer frequentemente em provas de PowerPoint.
+`,
+
+    assunto: "office"
+},
+
+{
     pergunta: "No Excel, qual função lógica retorna VERDADEIRO quando pelo menos uma das condições avaliadas é verdadeira?",
 
     alternativas: [
@@ -681,10 +1476,32 @@ const office = [
 
     correta: 2,
 
-    feedback: "A função OU retorna VERDADEIRO quando ao menos uma condição é satisfeita.",
+    feedbackAcerto: `
+Correto!
 
-    assunto: 'office'
-},{
+A função OU retorna VERDADEIRO quando pelo menos uma das condições informadas é satisfeita.
+
+Ela é muito utilizada em regras que admitem múltiplas possibilidades de aprovação.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+A função OU exige que apenas uma das condições seja verdadeira para retornar VERDADEIRO.
+
+Já a função E exige que todas as condições sejam verdadeiras.
+
+As demais alternativas possuem finalidades diferentes.
+`,
+
+    dicaBanca: `
+A principal diferença entre E e OU é uma das mais cobradas em funções lógicas.
+`,
+
+    assunto: "office"
+},
+
+{
     pergunta: "No Word, ao utilizar Ctrl + Enter, o programa executa qual ação?",
 
     alternativas: [
@@ -697,10 +1514,31 @@ const office = [
 
     correta: 1,
 
-    feedback: "Ctrl + Enter insere uma quebra de página, iniciando o conteúdo seguinte na próxima página.",
+    feedbackAcerto: `
+Perfeito!
 
-    assunto: 'office'
+O atalho Ctrl + Enter insere uma Quebra de Página.
+
+Com isso, o conteúdo seguinte passa automaticamente para a próxima página do documento.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+Ctrl + Enter é o atalho utilizado para inserir uma Quebra de Página.
+
+Esse recurso é muito utilizado na formatação de documentos longos.
+
+As demais alternativas não correspondem à função desse atalho.
+`,
+
+    dicaBanca: `
+Não confunda Quebra de Página com Quebra de Seção. São recursos diferentes e muito cobrados em concursos.
+`,
+
+    assunto: "office"
 },
+
 {
     pergunta: "No Excel, qual função é utilizada para retornar a posição de um valor dentro de um intervalo?",
 
@@ -714,12 +1552,32 @@ const office = [
 
     correta: 1,
 
-    feedback: "A função CORRESP retorna a posição relativa de um item dentro de um intervalo.",
+    feedbackAcerto: `
+Muito bem!
 
-    assunto: 'office'
-},
+A função CORRESP retorna a posição relativa de um valor dentro de um intervalo.
 
-{
+Ela é frequentemente utilizada em conjunto com a função ÍNDICE para criar pesquisas avançadas.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+A função CORRESP localiza um valor e informa sua posição dentro de um intervalo.
+
+A função ÍNDICE retorna um valor com base em uma posição.
+
+PROCV realiza pesquisas verticais.
+
+As demais funções possuem finalidades diferentes.
+`,
+
+    dicaBanca: `
+A combinação ÍNDICE + CORRESP é considerada uma alternativa mais flexível ao PROCV.
+`,
+
+    assunto: "office"
+},{
     pergunta: "No Excel, a função ÍNDICE é frequentemente utilizada em conjunto com CORRESP porque:",
 
     alternativas: [
@@ -732,9 +1590,29 @@ const office = [
 
     correta: 2,
 
-    feedback: "ÍNDICE + CORRESP é uma combinação muito usada por ser mais flexível do que PROCV.",
+    feedbackAcerto: `
+Excelente!
 
-    assunto: 'office'
+A combinação ÍNDICE + CORRESP é amplamente utilizada para realizar buscas avançadas em planilhas.
+
+Ela oferece maior flexibilidade que o PROCV, pois permite pesquisar informações em qualquer direção da tabela.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+A combinação ÍNDICE + CORRESP é utilizada para criar pesquisas mais flexíveis e eficientes que o PROCV.
+
+Ela permite localizar valores sem a limitação de pesquisar apenas da esquerda para a direita.
+
+As demais alternativas não representam a finalidade dessas funções.
+`,
+
+    dicaBanca: `
+Questões mais avançadas de Excel costumam cobrar a diferença entre PROCV e a combinação ÍNDICE + CORRESP.
+`,
+
+    assunto: "office"
 },
 
 {
@@ -750,9 +1628,29 @@ const office = [
 
     correta: 1,
 
-    feedback: "O Controle de Alterações registra inserções, exclusões e modificações realizadas no documento.",
+    feedbackAcerto: `
+Muito bem!
 
-    assunto: 'office'
+O Controle de Alterações registra inclusões, exclusões e modificações realizadas por diferentes usuários.
+
+Esse recurso é bastante utilizado em documentos colaborativos e revisões de textos.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+O Controle de Alterações permite visualizar todas as modificações realizadas em um documento.
+
+Ele facilita revisões e aprovações antes da versão final.
+
+As demais opções possuem funções diferentes dentro do Word.
+`,
+
+    dicaBanca: `
+Controle de Alterações e Comentários costumam aparecer juntos em provas sobre revisão de documentos.
+`,
+
+    assunto: "office"
 },
 
 {
@@ -768,9 +1666,29 @@ const office = [
 
     correta: 0,
 
-    feedback: "Transições ocorrem entre slides. Animações são aplicadas aos objetos.",
+    feedbackAcerto: `
+Correto!
 
-    assunto: 'office'
+As transições são efeitos visuais aplicados durante a mudança de um slide para outro.
+
+Elas ajudam a tornar a apresentação mais dinâmica e agradável visualmente.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra A.
+
+Transições atuam entre slides.
+
+Quando os efeitos são aplicados em textos, imagens ou formas dentro do slide, estamos falando de animações.
+
+Essa diferença é uma das mais cobradas em concursos.
+`,
+
+    dicaBanca: `
+Lembre-se: Transição ocorre entre slides. Animação ocorre dentro do slide.
+`,
+
+    assunto: "office"
 },
 
 {
@@ -786,9 +1704,29 @@ const office = [
 
     correta: 2,
 
-    feedback: "CONT.NÚM contabiliza apenas células contendo valores numéricos.",
+    feedbackAcerto: `
+Perfeito!
 
-    assunto: 'office'
+A função CONT.NÚM contabiliza apenas as células que possuem valores numéricos.
+
+Textos, células vazias e outros conteúdos não são considerados nessa contagem.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+A função CONT.NÚM conta exclusivamente células contendo números.
+
+CONT.VALORES conta células preenchidas independentemente do conteúdo.
+
+As demais funções possuem finalidades diferentes.
+`,
+
+    dicaBanca: `
+CONT.NÚM e CONT.VALORES são frequentemente cobradas juntas para confundir candidatos.
+`,
+
+    assunto: "office"
 },
 
 {
@@ -804,12 +1742,30 @@ const office = [
 
     correta: 2,
 
-    feedback: "Os títulos formatados com estilos permitem ao Word gerar automaticamente o sumário.",
+    feedbackAcerto: `
+Excelente!
 
-    assunto: 'office'
-},
+O Sumário Automático é criado a partir dos Estilos de Título aplicados aos tópicos do documento.
 
-{
+Sem esses estilos, o Word não consegue estruturar corretamente o sumário.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+O Word utiliza os Estilos de Título para identificar capítulos, seções e subseções.
+
+Com base nessa estrutura, o programa gera automaticamente o sumário.
+
+As demais alternativas não são responsáveis pela criação do Sumário Automático.
+`,
+
+    dicaBanca: `
+Sempre que a questão mencionar Sumário Automático, a resposta geralmente estará relacionada aos Estilos de Título.
+`,
+
+    assunto: "office"
+},{
     pergunta: "No Excel, qual operador é utilizado para indicar uma referência de intervalo?",
 
     alternativas: [
@@ -822,9 +1778,29 @@ const office = [
 
     correta: 1,
 
-    feedback: "O operador ':' define intervalos, como A1:A10.",
+    feedbackAcerto: `
+Muito bem!
 
-    assunto: 'office'
+O operador ":" é utilizado para definir intervalos de células em planilhas.
+
+Por exemplo, A1:A10 representa todas as células compreendidas entre A1 e A10.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+O operador ":" indica um intervalo contínuo de células.
+
+Na expressão A1:A10, todas as células entre A1 e A10 fazem parte do intervalo.
+
+Os demais símbolos possuem funções diferentes dentro das fórmulas.
+`,
+
+    dicaBanca: `
+Questões sobre sintaxe de fórmulas costumam cobrar operadores como :, ;, =, >, < e <>.
+`,
+
+    assunto: "office"
 },
 
 {
@@ -840,9 +1816,29 @@ const office = [
 
     correta: 2,
 
-    feedback: "Ocultar Slide mantém o slide no arquivo, mas impede sua exibição durante a apresentação.",
+    feedbackAcerto: `
+Correto!
 
-    assunto: 'office'
+O recurso Ocultar Slide mantém o slide dentro da apresentação, mas impede sua exibição durante a execução normal dos slides.
+
+É muito utilizado quando se deseja manter conteúdo de reserva para determinadas situações.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+Ocultar Slide impede que o slide seja exibido durante a apresentação sem removê-lo do arquivo.
+
+Dessa forma, o conteúdo continua disponível para futuras edições.
+
+As demais alternativas possuem finalidades diferentes.
+`,
+
+    dicaBanca: `
+Ocultar Slide é um recurso muito utilizado em apresentações corporativas e frequentemente aparece em provas de PowerPoint.
+`,
+
+    assunto: "office"
 },
 
 {
@@ -858,9 +1854,29 @@ const office = [
 
     correta: 0,
 
-    feedback: "A função SE exige condição, valor se verdadeiro e valor se falso.",
+    feedbackAcerto: `
+Excelente!
 
-    assunto: 'office'
+A função SE permite retornar resultados diferentes conforme uma condição seja verdadeira ou falsa.
+
+Nesse caso, quando A1 for maior ou igual a 7, será exibido "Aprovado". Caso contrário, será exibido "Reprovado".
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra A.
+
+A função SE exige três elementos: condição, valor para verdadeiro e valor para falso.
+
+A fórmula apresentada está corretamente estruturada e retorna "Aprovado" ou "Reprovado" conforme a nota informada.
+
+As demais alternativas apresentam erros de sintaxe ou lógica.
+`,
+
+    dicaBanca: `
+A função SE é considerada uma das funções mais importantes e mais cobradas em concursos de informática.
+`,
+
+    assunto: "office"
 },
 
 {
@@ -876,9 +1892,385 @@ const office = [
 
     correta: 2,
 
-    feedback: "F5 inicia a apresentação desde o primeiro slide. Shift + F5 inicia do slide atual.",
+    feedbackAcerto: `
+Perfeito!
 
-    assunto: 'office'
+A tecla F5 inicia a apresentação de slides desde o primeiro slide da apresentação.
+
+É um dos atalhos mais conhecidos do PowerPoint.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra C.
+
+Ao pressionar F5, o PowerPoint inicia a apresentação desde o primeiro slide.
+
+Para iniciar a partir do slide atual, utiliza-se normalmente Shift + F5.
+
+As demais alternativas não correspondem à função desse atalho.
+`,
+
+    dicaBanca: `
+Atalhos de teclado do PowerPoint aparecem com frequência em provas de informática básica.
+`,
+
+    assunto: "office"
 },
+
+{
+    pergunta: "No Microsoft Excel e no LibreOffice Calc, qual tipo de gráfico é mais indicado para representar a participação percentual de cada categoria em um total?",
+
+    alternativas: [
+        "Gráfico de Linhas",
+        "Gráfico de Pizza",
+        "Gráfico de Dispersão",
+        "Gráfico de Área",
+        "Gráfico Radar"
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `
+Correto!
+
+O gráfico de Pizza é utilizado para representar partes de um todo, facilitando a visualização da participação percentual de cada categoria.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+O gráfico de Pizza é o mais indicado para representar percentuais de participação em um total.
+
+Os demais gráficos possuem finalidades diferentes.
+`,
+
+    dicaBanca: `
+Gráfico de Pizza = participação percentual. Essa associação é muito cobrada em concursos.
+`,
+
+    assunto: "office"
+},
+
+{
+    pergunta: "Qual recurso do Excel permite exibir apenas os registros que atendem a critérios específicos, ocultando temporariamente os demais?",
+
+    alternativas: [
+        "Classificação",
+        "Filtro",
+        "Validação",
+        "Proteção",
+        "Congelar Painéis"
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `
+Muito bem!
+
+O Filtro permite exibir apenas os dados que atendem aos critérios definidos pelo usuário.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+O recurso Filtro restringe temporariamente a visualização dos registros.
+
+Os dados não são apagados, apenas ocultados.
+`,
+
+    dicaBanca: `
+Filtro e Classificação costumam aparecer juntos nas provas.
+`,
+
+    assunto: "office"
+},
+
+{
+    pergunta: "No Excel, a Classificação Crescente organiza os dados:",
+
+    alternativas: [
+        "Do maior para o menor",
+        "Do menor para o maior",
+        "De forma aleatória",
+        "Por cores",
+        "Por comentários"
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `
+Correto!
+
+A classificação crescente organiza números do menor para o maior e textos em ordem alfabética.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+Classificação crescente significa ordenar dados do menor para o maior.
+`,
+
+    dicaBanca: `
+Ordem crescente = A→Z ou menor→maior.
+`,
+
+    assunto: "office"
+},
+
+{
+    pergunta: "No Microsoft Word, qual recurso é utilizado para criar tabelas destinadas à organização de informações em linhas e colunas?",
+
+    alternativas: [
+        "SmartArt",
+        "Tabela",
+        "WordArt",
+        "Comentário",
+        "Indicador"
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `
+Perfeito!
+
+As tabelas permitem organizar dados em linhas e colunas de forma estruturada.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+O recurso Tabela é utilizado para organizar informações tabulares em documentos.
+`,
+
+    dicaBanca: `
+Questões sobre tabelas aparecem frequentemente em provas de Word.
+`,
+
+    assunto: "office"
+},
+
+{
+    pergunta: "Qual formato é o padrão de documentos do LibreOffice Writer?",
+
+    alternativas: [
+        ".docx",
+        ".txt",
+        ".pdf",
+        ".odt",
+        ".rtf"
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: `
+Excelente!
+
+O formato padrão do LibreOffice Writer é ODT (Open Document Text).
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra D.
+
+ODT é o formato nativo utilizado pelo LibreOffice Writer.
+`,
+
+    dicaBanca: `
+ODT corresponde ao Writer assim como DOCX corresponde ao Word.
+`,
+
+    assunto: "office"
+},
+
+{
+    pergunta: "Qual formato é nativamente utilizado pelo LibreOffice Calc para armazenamento de planilhas?",
+
+    alternativas: [
+        ".xlsx",
+        ".ods",
+        ".csv",
+        ".xls",
+        ".txt"
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `
+Muito bem!
+
+ODS é o formato padrão utilizado pelo LibreOffice Calc.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+ODS é o formato nativo de planilhas do LibreOffice Calc.
+`,
+
+    dicaBanca: `
+ODS = Calc. XLSX = Excel.
+`,
+
+    assunto: "office"
+},
+
+{
+    pergunta: "Qual formato é utilizado pelo LibreOffice Impress para apresentações?",
+
+    alternativas: [
+        ".pptx",
+        ".odp",
+        ".ppsx",
+        ".odt",
+        ".ods"
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `
+Correto!
+
+ODP é o formato padrão das apresentações criadas no LibreOffice Impress.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+ODP é o formato nativo do LibreOffice Impress.
+`,
+
+    dicaBanca: `
+ODP = Impress. PPTX = PowerPoint.
+`,
+
+    assunto: "office"
+},
+
+{
+    pergunta: "No Excel, qual recurso permite definir previamente quais valores podem ser digitados em uma célula?",
+
+    alternativas: [
+        "Filtro",
+        "Validação de Dados",
+        "Classificação",
+        "Congelar Painéis",
+        "Comentário"
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `
+Muito bem!
+
+A Validação de Dados permite restringir os valores aceitos em uma célula.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+A Validação de Dados é utilizada para controlar entradas incorretas em planilhas.
+`,
+
+    dicaBanca: `
+Validação de Dados é muito utilizada em formulários e planilhas corporativas.
+`,
+
+    assunto: "office"
+},
+
+{
+    pergunta: "Qual recurso do Excel permite manter determinadas linhas ou colunas visíveis durante a rolagem da planilha?",
+
+    alternativas: [
+        "Filtro",
+        "Congelar Painéis",
+        "Validação",
+        "Classificação",
+        "Ocultar"
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `
+Perfeito!
+
+Congelar Painéis mantém linhas e colunas visíveis durante a navegação.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+O recurso Congelar Painéis facilita a visualização de cabeçalhos em planilhas extensas.
+`,
+
+    dicaBanca: `
+Congelar Painéis é um recurso bastante cobrado em Excel.
+`,
+
+    assunto: "office"
+},
+
+{
+    pergunta: "Na impressão de um documento do Word, a orientação Paisagem caracteriza-se por:",
+
+    alternativas: [
+        "Página mais alta que larga",
+        "Página mais larga que alta",
+        "Página sem margens",
+        "Página em formato quadrado",
+        "Página sem cabeçalho"
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `
+Excelente!
+
+Na orientação Paisagem, a largura da página é maior que sua altura.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra B.
+
+Paisagem significa página horizontal, mais larga do que alta.
+`,
+
+    dicaBanca: `
+Retrato = vertical. Paisagem = horizontal.
+`,
+
+    assunto: "office"
+},
+
+{
+    pergunta: "Antes de imprimir um documento, qual recurso permite verificar como será o resultado final da impressão?",
+
+    alternativas: [
+        "Visualização de Impressão",
+        "Controle de Alterações",
+        "Classificação",
+        "Localizar",
+        "Mala Direta"
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: `
+Correto!
+
+A Visualização de Impressão permite verificar a aparência final do documento antes da impressão.
+`,
+
+    feedbackErro: `
+A alternativa correta é a letra A.
+
+A Visualização de Impressão mostra exatamente como o documento será impresso.
+`,
+
+    dicaBanca: `
+Visualização de Impressão é frequentemente cobrada em Word e Writer.
+`,
+
+    assunto: "office"
+}
 
 ];
