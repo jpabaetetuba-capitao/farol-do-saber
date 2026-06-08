@@ -2260,17 +2260,37 @@ async function entrar(){
 document.getElementById("login").style.display = "none";
 
     }
-    catch(erro){
+    
+catch(erro){
 
-        console.error(
-            erro
-        );
+    console.error(erro);
 
-        alert(
-            erro.message
-        );
+    let mensagem = "";
+
+    switch(erro.code){
+
+        case "auth/user-not-found":
+            mensagem = "Usuário não encontrado.";
+            break;
+
+        case "auth/wrong-password":
+            mensagem = "Senha incorreta.";
+            break;
+
+        case "auth/invalid-email":
+            mensagem = "E-mail inválido.";
+            break;
+
+        case "auth/invalid-credential":
+            mensagem = "E-mail ou senha incorretos.";
+            break;
+
+        default:
+            mensagem = erro.message;
 
     }
+
+    alert(mensagem);
 
 }
 
@@ -2352,12 +2372,30 @@ async function finalizarCadastro(){
         mostrarTela("login");
 
     }
-    catch(erro){
+    
+catch(erro){
 
-        alert(
-            erro.message
-        );
+    let mensagem = "";
+
+    switch(erro.code){
+
+        case "auth/email-already-in-use":
+            mensagem = "Este e-mail já está cadastrado.";
+            break;
+
+        case "auth/invalid-email":
+            mensagem = "E-mail inválido.";
+            break;
+
+        case "auth/weak-password":
+            mensagem = "A senha deve ter pelo menos 6 caracteres.";
+            break;
+
+        default:
+            mensagem = erro.message;
 
     }
+
+    alert(mensagem);
 
 }
