@@ -608,3 +608,28 @@ footer small{
     pointer-events:none;
 
 }
+
+.imagem-questao {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    display: block;
+
+    margin: 0 auto;
+
+    border-radius: 12px;
+
+}
+.btn-voltar{
+
+    background:#1e88e5 !important;
+
+}
+
+.btn-voltar:hover{
+
+    background:#1565c0 !important;
+
+}
