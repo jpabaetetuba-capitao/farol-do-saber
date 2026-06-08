@@ -28,9 +28,9 @@
         🏠 Início
     </button>
 
-    <button onclick="mostrarTela('questoes')">
-        📚 Questões
-    </button>
+<button onclick="mostrarTela('questoes')">
+    📚 Disciplinas
+</button>
 
     <button onclick="mostrarTela('simulados')">
         📝 Simulados
@@ -51,6 +51,16 @@
 <section id="didatica" class="tela">
 
     <div class="card">
+
+<button
+    class="btn-voltar"
+    onclick="mostrarTela('questoes')">
+
+    ⬅ Voltar para Disciplinas
+
+</button>
+
+        <br><br>
 
         <h2>📚 Didática e Legislação</h2>
 
@@ -131,6 +141,16 @@
 <section id="portugues" class="tela">
 
     <div class="card">
+
+<button
+    class="btn-voltar"
+    onclick="mostrarTela('questoes')">
+
+    ⬅ Voltar para Disciplinas
+
+</button>
+
+        <br><br>
 
         <h2>📖 Língua Portuguesa</h2>
 
@@ -221,6 +241,65 @@
 </div>
 
     </div>
+
+</section>
+
+<section id="informatica" class="tela">
+
+    <div class="card">
+
+<button
+    class="btn-voltar"
+    onclick="mostrarTela('questoes')">
+
+    ⬅ Voltar para Disciplinas
+
+</button>
+
+        <br><br>
+
+        <h2>💻 Informática</h2>
+
+        <p>
+            Selecione um assunto:
+        </p>
+
+        <br>
+
+        <div class="grid-assuntos">
+
+<button class="btn-assunto" onclick="abrirAssunto('hardware')">
+💻 Hardware
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('software')">
+⚙️ Software, Windows e Linux
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('arquivos')">
+🗂 Arquivos, Pastas e Backup
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('office')">
+📊 Office e LibreOffice
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('internet')">
+🌐 Internet e Correio Eletrônico
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('redes')">
+🖧 Redes de Computadores
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('seguranca')">
+🔐 Segurança da Informação
+</button>
+
+        </div>
+
+    </div>
+
 
 </section>
 
@@ -337,6 +416,37 @@ Li e revisei o mapa mental.
                 </strong>
             </p>
 
+<br>
+
+<h3>🏅 Medalhas</h3>
+
+<br>
+
+<p>
+    🥇 Ouro:
+    <strong id="medalhasOuro">
+        0
+    </strong>
+</p>
+
+<br>
+
+<p>
+    🥈 Prata:
+    <strong id="medalhasPrata">
+        0
+    </strong>
+</p>
+
+<br>
+
+<p>
+    🥉 Bronze:
+    <strong id="medalhasBronze">
+        0
+    </strong>
+</p>
+
         </div>
 
         <!-- PAINEL DIREITA -->
@@ -393,7 +503,13 @@ Li e revisei o mapa mental.
 
     <div class="card">
 
-        <h2>Banco de Questões</h2>
+       <h2>📚 Escolha uma Disciplina</h2>
+
+<p>
+    Selecione a disciplina que deseja estudar.
+</p>
+
+<br>
 
         <div class="grid-disciplinas">
 
@@ -432,6 +548,20 @@ Li e revisei o mapa mental.
 
     <div>
         Professor de Ciências
+    </div>
+
+</button>
+
+<button
+    class="btn-disciplina premium"
+    onclick="abrirDisciplina('matematica')">
+
+    <div class="cadeado-premium">
+        🔒
+    </div>
+
+    <div>
+        Professor de Matemática
     </div>
 
 </button>
@@ -495,25 +625,85 @@ Li e revisei o mapa mental.
 
     <div class="card">
 
-        <h2>Simulados</h2>
+        <h2>📝 Simulados</h2>
 
         <p>
-            Em breve estarão disponíveis:
+            Escolha o tipo de simulado.
         </p>
 
         <br>
 
-        <button onclick="iniciarSimulado(10)">
-    Simulado 10 Questões
-</button>
+        <h3>📚 Simulados por Disciplina</h3>
 
-<button onclick="iniciarSimulado(20)">
-    Simulado 20 Questões
-</button>
+        <br>
 
-<button onclick="iniciarSimulado(50)">
-    Simulado 50 Questões
-</button>
+        <div class="grid-assuntos">
+
+            <button
+                class="btn-assunto"
+                onclick="iniciarSimuladoPortugues()">
+
+                📖 Português
+
+            </button>
+
+            <button
+                class="btn-assunto"
+                onclick="iniciarSimuladoInformatica()">
+
+                💻 Informática
+
+            </button>
+
+            <button
+                class="btn-assunto"
+                onclick="iniciarSimuladoDidatica()">
+
+                📚 Didática e Legislação
+
+            </button>
+
+        </div>
+
+        <br><br>
+
+        <h3>👨‍🏫 Simulados por Cargo</h3>
+
+        <br>
+
+        <div class="grid-assuntos">
+
+            <button
+                class="btn-assunto"
+                onclick="iniciarSimuladoApoioEscolar()">
+
+                👨‍🏫 Apoio Escolar
+
+            </button>
+
+            <button
+                class="btn-disciplina premium">
+
+                <div class="cadeado-premium">
+                    🔒
+                </div>
+
+                Professor de Matemática
+
+            </button>
+
+            <button
+                class="btn-disciplina premium">
+
+                <div class="cadeado-premium">
+                    🔒
+                </div>
+
+                Professor de Ciências
+
+            </button>
+
+        </div>
 
     </div>
 
@@ -621,6 +811,10 @@ Li e revisei o mapa mental.
 <script src="dados/acentuacao.js"></script>
 
 <script src="dados/redacaoOficial.js"></script>
+
+<script src="dados/hardware.js"></script>
+
+<script src="dados/software.js"></script>
 
 <!-- SISTEMA -->
 
