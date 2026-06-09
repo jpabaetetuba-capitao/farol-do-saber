@@ -380,10 +380,14 @@
 
         <div class="grid-assuntos">
 
-<button class="btn-assunto" onclick="abrirAssunto('hardware')">
-💻 Hardware
-</button>
+<button
+    id="btnHardware"
+    class="btn-assunto"
+    onclick="abrirAssunto('hardware')">
 
+    💻 Hardware
+
+</button>
 <button class="btn-assunto" onclick="abrirAssunto('software')">
 ⚙️ Software, Windows e Linux
 </button>
@@ -440,12 +444,13 @@
         <div class="grid-assuntos">
 
             <button
-                class="btn-assunto"
-                onclick="abrirAssunto('fundamentosCiencias')">
+    id="btnFundamentosCiencias"
+    class="btn-assunto"
+    onclick="abrirAssunto('fundamentosCiencias')">
 
-                🔬 Fundamentos do Ensino de Ciências
+    🔬 Fundamentos do Ensino de Ciências
 
-            </button>
+</button>
 
         </div>
 
@@ -707,9 +712,32 @@ Li e revisei o mapa mental.
                 </strong>
             </p>
 
-        </div>
+<br>
+
+<p>
+    Melhor resultado:
+    <strong id="melhorResultado">
+        -
+    </strong>
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+    <h2>👥 Online Agora</h2>
+
+    <br>
+
+    <div id="usuariosOnline">
+
+        Nenhum usuário online.
 
     </div>
+
+</div>
+
+</div>
 
 </section>
 
