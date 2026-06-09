@@ -327,10 +327,10 @@ paginaTeoriaAtual = Number(
 
 function mostrarPaginaTeoria(){
 
-localStorage.setItem(
-    "farol_teoria_" + assuntoAtual,
-    paginaTeoriaAtual
-);
+    localStorage.setItem(
+        "farol_teoria_" + assuntoAtual,
+        paginaTeoriaAtual
+    );
 
     const pagina =
         teoriaAtual[paginaTeoriaAtual];
@@ -355,52 +355,80 @@ localStorage.setItem(
 
         <h4>
 
-    Página
-    ${paginaTeoriaAtual + 1}
+            Página
+            ${paginaTeoriaAtual + 1}
 
-    de
+            de
 
-    ${teoriaAtual.length}
+            ${teoriaAtual.length}
 
-</h4>
+        </h4>
 
-<br>
+        <br>
 
-<progress
-    value="${paginaTeoriaAtual + 1}"
-    max="${teoriaAtual.length}"
-    style="
-        width:100%;
-        height:25px;
-    ">
-</progress>
+        <progress
+            value="${paginaTeoriaAtual + 1}"
+            max="${teoriaAtual.length}"
+            style="
+                width:100%;
+                height:25px;
+            ">
+        </progress>
 
-<br><br>
+        <br><br>
 
-<strong>
+        <strong>
 
-${
-    Math.round(
-        (
-            (paginaTeoriaAtual + 1)
-            /
-            teoriaAtual.length
-        ) * 100
-    )
-}%
+        ${
+            Math.round(
+                (
+                    (paginaTeoriaAtual + 1)
+                    /
+                    teoriaAtual.length
+                ) * 100
+            )
+        }%
 
-concluído
+        concluído
 
-</strong>
+        </strong>
 
     `;
 
-document
-    .getElementById("tituloTeoria")
-    .scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
+    const botao =
+    document.getElementById(
+        "btnProximaTeoria"
+    );
+
+    if(
+        paginaTeoriaAtual
+        ===
+        teoriaAtual.length - 1
+    ){
+
+        botao.innerHTML =
+        "✅ Concluir Teoria";
+
+        botao.onclick =
+        concluirTeoria;
+
+    }
+    else{
+
+        botao.innerHTML =
+        "Próxima Página ➡";
+
+        botao.onclick =
+        proximaPaginaTeoria;
+
+    }
+
+    document
+        .getElementById("tituloTeoria")
+        .scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
 
 }
 
@@ -446,6 +474,22 @@ function paginaAnteriorTeoria(){
         mostrarPaginaTeoria();
 
     }
+
+}
+
+function concluirTeoria(){
+
+    localStorage.setItem(
+        "farol_teoria_concluida_" + assuntoAtual,
+        "true"
+    );
+
+    localStorage.setItem(
+        "farol_teoria_" + assuntoAtual,
+        0
+    );
+
+    abrirMapaMental();
 
 }
 
@@ -2598,11 +2642,22 @@ async function entrar(){
 
         if(doc.exists){
 
-            console.log(
-                doc.data()
-            );
+    console.log(
+        doc.data()
+    );
 
-        }
+    const nome =
+        doc.data().nome || "";
+
+    const primeiroNome =
+        nome.split(" ")[0];
+
+document.getElementById(
+    "nomeUsuario"
+).textContent =
+    "👋 Olá, " + primeiroNome;
+
+}
 
         mostrarTela("inicio");
 document.getElementById("login").style.display = "none";
