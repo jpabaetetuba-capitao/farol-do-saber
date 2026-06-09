@@ -778,3 +778,13 @@ footer small{
     margin-bottom: 8px;
 
 }
+
+progress{
+
+    width:100%;
+
+    height:25px;
+
+    border-radius:10px;
+
+}
