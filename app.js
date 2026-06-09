@@ -2749,6 +2749,7 @@ async function carregarUsuariosOnline(){
         .get();
 
     let html = "";
+    let totalOnline = 0;
 
     snapshot.forEach(doc => {
 
@@ -2769,20 +2770,27 @@ async function carregarUsuariosOnline(){
                 <br>
             `;
 
+totalOnline++;
+
         }
 
     });
 
     if(html === ""){
 
-        html =
-            "Nenhum usuário online.";
+    html =
+        "Nenhum usuário online.";
 
-    }
+}
 
-    document.getElementById(
-        "usuariosOnline"
-    ).innerHTML = html;
+document.getElementById(
+    "totalOnline"
+).textContent =
+    totalOnline;
+
+document.getElementById(
+    "usuariosOnline"
+).innerHTML = html;
 
 }
 
