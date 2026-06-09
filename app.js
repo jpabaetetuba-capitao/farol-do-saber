@@ -5,6 +5,10 @@
 // TROCA DE TELAS
 function mostrarTela(id) {
 
+atualizarStatusAssuntos();
+
+atualizarAtividade();
+
     document.querySelectorAll(".tela").forEach(tela => {
         tela.classList.remove("ativa");
     });
@@ -670,6 +674,8 @@ ${q.afirmacoes.map(item => `
 
 function corrigirQuestao() {
 
+atualizarAtividade();
+
     const resposta = document.querySelector(
         'input[name="resposta"]:checked'
     );
@@ -1000,6 +1006,32 @@ medalha = "📚 SEM MEDALHA";
     "Não desanime. Revise o conteúdo e tente novamente.";
 
 }
+
+let resultadosAssuntos =
+    JSON.parse(
+        localStorage.getItem(
+            "farol_resultados"
+        )
+    ) || {};
+
+resultadosAssuntos[
+    disciplinaAtual
+] = {
+
+    percentual: percentual,
+
+    medalha: medalha,
+
+    classificacao: classificacao
+
+};
+
+localStorage.setItem(
+    "farol_resultados",
+    JSON.stringify(
+        resultadosAssuntos
+    )
+);
 
 salvarDados();
 atualizarDashboard();
@@ -2135,47 +2167,57 @@ window.onload = function () {
 
     atualizarPainelEstudos();
 
+    carregarUsuariosOnline();
+
+    setInterval(
+
+        carregarUsuariosOnline,
+
+        30000
+
+    );
+
     auth.onAuthStateChanged((user) => {
 
-    if(user){
+        if(user){
 
-    document.body.classList.remove(
-        "login-ativo"
-    );
+            document.body.classList.remove(
+                "login-ativo"
+            );
 
-    const telaSalva =
-        localStorage.getItem(
-            "farol_telaAtual"
-        );
+            const telaSalva =
+                localStorage.getItem(
+                    "farol_telaAtual"
+                );
 
-    if(telaSalva){
+            if(telaSalva){
 
-        mostrarTela(
-            telaSalva
-        );
+                mostrarTela(
+                    telaSalva
+                );
 
-    }else{
+            }else{
 
-        mostrarTela(
-            "inicio"
-        );
+                mostrarTela(
+                    "inicio"
+                );
 
-    }
+            }
 
-}
-else{
+        }
+        else{
 
-    document.body.classList.add(
-        "login-ativo"
-    );
+            document.body.classList.add(
+                "login-ativo"
+            );
 
-    mostrarTela(
-        "login"
-    );
+            mostrarTela(
+                "login"
+            );
 
-}
+        }
 
-});
+    });
 
 };
 
@@ -2241,12 +2283,31 @@ document.getElementById(
 
 function voltarParaMapa(){
 
-    abrirAssunto(
-        assuntoAtual
+    const titulo =
+        document.getElementById(
+            "tituloMapa"
+        );
+
+    const imagem =
+        document.getElementById(
+            "imagemMapa"
+        );
+
+    if(assuntoAtual === "fundamentosCiencias"){
+
+        titulo.innerHTML =
+            "🔬 Fundamentos do Ensino de Ciências";
+
+        imagem.src =
+            "imagens/mapas/fundamentos-ciencias.png";
+
+    }
+
+    mostrarTela(
+        "telaMapaMental"
     );
 
 }
-
 
 function abrirTeoriaDoAssunto(){
 
@@ -2569,6 +2630,186 @@ ultimo = nomesBonitos[assunto];
         "proximaQuestaoPainel"
     ).textContent = proxima;
 
+const resultados =
+    JSON.parse(
+        localStorage.getItem(
+            "farol_resultados"
+        )
+    ) || {};
+
+let melhorTexto = "-";
+
+let melhorPercentual = -1;
+
+for(
+    let assunto in resultados
+){
+
+    if(
+        resultados[assunto].percentual
+        >
+        melhorPercentual
+    ){
+
+        melhorPercentual =
+            resultados[assunto].percentual;
+
+        melhorTexto =
+            resultados[assunto].medalha
+            + " "
+            + resultados[assunto].percentual
+            + "%";
+
+    }
+
+}
+
+document.getElementById(
+    "melhorResultado"
+).textContent =
+    melhorTexto;
+
+}
+
+function atualizarStatusAssuntos(){
+
+    const resultados =
+        JSON.parse(
+            localStorage.getItem(
+                "farol_resultados"
+            )
+        ) || {};
+
+    if(
+        document.getElementById(
+            "btnHardware"
+        )
+        &&
+        resultados.hardware
+    ){
+
+        document.getElementById(
+            "btnHardware"
+        ).innerHTML = `
+
+            💻 Hardware
+
+            <br><br>
+
+            ✅ Concluído
+
+            <br>
+
+            ${resultados.hardware.medalha}
+
+            ${resultados.hardware.percentual}%
+
+        `;
+
+    }
+
+    if(
+        document.getElementById(
+            "btnFundamentosCiencias"
+        )
+        &&
+        resultados.fundamentosCiencias
+    ){
+
+        document.getElementById(
+            "btnFundamentosCiencias"
+        ).innerHTML = `
+
+            🔬 Fundamentos do Ensino de Ciências
+
+            <br><br>
+
+            ✅ Concluído
+
+            <br>
+
+            ${resultados.fundamentosCiencias.medalha}
+
+            ${resultados.fundamentosCiencias.percentual}%
+
+        `;
+
+    }
+
+}
+
+async function carregarUsuariosOnline(){
+
+    const agora = Date.now();
+
+    const limite = 120000;
+
+    const snapshot =
+        await db.collection("usuarios")
+        .get();
+
+    let html = "";
+
+    snapshot.forEach(doc => {
+
+        const dados = doc.data();
+
+        if(
+            dados.ultimaAtividade &&
+            (agora - dados.ultimaAtividade)
+            < limite
+        ){
+
+            const primeiroNome =
+                (dados.nome || "")
+                .split(" ")[0];
+
+            html += `
+                🟢 ${primeiroNome}
+                <br>
+            `;
+
+        }
+
+    });
+
+    if(html === ""){
+
+        html =
+            "Nenhum usuário online.";
+
+    }
+
+    document.getElementById(
+        "usuariosOnline"
+    ).innerHTML = html;
+
+}
+
+async function atualizarAtividade(){
+
+    if(!auth.currentUser){
+        return;
+    }
+
+    try{
+
+        await db.collection("usuarios")
+        .doc(auth.currentUser.uid)
+        .update({
+
+            ultimaAtividade: Date.now()
+
+        });
+
+    }catch(erro){
+
+        console.log(
+            "Erro ao atualizar atividade"
+        );
+
+    }
+
 }
 
 async function criarConta(){
@@ -2681,6 +2922,14 @@ document.getElementById(
     "👋 Olá, " + primeiroNome;
 
 }
+
+await db.collection("usuarios")
+.doc(credencial.user.uid)
+.update({
+
+    ultimaAtividade: Date.now()
+
+});
 
         mostrarTela("inicio");
 document.getElementById("login").style.display = "none";
