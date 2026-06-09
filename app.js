@@ -117,8 +117,9 @@ const bancoQuestoes = {
 
     redes,
 
-    seguranca
+    seguranca,
 
+    fundamentosCiencias
 };
 
 // ==========================
@@ -250,9 +251,7 @@ function abrirDisciplina(nome) {
 
 if(nome === "ciencias"){
 
-    alert(
-        "🔒 Disciplina Premium.\n\nDisponível em breve."
-    );
+    mostrarTela("ciencias");
 
     return;
 
@@ -377,18 +376,29 @@ ${q.texto ? `
 ` : ""}
 
 ${q.imagem ? `
-
 <img
     src="${q.imagem}"
     class="imagem-questao">
-
 <br><br>
+` : ""}
+
+${q.afirmacoes ? `
+
+<div class="card texto-base">
+
+${q.afirmacoes.map(item => `
+<p>${item}</p>
+`).join("")}
+
+</div>
+
+<br>
 
 ` : ""}
-        <p class="pergunta">
+
+<p class="pergunta">
     ${q.pergunta}
 </p>
-
         <br>
 
         ${q.alternativas.map((alt, index) => `
@@ -432,8 +442,12 @@ function corrigirQuestao() {
 
 const q = questaoExibida;
 
+
     const feedback =
         document.getElementById("feedback");
+console.log(q.feedbackAcerto);
+console.log(q.feedbackErro);
+console.log(q.dicaBanca);
 
     const respostaCorreta =
         q.alternativas[q.correta];
@@ -560,7 +574,10 @@ errosAssunto++;
 
     redes: "🌐 Redes de Computadores",
 
-    seguranca: "🔒 Segurança da Informação"
+    seguranca: "🔒 Segurança da Informação",
+
+    fundamentosCiencias:
+"🔬 Fundamentos do Ensino de Ciências"
     
 
 };
@@ -606,11 +623,21 @@ const nomeDisciplina =
 <strong>Resposta correta:</strong><br>
 ${respostaCorreta}
 
-<div class="texto-feedback">
-${(q.feedbackErro || "")
-    .trim()
-    .replace(/\n/g,"<br>")}
-</div>
+<br><br>
+
+<strong>Explicação:</strong>
+
+<br><br>
+
+${q.feedbackErro || "Sem explicação cadastrada."}
+
+<br><br>
+
+<strong>💡 Dica da banca:</strong>
+
+<br><br>
+
+${q.dicaBanca || "Sem dica cadastrada."}
 
            
             <button onclick="proximaQuestao()">
@@ -1031,21 +1058,13 @@ function mostrarQuestaoSimulado() {
             ${percentual}% concluído
         </strong>
 
-${q.texto ? `
+${q.afirmacoes ? `
 
 <div class="card texto-base">
 
-    <h3>
-        📄 Texto de Apoio
-    </h3>
-
-    <br>
-
-    <p>
-
-        ${q.texto}
-
-    </p>
+${q.afirmacoes.map(item => `
+<p>${item}</p>
+`).join("")}
 
 </div>
 
@@ -1770,6 +1789,16 @@ case "seguranca":
 
     break;
 
+case "fundamentosCiencias":
+
+    titulo.innerHTML =
+        "🔬 Fundamentos do Ensino de Ciências";
+
+    imagem.src =
+        "imagens/mapas/fundamentos-ciencias.png";
+
+    break;
+
     }
 
     mostrarTela(
@@ -2183,6 +2212,8 @@ const ultimoSalvo =
     redes: "🌐 Redes de Computadores",
 
     seguranca: "🔒 Segurança da Informação"
+
+    
 
 };
 
