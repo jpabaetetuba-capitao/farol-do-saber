@@ -146,6 +146,14 @@ let medalhasBronze = 0;
 let cadernoErros = [];
 
 // ==========================
+// TEORIAS
+// ==========================
+
+let teoriaAtual = [];
+
+let paginaTeoriaAtual = 0;
+
+// ==========================
 // SIMULADOS
 // ==========================
 
@@ -293,6 +301,113 @@ if (nome === "informatica") {
 
     alert(
         "Disciplina em desenvolvimento."
+    );
+
+}
+
+function abrirTeoria(teoria, titulo){
+
+    teoriaAtual = teoria;
+
+    paginaTeoriaAtual = 0;
+
+    document.getElementById(
+        "tituloTeoria"
+    ).innerHTML = titulo;
+
+    mostrarPaginaTeoria();
+
+    mostrarTela("teoria");
+
+}
+
+function mostrarPaginaTeoria(){
+
+    const pagina =
+        teoriaAtual[paginaTeoriaAtual];
+
+    document.getElementById(
+        "conteudoTeoria"
+    ).innerHTML = `
+
+        <h3>
+
+            ${pagina.titulo}
+
+        </h3>
+
+        <hr>
+
+        <br>
+
+        ${pagina.conteudo}
+
+        <br><br>
+
+        <strong>
+
+            Página
+            ${paginaTeoriaAtual + 1}
+
+            de
+
+            ${teoriaAtual.length}
+
+        </strong>
+
+    `;
+
+window.scrollTo(
+    0,
+    0
+);
+
+}
+
+function proximaPaginaTeoria(){
+
+    if(
+
+        paginaTeoriaAtual
+
+        <
+
+        teoriaAtual.length - 1
+
+    ){
+
+        paginaTeoriaAtual++;
+
+        mostrarPaginaTeoria();
+
+    } else {
+
+        abrirMapaMental();
+
+    }
+
+}
+
+function paginaAnteriorTeoria(){
+
+    if(
+
+        paginaTeoriaAtual > 0
+
+    ){
+
+        paginaTeoriaAtual--;
+
+        mostrarPaginaTeoria();
+
+    }
+
+}
+
+function abrirMapaMental(){
+
+    mostrarTela(
+        "telaMapaMental"
     );
 
 }
@@ -1373,7 +1488,6 @@ function iniciarSimuladoInformatica(){
         ...hardware,
         ...software,
         ...arquivos,
-        ...arquivos,
         ...office,
         ...internet,
         ...redes,
@@ -1801,9 +1915,20 @@ case "fundamentosCiencias":
 
     }
 
-    mostrarTela(
-        "telaMapaMental"
+if(assunto === "fundamentosCiencias"){
+
+    abrirTeoria(
+        fundamentosCienciasTeoria,
+        "🔬 Fundamentos do Ensino de Ciências"
     );
+
+    return;
+
+}
+
+mostrarTela(
+    "telaMapaMental"
+);
 
 }
 
@@ -2036,32 +2161,63 @@ function voltarParaAssuntos(){
 
     ];
 
+    const assuntosCiencias = [
+
+        "fundamentosCiencias"
+
+    ];
+
     if(
+
         assuntosPortugues.includes(
             assuntoAtual
         )
+
     ){
 
-        mostrarTela("portugues");
+        mostrarTela(
+            "portugues"
+        );
 
     }
+
     else if(
+
         assuntosInformatica.includes(
             assuntoAtual
         )
+
     ){
 
-        mostrarTela("informatica");
+        mostrarTela(
+            "informatica"
+        );
 
     }
+
+    else if(
+
+        assuntosCiencias.includes(
+            assuntoAtual
+        )
+
+    ){
+
+        mostrarTela(
+            "ciencias"
+        );
+
+    }
+
     else{
 
-        mostrarTela("didatica");
+        mostrarTela(
+            "didatica"
+        );
 
     }
 
 }
-
 function continuarQuestoes(){
 
     disciplinaAtual = assuntoAtual;
