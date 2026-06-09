@@ -736,3 +736,45 @@ footer small{
     display:none;
 
 }
+
+/* ==========================
+   TEORIA
+========================== */
+
+#conteudoTeoria{
+
+    text-align: justify;
+
+    line-height: 1.8;
+
+    font-size: 18px;
+
+}
+
+#conteudoTeoria h3{
+
+    margin-top: 20px;
+
+    margin-bottom: 10px;
+
+}
+
+#conteudoTeoria p{
+
+    margin-bottom: 15px;
+
+}
+
+#conteudoTeoria ul{
+
+    margin-left: 25px;
+
+    margin-bottom: 15px;
+
+}
+
+#conteudoTeoria li{
+
+    margin-bottom: 8px;
+
+}
