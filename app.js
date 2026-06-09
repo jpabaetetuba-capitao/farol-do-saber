@@ -307,9 +307,13 @@ if (nome === "informatica") {
 
 function abrirTeoria(teoria, titulo){
 
-    teoriaAtual = teoria;
+teoriaAtual = teoria;
 
-    paginaTeoriaAtual = 0;
+paginaTeoriaAtual = Number(
+    localStorage.getItem(
+        "farol_teoria_" + assuntoAtual
+    )
+) || 0;
 
     document.getElementById(
         "tituloTeoria"
@@ -322,6 +326,11 @@ function abrirTeoria(teoria, titulo){
 }
 
 function mostrarPaginaTeoria(){
+
+localStorage.setItem(
+    "farol_teoria_" + assuntoAtual,
+    paginaTeoriaAtual
+);
 
     const pagina =
         teoriaAtual[paginaTeoriaAtual];
@@ -344,23 +353,54 @@ function mostrarPaginaTeoria(){
 
         <br><br>
 
-        <strong>
+        <h4>
 
-            Página
-            ${paginaTeoriaAtual + 1}
+    Página
+    ${paginaTeoriaAtual + 1}
 
-            de
+    de
 
-            ${teoriaAtual.length}
+    ${teoriaAtual.length}
 
-        </strong>
+</h4>
+
+<br>
+
+<progress
+    value="${paginaTeoriaAtual + 1}"
+    max="${teoriaAtual.length}"
+    style="
+        width:100%;
+        height:25px;
+    ">
+</progress>
+
+<br><br>
+
+<strong>
+
+${
+    Math.round(
+        (
+            (paginaTeoriaAtual + 1)
+            /
+            teoriaAtual.length
+        ) * 100
+    )
+}%
+
+concluído
+
+</strong>
 
     `;
 
-window.scrollTo(
-    0,
-    0
-);
+document
+    .getElementById("tituloTeoria")
+    .scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 
 }
 
@@ -382,9 +422,14 @@ function proximaPaginaTeoria(){
 
     } else {
 
-        abrirMapaMental();
+    localStorage.setItem(
+        "farol_teoria_concluida_" + assuntoAtual,
+        "true"
+    );
 
-    }
+    abrirMapaMental();
+
+}
 
 }
 
@@ -439,9 +484,21 @@ const percentual =
     
     <div class="card">
 
-<button onclick="voltarParaMapa()">
-    ⬅ Voltar
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+
+<button onclick="abrirTeoriaDoAssunto()">
+    📚 Teoria
 </button>
+
+<button onclick="voltarParaMapa()">
+    🧠 Mapa Mental
+</button>
+
+<button onclick="voltarParaAssuntos()">
+    ⬅ Assuntos
+</button>
+
+</div>
 
 <br><br>
 
@@ -2120,6 +2177,20 @@ function voltarParaMapa(){
     abrirAssunto(
         assuntoAtual
     );
+
+}
+
+
+function abrirTeoriaDoAssunto(){
+
+    if(assuntoAtual === "fundamentosCiencias"){
+
+        abrirTeoria(
+            fundamentosCienciasTeoria,
+            "🔬 Fundamentos do Ensino de Ciências"
+        );
+
+    }
 
 }
 
