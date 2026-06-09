@@ -355,7 +355,7 @@ function mostrarPaginaTeoria(){
 
         <h4>
 
-            Página
+            📖 Página
             ${paginaTeoriaAtual + 1}
 
             de
@@ -364,36 +364,51 @@ function mostrarPaginaTeoria(){
 
         </h4>
 
-        <br>
-
-        <progress
-            value="${paginaTeoriaAtual + 1}"
-            max="${teoriaAtual.length}"
-            style="
-                width:100%;
-                height:25px;
-            ">
-        </progress>
-
-        <br><br>
-
-        <strong>
-
-        ${
-            Math.round(
-                (
-                    (paginaTeoriaAtual + 1)
-                    /
-                    teoriaAtual.length
-                ) * 100
-            )
-        }%
-
-        concluído
-
-        </strong>
-
     `;
+
+    let paginasHTML = "";
+
+    for(
+        let i = 0;
+        i < teoriaAtual.length;
+        i++
+    ){
+
+        if(i === paginaTeoriaAtual){
+
+            paginasHTML += `
+            <button
+                onclick="irParaPaginaTeoria(${i})"
+                style="
+                    background:#1565c0;
+                    color:white;
+                    margin:2px;
+                    min-width:40px;
+                ">
+                ${i + 1}
+            </button>
+            `;
+
+        }else{
+
+            paginasHTML += `
+            <button
+                onclick="irParaPaginaTeoria(${i})"
+                style="
+                    margin:2px;
+                    min-width:40px;
+                ">
+                ${i + 1}
+            </button>
+            `;
+
+        }
+
+    }
+
+    document.getElementById(
+        "paginacaoTeoria"
+    ).innerHTML = paginasHTML;
 
     const botao =
     document.getElementById(
@@ -431,6 +446,14 @@ function mostrarPaginaTeoria(){
         });
 
 }
+function irParaPaginaTeoria(numero){
+
+    paginaTeoriaAtual = numero;
+
+    mostrarPaginaTeoria();
+
+}
+
 
 function proximaPaginaTeoria(){
 
