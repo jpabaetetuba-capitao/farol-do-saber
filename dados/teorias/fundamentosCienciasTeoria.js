@@ -2,7 +2,7 @@ const fundamentosCienciasTeoria = [
 
 {
 titulo: "1. Apresentação do Ensino de Ciências",
-conteudo: `<h3>1. APRESENTAÇÃO DO ENSINO DE CIÊNCIAS</h3>
+conteudo: `
 
 <p>
 O Ensino de Ciências é uma área fundamental da Educação Básica, responsável por promover a compreensão dos fenômenos naturais, tecnológicos e ambientais que fazem parte da vida cotidiana. Seu objetivo vai muito além da simples transmissão de conteúdos relacionados à Biologia, Física, Química ou Astronomia. O Ensino de Ciências busca desenvolver nos estudantes a capacidade de observar, questionar, investigar, argumentar e tomar decisões fundamentadas em evidências.
@@ -121,7 +121,7 @@ As contribuições de autores como Attico Chassot, Jean Piaget, Lev Vygotsky e P
 
 {
 titulo: "2. História do Ensino de Ciências",
-conteudo: `<h3>2. HISTÓRIA DO ENSINO DE CIÊNCIAS</h3>
+conteudo: `
 
 <p>
 A história do Ensino de Ciências está diretamente relacionada às transformações sociais, econômicas, tecnológicas e educacionais ocorridas ao longo do tempo. A maneira como a ciência foi ensinada nas escolas modificou-se significativamente, acompanhando as mudanças nas concepções de aprendizagem, desenvolvimento humano e papel da educação na sociedade.
@@ -222,7 +222,7 @@ Autores como Demétrio Delizoicov, José André Angotti, Martha Pernambuco e Att
 
 {
 titulo: "3. Objetivos do Ensino de Ciências",
-conteudo: `<h3>3. OBJETIVOS DO ENSINO DE CIÊNCIAS</h3>
+conteudo: `
 
 <p>
 O Ensino de Ciências possui um papel fundamental na formação dos estudantes da Educação Básica. Seu objetivo não se limita à transmissão de conhecimentos científicos acumulados ao longo da história, mas envolve a formação de indivíduos capazes de compreender a realidade, interpretar fenômenos naturais, utilizar conhecimentos científicos na resolução de problemas e participar ativamente da sociedade.
@@ -395,7 +395,7 @@ Segundo a BNCC, o estudante deve ser capaz de utilizar conhecimentos científico
 
 {
 titulo: "4. Jean Piaget e o Construtivismo",
-conteudo: `<h3>4. JEAN PIAGET E O CONSTRUTIVISMO</h3>
+conteudo: `
 
 <p>
 Jean William Fritz Piaget (1896–1980) foi um biólogo, psicólogo e epistemólogo suíço, reconhecido mundialmente como um dos mais importantes estudiosos do desenvolvimento cognitivo humano. Suas pesquisas revolucionaram a compreensão sobre como as crianças aprendem e construem conhecimentos.
@@ -594,7 +594,7 @@ Apesar das críticas, Piaget permanece como uma das maiores referências da Psic
 
 {
 titulo: "5. Lev Vygotsky e a Aprendizagem Social",
-conteudo: `<h3>5. LEV VYGOTSKY E A APRENDIZAGEM SOCIAL</h3>
+conteudo: `
 
 <p>
 Lev Semionovich Vygotsky (1896–1934) foi um psicólogo e pesquisador russo que desenvolveu uma das teorias mais influentes da educação moderna. Sua abordagem, conhecida como Teoria Sociocultural ou Histórico-Cultural, destaca a importância das interações sociais e da cultura na construção do conhecimento.
@@ -801,7 +801,7 @@ Questões costumam relacionar esses conceitos à prática pedagógica, ao papel 
 
 {
 titulo: "6. Paulo Freire e a Educação Científica",
-conteudo: `<h3>6. PAULO FREIRE E A EDUCAÇÃO CIENTÍFICA</h3>
+conteudo: `
 
 <p>
 Paulo Reglus Neves Freire (1921–1997) é considerado um dos educadores mais influentes da história da educação mundial. Suas ideias transformaram a compreensão do processo educativo ao defender uma educação crítica, democrática, participativa e comprometida com a transformação social.
@@ -1008,7 +1008,7 @@ Compreender esses conceitos é fundamental para provas de Professor, Pedagogo e 
 
 {
 titulo: "7. Alfabetização Científica",
-conteudo: `<h3>7. ALFABETIZAÇÃO CIENTÍFICA</h3>
+conteudo: `
 
 <p>
 A Alfabetização Científica é um dos conceitos mais importantes da Educação em Ciências contemporânea. Ela representa a capacidade que os indivíduos desenvolvem para compreender conhecimentos científicos, interpretar informações relacionadas à ciência e utilizar esse conhecimento para tomar decisões conscientes em sua vida pessoal e social.
@@ -1215,7 +1215,7 @@ Também são frequentes questões envolvendo a relação entre Alfabetização C
 
 {
 titulo: "8. Ensino por Investigação",
-conteudo: `<h3>8. ENSINO DE CIÊNCIAS POR INVESTIGAÇÃO</h3>
+conteudo: `
 
 <p>
 O Ensino de Ciências por Investigação é uma abordagem pedagógica que busca aproximar a aprendizagem escolar das práticas utilizadas pelos cientistas na produção do conhecimento. Nessa perspectiva, os estudantes deixam de ser apenas receptores de informações e passam a atuar como sujeitos ativos na construção do conhecimento científico.
@@ -1419,8 +1419,8 @@ Também são comuns questões envolvendo o papel mediador do professor e as etap
 },
 
 {
-titulo: "9. CTSA",
-conteudo: `<h3>9. CTSA – CIÊNCIA, TECNOLOGIA, SOCIEDADE E AMBIENTE</h3>
+titulo: "9. CTSA – CIÊNCIA, TECNOLOGIA, SOCIEDADE E AMBIENTE",
+conteudo: `
 
 <p>
 A abordagem CTSA (Ciência, Tecnologia, Sociedade e Ambiente) constitui uma das principais tendências contemporâneas da Educação em Ciências. Essa perspectiva busca superar o ensino fragmentado dos conteúdos científicos, promovendo a compreensão das relações existentes entre os avanços científicos, o desenvolvimento tecnológico, a sociedade e o meio ambiente.
@@ -1633,7 +1633,7 @@ Também são comuns perguntas que relacionam a abordagem CTSA à Alfabetização
 
 {
 titulo: "10. Ensino de Ciências na BNCC",
-conteudo: `<h3>10. ENSINO DE CIÊNCIAS NA BNCC</h3>
+conteudo: `
 
 <p>
 A Base Nacional Comum Curricular (BNCC) é um documento normativo que estabelece as aprendizagens essenciais que todos os estudantes brasileiros devem desenvolver ao longo da Educação Básica. Homologada em 2017 para a Educação Infantil e o Ensino Fundamental e em 2018 para o Ensino Médio, a BNCC orienta a elaboração dos currículos escolares em todo o país.
@@ -1833,8 +1833,8 @@ Questões também costumam relacionar a BNCC às metodologias ativas e ao Ensino
 },
 
 {
-titulo: "11. O Papel do Professor de Ciências",
-conteudo: `<h3>11. O PAPEL DO PROFESSOR DE CIÊNCIAS NO SÉCULO XXI</h3>
+titulo: "11. O Papel do Professor de Ciências no Século XXI",
+conteudo: `
 
 <p>
 As profundas transformações científicas, tecnológicas e sociais ocorridas nas últimas décadas modificaram significativamente o papel da escola e dos professores. No contexto atual, o professor de Ciências não pode mais ser visto apenas como transmissor de informações. Sua atuação envolve a mediação do conhecimento, a promoção da investigação científica e a formação de cidadãos críticos capazes de compreender e atuar na sociedade contemporânea.
@@ -2064,7 +2064,7 @@ Compreender essas perspectivas é fundamental para responder adequadamente às q
 
 {
 titulo: "12. Revisão Geral para Concursos",
-conteudo: `<h3>12. REVISÃO GERAL PARA CONCURSOS</h3>
+conteudo: `
 
 <p>
 Ao longo desta teoria foram apresentados os principais fundamentos do Ensino de Ciências cobrados em concursos para Professor. Esta página tem como objetivo revisar os conceitos centrais, autores mais importantes e palavras-chave frequentemente exploradas pelas bancas examinadoras.
