@@ -393,36 +393,52 @@ async function excluirResposta(
         return;
     }
 
-    const pergunta =
-    perguntasForum.find(
+    try {
 
-        p => p.firebaseId === firebaseId
+        const pergunta =
+        perguntasForum.find(
 
-    );
+            p => p.firebaseId === firebaseId
 
-    if(!pergunta){
-        return;
+        );
+
+        if(!pergunta){
+            alert("Pergunta não encontrada");
+            return;
+        }
+
+        const respostas = [
+
+            ...(pergunta.respostas || [])
+
+        ];
+
+        respostas.splice(
+            indiceResposta,
+            1
+        );
+
+        await db
+        .collection("forumGlobal")
+        .doc(firebaseId)
+        .update({
+
+            respostas: respostas
+
+        });
+
+        alert("Resposta excluída com sucesso");
+
+    } catch(error){
+
+        console.error(error);
+
+        alert(
+            "ERRO: " +
+            error.message
+        );
+
     }
-
-    const respostas = [
-
-        ...(pergunta.respostas || [])
-
-    ];
-
-    respostas.splice(
-        indiceResposta,
-        1
-    );
-
-    await db
-    .collection("forumGlobal")
-    .doc(firebaseId)
-    .update({
-
-        respostas: respostas
-
-    });
 
 }
 
@@ -3974,6 +3990,8 @@ async function enviarMensagem(){
 
 function iniciarChat(){
 
+iniciarDigitando();
+
     db.collection("chatGlobal")
 
     .orderBy("data")
@@ -4173,3 +4191,98 @@ async function curtirMensagem(id){
     });
 
 }
+
+// ===============================
+// USUÁRIO ESTÁ DIGITANDO
+// ===============================
+
+let timeoutDigitando;
+
+function iniciarDigitando() {
+
+    const campo =
+    document.getElementById(
+        "mensagemChat"
+    );
+
+    if(!campo){
+        return;
+    }
+
+    campo.addEventListener(
+        "input",
+        async () => {
+
+            if(!usuarioForum){
+                return;
+            }
+
+            await db
+            .collection("digitando")
+            .doc(usuarioEmail)
+            .set({
+
+                nome: usuarioForum,
+                timestamp: Date.now()
+
+            });
+
+            clearTimeout(
+                timeoutDigitando
+            );
+
+            timeoutDigitando =
+            setTimeout(
+                async () => {
+
+                    await db
+                    .collection("digitando")
+                    .doc(usuarioEmail)
+                    .delete();
+
+                },
+                3000
+            );
+
+        }
+    );
+
+}
+
+db.collection("digitando")
+.onSnapshot(snapshot => {
+
+    let texto = "";
+
+    snapshot.forEach(doc => {
+
+        const dados =
+        doc.data();
+
+        if(
+            dados.nome !==
+            usuarioForum
+        ){
+
+            texto =
+            "✍️ " +
+            dados.nome +
+            " está digitando...";
+
+        }
+
+    });
+
+    const area =
+    document.getElementById(
+        "digitandoInfo"
+    );
+
+    if(area){
+
+        area.innerHTML =
+        texto;
+
+    }
+
+});
