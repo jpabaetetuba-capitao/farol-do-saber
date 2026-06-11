@@ -1157,3 +1157,44 @@ progress{
     }
 
 }
+
+@media (max-width: 768px){
+
+    nav{
+        display:grid;
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:8px;
+    }
+
+    nav button{
+        width:100%;
+        margin:0;
+        padding:8px 10px;
+        font-size:12px;
+        border-radius:10px;
+    }
+
+    .grid-disciplinas{
+        grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+        gap:8px;
+    }
+
+    .btn-disciplina{
+        min-height:72px;
+        padding:8px;
+        font-size:12px;
+        line-height:1.1;
+        border-radius:14px;
+    }
+
+    .grid-assuntos{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:8px;
+    }
+
+    .btn-assunto{
+        padding:10px;
+        font-size:12px;
+    }
+
+}
