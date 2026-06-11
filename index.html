@@ -132,6 +132,10 @@
 
 <nav>
 
+    <button onclick="mostrarTela('chatGlobal')">
+    💬 Chat Geral
+</button>
+
     <button onclick="mostrarTela('inicio')">
         🏠 Início
     </button>
@@ -175,6 +179,19 @@
         <br><br>
 
         <h2>📚 Didática e Legislação</h2>
+
+<br>
+
+<button
+    id="btnForumDidatica"
+    class="btn-forum"
+    onclick="abrirForum('didatica')">
+
+    💬 Fórum de Discussão
+
+</button>
+
+<br><br>
 
         <p>
             Selecione um assunto:
@@ -265,6 +282,19 @@
         <br><br>
 
         <h2>📖 Língua Portuguesa</h2>
+
+<br>
+
+<button
+    id="btnForumPortugues"
+    class="btn-forum"
+    onclick="abrirForum('portugues')">
+
+    💬 Fórum de Discussão
+
+</button>
+
+<br><br>
 
         <p>
             Selecione um assunto:
@@ -372,6 +402,19 @@
 
         <h2>💻 Informática</h2>
 
+<br>
+
+<button
+    id="btnForumInformatica"
+    class="btn-forum"
+    onclick="abrirForum('informatica')">
+
+    💬 Fórum de Discussão
+
+</button>
+
+<br><br>
+
         <p>
             Selecione um assunto:
         </p>
@@ -435,6 +478,19 @@
 
         <h2>🔬 Professor de Ciências</h2>
 
+<br>
+
+<<button
+    id="btnForumCiencias"
+    class="btn-forum"
+    onclick="abrirForum('ciencias')">
+
+    💬 Fórum de Discussão
+
+</button>
+
+<br><br>
+
         <p>
             Selecione um assunto:
         </p>
@@ -449,6 +505,15 @@
     onclick="abrirAssunto('fundamentosCiencias')">
 
     🔬 Fundamentos do Ensino de Ciências
+
+</button>
+
+<button
+    id="btnBnccCiencias"
+    class="btn-assunto"
+    onclick="abrirAssunto('bnccCiencias')">
+
+    📘 BNCC e Competências em Ciências da Natureza
 
 </button>
 
@@ -639,6 +704,16 @@ Li e revisei o mapa mental.
 
 <br>
 
+<p>
+    Tempo Estudado:
+    <strong
+        id="tempoEstudado">
+        0h 0min
+    </strong>
+</p>
+
+<br>
+
 <h3>🏅 Medalhas</h3>
 
 <br>
@@ -795,19 +870,12 @@ Li e revisei o mapa mental.
     </button>
 
 <button
-    class="btn-disciplina premium"
+    class="btn-disciplina"
     onclick="abrirDisciplina('ciencias')">
 
-    <div class="cadeado-premium">
-        🔒
-    </div>
-
-    <div>
-        Professor de Ciências
-    </div>
+    🔬 Professor de Ciências
 
 </button>
-
 <button
     class="btn-disciplina premium"
     onclick="abrirDisciplina('matematica')">
@@ -819,6 +887,32 @@ Li e revisei o mapa mental.
     <div>
         Professor de Matemática
     </div>
+
+</button>
+
+<button
+    class="btn-disciplina premium"
+    onclick="alert('🚧 Disciplina em desenvolvimento!')">
+
+    <div class="cadeado-premium">
+        🔒
+    </div>
+
+    <div>
+        Professor de História
+    </div>
+
+</button>
+
+<button
+    class="btn-disciplina premium"
+    onclick="alert('🚧 Disciplina em desenvolvimento!')">
+
+    <div class="cadeado-premium">
+        🔒
+    </div>
+
+    Professor de Educação Física
 
 </button>
 
@@ -948,16 +1042,40 @@ Li e revisei o mapa mental.
 
             </button>
 
-            <button
-                class="btn-disciplina premium">
+<button
+    class="btn-disciplina premium"
+    onclick="alert('🚧 Disciplina em desenvolvimento!')">
 
-                <div class="cadeado-premium">
-                    🔒
-                </div>
+    <div class="cadeado-premium">
+        🔒
+    </div>
 
-                Professor de Ciências
+    <div>
+        Professor de História
+    </div>
 
-            </button>
+</button>
+
+<button
+    class="btn-disciplina premium"
+    onclick="alert('🚧 Disciplina em desenvolvimento!')">
+
+    <div class="cadeado-premium">
+        🔒
+    </div>
+
+    Professor de Educação Física
+
+</button>
+
+
+           <button
+    class="btn-assunto"
+    onclick="iniciarSimuladoCiencias()">
+
+    🔬 Professor de Ciências
+
+</button>
 
         </div>
 
@@ -1084,7 +1202,13 @@ Li e revisei o mapa mental.
 
 <script src="dados/fundamentosCiencias.js"></script>
 
+<script src="dados/bnccCiencias.js"></script>
+
 <script src="dados/teorias/fundamentosCienciasTeoria.js"></script>
+
+<script src="dados/teorias/bnccCienciasTeoria.js"></script>
+
+<script src="dados/teorias/hardwareTeoria.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 
@@ -1104,7 +1228,6 @@ Li e revisei o mapa mental.
 
         <center>
 
-            
             <p>
                 Idealizado e desenvolvido por:
             </p>
@@ -1124,6 +1247,154 @@ Li e revisei o mapa mental.
     </div>
 
 </footer>
+
+<section
+    id="forum"
+    class="tela">
+
+    <div class="card">
+
+        <button
+            class="btn-voltar"
+           onclick="voltarForum()">
+
+            ⬅ Voltar
+
+        </button>
+
+        <br><br>
+
+        <h2>
+            💬 Fórum de Discussão
+        </h2>
+
+        <p>
+            Compartilhe dúvidas
+            e ajude outros alunos.
+        </p>
+
+        <br>
+
+        <button
+            class="btn-forum"
+            onclick="novaPergunta()">
+
+            ➕ Nova Pergunta
+
+        </button>
+
+        <br><br>
+
+        <div id="listaForum">
+
+            Nenhuma pergunta cadastrada.
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    id="chatGlobal"
+    class="tela">
+
+    <div
+        class="card"
+        style="
+            max-width:500px;
+            margin:auto;
+        ">
+
+        <h2>
+            💬 Chat Geral
+        </h2>
+
+        <p>
+            Converse com os alunos online.
+        </p>
+
+<div
+    id="usuariosOnlineChat"
+    class="usuarios-online-chat">
+
+    Carregando usuários...
+
+</div>
+
+<br>
+
+        <br>
+
+        <div
+            id="listaChat"
+    class="chat-box"
+    style="
+        height:350px;
+        overflow-y:auto;
+        text-align:left;
+        padding:15px;
+        border-radius:20px;
+        background:rgba(255,255,255,0.10);
+        backdrop-filter:blur(10px);
+        -webkit-backdrop-filter:blur(10px);
+        border:1px solid rgba(255,255,255,0.20);
+            ">
+
+            Nenhuma mensagem.
+
+        </div>
+
+        <br>
+
+<div class="emoji-bar">
+
+    <button onclick="adicionarEmoji('😀')">😀</button>
+
+    <button onclick="adicionarEmoji('😂')">😂</button>
+
+    <button onclick="adicionarEmoji('😍')">😍</button>
+
+    <button onclick="adicionarEmoji('😎')">😎</button>
+
+    <button onclick="adicionarEmoji('👍')">👍</button>
+
+    <button onclick="adicionarEmoji('👏')">👏</button>
+
+    <button onclick="adicionarEmoji('🎉')">🎉</button>
+
+    <button onclick="adicionarEmoji('❤️')">❤️</button>
+
+</div>
+
+<br>
+        <input
+            type="text"
+            id="mensagemChat"
+            placeholder="Digite sua mensagem..."
+            style="
+                width:100%;
+                background:rgba(255,255,255,0.15);
+                border:1px solid rgba(255,255,255,0.25);
+                color:black;
+                padding:12px;
+                border-radius:12px;
+                font-size:16px;
+            "
+            onkeypress="if(event.key==='Enter') enviarMensagem();">
+
+        <br><br>
+
+        <button
+            onclick="enviarMensagem()">
+
+            📤 Enviar
+
+        </button>
+
+    </div>
+
+</section>
 
 </body>
 
