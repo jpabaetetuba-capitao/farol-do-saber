@@ -1256,7 +1256,7 @@ Li e revisei o mapa mental.
 
         <button
             class="btn-voltar"
-           onclick="voltarForum()">
+            onclick="voltarForum()">
 
             ⬅ Voltar
 
@@ -1306,6 +1306,16 @@ Li e revisei o mapa mental.
             margin:auto;
         ">
 
+        <button
+            class="btn-voltar"
+            onclick="mostrarTela('inicio')">
+
+            ⬅ Voltar
+
+        </button>
+
+        <br><br>
+
         <h2>
             💬 Chat Geral
         </h2>
@@ -1314,31 +1324,31 @@ Li e revisei o mapa mental.
             Converse com os alunos online.
         </p>
 
-<div
-    id="usuariosOnlineChat"
-    class="usuarios-online-chat">
+        <div
+            id="usuariosOnlineChat"
+            class="usuarios-online-chat">
 
-    Carregando usuários...
+            Carregando usuários...
 
-</div>
+        </div>
 
-<br>
+        <div id="digitandoInfo"></div>
 
         <br>
 
         <div
             id="listaChat"
-    class="chat-box"
-    style="
-        height:350px;
-        overflow-y:auto;
-        text-align:left;
-        padding:15px;
-        border-radius:20px;
-        background:rgba(255,255,255,0.10);
-        backdrop-filter:blur(10px);
-        -webkit-backdrop-filter:blur(10px);
-        border:1px solid rgba(255,255,255,0.20);
+            class="chat-box"
+            style="
+                height:350px;
+                overflow-y:auto;
+                text-align:left;
+                padding:15px;
+                border-radius:20px;
+                background:rgba(255,255,255,0.10);
+                backdrop-filter:blur(10px);
+                -webkit-backdrop-filter:blur(10px);
+                border:1px solid rgba(255,255,255,0.20);
             ">
 
             Nenhuma mensagem.
@@ -1347,7 +1357,7 @@ Li e revisei o mapa mental.
 
         <br>
 
-<div class="emoji-bar">
+        <div class="emoji-bar">
 
     <button onclick="adicionarEmoji('😀')">😀</button>
 
