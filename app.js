@@ -607,7 +607,10 @@ const bancoQuestoes = {
 
     fundamentosCiencias,
 
-    bnccCiencias
+    bnccCiencias,
+
+    
+    
 
 
 };
@@ -2660,6 +2663,59 @@ if(assunto === "hardware"){
 
 }
 
+if(assunto === "software"){
+
+    abrirTeoria(
+        softwareTeoria,
+        "🖥️ Software"
+    );
+
+    return;
+
+}
+
+if(assunto === "arquivos"){
+
+    abrirTeoria(
+        arquivosPastasBackupTeoria,
+        "📁 Arquivos, Pastas, Linux e Backup"
+    );
+
+    return;
+
+}
+
+if(assunto === "office"){
+    abrirTeoria(
+        officeTeoria,
+        "📊 Office e LibreOffice"
+    );
+    return;
+}
+
+if(assunto === "internet"){
+    abrirTeoria(
+        internetTeoria,
+        "🌐 Internet e Correio Eletrônico"
+    );
+    return;
+}
+
+if(assunto === "redes"){
+    abrirTeoria(
+        redesTeoria,
+        "🖧 Redes de Computadores"
+    );
+    return;
+}
+
+if(assunto === "seguranca"){
+    abrirTeoria(
+        segurancaInformacaoTeoria,
+        "🔐 Segurança da Informação"
+    );
+    return;
+}
 
 mostrarTela(
     "telaMapaMental"
@@ -2934,7 +2990,6 @@ function voltarParaMapa(){
 function abrirTeoriaDoAssunto(){
 
     if(assuntoAtual === "fundamentosCiencias"){
-
         abrirTeoria(
             fundamentosCienciasTeoria,
             "🔬 Fundamentos do Ensino de Ciências"
@@ -2943,7 +2998,6 @@ function abrirTeoriaDoAssunto(){
     }
 
     if(assuntoAtual === "bnccCiencias"){
-
         abrirTeoria(
             bnccCienciasTeoria,
             "📘 BNCC e Competências em Ciências da Natureza"
@@ -2952,7 +3006,6 @@ function abrirTeoriaDoAssunto(){
     }
 
     if(assuntoAtual === "hardware"){
-
         abrirTeoria(
             hardwareTeoria,
             "💻 Hardware"
@@ -2960,6 +3013,53 @@ function abrirTeoriaDoAssunto(){
         return;
     }
 
+    if(assuntoAtual === "software"){
+        abrirTeoria(
+            softwareTeoria,
+            "🖥️ Software"
+        );
+        return;
+    }
+
+    if(assuntoAtual === "arquivos"){
+        abrirTeoria(
+            arquivosPastasBackupTeoria,
+            "📁 Arquivos, Pastas, Linux e Backup"
+        );
+        return;
+    }
+
+if(assuntoAtual === "office"){
+    abrirTeoria(
+        officeTeoria,
+        "📊 Office e LibreOffice"
+    );
+    return;
+}
+if(assuntoAtual === "internet"){
+    abrirTeoria(
+        internetTeoria,
+        "🌐 Internet"
+    );
+    return;
+}
+if(assuntoAtual === "redes"){
+    abrirTeoria(
+        redesTeoria,
+        "📡 Redes de Computadores"
+    );
+    return;
+}
+if(assuntoAtual === "seguranca"){
+    abrirTeoria(
+        segurancaInformacaoTeoria,
+        "🔐 Segurança da Informação"
+    );
+    return;
+}
+
+
+    mostrarTela("telaMapaMental");
 }
 
 function voltarParaAssuntos(){
