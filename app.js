@@ -51,8 +51,7 @@ function abrirForum(disciplina){
         localStorage.getItem("farol_telaAtual")
         || "";
 
-    carregarForum();
-
+  
     mostrarTela("forum");
 
 }
@@ -86,6 +85,9 @@ const novaPerguntaObj = {
     autor:
         usuarioForum,
 
+    autorEmail:
+        usuarioEmail,
+
     pergunta:
         pergunta,
 
@@ -104,8 +106,7 @@ atualizarContadorForum();
 
 }
 
-
-function responderPergunta(botao){
+async function responderPergunta(firebaseId){
 
     const resposta = prompt(
         "Digite sua resposta:"
@@ -118,62 +119,61 @@ function responderPergunta(botao){
         return;
     }
 
-const perguntaTexto =
+    const perguntaEncontrada =
+    perguntasForum.find(
 
-botao
-.parentElement
-.querySelector("h3")
-.textContent
-.replace("❓","")
-.trim();
+        p => p.firebaseId === firebaseId
 
-const perguntaEncontrada =
+    );
 
-perguntasForum.find(
 
-    p => p.pergunta === perguntaTexto
+    if(!perguntaEncontrada){
+        alert("Pergunta não encontrada.");
+        return;
+    }
 
-);
+    const novasRespostas = [
 
-if(perguntaEncontrada){
+        ...(perguntaEncontrada.respostas || []),
 
-   perguntaEncontrada.respostas.push({
+        {
+            autor: usuarioForum,
+            data: new Date().toLocaleString(),
+            texto: resposta,
+            curtidas: 0,
+            curtidoPor: []
+        }
 
-    autor: usuarioForum,
+    ];
 
-    data: new Date()
-    .toLocaleString(),
+    try{
 
-    texto: resposta,
+    await db
+    .collection("forumGlobal")
+    .doc(firebaseId)
+    .update({
 
-    curtidas: 0,
+        respostas: novasRespostas
 
-    curtidoPor: []
+    });
 
-});
+    
+}catch(erro){
 
-    localStorage.setItem(
+    console.error(erro);
 
-        "forumPerguntas",
-
-        JSON.stringify(
-            perguntasForum
-        )
-
+    alert(
+        "ERRO: " + erro.message
     );
 
 }
 
 
-    carregarForum();
-
 }
-
 
 function renderizarForum(){
 
     const listaForum =
-
     document.getElementById(
         "listaForum"
     );
@@ -197,22 +197,22 @@ function renderizarForum(){
 
     [...perguntasForum]
 
-.filter(
+    .filter(
 
-    item =>
+        item =>
 
-    item.disciplina ===
-    disciplinaForumAtual
+        item.disciplina ===
+        disciplinaForumAtual
 
-)
+    )
 
-.sort(
+    .sort(
 
-    (a,b) => b.id - a.id
+        (a,b) => b.id - a.id
 
-)
+    )
 
-.forEach(item => {
+    .forEach(item => {
 
         listaForum.innerHTML += `
 
@@ -225,22 +225,15 @@ function renderizarForum(){
             <p>
                 👤 ${item.autor}
 
-${
-    administradores.includes(item.autor)
-    ?
-    " 👑"
-    :
-    ""
-}
             </p>
 
             <p>
                 📅 ${item.data}
             </p>
 
- <button
+<button
     class="btn-responder"
-    onclick="responderPergunta(this)">
+    onclick="responderPergunta('${item.firebaseId}')">
 
     💬 Responder
 
@@ -254,7 +247,7 @@ ${
     `
     <button
         class="btn-excluir"
-        onclick="excluirPergunta(${item.id})">
+        onclick="excluirPergunta('${item.firebaseId}')">
 
         🗑 Excluir
 
@@ -264,27 +257,17 @@ ${
     ""
 }
 
-            <div class="respostas">
+<div class="respostas">
 
 ${
-    item.respostas
+    (item.respostas || [])
 
     .map((resposta, indice) => `
-
 
     <div class="resposta-forum">
 
         👤 ${resposta.autor}
 
-${
-    administradores.includes(
-        resposta.autor
-    )
-    ?
-    " 👑"
-    :
-    ""
-}
 
         <br>
 
@@ -298,7 +281,7 @@ ${
 
 <button
     onclick="curtirResposta(
-        ${item.id},
+        '${item.firebaseId}',
         ${indice}
     )">
 
@@ -308,30 +291,33 @@ ${
 
 <br><br>
 
-        ${
+${
     resposta.autor === usuarioForum
     ||
     ehAdmin()
     ?
-            `
-            <button
-                class="btn-excluir"
-                onclick="excluirResposta(${item.id}, ${indice})">
+    `
+    <button
+        class="btn-excluir"
+        onclick="excluirResposta(
+            '${item.firebaseId}',
+            ${indice}
+        )">
 
-                🗑 Excluir Resposta
+        🗑 Excluir Resposta
 
-            </button>
-            `
-            :
-            ""
-        }
+    </button>
+    `
+    :
+    ""
+}
 
     </div>
 
     <br>
 
 `)
-    .join("")
+.join("")
 }
 
 </div>
@@ -344,9 +330,11 @@ ${
 
     });
 
-atualizarContadorForum();
+    atualizarContadorForum();
 
 }
+
+
 
 function carregarForum(){
 
@@ -374,46 +362,26 @@ function carregarForum(){
 
 }
 
-
-function excluirPergunta(id){
+async function excluirPergunta(firebaseId){
 
     const confirmar = confirm(
-
         "Deseja excluir esta pergunta?"
-
     );
 
     if(!confirmar){
         return;
     }
 
-    perguntasForum =
+    await db
+    .collection("forumGlobal")
+    .doc(firebaseId)
+    .delete();
 
-    perguntasForum.filter(
-
-        pergunta =>
-
-        pergunta.id !== id
-
-    );
-
-    localStorage.setItem(
-
-        "forumPerguntas",
-
-        JSON.stringify(
-            perguntasForum
-        )
-
-    );
-
-    carregarForum();
-
-    atualizarContadorForum();
 }
 
-function excluirResposta(
-    idPergunta,
+
+async function excluirResposta(
+    firebaseId,
     indiceResposta
 ){
 
@@ -426,10 +394,9 @@ function excluirResposta(
     }
 
     const pergunta =
-
     perguntasForum.find(
 
-        p => p.id === idPergunta
+        p => p.firebaseId === firebaseId
 
     );
 
@@ -437,43 +404,58 @@ function excluirResposta(
         return;
     }
 
-    pergunta.respostas.splice(
+    const respostas = [
+
+        ...(pergunta.respostas || [])
+
+    ];
+
+    respostas.splice(
         indiceResposta,
         1
     );
 
-    localStorage.setItem(
+    await db
+    .collection("forumGlobal")
+    .doc(firebaseId)
+    .update({
 
-        "forumPerguntas",
+        respostas: respostas
 
-        JSON.stringify(
-            perguntasForum
-        )
-
-    );
-
-    carregarForum();
+    });
 
 }
 
-function curtirResposta(
-    idPergunta,
+
+
+async function curtirResposta(
+    firebaseId,
     indiceResposta
 ){
 
     const pergunta =
     perguntasForum.find(
-        p => p.id === idPergunta
+
+        p => p.firebaseId === firebaseId
+
     );
 
     if(!pergunta){
         return;
     }
 
-    const resposta =
-    pergunta.respostas[
-        indiceResposta
+    const respostas = [
+
+        ...(pergunta.respostas || [])
+
     ];
+
+    const resposta =
+    respostas[indiceResposta];
+
+    if(!resposta){
+        return;
+    }
 
     if(!resposta.curtidoPor){
 
@@ -482,9 +464,11 @@ function curtirResposta(
     }
 
     if(
+
         resposta.curtidoPor.includes(
             usuarioForum
         )
+
     ){
 
         alert(
@@ -495,23 +479,21 @@ function curtirResposta(
 
     }
 
-    resposta.curtidas++;
+    resposta.curtidas =
+        (resposta.curtidas || 0) + 1;
 
     resposta.curtidoPor.push(
         usuarioForum
     );
 
-    localStorage.setItem(
+    await db
+    .collection("forumGlobal")
+    .doc(firebaseId)
+    .update({
 
-        "forumPerguntas",
+        respostas: respostas
 
-        JSON.stringify(
-            perguntasForum
-        )
-
-    );
-
-    carregarForum();
+    });
 
 }
 
@@ -618,7 +600,6 @@ const bancoQuestoes = {
 // VARIÁVEIS GLOBAIS
 // ==========================
 
-
 let disciplinaAtual = "";
 let assuntoAtual = "";
 let questaoAtual = 0;
@@ -633,11 +614,17 @@ let acertos = 0;
 let erros = 0;
 
 let inicioEstudo = Date.now();
-let usuarioForum =
 
+let usuarioForum =
 localStorage.getItem(
     "usuarioForum"
 ) || "Visitante";
+
+let usuarioEmail =
+localStorage.getItem(
+    "usuarioEmail"
+) || "";
+
 let usuarioEhAdmin = false;
 
 let tempoEstudado =
@@ -657,16 +644,17 @@ let cadernoErros = [];
 
 let perguntasForum = [];
 
-
 const administradores = [
 
-    "João"
+    "jp@gmail.com"
 
 ];
 
 function ehAdmin(){
 
-    return usuarioEhAdmin;
+    return administradores.includes(
+        usuarioEmail
+    );
 
 }
 
@@ -3578,6 +3566,13 @@ usuarioEhAdmin =
 
 usuarioForum =
     primeiroNome;
+usuarioEmail =
+    credencial.user.email;
+
+localStorage.setItem(
+    "usuarioEmail",
+    usuarioEmail
+);
 
 localStorage.setItem(
     "usuarioForum",
@@ -3644,6 +3639,16 @@ async function sair(){
     localStorage.removeItem(
         "usuarioForum"
     );
+
+    localStorage.removeItem(
+        "usuarioEmail"
+    );
+
+    usuarioForum = "Visitante";
+
+    usuarioEmail = "";
+
+    usuarioEhAdmin = false;
 
     await auth.signOut();
 
@@ -3879,40 +3884,13 @@ async function enviarMensagem(){
         "mensagemChat"
     ).value.trim();
 
-if (texto === "faroldosaber@") {
-
-    const confirma = confirm(
-        "Apagar todo o chat?"
-    );
-
-    if (!confirma) return;
-
-    const snapshot = await db
-        .collection("chatGlobal")
-        .get();
-
-    const batch = db.batch();
-
-    snapshot.forEach(doc => {
-        batch.delete(doc.ref);
-    });
-
-    await batch.commit();
-
-    alert("Chat limpo!");
-
-    document.getElementById(
-        "mensagemChat"
-    ).value = "";
-
-    return;
-}
 
     if(!texto){
         return;
     }
 
     // COMANDO SECRETO ADMIN
+
     if(
         texto === "faroldosaber@"
         &&
@@ -3966,6 +3944,8 @@ if (texto === "faroldosaber@") {
 
         autor: usuarioForum,
 
+        autorEmail: usuarioEmail,
+
         mensagem: texto,
 
         data: Date.now(),
@@ -3980,7 +3960,7 @@ if (texto === "faroldosaber@") {
             }
         ),
 
-        uid: usuarioForum,
+        uid: auth.currentUser.uid,
 
         curtidas: 0
 
@@ -4018,9 +3998,12 @@ doc.id;
     👤 ${msg.autor}
 
     ${
-        administradores.includes(msg.autor)
-        ? " 👑"
-        : ""
+        administradores.includes(
+    msg.autorEmail
+)
+    ? " 👑"
+    : ""
+
     }
 
     <span class="hora-chat">
@@ -4050,7 +4033,11 @@ doc.id;
 
     </button>
 
-    ${msg.curtidas || 0}
+    ${
+        msg.curtidas > 0
+        ? msg.curtidas
+        : ""
+    }
 
 </div>
 
@@ -4060,11 +4047,15 @@ doc.id;
 
         });
 
-        document.getElementById(
-            "listaChat"
-        ).innerHTML = html;
-        listaChat.scrollTop =
-listaChat.scrollHeight;
+        const listaChat =
+document.getElementById(
+    "listaChat"
+);
+
+listaChat.innerHTML = html;
+
+listaChat.scrollTop =
+    listaChat.scrollHeight;
 
     });
 
