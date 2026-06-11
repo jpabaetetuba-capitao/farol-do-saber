@@ -2717,6 +2717,28 @@ if(assunto === "seguranca"){
     return;
 }
 
+if(assunto === "interpretacao"){
+
+    abrirTeoria(
+        interpretacaoTeoria,
+        "📖 Interpretação de Textos"
+    );
+
+    return;
+
+}
+
+if(assunto === "generos"){
+
+    abrirTeoria(
+        generosTeoria,
+        "📄 Tipologia e Gêneros Textuais"
+    );
+
+    return;
+
+}
+
 mostrarTela(
     "telaMapaMental"
 );
@@ -3058,6 +3080,27 @@ if(assuntoAtual === "seguranca"){
     return;
 }
 
+if(assuntoAtual === "interpretacao"){
+
+    abrirTeoria(
+        interpretacaoTeoria,
+        "📖 Interpretação de Textos"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "generos"){
+
+    abrirTeoria(
+        generosTeoria,
+        "📄 Tipologia e Gêneros Textuais"
+    );
+
+    return;
+
+}
 
     mostrarTela("telaMapaMental");
 }
@@ -4239,7 +4282,7 @@ async function carregarUsuariosOnlineChat(){
     html =
         `
         <strong>
-            🟢 Usuários Online (${totalOnline})
+            🟢 Online (${totalOnline})
         </strong>
         <br><br>
         `
