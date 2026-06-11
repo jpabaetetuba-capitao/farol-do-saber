@@ -58,7 +58,7 @@ function abrirForum(disciplina){
 }
 
 
-function novaPergunta(){
+async function novaPergunta(){
 
     const pergunta = prompt(
         "Digite sua dúvida:"
@@ -96,21 +96,10 @@ const novaPerguntaObj = {
 
 };
 
-perguntasForum.push(
-    novaPerguntaObj
-);
+await db
+.collection("forumGlobal")
+.add(novaPerguntaObj);
 
-localStorage.setItem(
-
-    "forumPerguntas",
-
-    JSON.stringify(
-        perguntasForum
-    )
-
-);
-
-carregarForum();
 atualizarContadorForum();
 
 }
@@ -181,7 +170,7 @@ if(perguntaEncontrada){
 }
 
 
-function carregarForum(){
+function renderizarForum(){
 
     const listaForum =
 
@@ -356,6 +345,32 @@ ${
     });
 
 atualizarContadorForum();
+
+}
+
+function carregarForum(){
+
+    db.collection("forumGlobal")
+
+    .onSnapshot(snapshot => {
+
+        perguntasForum = [];
+
+        snapshot.forEach(doc => {
+
+            perguntasForum.push({
+
+                firebaseId: doc.id,
+
+                ...doc.data()
+
+            });
+
+        });
+
+        renderizarForum();
+
+    });
 
 }
 
@@ -640,12 +655,7 @@ let medalhasBronze = 0;
 
 let cadernoErros = [];
 
-let perguntasForum =
-JSON.parse(
-    localStorage.getItem(
-        "forumPerguntas"
-    )
-) || [];
+let perguntasForum = [];
 
 
 const administradores = [
@@ -4003,9 +4013,15 @@ doc.id;
 
 <div class="msg-chat">
 
-   <div class="autor-chat">
+  <div class="autor-chat">
 
     👤 ${msg.autor}
+
+    ${
+        administradores.includes(msg.autor)
+        ? " 👑"
+        : ""
+    }
 
     <span class="hora-chat">
 
@@ -4013,9 +4029,7 @@ doc.id;
 
     </span>
 
-       
-
-    </div>
+</div>
 
    <div class="bolha-chat">
 
