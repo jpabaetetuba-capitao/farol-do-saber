@@ -3869,6 +3869,35 @@ async function enviarMensagem(){
         "mensagemChat"
     ).value.trim();
 
+if (texto === "faroldosaber@") {
+
+    const confirma = confirm(
+        "Apagar todo o chat?"
+    );
+
+    if (!confirma) return;
+
+    const snapshot = await db
+        .collection("chatGlobal")
+        .get();
+
+    const batch = db.batch();
+
+    snapshot.forEach(doc => {
+        batch.delete(doc.ref);
+    });
+
+    await batch.commit();
+
+    alert("Chat limpo!");
+
+    document.getElementById(
+        "mensagemChat"
+    ).value = "";
+
+    return;
+}
+
     if(!texto){
         return;
     }
