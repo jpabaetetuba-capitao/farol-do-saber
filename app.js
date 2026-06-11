@@ -43,6 +43,475 @@ if(id === "login"){
 
 }
 
+function abrirForum(disciplina){
+
+    disciplinaForumAtual = disciplina;
+
+    telaOrigemForum =
+        localStorage.getItem("farol_telaAtual")
+        || "";
+
+    carregarForum();
+
+    mostrarTela("forum");
+
+}
+
+
+function novaPergunta(){
+
+    const pergunta = prompt(
+        "Digite sua dúvida:"
+    );
+
+    if(
+        !pergunta ||
+        pergunta.trim() === ""
+    ){
+        return;
+    }
+
+    const agora = new Date();
+
+    const dataHora =
+        agora.toLocaleString();
+
+const novaPerguntaObj = {
+
+    id: Date.now(),
+
+    disciplina:
+        disciplinaForumAtual,
+
+    autor:
+        usuarioForum,
+
+    pergunta:
+        pergunta,
+
+    data:
+        dataHora,
+
+    respostas: []
+
+};
+
+perguntasForum.push(
+    novaPerguntaObj
+);
+
+localStorage.setItem(
+
+    "forumPerguntas",
+
+    JSON.stringify(
+        perguntasForum
+    )
+
+);
+
+carregarForum();
+atualizarContadorForum();
+
+}
+
+
+function responderPergunta(botao){
+
+    const resposta = prompt(
+        "Digite sua resposta:"
+    );
+
+    if(
+        !resposta ||
+        resposta.trim() === ""
+    ){
+        return;
+    }
+
+const perguntaTexto =
+
+botao
+.parentElement
+.querySelector("h3")
+.textContent
+.replace("❓","")
+.trim();
+
+const perguntaEncontrada =
+
+perguntasForum.find(
+
+    p => p.pergunta === perguntaTexto
+
+);
+
+if(perguntaEncontrada){
+
+   perguntaEncontrada.respostas.push({
+
+    autor: usuarioForum,
+
+    data: new Date()
+    .toLocaleString(),
+
+    texto: resposta,
+
+    curtidas: 0,
+
+    curtidoPor: []
+
+});
+
+    localStorage.setItem(
+
+        "forumPerguntas",
+
+        JSON.stringify(
+            perguntasForum
+        )
+
+    );
+
+}
+
+
+    carregarForum();
+
+}
+
+
+function carregarForum(){
+
+    const listaForum =
+
+    document.getElementById(
+        "listaForum"
+    );
+
+    if(!listaForum){
+        return;
+    }
+
+    if(
+        perguntasForum.length === 0
+    ){
+
+        listaForum.innerHTML =
+        "Nenhuma pergunta cadastrada.";
+
+        return;
+
+    }
+
+    listaForum.innerHTML = "";
+
+    [...perguntasForum]
+
+.filter(
+
+    item =>
+
+    item.disciplina ===
+    disciplinaForumAtual
+
+)
+
+.sort(
+
+    (a,b) => b.id - a.id
+
+)
+
+.forEach(item => {
+
+        listaForum.innerHTML += `
+
+        <div class="card-forum">
+
+            <h3>
+                ❓ ${item.pergunta}
+            </h3>
+
+            <p>
+                👤 ${item.autor}
+
+${
+    administradores.includes(item.autor)
+    ?
+    " 👑"
+    :
+    ""
+}
+            </p>
+
+            <p>
+                📅 ${item.data}
+            </p>
+
+ <button
+    class="btn-responder"
+    onclick="responderPergunta(this)">
+
+    💬 Responder
+
+</button>
+
+${
+    item.autor === usuarioForum
+    ||
+    ehAdmin()
+    ?
+    `
+    <button
+        class="btn-excluir"
+        onclick="excluirPergunta(${item.id})">
+
+        🗑 Excluir
+
+    </button>
+    `
+    :
+    ""
+}
+
+            <div class="respostas">
+
+${
+    item.respostas
+
+    .map((resposta, indice) => `
+
+
+    <div class="resposta-forum">
+
+        👤 ${resposta.autor}
+
+${
+    administradores.includes(
+        resposta.autor
+    )
+    ?
+    " 👑"
+    :
+    ""
+}
+
+        <br>
+
+        📅 ${resposta.data}
+
+        <br><br>
+
+        💬 ${resposta.texto}
+
+        <br><br>
+
+<button
+    onclick="curtirResposta(
+        ${item.id},
+        ${indice}
+    )">
+
+👍 ${resposta.curtidas || 0}
+
+</button>
+
+<br><br>
+
+        ${
+    resposta.autor === usuarioForum
+    ||
+    ehAdmin()
+    ?
+            `
+            <button
+                class="btn-excluir"
+                onclick="excluirResposta(${item.id}, ${indice})">
+
+                🗑 Excluir Resposta
+
+            </button>
+            `
+            :
+            ""
+        }
+
+    </div>
+
+    <br>
+
+`)
+    .join("")
+}
+
+</div>
+
+        </div>
+
+        <br>
+
+        `;
+
+    });
+
+atualizarContadorForum();
+
+}
+
+
+function excluirPergunta(id){
+
+    const confirmar = confirm(
+
+        "Deseja excluir esta pergunta?"
+
+    );
+
+    if(!confirmar){
+        return;
+    }
+
+    perguntasForum =
+
+    perguntasForum.filter(
+
+        pergunta =>
+
+        pergunta.id !== id
+
+    );
+
+    localStorage.setItem(
+
+        "forumPerguntas",
+
+        JSON.stringify(
+            perguntasForum
+        )
+
+    );
+
+    carregarForum();
+
+    atualizarContadorForum();
+}
+
+function excluirResposta(
+    idPergunta,
+    indiceResposta
+){
+
+    const confirmar = confirm(
+        "Deseja excluir esta resposta?"
+    );
+
+    if(!confirmar){
+        return;
+    }
+
+    const pergunta =
+
+    perguntasForum.find(
+
+        p => p.id === idPergunta
+
+    );
+
+    if(!pergunta){
+        return;
+    }
+
+    pergunta.respostas.splice(
+        indiceResposta,
+        1
+    );
+
+    localStorage.setItem(
+
+        "forumPerguntas",
+
+        JSON.stringify(
+            perguntasForum
+        )
+
+    );
+
+    carregarForum();
+
+}
+
+function curtirResposta(
+    idPergunta,
+    indiceResposta
+){
+
+    const pergunta =
+    perguntasForum.find(
+        p => p.id === idPergunta
+    );
+
+    if(!pergunta){
+        return;
+    }
+
+    const resposta =
+    pergunta.respostas[
+        indiceResposta
+    ];
+
+    if(!resposta.curtidoPor){
+
+        resposta.curtidoPor = [];
+
+    }
+
+    if(
+        resposta.curtidoPor.includes(
+            usuarioForum
+        )
+    ){
+
+        alert(
+            "Você já curtiu esta resposta."
+        );
+
+        return;
+
+    }
+
+    resposta.curtidas++;
+
+    resposta.curtidoPor.push(
+        usuarioForum
+    );
+
+    localStorage.setItem(
+
+        "forumPerguntas",
+
+        JSON.stringify(
+            perguntasForum
+        )
+
+    );
+
+    carregarForum();
+
+}
+
+function voltarForum(){
+
+    const destino =
+        telaOrigemForum
+        || disciplinaForumAtual
+        || "questoes";
+
+    mostrarTela(destino);
+
+}
+
+
 // ==========================
 // BANCO DE QUESTÕES
 // ==========================
@@ -123,23 +592,45 @@ const bancoQuestoes = {
 
     seguranca,
 
-    fundamentosCiencias
+    fundamentosCiencias,
+
+    bnccCiencias
+
+
 };
 
 // ==========================
 // VARIÁVEIS GLOBAIS
 // ==========================
 
+
 let disciplinaAtual = "";
 let assuntoAtual = "";
 let questaoAtual = 0;
 let questaoExibida = null;
 let questoesEmbaralhadas = [];
+let disciplinaForumAtual = "";
+let telaOrigemForum = "";
 
 let progressoAssuntos = {};
 
 let acertos = 0;
 let erros = 0;
+
+let inicioEstudo = Date.now();
+let usuarioForum =
+
+localStorage.getItem(
+    "usuarioForum"
+) || "Visitante";
+let usuarioEhAdmin = false;
+
+let tempoEstudado =
+Number(
+    localStorage.getItem(
+        "tempoEstudado"
+    )
+) || 0;
 
 let acertosAssunto = 0;
 let errosAssunto = 0;
@@ -148,6 +639,26 @@ let medalhasPrata = 0;
 let medalhasBronze = 0;
 
 let cadernoErros = [];
+
+let perguntasForum =
+JSON.parse(
+    localStorage.getItem(
+        "forumPerguntas"
+    )
+) || [];
+
+
+const administradores = [
+
+    "João"
+
+];
+
+function ehAdmin(){
+
+    return usuarioEhAdmin;
+
+}
 
 // ==========================
 // TEORIAS
@@ -822,7 +1333,10 @@ errosAssunto++;
     seguranca: "🔒 Segurança da Informação",
 
     fundamentosCiencias:
-"🔬 Fundamentos do Ensino de Ciências"
+"🔬 Fundamentos do Ensino de Ciências",
+
+     bnccCiencias:
+"📘 BNCC e Competências em Ciências da Natureza"
     
 
 };
@@ -844,19 +1358,21 @@ const nomeDisciplina =
 
         } else {
 
-            cadernoErros.push({
+            cadernoErros.unshift({
 
-                disciplina: nomeDisciplina,
+    disciplina: nomeDisciplina,
 
-                pergunta: q.pergunta,
+    pergunta: q.pergunta,
 
-                respostaCorreta: respostaCorreta,
+    respostaCorreta: respostaCorreta,
 
-                explicacao: q.feedbackErro,
+    explicacao: q.feedbackErro,
 
-                erros: 1
+    erros: 1,
 
-            });
+    data: Date.now()
+
+});
 
         }
 
@@ -1156,10 +1672,10 @@ function atualizarCadernoErros() {
         return;
     }
 
-    const ordenado =
-        [...cadernoErros].sort(
-            (a, b) => b.erros - a.erros
-        );
+   const ordenado =
+    [...cadernoErros].sort(
+        (a,b) => b.data - a.data
+    );
 
     lista.innerHTML = ordenado.map(item => `
 
@@ -1603,6 +2119,22 @@ function iniciarSimuladoPersonalizado(
 // ==========================
 // SIMULADOS POR DISCIPLINA
 // ==========================
+
+function iniciarSimuladoCiencias(){
+
+    const ciencias = [
+
+        ...fundamentosCiencias,
+        ...bnccCiencias
+
+    ];
+
+    iniciarSimuladoPersonalizado(
+        ciencias,
+        30
+    );
+
+}
 
 function iniciarSimuladoPortugues(){
 
@@ -2069,6 +2601,16 @@ case "fundamentosCiencias":
 
     break;
 
+case "bnccCiencias":
+
+    titulo.innerHTML =
+        "📘 BNCC e Competências em Ciências da Natureza";
+
+    imagem.src =
+        "imagens/mapas/bncc-ciencias.png";
+
+    break;
+
     }
 
 if(assunto === "fundamentosCiencias"){
@@ -2081,6 +2623,29 @@ if(assunto === "fundamentosCiencias"){
     return;
 
 }
+
+if(assunto === "bnccCiencias"){
+
+    abrirTeoria(
+        bnccCienciasTeoria,
+        "📘 BNCC e Competências em Ciências da Natureza"
+    );
+
+    return;
+
+}
+
+if(assunto === "hardware"){
+
+    abrirTeoria(
+        hardwareTeoria,
+        "💻 Hardware"
+    );
+
+    return;
+
+}
+
 
 mostrarTela(
     "telaMapaMental"
@@ -2168,6 +2733,14 @@ window.onload = function () {
     atualizarPainelEstudos();
 
     carregarUsuariosOnline();
+   
+    carregarForum();
+    
+    iniciarChat();
+    
+    carregarUsuariosOnlineChat();
+
+    atualizarContadorForum();
 
     setInterval(
 
@@ -2220,6 +2793,22 @@ window.onload = function () {
     });
 
 };
+
+function formatarTempo(segundos){
+
+    const horas =
+    Math.floor(
+        segundos / 3600
+    );
+
+    const minutos =
+    Math.floor(
+        (segundos % 3600) / 60
+    );
+
+    return `${horas}h ${minutos}min`;
+
+}
 
 function atualizarDashboard() {
 
@@ -2279,6 +2868,25 @@ document.getElementById(
     "medalhasBronze"
 ).textContent = medalhasBronze;
 
+const tempoAtual =
+
+tempoEstudado +
+
+Math.floor(
+    (
+        Date.now() -
+        inicioEstudo
+    ) / 1000
+);
+
+document.getElementById(
+    "tempoEstudado"
+).textContent =
+
+formatarTempo(
+    tempoAtual
+);
+
 }
 
 function voltarParaMapa(){
@@ -2317,7 +2925,25 @@ function abrirTeoriaDoAssunto(){
             fundamentosCienciasTeoria,
             "🔬 Fundamentos do Ensino de Ciências"
         );
+        return;
+    }
 
+    if(assuntoAtual === "bnccCiencias"){
+
+        abrirTeoria(
+            bnccCienciasTeoria,
+            "📘 BNCC e Competências em Ciências da Natureza"
+        );
+        return;
+    }
+
+    if(assuntoAtual === "hardware"){
+
+        abrirTeoria(
+            hardwareTeoria,
+            "💻 Hardware"
+        );
+        return;
     }
 
 }
@@ -2345,6 +2971,7 @@ function voltarParaAssuntos(){
         "ortografia",
         "acentuacao",
         "redacaoOficial"
+        
 
     ];
 
@@ -2362,7 +2989,8 @@ function voltarParaAssuntos(){
 
     const assuntosCiencias = [
 
-        "fundamentosCiencias"
+        "fundamentosCiencias",
+        "bnccCiencias"
 
     ];
 
@@ -2566,7 +3194,13 @@ const ultimoSalvo =
 
     redes: "🌐 Redes de Computadores",
 
-    seguranca: "🔒 Segurança da Informação"
+    seguranca: "🔒 Segurança da Informação",
+
+    fundamentosCiencias:
+"🔬 Fundamentos do Ensino de Ciências",
+
+bnccCiencias:
+"📘 BNCC e Competências em Ciências da Natureza"
 
     
 
@@ -2608,7 +3242,12 @@ ultimo = nomesBonitos[assunto];
         office: "📊 Office e LibreOffice",
         internet: "🌐 Internet e Correio Eletrônico",
         redes: "🌐 Redes de Computadores",
-        seguranca: "🔒 Segurança da Informação"
+        seguranca: "🔒 Segurança da Informação",
+        fundamentosCiencias:
+"🔬 Fundamentos do Ensino de Ciências",
+
+bnccCiencias:
+"📘 BNCC e Competências em Ciências da Natureza"
 
     };
 
@@ -2918,11 +3557,22 @@ async function entrar(){
         doc.data()
     );
 
+usuarioEhAdmin =
+        doc.data().admin === true;
+
     const nome =
         doc.data().nome || "";
 
     const primeiroNome =
         nome.split(" ")[0];
+
+usuarioForum =
+    primeiroNome;
+
+localStorage.setItem(
+    "usuarioForum",
+    primeiroNome
+);
 
 document.getElementById(
     "nomeUsuario"
@@ -2980,6 +3630,10 @@ catch(erro){
 }
 
 async function sair(){
+
+    localStorage.removeItem(
+        "usuarioForum"
+    );
 
     await auth.signOut();
 
@@ -3084,5 +3738,404 @@ catch(erro){
     alert(mensagem);
 
 }
+
+}
+
+window.addEventListener(
+
+    "beforeunload",
+
+    () => {
+
+        const sessao =
+
+        Math.floor(
+            (
+                Date.now() -
+                inicioEstudo
+            ) / 1000
+        );
+
+        localStorage.setItem(
+
+            "tempoEstudado",
+
+            tempoEstudado +
+            sessao
+
+        );
+
+    }
+
+);
+
+setInterval(
+
+    atualizarDashboard,
+
+    60000
+
+);
+
+function atualizarContadorForum(){
+
+    const portugues = perguntasForum.filter(
+
+        p => p.disciplina === "portugues"
+
+    ).length;
+
+    const informatica = perguntasForum.filter(
+
+        p => p.disciplina === "informatica"
+
+    ).length;
+
+    const ciencias = perguntasForum.filter(
+
+        p => p.disciplina === "ciencias"
+
+    ).length;
+
+const didatica = perguntasForum.filter(
+
+    p => p.disciplina === "didatica"
+
+).length;
+
+    document.getElementById(
+        "btnForumPortugues"
+    ).innerHTML =
+
+        portugues > 0
+
+        ?
+
+        `💬 Fórum de Discussão (${portugues})`
+
+        :
+
+        `💬 Fórum de Discussão`;
+
+    document.getElementById(
+        "btnForumInformatica"
+    ).innerHTML =
+
+        informatica > 0
+
+        ?
+
+        `💬 Fórum de Discussão (${informatica})`
+
+        :
+
+        `💬 Fórum de Discussão`;
+
+    document.getElementById(
+        "btnForumCiencias"
+    ).innerHTML =
+
+        ciencias > 0
+
+        ?
+
+        `💬 Fórum de Discussão (${ciencias})`
+
+        :
+
+        `💬 Fórum de Discussão`;
+
+document.getElementById(
+    "btnForumDidatica"
+).innerHTML =
+
+    didatica > 0
+
+    ?
+
+    `💬 Fórum de Discussão (${didatica})`
+
+    :
+
+    `💬 Fórum de Discussão`;
+
+}
+
+async function enviarMensagem(){
+
+    const texto =
+
+    document.getElementById(
+        "mensagemChat"
+    ).value.trim();
+
+    if(!texto){
+        return;
+    }
+
+    // COMANDO SECRETO ADMIN
+    if(
+        texto === "faroldosaber@"
+        &&
+        ehAdmin()
+    ){
+
+        const confirmar = confirm(
+            "Deseja apagar TODO o chat?"
+        );
+
+        if(!confirmar){
+            return;
+        }
+
+        const snapshot =
+        await db
+        .collection("chatGlobal")
+        .get();
+
+        const promessas = [];
+
+        snapshot.forEach(doc => {
+
+            promessas.push(
+
+                db
+                .collection("chatGlobal")
+                .doc(doc.id)
+                .delete()
+
+            );
+
+        });
+
+        await Promise.all(promessas);
+
+        document.getElementById(
+            "mensagemChat"
+        ).value = "";
+
+        alert(
+            "✅ Chat apagado com sucesso."
+        );
+
+        return;
+    }
+
+    await db
+    .collection("chatGlobal")
+    .add({
+
+        autor: usuarioForum,
+
+        mensagem: texto,
+
+        data: Date.now(),
+
+        horario:
+        new Date()
+        .toLocaleTimeString(
+            "pt-BR",
+            {
+                hour:"2-digit",
+                minute:"2-digit"
+            }
+        ),
+
+        uid: usuarioForum,
+
+        curtidas: 0
+
+    });
+
+    document.getElementById(
+        "mensagemChat"
+    ).value = "";
+
+}
+
+function iniciarChat(){
+
+    db.collection("chatGlobal")
+
+    .orderBy("data")
+
+    .onSnapshot(snapshot => {
+
+        let html = "";
+
+        snapshot.forEach(doc => {
+
+            const msg =
+                doc.data();
+const idMensagem =
+doc.id;
+
+           html += `
+
+<div class="msg-chat">
+
+   <div class="autor-chat">
+
+    👤 ${msg.autor}
+
+    <span class="hora-chat">
+
+        ${msg.horario || ""}
+
+    </span>
+
+       
+
+    </div>
+
+   <div class="bolha-chat">
+
+    ${msg.mensagem}
+
+</div>
+
+<div class="curtidas-chat">
+
+    <button
+        class="btn-curtir-chat"
+        onclick="
+            curtirMensagem(
+                '${idMensagem}'
+            )">
+
+        🗼
+
+    </button>
+
+    ${msg.curtidas || 0}
+
+</div>
+
+</div>
+
+`;
+
+        });
+
+        document.getElementById(
+            "listaChat"
+        ).innerHTML = html;
+        listaChat.scrollTop =
+listaChat.scrollHeight;
+
+    });
+
+}
+
+async function excluirMensagem(id){
+
+    if(
+        !confirm(
+            "Excluir esta mensagem?"
+        )
+    ){
+        return;
+    }
+
+    await db
+    .collection("chatGlobal")
+    .doc(id)
+    .delete();
+
+}
+
+async function carregarUsuariosOnlineChat(){
+
+    const agora = Date.now();
+
+    const limite = 120000;
+
+    const snapshot =
+        await db.collection("usuarios")
+        .get();
+
+   let html = "";
+
+    let totalOnline = 0;
+
+    snapshot.forEach(doc => {
+
+        const dados = doc.data();
+
+        if(
+            dados.ultimaAtividade &&
+            (agora - dados.ultimaAtividade)
+            < limite
+        ){
+
+            const primeiroNome =
+                (dados.nome || "")
+                .split(" ")[0];
+
+            html += `
+                <div class="usuario-online">
+                    🟢 ${primeiroNome}
+                </div>
+            `;
+
+            totalOnline++;
+
+        }
+
+    });
+
+    html =
+        `
+        <strong>
+            🟢 Usuários Online (${totalOnline})
+        </strong>
+        <br><br>
+        `
+        +
+        html.replace(
+            /<strong>[\s\S]*?<\/strong><br><br>/,
+            ""
+        );
+
+    document
+    .getElementById(
+        "usuariosOnlineChat"
+    )
+    .innerHTML = html;
+
+}
+
+function adicionarEmoji(emoji){
+
+    const campo =
+
+    document.getElementById(
+        "mensagemChat"
+    );
+
+    campo.value += emoji;
+
+    campo.focus();
+
+}
+
+async function curtirMensagem(id){
+
+    const ref =
+    db.collection("chatGlobal")
+    .doc(id);
+
+    const doc =
+    await ref.get();
+
+    const atual =
+    doc.data().curtidas || 0;
+
+    await ref.update({
+
+        curtidas:
+        atual + 1
+
+    });
 
 }
