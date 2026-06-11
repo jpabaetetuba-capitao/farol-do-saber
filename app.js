@@ -47,11 +47,15 @@ function abrirForum(disciplina){
 
     disciplinaForumAtual = disciplina;
 
+    localStorage.setItem(
+        "farol_disciplinaForum",
+        disciplina
+    );
+
     telaOrigemForum =
         localStorage.getItem("farol_telaAtual")
         || "";
 
-  
     mostrarTela("forum");
 
 }
@@ -624,7 +628,10 @@ let assuntoAtual = "";
 let questaoAtual = 0;
 let questaoExibida = null;
 let questoesEmbaralhadas = [];
-let disciplinaForumAtual = "";
+let disciplinaForumAtual =
+    localStorage.getItem(
+        "farol_disciplinaForum"
+    ) || "";
 let telaOrigemForum = "";
 
 let progressoAssuntos = {};
