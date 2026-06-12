@@ -1,2632 +1,471 @@
 const redesTeoria = [
-
 {
-    titulo: "🌐 Conceitos Fundamentais de Redes de Computadores",
+  titulo: "🌐 Conceitos Fundamentais de Redes de Computadores",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Uma rede de computadores é um conjunto de dispositivos interligados que podem trocar informações e compartilhar recursos.</p>
+<p>Esses dispositivos podem incluir computadores, notebooks, smartphones, impressoras, servidores e diversos outros equipamentos.</p>
 
-    conteudo: `
-
-<h3>📘 O que é uma Rede de Computadores?</h3>
-
-<p>
-Uma rede de computadores é um conjunto de dispositivos interligados que podem trocar informações e compartilhar recursos.
-</p>
-
-<p>
-Esses dispositivos podem incluir computadores, notebooks, smartphones, impressoras, servidores e diversos outros equipamentos.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O principal objetivo de uma rede é permitir comunicação e compartilhamento de recursos entre dispositivos.
-
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ IMPORTANTE</h4>
+  <p>O principal objetivo de uma rede é permitir a <strong>comunicação</strong> e o <strong>compartilhamento de recursos</strong> entre dispositivos.</p>
 </div>
 
-<br><br>
-
-<h3>🧰 O que pode ser Compartilhado?</h3>
-
+<h3 style="color: #E67E22; margin-top: 20px;">📌 O QUE PODE SER COMPARTILHADO?</h3>
 <ul>
-
-<li>📄 Arquivos</li>
-
-<li>🖨 Impressoras</li>
-
-<li>🌐 Conexão com a Internet</li>
-
-<li>📂 Pastas</li>
-
-<li>🗄 Bancos de dados</li>
-
-<li>💾 Servidores</li>
-
+  <li>📄 Arquivos e Pastas</li>
+  <li>🖨 Impressoras</li>
+  <li>🌐 Conexão com a Internet</li>
+  <li>🗄 Bancos de dados</li>
+  <li>💾 Servidores</li>
 </ul>
 
-<br><br>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 COMUNICAÇÃO ENTRE DISPOSITIVOS</h3>
+<p>Em uma rede, os dispositivos enviam e recebem dados através de protocolos de comunicação. Esses protocolos definem regras para que a troca de informações ocorra corretamente.</p>
 
-<h3>🔄 Comunicação entre Dispositivos</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 ONDE ENCONTRAMOS REDES?</h3>
+<p>As redes estão presentes em praticamente todos os ambientes modernos: 🏠 Residências, 🏢 Empresas, 🏫 Escolas, 🏥 Hospitais, 🚢 Navios e 🏛 Órgãos públicos.</p>
 
-<p>
-Em uma rede, os dispositivos enviam e recebem dados através de protocolos de comunicação.
-</p>
-
-<p>
-Esses protocolos definem regras para que a troca de informações ocorra corretamente.
-</p>
-
-<br><br>
-
-<h3>🖥️ Exemplos de Dispositivos em Rede</h3>
-
-<ul>
-
-<li>Computadores</li>
-
-<li>Notebooks</li>
-
-<li>Smartphones</li>
-
-<li>Tablets</li>
-
-<li>Impressoras de rede</li>
-
-<li>Servidores</li>
-
-</ul>
-
-<br><br>
-
-<h3>🌍 Onde Encontramos Redes?</h3>
-
-<p>
-As redes estão presentes em praticamente todos os ambientes modernos.
-</p>
-
-<ul>
-
-<li>🏠 Residências</li>
-
-<li>🏢 Empresas</li>
-
-<li>🏫 Escolas</li>
-
-<li>🏥 Hospitais</li>
-
-<li>🚢 Navios</li>
-
-<li>🏛 Órgãos públicos</li>
-
-</ul>
-
-<br><br>
-
-<h3>📡 Benefícios das Redes</h3>
-
-<ul>
-
-<li>Compartilhamento de recursos</li>
-
-<li>Comunicação rápida</li>
-
-<li>Redução de custos</li>
-
-<li>Troca de informações em tempo real</li>
-
-<li>Facilidade de acesso aos dados</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Em um navio, diversos computadores podem estar conectados à mesma rede.
-</p>
-
-<p>
-Dessa forma, os tripulantes conseguem acessar sistemas, compartilhar documentos e utilizar impressoras sem necessidade de equipamentos separados para cada usuário.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Rede
-
-⬇
-
-Conectar
-
-⬇
-
-Compartilhar
-
-⬇
-
-Comunicar
-
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE</h4>
+  <p>Palavras-chave de Redes:<br>
+  <strong>Conectar</strong> ➔ <strong>Comunicar</strong> ➔ <strong>Compartilhar</strong></p>
 </div>
 
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma pegadinha comum é afirmar que uma rede serve apenas para compartilhar Internet.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-Além da Internet, as redes permitem compartilhar arquivos, impressoras, bancos de dados, servidores e diversos outros recursos.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Rede é um conjunto de dispositivos conectados.
-
-• Permite comunicação e compartilhamento.
-
-• Pode compartilhar arquivos, impressoras e Internet.
-
-• Está presente em residências, empresas e escolas.
-
-• Utiliza protocolos para troca de dados.
-
-• O principal objetivo é conectar e compartilhar recursos.
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p>Uma pegadinha comum é afirmar que uma rede serve <em>apenas</em> para compartilhar Internet.</p>
+  <p><span style="color: #DC3545; font-weight: bold;">❌ Errado.</span> Além da Internet, as redes permitem compartilhar arquivos físicos (como um documento num servidor) e hardware (como uma única impressora para 20 computadores).</p>
 </div>
 
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li>🌐 <strong>Rede:</strong> Conjunto de dispositivos conectados.</li>
+    <li>🤝 <strong>Objetivo:</strong> Comunicação e compartilhamento.</li>
+    <li>📜 <strong>Protocolos:</strong> Regras que organizam essa troca de dados.</li>
+  </ul>
+</div>
 `
-
-},
-{
-    titulo: "🖥️ Componentes de uma Rede",
-
-    conteudo: `
-
-<h3>📘 O que são Componentes de uma Rede?</h3>
-
-<p>
-Os componentes de uma rede são os equipamentos e elementos responsáveis pela comunicação e troca de informações entre os dispositivos conectados.
-</p>
-
-<p>
-Cada componente possui uma função específica para garantir o funcionamento adequado da rede.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Uma rede depende da combinação de hardware, meios de transmissão e protocolos de comunicação.
-
-</div>
-
-<br><br>
-
-<h3>💻 Computadores e Dispositivos</h3>
-
-<p>
-São os equipamentos que utilizam a rede para enviar e receber informações.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>Computadores</li>
-
-<li>Notebooks</li>
-
-<li>Smartphones</li>
-
-<li>Tablets</li>
-
-<li>Impressoras de rede</li>
-
-</ul>
-
-<br><br>
-
-<h3>🗄 Servidores</h3>
-
-<p>
-Servidores são computadores especializados que fornecem serviços e recursos para outros dispositivos da rede.
-</p>
-
-<p>
-Eles podem armazenar arquivos, hospedar sistemas e controlar o acesso às informações.
-</p>
-
-<br><br>
-
-<h3>📡 Meios de Transmissão</h3>
-
-<p>
-São os caminhos utilizados para transportar os dados entre os dispositivos.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>🔌 Cabo de rede</li>
-
-<li>🌐 Fibra óptica</li>
-
-<li>📶 Wi-Fi</li>
-
-<li>📡 Rádio</li>
-
-</ul>
-
-<br><br>
-
-<h3>📶 Placa de Rede</h3>
-
-<p>
-A placa de rede é o componente responsável por conectar o dispositivo à rede.
-</p>
-
-<p>
-Ela pode ser cabeada ou sem fio.
-</p>
-
-<br><br>
-
-<h3>📡 Roteador</h3>
-
-<p>
-O roteador é responsável por encaminhar os dados entre redes diferentes.
-</p>
-
-<p>
-Nas residências, normalmente conecta a rede local à Internet.
-</p>
-
-<br><br>
-
-<h3>🔀 Switch</h3>
-
-<p>
-O switch conecta vários dispositivos dentro da mesma rede local.
-</p>
-
-<p>
-Ele permite que computadores, impressoras e servidores se comuniquem de forma eficiente.
-</p>
-
-<br><br>
-
-<h3>🌍 Modem</h3>
-
-<p>
-O modem realiza a comunicação entre a rede local e o provedor de Internet.
-</p>
-
-<p>
-Ele converte sinais para permitir o acesso à Internet.
-</p>
-
-<br><br>
-
-<h3>📜 Protocolos</h3>
-
-<p>
-Protocolos são conjuntos de regras que definem como os dispositivos trocam informações.
-</p>
-
-<p>
-Sem protocolos, os equipamentos não conseguiriam se comunicar corretamente.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Em uma escola, vários computadores podem estar ligados a um switch.
-</p>
-
-<p>
-O switch conecta os equipamentos à rede local e o roteador permite o acesso à Internet.
-</p>
-
-<p>
-Os arquivos podem ficar armazenados em um servidor central.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Servidor → Fornece Serviços
-
-Switch → Liga Dispositivos
-
-Roteador → Liga Redes
-
-Modem → Liga ao Provedor
-
-Placa de Rede → Conecta o Equipamento
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma pegadinha muito comum é confundir switch com roteador.
-</p>
-
-<p>
-O switch conecta dispositivos dentro da mesma rede local.
-</p>
-
-<p>
-O roteador conecta redes diferentes.
-</p>
-
-<p>
-Outra pegadinha é afirmar que modem e roteador são a mesma coisa.
-</p>
-
-<p>
-Embora alguns equipamentos integrem ambas as funções, os conceitos são diferentes.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Computadores e impressoras utilizam a rede.
-
-• Servidores fornecem serviços.
-
-• Placa de rede conecta dispositivos.
-
-• Switch conecta equipamentos da mesma rede.
-
-• Roteador conecta redes diferentes.
-
-• Modem conecta ao provedor de Internet.
-
-• Protocolos definem regras de comunicação.
-
-</div>
-
-`
-
-},
-{
-    titulo: "📡 Tipos de Redes (LAN, MAN e WAN)",
-
-    conteudo: `
-
-<h3>📘 Classificação das Redes</h3>
-
-<p>
-As redes de computadores podem ser classificadas de acordo com sua área de cobertura geográfica.
-</p>
-
-<p>
-As três classificações mais cobradas em concursos são LAN, MAN e WAN.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-A principal diferença entre LAN, MAN e WAN é o alcance geográfico da rede.
-
-</div>
-
-<br><br>
-
-<h3>🏠 LAN (Local Area Network)</h3>
-
-<p>
-LAN significa Local Area Network (Rede Local).
-</p>
-
-<p>
-É uma rede que cobre uma área pequena e limitada.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>Residência</li>
-
-<li>Escola</li>
-
-<li>Escritório</li>
-
-<li>Laboratório</li>
-
-<li>Navio</li>
-
-</ul>
-
-<br>
-
-<p>
-A LAN é a rede mais comum no dia a dia.
-</p>
-
-<br><br>
-
-<h3>🏙️ MAN (Metropolitan Area Network)</h3>
-
-<p>
-MAN significa Metropolitan Area Network (Rede Metropolitana).
-</p>
-
-<p>
-Ela interliga várias redes locais dentro de uma cidade ou região metropolitana.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>Rede de uma prefeitura</li>
-
-<li>Rede de universidades em uma cidade</li>
-
-<li>Rede de órgãos públicos municipais</li>
-
-</ul>
-
-<br><br>
-
-<h3>🌍 WAN (Wide Area Network)</h3>
-
-<p>
-WAN significa Wide Area Network (Rede de Longa Distância).
-</p>
-
-<p>
-Possui grande alcance geográfico, podendo conectar cidades, estados, países e continentes.
-</p>
-
-<br>
-
-<p>
-A Internet é o principal exemplo de WAN.
-</p>
-
-<br><br>
-
-<h3>📊 Comparação entre LAN, MAN e WAN</h3>
-
-<table border="1" width="100%">
-
-<tr>
-
-<th>Tipo</th>
-
-<th>Alcance</th>
-
-</tr>
-
-<tr>
-
-<td>LAN</td>
-
-<td>Pequena Área</td>
-
-</tr>
-
-<tr>
-
-<td>MAN</td>
-
-<td>Cidade</td>
-
-</tr>
-
-<tr>
-
-<td>WAN</td>
-
-<td>Grande Distância</td>
-
-</tr>
-
-</table>
-
-<br><br>
-
-<h3>🚢 Exemplo Prático</h3>
-
-<p>
-Os computadores de bordo de um navio normalmente formam uma LAN.
-</p>
-
-<p>
-Se várias unidades de uma empresa forem conectadas dentro de uma mesma cidade, teremos uma MAN.
-</p>
-
-<p>
-Quando unidades espalhadas pelo mundo se comunicam através da Internet, estamos utilizando uma WAN.
-</p>
-
-<br><br>
-
-<h3>📈 Ordem de Crescimento</h3>
-
-<p>
-
-LAN
-
-⬇
-
-MAN
-
-⬇
-
-WAN
-
-</p>
-
-<p>
-Quanto maior a área coberta, maior a complexidade da rede.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-LAN = Local
-
-MAN = Metropolitana
-
-WAN = Mundial
-
-<br><br>
-
-Casa → LAN
-
-Cidade → MAN
-
-Internet → WAN
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-A pegadinha mais comum é afirmar que a Internet é uma LAN.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-A Internet é uma WAN porque possui alcance mundial.
-</p>
-
-<p>
-Outra pegadinha frequente é trocar MAN por WAN.
-</p>
-
-<p>
-Lembre-se: MAN cobre uma cidade; WAN cobre grandes distâncias.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• LAN = Rede Local.
-
-• MAN = Rede Metropolitana.
-
-• WAN = Rede de Longa Distância.
-
-• LAN cobre pequenas áreas.
-
-• MAN cobre cidades.
-
-• WAN cobre países e continentes.
-
-• Internet é o principal exemplo de WAN.
-
-</div>
-
-`
-
-},
-{
-    titulo: "🏢 Intranet e Extranet",
-
-    conteudo: `
-
-<h3>📘 O que é Intranet?</h3>
-
-<p>
-A Intranet é uma rede privada utilizada por uma organização para compartilhar informações, sistemas e recursos entre seus membros.
-</p>
-
-<p>
-Ela utiliza tecnologias semelhantes às da Internet, porém seu acesso é restrito aos usuários autorizados.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-A Intranet é uma rede privada de uso interno da organização.
-
-</div>
-
-<br><br>
-
-<h3>🏢 Onde a Intranet é Utilizada?</h3>
-
-<ul>
-
-<li>Empresas</li>
-
-<li>Escolas</li>
-
-<li>Hospitais</li>
-
-<li>Órgãos públicos</li>
-
-<li>Universidades</li>
-
-<li>Navios e plataformas</li>
-
-</ul>
-
-<br><br>
-
-<h3>📂 Recursos Disponíveis na Intranet</h3>
-
-<ul>
-
-<li>Sistemas internos</li>
-
-<li>Documentos corporativos</li>
-
-<li>Normas e procedimentos</li>
-
-<li>Banco de dados</li>
-
-<li>Comunicação interna</li>
-
-<li>Treinamentos</li>
-
-</ul>
-
-<br><br>
-
-<h3>🔒 Características da Intranet</h3>
-
-<ul>
-
-<li>Acesso restrito</li>
-
-<li>Rede privada</li>
-
-<li>Maior controle de segurança</li>
-
-<li>Uso interno da organização</li>
-
-</ul>
-
-<br><br>
-
-<h3>📘 O que é Extranet?</h3>
-
-<p>
-A Extranet é uma extensão da Intranet.
-</p>
-
-<p>
-Ela permite que pessoas externas à organização tenham acesso controlado a determinados recursos da rede.
-</p>
-
-<br><br>
-
-<h3>🌐 Quem Pode Utilizar a Extranet?</h3>
-
-<ul>
-
-<li>Clientes</li>
-
-<li>Fornecedores</li>
-
-<li>Parceiros comerciais</li>
-
-<li>Prestadores de serviço</li>
-
-</ul>
-
-<br><br>
-
-<h3>🔑 Acesso Controlado</h3>
-
-<p>
-O acesso à Extranet normalmente exige autenticação por login e senha.
-</p>
-
-<p>
-Cada usuário possui permissões específicas para visualizar apenas os recursos autorizados.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Uma empresa possui uma Intranet onde os funcionários acessam procedimentos internos.
-</p>
-
-<p>
-Essa mesma empresa pode disponibilizar uma Extranet para que fornecedores acompanhem pedidos e documentos específicos.
-</p>
-
-<br><br>
-
-<h3>📊 Comparação</h3>
-
-<table border="1" width="100%">
-
-<tr>
-
-<th>Rede</th>
-
-<th>Acesso</th>
-
-</tr>
-
-<tr>
-
-<td>Internet</td>
-
-<td>Público</td>
-
-</tr>
-
-<tr>
-
-<td>Intranet</td>
-
-<td>Interno</td>
-
-</tr>
-
-<tr>
-
-<td>Extranet</td>
-
-<td>Externo Controlado</td>
-
-</tr>
-
-</table>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Internet
-
-🌍 Público
-
-<br><br>
-
-Intranet
-
-🏢 Interno
-
-<br><br>
-
-Extranet
-
-🤝 Externo Autorizado
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-A banca costuma afirmar que a Intranet é acessível a qualquer pessoa na Internet.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-A Intranet possui acesso restrito aos membros da organização.
-</p>
-
-<p>
-Outra pegadinha comum é afirmar que Extranet e Internet são a mesma coisa.
-</p>
-
-<p>
-A Extranet possui acesso controlado e limitado a usuários autorizados.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Intranet = Rede privada interna.
-
-• Extranet = Extensão da Intranet.
-
-• Intranet é usada por funcionários.
-
-• Extranet pode ser usada por parceiros e fornecedores.
-
-• Internet possui acesso público.
-
-• Extranet possui acesso externo controlado.
-
-• Intranet e Extranet são assuntos muito cobrados em concursos.
-
-</div>
-
-`
-
 },
 
 {
-    titulo: "🔢 Endereçamento IP",
+  titulo: "🖥️ Componentes de uma Rede",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Os componentes de uma rede são os equipamentos e elementos responsáveis pela comunicação e troca de informações. Cada componente possui uma função específica para garantir o funcionamento adequado da rede.</p>
 
-    conteudo: `
-
-<h3>📘 O que é Endereço IP?</h3>
-
-<p>
-IP significa Internet Protocol (Protocolo de Internet).
-</p>
-
-<p>
-O endereço IP é um identificador numérico atribuído a cada dispositivo conectado a uma rede.
-</p>
-
-<p>
-Ele permite que os equipamentos sejam localizados e se comuniquem corretamente.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Não podem existir dois dispositivos com o mesmo endereço IP na mesma rede ao mesmo tempo.
-
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ IMPORTANTE</h4>
+  <p>Uma rede depende da combinação exata de <strong>hardware</strong> (equipamentos), <strong>meios de transmissão</strong> (cabos/ar) e <strong>protocolos</strong> (software de regras).</p>
 </div>
 
-<br><br>
-
-<h3>🏠 Comparação com Endereço Residencial</h3>
-
-<p>
-Assim como uma casa possui um endereço para receber correspondências, um dispositivo possui um endereço IP para enviar e receber dados.
-</p>
-
-<p>
-Sem o endereço IP a comunicação na rede não seria possível.
-</p>
-
-<br><br>
-
-<h3>🌐 Função do IP</h3>
-
+<h3 style="color: #E67E22; margin-top: 20px;">📌 HARDWARE DE REDE (EQUIPAMENTOS)</h3>
 <ul>
-
-<li>Identificar dispositivos</li>
-
-<li>Permitir comunicação na rede</li>
-
-<li>Encaminhar informações corretamente</li>
-
-<li>Localizar origem e destino dos dados</li>
-
+  <li>💻 <strong>Dispositivos Finais (Hosts):</strong> Computadores, smartphones, impressoras. São a origem e o destino da informação.</li>
+  <li>🗄 <strong>Servidores:</strong> Computadores potentes e especializados que <em>fornecem serviços</em> para outros dispositivos da rede (hospedam arquivos, sites, bancos de dados).</li>
+  <li>📶 <strong>Placa de Rede (NIC):</strong> Componente instalado dentro do computador (cabeado ou Wi-Fi) que permite a ele "falar" com a rede.</li>
 </ul>
 
-<br><br>
-
-<h3>📍 Exemplo de Endereço IPv4</h3>
-
-<p>
-
-192.168.1.10
-
-</p>
-
-<br>
-
-<p>
-Esse é um exemplo de endereço IP formado por quatro grupos numéricos separados por pontos.
-</p>
-
-<br><br>
-
-<h3>🖥️ Dispositivos que Possuem IP</h3>
-
+<h3 style="color: #E67E22; margin-top: 20px;">📌 EQUIPAMENTOS DE INTERLIGAÇÃO</h3>
 <ul>
-
-<li>Computadores</li>
-
-<li>Notebooks</li>
-
-<li>Smartphones</li>
-
-<li>Tablets</li>
-
-<li>Impressoras de rede</li>
-
-<li>Servidores</li>
-
-<li>Roteadores</li>
-
+  <li>🔀 <strong>Switch:</strong> Conecta vários dispositivos <em>dentro da mesma rede local</em>.</li>
+  <li>📡 <strong>Roteador:</strong> Encaminha os dados <em>entre redes diferentes</em> (Ex: conecta sua rede local à Internet).</li>
+  <li>🌍 <strong>Modem:</strong> Realiza a comunicação direta com o provedor de Internet (modula e demodula o sinal).</li>
 </ul>
 
-<br><br>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 MEIOS DE TRANSMISSÃO</h3>
+<p>São as "estradas" por onde a informação passa: 🔌 Cabo de rede (Par Trançado), 🌐 Fibra óptica e 📶 Ondas de Rádio (Wi-Fi).</p>
 
-<h3>🔄 IP e Comunicação</h3>
-
-<p>
-Quando um dispositivo envia dados para outro, os pacotes transportam informações de origem e destino.
-</p>
-
-<p>
-Essas informações utilizam os endereços IP dos equipamentos envolvidos na comunicação.
-</p>
-
-<br><br>
-
-<h3>🌍 IP Público e IP Privado</h3>
-
-<p>
-
-<strong>IP Público:</strong>
-
-Utilizado para comunicação na Internet.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>IP Privado:</strong>
-
-Utilizado dentro de redes locais.
-
-</p>
-
-<br>
-
-Exemplos de IPs privados:
-
-<ul>
-
-<li>192.168.x.x</li>
-
-<li>10.x.x.x</li>
-
-<li>172.16.x.x até 172.31.x.x</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Em uma residência, cada computador conectado ao roteador recebe um endereço IP privado.
-</p>
-
-<p>
-O roteador utiliza um IP público para se comunicar com a Internet.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-IP
-
-⬇
-
-Identifica
-
-⬇
-
-Localiza
-
-⬇
-
-Comunica
-
-<br><br>
-
-IP Privado
-
-🏠 Rede Local
-
-<br>
-
-IP Público
-
-🌍 Internet
-
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE</h4>
+  <p><strong>Servidor</strong> → Fornece Serviços<br>
+  <strong>Switch</strong> → Liga Equipamentos Iguais (mesma rede)<br>
+  <strong>Roteador</strong> → Liga Redes Diferentes<br>
+  <strong>Modem</strong> → Liga ao Provedor</p>
 </div>
 
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma pegadinha muito comum é afirmar que o endereço IP identifica apenas computadores.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-Diversos dispositivos podem possuir endereço IP, incluindo smartphones, impressoras, roteadores e servidores.
-</p>
-
-<p>
-Outra pegadinha frequente é confundir IP público com IP privado.
-</p>
-
-<p>
-O IP privado funciona dentro da rede local, enquanto o IP público é utilizado para comunicação com a Internet.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• IP identifica dispositivos em uma rede.
-
-• Permite comunicação entre equipamentos.
-
-• IPv4 é formado por quatro grupos numéricos.
-
-• Existem IPs públicos e privados.
-
-• IP privado é utilizado na rede local.
-
-• IP público é utilizado na Internet.
-
-• Todo dispositivo conectado à rede precisa de identificação.
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> Switch conecta sua casa à internet. / <span style="color: #28A745; font-weight: bold;">✔</span> O Switch conecta apenas os computadores <em>dentro</em> da sua casa. Quem liga à internet (outra rede) é o <strong>Roteador</strong>.</p>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> Modem e roteador são exatamente a mesma coisa. / <span style="color: #28A745; font-weight: bold;">✔</span> São conceitos diferentes, embora hoje as operadoras entreguem um único aparelho de plástico que faz as duas funções.</p>
 </div>
-
 `
-
 },
+
 {
-    titulo: "📍 IPv4 e IPv6",
+  titulo: "📡 Tipos de Redes (LAN, MAN e WAN)",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>As redes de computadores podem ser classificadas de acordo com sua <strong>área de cobertura geográfica</strong>. Esse é o assunto de redes que mais cai em provas!</p>
 
-    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 LAN (Local Area Network)</h3>
+<p>Significa <strong>Rede Local</strong>. Cobre uma área pequena e geograficamente limitada.<br>
+<strong>Exemplos:</strong> Uma casa, uma sala de aula, um laboratório de informática, o prédio de uma empresa ou um navio.</p>
 
-<h3>📘 O que são IPv4 e IPv6?</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 MAN (Metropolitan Area Network)</h3>
+<p>Significa <strong>Rede Metropolitana</strong>. Interliga várias redes locais dentro de uma cidade ou região metropolitana.<br>
+<strong>Exemplos:</strong> Rede interligando todos os postos de saúde de uma prefeitura, ou a rede de uma universidade com campus espalhados pela cidade.</p>
 
-<p>
-IPv4 e IPv6 são versões do Protocolo IP utilizadas para identificar dispositivos em redes de computadores.
-</p>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 WAN (Wide Area Network)</h3>
+<p>Significa <strong>Rede de Longa Distância</strong>. Possui um alcance geográfico global, conectando cidades, estados, países e continentes inteiros.<br>
+<strong>Exemplo Máximo:</strong> A própria Internet!</p>
 
-<p>
-Ambos possuem a mesma finalidade: permitir a comunicação entre equipamentos conectados à rede.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-A principal diferença entre IPv4 e IPv6 é a quantidade de endereços disponíveis.
-
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE DA ORDEM DE CRESCIMENTO</h4>
+  <p><strong>LAN</strong> (Local / Prédio) ➔ <strong>MAN</strong> (Metrópole / Cidade) ➔ <strong>WAN</strong> (World / Mundo)</p>
 </div>
 
-<br><br>
-
-<h3>🌐 IPv4</h3>
-
-<p>
-O IPv4 é a versão mais tradicional e ainda a mais utilizada atualmente.
-</p>
-
-<p>
-Ele utiliza endereços de 32 bits.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-192.168.1.10
-
-</p>
-
-<br>
-
-<p>
-O endereço é formado por quatro grupos numéricos separados por pontos.
-</p>
-
-<br><br>
-
-<h3>📊 Estrutura do IPv4</h3>
-
-<p>
-
-XXX.XXX.XXX.XXX
-
-</p>
-
-<br>
-
-<p>
-Cada grupo pode variar de 0 até 255.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>192.168.1.1</li>
-
-<li>10.0.0.1</li>
-
-<li>172.16.0.1</li>
-
-</ul>
-
-<br><br>
-
-<h3>⚠️ Limitação do IPv4</h3>
-
-<p>
-Com o crescimento da Internet, a quantidade de dispositivos conectados aumentou enormemente.
-</p>
-
-<p>
-Isso provocou escassez de endereços IPv4 disponíveis.
-</p>
-
-<br><br>
-
-<h3>🚀 IPv6</h3>
-
-<p>
-O IPv6 foi criado para solucionar a limitação de endereços do IPv4.
-</p>
-
-<p>
-Ele utiliza endereços de 128 bits.
-</p>
-
-<p>
-Isso permite uma quantidade extremamente maior de endereços disponíveis.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-2001:0db8:85a3:0000:0000:8a2e:0370:7334
-
-</p>
-
-<br><br>
-
-<h3>📊 Estrutura do IPv6</h3>
-
-<p>
-O IPv6 é composto por oito grupos separados por dois pontos (:).
-</p>
-
-<p>
-Ele utiliza números e letras hexadecimais.
-</p>
-
-<br><br>
-
-<h3>🔄 Convivência entre IPv4 e IPv6</h3>
-
-<p>
-Atualmente muitos sistemas operam utilizando ambos os protocolos.
-</p>
-
-<p>
-Essa coexistência facilita a migração gradual para o IPv6.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Quando você acessa um site, seu computador pode utilizar IPv4 ou IPv6 para estabelecer a comunicação com o servidor.
-</p>
-
-<p>
-O processo é transparente para o usuário.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-IPv4
-
-➡ 32 bits
-
-➡ 4 grupos
-
-➡ Usa pontos
-
-<br><br>
-
-IPv6
-
-➡ 128 bits
-
-➡ 8 grupos
-
-➡ Usa dois pontos (:)
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p>A banca vai tentar te enganar usando o tamanho da empresa no lugar da distância.</p>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> "A rede do banco Itaú é uma LAN porque é uma empresa privada." / <span style="color: #28A745; font-weight: bold;">✔</span> Falso. O banco tem agências no país todo. Uma rede que corta o país é uma <strong>WAN</strong>.</p>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> "A Internet é a maior LAN do mundo." / <span style="color: #28A745; font-weight: bold;">✔</span> A Internet é uma <strong>WAN</strong>.</p>
 </div>
 
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma pegadinha muito comum é afirmar que IPv6 utiliza menos endereços que IPv4.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-O IPv6 foi criado justamente para ampliar enormemente a quantidade de endereços disponíveis.
-</p>
-
-<p>
-Outra pegadinha frequente é afirmar que IPv6 utiliza apenas números.
-</p>
-
-<p>
-Na verdade, ele utiliza caracteres hexadecimais (0 a 9 e A a F).
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• IPv4 utiliza 32 bits.
-
-• IPv4 possui 4 grupos separados por pontos.
-
-• IPv6 utiliza 128 bits.
-
-• IPv6 possui 8 grupos separados por ":".
-
-• IPv6 foi criado para resolver a falta de endereços IPv4.
-
-• IPv6 utiliza números e letras hexadecimais.
-
-• Atualmente IPv4 e IPv6 convivem simultaneamente.
-
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li>🏠 <strong>LAN:</strong> Alcance Local (Pequenas distâncias).</li>
+    <li>🏙️ <strong>MAN:</strong> Alcance Metropolitano (Cidades).</li>
+    <li>🌍 <strong>WAN:</strong> Alcance Amplo (Países / Internet).</li>
+  </ul>
 </div>
-
 `
-
 },
+
 {
-    titulo: "🌍 DNS (Domain Name System)",
+  titulo: "🏢 Intranet e Extranet",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Os conceitos de Internet, Intranet e Extranet são definidos pelo <strong>público que tem acesso</strong> a elas, e não pela tecnologia utilizada (pois todas usam as mesmas tecnologias e protocolos da Internet, como o TCP/IP).</p>
 
-    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 O QUE É INTRANET?</h3>
+<p>É uma <strong>rede privada</strong> utilizada exclusivamente por uma organização. O acesso é restrito aos funcionários e membros autorizados <em>dentro</em> da instituição.</p>
+<p><strong>Recursos:</strong> Sistemas de RH, manuais internos, portal de notícias corporativo, formulários de férias.</p>
 
-<h3>📘 O que é DNS?</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 O QUE É EXTRANET?</h3>
+<p>É uma <strong>extensão da Intranet</strong>. Ela permite que pessoas externas à organização tenham um acesso controlado a partes da rede interna através da Internet.</p>
+<p><strong>Quem acessa?</strong> Clientes, fornecedores, parceiros comerciais e prestadores de serviço (exigindo Login e Senha).</p>
 
-<p>
-DNS significa Domain Name System (Sistema de Nomes de Domínio).
-</p>
-
-<p>
-Ele é responsável por traduzir nomes de domínio em endereços IP.
-</p>
-
-<p>
-Sem o DNS seria necessário memorizar os endereços IP de todos os sites acessados.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O DNS funciona como uma "lista telefônica" da Internet.
-
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE DA COMPARAÇÃO</h4>
+  <p>🌍 <strong>Internet:</strong> Acesso Público (Qualquer pessoa).<br>
+  🏢 <strong>Intranet:</strong> Acesso Interno (Só funcionários).<br>
+  🤝 <strong>Extranet:</strong> Acesso Externo Controlado (Parceiros com senha).</p>
 </div>
 
-<br><br>
-
-<h3>🌐 Por que o DNS é Necessário?</h3>
-
-<p>
-Os computadores se comunicam utilizando endereços IP.
-</p>
-
-<p>
-Entretanto, para os seres humanos é muito mais fácil lembrar nomes do que números.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-www.google.com
-
-</p>
-
-<br>
-
-é muito mais fácil de memorizar do que:
-
-<p>
-
-142.250.218.14
-
-</p>
-
-<br><br>
-
-<h3>🔄 Como o DNS Funciona?</h3>
-
-<p>
-Quando o usuário digita um endereço em um navegador:
-</p>
-
-<ul>
-
-<li>O navegador consulta um servidor DNS.</li>
-
-<li>O DNS localiza o endereço IP correspondente.</li>
-
-<li>O IP é retornado ao navegador.</li>
-
-<li>O navegador acessa o servidor correto.</li>
-
-</ul>
-
-<br><br>
-
-<h3>📍 Exemplo Prático</h3>
-
-<p>
-Usuário digita:
-</p>
-
-<p>
-
-www.google.com
-
-</p>
-
-<br>
-
-<p>
-O DNS encontra o endereço IP correspondente.
-</p>
-
-<p>
-Em seguida o navegador utiliza esse IP para acessar o servidor do Google.
-</p>
-
-<br><br>
-
-<h3>🗄 Servidores DNS</h3>
-
-<p>
-Os servidores DNS armazenam informações sobre domínios e seus respectivos endereços IP.
-</p>
-
-<p>
-Eles trabalham continuamente para responder às consultas realizadas pelos usuários.
-</p>
-
-<br><br>
-
-<h3>⚡ Benefícios do DNS</h3>
-
-<ul>
-
-<li>Facilita a navegação.</li>
-
-<li>Evita decorar endereços IP.</li>
-
-<li>Torna a Internet mais amigável.</li>
-
-<li>Permite acesso rápido aos sites.</li>
-
-</ul>
-
-<br><br>
-
-<h3>🌍 Exemplos de Domínios</h3>
-
-<ul>
-
-<li>google.com</li>
-
-<li>wikipedia.org</li>
-
-<li>gov.br</li>
-
-<li>uol.com.br</li>
-
-</ul>
-
-<p>
-Todos esses nomes precisam ser convertidos para IP por meio do DNS.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo de Analogia</h3>
-
-<p>
-
-Pessoa → Nome
-
-<br>
-
-Telefone → Número
-
-</p>
-
-<br>
-
-<p>
-
-Site → Domínio
-
-<br>
-
-Computador → IP
-
-</p>
-
-<br>
-
-<p>
-O DNS faz a correspondência entre os dois.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-DNS
-
-⬇
-
-Tradutor
-
-⬇
-
-Domínio
-
-⬇
-
-IP
-
-<br><br>
-
-google.com
-
-⬇
-
-142.xxx.xxx.xxx
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> A Intranet usa protocolos diferentes da Internet para ser mais segura. / <span style="color: #28A745; font-weight: bold;">✔</span> Falso. A Intranet usa exatamente a mesma tecnologia (TCP/IP, HTTP). O que muda é a barreira de acesso (Firewall/Senhas).</p>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> Se um funcionário acessa a Intranet de casa, ele está usando a Extranet. / <span style="color: #28A745; font-weight: bold;">✔</span> Falso. O funcionário <em>sempre</em> acessa a Intranet (mesmo via VPN). A Extranet é para público <strong>não-funcionário</strong> (fornecedores/clientes).</p>
 </div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma pegadinha muito comum é afirmar que o DNS traduz IP para domínio apenas.
-</p>
-
-<p>
-Na prática, sua função principal é traduzir nomes de domínio para endereços IP.
-</p>
-
-<p>
-Outra pegadinha frequente é afirmar que o DNS substitui o endereço IP.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-O DNS apenas localiza o IP correspondente ao domínio informado.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• DNS significa Domain Name System.
-
-• Traduz nomes de domínio para IP.
-
-• Funciona como uma lista telefônica da Internet.
-
-• Facilita a navegação dos usuários.
-
-• Sem DNS seria necessário memorizar IPs.
-
-• Domínio e IP não são a mesma coisa.
-
-• DNS é um dos assuntos mais cobrados em redes.
-
-</div>
-
 `
-
 },
+
 {
-    titulo: "📶 Modem, Roteador e Switch",
+  titulo: "🔢 Endereçamento IP",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>IP significa <strong>Internet Protocol</strong>. O endereço IP é o número de identificação único atribuído a cada dispositivo conectado a uma rede para que ele possa enviar e receber dados.</p>
 
-    conteudo: `
-
-<h3>📘 O que são Modem, Roteador e Switch?</h3>
-
-<p>
-Modem, roteador e switch são equipamentos fundamentais para o funcionamento das redes de computadores.
-</p>
-
-<p>
-Cada um possui uma função específica na comunicação dos dispositivos.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Uma das maiores pegadinhas de concurso é confundir as funções de modem, roteador e switch.
-
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ IMPORTANTE</h4>
+  <p>Assim como uma casa precisa de um CEP e um número para o correio entregar a carta, um computador precisa de um IP para a rede entregar os pacotes de dados. <strong>Não existem dois IPs iguais ativos na mesma rede.</strong></p>
 </div>
 
-<br><br>
-
-<h3>🌍 Modem</h3>
-
-<p>
-O modem é o equipamento responsável por realizar a comunicação entre a rede local e o provedor de Internet.
-</p>
-
-<p>
-Seu nome vem de:
-</p>
-
-<p>
-
-MOdulador + DEModulador
-
-</p>
-
-<br>
-
-<p>
-Ele converte sinais para permitir o acesso à Internet.
-</p>
-
-<br><br>
-
-<h3>📡 Função do Modem</h3>
-
+<h3 style="color: #E67E22; margin-top: 20px;">📌 IP PÚBLICO VS IP PRIVADO</h3>
 <ul>
-
-<li>Conectar ao provedor</li>
-
-<li>Receber sinal da operadora</li>
-
-<li>Permitir acesso à Internet</li>
-
+  <li>🌍 <strong>IP Público:</strong> É a sua "identidade" na Internet. É o endereço que seu provedor fornece. Único no mundo inteiro.</li>
+  <li>🏠 <strong>IP Privado:</strong> É a identidade do seu celular ou PC <em>dentro da sua casa ou empresa</em>. Exemplo clássico: <code>192.168.1.10</code>. Ele não é válido na internet aberta, só no seu roteador local.</li>
 </ul>
 
-<br><br>
-
-<h3>🔀 Roteador</h3>
-
-<p>
-O roteador é responsável por encaminhar pacotes de dados entre redes diferentes.
-</p>
-
-<p>
-Nas residências ele normalmente conecta a rede local à Internet.
-</p>
-
-<br><br>
-
-<h3>📡 Função do Roteador</h3>
-
-<ul>
-
-<li>Interligar redes</li>
-
-<li>Distribuir Internet</li>
-
-<li>Gerenciar tráfego de dados</li>
-
-<li>Fornecer Wi-Fi (em muitos modelos)</li>
-
-</ul>
-
-<br><br>
-
-<h3>🔌 Switch</h3>
-
-<p>
-O switch conecta dispositivos dentro da mesma rede local.
-</p>
-
-<p>
-Ele permite que computadores, impressoras e servidores troquem informações de forma eficiente.
-</p>
-
-<br><br>
-
-<h3>📡 Função do Switch</h3>
-
-<ul>
-
-<li>Conectar dispositivos locais</li>
-
-<li>Expandir a quantidade de portas de rede</li>
-
-<li>Melhorar a comunicação interna</li>
-
-</ul>
-
-<br><br>
-
-<h3>🏢 Exemplo em uma Empresa</h3>
-
-<p>
-
-Internet
-
-⬇
-
-Modem
-
-⬇
-
-Roteador
-
-⬇
-
-Switch
-
-⬇
-
-Computadores
-
-Impressoras
-
-Servidores
-
-</p>
-
-<br><br>
-
-<h3>🚢 Exemplo no Navio</h3>
-
-<p>
-O link de comunicação do navio chega ao modem.
-</p>
-
-<p>
-O roteador distribui a conexão para a rede de bordo.
-</p>
-
-<p>
-Os switches conectam computadores, impressoras e servidores espalhados pelos diversos compartimentos.
-</p>
-
-<br><br>
-
-<h3>📊 Comparação</h3>
-
-<table border="1" width="100%">
-
-<tr>
-
-<th>Equipamento</th>
-
-<th>Função</th>
-
-</tr>
-
-<tr>
-
-<td>Modem</td>
-
-<td>Conecta ao Provedor</td>
-
-</tr>
-
-<tr>
-
-<td>Roteador</td>
-
-<td>Conecta Redes</td>
-
-</tr>
-
-<tr>
-
-<td>Switch</td>
-
-<td>Conecta Dispositivos Locais</td>
-
-</tr>
-
-</table>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-MODEM
-
-🌍 Internet
-
-<br><br>
-
-ROTEADOR
-
-🔀 Liga Redes
-
-<br><br>
-
-SWITCH
-
-🔌 Liga Equipamentos
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> Apenas os computadores possuem endereço IP. / <span style="color: #28A745; font-weight: bold;">✔</span> Qualquer equipamento na rede precisa de IP (SmartTV, celular, impressora de rede, geladeira inteligente).</p>
 </div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-A pegadinha mais comum é afirmar que o switch conecta redes diferentes.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-Quem conecta redes diferentes é o roteador.
-</p>
-
-<p>
-O switch conecta dispositivos da mesma rede local.
-</p>
-
-<p>
-Outra pegadinha frequente é afirmar que modem e roteador são exatamente o mesmo equipamento.
-</p>
-
-<p>
-Embora existam aparelhos que integrem ambas as funções, os conceitos são diferentes.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Modem conecta ao provedor.
-
-• Roteador conecta redes.
-
-• Switch conecta dispositivos locais.
-
-• Modem recebe o sinal da operadora.
-
-• Roteador distribui a conexão.
-
-• Switch interliga computadores da LAN.
-
-• Roteador ≠ Switch.
-
-</div>
-
 `
-
 },
+
 {
-    titulo: "📡 Wi-Fi e Redes Sem Fio",
+  titulo: "📍 IPv4 e IPv6",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Devido ao crescimento explosivo da internet, os endereços IP tradicionais (IPv4) começaram a esgotar, forçando a criação de um novo padrão gigante (IPv6).</p>
 
-    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 IPv4 (O Padrão Antigo)</h3>
+<ul>
+  <li>Utiliza <strong>32 bits</strong>.</li>
+  <li>Formado por <strong>4 blocos numéricos</strong>.</li>
+  <li>Separados por <strong>pontos (.)</strong>.</li>
+  <li>Cada bloco varia de 0 a 255. (Ex: <code>192.168.0.1</code>)</li>
+</ul>
 
-<h3>📘 O que são Redes Sem Fio?</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 IPv6 (O Novo Padrão)</h3>
+<ul>
+  <li>Utiliza <strong>128 bits</strong> (Gera bilhões de trilhões de endereços a mais).</li>
+  <li>Formado por <strong>8 blocos alfanuméricos (hexadecimais)</strong>.</li>
+  <li>Separados por <strong>dois pontos (:)</strong>.</li>
+  <li>Usa números de 0 a 9 e letras de A a F. (Ex: <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>).</li>
+</ul>
 
-<p>
-Redes sem fio são redes de computadores que realizam a comunicação sem a utilização de cabos físicos.
-</p>
-
-<p>
-A transmissão dos dados ocorre por meio de ondas eletromagnéticas, permitindo maior mobilidade aos usuários.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Wi-Fi não significa Internet.
-
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE DA PROVA</h4>
+  <p>Bateu o olho e viu só <strong>PONTOS</strong> e números curtos? = <strong>IPv4</strong>.<br>
+  Bateu o olho e viu <strong>DOIS PONTOS (:)</strong>, letras e números grandes? = <strong>IPv6</strong>.</p>
 </div>
 
-<p>
-O Wi-Fi é apenas uma tecnologia que permite acessar uma rede sem utilizar cabos.
-</p>
-
-<br><br>
-
-<h3>📶 O que é Wi-Fi?</h3>
-
-<p>
-Wi-Fi é uma tecnologia utilizada para conectar dispositivos a uma rede sem fio.
-</p>
-
-<p>
-Ela permite a comunicação entre computadores, smartphones, tablets, impressoras e outros equipamentos.
-</p>
-
-<br><br>
-
-<h3>📱 Dispositivos que Utilizam Wi-Fi</h3>
-
-<ul>
-
-<li>Smartphones</li>
-
-<li>Notebooks</li>
-
-<li>Computadores</li>
-
-<li>Tablets</li>
-
-<li>Smart TVs</li>
-
-<li>Impressoras</li>
-
-<li>Dispositivos IoT</li>
-
-</ul>
-
-<br><br>
-
-<h3>📡 Ponto de Acesso (Access Point)</h3>
-
-<p>
-O ponto de acesso é o equipamento responsável por disponibilizar a rede sem fio aos dispositivos.
-</p>
-
-<p>
-Em muitas residências essa função já está integrada ao roteador Wi-Fi.
-</p>
-
-<br><br>
-
-<h3>🌍 Vantagens do Wi-Fi</h3>
-
-<ul>
-
-<li>Mobilidade</li>
-
-<li>Facilidade de instalação</li>
-
-<li>Menor quantidade de cabos</li>
-
-<li>Conexão de múltiplos dispositivos</li>
-
-<li>Flexibilidade de uso</li>
-
-</ul>
-
-<br><br>
-
-<h3>⚠️ Desvantagens do Wi-Fi</h3>
-
-<ul>
-
-<li>Interferências</li>
-
-<li>Menor estabilidade em comparação ao cabo</li>
-
-<li>Alcance limitado</li>
-
-<li>Maior exposição a ataques se mal configurado</li>
-
-</ul>
-
-<br><br>
-
-<h3>🔒 Segurança em Redes Wi-Fi</h3>
-
-<p>
-As redes sem fio devem utilizar mecanismos de proteção para impedir acessos não autorizados.
-</p>
-
-<p>
-A principal medida é o uso de senha forte e criptografia.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>WPA2</li>
-
-<li>WPA3</li>
-
-</ul>
-
-<br><br>
-
-<h3>📶 Alcance do Sinal</h3>
-
-<p>
-O alcance do Wi-Fi pode variar conforme obstáculos físicos, distância e potência dos equipamentos.
-</p>
-
-<p>
-Paredes, estruturas metálicas e outros equipamentos eletrônicos podem reduzir a qualidade do sinal.
-</p>
-
-<br><br>
-
-<h3>🚢 Exemplo Prático</h3>
-
-<p>
-Em um navio, roteadores Wi-Fi podem distribuir acesso à rede em áreas como acomodações, escritórios e salas de controle.
-</p>
-
-<p>
-Quanto maior a distância do ponto de acesso, menor tende a ser a intensidade do sinal.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Wi-Fi
-
-⬇
-
-Sem Fio
-
-⬇
-
-Mobilidade
-
-<br><br>
-
-Cabo
-
-⬇
-
-Maior Estabilidade
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> Com a chegada do IPv6, o IPv4 parou imediatamente de funcionar. / <span style="color: #28A745; font-weight: bold;">✔</span> Errado. Existe uma convivência simultânea. A migração está sendo gradual.</p>
 </div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma pegadinha muito comum é afirmar que Wi-Fi e Internet são a mesma coisa.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-O Wi-Fi é apenas uma tecnologia de acesso à rede.
-</p>
-
-<p>
-É possível existir Wi-Fi sem acesso à Internet e também Internet sem Wi-Fi.
-</p>
-
-<p>
-Outra pegadinha frequente é afirmar que redes sem fio são sempre mais rápidas que redes cabeadas.
-</p>
-
-<p>
-Na prática, redes cabeadas normalmente oferecem maior estabilidade e desempenho.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Wi-Fi é uma tecnologia de rede sem fio.
-
-• Wi-Fi não é sinônimo de Internet.
-
-• Permite mobilidade e facilidade de conexão.
-
-• Utiliza pontos de acesso (Access Points).
-
-• WPA2 e WPA3 são mecanismos de segurança.
-
-• Redes cabeadas costumam ser mais estáveis.
-
-• Obstáculos podem reduzir o alcance do sinal.
-
-</div>
-
 `
-
 },
+
 {
-    titulo: "🚨 Revisão Geral e Pegadinhas",
+  titulo: "🌍 DNS (Domain Name System)",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>DNS significa <strong>Domain Name System</strong> (Sistema de Nomes de Domínio). Ele é o tradutor oficial da internet e resolve o problema da memória humana.</p>
 
-    conteudo: `
-
-<h3>📘 Revisão Geral do Módulo Redes de Computadores</h3>
-
-<p>
-Neste módulo estudamos os principais conceitos relacionados às redes de computadores, seus componentes, tipos de redes, endereçamento e equipamentos.
-</p>
-
-<p>
-Esses assuntos aparecem com frequência em concursos públicos e provas de informática.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Grande parte das questões cobra diferenças entre equipamentos, tipos de redes e conceitos de endereçamento.
-
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ IMPORTANTE</h4>
+  <p>Computadores só conversam através de números (IPs). Humanos preferem palavras. O DNS é a "lista telefônica" que traduz nomes fáceis em números difíceis.</p>
 </div>
 
-<br><br>
-
-<h3>🌐 O que é uma Rede?</h3>
-
-<p>
-Rede de computadores é um conjunto de dispositivos conectados para compartilhar informações e recursos.
-</p>
-
-<br>
-
-Exemplos de recursos:
-
-<ul>
-
-<li>Arquivos</li>
-
-<li>Impressoras</li>
-
-<li>Internet</li>
-
-<li>Servidores</li>
-
-</ul>
-
-<br><br>
-
-<h3>🖥️ Componentes da Rede</h3>
-
-<table border="1" width="100%">
-
-<tr>
-
-<th>Componente</th>
-
-<th>Função</th>
-
-</tr>
-
-<tr>
-
-<td>Servidor</td>
-
-<td>Fornece Serviços</td>
-
-</tr>
-
-<tr>
-
-<td>Placa de Rede</td>
-
-<td>Conecta Dispositivos</td>
-
-</tr>
-
-<tr>
-
-<td>Switch</td>
-
-<td>Conecta Equipamentos Locais</td>
-
-</tr>
-
-<tr>
-
-<td>Roteador</td>
-
-<td>Conecta Redes</td>
-
-</tr>
-
-<tr>
-
-<td>Modem</td>
-
-<td>Conecta ao Provedor</td>
-
-</tr>
-
-</table>
-
-<br><br>
-
-<h3>📡 LAN x MAN x WAN</h3>
-
-<table border="1" width="100%">
-
-<tr>
-
-<th>Rede</th>
-
-<th>Alcance</th>
-
-</tr>
-
-<tr>
-
-<td>LAN</td>
-
-<td>Local</td>
-
-</tr>
-
-<tr>
-
-<td>MAN</td>
-
-<td>Metropolitana</td>
-
-</tr>
-
-<tr>
-
-<td>WAN</td>
-
-<td>Longa Distância</td>
-
-</tr>
-
-</table>
-
-<br>
-
-<p>
-
-LAN → Casa, Escola, Escritório
-
-</p>
-
-<p>
-
-MAN → Cidade
-
-</p>
-
-<p>
-
-WAN → Países e Continentes
-
-</p>
-
-<p>
-
-Internet → WAN
-
-</p>
-
-<br><br>
-
-<h3>🏢 Intranet x Extranet x Internet</h3>
-
-<p>
-
-<strong>Internet:</strong>
-
-Acesso público.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Intranet:</strong>
-
-Uso interno da organização.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Extranet:</strong>
-
-Acesso externo controlado.
-
-</p>
-
-<br><br>
-
-<h3>🔢 Endereço IP</h3>
-
-<p>
-O endereço IP identifica dispositivos em uma rede.
-</p>
-
-<br>
-
-Exemplo IPv4:
-
-<p>
-
-192.168.1.10
-
-</p>
-
-<br>
-
-<p>
-Existem IPs públicos e privados.
-</p>
-
-<br><br>
-
-<h3>📍 IPv4 x IPv6</h3>
-
-<table border="1" width="100%">
-
-<tr>
-
-<th>IPv4</th>
-
-<th>IPv6</th>
-
-</tr>
-
-<tr>
-
-<td>32 bits</td>
-
-<td>128 bits</td>
-
-</tr>
-
-<tr>
-
-<td>4 grupos</td>
-
-<td>8 grupos</td>
-
-</tr>
-
-<tr>
-
-<td>Pontos (.)</td>
-
-<td>Dois Pontos (:)</td>
-
-</tr>
-
-</table>
-
-<br><br>
-
-<h3>🌍 DNS</h3>
-
-<p>
-DNS significa Domain Name System.
-</p>
-
-<p>
-Sua função é traduzir nomes de domínio para endereços IP.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-google.com
-
-⬇
-
-142.xxx.xxx.xxx
-
-</p>
-
-<br><br>
-
-<h3>📶 Modem x Roteador x Switch</h3>
-
-<p>
-
-<strong>Modem:</strong>
-
-Conecta ao provedor.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Roteador:</strong>
-
-Conecta redes diferentes.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Switch:</strong>
-
-Conecta dispositivos da mesma rede local.
-
-</p>
-
-<br><br>
-
-<h3>📡 Wi-Fi</h3>
-
-<p>
-Wi-Fi é uma tecnologia de rede sem fio.
-</p>
-
-<p>
-Wi-Fi não é sinônimo de Internet.
-</p>
-
-<p>
-Pode existir Wi-Fi sem Internet e Internet sem Wi-Fi.
-</p>
-
-<br><br>
-
-<h3>🔒 Segurança Wi-Fi</h3>
-
-<ul>
-
-<li>WPA2</li>
-
-<li>WPA3</li>
-
-<li>Senha Forte</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE MASTER
-
-LAN → Local
-
-MAN → Metropolitana
-
-WAN → Mundial
-
-<br><br>
-
-DNS → Traduz Nome para IP
-
-<br><br>
-
-Modem → Provedor
-
-Roteador → Redes
-
-Switch → Equipamentos
-
-<br><br>
-
-Wi-Fi ≠ Internet
-
+<h3 style="color: #E67E22; margin-top: 20px;">📌 COMO O DNS FUNCIONA?</h3>
+<p>Quando você digita <code>www.google.com</code> no navegador:</p>
+<ol>
+  <li>O PC pergunta ao Servidor DNS: "Qual o IP do site google.com?"</li>
+  <li>O DNS verifica na tabela dele e responde: "O IP é <code>142.250.218.14</code>".</li>
+  <li>O seu computador se conecta a esse IP e carrega a página.</li>
+</ol>
+
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> O DNS traduz o IP para endereço MAC da máquina. / <span style="color: #28A745; font-weight: bold;">✔</span> Falso. Ele traduz <strong>Nome de Domínio (URL)</strong> para <strong>Endereço IP</strong> e vice-versa.</p>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> Sem o DNS é impossível acessar a Internet. / <span style="color: #28A745; font-weight: bold;">✔</span> Falso. Se você souber de cor o IP numérico do servidor, você consegue acessar o site digitando o IP direto na barra (mas é humanamente inviável decorar todos).</p>
 </div>
-
-<br><br>
-
-<h3>🚨 Pegadinhas Mais Cobradas</h3>
-
-<ul>
-
-<li>Internet não é LAN.</li>
-
-<li>Internet é WAN.</li>
-
-<li>DNS não substitui o IP.</li>
-
-<li>DNS traduz domínio para IP.</li>
-
-<li>Switch não conecta redes diferentes.</li>
-
-<li>Quem conecta redes é o roteador.</li>
-
-<li>Modem não é roteador.</li>
-
-<li>Intranet não é pública.</li>
-
-<li>Extranet não é a mesma coisa que Internet.</li>
-
-<li>Wi-Fi não é Internet.</li>
-
-<li>IPv6 possui mais endereços que IPv4.</li>
-
-<li>IPv6 utiliza números e letras hexadecimais.</li>
-
-</ul>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO FINAL DO MÓDULO
-
-• Rede conecta dispositivos.
-
-• LAN = Local.
-
-• MAN = Metropolitana.
-
-• WAN = Longa Distância.
-
-• Internet = WAN.
-
-• Intranet = Rede Interna.
-
-• Extranet = Acesso Externo Controlado.
-
-• IP identifica dispositivos.
-
-• DNS traduz domínio para IP.
-
-• Modem conecta ao provedor.
-
-• Roteador conecta redes.
-
-• Switch conecta dispositivos locais.
-
-• Wi-Fi é rede sem fio.
-
-🎉 MÓDULO REDES DE COMPUTADORES CONCLUÍDO
-
-</div>
-
 `
+},
 
+{
+  titulo: "📶 Modem, Roteador e Switch (A Fundo)",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Estes são os equipamentos físicos que fazem a rede pulsar. Entender a diferença fina entre eles é garantia de pontos na prova de hardware/redes.</p>
+
+<h3 style="color: #E67E22; margin-top: 20px;">📌 MODEM</h3>
+<p>A palavra vem de <strong>MO</strong>dulador / <strong>DEM</strong>odulador. Ele converte o sinal analógico (que vem do poste na rua via cabo coaxial ou telefone) em sinal digital (que o PC entende).<br>
+<strong>Função de prova:</strong> É a porta de entrada da casa, conectando sua rede local ao provedor (ISP).</p>
+
+<h3 style="color: #E67E22; margin-top: 20px;">📌 ROTEADOR</h3>
+<p>É o "guarda de trânsito" inteligente. Ele define a melhor ROTA para os pacotes de dados. <br>
+<strong>Função de prova:</strong> Ele conecta REDES DIFERENTES (ex: liga a rede LAN da sua casa com a rede WAN da internet).</p>
+
+<h3 style="color: #E67E22; margin-top: 20px;">📌 SWITCH</h3>
+<p>É a régua de energia dos dados. Ele possui várias portas (buracos) para espetar cabos azuis.<br>
+<strong>Função de prova:</strong> Ele conecta equipamentos DENTRO DA MESMA REDE (ex: liga 10 computadores na sala de uma empresa para formar uma LAN).</p>
+
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li>🌍 <strong>Modem:</strong> Traduz o sinal da operadora da rua para a casa.</li>
+    <li>🔀 <strong>Roteador:</strong> Pega a internet do modem e "roteia/distribui" (criando a separação LAN/Internet).</li>
+    <li>🔌 <strong>Switch:</strong> Multiplica as conexões para vários PCs locais via cabo.</li>
+  </ul>
+</div>
+`
+},
+
+{
+  titulo: "📡 Wi-Fi e Redes Sem Fio",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>As redes sem fio (Wireless) transmitem dados através de ondas eletromagnéticas. O padrão de rede local sem fio mais famoso é o Wi-Fi.</p>
+
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ IMPORTANTE</h4>
+  <p><strong>Wi-Fi NÃO É sinônimo de Internet!</strong> O Wi-Fi é apenas o "cabo invisível". Você pode ter um roteador gerando Wi-Fi perfeito em casa, ligando seu celular à sua TV, mesmo se o provedor cortar sua internet.</p>
+</div>
+
+<h3 style="color: #E67E22; margin-top: 20px;">📌 ACCESS POINT (Ponto de Acesso)</h3>
+<p>É o dispositivo que irradia o sinal sem fio (as "antenas"). Em casa, essa função fica embutida dentro do Roteador. Em empresas, os Access Points são aquelas "bacias brancas" coladas no teto espalhadas pelo prédio.</p>
+
+<h3 style="color: #E67E22; margin-top: 20px;">📌 SEGURANÇA SEM FIO (CRIPTOGRAFIA)</h3>
+<p>Como as ondas voam pelo ar, qualquer vizinho pode "ouvir" a rede. Por isso as redes usam senhas. Os padrões cobrados são:</p>
+<ul>
+  <li><strong>WEP:</strong> O mais antigo e quebrado. Muito inseguro.</li>
+  <li><strong>WPA / WPA2:</strong> O padrão forte mais comum hoje.</li>
+  <li><strong>WPA3:</strong> O padrão mais moderno e seguro atualmente.</li>
+</ul>
+
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> Redes Wi-Fi são invulneráveis a ataques se a rede estiver "oculta". / <span style="color: #28A745; font-weight: bold;">✔</span> Falso. Ocultar o nome da rede (SSID) não impede invasões, apenas exige o uso forte dos protocolos WPA2/WPA3.</p>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> O Wi-Fi é sempre mais rápido e estável que a rede cabeada. / <span style="color: #28A745; font-weight: bold;">✔</span> Falso. O cabo Ethernet direto na placa de rede sempre garante menos perdas, zero interferência magnética e mais velocidade bruta do que o Wi-Fi.</p>
+</div>
+`
+},
+
+{
+  titulo: "🚨 Revisão Geral Rápida",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 O QUE VOCÊ NÃO PODE ESQUECER</h2>
+
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 TABELA MESTRA DE REDES</h4>
+  <ul>
+    <li><strong>LAN:</strong> Rede da sua casa ou prédio.</li>
+    <li><strong>MAN:</strong> Rede do tamanho de uma cidade.</li>
+    <li><strong>WAN:</strong> A Internet! Global.</li>
+    <li><strong>Intranet:</strong> A rede secreta dos funcionários.</li>
+    <li><strong>Extranet:</strong> A rede com senha para clientes/fornecedores.</li>
+    <li><strong>Roteador:</strong> Cria a rota e liga redes diferentes.</li>
+    <li><strong>Switch:</strong> Multiplica pontos de cabo na LAN.</li>
+    <li><strong>Modem:</strong> Puxa a internet da rua pra casa.</li>
+    <li><strong>IP:</strong> O "RG/CPF" da máquina. IPv4 (pontos) e IPv6 (letras e dois pontos).</li>
+    <li><strong>DNS:</strong> A agenda telefônica da internet (Nomes para IPs).</li>
+  </ul>
+</div>
+`
+},
+
+{
+  titulo: "📝 Questões Comentadas - Parte 1",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 HORA DE PRATICAR: QUESTÕES DE CONCURSOS</h2>
+<p>Teste seus conhecimentos com essas questões sobre abrangência e equipamentos de rede.</p>
+
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 1 (VUNESP)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+A classificação de uma rede de computadores que abrange uma pequena área geográfica, como um único edifício, uma residência ou um escritório, e que permite o compartilhamento de arquivos e impressoras de forma ágil, é tecnicamente denominada:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) MAN (Metropolitan Area Network).</li>
+  <li>B) WAN (Wide Area Network).</li>
+  <li><strong>C) LAN (Local Area Network).</strong></li>
+  <li>D) PAN (Personal Area Network).</li>
+  <li>E) SAN (Storage Area Network).</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Questão clássica e direta. Redes limitadas a pequenas distâncias (um prédio, uma sala, uma casa) são classificadas como <strong>LAN</strong> (Redes Locais). Lembre-se do macete: LAN (Prédio) -> MAN (Cidade) -> WAN (Mundo).
+</div>
+
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 2 (CEBRASPE)</h3>
+<p><strong>Julgue o item a seguir:</strong><br>
+A Intranet e a Extranet utilizam a mesma tecnologia da Internet (protocolos TCP/IP). A diferença primordial reside no fato de que a Intranet é restrita aos funcionários de uma organização, enquanto a Extranet permite o acesso externo controlado a parceiros e fornecedores.</p>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ CERTO</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Perfeito! A afirmativa resumiu de forma impecável a teoria. Todas as três (Internet, Intranet e Extranet) utilizam a mesma matriz tecnológica de protocolos web. A diferenciação entre elas é exclusivamente sobre <strong>quem tem permissão de acesso</strong>.
+</div>
+
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 3 (FGV)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+O equipamento de rede que atua na camada de enlace e que tem a função de interligar computadores em uma mesma rede local (LAN), encaminhando os dados diretamente para a porta do computador de destino sem replicar para os demais, é o:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) Modem.</li>
+  <li>B) Roteador.</li>
+  <li><strong>C) Switch.</strong></li>
+  <li>D) Firewall.</li>
+  <li>E) Hub.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> O <strong>Switch</strong> é o concentrador inteligente que liga vários equipamentos <em>dentro da mesma rede local</em>. Ele entrega o pacote apenas na porta exata da máquina de destino, ao contrário do antigo e obsoleto "Hub", que espalhava a informação de forma "burra" para todos.
+</div>
+
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 4 (FCC)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+O serviço responsável por traduzir nomes amigáveis para os usuários, como "www.tst.jus.br", nos respectivos endereços de IP numéricos que as máquinas utilizam para se comunicarem na rede, é conhecido como:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) DHCP.</li>
+  <li>B) FTP.</li>
+  <li>C) HTTP.</li>
+  <li><strong>D) DNS.</strong></li>
+  <li>E) MAC.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra D</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Essa é a função mestra do <strong>DNS</strong> (Domain Name System). Ele é a grande lista telefônica da internet. Nós memorizamos o nome do site (domínio) e o DNS faz o favor de traduzir isso para o endereço numérico IP real do servidor.
+</div>
+`
+},
+
+{
+  titulo: "📝 Questões Comentadas - Parte 2",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 MAIS QUESTÕES DE CONCURSOS PARA FIXAÇÃO</h2>
+<p>Vamos fechar com questões avançadas sobre IPs e segurança de redes sem fio.</p>
+
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 5 (Instituto AOCP)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+O endereço de IP <code>192.168.1.100</code> é composto por 4 blocos numéricos separados por pontos. Esse formato indica, categoricamente, que o endereço em questão pertence ao padrão:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li><strong>A) IPv4.</strong></li>
+  <li>B) IPv6.</li>
+  <li>C) MAC Address.</li>
+  <li>D) DNS reverso.</li>
+  <li>E) Endereço de Broadcast.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra A</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Bateu o olho e viu apenas números (variando de 0 a 255) formatados em 4 bloquinhos divididos por <strong>pontos</strong>? É a estrutura clássica e inconfundível do <strong>IPv4</strong>. O IPv6 utiliza o sistema alfanumérico (hexadecimal) com 8 blocos e dois pontos (<code>:</code>).
+</div>
+
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 6 (CEBRASPE)</h3>
+<p><strong>Julgue o item a seguir:</strong><br>
+Para que um smartphone, uma televisão smart e um notebook consigam compartilhar a mesma impressora sem fio dentro de uma residência, não é necessário que todos possuam acesso ativo à Internet, bastando que estejam devidamente conectados à mesma rede local Wi-Fi.</p>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ CERTO</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Perfeito! Essa questão pega muita gente. <strong>Rede local (LAN / Wi-Fi) não é sinônimo de Internet (WAN).</strong> Se o cabo da fibra ótica lá da rua se romper, você perde a Internet, mas o roteador da sua casa continua criando a rede Wi-Fi local. Portanto, o computador pode enviar o arquivo para a impressora pela rede sem fio tranquilamente, mesmo estando "offline" do mundo externo.
+</div>
+
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 7 (FGV)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Em relação à segurança de redes sem fio (Wireless/Wi-Fi), assinale o protocolo mais moderno, projetado para oferecer o mais alto nível de criptografia e proteção contra ataques de força bruta, superando seus antecessores:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) WEP.</li>
+  <li>B) FTP.</li>
+  <li>C) HTTPS.</li>
+  <li><strong>D) WPA3.</strong></li>
+  <li>E) SMTP.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra D</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> A evolução da segurança do Wi-Fi seguiu os passos: WEP (muito velho/inseguro) -> WPA -> WPA2 (ainda muito usado) -> <strong>WPA3</strong> (o mais moderno, atual e blindado). Os outros itens não têm a ver: FTP envia arquivos, SMTP envia e-mail, e HTTPS cifra a navegação de páginas web, não a rede Wi-Fi em si.
+</div>
+
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 8 (VUNESP)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Quando se fala em interligar redes distintas, como a rede local de uma empresa à internet, qual é o equipamento de hardware primariamente responsável por traçar a rota, encaminhar os pacotes de dados e realizar a ponte entre a LAN corporativa e a rede da operadora externa?</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) Switch.</li>
+  <li>B) Placa de Rede.</li>
+  <li><strong>C) Roteador.</strong></li>
+  <li>D) Access Point.</li>
+  <li>E) Cabo de Par Trançado.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Falou em interligar "redes distintas" (ex: LAN e WAN), falou em <strong>Roteador</strong>! O nome entrega a função: ele cria "Rotas" de tráfego entre redes diferentes. O Switch interliga aparelhos dentro da mesma rede (não traça rotas externas).
+</div>
+`
 }
 ];
