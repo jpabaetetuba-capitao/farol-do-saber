@@ -2,134 +2,55 @@ const arquivosPastasBackupTeoria = [
 {
 titulo: "1. Conceitos Fundamentais de Arquivos e Pastas",
 conteudo: `
-<style>
-  /* Estilos Globais para o Módulo */
-  .conteudo-teoria { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #334155; }
-  .conceito-box { background: #eff6ff; border-left: 5px solid #3b82f6; padding: 15px; border-radius: 4px; margin: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-  .alerta-box { border-left: 5px solid #f59e0b; background: #fffbeb; padding: 15px; margin: 15px 0; border-radius: 4px; }
-  .dica-box { border-left: 5px solid #10b981; background: #ecfdf5; padding: 15px; margin: 15px 0; border-radius: 4px; }
-  .terminal { background: #1e1e1e; color: #4af626; padding: 15px; border-radius: 6px; font-family: 'Courier New', Courier, monospace; margin: 10px 0; overflow-x: auto; border: 1px solid #000; }
-  .terminal strong { color: #fff; }
-  .tag { display: inline-block; background: #e0f2fe; color: #0284c7; padding: 3px 8px; border-radius: 12px; font-size: 0.9em; font-weight: bold; margin: 2px; }
-  .tree { border-left: 2px dashed #cbd5e1; padding-left: 20px; list-style: none; margin-left: 10px; }
-  .tree li { position: relative; padding-left: 15px; margin-bottom: 5px; }
-  .tree li::before { content: ''; position: absolute; top: 12px; left: 0; width: 10px; height: 2px; background: #cbd5e1; }
-  .grafico-container { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; margin: 15px 0; }
-  .barra-wrap { display: flex; align-items: center; margin-bottom: 10px; }
-  .barra-label { width: 120px; font-weight: bold; font-size: 0.9em; }
-  .barra { height: 24px; border-radius: 12px; display: flex; align-items: center; padding-left: 10px; color: white; font-weight: bold; font-size: 0.85em; transition: width 1s ease-in-out; }
-  
-  /* Animação da Seta */
-  @keyframes bounceRight {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(5px); }
-  }
-  .seta { display: inline-block; animation: bounceRight 1s infinite; color: #f59e0b; font-weight: 900; margin-right: 5px; }
-</style>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Os arquivos e as pastas constituem a base da organização das informações em sistemas computacionais. Todo documento, imagem, vídeo, programa ou dado armazenado em um computador é representado por meio de arquivos organizados em pastas.</p>
+<p>A correta compreensão desses conceitos é essencial para a utilização eficiente de sistemas operacionais como Windows e Linux, sendo um tema frequentemente cobrado em concursos públicos.</p>
 
-<div class="conteudo-teoria">
-<p>
-Os arquivos e as pastas constituem a base da organização das informações em sistemas computacionais. Todo documento, imagem, vídeo, programa ou dado armazenado em um computador é representado por meio de arquivos organizados em pastas.
-</p>
-
-<p>
-A correta compreensão desses conceitos é essencial para a utilização eficiente de sistemas operacionais como Windows e Linux, sendo um tema frequentemente cobrado em concursos públicos.
-</p>
-
-<div class="conceito-box">
-<span class="seta">➔</span> <strong>O Que é um Arquivo?</strong><br>
-Arquivo é uma unidade de armazenamento de informações em um dispositivo digital. Ele pode conter diferentes tipos de dados, como textos, imagens, áudios, vídeos, programas e planilhas. Cada arquivo possui um nome e geralmente uma extensão que identifica seu formato.
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ O QUE É UM ARQUIVO?</h4>
+  <p>Arquivo é uma <strong>unidade de armazenamento de informações</strong> em um dispositivo digital. Ele pode conter diferentes tipos de dados, como textos, imagens, áudios, vídeos, programas e planilhas. Cada arquivo possui um nome e, geralmente, uma extensão que identifica seu formato.</p>
 </div>
 
-<h3>Exemplos de Arquivos</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 EXEMPLOS DE ARQUIVOS</h3>
 <ul>
-<li><span class="tag">.docx</span> Trabalho.docx</li>
-<li><span class="tag">.xlsx</span> Planilha.xlsx</li>
-<li><span class="tag">.jpg</span> Foto.jpg</li>
-<li><span class="tag">.mp3</span> Musica.mp3</li>
-<li><span class="tag">.mp4</span> Video.mp4</li>
-<li><span class="tag">.pdf</span> Relatorio.pdf</li>
+  <li>📄 <strong>.docx</strong> (Trabalho.docx)</li>
+  <li>📊 <strong>.xlsx</strong> (Planilha.xlsx)</li>
+  <li>🖼️ <strong>.jpg</strong> (Foto.jpg)</li>
+  <li>🎵 <strong>.mp3</strong> (Musica.mp3)</li>
+  <li>🎬 <strong>.mp4</strong> (Video.mp4)</li>
+  <li>📑 <strong>.pdf</strong> (Relatorio.pdf)</li>
 </ul>
-</div>
 `
 },
 
 {
 titulo: "2. Organização de Arquivos e Pastas",
 conteudo: `
-<div class="conteudo-teoria">
-<p>
-A organização de arquivos e pastas é uma prática fundamental para facilitar o armazenamento, localização e gerenciamento das informações. Tanto o Windows quanto o Linux utilizam <strong>estruturas hierárquicas</strong> (em árvore).
-</p>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>A organização de arquivos e pastas é uma prática fundamental para facilitar o armazenamento, localização e gerenciamento das informações. Tanto o Windows quanto o Linux utilizam <strong>estruturas hierárquicas (em árvore)</strong>.</p>
 
-<div class="conceito-box">
-<span class="seta">➔</span> <strong>Diretório Raiz</strong><br>
-O diretório raiz é o ponto inicial da estrutura de diretórios de um sistema operacional.
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ DIRETÓRIO RAIZ</h4>
+  <p>O diretório raiz é o ponto inicial e absoluto da estrutura de diretórios de um sistema operacional. No Windows, geralmente é o <code>C:\\</code>. No Linux, é apenas a barra <code>/</code>.</p>
 </div>
 
-<h3>Representação Gráfica: Estrutura em Árvore</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 REPRESENTAÇÃO GRÁFICA (EM ÁRVORE)</h3>
+<p><strong>Exemplo no Windows:</strong><br>
+💽 C:\\ (Raiz)<br>
+&nbsp; ├── 📂 Usuarios<br>
+&nbsp; &nbsp; &nbsp; └── 📂 Joao<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├── 📂 Documentos<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └── 📂 Downloads</p>
 
-<div style="display: flex; gap: 20px; flex-wrap: wrap;">
-  <div style="flex: 1; min-width: 250px;" class="grafico-container">
-    <h4 style="margin-top: 0; color: #0284c7;">Estrutura no Windows</h4>
-    <ul class="tree" style="margin:0; padding-left:0; border:none;">
-      <li><span class="tag" style="background:#bfdbfe;">C:\\ (Raiz)</span>
-        <ul class="tree">
-          <li>📂 Usuarios
-            <ul class="tree">
-              <li>📂 Joao
-                <ul class="tree">
-                  <li>📂 Documentos</li>
-                  <li>📂 Downloads</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <div style="flex: 1; min-width: 250px;" class="grafico-container">
-    <h4 style="margin-top: 0; color: #10b981;">Estrutura no Linux</h4>
-    <ul class="tree" style="margin:0; padding-left:0; border:none;">
-      <li><span class="tag" style="background:#a7f3d0;">/ (Raiz)</span>
-        <ul class="tree">
-          <li>📂 home
-            <ul class="tree">
-              <li>📂 joao
-                <ul class="tree">
-                  <li>📂 documentos</li>
-                  <li>📂 downloads</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE: CAMINHO ABSOLUTO vs RELATIVO</h4>
+  <p><strong>Absoluto:</strong> Indica a localização completa começando desde o diretório raiz (Ex: <code>C:\\Usuarios\\Joao\\Documentos\\Relatorio.docx</code>).<br>
+  <strong>Relativo:</strong> Indica a localização tomando como referência a pasta <em>atual</em> onde você já está.</p>
 </div>
 
-<h3>Caminhos (Paths)</h3>
-<div class="alerta-box">
-<strong>Caminho Absoluto vs Relativo</strong><br>
-<span class="seta">➔</span> <strong>Absoluto:</strong> Indica a localização completa desde o diretório raiz (Ex: <code>C:\\Usuarios\\Joao\\Documentos\\Relatorio.docx</code> ou <code>/home/joao/relatorio.docx</code>).<br>
-<span class="seta">➔</span> <strong>Relativo:</strong> Indica a localização tomando como referência a pasta <em>atual</em> onde você já está, não começando pela raiz.
-</div>
-
-<h3>Boas Práticas e Nomenclatura</h3>
-<ul>
-<li>Utilize nomes descritivos (Ex: <code>Relatorio_Vendas_2026.pdf</code>).</li>
-<li>Evite arquivos espalhados pela área de trabalho.</li>
-</ul>
-
-<h3>Pegadinhas de Concurso</h3>
-<ul>
-<li>Diretório e pasta são considerados <strong>sinônimos</strong>.</li>
-<li>O diretório raiz está no topo absoluto da estrutura.</li>
-<li>Caminho relativo depende da sua localização atual!</li>
-</ul>
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> Diretório e pasta são conceitos completamente diferentes. / <span style="color: #28A745; font-weight: bold;">✔</span> Falso. Para fins de prova, "Pasta" e "Diretório" são considerados <strong>sinônimos</strong>.</p>
 </div>
 `
 },
@@ -137,536 +58,454 @@ O diretório raiz é o ponto inicial da estrutura de diretórios de um sistema o
 {
 titulo: "3. Operações com Arquivos e Pastas",
 conteudo: `
-<div class="conteudo-teoria">
-<p>
-O domínio das operações básicas é essencial e as bancas amam testar a diferença sutil entre elas (especialmente Copiar vs Mover).
-</p>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>O domínio das operações básicas de arquivos é essencial e as bancas amam testar a diferença sutil entre elas (especialmente Copiar vs Mover).</p>
 
-<div class="dica-box">
-<span class="seta">➔</span> <strong>Diferença de Ouro para Provas:</strong><br>
-<strong>COPIAR (Ctrl+C):</strong> O arquivo original PERMANECE no local de origem. Surgem DUAS versões.<br>
-<strong>MOVER / RECORTAR (Ctrl+X):</strong> O arquivo DEIXA de existir no local original. Continua existindo APENAS UMA versão, em novo endereço.
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE: A DIFERENÇA DE OURO</h4>
+  <p><strong>COPIAR (Ctrl+C):</strong> O arquivo original PERMANECE no local de origem. Surgem DUAS versões idênticas do arquivo.<br>
+  <strong>MOVER / RECORTAR (Ctrl+X):</strong> O arquivo DEIXA de existir no local original. Continua existindo APENAS UMA versão, transferida para o novo endereço.</p>
 </div>
 
-<h3>Exclusão e Lixeira do Windows</h3>
-<p>Excluir arquivos (tecla <code>Delete</code>) normalmente os envia para a Lixeira, uma área temporária de onde podem ser restaurados. A exclusão definitiva só ocorre se a lixeira for esvaziada.</p>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 EXCLUSÃO E LIXEIRA</h3>
+<p>Excluir arquivos (pressionando a tecla <code>Delete</code>) normalmente os envia para a Lixeira, uma área temporária de onde podem ser restaurados. A exclusão definitiva só ocorre se a lixeira for esvaziada.</p>
 
-<div class="alerta-box">
-<span class="seta">➔</span> <strong>Excluir Permanentemente:</strong><br>
-Pressionar <strong>Shift + Delete</strong> exclui o arquivo diretamente, ignorando a Lixeira. A recuperação se torna muito difícil!
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ EXCLUSÃO PERMANENTE</h4>
+  <p>Pressionar <strong>Shift + Delete</strong> exclui o arquivo diretamente, ignorando a Lixeira. A recuperação convencional torna-se impossível!</p>
 </div>
 
-<h3>Renomear e Operações em Lote</h3>
-<p>
-Renomear altera apenas a "etiqueta" (o nome), o conteúdo do arquivo permanece intacto (Atalho: <strong>F2</strong>). Operações em lote ocorrem quando você seleciona vários arquivos de uma vez (segurando <code>Ctrl</code> para arquivos alternados ou <code>Shift</code> para sequência contínua) e aplica a operação em todos ao mesmo tempo.
-</p>
-
-<h3>Resumo para Concurso</h3>
-<ul>
-<li>Criar gera novos arquivos ou pastas.</li>
-<li>Copiar mantém o original.</li>
-<li>Mover transfere e remove da origem.</li>
-<li>Renomear (F2) altera apenas o nome.</li>
-<li>Excluir envia para a Lixeira. Restaurar devolve ao local original.</li>
-<li>Shift + Delete exclui permanentemente.</li>
-</ul>
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li>➕ <strong>Criar:</strong> Gera novos arquivos ou pastas.</li>
+    <li>📋 <strong>Copiar:</strong> Mantém o original intacto.</li>
+    <li>✂️ <strong>Mover:</strong> Transfere e remove da origem.</li>
+    <li>✏️ <strong>Renomear (F2):</strong> Altera apenas o nome, preserva o conteúdo.</li>
+  </ul>
 </div>
 `
 },
 {
 titulo: "4. Extensões de Arquivos",
 conteudo: `
-<div class="conteudo-teoria">
-<p>
-As extensões são os "sobrenomes" dos arquivos. Elas dizem ao Sistema Operacional qual programa deve ser usado para abrir aquele conteúdo.
-</p>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>As extensões são os "sobrenomes" dos arquivos. Elas informam ao Sistema Operacional qual programa específico deve ser usado para abrir aquele conteúdo.</p>
 
-<div class="grafico-container">
-  <h3 style="margin-top: 0;">Extensões Mais Cobradas Separadas por Categoria</h3>
-  
-  <strong>📄 Textos e Documentos</strong><br>
-  <span class="tag">.txt</span> Texto Simples 
-  <span class="tag">.docx</span> Word Atual 
-  <span class="tag">.odt</span> LibreOffice Writer 
-  <span class="tag">.pdf</span> Portable Document Format<br><br>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 EXTENSÕES MAIS COBRADAS</h3>
+<ul>
+  <li>📄 <strong>Textos:</strong> .txt (simples), .docx (Word), .odt (Writer), .pdf (Acrobat/Portátil).</li>
+  <li>📊 <strong>Planilhas:</strong> .xlsx (Excel), .ods (Calc), .csv (Valores separados por vírgula).</li>
+  <li>🎞️ <strong>Apresentações:</strong> .pptx (PowerPoint), .odp (Impress).</li>
+  <li>🖼️ <strong>Imagens:</strong> .jpg / .jpeg (Fotos), .png (Fundo transparente), .gif (Animação curta).</li>
+  <li>🎵 <strong>Multimídia:</strong> .mp3 (Áudio), .mp4 (Vídeo).</li>
+  <li>🗜️ <strong>Compactados:</strong> .zip, .rar.</li>
+  <li>⚙️ <strong>Executáveis:</strong> .exe, .bat.</li>
+</ul>
 
-  <strong>📊 Planilhas e 📽️ Apresentações</strong><br>
-  <span class="tag">.xlsx</span> Excel Atual 
-  <span class="tag">.ods</span> LibreOffice Calc 
-  <span class="tag">.pptx</span> PowerPoint 
-  <span class="tag">.odp</span> LibreOffice Impress<br><br>
-
-  <strong>🖼️ Imagens</strong><br>
-  <span class="tag">.jpg / .jpeg</span> Fotos comprimidas 
-  <span class="tag">.png</span> Suporta transparência 
-  <span class="tag">.gif</span> Animações curtas<br><br>
-
-  <strong>🎵 Áudio e 🎬 Vídeo</strong><br>
-  <span class="tag">.mp3</span> Áudio comprimido 
-  <span class="tag">.wav</span> Áudio sem compressão (pesado) 
-  <span class="tag">.mp4</span> Vídeo padrão web<br><br>
-
-  <strong>🗜️ Compactados e ⚙️ Executáveis</strong><br>
-  <span class="tag">.zip</span> / <span class="tag">.rar</span> Pacotes comprimidos 
-  <span class="tag">.exe</span> Instalador/Executável Windows
-</div>
-
-<div class="alerta-box">
-<span class="seta">➔</span> <strong>Ocultação de Extensões:</strong> O Windows, por padrão, costuma ocultar as extensões dos tipos de arquivo conhecidos. Mas cuidado na prova: mesmo oculta, a extensão continua existindo no código do sistema!
-</div>
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> Se o Windows ocultar a extensão de um arquivo conhecido, ela deixa de existir e o arquivo perde seu formato. / <span style="color: #28A745; font-weight: bold;">✔</span> Falso. A extensão continua existindo no código do sistema; ela apenas não é exibida na tela do usuário para fins estéticos.</p>
 </div>
 `
 },
 {
 titulo: "5. Gerenciamento de Arquivos no Windows",
 conteudo: `
-<div class="conteudo-teoria">
-<p>
-A principal ferramenta para visualizar, organizar e manipular arquivos no Windows é o <strong>Explorador de Arquivos</strong> (File Explorer).
-</p>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>A principal ferramenta para visualizar, organizar e manipular arquivos no Windows é o <strong>Explorador de Arquivos</strong> (File Explorer).</p>
 
-<div class="conceito-box">
-<span class="seta">➔</span> <strong>Atalho de Ouro:</strong> Pressione <kbd>Windows + E</kbd> para abrir o Explorador de Arquivos instantaneamente!
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE DO TECLADO</h4>
+  <p>Para abrir o Explorador de Arquivos instantaneamente, pressione o atalho: <strong>Windows + E</strong>.</p>
 </div>
 
-<h3>Estrutura do Explorador</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 ESTRUTURA DO EXPLORADOR</h3>
 <ul>
-<li><strong>Painel de Navegação:</strong> Lado esquerdo, exibe a hierarquia, pendrives conectados e locais de rede.</li>
-<li><strong>Barra de Endereços:</strong> Mostra o caminho da pasta atual (Ex: <code>C:\\Usuarios\\Documentos</code>).</li>
-<li><strong>Caixa de Pesquisa:</strong> Canto superior direito, busca itens dentro da pasta atual.</li>
+  <li><strong>Painel de Navegação (Esquerda):</strong> Exibe a hierarquia em árvore, pendrives conectados e locais de rede.</li>
+  <li><strong>Barra de Endereços (Topo):</strong> Mostra o caminho da pasta atual (Ex: <code>C:\\Usuarios\\Documentos</code>).</li>
+  <li><strong>Caixa de Pesquisa (Topo Direito):</strong> Busca itens exclusivamente dentro da pasta em que você está navegando.</li>
 </ul>
 
-<h3>Atalhos Clássicos do Windows</h3>
-<div class="grafico-container" style="background: #f1f5f9;">
-  <code>Ctrl + C</code> ➔ Copiar<br>
-  <code>Ctrl + X</code> ➔ Recortar (Mover)<br>
-  <code>Ctrl + V</code> ➔ Colar<br>
-  <code>Ctrl + Z</code> ➔ Desfazer a última ação<br>
-  <code>Ctrl + A</code> ➔ Selecionar Tudo (All)<br>
-  <code>F2</code> ➔ Renomear<br>
-  <code>Shift + Delete</code> ➔ Excluir permanentemente
-</div>
-
-<h3>Atributos de Arquivos</h3>
-<p>Nas propriedades do arquivo (botão direito -> Propriedades), você encontra os atributos:</p>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 ATRIBUTOS DE ARQUIVOS</h3>
+<p>Ao clicar com o botão direito e ir em Propriedades, você encontra os atributos do arquivo:</p>
 <ul>
-<li><strong>Somente Leitura (Read-only):</strong> Impede que o arquivo seja modificado acidentalmente.</li>
-<li><strong>Oculto (Hidden):</strong> O arquivo não aparece nas listagens normais do sistema.</li>
+  <li>👁️ <strong>Somente Leitura:</strong> Impede que o arquivo seja modificado acidentalmente.</li>
+  <li>👻 <strong>Oculto:</strong> O arquivo não aparece nas listagens normais do sistema.</li>
 </ul>
+
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO DOS ATALHOS CLÁSSICOS</h4>
+  <p><code>Ctrl + C</code> = Copiar<br>
+  <code>Ctrl + X</code> = Recortar (Mover)<br>
+  <code>Ctrl + V</code> = Colar<br>
+  <code>Ctrl + Z</code> = Desfazer ação<br>
+  <code>Ctrl + A</code> = Selecionar Tudo<br>
+  <code>F2</code> = Renomear</p>
 </div>
 `
 },
 {
 titulo: "6. Gerenciamento de Arquivos no Linux",
 conteudo: `
-<div class="conteudo-teoria">
-<p>
-O Linux é <strong>diferente</strong> do Windows. Ele não utiliza letras de unidade (como C: ou D:). Toda a árvore nasce de um único ponto: o diretório raiz.
-</p>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>O Linux é estruturalmente diferente do Windows. Ele <strong>não utiliza letras de unidade</strong> (como C: ou D:). Toda a árvore nasce de um único ponto inicial, chamado de diretório raiz.</p>
 
-<div class="dica-box">
-<span class="seta">➔</span> <strong>Case Sensitive:</strong> O Linux difere maiúsculas de minúsculas! Um arquivo chamado <code>Teste.txt</code> é completamente diferente de <code>teste.txt</code>. Eles podem existir na mesma pasta.
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ IMPORTANTE: CASE SENSITIVE</h4>
+  <p>Diferente do Windows, o Linux difere letras maiúsculas de minúsculas! Um arquivo chamado <code>Prova.txt</code> é completamente diferente de <code>prova.txt</code>. Eles podem existir simultaneamente na mesma pasta.</p>
 </div>
 
-<h3>Estrutura Famosa do Linux (Árvore de Diretórios)</h3>
-<div class="grafico-container" style="font-family: monospace;">
-  <strong>/</strong> (Diretório Raiz)<br>
-  ├── <strong>/home</strong> ➔ Pastas pessoais dos usuários comuns.<br>
-  ├── <strong>/root</strong> ➔ Pasta pessoal exclusiva do superusuário (Administrador).<br>
-  ├── <strong>/etc</strong> ➔ Arquivos de configuração do sistema (Não tem executáveis aqui!).<br>
-  ├── <strong>/bin</strong> ➔ Binários (comandos básicos e essenciais).<br>
-  ├── <strong>/var</strong> ➔ Arquivos variáveis (Ex: Logs do sistema, filas de impressão).<br>
-  ├── <strong>/tmp</strong> ➔ Arquivos temporários (apagados a cada reinício).<br>
-  └── <strong>/dev</strong> ➔ Dispositivos físicos (mouse, teclado, HDs são lidos como arquivos aqui).
-</div>
-
-<h3>Pegadinhas de Concurso</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 A FAMOSA ÁRVORE DE DIRETÓRIOS</h3>
 <ul>
-<li>Não confunda <strong>/</strong> (raiz do sistema) com <strong>/root</strong> (casa do administrador).</li>
-<li><strong>/etc</strong> não guarda programas, apenas as configurações deles!</li>
+  <li><strong>/</strong> ➔ O Diretório Raiz. A origem de tudo.</li>
+  <li><strong>/home</strong> ➔ Abriga as pastas pessoais dos usuários comuns (Seus documentos ficam aqui).</li>
+  <li><strong>/root</strong> ➔ Pasta pessoal exclusiva do superusuário (Administrador do sistema).</li>
+  <li><strong>/etc</strong> ➔ Guarda os arquivos de <em>configuração</em> do sistema.</li>
+  <li><strong>/bin</strong> ➔ Guarda os arquivos binários e executáveis essenciais.</li>
+  <li><strong>/var</strong> ➔ Arquivos variáveis (Ex: Logs e registros do sistema).</li>
+  <li><strong>/tmp</strong> ➔ Arquivos temporários (apagados a cada reinício).</li>
+  <li><strong>/dev</strong> ➔ Dispositivos físicos (mouses, pendrives, lidos como arquivos).</li>
 </ul>
+
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> A pasta <code>/root</code> é a origem principal (raiz) do sistema. / <span style="color: #28A745; font-weight: bold;">✔</span> Falso. A raiz é apenas a barra <code>/</code>. O diretório <code>/root</code> é a pasta pessoal do administrador.</p>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> Os programas instalados ficam dentro de <code>/etc</code>. / <span style="color: #28A745; font-weight: bold;">✔</span> Falso. O <code>/etc</code> guarda as configurações. Os executáveis ficam em <code>/bin</code> ou <code>/usr/bin</code>.</p>
 </div>
 `
 },
 {
 titulo: "7. Permissões de Arquivos no Linux",
 conteudo: `
-<div class="conteudo-teoria">
-<p>
-O Linux é extremamente focado em segurança. Cada arquivo e pasta possui regras rígidas de quem pode ver, alterar ou rodar.
-</p>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>O Linux é um sistema extremamente focado em segurança de múltiplos usuários. Cada arquivo e pasta possui regras rígidas de quem pode ver, alterar ou rodar.</p>
 
-<h3>A Tríade de Permissões (rwx)</h3>
-<p>As permissões geram valores numéricos. As bancas amam essa matemática:</p>
-<div class="grafico-container" style="text-align: center;">
-  <span class="tag" style="background:#fca5a5; color:#991b1b; font-size:1.1em;"><strong>r</strong> = Read (Leitura) = <strong>4</strong></span>
-  <span class="tag" style="background:#fcd34d; color:#92400e; font-size:1.1em;"><strong>w</strong> = Write (Escrita) = <strong>2</strong></span>
-  <span class="tag" style="background:#86efac; color:#166534; font-size:1.1em;"><strong>x</strong> = eXecute (Execução) = <strong>1</strong></span>
-</div>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 A TRÍADE DE PERMISSÕES (rwx)</h3>
+<p>As permissões geram valores numéricos (matemática cobrada em provas):</p>
+<ul>
+  <li>📖 <strong>r (Read / Leitura):</strong> Valor = <strong>4</strong></li>
+  <li>✍️ <strong>w (Write / Escrita):</strong> Valor = <strong>2</strong></li>
+  <li>⚙️ <strong>x (eXecute / Execução):</strong> Valor = <strong>1</strong></li>
+</ul>
 
-<h3>Categorias (U G O)</h3>
-<p>Essas permissões são aplicadas em 3 níveis:</p>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 CATEGORIAS (U G O)</h3>
+<p>Essas permissões são aplicadas na seguinte ordem:</p>
 <ol>
-<li><strong>Dono (User/Owner):</strong> Quem criou.</li>
-<li><strong>Grupo (Group):</strong> Grupo associado.</li>
-<li><strong>Outros (Others):</strong> O resto do mundo.</li>
+  <li><strong>Dono (User):</strong> Quem criou o arquivo.</li>
+  <li><strong>Grupo (Group):</strong> O grupo de usuários associado.</li>
+  <li><strong>Outros (Others):</strong> O "resto do mundo" (qualquer outra pessoa).</li>
 </ol>
 
-<div class="conceito-box">
-<span class="seta">➔</span> <strong>Exemplo de Prova: <code>chmod 755 arquivo.txt</code></strong><br>
-O que significa o 755?<br>
-- <strong>7</strong> para o Dono (4+2+1) = rwx (Pode tudo)<br>
-- <strong>5</strong> para o Grupo (4+0+1) = r-x (Lê e Executa, mas não escreve)<br>
-- <strong>5</strong> para Outros (4+0+1) = r-x (Lê e Executa, mas não escreve)
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE: O COMANDO CHMOD 755</h4>
+  <p>O que significa <code>chmod 755 arquivo.txt</code>?<br>
+  - <strong>7</strong> para o Dono (4+2+1 = rwx): Lê, escreve e executa.<br>
+  - <strong>5</strong> para o Grupo (4+0+1 = r-x): Lê e executa (mas não edita/escreve).<br>
+  - <strong>5</strong> para os Outros (4+0+1 = r-x): Lê e executa (mas não edita/escreve).</p>
 </div>
 
-<h3>Comandos de Propriedade</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 COMANDOS DE PROPRIEDADE</h3>
 <ul>
-<li><code>chmod</code> = Muda a permissão (Change Mode).</li>
-<li><code>chown</code> = Muda o dono do arquivo (Change Owner).</li>
-<li><code>ls -l</code> = Comando para visualizar a lista de permissões da pasta.</li>
+  <li><code>chmod</code> = Muda a permissão de acesso (Change Mode).</li>
+  <li><code>chown</code> = Muda o dono/proprietário do arquivo (Change Owner).</li>
+  <li><code>ls -l</code> = Visualiza a lista longa, revelando as permissões das pastas.</li>
 </ul>
-</div>
 `
 },
 {
 titulo: "8. Terminal Linux e Conceitos de Shell",
 conteudo: `
-<div class="conteudo-teoria">
-<p>
-A "tela preta" onde digitamos comandos é a interface mais poderosa do Linux. Entender suas camadas é vital.
-</p>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>A "tela preta" onde digitamos comandos é a interface mais poderosa e ágil do Linux. Entender as camadas por trás dessa tela é vital para concursos.</p>
 
-<div class="alerta-box">
-<span class="seta">➔</span> <strong>Shell vs Kernel:</strong><br>
-- <strong>Kernel:</strong> É o núcleo do sistema operacional. Ele fala diretamente com o hardware físico (processador, memória).<br>
-- <strong>Shell:</strong> É o "tradutor" (interpretador de comandos). Ele lê o texto que você digita e envia a ordem para o Kernel. O Shell mais famoso e padrão é o <strong>Bash</strong>.
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ IMPORTANTE: SHELL vs KERNEL</h4>
+  <p><strong>Kernel:</strong> É o núcleo do sistema operacional. Ele fala diretamente com as peças de hardware (processador, memória).<br>
+  <strong>Shell:</strong> É o "tradutor" (interpretador de comandos). Ele recebe o texto humano que você digita na tela, interpreta, e envia a ordem para o Kernel. O Shell mais famoso é o <strong>Bash</strong>.</p>
 </div>
 
-<h3>O Prompt de Comando</h3>
-<p>O símbolo final da linha de comando indica o seu nível de poder no sistema:</p>
-<div class="terminal">
-joao@linux:~$ <span style="color:#888;"># O cifrão ($) indica Usuário Comum</span><br>
-root@linux:~# <span style="color:#888;"># A cerquilha (#) indica Superusuário (Root / Administrador)</span>
-</div>
-
-<h3>Por que usar o Terminal?</h3>
-<p>Apesar da interface gráfica ser amigável, o terminal é superior para automação de tarefas, consumo mínimo de memória RAM, e administração remota de servidores web.</p>
-</div>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 O PROMPT DE COMANDO ($ vs #)</h3>
+<p>O símbolo final da linha de comando indica o seu nível de poder na máquina:</p>
+<ul>
+  <li><code>joao@linux:~$</code> O cifrão (<strong>$</strong>) indica que você é um <strong>Usuário Comum</strong> (limitado).</li>
+  <li><code>root@linux:~#</code> A cerquilha (<strong>#</strong>) indica que você é o <strong>Root / Superusuário</strong> (administrador com poder total).</li>
+</ul>
 `
 },
 {
 titulo: "9. Comandos Básicos do Terminal Linux",
 conteudo: `
-<div class="conteudo-teoria">
-<p>
-Memorize os comandos essenciais abaixo, pois são presença garantida em provas que abordam Linux básico.
-</p>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Memorize os comandos essenciais abaixo. Eles são a "tabuada" do Linux e presença garantida nas questões operacionais.</p>
 
-<div class="grafico-container">
-  <table style="width:100%; border-collapse: collapse; text-align: left;">
-    <tr style="border-bottom: 2px solid #cbd5e1;">
-      <th style="padding: 8px;">Comando</th>
-      <th style="padding: 8px;">Função Traduzida</th>
-      <th style="padding: 8px;">Ação Prática</th>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="padding: 8px;"><strong>pwd</strong></td>
-      <td style="padding: 8px;">Print Working Directory</td>
-      <td style="padding: 8px;">Mostra o caminho exato da pasta atual.</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="padding: 8px;"><strong>ls</strong></td>
-      <td style="padding: 8px;">List</td>
-      <td style="padding: 8px;">Lista os arquivos e pastas visíveis. (<code>ls -a</code> mostra os ocultos).</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="padding: 8px;"><strong>cd</strong></td>
-      <td style="padding: 8px;">Change Directory</td>
-      <td style="padding: 8px;">Entra ou sai de pastas. (<code>cd ..</code> volta um nível).</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="padding: 8px;"><strong>mkdir</strong></td>
-      <td style="padding: 8px;">Make Directory</td>
-      <td style="padding: 8px;">Cria uma nova pasta.</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="padding: 8px;"><strong>cp</strong></td>
-      <td style="padding: 8px;">Copy</td>
-      <td style="padding: 8px;">Copia arquivos.</td>
-    </tr>
-    <tr style="border-bottom: 1px solid #e2e8f0;">
-      <td style="padding: 8px;"><strong>mv</strong></td>
-      <td style="padding: 8px;">Move</td>
-      <td style="padding: 8px;">Move arquivos OU serve para Renomeá-los.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;"><strong>rm</strong></td>
-      <td style="padding: 8px;">Remove</td>
-      <td style="padding: 8px;">Exclui o arquivo definitivamente (sem lixeira).</td>
-    </tr>
-  </table>
-</div>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 PRINCIPAIS COMANDOS</h3>
+<ul>
+  <li><strong>pwd (Print Working Directory):</strong> Mostra o caminho exato do diretório onde você está no momento.</li>
+  <li><strong>ls (List):</strong> Lista os arquivos e pastas visíveis. (Dica: <code>ls -a</code> mostra os ocultos).</li>
+  <li><strong>cd (Change Directory):</strong> Entra ou sai de pastas. (Dica: <code>cd ..</code> volta um nível).</li>
+  <li><strong>mkdir (Make Directory):</strong> Cria um novo diretório (pasta).</li>
+  <li><strong>cp (Copy):</strong> Copia arquivos para outro destino.</li>
+  <li><strong>mv (Move):</strong> Move arquivos para outro destino OU serve para renomeá-los.</li>
+  <li><strong>rm (Remove):</strong> Exclui o arquivo definitivamente (não vai para a lixeira!).</li>
+  <li><strong>clear:</strong> Limpa o texto da tela do terminal.</li>
+  <li><strong>touch:</strong> Cria um arquivo de texto vazio rapidamente.</li>
+</ul>
 
-<div class="terminal">
-<span style="color:#888;">Exemplo prático de uso no terminal:</span><br>
-$ mkdir provas_2026<br>
-$ touch gabarito.txt <span style="color:#888;"># Cria um arquivo vazio</span><br>
-$ mv gabarito.txt provas_2026/ <span style="color:#888;"># Move o arquivo para dentro da pasta</span>
-</div>
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE (USO PRÁTICO)</h4>
+  <p><code>$ mkdir provas</code> -> Cria a pasta "provas".<br>
+  <code>$ touch gabarito.txt</code> -> Cria o arquivo vazio.<br>
+  <code>$ mv gabarito.txt provas/</code> -> Move o arquivo recém-criado para dentro da pasta.</p>
 </div>
 `
 },
 {
 titulo: "10. Comandos Linux Intermediários",
 conteudo: `
-<div class="conteudo-teoria">
-<p>Estes comandos realizam buscas e fornecem diagnósticos do sistema.</p>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Além da navegação básica, administradores usam comandos intermediários para realizar buscas em lote e obter diagnósticos da máquina.</p>
 
-<div class="conceito-box">
-<span class="seta">➔</span> <strong>Buscadores: grep vs find</strong><br>
-- <code>grep</code> procura <strong>textos/palavras</strong> DENTRO do arquivo. (Ex: <code>grep "senha" arquivo.txt</code>).<br>
-- <code>find</code> procura o <strong>nome do arquivo</strong> na estrutura de pastas do PC. (Ex: <code>find / -name "arquivo.txt"</code>).
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE: BUSCADORES (GREP vs FIND)</h4>
+  <p><strong>grep:</strong> Procura textos/palavras <strong>DENTRO</strong> do conteúdo do arquivo. (Ex: <code>grep "senha" arquivo.txt</code> achará a palavra lá dentro).<br>
+  <strong>find:</strong> Procura pelo <strong>NOME DO ARQUIVO</strong> na estrutura de pastas. (Ex: <code>find / -name "arquivo.txt"</code> vai buscar o arquivo no HD).</p>
 </div>
 
-<h3>Espaço em Disco: df vs du</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 ESPAÇO EM DISCO (df vs du)</h3>
 <ul>
-<li><strong>df (Disk Free):</strong> Mostra a quantidade de espaço LIVRE e total nas partições do HD.</li>
-<li><strong>du (Disk Usage):</strong> Mostra o espaço OCUPADO/UTILIZADO por diretórios específicos.</li>
+  <li><strong>df (Disk Free):</strong> Mostra o espaço LIVRE e o total das partições do HD.</li>
+  <li><strong>du (Disk Usage):</strong> Mostra o espaço OCUPADO/UTILIZADO por uma pasta específica.</li>
+  <li><em>Nota: O sufixo <code>-h</code> (human readable) converte os blocos difíceis de ler para MB e GB.</em></li>
 </ul>
-<p><em>Dica: Use <code>-h</code> (human readable) com ambos para exibir em MB e GB, facilitando a leitura.</em></p>
 
-<h3>Outros Utilitários Cobrados</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 OUTROS UTILITÁRIOS IMPORTANTES</h3>
 <ul>
-<li><code>sudo</code>: Executa UM comando como superusuário root (SuperUser DO).</li>
-<li><code>whoami</code>: Exibe o nome do usuário logado naquele terminal.</li>
-<li><code>history</code>: Lista o histórico numerado de todos os comandos que você já digitou.</li>
-<li><code>uname -a</code>: Exibe dados completos do sistema operacional e Kernel.</li>
+  <li><strong>sudo:</strong> Permite que um usuário comum execute um único comando com poderes administrativos (SuperUser DO).</li>
+  <li><strong>whoami:</strong> Exibe na tela qual é o nome do usuário que está logado no terminal.</li>
+  <li><strong>history:</strong> Lista de forma numerada todo o histórico dos últimos comandos digitados.</li>
 </ul>
-</div>
 `
 },
 {
 titulo: "11. Conceitos Fundamentais de Backup",
 conteudo: `
-<div class="conteudo-teoria">
-<p>
-Backup é a criação de <strong>cópias de segurança</strong>. Ele tem apenas um grande objetivo: garantir a RESTAURAÇÃO dos dados caso ocorra um desastre (hardware queimado, ransomware, exclusão acidental, enchente).
-</p>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Backup é a criação de cópias de segurança de dados em uso. O objetivo supremo do backup não é evitar o desastre, mas sim garantir a RESTAURAÇÃO rápida da informação caso um hardware queime ou um ransomware ataque.</p>
 
-<div class="alerta-box">
-<span class="seta">➔</span> <strong>Pegadinha Clássica: Backup vs Arquivamento</strong><br>
-<strong>Backup:</strong> Cópia de dados que estão em <em>uso ativo</em>, feita de forma rotineira, visando rápida recuperação se der problema.<br>
-<strong>Arquivamento:</strong> Retirada de dados que <em>não são mais usados</em> no dia a dia, guardando-os para consulta futura ou fins legais, liberando espaço na máquina principal.
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO: BACKUP VS ARQUIVAMENTO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> O backup serve para guardar arquivos antigos que não são mais usados e liberar espaço no PC. / <span style="color: #28A745; font-weight: bold;">✔</span> Falso. Isso é <strong>Arquivamento</strong>. O Backup é uma cópia-espelho de arquivos ATIVOS da empresa, para socorro imediato.</p>
 </div>
 
-<h3>Localização Estratégica</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 LOCALIZAÇÃO ESTRATÉGICA</h3>
 <ul>
-<li><strong>Local:</strong> Feito em pendrives ou HDs externos ao lado do computador. Recuperação rápida, mas vulnerável a assaltos e incêndios locais.</li>
-<li><strong>Remoto/Offsite:</strong> Mídia guardada em outro prédio ou em um cofre distante.</li>
-<li><strong>Nuvem (Cloud Backup):</strong> Envia a cópia via internet para datacenters globais. Proteção física máxima, mas dependente da conexão de internet para restaurar rápido.</li>
+  <li><strong>Local:</strong> Feito em HDs externos ao lado da máquina. Rápido para restaurar, mas vulnerável a incêndios ou roubos locais.</li>
+  <li><strong>Remoto/Offsite:</strong> Feito em mídias transportadas para outro prédio.</li>
+  <li><strong>Nuvem (Cloud):</strong> Envia a cópia via internet para servidores mundiais. Proteção física máxima, porém demanda boa internet para restaurar rápido.</li>
 </ul>
-
-<p>
-A segurança da informação baseia-se na disponibilidade. Seus dados só são úteis se estiverem disponíveis. O backup garante essa disponibilidade!
-</p>
-</div>
 `
 },
 {
 titulo: "12. Tipos de Backup",
 conteudo: `
-<div class="conteudo-teoria">
-<p>
-Este é, de longe, o tópico de backup mais explorado em provas. Entenda a matemática do armazenamento!
-</p>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Existem diferentes métodos (estratégias de cópia) que equilibram a velocidade de armazenamento contra a velocidade de restauração. Esse é o tópico de Backup mais cobrado!</p>
 
-<div class="grafico-container">
-  <strong>1. Backup COMPLETO (Full)</strong>
-  <p style="margin:5px 0;">Copia 100% dos dados, tenham sido alterados ou não. Consome muito espaço e tempo. Restauração facilíssima (basta o próprio arquivo).</p>
-  <div class="barra-wrap">
-    <div class="barra-label">Volume:</div>
-    <div class="barra" style="width: 100%; background: #ef4444;">Máximo Espaço Consumido</div>
-  </div>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 1. BACKUP COMPLETO (FULL)</h3>
+<p>Copia absoluta e integralmente TODOS os arquivos selecionados, alterados ou não. <br>
+<strong>Ponto forte:</strong> Restauração facilíssima (basta pegar o próprio backup).<br>
+<strong>Ponto fraco:</strong> Demora muito e consome armazenamento máximo.</p>
 
-  <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 15px 0;">
+<h3 style="color: #E67E22; margin-top: 20px;">📌 2. BACKUP DIFERENCIAL</h3>
+<p>Copia <em>apenas</em> os dados que sofreram modificação ou criação <strong>desde o último backup COMPLETO</strong>. Ele vai "inchando" dia após dia até o próximo completo.<br>
+<strong>Restauração:</strong> Precisa da junção do Completo + o último Diferencial correspondente.</p>
 
-  <strong>2. Backup DIFERENCIAL</strong>
-  <p style="margin:5px 0;">Copia APENAS o que foi alterado desde o último backup <strong>COMPLETO</strong>. Ele vai acumulando tamanho com o passar dos dias. Restauração: Precisa do último Completo + do último Diferencial.</p>
-  <div class="barra-wrap">
-    <div class="barra-label">Volume:</div>
-    <div class="barra" style="width: 60%; background: #f59e0b;">Crescimento Médio Diário</div>
-  </div>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 3. BACKUP INCREMENTAL</h3>
+<p>Copia <em>apenas</em> os dados modificados <strong>desde o último backup DE QUALQUER TIPO</strong> (completo ou do dia anterior). É extremamente rápido de fazer e economiza muito espaço de disco.<br>
+<strong>Restauração:</strong> Dolorosa. Precisa da fita do Completo + TODOS os incrementais em sequência cronológica ininterrupta até a data do desastre.</p>
 
-  <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 15px 0;">
-
-  <strong>3. Backup INCREMENTAL</strong>
-  <p style="margin:5px 0;">Copia APENAS o que foi alterado desde o <strong>ÚLTIMO BACKUP DE QUALQUER TIPO</strong> (completo ou do dia anterior). Muito rápido e econômico. Restauração dolorosa: Precisa do Completo + TODOS os incrementais em sequência até o dia fatal.</p>
-  <div class="barra-wrap">
-    <div class="barra-label">Volume:</div>
-    <div class="barra" style="width: 25%; background: #10b981;">Mínimo Espaço (Rápido)</div>
-  </div>
-</div>
-
-<div class="dica-box">
-<span class="seta">➔</span> <strong>Macete Matador:</strong><br>
-<strong>I</strong>ncremental = Alterações desde o <strong>I</strong>mediatamente anterior.<br>
-Diferencial = Alterações desde o Full (Completo).
-</div>
-
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE DA PROVA</h4>
+  <p><strong>I</strong>ncremental = Copia as alterações desde o <strong>I</strong>mediatamente anterior.<br>
+  <strong>Diferencial</strong> = Ignora os dias anteriores e copia tudo alterado desde o Full.</p>
 </div>
 `
 },
 {
 titulo: "13. Mídias e Armazenamento para Backup",
 conteudo: `
-<div class="conteudo-teoria">
-<p>Onde guardaremos essas cópias? A escolha da mídia dita a velocidade e o custo.</p>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>A escolha da mídia onde a cópia será guardada afeta diretamente a durabilidade e o custo do plano de contingência corporativo.</p>
 
-<h3>Mídias Físicas Principais</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 MÍDIAS FÍSICAS PRINCIPAIS</h3>
 <ul>
-<li><strong>HD Externo (Disco Rígido):</strong> Partes mecânicas, magnético, altíssima capacidade e bom preço, mas frágil a quedas.</li>
-<li><strong>SSD Externo:</strong> Memória flash, sem peças móveis, ultra rápido e resistente a impactos, porém o custo por Terabyte é alto.</li>
-<li><strong>Fita Magnética (LTO):</strong> Você achou que tinha morrido? Em bancos e grandes empresas ela VIVE! Oferece custo baixíssimo para petabytes de dados e dura décadas.</li>
-<li><strong>NAS (Network Attached Storage):</strong> Uma "caixa de HDs" conectada diretamente à rede Wi-Fi/Cabo da empresa. É como ter sua própria nuvem privada corporativa.</li>
+  <li><strong>HD Externo:</strong> Magnético, barato e gigante. Frágil contra impactos.</li>
+  <li><strong>SSD Externo:</strong> Baseado em memória Flash. Velocidade altíssima, blindado contra choques, porém de custo alto por TB.</li>
+  <li><strong>Fita Magnética (LTO):</strong> Embora pareça velha, é <strong>excelente para grandes data centers</strong>. Custa frações de centavos por GB e dura décadas armazenada no cofre.</li>
+  <li><strong>NAS (Network Attached Storage):</strong> Uma central de HDs ligada direto na rede local (cabo Ethernet) para backups automatizados da empresa toda.</li>
 </ul>
 
-<div class="conceito-box">
-<span class="seta">➔</span> <strong>A Regra de Ouro: 3-2-1 do Backup</strong><br>
-Para garantir que dados nunca sejam perdidos, especialistas recomendam:<br>
-<strong>3</strong> cópias no total dos seus dados.<br>
-<strong>2</strong> mídias de tecnologias diferentes (Ex: um SSD e um NAS).<br>
-<strong>1</strong> cópia fisicamente externa (Nuvem ou cofre em outra cidade).
-</div>
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ IMPORTANTE: A REGRA 3-2-1</h4>
+  <p>Padrão ouro de segurança. Para os dados estarem salvos de verdade, você deve ter: <strong>3</strong> cópias totais da informação, alocadas em <strong>2</strong> tecnologias de mídias físicas diferentes, mantendo no mínimo <strong>1</strong> cópia externa/offsite (na Nuvem).</p>
 </div>
 `
 },
 {
-titulo: "14. Revisão Geral e Mapa Mental Integrado",
+titulo: "14. Revisão Geral",
 conteudo: `
-<div class="conteudo-teoria">
-<p>Chegamos à consolidação. Use a lista abaixo como check-up horas antes da prova!</p>
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 O QUE VOCÊ NÃO PODE ESQUECER</h2>
 
-<div class="grafico-container" style="background:#f8fafc; border: 2px solid #3b82f6;">
-  <h3 style="color:#1e3a8a; margin-top:0; text-align:center;">✓ CHECKLIST DE APROVAÇÃO ✓</h3>
-  
-  <strong>Sistemas & Arquivos:</strong><br>
-  [ ] Pasta e Diretório são a mesma coisa para concursos.<br>
-  [ ] Atalho <code>Win + E</code> abre o coração do Windows (Explorador).<br>
-  [ ] Extensões: <code>.xlsx</code> (Planilha), <code>.docx</code> (Texto), <code>.zip</code> (Compactado).<br>
-  [ ] <code>Ctrl+X</code> não clona, ele move (apaga do original). <code>Shift+Del</code> diz adeus para sempre, sem lixeira.<br><br>
-
-  <strong>Linux:</strong><br>
-  [ ] Case Sensitive: <code>Prova.txt</code> é diferente de <code>prova.txt</code>.<br>
-  [ ] Raiz é <code>/</code>. Administrador mora em <code>/root</code>. O usuário comum em <code>/home</code>.<br>
-  [ ] <code>ls</code> lista, <code>pwd</code> mostra o local, <code>mkdir</code> cria pasta, <code>rm</code> detona o arquivo.<br>
-  [ ] Permissões: Ler (4) + Escrever (2) + Executar (1) = Total máximo 7. Comando: <code>chmod</code>.<br><br>
-
-  <strong>Backup:</strong><br>
-  [ ] Não é arquivo morto! É segurança ativa para disponibilidade.<br>
-  [ ] Diferencial usa mais espaço que Incremental.<br>
-  [ ] Incremental é chato de restaurar (precisa da corrente inteira).<br>
-  [ ] Fita magnética ainda cai em prova e é excelente para alto volume de dados em corporações.
-</div>
-
-<p style="text-align:center; font-weight:bold; color:#10b981;">
-Você dominou a teoria! A partir da página 15, teste sua proficiência com exercícios aplicados.
-</p>
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL: CHECKLIST</h4>
+  <ul>
+    <li>📂 <strong>Windows:</strong> <code>Win+E</code> abre o Explorer. <code>Shift+Del</code> exclui sem lixeira.</li>
+    <li>🐧 <strong>Linux:</strong> A raiz é a barra ( <code>/</code> ). O terminal diferencia maiúsculas de minúsculas (Case Sensitive).</li>
+    <li>🔑 <strong>Permissões:</strong> Leitura (4), Escrita (2), Execução (1). Usamos <code>chmod</code> para mudar.</li>
+    <li>🕹️ <strong>Comandos Básicos:</strong> <code>mkdir</code> (cria pasta), <code>rm</code> (apaga), <code>mv</code> (move ou renomeia).</li>
+    <li>💾 <strong>Backup Diferencial:</strong> Copia acumulando desde o último Full.</li>
+    <li>💾 <strong>Backup Incremental:</strong> Copia apenas os arquivos do dia. Usa menos espaço.</li>
+  </ul>
 </div>
 `
 },
 {
-titulo: "15. Questões Comentadas - Parte 1 (Arquivos, Pastas e Windows)",
+titulo: "15. Questões Comentadas - Parte 1",
 conteudo: `
-<div class="conteudo-teoria">
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 HORA DE PRATICAR: QUESTÕES DE CONCURSOS</h2>
+<p>Teste seus conhecimentos com essas questões sobre Arquivos, Windows e Linha de Comando Linux.</p>
 
-<div class="conceito-box" style="background: #ffffff; border-color: #94a3b8;">
-<strong>Questão 1 (Fundação Carlos Chagas - Assistente Administrativo)</strong><br>
-Um funcionário selecionou um arquivo de nome <code>Relatorio.pdf</code> na Área de Trabalho do Windows e pressionou o conjunto de teclas <strong>Ctrl + X</strong>. Em seguida, ele abriu a pasta Documentos e pressionou <strong>Ctrl + V</strong>. O que aconteceu com o arquivo?<br>
-a) Foi criada uma cópia em Documentos e o original permaneceu na Área de Trabalho.<br>
-b) O arquivo foi renomeado.<br>
-c) O arquivo foi transferido (movido) para Documentos, desaparecendo da Área de Trabalho.<br>
-d) O arquivo foi enviado para a Lixeira.
-</div>
-<div class="dica-box" style="margin-top: 0; background: #f8fafc; border-left-color: #3b82f6;">
-<strong>Gabarito: C</strong><br>
-<span class="seta">➔</span> <em>Comentário:</em> O atalho Ctrl + X corresponde à função "Recortar". Ao colar (Ctrl + V) em outro local, o arquivo é MOVIDO. Diferente do Ctrl + C (Copiar), que geraria duas versões do arquivo.
-</div>
+<hr style="margin: 30px 0;">
 
-<div class="conceito-box" style="background: #ffffff; border-color: #94a3b8;">
-<strong>Questão 2 (CEBRASPE/CESPE - Polícia Federal)</strong><br>
-No Windows 10, caso um usuário selecione um arquivo em um pendrive (unidade removível) e pressione a tecla DELETE, esse arquivo será movido para a Lixeira do sistema, podendo ser restaurado posteriormente. (Certo / Errado)
-</div>
-<div class="dica-box" style="margin-top: 0; background: #f8fafc; border-left-color: #3b82f6;">
-<strong>Gabarito: ERRADO</strong><br>
-<span class="seta">➔</span> <em>Comentário:</em> Pegadinha clássica do Cespe! Arquivos apagados de unidades removíveis (como pendrives USB) ou redes mapeadas NÃO VÃO para a Lixeira. Eles são excluídos permanentemente de forma imediata (comportamento similar ao <code>Shift + Delete</code> no disco rígido).
+<h3 style="color: #8E44AD;">📌 Questão 1 (Fundação Carlos Chagas)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Um funcionário selecionou um arquivo de nome <code>Relatorio.pdf</code> na Área de Trabalho do Windows e pressionou o conjunto de teclas <strong>Ctrl + X</strong>. Em seguida, ele abriu a pasta Documentos e pressionou <strong>Ctrl + V</strong>. O que aconteceu com o arquivo?</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) Foi criada uma cópia em Documentos e o original permaneceu na Área de Trabalho.</li>
+  <li>B) O arquivo foi renomeado.</li>
+  <li><strong>C) O arquivo foi transferido (movido) para Documentos, desaparecendo da Área de Trabalho.</strong></li>
+  <li>D) O arquivo foi enviado para a Lixeira.</li>
+  <li>E) O arquivo foi duplicado como atalho.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> O atalho <code>Ctrl + X</code> corresponde à função "Recortar". Ao colar (<code>Ctrl + V</code>) em outro local, o arquivo é fisicamente <strong>MOVIDO</strong>, sumindo do local anterior. Diferente do <code>Ctrl + C</code> (Copiar), que geraria duas versões idênticas do arquivo.
 </div>
 
-<div class="conceito-box" style="background: #ffffff; border-color: #94a3b8;">
-<strong>Questão 3 (VUNESP - Auxiliar de TI)</strong><br>
-Observe as extensões de arquivos listadas a seguir:<br>
-I. .xlsx<br>
-II. .pdf<br>
-III. .zip<br>
-Elas representam, correta e respectivamente, formatos de arquivos de:<br>
-a) Planilha eletrônica, Arquivo compactado e Texto editável.<br>
-b) Planilha eletrônica, Documento de formato portátil e Arquivo compactado.<br>
-c) Texto editável, Imagem e Áudio.<br>
-d) Vídeo, Documento de formato portátil e Arquivo executável.
-</div>
-<div class="dica-box" style="margin-top: 0; background: #f8fafc; border-left-color: #3b82f6;">
-<strong>Gabarito: B</strong><br>
-<span class="seta">➔</span> <em>Comentário:</em> <code>.xlsx</code> é a extensão padrão do Microsoft Excel (planilha). <code>.pdf</code> é a extensão universal para leitura de documentos (Portable Document Format). <code>.zip</code> é o formato padrão nativo de compressão/compactação de arquivos e pastas.
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 2 (CEBRASPE)</h3>
+<p><strong>Julgue o item a seguir:</strong><br>
+No ambiente de gerenciamento de arquivos do Windows 10, caso um usuário selecione um arquivo em um pendrive (unidade removível tipo Flash) e pressione a tecla DELETE, esse arquivo será movido para a Lixeira do sistema local, podendo ser restaurado posteriormente.</p>
+<p><strong>Gabarito:</strong> <span style="color: #DC3545; font-weight: bold; background-color: #F8D7DA; padding: 3px 8px; border-radius: 4px;">❌ ERRADO</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Pegadinha clássica do Cespe! Arquivos apagados de unidades removíveis externas (como pendrives USB) ou unidades mapeadas de rede <strong>NÃO VÃO para a Lixeira</strong>. Eles são excluídos permanentemente de forma imediata (apresentando comportamento similar ao de pressionar <code>Shift + Delete</code> no disco rígido).
 </div>
 
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 3 (VUNESP)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Observe as extensões de arquivos listadas a seguir: I. <code>.xlsx</code> | II. <code>.pdf</code> | III. <code>.zip</code>. Elas representam, correta e respectivamente, formatos de arquivos de:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) Planilha eletrônica, Arquivo compactado e Texto editável.</li>
+  <li><strong>B) Planilha eletrônica, Documento de formato portátil e Arquivo compactado.</strong></li>
+  <li>C) Texto editável, Imagem e Áudio.</li>
+  <li>D) Vídeo, Documento de formato portátil e Arquivo executável.</li>
+  <li>E) Banco de dados, Planilha eletrônica e Imagem.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra B</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> <code>.xlsx</code> é a extensão padrão de planilhas eletrônicas modernas (Excel). <code>.pdf</code> é a extensão universal da Adobe para leitura de Documentos em Formato Portátil. <code>.zip</code> é o formato padrão nativo consolidado de compressão/compactação de pastas.
+</div>
+
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 4 (FGV)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+No terminal (linha de comando) do sistema operacional Linux, o comando utilizado para criar um novo diretório vazio e o comando utilizado para listar os arquivos presentes dentro do diretório atual são, respectivamente:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li><strong>A) mkdir e ls</strong></li>
+  <li>B) rmdir e cat</li>
+  <li>C) touch e pwd</li>
+  <li>D) make e grep</li>
+  <li>E) new e list</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra A</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> <code>mkdir</code> (Make Directory) é o comando mundialmente usado para criar pastas no Unix/Linux. O comando <code>ls</code> (List) faz a listagem gráfica dos itens da pasta. Revendo os outros: <code>touch</code> criaria um arquivo (não pasta), <code>pwd</code> mostra o local atual (sem listar), e <code>grep</code> procura texto dentro de arquivos.
 </div>
 `
 },
 {
-titulo: "16. Questões Comentadas - Parte 2 (Linux e Backups)",
+titulo: "16. Questões Comentadas - Parte 2",
 conteudo: `
-<div class="conteudo-teoria">
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 MAIS QUESTÕES DE CONCURSOS PARA FIXAÇÃO</h2>
+<p>Finalizando nossa bateria com questões avançadas de Permissões de Usuário e Políticas de Backup.</p>
 
-<div class="conceito-box" style="background: #ffffff; border-color: #94a3b8;">
-<strong>Questão 4 (FGV - Analista de Sistemas)</strong><br>
-No terminal do sistema operacional Linux, o comando utilizado para criar um novo diretório vazio e o comando utilizado para listar os arquivos presentes dentro de um diretório são, respectivamente:<br>
-a) mkdir e ls<br>
-b) rmdir e cat<br>
-c) touch e pwd<br>
-d) make e grep
-</div>
-<div class="dica-box" style="margin-top: 0; background: #f8fafc; border-left-color: #3b82f6;">
-<strong>Gabarito: A</strong><br>
-<span class="seta">➔</span> <em>Comentário:</em> <code>mkdir</code> (Make Directory) cria pastas. O comando <code>ls</code> (List) faz a listagem gráfica dos itens de uma pasta. <code>rmdir</code> apagaria pasta vazia, <code>cat</code> mostra o texto de um arquivo, <code>touch</code> cria arquivo vazio e <code>pwd</code> mostra onde você está no momento.
-</div>
+<hr style="margin: 30px 0;">
 
-<div class="conceito-box" style="background: #ffffff; border-color: #94a3b8;">
-<strong>Questão 5 (VUNESP - Tribunal de Justiça)</strong><br>
-No Linux, as permissões de um arquivo foram configuradas utilizando o comando numérico <strong>chmod 777 projeto.sh</strong>. Isso significa que:<br>
-a) Apenas o usuário root tem permissão de ler o arquivo.<br>
-b) O proprietário tem leitura, mas o grupo está bloqueado.<br>
-c) O arquivo concede permissão de Leitura, Escrita e Execução para todas as três classes: Proprietário, Grupo e Outros usuários.<br>
-d) O arquivo sofreu uma exclusão criptografada de nível 7.
-</div>
-<div class="dica-box" style="margin-top: 0; background: #f8fafc; border-left-color: #3b82f6;">
-<strong>Gabarito: C</strong><br>
-<span class="seta">➔</span> <em>Comentário:</em> Lembre-se da soma matemática: R(4) + W(2) + X(1) = 7. Quando configuramos 7-7-7, estamos dizendo que o Dono pode tudo (7), o Grupo associado pode tudo (7) e Qualquer Pessoa (Outros) também pode fazer tudo (7). É a permissão máxima e a mais perigosa de se aplicar num servidor real!
+<h3 style="color: #8E44AD;">📌 Questão 5 (VUNESP)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Em um servidor baseado em Linux, o administrador configurou as permissões de um script essencial através da linha de comando numérica <code>chmod 755 script.sh</code>. Ao analisar tal configuração, conclui-se corretamente que:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) Apenas o usuário root obteve permissão de executar o arquivo, enquanto os demais não conseguem ler.</li>
+  <li>B) O arquivo sofreu uma criptografia de nível 7 e agora está protegido com senha.</li>
+  <li><strong>C) O proprietário do arquivo tem permissão total (leitura, gravação e execução), enquanto o grupo e os demais usuários podem apenas ler e executar.</strong></li>
+  <li>D) Todos os membros do grupo ganharam acesso total ao arquivo, perdendo as restrições normais.</li>
+  <li>E) O comando transferiu a propriedade da pasta para o usuário "755".</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Lembre-se da matemática do chmod: <code>R(4) + W(2) + X(1)</code>. No comando <code>755</code>:<br>
+  - O primeiro dígito (<strong>7</strong>) é para o Dono: 4+2+1 = Acesso Total.<br>
+  - O segundo dígito (<strong>5</strong>) é para o Grupo: 4+0+1 = Ler e Executar (mas é proibido de editar/escrever).<br>
+  - O terceiro dígito (<strong>5</strong>) é para Outros: Igual ao grupo, apenas Lê e Executa.
 </div>
 
-<div class="conceito-box" style="background: #ffffff; border-color: #94a3b8;">
-<strong>Questão 6 (IADES - Área Administrativa)</strong><br>
-Considere uma política de backup em que, no domingo, realiza-se um backup completo dos servidores de uma empresa. Na segunda, na terça e na quarta-feira são copiados apenas os arquivos que sofreram modificação ou criação exclusivamente desde o backup completo realizado no domingo. Esse método diário de terça e quarta-feira, em relação ao modelo executado, é o backup:<br>
-a) Incremental.<br>
-b) Espelhado.<br>
-c) Diferencial.<br>
-d) Nuvem Pública.
-</div>
-<div class="dica-box" style="margin-top: 0; background: #f8fafc; border-left-color: #3b82f6;">
-<strong>Gabarito: C</strong><br>
-<span class="seta">➔</span> <em>Comentário:</em> O texto diz: "copiados os arquivos que sofreram modificação [...] DESDE O BACKUP COMPLETO realizado no domingo". O backup que usa como âncora/referência sempre o último FULL/COMPLETO, ignorando os backups parciais dos dias anteriores, é o <strong>Diferencial</strong>. Se ele copiasse alterações "desde o dia anterior", seria o Incremental.
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 6 (IADES)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Considere uma política de backup em que, no domingo à noite, realiza-se um backup completo (full) dos servidores de uma corporação. Na segunda, na terça e na quarta-feira são copiados para a fita apenas os arquivos que sofreram modificação ou criação exclusivamente <em>desde o backup completo realizado no domingo</em>. Esse método diário de terça e quarta-feira, em relação ao modelo executado no servidor, é classificado como backup:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) Incremental.</li>
+  <li>B) Espelhado.</li>
+  <li><strong>C) Diferencial.</strong></li>
+  <li>D) Nuvem Pública.</li>
+  <li>E) Snapshot Diário.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> O texto sublinhou: "copiados os arquivos modificados DESDE O BACKUP COMPLETO realizado no domingo". O backup que usa como âncora/referência sempre o último FULL/COMPLETO, acumulando volume e ignorando as cópias parciais dos dias anteriores, é o <strong>Diferencial</strong>. (Se ele copiasse mirando apenas o dia anterior, seria o Incremental).
 </div>
 
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 7 (CEBRASPE)</h3>
+<p><strong>Julgue o item a seguir:</strong><br>
+O processo de backup incremental caracteriza-se por copiar somente os arquivos que foram modificados desde o último backup efetuado (seja ele um backup completo ou um outro incremental anterior), apresentando como grande vantagem um menor consumo de espaço e um menor tempo gasto na operação de cópia diária em comparação ao método diferencial.</p>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ CERTO</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Definição perfeita da banca. O backup <strong>Incremental</strong> só carrega "a mochila daquele dia". Ele olha para trás, checa a fita de ontem (não importando o tipo que ela era) e grava apenas a diferença mínima ocorrida nas últimas 24 horas. É de longe o que consome menos tempo e espaço, porém é o mais doloroso no dia de restaurar.
+</div>
+
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 8 (FCC)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Ao trabalhar no ambiente de linha de comando do Linux e precisar consultar a exata utilização de espaço em disco (volume total disponível, em uso e livre) de todas as partições do sistema montadas, o analista deve recorrer diretamente ao utilitário de texto:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) du</li>
+  <li>B) ls</li>
+  <li><strong>C) df</strong></li>
+  <li>D) fdisk</li>
+  <li>E) top</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> A diferença matadora para concursos: <code>df</code> (Disk Free) lista o uso e a disponibilidade bruta do disco como um todo (as partições). Já o comando <code>du</code> (Disk Usage) lista quanto cada diretório/pasta específica está pesando/ocupando de disco. O comando correto pedido pela banca é o <code>df</code>.
 </div>
 `
 }
