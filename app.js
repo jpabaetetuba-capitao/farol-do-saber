@@ -132,7 +132,7 @@ async function responderPergunta(firebaseId){
 
 
     if(!perguntaEncontrada){
-        alert("Pergunta não encontrada.");
+        mostrarToast("Pergunta não encontrada.");
         return;
     }
 
@@ -212,7 +212,7 @@ function renderizarForum(){
 
     .sort(
 
-        (a,b) => b.id - a.id
+        (a,b) => a.id - b.id
 
     )
 
@@ -234,6 +234,8 @@ function renderizarForum(){
             <p>
                 📅 ${item.data}
             </p>
+
+<div class="botoes-forum">
 
 <button
     class="btn-responder"
@@ -261,6 +263,9 @@ ${
     ""
 }
 
+</div>
+
+
 <div class="respostas">
 
 ${
@@ -283,6 +288,8 @@ ${
 
         <br><br>
 
+<div class="botoes-resposta">
+
 <button
     onclick="curtirResposta(
         '${item.firebaseId}',
@@ -292,8 +299,6 @@ ${
 👍 ${resposta.curtidas || 0}
 
 </button>
-
-<br><br>
 
 ${
     resposta.autor === usuarioForum
@@ -308,13 +313,15 @@ ${
             ${indice}
         )">
 
-        🗑 Excluir Resposta
+        🗑 Excluir
 
     </button>
     `
     :
     ""
 }
+
+</div>
 
     </div>
 
@@ -407,7 +414,7 @@ async function excluirResposta(
         );
 
         if(!pergunta){
-            alert("Pergunta não encontrada");
+            mostrarToast("Pergunta não encontrada");
             return;
         }
 
@@ -431,7 +438,7 @@ async function excluirResposta(
 
         });
 
-        alert("Resposta excluída com sucesso");
+        mostrarToast("Resposta excluída com sucesso");
 
     } catch(error){
 
@@ -491,7 +498,7 @@ async function curtirResposta(
 
     ){
 
-        alert(
+        mostrarToast(
             "Você já curtiu esta resposta."
         );
 
@@ -615,13 +622,34 @@ const bancoQuestoes = {
 
     
     
-
-
 };
+
+function mostrarToast(mensagem){
+
+    const toast =
+        document.getElementById("toast");
+
+    if(!toast) return;
+
+    toast.textContent =
+        mensagem;
+
+    toast.className =
+        "toast mostrar";
+
+    setTimeout(()=>{
+
+        toast.className =
+            "toast";
+
+    },3000);
+
+}
 
 // ==========================
 // VARIÁVEIS GLOBAIS
 // ==========================
+
 
 let disciplinaAtual = "";
 let assuntoAtual = "";
@@ -814,14 +842,7 @@ if(nome === "ciencias"){
 
     }
 
-    if (nome === "didatica") {
-
-        mostrarTela("didatica");
-
-        return;
-
- }
-
+  
     if (nome === "portugues") {
 
         mostrarTela("portugues");
@@ -854,6 +875,12 @@ paginaTeoriaAtual = Number(
     )
 ) || 0;
 
+ if(
+        paginaTeoriaAtual >= teoria.length
+    ){
+        paginaTeoriaAtual = 0;
+    }
+
     document.getElementById(
         "tituloTeoria"
     ).innerHTML = titulo;
@@ -870,6 +897,15 @@ function mostrarPaginaTeoria(){
         "farol_teoria_" + assuntoAtual,
         paginaTeoriaAtual
     );
+
+if(
+    !teoriaAtual ||
+    paginaTeoriaAtual < 0 ||
+    paginaTeoriaAtual >= teoriaAtual.length
+){
+    paginaTeoriaAtual = 0;
+}
+
 
     const pagina =
         teoriaAtual[paginaTeoriaAtual];
@@ -1216,7 +1252,9 @@ atualizarAtividade();
     );
 
     if (!resposta) {
-        alert("Selecione uma alternativa.");
+        mostrarToast(
+    "Selecione uma alternativa."
+);
         return;
     }
 
@@ -1488,7 +1526,7 @@ let classificacao = "";
 let mensagem = "";
 let medalha = "";
 
-if(percentual >= 90){
+if(percentual >= 95){
 
     classificacao = "🏆 EXCELENTE";
 medalha = "🥇 OURO";
@@ -1933,7 +1971,7 @@ function corrigirSimulado() {
 
     if (!resposta) {
 
-        alert(
+        mostrarToast(
             "Selecione uma alternativa."
         );
 
@@ -3223,7 +3261,7 @@ questoesEmbaralhadas =
 
     if(questaoAtual >= total){
 
-        alert("Este assunto já foi concluído.");
+        mostrarToast("Este assunto já foi concluído.");
         return;
 
     }
@@ -3251,16 +3289,54 @@ function refazerAssunto(){
 
 function atualizarPainelEstudos(){
 
+    const nomesBonitos = {
+        bncc: "📘 BNCC",
+        ldb: "📘 LDB",
+        eca: "📘 ECA",
+        pne: "📘 PNE",
+        fundeb: "📘 FUNDEB",
+        lbi: "📘 LBI",
+        tea: "📘 TEA",
+        inclusiva: "📘 Educação Inclusiva",
+        etnicoRacial: "📘 Relações Étnico-Raciais",
+        educacaoCampo: "📘 Educação do Campo",
+        curriculo: "📘 Currículo e Planejamento",
+        interpretacao: "📖 Interpretação de Textos",
+        generos: "📄 Tipologia e Gêneros Textuais",
+        funcoes: "📡 Funções da Linguagem",
+        coesao: "🔗 Coesão e Coerência",
+        semantica: "🧠 Semântica",
+        figuras: "🎭 Figuras de Linguagem",
+        variacao: "🌎 Variação Linguística",
+        classesPalavras: "📚 Classes de Palavras",
+        formacaoPalavras: "🏗 Formação de Palavras",
+        sintaxe: "📝 Sintaxe",
+        periodoComposto: "🔄 Período Simples e Composto",
+        concordancia: "📌 Concordância",
+        regencia: "🎯 Regência",
+        crase: "✍️ Crase",
+        vozesVerbais: "🗣️ Vozes Verbais",
+        pontuacao: "📍 Pontuação",
+        ortografia: "📖 Ortografia",
+        acentuacao: "🔠 Acentuação",
+        redacaoOficial: "🏛️ Redação Oficial",
+        hardware: "💻 Hardware",
+        software: "⚙️ Software",
+        arquivos: "🗂 Arquivos, Pastas e Backup",
+        office: "📊 Office e LibreOffice",
+        internet: "🌐 Internet e Correio Eletrônico",
+        redes: "🌐 Redes de Computadores",
+        seguranca: "🔒 Segurança da Informação",
+        fundamentosCiencias: "🔬 Fundamentos do Ensino de Ciências",
+        bnccCiencias: "📘 BNCC e Competências em Ciências da Natureza"
+    };
+
     let concluidos = 0;
-
     let andamento = 0;
-
     let ultimo = "Nenhum";
 
-const ultimoSalvo =
-    localStorage.getItem(
-        "farol_ultimoAssunto"
-    );
+    const ultimoSalvo =
+        localStorage.getItem("farol_ultimoAssunto");
 
     let proxima = "-";
 
@@ -3268,114 +3344,19 @@ const ultimoSalvo =
 
         const total =
             bancoQuestoes[assunto]
-            ?
-            bancoQuestoes[assunto].length
-            :
-            0;
+            ? bancoQuestoes[assunto].length
+            : 0;
 
         const atual =
             progressoAssuntos[assunto];
 
         if(atual >= total){
-
             concluidos++;
-
         }else{
-
             andamento++;
-
-            const nomesBonitos = {
-
-    bncc: "📘 BNCC",
-
-    ldb: "📘 LDB",
-
-    eca: "📘 ECA",
-
-    pne: "📘 PNE",
-
-    fundeb: "📘 FUNDEB",
-
-    lbi: "📘 LBI",
-
-    tea: "📘 TEA",
-
-    inclusiva: "📘 Educação Inclusiva",
-
-    etnicoRacial: "📘 Relações Étnico-Raciais",
-
-    educacaoCampo: "📘 Educação do Campo",
-
-    curriculo: "📘 Currículo e Planejamento",
-
-    interpretacao: "📖 Interpretação de Textos",
-
-    generos: "📄 Tipologia e Gêneros Textuais",
-
-    funcoes: "📡 Funções da Linguagem",
-
-    coesao: "🔗 Coesão e Coerência",
-
-    semantica: "🧠 Semântica",
-
-    figuras: "🎭 Figuras de Linguagem",
-
-    variacao: "🌎 Variação Linguística",
-
-    classesPalavras: "📚 Classes de Palavras",
-
-    formacaoPalavras: "🏗 Formação de Palavras",
-
-    sintaxe: "📝 Sintaxe",
-
-    periodoComposto: "🔄 Período Simples e Composto",
-
-    concordancia: "📌 Concordância",
-
-    regencia: "🎯 Regência",
-
-    crase: "✍️ Crase",
-
-    vozesVerbais: "🗣️ Vozes Verbais",
-
-    pontuacao: "📍 Pontuação",
-
-    ortografia: "📖 Ortografia",
-
-    acentuacao: "🔠 Acentuação",
-
-    redacaoOficial: "🏛️ Redação Oficial",
-
-    hardware: "💻 Hardware",
-
-    software: "⚙️ Software",
-
-    arquivos: "🗂 Arquivos, Pastas e Backup",
-
-    office: "📊 Office e LibreOffice",
-
-    internet: "🌐 Internet e Correio Eletrônico",
-
-    redes: "🌐 Redes de Computadores",
-
-    seguranca: "🔒 Segurança da Informação",
-
-    fundamentosCiencias:
-"🔬 Fundamentos do Ensino de Ciências",
-
-bnccCiencias:
-"📘 BNCC e Competências em Ciências da Natureza"
-
-    
-
-};
-
-ultimo = nomesBonitos[assunto];
-
+            ultimo = nomesBonitos[assunto] || assunto;
             proxima = atual + 1;
-
         }
-
     }
 
     document.getElementById(
@@ -3386,92 +3367,43 @@ ultimo = nomesBonitos[assunto];
         "assuntosAndamento"
     ).textContent = andamento;
 
- if(ultimoSalvo){
-
-    const nomesBonitos = {
-
-        bncc: "📘 BNCC",
-        ldb: "📘 LDB",
-        eca: "📘 ECA",
-        pne: "📘 PNE",
-        fundeb: "📘 FUNDEB",
-        lbi: "📘 LBI",
-        tea: "📘 TEA",
-        inclusiva: "📘 Educação Inclusiva",
-        interpretacao: "📖 Interpretação de Textos",
-        semantica: "🧠 Semântica",
-        hardware: "💻 Hardware",
-        software: "⚙️ Software",
-        arquivos: "🗂 Arquivos, Pastas e Backup",
-        office: "📊 Office e LibreOffice",
-        internet: "🌐 Internet e Correio Eletrônico",
-        redes: "🌐 Redes de Computadores",
-        seguranca: "🔒 Segurança da Informação",
-        fundamentosCiencias:
-"🔬 Fundamentos do Ensino de Ciências",
-
-bnccCiencias:
-"📘 BNCC e Competências em Ciências da Natureza"
-
-    };
-
-    document.getElementById(
-        "ultimoAssunto"
-    ).textContent =
-        nomesBonitos[ultimoSalvo]
-        || ultimoSalvo;
-
-}else{
-
-    document.getElementById(
-        "ultimoAssunto"
-    ).textContent = ultimo;
-
-}
+    if(ultimoSalvo){
+        document.getElementById(
+            "ultimoAssunto"
+        ).textContent =
+            nomesBonitos[ultimoSalvo] || ultimoSalvo;
+    }else{
+        document.getElementById(
+            "ultimoAssunto"
+        ).textContent = ultimo;
+    }
 
     document.getElementById(
         "proximaQuestaoPainel"
     ).textContent = proxima;
 
-const resultados =
-    JSON.parse(
-        localStorage.getItem(
-            "farol_resultados"
-        )
-    ) || {};
+    const resultados =
+        JSON.parse(
+            localStorage.getItem("farol_resultados")
+        ) || {};
 
-let melhorTexto = "-";
+    let melhorTexto = "-";
+    let melhorPercentual = -1;
 
-let melhorPercentual = -1;
-
-for(
-    let assunto in resultados
-){
-
-    if(
-        resultados[assunto].percentual
-        >
-        melhorPercentual
-    ){
-
-        melhorPercentual =
-            resultados[assunto].percentual;
-
-        melhorTexto =
-            resultados[assunto].medalha
-            + " "
-            + resultados[assunto].percentual
-            + "%";
-
+    for(let assunto in resultados){
+        if(resultados[assunto].percentual > melhorPercentual){
+            melhorPercentual = resultados[assunto].percentual;
+            melhorTexto =
+                (nomesBonitos[assunto] || assunto) +
+                " - " +
+                resultados[assunto].percentual +
+                "%";
+        }
     }
 
-}
-
-document.getElementById(
-    "melhorResultado"
-).textContent =
-    melhorTexto;
-
+    document.getElementById(
+        "melhorResultado"
+    ).textContent = melhorTexto;
 }
 
 function atualizarStatusAssuntos(){
@@ -4147,6 +4079,7 @@ iniciarDigitando();
     .orderBy("data")
 
     .onSnapshot(snapshot => {
+
 
         let html = "";
 
