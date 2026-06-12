@@ -1,3634 +1,498 @@
 const internetTeoria = [
-
 {
-    titulo: "🌐 Conceitos Fundamentais da Internet",
+  titulo: "🌐 Conceitos Fundamentais da Internet",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>A Internet é uma rede mundial de computadores interligados que permite a troca de informações entre usuários em qualquer parte do mundo.</p>
+<p>Por meio da Internet é possível acessar sites, enviar e-mails, assistir a vídeos, realizar pesquisas, armazenar arquivos e utilizar diversos serviços digitais.</p>
 
-    conteudo: `
-
-<h3>📘 O que é a Internet?</h3>
-
-<p>
-A Internet é uma rede mundial de computadores interligados que permite a troca de informações entre usuários em qualquer parte do mundo.
-</p>
-
-<p>
-Por meio da Internet é possível acessar sites, enviar e-mails, assistir vídeos, realizar pesquisas, armazenar arquivos e utilizar diversos serviços digitais.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-A Internet não é um único computador. Ela é formada por milhões de dispositivos conectados em rede.
-
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ IMPORTANTE</h4>
+  <p>A Internet não é um único computador central. Ela é formada por milhões de dispositivos conectados em rede no mundo todo.</p>
 </div>
 
-<br><br>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 COMO A INTERNET FUNCIONA?</h3>
+<p>A comunicação ocorre através de protocolos e equipamentos que permitem a transmissão de dados entre computadores e servidores.</p>
+<p>Quando você acessa um site, seu dispositivo envia uma solicitação ao servidor onde aquele site está hospedado. O servidor processa o pedido e envia as informações solicitadas de volta para a sua tela.</p>
 
-<h3>🌍 Como a Internet Funciona?</h3>
-
-<p>
-A comunicação ocorre através de protocolos e equipamentos que permitem a transmissão de dados entre computadores e servidores.
-</p>
-
-<p>
-Quando você acessa um site, seu dispositivo envia uma solicitação ao servidor onde aquele site está hospedado.
-</p>
-
-<p>
-O servidor processa o pedido e envia as informações solicitadas.
-</p>
-
-<br><br>
-
-<h3>🧰 Principais Serviços da Internet</h3>
-
+<h3 style="color: #E67E22; margin-top: 20px;">📌 PRINCIPAIS SERVIÇOS DA INTERNET</h3>
 <ul>
-
-<li>🌐 Navegação em sites</li>
-
-<li>📧 Correio eletrônico (e-mail)</li>
-
-<li>☁️ Armazenamento em nuvem</li>
-
-<li>🎥 Vídeos e streaming</li>
-
-<li>💬 Mensagens instantâneas</li>
-
-<li>📱 Redes sociais</li>
-
-<li>🔎 Busca e pesquisa</li>
-
-<li>🤝 Plataformas de colaboração</li>
-
+  <li>🌐 Navegação em sites (WWW)</li>
+  <li>📧 Correio eletrônico (e-mail)</li>
+  <li>☁️ Armazenamento em nuvem</li>
+  <li>🎥 Vídeos e streaming</li>
+  <li>💬 Mensagens instantâneas</li>
+  <li>📱 Redes sociais</li>
 </ul>
 
-<br><br>
-
-<h3>🖥️ Internet x Web</h3>
-
-<p>
-Muitas pessoas confundem Internet com Web, mas não são a mesma coisa.
-</p>
-
-<p>
-A Internet é a infraestrutura de comunicação.
-</p>
-
-<p>
-A Web (WWW) é um dos serviços que funciona sobre a Internet.
-</p>
-
-<br><br>
-
-<h3>📡 Conexão com a Internet</h3>
-
-<p>
-Para acessar a Internet normalmente utilizamos:
-</p>
-
+<h3 style="color: #E67E22; margin-top: 20px;">📌 CONEXÃO COM A INTERNET</h3>
+<p>Para acessar a Internet, o usuário final normalmente utiliza:</p>
 <ul>
-
-<li>Fibra óptica</li>
-
-<li>Banda larga</li>
-
-<li>Wi-Fi</li>
-
-<li>Rede móvel (4G e 5G)</li>
-
-<li>Satélite</li>
-
+  <li>Fibra óptica</li>
+  <li>Banda larga (ADSL/Cabo)</li>
+  <li>Wi-Fi</li>
+  <li>Rede móvel (4G e 5G)</li>
+  <li>Satélite</li>
 </ul>
 
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Quando um usuário digita o endereço de um site no navegador:
-</p>
-
-<ul>
-
-<li>O navegador envia uma solicitação.</li>
-
-<li>O servidor recebe o pedido.</li>
-
-<li>O servidor envia a página solicitada.</li>
-
-<li>O conteúdo é exibido na tela do usuário.</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Internet = Rede Mundial
-
-WWW = Serviço da Internet
-
-Internet ≠ Web
-
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE</h4>
+  <p>Internet = Rede Mundial de Computadores (A infraestrutura física e lógica).<br>
+  WWW (World Wide Web) = Serviço de páginas e sites que funciona <strong>sobre</strong> a Internet.<br>
+  <strong>Internet ≠ Web</strong></p>
 </div>
 
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma pegadinha muito comum é afirmar que Internet e WWW são sinônimos.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-A Internet é a rede mundial de computadores.
-</p>
-
-<p>
-A WWW (World Wide Web) é apenas um dos serviços disponíveis na Internet.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Internet é uma rede mundial de computadores.
-
-• Permite troca de informações entre dispositivos.
-
-• WWW é um serviço da Internet.
-
-• Internet não é sinônimo de Web.
-
-• Navegação, e-mail e nuvem são serviços da Internet.
-
-• Acesso pode ocorrer por fibra, Wi-Fi, rede móvel ou satélite.
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p>Uma pegadinha muito comum é a banca afirmar que Internet e WWW são sinônimos.<br>
+  <span style="color: #DC3545; font-weight: bold;">❌ Errado.</span> A Internet é a rede. A WWW é apenas <em>um dos serviços</em> disponíveis nela (assim como o e-mail é outro serviço).</p>
 </div>
 
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li>🌐 <strong>Internet:</strong> Rede mundial de computadores.</li>
+    <li>🖥️ <strong>WWW:</strong> Serviço de navegação web.</li>
+    <li><span style="color: #DC3545;">❌</span> Internet não é a mesma coisa que Web.</li>
+  </ul>
+</div>
 `
-
 },
 
 {
-    titulo: "🌍 Navegadores Web",
+  titulo: "🌍 Navegadores Web",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Os navegadores web, também chamados de <strong>browsers</strong>, são programas (softwares) utilizados para acessar, visualizar e interagir com páginas da Internet.</p>
 
-    conteudo: `
-
-<h3>📘 O que são Navegadores Web?</h3>
-
-<p>
-Os navegadores web, também chamados de browsers, são programas utilizados para acessar, visualizar e interagir com páginas da Internet.
-</p>
-
-<p>
-Eles permitem abrir sites, realizar pesquisas, assistir vídeos, acessar redes sociais, utilizar serviços bancários e diversas outras atividades online.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O navegador é apenas a ferramenta utilizada para acessar a Internet. Ele não é a própria Internet.
-
-</div>
-
-<br><br>
-
-<h3>🌐 Principais Navegadores</h3>
-
+<h3 style="color: #E67E22; margin-top: 20px;">📌 PRINCIPAIS NAVEGADORES</h3>
 <ul>
-
-<li>🌍 Google Chrome</li>
-
-<li>🦊 Mozilla Firefox</li>
-
-<li>🔵 Microsoft Edge</li>
-
-<li>🧭 Safari</li>
-
-<li>🛡️ Opera</li>
-
+  <li>🌍 <strong>Google Chrome:</strong> Desenvolvido pelo Google (o mais utilizado).</li>
+  <li>🔵 <strong>Microsoft Edge:</strong> Navegador padrão atual do Windows (substituiu o Internet Explorer).</li>
+  <li>🦊 <strong>Mozilla Firefox:</strong> Navegador de código aberto.</li>
+  <li>🧭 <strong>Safari:</strong> Navegador padrão dos dispositivos Apple.</li>
+  <li>🛡️ <strong>Opera:</strong> Navegador alternativo conhecido por recursos nativos extras.</li>
 </ul>
 
-<br><br>
-
-<h3>🧰 Funções dos Navegadores</h3>
-
-<p>
-Os navegadores possuem diversas funcionalidades para facilitar a navegação dos usuários.
-</p>
-
+<h3 style="color: #E67E22; margin-top: 20px;">📌 FUNÇÕES E RECURSOS</h3>
 <ul>
-
-<li>Acessar sites e páginas web</li>
-
-<li>Salvar favoritos</li>
-
-<li>Gerenciar downloads</li>
-
-<li>Armazenar senhas</li>
-
-<li>Histórico de navegação</li>
-
-<li>Modo anônimo ou privado</li>
-
-<li>Bloqueio de pop-ups</li>
-
-<li>Gerenciamento de abas</li>
-
+  <li>⭐ <strong>Favoritos (ou Marcadores):</strong> Salva o endereço do site para acesso rápido no futuro.</li>
+  <li>📜 <strong>Histórico:</strong> Registra a lista das páginas visitadas pelo usuário.</li>
+  <li>🍪 <strong>Cookies:</strong> Pequenos arquivos de texto que salvam suas preferências de navegação (ex: manter você logado, itens no carrinho de compras).</li>
+  <li>📥 <strong>Downloads:</strong> Gerencia os arquivos baixados da internet para o seu disco rígido.</li>
 </ul>
 
-<br><br>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 MODO ANÔNIMO / INPRIVATO</h3>
+<p>Nesse modo, o navegador <strong>não salva</strong> no computador o histórico, os cookies ou as senhas digitadas após a janela ser fechada.</p>
 
-<h3>⭐ Favoritos</h3>
-
-<p>
-Os favoritos permitem salvar endereços de sites para acesso rápido posteriormente.
-</p>
-
-<p>
-Também podem ser chamados de marcadores em alguns navegadores.
-</p>
-
-<br><br>
-
-<h3>📜 Histórico</h3>
-
-<p>
-O histórico registra as páginas visitadas pelo usuário.
-</p>
-
-<p>
-Ele facilita o retorno a sites acessados anteriormente.
-</p>
-
-<br><br>
-
-<h3>🕶️ Modo Anônimo</h3>
-
-<p>
-O modo anônimo ou navegação privada impede que o navegador salve histórico, cookies e informações da sessão no computador após o fechamento da janela.
-</p>
-
-<p>
-Entretanto, ele não torna o usuário invisível na Internet.
-</p>
-
-<br><br>
-
-<h3>🍪 Cookies</h3>
-
-<p>
-Cookies são pequenos arquivos armazenados pelo navegador para guardar preferências e informações de navegação.
-</p>
-
-<p>
-Eles ajudam a personalizar a experiência do usuário nos sites.
-</p>
-
-<br><br>
-
-<h3>📥 Downloads</h3>
-
-<p>
-Os navegadores permitem baixar arquivos da Internet, como documentos, imagens, programas e vídeos.
-</p>
-
-<p>
-Os arquivos baixados normalmente ficam armazenados na pasta Downloads.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Quando você digita um endereço como:
-</p>
-
-<p>
-
-www.google.com
-
-</p>
-
-<p>
-O navegador envia uma solicitação ao servidor e exibe a página correspondente na tela.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Chrome → Google
-
-Edge → Microsoft
-
-Firefox → Mozilla
-
-Safari → Apple
-
-Opera → Opera Software
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p>As bancas afirmam que o Modo Anônimo (Navegação Privada) oculta o IP do usuário ou o torna invisível para o provedor de internet e para o site acessado.<br>
+  <span style="color: #DC3545; font-weight: bold;">❌ Errado.</span> O modo anônimo esconde seus rastros apenas <strong>localmente</strong> (para quem for usar o mesmo PC depois de você). Seu provedor e o site continuam sabendo quem você é.</p>
 </div>
 
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma questão muito comum afirma que o modo anônimo oculta completamente a identidade do usuário na Internet.
-</p>
-
-<p>
-Isso está errado.
-</p>
-
-<p>
-O modo anônimo apenas impede o armazenamento local do histórico, cookies e dados da sessão após o encerramento da navegação.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Navegadores são programas para acessar páginas da Internet.
-
-• Chrome, Firefox, Edge, Safari e Opera são exemplos.
-
-• Possuem favoritos, histórico e downloads.
-
-• Cookies armazenam informações de navegação.
-
-• O modo anônimo não torna o usuário invisível.
-
-• Navegador não é sinônimo de Internet.
-
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li>🌍 <strong>Browser:</strong> Programa para acessar a web.</li>
+    <li>🍪 <strong>Cookies:</strong> Arquivos que guardam preferências.</li>
+    <li>🕶️ <strong>Modo Anônimo:</strong> Não salva histórico local (mas não oculta o IP).</li>
+  </ul>
 </div>
-
 `
-
-},
-{
-    titulo: "🖥️ Sites, Páginas e Portais",
-
-    conteudo: `
-
-<h3>📘 O que é um Site?</h3>
-
-<p>
-Um site é um conjunto de páginas web relacionadas entre si e disponibilizadas na Internet.
-</p>
-
-<p>
-Os sites podem conter textos, imagens, vídeos, formulários, gráficos e diversos outros recursos multimídia.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Todo portal é um site, mas nem todo site é um portal.
-
-</div>
-
-<br><br>
-
-<h3>📄 O que é uma Página Web?</h3>
-
-<p>
-Uma página web é um documento individual acessado através de um navegador.
-</p>
-
-<p>
-Ela corresponde a uma única página dentro de um site.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>Página inicial (Home)</li>
-
-<li>Página de contato</li>
-
-<li>Página de notícias</li>
-
-<li>Página de produtos</li>
-
-</ul>
-
-<br><br>
-
-<h3>🌐 O que é um Site?</h3>
-
-<p>
-Um site é formado por várias páginas web interligadas.
-</p>
-
-<p>
-Normalmente possui uma página principal chamada Home Page ou Página Inicial.
-</p>
-
-<br>
-
-Exemplo:
-
-<ul>
-
-<li>Home</li>
-
-<li>Quem Somos</li>
-
-<li>Serviços</li>
-
-<li>Contato</li>
-
-</ul>
-
-<br>
-
-<p>
-Todas essas páginas juntas formam um site.
-</p>
-
-<br><br>
-
-<h3>🏢 O que é um Portal?</h3>
-
-<p>
-Portal é um tipo especial de site que reúne grande quantidade de informações e serviços.
-</p>
-
-<p>
-Normalmente oferece notícias, pesquisas, e-mails, conteúdos diversos e acesso a vários serviços em um único local.
-</p>
-
-<br>
-
-Exemplos de portais:
-
-<ul>
-
-<li>Portais de notícias</li>
-
-<li>Portais governamentais</li>
-
-<li>Portais educacionais</li>
-
-<li>Portais corporativos</li>
-
-</ul>
-
-<br><br>
-
-<h3>🏠 Home Page</h3>
-
-<p>
-A Home Page é a página principal de um site.
-</p>
-
-<p>
-Ela geralmente funciona como porta de entrada para as demais páginas.
-</p>
-
-<br><br>
-
-<h3>🔗 Hiperlinks</h3>
-
-<p>
-Os hiperlinks (links) permitem navegar entre páginas e sites diferentes.
-</p>
-
-<p>
-Ao clicar em um link, o navegador é direcionado para outro conteúdo.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Imagine o site de uma escola:
-</p>
-
-<ul>
-
-<li>Home</li>
-
-<li>Notícias</li>
-
-<li>Professores</li>
-
-<li>Cursos</li>
-
-<li>Contato</li>
-
-</ul>
-
-<p>
-Cada uma dessas áreas representa uma página web.
-</p>
-
-<p>
-O conjunto delas forma o site da escola.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Página Web = Página Individual
-
-Site = Conjunto de Páginas
-
-Portal = Site com muitos serviços
-
-Home Page = Página Inicial
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-As bancas costumam afirmar que página web e site são a mesma coisa.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-Página web é um documento individual.
-</p>
-
-<p>
-Site é o conjunto de várias páginas web relacionadas.
-</p>
-
-<p>
-Outra pegadinha comum é afirmar que portal e site são exatamente iguais.
-</p>
-
-<p>
-Portal é um tipo de site que reúne informações e diversos serviços em um único ambiente.
-
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Página Web = Documento individual.
-
-• Site = Conjunto de páginas web.
-
-• Portal = Site com vários serviços.
-
-• Home Page = Página inicial.
-
-• Links permitem navegar entre páginas.
-
-• Todo portal é um site.
-
-• Nem todo site é um portal.
-
-</div>
-
-`
-
-},
-{
-    titulo: "🔗 URL, Domínio e Endereço Web",
-
-    conteudo: `
-
-<h3>📘 O que é uma URL?</h3>
-
-<p>
-URL significa Uniform Resource Locator (Localizador Uniforme de Recursos).
-</p>
-
-<p>
-É o endereço utilizado para localizar páginas, arquivos e recursos na Internet.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-A URL funciona como o endereço de uma página na Internet, semelhante ao endereço de uma residência.
-
-</div>
-
-<br><br>
-
-<h3>🌐 Exemplo de URL</h3>
-
-<p>
-
-https://www.exemplo.com.br
-
-</p>
-
-<p>
-Essa URL permite que o navegador encontre o recurso solicitado.
-</p>
-
-<br><br>
-
-<h3>🧩 Partes de uma URL</h3>
-
-<p>
-
-https://www.exemplo.com.br/pagina
-
-</p>
-
-<br>
-
-<ul>
-
-<li><strong>https</strong> → Protocolo</li>
-
-<li><strong>www</strong> → Subdomínio</li>
-
-<li><strong>exemplo</strong> → Domínio</li>
-
-<li><strong>.com.br</strong> → Extensão do domínio</li>
-
-<li><strong>/pagina</strong> → Caminho do recurso</li>
-
-</ul>
-
-<br><br>
-
-<h3>🏢 O que é um Domínio?</h3>
-
-<p>
-Domínio é o nome que identifica um site na Internet.
-</p>
-
-<p>
-Ele substitui endereços numéricos complexos, facilitando o acesso pelos usuários.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>google.com</li>
-
-<li>wikipedia.org</li>
-
-<li>gov.br</li>
-
-<li>uol.com.br</li>
-
-</ul>
-
-<br><br>
-
-<h3>📂 Principais Extensões de Domínio</h3>
-
-<ul>
-
-<li>.com → Comercial</li>
-
-<li>.org → Organizações</li>
-
-<li>.gov → Governo</li>
-
-<li>.edu → Educação</li>
-
-<li>.mil → Militar</li>
-
-<li>.net → Redes</li>
-
-</ul>
-
-<br><br>
-
-<h3>🇧🇷 Domínios Brasileiros</h3>
-
-<p>
-No Brasil é comum encontrar domínios terminados em:
-</p>
-
-<ul>
-
-<li>.com.br</li>
-
-<li>.gov.br</li>
-
-<li>.edu.br</li>
-
-<li>.org.br</li>
-
-</ul>
-
-<br><br>
-
-<h3>🔢 Endereço IP</h3>
-
-<p>
-Por trás de cada domínio existe um endereço IP.
-</p>
-
-<p>
-Os computadores utilizam o IP para localizar servidores na rede.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-142.250.218.14
-
-</p>
-
-<br>
-
-<p>
-Memorizar nomes de domínio é muito mais fácil do que decorar números IP.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Quando você digita:
-</p>
-
-<p>
-
-www.google.com
-
-</p>
-
-<p>
-O navegador consulta os servidores DNS para descobrir o endereço IP correspondente e então acessa o site solicitado.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-URL = Endereço Completo
-
-Domínio = Nome do Site
-
-IP = Endereço Numérico
-
-DNS = Tradutor entre Domínio e IP
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Muitas bancas afirmam que URL e domínio são a mesma coisa.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-O domínio é apenas uma parte da URL.
-</p>
-
-<p>
-A URL é o endereço completo do recurso na Internet.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• URL é o endereço completo de um recurso.
-
-• Domínio identifica um site.
-
-• IP identifica dispositivos na rede.
-
-• DNS converte domínios em endereços IP.
-
-• Domínio é apenas uma parte da URL.
-
-• Exemplos: .com, .org, .gov e .edu.
-
-</div>
-
-`
-
 },
 
 {
-    titulo: "🔒 HTTP e HTTPS",
+  titulo: "🖥️ Sites, Páginas e Portais",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Ao navegar na WWW (World Wide Web), passamos por diferentes estruturas de conteúdo. É vital saber a diferença entre Página, Site e Portal.</p>
 
-    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 PÁGINA WEB (Webpage)</h3>
+<p>Uma página web é um <strong>documento individual</strong> acessado através de um navegador. É uma única tela. Exemplo: A página "Contato" de uma empresa.</p>
 
-<h3>📘 O que é HTTP?</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 SITE (Website)</h3>
+<p>Um site é um <strong>conjunto de páginas web</strong> interligadas sob o mesmo domínio. Exemplo: O site da escola (composto pelas páginas Home, Contato, Cursos, etc.).</p>
 
-<p>
-HTTP significa HyperText Transfer Protocol (Protocolo de Transferência de Hipertexto).
-</p>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 PORTAL</h3>
+<p>Portal é um <strong>tipo de site gigante</strong> que reúne uma enorme quantidade de serviços e links de diferentes fontes em um único ambiente. (Ex: G1, UOL, Terra).</p>
 
-<p>
-É o protocolo utilizado para a comunicação entre navegadores e servidores na Internet.
-</p>
-
-<p>
-Quando um usuário acessa um site, o navegador utiliza esse protocolo para solicitar informações ao servidor.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O HTTP é um protocolo de comunicação, não um navegador e nem um site.
-
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE</h4>
+  <p>📄 Página = Um único documento (A folha de um livro).<br>
+  🌐 Site = Várias páginas juntas (O livro inteiro).<br>
+  🏢 Portal = Um site com muitos serviços (Uma grande biblioteca).</p>
 </div>
 
-<br><br>
-
-<h3>🌐 Como o HTTP Funciona?</h3>
-
-<p>
-O navegador envia uma solicitação ao servidor.
-</p>
-
-<p>
-O servidor processa o pedido e devolve a página solicitada.
-</p>
-
-<p>
-Esse processo ocorre em poucos segundos.
-</p>
-
-<br><br>
-
-<h3>📡 Exemplo de Endereço HTTP</h3>
-
-<p>
-
-http://www.exemplo.com
-
-</p>
-
-<br>
-
-<p>
-Nesse caso a comunicação ocorre sem criptografia.
-</p>
-
-<br><br>
-
-<h3>🔒 O que é HTTPS?</h3>
-
-<p>
-HTTPS significa HyperText Transfer Protocol Secure.
-</p>
-
-<p>
-É a versão segura do HTTP.
-</p>
-
-<p>
-Ele utiliza mecanismos de criptografia para proteger os dados transmitidos entre o navegador e o servidor.
-</p>
-
-<br><br>
-
-<h3>🛡️ Vantagens do HTTPS</h3>
-
-<ul>
-
-<li>Proteção de senhas</li>
-
-<li>Proteção de dados bancários</li>
-
-<li>Proteção de informações pessoais</li>
-
-<li>Maior segurança na navegação</li>
-
-<li>Redução do risco de interceptação de dados</li>
-
-</ul>
-
-<br><br>
-
-<h3>🔐 Criptografia</h3>
-
-<p>
-A criptografia transforma os dados em um formato protegido durante a transmissão.
-</p>
-
-<p>
-Mesmo que alguém intercepte as informações, não conseguirá compreendê-las facilmente.
-</p>
-
-<br><br>
-
-<h3>🔑 Certificado Digital</h3>
-
-<p>
-Os sites que utilizam HTTPS possuem certificados digitais.
-</p>
-
-<p>
-Esses certificados ajudam a comprovar a identidade do site e garantem uma conexão segura.
-</p>
-
-<br><br>
-
-<h3>🔒 Cadeado de Segurança</h3>
-
-<p>
-Nos navegadores modernos, os sites protegidos por HTTPS normalmente exibem um cadeado próximo ao endereço da página.
-</p>
-
-<p>
-Esse símbolo indica que a comunicação está protegida por criptografia.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Ao acessar um banco pela Internet:
-</p>
-
-<ul>
-
-<li>Seu login é enviado ao servidor.</li>
-
-<li>Os dados são criptografados.</li>
-
-<li>Terceiros não conseguem visualizar facilmente as informações.</li>
-
-</ul>
-
-<p>
-Por esse motivo os bancos utilizam HTTPS.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-HTTP
-
-➡️ Sem criptografia
-
-<br><br>
-
-HTTPS
-
-➡️ Com criptografia
-
-<br><br>
-
-A letra "S" significa:
-
-SECURE (Seguro)
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p>Bancas costumam dizer: <em>"Portal e Site são tecnicamente a mesma coisa e têm as mesmas proporções."</em><br>
+  <span style="color: #DC3545; font-weight: bold;">❌ Errado.</span> Todo portal é um site, mas nem todo site é um portal. O portal se diferencia pela agregação massiva de serviços diversos.</p>
 </div>
 
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Muitas bancas afirmam que HTTPS impede completamente ataques e invasões.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-O HTTPS aumenta significativamente a segurança da comunicação, mas não elimina todos os riscos existentes.
-</p>
-
-<p>
-Outra pegadinha comum é dizer que HTTP possui criptografia.
-</p>
-
-<p>
-A criptografia é característica do HTTPS.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• HTTP é um protocolo de comunicação.
-
-• HTTPS é a versão segura do HTTP.
-
-• HTTPS utiliza criptografia.
-
-• O "S" significa Secure (Seguro).
-
-• Sites HTTPS utilizam certificados digitais.
-
-• O cadeado indica conexão protegida.
-
-• HTTP não possui criptografia.
-
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li>🏠 <strong>Home Page:</strong> É a página inicial, a porta de entrada do site.</li>
+    <li>🔗 <strong>Hiperlink:</strong> É o "link" clicável que te leva de uma página para outra.</li>
+  </ul>
 </div>
-
 `
-
 },
 
 {
-    titulo: "📧 Correio Eletrônico (E-mail)",
+  titulo: "🔗 URL, Domínio e Endereço IP",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Para chegar a qualquer lugar na Internet, você precisa de um endereço. O sistema de endereçamento da web é muito cobrado em provas operacionais e administrativas.</p>
 
-    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 O QUE É URL?</h3>
+<p>URL significa <strong>Uniform Resource Locator</strong> (Localizador Uniforme de Recursos). É o endereço <strong>completo</strong> que você digita na barra do navegador.</p>
+<p>Exemplo: <code>https://www.google.com.br/imagens</code></p>
 
-<h3>📘 O que é Correio Eletrônico?</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 PARTES DE UMA URL</h3>
+<ul>
+  <li><strong>https://</strong> → Protocolo (como os dados serão transferidos).</li>
+  <li><strong>www</strong> → Subdomínio (serviço web).</li>
+  <li><strong>google</strong> → Domínio (o nome registrado da empresa).</li>
+  <li><strong>.com.br</strong> → Extensão ou Domínio de Topo (indica tipo comercial e país Brasil).</li>
+  <li><strong>/imagens</strong> → Caminho/Pasta do recurso.</li>
+</ul>
 
-<p>
-Correio eletrônico, também conhecido como e-mail (electronic mail), é um serviço utilizado para enviar e receber mensagens através da Internet.
-</p>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 O QUE É IP E DNS?</h3>
+<p>Os computadores não entendem palavras (domínios), eles entendem números. Esse número é o <strong>Endereço IP</strong> (Ex: 142.250.218.14).</p>
+<p>O <strong>DNS (Domain Name System)</strong> é o "tradutor". Quando você digita o domínio <em>google.com</em>, o DNS traduz isso para o endereço IP da máquina do Google, permitindo a conexão.</p>
 
-<p>
-É uma das ferramentas de comunicação mais utilizadas por empresas, instituições de ensino, órgãos públicos e usuários em geral.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O e-mail permite o envio não apenas de mensagens de texto, mas também de arquivos anexados.
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> URL e Domínio são sinônimos. / <span style="color: #28A745; font-weight: bold;">✔</span> O domínio é apenas uma "parte" da URL inteira.</p>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> O IP traduz o nome para número. / <span style="color: #28A745; font-weight: bold;">✔</span> Quem faz a tradução é o servidor DNS.</p>
 </div>
 
-<br><br>
-
-<h3>📨 Como Funciona o E-mail?</h3>
-
-<p>
-Quando uma mensagem é enviada, ela passa por servidores de e-mail até chegar à caixa postal do destinatário.
-</p>
-
-<p>
-Esse processo normalmente ocorre em poucos segundos.
-</p>
-
-<br><br>
-
-<h3>📧 Estrutura de um Endereço de E-mail</h3>
-
-<p>
-
-usuario@empresa.com.br
-
-</p>
-
-<br>
-
-<ul>
-
-<li><strong>usuario</strong> → Nome da conta</li>
-
-<li><strong>@</strong> → Símbolo obrigatório</li>
-
-<li><strong>empresa.com.br</strong> → Domínio do serviço</li>
-
-</ul>
-
-<br><br>
-
-<h3>🌐 Principais Serviços de E-mail</h3>
-
-<ul>
-
-<li>Gmail</li>
-
-<li>Outlook</li>
-
-<li>Yahoo Mail</li>
-
-<li>Proton Mail</li>
-
-</ul>
-
-<br><br>
-
-<h3>📎 Anexos</h3>
-
-<p>
-Os anexos permitem enviar arquivos junto com a mensagem.
-</p>
-
-<p>
-Podem ser enviados documentos, imagens, planilhas, apresentações, vídeos e diversos outros tipos de arquivos.
-</p>
-
-<br><br>
-
-<h3>📥 Caixa de Entrada</h3>
-
-<p>
-É a pasta onde ficam armazenadas as mensagens recebidas pelo usuário.
-</p>
-
-<br><br>
-
-<h3>📤 Itens Enviados</h3>
-
-<p>
-Armazena as mensagens que já foram enviadas para outros destinatários.
-</p>
-
-<br><br>
-
-<h3>🗑️ Lixeira</h3>
-
-<p>
-Contém mensagens excluídas pelo usuário.
-</p>
-
-<p>
-Dependendo do serviço, as mensagens podem ser removidas definitivamente após determinado período.
-</p>
-
-<br><br>
-
-<h3>🌍 Webmail</h3>
-
-<p>
-Webmail é o acesso ao e-mail através de um navegador de Internet.
-</p>
-
-<p>
-Exemplos:
-</p>
-
-<ul>
-
-<li>Gmail</li>
-
-<li>Outlook Web</li>
-
-<li>Yahoo Mail</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um professor pode utilizar o e-mail para:
-</p>
-
-<ul>
-
-<li>Enviar atividades aos alunos.</li>
-
-<li>Receber trabalhos.</li>
-
-<li>Trocar mensagens com a coordenação.</li>
-
-<li>Compartilhar documentos.</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-E-mail = Correio Eletrônico
-
-<br><br>
-
-@ = Obrigatório no endereço
-
-<br><br>
-
-Webmail = E-mail pelo navegador
-
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li>🔗 <strong>URL:</strong> Caminho e endereço completo.</li>
+    <li>🏢 <strong>Domínio:</strong> Nome de registro do site (ex: uol.com.br).</li>
+    <li>🔢 <strong>IP:</strong> Endereço numérico da máquina na rede.</li>
+    <li>📖 <strong>DNS:</strong> A "lista telefônica" que traduz nomes em IPs.</li>
+  </ul>
 </div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Muitas bancas afirmam que o símbolo "@" é opcional em um endereço de e-mail.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-Todo endereço de e-mail válido deve possuir o símbolo "@", separando o usuário do domínio.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• E-mail significa correio eletrônico.
-
-• Permite envio e recebimento de mensagens.
-
-• Pode enviar anexos.
-
-• Possui caixa de entrada, enviados e lixeira.
-
-• Webmail é o acesso via navegador.
-
-• Todo e-mail possui o símbolo @.
-
-</div>
-
 `
-
 },
 
 {
-    titulo: "📨 Estrutura de um E-mail",
+  titulo: "🔒 HTTP e HTTPS",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Os protocolos são as regras de comunicação na internet. O HTTP e o HTTPS são os protocolos responsáveis por trazer as páginas web do servidor até a sua tela.</p>
 
-    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 O QUE É HTTP?</h3>
+<p><strong>HyperText Transfer Protocol</strong> (Protocolo de Transferência de Hipertexto).</p>
+<p>A comunicação via HTTP é transmitida em texto puro. <span style="color: #DC3545; font-weight: bold;">❌ Não possui criptografia.</span> Se alguém interceptar a comunicação, conseguirá ler tudo (inclusive senhas).</p>
 
-<h3>📘 Principais Componentes de um E-mail</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 O QUE É HTTPS?</h3>
+<p><strong>HyperText Transfer Protocol SECURE</strong>.</p>
+<p>É a versão segura. O HTTPS utiliza <strong>Criptografia</strong> e um <strong>Certificado Digital</strong>. Ele embaralha os dados durante o trânsito. É indicado por um 🔒 <strong>cadeado de segurança</strong> na barra do navegador.</p>
 
-<p>
-Uma mensagem de correio eletrônico possui diversos campos que auxiliam no envio e organização das informações.
-</p>
-
-<p>
-Conhecer esses campos é fundamental para concursos públicos.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-As bancas adoram cobrar as diferenças entre Para, CC e CCO.
-
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE</h4>
+  <p><strong>HTTP</strong> = Texto Aberto (Inseguro).<br>
+  <strong>HTTP<span style="color: #28A745;">S</span></strong> = <span style="color: #28A745;">S</span>eguro, <span style="color: #28A745;">S</span>igiloso (Criptografado).</p>
 </div>
 
-<br><br>
-
-<h3>👤 Remetente</h3>
-
-<p>
-É a pessoa que envia a mensagem.
-</p>
-
-<p>
-Seu endereço de e-mail aparece automaticamente na mensagem enviada.
-</p>
-
-<br><br>
-
-<h3>👥 Destinatário (Para)</h3>
-
-<p>
-Campo utilizado para informar o principal destinatário da mensagem.
-</p>
-
-<p>
-É quem deverá receber diretamente o conteúdo enviado.
-</p>
-
-<br><br>
-
-<h3>📋 CC (Cópia Carbono)</h3>
-
-<p>
-Permite enviar uma cópia da mensagem para outras pessoas.
-</p>
-
-<p>
-Todos os destinatários conseguem visualizar quem recebeu a cópia.
-</p>
-
-<br>
-
-Exemplo:
-
-<ul>
-
-<li>João recebe a mensagem principal.</li>
-
-<li>Maria recebe uma cópia em CC.</li>
-
-<li>João consegue ver que Maria recebeu a cópia.</li>
-
-</ul>
-
-<br><br>
-
-<h3>🔒 CCO (Cópia Carbono Oculta)</h3>
-
-<p>
-Permite enviar uma cópia da mensagem de forma oculta.
-</p>
-
-<p>
-Os demais destinatários não conseguem visualizar quem recebeu a mensagem em CCO.
-</p>
-
-<br>
-
-Exemplo:
-
-<ul>
-
-<li>João recebe a mensagem principal.</li>
-
-<li>Maria recebe em CCO.</li>
-
-<li>João não sabe que Maria recebeu a mensagem.</li>
-
-</ul>
-
-<br><br>
-
-<h3>📝 Assunto</h3>
-
-<p>
-Campo utilizado para informar o tema ou objetivo da mensagem.
-</p>
-
-<p>
-Ajuda o destinatário a identificar rapidamente o conteúdo do e-mail.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-Assunto: Reunião Pedagógica
-
-</p>
-
-<br><br>
-
-<h3>📄 Corpo da Mensagem</h3>
-
-<p>
-É o local onde o texto principal da mensagem é digitado.
-</p>
-
-<p>
-Nele são inseridas informações, solicitações, avisos e demais conteúdos.
-</p>
-
-<br><br>
-
-<h3>📎 Anexo</h3>
-
-<p>
-Permite enviar arquivos juntamente com a mensagem.
-</p>
-
-<p>
-Podem ser anexados documentos, imagens, planilhas, apresentações e outros tipos de arquivos.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>📄 PDF</li>
-
-<li>📊 XLSX</li>
-
-<li>🖼 JPG</li>
-
-<li>🎞 PPTX</li>
-
-</ul>
-
-<br><br>
-
-<h3>📅 Data e Hora</h3>
-
-<p>
-Toda mensagem registra automaticamente a data e o horário de envio.
-</p>
-
-<p>
-Essas informações ajudam na organização e rastreamento das mensagens.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-
-De: professor@escola.com.br
-
-</p>
-
-<p>
-
-Para: aluno@escola.com.br
-
-</p>
-
-<p>
-
-CC: coordenacao@escola.com.br
-
-</p>
-
-<p>
-
-Assunto: Trabalho de Ciências
-
-</p>
-
-<p>
-
-Anexo: trabalho.pdf
-
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-PARA → Destinatário Principal
-
-CC → Todos veem
-
-CCO → Ninguém vê
-
-ASSUNTO → Tema da Mensagem
-
-ANEXO → Arquivo Enviado
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p>Muitas bancas afirmam que: <em>"O HTTPS impede completamente que um computador pegue vírus."</em><br>
+  <span style="color: #DC3545; font-weight: bold;">❌ Errado.</span> O HTTPS protege os dados "em trânsito" (no caminho do cabo/wifi). Ele não impede que você faça o download de um arquivo infectado ou seja vítima de engenharia social.</p>
 </div>
 
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-A pegadinha mais comum envolve CC e CCO.
-</p>
-
-<p>
-No campo CC, todos os destinatários conseguem visualizar quem recebeu a cópia.
-</p>
-
-<p>
-No campo CCO, os destinatários ocultos não são visualizados pelos demais participantes da mensagem.
-</p>
-
-<p>
-Outra pegadinha frequente é afirmar que o campo assunto é obrigatório.
-</p>
-
-<p>
-Na maioria dos serviços de e-mail ele pode ficar em branco, embora isso não seja recomendado.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Remetente = Quem envia.
-
-• Para = Destinatário principal.
-
-• CC = Cópia visível.
-
-• CCO = Cópia oculta.
-
-• Assunto = Tema da mensagem.
-
-• Corpo = Texto principal.
-
-• Anexo = Arquivo enviado.
-
-• CCO é uma das pegadinhas mais cobradas em concursos.
-
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li>🔓 <strong>HTTP:</strong> Protocolo base da web, sem criptografia.</li>
+    <li>🔒 <strong>HTTPS:</strong> Protocolo criptografado, usa certificado digital.</li>
+    <li>🔐 <strong>Função:</strong> Protege senhas e dados bancários durante o envio.</li>
+  </ul>
 </div>
-
 `
-
-},
-{
-    titulo: "👥 Grupos de Discussão",
-
-    conteudo: `
-
-<h3>📘 O que são Grupos de Discussão?</h3>
-
-<p>
-Grupos de discussão são ambientes virtuais criados para permitir a troca de informações, ideias, opiniões e conhecimentos entre pessoas com interesses em comum.
-</p>
-
-<p>
-Eles são amplamente utilizados para debates, estudos, suporte técnico, comunicação profissional e compartilhamento de experiências.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Os grupos de discussão permitem comunicação entre vários participantes ao mesmo tempo.
-
-</div>
-
-<br><br>
-
-<h3>🌐 Como Funcionam?</h3>
-
-<p>
-Os participantes enviam mensagens que podem ser visualizadas pelos demais membros do grupo.
-</p>
-
-<p>
-As respostas geram debates e discussões sobre determinado assunto.
-</p>
-
-<br><br>
-
-<h3>🧰 Principais Objetivos</h3>
-
-<ul>
-
-<li>Troca de conhecimentos</li>
-
-<li>Debates sobre temas específicos</li>
-
-<li>Compartilhamento de arquivos</li>
-
-<li>Resolução de dúvidas</li>
-
-<li>Colaboração entre usuários</li>
-
-</ul>
-
-<br><br>
-
-<h3>📧 Listas de Discussão</h3>
-
-<p>
-Uma lista de discussão é um grupo baseado em e-mail.
-</p>
-
-<p>
-Quando um participante envia uma mensagem para a lista, ela é distribuída automaticamente para todos os membros cadastrados.
-</p>
-
-<br><br>
-
-<h3>💬 Fóruns de Discussão</h3>
-
-<p>
-Os fóruns organizam mensagens em tópicos.
-</p>
-
-<p>
-Os participantes podem criar perguntas, responder mensagens e acompanhar debates sobre diferentes assuntos.
-</p>
-
-<br><br>
-
-<h3>📱 Grupos em Plataformas Digitais</h3>
-
-<p>
-Atualmente muitos grupos de discussão funcionam em plataformas de comunicação online.
-</p>
-
-<p>
-Esses ambientes permitem troca de mensagens, arquivos, imagens e vídeos.
-</p>
-
-<br><br>
-
-<h3>🎓 Uso Educacional</h3>
-
-<p>
-Em ambientes educacionais os grupos de discussão são utilizados para:
-</p>
-
-<ul>
-
-<li>Debater conteúdos estudados.</li>
-
-<li>Esclarecer dúvidas.</li>
-
-<li>Compartilhar materiais.</li>
-
-<li>Realizar trabalhos colaborativos.</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um grupo de professores pode utilizar um fórum para discutir estratégias de ensino e compartilhar materiais didáticos.
-</p>
-
-<p>
-Cada participante contribui com opiniões e experiências, enriquecendo o debate.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Grupo de Discussão
-
-⬇
-
-Troca de Ideias
-
-⬇
-
-Debates
-
-⬇
-
-Colaboração
-
-<br><br>
-
-Lista = E-mail
-
-Fórum = Tópicos
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Algumas bancas afirmam que grupos de discussão servem apenas para envio de mensagens.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-Além das mensagens, eles permitem debates, colaboração, compartilhamento de conhecimento e troca de arquivos.
-</p>
-
-<p>
-Outra pegadinha comum é confundir listas de discussão com fóruns.
-</p>
-
-<p>
-Listas utilizam e-mail como principal meio de comunicação, enquanto fóruns organizam mensagens em tópicos.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Grupos de discussão promovem troca de informações.
-
-• Permitem debates e colaboração.
-
-• Lista de discussão utiliza e-mail.
-
-• Fórum organiza mensagens em tópicos.
-
-• Muito utilizados em educação e trabalho.
-
-• Facilitam compartilhamento de conhecimento.
-
-</div>
-
-`
-
-},
-{
-    titulo: "☁️ Armazenamento em Nuvem",
-
-    conteudo: `
-
-<h3>📘 O que é Armazenamento em Nuvem?</h3>
-
-<p>
-Armazenamento em nuvem é um serviço que permite guardar arquivos em servidores conectados à Internet.
-</p>
-
-<p>
-Dessa forma, os dados podem ser acessados de diferentes dispositivos e locais, desde que exista conexão com a Internet.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Os arquivos não ficam armazenados apenas no computador do usuário, mas também em servidores remotos.
-
-</div>
-
-<br><br>
-
-<h3>☁️ O que Significa "Nuvem"?</h3>
-
-<p>
-O termo "nuvem" é utilizado para representar servidores e serviços disponíveis através da Internet.
-</p>
-
-<p>
-Na prática, os arquivos ficam armazenados em datacenters mantidos pelos provedores do serviço.
-</p>
-
-<br><br>
-
-<h3>🌐 Principais Serviços de Nuvem</h3>
-
-<ul>
-
-<li>Google Drive</li>
-
-<li>Microsoft OneDrive</li>
-
-<li>Dropbox</li>
-
-<li>iCloud</li>
-
-<li>Box</li>
-
-</ul>
-
-<br><br>
-
-<h3>📂 Principais Funcionalidades</h3>
-
-<ul>
-
-<li>Armazenar arquivos</li>
-
-<li>Compartilhar documentos</li>
-
-<li>Realizar backup</li>
-
-<li>Sincronizar dispositivos</li>
-
-<li>Acessar arquivos remotamente</li>
-
-<li>Trabalhar de forma colaborativa</li>
-
-</ul>
-
-<br><br>
-
-<h3>🔄 Sincronização</h3>
-
-<p>
-A sincronização mantém os arquivos atualizados entre diferentes dispositivos.
-</p>
-
-<p>
-Quando um documento é alterado em um equipamento, a alteração pode ser refletida automaticamente nos demais dispositivos conectados à mesma conta.
-</p>
-
-<br><br>
-
-<h3>🤝 Compartilhamento</h3>
-
-<p>
-Os serviços de nuvem permitem compartilhar arquivos e pastas com outras pessoas.
-</p>
-
-<p>
-Dependendo das permissões concedidas, os usuários podem apenas visualizar ou também editar os documentos.
-</p>
-
-<br><br>
-
-<h3>💾 Backup em Nuvem</h3>
-
-<p>
-Uma das principais vantagens da nuvem é a possibilidade de manter cópias de segurança dos arquivos.
-</p>
-
-<p>
-Caso o computador apresente problemas, os dados continuam armazenados nos servidores do serviço.
-</p>
-
-<br><br>
-
-<h3>📱 Acesso em Diversos Dispositivos</h3>
-
-<p>
-Os arquivos armazenados na nuvem podem ser acessados por computadores, tablets e smartphones.
-</p>
-
-<p>
-Basta realizar o login na conta do serviço utilizado.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um professor cria uma apostila no computador e a salva no Google Drive.
-</p>
-
-<p>
-Posteriormente, ele consegue acessar o mesmo arquivo pelo celular, tablet ou outro computador conectado à Internet.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Nuvem = Arquivos na Internet
-
-<br><br>
-
-Drive = Google
-
-OneDrive = Microsoft
-
-iCloud = Apple
-
-<br><br>
-
-Nuvem ≠ Disco Local
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Muitas bancas afirmam que os arquivos armazenados na nuvem ficam exclusivamente no computador do usuário.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-Os arquivos são armazenados em servidores remotos acessados através da Internet.
-</p>
-
-<p>
-Outra pegadinha comum é afirmar que a nuvem serve apenas para armazenamento.
-</p>
-
-<p>
-Além de armazenar, ela também permite compartilhamento, sincronização, backup e colaboração.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Nuvem permite armazenar arquivos pela Internet.
-
-• Os arquivos ficam em servidores remotos.
-
-• Permite backup e sincronização.
-
-• Facilita o compartilhamento de documentos.
-
-• Pode ser acessada por vários dispositivos.
-
-• Exemplos: Google Drive, OneDrive, Dropbox e iCloud.
-
-</div>
-
-`
-
 },
 
 {
-    titulo: "🔎 Busca e Pesquisa na Internet",
+  titulo: "📧 Correio Eletrônico e Campos (Para, CC, CCO)",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>O Correio Eletrônico (E-mail) é o serviço de troca de mensagens assíncronas mais cobrado em provas. Conhecer a estrutura de envio é obrigatório para gabaritar Informática.</p>
 
-    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 ESTRUTURA DO ENDEREÇO</h3>
+<p><code>usuario@dominio.com.br</code></p>
+<p>O símbolo <strong>@ (arroba)</strong> é obrigatório e separa o nome do usuário do servidor/domínio que ele utiliza.</p>
 
-<h3>📘 O que é Busca na Internet?</h3>
-
-<p>
-A busca na Internet é o processo de localizar informações utilizando mecanismos de pesquisa.
-</p>
-
-<p>
-Essas ferramentas permitem encontrar páginas, imagens, vídeos, documentos e diversos conteúdos disponíveis na Web.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O mecanismo de busca não é a Internet. Ele é apenas um serviço utilizado para localizar informações na Internet.
-
-</div>
-
-<br><br>
-
-<h3>🔍 Motores de Busca</h3>
-
-<p>
-Os motores de busca são sistemas responsáveis por localizar conteúdos na Web a partir das palavras digitadas pelo usuário.
-</p>
-
-<br>
-
-Exemplos:
-
+<h3 style="color: #E67E22; margin-top: 20px;">📌 CAMPOS DE ENVIO (O QUE CAI NA PROVA!)</h3>
 <ul>
-
-<li>Google</li>
-
-<li>Bing</li>
-
-<li>Yahoo Search</li>
-
-<li>DuckDuckGo</li>
-
+  <li>👤 <strong>Para (To):</strong> Destinatário principal da mensagem.</li>
+  <li>📋 <strong>CC (Cópia Carbono):</strong> Envia uma cópia. Todos os destinatários conseguem ver quem está no campo CC.</li>
+  <li>🔒 <strong>CCO (Cópia Carbono Oculta):</strong> Também chamado de BCC em inglês. Quem está no CCO recebe uma cópia, mas <strong>fica invisível</strong> para os demais recipientes (tanto do Para, quanto do CC).</li>
 </ul>
 
-<br><br>
-
-<h3>⚙️ Como Funciona uma Pesquisa?</h3>
-
-<p>
-O usuário digita uma ou mais palavras-chave no campo de pesquisa.
-</p>
-
-<p>
-O mecanismo de busca procura páginas relacionadas e apresenta os resultados mais relevantes.
-</p>
-
-<br><br>
-
-<h3>🔑 Palavras-Chave</h3>
-
-<p>
-Palavras-chave são os termos utilizados para realizar uma pesquisa.
-</p>
-
-<p>
-Quanto mais específicas forem as palavras utilizadas, mais precisos tendem a ser os resultados.
-</p>
-
-<br>
-
-Exemplo:
-
+<h3 style="color: #E67E22; margin-top: 20px;">📌 OUTROS TERMOS</h3>
 <ul>
-
-<li>Informática</li>
-
-<li>Concurso informática</li>
-
-<li>Conceitos de Internet para concursos</li>
-
+  <li>📎 <strong>Anexo:</strong> Permite adicionar arquivos (PDF, imagens, planilhas) à mensagem.</li>
+  <li>🌍 <strong>Webmail:</strong> Quando você acessa seu e-mail direto pelo navegador (ex: abrir o gmail.com no Chrome), sem usar um programa instalado (como o Outlook).</li>
 </ul>
 
-<br><br>
-
-<h3>📄 Resultados da Pesquisa</h3>
-
-<p>
-Após a pesquisa, o mecanismo apresenta uma lista de resultados contendo:
-</p>
-
-<ul>
-
-<li>Título da página</li>
-
-<li>Endereço (URL)</li>
-
-<li>Descrição resumida</li>
-
-</ul>
-
-<br><br>
-
-<h3>🖼 Pesquisa por Imagens</h3>
-
-<p>
-Os mecanismos de busca também permitem localizar imagens relacionadas ao assunto pesquisado.
-</p>
-
-<p>
-Esse recurso é bastante utilizado em pesquisas acadêmicas e profissionais.
-</p>
-
-<br><br>
-
-<h3>🎥 Pesquisa por Vídeos</h3>
-
-<p>
-Além de páginas e imagens, também é possível localizar vídeos relacionados ao tema pesquisado.
-</p>
-
-<br><br>
-
-<h3>📚 Avaliação das Fontes</h3>
-
-<p>
-Nem toda informação encontrada na Internet é confiável.
-</p>
-
-<p>
-É importante verificar a origem do conteúdo, a data de publicação e a credibilidade da fonte consultada.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um estudante deseja pesquisar sobre segurança da informação.
-</p>
-
-<p>
-Ao digitar:
-</p>
-
-<p>
-
-segurança da informação
-
-</p>
-
-<p>
-O mecanismo de busca apresentará páginas relacionadas ao tema pesquisado.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Pesquisa Melhor
-
-⬇
-
-Palavras Mais Específicas
-
-⬇
-
-Resultados Mais Precisos
-
-<br><br>
-
-Google ≠ Internet
-
-Google = Mecanismo de Busca
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p>A banca relata uma situação: <em>"João enviou um e-mail PARA Maria, com CC para José, e CCO para Ana e Pedro."</em><br>
+  - Maria e José não sabem que Ana e Pedro receberam o e-mail.<br>
+  - Ana não sabe que Pedro recebeu o e-mail (quem está no CCO não enxerga os outros do próprio CCO!).<br>
+  - Porém, Ana e Pedro sabem que Maria e José receberam (pois enxergam o Para e o CC).</p>
 </div>
 
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma pegadinha muito comum é afirmar que Google é sinônimo de Internet.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-Google é um mecanismo de busca utilizado para localizar informações na Internet.
-</p>
-
-<p>
-A Internet é a rede mundial de computadores.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Motores de busca localizam informações na Web.
-
-• Google, Bing e Yahoo são exemplos.
-
-• Pesquisas utilizam palavras-chave.
-
-• É possível pesquisar páginas, imagens e vídeos.
-
-• Nem toda informação encontrada é confiável.
-
-• Google não é sinônimo de Internet.
-
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li>👁️ <strong>Para / CC:</strong> Destinatários visíveis e expostos.</li>
+    <li>👻 <strong>CCO:</strong> Destinatário invisível para todos os outros.</li>
+    <li>⚠️ <strong>Assunto:</strong> Não é um campo obrigatório para envio (mas é recomendado).</li>
+  </ul>
 </div>
-
 `
-
 },
+
 {
-    titulo: "🎯 Operadores de Pesquisa",
+  titulo: "☁️ Armazenamento em Nuvem e Colaboração",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Os conceitos de Cloud Computing (Computação em Nuvem) e ferramentas de trabalho em equipe substituíram o antigo modelo de salvar tudo no pendrive.</p>
 
-    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 ARMAZENAMENTO EM NUVEM</h3>
+<p>Significa armazenar arquivos em grandes <strong>servidores remotos</strong> acessados através da Internet, em vez de salvar exclusivamente no disco local do computador.</p>
+<p><strong>Exemplos Famosos:</strong> Google Drive, Microsoft OneDrive, Dropbox, Apple iCloud.</p>
+<p><strong>Vantagens:</strong> Acesso de qualquer lugar do mundo, backup automático contra quebra do PC físico e sincronização entre celular e PC.</p>
 
-<h3>📘 O que são Operadores de Pesquisa?</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 FERRAMENTAS DE COLABORAÇÃO</h3>
+<p>Plataformas que permitem que várias pessoas trabalhem <strong>juntas e simultaneamente</strong> no mesmo documento pela Internet.</p>
+<ul>
+  <li>📄 <strong>Google Docs / Microsoft 365:</strong> Vários usuários podem digitar no mesmo texto ao mesmo tempo, vendo o cursor do colega.</li>
+  <li>🔄 <strong>Controle de Versão:</strong> Salva o histórico de tudo. Se alguém apagar algo sem querer, é possível restaurar o que foi feito ontem.</li>
+</ul>
 
-<p>
-Operadores de pesquisa são comandos especiais utilizados nos mecanismos de busca para tornar os resultados mais precisos.
-</p>
-
-<p>
-Eles ajudam o usuário a encontrar informações específicas de forma mais rápida e eficiente.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Os operadores refinam a pesquisa e reduzem a quantidade de resultados irrelevantes.
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> A edição de documentos em nuvem só pode ser feita por uma pessoa por vez, bloqueando o acesso para os demais. / <span style="color: #28A745; font-weight: bold;">✔</span> Falso. A principal característica moderna é a <strong>edição simultânea</strong> (colaboração em tempo real).</p>
 </div>
 
-<br><br>
-
-<h3>🔍 Pesquisa por Frase Exata</h3>
-
-<p>
-As aspas (" ") são utilizadas para localizar uma frase exatamente como foi digitada.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-"segurança da informação"
-
-</p>
-
-<br>
-
-<p>
-O mecanismo retornará páginas contendo exatamente essa expressão.
-</p>
-
-<br><br>
-
-<h3>➖ Operador de Exclusão</h3>
-
-<p>
-O sinal de menos (-) permite excluir palavras dos resultados.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-python -cobra
-
-</p>
-
-<br>
-
-<p>
-A pesquisa buscará conteúdos sobre a linguagem Python, excluindo resultados relacionados ao animal cobra.
-</p>
-
-<br><br>
-
-<h3>➕ Pesquisa Combinada</h3>
-
-<p>
-Ao utilizar várias palavras-chave, o mecanismo procura páginas relacionadas aos termos informados.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-informática concursos
-
-</p>
-
-<br><br>
-
-<h3>🌐 Operador Site:</h3>
-
-<p>
-Permite pesquisar informações dentro de um site específico.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-segurança site:gov.br
-
-</p>
-
-<br>
-
-<p>
-A busca retornará apenas resultados encontrados em sites do domínio gov.br.
-</p>
-
-<br><br>
-
-<h3>📄 Operador Filetype:</h3>
-
-<p>
-Permite localizar arquivos de um tipo específico.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-informática filetype:pdf
-
-</p>
-
-<br>
-
-<p>
-A pesquisa retornará principalmente arquivos PDF relacionados ao tema.
-</p>
-
-<br><br>
-
-<h3>🔗 Operador Related:</h3>
-
-<p>
-Permite localizar sites semelhantes a outro site informado.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-related:wikipedia.org
-
-</p>
-
-<br>
-
-<p>
-O mecanismo tentará apresentar páginas semelhantes à Wikipédia.
-</p>
-
-<br><br>
-
-<h3>📝 Pesquisa por Título</h3>
-
-<p>
-Alguns mecanismos permitem pesquisar palavras que aparecem especificamente no título das páginas.
-</p>
-
-<p>
-Esse recurso ajuda a encontrar conteúdos mais relevantes sobre determinado assunto.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um candidato deseja encontrar apostilas em PDF sobre Internet.
-</p>
-
-<p>
-Ele pode pesquisar:
-</p>
-
-<p>
-
-internet concursos filetype:pdf
-
-</p>
-
-<p>
-Os resultados terão maior chance de apresentar materiais em formato PDF.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-"texto"
-
-➡ Pesquisa Exata
-
-<br><br>
-
-- palavra
-
-➡ Excluir Palavra
-
-<br><br>
-
-site:
-
-➡ Pesquisar em um Site
-
-<br><br>
-
-filetype:
-
-➡ Procurar Arquivos
-
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li>☁️ <strong>Nuvem:</strong> Arquivos salvos em datacenters via Internet.</li>
+    <li>🔄 <strong>Sincronização:</strong> Altera no celular, muda no PC automaticamente.</li>
+    <li>🤝 <strong>Colaboração:</strong> Trabalho em equipe, em tempo real, no mesmo arquivo.</li>
+  </ul>
 </div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Muitas bancas apresentam operadores de pesquisa como se fossem recursos exclusivos do navegador.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-Os operadores são recursos dos mecanismos de busca, como Google e Bing.
-</p>
-
-<p>
-Outra pegadinha comum é confundir o operador site: com URL ou domínio.
-</p>
-
-<p>
-O operador site: apenas restringe os resultados a determinado domínio ou site.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Operadores refinam pesquisas.
-
-• "texto" → Pesquisa exata.
-
-• -palavra → Exclui termo.
-
-• site: → Pesquisa em site específico.
-
-• filetype: → Pesquisa arquivos.
-
-• Operadores pertencem aos mecanismos de busca.
-
-• Tornam os resultados mais precisos.
-
-</div>
-
 `
-
 },
+
 {
-    titulo: "💬 Plataformas de Comunicação",
+  titulo: "🔎 Motores de Busca e Operadores de Pesquisa",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Saber utilizar o Google e o Bing de forma inteligente é uma habilidade amplamente testada em provas de cargos administrativos.</p>
 
-    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 O QUE SÃO MOTORES DE BUSCA?</h3>
+<p>São sistemas encarregados de vasculhar a Web indexando e ranqueando páginas a partir das <strong>palavras-chave</strong> digitadas pelo usuário (Google, Bing, DuckDuckGo).</p>
 
-<h3>📘 O que são Plataformas de Comunicação?</h3>
-
-<p>
-Plataformas de comunicação são serviços digitais que permitem a troca de informações entre pessoas através da Internet.
-</p>
-
-<p>
-Elas possibilitam o envio de mensagens, realização de chamadas de voz, videoconferências e compartilhamento de arquivos.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-As plataformas de comunicação tornaram-se essenciais para atividades profissionais, acadêmicas e pessoais.
-
-</div>
-
-<br><br>
-
-<h3>🌐 Principais Formas de Comunicação</h3>
-
+<h3 style="color: #E67E22; margin-top: 20px;">📌 OPERADORES DE PESQUISA (O SEGREDO DAS PROVAS)</h3>
+<p>São comandos que você digita na barra do Google para refinar/filtrar os resultados.</p>
 <ul>
-
-<li>💬 Mensagens instantâneas</li>
-
-<li>📧 Correio eletrônico (e-mail)</li>
-
-<li>📞 Chamadas de voz</li>
-
-<li>🎥 Videoconferências</li>
-
-<li>📂 Compartilhamento de arquivos</li>
-
+  <li><strong>Aspas Duplas (" ")</strong> → Pesquisa pela frase <strong>exata</strong>. Ex: <code>"concurso público 2026"</code> (Obrigará o Google a achar as palavras exatamente nessa ordem).</li>
+  <li><strong>Sinal de Menos (-)</strong> → <strong>Exclui</strong> uma palavra dos resultados. Ex: <code>jaguar -carro</code> (Busca o animal jaguar e tira páginas que falam do carro Jaguar).</li>
+  <li><strong>site:</strong> → Pesquisa apenas dentro de um <strong>domínio específico</strong>. Ex: <code>edital site:gov.br</code> (Só trará resultados governamentais).</li>
+  <li><strong>filetype:</strong> → Busca um <strong>tipo de arquivo</strong> específico. Ex: <code>matemática filetype:pdf</code> (Só trará downloads em PDF, filtrando páginas normais).</li>
 </ul>
 
-<br><br>
-
-<h3>📱 Mensagens Instantâneas</h3>
-
-<p>
-Permitem a troca de mensagens em tempo real entre usuários conectados à Internet.
-</p>
-
-<p>
-São amplamente utilizadas para comunicação rápida e prática.
-</p>
-
-<br><br>
-
-<h3>🎥 Videoconferência</h3>
-
-<p>
-A videoconferência permite a comunicação utilizando áudio e vídeo simultaneamente.
-</p>
-
-<p>
-Esse recurso é muito utilizado em reuniões, aulas online e treinamentos.
-</p>
-
-<br><br>
-
-<h3>📞 Chamadas de Voz pela Internet</h3>
-
-<p>
-Muitas plataformas permitem realizar chamadas utilizando a conexão com a Internet.
-</p>
-
-<p>
-Essa tecnologia é conhecida como VoIP (Voice over Internet Protocol).
-</p>
-
-<br><br>
-
-<h3>📂 Compartilhamento de Arquivos</h3>
-
-<p>
-As plataformas modernas permitem enviar documentos, imagens, vídeos e outros arquivos durante a comunicação.
-</p>
-
-<p>
-Esse recurso facilita o trabalho em equipe e a colaboração.
-</p>
-
-<br><br>
-
-<h3>🏫 Comunicação na Educação</h3>
-
-<p>
-Instituições de ensino utilizam plataformas de comunicação para:
-</p>
-
-<ul>
-
-<li>Realizar aulas online.</li>
-
-<li>Compartilhar materiais.</li>
-
-<li>Esclarecer dúvidas.</li>
-
-<li>Promover reuniões virtuais.</li>
-
-</ul>
-
-<br><br>
-
-<h3>🏢 Comunicação nas Empresas</h3>
-
-<p>
-Empresas utilizam essas ferramentas para:
-</p>
-
-<ul>
-
-<li>Reuniões remotas.</li>
-
-<li>Treinamentos.</li>
-
-<li>Atendimento ao cliente.</li>
-
-<li>Comunicação entre equipes.</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Uma equipe de trabalho pode utilizar uma plataforma de comunicação para realizar uma reunião virtual, compartilhar documentos e trocar mensagens em tempo real.
-</p>
-
-<p>
-Isso reduz deslocamentos e aumenta a produtividade.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Comunicação Online
-
-⬇
-
-Mensagem
-
-⬇
-
-Áudio
-
-⬇
-
-Vídeo
-
-⬇
-
-Arquivos
-
-<br><br>
-
-Tudo pela Internet
-
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p>As bancas muitas vezes inventam operadores, como <code>only:</code> ou <code>type:</code>. Memorize os operadores corretos oficiais: <strong>site:</strong> e <strong>filetype:</strong>.</p>
 </div>
 
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma pegadinha comum é afirmar que plataformas de comunicação servem apenas para troca de mensagens.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-Além das mensagens, elas podem oferecer chamadas de voz, videoconferências, compartilhamento de arquivos e colaboração em tempo real.
-</p>
-
-<p>
-Outra pegadinha frequente é confundir comunicação síncrona com assíncrona.
-</p>
-
-<p>
-Videoconferências normalmente são síncronas (em tempo real), enquanto e-mails são assíncronos (não exigem resposta imediata).
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Plataformas de comunicação permitem interação pela Internet.
-
-• Possibilitam mensagens, áudio e vídeo.
-
-• Permitem compartilhamento de arquivos.
-
-• São utilizadas em empresas e escolas.
-
-• VoIP permite chamadas pela Internet.
-
-• Comunicação pode ser síncrona ou assíncrona.
-
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li>🔎 <strong>" " (Aspas)</strong> = Correspondência Exata.</li>
+    <li>➖ <strong>- (Hífen/Menos)</strong> = Remoção de termo.</li>
+    <li>🌐 <strong>site:</strong> = Limita a busca a uma URL.</li>
+    <li>📄 <strong>filetype:</strong> = Traz apenas formatos específicos (PDF, DOCX).</li>
+  </ul>
 </div>
-
 `
-
 },
+
 {
-    titulo: "🤝 Ferramentas de Colaboração",
+  titulo: "💬 Redes Sociais e Comunicação (Síncrona x Assíncrona)",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>No ambiente corporativo e pessoal, as comunicações online dividem-se em dois grandes conceitos de tempo e resposta.</p>
 
-    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 COMUNICAÇÃO SÍNCRONA</h3>
+<p>Ocorre em <strong>tempo real</strong>. Os usuários devem estar conectados e participando ao mesmo tempo.</p>
+<p><strong>Exemplos:</strong> Chat ao vivo, Chamadas de Voz (VoIP), Videoconferências (Zoom, Google Meet), Mensagens Instantâneas de reposta rápida (WhatsApp).</p>
 
-<h3>📘 O que são Ferramentas de Colaboração?</h3>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 COMUNICAÇÃO ASSÍNCRONA</h3>
+<p>Não ocorre em tempo real. O emissor envia a mensagem e o receptor pode ler e responder horas ou dias depois.</p>
+<p><strong>Exemplos:</strong> Correio Eletrônico (E-mail), Fóruns de Discussão, Grupos de E-mail (Listas).</p>
 
-<p>
-Ferramentas de colaboração são plataformas que permitem que várias pessoas trabalhem juntas em documentos, projetos e atividades através da Internet.
-</p>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 REDES SOCIAIS VS MENSAGEIROS</h3>
+<ul>
+  <li><strong>Redes Sociais:</strong> Foco em compartilhamento de conteúdo público/semipúblico e criação de perfis (Instagram, LinkedIn, X/Twitter). Maior viés Assíncrono.</li>
+  <li><strong>Mensageiros:</strong> Foco na comunicação instantânea direta "1 para 1" ou "1 para poucos" (WhatsApp, Telegram). Maior viés Síncrono.</li>
+</ul>
 
-<p>
-Essas ferramentas facilitam a comunicação, o compartilhamento de informações e o trabalho em equipe.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Uma das principais características das ferramentas de colaboração é permitir que várias pessoas trabalhem no mesmo documento simultaneamente.
-
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE</h4>
+  <p><strong>S</strong>íncrono = <strong>S</strong>imultâneo (Ao vivo).<br>
+  <strong>A</strong>ssíncrono = <strong>A</strong>trasado (No próprio tempo do usuário).</p>
 </div>
 
-<br><br>
-
-<h3>🌐 Colaboração em Tempo Real</h3>
-
-<p>
-A colaboração em tempo real permite que diversos usuários visualizem e editem um documento ao mesmo tempo.
-</p>
-
-<p>
-As alterações realizadas aparecem automaticamente para todos os participantes.
-</p>
-
-<br><br>
-
-<h3>📄 Google Docs</h3>
-
-<p>
-O Google Docs é uma ferramenta online utilizada para criação e edição colaborativa de documentos de texto.
-</p>
-
-<p>
-Diversos usuários podem trabalhar simultaneamente no mesmo arquivo.
-</p>
-
-<br><br>
-
-<h3>📊 Google Sheets</h3>
-
-<p>
-O Google Sheets é a planilha eletrônica da plataforma Google.
-</p>
-
-<p>
-Permite cálculos, gráficos e edição colaborativa em tempo real.
-</p>
-
-<br><br>
-
-<h3>🎞 Google Slides</h3>
-
-<p>
-O Google Slides é utilizado para criação de apresentações online.
-</p>
-
-<p>
-Vários usuários podem colaborar na mesma apresentação simultaneamente.
-</p>
-
-<br><br>
-
-<h3>☁️ Microsoft 365</h3>
-
-<p>
-O Microsoft 365 oferece versões online dos aplicativos Word, Excel e PowerPoint.
-</p>
-
-<p>
-Essas versões permitem compartilhamento e colaboração pela Internet.
-</p>
-
-<br><br>
-
-<h3>📂 OneDrive</h3>
-
-<p>
-O OneDrive é o serviço de armazenamento em nuvem da Microsoft.
-</p>
-
-<p>
-Ele permite armazenar, sincronizar e compartilhar arquivos entre diferentes dispositivos e usuários.
-</p>
-
-<br><br>
-
-<h3>🔄 Controle de Versões</h3>
-
-<p>
-Muitas ferramentas de colaboração registram alterações realizadas nos documentos.
-</p>
-
-<p>
-Isso permite recuperar versões anteriores quando necessário.
-</p>
-
-<br><br>
-
-<h3>👥 Compartilhamento de Arquivos</h3>
-
-<p>
-Os documentos podem ser compartilhados através de links ou permissões específicas.
-</p>
-
-<p>
-O proprietário pode definir quem poderá visualizar, comentar ou editar o conteúdo.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Uma equipe de professores pode criar uma prova utilizando o Google Docs.
-</p>
-
-<p>
-Cada professor edita partes diferentes do documento e todas as alterações aparecem em tempo real para os demais participantes.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Google Docs → Texto
-
-Google Sheets → Planilha
-
-Google Slides → Apresentação
-
-<br><br>
-
-Microsoft 365
-
-⬇
-
-Word Online
-
-Excel Online
-
-PowerPoint Online
-
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li>⚡ <strong>Síncrono:</strong> Zoom, Chat online, Ligação de áudio.</li>
+    <li>🐌 <strong>Assíncrono:</strong> E-mail, Fórum corporativo.</li>
+  </ul>
 </div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma pegadinha comum é afirmar que apenas uma pessoa pode editar um documento compartilhado.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-As ferramentas colaborativas permitem que várias pessoas trabalhem simultaneamente no mesmo arquivo.
-</p>
-
-<p>
-Outra pegadinha frequente é afirmar que colaboração online exige que os usuários estejam utilizando o mesmo computador.
-</p>
-
-<p>
-Na verdade, cada participante pode acessar o documento de dispositivos diferentes conectados à Internet.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Ferramentas de colaboração permitem trabalho em equipe.
-
-• Possuem edição em tempo real.
-
-• Google Docs → Texto.
-
-• Google Sheets → Planilhas.
-
-• Google Slides → Apresentações.
-
-• Microsoft 365 oferece colaboração online.
-
-• OneDrive permite compartilhamento e sincronização.
-
-• Vários usuários podem editar o mesmo documento simultaneamente.
-
-</div>
-
 `
-
 },
+
 {
-    titulo: "📱 Redes Sociais e Mensageiros",
+  titulo: "📝 Questões Comentadas - Parte 1",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 HORA DE PRATICAR: QUESTÕES DE CONCURSOS</h2>
+<p>Vamos testar os conceitos fundamentais da Internet que acabamos de revisar através de questões reais de provas.</p>
 
-    conteudo: `
+<hr style="margin: 30px 0;">
 
-<h3>📘 O que são Redes Sociais?</h3>
-
-<p>
-Redes sociais são plataformas digitais que permitem a interação entre pessoas, empresas e organizações através da Internet.
-</p>
-
-<p>
-Elas possibilitam a criação de perfis, compartilhamento de conteúdos e comunicação entre usuários.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-As redes sociais têm como objetivo principal promover a interação e o compartilhamento de informações entre usuários.
-
+<h3 style="color: #8E44AD;">📌 Questão 1 (CEBRASPE)</h3>
+<p><strong>Julgue o item a seguir:</strong><br>
+Embora muitas vezes sejam tratados como sinônimos pelos usuários em geral, a Internet e a World Wide Web (WWW) possuem conceitos distintos tecnicamente, sendo a Web um sistema de informações navegáveis que opera sobre a infraestrutura global da Internet.</p>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ CERTO</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Perfeito! A banca exigiu o conhecimento técnico clássico. A <strong>Internet</strong> é a rede gigantesca de cabos, servidores e conexões (infraestrutura). A <strong>Web (WWW)</strong> é o serviço de sites HTML e navegação hipertexto que utiliza a Internet para funcionar.
 </div>
 
-<br><br>
+<hr style="margin: 30px 0;">
 
-<h3>🌐 Principais Redes Sociais</h3>
-
-<ul>
-
-<li>📘 Facebook</li>
-
-<li>📸 Instagram</li>
-
-<li>💼 LinkedIn</li>
-
-<li>🎵 TikTok</li>
-
-<li>🐦 X (antigo Twitter)</li>
-
+<h3 style="color: #8E44AD;">📌 Questão 2 (FGV)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Nos navegadores modernos, a utilização do modo de Navegação Anônima (ou Navegação InPrivate) tem o efeito prático de:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) mascarar o endereço IP do usuário na Internet, tornando-o totalmente invisível aos provedores de acesso.</li>
+  <li>B) impedir a contaminação do sistema operacional por qualquer tipo de vírus ou malware.</li>
+  <li><strong>C) não salvar, no computador local, o histórico de navegação, cookies e dados de formulários após o fechamento da janela.</strong></li>
+  <li>D) criptografar obrigatoriamente todas as requisições HTTP transformando-as nativamente em HTTPS.</li>
+  <li>E) bloquear o envio de mensagens de e-mail maliciosas.</li>
 </ul>
-
-<br><br>
-
-<h3>📱 O que são Mensageiros Instantâneos?</h3>
-
-<p>
-Mensageiros instantâneos são aplicativos que permitem a troca de mensagens em tempo real através da Internet.
-</p>
-
-<p>
-Além de mensagens de texto, também podem transmitir áudio, vídeo, imagens e documentos.
-</p>
-
-<br><br>
-
-<h3>💬 Principais Mensageiros</h3>
-
-<ul>
-
-<li>WhatsApp</li>
-
-<li>Telegram</li>
-
-<li>Messenger</li>
-
-<li>Signal</li>
-
-</ul>
-
-<br><br>
-
-<h3>📤 Compartilhamento de Conteúdo</h3>
-
-<p>
-As redes sociais permitem compartilhar diversos tipos de conteúdo:
-</p>
-
-<ul>
-
-<li>Textos</li>
-
-<li>Fotos</li>
-
-<li>Vídeos</li>
-
-<li>Links</li>
-
-<li>Documentos</li>
-
-</ul>
-
-<br><br>
-
-<h3>👥 Comunicação Síncrona e Assíncrona</h3>
-
-<p>
-
-<strong>Comunicação Síncrona:</strong>
-
-ocorre em tempo real.
-
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>Chamadas de vídeo</li>
-
-<li>Chamadas de voz</li>
-
-<li>Chat online</li>
-
-</ul>
-
-<br>
-
-<p>
-
-<strong>Comunicação Assíncrona:</strong>
-
-não exige resposta imediata.
-
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>E-mail</li>
-
-<li>Comentários em redes sociais</li>
-
-<li>Publicações em fóruns</li>
-
-</ul>
-
-<br><br>
-
-<h3>🔒 Cuidados de Segurança</h3>
-
-<p>
-Ao utilizar redes sociais e aplicativos de mensagens é importante adotar boas práticas de segurança.
-</p>
-
-<ul>
-
-<li>Utilizar senhas fortes.</li>
-
-<li>Ativar autenticação em dois fatores.</li>
-
-<li>Evitar compartilhar informações sensíveis.</li>
-
-<li>Desconfiar de links suspeitos.</li>
-
-<li>Manter aplicativos atualizados.</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Uma escola pode utilizar grupos em aplicativos de mensagens para comunicação com professores e alunos.
-</p>
-
-<p>
-Também pode utilizar redes sociais para divulgar eventos, avisos e atividades educacionais.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Rede Social
-
-⬇
-
-Interação e Compartilhamento
-
-<br><br>
-
-Mensageiro
-
-⬇
-
-Comunicação Instantânea
-
-<br><br>
-
-E-mail = Assíncrono
-
-Chat = Síncrono
-
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> O modo anônimo age apenas <strong>localmente</strong>. Ele serve para você acessar um PC que não é seu e não deixar rastros da sua navegação ou do seu login *naquela máquina*. Ele não fornece anonimato contra o seu Provedor de Internet nem contra o dono da rede.
 </div>
 
-<br><br>
+<hr style="margin: 30px 0;">
 
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma pegadinha comum é afirmar que toda comunicação pela Internet ocorre em tempo real.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-Existem formas de comunicação síncrona (tempo real) e assíncrona (sem necessidade de resposta imediata).
-</p>
-
-<p>
-Outra pegadinha frequente é confundir redes sociais com mensageiros instantâneos.
-</p>
-
-<p>
-Embora possam possuir funções semelhantes, seus objetivos principais são diferentes.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Redes sociais promovem interação entre usuários.
-
-• Facebook, Instagram e LinkedIn são exemplos.
-
-• Mensageiros permitem comunicação instantânea.
-
-• WhatsApp e Telegram são exemplos.
-
-• Comunicação pode ser síncrona ou assíncrona.
-
-• É importante adotar boas práticas de segurança.
-
+<h3 style="color: #8E44AD;">📌 Questão 3 (VUNESP)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Ao acessar a página de um banco, um usuário percebeu que a URL iniciava com "https://" e possuía a figura de um cadeado fechado. Essa nomenclatura "HTTPS" indica que:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) O banco não cobra taxas nas transferências pelo aplicativo.</li>
+  <li>B) O endereço utiliza o protocolo de transferência de hipertexto sem autenticação.</li>
+  <li><strong>C) A comunicação entre o navegador do usuário e o servidor web é criptografada, oferecendo maior segurança.</strong></li>
+  <li>D) O site está imune a vírus.</li>
+  <li>E) O servidor web está alocado fisicamente no Brasil.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> O "S" do HTTPS vem de Secure (Seguro). Ele atua criando um túnel criptografado entre o PC do usuário e o Banco, protegendo dados como CPF e senhas contra interceptação de hackers no meio do caminho.
 </div>
 
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 4 (FCC)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Na elaboração de uma mensagem de e-mail, preencher endereços no campo CCO (Cópia Oculta) possui a finalidade específica de:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) Permitir que os anexos fiquem invisíveis para o destinatário principal.</li>
+  <li><strong>B) Enviar cópias da mensagem para outras pessoas sem que os demais destinatários saibam quem são elas.</strong></li>
+  <li>C) Criptografar o texto da mensagem.</li>
+  <li>D) Encaminhar a mensagem apenas quando todos os usuários entrarem online.</li>
+  <li>E) Ocultar a identidade do próprio remetente.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra B</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Esse é o conceito clássico do campo CCO (BCC em inglês). O campo garante a privacidade dos contatos da lista, pois os nomes e e-mails de quem está no CCO ficam totalmente ocultos dos que estão no Para e no CC.
+</div>
 `
-
 },
+
 {
-    titulo: "🚨 Revisão Geral e Pegadinhas",
+  titulo: "📝 Questões Comentadas - Parte 2",
+  conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 MAIS QUESTÕES DE CONCURSOS PARA FIXAÇÃO</h2>
+<p>Aprofundando os conhecimentos em ferramentas de busca, colaboração e tipos de comunicação.</p>
 
-    conteudo: `
+<hr style="margin: 30px 0;">
 
-<h3>📘 Revisão Geral do Módulo Internet</h3>
-
-<p>
-Neste módulo estudamos os principais conceitos relacionados à Internet, navegação, comunicação, pesquisa, armazenamento em nuvem e colaboração online.
-</p>
-
-<p>
-Esses assuntos são frequentemente cobrados em concursos públicos e provas de informática.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Grande parte das questões de concurso explora diferenças entre conceitos parecidos.
-
+<h3 style="color: #8E44AD;">📌 Questão 5 (CEBRASPE)</h3>
+<p><strong>Julgue o item a seguir:</strong><br>
+Os serviços de armazenamento em nuvem (como o Google Drive e o Microsoft OneDrive) exigem que o usuário tenha um disco rígido local (HD) com espaço disponível igual ou superior ao tamanho dos arquivos guardados na nuvem para realizar a salvaguarda de forma exclusiva.</p>
+<p><strong>Gabarito:</strong> <span style="color: #DC3545; font-weight: bold; background-color: #F8D7DA; padding: 3px 8px; border-radius: 4px;">❌ ERRADO</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> A premissa do armazenamento em nuvem é justamente poupar o espaço do disco rígido local do usuário. Você pode armazenar 100GB de dados nos servidores do Google Drive mesmo se tiver um celular ou PC que conte apenas com 32GB de memória interna.
 </div>
 
-<br><br>
-
-<h3>🌐 Internet x Web (WWW)</h3>
-
-<p>
-
-<strong>Internet:</strong>
-
-Rede mundial de computadores.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Web (WWW):</strong>
-
-Serviço que funciona sobre a Internet.
-
-</p>
-
-<br>
-
-<p>
-A Internet é a infraestrutura.
-</p>
-
-<p>
-A Web é apenas um dos serviços disponíveis na Internet.
-</p>
-
-<br><br>
-
-<h3>🖥️ Página Web x Site x Portal</h3>
-
-<p>
-
-<strong>Página Web:</strong>
-
-Documento individual.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Site:</strong>
-
-Conjunto de páginas web.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Portal:</strong>
-
-Site que reúne informações e diversos serviços.
-
-</p>
-
-<br><br>
-
-<h3>🔗 URL x Domínio x IP</h3>
-
-<p>
-
-<strong>URL:</strong>
-
-Endereço completo do recurso.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Domínio:</strong>
-
-Nome do site.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>IP:</strong>
-
-Endereço numérico utilizado pelos computadores.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>DNS:</strong>
-
-Traduz domínio para IP.
-
-</p>
-
-<br><br>
-
-<h3>🔒 HTTP x HTTPS</h3>
-
-<p>
-
-<strong>HTTP:</strong>
-
-Sem criptografia.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>HTTPS:</strong>
-
-Com criptografia.
-
-</p>
-
-<br>
-
-<p>
-A letra "S" significa Secure (Seguro).
-</p>
-
-<br><br>
-
-<h3>📧 E-mail</h3>
-
-<p>
-
-<strong>Remetente:</strong>
-
-Quem envia.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Destinatário:</strong>
-
-Quem recebe.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Anexo:</strong>
-
-Arquivo enviado junto com a mensagem.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Webmail:</strong>
-
-Acesso ao e-mail através do navegador.
-
-</p>
-
-<br><br>
-
-<h3>📨 CC x CCO</h3>
-
-<p>
-
-<strong>CC:</strong>
-
-Cópia visível.
-
-</p>
-
-<p>
-Todos conseguem visualizar quem recebeu a mensagem.
-</p>
-
-<br>
-
-<p>
-
-<strong>CCO:</strong>
-
-Cópia oculta.
-
-</p>
-
-<p>
-Os demais destinatários não visualizam quem recebeu a cópia.
-</p>
-
-<br><br>
-
-<h3>☁️ Armazenamento em Nuvem</h3>
-
-<p>
-Permite armazenar arquivos em servidores acessados pela Internet.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>Google Drive</li>
-
-<li>OneDrive</li>
-
-<li>Dropbox</li>
-
-<li>iCloud</li>
-
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 6 (Instituto AOCP)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Um analista precisa realizar uma pesquisa no motor de busca Google para encontrar documentos unicamente no formato PDF que tratem sobre a Lei de Licitações. O operador de busca avançada correto que deverá ser inserido junto às palavras-chave para filtrar apenas o tipo de arquivo desejado é:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) format:pdf</li>
+  <li>B) type:pdf</li>
+  <li><strong>C) filetype:pdf</strong></li>
+  <li>D) doc:pdf</li>
+  <li>E) ext:pdf</li>
 </ul>
-
-<br><br>
-
-<h3>🔎 Busca e Pesquisa</h3>
-
-<p>
-Motores de busca localizam informações na Internet.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>Google</li>
-
-<li>Bing</li>
-
-<li>Yahoo</li>
-
-<li>DuckDuckGo</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎯 Operadores de Pesquisa</h3>
-
-<ul>
-
-<li>"texto" → Pesquisa exata</li>
-
-<li>-palavra → Excluir termo</li>
-
-<li>site: → Pesquisar em site específico</li>
-
-<li>filetype: → Procurar arquivos</li>
-
-</ul>
-
-<br><br>
-
-<h3>💬 Comunicação x Colaboração</h3>
-
-<p>
-
-<strong>Plataformas de Comunicação:</strong>
-
-Troca de mensagens, áudio e vídeo.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Ferramentas de Colaboração:</strong>
-
-Permitem trabalho conjunto em documentos e projetos.
-
-</p>
-
-<br><br>
-
-<h3>📱 Comunicação Síncrona x Assíncrona</h3>
-
-<p>
-
-<strong>Síncrona:</strong>
-
-Tempo real.
-
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>Videoconferência</li>
-
-<li>Chamada de voz</li>
-
-<li>Chat online</li>
-
-</ul>
-
-<br>
-
-<p>
-
-<strong>Assíncrona:</strong>
-
-Sem resposta imediata.
-
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>E-mail</li>
-
-<li>Fóruns</li>
-
-<li>Comentários</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE MASTER
-
-Internet ≠ Web
-
-Página ≠ Site
-
-Site ≠ Portal
-
-URL ≠ Domínio
-
-HTTP ≠ HTTPS
-
-CC ≠ CCO
-
-Google ≠ Internet
-
-Nuvem ≠ Disco Local
-
-Síncrona ≠ Assíncrona
-
-Comunicação ≠ Colaboração
-
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Como vimos na teoria, os operadores de pesquisa do Google são estritos. O comando oficial e exigido pelas bancas para encontrar extensões e tipos de arquivos diretamente do buscador é o <code>filetype:</code> (ex: <code>filetype:pdf</code>, <code>filetype:docx</code>).
 </div>
 
-<br><br>
+<hr style="margin: 30px 0;">
 
-<h3>🚨 Pegadinhas Mais Cobradas</h3>
-
-<ul>
-
-<li>Internet e WWW não são sinônimos.</li>
-
-<li>Página web não é site.</li>
-
-<li>URL não é domínio.</li>
-
-<li>HTTP não possui criptografia.</li>
-
-<li>HTTPS utiliza criptografia.</li>
-
-<li>Google não é a Internet.</li>
-
-<li>CCO é cópia oculta.</li>
-
-<li>Nuvem não é armazenamento apenas local.</li>
-
-<li>E-mail é comunicação assíncrona.</li>
-
-<li>Videoconferência é comunicação síncrona.</li>
-
-<li>Ferramentas colaborativas permitem edição simultânea.</li>
-
-</ul>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO FINAL DO MÓDULO
-
-• Internet = Rede Mundial.
-
-• WWW = Serviço da Internet.
-
-• URL = Endereço Completo.
-
-• Domínio = Nome do Site.
-
-• HTTPS = Comunicação Criptografada.
-
-• CC = Cópia Visível.
-
-• CCO = Cópia Oculta.
-
-• Nuvem = Arquivos em Servidores Remotos.
-
-• Google = Mecanismo de Busca.
-
-• Ferramentas colaborativas permitem trabalho em equipe.
-
-🎉 MÓDULO INTERNET CONCLUÍDO
-
+<h3 style="color: #8E44AD;">📌 Questão 7 (CEBRASPE)</h3>
+<p><strong>Julgue o item a seguir:</strong><br>
+Ferramentas de colaboração online em nuvem, a exemplo do Google Docs, oferecem o recurso de edição simultânea, o qual possibilita que múltiplos usuários devidamente autorizados abram e editem as informações do mesmo arquivo de texto simultaneamente, refletindo as alterações em tempo real para todos.</p>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ CERTO</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Exato! A <strong>Edição Simultânea</strong> em tempo real é a principal e mais poderosa característica (killer feature) que difere as "ferramentas de colaboração em nuvem" do modelo antigo de edição de documentos locais.
 </div>
 
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 8 (FUNDATEC)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Na rotina de comunicação digital corporativa, as plataformas e serviços baseiam-se em comunicação síncrona e assíncrona. Assinale a alternativa que apresenta um exemplo clássico de comunicação <strong>assíncrona</strong>:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) Reunião em vídeo através do Zoom.</li>
+  <li>B) Chamada de voz via internet (VoIP) pelo WhatsApp.</li>
+  <li>C) Palestra ao vivo no Microsoft Teams com chat aberto.</li>
+  <li><strong>D) Envio de mensagens de correio eletrônico (E-mail).</strong></li>
+  <li>E) Transmissão ao vivo (Live) no Instagram.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra D</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> A comunicação <strong>assíncrona</strong> é aquela que não demanda que remetente e destinatário estejam online ao mesmo tempo. O <strong>E-mail</strong> é o exemplo mor desse tipo de ferramenta (você envia à noite, e o receptor lê pela manhã). Todas as outras alternativas forçam o "tempo real" (síncrona).
+</div>
 `
-
-},
-
+}
 ];
