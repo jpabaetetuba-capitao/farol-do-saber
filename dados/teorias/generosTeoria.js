@@ -1,1481 +1,308 @@
 const generosTeoria = [
-
-{
-
-titulo: "O que são Gêneros Textuais?",
-
-conteudo: `
-
-<p>
-
-Os gêneros textuais são formas de comunicação utilizadas pelas pessoas em diferentes situações do cotidiano.
-
-</p>
-
-<p>
-
-Sempre que alguém escreve ou fala com determinado objetivo, está utilizando um gênero textual.
-
-</p>
-
-<p>
-
-Esses gêneros surgem para atender necessidades específicas de comunicação e fazem parte da vida em sociedade.
-
-</p>
-
-<p>
-
-Quando uma pessoa envia uma mensagem pelo celular, escreve um e-mail, lê uma notícia ou segue uma receita culinária, está interagindo por meio de diferentes gêneros textuais.
-
-</p>
-
-<p>
-
-Cada gênero possui características próprias relacionadas à sua finalidade, estrutura, linguagem e público-alvo.
-
-</p>
-
-<p>
-
-Por esse motivo, não escrevemos uma notícia da mesma forma que escrevemos uma carta ou uma mensagem em uma rede social.
-
-</p>
-
-<h4>
-
-Exemplos de gêneros textuais
-
-</h4>
-
+  {
+    titulo: "O que são Gêneros Textuais?",
+    conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 INTRODUÇÃO</h2>
+<p>Os gêneros textuais são formas de comunicação utilizadas pelas pessoas em diferentes situações do cotidiano. Sempre que alguém escreve ou fala com determinado objetivo, está utilizando um gênero textual.</p>
+<p>Esses gêneros surgem para atender necessidades específicas de comunicação e fazem parte da vida em sociedade. Quando uma pessoa envia uma mensagem pelo celular, escreve um e-mail, lê uma notícia ou segue uma receita culinária, está interagindo por meio de diferentes gêneros textuais.</p>
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ IMPORTANTE</h4>
+  <p>Cada gênero possui características próprias relacionadas à sua finalidade, estrutura, linguagem e público-alvo. Por esse motivo, não escrevemos uma notícia da mesma forma que escrevemos uma carta ou uma mensagem em uma rede social.</p>
+</div>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 Exemplos de gêneros textuais</h3>
 <ul>
-
-<li>Notícia</li>
-
-<li>Reportagem</li>
-
-<li>Carta</li>
-
-<li>E-mail</li>
-
-<li>Bilhete</li>
-
-<li>Receita culinária</li>
-
-<li>Anúncio publicitário</li>
-
-<li>Artigo de opinião</li>
-
-<li>Charge</li>
-
-<li>Mensagem em redes sociais</li>
-
+  <li>Notícia, Reportagem e Artigo de opinião.</li>
+  <li>Carta, E-mail e Bilhete.</li>
+  <li>Receita culinária e Anúncio publicitário.</li>
+  <li>Charge e Mensagem em redes sociais.</li>
 </ul>
-
-<p>
-
-Os gêneros textuais acompanham a evolução da sociedade.
-
-</p>
-
-<p>
-
-Com o surgimento da internet, por exemplo, novos gêneros passaram a fazer parte da comunicação diária das pessoas.
-
-</p>
-
-<p>
-
-As bancas de concursos costumam cobrar a identificação de gêneros textuais, suas características e suas finalidades comunicativas.
-
-</p>
-
-<h4>
-
-Resumo
-
-</h4>
-
-<ul>
-
-<li>Gêneros textuais são formas de comunicação.</li>
-
-<li>Estão presentes no cotidiano das pessoas.</li>
-
-<li>Possuem objetivos específicos.</li>
-
-<li>Apresentam características próprias.</li>
-
-<li>Evoluem conforme a sociedade se transforma.</li>
-
-</ul>
-
+<p>Os gêneros textuais acompanham a evolução da sociedade. Com o surgimento da internet, por exemplo, novos gêneros passaram a fazer parte da comunicação diária das pessoas.</p>
 `
-
-},
-
-{
-
-titulo: "Função Social dos Gêneros Textuais",
-
-conteudo: `
-
-<p>
-
-Os gêneros textuais existem porque atendem às necessidades de comunicação da sociedade.
-
-</p>
-
-<p>
-
-Cada gênero desempenha uma função social específica e surge para facilitar a interação entre as pessoas em diferentes situações do cotidiano.
-
-</p>
-
-<p>
-
-Quando uma pessoa escreve uma receita culinária, seu objetivo é ensinar o preparo de um alimento. Já uma notícia busca informar fatos relevantes para a população.
-
-</p>
-
-<p>
-
-Dessa forma, cada gênero possui uma finalidade própria e é utilizado em determinado contexto comunicativo.
-
-</p>
-
-<p>
-
-A função social está diretamente relacionada ao motivo pelo qual o texto foi produzido e ao efeito que se pretende causar no leitor.
-
-</p>
-
-<h4>
-
-Exemplos de funções sociais
-
-</h4>
-
+  },
+  {
+    titulo: "Função Social dos Gêneros Textuais",
+    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 FUNÇÃO SOCIAL DOS GÊNEROS</h3>
+<p>Os gêneros textuais existem porque atendem às necessidades de comunicação da sociedade. Cada gênero desempenha uma função social específica e surge para facilitar a interação entre as pessoas em diferentes situações do cotidiano.</p>
+<p>Quando uma pessoa escreve uma receita culinária, seu objetivo é ensinar o preparo de um alimento. Já uma notícia busca informar fatos relevantes para a população. Dessa forma, cada gênero possui uma finalidade própria e é utilizado em determinado contexto comunicativo.</p>
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE DA PROVA</h4>
+  <p>Um mesmo tema pode ser tratado em diferentes gêneros textuais. Por exemplo, um assunto relacionado à saúde pode aparecer em uma notícia, em uma reportagem, em uma campanha publicitária ou em um artigo científico. O que muda é a finalidade comunicativa e a forma de apresentação da informação.</p>
+</div>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 Exemplos de funções sociais</h3>
 <ul>
-
-<li>Informar acontecimentos por meio de notícias e reportagens.</li>
-
-<li>Orientar procedimentos por meio de manuais e receitas.</li>
-
-<li>Convencer por meio de anúncios publicitários e artigos de opinião.</li>
-
-<li>Registrar informações através de atas e relatórios.</li>
-
-<li>Comunicar mensagens pessoais por meio de cartas, bilhetes e e-mails.</li>
-
+  <li><strong>Informar:</strong> acontecimentos por meio de notícias e reportagens.</li>
+  <li><strong>Orientar:</strong> procedimentos por meio de manuais e receitas.</li>
+  <li><strong>Convencer:</strong> por meio de anúncios publicitários e artigos de opinião.</li>
+  <li><strong>Registrar:</strong> informações através de atas e relatórios.</li>
+  <li><strong>Comunicar:</strong> mensagens pessoais por meio de cartas, bilhetes e e-mails.</li>
 </ul>
-
-<p>
-
-O mesmo tema pode ser tratado em diferentes gêneros textuais.
-
-</p>
-
-<p>
-
-Por exemplo, um assunto relacionado à saúde pode aparecer em uma notícia, em uma reportagem, em uma campanha publicitária ou em um artigo científico.
-
-</p>
-
-<p>
-
-O que muda é a finalidade comunicativa e a forma de apresentação da informação.
-
-</p>
-
-<p>
-
-As bancas costumam cobrar a identificação da finalidade e da função social dos gêneros textuais.
-
-</p>
-
-<h4>
-
-Resumo
-
-</h4>
-
-<ul>
-
-<li>Todo gênero textual possui uma função social.</li>
-
-<li>Os gêneros existem para atender necessidades de comunicação.</li>
-
-<li>A função social está ligada ao objetivo do texto.</li>
-
-<li>Um mesmo tema pode aparecer em diferentes gêneros.</li>
-
-<li>A finalidade comunicativa é um dos aspectos mais cobrados em concursos.</li>
-
-</ul>
-
 `
-
-},
-
-{
-
-titulo: "Gênero Textual e Tipologia Textual",
-
-conteudo: `
-
-<p>
-
-Um dos assuntos que mais geram dúvidas em concursos públicos é a diferença entre gênero textual e tipologia textual.
-
-</p>
-
-<p>
-
-Embora estejam relacionados, esses conceitos não possuem o mesmo significado.
-
-</p>
-
-<h4>
-
-O que é Gênero Textual?
-
-</h4>
-
-<p>
-
-Gênero textual é a forma concreta que um texto assume em determinada situação de comunicação.
-
-</p>
-
-<p>
-
-Os gêneros fazem parte do cotidiano e possuem características próprias de estrutura, linguagem e finalidade.
-
-</p>
-
-<p>
-
-Exemplos de gêneros textuais:
-
-</p>
-
+  },
+  {
+    titulo: "Gênero Textual e Tipologia Textual",
+    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 GÊNERO X TIPOLOGIA</h3>
+<p>Um dos assuntos que mais geram dúvidas em concursos públicos é a diferença entre gênero textual e tipologia textual. Embora estejam relacionados, esses conceitos não possuem o mesmo significado.</p>
+<p><strong>Gênero textual</strong> é a forma concreta que um texto assume em determinada situação de comunicação (ex: Notícia, E-mail, Receita). Já a <strong>Tipologia textual</strong> é a forma de organização das ideias dentro do texto. Ela está relacionada à estrutura linguística predominante utilizada pelo autor (ex: Narrativa, Descritiva, Dissertativa).</p>
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> Afirmar que um gênero textual só pode ter uma única tipologia. / <span style="color: #28A745; font-weight: bold;">✔</span> Um gênero pode apresentar mais de uma tipologia. Por exemplo, uma reportagem (gênero) pode conter trechos narrativos, descritivos e expositivos (tipologias) ao mesmo tempo.</p>
+</div>
 <ul>
-
-<li>Notícia</li>
-
-<li>Reportagem</li>
-
-<li>Carta</li>
-
-<li>E-mail</li>
-
-<li>Receita culinária</li>
-
-<li>Artigo de opinião</li>
-
-<li>Charge</li>
-
-<li>Anúncio publicitário</li>
-
-<li>Bilhete</li>
-
+  <li>Gênero textual = forma de comunicação utilizada (existem infinitos).</li>
+  <li>Tipologia textual = estrutura predominante do texto (existem poucas: Narrativa, Descritiva, Dissertativa, Expositiva, Injuntiva).</li>
 </ul>
-
-<h4>
-
-O que é Tipologia Textual?
-
-</h4>
-
-<p>
-
-Tipologia textual é a forma de organização das ideias dentro do texto.
-
-</p>
-
-<p>
-
-Ela está relacionada à estrutura linguística predominante utilizada pelo autor.
-
-</p>
-
-<p>
-
-As tipologias são mais limitadas e servem como base para a construção dos diversos gêneros textuais.
-
-</p>
-
-<p>
-
-As principais tipologias textuais são:
-
-</p>
-
-<ul>
-
-<li>Narrativa</li>
-
-<li>Descritiva</li>
-
-<li>Dissertativa</li>
-
-<li>Expositiva</li>
-
-<li>Injuntiva</li>
-
-</ul>
-
-<h4>
-
-Qual a diferença?
-
-</h4>
-
-<p>
-
-O gênero textual corresponde ao tipo de documento ou texto utilizado na comunicação.
-
-</p>
-
-<p>
-
-A tipologia textual corresponde à forma como as ideias são organizadas dentro desse gênero.
-
-</p>
-
-<p>
-
-Um mesmo gênero pode apresentar mais de uma tipologia textual.
-
-</p>
-
-<p>
-
-Por exemplo, uma reportagem pode conter trechos narrativos, descritivos e expositivos ao mesmo tempo.
-
-</p>
-
-<p>
-
-Já um artigo de opinião normalmente apresenta predominância da tipologia dissertativa.
-
-</p>
-
-<h4>
-
-Resumo
-
-</h4>
-
-<ul>
-
-<li>Gênero textual = forma de comunicação utilizada.</li>
-
-<li>Tipologia textual = estrutura predominante do texto.</li>
-
-<li>Existem inúmeros gêneros textuais.</li>
-
-<li>Existem poucas tipologias textuais.</li>
-
-<li>Um gênero pode apresentar mais de uma tipologia.</li>
-
-</ul>
-
 `
-
-},
-
-{
-
-titulo: "Tipologia Narrativa",
-
-conteudo: `
-
-<p>
-
-A tipologia narrativa é utilizada para contar acontecimentos reais ou fictícios.
-
-</p>
-
-<p>
-
-Nela, existe uma sequência de fatos que se desenvolvem ao longo do tempo, envolvendo personagens em determinado espaço.
-
-</p>
-
-<p>
-
-A narrativa está presente em diversos gêneros textuais, como contos, romances, crônicas, fábulas e histórias em quadrinhos.
-
-</p>
-
-<p>
-
-O objetivo principal desse tipo textual é relatar acontecimentos e desenvolver uma história para o leitor.
-
-</p>
-
-<h4>
-
-Elementos da Narrativa
-
-</h4>
-
-<p>
-
-Para que uma narrativa exista, normalmente encontramos alguns elementos fundamentais.
-
-</p>
-
+  },
+  {
+    titulo: "Tipologia Narrativa",
+    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 TIPOLOGIA NARRATIVA</h3>
+<p>A tipologia narrativa é utilizada para contar acontecimentos reais ou fictícios. Nela, existe uma sequência de fatos que se desenvolvem ao longo do tempo, envolvendo personagens em determinado espaço.</p>
+<p>A narrativa está presente em diversos gêneros textuais, como contos, romances, crônicas, fábulas e histórias em quadrinhos.</p>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 Elementos da Narrativa</h3>
 <ul>
-
-<li><strong>Narrador:</strong> quem conta a história.</li>
-
-<li><strong>Personagens:</strong> participantes dos acontecimentos.</li>
-
-<li><strong>Tempo:</strong> momento em que os fatos ocorrem.</li>
-
-<li><strong>Espaço:</strong> local onde a história acontece.</li>
-
-<li><strong>Enredo:</strong> conjunto dos acontecimentos narrados.</li>
-
+  <li><strong>Narrador:</strong> quem conta a história.</li>
+  <li><strong>Personagens:</strong> participantes dos acontecimentos.</li>
+  <li><strong>Tempo:</strong> momento em que os fatos ocorrem.</li>
+  <li><strong>Espaço:</strong> local onde a história acontece.</li>
+  <li><strong>Enredo:</strong> conjunto dos acontecimentos narrados.</li>
 </ul>
-
-<h4>
-
-Estrutura Básica
-
-</h4>
-
-<p>
-
-A narrativa geralmente apresenta uma sequência lógica de acontecimentos.
-
-</p>
-
-<ul>
-
-<li>Situação inicial.</li>
-
-<li>Conflito ou problema.</li>
-
-<li>Desenvolvimento dos fatos.</li>
-
-<li>Desfecho ou conclusão.</li>
-
-</ul>
-
-<h4>
-
-Características da Tipologia Narrativa
-
-</h4>
-
-<ul>
-
-<li>Presença de acontecimentos.</li>
-
-<li>Participação de personagens.</li>
-
-<li>Existência de narrador.</li>
-
-<li>Sequência temporal dos fatos.</li>
-
-<li>Desenvolvimento de uma história.</li>
-
-</ul>
-
-<p>
-
-As bancas costumam cobrar a identificação dos elementos da narrativa e a diferenciação entre textos narrativos e outros tipos textuais.
-
-</p>
-
-<p>
-
-É importante lembrar que nem todo gênero textual é exclusivamente narrativo. Muitos textos apresentam características de diferentes tipologias ao mesmo tempo.
-
-</p>
-
-<h4>
-
-Resumo
-
-</h4>
-
-<ul>
-
-<li>Narrar é contar uma história.</li>
-
-<li>A narrativa possui personagens, tempo, espaço e enredo.</li>
-
-<li>Os acontecimentos seguem uma sequência temporal.</li>
-
-<li>Contos, romances e crônicas utilizam frequentemente essa tipologia.</li>
-
-<li>É uma das tipologias mais cobradas em concursos.</li>
-
-</ul>
-
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ IMPORTANTE</h4>
+  <p>A narrativa geralmente apresenta uma sequência lógica de acontecimentos: Situação inicial, Conflito ou problema, Desenvolvimento dos fatos e Desfecho (conclusão).</p>
+</div>
 `
-
-},
-{
-
-titulo: "Tipologia Descritiva",
-
-conteudo: `
-
-<p>
-
-A tipologia descritiva tem como principal objetivo apresentar características de pessoas, objetos, animais, ambientes, situações ou fenômenos.
-
-</p>
-
-<p>
-
-Ao descrever, o autor procura transmitir ao leitor uma imagem detalhada daquilo que está sendo apresentado.
-
-</p>
-
-<p>
-
-Diferentemente da narrativa, a descrição não se preocupa em contar acontecimentos, mas sim em mostrar como algo é.
-
-</p>
-
-<p>
-
-Por esse motivo, os textos descritivos apresentam grande quantidade de detalhes, características e qualificações.
-
-</p>
-
-<h4>
-
-Características da Tipologia Descritiva
-
-</h4>
-
-<ul>
-
-<li>Predomínio de características e detalhes.</li>
-
-<li>Valorização de aspectos físicos e psicológicos.</li>
-
-<li>Uso frequente de adjetivos.</li>
-
-<li>Ausência de sequência de acontecimentos.</li>
-
-<li>Objetivo de criar uma imagem mental no leitor.</li>
-
-</ul>
-
-<h4>
-
-O que pode ser descrito?
-
-</h4>
-
-<ul>
-
-<li>Pessoas.</li>
-
-<li>Objetos.</li>
-
-<li>Animais.</li>
-
-<li>Paisagens.</li>
-
-<li>Ambientes.</li>
-
-<li>Situações.</li>
-
-<li>Sentimentos.</li>
-
-</ul>
-
-<h4>
-
-Exemplo de descrição
-
-</h4>
-
-<p>
-
-"A casa era antiga, possuía paredes amareladas pelo tempo, janelas de madeira escura e um amplo jardim repleto de flores coloridas."
-
-</p>
-
-<p>
-
-Observe que o trecho não narra acontecimentos. Seu objetivo é apresentar características do ambiente.
-
-</p>
-
-<h4>
-
-Descrição Objetiva e Subjetiva
-
-</h4>
-
-<p>
-
-A descrição pode ser objetiva quando apresenta características de forma imparcial e precisa.
-
-</p>
-
-<p>
-
-Também pode ser subjetiva quando inclui impressões, emoções ou opiniões do autor.
-
-</p>
-
-<p>
-
-Essa diferença costuma ser explorada pelas bancas examinadoras.
-
-</p>
-
-<h4>
-
-Resumo
-
-</h4>
-
-<ul>
-
-<li>Descrever é caracterizar.</li>
-
-<li>O foco está nos detalhes e características.</li>
-
-<li>Há uso frequente de adjetivos.</li>
-
-<li>Não existe sequência de acontecimentos.</li>
-
-<li>O objetivo é criar uma imagem mental para o leitor.</li>
-
-</ul>
-
+  },
+  {
+    titulo: "Tipologia Descritiva",
+    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 TIPOLOGIA DESCRITIVA</h3>
+<p>A tipologia descritiva tem como principal objetivo apresentar características de pessoas, objetos, animais, ambientes, situações ou fenômenos. Ao descrever, o autor procura transmitir ao leitor uma imagem detalhada daquilo que está sendo apresentado.</p>
+<p>Diferentemente da narrativa, a descrição não se preocupa em contar acontecimentos, mas sim em mostrar <strong>como algo é</strong>. Por esse motivo, os textos descritivos apresentam grande quantidade de detalhes, características e qualificações (uso de adjetivos).</p>
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE DA PROVA</h4>
+  <p>Pense na tipologia descritiva como uma "fotografia" em forma de palavras, enquanto a narrativa seria um "filme". Exemplo: <em>"A casa era antiga, possuía paredes amareladas pelo tempo, janelas de madeira escura..."</em></p>
+</div>
+<p>A descrição pode ser <strong>objetiva</strong> quando apresenta características de forma imparcial e precisa, ou <strong>subjetiva</strong> quando inclui impressões, emoções ou opiniões do autor. Essa diferença costuma ser muito explorada pelas bancas examinadoras.</p>
 `
-
-},
-{
-
-titulo: "Tipologia Dissertativa",
-
-conteudo: `
-
-<p>
-
-A tipologia dissertativa tem como objetivo apresentar ideias, opiniões, argumentos ou reflexões sobre determinado assunto.
-
-</p>
-
-<p>
-
-Esse tipo textual é muito comum em concursos públicos, vestibulares, artigos de opinião, editoriais e redações.
-
-</p>
-
-<p>
-
-Ao contrário da narrativa, que conta acontecimentos, e da descrição, que apresenta características, a dissertação busca explicar, analisar ou defender um ponto de vista.
-
-</p>
-
-<p>
-
-O autor organiza suas ideias de forma lógica para transmitir informações ou convencer o leitor sobre determinado tema.
-
-</p>
-
-<h4>
-
-Características da Tipologia Dissertativa
-
-</h4>
-
+  },
+  {
+    titulo: "Tipologia Dissertativa",
+    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 TIPOLOGIA DISSERTATIVA</h3>
+<p>A tipologia dissertativa tem como objetivo apresentar ideias, opiniões, argumentos ou reflexões sobre determinado assunto. Esse tipo textual é muito comum em concursos públicos, artigos de opinião, editoriais e redações.</p>
+<p>Ao contrário da narrativa (que conta acontecimentos) e da descrição (que apresenta características), a dissertação busca explicar, analisar ou defender um ponto de vista. O autor organiza suas ideias de forma lógica.</p>
+<h3 style="color: #E67E22; margin-top: 20px;">📌 Tipos de Dissertação</h3>
 <ul>
-
-<li>Apresentação de ideias e opiniões.</li>
-
-<li>Desenvolvimento de argumentos.</li>
-
-<li>Uso da lógica e da reflexão.</li>
-
-<li>Predomínio da linguagem objetiva.</li>
-
-<li>Organização das informações de forma racional.</li>
-
+  <li><strong>Dissertação Expositiva:</strong> O objetivo é informar e explicar determinado assunto. O autor apresenta dados e conceitos sem necessariamente defender uma opinião.</li>
+  <li><strong>Dissertação Argumentativa:</strong> Além de apresentar informações, o autor procura convencer o leitor sobre determinado ponto de vista. Para isso, utiliza argumentos, exemplos e dados. É o modelo das redações de concursos.</li>
 </ul>
-
-<h4>
-
-Dissertação Expositiva
-
-</h4>
-
-<p>
-
-Na dissertação expositiva, o objetivo é informar e explicar determinado assunto.
-
-</p>
-
-<p>
-
-O autor apresenta dados, conceitos e informações sem necessariamente defender uma opinião.
-
-</p>
-
-<h4>
-
-Dissertação Argumentativa
-
-</h4>
-
-<p>
-
-Na dissertação argumentativa, além de apresentar informações, o autor procura convencer o leitor sobre determinado ponto de vista.
-
-</p>
-
-<p>
-
-Para isso, utiliza argumentos, exemplos, dados e justificativas.
-
-</p>
-
-<p>
-
-Esse é o modelo mais cobrado em redações de concursos e vestibulares.
-
-</p>
-
-<h4>
-
-Estrutura Geral
-
-</h4>
-
-<ul>
-
-<li>Introdução: apresentação do tema.</li>
-
-<li>Desenvolvimento: exposição ou defesa das ideias.</li>
-
-<li>Conclusão: encerramento do raciocínio apresentado.</li>
-
-</ul>
-
-<h4>
-
-Exemplo
-
-</h4>
-
-<p>
-
-"A preservação ambiental é fundamental para garantir qualidade de vida às futuras gerações. A adoção de práticas sustentáveis contribui para a redução dos impactos causados pela ação humana sobre a natureza."
-
-</p>
-
-<p>
-
-Observe que o trecho apresenta uma reflexão sobre um tema e desenvolve uma ideia de forma lógica.
-
-</p>
-
-<h4>
-
-Resumo
-
-</h4>
-
-<ul>
-
-<li>Dissertar é explicar, analisar ou argumentar.</li>
-
-<li>O foco está nas ideias e argumentos.</li>
-
-<li>Pode ser expositiva ou argumentativa.</li>
-
-<li>Utiliza organização lógica das informações.</li>
-
-<li>É uma das tipologias mais cobradas em concursos.</li>
-
-</ul>
-
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ IMPORTANTE</h4>
+  <p>A estrutura geral da dissertação segue: <strong>Introdução</strong> (apresentação do tema), <strong>Desenvolvimento</strong> (exposição ou defesa das ideias) e <strong>Conclusão</strong> (encerramento do raciocínio).</p>
+</div>
 `
-
-},
-{
-
-titulo: "Tipologia Expositiva",
-
-conteudo: `
-
-<p>
-
-A tipologia expositiva tem como finalidade apresentar, explicar e transmitir informações sobre determinado assunto de forma clara e objetiva.
-
-</p>
-
-<p>
-
-Nesse tipo textual, o autor procura ampliar o conhecimento do leitor por meio da exposição organizada de conceitos, dados, fatos e explicações.
-
-</p>
-
-<p>
-
-A preocupação principal não é convencer o leitor nem contar uma história, mas informar e esclarecer determinado tema.
-
-</p>
-
-<p>
-
-Por esse motivo, a linguagem costuma ser objetiva, clara e impessoal.
-
-</p>
-
-<h4>
-
-Características da Tipologia Expositiva
-
-</h4>
-
+  },
+  {
+    titulo: "Tipologia Expositiva",
+    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 TIPOLOGIA EXPOSITIVA</h3>
+<p>A tipologia expositiva tem como finalidade apresentar, explicar e transmitir informações sobre determinado assunto de forma clara e objetiva. O autor procura ampliar o conhecimento do leitor por meio da exposição organizada de conceitos, fatos e explicações.</p>
+<p>A preocupação principal não é convencer o leitor nem contar uma história, mas <strong>informar e esclarecer</strong> determinado tema. Por esse motivo, a linguagem costuma ser objetiva, clara e impessoal.</p>
+<div style="background-color: #F8D7DA; padding: 15px; border-left: 5px solid #DC3545; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #721C24; margin-top: 0;">🚨 PEGADINHAS DE CONCURSO</h4>
+  <p><span style="color: #DC3545; font-weight: bold;">❌</span> Confundir texto expositivo com argumentativo. / <span style="color: #28A745; font-weight: bold;">✔</span> A tipologia expositiva <strong>não busca convencer</strong> o leitor, apenas informa (ex: livro didático, manual). A dissertativa-argumentativa, sim, tem a intenção de persuasão.</p>
+</div>
 <ul>
-
-<li>Transmissão de informações.</li>
-
-<li>Explicação de conceitos e ideias.</li>
-
-<li>Linguagem objetiva e clara.</li>
-
-<li>Predomínio da função informativa.</li>
-
-<li>Ausência de intenção persuasiva.</li>
-
+  <li>Transmissão de informações e explicação de conceitos.</li>
+  <li>Linguagem objetiva e impessoal.</li>
+  <li>Comum em enciclopédias, artigos científicos e livros didáticos.</li>
 </ul>
-
-<h4>
-
-Onde é encontrada?
-
-</h4>
-
-<p>
-
-A tipologia expositiva aparece frequentemente em textos utilizados para ensinar, informar ou divulgar conhecimentos.
-
-</p>
-
-<ul>
-
-<li>Livros didáticos.</li>
-
-<li>Enciclopédias.</li>
-
-<li>Artigos científicos.</li>
-
-<li>Manuais.</li>
-
-<li>Textos informativos.</li>
-
-<li>Materiais de estudo.</li>
-
-</ul>
-
-<h4>
-
-Exemplo
-
-</h4>
-
-<p>
-
-"A fotossíntese é um processo realizado pelas plantas para produzir alimento. Durante esse processo, ocorre a transformação de energia luminosa em energia química."
-
-</p>
-
-<p>
-
-Observe que o trecho apresenta uma explicação objetiva sobre determinado assunto, sem emitir opiniões ou tentar convencer o leitor.
-
-</p>
-
-<h4>
-
-Diferença entre Expositiva e Dissertativa
-
-</h4>
-
-<p>
-
-A tipologia expositiva tem como foco principal informar e explicar.
-
-</p>
-
-<p>
-
-Já a tipologia dissertativa pode apresentar opiniões, análises e argumentos sobre determinado tema.
-
-</p>
-
-<p>
-
-Em muitos textos, essas duas tipologias podem aparecer juntas.
-
-</p>
-
-<h4>
-
-Resumo
-
-</h4>
-
-<ul>
-
-<li>Expor é informar e explicar.</li>
-
-<li>O foco está na transmissão de conhecimentos.</li>
-
-<li>Utiliza linguagem clara e objetiva.</li>
-
-<li>É comum em livros, artigos e materiais didáticos.</li>
-
-<li>Não busca convencer o leitor.</li>
-
-</ul>
-
 `
-
-},
-{
-
-titulo: "Tipologia Injuntiva",
-
-conteudo: `
-
-<p>
-
-A tipologia injuntiva tem como principal finalidade orientar, instruir, aconselhar ou indicar ao leitor como realizar determinada ação.
-
-</p>
-
-<p>
-
-Nesse tipo textual, o autor procura direcionar o comportamento do leitor por meio de instruções, recomendações, regras ou comandos.
-
-</p>
-
-<p>
-
-Por esse motivo, a tipologia injuntiva é bastante utilizada em situações que exigem a execução de procedimentos específicos.
-
-</p>
-
-<p>
-
-É comum encontrarmos esse tipo textual em atividades do cotidiano, principalmente quando precisamos seguir etapas para alcançar determinado objetivo.
-
-</p>
-
-<h4>
-
-Características da Tipologia Injuntiva
-
-</h4>
-
-<ul>
-
-<li>Presença de orientações e instruções.</li>
-
-<li>Indicação de procedimentos.</li>
-
-<li>Uso frequente de verbos no imperativo.</li>
-
-<li>Linguagem clara e objetiva.</li>
-
-<li>Organização em etapas ou sequências.</li>
-
-</ul>
-
-<h4>
-
-Onde é encontrada?
-
-</h4>
-
-<ul>
-
-<li>Receitas culinárias.</li>
-
-<li>Manuais de instruções.</li>
-
-<li>Bulas de medicamentos.</li>
-
-<li>Editais.</li>
-
-<li>Regulamentos.</li>
-
-<li>Tutoriais.</li>
-
-<li>Guias de orientação.</li>
-
-</ul>
-
-<h4>
-
-Exemplo
-
-</h4>
-
-<p>
-
-"Primeiramente, ligue o equipamento. Em seguida, pressione o botão de inicialização e aguarde a conclusão do processo."
-
-</p>
-
-<p>
-
-Observe que o texto orienta o leitor sobre quais ações devem ser realizadas.
-
-</p>
-
-<h4>
-
-Uso do Imperativo
-
-</h4>
-
-<p>
-
-Os textos injuntivos frequentemente utilizam verbos no modo imperativo, pois sua função é orientar ou determinar ações.
-
-</p>
-
-<p>
-
-Exemplos:
-
-</p>
-
-<ul>
-
-<li>Leia atentamente.</li>
-
-<li>Preencha o formulário.</li>
-
-<li>Siga as instruções.</li>
-
-<li>Não ultrapasse o limite indicado.</li>
-
-</ul>
-
-<h4>
-
-Resumo
-
-</h4>
-
-<ul>
-
-<li>Injuntiva = instrução ou orientação.</li>
-
-<li>Indica ações a serem realizadas.</li>
-
-<li>Utiliza frequentemente verbos no imperativo.</li>
-
-<li>É comum em receitas, manuais e regulamentos.</li>
-
-<li>Tem como objetivo orientar o leitor.</li>
-
-</ul>
-
+  },
+  {
+    titulo: "Tipologia Injuntiva",
+    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 TIPOLOGIA INJUNTIVA</h3>
+<p>A tipologia injuntiva tem como principal finalidade orientar, instruir, aconselhar ou indicar ao leitor como realizar determinada ação. O autor procura direcionar o comportamento do leitor por meio de instruções ou comandos.</p>
+<p>É comum encontrarmos esse tipo textual em atividades do cotidiano, principalmente quando precisamos seguir etapas para alcançar determinado objetivo, como em receitas culinárias, manuais de instruções, bulas de remédio e editais de concursos.</p>
+<div style="background-color: #D1ECF1; padding: 15px; border-left: 5px solid #17A2B8; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #0C5460; margin-top: 0;">💡 MACETE DA PROVA</h4>
+  <p>A marca registrada da tipologia injuntiva é o uso frequente de <strong>verbos no modo imperativo</strong>, pois sua função é orientar ou determinar ações. Ex: <em>"Leia atentamente", "Preencha o formulário", "Siga as instruções".</em></p>
+</div>
 `
-
-},
-{
-
-titulo: "Gêneros Textuais Mais Cobrados em Concursos",
-
-conteudo: `
-
-<p>
-
-Os concursos públicos costumam explorar diversos gêneros textuais para avaliar a capacidade de interpretação dos candidatos.
-
-</p>
-
-<p>
-
-Por esse motivo, é importante conhecer os principais gêneros utilizados pelas bancas examinadoras e compreender suas características fundamentais.
-
-</p>
-
-<p>
-
-Embora existam inúmeros gêneros textuais, alguns aparecem com muito mais frequência nas provas.
-
-</p>
-
-<h4>
-
-Notícia
-
-</h4>
-
-<p>
-
-Tem como finalidade informar fatos atuais de interesse público.
-
-</p>
-
-<p>
-
-Apresenta linguagem objetiva e busca transmitir informações de forma clara e imparcial.
-
-</p>
-
-<h4>
-
-Reportagem
-
-</h4>
-
-<p>
-
-Também possui caráter informativo, porém apresenta maior aprofundamento dos fatos.
-
-</p>
-
-<p>
-
-Pode incluir entrevistas, dados estatísticos, opiniões de especialistas e análises sobre o tema abordado.
-
-</p>
-
-<h4>
-
-Artigo de Opinião
-
-</h4>
-
-<p>
-
-É um gênero em que o autor apresenta seu ponto de vista sobre determinado assunto.
-
-</p>
-
-<p>
-
-Utiliza argumentos para defender uma opinião e tentar convencer o leitor.
-
-</p>
-
-<h4>
-
-Charge
-
-</h4>
-
-<p>
-
-Combina linguagem verbal e não verbal para realizar críticas sociais, políticas ou culturais.
-
-</p>
-
-<p>
-
-Normalmente utiliza humor, ironia e sátira.
-
-</p>
-
-<h4>
-
-Carta e E-mail
-
-</h4>
-
-<p>
-
-São gêneros utilizados para comunicação entre pessoas ou instituições.
-
-</p>
-
-<p>
-
-Podem apresentar finalidades informativas, pessoais, profissionais ou administrativas.
-
-</p>
-
-<h4>
-
-Anúncio Publicitário
-
-</h4>
-
-<p>
-
-Tem como objetivo persuadir o público a adquirir um produto, serviço ou adotar determinado comportamento.
-
-</p>
-
-<p>
-
-Utiliza recursos persuasivos e linguagem atrativa.
-
-</p>
-
-<h4>
-
-Receita e Manual
-
-</h4>
-
-<p>
-
-São exemplos de gêneros que utilizam predominantemente a tipologia injuntiva.
-
-</p>
-
-<p>
-
-Seu objetivo é orientar o leitor por meio de instruções e procedimentos.
-
-</p>
-
-<h4>
-
-Importância para Concursos
-
-</h4>
-
-<p>
-
-As bancas frequentemente cobram a identificação do gênero textual, sua finalidade comunicativa e suas características principais.
-
-</p>
-
-<p>
-
-Por isso, o candidato deve ser capaz de reconhecer rapidamente o gênero apresentado e compreender sua função social.
-
-</p>
-
-<h4>
-
-Resumo
-
-</h4>
-
+  },
+  {
+    titulo: "Gêneros Textuais Mais Cobrados em Concursos",
+    conteudo: `
+<h3 style="color: #E67E22; margin-top: 20px;">📌 GÊNEROS MAIS COBRADOS NAS PROVAS</h3>
+<p>Embora existam inúmeros gêneros textuais, alguns aparecem com muito mais frequência nas provas das principais bancas:</p>
 <ul>
-
-<li>Notícia → informar fatos.</li>
-
-<li>Reportagem → aprofundar informações.</li>
-
-<li>Artigo de opinião → defender um ponto de vista.</li>
-
-<li>Charge → criticar utilizando humor e ironia.</li>
-
-<li>Carta e e-mail → comunicação entre pessoas ou instituições.</li>
-
-<li>Anúncio publicitário → persuadir o público.</li>
-
-<li>Receitas e manuais → orientar ações.</li>
-
+  <li><strong>Notícia:</strong> Tem como finalidade informar fatos atuais de interesse público. Linguagem objetiva.</li>
+  <li><strong>Reportagem:</strong> Caráter informativo, porém com maior aprofundamento. Pode incluir entrevistas, dados e opiniões.</li>
+  <li><strong>Artigo de Opinião:</strong> O autor apresenta e defende seu ponto de vista sobre um assunto para convencer o leitor.</li>
+  <li><strong>Charge:</strong> Combina linguagem verbal e não verbal para realizar críticas (sociais, políticas) usando humor e ironia.</li>
+  <li><strong>Anúncio Publicitário:</strong> Objetivo é persuadir o público a adquirir um produto ou adotar um comportamento.</li>
 </ul>
-
+<div style="background-color: #FFF3CD; padding: 15px; border-left: 5px solid #FFC107; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #856404; margin-top: 0;">⚠️ IMPORTANTE</h4>
+  <p>As bancas frequentemente cobram a identificação do gênero textual associada à sua <strong>finalidade comunicativa</strong>. Reconhecer rapidamente se o texto quer informar, criticar, orientar ou persuadir é meio caminho andado para acertar a questão.</p>
+</div>
 `
-
-},
-{
-
-titulo: "Resumo Geral de Gêneros e Tipologias Textuais",
-
-conteudo: `
-
-<p>
-
-Os gêneros textuais e as tipologias textuais desempenham papel fundamental na comunicação humana.
-
-</p>
-
-<p>
-
-Por meio deles, as pessoas transmitem informações, expressam opiniões, orientam ações, narram acontecimentos e interagem nas mais diversas situações do cotidiano.
-
-</p>
-
-<p>
-
-Compreender esses conceitos é essencial para interpretar corretamente os textos apresentados em concursos públicos.
-
-</p>
-
-<h4>
-
-Gêneros Textuais
-
-</h4>
-
-<p>
-
-Os gêneros textuais são formas de comunicação utilizadas em situações concretas da vida social.
-
-</p>
-
-<p>
-
-Cada gênero possui finalidade específica, características próprias e público-alvo determinado.
-
-</p>
-
-<p>
-
-Exemplos:
-
-</p>
-
-<ul>
-
-<li>Notícia</li>
-
-<li>Reportagem</li>
-
-<li>Artigo de opinião</li>
-
-<li>Carta</li>
-
-<li>E-mail</li>
-
-<li>Charge</li>
-
-<li>Anúncio publicitário</li>
-
-<li>Receita culinária</li>
-
-<li>Manual de instruções</li>
-
-</ul>
-
-<h4>
-
-Tipologias Textuais
-
-</h4>
-
-<p>
-
-As tipologias textuais representam a forma predominante de organização das ideias dentro de um texto.
-
-</p>
-
-<p>
-
-As cinco tipologias mais cobradas em concursos são:
-
-</p>
-
-<ul>
-
-<li><strong>Narrativa:</strong> relata acontecimentos.</li>
-
-<li><strong>Descritiva:</strong> apresenta características.</li>
-
-<li><strong>Dissertativa:</strong> expõe ideias e argumentos.</li>
-
-<li><strong>Expositiva:</strong> explica e informa.</li>
-
-<li><strong>Injuntiva:</strong> orienta e instrui.</li>
-
-</ul>
-
-<h4>
-
-Diferença Fundamental
-
-</h4>
-
-<p>
-
-O gênero textual corresponde à forma de comunicação utilizada.
-
-</p>
-
-<p>
-
-A tipologia textual corresponde à estrutura predominante utilizada na construção do texto.
-
-</p>
-
-<p>
-
-Um mesmo gênero pode apresentar mais de uma tipologia textual.
-
-</p>
-
-<p>
-
-Por exemplo, uma reportagem pode conter trechos narrativos, descritivos e expositivos.
-
-</p>
-
-<h4>
-
-O que as Bancas Mais Cobram?
-
-</h4>
-
-<ul>
-
-<li>Diferença entre gênero e tipologia.</li>
-
-<li>Finalidade comunicativa dos gêneros.</li>
-
-<li>Características das tipologias textuais.</li>
-
-<li>Identificação da tipologia predominante.</li>
-
-<li>Reconhecimento de gêneros em situações práticas.</li>
-
-</ul>
-
-<h4>
-
-Resumo Final
-
-</h4>
-
-<ul>
-
-<li>Gênero textual = forma de comunicação.</li>
-
-<li>Tipologia textual = organização das ideias.</li>
-
-<li>Existem inúmeros gêneros textuais.</li>
-
-<li>Existem cinco tipologias principais.</li>
-
-<li>Os gêneros possuem função social.</li>
-
-<li>Um gênero pode conter várias tipologias.</li>
-
-<li>A identificação da finalidade é muito cobrada em concursos.</li>
-
-</ul>
-
-<p>
-
-🎯 Objetivo alcançado: você concluiu o módulo de Tipologia e Gêneros Textuais.
-
-</p>
-
+  },
+  {
+    titulo: "Resumo Geral de Gêneros e Tipologias Textuais",
+    conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 CONCLUSÃO DO MÓDULO</h2>
+<p>Os gêneros textuais e as tipologias textuais desempenham papel fundamental na comunicação humana e sua compreensão é essencial para a interpretação de textos em provas de concursos.</p>
+<div style="background-color: #E2E3E5; padding: 15px; border-left: 5px solid #383D41; margin: 20px 0; border-radius: 4px;">
+  <h4 style="color: #383D41; margin-top: 0;">🏆 RESUMO FINAL</h4>
+  <ul>
+    <li><strong>Gênero textual</strong> é a forma social do texto (Notícia, Receita, Carta). Existem inúmeros.</li>
+    <li><strong>Tipologia textual</strong> é a organização estrutural (Narrativa, Descritiva, Dissertativa, Expositiva, Injuntiva).</li>
+    <li>Um mesmo gênero pode (e costuma) conter várias tipologias mescladas.</li>
+    <li><strong>Narrativa:</strong> Relata acontecimentos, possui tempo, espaço, personagens.</li>
+    <li><strong>Descritiva:</strong> Apresenta características (é uma "foto" escrita).</li>
+    <li><strong>Dissertativa:</strong> Expõe ou defende ideias. Se apenas informa, é expositiva; se tenta convencer, é argumentativa.</li>
+    <li><strong>Injuntiva:</strong> Orienta ações e procedimentos, fortemente marcada pelo verbo no imperativo.</li>
+  </ul>
+</div>
+<p>🎯 Objetivo alcançado: você concluiu a teoria de Tipologia e Gêneros Textuais e está pronto para resolver as questões a seguir.</p>
 `
+  },
+  {
+    titulo: "Questões Comentadas - Parte 1",
+    conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 BATERIA DE QUESTÕES - PARTE 1</h2>
 
-},
+<h3 style="color: #8E44AD;">📌 Questão 1 (Banca CESPE/CEBRASPE)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Julgue a afirmação a seguir: "A bula de um remédio e uma receita de bolo são exemplos de gêneros textuais distintos que compartilham, de modo predominante, a tipologia injuntiva."</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) Errada, pois receitas de bolo são predominantemente descritivas.</li>
+  <li><strong>B) Correta, ambos são gêneros que têm como foco instruir e orientar o leitor a realizar um procedimento.</strong></li>
+  <li>C) Errada, pois bula de remédio pertence à tipologia narrativa.</li>
+  <li>D) Errada, gênero e tipologia são sinônimos perfeitos na linguística.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra B</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Perfeito! Bula e Receita são os "documentos" (gêneros), e a estrutura textual que predomina neles é a injuntiva, ou seja, aquela focada em dar comandos, ordens e instruções usando o modo imperativo.
+</div>
+<hr style="margin: 30px 0;">
 
+<h3 style="color: #8E44AD;">📌 Questão 2 (Banca FCC)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Assinale a alternativa que define corretamente a diferença entre Gênero Textual e Tipologia Textual:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) A tipologia textual é infinita e se adapta ao cotidiano; o gênero textual resume-se a cinco tipos básicos.</li>
+  <li>B) O gênero textual e a tipologia são exatamente a mesma coisa nas provas de concurso.</li>
+  <li><strong>C) A tipologia textual refere-se à estrutura linguística predominante (ex: narração, descrição), enquanto os gêneros são as realizações concretas nos contextos de comunicação.</strong></li>
+  <li>D) Um gênero textual jamais pode misturar duas tipologias em sua estrutura.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Essa é a definição clássica. Tipologia (tipo) é a "fôrma" estrutural e são poucas (narração, descrição, dissertação...). Gêneros são infinitos e representam o texto "vivo" na sociedade (e-mail, bilhete, reportagem).
+</div>
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 3 (Banca VUNESP)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Leia o fragmento: "O suspeito era alto, usava um casaco de couro desgastado e tinha uma cicatriz marcante acima do olho esquerdo". A tipologia textual que predomina no trecho é:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) Narrativa, pois conta o crime cometido pelo suspeito.</li>
+  <li>B) Dissertativa-argumentativa, pois tenta convencer da culpa do suspeito.</li>
+  <li><strong>C) Descritiva, pois apresenta características e detalhes que formam uma imagem do sujeito.</strong></li>
+  <li>D) Injuntiva, pois ensina como capturar o suspeito.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> O trecho funciona como uma "fotografia". O forte uso de adjetivos e a pausa no tempo indicam a tipologia descritiva. Não há progressão de fatos (narrativa).
+</div>
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 4 (Banca FGV)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+No gênero textual "Artigo de Opinião", qual é a tipologia textual predominante e sua principal característica?</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li><strong>A) Dissertativa-argumentativa, cujo foco é defender uma tese e convencer o leitor.</strong></li>
+  <li>B) Narrativa, cujo foco é relatar uma história de forma cronológica.</li>
+  <li>C) Expositiva, focada apenas em informar os dados sem julgamento de valor.</li>
+  <li>D) Injuntiva, focada em dar ordens expressas ao público.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra A</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Se é de "Opinião", o autor não quer apenas informar (como faria na tipologia expositiva). Ele quer defender um ponto de vista e persuadir o leitor, caracterizando a tipologia dissertativa-argumentativa.
+</div>
+<hr style="margin: 30px 0;">
+`
+  },
+  {
+    titulo: "Questões Comentadas - Parte 2",
+    conteudo: `
+<h2 style="color: #2C3E50; border-bottom: 2px solid #3498DB; padding-bottom: 5px;">🎯 BATERIA DE QUESTÕES - PARTE 2</h2>
+
+<h3 style="color: #8E44AD;">📌 Questão 5 (Banca IBFC)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Sobre os elementos da tipologia narrativa, é correto afirmar que ela exige a presença obrigatória de:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) Argumentos, dados estatísticos e verbos no imperativo.</li>
+  <li>B) Características físicas excessivas sem qualquer progressão de tempo.</li>
+  <li><strong>C) Narrador, personagens, tempo, espaço e enredo.</strong></li>
+  <li>D) Teses, premissas maiores e conclusão argumentativa.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> Esses são os 5 elementos essenciais da narração. Pense no mnemônico "PENTE" (Personagem, Espaço, Narrador, Tempo, Enredo).
+</div>
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 6 (Banca QUADRIX)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+O gênero "Notícia" tem como principal função social informar os cidadãos sobre fatos recentes e relevantes. Para que isso ocorra com eficiência e neutralidade, a tipologia predominante é a:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li><strong>A) Expositiva (podendo mesclar com relatos narrativos).</strong></li>
+  <li>B) Injuntiva, pois ensina o cidadão a se comportar.</li>
+  <li>C) Dissertativa-argumentativa, para ditar como o leitor deve pensar.</li>
+  <li>D) Descritiva subjetiva, focada nas emoções do repórter.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra A</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> A notícia pura visa à informação direta, impessoal e objetiva, marcas da tipologia expositiva. Muitas vezes ela narra fatos (narração objetiva), mas evita ao máximo a argumentação e opiniões, pois comprometeria a neutralidade.
+</div>
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 7 (Banca IDECAN)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+A principal marca gramatical que ajuda o candidato a identificar a tipologia injuntiva em um texto de concurso é o emprego abundante de:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) Adjetivos subjetivos.</li>
+  <li>B) Verbos no tempo pretérito perfeito.</li>
+  <li><strong>C) Verbos no modo imperativo.</strong></li>
+  <li>D) Conjunções adversativas no início dos parágrafos.</li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra C</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> O modo imperativo (faça, leia, evite, preencha) expressa ordem, pedido ou orientação, que é o coração da tipologia injuntiva (instrucional).
+</div>
+<hr style="margin: 30px 0;">
+
+<h3 style="color: #8E44AD;">📌 Questão 8 (Banca CESGRANRIO)</h3>
+<p><strong>Múltipla Escolha:</strong><br>
+Analise o gênero "Charge". Além da linguagem não verbal (desenhos), a Charge costuma apresentar como principal característica comunicativa:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>A) O relato minucioso de fatos históricos passados sem qualquer traço cômico.</li>
+  <li>B) A explicação neutra e científica de um fenômeno da natureza.</li>
+  <li>C) O ensinamento de uma receita passo a passo.</li>
+  <li><strong>D) A crítica social, política ou cultural, utilizando como principal ferramenta o humor e a ironia.</strong></li>
+</ul>
+<p><strong>Gabarito:</strong> <span style="color: #28A745; font-weight: bold; background-color: #D4EDDA; padding: 3px 8px; border-radius: 4px;">✔ Letra D</span></p>
+<div style="background-color: #E8F8F5; padding: 15px; border-left: 4px solid #1ABC9C; margin-top: 10px;">
+  <strong>💬 Comentário do Professor:</strong> As charges são figurinhas carimbadas em provas de português! Elas sempre estão atreladas a uma crítica sobre o tempo presente, e a arma para isso é a ironia aliada à junção de imagem e texto curto.
+</div>
+<hr style="margin: 30px 0;">
+`
+  }
 ];
+
