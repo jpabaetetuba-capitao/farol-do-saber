@@ -1,3432 +1,483 @@
 const officeTeoria = [
-
 {
-    titulo: "📊 Conceitos de Aplicativos de Escritório",
-
+    titulo: "📊 1. Conceitos de Aplicativos de Escritório",
     conteudo: `
+<style>
+  /* Estilos Globais para o Módulo Office */
+  .conteudo-teoria { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #334155; }
+  .conceito-box { background: #eff6ff; border-left: 5px solid #3b82f6; padding: 15px; border-radius: 4px; margin: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+  .alerta-box { border-left: 5px solid #f59e0b; background: #fffbeb; padding: 15px; margin: 15px 0; border-radius: 4px; }
+  .dica-box, .macete { border-left: 5px solid #10b981; background: #ecfdf5; padding: 15px; margin: 15px 0; border-radius: 4px; }
+  .resumo { background: #1e293b; color: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 5px solid #38bdf8; }
+  
+  /* Tags de Extensões e Apps */
+  .tag { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 0.9em; font-weight: bold; margin: 3px; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+  .tag-word { background: #2563eb; } /* Azul */
+  .tag-excel { background: #16a34a; } /* Verde */
+  .tag-ppt { background: #ea580c; } /* Laranja */
+  .tag-writer { background: #475569; } /* Cinza Escuro */
+  .tag-calc { background: #059669; } /* Verde Esmeralda */
+  .tag-impress { background: #dc2626; } /* Vermelho */
+  .tag-ext { background: #8b5cf6; } /* Roxo para extensões */
+  
+  /* Tabelas Profissionais */
+  .tabela-pro { width: 100%; border-collapse: collapse; margin: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+  .tabela-pro th { background: #cbd5e1; padding: 12px; border: 1px solid #94a3b8; text-align: left; color: #1e293b; }
+  .tabela-pro td { padding: 12px; border: 1px solid #e2e8f0; }
+  
+  /* Cards Comparativos */
+  .grid-comparativo { display: flex; gap: 15px; flex-wrap: wrap; margin: 15px 0; }
+  .card-ms, .card-libre { flex: 1; min-width: 220px; padding: 20px; border-radius: 8px; color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+  .card-ms { background: linear-gradient(135deg, #1e3a8a, #3b82f6); }
+  .card-libre { background: linear-gradient(135deg, #064e3b, #10b981); }
+  .card-ms h3, .card-libre h3 { margin-top: 0; color: #fff; border-bottom: 2px solid rgba(255,255,255,0.3); padding-bottom: 10px; }
+  .card-ms ul, .card-libre ul { list-style-type: none; padding-left: 0; }
+  .card-ms li, .card-libre li { margin-bottom: 8px; font-weight: 500; }
+  
+  /* Fórmulas e Código */
+  code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', monospace; color: #b91c1c; font-weight: bold; }
+  
+  /* Animação da Seta */
+  @keyframes bounceRight { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+  .seta { display: inline-block; animation: bounceRight 1s infinite; color: #f59e0b; font-weight: 900; margin-right: 5px; font-size: 1.2em; }
+</style>
 
+<div class="conteudo-teoria">
 <h3>📘 O que são Aplicativos de Escritório?</h3>
-
 <p>
-Aplicativos de escritório são programas utilizados para criar, editar, organizar, armazenar e apresentar informações.
+Aplicativos de escritório são programas utilizados para criar, editar, organizar, armazenar e apresentar informações. Eles auxiliam atividades profissionais, acadêmicas e pessoais, aumentando a produtividade do usuário.
 </p>
 
-<p>
-Eles auxiliam atividades profissionais, acadêmicas e pessoais, aumentando a produtividade do usuário.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Uma suíte de escritório é um conjunto de programas integrados voltados para tarefas de produtividade.
-
+<div class="conceito-box">
+<span class="seta">➔</span> <strong>Suíte de Escritório:</strong> É um pacote ou conjunto de programas integrados voltados para tarefas de produtividade. Você não instala apenas um, mas sim a "caixa de ferramentas" completa.
 </div>
 
-<br><br>
+<h3>🧰 O Grande Duelo das Suítes</h3>
+<p>As provas adoram comparar os dois gigantes do mercado. Conheça-os bem:</p>
 
-<h3>🧰 Principais Ferramentas</h3>
+<div class="grid-comparativo">
+  <div class="card-ms">
+    <h3>🏢 Microsoft Office</h3>
+    <p>Software <strong>Proprietário</strong>. Possui licença comercial paga e código-fonte fechado (restrito à Microsoft).</p>
+    <ul>
+      <li>📄 <span class="tag tag-word">Word</span> (Texto)</li>
+      <li>📊 <span class="tag tag-excel">Excel</span> (Planilha)</li>
+      <li>🎞 <span class="tag tag-ppt">PowerPoint</span> (Apresentação)</li>
+      <li>📧 Outlook (E-mail)</li>
+      <li>🗄 Access (Banco de Dados)</li>
+    </ul>
+  </div>
 
-<ul>
-
-<li>📄 Editor de Texto</li>
-
-<li>📊 Planilha Eletrônica</li>
-
-<li>🎞 Programa de Apresentações</li>
-
-<li>🗄 Banco de Dados</li>
-
-<li>📧 Ferramentas de Comunicação</li>
-
-</ul>
-
-<br><br>
-
-<h3>🏢 Microsoft Office</h3>
-
-<p>
-É a suíte de escritório desenvolvida pela Microsoft.
-</p>
-
-<p>
-Trata-se de um software proprietário, ou seja, possui licença comercial e código-fonte fechado.
-</p>
-
-<br>
-
-<ul>
-
-<li>📄 Word</li>
-
-<li>📊 Excel</li>
-
-<li>🎞 PowerPoint</li>
-
-<li>📧 Outlook</li>
-
-<li>🗄 Access</li>
-
-</ul>
-
-<br><br>
-
-<h3>🐧 LibreOffice</h3>
-
-<p>
-É uma suíte de escritório gratuita e de código aberto.
-</p>
-
-<p>
-É considerada software livre e amplamente utilizada em órgãos públicos e instituições de ensino.
-</p>
-
-<br>
-
-<ul>
-
-<li>📄 Writer</li>
-
-<li>📊 Calc</li>
-
-<li>🎞 Impress</li>
-
-<li>🗄 Base</li>
-
-<li>🎨 Draw</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um professor pode utilizar:
-</p>
-
-<ul>
-
-<li>📄 Word ou Writer para criar apostilas.</li>
-
-<li>📊 Excel ou Calc para controlar notas.</li>
-
-<li>🎞 PowerPoint ou Impress para criar apresentações.</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Microsoft Office:
-
-📄 Word
-
-📊 Excel
-
-🎞 PowerPoint
-
-<br><br>
-
-LibreOffice:
-
-📄 Writer
-
-📊 Calc
-
-🎞 Impress
-
+  <div class="card-libre">
+    <h3>🐧 LibreOffice</h3>
+    <p>Software <strong>Livre</strong> e de código aberto. É gratuito e amplamente utilizado em órgãos públicos e governamentais.</p>
+    <ul>
+      <li>📄 <span class="tag tag-writer">Writer</span> (Texto)</li>
+      <li>📊 <span class="tag tag-calc">Calc</span> (Planilha)</li>
+      <li>🎞 <span class="tag tag-impress">Impress</span> (Apresentação)</li>
+      <li>🗄 Base (Banco de Dados)</li>
+      <li>🎨 Draw (Desenho Vetorial)</li>
+    </ul>
+  </div>
 </div>
 
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-As bancas costumam perguntar qual suíte é software livre e qual é software proprietário.
-</p>
-
-<p>
-LibreOffice = Software Livre.
-</p>
-
-<p>
-Microsoft Office = Software Proprietário.
-</p>
-
-<br><br>
+<div class="alerta-box">
+<span class="seta">➔</span> <strong>Pegadinha Clássica:</strong> As bancas costumam afirmar que o LibreOffice é "proprietário" ou que o Microsoft Office é "livre". Lembre-se: O <em>Libre</em>Office é Livre. O <em>Microsoft</em> é Proprietário.
+</div>
 
 <div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Aplicativos de escritório aumentam a produtividade.
-
-• Microsoft Office é software proprietário.
-
-• LibreOffice é software livre.
-
-• Word ↔ Writer.
-
-• Excel ↔ Calc.
-
-• PowerPoint ↔ Impress.
-
+✅ <strong>RESUMO RÁPIDO:</strong><br>
+• Word ↔ Writer (Textos)<br>
+• Excel ↔ Calc (Planilhas)<br>
+• PowerPoint ↔ Impress (Apresentações)
 </div>
-
+</div>
 `
-
 },
 
 {
-    titulo: "🏢 Microsoft Office",
-
+    titulo: "🏢 2. Microsoft Office em Detalhes",
     conteudo: `
-
-<h3>📘 O que é o Microsoft Office?</h3>
-
+<div class="conteudo-teoria">
+<h3>📘 A Suíte Mais Famosa do Mundo</h3>
 <p>
-O Microsoft Office é uma suíte de aplicativos desenvolvida pela Microsoft para auxiliar tarefas de produtividade, comunicação e gerenciamento de informações.
+O Microsoft Office é uma suíte de aplicativos desenvolvida pela Microsoft para auxiliar tarefas de produtividade, comunicação e gerenciamento de informações. Por ser <strong>Software Proprietário</strong>, seu uso depende da aquisição de uma licença (compra única ou assinatura como o Microsoft 365).
 </p>
 
-<p>
-É uma das ferramentas mais utilizadas em empresas, escolas, universidades e órgãos públicos.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O Microsoft Office é um software proprietário, ou seja, necessita de licença para uso e possui código-fonte fechado.
-
-</div>
-
-<br><br>
-
-<h3>🧰 Principais Aplicativos</h3>
+<h3>🧰 Principais Aplicativos Cobrados</h3>
 
 <ul>
-
-<li>📄 Word → Editor de textos</li>
-
-<li>📊 Excel → Planilhas eletrônicas</li>
-
-<li>🎞 PowerPoint → Apresentações</li>
-
-<li>📧 Outlook → Correio eletrônico</li>
-
-<li>🗄 Access → Banco de dados</li>
-
+<li><span class="tag tag-word">Word</span> ➔ Utilizado para criação, edição e formatação de documentos de texto (relatórios, ofícios, livros).</li>
+<li><span class="tag tag-excel">Excel</span> ➔ Criação de planilhas eletrônicas, cálculos complexos, geração de gráficos e análise de dados matemáticos.</li>
+<li><span class="tag tag-ppt">PowerPoint</span> ➔ Criação de apresentações em slides para reuniões, palestras e aulas. Permite animações.</li>
+<li><span class="tag" style="background:#0284c7;">Outlook</span> ➔ Gerenciador de e-mails (cliente de correio eletrônico), contatos, calendário e agenda de compromissos.</li>
+<li><span class="tag" style="background:#b91c1c;">Access</span> ➔ SGBD (Sistema de Gerenciamento de Banco de Dados) para organizar grandes volumes de registros estruturados.</li>
 </ul>
 
-<br><br>
-
-<h3>📄 Microsoft Word</h3>
-
-<p>
-Utilizado para criação, edição e formatação de documentos de texto.
-</p>
-
-<p>
-Permite inserir imagens, tabelas, gráficos, cabeçalhos, rodapés e diversos elementos de formatação.
-</p>
-
-<br><br>
-
-<h3>📊 Microsoft Excel</h3>
-
-<p>
-Utilizado para criação de planilhas eletrônicas, cálculos, gráficos e análise de dados.
-</p>
-
-<p>
-É amplamente utilizado em controles financeiros, relatórios e estatísticas.
-</p>
-
-<br><br>
-
-<h3>🎞 Microsoft PowerPoint</h3>
-
-<p>
-Utilizado para criação de apresentações em slides.
-</p>
-
-<p>
-Permite inserir textos, imagens, vídeos, animações e transições.
-</p>
-
-<br><br>
-
-<h3>📧 Microsoft Outlook</h3>
-
-<p>
-Programa utilizado para gerenciamento de e-mails, contatos, calendário e compromissos.
-</p>
-
-<br><br>
-
-<h3>🗄 Microsoft Access</h3>
-
-<p>
-Sistema de gerenciamento de banco de dados utilizado para armazenar, organizar e consultar informações.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Uma escola pode utilizar:
-</p>
-
-<ul>
-
-<li>📄 Word para elaborar provas.</li>
-
-<li>📊 Excel para controlar notas.</li>
-
-<li>🎞 PowerPoint para apresentações em sala.</li>
-
-<li>📧 Outlook para comunicação institucional.</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Word = Texto
-
-Excel = Planilha
-
-PowerPoint = Apresentação
-
-Outlook = E-mail
-
-Access = Banco de Dados
-
+<div class="alerta-box">
+<span class="seta">➔</span> <strong>Pegadinha de Concurso:</strong><br>
+Muitas bancas invertem os papéis para testar sua atenção. Exemplo: <em>"O MS Excel é um excelente editor de textos para ofícios"</em> (ERRADO!). Cada aplicativo possui uma função primária específica.
 </div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Muitas bancas afirmam que o Excel é um editor de textos ou que o Word é uma planilha eletrônica.
-</p>
-
-<p>
-Isso está incorreto.
-</p>
-
-<p>
-Cada aplicativo possui uma função específica dentro da suíte Office.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Microsoft Office é software proprietário.
-
-• Word → Editor de Texto.
-
-• Excel → Planilha Eletrônica.
-
-• PowerPoint → Apresentações.
-
-• Outlook → Correio Eletrônico.
-
-• Access → Banco de Dados.
-
 </div>
-
 `
-
-},
-{
-    titulo: "🐧 LibreOffice",
-
-    conteudo: `
-
-<h3>📘 O que é o LibreOffice?</h3>
-
-<p>
-O LibreOffice é uma suíte de aplicativos de escritório gratuita e de código aberto, utilizada para criação de documentos, planilhas, apresentações e bancos de dados.
-</p>
-
-<p>
-Foi desenvolvida pela The Document Foundation e é amplamente utilizada por governos, escolas, universidades e usuários que procuram uma alternativa gratuita ao Microsoft Office.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O LibreOffice é um software livre, podendo ser utilizado, copiado, distribuído e modificado sem pagamento de licença.
-
-</div>
-
-<br><br>
-
-<h3>🧰 Principais Aplicativos</h3>
-
-<ul>
-
-<li>📄 Writer → Editor de textos</li>
-
-<li>📊 Calc → Planilhas eletrônicas</li>
-
-<li>🎞 Impress → Apresentações</li>
-
-<li>🗄 Base → Banco de dados</li>
-
-<li>🎨 Draw → Desenhos e diagramas</li>
-
-<li>🧮 Math → Fórmulas matemáticas</li>
-
-</ul>
-
-<br><br>
-
-<h3>📄 Writer</h3>
-
-<p>
-É o editor de textos do LibreOffice.
-</p>
-
-<p>
-Possui funções semelhantes ao Microsoft Word para criação e edição de documentos.
-</p>
-
-<br><br>
-
-<h3>📊 Calc</h3>
-
-<p>
-É a planilha eletrônica do LibreOffice.
-</p>
-
-<p>
-Permite realizar cálculos, criar gráficos e organizar dados, desempenhando funções semelhantes às do Excel.
-</p>
-
-<br><br>
-
-<h3>🎞 Impress</h3>
-
-<p>
-É o programa utilizado para criação de apresentações em slides.
-</p>
-
-<p>
-Seu equivalente no Microsoft Office é o PowerPoint.
-</p>
-
-<br><br>
-
-<h3>🗄 Base</h3>
-
-<p>
-É o sistema de banco de dados do LibreOffice.
-</p>
-
-<p>
-Seu equivalente no Microsoft Office é o Access.
-</p>
-
-<br><br>
-
-<h3>🎨 Draw</h3>
-
-<p>
-É utilizado para criação de desenhos, diagramas, fluxogramas e ilustrações.
-</p>
-
-<br><br>
-
-<h3>🔄 Compatibilidade com Microsoft Office</h3>
-
-<p>
-O LibreOffice consegue abrir e salvar arquivos criados no Microsoft Office.
-</p>
-
-<p>
-Entretanto, dependendo do documento, podem ocorrer pequenas diferenças de formatação.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Writer → Word
-
-Calc → Excel
-
-Impress → PowerPoint
-
-Base → Access
-
-Draw → Desenhos
-
-Math → Fórmulas
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-As bancas costumam afirmar que o LibreOffice é um software proprietário.
-</p>
-
-<p>
-A afirmação está errada.
-</p>
-
-<p>
-O LibreOffice é um software livre e de código aberto.
-</p>
-
-<p>
-Já o Microsoft Office é um software proprietário e comercial.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• LibreOffice é uma suíte de escritório gratuita.
-
-• LibreOffice é software livre.
-
-• Writer ↔ Word.
-
-• Calc ↔ Excel.
-
-• Impress ↔ PowerPoint.
-
-• Base ↔ Access.
-
-• Draw ↔ Ferramenta de desenhos.
-
-• Math ↔ Editor de fórmulas matemáticas.
-
-</div>
-
-`
-
 },
 
 {
-    titulo: "📄 Editores de Texto",
-
+    titulo: "🐧 3. LibreOffice em Detalhes",
     conteudo: `
-
-<h3>📘 O que é um Editor de Texto?</h3>
-
+<div class="conteudo-teoria">
+<h3>📘 A Força do Software Livre</h3>
 <p>
-Um editor de texto é um programa utilizado para criar, editar, formatar, salvar e imprimir documentos.
+Desenvolvido pela The Document Foundation, o LibreOffice é a alternativa gratuita que domina as repartições públicas do Brasil. É um <strong>Software Livre e de Código Aberto (Open Source)</strong>.
 </p>
 
-<p>
-Esses programas são amplamente utilizados em empresas, escolas, universidades e órgãos públicos para elaboração de cartas, relatórios, contratos, trabalhos acadêmicos e diversos outros documentos.
-</p>
+<h3>🧰 Seus Principais Componentes</h3>
+<ul>
+<li><span class="tag tag-writer">Writer</span> ➔ Editor de textos, rival direto do MS Word.</li>
+<li><span class="tag tag-calc">Calc</span> ➔ Planilha eletrônica, rival direto do MS Excel.</li>
+<li><span class="tag tag-impress">Impress</span> ➔ Apresentações em slides, rival direto do MS PowerPoint.</li>
+<li><span class="tag" style="background:#5b21b6;">Base</span> ➔ Banco de dados, semelhante ao Access.</li>
+<li><span class="tag" style="background:#ea580c;">Draw</span> ➔ Utilizado para criação de desenhos, diagramas vetoriais e fluxogramas.</li>
+<li><span class="tag" style="background:#0891b2;">Math</span> ➔ Editor especializado em diagramação de fórmulas matemáticas complexas.</li>
+</ul>
 
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Editor de texto não é a mesma coisa que planilha eletrônica ou programa de apresentações.
-
+<div class="dica-box">
+<span class="seta">➔</span> <strong>Compatibilidade (Cai muito na prova!):</strong><br>
+O LibreOffice <strong>consegue SIM</strong> abrir, editar e salvar arquivos nos formatos do Microsoft Office (como <code>.docx</code> ou <code>.xlsx</code>). Embora possam ocorrer pequenos desajustes visuais em documentos muito complexos, a compatibilidade nativa existe.
 </div>
-
-<br><br>
-
-<h3>🧰 Principais Editores de Texto</h3>
-
-<ul>
-
-<li>📄 Microsoft Word</li>
-
-<li>📄 LibreOffice Writer</li>
-
-</ul>
-
-<p>
-Ambos possuem recursos semelhantes para criação e edição de documentos.
-</p>
-
-<br><br>
-
-<h3>✍️ Principais Recursos</h3>
-
-<ul>
-
-<li>Alteração de fontes</li>
-
-<li>Negrito, itálico e sublinhado</li>
-
-<li>Alinhamento de texto</li>
-
-<li>Inserção de imagens</li>
-
-<li>Inserção de tabelas</li>
-
-<li>Correção ortográfica</li>
-
-<li>Cabeçalho e rodapé</li>
-
-<li>Numeração de páginas</li>
-
-<li>Impressão de documentos</li>
-
-</ul>
-
-<br><br>
-
-<h3>📂 Operações Comuns</h3>
-
-<p>
-Os editores de texto permitem:
-</p>
-
-<ul>
-
-<li>Criar documentos</li>
-
-<li>Abrir documentos existentes</li>
-
-<li>Salvar alterações</li>
-
-<li>Exportar para PDF</li>
-
-<li>Imprimir documentos</li>
-
-</ul>
-
-<br><br>
-
-<h3>📑 Formatação de Texto</h3>
-
-<p>
-A formatação é utilizada para melhorar a aparência e a organização do documento.
-</p>
-
-<p>
-Entre os recursos mais utilizados estão:
-</p>
-
-<ul>
-
-<li><strong>Negrito</strong></li>
-
-<li><em>Itálico</em></li>
-
-<li><u>Sublinhado</u></li>
-
-<li>Alteração do tamanho da fonte</li>
-
-<li>Alteração da cor da fonte</li>
-
-<li>Espaçamento entre linhas</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um professor pode utilizar um editor de texto para:
-</p>
-
-<ul>
-
-<li>Criar provas.</li>
-
-<li>Elaborar planos de aula.</li>
-
-<li>Produzir apostilas.</li>
-
-<li>Gerar declarações e relatórios.</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Editor de Texto = Produção de Documentos
-
-Word → Editor de Texto
-
-Writer → Editor de Texto
-
-Excel e Calc NÃO são editores de texto.
-
 </div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-As bancas costumam misturar as funções dos programas.
-</p>
-
-<p>
-Word e Writer são editores de texto.
-</p>
-
-<p>
-Excel e Calc são planilhas eletrônicas.
-</p>
-
-<p>
-PowerPoint e Impress são programas de apresentação.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Editor de texto cria e edita documentos.
-
-• Word e Writer são editores de texto.
-
-• Permitem formatar textos e inserir imagens.
-
-• Possuem recursos de impressão e exportação para PDF.
-
-• Não devem ser confundidos com planilhas eletrônicas ou apresentações.
-
-</div>
-
 `
-
 },
+
 {
-    titulo: "📄 Microsoft Word",
-
+    titulo: "📄 4. Editores de Texto: Word e Writer",
     conteudo: `
-
-<h3>📘 O que é o Microsoft Word?</h3>
-
+<div class="conteudo-teoria">
 <p>
-O Microsoft Word é o editor de textos da suíte Microsoft Office.
+Editores de texto são as ferramentas de elaboração de documentos textuais (cartas, ofícios, relatórios). Não confunda editores de texto com planilhas!
 </p>
 
-<p>
-Ele é utilizado para criar, editar, formatar, salvar e imprimir documentos dos mais diversos tipos.
-</p>
-
-<p>
-É um dos programas mais cobrados em concursos públicos.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O Microsoft Word é um editor de textos e não uma planilha eletrônica.
-
+<div class="grid-comparativo">
+  <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; flex: 1; border-top: 4px solid #2563eb;">
+    <h3 style="color:#1e3a8a; margin-top:0;">📄 Microsoft Word</h3>
+    <p>Formato Padrão Atual: <span class="tag tag-ext">.DOCX</span></p>
+    <p>Formato Antigo: <span class="tag tag-ext">.DOC</span></p>
+    <p>Possui recursos avançados como Mala Direta, sumários automáticos e controle de alterações.</p>
+  </div>
+  
+  <div style="background: #f1f5f9; padding: 15px; border-radius: 8px; flex: 1; border-top: 4px solid #475569;">
+    <h3 style="color:#334155; margin-top:0;">📄 LibreOffice Writer</h3>
+    <p>Formato Padrão: <span class="tag tag-ext">.ODT</span> (OpenDocument Text)</p>
+    <p>Permite exportação direta para PDF de forma nativa e muito estável.</p>
+  </div>
 </div>
 
-<br><br>
-
-<h3>🧰 Principais Recursos do Word</h3>
-
+<h3>📑 Recursos Comuns Frequentes em Provas</h3>
 <ul>
-
-<li>📄 Criação de documentos</li>
-
-<li>✍️ Formatação de texto</li>
-
-<li>📊 Inserção de tabelas</li>
-
-<li>🖼 Inserção de imagens</li>
-
-<li>📑 Numeração de páginas</li>
-
-<li>📌 Cabeçalho e rodapé</li>
-
-<li>🔍 Correção ortográfica</li>
-
-<li>🖨 Impressão de documentos</li>
-
-<li>📄 Exportação para PDF</li>
-
+<li><strong>Cabeçalho e Rodapé:</strong> Áreas fixas no topo e na base do papel que se repetem automaticamente em todas as páginas (úteis para numeração de página e logomarcas).</li>
+<li><strong>Formatação de Fonte:</strong> Negrito, <em>Itálico</em>, <u>Sublinhado</u>.</li>
+<li><strong>Atalhos (Atenção às diferenças):</strong> No Word em Português, o Negrito é <code>Ctrl + N</code>. No Writer em Português, muitos atalhos seguem o padrão do inglês, então Negrito é <code>Ctrl + B</code> (Bold).</li>
 </ul>
 
-<br><br>
-
-<h3>✍️ Formatação de Texto</h3>
-
-<p>
-O Word permite alterar a aparência do texto para melhorar a apresentação do documento.
-</p>
-
-<ul>
-
-<li>Negrito</li>
-
-<li>Itálico</li>
-
-<li>Sublinhado</li>
-
-<li>Tamanho da fonte</li>
-
-<li>Cor da fonte</li>
-
-<li>Alinhamento</li>
-
-<li>Espaçamento entre linhas</li>
-
-</ul>
-
-<br><br>
-
-<h3>📑 Cabeçalho e Rodapé</h3>
-
-<p>
-O cabeçalho é a área localizada na parte superior da página.
-</p>
-
-<p>
-O rodapé é a área localizada na parte inferior da página.
-</p>
-
-<p>
-Nessas regiões podem ser inseridos textos, logotipos, datas e números de página.
-</p>
-
-<br><br>
-
-<h3>📊 Tabelas e Imagens</h3>
-
-<p>
-O Word permite inserir tabelas para organizar informações e imagens para complementar o conteúdo do documento.
-</p>
-
-<p>
-Esses recursos são muito utilizados em relatórios, trabalhos acadêmicos e documentos oficiais.
-</p>
-
-<br><br>
-
-<h3>⌨️ Atalhos Importantes</h3>
-
-<ul>
-
-<li><strong>Ctrl + N</strong> → Negrito</li>
-
-<li><strong>Ctrl + I</strong> → Itálico</li>
-
-<li><strong>Ctrl + S</strong> → Sublinhado</li>
-
-<li><strong>Ctrl + P</strong> → Imprimir</li>
-
-<li><strong>Ctrl + C</strong> → Copiar</li>
-
-<li><strong>Ctrl + V</strong> → Colar</li>
-
-<li><strong>Ctrl + X</strong> → Recortar</li>
-
-<li><strong>Ctrl + Z</strong> → Desfazer</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um professor pode utilizar o Word para:
-</p>
-
-<ul>
-
-<li>Elaborar provas.</li>
-
-<li>Produzir apostilas.</li>
-
-<li>Criar planos de aula.</li>
-
-<li>Gerar declarações e relatórios.</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-WORD = WORDS (PALAVRAS)
-
-Lembre-se:
-
-Word → Texto
-
-Excel → Planilha
-
-PowerPoint → Apresentação
-
+<div class="alerta-box">
+<span class="seta">➔</span> <strong>A Maior Pegadinha sobre Formatos:</strong><br>
+A banca vai te perguntar qual é o formato padrão nativo do Writer. A resposta é <strong>.ODT</strong>. Se a prova disser que o formato padrão do Writer é .DOCX, está ERRADO (ele abre, mas não é o seu padrão).
 </div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma pegadinha comum é afirmar que o Word é utilizado para criar planilhas eletrônicas.
-</p>
-
-<p>
-A afirmação está errada.
-</p>
-
-<p>
-O Word é um editor de textos.
-</p>
-
-<p>
-Planilhas eletrônicas são criadas no Excel ou no Calc.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Word é o editor de textos da Microsoft.
-
-• Permite criar e formatar documentos.
-
-• Possui cabeçalho, rodapé e numeração de páginas.
-
-• Permite inserir tabelas e imagens.
-
-• Exporta documentos para PDF.
-
-• Não é utilizado para criar planilhas eletrônicas.
-
 </div>
-
 `
-
 },
+
 {
-    titulo: "📄 LibreOffice Writer",
-
+    titulo: "📊 5. Planilhas Eletrônicas: Excel e Calc",
     conteudo: `
-
-<h3>📘 O que é o LibreOffice Writer?</h3>
-
+<div class="conteudo-teoria">
 <p>
-O Writer é o editor de textos da suíte LibreOffice.
+Planilhas organizam dados em uma grade matricial e realizam processamentos matemáticos pesados automaticamente.
 </p>
 
-<p>
-Ele é utilizado para criar, editar, formatar, salvar e imprimir documentos, desempenhando funções semelhantes às do Microsoft Word.
-</p>
+<h3>📋 A Estrutura da Grade</h3>
+<p>As planilhas formam uma malha composta por:</p>
+<ul>
+<li>➡️ <strong>Colunas:</strong> Identificadas por LETRAS (A, B, C, D...).</li>
+<li>⬇️ <strong>Linhas:</strong> Identificadas por NÚMEROS (1, 2, 3, 4...).</li>
+<li>📦 <strong>Célula:</strong> É a unidade básica de preenchimento, o exato encontro entre uma Coluna e uma Linha. (Ex: <code>A1</code>, <code>C10</code>, <code>Z99</code>).</li>
+</ul>
 
-<p>
-É uma alternativa gratuita e de código aberto ao Word.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O Writer é um editor de textos e faz parte do LibreOffice, que é uma suíte de escritório gratuita.
-
+<div class="grid-comparativo">
+  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; flex: 1; border-top: 4px solid #16a34a;">
+    <h3 style="color:#14532d; margin-top:0;">📊 Microsoft Excel</h3>
+    <p>Formato Padrão Atual: <span class="tag tag-ext">.XLSX</span></p>
+    <p>Formato Antigo: <span class="tag tag-ext">.XLS</span></p>
+  </div>
+  
+  <div style="background: #d1fae5; padding: 15px; border-radius: 8px; flex: 1; border-top: 4px solid #059669;">
+    <h3 style="color:#064e3b; margin-top:0;">📊 LibreOffice Calc</h3>
+    <p>Formato Padrão: <span class="tag tag-ext">.ODS</span> (OpenDocument Spreadsheet)</p>
+  </div>
 </div>
-
-<br><br>
-
-<h3>🧰 Principais Recursos do Writer</h3>
-
-<ul>
-
-<li>📄 Criação de documentos</li>
-
-<li>✍️ Formatação de texto</li>
-
-<li>📊 Inserção de tabelas</li>
-
-<li>🖼 Inserção de imagens</li>
-
-<li>📑 Numeração de páginas</li>
-
-<li>📌 Cabeçalho e rodapé</li>
-
-<li>🔍 Verificação ortográfica</li>
-
-<li>🖨 Impressão de documentos</li>
-
-<li>📄 Exportação para PDF</li>
-
-</ul>
-
-<br><br>
-
-<h3>✍️ Formatação de Texto</h3>
-
-<p>
-O Writer possui recursos para personalização e organização dos documentos.
-</p>
-
-<ul>
-
-<li>Negrito</li>
-
-<li>Itálico</li>
-
-<li>Sublinhado</li>
-
-<li>Tamanho da fonte</li>
-
-<li>Cor da fonte</li>
-
-<li>Alinhamento de texto</li>
-
-<li>Espaçamento entre linhas</li>
-
-</ul>
-
-<br><br>
-
-<h3>📂 Formato Padrão de Arquivo</h3>
-
-<p>
-O formato padrão utilizado pelo Writer é:
-</p>
-
-<ul>
-
-<li><strong>.odt</strong> (OpenDocument Text)</li>
-
-</ul>
-
-<p>
-O Writer também pode abrir e salvar arquivos do Microsoft Word.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>.doc</li>
-
-<li>.docx</li>
-
-</ul>
-
-<br><br>
-
-<h3>📄 Exportação para PDF</h3>
-
-<p>
-Uma das características mais cobradas em concursos é a capacidade do Writer de exportar documentos diretamente para PDF.
-</p>
-
-<p>
-Esse recurso já vem integrado ao programa.
-</p>
-
-<br><br>
-
-<h3>🔄 Compatibilidade com Word</h3>
-
-<p>
-O Writer é compatível com documentos criados no Microsoft Word.
-</p>
-
-<p>
-Porém, dependendo do conteúdo, podem ocorrer pequenas diferenças de formatação entre os programas.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um professor pode utilizar o Writer para:
-</p>
-
-<ul>
-
-<li>Elaborar apostilas.</li>
-
-<li>Criar provas.</li>
-
-<li>Produzir relatórios.</li>
-
-<li>Gerar declarações.</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Writer = Escrever
-
-Word = Palavras
-
-Ambos são editores de texto.
-
-Formato padrão do Writer:
-
-📄 .ODT
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Muitas bancas perguntam qual é o formato padrão do Writer.
-</p>
-
-<p>
-A resposta correta é:
-</p>
-
-<p>
-
-<strong>.ODT</strong>
-
-</p>
-
-<p>
-Já o formato mais comum do Word é:
-</p>
-
-<p>
-
-<strong>.DOCX</strong>
-
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Writer é o editor de textos do LibreOffice.
-
-• É software livre e gratuito.
-
-• Seu formato padrão é .ODT.
-
-• Possui recursos semelhantes ao Word.
-
-• Permite exportação direta para PDF.
-
-• Pode abrir arquivos .DOC e .DOCX.
-
-</div>
-
-`
-
-},
-{
-    titulo: "📊 Planilhas Eletrônicas",
-
-    conteudo: `
-
-<h3>📘 O que são Planilhas Eletrônicas?</h3>
-
-<p>
-Planilhas eletrônicas são programas utilizados para organizar dados, realizar cálculos automáticos, criar gráficos e analisar informações.
-</p>
-
-<p>
-São amplamente utilizadas em empresas, escolas, órgãos públicos e atividades financeiras.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Planilha eletrônica não é editor de texto. Sua principal finalidade é trabalhar com dados e cálculos.
-
-</div>
-
-<br><br>
-
-<h3>🧰 Principais Programas</h3>
-
-<ul>
-
-<li>📊 Microsoft Excel</li>
-
-<li>📊 LibreOffice Calc</li>
-
-</ul>
-
-<p>
-Ambos possuem recursos semelhantes para cálculos, organização de dados e geração de gráficos.
-</p>
-
-<br><br>
-
-<h3>📋 Estrutura de uma Planilha</h3>
-
-<p>
-Uma planilha é formada por linhas, colunas e células.
-</p>
-
-<ul>
-
-<li>➡️ Linhas: identificadas por números.</li>
-
-<li>⬇️ Colunas: identificadas por letras.</li>
-
-<li>📦 Células: encontro entre linha e coluna.</li>
-
-</ul>
-
-<br>
-
-Exemplos de células:
-
-<ul>
-
-<li>A1</li>
-
-<li>B5</li>
-
-<li>C10</li>
-
-<li>D20</li>
-
-</ul>
-
-<br><br>
-
-<h3>🧮 Principais Utilizações</h3>
-
-<ul>
-
-<li>Controle financeiro</li>
-
-<li>Controle de estoque</li>
-
-<li>Controle de notas escolares</li>
-
-<li>Relatórios estatísticos</li>
-
-<li>Orçamentos</li>
-
-<li>Análise de dados</li>
-
-</ul>
-
-<br><br>
-
-<h3>⚙️ Fórmulas e Funções</h3>
-
-<p>
-As planilhas permitem realizar cálculos automaticamente através de fórmulas e funções.
-</p>
-
-<p>
-Esses recursos aumentam a produtividade e reduzem erros de cálculo.
-</p>
-
-<br><br>
 
 <h3>📈 Gráficos</h3>
-
-<p>
-Os dados armazenados podem ser transformados em gráficos para facilitar a interpretação das informações.
-</p>
-
-<p>
-Os tipos mais comuns são:
-</p>
-
-<ul>
-
-<li>📊 Colunas</li>
-
-<li>📈 Linhas</li>
-
-<li>🥧 Pizza</li>
-
-<li>📉 Barras</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um professor pode utilizar uma planilha para registrar notas dos alunos.
-</p>
-
-<p>
-A própria planilha pode calcular automaticamente médias, totais e percentuais.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Planilha = Cálculos
-
-Excel → Planilha
-
-Calc → Planilha
-
-Word e Writer NÃO são planilhas.
-
+<p>Tanto Excel quanto Calc permitem selecionar células numéricas e transformá-las em gráficos (Pizza, Colunas, Linhas, Barras, Dispersão), facilitando a leitura de relatórios.</p>
 </div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-As bancas frequentemente confundem as funções dos programas.
-</p>
-
-<p>
-Excel e Calc são programas de planilhas eletrônicas.
-</p>
-
-<p>
-Word e Writer são editores de texto.
-</p>
-
-<p>
-PowerPoint e Impress são programas de apresentação.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Planilhas eletrônicas organizam dados e realizam cálculos.
-
-• São compostas por linhas, colunas e células.
-
-• Excel e Calc são programas de planilhas.
-
-• Permitem uso de fórmulas, funções e gráficos.
-
-• São muito utilizadas para controles financeiros e estatísticos.
-
-</div>
-
 `
-
-},
-{
-    titulo: "📊 Microsoft Excel",
-
-    conteudo: `
-
-<h3>📘 O que é o Microsoft Excel?</h3>
-
-<p>
-O Microsoft Excel é o programa de planilhas eletrônicas da suíte Microsoft Office.
-</p>
-
-<p>
-Ele é utilizado para organizar dados, realizar cálculos, criar gráficos e analisar informações.
-</p>
-
-<p>
-É um dos aplicativos mais utilizados em empresas, órgãos públicos e instituições de ensino.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O Excel é uma planilha eletrônica. Não é um editor de textos e nem um programa de apresentações.
-
-</div>
-
-<br><br>
-
-<h3>🧰 Estrutura do Excel</h3>
-
-<p>
-Uma planilha é formada por:
-</p>
-
-<ul>
-
-<li>📋 Linhas</li>
-
-<li>📋 Colunas</li>
-
-<li>📦 Células</li>
-
-</ul>
-
-<br>
-
-<p>
-A célula é o encontro entre uma linha e uma coluna.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>A1</li>
-
-<li>B3</li>
-
-<li>C10</li>
-
-<li>D25</li>
-
-</ul>
-
-<br><br>
-
-<h3>⚙️ Principais Recursos</h3>
-
-<ul>
-
-<li>Realização de cálculos automáticos</li>
-
-<li>Criação de fórmulas</li>
-
-<li>Utilização de funções</li>
-
-<li>Construção de gráficos</li>
-
-<li>Classificação de dados</li>
-
-<li>Filtros</li>
-
-<li>Tabelas</li>
-
-<li>Análise estatística</li>
-
-</ul>
-
-<br><br>
-
-<h3>🧮 Fórmulas</h3>
-
-<p>
-As fórmulas são expressões utilizadas para realizar cálculos.
-</p>
-
-<p>
-Toda fórmula no Excel começa com o sinal:
-</p>
-
-<p>
-
-<strong>=</strong>
-
-</p>
-
-<br>
-
-Exemplos:
-
-<p>
-
-=10+5
-
-</p>
-
-<p>
-
-=A1+B1
-
-</p>
-
-<br><br>
-
-<h3>📈 Gráficos</h3>
-
-<p>
-O Excel permite transformar dados em gráficos para facilitar a interpretação das informações.
-</p>
-
-<p>
-Os tipos mais comuns são:
-</p>
-
-<ul>
-
-<li>📊 Colunas</li>
-
-<li>📈 Linhas</li>
-
-<li>🥧 Pizza</li>
-
-<li>📉 Barras</li>
-
-</ul>
-
-<br><br>
-
-<h3>📂 Formato Padrão</h3>
-
-<p>
-O formato padrão das versões atuais do Excel é:
-</p>
-
-<p>
-
-<strong>.XLSX</strong>
-
-</p>
-
-<br>
-
-<p>
-Versões antigas utilizavam:
-</p>
-
-<p>
-
-<strong>.XLS</strong>
-
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Uma escola pode utilizar o Excel para:
-</p>
-
-<ul>
-
-<li>Controlar notas dos alunos.</li>
-
-<li>Calcular médias automaticamente.</li>
-
-<li>Gerar relatórios.</li>
-
-<li>Criar gráficos de desempenho.</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Excel = Cálculos
-
-Excel = Planilhas
-
-Excel = Gráficos
-
-Formato atual:
-
-📊 .XLSX
-
-Formato antigo:
-
-📊 .XLS
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Muitas bancas perguntam qual símbolo inicia uma fórmula no Excel.
-</p>
-
-<p>
-A resposta correta é:
-</p>
-
-<p>
-
-<strong>= (igual)</strong>
-
-</p>
-
-<p>
-Sem esse símbolo o Excel interpreta o conteúdo apenas como texto.
-
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Excel é a planilha eletrônica da Microsoft.
-
-• É utilizado para cálculos e análise de dados.
-
-• Toda fórmula começa com "=".
-
-• Permite criação de gráficos.
-
-• Formato atual: .XLSX.
-
-• Formato antigo: .XLS.
-
-</div>
-
-`
-
-},
-{
-    titulo: "🧮 Fórmulas e Funções",
-
-    conteudo: `
-
-<h3>📘 O que são Fórmulas?</h3>
-
-<p>
-As fórmulas são expressões utilizadas para realizar cálculos em planilhas eletrônicas.
-</p>
-
-<p>
-Elas permitem executar operações matemáticas automaticamente, economizando tempo e reduzindo erros.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Toda fórmula no Excel e no Calc começa obrigatoriamente com o sinal de igual (=).
-
-</div>
-
-<br><br>
-
-<h3>🧮 Exemplos de Fórmulas</h3>
-
-<p>
-Algumas fórmulas simples são:
-</p>
-
-<p>
-
-=10+5
-
-</p>
-
-<p>
-
-=20-8
-
-</p>
-
-<p>
-
-=5*4
-
-</p>
-
-<p>
-
-=100/2
-
-</p>
-
-<br><br>
-
-<p>
-Também é possível utilizar referências de células:
-</p>
-
-<p>
-
-=A1+B1
-
-</p>
-
-<p>
-
-=C1-D1
-
-</p>
-
-<p>
-
-=A1*B1
-
-</p>
-
-<br><br>
-
-<h3>📘 O que são Funções?</h3>
-
-<p>
-Funções são fórmulas prontas disponibilizadas pelo programa para facilitar cálculos e operações mais complexas.
-</p>
-
-<p>
-Elas recebem dados como entrada e retornam automaticamente um resultado.
-</p>
-
-<br><br>
-
-<h3>⭐ Funções Mais Cobradas em Concursos</h3>
-
-<ul>
-
-<li>SOMA()</li>
-
-<li>MÉDIA()</li>
-
-<li>MÁXIMO()</li>
-
-<li>MÍNIMO()</li>
-
-<li>SE()</li>
-
-</ul>
-
-<br><br>
-
-<h3>➕ Função SOMA()</h3>
-
-<p>
-Realiza a soma de valores.
-</p>
-
-<p>
-
-=SOMA(A1:A10)
-
-</p>
-
-<p>
-Soma todas as células de A1 até A10.
-</p>
-
-<br><br>
-
-<h3>📊 Função MÉDIA()</h3>
-
-<p>
-Calcula a média aritmética dos valores.
-</p>
-
-<p>
-
-=MÉDIA(A1:A10)
-
-</p>
-
-<br><br>
-
-<h3>🔺 Função MÁXIMO()</h3>
-
-<p>
-Retorna o maior valor de um conjunto.
-</p>
-
-<p>
-
-=MÁXIMO(A1:A10)
-
-</p>
-
-<br><br>
-
-<h3>🔻 Função MÍNIMO()</h3>
-
-<p>
-Retorna o menor valor de um conjunto.
-</p>
-
-<p>
-
-=MÍNIMO(A1:A10)
-
-</p>
-
-<br><br>
-
-<h3>🔀 Função SE()</h3>
-
-<p>
-Executa um teste lógico.
-</p>
-
-<p>
-
-=SE(A1>=7;"APROVADO";"REPROVADO")
-
-</p>
-
-<p>
-Se A1 for maior ou igual a 7, retorna APROVADO. Caso contrário, retorna REPROVADO.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um professor pode utilizar:
-</p>
-
-<ul>
-
-<li>SOMA para totalizar notas.</li>
-
-<li>MÉDIA para calcular médias dos alunos.</li>
-
-<li>MÁXIMO para identificar a maior nota.</li>
-
-<li>MÍNIMO para identificar a menor nota.</li>
-
-<li>SE para verificar aprovação ou reprovação.</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-SOMA → Soma
-
-MÉDIA → Média
-
-MÁXIMO → Maior Valor
-
-MÍNIMO → Menor Valor
-
-SE → Teste Lógico
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Muitas bancas perguntam a diferença entre fórmula e função.
-</p>
-
-<p>
-Fórmula é criada pelo usuário.
-</p>
-
-<p>
-Função é uma fórmula pronta fornecida pelo programa.
-</p>
-
-<p>
-Toda função é uma fórmula, mas nem toda fórmula é uma função.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Toda fórmula começa com "=".
-
-• Fórmula é criada pelo usuário.
-
-• Função é uma fórmula pronta.
-
-• SOMA → Soma valores.
-
-• MÉDIA → Calcula média.
-
-• MÁXIMO → Maior valor.
-
-• MÍNIMO → Menor valor.
-
-• SE → Teste lógico.
-
-</div>
-
-`
-
-},
-{
-    titulo: "📌 Referências de Células",
-
-    conteudo: `
-
-<h3>📘 O que são Referências de Células?</h3>
-
-<p>
-As referências de células são utilizadas para identificar a localização de dados dentro de uma planilha eletrônica.
-</p>
-
-<p>
-Elas permitem que fórmulas e funções utilizem valores armazenados em diferentes células.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Uma referência é formada pela letra da coluna e pelo número da linha.
-
-</div>
-
-<br><br>
-
-<h3>📦 Exemplos de Referências</h3>
-
-<p>
-
-A1
-
-</p>
-
-<p>
-
-B5
-
-</p>
-
-<p>
-
-C10
-
-</p>
-
-<p>
-
-D20
-
-</p>
-
-<br>
-
-<p>
-Nesses exemplos:
-</p>
-
-<ul>
-
-<li>A, B, C e D representam as colunas.</li>
-
-<li>1, 5, 10 e 20 representam as linhas.</li>
-
-</ul>
-
-<br><br>
-
-<h3>📊 Tipos de Referências</h3>
-
-<p>
-Existem três tipos principais:
-</p>
-
-<ul>
-
-<li>Referência Relativa</li>
-
-<li>Referência Absoluta</li>
-
-<li>Referência Mista</li>
-
-</ul>
-
-<br><br>
-
-<h3>➡️ Referência Relativa</h3>
-
-<p>
-É a referência padrão utilizada pelo Excel e pelo Calc.
-</p>
-
-<p>
-
-A1
-
-</p>
-
-<p>
-Quando a fórmula é copiada para outra célula, a referência é ajustada automaticamente.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-=A1+B1
-
-</p>
-
-<br><br>
-
-<h3>🔒 Referência Absoluta</h3>
-
-<p>
-Mantém fixa a coluna e a linha, mesmo quando a fórmula é copiada.
-</p>
-
-<p>
-
-$A$1
-
-</p>
-
-<p>
-O símbolo "$" trava a posição da célula.
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-=A1*$B$1
-
-</p>
-
-<br><br>
-
-<h3>🔀 Referência Mista</h3>
-
-<p>
-Trava apenas uma parte da referência.
-</p>
-
-<br>
-
-<p>
-
-$A1
-
-</p>
-
-<p>
-
-A$1
-
-</p>
-
-<br>
-
-<p>
-Em uma delas a coluna fica fixa.
-</p>
-
-<p>
-Na outra a linha fica fixa.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Imagine que a célula B1 contém uma taxa de desconto utilizada em toda a planilha.
-</p>
-
-<p>
-Ao utilizar:
-</p>
-
-<p>
-
-=A1*$B$1
-
-</p>
-
-<p>
-A taxa permanecerá fixa mesmo que a fórmula seja copiada para outras linhas.
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Sem "$"
-
-➡️ Relativa
-
-<br><br>
-
-Com "$" nos dois
-
-🔒 Absoluta
-
-$A$1
-
-<br><br>
-
-Com "$" em apenas um
-
-🔀 Mista
-
-$A1
-
-A$1
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-A banca costuma perguntar qual símbolo identifica uma referência absoluta.
-</p>
-
-<p>
-A resposta correta é:
-</p>
-
-<p>
-
-<strong>$</strong>
-
-</p>
-
-<p>
-Sem o símbolo "$", a referência é relativa.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Referências identificam células da planilha.
-
-• Relativa → A1.
-
-• Absoluta → $A$1.
-
-• Mista → $A1 ou A$1.
-
-• O símbolo "$" trava linhas e/ou colunas.
-
-• Referências absolutas são muito utilizadas em fórmulas copiadas.
-
-</div>
-
-`
-
 },
 
 {
-    titulo: "📊 LibreOffice Calc",
-
+    titulo: "🧮 6. Fórmulas e Funções Básicas",
     conteudo: `
-
-<h3>📘 O que é o LibreOffice Calc?</h3>
-
-<p>
-O Calc é o programa de planilhas eletrônicas da suíte LibreOffice.
-</p>
-
-<p>
-Ele é utilizado para organizar dados, realizar cálculos, criar gráficos e gerar relatórios.
-</p>
-
-<p>
-Seu principal equivalente no Microsoft Office é o Excel.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O Calc é uma planilha eletrônica e não um editor de textos.
-
+<div class="conteudo-teoria">
+<div class="alerta-box">
+<span class="seta">➔</span> <strong>O Início de Tudo:</strong><br>
+Toda e qualquer fórmula ou função no Excel e no Calc <strong>COMEÇA COM O SINAL DE IGUAL (=)</strong>. Se você digitar <code>A1+B1</code>, o programa acha que é só um texto. Digitando <code>=A1+B1</code>, ele efetua o cálculo!
 </div>
 
-<br><br>
-
-<h3>🧰 Principais Recursos do Calc</h3>
-
+<h3>📘 Diferença entre Fórmula e Função</h3>
 <ul>
-
-<li>📊 Criação de planilhas</li>
-
-<li>🧮 Fórmulas e funções</li>
-
-<li>📈 Gráficos</li>
-
-<li>📋 Tabelas</li>
-
-<li>🔍 Filtros</li>
-
-<li>📑 Classificação de dados</li>
-
-<li>📄 Exportação para PDF</li>
-
+<li><strong>Fórmula:</strong> É uma expressão matemática montada pelo próprio usuário. Ex: <code>=A1+A2+A3+B1</code></li>
+<li><strong>Função:</strong> É uma fórmula pré-programada que vem embutida no software para facilitar a vida. Ex: <code>=SOMA(A1:A3; B1)</code></li>
 </ul>
 
-<br><br>
-
-<h3>📋 Estrutura da Planilha</h3>
-
-<p>
-Assim como no Excel, uma planilha do Calc é formada por:
-</p>
-
-<ul>
-
-<li>Linhas</li>
-
-<li>Colunas</li>
-
-<li>Células</li>
-
-</ul>
-
-<br>
-
-<p>
-Exemplos de células:
-</p>
-
-<ul>
-
-<li>A1</li>
-
-<li>B5</li>
-
-<li>C10</li>
-
-<li>D20</li>
-
-</ul>
-
-<br><br>
-
-<h3>⚙️ Fórmulas e Funções</h3>
-
-<p>
-O Calc utiliza fórmulas e funções de maneira semelhante ao Excel.
-</p>
-
-<p>
-Toda fórmula começa com:
-</p>
-
-<p>
-
-<strong>=</strong>
-
-</p>
-
-<br>
-
-Exemplos:
-
-<p>
-
-=SOMA(A1:A10)
-
-</p>
-
-<p>
-
-=MÉDIA(B1:B10)
-
-</p>
-
-<p>
-
-=MÁXIMO(C1:C10)
-
-</p>
-
-<br><br>
-
-<h3>📈 Gráficos</h3>
-
-<p>
-O Calc permite transformar dados em gráficos para facilitar a análise das informações.
-</p>
-
-<p>
-Os tipos mais utilizados são:
-</p>
-
-<ul>
-
-<li>📊 Colunas</li>
-
-<li>📈 Linhas</li>
-
-<li>🥧 Pizza</li>
-
-<li>📉 Barras</li>
-
-</ul>
-
-<br><br>
-
-<h3>📂 Formato Padrão</h3>
-
-<p>
-O formato padrão dos arquivos do Calc é:
-</p>
-
-<p>
-
-<strong>.ODS</strong>
-
-</p>
-
-<br>
-
-<p>
-O Calc também pode abrir e salvar arquivos do Excel.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>.XLS</li>
-
-<li>.XLSX</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Uma escola pode utilizar o Calc para:
-</p>
-
-<ul>
-
-<li>Controlar notas dos alunos.</li>
-
-<li>Calcular médias automaticamente.</li>
-
-<li>Controlar frequência.</li>
-
-<li>Gerar gráficos de desempenho.</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Calc = Calculadora Avançada
-
-Calc → Planilhas
-
-Excel → Planilhas
-
-Formato padrão do Calc:
-
-📊 .ODS
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma questão muito comum é perguntar o formato padrão do Calc.
-</p>
-
-<p>
-A resposta correta é:
-</p>
-
-<p>
-
-<strong>.ODS</strong>
-
-</p>
-
-<p>
-Já o formato padrão do Excel é:
-</p>
-
-<p>
-
-<strong>.XLSX</strong>
-
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Calc é a planilha eletrônica do LibreOffice.
-
-• Equivalente ao Excel.
-
-• Utiliza fórmulas e funções.
-
-• Permite criação de gráficos.
-
-• Formato padrão: .ODS.
-
-• Compatível com .XLS e .XLSX.
-
-</div>
-
-`
-
-},
-
-{
-    titulo: "🎞 Apresentações Eletrônicas",
-
-    conteudo: `
-
-<h3>📘 O que são Apresentações Eletrônicas?</h3>
-
-<p>
-Apresentações eletrônicas são documentos compostos por slides utilizados para transmitir informações de forma visual e organizada.
-</p>
-
-<p>
-São amplamente utilizadas em aulas, treinamentos, reuniões, palestras e apresentações profissionais.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Uma apresentação é formada por slides, que podem conter textos, imagens, gráficos, tabelas, vídeos e animações.
-
-</div>
-
-<br><br>
-
-<h3>🧰 Principais Programas</h3>
-
-<ul>
-
-<li>🎞 Microsoft PowerPoint</li>
-
-<li>🎞 LibreOffice Impress</li>
-
-</ul>
-
-<p>
-Ambos possuem recursos semelhantes para criação e exibição de apresentações.
-</p>
-
-<br><br>
-
-<h3>📄 O que é um Slide?</h3>
-
-<p>
-Slide é cada página individual de uma apresentação.
-</p>
-
-<p>
-Uma apresentação pode conter um único slide ou centenas de slides.
-</p>
-
-<br><br>
-
-<h3>🎨 Recursos Disponíveis</h3>
-
-<ul>
-
-<li>Inserção de textos</li>
-
-<li>Inserção de imagens</li>
-
-<li>Inserção de vídeos</li>
-
-<li>Inserção de áudio</li>
-
-<li>Gráficos e tabelas</li>
-
-<li>SmartArt e diagramas</li>
-
-<li>Temas e modelos</li>
-
-</ul>
-
-<br><br>
-
-<h3>✨ Animações</h3>
-
-<p>
-As animações são efeitos aplicados aos objetos dentro de um slide.
-</p>
-
-<p>
-Podem ser utilizadas em textos, imagens, gráficos e demais elementos.
-</p>
-
-<br><br>
-
-<h3>🔄 Transições</h3>
-
-<p>
-As transições são efeitos aplicados na passagem de um slide para outro.
-</p>
-
-<p>
-Sua finalidade é tornar a apresentação mais dinâmica.
-</p>
-
-<br><br>
-
-<h3>📺 Modo Apresentação</h3>
-
-<p>
-Após a criação dos slides, é possível executar a apresentação em tela cheia para exibição ao público.
-</p>
-
-<p>
-Esse recurso é conhecido como modo apresentação ou apresentação de slides.
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um professor pode utilizar apresentações eletrônicas para:
-</p>
-
-<ul>
-
-<li>Explicar conteúdos em sala de aula.</li>
-
-<li>Exibir imagens e gráficos.</li>
-
-<li>Apresentar trabalhos acadêmicos.</li>
-
-<li>Realizar treinamentos e palestras.</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Texto → Word / Writer
-
-Planilha → Excel / Calc
-
-Apresentação → PowerPoint / Impress
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-As bancas costumam confundir animações e transições.
-</p>
-
-<p>
-Animação → efeito aplicado dentro do slide.
-</p>
-
-<p>
-Transição → efeito aplicado entre slides.
-</p>
-
-<p>
-Essa é uma das pegadinhas mais frequentes em provas de informática.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Apresentações eletrônicas são compostas por slides.
-
-• PowerPoint e Impress são programas de apresentação.
-
-• Slides podem conter textos, imagens e vídeos.
-
-• Animação atua dentro do slide.
-
-• Transição atua entre slides.
-
-• Muito utilizadas em aulas, reuniões e palestras.
-
-</div>
-
-`
-
-},
-
-{
-    titulo: "🎞 Microsoft PowerPoint",
-
-    conteudo: `
-
-<h3>📘 O que é o Microsoft PowerPoint?</h3>
-
-<p>
-O Microsoft PowerPoint é o programa de apresentações da suíte Microsoft Office.
-</p>
-
-<p>
-Ele é utilizado para criar apresentações em slides destinadas a aulas, reuniões, palestras, treinamentos e eventos profissionais.
-</p>
-
-<p>
-É uma das ferramentas mais utilizadas para comunicação visual.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O PowerPoint é um programa de apresentações e não um editor de textos ou planilha eletrônica.
-
-</div>
-
-<br><br>
-
-<h3>🧰 Principais Recursos</h3>
-
-<ul>
-
-<li>🎞 Criação de slides</li>
-
-<li>📝 Inserção de textos</li>
-
-<li>🖼 Inserção de imagens</li>
-
-<li>📊 Inserção de gráficos</li>
-
-<li>📋 Inserção de tabelas</li>
-
-<li>🎥 Inserção de vídeos</li>
-
-<li>🔊 Inserção de áudio</li>
-
-<li>✨ Animações</li>
-
-<li>🔄 Transições</li>
-
-</ul>
-
-<br><br>
-
-<h3>📄 Slides</h3>
-
-<p>
-Cada página da apresentação é chamada de slide.
-</p>
-
-<p>
-Os slides podem conter diversos tipos de conteúdo organizados de forma visual.
-</p>
-
-<br><br>
-
-<h3>🎨 Temas e Layouts</h3>
-
-<p>
-O PowerPoint possui temas prontos que alteram cores, fontes e estilos da apresentação.
-</p>
-
-<p>
-Também possui layouts que ajudam na organização dos elementos dentro dos slides.
-</p>
-
-<br><br>
-
-<h3>✨ Animações</h3>
-
-<p>
-As animações são efeitos aplicados aos objetos do slide.
-</p>
-
-<p>
-Podem ser utilizadas em textos, imagens, gráficos e demais elementos.
-</p>
-
-<br><br>
-
-<h3>🔄 Transições</h3>
-
-<p>
-As transições são efeitos visuais exibidos durante a mudança de um slide para outro.
-</p>
-
-<p>
-São utilizadas para tornar a apresentação mais dinâmica.
-</p>
-
-<br><br>
-
-<h3>📂 Formato Padrão</h3>
-
-<p>
-O formato padrão das versões atuais do PowerPoint é:
-</p>
-
-<p>
-
-<strong>.PPTX</strong>
-
-</p>
-
-<br>
-
-<p>
-Versões antigas utilizavam:
-</p>
-
-<p>
-
-<strong>.PPT</strong>
-
-</p>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um professor pode utilizar o PowerPoint para:
-</p>
-
-<ul>
-
-<li>Apresentar conteúdos em sala de aula.</li>
-
-<li>Exibir gráficos e imagens.</li>
-
-<li>Explicar conceitos complexos de forma visual.</li>
-
-<li>Apresentar seminários e palestras.</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-Word → Texto
-
-Excel → Planilha
-
-PowerPoint → Apresentação
-
-<br><br>
-
-Formato Atual:
-
-🎞 .PPTX
-
-<br>
-
-Formato Antigo:
-
-🎞 .PPT
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma das pegadinhas mais frequentes é confundir animações com transições.
-</p>
-
-<p>
-Animação atua nos objetos dentro do slide.
-</p>
-
-<p>
-Transição atua na troca entre slides.
-</p>
-
-<p>
-Outra pegadinha comum é perguntar o formato padrão do PowerPoint.
-</p>
-
-<p>
-A resposta correta é:
-</p>
-
-<p>
-
-<strong>.PPTX</strong>
-
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• PowerPoint é o programa de apresentações da Microsoft.
-
-• Trabalha com slides.
-
-• Permite inserir textos, imagens, vídeos e gráficos.
-
-• Animações atuam dentro do slide.
-
-• Transições atuam entre slides.
-
-• Formato atual: .PPTX.
-
-• Formato antigo: .PPT.
-
-</div>
-
-`
-
-},
-
-{
-    titulo: "🎞 LibreOffice Impress",
-
-    conteudo: `
-
-<h3>📘 O que é o LibreOffice Impress?</h3>
-
-<p>
-O Impress é o programa de apresentações da suíte LibreOffice.
-</p>
-
-<p>
-Ele é utilizado para criar apresentações em slides destinadas a aulas, palestras, treinamentos, reuniões e eventos profissionais.
-</p>
-
-<p>
-Seu principal equivalente no Microsoft Office é o PowerPoint.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-O Impress é um programa de apresentações e não um editor de textos ou uma planilha eletrônica.
-
-</div>
-
-<br><br>
-
-<h3>🧰 Principais Recursos</h3>
-
-<ul>
-
-<li>🎞 Criação de slides</li>
-
-<li>📝 Inserção de textos</li>
-
-<li>🖼 Inserção de imagens</li>
-
-<li>📊 Inserção de gráficos</li>
-
-<li>📋 Inserção de tabelas</li>
-
-<li>🎥 Inserção de vídeos</li>
-
-<li>🔊 Inserção de áudio</li>
-
-<li>✨ Animações</li>
-
-<li>🔄 Transições</li>
-
-<li>📄 Exportação para PDF</li>
-
-</ul>
-
-<br><br>
-
-<h3>📄 Slides</h3>
-
-<p>
-Cada página da apresentação é chamada de slide.
-</p>
-
-<p>
-Os slides podem conter diversos tipos de conteúdo organizados visualmente.
-</p>
-
-<br><br>
-
-<h3>🎨 Modelos e Layouts</h3>
-
-<p>
-O Impress disponibiliza modelos prontos e layouts que facilitam a criação de apresentações profissionais.
-</p>
-
-<p>
-Esses recursos ajudam a organizar títulos, imagens, gráficos e demais elementos.
-</p>
-
-<br><br>
-
-<h3>✨ Animações</h3>
-
-<p>
-As animações são efeitos aplicados aos objetos presentes dentro do slide.
-</p>
-
-<p>
-Podem ser utilizadas em textos, imagens, gráficos e figuras.
-</p>
-
-<br><br>
-
-<h3>🔄 Transições</h3>
-
-<p>
-As transições são efeitos exibidos durante a mudança de um slide para outro.
-</p>
-
-<p>
-Elas tornam a apresentação mais dinâmica e agradável visualmente.
-</p>
-
-<br><br>
-
-<h3>📂 Formato Padrão</h3>
-
-<p>
-O formato padrão utilizado pelo Impress é:
-</p>
-
-<p>
-
-<strong>.ODP</strong>
-
-</p>
-
-<br>
-
-<p>
-O Impress também pode abrir e salvar arquivos do PowerPoint.
-</p>
-
-<br>
-
-Exemplos:
-
-<ul>
-
-<li>.PPT</li>
-
-<li>.PPTX</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎯 Exemplo Prático</h3>
-
-<p>
-Um professor pode utilizar o Impress para:
-</p>
-
-<ul>
-
-<li>Apresentar conteúdos em sala de aula.</li>
-
-<li>Exibir imagens e gráficos.</li>
-
-<li>Realizar seminários.</li>
-
-<li>Apresentar projetos e pesquisas.</li>
-
-</ul>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE
-
-PowerPoint → Microsoft Office
-
-Impress → LibreOffice
-
-<br><br>
-
-Formato do Impress:
-
-🎞 .ODP
-
-<br><br>
-
-Formato do PowerPoint:
-
-🎞 .PPTX
-
-</div>
-
-<br><br>
-
-<h3>🚨 Pegadinha de Concurso</h3>
-
-<p>
-Uma questão muito comum é perguntar qual é o formato padrão do Impress.
-</p>
-
-<p>
-A resposta correta é:
-</p>
-
-<p>
-
-<strong>.ODP</strong>
-
-</p>
-
-<p>
-Outra pegadinha frequente é afirmar que o Impress pertence ao Microsoft Office.
-</p>
-
-<p>
-Isso está errado.
-</p>
-
-<p>
-O Impress pertence à suíte LibreOffice.
-</p>
-
-<br><br>
-
-<div class="resumo">
-
-✅ RESUMO DA PÁGINA
-
-• Impress é o programa de apresentações do LibreOffice.
-
-• Equivale ao PowerPoint.
-
-• Trabalha com slides.
-
-• Possui animações e transições.
-
-• Permite exportação para PDF.
-
-• Formato padrão: .ODP.
-
-• Compatível com .PPT e .PPTX.
-
-</div>
-
-`
-
-},
-{
-    titulo: "🚨 Revisão Geral e Pegadinhas de Concurso",
-
-    conteudo: `
-
-<h3>📘 Revisão Geral do Módulo</h3>
-
-<p>
-Neste módulo estudamos os principais aplicativos de escritório presentes nas suítes Microsoft Office e LibreOffice.
-</p>
-
-<p>
-Esses programas são frequentemente cobrados em concursos públicos e provas de informática.
-</p>
-
-<br><br>
-
-<div class="destaque">
-
-<strong>⚠️ Atenção:</strong>
-
-Grande parte das questões cobra equivalências entre Microsoft Office e LibreOffice.
-
-</div>
-
-<br><br>
-
-<h3>📄 Editores de Texto</h3>
-
-<table border="1" width="100%">
-
-<tr>
-
-<th>Microsoft Office</th>
-
-<th>LibreOffice</th>
-
-</tr>
-
-<tr>
-
-<td>Word</td>
-
-<td>Writer</td>
-
-</tr>
-
+<h3>⭐ Top 5 Funções de Concursos</h3>
+<table class="tabela-pro">
+  <tr>
+    <th>Função</th>
+    <th>Exemplo Prático</th>
+    <th>O que ela faz?</th>
+  </tr>
+  <tr>
+    <td><strong>SOMA</strong></td>
+    <td><code>=SOMA(A1:A10)</code></td>
+    <td>Soma todos os valores contidos no intervalo de A1 até A10.</td>
+  </tr>
+  <tr>
+    <td><strong>MÉDIA</strong></td>
+    <td><code>=MÉDIA(A1:A10)</code></td>
+    <td>Soma os valores e divide pela quantidade de números, gerando a média aritmética.</td>
+  </tr>
+  <tr>
+    <td><strong>MÁXIMO</strong></td>
+    <td><code>=MÁXIMO(B1:B50)</code></td>
+    <td>Vasculha o intervalo e retorna apenas o número de MAIOR valor.</td>
+  </tr>
+  <tr>
+    <td><strong>MÍNIMO</strong></td>
+    <td><code>=MÍNIMO(C1:C10)</code></td>
+    <td>Vasculha o intervalo e retorna apenas o número de MENOR valor.</td>
+  </tr>
+  <tr>
+    <td><strong>SE</strong></td>
+    <td><code>=SE(A1>=7;"Aprovado";"Reprovado")</code></td>
+    <td>Função lógica. SE a condição for verdadeira, mostra o primeiro texto. Se for falsa, mostra o segundo.</td>
+  </tr>
 </table>
 
-<br>
+<div class="dica-box">
+<span class="seta">➔</span> <strong>Dois Pontos (:) vs Ponto e Vírgula (;)</strong><br>
+- <code>(A1:A5)</code> ➔ O Dois Pontos significa <strong>"ATÉ"</strong>. (Pega A1, A2, A3, A4 e A5). É um intervalo contínuo.<br>
+- <code>(A1;A5)</code> ➔ O Ponto e Vírgula significa <strong>"E"</strong>. (Pega APENAS o A1 e o A5, pulando os do meio).
+</div>
+</div>
+`
+},
 
+{
+    titulo: "📌 7. O Pulo do Gato: Referências de Células",
+    conteudo: `
+<div class="conteudo-teoria">
 <p>
-
-Formatos padrão:
-
+Quando arrastamos uma fórmula para copiá-la para as linhas de baixo, o Excel ajusta as letras e números automaticamente. Às vezes, não queremos isso. Para "travar" a célula, usamos o cifrão (<strong>$</strong>).
 </p>
 
-<ul>
+<div class="grid-comparativo">
+  <div style="background: #fff; padding: 15px; border-radius: 8px; flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #64748b;">
+    <h3 style="color:#334155; margin-top:0;">➡️ Relativa (Livre)</h3>
+    <p>Exemplo: <code>A1</code></p>
+    <p>É o padrão. Sem cifrão nenhum. Se você copiar a fórmula uma linha para baixo, a referência muda automaticamente para <code>A2</code>.</p>
+  </div>
+  
+  <div style="background: #fff; padding: 15px; border-radius: 8px; flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #dc2626;">
+    <h3 style="color:#991b1b; margin-top:0;">🔒 Absoluta (Travada)</h3>
+    <p>Exemplo: <code>$A$1</code></p>
+    <p>Tem cifrão na coluna ($A) e na linha ($1). Por mais que você copie ou arraste a fórmula, ela vai sempre apontar para a célula A1. Fica 100% fixa.</p>
+  </div>
+  
+  <div style="background: #fff; padding: 15px; border-radius: 8px; flex: 1; border: 1px solid #cbd5e1; border-top: 4px solid #f59e0b;">
+    <h3 style="color:#b45309; margin-top:0;">🔀 Mista (Meio a Meio)</h3>
+    <p>Exemplos: <code>$A1</code> ou <code>A$1</code></p>
+    <p>O cifrão trava só quem está logo à frente dele. Em <code>$A1</code>, a coluna A está travada, mas a linha 1 está livre para descer.</p>
+  </div>
+</div>
+</div>
+`
+},
 
-<li>Word → .DOCX</li>
-
-<li>Writer → .ODT</li>
-
-</ul>
-
-<br><br>
-
-<h3>📊 Planilhas Eletrônicas</h3>
-
-<table border="1" width="100%">
-
-<tr>
-
-<th>Microsoft Office</th>
-
-<th>LibreOffice</th>
-
-</tr>
-
-<tr>
-
-<td>Excel</td>
-
-<td>Calc</td>
-
-</tr>
-
-</table>
-
-<br>
-
+{
+    titulo: "🎞 8. Apresentações: PowerPoint e Impress",
+    conteudo: `
+<div class="conteudo-teoria">
 <p>
-
-Formatos padrão:
-
+Utilizados para transmitir informações de forma visual e de alto impacto (slides) em aulas, reuniões e defesas de projetos.
 </p>
 
-<ul>
-
-<li>Excel → .XLSX</li>
-
-<li>Calc → .ODS</li>
-
-</ul>
-
-<br><br>
-
-<h3>🎞 Programas de Apresentação</h3>
-
-<table border="1" width="100%">
-
-<tr>
-
-<th>Microsoft Office</th>
-
-<th>LibreOffice</th>
-
-</tr>
-
-<tr>
-
-<td>PowerPoint</td>
-
-<td>Impress</td>
-
-</tr>
-
-</table>
-
-<br>
-
-<p>
-
-Formatos padrão:
-
-</p>
-
-<ul>
-
-<li>PowerPoint → .PPTX</li>
-
-<li>Impress → .ODP</li>
-
-</ul>
-
-<br><br>
-
-<h3>🧮 Fórmula x Função</h3>
-
-<p>
-
-<strong>Fórmula:</strong>
-
-criada pelo usuário.
-
-</p>
-
-<br>
-
-Exemplo:
-
-<p>
-
-=10+5
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Função:</strong>
-
-fórmula pronta do programa.
-
-</p>
-
-<br>
-
-Exemplos:
-
-<p>
-
-=SOMA(A1:A10)
-
-</p>
-
-<p>
-
-=MÉDIA(A1:A10)
-
-</p>
-
-<br><br>
-
-<h3>✨ Animação x Transição</h3>
-
-<p>
-
-<strong>Animação:</strong>
-
-efeito aplicado dentro do slide.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>Transição:</strong>
-
-efeito aplicado entre slides.
-
-</p>
-
-<br><br>
-
-<h3>🔒 Software Proprietário x Software Livre</h3>
-
-<p>
-
-<strong>Microsoft Office:</strong>
-
-Software Proprietário.
-
-</p>
-
-<br>
-
-<p>
-
-<strong>LibreOffice:</strong>
-
-Software Livre.
-
-</p>
-
-<br><br>
-
-<div class="macete">
-
-💡 MACETE MASTER
-
-WORD → WRITER
-
-EXCEL → CALC
-
-POWERPOINT → IMPRESS
-
-<br><br>
-
-DOCX → ODT
-
-XLSX → ODS
-
-PPTX → ODP
-
+<div class="grid-comparativo">
+  <div style="background: #ffedd5; padding: 15px; border-radius: 8px; flex: 1; border-top: 4px solid #ea580c;">
+    <h3 style="color:#9a3412; margin-top:0;">🎞 Microsoft PowerPoint</h3>
+    <p>Formato Padrão Atual: <span class="tag tag-ext">.PPTX</span></p>
+    <p>Formato Antigo: <span class="tag tag-ext">.PPT</span></p>
+  </div>
+  
+  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; flex: 1; border-top: 4px solid #dc2626;">
+    <h3 style="color:#991b1b; margin-top:0;">🎞 LibreOffice Impress</h3>
+    <p>Formato Padrão: <span class="tag tag-ext">.ODP</span> (OpenDocument Presentation)</p>
+  </div>
 </div>
 
-<br><br>
+<div class="alerta-box">
+<span class="seta">➔</span> <strong>O Campeão de Quedas nas Provas: Animação x Transição</strong><br><br>
+✨ <strong>ANIMAÇÃO:</strong> Acontece DENTRO do próprio slide. É o efeito aplicado em um OBJETO específico (exemplo: fazer uma foto surgir girando, ou um texto entrar voando linha por linha).<br><br>
+🔄 <strong>TRANSIÇÃO:</strong> Acontece ENTRE os slides. É o efeito especial visto exatamente no momento em que você sai do Slide 1 e entra no Slide 2 (exemplo: tela esmaecer, ou virar como a página de um livro).
+</div>
+</div>
+`
+},
 
-<h3>🚨 Pegadinhas Mais Cobradas</h3>
+{
+    titulo: "🚨 9. Resumo Estratégico em Tabelas",
+    conteudo: `
+<div class="conteudo-teoria">
+<p>Decore esta tabela. Ela resolve cerca de 60% das questões básicas de escritório em concursos.</p>
 
-<ul>
-
-<li>Word não é planilha eletrônica.</li>
-
-<li>Excel não é editor de texto.</li>
-
-<li>PowerPoint não é planilha.</li>
-
-<li>LibreOffice não é software proprietário.</li>
-
-<li>Writer não pertence ao Microsoft Office.</li>
-
-<li>Calc não utiliza formato XLSX como padrão.</li>
-
-<li>Impress não pertence ao Microsoft Office.</li>
-
-<li>Animação não é transição.</li>
-
-<li>Toda função é uma fórmula.</li>
-
-<li>Nem toda fórmula é uma função.</li>
-
-</ul>
-
-<br><br>
+<table class="tabela-pro" style="text-align:center;">
+  <tr>
+    <th style="text-align:center;">Finalidade</th>
+    <th style="background:#1e3a8a; color:white; text-align:center;">Microsoft Office (Proprietário)</th>
+    <th style="background:#064e3b; color:white; text-align:center;">LibreOffice (Livre)</th>
+  </tr>
+  <tr>
+    <td><strong>Editor de Textos</strong></td>
+    <td>Word <code>(.docx)</code></td>
+    <td>Writer <code>(.odt)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Planilha Eletrônica</strong></td>
+    <td>Excel <code>(.xlsx)</code></td>
+    <td>Calc <code>(.ods)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Apresentação de Slides</strong></td>
+    <td>PowerPoint <code>(.pptx)</code></td>
+    <td>Impress <code>(.odp)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Banco de Dados</strong></td>
+    <td>Access <code>(.accdb)</code></td>
+    <td>Base <code>(.odb)</code></td>
+  </tr>
+</table>
 
 <div class="resumo">
+✅ <strong>MANTRA DA APROVAÇÃO</strong><br><br>
+• A Microsoft COBRA pela licença (Proprietário). A The Document Foundation NÃO COBRA (LibreOffice = Livre).<br>
+• Toda fórmula obrigatoriamente começa com IGUAL (=).<br>
+• Dois pontos (:) é ATÉ. Ponto e vírgula (;) é E.<br>
+• O símbolo <strong>$</strong> serve para CONGELAR (travar) referências absolutas.<br>
+• Transição muda o SLIDE. Animação move a IMAGEM/TEXTO.
+</div>
+</div>
+`
+},
 
-✅ RESUMO FINAL DO MÓDULO
+{
+    titulo: "📝 10. Questões Comentadas - Parte 1 (Conceitos, MS Office e LibreOffice)",
+    conteudo: `
+<div class="conteudo-teoria">
 
-• Word ↔ Writer
-
-• Excel ↔ Calc
-
-• PowerPoint ↔ Impress
-
-• DOCX ↔ ODT
-
-• XLSX ↔ ODS
-
-• PPTX ↔ ODP
-
-• Microsoft Office = Proprietário
-
-• LibreOffice = Livre
-
-• Fórmula ≠ Função
-
-• Animação ≠ Transição
-
-🎉 MÓDULO OFFICE E LIBREOFFICE CONCLUÍDO
-
+<div class="conceito-box" style="background: #ffffff; border-color: #94a3b8;">
+<strong>Questão 1 (Fundação Carlos Chagas - Assistente de Administração)</strong><br>
+O conjunto de ferramentas para escritório LibreOffice, muito adotado em ambientes corporativos governamentais por ser uma alternativa sem custos de licenciamento, possui aplicativos correspondentes diretos ao Word, Excel e PowerPoint do Microsoft Office. Esses aplicativos do LibreOffice são, respectivamente:<br>
+a) Math, Base e Draw.<br>
+b) Writer, Calc e Impress.<br>
+c) Outlook, Access e Visio.<br>
+d) Writer, Impress e Calc.<br>
+e) WordPad, Calc e Presenter.
+</div>
+<div class="dica-box" style="margin-top: 0; background: #f8fafc; border-left-color: #3b82f6;">
+<strong>Gabarito: B</strong><br>
+<span class="seta">➔</span> <em>Comentário:</em> A banca pediu "respectivamente" para Word, Excel e PowerPoint. A resposta exata é Writer (texto), Calc (planilha) e Impress (apresentação). A letra D misturou a ordem do Calc e do Impress.
 </div>
 
-`
+<div class="conceito-box" style="background: #ffffff; border-color: #94a3b8;">
+<strong>Questão 2 (CEBRASPE / CESPE - Técnico Judiciário)</strong><br>
+A respeito dos aplicativos de escritório, julgue o item a seguir.<br>
+O LibreOffice Writer não possui a capacidade de abrir documentos salvos na extensão .DOCX nativa do Microsoft Word, obrigando o usuário a convertê-los antes em PDF. (Certo / Errado)
+</div>
+<div class="dica-box" style="margin-top: 0; background: #f8fafc; border-left-color: #3b82f6;">
+<strong>Gabarito: ERRADO</strong><br>
+<span class="seta">➔</span> <em>Comentário:</em> Pegadinha clássica! O LibreOffice (incluindo o Writer) <strong>possui sim</strong> total capacidade para abrir, editar e até mesmo salvar arquivos no formato nativo da Microsoft (como o .DOC e o .DOCX), garantindo a interoperabilidade entre as plataformas.
+</div>
 
+<div class="conceito-box" style="background: #ffffff; border-color: #94a3b8;">
+<strong>Questão 3 (VUNESP - Auxiliar Administrativo)</strong><br>
+Em um computador de uma prefeitura municipal, foi configurado o LibreOffice como padrão. O formato nativo que será gerado ao salvar um documento de texto no Writer e o formato nativo de uma planilha salva no Calc são, respectivamente:<br>
+a) .docx e .xlsx<br>
+b) .odt e .ods<br>
+c) .odp e .odt<br>
+d) .txt e .csv
+</div>
+<div class="dica-box" style="margin-top: 0; background: #f8fafc; border-left-color: #3b82f6;">
+<strong>Gabarito: B</strong><br>
+<span class="seta">➔</span> <em>Comentário:</em> A família OpenDocument (ODF) segue uma lógica: OD<strong>T</strong> (Text = Writer), OD<strong>S</strong> (Spreadsheet = Calc), OD<strong>P</strong> (Presentation = Impress). Portanto, texto e planilha são, respectivamente, .odt e .ods.
+</div>
+
+</div>
+`
+},
+
+{
+    titulo: "📝 11. Questões Comentadas - Parte 2 (Excel, Fórmulas e Apresentações)",
+    conteudo: `
+<div class="conteudo-teoria">
+
+<div class="conceito-box" style="background: #ffffff; border-color: #94a3b8;">
+<strong>Questão 4 (FGV - Analista)</strong><br>
+No Microsoft Excel, a diferença entre as fórmulas <code>=SOMA(A1:A4)</code> e <code>=SOMA(A1;A4)</code> é que a primeira realiza a soma de:<br>
+a) apenas duas células, e a segunda, de quatro células.<br>
+b) quatro células (A1, A2, A3 e A4), enquanto a segunda realiza a soma apenas das células A1 e A4.<br>
+c) valores absolutos, enquanto a segunda utiliza referências relativas.<br>
+d) todos os números da planilha, enquanto a segunda divide A1 por A4.
+</div>
+<div class="dica-box" style="margin-top: 0; background: #f8fafc; border-left-color: #3b82f6;">
+<strong>Gabarito: B</strong><br>
+<span class="seta">➔</span> <em>Comentário:</em> Dois pontos (<code>:</code>) cria um intervalo contínuo, ou seja, "de A1 ATÉ A4", somando quatro células. O ponto e vírgula (<code>;</code>) age como um separador "E", ou seja, "A1 E A4", somando apenas as duas células das pontas.
+</div>
+
+<div class="conceito-box" style="background: #ffffff; border-color: #94a3b8;">
+<strong>Questão 5 (Instituto AOCP - Assistente)</strong><br>
+Ao construir uma planilha no Calc ou no Excel, um usuário digitou a fórmula <code>=A1*$B$1</code> e, em seguida, copiou e colou esta fórmula na linha de baixo. Como ficará a fórmula na nova linha?<br>
+a) =A2*$B$2<br>
+b) =A2*$B$1<br>
+c) =A1*$B$1<br>
+d) =B2*$C$2
+</div>
+<div class="dica-box" style="margin-top: 0; background: #f8fafc; border-left-color: #3b82f6;">
+<strong>Gabarito: B</strong><br>
+<span class="seta">➔</span> <em>Comentário:</em> A referência <code>A1</code> é relativa; ao ser copiada uma linha para baixo, o número "cai" com ela, virando <code>A2</code>. Já a referência <code>$B$1</code> é ABSOLUTA (travada pelo cifrão). Ela fica paralisada, independente de para onde você arraste. Logo, o resultado final ao colar na linha de baixo é <code>=A2*$B$1</code>.
+</div>
+
+<div class="conceito-box" style="background: #ffffff; border-color: #94a3b8;">
+<strong>Questão 6 (Fundatec - Oficial Administrativo)</strong><br>
+Durante a edição de um documento no Microsoft PowerPoint, o palestrante deseja que uma imagem de estrela vá girando ao entrar no slide. Esse efeito visual, aplicado especificamente sobre um objeto inserido na página, recebe o nome técnico de:<br>
+a) Transição de Slide.<br>
+b) Animação de Objeto.<br>
+c) Interpolação Gráfica.<br>
+d) Transição Vetorial.
+</div>
+<div class="dica-box" style="margin-top: 0; background: #f8fafc; border-left-color: #3b82f6;">
+<strong>Gabarito: B</strong><br>
+<span class="seta">➔</span> <em>Comentário:</em> Efeitos aplicados <strong>diretamente em objetos</strong> dentro de um mesmo slide (como a estrela girando, letras aparecendo) são chamados de <strong>Animações</strong>. As Transições são os efeitos visuais gerados na troca/mudança completa da tela de um slide para o slide seguinte.
+</div>
+
+</div>
+`
 }
 ];
