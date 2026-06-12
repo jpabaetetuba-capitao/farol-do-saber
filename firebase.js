@@ -47,10 +47,13 @@ console.log("NOME:", dados.nome);
 
                 if(campoNome){
 
-                    campoNome.innerHTML =
-                        "👋 Olá, " +
-                        dados.nome +
-                        "!";
+                    const primeiroNome =
+    dados.nome.split(" ")[0];
+
+campoNome.innerHTML =
+    "👋 Olá, " +
+    primeiroNome +
+    "!";
 
                 }
 
@@ -63,8 +66,7 @@ console.log("NOME:", dados.nome);
 
         }
 
-        mostrarTela("inicio");
-
+        
     }
 
 });
