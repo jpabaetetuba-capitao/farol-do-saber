@@ -2,35 +2,21 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-
-    background-image:url("imagens/farol-fundo.jpg");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-
-    color:#333;
-    padding:15px;
-
-    min-height:100vh;
+    
 }
 
 body{
     margin:0;
     min-height:100vh;
-
     background-image:url("imagens/logo-farol.png");
-
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
     background-attachment:fixed;
-
     font-family:Arial, Helvetica, sans-serif;
+    color:#333;
+    padding:15px;
+
 }
 
 header{
@@ -102,6 +88,7 @@ nav button:hover{
 .card h2{
     margin-bottom:15px;
     color:#1e88e5;
+
 }
 
 select{
@@ -877,21 +864,38 @@ progress{
 
 }
 
-.btn-responder{
+.btn-responder,
+.btn-excluir{
+
+    padding:6px 12px;
+
+    font-size:13px;
+
+    margin:0;
+
+}
+
+.botoes-forum{
+
+    display:flex;
+
+    gap:8px;
 
     margin-top:10px;
 
-    background:#43a047;
+    align-items:center;
 
-    color:white;
+}
 
-    border:none;
+.botoes-resposta{
 
-    padding:8px 12px;
+    display:flex;
 
-    border-radius:8px;
+    gap:8px;
 
-    cursor:pointer;
+    align-items:center;
+
+    margin-top:10px;
 
 }
 
@@ -1195,6 +1199,124 @@ progress{
     .btn-assunto{
         padding:10px;
         font-size:12px;
+    }
+
+}
+
+/* ==========================
+   ESTILOS DA APOSTILA VISUAL
+========================== */
+.apostila-container { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+.apostila-container h3 { color: #1e88e5; margin-top: 25px; margin-bottom: 15px; }
+
+/* Fluxogramas e Diagramas */
+.fluxograma { display: flex; flex-direction: column; align-items: center; background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #e9ecef; }
+.fluxo-row { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; justify-content: center;}
+.fluxo-box { padding: 10px 20px; border-radius: 6px; font-weight: bold; text-align: center; color: white; min-width: 150px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+.fluxo-box.azul { background: #1976d2; }
+.fluxo-box.roxo { background: #6f42c1; }
+.fluxo-box.verde { background: #43a047; }
+.fluxo-box.laranja { background: #f57c00; }
+.fluxo-box.vermelho { background: #d32f2f; }
+.fluxo-box.cinza { background: #616161; }
+.seta { font-size: 24px; color: #6c757d; margin: 5px 0; animation: slideDown 1.5s infinite; text-align: center;}
+.seta-dir { font-size: 24px; color: #6c757d; margin: 0 10px; animation: slideRight 1.5s infinite;}
+.seta-dupla { font-size: 24px; color: #6c757d; margin: 5px 0; }
+
+/* Animações */
+@keyframes slideDown { 0% { transform: translateY(-3px); opacity: 0.5; } 50% { transform: translateY(3px); opacity: 1; } 100% { transform: translateY(-3px); opacity: 0.5; } }
+@keyframes slideRight { 0% { transform: translateX(-3px); opacity: 0.5; } 50% { transform: translateX(3px); opacity: 1; } 100% { transform: translateX(-3px); opacity: 0.5; } }
+
+/* Tabelas Modernas */
+.tabela-moderna { width: 100%; border-collapse: collapse; margin: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
+.tabela-moderna th, .tabela-moderna td { padding: 12px; border-bottom: 1px solid #ddd; text-align: center; }
+.tabela-moderna th { background-color: #343a40; color: white; text-transform: uppercase; font-size: 0.9em; }
+.tabela-moderna tr:nth-child(even) { background-color: #f8f9fa; }
+.tabela-moderna tr:hover { background-color: #e9ecef; }
+
+/* Caixas de Destaque */
+.resumo { background-color: #e2e3e5; border-left: 5px solid #6c757d; padding: 15px 20px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+.alerta { background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 15px 20px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+.pegadinha { background-color: #f8d7da; border-left: 5px solid #dc3545; padding: 15px 20px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+.titulo-destaque { font-weight: bold; margin-bottom: 10px; display: block;}
+.alerta .titulo-destaque { color: #856404; }
+.pegadinha .titulo-destaque { color: #721c24; }
+.resumo .titulo-destaque { color: #383d41; }
+
+/* Grid para Listas (Substitui texto puro por blocos visuais) */
+.grid-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 15px 0; }
+.grid-item { background: #f1f3f5; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; border: 1px solid #dee2e6; box-shadow: 0 1px 3px rgba(0,0,0,0.05);}
+
+/* ==========================
+   TOAST NOTIFICATION
+========================== */
+
+.toast{
+
+    visibility:hidden;
+
+    min-width:250px;
+
+    background:#333;
+
+    color:white;
+
+    text-align:center;
+
+    border-radius:8px;
+
+    padding:16px;
+
+    position:fixed;
+
+    z-index:99999;
+
+    left:50%;
+
+    bottom:30px;
+
+    transform:translateX(-50%);
+
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+
+    font-size:15px;
+
+}
+
+.toast.mostrar{
+
+    visibility:visible;
+
+    animation:
+    fadein .3s,
+    fadeout .3s 2.7s;
+
+}
+
+@keyframes fadein{
+
+    from{
+        opacity:0;
+        bottom:0;
+    }
+
+    to{
+        opacity:1;
+        bottom:30px;
+    }
+
+}
+
+@keyframes fadeout{
+
+    from{
+        opacity:1;
+        bottom:30px;
+    }
+
+    to{
+        opacity:0;
+        bottom:0;
     }
 
 }
