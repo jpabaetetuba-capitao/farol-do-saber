@@ -3,753 +3,21 @@ const figuras = [
 {
     pergunta: `Leia o trecho:
 
-"Após anos de dedicação aos estudos, João finalmente colheu os frutos de seu esforço."
+"Após anos de debates improdutivos, o diálogo entre os diferentes setores tornou-se um deserto onde quase nenhuma ideia conseguia florescer."
 
-No contexto apresentado, a expressão destacada exemplifica a figura de linguagem denominada:`,
-
-    alternativas: [
-
-        "Comparação.",
-
-        "Metáfora.",
-
-        "Metonímia.",
-
-        "Catacrese.",
-
-        "Eufemismo."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A metáfora ocorre quando uma palavra ou expressão é empregada em sentido figurado por uma relação de semelhança implícita.
-
-No trecho, "colheu os frutos" não se refere à colheita real, mas aos resultados obtidos pelo esforço realizado.
-
-🎯 Dica de prova
-
-Sempre desconfie de metáfora quando houver transferência de sentido sem a presença de conectivos comparativos como "como", "tal qual" ou "feito".
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Metáfora.
-
-📖 Explicação
-
-A expressão "colheu os frutos" foi utilizada em sentido figurado.
-
-O autor compara implicitamente os resultados alcançados aos frutos de uma colheita.
-
-Não existe colheita real no contexto apresentado.
-
-⚠️ Atenção da banca
-
-Muitos candidatos confundem metáfora com comparação.
-
-Na comparação, normalmente aparecem elementos comparativos explícitos, como "como", "assim como", "tal qual" ou "feito".
-
-🎯 Como resolver na prova
-
-Verifique se a relação de semelhança está implícita.
-
-Se estiver implícita, a tendência é ser metáfora.
-`,
-
-    dicaBanca: `
-
-Metáfora = comparação implícita.
-
-Comparação = comparação explícita.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Durante a apresentação, o candidato permaneceu firme como uma rocha diante das perguntas da banca examinadora."
-
-A figura de linguagem predominante no trecho é:`,
+O efeito de sentido produzido pela expressão destacada decorre principalmente da figura de linguagem denominada:`,
 
     alternativas: [
 
-        "Metáfora.",
+        "Metáfora, pois ocorre transferência de sentido baseada em uma relação implícita de semelhança.",
 
-        "Comparação.",
+        "Metonímia, pois um elemento concreto substitui outro por relação de proximidade contextual.",
 
-        "Metonímia.",
+        "Catacrese, pois a expressão utiliza um termo já cristalizado pelo uso cotidiano da língua.",
 
-        "Hipérbole.",
+        "Antítese, pois estabelece contraste explícito entre conceitos semanticamente opostos.",
 
-        "Antítese."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A comparação ocorre quando dois elementos são aproximados por meio de conectivos comparativos.
-
-No trecho, a expressão "como uma rocha" estabelece explicitamente a comparação entre a firmeza do candidato e a resistência de uma rocha.
-
-🎯 Dica de prova
-
-A presença de palavras como "como", "tal qual", "feito", "assim como" geralmente indica comparação.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Comparação.
-
-📖 Explicação
-
-O autor compara diretamente o candidato a uma rocha utilizando o conectivo "como".
-
-Essa presença explícita do elemento comparativo caracteriza a comparação.
-
-Na metáfora, a comparação existe, mas fica implícita.
-
-⚠️ Atenção da banca
-
-Esta é uma das pegadinhas mais frequentes em concursos.
-
-Muitos candidatos identificam qualquer relação de semelhança como metáfora e esquecem de verificar a existência do conectivo comparativo.
-
-🎯 Como resolver na prova
-
-Procure palavras como:
-
-• como
-• tal qual
-• feito
-• assim como
-
-Se estiverem presentes estabelecendo semelhança, normalmente a resposta será comparação.
-`,
-
-    dicaBanca: `
-
-Metáfora = comparação implícita.
-
-Comparação = comparação explícita.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Após a reunião, os participantes dirigiram-se ao pé da mesa para analisar os documentos que estavam sobre ela."
-
-A expressão destacada exemplifica a figura de linguagem denominada:`,
-
-    alternativas: [
-
-        "Metáfora.",
-
-        "Catacrese.",
-
-        "Metonímia.",
-
-        "Comparação.",
-
-        "Hipérbole."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A catacrese ocorre quando uma palavra é utilizada por falta de um termo específico para designar determinada realidade.
-
-Expressões como "pé da mesa", "braço da cadeira" e "dente de alho" são exemplos clássicos.
-
-🎯 Dica de prova
-
-Se o termo já está incorporado ao uso cotidiano da língua, há grande chance de ser catacrese.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Catacrese.
-
-📖 Explicação
-
-Na expressão "pé da mesa", a palavra "pé" não indica literalmente um membro do corpo humano.
-
-Ela é utilizada para nomear a parte que sustenta a mesa.
-
-Esse emprego ocorre porque não existe um termo específico amplamente utilizado para essa parte do objeto.
-
-Por isso, temos um caso de catacrese.
-
-⚠️ Atenção da banca
-
-Muitos candidatos confundem catacrese com metáfora.
-
-A diferença é que a metáfora cria um efeito expressivo intencional.
-
-Já a catacrese tornou-se tão comum que muitas vezes nem percebemos seu sentido figurado.
-
-🎯 Como resolver na prova
-
-Memorize os exemplos clássicos:
-
-• pé da mesa;
-• braço da cadeira;
-• dente de alho;
-• boca do túnel;
-• asa da xícara.
-
-Esses exemplos aparecem frequentemente em concursos.
-`,
-
-    dicaBanca: `
-
-Catacrese é uma metáfora cristalizada pelo uso constante da língua.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"O auditório inteiro aplaudiu quando o cantor anunciou que havia conquistado três discos de ouro ao longo da carreira."
-
-Considerando a expressão destacada, assinale a alternativa correta.`,
-
-    alternativas: [
-
-        "Trata-se de metáfora, pois há uma comparação implícita.",
-
-        "Trata-se de metonímia, pois o objeto representa uma premiação recebida pelo artista.",
-
-        "Trata-se de catacrese, pois a expressão já foi incorporada à língua.",
-
-        "Trata-se de hipérbole, pois exagera a quantidade de premiações.",
-
-        "Trata-se de eufemismo, pois suaviza uma informação."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A metonímia ocorre quando uma palavra substitui outra por uma relação de proximidade de sentido.
-
-No trecho, "discos de ouro" representa uma premiação concedida em razão do sucesso de vendas.
-
-🎯 Dica de prova
-
-Na metonímia, normalmente ocorre substituição entre elementos que mantêm alguma relação lógica.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Metonímia.
-
-📖 Explicação
-
-A metonímia consiste na substituição de um termo por outro com o qual mantém relação de proximidade.
-
-No caso apresentado, "discos de ouro" não se refere apenas ao objeto físico, mas à premiação e ao reconhecimento obtidos pelo artista.
-
-Há uma substituição de sentido baseada em associação.
-
-⚠️ Atenção da banca
-
-A metonímia é frequentemente confundida com a metáfora.
-
-Na metáfora existe relação de semelhança.
-
-Na metonímia existe relação de proximidade, associação ou dependência.
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-Existe uma comparação por semelhança?
-
-• Se sim → Metáfora.
-
-Existe substituição por associação?
-
-• Se sim → Metonímia.
-`,
-
-    dicaBanca: `
-
-Exemplos clássicos de metonímia:
-
-• Ler Machado de Assis (autor pela obra).
-• Tomar um copo de água (continente pelo conteúdo).
-• Ouvir Beethoven (autor pela obra).
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"A voz doce da professora transmitia uma sensação de tranquilidade aos alunos."
-
-A figura de linguagem presente na expressão destacada é:`,
-
-    alternativas: [
-
-        "Metáfora.",
-
-        "Metonímia.",
-
-        "Sinestesia.",
-
-        "Hipérbole.",
-
-        "Catacrese."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A sinestesia ocorre quando há mistura de sensações percebidas por sentidos diferentes.
-
-No trecho, a característica gustativa "doce" foi atribuída à voz, que é percebida pela audição.
-
-🎯 Dica de prova
-
-Sempre observe se o texto mistura audição, visão, tato, olfato ou paladar.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Sinestesia.
-
-📖 Explicação
-
-A palavra "doce" normalmente está relacionada ao paladar.
-
-Entretanto, foi utilizada para caracterizar a voz da professora, percebida pela audição.
-
-Essa combinação de sensações pertencentes a sentidos diferentes caracteriza a sinestesia.
-
-⚠️ Atenção da banca
-
-Muitos candidatos confundem sinestesia com metáfora.
-
-Na sinestesia existe mistura de percepções sensoriais.
-
-🎯 Como resolver na prova
-
-Identifique se há combinação entre:
-
-• visão;
-• audição;
-• tato;
-• olfato;
-• paladar.
-
-Se houver mistura entre sentidos, a tendência é ser sinestesia.
-`,
-
-    dicaBanca: `
-
-Exemplos clássicos:
-
-• voz doce;
-• perfume suave;
-• grito áspero;
-• cor quente.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"O Rei do Futebol continua sendo uma das maiores referências da história do esporte mundial."
-
-A expressão destacada exemplifica a figura de linguagem denominada:`,
-
-    alternativas: [
-
-        "Metonímia.",
-
-        "Perífrase (Antonomásia).",
-
-        "Hipérbole.",
-
-        "Catacrese.",
-
-        "Sinestesia."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A perífrase, também chamada de antonomásia quando substitui um nome próprio, consiste na substituição de um ser por uma característica marcante.
-
-No trecho, "Rei do Futebol" substitui o nome de Pelé.
-
-🎯 Dica de prova
-
-Quando uma pessoa famosa é identificada por um título ou característica conhecida, normalmente há antonomásia.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Perífrase (Antonomásia).
-
-📖 Explicação
-
-A expressão "Rei do Futebol" substitui diretamente o nome do jogador Pelé.
-
-A substituição ocorre por uma característica amplamente reconhecida.
-
-Isso caracteriza a antonomásia, considerada um caso específico de perífrase.
-
-⚠️ Atenção da banca
-
-Não confunda com metonímia.
-
-Na antonomásia, um nome é substituído por uma característica que o identifica.
-
-🎯 Como resolver na prova
-
-Observe se o nome foi trocado por:
-
-• um título;
-• uma qualidade;
-• uma característica marcante.
-
-Se isso ocorrer, provavelmente trata-se de antonomásia.
-`,
-
-    dicaBanca: `
-
-Exemplos clássicos:
-
-• Rei do Futebol = Pelé.
-• Cidade Maravilhosa = Rio de Janeiro.
-• Pai da Aviação = Santos Dumont.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Ele chorou rios de lágrimas ao receber a notícia."
-
-A figura de linguagem predominante é:`,
-
-    alternativas: [
-
-        "Eufemismo.",
-
-        "Antítese.",
-
-        "Hipérbole.",
-
-        "Metonímia.",
-
-        "Ironia."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A hipérbole consiste em um exagero intencional para intensificar uma ideia.
-
-A expressão "rios de lágrimas" exagera a quantidade de lágrimas derramadas.
-
-🎯 Dica de prova
-
-Sempre desconfie de hipérbole quando houver exagero evidente.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Hipérbole.
-
-📖 Explicação
-
-Ninguém produz literalmente rios de lágrimas.
-
-O autor utiliza um exagero proposital para reforçar a intensidade da emoção sentida pela personagem.
-
-Essa amplificação caracteriza a hipérbole.
-
-⚠️ Atenção da banca
-
-Hipérbole é uma das figuras mais fáceis de identificar, mas costuma aparecer misturada com metáfora.
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-O fato descrito é possível na realidade?
-
-Se houver exagero evidente, provavelmente é hipérbole.
-`,
-
-    dicaBanca: `
-
-Exemplos clássicos:
-
-• Morri de rir.
-• Esperei uma eternidade.
-• Estou morrendo de fome.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"O funcionário foi desligado da empresa após uma reestruturação interna."
-
-A expressão destacada exemplifica a figura de linguagem denominada:`,
-
-    alternativas: [
-
-        "Hipérbole.",
-
-        "Ironia.",
-
-        "Eufemismo.",
-
-        "Metonímia.",
-
-        "Paradoxo."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-O eufemismo consiste em suavizar uma informação desagradável.
-
-No trecho, "foi desligado da empresa" suaviza a ideia de demissão.
-
-🎯 Dica de prova
-
-Sempre observe se o autor tenta tornar uma informação menos impactante.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Eufemismo.
-
-📖 Explicação
-
-A expressão utilizada procura amenizar uma situação considerada desagradável.
-
-Em vez de dizer "foi demitido", o texto utiliza uma forma mais suave.
-
-⚠️ Atenção da banca
-
-Eufemismo não significa mentir, mas suavizar a informação.
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-O autor está tentando amenizar uma realidade dura ou desagradável?
-
-Se sim, provavelmente é eufemismo.
-`,
-
-    dicaBanca: `
-
-Exemplos clássicos:
-
-• Partiu desta para melhor.
-• Foi descansar.
-• Foi desligado da empresa.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Entre o amor e o ódio, ele passou anos sem conseguir tomar uma decisão."
-
-A figura de linguagem predominante é:`,
-
-    alternativas: [
-
-        "Paradoxo.",
-
-        "Antítese.",
-
-        "Metáfora.",
-
-        "Hipérbole.",
-
-        "Catacrese."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A antítese ocorre quando ideias opostas aparecem em contraste.
-
-No trecho, "amor" e "ódio" representam conceitos contrários.
-
-🎯 Dica de prova
-
-Antítese = oposição de ideias.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Antítese.
-
-📖 Explicação
-
-O autor coloca lado a lado duas ideias opostas.
-
-Essa oposição cria um efeito de contraste.
-
-⚠️ Atenção da banca
-
-Antítese não é paradoxo.
-
-Na antítese, as ideias são opostas.
-
-No paradoxo, as ideias opostas aparecem simultaneamente gerando aparente contradição.
-
-🎯 Como resolver na prova
-
-Procure palavras ou conceitos contrários presentes no mesmo contexto.
-`,
-
-    dicaBanca: `
-
-Vida × morte.
-
-Amor × ódio.
-
-Claro × escuro.
-
-São exemplos clássicos de antítese.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Estou cego de tanto enxergar."
-
-A figura de linguagem predominante é:`,
-
-    alternativas: [
-
-        "Antítese.",
-
-        "Paradoxo.",
-
-        "Metonímia.",
-
-        "Eufemismo.",
-
-        "Catacrese."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-O paradoxo ocorre quando ideias aparentemente incompatíveis aparecem associadas.
-
-No trecho, "cego" e "enxergar" criam uma contradição aparente.
-
-🎯 Dica de prova
-
-Paradoxo = oposição com aparência de impossibilidade lógica.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Paradoxo.
-
-📖 Explicação
-
-A frase reúne ideias contraditórias.
-
-Como alguém pode estar cego e enxergar ao mesmo tempo?
-
-Essa incompatibilidade produz o efeito paradoxal.
-
-⚠️ Atenção da banca
-
-Muitos candidatos confundem paradoxo com antítese.
-
-No paradoxo existe uma contradição mais intensa.
-
-🎯 Como resolver na prova
-
-Verifique se as ideias opostas parecem impossíveis de coexistir.
-`,
-
-    dicaBanca: `
-
-Exemplos clássicos:
-
-• Estou cego de tanto ver.
-• O silêncio ensurdecedor.
-• Amor é fogo que arde sem se ver.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Que ótimo! O computador travou justamente no momento da apresentação."
-
-A figura de linguagem predominante é:`,
-
-    alternativas: [
-
-        "Ironia.",
-
-        "Hipérbole.",
-
-        "Metáfora.",
-
-        "Sinestesia.",
-
-        "Antítese."
+        "Eufemismo, pois suaviza uma avaliação negativa relacionada ao processo de diálogo."
 
     ],
 
@@ -759,758 +27,171 @@ A figura de linguagem predominante é:`,
 
 📖 Revisão rápida
 
-A ironia ocorre quando se afirma algo querendo transmitir sentido oposto.
+A palavra "deserto" não foi utilizada em sentido literal.
 
-No contexto, o fato não é positivo.
+O autor estabelece uma comparação implícita entre a ausência de diálogo produtivo e a esterilidade de um deserto.
+
+Isso caracteriza metáfora.
 
 🎯 Dica de prova
 
-Ironia frequentemente depende do contexto para ser compreendida.
+Em provas da FGV, a metáfora costuma aparecer em textos argumentativos e editoriais, e não apenas em frases literárias clássicas.
 `,
 
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
+    feedbackErro: `❌ Resposta incorreta.
 
-✅ Resposta correta: Ironia.
+✅ Gabarito: Metáfora.
 
 📖 Explicação
 
-O autor utiliza a expressão "Que ótimo!" para manifestar insatisfação.
+O trecho não trata de um deserto real.
 
-O sentido pretendido é contrário ao significado literal.
+O termo foi empregado figuradamente para representar a dificuldade de desenvolvimento de ideias e debates produtivos.
 
-⚠️ Atenção da banca
+Há uma relação implícita de semelhança entre os conceitos.
 
-A ironia exige interpretação contextual.
+🎯 Estratégia
 
-🎯 Como resolver na prova
+Pergunte-se sempre:
+
+O termo está sendo usado literalmente?
+
+Se não estiver e houver aproximação implícita de sentidos, provavelmente há metáfora.
+`,
+
+    dicaBanca: `
+
+Metáfora = semelhança implícita.
+
+Metonímia = associação.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"Embora os indicadores econômicos apresentassem sinais positivos, o relatório descrevia um cenário em que prosperidade e insegurança conviviam lado a lado."
+
+A construção destacada exemplifica principalmente:`,
+
+    alternativas: [
+
+        "Paradoxo, pois reúne ideias incompatíveis dentro da mesma estrutura lógica.",
+
+        "Antítese, pois aproxima conceitos semanticamente opostos para produzir contraste.",
+
+        "Hipérbole, pois exagera características associadas ao cenário econômico.",
+
+        "Ironia, pois apresenta sentido contrário ao significado literal das palavras.",
+
+        "Metonímia, pois substitui elementos por outros com os quais mantêm associação."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+Prosperidade e insegurança representam ideias opostas.
+
+A aproximação desses conceitos cria contraste, característica típica da antítese.
+
+🎯 Dica de prova
+
+Nem toda oposição é paradoxo.
+
+A antítese apenas coloca ideias contrárias em confronto.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Antítese.
+
+📖 Explicação
+
+O texto contrapõe duas ideias opostas.
+
+Entretanto, elas continuam logicamente possíveis dentro do mesmo contexto.
+
+Por isso não há paradoxo.
+
+🎯 Estratégia
+
+Antítese = oposição.
+
+Paradoxo = contradição aparente.
+`,
+
+    dicaBanca: `
+
+Antítese = oposição.
+
+Paradoxo = incompatibilidade aparente.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"Os corredores da universidade despertaram antes do amanhecer, ansiosos pela chegada dos novos estudantes."
+
+A figura predominante no trecho é:`,
+
+    alternativas: [
+
+        "Metáfora, pois os corredores representam simbolicamente a instituição.",
+
+        "Prosopopeia, pois características humanas são atribuídas a elementos inanimados.",
+
+        "Hipérbole, pois ocorre exagero relacionado à movimentação do campus.",
+
+        "Metonímia, pois uma parte da universidade substitui o todo institucional.",
+
+        "Catacrese, pois há emprego cristalizado de expressão figurada."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+Corredores não podem despertar nem sentir ansiedade.
+
+O autor atribui características humanas a elementos inanimados.
+
+Temos prosopopeia.
+
+🎯 Dica de prova
+
+As bancas modernas costumam esconder a personificação em textos institucionais e jornalísticos.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Prosopopeia.
+
+📖 Explicação
+
+O trecho atribui comportamento humano a algo que não possui vida própria.
+
+Essa humanização caracteriza a prosopopeia.
+
+🎯 Estratégia
 
 Pergunte:
 
-O autor realmente acredita no que está dizendo?
+Existe algo não humano realizando ação humana?
 
-Se a resposta for não, pode haver ironia.
+Se sim, há forte indício de prosopopeia.
 `,
 
     dicaBanca: `
 
-A ironia é muito explorada em charges e tirinhas.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"As árvores dançavam alegremente ao sabor do vento."
-
-A figura de linguagem predominante é:`,
-
-    alternativas: [
-
-        "Prosopopeia (Personificação).",
-
-        "Metonímia.",
-
-        "Hipérbole.",
-
-        "Paradoxo.",
-
-        "Antítese."
-
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A prosopopeia ocorre quando características humanas são atribuídas a seres inanimados ou irracionais.
-
-No trecho, as árvores recebem a capacidade humana de dançar.
-
-🎯 Dica de prova
-
-Objeto ou animal realizando ação humana costuma indicar personificação.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Prosopopeia (Personificação).
-
-📖 Explicação
-
-Árvores não dançam literalmente.
-
-O autor atribui comportamento humano a um elemento da natureza.
-
-Essa transferência caracteriza a prosopopeia.
-
-⚠️ Atenção da banca
-
-Prosopopeia e personificação são sinônimos.
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-Há algo não humano realizando ação tipicamente humana?
-
-Se sim, provavelmente é prosopopeia.
-`,
-
-    dicaBanca: `
-
-Exemplos clássicos:
-
-• O vento sussurrava.
-• O sol sorriu.
-• A cidade acordou triste.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Na sala, apenas silêncio."
-
-A figura de linguagem presente no trecho é:`,
-
-    alternativas: [
-
-        "Zeugma.",
-
-        "Pleonasmo.",
-
-        "Elipse.",
-
-        "Assíndeto.",
-
-        "Polissíndeto."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A elipse ocorre quando um termo é omitido, mas pode ser facilmente identificado pelo contexto.
-
-No trecho, o verbo "havia" foi omitido.
-
-A construção completa seria:
-
-"Na sala, havia apenas silêncio."
-
-🎯 Dica de prova
-
-Se uma palavra estiver subentendida pelo contexto, desconfie de elipse.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Elipse.
-
-📖 Explicação
-
-O verbo não aparece na frase, mas pode ser facilmente recuperado.
-
-Isso caracteriza uma omissão intencional de termo.
-
-⚠️ Atenção da banca
-
-Elipse é diferente de zeugma.
-
-Na elipse, o termo omitido não apareceu anteriormente.
-
-🎯 Como resolver na prova
-
-Identifique se existe palavra subentendida pelo contexto.
-`,
-
-    dicaBanca: `
-
-Exemplo clássico:
-
-"Na sala, apenas silêncio."
-
-(Havia apenas silêncio.)
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"João gosta de matemática; Maria, de português."
-
-A figura de linguagem presente é:`,
-
-    alternativas: [
-
-        "Elipse.",
-
-        "Zeugma.",
-
-        "Assíndeto.",
-
-        "Hipérbole.",
-
-        "Pleonasmo."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-O zeugma ocorre quando um termo já mencionado anteriormente é omitido para evitar repetição.
-
-No trecho, foi omitido o verbo "gosta".
-
-🎯 Dica de prova
-
-Zeugma é uma espécie de elipse.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Zeugma.
-
-📖 Explicação
-
-A frase completa seria:
-
-"João gosta de matemática; Maria gosta de português."
-
-O segundo verbo foi omitido porque já apareceu anteriormente.
-
-⚠️ Atenção da banca
-
-Elipse = termo não apareceu antes.
-
-Zeugma = termo já apareceu antes.
-
-🎯 Como resolver na prova
-
-Verifique se a palavra omitida já foi utilizada anteriormente.
-`,
-
-    dicaBanca: `
-
-Zeugma é uma das figuras favoritas das bancas.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Vi com meus próprios olhos o acidente."
-
-A figura de linguagem predominante é:`,
-
-    alternativas: [
-
-        "Pleonasmo.",
-
-        "Elipse.",
-
-        "Metáfora.",
-
-        "Antítese.",
-
-        "Assíndeto."
-
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-O pleonasmo consiste na repetição de uma ideia para reforçar a expressão.
-
-Quem vê, vê com os olhos.
-
-🎯 Dica de prova
-
-Nem todo pleonasmo é erro.
-
-Em muitos casos, ele produz efeito expressivo.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Pleonasmo.
-
-📖 Explicação
-
-A informação "com meus próprios olhos" repete uma ideia já presente no verbo "ver".
-
-Essa repetição produz reforço expressivo.
-
-⚠️ Atenção da banca
-
-Pleonasmo literário ≠ vício de linguagem.
-
-🎯 Como resolver na prova
-
-Observe se existe repetição intencional de significado.
-`,
-
-    dicaBanca: `
-
-Exemplos clássicos:
-
-• Subir para cima.
-• Entrar para dentro.
-• Ver com os próprios olhos.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Cheguei, vi, venci."
-
-A figura de linguagem predominante é:`,
-
-    alternativas: [
-
-        "Polissíndeto.",
-
-        "Pleonasmo.",
-
-        "Assíndeto.",
-
-        "Zeugma.",
-
-        "Metonímia."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-O assíndeto ocorre pela ausência de conectivos entre termos ou orações.
-
-No trecho, as ações aparecem em sequência sem conjunções.
-
-🎯 Dica de prova
-
-Ausência de conectivos = assíndeto.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Assíndeto.
-
-📖 Explicação
-
-O autor enumera ações sem utilizar conjunções.
-
-Essa omissão produz dinamismo e rapidez na leitura.
-
-⚠️ Atenção da banca
-
-Assíndeto é o oposto de polissíndeto.
-
-🎯 Como resolver na prova
-
-Verifique se os conectivos foram omitidos.
-`,
-
-    dicaBanca: `
-
-Exemplo clássico:
-
-"Vim, vi, venci."
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"E chorava, e ria, e gritava, e cantava durante toda a apresentação."
-
-A figura de linguagem predominante é:`,
-
-    alternativas: [
-
-        "Assíndeto.",
-
-        "Polissíndeto.",
-
-        "Elipse.",
-
-        "Metáfora.",
-
-        "Pleonasmo."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-O polissíndeto ocorre pela repetição de conectivos.
-
-No trecho, a conjunção "e" aparece repetidamente.
-
-🎯 Dica de prova
-
-Excesso de conectivos = polissíndeto.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Polissíndeto.
-
-📖 Explicação
-
-O autor repete intencionalmente a conjunção "e".
-
-Essa repetição cria ritmo e reforça a sequência de ações.
-
-⚠️ Atenção da banca
-
-Polissíndeto é o oposto de assíndeto.
-
-🎯 Como resolver na prova
-
-Observe se há repetição insistente de conectivos.
-`,
-
-    dicaBanca: `
-
-Poli = muitos.
-
-Muitos conectivos = polissíndeto.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Eu, sinceramente, essas promessas de campanha já não acredito mais."
-
-A figura de linguagem predominante é:`,
-
-    alternativas: [
-
-        "Anacoluto.",
-
-        "Elipse.",
-
-        "Pleonasmo.",
-
-        "Zeugma.",
-
-        "Hipérbole."
-
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-O anacoluto ocorre quando há uma quebra na estrutura sintática da frase.
-
-No trecho, "Eu" aparece desligado da estrutura que vem depois.
-
-🎯 Dica de prova
-
-Quando o início da frase parece ficar sem função sintática, desconfie de anacoluto.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Anacoluto.
-
-📖 Explicação
-
-A construção inicia com "Eu", mas a sequência da frase não mantém a estrutura sintática esperada.
-
-Há uma ruptura na organização da oração.
-
-⚠️ Atenção da banca
-
-O anacoluto aparece frequentemente em construções da linguagem oral.
-
-🎯 Como resolver na prova
-
-Observe se existe quebra da estrutura sintática após o início da frase.
-`,
-
-    dicaBanca: `
-
-Exemplo clássico:
-
-"Eu, essas coisas antigas não guardo mais."
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"O rato roeu a roupa do rei de Roma."
-
-A figura de linguagem predominante é:`,
-
-    alternativas: [
-
-        "Assonância.",
-
-        "Aliteração.",
-
-        "Onomatopeia.",
-
-        "Paronomásia.",
-
-        "Metáfora."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A aliteração consiste na repetição de sons consonantais.
-
-No trecho, observa-se repetição intensa do fonema "r".
-
-🎯 Dica de prova
-
-Repetição de consoantes = aliteração.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Aliteração.
-
-📖 Explicação
-
-O efeito sonoro foi produzido pela repetição da consoante "r".
-
-Essa repetição caracteriza a aliteração.
-
-⚠️ Atenção da banca
-
-Aliteração trabalha sons consonantais.
-
-Assonância trabalha sons vocálicos.
-
-🎯 Como resolver na prova
-
-Identifique qual som está sendo repetido.
-`,
-
-    dicaBanca: `
-
-Consoante repetida = aliteração.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"A tarde clara e amarela banhava a praça silenciosa."
-
-A repetição predominante do som da vogal "a" caracteriza:`,
-
-    alternativas: [
-
-        "Aliteração.",
-
-        "Metonímia.",
-
-        "Assonância.",
-
-        "Paradoxo.",
-
-        "Onomatopeia."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A assonância ocorre pela repetição de sons vocálicos.
-
-No trecho, o som da vogal "a" aparece diversas vezes.
-
-🎯 Dica de prova
-
-Vogal repetida = assonância.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Assonância.
-
-📖 Explicação
-
-A musicalidade do trecho decorre da repetição de sons vocálicos semelhantes.
-
-Essa repetição produz o efeito denominado assonância.
-
-⚠️ Atenção da banca
-
-Não confunda:
-
-• Aliteração = consoantes.
-• Assonância = vogais.
-
-🎯 Como resolver na prova
-
-Observe se a repetição sonora ocorre nas vogais.
-`,
-
-    dicaBanca: `
-
-Assonância é muito cobrada junto com aliteração.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Trim-trim! O telefone tocou várias vezes antes que alguém atendesse."
-
-A figura de linguagem presente na expressão destacada é:`,
-
-    alternativas: [
-
-        "Assonância.",
-
-        "Onomatopeia.",
-
-        "Metonímia.",
-
-        "Aliteração.",
-
-        "Prosopopeia."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A onomatopeia consiste na reprodução escrita de sons.
-
-No trecho, "trim-trim" imita o toque do telefone.
-
-🎯 Dica de prova
-
-Imitação de sons = onomatopeia.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Onomatopeia.
-
-📖 Explicação
-
-A expressão reproduz graficamente um som percebido na realidade.
-
-Esse recurso caracteriza a onomatopeia.
-
-⚠️ Atenção da banca
-
-Onomatopeias aparecem frequentemente em quadrinhos e tirinhas.
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-A palavra imita um som real?
-
-Se sim, provavelmente é onomatopeia.
-`,
-
-    dicaBanca: `
-
-Exemplos:
-
-• Trim-trim.
-• Tic-tac.
-• Au-au.
-• Miau.
-
-`
-},
-{
-    pergunta: `Assinale a alternativa em que ocorre PROSOPOPEIA (personificação).`,
-
-    alternativas: [
-
-        "O relógio fazia tic-tac sem parar.",
-
-        "O vento cantava suavemente entre as árvores.",
-
-        "Esperei uma eternidade pelo resultado.",
-
-        "Ela era forte como uma rocha.",
-
-        "Li Machado de Assis durante as férias."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A prosopopeia atribui características humanas a seres inanimados ou irracionais.
-
-No trecho, o vento recebe a capacidade humana de cantar.
-
-🎯 Dica de prova
-
-Elemento não humano realizando ação humana = prosopopeia.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: O vento cantava suavemente entre as árvores.
-
-📖 Explicação
-
-O verbo "cantar" representa uma ação tipicamente humana.
-
-Ao atribuí-lo ao vento, ocorre personificação.
-
-⚠️ Atenção da banca
-
-A prosopopeia costuma aparecer misturada com metáfora.
-
-🎯 Como resolver na prova
-
-Procure verbos ou atitudes humanas atribuídos a animais, objetos ou fenômenos da natureza.
-`,
-
-    dicaBanca: `
-
-Prosopopeia = personificação.
+Prosopopeia = Personificação.
 
 São termos equivalentes.
 
@@ -1519,345 +200,21 @@ São termos equivalentes.
 {
     pergunta: `Leia o trecho:
 
-"Ele morreu de rir ao ouvir a piada."
+"Após sucessivos adiamentos, a população recebeu com entusiasmo a notícia de que a obra finalmente sairia do papel."
 
-A figura de linguagem predominante é:`,
-
-    alternativas: [
-
-        "Eufemismo.",
-
-        "Hipérbole.",
-
-        "Metáfora.",
-
-        "Paradoxo.",
-
-        "Metonímia."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A hipérbole consiste em exagero intencional.
-
-Ninguém morre literalmente por rir.
-
-🎯 Dica de prova
-
-Exagero evidente geralmente indica hipérbole.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Hipérbole.
-
-📖 Explicação
-
-O autor exagera a intensidade do riso para produzir efeito expressivo.
-
-🎯 Como resolver na prova
-
-Pergunte: isso seria possível literalmente?
-
-Se não, pode haver hipérbole.
-`,
-
-    dicaBanca: `
-
-Hipérbole = exagero expressivo.
-
-`
-},
-{
-    pergunta: `Assinale a alternativa em que ocorre METONÍMIA.`,
+A expressão destacada exemplifica:`,
 
     alternativas: [
 
-        "A cidade acordou triste naquela manhã.",
+        "Metonímia, pois substitui a execução concreta do projeto por uma representação figurada.",
 
-        "Comprei um Machado de Assis na feira do livro.",
+        "Catacrese, pois utiliza expressão incorporada definitivamente ao uso cotidiano.",
 
-        "Ela era uma flor de pessoa.",
+        "Hipérbole, pois exagera o tempo necessário para a realização da obra.",
 
-        "Seu sorriso iluminava o ambiente.",
+        "Comparação, pois aproxima duas realidades por meio de semelhança explícita.",
 
-        "O mar cantava durante a noite."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-O autor foi utilizado no lugar da obra.
-
-🎯 Dica de prova
-
-Autor pela obra é um caso clássico de metonímia.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Comprei um Machado de Assis na feira do livro.
-
-📖 Explicação
-
-Ninguém compra a pessoa Machado de Assis.
-
-Compra-se uma obra escrita por ele.
-
-⚠️ Atenção da banca
-
-Autor pela obra é uma das formas mais cobradas de metonímia.
-`,
-
-    dicaBanca: `
-
-Machado de Assis = obra de Machado de Assis.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Meu coração é um deserto."
-
-A figura de linguagem predominante é:`,
-
-    alternativas: [
-
-        "Comparação.",
-
-        "Metáfora.",
-
-        "Catacrese.",
-
-        "Hipérbole.",
-
-        "Metonímia."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-Há comparação implícita entre coração e deserto.
-
-🎯 Dica de prova
-
-Ausência de conectivo comparativo geralmente indica metáfora.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Metáfora.
-
-📖 Explicação
-
-O coração não é literalmente um deserto.
-
-O autor estabelece uma relação de semelhança implícita.
-
-⚠️ Atenção da banca
-
-Se aparecesse "como um deserto", seria comparação.
-`,
-
-    dicaBanca: `
-
-Metáfora = comparação implícita.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"O silêncio gritava dentro daquela sala."
-
-A figura de linguagem predominante é:`,
-
-    alternativas: [
-
-        "Antítese.",
-
-        "Paradoxo.",
-
-        "Eufemismo.",
-
-        "Pleonasmo.",
-
-        "Catacrese."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-Silêncio e grito são conceitos incompatíveis.
-
-🎯 Dica de prova
-
-Paradoxo reúne ideias aparentemente impossíveis.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Paradoxo.
-
-📖 Explicação
-
-O texto une conceitos contraditórios.
-
-O efeito produzido é paradoxal.
-
-⚠️ Atenção da banca
-
-Paradoxo vai além da simples oposição da antítese.
-`,
-
-    dicaBanca: `
-
-Contradição aparente = paradoxo.
-
-`
-},
-{
-    pergunta: `Assinale a alternativa em que ocorre SINESTESIA.`,
-
-    alternativas: [
-
-        "A lua observava a cidade.",
-
-        "A voz macia acalmava a plateia.",
-
-        "Ele chorou rios de lágrimas.",
-
-        "Li Clarice Lispector ontem.",
-
-        "Cheguei, vi, venci."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-A voz é percebida pela audição.
-
-"Macia" remete ao tato.
-
-🎯 Dica de prova
-
-Mistura de sentidos = sinestesia.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: A voz macia acalmava a plateia.
-
-📖 Explicação
-
-Há mistura entre audição e tato.
-
-Isso caracteriza sinestesia.
-
-⚠️ Atenção da banca
-
-Sinestesia costuma ser confundida com metáfora.
-`,
-
-    dicaBanca: `
-
-Audição + tato = sinestesia.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"E ria, e chorava, e cantava, e dançava durante toda a noite."
-
-A figura predominante é:`,
-
-    alternativas: [
-
-        "Assíndeto.",
-
-        "Polissíndeto.",
-
-        "Elipse.",
-
-        "Zeugma.",
-
-        "Pleonasmo."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `🎉 Excelente!
-
-📖 Revisão rápida
-
-Há repetição intencional da conjunção "e".
-
-🎯 Dica de prova
-
-Muitos conectivos = polissíndeto.
-`,
-
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Polissíndeto.
-
-📖 Explicação
-
-A repetição do conectivo produz ritmo e intensidade.
-
-⚠️ Atenção da banca
-
-Polissíndeto é o oposto de assíndeto.
-`,
-
-    dicaBanca: `
-
-Poli = muitos.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Que maravilha! O sistema caiu exatamente no último minuto da prova."
-
-A figura predominante é:`,
-
-    alternativas: [
-
-        "Ironia.",
-
-        "Hipérbole.",
-
-        "Metáfora.",
-
-        "Metonímia.",
-
-        "Catacrese."
+        "Antonomásia, pois substitui um nome por característica conhecida."
 
     ],
 
@@ -1867,46 +224,62 @@ A figura predominante é:`,
 
 📖 Revisão rápida
 
-O sentido pretendido é contrário ao sentido literal.
+"Sair do papel" significa deixar de ser apenas projeto e tornar-se realidade.
+
+Há substituição baseada em associação de sentido.
 
 🎯 Dica de prova
 
-Ironia depende do contexto.
+Muitas expressões administrativas utilizam mecanismos próximos à metonímia.
 `,
 
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
+    feedbackErro: `❌ Resposta incorreta.
 
-✅ Resposta correta: Ironia.
+✅ Gabarito: Metonímia.
 
 📖 Explicação
 
-O autor demonstra insatisfação utilizando expressão aparentemente positiva.
+O papel representa o projeto formalizado.
 
-⚠️ Atenção da banca
+Ao "sair do papel", a ideia passa para a execução concreta.
 
-A ironia aparece frequentemente em charges e tirinhas.
+A relação ocorre por associação, e não por semelhança.
+
+🎯 Estratégia
+
+Associação → Metonímia.
+
+Semelhança → Metáfora.
 `,
 
     dicaBanca: `
 
-Sentido real oposto ao literal = ironia.
+Projeto ↔ papel.
+
+Obra ↔ execução.
+
+Relação associativa = metonímia.
 
 `
 },
 {
-    pergunta: `Assinale a alternativa correta.`,
+    pergunta: `Leia o trecho:
+
+"Que excelente demonstração de eficiência! O sistema ficou indisponível justamente durante o período de inscrições."
+
+A figura predominante no trecho é:`,
 
     alternativas: [
 
-        "Metáfora utiliza conectivos comparativos explícitos.",
+        "Hipérbole, pois intensifica os efeitos provocados pela falha do sistema.",
 
-        "Antítese e paradoxo são figuras idênticas.",
+        "Eufemismo, pois suaviza os problemas ocorridos durante as inscrições.",
 
-        "Metonímia baseia-se em relação de proximidade entre termos.",
+        "Ironia, pois o sentido pretendido é oposto ao significado literal da afirmação.",
 
-        "Hipérbole suaviza uma informação desagradável.",
+        "Antítese, pois contrapõe eficiência e indisponibilidade tecnológica.",
 
-        "Prosopopeia consiste na repetição de sons consonantais."
+        "Paradoxo, pois reúne conceitos logicamente incompatíveis."
 
     ],
 
@@ -1916,41 +289,1415 @@ Sentido real oposto ao literal = ironia.
 
 📖 Revisão rápida
 
-A metonímia ocorre por associação ou proximidade entre elementos.
+O autor não considera a situação excelente.
+
+A expressão positiva é utilizada para transmitir crítica.
+
+Isso caracteriza ironia.
 
 🎯 Dica de prova
 
-Associação = metonímia.
-
-Semelhança = metáfora.
+A ironia depende fortemente do contexto.
 `,
 
-    feedbackErro: `❌ Você marcou uma alternativa incorreta.
+    feedbackErro: `❌ Resposta incorreta.
 
-✅ Resposta correta: Metonímia baseia-se em relação de proximidade entre termos.
+✅ Gabarito: Ironia.
 
 📖 Explicação
 
-A questão reúne várias pegadinhas clássicas sobre figuras de linguagem.
+O sentido real é contrário ao sentido literal.
 
-Por isso, exige domínio conceitual.
+A aparente elogio funciona, na verdade, como crítica.
 
-⚠️ Atenção da banca
+🎯 Estratégia
 
-Questões de síntese costumam aparecer em provas de nível médio e superior.
+Pergunte:
+
+O emissor realmente acredita no que está dizendo?
+
+Se a resposta for não, pode haver ironia.
 `,
 
     dicaBanca: `
 
-Revise sempre:
+Sentido literal ≠ sentido pretendido
 
-Metáfora × Comparação.
-
-Antítese × Paradoxo.
-
-Metáfora × Metonímia.
+→ Ironia.
 
 `
+},
+{
+    pergunta: `Leia o trecho:
+
+"Durante anos, a proposta permaneceu adormecida nos arquivos da instituição, até que voltou a despertar interesse entre os gestores."
+
+A figura de linguagem predominante na construção destacada é:`,
+
+    alternativas: [
+
+        "Prosopopeia, pois atribui características próprias de seres vivos a uma proposta institucional.",
+
+        "Metonímia, pois substitui os gestores pela proposta mencionada no texto.",
+
+        "Hipérbole, pois exagera o período em que a proposta permaneceu sem utilização.",
+
+        "Antítese, pois contrapõe momentos distintos da trajetória administrativa do projeto.",
+
+        "Catacrese, pois utiliza expressão incorporada ao vocabulário técnico."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+Uma proposta não pode dormir nem despertar.
+
+O autor atribui ações humanas a algo abstrato.
+
+Isso caracteriza prosopopeia.
+
+🎯 Dica de prova
+
+A personificação pode ocorrer com objetos, ideias, instituições ou conceitos abstratos.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Prosopopeia.
+
+📖 Explicação
+
+A proposta foi apresentada como se possuísse comportamentos humanos.
+
+Essa atribuição de características humanas é típica da prosopopeia.
+
+🎯 Estratégia
+
+Verifique se algo sem vida ou abstrato executa ações humanas.
+`,
+
+    dicaBanca: `
+
+Ideias, projetos e instituições também podem ser personificados.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"As negociações avançavam lentamente: reuniões, propostas, contrapropostas, revisões, novas análises. Nada parecia suficiente para encerrar o impasse."
+
+O efeito de sentido produzido pela sequência destacada decorre principalmente de:`,
+
+    alternativas: [
+
+        "Polissíndeto, pois há repetição sistemática de conectivos coordenativos.",
+
+        "Assíndeto, pois ocorre enumeração sem a utilização de conectivos entre os elementos.",
+
+        "Elipse, pois termos essenciais da oração foram omitidos intencionalmente.",
+
+        "Anacoluto, pois existe ruptura da estrutura sintática inicialmente construída.",
+
+        "Zeugma, pois um termo anteriormente expresso foi suprimido."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+Os elementos aparecem em sequência sem conectivos.
+
+Essa ausência produz ritmo acelerado e sensação de acúmulo.
+
+Caracteriza assíndeto.
+
+🎯 Dica de prova
+
+FGV gosta de cobrar o efeito estilístico da figura, não apenas sua definição.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Assíndeto.
+
+📖 Explicação
+
+A enumeração ocorre sem conjunções ligando os elementos.
+
+Isso gera dinamismo e aceleração na leitura.
+
+🎯 Estratégia
+
+Sem conectivos → Assíndeto.
+
+Muitos conectivos → Polissíndeto.
+`,
+
+    dicaBanca: `
+
+Assíndeto = ausência de conectivos.
+
+Polissíndeto = excesso de conectivos.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"E discutiram os relatórios, e revisaram os dados, e analisaram os resultados, e propuseram ajustes para o projeto."
+
+A repetição da conjunção produz efeito associado à figura denominada:`,
+
+    alternativas: [
+
+        "Assíndeto, pois elimina elementos de ligação para acelerar a leitura.",
+
+        "Zeugma, pois omite palavras repetidas no interior do período.",
+
+        "Polissíndeto, pois repete conectivos para enfatizar a sequência das ações.",
+
+        "Anáfora, pois repete termos exclusivamente no início dos parágrafos.",
+
+        "Elipse, pois reduz a estrutura sintática para evitar redundâncias."
+
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+A conjunção "e" aparece repetidamente.
+
+Essa repetição intencional caracteriza polissíndeto.
+
+🎯 Dica de prova
+
+Além da identificação da figura, observe seu efeito de reforço e acumulação.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Polissíndeto.
+
+📖 Explicação
+
+O uso reiterado da conjunção cria ritmo e reforça a sucessão de ações.
+
+🎯 Estratégia
+
+Excesso de conectivos coordenativos costuma indicar polissíndeto.
+`,
+
+    dicaBanca: `
+
+Muitos "e", "ou", "nem" repetidos
+
+→ Polissíndeto.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"A cidade acordou sob um silêncio barulhento que parecia anunciar mudanças iminentes."
+
+A construção "silêncio barulhento" exemplifica:`,
+
+    alternativas: [
+
+        "Antítese, pois aproxima conceitos opostos sem produzir incompatibilidade lógica.",
+
+        "Paradoxo, pois reúne ideias aparentemente contraditórias em uma mesma construção.",
+
+        "Hipérbole, pois exagera a intensidade do silêncio observado.",
+
+        "Metáfora, pois substitui uma ideia concreta por outra abstrata.",
+
+        "Ironia, pois expressa sentido contrário ao significado literal."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+Silêncio e barulho são conceitos contraditórios.
+
+A união dos dois produz uma aparente impossibilidade lógica.
+
+Isso caracteriza paradoxo.
+
+🎯 Dica de prova
+
+Paradoxo costuma exigir interpretação mais profunda do contexto.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Paradoxo.
+
+📖 Explicação
+
+Há fusão de conceitos aparentemente incompatíveis.
+
+O objetivo é provocar reflexão e ampliar o significado da mensagem.
+
+🎯 Estratégia
+
+Antítese aproxima opostos.
+
+Paradoxo funde opostos na mesma ideia.
+`,
+
+    dicaBanca: `
+
+Antítese → oposição.
+
+Paradoxo → contradição aparente.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"Os corredores da escola foram tomados por um perfume alegre que parecia anunciar o início das festividades."
+
+A expressão destacada constitui exemplo de:`,
+
+    alternativas: [
+
+        "Metonímia, pois substitui um elemento sensorial por outro semanticamente próximo.",
+
+        "Sinestesia, pois associa percepções pertencentes a diferentes sentidos humanos.",
+
+        "Catacrese, pois emprega expressão figurada já incorporada ao uso comum.",
+
+        "Hipérbole, pois intensifica artificialmente uma sensação percebida.",
+
+        "Comparação, pois aproxima explicitamente duas experiências sensoriais."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+Perfume é percebido pelo olfato.
+
+Alegre relaciona-se a sensação emocional.
+
+Há mistura de percepções diferentes.
+
+Isso caracteriza sinestesia.
+
+🎯 Dica de prova
+
+A sinestesia aparece frequentemente em textos literários e crônicas.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Sinestesia.
+
+📖 Explicação
+
+O autor combina sensações de naturezas distintas para construir efeito expressivo.
+
+🎯 Estratégia
+
+Mistura de sentidos físicos ou emocionais → Sinestesia.
+`,
+
+    dicaBanca: `
+
+Perfume alegre
+Som doce
+Cor quente
+
+→ Sinestesia.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"Não foi uma decisão simples. Tampouco uma escolha livre de riscos."
+
+Considerando a construção do período, a figura de linguagem predominante é:`,
+
+    alternativas: [
+
+        "Anacoluto, pois ocorre ruptura da estrutura sintática inicialmente prevista.",
+
+        "Zeugma, pois há omissão de um termo anteriormente expresso e facilmente recuperável pelo contexto.",
+
+        "Elipse, pois a supressão de termos impede a reconstrução completa do sentido.",
+
+        "Assíndeto, pois há enumeração de elementos sem utilização de conectivos.",
+
+        "Metonímia, pois ocorre substituição baseada em relação de proximidade semântica."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+Na segunda frase, o verbo "foi" está oculto:
+
+"Tampouco [foi] uma escolha livre de riscos."
+
+Essa omissão de termo anteriormente mencionado caracteriza zeugma.
+
+🎯 Dica de prova
+
+FGV costuma cobrar zeugma em textos jornalísticos e argumentativos, e não apenas em exemplos literários.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Zeugma.
+
+📖 Explicação
+
+O verbo da primeira oração foi omitido na segunda para evitar repetição.
+
+Como o termo já apareceu anteriormente, temos zeugma.
+
+🎯 Estratégia
+
+Termo omitido já apareceu antes?
+
+→ Zeugma.
+
+Nunca apareceu?
+
+→ Elipse.
+`,
+
+    dicaBanca: `
+
+Zeugma = omissão de termo já citado.
+
+Elipse = omissão de termo não citado.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"Os relatórios chegaram, as análises começaram, as discussões avançaram, as decisões foram tomadas."
+
+O efeito expressivo predominante da construção decorre de:`,
+
+    alternativas: [
+
+        "Polissíndeto, responsável por enfatizar a continuidade das ações.",
+
+        "Assíndeto, responsável por imprimir dinamismo e rapidez à sequência apresentada.",
+
+        "Anáfora, responsável pela repetição sistemática dos mesmos conectivos.",
+
+        "Zeugma, responsável pela omissão de verbos repetidos no período.",
+
+        "Paradoxo, responsável pela coexistência de ideias aparentemente incompatíveis."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+A ausência de conectivos acelera a leitura.
+
+O texto transmite sensação de rapidez e sucessão contínua dos acontecimentos.
+
+🎯 Dica de prova
+
+A banca frequentemente pergunta o efeito estilístico da figura, não apenas seu nome.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Assíndeto.
+
+📖 Explicação
+
+Os segmentos aparecem lado a lado sem conjunções.
+
+Esse recurso produz ritmo acelerado e sensação de encadeamento.
+
+🎯 Estratégia
+
+Enumeração sem conectivos = Assíndeto.
+`,
+
+    dicaBanca: `
+
+Sem conectivos → Assíndeto.
+
+Com muitos conectivos → Polissíndeto.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"Brasília anunciou novas medidas para estimular o crescimento econômico."
+
+A figura presente na palavra "Brasília" é:`,
+
+    alternativas: [
+
+        "Metáfora, pois a cidade é comparada implicitamente ao governo federal.",
+
+        "Metonímia, pois o local é utilizado para representar a instituição nele sediada.",
+
+        "Antonomásia, pois um nome próprio substitui uma característica conhecida.",
+
+        "Catacrese, pois ocorre emprego figurado já incorporado à língua.",
+
+        "Prosopopeia, pois a cidade recebe características humanas."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+Quem anuncia medidas não é a cidade em si.
+
+"Brasília" representa o governo federal.
+
+Trata-se de metonímia.
+
+🎯 Dica de prova
+
+Locais representando instituições aparecem constantemente em notícias e editoriais.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Metonímia.
+
+📖 Explicação
+
+Existe substituição baseada em associação.
+
+O lugar representa a instituição instalada nele.
+
+🎯 Estratégia
+
+Local → instituição.
+
+Autor → obra.
+
+Parte → todo.
+
+Todos são casos clássicos de metonímia.
+`,
+
+    dicaBanca: `
+
+"Brasília decidiu"
+
+"Planalto informou"
+
+"Itamaraty declarou"
+
+→ Metonímia.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"O pesquisador mergulhou profundamente nos dados antes de apresentar qualquer conclusão."
+
+A expressão destacada constitui principalmente:`,
+
+    alternativas: [
+
+        "Hipérbole, pois exagera o esforço realizado durante a análise.",
+
+        "Catacrese, pois utiliza termo já cristalizado para indicar investigação detalhada.",
+
+        "Metáfora, pois transfere para uma atividade intelectual uma ação originalmente física.",
+
+        "Metonímia, pois substitui o pesquisador pelos dados analisados.",
+
+        "Prosopopeia, pois atribui comportamento humano aos dados."
+
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+Não houve mergulho literal.
+
+A ação física foi transferida para o campo intelectual da pesquisa.
+
+Temos metáfora.
+
+🎯 Dica de prova
+
+Metáforas conceituais aparecem muito em textos acadêmicos.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Metáfora.
+
+📖 Explicação
+
+O verbo foi utilizado figuradamente.
+
+O pesquisador não entrou fisicamente nos dados.
+
+A expressão sugere investigação profunda.
+
+🎯 Estratégia
+
+Pergunte:
+
+Existe comparação implícita baseada em semelhança?
+
+→ Metáfora.
+`,
+
+    dicaBanca: `
+
+Mergulhar em estudos.
+Navegar em ideias.
+Explorar conceitos.
+
+→ Metáforas conceituais.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"Que admirável demonstração de planejamento! O evento começou com apenas três horas de atraso."
+
+A construção destacada apresenta predominantemente:`,
+
+    alternativas: [
+
+        "Hipérbole, pois exagera a duração do atraso observado.",
+
+        "Antítese, pois contrapõe planejamento e atraso operacional.",
+
+        "Ironia, pois o elogio aparente funciona como forma de crítica.",
+
+        "Paradoxo, pois reúne ideias logicamente incompatíveis.",
+
+        "Eufemismo, pois suaviza os problemas ocorridos durante o evento."
+
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+O autor não está elogiando.
+
+O elogio aparente serve para criticar.
+
+Esse mecanismo caracteriza ironia.
+
+🎯 Dica de prova
+
+A ironia é uma das figuras mais cobradas em textos opinativos.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Ironia.
+
+📖 Explicação
+
+Há divergência entre o sentido literal e a intenção real do emissor.
+
+A expressão positiva comunica uma avaliação negativa.
+
+🎯 Estratégia
+
+Se o contexto contradiz o elogio, provavelmente há ironia.
+`,
+
+    dicaBanca: `
+
+Elogio aparente + crítica implícita
+
+→ Ironia.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"A notícia espalhou-se tão rapidamente que, em poucas horas, já parecia ter atravessado todos os continentes."
+
+O efeito de sentido predominante decorre da figura denominada:`,
+
+    alternativas: [
+
+        "Metáfora, pois a circulação da notícia é comparada implicitamente a um deslocamento físico.",
+
+        "Hipérbole, pois ocorre exagero intencional para enfatizar a velocidade de propagação.",
+
+        "Metonímia, pois os continentes representam os habitantes que receberam a informação.",
+
+        "Ironia, pois o autor questiona a credibilidade da notícia divulgada.",
+
+        "Catacrese, pois a expressão já se encontra incorporada ao uso cotidiano."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+O autor exagera deliberadamente a velocidade de circulação da notícia.
+
+Esse exagero expressivo caracteriza hipérbole.
+
+🎯 Dica de prova
+
+A hipérbole nem sempre aparece em frases absurdas; muitas vezes surge em textos jornalísticos e argumentativos.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Hipérbole.
+
+📖 Explicação
+
+A ideia de atravessar todos os continentes em poucas horas constitui exagero utilizado para intensificar uma característica.
+
+🎯 Estratégia
+
+Exagero intencional → Hipérbole.
+`,
+
+    dicaBanca: `
+
+Exagero expressivo = Hipérbole.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"Depois de meses de discussão, a proposta finalmente viu a luz."
+
+A expressão destacada exemplifica principalmente:`,
+
+    alternativas: [
+
+        "Metonímia, pois substitui a divulgação da proposta pelo ambiente em que ocorreu.",
+
+        "Catacrese, pois emprega expressão figurada amplamente cristalizada no uso da língua.",
+
+        "Metáfora, pois associa o surgimento da proposta à ideia de iluminação ou nascimento.",
+
+        "Prosopopeia, pois atribui à proposta a capacidade humana de enxergar.",
+
+        "Antítese, pois contrapõe obscuridade e visibilidade."
+
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+"Ver a luz" representa tornar-se conhecida ou concretizar-se.
+
+Há transferência de sentido baseada em semelhança.
+
+🎯 Dica de prova
+
+FGV costuma explorar metáforas ligadas à luz como símbolo de conhecimento ou surgimento.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Metáfora.
+
+📖 Explicação
+
+A luz não aparece em sentido literal.
+
+Ela simboliza surgimento, visibilidade ou concretização.
+
+🎯 Estratégia
+
+Luz frequentemente representa conhecimento, descoberta ou nascimento.
+`,
+
+    dicaBanca: `
+
+Luz = conhecimento, revelação ou surgimento.
+
+→ Metáfora.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"Na reunião estavam presentes diretores, coordenadores, professores, estudantes; todos defendiam mudanças na instituição."
+
+A sequência destacada produz efeito estilístico associado principalmente a:`,
+
+    alternativas: [
+
+        "Assíndeto, pela enumeração construída sem conectivos entre os elementos.",
+
+        "Polissíndeto, pela repetição sistemática de conjunções coordenativas.",
+
+        "Zeugma, pela omissão de verbos repetidos ao longo da enumeração.",
+
+        "Anacoluto, pela ruptura da estrutura sintática inicialmente planejada.",
+
+        "Elipse, pela supressão de termos impossíveis de recuperar pelo contexto."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+Os termos aparecem em sequência sem conjunções.
+
+Esse recurso cria fluidez e aceleração.
+
+🎯 Dica de prova
+
+O efeito do assíndeto costuma ser tão importante quanto sua identificação.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Assíndeto.
+
+📖 Explicação
+
+A enumeração ocorre sem conectivos coordenativos.
+
+Isso gera sensação de rapidez e acúmulo.
+
+🎯 Estratégia
+
+Lista sem conectivos → Assíndeto.
+`,
+
+    dicaBanca: `
+
+Enumeração sem "e", "ou", "nem"
+
+→ Assíndeto.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"Não foi embora; desapareceu do mapa."
+
+A expressão destacada constitui exemplo de:`,
+
+    alternativas: [
+
+        "Hipérbole, pois exagera a distância percorrida pela pessoa mencionada.",
+
+        "Eufemismo, pois suaviza uma informação potencialmente desagradável.",
+
+        "Metonímia, pois o mapa substitui o local onde a pessoa estava.",
+
+        "Ironia, pois o autor não acredita que a pessoa realmente tenha partido.",
+
+        "Paradoxo, pois reúne conceitos incompatíveis na mesma construção."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+"Desapareceu do mapa" suaviza a ideia de sumiço ou afastamento.
+
+Temos um eufemismo.
+
+🎯 Dica de prova
+
+Eufemismos não aparecem apenas em temas ligados à morte; podem suavizar diversas situações.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Eufemismo.
+
+📖 Explicação
+
+A expressão atenua ou suaviza uma informação potencialmente negativa.
+
+🎯 Estratégia
+
+Suavização do sentido → Eufemismo.
+`,
+
+    dicaBanca: `
+
+Atenuar uma ideia desagradável
+
+→ Eufemismo.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"O pesquisador ouviu um silêncio áspero tomar conta da sala após a divulgação dos resultados."
+
+A expressão "silêncio áspero" constitui exemplo de:`,
+
+    alternativas: [
+
+        "Hipérbole, pois amplia artificialmente a intensidade da reação dos presentes.",
+
+        "Sinestesia, pois associa percepções pertencentes a campos sensoriais distintos.",
+
+        "Metonímia, pois uma sensação substitui outra semanticamente relacionada.",
+
+        "Prosopopeia, pois o silêncio recebe comportamento humano.",
+
+        "Antítese, pois aproxima conceitos semanticamente opostos."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+Silêncio relaciona-se à audição.
+
+Áspero relaciona-se ao tato.
+
+A mistura dessas percepções caracteriza sinestesia.
+
+🎯 Dica de prova
+
+A sinestesia costuma aparecer em textos literários sofisticados.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Sinestesia.
+
+📖 Explicação
+
+Há combinação de sensações pertencentes a diferentes sentidos.
+
+🎯 Estratégia
+
+Mistura de audição, visão, tato, olfato ou paladar
+
+→ Sinestesia.
+`,
+
+    dicaBanca: `
+
+Som doce.
+Perfume alegre.
+Silêncio áspero.
+
+→ Sinestesia.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"A pesquisa avançava lentamente. Os recursos, escassos. O prazo, cada vez mais curto."
+
+A construção destacada exemplifica principalmente:`,
+
+    alternativas: [
+
+        "Zeugma, pois ocorre omissão de termos anteriormente expressos e facilmente recuperáveis pelo contexto.",
+
+        "Anacoluto, pois a estrutura sintática é interrompida antes de sua conclusão lógica.",
+
+        "Polissíndeto, pois há repetição sistemática de conectivos coordenativos.",
+
+        "Metonímia, pois recursos e prazos representam os responsáveis pela pesquisa.",
+
+        "Paradoxo, pois ideias incompatíveis coexistem na mesma estrutura."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+Nas frases reduzidas, o verbo "eram/estavam" foi omitido:
+
+"Os recursos [eram] escassos."
+"O prazo [estava] cada vez mais curto."
+
+Essa omissão caracteriza zeugma.
+
+🎯 Dica de prova
+
+A FGV costuma explorar zeugma em textos argumentativos modernos.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Zeugma.
+
+📖 Explicação
+
+Há omissão de termos facilmente recuperáveis a partir do contexto anterior.
+
+🎯 Estratégia
+
+Se o termo omitido já apareceu anteriormente, geralmente temos zeugma.
+`,
+
+    dicaBanca: `
+
+Zeugma = repetição evitada.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"Os estudantes buscavam respostas; os professores, caminhos; a instituição, soluções duradouras."
+
+A figura predominante na construção é:`,
+
+    alternativas: [
+
+        "Elipse, pois verbos essenciais foram omitidos sem terem aparecido anteriormente.",
+
+        "Zeugma, pois há supressão de verbo anteriormente expresso na mesma estrutura.",
+
+        "Assíndeto, pois inexiste qualquer relação sintática entre os segmentos.",
+
+        "Anacoluto, pois ocorre quebra da construção sintática iniciada.",
+
+        "Metáfora, pois respostas, caminhos e soluções são empregados figuradamente."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+O verbo "buscavam" aparece apenas no primeiro segmento.
+
+Nos demais, fica implícito:
+
+"os professores [buscavam] caminhos"
+
+"a instituição [buscava] soluções"
+
+🎯 Dica de prova
+
+Zeugma é uma das figuras sintáticas favoritas das bancas.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Zeugma.
+
+📖 Explicação
+
+O verbo já apareceu e foi omitido nos segmentos seguintes.
+
+🎯 Estratégia
+
+Procure verbos repetidos que desaparecem nos trechos posteriores.
+`,
+
+    dicaBanca: `
+
+Verbo repetido oculto
+
+→ Zeugma.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"Eu, sinceramente, essas justificativas não consigo aceitar."
+
+A estrutura do período apresenta principalmente:`,
+
+    alternativas: [
+
+        "Assíndeto, pela ausência de conectivos entre as orações.",
+
+        "Anacoluto, pela ruptura da organização sintática inicialmente estabelecida.",
+
+        "Polissíndeto, pela repetição excessiva de elementos coordenativos.",
+
+        "Metonímia, pela substituição de um termo por outro semanticamente associado.",
+
+        "Hipérbole, pela intensificação da discordância expressa pelo emissor."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+O trecho inicia uma construção e depois altera sua organização sintática.
+
+Essa quebra caracteriza anacoluto.
+
+🎯 Dica de prova
+
+Anacoluto aparece muito na linguagem oral e em textos que simulam espontaneidade.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Anacoluto.
+
+📖 Explicação
+
+Há ruptura da estrutura inicialmente iniciada pelo falante.
+
+🎯 Estratégia
+
+Observe se o começo da frase parece desconectado da continuação sintática.
+`,
+
+    dicaBanca: `
+
+Quebra sintática
+
+→ Anacoluto.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"Era uma derrota vitoriosa: perderam a disputa, mas conquistaram reconhecimento e respeito."
+
+A construção destacada exemplifica:`,
+
+    alternativas: [
+
+        "Antítese, pois apenas aproxima conceitos opostos sem integrá-los.",
+
+        "Paradoxo, pois funde ideias aparentemente contraditórias em uma única expressão.",
+
+        "Ironia, pois o sentido real contradiz completamente o sentido literal.",
+
+        "Eufemismo, pois suaviza o impacto da derrota sofrida.",
+
+        "Hipérbole, pois exagera os efeitos produzidos pela competição."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+"Derrota vitoriosa" reúne conceitos aparentemente incompatíveis.
+
+Essa fusão produz um paradoxo.
+
+🎯 Dica de prova
+
+Paradoxos exigem interpretação contextual, não apenas identificação de palavras opostas.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Paradoxo.
+
+📖 Explicação
+
+As ideias contraditórias convivem na mesma expressão.
+
+O contexto resolve a aparente incompatibilidade.
+
+🎯 Estratégia
+
+Se os opostos se fundem numa mesma ideia, há paradoxo.
+`,
+
+    dicaBanca: `
+
+Antítese = oposição.
+
+Paradoxo = fusão de opostos.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"O mestre de Avon permanece como uma das maiores referências da literatura mundial."
+
+A expressão "mestre de Avon" constitui exemplo de:`,
+
+    alternativas: [
+
+        "Metonímia, pois substitui a obra pelo autor que a produziu.",
+
+        "Catacrese, pois utiliza expressão figurada incorporada ao uso comum.",
+
+        "Antonomásia (perífrase), pois substitui o nome próprio por uma característica identificadora.",
+
+        "Metáfora, pois estabelece comparação implícita entre autor e mestre.",
+
+        "Prosopopeia, pois atribui ações humanas à literatura."
+
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: `🎉 Excelente!
+
+📖 Revisão rápida
+
+"Mestre de Avon" é uma forma de referir-se a Shakespeare sem utilizar seu nome.
+
+Temos antonomásia (ou perífrase).
+
+🎯 Dica de prova
+
+Essa figura aparece muito em questões literárias e culturais.
+`,
+
+    feedbackErro: `❌ Resposta incorreta.
+
+✅ Gabarito: Antonomásia (Perífrase).
+
+📖 Explicação
+
+O nome é substituído por uma característica amplamente reconhecida.
+
+🎯 Estratégia
+
+Pessoa famosa identificada por característica ou título
+
+→ Antonomásia.
+`,
+
+    dicaBanca: `
+
+"O Rei do Futebol"
+"O Poeta dos Escravos"
+"O Mestre de Avon"
+
+→ Antonomásia.
+
+`
+},
+{
+    pergunta: `Leia o trecho:
+
+"E o projeto cresceu, e os resultados apareceram, e a equipe ampliou suas ações, e novas parcerias foram estabelecidas."
+
+A repetição do conectivo produz efeito associado principalmente a:`,
+
+    alternativas: [
+
+        "Assíndeto, por eliminar conectivos e acelerar o ritmo do texto.",
+
+        "Polissíndeto, por reforçar a sucessão e a acumulação das ações apresentadas.",
+
+        "Zeugma, por omitir termos repetidos ao longo da construção.",
+
+        "Anacoluto, por interromper a estrutura sintática originalmente planejada.",
+
+        "Hipérbole, por exagerar a quantidade de ações desenvolvidas."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. A repetição intencional da conjunção cria efeito de acumulação e reforça a progressão dos acontecimentos.",
+
+    feedbackErro: "A presença repetida do conectivo é o principal indício para identificar a figura utilizada.",
+
+    dicaBanca: "As bancas costumam cobrar não apenas a identificação do polissíndeto, mas também seu efeito de reforço e encadeamento."
+
+},
+{
+    pergunta: `Leia o trecho:
+
+"As teclas do computador responderam com um clique seco e metálico que interrompeu o silêncio da sala."
+
+A expressão 'clique' constitui exemplo de:`,
+
+    alternativas: [
+
+        "Assonância, por repetir sons vocálicos semelhantes ao longo da frase.",
+
+        "Aliteração, por enfatizar a repetição de consoantes específicas.",
+
+        "Onomatopeia, por reproduzir linguisticamente um som associado à realidade.",
+
+        "Sinestesia, por combinar percepções auditivas e táteis.",
+
+        "Prosopopeia, por atribuir comportamento humano ao objeto."
+
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A palavra procura reproduzir o som produzido pelo objeto descrito.",
+
+    feedbackErro: "Nem toda palavra relacionada a som é onomatopeia. É necessário que haja tentativa de imitação sonora.",
+
+    dicaBanca: "Os examinadores costumam contextualizar onomatopeias em textos narrativos e descritivos, evitando exemplos excessivamente óbvios."
+
+},
+{
+    pergunta: `Leia o trecho:
+
+"Vozes vagas vagavam pelos velhos corredores da instituição."
+
+O efeito expressivo predominante decorre de:`,
+
+    alternativas: [
+
+        "Assonância, pela repetição sistemática de sons vocálicos predominantes.",
+
+        "Metonímia, pela associação entre vozes e pessoas.",
+
+        "Aliteração, pela repetição intencional de fonemas consonantais semelhantes.",
+
+        "Onomatopeia, pela reprodução de sons existentes na realidade.",
+
+        "Paradoxo, pela aproximação de conceitos semanticamente incompatíveis."
+
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A repetição do fonema consonantal produz musicalidade e reforço sonoro.",
+
+    feedbackErro: "A questão exige observar o aspecto fonético da construção e não apenas seu significado.",
+
+    dicaBanca: "As bancas frequentemente exploram aliteração associada aos efeitos de ritmo e sonoridade."
+
+},
+{
+    pergunta: `Leia o trecho:
+
+"O relatório apresentava uma clareza obscura: quanto mais dados revelava, mais dúvidas parecia gerar."
+
+A expressão destacada exemplifica:`,
+
+    alternativas: [
+
+        "Antítese, pois aproxima ideias opostas em segmentos diferentes do texto.",
+
+        "Ironia, pois o sentido pretendido contradiz o sentido literal.",
+
+        "Paradoxo, pois reúne elementos aparentemente incompatíveis dentro da mesma construção.",
+
+        "Eufemismo, pois suaviza uma crítica ao relatório apresentado.",
+
+        "Hipérbole, pois exagera a quantidade de dúvidas produzidas."
+
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A expressão combina conceitos aparentemente contraditórios para produzir reflexão.",
+
+    feedbackErro: "A oposição não aparece apenas entre termos separados; ela é incorporada à própria ideia construída.",
+
+    dicaBanca: "Questões de figuras de linguagem frequentemente exigem diferenciar antítese e paradoxo."
+
+},
+{
+    pergunta: `Leia o trecho:
+
+"Os resultados falaram mais alto do que qualquer discurso apresentado durante a reunião."
+
+A figura predominante no emprego do verbo 'falaram' é:`,
+
+    alternativas: [
+
+        "Prosopopeia, pois atribui ação tipicamente humana a um elemento inanimado.",
+
+        "Metonímia, pois os resultados substituem os responsáveis pela pesquisa.",
+
+        "Hipérbole, pois exagera a importância dos resultados obtidos.",
+
+        "Catacrese, pois utiliza expressão cristalizada pelo uso frequente.",
+
+        "Antítese, pois contrapõe resultados e discursos."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. Os resultados recebem uma capacidade humana, sendo personificados pelo autor.",
+
+    feedbackErro: "O verbo não está sendo utilizado literalmente. O texto atribui ação humana a algo abstrato.",
+
+    dicaBanca: "As bancas costumam empregar prosopopeia em contextos argumentativos, atribuindo ações humanas a conceitos, dados ou instituições."
+
 }
+
 
 ];
