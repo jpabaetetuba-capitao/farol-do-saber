@@ -1,2658 +1,1127 @@
 const generos = [
 
 {
-    pergunta: `Leia o trecho:
+    texto: `À medida que o sol desaparecia atrás das montanhas, o céu assumia tons alaranjados e avermelhados. A brisa suave movimentava lentamente as folhas das árvores, enquanto o silêncio tomava conta da paisagem.`,
 
-"À medida que o sol desaparecia atrás das montanhas, o céu assumia tons alaranjados e avermelhados. A brisa suave movimentava lentamente as folhas das árvores, enquanto o silêncio tomava conta da paisagem."
-
-Considerando a tipologia textual predominante, assinale a alternativa correta.`,
+    pergunta: "Considerando a organização textual e os recursos linguísticos empregados, é correto afirmar que o trecho apresenta predominância:",
 
     alternativas: [
 
-        "Narrativa, pois apresenta personagens realizando ações sucessivas.",
+        "narrativa, pois os acontecimentos são organizados em sequência temporal envolvendo mudanças progressivas no cenário.",
 
-        "Dissertativa, pois expõe informações de maneira objetiva.",
+        "descritiva, pois o foco recai sobre a caracterização sensorial dos elementos que compõem a paisagem apresentada.",
 
-        "Descritiva, pois caracteriza elementos do ambiente e da paisagem.",
+        "argumentativa, pois o autor procura valorizar subjetivamente os aspectos observados no ambiente natural.",
 
-        "Injuntiva, pois orienta o leitor sobre procedimentos.",
+        "injuntiva, pois conduz o leitor à observação detalhada dos componentes da cena retratada.",
 
-        "Argumentativa, pois defende um ponto de vista sobre a natureza."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-Você identificou corretamente a tipologia descritiva.
-
-Nesse tipo textual, o objetivo principal é apresentar características de pessoas, objetos, ambientes, situações ou fenômenos.
-
-No trecho apresentado, o autor descreve:
-
-• O céu alaranjado e avermelhado;
-• A brisa movimentando as folhas;
-• O silêncio da paisagem.
-
-O foco não está em narrar acontecimentos, mas em construir uma imagem mental para o leitor.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Lembre-se:
-
-• Narração → conta fatos.
-• Descrição → caracteriza elementos.
-
-Em concursos, a presença de verbos não significa necessariamente que o texto seja narrativo.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Descritiva, pois caracteriza elementos do ambiente e da paisagem.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-Embora existam verbos como "desaparecia", "assumia" e "movimentava", a finalidade principal do trecho não é relatar uma sequência de acontecimentos.
-
-O autor procura retratar o cenário por meio de características visuais e sensoriais.
-
-Observe os elementos descritos:
-
-• Céu alaranjado e avermelhado;
-• Brisa suave;
-• Folhas das árvores;
-• Silêncio da paisagem.
-
-Essas informações ajudam o leitor a visualizar o ambiente.
-
-Por isso, a tipologia predominante é a DESCRIÇÃO.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Uma das pegadinhas mais comuns é inserir verbos de ação em textos descritivos para induzir o candidato a marcar "narração".
-
-O que define a tipologia é a finalidade predominante do texto.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-"O texto está contando uma história ou caracterizando algo?"
-
-Se a intenção principal for apresentar características, a resposta tende a ser DESCRIÇÃO.
-
-`,
-
-    dicaBanca: `
-
-Analise sempre a finalidade predominante do texto.
-
-A presença de ações não transforma automaticamente um texto descritivo em narrativo.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"O consumo excessivo de plástico tem provocado impactos ambientais significativos. Estudos apontam que milhões de toneladas desse material chegam aos oceanos todos os anos, afetando ecossistemas marinhos e diversas espécies animais."
-
-Considerando a tipologia textual predominante, assinale a alternativa correta.`,
-
-    alternativas: [
-
-        "Narrativa, pois relata acontecimentos em sequência temporal.",
-
-        "Dissertativa argumentativa, pois busca convencer o leitor por meio da defesa de uma opinião.",
-
-        "Descritiva, pois caracteriza detalhadamente o ambiente marinho.",
-
-        "Dissertativa expositiva, pois apresenta informações e dados sobre determinado tema.",
-
-        "Injuntiva, pois orienta o leitor sobre como reduzir o uso de plástico."
-
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-O trecho apresenta informações objetivas sobre os impactos do plástico no meio ambiente.
-
-O autor expõe dados e fatos sem defender explicitamente uma tese ou tentar convencer o leitor.
-
-Por isso, a tipologia predominante é a DISSERTAÇÃO EXPOSITIVA.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Na dissertação expositiva:
-
-• O objetivo é informar.
-• Predominam dados e explicações.
-• Não há defesa explícita de opinião.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Dissertativa expositiva.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O texto apresenta informações sobre um problema ambiental e menciona estudos que comprovam os impactos do plástico nos oceanos.
-
-Em nenhum momento o autor apresenta uma opinião pessoal ou tenta convencer o leitor a adotar determinado posicionamento.
-
-Seu objetivo é apenas informar e explicar.
-
-Essa é a principal característica da dissertação expositiva.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Muitos candidatos confundem temas polêmicos com textos argumentativos.
-
-Nem todo texto sobre meio ambiente, política ou educação é argumentativo.
-
-O que determina a argumentação é a defesa explícita de uma tese.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-"O autor está apenas explicando ou está tentando convencer?"
-
-• Explicar → Expositiva.
-• Convencer → Argumentativa.
-
-`,
-
-    dicaBanca: `
-
-A presença de dados estatísticos não transforma automaticamente um texto em argumentativo.
-
-Verifique sempre se existe defesa explícita de uma tese.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"A ampliação do acesso à internet contribuiu significativamente para a democratização da informação. Entretanto, é necessário que os usuários desenvolvam senso crítico para avaliar a confiabilidade das fontes consultadas, evitando a disseminação de notícias falsas."
-
-A tipologia textual predominante nesse trecho é:`,
-
-    alternativas: [
-
-        "Narrativa, pois relata fatos ocorridos em sequência cronológica.",
-
-        "Dissertativa argumentativa, pois apresenta um posicionamento e defende uma ideia.",
-
-        "Descritiva, pois caracteriza o comportamento dos usuários da internet.",
-
-        "Injuntiva, pois apresenta instruções detalhadas ao leitor.",
-
-        "Dialogal, pois reproduz uma interação comunicativa."
+        "expositiva, pois apresenta informações objetivas acerca de fenômenos naturais observáveis."
 
     ],
 
     correta: 1,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. O trecho concentra-se na caracterização do ambiente por meio de imagens visuais e sensoriais, característica típica da descrição.",
 
-🎉 Excelente!
+    feedbackErro: "Embora existam verbos indicando movimento ou transformação, o foco principal não está na sucessão de acontecimentos, mas na construção detalhada da paisagem.",
 
-━━━━━━━━━━━━━━━━━━
+    dicaBanca: "Em questões sobre tipologia textual, observe qual elemento recebe maior destaque: ações (narração), características (descrição), ideias defendidas (argumentação) ou orientações (injunção)."
 
-📖 Revisão rápida
-
-O texto apresenta uma ideia inicial e, em seguida, desenvolve uma reflexão sobre a necessidade do senso crítico no uso da internet.
-
-Há uma tomada de posição implícita: o autor considera importante que os usuários avaliem a confiabilidade das informações consumidas.
-
-Por isso, a tipologia predominante é a dissertação argumentativa.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-A argumentação não exige necessariamente expressões como "eu acho" ou "na minha opinião".
-
-Muitas vezes, a defesa de uma tese ocorre de forma objetiva e impessoal.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Dissertativa argumentativa.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O texto não se limita a informar um fato.
-
-Inicialmente, apresenta uma constatação sobre o acesso à internet.
-
-Em seguida, desenvolve uma ideia que busca convencer o leitor sobre a importância do senso crítico diante das informações disponíveis.
-
-Há, portanto, uma defesa de posicionamento.
-
-Essa característica distingue a dissertação argumentativa da dissertação expositiva.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Uma pegadinha frequente consiste em apresentar textos objetivos e impessoais que, mesmo sem marcas explícitas de opinião, defendem uma tese.
-
-Nesses casos, muitos candidatos confundem argumentação com exposição.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Procure identificar:
-
-• Existe apenas explicação de um tema?
-
-ou
-
-• Existe uma ideia que o autor pretende sustentar?
-
-Se houver defesa de posicionamento, a tendência é ser argumentação.
-
-`,
-
-    dicaBanca: `
-
-A dissertação argumentativa pode apresentar linguagem impessoal.
-
-O elemento decisivo é a existência de uma tese defendida pelo autor.
-
-`
 },
 {
-    pergunta: `Leia o trecho:
+    texto: `O consumo excessivo de plástico tem provocado impactos ambientais significativos. Estudos apontam que milhões de toneladas desse material chegam aos oceanos todos os anos, afetando ecossistemas marinhos e diversas espécies animais.`,
 
-"Para realizar a atualização do sistema, acesse o menu Configurações, selecione a opção 'Atualizações' e clique em 'Verificar agora'. Aguarde a conclusão do processo antes de reiniciar o equipamento."
-
-A tipologia textual predominante nesse trecho é:`,
+    pergunta: "A finalidade predominante do trecho permite classificá-lo como um texto:",
 
     alternativas: [
 
-        "Narrativa, pois relata uma sequência de acontecimentos.",
+        "argumentativo, por defender explicitamente medidas de combate à poluição causada por resíduos plásticos.",
 
-        "Dissertativa expositiva, pois apresenta informações sobre tecnologia.",
+        "injuntivo, por orientar o leitor quanto às formas adequadas de descarte de materiais recicláveis.",
 
-        "Descritiva, pois caracteriza as funções do sistema.",
+        "descritivo, por caracterizar detalhadamente os danos ambientais produzidos pelo plástico.",
 
-        "Injuntiva, pois orienta o leitor por meio de instruções e procedimentos.",
+        "expositivo, por apresentar informações e dados com finalidade prioritariamente informativa.",
 
-        "Argumentativa, pois procura convencer o leitor a atualizar o sistema."
+        "narrativo, por relatar acontecimentos relacionados ao descarte de resíduos em diferentes contextos."
 
     ],
 
     correta: 3,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. O texto apresenta informações e dados sobre determinado tema sem buscar convencer diretamente o leitor ou orientá-lo quanto a procedimentos específicos.",
 
-🎉 Excelente!
+    feedbackErro: "A presença de informações sobre um problema ambiental não torna o texto automaticamente argumentativo. É necessário identificar a finalidade predominante da comunicação.",
 
-━━━━━━━━━━━━━━━━━━
+    dicaBanca: "Nem todo texto que trata de um problema social é argumentativo. Verifique se há defesa explícita de uma tese ou apenas apresentação de informações."
 
-📖 Revisão rápida
-
-Você identificou corretamente a tipologia injuntiva.
-
-A função principal desse tipo textual é orientar, instruir ou indicar procedimentos que devem ser executados pelo leitor.
-
-No trecho apresentado, observam-se comandos como:
-
-• acesse;
-• selecione;
-• clique;
-• aguarde.
-
-Esses verbos direcionam o comportamento do destinatário.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Sempre que o texto ensinar, orientar ou explicar um procedimento, há forte indício de tipologia injuntiva.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Injuntiva, pois orienta o leitor por meio de instruções e procedimentos.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O texto apresenta uma sequência de comandos destinados a orientar o usuário na realização de uma tarefa.
-
-Seu objetivo principal não é informar sobre o funcionamento do sistema nem defender uma opinião.
-
-A finalidade predominante é instruir o leitor sobre como executar determinado procedimento.
-
-Essa é a principal característica da tipologia injuntiva.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Uma pegadinha comum consiste em associar textos tecnológicos à dissertação expositiva.
-
-Embora o tema seja tecnologia, o que determina a tipologia é a finalidade do texto.
-
-Neste caso, o objetivo é ensinar uma ação passo a passo.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-"O texto quer informar ou orientar?"
-
-Se a resposta for orientar, ensinar, instruir ou indicar procedimentos, a tipologia tende a ser INJUNTIVA.
-
-`,
-
-    dicaBanca: `
-
-Receitas, manuais, tutoriais, regulamentos e instruções geralmente apresentam predominância da tipologia injuntiva.
-
-`
 },
 {
-    pergunta: `Leia o trecho:
+    texto: `A ampliação do acesso à internet contribuiu significativamente para a democratização da informação. Entretanto, é necessário que os usuários desenvolvam senso crítico para avaliar a confiabilidade das fontes consultadas, evitando a disseminação de notícias falsas.`,
 
-"Pedro saiu de casa ainda cedo. As ruas estreitas estavam silenciosas, e as fachadas antigas exibiam marcas do tempo. Enquanto caminhava em direção ao trabalho, observava as janelas coloridas que contrastavam com o céu cinzento daquela manhã."
-
-Considerando a tipologia textual predominante, assinale a alternativa correta.`,
+    pergunta: "A predominância argumentativa do texto decorre principalmente do fato de que:",
 
     alternativas: [
 
-        "Narrativa, pois apresenta uma sequência de ações praticadas por um personagem.",
+        "o autor apresenta informações sobre a internet e utiliza essas informações para sustentar uma conclusão defendida ao final do texto.",
 
-        "Descritiva, pois o texto se limita à caracterização do ambiente.",
+        "o texto descreve os principais comportamentos observados entre usuários de ambientes digitais.",
 
-        "Dissertativa expositiva, pois informa características de uma cidade.",
+        "a organização textual concentra-se na caracterização das notícias falsas e de seus impactos sociais.",
 
-        "Injuntiva, pois orienta o leitor sobre um percurso urbano.",
+        "o autor relata acontecimentos históricos relacionados à evolução da comunicação digital.",
 
-        "Dialogal, pois reproduz uma interação entre personagens."
+        "a exposição de conceitos técnicos substitui a necessidade de manifestação de posicionamento."
 
     ],
 
     correta: 0,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. O autor apresenta uma ideia inicial e a utiliza para sustentar a necessidade do desenvolvimento do senso crítico.",
 
-🎉 Excelente!
+    feedbackErro: "A característica central da argumentação é a defesa de uma ideia ou posicionamento sustentado por justificativas.",
 
-━━━━━━━━━━━━━━━━━━
+    dicaBanca: "Sempre procure identificar se o autor pretende apenas informar ou se busca conduzir o leitor a determinada conclusão."
 
-📖 Revisão rápida
-
-O texto apresenta elementos descritivos importantes, mas a finalidade predominante é narrar uma ação.
-
-Observe a sequência:
-
-• Pedro saiu de casa;
-• caminhava em direção ao trabalho;
-• observava as janelas.
-
-Há um personagem praticando ações ao longo do tempo.
-
-Por isso, a tipologia predominante é a NARRAÇÃO.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Em textos narrativos, descrições frequentemente aparecem para enriquecer a história.
-
-O importante é identificar qual finalidade predomina.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Narrativa, pois apresenta uma sequência de ações praticadas por um personagem.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O texto mistura narração e descrição.
-
-As descrições aparecem em trechos como:
-
-• "ruas estreitas estavam silenciosas";
-• "fachadas antigas exibiam marcas do tempo";
-• "janelas coloridas".
-
-Entretanto, o foco principal está no personagem Pedro e nas ações que ele realiza.
-
-Existe progressão temporal:
-
-• saiu de casa;
-• caminhava;
-• observava.
-
-Esses elementos caracterizam a tipologia narrativa.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Esta é uma das pegadinhas mais frequentes em concursos.
-
-A banca insere diversas descrições dentro de uma narrativa para induzir o candidato a marcar "descrição".
-
-Lembre-se: a presença de descrição não elimina a predominância narrativa.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-"O texto está contando algo que acontece com alguém?"
-
-Se houver personagem, ações e progressão temporal, geralmente a tipologia predominante será a NARRAÇÃO.
-
-`,
-
-    dicaBanca: `
-
-Nem todo texto com muitas características e detalhes é descritivo.
-
-Verifique sempre se existe uma sequência de acontecimentos envolvendo personagens.
-
-`
 },
 {
-    pergunta: `Leia o trecho:
+    texto: `Para realizar a atualização do sistema, acesse o menu Configurações, selecione a opção 'Atualizações' e clique em 'Verificar agora'. Aguarde a conclusão do processo antes de reiniciar o equipamento.`,
 
-— Você já concluiu o relatório solicitado pela coordenação?
+    pergunta: "O texto apresentado exemplifica predominantemente a tipologia:",
+
+    alternativas: [
+
+        "argumentativa, por demonstrar as vantagens de manter sistemas atualizados.",
+
+        "expositiva, por explicar o funcionamento interno do software utilizado.",
+
+        "descritiva, por caracterizar os recursos disponíveis no equipamento.",
+
+        "narrativa, por relatar as etapas normalmente observadas durante atualizações de sistema.",
+
+        "injuntiva, por apresentar orientações organizadas para a execução de uma tarefa."
+
+    ],
+
+    correta: 4,
+
+    feedbackAcerto: "Correto. O texto orienta o leitor quanto aos procedimentos necessários para realizar determinada ação.",
+
+    feedbackErro: "A presença de verbos no imperativo e de instruções sequenciais constitui forte indício da tipologia injuntiva.",
+
+    dicaBanca: "Receitas, manuais, tutoriais e instruções geralmente apresentam predominância injuntiva."
+
+},
+{
+    texto: `Pedro saiu de casa ainda cedo. As ruas estreitas estavam silenciosas, e as fachadas antigas exibiam marcas do tempo. Enquanto caminhava em direção ao trabalho, observava as janelas coloridas que contrastavam com o céu cinzento daquela manhã.`,
+
+    pergunta: "Embora apresente elementos descritivos, o texto é predominantemente narrativo porque:",
+
+    alternativas: [
+
+        "os aspectos visuais do ambiente recebem destaque superior às ações realizadas pelo personagem.",
+
+        "a caracterização do cenário constitui a finalidade principal da construção textual.",
+
+        "a sequência textual organiza-se em torno das ações praticadas por um personagem em determinado contexto temporal.",
+
+        "os elementos descritivos impedem a classificação do texto como predominantemente descritivo.",
+
+        "a ambientação apresentada substitui a necessidade de desenvolvimento de acontecimentos."
+
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. Apesar da presença de descrições, a progressão do texto ocorre por meio das ações realizadas pelo personagem.",
+
+    feedbackErro: "Em textos mistos, a predominância é definida pelo elemento que conduz o desenvolvimento da sequência textual.",
+
+    dicaBanca: "FGV e CEBRASPE gostam de misturar narração e descrição. Identifique qual delas conduz a progressão do texto."
+
+},
+
+{
+    texto: `— Você já concluiu o relatório solicitado pela coordenação?
 
 — Ainda não. Pretendo finalizá-lo até o final da tarde.
 
-— Ótimo. Precisamos enviá-lo amanhã pela manhã.
+— Ótimo. Precisamos enviá-lo amanhã pela manhã.`,
 
-A tipologia textual predominante no trecho é:`,
+    pergunta: "Considerando a estrutura e a finalidade comunicativa do trecho, é correto afirmar que há predominância da tipologia:",
 
     alternativas: [
 
-        "Narrativa, pois apresenta personagens realizando ações sucessivas.",
+        "dialogal, pois a construção do sentido ocorre por meio da interação entre interlocutores.",
 
-        "Descritiva, pois caracteriza os participantes da conversa.",
+        "argumentativa, pois os participantes procuram convencer um ao outro acerca da importância do relatório.",
 
-        "Dialogal, pois se estrutura por meio da interação verbal entre interlocutores.",
+        "descritiva, pois o texto caracteriza detalhadamente o ambiente de trabalho em que ocorre a conversa.",
 
-        "Dissertativa argumentativa, pois defende um posicionamento sobre prazos.",
+        "injuntiva, pois apresenta instruções relacionadas à elaboração de documentos institucionais.",
 
-        "Injuntiva, pois apresenta orientações para elaboração de relatórios."
+        "narrativa, pois relata acontecimentos organizados em sequência temporal completa."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. O texto estrutura-se a partir da troca de falas entre interlocutores, característica típica da tipologia dialogal.",
+
+    feedbackErro: "Embora haja informações sobre uma tarefa profissional, o elemento predominante é a interação verbal entre os participantes.",
+
+    dicaBanca: "Ao analisar diálogos, observe se a construção do texto depende essencialmente da alternância de falas entre interlocutores."
+
+},
+{
+    texto: `Nos últimos anos, o uso de bicicletas como meio de transporte aumentou significativamente nas grandes cidades. Além de contribuir para a redução dos congestionamentos, essa prática favorece a diminuição da emissão de poluentes. Por isso, é fundamental que o poder público amplie os investimentos em ciclovias e infraestrutura adequada.`,
+
+    pergunta: "A tipologia predominante do texto pode ser identificada porque o autor:",
+
+    alternativas: [
+
+        "relata mudanças observadas na mobilidade urbana sem defender qualquer posicionamento sobre o tema.",
+
+        "utiliza informações sobre os benefícios da bicicleta para sustentar uma proposta apresentada ao final.",
+
+        "descreve detalhadamente os impactos ambientais produzidos pelos meios de transporte urbanos.",
+
+        "instrui os leitores quanto aos procedimentos necessários para utilizar bicicletas com segurança.",
+
+        "expõe dados estatísticos cuja finalidade limita-se à divulgação de informações públicas."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. Os argumentos apresentados servem de fundamento para a defesa de investimentos em infraestrutura cicloviária.",
+
+    feedbackErro: "A argumentação ocorre quando informações ou fatos são utilizados para sustentar uma conclusão ou posicionamento.",
+
+    dicaBanca: "Identifique sempre se existe uma tese sendo defendida pelo autor e quais argumentos sustentam essa tese."
+
+},
+{
+    texto: `Antes de utilizar o equipamento, verifique se o cabo de alimentação está corretamente conectado. Essa medida reduz o risco de falhas durante o funcionamento e contribui para a segurança do operador. Em seguida, pressione o botão de inicialização e aguarde o carregamento completo do sistema.`,
+
+    pergunta: "Mesmo contendo uma explicação complementar, o texto permanece predominantemente injuntivo porque:",
+
+    alternativas: [
+
+        "as informações explicativas possuem função secundária em relação às instruções dirigidas ao leitor.",
+
+        "a justificativa apresentada possui caráter argumentativo superior às orientações fornecidas.",
+
+        "a descrição do equipamento recebe maior destaque que os procedimentos recomendados.",
+
+        "o objetivo principal consiste em convencer o leitor sobre a qualidade do equipamento.",
+
+        "a sequência de ações mencionadas possui finalidade exclusivamente informativa."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. As explicações apenas reforçam as orientações, que continuam sendo o foco principal do texto.",
+
+    feedbackErro: "A presença de justificativas não altera a tipologia predominante quando a finalidade principal continua sendo orientar procedimentos.",
+
+    dicaBanca: "Muitos textos apresentam tipologias secundárias. O importante é identificar qual delas conduz a finalidade principal."
+
+},
+{
+    texto: `Quando Ana chegou à antiga biblioteca, percebeu imediatamente o aroma característico dos livros envelhecidos. As estantes de madeira escura ocupavam quase toda a extensão das paredes, enquanto luminárias amareladas projetavam uma luz suave sobre as mesas de leitura. Após alguns instantes de observação, ela dirigiu-se ao setor de pesquisas.`,
+
+    pergunta: "A predominância descritiva do trecho decorre principalmente do fato de que:",
+
+    alternativas: [
+
+        "a sequência de ações realizadas pela personagem constitui o eixo central da construção textual.",
+
+        "os elementos sensoriais e visuais do ambiente recebem maior destaque que os acontecimentos narrados.",
+
+        "a movimentação da personagem organiza integralmente a progressão dos fatos apresentados.",
+
+        "a presença de verbos de ação impede a classificação do texto como predominantemente descritivo.",
+
+        "a caracterização do cenário desempenha papel secundário em relação ao deslocamento da personagem."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. O foco principal está na caracterização do ambiente por meio de impressões visuais e sensoriais.",
+
+    feedbackErro: "A personagem realiza ações, mas elas servem principalmente como suporte para a descrição do espaço apresentado.",
+
+    dicaBanca: "Em textos mistos, observe qual elemento ocupa maior espaço e recebe maior detalhamento."
+
+},
+{
+    texto: `A expansão das tecnologias digitais transformou profundamente as formas de comunicação na sociedade contemporânea. Atualmente, pessoas de diferentes regiões podem interagir em tempo real por meio de diversas plataformas. Diante desse cenário, torna-se indispensável investir em educação digital para que os cidadãos utilizem essas ferramentas de maneira crítica e responsável.`,
+
+    pergunta: "A tese defendida pelo autor pode ser sintetizada adequadamente pela seguinte afirmação:",
+
+    alternativas: [
+
+        "As tecnologias digitais eliminaram a necessidade de formação educacional voltada para a comunicação.",
+
+        "A ampliação das interações digitais exige ações educativas que favoreçam o uso consciente dessas ferramentas.",
+
+        "O acesso às plataformas digitais garante automaticamente a formação de cidadãos críticos.",
+
+        "Os meios digitais apresentam vantagens limitadas quando comparados às formas tradicionais de comunicação.",
+
+        "A educação digital possui importância secundária diante do avanço das tecnologias de informação."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. O texto reconhece os benefícios das tecnologias digitais, mas enfatiza a necessidade de educação para seu uso responsável.",
+
+    feedbackErro: "A conclusão defendida pelo autor relaciona o avanço tecnológico à formação crítica dos usuários.",
+
+    dicaBanca: "Ao buscar a tese de um texto argumentativo, identifique a ideia que o autor pretende que o leitor aceite ao final da leitura."
+
+},
+{
+    texto: `Um jornal publicou um texto sem assinatura no qual analisava os impactos de uma nova política pública para a educação. Ao longo do texto, eram apresentados argumentos favoráveis e críticas à implementação das medidas anunciadas, refletindo o posicionamento institucional do veículo de comunicação.`,
+
+    pergunta: "Considerando as características dos gêneros textuais, o texto descrito aproxima-se principalmente do gênero:",
+
+    alternativas: [
+
+        "artigo de opinião, por apresentar análise argumentativa elaborada por colaborador especializado.",
+
+        "editorial, por expressar o posicionamento institucional do veículo acerca de tema de interesse público.",
+
+        "reportagem, por aprofundar o assunto mediante a apresentação de múltiplas perspectivas.",
+
+        "notícia, por relatar fatos recentes de forma objetiva e impessoal.",
+
+        "resenha crítica, por avaliar uma política pública com base em critérios técnicos previamente definidos."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. O editorial expressa a posição institucional do veículo de comunicação e normalmente não é assinado.",
+
+    feedbackErro: "A principal característica do editorial é representar o posicionamento do próprio jornal, e não a opinião individual de um autor.",
+
+    dicaBanca: "FGV, CEBRASPE e Ágata costumam diferenciar editorial e artigo de opinião. Observe sempre quem fala no texto: o veículo ou um autor específico."
+
+},
+{
+    texto: `Uma revista publicou um texto assinado por um especialista em educação. No material, o autor apresentou argumentos, exemplos e interpretações para defender mudanças na formação de professores da educação básica.`,
+
+    pergunta: "A situação comunicativa descrita corresponde predominantemente ao gênero:",
+
+    alternativas: [
+
+        "editorial, por representar oficialmente a posição institucional da revista sobre o tema discutido.",
+
+        "notícia, por informar acontecimentos recentes relacionados à educação nacional.",
+
+        "artigo de opinião, por apresentar posicionamento pessoal sustentado por argumentos e exemplos.",
+
+        "reportagem, por reunir diferentes fontes e perspectivas sobre determinado assunto.",
+
+        "crônica, por abordar tema cotidiano mediante linguagem predominantemente literária."
 
     ],
 
     correta: 2,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. O artigo de opinião caracteriza-se pela defesa de uma tese ou posicionamento pessoal sustentado por argumentos.",
 
-🎉 Excelente!
+    feedbackErro: "A assinatura do autor e a defesa explícita de uma opinião são elementos fundamentais para identificar o artigo de opinião.",
 
-━━━━━━━━━━━━━━━━━━
+    dicaBanca: "Em provas de gêneros textuais, a autoria costuma ser um elemento decisivo para diferenciar editorial e artigo de opinião."
 
-📖 Revisão rápida
-
-Você identificou corretamente a tipologia dialogal.
-
-Nesse tipo textual, a construção ocorre por meio da troca de falas entre interlocutores.
-
-Observe que o texto é formado por perguntas e respostas, evidenciando uma interação comunicativa direta.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-A tipologia dialogal aparece frequentemente em:
-
-• Conversas;
-• Entrevistas;
-• Chats;
-• Debates;
-• Peças teatrais.
-
-Sempre que houver alternância de vozes, desconfie da tipologia dialogal.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Dialogal, pois se estrutura por meio da interação verbal entre interlocutores.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O elemento central do texto é a troca de falas entre dois participantes.
-
-Embora exista uma pequena informação sobre um relatório, o objetivo principal não é narrar fatos, argumentar ou instruir.
-
-A estrutura do trecho é construída pela interação direta entre os interlocutores.
-
-Essa característica define a tipologia dialogal.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Uma pegadinha comum consiste em apresentar diálogos contendo informações narrativas e induzir o candidato a marcar "narração".
-
-Contudo, a simples presença de informações ou acontecimentos não altera a predominância dialogal quando o texto é estruturado pela conversa.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-"O texto é construído principalmente por falas alternadas entre participantes?"
-
-Se a resposta for sim, a tendência é que a tipologia predominante seja DIALOGAL.
-
-`,
-
-    dicaBanca: `
-
-Não confunda diálogo com narração.
-
-A narração conta acontecimentos; a tipologia dialogal organiza o texto por meio da interação entre interlocutores.
-
-`
 },
 {
-    pergunta: `Leia o trecho:
+    texto: `Uma publicação apresenta informações sobre a inauguração de uma escola, respondendo objetivamente a perguntas como: o que aconteceu, onde ocorreu, quando ocorreu e quem participou do evento. O texto não apresenta análises aprofundadas nem opiniões do autor.`,
 
-"Nos últimos anos, o uso de bicicletas como meio de transporte aumentou significativamente nas grandes cidades. Além de contribuir para a redução dos congestionamentos, essa prática favorece a diminuição da emissão de poluentes. Por isso, é fundamental que o poder público amplie os investimentos em ciclovias e infraestrutura adequada."
-
-Considerando a tipologia textual predominante, assinale a alternativa correta.`,
+    pergunta: "A organização das informações permite classificar o texto como:",
 
     alternativas: [
 
-        "Dissertativa expositiva, pois apenas apresenta informações sobre mobilidade urbana.",
+        "reportagem, pois desenvolve o tema de forma aprofundada com múltiplas fontes e contextualização ampla.",
 
-        "Narrativa, pois relata acontecimentos ocorridos nos últimos anos.",
+        "artigo de opinião, pois apresenta interpretação crítica acerca do fato relatado.",
 
-        "Dissertativa argumentativa, pois apresenta informações para defender uma tese.",
+        "editorial, pois manifesta o posicionamento institucional do veículo responsável pela publicação.",
 
-        "Descritiva, pois caracteriza o sistema de transporte urbano.",
+        "notícia, pois prioriza a divulgação objetiva de um acontecimento recente de interesse público.",
 
-        "Injuntiva, pois orienta o leitor a utilizar bicicletas."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-O texto apresenta informações sobre o aumento do uso de bicicletas, mas não se limita à exposição de dados.
-
-O autor utiliza essas informações para sustentar uma ideia:
-
-• É fundamental ampliar os investimentos em ciclovias.
-
-Há, portanto, uma tese sendo defendida.
-
-Por isso, a tipologia predominante é a DISSERTAÇÃO ARGUMENTATIVA.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Muitos textos argumentativos começam apresentando fatos ou dados.
-
-O importante é identificar se essas informações servem para defender um posicionamento.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Dissertativa argumentativa.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O texto possui características expositivas ao apresentar informações sobre o crescimento do uso de bicicletas.
-
-Entretanto, essas informações funcionam como argumentos para sustentar uma conclusão:
-
-"é fundamental que o poder público amplie os investimentos em ciclovias".
-
-Essa defesa de uma ideia caracteriza a dissertação argumentativa.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Essa é uma das pegadinhas mais comuns em concursos.
-
-A banca apresenta um texto cheio de informações e dados para induzir o candidato a marcar "dissertação expositiva".
-
-Contudo, quando existe uma tese ou proposta defendida pelo autor, a tipologia predominante passa a ser argumentativa.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Procure a seguinte pergunta:
-
-"O autor está apenas informando ou está tentando convencer?"
-
-Se estiver defendendo uma ideia, mesmo de forma sutil, a tendência é ser ARGUMENTAÇÃO.
-
-`,
-
-    dicaBanca: `
-
-Informação + defesa de posicionamento = forte indício de dissertação argumentativa.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Antes de utilizar o equipamento, verifique se o cabo de alimentação está corretamente conectado. Essa medida reduz o risco de falhas durante o funcionamento e contribui para a segurança do operador. Em seguida, pressione o botão de inicialização e aguarde o carregamento completo do sistema."
-
-Considerando a tipologia textual predominante, assinale a alternativa correta.`,
-
-    alternativas: [
-
-        "Dissertativa expositiva, pois explica os benefícios do procedimento.",
-
-        "Narrativa, pois apresenta uma sequência cronológica de acontecimentos.",
-
-        "Descritiva, pois caracteriza o funcionamento do equipamento.",
-
-        "Injuntiva, pois orienta o leitor por meio de instruções, ainda que apresente explicações complementares.",
-
-        "Argumentativa, pois busca convencer o leitor sobre a importância da segurança."
+        "resenha, pois avalia criticamente os resultados produzidos pelo evento mencionado."
 
     ],
 
     correta: 3,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. A notícia tem como principal finalidade informar fatos recentes de forma objetiva e direta.",
 
-🎉 Excelente!
+    feedbackErro: "A ausência de análises aprofundadas, opiniões e avaliações indica predominância informativa típica da notícia.",
 
-━━━━━━━━━━━━━━━━━━
+    dicaBanca: "A notícia costuma responder às perguntas básicas do fato: o quê, quem, quando, onde e, em alguns casos, por quê."
 
-📖 Revisão rápida
-
-O texto apresenta algumas explicações sobre segurança e funcionamento.
-
-Entretanto, sua finalidade principal é orientar o leitor sobre os procedimentos que devem ser realizados.
-
-Observe os comandos:
-
-• verifique;
-• pressione;
-• aguarde.
-
-Esses verbos indicam claramente uma sequência de instruções.
-
-Por isso, a tipologia predominante é a INJUNTIVA.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Textos injuntivos frequentemente contêm explicações complementares.
-
-O importante é identificar a finalidade principal do texto.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Injuntiva, pois orienta o leitor por meio de instruções, ainda que apresente explicações complementares.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O texto mistura duas características:
-
-• Orientações práticas ao leitor;
-• Informações explicativas sobre segurança.
-
-No entanto, as explicações servem apenas para justificar os procedimentos recomendados.
-
-A finalidade predominante continua sendo instruir o destinatário sobre como utilizar corretamente o equipamento.
-
-Por esse motivo, a tipologia predominante é a injuntiva.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Uma das armadilhas mais frequentes é apresentar textos injuntivos acompanhados de explicações.
-
-Nesses casos, muitos candidatos marcam "dissertativa expositiva".
-
-Lembre-se: o que define a tipologia é a finalidade predominante.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-"O texto quer ensinar o leitor a realizar alguma ação?"
-
-Se a resposta for sim, mesmo que existam explicações complementares, a tendência é que a tipologia predominante seja INJUNTIVA.
-
-`,
-
-    dicaBanca: `
-
-Em manuais, regulamentos, tutoriais e editais, a presença de explicações não elimina a predominância da tipologia injuntiva.
-
-`
 },
 {
-    pergunta: `Leia o trecho:
+    texto: `Um portal de comunicação publica um texto extenso sobre evasão escolar. Além de apresentar dados estatísticos, o material reúne entrevistas com especialistas, relatos de estudantes e análises sobre as possíveis causas do problema.`,
 
-"Quando Ana chegou à antiga biblioteca, percebeu imediatamente o aroma característico dos livros envelhecidos. As estantes de madeira escura ocupavam quase toda a extensão das paredes, enquanto luminárias amareladas projetavam uma luz suave sobre as mesas de leitura. Após alguns instantes de observação, ela dirigiu-se ao setor de pesquisas."
-
-Considerando a tipologia textual predominante, assinale a alternativa correta.`,
+    pergunta: "A descrição apresentada corresponde mais adequadamente ao gênero:",
 
     alternativas: [
 
-        "Narrativa, pois apresenta ações praticadas por uma personagem em determinada sequência temporal.",
+        "reportagem, por aprofundar o tema mediante diferentes fontes, análises e contextualizações.",
 
-        "Descritiva, pois caracteriza detalhadamente o ambiente da biblioteca.",
+        "notícia, por limitar-se à divulgação objetiva de um acontecimento recente.",
 
-        "Dissertativa expositiva, pois informa características de espaços culturais.",
+        "editorial, por representar o posicionamento institucional do veículo de comunicação.",
 
-        "Dialogal, pois evidencia interação entre interlocutores.",
+        "artigo de opinião, por defender exclusivamente a visão pessoal do autor sobre o problema.",
 
-        "Injuntiva, pois orienta o leitor sobre a utilização da biblioteca."
+        "resenha crítica, por avaliar formalmente estudos relacionados ao tema abordado."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A reportagem caracteriza-se pelo aprofundamento das informações e pela utilização de múltiplas fontes.",
+
+    feedbackErro: "Ao contrário da notícia, a reportagem busca contextualizar, investigar e ampliar a compreensão do tema tratado.",
+
+    dicaBanca: "Uma das diferenças mais cobradas entre notícia e reportagem é o grau de aprofundamento das informações."
+
+},
+{
+    texto: `Uma empresa divulga uma peça textual com linguagem persuasiva, destacando qualidades de determinado produto e incentivando o público a adquiri-lo. O texto utiliza slogans, imagens atrativas e argumentos voltados ao convencimento do consumidor.`,
+
+    pergunta: "A finalidade comunicativa predominante permite identificar o gênero como:",
+
+    alternativas: [
+
+        "propaganda publicitária, por buscar influenciar comportamentos e estimular o consumo de determinado produto.",
+
+        "notícia comercial, por divulgar objetivamente informações relacionadas ao mercado consumidor.",
+
+        "editorial institucional, por expressar o posicionamento oficial da empresa acerca de seus produtos.",
+
+        "artigo promocional, por apresentar análise crítica sobre a qualidade dos itens anunciados.",
+
+        "reportagem mercadológica, por investigar as características do produto sob diferentes perspectivas."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A propaganda tem como principal objetivo persuadir o público a adotar determinado comportamento ou consumir um produto.",
+
+    feedbackErro: "A presença de estratégias de convencimento e valorização do produto indica claramente a função persuasiva típica da propaganda.",
+
+    dicaBanca: "Sempre observe a finalidade do texto. Quando o objetivo é convencer ou influenciar o comportamento do leitor, geralmente há predominância da função persuasiva."
+
+},
+{
+    texto: `Um estudante envia uma mensagem eletrônica ao professor solicitando esclarecimentos sobre o prazo de entrega de um trabalho acadêmico. O texto apresenta saudação inicial, desenvolvimento objetivo da solicitação e despedida ao final.`,
+
+    pergunta: "Considerando a situação comunicativa descrita, o gênero textual predominante é:",
+
+    alternativas: [
+
+        "e-mail, por possibilitar comunicação escrita estruturada entre remetente e destinatário em ambiente digital.",
+
+        "memorando, por destinar-se exclusivamente à circulação de informações em instituições formais.",
+
+        "ofício, por exigir linguagem oficial e seguir protocolos administrativos específicos.",
+
+        "artigo de opinião, por apresentar manifestação pessoal sobre tema de interesse acadêmico.",
+
+        "relatório, por registrar formalmente informações relacionadas a determinada atividade."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A estrutura apresentada corresponde às características mais comuns do gênero e-mail em contextos acadêmicos e profissionais.",
+
+    feedbackErro: "A presença de remetente, destinatário, saudação, desenvolvimento e despedida indica comunicação eletrônica típica do gênero e-mail.",
+
+    dicaBanca: "Em questões sobre gêneros, analise sempre a finalidade comunicativa, o suporte utilizado e a relação entre os interlocutores."
+
+},
+{
+    texto: `Uma publicação apresenta a avaliação de uma obra literária recém-lançada. O autor resume aspectos da narrativa, comenta características da escrita e emite julgamentos sobre a qualidade da obra, indicando pontos positivos e limitações.`,
+
+    pergunta: "A descrição apresentada permite identificar predominantemente o gênero:",
+
+    alternativas: [
+
+        "resenha crítica, por combinar síntese de informações e apreciação avaliativa da obra analisada.",
+
+        "artigo científico, por apresentar resultados de investigação sobre aspectos literários específicos.",
+
+        "editorial, por expressar o posicionamento institucional do veículo responsável pela publicação.",
+
+        "reportagem cultural, por reunir diferentes opiniões acerca do lançamento de determinada obra.",
+
+        "notícia, por informar objetivamente fatos relacionados ao mercado editorial."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A resenha crítica reúne descrição, síntese e avaliação de uma obra ou produto cultural.",
+
+    feedbackErro: "A característica central da resenha crítica é apresentar apreciação fundamentada sobre o objeto analisado.",
+
+    dicaBanca: "Muitas bancas diferenciam resumo e resenha. A presença de avaliação é um forte indicativo de resenha crítica."
+
+},
+{
+    texto: `Uma tira apresenta três quadrinhos. Nos dois primeiros, um personagem reclama constantemente do excesso de tarefas. No último, surge uma situação inesperada que produz efeito humorístico relacionado às falas anteriores.`,
+
+    pergunta: "A construção do sentido do texto depende principalmente:",
+
+    alternativas: [
+
+        "da combinação entre linguagem verbal e visual, culminando em um desfecho que produz humor.",
+
+        "da exposição objetiva de fatos cotidianos sem qualquer intenção de provocar interpretação subjetiva.",
+
+        "da defesa explícita de uma tese relacionada à organização do trabalho contemporâneo.",
+
+        "da apresentação detalhada de informações necessárias à compreensão de determinado problema social.",
+
+        "da reprodução fiel de acontecimentos reais com finalidade predominantemente documental."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. As tiras normalmente combinam elementos verbais e visuais para construir humor ou reflexão em poucos quadrinhos.",
+
+    feedbackErro: "O efeito de sentido da tira decorre da interação entre imagens, falas e desfecho apresentado ao leitor.",
+
+    dicaBanca: "Tiras costumam explorar humor, ironia ou crítica social por meio da articulação entre texto e imagem."
+
+},
+{
+    texto: `Em uma publicação, o autor utiliza linguagem subjetiva para relatar uma situação cotidiana aparentemente simples. Ao longo do texto, fatos comuns recebem tratamento reflexivo e bem-humorado, permitindo múltiplas interpretações.`,
+
+    pergunta: "As características descritas aproximam o texto do gênero:",
+
+    alternativas: [
+
+        "crônica, por abordar acontecimentos do cotidiano mediante olhar subjetivo e frequentemente reflexivo.",
+
+        "notícia, por relatar fatos recentes de interesse coletivo com objetividade informativa.",
+
+        "editorial, por expressar posicionamento institucional sobre tema relevante para a sociedade.",
+
+        "reportagem, por aprofundar determinado assunto mediante entrevistas e contextualização.",
+
+        "relatório, por registrar formalmente observações relacionadas a uma situação específica."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A crônica costuma partir de situações cotidianas para construir reflexões, humor ou críticas sociais.",
+
+    feedbackErro: "A subjetividade e o tratamento literário de fatos comuns constituem marcas importantes da crônica.",
+
+    dicaBanca: "Ao identificar uma crônica, observe a presença de temas cotidianos associados a linguagem mais pessoal e interpretativa."
+
+},
+{
+    texto: `Uma instituição pública encaminha documento oficial a outro órgão da administração para solicitar informações necessárias ao desenvolvimento de determinado procedimento administrativo. O texto segue padrão formal e linguagem impessoal.`,
+
+    pergunta: "A situação descrita corresponde mais adequadamente ao gênero:",
+
+    alternativas: [
+
+        "ofício, por constituir instrumento formal de comunicação entre instituições ou autoridades.",
+
+        "e-mail pessoal, por permitir troca rápida de informações entre diferentes destinatários.",
+
+        "artigo de opinião, por apresentar posicionamento fundamentado acerca de tema administrativo.",
+
+        "relatório técnico, por registrar detalhadamente resultados de atividades já executadas.",
+
+        "memorando informal, por priorizar comunicação espontânea sem exigência de formalidades."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. O ofício é amplamente utilizado na comunicação formal entre órgãos e autoridades da administração pública.",
+
+    feedbackErro: "A formalidade, a finalidade institucional e a comunicação entre órgãos públicos são características típicas do ofício.",
+
+    dicaBanca: "Bancas de concursos para professor costumam cobrar a distinção entre gêneros administrativos e gêneros de circulação cotidiana."
+
+},
+{
+    texto: `Uma charge publicada em jornal apresenta um personagem político tentando esconder documentos atrás de uma cortina enquanto afirma publicamente defender a transparência. A construção visual e verbal produz efeito crítico relacionado ao comportamento retratado.`,
+
+    pergunta: "A principal característica do gênero apresentado consiste em:",
+
+    alternativas: [
+
+        "utilizar recursos verbais e visuais para promover crítica relacionada a fatos ou situações socialmente relevantes.",
+
+        "relatar acontecimentos recentes de forma objetiva, priorizando a transmissão de informações verificáveis.",
+
+        "apresentar descrição detalhada de personagens públicos sem manifestação de posicionamento crítico.",
+
+        "defender explicitamente uma tese por meio de argumentação desenvolvida em linguagem formal.",
+
+        "registrar acontecimentos cotidianos com finalidade predominantemente documental e informativa."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A charge caracteriza-se pelo uso de humor, ironia e crítica social ou política associados a situações contextualizadas.",
+
+    feedbackErro: "A presença de crítica construída por meio da combinação entre imagem e linguagem verbal é uma marca típica da charge.",
+
+    dicaBanca: "Charge e cartum costumam ser cobrados juntos. A charge geralmente dialoga com acontecimentos ou contextos específicos."
+
+},
+{
+    texto: `Uma publicação humorística apresenta um personagem fictício reclamando da dificuldade de acordar cedo. A situação retratada não está relacionada a fatos ou acontecimentos específicos, podendo ser compreendida em diferentes épocas e contextos.`,
+
+    pergunta: "As características descritas aproximam o texto do gênero:",
+
+    alternativas: [
+
+        "charge, por estabelecer crítica direta a acontecimentos políticos ou sociais recentes.",
+
+        "cartum, por explorar situação humorística de caráter amplo e atemporal.",
+
+        "notícia, por relatar fato de interesse coletivo mediante linguagem acessível.",
+
+        "editorial, por expressar posicionamento institucional acerca de comportamento social.",
+
+        "crônica, por desenvolver reflexão subjetiva sobre experiência cotidiana."
 
     ],
 
     correta: 1,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. O cartum geralmente aborda situações universais e atemporais, sem depender de contexto específico para sua compreensão.",
 
-🎉 Excelente!
+    feedbackErro: "Diferentemente da charge, o cartum não costuma estar vinculado a acontecimentos ou personagens contextualizados.",
 
-━━━━━━━━━━━━━━━━━━
+    dicaBanca: "Se a compreensão do texto depende de um fato atual, tende a ser charge. Se funciona em qualquer época, aproxima-se do cartum."
 
-📖 Revisão rápida
-
-Embora exista uma personagem e algumas ações, o foco principal do texto está na caracterização do ambiente.
-
-Observe os elementos descritos:
-
-• aroma dos livros envelhecidos;
-• estantes de madeira escura;
-• luminárias amareladas;
-• luz suave sobre as mesas.
-
-Essas informações constroem uma imagem detalhada do espaço.
-
-Por isso, a tipologia predominante é a DESCRIÇÃO.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Nem toda presença de personagem indica narração.
-
-O que importa é identificar onde está concentrada a atenção do texto.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Descritiva, pois caracteriza detalhadamente o ambiente da biblioteca.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O texto apresenta alguns elementos narrativos:
-
-• Ana chegou à biblioteca;
-• observou o ambiente;
-• dirigiu-se ao setor de pesquisas.
-
-Entretanto, essas ações servem apenas como suporte para a descrição do cenário.
-
-A maior parte do trecho dedica-se à caracterização do ambiente por meio de aspectos visuais e sensoriais.
-
-O objetivo principal é permitir que o leitor visualize o local.
-
-Por essa razão, a tipologia predominante é a DESCRIÇÃO.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Esta é uma pegadinha clássica.
-
-A banca insere uma personagem realizando pequenas ações para induzir o candidato a marcar "narração".
-
-Contudo, quando a caracterização do ambiente ocupa a maior parte do texto, a predominância costuma ser descritiva.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-"O foco principal está nas ações ou nas características apresentadas?"
-
-• Foco nas ações → Narração.
-• Foco nas características → Descrição.
-
-Analise sempre a finalidade predominante.
-
-`,
-
-    dicaBanca: `
-
-Em questões de concurso, textos mistos exigem a identificação da tipologia predominante, e não da tipologia exclusiva.
-
-`
 },
 {
-    pergunta: `Leia o trecho:
+    texto: `Uma instituição educacional divulga material contendo datas, horários, local de realização e orientações básicas para participação em determinado evento acadêmico destinado à comunidade escolar.`,
 
-"A expansão das tecnologias digitais transformou profundamente as formas de comunicação na sociedade contemporânea. Atualmente, pessoas de diferentes regiões podem interagir em tempo real por meio de diversas plataformas. Diante desse cenário, torna-se indispensável investir em educação digital para que os cidadãos utilizem essas ferramentas de maneira crítica e responsável."
-
-A respeito da tipologia textual predominante, assinale a alternativa correta.`,
+    pergunta: "A finalidade comunicativa predominante permite classificar o texto como:",
 
     alternativas: [
 
-        "Dissertativa expositiva, pois apresenta exclusivamente informações objetivas sobre tecnologia.",
+        "convite, por buscar informar e estimular a participação dos destinatários em determinado evento.",
 
-        "Narrativa, pois relata fatos históricos em ordem cronológica.",
+        "relatório, por registrar formalmente informações produzidas durante atividade institucional.",
 
-        "Dissertativa argumentativa, pois utiliza informações para sustentar uma tese.",
+        "artigo de opinião, por apresentar posicionamento acerca da relevância do evento promovido.",
 
-        "Descritiva, pois caracteriza detalhadamente os recursos tecnológicos.",
+        "reportagem, por contextualizar fatos relacionados à organização de atividades acadêmicas.",
 
-        "Injuntiva, pois ensina procedimentos relacionados à educação digital."
+        "editorial, por expressar a posição oficial da instituição sobre temas educacionais."
 
     ],
 
-    correta: 2,
+    correta: 0,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. O convite tem como objetivo principal divulgar um evento e incentivar a participação do público-alvo.",
 
-🎉 Excelente!
+    feedbackErro: "A divulgação de informações práticas associadas ao estímulo à participação caracteriza o gênero convite.",
 
-━━━━━━━━━━━━━━━━━━
+    dicaBanca: "Observe sempre a finalidade comunicativa do texto. Em muitos casos, ela é o principal elemento para identificar o gênero."
 
-📖 Revisão rápida
-
-O texto apresenta informações sobre a expansão das tecnologias digitais.
-
-Entretanto, essas informações não constituem sua finalidade principal.
-
-Elas servem de fundamento para a defesa de uma ideia:
-
-• É indispensável investir em educação digital.
-
-Portanto, o texto apresenta uma tese apoiada em argumentos.
-
-Por isso, a tipologia predominante é a DISSERTAÇÃO ARGUMENTATIVA.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Em textos argumentativos, os dados e informações costumam funcionar como argumentos para convencer o leitor.
-
-Nem toda exposição de informações caracteriza uma dissertação expositiva.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Dissertativa argumentativa, pois utiliza informações para sustentar uma tese.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-Inicialmente, o texto apresenta informações sobre as transformações provocadas pelas tecnologias digitais.
-
-Contudo, o objetivo não é apenas informar.
-
-O autor utiliza essas informações para defender uma posição:
-
-• investir em educação digital é indispensável.
-
-Há, portanto, uma tese claramente identificável.
-
-As informações iniciais funcionam como argumentos que sustentam essa conclusão.
-
-Por esse motivo, a tipologia predominante é a dissertação argumentativa.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Esta é uma das questões mais cobradas em concursos.
-
-A banca apresenta um texto com aparência expositiva e leva muitos candidatos a ignorarem a tese defendida pelo autor.
-
-Lembre-se:
-
-• Exposição → informa.
-• Argumentação → defende uma ideia.
-
-Quando houver defesa de posicionamento, a tendência é ser argumentação.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Faça a seguinte pergunta:
-
-"O autor apenas apresenta informações ou utiliza essas informações para convencer o leitor de algo?"
-
-Se existir uma conclusão defendida pelo autor, normalmente a resposta será DISSERTAÇÃO ARGUMENTATIVA.
-
-`,
-
-    dicaBanca: `
-
-Informações, estatísticas e fatos podem aparecer tanto em textos expositivos quanto argumentativos.
-
-O elemento decisivo é a presença ou ausência de uma tese.
-
-`
 },
 {
-    pergunta: `Leia o texto:
+    texto: `Uma revista científica publica texto que apresenta objetivos, metodologia, resultados e conclusões de uma pesquisa realizada por pesquisadores vinculados a uma universidade pública.`,
 
-"Segundo dados divulgados pelo Instituto Nacional de Pesquisas Espaciais (INPE), o desmatamento na Amazônia apresentou redução de 18% no último ano. O levantamento foi realizado com base em imagens de satélite e apontou diminuição em diversas áreas monitoradas."
-
-Quanto ao gênero textual predominante, o texto classifica-se como:`,
+    pergunta: "A organização textual descrita corresponde predominantemente ao gênero:",
 
     alternativas: [
 
-        "Artigo de opinião, pois apresenta um posicionamento sobre questões ambientais.",
+        "resenha crítica, por avaliar a qualidade metodológica de investigações acadêmicas recentes.",
 
-        "Editorial, pois expressa a opinião institucional de um veículo de comunicação.",
+        "artigo científico, por divulgar procedimentos, resultados e conclusões de pesquisa.",
 
-        "Notícia, pois informa objetivamente um fato de interesse público.",
+        "reportagem especializada, por contextualizar descobertas científicas para o público geral.",
 
-        "Crônica, pois relata um acontecimento do cotidiano com linguagem subjetiva.",
+        "editorial acadêmico, por expressar posicionamento institucional sobre temas científicos.",
 
-        "Reportagem, pois aprofunda a análise do tema por meio de entrevistas e contextualizações."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-Você identificou corretamente o gênero NOTÍCIA.
-
-A notícia tem como principal finalidade informar acontecimentos ou fatos de interesse público de forma objetiva.
-
-No texto apresentado:
-
-• Há referência a uma fonte oficial;
-• São apresentados dados concretos;
-• Não há opinião do autor;
-• O foco está na informação.
-
-Essas características são típicas da notícia.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Sempre associe a notícia à objetividade e à transmissão direta de fatos.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Notícia.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O texto apresenta um fato de interesse público baseado em informações obtidas junto a uma fonte oficial.
-
-Seu objetivo principal é informar o leitor.
-
-Observe que:
-
-• Não há opinião do autor;
-• Não existe defesa de tese;
-• Não há aprofundamento do tema;
-• Não aparecem entrevistas ou análises extensas.
-
-Essas características afastam o texto dos gêneros editorial, artigo de opinião e reportagem.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Uma das pegadinhas mais comuns consiste em confundir notícia e reportagem.
-
-A notícia normalmente apresenta os fatos de forma mais direta e objetiva.
-
-Já a reportagem costuma aprofundar o assunto, trazendo entrevistas, contextualizações, análises e múltiplas perspectivas.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-"O texto apenas informa um fato?"
-
-Se a resposta for sim, há forte tendência de se tratar de uma NOTÍCIA.
-
-Caso haja aprofundamento investigativo e contextualização ampla, considere a REPORTAGEM.
-
-`,
-
-    dicaBanca: `
-
-Notícia = informar.
-
-Reportagem = informar e aprofundar.
-
-Essa diferença é extremamente cobrada em concursos.
-
-`
-},
-{
-    pergunta: `Leia o trecho:
-
-"Durante três meses, nossa equipe acompanhou a rotina de moradores de comunidades ribeirinhas da Amazônia. Foram realizadas entrevistas com especialistas, lideranças locais e representantes de órgãos ambientais para compreender os impactos das mudanças climáticas na região."
-
-O gênero textual predominante é:`,
-
-    alternativas: [
-
-        "Notícia, pois apresenta um fato de forma breve e objetiva.",
-
-        "Reportagem, pois aprofunda um tema por meio de investigação e entrevistas.",
-
-        "Editorial, pois expressa a opinião institucional de um veículo de comunicação.",
-
-        "Crônica, pois retrata fatos do cotidiano com subjetividade.",
-
-        "Artigo de opinião, pois defende explicitamente um ponto de vista."
+        "ensaio argumentativo, por desenvolver reflexão pessoal acerca de determinado problema."
 
     ],
 
     correta: 1,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. O artigo científico possui estrutura voltada à divulgação formal de pesquisas e resultados acadêmicos.",
 
-🎉 Excelente!
+    feedbackErro: "Objetivos, metodologia, resultados e conclusões são elementos característicos dos artigos científicos.",
 
-━━━━━━━━━━━━━━━━━━
+    dicaBanca: "Questões sobre gêneros acadêmicos costumam explorar sua finalidade e organização estrutural."
 
-📖 Revisão rápida
-
-A reportagem busca aprofundar um tema, investigando diferentes aspectos da questão abordada.
-
-No trecho, observam-se:
-
-• acompanhamento durante meses;
-• entrevistas;
-• investigação;
-• contextualização do tema.
-
-Essas características são típicas da REPORTAGEM.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Reportagem = aprofundamento.
-
-Notícia = informação imediata.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Reportagem.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O texto evidencia investigação, acompanhamento prolongado e utilização de entrevistas.
-
-Esses elementos ampliam a compreensão do tema e caracterizam a reportagem.
-
-A notícia normalmente apresenta apenas o fato principal de forma objetiva e resumida.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-A principal diferença entre notícia e reportagem está no aprofundamento do assunto.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Procure elementos como:
-
-• entrevistas;
-• pesquisas;
-• investigação;
-• contextualização.
-
-Eles geralmente indicam REPORTAGEM.
-
-`,
-
-    dicaBanca: `
-
-Quando houver aprofundamento do tema, desconfie da alternativa "Notícia".
-
-`
-}
-,
-{
-    pergunta: `Assinale a alternativa que apresenta corretamente a principal característica do gênero EDITORIAL.`,
-
-    alternativas: [
-
-        "Relatar experiências pessoais do autor.",
-
-        "Informar fatos de maneira objetiva e imparcial.",
-
-        "Expressar a opinião institucional de um veículo de comunicação.",
-
-        "Narrar acontecimentos fictícios.",
-
-        "Apresentar instruções ao leitor."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-O editorial representa a posição oficial de um jornal, revista ou portal de notícias sobre determinado assunto.
-
-Não expressa a opinião de um indivíduo específico, mas da instituição.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Editorial = opinião do veículo.
-
-Artigo de opinião = opinião do autor.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Expressar a opinião institucional de um veículo de comunicação.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O editorial apresenta a posição institucional do meio de comunicação sobre temas relevantes.
-
-Por esse motivo, normalmente não vem assinado por um autor específico.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Muitos candidatos confundem editorial com artigo de opinião.
-
-No artigo, a opinião é do autor.
-
-No editorial, a opinião é da instituição.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Verifique quem assume a responsabilidade pela opinião apresentada.
-
-`,
-
-    dicaBanca: `
-
-A ausência de assinatura costuma ser uma característica importante do editorial.
-
-`
-}
-,
-{
-    pergunta: `Leia o trecho:
-
-"A educação financeira deveria ocupar papel mais relevante no currículo escolar. Ao compreender conceitos básicos de planejamento e investimento desde cedo, os estudantes estariam mais preparados para tomar decisões responsáveis ao longo da vida."
-
-O gênero textual predominante é:`,
-
-    alternativas: [
-
-        "Notícia.",
-
-        "Reportagem.",
-
-        "Artigo de opinião.",
-
-        "Manual de instruções.",
-
-        "Convite."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-O texto apresenta uma opinião defendida pelo autor.
-
-Há uma tese:
-
-• a educação financeira deveria ocupar papel mais relevante na escola.
-
-Isso caracteriza o artigo de opinião.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Artigo de opinião = tese + argumentos.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Artigo de opinião.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O autor não apenas informa.
-
-Ele defende um posicionamento sobre a importância da educação financeira nas escolas.
-
-Essa defesa de uma ideia é típica do artigo de opinião.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Nem todo texto opinativo é editorial.
-
-No artigo de opinião, a responsabilidade pelas ideias pertence ao autor.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Procure a tese defendida pelo autor.
-
-Se houver posicionamento explícito, considere o artigo de opinião.
-
-`,
-
-    dicaBanca: `
-
-Artigo de opinião e editorial são gêneros argumentativos, mas possuem autores diferentes.
-
-`
-}
-,
-{
-    pergunta: `Leia o trecho:
-
-"Todas as manhãs, seu Antônio ocupava o mesmo banco da praça. Cumprimentava os passantes, observava os pombos e comentava sobre o clima com quem estivesse disposto a conversar. Nada extraordinário acontecia, mas aquela rotina parecia dar sentido aos seus dias."
-
-O gênero textual predominante é:`,
-
-    alternativas: [
-
-        "Notícia.",
-
-        "Editorial.",
-
-        "Crônica.",
-
-        "Reportagem.",
-
-        "Manual."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-A crônica costuma abordar situações simples do cotidiano, frequentemente com linguagem leve e reflexiva.
-
-O texto retrata uma cena comum da vida diária.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Cotidiano + reflexão = forte indício de crônica.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Crônica.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O texto apresenta um episódio simples e cotidiano.
-
-Não busca informar um fato jornalístico nem defender uma tese.
-
-Seu objetivo é retratar uma situação comum da vida humana, característica típica da crônica.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Muitos candidatos associam qualquer narrativa à notícia ou reportagem.
-
-A crônica normalmente trabalha acontecimentos simples e cotidianos, muitas vezes acompanhados de reflexão.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Observe se o texto retrata situações comuns do dia a dia com linguagem mais literária e subjetiva.
-
-`,
-
-    dicaBanca: `
-
-Crônica é um dos gêneros mais cobrados em concursos por causa da sua proximidade com a narrativa.
-
-`
 },
 {
-    pergunta: `Leia o trecho:
+    texto: `Em um ambiente corporativo, um gestor encaminha comunicação breve aos funcionários de determinado setor para informar alteração de procedimentos internos. O texto circula apenas dentro da própria organização e possui finalidade administrativa.`,
 
-"O livro apresenta uma narrativa envolvente e personagens bem construídos. Apesar de alguns momentos previsíveis, a obra consegue prender a atenção do leitor e merece destaque pela forma como aborda questões sociais contemporâneas."
-
-O gênero textual predominante é:`,
+    pergunta: "Considerando a situação comunicativa apresentada, o gênero mais adequado é:",
 
     alternativas: [
 
-        "Notícia.",
+        "ofício, por destinar-se prioritariamente à comunicação formal entre instituições distintas.",
 
-        "Resenha.",
+        "memorando, por viabilizar comunicação interna relacionada a assuntos administrativos.",
 
-        "Editorial.",
+        "carta aberta, por permitir ampla divulgação de informações de interesse coletivo.",
 
-        "Crônica.",
+        "relatório técnico, por registrar detalhadamente atividades e resultados alcançados.",
 
-        "Carta."
+        "e-mail pessoal, por privilegiar comunicação informal entre indivíduos específicos."
 
     ],
 
     correta: 1,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. O memorando é tradicionalmente utilizado para comunicação interna em instituições e organizações.",
 
-🎉 Excelente!
+    feedbackErro: "A principal pista da questão é a circulação restrita ao ambiente interno da organização.",
 
-━━━━━━━━━━━━━━━━━━
+    dicaBanca: "Memorando e ofício são frequentemente cobrados juntos. Memorando = comunicação interna; Ofício = comunicação externa ou institucional."
 
-📖 Revisão rápida
-
-A resenha apresenta uma avaliação sobre uma obra.
-
-O autor não apenas descreve o livro, mas também emite juízo de valor.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Resenha = apresentação + avaliação.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Resenha.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O texto apresenta comentários críticos sobre uma obra.
-
-Observe expressões como:
-
-• "narrativa envolvente";
-• "momentos previsíveis";
-• "merece destaque".
-
-Esses julgamentos caracterizam a resenha.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Resumo não é resenha.
-
-A resenha possui avaliação crítica.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Procure opiniões sobre livros, filmes ou obras.
-
-`,
-
-    dicaBanca: `
-
-Resenha = análise crítica de uma obra.
-
-`
 },
 {
-    pergunta: `Assinale a alternativa que apresenta característica típica do gênero carta pessoal.`,
+    texto: `Uma organização não governamental publica um texto destinado à população em geral, apresentando orientações para a prevenção de doenças transmitidas por mosquitos. O material utiliza linguagem acessível, verbos no imperativo e recomendações práticas para o cotidiano.`,
+
+    pergunta: "A finalidade comunicativa predominante permite identificar o texto como pertencente ao gênero:",
 
     alternativas: [
 
-        "Linguagem exclusivamente técnica.",
+        "manual de instruções, por apresentar procedimentos relacionados ao funcionamento de equipamentos específicos.",
 
-        "Objetividade jornalística.",
+        "campanha educativa, por orientar comportamentos e promover práticas consideradas socialmente benéficas.",
 
-        "Comunicação direta entre remetente e destinatário identificado.",
+        "artigo científico, por divulgar conhecimentos produzidos por meio de investigação sistemática.",
 
-        "Ausência de interlocutor definido.",
+        "editorial, por expressar posicionamento institucional sobre questões de saúde pública.",
 
-        "Finalidade exclusivamente publicitária."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-A carta estabelece comunicação entre remetente e destinatário.
-
-Normalmente possui saudação, desenvolvimento e despedida.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Carta = comunicação pessoal direcionada.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Comunicação direta entre remetente e destinatário identificado.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-A carta é um gênero voltado para interação entre pessoas específicas.
-
-Seu conteúdo pode variar, mas sempre existe um destinatário definido.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Não confunda carta com notícia ou editorial.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Observe se existe remetente e destinatário claramente identificados.
-
-`,
-
-    dicaBanca: `
-
-Remetente e destinatário são marcas clássicas da carta.
-
-`
-},
-{
-    pergunta: `O e-mail diferencia-se da carta tradicional principalmente por:`,
-
-    alternativas: [
-
-        "Ser utilizado apenas em ambientes profissionais.",
-
-        "Possuir obrigatoriamente linguagem formal.",
-
-        "Ser um gênero digital transmitido por meios eletrônicos.",
-
-        "Não possuir destinatário definido.",
-
-        "Apresentar apenas conteúdo informativo."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-O e-mail é um gênero digital utilizado para comunicação eletrônica.
-
-Pode ser formal ou informal, dependendo da situação.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-E-mail = gênero digital de comunicação.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Ser um gênero digital transmitido por meios eletrônicos.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-A principal característica do e-mail é o suporte digital.
-
-Ele pode assumir diversas finalidades:
-
-• informar;
-• solicitar;
-• convidar;
-• comunicar.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Formalidade não define o gênero.
-
-O que define é a forma de circulação.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Identifique o suporte utilizado pelo texto.
-
-`,
-
-    dicaBanca: `
-
-Gênero textual e suporte textual não são a mesma coisa.
-
-`
-},
-{
-    pergunta: `A finalidade principal do gênero convite é:`,
-
-    alternativas: [
-
-        "Narrar acontecimentos.",
-
-        "Emitir opinião crítica.",
-
-        "Convidar alguém para participar de determinado evento.",
-
-        "Apresentar instruções técnicas.",
-
-        "Divulgar resultados de pesquisas."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-O convite busca comunicar e incentivar a participação em um evento.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Convite = participação.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Convidar alguém para participar de determinado evento.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-A finalidade comunicativa é um dos critérios mais importantes para identificação dos gêneros.
-
-No convite, o objetivo central é chamar alguém para um acontecimento.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Questões sobre gêneros costumam cobrar finalidade comunicativa.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-"Para que esse texto foi produzido?"
-
-`,
-
-    dicaBanca: `
-
-Finalidade comunicativa é um dos assuntos mais cobrados em concursos.
-
-`
-},
-{
-    pergunta: `Assinale a alternativa que apresenta exclusivamente gêneros textuais digitais.`,
-
-    alternativas: [
-
-        "Carta, bilhete e editorial.",
-
-        "Notícia, reportagem e crônica.",
-
-        "E-mail, postagem em rede social e mensagem instantânea.",
-
-        "Convite, receita e manual.",
-
-        "Resenha, artigo de opinião e carta."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-Os gêneros digitais surgiram ou se adaptaram aos ambientes eletrônicos.
-
-Exemplos:
-
-• e-mail;
-• postagem em rede social;
-• mensagem instantânea.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Gêneros digitais dependem de suporte tecnológico.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: E-mail, postagem em rede social e mensagem instantânea.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-Esses gêneros circulam predominantemente em ambientes digitais.
-
-Sua produção e circulação dependem de tecnologias de informação e comunicação.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Não confunda gênero textual com suporte textual.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Analise onde o texto circula e como ele é utilizado.
-
-`,
-
-    dicaBanca: `
-
-Questões atuais costumam explorar os gêneros digitais e suas características.
-
-`
-},
-{
-    pergunta: `Leia o texto:
-
-"Vacine-se contra a gripe. Procure a unidade de saúde mais próxima e proteja você e sua família."
-
-A finalidade comunicativa predominante desse texto é:`,
-
-    alternativas: [
-
-        "Narrar um acontecimento.",
-
-        "Descrever uma situação.",
-
-        "Convencer o leitor a adotar um comportamento.",
-
-        "Relatar uma experiência pessoal.",
-
-        "Apresentar uma análise crítica."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-O texto busca influenciar o comportamento do leitor.
-
-Seu objetivo é incentivar a vacinação.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Em concursos, a finalidade comunicativa costuma ser mais importante que o tema.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Convencer o leitor a adotar um comportamento.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O texto procura persuadir o leitor a realizar uma ação específica: vacinar-se.
-
-Trata-se de uma finalidade persuasiva.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Nem todo texto com verbo no imperativo é apenas injuntivo.
-
-Muitas vezes ele possui finalidade persuasiva.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-"O que o autor deseja que o leitor faça após ler o texto?"
-
-`,
-
-    dicaBanca: `
-
-Finalidade comunicativa é um dos temas mais cobrados em gêneros textuais.
-
-`
-},
-{
-    pergunta: `O suporte textual corresponde:`,
-
-    alternativas: [
-
-        "Ao assunto principal do texto.",
-
-        "À intenção do autor.",
-
-        "Ao meio físico ou digital em que o texto circula.",
-
-        "Ao gênero textual utilizado.",
-
-        "À tipologia predominante."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-O suporte textual é o local ou meio em que o texto é veiculado.
-
-Exemplos:
-
-• Jornal;
-• Revista;
-• Site;
-• Aplicativo;
-• Livro.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Ao meio físico ou digital em que o texto circula.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O suporte não é o gênero.
-
-Uma notícia pode circular:
-
-• em jornal impresso;
-• em portal eletrônico;
-• em aplicativo.
-
-O gênero continua sendo notícia.
-
-O suporte muda.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Gênero textual ≠ suporte textual.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Identifique onde o texto circula.
-
-`,
-
-    dicaBanca: `
-
-Essa diferença aparece frequentemente em provas de Português.
-
-`
-},
-{
-    pergunta: `A charge caracteriza-se principalmente por:`,
-
-    alternativas: [
-
-        "Apresentar humor desvinculado de fatos sociais.",
-
-        "Narrar acontecimentos históricos.",
-
-        "Criticar fatos, acontecimentos ou personagens da atualidade por meio do humor.",
-
-        "Descrever situações fictícias sem crítica social.",
-
-        "Apresentar exclusivamente linguagem verbal."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-A charge utiliza humor para criticar acontecimentos atuais.
-
-Normalmente possui relação com fatos políticos, sociais ou econômicos.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Criticar fatos, acontecimentos ou personagens da atualidade por meio do humor.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-A charge é marcada pela crítica social e pela contextualização temporal.
-
-Ela geralmente depende de fatos atuais para ser compreendida.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Charge e cartum não são a mesma coisa.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-"Existe relação com fatos atuais?"
-
-Se sim, provavelmente trata-se de charge.
-
-`,
-
-    dicaBanca: `
-
-Atualidade é a principal característica da charge.
-
-`
-},
-{
-    pergunta: `Diferentemente da charge, o cartum caracteriza-se por:`,
-
-    alternativas: [
-
-        "Abordar fatos específicos da atualidade.",
-
-        "Apresentar crítica atemporal, compreensível independentemente do momento histórico.",
-
-        "Ter obrigatoriamente personagens políticos.",
-
-        "Utilizar apenas linguagem verbal.",
-
-        "Relatar acontecimentos reais."
+        "reportagem, por contextualizar informações relacionadas a problemas sanitários."
 
     ],
 
     correta: 1,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. O objetivo principal é orientar a população e incentivar comportamentos preventivos, característica comum de campanhas educativas.",
 
-🎉 Excelente!
+    feedbackErro: "A presença de orientações práticas voltadas ao público em geral indica finalidade educativa e de conscientização.",
 
-━━━━━━━━━━━━━━━━━━
+    dicaBanca: "Analise sempre quem é o público-alvo e qual comportamento o texto pretende estimular."
 
-📖 Revisão rápida
-
-O cartum aborda situações universais e atemporais.
-
-Sua compreensão não depende de acontecimentos recentes.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Apresentar crítica atemporal.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O cartum costuma tratar de comportamentos humanos, costumes e situações permanentes.
-
-Por isso, continua compreensível mesmo muitos anos após sua publicação.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Charge = atualidade.
-
-Cartum = atemporalidade.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Verifique se a compreensão depende de um fato atual.
-
-`,
-
-    dicaBanca: `
-
-A diferença entre charge e cartum é extremamente cobrada.
-
-`
 },
 {
-    pergunta: `Assinale a alternativa que apresenta característica típica das tirinhas.`,
+    texto: `Um cidadão publica texto em jornal de grande circulação manifestando sua opinião sobre problemas de mobilidade urbana em sua cidade. O texto é assinado, apresenta argumentos e busca convencer os leitores acerca de possíveis soluções.`,
+
+    pergunta: "A situação descrita aproxima-se mais adequadamente do gênero:",
 
     alternativas: [
 
-        "Ausência de sequência narrativa.",
+        "editorial, por representar o posicionamento institucional do veículo de comunicação.",
 
-        "Uso exclusivo de linguagem verbal.",
+        "carta do leitor, por permitir manifestação de opinião do público sobre temas de interesse coletivo.",
 
-        "Combinação de linguagem verbal e não verbal em sequência de quadrinhos.",
+        "notícia, por informar objetivamente acontecimentos relacionados ao trânsito urbano.",
 
-        "Finalidade exclusivamente informativa.",
+        "reportagem, por reunir diferentes perspectivas acerca do tema discutido.",
 
-        "Dependência obrigatória de fatos políticos."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-As tirinhas utilizam linguagem verbal e visual.
-
-A construção do sentido depende da sequência dos quadrinhos.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Combinação de linguagem verbal e não verbal em sequência de quadrinhos.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-As tirinhas são gêneros multimodais.
-
-Seu sentido resulta da interação entre:
-
-• imagens;
-• falas;
-• expressões;
-• contexto.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Tirinhas, charges e cartuns costumam aparecer juntos nas provas.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Observe a presença simultânea de elementos verbais e visuais.
-
-`,
-
-    dicaBanca: `
-
-Questões sobre tirinhas geralmente exigem interpretação da linguagem não verbal.
-
-`
-},
-{
-    pergunta: `Assinale a alternativa correta acerca da relação entre gênero textual e tipologia textual.`,
-
-    alternativas: [
-
-        "Todo gênero textual apresenta apenas uma tipologia textual.",
-
-        "Gênero textual e tipologia textual são conceitos equivalentes.",
-
-        "Um mesmo gênero textual pode apresentar mais de uma tipologia textual.",
-
-        "As tipologias textuais dependem exclusivamente do suporte em que circulam.",
-
-        "Os gêneros textuais são definidos apenas pela estrutura gramatical."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-
-🎉 Excelente!
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-Um gênero pode reunir diferentes tipologias.
-
-Exemplo:
-
-• Artigo de opinião → exposição + argumentação.
-• Reportagem → narração + descrição + exposição.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Gênero é mais amplo que tipologia.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Um mesmo gênero textual pode apresentar mais de uma tipologia textual.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-Os gêneros textuais são formas concretas de comunicação.
-
-Já as tipologias representam formas de organização do texto.
-
-Por isso, um gênero pode combinar diferentes tipologias.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Essa diferença é uma das mais cobradas em concursos.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Lembre-se:
-
-• Gênero = forma social de comunicação.
-• Tipologia = organização linguística predominante.
-
-`,
-
-    dicaBanca: `
-
-Não confunda gênero textual com tipologia textual.
-
-`
-},
-{
-    pergunta: `Uma notícia publicada em um portal de internet possui como gênero textual e suporte textual, respectivamente:`,
-
-    alternativas: [
-
-        "Portal de internet e notícia.",
-
-        "Notícia e portal de internet.",
-
-        "Reportagem e jornalismo digital.",
-
-        "Informação e portal eletrônico.",
-
-        "Texto jornalístico e internet."
+        "resenha crítica, por avaliar formalmente políticas públicas de mobilidade."
 
     ],
 
     correta: 1,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. A carta do leitor possibilita que cidadãos expressem opiniões, críticas ou sugestões sobre assuntos de interesse público.",
 
-🎉 Excelente!
+    feedbackErro: "O texto é assinado por um cidadão e representa sua opinião pessoal, não a posição institucional do jornal.",
 
-━━━━━━━━━━━━━━━━━━
+    dicaBanca: "Observe quem produz o texto e qual espaço de circulação ele ocupa dentro do veículo de comunicação."
 
-📖 Revisão rápida
-
-Gênero = notícia.
-
-Suporte = portal de internet.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-O gênero permanece.
-
-O suporte pode mudar.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Notícia e portal de internet.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-Uma notícia pode circular em diferentes suportes:
-
-• jornal impresso;
-• revista;
-• portal eletrônico.
-
-O gênero continua sendo notícia.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Muitos candidatos invertem os conceitos.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Pergunte:
-
-"O que é o texto?" → gênero.
-
-"Onde ele circula?" → suporte.
-
-`,
-
-    dicaBanca: `
-
-Essa questão aparece frequentemente em concursos para professores.
-
-`
 },
 {
-    pergunta: `Um texto apresenta título, subtítulo, entrevistas com especialistas, gráficos estatísticos e análise aprofundada do tema. O gênero textual mais provável é:`,
+    texto: `Uma empresa apresenta documento contendo registro detalhado das atividades realizadas durante determinado período, incluindo metas alcançadas, dificuldades encontradas e resultados obtidos.`,
+
+    pergunta: "As características descritas correspondem predominantemente ao gênero:",
 
     alternativas: [
 
-        "Bilhete.",
+        "relatório, por sistematizar informações relacionadas à execução e aos resultados de atividades realizadas.",
 
-        "Editorial.",
+        "memorando, por comunicar rapidamente informações internas entre setores da organização.",
 
-        "Reportagem.",
+        "ofício, por estabelecer comunicação formal entre instituições ou autoridades.",
 
-        "Convite.",
+        "ata, por registrar discussões e decisões ocorridas em reuniões específicas.",
 
-        "Carta pessoal."
+        "artigo de opinião, por apresentar avaliação crítica acerca do desempenho institucional."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. O relatório tem como finalidade registrar, organizar e apresentar informações sobre atividades executadas e seus resultados.",
+
+    feedbackErro: "A descrição enfatiza acompanhamento de atividades e apresentação de resultados, características típicas do relatório.",
+
+    dicaBanca: "Relatório costuma envolver prestação de contas, descrição de ações realizadas e análise de resultados."
+
+},
+{
+    texto: `Durante uma reunião escolar, um servidor registra participantes presentes, assuntos discutidos, encaminhamentos realizados e decisões aprovadas pelos membros presentes.`,
+
+    pergunta: "O registro produzido ao final da reunião corresponde ao gênero:",
+
+    alternativas: [
+
+        "memorando, por transmitir informações administrativas entre setores de uma instituição.",
+
+        "ofício, por formalizar comunicação externa entre órgãos ou autoridades.",
+
+        "ata, por documentar oficialmente acontecimentos e deliberações ocorridas em reunião.",
+
+        "relatório, por apresentar análise detalhada de resultados alcançados ao longo de determinado período.",
+
+        "convite, por divulgar informações relacionadas à realização de eventos institucionais."
 
     ],
 
     correta: 2,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. A ata registra formalmente os fatos, debates e decisões ocorridos durante uma reunião.",
 
-🎉 Excelente!
+    feedbackErro: "A principal finalidade da ata é documentar acontecimentos e deliberações para consulta futura.",
 
-━━━━━━━━━━━━━━━━━━
+    dicaBanca: "Sempre associe a ata ao contexto de reuniões, assembleias ou encontros deliberativos."
 
-📖 Revisão rápida
-
-A presença de entrevistas, gráficos e aprofundamento caracteriza a reportagem.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Reportagem = investigação + contextualização.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Reportagem.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-A reportagem vai além da simples informação.
-
-Ela amplia a compreensão do tema por meio de:
-
-• entrevistas;
-• pesquisas;
-• estatísticas;
-• contextualização.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Notícia e reportagem costumam aparecer juntas nas alternativas.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Procure sinais de aprofundamento.
-
-`,
-
-    dicaBanca: `
-
-Quanto mais investigação existir, maior a chance de ser reportagem.
-
-`
 },
 {
-    pergunta: `O principal objetivo de um artigo de opinião é:`,
+    texto: `Uma instituição pública divulga texto dirigido à população para informar alterações no funcionamento de determinados serviços. O material apresenta linguagem objetiva, foco informativo e preocupação com a transmissão clara dos fatos.`,
+
+    pergunta: "A finalidade predominante do texto aproxima-o mais do gênero:",
 
     alternativas: [
 
-        "Relatar fatos históricos.",
+        "artigo de opinião, por defender posicionamento relacionado à prestação de serviços públicos.",
 
-        "Narrar acontecimentos cotidianos.",
+        "editorial, por expressar oficialmente a visão institucional sobre questões administrativas.",
 
-        "Defender uma tese por meio de argumentos.",
+        "comunicado, por transmitir informações relevantes de maneira objetiva aos destinatários.",
 
-        "Apresentar instruções ao leitor.",
+        "resenha, por avaliar criticamente as mudanças implementadas pela instituição.",
 
-        "Descrever pessoas e ambientes."
+        "crônica, por abordar situação cotidiana mediante linguagem subjetiva e reflexiva."
 
     ],
 
     correta: 2,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. O comunicado tem como objetivo principal informar o público sobre fatos, mudanças ou orientações de interesse comum.",
 
-🎉 Excelente!
+    feedbackErro: "A objetividade e a transmissão direta de informações são características centrais do gênero comunicado.",
 
-━━━━━━━━━━━━━━━━━━
-
-📖 Revisão rápida
-
-O artigo de opinião é um gênero argumentativo.
-
-Seu objetivo principal é convencer o leitor.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Dica de revisão
-
-Tese + argumentos = artigo de opinião.
-
-`,
-
-    feedbackErro: `
-
-❌ Você marcou uma alternativa incorreta.
-
-✅ Resposta correta: Defender uma tese por meio de argumentos.
-
-━━━━━━━━━━━━━━━━━━
-
-📖 Explicação
-
-O autor apresenta um posicionamento e utiliza argumentos para sustentá-lo.
-
-Essa é a finalidade comunicativa predominante.
-
-━━━━━━━━━━━━━━━━━━
-
-⚠️ Atenção da banca
-
-Nem todo texto informativo é argumentativo.
-
-━━━━━━━━━━━━━━━━━━
-
-🎯 Como resolver na prova
-
-Identifique se há tentativa de convencimento.
-
-`,
-
-    dicaBanca: `
-
-Argumentação e persuasão costumam caminhar juntas.
-
-`
+    dicaBanca: "Quando o foco está apenas em informar algo ao público, sem argumentação ou avaliação, considere a possibilidade de comunicado."
 },
 {
-    pergunta: `Assinale a alternativa correta.`,
+    texto: `Uma instituição de ensino divulga documento contendo normas para inscrição em um processo seletivo. O texto apresenta requisitos, documentação necessária, prazos, critérios de classificação e orientações aos candidatos.`,
+
+    pergunta: "Considerando a finalidade e a organização das informações, o gênero textual descrito corresponde a:",
 
     alternativas: [
 
-        "A charge caracteriza-se pela atemporalidade de suas críticas.",
+        "edital, por estabelecer regras, condições e procedimentos relacionados a determinado processo público ou institucional.",
 
-        "O editorial expressa a opinião pessoal do jornalista que o assina.",
+        "memorando, por viabilizar a circulação interna de informações administrativas entre setores específicos.",
 
-        "O cartum geralmente está relacionado a fatos específicos da atualidade.",
+        "ata, por registrar formalmente decisões e deliberações ocorridas em reuniões institucionais.",
 
-        "A notícia tem como finalidade principal informar fatos de interesse público.",
+        "artigo de opinião, por apresentar posicionamentos acerca dos critérios adotados pela instituição.",
 
-        "A reportagem limita-se à apresentação resumida dos acontecimentos."
+        "reportagem, por contextualizar informações relacionadas ao processo seletivo mencionado."
 
     ],
 
-    correta: 3,
+    correta: 0,
 
-    feedbackAcerto: `
+    feedbackAcerto: "Correto. O edital tem como finalidade divulgar regras, requisitos, prazos e condições de participação em processos seletivos, concursos e outras atividades institucionais.",
 
-🎉 Excelente!
+    feedbackErro: "A descrição enfatiza normas e condições de participação, características típicas do gênero edital.",
 
-━━━━━━━━━━━━━━━━━━
+    dicaBanca: "Quando o texto estabelece regras, prazos, critérios e exigências formais, considere a possibilidade de ser um edital."
 
-📖 Revisão rápida
+},
+{
+    texto: `Uma publicação acadêmica apresenta reflexão aprofundada sobre os impactos da inteligência artificial na educação. O autor desenvolve argumentos, dialoga com diferentes referências teóricas e explora possibilidades interpretativas sem necessariamente seguir a estrutura de uma pesquisa científica.`,
 
-A notícia tem como finalidade principal informar fatos de interesse público de forma objetiva.
+    pergunta: "As características descritas aproximam o texto do gênero:",
 
-━━━━━━━━━━━━━━━━━━
+    alternativas: [
 
-🎯 Dica de revisão
+        "artigo científico, por apresentar obrigatoriamente metodologia, resultados e conclusões de pesquisa.",
 
-Notícia = informar.
+        "ensaio, por desenvolver reflexão analítica e interpretativa acerca de determinado tema.",
 
-Reportagem = aprofundar.
+        "editorial, por expressar posicionamento institucional da publicação acadêmica.",
 
-Charge = atualidade.
+        "relatório técnico, por registrar dados produzidos durante investigação formal.",
 
-Cartum = atemporalidade.
+        "resenha crítica, por avaliar especificamente uma obra ou produção intelectual."
 
-Editorial = opinião institucional.
+    ],
 
-`,
+    correta: 1,
 
-    feedbackErro: `
+    feedbackAcerto: "Correto. O ensaio caracteriza-se pela reflexão crítica e pela exploração interpretativa de um tema.",
 
-❌ Você marcou uma alternativa incorreta.
+    feedbackErro: "O texto descrito não apresenta a estrutura típica de pesquisa científica, mas sim uma reflexão argumentativa e analítica.",
 
-✅ Resposta correta: A notícia tem como finalidade principal informar fatos de interesse público.
+    dicaBanca: "O ensaio costuma valorizar a reflexão intelectual e a liberdade argumentativa do autor."
 
-━━━━━━━━━━━━━━━━━━
+},
+{
+    texto: `Um portal especializado em cultura publica texto que apresenta informações sobre um filme recém-lançado, descreve aspectos da narrativa e avalia elementos como roteiro, direção e atuação dos personagens.`,
 
-📖 Explicação
+    pergunta: "A finalidade comunicativa predominante permite classificar o texto como:",
 
-Esta questão reúne diversos conceitos cobrados em concursos:
+    alternativas: [
 
-• Charge → atualidade.
-• Cartum → atemporalidade.
-• Editorial → opinião institucional.
-• Notícia → informação objetiva.
-• Reportagem → aprofundamento.
+        "notícia cultural, por informar objetivamente a estreia de determinada produção cinematográfica.",
 
-Dominar essas diferenças é fundamental para resolver questões de gêneros textuais.
+        "resenha crítica, por combinar apresentação da obra com apreciação avaliativa de seus elementos.",
 
-━━━━━━━━━━━━━━━━━━
+        "editorial, por expressar o posicionamento institucional do veículo sobre produções artísticas.",
 
-⚠️ Atenção da banca
+        "reportagem investigativa, por aprofundar questões relacionadas à indústria cinematográfica.",
 
-Questões de síntese costumam misturar conceitos semelhantes para confundir o candidato.
+        "ensaio acadêmico, por desenvolver reflexão teórica acerca da linguagem audiovisual."
 
-━━━━━━━━━━━━━━━━━━
+    ],
 
-🎯 Como resolver na prova
+    correta: 1,
 
-Monte um quadro mental comparando os gêneros mais cobrados.
+    feedbackAcerto: "Correto. A resenha crítica apresenta informações sobre a obra e realiza avaliação fundamentada de seus aspectos.",
 
-`,
+    feedbackErro: "A presença de comentários avaliativos diferencia a resenha de gêneros meramente informativos.",
 
-    dicaBanca: `
+    dicaBanca: "Resumo informa. Resenha informa e avalia. Essa distinção é muito cobrada em concursos."
 
-As diferenças entre notícia, reportagem, editorial, charge e cartum aparecem constantemente em provas.
+},
+{
+    texto: `Durante uma assembleia de moradores, diferentes participantes apresentaram sugestões para melhorar a segurança do bairro. Ao final do encontro, as propostas aprovadas foram registradas oficialmente para futura execução.`,
 
-`
+    pergunta: "O documento utilizado para registrar formalmente as deliberações da assembleia pertence ao gênero:",
+
+    alternativas: [
+
+        "relatório, por apresentar resultados alcançados após a implementação das decisões tomadas.",
+
+        "memorando, por comunicar informações internas entre setores de uma organização.",
+
+        "ata, por documentar acontecimentos, debates e decisões ocorridos durante a reunião.",
+
+        "ofício, por formalizar comunicação entre entidades distintas.",
+
+        "comunicado, por divulgar informações de interesse coletivo ao público em geral."
+
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A ata registra oficialmente os fatos e decisões ocorridos durante reuniões e assembleias.",
+
+    feedbackErro: "O foco da questão está no registro formal das deliberações, característica típica da ata.",
+
+    dicaBanca: "Sempre associe a ata ao contexto de reuniões, assembleias, conselhos ou encontros deliberativos."
+
+},
+{
+    texto: `Uma empresa divulga documento destinado aos colaboradores informando alterações em procedimentos internos. O texto apresenta linguagem objetiva, circulação restrita ao ambiente organizacional e finalidade exclusivamente informativa.`,
+
+    pergunta: "A situação comunicativa descrita aproxima-se mais adequadamente do gênero:",
+
+    alternativas: [
+
+        "memorando, por viabilizar a comunicação interna de informações administrativas entre membros da instituição.",
+
+        "ofício, por estabelecer comunicação formal entre diferentes órgãos ou entidades.",
+
+        "editorial corporativo, por expressar posicionamento institucional sobre temas estratégicos.",
+
+        "artigo de opinião, por apresentar análise crítica acerca das mudanças implementadas.",
+
+        "relatório gerencial, por registrar resultados produzidos após a adoção dos novos procedimentos."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. O memorando é utilizado principalmente para comunicações internas de caráter administrativo.",
+
+    feedbackErro: "A circulação interna e a finalidade informativa são elementos centrais para identificar o memorando.",
+
+    dicaBanca: "Uma regra prática: memorando = comunicação interna; ofício = comunicação externa ou institucional."
+
+},
+{
+    texto: `Uma organização internacional divulga documento no qual apresenta princípios, objetivos e compromissos assumidos por diferentes países em relação à preservação ambiental. O texto possui caráter normativo e busca orientar ações futuras dos participantes.`,
+
+    pergunta: "Considerando sua finalidade comunicativa, o documento descrito aproxima-se mais adequadamente do gênero:",
+
+    alternativas: [
+
+        "manifesto, por tornar pública uma posição coletiva e defender princípios relacionados a determinada causa.",
+
+        "relatório técnico, por apresentar resultados produzidos após a implementação de políticas ambientais.",
+
+        "editorial, por expressar o posicionamento institucional de um veículo de comunicação.",
+
+        "notícia, por informar acontecimentos recentes de interesse público.",
+
+        "ata, por registrar formalmente debates ocorridos em reuniões internacionais."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. O manifesto caracteriza-se pela apresentação pública de ideias, princípios e posicionamentos coletivos relacionados a determinada causa.",
+
+    feedbackErro: "O texto não se limita a informar ou registrar acontecimentos; ele busca afirmar compromissos e orientar posicionamentos.",
+
+    dicaBanca: "Manifestos costumam defender valores, princípios e propostas de ação voltados para grupos ou para a sociedade."
+
+},
+{
+    texto: `Um pesquisador apresenta oralmente os resultados de seu estudo durante um congresso acadêmico. Sua exposição é acompanhada por slides contendo gráficos, tabelas e sínteses das principais conclusões obtidas.`,
+
+    pergunta: "A situação comunicativa descrita corresponde predominantemente ao gênero:",
+
+    alternativas: [
+
+        "seminário, por envolver apresentação oral estruturada de conhecimentos a um público específico.",
+
+        "artigo científico, por divulgar formalmente resultados de pesquisa em publicação especializada.",
+
+        "resenha crítica, por avaliar contribuições produzidas por outros pesquisadores.",
+
+        "editorial acadêmico, por expressar posicionamento institucional acerca de determinado tema.",
+
+        "ata de congresso, por registrar oficialmente as atividades desenvolvidas durante o evento."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. O seminário caracteriza-se pela exposição oral organizada de conhecimentos, frequentemente apoiada por recursos visuais.",
+
+    feedbackErro: "Embora os resultados de pesquisa possam originar artigos científicos, a situação descrita enfatiza a apresentação oral.",
+
+    dicaBanca: "Observe se a questão trata de produção escrita ou de exposição oral. Essa diferença costuma ser decisiva."
+
+},
+{
+    texto: `Em uma rede social, uma instituição pública divulga publicação curta alertando a população sobre a necessidade de vacinação. O texto utiliza linguagem objetiva, elementos visuais e informações resumidas para alcançar grande número de pessoas.`,
+
+    pergunta: "A estratégia comunicativa apresentada aproxima o texto principalmente do gênero:",
+
+    alternativas: [
+
+        "campanha de conscientização, por buscar informar e influenciar comportamentos socialmente desejáveis.",
+
+        "editorial digital, por expressar posicionamento institucional detalhado sobre políticas públicas.",
+
+        "artigo de opinião, por desenvolver argumentação aprofundada acerca do tema tratado.",
+
+        "reportagem multimodal, por investigar diferentes aspectos relacionados à vacinação.",
+
+        "relatório informativo, por registrar dados produzidos por órgãos de saúde."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. O objetivo principal é conscientizar a população e estimular determinado comportamento.",
+
+    feedbackErro: "A brevidade do texto e a tentativa de mobilizar atitudes aproximam-no das campanhas de conscientização.",
+
+    dicaBanca: "Em gêneros digitais, observe não apenas o suporte, mas também a finalidade comunicativa predominante."
+
+},
+{
+    texto: `Uma publicação reúne perguntas frequentes de usuários sobre determinado serviço público, apresentando respostas objetivas para cada uma delas com o objetivo de esclarecer dúvidas recorrentes.`,
+
+    pergunta: "A organização textual descrita corresponde predominantemente ao gênero:",
+
+    alternativas: [
+
+        "guia de perguntas frequentes (FAQ), por estruturar informações a partir de dúvidas e respostas organizadas.",
+
+        "artigo científico, por desenvolver explicações fundamentadas em pesquisa especializada.",
+
+        "editorial institucional, por expressar posicionamento oficial acerca do serviço oferecido.",
+
+        "reportagem explicativa, por aprofundar diferentes aspectos relacionados ao tema abordado.",
+
+        "resenha informativa, por sintetizar e avaliar características do serviço mencionado."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A estrutura de perguntas e respostas é característica dos textos organizados como FAQ.",
+
+    feedbackErro: "O foco está no esclarecimento rápido de dúvidas recorrentes e não na argumentação ou avaliação do tema.",
+
+    dicaBanca: "Nem sempre a identificação do gênero depende do suporte; muitas vezes ela decorre da forma de organização do texto."
+
+},
+{
+    texto: `Uma associação de moradores torna público um documento no qual reivindica melhorias para o transporte público da região. O texto apresenta argumentos, solicita providências das autoridades e busca mobilizar apoio da comunidade.`,
+
+    pergunta: "Considerando os objetivos comunicativos apresentados, o texto aproxima-se mais adequadamente do gênero:",
+
+    alternativas: [
+
+        "carta aberta, por dirigir-se publicamente à sociedade ou às autoridades para defender determinada reivindicação.",
+
+        "ata, por registrar formalmente decisões tomadas pelos membros da associação.",
+
+        "memorando, por comunicar informações internas entre setores de uma instituição.",
+
+        "notícia, por relatar objetivamente fatos relacionados ao transporte público local.",
+
+        "relatório, por apresentar resultados decorrentes de ações previamente executadas."
+
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A carta aberta tem caráter público e busca sensibilizar leitores ou autoridades em torno de determinada causa.",
+
+    feedbackErro: "O texto não registra fatos nem comunica informações internas; ele procura mobilizar apoio para uma reivindicação coletiva.",
+
+    dicaBanca: "Cartas abertas costumam combinar argumentação, reivindicação e ampla divulgação ao público."
 }
 
 ];
