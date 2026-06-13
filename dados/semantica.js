@@ -833,6 +833,6 @@ const semantica = [
     feedbackErro: "A metáfora das portas abertas indica permanência de possibilidades ou caminhos interpretativos.",
 
     dicaBanca: "FGV aprecia questões em que a metáfora não elimina completamente uma possibilidade, mas apenas reduz sua probabilidade."
-},
+}
 
 ];
