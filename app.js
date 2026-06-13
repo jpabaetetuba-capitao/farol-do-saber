@@ -620,6 +620,8 @@ const bancoQuestoes = {
 
     bnccCiencias,
 
+    povosPreColombianos,
+
     
     
 };
@@ -854,6 +856,14 @@ if(nome === "ciencias"){
 if (nome === "informatica") {
 
     mostrarTela("informatica");
+
+    return;
+
+}
+
+if (nome === "historia") {
+
+    mostrarTela("historia");
 
     return;
 
@@ -2673,6 +2683,16 @@ case "bnccCiencias":
 
     break;
 
+case "povosPreColombianos":
+
+    titulo.innerHTML =
+        "🏺 Povos Pré-Colombianos";
+
+    imagem.src =
+        "imagens/mapas/povosPreColombianos.png";
+
+    break;
+
     }
 
 if(assunto === "fundamentosCiencias"){
@@ -2782,6 +2802,46 @@ if(assunto === "generos"){
 
     return;
 
+}
+
+if(assunto === "funcoes"){
+
+    abrirTeoria(
+        funcoesTeoria,
+        "📡 Funções da Linguagem"
+    );
+
+    return;
+
+}
+
+if(assunto === "coesao"){
+
+    abrirTeoria(
+        coesaoTeoria,
+        "🔗 Coesão e Coerência"
+    );
+
+    return;
+
+}
+
+if (assuntoAtual === "semantica") {
+    abrirTeoria(
+        semanticaTeoria,
+        "🧠 Semântica"
+    );
+    return;
+}
+
+if (assuntoAtual === "figuras") {
+
+    abrirTeoria(
+        figurasTeoria,
+        "🎭 Figuras de Linguagem"
+    );
+
+    return;
 }
 
 mostrarTela(
@@ -3147,6 +3207,54 @@ if(assuntoAtual === "generos"){
 
 }
 
+if(assuntoAtual === "funcoes"){
+
+    abrirTeoria(
+        funcoesTeoria,
+        "📡 Funções da Linguagem"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "coesao"){
+
+    abrirTeoria(
+        coesaoTeoria,
+        "🔗 Coesão e Coerência"
+    );
+
+    return;
+
+}
+
+if (assuntoAtual === "semantica") {
+    abrirTeoria(
+        semanticaTeoria,
+        "🧠 Semântica"
+    );
+    return;
+}
+if (assuntoAtual === "figuras") {
+
+    abrirTeoria(
+        figurasTeoria,
+        "🎭 Figuras de Linguagem"
+    );
+
+    return;
+}
+
+if (assuntoAtual === "povosPreColombianos") {
+    abrirTeoria(
+        povosPreColombianosTeoria,
+        "🏺 Povos Pré-Colombianos"
+    );
+    return;
+}
+
+
     mostrarTela("telaMapaMental");
 }
 
@@ -3196,6 +3304,12 @@ function voltarParaAssuntos(){
 
     ];
 
+  const assuntosHistoria = [
+
+        "povosPreColombianos"
+
+    ];
+
     if(
 
         assuntosPortugues.includes(
@@ -3238,7 +3352,21 @@ function voltarParaAssuntos(){
 
     }
 
-    else{
+else if(
+
+        assuntosHistoria.includes(
+            assuntoAtual
+        )
+
+   ) {
+
+        mostrarTela(
+            "historia"
+        );
+
+    }
+
+ else{
 
         mostrarTela(
             "didatica"
@@ -3247,6 +3375,7 @@ function voltarParaAssuntos(){
     }
 
 }
+
 function continuarQuestoes(){
 
     disciplinaAtual = assuntoAtual;
@@ -3301,6 +3430,8 @@ function atualizarPainelEstudos(){
         etnicoRacial: "📘 Relações Étnico-Raciais",
         educacaoCampo: "📘 Educação do Campo",
         curriculo: "📘 Currículo e Planejamento",
+        povosPreColombianos:
+"🏺 Povos Pré-Colombianos",
         interpretacao: "📖 Interpretação de Textos",
         generos: "📄 Tipologia e Gêneros Textuais",
         funcoes: "📡 Funções da Linguagem",
