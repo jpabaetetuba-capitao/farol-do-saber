@@ -3,570 +3,581 @@ const interpretacao = [
 {
     texto: `A leitura desempenha papel fundamental na formação do cidadão. Por meio dela, o indivíduo amplia seu repertório cultural, desenvolve o senso crítico e adquire novos conhecimentos. Em uma sociedade marcada pelo grande volume de informações circulando diariamente, a capacidade de compreender, analisar e interpretar textos torna-se cada vez mais importante. Ler não significa apenas decodificar palavras, mas construir sentidos, estabelecer relações e refletir sobre diferentes pontos de vista.`,
 
-    pergunta: "A ideia central do texto é:",
+    pergunta: "A argumentação desenvolvida no texto permite concluir que:",
 
     alternativas: [
 
-        "A leitura serve apenas para aumentar o vocabulário.",
+        "A ampliação do repertório cultural representa consequência secundária do processo de leitura quando comparada à aquisição de informações.",
 
-        "O excesso de informações torna a leitura desnecessária.",
+        "A interpretação crítica dos textos assume relevância crescente em contextos caracterizados pela ampla circulação de informações.",
 
-        "A leitura contribui para a formação crítica e intelectual do indivíduo.",
+        "A formação cidadã decorre principalmente do acesso a conteúdos informativos produzidos por diferentes meios de comunicação.",
 
-        "Ler consiste apenas em reconhecer palavras e frases.",
+        "A construção de sentidos depende prioritariamente do domínio técnico da linguagem utilizada pelo autor do texto.",
 
-        "A leitura é importante somente no ambiente escolar."
+        "O desenvolvimento do senso crítico ocorre independentemente da capacidade de estabelecer relações entre informações."
 
     ],
 
-    correta: 2,
+    correta: 1,
 
-    feedbackAcerto: "Correto. O texto enfatiza que a leitura desenvolve o senso crítico, amplia conhecimentos e contribui para a formação do cidadão.",
+    feedbackAcerto: "Correto. O texto relaciona diretamente a grande circulação de informações à necessidade crescente de compreender, analisar e interpretar textos.",
 
-    feedbackErro: "A ideia principal está relacionada à importância da leitura para o desenvolvimento intelectual e crítico. As demais alternativas apresentam informações parciais ou contradizem o texto.",
+    feedbackErro: "A conclusão correta deve considerar a articulação entre leitura, pensamento crítico e contexto social apresentada pelo texto.",
 
-    dicaBanca: "Em questões de ideia central, procure identificar a mensagem que resume todo o texto, e não apenas uma informação específica."
+    dicaBanca: "Em questões de inferência, observe como as ideias do texto se relacionam antes de escolher a alternativa mais abrangente."
 
 },
+
 {
     texto: `Em uma pequena cidade do interior, foi inaugurada uma nova biblioteca pública. Nos primeiros meses, a frequência de visitantes foi considerada baixa. Entretanto, após a realização de projetos de leitura voltados para crianças, adolescentes e idosos, o número de usuários aumentou significativamente. Atualmente, o espaço é utilizado não apenas para empréstimo de livros, mas também para palestras, oficinas e atividades culturais.`,
 
-    pergunta: "A partir das informações apresentadas, pode-se inferir que o aumento da utilização da biblioteca ocorreu principalmente porque:",
+    pergunta: "A interpretação mais consistente com as informações do texto é que:",
 
     alternativas: [
 
-        "A população foi obrigada a frequentar a biblioteca.",
+        "O aumento da frequência decorreu principalmente da ampliação das funções exercidas pela biblioteca junto à comunidade.",
 
-        "A biblioteca passou a oferecer atividades que despertaram o interesse da comunidade.",
+        "A elevação do número de usuários resultou da substituição de outras formas de acesso à cultura existentes na cidade.",
 
-        "Os moradores deixaram de utilizar a internet para buscar informações.",
+        "A procura pela biblioteca aumentou em razão do interesse espontâneo da população pelos empréstimos de livros.",
 
-        "O empréstimo de livros tornou-se gratuito após a inauguração.",
+        "A realização dos projetos de leitura teve influência limitada sobre a utilização posterior do espaço público.",
 
-        "A cidade proibiu outras formas de acesso à cultura."
+        "A biblioteca passou a concentrar suas atividades exclusivamente em ações voltadas para o público estudantil."
 
     ],
 
-    correta: 1,
+    correta: 0,
 
-    feedbackAcerto: "Correto. Embora o texto não afirme isso diretamente, é possível concluir que os projetos de leitura e as atividades culturais contribuíram para aumentar o interesse da comunidade pela biblioteca.",
+    feedbackAcerto: "Correto. O texto sugere que os projetos e atividades desenvolvidos ampliaram a participação da comunidade e fortaleceram o papel social da biblioteca.",
 
-    feedbackErro: "Esta é uma questão de inferência. A resposta correta não está escrita literalmente no texto, mas pode ser concluída a partir da sequência dos acontecimentos apresentados.",
+    feedbackErro: "A resposta deve ser construída a partir da relação entre as ações implementadas e o aumento da utilização do espaço.",
 
-    dicaBanca: "Questões de inferência exigem que o candidato conclua algo a partir das informações fornecidas, sem inventar fatos que não aparecem no texto."
+    dicaBanca: "Questões de inferência costumam exigir a identificação de relações de causa e consequência não explicitadas diretamente."
 
 },
+
 {
     texto: `Nos últimos anos, o uso de bicicletas como meio de transporte urbano tem crescido em diversas cidades. Além de contribuir para a redução do trânsito e da poluição, a prática proporciona benefícios à saúde. No entanto, especialistas defendem que a expansão do uso da bicicleta deve ser acompanhada de investimentos em ciclovias e campanhas de conscientização para motoristas e ciclistas. Sem essas medidas, o aumento do número de ciclistas pode não resultar em melhorias significativas na mobilidade urbana.`,
 
-    pergunta: "Qual das alternativas apresenta uma opinião expressa no texto?",
+    pergunta: "A posição defendida pelos especialistas fundamenta-se na ideia de que:",
 
     alternativas: [
 
-        "O uso de bicicletas tem crescido em diversas cidades.",
+        "Os benefícios associados ao uso da bicicleta dependem exclusivamente da adesão crescente da população ao modal.",
 
-        "A prática proporciona benefícios à saúde.",
+        "A ampliação do número de ciclistas constitui condição suficiente para transformar a mobilidade urbana das cidades.",
 
-        "A expansão do uso da bicicleta deve ser acompanhada de investimentos em infraestrutura.",
+        "Os impactos positivos da utilização da bicicleta tendem a ser potencializados por ações estruturais e educativas.",
 
-        "Há aumento do número de ciclistas em algumas cidades.",
+        "As campanhas de conscientização apresentam maior relevância que os investimentos em infraestrutura cicloviária.",
 
-        "A bicicleta contribui para a redução do trânsito."
+        "A redução da poluição urbana decorre prioritariamente da adoção de medidas voltadas aos motoristas."
 
     ],
 
     correta: 2,
 
-    feedbackAcerto: "Correto. A expressão 'especialistas defendem' indica um posicionamento, uma recomendação, ou seja, uma opinião.",
+    feedbackAcerto: "Correto. O texto sustenta que os benefícios da expansão do uso da bicicleta dependem também de infraestrutura adequada e conscientização.",
 
-    feedbackErro: "Fato é algo que pode ser verificado ou comprovado. Opinião envolve julgamento, recomendação ou ponto de vista. A alternativa correta expressa uma recomendação dos especialistas.",
+    feedbackErro: "A opinião dos especialistas não se limita ao aumento do número de ciclistas, mas envolve condições que favoreçam resultados efetivos.",
 
-    dicaBanca: "Palavras como 'defendem', 'acreditam', 'consideram', 'deveria' e 'necessário' costumam indicar opinião."
+    dicaBanca: "Ao identificar uma opinião, procure compreender quais argumentos são utilizados para sustentá-la."
 
 },
+
 {
     texto: `O avanço da tecnologia modificou profundamente a forma como as pessoas se comunicam. Se, por um lado, as redes sociais aproximaram indivíduos que vivem em diferentes regiões do mundo, por outro, especialistas alertam para o risco da diminuição das interações presenciais. Muitos estudiosos defendem que a comunicação digital deve ser utilizada de forma equilibrada, servindo como complemento, e não substituição, das relações humanas construídas no convívio diário.`,
 
-    pergunta: "A principal ideia defendida no texto é:",
+    pergunta: "A tese central defendida no texto pode ser expressa adequadamente pela seguinte afirmação:",
 
     alternativas: [
 
-        "As redes sociais devem substituir totalmente as relações presenciais.",
+        "A comunicação digital tornou-se suficiente para atender às necessidades de interação social da sociedade contemporânea.",
 
-        "A tecnologia prejudica toda forma de comunicação humana.",
+        "Os avanços tecnológicos produziram efeitos predominantemente negativos sobre as relações humanas presenciais.",
 
-        "A comunicação digital deve ser utilizada de forma equilibrada.",
+        "O uso das tecnologias de comunicação deve ocorrer de forma compatível com a preservação das relações interpessoais diretas.",
 
-        "As relações presenciais deixaram de ser importantes.",
+        "As redes sociais representam o estágio mais avançado e completo das formas de comunicação atualmente existentes.",
 
-        "A comunicação digital é responsável por todos os problemas sociais."
+        "A valorização das relações presenciais exige a redução significativa da utilização de recursos digitais."
 
     ],
 
     correta: 2,
 
-    feedbackAcerto: "Correto. O texto reconhece benefícios da comunicação digital, mas defende seu uso equilibrado.",
+    feedbackAcerto: "Correto. O texto não rejeita a comunicação digital, mas defende sua utilização equilibrada e complementar.",
 
-    feedbackErro: "O autor não condena a tecnologia nem defende sua substituição às relações humanas. A ideia central é o equilíbrio.",
+    feedbackErro: "A tese do texto está associada à busca de equilíbrio entre os benefícios tecnológicos e a preservação das relações presenciais.",
 
-    dicaBanca: "A ideia principal normalmente aparece repetida ou reforçada ao longo do texto."
+    dicaBanca: "Em textos argumentativos, a tese costuma representar a posição que o autor procura sustentar ao longo da exposição."
 
-}
-,
+},
+
 {
     texto: `Durante décadas, acreditou-se que o desenvolvimento econômico de uma região dependia exclusivamente da exploração de recursos naturais. Atualmente, entretanto, diversos estudos demonstram que fatores como educação, inovação tecnológica e qualificação profissional possuem papel fundamental no crescimento sustentável das sociedades. Países que investiram fortemente em educação apresentaram avanços significativos não apenas na economia, mas também na qualidade de vida da população.`,
 
-    pergunta: "Pode-se concluir corretamente que:",
+    pergunta: "Com base na progressão argumentativa do texto, é correto afirmar que:",
 
     alternativas: [
 
-        "Os recursos naturais deixaram de ter qualquer importância.",
+        "O desenvolvimento sustentável resulta da combinação de diferentes fatores, entre os quais se destacam educação e inovação.",
 
-        "A educação é apontada como um dos fatores que contribuem para o desenvolvimento sustentável.",
+        "A exploração de recursos naturais tornou-se incompatível com qualquer estratégia de crescimento econômico contemporâneo.",
 
-        "O crescimento econômico depende exclusivamente da tecnologia.",
+        "Os avanços econômicos observados em diferentes países decorreram prioritariamente da qualificação profissional.",
 
-        "A qualidade de vida não possui relação com a educação.",
+        "A melhoria da qualidade de vida representa consequência indireta da inovação tecnológica, independentemente da educação.",
 
-        "A exploração de recursos naturais é prejudicial em qualquer situação."
+        "Os estudos atuais substituíram completamente as teorias anteriores sobre desenvolvimento econômico regional."
 
     ],
 
-    correta: 1,
+    correta: 0,
 
-    feedbackAcerto: "Correto. O texto destaca a educação como um dos elementos fundamentais para o desenvolvimento sustentável.",
+    feedbackAcerto: "Correto. O texto abandona a explicação baseada em um único fator e passa a defender uma visão multifatorial do desenvolvimento.",
 
-    feedbackErro: "O texto não trabalha com exclusividade. Ele apresenta vários fatores que contribuem para o desenvolvimento.",
+    feedbackErro: "A interpretação adequada deve considerar a relação entre educação, inovação, qualificação profissional e desenvolvimento sustentável.",
 
-    dicaBanca: "Desconfie de alternativas que utilizam palavras como 'apenas', 'somente', 'exclusivamente' e 'sempre'."
+    dicaBanca: "Observe quando o autor substitui uma explicação simplificada por uma interpretação mais ampla e complexa."
 
-}
-,
+},
+
+
 {
     texto: `Uma pesquisa realizada com estudantes revelou que aqueles que mantêm uma rotina organizada de estudos apresentam melhor desempenho acadêmico. Contudo, os pesquisadores destacam que não existe uma fórmula única para o sucesso escolar. Aspectos como motivação, ambiente familiar, condições socioeconômicas e acesso a recursos educacionais também influenciam os resultados obtidos pelos alunos.`,
 
-    pergunta: "A partir da leitura do texto, é correto afirmar que:",
+    pergunta: "A conclusão mais consistente com a argumentação apresentada é:",
 
     alternativas: [
 
-        "A organização dos estudos garante sucesso em qualquer situação.",
+        "A organização dos estudos constitui um fator relevante, embora os resultados acadêmicos sejam influenciados por múltiplas variáveis.",
 
-        "O desempenho escolar depende exclusivamente da motivação.",
+        "O desempenho escolar depende prioritariamente das condições socioeconômicas dos estudantes.",
 
-        "A rotina organizada é um fator relevante, mas não o único responsável pelos resultados.",
+        "A motivação individual é suficiente para compensar limitações relacionadas ao contexto educacional.",
 
-        "O ambiente familiar não interfere na aprendizagem.",
+        "A existência de uma rotina organizada elimina a influência de fatores externos sobre a aprendizagem.",
 
-        "Todos os estudantes possuem as mesmas condições de aprendizagem."
+        "O acesso a recursos educacionais apresenta impacto reduzido quando comparado aos hábitos de estudo."
 
     ],
 
-    correta: 2,
+    correta: 0,
 
-    feedbackAcerto: "Correto. O texto reconhece a importância da organização, mas destaca outros fatores envolvidos.",
+    feedbackAcerto: "Correto. O texto reconhece a importância da organização dos estudos, mas ressalta que ela não explica sozinha os resultados acadêmicos.",
 
-    feedbackErro: "A questão exige interpretação global. O texto não atribui os resultados a um único fator.",
+    feedbackErro: "A interpretação adequada exige considerar tanto a relevância da organização quanto a influência de outros fatores mencionados.",
 
-    dicaBanca: "Observe expressões como 'também', 'além disso' e 'contudo', pois costumam ampliar ou restringir ideias."
+    dicaBanca: "Em textos argumentativos, atenção para elementos que relativizam explicações únicas para fenômenos complexos."
 
-}
-,
+},
+
 {
     texto: `A preservação ambiental tornou-se uma das principais preocupações do século XXI. Governos, empresas e organizações da sociedade civil têm buscado alternativas para reduzir os impactos causados pela atividade humana. Apesar dos avanços alcançados, especialistas afirmam que ainda existem desafios significativos relacionados ao consumo excessivo de recursos naturais e à produção de resíduos em larga escala.`,
 
-    pergunta: "A informação implícita no texto é que:",
+    pergunta: "Uma inferência compatível com as ideias do texto é que:",
 
     alternativas: [
 
-        "Os problemas ambientais já foram totalmente solucionados.",
+        "As medidas adotadas até o momento contribuíram para avanços, mas não eliminaram os principais desafios ambientais.",
 
-        "A preservação ambiental depende apenas dos governos.",
+        "As iniciativas de preservação ambiental demonstraram resultados insuficientes para justificar sua continuidade.",
 
-        "Ainda são necessárias novas ações para enfrentar os desafios ambientais.",
+        "O consumo de recursos naturais deixou de representar preocupação para especialistas da área.",
 
-        "O consumo de recursos naturais deixou de preocupar especialistas.",
+        "A responsabilidade pela preservação ambiental deve ser atribuída exclusivamente ao setor público.",
 
-        "A sociedade não participa das questões ambientais."
+        "A produção de resíduos tornou-se um problema secundário diante dos demais desafios ambientais."
 
     ],
 
-    correta: 2,
+    correta: 0,
 
-    feedbackAcerto: "Correto. O texto sugere que, apesar dos avanços, ainda existem desafios que exigem novas medidas.",
+    feedbackAcerto: "Correto. O texto reconhece avanços, mas ressalta a permanência de desafios importantes.",
 
-    feedbackErro: "Questões de informação implícita exigem identificar aquilo que está sugerido pelo texto, mesmo sem estar declarado diretamente.",
+    feedbackErro: "A alternativa correta deve conciliar as duas ideias centrais do texto: progresso alcançado e desafios persistentes.",
 
-    dicaBanca: "Leia as entrelinhas. Muitas respostas corretas dependem de informações implícitas."
+    dicaBanca: "Questões de inferência exigem observar aquilo que decorre logicamente das informações apresentadas."
 
-}
-,
+},
+
 {
     texto: `Ao longo da história, diferentes invenções transformaram profundamente a vida em sociedade. A imprensa ampliou o acesso ao conhecimento, a eletricidade revolucionou a indústria e os meios de comunicação reduziram distâncias entre povos. Atualmente, a inteligência artificial ocupa posição de destaque nesse processo de transformação, despertando expectativas positivas, mas também debates relacionados à ética, ao mercado de trabalho e à privacidade de dados.`,
 
-    pergunta: "A finalidade principal do texto é:",
+    pergunta: "A finalidade predominante do texto é:",
 
     alternativas: [
 
-        "Convencer o leitor de que a inteligência artificial deve ser proibida.",
+        "Defender a substituição de tecnologias tradicionais por sistemas de inteligência artificial.",
 
-        "Narrar uma experiência pessoal do autor.",
+        "Apresentar um panorama de transformações tecnológicas e discutir algumas implicações contemporâneas.",
 
-        "Informar sobre transformações tecnológicas e seus impactos.",
+        "Demonstrar que os benefícios da inteligência artificial superam qualquer preocupação existente.",
 
-        "Criticar exclusivamente o uso da inteligência artificial.",
+        "Convencer o leitor de que os avanços tecnológicos devem ser limitados por regulamentações rigorosas.",
 
-        "Defender que apenas invenções antigas foram importantes."
+        "Criticar os impactos provocados pelas invenções que marcaram diferentes períodos históricos."
 
     ],
 
-    correta: 2,
+    correta: 1,
 
-    feedbackAcerto: "Correto. O texto tem caráter predominantemente informativo.",
+    feedbackAcerto: "Correto. O texto possui caráter predominantemente expositivo e informativo.",
 
-    feedbackErro: "O autor apresenta informações e reflexões sobre o impacto das inovações tecnológicas ao longo da história.",
+    feedbackErro: "O autor apresenta informações e reflexões, sem assumir posição radical favorável ou contrária às tecnologias citadas.",
 
-    dicaBanca: "Questões sobre finalidade textual exigem identificar a intenção predominante do autor."
+    dicaBanca: "Ao analisar a finalidade textual, identifique a intenção predominante do autor e não informações isoladas."
 
 },
+
 {
     texto: `Em diferentes momentos da história, grandes transformações sociais ocorreram em razão da capacidade humana de produzir e compartilhar conhecimento. O desenvolvimento científico permitiu avanços significativos na medicina, na agricultura e nos meios de transporte. Entretanto, diversos estudiosos observam que a simples produção de conhecimento não garante benefícios coletivos. Para que o progresso científico se traduza em melhorias concretas para a sociedade, é necessário que os resultados das pesquisas sejam acessíveis e utilizados de maneira ética e responsável.`,
 
-    pergunta: "A principal reflexão apresentada pelo texto é:",
+    pergunta: "A tese sustentada pelo texto pode ser sintetizada pela afirmação de que:",
 
     alternativas: [
 
-        "O conhecimento científico não produz benefícios sociais.",
+        "A produção científica perde relevância quando associada a preocupações éticas e sociais.",
 
-        "A ciência perdeu sua importância na sociedade atual.",
+        "O conhecimento científico gera benefícios automáticos independentemente da forma como é utilizado.",
 
-        "A produção de conhecimento, por si só, não garante melhorias para a população.",
+        "O impacto positivo da ciência depende não apenas da produção de conhecimento, mas também de sua utilização responsável.",
 
-        "O acesso ao conhecimento deve ser restrito aos especialistas.",
+        "O acesso aos resultados científicos deve ser restrito a especialistas para evitar interpretações equivocadas.",
 
-        "O progresso científico ocorre independentemente de fatores éticos."
+        "O progresso científico apresenta importância limitada diante de outros fatores de transformação social."
 
     ],
 
     correta: 2,
 
-    feedbackAcerto: "Correto. O texto destaca que a produção de conhecimento é importante, mas não suficiente para gerar benefícios sociais.",
+    feedbackAcerto: "Correto. O texto diferencia a produção do conhecimento de sua efetiva aplicação em benefício da sociedade.",
 
-    feedbackErro: "A ideia central está relacionada à necessidade de utilização ética e acessível do conhecimento produzido.",
+    feedbackErro: "A argumentação do texto enfatiza a necessidade de acesso e uso ético dos resultados científicos.",
 
-    dicaBanca: "Procure identificar a conclusão defendida pelo autor e não apenas informações isoladas."
+    dicaBanca: "Busque identificar a conclusão defendida pelo autor ao final do raciocínio desenvolvido."
 
 },
+
 {
     texto: `Embora a tecnologia tenha ampliado o acesso à informação, especialistas alertam para um fenômeno cada vez mais comum: o excesso de dados disponíveis. Em muitos casos, a dificuldade das pessoas já não está em encontrar informações, mas em avaliar sua qualidade, verificar sua veracidade e selecionar aquilo que realmente é relevante. Nesse contexto, habilidades relacionadas ao pensamento crítico tornaram-se essenciais para a formação cidadã.`,
 
-    pergunta: "De acordo com o texto, o principal desafio atual relacionado à informação é:",
+    pergunta: "A progressão das ideias do texto permite concluir que:",
 
     alternativas: [
 
-        "A falta de acesso aos meios digitais.",
+        "A ampliação do acesso à informação reduziu a necessidade de desenvolver competências analíticas.",
 
-        "A ausência de produção de conhecimento.",
+        "A abundância de informações torna dispensáveis mecanismos de verificação e seleção de conteúdo.",
 
-        "A dificuldade de avaliar e selecionar informações confiáveis.",
+        "A principal dificuldade contemporânea está associada à escassez de informações confiáveis disponíveis.",
 
-        "A inexistência de ferramentas de pesquisa.",
+        "O desenvolvimento do pensamento crítico constitui resposta às exigências impostas pelo excesso de informações.",
 
-        "A redução do volume de informações disponíveis."
+        "A formação cidadã depende prioritariamente da capacidade de acessar plataformas digitais de comunicação."
 
     ],
 
-    correta: 2,
+    correta: 3,
 
-    feedbackAcerto: "Correto. O texto afirma que o problema atual não é encontrar informações, mas avaliá-las criticamente.",
+    feedbackAcerto: "Correto. O texto relaciona diretamente o excesso de informações à necessidade de pensamento crítico.",
 
-    feedbackErro: "A resposta está relacionada à qualidade e seleção das informações, e não à sua disponibilidade.",
+    feedbackErro: "A resposta correta deve considerar a relação estabelecida pelo autor entre informação, análise crítica e cidadania.",
 
-    dicaBanca: "Observe a oposição estabelecida pelo autor entre quantidade e qualidade da informação."
+    dicaBanca: "Observe como o autor constrói relações de causa e consequência entre os fenômenos apresentados."
 
 },
+
 {
     texto: `Uma cidade decidiu investir simultaneamente em educação, mobilidade urbana e preservação ambiental. Após alguns anos, indicadores apontaram melhorias na qualidade de vida da população. Apesar disso, pesquisadores destacaram que os resultados observados não podem ser atribuídos a uma única medida, mas ao conjunto de políticas implementadas de forma integrada.`,
 
-    pergunta: "A conclusão mais adequada a partir do texto é:",
+    pergunta: "A interpretação mais adequada das informações apresentadas é que:",
 
     alternativas: [
 
-        "A educação foi a única responsável pelos resultados obtidos.",
+        "As melhorias observadas decorreram da interação entre diferentes políticas públicas implementadas.",
 
-        "As melhorias observadas decorreram de um conjunto de ações articuladas.",
+        "Os avanços registrados foram consequência predominante dos investimentos em educação.",
 
-        "A mobilidade urbana não influenciou os resultados.",
+        "Os indicadores utilizados não permitem relacionar políticas públicas e qualidade de vida.",
 
-        "Os indicadores utilizados não possuem relevância.",
+        "A preservação ambiental exerceu influência mais significativa que os demais fatores considerados.",
 
-        "As políticas ambientais foram suficientes para explicar todas as melhorias."
+        "Os resultados demonstram que ações isoladas produzem efeitos equivalentes aos de estratégias integradas."
 
     ],
 
-    correta: 1,
+    correta: 0,
 
-    feedbackAcerto: "Correto. O texto enfatiza a atuação conjunta das políticas públicas.",
+    feedbackAcerto: "Correto. O texto enfatiza que os resultados decorreram da atuação conjunta das políticas implementadas.",
 
-    feedbackErro: "A questão exige interpretação global e rejeição de explicações simplificadas.",
+    feedbackErro: "A argumentação do texto rejeita explicações simplificadas baseadas em uma única causa.",
 
-    dicaBanca: "Evite alternativas que atribuem resultados complexos a uma única causa."
+    dicaBanca: "Questões de interpretação frequentemente exigem a identificação de relações multifatoriais."
 
 },
+
 {
     texto: `Ao analisar diferentes modelos educacionais, pesquisadores observaram que não existe uma metodologia capaz de resolver todos os desafios da aprendizagem. Estratégias consideradas eficazes em determinado contexto podem apresentar resultados limitados em outras realidades. Por essa razão, muitos especialistas defendem que a prática pedagógica deve considerar as características dos estudantes e do ambiente em que estão inseridos.`,
 
-    pergunta: "A ideia defendida pelo texto é que:",
+    pergunta: "A posição defendida pelos especialistas fundamenta-se na ideia de que:",
 
     alternativas: [
 
-        "Existe uma metodologia universal para todos os alunos.",
+        "Os resultados educacionais independem das características dos alunos e do contexto escolar.",
 
-        "O sucesso escolar independe do contexto.",
+        "Uma metodologia eficiente em determinado cenário tende a produzir resultados idênticos em qualquer realidade.",
 
-        "As práticas pedagógicas devem considerar diferentes realidades.",
+        "A diversidade de contextos exige adaptações das práticas pedagógicas às necessidades dos estudantes.",
 
-        "Todas as metodologias produzem os mesmos resultados.",
+        "A aprendizagem depende exclusivamente da metodologia adotada pelo professor.",
 
-        "A aprendizagem depende apenas do professor."
+        "As diferenças existentes entre os estudantes possuem impacto reduzido sobre os processos de aprendizagem."
 
     ],
 
     correta: 2,
 
-    feedbackAcerto: "Correto. O texto valoriza a adaptação das práticas pedagógicas às diferentes realidades.",
+    feedbackAcerto: "Correto. O texto destaca a necessidade de adequação das práticas pedagógicas às diferentes realidades.",
 
-    feedbackErro: "O autor rejeita a ideia de soluções universais para a educação.",
+    feedbackErro: "A interpretação correta exige compreender a rejeição de soluções universais para a educação.",
 
-    dicaBanca: "Observe quando o texto apresenta relativizações ou exceções."
+    dicaBanca: "Observe quando o autor relativiza generalizações e valoriza fatores contextuais."
 
 },
+
 {
     texto: `A expansão das cidades trouxe inúmeros benefícios econômicos e sociais. Entretanto, o crescimento urbano acelerado também gerou desafios relacionados ao trânsito, ao saneamento básico e à ocupação desordenada do espaço urbano. Nesse cenário, especialistas defendem a necessidade de planejamento de longo prazo para garantir o desenvolvimento sustentável das áreas urbanas.`,
 
-    pergunta: "A palavra 'Entretanto' estabelece uma relação de:",
+    pergunta: "O emprego da palavra 'Entretanto' contribui para estabelecer no texto uma relação de:",
 
     alternativas: [
 
-        "Conclusão.",
+        "explicação entre os benefícios urbanos e os desafios decorrentes do crescimento populacional.",
 
-        "Explicação.",
+        "conclusão acerca dos efeitos produzidos pela expansão das cidades.",
 
-        "Condição.",
+        "contraste entre aspectos positivos e problemas associados ao processo de urbanização.",
 
-        "Oposição.",
+        "condição necessária para o desenvolvimento sustentável das áreas urbanas.",
 
-        "Finalidade."
+        "finalidade relacionada à implementação de políticas de planejamento urbano."
 
     ],
 
-    correta: 3,
+    correta: 2,
 
-    feedbackAcerto: "Correto. A palavra introduz uma ideia contrária ao que foi apresentado anteriormente.",
+    feedbackAcerto: "Correto. O conectivo introduz uma oposição entre os benefícios e os problemas decorrentes da expansão urbana.",
 
-    feedbackErro: "Conectivos são frequentemente cobrados em interpretação de textos e ajudam a compreender a relação entre as ideias.",
+    feedbackErro: "A compreensão dos conectivos é fundamental para identificar a progressão argumentativa do texto.",
 
-    dicaBanca: "Identifique a função das palavras de ligação no desenvolvimento do texto."
+    dicaBanca: "Em provas de interpretação, conectivos frequentemente revelam relações lógicas importantes."
 
 },
+
 {
     texto: `Ao longo das últimas décadas, o acesso à informação tornou-se cada vez mais rápido. Notícias, opiniões e dados circulam em velocidade inédita por meio das plataformas digitais. No entanto, essa facilidade trouxe um desafio importante: a necessidade de verificar a confiabilidade das informações consumidas diariamente. Em muitos casos, conteúdos falsos ou distorcidos são compartilhados sem qualquer análise crítica, contribuindo para a disseminação da desinformação. Diante desse cenário, educadores e pesquisadores destacam a importância do desenvolvimento da leitura crítica e da educação midiática.`,
 
-    pergunta: "A principal preocupação apresentada no texto é:",
+    pergunta: "A preocupação central apresentada pelo texto está relacionada:",
 
     alternativas: [
 
-        "A redução do acesso à informação.",
+        "à substituição gradual dos meios tradicionais de comunicação pelas plataformas digitais.",
 
-        "A substituição dos meios digitais pelos impressos.",
+        "ao crescimento da circulação de conteúdos sem avaliação adequada de sua confiabilidade.",
 
-        "A dificuldade de produzir conteúdos digitais.",
+        "à dificuldade de produção de informações em ambientes digitais contemporâneos.",
 
-        "A circulação de informações sem verificação de confiabilidade.",
+        "à redução da velocidade de circulação das notícias nos meios eletrônicos.",
 
-        "A proibição do compartilhamento de notícias."
+        "à limitação do acesso da população aos recursos tecnológicos disponíveis."
 
     ],
 
-    correta: 3,
+    correta: 1,
 
-    feedbackAcerto: "Correto. O texto destaca os riscos da disseminação de informações falsas e a necessidade de análise crítica.",
+    feedbackAcerto: "Correto. O texto enfatiza os riscos associados à circulação de informações sem análise crítica.",
 
-    feedbackErro: "O foco do texto não é o acesso à informação, mas a avaliação de sua confiabilidade.",
+    feedbackErro: "O foco da argumentação está na verificação da confiabilidade das informações e não em sua disponibilidade.",
 
-    dicaBanca: "Identifique qual problema o autor procura discutir ou alertar."
+    dicaBanca: "Identifique qual problema o autor procura discutir ao longo do texto."
 
-}
-,
+},
+
 {
     texto: `Uma empresa decidiu implementar o trabalho remoto para parte de seus funcionários. Após alguns meses, foram observados benefícios como redução do tempo de deslocamento e maior flexibilidade de horários. Entretanto, alguns colaboradores relataram dificuldades relacionadas à comunicação entre equipes e à separação entre vida profissional e pessoal. Diante desses resultados, a direção concluiu que o modelo apresenta vantagens e desafios que devem ser constantemente avaliados.`,
 
-    pergunta: "A conclusão da direção da empresa foi que:",
+    pergunta: "A conclusão da direção da empresa demonstra uma postura:",
 
     alternativas: [
 
-        "O trabalho remoto deve ser abolido.",
+        "favorável à substituição definitiva do trabalho presencial pelo remoto.",
 
-        "O trabalho remoto apresenta apenas benefícios.",
+        "contrária à manutenção de qualquer modalidade de trabalho a distância.",
 
-        "O trabalho remoto apresenta aspectos positivos e negativos.",
+        "equilibrada, ao reconhecer simultaneamente benefícios e limitações do modelo adotado.",
 
-        "A comunicação deixou de ser necessária no ambiente profissional.",
+        "centrada exclusivamente nas dificuldades relatadas pelos colaboradores.",
 
-        "Os funcionários preferem trabalhar exclusivamente de forma presencial."
+        "baseada na convicção de que a flexibilidade de horários compensa todos os demais problemas."
 
     ],
 
     correta: 2,
 
-    feedbackAcerto: "Correto. O texto evidencia vantagens e dificuldades associadas ao trabalho remoto.",
+    feedbackAcerto: "Correto. A conclusão considera aspectos positivos e negativos do trabalho remoto.",
 
-    feedbackErro: "A conclusão apresentada é equilibrada e considera diferentes aspectos da situação.",
+    feedbackErro: "A direção não adota posição extrema, mas uma avaliação ponderada da experiência realizada.",
 
-    dicaBanca: "Muitas vezes a resposta correta está nas alternativas mais equilibradas."
+    dicaBanca: "Muitas bancas valorizam alternativas que refletem a complexidade e o equilíbrio da argumentação."
+},
 
-}
-,
 {
     texto: `O hábito da leitura costuma ser associado ao desempenho escolar, mas seus benefícios vão além da vida acadêmica. Ler amplia a capacidade de interpretação, fortalece a argumentação e favorece o desenvolvimento da empatia ao permitir contato com diferentes perspectivas e experiências humanas. Por essa razão, especialistas defendem que o incentivo à leitura deve ocorrer desde a infância e continuar ao longo de toda a vida.`,
 
-    pergunta: "Segundo o texto, um dos benefícios da leitura é:",
+    pergunta: "A defesa do incentivo contínuo à leitura fundamenta-se principalmente na ideia de que:",
 
     alternativas: [
 
-        "Eliminar completamente as dificuldades de aprendizagem.",
+        "os benefícios da leitura restringem-se ao aprimoramento das habilidades exigidas no ambiente escolar.",
 
-        "Garantir sucesso profissional em qualquer situação.",
+        "a leitura contribui para o desenvolvimento de competências intelectuais e sociais relevantes ao longo da vida.",
 
-        "Desenvolver a capacidade de compreender diferentes perspectivas.",
+        "o contato com diferentes perspectivas torna desnecessária a vivência de experiências concretas.",
 
-        "Substituir a necessidade de experiências pessoais.",
+        "a formação da empatia depende exclusivamente da prática constante da leitura.",
 
-        "Reduzir o contato com outras formas de conhecimento."
+        "a capacidade de argumentação apresenta importância secundária em comparação ao desempenho acadêmico."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. O texto destaca benefícios que ultrapassam o contexto escolar, justificando o incentivo permanente à leitura.",
+
+    feedbackErro: "A argumentação apresentada associa a leitura ao desenvolvimento de diversas competências cognitivas e sociais.",
+
+    dicaBanca: "Procure identificar quais razões o autor utiliza para sustentar a conclusão apresentada."
+
+},
+
+{
+    texto: `Embora a preservação ambiental seja frequentemente discutida em conferências e fóruns internacionais, muitas mudanças dependem de atitudes adotadas no cotidiano das pessoas. A redução do desperdício, o consumo consciente e o descarte adequado de resíduos são exemplos de práticas que podem contribuir para a diminuição dos impactos ambientais. Assim, a responsabilidade pela preservação do meio ambiente não se limita aos governos ou às grandes empresas.`,
+
+    pergunta: "A progressão argumentativa do texto permite inferir que:",
+
+    alternativas: [
+
+        "as ações individuais possuem capacidade limitada para influenciar questões ambientais.",
+
+        "a responsabilidade ambiental deve ser compartilhada entre diferentes agentes sociais.",
+
+        "as conferências internacionais representam o principal mecanismo de preservação ambiental.",
+
+        "as empresas exercem papel menos relevante que os indivíduos na proteção ambiental.",
+
+        "a redução dos impactos ambientais depende exclusivamente de mudanças legislativas."
+
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. O texto amplia a responsabilidade ambiental para além dos governos e empresas, incluindo os indivíduos.",
+
+    feedbackErro: "A inferência correta deve considerar a ideia de responsabilidade compartilhada defendida pelo autor.",
+
+    dicaBanca: "Observe quando o texto amplia o alcance de uma responsabilidade ou de uma ação."
+
+},
+
+{
+    texto: `Ao analisar os resultados de uma avaliação educacional, pesquisadores identificaram diferenças significativas entre escolas de contextos socioeconômicos distintos. Apesar disso, também encontraram exemplos de instituições localizadas em áreas vulneráveis que apresentaram desempenhos acima da média. Esse resultado levou os estudiosos a concluir que fatores socioeconômicos influenciam a aprendizagem, mas não determinam completamente os resultados educacionais.`,
+
+    pergunta: "A conclusão dos pesquisadores rejeita principalmente a ideia de que:",
+
+    alternativas: [
+
+        "os fatores socioeconômicos exercem influência sobre os resultados escolares.",
+
+        "a aprendizagem pode ser afetada por condições externas ao ambiente escolar.",
+
+        "o desempenho educacional esteja integralmente condicionado ao contexto socioeconômico.",
+
+        "existam diferenças de desempenho entre escolas inseridas em realidades distintas.",
+
+        "a análise dos resultados educacionais exija a consideração de múltiplos fatores."
 
     ],
 
     correta: 2,
 
-    feedbackAcerto: "Correto. O texto relaciona a leitura ao desenvolvimento da empatia e da compreensão de diferentes perspectivas.",
+    feedbackAcerto: "Correto. O texto rejeita explicações deterministas e reconhece a existência de exceções relevantes.",
 
-    feedbackErro: "A alternativa correta deve estar diretamente apoiada pelas informações do texto.",
+    feedbackErro: "A resposta correta deve refletir a oposição feita pelos pesquisadores ao determinismo socioeconômico.",
 
-    dicaBanca: "Evite respostas absolutas que prometem resultados garantidos."
-
-}
-,
-{
-    texto: `Embora a preservação ambiental seja frequentemente discutida em conferências e fóruns internacionais, muitas mudanças dependem de atitudes adotadas no cotidiano das pessoas. A redução do desperdício, o consumo consciente e o descarte adequado de resíduos são exemplos de práticas que podem contribuir para a diminuição dos impactos ambientais. Assim, a responsabilidade pela preservação do meio ambiente não se limita aos governos ou às grandes empresas.`,
-
-    pergunta: "Pode-se inferir do texto que:",
-
-    alternativas: [
-
-        "Somente governos possuem responsabilidade ambiental.",
-
-        "As ações individuais também podem contribuir para a preservação ambiental.",
-
-        "As empresas não possuem qualquer responsabilidade ambiental.",
-
-        "As conferências internacionais resolvem todos os problemas ambientais.",
-
-        "O consumo consciente não influencia o meio ambiente."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. O texto destaca a importância das atitudes individuais para a preservação ambiental.",
-
-    feedbackErro: "A inferência correta deve estar de acordo com a ideia geral apresentada pelo texto.",
-
-    dicaBanca: "Observe o que o autor sugere, mesmo sem afirmar diretamente."
-
-}
-,
-{
-    texto: `Ao analisar os resultados de uma avaliação educacional, pesquisadores identificaram diferenças significativas entre escolas de contextos socioeconômicos distintos. Apesar disso, também encontraram exemplos de instituições localizadas em áreas vulneráveis que apresentaram desempenhos acima da média. Esse resultado levou os estudiosos a concluir que fatores socioeconômicos influenciam a aprendizagem, mas não determinam completamente os resultados educacionais.`,
-
-    pergunta: "A conclusão dos pesquisadores foi que:",
-
-    alternativas: [
-
-        "Os fatores socioeconômicos não possuem qualquer influência.",
-
-        "O desempenho escolar depende exclusivamente da renda.",
-
-        "A aprendizagem é determinada apenas pela localização da escola.",
-
-        "Os fatores socioeconômicos influenciam, mas não explicam totalmente os resultados.",
-
-        "Todas as escolas apresentam desempenhos semelhantes."
-
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. O texto reconhece a influência dos fatores socioeconômicos, mas rejeita a ideia de determinismo absoluto.",
-
-    feedbackErro: "A resposta correta deve considerar todas as informações apresentadas no texto.",
-
-    dicaBanca: "Desconfie de alternativas extremas como 'sempre', 'nunca', 'somente' e 'exclusivamente'."
+    dicaBanca: "Muitas questões exigem identificar não apenas o que o autor afirma, mas também o que ele procura refutar."
 
 },
+
 {
     texto: `Ao longo da história, diferentes sociedades desenvolveram mecanismos para transmitir conhecimentos às novas gerações. Inicialmente, esse processo ocorria principalmente por meio da oralidade. Com o surgimento da escrita, tornou-se possível registrar informações e preservar experiências por períodos mais longos. Atualmente, a expansão das tecnologias digitais ampliou significativamente as formas de produção e circulação do conhecimento. Entretanto, especialistas alertam que o acesso à informação não garante, por si só, a construção do conhecimento, uma vez que essa construção depende da capacidade de analisar, interpretar e relacionar informações de maneira crítica.`,
 
-    pergunta: "A principal ideia defendida pelo texto é:",
+    pergunta: "A distinção estabelecida pelo texto entre informação e conhecimento baseia-se na ideia de que:",
 
     alternativas: [
 
-        "A escrita tornou desnecessária a transmissão oral de conhecimentos.",
+        "o acesso à informação constitui condição suficiente para a aprendizagem significativa.",
 
-        "As tecnologias digitais eliminaram a necessidade de reflexão crítica.",
+        "a construção do conhecimento exige processos de análise e interpretação das informações disponíveis.",
 
-        "O acesso à informação é suficiente para garantir a aprendizagem.",
+        "as tecnologias digitais reduziram a importância das capacidades cognitivas relacionadas à aprendizagem.",
 
-        "A construção do conhecimento exige mais do que o simples acesso à informação.",
+        "a oralidade e a escrita deixaram de exercer influência sobre a formação do conhecimento humano.",
 
-        "As sociedades antigas não possuíam formas de transmitir conhecimentos."
-
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. O texto diferencia acesso à informação e construção do conhecimento, destacando a importância da análise crítica.",
-
-    feedbackErro: "O texto não afirma que a informação é suficiente para aprender. Pelo contrário, destaca a necessidade de interpretação e reflexão.",
-
-    dicaBanca: "Em textos argumentativos, procure identificar a tese defendida pelo autor, geralmente reforçada na conclusão."
-
-},
-{
-    texto: `A convivência em sociedade exige o estabelecimento de regras que orientem comportamentos e promovam o bem-estar coletivo. No entanto, o simples conhecimento dessas regras não garante sua efetiva observância. Diversos fatores, como valores pessoais, contexto social e experiências individuais, influenciam a forma como cada pessoa interpreta e aplica normas em seu cotidiano. Por essa razão, estudiosos afirmam que a formação cidadã não depende apenas da transmissão de informações, mas também do desenvolvimento de atitudes relacionadas à responsabilidade, ao respeito e à participação social.`,
-
-    pergunta: "Com base no texto, é correto afirmar que:",
-
-    alternativas: [
-
-        "O conhecimento das regras é suficiente para garantir comportamentos adequados.",
-
-        "A formação cidadã envolve aspectos que vão além da simples transmissão de informações.",
-
-        "Valores pessoais não influenciam o comportamento dos indivíduos.",
-
-        "As normas sociais são interpretadas da mesma forma por todas as pessoas.",
-
-        "A participação social não possui relação com a cidadania."
+        "a circulação de informações apresenta relevância superior aos processos de reflexão crítica."
 
     ],
 
     correta: 1,
 
-    feedbackAcerto: "Correto. O texto destaca que a formação cidadã envolve atitudes, valores e participação social, além do conhecimento das regras.",
+    feedbackAcerto: "Correto. O texto diferencia claramente o acesso à informação da efetiva construção do conhecimento.",
 
-    feedbackErro: "A cidadania é apresentada como um processo mais amplo do que a simples transmissão de informações ou normas.",
+    feedbackErro: "A resposta deve considerar a importância atribuída pelo autor à análise crítica das informações.",
 
-    dicaBanca: "Questões de interpretação costumam exigir atenção às conclusões apresentadas pelo autor e às relações entre as ideias do texto."
+    dicaBanca: "Observe conceitos que o texto aproxima ou diferencia ao longo da argumentação."
 
+},
+
+{
+    texto: `A convivência em sociedade exige o estabelecimento de regras que orientem comportamentos e promovam o bem-estar coletivo. No entanto, o simples conhecimento dessas regras não garante sua efetiva observância. Diversos fatores, como valores pessoais, contexto social e experiências individuais, influenciam a forma como cada pessoa interpreta e aplica normas em seu cotidiano. Por essa razão, estudiosos afirmam que a formação cidadã não depende apenas da transmissão de informações, mas também do desenvolvimento de atitudes relacionadas à responsabilidade, ao respeito e à participação social.`,
+
+    pergunta: "A tese defendida pelo texto pode ser adequadamente resumida pela afirmação de que:",
+
+    alternativas: [
+
+        "a cidadania resulta exclusivamente do conhecimento das normas que regulam a vida em sociedade.",
+
+        "a observância das regras sociais independe das experiências vividas pelos indivíduos.",
+
+        "a formação cidadã envolve conhecimentos, valores e atitudes relacionados à convivência social.",
+
+        "o respeito às normas representa consequência automática da educação formal recebida pelos cidadãos.",
+
+        "a participação social possui relevância secundária nos processos de formação cidadã."
+
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. O texto amplia o conceito de formação cidadã para além da simples transmissão de informações.",
+
+    feedbackErro: "A resposta correta deve considerar todos os elementos apontados pelo autor como constitutivos da cidadania.",
+
+    dicaBanca: "Em questões sobre tese, procure a alternativa que sintetiza a mensagem central defendida pelo texto."
 }
+
 
 ];
