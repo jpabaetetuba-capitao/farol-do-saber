@@ -2844,6 +2844,17 @@ if (assuntoAtual === "figuras") {
     return;
 }
 
+if (assuntoAtual === "povosPreColombianos") {
+
+    abrirTeoria(
+        povosPreColombianosTeoria,
+        "🏺 Povos Pré-Colombianos"
+    );
+
+    return;
+}
+
+
 mostrarTela(
     "telaMapaMental"
 );
