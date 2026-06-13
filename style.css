@@ -1320,3 +1320,468 @@ progress{
     }
 
 }
+
+/* ==========================
+   TEORIA PREMIUM FAROL DO SABER
+========================== */
+
+/* Animação ao trocar páginas */
+
+#conteudoTeoria{
+
+    animation:fadeTeoria .4s ease;
+
+}
+
+@keyframes fadeTeoria{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Título principal da teoria */
+
+#conteudoTeoria h2{
+
+    color:#00ff88;
+
+    text-shadow:
+        0 0 10px rgba(0,255,136,.35),
+        0 0 20px rgba(0,255,136,.15);
+
+    margin-bottom:20px;
+
+}
+
+/* Subtítulos */
+
+#conteudoTeoria h3{
+
+    color:#1e88e5;
+
+    margin-top:25px;
+
+    margin-bottom:12px;
+
+}
+
+/* Caixa de destaque */
+
+.caixa-destaque{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,255,136,.10),
+            rgba(0,255,136,.04)
+        );
+
+    border-left:5px solid #00ff88;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    margin:20px 0;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.15);
+
+}
+
+/* Caixa de exemplo */
+
+.caixa-exemplo{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(30,136,229,.10),
+            rgba(30,136,229,.04)
+        );
+
+    border-left:5px solid #1e88e5;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    margin:20px 0;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.10);
+
+}
+
+/* Tabelas das teorias */
+
+#conteudoTeoria table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin:20px 0;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.15);
+
+}
+
+#conteudoTeoria th{
+
+    background:#00ff88;
+
+    color:#000;
+
+    padding:12px;
+
+    text-align:center;
+
+    font-weight:bold;
+
+}
+
+#conteudoTeoria td{
+
+    padding:12px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.1);
+
+    text-align:center;
+
+    background:
+        rgba(255,255,255,.05);
+
+}
+
+/* Listas */
+
+#conteudoTeoria ul{
+
+    margin-left:25px;
+
+}
+
+#conteudoTeoria li{
+
+    margin-bottom:8px;
+
+}
+
+/* Setas animadas */
+
+.seta-fluxo{
+
+    display:block;
+
+    text-align:center;
+
+    font-size:30px;
+
+    margin:10px 0;
+
+    animation:pulsarSeta 1.5s infinite;
+
+}
+
+@keyframes pulsarSeta{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Efeito hover nas caixas */
+
+.caixa-destaque:hover,
+.caixa-exemplo:hover{
+
+    transform:translateY(-2px);
+
+    transition:.3s;
+
+}
+
+/* Barra lateral decorativa para resumos */
+
+.resumo-premium{
+
+    background:
+        rgba(255,255,255,.08);
+
+    border-left:6px solid #ffc107;
+
+    padding:18px;
+
+    margin:20px 0;
+
+    border-radius:12px;
+
+}
+
+/* Destaque para pegadinhas */
+
+.pegadinha-premium{
+
+    background:
+        rgba(255,0,0,.06);
+
+    border-left:6px solid #ff5252;
+
+    padding:18px;
+
+    margin:20px 0;
+
+    border-radius:12px;
+
+}
+
+/* Destaque para dicas de prova */
+
+.dica-concurso{
+
+    background:
+        rgba(255,193,7,.10);
+
+    border-left:6px solid #ffc107;
+
+    padding:18px;
+
+    margin:20px 0;
+
+    border-radius:12px;
+
+}
+
+/* Responsividade */
+
+@media(max-width:768px){
+
+    #conteudoTeoria{
+
+        font-size:16px;
+
+        line-height:1.8;
+
+    }
+
+    #conteudoTeoria table{
+
+        font-size:13px;
+
+    }
+
+}
+/* ==========================================
+   FAROL DO SABER PREMIUM - SEMÂNTICA
+========================================== */
+
+.fluxograma-premium{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    margin:25px 0;
+}
+
+.bloco-fluxo{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:12px;
+    padding:12px 20px;
+    font-weight:600;
+    text-align:center;
+    min-width:220px;
+    backdrop-filter:blur(6px);
+}
+
+.seta-animada{
+    font-size:28px;
+    animation:setaPulse 1.5s infinite;
+}
+
+@keyframes setaPulse{
+
+    0%{
+        transform:translateY(0);
+        opacity:0.5;
+    }
+
+    50%{
+        transform:translateY(6px);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(0);
+        opacity:0.5;
+    }
+}
+
+.banca-premium{
+    background:linear-gradient(
+        135deg,
+        rgba(59,130,246,.15),
+        rgba(29,78,216,.15)
+    );
+
+    border-left:5px solid #3b82f6;
+    padding:18px;
+    margin:20px 0;
+    border-radius:12px;
+}
+
+.erro-classico{
+    background:linear-gradient(
+        135deg,
+        rgba(239,68,68,.12),
+        rgba(185,28,28,.12)
+    );
+
+    border-left:5px solid #ef4444;
+    padding:18px;
+    margin:20px 0;
+    border-radius:12px;
+}
+
+.memorizacao{
+    background:linear-gradient(
+        135deg,
+        rgba(16,185,129,.12),
+        rgba(5,150,105,.12)
+    );
+
+    border-left:5px solid #10b981;
+    padding:18px;
+    margin:20px 0;
+    border-radius:12px;
+}
+
+.raciocinio-banca{
+    background:linear-gradient(
+        135deg,
+        rgba(168,85,247,.12),
+        rgba(126,34,206,.12)
+    );
+
+    border-left:5px solid #a855f7;
+    padding:18px;
+    margin:20px 0;
+    border-radius:12px;
+}
+
+.analise-banca{
+    background:linear-gradient(
+        135deg,
+        rgba(34,197,94,.12),
+        rgba(21,128,61,.12)
+    );
+
+    border-left:5px solid #22c55e;
+    padding:18px;
+    margin:20px 0;
+    border-radius:12px;
+}
+
+.checkpoint{
+    background:linear-gradient(
+        135deg,
+        rgba(245,158,11,.15),
+        rgba(217,119,6,.15)
+    );
+
+    border:2px solid rgba(245,158,11,.4);
+    border-radius:14px;
+    padding:20px;
+    margin:25px 0;
+    font-weight:600;
+    line-height:1.8;
+}
+
+.resumo-gigante{
+    text-align:center;
+    font-size:1.15rem;
+    line-height:2;
+    font-weight:700;
+    margin:30px 0;
+}
+
+.palavra-chave{
+    color:#facc15;
+    font-weight:700;
+}
+
+.caixa-destaque:hover,
+.caixa-exemplo:hover,
+.banca-premium:hover,
+.erro-classico:hover,
+.memorizacao:hover,
+.raciocinio-banca:hover,
+.analise-banca:hover{
+    transform:translateY(-3px);
+    transition:.3s;
+}
+
+.checkpoint:hover{
+    transform:scale(1.01);
+    transition:.3s;
+}
+
+.figura-linguagem{
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin:20px 0;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(236,72,153,.12),
+        rgba(168,85,247,.12)
+    );
+
+    border-left:5px solid #ec4899;
+
+}
