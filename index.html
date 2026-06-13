@@ -162,6 +162,50 @@
 
 </nav>
 
+
+<!-- HISTORIA -->
+
+<section id="historia" class="tela">
+
+    <div class="card">
+
+        <button
+            class="btn-voltar"
+            onclick="mostrarTela('questoes')">
+
+            ⬅ Voltar para Disciplinas
+
+        </button>
+
+        <br><br>
+
+        <h2>📜 História</h2>
+
+        <br>
+
+        <p>
+            Selecione um assunto:
+        </p>
+
+        <br>
+
+        <div class="grid-assuntos">
+
+            <button
+                class="btn-assunto"
+                onclick="abrirAssunto('povosPreColombianos')">
+
+                🏺 Povos Pré-Colombianos
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <!-- DIDÁTICA -->
 
 <section id="didatica" class="tela">
@@ -891,16 +935,10 @@ Li e revisei o mapa mental.
 </button>
 
 <button
-    class="btn-disciplina premium"
-    onclick="alert('🚧 Disciplina em desenvolvimento!')">
+    class="btn-disciplina"
+    onclick="abrirDisciplina('historia')">
 
-    <div class="cadeado-premium">
-        🔒
-    </div>
-
-    <div>
-        Professor de História
-    </div>
+    📜 História
 
 </button>
 
@@ -1126,6 +1164,7 @@ Li e revisei o mapa mental.
 
 <!-- BANCOS DE DADOS -->
 
+
 <script src="dados/bncc.js"></script>
 
 <script src="dados/ldb.js"></script>
@@ -1147,6 +1186,8 @@ Li e revisei o mapa mental.
 <script src="dados/etnicoRacial.js"></script>
 
 <script src="dados/educacaocampo.js"></script>
+
+<script src="dados/povosPreColombianos.js"></script>
 
 <script src="dados/interpretacao.js"></script>
 
@@ -1225,6 +1266,16 @@ Li e revisei o mapa mental.
 <script src="dados/teorias/interpretacaoTeoria.js"></script>
 
 <script src="dados/teorias/generosTeoria.js"></script>
+
+<script src="dados/teorias/funcoesTeoria.js"></script>
+
+<script src="dados/teorias/coesaoTeoria.js"></script>
+
+<script src="dados/teorias/semanticaTeoria.js"></script>
+
+<script src="dados/teorias/figurasTeoria.js"></script>
+
+<script src="dados/teorias/povosPreColombianosTeoria.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 
