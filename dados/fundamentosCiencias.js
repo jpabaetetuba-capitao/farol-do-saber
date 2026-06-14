@@ -4,70 +4,83 @@ const fundamentosCiencias = [
     pergunta: "O ensino contemporâneo de Ciências caracteriza-se principalmente por:",
 
     alternativas: [
-        "Priorizar a memorização de conceitos científicos sem contextualização.",
-        "Valorizar a participação ativa do estudante na construção do conhecimento.",
-        "Restringir a experimentação aos laboratórios universitários.",
-        "Eliminar a relação entre ciência e cotidiano.",
-        "Concentrar-se exclusivamente na transmissão de conteúdos."
+        "Valorizar a participação ativa do estudante na construção do conhecimento por meio da investigação, da reflexão e da análise de situações contextualizadas.",
+        "Promover a sistematização dos conhecimentos científicos a partir de sequências didáticas cuidadosamente estruturadas pelo professor.",
+        "Favorecer a compreensão dos fenômenos naturais mediante a articulação entre conceitos científicos, experiências práticas e mediação pedagógica.",
+        "Desenvolver competências relacionadas à interpretação de evidências e à utilização do conhecimento científico em diferentes contextos sociais.",
+        "Organizar situações de aprendizagem que possibilitem a apropriação progressiva dos conhecimentos produzidos historicamente pela ciência."
     ],
 
-    correta: 1,
+    correta: 0,
+
+    explicacao: "O elemento mais característico das abordagens contemporâneas é o protagonismo do estudante aliado à investigação, à reflexão e à construção ativa do conhecimento.",
 
     feedbackAcerto:
-    "Excelente! O ensino atual valoriza o protagonismo do estudante.",
+    "Excelente! Você identificou o princípio central das abordagens contemporâneas do Ensino de Ciências.",
 
     feedbackErro:
-    "As tendências contemporâneas defendem investigação, contextualização e participação ativa do aluno.",
+    "Embora várias alternativas apresentem características presentes no ensino atual, a participação ativa do estudante na construção do conhecimento constitui o elemento mais distintivo dessas abordagens.",
 
     dicaBanca:
-    "As bancas costumam comparar ensino tradicional e ensino investigativo."
+    "Identifique a alternativa que melhor expressa o protagonismo estudantil e a construção ativa do conhecimento."
 },
-
 {
     pergunta: "Ao planejar uma sequência didática sobre mudanças climáticas, um professor propõe que os estudantes analisem dados meteorológicos, formulem hipóteses e debatam possíveis impactos socioambientais. Essa proposta está mais alinhada à concepção de ensino de Ciências que entende o conhecimento científico como:",
 
     alternativas: [
-        "Um conjunto de verdades definitivas produzidas por especialistas.",
-        "Uma construção histórica e social baseada em evidências e sujeita a revisões.",
-        "Um saber exclusivamente experimental, independente de interpretações.",
-        "Uma forma de conhecimento superior às demais, imune a questionamentos.",
-        "Um sistema de informações que deve ser memorizado para aplicação futura."
+        "Uma construção histórica e social fundamentada em evidências, sujeita à análise crítica e à revisão diante de novos conhecimentos.",
+        "Um conjunto organizado de explicações produzido por especialistas para orientar a compreensão dos fenômenos naturais e sociais.",
+        "Um sistema de conhecimentos elaborado por meio da investigação empírica e validado pela comunidade científica.",
+        "Uma forma de interpretação da realidade construída a partir da observação sistemática e da elaboração de modelos explicativos.",
+        "Um corpo de conhecimentos que resulta da aplicação de métodos rigorosos para compreender fenômenos e resolver problemas."
     ],
 
-    correta: 1,
+    correta: 0,
 
-    explicacao: "A ciência é compreendida como uma construção histórica, social e provisória, fundamentada em evidências e passível de revisão.",
+    explicacao: "A alternativa correta destaca o caráter histórico, social, provisório e revisável do conhecimento científico, aspecto central da natureza da ciência.",
 
-    feedbackAcerto: "Excelente! Você identificou uma característica central da natureza da ciência.",
+    feedbackAcerto:
+    "Excelente! Você reconheceu que o conhecimento científico é uma construção dinâmica e passível de revisão.",
 
-    feedbackErro: "Muitas bancas exploram a ideia equivocada de que a ciência produz verdades absolutas. O conhecimento científico é provisório.",
+    feedbackErro:
+    "A ciência produz conhecimentos fundamentados em evidências, mas que permanecem abertos à revisão e ao aperfeiçoamento.",
 
-    dicaBanca: "Sempre desconfie de alternativas que utilizem termos como 'definitivo', 'imutável' ou 'absoluto'."
+    dicaBanca:
+    "Observe qual alternativa enfatiza o caráter provisório e historicamente construído da ciência."
 },
 {
     pergunta: "Nas tendências contemporâneas do Ensino de Ciências, o papel do professor é redefinido principalmente porque:",
 
     alternativas: [
-        "A transmissão direta de conteúdos tornou-se incompatível com a educação básica.",
-        "A construção do conhecimento exige mediação pedagógica e participação ativa do estudante.",
-        "Os conteúdos científicos perderam relevância diante das tecnologias digitais.",
-        "A aprendizagem ocorre espontaneamente quando o aluno possui interesse pelo tema.",
-        "A experimentação substitui a necessidade de intervenção docente."
+        "A construção do conhecimento pelos estudantes requer mediação pedagógica capaz de promover investigação, reflexão e aprendizagem significativa.",
+        "A organização dos conteúdos científicos exige planejamento didático que favoreça a compreensão progressiva dos conceitos estudados.",
+        "A complexidade dos conhecimentos científicos demanda intervenções pedagógicas voltadas à superação de dificuldades de aprendizagem.",
+        "A articulação entre teoria e prática depende da atuação docente na seleção de estratégias adequadas aos objetivos educacionais.",
+        "A formação científica dos estudantes pressupõe acompanhamento sistemático do desenvolvimento de competências e habilidades."
     ],
 
-    correta: 1,
+    correta: 0,
 
-    explicacao: "O professor atua como mediador da aprendizagem, organizando situações que favoreçam investigação, reflexão e construção do conhecimento.",
+    explicacao: "O professor contemporâneo atua como mediador da aprendizagem, organizando situações que favorecem a participação ativa dos estudantes.",
 
-    feedbackAcerto: "Correto! O protagonismo do aluno não elimina a importância da mediação docente.",
+    feedbackAcerto:
+    "Muito bem! A mediação pedagógica constitui uma das principais características do papel docente nas abordagens atuais.",
 
-    feedbackErro: "As tendências atuais valorizam tanto a participação ativa do estudante quanto a ação intencional do professor.",
+    feedbackErro:
+    "O protagonismo estudantil não reduz a importância do professor; ao contrário, reforça sua função como mediador da aprendizagem.",
 
-    dicaBanca: "Professor mediador ≠ professor ausente."
+    dicaBanca:
+    "Diferencie a ideia de mediação pedagógica da simples transmissão de conteúdos."
 },
 {
     pergunta: "Analise as afirmativas sobre os fundamentos do Ensino de Ciências:",
-    
+
+    afirmacoes: [
+        "I. O ensino de Ciências deve favorecer a compreensão crítica dos fenômenos naturais e tecnológicos.",
+        "II. A alfabetização científica relaciona-se à capacidade de utilizar conhecimentos científicos em diferentes contextos sociais.",
+        "III. O conhecimento científico escolar deve limitar-se à reprodução de conceitos previamente estabelecidos."
+    ],
+
     alternativas: [
         "I e II apenas.",
         "I e III apenas.",
@@ -76,86 +89,91 @@ const fundamentosCiencias = [
         "II apenas."
     ],
 
-    afirmacoes: [
-        "I. O ensino de Ciências deve favorecer a compreensão crítica dos fenômenos naturais e tecnológicos.",
-        "II. A alfabetização científica relaciona-se à capacidade de utilizar conhecimentos científicos em diferentes contextos sociais.",
-        "III. O conhecimento científico escolar deve limitar-se à reprodução de conceitos previamente estabelecidos."
-    ],
-
     correta: 0,
 
-    explicacao: "As afirmativas I e II estão corretas. A III está incorreta porque o ensino atual busca construção e aplicação do conhecimento.",
+    explicacao: "As afirmativas I e II estão corretas. A III contraria as tendências contemporâneas, que valorizam a construção e a aplicação do conhecimento.",
 
-    feedbackAcerto: "Muito bem! Você distinguiu reprodução mecânica de construção significativa do conhecimento.",
+    feedbackAcerto:
+    "Excelente! Você identificou corretamente os princípios que orientam o Ensino de Ciências na atualidade.",
 
-    feedbackErro: "A ciência escolar contemporânea vai além da memorização e da simples reprodução de conceitos.",
+    feedbackErro:
+    "O ensino contemporâneo não se limita à reprodução de conceitos, mas busca promover compreensão, reflexão e aplicação do conhecimento.",
 
-    dicaBanca: "Questões com I, II e III são muito comuns em concursos para professor."
+    dicaBanca:
+    "Avalie cuidadosamente se cada afirmativa está alinhada às concepções contemporâneas de aprendizagem."
 },
 {
     pergunta: "Uma proposta pedagógica fundamentada no ensino investigativo diferencia-se das abordagens tradicionais porque prioriza:",
 
     alternativas: [
-        "A exposição sistemática de conteúdos antes de qualquer contato do estudante com problemas científicos.",
-        "A realização de experimentos previamente roteirizados para comprovar teorias já estudadas.",
-        "A formulação de questões, análise de evidências e elaboração de explicações fundamentadas.",
-        "A redução da intervenção docente para garantir autonomia absoluta dos estudantes.",
-        "A substituição dos conceitos científicos por experiências do cotidiano."
+        "A formulação de problemas, a análise de evidências e a construção de explicações fundamentadas pelos estudantes.",
+        "A realização de atividades práticas integradas ao estudo sistemático dos conceitos científicos previstos no currículo.",
+        "A utilização de estratégias didáticas que favoreçam a observação, a interpretação e a compreensão dos fenômenos estudados.",
+        "A articulação entre conhecimentos científicos, experiências cotidianas e processos de reflexão sobre a realidade.",
+        "A organização de situações de aprendizagem que promovam o desenvolvimento progressivo do pensamento científico."
     ],
 
-    correta: 2,
+    correta: 0,
 
-    explicacao: "O ensino investigativo envolve questionamento, análise de evidências, argumentação e construção de explicações científicas.",
+    explicacao: "O ensino investigativo caracteriza-se pela problematização, pela busca de evidências e pela elaboração de explicações fundamentadas.",
 
-    feedbackAcerto: "Excelente! Essa é a essência das metodologias investigativas.",
+    feedbackAcerto:
+    "Excelente! Você identificou o elemento central das metodologias investigativas.",
 
-    feedbackErro: "Investigar não significa apenas realizar experimentos, mas desenvolver raciocínio científico.",
+    feedbackErro:
+    "A investigação científica envolve questionamento, análise de evidências, argumentação e construção de explicações.",
 
-    dicaBanca: "A banca costuma confundir ensino investigativo com simples atividade prática."
+    dicaBanca:
+    "Procure a alternativa que enfatiza a investigação como processo de produção de explicações fundamentadas."
 },
 {
     pergunta: "Entre os objetivos do Ensino de Ciências na Educação Básica, destaca-se a formação de estudantes capazes de:",
 
     alternativas: [
-        "Reproduzir conceitos científicos sem questionar sua origem ou aplicação.",
-        "Utilizar conhecimentos científicos para compreender situações do cotidiano e tomar decisões fundamentadas.",
-        "Dominar exclusivamente procedimentos laboratoriais complexos.",
-        "Substituir conhecimentos populares por explicações científicas.",
-        "Memorizar teorias científicas independentemente de sua aplicação prática."
+        "Utilizar conhecimentos científicos para interpretar situações do cotidiano, avaliar informações e tomar decisões fundamentadas.",
+        "Compreender conceitos científicos essenciais para explicar fenômenos naturais presentes em diferentes contextos sociais.",
+        "Aplicar procedimentos investigativos na análise de problemas relacionados à ciência e à tecnologia.",
+        "Relacionar conhecimentos produzidos pela ciência às demandas sociais, ambientais e culturais contemporâneas.",
+        "Desenvolver competências que favoreçam a participação responsável em discussões envolvendo temas científicos."
     ],
 
-    correta: 1,
+    correta: 0,
 
-    explicacao: "O Ensino de Ciências busca formar cidadãos capazes de utilizar conhecimentos científicos para interpretar a realidade e tomar decisões conscientes.",
+    explicacao: "O objetivo central é formar cidadãos capazes de utilizar conhecimentos científicos na compreensão da realidade e na tomada de decisões.",
 
-    feedbackAcerto: "Excelente! O conhecimento científico deve contribuir para a atuação crítica na sociedade.",
+    feedbackAcerto:
+    "Excelente! Você identificou uma das finalidades mais importantes da educação científica.",
 
-    feedbackErro: "A finalidade do ensino vai além da memorização de conteúdos.",
+    feedbackErro:
+    "O Ensino de Ciências busca formar sujeitos capazes de interpretar informações e tomar decisões fundamentadas em conhecimentos científicos.",
 
-    dicaBanca: "As bancas costumam associar Ensino de Ciências à formação cidadã."
+    dicaBanca:
+    "Observe qual alternativa enfatiza a utilização do conhecimento científico em situações reais."
 },
 {
     pergunta: "Ao defender a formação de cidadãos críticos, o Ensino de Ciências pretende que os estudantes sejam capazes de:",
 
     alternativas: [
-        "Aceitar explicações científicas sem análise ou reflexão.",
-        "Reconhecer que decisões sociais e ambientais podem envolver conhecimentos científicos.",
-        "Priorizar apenas aspectos tecnológicos dos problemas contemporâneos.",
-        "Desconsiderar fatores éticos envolvidos nas aplicações da ciência.",
-        "Limitar a utilização da ciência ao contexto escolar."
+        "Reconhecer que problemas sociais, ambientais e tecnológicos frequentemente envolvem conhecimentos científicos e demandam análise fundamentada.",
+        "Compreender a relevância dos avanços científicos para a melhoria das condições de vida em diferentes sociedades.",
+        "Analisar informações científicas considerando aspectos éticos, sociais e ambientais relacionados aos fenômenos estudados.",
+        "Participar de discussões públicas envolvendo temas científicos com base em argumentos sustentados por evidências.",
+        "Avaliar impactos decorrentes da produção científica e tecnológica em diferentes contextos históricos e culturais."
     ],
 
-    correta: 1,
+    correta: 0,
 
-    explicacao: "A formação cidadã envolve a compreensão das relações entre ciência, tecnologia, sociedade e ambiente.",
+    explicacao: "A formação cidadã envolve reconhecer a presença da ciência em decisões sociais relevantes e participar criticamente dessas discussões.",
 
-    feedbackAcerto: "Muito bem! A ciência deve auxiliar na compreensão dos desafios da sociedade.",
+    feedbackAcerto:
+    "Muito bem! A educação científica está diretamente relacionada ao exercício da cidadania.",
 
-    feedbackErro: "O Ensino de Ciências busca desenvolver participação crítica e responsável.",
+    feedbackErro:
+    "O foco está na capacidade de compreender e analisar criticamente situações sociais que envolvem ciência e tecnologia.",
 
-    dicaBanca: "CTS e CTSA aparecem frequentemente em provas."
-},
-{
+    dicaBanca:
+    "Procure a alternativa que relaciona conhecimento científico e participação social."
+},{
     pergunta: "Analise as afirmativas sobre os objetivos do Ensino de Ciências:",
 
     afirmacoes: [
@@ -174,97 +192,112 @@ const fundamentosCiencias = [
 
     correta: 4,
 
-    explicacao: "As três afirmativas expressam objetivos reconhecidos do Ensino de Ciências.",
+    explicacao: "As três afirmativas expressam finalidades amplamente reconhecidas no Ensino de Ciências contemporâneo.",
 
-    feedbackAcerto: "Excelente! Você identificou corretamente as finalidades educacionais da área.",
+    feedbackAcerto:
+    "Excelente! Você reconheceu objetivos essenciais da formação científica na Educação Básica.",
 
-    feedbackErro: "Todos os itens representam objetivos importantes do Ensino de Ciências.",
+    feedbackErro:
+    "Compreensão de fenômenos, argumentação baseada em evidências e tomada de decisões responsáveis são objetivos complementares do Ensino de Ciências.",
 
-    dicaBanca: "Questões com três afirmativas corretas são comuns em concursos docentes."
+    dicaBanca:
+    "Verifique se existe alguma afirmativa incompatível com as finalidades atuais da educação científica."
 },
 {
     pergunta: "Um professor propõe atividades em que os alunos analisam notícias sobre vacinas, verificam fontes de informação e discutem evidências científicas. Essa prática contribui principalmente para:",
 
     alternativas: [
-        "O desenvolvimento da alfabetização científica.",
-        "A substituição do currículo formal por debates livres.",
-        "A eliminação da necessidade de conhecimentos conceituais.",
-        "A valorização exclusiva da opinião individual.",
-        "A formação de especialistas em imunologia."
+        "O desenvolvimento da alfabetização científica, favorecendo a análise crítica de informações e a avaliação de evidências.",
+        "A ampliação da capacidade de interpretação de textos científicos relacionados a temas de interesse social.",
+        "O fortalecimento das competências investigativas necessárias à compreensão de questões contemporâneas.",
+        "A compreensão dos processos de produção e validação dos conhecimentos científicos divulgados na sociedade.",
+        "O desenvolvimento de habilidades relacionadas à argumentação e ao uso responsável de informações científicas."
     ],
 
     correta: 0,
 
-    explicacao: "A alfabetização científica envolve interpretar informações, analisar evidências e tomar decisões fundamentadas.",
+    explicacao: "A atividade está diretamente relacionada à alfabetização científica, pois envolve análise crítica de informações e avaliação de evidências.",
 
-    feedbackAcerto: "Correto! O estudante aprende a avaliar criticamente informações científicas.",
+    feedbackAcerto:
+    "Correto! A alfabetização científica permite compreender, avaliar e utilizar informações científicas de forma crítica.",
 
-    feedbackErro: "A proposta está relacionada à alfabetização científica e ao pensamento crítico.",
+    feedbackErro:
+    "A proposta vai além da leitura de informações; ela envolve análise crítica, verificação de fontes e interpretação de evidências.",
 
-    dicaBanca: "Fake news e divulgação científica são temas muito cobrados atualmente."
+    dicaBanca:
+    "Observe qual alternativa melhor relaciona informação científica, evidências e tomada de decisões."
 },
 {
     pergunta: "A ampliação da participação dos estudantes em debates sobre questões ambientais, energéticas e de saúde pública está relacionada ao entendimento de que o Ensino de Ciências deve:",
 
     alternativas: [
-        "Restringir-se ao domínio conceitual dos conteúdos curriculares.",
-        "Priorizar exclusivamente a preparação para exames externos.",
-        "Contribuir para a formação de sujeitos capazes de intervir criticamente na realidade social.",
-        "Evitar discussões controversas para garantir neutralidade pedagógica.",
-        "Substituir conhecimentos científicos por experiências cotidianas."
+        "Contribuir para a formação de sujeitos capazes de analisar criticamente problemas sociais e participar de decisões fundamentadas.",
+        "Promover a compreensão das relações existentes entre desenvolvimento científico, tecnologia e desafios contemporâneos.",
+        "Estimular a utilização de conhecimentos científicos na interpretação de fenômenos que afetam a vida em sociedade.",
+        "Favorecer a construção de argumentos sustentados por evidências em discussões envolvendo temas científicos relevantes.",
+        "Desenvolver competências necessárias à participação responsável em contextos marcados pela presença da ciência e da tecnologia."
     ],
 
-    correta: 2,
+    correta: 0,
 
-    explicacao: "O Ensino de Ciências possui compromisso com a formação crítica e cidadã dos estudantes.",
+    explicacao: "A educação científica contemporânea busca formar cidadãos capazes de participar criticamente das discussões e decisões da sociedade.",
 
-    feedbackAcerto: "Excelente! Essa é uma das finalidades mais importantes do ensino contemporâneo.",
+    feedbackAcerto:
+    "Excelente! Você identificou uma das principais finalidades do Ensino de Ciências na atualidade.",
 
-    feedbackErro: "A educação científica está ligada à participação social e à cidadania.",
+    feedbackErro:
+    "A participação crítica em debates sociais relacionados à ciência é um dos pilares da formação cidadã.",
 
-    dicaBanca: "Questões sobre cidadania científica aparecem com frequência em FGV e FCC."
+    dicaBanca:
+    "Procure a alternativa que enfatiza participação social, pensamento crítico e tomada de decisões fundamentadas."
 },
 {
     pergunta: "A respeito da natureza do conhecimento científico, assinale a alternativa correta.",
 
     alternativas: [
-        "O conhecimento científico caracteriza-se por ser definitivo e imutável.",
-        "As teorias científicas correspondem a hipóteses sem evidências empíricas.",
-        "O conhecimento científico é construído a partir da observação, investigação e análise crítica de evidências.",
-        "A ciência produz verdades absolutas independentes do contexto histórico.",
-        "As explicações científicas dispensam processos de validação."
+        "O conhecimento científico é produzido por meio de investigação sistemática, análise crítica de evidências e constante possibilidade de revisão.",
+        "O conhecimento científico resulta da aplicação de métodos de investigação que garantem explicações definitivas para os fenômenos estudados.",
+        "O conhecimento científico caracteriza-se pela produção de modelos explicativos cuja validade independe das condições históricas de sua elaboração.",
+        "O conhecimento científico consiste na formulação de explicações baseadas em observações que, uma vez confirmadas, tornam-se permanentes.",
+        "O conhecimento científico corresponde à organização de informações obtidas empiricamente e preservadas enquanto não surgem interpretações alternativas."
     ],
 
-    correta: 2,
+    correta: 0,
 
-    explicacao: "A ciência produz conhecimentos fundamentados em evidências, submetidos à análise crítica e passíveis de revisão.",
+    explicacao: "A ciência produz conhecimentos fundamentados em evidências, mas sempre sujeitos à análise crítica, revisão e aperfeiçoamento.",
 
-    feedbackAcerto: "Excelente! Você identificou uma característica fundamental da produção científica.",
+    feedbackAcerto:
+    "Excelente! Você identificou uma característica essencial da produção do conhecimento científico.",
 
-    feedbackErro: "A ciência não trabalha com verdades absolutas, mas com explicações sustentadas pelas melhores evidências disponíveis.",
+    feedbackErro:
+    "A ciência trabalha com explicações sustentadas pelas melhores evidências disponíveis, mas abertas à revisão.",
 
-    dicaBanca: "Desconfie de termos como 'imutável', 'definitivo' e 'absoluto'."
+    dicaBanca:
+    "Desconfie de alternativas que sugiram caráter definitivo ou permanente para o conhecimento científico."
 },
 {
     pergunta: "Uma das características centrais do conhecimento científico é sua:",
 
     alternativas: [
-        "Dependência exclusiva da opinião dos pesquisadores.",
-        "Capacidade de ser questionado e revisado diante de novas evidências.",
-        "Validade restrita ao ambiente escolar.",
-        "Independência em relação à observação dos fenômenos.",
-        "Impossibilidade de sofrer alterações ao longo do tempo."
+        "Capacidade de ser analisado criticamente e reformulado diante da produção de novas evidências.",
+        "Possibilidade de produzir explicações amplamente aceitas pela comunidade científica em determinado contexto histórico.",
+        "Utilização de procedimentos metodológicos que favorecem a construção de interpretações confiáveis da realidade.",
+        "Organização sistemática de informações destinadas à compreensão dos fenômenos naturais e sociais.",
+        "Aplicação de modelos explicativos que permitem interpretar fenômenos observáveis de maneira coerente."
     ],
 
-    correta: 1,
+    correta: 0,
 
-    explicacao: "O conhecimento científico é provisório e pode ser reformulado quando novas evidências são produzidas.",
+    explicacao: "A possibilidade de revisão constitui uma característica fundamental da atividade científica.",
 
-    feedbackAcerto: "Muito bem! A revisão constante é um dos pilares da atividade científica.",
+    feedbackAcerto:
+    "Muito bem! A ciência evolui continuamente por meio da análise crítica e da produção de novas evidências.",
 
-    feedbackErro: "A ciência evolui continuamente por meio da investigação e da análise crítica.",
+    feedbackErro:
+    "Uma das marcas da ciência é justamente sua abertura à revisão e ao aperfeiçoamento.",
 
-    dicaBanca: "Provisoriedade e revisão são conceitos recorrentes em concursos."
+    dicaBanca:
+    "Procure a alternativa que destaca o caráter dinâmico do conhecimento científico."
 },
 {
     pergunta: "Analise as afirmativas sobre o conhecimento científico:",
@@ -285,97 +318,112 @@ const fundamentosCiencias = [
 
     correta: 3,
 
-    explicacao: "As afirmativas I e II estão corretas. A III está incorreta porque o conhecimento científico não é definitivo.",
+    explicacao: "As afirmativas I e II estão corretas. A III é incompatível com a compreensão contemporânea da ciência.",
 
-    feedbackAcerto: "Excelente! Você compreendeu o caráter dinâmico da ciência.",
+    feedbackAcerto:
+    "Excelente! Você compreendeu que a ciência é construída por investigação e permanece aberta à revisão.",
 
-    feedbackErro: "A ciência está em constante construção e revisão.",
+    feedbackErro:
+    "O conhecimento científico não é composto por verdades absolutas, mas por explicações sustentadas por evidências.",
 
-    dicaBanca: "Questões sobre natureza da ciência costumam explorar a ideia equivocada de verdade absoluta."
+    dicaBanca:
+    "Verifique se alguma afirmativa atribui caráter definitivo ao conhecimento científico."
 },
 {
     pergunta: "Ao discutir a história da ciência em sala de aula, o professor pretende demonstrar que:",
 
     alternativas: [
-        "Os conhecimentos científicos surgem prontos e acabados.",
-        "A produção científica ocorre de forma isolada das transformações sociais.",
-        "As explicações científicas são construídas historicamente e influenciadas por diferentes contextos.",
-        "As teorias científicas não sofrem influência do desenvolvimento tecnológico.",
-        "A evolução da ciência depende exclusivamente do acaso."
+        "As explicações científicas são construídas historicamente e influenciadas por fatores culturais, sociais e tecnológicos.",
+        "A evolução do conhecimento científico decorre da ampliação progressiva das técnicas de observação dos fenômenos naturais.",
+        "As transformações ocorridas na ciência refletem mudanças nos métodos utilizados para produzir explicações sobre a realidade.",
+        "O desenvolvimento científico acompanha processos históricos que influenciam a formulação de problemas e interpretações.",
+        "A produção científica está associada à construção de modelos explicativos adequados às demandas de cada contexto histórico."
     ],
 
-    correta: 2,
+    correta: 0,
 
-    explicacao: "A ciência é uma construção histórica e social, influenciada pelos contextos culturais, tecnológicos e econômicos.",
+    explicacao: "A ciência é uma construção histórica e social, influenciada pelos contextos em que é produzida.",
 
-    feedbackAcerto: "Correto! A ciência faz parte da história da humanidade.",
+    feedbackAcerto:
+    "Correto! O conhecimento científico não surge isoladamente, mas em interação com diferentes contextos históricos.",
 
-    feedbackErro: "O conhecimento científico está relacionado ao contexto em que é produzido.",
+    feedbackErro:
+    "A história da ciência evidencia que a produção científica está relacionada às condições sociais, culturais e tecnológicas de cada época.",
 
-    dicaBanca: "História da ciência e contextualização aparecem frequentemente em provas de licenciatura."
+    dicaBanca:
+    "Observe qual alternativa enfatiza a relação entre ciência e contexto histórico."
 },
 {
     pergunta: "Uma professora solicita que os estudantes comparem diferentes explicações históricas para a origem das doenças, analisando evidências disponíveis em cada época. Essa atividade favorece principalmente a compreensão de que:",
 
     alternativas: [
-        "O conhecimento científico é produzido de forma linear e sem controvérsias.",
-        "As teorias científicas permanecem inalteradas ao longo do tempo.",
-        "As explicações científicas podem ser modificadas conforme novas evidências são produzidas.",
-        "A ciência evolui exclusivamente por avanços tecnológicos.",
-        "O conhecimento científico depende apenas da criatividade individual dos pesquisadores."
+        "As explicações científicas podem ser reformuladas quando novas evidências permitem interpretações mais adequadas dos fenômenos estudados.",
+        "O desenvolvimento científico resulta da ampliação gradual dos conhecimentos produzidos por diferentes gerações de pesquisadores.",
+        "A construção do conhecimento científico depende da análise crítica das explicações disponíveis em determinado momento histórico.",
+        "As teorias científicas constituem modelos explicativos elaborados para interpretar fenômenos com base nas evidências disponíveis.",
+        "A evolução da ciência envolve processos contínuos de investigação, validação e aperfeiçoamento das explicações existentes."
     ],
 
-    correta: 2,
+    correta: 0,
 
-    explicacao: "As teorias científicas podem ser reformuladas quando novas evidências permitem explicações mais adequadas dos fenômenos.",
+    explicacao: "A atividade evidencia o caráter provisório e revisável do conhecimento científico diante da produção de novas evidências.",
 
-    feedbackAcerto: "Excelente! Você compreendeu o caráter provisório e evolutivo da ciência.",
+    feedbackAcerto:
+    "Excelente! Você identificou um dos princípios centrais da natureza da ciência.",
 
-    feedbackErro: "A ciência não é estática; suas explicações podem mudar diante de novas evidências.",
+    feedbackErro:
+    "A ciência evolui porque suas explicações podem ser revistas, ampliadas ou substituídas quando surgem novas evidências.",
 
-    dicaBanca: "Questões contextualizadas costumam cobrar a evolução histórica do conhecimento científico."
+    dicaBanca:
+    "Procure a alternativa que destaca a relação entre evidências e revisão do conhecimento científico."
 },
 {
     pergunta: "Nas abordagens contemporâneas do Ensino de Ciências, o professor é compreendido principalmente como:",
 
     alternativas: [
-        "Responsável por transmitir conhecimentos prontos e acabados aos estudantes.",
-        "Mediador da aprendizagem, promovendo situações de investigação e reflexão.",
-        "Observador passivo do processo de aprendizagem.",
-        "Executor exclusivo das atividades experimentais.",
-        "Responsável por evitar questionamentos que possam gerar dúvidas nos alunos."
+        "Mediador da aprendizagem, responsável por organizar situações que favoreçam investigação, reflexão e construção do conhecimento.",
+        "Profissional encarregado de sistematizar conteúdos científicos de modo a assegurar a progressão conceitual dos estudantes.",
+        "Agente educacional que promove experiências de aprendizagem voltadas à compreensão dos fenômenos naturais e tecnológicos.",
+        "Responsável pela seleção de estratégias didáticas adequadas ao desenvolvimento de competências científicas.",
+        "Orientador do processo educativo que articula conhecimentos científicos, experiências dos estudantes e objetivos curriculares."
     ],
 
-    correta: 1,
+    correta: 0,
 
-    explicacao: "O professor atua como mediador, organizando experiências que favoreçam a construção do conhecimento pelos estudantes.",
+    explicacao: "A mediação pedagógica constitui uma das principais características atribuídas ao professor nas tendências contemporâneas do Ensino de Ciências.",
 
-    feedbackAcerto: "Excelente! A mediação pedagógica é uma característica central do ensino contemporâneo.",
+    feedbackAcerto:
+    "Excelente! Você identificou o conceito de mediação pedagógica como elemento central da atuação docente.",
 
-    feedbackErro: "O professor não é apenas transmissor de conteúdos; ele orienta e estimula a aprendizagem.",
+    feedbackErro:
+    "Nas abordagens atuais, o professor não atua apenas como transmissor de conteúdos, mas como mediador da aprendizagem.",
 
-    dicaBanca: "Professor mediador é um conceito muito cobrado em concursos para licenciaturas."
+    dicaBanca:
+    "Procure a alternativa que enfatiza investigação, reflexão e construção do conhecimento."
 },
 {
     pergunta: "Ao incentivar os estudantes a formular hipóteses e buscar evidências para responder a um problema, o professor está favorecendo:",
 
     alternativas: [
-        "A reprodução mecânica de conceitos científicos.",
-        "A construção ativa do conhecimento.",
-        "A substituição do conhecimento científico por opiniões pessoais.",
-        "A eliminação da necessidade de conteúdos conceituais.",
-        "A aprendizagem baseada exclusivamente na memorização."
+        "A construção ativa do conhecimento por meio da investigação e da análise fundamentada de informações.",
+        "O desenvolvimento de procedimentos científicos necessários à compreensão dos fenômenos estudados.",
+        "A ampliação da autonomia intelectual dos estudantes durante a resolução de problemas científicos.",
+        "A utilização de estratégias investigativas voltadas à interpretação crítica da realidade.",
+        "O fortalecimento das competências relacionadas à observação, argumentação e tomada de decisões."
     ],
 
-    correta: 1,
+    correta: 0,
 
-    explicacao: "A formulação de hipóteses e a busca por evidências estimulam a participação ativa dos estudantes na construção do conhecimento.",
+    explicacao: "A formulação de hipóteses e a busca por evidências caracterizam processos de construção ativa do conhecimento.",
 
-    feedbackAcerto: "Muito bem! O aluno é protagonista do processo de aprendizagem.",
+    feedbackAcerto:
+    "Muito bem! A participação ativa do estudante é uma característica essencial das metodologias investigativas.",
 
-    feedbackErro: "As metodologias investigativas valorizam a participação ativa dos estudantes.",
+    feedbackErro:
+    "A investigação científica escolar busca envolver o estudante na construção das explicações e não apenas na recepção de informações.",
 
-    dicaBanca: "Aluno protagonista é uma expressão frequentemente utilizada pelas bancas."
+    dicaBanca:
+    "Observe qual alternativa melhor representa o protagonismo do estudante."
 },
 {
     pergunta: "Analise as afirmativas sobre os papéis do professor e do aluno no Ensino de Ciências:",
@@ -396,160 +444,184 @@ const fundamentosCiencias = [
 
     correta: 2,
 
-    explicacao: "As afirmativas I e II estão corretas. A III está incorreta, pois a participação ativa do aluno é incentivada.",
+    explicacao: "As afirmativas I e II estão alinhadas às tendências contemporâneas. A III contradiz o princípio do protagonismo estudantil.",
 
-    feedbackAcerto: "Excelente! Você compreendeu os papéis atribuídos ao professor e ao estudante nas abordagens atuais.",
+    feedbackAcerto:
+    "Excelente! Você identificou corretamente os papéis atribuídos a professores e estudantes nas abordagens atuais.",
 
-    feedbackErro: "A participação ativa dos alunos é elemento essencial do ensino contemporâneo.",
+    feedbackErro:
+    "A participação ativa do estudante é considerada um elemento fundamental da aprendizagem científica.",
 
-    dicaBanca: "Questões sobre protagonismo estudantil aparecem com frequência."
+    dicaBanca:
+    "Verifique se alguma afirmativa restringe indevidamente a participação do estudante."
 },
 {
     pergunta: "Em uma aula investigativa, o principal papel do estudante consiste em:",
 
     alternativas: [
-        "Receber informações e reproduzi-las integralmente.",
-        "Executar procedimentos sem compreender seus objetivos.",
-        "Construir explicações a partir da análise de evidências e da argumentação.",
-        "Memorizar definições previamente selecionadas pelo professor.",
-        "Observar passivamente as demonstrações realizadas em sala."
+        "Construir explicações fundamentadas por meio da análise de evidências, da argumentação e da reflexão crítica.",
+        "Participar de atividades planejadas para desenvolver competências relacionadas à compreensão dos fenômenos científicos.",
+        "Utilizar procedimentos investigativos para interpretar informações e elaborar conclusões consistentes.",
+        "Mobilizar conhecimentos científicos durante a resolução de problemas presentes em diferentes contextos.",
+        "Desenvolver autonomia intelectual na análise de questões relacionadas à ciência e à tecnologia."
     ],
 
-    correta: 2,
+    correta: 0,
 
-    explicacao: "O estudante participa ativamente da investigação, analisando dados e construindo explicações fundamentadas.",
+    explicacao: "O estudante assume papel ativo na produção de explicações fundamentadas em evidências.",
 
-    feedbackAcerto: "Correto! A aprendizagem investigativa exige participação ativa e pensamento crítico.",
+    feedbackAcerto:
+    "Correto! O ensino investigativo valoriza a análise de evidências e a construção de explicações pelos estudantes.",
 
-    feedbackErro: "O ensino investigativo não reduz o aluno a um observador passivo.",
+    feedbackErro:
+    "O estudante não atua como mero observador, mas participa ativamente da construção do conhecimento.",
 
-    dicaBanca: "Investigação científica envolve análise, interpretação e argumentação."
+    dicaBanca:
+    "Procure a alternativa que destaca análise de evidências e argumentação."
 },
 {
     pergunta: "Uma professora propõe que os alunos discutam diferentes soluções para um problema ambiental local, apresentando argumentos fundamentados em evidências científicas. Essa prática evidencia:",
 
     alternativas: [
-        "A centralização do processo educativo na figura do professor.",
-        "A valorização exclusiva do conteúdo conceitual.",
-        "O desenvolvimento da argumentação científica e da participação ativa dos estudantes.",
-        "A substituição do conhecimento científico por opiniões individuais.",
-        "A eliminação da necessidade de mediação pedagógica."
+        "O desenvolvimento da argumentação científica associado à participação ativa dos estudantes na análise de problemas reais.",
+        "A utilização de estratégias didáticas voltadas à compreensão das relações entre ciência, sociedade e ambiente.",
+        "A promoção de experiências educativas que favorecem o pensamento crítico e a tomada de decisões fundamentadas.",
+        "A construção coletiva de conhecimentos científicos relacionados a questões relevantes para a comunidade.",
+        "O fortalecimento de competências necessárias à avaliação de diferentes perspectivas sobre problemas socioambientais."
     ],
 
-    correta: 2,
+    correta: 0,
 
-    explicacao: "A argumentação científica é um componente importante da alfabetização científica e da participação cidadã.",
+    explicacao: "A atividade enfatiza a argumentação científica baseada em evidências e a participação ativa dos estudantes.",
 
-    feedbackAcerto: "Excelente! Você identificou uma prática alinhada às tendências atuais do Ensino de Ciências.",
+    feedbackAcerto:
+    "Excelente! Você identificou uma prática alinhada às tendências contemporâneas da educação científica.",
 
-    feedbackErro: "A atividade proposta busca desenvolver pensamento crítico, argumentação e participação ativa.",
+    feedbackErro:
+    "A argumentação científica constitui um dos pilares da alfabetização científica e da formação cidadã.",
 
-    dicaBanca: "Argumentação científica é tema recorrente em concursos recentes."
+    dicaBanca:
+    "Observe qual alternativa enfatiza argumentação baseada em evidências."
 },
 {
     pergunta: "A alfabetização científica pode ser compreendida como a capacidade de:",
 
     alternativas: [
-        "Memorizar conceitos científicos e reproduzi-los em avaliações escolares.",
-        "Utilizar conhecimentos científicos para interpretar informações e tomar decisões fundamentadas.",
-        "Dominar exclusivamente a linguagem técnica utilizada por pesquisadores.",
-        "Realizar experimentos laboratoriais complexos sem necessidade de contextualização.",
-        "Substituir conhecimentos cotidianos por conhecimentos científicos."
+        "Utilizar conhecimentos científicos para interpretar informações, avaliar evidências e tomar decisões fundamentadas em diferentes contextos sociais.",
+        "Compreender conceitos e procedimentos científicos necessários à análise de fenômenos presentes no cotidiano.",
+        "Mobilizar conhecimentos produzidos pela ciência para participar de discussões relacionadas a problemas contemporâneos.",
+        "Analisar criticamente informações envolvendo ciência e tecnologia com base em critérios de confiabilidade e relevância.",
+        "Relacionar conhecimentos científicos a situações concretas que demandam reflexão e posicionamento responsável."
     ],
 
-    correta: 1,
+    correta: 0,
 
-    explicacao: "A alfabetização científica envolve a compreensão e utilização do conhecimento científico em situações da vida cotidiana.",
+    explicacao: "A alfabetização científica envolve a utilização do conhecimento científico para compreender situações, avaliar informações e tomar decisões fundamentadas.",
 
-    feedbackAcerto: "Excelente! A alfabetização científica está relacionada ao exercício da cidadania.",
+    feedbackAcerto:
+    "Excelente! Você identificou o conceito mais abrangente de alfabetização científica.",
 
-    feedbackErro: "Ela vai muito além da memorização de conceitos e fórmulas.",
+    feedbackErro:
+    "A alfabetização científica vai além da compreensão de conceitos; envolve a capacidade de utilizá-los criticamente em diferentes contextos.",
 
-    dicaBanca: "Alfabetização científica = compreender, analisar e decidir."
+    dicaBanca:
+    "Procure a alternativa que relaciona conhecimento científico, análise crítica e tomada de decisões."
 },
 {
     pergunta: "Uma das características do ensino investigativo é:",
 
     alternativas: [
-        "Priorizar a transmissão direta de conteúdos previamente organizados.",
-        "Utilizar experimentos apenas para comprovar teorias já estudadas.",
-        "Estimular a formulação de problemas, hipóteses e análise de evidências.",
-        "Reduzir a participação dos estudantes durante as atividades.",
-        "Eliminar a necessidade de planejamento pedagógico."
+        "Estimular a formulação de problemas, a construção de hipóteses e a análise de evidências na busca de explicações fundamentadas.",
+        "Promover situações de aprendizagem em que os estudantes utilizem procedimentos científicos para compreender fenômenos.",
+        "Favorecer a participação ativa dos alunos na interpretação de informações obtidas durante atividades de investigação.",
+        "Organizar experiências educativas voltadas ao desenvolvimento do pensamento científico e da argumentação.",
+        "Mobilizar conhecimentos conceituais e metodológicos na análise de questões relacionadas à realidade estudada."
     ],
 
-    correta: 2,
+    correta: 0,
 
-    explicacao: "O ensino investigativo promove a participação ativa do estudante na construção do conhecimento científico.",
+    explicacao: "O ensino investigativo caracteriza-se pela problematização, formulação de hipóteses, análise de evidências e construção de explicações.",
 
-    feedbackAcerto: "Muito bem! Problematização, hipóteses e evidências são pilares do ensino investigativo.",
+    feedbackAcerto:
+    "Muito bem! Você identificou os elementos centrais do ensino investigativo.",
 
-    feedbackErro: "Investigar não significa apenas experimentar, mas também questionar e argumentar.",
+    feedbackErro:
+    "Investigar envolve levantar questões, analisar evidências e construir explicações fundamentadas.",
 
-    dicaBanca: "Ensino investigativo ≠ aula prática tradicional."
+    dicaBanca:
+    "Observe qual alternativa apresenta todas as etapas fundamentais da investigação."
 },
 {
     pergunta: "A contextualização no Ensino de Ciências contribui para a aprendizagem porque:",
 
     alternativas: [
-        "Substitui os conceitos científicos por exemplos do cotidiano.",
-        "Permite relacionar os conteúdos escolares a situações significativas para os estudantes.",
-        "Dispensa a necessidade de aprofundamento conceitual.",
-        "Restringe o ensino às experiências individuais dos alunos.",
-        "Prioriza apenas temas de interesse local."
+        "Permite relacionar os conteúdos científicos a situações significativas, favorecendo a atribuição de sentido ao conhecimento estudado.",
+        "Favorece a compreensão dos conceitos científicos por meio da aproximação entre fenômenos escolares e experiências cotidianas.",
+        "Possibilita a análise de problemas concretos utilizando conhecimentos construídos ao longo do processo educativo.",
+        "Estimula a utilização de referências presentes na realidade dos estudantes para ampliar a compreensão dos conteúdos.",
+        "Promove a articulação entre conceitos científicos e situações observadas em diferentes contextos sociais e culturais."
     ],
 
-    correta: 1,
+    correta: 0,
 
-    explicacao: "A contextualização aproxima os conteúdos da realidade dos estudantes, favorecendo a aprendizagem significativa.",
+    explicacao: "A contextualização busca atribuir significado aos conteúdos por meio da relação entre conhecimento científico e realidade.",
 
-    feedbackAcerto: "Excelente! Contextualizar é dar sentido ao conhecimento científico.",
+    feedbackAcerto:
+    "Excelente! Você compreendeu a principal finalidade da contextualização no Ensino de Ciências.",
 
-    feedbackErro: "Contextualização não significa abandonar conceitos científicos.",
+    feedbackErro:
+    "Contextualizar significa aproximar o conhecimento científico de situações que façam sentido para o estudante.",
 
-    dicaBanca: "Aprendizagem significativa e contextualização costumam aparecer juntas."
+    dicaBanca:
+    "Identifique a alternativa que enfatiza a construção de significado para a aprendizagem."
 },
 {
     pergunta: "A interdisciplinaridade no Ensino de Ciências pressupõe:",
 
     alternativas: [
-        "A eliminação das fronteiras entre as disciplinas escolares.",
-        "A substituição dos conteúdos científicos por temas transversais.",
-        "A articulação entre diferentes áreas do conhecimento para compreender problemas complexos.",
-        "O ensino simultâneo de conteúdos sem qualquer integração conceitual.",
-        "A redução da carga horária das disciplinas envolvidas."
+        "A articulação entre diferentes áreas do conhecimento para ampliar a compreensão de problemas e fenômenos complexos.",
+        "A integração de conceitos e procedimentos provenientes de distintas disciplinas na análise de situações reais.",
+        "A utilização de múltiplas perspectivas teóricas para interpretar fenômenos que não podem ser explicados isoladamente.",
+        "A construção de abordagens educativas capazes de relacionar saberes produzidos em diferentes campos científicos.",
+        "A cooperação entre áreas de conhecimento na busca de explicações mais abrangentes para questões contemporâneas."
     ],
 
-    correta: 2,
+    correta: 0,
 
-    explicacao: "A interdisciplinaridade busca integrar saberes de diferentes áreas para ampliar a compreensão dos fenômenos.",
+    explicacao: "A interdisciplinaridade envolve integração e articulação de saberes para compreender problemas complexos.",
 
-    feedbackAcerto: "Correto! Muitos problemas contemporâneos exigem abordagens interdisciplinares.",
+    feedbackAcerto:
+    "Correto! A interdisciplinaridade busca superar análises fragmentadas da realidade.",
 
-    feedbackErro: "Interdisciplinaridade é integração, não simples justaposição de conteúdos.",
+    feedbackErro:
+    "A interdisciplinaridade não significa eliminar disciplinas, mas promover integração entre elas.",
 
-    dicaBanca: "Integração de saberes é a expressão-chave."
+    dicaBanca:
+    "Procure a alternativa que enfatiza integração de saberes e compreensão ampliada da realidade."
 },
 {
     pergunta: "A perspectiva CTSA (Ciência, Tecnologia, Sociedade e Ambiente) no Ensino de Ciências tem como objetivo principal:",
 
     alternativas: [
-        "Priorizar exclusivamente os avanços tecnológicos produzidos pela ciência.",
-        "Promover a compreensão das relações entre ciência, tecnologia, sociedade e ambiente, favorecendo decisões responsáveis.",
-        "Substituir conteúdos científicos por debates sociais.",
-        "Restringir a discussão científica aos impactos ambientais.",
-        "Formar especialistas em áreas científicas específicas."
+        "Promover a compreensão crítica das relações entre ciência, tecnologia, sociedade e ambiente, favorecendo decisões responsáveis e participação cidadã.",
+        "Analisar os impactos decorrentes do desenvolvimento científico e tecnológico sobre diferentes dimensões da vida social.",
+        "Favorecer a reflexão sobre os desafios contemporâneos relacionados à produção e utilização do conhecimento científico.",
+        "Desenvolver competências necessárias à avaliação crítica de questões envolvendo ciência, tecnologia e sustentabilidade.",
+        "Estimular a participação dos estudantes em discussões fundamentadas sobre problemas científicos com repercussões sociais e ambientais."
     ],
 
-    correta: 1,
+    correta: 0,
 
-    explicacao: "A abordagem CTSA busca desenvolver uma visão crítica das interações entre ciência, tecnologia, sociedade e ambiente.",
+    explicacao: "A abordagem CTSA busca compreender criticamente as interações entre ciência, tecnologia, sociedade e ambiente, contribuindo para a formação cidadã.",
 
-    feedbackAcerto: "Excelente! Você compreendeu um dos eixos mais cobrados no Ensino de Ciências.",
+    feedbackAcerto:
+    "Excelente! Você identificou a finalidade central da perspectiva CTSA.",
 
-    feedbackErro: "A perspectiva CTSA envolve relações amplas entre conhecimento científico e vida em sociedade.",
+    feedbackErro:
+    "A proposta CTSA busca analisar criticamente as relações entre ciência, tecnologia, sociedade e ambiente.",
 
-    dicaBanca: "CTSA = Ciência + Tecnologia + Sociedade + Ambiente."
+    dicaBanca:
+    "Observe qual alternativa reúne simultaneamente ciência, tecnologia, sociedade, ambiente e cidadania."
 }
 
 ];
