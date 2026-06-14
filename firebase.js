@@ -38,6 +38,13 @@ auth.onAuthStateChanged(async (user) => {
 
                 const dados = doc.data();
 
+usuarioForum = dados.nome;
+
+localStorage.setItem(
+    "usuarioForum",
+    dados.nome
+);
+
 console.log("NOME:", dados.nome);
 
                 const campoNome =
