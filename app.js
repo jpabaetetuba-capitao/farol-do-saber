@@ -2722,9 +2722,10 @@ case "citologia":
         "🧬 Citologia";
 
     imagem.src =
-        "imagens/mapas/citologia.png";
+        "imagens/mapas/Citologia.png";
 
     break;
+
 
 case "ecologia":
 
@@ -2732,7 +2733,7 @@ case "ecologia":
         "🌿 Ecologia";
 
     imagem.src =
-        "imagens/mapas/ecologia.png";
+        "imagens/mapas/Ecologia.png";
 
     break;
 
