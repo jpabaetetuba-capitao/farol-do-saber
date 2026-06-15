@@ -1383,23 +1383,15 @@ progress{
 
 .caixa-destaque{
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0,255,136,.10),
-            rgba(0,255,136,.04)
-        );
+    ...
 
-    border-left:5px solid #00ff88;
+    padding:14px;
 
-    border-radius:14px;
+    margin:12px 0;
 
-    padding:18px;
+    line-height:1.4;
 
-    margin:20px 0;
-
-    box-shadow:
-        0 4px 12px rgba(0,0,0,.15);
+    white-space: pre-line;
 
 }
 
@@ -1424,6 +1416,8 @@ progress{
 
     box-shadow:
         0 4px 12px rgba(0,0,0,.10);
+
+   white-space: pre-line;
 
 }
 
@@ -1496,9 +1490,17 @@ progress{
 
     text-align:center;
 
-    font-size:30px;
+    font-size:42px;
 
-    margin:10px 0;
+    font-weight:bold;
+
+    color:#00ff88;
+
+    margin:12px 0;
+
+    text-shadow:
+        0 0 8px rgba(0,255,136,.8),
+        0 0 20px rgba(0,255,136,.5);
 
     animation:pulsarSeta 1.5s infinite;
 
@@ -1783,5 +1785,17 @@ progress{
     );
 
     border-left:5px solid #ec4899;
+
+}
+
+.fluxograma-texto{
+
+    white-space: pre-line;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    line-height:2;
 
 }
