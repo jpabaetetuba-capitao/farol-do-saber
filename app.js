@@ -444,7 +444,7 @@ async function excluirResposta(
 
         console.error(error);
 
-        alert(
+        mostrarToast(
             "ERRO: " +
             error.message
         );
@@ -619,6 +619,14 @@ const bancoQuestoes = {
     fundamentosCiencias,
 
     bnccCiencias,
+
+    alfabetizacaoCientifica,
+
+    citologia,
+
+    ecologia,
+
+    terraEUniverso,
 
     povosPreColombianos,
 
@@ -869,7 +877,7 @@ if (nome === "historia") {
 
 }
 
-    alert(
+    mostrarToast(
         "Disciplina em desenvolvimento."
     );
 
@@ -1408,8 +1416,19 @@ errosAssunto++;
 "🔬 Fundamentos do Ensino de Ciências",
 
      bnccCiencias:
-"📘 BNCC e Competências em Ciências da Natureza"
+"📘 BNCC e Competências em Ciências da Natureza",
+
+alfabetizacaoCientifica:
+"🔬 Alfabetização Científica",
     
+citologia:
+"🧬 Citologia",
+
+ecologia:
+"🌿 Ecologia",
+
+terraEUniverso:
+"🌎 Terra e Universo"
 
 };
 
@@ -1836,7 +1855,7 @@ function resetarProgresso() {
     atualizarPainelEstudos();
     atualizarCadernoErros();
 
-    alert("Progresso apagado com sucesso!");
+    mostrarToast("Progresso apagado com sucesso!");
 
 }
 
@@ -2197,7 +2216,11 @@ function iniciarSimuladoCiencias(){
     const ciencias = [
 
         ...fundamentosCiencias,
-        ...bnccCiencias
+        ...bnccCiencias,
+        ...alfabetizacaoCientifica,
+        ...citologia,
+        ...ecologia,
+        ...terraEUniverso
 
     ];
 
@@ -2288,7 +2311,7 @@ function iniciarSimuladoDidatica(){
 
 function iniciarSimuladoApoioEscolar(){
 
-    alert(
+    mostrarToast(
         "🚧 Simulado de Apoio Escolar em desenvolvimento."
     );
 
@@ -2683,6 +2706,46 @@ case "bnccCiencias":
 
     break;
 
+case "alfabetizacaoCientifica":
+
+    titulo.innerHTML =
+        "🔬 Alfabetização Científica";
+
+    imagem.src =
+        "imagens/mapas/AlfabetizacaoCientifica.png";
+
+    break;
+
+case "citologia":
+
+    titulo.innerHTML =
+        "🧬 Citologia";
+
+    imagem.src =
+        "imagens/mapas/citologia.png";
+
+    break;
+
+case "ecologia":
+
+    titulo.innerHTML =
+        "🌿 Ecologia";
+
+    imagem.src =
+        "imagens/mapas/ecologia.png";
+
+    break;
+
+case "terraEUniverso":
+
+    titulo.innerHTML =
+        "🌎 Terra e Universo";
+
+    imagem.src =
+        "imagens/mapas/TerraEUniverso.png";
+
+    break;
+
 case "povosPreColombianos":
 
     titulo.innerHTML =
@@ -2695,7 +2758,7 @@ case "povosPreColombianos":
 
     }
 
-if(assunto === "fundamentosCiencias"){
+if(assuntoAtual === "fundamentosCiencias"){
 
     abrirTeoria(
         fundamentosCienciasTeoria,
@@ -2706,7 +2769,7 @@ if(assunto === "fundamentosCiencias"){
 
 }
 
-if(assunto === "bnccCiencias"){
+if(assuntoAtual === "bnccCiencias"){
 
     abrirTeoria(
         bnccCienciasTeoria,
@@ -2717,7 +2780,52 @@ if(assunto === "bnccCiencias"){
 
 }
 
-if(assunto === "hardware"){
+if(assuntoAtual === "alfabetizacaoCientifica"){
+
+    abrirTeoria(
+        alfabetizacaoCientificaTeoria,
+        "🔬 Alfabetização Científica"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "citologia"){
+
+    abrirTeoria(
+        citologiaTeoria,
+        "🧬 Citologia"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "ecologia"){
+
+    abrirTeoria(
+        ecologiaTeoria,
+        "🌿 Ecologia"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "terraEUniverso"){
+
+    abrirTeoria(
+        terraUniversoTeoria,
+        "🌎 Terra e Universo"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "hardware"){
 
     abrirTeoria(
         hardwareTeoria,
@@ -2728,7 +2836,7 @@ if(assunto === "hardware"){
 
 }
 
-if(assunto === "software"){
+if(assuntoAtual === "software"){
 
     abrirTeoria(
         softwareTeoria,
@@ -2739,7 +2847,7 @@ if(assunto === "software"){
 
 }
 
-if(assunto === "arquivos"){
+if(assuntoAtual === "arquivos"){
 
     abrirTeoria(
         arquivosPastasBackupTeoria,
@@ -2750,7 +2858,7 @@ if(assunto === "arquivos"){
 
 }
 
-if(assunto === "office"){
+if(assuntoAtual === "office"){
     abrirTeoria(
         officeTeoria,
         "📊 Office e LibreOffice"
@@ -2758,7 +2866,7 @@ if(assunto === "office"){
     return;
 }
 
-if(assunto === "internet"){
+if(assuntoAtual === "internet"){
     abrirTeoria(
         internetTeoria,
         "🌐 Internet e Correio Eletrônico"
@@ -2766,7 +2874,7 @@ if(assunto === "internet"){
     return;
 }
 
-if(assunto === "redes"){
+if(assuntoAtual === "redes"){
     abrirTeoria(
         redesTeoria,
         "🖧 Redes de Computadores"
@@ -2774,7 +2882,7 @@ if(assunto === "redes"){
     return;
 }
 
-if(assunto === "seguranca"){
+if(assuntoAtual === "seguranca"){
     abrirTeoria(
         segurancaInformacaoTeoria,
         "🔐 Segurança da Informação"
@@ -2782,7 +2890,7 @@ if(assunto === "seguranca"){
     return;
 }
 
-if(assunto === "interpretacao"){
+if(assuntoAtual === "interpretacao"){
 
     abrirTeoria(
         interpretacaoTeoria,
@@ -2793,7 +2901,7 @@ if(assunto === "interpretacao"){
 
 }
 
-if(assunto === "generos"){
+if(assuntoAtual === "generos"){
 
     abrirTeoria(
         generosTeoria,
@@ -2804,7 +2912,7 @@ if(assunto === "generos"){
 
 }
 
-if(assunto === "funcoes"){
+if(assuntoAtual === "funcoes"){
 
     abrirTeoria(
         funcoesTeoria,
@@ -2815,7 +2923,7 @@ if(assunto === "funcoes"){
 
 }
 
-if(assunto === "coesao"){
+if(assuntoAtual === "coesao"){
 
     abrirTeoria(
         coesaoTeoria,
@@ -2870,7 +2978,7 @@ function iniciarBNCC() {
 
     if (!revisado) {
 
-        alert(
+        mostrarToast(
             "Leia o mapa mental antes de continuar."
         );
 
@@ -2878,7 +2986,7 @@ function iniciarBNCC() {
 
     }
 
-    alert(
+    mostrarToast(
         "Banco de questões BNCC será conectado na próxima etapa."
     );
 
@@ -2897,7 +3005,7 @@ function iniciarQuestoesAssunto() {
 
     if (!revisado) {
 
-        alert(
+        mostrarToast(
             "Leia e revise o mapa mental antes de iniciar as questões."
         );
 
@@ -3143,6 +3251,47 @@ function abrirTeoriaDoAssunto(){
         return;
     }
 
+if(assuntoAtual === "alfabetizacaoCientifica"){
+    abrirTeoria(
+        alfabetizacaoCientificaTeoria,
+        "🔬 Alfabetização Científica"
+    );
+    return;
+}
+
+if(assuntoAtual === "citologia"){
+
+    abrirTeoria(
+        citologiaTeoria,
+        "🧬 Citologia"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "ecologia"){
+
+    abrirTeoria(
+        ecologiaTeoria,
+        "🌿 Ecologia"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "terraEUniverso"){
+
+    abrirTeoria(
+        terraUniversoTeoria,
+        "🌎 Terra e Universo"
+    );
+
+    return;
+
+}
+
     if(assuntoAtual === "hardware"){
         abrirTeoria(
             hardwareTeoria,
@@ -3271,6 +3420,7 @@ if (assuntoAtual === "povosPreColombianos") {
 
 function voltarParaAssuntos(){
 
+
     const assuntosPortugues = [
 
         "interpretacao",
@@ -3311,7 +3461,11 @@ function voltarParaAssuntos(){
     const assuntosCiencias = [
 
         "fundamentosCiencias",
-        "bnccCiencias"
+        "bnccCiencias",
+        "alfabetizacaoCientifica",
+        "citologia",
+        "ecologia",
+        "terraEUniverso"
 
     ];
 
@@ -3470,7 +3624,18 @@ function atualizarPainelEstudos(){
         redes: "🌐 Redes de Computadores",
         seguranca: "🔒 Segurança da Informação",
         fundamentosCiencias: "🔬 Fundamentos do Ensino de Ciências",
-        bnccCiencias: "📘 BNCC e Competências em Ciências da Natureza"
+        bnccCiencias: "📘 BNCC e Competências em Ciências da Natureza",
+alfabetizacaoCientifica:
+"🔬 Alfabetização Científica",
+citologia:
+"🧬 Citologia",
+
+ecologia:
+"🌿 Ecologia",
+
+terraEUniverso:
+"🌎 Terra e Universo"
+
     };
 
     let concluidos = 0;
@@ -3711,7 +3876,7 @@ async function criarConta(){
 
 if(!email || !senha){
 
-    alert(
+    mostrarToast(
         "Preencha e-mail e senha."
     );
 
@@ -3737,7 +3902,7 @@ if(!email || !senha){
 
         });
 
-        alert(
+        mostrarToast(
             "Cadastro realizado. Aguarde aprovação."
         );
 
@@ -3746,7 +3911,7 @@ if(!email || !senha){
     }
     catch(erro){
 
-        alert(
+        mostrarToast(
             erro.message
         );
 
@@ -3924,7 +4089,7 @@ async function finalizarCadastro(){
         !senha ||
         !confirmar
     ){
-        alert(
+        mostrarToast(
             "Preencha todos os campos."
         );
         return;
@@ -3932,7 +4097,7 @@ async function finalizarCadastro(){
 
     if(senha !== confirmar){
 
-        alert(
+        mostrarToast(
             "As senhas não coincidem."
         );
 
@@ -3957,7 +4122,7 @@ async function finalizarCadastro(){
 
         });
 
-        alert(
+        mostrarToast(
             "Cadastro realizado com sucesso!"
         );
 
@@ -4171,7 +4336,7 @@ async function enviarMensagem(){
             "mensagemChat"
         ).value = "";
 
-        alert(
+        mostrarToast(
             "✅ Chat apagado com sucesso."
         );
 
