@@ -560,7 +560,17 @@ const bancoQuestoes = {
 
     etnicoRacial,
 
-    educacaoCampo,
+    educacaoCampo,    
+
+    quilombola,
+
+    indigena,
+
+    didatica,
+
+    planejamento,
+
+    avaliacao,
 
     curriculo,
 
@@ -1359,6 +1369,16 @@ errosAssunto++;
     etnicoRacial: "📘 Relações Étnico-Raciais",
 
     educacaoCampo: "📘 Educação do Campo",
+
+    quilombola: "🏘 Quilombola",
+
+    indigena: "🪶 Educação Escolar Indígena",
+
+    didatica: "📚 Didática",
+
+    planejamento: "📋 Planejamento Educacional",
+
+    avaliacao: "📊 Avaliação da Aprendizagem",
 
     curriculo: "📘 Currículo e Planejamento",
 
@@ -2298,7 +2318,12 @@ function iniciarSimuladoDidatica(){
         ...tea,
         ...inclusiva,
         ...etnicoRacial,
-        ...educacaoCampo
+        ...educacaoCampo,
+        ...quilombola,
+        ...indigina,
+        ...didatica,
+        ...planejamento,
+        ...avaliacao
 
     ];
 
@@ -2420,6 +2445,52 @@ if (
         titulo.innerHTML = "📘 Educação do Campo";
         imagem.src = "imagens/mapas/campo.jpg";
         break;
+
+    case "quilombola":
+    titulo.innerHTML = "🏘 Quilombola";
+    imagem.src = "imagens/mapas/quilombola.png";
+    break;
+
+   case "indigena":
+
+    titulo.innerHTML =
+        "🪶 Educação Escolar Indígena";
+
+    imagem.src =
+        "imagens/mapas/indigena.png";
+
+    break;
+
+    case "didatica":
+
+    titulo.innerHTML =
+        "📚 Didática";
+
+    imagem.src =
+        "imagens/mapas/Didatica.png";
+
+    break;
+
+    case "planejamento":
+
+    titulo.innerHTML =
+        "📋 Planejamento Educacional";
+
+    imagem.src =
+        "imagens/mapas/Planejamento.png";
+
+    break;
+
+
+case "avaliacao":
+
+    titulo.innerHTML =
+        "📊 Avaliação da Aprendizagem";
+
+    imagem.src =
+        "imagens/mapas/Avaliacao.png";
+
+    break;
 
        case "gestao":
         titulo.innerHTML = "📘 Gestão Democrática";
@@ -3595,6 +3666,11 @@ function atualizarPainelEstudos(){
         inclusiva: "📘 Educação Inclusiva",
         etnicoRacial: "📘 Relações Étnico-Raciais",
         educacaoCampo: "📘 Educação do Campo",
+        quilombola: "🏘 Quilombola",
+        indigena: "🪶 Educação Escolar Indígena",
+        didatica: "📚 Didática",
+        planejamento: "📋 Planejamento Educacional",
+        avaliacao: "📊 Avaliação da Aprendizagem",
         curriculo: "📘 Currículo e Planejamento",
         povosPreColombianos:
 "🏺 Povos Pré-Colombianos",
