@@ -1,673 +1,994 @@
 const tea = [
 
 {
-    pergunta: "Durante reunião pedagógica, um diretor afirmou que o Transtorno do Espectro Autista (TEA) constitui apenas uma condição de saúde, não gerando repercussões jurídicas relevantes para a garantia de direitos educacionais. Uma professora discordou, citando a legislação específica sobre o tema. À luz da Lei nº 12.764/2012, assinale a alternativa correta:",
+    pergunta: "Durante uma formação continuada, uma professora afirmou que o Transtorno do Espectro Autista (TEA) é caracterizado exclusivamente por dificuldades de aprendizagem. Outro participante discordou, mencionando os critérios previstos na Lei nº 12.764/2012. À luz da legislação, assinale a alternativa correta:",
 
     alternativas: [
-
-        "A pessoa com TEA possui apenas direitos relacionados à saúde.",
-
-        "O TEA produz efeitos exclusivamente no âmbito médico.",
-
-        "A pessoa com TEA é considerada pessoa com deficiência para todos os efeitos legais.",
-
-        "O reconhecimento jurídico do TEA depende de autorização judicial."
-
+        "O TEA caracteriza-se exclusivamente por dificuldades acadêmicas.",
+        "O TEA é definido apenas pela presença de deficiência intelectual.",
+        "O TEA envolve deficiência persistente na comunicação e interação social, associada a padrões restritivos e repetitivos de comportamento, interesses ou atividades.",
+        "O TEA é caracterizado apenas por alterações motoras e sensoriais.",
+        "O TEA depende obrigatoriamente da presença de deficiência física associada."
     ],
 
     correta: 2,
 
-    feedbackAcerto:
-        "Correto. A Lei nº 12.764/2012 estabelece que a pessoa com Transtorno do Espectro Autista é considerada pessoa com deficiência para todos os efeitos legais.",
+    feedbackAcerto: "Correto. A Lei nº 12.764/2012 descreve o TEA a partir de déficits persistentes na comunicação e interação social, associados a padrões restritivos e repetitivos de comportamento.",
 
-    feedbackErro:
-        "Essa é uma das questões mais cobradas em concursos. A legislação reconhece expressamente a pessoa com TEA como pessoa com deficiência para todos os efeitos legais.",
+    feedbackErro: "A legislação não reduz o TEA a dificuldades escolares ou deficiência intelectual.",
 
-    dicaBanca:
-        "Decore: TEA = pessoa com deficiência para todos os efeitos legais."
-},
-{
-    pergunta: "Durante uma reunião pedagógica, a direção de uma escola afirmou que estudantes com Transtorno do Espectro Autista somente poderiam ser matriculados após apresentação de laudo médico recente emitido por especialista indicado pela própria instituição. Os responsáveis questionaram a exigência. À luz da Lei nº 12.764/2012, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "A escola pode estabelecer livremente os requisitos para matrícula de estudantes com TEA.",
-
-        "A exigência é válida apenas para escolas particulares.",
-
-        "A criação de obstáculos ou exigências indevidas para acesso à educação contraria os direitos assegurados à pessoa com TEA.",
-
-        "A matrícula depende obrigatoriamente de autorização médica da instituição."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A legislação assegura à pessoa com TEA acesso à educação em igualdade de condições, vedando práticas que dificultem ou restrinjam esse direito.",
-
-    feedbackErro:
-        "As bancas frequentemente apresentam exigências burocráticas como se fossem legítimas. A legislação busca garantir acesso e inclusão, não criar barreiras.",
-
-    dicaBanca:
-        "Se a medida cria obstáculo ao acesso, geralmente está em desacordo com a lei."
+    dicaBanca: "Comunicação, interação social e comportamentos repetitivos formam o núcleo da definição legal."
 },
 
 {
-    pergunta: "Uma escola particular passou a cobrar mensalidade diferenciada de estudantes com TEA sob o argumento de que adaptações pedagógicas e apoio especializado geram custos adicionais. Considerando a legislação vigente, assinale a alternativa correta:",
+    pergunta: "Durante uma avaliação clínica, verificou-se que determinada criança apresenta interesses extremamente restritos, necessidade intensa de rotinas e resistência significativa a mudanças. Considerando a definição legal do TEA, essas características estão relacionadas principalmente:",
 
     alternativas: [
-
-        "A cobrança é permitida quando houver justificativa financeira.",
-
-        "A cobrança é permitida desde que aprovada pelos responsáveis.",
-
-        "A cobrança adicional em razão do TEA viola os direitos assegurados pela legislação.",
-
-        "A cobrança é obrigatória para garantir atendimento especializado."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A legislação proíbe cobrança adicional em razão da condição da pessoa com TEA.",
-
-    feedbackErro:
-        "Cobrança extra, limitação de vagas ou recusa de matrícula são pegadinhas clássicas de concursos sobre inclusão.",
-
-    dicaBanca:
-        "Escola privada não pode cobrar taxa adicional por motivo de TEA."
-},
-
-{
-    pergunta: "Um estudante com TEA apresentou dificuldades relacionadas à comunicação e à interação social. Após avaliação, verificou-se a necessidade de acompanhamento especializado para favorecer sua participação nas atividades escolares. Segundo a Lei nº 12.764/2012, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "O acompanhante especializado constitui direito da pessoa com TEA quando comprovada sua necessidade.",
-
-        "O acompanhante especializado substitui o professor da turma.",
-
-        "O acompanhante especializado somente pode atuar em escolas públicas.",
-
-        "A presença do acompanhante depende exclusivamente da decisão da escola."
-
-    ],
-
-    correta: 0,
-
-    feedbackAcerto:
-        "Correto. A legislação assegura acompanhante especializado quando comprovadamente necessário ao estudante com TEA.",
-
-    feedbackErro:
-        "O acompanhante especializado é um direito legal e não substitui o trabalho pedagógico do professor.",
-
-    dicaBanca:
-        "Acompanhante especializado ≠ professor."
-},
-
-{
-    pergunta: "Durante uma palestra sobre inclusão, um participante afirmou que a proteção jurídica da pessoa com TEA limita-se ao acesso à educação. Outro participante discordou e citou diversos direitos previstos em lei. À luz da Política Nacional de Proteção dos Direitos da Pessoa com TEA, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "A legislação trata exclusivamente de educação.",
-
-        "Os direitos restringem-se à área da saúde.",
-
-        "A legislação assegura direitos em áreas como educação, saúde, trabalho, assistência social e participação comunitária.",
-
-        "Os direitos previstos aplicam-se apenas a crianças e adolescentes."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A proteção legal da pessoa com TEA abrange diversas dimensões da vida social, não se limitando à educação.",
-
-    feedbackErro:
-        "A banca costuma restringir artificialmente o alcance da lei para confundir candidatos.",
-
-    dicaBanca:
-        "TEA envolve educação, saúde, trabalho, assistência e cidadania."
-},
-
-{
-    pergunta: "Um gestor municipal afirmou que as políticas públicas destinadas às pessoas com TEA são responsabilidade exclusiva da União. Durante a discussão, outros participantes apresentaram entendimento diferente. Considerando a legislação, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "A responsabilidade é exclusiva da União.",
-
-        "A responsabilidade é exclusiva dos municípios.",
-
-        "A efetivação dos direitos da pessoa com TEA envolve atuação conjunta dos entes federativos e da sociedade.",
-
-        "A participação da sociedade é vedada na formulação dessas políticas."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A proteção dos direitos da pessoa com TEA depende da atuação integrada dos entes públicos e da sociedade.",
-
-    feedbackErro:
-        "A legislação trabalha com responsabilidade compartilhada e cooperação institucional.",
-
-    dicaBanca:
-        "Responsabilidade compartilhada é uma expressão recorrente em provas."
-},
-{
-    pergunta: "Uma criança com sinais compatíveis com Transtorno do Espectro Autista foi encaminhada para avaliação especializada. A família foi informada de que a legislação brasileira estabelece prioridade para determinadas ações voltadas a esse público. À luz da Lei nº 12.764/2012, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "A legislação prioriza exclusivamente o tratamento medicamentoso.",
-
-        "O diagnóstico precoce e o atendimento multiprofissional figuram entre as prioridades previstas na política nacional.",
-
-        "O atendimento especializado somente deve ocorrer após a conclusão da educação básica.",
-
-        "A intervenção precoce depende exclusivamente da iniciativa da família."
-
+        "À deficiência visual associada.",
+        "A padrões restritivos e repetitivos de comportamento.",
+        "À incapacidade civil da criança.",
+        "À ausência de desenvolvimento cognitivo.",
+        "Ao transtorno de aprendizagem específico."
     ],
 
     correta: 1,
 
-    feedbackAcerto:
-        "Correto. Entre as diretrizes da Política Nacional de Proteção dos Direitos da Pessoa com TEA estão o diagnóstico precoce, o atendimento multiprofissional e o acesso a serviços adequados.",
+    feedbackAcerto: "Correto. Padrões restritivos e repetitivos de comportamento constituem elemento central da caracterização do TEA.",
 
-    feedbackErro:
-        "A legislação enfatiza a importância da identificação precoce e da atuação integrada de diferentes profissionais.",
+    feedbackErro: "A legislação menciona expressamente comportamentos, interesses e atividades restritivas e repetitivas.",
 
-    dicaBanca:
-        "Diagnóstico precoce e atendimento multiprofissional aparecem frequentemente em provas."
+    dicaBanca: "Rotinas rígidas e interesses restritos aparecem frequentemente em questões."
 },
 
 {
-    pergunta: "Uma equipe escolar discutia estratégias para inclusão de um estudante com TEA. Um professor argumentou que todas as adaptações deveriam ser evitadas para que o aluno fosse tratado exatamente da mesma forma que os demais colegas. Considerando os princípios da inclusão, assinale a alternativa correta:",
+    pergunta: "Durante um seminário, um palestrante afirmou que todas as pessoas com TEA apresentam exatamente as mesmas características, necessidades e potencialidades. À luz da legislação e dos conhecimentos atuais sobre o transtorno, assinale a alternativa correta:",
 
     alternativas: [
-
-        "A igualdade exige tratamento idêntico em todas as situações.",
-
-        "Adaptações razoáveis podem ser necessárias para garantir igualdade de oportunidades.",
-
-        "Adaptações configuram privilégio vedado pela legislação.",
-
-        "Somente estudantes com deficiência física podem receber adaptações."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A igualdade material pode exigir adaptações razoáveis para eliminar barreiras e assegurar participação efetiva.",
-
-    feedbackErro:
-        "As bancas costumam confundir igualdade formal com igualdade material.",
-
-    dicaBanca:
-        "Adaptar não significa privilegiar."
-},
-
-{
-    pergunta: "Durante uma atividade escolar, um estudante com TEA passou a ser excluído de trabalhos em grupo porque alguns colegas acreditavam que ele não conseguiria participar adequadamente das tarefas. A situação chegou ao conhecimento da direção. À luz da legislação e dos princípios de inclusão, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "A exclusão é justificável quando facilita a organização das atividades.",
-
-        "A exclusão pode caracterizar prática discriminatória.",
-
-        "A participação do estudante depende exclusivamente da decisão dos colegas.",
-
-        "A escola não possui responsabilidade sobre relações entre estudantes."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A exclusão baseada na condição da pessoa com TEA pode configurar discriminação e viola princípios de inclusão e participação social.",
-
-    feedbackErro:
-        "A escola possui papel ativo na promoção de ambientes inclusivos e no combate à discriminação.",
-
-    dicaBanca:
-        "Discriminação não ocorre apenas por atos formais."
-},
-
-{
-    pergunta: "Uma família procurou a escola para solicitar informações sobre os direitos de seu filho com TEA. Durante a reunião, a equipe pedagógica destacou a importância da participação familiar no processo educacional. Considerando a legislação, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "A participação da família é irrelevante para a efetivação dos direitos da pessoa com TEA.",
-
-        "A legislação reconhece a importância da orientação e do apoio às famílias.",
-
-        "As decisões relacionadas ao estudante devem ser tomadas exclusivamente pela escola.",
-
-        "A família somente participa quando houver autorização judicial."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A legislação valoriza a orientação, o apoio e a participação da família na promoção dos direitos da pessoa com TEA.",
-
-    feedbackErro:
-        "A inclusão efetiva envolve cooperação entre escola, família e demais instituições.",
-
-    dicaBanca:
-        "Família é parceira no processo de inclusão."
-},
-
-{
-    pergunta: "Durante um seminário sobre TEA, um palestrante afirmou que todos os indivíduos diagnosticados apresentam exatamente as mesmas características e necessidades de apoio. Considerando os conhecimentos atuais e a legislação, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "A afirmação está correta, pois o TEA apresenta manifestações padronizadas.",
-
-        "As características do TEA podem variar significativamente entre os indivíduos.",
-
-        "As diferenças individuais deixam de existir após a idade adulta.",
-
+        "A afirmação está correta.",
+        "As diferenças individuais desaparecem na vida adulta.",
+        "As características do TEA variam significativamente entre os indivíduos, justificando a expressão 'espectro'.",
+        "As manifestações do TEA dependem exclusivamente do ambiente escolar.",
         "Os níveis de suporte não possuem relevância prática."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. O TEA é um espectro, o que significa que as manifestações e necessidades de apoio variam entre as pessoas.",
-
-    feedbackErro:
-        "Uma pegadinha comum é tratar todas as pessoas com TEA como se apresentassem características idênticas.",
-
-    dicaBanca:
-        "A palavra 'espectro' indica diversidade de manifestações."
-},
-{
-    pergunta: "Durante uma reunião escolar, um professor afirmou que o acompanhante especializado previsto na Lei nº 12.764/2012 possui as mesmas atribuições do profissional de apoio escolar previsto na Lei Brasileira de Inclusão. Considerando a legislação vigente, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "Os dois profissionais possuem exatamente as mesmas atribuições em qualquer situação.",
-
-        "O acompanhante especializado e o profissional de apoio escolar são figuras jurídicas distintas, embora possam atuar de forma complementar.",
-
-        "O profissional de apoio escolar substitui obrigatoriamente o acompanhante especializado.",
-
-        "A legislação não diferencia as duas funções."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A legislação trata as duas figuras de forma distinta. Em concursos, é comum a banca tentar confundir os conceitos.",
-
-    feedbackErro:
-        "Acompanhante especializado e profissional de apoio escolar não são sinônimos. As atribuições podem ser complementares, mas os institutos jurídicos são distintos.",
-
-    dicaBanca:
-        "Pegadinha clássica: acompanhante especializado ≠ profissional de apoio escolar."
-},
-
-{
-    pergunta: "Uma escola particular informou aos pais de um estudante com TEA que a presença de acompanhante especializado somente seria permitida mediante pagamento de taxa adicional destinada à cobertura dos custos da instituição. À luz da Lei nº 12.764/2012, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "A cobrança é legítima por se tratar de serviço diferenciado.",
-
-        "A cobrança depende de autorização do Conselho Escolar.",
-
-        "A cobrança adicional em razão do TEA viola a legislação.",
-
-        "A cobrança é permitida apenas na rede privada."
-
     ],
 
     correta: 2,
 
-    feedbackAcerto:
-        "Correto. A legislação veda qualquer cobrança adicional vinculada à condição da pessoa com TEA.",
+    feedbackAcerto: "Correto. O conceito de espectro reflete a ampla diversidade de manifestações e necessidades de apoio existentes entre as pessoas com TEA.",
 
-    feedbackErro:
-        "Cobrança extra por motivo de deficiência ou TEA é uma das infrações mais cobradas em concursos.",
+    feedbackErro: "Uma das principais pegadinhas é tratar todas as pessoas com TEA como se fossem iguais.",
 
-    dicaBanca:
-        "Taxa extra por TEA = ilegal."
+    dicaBanca: "Espectro = diversidade de manifestações."
 },
 
 {
-    pergunta: "Durante a elaboração de políticas públicas, um gestor afirmou que as ações voltadas às pessoas com TEA deveriam concentrar-se exclusivamente na área da saúde. Considerando a Política Nacional de Proteção dos Direitos da Pessoa com TEA, assinale a alternativa correta:",
+    pergunta: "Um candidato afirmou que a caracterização do TEA exige obrigatoriamente comprometimento intelectual severo. Considerando a Lei nº 12.764/2012, assinale a alternativa correta:",
 
     alternativas: [
-
-        "A política nacional possui foco exclusivamente médico.",
-
-        "A política nacional abrange educação, saúde, trabalho, assistência social e participação comunitária.",
-
-        "A legislação limita-se ao atendimento terapêutico.",
-
-        "A inclusão escolar não integra os objetivos da política nacional."
-
+        "A afirmação está correta.",
+        "O comprometimento intelectual severo é requisito indispensável para caracterização do TEA.",
+        "Somente pessoas com deficiência intelectual podem ser diagnosticadas com TEA.",
+        "A presença de deficiência intelectual não constitui requisito obrigatório para a caracterização do TEA.",
+        "O TEA somente existe quando há incapacidade total para comunicação."
     ],
 
-    correta: 1,
+    correta: 3,
 
-    feedbackAcerto:
-        "Correto. A proteção da pessoa com TEA possui caráter multidimensional e envolve diversas áreas de direitos.",
+    feedbackAcerto: "Correto. O TEA pode ocorrer com diferentes níveis de funcionamento intelectual, não sendo exigida deficiência intelectual para sua caracterização.",
 
-    feedbackErro:
-        "Uma pegadinha comum consiste em reduzir a legislação à área da saúde.",
+    feedbackErro: "A legislação não condiciona o reconhecimento do TEA à existência de deficiência intelectual.",
 
-    dicaBanca:
-        "TEA não é apenas tema de saúde; envolve cidadania e inclusão."
+    dicaBanca: "TEA e deficiência intelectual não são sinônimos."
 },
 
 {
-    pergunta: "Um servidor público afirmou que a Carteira de Identificação da Pessoa com Transtorno do Espectro Autista (CIPTEA) cria novos direitos para seus titulares. Considerando a legislação, assinale a alternativa correta:",
+    pergunta: "Ao estudar a Lei nº 12.764/2012, uma candidata concluiu que a pessoa com Transtorno do Espectro Autista é considerada pessoa com deficiência para todos os efeitos legais. Essa conclusão está:",
 
     alternativas: [
-
-        "A CIPTEA cria direitos que não existem para outras pessoas com TEA.",
-
-        "A CIPTEA tem como principal finalidade facilitar a identificação e o acesso aos direitos já assegurados em lei.",
-
-        "A CIPTEA substitui o diagnóstico médico.",
-
-        "A CIPTEA é obrigatória para o reconhecimento dos direitos da pessoa com TEA."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A CIPTEA não cria direitos novos; ela facilita a identificação e o acesso aos direitos já existentes.",
-
-    feedbackErro:
-        "Os direitos decorrem da legislação, e não da emissão da carteira.",
-
-    dicaBanca:
-        "A CIPTEA facilita o exercício dos direitos; não os cria."
-},
-
-{
-    pergunta: "Durante um debate sobre inclusão, um participante afirmou que o simples fato de um estudante com TEA estar matriculado em uma escola regular é suficiente para caracterizar inclusão escolar. À luz dos princípios legais, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "A matrícula, por si só, garante inclusão plena.",
-
-        "A inclusão exige participação efetiva, acessibilidade, apoio necessário e igualdade de oportunidades.",
-
-        "A inclusão depende apenas da presença do acompanhante especializado.",
-
-        "A inclusão escolar é responsabilidade exclusiva da família."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. Inclusão não significa apenas presença física; envolve participação, aprendizagem e acesso em igualdade de condições.",
-
-    feedbackErro:
-        "A banca frequentemente confunde integração física com inclusão efetiva.",
-
-    dicaBanca:
-        "Estar na escola não significa, necessariamente, estar incluído."
-},
-{
-    pergunta: "Uma escola informou aos pais de um estudante com TEA que ele poderia frequentar as aulas, mas não participaria de atividades extracurriculares, passeios pedagógicos e eventos esportivos devido às adaptações que seriam necessárias. Considerando a legislação vigente, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "A restrição é válida para preservar a organização escolar.",
-
-        "A participação em atividades complementares depende exclusivamente da decisão da direção.",
-
-        "A exclusão de atividades em razão do TEA pode configurar discriminação e violação do direito à inclusão.",
-
-        "A medida é permitida desde que a família seja previamente comunicada."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A inclusão envolve participação plena nas atividades escolares e comunitárias, não apenas frequência às aulas.",
-
-    feedbackErro:
-        "A legislação busca garantir participação efetiva em igualdade de condições, inclusive em atividades extracurriculares.",
-
-    dicaBanca:
-        "Inclusão significa participação, não apenas presença física."
-},
-
-{
-    pergunta: "Durante a matrícula de um estudante com TEA, a escola informou que somente aceitaria sua permanência caso os pais permanecessem disponíveis para comparecer imediatamente à instituição sempre que ocorresse qualquer dificuldade comportamental. À luz da legislação, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "A exigência é válida porque a responsabilidade é exclusiva da família.",
-
-        "A escola pode transferir integralmente à família o dever de inclusão.",
-
-        "A exigência, quando utilizada como condição para permanência do aluno, contraria os princípios da inclusão escolar.",
-
-        "A medida é obrigatória para todos os estudantes com TEA."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A inclusão escolar é responsabilidade compartilhada entre escola, família e poder público.",
-
-    feedbackErro:
-        "A escola não pode transferir integralmente suas responsabilidades para a família.",
-
-    dicaBanca:
-        "Responsabilidade compartilhada é conceito central."
-},
-
-{
-    pergunta: "Um candidato com TEA participou de concurso público e solicitou adaptações razoáveis para realização da prova. A banca examinadora recusou o pedido alegando que todos os candidatos devem ser tratados exatamente da mesma forma. Considerando os princípios da inclusão, assinale a alternativa correta:",
-
-    alternativas: [
-
-        "A recusa é correta porque garante igualdade formal.",
-
-        "Adaptações razoáveis podem ser necessárias para assegurar igualdade de oportunidades.",
-
-        "Somente pessoas com deficiência física podem receber adaptações.",
-
-        "A legislação proíbe qualquer diferenciação em concursos públicos."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A igualdade material pode exigir adaptações que eliminem barreiras e permitam participação em condições equivalentes.",
-
-    feedbackErro:
-        "Tratar todos exatamente da mesma forma nem sempre produz igualdade real.",
-
-    dicaBanca:
-        "Igualdade material é uma pegadinha recorrente."
-},
-
-{
-    pergunta: "Uma campanha institucional divulgou que pessoas com TEA são incapazes de desenvolver autonomia e exercer plenamente sua cidadania. À luz da Política Nacional de Proteção dos Direitos da Pessoa com TEA, essa afirmação é:",
-
-    alternativas: [
-
-        "Correta, pois o TEA impede autonomia.",
-
-        "Correta apenas nos casos considerados graves.",
-
-        "Incorreta, pois reforça estigmas e contraria os princípios de inclusão e dignidade da pessoa humana.",
-
-        "Aceitável quando baseada em opinião técnica."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A legislação combate preconceitos, estigmas e discriminações relacionados ao TEA.",
-
-    feedbackErro:
-        "As pessoas com TEA possuem direitos, dignidade e potencialidades que devem ser reconhecidos e respeitados.",
-
-    dicaBanca:
-        "Cuidado com alternativas que generalizam limitações."
-},
-
-{
-    pergunta: "Ao estudar a Lei nº 12.764/2012, um candidato concluiu que ela foi criada para instituir a Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista. Essa conclusão está:",
-
-    alternativas: [
-
         "Correta.",
-
-        "Incorreta, pois a lei trata apenas da educação especial.",
-
-        "Incorreta, pois a lei regulamenta exclusivamente serviços de saúde.",
-
-        "Incorreta, pois a proteção dos direitos da pessoa com TEA foi criada pela LBI."
-
+        "Incorreta, pois essa equiparação ocorre apenas na área da educação.",
+        "Incorreta, pois depende de decisão judicial.",
+        "Incorreta, pois somente se aplica à infância.",
+        "Incorreta, pois vale apenas para acesso à saúde."
     ],
 
     correta: 0,
 
-    feedbackAcerto:
-        "Correto. A Lei nº 12.764/2012 instituiu a Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista.",
+    feedbackAcerto: "Correto. A Lei nº 12.764/2012 estabelece expressamente que a pessoa com TEA é considerada pessoa com deficiência para todos os efeitos legais.",
 
-    feedbackErro:
-        "Essa é uma cobrança clássica de provas: conhecer o objetivo central da lei.",
+    feedbackErro: "Esse é um dos dispositivos mais cobrados da legislação sobre TEA.",
 
-    dicaBanca:
-        "Lei 12.764/2012 = Política Nacional de Proteção dos Direitos da Pessoa com TEA."
+    dicaBanca: "Decore literalmente: TEA = pessoa com deficiência para todos os efeitos legais."
 },
 {
-    pergunta: "Uma escola particular decidiu limitar a duas o número máximo de estudantes com TEA por turma, alegando que isso facilitaria a gestão pedagógica e o acompanhamento dos alunos. À luz da Lei nº 12.764/2012, assinale a alternativa correta:",
+    pergunta: "Durante uma reunião com familiares, um gestor público afirmou que a proteção jurídica da pessoa com TEA limita-se ao acesso aos serviços de saúde. Uma mãe contestou a afirmação com base na Lei nº 12.764/2012. À luz da legislação, assinale a alternativa correta:",
 
     alternativas: [
-
-        "A medida é válida quando baseada em critérios pedagógicos.",
-
-        "A limitação do número de estudantes com TEA pode configurar prática discriminatória.",
-
-        "A medida é permitida apenas em instituições privadas.",
-
-        "A legislação autoriza limites quantitativos para garantir inclusão."
-
+        "A proteção jurídica restringe-se ao atendimento médico especializado.",
+        "Os direitos da pessoa com TEA abrangem áreas como saúde, educação, trabalho, assistência social e cidadania.",
+        "A legislação protege apenas crianças e adolescentes com TEA.",
+        "Os direitos previstos aplicam-se exclusivamente à rede pública de serviços.",
+        "A proteção legal limita-se às situações de vulnerabilidade econômica."
     ],
 
     correta: 1,
 
-    feedbackAcerto:
-        "Correto. A limitação de vagas ou de matrícula em razão do TEA afronta os princípios de inclusão e igualdade de oportunidades previstos na legislação.",
+    feedbackAcerto: "Correto. A Política Nacional de Proteção dos Direitos da Pessoa com TEA possui caráter amplo e busca assegurar direitos em diversas áreas da vida social.",
 
-    feedbackErro:
-        "Uma pegadinha comum é apresentar restrições quantitativas como medidas pedagógicas legítimas. A legislação protege o acesso e a permanência em igualdade de condições.",
+    feedbackErro: "A legislação não se restringe à saúde, abrangendo múltiplas dimensões da inclusão e da cidadania.",
 
-    dicaBanca:
-        "Limitar vagas por motivo de TEA costuma indicar ilegalidade."
+    dicaBanca: "Cuidado com alternativas que reduzem a lei a apenas uma área."
 },
 
 {
-    pergunta: "Durante um curso de formação continuada, um professor afirmou que estudantes com TEA devem permanecer em salas separadas sempre que apresentarem dificuldades de interação social. Considerando os princípios da inclusão escolar, assinale a alternativa correta:",
+    pergunta: "Um servidor afirmou que a pessoa com TEA somente pode exercer plenamente seus direitos após comprovar elevado grau de autonomia e independência. Considerando a legislação vigente, assinale a alternativa correta:",
 
     alternativas: [
-
-        "A separação é recomendada como regra geral.",
-
-        "A segregação constitui o principal objetivo da educação inclusiva.",
-
-        "A inclusão busca garantir participação no ensino regular, com os apoios necessários.",
-
-        "O ensino regular é incompatível com estudantes com TEA."
-
+        "A afirmação está correta.",
+        "O exercício dos direitos depende da demonstração prévia de autonomia plena.",
+        "Os direitos da pessoa com TEA decorrem de sua condição de cidadã e não de critérios de desempenho pessoal.",
+        "A autonomia é requisito obrigatório para reconhecimento dos direitos legais.",
+        "Somente adultos com TEA podem exercer plenamente seus direitos."
     ],
 
     correta: 2,
 
-    feedbackAcerto:
-        "Correto. A legislação privilegia a inclusão no ensino regular e a oferta dos apoios necessários para garantir participação e aprendizagem.",
+    feedbackAcerto: "Correto. Os direitos fundamentais da pessoa com TEA decorrem da dignidade humana e da cidadania, não da demonstração de autonomia específica.",
 
-    feedbackErro:
-        "A banca frequentemente tenta apresentar segregação como estratégia de inclusão, quando ocorre exatamente o contrário.",
+    feedbackErro: "A legislação assegura direitos independentemente do nível de suporte necessário à pessoa.",
 
-    dicaBanca:
-        "Inclusão significa participação no ambiente comum de aprendizagem."
+    dicaBanca: "Direitos não dependem de desempenho ou produtividade."
 },
 
 {
-    pergunta: "Um gestor público declarou que as ações voltadas às pessoas com TEA devem priorizar apenas o indivíduo diagnosticado, sem envolver familiares ou responsáveis. À luz da Política Nacional de Proteção dos Direitos da Pessoa com TEA, assinale a alternativa correta:",
+    pergunta: "Durante um debate sobre inclusão, um participante afirmou que a pessoa com TEA deve ser tratada exatamente da mesma forma em todas as situações para que haja igualdade. À luz dos princípios que orientam a legislação, assinale a alternativa correta:",
 
     alternativas: [
-
-        "A afirmação está correta, pois os direitos são exclusivamente individuais.",
-
-        "A legislação reconhece a importância da orientação e do apoio às famílias.",
-
-        "A família não possui qualquer participação na efetivação dos direitos.",
-
-        "O apoio às famílias é vedado para evitar interferências externas."
-
+        "A igualdade exige tratamento absolutamente idêntico em qualquer contexto.",
+        "A igualdade somente admite diferenciação por decisão judicial.",
+        "A oferta de apoios e adaptações necessárias pode ser indispensável para assegurar igualdade de oportunidades.",
+        "Qualquer adaptação configura privilégio indevido.",
+        "O princípio da igualdade impede medidas de inclusão específicas."
     ],
 
-    correta: 1,
+    correta: 2,
 
-    feedbackAcerto:
-        "Correto. A legislação reconhece a relevância da orientação e do apoio às famílias na promoção dos direitos da pessoa com TEA.",
+    feedbackAcerto: "Correto. A igualdade material pode exigir medidas específicas para eliminar barreiras e garantir participação efetiva.",
 
-    feedbackErro:
-        "A proteção integral da pessoa com TEA envolve também suporte e orientação aos familiares.",
+    feedbackErro: "A legislação busca igualdade de oportunidades, não simples tratamento idêntico.",
 
-    dicaBanca:
-        "Família e rede de apoio aparecem com frequência nas provas."
+    dicaBanca: "Igualdade material é diferente de igualdade formal."
 },
 
 {
-    pergunta: "Ao final de seus estudos sobre a Lei nº 12.764/2012, uma candidata concluiu que a política nacional criada pela norma possui como fundamentos a inclusão social, a cidadania, a dignidade da pessoa humana, a igualdade de oportunidades e o combate à discriminação. Essa conclusão está:",
+    pergunta: "Um município decidiu elaborar políticas públicas para pessoas com TEA sem consultar famílias, profissionais ou entidades representativas. Ao analisar a situação, um conselheiro destacou um princípio presente na legislação. Assinale a alternativa correta:",
 
     alternativas: [
-
-        "Correta.",
-
-        "Incorreta, pois a lei trata apenas de atendimento médico.",
-
-        "Incorreta, pois a inclusão escolar não integra os objetivos da norma.",
-
-        "Incorreta, pois a legislação restringe-se à assistência social."
-
+        "A efetivação dos direitos da pessoa com TEA envolve atuação articulada entre poder público, sociedade e famílias.",
+        "A formulação de políticas públicas é responsabilidade exclusiva da União.",
+        "A participação da sociedade deve ser evitada para garantir neutralidade técnica.",
+        "As famílias não possuem papel relevante na efetivação dos direitos.",
+        "A legislação atribui toda responsabilidade ao sistema de saúde."
     ],
 
     correta: 0,
 
-    feedbackAcerto:
-        "Correto. Esses princípios estão alinhados aos fundamentos da Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista.",
+    feedbackAcerto: "Correto. A proteção dos direitos da pessoa com TEA depende da cooperação entre diversos atores sociais e institucionais.",
 
-    feedbackErro:
-        "A Lei nº 12.764/2012 possui caráter amplo e busca garantir direitos em diversas áreas da vida social.",
+    feedbackErro: "A legislação valoriza a atuação conjunta do Estado, da sociedade e das famílias.",
 
-    dicaBanca:
-        "Questão de fechamento baseada nos princípios centrais da lei."
+    dicaBanca: "Responsabilidade compartilhada aparece frequentemente nas provas."
+},
+
+{
+    pergunta: "Uma campanha institucional divulgou que pessoas com TEA possuem menor capacidade de participação social e, por isso, devem permanecer em ambientes específicos para evitar dificuldades de convivência. Considerando os princípios da Lei nº 12.764/2012, assinale a alternativa correta:",
+
+    alternativas: [
+        "A segregação social é medida recomendada pela legislação.",
+        "A participação comunitária deve ocorrer apenas quando houver supervisão constante.",
+        "A limitação da convivência social favorece o desenvolvimento da pessoa com TEA.",
+        "A legislação promove inclusão, participação social, cidadania e combate à discriminação.",
+        "A convivência comunitária não constitui objetivo da política nacional."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. A Política Nacional de Proteção dos Direitos da Pessoa com TEA fundamenta-se na inclusão social, cidadania e participação plena na comunidade.",
+
+    feedbackErro: "A legislação combate práticas segregadoras e discriminatórias.",
+
+    dicaBanca: "Inclusão e participação social são objetivos centrais da política nacional."
+},
+{
+    pergunta: "Uma criança apresentou sinais compatíveis com Transtorno do Espectro Autista durante os primeiros anos de vida. Os responsáveis foram orientados a aguardar a idade escolar para buscar avaliação especializada. À luz da Lei nº 12.764/2012, assinale a alternativa correta:",
+
+    alternativas: [
+        "A orientação está correta, pois o diagnóstico somente deve ocorrer após a alfabetização.",
+        "A intervenção precoce pode prejudicar o desenvolvimento da criança.",
+        "O diagnóstico precoce constitui uma das diretrizes relevantes da política de proteção da pessoa com TEA.",
+        "A avaliação especializada somente deve ocorrer quando houver prejuízo acadêmico.",
+        "A legislação não trata do diagnóstico precoce."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A legislação valoriza o diagnóstico precoce como instrumento para favorecer o desenvolvimento e o acesso aos apoios necessários.",
+
+    feedbackErro: "A identificação precoce é um dos pilares da proteção e do atendimento à pessoa com TEA.",
+
+    dicaBanca: "Diagnóstico precoce aparece frequentemente associado ao desenvolvimento integral."
+},
+
+{
+    pergunta: "Durante uma reunião de equipe, um profissional afirmou que o atendimento à pessoa com TEA deve ser conduzido exclusivamente por médicos, dispensando a participação de outros especialistas. Considerando a legislação, assinale a alternativa correta:",
+
+    alternativas: [
+        "A afirmação está correta.",
+        "O atendimento deve ser realizado apenas por profissionais da saúde.",
+        "A atuação multiprofissional é dispensável quando existe diagnóstico confirmado.",
+        "A legislação reconhece a importância do atendimento multiprofissional.",
+        "A participação de outros profissionais depende exclusivamente da família."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. A Lei nº 12.764/2012 destaca a importância do atendimento multiprofissional para a pessoa com TEA.",
+
+    feedbackErro: "O atendimento à pessoa com TEA exige integração de diferentes áreas do conhecimento.",
+
+    dicaBanca: "Multiprofissionalidade é palavra-chave na legislação."
+},
+
+{
+    pergunta: "Uma família procurou os serviços públicos após receber o diagnóstico de TEA de seu filho. O gestor responsável informou que a atuação dos serviços deveria ocorrer de forma isolada, sem articulação entre setores. À luz da política nacional, assinale a alternativa correta:",
+
+    alternativas: [
+        "A atuação isolada dos serviços aumenta a eficiência do atendimento.",
+        "A integração entre diferentes áreas favorece a proteção integral da pessoa com TEA.",
+        "Somente os serviços educacionais devem atuar após o diagnóstico.",
+        "A articulação institucional é proibida para evitar sobreposição de funções.",
+        "A legislação determina atuação exclusiva dos serviços de saúde."
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. A proteção da pessoa com TEA pressupõe articulação entre diferentes políticas e serviços.",
+
+    feedbackErro: "A legislação privilegia ações integradas e coordenadas.",
+
+    dicaBanca: "Integração entre setores é característica recorrente das políticas inclusivas."
+},
+
+{
+    pergunta: "Durante um curso de capacitação, um participante afirmou que o atendimento multiprofissional deve ocorrer apenas quando houver comprometimento severo associado ao TEA. Considerando a legislação, assinale a alternativa correta:",
+
+    alternativas: [
+        "A afirmação está correta.",
+        "O atendimento multiprofissional depende exclusivamente da gravidade do quadro.",
+        "O atendimento multiprofissional é uma diretriz da política nacional e não se restringe a casos específicos previamente definidos.",
+        "Somente crianças podem receber atendimento multiprofissional.",
+        "A legislação não menciona esse tipo de atendimento."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A política nacional reconhece a importância do atendimento multiprofissional como instrumento de apoio e desenvolvimento.",
+
+    feedbackErro: "A legislação não restringe essa diretriz apenas a situações extremas.",
+
+    dicaBanca: "Evite alternativas que utilizem expressões como 'somente', 'apenas' ou 'exclusivamente'."
+},
+
+{
+    pergunta: "Uma candidata afirmou que o diagnóstico precoce possui relevância apenas para fins estatísticos e administrativos, não produzindo impactos concretos na vida da pessoa com TEA. Considerando os fundamentos da política nacional, assinale a alternativa correta:",
+
+    alternativas: [
+        "A afirmação está correta.",
+        "O diagnóstico precoce possui importância limitada à emissão de documentos.",
+        "O diagnóstico precoce favorece o acesso a serviços, apoios e intervenções adequadas.",
+        "O diagnóstico precoce interessa apenas à área da saúde.",
+        "A legislação não relaciona diagnóstico e acesso a direitos."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. O diagnóstico precoce pode facilitar o acesso a atendimentos, apoios e políticas voltadas ao desenvolvimento da pessoa com TEA.",
+
+    feedbackErro: "A legislação valoriza o diagnóstico precoce justamente pelos benefícios associados à intervenção e ao acesso a direitos.",
+
+    dicaBanca: "Diagnóstico precoce costuma estar associado a acesso, desenvolvimento e proteção."
+},
+{
+    pergunta: "Uma família procurou a rede pública de saúde em busca de atendimento para uma criança com TEA. O gestor responsável informou que os serviços especializados somente seriam disponibilizados após vários anos de acompanhamento na atenção básica. À luz da Lei nº 12.764/2012, assinale a alternativa correta:",
+
+    alternativas: [
+        "A legislação prioriza a postergação do atendimento especializado.",
+        "O acesso aos serviços de saúde depende exclusivamente da disponibilidade orçamentária do município.",
+        "A pessoa com TEA possui direito ao acesso a ações e serviços de saúde adequados às suas necessidades.",
+        "O atendimento especializado somente é assegurado após a idade escolar.",
+        "A legislação limita-se à educação e não trata de serviços de saúde."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A Política Nacional de Proteção dos Direitos da Pessoa com TEA assegura acesso às ações e aos serviços de saúde necessários ao desenvolvimento e bem-estar da pessoa.",
+
+    feedbackErro: "A legislação reconhece a saúde como um dos pilares da proteção integral da pessoa com TEA.",
+
+    dicaBanca: "Saúde é direito fundamental expressamente protegido pela lei."
+},
+
+{
+    pergunta: "Durante uma discussão sobre políticas públicas, um gestor afirmou que o atendimento da pessoa com TEA deve concentrar-se apenas no tratamento dos sintomas clínicos observados. Considerando a legislação, assinale a alternativa correta:",
+
+    alternativas: [
+        "A afirmação está correta.",
+        "O atendimento deve limitar-se às necessidades médicas imediatas.",
+        "A proteção da pessoa com TEA envolve abordagem ampla voltada ao desenvolvimento, autonomia e inclusão social.",
+        "O atendimento integral é incompatível com a política nacional.",
+        "A legislação não prevê ações voltadas ao desenvolvimento global da pessoa."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A legislação adota perspectiva ampla de proteção, contemplando diferentes dimensões da vida da pessoa com TEA.",
+
+    feedbackErro: "Uma das pegadinhas mais comuns é reduzir o TEA exclusivamente à dimensão médica.",
+
+    dicaBanca: "A política nacional possui caráter multidimensional."
+},
+
+{
+    pergunta: "Uma adolescente com TEA necessitava de acompanhamento realizado por profissionais de diferentes áreas. Entretanto, um órgão público decidiu oferecer apenas atendimento isolado, sem articulação entre os serviços. À luz da política nacional, assinale a alternativa correta:",
+
+    alternativas: [
+        "A atuação isolada dos serviços é a forma preferencial prevista na legislação.",
+        "A integração entre diferentes profissionais e serviços favorece a efetivação dos direitos da pessoa com TEA.",
+        "A articulação entre áreas distintas é vedada para evitar conflitos de competência.",
+        "Somente profissionais médicos devem participar do atendimento.",
+        "O atendimento multiprofissional aplica-se exclusivamente à infância."
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. A atuação integrada e multiprofissional fortalece a proteção integral da pessoa com TEA.",
+
+    feedbackErro: "A legislação valoriza ações coordenadas e articuladas entre diferentes profissionais e políticas públicas.",
+
+    dicaBanca: "Integração de serviços é tema recorrente."
+},
+
+{
+    pergunta: "Um servidor afirmou que a pessoa com TEA somente pode acessar serviços especializados de saúde após comprovar incapacidade para realizar atividades da vida diária. Considerando a Lei nº 12.764/2012, assinale a alternativa correta:",
+
+    alternativas: [
+        "A afirmação está correta.",
+        "O acesso aos serviços depende da demonstração de incapacidade total.",
+        "A comprovação de dependência permanente é requisito legal obrigatório.",
+        "O direito ao atendimento não está condicionado à demonstração de incapacidade absoluta.",
+        "A legislação restringe os serviços especializados aos casos mais graves."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. Os direitos assegurados à pessoa com TEA não dependem da demonstração de incapacidade absoluta.",
+
+    feedbackErro: "A legislação busca garantir acesso aos serviços necessários conforme as necessidades da pessoa.",
+
+    dicaBanca: "Direitos não dependem de incapacidade total."
+},
+
+{
+    pergunta: "Ao analisar a Lei nº 12.764/2012, uma candidata concluiu que a proteção da pessoa com TEA deve ocorrer de forma contínua e articulada, envolvendo diferentes serviços e políticas públicas. Essa conclusão está:",
+
+    alternativas: [
+        "Correta.",
+        "Incorreta, pois a lei trata exclusivamente do atendimento médico.",
+        "Incorreta, pois a proteção restringe-se ao ambiente escolar.",
+        "Incorreta, pois a atuação integrada não é mencionada na política nacional.",
+        "Incorreta, pois a responsabilidade pertence exclusivamente ao sistema de saúde."
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A política nacional busca assegurar proteção ampla e articulada, envolvendo diferentes áreas e serviços.",
+
+    feedbackErro: "A legislação não adota uma visão fragmentada do atendimento à pessoa com TEA.",
+
+    dicaBanca: "Proteção integral exige atuação articulada."
+},
+{
+    pergunta: "Durante o período de matrículas, uma escola particular informou aos responsáveis por um estudante com TEA que somente analisaria seu pedido de ingresso após verificar se haveria impacto na rotina pedagógica da turma. Considerando a Lei nº 12.764/2012, assinale a alternativa correta:",
+
+    alternativas: [
+        "A escola pode condicionar a matrícula à análise de conveniência pedagógica.",
+        "A instituição possui autonomia para recusar estudantes com TEA quando entender necessário.",
+        "O ingresso do estudante depende da aprovação prévia dos demais responsáveis da turma.",
+        "A criação de obstáculos ao acesso à educação da pessoa com TEA contraria a legislação.",
+        "A matrícula pode ser recusada quando houver necessidade de adaptações educacionais."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. A legislação assegura o acesso da pessoa com TEA à educação em igualdade de condições, vedando práticas que dificultem ou restrinjam esse direito.",
+
+    feedbackErro: "A existência de necessidades educacionais específicas não autoriza restrições ao acesso à escola.",
+
+    dicaBanca: "Obstáculos ao acesso costumam indicar ilegalidade."
+},
+
+{
+    pergunta: "Uma equipe escolar afirmou que a inclusão de estudantes com TEA está plenamente garantida quando eles apenas frequentam o mesmo espaço físico dos demais alunos. À luz dos princípios da educação inclusiva, assinale a alternativa correta:",
+
+    alternativas: [
+        "A presença física é suficiente para caracterizar inclusão.",
+        "A inclusão exige apenas matrícula regular.",
+        "A participação efetiva, a aprendizagem e a igualdade de oportunidades também integram o conceito de inclusão.",
+        "A inclusão depende exclusivamente do acompanhante especializado.",
+        "A convivência escolar não possui relevância para a inclusão."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. Inclusão envolve participação, aprendizagem, acessibilidade e oportunidades reais de desenvolvimento.",
+
+    feedbackErro: "Uma das pegadinhas mais frequentes é confundir presença física com inclusão efetiva.",
+
+    dicaBanca: "Matrícula não é sinônimo de inclusão."
+},
+
+{
+    pergunta: "Durante um conselho de classe, um professor sugeriu que um estudante com TEA fosse dispensado de atividades em grupo para evitar dificuldades de interação. Considerando os princípios da inclusão escolar, assinale a alternativa correta:",
+
+    alternativas: [
+        "A dispensa é recomendada para preservar o rendimento da turma.",
+        "A exclusão de atividades coletivas pode comprometer o direito à participação e à inclusão.",
+        "A participação em grupo depende exclusivamente da vontade dos colegas.",
+        "Estudantes com TEA devem realizar atividades separadas sempre que possível.",
+        "A legislação incentiva a segregação pedagógica como estratégia educacional."
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. A inclusão pressupõe oportunidades de participação nas atividades escolares e sociais da comunidade educativa.",
+
+    feedbackErro: "A legislação combate práticas segregadoras e favorece a convivência e a participação.",
+
+    dicaBanca: "Inclusão significa participar, não apenas estar presente."
+},
+
+{
+    pergunta: "Uma escola informou aos pais de um aluno com TEA que ele poderia frequentar as aulas, mas não participaria de excursões, feiras científicas e eventos culturais promovidos pela instituição. À luz da legislação, assinale a alternativa correta:",
+
+    alternativas: [
+        "A medida é válida por razões organizacionais.",
+        "A escola pode restringir atividades extracurriculares para estudantes com TEA.",
+        "A participação em atividades complementares depende da existência de laudo específico.",
+        "A exclusão de atividades escolares em razão do TEA pode configurar prática discriminatória.",
+        "Eventos extracurriculares não integram o processo de inclusão."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. A inclusão envolve participação plena nas atividades oferecidas pela comunidade escolar.",
+
+    feedbackErro: "Restrições baseadas exclusivamente na condição do estudante podem caracterizar discriminação.",
+
+    dicaBanca: "Inclusão não termina na sala de aula."
+},
+
+{
+    pergunta: "Uma instituição de ensino exigiu que os responsáveis permanecessem permanentemente de prontidão para buscar um estudante com TEA sempre que ocorresse qualquer comportamento considerado inadequado pela escola. Considerando os princípios legais aplicáveis, assinale a alternativa correta:",
+
+    alternativas: [
+        "A responsabilidade pela inclusão pertence exclusivamente à família.",
+        "A escola pode transferir integralmente suas responsabilidades educacionais aos responsáveis.",
+        "A inclusão escolar resulta de responsabilidade compartilhada entre escola, família e poder público.",
+        "A medida é obrigatória para todos os estudantes com TEA.",
+        "A permanência do estudante pode ser condicionada à disponibilidade integral da família."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A efetivação da inclusão exige cooperação entre diferentes atores, sem transferência integral de responsabilidades.",
+
+    feedbackErro: "A escola possui deveres próprios relacionados ao atendimento e à inclusão do estudante.",
+
+    dicaBanca: "Responsabilidade compartilhada é tema recorrente em questões de inclusão."
+},
+{
+    pergunta: "Durante uma reunião escolar, a direção informou que o acompanhante especializado previsto na Lei nº 12.764/2012 passaria a assumir as funções pedagógicas do professor sempre que estivesse acompanhando um estudante com TEA. À luz da legislação, assinale a alternativa correta:",
+
+    alternativas: [
+        "A afirmação está correta, pois o acompanhante especializado substitui o professor da turma.",
+        "O acompanhante especializado exerce exclusivamente funções administrativas.",
+        "O acompanhante especializado atua como responsável legal do estudante durante o período escolar.",
+        "O acompanhante especializado pode substituir o professor apenas em atividades extracurriculares.",
+        "O acompanhante especializado não substitui as atribuições pedagógicas do professor."
+    ],
+
+    correta: 4,
+
+    feedbackAcerto: "Correto. O acompanhante especializado constitui apoio ao estudante, mas não substitui as funções pedagógicas do professor.",
+
+    feedbackErro: "Uma das confusões mais frequentes em provas é atribuir ao acompanhante especializado funções docentes que não lhe pertencem.",
+
+    dicaBanca: "Acompanhante especializado ≠ professor."
+},
+
+{
+    pergunta: "Uma escola recusou o pedido de acompanhante especializado para um estudante com TEA, alegando que a simples matrícula na rede regular já seria suficiente para garantir sua inclusão. Considerando a Lei nº 12.764/2012, assinale a alternativa correta:",
+
+    alternativas: [
+        "A escola está correta, pois a matrícula elimina qualquer necessidade de apoio adicional.",
+        "O acompanhante especializado constitui direito do estudante quando comprovadamente necessário.",
+        "A presença do acompanhante depende exclusivamente da conveniência administrativa da escola.",
+        "O acompanhante especializado somente pode atuar na rede pública.",
+        "A legislação não prevê qualquer forma de apoio individualizado."
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. A Lei nº 12.764/2012 assegura acompanhante especializado quando houver necessidade comprovada.",
+
+    feedbackErro: "A inclusão efetiva pode exigir recursos e apoios específicos para garantir participação em igualdade de condições.",
+
+    dicaBanca: "Necessidade comprovada é expressão importante na lei."
+},
+
+{
+    pergunta: "Durante uma capacitação, um professor afirmou que todo estudante com TEA possui automaticamente direito ao acompanhante especializado, independentemente de avaliação das necessidades individuais. À luz da legislação, assinale a alternativa correta:",
+
+    alternativas: [
+        "A afirmação está correta.",
+        "O acompanhante é obrigatório para toda pessoa diagnosticada com TEA.",
+        "A necessidade de acompanhante especializado deve ser analisada conforme as necessidades do estudante.",
+        "O acompanhante somente pode ser solicitado pela escola.",
+        "A legislação proíbe qualquer análise individual das necessidades educacionais."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A legislação vincula o acompanhante especializado à existência de necessidade comprovada, evitando generalizações.",
+
+    feedbackErro: "Nem toda pessoa com TEA apresenta as mesmas necessidades de apoio.",
+
+    dicaBanca: "Cuidado com alternativas que utilizam expressões como 'sempre', 'todo' ou 'automaticamente'."
+},
+
+{
+    pergunta: "Uma instituição de ensino informou aos pais de um estudante com TEA que permitiria a presença do acompanhante especializado apenas mediante pagamento de taxa adicional destinada à cobertura dos custos do serviço. Considerando a legislação vigente, assinale a alternativa correta:",
+
+    alternativas: [
+        "A cobrança é válida por se tratar de serviço diferenciado.",
+        "A cobrança depende apenas da concordância da família.",
+        "A cobrança é permitida exclusivamente na rede privada.",
+        "A cobrança adicional vinculada à condição do estudante contraria a legislação.",
+        "A escola possui liberdade para definir valores relacionados à inclusão."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. A cobrança adicional em razão do TEA ou da necessidade de inclusão viola os direitos assegurados pela legislação.",
+
+    feedbackErro: "Taxas extras relacionadas à deficiência ou ao TEA são frequentemente cobradas em concursos.",
+
+    dicaBanca: "Inclusão não pode gerar cobrança adicional."
+},
+
+{
+    pergunta: "Ao analisar a situação de um estudante com TEA, a equipe escolar concluiu que ele necessitava de apoio especializado para participar adequadamente das atividades educacionais. Um gestor argumentou que a concessão desse apoio configuraria privilégio indevido em relação aos demais estudantes. Considerando os princípios da inclusão, assinale a alternativa correta:",
+
+    alternativas: [
+        "O apoio especializado constitui privilégio incompatível com a igualdade.",
+        "A oferta de apoios necessários busca assegurar igualdade de oportunidades e participação efetiva.",
+        "Apoios individualizados somente podem existir mediante decisão judicial.",
+        "A igualdade exige tratamento idêntico em todas as situações.",
+        "A legislação proíbe medidas específicas voltadas à inclusão."
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. Os apoios necessários existem para eliminar barreiras e garantir igualdade material de oportunidades.",
+
+    feedbackErro: "A inclusão não significa tratar todos exatamente da mesma forma, mas garantir condições efetivas de participação.",
+
+    dicaBanca: "Igualdade material é uma das maiores pegadinhas das provas."
+},
+{
+    pergunta: "Durante uma capacitação para servidores públicos, um participante afirmou que a Carteira de Identificação da Pessoa com Transtorno do Espectro Autista (CIPTEA) foi criada para conceder novos direitos aos seus portadores. Considerando a legislação vigente, assinale a alternativa correta:",
+
+    alternativas: [
+        "A CIPTEA cria direitos exclusivos que não existem para outras pessoas com TEA.",
+        "A CIPTEA substitui o diagnóstico e o laudo médico.",
+        "A CIPTEA tem como principal finalidade facilitar a identificação da pessoa com TEA e o acesso aos direitos já assegurados em lei.",
+        "A CIPTEA é obrigatória para o reconhecimento da condição de pessoa com TEA.",
+        "A CIPTEA é exigida para matrícula escolar e atendimento em saúde."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A CIPTEA não cria direitos novos; ela facilita a identificação da pessoa com TEA e o exercício dos direitos já garantidos pela legislação.",
+
+    feedbackErro: "Os direitos decorrem da lei, e não da emissão da carteira.",
+
+    dicaBanca: "A CIPTEA facilita direitos; não cria direitos."
+},
+
+{
+    pergunta: "Uma pessoa com TEA compareceu a um órgão público sem portar a CIPTEA. O atendente informou que, sem a carteira, nenhum dos direitos previstos na legislação poderia ser reconhecido. À luz da legislação vigente, assinale a alternativa correta:",
+
+    alternativas: [
+        "O atendente está correto, pois a CIPTEA é requisito obrigatório para todos os direitos.",
+        "Sem a CIPTEA, a pessoa deixa de ser considerada pessoa com deficiência.",
+        "A CIPTEA facilita a identificação, mas não constitui condição para existência dos direitos legais.",
+        "Os direitos somente podem ser exercidos após a emissão da CIPTEA.",
+        "A legislação condiciona a cidadania da pessoa com TEA à apresentação da carteira."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A carteira facilita a comprovação da condição da pessoa, mas os direitos decorrem da legislação e não da posse do documento.",
+
+    feedbackErro: "A CIPTEA não é fonte dos direitos; ela apenas facilita sua identificação.",
+
+    dicaBanca: "Documento comprova; a lei garante."
+},
+
+{
+    pergunta: "Durante um atendimento em serviço público, um servidor questionou a necessidade de oferecer prioridade a uma pessoa com TEA, alegando que o transtorno não gera direitos diferenciados. Considerando a legislação, assinale a alternativa correta:",
+
+    alternativas: [
+        "A prioridade somente existe para pessoas com deficiência física.",
+        "A prioridade depende exclusivamente da avaliação do servidor responsável.",
+        "A pessoa com TEA, por ser considerada pessoa com deficiência para todos os efeitos legais, pode usufruir dos direitos correlatos previstos na legislação.",
+        "A prioridade aplica-se apenas a crianças com TEA.",
+        "A legislação não relaciona TEA e direitos de atendimento prioritário."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A equiparação legal da pessoa com TEA à pessoa com deficiência produz reflexos em diversos direitos assegurados pela legislação brasileira.",
+
+    feedbackErro: "A condição jurídica da pessoa com TEA gera consequências relevantes para o exercício de direitos.",
+
+    dicaBanca: "TEA = pessoa com deficiência para todos os efeitos legais."
+},
+
+{
+    pergunta: "Uma campanha institucional divulgou que a CIPTEA possui finalidade exclusivamente estatística e administrativa, sem qualquer impacto na vida cotidiana das pessoas com TEA. À luz da legislação, assinale a alternativa correta:",
+
+    alternativas: [
+        "A afirmação está correta.",
+        "A CIPTEA possui finalidade apenas cadastral.",
+        "A CIPTEA existe apenas para controle governamental.",
+        "A CIPTEA busca facilitar a identificação da pessoa com TEA e contribuir para acesso mais célere aos serviços e direitos.",
+        "A CIPTEA substitui políticas públicas de inclusão."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. A carteira foi criada para facilitar a identificação e reduzir obstáculos no acesso aos direitos e serviços.",
+
+    feedbackErro: "A finalidade da CIPTEA vai além de simples registros administrativos.",
+
+    dicaBanca: "Facilitar identificação é a essência da CIPTEA."
+},
+
+{
+    pergunta: "Ao estudar a legislação sobre TEA, uma candidata concluiu que a identificação adequada da pessoa com Transtorno do Espectro Autista contribui para a efetivação de direitos relacionados à inclusão, ao atendimento e à participação social. Essa conclusão está:",
+
+    alternativas: [
+        "Correta.",
+        "Incorreta, pois a identificação não possui qualquer relevância prática.",
+        "Incorreta, pois a legislação limita-se à área da saúde.",
+        "Incorreta, pois a identificação somente interessa ao poder público.",
+        "Incorreta, pois a inclusão independe do reconhecimento da condição da pessoa."
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A identificação adequada pode facilitar o acesso a políticas públicas, serviços e direitos assegurados pela legislação.",
+
+    feedbackErro: "A legislação busca reduzir barreiras e promover o exercício efetivo dos direitos da pessoa com TEA.",
+
+    dicaBanca: "Identificação adequada favorece inclusão e acesso a direitos."
+},
+{
+    pergunta: "Durante uma reunião sobre inclusão, um gestor afirmou que a participação da família na promoção dos direitos da pessoa com TEA é facultativa e possui pouca relevância prática. À luz da Lei nº 12.764/2012, assinale a alternativa correta:",
+
+    alternativas: [
+        "A afirmação está correta, pois os direitos da pessoa com TEA dependem exclusivamente do Estado.",
+        "A família atua apenas durante a infância, sem relevância nas demais fases da vida.",
+        "A legislação reconhece a importância da orientação, do apoio e da participação da família na efetivação dos direitos da pessoa com TEA.",
+        "A participação familiar deve ser evitada para preservar a autonomia da pessoa.",
+        "A família não possui papel reconhecido pela política nacional."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A legislação valoriza a participação e o apoio às famílias como elementos importantes para a proteção e promoção dos direitos da pessoa com TEA.",
+
+    feedbackErro: "A proteção integral da pessoa com TEA envolve também orientação e suporte aos familiares.",
+
+    dicaBanca: "Família e rede de apoio aparecem com frequência nas provas."
+},
+
+{
+    pergunta: "Uma campanha institucional divulgou que pessoas com TEA devem permanecer restritas a ambientes especializados para evitar dificuldades de convivência social. Considerando os princípios da política nacional, assinale a alternativa correta:",
+
+    alternativas: [
+        "A segregação social favorece a inclusão.",
+        "A convivência comunitária deve ocorrer apenas em ambientes controlados.",
+        "A participação social depende exclusivamente da presença de acompanhante especializado.",
+        "A inclusão pressupõe participação na comunidade e exercício da cidadania em igualdade de oportunidades.",
+        "A vida comunitária não possui relação com os direitos da pessoa com TEA."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. A legislação promove inclusão social, cidadania e participação comunitária da pessoa com TEA.",
+
+    feedbackErro: "A política nacional combate práticas segregadoras e incentiva a participação social.",
+
+    dicaBanca: "Inclusão e cidadania caminham juntas."
+},
+
+{
+    pergunta: "Durante um debate sobre autonomia, um participante afirmou que pessoas com TEA são incapazes de tomar decisões sobre a própria vida e devem ser permanentemente representadas por terceiros. À luz da legislação e dos princípios de inclusão, assinale a alternativa correta:",
+
+    alternativas: [
+        "A afirmação está correta para todas as pessoas com TEA.",
+        "A autonomia é incompatível com o TEA.",
+        "A necessidade de apoio elimina automaticamente a capacidade de autodeterminação.",
+        "A legislação reconhece a dignidade, a autonomia e o direito ao desenvolvimento da pessoa com TEA.",
+        "A representação permanente constitui regra geral para pessoas com TEA."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. A legislação busca promover autonomia, dignidade e participação social, combatendo estigmas relacionados à incapacidade generalizada.",
+
+    feedbackErro: "O TEA não autoriza conclusões automáticas sobre incapacidade ou ausência de autonomia.",
+
+    dicaBanca: "Cuidado com alternativas que generalizam limitações."
+},
+
+{
+    pergunta: "Um município decidiu elaborar ações voltadas à pessoa com TEA sem envolver escolas, serviços de saúde, assistência social ou entidades da sociedade civil. Considerando a política nacional, assinale a alternativa correta:",
+
+    alternativas: [
+        "A medida está correta, pois a atuação deve ser centralizada.",
+        "A proteção dos direitos da pessoa com TEA depende da articulação entre diferentes setores e instituições.",
+        "A integração entre serviços gera conflitos e deve ser evitada.",
+        "A participação da sociedade civil não possui relevância para a inclusão.",
+        "As políticas voltadas ao TEA devem ser executadas exclusivamente pelo sistema de saúde."
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. A efetivação dos direitos da pessoa com TEA exige atuação articulada entre diferentes políticas públicas e atores sociais.",
+
+    feedbackErro: "A legislação valoriza integração, cooperação e atuação intersetorial.",
+
+    dicaBanca: "Intersetorialidade é tema recorrente em inclusão."
+},
+
+{
+    pergunta: "Ao analisar a Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista, uma candidata concluiu que seus objetivos ultrapassam o acesso a serviços, buscando também promover cidadania, dignidade e participação social. Essa conclusão está:",
+
+    alternativas: [
+        "Correta.",
+        "Incorreta, pois a política nacional limita-se ao atendimento médico.",
+        "Incorreta, pois a legislação trata exclusivamente da educação.",
+        "Incorreta, pois cidadania não integra os objetivos da norma.",
+        "Incorreta, pois participação social não possui relevância jurídica."
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A política nacional possui caráter amplo e busca assegurar inclusão, cidadania, dignidade e participação plena da pessoa com TEA.",
+
+    feedbackErro: "A legislação não se limita ao acesso a serviços, mas promove a inclusão social em sentido amplo.",
+
+    dicaBanca: "Questões de fechamento costumam cobrar os objetivos gerais da política."
+},
+{
+    pergunta: "Uma empresa recusou a participação de um candidato com TEA em processo seletivo, alegando que pessoas com o transtorno apresentam dificuldades naturais de adaptação ao ambiente corporativo. À luz da legislação e dos princípios de inclusão, assinale a alternativa correta:",
+
+    alternativas: [
+        "A decisão é legítima quando baseada em experiência anterior da empresa.",
+        "A empresa pode restringir a participação de pessoas com TEA para evitar riscos operacionais.",
+        "A recusa caracteriza tratamento potencialmente discriminatório baseado em generalizações sobre a condição da pessoa.",
+        "A seleção diferenciada é recomendada para proteger o candidato.",
+        "A legislação não se aplica às relações privadas de trabalho."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A exclusão baseada em estereótipos ou generalizações relacionadas ao TEA contraria os princípios da igualdade de oportunidades e da não discriminação.",
+
+    feedbackErro: "A condição da pessoa não pode ser utilizada como justificativa automática para restringir oportunidades profissionais.",
+
+    dicaBanca: "Generalizações costumam indicar discriminação."
+},
+
+{
+    pergunta: "Durante uma palestra, um gestor afirmou que a inclusão profissional da pessoa com TEA limita-se ao acesso ao emprego, não abrangendo oportunidades de crescimento e desenvolvimento na carreira. Considerando os princípios da legislação, assinale a alternativa correta:",
+
+    alternativas: [
+        "A afirmação está correta.",
+        "A inclusão profissional restringe-se à contratação inicial.",
+        "A pessoa com TEA possui direito apenas ao primeiro acesso ao mercado de trabalho.",
+        "A promoção da inclusão envolve acesso, permanência, desenvolvimento e participação em igualdade de oportunidades.",
+        "O crescimento profissional depende exclusivamente da ausência de necessidades de apoio."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. A inclusão profissional não se limita ao ingresso no trabalho, abrangendo oportunidades de desenvolvimento e participação.",
+
+    feedbackErro: "A legislação busca promover igualdade de oportunidades ao longo de toda a trajetória profissional.",
+
+    dicaBanca: "Inclusão profissional não termina na contratação."
+},
+
+{
+    pergunta: "Uma instituição responsável por cursos de qualificação recusou a inscrição de uma pessoa com TEA sob o argumento de que o curso não foi criado para atender pessoas com necessidades específicas. À luz dos princípios da inclusão, assinale a alternativa correta:",
+
+    alternativas: [
+        "A recusa é válida quando o curso possui alta complexidade técnica.",
+        "A instituição possui liberdade para selecionar apenas determinados perfis de alunos.",
+        "A qualificação profissional pode ser restringida quando houver necessidade de adaptações.",
+        "A exclusão baseada exclusivamente na condição da pessoa pode configurar discriminação.",
+        "A legislação protege apenas o acesso ao ensino regular."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. O acesso à qualificação profissional integra o processo de inclusão social e econômica da pessoa com TEA.",
+
+    feedbackErro: "A simples necessidade de adaptações não justifica a exclusão da pessoa de oportunidades educacionais ou profissionais.",
+
+    dicaBanca: "Capacitação e qualificação também fazem parte da inclusão."
+},
+
+{
+    pergunta: "Durante uma campanha institucional, foi divulgado que pessoas com TEA devem ser direcionadas exclusivamente para atividades simples e repetitivas, independentemente de suas habilidades individuais. Considerando a legislação e os princípios da cidadania, assinale a alternativa correta:",
+
+    alternativas: [
+        "A afirmação está correta, pois o TEA determina previamente a capacidade profissional da pessoa.",
+        "A distribuição de funções deve ocorrer exclusivamente com base no diagnóstico.",
+        "As potencialidades individuais devem ser consideradas, evitando estigmas e generalizações.",
+        "A especialização profissional é incompatível com o TEA.",
+        "A legislação recomenda direcionamento ocupacional obrigatório."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A legislação combate preconceitos e reconhece a individualidade e as potencialidades de cada pessoa.",
+
+    feedbackErro: "O diagnóstico não define, por si só, capacidades, interesses ou possibilidades profissionais.",
+
+    dicaBanca: "Cuidado com alternativas que tratam todas as pessoas com TEA como iguais."
+},
+
+{
+    pergunta: "Uma candidata concluiu que a inclusão social da pessoa com TEA envolve não apenas acesso a serviços públicos, mas também oportunidades de participação na educação, trabalho, cultura, lazer e vida comunitária. Essa conclusão está:",
+
+    alternativas: [
+        "Correta.",
+        "Incorreta, pois a legislação limita-se à saúde e educação.",
+        "Incorreta, pois trabalho e lazer não integram o conceito de inclusão.",
+        "Incorreta, pois a participação social não constitui objetivo da política nacional.",
+        "Incorreta, pois a legislação trata apenas de atendimento especializado."
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A Política Nacional de Proteção dos Direitos da Pessoa com TEA possui caráter amplo e busca promover participação plena na sociedade.",
+
+    feedbackErro: "A inclusão social envolve múltiplas dimensões da vida humana e não apenas acesso a serviços especializados.",
+
+    dicaBanca: "Inclusão = participação plena na sociedade."
+},
+{
+    pergunta: "Durante uma atividade escolar, alguns estudantes passaram a evitar deliberadamente a participação de um colega com TEA em trabalhos e projetos, alegando que sua presença dificultaria o desempenho do grupo. Ao tomar conhecimento da situação, a direção da escola deve compreender que essa conduta:",
+
+    alternativas: [
+        "Constitui prática aceitável quando aprovada pela maioria dos estudantes.",
+        "Representa simples conflito interpessoal sem relevância para a inclusão.",
+        "É justificável quando houver diferença de rendimento acadêmico.",
+        "Pode caracterizar discriminação e violação dos princípios de inclusão e igualdade de oportunidades.",
+        "Deve ser resolvida exclusivamente pela família do estudante."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. A exclusão baseada na condição da pessoa com TEA pode configurar discriminação e afronta os princípios da inclusão social.",
+
+    feedbackErro: "A discriminação pode ocorrer por ações indiretas de exclusão e isolamento social.",
+
+    dicaBanca: "Discriminação nem sempre ocorre de forma explícita."
+},
+
+{
+    pergunta: "Durante um atendimento em estabelecimento comercial, um funcionário afirmou que pessoas com TEA deveriam utilizar canais específicos de atendimento para evitar desconforto aos demais clientes. À luz da legislação e dos princípios da inclusão, assinale a alternativa correta:",
+
+    alternativas: [
+        "A medida promove organização e eficiência do atendimento.",
+        "A segregação de pessoas com TEA pode configurar tratamento discriminatório.",
+        "O estabelecimento possui liberdade para criar regras específicas para pessoas com TEA.",
+        "A medida é válida sempre que houver justificativa administrativa.",
+        "A legislação não alcança relações privadas de consumo."
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. A criação de restrições ou tratamentos segregadores pode caracterizar discriminação e violação de direitos.",
+
+    feedbackErro: "A inclusão pressupõe acesso aos mesmos ambientes e oportunidades, salvo adaptações destinadas a eliminar barreiras.",
+
+    dicaBanca: "Segregação costuma indicar ilegalidade."
+},
+
+{
+    pergunta: "Um gestor público afirmou que o combate ao preconceito relacionado ao TEA deve ocorrer apenas por meio de ações de saúde, pois educação e conscientização social não possuem relevância jurídica. Considerando a Política Nacional de Proteção dos Direitos da Pessoa com TEA, assinale a alternativa correta:",
+
+    alternativas: [
+        "A afirmação está correta.",
+        "O combate ao preconceito depende exclusivamente de atendimento médico.",
+        "A conscientização social e a promoção da inclusão são instrumentos importantes para proteção dos direitos da pessoa com TEA.",
+        "A legislação não trata de discriminação ou preconceito.",
+        "O preconceito somente possui relevância quando praticado por agentes públicos."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. A política nacional busca promover inclusão, cidadania e respeito à dignidade da pessoa com TEA, combatendo estigmas e preconceitos.",
+
+    feedbackErro: "A proteção dos direitos da pessoa com TEA envolve também mudança cultural e conscientização social.",
+
+    dicaBanca: "Inclusão depende de acessibilidade e também de atitudes."
+},
+
+{
+    pergunta: "Ao revisar a Lei nº 12.764/2012, um candidato concluiu que a proteção da pessoa com TEA envolve diagnóstico precoce, atendimento multiprofissional, acesso à educação, saúde, trabalho, participação social e combate à discriminação. Essa conclusão está:",
+
+    alternativas: [
+        "Correta.",
+        "Incorreta, pois a lei limita-se ao atendimento médico.",
+        "Incorreta, pois trabalho e participação social não integram a política nacional.",
+        "Incorreta, pois educação e saúde são os únicos direitos previstos.",
+        "Incorreta, pois a legislação trata apenas de crianças e adolescentes."
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A Política Nacional de Proteção dos Direitos da Pessoa com TEA possui caráter amplo e abrange diversas dimensões da vida social.",
+
+    feedbackErro: "A legislação não se restringe a uma única área de atuação, buscando proteção integral da pessoa com TEA.",
+
+    dicaBanca: "Questões de revisão costumam reunir vários temas da lei."
+},
+
+{
+    pergunta: "Após estudar toda a Lei nº 12.764/2012, uma candidata afirmou que seu principal objetivo é promover a proteção dos direitos da pessoa com Transtorno do Espectro Autista, assegurando inclusão social, cidadania, dignidade da pessoa humana, igualdade de oportunidades e participação plena na sociedade. Essa afirmação está:",
+
+    alternativas: [
+        "Correta.",
+        "Incorreta, pois a lei possui finalidade exclusivamente terapêutica.",
+        "Incorreta, pois a norma limita-se à regulamentação da educação especial.",
+        "Incorreta, pois a legislação trata apenas da emissão da CIPTEA.",
+        "Incorreta, pois a política nacional restringe-se aos serviços públicos de saúde."
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. Esse entendimento sintetiza os fundamentos e objetivos centrais da Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista.",
+
+    feedbackErro: "A lei possui caráter amplo e orienta a promoção da inclusão e da cidadania da pessoa com TEA.",
+
+    dicaBanca: "Questões finais costumam cobrar a visão global da legislação."
 }
 
 ];
