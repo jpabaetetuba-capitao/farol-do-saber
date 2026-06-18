@@ -5,90 +5,63 @@ const materiaQuimicaTeoria = [
 
     conteudo: `
 
-<h2>⚗️ MATÉRIA E QUÍMICA</h2>
+<h2>⚗️ INTRODUÇÃO À MATÉRIA E À QUÍMICA</h2>
 
-<p>
-O estudo da matéria e da Química permite compreender do que são feitos os materiais, como eles se apresentam, quais propriedades possuem e como podem sofrer transformações. Esse conteúdo aparece em concursos de Ciências porque relaciona conceitos básicos da Química ao cotidiano, à saúde, ao ambiente, à tecnologia e à interpretação de fenômenos naturais.
-</p>
-
-<p>
-Matéria é tudo aquilo que possui massa e ocupa lugar no espaço. Uma pedra, a água, o ar, o corpo humano, os alimentos, os combustíveis, os medicamentos e os produtos de limpeza são exemplos de matéria. A Química estuda a composição, a estrutura, as propriedades e as transformações da matéria.
-</p>
+<p>A Química é a ciência que estuda a matéria, sua composição, suas propriedades e suas transformações. Ela explica fenômenos presentes no cotidiano, como ferrugem, combustão, tratamento de água, conservação de alimentos, ação de medicamentos, fabricação de materiais, poluição e reciclagem.</p><p>Matéria é tudo aquilo que possui massa e ocupa lugar no espaço. Ar, água, metais, madeira, vidro, alimentos, combustíveis e gases são exemplos de matéria. Mesmo quando não conseguimos ver, como no caso do ar, há massa e volume envolvidos.</p>
 
 <div class="caixa-destaque">
-<h3>📌 Ideia Central</h3>
+<h3>📌 Ideia Principal</h3>
 Matéria
 <span class="seta-fluxo">⬇</span>
 Propriedades
 <span class="seta-fluxo">⬇</span>
-Substâncias e Misturas
+Substâncias e misturas
 <span class="seta-fluxo">⬇</span>
-Transformações Físicas e Químicas
+Transformações
 <span class="seta-fluxo">⬇</span>
-Modelos Atômicos, Funções e Reações
+Modelos e reações
 </div>
 
-<h3>🔬 CORPO, OBJETO E MATERIAL</h3>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Conceito</th><th>Significado</th><th>Exemplo</th></tr>
-<tr><td>Corpo</td><td>Porção limitada de matéria</td><td>Uma barra de ferro</td></tr>
-<tr><td>Objeto</td><td>Corpo com finalidade de uso</td><td>Uma panela de ferro</td></tr>
-<tr><td>Material</td><td>Tipo de matéria que forma o corpo</td><td>Ferro, vidro, plástico</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Matéria</td><td>Tudo que possui massa e ocupa espaço.</td></tr>
+<tr><td>Corpo</td><td>Porção limitada de matéria.</td></tr>
+<tr><td>Objeto</td><td>Corpo com finalidade de uso.</td></tr>
+<tr><td>Material</td><td>Tipo de matéria que constitui um corpo ou objeto.</td></tr>
 </table>
 
-<h3>🧪 POR QUE ESTUDAR QUÍMICA?</h3>
-
-<p>
-A Química ajuda a explicar a conservação dos alimentos, o tratamento da água, a corrosão dos metais, a ação de medicamentos, a queima de combustíveis, a reciclagem, a poluição, a composição dos materiais e a produção de novos produtos.
-</p>
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
 
 <div class="caixa-exemplo">
-<strong>📖 Exemplo</strong>
-<br><br>
-Quando o ferro enferruja, ocorre uma transformação química. Quando o gelo derrete, ocorre uma transformação física. Saber diferenciar esses processos é essencial em provas.
+Uma garrafa é um objeto; o vidro ou o plástico é o material; um pedaço quebrado dessa garrafa é um corpo. Todos são exemplos relacionados à matéria.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Matéria é apenas aquilo que podemos ver.
-<br><br>
-✅ Errado. O ar é matéria, embora não seja visível.
-<br><br>
-❌ Toda transformação da matéria forma uma nova substância.
-<br><br>
-✅ Errado. Transformações físicas não formam nova substância.
-<br><br>
-❌ Química estuda apenas produtos de laboratório.
-<br><br>
-✅ Errado. A Química está presente no cotidiano, nos seres vivos, no ambiente e na tecnologia.
+❌ Matéria é apenas o que pode ser visto.<br><br>✅ Errado. O ar é matéria, embora não seja visível.<br><br>
+❌ Química estuda apenas produtos de laboratório.<br><br>✅ Errado. A Química está no ambiente, na saúde, na alimentação e na tecnologia.<br><br>
+❌ Corpo, objeto e material são sinônimos.<br><br>✅ Errado. Corpo é porção de matéria; objeto tem função; material é a composição.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ Matéria possui massa e ocupa espaço.
-<br><br>
-✔ Química estuda composição, propriedades e transformações da matéria.
-<br><br>
-✔ Corpo é uma porção limitada de matéria.
-<br><br>
-✔ Objeto é um corpo com função.
-<br><br>
-✔ Material é o tipo de matéria que forma o corpo.
+✔ Matéria tem massa e ocupa espaço.<br><br>
+✔ Química estuda composição, propriedades e transformações.<br><br>
+✔ Corpo, objeto e material têm sentidos diferentes.<br><br>
+✔ A Química explica fenômenos cotidianos.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Conceito de matéria.
-<br><br>
-2. Diferença entre corpo, objeto e material.
-<br><br>
-3. Relação entre Química e cotidiano.
-<br><br>
-4. Diferença inicial entre transformação física e química.
+1. Conceito de matéria.<br><br>
+2. Diferença entre corpo, objeto e material.<br><br>
+3. Química no cotidiano.<br><br>
+4. Transformações da matéria.
 </div>
 
 `
@@ -101,94 +74,62 @@ Quando o ferro enferruja, ocorre uma transformação química. Quando o gelo der
 
 <h2>🧱 PROPRIEDADES GERAIS DA MATÉRIA</h2>
 
-<p>
-As propriedades gerais são características presentes em toda matéria, independentemente do tipo de material. Elas não permitem identificar uma substância específica, mas ajudam a compreender o comportamento dos corpos materiais.
-</p>
+<p>Propriedades gerais são características presentes em toda matéria. Elas não identificam uma substância específica, pois qualquer corpo material possui essas propriedades.</p><p>Massa, volume, impenetrabilidade, divisibilidade, compressibilidade, elasticidade e inércia são exemplos. Em provas, costuma-se cobrar a diferença entre propriedade geral e propriedade específica.</p>
 
 <div class="caixa-destaque">
-<h3>📌 Propriedades Gerais</h3>
+<h3>📌 Ideia Principal</h3>
 Massa
 <span class="seta-fluxo">⬇</span>
 Volume
 <span class="seta-fluxo">⬇</span>
 Impenetrabilidade
 <span class="seta-fluxo">⬇</span>
-Divisibilidade
-<span class="seta-fluxo">⬇</span>
 Compressibilidade
-<span class="seta-fluxo">⬇</span>
-Elasticidade
 <span class="seta-fluxo">⬇</span>
 Inércia
 </div>
 
-<h3>⚖️ MASSA E VOLUME</h3>
-
-<p>
-Massa é a quantidade de matéria de um corpo. Volume é o espaço ocupado por esse corpo. Um bloco de madeira e uma porção de água possuem massa e volume, portanto são matéria.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Propriedade</th><th>Explicação</th></tr>
-<tr><td>Massa</td><td>Quantidade de matéria de um corpo</td></tr>
-<tr><td>Volume</td><td>Espaço ocupado por um corpo</td></tr>
-<tr><td>Impenetrabilidade</td><td>Dois corpos não ocupam o mesmo lugar ao mesmo tempo</td></tr>
-<tr><td>Divisibilidade</td><td>A matéria pode ser dividida em partes menores</td></tr>
-<tr><td>Compressibilidade</td><td>A matéria pode ter seu volume reduzido sob pressão</td></tr>
-<tr><td>Elasticidade</td><td>Capacidade de retornar à forma original após deformação</td></tr>
-<tr><td>Inércia</td><td>Tendência de manter estado de repouso ou movimento</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Massa</td><td>Quantidade de matéria de um corpo.</td></tr>
+<tr><td>Volume</td><td>Espaço ocupado pelo corpo.</td></tr>
+<tr><td>Impenetrabilidade</td><td>Dois corpos não ocupam o mesmo lugar ao mesmo tempo.</td></tr>
+<tr><td>Compressibilidade</td><td>Capacidade de reduzir volume sob pressão.</td></tr>
+<tr><td>Inércia</td><td>Tendência de manter estado de repouso ou movimento.</td></tr>
 </table>
 
-<h3>🎈 COMPRESSIBILIDADE</h3>
-
-<p>
-Os gases são mais compressíveis que líquidos e sólidos, pois suas partículas ficam mais afastadas. Por isso, o ar pode ser comprimido em cilindros, pneus e seringas.
-</p>
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
 
 <div class="caixa-exemplo">
-<strong>📖 Exemplo</strong>
-<br><br>
-Ao empurrar o êmbolo de uma seringa com a saída tampada, o ar ocupa menor volume. Isso mostra a compressibilidade dos gases.
+Quando uma seringa com ar é tampada e o êmbolo é pressionado, o volume do ar diminui. Isso demonstra a compressibilidade, mais evidente em gases.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Massa e peso são a mesma coisa.
-<br><br>
-✅ Errado. Massa é quantidade de matéria; peso depende da gravidade.
-<br><br>
-❌ Apenas sólidos possuem volume.
-<br><br>
-✅ Errado. Líquidos e gases também ocupam espaço.
-<br><br>
-❌ A impenetrabilidade significa que a matéria não pode ser dividida.
-<br><br>
-✅ Errado. Impenetrabilidade significa que dois corpos não ocupam o mesmo lugar ao mesmo tempo.
+❌ Massa e peso são a mesma coisa.<br><br>✅ Errado. Massa é quantidade de matéria; peso depende da gravidade.<br><br>
+❌ Apenas sólidos possuem volume.<br><br>✅ Errado. Líquidos e gases também ocupam espaço.<br><br>
+❌ Impenetrabilidade significa que a matéria não pode ser dividida.<br><br>✅ Errado. Significa que dois corpos não ocupam o mesmo lugar ao mesmo tempo.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ Propriedades gerais pertencem a toda matéria.
-<br><br>
-✔ Massa e volume são propriedades gerais.
-<br><br>
-✔ Gases são bastante compressíveis.
-<br><br>
-✔ Impenetrabilidade não é o mesmo que indivisibilidade.
+✔ Propriedades gerais existem em toda matéria.<br><br>
+✔ Massa e volume são propriedades gerais.<br><br>
+✔ Gases são bastante compressíveis.<br><br>
+✔ Impenetrabilidade não é indivisibilidade.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Diferença entre massa e volume.
-<br><br>
-2. Conceito de impenetrabilidade.
-<br><br>
-3. Compressibilidade dos gases.
-<br><br>
-4. Identificação das propriedades gerais.
+1. Massa e volume.<br><br>
+2. Compressibilidade dos gases.<br><br>
+3. Impenetrabilidade.<br><br>
+4. Diferença entre massa e peso.
 </div>
 
 `
@@ -201,92 +142,60 @@ Ao empurrar o êmbolo de uma seringa com a saída tampada, o ar ocupa menor volu
 
 <h2>🔎 PROPRIEDADES ESPECÍFICAS DA MATÉRIA</h2>
 
-<p>
-As propriedades específicas permitem diferenciar e identificar substâncias. Ao contrário das propriedades gerais, elas variam de um material para outro. São muito cobradas em questões que envolvem densidade, ponto de fusão, ponto de ebulição, solubilidade, condutividade e características químicas.
-</p>
+<p>Propriedades específicas ajudam a diferenciar e identificar materiais. Ao contrário das gerais, elas variam de uma substância para outra.</p><p>Podem ser físicas, químicas ou organolépticas. Densidade, ponto de fusão, ponto de ebulição, solubilidade e condutividade são físicas. Inflamabilidade, oxidação e corrosão são químicas.</p>
 
 <div class="caixa-destaque">
-<h3>📌 Tipos de Propriedades Específicas</h3>
+<h3>📌 Ideia Principal</h3>
 Físicas
 <span class="seta-fluxo">⬇</span>
 Químicas
 <span class="seta-fluxo">⬇</span>
 Organolépticas
 <span class="seta-fluxo">⬇</span>
-Funcionais
+Identificação de substâncias
 </div>
 
-<h3>🧊 PROPRIEDADES FÍSICAS</h3>
-
-<p>
-São propriedades observadas ou medidas sem alterar a composição da substância. Exemplos: densidade, ponto de fusão, ponto de ebulição, solubilidade, dureza, maleabilidade, ductilidade e condutividade elétrica ou térmica.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Propriedade</th><th>Explicação</th></tr>
-<tr><td>Densidade</td><td>Relação entre massa e volume</td></tr>
-<tr><td>Ponto de fusão</td><td>Temperatura em que sólido passa para líquido</td></tr>
-<tr><td>Ponto de ebulição</td><td>Temperatura em que líquido passa para vapor</td></tr>
-<tr><td>Solubilidade</td><td>Capacidade de dissolução em determinado solvente</td></tr>
-<tr><td>Condutividade</td><td>Capacidade de conduzir calor ou eletricidade</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Densidade</td><td>Relação entre massa e volume.</td></tr>
+<tr><td>Ponto de fusão</td><td>Temperatura de passagem do sólido para o líquido.</td></tr>
+<tr><td>Ponto de ebulição</td><td>Temperatura de passagem do líquido para vapor.</td></tr>
+<tr><td>Inflamabilidade</td><td>Capacidade de sofrer combustão.</td></tr>
+<tr><td>Organolépticas</td><td>Cor, odor, sabor e brilho, percebidos pelos sentidos.</td></tr>
 </table>
 
-<h3>🔥 PROPRIEDADES QUÍMICAS</h3>
-
-<p>
-São características observadas quando a matéria sofre transformação química. Inflamabilidade, oxidação, corrosão, acidez, basicidade e reatividade são exemplos.
-</p>
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
 
 <div class="caixa-exemplo">
-<strong>📖 Exemplo</strong>
-<br><br>
-O ferro enferrujar é uma manifestação de propriedade química, pois há formação de novas substâncias por reação com oxigênio e umidade.
+O álcool é inflamável. Essa característica é propriedade química, pois envolve a capacidade de reagir com oxigênio em combustão.
 </div>
-
-<h3>👃 PROPRIEDADES ORGANOLÉPTICAS</h3>
-
-<p>
-São percebidas pelos sentidos, como cor, odor, sabor e brilho. Em laboratório, não se deve provar substâncias para identificá-las, pois muitas podem ser tóxicas.
-</p>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Densidade é propriedade geral.
-<br><br>
-✅ Errado. Densidade é propriedade específica.
-<br><br>
-❌ Ponto de fusão altera a composição da substância.
-<br><br>
-✅ Errado. Mudança de estado físico não altera a composição química.
-<br><br>
-❌ Odor e sabor são métodos seguros para identificar substâncias em laboratório.
-<br><br>
-✅ Errado. O uso dos sentidos deve respeitar normas de segurança.
+❌ Densidade é propriedade geral.<br><br>✅ Errado. Densidade é propriedade específica.<br><br>
+❌ Ponto de fusão altera a composição química.<br><br>✅ Errado. Mudança de estado é transformação física.<br><br>
+❌ Provar substâncias é método seguro de identificação.<br><br>✅ Errado. Em laboratório, isso é perigoso.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ Propriedades específicas ajudam a identificar substâncias.
-<br><br>
-✔ Densidade, fusão, ebulição e solubilidade são propriedades físicas.
-<br><br>
-✔ Inflamabilidade e oxidação são propriedades químicas.
-<br><br>
-✔ Propriedades organolépticas são percebidas pelos sentidos.
+✔ Propriedades específicas ajudam a identificar materiais.<br><br>
+✔ Densidade é específica.<br><br>
+✔ Inflamabilidade é química.<br><br>
+✔ Propriedades organolépticas exigem cuidado.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Diferença entre propriedade geral e específica.
-<br><br>
-2. Densidade como propriedade específica.
-<br><br>
-3. Ponto de fusão e ebulição.
-<br><br>
-4. Propriedades químicas e formação de novas substâncias.
+1. Densidade.<br><br>
+2. Ponto de fusão e ebulição.<br><br>
+3. Inflamabilidade e oxidação.<br><br>
+4. Propriedades organolépticas.
 </div>
 
 `
@@ -299,86 +208,59 @@ São percebidas pelos sentidos, como cor, odor, sabor e brilho. Em laboratório,
 
 <h2>⚖️ DENSIDADE E FLUTUAÇÃO</h2>
 
-<p>
-Densidade é uma propriedade específica da matéria que relaciona a massa de um corpo ao volume que ele ocupa. Ela é muito utilizada para comparar materiais, explicar flutuação, separar misturas e identificar substâncias.
-</p>
+<p>Densidade é a relação entre massa e volume. Ela permite comparar materiais e explicar flutuação, afundamento e alguns métodos de separação de misturas.</p><p>Um corpo tende a flutuar quando sua densidade média é menor que a densidade do líquido. Tende a afundar quando sua densidade média é maior. A massa isolada não explica tudo; é preciso considerar o volume.</p>
 
 <div class="caixa-destaque">
-<h3>📌 Fórmula Fundamental</h3>
-Densidade = Massa ÷ Volume
-<br><br>
-d = m / V
+<h3>📌 Ideia Principal</h3>
+Massa
+<span class="seta-fluxo">⬇</span>
+Volume
+<span class="seta-fluxo">⬇</span>
+Densidade = m/V
+<span class="seta-fluxo">⬇</span>
+Flutuação
 </div>
 
-<h3>🌊 FLUTUAÇÃO</h3>
-
-<p>
-Um corpo tende a flutuar quando sua densidade média é menor que a densidade do líquido em que está imerso. Um corpo tende a afundar quando sua densidade média é maior que a densidade do líquido.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Situação</th><th>Interpretação</th></tr>
-<tr><td>Corpo menos denso que o líquido</td><td>Flutua</td></tr>
-<tr><td>Corpo mais denso que o líquido</td><td>Afunda</td></tr>
-<tr><td>Corpo com densidade semelhante à do líquido</td><td>Pode ficar em equilíbrio</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Densidade</td><td>Razão entre massa e volume.</td></tr>
+<tr><td>Menor densidade</td><td>Tende a flutuar em líquido mais denso.</td></tr>
+<tr><td>Maior densidade</td><td>Tende a afundar em líquido menos denso.</td></tr>
+<tr><td>Densidade média</td><td>Considera o conjunto do corpo, inclusive espaços internos.</td></tr>
 </table>
 
-<h3>🚢 EXEMPLO DO NAVIO</h3>
-
-<p>
-Um navio de aço pode flutuar porque não se considera apenas a densidade do aço, mas a densidade média do conjunto navio + ar interno. O formato do casco permite deslocar grande volume de água, reduzindo a densidade média da estrutura.
-</p>
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
 
 <div class="caixa-exemplo">
-<strong>📖 Exemplo</strong>
-<br><br>
-Uma esfera maciça de ferro afunda na água. Já um navio feito de aço flutua porque possui grande volume interno com ar, diminuindo sua densidade média.
+Um navio de aço flutua porque a densidade média do conjunto navio + ar interno pode ser menor que a da água deslocada. Uma esfera maciça de aço, por outro lado, tende a afundar.
 </div>
-
-<h3>🧪 DENSIDADE E SEPARAÇÃO DE MISTURAS</h3>
-
-<p>
-A diferença de densidade é usada em processos como decantação, centrifugação e flotação. Óleo e água podem separar-se porque possuem densidades diferentes e não se misturam completamente.
-</p>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Todo objeto de metal afunda.
-<br><br>
-✅ Errado. Depende da densidade média e do formato.
-<br><br>
-❌ Densidade depende apenas da massa.
-<br><br>
-✅ Errado. Depende da relação entre massa e volume.
-<br><br>
-❌ Um material menos denso que a água sempre fica no fundo.
-<br><br>
-✅ Errado. Se for menos denso, tende a flutuar.
+❌ Todo metal afunda.<br><br>✅ Errado. Depende da densidade média e do formato.<br><br>
+❌ Densidade depende apenas da massa.<br><br>✅ Errado. Depende da relação massa/volume.<br><br>
+❌ Um objeto menos denso que a água fica no fundo.<br><br>✅ Errado. Tende a flutuar.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ Densidade é massa dividida pelo volume.
-<br><br>
-✔ Materiais menos densos tendem a flutuar em líquidos mais densos.
-<br><br>
-✔ A flutuação depende da densidade média do corpo.
-<br><br>
+✔ Densidade é massa dividida pelo volume.<br><br>
+✔ Flutuação depende da densidade relativa.<br><br>
+✔ Navios flutuam por densidade média.<br><br>
 ✔ Diferenças de densidade ajudam na separação de misturas.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Fórmula da densidade.
-<br><br>
-2. Flutuação e afundamento.
-<br><br>
-3. Densidade média.
-<br><br>
-4. Relação entre densidade e separação de misturas.
+1. Cálculo de densidade.<br><br>
+2. Flutuação.<br><br>
+3. Afundamento.<br><br>
+4. Densidade média.
 </div>
 
 `
@@ -391,82 +273,59 @@ A diferença de densidade é usada em processos como decantação, centrifugaç�
 
 <h2>🧊 ESTADOS FÍSICOS DA MATÉRIA</h2>
 
-<p>
-A matéria pode apresentar-se em diferentes estados físicos. No estudo básico de Ciências, os principais são sólido, líquido e gasoso. Também existem outros estados, como o plasma, mas os três primeiros são os mais cobrados em conteúdos escolares e concursos.
-</p>
+<p>A matéria pode apresentar-se em diferentes estados físicos. No ensino fundamental, os principais são sólido, líquido e gasoso.</p><p>Esses estados se diferenciam pela organização das partículas, pela liberdade de movimento, pela forma e pelo volume. O estado físico depende das condições de temperatura e pressão.</p>
 
 <div class="caixa-destaque">
-<h3>📌 Estados Físicos</h3>
+<h3>📌 Ideia Principal</h3>
 Sólido
 <span class="seta-fluxo">⬇</span>
 Líquido
 <span class="seta-fluxo">⬇</span>
 Gasoso
+<span class="seta-fluxo">⬇</span>
+Organização das partículas
 </div>
 
-<h3>🧱 SÓLIDO</h3>
-
-<p>
-No estado sólido, as partículas estão mais próximas e organizadas, com menor liberdade de movimento. Por isso, os sólidos possuem forma e volume definidos.
-</p>
-
-<h3>💧 LÍQUIDO</h3>
-
-<p>
-No estado líquido, as partículas estão próximas, mas têm maior liberdade de movimento que nos sólidos. Os líquidos possuem volume definido, mas assumem a forma do recipiente.
-</p>
-
-<h3>💨 GASOSO</h3>
-
-<p>
-No estado gasoso, as partículas ficam afastadas e movimentam-se intensamente. Os gases não possuem forma nem volume definidos, ocupando todo o espaço disponível.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Estado</th><th>Forma</th><th>Volume</th><th>Organização das partículas</th></tr>
-<tr><td>Sólido</td><td>Definida</td><td>Definido</td><td>Mais organizadas e próximas</td></tr>
-<tr><td>Líquido</td><td>Variável</td><td>Definido</td><td>Próximas e com mobilidade</td></tr>
-<tr><td>Gasoso</td><td>Variável</td><td>Variável</td><td>Afastadas e muito móveis</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Sólido</td><td>Forma e volume definidos; partículas mais organizadas.</td></tr>
+<tr><td>Líquido</td><td>Volume definido e forma variável; partículas com maior mobilidade.</td></tr>
+<tr><td>Gasoso</td><td>Forma e volume variáveis; partículas afastadas.</td></tr>
+<tr><td>Pressão e temperatura</td><td>Influenciam mudanças de estado.</td></tr>
 </table>
+
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
+<div class="caixa-exemplo">
+O vapor de água ocupa o espaço disponível porque, no estado gasoso, as partículas ficam afastadas e se movimentam com maior liberdade.
+</div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Líquidos não possuem volume definido.
-<br><br>
-✅ Errado. Líquidos possuem volume definido, mas forma variável.
-<br><br>
-❌ Gases ocupam apenas a parte inferior do recipiente.
-<br><br>
-✅ Errado. Gases ocupam todo o espaço disponível.
-<br><br>
-❌ Sólidos não possuem partículas em movimento.
-<br><br>
-✅ Errado. As partículas vibram em posições mais fixas.
+❌ Líquidos não possuem volume definido.<br><br>✅ Errado. Líquidos têm volume definido e forma variável.<br><br>
+❌ Gases ocupam apenas o fundo do recipiente.<br><br>✅ Errado. Gases ocupam todo o espaço disponível.<br><br>
+❌ Sólidos não possuem partículas em movimento.<br><br>✅ Errado. As partículas vibram em posições mais fixas.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ Sólido: forma e volume definidos.
-<br><br>
-✔ Líquido: forma variável e volume definido.
-<br><br>
-✔ Gasoso: forma e volume variáveis.
-<br><br>
-✔ O estado físico depende da organização e energia das partículas.
+✔ Sólidos têm forma e volume definidos.<br><br>
+✔ Líquidos têm volume definido e forma variável.<br><br>
+✔ Gases têm forma e volume variáveis.<br><br>
+✔ Partículas gasosas ficam mais afastadas.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Diferença entre sólido, líquido e gás.
-<br><br>
-2. Forma e volume em cada estado.
-<br><br>
-3. Organização das partículas.
-<br><br>
-4. Compressibilidade dos gases.
+1. Estados físicos.<br><br>
+2. Forma e volume.<br><br>
+3. Organização das partículas.<br><br>
+4. Influência de temperatura e pressão.
 </div>
 
 `
@@ -479,91 +338,60 @@ No estado gasoso, as partículas ficam afastadas e movimentam-se intensamente. O
 
 <h2>🌡️ MUDANÇAS DE ESTADO FÍSICO</h2>
 
-<p>
-As mudanças de estado físico ocorrem quando a matéria passa de um estado físico para outro devido à variação de temperatura e/ou pressão. Em geral, essas mudanças não alteram a composição da substância, sendo classificadas como transformações físicas.
-</p>
+<p>Mudanças de estado físico ocorrem quando a matéria passa de um estado para outro por alteração de temperatura e/ou pressão. Em geral, não há formação de nova substância.</p><p>Fusão, solidificação, vaporização, condensação e sublimação são transformações físicas. A composição da substância permanece a mesma.</p>
 
 <div class="caixa-destaque">
-<h3>📌 Principais Mudanças</h3>
-Fusão
+<h3>📌 Ideia Principal</h3>
+Aquecimento ou resfriamento
 <span class="seta-fluxo">⬇</span>
-Vaporização
+Mudança de estado
 <span class="seta-fluxo">⬇</span>
-Condensação
+Mesma substância
 <span class="seta-fluxo">⬇</span>
-Solidificação
-<span class="seta-fluxo">⬇</span>
-Sublimação
+Transformação física
 </div>
 
-<table>
-<tr><th>Mudança</th><th>Passagem</th></tr>
-<tr><td>Fusão</td><td>Sólido para líquido</td></tr>
-<tr><td>Solidificação</td><td>Líquido para sólido</td></tr>
-<tr><td>Vaporização</td><td>Líquido para gasoso</td></tr>
-<tr><td>Condensação ou liquefação</td><td>Gasoso para líquido</td></tr>
-<tr><td>Sublimação</td><td>Sólido para gasoso ou gasoso para sólido</td></tr>
-</table>
-
-<h3>💨 TIPOS DE VAPORIZAÇÃO</h3>
-
-<p>
-A vaporização pode ocorrer por evaporação, ebulição ou calefação.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Tipo</th><th>Característica</th></tr>
-<tr><td>Evaporação</td><td>Lenta e ocorre na superfície do líquido</td></tr>
-<tr><td>Ebulição</td><td>Rápida e ocorre em toda a massa líquida</td></tr>
-<tr><td>Calefação</td><td>Muito rápida, em superfície muito quente</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Fusão</td><td>Sólido para líquido.</td></tr>
+<tr><td>Solidificação</td><td>Líquido para sólido.</td></tr>
+<tr><td>Vaporização</td><td>Líquido para gasoso.</td></tr>
+<tr><td>Condensação</td><td>Gasoso para líquido.</td></tr>
+<tr><td>Sublimação</td><td>Sólido para gasoso ou gasoso para sólido.</td></tr>
 </table>
+
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
 
 <div class="caixa-exemplo">
-<strong>📖 Exemplo</strong>
-<br><br>
-A roupa secando no varal é evaporação. A água fervendo em uma panela é ebulição. Gotas de água em uma chapa muito quente sofrem calefação.
+Quando o gelo derrete, ocorre fusão. A substância continua sendo água, apenas em outro estado físico.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Toda vaporização é ebulição.
-<br><br>
-✅ Errado. Ebulição é apenas um tipo de vaporização.
-<br><br>
-❌ Fusão é passagem do líquido para o sólido.
-<br><br>
-✅ Errado. Fusão é passagem do sólido para o líquido.
-<br><br>
-❌ Mudança de estado sempre forma nova substância.
-<br><br>
-✅ Errado. Mudança de estado é transformação física.
+❌ Toda vaporização é ebulição.<br><br>✅ Errado. Também existe evaporação e calefação.<br><br>
+❌ Fusão é líquido para sólido.<br><br>✅ Errado. Fusão é sólido para líquido.<br><br>
+❌ Mudança de estado sempre forma nova substância.<br><br>✅ Errado. É transformação física.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ Fusão: sólido para líquido.
-<br><br>
-✔ Solidificação: líquido para sólido.
-<br><br>
-✔ Vaporização: líquido para gasoso.
-<br><br>
-✔ Condensação: gasoso para líquido.
-<br><br>
-✔ Sublimação: sólido para gasoso ou o inverso.
+✔ Mudança de estado é transformação física.<br><br>
+✔ Fusão é sólido para líquido.<br><br>
+✔ Condensação é gasoso para líquido.<br><br>
+✔ Vaporização pode ocorrer por evaporação, ebulição ou calefação.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Nome das mudanças de estado.
-<br><br>
-2. Diferença entre evaporação e ebulição.
-<br><br>
-3. Mudança física não forma nova substância.
-<br><br>
-4. Interferência de temperatura e pressão.
+1. Nome das mudanças de estado.<br><br>
+2. Evaporação, ebulição e calefação.<br><br>
+3. Transformação física.<br><br>
+4. Temperatura e pressão.
 </div>
 
 `
@@ -576,87 +404,60 @@ A roupa secando no varal é evaporação. A água fervendo em uma panela é ebul
 
 <h2>🧪 SUBSTÂNCIAS PURAS</h2>
 
-<p>
-Substância pura é um material formado por partículas químicas de composição definida. Pode ser classificada como simples ou composta. Esse conceito é fundamental para diferenciar substâncias puras de misturas.
-</p>
+<p>Substância pura é material de composição definida. Pode ser simples, quando formada por um único elemento químico, ou composta, quando formada por elementos diferentes.</p><p>Substâncias puras apresentam propriedades características, como pontos de fusão e ebulição definidos em condições constantes.</p>
 
 <div class="caixa-destaque">
-<h3>📌 Classificação</h3>
-Substância Pura
+<h3>📌 Ideia Principal</h3>
+Composição definida
 <span class="seta-fluxo">⬇</span>
-Simples
+Substância simples
 <span class="seta-fluxo">⬇</span>
-Composta
+Substância composta
+<span class="seta-fluxo">⬇</span>
+Propriedades constantes
 </div>
 
-<h3>⚛️ SUBSTÂNCIA SIMPLES</h3>
-
-<p>
-É formada por átomos de um mesmo elemento químico. Exemplos: gás oxigênio (O₂), gás hidrogênio (H₂), gás nitrogênio (N₂), ozônio (O₃), ferro (Fe) e ouro (Au).
-</p>
-
-<h3>🧬 SUBSTÂNCIA COMPOSTA</h3>
-
-<p>
-É formada por átomos de elementos químicos diferentes. Exemplos: água (H₂O), gás carbônico (CO₂), cloreto de sódio (NaCl), glicose (C₆H₁₂O₆) e amônia (NH₃).
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Tipo</th><th>Composição</th><th>Exemplo</th></tr>
-<tr><td>Simples</td><td>Mesmo elemento químico</td><td>O₂, Fe, O₃</td></tr>
-<tr><td>Composta</td><td>Elementos químicos diferentes</td><td>H₂O, CO₂, NaCl</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Substância simples</td><td>Formada por átomos de um mesmo elemento químico.</td></tr>
+<tr><td>Substância composta</td><td>Formada por elementos químicos diferentes.</td></tr>
+<tr><td>O₂</td><td>Substância simples.</td></tr>
+<tr><td>H₂O</td><td>Substância composta.</td></tr>
+<tr><td>NaCl</td><td>Substância composta.</td></tr>
 </table>
 
-<h3>🌡️ COMPORTAMENTO EM MUDANÇAS DE ESTADO</h3>
-
-<p>
-Substâncias puras apresentam pontos de fusão e ebulição bem definidos em condições constantes de pressão. Essa característica ajuda a diferenciá-las das misturas.
-</p>
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
 
 <div class="caixa-exemplo">
-<strong>📖 Exemplo</strong>
-<br><br>
-A água pura, ao nível do mar, funde a 0 °C e entra em ebulição a 100 °C. Já misturas podem apresentar variações durante essas mudanças.
+A água pura é substância composta, pois suas moléculas possuem hidrogênio e oxigênio quimicamente combinados.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Toda substância pura é formada por um único átomo.
-<br><br>
-✅ Errado. O₂ é substância pura e possui moléculas com dois átomos.
-<br><br>
-❌ Substância simples e elemento químico são sempre a mesma coisa.
-<br><br>
-✅ Cuidado. Substância simples é formada por átomos de um mesmo elemento; elemento é o tipo de átomo.
-<br><br>
-❌ Água pura é substância simples.
-<br><br>
-✅ Errado. Água é substância composta, pois possui hidrogênio e oxigênio.
+❌ Toda substância pura é simples.<br><br>✅ Errado. Pode ser simples ou composta.<br><br>
+❌ Água é substância simples.<br><br>✅ Errado. Água tem dois elementos: H e O.<br><br>
+❌ O₂ é composto porque tem dois átomos.<br><br>✅ Errado. É simples, pois possui apenas o elemento oxigênio.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ Substância pura tem composição definida.
-<br><br>
-✔ Substância simples possui um único elemento químico.
-<br><br>
-✔ Substância composta possui elementos diferentes.
-<br><br>
-✔ Substâncias puras têm pontos de fusão e ebulição definidos.
+✔ Substância pura tem composição definida.<br><br>
+✔ Simples tem um elemento químico.<br><br>
+✔ Composta tem elementos diferentes.<br><br>
+✔ Pontos de fusão e ebulição ajudam a identificar substâncias puras.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Diferença entre substância simples e composta.
-<br><br>
-2. Exemplos de O₂, H₂O, CO₂ e NaCl.
-<br><br>
-3. Composição definida.
-<br><br>
-4. Ponto de fusão e ebulição de substâncias puras.
+1. Substância simples e composta.<br><br>
+2. Exemplos: O₂, H₂O, CO₂, NaCl.<br><br>
+3. Composição definida.<br><br>
+4. Propriedades características.
 </div>
 
 `
@@ -669,423 +470,319 @@ A água pura, ao nível do mar, funde a 0 °C e entra em ebulição a 100 °C. J
 
 <h2>🧫 MISTURAS HOMOGÊNEAS E HETEROGÊNEAS</h2>
 
-<p>
-Mistura é a reunião de duas ou mais substâncias sem proporção fixa obrigatória e sem formação de uma nova substância única. As misturas podem ser homogêneas ou heterogêneas, dependendo do número de fases observáveis.
-</p>
+<p>Mistura é a reunião de duas ou mais substâncias sem proporção fixa obrigatória. As misturas podem ser homogêneas ou heterogêneas.</p><p>O critério principal é o número de fases. Mistura homogênea apresenta uma fase; mistura heterogênea apresenta duas ou mais fases. Fase não é o mesmo que componente.</p>
 
 <div class="caixa-destaque">
-<h3>📌 Classificação das Misturas</h3>
+<h3>📌 Ideia Principal</h3>
 Mistura
 <span class="seta-fluxo">⬇</span>
-Homogênea
+Componentes
 <span class="seta-fluxo">⬇</span>
-Heterogênea
+Fases
+<span class="seta-fluxo">⬇</span>
+Classificação
 </div>
 
-<h3>💧 MISTURA HOMOGÊNEA</h3>
-
-<p>
-Apresenta uma única fase visível. Também é chamada de solução. Exemplos: água com sal totalmente dissolvido, ar atmosférico filtrado, álcool hidratado e ligas metálicas homogêneas.
-</p>
-
-<h3>🪨 MISTURA HETEROGÊNEA</h3>
-
-<p>
-Apresenta duas ou mais fases visíveis. Exemplos: água e óleo, areia e água, granito, água com gelo e sangue observado em determinados níveis de análise.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Tipo de Mistura</th><th>Número de fases</th><th>Exemplo</th></tr>
-<tr><td>Homogênea</td><td>Uma fase</td><td>Água + sal dissolvido</td></tr>
-<tr><td>Heterogênea</td><td>Duas ou mais fases</td><td>Água + óleo</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Componente</td><td>Cada substância presente na mistura.</td></tr>
+<tr><td>Fase</td><td>Porção visualmente uniforme.</td></tr>
+<tr><td>Homogênea</td><td>Uma fase.</td></tr>
+<tr><td>Heterogênea</td><td>Duas ou mais fases.</td></tr>
 </table>
 
-<h3>🔍 FASE E COMPONENTE</h3>
-
-<p>
-Fase é cada porção visualmente uniforme de uma mistura. Componente é cada substância presente. Uma mistura pode ter vários componentes e uma única fase, como água com sal e açúcar dissolvidos.
-</p>
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
 
 <div class="caixa-exemplo">
-<strong>📖 Exemplo</strong>
-<br><br>
-Água + sal dissolvido possui dois componentes e uma fase. Água + óleo possui dois componentes e duas fases.
+Água com sal totalmente dissolvido possui dois componentes e uma fase. Água e óleo possuem dois componentes e duas fases.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Toda mistura com dois componentes é heterogênea.
-<br><br>
-✅ Errado. Água e sal dissolvido possui dois componentes, mas é homogênea.
-<br><br>
-❌ Fase e componente são sinônimos.
-<br><br>
-✅ Errado. Fase é aspecto visual uniforme; componente é substância presente.
-<br><br>
-❌ Mistura homogênea sempre tem apenas uma substância.
-<br><br>
-✅ Errado. Ela tem uma fase, mas pode ter várias substâncias.
+❌ Toda mistura com dois componentes é heterogênea.<br><br>✅ Errado. Água e sal dissolvido é homogênea.<br><br>
+❌ Fase e componente são sinônimos.<br><br>✅ Errado. São critérios diferentes.<br><br>
+❌ Mistura homogênea tem apenas uma substância.<br><br>✅ Errado. Tem uma fase, mas pode ter várias substâncias.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ Mistura reúne duas ou mais substâncias.
-<br><br>
-✔ Homogênea possui uma fase.
-<br><br>
-✔ Heterogênea possui duas ou mais fases.
-<br><br>
-✔ Fase não é o mesmo que componente.
+✔ Mistura tem duas ou mais substâncias.<br><br>
+✔ Homogênea tem uma fase.<br><br>
+✔ Heterogênea tem duas ou mais fases.<br><br>
+✔ Fase não é componente.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Diferença entre fase e componente.
-<br><br>
-2. Classificação de misturas.
-<br><br>
-3. Água com sal como mistura homogênea.
-<br><br>
-4. Água e óleo como mistura heterogênea.
+1. Fase e componente.<br><br>
+2. Soluções.<br><br>
+3. Água e óleo.<br><br>
+4. Granito.
 </div>
 
 `
 },
 
 {
-    titulo: "Soluções: Soluto e Solvente",
+    titulo: "Soluções, Soluto e Solvente",
 
     conteudo: `
 
-<h2>⚗️ SOLUÇÕES: SOLUTO E SOLVENTE</h2>
+<h2>💧 SOLUÇÕES, SOLUTO E SOLVENTE</h2>
 
-<p>
-Solução é mistura homogênea. Soluto é a substância dissolvida; solvente é a substância que dissolve. Em água com sal, o sal é soluto e a água é solvente. A concentração indica a quantidade de soluto em determinada quantidade de solução.
-</p>
+<p>Solução é uma mistura homogênea. Nela, o soluto está dissolvido no solvente. A água é um solvente muito comum, mas não dissolve todas as substâncias.</p><p>A concentração expressa a quantidade de soluto em determinada quantidade de solução ou solvente. Soluções podem ser diluídas ou concentradas.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Soluto
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Solvente
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Solução
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Concentração
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Soluto</td><td>Substância dissolvida.</td></tr>
+<tr><td>Solvente</td><td>Substância que dissolve.</td></tr>
+<tr><td>Solução</td><td>Mistura homogênea.</td></tr>
+<tr><td>Concentração</td><td>Relação entre quantidade de soluto e solução.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Em água com açúcar, o açúcar é o soluto e a água é o solvente. Como há aspecto uniforme, trata-se de solução.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Solvente é sempre a substância em menor quantidade.<br><br>✅ Geralmente é a maior quantidade, mas o critério principal é dissolver o soluto.<br><br>
+❌ Toda solução é líquida.<br><br>✅ Errado. Existem soluções gasosas e sólidas, como ligas metálicas.<br><br>
+❌ Soluto desaparece quimicamente.<br><br>✅ Errado. Ele se dispersa na mistura.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Solução é mistura homogênea.<br><br>
+✔ Soluto é dissolvido.<br><br>
+✔ Solvente dissolve.<br><br>
+✔ Concentração relaciona quantidade de soluto e solução.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Soluto e solvente.<br><br>
+2. Solução aquosa.<br><br>
+3. Concentração.<br><br>
+4. Misturas homogêneas.
 </div>
 
 `
 },
 
 {
-    titulo: "Separação de Misturas I: Catação, Peneiração e Levigação",
+    titulo: "Separação de Misturas I",
 
     conteudo: `
 
-<h2>⚗️ SEPARAÇÃO DE MISTURAS I: CATAÇÃO, PENEIRAÇÃO E LEVIGAÇÃO</h2>
+<h2>🧺 SEPARAÇÃO DE MISTURAS I</h2>
 
-<p>
-Catação separa sólidos manualmente. Peneiração separa sólidos por tamanho das partículas. Levigação usa corrente de água para separar sólidos com densidades diferentes, sendo comum na separação de ouro e areia.
-</p>
+<p>Métodos de separação dependem das propriedades dos componentes. Catação, peneiração, ventilação, levigação e imantação são usados principalmente em misturas heterogêneas.</p><p>A escolha do método deve considerar tamanho das partículas, densidade, magnetismo ou possibilidade de separação manual.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Propriedade dos componentes
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Escolha do método
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Separação física
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Mistura heterogênea
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Catação</td><td>Separação manual de sólidos.</td></tr>
+<tr><td>Peneiração</td><td>Diferença de tamanho das partículas.</td></tr>
+<tr><td>Levigação</td><td>Diferença de densidade com corrente de água.</td></tr>
+<tr><td>Imantação</td><td>Separação por atração magnética.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Separar feijão de pedrinhas é catação. Separar areia grossa de areia fina por uma malha é peneiração.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Peneiração separa sal dissolvido em água.<br><br>✅ Errado. Peneiração separa sólidos por tamanho.<br><br>
+❌ Imantação funciona com qualquer metal.<br><br>✅ Errado. Depende de propriedades magnéticas.<br><br>
+❌ Catação é reação química.<br><br>✅ Errado. É separação física.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Métodos de separação são físicos.<br><br>
+✔ Catação é manual.<br><br>
+✔ Peneiração usa tamanho.<br><br>
+✔ Imantação usa magnetismo.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Catação.<br><br>
+2. Peneiração.<br><br>
+3. Levigação.<br><br>
+4. Imantação.
 </div>
 
 `
 },
 
 {
-    titulo: "Separação de Misturas II: Filtração, Decantação e Centrifugação",
+    titulo: "Separação de Misturas II",
 
     conteudo: `
 
-<h2>⚗️ SEPARAÇÃO DE MISTURAS II: FILTRAÇÃO, DECANTAÇÃO E CENTRIFUGAÇÃO</h2>
+<h2>🚰 SEPARAÇÃO DE MISTURAS II</h2>
 
-<p>
-Filtração separa sólido não dissolvido de líquido ou gás. Decantação separa fases por diferença de densidade. Centrifugação acelera a decantação por rotação.
-</p>
+<p>Filtração, decantação e centrifugação são métodos muito cobrados. Eles se aplicam a misturas heterogêneas, principalmente quando há sólido não dissolvido ou fases com densidades diferentes.</p><p>A filtração usa uma barreira porosa. A decantação depende da diferença de densidade. A centrifugação acelera a separação por rotação.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Mistura heterogênea
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Diferença de tamanho ou densidade
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Separação das fases
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Método adequado
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Filtração</td><td>Sólido insolúvel retido por filtro.</td></tr>
+<tr><td>Decantação</td><td>Separação por diferença de densidade.</td></tr>
+<tr><td>Centrifugação</td><td>Decantação acelerada.</td></tr>
+<tr><td>Funil de separação</td><td>Usado para líquidos imiscíveis.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Areia e água podem ser separadas por filtração. Água e óleo podem ser separados por decantação em funil de separação.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Filtração separa sal dissolvido da água.<br><br>✅ Errado. Sal dissolvido passa pelo filtro.<br><br>
+❌ Decantação separa líquidos miscíveis.<br><br>✅ Errado. É indicada para fases separadas.<br><br>
+❌ Centrifugação é reação química.<br><br>✅ Errado. É processo físico.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Filtração separa sólido insolúvel.<br><br>
+✔ Decantação usa densidade.<br><br>
+✔ Centrifugação acelera separação.<br><br>
+✔ Funil separa líquidos imiscíveis.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Filtração.<br><br>
+2. Decantação.<br><br>
+3. Centrifugação.<br><br>
+4. Funil de separação.
 </div>
 
 `
 },
 
 {
-    titulo: "Separação de Misturas III: Destilação e Evaporação",
+    titulo: "Separação de Misturas III",
 
     conteudo: `
 
-<h2>⚗️ SEPARAÇÃO DE MISTURAS III: DESTILAÇÃO E EVAPORAÇÃO</h2>
+<h2>⚗️ SEPARAÇÃO DE MISTURAS III</h2>
 
-<p>
-Evaporação separa sólido dissolvido de líquido, recuperando o sólido. Destilação simples separa líquido de sólido dissolvido. Destilação fracionada separa líquidos miscíveis com pontos de ebulição diferentes.
-</p>
+<p>Evaporação, destilação simples, destilação fracionada e cromatografia são métodos usados em soluções e misturas com componentes de propriedades diferentes.</p><p>Destilação simples recupera solvente de solução com sólido dissolvido. Destilação fracionada separa líquidos miscíveis com pontos de ebulição diferentes.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Mistura homogênea
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Aquecimento ou afinidade
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Separação dos componentes
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Recuperação
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Evaporação</td><td>Recupera soluto sólido, mas perde o solvente.</td></tr>
+<tr><td>Destilação simples</td><td>Recupera solvente de solução com sólido dissolvido.</td></tr>
+<tr><td>Destilação fracionada</td><td>Separa líquidos miscíveis.</td></tr>
+<tr><td>Cromatografia</td><td>Separa por afinidade entre fases.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Para obter água pura a partir de água salgada, usa-se destilação simples. A água evapora e depois condensa, sendo recuperada.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Evaporação recupera água líquida.<br><br>✅ Errado. A evaporação recupera o soluto, mas o solvente se perde se não for condensado.<br><br>
+❌ Destilação fracionada separa areia e água.<br><br>✅ Errado. É usada para líquidos miscíveis.<br><br>
+❌ Cromatografia depende apenas de tamanho das partículas.<br><br>✅ Errado. Depende da afinidade entre fases.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Evaporação recupera soluto.<br><br>
+✔ Destilação simples recupera solvente.<br><br>
+✔ Destilação fracionada separa líquidos miscíveis.<br><br>
+✔ Cromatografia usa afinidade.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Evaporação.<br><br>
+2. Destilação simples.<br><br>
+3. Destilação fracionada.<br><br>
+4. Cromatografia.
 </div>
 
 `
@@ -1096,80 +793,61 @@ Quando uma questão apresenta uma situação do cotidiano, o candidato deve iden
 
     conteudo: `
 
-<h2>⚗️ TRANSFORMAÇÕES FÍSICAS</h2>
+<h2>🔄 TRANSFORMAÇÕES FÍSICAS</h2>
 
-<p>
-Transformações físicas alteram estado, forma, tamanho ou aparência sem formar nova substância. Derretimento do gelo, dissolução do sal em água e amassar papel são exemplos.
-</p>
+<p>Transformações físicas alteram forma, tamanho, estado físico ou aparência sem formar nova substância. A composição química permanece a mesma.</p><p>Derreter gelo, rasgar papel, triturar açúcar, dissolver sal em água e evaporar álcool são exemplos geralmente físicos.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Mudança de aspecto
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Mesma composição
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Sem nova substância
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Transformação física
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Mudança de estado</td><td>Exemplo: fusão e evaporação.</td></tr>
+<tr><td>Mudança de forma</td><td>Exemplo: amassar alumínio.</td></tr>
+<tr><td>Trituração</td><td>Reduz tamanho das partículas.</td></tr>
+<tr><td>Dissolução</td><td>Pode formar mistura homogênea sem reação.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Quando o gelo derrete, ele deixa de ser sólido e vira líquido, mas continua sendo água.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Toda mudança visual é química.<br><br>✅ Errado. Pode ser apenas física.<br><br>
+❌ Transformação física é sempre facilmente reversível.<br><br>✅ Errado. Rasgar papel é físico, mas não é facilmente reversível.<br><br>
+❌ Dissolver sal em água sempre forma nova substância.<br><br>✅ Errado. Forma uma solução.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Transformação física não forma nova substância.<br><br>
+✔ Mudança de estado é física.<br><br>
+✔ Alteração de forma pode ser física.<br><br>
+✔ A composição permanece a mesma.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Mudança de estado.<br><br>
+2. Dissolução.<br><br>
+3. Trituração.<br><br>
+4. Diferença entre física e química.
 </div>
 
 `
@@ -1180,80 +858,61 @@ Quando uma questão apresenta uma situação do cotidiano, o candidato deve iden
 
     conteudo: `
 
-<h2>⚗️ TRANSFORMAÇÕES QUÍMICAS</h2>
+<h2>🔥 TRANSFORMAÇÕES QUÍMICAS</h2>
 
-<p>
-Transformações químicas formam novas substâncias. Evidências possíveis: mudança de cor, liberação de gás, formação de precipitado, emissão de luz ou calor, alteração de odor.
-</p>
+<p>Transformações químicas, ou reações químicas, formam novas substâncias. Átomos se reorganizam, rompendo e formando ligações químicas.</p><p>Combustão, oxidação, fermentação, apodrecimento, cozimento de alimentos, ferrugem e formação de precipitado são exemplos comuns.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Reagentes
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Reorganização dos átomos
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Novas substâncias
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Produtos
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Reagentes</td><td>Substâncias iniciais.</td></tr>
+<tr><td>Produtos</td><td>Substâncias formadas.</td></tr>
+<tr><td>Combustão</td><td>Reação com liberação de energia.</td></tr>
+<tr><td>Oxidação</td><td>Exemplo: ferrugem do ferro.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Quando o ferro enferruja, forma-se uma nova substância. Por isso, a ferrugem é transformação química.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Toda transformação química é explosiva.<br><br>✅ Errado. Muitas são lentas, como ferrugem.<br><br>
+❌ Cozinhar alimento é apenas mudança física.<br><br>✅ Cuidado. Há transformações químicas no cozimento.<br><br>
+❌ Reação química destrói átomos.<br><br>✅ Errado. Átomos se reorganizam.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Transformação química forma novas substâncias.<br><br>
+✔ Reagentes originam produtos.<br><br>
+✔ Ferrugem é química.<br><br>
+✔ Combustão é reação química.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Reagentes e produtos.<br><br>
+2. Evidências de reação.<br><br>
+3. Combustão.<br><br>
+4. Oxidação.
 </div>
 
 `
@@ -1264,80 +923,61 @@ Quando uma questão apresenta uma situação do cotidiano, o candidato deve iden
 
     conteudo: `
 
-<h2>⚗️ EVIDÊNCIAS DE REAÇÕES QUÍMICAS</h2>
+<h2>🧯 EVIDÊNCIAS DE REAÇÕES QUÍMICAS</h2>
 
-<p>
-Nem toda mudança visual prova reação química isoladamente, mas sinais como gás, precipitado, variação de temperatura e mudança persistente de cor podem indicar formação de novas substâncias.
-</p>
+<p>Algumas evidências sugerem reação química: formação de gás, precipitado, mudança persistente de cor, emissão de luz, liberação ou absorção de calor e mudança de odor.</p><p>Esses sinais precisam ser interpretados com cuidado. Nem toda mudança de cor ou temperatura prova reação se o contexto indicar apenas fenômeno físico.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Observação
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Evidência
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Interpretação
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Formação de produto
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Gás</td><td>Bolhas podem indicar reação.</td></tr>
+<tr><td>Precipitado</td><td>Sólido formado em solução.</td></tr>
+<tr><td>Mudança de cor</td><td>Pode indicar novas substâncias.</td></tr>
+<tr><td>Energia</td><td>Liberação de luz ou calor pode acompanhar reações.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Se duas soluções transparentes são misturadas e aparece um sólido insolúvel, houve formação de precipitado, uma forte evidência de reação química.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Qualquer bolha indica reação química.<br><br>✅ Errado. Água fervendo também forma bolhas por mudança física.<br><br>
+❌ Mudança de cor sempre é reação.<br><br>✅ Errado. Pode depender de mistura ou iluminação.<br><br>
+❌ Precipitado é gás liberado.<br><br>✅ Errado. Precipitado é sólido formado.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Evidências precisam de contexto.<br><br>
+✔ Gás pode indicar reação.<br><br>
+✔ Precipitado é sólido formado.<br><br>
+✔ Mudança persistente pode sugerir reação.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Gás.<br><br>
+2. Precipitado.<br><br>
+3. Mudança de cor.<br><br>
+4. Liberação de energia.
 </div>
 
 `
@@ -1348,80 +988,61 @@ Quando uma questão apresenta uma situação do cotidiano, o candidato deve iden
 
     conteudo: `
 
-<h2>⚗️ MODELOS ATÔMICOS: DALTON E THOMSON</h2>
+<h2>⚛️ MODELOS ATÔMICOS: DALTON E THOMSON</h2>
 
-<p>
-Dalton propôs átomos como partículas maciças e indivisíveis. Thomson descobriu o elétron e propôs o modelo do pudim de passas, com elétrons inseridos em massa positiva.
-</p>
+<p>Os modelos atômicos são construções científicas usadas para explicar a estrutura da matéria. Eles mudaram ao longo do tempo conforme novas evidências surgiram.</p><p>Dalton propôs o átomo como esfera maciça e indivisível. Thomson, após estudos sobre raios catódicos, identificou o elétron e propôs um átomo com carga positiva distribuída e elétrons incrustados.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Dalton
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Átomo maciço
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Thomson
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Elétron
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Dalton</td><td>Modelo da bola de bilhar.</td></tr>
+<tr><td>Átomo em Dalton</td><td>Maciço e indivisível.</td></tr>
+<tr><td>Thomson</td><td>Descoberta do elétron.</td></tr>
+<tr><td>Pudim de passas</td><td>Elétrons em massa positiva.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+A descoberta do elétron mostrou que o átomo não era indivisível, superando uma limitação do modelo de Dalton.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Dalton propôs elétrons em níveis.<br><br>✅ Errado. Isso está associado a Bohr.<br><br>
+❌ Thomson propôs núcleo pequeno e positivo.<br><br>✅ Errado. Isso é Rutherford.<br><br>
+❌ Modelos atômicos nunca mudam.<br><br>✅ Errado. Mudam com novas evidências.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Dalton: átomo maciço.<br><br>
+✔ Thomson: elétron.<br><br>
+✔ Pudim de passas é de Thomson.<br><br>
+✔ Modelos mudam com evidências.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Dalton.<br><br>
+2. Thomson.<br><br>
+3. Elétron.<br><br>
+4. Evolução dos modelos.
 </div>
 
 `
@@ -1432,80 +1053,61 @@ Quando uma questão apresenta uma situação do cotidiano, o candidato deve iden
 
     conteudo: `
 
-<h2>⚗️ MODELOS ATÔMICOS: RUTHERFORD E BOHR</h2>
+<h2>🔬 MODELOS ATÔMICOS: RUTHERFORD E BOHR</h2>
 
-<p>
-Rutherford propôs núcleo pequeno, positivo e denso, com eletrosfera ao redor. Bohr organizou elétrons em níveis de energia, explicando saltos eletrônicos.
-</p>
+<p>Rutherford realizou o experimento da lâmina de ouro. A maioria das partículas atravessou a lâmina, mas algumas desviaram muito, indicando a existência de um núcleo pequeno, denso e positivo.</p><p>Bohr aperfeiçoou o modelo nuclear ao propor elétrons distribuídos em níveis de energia. Saltos entre níveis explicam absorção e emissão de energia.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Lâmina de ouro
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Núcleo
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Eletrosfera
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Níveis de energia
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Rutherford</td><td>Núcleo pequeno, denso e positivo.</td></tr>
+<tr><td>Espaço vazio</td><td>Grande parte do átomo.</td></tr>
+<tr><td>Bohr</td><td>Elétrons em níveis de energia.</td></tr>
+<tr><td>Salto eletrônico</td><td>Mudança de nível com absorção ou emissão de energia.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Os fogos de artifício podem ser associados a saltos eletrônicos: elétrons absorvem energia e depois emitem luz ao retornar a níveis mais baixos.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Rutherford manteve o átomo maciço de Dalton.<br><br>✅ Errado. Rutherford propôs núcleo e espaço vazio.<br><br>
+❌ Bohr negou a existência de níveis de energia.<br><br>✅ Errado. Essa é sua principal contribuição.<br><br>
+❌ Núcleo ocupa quase todo o volume do átomo.<br><br>✅ Errado. O átomo tem grande espaço vazio.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Rutherford propôs núcleo.<br><br>
+✔ Bohr propôs níveis de energia.<br><br>
+✔ O átomo tem grande espaço vazio.<br><br>
+✔ Saltos eletrônicos envolvem energia.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Experimento da lâmina de ouro.<br><br>
+2. Núcleo atômico.<br><br>
+3. Modelo de Bohr.<br><br>
+4. Níveis de energia.
 </div>
 
 `
@@ -1516,80 +1118,61 @@ Quando uma questão apresenta uma situação do cotidiano, o candidato deve iden
 
     conteudo: `
 
-<h2>⚗️ MODELO ATÔMICO ATUAL</h2>
+<h2>🧠 MODELO ATÔMICO ATUAL</h2>
 
-<p>
-O modelo atual descreve elétrons em regiões de probabilidade chamadas orbitais. Não se fala em trajetórias fixas, mas em distribuição eletrônica probabilística.
-</p>
+<p>O modelo atômico atual descreve os elétrons em regiões de maior probabilidade chamadas orbitais. Ele não apresenta elétrons em órbitas fixas como planetas ao redor do Sol.</p><p>A estrutura atômica atual considera núcleo com prótons e nêutrons e eletrosfera com elétrons distribuídos de modo probabilístico.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Núcleo
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Eletrosfera
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Orbitais
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Probabilidade
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Núcleo</td><td>Contém prótons e nêutrons.</td></tr>
+<tr><td>Eletrosfera</td><td>Região dos elétrons.</td></tr>
+<tr><td>Orbital</td><td>Região de maior probabilidade de encontrar elétron.</td></tr>
+<tr><td>Modelo atual</td><td>Base probabilística, não órbitas rígidas.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Em vez de desenhar elétrons como planetas em trajetórias fixas, o modelo atual trabalha com regiões prováveis de localização.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Modelo atual é idêntico ao de Bohr.<br><br>✅ Errado. Bohr usa níveis definidos; o atual usa orbitais e probabilidade.<br><br>
+❌ Elétrons ficam no núcleo.<br><br>✅ Errado. Ficam na eletrosfera.<br><br>
+❌ Orbitais são caminhos circulares fixos.<br><br>✅ Errado. São regiões de probabilidade.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Modelo atual é probabilístico.<br><br>
+✔ Orbitais não são órbitas fixas.<br><br>
+✔ Núcleo tem prótons e nêutrons.<br><br>
+✔ Elétrons ficam na eletrosfera.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Orbitais.<br><br>
+2. Eletrosfera.<br><br>
+3. Núcleo.<br><br>
+4. Diferença entre Bohr e modelo atual.
 </div>
 
 `
@@ -1600,80 +1183,61 @@ Quando uma questão apresenta uma situação do cotidiano, o candidato deve iden
 
     conteudo: `
 
-<h2>⚗️ PARTÍCULAS SUBATÔMICAS</h2>
+<h2>🧩 PARTÍCULAS SUBATÔMICAS</h2>
 
-<p>
-Prótons têm carga positiva, nêutrons não possuem carga elétrica e elétrons têm carga negativa. Prótons e nêutrons ficam no núcleo; elétrons ficam na eletrosfera.
-</p>
+<p>Átomos são formados por prótons, nêutrons e elétrons. Prótons possuem carga positiva; elétrons, carga negativa; nêutrons, carga neutra.</p><p>Prótons e nêutrons ficam no núcleo. Elétrons ficam na eletrosfera. A massa do átomo concentra-se principalmente no núcleo.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Prótons
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Nêutrons
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Elétrons
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Átomo
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Próton</td><td>Carga positiva.</td></tr>
+<tr><td>Nêutron</td><td>Sem carga elétrica.</td></tr>
+<tr><td>Elétron</td><td>Carga negativa.</td></tr>
+<tr><td>Núcleo</td><td>Região com prótons e nêutrons.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Um átomo neutro possui número de prótons igual ao número de elétrons. Se perde ou ganha elétrons, torna-se íon.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Prótons ficam na eletrosfera.<br><br>✅ Errado. Prótons ficam no núcleo.<br><br>
+❌ Elétrons têm carga positiva.<br><br>✅ Errado. Elétrons têm carga negativa.<br><br>
+❌ Nêutrons definem o elemento químico.<br><br>✅ Errado. Quem define é o número de prótons.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Prótons são positivos.<br><br>
+✔ Elétrons são negativos.<br><br>
+✔ Nêutrons são neutros.<br><br>
+✔ Núcleo concentra massa.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Cargas das partículas.<br><br>
+2. Núcleo e eletrosfera.<br><br>
+3. Átomo neutro.<br><br>
+4. Formação de íons.
 </div>
 
 `
@@ -1684,332 +1248,191 @@ Quando uma questão apresenta uma situação do cotidiano, o candidato deve iden
 
     conteudo: `
 
-<h2>⚗️ NÚMERO ATÔMICO E NÚMERO DE MASSA</h2>
+<h2>🔢 NÚMERO ATÔMICO E NÚMERO DE MASSA</h2>
 
-<p>
-Número atômico é o número de prótons. Número de massa é a soma de prótons e nêutrons. Átomos neutros possuem número de prótons igual ao de elétrons.
-</p>
+<p>Número atômico, representado por Z, é o número de prótons. Ele identifica o elemento químico. Se muda o número de prótons, muda o elemento.</p><p>Número de massa, representado por A, é a soma de prótons e nêutrons. Para calcular nêutrons, usa-se A - Z.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Z = prótons
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+A = prótons + nêutrons
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Átomo neutro
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Prótons = elétrons
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Número atômico</td><td>Quantidade de prótons.</td></tr>
+<tr><td>Número de massa</td><td>Prótons + nêutrons.</td></tr>
+<tr><td>Nêutrons</td><td>A - Z.</td></tr>
+<tr><td>Átomo neutro</td><td>Prótons e elétrons em igual número.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Um átomo neutro com Z = 11 e A = 23 possui 11 prótons, 11 elétrons e 12 nêutrons.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Número atômico é prótons + nêutrons.<br><br>✅ Errado. Isso é número de massa.<br><br>
+❌ Átomo neutro tem prótons = nêutrons.<br><br>✅ Errado. Tem prótons = elétrons.<br><br>
+❌ O elemento é definido pelos nêutrons.<br><br>✅ Errado. É definido pelos prótons.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Z indica prótons.<br><br>
+✔ A indica prótons + nêutrons.<br><br>
+✔ Nêutrons = A - Z.<br><br>
+✔ Átomo neutro tem prótons = elétrons.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Cálculo de prótons, elétrons e nêutrons.<br><br>
+2. Número atômico.<br><br>
+3. Número de massa.<br><br>
+4. Átomo neutro.
 </div>
 
 `
 },
 
 {
-    titulo: "Íons, Cátions e Ânions",
+    titulo: "Íons: Cátions e Ânions",
 
     conteudo: `
 
-<h2>⚗️ ÍONS, CÁTIONS E ÂNIONS</h2>
+<h2>➕ ÍONS: CÁTIONS E ÂNIONS</h2>
 
-<p>
-Íons são átomos ou grupos com carga elétrica. Cátion perde elétrons e fica positivo. Ânion ganha elétrons e fica negativo.
-</p>
+<p>Íons são átomos ou grupos de átomos com carga elétrica. Eles se formam quando há ganho ou perda de elétrons.</p><p>Cátions são positivos e resultam da perda de elétrons. Ânions são negativos e resultam do ganho de elétrons. Em reações químicas comuns, o núcleo não muda para formar íons.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Átomo neutro
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Perde ou ganha elétrons
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Íon
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Carga elétrica
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Cátion</td><td>Íon positivo, formado por perda de elétrons.</td></tr>
+<tr><td>Ânion</td><td>Íon negativo, formado por ganho de elétrons.</td></tr>
+<tr><td>Elétrons</td><td>Partículas envolvidas na formação de íons.</td></tr>
+<tr><td>Prótons</td><td>Não são perdidos em ionização comum.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Na⁺ é cátion porque perdeu elétron. Cl⁻ é ânion porque ganhou elétron.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Cátion ganha elétrons.<br><br>✅ Errado. Cátion perde elétrons.<br><br>
+❌ Ânion perde elétrons.<br><br>✅ Errado. Ânion ganha elétrons.<br><br>
+❌ Íons se formam por perda de prótons em reações comuns.<br><br>✅ Errado. Ocorre ganho ou perda de elétrons.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Íon tem carga elétrica.<br><br>
+✔ Cátion é positivo.<br><br>
+✔ Ânion é negativo.<br><br>
+✔ Formação de íons envolve elétrons.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Cátions.<br><br>
+2. Ânions.<br><br>
+3. Ganho e perda de elétrons.<br><br>
+4. Carga elétrica.
 </div>
 
 `
 },
 
 {
-    titulo: "Elementos Químicos e Tabela Periódica",
+    titulo: "Tabela Periódica",
 
     conteudo: `
 
-<h2>⚗️ ELEMENTOS QUÍMICOS E TABELA PERIÓDICA</h2>
+<h2>🧾 TABELA PERIÓDICA</h2>
 
-<p>
-Elemento químico é definido pelo número atômico. A Tabela Periódica organiza elementos por número atômico e propriedades semelhantes.
-</p>
+<p>A Tabela Periódica organiza os elementos químicos em ordem crescente de número atômico. Elementos com propriedades semelhantes aparecem em grupos ou famílias.</p><p>As colunas são famílias; as linhas são períodos. Essa organização permite prever propriedades e comportamento químico.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Número atômico
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Elementos
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Famílias
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Períodos
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Elemento químico</td><td>Tipo de átomo definido pelo número de prótons.</td></tr>
+<tr><td>Famílias</td><td>Colunas da tabela.</td></tr>
+<tr><td>Períodos</td><td>Linhas da tabela.</td></tr>
+<tr><td>Propriedades periódicas</td><td>Tendências que variam ao longo da tabela.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Elementos da mesma família, como os gases nobres, tendem a apresentar propriedades semelhantes.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Família é linha.<br><br>✅ Errado. Família é coluna.<br><br>
+❌ Período é coluna.<br><br>✅ Errado. Período é linha.<br><br>
+❌ A tabela é organizada por massa em ordem pura.<br><br>✅ Errado. A organização moderna é por número atômico.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Tabela moderna usa número atômico.<br><br>
+✔ Famílias são colunas.<br><br>
+✔ Períodos são linhas.<br><br>
+✔ Propriedades semelhantes aparecem em grupos.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
-</div>
-
-`
-},
-
-{
-    titulo: "Famílias e Períodos da Tabela Periódica",
-
-    conteudo: `
-
-<h2>⚗️ FAMÍLIAS E PERÍODOS DA TABELA PERIÓDICA</h2>
-
-<p>
-Famílias são colunas e reúnem elementos com propriedades semelhantes. Períodos são linhas e indicam níveis de energia ocupados pelos elétrons.
-</p>
-
-<div class="caixa-destaque">
-<h3>📌 Ideia Principal</h3>
-Conceito
-<span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
-<span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
-<span class="seta-fluxo">⬇</span>
-Interpretação em Provas
-</div>
-
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
-
-<table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
-</table>
-
-<div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
-</div>
-
-<h3>⚠️ PEGADINHAS DE CONCURSO</h3>
-
-<div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
-</div>
-
-<h3>🎯 CAI EM PROVA</h3>
-
-<div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Famílias e períodos.<br><br>
+2. Número atômico.<br><br>
+3. Elementos químicos.<br><br>
+4. Propriedades periódicas.
 </div>
 
 `
@@ -2020,332 +1443,191 @@ Quando uma questão apresenta uma situação do cotidiano, o candidato deve iden
 
     conteudo: `
 
-<h2>⚗️ LIGAÇÕES QUÍMICAS</h2>
+<h2>🔗 LIGAÇÕES QUÍMICAS</h2>
 
-<p>
-Ligação iônica envolve transferência de elétrons; ligação covalente envolve compartilhamento; ligação metálica envolve elétrons relativamente livres em estrutura metálica.
-</p>
+<p>Ligações químicas explicam como átomos se unem para formar substâncias. Elas envolvem principalmente elétrons da eletrosfera.</p><p>A ligação iônica envolve transferência de elétrons e atração entre íons. A covalente envolve compartilhamento de elétrons. A metálica envolve elétrons relativamente livres em estrutura metálica.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Elétrons
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Estabilidade
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Ligação iônica
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Covalente e metálica
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Iônica</td><td>Transferência de elétrons.</td></tr>
+<tr><td>Covalente</td><td>Compartilhamento de elétrons.</td></tr>
+<tr><td>Metálica</td><td>Elétrons livres ou deslocalizados.</td></tr>
+<tr><td>Estabilidade</td><td>Associada à configuração eletrônica.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+O cloreto de sódio envolve íons de cargas opostas. Já a água possui ligações covalentes entre hidrogênio e oxigênio.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Ligação iônica é compartilhamento.<br><br>✅ Errado. É transferência.<br><br>
+❌ Ligação covalente é perda completa de elétrons.<br><br>✅ Errado. É compartilhamento.<br><br>
+❌ Metais não conduzem eletricidade.<br><br>✅ Errado. Elétrons livres favorecem condução.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Ligações envolvem elétrons.<br><br>
+✔ Iônica transfere elétrons.<br><br>
+✔ Covalente compartilha elétrons.<br><br>
+✔ Metálica tem elétrons deslocalizados.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Iônica.<br><br>
+2. Covalente.<br><br>
+3. Metálica.<br><br>
+4. Estabilidade eletrônica.
 </div>
 
 `
 },
 
 {
-    titulo: "Funções Químicas: Ácidos e Bases",
+    titulo: "Ácidos, Bases e pH",
 
     conteudo: `
 
-<h2>⚗️ FUNÇÕES QUÍMICAS: ÁCIDOS E BASES</h2>
+<h2>🧪 ÁCIDOS, BASES E PH</h2>
 
-<p>
-Ácidos em água liberam H+ ou formam H3O+. Bases liberam OH- ou recebem prótons, conforme o conceito utilizado. Indicadores podem diferenciar meio ácido e básico.
-</p>
+<p>Ácidos e bases são funções químicas importantes. Em abordagem escolar, soluções ácidas apresentam pH menor que 7; soluções básicas apresentam pH maior que 7; solução neutra apresenta pH igual a 7.</p><p>Indicadores ácido-base mudam de cor conforme o meio. O pH aparece em situações como alimentos, produtos de limpeza, antiácidos, solo e água.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Ácido
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+pH < 7
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Neutro = 7
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Base pH > 7
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Ácido</td><td>Meio com pH menor que 7.</td></tr>
+<tr><td>Base</td><td>Meio com pH maior que 7.</td></tr>
+<tr><td>Neutro</td><td>pH igual a 7 em escala usual.</td></tr>
+<tr><td>Indicador</td><td>Substância que muda de cor conforme pH.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Vinagre é ácido. Solução de sabão tende a ser básica. Água pura, em condições usuais, é neutra.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ pH 3 é básico.<br><br>✅ Errado. pH menor que 7 é ácido.<br><br>
+❌ pH 7 é ácido fraco.<br><br>✅ Errado. Na escala usual, é neutro.<br><br>
+❌ Indicadores não mudam com pH.<br><br>✅ Errado. Mudam de cor conforme acidez ou basicidade.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Ácido tem pH menor que 7.<br><br>
+✔ Base tem pH maior que 7.<br><br>
+✔ pH 7 é neutro.<br><br>
+✔ Indicadores ajudam a identificar o meio.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Escala de pH.<br><br>
+2. Ácidos e bases.<br><br>
+3. Indicadores.<br><br>
+4. Neutralização.
 </div>
 
 `
 },
 
 {
-    titulo: "Funções Químicas: Sais e Óxidos",
+    titulo: "Sais, Óxidos e Neutralização",
 
     conteudo: `
 
-<h2>⚗️ FUNÇÕES QUÍMICAS: SAIS E ÓXIDOS</h2>
+<h2>⚗️ SAIS, ÓXIDOS E NEUTRALIZAÇÃO</h2>
 
-<p>
-Sais podem resultar de neutralização entre ácido e base. Óxidos são compostos binários em que o oxigênio se liga a outro elemento, exceto em casos específicos como fluoretos de oxigênio.
-</p>
+<p>Sais podem ser formados em reações de neutralização entre ácidos e bases. Óxidos são compostos binários em que o oxigênio se combina com outro elemento, com exceções específicas.</p><p>Neutralização típica forma sal e água. Esse processo aparece em antiácidos, tratamento de efluentes e correção de acidez do solo.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Ácido + base
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Neutralização
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Sal + água
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Óxidos
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Sal</td><td>Composto frequentemente formado em neutralização.</td></tr>
+<tr><td>Óxido</td><td>Composto binário com oxigênio e outro elemento.</td></tr>
+<tr><td>Neutralização</td><td>Reação entre ácido e base.</td></tr>
+<tr><td>Antiácido</td><td>Exemplo cotidiano de neutralização.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Quando um antiácido reduz a acidez do estômago, ocorre uma reação de neutralização entre substâncias de caráter básico e o ácido presente no suco gástrico.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Sal é apenas cloreto de sódio.<br><br>✅ Errado. Há muitos sais.<br><br>
+❌ Óxido não possui oxigênio.<br><br>✅ Errado. Em geral, possui oxigênio combinado a outro elemento.<br><br>
+❌ Neutralização forma sempre apenas gás.<br><br>✅ Errado. Frequentemente forma sal e água.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Sais podem resultar de neutralização.<br><br>
+✔ Óxidos envolvem oxigênio.<br><br>
+✔ Neutralização envolve ácido e base.<br><br>
+✔ Antiácidos são exemplos cotidianos.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
-</div>
-
-`
-},
-
-{
-    titulo: "Escala de pH e Neutralização",
-
-    conteudo: `
-
-<h2>⚗️ ESCALA DE PH E NEUTRALIZAÇÃO</h2>
-
-<p>
-pH indica acidez ou basicidade. Valores menores que 7 são ácidos, 7 é neutro e maiores que 7 são básicos em escala usual. Neutralização forma sal e água em muitos casos.
-</p>
-
-<div class="caixa-destaque">
-<h3>📌 Ideia Principal</h3>
-Conceito
-<span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
-<span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
-<span class="seta-fluxo">⬇</span>
-Interpretação em Provas
-</div>
-
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
-
-<table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
-</table>
-
-<div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
-</div>
-
-<h3>⚠️ PEGADINHAS DE CONCURSO</h3>
-
-<div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
-</div>
-
-<h3>🎯 CAI EM PROVA</h3>
-
-<div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Sais.<br><br>
+2. Óxidos.<br><br>
+3. Neutralização.<br><br>
+4. Ácidos e bases no cotidiano.
 </div>
 
 `
@@ -2356,80 +1638,191 @@ Quando uma questão apresenta uma situação do cotidiano, o candidato deve iden
 
     conteudo: `
 
-<h2>⚗️ REAÇÕES QUÍMICAS E EQUAÇÕES</h2>
+<h2>🧮 REAÇÕES QUÍMICAS E EQUAÇÕES</h2>
 
-<p>
-Equações químicas representam reagentes, produtos e proporções. Reagentes ficam antes da seta; produtos depois da seta.
-</p>
+<p>Equações químicas representam reações. Reagentes aparecem antes da seta; produtos aparecem depois. A seta indica transformação química.</p><p>Coeficientes indicam proporções entre substâncias. Índices fazem parte das fórmulas e indicam quantidade de átomos na molécula ou fórmula.</p>
 
 <div class="caixa-destaque">
 <h3>📌 Ideia Principal</h3>
-Conceito
+Reagentes
 <span class="seta-fluxo">⬇</span>
-Identificação no Cotidiano
+Seta
 <span class="seta-fluxo">⬇</span>
-Aplicação em Problemas
+Produtos
 <span class="seta-fluxo">⬇</span>
-Interpretação em Provas
+Coeficientes
 </div>
 
-<h3>🔬 EXPLICAÇÃO COMPLEMENTAR</h3>
-
-<p>
-Esse conteúdo deve ser estudado de forma comparativa, pois as questões costumam apresentar situações práticas e pedir a identificação do processo, da propriedade ou da classificação correta. O erro mais comum é decorar nomes sem compreender o critério usado para classificar o fenômeno.
-</p>
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
 
 <table>
-<tr><th>Aspecto</th><th>Como interpretar</th></tr>
-<tr><td>Conceito</td><td>Observe a definição científica central.</td></tr>
-<tr><td>Exemplo</td><td>Relacione o conceito com situações do cotidiano.</td></tr>
-<tr><td>Pegadinha</td><td>Verifique se houve formação de nova substância ou apenas mudança de aspecto.</td></tr>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Reagentes</td><td>Substâncias consumidas ou transformadas.</td></tr>
+<tr><td>Produtos</td><td>Substâncias formadas.</td></tr>
+<tr><td>Coeficiente</td><td>Número antes da fórmula.</td></tr>
+<tr><td>Índice</td><td>Número dentro da fórmula, ligado ao elemento.</td></tr>
 </table>
 
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
 <div class="caixa-exemplo">
-<strong>📖 Exemplo de Concurso</strong>
-<br><br>
-Quando uma questão apresenta uma situação do cotidiano, o candidato deve identificar o critério científico envolvido, e não apenas o nome popular do fenômeno.
+Em 2H₂ + O₂ → 2H₂O, o 2 antes de H₂ é coeficiente. O 2 em H₂ é índice.
 </div>
 
 <h3>⚠️ PEGADINHAS DE CONCURSO</h3>
 
 <div class="caixa-destaque">
-❌ Interpretar apenas pela aparência.
-<br><br>
-✅ Errado. É preciso verificar composição, fases, propriedades e transformação ocorrida.
-<br><br>
-❌ Confundir mudança física com reação química.
-<br><br>
-✅ Cuidado. Nem toda mudança visível gera nova substância.
-<br><br>
-❌ Trocar causa e consequência do fenômeno.
-<br><br>
-✅ Leia o enunciado com atenção e identifique o processo principal.
+❌ Para balancear, altera-se índice.<br><br>✅ Errado. Alteram-se coeficientes.<br><br>
+❌ Reagentes ficam depois da seta.<br><br>✅ Errado. Reagentes ficam antes.<br><br>
+❌ Coeficiente e índice são a mesma coisa.<br><br>✅ Errado. Têm funções diferentes.
 </div>
 
 <h3>📚 RESUMO DA PÁGINA</h3>
 
 <div class="caixa-destaque">
-✔ O conceito deve ser associado ao critério de classificação.
-<br><br>
-✔ Exemplos cotidianos ajudam a interpretar questões.
-<br><br>
-✔ Distratores costumam misturar conceitos próximos.
-<br><br>
-✔ A resposta correta mantém coerência científica.
+✔ Reagentes ficam antes da seta.<br><br>
+✔ Produtos ficam depois.<br><br>
+✔ Coeficientes ajustam proporções.<br><br>
+✔ Índices pertencem às fórmulas.
 </div>
 
 <h3>🎯 CAI EM PROVA</h3>
 
 <div class="caixa-exemplo">
-1. Definição do conceito.
-<br><br>
-2. Aplicação em situações cotidianas.
-<br><br>
-3. Diferença entre conceitos semelhantes.
-<br><br>
-4. Identificação de pegadinhas conceituais.
+1. Equações químicas.<br><br>
+2. Coeficiente e índice.<br><br>
+3. Reagentes e produtos.<br><br>
+4. Balanceamento.
+</div>
+
+`
+},
+
+{
+    titulo: "Balanceamento e Conservação da Massa",
+
+    conteudo: `
+
+<h2>⚖️ BALANCEAMENTO E CONSERVAÇÃO DA MASSA</h2>
+
+<p>Balancear equações significa ajustar coeficientes para que o número de átomos de cada elemento seja igual nos reagentes e produtos.</p><p>Esse procedimento respeita a Lei da Conservação da Massa: em sistema fechado, a massa total dos reagentes é igual à massa total dos produtos.</p>
+
+<div class="caixa-destaque">
+<h3>📌 Ideia Principal</h3>
+Átomos nos reagentes
+<span class="seta-fluxo">⬇</span>
+Átomos nos produtos
+<span class="seta-fluxo">⬇</span>
+Coeficientes
+<span class="seta-fluxo">⬇</span>
+Conservação
+</div>
+
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
+
+<table>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Balanceamento</td><td>Ajuste de coeficientes.</td></tr>
+<tr><td>Conservação</td><td>Átomos não desaparecem.</td></tr>
+<tr><td>Sistema fechado</td><td>Massa total se conserva.</td></tr>
+<tr><td>Erro comum</td><td>Alterar índices da fórmula.</td></tr>
+</table>
+
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
+<div class="caixa-exemplo">
+Se uma reação ocorre em recipiente fechado com 40 g de reagentes, a massa total dos produtos também será 40 g.
+</div>
+
+<h3>⚠️ PEGADINHAS DE CONCURSO</h3>
+
+<div class="caixa-destaque">
+❌ A massa sempre diminui em reação química.<br><br>✅ Errado em sistema fechado.<br><br>
+❌ Balancear é mudar fórmulas.<br><br>✅ Errado. Muda-se coeficiente.<br><br>
+❌ Átomos são destruídos na reação.<br><br>✅ Errado. Eles se reorganizam.
+</div>
+
+<h3>📚 RESUMO DA PÁGINA</h3>
+
+<div class="caixa-destaque">
+✔ Balancear é ajustar coeficientes.<br><br>
+✔ A massa se conserva em sistema fechado.<br><br>
+✔ Átomos se reorganizam.<br><br>
+✔ Índices não devem ser alterados.
+</div>
+
+<h3>🎯 CAI EM PROVA</h3>
+
+<div class="caixa-exemplo">
+1. Balanceamento.<br><br>
+2. Lei de Lavoisier.<br><br>
+3. Sistema fechado.<br><br>
+4. Conservação dos átomos.
+</div>
+
+`
+},
+
+{
+    titulo: "Tipos de Reações Químicas",
+
+    conteudo: `
+
+<h2>🔁 TIPOS DE REAÇÕES QUÍMICAS</h2>
+
+<p>Reações químicas podem ser classificadas por padrões. As mais comuns em nível básico são síntese, decomposição, simples troca e dupla troca.</p><p>A síntese combina substâncias; a decomposição quebra uma substância; a simples troca envolve deslocamento; a dupla troca envolve troca entre compostos.</p>
+
+<div class="caixa-destaque">
+<h3>📌 Ideia Principal</h3>
+Padrão dos reagentes
+<span class="seta-fluxo">⬇</span>
+Transformação
+<span class="seta-fluxo">⬇</span>
+Padrão dos produtos
+<span class="seta-fluxo">⬇</span>
+Classificação
+</div>
+
+<h3>🔬 EXPLICAÇÃO COMPLETA</h3>
+
+<table>
+<tr><th>Conceito</th><th>Explicação</th></tr>
+<tr><td>Síntese</td><td>A + B → AB.</td></tr>
+<tr><td>Decomposição</td><td>AB → A + B.</td></tr>
+<tr><td>Simples troca</td><td>A + BC → AC + B.</td></tr>
+<tr><td>Dupla troca</td><td>AB + CD → AD + CB.</td></tr>
+</table>
+
+<h3>📖 EXEMPLO CONTEXTUALIZADO</h3>
+
+<div class="caixa-exemplo">
+A formação de água a partir de hidrogênio e oxigênio é síntese. A decomposição da água oxigenada é exemplo de decomposição.
+</div>
+
+<h3>⚠️ PEGADINHAS DE CONCURSO</h3>
+
+<div class="caixa-destaque">
+❌ Síntese é quebra de substância.<br><br>✅ Errado. Síntese é combinação.<br><br>
+❌ Decomposição sempre envolve dois reagentes.<br><br>✅ Errado. Geralmente um reagente origina produtos.<br><br>
+❌ Dupla troca é separação física.<br><br>✅ Errado. É reação química.
+</div>
+
+<h3>📚 RESUMO DA PÁGINA</h3>
+
+<div class="caixa-destaque">
+✔ Síntese combina.<br><br>
+✔ Decomposição quebra.<br><br>
+✔ Simples troca desloca.<br><br>
+✔ Dupla troca troca componentes entre compostos.
+</div>
+
+<h3>🎯 CAI EM PROVA</h3>
+
+<div class="caixa-exemplo">
+1. Síntese.<br><br>
+2. Decomposição.<br><br>
+3. Simples troca.<br><br>
+4. Dupla troca.
 </div>
 
 `
@@ -2443,31 +1836,32 @@ Quando uma questão apresenta uma situação do cotidiano, o candidato deve iden
 <h2>📝 QUESTÕES COMENTADAS I</h2>
 
 <p>
-As questões comentadas ao final da teoria servem para treinar interpretação, eliminar distratores fortes e revisar os pontos mais cobrados sobre matéria e Química.
+Esta página fecha a teoria com questões comentadas no padrão do Farol do Saber: enunciado contextualizado, alternativas plausíveis, distratores fortes e explicação direta do raciocínio.
 </p>
+
 
 <h3>📝 QUESTÃO COMENTADA 1</h3>
 
 <div class="caixa-exemplo">
 <strong>Enunciado:</strong>
 <br><br>
-Em uma atividade experimental, um estudante observou gelo derretendo, papel sendo rasgado e ferro enferrujando. A classificação correta desses fenômenos é:
+Em uma atividade experimental, foram observados gelo derretendo, papel sendo rasgado e ferro enferrujando. A classificação correta é:
 <br><br>
-A) Todos são transformações químicas, pois há alteração visual.
+A) gelo derretendo e papel rasgado são transformações físicas; ferro enferrujando é transformação química.
 <br>
-B) Gelo derretendo e papel rasgado são transformações físicas; ferro enferrujando é transformação química.
+B) todos são transformações químicas, pois há alteração visual.
 <br>
-C) Gelo derretendo é transformação química; papel rasgado e ferro enferrujando são transformações físicas.
+C) gelo derretendo é transformação química; papel rasgado e ferro enferrujando são físicos.
 <br>
-D) Todos são transformações físicas, pois a matéria continua visível.
+D) todos são transformações físicas, pois a matéria continua visível.
 <br>
-E) Papel rasgado é transformação química; ferro enferrujando é mudança de estado físico.
+E) papel rasgado é transformação química; ferro enferrujando é mudança de estado.
 <br><br>
-<strong>Resposta correta:</strong> B.
+<strong>Resposta correta:</strong> A.
 <br><br>
 <strong>Comentário:</strong>
 <br>
-Derretimento do gelo é mudança de estado físico. Rasgar papel altera forma e tamanho, mas não forma nova substância. A ferrugem envolve reação química e formação de novas substâncias.
+Derretimento e rasgo não formam nova substância. Ferrugem envolve reação química com formação de novas substâncias.
 </div>
 
 <h3>📝 QUESTÃO COMENTADA 2</h3>
@@ -2477,21 +1871,21 @@ Derretimento do gelo é mudança de estado físico. Rasgar papel altera forma e 
 <br><br>
 Uma mistura formada por água e sal totalmente dissolvido apresenta:
 <br><br>
-A) Dois componentes e uma fase.
+A) dois componentes e uma fase.
 <br>
-B) Uma substância simples e duas fases.
+B) uma substância simples e duas fases.
 <br>
-C) Um componente e duas fases.
+C) um componente e duas fases.
 <br>
-D) Duas substâncias puras simples.
+D) duas substâncias puras simples.
 <br>
-E) Três fases e um componente.
+E) três fases e um componente.
 <br><br>
 <strong>Resposta correta:</strong> A.
 <br><br>
 <strong>Comentário:</strong>
 <br>
-A água e o sal são componentes diferentes. Como o sal está totalmente dissolvido, observa-se apenas uma fase, formando uma mistura homogênea.
+A água e o sal são componentes diferentes. Como o sal está dissolvido, observa-se apenas uma fase.
 </div>
 
 <h3>📝 QUESTÃO COMENTADA 3</h3>
@@ -2501,21 +1895,21 @@ A água e o sal são componentes diferentes. Como o sal está totalmente dissolv
 <br><br>
 Um objeto flutua em determinado líquido. A explicação mais adequada é:
 <br><br>
-A) Sua massa sempre é menor que a massa de qualquer líquido.
+A) sua densidade média é menor que a densidade do líquido.
 <br>
-B) Sua densidade média é menor que a densidade do líquido.
+B) sua massa sempre é menor que a massa de qualquer líquido.
 <br>
-C) Seu volume é obrigatoriamente menor que o volume do líquido.
+C) seu volume é obrigatoriamente menor que o volume do líquido.
 <br>
-D) O material não possui partículas e, por isso, não afunda.
+D) o material não possui partículas e, por isso, não afunda.
 <br>
-E) O líquido perde densidade sempre que recebe um corpo sólido.
+E) o líquido perde densidade sempre que recebe um sólido.
 <br><br>
-<strong>Resposta correta:</strong> B.
+<strong>Resposta correta:</strong> A.
 <br><br>
 <strong>Comentário:</strong>
 <br>
-A flutuação depende da relação entre densidades. Corpos com densidade média menor que a do líquido tendem a flutuar.
+A flutuação depende da relação entre densidades. Massa isolada não explica o fenômeno.
 </div>
 
 <h3>📝 QUESTÃO COMENTADA 4</h3>
@@ -2525,33 +1919,33 @@ A flutuação depende da relação entre densidades. Corpos com densidade média
 <br><br>
 A destilação fracionada é adequada para separar:
 <br><br>
-A) Líquidos miscíveis com diferentes pontos de ebulição.
+A) líquidos miscíveis com diferentes pontos de ebulição.
 <br>
-B) Sólidos de tamanhos diferentes por ação de peneira.
+B) sólidos de tamanhos diferentes por ação de peneira.
 <br>
-C) Sólido insolúvel de líquido por barreira porosa.
+C) sólido insolúvel de líquido por barreira porosa.
 <br>
-D) Componentes de uma mistura por atração magnética.
+D) componentes de mistura por atração magnética.
 <br>
-E) Líquidos imiscíveis por diferença de densidade.
+E) líquidos imiscíveis por diferença de densidade.
 <br><br>
 <strong>Resposta correta:</strong> A.
 <br><br>
 <strong>Comentário:</strong>
 <br>
-A destilação fracionada separa líquidos miscíveis com pontos de ebulição diferentes, como frações do petróleo.
+Destilação fracionada separa líquidos miscíveis que apresentam diferentes pontos de ebulição.
 </div>
 
-<h3>📚 FECHAMENTO</h3>
 
 <div class="caixa-destaque">
-✔ Transformação física não forma nova substância.
+<h3>📚 Síntese Final</h3>
+✔ Leia o contexto antes de escolher a alternativa.
 <br><br>
-✔ Mistura homogênea possui uma fase.
+✔ Observe se a questão cobra composição, fase, propriedade, modelo atômico ou reação.
 <br><br>
-✔ Densidade explica flutuação.
+✔ Distratores fortes costumam misturar conceitos próximos.
 <br><br>
-✔ Destilação fracionada separa líquidos miscíveis.
+✔ A alternativa correta deve respeitar o critério científico apresentado no enunciado.
 </div>
 
 `
@@ -2565,25 +1959,26 @@ A destilação fracionada separa líquidos miscíveis com pontos de ebulição d
 <h2>📝 QUESTÕES COMENTADAS II</h2>
 
 <p>
-Nesta segunda página de questões comentadas, o foco está em modelos atômicos, partículas subatômicas, funções químicas, reações e conservação da massa.
+Esta página fecha a teoria com questões comentadas no padrão do Farol do Saber: enunciado contextualizado, alternativas plausíveis, distratores fortes e explicação direta do raciocínio.
 </p>
 
-<h3>📝 QUESTÃO COMENTADA 5</h3>
+
+<h3>📝 QUESTÃO COMENTADA 1</h3>
 
 <div class="caixa-exemplo">
 <strong>Enunciado:</strong>
 <br><br>
 O modelo atômico de Rutherford foi importante porque propôs:
 <br><br>
-A) Um átomo com núcleo pequeno, denso e positivo, cercado por região extranuclear.
+A) um átomo com núcleo pequeno, denso e positivo, cercado por região extranuclear.
 <br>
-B) Um átomo maciço e indivisível, sem partículas internas.
+B) um átomo maciço e indivisível, sem partículas internas.
 <br>
-C) Uma esfera positiva com elétrons incrustados de forma uniforme.
+C) uma esfera positiva com elétrons incrustados uniformemente.
 <br>
-D) Elétrons em níveis de energia fixos, sem núcleo atômico.
+D) elétrons em níveis de energia fixos, sem núcleo atômico.
 <br>
-E) Orbitais probabilísticos sem qualquer região nuclear.
+E) orbitais probabilísticos sem qualquer região nuclear.
 <br><br>
 <strong>Resposta correta:</strong> A.
 <br><br>
@@ -2592,7 +1987,7 @@ E) Orbitais probabilísticos sem qualquer região nuclear.
 Rutherford propôs o modelo nuclear: núcleo pequeno, positivo e denso, com grande espaço vazio ao redor.
 </div>
 
-<h3>📝 QUESTÃO COMENTADA 6</h3>
+<h3>📝 QUESTÃO COMENTADA 2</h3>
 
 <div class="caixa-exemplo">
 <strong>Enunciado:</strong>
@@ -2613,49 +2008,49 @@ E) 23 prótons, 23 elétrons e 11 nêutrons.
 <br><br>
 <strong>Comentário:</strong>
 <br>
-O número atômico indica prótons. Em átomo neutro, prótons = elétrons. O número de nêutrons é massa menos prótons: 23 - 11 = 12.
+Z indica prótons. Átomo neutro tem prótons = elétrons. Nêutrons = A - Z = 23 - 11 = 12.
 </div>
 
-<h3>📝 QUESTÃO COMENTADA 7</h3>
+<h3>📝 QUESTÃO COMENTADA 3</h3>
 
 <div class="caixa-exemplo">
 <strong>Enunciado:</strong>
 <br><br>
 Uma solução apresenta pH igual a 3. Ela deve ser classificada como:
 <br><br>
-A) Ácida.
+A) ácida.
 <br>
-B) Neutra.
+B) neutra.
 <br>
-C) Básica.
+C) básica.
 <br>
-D) Salina obrigatoriamente neutra.
+D) salina obrigatoriamente neutra.
 <br>
-E) Metálica.
+E) metálica.
 <br><br>
 <strong>Resposta correta:</strong> A.
 <br><br>
 <strong>Comentário:</strong>
 <br>
-Na escala usual de pH, valores menores que 7 indicam meio ácido; pH igual a 7 indica neutralidade; valores maiores que 7 indicam meio básico.
+Na escala usual, pH menor que 7 é ácido; pH igual a 7 é neutro; pH maior que 7 é básico.
 </div>
 
-<h3>📝 QUESTÃO COMENTADA 8</h3>
+<h3>📝 QUESTÃO COMENTADA 4</h3>
 
 <div class="caixa-exemplo">
 <strong>Enunciado:</strong>
 <br><br>
 Ao balancear uma equação química, o estudante deve:
 <br><br>
-A) Ajustar coeficientes para conservar o número de átomos.
+A) ajustar coeficientes para conservar o número de átomos.
 <br>
-B) Alterar fórmulas químicas para igualar massas visuais.
+B) alterar fórmulas químicas para igualar massas visuais.
 <br>
-C) Trocar reagentes por produtos sempre que houver gás.
+C) trocar reagentes por produtos sempre que houver gás.
 <br>
-D) Eliminar elementos que aparecem em pequena quantidade.
+D) eliminar elementos que aparecem em pequena quantidade.
 <br>
-E) Modificar índices das substâncias até obter números iguais.
+E) modificar índices das substâncias até obter números iguais.
 <br><br>
 <strong>Resposta correta:</strong> A.
 <br><br>
@@ -2664,18 +2059,16 @@ E) Modificar índices das substâncias até obter números iguais.
 O balanceamento respeita a conservação dos átomos. Ajustam-se coeficientes, não os índices das fórmulas químicas.
 </div>
 
-<h3>📚 FECHAMENTO</h3>
 
 <div class="caixa-destaque">
-✔ Rutherford propôs o núcleo atômico.
+<h3>📚 Síntese Final</h3>
+✔ Leia o contexto antes de escolher a alternativa.
 <br><br>
-✔ Número atômico = prótons.
+✔ Observe se a questão cobra composição, fase, propriedade, modelo atômico ou reação.
 <br><br>
-✔ Átomo neutro tem prótons = elétrons.
+✔ Distratores fortes costumam misturar conceitos próximos.
 <br><br>
-✔ pH menor que 7 é ácido.
-<br><br>
-✔ Balancear é ajustar coeficientes.
+✔ A alternativa correta deve respeitar o critério científico apresentado no enunciado.
 </div>
 
 `
