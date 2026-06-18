@@ -638,6 +638,12 @@ const bancoQuestoes = {
 
     terraEUniverso,
 
+    anatomiaFisiologia,
+
+    materiaQuimica,
+
+    fundamentosFisica,
+
     povosPreColombianos,
 
     
@@ -1448,7 +1454,16 @@ ecologia:
 "🌿 Ecologia",
 
 terraEUniverso:
-"🌎 Terra e Universo"
+"🌎 Terra e Universo",
+
+anatomiaFisiologia:
+"🫀 Anatomia e Fisiologia Humana",
+
+materiaQuimica:
+"⚗️ Matéria, Substâncias e Transformações Químicas",
+
+fundamentosFisica:
+"⚡ Fundamentos da Física"
 
 };
 
@@ -2240,7 +2255,10 @@ function iniciarSimuladoCiencias(){
         ...alfabetizacaoCientifica,
         ...citologia,
         ...ecologia,
-        ...terraEUniverso
+        ...terraEUniverso,
+        ...anatomiaFisiologia,
+        ...materiaQuimica,
+        ...fundamentosFisica
 
     ];
 
@@ -2818,6 +2836,36 @@ case "terraEUniverso":
 
     break;
 
+case "anatomiaFisiologia":
+
+    titulo.innerHTML =
+        "🫀 Anatomia e Fisiologia Humana";
+
+    imagem.src =
+        "imagens/mapas/AnatomiaFisiologia.png";
+
+    break;
+
+case "materiaQuimica":
+
+    titulo.innerHTML =
+        "⚗️ Matéria, Substâncias e Transformações Químicas";
+
+    imagem.src =
+        "imagens/mapas/MateriaQuimica.png";
+
+    break;
+
+case "fundamentosFisica":
+
+    titulo.innerHTML =
+        "⚡ Fundamentos da Física";
+
+    imagem.src =
+        "imagens/mapas/FundamentosFisica.png";
+
+    break;
+
 case "povosPreColombianos":
 
     titulo.innerHTML =
@@ -2890,6 +2938,39 @@ if(assuntoAtual === "terraEUniverso"){
     abrirTeoria(
         terraUniversoTeoria,
         "🌎 Terra e Universo"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "anatomiaFisiologia"){
+
+    abrirTeoria(
+        anatomiaFisiologiaTeoria,
+        "🫀 Anatomia e Fisiologia Humana"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "materiaQuimica"){
+
+    abrirTeoria(
+        materiaQuimicaTeoria,
+        "⚗️ Matéria, Substâncias e Transformações Químicas"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "fundamentosFisica"){
+
+    abrirTeoria(
+        fundamentosFisicaTeoria,
+        "⚡ Fundamentos da Física"
     );
 
     return;
@@ -3097,6 +3178,20 @@ acertosAssunto = 0;
 errosAssunto = 0;
 
 questaoAtual = 0;
+
+if(
+    !bancoQuestoes[disciplinaAtual]
+    ||
+    bancoQuestoes[disciplinaAtual].length === 0
+){
+
+    mostrarToast(
+        "Banco de questões em construção para este assunto."
+    );
+
+    return;
+
+}
 
 questoesEmbaralhadas =
     [...bancoQuestoes[disciplinaAtual]]
@@ -3364,6 +3459,39 @@ if(assuntoAtual === "terraEUniverso"){
 
 }
 
+if(assuntoAtual === "anatomiaFisiologia"){
+
+    abrirTeoria(
+        anatomiaFisiologiaTeoria,
+        "🫀 Anatomia e Fisiologia Humana"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "materiaQuimica"){
+
+    abrirTeoria(
+        materiaQuimicaTeoria,
+        "⚗️ Matéria, Substâncias e Transformações Químicas"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "fundamentosFisica"){
+
+    abrirTeoria(
+        fundamentosFisicaTeoria,
+        "⚡ Fundamentos da Física"
+    );
+
+    return;
+
+}
+
     if(assuntoAtual === "hardware"){
         abrirTeoria(
             hardwareTeoria,
@@ -3537,7 +3665,10 @@ function voltarParaAssuntos(){
         "alfabetizacaoCientifica",
         "citologia",
         "ecologia",
-        "terraEUniverso"
+        "terraEUniverso",
+        "anatomiaFisiologia",
+        "materiaQuimica",
+        "fundamentosFisica"
 
     ];
 
@@ -3711,7 +3842,16 @@ ecologia:
 "🌿 Ecologia",
 
 terraEUniverso:
-"🌎 Terra e Universo"
+"🌎 Terra e Universo",
+
+anatomiaFisiologia:
+"🫀 Anatomia e Fisiologia Humana",
+
+materiaQuimica:
+"⚗️ Matéria, Substâncias e Transformações Químicas",
+
+fundamentosFisica:
+"⚡ Fundamentos da Física"
 
     };
 
