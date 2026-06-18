@@ -29,6 +29,16 @@ auth.onAuthStateChanged(async (user) => {
 
         try{
 
+            await db.collection("usuarios")
+                .doc(user.uid)
+                .set({
+
+                    email: user.email || "",
+                    ultimoAcesso: firebase.firestore.FieldValue.serverTimestamp(),
+                    ultimaAtividade: Date.now()
+
+                }, { merge: true });
+
             const doc =
                 await db.collection("usuarios")
                 .doc(user.uid)
