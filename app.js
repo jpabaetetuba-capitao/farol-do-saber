@@ -638,12 +638,6 @@ const bancoQuestoes = {
 
     terraEUniverso,
 
-    anatomiaFisiologia,
-
-    materiaQuimica,
-
-    fundamentosFisica,
-
     povosPreColombianos,
 
     
@@ -1454,16 +1448,7 @@ ecologia:
 "🌿 Ecologia",
 
 terraEUniverso:
-"🌎 Terra e Universo",
-
-anatomiaFisiologia:
-"🫀 Anatomia e Fisiologia Humana",
-
-materiaQuimica:
-"⚗️ Matéria, Substâncias e Transformações Químicas",
-
-fundamentosFisica:
-"⚡ Fundamentos da Física"
+"🌎 Terra e Universo"
 
 };
 
@@ -2255,10 +2240,7 @@ function iniciarSimuladoCiencias(){
         ...alfabetizacaoCientifica,
         ...citologia,
         ...ecologia,
-        ...terraEUniverso,
-        ...anatomiaFisiologia,
-        ...materiaQuimica,
-        ...fundamentosFisica
+        ...terraEUniverso
 
     ];
 
@@ -2836,36 +2818,6 @@ case "terraEUniverso":
 
     break;
 
-case "anatomiaFisiologia":
-
-    titulo.innerHTML =
-        "🫀 Anatomia e Fisiologia Humana";
-
-    imagem.src =
-        "imagens/mapas/AnatomiaFisiologia.png";
-
-    break;
-
-case "materiaQuimica":
-
-    titulo.innerHTML =
-        "⚗️ Matéria, Substâncias e Transformações Químicas";
-
-    imagem.src =
-        "imagens/mapas/MateriaQuimica.png";
-
-    break;
-
-case "fundamentosFisica":
-
-    titulo.innerHTML =
-        "⚡ Fundamentos da Física";
-
-    imagem.src =
-        "imagens/mapas/FundamentosFisica.png";
-
-    break;
-
 case "povosPreColombianos":
 
     titulo.innerHTML =
@@ -2944,37 +2896,91 @@ if(assuntoAtual === "terraEUniverso"){
 
 }
 
-if(assuntoAtual === "anatomiaFisiologia"){
 
-    abrirTeoria(
-        anatomiaFisiologiaTeoria,
-        "🫀 Anatomia e Fisiologia Humana"
-    );
 
+// ==========================
+// TEORIAS DIDÁTICA E LEGISLAÇÃO - BLOCOS 1 E 2
+// ==========================
+
+if(assuntoAtual === "bncc"){
+    abrirTeoria(bnccTeoria, "📘 BNCC");
     return;
-
 }
 
-if(assuntoAtual === "materiaQuimica"){
-
-    abrirTeoria(
-        materiaQuimicaTeoria,
-        "⚗️ Matéria, Substâncias e Transformações Químicas"
-    );
-
+if(assuntoAtual === "ldb"){
+    abrirTeoria(ldbTeoria, "📘 LDB");
     return;
-
 }
 
-if(assuntoAtual === "fundamentosFisica"){
-
-    abrirTeoria(
-        fundamentosFisicaTeoria,
-        "⚡ Fundamentos da Física"
-    );
-
+if(assuntoAtual === "eca"){
+    abrirTeoria(ecaTeoria, "🧒 ECA");
     return;
+}
 
+if(assuntoAtual === "pne"){
+    abrirTeoria(pneTeoria, "📊 PNE");
+    return;
+}
+
+if(assuntoAtual === "fundeb"){
+    abrirTeoria(fundebTeoria, "💰 FUNDEB");
+    return;
+}
+
+if(assuntoAtual === "lbi"){
+    abrirTeoria(lbiTeoria, "♿ LBI");
+    return;
+}
+
+if(assuntoAtual === "tea"){
+    abrirTeoria(teaTeoria, "🧩 TEA");
+    return;
+}
+
+if(assuntoAtual === "inclusiva"){
+    abrirTeoria(inclusivaTeoria, "🤝 Educação Inclusiva");
+    return;
+}
+
+if(assuntoAtual === "etnicoRacial"){
+    abrirTeoria(etnicoRacialTeoria, "🌍 Educação Étnico-Racial");
+    return;
+}
+
+if(assuntoAtual === "educacaoCampo"){
+    abrirTeoria(educacaoCampoTeoria, "🌱 Educação do Campo");
+    return;
+}
+
+
+
+// ==========================
+// TEORIAS DIDÁTICA E LEGISLAÇÃO - BLOCO 3
+// ==========================
+
+if(assuntoAtual === "quilombola"){
+    abrirTeoria(quilombolaTeoria, "🏘 Educação Escolar Quilombola");
+    return;
+}
+
+if(assuntoAtual === "indigena"){
+    abrirTeoria(indigenaTeoria, "🪶 Educação Escolar Indígena");
+    return;
+}
+
+if(assuntoAtual === "didatica"){
+    abrirTeoria(didaticaTeoria, "📚 Didática");
+    return;
+}
+
+if(assuntoAtual === "planejamento"){
+    abrirTeoria(planejamentoTeoria, "🗂 Planejamento");
+    return;
+}
+
+if(assuntoAtual === "avaliacao"){
+    abrirTeoria(avaliacaoTeoria, "📝 Avaliação");
+    return;
 }
 
 
@@ -3178,20 +3184,6 @@ acertosAssunto = 0;
 errosAssunto = 0;
 
 questaoAtual = 0;
-
-if(
-    !bancoQuestoes[disciplinaAtual]
-    ||
-    bancoQuestoes[disciplinaAtual].length === 0
-){
-
-    mostrarToast(
-        "Banco de questões em construção para este assunto."
-    );
-
-    return;
-
-}
 
 questoesEmbaralhadas =
     [...bancoQuestoes[disciplinaAtual]]
@@ -3459,39 +3451,6 @@ if(assuntoAtual === "terraEUniverso"){
 
 }
 
-if(assuntoAtual === "anatomiaFisiologia"){
-
-    abrirTeoria(
-        anatomiaFisiologiaTeoria,
-        "🫀 Anatomia e Fisiologia Humana"
-    );
-
-    return;
-
-}
-
-if(assuntoAtual === "materiaQuimica"){
-
-    abrirTeoria(
-        materiaQuimicaTeoria,
-        "⚗️ Matéria, Substâncias e Transformações Químicas"
-    );
-
-    return;
-
-}
-
-if(assuntoAtual === "fundamentosFisica"){
-
-    abrirTeoria(
-        fundamentosFisicaTeoria,
-        "⚡ Fundamentos da Física"
-    );
-
-    return;
-
-}
-
     if(assuntoAtual === "hardware"){
         abrirTeoria(
             hardwareTeoria,
@@ -3665,10 +3624,7 @@ function voltarParaAssuntos(){
         "alfabetizacaoCientifica",
         "citologia",
         "ecologia",
-        "terraEUniverso",
-        "anatomiaFisiologia",
-        "materiaQuimica",
-        "fundamentosFisica"
+        "terraEUniverso"
 
     ];
 
@@ -3842,16 +3798,7 @@ ecologia:
 "🌿 Ecologia",
 
 terraEUniverso:
-"🌎 Terra e Universo",
-
-anatomiaFisiologia:
-"🫀 Anatomia e Fisiologia Humana",
-
-materiaQuimica:
-"⚗️ Matéria, Substâncias e Transformações Químicas",
-
-fundamentosFisica:
-"⚡ Fundamentos da Física"
+"🌎 Terra e Universo"
 
     };
 
