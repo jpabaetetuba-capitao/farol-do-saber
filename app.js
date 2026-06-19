@@ -612,6 +612,14 @@ const bancoQuestoes = {
 
     redacaoOficial,
 
+    eticaConceitos,
+    principiosAdministracao,
+    deveresServidor,
+    condutaEtica,
+    lai,
+    lgpd,
+
+
     hardware,
 
     software,
@@ -877,6 +885,14 @@ if(nome === "ciencias"){
         return;
 
     }
+
+if (nome === "etica") {
+
+    mostrarTela("etica");
+
+    return;
+
+}
 
 if (nome === "informatica") {
 
@@ -1426,6 +1442,19 @@ errosAssunto++;
     acentuacao: "🔠 Acentuação",
 
     redacaoOficial: "🏛️ Redação Oficial",
+
+    eticaConceitos: "⚖️ Ética no Serviço Público",
+
+    principiosAdministracao: "🏛️ Princípios da Administração Pública",
+
+    deveresServidor: "📋 Deveres, Proibições e Responsabilidades",
+
+    condutaEtica: "🤝 Conduta Ética e Atendimento ao Público",
+
+    lai: "🔎 Lei de Acesso à Informação",
+
+    lgpd: "🛡️ Lei Geral de Proteção de Dados",
+
 
     hardware: "💻 Hardware",
 
@@ -2309,6 +2338,28 @@ function iniciarSimuladoPortugues(){
 
 }
 
+
+function iniciarSimuladoEtica(){
+
+    const etica = [
+
+        ...eticaConceitos,
+        ...principiosAdministracao,
+        ...deveresServidor,
+        ...condutaEtica,
+        ...lai,
+        ...lgpd
+
+    ];
+
+    iniciarSimuladoPersonalizado(
+        etica,
+        30
+    );
+
+}
+
+
 function iniciarSimuladoInformatica(){
 
     const informatica = [
@@ -2711,6 +2762,73 @@ case "redacaoOficial":
         "imagens/mapas/redacaoOficial.png";
 
     break;
+
+
+case "eticaConceitos":
+
+    titulo.innerHTML =
+        "⚖️ Ética no Serviço Público";
+
+    imagem.src =
+        "imagens/mapas/EticaConceitos.png";
+
+    break;
+
+
+case "principiosAdministracao":
+
+    titulo.innerHTML =
+        "🏛️ Princípios da Administração Pública";
+
+    imagem.src =
+        "imagens/mapas/PrincipiosAdministracao.png";
+
+    break;
+
+
+case "deveresServidor":
+
+    titulo.innerHTML =
+        "📋 Deveres, Proibições e Responsabilidades";
+
+    imagem.src =
+        "imagens/mapas/DeveresServidor.png";
+
+    break;
+
+
+case "condutaEtica":
+
+    titulo.innerHTML =
+        "🤝 Conduta Ética e Atendimento ao Público";
+
+    imagem.src =
+        "imagens/mapas/CondutaEtica.png";
+
+    break;
+
+
+case "lai":
+
+    titulo.innerHTML =
+        "🔎 Lei de Acesso à Informação";
+
+    imagem.src =
+        "imagens/mapas/LAI.png";
+
+    break;
+
+
+case "lgpd":
+
+    titulo.innerHTML =
+        "🛡️ Lei Geral de Proteção de Dados";
+
+    imagem.src =
+        "imagens/mapas/LGPD.png";
+
+    break;
+
 
 case "hardware":
 
@@ -3182,6 +3300,78 @@ if(assuntoAtual === "avaliacao"){
     return;
 }
 
+
+
+if(assuntoAtual === "eticaConceitos"){
+
+    abrirTeoria(
+        eticaConceitosTeoria,
+        "⚖️ Ética no Serviço Público"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "principiosAdministracao"){
+
+    abrirTeoria(
+        principiosAdministracaoTeoria,
+        "🏛️ Princípios da Administração Pública"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "deveresServidor"){
+
+    abrirTeoria(
+        deveresServidorTeoria,
+        "📋 Deveres, Proibições e Responsabilidades"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "condutaEtica"){
+
+    abrirTeoria(
+        condutaEticaTeoria,
+        "🤝 Conduta Ética e Atendimento ao Público"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "lai"){
+
+    abrirTeoria(
+        laiTeoria,
+        "🔎 Lei de Acesso à Informação"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "lgpd"){
+
+    abrirTeoria(
+        lgpdTeoria,
+        "🛡️ Lei Geral de Proteção de Dados"
+    );
+
+    return;
+
+}
 
 if(assuntoAtual === "hardware"){
 
@@ -3812,132 +4002,53 @@ if (assuntoAtual === "povosPreColombianos") {
     mostrarTela("telaMapaMental");
 }
 
+const assuntosEtica = [
+        "eticaConceitos",
+        "principiosAdministracao",
+        "deveresServidor",
+        "condutaEtica",
+        "lai",
+        "lgpd"
+    ];
+
+
 function voltarParaAssuntos(){
 
-
-    const assuntosPortugues = [
-
-        "interpretacao",
-        "generos",
-        "funcoes",
-        "coesao",
-        "semantica",
-        "figuras",
-        "variacao",
-        "classesPalavras",
-        "formacaoPalavras",
-        "sintaxe",
-        "periodoComposto",
-        "concordancia",
-        "regencia",
-        "crase",
-        "vozesVerbais",
-        "pontuacao",
-        "ortografia",
-        "acentuacao",
-        "redacaoOficial"
-        
-
-    ];
-
-    const assuntosInformatica = [
-
-        "hardware",
-        "software",
-        "arquivos",
-        "office",
-        "internet",
-        "redes",
-        "seguranca"
-
-    ];
-
-    const assuntosCiencias = [
-
-        "fundamentosCiencias",
-        "bnccCiencias",
-        "alfabetizacaoCientifica",
-        "citologia",
-        "ecologia",
-        "terraEUniverso",
-
-        "anatomiaFisiologia",
-        "materiaQuimica",
-        "fundamentosFisica",
-
-    ];
-
-  const assuntosHistoria = [
-
-        "povosPreColombianos"
-
-    ];
-
-    if(
-
-        assuntosPortugues.includes(
-            assuntoAtual
-        )
-
-    ){
-
-        mostrarTela(
-            "portugues"
-        );
-
+    if(assuntosEtica.includes(assuntoAtual)){
+        mostrarTela("etica");
+        return;
     }
 
-    else if(
-
-        assuntosInformatica.includes(
-            assuntoAtual
-        )
-
-    ){
-
-        mostrarTela(
-            "informatica"
-        );
-
+    if(assuntosPortugues.includes(assuntoAtual)){
+        mostrarTela("portugues");
+        return;
     }
 
-    else if(
-
-        assuntosCiencias.includes(
-            assuntoAtual
-        )
-
-    ){
-
-        mostrarTela(
-            "ciencias"
-        );
-
+    if(assuntosInformatica.includes(assuntoAtual)){
+        mostrarTela("informatica");
+        return;
     }
 
-else if(
-
-        assuntosHistoria.includes(
-            assuntoAtual
-        )
-
-   ) {
-
-        mostrarTela(
-            "historia"
-        );
-
+    if(assuntosDidatica.includes(assuntoAtual)){
+        mostrarTela("didatica");
+        return;
     }
 
- else{
-
-        mostrarTela(
-            "didatica"
-        );
-
+    if(assuntosCiencias.includes(assuntoAtual)){
+        mostrarTela("ciencias");
+        return;
     }
+
+    if(assuntoAtual === "povosPreColombianos"){
+        mostrarTela("historia");
+        return;
+    }
+
+    mostrarTela("questoes");
 
 }
+
+
 
 function continuarQuestoes(){
 
