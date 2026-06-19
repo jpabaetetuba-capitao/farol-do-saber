@@ -428,6 +428,75 @@
 
 </section>
 
+<!-- ÉTICA -->
+
+<section id="etica" class="tela">
+
+    <div class="card">
+
+        <button
+            class="btn-voltar"
+            onclick="mostrarTela('questoes')">
+
+            ⬅ Voltar para Disciplinas
+
+        </button>
+
+        <br><br>
+
+        <h2>⚖️ Ética no Serviço Público</h2>
+
+<br>
+
+<button
+    id="btnForumEtica"
+    class="btn-forum"
+    onclick="abrirForum('etica')">
+
+    💬 Fórum de Discussão
+
+</button>
+
+<br><br>
+
+        <p>
+            Selecione um assunto:
+        </p>
+
+        <br>
+
+        <div class="grid-assuntos">
+
+<button class="btn-assunto" onclick="abrirAssunto('eticaConceitos')">
+⚖️ Ética no Serviço Público
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('principiosAdministracao')">
+🏛️ Princípios da Administração Pública
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('deveresServidor')">
+📋 Deveres, Proibições e Responsabilidades
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('condutaEtica')">
+🤝 Conduta Ética e Atendimento ao Público
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('lai')">
+🔎 Lei de Acesso à Informação
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('lgpd')">
+🛡️ Lei Geral de Proteção de Dados
+</button>
+
+        </div>
+
+    </div>
+
+</section>
+
 <section id="informatica" class="tela">
 
     <div class="card">
@@ -1080,6 +1149,14 @@ Li e revisei o mapa mental.
 
             <button
                 class="btn-assunto"
+                onclick="iniciarSimuladoEtica()">
+
+                ⚖️ Ética
+
+            </button>
+
+            <button
+                class="btn-assunto"
                 onclick="iniciarSimuladoDidatica()">
 
                 📚 Didática e Legislação
@@ -1348,7 +1425,6 @@ Li e revisei o mapa mental.
 <script src="dados/teorias/acentuacaoTeoria.js"></script>
 <script src="dados/teorias/redacaoOficialTeoria.js"></script>
 
-
 <script src="dados/teorias/povosPreColombianosTeoria.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -1382,6 +1458,18 @@ Li e revisei o mapa mental.
 <script src="dados/teorias/anatomiaFisiologiaTeoria.js"></script>
 <script src="dados/teorias/materiaQuimicaTeoria.js"></script>
 <script src="dados/teorias/fundamentosFisicaTeoria.js"></script>
+<script src="dados/eticaConceitos.js"></script>
+<script src="dados/principiosAdministracao.js"></script>
+<script src="dados/deveresServidor.js"></script>
+<script src="dados/condutaEtica.js"></script>
+<script src="dados/lai.js"></script>
+<script src="dados/lgpd.js"></script>
+<script src="dados/teorias/eticaConceitosTeoria.js"></script>
+<script src="dados/teorias/principiosAdministracaoTeoria.js"></script>
+<script src="dados/teorias/deveresServidorTeoria.js"></script>
+<script src="dados/teorias/condutaEticaTeoria.js"></script>
+<script src="dados/teorias/laiTeoria.js"></script>
+<script src="dados/teorias/lgpdTeoria.js"></script>
 <script src="app.js"></script>
 
 <footer>
