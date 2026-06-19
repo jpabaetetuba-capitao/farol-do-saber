@@ -2988,6 +2988,111 @@ if(assuntoAtual === "fundamentosFisica"){
 
 }
 
+if(assuntoAtual === "variacao"){
+    abrirTeoria(
+        variacaoTeoria,
+        "🌎 Variação Linguística"
+    );
+    return;
+}
+
+if(assuntoAtual === "classesPalavras"){
+    abrirTeoria(
+        classesPalavrasTeoria,
+        "📚 Classes de Palavras"
+    );
+    return;
+}
+
+if(assuntoAtual === "formacaoPalavras"){
+    abrirTeoria(
+        formacaoPalavrasTeoria,
+        "🏗 Formação de Palavras"
+    );
+    return;
+}
+
+if(assuntoAtual === "sintaxe"){
+    abrirTeoria(
+        sintaxeTeoria,
+        "📝 Sintaxe"
+    );
+    return;
+}
+
+if(assuntoAtual === "periodoComposto"){
+    abrirTeoria(
+        periodoCompostoTeoria,
+        "🔄 Período Simples e Composto"
+    );
+    return;
+}
+
+if(assuntoAtual === "concordancia"){
+    abrirTeoria(
+        concordanciaTeoria,
+        "📌 Concordância"
+    );
+    return;
+}
+
+if(assuntoAtual === "regencia"){
+    abrirTeoria(
+        regenciaTeoria,
+        "🎯 Regência"
+    );
+    return;
+}
+
+if(assuntoAtual === "crase"){
+    abrirTeoria(
+        craseTeoria,
+        "✍️ Crase"
+    );
+    return;
+}
+
+if(assuntoAtual === "vozesVerbais"){
+    abrirTeoria(
+        vozesVerbaisTeoria,
+        "🗣️ Vozes Verbais"
+    );
+    return;
+}
+
+if(assuntoAtual === "pontuacao"){
+    abrirTeoria(
+        pontuacaoTeoria,
+        "📍 Pontuação"
+    );
+    return;
+}
+
+if(assuntoAtual === "ortografia"){
+    abrirTeoria(
+        ortografiaTeoria,
+        "📖 Ortografia"
+    );
+    return;
+}
+
+if(assuntoAtual === "acentuacao"){
+    abrirTeoria(
+        acentuacaoTeoria,
+        "🔠 Acentuação"
+    );
+    return;
+}
+
+if(assuntoAtual === "redacaoOficial"){
+    abrirTeoria(
+        redacaoOficialTeoria,
+        "🏛️ Redação Oficial"
+    );
+    return;
+}
+
+
 
 
 
