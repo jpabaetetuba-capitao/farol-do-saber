@@ -657,6 +657,17 @@ const bancoQuestoes = {
 
     
     
+    apoioOrganizacaoEducacao,
+    apoioLDB,
+    apoioECA,
+    apoioLBI,
+    apoioTEA,
+    apoioPoliticaEducacaoEspecial,
+    apoioBNCCDiretrizes,
+    apoioEducacaoInclusiva,
+    apoioPapelProfissional,
+    apoioTrabalhoColaborativo,
+
 };
 
 function mostrarToast(mensagem){
@@ -885,6 +896,14 @@ if(nome === "ciencias"){
         return;
 
     }
+
+if (nome === "apoioEscolar") {
+
+    mostrarTela("apoioEscolar");
+
+    return;
+
+}
 
 if (nome === "etica") {
 
@@ -1144,11 +1163,11 @@ function concluirTeoria(){
 
 function abrirMapaMental(){
 
-    mostrarTela(
-        "telaMapaMental"
-    );
+    mostrarTela("telaMapaMental");
 
 }
+
+
 
 // ==========================
 // MOSTRAR QUESTÃO
@@ -1454,6 +1473,17 @@ errosAssunto++;
     lai: "🔎 Lei de Acesso à Informação",
 
     lgpd: "🛡️ Lei Geral de Proteção de Dados",
+    apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
+    apoioLDB: "📘 LDB e Bases da Educação Nacional",
+    apoioECA: "🧒 ECA e Proteção Integral",
+    apoioLBI: "♿ LBI e Inclusão da Pessoa com Deficiência",
+    apoioTEA: "🧩 Política Nacional do TEA",
+    apoioPoliticaEducacaoEspecial: "🌐 Política Nacional de Educação Especial Inclusiva",
+    apoioBNCCDiretrizes: "📚 Diretrizes Curriculares e BNCC",
+    apoioEducacaoInclusiva: "🤝 Educação Especial na Perspectiva Inclusiva",
+    apoioPapelProfissional: "👨‍🏫 Papel do Profissional de Apoio Escolar",
+    apoioTrabalhoColaborativo: "🛡️ Trabalho Colaborativo, Ética e Segurança",
+
 
 
     hardware: "💻 Hardware",
@@ -2412,12 +2442,29 @@ function iniciarSimuladoDidatica(){
 
 function iniciarSimuladoApoioEscolar(){
 
-    mostrarToast(
-        "🚧 Simulado de Apoio Escolar em desenvolvimento."
+    const apoioEscolar = [
+
+        ...apoioOrganizacaoEducacao,
+        ...apoioLDB,
+        ...apoioECA,
+        ...apoioLBI,
+        ...apoioTEA,
+        ...apoioPoliticaEducacaoEspecial,
+        ...apoioBNCCDiretrizes,
+        ...apoioEducacaoInclusiva,
+        ...apoioPapelProfissional,
+        ...apoioTrabalhoColaborativo,
+
+    ];
+
+    iniciarSimuladoPersonalizado(
+        apoioEscolar,
+        30
     );
 
-
 }
+
+
 
 // ==========================
 // ABRIR ASSUNTO
@@ -2465,6 +2512,116 @@ if (
         );
 
     switch (assunto) {
+
+case "apoioOrganizacaoEducacao":
+
+    titulo.innerHTML =
+        "🏫 Organização da Educação Básica";
+
+    imagem.src =
+        "imagens/mapas/ApoioOrganizacaoEducacao.png";
+
+    break;
+
+
+case "apoioLDB":
+
+    titulo.innerHTML =
+        "📘 LDB e Bases da Educação Nacional";
+
+    imagem.src =
+        "imagens/mapas/ApoioLDB.png";
+
+    break;
+
+
+case "apoioECA":
+
+    titulo.innerHTML =
+        "🧒 ECA e Proteção Integral";
+
+    imagem.src =
+        "imagens/mapas/ApoioECA.png";
+
+    break;
+
+
+case "apoioLBI":
+
+    titulo.innerHTML =
+        "♿ LBI e Inclusão da Pessoa com Deficiência";
+
+    imagem.src =
+        "imagens/mapas/ApoioLBI.png";
+
+    break;
+
+
+case "apoioTEA":
+
+    titulo.innerHTML =
+        "🧩 Política Nacional do TEA";
+
+    imagem.src =
+        "imagens/mapas/ApoioTEA.png";
+
+    break;
+
+
+case "apoioPoliticaEducacaoEspecial":
+
+    titulo.innerHTML =
+        "🌐 Política Nacional de Educação Especial Inclusiva";
+
+    imagem.src =
+        "imagens/mapas/ApoioPoliticaEducacaoEspecial.png";
+
+    break;
+
+
+case "apoioBNCCDiretrizes":
+
+    titulo.innerHTML =
+        "📚 Diretrizes Curriculares e BNCC";
+
+    imagem.src =
+        "imagens/mapas/ApoioBNCCDiretrizes.png";
+
+    break;
+
+
+case "apoioEducacaoInclusiva":
+
+    titulo.innerHTML =
+        "🤝 Educação Especial na Perspectiva Inclusiva";
+
+    imagem.src =
+        "imagens/mapas/ApoioEducacaoInclusiva.png";
+
+    break;
+
+
+case "apoioPapelProfissional":
+
+    titulo.innerHTML =
+        "👨‍🏫 Papel do Profissional de Apoio Escolar";
+
+    imagem.src =
+        "imagens/mapas/ApoioPapelProfissional.png";
+
+    break;
+
+
+case "apoioTrabalhoColaborativo":
+
+    titulo.innerHTML =
+        "🛡️ Trabalho Colaborativo, Ética e Segurança";
+
+    imagem.src =
+        "imagens/mapas/ApoioTrabalhoColaborativo.png";
+
+    break;
+
 
         case "bncc":
 
@@ -3302,6 +3459,126 @@ if(assuntoAtual === "avaliacao"){
 
 
 
+
+if(assuntoAtual === "apoioOrganizacaoEducacao"){
+
+    abrirTeoria(
+        apoioOrganizacaoEducacaoTeoria,
+        "🏫 Organização da Educação Básica"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "apoioLDB"){
+
+    abrirTeoria(
+        apoioLDBTeoria,
+        "📘 LDB e Bases da Educação Nacional"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "apoioECA"){
+
+    abrirTeoria(
+        apoioECATeoria,
+        "🧒 ECA e Proteção Integral"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "apoioLBI"){
+
+    abrirTeoria(
+        apoioLBITeoria,
+        "♿ LBI e Inclusão da Pessoa com Deficiência"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "apoioTEA"){
+
+    abrirTeoria(
+        apoioTEATeoria,
+        "🧩 Política Nacional do TEA"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "apoioPoliticaEducacaoEspecial"){
+
+    abrirTeoria(
+        apoioPoliticaEducacaoEspecialTeoria,
+        "🌐 Política Nacional de Educação Especial Inclusiva"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "apoioBNCCDiretrizes"){
+
+    abrirTeoria(
+        apoioBNCCDiretrizesTeoria,
+        "📚 Diretrizes Curriculares e BNCC"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "apoioEducacaoInclusiva"){
+
+    abrirTeoria(
+        apoioEducacaoInclusivaTeoria,
+        "🤝 Educação Especial na Perspectiva Inclusiva"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "apoioPapelProfissional"){
+
+    abrirTeoria(
+        apoioPapelProfissionalTeoria,
+        "👨‍🏫 Papel do Profissional de Apoio Escolar"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "apoioTrabalhoColaborativo"){
+
+    abrirTeoria(
+        apoioTrabalhoColaborativoTeoria,
+        "🛡️ Trabalho Colaborativo, Ética e Segurança"
+    );
+
+    return;
+
+}
+
 if(assuntoAtual === "eticaConceitos"){
 
     abrirTeoria(
@@ -3781,226 +4058,813 @@ function voltarParaMapa(){
 
 }
 
+function voltarParaTeoria(){
+
+    if(!assuntoAtual){
+
+        mostrarToast("Selecione um assunto antes de voltar para a teoria.");
+        mostrarTela("questoes");
+        return;
+
+    }
+
+    abrirTeoriaDoAssunto();
+
+}
+
 function abrirTeoriaDoAssunto(){
 
-    if(assuntoAtual === "fundamentosCiencias"){
+    if(assuntoAtual === "bncc"){
+
         abrirTeoria(
-            fundamentosCienciasTeoria,
-            "🔬 Fundamentos do Ensino de Ciências"
+            bnccTeoria,
+            "📘 BNCC"
         );
+
         return;
+
     }
 
-    if(assuntoAtual === "bnccCiencias"){
+    if(assuntoAtual === "ldb"){
+
         abrirTeoria(
-            bnccCienciasTeoria,
-            "📘 BNCC e Competências em Ciências da Natureza"
+            ldbTeoria,
+            "📘 LDB"
         );
+
         return;
+
     }
 
-if(assuntoAtual === "alfabetizacaoCientifica"){
-    abrirTeoria(
-        alfabetizacaoCientificaTeoria,
-        "🔬 Alfabetização Científica"
-    );
-    return;
-}
+    if(assuntoAtual === "eca"){
 
-if(assuntoAtual === "citologia"){
+        abrirTeoria(
+            ecaTeoria,
+            "📘 ECA"
+        );
 
-    abrirTeoria(
-        citologiaTeoria,
-        "🧬 Citologia"
-    );
+        return;
 
-    return;
+    }
 
-}
+    if(assuntoAtual === "pne"){
 
-if(assuntoAtual === "ecologia"){
+        abrirTeoria(
+            pneTeoria,
+            "📘 PNE"
+        );
 
-    abrirTeoria(
-        ecologiaTeoria,
-        "🌿 Ecologia"
-    );
+        return;
 
-    return;
+    }
 
-}
+    if(assuntoAtual === "fundeb"){
 
-if(assuntoAtual === "terraEUniverso"){
+        abrirTeoria(
+            fundebTeoria,
+            "📘 FUNDEB"
+        );
 
-    abrirTeoria(
-        terraUniversoTeoria,
-        "🌎 Terra e Universo"
-    );
+        return;
 
-    return;
+    }
 
-}
+    if(assuntoAtual === "lbi"){
 
+        abrirTeoria(
+            lbiTeoria,
+            "📘 LBI"
+        );
 
-if(assuntoAtual === "anatomiaFisiologia"){
+        return;
 
-    abrirTeoria(
-        anatomiaFisiologiaTeoria,
-        "🫀 Anatomia e Fisiologia Humana"
-    );
+    }
 
-    return;
+    if(assuntoAtual === "tea"){
 
-}
+        abrirTeoria(
+            teaTeoria,
+            "📘 TEA"
+        );
 
-if(assuntoAtual === "materiaQuimica"){
+        return;
 
-    abrirTeoria(
-        materiaQuimicaTeoria,
-        "⚗️ Matéria e Química"
-    );
+    }
 
-    return;
+    if(assuntoAtual === "inclusiva"){
 
-}
+        abrirTeoria(
+            inclusivaTeoria,
+            "📘 Educação Inclusiva"
+        );
 
-if(assuntoAtual === "fundamentosFisica"){
+        return;
 
-    abrirTeoria(
-        fundamentosFisicaTeoria,
-        "⚡ Fundamentos da Física"
-    );
+    }
 
-    return;
+    if(assuntoAtual === "etnicoRacial"){
 
-}
+        abrirTeoria(
+            etnicoRacialTeoria,
+            "📘 Relações Étnico-Raciais"
+        );
 
+        return;
 
+    }
+
+    if(assuntoAtual === "educacaoCampo"){
+
+        abrirTeoria(
+            educacaoCampoTeoria,
+            "📘 Educação do Campo"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "quilombola"){
+
+        abrirTeoria(
+            quilombolaTeoria,
+            "🏘 Educação Escolar Quilombola"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "indigena"){
+
+        abrirTeoria(
+            indigenaTeoria,
+            "🪶 Educação Escolar Indígena"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "didatica"){
+
+        abrirTeoria(
+            didaticaTeoria,
+            "📚 Didática"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "planejamento"){
+
+        abrirTeoria(
+            planejamentoTeoria,
+            "📋 Planejamento Educacional"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "avaliacao"){
+
+        abrirTeoria(
+            avaliacaoTeoria,
+            "📊 Avaliação da Aprendizagem"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "interpretacao"){
+
+        abrirTeoria(
+            interpretacaoTeoria,
+            "📖 Interpretação de Textos"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "generos"){
+
+        abrirTeoria(
+            generosTeoria,
+            "📄 Tipologia e Gêneros Textuais"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "funcoes"){
+
+        abrirTeoria(
+            funcoesTeoria,
+            "📡 Funções da Linguagem"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "coesao"){
+
+        abrirTeoria(
+            coesaoTeoria,
+            "🔗 Coesão e Coerência"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "semantica"){
+
+        abrirTeoria(
+            semanticaTeoria,
+            "🧠 Semântica"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "figuras"){
+
+        abrirTeoria(
+            figurasTeoria,
+            "🎭 Figuras de Linguagem"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "variacao"){
+
+        abrirTeoria(
+            variacaoTeoria,
+            "🗣️ Variação Linguística"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "classesPalavras"){
+
+        abrirTeoria(
+            classesPalavrasTeoria,
+            "🔤 Classes de Palavras"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "formacaoPalavras"){
+
+        abrirTeoria(
+            formacaoPalavrasTeoria,
+            "🧩 Formação de Palavras"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "sintaxe"){
+
+        abrirTeoria(
+            sintaxeTeoria,
+            "🏗️ Sintaxe"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "periodoComposto"){
+
+        abrirTeoria(
+            periodoCompostoTeoria,
+            "🔗 Período Composto"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "concordancia"){
+
+        abrirTeoria(
+            concordanciaTeoria,
+            "✅ Concordância"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "regencia"){
+
+        abrirTeoria(
+            regenciaTeoria,
+            "🎯 Regência"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "crase"){
+
+        abrirTeoria(
+            craseTeoria,
+            "À Crase"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "vozesVerbais"){
+
+        abrirTeoria(
+            vozesVerbaisTeoria,
+            "🔄 Vozes Verbais"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "pontuacao"){
+
+        abrirTeoria(
+            pontuacaoTeoria,
+            "✍️ Pontuação"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "ortografia"){
+
+        abrirTeoria(
+            ortografiaTeoria,
+            "📝 Ortografia"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "acentuacao"){
+
+        abrirTeoria(
+            acentuacaoTeoria,
+            "´ Acentuação"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "redacaoOficial"){
+
+        abrirTeoria(
+            redacaoOficialTeoria,
+            "🏛️ Redação Oficial"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "eticaConceitos"){
+
+        abrirTeoria(
+            eticaConceitosTeoria,
+            "⚖️ Ética no Serviço Público"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "principiosAdministracao"){
+
+        abrirTeoria(
+            principiosAdministracaoTeoria,
+            "🏛️ Princípios da Administração Pública"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "deveresServidor"){
+
+        abrirTeoria(
+            deveresServidorTeoria,
+            "📋 Deveres, Proibições e Responsabilidades"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "condutaEtica"){
+
+        abrirTeoria(
+            condutaEticaTeoria,
+            "🤝 Conduta Ética no Trabalho e Atendimento"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "lai"){
+
+        abrirTeoria(
+            laiTeoria,
+            "🔎 Lei de Acesso à Informação"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "lgpd"){
+
+        abrirTeoria(
+            lgpdTeoria,
+            "🛡️ Lei Geral de Proteção de Dados"
+        );
+
+        return;
+
+    }
 
     if(assuntoAtual === "hardware"){
+
         abrirTeoria(
             hardwareTeoria,
             "💻 Hardware"
         );
+
         return;
+
     }
 
     if(assuntoAtual === "software"){
+
         abrirTeoria(
             softwareTeoria,
             "🖥️ Software"
         );
+
         return;
+
     }
 
     if(assuntoAtual === "arquivos"){
+
         abrirTeoria(
             arquivosPastasBackupTeoria,
             "📁 Arquivos, Pastas, Linux e Backup"
         );
+
         return;
+
     }
 
-if(assuntoAtual === "office"){
-    abrirTeoria(
-        officeTeoria,
-        "📊 Office e LibreOffice"
-    );
-    return;
-}
-if(assuntoAtual === "internet"){
-    abrirTeoria(
-        internetTeoria,
-        "🌐 Internet"
-    );
-    return;
-}
-if(assuntoAtual === "redes"){
-    abrirTeoria(
-        redesTeoria,
-        "📡 Redes de Computadores"
-    );
-    return;
-}
-if(assuntoAtual === "seguranca"){
-    abrirTeoria(
-        segurancaInformacaoTeoria,
-        "🔐 Segurança da Informação"
-    );
-    return;
-}
+    if(assuntoAtual === "office"){
 
-if(assuntoAtual === "interpretacao"){
+        abrirTeoria(
+            officeTeoria,
+            "📊 Office e LibreOffice"
+        );
 
-    abrirTeoria(
-        interpretacaoTeoria,
-        "📖 Interpretação de Textos"
-    );
+        return;
 
-    return;
+    }
 
-}
+    if(assuntoAtual === "internet"){
 
-if(assuntoAtual === "generos"){
+        abrirTeoria(
+            internetTeoria,
+            "🌐 Internet"
+        );
 
-    abrirTeoria(
-        generosTeoria,
-        "📄 Tipologia e Gêneros Textuais"
-    );
+        return;
 
-    return;
+    }
 
-}
+    if(assuntoAtual === "redes"){
 
-if(assuntoAtual === "funcoes"){
+        abrirTeoria(
+            redesTeoria,
+            "📡 Redes de Computadores"
+        );
 
-    abrirTeoria(
-        funcoesTeoria,
-        "📡 Funções da Linguagem"
-    );
+        return;
 
-    return;
+    }
 
-}
+    if(assuntoAtual === "seguranca"){
 
-if(assuntoAtual === "coesao"){
+        abrirTeoria(
+            segurancaInformacaoTeoria,
+            "🔐 Segurança da Informação"
+        );
 
-    abrirTeoria(
-        coesaoTeoria,
-        "🔗 Coesão e Coerência"
-    );
+        return;
 
-    return;
+    }
 
-}
+    if(assuntoAtual === "fundamentosCiencias"){
 
-if (assuntoAtual === "semantica") {
-    abrirTeoria(
-        semanticaTeoria,
-        "🧠 Semântica"
-    );
-    return;
-}
-if (assuntoAtual === "figuras") {
+        abrirTeoria(
+            fundamentosCienciasTeoria,
+            "🔬 Fundamentos do Ensino de Ciências"
+        );
 
-    abrirTeoria(
-        figurasTeoria,
-        "🎭 Figuras de Linguagem"
-    );
+        return;
 
-    return;
-}
+    }
 
-if (assuntoAtual === "povosPreColombianos") {
-    abrirTeoria(
-        povosPreColombianosTeoria,
-        "🏺 Povos Pré-Colombianos"
-    );
-    return;
-}
+    if(assuntoAtual === "bnccCiencias"){
 
+        abrirTeoria(
+            bnccCienciasTeoria,
+            "📘 BNCC e Competências em Ciências da Natureza"
+        );
 
+        return;
+
+    }
+
+    if(assuntoAtual === "alfabetizacaoCientifica"){
+
+        abrirTeoria(
+            alfabetizacaoCientificaTeoria,
+            "🔬 Alfabetização Científica"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "citologia"){
+
+        abrirTeoria(
+            citologiaTeoria,
+            "🧬 Citologia"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "ecologia"){
+
+        abrirTeoria(
+            ecologiaTeoria,
+            "🌿 Ecologia"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "terraEUniverso"){
+
+        abrirTeoria(
+            terraUniversoTeoria,
+            "🌎 Terra e Universo"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "anatomiaFisiologia"){
+
+        abrirTeoria(
+            anatomiaFisiologiaTeoria,
+            "🫀 Anatomia e Fisiologia Humana"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "materiaQuimica"){
+
+        abrirTeoria(
+            materiaQuimicaTeoria,
+            "⚗️ Matéria e Química"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "fundamentosFisica"){
+
+        abrirTeoria(
+            fundamentosFisicaTeoria,
+            "⚡ Fundamentos da Física"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "povosPreColombianos"){
+
+        abrirTeoria(
+            povosPreColombianosTeoria,
+            "🏺 Povos Pré-Colombianos"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "apoioOrganizacaoEducacao"){
+
+        abrirTeoria(
+            apoioOrganizacaoEducacaoTeoria,
+            "🏫 Organização da Educação Básica"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "apoioLDB"){
+
+        abrirTeoria(
+            apoioLDBTeoria,
+            "📘 LDB e Bases da Educação Nacional"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "apoioECA"){
+
+        abrirTeoria(
+            apoioECATeoria,
+            "🧒 ECA e Proteção Integral"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "apoioLBI"){
+
+        abrirTeoria(
+            apoioLBITeoria,
+            "♿ LBI e Inclusão da Pessoa com Deficiência"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "apoioTEA"){
+
+        abrirTeoria(
+            apoioTEATeoria,
+            "🧩 Política Nacional do TEA"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "apoioPoliticaEducacaoEspecial"){
+
+        abrirTeoria(
+            apoioPoliticaEducacaoEspecialTeoria,
+            "🌐 Política Nacional de Educação Especial Inclusiva"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "apoioBNCCDiretrizes"){
+
+        abrirTeoria(
+            apoioBNCCDiretrizesTeoria,
+            "📚 Diretrizes Curriculares e BNCC"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "apoioEducacaoInclusiva"){
+
+        abrirTeoria(
+            apoioEducacaoInclusivaTeoria,
+            "🤝 Educação Especial na Perspectiva Inclusiva"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "apoioPapelProfissional"){
+
+        abrirTeoria(
+            apoioPapelProfissionalTeoria,
+            "👨‍🏫 Papel do Profissional de Apoio Escolar"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "apoioTrabalhoColaborativo"){
+
+        abrirTeoria(
+            apoioTrabalhoColaborativoTeoria,
+            "🛡️ Trabalho Colaborativo, Ética e Segurança"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "curriculo"){
+
+        mostrarToast("A teoria deste tópico ainda não foi cadastrada neste pacote.");
+        mostrarTela("telaMapaMental");
+        return;
+
+    }
+
+    mostrarToast("Teoria não encontrada para este assunto.");
     mostrarTela("telaMapaMental");
+
 }
+
+
+const assuntosDidatica = [
+        "bncc",
+        "ldb",
+        "eca",
+        "pne",
+        "fundeb",
+        "lbi",
+        "tea",
+        "inclusiva",
+        "etnicoRacial",
+        "educacaoCampo",
+        "quilombola",
+        "indigena",
+        "didatica",
+        "planejamento",
+        "avaliacao",
+        "curriculo",
+    ];
+
+const assuntosPortugues = [
+        "interpretacao",
+        "generos",
+        "funcoes",
+        "coesao",
+        "semantica",
+        "figuras",
+        "variacao",
+        "classesPalavras",
+        "formacaoPalavras",
+        "sintaxe",
+        "periodoComposto",
+        "concordancia",
+        "regencia",
+        "crase",
+        "vozesVerbais",
+        "pontuacao",
+        "ortografia",
+        "acentuacao",
+        "redacaoOficial",
+    ];
 
 const assuntosEtica = [
         "eticaConceitos",
@@ -4008,11 +4872,54 @@ const assuntosEtica = [
         "deveresServidor",
         "condutaEtica",
         "lai",
-        "lgpd"
+        "lgpd",
     ];
 
+const assuntosInformatica = [
+        "hardware",
+        "software",
+        "arquivos",
+        "office",
+        "internet",
+        "redes",
+        "seguranca",
+    ];
+
+const assuntosCiencias = [
+        "fundamentosCiencias",
+        "bnccCiencias",
+        "alfabetizacaoCientifica",
+        "citologia",
+        "ecologia",
+        "terraEUniverso",
+        "anatomiaFisiologia",
+        "materiaQuimica",
+        "fundamentosFisica",
+    ];
+
+const assuntosHistoria = [
+        "povosPreColombianos",
+    ];
+
+const assuntosApoioEscolar = [
+        "apoioOrganizacaoEducacao",
+        "apoioLDB",
+        "apoioECA",
+        "apoioLBI",
+        "apoioTEA",
+        "apoioPoliticaEducacaoEspecial",
+        "apoioBNCCDiretrizes",
+        "apoioEducacaoInclusiva",
+        "apoioPapelProfissional",
+        "apoioTrabalhoColaborativo",
+    ];
 
 function voltarParaAssuntos(){
+
+    if(assuntosApoioEscolar.includes(assuntoAtual)){
+        mostrarTela("apoioEscolar");
+        return;
+    }
 
     if(assuntosEtica.includes(assuntoAtual)){
         mostrarTela("etica");
@@ -4039,7 +4946,7 @@ function voltarParaAssuntos(){
         return;
     }
 
-    if(assuntoAtual === "povosPreColombianos"){
+    if(assuntosHistoria.includes(assuntoAtual)){
         mostrarTela("historia");
         return;
     }
