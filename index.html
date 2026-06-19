@@ -206,6 +206,91 @@
 
 <!-- DIDÁTICA -->
 
+<!-- APOIO ESCOLAR -->
+
+<section id="apoioEscolar" class="tela">
+
+    <div class="card">
+
+        <button
+            class="btn-voltar"
+            onclick="mostrarTela('questoes')">
+
+            ⬅ Voltar para Disciplinas
+
+        </button>
+
+        <br><br>
+
+        <h2>👨‍🏫 Apoio Escolar</h2>
+
+        <br>
+
+        <button
+            id="btnForumApoioEscolar"
+            class="btn-forum"
+            onclick="abrirForum('apoioEscolar')">
+
+            💬 Fórum de Discussão
+
+        </button>
+
+        <br><br>
+
+        <p>
+            Selecione um assunto:
+        </p>
+
+        <br>
+
+        <div class="grid-assuntos">
+
+            <button class="btn-assunto" onclick="abrirAssunto('apoioOrganizacaoEducacao')">
+                🏫 Organização da Educação Básica
+            </button>
+
+            <button class="btn-assunto" onclick="abrirAssunto('apoioLDB')">
+                📘 LDB e Bases da Educação Nacional
+            </button>
+
+            <button class="btn-assunto" onclick="abrirAssunto('apoioECA')">
+                🧒 ECA e Proteção Integral
+            </button>
+
+            <button class="btn-assunto" onclick="abrirAssunto('apoioLBI')">
+                ♿ LBI e Inclusão da Pessoa com Deficiência
+            </button>
+
+            <button class="btn-assunto" onclick="abrirAssunto('apoioTEA')">
+                🧩 Política Nacional do TEA
+            </button>
+
+            <button class="btn-assunto" onclick="abrirAssunto('apoioPoliticaEducacaoEspecial')">
+                🌐 Política Nacional de Educação Especial Inclusiva
+            </button>
+
+            <button class="btn-assunto" onclick="abrirAssunto('apoioBNCCDiretrizes')">
+                📚 Diretrizes Curriculares e BNCC
+            </button>
+
+            <button class="btn-assunto" onclick="abrirAssunto('apoioEducacaoInclusiva')">
+                🤝 Educação Especial na Perspectiva Inclusiva
+            </button>
+
+            <button class="btn-assunto" onclick="abrirAssunto('apoioPapelProfissional')">
+                👨‍🏫 Papel do Profissional de Apoio Escolar
+            </button>
+
+            <button class="btn-assunto" onclick="abrirAssunto('apoioTrabalhoColaborativo')">
+                🛡️ Trabalho Colaborativo, Ética e Segurança
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
 <section id="didatica" class="tela">
 
     <div class="card">
@@ -781,7 +866,7 @@ Li e revisei o mapa mental.
 
 </button>
 
-<button onclick="abrirTeoriaDoAssunto()">
+<button onclick="voltarParaTeoria()">
     📚 Voltar para Teoria
 </button>
 
@@ -1470,6 +1555,26 @@ Li e revisei o mapa mental.
 <script src="dados/teorias/condutaEticaTeoria.js"></script>
 <script src="dados/teorias/laiTeoria.js"></script>
 <script src="dados/teorias/lgpdTeoria.js"></script>
+<script src="dados/apoioOrganizacaoEducacao.js"></script>
+<script src="dados/apoioLDB.js"></script>
+<script src="dados/apoioECA.js"></script>
+<script src="dados/apoioLBI.js"></script>
+<script src="dados/apoioTEA.js"></script>
+<script src="dados/apoioPoliticaEducacaoEspecial.js"></script>
+<script src="dados/apoioBNCCDiretrizes.js"></script>
+<script src="dados/apoioEducacaoInclusiva.js"></script>
+<script src="dados/apoioPapelProfissional.js"></script>
+<script src="dados/apoioTrabalhoColaborativo.js"></script>
+<script src="dados/teorias/apoioOrganizacaoEducacaoTeoria.js"></script>
+<script src="dados/teorias/apoioLDBTeoria.js"></script>
+<script src="dados/teorias/apoioECATeoria.js"></script>
+<script src="dados/teorias/apoioLBITeoria.js"></script>
+<script src="dados/teorias/apoioTEATeoria.js"></script>
+<script src="dados/teorias/apoioPoliticaEducacaoEspecialTeoria.js"></script>
+<script src="dados/teorias/apoioBNCCDiretrizesTeoria.js"></script>
+<script src="dados/teorias/apoioEducacaoInclusivaTeoria.js"></script>
+<script src="dados/teorias/apoioPapelProfissionalTeoria.js"></script>
+<script src="dados/teorias/apoioTrabalhoColaborativoTeoria.js"></script>
 <script src="app.js"></script>
 
 <footer>
