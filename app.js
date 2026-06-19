@@ -870,6 +870,16 @@ Number(
 
 function abrirDisciplina(nome) {
 
+if(nome === "administrador"){
+
+    mostrarToast(
+        "Disciplina em desenvolvimento."
+    );
+
+    return;
+
+}
+
 if(nome === "ciencias"){
 
     mostrarTela("ciencias");
