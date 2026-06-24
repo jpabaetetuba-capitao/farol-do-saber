@@ -7529,15 +7529,138 @@ if(!CanvasRenderingContext2D.prototype.roundRect){
 // DUELO DO SABER - DESAFIO POR CONVITE
 // ==========================
 
-const assuntosDueloInformatica = [
-    { chave: "hardware", nome: "💻 Hardware" },
-    { chave: "software", nome: "⚙️ Software" },
-    { chave: "arquivos", nome: "🗂 Arquivos, Pastas e Backup" },
-    { chave: "office", nome: "📊 Office e LibreOffice" },
-    { chave: "internet", nome: "🌐 Internet" },
-    { chave: "redes", nome: "🖧 Redes de Computadores" },
-    { chave: "seguranca", nome: "🔐 Segurança da Informação" }
+const gruposDuelo = [
+    {
+        disciplina: "informatica",
+        nome: "💻 Informática",
+        assuntos: [
+            { chave: "hardware", nome: "💻 Hardware" },
+            { chave: "software", nome: "⚙️ Software" },
+            { chave: "arquivos", nome: "🗂 Arquivos, Pastas e Backup" },
+            { chave: "office", nome: "📊 Office e LibreOffice" },
+            { chave: "internet", nome: "🌐 Internet" },
+            { chave: "redes", nome: "🖧 Redes de Computadores" },
+            { chave: "seguranca", nome: "🔐 Segurança da Informação" }
+        ]
+    },
+    {
+        disciplina: "portugues",
+        nome: "📖 Língua Portuguesa",
+        assuntos: [
+            { chave: "interpretacao", nome: "📖 Interpretação de Textos" },
+            { chave: "generos", nome: "📄 Tipologia e Gêneros Textuais" },
+            { chave: "funcoes", nome: "📡 Funções da Linguagem" },
+            { chave: "coesao", nome: "🔗 Coesão e Coerência" },
+            { chave: "semantica", nome: "🧠 Semântica" },
+            { chave: "figuras", nome: "🎭 Figuras de Linguagem" },
+            { chave: "variacao", nome: "🌎 Variação Linguística" },
+            { chave: "classesPalavras", nome: "📚 Classes de Palavras" },
+            { chave: "formacaoPalavras", nome: "🧩 Formação de Palavras" },
+            { chave: "sintaxe", nome: "🧱 Sintaxe" },
+            { chave: "periodoComposto", nome: "🔗 Período Composto" },
+            { chave: "concordancia", nome: "✅ Concordância" },
+            { chave: "regencia", nome: "➡️ Regência" },
+            { chave: "crase", nome: "À Crase" },
+            { chave: "vozesVerbais", nome: "🗣 Vozes Verbais" },
+            { chave: "pontuacao", nome: "✍️ Pontuação" },
+            { chave: "ortografia", nome: "🔤 Ortografia" },
+            { chave: "acentuacao", nome: "´ Acentuação" },
+            { chave: "redacaoOficial", nome: "📄 Redação Oficial" }
+        ]
+    },
+    {
+        disciplina: "didatica",
+        nome: "📚 Didática e Legislação",
+        assuntos: [
+            { chave: "bncc", nome: "📘 BNCC" },
+            { chave: "ldb", nome: "📘 LDB" },
+            { chave: "eca", nome: "📘 ECA" },
+            { chave: "pne", nome: "📘 PNE" },
+            { chave: "fundeb", nome: "📘 FUNDEB" },
+            { chave: "lbi", nome: "♿ LBI" },
+            { chave: "tea", nome: "🧩 TEA" },
+            { chave: "inclusiva", nome: "♿ Inclusiva" },
+            { chave: "etnicoRacial", nome: "✊ Étnico-Racial" },
+            { chave: "educacaoCampo", nome: "🌱 Educação do Campo" },
+            { chave: "quilombola", nome: "🏘 Quilombola" },
+            { chave: "indigena", nome: "🪶 Indígena" },
+            { chave: "didatica", nome: "📚 Didática" },
+            { chave: "planejamento", nome: "📝 Planejamento" },
+            { chave: "avaliacao", nome: "📊 Avaliação" }
+        ]
+    },
+    {
+        disciplina: "ciencias",
+        nome: "🔬 Ciências",
+        assuntos: [
+            { chave: "fundamentosCiencias", nome: "🔬 Fundamentos de Ciências" },
+            { chave: "bnccCiencias", nome: "📘 BNCC Ciências" },
+            { chave: "alfabetizacaoCientifica", nome: "🧪 Alfabetização Científica" },
+            { chave: "citologia", nome: "🧫 Citologia" },
+            { chave: "ecologia", nome: "🌱 Ecologia" },
+            { chave: "terraEUniverso", nome: "🌎 Terra e Universo" },
+            { chave: "anatomiaFisiologia", nome: "🫀 Anatomia e Fisiologia" },
+            { chave: "materiaQuimica", nome: "⚗️ Matéria e Química" },
+            { chave: "fundamentosFisica", nome: "⚙️ Fundamentos de Física" }
+        ]
+    },
+    {
+        disciplina: "etica",
+        nome: "⚖️ Ética e Administração Pública",
+        assuntos: [
+            { chave: "eticaConceitos", nome: "⚖️ Conceitos de Ética" },
+            { chave: "principiosAdministracao", nome: "🏛 Princípios da Administração" },
+            { chave: "deveresServidor", nome: "📜 Deveres do Servidor" },
+            { chave: "condutaEtica", nome: "🤝 Conduta Ética" },
+            { chave: "lai", nome: "🔎 LAI" },
+            { chave: "lgpd", nome: "🔐 LGPD" }
+        ]
+    },
+    {
+        disciplina: "apoioEscolar",
+        nome: "👨‍🏫 Apoio Escolar",
+        assuntos: [
+            { chave: "apoioOrganizacaoEducacao", nome: "🏫 Organização da Educação Básica" },
+            { chave: "apoioLDB", nome: "📘 LDB" },
+            { chave: "apoioECA", nome: "🧒 ECA" },
+            { chave: "apoioLBI", nome: "♿ LBI" },
+            { chave: "apoioTEA", nome: "🧩 TEA" },
+            { chave: "apoioPoliticaEducacaoEspecial", nome: "🌐 Política de Educação Especial" },
+            { chave: "apoioBNCCDiretrizes", nome: "📚 BNCC e Diretrizes" },
+            { chave: "apoioEducacaoInclusiva", nome: "🤝 Educação Inclusiva" },
+            { chave: "apoioPapelProfissional", nome: "👨‍🏫 Papel do Profissional" },
+            { chave: "apoioTrabalhoColaborativo", nome: "🛡️ Trabalho Colaborativo" }
+        ]
+    },
+    {
+        disciplina: "historia",
+        nome: "📜 História",
+        assuntos: [
+            { chave: "povosPreColombianos", nome: "🏺 Povos Pré-Colombianos" }
+        ]
+    }
 ];
+
+function obterAssuntoDuelo(chave){
+
+    for(const grupo of gruposDuelo){
+        const assunto = grupo.assuntos.find(item => item.chave === chave);
+        if(assunto){
+            return {
+                ...assunto,
+                disciplina: grupo.disciplina,
+                nomeDisciplina: grupo.nome
+            };
+        }
+    }
+
+    return {
+        chave: chave,
+        nome: chave,
+        disciplina: "geral",
+        nomeDisciplina: "Geral"
+    };
+}
 
 function prepararSelectDuelo(){
 
@@ -7547,9 +7670,33 @@ function prepararSelectDuelo(){
         return;
     }
 
-    select.innerHTML = assuntosDueloInformatica.map(item => `
-        <option value="${item.chave}">${item.nome}</option>
-    `).join("");
+    let html = "";
+
+    gruposDuelo.forEach(grupo => {
+
+        const assuntosDisponiveis = grupo.assuntos.filter(item => {
+            const banco = bancoQuestoes[item.chave];
+            return Array.isArray(banco) && banco.length > 0;
+        });
+
+        if(assuntosDisponiveis.length === 0){
+            return;
+        }
+
+        html += `<optgroup label="${grupo.nome}">`;
+
+        assuntosDisponiveis.forEach(item => {
+            html += `
+                <option value="${item.chave}">${item.nome}</option>
+            `;
+        });
+
+        html += `</optgroup>`;
+    });
+
+    select.innerHTML = html || `
+        <option value="">Nenhum banco de questões disponível</option>
+    `;
 }
 
 function gerarCodigoDuelo(){
@@ -7577,13 +7724,15 @@ async function criarDuelo(){
         .slice(0, Math.min(quantidade, banco.length));
 
     const codigo = gerarCodigoDuelo();
-    const nomeAssunto = assuntosDueloInformatica.find(a => a.chave === assunto)?.nome || assunto;
+    const assuntoDuelo = obterAssuntoDuelo(assunto);
+    const nomeAssunto = assuntoDuelo.nome || assunto;
 
     await db.collection("duelos")
         .doc(codigo)
         .set({
             codigo: codigo,
-            disciplina: "informatica",
+            disciplina: assuntoDuelo.disciplina,
+            nomeDisciplina: assuntoDuelo.nomeDisciplina,
             assunto: assunto,
             nomeAssunto: nomeAssunto,
             quantidade: indices.length,
@@ -7688,6 +7837,8 @@ function mostrarQuestaoDuelo(){
         <div class="card">
             <h2>⚔️ Duelo do Saber</h2>
             <p><strong>Código:</strong> ${dueloAtual.codigo}</p>
+            <p><strong>Disciplina:</strong> ${dueloAtual.nomeDisciplina || dueloAtual.disciplina || "Geral"}</p>
+            <p><strong>Disciplina:</strong> ${dueloAtual.nomeDisciplina || dueloAtual.disciplina || "Geral"}</p>
             <p><strong>Assunto:</strong> ${dueloAtual.nomeAssunto || dueloAtual.assunto}</p>
             <br>
             <h3>Questão ${dueloIndiceAtual + 1} de ${dueloQuestoes.length}</h3>
@@ -7869,6 +8020,7 @@ async function carregarMeusDuelos(){
             html += `
                 <div class="duelo-item">
                     <strong>${dados.codigo}</strong><br>
+                    ${dados.nomeDisciplina || dados.disciplina || "Geral"}<br>
                     ${dados.nomeAssunto || dados.assunto}<br><br>
                     <button onclick="mostrarResultadoDuelo('${dados.codigo}')">
                         Ver resultado
