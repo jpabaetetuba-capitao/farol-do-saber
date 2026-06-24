@@ -744,6 +744,30 @@ let cadernoErros = [];
 
 let perguntasForum = [];
 
+let pontosLuz = 0;
+let saldoPontosLuz = 0;
+let pontosLuzGerados = {};
+let estatisticasDiarias = {};
+let lojaFarol = {
+    comprados: {},
+    medalhaEstudanteAtivo: false,
+    tituloAtual: "",
+    avatarAtual: "👤",
+    nomeAvatarAtual: "Estudante",
+    cardPremium: false,
+    certificadoDigital: false,
+    codigoCertificado: "",
+    dataCertificado: ""
+};
+let posicaoRankingUsuario = "-";
+let tipoSimuladoAtual = "geral";
+let dueloAtual = null;
+let dueloQuestoes = [];
+let dueloIndiceAtual = 0;
+let dueloAcertos = 0;
+let dueloErros = 0;
+let dueloRespostas = [];
+
 const administradores = [
 
     "jp@gmail.com"
@@ -812,6 +836,31 @@ localStorage.setItem(
 );
 
     localStorage.setItem(
+        "farol_pontos_luz",
+        pontosLuz
+    );
+
+    localStorage.setItem(
+        "farol_saldo_pontos_luz",
+        saldoPontosLuz
+    );
+
+    localStorage.setItem(
+        "farol_loja",
+        JSON.stringify(lojaFarol)
+    );
+
+    localStorage.setItem(
+        "farol_pontos_luz_gerados",
+        JSON.stringify(pontosLuzGerados)
+    );
+
+    localStorage.setItem(
+        "farol_estatisticas_diarias",
+        JSON.stringify(estatisticasDiarias)
+    );
+
+    localStorage.setItem(
         "farol_caderno",
         JSON.stringify(cadernoErros)
     );
@@ -860,6 +909,44 @@ Number(
         JSON.parse(
             localStorage.getItem("farol_progresso")
         ) || {};
+
+    pontosLuz =
+        Number(
+            localStorage.getItem("farol_pontos_luz")
+        ) || 0;
+
+    const saldoSalvo = localStorage.getItem("farol_saldo_pontos_luz");
+    saldoPontosLuz =
+        saldoSalvo === null
+        ? pontosLuz
+        : (Number(saldoSalvo) || 0);
+
+    lojaFarol = {
+        ...lojaFarol,
+        ...(JSON.parse(localStorage.getItem("farol_loja")) || {})
+    };
+
+    lojaFarol.comprados = lojaFarol.comprados || {};
+    lojaFarol.avatarAtual = lojaFarol.avatarAtual || "👤";
+    lojaFarol.nomeAvatarAtual = lojaFarol.nomeAvatarAtual || "Estudante";
+
+    pontosLuzGerados =
+        JSON.parse(
+            localStorage.getItem("farol_pontos_luz_gerados")
+        ) || {};
+
+    estatisticasDiarias =
+        JSON.parse(
+            localStorage.getItem("farol_estatisticas_diarias")
+        ) || {};
+
+    cadernoErros = cadernoErros.map((item, indice) => ({
+        idErro: item.idErro || ("erro_antigo_" + indice + "_" + Date.now()),
+        acertosRevisao: item.acertosRevisao || 0,
+        pontosRevisaoGanhos: item.pontosRevisaoGanhos || false,
+        status: item.status || "pendente",
+        ...item
+    }));
 
 }
 
@@ -1367,10 +1454,20 @@ if (Number(resposta.value) === q.correta) {
     acertos++;
     acertosAssunto++;
 
+    const ganhouPontosQuestao = adicionarPontosLuz(
+        10,
+        "Questão correta",
+        chaveQuestaoPontuacao("questao", disciplinaAtual, q)
+    );
+
+    registrarAtividadeDiaria("acertos", ganhouPontosQuestao ? 1 : 0);
+
         feedback.innerHTML = `
         <div class="feedback-acerto">
 
             <h3>✅ Resposta Correta!</h3>
+
+            ${ganhouPontosQuestao ? `<p class="pontos-luz-feedback">⭐ +10 Pontos de Luz</p>` : `<p class="pontos-luz-feedback neutro">⭐ Pontos desta questão já foram registrados antes.</p>`}
 
             <br>
 
@@ -1559,21 +1656,64 @@ const nomeDisciplina =
 
         if (indiceExistente >= 0) {
 
-            cadernoErros[indiceExistente].erros++;
+            cadernoErros[indiceExistente] = {
+                ...cadernoErros[indiceExistente],
+                idErro: cadernoErros[indiceExistente].idErro || chaveQuestaoPontuacao("erro", disciplinaAtual, q),
+                assunto: disciplinaAtual,
+                alternativas: q.alternativas,
+                correta: q.correta,
+                texto: q.texto || "",
+                imagem: q.imagem || "",
+                afirmacoes: q.afirmacoes || null,
+                respostaCorreta: respostaCorreta,
+                explicacao: q.feedbackErro,
+                feedbackAcerto: q.feedbackAcerto || "",
+                feedbackErro: q.feedbackErro || "",
+                dicaBanca: q.dicaBanca || "",
+                erros: (cadernoErros[indiceExistente].erros || 0) + 1,
+                data: Date.now(),
+                status: "pendente"
+            };
 
         } else {
 
             cadernoErros.unshift({
 
+    idErro: chaveQuestaoPontuacao("erro", disciplinaAtual, q),
+
+    assunto: disciplinaAtual,
+
     disciplina: nomeDisciplina,
 
     pergunta: q.pergunta,
+
+    texto: q.texto || "",
+
+    imagem: q.imagem || "",
+
+    afirmacoes: q.afirmacoes || null,
+
+    alternativas: q.alternativas,
+
+    correta: q.correta,
 
     respostaCorreta: respostaCorreta,
 
     explicacao: q.feedbackErro,
 
+    feedbackAcerto: q.feedbackAcerto || "",
+
+    feedbackErro: q.feedbackErro || "",
+
+    dicaBanca: q.dicaBanca || "",
+
     erros: 1,
+
+    acertosRevisao: 0,
+
+    pontosRevisaoGanhos: false,
+
+    status: "pendente",
 
     data: Date.now()
 
@@ -1754,6 +1894,37 @@ localStorage.setItem(
     )
 );
 
+let pontosTopicoHTML = "";
+
+if(adicionarPontosLuz(
+    50,
+    "Conclusão de tópico",
+    "topico:" + disciplinaAtual
+)){
+    pontosTopicoHTML += "⭐ +50 Pontos de Luz por concluir o tópico<br>";
+}
+
+if(percentual >= 90){
+    if(adicionarPontosLuz(
+        120,
+        "Desempenho acima de 90% no tópico",
+        "topico90:" + disciplinaAtual
+    )){
+        pontosTopicoHTML += "🏆 +120 Pontos de Luz por desempenho acima de 90%<br>";
+    }
+}
+else if(percentual >= 80){
+    if(adicionarPontosLuz(
+        80,
+        "Desempenho acima de 80% no tópico",
+        "topico80:" + disciplinaAtual
+    )){
+        pontosTopicoHTML += "🥇 +80 Pontos de Luz por desempenho acima de 80%<br>";
+    }
+}
+
+registrarAtividadeDiaria("topicos", 1);
+
 salvarDados();
 atualizarDashboard();
     document.getElementById(
@@ -1809,6 +1980,14 @@ ${medalha}
         <p>
             ${mensagem}
         </p>
+
+        ${pontosTopicoHTML ? `
+            <br>
+            <div class="pontos-luz-box">
+                <strong>⭐ Pontos de Luz conquistados:</strong><br><br>
+                ${pontosTopicoHTML}
+            </div>
+        ` : ""}
 
         <br><br>
 
@@ -1869,22 +2048,51 @@ function atualizarCadernoErros() {
     const lista =
         document.getElementById("listaErros");
 
+    if(!lista){
+        return;
+    }
+
     if (cadernoErros.length === 0) {
 
-        lista.innerHTML =
-            "Nenhum erro registrado.";
+        lista.innerHTML = `
+            <div class="card caderno-vazio">
+                ✅ Nenhum erro registrado.<br><br>
+                Continue estudando. Quando errar uma questão, ela aparecerá aqui para revisão.
+            </div>
+        `;
 
         return;
     }
 
    const ordenado =
     [...cadernoErros].sort(
-        (a,b) => b.data - a.data
+        (a,b) => (b.data || 0) - (a.data || 0)
     );
 
-    lista.innerHTML = ordenado.map(item => `
+    lista.innerHTML = `
 
-    <div class="card">
+    <div class="card caderno-acoes">
+        <h3>🧠 Revisão Inteligente</h3>
+        <p>
+            Revise os erros respondendo novamente. No primeiro acerto a questão fica em recuperação; no segundo acerto ela sai do caderno.
+        </p>
+        <br>
+        <button onclick="revisarTodosErros()">
+            🚀 Revisar todos os erros
+        </button>
+    </div>
+
+    ` + ordenado.map(item => {
+
+        const indiceOriginal = cadernoErros.indexOf(item);
+        const podeRevisar = Array.isArray(item.alternativas);
+        const status = item.status === "recuperacao"
+            ? "🟡 Em recuperação"
+            : "🔴 Pendente";
+
+        return `
+
+    <div class="card card-erro-inteligente">
 
         <h3>
             ❌ Questão para Revisão
@@ -1892,55 +2100,65 @@ function atualizarCadernoErros() {
 
         <br>
 
-        <strong>
-            Disciplina:
-        </strong>
-
+        <strong>Disciplina:</strong>
         <br>
-
-        ${item.disciplina}
+        ${item.disciplina || "-"}
 
         <br><br>
 
-        <strong>
-            Pergunta:
-        </strong>
-
+        <strong>Status:</strong>
         <br>
-
-        ${item.pergunta}
+        ${status}
 
         <br><br>
 
-        <strong>
-            Resposta correta:
-        </strong>
-
+        <strong>Pergunta:</strong>
         <br>
-
-        ${item.respostaCorreta}
+        ${item.pergunta || "-"}
 
         <br><br>
 
-        <strong>
-            Explicação:
-        </strong>
-
+        <strong>Resposta correta:</strong>
         <br>
-
-        ${item.explicacao}
+        ${item.respostaCorreta || "-"}
 
         <br><br>
 
-        <strong>
-            Erros nessa questão:
-        </strong>
+        <details>
+            <summary>📚 Ver explicação</summary>
+            <br>
+            ${item.explicacao || item.feedbackErro || "Sem explicação cadastrada."}
+            <br><br>
+            <strong>💡 Dica da banca:</strong>
+            <br>
+            ${item.dicaBanca || "Sem dica cadastrada."}
+        </details>
 
-        ${item.erros}
+        <br>
+
+        <strong>Erros nessa questão:</strong>
+        ${item.erros || 1}
+
+        <br><br>
+
+        <strong>Acertos em revisão:</strong>
+        ${item.acertosRevisao || 0}/2
+
+        <br><br>
+
+        ${podeRevisar ? `
+            <button onclick="revisarErro(${indiceOriginal})">
+                🔁 Revisar questão
+            </button>
+        ` : `
+            <p class="aviso-caderno-antigo">
+                Esta questão foi registrada antes da atualização do Caderno Inteligente. Erre novamente a questão no modo normal para habilitar a revisão com alternativas.
+            </p>
+        `}
 
     </div>
 
-    `).join("");
+    `}).join("");
 }
 
 // ==========================
@@ -1978,6 +2196,8 @@ function resetarProgresso() {
 // ==========================
 
 function iniciarSimulado(qtd) {
+
+tipoSimuladoAtual = "geral";
 
 const todasQuestoes = Object.values(
     bancoQuestoes
@@ -2245,6 +2465,39 @@ function finalizarSimulado() {
         ).toFixed(1)
         : 0;
 
+    const percentualNumero = Number(percentual);
+    const hoje = dataHojeFarol();
+    let pontosSimuladoHTML = "";
+
+    if(adicionarPontosLuz(
+        100,
+        "Simulado finalizado",
+        "simulado:" + tipoSimuladoAtual + ":" + hoje
+    )){
+        pontosSimuladoHTML += "⭐ +100 Pontos de Luz por finalizar o simulado<br>";
+    }
+
+    if(percentualNumero >= 90){
+        if(adicionarPontosLuz(
+            150,
+            "Desempenho acima de 90% no simulado",
+            "simulado90:" + tipoSimuladoAtual + ":" + hoje
+        )){
+            pontosSimuladoHTML += "🏆 +150 Pontos de Luz por desempenho acima de 90%<br>";
+        }
+    }
+    else if(percentualNumero >= 80){
+        if(adicionarPontosLuz(
+            100,
+            "Desempenho acima de 80% no simulado",
+            "simulado80:" + tipoSimuladoAtual + ":" + hoje
+        )){
+            pontosSimuladoHTML += "🥇 +100 Pontos de Luz por desempenho acima de 80%<br>";
+        }
+    }
+
+    registrarAtividadeDiaria("simulados", 1);
+
     document
         .getElementById(
             "areaQuestao"
@@ -2288,6 +2541,20 @@ function finalizarSimulado() {
 
             ${percentual}%
 
+            ${pontosSimuladoHTML ? `
+                <br><br>
+                <div class="pontos-luz-box">
+                    <strong>⭐ Pontos de Luz conquistados:</strong><br><br>
+                    ${pontosSimuladoHTML}
+                </div>
+            ` : ""}
+
+            <br><br>
+
+            <button onclick="mostrarTela('simulados')">
+                📝 Voltar aos Simulados
+            </button>
+
         </div>
 
     `;
@@ -2300,8 +2567,11 @@ function finalizarSimulado() {
 
 function iniciarSimuladoPersonalizado(
     banco,
-    quantidade
+    quantidade,
+    tipo
 ){
+
+tipoSimuladoAtual = tipo || "personalizado";
 
     questoesSimulado =
 
@@ -2340,7 +2610,8 @@ function iniciarSimuladoCiencias(){
 
     iniciarSimuladoPersonalizado(
         ciencias,
-        30
+        30,
+        "ciencias"
     );
 
 }
@@ -2373,7 +2644,8 @@ function iniciarSimuladoPortugues(){
 
     iniciarSimuladoPersonalizado(
         portugues,
-        30
+        30,
+        "portugues"
     );
 
 }
@@ -2394,7 +2666,8 @@ function iniciarSimuladoEtica(){
 
     iniciarSimuladoPersonalizado(
         etica,
-        30
+        30,
+        "etica"
     );
 
 }
@@ -2416,7 +2689,8 @@ function iniciarSimuladoInformatica(){
 
     iniciarSimuladoPersonalizado(
         informatica,
-        30
+        30,
+        "informatica"
     );
 
 }
@@ -2436,7 +2710,7 @@ function iniciarSimuladoDidatica(){
         ...etnicoRacial,
         ...educacaoCampo,
         ...quilombola,
-        ...indigina,
+        ...indigena,
         ...didatica,
         ...planejamento,
         ...avaliacao
@@ -2445,7 +2719,8 @@ function iniciarSimuladoDidatica(){
 
     iniciarSimuladoPersonalizado(
         didatica,
-        30
+        30,
+        "didatica"
     );
 
 }
@@ -2469,7 +2744,8 @@ function iniciarSimuladoApoioEscolar(){
 
     iniciarSimuladoPersonalizado(
         apoioEscolar,
-        30
+        30,
+        "apoioEscolar"
     );
 
 }
@@ -3893,6 +4169,11 @@ window.onload = function () {
 
     atualizarContadorForum();
 
+    atualizarMissaoDiaria();
+    carregarRankingPontos();
+    prepararSelectDuelo();
+    atualizarLojaFarol();
+
     setInterval(
 
         carregarUsuariosOnline,
@@ -3927,6 +4208,13 @@ window.onload = function () {
                 );
 
             }
+
+            setTimeout(() => {
+                carregarLojaFirebase();
+                salvarRankingFirebase();
+                carregarRankingPontos();
+                carregarMeusDuelos();
+            }, 800);
 
         }
         else{
@@ -4037,6 +4325,34 @@ document.getElementById(
 formatarTempo(
     tempoAtual
 );
+
+const campoPontosLuz = document.getElementById("pontosLuz");
+if(campoPontosLuz){
+    campoPontosLuz.textContent = pontosLuz;
+}
+
+const campoSaldoPontosLuz = document.getElementById("saldoPontosLuz");
+if(campoSaldoPontosLuz){
+    campoSaldoPontosLuz.textContent = saldoPontosLuz;
+}
+
+const campoAvatarAluno = document.getElementById("avatarAluno");
+if(campoAvatarAluno){
+    campoAvatarAluno.textContent = `${lojaFarol.avatarAtual || "👤"} ${lojaFarol.nomeAvatarAtual || "Estudante"}`;
+}
+
+const campoTituloAluno = document.getElementById("tituloAluno");
+if(campoTituloAluno){
+    campoTituloAluno.textContent = lojaFarol.tituloAtual || "Sem título especial";
+}
+
+const campoMedalhaEspecial = document.getElementById("medalhaEspecialAluno");
+if(campoMedalhaEspecial){
+    campoMedalhaEspecial.textContent = lojaFarol.medalhaEstudanteAtivo ? "🏅 Estudante Ativo" : "Nenhuma medalha especial";
+}
+
+atualizarMissaoDiaria();
+atualizarLojaFarol();
 
 }
 
@@ -5648,85 +5964,33 @@ setInterval(
 
 function atualizarContadorForum(){
 
-    const portugues = perguntasForum.filter(
+    const disciplinasForum = [
+        { id: "btnForumPortugues", chave: "portugues" },
+        { id: "btnForumInformatica", chave: "informatica" },
+        { id: "btnForumCiencias", chave: "ciencias" },
+        { id: "btnForumDidatica", chave: "didatica" },
+        { id: "btnForumHistoria", chave: "historia" },
+        { id: "btnForumEtica", chave: "etica" },
+        { id: "btnForumApoioEscolar", chave: "apoioEscolar" }
+    ];
 
-        p => p.disciplina === "portugues"
+    disciplinasForum.forEach(item => {
 
-    ).length;
+        const botao = document.getElementById(item.id);
 
-    const informatica = perguntasForum.filter(
+        if(!botao){
+            return;
+        }
 
-        p => p.disciplina === "informatica"
+        const total = perguntasForum.filter(
+            p => p.disciplina === item.chave
+        ).length;
 
-    ).length;
+        botao.innerHTML = total > 0
+            ? `💬 Fórum de Discussão (${total})`
+            : `💬 Fórum de Discussão`;
 
-    const ciencias = perguntasForum.filter(
-
-        p => p.disciplina === "ciencias"
-
-    ).length;
-
-const didatica = perguntasForum.filter(
-
-    p => p.disciplina === "didatica"
-
-).length;
-
-    document.getElementById(
-        "btnForumPortugues"
-    ).innerHTML =
-
-        portugues > 0
-
-        ?
-
-        `💬 Fórum de Discussão (${portugues})`
-
-        :
-
-        `💬 Fórum de Discussão`;
-
-    document.getElementById(
-        "btnForumInformatica"
-    ).innerHTML =
-
-        informatica > 0
-
-        ?
-
-        `💬 Fórum de Discussão (${informatica})`
-
-        :
-
-        `💬 Fórum de Discussão`;
-
-    document.getElementById(
-        "btnForumCiencias"
-    ).innerHTML =
-
-        ciencias > 0
-
-        ?
-
-        `💬 Fórum de Discussão (${ciencias})`
-
-        :
-
-        `💬 Fórum de Discussão`;
-
-document.getElementById(
-    "btnForumDidatica"
-).innerHTML =
-
-    didatica > 0
-
-    ?
-
-    `💬 Fórum de Discussão (${didatica})`
-
-    :
-
-    `💬 Fórum de Discussão`;
+    });
 
 }
 
@@ -6125,3 +6389,1498 @@ db.collection("digitando")
     }
 
 });
+
+
+// ==========================
+// PONTOS DE LUZ, MISSÕES E RANKING
+// ==========================
+
+function dataHojeFarol(){
+    return new Date().toISOString().slice(0,10);
+}
+
+function chaveQuestaoPontuacao(tipo, assunto, questao){
+    const pergunta = (questao && questao.pergunta ? questao.pergunta : "")
+        .toString()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .slice(0, 120);
+
+    return `${tipo}:${assunto}:${pergunta}`;
+}
+
+function adicionarPontosLuz(valor, motivo, chaveUnica){
+
+    if(chaveUnica && pontosLuzGerados[chaveUnica]){
+        return false;
+    }
+
+    pontosLuz += valor;
+    saldoPontosLuz += valor;
+
+    if(chaveUnica){
+        pontosLuzGerados[chaveUnica] = {
+            valor: valor,
+            motivo: motivo,
+            data: Date.now()
+        };
+    }
+
+    salvarDados();
+    atualizarDashboard();
+    salvarRankingFirebase();
+    verificarMissaoDiaria();
+
+    return true;
+}
+
+function garantirEstatisticaHoje(){
+
+    const hoje = dataHojeFarol();
+
+    if(!estatisticasDiarias[hoje]){
+        estatisticasDiarias[hoje] = {
+            acertos: 0,
+            revisoes: 0,
+            topicos: 0,
+            simulados: 0,
+            missaoPremiada: false
+        };
+    }
+
+    return estatisticasDiarias[hoje];
+}
+
+function registrarAtividadeDiaria(tipo, quantidade){
+
+    if(!quantidade){
+        return;
+    }
+
+    const hoje = garantirEstatisticaHoje();
+
+    hoje[tipo] = (hoje[tipo] || 0) + quantidade;
+
+    salvarDados();
+    atualizarMissaoDiaria();
+    verificarMissaoDiaria();
+}
+
+function verificarMissaoDiaria(){
+
+    const hoje = garantirEstatisticaHoje();
+
+    const completa =
+        (hoje.acertos || 0) >= 10 &&
+        (hoje.revisoes || 0) >= 3 &&
+        ((hoje.topicos || 0) >= 1 || (hoje.simulados || 0) >= 1);
+
+    if(completa && !hoje.missaoPremiada){
+        hoje.missaoPremiada = true;
+        adicionarPontosLuz(
+            50,
+            "Missão diária completa",
+            "missao-diaria:" + dataHojeFarol()
+        );
+        mostrarToast("🎯 Missão diária concluída! +50 Pontos de Luz");
+    }
+
+    atualizarMissaoDiaria();
+}
+
+function atualizarMissaoDiaria(){
+
+    const area = document.getElementById("missaoDiaria");
+
+    if(!area){
+        return;
+    }
+
+    const hoje = garantirEstatisticaHoje();
+
+    const acertos = hoje.acertos || 0;
+    const revisoes = hoje.revisoes || 0;
+    const tarefaFinal = (hoje.topicos || 0) + (hoje.simulados || 0);
+
+    area.innerHTML = `
+        <p>✅ Acertar 10 questões: <strong>${Math.min(acertos,10)}/10</strong></p>
+        <p>🔁 Revisar 3 erros: <strong>${Math.min(revisoes,3)}/3</strong></p>
+        <p>🏁 Concluir 1 tópico ou simulado: <strong>${Math.min(tarefaFinal,1)}/1</strong></p>
+        <br>
+        <strong>${hoje.missaoPremiada ? "🎉 Missão concluída hoje" : "🎯 Complete tudo e ganhe +50 Pontos de Luz"}</strong>
+    `;
+}
+
+async function salvarRankingFirebase(){
+
+    if(!auth.currentUser){
+        return;
+    }
+
+    try{
+        await db.collection("usuarios")
+        .doc(auth.currentUser.uid)
+        .set({
+            nome: usuarioForum || "Aluno",
+            email: usuarioEmail || (auth.currentUser.email || ""),
+            pontosLuz: pontosLuz,
+            saldoPontosLuz: saldoPontosLuz,
+            acertos: acertos,
+            erros: erros,
+            avatarAtual: lojaFarol.avatarAtual || "👤",
+            nomeAvatarAtual: lojaFarol.nomeAvatarAtual || "Estudante",
+            tituloAtual: lojaFarol.tituloAtual || "",
+            medalhaEstudanteAtivo: !!lojaFarol.medalhaEstudanteAtivo,
+            cardPremium: !!lojaFarol.cardPremium,
+            certificadoDigital: !!lojaFarol.certificadoDigital,
+            lojaFarol: lojaFarol,
+            atualizadoEm: Date.now()
+        }, { merge: true });
+    }
+    catch(erro){
+        console.log("Erro ao salvar ranking", erro);
+    }
+}
+
+async function carregarRankingPontos(){
+
+    const area = document.getElementById("rankingPontos");
+
+    if(!area){
+        return;
+    }
+
+    try{
+        const snapshot = await db.collection("usuarios")
+            .orderBy("pontosLuz", "desc")
+            .limit(10)
+            .get();
+
+        let html = "";
+        let posicao = 0;
+        posicaoRankingUsuario = "-";
+
+        snapshot.forEach(doc => {
+            const dados = doc.data();
+            posicao++;
+
+            const nome = (dados.nome || "Aluno").split(" ")[0];
+            const pontos = dados.pontosLuz || 0;
+            const avatar = dados.avatarAtual || "👤";
+            const titulo = dados.tituloAtual ? ` — ${dados.tituloAtual}` : "";
+            const medalha = dados.medalhaEstudanteAtivo ? " 🏅" : "";
+
+            if(auth.currentUser && doc.id === auth.currentUser.uid){
+                posicaoRankingUsuario = posicao + "º";
+            }
+
+            html += `
+                <div class="linha-ranking">
+                    <strong>${posicao}º</strong> ${avatar} ${nome}${titulo}${medalha}
+                    <span>${pontos} ⭐</span>
+                </div>
+            `;
+        });
+
+        area.innerHTML = html || "Ranking ainda vazio.";
+    }
+    catch(erro){
+        area.innerHTML = "Ranking indisponível no momento.";
+        console.log("Erro no ranking", erro);
+    }
+}
+
+setInterval(carregarRankingPontos, 120000);
+
+// ==========================
+// CADERNO DE ERROS INTELIGENTE
+// ==========================
+
+function revisarTodosErros(){
+
+    if(cadernoErros.length === 0){
+        mostrarToast("Nenhum erro para revisar.");
+        return;
+    }
+
+    const indice = cadernoErros.findIndex(item => Array.isArray(item.alternativas));
+
+    if(indice < 0){
+        mostrarToast("Os erros antigos precisam ser registrados novamente para liberar revisão com alternativas.");
+        return;
+    }
+
+    revisarErro(indice);
+}
+
+function revisarErro(indice){
+
+    const item = cadernoErros[indice];
+
+    if(!item || !Array.isArray(item.alternativas)){
+        mostrarToast("Esta questão ainda não possui alternativas salvas para revisão.");
+        return;
+    }
+
+    mostrarTela("resolverQuestao");
+
+    const area = document.getElementById("areaQuestao");
+
+    area.innerHTML = `
+        <div class="card">
+
+            <h2>🔁 Revisão do Caderno de Erros</h2>
+
+            <br>
+
+            <button onclick="mostrarTela('erros')">
+                ⬅ Voltar ao Caderno
+            </button>
+
+            <br><br>
+
+            ${item.texto ? `
+                <div class="card texto-base">
+                    <h3>📄 Texto de Apoio</h3>
+                    <br>
+                    <p>${item.texto}</p>
+                </div>
+                <br>
+            ` : ""}
+
+            ${item.imagem ? `
+                <img src="${item.imagem}" class="imagem-questao">
+                <br><br>
+            ` : ""}
+
+            ${item.afirmacoes ? `
+                <div class="card texto-base">
+                    ${item.afirmacoes.map(af => `<p>${af}</p>`).join("")}
+                </div>
+                <br>
+            ` : ""}
+
+            <p class="pergunta">${item.pergunta}</p>
+
+            <br>
+
+            ${item.alternativas.map((alt, i) => `
+                <label class="alternativa">
+                    <input type="radio" name="respostaRevisao" value="${i}">
+                    ${alt}
+                </label>
+            `).join("")}
+
+            <br>
+
+            <button onclick="corrigirRevisaoErro(${indice})">
+                Responder Revisão
+            </button>
+
+            <div id="feedback"></div>
+
+        </div>
+    `;
+}
+
+function corrigirRevisaoErro(indice){
+
+    const item = cadernoErros[indice];
+    const resposta = document.querySelector('input[name="respostaRevisao"]:checked');
+
+    if(!item || !resposta){
+        mostrarToast("Selecione uma alternativa.");
+        return;
+    }
+
+    const feedback = document.getElementById("feedback");
+
+    document.querySelectorAll('input[name="respostaRevisao"]').forEach(opcao => {
+        opcao.disabled = true;
+    });
+
+    if(Number(resposta.value) === item.correta){
+
+        item.acertosRevisao = (item.acertosRevisao || 0) + 1;
+        item.status = item.acertosRevisao >= 2 ? "corrigida" : "recuperacao";
+
+        let pontosHTML = "";
+
+        if(!item.pontosRevisaoGanhos){
+            const ganhou = adicionarPontosLuz(
+                3,
+                "Revisão correta do caderno de erros",
+                "revisao:" + item.idErro
+            );
+
+            if(ganhou){
+                item.pontosRevisaoGanhos = true;
+                pontosHTML = `<p class="pontos-luz-feedback">⭐ +3 Pontos de Luz pela revisão</p>`;
+                registrarAtividadeDiaria("revisoes", 1);
+            }
+        }
+
+        let botaoProximo = `
+            <button onclick="mostrarTela('erros'); atualizarCadernoErros();">
+                Voltar ao Caderno
+            </button>
+        `;
+
+        let mensagemStatus = "";
+
+        if(item.acertosRevisao >= 2){
+            cadernoErros.splice(indice, 1);
+            mensagemStatus = "✅ Erro corrigido! A questão saiu do Caderno de Erros.";
+        }
+        else{
+            mensagemStatus = "🟡 Muito bom! A questão ficou em recuperação. Acerte novamente depois para remover do caderno.";
+        }
+
+        salvarDados();
+        atualizarCadernoErros();
+
+        feedback.innerHTML = `
+            <div class="feedback-acerto">
+                <h3>✅ Resposta Correta!</h3>
+                ${pontosHTML}
+                <br>
+                <p>${mensagemStatus}</p>
+                <br>
+                ${item.feedbackAcerto || "Boa revisão!"}
+                <br><br>
+                ${botaoProximo}
+            </div>
+        `;
+    }
+    else{
+
+        item.erros = (item.erros || 0) + 1;
+        item.status = "pendente";
+        item.data = Date.now();
+
+        salvarDados();
+        atualizarCadernoErros();
+
+        feedback.innerHTML = `
+            <div class="feedback-erro">
+                <h3>❌ Ainda precisa revisar.</h3>
+                <br>
+                <strong>Resposta correta:</strong><br>
+                ${item.respostaCorreta}
+                <br><br>
+                <strong>Explicação:</strong><br><br>
+                ${item.feedbackErro || item.explicacao || "Sem explicação cadastrada."}
+                <br><br>
+                <button onclick="mostrarTela('erros')">
+                    Voltar ao Caderno
+                </button>
+            </div>
+        `;
+    }
+}
+
+// ==========================
+// COMPARTILHAR PROGRESSO
+// ==========================
+
+function montarMensagemProgresso(){
+
+    const respondidas = acertos + erros;
+    const aproveitamento = respondidas > 0
+        ? Math.round((acertos / respondidas) * 100)
+        : 0;
+
+    const nome = (usuarioForum || "Aluno").split(" ")[0];
+
+    const avatar = lojaFarol.avatarAtual || "👤";
+    const titulo = lojaFarol.tituloAtual ? `
+🎖 Título: ${lojaFarol.tituloAtual}` : "";
+
+    return `🚀 Meu progresso no Farol do Saber
+
+${avatar} ${nome}${titulo}
+⭐ Pontos de Luz: ${pontosLuz}
+✅ Acertos: ${acertos}
+📚 Questões respondidas: ${respondidas}
+📊 Aproveitamento: ${aproveitamento}%
+🏆 Ranking: ${posicaoRankingUsuario}
+
+Rumo à aprovação!`;
+}
+
+function criarCanvasCardProgresso(){
+
+    const canvas = document.createElement("canvas");
+    canvas.width = 1080;
+    canvas.height = 1350;
+
+    const ctx = canvas.getContext("2d");
+    const premium = !!lojaFarol.cardPremium;
+
+    if(premium){
+        const gradiente = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+        gradiente.addColorStop(0, "#071a2f");
+        gradiente.addColorStop(0.55, "#0d47a1");
+        gradiente.addColorStop(1, "#f9a825");
+        ctx.fillStyle = gradiente;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "rgba(255,248,225,0.97)";
+        ctx.roundRect(70, 90, 940, 1170, 46);
+        ctx.fill();
+
+        ctx.strokeStyle = "#f9a825";
+        ctx.lineWidth = 12;
+        ctx.stroke();
+
+        ctx.fillStyle = "#7a5200";
+        ctx.font = "bold 34px Arial";
+        ctx.textAlign = "center";
+        ctx.fillText("CARD PREMIUM DE PROGRESSO", 540, 165);
+    }
+    else{
+        const gradiente = ctx.createLinearGradient(0, 0, 0, canvas.height);
+        gradiente.addColorStop(0, "#0d47a1");
+        gradiente.addColorStop(1, "#1e88e5");
+        ctx.fillStyle = gradiente;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "rgba(255,255,255,0.95)";
+        ctx.roundRect(90, 120, 900, 1110, 40);
+        ctx.fill();
+    }
+
+    ctx.fillStyle = "#0d47a1";
+    ctx.font = "bold 64px Arial";
+    ctx.textAlign = "center";
+    ctx.fillText("🗼 Farol do Saber", 540, premium ? 255 : 240);
+
+    const nome = (usuarioForum || "Aluno").split(" ")[0];
+    const respondidas = acertos + erros;
+    const aproveitamento = respondidas > 0
+        ? Math.round((acertos / respondidas) * 100)
+        : 0;
+
+    const avatar = lojaFarol.avatarAtual || "👤";
+    const titulo = lojaFarol.tituloAtual || "Estudante";
+
+    ctx.fillStyle = "#222";
+    ctx.font = "bold 52px Arial";
+    ctx.fillText(`${avatar} Parabéns, ${nome}!`, 540, 370);
+
+    ctx.fillStyle = premium ? "#7a5200" : "#1e88e5";
+    ctx.font = "bold 36px Arial";
+    ctx.fillText(titulo, 540, 425);
+
+    ctx.fillStyle = "#222";
+    ctx.font = "44px Arial";
+    ctx.textAlign = "left";
+
+    const linhas = [
+        `⭐ ${pontosLuz} Pontos de Luz`,
+        `✅ ${acertos} acertos`,
+        `📚 ${respondidas} questões respondidas`,
+        `📊 ${aproveitamento}% de aproveitamento`,
+        `🏆 Ranking: ${posicaoRankingUsuario}`
+    ];
+
+    let y = 560;
+    linhas.forEach(linha => {
+        ctx.fillText(linha, 180, y);
+        y += 95;
+    });
+
+    if(lojaFarol.medalhaEstudanteAtivo){
+        ctx.fillStyle = "#f9a825";
+        ctx.font = "bold 38px Arial";
+        ctx.textAlign = "center";
+        ctx.fillText("🏅 Medalha Estudante Ativo", 540, 980);
+    }
+
+    ctx.textAlign = "center";
+    ctx.fillStyle = premium ? "#7a5200" : "#1e88e5";
+    ctx.font = "bold 42px Arial";
+    ctx.fillText("Rumo à aprovação!", 540, 1060);
+
+    ctx.fillStyle = "#555";
+    ctx.font = "30px Arial";
+    ctx.fillText("Compartilhe seu progresso", 540, 1140);
+
+    return canvas;
+}
+
+function canvasParaBlob(canvas){
+
+    return new Promise(resolve => {
+
+        canvas.toBlob(blob => {
+            resolve(blob);
+        }, "image/png");
+
+    });
+}
+
+async function compartilharProgresso(){
+
+    const texto = montarMensagemProgresso();
+
+    try{
+
+        const canvas = criarCanvasCardProgresso();
+        const blob = await canvasParaBlob(canvas);
+
+        if(blob){
+
+            const arquivo = new File(
+                [blob],
+                "farol-do-saber-progresso.png",
+                { type: "image/png" }
+            );
+
+            if(
+                navigator.canShare &&
+                navigator.canShare({ files: [arquivo] })
+            ){
+
+                await navigator.share({
+                    title: "Meu progresso no Farol do Saber",
+                    text: "Estou avançando no Farol do Saber! 🚀",
+                    files: [arquivo]
+                });
+
+                return;
+
+            }
+
+        }
+
+        if(navigator.share){
+
+            await navigator.share({
+                title: "Meu progresso no Farol do Saber",
+                text: texto,
+                url: window.location.href
+            });
+
+            return;
+
+        }
+
+        copiarTextoProgresso();
+
+    }catch(erro){
+
+        if(
+            erro &&
+            erro.name === "AbortError"
+        ){
+            return;
+        }
+
+        console.log("Não foi possível compartilhar o card:", erro);
+        copiarTextoProgresso();
+
+    }
+
+}
+
+function copiarTextoProgresso(){
+
+    const texto = montarMensagemProgresso();
+
+    if(navigator.clipboard){
+        navigator.clipboard.writeText(texto);
+        mostrarToast("Progresso copiado. Agora é só colar onde quiser compartilhar.");
+        return;
+    }
+
+    prompt("Copie seu progresso:", texto);
+}
+
+function baixarCardProgresso(){
+
+    const canvas = criarCanvasCardProgresso();
+
+    const link = document.createElement("a");
+    link.download = "progresso-farol-do-saber.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+}
+
+// Mantém compatibilidade caso algum navegador esteja com arquivo antigo em cache.
+function compartilharWhatsApp(){
+    compartilharProgresso();
+}
+
+function compartilharFacebook(){
+    compartilharProgresso();
+}
+
+
+// ==========================
+// LOJA DO FAROL
+// ==========================
+
+const recompensasLojaFarol = [
+    {
+        id: "medalha_estudante_ativo",
+        tipo: "medalha",
+        icone: "🏅",
+        nome: "Medalha Estudante Ativo",
+        custo: 500,
+        descricao: "Aparece no perfil, no ranking e no card de progresso."
+    },
+    {
+        id: "titulo_guardiao_farol",
+        tipo: "titulo",
+        icone: "🎖",
+        nome: "Título Guardião do Farol",
+        custo: 800,
+        descricao: "Título especial exibido no perfil, ranking e compartilhamento."
+    },
+    {
+        id: "avatar_faroleiro",
+        tipo: "avatar",
+        icone: "🗼",
+        nome: "Avatar Faroleiro do Saber",
+        custo: 600,
+        descricao: "Avatar especial para aparecer no ranking, fórum e duelos.",
+        avatar: "🗼",
+        nomeAvatar: "Faroleiro do Saber"
+    },
+    {
+        id: "avatar_navegador",
+        tipo: "avatar",
+        icone: "🌊",
+        nome: "Avatar Navegador do Saber",
+        custo: 900,
+        descricao: "Avatar com identidade marítima e visual de jornada.",
+        avatar: "🌊",
+        nomeAvatar: "Navegador do Saber"
+    },
+    {
+        id: "avatar_mestre",
+        tipo: "avatar",
+        icone: "🧠",
+        nome: "Avatar Mestre das Questões",
+        custo: 1200,
+        descricao: "Avatar para quem gosta de mostrar desempenho nas questões.",
+        avatar: "🧠",
+        nomeAvatar: "Mestre das Questões"
+    },
+    {
+        id: "card_premium_progresso",
+        tipo: "card",
+        icone: "📤",
+        nome: "Card Premium de Progresso",
+        custo: 1000,
+        descricao: "Deixa o card de compartilhamento mais bonito e destacado."
+    },
+    {
+        id: "certificado_digital",
+        tipo: "certificado",
+        icone: "📜",
+        nome: "Certificado Digital de Destaque",
+        custo: 2000,
+        requisito: "100 acertos",
+        descricao: "Gera um certificado de participação e desempenho no Farol do Saber."
+    }
+];
+
+function recompensaComprada(id){
+    return !!(lojaFarol.comprados && lojaFarol.comprados[id]);
+}
+
+function obterRecompensaLoja(id){
+    return recompensasLojaFarol.find(item => item.id === id);
+}
+
+function gerarCodigoCertificado(){
+    const ano = new Date().getFullYear();
+    const numero = Math.floor(100000 + Math.random() * 900000);
+    return `FAROL-${ano}-${numero}`;
+}
+
+function comprarRecompensaLoja(id){
+
+    const item = obterRecompensaLoja(id);
+
+    if(!item){
+        mostrarToast("Recompensa não encontrada.");
+        return;
+    }
+
+    if(recompensaComprada(id)){
+        mostrarToast("Você já possui esta recompensa.");
+        return;
+    }
+
+    if(item.id === "certificado_digital" && acertos < 100){
+        mostrarToast("Para emitir o certificado, alcance pelo menos 100 acertos.");
+        return;
+    }
+
+    if(saldoPontosLuz < item.custo){
+        mostrarToast("Você ainda não tem Pontos de Luz suficientes para esta troca.");
+        return;
+    }
+
+    const confirmar = confirm(
+        `Trocar ${item.custo} Pontos de Luz por ${item.nome}?`
+    );
+
+    if(!confirmar){
+        return;
+    }
+
+    saldoPontosLuz -= item.custo;
+
+    lojaFarol.comprados[id] = {
+        nome: item.nome,
+        custo: item.custo,
+        data: Date.now()
+    };
+
+    if(item.tipo === "medalha"){
+        lojaFarol.medalhaEstudanteAtivo = true;
+    }
+
+    if(item.tipo === "titulo"){
+        lojaFarol.tituloAtual = "Guardião do Farol";
+    }
+
+    if(item.tipo === "avatar"){
+        lojaFarol.avatarAtual = item.avatar;
+        lojaFarol.nomeAvatarAtual = item.nomeAvatar;
+    }
+
+    if(item.tipo === "card"){
+        lojaFarol.cardPremium = true;
+    }
+
+    if(item.tipo === "certificado"){
+        lojaFarol.certificadoDigital = true;
+        lojaFarol.codigoCertificado = lojaFarol.codigoCertificado || gerarCodigoCertificado();
+        lojaFarol.dataCertificado = lojaFarol.dataCertificado || new Date().toLocaleDateString("pt-BR");
+    }
+
+    salvarDados();
+    atualizarDashboard();
+    atualizarLojaFarol();
+    salvarRankingFirebase();
+    salvarLojaFirebase();
+
+    mostrarToast("Recompensa desbloqueada com sucesso!");
+}
+
+function usarAvatarLoja(id){
+
+    const item = obterRecompensaLoja(id);
+
+    if(!item || item.tipo !== "avatar"){
+        return;
+    }
+
+    if(!recompensaComprada(id)){
+        mostrarToast("Você ainda não desbloqueou este avatar.");
+        return;
+    }
+
+    lojaFarol.avatarAtual = item.avatar;
+    lojaFarol.nomeAvatarAtual = item.nomeAvatar;
+
+    salvarDados();
+    atualizarDashboard();
+    atualizarLojaFarol();
+    salvarRankingFirebase();
+    salvarLojaFirebase();
+
+    mostrarToast("Avatar aplicado ao seu perfil.");
+}
+
+function atualizarLojaFarol(){
+
+    const area = document.getElementById("conteudoLojaFarol");
+
+    if(!area){
+        return;
+    }
+
+    const certificadoDisponivel = acertos >= 100;
+
+    area.innerHTML = `
+        <div class="loja-resumo">
+            <p><strong>⭐ Pontos de Luz totais:</strong> ${pontosLuz}</p>
+            <p><strong>🛒 Saldo para trocar:</strong> ${saldoPontosLuz}</p>
+            <p><strong>👤 Perfil:</strong> ${lojaFarol.avatarAtual || "👤"} ${lojaFarol.nomeAvatarAtual || "Estudante"}</p>
+            <p><strong>🎖 Título:</strong> ${lojaFarol.tituloAtual || "Sem título especial"}</p>
+        </div>
+
+        <br>
+
+        <div class="grid-loja">
+            ${recompensasLojaFarol.map(item => {
+                const comprada = recompensaComprada(item.id);
+                const bloqueadaCertificado = item.id === "certificado_digital" && !certificadoDisponivel;
+                const semSaldo = saldoPontosLuz < item.custo && !comprada;
+                const status = comprada
+                    ? "✅ Desbloqueado"
+                    : bloqueadaCertificado
+                        ? "🔒 Requer 100 acertos"
+                        : semSaldo
+                            ? "🔒 Pontos insuficientes"
+                            : "🛒 Disponível";
+
+                let acao = `
+                    <button onclick="comprarRecompensaLoja('${item.id}')">
+                        Trocar por ${item.custo} ⭐
+                    </button>
+                `;
+
+                if(comprada){
+                    if(item.tipo === "avatar"){
+                        acao = `
+                            <button onclick="usarAvatarLoja('${item.id}')">
+                                Usar avatar
+                            </button>
+                        `;
+                    }
+                    else if(item.tipo === "certificado"){
+                        acao = `
+                            <button onclick="gerarCertificadoDigital()">
+                                📜 Ver certificado
+                            </button>
+                        `;
+                    }
+                    else if(item.tipo === "card"){
+                        acao = `
+                            <button onclick="compartilharProgresso()">
+                                📤 Compartilhar card premium
+                            </button>
+                        `;
+                    }
+                    else{
+                        acao = `<button disabled>Desbloqueado</button>`;
+                    }
+                }
+
+                return `
+                    <div class="item-loja ${comprada ? "comprado" : ""}">
+                        <h3>${item.icone} ${item.nome}</h3>
+                        <p>${item.descricao}</p>
+                        <p><strong>Custo:</strong> ${item.custo} Pontos de Luz</p>
+                        ${item.requisito ? `<p><strong>Requisito:</strong> ${item.requisito}</p>` : ""}
+                        <p class="status-loja">${status}</p>
+                        ${acao}
+                    </div>
+                `;
+            }).join("")}
+        </div>
+
+        <div id="areaCertificadoDigital" class="area-certificado-digital"></div>
+    `;
+}
+
+function criarCanvasCertificadoDigital(){
+
+    const canvas = document.createElement("canvas");
+    canvas.width = 1600;
+    canvas.height = 1100;
+
+    const ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "#f7f2df";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.strokeStyle = "#0d47a1";
+    ctx.lineWidth = 18;
+    ctx.strokeRect(60, 60, canvas.width - 120, canvas.height - 120);
+
+    ctx.strokeStyle = "#f9a825";
+    ctx.lineWidth = 8;
+    ctx.strokeRect(95, 95, canvas.width - 190, canvas.height - 190);
+
+    ctx.textAlign = "center";
+    ctx.fillStyle = "#0d47a1";
+    ctx.font = "bold 66px Arial";
+    ctx.fillText("🗼 Farol do Saber", 800, 190);
+
+    ctx.fillStyle = "#222";
+    ctx.font = "bold 72px Arial";
+    ctx.fillText("CERTIFICADO DIGITAL", 800, 310);
+
+    ctx.font = "34px Arial";
+    ctx.fillText("Certificado de participação e desempenho na plataforma", 800, 365);
+
+    const nome = usuarioForum || "Aluno";
+    const titulo = lojaFarol.tituloAtual || "Estudante";
+    const avatar = lojaFarol.avatarAtual || "👤";
+    const codigo = lojaFarol.codigoCertificado || gerarCodigoCertificado();
+    const data = lojaFarol.dataCertificado || new Date().toLocaleDateString("pt-BR");
+
+    ctx.font = "40px Arial";
+    ctx.fillStyle = "#333";
+    ctx.fillText("Certificamos que", 800, 470);
+
+    ctx.font = "bold 62px Arial";
+    ctx.fillStyle = "#0d47a1";
+    ctx.fillText(`${avatar} ${nome}`, 800, 550);
+
+    ctx.font = "34px Arial";
+    ctx.fillStyle = "#333";
+    ctx.fillText("demonstrou dedicação, constância e desempenho nos estudos", 800, 625);
+    ctx.fillText("realizados na plataforma Farol do Saber.", 800, 675);
+
+    ctx.font = "bold 36px Arial";
+    ctx.fillStyle = "#7a5200";
+    ctx.fillText(`🎖 ${titulo}`, 800, 755);
+
+    ctx.font = "34px Arial";
+    ctx.fillStyle = "#222";
+    ctx.fillText(`⭐ Pontos de Luz: ${pontosLuz}    ✅ Acertos: ${acertos}`, 800, 830);
+
+    ctx.font = "28px Arial";
+    ctx.fillStyle = "#555";
+    ctx.fillText(`Emitido em: ${data}`, 800, 930);
+    ctx.fillText(`Código de verificação: ${codigo}`, 800, 980);
+
+    ctx.font = "22px Arial";
+    ctx.fillText("Este certificado não possui validade oficial de curso; é um registro de participação e desempenho na plataforma.", 800, 1035);
+
+    return canvas;
+}
+
+function gerarCertificadoDigital(){
+
+    if(!lojaFarol.certificadoDigital){
+        mostrarToast("Você ainda não desbloqueou o certificado digital.");
+        return;
+    }
+
+    if(!lojaFarol.codigoCertificado){
+        lojaFarol.codigoCertificado = gerarCodigoCertificado();
+    }
+
+    if(!lojaFarol.dataCertificado){
+        lojaFarol.dataCertificado = new Date().toLocaleDateString("pt-BR");
+    }
+
+    salvarDados();
+
+    const area = document.getElementById("areaCertificadoDigital");
+
+    if(!area){
+        return;
+    }
+
+    const canvas = criarCanvasCertificadoDigital();
+    canvas.className = "canvas-certificado";
+
+    area.innerHTML = `
+        <h3>📜 Meu Certificado Digital</h3>
+        <p>Você pode compartilhar o certificado pelo celular ou baixar a imagem.</p>
+        <br>
+        <div id="previewCertificado"></div>
+        <br>
+        <button onclick="compartilharCertificadoDigital()">
+            📤 Compartilhar certificado
+        </button>
+        <button onclick="baixarCertificadoDigital()">
+            ⬇️ Baixar certificado
+        </button>
+    `;
+
+    document.getElementById("previewCertificado").appendChild(canvas);
+
+    area.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function baixarCertificadoDigital(){
+    const canvas = criarCanvasCertificadoDigital();
+    const link = document.createElement("a");
+    link.download = "certificado-farol-do-saber.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+}
+
+async function compartilharCertificadoDigital(){
+
+    try{
+        const canvas = criarCanvasCertificadoDigital();
+        const blob = await canvasParaBlob(canvas);
+
+        if(blob){
+            const arquivo = new File(
+                [blob],
+                "certificado-farol-do-saber.png",
+                { type: "image/png" }
+            );
+
+            if(
+                navigator.canShare &&
+                navigator.canShare({ files: [arquivo] })
+            ){
+                await navigator.share({
+                    title: "Meu certificado no Farol do Saber",
+                    text: "Conquistei meu certificado digital no Farol do Saber! 🗼📚",
+                    files: [arquivo]
+                });
+                return;
+            }
+        }
+
+        if(navigator.share){
+            await navigator.share({
+                title: "Meu certificado no Farol do Saber",
+                text: "Conquistei meu certificado digital no Farol do Saber! 🗼📚",
+                url: window.location.href
+            });
+            return;
+        }
+
+        mostrarToast("Seu navegador não permite compartilhar direto. Baixe o certificado para enviar.");
+
+    }catch(erro){
+        if(erro && erro.name === "AbortError"){
+            return;
+        }
+        console.log("Erro ao compartilhar certificado", erro);
+        mostrarToast("Não foi possível compartilhar. Tente baixar o certificado.");
+    }
+}
+
+async function salvarLojaFirebase(){
+    if(!auth.currentUser){
+        return;
+    }
+    try{
+        await db.collection("usuarios")
+        .doc(auth.currentUser.uid)
+        .set({
+            saldoPontosLuz: saldoPontosLuz,
+            lojaFarol: lojaFarol,
+            avatarAtual: lojaFarol.avatarAtual || "👤",
+            nomeAvatarAtual: lojaFarol.nomeAvatarAtual || "Estudante",
+            tituloAtual: lojaFarol.tituloAtual || "",
+            medalhaEstudanteAtivo: !!lojaFarol.medalhaEstudanteAtivo,
+            cardPremium: !!lojaFarol.cardPremium,
+            certificadoDigital: !!lojaFarol.certificadoDigital
+        }, { merge: true });
+    }
+    catch(erro){
+        console.log("Erro ao salvar loja", erro);
+    }
+}
+
+async function carregarLojaFirebase(){
+    if(!auth.currentUser){
+        return;
+    }
+    try{
+        const doc = await db.collection("usuarios")
+        .doc(auth.currentUser.uid)
+        .get();
+
+        if(doc.exists){
+            const dados = doc.data() || {};
+            if(dados.lojaFarol){
+                lojaFarol = {
+                    ...lojaFarol,
+                    ...dados.lojaFarol,
+                    comprados: {
+                        ...(lojaFarol.comprados || {}),
+                        ...((dados.lojaFarol && dados.lojaFarol.comprados) || {})
+                    }
+                };
+            }
+            if(typeof dados.saldoPontosLuz === "number"){
+                saldoPontosLuz = dados.saldoPontosLuz;
+            }
+            salvarDados();
+            atualizarDashboard();
+            atualizarLojaFarol();
+        }
+    }
+    catch(erro){
+        console.log("Erro ao carregar loja", erro);
+    }
+}
+
+// Compatibilidade para bordas arredondadas no canvas
+if(!CanvasRenderingContext2D.prototype.roundRect){
+    CanvasRenderingContext2D.prototype.roundRect = function(x, y, width, height, radius){
+        this.beginPath();
+        this.moveTo(x + radius, y);
+        this.lineTo(x + width - radius, y);
+        this.quadraticCurveTo(x + width, y, x + width, y + radius);
+        this.lineTo(x + width, y + height - radius);
+        this.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+        this.lineTo(x + radius, y + height);
+        this.quadraticCurveTo(x, y + height, x, y + height - radius);
+        this.lineTo(x, y + radius);
+        this.quadraticCurveTo(x, y, x + radius, y);
+        this.closePath();
+    };
+}
+
+// ==========================
+// DUELO DO SABER - DESAFIO POR CONVITE
+// ==========================
+
+const assuntosDueloInformatica = [
+    { chave: "hardware", nome: "💻 Hardware" },
+    { chave: "software", nome: "⚙️ Software" },
+    { chave: "arquivos", nome: "🗂 Arquivos, Pastas e Backup" },
+    { chave: "office", nome: "📊 Office e LibreOffice" },
+    { chave: "internet", nome: "🌐 Internet" },
+    { chave: "redes", nome: "🖧 Redes de Computadores" },
+    { chave: "seguranca", nome: "🔐 Segurança da Informação" }
+];
+
+function prepararSelectDuelo(){
+
+    const select = document.getElementById("dueloAssunto");
+
+    if(!select){
+        return;
+    }
+
+    select.innerHTML = assuntosDueloInformatica.map(item => `
+        <option value="${item.chave}">${item.nome}</option>
+    `).join("");
+}
+
+function gerarCodigoDuelo(){
+    return "FAROL-" + Math.floor(1000 + Math.random() * 9000);
+}
+
+async function criarDuelo(){
+
+    if(!auth.currentUser){
+        mostrarToast("Faça login para criar um duelo.");
+        return;
+    }
+
+    const assunto = document.getElementById("dueloAssunto").value;
+    const quantidade = Number(document.getElementById("dueloQuantidade").value) || 5;
+    const banco = bancoQuestoes[assunto] || [];
+
+    if(banco.length === 0){
+        mostrarToast("Banco de questões não encontrado para este assunto.");
+        return;
+    }
+
+    const indices = banco.map((_, i) => i)
+        .sort(() => Math.random() - 0.5)
+        .slice(0, Math.min(quantidade, banco.length));
+
+    const codigo = gerarCodigoDuelo();
+    const nomeAssunto = assuntosDueloInformatica.find(a => a.chave === assunto)?.nome || assunto;
+
+    await db.collection("duelos")
+        .doc(codigo)
+        .set({
+            codigo: codigo,
+            disciplina: "informatica",
+            assunto: assunto,
+            nomeAssunto: nomeAssunto,
+            quantidade: indices.length,
+            indices: indices,
+            criadoPor: auth.currentUser.uid,
+            criadoPorNome: usuarioForum || "Aluno",
+            criadoEm: Date.now(),
+            uids: [auth.currentUser.uid],
+            participantes: {
+                [auth.currentUser.uid]: {
+                    nome: usuarioForum || "Aluno",
+                    acertos: 0,
+                    erros: 0,
+                    finalizado: false,
+                    entrouEm: Date.now()
+                }
+            }
+        });
+
+    document.getElementById("codigoDueloCriado").innerHTML = `
+        <div class="duelo-codigo">
+            Sala criada: <strong>${codigo}</strong><br><br>
+            Envie esse código para o colega entrar no desafio.
+        </div>
+    `;
+
+    mostrarToast("Duelo criado com sucesso!");
+    carregarMeusDuelos();
+}
+
+async function entrarDueloPorCodigo(){
+
+    const campo = document.getElementById("codigoDueloEntrada");
+    const codigo = (campo.value || "").trim().toUpperCase();
+
+    if(!codigo){
+        mostrarToast("Digite o código do duelo.");
+        return;
+    }
+
+    await entrarDuelo(codigo);
+}
+
+async function entrarDuelo(codigo){
+
+    if(!auth.currentUser){
+        mostrarToast("Faça login para entrar no duelo.");
+        return;
+    }
+
+    const ref = db.collection("duelos").doc(codigo);
+    const doc = await ref.get();
+
+    if(!doc.exists){
+        mostrarToast("Duelo não encontrado.");
+        return;
+    }
+
+    const dados = doc.data();
+
+    await ref.set({
+        uids: firebase.firestore.FieldValue.arrayUnion(auth.currentUser.uid),
+        participantes: {
+            ...(dados.participantes || {}),
+            [auth.currentUser.uid]: {
+                nome: usuarioForum || "Aluno",
+                acertos: 0,
+                erros: 0,
+                finalizado: false,
+                entrouEm: Date.now()
+            }
+        }
+    }, { merge: true });
+
+    dueloAtual = {
+        codigo: codigo,
+        ...dados
+    };
+
+    dueloQuestoes = (dados.indices || []).map(i => bancoQuestoes[dados.assunto][i]).filter(Boolean);
+    dueloIndiceAtual = 0;
+    dueloAcertos = 0;
+    dueloErros = 0;
+    dueloRespostas = [];
+
+    mostrarQuestaoDuelo();
+}
+
+function mostrarQuestaoDuelo(){
+
+    if(!dueloAtual || dueloQuestoes.length === 0){
+        mostrarToast("Duelo sem questões.");
+        return;
+    }
+
+    const q = dueloQuestoes[dueloIndiceAtual];
+    const percentual = Math.round(((dueloIndiceAtual + 1) / dueloQuestoes.length) * 100);
+
+    mostrarTela("resolverQuestao");
+
+    document.getElementById("areaQuestao").innerHTML = `
+        <div class="card">
+            <h2>⚔️ Duelo do Saber</h2>
+            <p><strong>Código:</strong> ${dueloAtual.codigo}</p>
+            <p><strong>Assunto:</strong> ${dueloAtual.nomeAssunto || dueloAtual.assunto}</p>
+            <br>
+            <h3>Questão ${dueloIndiceAtual + 1} de ${dueloQuestoes.length}</h3>
+            <br>
+            <progress value="${dueloIndiceAtual + 1}" max="${dueloQuestoes.length}" style="width:100%;height:25px;"></progress>
+            <br><br>
+            <strong>${percentual}% concluído</strong>
+            <br><br>
+
+            ${q.afirmacoes ? `
+                <div class="card texto-base">
+                    ${q.afirmacoes.map(item => `<p>${item}</p>`).join("")}
+                </div>
+                <br>
+            ` : ""}
+
+            <p class="pergunta">${q.pergunta}</p>
+            <br>
+            ${q.alternativas.map((alt, index) => `
+                <label class="alternativa">
+                    <input type="radio" name="respostaDuelo" value="${index}">
+                    ${alt}
+                </label>
+            `).join("")}
+            <br>
+            <button onclick="corrigirDuelo()">Responder</button>
+            <div id="feedback"></div>
+        </div>
+    `;
+}
+
+function corrigirDuelo(){
+
+    const resposta = document.querySelector('input[name="respostaDuelo"]:checked');
+
+    if(!resposta){
+        mostrarToast("Selecione uma alternativa.");
+        return;
+    }
+
+    const q = dueloQuestoes[dueloIndiceAtual];
+    const acertou = Number(resposta.value) === q.correta;
+
+    if(acertou){
+        dueloAcertos++;
+    }
+    else{
+        dueloErros++;
+    }
+
+    dueloRespostas.push({
+        pergunta: q.pergunta,
+        resposta: Number(resposta.value),
+        correta: q.correta,
+        acertou: acertou
+    });
+
+    document.querySelectorAll('input[name="respostaDuelo"]').forEach(opcao => opcao.disabled = true);
+
+    document.getElementById("feedback").innerHTML = `
+        <div class="${acertou ? "feedback-acerto" : "feedback-erro"}">
+            <h3>${acertou ? "✅ Correta!" : "❌ Incorreta!"}</h3>
+            <br>
+            <button onclick="proximaQuestaoDuelo()">
+                ${dueloIndiceAtual + 1 >= dueloQuestoes.length ? "Finalizar Duelo" : "Próxima"}
+            </button>
+        </div>
+    `;
+}
+
+function proximaQuestaoDuelo(){
+
+    dueloIndiceAtual++;
+
+    if(dueloIndiceAtual >= dueloQuestoes.length){
+        finalizarDuelo();
+        return;
+    }
+
+    mostrarQuestaoDuelo();
+}
+
+async function finalizarDuelo(){
+
+    if(!dueloAtual || !auth.currentUser){
+        return;
+    }
+
+    const ref = db.collection("duelos").doc(dueloAtual.codigo);
+    const doc = await ref.get();
+    const dados = doc.data() || {};
+    const participantes = dados.participantes || {};
+
+    participantes[auth.currentUser.uid] = {
+        ...(participantes[auth.currentUser.uid] || {}),
+        nome: usuarioForum || "Aluno",
+        acertos: dueloAcertos,
+        erros: dueloErros,
+        respostas: dueloRespostas,
+        finalizado: true,
+        finalizadoEm: Date.now()
+    };
+
+    await ref.update({
+        participantes: participantes
+    });
+
+    adicionarPontosLuz(
+        20,
+        "Participação em duelo",
+        "duelo-participacao:" + dueloAtual.codigo + ":" + auth.currentUser.uid
+    );
+
+    mostrarResultadoDuelo(dueloAtual.codigo);
+}
+
+async function mostrarResultadoDuelo(codigo){
+
+    const doc = await db.collection("duelos").doc(codigo).get();
+
+    if(!doc.exists){
+        mostrarToast("Duelo não encontrado.");
+        return;
+    }
+
+    const dados = doc.data();
+    const participantes = Object.values(dados.participantes || {});
+    const finalizados = participantes.filter(p => p.finalizado);
+
+    let vencedorTexto = "Aguardando o outro participante finalizar.";
+
+    if(finalizados.length >= 2){
+        const ordenado = [...finalizados].sort((a,b) => (b.acertos - a.acertos));
+        const vencedor = ordenado[0];
+        vencedorTexto = `🏆 Vencedor: ${vencedor.nome} com ${vencedor.acertos} acertos`;
+    }
+
+    mostrarTela("resolverQuestao");
+
+    document.getElementById("areaQuestao").innerHTML = `
+        <div class="card">
+            <h2>🏆 Resultado do Duelo</h2>
+            <br>
+            <p><strong>Código:</strong> ${codigo}</p>
+            <p><strong>Assunto:</strong> ${dados.nomeAssunto || dados.assunto}</p>
+            <br>
+            ${participantes.map(p => `
+                <div class="linha-ranking">
+                    <strong>${p.nome}</strong>
+                    <span>${p.finalizado ? `${p.acertos} acertos` : "aguardando"}</span>
+                </div>
+            `).join("")}
+            <br>
+            <h3>${vencedorTexto}</h3>
+            <br>
+            <button onclick="mostrarTela('duelos')">⚔️ Voltar aos Duelos</button>
+        </div>
+    `;
+}
+
+async function carregarMeusDuelos(){
+
+    const area = document.getElementById("meusDuelos");
+
+    if(!area || !auth.currentUser){
+        return;
+    }
+
+    try{
+        const snapshot = await db.collection("duelos")
+            .where("uids", "array-contains", auth.currentUser.uid)
+            .limit(10)
+            .get();
+
+        let html = "";
+
+        snapshot.forEach(doc => {
+            const dados = doc.data();
+            html += `
+                <div class="duelo-item">
+                    <strong>${dados.codigo}</strong><br>
+                    ${dados.nomeAssunto || dados.assunto}<br><br>
+                    <button onclick="mostrarResultadoDuelo('${dados.codigo}')">
+                        Ver resultado
+                    </button>
+                </div>
+            `;
+        });
+
+        area.innerHTML = html || "Você ainda não entrou em nenhum duelo.";
+    }
+    catch(erro){
+        area.innerHTML = "Não foi possível carregar seus duelos.";
+        console.log("Erro nos duelos", erro);
+    }
+}
