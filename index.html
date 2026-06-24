@@ -23,6 +23,8 @@
             Iluminando o caminho para sua aprovação.
         </p>
 
+        <div id="conviteDueloLogin" class="convite-duelo-login" style="display:none;"></div>
+
         <br>
 
         <input
@@ -148,7 +150,7 @@
         📝 Simulados
     </button>
 
-    <button onclick="mostrarTela('duelos'); carregarMeusDuelos();">
+    <button onclick="mostrarTela('duelos'); prepararSelectDuelo(); carregarMeusDuelos();">
         ⚔️ Duelos
     </button>
 
@@ -208,6 +210,32 @@
         <br>
 
         <div class="grid-assuntos">
+
+            <button
+                class="btn-assunto"
+                onclick="abrirAssunto('fundamentosEnsinoHistoria')">
+
+                📚 Fundamentos do Ensino de História
+
+            </button>
+
+
+            <button
+                class="btn-assunto"
+                onclick="abrirAssunto('cienciaHistoricaOficioHistoriador')">
+
+                🔎 Ciência Histórica e Ofício do Historiador
+
+            </button>
+
+
+            <button
+                class="btn-assunto"
+                onclick="abrirAssunto('formacaoSocialCulturalBrasileira')">
+
+                🧬 Formação Social e Cultural Brasileira
+
+            </button>
 
             <button
                 class="btn-assunto"
@@ -1467,68 +1495,111 @@ Li e revisei o mapa mental.
 
 <section id="duelos" class="tela">
 
-    <div class="card">
+    <div class="card duelo-card-principal">
 
         <h2>⚔️ Duelo do Saber</h2>
 
         <p>
-            Crie um desafio escolhendo a disciplina e o assunto. Depois envie o código para outro aluno responder as mesmas questões.
+            Crie um desafio em etapas: primeiro escolha a disciplina, depois o tópico, selecione a quantidade de questões e envie o código para outro aluno.
         </p>
 
         <br>
 
-        <h3>⚔️ Criar Desafio</h3>
+        <div class="duelo-layout">
 
-        <br>
+            <div class="duelo-bloco">
 
-        <label>
-            Disciplina e assunto:
-        </label>
+                <h3>🆕 Criar novo duelo</h3>
 
-        <select id="dueloAssunto"></select>
+                <br>
 
-        <br><br>
+                <div class="duelo-etapa">
+                    <strong>1. Escolha a disciplina</strong>
+                    <p class="duelo-ajuda">Toque em uma disciplina para ver apenas os tópicos dela.</p>
+                    <div id="dueloDisciplinas" class="duelo-grid-disciplinas">
+                        Carregando disciplinas...
+                    </div>
+                </div>
 
-        <label>
-            Quantidade de questões:
-        </label>
+                <div class="duelo-etapa">
+                    <strong>2. Escolha o tópico</strong>
+                    <p id="dueloDisciplinaSelecionadaTexto" class="duelo-ajuda">Nenhuma disciplina selecionada.</p>
 
-        <select id="dueloQuantidade">
-            <option value="5">5 questões</option>
-            <option value="10">10 questões</option>
-            <option value="15">15 questões</option>
-        </select>
+                    <input
+                        id="buscaTopicoDuelo"
+                        type="text"
+                        placeholder="🔎 Buscar tópico..."
+                        oninput="renderizarTopicosDuelo()"
+                        class="input-duelo-busca">
 
-        <br><br>
+                    <div id="dueloTopicos" class="duelo-grid-topicos">
+                        Escolha uma disciplina para listar os tópicos.
+                    </div>
+                </div>
 
-        <button onclick="criarDuelo()">
-            ⚔️ Criar Duelo
-        </button>
+                <div class="duelo-etapa">
+                    <strong>3. Quantidade de questões</strong>
 
-        <div id="codigoDueloCriado"></div>
+                    <select id="dueloQuantidade" onchange="atualizarResumoDuelo()">
+                        <option value="5">5 questões</option>
+                        <option value="10">10 questões</option>
+                        <option value="15">15 questões</option>
+                    </select>
+                </div>
 
-        <br><br>
+                <div id="dueloResumoCriacao" class="duelo-resumo-criacao">
+                    Escolha uma disciplina e um tópico para criar o duelo.
+                </div>
 
-        <h3>🔑 Entrar com Código</h3>
+                <button onclick="criarDuelo()">
+                    ⚔️ Criar Duelo
+                </button>
 
-        <br>
+                <div id="codigoDueloCriado"></div>
 
-        <input
-            id="codigoDueloEntrada"
-            type="text"
-            placeholder="Exemplo: FAROL-1234">
+            </div>
 
-        <br><br>
+            <div class="duelo-bloco">
 
-        <button onclick="entrarDueloPorCodigo()">
-            🚀 Entrar no Duelo
-        </button>
+                <h3>🔑 Entrar com Código</h3>
+
+                <p class="duelo-ajuda">
+                    Recebeu um código de outro aluno? Digite abaixo para entrar no desafio.
+                </p>
+
+                <div id="dueloConviteRecebido" class="duelo-convite-recebido" style="display:none;"></div>
+
+                <input
+                    id="codigoDueloEntrada"
+                    type="text"
+                    placeholder="Exemplo: FAROL-1234">
+
+                <br><br>
+
+                <button onclick="entrarDueloPorCodigo()">
+                    🚀 Entrar no Duelo
+                </button>
+
+                <br><br>
+
+                <h3>📌 Dica</h3>
+                <p class="duelo-ajuda">
+                    Depois de criar o duelo, você pode copiar o código ou compartilhar o convite diretamente pelo WhatsApp e outros aplicativos.
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
 
     <div class="card">
 
         <h3>🏆 Meus Duelos</h3>
+
+        <p class="duelo-ajuda">
+            Aqui aparecem os duelos que você criou ou entrou. Você pode continuar, ver resultado, compartilhar o código ou ocultar da lista.
+        </p>
 
         <br>
 
@@ -1626,6 +1697,12 @@ Li e revisei o mapa mental.
 <script src="dados/planejamento.js"></script>
 
 <script src="dados/avaliacao.js"></script>
+
+<script src="dados/fundamentosEnsinoHistoria.js"></script>
+
+<script src="dados/cienciaHistoricaOficioHistoriador.js"></script>
+
+<script src="dados/formacaoSocialCulturalBrasileira.js"></script>
 
 <script src="dados/povosPreColombianos.js"></script>
 
@@ -1744,6 +1821,12 @@ Li e revisei o mapa mental.
 <script src="dados/teorias/ortografiaTeoria.js"></script>
 <script src="dados/teorias/acentuacaoTeoria.js"></script>
 <script src="dados/teorias/redacaoOficialTeoria.js"></script>
+
+<script src="dados/teorias/fundamentosEnsinoHistoriaTeoria.js"></script>
+
+<script src="dados/teorias/cienciaHistoricaOficioHistoriadorTeoria.js"></script>
+
+<script src="dados/teorias/formacaoSocialCulturalBrasileiraTeoria.js"></script>
 
 <script src="dados/teorias/povosPreColombianosTeoria.js"></script>
 
