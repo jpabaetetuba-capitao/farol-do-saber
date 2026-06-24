@@ -2738,6 +2738,27 @@ function iniciarSimuladoDidatica(){
 
 }
 
+
+function iniciarSimuladoHistoria(){
+
+    const historia = [
+
+        ...fundamentosEnsinoHistoria,
+        ...cienciaHistoricaOficioHistoriador,
+        ...povosPreColombianos,
+        ...formacaoSocialCulturalBrasileira,
+        ...estadosModernosApropriacaoAmerica
+
+    ];
+
+    iniciarSimuladoPersonalizado(
+        historia,
+        30,
+        "historia"
+    );
+
+}
+
 function iniciarSimuladoApoioEscolar(){
 
     const apoioEscolar = [
