@@ -1,1147 +1,1171 @@
 const cienciaHistoricaOficioHistoriador = [
-
 {
-pergunta: "A ciência histórica pode ser compreendida como a área do conhecimento que:",
+pergunta: "Um pesquisador encontra cartas de trabalhadores do início do século XX e decide estudá-las junto a jornais, leis e registros de fábrica. Essa decisão expressa o ofício do historiador porque:",
 
 alternativas: [
-    "reproduz o passado exatamente como ele ocorreu, dispensando interpretação e seleção de fontes.",
-    "estuda as ações humanas no tempo por meio de fontes, métodos e interpretações fundamentadas.",
-    "limita-se à memorização de datas políticas, nomes de governantes e batalhas militares.",
-    "substitui documentos por opiniões pessoais, pois o passado não pode ser investigado cientificamente.",
-    "elabora narrativas definitivas, sem possibilidade de revisão diante de novas evidências."
+    "cruza fontes variadas para construir uma interpretação fundamentada sobre sujeitos e contexto.",
+    "busca reproduzir o passado exatamente, pois a soma de documentos elimina qualquer interpretação.",
+    "dispensa hipóteses de pesquisa, já que os documentos revelam sozinhos o sentido dos fatos.",
+    "privilegia apenas fontes oficiais, pois cartas pessoais não possuem valor para a ciência histórica.",
+    "substitui análise documental por opinião pessoal, tornando o estudo independente de evidências.",
+],
+
+correta: 0,
+
+feedbackAcerto: `
+🎉 Excelente! A alternativa correta mostra método histórico baseado em cruzamento e crítica de fontes.
+`,
+
+feedbackErro: `
+❌ Atenção! A alternativa correta mostra método histórico baseado em cruzamento e crítica de fontes.
+`,
+
+dicaBanca: `
+Historiador não copia o passado: formula problemas, critica fontes e interpreta evidências.
+`
+},
+
+{
+pergunta: "Em uma discussão acadêmica, dois historiadores chegam a interpretações diferentes sobre o mesmo processo, embora usem documentos e métodos reconhecidos. Essa situação indica que a História:",
+
+alternativas: [
+    "não possui rigor científico, pois divergência entre pesquisadores prova ausência de método.",
+    "é conhecimento interpretativo e controlado por evidências, podendo ser revisto e debatido.",
+    "deve aceitar apenas a interpretação mais antiga, considerada mais próxima dos fatos originais.",
+    "alcança uma verdade única quando elimina perguntas e consulta todos os documentos disponíveis.",
+    "é mera opinião subjetiva, sem possibilidade de comparação entre argumentos e fontes.",
 ],
 
 correta: 1,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que a História investiga sociedades humanas no tempo. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A resposta correta reconhece interpretação, debate e controle por evidências.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que a História investiga sociedades humanas no tempo. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A resposta correta reconhece interpretação, debate e controle por evidências.
 `,
 
 dicaBanca: `
-História é ciência humana interpretativa, mas baseada em método e fontes.
+Divergência historiográfica não significa relativismo sem critério.
 `
 },
 
 {
-pergunta: "Em relação ao objeto de estudo da História, é correto afirmar que ele abrange:",
+pergunta: "Ao analisar um decreto imperial, uma historiadora pergunta quem o produziu, para quem se dirigia, que interesses expressava e o que silenciava. Esse procedimento corresponde à:",
 
 alternativas: [
-    "apenas os grandes acontecimentos políticos registrados por documentos oficiais do Estado.",
-    "somente fatos antigos, pois acontecimentos recentes pertencem exclusivamente ao jornalismo.",
-    "as sociedades humanas em suas dimensões políticas, econômicas, sociais, culturais e cotidianas.",
-    "unicamente biografias de líderes, governantes e militares reconhecidos pela tradição nacional.",
-    "exclusivamente processos europeus, já que eles explicam de forma completa todas as sociedades."
+    "memorização documental, tomando o texto legal como registro neutro e completo do passado ignorando conflitos, temporalidades e relações de poder.",
+    "validação automática, pois documentos oficiais dispensam comparação com outros vestígios.",
+    "crítica da fonte, considerando autoria, finalidade, contexto, linguagem e limites do documento.",
+    "imaginação histórica livre, usada quando faltam informações seguras sobre um acontecimento.",
+    "descrição cronológica simples, suficiente para explicar relações sociais e disputas políticas.",
 ],
 
 correta: 2,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que o objeto da História envolve a experiência humana em diferentes tempos e espaços. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A alternativa correta identifica a crítica interna e externa da fonte.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que o objeto da História envolve a experiência humana em diferentes tempos e espaços. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A alternativa correta identifica a crítica interna e externa da fonte.
 `,
 
 dicaBanca: `
-Objeto da História = sociedades humanas em múltiplas dimensões.
+Fonte oficial também tem interesses, linguagem e silêncios.
 `
 },
 
 {
-pergunta: "O ofício do historiador exige, entre outros procedimentos:",
+pergunta: "Um estudante afirma que fonte histórica é somente documento escrito antigo. A resposta mais adequada do professor é explicar que fontes históricas são:",
 
 alternativas: [
-    "selecionar fontes, formular problemas, contextualizar documentos e construir interpretações fundamentadas.",
-    "aceitar documentos antigos como verdades automáticas, sem questionar autoria ou finalidade.",
-    "rejeitar fontes visuais e orais, pois apenas documentos escritos possuem valor histórico.",
-    "evitar hipóteses de pesquisa, já que o historiador deve apenas copiar informações encontradas.",
-    "produzir narrativas neutras, sem escolhas metodológicas ou diálogo com outras interpretações."
+    "registros escritos do Estado, pois apenas arquivos oficiais permitem investigação científica segura.",
+    "materiais antigos preservados em museus, desde que não tenham relação com grupos populares.",
+    "lembranças pessoais sem necessidade de crítica, já que toda memória equivale à verdade histórica.",
+    "vestígios diversos da experiência humana, como textos, imagens, objetos, relatos, músicas e lugares.",
+    "textos historiográficos recentes, pois documentos do passado não podem ser analisados diretamente.",
+],
+
+correta: 3,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta amplia o conceito de fonte sem abandonar o método histórico.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta amplia o conceito de fonte sem abandonar o método histórico.
+`,
+
+dicaBanca: `
+A noção atual de fonte é ampla, mas sempre exige crítica.
+`
+},
+
+{
+pergunta: "Ao estudar um quilombo, uma pesquisadora combina vestígios arqueológicos, documentos coloniais e tradições orais. Essa estratégia é adequada porque:",
+
+alternativas: [
+    "mistura fontes incompatíveis, pois História científica só pode trabalhar com documentos escritos.",
+    "elimina a necessidade de crítica, já que múltiplas fontes sempre confirmam a mesma narrativa.",
+    "privilegia relatos orais como verdades absolutas, superiores a qualquer registro documental.",
+    "transforma a pesquisa em memória comunitária, sem relação com problemas historiográficos ignorando conflitos, temporalidades e relações de poder.",
+    "amplia evidências e permite confrontar registros produzidos por diferentes sujeitos e posições sociais.",
+],
+
+correta: 4,
+
+feedbackAcerto: `
+🎉 Excelente! A alternativa correta reconhece a importância do cruzamento de diferentes vestígios.
+`,
+
+feedbackErro: `
+❌ Atenção! A alternativa correta reconhece a importância do cruzamento de diferentes vestígios.
+`,
+
+dicaBanca: `
+Fontes diversas fortalecem a análise quando são criticadas e comparadas.
+`
+},
+
+{
+pergunta: "Um livro afirma que a História é a narrativa dos vencedores, mas a historiografia contemporânea busca investigar grupos silenciados. Essa mudança se relaciona principalmente:",
+
+alternativas: [
+    "à ampliação dos objetos, sujeitos e fontes utilizados pela pesquisa histórica.",
+    "à rejeição completa de documentos oficiais, que deixam de ter qualquer valor para o historiador.",
+    "à substituição da pesquisa por narrativas ficcionais, voltadas apenas à valorização simbólica.",
+    "ao abandono da crítica documental, pois grupos populares não produziram registros analisáveis.",
+    "à volta da história política tradicional, centrada exclusivamente em líderes e instituições.",
 ],
 
 correta: 0,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que o historiador pesquisa, critica fontes e interpreta evidências. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A resposta correta situa a renovação historiográfica na ampliação do campo histórico.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que o historiador pesquisa, critica fontes e interpreta evidências. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A resposta correta situa a renovação historiográfica na ampliação do campo histórico.
 `,
 
 dicaBanca: `
-Ofício do historiador = problema, fonte, crítica e interpretação.
+Ampliar sujeitos não significa abandonar método; significa diversificar fontes e perguntas.
 `
 },
 
 {
-pergunta: "Uma fonte histórica deve ser analisada criticamente porque:",
+pergunta: "Em uma pesquisa sobre epidemias, o historiador não se limita a dados médicos e investiga medo, políticas públicas, imprensa, desigualdade social e práticas religiosas. Isso revela que o objeto da História:",
 
 alternativas: [
-    "todo documento antigo foi produzido por pessoas neutras e, por isso, não precisa de contextualização.",
-    "as fontes revelam informações, mas também expressam contexto, finalidade, interesses e limites.",
-    "apenas fontes oficiais apresentam valor científico para compreender sociedades do passado.",
-    "as imagens e objetos não podem ser interrogados, pois não possuem linguagem histórica própria.",
-    "o historiador deve escolher uma única fonte e evitar compará-la com outros vestígios."
+    "fica restrito aos fatos políticos oficiais, pois questões de saúde pertencem apenas à Medicina.",
+    "abrange experiências humanas em dimensões sociais, culturais, políticas, econômicas e cotidianas.",
+    "deve evitar sentimentos coletivos, já que emoções não podem ser analisadas historicamente.",
+    "exclui o cotidiano, concentrando-se em governos, guerras e tratados internacionais como critério central de interpretação histórica.",
+    "dispensa fontes variadas quando o tema possui estatísticas e registros administrativos.",
 ],
 
 correta: 1,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que toda fonte tem contexto, autoria, finalidade e limites. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A resposta correta reconhece a amplitude do objeto histórico e suas dimensões.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que toda fonte tem contexto, autoria, finalidade e limites. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A resposta correta reconhece a amplitude do objeto histórico e suas dimensões.
 `,
 
 dicaBanca: `
-Fonte histórica não fala sozinha: exige crítica e contexto.
+Objeto da História é amplo: sociedades humanas no tempo, em múltiplas dimensões.
 `
 },
 
 {
-pergunta: "A crítica das fontes históricas envolve a análise de:",
+pergunta: "Uma banca apresenta a frase: 'o historiador reconstrói o passado tal como aconteceu'. O problema dessa afirmação está em ignorar que o conhecimento histórico:",
 
 alternativas: [
-    "autoria, contexto, finalidade, público, linguagem, confiabilidade e relação com outras evidências.",
-    "preferências pessoais do pesquisador, independentemente da documentação disponível.",
-    "datas isoladas, sem necessidade de compreender os sujeitos envolvidos no documento.",
-    "conteúdo literal da fonte, dispensando a investigação de silêncios e intencionalidades.",
-    "interpretações prontas, para impedir divergências entre pesquisadores e estudantes."
+    "depende somente da imaginação do pesquisador, pois o passado não deixou vestígios confiáveis.",
+    "reproduz integralmente os fatos quando utiliza documentos oficiais e linguagem neutra.",
+    "é reconstrução interpretativa baseada em vestígios, perguntas, métodos e limites documentais.",
+    "deve evitar perguntas de pesquisa, pois elas distorcem o significado original dos documentos.",
+    "alcança certeza absoluta quando reúne muitas fontes sobre o mesmo acontecimento.",
+],
+
+correta: 2,
+
+feedbackAcerto: `
+🎉 Excelente! A alternativa correta supera a ideia de reprodução exata do passado.
+`,
+
+feedbackErro: `
+❌ Atenção! A alternativa correta supera a ideia de reprodução exata do passado.
+`,
+
+dicaBanca: `
+História não é espelho do passado, mas interpretação fundamentada sobre vestígios.
+`
+},
+
+{
+pergunta: "Ao comparar diferentes narrativas sobre a Revolução Francesa, uma professora pede que os alunos identifiquem conceitos usados, fontes citadas e grupos destacados. A atividade trabalha:",
+
+alternativas: [
+    "a impossibilidade de estudar o passado, pois narrativas diferentes anulam qualquer conhecimento.",
+    "a superioridade automática da versão mais longa, já que textos extensos são mais científicos.",
+    "a necessidade de escolher a narrativa mais famosa e tratá-la como síntese final do processo.",
+    "a percepção de que toda narrativa histórica organiza evidências a partir de questões e escolhas.",
+    "a substituição da História por literatura, pois toda narrativa é livre de comprovação documental.",
+],
+
+correta: 3,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta entende a narrativa histórica como construção fundamentada.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta entende a narrativa histórica como construção fundamentada.
+`,
+
+dicaBanca: `
+Narrativa histórica tem seleção, organização e argumento; não é invenção solta.
+`
+},
+
+{
+pergunta: "Um historiador decide estudar o cotidiano de mulheres pobres em uma cidade colonial. A escolha do tema demonstra que a História:",
+
+alternativas: [
+    "perde rigor ao estudar grupos sem grande presença em documentos oficiais do Estado sem problematizar evidências e diferentes experiências.",
+    "abandona acontecimentos relevantes quando deixa de priorizar reis, presidentes e militares.",
+    "deve trabalhar apenas com biografias individuais, sem analisar relações sociais e estruturas.",
+    "nega a importância da política, pois cotidiano e poder são campos sem conexão histórica.",
+    "não se limita a elites políticas, podendo investigar experiências sociais antes pouco visíveis.",
+],
+
+correta: 4,
+
+feedbackAcerto: `
+🎉 Excelente! A alternativa correta reconhece a ampliação dos sujeitos históricos pesquisados.
+`,
+
+feedbackErro: `
+❌ Atenção! A alternativa correta reconhece a ampliação dos sujeitos históricos pesquisados.
+`,
+
+dicaBanca: `
+História do cotidiano e dos grupos subalternos também exige método e fontes.
+`
+},
+
+{
+pergunta: "Ao consultar um processo judicial, uma pesquisadora nota que o documento registra falas populares filtradas por escrivães e autoridades. A leitura crítica deve considerar que:",
+
+alternativas: [
+    "a fonte informa sobre conflitos, mas também carrega mediações, hierarquias e linguagem institucional.",
+    "o processo judicial é neutro, pois a escrita oficial elimina interesses e desigualdades sociais.",
+    "as falas registradas devem ser descartadas, já que a mediação impede qualquer uso histórico.",
+    "o conteúdo literal basta para reconstruir o acontecimento sem comparar outras evidências ignorando conflitos, temporalidades e relações de poder.",
+    "documentos jurídicos só servem para estudar leis, não experiências sociais ou relações de poder.",
 ],
 
 correta: 0,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que a crítica documental verifica origem, intenção e consistência da evidência. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A resposta correta compreende documento como vestígio e construção institucional.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que a crítica documental verifica origem, intenção e consistência da evidência. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A resposta correta compreende documento como vestígio e construção institucional.
 `,
 
 dicaBanca: `
-Crítica de fonte = autoria, contexto, finalidade, limites e cruzamento.
+Fonte mediada não é inútil; exige leitura cuidadosa de sua produção.
 `
 },
 
 {
-pergunta: "O conceito de tempo histórico diferencia-se da simples cronologia porque:",
+pergunta: "Em uma pesquisa, a pergunta inicial muda depois que novas fontes são encontradas. Isso é normal no trabalho historiográfico porque:",
 
 alternativas: [
-    "elimina completamente o uso de datas, sequências e periodizações no estudo da História.",
-    "considera mudanças, permanências, rupturas, continuidades e diferentes ritmos dos processos sociais.",
-    "trata todos os acontecimentos como episódios isolados, sem relação com contextos mais amplos.",
-    "define que todas as sociedades seguem necessariamente a mesma linha evolutiva e progressiva.",
-    "impede a comparação entre passado e presente, pois cada época deve ser estudada sem conexão."
+    "o historiador não precisa de método, adaptando conclusões conforme sua preferência pessoal.",
+    "problemas de pesquisa podem ser reformulados diante de evidências, lacunas e novas interpretações.",
+    "as fontes devem confirmar a hipótese inicial, evitando mudanças que prejudiquem a objetividade.",
+    "a pesquisa histórica não admite revisão, pois o plano inicial define toda verdade do estudo.",
+    "documentos novos tornam inúteis as interpretações anteriores, que devem ser apagadas sem problematizar evidências e diferentes experiências.",
 ],
 
 correta: 1,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que o tempo histórico envolve mudanças, permanências e durações. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A alternativa correta reconhece a relação dinâmica entre problema, fonte e interpretação.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que o tempo histórico envolve mudanças, permanências e durações. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A alternativa correta reconhece a relação dinâmica entre problema, fonte e interpretação.
 `,
 
 dicaBanca: `
-Tempo histórico vai além de datas; envolve ritmos e processos.
+Pesquisa histórica é rigorosa, mas não é engessada.
 `
 },
 
 {
-pergunta: "A historiografia pode ser definida como:",
+pergunta: "Ao estudar memória de uma comunidade, o historiador entrevista moradores e compara seus relatos com fotografias, mapas e atas municipais. Esse procedimento é adequado porque:",
 
 alternativas: [
-    "o conjunto de datas oficiais que devem ser memorizadas para compreender o passado nacional.",
-    "a produção escrita da História e o estudo das interpretações construídas pelos historiadores.",
-    "o arquivo completo de documentos antigos, sem relação com debates ou métodos de pesquisa.",
-    "a narrativa única e definitiva sobre cada acontecimento, aceita por todos os pesquisadores.",
-    "a substituição da História científica por memórias familiares e relatos subjetivos."
+    "aceita lembranças como verdades integrais, pois testemunhas sempre relatam o passado sem seleção.",
+    "considera memórias inúteis, já que apenas documentos escritos permitem conhecimento histórico.",
+    "trata a memória como fonte importante, mas submetida a contexto, comparação e crítica.",
+    "substitui pesquisa por homenagem comunitária, impedindo qualquer análise de conflitos sociais.",
+    "dispensa outras fontes, pois entrevista oral é suficiente para reconstruir qualquer processo.",
+],
+
+correta: 2,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta articula história oral, crítica e comparação documental.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta articula história oral, crítica e comparação documental.
+`,
+
+dicaBanca: `
+Memória é fonte, mas memória também seleciona, esquece e reorganiza sentidos.
+`
+},
+
+{
+pergunta: "Em uma prova, a alternativa afirma que o historiador deve ser neutro e não escolher temas, fontes ou perguntas. Essa concepção é inadequada porque:",
+
+alternativas: [
+    "o historiador deve escolher qualquer versão conveniente, sem prestar contas às fontes utilizadas.",
+    "o conhecimento histórico depende apenas de simpatias políticas, religiosas ou pessoais do pesquisador.",
+    "a neutralidade absoluta é alcançada quando se evita interpretar documentos e processos sociais.",
+    "a pesquisa exige escolhas explícitas e controladas por método, crítica documental e debate acadêmico.",
+    "as escolhas de pesquisa tornam impossível produzir conhecimento confiável sobre o passado.",
+],
+
+correta: 3,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta diferencia objetividade crítica de neutralidade absoluta.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta diferencia objetividade crítica de neutralidade absoluta.
+`,
+
+dicaBanca: `
+O problema não é escolher; é esconder escolhas ou não fundamentá-las.
+`
+},
+
+{
+pergunta: "Uma pesquisa sobre festas populares analisa músicas, vestimentas, trajetos, imprensa e disputas entre grupos locais. O tema é histórico porque:",
+
+alternativas: [
+    "festas pertencem ao folclore e não revelam processos sociais relevantes para a História sem problematizar evidências e diferentes experiências.",
+    "somente eventos políticos formais permitem explicar mudanças e permanências de uma sociedade.",
+    "manifestações culturais devem ser descritas sem contexto para preservar sua pureza tradicional.",
+    "a cultura popular não deixa fontes confiáveis, exigindo apenas observação sem interpretação.",
+    "práticas culturais expressam relações sociais, identidades, conflitos e transformações no tempo.",
+],
+
+correta: 4,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta reconhece cultura popular como objeto legítimo de investigação histórica.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta reconhece cultura popular como objeto legítimo de investigação histórica.
+`,
+
+dicaBanca: `
+Cultura também é campo histórico: tem sujeitos, disputas e temporalidade.
+`
+},
+
+{
+pergunta: "Ao analisar uma pintura de batalha, o historiador não pergunta apenas o que ela mostra, mas quem encomendou a obra e que imagem do conflito ela constrói. Esse cuidado ocorre porque a imagem:",
+
+alternativas: [
+    "representa o passado a partir de escolhas estéticas, políticas e simbólicas de seu contexto.",
+    "substitui documentos escritos por possuir maior fidelidade visual ao acontecimento retratado.",
+    "é neutra quando apresenta uniformes, armas e cenário com aparência de época histórica.",
+    "não pode ser usada como fonte, pois arte pertence ao campo da estética e não da História.",
+    "dispensa comparação com outros vestígios, já que a cena pintada confirma o acontecimento.",
+],
+
+correta: 0,
+
+feedbackAcerto: `
+🎉 Excelente! A alternativa correta aplica crítica histórica a obras visuais.
+`,
+
+feedbackErro: `
+❌ Atenção! A alternativa correta aplica crítica histórica a obras visuais.
+`,
+
+dicaBanca: `
+Imagem histórica é representação, não janela transparente para o passado.
+`
+},
+
+{
+pergunta: "Um historiador do tempo presente utiliza jornais, entrevistas, redes sociais e documentos governamentais. A pesquisa é possível porque a História:",
+
+alternativas: [
+    "só estuda períodos muito antigos, pois a proximidade temporal impede qualquer análise confiável.",
+    "pode investigar processos recentes, desde que empregue método, crítica e contextualização das fontes.",
+    "deve deixar acontecimentos recentes para o jornalismo, sem diálogo com as ciências humanas ignorando conflitos, temporalidades e relações de poder.",
+    "abandona critérios quando trabalha com fontes digitais, que não permitem verificação histórica.",
+    "trata o presente como repetição do passado, dispensando análise das especificidades atuais.",
 ],
 
 correta: 1,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que historiografia é a escrita da História e suas interpretações. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A resposta correta reconhece a legitimidade metodológica da História do tempo presente.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que historiografia é a escrita da História e suas interpretações. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A resposta correta reconhece a legitimidade metodológica da História do tempo presente.
 `,
 
 dicaBanca: `
-Historiografia = produção e debate sobre a escrita da História.
+História do tempo presente existe, mas exige cuidados próprios com fontes e memória.
 `
 },
 
 {
-pergunta: "A Escola dos Annales contribuiu para a renovação historiográfica ao valorizar:",
+pergunta: "Ao investigar um silêncio documental, a historiadora pergunta por que certos grupos quase não aparecem nos registros oficiais. Essa pergunta revela que:",
 
 alternativas: [
-    "a história exclusivamente diplomática, centrada em tratados, governantes e batalhas oficiais.",
-    "a longa duração, a interdisciplinaridade, as mentalidades e a ampliação dos objetos históricos.",
-    "a eliminação das fontes não escritas, consideradas inadequadas para o estudo do passado.",
-    "a defesa de uma cronologia puramente factual, sem análise de estruturas sociais e culturais.",
-    "a ideia de que somente eventos políticos rápidos possuem relevância histórica."
+    "o silêncio documental impede qualquer pesquisa, pois não há meios de formular hipóteses históricas.",
+    "grupos sem registro escrito não participaram de processos históricos relevantes em sua época.",
+    "ausências nas fontes também podem indicar relações de poder, exclusão e controle da escrita.",
+    "documentos oficiais são completos, e ausências devem ser interpretadas como inexistência social.",
+    "o historiador deve ignorar lacunas, usando apenas informações explícitas no documento.",
+],
+
+correta: 2,
+
+feedbackAcerto: `
+🎉 Excelente! A alternativa correta interpreta ausências como problema histórico e não como simples vazio.
+`,
+
+feedbackErro: `
+❌ Atenção! A alternativa correta interpreta ausências como problema histórico e não como simples vazio.
+`,
+
+dicaBanca: `
+Silêncios documentais são parte da crítica da fonte.
+`
+},
+
+{
+pergunta: "Uma turma lê um texto historiográfico e identifica notas, fontes, conceitos e diálogo com outros autores. Esses elementos indicam que o texto:",
+
+alternativas: [
+    "apresenta opinião literária, pois todo texto narrativo sobre o passado dispensa comprovação.",
+    "é registro direto do passado, já que historiadores apenas transcrevem documentos originais.",
+    "deve ser aceito sem crítica, pois a presença de notas garante verdade definitiva.",
+    "constrói uma interpretação argumentada, apoiada em evidências e debate historiográfico.",
+    "tem valor apenas informativo, sem escolhas de método, recorte ou problemática.",
+],
+
+correta: 3,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta reconhece argumento, fonte e diálogo acadêmico.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta reconhece argumento, fonte e diálogo acadêmico.
+`,
+
+dicaBanca: `
+Texto historiográfico não é fonte primária neutra; é interpretação fundamentada.
+`
+},
+
+{
+pergunta: "Em uma pesquisa sobre trabalhadores, o historiador seleciona documentos produzidos por patrões e sindicatos. A comparação é importante porque:",
+
+alternativas: [
+    "fontes patronais são sempre falsas, enquanto registros sindicais expressam a verdade completa.",
+    "documentos de lados opostos se anulam, impedindo qualquer conclusão histórica fundamentada.",
+    "a escolha de fontes diferentes elimina a necessidade de contexto e análise crítica sem considerar fontes, contexto e sujeitos sociais.",
+    "registros sindicais não devem ser usados, pois somente empresas produziram documentos confiáveis.",
+    "fontes de posições sociais diferentes ajudam a perceber conflitos, interesses e versões do processo.",
+],
+
+correta: 4,
+
+feedbackAcerto: `
+🎉 Excelente! A alternativa correta mostra a utilidade do confronto entre fontes socialmente situadas.
+`,
+
+feedbackErro: `
+❌ Atenção! A alternativa correta mostra a utilidade do confronto entre fontes socialmente situadas.
+`,
+
+dicaBanca: `
+Comparar não é somar verdades; é analisar posições, interesses e contextos.
+`
+},
+
+{
+pergunta: "Uma questão afirma que a História se tornou ciência quando passou a usar método crítico. Essa afirmação deve ser entendida como referência à necessidade de:",
+
+alternativas: [
+    "investigar evidências com procedimentos de crítica, comparação, contextualização e argumentação.",
+    "imitar as ciências naturais, buscando leis universais capazes de prever todos os acontecimentos.",
+    "eliminar interpretação, pois ciência histórica deve apenas acumular fatos em ordem cronológica.",
+    "tratar documentos oficiais como provas absolutas, dispensando hipóteses e problemas de pesquisa.",
+    "substituir fontes por teorias gerais, já que o método torna desnecessário consultar documentos.",
+],
+
+correta: 0,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta associa ciência histórica ao método crítico e interpretativo.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta associa ciência histórica ao método crítico e interpretativo.
+`,
+
+dicaBanca: `
+Método histórico não é fórmula exata; é rigor na análise de evidências humanas.
+`
+},
+
+{
+pergunta: "Ao estudar uma lei abolicionista, a historiadora investiga debates parlamentares, jornais, ações de escravizados e interesses econômicos. Essa abordagem evita:",
+
+alternativas: [
+    "relacionar política e sociedade, pois leis devem ser estudadas isoladas de movimentos sociais.",
+    "explicar o processo apenas por decisão legal, sem considerar conflitos e pressões sociais.",
+    "analisar fontes diversas, já que a lei em si contém todos os sentidos do processo histórico.",
+    "investigar sujeitos subalternos, pois a abolição foi definida somente por autoridades estatais.",
+    "usar documentos oficiais, pois leis não possuem valor histórico para compreender mudanças sociais.",
 ],
 
 correta: 1,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que os Annales ampliaram temas, fontes e temporalidades. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A alternativa correta amplia a análise da lei para o processo histórico que a cerca.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que os Annales ampliaram temas, fontes e temporalidades. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A alternativa correta amplia a análise da lei para o processo histórico que a cerca.
 `,
 
 dicaBanca: `
-Annales = longa duração, interdisciplinaridade e novos objetos.
+Cuidado com explicações legalistas: processos históricos envolvem conflitos e sujeitos sociais.
 `
 },
 
 {
-pergunta: "O marxismo, como corrente historiográfica, tende a destacar:",
+pergunta: "Um historiador identifica que uma fonte colonial chama povos indígenas de 'bárbaros'. A leitura crítica exige perceber que essa expressão:",
 
 alternativas: [
-    "a ação isolada dos heróis nacionais, sem relação com economia, trabalho e classes sociais.",
-    "as estruturas econômicas, os conflitos sociais, o trabalho e as relações entre classes.",
-    "a impossibilidade de analisar sociedades a partir de contradições materiais e políticas.",
-    "o abandono das fontes históricas, pois a teoria dispensaria evidências documentais.",
-    "a neutralidade absoluta do Estado em todos os processos históricos conhecidos."
+    "comprova objetivamente o estágio cultural indígena, pois documentos da época são neutros.",
+    "deve ser repetida sem análise, para preservar a fidelidade ao vocabulário original da fonte.",
+    "revela a visão do colonizador e deve ser contextualizada como linguagem de dominação.",
+    "impede qualquer uso do documento, já que termos preconceituosos anulam seu valor histórico.",
+    "representa consenso entre todos os grupos do período, incluindo os povos descritos na fonte.",
+],
+
+correta: 2,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta interpreta linguagem como parte das relações de poder do documento.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta interpreta linguagem como parte das relações de poder do documento.
+`,
+
+dicaBanca: `
+Vocabulário da fonte também é objeto de análise histórica.
+`
+},
+
+{
+pergunta: "Ao pesquisar um tema, o historiador delimita tempo, espaço e problema. Essa delimitação é necessária porque:",
+
+alternativas: [
+    "reduz a objetividade do estudo, pois todo recorte impede alcançar a totalidade do passado.",
+    "serve apenas para atender normas formais, sem impacto sobre fontes e interpretação.",
+    "garante que a conclusão já esteja definida antes da investigação documental.",
+    "organiza o recorte da pesquisa e torna possível analisar fontes de modo coerente.",
+    "substitui a análise de fontes por limites artificiais criados pelo pesquisador.",
+],
+
+correta: 3,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta reconhece a importância metodológica do recorte.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta reconhece a importância metodológica do recorte.
+`,
+
+dicaBanca: `
+Recorte não é defeito; é condição de pesquisa histórica séria.
+`
+},
+
+{
+pergunta: "Uma professora explica que documentos não 'falam sozinhos'. Essa frase significa que:",
+
+alternativas: [
+    "as fontes não possuem valor, pois somente interpretações atuais produzem conhecimento.",
+    "o historiador pode atribuir qualquer sentido ao documento, sem limites ou comprovação.",
+    "documentos escritos dependem de leitura, mas imagens e objetos não exigem análise.",
+    "a fonte correta revela automaticamente a verdade quando é preservada em arquivo público.",
+    "as fontes precisam ser interrogadas por perguntas históricas e analisadas em contexto.",
+],
+
+correta: 4,
+
+feedbackAcerto: `
+🎉 Excelente! A alternativa correta traduz a ideia de problematização documental.
+`,
+
+feedbackErro: `
+❌ Atenção! A alternativa correta traduz a ideia de problematização documental.
+`,
+
+dicaBanca: `
+A pergunta do pesquisador orienta a leitura da fonte, mas não autoriza invenção.
+`
+},
+
+{
+pergunta: "Em uma pesquisa sobre imigração, o historiador usa listas de passageiros, cartas, fotografias e relatos de descendentes. A articulação dessas fontes permite:",
+
+alternativas: [
+    "analisar deslocamentos, expectativas, redes familiares e experiências de adaptação social.",
+    "substituir a interpretação por acúmulo documental, já que muitos documentos garantem resposta final.",
+    "priorizar memórias familiares, dispensando registros administrativos e contexto econômico.",
+    "evitar perguntas sobre identidade, trabalho e preconceito, pois imigração é tema apenas demográfico.",
+    "tratar fotografias como registros completos, sem considerar pose, enquadramento e circulação.",
+],
+
+correta: 0,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta mostra como diferentes fontes ampliam a explicação histórica.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta mostra como diferentes fontes ampliam a explicação histórica.
+`,
+
+dicaBanca: `
+Tema migratório exige fontes variadas e análise de experiência social.
+`
+},
+
+{
+pergunta: "Ao revisar seu texto, uma historiadora explicita o conceito de classe social usado na análise. Esse cuidado é importante porque:",
+
+alternativas: [
+    "conceitos devem ser evitados, pois a História séria trabalha apenas com fatos brutos e datas.",
+    "conceitos orientam a interpretação e precisam ser definidos para evitar usos vagos ou contraditórios.",
+    "definições teóricas tornam a pesquisa menos objetiva, afastando o estudo dos documentos.",
+    "todo conceito possui sentido único e universal, dispensando explicitação pelo pesquisador.",
+    "a teoria substitui as fontes, permitindo conclusões mesmo sem evidências históricas sem problematizar evidências e diferentes experiências.",
 ],
 
 correta: 1,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que o marxismo enfatiza classes, trabalho e relações de produção. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A resposta correta reconhece a função analítica dos conceitos historiográficos.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que o marxismo enfatiza classes, trabalho e relações de produção. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A resposta correta reconhece a função analítica dos conceitos historiográficos.
 `,
 
 dicaBanca: `
-Marxismo histórico valoriza estrutura econômica, trabalho e conflitos sociais.
+Conceitos ajudam a pensar fontes; não são enfeite nem substituem evidências.
 `
 },
 
 {
-pergunta: "A Nova História ampliou o campo de investigação histórica ao enfatizar:",
+pergunta: "Um documento produzido por uma autoridade colonial descreve revoltas populares como desordem. Ao analisá-lo, o historiador deve considerar:",
 
 alternativas: [
-    "apenas os documentos oficiais produzidos por governos, tribunais e autoridades militares.",
-    "cultura, cotidiano, representações, mentalidades, novos sujeitos e diversidade de fontes.",
-    "somente a sucessão cronológica de reis, presidentes e comandantes militares europeus.",
-    "a negação da interpretação, defendendo que o documento apresenta sentido único e transparente.",
-    "a exclusão de temas como memória, identidade, gênero, alimentação e práticas culturais."
+    "a descrição oficial como verdade completa, pois autoridades registravam fatos sem interesse político.",
+    "a impossibilidade de estudar revoltas populares quando as fontes foram produzidas por elites.",
+    "a posição social do autor e os interesses envolvidos na forma de nomear o conflito.",
+    "a necessidade de eliminar o documento, já que linguagem de poder impede qualquer informação útil.",
+    "a neutralidade do vocabulário jurídico, que não interfere na interpretação histórica.",
+],
+
+correta: 2,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta percebe autoria, linguagem e interesse na fonte.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta percebe autoria, linguagem e interesse na fonte.
+`,
+
+dicaBanca: `
+Nomear um conflito também é disputar seu sentido histórico.
+`
+},
+
+{
+pergunta: "Em uma conferência, afirma-se que a História possui relação com o presente. Essa relação não significa julgar o passado apenas pelos valores atuais, mas:",
+
+alternativas: [
+    "usar o presente como medida única para condenar ou absolver todos os sujeitos históricos.",
+    "abandonar problemas contemporâneos, pois eles sempre contaminam a pesquisa histórica.",
+    "provar que o passado se repete exatamente, dispensando análise das diferenças de contexto.",
+    "formular perguntas atuais com cuidado contextual, evitando anacronismos e simplificações.",
+    "transformar a História em opinião política imediata, sem método ou documentação.",
+],
+
+correta: 3,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta diferencia diálogo com o presente de julgamento anacrônico.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta diferencia diálogo com o presente de julgamento anacrônico.
+`,
+
+dicaBanca: `
+Presente orienta perguntas, mas contexto histórico evita anacronismo.
+`
+},
+
+{
+pergunta: "Uma pesquisa compara mapas coloniais e mapas atuais para discutir fronteiras. O historiador deve lembrar que mapas:",
+
+alternativas: [
+    "são retratos neutros do território, pois a cartografia elimina escolhas e disputas políticas.",
+    "servem apenas para localizar cidades, sem valor para compreender dominação territorial.",
+    "dispensam autoria e contexto, pois escala e legenda bastam para interpretar qualquer mapa.",
+    "mostram fronteiras naturais imutáveis, independentes de guerras, tratados e ocupações sociais.",
+    "são representações produzidas em contextos de poder, técnica, interesse e visão de mundo.",
+],
+
+correta: 4,
+
+feedbackAcerto: `
+🎉 Excelente! A alternativa correta reconhece mapas como construções históricas.
+`,
+
+feedbackErro: `
+❌ Atenção! A alternativa correta reconhece mapas como construções históricas.
+`,
+
+dicaBanca: `
+Mapa é fonte histórica e representação política do espaço.
+`
+},
+
+{
+pergunta: "Ao estudar a História da África, um pesquisador usa relatos árabes, arqueologia, tradições orais e fontes europeias. Essa combinação é necessária porque:",
+
+alternativas: [
+    "diferentes vestígios permitem superar lacunas e visões parciais sobre sociedades africanas.",
+    "fontes orais são suficientes, pois dispensam confronto com outros registros e contextos.",
+    "fontes europeias devem ser aceitas integralmente, por apresentarem escrita mais sistemática.",
+    "a arqueologia substitui relatos, já que objetos eliminam interpretações culturais.",
+    "a ausência de arquivos estatais impede qualquer conhecimento sobre a África pré-colonial.",
+],
+
+correta: 0,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta valoriza fontes variadas para lidar com lacunas e perspectivas.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta valoriza fontes variadas para lidar com lacunas e perspectivas.
+`,
+
+dicaBanca: `
+Sociedades com tradição oral também têm história e podem ser estudadas com método.
+`
+},
+
+{
+pergunta: "Uma questão pede para distinguir fato histórico de interpretação histórica. A distinção correta é:",
+
+alternativas: [
+    "fatos dispensam análise, enquanto interpretações são opiniões sem relação com documentos.",
+    "fatos são acontecimentos investigáveis; interpretações explicam seus sentidos com base em evidências.",
+    "fatos não existem, pois toda narrativa histórica é invenção completa do pesquisador ignorando conflitos, temporalidades e relações de poder.",
+    "interpretações verdadeiras eliminam a necessidade de fatos, fontes e comparação documental.",
+    "fatos históricos são apenas datas políticas, e interpretações pertencem à literatura.",
 ],
 
 correta: 1,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que a Nova História ampliou fontes, sujeitos e temas. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A resposta correta articula acontecimento, evidência e explicação histórica.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que a Nova História ampliou fontes, sujeitos e temas. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A resposta correta articula acontecimento, evidência e explicação histórica.
 `,
 
 dicaBanca: `
-Nova História = cultura, cotidiano, representações e novos sujeitos.
+Nem positivismo ingênuo, nem relativismo total: fato e interpretação se relacionam.
 `
 },
 
 {
-pergunta: "A relação entre memória e História deve ser compreendida da seguinte forma:",
+pergunta: "Em uma investigação, o historiador percebe que os documentos disponíveis foram preservados por uma instituição interessada em certa memória. Isso exige analisar:",
 
 alternativas: [
-    "memória e História são sinônimos, pois ambas produzem conhecimento crítico com o mesmo método.",
-    "a memória é fonte e objeto de estudo, mas a História exige crítica, método e contextualização.",
-    "a História deve aceitar toda memória coletiva como verdade definitiva e incontestável.",
-    "a memória não possui qualquer importância para o historiador, pois é sempre falsa e inútil.",
-    "a História deve eliminar lembranças sociais para trabalhar apenas com estatísticas oficiais."
+    "apenas o conteúdo escrito, pois a trajetória do documento não interfere em seu valor histórico.",
+    "a intenção do arquivo como garantia de verdade, já que instituições preservam documentos neutros.",
+    "as condições de produção, seleção, preservação e acesso aos acervos documentais.",
+    "o documento isoladamente, sem perguntar por perdas, silêncios ou escolhas de conservação.",
+    "a impossibilidade de usar acervos institucionais, por serem sempre manipulados e inúteis.",
+],
+
+correta: 2,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta amplia a crítica para a trajetória dos documentos.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta amplia a crítica para a trajetória dos documentos.
+`,
+
+dicaBanca: `
+Arquivo também tem história: seleção, preservação e silêncio são questões relevantes.
+`
+},
+
+{
+pergunta: "Ao analisar charges políticas, uma turma identifica ironia, personagens, contexto de circulação e crítica social. Esse procedimento é adequado porque charges:",
+
+alternativas: [
+    "são textos humorísticos sem valor histórico, pois exagero e ironia impedem análise científica.",
+    "registram fatos de modo neutro, já que a imagem dispensa explicações sobre contexto.",
+    "devem ser interpretadas literalmente, evitando considerar símbolos e recursos de linguagem.",
+    "são fontes visuais que expressam opiniões, disputas e representações de seu tempo.",
+    "servem apenas para tornar a aula atraente, sem relação com conhecimento histórico.",
+],
+
+correta: 3,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta reconhece charge como fonte de opinião, representação e conflito.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta reconhece charge como fonte de opinião, representação e conflito.
+`,
+
+dicaBanca: `
+Charges têm linguagem própria; análise literal costuma levar ao erro.
+`
+},
+
+{
+pergunta: "Um historiador revisa uma conclusão porque encontrou novas evidências e leituras. Essa revisão indica que o conhecimento histórico:",
+
+alternativas: [
+    "não é confiável, pois qualquer revisão demonstra que interpretações anteriores eram inúteis.",
+    "muda conforme preferência pessoal, sem necessidade de novas fontes ou debate acadêmico.",
+    "deve permanecer fixo, porque alterar conclusões ameaça a autoridade da História sem considerar fontes, contexto e sujeitos sociais.",
+    "depende apenas da quantidade de documentos, sem relação com perguntas e conceitos usados.",
+    "é provisório no sentido científico, aberto a revisão fundamentada e não a mudança arbitrária.",
+],
+
+correta: 4,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta entende a historicidade do próprio conhecimento histórico.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta entende a historicidade do próprio conhecimento histórico.
+`,
+
+dicaBanca: `
+Revisável não significa frágil; significa científico e fundamentado.
+`
+},
+
+{
+pergunta: "Em uma análise sobre imprensa, a historiadora observa editoriais, anúncios, notícias e público-alvo. Esse cuidado ocorre porque o jornal:",
+
+alternativas: [
+    "é fonte produzida em ambiente social, econômico e político, com escolhas e interesses editoriais.",
+    "é registro neutro do cotidiano, pois a função informativa impede posicionamentos e silêncios.",
+    "deve ser lido apenas por suas datas, sem considerar linguagem, seção ou circulação social.",
+    "perde valor histórico quando contém opinião, já que fontes úteis são sempre imparciais.",
+    "serve somente para confirmar cronologias, sem revelar disputas culturais ou políticas como critério central de interpretação histórica.",
+],
+
+correta: 0,
+
+feedbackAcerto: `
+🎉 Excelente! A alternativa correta aplica crítica histórica à imprensa.
+`,
+
+feedbackErro: `
+❌ Atenção! A alternativa correta aplica crítica histórica à imprensa.
+`,
+
+dicaBanca: `
+Jornal é fonte rica, mas não é espelho neutro da realidade.
+`
+},
+
+{
+pergunta: "Ao estudar monumentos públicos, o historiador pergunta quem foi homenageado, quem ficou ausente e em que contexto a obra foi erguida. Essa análise mostra que monumentos:",
+
+alternativas: [
+    "guardam memória consensual, aceita igualmente por todos os grupos sociais de uma comunidade.",
+    "participam da construção de memórias públicas e podem revelar disputas por reconhecimento.",
+    "são objetos artísticos sem relação com História, política, identidade ou conflitos sociais.",
+    "preservam o passado exatamente, dispensando perguntas sobre seleção e silenciamento.",
+    "devem ser estudados apenas pela data de inauguração e pelo material usado na construção.",
 ],
 
 correta: 1,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que memória e História se relacionam, mas não são idênticas. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A resposta correta relaciona monumento, memória pública e disputas sociais.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que memória e História se relacionam, mas não são idênticas. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A resposta correta relaciona monumento, memória pública e disputas sociais.
 `,
 
 dicaBanca: `
-Memória é importante, mas não equivale automaticamente à História.
+Monumento é fonte de memória e poder, não apenas decoração urbana.
 `
 },
 
 {
-pergunta: "A ideia de neutralidade absoluta na escrita da História é criticada porque:",
+pergunta: "Uma pesquisadora usa estatísticas de censo para estudar população escravizada, mas também consulta relatos e inventários. A combinação é importante porque:",
 
 alternativas: [
-    "o historiador escolhe temas, fontes e métodos, mas deve manter rigor e fundamentação em evidências.",
-    "toda interpretação histórica é igualmente válida, mesmo quando não possui fontes ou coerência.",
-    "a ausência de neutralidade autoriza manipular documentos para defender qualquer conclusão.",
-    "a História não precisa de método, pois depende apenas da visão pessoal de quem escreve.",
-    "os documentos oficiais já apresentam o passado de modo completo, sem necessidade de análise."
+    "estatísticas são sempre suficientes, pois quantificar elimina necessidade de interpretação histórica.",
+    "relatos e inventários distorcem os dados, devendo ser abandonados para preservar objetividade.",
+    "números indicam dimensões gerais, enquanto outras fontes ajudam a compreender experiências e relações sociais.",
+    "a História social deve evitar números, pois eles pertencem apenas à Matemática e à Economia sem problematizar evidências e diferentes experiências.",
+    "a combinação de fontes enfraquece conclusões, pois cada documento aponta para aspecto diferente.",
+],
+
+correta: 2,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta integra quantificação e análise social.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta integra quantificação e análise social.
+`,
+
+dicaBanca: `
+Dados quantitativos também precisam de interpretação e podem dialogar com fontes qualitativas.
+`
+},
+
+{
+pergunta: "Em uma aula, o professor afirma que o passado não muda, mas as perguntas feitas sobre ele podem mudar. A frase quer dizer que:",
+
+alternativas: [
+    "os acontecimentos são inventados novamente por cada geração, sem vínculo com evidências.",
+    "as perguntas atuais tornam impossível qualquer compreensão correta de sociedades passadas.",
+    "o historiador deve repetir sempre as mesmas interpretações para preservar a tradição acadêmica.",
+    "novos problemas, fontes e contextos sociais podem produzir interpretações históricas renovadas.",
+    "o passado deve ser julgado apenas por valores presentes, pois contexto não interfere na análise.",
+],
+
+correta: 3,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta explica a renovação historiográfica sem negar evidências.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta explica a renovação historiográfica sem negar evidências.
+`,
+
+dicaBanca: `
+Acontecimento passado não se altera; a interpretação pode ser renovada com método.
+`
+},
+
+{
+pergunta: "Uma questão apresenta o trabalho do historiador como pesquisa em arquivos, formulação de hipóteses e escrita argumentativa. A etapa da escrita é importante porque:",
+
+alternativas: [
+    "transforma documentos em ficção, pois escrever sobre o passado dispensa compromisso com evidências.",
+    "é atividade secundária, já que a pesquisa termina quando o historiador localiza os documentos.",
+    "deve apagar escolhas do pesquisador, criando aparência de transcrição neutra do passado.",
+    "substitui a análise das fontes, pois o estilo do texto é suficiente para convencer leitores.",
+    "organiza a interpretação em narrativa coerente, sustentada por fontes, conceitos e explicações.",
+],
+
+correta: 4,
+
+feedbackAcerto: `
+🎉 Excelente! A resposta correta reconhece a escrita historiográfica como construção argumentativa.
+`,
+
+feedbackErro: `
+❌ Atenção! A resposta correta reconhece a escrita historiográfica como construção argumentativa.
+`,
+
+dicaBanca: `
+Escrever História é parte do método: narrativa, argumento e evidência se articulam.
+`
+},
+
+{
+pergunta: "Ao estudar um objeto de museu, a historiadora pergunta sobre uso, material, circulação e significado social. Essa análise é possível porque objetos:",
+
+alternativas: [
+    "são fontes materiais capazes de revelar práticas, técnicas, valores e relações sociais.",
+    "não possuem linguagem histórica, servindo apenas para ilustrar informações retiradas de textos.",
+    "são fontes inferiores, úteis somente quando faltam documentos escritos oficiais.",
+    "falam por si mesmos, dispensando comparação, contexto e perguntas do pesquisador.",
+    "interessam apenas à arqueologia, sem conexão com a pesquisa histórica escolar ou acadêmica.",
 ],
 
 correta: 0,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que o historiador interpreta, mas deve fundamentar sua interpretação. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A resposta correta reconhece objetos como vestígios de práticas sociais.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que o historiador interpreta, mas deve fundamentar sua interpretação. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A resposta correta reconhece objetos como vestígios de práticas sociais.
 `,
 
 dicaBanca: `
-Nem neutralidade absoluta, nem opinião livre: interpretação com rigor.
+Cultura material é fonte histórica quando analisada em contexto.
 `
 },
 
 {
-pergunta: "A narrativa histórica diferencia-se de uma ficção livre porque:",
+pergunta: "Ao analisar uma biografia, o historiador evita explicar toda uma época pela vontade de um indivíduo. O cuidado metodológico adequado é:",
 
 alternativas: [
-    "é construída com base em fontes, método, crítica e argumentação verificável pela comunidade acadêmica.",
-    "pode inventar fatos sempre que houver lacunas nos documentos estudados pelo pesquisador.",
-    "dispensa compromisso com evidências, desde que apresente uma linguagem clara e envolvente.",
-    "elimina escolhas interpretativas, reproduzindo o passado exatamente como ele aconteceu.",
-    "não precisa dialogar com outros estudos, pois cada historiador trabalha isoladamente."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que a escrita da História depende de evidências e argumentação. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que a escrita da História depende de evidências e argumentação. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Narrativa histórica é interpretação controlada por fontes e método.
-`
-},
-
-{
-pergunta: "Quando o professor trabalha com fontes em sala de aula, ele aproxima o aluno do pensamento histórico porque:",
-
-alternativas: [
-    "permite que o estudante interprete evidências, contextualize documentos e compreenda como o conhecimento é produzido.",
-    "substitui o estudo dos conteúdos por observação livre de imagens, sem necessidade de orientação docente.",
-    "garante que qualquer interpretação dos alunos seja correta, mesmo sem relação com a fonte apresentada.",
-    "transforma a aula em memorização visual, evitando debates sobre contexto e intencionalidade.",
-    "elimina a necessidade de conceitos históricos, pois a fonte isolada explica todo o processo estudado."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que o uso de fontes favorece pensamento histórico quando é problematizado. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que o uso de fontes favorece pensamento histórico quando é problematizado. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Fonte em sala deve desenvolver investigação e interpretação orientada.
-`
-},
-
-{
-pergunta: "A ampliação do conceito de sujeito histórico permitiu reconhecer que:",
-
-alternativas: [
-    "apenas governantes, generais e grandes líderes possuem capacidade de interferir nos processos sociais.",
-    "trabalhadores, mulheres, indígenas, negros, movimentos sociais e sujeitos comuns também participam da História.",
-    "instituições e grupos populares devem ser excluídos da narrativa histórica por falta de documentos oficiais.",
-    "a História contemporânea abandonou o estudo de conflitos sociais e relações de poder.",
-    "a ação coletiva é irrelevante, pois as mudanças históricas sempre dependem de indivíduos excepcionais."
+    "eliminar o estudo de indivíduos, pois biografias não ajudam a compreender processos históricos.",
+    "relacionar trajetória pessoal a contexto, redes sociais, instituições e limites históricos.",
+    "atribuir todos os acontecimentos à genialidade ou à maldade de personagens centrais.",
+    "separar vida individual de estruturas sociais, já que contexto reduz a liberdade do sujeito.",
+    "tomar memórias autobiográficas como verdades completas, dispensando crítica de fonte.",
 ],
 
 correta: 1,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que diferentes grupos sociais produzem experiências históricas. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A resposta correta equilibra ação individual e condições históricas.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que diferentes grupos sociais produzem experiências históricas. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A resposta correta equilibra ação individual e condições históricas.
 `,
 
 dicaBanca: `
-Sujeito histórico não se limita a grandes líderes.
+Biografia histórica exige contexto, não culto ao personagem.
 `
 },
 
 {
-pergunta: "Uma periodização histórica deve ser entendida como:",
+pergunta: "Em uma pesquisa sobre educação, a historiadora usa leis, cadernos escolares, fotografias, memórias docentes e relatórios administrativos. Essa variedade de fontes permite:",
 
 alternativas: [
-    "uma divisão natural e universal do tempo, válida igualmente para todas as sociedades e culturas.",
-    "uma construção interpretativa que organiza o estudo, mas não esgota a diversidade das experiências históricas.",
-    "uma sequência fixa de progresso obrigatório, pela qual todos os povos passam da mesma forma.",
-    "um recurso sem utilidade para a História, pois impede qualquer compreensão dos processos temporais.",
-    "uma lista de datas que dispensa análise de mudanças, permanências e rupturas."
+    "reduzir a escola às leis educacionais, pois a norma revela exatamente o cotidiano das salas.",
+    "descartar memórias docentes, já que experiências pessoais não participam da história escolar.",
+    "articular normas oficiais, práticas escolares e experiências vividas por diferentes sujeitos.",
+    "tratar fotografias como documentos neutros, sem analisar enquadramento e finalidade.",
+    "evitar contradições, pois fontes variadas confundem a compreensão do processo histórico.",
 ],
 
-correta: 1,
+correta: 2,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que periodização é recurso interpretativo, não divisão natural do tempo. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A resposta correta relaciona diferentes dimensões da vida escolar.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que periodização é recurso interpretativo, não divisão natural do tempo. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A resposta correta relaciona diferentes dimensões da vida escolar.
 `,
 
 dicaBanca: `
-Periodização ajuda a organizar, mas é construção histórica.
+História da educação não se limita à legislação; práticas e experiências também importam.
 `
 },
 
 {
-pergunta: "Ao estudar um jornal produzido durante determinado conflito político, o historiador deve:",
+pergunta: "Ao estudar um acontecimento político, a historiadora diferencia causa imediata e causas estruturais. Essa distinção é necessária porque:",
 
 alternativas: [
-    "considerar a notícia como descrição neutra dos fatos, pois jornais sempre registram a verdade objetiva.",
-    "analisar linha editorial, autoria, contexto, público, linguagem e interesses envolvidos na publicação.",
-    "usar apenas o título da matéria, pois o restante do documento não interfere na interpretação histórica.",
-    "rejeitar automaticamente o jornal, já que nenhum periódico pode servir como fonte histórica.",
-    "evitar comparação com outros documentos para preservar a coerência de uma única versão."
+    "toda explicação histórica deve escolher uma causa única, para evitar complexidade desnecessária.",
+    "causas imediatas sempre são mais importantes do que condições sociais e econômicas anteriores.",
+    "processos longos impedem analisar ações individuais e decisões políticas específicas.",
+    "eventos resultam de múltiplas temporalidades, envolvendo episódios, processos e condições de longa duração.",
+    "temporalidades diferentes pertencem à Filosofia, não ao método do historiador sem considerar fontes, contexto e sujeitos sociais.",
 ],
 
-correta: 1,
+correta: 3,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que fontes jornalísticas revelam contextos e interesses. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A resposta correta reconhece causalidade histórica complexa e temporalidades diversas.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que fontes jornalísticas revelam contextos e interesses. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A resposta correta reconhece causalidade histórica complexa e temporalidades diversas.
 `,
 
 dicaBanca: `
-Jornal é fonte, mas precisa de crítica e contextualização.
+Bancas gostam de múltipla causalidade e diferentes durações.
 `
 },
 
 {
-pergunta: "A História oral é importante para a pesquisa histórica porque:",
+pergunta: "Uma questão pergunta por que o historiador precisa indicar fontes utilizadas. A resposta adequada é que essa indicação:",
 
 alternativas: [
-    "permite acessar memórias, experiências e perspectivas de sujeitos muitas vezes ausentes dos arquivos escritos.",
-    "substitui completamente documentos escritos, tornando desnecessária a crítica das evidências.",
-    "produz relatos sempre objetivos, sem esquecimentos, seleções ou reconstruções de memória.",
-    "deve ser descartada por não pertencer ao campo das fontes históricas reconhecidas.",
-    "serve apenas para confirmar narrativas oficiais já consolidadas pela documentação estatal."
+    "serve apenas para cumprir formalidade, sem relação com confiabilidade ou diálogo científico.",
+    "substitui a análise, pois citar muitos documentos garante automaticamente uma conclusão correta.",
+    "impede novas interpretações, já que a fonte indicada fixa definitivamente o sentido histórico.",
+    "é desnecessária em ciências humanas, pois narrativas históricas dependem de estilo pessoal ignorando conflitos, temporalidades e relações de poder.",
+    "permite verificar a base documental, acompanhar o argumento e inserir o estudo em debate acadêmico.",
 ],
 
-correta: 0,
+correta: 4,
 
 feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que relatos orais podem revelar experiências e memórias sociais. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
+🎉 Excelente! A alternativa correta liga referência, evidência e debate historiográfico.
 `,
 
 feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que relatos orais podem revelar experiências e memórias sociais. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
+❌ Atenção! A alternativa correta liga referência, evidência e debate historiográfico.
 `,
 
 dicaBanca: `
-História oral amplia sujeitos e fontes, mas também exige crítica.
-`
-},
-
-{
-pergunta: "O anacronismo ocorre quando o pesquisador:",
-
-alternativas: [
-    "analisa um acontecimento em seu contexto, observando valores e condições próprias da época.",
-    "aplica valores, conceitos ou expectativas de uma época a outra sem a devida contextualização.",
-    "compara processos históricos diferentes, respeitando suas semelhanças e especificidades.",
-    "utiliza fontes variadas para compreender mudanças e permanências de longa duração.",
-    "reconhece limites documentais e evita conclusões sem apoio em evidências suficientes."
-],
-
-correta: 1,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que anacronismo é erro de contextualização temporal. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que anacronismo é erro de contextualização temporal. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Anacronismo = julgar/interpretar o passado com categorias deslocadas sem contexto.
-`
-},
-
-{
-pergunta: "A interdisciplinaridade contribui para a ciência histórica porque:",
-
-alternativas: [
-    "permite diálogo com Geografia, Sociologia, Antropologia, Economia e outras áreas na interpretação do passado.",
-    "elimina a especificidade do método histórico, tornando desnecessário o uso de fontes.",
-    "substitui a pesquisa documental por explicações gerais que não precisam de evidências.",
-    "impede a análise de contextos específicos, pois todas as áreas devem usar o mesmo método.",
-    "limita o estudo histórico aos fenômenos naturais, afastando sociedades e culturas."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que a História pode dialogar com outras ciências humanas. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que a História pode dialogar com outras ciências humanas. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-História dialoga com outras áreas sem perder método próprio.
-`
-},
-
-{
-pergunta: "Ao afirmar que 'a fonte não fala sozinha', entende-se que:",
-
-alternativas: [
-    "documentos históricos não possuem qualquer utilidade para a pesquisa científica.",
-    "o sentido da fonte depende das perguntas, do contexto, da crítica e da interpretação do pesquisador.",
-    "o documento apresenta sempre uma única verdade evidente, dispensando análise de autoria e finalidade.",
-    "toda fonte deve ser recusada quando apresentar lacunas, contradições ou parcialidades.",
-    "o historiador deve completar livremente as informações ausentes com imaginação narrativa."
-],
-
-correta: 1,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que fontes precisam ser interrogadas pelo historiador. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que fontes precisam ser interrogadas pelo historiador. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-A fonte exige perguntas e interpretação crítica.
-`
-},
-
-{
-pergunta: "Uma abordagem positivista tradicional da História tende a valorizar:",
-
-alternativas: [
-    "fatos políticos, cronologia, documentos oficiais e a narrativa de grandes personagens.",
-    "cotidiano, mentalidades, cultura popular e multiplicidade de fontes não escritas.",
-    "relações de classe, modos de produção e conflitos econômicos como eixo principal.",
-    "memória coletiva, história oral e subjetividades como centro da interpretação.",
-    "a crítica à ideia de documento oficial como fonte privilegiada da verdade histórica."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que o positivismo valorizava fatos, ordem e documentação oficial. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que o positivismo valorizava fatos, ordem e documentação oficial. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Positivismo tradicional = fatos, documentos oficiais e cronologia política.
-`
-},
-
-{
-pergunta: "A interpretação histórica deve ser considerada válida quando:",
-
-alternativas: [
-    "é sustentada por evidências, coerência argumentativa, crítica das fontes e diálogo historiográfico.",
-    "expressa uma opinião forte, mesmo sem fontes, desde que seja socialmente compartilhada.",
-    "confirma as memórias oficiais, sem necessidade de comparar outras perspectivas.",
-    "elimina divergências entre historiadores, apresentando uma única conclusão definitiva.",
-    "usa documentos antigos sem questionar intencionalidades, lacunas ou contexto de produção."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que validade histórica depende de fundamentação. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que validade histórica depende de fundamentação. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Interpretação histórica precisa de evidências e método.
-`
-},
-
-{
-pergunta: "O estudo da cultura material como fonte histórica permite investigar:",
-
-alternativas: [
-    "objetos, utensílios, construções e vestígios que revelam práticas sociais e modos de vida.",
-    "apenas textos escritos produzidos por autoridades políticas e instituições estatais.",
-    "somente datas de acontecimentos militares, sem relação com cotidiano ou tecnologia.",
-    "memórias individuais sem qualquer vínculo com evidências materiais preservadas.",
-    "leis e decretos, excluindo objetos por não possuírem linguagem histórica."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que objetos também são fontes históricas. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que objetos também são fontes históricas. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Cultura material = objetos e vestígios como evidências históricas.
-`
-},
-
-{
-pergunta: "Em uma pesquisa histórica, o levantamento bibliográfico tem a função de:",
-
-alternativas: [
-    "dispensar o uso de fontes, pois a opinião de outros autores substitui a investigação.",
-    "situar o pesquisador no debate existente e compreender interpretações já produzidas sobre o tema.",
-    "evitar contato com a historiografia para garantir uma narrativa totalmente original e isolada.",
-    "reunir apenas obras antigas, já que pesquisas recentes não podem alterar interpretações anteriores.",
-    "selecionar livros aleatórios sem relação com o problema de pesquisa formulado."
-],
-
-correta: 1,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que a pesquisa dialoga com estudos anteriores. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que a pesquisa dialoga com estudos anteriores. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Bibliografia situa o pesquisador no debate historiográfico.
-`
-},
-
-{
-pergunta: "A escolha de um problema histórico é importante porque:",
-
-alternativas: [
-    "orienta a seleção das fontes, os objetivos da pesquisa e o caminho interpretativo do historiador.",
-    "impede a análise de documentos, pois uma pergunta inicial limita totalmente o trabalho científico.",
-    "torna desnecessária a leitura bibliográfica e a comparação com outras interpretações.",
-    "garante uma resposta definitiva antes mesmo da investigação das evidências disponíveis.",
-    "serve apenas para decorar melhor os acontecimentos, sem alterar a análise do passado."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que a pesquisa histórica começa com perguntas. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que a pesquisa histórica começa com perguntas. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Problema histórico orienta pesquisa e interpretação.
-`
-},
-
-{
-pergunta: "Quando diferentes historiadores apresentam interpretações diversas sobre o mesmo processo, isso indica que:",
-
-alternativas: [
-    "a História não possui método e, portanto, qualquer narrativa deve ser aceita como correta.",
-    "a História é campo de debate, no qual novas perguntas, fontes e métodos podem produzir novas leituras.",
-    "os documentos são inúteis, pois não permitem nenhum tipo de conhecimento sobre o passado.",
-    "apenas uma interpretação pode existir, e todas as demais devem ser descartadas sem análise.",
-    "a divergência historiográfica elimina a necessidade de fundamentar argumentos em evidências."
-],
-
-correta: 1,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que a História é conhecimento interpretativo e debatido. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que a História é conhecimento interpretativo e debatido. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Divergência historiográfica é parte do debate científico.
-`
-},
-
-{
-pergunta: "O patrimônio histórico pode ser estudado pela História porque:",
-
-alternativas: [
-    "expressa memórias, identidades, disputas de preservação e relações sociais com o passado.",
-    "representa sempre uma memória neutra, consensual e sem conflitos dentro da sociedade.",
-    "deve ser tratado apenas como objeto turístico, sem relação com cultura ou cidadania.",
-    "elimina a necessidade de fontes escritas e permite conclusões sem método histórico.",
-    "refere-se exclusivamente a prédios antigos, excluindo práticas culturais e bens imateriais."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que patrimônio é fonte e objeto histórico. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que patrimônio é fonte e objeto histórico. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Patrimônio envolve memória, identidade e disputa social.
-`
-},
-
-{
-pergunta: "O ensino de História fundamentado na ciência histórica deve favorecer:",
-
-alternativas: [
-    "a análise de fontes, a contextualização, a argumentação e a compreensão crítica dos processos sociais.",
-    "a repetição de narrativas oficiais, evitando perguntas dos estudantes sobre conflitos históricos.",
-    "a memorização de listas de datas como objetivo único da aprendizagem escolar.",
-    "a exclusão de temas sociais polêmicos, para preservar uma visão harmônica do passado nacional.",
-    "a substituição do conhecimento histórico por opiniões pessoais sem relação com documentos."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que a ciência histórica fundamenta ensino crítico e contextualizado. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que a ciência histórica fundamenta ensino crítico e contextualizado. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Ensino de História deve desenvolver pensamento histórico.
-`
-},
-
-{
-pergunta: "A crítica interna de uma fonte está mais relacionada à análise:",
-
-alternativas: [
-    "do conteúdo, linguagem, coerência, argumentos, sentidos e informações presentes no documento.",
-    "do material físico do documento apenas, como papel, tinta, suporte e estado de conservação.",
-    "da eliminação do contexto, para observar a fonte como verdade independente de sua época.",
-    "da rejeição de toda fonte que apresente parcialidade, intenção ou linguagem persuasiva.",
-    "da memorização literal do documento, sem interpretação ou comparação de evidências."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que crítica interna observa o que a fonte diz e como diz. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que crítica interna observa o que a fonte diz e como diz. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Crítica interna examina conteúdo e sentido da fonte.
-`
-},
-
-{
-pergunta: "A crítica externa de uma fonte está mais relacionada à análise:",
-
-alternativas: [
-    "da autenticidade, autoria, datação, origem, suporte e condições de produção do documento.",
-    "da opinião pessoal do pesquisador sobre o tema, sem relação com a origem do documento.",
-    "do conteúdo simbólico da fonte, sem preocupação com autoria, data ou autenticidade.",
-    "da substituição da fonte por narrativas escolares simplificadas e sem comprovação.",
-    "do efeito emocional produzido pela leitura, dispensando investigação documental."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que crítica externa verifica origem e materialidade da fonte. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que crítica externa verifica origem e materialidade da fonte. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Crítica externa examina origem, autenticidade e produção da fonte.
-`
-},
-
-{
-pergunta: "Ao trabalhar com a noção de longa duração, o historiador busca compreender:",
-
-alternativas: [
-    "estruturas, permanências e ritmos lentos que atravessam longos períodos históricos.",
-    "apenas acontecimentos rápidos, como batalhas, decretos e mudanças imediatas de governo.",
-    "fatos totalmente isolados, sem relação com economia, cultura, geografia ou sociedade.",
-    "a impossibilidade de estudar permanências, pois toda sociedade muda igualmente a cada ano.",
-    "uma sequência de datas curtas, organizadas sem interpretação de processos históricos."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que longa duração destaca ritmos lentos e estruturas históricas. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que longa duração destaca ritmos lentos e estruturas históricas. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Longa duração = estruturas e permanências.
-`
-},
-
-{
-pergunta: "As fontes visuais, como fotografias e charges, devem ser analisadas considerando:",
-
-alternativas: [
-    "contexto, autoria, intencionalidade, linguagem visual, público e possíveis sentidos da imagem.",
-    "apenas aquilo que aparece no primeiro plano, pois imagens não possuem construção simbólica.",
-    "sua função decorativa, já que não podem produzir conhecimento histórico confiável.",
-    "sua superioridade absoluta sobre documentos escritos, que não devem ser utilizados em conjunto.",
-    "a impossibilidade de crítica, pois toda imagem registra automaticamente a realidade como ela foi."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que fontes visuais exigem análise de linguagem e contexto. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que fontes visuais exigem análise de linguagem e contexto. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Imagem é fonte e possui linguagem própria.
-`
-},
-
-{
-pergunta: "Um risco de confundir memória com História é:",
-
-alternativas: [
-    "tratar lembranças selecionadas e afetivas como explicações históricas definitivas e incontestáveis.",
-    "analisar a memória como objeto de estudo, observando identidades, esquecimentos e disputas.",
-    "utilizar depoimentos orais com crítica, contextualização e comparação com outras fontes.",
-    "reconhecer que grupos sociais constroem diferentes formas de lembrar o passado.",
-    "investigar monumentos e comemorações como expressões de memória coletiva."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que memória pode selecionar, silenciar e idealizar. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que memória pode selecionar, silenciar e idealizar. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Memória deve ser analisada criticamente, não aceita como verdade automática.
-`
-},
-
-{
-pergunta: "A produção do conhecimento histórico pode ser revista quando:",
-
-alternativas: [
-    "novas fontes, novos métodos ou novas perguntas permitem reinterpretar processos antes estudados.",
-    "um governo decide substituir oficialmente todas as interpretações acadêmicas por uma versão única.",
-    "o historiador abandona as fontes para adaptar o passado a preferências ideológicas pessoais.",
-    "a memorização escolar elimina divergências e encerra definitivamente o debate historiográfico.",
-    "documentos antigos são ignorados, pois apenas opiniões atuais interessam à ciência histórica."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que História é ciência em construção e debate. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que História é ciência em construção e debate. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Conhecimento histórico pode ser revisto com evidências e novas questões.
-`
-},
-
-{
-pergunta: "O uso de mapas históricos pode auxiliar a aprendizagem porque:",
-
-alternativas: [
-    "permite relacionar espaço, tempo, deslocamentos, fronteiras, disputas territoriais e processos sociais.",
-    "substitui a análise de fontes escritas, tornando desnecessária qualquer contextualização histórica.",
-    "serve apenas como ilustração estética, sem relação com interpretação de processos históricos.",
-    "apresenta fronteiras naturais e eternas, sem mudanças ao longo do tempo.",
-    "impede a comparação entre sociedades, pois o espaço geográfico não participa da História."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que espaço e tempo são dimensões importantes do processo histórico. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que espaço e tempo são dimensões importantes do processo histórico. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Mapas ajudam a compreender espacialidade histórica.
-`
-},
-
-{
-pergunta: "O historiador deve evitar o presentismo, isto é:",
-
-alternativas: [
-    "a imposição acrítica de valores e categorias do presente para explicar sociedades do passado.",
-    "a tentativa de compreender relações entre passado e presente com contextualização adequada.",
-    "o uso de perguntas atuais para investigar problemas históricos de forma metodologicamente controlada.",
-    "a comparação entre épocas diferentes, respeitando especificidades e diferenças contextuais.",
-    "o reconhecimento de permanências históricas em desigualdades e instituições atuais."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que não se deve julgar o passado sem contextualização histórica. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que não se deve julgar o passado sem contextualização histórica. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Presentismo/anacronismo = projetar o presente sem contexto.
-`
-},
-
-{
-pergunta: "A história do cotidiano tornou-se importante para a historiografia porque:",
-
-alternativas: [
-    "permite estudar práticas, hábitos, relações sociais, culturas e experiências de sujeitos comuns.",
-    "elimina o estudo de política e economia, tornando-os irrelevantes para qualquer explicação histórica.",
-    "limita-se a curiosidades sem valor científico, afastando fontes e métodos de pesquisa.",
-    "afirma que apenas grandes acontecimentos podem explicar a vida das sociedades humanas.",
-    "substitui documentos por imaginação, já que o cotidiano não deixa vestígios históricos."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que a historiografia ampliou objetos para além da política tradicional. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que a historiografia ampliou objetos para além da política tradicional. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Cotidiano também revela relações sociais e culturais.
-`
-},
-
-{
-pergunta: "O cruzamento de fontes é um procedimento importante porque:",
-
-alternativas: [
-    "permite comparar evidências, verificar informações, perceber divergências e reduzir interpretações frágeis.",
-    "autoriza escolher apenas a fonte que confirma previamente a opinião do pesquisador.",
-    "elimina todos os conflitos interpretativos, produzindo uma verdade definitiva e única.",
-    "substitui a crítica documental, pois a quantidade de fontes dispensa análise de contexto.",
-    "serve apenas para aumentar o volume da pesquisa, sem efeito sobre a interpretação histórica."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que comparar fontes ajuda a construir interpretações mais consistentes. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que comparar fontes ajuda a construir interpretações mais consistentes. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Cruzamento de fontes fortalece a análise histórica.
-`
-},
-
-{
-pergunta: "No contexto da ciência histórica, o termo 'evidência' refere-se:",
-
-alternativas: [
-    "aos elementos encontrados nas fontes que sustentam uma interpretação sobre determinado problema histórico.",
-    "a qualquer lembrança pessoal aceita automaticamente como verdade científica sem análise crítica.",
-    "a fatos imaginados pelo historiador para preencher lacunas deixadas pelos documentos.",
-    "a opiniões atuais que substituem o uso de documentos, bibliografia e método de pesquisa.",
-    "a uma verdade absoluta que dispensa debate e revisão por outros pesquisadores."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que evidências são dados interpretados a partir das fontes. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que evidências são dados interpretados a partir das fontes. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Evidência sustenta argumento histórico.
-`
-},
-
-{
-pergunta: "Uma alternativa adequada sobre a escrita da História é:",
-
-alternativas: [
-    "A narrativa histórica resulta de pesquisa, seleção de fontes, crítica documental e argumentação interpretativa.",
-    "A narrativa histórica é idêntica à ficção, pois ambas podem inventar acontecimentos livremente.",
-    "A escrita da História elimina a subjetividade por completo e reproduz o passado de modo transparente.",
-    "O historiador deve evitar diálogo com outros autores para preservar neutralidade absoluta.",
-    "A escrita histórica dispensa público, linguagem e organização argumentativa."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que a História é escrita com método, evidência e argumentação. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que a História é escrita com método, evidência e argumentação. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Escrita histórica é narrativa fundamentada em pesquisa.
-`
-},
-
-{
-pergunta: "No ensino de História, a compreensão do ofício do historiador ajuda o aluno a perceber que:",
-
-alternativas: [
-    "o conhecimento histórico é produzido por investigação, perguntas, fontes e interpretações fundamentadas.",
-    "o passado deve ser memorizado como lista fixa, sem necessidade de análise de documentos.",
-    "todas as versões sobre o passado possuem o mesmo valor, mesmo sem evidências.",
-    "o professor deve evitar fontes, pois elas tornam a aprendizagem mais complexa e menos objetiva.",
-    "a História escolar não possui relação com pesquisa, cidadania ou pensamento crítico."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que o aluno aprende como o conhecimento histórico é construído. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que o aluno aprende como o conhecimento histórico é construído. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Entender o ofício do historiador desenvolve pensamento histórico.
-`
-},
-
-{
-pergunta: "Uma das principais características da ciência histórica contemporânea é:",
-
-alternativas: [
-    "a ampliação de temas, fontes e sujeitos históricos, sem abandonar a exigência de rigor metodológico.",
-    "o retorno exclusivo ao estudo de reis, presidentes e batalhas como únicos temas legítimos.",
-    "a recusa de fontes orais, visuais e materiais por não serem documentos oficiais escritos.",
-    "a defesa de que toda narrativa memorial deve substituir a análise historiográfica.",
-    "a eliminação de problemas de pesquisa, pois perguntas orientam indevidamente a investigação."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que a ciência histórica contemporânea é plural e metódica. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que a ciência histórica contemporânea é plural e metódica. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-História contemporânea ampliou objetos e manteve rigor.
-`
-},
-
-{
-pergunta: "Em uma questão de concurso, tende a estar correta a alternativa que afirma que a História:",
-
-alternativas: [
-    "é conhecimento crítico construído com fontes, método, interpretação e contextualização.",
-    "é repetição exata do passado, sem escolhas, linguagem ou ponto de vista do historiador.",
-    "é opinião subjetiva sem necessidade de documentação, comparação ou coerência argumentativa.",
-    "é estudo exclusivo de acontecimentos antigos sem relação com o presente e a cidadania.",
-    "é narrativa única e imutável produzida por documentos oficiais do Estado."
-],
-
-correta: 0,
-
-feedbackAcerto: `
-🎉 Excelente! Você identificou corretamente que a História combina crítica, fontes e interpretação. A ciência histórica trabalha com fontes, método, crítica, contextualização e interpretação fundamentada.
-`,
-
-feedbackErro: `
-❌ Atenção! A alternativa correta é a que reconhece que a História combina crítica, fontes e interpretação. História não é simples memorização nem opinião livre: exige evidências, análise crítica e coerência interpretativa.
-`,
-
-dicaBanca: `
-Essa é a síntese do tópico.
+Citação de fonte é parte da transparência do método histórico.
 `
 }
-
 ];
