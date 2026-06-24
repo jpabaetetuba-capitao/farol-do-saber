@@ -659,6 +659,8 @@ const bancoQuestoes = {
 
     formacaoSocialCulturalBrasileira,
 
+    estadosModernosApropriacaoAmerica,
+
     povosPreColombianos,
 
     
@@ -1589,6 +1591,7 @@ errosAssunto++;
     fundamentosEnsinoHistoria: "📚 Fundamentos do Ensino de História",
     cienciaHistoricaOficioHistoriador: "🔎 Ciência Histórica e Ofício do Historiador",
     formacaoSocialCulturalBrasileira: "🧬 Formação Social e Cultural Brasileira",
+    estadosModernosApropriacaoAmerica: "🏛️ Estados Modernos e Apropriação da América",
     povosPreColombianos: "🏺 Povos Pré-Colombianos",
     apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
     apoioLDB: "📘 LDB e Bases da Educação Nacional",
@@ -3479,6 +3482,15 @@ case "formacaoSocialCulturalBrasileira":
 
     break;
 
+case "estadosModernosApropriacaoAmerica":
+
+    titulo.innerHTML =
+        "🏛️ Estados Modernos e Apropriação da América";
+
+    imagem.src =
+        "imagens/mapas/estadosModernosApropriacaoAmerica.png";
+
+    break;
 
 case "povosPreColombianos":
 
@@ -4131,6 +4143,16 @@ if (assuntoAtual === "formacaoSocialCulturalBrasileira") {
     abrirTeoria(
         formacaoSocialCulturalBrasileiraTeoria,
         "🧬 Formação Social e Cultural Brasileira"
+    );
+
+    return;
+}
+
+if (assuntoAtual === "estadosModernosApropriacaoAmerica") {
+
+    abrirTeoria(
+        estadosModernosApropriacaoAmericaTeoria,
+        "🏛️ Estados Modernos e Apropriação da América"
     );
 
     return;
@@ -5139,6 +5161,17 @@ function abrirTeoriaDoAssunto(){
 
     }
 
+    if(assuntoAtual === "estadosModernosApropriacaoAmerica"){
+
+        abrirTeoria(
+            estadosModernosApropriacaoAmericaTeoria,
+            "🏛️ Estados Modernos e Apropriação da América"
+        );
+
+        return;
+
+    }
+
     if(assuntoAtual === "povosPreColombianos"){
 
         abrirTeoria(
@@ -5350,6 +5383,7 @@ const assuntosHistoria = [
         "fundamentosEnsinoHistoria",
         "cienciaHistoricaOficioHistoriador",
         "formacaoSocialCulturalBrasileira",
+        "estadosModernosApropriacaoAmerica",
         "povosPreColombianos",
     ];
 
@@ -5474,6 +5508,8 @@ function atualizarPainelEstudos(){
 "🔎 Ciência Histórica e Ofício do Historiador",
         formacaoSocialCulturalBrasileira:
 "🧬 Formação Social e Cultural Brasileira",
+        estadosModernosApropriacaoAmerica:
+"🏛️ Estados Modernos e Apropriação da América",
         povosPreColombianos:
 "🏺 Povos Pré-Colombianos",
         interpretacao: "📖 Interpretação de Textos",
@@ -7937,6 +7973,7 @@ const gruposDuelo = [
             { chave: "fundamentosEnsinoHistoria", nome: "📚 Fundamentos do Ensino de História" },
             { chave: "cienciaHistoricaOficioHistoriador", nome: "🔎 Ciência Histórica e Ofício do Historiador" },
             { chave: "formacaoSocialCulturalBrasileira", nome: "🧬 Formação Social e Cultural Brasileira" },
+            { chave: "estadosModernosApropriacaoAmerica", nome: "🏛️ Estados Modernos e Apropriação da América" },
             { chave: "povosPreColombianos", nome: "🏺 Povos Pré-Colombianos" }
         ]
     }
@@ -8438,17 +8475,118 @@ async function mostrarResultadoDuelo(codigo){
     }
 
     const dados = doc.data();
-    const participantes = Object.values(dados.participantes || {});
+    const participantesObj = dados.participantes || {};
+    const participantes = Object.entries(participantesObj).map(([uid, dadosParticipante]) => ({
+        uid: uid,
+        ...dadosParticipante
+    }));
     const finalizados = participantes.filter(p => p.finalizado);
+    const quantidadeQuestoes = Number(dados.quantidade || (dados.indices || []).length || 0);
 
     let vencedorTexto = dados.cancelado
         ? "Duelo cancelado pelo criador."
         : "Aguardando o outro participante finalizar.";
 
+    let pontuacaoDueloHTML = "";
+
     if(!dados.cancelado && finalizados.length >= 2){
-        const ordenado = [...finalizados].sort((a,b) => (b.acertos - a.acertos));
-        const vencedor = ordenado[0];
-        vencedorTexto = `🏆 Vencedor: ${vencedor.nome} com ${vencedor.acertos} acertos`;
+        const maiorPontuacao = Math.max(...finalizados.map(p => Number(p.acertos || 0)));
+        const vencedores = finalizados.filter(p => Number(p.acertos || 0) === maiorPontuacao);
+
+        if(vencedores.length > 1){
+            vencedorTexto = `🤝 Empate: ${vencedores.map(p => p.nome).join(" e ")} com ${maiorPontuacao} acertos`;
+        }
+        else{
+            const vencedor = vencedores[0];
+            vencedorTexto = `🏆 Vencedor: ${vencedor.nome} com ${vencedor.acertos} acertos`;
+        }
+
+        if(auth.currentUser){
+            const uidAtual = auth.currentUser.uid;
+            const participanteAtual = participantes.find(p => p.uid === uidAtual && p.finalizado);
+
+            if(participanteAtual){
+                const mensagensPontuacao = [];
+                const chaveParticipacao = "duelo-participacao:" + codigo + ":" + uidAtual;
+
+                if(pontosLuzGerados[chaveParticipacao]){
+                    mensagensPontuacao.push("⭐ +20 Pontos de Luz por participar");
+                }
+
+                const usuarioEstaEntreVencedores = vencedores.some(p => p.uid === uidAtual);
+
+                if(usuarioEstaEntreVencedores && vencedores.length === 1){
+                    const ganhouVitoria = adicionarPontosLuz(
+                        40,
+                        "Vitória em duelo",
+                        "duelo-vitoria:" + codigo + ":" + uidAtual
+                    );
+
+                    mensagensPontuacao.push(
+                        ganhouVitoria
+                        ? "🥇 +40 Pontos de Luz pela vitória"
+                        : "🥇 Bônus de vitória já registrado"
+                    );
+
+                    mostrarToast("🏆 Você venceu o duelo! +40 Pontos de Luz");
+                }
+                else if(usuarioEstaEntreVencedores && vencedores.length > 1){
+                    const ganhouEmpate = adicionarPontosLuz(
+                        20,
+                        "Empate em duelo",
+                        "duelo-empate:" + codigo + ":" + uidAtual
+                    );
+
+                    mensagensPontuacao.push(
+                        ganhouEmpate
+                        ? "🤝 +20 Pontos de Luz pelo empate"
+                        : "🤝 Bônus de empate já registrado"
+                    );
+
+                    mostrarToast("🤝 Duelo empatado! +20 Pontos de Luz");
+                }
+
+                if(quantidadeQuestoes > 0 && Number(participanteAtual.acertos || 0) === quantidadeQuestoes){
+                    const ganhouGabarito = adicionarPontosLuz(
+                        30,
+                        "100% de acerto no duelo",
+                        "duelo-gabarito:" + codigo + ":" + uidAtual
+                    );
+
+                    mensagensPontuacao.push(
+                        ganhouGabarito
+                        ? "🏆 +30 Pontos de Luz por gabaritar o duelo"
+                        : "🏆 Bônus de 100% já registrado"
+                    );
+                }
+
+                if(mensagensPontuacao.length > 0){
+                    pontuacaoDueloHTML = `
+                        <div class="pontos-luz-box">
+                            <strong>⭐ Pontuação deste duelo:</strong><br><br>
+                            ${mensagensPontuacao.join("<br>")}
+                        </div>
+                        <br>
+                    `;
+                }
+            }
+        }
+    }
+    else if(!dados.cancelado && auth.currentUser){
+        const uidAtual = auth.currentUser.uid;
+        const participanteAtual = participantes.find(p => p.uid === uidAtual && p.finalizado);
+        const chaveParticipacao = "duelo-participacao:" + codigo + ":" + uidAtual;
+
+        if(participanteAtual && pontosLuzGerados[chaveParticipacao]){
+            pontuacaoDueloHTML = `
+                <div class="pontos-luz-box">
+                    <strong>⭐ Pontuação deste duelo:</strong><br><br>
+                    ⭐ +20 Pontos de Luz por participar<br>
+                    Aguarde o outro participante finalizar para saber se haverá bônus de vitória.
+                </div>
+                <br>
+            `;
+        }
     }
 
     mostrarTela("resolverQuestao");
@@ -8470,6 +8608,7 @@ async function mostrarResultadoDuelo(codigo){
             <br>
             <h3>${vencedorTexto}</h3>
             <br>
+            ${pontuacaoDueloHTML}
             <button onclick="mostrarTela('duelos'); carregarMeusDuelos();">⚔️ Voltar aos Duelos</button>
         </div>
     `;
@@ -8568,8 +8707,13 @@ async function carregarMeusDuelos(){
     }
 }
 
+function primeiroNomeDuelo(nome){
+    const texto = String(nome || "Aluno").trim();
+    return texto.split(/\s+/)[0] || "Aluno";
+}
+
 function montarMensagemDuelo(dados){
-    const nomeCriador = dados.criadoPorNome || usuarioForum || "Um aluno";
+    const nomeCriador = primeiroNomeDuelo(dados.criadoPorNome || usuarioForum || "Um aluno");
     const link = montarLinkDuelo(dados.codigo);
 
     return `⚔️ Te desafiei no Duelo do Saber!
