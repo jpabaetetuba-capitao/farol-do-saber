@@ -148,6 +148,14 @@
         📝 Simulados
     </button>
 
+    <button onclick="mostrarTela('duelos'); carregarMeusDuelos();">
+        ⚔️ Duelos
+    </button>
+
+    <button onclick="mostrarTela('lojaFarol'); atualizarLojaFarol();">
+        🛒 Loja
+    </button>
+
     <button onclick="mostrarTela('estatisticas')">
         📊 Estatísticas
     </button>
@@ -181,6 +189,17 @@
         <h2>📜 História</h2>
 
         <br>
+
+        <button
+            id="btnForumHistoria"
+            class="btn-forum"
+            onclick="abrirForum('historia')">
+
+            💬 Fórum de Discussão
+
+        </button>
+
+        <br><br>
 
         <p>
             Selecione um assunto:
@@ -848,6 +867,12 @@ onclick="abrirAssunto('fundamentosFisica')">
 
         <br><br>
 
+<button onclick="window.open(document.getElementById('imagemMapa').src, '_blank')">
+    🔍 Ampliar Mapa
+</button>
+
+<br><br>
+
 <label>
 
 <input
@@ -948,6 +973,57 @@ Li e revisei o mapa mental.
 
 <br>
 
+<p>
+    Pontos de Luz:
+    <strong id="pontosLuz">
+        0
+    </strong>
+</p>
+
+<br>
+
+<p>
+    Saldo da Loja:
+    <strong id="saldoPontosLuz">
+        0
+    </strong>
+</p>
+
+<br>
+
+<div class="perfil-loja-resumo">
+    <p>
+        Avatar:
+        <strong id="avatarAluno">
+            👤 Estudante
+        </strong>
+    </p>
+    <p>
+        Título:
+        <strong id="tituloAluno">
+            Sem título especial
+        </strong>
+    </p>
+    <p>
+        Medalha especial:
+        <strong id="medalhaEspecialAluno">
+            Nenhuma medalha especial
+        </strong>
+    </p>
+</div>
+
+<br>
+
+<div class="compartilhar-progresso">
+    <button
+        class="btn-compartilhar-unico"
+        onclick="compartilharProgresso()">
+        📤 Compartilhar progresso
+    </button>
+</div>
+
+<br>
+
 <h3>🏅 Medalhas</h3>
 
 <br>
@@ -1029,6 +1105,30 @@ Li e revisei o mapa mental.
         -
     </strong>
 </p>
+
+</div>
+
+<div class="dashboard-card missao-card">
+
+    <h2>🎯 Missão do Dia</h2>
+
+    <br>
+
+    <div id="missaoDiaria">
+        Carregando missão...
+    </div>
+
+</div>
+
+<div class="dashboard-card ranking-card">
+
+    <h2>🏆 Ranking</h2>
+
+    <br>
+
+    <div id="rankingPontos">
+        Ranking ainda vazio.
+    </div>
 
 </div>
 
@@ -1332,6 +1432,120 @@ Li e revisei o mapa mental.
 
 </section>
 
+
+<!-- LOJA DO FAROL -->
+
+<section id="lojaFarol" class="tela">
+
+    <div class="card">
+
+        <button
+            class="btn-voltar"
+            onclick="mostrarTela('inicio')">
+            ⬅ Voltar ao Início
+        </button>
+
+        <br><br>
+
+        <h2>🛒 Loja do Farol</h2>
+
+        <p>
+            Troque seu saldo de Pontos de Luz por recompensas visuais, títulos, avatares, card premium e certificado digital.
+        </p>
+
+        <br>
+
+        <div id="conteudoLojaFarol">
+            Carregando recompensas...
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DUELOS -->
+
+<section id="duelos" class="tela">
+
+    <div class="card">
+
+        <h2>⚔️ Duelo do Saber</h2>
+
+        <p>
+            Crie um desafio de Informática e envie o código para outro aluno responder as mesmas questões.
+        </p>
+
+        <br>
+
+        <h3>⚔️ Criar Desafio</h3>
+
+        <br>
+
+        <label>
+            Assunto de Informática:
+        </label>
+
+        <select id="dueloAssunto"></select>
+
+        <br><br>
+
+        <label>
+            Quantidade de questões:
+        </label>
+
+        <select id="dueloQuantidade">
+            <option value="5">5 questões</option>
+            <option value="10">10 questões</option>
+            <option value="15">15 questões</option>
+        </select>
+
+        <br><br>
+
+        <button onclick="criarDuelo()">
+            ⚔️ Criar Duelo
+        </button>
+
+        <div id="codigoDueloCriado"></div>
+
+        <br><br>
+
+        <h3>🔑 Entrar com Código</h3>
+
+        <br>
+
+        <input
+            id="codigoDueloEntrada"
+            type="text"
+            placeholder="Exemplo: FAROL-1234">
+
+        <br><br>
+
+        <button onclick="entrarDueloPorCodigo()">
+            🚀 Entrar no Duelo
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h3>🏆 Meus Duelos</h3>
+
+        <br>
+
+        <button onclick="carregarMeusDuelos()">
+            🔄 Atualizar meus duelos
+        </button>
+
+        <br><br>
+
+        <div id="meusDuelos">
+            Você ainda não entrou em nenhum duelo.
+        </div>
+
+    </div>
+
+</section>
+
 <!-- ESTATÍSTICAS -->
 
 <section id="estatisticas" class="tela">
@@ -1361,7 +1575,13 @@ Li e revisei o mapa mental.
 
     <div class="card">
 
-        <h2>❌ Caderno de Erros</h2>
+        <h2>❌ Caderno de Erros Inteligente</h2>
+
+        <p>
+            Aqui o aluno revisa as questões que errou e acompanha a recuperação do conteúdo.
+        </p>
+
+        <br>
 
         <div id="listaErros">
 
