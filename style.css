@@ -1985,3 +1985,224 @@ progress{
     border-radius:12px;
     box-shadow:0 6px 18px rgba(0,0,0,0.25);
 }
+
+/* ==========================
+   DUELOS - FLUXO GUIADO
+========================== */
+
+.duelo-card-principal{
+    overflow:hidden;
+}
+
+.duelo-layout{
+    display:grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap:20px;
+    align-items:start;
+}
+
+.duelo-bloco{
+    background:rgba(255,255,255,0.70);
+    border:1px solid rgba(30,136,229,0.18);
+    border-radius:16px;
+    padding:18px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+
+.duelo-etapa{
+    background:rgba(248,249,250,0.95);
+    border-left:6px solid #1e88e5;
+    border-radius:14px;
+    padding:15px;
+    margin-bottom:15px;
+}
+
+.duelo-ajuda{
+    font-size:14px;
+    opacity:0.85;
+    line-height:1.5;
+    margin-top:6px;
+    margin-bottom:10px;
+}
+
+.duelo-grid-disciplinas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    gap:10px;
+}
+
+.duelo-opcao-disciplina,
+.duelo-opcao-topico{
+    width:100%;
+    text-align:left;
+    background:#e3f2fd;
+    color:#0d47a1;
+    border:2px solid transparent;
+    border-radius:14px;
+    padding:14px;
+    font-weight:bold;
+    transition:0.2s;
+}
+
+.duelo-opcao-disciplina:hover,
+.duelo-opcao-topico:hover{
+    transform:scale(1.02);
+    background:#bbdefb;
+}
+
+.duelo-opcao-disciplina.selecionado,
+.duelo-opcao-topico.selecionado{
+    background:#1e88e5;
+    color:white;
+    border-color:#0d47a1;
+    box-shadow:0 4px 12px rgba(30,136,229,0.35);
+}
+
+.input-duelo-busca{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+    margin-bottom:12px;
+}
+
+.duelo-grid-topicos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));
+    gap:10px;
+    max-height:360px;
+    overflow-y:auto;
+    padding-right:6px;
+}
+
+.duelo-opcao-topico small{
+    display:block;
+    font-weight:normal;
+    opacity:0.75;
+    margin-top:6px;
+}
+
+.duelo-resumo-criacao{
+    background:#fff8e1;
+    border-left:6px solid #f9a825;
+    border-radius:14px;
+    padding:15px;
+    margin:15px 0;
+    line-height:1.6;
+}
+
+.duelo-codigo{
+    background:#e8f5e9;
+    border:2px dashed #43a047;
+    border-radius:16px;
+    padding:18px;
+    margin-top:18px;
+    text-align:center;
+}
+
+.duelo-codigo-grande{
+    display:inline-block;
+    font-size:30px;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:#1b5e20;
+    background:white;
+    border-radius:12px;
+    padding:10px 18px;
+    margin:10px 0;
+    box-shadow:0 2px 8px rgba(0,0,0,0.12);
+}
+
+.duelo-botoes-codigo,
+.duelo-item-acoes{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.duelo-item-melhorado{
+    background:rgba(255,255,255,0.95);
+    border-left:6px solid #7b1fa2;
+    border-radius:14px;
+    padding:15px;
+    margin-bottom:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.10);
+}
+
+.duelo-item-topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.duelo-item-topo strong{
+    font-size:18px;
+    color:#4a148c;
+}
+
+.duelo-item-topo span{
+    background:#f3e5f5;
+    color:#4a148c;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.duelo-item-info{
+    line-height:1.7;
+    margin-bottom:12px;
+}
+
+@media(max-width:900px){
+    .duelo-layout{
+        grid-template-columns:1fr;
+    }
+
+    .duelo-grid-topicos{
+        max-height:none;
+    }
+
+    .duelo-item-topo{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+
+/* ==========================
+   CONVITE DE DUELO COM LINK
+========================== */
+
+.convite-duelo-login,
+.duelo-convite-recebido{
+    margin-top:18px;
+    margin-bottom:18px;
+    padding:14px;
+    border-radius:14px;
+    background:rgba(255,248,220,0.92);
+    color:#3e2723;
+    border:2px solid rgba(255,193,7,0.75);
+    line-height:1.5;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.duelo-convite-recebido{
+    background:#fff8e1;
+    border-left:6px solid #f9a825;
+}
+
+.duelo-link{
+    margin-top:12px;
+    padding:10px;
+    border-radius:10px;
+    background:rgba(25,118,210,0.08);
+    border:1px dashed rgba(25,118,210,0.45);
+    color:#0d47a1;
+    font-size:14px;
+    word-break:break-all;
+}
