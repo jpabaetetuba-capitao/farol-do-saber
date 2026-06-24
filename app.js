@@ -653,6 +653,12 @@ const bancoQuestoes = {
     fundamentosFisica,
 
 
+    fundamentosEnsinoHistoria,
+
+    cienciaHistoricaOficioHistoriador,
+
+    formacaoSocialCulturalBrasileira,
+
     povosPreColombianos,
 
     
@@ -1580,6 +1586,10 @@ errosAssunto++;
     lai: "🔎 Lei de Acesso à Informação",
 
     lgpd: "🛡️ Lei Geral de Proteção de Dados",
+    fundamentosEnsinoHistoria: "📚 Fundamentos do Ensino de História",
+    cienciaHistoricaOficioHistoriador: "🔎 Ciência Histórica e Ofício do Historiador",
+    formacaoSocialCulturalBrasileira: "🧬 Formação Social e Cultural Brasileira",
+    povosPreColombianos: "🏺 Povos Pré-Colombianos",
     apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
     apoioLDB: "📘 LDB e Bases da Educação Nacional",
     apoioECA: "🧒 ECA e Proteção Integral",
@@ -3437,6 +3447,39 @@ case "fundamentosFisica":
 
 
 
+case "fundamentosEnsinoHistoria":
+
+    titulo.innerHTML =
+        "📚 Fundamentos do Ensino de História";
+
+    imagem.src =
+        "imagens/mapas/fundamentosEnsinoHistoria.png";
+
+    break;
+
+
+case "cienciaHistoricaOficioHistoriador":
+
+    titulo.innerHTML =
+        "🔎 Ciência Histórica e Ofício do Historiador";
+
+    imagem.src =
+        "imagens/mapas/cienciaHistoricaOficioHistoriador.png";
+
+    break;
+
+
+case "formacaoSocialCulturalBrasileira":
+
+    titulo.innerHTML =
+        "🧬 Formação Social e Cultural Brasileira";
+
+    imagem.src =
+        "imagens/mapas/formacaoSocialCulturalBrasileira.png";
+
+    break;
+
+
 case "povosPreColombianos":
 
     titulo.innerHTML =
@@ -4063,6 +4106,36 @@ if (assuntoAtual === "figuras") {
     return;
 }
 
+if (assuntoAtual === "fundamentosEnsinoHistoria") {
+
+    abrirTeoria(
+        fundamentosEnsinoHistoriaTeoria,
+        "📚 Fundamentos do Ensino de História"
+    );
+
+    return;
+}
+
+if (assuntoAtual === "cienciaHistoricaOficioHistoriador") {
+
+    abrirTeoria(
+        cienciaHistoricaOficioHistoriadorTeoria,
+        "🔎 Ciência Histórica e Ofício do Historiador"
+    );
+
+    return;
+}
+
+if (assuntoAtual === "formacaoSocialCulturalBrasileira") {
+
+    abrirTeoria(
+        formacaoSocialCulturalBrasileiraTeoria,
+        "🧬 Formação Social e Cultural Brasileira"
+    );
+
+    return;
+}
+
 if (assuntoAtual === "povosPreColombianos") {
 
     abrirTeoria(
@@ -4149,38 +4222,7 @@ mostrarQuestao();
 
 window.onload = function () {
 
-    carregarDados();
-
-    atualizarEstatisticas();
-
-    atualizarCadernoErros();
-
-    atualizarDashboard();
-
-    atualizarPainelEstudos();
-
-    carregarUsuariosOnline();
-   
-    carregarForum();
-    
-    iniciarChat();
-    
-    carregarUsuariosOnlineChat();
-
-    atualizarContadorForum();
-
-    atualizarMissaoDiaria();
-    carregarRankingPontos();
-    prepararSelectDuelo();
-    atualizarLojaFarol();
-
-    setInterval(
-
-        carregarUsuariosOnline,
-
-        30000
-
-    );
+    inicializarConviteDueloComSeguranca();
 
     auth.onAuthStateChanged((user) => {
 
@@ -4190,30 +4232,42 @@ window.onload = function () {
                 "login-ativo"
             );
 
-            const telaSalva =
-                localStorage.getItem(
-                    "farol_telaAtual"
-                );
+            if(deveAbrirDuelosPorConvite()){
 
-            if(telaSalva){
-
-                mostrarTela(
-                    telaSalva
-                );
+                localStorage.setItem("farol_telaAtual", "duelos");
+                mostrarTela("duelos");
+                prepararSelectDuelo();
+                preencherConviteDueloPendente();
 
             }else{
 
-                mostrarTela(
-                    "inicio"
-                );
+                const telaSalva =
+                    localStorage.getItem(
+                        "farol_telaAtual"
+                    );
+
+                if(telaSalva){
+
+                    mostrarTela(
+                        telaSalva
+                    );
+
+                }else{
+
+                    mostrarTela(
+                        "inicio"
+                    );
+
+                }
 
             }
 
             setTimeout(() => {
-                carregarLojaFirebase();
-                salvarRankingFirebase();
-                carregarRankingPontos();
-                carregarMeusDuelos();
+                try{ carregarLojaFirebase(); }catch(e){ console.log(e); }
+                try{ salvarRankingFirebase(); }catch(e){ console.log(e); }
+                try{ carregarRankingPontos(); }catch(e){ console.log(e); }
+                try{ carregarMeusDuelos(); }catch(e){ console.log(e); }
+                try{ abrirDueloPendenteAposLogin(); }catch(e){ console.log(e); }
             }, 800);
 
         }
@@ -4227,9 +4281,45 @@ window.onload = function () {
                 "login"
             );
 
+            atualizarAvisoConviteDuelo();
+
         }
 
     });
+
+    const tarefasIniciais = [
+        carregarDados,
+        atualizarEstatisticas,
+        atualizarCadernoErros,
+        atualizarDashboard,
+        atualizarPainelEstudos,
+        carregarUsuariosOnline,
+        carregarForum,
+        iniciarChat,
+        carregarUsuariosOnlineChat,
+        atualizarContadorForum,
+        atualizarMissaoDiaria,
+        carregarRankingPontos,
+        prepararSelectDuelo,
+        atualizarLojaFarol
+    ];
+
+    tarefasIniciais.forEach(funcao => {
+        try{
+            funcao();
+        }
+        catch(erro){
+            console.log("Erro na inicialização:", funcao.name, erro);
+        }
+    });
+
+    setInterval(
+
+        carregarUsuariosOnline,
+
+        30000
+
+    );
 
 };
 
@@ -5016,6 +5106,39 @@ function abrirTeoriaDoAssunto(){
 
     }
 
+    if(assuntoAtual === "fundamentosEnsinoHistoria"){
+
+        abrirTeoria(
+            fundamentosEnsinoHistoriaTeoria,
+            "📚 Fundamentos do Ensino de História"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "cienciaHistoricaOficioHistoriador"){
+
+        abrirTeoria(
+            cienciaHistoricaOficioHistoriadorTeoria,
+            "🔎 Ciência Histórica e Ofício do Historiador"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "formacaoSocialCulturalBrasileira"){
+
+        abrirTeoria(
+            formacaoSocialCulturalBrasileiraTeoria,
+            "🧬 Formação Social e Cultural Brasileira"
+        );
+
+        return;
+
+    }
+
     if(assuntoAtual === "povosPreColombianos"){
 
         abrirTeoria(
@@ -5224,6 +5347,9 @@ const assuntosCiencias = [
     ];
 
 const assuntosHistoria = [
+        "fundamentosEnsinoHistoria",
+        "cienciaHistoricaOficioHistoriador",
+        "formacaoSocialCulturalBrasileira",
         "povosPreColombianos",
     ];
 
@@ -5342,6 +5468,12 @@ function atualizarPainelEstudos(){
         planejamento: "📋 Planejamento Educacional",
         avaliacao: "📊 Avaliação da Aprendizagem",
         curriculo: "📘 Currículo e Planejamento",
+        fundamentosEnsinoHistoria:
+"📚 Fundamentos do Ensino de História",
+        cienciaHistoricaOficioHistoriador:
+"🔎 Ciência Histórica e Ofício do Historiador",
+        formacaoSocialCulturalBrasileira:
+"🧬 Formação Social e Cultural Brasileira",
         povosPreColombianos:
 "🏺 Povos Pré-Colombianos",
         interpretacao: "📖 Interpretação de Textos",
@@ -7529,6 +7661,172 @@ if(!CanvasRenderingContext2D.prototype.roundRect){
 // DUELO DO SABER - DESAFIO POR CONVITE
 // ==========================
 
+let dueloDisciplinaSelecionada = "";
+let dueloAssuntoSelecionado = "";
+
+const FAROL_SABER_URL = "https://jpabaetetuba-capitao.github.io/farol-do-saber";
+const CHAVE_DUELO_PENDENTE = "farol_duelo_pendente";
+
+function normalizarCodigoDuelo(valor){
+    let texto = String(valor || "").trim();
+
+    if(!texto){
+        return "";
+    }
+
+    try{
+        if(texto.includes("?") || texto.includes("http")){
+            const url = new URL(texto, window.location.origin);
+            texto = url.searchParams.get("duelo")
+                || url.searchParams.get("codigo")
+                || url.searchParams.get("codigoDuelo")
+                || texto;
+        }
+    }
+    catch(erro){
+        // Se não for URL válida, continua tratando como código digitado.
+    }
+
+    const encontrado = texto.toUpperCase().match(/FAROL[-\s]?[0-9]{4,6}/);
+
+    if(encontrado){
+        return encontrado[0]
+            .replace(/\s+/g, "-")
+            .replace(/^FAROL([0-9])/, "FAROL-$1")
+            .replace(/--+/g, "-");
+    }
+
+    return texto.toUpperCase();
+}
+
+function montarLinkDuelo(codigo){
+    const codigoLimpo = normalizarCodigoDuelo(codigo);
+    return `${FAROL_SABER_URL}/?duelo=${encodeURIComponent(codigoLimpo)}`;
+}
+
+function obterCodigoDueloDaURL(){
+    try{
+        const params = new URLSearchParams(window.location.search);
+        return normalizarCodigoDuelo(
+            params.get("duelo")
+            || params.get("codigo")
+            || params.get("codigoDuelo")
+            || ""
+        );
+    }
+    catch(erro){
+        return "";
+    }
+}
+
+function codigoDueloPendente(){
+    return normalizarCodigoDuelo(
+        localStorage.getItem(CHAVE_DUELO_PENDENTE) || ""
+    );
+}
+
+function capturarConviteDueloDaURL(){
+    const codigo = obterCodigoDueloDaURL();
+
+    if(codigo){
+        localStorage.setItem(CHAVE_DUELO_PENDENTE, codigo);
+        localStorage.setItem("farol_telaAtual", "duelos");
+        localStorage.setItem("farol_forcar_duelos", "true");
+    }
+
+    atualizarAvisoConviteDuelo();
+
+    return codigo;
+}
+
+function atualizarAvisoConviteDuelo(){
+    const codigo = codigoDueloPendente();
+    const avisoLogin = document.getElementById("conviteDueloLogin");
+
+    if(avisoLogin){
+        if(codigo){
+            avisoLogin.style.display = "block";
+            avisoLogin.innerHTML = `
+                <strong>⚔️ Convite de Duelo recebido!</strong><br>
+                Código: <strong>${codigo}</strong><br><br>
+                Faça login ou crie sua conta para participar do desafio.
+            `;
+        }
+        else{
+            avisoLogin.style.display = "none";
+            avisoLogin.innerHTML = "";
+        }
+    }
+}
+
+function preencherConviteDueloPendente(){
+    const codigo = codigoDueloPendente();
+
+    if(!codigo){
+        return false;
+    }
+
+    const campo = document.getElementById("codigoDueloEntrada");
+    const avisoDuelos = document.getElementById("dueloConviteRecebido");
+
+    if(campo){
+        campo.value = codigo;
+    }
+
+    if(avisoDuelos){
+        avisoDuelos.style.display = "block";
+        avisoDuelos.innerHTML = `
+            <strong>⚔️ Convite encontrado!</strong><br>
+            Código do duelo: <strong>${codigo}</strong><br><br>
+            Clique em <strong>Entrar no Duelo</strong> para participar.
+        `;
+    }
+
+    return true;
+}
+
+function abrirDueloPendenteAposLogin(){
+    const codigo = codigoDueloPendente();
+
+    if(!codigo || !auth.currentUser){
+        return false;
+    }
+
+    localStorage.setItem("farol_telaAtual", "duelos");
+
+    mostrarTela("duelos");
+    prepararSelectDuelo();
+    carregarMeusDuelos();
+    preencherConviteDueloPendente();
+
+    const campo = document.getElementById("codigoDueloEntrada");
+
+    if(campo){
+        campo.scrollIntoView({ behavior: "smooth", block: "center" });
+        campo.focus();
+    }
+
+    mostrarToast("Código do duelo preenchido automaticamente.");
+
+    return true;
+}
+
+function inicializarConviteDueloComSeguranca(){
+    const codigo = capturarConviteDueloDaURL();
+
+    if(codigo){
+        localStorage.setItem("farol_telaAtual", "duelos");
+        localStorage.setItem("farol_forcar_duelos", "true");
+    }
+
+    return codigo;
+}
+
+function deveAbrirDuelosPorConvite(){
+    return !!codigoDueloPendente()
+        || localStorage.getItem("farol_forcar_duelos") === "true";
+}
+
 const gruposDuelo = [
     {
         disciplina: "informatica",
@@ -7636,10 +7934,33 @@ const gruposDuelo = [
         disciplina: "historia",
         nome: "📜 História",
         assuntos: [
+            { chave: "fundamentosEnsinoHistoria", nome: "📚 Fundamentos do Ensino de História" },
+            { chave: "cienciaHistoricaOficioHistoriador", nome: "🔎 Ciência Histórica e Ofício do Historiador" },
+            { chave: "formacaoSocialCulturalBrasileira", nome: "🧬 Formação Social e Cultural Brasileira" },
             { chave: "povosPreColombianos", nome: "🏺 Povos Pré-Colombianos" }
         ]
     }
 ];
+
+function escaparHTMLDuelo(texto){
+    return String(texto || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function assuntosDisponiveisDuelo(grupo){
+    return (grupo.assuntos || []).filter(item => {
+        const banco = bancoQuestoes[item.chave];
+        return Array.isArray(banco) && banco.length > 0;
+    });
+}
+
+function obterGrupoDuelo(disciplina){
+    return gruposDuelo.find(grupo => grupo.disciplina === disciplina) || null;
+}
 
 function obterAssuntoDuelo(chave){
 
@@ -7663,39 +7984,129 @@ function obterAssuntoDuelo(chave){
 }
 
 function prepararSelectDuelo(){
+    renderizarDisciplinasDuelo();
 
-    const select = document.getElementById("dueloAssunto");
+    if(!dueloDisciplinaSelecionada){
+        const primeiroGrupo = gruposDuelo.find(grupo => assuntosDisponiveisDuelo(grupo).length > 0);
+        if(primeiroGrupo){
+            selecionarDisciplinaDuelo(primeiroGrupo.disciplina);
+            return;
+        }
+    }
 
-    if(!select){
+    renderizarTopicosDuelo();
+    atualizarResumoDuelo();
+}
+
+function renderizarDisciplinasDuelo(){
+    const area = document.getElementById("dueloDisciplinas");
+    if(!area){
         return;
     }
 
-    let html = "";
+    const gruposDisponiveis = gruposDuelo.filter(grupo => assuntosDisponiveisDuelo(grupo).length > 0);
 
-    gruposDuelo.forEach(grupo => {
+    area.innerHTML = gruposDisponiveis.map(grupo => `
+        <button
+            class="duelo-opcao-disciplina ${grupo.disciplina === dueloDisciplinaSelecionada ? "selecionado" : ""}"
+            onclick="selecionarDisciplinaDuelo('${grupo.disciplina}')">
+            ${grupo.nome}
+        </button>
+    `).join("") || "Nenhuma disciplina disponível para duelos.";
+}
 
-        const assuntosDisponiveis = grupo.assuntos.filter(item => {
-            const banco = bancoQuestoes[item.chave];
-            return Array.isArray(banco) && banco.length > 0;
-        });
+function selecionarDisciplinaDuelo(disciplina){
+    dueloDisciplinaSelecionada = disciplina;
+    dueloAssuntoSelecionado = "";
 
-        if(assuntosDisponiveis.length === 0){
-            return;
+    const busca = document.getElementById("buscaTopicoDuelo");
+    if(busca){
+        busca.value = "";
+    }
+
+    renderizarDisciplinasDuelo();
+    renderizarTopicosDuelo();
+    atualizarResumoDuelo();
+}
+
+function renderizarTopicosDuelo(){
+    const area = document.getElementById("dueloTopicos");
+    const textoDisciplina = document.getElementById("dueloDisciplinaSelecionadaTexto");
+
+    if(!area){
+        return;
+    }
+
+    const grupo = obterGrupoDuelo(dueloDisciplinaSelecionada);
+
+    if(!grupo){
+        area.innerHTML = "Escolha uma disciplina para listar os tópicos.";
+        if(textoDisciplina){
+            textoDisciplina.innerHTML = "Nenhuma disciplina selecionada.";
         }
+        return;
+    }
 
-        html += `<optgroup label="${grupo.nome}">`;
+    if(textoDisciplina){
+        textoDisciplina.innerHTML = `Disciplina selecionada: <strong>${grupo.nome}</strong>`;
+    }
 
-        assuntosDisponiveis.forEach(item => {
-            html += `
-                <option value="${item.chave}">${item.nome}</option>
-            `;
-        });
+    const termo = ((document.getElementById("buscaTopicoDuelo") || {}).value || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
 
-        html += `</optgroup>`;
+    const assuntos = assuntosDisponiveisDuelo(grupo).filter(item => {
+        if(!termo){
+            return true;
+        }
+        const nomeNormalizado = item.nome
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
+        return nomeNormalizado.includes(termo) || item.chave.toLowerCase().includes(termo);
     });
 
-    select.innerHTML = html || `
-        <option value="">Nenhum banco de questões disponível</option>
+    area.innerHTML = assuntos.map(item => {
+        const total = Array.isArray(bancoQuestoes[item.chave]) ? bancoQuestoes[item.chave].length : 0;
+        return `
+            <button
+                class="duelo-opcao-topico ${item.chave === dueloAssuntoSelecionado ? "selecionado" : ""}"
+                onclick="selecionarAssuntoDuelo('${item.chave}')">
+                <span>${item.nome}</span>
+                <small>${total} questões disponíveis</small>
+            </button>
+        `;
+    }).join("") || "Nenhum tópico encontrado nessa busca.";
+}
+
+function selecionarAssuntoDuelo(chave){
+    dueloAssuntoSelecionado = chave;
+    renderizarTopicosDuelo();
+    atualizarResumoDuelo();
+}
+
+function atualizarResumoDuelo(){
+    const area = document.getElementById("dueloResumoCriacao");
+    if(!area){
+        return;
+    }
+
+    if(!dueloAssuntoSelecionado){
+        area.innerHTML = "Escolha uma disciplina e um tópico para criar o duelo.";
+        return;
+    }
+
+    const assuntoDuelo = obterAssuntoDuelo(dueloAssuntoSelecionado);
+    const quantidade = Number((document.getElementById("dueloQuantidade") || {}).value) || 5;
+    const banco = bancoQuestoes[dueloAssuntoSelecionado] || [];
+    const quantidadeFinal = Math.min(quantidade, banco.length);
+
+    area.innerHTML = `
+        <strong>Duelo selecionado:</strong><br>
+        ${assuntoDuelo.nomeDisciplina}<br>
+        ${assuntoDuelo.nome}<br>
+        ${quantidadeFinal} questão${quantidadeFinal === 1 ? "" : "ões"}
     `;
 }
 
@@ -7710,9 +8121,14 @@ async function criarDuelo(){
         return;
     }
 
-    const assunto = document.getElementById("dueloAssunto").value;
+    const assunto = dueloAssuntoSelecionado || ((document.getElementById("dueloAssunto") || {}).value || "");
     const quantidade = Number(document.getElementById("dueloQuantidade").value) || 5;
     const banco = bancoQuestoes[assunto] || [];
+
+    if(!assunto){
+        mostrarToast("Escolha um tópico para criar o duelo.");
+        return;
+    }
 
     if(banco.length === 0){
         mostrarToast("Banco de questões não encontrado para este assunto.");
@@ -7740,6 +8156,8 @@ async function criarDuelo(){
             criadoPor: auth.currentUser.uid,
             criadoPorNome: usuarioForum || "Aluno",
             criadoEm: Date.now(),
+            cancelado: false,
+            ocultoPara: [],
             uids: [auth.currentUser.uid],
             participantes: {
                 [auth.currentUser.uid]: {
@@ -7752,10 +8170,29 @@ async function criarDuelo(){
             }
         });
 
+    const linkDuelo = montarLinkDuelo(codigo);
+
     document.getElementById("codigoDueloCriado").innerHTML = `
         <div class="duelo-codigo">
-            Sala criada: <strong>${codigo}</strong><br><br>
-            Envie esse código para o colega entrar no desafio.
+            <h3>✅ Duelo criado!</h3>
+            <br>
+            <p><strong>Código:</strong></p>
+            <div class="duelo-codigo-grande">${codigo}</div>
+            <p>${assuntoDuelo.nomeDisciplina} • ${nomeAssunto}</p>
+            <p>${indices.length} questão${indices.length === 1 ? "" : "ões"}</p>
+            <p class="duelo-link"><strong>Link do convite:</strong><br>${linkDuelo}</p>
+            <br>
+            <div class="duelo-botoes-codigo">
+                <button onclick="copiarCodigoDuelo('${codigo}')">
+                    📋 Copiar código
+                </button>
+                <button onclick="copiarLinkDuelo('${codigo}')">
+                    🔗 Copiar link
+                </button>
+                <button onclick="compartilharDuelo('${codigo}')">
+                    📤 Compartilhar convite
+                </button>
+            </div>
         </div>
     `;
 
@@ -7766,7 +8203,11 @@ async function criarDuelo(){
 async function entrarDueloPorCodigo(){
 
     const campo = document.getElementById("codigoDueloEntrada");
-    const codigo = (campo.value || "").trim().toUpperCase();
+    const codigo = normalizarCodigoDuelo(campo.value || "");
+
+    if(campo){
+        campo.value = codigo;
+    }
 
     if(!codigo){
         mostrarToast("Digite o código do duelo.");
@@ -7793,16 +8234,26 @@ async function entrarDuelo(codigo){
 
     const dados = doc.data();
 
+    if(dados.cancelado){
+        mostrarToast("Este duelo foi cancelado pelo criador.");
+        return;
+    }
+
+    const participantesAtuais = dados.participantes || {};
+    const participanteAtual = participantesAtuais[auth.currentUser.uid] || {};
+
     await ref.set({
         uids: firebase.firestore.FieldValue.arrayUnion(auth.currentUser.uid),
+        ocultoPara: firebase.firestore.FieldValue.arrayRemove(auth.currentUser.uid),
         participantes: {
-            ...(dados.participantes || {}),
+            ...participantesAtuais,
             [auth.currentUser.uid]: {
-                nome: usuarioForum || "Aluno",
-                acertos: 0,
-                erros: 0,
-                finalizado: false,
-                entrouEm: Date.now()
+                nome: usuarioForum || participanteAtual.nome || "Aluno",
+                acertos: participanteAtual.acertos || 0,
+                erros: participanteAtual.erros || 0,
+                respostas: participanteAtual.respostas || [],
+                finalizado: !!participanteAtual.finalizado,
+                entrouEm: participanteAtual.entrouEm || Date.now()
             }
         }
     }, { merge: true });
@@ -7817,6 +8268,15 @@ async function entrarDuelo(codigo){
     dueloAcertos = 0;
     dueloErros = 0;
     dueloRespostas = [];
+
+    localStorage.removeItem(CHAVE_DUELO_PENDENTE);
+    atualizarAvisoConviteDuelo();
+
+    const avisoDuelos = document.getElementById("dueloConviteRecebido");
+    if(avisoDuelos){
+        avisoDuelos.style.display = "none";
+        avisoDuelos.innerHTML = "";
+    }
 
     mostrarQuestaoDuelo();
 }
@@ -7838,7 +8298,6 @@ function mostrarQuestaoDuelo(){
             <h2>⚔️ Duelo do Saber</h2>
             <p><strong>Código:</strong> ${dueloAtual.codigo}</p>
             <p><strong>Disciplina:</strong> ${dueloAtual.nomeDisciplina || dueloAtual.disciplina || "Geral"}</p>
-            <p><strong>Disciplina:</strong> ${dueloAtual.nomeDisciplina || dueloAtual.disciplina || "Geral"}</p>
             <p><strong>Assunto:</strong> ${dueloAtual.nomeAssunto || dueloAtual.assunto}</p>
             <br>
             <h3>Questão ${dueloIndiceAtual + 1} de ${dueloQuestoes.length}</h3>
@@ -7847,6 +8306,20 @@ function mostrarQuestaoDuelo(){
             <br><br>
             <strong>${percentual}% concluído</strong>
             <br><br>
+
+            ${q.texto ? `
+                <div class="card texto-base">
+                    <h3>📄 Texto de Apoio</h3>
+                    <br>
+                    <p>${q.texto}</p>
+                </div>
+                <br>
+            ` : ""}
+
+            ${q.imagem ? `
+                <img src="${q.imagem}" class="imagem-questao">
+                <br><br>
+            ` : ""}
 
             ${q.afirmacoes ? `
                 <div class="card texto-base">
@@ -7968,9 +8441,11 @@ async function mostrarResultadoDuelo(codigo){
     const participantes = Object.values(dados.participantes || {});
     const finalizados = participantes.filter(p => p.finalizado);
 
-    let vencedorTexto = "Aguardando o outro participante finalizar.";
+    let vencedorTexto = dados.cancelado
+        ? "Duelo cancelado pelo criador."
+        : "Aguardando o outro participante finalizar.";
 
-    if(finalizados.length >= 2){
+    if(!dados.cancelado && finalizados.length >= 2){
         const ordenado = [...finalizados].sort((a,b) => (b.acertos - a.acertos));
         const vencedor = ordenado[0];
         vencedorTexto = `🏆 Vencedor: ${vencedor.nome} com ${vencedor.acertos} acertos`;
@@ -7983,6 +8458,7 @@ async function mostrarResultadoDuelo(codigo){
             <h2>🏆 Resultado do Duelo</h2>
             <br>
             <p><strong>Código:</strong> ${codigo}</p>
+            <p><strong>Disciplina:</strong> ${dados.nomeDisciplina || dados.disciplina || "Geral"}</p>
             <p><strong>Assunto:</strong> ${dados.nomeAssunto || dados.assunto}</p>
             <br>
             ${participantes.map(p => `
@@ -7994,7 +8470,7 @@ async function mostrarResultadoDuelo(codigo){
             <br>
             <h3>${vencedorTexto}</h3>
             <br>
-            <button onclick="mostrarTela('duelos')">⚔️ Voltar aos Duelos</button>
+            <button onclick="mostrarTela('duelos'); carregarMeusDuelos();">⚔️ Voltar aos Duelos</button>
         </div>
     `;
 }
@@ -8010,21 +8486,76 @@ async function carregarMeusDuelos(){
     try{
         const snapshot = await db.collection("duelos")
             .where("uids", "array-contains", auth.currentUser.uid)
-            .limit(10)
+            .limit(40)
             .get();
 
-        let html = "";
+        const duelos = [];
 
         snapshot.forEach(doc => {
             const dados = doc.data();
+            const ocultoPara = dados.ocultoPara || [];
+            if(ocultoPara.includes(auth.currentUser.uid)){
+                return;
+            }
+            duelos.push(dados);
+        });
+
+        duelos.sort((a,b) => (b.criadoEm || 0) - (a.criadoEm || 0));
+
+        let html = "";
+
+        duelos.forEach(dados => {
+            const participantes = dados.participantes || {};
+            const idsParticipantes = Object.keys(participantes);
+            const meuRegistro = participantes[auth.currentUser.uid] || {};
+            const finalizados = idsParticipantes.filter(uid => participantes[uid] && participantes[uid].finalizado).length;
+            const totalParticipantes = idsParticipantes.length;
+            const criadoPorMim = dados.criadoPor === auth.currentUser.uid;
+            const temOutroParticipante = idsParticipantes.some(uid => uid !== auth.currentUser.uid);
+            const status = dados.cancelado
+                ? "🚫 Cancelado"
+                : (meuRegistro.finalizado ? "✅ Finalizado" : "🟡 Pendente");
+
             html += `
-                <div class="duelo-item">
-                    <strong>${dados.codigo}</strong><br>
-                    ${dados.nomeDisciplina || dados.disciplina || "Geral"}<br>
-                    ${dados.nomeAssunto || dados.assunto}<br><br>
-                    <button onclick="mostrarResultadoDuelo('${dados.codigo}')">
-                        Ver resultado
-                    </button>
+                <div class="duelo-item duelo-item-melhorado">
+                    <div class="duelo-item-topo">
+                        <strong>${escaparHTMLDuelo(dados.codigo)}</strong>
+                        <span>${status}</span>
+                    </div>
+
+                    <div class="duelo-item-info">
+                        <strong>${escaparHTMLDuelo(dados.nomeDisciplina || dados.disciplina || "Geral")}</strong><br>
+                        ${escaparHTMLDuelo(dados.nomeAssunto || dados.assunto)}<br>
+                        ${dados.quantidade || "-"} questões • ${finalizados}/${totalParticipantes} participante(s) finalizaram
+                    </div>
+
+                    <div class="duelo-item-acoes">
+                        ${!dados.cancelado && !meuRegistro.finalizado ? `
+                            <button onclick="entrarDuelo('${dados.codigo}')">
+                                🚀 Entrar/continuar
+                            </button>
+                        ` : ""}
+
+                        <button onclick="mostrarResultadoDuelo('${dados.codigo}')">
+                            👁 Ver resultado
+                        </button>
+
+                        ${!dados.cancelado ? `
+                            <button onclick="compartilharDuelo('${dados.codigo}')">
+                                📤 Compartilhar
+                            </button>
+                        ` : ""}
+
+                        ${criadoPorMim && !temOutroParticipante && !dados.cancelado ? `
+                            <button class="btn-excluir" onclick="cancelarDuelo('${dados.codigo}')">
+                                🗑 Cancelar
+                            </button>
+                        ` : `
+                            <button class="btn-excluir" onclick="arquivarDuelo('${dados.codigo}')">
+                                📦 Ocultar
+                            </button>
+                        `}
+                    </div>
                 </div>
             `;
         });
@@ -8034,5 +8565,181 @@ async function carregarMeusDuelos(){
     catch(erro){
         area.innerHTML = "Não foi possível carregar seus duelos.";
         console.log("Erro nos duelos", erro);
+    }
+}
+
+function montarMensagemDuelo(dados){
+    const nomeCriador = dados.criadoPorNome || usuarioForum || "Um aluno";
+    const link = montarLinkDuelo(dados.codigo);
+
+    return `⚔️ Te desafiei no Duelo do Saber!
+
+${nomeCriador} está te chamando para um desafio de questões no Farol do Saber.
+
+📚 Disciplina: ${dados.nomeDisciplina || dados.disciplina || "Geral"}
+🧠 Assunto: ${dados.nomeAssunto || dados.assunto}
+📝 Questões: ${dados.quantidade || "-"}
+
+🔑 Código do duelo: ${dados.codigo}
+
+Acesse pelo link abaixo. Se ainda não tiver conta, é só criar uma conta e o código ficará preenchido automaticamente:
+${link}
+
+Quem acertar mais vence! 🏆🗼`;
+}
+
+async function copiarCodigoDuelo(codigo){
+    const codigoLimpo = normalizarCodigoDuelo(codigo);
+
+    try{
+        await navigator.clipboard.writeText(codigoLimpo);
+        mostrarToast("Código copiado!");
+    }
+    catch(erro){
+        prompt("Copie o código do duelo:", codigoLimpo);
+    }
+}
+
+async function copiarLinkDuelo(codigo){
+    const link = montarLinkDuelo(codigo);
+
+    try{
+        await navigator.clipboard.writeText(link);
+        mostrarToast("Link do duelo copiado!");
+    }
+    catch(erro){
+        prompt("Copie o link do duelo:", link);
+    }
+}
+
+async function compartilharDuelo(codigo){
+    let mensagem = "";
+
+    try{
+        const doc = await db.collection("duelos").doc(codigo).get();
+        if(!doc.exists){
+            mostrarToast("Duelo não encontrado.");
+            return;
+        }
+
+        const dados = doc.data();
+        mensagem = montarMensagemDuelo(dados);
+    }
+    catch(erro){
+        console.log("Erro ao buscar dados do duelo", erro);
+        mensagem = `⚔️ Te desafiei no Duelo do Saber!
+
+🔑 Código do duelo: ${codigo}
+
+Acesse o Farol do Saber:
+${montarLinkDuelo(codigo)}
+
+Quem acertar mais vence! 🏆🗼`;
+    }
+
+    if(navigator.share){
+        try{
+            await navigator.share({
+                title: "Duelo do Saber",
+                text: mensagem
+            });
+            return;
+        }
+        catch(erro){
+            if(erro && erro.name === "AbortError"){
+                return;
+            }
+            console.log("Compartilhamento nativo não funcionou, usando fallback.", erro);
+        }
+    }
+
+    if(navigator.clipboard && window.isSecureContext){
+        try{
+            await navigator.clipboard.writeText(mensagem);
+            mostrarToast("Convite copiado. Agora cole no WhatsApp.");
+            return;
+        }
+        catch(erro){
+            console.log("Clipboard não funcionou, usando prompt.", erro);
+        }
+    }
+
+    prompt("Copie o convite do duelo:", mensagem);
+}
+
+async function cancelarDuelo(codigo){
+    if(!auth.currentUser){
+        mostrarToast("Faça login para cancelar o duelo.");
+        return;
+    }
+
+    const confirmar = confirm("Deseja cancelar este duelo? Ele será removido da sua lista.");
+    if(!confirmar){
+        return;
+    }
+
+    try{
+        const ref = db.collection("duelos").doc(codigo);
+        const doc = await ref.get();
+
+        if(!doc.exists){
+            mostrarToast("Duelo não encontrado.");
+            return;
+        }
+
+        const dados = doc.data();
+        const participantes = dados.participantes || {};
+        const temOutroParticipante = Object.keys(participantes).some(uid => uid !== auth.currentUser.uid);
+
+        if(dados.criadoPor !== auth.currentUser.uid){
+            mostrarToast("Você só pode cancelar duelos criados por você.");
+            return;
+        }
+
+        if(temOutroParticipante){
+            mostrarToast("Outro aluno já entrou nesse duelo. Vou apenas ocultar da sua lista.");
+            await arquivarDuelo(codigo);
+            return;
+        }
+
+        await ref.update({
+            cancelado: true,
+            canceladoPor: auth.currentUser.uid,
+            canceladoEm: Date.now(),
+            ocultoPara: firebase.firestore.FieldValue.arrayUnion(auth.currentUser.uid)
+        });
+
+        mostrarToast("Duelo cancelado e removido da sua lista.");
+        carregarMeusDuelos();
+    }
+    catch(erro){
+        console.log("Erro ao cancelar duelo", erro);
+        mostrarToast("Não foi possível cancelar o duelo.");
+    }
+}
+
+async function arquivarDuelo(codigo){
+    if(!auth.currentUser){
+        return;
+    }
+
+    const confirmar = confirm("Deseja ocultar este duelo da sua lista?");
+    if(!confirmar){
+        return;
+    }
+
+    try{
+        await db.collection("duelos")
+            .doc(codigo)
+            .update({
+                ocultoPara: firebase.firestore.FieldValue.arrayUnion(auth.currentUser.uid)
+            });
+
+        mostrarToast("Duelo ocultado da sua lista.");
+        carregarMeusDuelos();
+    }
+    catch(erro){
+        console.log("Erro ao ocultar duelo", erro);
+        mostrarToast("Não foi possível ocultar o duelo.");
     }
 }
