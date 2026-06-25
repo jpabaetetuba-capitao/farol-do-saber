@@ -393,7 +393,7 @@ Patrimônio não é só prédio; envolve também práticas, memórias e disputas
 pergunta: "Uma alternativa de prova afirma que o bom ensino de História deve apresentar o passado de modo neutro, sem controvérsias, para evitar divergências em sala. Essa afirmação é inadequada porque:",
 
 alternativas: [
-    "a História escolar deve tratar conflitos e interpretações com mediação, fontes e rigor conceitual.",
+    "a História escolar deve tratar conflitos e interpretações com mediação, fontes e rigor.",
     "todo ensino histórico precisa defender uma única opinião do professor, ainda que sem documentação.",
     "assuntos controversos devem ser retirados do currículo, pois dificultam a memorização dos alunos.",
     "a neutralidade é garantida quando o professor utiliza apenas o livro didático adotado pela escola.",

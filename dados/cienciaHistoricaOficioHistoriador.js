@@ -81,10 +81,10 @@ Fonte oficial também tem interesses, linguagem e silêncios.
 pergunta: "Um estudante afirma que fonte histórica é somente documento escrito antigo. A resposta mais adequada do professor é explicar que fontes históricas são:",
 
 alternativas: [
-    "registros escritos do Estado, pois apenas arquivos oficiais permitem investigação científica segura.",
+    "registros escritos do Estado, pois apenas arquivos oficiais permitiriam investigação científica realmente segura.",
     "materiais antigos preservados em museus, desde que não tenham relação com grupos populares.",
     "lembranças pessoais sem necessidade de crítica, já que toda memória equivale à verdade histórica.",
-    "vestígios diversos da experiência humana, como textos, imagens, objetos, relatos, músicas e lugares.",
+    "vestígios da experiência humana, como textos, imagens, objetos, relatos, músicas e lugares.",
     "textos historiográficos recentes, pois documentos do passado não podem ser analisados diretamente.",
 ],
 
@@ -185,9 +185,9 @@ Objeto da História é amplo: sociedades humanas no tempo, em múltiplas dimens�
 pergunta: "Uma banca apresenta a frase: 'o historiador reconstrói o passado tal como aconteceu'. O problema dessa afirmação está em ignorar que o conhecimento histórico:",
 
 alternativas: [
-    "depende somente da imaginação do pesquisador, pois o passado não deixou vestígios confiáveis.",
+    "depende somente da imaginação do pesquisador, pois o passado não teria deixado vestígios confiáveis.",
     "reproduz integralmente os fatos quando utiliza documentos oficiais e linguagem neutra.",
-    "é reconstrução interpretativa baseada em vestígios, perguntas, métodos e limites documentais.",
+    "é reconstrução interpretativa baseada em vestígios, problemas, métodos e limites documentais.",
     "deve evitar perguntas de pesquisa, pois elas distorcem o significado original dos documentos.",
     "alcança certeza absoluta quando reúne muitas fontes sobre o mesmo acontecimento.",
 ],
@@ -523,8 +523,8 @@ Comparar não é somar verdades; é analisar posições, interesses e contextos.
 pergunta: "Uma questão afirma que a História se tornou ciência quando passou a usar método crítico. Essa afirmação deve ser entendida como referência à necessidade de:",
 
 alternativas: [
-    "investigar evidências com procedimentos de crítica, comparação, contextualização e argumentação.",
-    "imitar as ciências naturais, buscando leis universais capazes de prever todos os acontecimentos.",
+    "investigar evidências por crítica, comparação, contextualização e argumentação histórica.",
+    "imitar as ciências naturais, buscando leis universais capazes de prever todos os acontecimentos humanos.",
     "eliminar interpretação, pois ciência histórica deve apenas acumular fatos em ordem cronológica.",
     "tratar documentos oficiais como provas absolutas, dispensando hipóteses e problemas de pesquisa.",
     "substituir fontes por teorias gerais, já que o método torna desnecessário consultar documentos.",
@@ -1092,12 +1092,12 @@ Biografia histórica exige contexto, não culto ao personagem.
 },
 
 {
-pergunta: "Em uma pesquisa sobre educação, a historiadora usa leis, cadernos escolares, fotografias, memórias docentes e relatórios administrativos. Essa variedade de fontes permite:",
+pergunta: "Na pesquisa sobre educação, a historiadora usa leis, cadernos escolares, fotografias, memórias docentes e relatórios administrativos. Essa variedade de fontes permite:",
 
 alternativas: [
     "reduzir a escola às leis educacionais, pois a norma revela exatamente o cotidiano das salas.",
-    "descartar memórias docentes, já que experiências pessoais não participam da história escolar.",
-    "articular normas oficiais, práticas escolares e experiências vividas por diferentes sujeitos.",
+    "descartar memórias docentes, já que experiências pessoais não participariam da história escolar.",
+    "articular normas oficiais, práticas escolares e experiências de diferentes sujeitos.",
     "tratar fotografias como documentos neutros, sem analisar enquadramento e finalidade.",
     "evitar contradições, pois fontes variadas confundem a compreensão do processo histórico.",
 ],
