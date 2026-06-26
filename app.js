@@ -657,11 +657,19 @@ const bancoQuestoes = {
 
     cienciaHistoricaOficioHistoriador,
 
+    povosPreColombianos,
+
     formacaoSocialCulturalBrasileira,
 
     estadosModernosApropriacaoAmerica,
 
-    povosPreColombianos,
+    mercantilismoColonizacaoAmerica,
+
+    brasilColonialSociedadeEconomiaResistencias,
+
+    administracaoAmericaLusitanaColonial,
+
+    expansaoFronteirasAmericaPortuguesa,
 
     
     
@@ -1266,7 +1274,77 @@ function concluirTeoria(){
 
 }
 
+
+function configurarMapaMentalAtual(){
+
+    const titulo =
+        document.getElementById("tituloMapa");
+
+    const imagem =
+        document.getElementById("imagemMapa");
+
+    if(!titulo || !imagem){
+        return;
+    }
+
+    const mapasHistoria = {
+        fundamentosEnsinoHistoria: {
+            titulo: "📚 Fundamentos do Ensino de História",
+            imagem: "imagens/mapas/fundamentosEnsinoHistoria.png"
+        },
+        cienciaHistoricaOficioHistoriador: {
+            titulo: "🔎 Ciência Histórica e Ofício do Historiador",
+            imagem: "imagens/mapas/cienciaHistoricaOficioHistoriador.png"
+        },
+        povosPreColombianos: {
+            titulo: "🏺 Povos Pré-Colombianos",
+            imagem: "imagens/mapas/povosPreColombianos.png"
+        },
+        formacaoSocialCulturalBrasileira: {
+            titulo: "🧬 Formação Social e Cultural Brasileira",
+            imagem: "imagens/mapas/formacaoSocialCulturalBrasileira.png"
+        },
+        estadosModernosApropriacaoAmerica: {
+            titulo: "🏛️ Estados Modernos e Apropriação da América",
+            imagem: "imagens/mapas/estadosModernosApropriacaoAmerica.png"
+        },
+        mercantilismoColonizacaoAmerica: {
+            titulo: "💰 Mercantilismo e Colonização da América",
+            imagem: "imagens/mapas/mercantilismoColonizacaoAmerica.png"
+        },
+        brasilColonialSociedadeEconomiaResistencias: {
+            titulo: "🌾 Brasil Colonial: Sociedade, Economia e Resistências",
+            imagem: "imagens/mapas/brasilColonialSociedadeEconomiaResistencias.png"
+        },
+        administracaoAmericaLusitanaColonial: {
+            titulo: "🏛️ Administração da América Lusitana Colonial",
+            imagem: "imagens/mapas/administracaoAmericaLusitanaColonial.png"
+        },
+        expansaoFronteirasAmericaPortuguesa: {
+            titulo: "🗺️ Expansão das Fronteiras da América Portuguesa",
+            imagem: "imagens/mapas/expansaoFronteirasAmericaPortuguesa.png"
+        },
+        administracaoAmericaLusitanaColonial: {
+            titulo: "🏛️ Administração da América Lusitana Colonial",
+            imagem: "imagens/mapas/administracaoAmericaLusitanaColonial.png"
+        },
+        expansaoFronteirasAmericaPortuguesa: {
+            titulo: "🗺️ Expansão das Fronteiras da América Portuguesa",
+            imagem: "imagens/mapas/expansaoFronteirasAmericaPortuguesa.png"
+        }
+    };
+
+    if(mapasHistoria[assuntoAtual]){
+        titulo.innerHTML = mapasHistoria[assuntoAtual].titulo;
+        imagem.src = mapasHistoria[assuntoAtual].imagem;
+    }
+
+}
+
+
 function abrirMapaMental(){
+
+    configurarMapaMentalAtual();
 
     mostrarTela("telaMapaMental");
 
@@ -1590,9 +1668,13 @@ errosAssunto++;
     lgpd: "🛡️ Lei Geral de Proteção de Dados",
     fundamentosEnsinoHistoria: "📚 Fundamentos do Ensino de História",
     cienciaHistoricaOficioHistoriador: "🔎 Ciência Histórica e Ofício do Historiador",
+    povosPreColombianos: "🏺 Povos Pré-Colombianos",
     formacaoSocialCulturalBrasileira: "🧬 Formação Social e Cultural Brasileira",
     estadosModernosApropriacaoAmerica: "🏛️ Estados Modernos e Apropriação da América",
-    povosPreColombianos: "🏺 Povos Pré-Colombianos",
+    mercantilismoColonizacaoAmerica: "💰 Mercantilismo e Colonização da América",
+    brasilColonialSociedadeEconomiaResistencias: "🌾 Brasil Colonial: Sociedade, Economia e Resistências",
+    administracaoAmericaLusitanaColonial: "🏛️ Administração da América Lusitana Colonial",
+    expansaoFronteirasAmericaPortuguesa: "🗺️ Expansão das Fronteiras da América Portuguesa",
     apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
     apoioLDB: "📘 LDB e Bases da Educação Nacional",
     apoioECA: "🧒 ECA e Proteção Integral",
@@ -2629,6 +2711,30 @@ function iniciarSimuladoCiencias(){
 
 }
 
+function iniciarSimuladoHistoria(){
+
+    const historia = [
+
+        ...fundamentosEnsinoHistoria,
+        ...cienciaHistoricaOficioHistoriador,
+        ...povosPreColombianos,
+        ...formacaoSocialCulturalBrasileira,
+        ...estadosModernosApropriacaoAmerica,
+        ...mercantilismoColonizacaoAmerica,
+        ...brasilColonialSociedadeEconomiaResistencias,
+        ...administracaoAmericaLusitanaColonial,
+        ...expansaoFronteirasAmericaPortuguesa
+
+    ];
+
+    iniciarSimuladoPersonalizado(
+        historia,
+        30,
+        "historia"
+    );
+
+}
+
 function iniciarSimuladoPortugues(){
 
     const portugues = [
@@ -2738,27 +2844,6 @@ function iniciarSimuladoDidatica(){
 
 }
 
-
-function iniciarSimuladoHistoria(){
-
-    const historia = [
-
-        ...fundamentosEnsinoHistoria,
-        ...cienciaHistoricaOficioHistoriador,
-        ...povosPreColombianos,
-        ...formacaoSocialCulturalBrasileira,
-        ...estadosModernosApropriacaoAmerica
-
-    ];
-
-    iniciarSimuladoPersonalizado(
-        historia,
-        30,
-        "historia"
-    );
-
-}
-
 function iniciarSimuladoApoioEscolar(){
 
     const apoioEscolar = [
@@ -2793,6 +2878,71 @@ function iniciarSimuladoApoioEscolar(){
 function abrirAssunto(assunto) {
 
     assuntoAtual = assunto;
+
+
+    // ===== CORREÇÃO HISTÓRIA: abrir teoria primeiro ao clicar no tópico =====
+    // Mantém o fluxo padrão: Tópico -> Teoria -> Mapa Mental -> Questões.
+    const teoriasHistoriaPorAssunto = {
+        fundamentosEnsinoHistoria: {
+            teoria: typeof fundamentosEnsinoHistoriaTeoria !== "undefined" ? fundamentosEnsinoHistoriaTeoria : null,
+            titulo: "📚 Fundamentos do Ensino de História"
+        },
+        cienciaHistoricaOficioHistoriador: {
+            teoria: typeof cienciaHistoricaOficioHistoriadorTeoria !== "undefined" ? cienciaHistoricaOficioHistoriadorTeoria : null,
+            titulo: "🔎 Ciência Histórica e Ofício do Historiador"
+        },
+        povosPreColombianos: {
+            teoria: typeof povosPreColombianosTeoria !== "undefined" ? povosPreColombianosTeoria : null,
+            titulo: "🏺 Povos Pré-Colombianos"
+        },
+        formacaoSocialCulturalBrasileira: {
+            teoria: typeof formacaoSocialCulturalBrasileiraTeoria !== "undefined" ? formacaoSocialCulturalBrasileiraTeoria : null,
+            titulo: "🧬 Formação Social e Cultural Brasileira"
+        },
+        estadosModernosApropriacaoAmerica: {
+            teoria: typeof estadosModernosApropriacaoAmericaTeoria !== "undefined" ? estadosModernosApropriacaoAmericaTeoria : null,
+            titulo: "🏛️ Estados Modernos e Apropriação da América"
+        },
+        mercantilismoColonizacaoAmerica: {
+            teoria: typeof mercantilismoColonizacaoAmericaTeoria !== "undefined" ? mercantilismoColonizacaoAmericaTeoria : null,
+            titulo: "💰 Mercantilismo e Colonização da América"
+        },
+        brasilColonialSociedadeEconomiaResistencias: {
+            teoria: typeof brasilColonialSociedadeEconomiaResistenciasTeoria !== "undefined" ? brasilColonialSociedadeEconomiaResistenciasTeoria : null,
+            titulo: "🌾 Brasil Colonial: Sociedade, Economia e Resistências"
+        },
+        administracaoAmericaLusitanaColonial: {
+            teoria: typeof administracaoAmericaLusitanaColonialTeoria !== "undefined" ? administracaoAmericaLusitanaColonialTeoria : null,
+            titulo: "🏛️ Administração da América Lusitana Colonial"
+        },
+        expansaoFronteirasAmericaPortuguesa: {
+            teoria: typeof expansaoFronteirasAmericaPortuguesaTeoria !== "undefined" ? expansaoFronteirasAmericaPortuguesaTeoria : null,
+            titulo: "🗺️ Expansão das Fronteiras da América Portuguesa"
+        },
+        administracaoAmericaLusitanaColonial: {
+            teoria: typeof administracaoAmericaLusitanaColonialTeoria !== "undefined" ? administracaoAmericaLusitanaColonialTeoria : null,
+            titulo: "🏛️ Administração da América Lusitana Colonial"
+        },
+        expansaoFronteirasAmericaPortuguesa: {
+            teoria: typeof expansaoFronteirasAmericaPortuguesaTeoria !== "undefined" ? expansaoFronteirasAmericaPortuguesaTeoria : null,
+            titulo: "🗺️ Expansão das Fronteiras da América Portuguesa"
+        }
+    };
+
+    if (teoriasHistoriaPorAssunto[assunto]) {
+        const itemTeoriaHistoria = teoriasHistoriaPorAssunto[assunto];
+
+        if (Array.isArray(itemTeoriaHistoria.teoria) && itemTeoriaHistoria.teoria.length > 0) {
+            abrirTeoria(
+                itemTeoriaHistoria.teoria,
+                itemTeoriaHistoria.titulo
+            );
+            return;
+        }
+
+        mostrarToast("Teoria não encontrada. Verifique se o arquivo de teoria foi enviado.");
+        return;
+    }
 
 console.log("Assunto:", assunto);
 console.log("Progresso:", progressoAssuntos);
@@ -3493,6 +3643,16 @@ case "cienciaHistoricaOficioHistoriador":
     break;
 
 
+case "povosPreColombianos":
+
+    titulo.innerHTML =
+        "🏺 Povos Pré-Colombianos";
+
+    imagem.src =
+        "imagens/mapas/povosPreColombianos.png";
+
+    break;
+
 case "formacaoSocialCulturalBrasileira":
 
     titulo.innerHTML =
@@ -3513,13 +3673,23 @@ case "estadosModernosApropriacaoAmerica":
 
     break;
 
-case "povosPreColombianos":
+case "mercantilismoColonizacaoAmerica":
 
     titulo.innerHTML =
-        "🏺 Povos Pré-Colombianos";
+        "💰 Mercantilismo e Colonização da América";
 
     imagem.src =
-        "imagens/mapas/povosPreColombianos.png";
+        "imagens/mapas/mercantilismoColonizacaoAmerica.png";
+
+    break;
+
+case "brasilColonialSociedadeEconomiaResistencias":
+
+    titulo.innerHTML =
+        "🌾 Brasil Colonial: Sociedade, Economia e Resistências";
+
+    imagem.src =
+        "imagens/mapas/brasilColonialSociedadeEconomiaResistencias.png";
 
     break;
 
@@ -4159,26 +4329,6 @@ if (assuntoAtual === "cienciaHistoricaOficioHistoriador") {
     return;
 }
 
-if (assuntoAtual === "formacaoSocialCulturalBrasileira") {
-
-    abrirTeoria(
-        formacaoSocialCulturalBrasileiraTeoria,
-        "🧬 Formação Social e Cultural Brasileira"
-    );
-
-    return;
-}
-
-if (assuntoAtual === "estadosModernosApropriacaoAmerica") {
-
-    abrirTeoria(
-        estadosModernosApropriacaoAmericaTeoria,
-        "🏛️ Estados Modernos e Apropriação da América"
-    );
-
-    return;
-}
-
 if (assuntoAtual === "povosPreColombianos") {
 
     abrirTeoria(
@@ -4501,14 +4651,44 @@ function voltarParaMapa(){
             "imagemMapa"
         );
 
-    if(assuntoAtual === "fundamentosCiencias"){
+    const mapas = {
+        fundamentosCiencias: {
+            titulo: "🔬 Fundamentos do Ensino de Ciências",
+            imagem: "imagens/mapas/fundamentos-ciencias.png"
+        },
+        fundamentosEnsinoHistoria: {
+            titulo: "📚 Fundamentos do Ensino de História",
+            imagem: "imagens/mapas/fundamentosEnsinoHistoria.png"
+        },
+        cienciaHistoricaOficioHistoriador: {
+            titulo: "🔎 Ciência Histórica e Ofício do Historiador",
+            imagem: "imagens/mapas/cienciaHistoricaOficioHistoriador.png"
+        },
+        povosPreColombianos: {
+            titulo: "🏺 Povos Pré-Colombianos",
+            imagem: "imagens/mapas/povosPreColombianos.png"
+        },
+        formacaoSocialCulturalBrasileira: {
+            titulo: "🧬 Formação Social e Cultural Brasileira",
+            imagem: "imagens/mapas/formacaoSocialCulturalBrasileira.png"
+        },
+        estadosModernosApropriacaoAmerica: {
+            titulo: "🏛️ Estados Modernos e Apropriação da América",
+            imagem: "imagens/mapas/estadosModernosApropriacaoAmerica.png"
+        },
+        mercantilismoColonizacaoAmerica: {
+            titulo: "💰 Mercantilismo e Colonização da América",
+            imagem: "imagens/mapas/mercantilismoColonizacaoAmerica.png"
+        },
+        brasilColonialSociedadeEconomiaResistencias: {
+            titulo: "🌾 Brasil Colonial: Sociedade, Economia e Resistências",
+            imagem: "imagens/mapas/brasilColonialSociedadeEconomiaResistencias.png"
+        }
+    };
 
-        titulo.innerHTML =
-            "🔬 Fundamentos do Ensino de Ciências";
-
-        imagem.src =
-            "imagens/mapas/fundamentos-ciencias.png";
-
+    if(mapas[assuntoAtual]){
+        titulo.innerHTML = mapas[assuntoAtual].titulo;
+        imagem.src = mapas[assuntoAtual].imagem;
     }
 
     mostrarTela(
@@ -4533,7 +4713,55 @@ function voltarParaTeoria(){
 
 function abrirTeoriaDoAssunto(){
 
-    if(assuntoAtual === "bncc"){
+    
+    // ===== CORREÇÃO HISTÓRIA: botão Teoria dentro das questões =====
+    const teoriasHistoriaBotao = {
+        fundamentosEnsinoHistoria: {
+            teoria: typeof fundamentosEnsinoHistoriaTeoria !== "undefined" ? fundamentosEnsinoHistoriaTeoria : null,
+            titulo: "📚 Fundamentos do Ensino de História"
+        },
+        cienciaHistoricaOficioHistoriador: {
+            teoria: typeof cienciaHistoricaOficioHistoriadorTeoria !== "undefined" ? cienciaHistoricaOficioHistoriadorTeoria : null,
+            titulo: "🔎 Ciência Histórica e Ofício do Historiador"
+        },
+        povosPreColombianos: {
+            teoria: typeof povosPreColombianosTeoria !== "undefined" ? povosPreColombianosTeoria : null,
+            titulo: "🏺 Povos Pré-Colombianos"
+        },
+        formacaoSocialCulturalBrasileira: {
+            teoria: typeof formacaoSocialCulturalBrasileiraTeoria !== "undefined" ? formacaoSocialCulturalBrasileiraTeoria : null,
+            titulo: "🧬 Formação Social e Cultural Brasileira"
+        },
+        estadosModernosApropriacaoAmerica: {
+            teoria: typeof estadosModernosApropriacaoAmericaTeoria !== "undefined" ? estadosModernosApropriacaoAmericaTeoria : null,
+            titulo: "🏛️ Estados Modernos e Apropriação da América"
+        },
+        mercantilismoColonizacaoAmerica: {
+            teoria: typeof mercantilismoColonizacaoAmericaTeoria !== "undefined" ? mercantilismoColonizacaoAmericaTeoria : null,
+            titulo: "💰 Mercantilismo e Colonização da América"
+        },
+        brasilColonialSociedadeEconomiaResistencias: {
+            teoria: typeof brasilColonialSociedadeEconomiaResistenciasTeoria !== "undefined" ? brasilColonialSociedadeEconomiaResistenciasTeoria : null,
+            titulo: "🌾 Brasil Colonial: Sociedade, Economia e Resistências"
+        }
+    };
+
+    if (teoriasHistoriaBotao[assuntoAtual]) {
+        const itemTeoriaBotao = teoriasHistoriaBotao[assuntoAtual];
+
+        if (Array.isArray(itemTeoriaBotao.teoria) && itemTeoriaBotao.teoria.length > 0) {
+            abrirTeoria(
+                itemTeoriaBotao.teoria,
+                itemTeoriaBotao.titulo
+            );
+            return;
+        }
+
+        mostrarToast("Teoria não encontrada. Verifique se o arquivo de teoria foi enviado.");
+        return;
+    }
+
+if(assuntoAtual === "bncc"){
 
         abrirTeoria(
             bnccTeoria,
@@ -5171,6 +5399,17 @@ function abrirTeoriaDoAssunto(){
 
     }
 
+    if(assuntoAtual === "povosPreColombianos"){
+
+        abrirTeoria(
+            povosPreColombianosTeoria,
+            "🏺 Povos Pré-Colombianos"
+        );
+
+        return;
+
+    }
+
     if(assuntoAtual === "formacaoSocialCulturalBrasileira"){
 
         abrirTeoria(
@@ -5193,11 +5432,44 @@ function abrirTeoriaDoAssunto(){
 
     }
 
-    if(assuntoAtual === "povosPreColombianos"){
+    if(assuntoAtual === "mercantilismoColonizacaoAmerica"){
 
         abrirTeoria(
-            povosPreColombianosTeoria,
-            "🏺 Povos Pré-Colombianos"
+            mercantilismoColonizacaoAmericaTeoria,
+            "💰 Mercantilismo e Colonização da América"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "brasilColonialSociedadeEconomiaResistencias"){
+
+        abrirTeoria(
+            brasilColonialSociedadeEconomiaResistenciasTeoria,
+            "🌾 Brasil Colonial: Sociedade, Economia e Resistências"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "administracaoAmericaLusitanaColonial"){
+
+        abrirTeoria(
+            administracaoAmericaLusitanaColonialTeoria,
+            "🏛️ Administração da América Lusitana Colonial"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "expansaoFronteirasAmericaPortuguesa"){
+
+        abrirTeoria(
+            expansaoFronteirasAmericaPortuguesaTeoria,
+            "🗺️ Expansão das Fronteiras da América Portuguesa"
         );
 
         return;
@@ -5403,9 +5675,13 @@ const assuntosCiencias = [
 const assuntosHistoria = [
         "fundamentosEnsinoHistoria",
         "cienciaHistoricaOficioHistoriador",
+        "povosPreColombianos",
         "formacaoSocialCulturalBrasileira",
         "estadosModernosApropriacaoAmerica",
-        "povosPreColombianos",
+        "mercantilismoColonizacaoAmerica",
+        "brasilColonialSociedadeEconomiaResistencias",
+        "administracaoAmericaLusitanaColonial",
+        "expansaoFronteirasAmericaPortuguesa",
     ];
 
 const assuntosApoioEscolar = [
@@ -5527,12 +5803,14 @@ function atualizarPainelEstudos(){
 "📚 Fundamentos do Ensino de História",
         cienciaHistoricaOficioHistoriador:
 "🔎 Ciência Histórica e Ofício do Historiador",
-        formacaoSocialCulturalBrasileira:
-"🧬 Formação Social e Cultural Brasileira",
-        estadosModernosApropriacaoAmerica:
-"🏛️ Estados Modernos e Apropriação da América",
         povosPreColombianos:
 "🏺 Povos Pré-Colombianos",
+    formacaoSocialCulturalBrasileira: "🧬 Formação Social e Cultural Brasileira",
+    estadosModernosApropriacaoAmerica: "🏛️ Estados Modernos e Apropriação da América",
+    mercantilismoColonizacaoAmerica: "💰 Mercantilismo e Colonização da América",
+    brasilColonialSociedadeEconomiaResistencias: "🌾 Brasil Colonial: Sociedade, Economia e Resistências",
+    administracaoAmericaLusitanaColonial: "🏛️ Administração da América Lusitana Colonial",
+    expansaoFronteirasAmericaPortuguesa: "🗺️ Expansão das Fronteiras da América Portuguesa",
         interpretacao: "📖 Interpretação de Textos",
         generos: "📄 Tipologia e Gêneros Textuais",
         funcoes: "📡 Funções da Linguagem",
@@ -7993,9 +8271,13 @@ const gruposDuelo = [
         assuntos: [
             { chave: "fundamentosEnsinoHistoria", nome: "📚 Fundamentos do Ensino de História" },
             { chave: "cienciaHistoricaOficioHistoriador", nome: "🔎 Ciência Histórica e Ofício do Historiador" },
+            { chave: "povosPreColombianos", nome: "🏺 Povos Pré-Colombianos" },
             { chave: "formacaoSocialCulturalBrasileira", nome: "🧬 Formação Social e Cultural Brasileira" },
             { chave: "estadosModernosApropriacaoAmerica", nome: "🏛️ Estados Modernos e Apropriação da América" },
-            { chave: "povosPreColombianos", nome: "🏺 Povos Pré-Colombianos" }
+            { chave: "mercantilismoColonizacaoAmerica", nome: "💰 Mercantilismo e Colonização da América" },
+            { chave: "brasilColonialSociedadeEconomiaResistencias", nome: "🌾 Brasil Colonial: Sociedade, Economia e Resistências" },
+            { chave: "administracaoAmericaLusitanaColonial", nome: "🏛️ Administração da América Lusitana Colonial" },
+            { chave: "expansaoFronteirasAmericaPortuguesa", nome: "🗺️ Expansão das Fronteiras da América Portuguesa" }
         ]
     }
 ];
@@ -8496,118 +8778,17 @@ async function mostrarResultadoDuelo(codigo){
     }
 
     const dados = doc.data();
-    const participantesObj = dados.participantes || {};
-    const participantes = Object.entries(participantesObj).map(([uid, dadosParticipante]) => ({
-        uid: uid,
-        ...dadosParticipante
-    }));
+    const participantes = Object.values(dados.participantes || {});
     const finalizados = participantes.filter(p => p.finalizado);
-    const quantidadeQuestoes = Number(dados.quantidade || (dados.indices || []).length || 0);
 
     let vencedorTexto = dados.cancelado
         ? "Duelo cancelado pelo criador."
         : "Aguardando o outro participante finalizar.";
 
-    let pontuacaoDueloHTML = "";
-
     if(!dados.cancelado && finalizados.length >= 2){
-        const maiorPontuacao = Math.max(...finalizados.map(p => Number(p.acertos || 0)));
-        const vencedores = finalizados.filter(p => Number(p.acertos || 0) === maiorPontuacao);
-
-        if(vencedores.length > 1){
-            vencedorTexto = `🤝 Empate: ${vencedores.map(p => p.nome).join(" e ")} com ${maiorPontuacao} acertos`;
-        }
-        else{
-            const vencedor = vencedores[0];
-            vencedorTexto = `🏆 Vencedor: ${vencedor.nome} com ${vencedor.acertos} acertos`;
-        }
-
-        if(auth.currentUser){
-            const uidAtual = auth.currentUser.uid;
-            const participanteAtual = participantes.find(p => p.uid === uidAtual && p.finalizado);
-
-            if(participanteAtual){
-                const mensagensPontuacao = [];
-                const chaveParticipacao = "duelo-participacao:" + codigo + ":" + uidAtual;
-
-                if(pontosLuzGerados[chaveParticipacao]){
-                    mensagensPontuacao.push("⭐ +20 Pontos de Luz por participar");
-                }
-
-                const usuarioEstaEntreVencedores = vencedores.some(p => p.uid === uidAtual);
-
-                if(usuarioEstaEntreVencedores && vencedores.length === 1){
-                    const ganhouVitoria = adicionarPontosLuz(
-                        40,
-                        "Vitória em duelo",
-                        "duelo-vitoria:" + codigo + ":" + uidAtual
-                    );
-
-                    mensagensPontuacao.push(
-                        ganhouVitoria
-                        ? "🥇 +40 Pontos de Luz pela vitória"
-                        : "🥇 Bônus de vitória já registrado"
-                    );
-
-                    mostrarToast("🏆 Você venceu o duelo! +40 Pontos de Luz");
-                }
-                else if(usuarioEstaEntreVencedores && vencedores.length > 1){
-                    const ganhouEmpate = adicionarPontosLuz(
-                        20,
-                        "Empate em duelo",
-                        "duelo-empate:" + codigo + ":" + uidAtual
-                    );
-
-                    mensagensPontuacao.push(
-                        ganhouEmpate
-                        ? "🤝 +20 Pontos de Luz pelo empate"
-                        : "🤝 Bônus de empate já registrado"
-                    );
-
-                    mostrarToast("🤝 Duelo empatado! +20 Pontos de Luz");
-                }
-
-                if(quantidadeQuestoes > 0 && Number(participanteAtual.acertos || 0) === quantidadeQuestoes){
-                    const ganhouGabarito = adicionarPontosLuz(
-                        30,
-                        "100% de acerto no duelo",
-                        "duelo-gabarito:" + codigo + ":" + uidAtual
-                    );
-
-                    mensagensPontuacao.push(
-                        ganhouGabarito
-                        ? "🏆 +30 Pontos de Luz por gabaritar o duelo"
-                        : "🏆 Bônus de 100% já registrado"
-                    );
-                }
-
-                if(mensagensPontuacao.length > 0){
-                    pontuacaoDueloHTML = `
-                        <div class="pontos-luz-box">
-                            <strong>⭐ Pontuação deste duelo:</strong><br><br>
-                            ${mensagensPontuacao.join("<br>")}
-                        </div>
-                        <br>
-                    `;
-                }
-            }
-        }
-    }
-    else if(!dados.cancelado && auth.currentUser){
-        const uidAtual = auth.currentUser.uid;
-        const participanteAtual = participantes.find(p => p.uid === uidAtual && p.finalizado);
-        const chaveParticipacao = "duelo-participacao:" + codigo + ":" + uidAtual;
-
-        if(participanteAtual && pontosLuzGerados[chaveParticipacao]){
-            pontuacaoDueloHTML = `
-                <div class="pontos-luz-box">
-                    <strong>⭐ Pontuação deste duelo:</strong><br><br>
-                    ⭐ +20 Pontos de Luz por participar<br>
-                    Aguarde o outro participante finalizar para saber se haverá bônus de vitória.
-                </div>
-                <br>
-            `;
-        }
+        const ordenado = [...finalizados].sort((a,b) => (b.acertos - a.acertos));
+        const vencedor = ordenado[0];
+        vencedorTexto = `🏆 Vencedor: ${vencedor.nome} com ${vencedor.acertos} acertos`;
     }
 
     mostrarTela("resolverQuestao");
@@ -8629,7 +8810,6 @@ async function mostrarResultadoDuelo(codigo){
             <br>
             <h3>${vencedorTexto}</h3>
             <br>
-            ${pontuacaoDueloHTML}
             <button onclick="mostrarTela('duelos'); carregarMeusDuelos();">⚔️ Voltar aos Duelos</button>
         </div>
     `;
@@ -8728,13 +8908,8 @@ async function carregarMeusDuelos(){
     }
 }
 
-function primeiroNomeDuelo(nome){
-    const texto = String(nome || "Aluno").trim();
-    return texto.split(/\s+/)[0] || "Aluno";
-}
-
 function montarMensagemDuelo(dados){
-    const nomeCriador = primeiroNomeDuelo(dados.criadoPorNome || usuarioForum || "Um aluno");
+    const nomeCriador = dados.criadoPorNome || usuarioForum || "Um aluno";
     const link = montarLinkDuelo(dados.codigo);
 
     return `⚔️ Te desafiei no Duelo do Saber!
