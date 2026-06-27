@@ -4807,17 +4807,39 @@ function iniciarQuestoesAssunto() {
         ? bancoQuestoes[disciplinaAtual].length
         : 0;
 
-    const progresso =
-        progressoAssuntos[disciplinaAtual] || 0;
-
-    if(progresso > 0 && progresso < total){
-        continuarQuestoes();
+    if(total === 0){
+        mostrarToast("Banco de questões não encontrado para este assunto.");
         return;
     }
 
-    if(progresso >= total && total > 0){
-        mostrarToast("Este assunto já foi concluído. Use Refazer Assunto para começar novamente.");
-        return;
+    const progresso =
+        progressoAssuntos[disciplinaAtual] || 0;
+
+    // Iniciar Questões agora tem função própria:
+    // começa o assunto do zero, em vez de chamar continuarQuestoes().
+    if(progresso > 0 && progresso < total){
+
+        const confirmar = confirm(
+            "Você já tem progresso salvo neste assunto. Deseja iniciar do zero?\n\nOK = iniciar do zero\nCancelar = manter o progresso e usar Continuar de Onde Parei"
+        );
+
+        if(!confirmar){
+            mostrarToast("Progresso mantido. Use Continuar de Onde Parei.");
+            return;
+        }
+
+    }
+
+    if(progresso >= total){
+
+        const confirmar = confirm(
+            "Este assunto já foi concluído. Deseja refazer desde a primeira questão?"
+        );
+
+        if(!confirmar){
+            return;
+        }
+
     }
 
     acertosAssunto = 0;
@@ -4827,11 +4849,17 @@ function iniciarQuestoesAssunto() {
 
     progressoAssuntos[disciplinaAtual] = 0;
 
+    localStorage.removeItem(
+        chaveOrdemQuestoes(disciplinaAtual)
+    );
+
     if(!prepararQuestoesDoAssunto(true)){
         return;
     }
 
     salvarDados();
+
+    atualizarBotaoContinuarQuestoes();
 
     mostrarTela("resolverQuestao");
 
