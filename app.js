@@ -5,15 +5,27 @@
 // TROCA DE TELAS
 function mostrarTela(id) {
 
-atualizarStatusAssuntos();
+if(typeof atualizarStatusAssuntos === "function"){
+    atualizarStatusAssuntos();
+}
 
-atualizarAtividade();
+if(typeof atualizarAtividade === "function"){
+    atualizarAtividade();
+}
 
     document.querySelectorAll(".tela").forEach(tela => {
         tela.classList.remove("ativa");
     });
 
-    document.getElementById(id).classList.add("ativa");
+    const telaDestino = document.getElementById(id);
+
+    if(!telaDestino){
+        console.warn("Tela não encontrada:", id);
+        return;
+    }
+
+    telaDestino.classList.add("ativa");
+
 if(id === "cadastro"){
 
     document.getElementById("login").style.display = "none";
@@ -35,13 +47,25 @@ if(id === "login"){
 
     if(id === "questoes"){
 
-        document.getElementById(
-            "areaQuestao"
-        ).innerHTML = "";
+        const areaQuestao =
+            document.getElementById("areaQuestao");
+
+        if(areaQuestao){
+            areaQuestao.innerHTML = "";
+        }
 
     }
 
+    if(id === "telaMapaMental"){
+        atualizarBotaoContinuarQuestoes();
+    }
+
+    if(id === "resolverQuestao"){
+        setTimeout(restaurarQuestaoAoAbrirTela, 0);
+    }
+
 }
+
 
 function abrirForum(disciplina){
 
@@ -1275,6 +1299,313 @@ function concluirTeoria(){
 }
 
 
+const mapasMentaisPorAssunto = {
+    "apoioOrganizacaoEducacao": {
+        "titulo": "🏫 Organização da Educação Básica",
+        "imagem": "imagens/mapas/ApoioOrganizacaoEducacao.png"
+    },
+    "apoioLDB": {
+        "titulo": "📘 LDB e Bases da Educação Nacional",
+        "imagem": "imagens/mapas/ApoioLDB.png"
+    },
+    "apoioECA": {
+        "titulo": "🧒 ECA e Proteção Integral",
+        "imagem": "imagens/mapas/ApoioECA.png"
+    },
+    "apoioLBI": {
+        "titulo": "♿ LBI e Inclusão da Pessoa com Deficiência",
+        "imagem": "imagens/mapas/ApoioLBI.png"
+    },
+    "apoioTEA": {
+        "titulo": "🧩 Política Nacional do TEA",
+        "imagem": "imagens/mapas/ApoioTEA.png"
+    },
+    "apoioPoliticaEducacaoEspecial": {
+        "titulo": "🌐 Política Nacional de Educação Especial Inclusiva",
+        "imagem": "imagens/mapas/ApoioPoliticaEducacaoEspecial.png"
+    },
+    "apoioBNCCDiretrizes": {
+        "titulo": "📚 Diretrizes Curriculares e BNCC",
+        "imagem": "imagens/mapas/ApoioBNCCDiretrizes.png"
+    },
+    "apoioEducacaoInclusiva": {
+        "titulo": "🤝 Educação Especial na Perspectiva Inclusiva",
+        "imagem": "imagens/mapas/ApoioEducacaoInclusiva.png"
+    },
+    "apoioPapelProfissional": {
+        "titulo": "👨‍🏫 Papel do Profissional de Apoio Escolar",
+        "imagem": "imagens/mapas/ApoioPapelProfissional.png"
+    },
+    "apoioTrabalhoColaborativo": {
+        "titulo": "🛡️ Trabalho Colaborativo, Ética e Segurança",
+        "imagem": "imagens/mapas/ApoioTrabalhoColaborativo.png"
+    },
+    "bncc": {
+        "titulo": "📘 BNCC",
+        "imagem": "imagens/mapas/bncc.jpg"
+    },
+    "ldb": {
+        "titulo": "📘 LDB",
+        "imagem": "imagens/mapas/ldb.jpg"
+    },
+    "eca": {
+        "titulo": "📘 ECA",
+        "imagem": "imagens/mapas/eca.jpg"
+    },
+    "pne": {
+        "titulo": "📘 PNE",
+        "imagem": "imagens/mapas/pne.jpg"
+    },
+    "fundeb": {
+        "titulo": "📘 FUNDEB",
+        "imagem": "imagens/mapas/fundeb.jpg"
+    },
+    "lbi": {
+        "titulo": "📘 LBI",
+        "imagem": "imagens/mapas/lbi.jpg"
+    },
+    "tea": {
+        "titulo": "📘 TEA",
+        "imagem": "imagens/mapas/tea.jpg"
+    },
+    "inclusiva": {
+        "titulo": "📘 EDUCAÇÃO INCLUSIVA",
+        "imagem": "imagens/mapas/inclusiva.jpg"
+    },
+    "etnicoRacial": {
+        "titulo": "📘 Relações Étnico-Raciais",
+        "imagem": "imagens/mapas/etnicoRacial.jpg"
+    },
+    "educacaoCampo": {
+        "titulo": "📘 Educação do Campo",
+        "imagem": "imagens/mapas/campo.jpg"
+    },
+    "quilombola": {
+        "titulo": "🏘 Quilombola",
+        "imagem": "imagens/mapas/quilombola.png"
+    },
+    "indigena": {
+        "titulo": "🪶 Educação Escolar Indígena",
+        "imagem": "imagens/mapas/indigena.png"
+    },
+    "didatica": {
+        "titulo": "📚 Didática",
+        "imagem": "imagens/mapas/Didatica.png"
+    },
+    "planejamento": {
+        "titulo": "📋 Planejamento Educacional",
+        "imagem": "imagens/mapas/Planejamento.png"
+    },
+    "avaliacao": {
+        "titulo": "📊 Avaliação da Aprendizagem",
+        "imagem": "imagens/mapas/Avaliacao.png"
+    },
+    "gestao": {
+        "titulo": "📘 Gestão Democrática",
+        "imagem": "imagens/mapas/gestao.jpg"
+    },
+    "interpretacao": {
+        "titulo": "📖 Interpretação de Textos",
+        "imagem": "imagens/mapas/texto.png"
+    },
+    "generos": {
+        "titulo": "📄 Tipologia e Gêneros Textuais",
+        "imagem": "imagens/mapas/generos.png"
+    },
+    "funcoes": {
+        "titulo": "📡 Funções da Linguagem",
+        "imagem": "imagens/mapas/funcoes.png"
+    },
+    "coesao": {
+        "titulo": "🔗 Coesão e Coerência",
+        "imagem": "imagens/mapas/coesao.png"
+    },
+    "semantica": {
+        "titulo": "🧠 Semântica",
+        "imagem": "imagens/mapas/semantica.png"
+    },
+    "figuras": {
+        "titulo": "🎭 Figuras de Linguagem",
+        "imagem": "imagens/mapas/figuras.png"
+    },
+    "variacao": {
+        "titulo": "🌎 Variação Linguística",
+        "imagem": "imagens/mapas/variacao.png"
+    },
+    "classesPalavras": {
+        "titulo": "📚 Classes de Palavras",
+        "imagem": "imagens/mapas/classesPalavras.png"
+    },
+    "formacaoPalavras": {
+        "titulo": "🏗 Formação de Palavras",
+        "imagem": "imagens/mapas/formacaoPalavras.png"
+    },
+    "sintaxe": {
+        "titulo": "📝 Sintaxe",
+        "imagem": "imagens/mapas/sintaxe.png"
+    },
+    "periodoComposto": {
+        "titulo": "🔄 Período Simples e Composto",
+        "imagem": "imagens/mapas/periodoComposto.png"
+    },
+    "concordancia": {
+        "titulo": "📌 Concordância",
+        "imagem": "imagens/mapas/concordancia.png"
+    },
+    "regencia": {
+        "titulo": "🎯 Regência",
+        "imagem": "imagens/mapas/regencia.png"
+    },
+    "crase": {
+        "titulo": "✍️ Crase",
+        "imagem": "imagens/mapas/crase.png"
+    },
+    "vozesVerbais": {
+        "titulo": "🗣️ Vozes Verbais",
+        "imagem": "imagens/mapas/vozesVerbais.png"
+    },
+    "pontuacao": {
+        "titulo": "📍 Pontuação",
+        "imagem": "imagens/mapas/pontuacao.png"
+    },
+    "ortografia": {
+        "titulo": "📖 Ortografia",
+        "imagem": "imagens/mapas/ortografia.png"
+    },
+    "acentuacao": {
+        "titulo": "🔠 Acentuação",
+        "imagem": "imagens/mapas/acentuacao.png"
+    },
+    "redacaoOficial": {
+        "titulo": "🏛️ Redação Oficial",
+        "imagem": "imagens/mapas/redacaoOficial.png"
+    },
+    "eticaConceitos": {
+        "titulo": "⚖️ Ética no Serviço Público",
+        "imagem": "imagens/mapas/EticaConceitos.png"
+    },
+    "principiosAdministracao": {
+        "titulo": "🏛️ Princípios da Administração Pública",
+        "imagem": "imagens/mapas/PrincipiosAdministracao.png"
+    },
+    "deveresServidor": {
+        "titulo": "📋 Deveres, Proibições e Responsabilidades",
+        "imagem": "imagens/mapas/DeveresServidor.png"
+    },
+    "condutaEtica": {
+        "titulo": "🤝 Conduta Ética e Atendimento ao Público",
+        "imagem": "imagens/mapas/CondutaEtica.png"
+    },
+    "lai": {
+        "titulo": "🔎 Lei de Acesso à Informação",
+        "imagem": "imagens/mapas/LAI.png"
+    },
+    "lgpd": {
+        "titulo": "🛡️ Lei Geral de Proteção de Dados",
+        "imagem": "imagens/mapas/LGPD.png"
+    },
+    "hardware": {
+        "titulo": "💻 Hardware",
+        "imagem": "imagens/mapas/hardware.png"
+    },
+    "software": {
+        "titulo": "⚙️ Software, Windows e Linux",
+        "imagem": "imagens/mapas/software.png"
+    },
+    "arquivos": {
+        "titulo": "🗂 Arquivos, Pastas e Backup",
+        "imagem": "imagens/mapas/arquivos.png"
+    },
+    "office": {
+        "titulo": "📊 Office e LibreOffice",
+        "imagem": "imagens/mapas/office.png"
+    },
+    "internet": {
+        "titulo": "🌐 Internet e Correio Eletrônico",
+        "imagem": "imagens/mapas/internet.png"
+    },
+    "redes": {
+        "titulo": "🌐 Redes de Computadores",
+        "imagem": "imagens/mapas/redes.png"
+    },
+    "seguranca": {
+        "titulo": "🔒 Segurança da Informação",
+        "imagem": "imagens/mapas/seguranca.png"
+    },
+    "fundamentosCiencias": {
+        "titulo": "🔬 Fundamentos do Ensino de Ciências",
+        "imagem": "imagens/mapas/fundamentos-ciencias.png"
+    },
+    "bnccCiencias": {
+        "titulo": "📘 BNCC e Competências em Ciências da Natureza",
+        "imagem": "imagens/mapas/bncc-ciencias.png"
+    },
+    "alfabetizacaoCientifica": {
+        "titulo": "🔬 Alfabetização Científica",
+        "imagem": "imagens/mapas/AlfabetizacaoCientifica.png"
+    },
+    "citologia": {
+        "titulo": "🧬 Citologia",
+        "imagem": "imagens/mapas/Citologia.png"
+    },
+    "ecologia": {
+        "titulo": "🌿 Ecologia",
+        "imagem": "imagens/mapas/Ecologia.png"
+    },
+    "terraEUniverso": {
+        "titulo": "🌎 Terra e Universo",
+        "imagem": "imagens/mapas/TerraEUniverso.png"
+    },
+    "anatomiaFisiologia": {
+        "titulo": "🫀 Anatomia e Fisiologia Humana",
+        "imagem": "imagens/mapas/AnatomiaFisiologia.png"
+    },
+    "materiaQuimica": {
+        "titulo": "⚗️ Matéria e Química",
+        "imagem": "imagens/mapas/MateriaQuimica.png"
+    },
+    "fundamentosFisica": {
+        "titulo": "⚡ Fundamentos da Física",
+        "imagem": "imagens/mapas/FundamentosFisica.png"
+    },
+    "fundamentosEnsinoHistoria": {
+        "titulo": "📚 Fundamentos do Ensino de História",
+        "imagem": "imagens/mapas/fundamentosEnsinoHistoria.png"
+    },
+    "cienciaHistoricaOficioHistoriador": {
+        "titulo": "🔎 Ciência Histórica e Ofício do Historiador",
+        "imagem": "imagens/mapas/cienciaHistoricaOficioHistoriador.png"
+    },
+    "povosPreColombianos": {
+        "titulo": "🏺 Povos Pré-Colombianos",
+        "imagem": "imagens/mapas/povosPreColombianos.png"
+    },
+    "formacaoSocialCulturalBrasileira": {
+        "titulo": "🧬 Formação Social e Cultural Brasileira",
+        "imagem": "imagens/mapas/formacaoSocialCulturalBrasileira.png"
+    },
+    "estadosModernosApropriacaoAmerica": {
+        "titulo": "🏛️ Estados Modernos e Apropriação da América",
+        "imagem": "imagens/mapas/estadosModernosApropriacaoAmerica.png"
+    },
+    "mercantilismoColonizacaoAmerica": {
+        "titulo": "💰 Mercantilismo e Colonização da América",
+        "imagem": "imagens/mapas/mercantilismoColonizacaoAmerica.png"
+    },
+    "brasilColonialSociedadeEconomiaResistencias": {
+        "titulo": "🌾 Brasil Colonial: Sociedade, Economia e Resistências",
+        "imagem": "imagens/mapas/brasilColonialSociedadeEconomiaResistencias.png"
+    },
+    "administracaoAmericaLusitanaColonial": {
+        "titulo": "🏛️ Administração da América Lusitana Colonial",
+        "imagem": "imagens/mapas/administracaoAmericaLusitanaColonial.png"
+    },
+    "expansaoFronteirasAmericaPortuguesa": {
+        "titulo": "🗺️ Expansão das Fronteiras da América Portuguesa",
+        "imagem": "imagens/mapas/expansaoFronteirasAmericaPortuguesa.png"
+    }
+};
+
 function configurarMapaMentalAtual(){
 
     const titulo =
@@ -1287,59 +1618,18 @@ function configurarMapaMentalAtual(){
         return;
     }
 
-    const mapasHistoria = {
-        fundamentosEnsinoHistoria: {
-            titulo: "📚 Fundamentos do Ensino de História",
-            imagem: "imagens/mapas/fundamentosEnsinoHistoria.png"
-        },
-        cienciaHistoricaOficioHistoriador: {
-            titulo: "🔎 Ciência Histórica e Ofício do Historiador",
-            imagem: "imagens/mapas/cienciaHistoricaOficioHistoriador.png"
-        },
-        povosPreColombianos: {
-            titulo: "🏺 Povos Pré-Colombianos",
-            imagem: "imagens/mapas/povosPreColombianos.png"
-        },
-        formacaoSocialCulturalBrasileira: {
-            titulo: "🧬 Formação Social e Cultural Brasileira",
-            imagem: "imagens/mapas/formacaoSocialCulturalBrasileira.png"
-        },
-        estadosModernosApropriacaoAmerica: {
-            titulo: "🏛️ Estados Modernos e Apropriação da América",
-            imagem: "imagens/mapas/estadosModernosApropriacaoAmerica.png"
-        },
-        mercantilismoColonizacaoAmerica: {
-            titulo: "💰 Mercantilismo e Colonização da América",
-            imagem: "imagens/mapas/mercantilismoColonizacaoAmerica.png"
-        },
-        brasilColonialSociedadeEconomiaResistencias: {
-            titulo: "🌾 Brasil Colonial: Sociedade, Economia e Resistências",
-            imagem: "imagens/mapas/brasilColonialSociedadeEconomiaResistencias.png"
-        },
-        administracaoAmericaLusitanaColonial: {
-            titulo: "🏛️ Administração da América Lusitana Colonial",
-            imagem: "imagens/mapas/administracaoAmericaLusitanaColonial.png"
-        },
-        expansaoFronteirasAmericaPortuguesa: {
-            titulo: "🗺️ Expansão das Fronteiras da América Portuguesa",
-            imagem: "imagens/mapas/expansaoFronteirasAmericaPortuguesa.png"
-        },
-        administracaoAmericaLusitanaColonial: {
-            titulo: "🏛️ Administração da América Lusitana Colonial",
-            imagem: "imagens/mapas/administracaoAmericaLusitanaColonial.png"
-        },
-        expansaoFronteirasAmericaPortuguesa: {
-            titulo: "🗺️ Expansão das Fronteiras da América Portuguesa",
-            imagem: "imagens/mapas/expansaoFronteirasAmericaPortuguesa.png"
-        }
-    };
+    const mapa =
+        mapasMentaisPorAssunto[assuntoAtual];
 
-    if(mapasHistoria[assuntoAtual]){
-        titulo.innerHTML = mapasHistoria[assuntoAtual].titulo;
-        imagem.src = mapasHistoria[assuntoAtual].imagem;
+    if(mapa){
+        titulo.innerHTML = mapa.titulo;
+        imagem.src = mapa.imagem;
     }
 
+    atualizarBotaoContinuarQuestoes();
+
 }
+
 
 
 function abrirMapaMental(){
@@ -1872,15 +2162,12 @@ atualizarPainelEstudos();
 
 salvarDados();
 
-    console.log(
-        "SALVOU:",
-        disciplinaAtual,
-        questaoAtual
+    localStorage.setItem(
+        "farol_ultimoAssunto",
+        disciplinaAtual
     );
 
-    console.log(
-        progressoAssuntos
-    );
+    atualizarBotaoContinuarQuestoes();
 
 const total =
     questoesEmbaralhadas.length > 0
@@ -2952,24 +3239,7 @@ console.log(
     progressoAssuntos[assunto]
 );
 
-const btnContinuar =
-    document.getElementById(
-        "btnContinuar"
-    );
-
-if (
-    progressoAssuntos[assunto] !== undefined
-) {
-
-    btnContinuar.style.display =
-        "inline-block";
-
-} else {
-
-    btnContinuar.style.display =
-        "none";
-
-}
+atualizarBotaoContinuarQuestoes();
 
     const titulo =
         document.getElementById(
@@ -4369,6 +4639,146 @@ function iniciarBNCC() {
 
 }
 
+
+// ==========================
+// CONTINUIDADE DAS QUESTÕES
+// ==========================
+
+function chaveOrdemQuestoes(assunto){
+    return "farol_ordemQuestoes_" + assunto;
+}
+
+function embaralharArray(lista){
+    const copia = [...lista];
+
+    for(let i = copia.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [copia[i], copia[j]] = [copia[j], copia[i]];
+    }
+
+    return copia;
+}
+
+function salvarOrdemQuestoes(assunto, questoes){
+    if(!assunto || !Array.isArray(questoes)){
+        return;
+    }
+
+    localStorage.setItem(
+        chaveOrdemQuestoes(assunto),
+        JSON.stringify(
+            questoes.map(q => q.pergunta)
+        )
+    );
+}
+
+function carregarQuestoesNaOrdemSalva(assunto){
+    const base = bancoQuestoes[assunto];
+
+    if(!Array.isArray(base)){
+        return [];
+    }
+
+    try{
+        const ordem = JSON.parse(
+            localStorage.getItem(
+                chaveOrdemQuestoes(assunto)
+            )
+        ) || [];
+
+        if(ordem.length === base.length){
+            const mapaPerguntas = new Map(
+                base.map(q => [q.pergunta, q])
+            );
+
+            const ordenadas = ordem
+                .map(pergunta => mapaPerguntas.get(pergunta))
+                .filter(Boolean);
+
+            if(ordenadas.length === base.length){
+                return ordenadas;
+            }
+        }
+    }catch(erro){
+        console.log("Ordem salva inválida:", erro);
+    }
+
+    return [...base];
+}
+
+function prepararQuestoesDoAssunto(novaOrdem){
+    disciplinaAtual = assuntoAtual;
+
+    const base = bancoQuestoes[disciplinaAtual];
+
+    if(!Array.isArray(base) || base.length === 0){
+        mostrarToast("Banco de questões não encontrado para este assunto.");
+        return false;
+    }
+
+    if(novaOrdem){
+        questoesEmbaralhadas = embaralharArray(base);
+        salvarOrdemQuestoes(disciplinaAtual, questoesEmbaralhadas);
+    }else{
+        questoesEmbaralhadas = carregarQuestoesNaOrdemSalva(disciplinaAtual);
+    }
+
+    localStorage.setItem(
+        "farol_ultimoAssunto",
+        disciplinaAtual
+    );
+
+    return true;
+}
+
+function atualizarBotaoContinuarQuestoes(){
+    const btnContinuar =
+        document.getElementById("btnContinuar");
+
+    if(!btnContinuar){
+        return;
+    }
+
+    const total =
+        bancoQuestoes[assuntoAtual]
+        ? bancoQuestoes[assuntoAtual].length
+        : 0;
+
+    const progresso =
+        progressoAssuntos[assuntoAtual] || 0;
+
+    btnContinuar.style.display =
+        progresso > 0 && progresso < total
+        ? "inline-block"
+        : "none";
+}
+
+function restaurarQuestaoAoAbrirTela(){
+    const tela = document.getElementById("resolverQuestao");
+    const area = document.getElementById("areaQuestao");
+
+    if(!tela || !area || !tela.classList.contains("ativa")){
+        return;
+    }
+
+    if(area.innerHTML.trim() !== ""){
+        return;
+    }
+
+    const ultimoAssunto =
+        localStorage.getItem("farol_ultimoAssunto");
+
+    if(!ultimoAssunto || !bancoQuestoes[ultimoAssunto]){
+        mostrarTela("questoes");
+        return;
+    }
+
+    assuntoAtual = ultimoAssunto;
+    disciplinaAtual = ultimoAssunto;
+
+    continuarQuestoes();
+}
+
 // ==========================
 // INICIALIZAÇÃO
 // ==========================
@@ -4390,28 +4800,45 @@ function iniciarQuestoesAssunto() {
 
     }
 
-disciplinaAtual = assuntoAtual;
+    disciplinaAtual = assuntoAtual;
 
+    const total =
+        bancoQuestoes[disciplinaAtual]
+        ? bancoQuestoes[disciplinaAtual].length
+        : 0;
 
-localStorage.setItem(
-    "farol_ultimoAssunto",
-    assuntoAtual
-);
+    const progresso =
+        progressoAssuntos[disciplinaAtual] || 0;
 
-acertosAssunto = 0;
-errosAssunto = 0;
+    if(progresso > 0 && progresso < total){
+        continuarQuestoes();
+        return;
+    }
 
-questaoAtual = 0;
+    if(progresso >= total && total > 0){
+        mostrarToast("Este assunto já foi concluído. Use Refazer Assunto para começar novamente.");
+        return;
+    }
 
-questoesEmbaralhadas =
-    [...bancoQuestoes[disciplinaAtual]]
-    .sort(() => Math.random() - 0.5);
+    acertosAssunto = 0;
+    errosAssunto = 0;
 
-mostrarTela("resolverQuestao");
+    questaoAtual = 0;
 
-mostrarQuestao();
+    progressoAssuntos[disciplinaAtual] = 0;
+
+    if(!prepararQuestoesDoAssunto(true)){
+        return;
+    }
+
+    salvarDados();
+
+    mostrarTela("resolverQuestao");
+
+    mostrarQuestao();
 
 }
+
 
 window.onload = function () {
 
@@ -4641,61 +5068,12 @@ atualizarLojaFarol();
 
 function voltarParaMapa(){
 
-    const titulo =
-        document.getElementById(
-            "tituloMapa"
-        );
+    configurarMapaMentalAtual();
 
-    const imagem =
-        document.getElementById(
-            "imagemMapa"
-        );
-
-    const mapas = {
-        fundamentosCiencias: {
-            titulo: "🔬 Fundamentos do Ensino de Ciências",
-            imagem: "imagens/mapas/fundamentos-ciencias.png"
-        },
-        fundamentosEnsinoHistoria: {
-            titulo: "📚 Fundamentos do Ensino de História",
-            imagem: "imagens/mapas/fundamentosEnsinoHistoria.png"
-        },
-        cienciaHistoricaOficioHistoriador: {
-            titulo: "🔎 Ciência Histórica e Ofício do Historiador",
-            imagem: "imagens/mapas/cienciaHistoricaOficioHistoriador.png"
-        },
-        povosPreColombianos: {
-            titulo: "🏺 Povos Pré-Colombianos",
-            imagem: "imagens/mapas/povosPreColombianos.png"
-        },
-        formacaoSocialCulturalBrasileira: {
-            titulo: "🧬 Formação Social e Cultural Brasileira",
-            imagem: "imagens/mapas/formacaoSocialCulturalBrasileira.png"
-        },
-        estadosModernosApropriacaoAmerica: {
-            titulo: "🏛️ Estados Modernos e Apropriação da América",
-            imagem: "imagens/mapas/estadosModernosApropriacaoAmerica.png"
-        },
-        mercantilismoColonizacaoAmerica: {
-            titulo: "💰 Mercantilismo e Colonização da América",
-            imagem: "imagens/mapas/mercantilismoColonizacaoAmerica.png"
-        },
-        brasilColonialSociedadeEconomiaResistencias: {
-            titulo: "🌾 Brasil Colonial: Sociedade, Economia e Resistências",
-            imagem: "imagens/mapas/brasilColonialSociedadeEconomiaResistencias.png"
-        }
-    };
-
-    if(mapas[assuntoAtual]){
-        titulo.innerHTML = mapas[assuntoAtual].titulo;
-        imagem.src = mapas[assuntoAtual].imagem;
-    }
-
-    mostrarTela(
-        "telaMapaMental"
-    );
+    mostrarTela("telaMapaMental");
 
 }
+
 
 function voltarParaTeoria(){
 
@@ -5743,8 +6121,10 @@ function voltarParaAssuntos(){
 function continuarQuestoes(){
 
     disciplinaAtual = assuntoAtual;
-questoesEmbaralhadas =
-    [...bancoQuestoes[disciplinaAtual]];
+
+    if(!prepararQuestoesDoAssunto(false)){
+        return;
+    }
 
     const total =
         bancoQuestoes[assuntoAtual].length;
@@ -5755,15 +6135,22 @@ questoesEmbaralhadas =
     if(questaoAtual >= total){
 
         mostrarToast("Este assunto já foi concluído.");
+        atualizarBotaoContinuarQuestoes();
         return;
 
     }
+
+    localStorage.setItem(
+        "farol_ultimoAssunto",
+        assuntoAtual
+    );
 
     mostrarTela("resolverQuestao");
 
     mostrarQuestao();
 
 }
+
 
 function refazerAssunto(){
 
@@ -5774,11 +6161,24 @@ function refazerAssunto(){
 
     progressoAssuntos[disciplinaAtual] = 0;
 
+    localStorage.removeItem(
+        chaveOrdemQuestoes(disciplinaAtual)
+    );
+
+    assuntoAtual = disciplinaAtual;
+
+    if(!prepararQuestoesDoAssunto(true)){
+        return;
+    }
+
+    salvarDados();
+
     mostrarTela("resolverQuestao");
 
     mostrarQuestao();
 
 }
+
 
 function atualizarPainelEstudos(){
 

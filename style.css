@@ -1383,8 +1383,10 @@ progress{
 
 .caixa-destaque{
 
-    ...
-
+    background:rgba(255,255,255,0.92);
+    border-left:5px solid #1e88e5;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,.10);
     padding:14px;
 
     margin:12px 0;
@@ -2205,4 +2207,37 @@ progress{
     color:#0d47a1;
     font-size:14px;
     word-break:break-all;
+}
+
+
+/* ==========================
+   OTIMIZAÇÃO DE FLUIDEZ
+========================== */
+
+@media(max-width:768px){
+    body{
+        background-attachment:scroll;
+    }
+
+    .luz-farol{
+        display:none;
+    }
+
+    .card,
+    .dashboard-card,
+    .login-card{
+        backdrop-filter:none;
+        -webkit-backdrop-filter:none;
+    }
+}
+
+@media(prefers-reduced-motion: reduce){
+    *,
+    *::before,
+    *::after{
+        animation-duration:0.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:0.01ms !important;
+        scroll-behavior:auto !important;
+    }
 }
