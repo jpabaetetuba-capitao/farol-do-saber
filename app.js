@@ -5076,7 +5076,14 @@ if(campoSaldoPontosLuz){
 
 const campoAvatarAluno = document.getElementById("avatarAluno");
 if(campoAvatarAluno){
-    campoAvatarAluno.textContent = `${lojaFarol.avatarAtual || "👤"} ${lojaFarol.nomeAvatarAtual || "Estudante"}`;
+    campoAvatarAluno.innerHTML = `
+        ${montarAvatarHTML(
+            lojaFarol.avatarAtual,
+            lojaFarol.nomeAvatarAtual,
+            "avatar-dashboard"
+        )}
+        <span>${lojaFarol.nomeAvatarAtual || "Estudante"}</span>
+    `;
 }
 
 const campoTituloAluno = document.getElementById("tituloAluno");
@@ -7473,7 +7480,11 @@ async function carregarRankingPontos(){
 
             html += `
                 <div class="linha-ranking">
-                    <strong>${posicao}º</strong> ${avatar} ${nome}${titulo}${medalha}
+                    <div class="ranking-identidade">
+                        <strong>${posicao}º</strong>
+                        ${montarAvatarHTML(avatar, dados.nomeAvatarAtual || "Avatar", "avatar-ranking")}
+                        <span>${nome}${titulo}${medalha}</span>
+                    </div>
                     <span>${pontos} ⭐</span>
                 </div>
             `;
@@ -7689,13 +7700,16 @@ function montarMensagemProgresso(){
 
     const nome = (usuarioForum || "Aluno").split(" ")[0];
 
-    const avatar = lojaFarol.avatarAtual || "👤";
+    const avatar = valorEhImagemAvatar(lojaFarol.avatarAtual)
+        ? ""
+        : (lojaFarol.avatarAtual || "👤");
     const titulo = lojaFarol.tituloAtual ? `
 🎖 Título: ${lojaFarol.tituloAtual}` : "";
+    const linhaNome = avatar ? `${avatar} ${nome}` : nome;
 
     return `🚀 Meu progresso no Farol do Saber
 
-${avatar} ${nome}${titulo}
+${linhaNome}${titulo}
 ⭐ Pontos de Luz: ${pontosLuz}
 ✅ Acertos: ${acertos}
 📚 Questões respondidas: ${respondidas}
@@ -7758,12 +7772,17 @@ function criarCanvasCardProgresso(){
         ? Math.round((acertos / respondidas) * 100)
         : 0;
 
-    const avatar = lojaFarol.avatarAtual || "👤";
-    const titulo = lojaFarol.tituloAtual || "Estudante";
+    const avatar = valorEhImagemAvatar(lojaFarol.avatarAtual)
+        ? ""
+        : (lojaFarol.avatarAtual || "👤");
+    const titulo = lojaFarol.tituloAtual || lojaFarol.nomeAvatarAtual || "Aprendiz do Farol";
+    const linhaParabens = avatar
+        ? `${avatar} Parabéns, ${nome}!`
+        : `Parabéns, ${nome}!`;
 
     ctx.fillStyle = "#222";
     ctx.font = "bold 52px Arial";
-    ctx.fillText(`${avatar} Parabéns, ${nome}!`, 540, 370);
+    ctx.fillText(linhaParabens, 540, 370);
 
     ctx.fillStyle = premium ? "#7a5200" : "#1e88e5";
     ctx.font = "bold 36px Arial";
@@ -7920,7 +7939,73 @@ function compartilharFacebook(){
 
 const recompensasLojaFarol = [
     {
+        id: "avatar_aprendiz",
+        categoria: "avatares_gratuitos",
+        tipo: "avatar",
+        icone: "imagens/avatares/iniciante.webp",
+        nome: "Avatar Aprendiz do Farol",
+        custo: 0,
+        descricao: "Avatar gratuito para quem está começando sua jornada no Farol do Saber.",
+        avatarMasculino: "imagens/avatares/iniciante.webp",
+        avatarFeminino: "imagens/avatares/iniciante_feminino.webp",
+        nomeAvatarMasculino: "Aprendiz do Farol",
+        nomeAvatarFeminino: "Aprendiz do Farol"
+    },
+    {
+        id: "avatar_faroleiro",
+        categoria: "avatares_premium",
+        tipo: "avatar",
+        icone: "imagens/avatares/faroleiro.webp",
+        nome: "Avatar Faroleiro do Saber",
+        custo: 500,
+        descricao: "Avatar especial para aparecer no perfil, ranking, fórum e duelos.",
+        avatarMasculino: "imagens/avatares/faroleiro.webp",
+        avatarFeminino: "imagens/avatares/faroleira.webp",
+        nomeAvatarMasculino: "Faroleiro do Saber",
+        nomeAvatarFeminino: "Faroleira do Saber"
+    },
+    {
+        id: "avatar_navegador",
+        categoria: "avatares_premium",
+        tipo: "avatar",
+        icone: "imagens/avatares/navegador.webp",
+        nome: "Avatar Navegador do Saber",
+        custo: 800,
+        descricao: "Avatar com identidade marítima e visual de jornada.",
+        avatarMasculino: "imagens/avatares/navegador.webp",
+        avatarFeminino: "imagens/avatares/navegadora.webp",
+        nomeAvatarMasculino: "Navegador do Saber",
+        nomeAvatarFeminino: "Navegadora do Saber"
+    },
+    {
+        id: "avatar_capitao",
+        categoria: "avatares_premium",
+        tipo: "avatar",
+        icone: "imagens/avatares/capitao.webp",
+        nome: "Avatar Capitão do Saber",
+        custo: 1000,
+        descricao: "Avatar para quem comanda a própria jornada de estudos.",
+        avatarMasculino: "imagens/avatares/capitao.webp",
+        avatarFeminino: "imagens/avatares/capita.webp",
+        nomeAvatarMasculino: "Capitão do Saber",
+        nomeAvatarFeminino: "Capitã do Saber"
+    },
+    {
+        id: "avatar_mestre",
+        categoria: "avatares_premium",
+        tipo: "avatar",
+        icone: "imagens/avatares/mestre.webp",
+        nome: "Avatar Mestre das Questões",
+        custo: 1200,
+        descricao: "Avatar para quem gosta de mostrar desempenho nas questões.",
+        avatarMasculino: "imagens/avatares/mestre.webp",
+        avatarFeminino: "imagens/avatares/mestra.webp",
+        nomeAvatarMasculino: "Mestre das Questões",
+        nomeAvatarFeminino: "Mestra das Questões"
+    },
+    {
         id: "medalha_estudante_ativo",
+        categoria: "titulos_medalhas",
         tipo: "medalha",
         icone: "🏅",
         nome: "Medalha Estudante Ativo",
@@ -7929,6 +8014,7 @@ const recompensasLojaFarol = [
     },
     {
         id: "titulo_guardiao_farol",
+        categoria: "titulos_medalhas",
         tipo: "titulo",
         icone: "🎖",
         nome: "Título Guardião do Farol",
@@ -7936,37 +8022,8 @@ const recompensasLojaFarol = [
         descricao: "Título especial exibido no perfil, ranking e compartilhamento."
     },
     {
-        id: "avatar_faroleiro",
-        tipo: "avatar",
-        icone: "🗼",
-        nome: "Avatar Faroleiro do Saber",
-        custo: 600,
-        descricao: "Avatar especial para aparecer no ranking, fórum e duelos.",
-        avatar: "🗼",
-        nomeAvatar: "Faroleiro do Saber"
-    },
-    {
-        id: "avatar_navegador",
-        tipo: "avatar",
-        icone: "🌊",
-        nome: "Avatar Navegador do Saber",
-        custo: 900,
-        descricao: "Avatar com identidade marítima e visual de jornada.",
-        avatar: "🌊",
-        nomeAvatar: "Navegador do Saber"
-    },
-    {
-        id: "avatar_mestre",
-        tipo: "avatar",
-        icone: "🧠",
-        nome: "Avatar Mestre das Questões",
-        custo: 1200,
-        descricao: "Avatar para quem gosta de mostrar desempenho nas questões.",
-        avatar: "🧠",
-        nomeAvatar: "Mestre das Questões"
-    },
-    {
         id: "card_premium_progresso",
+        categoria: "extras_progresso",
         tipo: "card",
         icone: "📤",
         nome: "Card Premium de Progresso",
@@ -7975,6 +8032,7 @@ const recompensasLojaFarol = [
     },
     {
         id: "certificado_digital",
+        categoria: "certificados",
         tipo: "certificado",
         icone: "📜",
         nome: "Certificado Digital de Destaque",
@@ -7984,7 +8042,124 @@ const recompensasLojaFarol = [
     }
 ];
 
+function valorEhImagemAvatar(valor){
+    return typeof valor === "string" && /\.(png|jpg|jpeg|webp|gif)$/i.test(valor);
+}
+
+function montarAvatarHTML(valor, nome, classe){
+    const classeFinal = classe || "avatar-pequeno";
+
+    if(!valor){
+        return `<span class="${classeFinal}">👤</span>`;
+    }
+
+    if(valorEhImagemAvatar(valor)){
+        return `
+            <img
+                src="${valor}"
+                alt="${nome || "Avatar"}"
+                class="${classeFinal}"
+                loading="lazy">
+        `;
+    }
+
+    return `<span class="${classeFinal}">${valor}</span>`;
+}
+
+function obterVersaoAvatarItem(item){
+    let genero = localStorage.getItem("farol_genero_avatar") || "";
+
+    if(!genero){
+        const escolha = prompt(
+            "Escolha a versão do avatar:\n1 - Masculino\n2 - Feminino"
+        );
+
+        if(escolha === "1"){
+            genero = "masculino";
+        }
+        else if(escolha === "2"){
+            genero = "feminino";
+        }
+        else{
+            return null;
+        }
+
+        localStorage.setItem("farol_genero_avatar", genero);
+    }
+
+    if(genero === "feminino"){
+        return {
+            avatar: item.avatarFeminino || item.avatar || "👤",
+            nomeAvatar: item.nomeAvatarFeminino || item.nomeAvatar || item.nome || "Estudante"
+        };
+    }
+
+    return {
+        avatar: item.avatarMasculino || item.avatar || "👤",
+        nomeAvatar: item.nomeAvatarMasculino || item.nomeAvatar || item.nome || "Estudante"
+    };
+}
+
+function renderizarIconeLoja(item){
+    if(item.tipo === "avatar"){
+        const avatarMasculino =
+            item.avatarMasculino ||
+            item.avatar ||
+            item.icone ||
+            "👤";
+
+        const avatarFeminino =
+            item.avatarFeminino ||
+            item.avatarMasculino ||
+            item.avatar ||
+            item.icone ||
+            "👤";
+
+        const nomeMasculino =
+            item.nomeAvatarMasculino ||
+            item.nomeAvatar ||
+            item.nome ||
+            "Avatar masculino";
+
+        const nomeFeminino =
+            item.nomeAvatarFeminino ||
+            item.nomeAvatar ||
+            item.nome ||
+            "Avatar feminino";
+
+        return `
+            <div class="avatar-loja-dupla">
+                <div class="avatar-opcao-loja">
+                    ${montarAvatarHTML(
+                        avatarMasculino,
+                        nomeMasculino,
+                        "avatar-loja-mini"
+                    )}
+                    <span>Masculino</span>
+                </div>
+
+                <div class="avatar-opcao-loja">
+                    ${montarAvatarHTML(
+                        avatarFeminino,
+                        nomeFeminino,
+                        "avatar-loja-mini"
+                    )}
+                    <span>Feminino</span>
+                </div>
+            </div>
+        `;
+    }
+
+    return `<div class="icone-loja-emoji">${item.icone || "⭐"}</div>`;
+}
+
 function recompensaComprada(id){
+    const item = obterRecompensaLoja(id);
+
+    if(item && item.custo === 0){
+        return true;
+    }
+
     return !!(lojaFarol.comprados && lojaFarol.comprados[id]);
 }
 
@@ -8047,8 +8222,15 @@ function comprarRecompensaLoja(id){
     }
 
     if(item.tipo === "avatar"){
-        lojaFarol.avatarAtual = item.avatar;
-        lojaFarol.nomeAvatarAtual = item.nomeAvatar;
+        const versaoAvatar = obterVersaoAvatarItem(item);
+
+        if(!versaoAvatar){
+            mostrarToast("Escolha do avatar cancelada.");
+            return;
+        }
+
+        lojaFarol.avatarAtual = versaoAvatar.avatar;
+        lojaFarol.nomeAvatarAtual = versaoAvatar.nomeAvatar;
     }
 
     if(item.tipo === "card"){
@@ -8083,8 +8265,15 @@ function usarAvatarLoja(id){
         return;
     }
 
-    lojaFarol.avatarAtual = item.avatar;
-    lojaFarol.nomeAvatarAtual = item.nomeAvatar;
+    const versaoAvatar = obterVersaoAvatarItem(item);
+
+    if(!versaoAvatar){
+        mostrarToast("Escolha do avatar cancelada.");
+        return;
+    }
+
+    lojaFarol.avatarAtual = versaoAvatar.avatar;
+    lojaFarol.nomeAvatarAtual = versaoAvatar.nomeAvatar;
 
     salvarDados();
     atualizarDashboard();
@@ -8093,6 +8282,11 @@ function usarAvatarLoja(id){
     salvarLojaFirebase();
 
     mostrarToast("Avatar aplicado ao seu perfil.");
+}
+
+function alterarVersaoAvatar(){
+    localStorage.removeItem("farol_genero_avatar");
+    mostrarToast("Escolha de versão liberada. Clique em usar avatar novamente.");
 }
 
 function atualizarLojaFarol(){
@@ -8105,74 +8299,127 @@ function atualizarLojaFarol(){
 
     const certificadoDisponivel = acertos >= 100;
 
+    const grupos = [
+        {
+            titulo: "👤 Avatares gratuitos",
+            categoria: "avatares_gratuitos"
+        },
+        {
+            titulo: "⭐ Avatares premium",
+            categoria: "avatares_premium"
+        },
+        {
+            titulo: "🎖 Títulos e medalhas",
+            categoria: "titulos_medalhas"
+        },
+        {
+            titulo: "📤 Extras de progresso",
+            categoria: "extras_progresso"
+        },
+        {
+            titulo: "📜 Certificados",
+            categoria: "certificados"
+        }
+    ];
+
+    const htmlGrupos = grupos.map(grupo => {
+        const itens = recompensasLojaFarol.filter(item => item.categoria === grupo.categoria);
+
+        if(itens.length === 0){
+            return "";
+        }
+
+        return `
+            <h3 class="titulo-secao-loja">${grupo.titulo}</h3>
+            <div class="grid-loja">
+                ${itens.map(item => {
+                    const comprada = recompensaComprada(item.id);
+                    const bloqueadaCertificado = item.id === "certificado_digital" && !certificadoDisponivel;
+                    const semSaldo = saldoPontosLuz < item.custo && !comprada;
+                    const custoTexto = item.custo === 0 ? "Grátis" : `${item.custo} Pontos de Luz`;
+                    const status = comprada
+                        ? "✅ Desbloqueado"
+                        : bloqueadaCertificado
+                            ? "🔒 Requer 100 acertos"
+                            : semSaldo
+                                ? "🔒 Pontos insuficientes"
+                                : "🛒 Disponível";
+
+                    let acao = `
+                        <button onclick="comprarRecompensaLoja('${item.id}')" ${semSaldo || bloqueadaCertificado ? "disabled" : ""}>
+                            Trocar por ${item.custo} ⭐
+                        </button>
+                    `;
+
+                    if(item.custo === 0 && item.tipo === "avatar"){
+                        acao = `
+                            <button onclick="usarAvatarLoja('${item.id}')">
+                                Usar grátis
+                            </button>
+                        `;
+                    }
+
+                    if(comprada){
+                        if(item.tipo === "avatar"){
+                            acao = `
+                                <button onclick="usarAvatarLoja('${item.id}')">
+                                    Usar avatar
+                                </button>
+                            `;
+                        }
+                        else if(item.tipo === "certificado"){
+                            acao = `
+                                <button onclick="gerarCertificadoDigital()">
+                                    📜 Ver certificado
+                                </button>
+                            `;
+                        }
+                        else if(item.tipo === "card"){
+                            acao = `
+                                <button onclick="compartilharProgresso()">
+                                    📤 Compartilhar card premium
+                                </button>
+                            `;
+                        }
+                        else{
+                            acao = `<button disabled>Desbloqueado</button>`;
+                        }
+                    }
+
+                    return `
+                        <div class="item-loja ${comprada ? "comprado" : ""}">
+                            ${renderizarIconeLoja(item)}
+                            <h3>${item.nome}</h3>
+                            <p>${item.descricao}</p>
+                            <p><strong>Custo:</strong> ${custoTexto}</p>
+                            ${item.requisito ? `<p><strong>Requisito:</strong> ${item.requisito}</p>` : ""}
+                            <p class="status-loja">${status}</p>
+                            ${acao}
+                        </div>
+                    `;
+                }).join("")}
+            </div>
+        `;
+    }).join("");
+
     area.innerHTML = `
         <div class="loja-resumo">
             <p><strong>⭐ Pontos de Luz totais:</strong> ${pontosLuz}</p>
             <p><strong>🛒 Saldo para trocar:</strong> ${saldoPontosLuz}</p>
-            <p><strong>👤 Perfil:</strong> ${lojaFarol.avatarAtual || "👤"} ${lojaFarol.nomeAvatarAtual || "Estudante"}</p>
+            <p class="perfil-loja-linha">
+                <strong>👤 Perfil:</strong>
+                ${montarAvatarHTML(lojaFarol.avatarAtual, lojaFarol.nomeAvatarAtual, "avatar-pequeno")}
+                <span>${lojaFarol.nomeAvatarAtual || "Estudante"}</span>
+                <button class="btn-versao-avatar" onclick="alterarVersaoAvatar()">
+                    Trocar versão M/F
+                </button>
+            </p>
             <p><strong>🎖 Título:</strong> ${lojaFarol.tituloAtual || "Sem título especial"}</p>
         </div>
 
         <br>
 
-        <div class="grid-loja">
-            ${recompensasLojaFarol.map(item => {
-                const comprada = recompensaComprada(item.id);
-                const bloqueadaCertificado = item.id === "certificado_digital" && !certificadoDisponivel;
-                const semSaldo = saldoPontosLuz < item.custo && !comprada;
-                const status = comprada
-                    ? "✅ Desbloqueado"
-                    : bloqueadaCertificado
-                        ? "🔒 Requer 100 acertos"
-                        : semSaldo
-                            ? "🔒 Pontos insuficientes"
-                            : "🛒 Disponível";
-
-                let acao = `
-                    <button onclick="comprarRecompensaLoja('${item.id}')">
-                        Trocar por ${item.custo} ⭐
-                    </button>
-                `;
-
-                if(comprada){
-                    if(item.tipo === "avatar"){
-                        acao = `
-                            <button onclick="usarAvatarLoja('${item.id}')">
-                                Usar avatar
-                            </button>
-                        `;
-                    }
-                    else if(item.tipo === "certificado"){
-                        acao = `
-                            <button onclick="gerarCertificadoDigital()">
-                                📜 Ver certificado
-                            </button>
-                        `;
-                    }
-                    else if(item.tipo === "card"){
-                        acao = `
-                            <button onclick="compartilharProgresso()">
-                                📤 Compartilhar card premium
-                            </button>
-                        `;
-                    }
-                    else{
-                        acao = `<button disabled>Desbloqueado</button>`;
-                    }
-                }
-
-                return `
-                    <div class="item-loja ${comprada ? "comprado" : ""}">
-                        <h3>${item.icone} ${item.nome}</h3>
-                        <p>${item.descricao}</p>
-                        <p><strong>Custo:</strong> ${item.custo} Pontos de Luz</p>
-                        ${item.requisito ? `<p><strong>Requisito:</strong> ${item.requisito}</p>` : ""}
-                        <p class="status-loja">${status}</p>
-                        ${acao}
-                    </div>
-                `;
-            }).join("")}
-        </div>
+        ${htmlGrupos}
 
         <div id="areaCertificadoDigital" class="area-certificado-digital"></div>
     `;
@@ -8211,7 +8458,7 @@ function criarCanvasCertificadoDigital(){
 
     const nome = usuarioForum || "Aluno";
     const titulo = lojaFarol.tituloAtual || "Estudante";
-    const avatar = lojaFarol.avatarAtual || "👤";
+    const avatar = valorEhImagemAvatar(lojaFarol.avatarAtual) ? "" : (lojaFarol.avatarAtual || "👤");
     const codigo = lojaFarol.codigoCertificado || gerarCodigoCertificado();
     const data = lojaFarol.dataCertificado || new Date().toLocaleDateString("pt-BR");
 
@@ -8221,7 +8468,7 @@ function criarCanvasCertificadoDigital(){
 
     ctx.font = "bold 62px Arial";
     ctx.fillStyle = "#0d47a1";
-    ctx.fillText(`${avatar} ${nome}`, 800, 550);
+    ctx.fillText(`${avatar ? avatar + " " : ""}${nome}`, 800, 550);
 
     ctx.font = "34px Arial";
     ctx.fillStyle = "#333";
