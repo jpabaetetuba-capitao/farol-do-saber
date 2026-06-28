@@ -48,14 +48,28 @@ auth.onAuthStateChanged(async (user) => {
 
                 const dados = doc.data();
 
-usuarioForum = dados.nome;
+const nomeCompleto =
+    dados.nome || "";
+
+const primeiroNome =
+    nomeCompleto
+    ? nomeCompleto.split(" ")[0]
+    : "Aluno";
+
+usuarioNomeCompleto = nomeCompleto;
+usuarioForum = primeiroNome;
+
+localStorage.setItem(
+    "usuarioNomeCompleto",
+    nomeCompleto
+);
 
 localStorage.setItem(
     "usuarioForum",
-    dados.nome
+    primeiroNome
 );
 
-console.log("NOME:", dados.nome);
+console.log("NOME:", nomeCompleto);
 
                 const campoNome =
                     document.getElementById(
@@ -63,9 +77,6 @@ console.log("NOME:", dados.nome);
                     );
 
                 if(campoNome){
-
-                    const primeiroNome =
-    dados.nome.split(" ")[0];
 
 campoNome.innerHTML =
     "👋 Olá, " +

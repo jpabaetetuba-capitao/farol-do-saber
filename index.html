@@ -161,11 +161,14 @@
     <button onclick="mostrarTela('estatisticas')">
         📊 Estatísticas
     </button>
-
-    <button onclick="mostrarTela('erros')">
+<button onclick="mostrarTela('erros')">
         ❌ Caderno de Erros
     </button>
 
+
+<button onclick="mostrarTela('sobre')">
+        ℹ️ Sobre
+    </button>
 <button onclick="sair()">
     🚪 Sair
 </button>
@@ -1130,6 +1133,11 @@ Li e revisei o mapa mental.
 
             <h2>📚 Estudos</h2>
 
+            <div class="aviso-farol aviso-farol-compacto missao-inicio" id="missaoDiariaResumoInicio">
+                <strong>🎯 Missão do Dia</strong>
+                <span>Carregando desafio de hoje...</span>
+            </div>
+
             <br>
 
             <p>
@@ -1174,18 +1182,6 @@ Li e revisei o mapa mental.
         -
     </strong>
 </p>
-
-</div>
-
-<div class="dashboard-card missao-card">
-
-    <h2>🎯 Missão do Dia</h2>
-
-    <br>
-
-    <div id="missaoDiaria">
-        Carregando missão...
-    </div>
 
 </div>
 
@@ -1238,6 +1234,13 @@ Li e revisei o mapa mental.
     <div class="card">
 
        <h2>📚 Escolha uma Disciplina</h2>
+
+<div class="aviso-farol">
+    <h3>⭐ Estude e acumule Pontos de Luz</h3>
+    <p>
+        Cada acerto nas questões vale <strong>10 Pontos de Luz</strong>. Ao concluir um tópico, você também pode ganhar bônus e medalhas.
+    </p>
+</div>
 
 <p>
     Selecione a disciplina que deseja estudar.
@@ -1388,6 +1391,13 @@ Li e revisei o mapa mental.
 
         <h2>📝 Simulados</h2>
 
+        <div class="aviso-farol">
+            <h3>🚀 Simulado também gera recompensa</h3>
+            <p>
+                Finalize um simulado e ganhe <strong>100 Pontos de Luz</strong>. Com 80% ou mais de aproveitamento, você pode receber bônus extra.
+            </p>
+        </div>
+
         <p>
             Escolha o tipo de simulado.
         </p>
@@ -1515,6 +1525,13 @@ Li e revisei o mapa mental.
         <p>
             Troque seu saldo de Pontos de Luz por recompensas visuais, títulos, avatares, card premium e certificado digital.
         </p>
+
+        <div class="aviso-farol">
+            <h3>🛒 Use seus pontos para evoluir seu perfil</h3>
+            <p>
+                Os Pontos de Luz conquistados nas questões, simulados, revisões e missões podem ser trocados por recompensas da Loja Farol.
+            </p>
+        </div>
 
         <br>
 
@@ -1660,6 +1677,18 @@ Li e revisei o mapa mental.
 
         <h2>📊 Estatísticas</h2>
 
+        <div class="aviso-farol aviso-farol-estatisticas">
+            <h3>🎯 Missão do Dia</h3>
+            <p>
+                A missão muda automaticamente a cada dia. Complete o desafio de hoje e ganhe Pontos de Luz.
+            </p>
+            <div id="missaoDiaria">
+                Carregando missão...
+            </div>
+        </div>
+
+        <br>
+
         <div id="estatisticasConteudo">
 
             Nenhum dado disponível.
@@ -1683,15 +1712,176 @@ Li e revisei o mapa mental.
 
         <h2>❌ Caderno de Erros Inteligente</h2>
 
+        <div class="aviso-farol">
+            <h3>🔁 Revisão também vale recompensa</h3>
+            <p>
+                Revise as questões que você errou. Cada revisão correta pode render <strong>5 Pontos de Luz</strong> e ajuda a recuperar o conteúdo.
+            </p>
+        </div>
+
         <p>
-            Aqui o aluno revisa as questões que errou e acompanha a recuperação do conteúdo.
+            Aqui o aluno revisa as questões que errou, acompanha a recuperação do conteúdo
+            e transforma erro em aprendizado.
         </p>
+
+        <br>
+
+        <div id="painelResumoCadernoErros" class="painel-caderno-erros">
+            Carregando resumo...
+        </div>
+
+        <div id="filtrosCadernoErros" class="filtros-caderno-erros">
+            Carregando filtros...
+        </div>
 
         <br>
 
         <div id="listaErros">
 
             Nenhum erro registrado.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SOBRE -->
+
+<section id="sobre" class="tela">
+
+    <div class="card sobre-card">
+
+        <button
+            class="btn-voltar"
+            onclick="mostrarTela('inicio')">
+
+            ⬅ Voltar para Início
+
+        </button>
+
+        <br><br>
+
+        <div class="sobre-hero">
+
+            <div class="sobre-foto-area">
+
+                <img
+                    src="imagens/autor/capitao-joao-paulo.webp"
+                    alt="Capitão João Paulo Silva"
+                    class="foto-autor">
+
+            </div>
+
+            <div class="sobre-intro">
+
+                <span class="sobre-tag">
+                    🗼 Farol do Saber
+                </span>
+
+                <h2>
+                    Sobre a plataforma
+                </h2>
+
+                <p>
+                    O Farol do Saber é uma plataforma de estudos criada para ajudar alunos e candidatos
+                    a estudarem com mais organização, constância e motivação.
+                </p>
+
+                <p>
+                    A plataforma reúne teoria, mapas mentais, questões comentadas, simulados, caderno de erros,
+                    ranking, missões diárias e sistema de Pontos de Luz, tornando o aprendizado mais dinâmico
+                    e gamificado.
+                </p>
+
+                <p>
+                    A proposta é transformar o estudo em uma jornada mais clara, onde cada aluno possa acompanhar
+                    seu progresso, revisar seus erros e avançar passo a passo rumo aos seus objetivos.
+                </p>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="sobre-grid">
+
+            <div class="sobre-bloco sobre-bloco-destaque">
+
+                <h3>
+                    👨‍✈️ Sobre o autor
+                </h3>
+
+                <p>
+                    O Farol do Saber foi idealizado por <strong>João Paulo Silva</strong>,
+                    Capitão de Cabotagem da Marinha Mercante, com mais de 10 anos de experiência
+                    na carreira marítima.
+                </p>
+
+                <p>
+                    João Paulo é formado em <strong>Licenciatura em Matemática</strong> pela
+                    Universidade Federal do Pará, possui pós-graduação em
+                    <strong>Matemática Financeira</strong>, Bacharelado em
+                    <strong>Administração</strong>, Curso Técnico em
+                    <strong>Processos Industriais</strong> e Curso Técnico em
+                    <strong>Mecânica Industrial</strong>.
+                </p>
+
+                <p>
+                    Antes de ingressar na Marinha Mercante, trabalhou por 5 anos na Hydro Alunorte,
+                    atuando como operador de produção e sala de controle. Após esse período,
+                    realizou o curso de Oficial de Náutica da Marinha Mercante, iniciando sua trajetória
+                    como Oficial de Náutica e alcançando posteriormente a ascensão a Capitão de Cabotagem.
+                </p>
+
+                <p>
+                    Unindo sua experiência na educação, na indústria e na área marítima, criou o Farol do Saber
+                    com o objetivo de tornar o estudo mais organizado, acessível e motivador para quem busca
+                    aprovação em concursos, cursos de formação e crescimento profissional.
+                </p>
+
+            </div>
+
+            <div class="sobre-bloco">
+
+                <h3>
+                    🎯 Objetivo
+                </h3>
+
+                <p>
+                    Oferecer uma experiência de estudo simples, prática e motivadora,
+                    ajudando o aluno a aprender, revisar e evoluir com acompanhamento de progresso.
+                </p>
+
+            </div>
+
+            <div class="sobre-bloco">
+
+                <h3>
+                    ⭐ Metodologia
+                </h3>
+
+                <p>
+                    O Farol do Saber combina teoria, mapas mentais, questões, simulados,
+                    caderno de erros e gamificação para estimular a constância nos estudos.
+                </p>
+
+            </div>
+
+            <div class="sobre-bloco">
+
+                <h3>
+                    🚀 Missão
+                </h3>
+
+                <p>
+                    Iluminar o caminho do estudante, tornando a preparação mais clara,
+                    organizada e acessível para quem busca aprovação e desenvolvimento profissional.
+                </p>
+
+            </div>
 
         </div>
 

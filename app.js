@@ -760,6 +760,11 @@ localStorage.getItem(
     "usuarioForum"
 ) || "Visitante";
 
+let usuarioNomeCompleto =
+localStorage.getItem(
+    "usuarioNomeCompleto"
+) || "";
+
 let usuarioEmail =
 localStorage.getItem(
     "usuarioEmail"
@@ -1669,6 +1674,13 @@ const percentual =
     
     <div class="card">
 
+<div class="aviso-farol aviso-farol-compacto">
+    <strong>⭐ Cada acerto vale 10 Pontos de Luz.</strong>
+    <span>Conclua o tópico para buscar bônus e medalhas.</span>
+</div>
+
+<br>
+
 <div style="display:flex;gap:10px;flex-wrap:wrap;">
 
 <button onclick="abrirTeoriaDoAssunto()">
@@ -1843,7 +1855,7 @@ if (Number(resposta.value) === q.correta) {
 
             <h3>✅ Resposta Correta!</h3>
 
-            ${ganhouPontosQuestao ? `<p class="pontos-luz-feedback">⭐ +10 Pontos de Luz</p>` : `<p class="pontos-luz-feedback neutro">⭐ Pontos desta questão já foram registrados antes.</p>`}
+            ${ganhouPontosQuestao ? `<p class="pontos-luz-feedback">⭐ 10 Pontos de Luz</p>` : `<p class="pontos-luz-feedback neutro">⭐ Pontos desta questão já foram registrados antes.</p>`}
 
             <br>
 
@@ -2283,7 +2295,7 @@ if(adicionarPontosLuz(
     "Conclusão de tópico",
     "topico:" + disciplinaAtual
 )){
-    pontosTopicoHTML += "⭐ +50 Pontos de Luz por concluir o tópico<br>";
+    pontosTopicoHTML += "⭐ 50 Pontos de Luz por concluir o tópico<br>";
 }
 
 if(percentual >= 90){
@@ -2425,6 +2437,191 @@ function atualizarEstatisticas() {
 // CADERNO DE ERROS
 // ==========================
 
+
+function obterStatusCadernoErro(item){
+
+    if(
+        item.status === "corrigida" ||
+        item.status === "recuperada"
+    ){
+        return "recuperada";
+    }
+
+    if(item.status === "recuperacao"){
+        return "revisao";
+    }
+
+    return "pendente";
+
+}
+
+function obterRotuloStatusCaderno(item){
+
+    const status =
+        obterStatusCadernoErro(item);
+
+    if(status === "recuperada"){
+        return "✅ Recuperada";
+    }
+
+    if(status === "revisao"){
+        return "🔁 Em revisão";
+    }
+
+    return "❌ Pendente";
+
+}
+
+function definirFiltroCadernoErros(filtro){
+
+    localStorage.setItem(
+        "farol_filtro_caderno_erros",
+        filtro
+    );
+
+    atualizarCadernoErros();
+
+}
+
+function contarCadernoErrosPorStatus(){
+
+    const resumo = {
+        total: cadernoErros.length,
+        pendentes: 0,
+        revisao: 0,
+        recuperadas: 0,
+        revisaveis: 0,
+        pontosPossiveis: 0
+    };
+
+    cadernoErros.forEach(item => {
+
+        const status =
+            obterStatusCadernoErro(item);
+
+        if(status === "pendente"){
+            resumo.pendentes++;
+        }
+        else if(status === "revisao"){
+            resumo.revisao++;
+        }
+        else if(status === "recuperada"){
+            resumo.recuperadas++;
+        }
+
+        if(
+            status !== "recuperada" &&
+            Array.isArray(item.alternativas)
+        ){
+            resumo.revisaveis++;
+        }
+
+        if(
+            status !== "recuperada" &&
+            !item.pontosRevisaoGanhos
+        ){
+            resumo.pontosPossiveis += 5;
+        }
+
+    });
+
+    return resumo;
+
+}
+
+function montarBotaoFiltroCaderno(filtroAtual, filtro, texto, quantidade){
+
+    return `
+        <button
+            class="btn-filtro-caderno ${filtroAtual === filtro ? "ativo" : ""}"
+            onclick="definirFiltroCadernoErros('${filtro}')">
+
+            ${texto}
+            <span>${quantidade}</span>
+
+        </button>
+    `;
+
+}
+
+function atualizarResumoCadernoErros(){
+
+    const painel =
+        document.getElementById(
+            "painelResumoCadernoErros"
+        );
+
+    const filtros =
+        document.getElementById(
+            "filtrosCadernoErros"
+        );
+
+    if(!painel || !filtros){
+        return;
+    }
+
+    const resumo =
+        contarCadernoErrosPorStatus();
+
+    const filtroAtual =
+        localStorage.getItem(
+            "farol_filtro_caderno_erros"
+        ) || "todos";
+
+    painel.innerHTML = `
+        <div class="resumo-caderno-card">
+            <span>❌</span>
+            <strong>${resumo.pendentes}</strong>
+            <small>Pendentes</small>
+        </div>
+
+        <div class="resumo-caderno-card">
+            <span>🔁</span>
+            <strong>${resumo.revisao}</strong>
+            <small>Em revisão</small>
+        </div>
+
+        <div class="resumo-caderno-card">
+            <span>✅</span>
+            <strong>${resumo.recuperadas}</strong>
+            <small>Recuperadas</small>
+        </div>
+
+        <div class="resumo-caderno-card">
+            <span>⭐</span>
+            <strong>${resumo.pontosPossiveis}</strong>
+            <small>Pontos possíveis</small>
+        </div>
+    `;
+
+    filtros.innerHTML =
+        montarBotaoFiltroCaderno(
+            filtroAtual,
+            "todos",
+            "Todos",
+            resumo.total
+        ) +
+        montarBotaoFiltroCaderno(
+            filtroAtual,
+            "pendentes",
+            "Pendentes",
+            resumo.pendentes
+        ) +
+        montarBotaoFiltroCaderno(
+            filtroAtual,
+            "revisao",
+            "Em revisão",
+            resumo.revisao
+        ) +
+        montarBotaoFiltroCaderno(
+            filtroAtual,
+            "recuperadas",
+            "Recuperadas",
+            resumo.recuperadas
+        );
+
+}
+
 function atualizarCadernoErros() {
 
     const lista =
@@ -2434,80 +2631,171 @@ function atualizarCadernoErros() {
         return;
     }
 
+    atualizarResumoCadernoErros();
+
     if (cadernoErros.length === 0) {
 
         lista.innerHTML = `
             <div class="card caderno-vazio">
-                ✅ Nenhum erro registrado.<br><br>
-                Continue estudando. Quando errar uma questão, ela aparecerá aqui para revisão.
+                <h3>✅ Nenhum erro registrado.</h3>
+                <br>
+                <p>
+                    Continue estudando. Quando errar uma questão, ela aparecerá aqui
+                    para revisão inteligente.
+                </p>
             </div>
         `;
 
         return;
     }
 
-   const ordenado =
-    [...cadernoErros].sort(
-        (a,b) => (b.data || 0) - (a.data || 0)
-    );
+    const filtroAtual =
+        localStorage.getItem(
+            "farol_filtro_caderno_erros"
+        ) || "todos";
+
+    const ordenado =
+        [...cadernoErros].sort(
+            (a,b) => (b.data || 0) - (a.data || 0)
+        );
+
+    const filtrado =
+        ordenado.filter(item => {
+
+            const status =
+                obterStatusCadernoErro(item);
+
+            if(filtroAtual === "todos"){
+                return true;
+            }
+
+            if(filtroAtual === "pendentes"){
+                return status === "pendente";
+            }
+
+            if(filtroAtual === "revisao"){
+                return status === "revisao";
+            }
+
+            if(filtroAtual === "recuperadas"){
+                return status === "recuperada";
+            }
+
+            return true;
+
+        });
+
+    if(filtrado.length === 0){
+
+        lista.innerHTML = `
+            <div class="card caderno-vazio">
+                <h3>🔎 Nenhum item neste filtro.</h3>
+                <br>
+                <p>
+                    Escolha outro filtro ou continue estudando para alimentar seu Caderno de Erros.
+                </p>
+            </div>
+        `;
+
+        return;
+
+    }
 
     lista.innerHTML = `
 
     <div class="card caderno-acoes">
         <h3>🧠 Revisão Inteligente</h3>
         <p>
-            Revise os erros respondendo novamente. No primeiro acerto a questão fica em recuperação; no segundo acerto ela sai do caderno.
+            Revise seus erros por prioridade. Cada primeira revisão correta rende
+            <strong>5 Pontos de Luz</strong>. Quando acertar novamente, a questão será
+            marcada como recuperada.
         </p>
         <br>
-        <button onclick="revisarTodosErros()">
-            🚀 Revisar todos os erros
+        <button onclick="revisarProximoErroCaderno()">
+            🚀 Revisar próximo erro
         </button>
     </div>
 
-    ` + ordenado.map(item => {
+    ` + filtrado.map(item => {
 
-        const indiceOriginal = cadernoErros.indexOf(item);
-        const podeRevisar = Array.isArray(item.alternativas);
-        const status = item.status === "recuperacao"
-            ? "🟡 Em recuperação"
-            : "🔴 Pendente";
+        const indiceOriginal =
+            cadernoErros.indexOf(item);
+
+        const podeRevisar =
+            Array.isArray(item.alternativas) &&
+            obterStatusCadernoErro(item) !== "recuperada";
+
+        const status =
+            obterStatusCadernoErro(item);
+
+        const classeStatus =
+            status === "recuperada"
+            ? "status-recuperada"
+            : status === "revisao"
+            ? "status-revisao"
+            : "status-pendente";
 
         return `
 
-    <div class="card card-erro-inteligente">
+    <div class="card card-erro-inteligente ${classeStatus}">
 
-        <h3>
-            ❌ Questão para Revisão
-        </h3>
+        <div class="cabecalho-card-erro">
+
+            <div>
+                <h3>
+                    ${obterRotuloStatusCaderno(item)}
+                </h3>
+
+                <small>
+                    📚 ${item.disciplina || "-"}
+                </small>
+            </div>
+
+            <span class="badge-erros">
+                ${item.erros || 1} erro(s)
+            </span>
+
+        </div>
 
         <br>
 
-        <strong>Disciplina:</strong>
+        <div class="info-revisao-card">
+            <span>
+                🔁 Acertos em revisão:
+                <strong>${item.acertosRevisao || 0}/2</strong>
+            </span>
+
+            <span>
+                ⭐ Recompensa:
+                <strong>
+                    ${
+                        item.pontosRevisaoGanhos
+                        ? "já recebida"
+                        : "5 Pontos de Luz"
+                    }
+                </strong>
+            </span>
+        </div>
+
         <br>
-        ${item.disciplina || "-"}
 
-        <br><br>
+        <strong>📌 Pergunta:</strong>
+        <p class="pergunta-caderno">
+            ${item.pergunta || "-"}
+        </p>
 
-        <strong>Status:</strong>
         <br>
-        ${status}
-
-        <br><br>
-
-        <strong>Pergunta:</strong>
-        <br>
-        ${item.pergunta || "-"}
-
-        <br><br>
-
-        <strong>Resposta correta:</strong>
-        <br>
-        ${item.respostaCorreta || "-"}
-
-        <br><br>
 
         <details>
-            <summary>📚 Ver explicação</summary>
+            <summary>✅ Ver resposta correta</summary>
+            <br>
+            ${item.respostaCorreta || "-"}
+        </details>
+
+        <br>
+
+        <details>
+            <summary>📚 Ver explicação e dica</summary>
             <br>
             ${item.explicacao || item.feedbackErro || "Sem explicação cadastrada."}
             <br><br>
@@ -2518,30 +2806,34 @@ function atualizarCadernoErros() {
 
         <br>
 
-        <strong>Erros nessa questão:</strong>
-        ${item.erros || 1}
+        <div class="acoes-card-erro">
 
-        <br><br>
+            ${podeRevisar ? `
+                <button onclick="revisarErro(${indiceOriginal})">
+                    🔁 Revisar agora
+                </button>
+            ` : status === "recuperada" ? `
+                <button
+                    class="btn-caderno-secundario"
+                    onclick="removerErroCaderno(${indiceOriginal})">
 
-        <strong>Acertos em revisão:</strong>
-        ${item.acertosRevisao || 0}/2
+                    🗑 Remover
 
-        <br><br>
+                </button>
+            ` : `
+                <p class="aviso-caderno-antigo">
+                    Esta questão foi registrada antes da atualização do Caderno Inteligente.
+                    Erre novamente a questão no modo normal para habilitar revisão com alternativas.
+                </p>
+            `}
 
-        ${podeRevisar ? `
-            <button onclick="revisarErro(${indiceOriginal})">
-                🔁 Revisar questão
-            </button>
-        ` : `
-            <p class="aviso-caderno-antigo">
-                Esta questão foi registrada antes da atualização do Caderno Inteligente. Erre novamente a questão no modo normal para habilitar a revisão com alternativas.
-            </p>
-        `}
+        </div>
 
     </div>
 
     `}).join("");
 }
+
 
 // ==========================
 // RESETAR PROGRESSO
@@ -2625,6 +2917,13 @@ function mostrarQuestaoSimulado() {
     area.innerHTML = `
 
     <div class="card">
+
+        <div class="aviso-farol aviso-farol-compacto">
+            <strong>📝 Finalize o simulado e ganhe 100 Pontos de Luz.</strong>
+            <span>Com 80% ou mais, você pode receber bônus extra.</span>
+        </div>
+
+        <br>
 
         <h3>
             Simulado
@@ -2856,7 +3155,7 @@ function finalizarSimulado() {
         "Simulado finalizado",
         "simulado:" + tipoSimuladoAtual + ":" + hoje
     )){
-        pontosSimuladoHTML += "⭐ +100 Pontos de Luz por finalizar o simulado<br>";
+        pontosSimuladoHTML += "⭐ 100 Pontos de Luz por finalizar o simulado<br>";
     }
 
     if(percentualNumero >= 90){
@@ -2865,7 +3164,7 @@ function finalizarSimulado() {
             "Desempenho acima de 90% no simulado",
             "simulado90:" + tipoSimuladoAtual + ":" + hoje
         )){
-            pontosSimuladoHTML += "🏆 +150 Pontos de Luz por desempenho acima de 90%<br>";
+            pontosSimuladoHTML += "🏆 150 Pontos de Luz por desempenho acima de 90%<br>";
         }
     }
     else if(percentualNumero >= 80){
@@ -2874,7 +3173,7 @@ function finalizarSimulado() {
             "Desempenho acima de 80% no simulado",
             "simulado80:" + tipoSimuladoAtual + ":" + hoje
         )){
-            pontosSimuladoHTML += "🥇 +100 Pontos de Luz por desempenho acima de 80%<br>";
+            pontosSimuladoHTML += "🥇 100 Pontos de Luz por desempenho acima de 80%<br>";
         }
     }
 
@@ -4916,6 +5215,8 @@ window.onload = function () {
                 try{ carregarRankingPontos(); }catch(e){ console.log(e); }
                 try{ carregarMeusDuelos(); }catch(e){ console.log(e); }
                 try{ abrirDueloPendenteAposLogin(); }catch(e){ console.log(e); }
+                try{ atualizarMissaoDiaria(); }catch(e){ console.log(e); }
+                try{ exibirToastMissaoDiariaUmaVez(); }catch(e){ console.log(e); }
             }, 800);
 
         }
@@ -6636,6 +6937,9 @@ usuarioEhAdmin =
     const primeiroNome =
         nome.split(" ")[0];
 
+usuarioNomeCompleto =
+    nome || primeiroNome;
+
 usuarioForum =
     primeiroNome;
 usuarioEmail =
@@ -6649,6 +6953,11 @@ localStorage.setItem(
 localStorage.setItem(
     "usuarioForum",
     primeiroNome
+);
+
+localStorage.setItem(
+    "usuarioNomeCompleto",
+    usuarioNomeCompleto
 );
 
 document.getElementById(
@@ -6668,6 +6977,13 @@ await db.collection("usuarios")
 
         mostrarTela("inicio");
 document.getElementById("login").style.display = "none";
+
+try{
+    atualizarMissaoDiaria();
+    exibirToastMissaoDiariaUmaVez();
+}catch(e){
+    console.log(e);
+}
 
     }
     
@@ -6716,7 +7032,13 @@ async function sair(){
         "usuarioEmail"
     );
 
+    localStorage.removeItem(
+        "usuarioNomeCompleto"
+    );
+
     usuarioForum = "Visitante";
+
+    usuarioNomeCompleto = "";
 
     usuarioEmail = "";
 
@@ -7338,6 +7660,113 @@ function adicionarPontosLuz(valor, motivo, chaveUnica){
     return true;
 }
 
+
+const missoesDiariasFarol = [
+
+    {
+        id: "foco-questoes",
+        nome: "Foco nas Questões",
+        descricao: "Responda questões e mantenha um bom ritmo de acertos.",
+        recompensa: 50,
+        requisitos: [
+            {
+                tipo: "acertos",
+                meta: 10,
+                texto: "Acertar 10 questões",
+                icone: "✅"
+            }
+        ]
+    },
+
+    {
+        id: "revisao-inteligente",
+        nome: "Revisão Inteligente",
+        descricao: "Volte ao Caderno de Erros e recupere conteúdos importantes.",
+        recompensa: 40,
+        requisitos: [
+            {
+                tipo: "revisoes",
+                meta: 5,
+                texto: "Revisar 5 erros",
+                icone: "🔁"
+            }
+        ]
+    },
+
+    {
+        id: "simulado-farol",
+        nome: "Simulado do Farol",
+        descricao: "Conclua um simulado para testar seu desempenho geral.",
+        recompensa: 80,
+        requisitos: [
+            {
+                tipo: "simulados",
+                meta: 1,
+                texto: "Concluir 1 simulado",
+                icone: "📝"
+            }
+        ]
+    },
+
+    {
+        id: "disciplina-em-dia",
+        nome: "Disciplina em Dia",
+        descricao: "Avance em qualquer disciplina e conclua um tópico de estudo.",
+        recompensa: 60,
+        requisitos: [
+            {
+                tipo: "topicos",
+                meta: 1,
+                texto: "Concluir 1 tópico",
+                icone: "📚"
+            }
+        ]
+    },
+
+    {
+        id: "estudante-constante",
+        nome: "Estudante Constante",
+        descricao: "Combine novas questões com revisão para manter a constância.",
+        recompensa: 50,
+        requisitos: [
+            {
+                tipo: "acertos",
+                meta: 5,
+                texto: "Acertar 5 questões",
+                icone: "✅"
+            },
+            {
+                tipo: "revisoes",
+                meta: 2,
+                texto: "Revisar 2 erros",
+                icone: "🔁"
+            }
+        ]
+    }
+
+];
+
+function obterMissaoDiaria(){
+
+    const hoje = dataHojeFarol();
+
+    const data =
+        new Date(
+            hoje + "T00:00:00Z"
+        );
+
+    const dias =
+        Math.floor(
+            data.getTime() / 86400000
+        );
+
+    const indice =
+        dias % missoesDiariasFarol.length;
+
+    return missoesDiariasFarol[indice];
+
+}
+
 function garantirEstatisticaHoje(){
 
     const hoje = dataHojeFarol();
@@ -7348,11 +7777,41 @@ function garantirEstatisticaHoje(){
             revisoes: 0,
             topicos: 0,
             simulados: 0,
-            missaoPremiada: false
+            missaoPremiada: false,
+            missoesPremiadas: {}
         };
     }
 
+    estatisticasDiarias[hoje].missoesPremiadas =
+        estatisticasDiarias[hoje].missoesPremiadas || {};
+
     return estatisticasDiarias[hoje];
+
+}
+
+function progressoMissao(requisito, estatistica){
+
+    const valor =
+        estatistica[requisito.tipo] || 0;
+
+    return {
+        atual: Math.min(valor, requisito.meta),
+        meta: requisito.meta,
+        completa: valor >= requisito.meta
+    };
+
+}
+
+function missaoDiariaCompleta(missao, estatistica){
+
+    return missao.requisitos.every(
+        requisito =>
+            progressoMissao(
+                requisito,
+                estatistica
+            ).completa
+    );
+
 }
 
 function registrarAtividadeDiaria(tipo, quantidade){
@@ -7368,52 +7827,192 @@ function registrarAtividadeDiaria(tipo, quantidade){
     salvarDados();
     atualizarMissaoDiaria();
     verificarMissaoDiaria();
+
 }
 
 function verificarMissaoDiaria(){
 
-    const hoje = garantirEstatisticaHoje();
+    const hoje =
+        garantirEstatisticaHoje();
+
+    const missao =
+        obterMissaoDiaria();
 
     const completa =
-        (hoje.acertos || 0) >= 10 &&
-        (hoje.revisoes || 0) >= 3 &&
-        ((hoje.topicos || 0) >= 1 || (hoje.simulados || 0) >= 1);
-
-    if(completa && !hoje.missaoPremiada){
-        hoje.missaoPremiada = true;
-        adicionarPontosLuz(
-            50,
-            "Missão diária completa",
-            "missao-diaria:" + dataHojeFarol()
+        missaoDiariaCompleta(
+            missao,
+            hoje
         );
-        mostrarToast("🎯 Missão diária concluída! +50 Pontos de Luz");
+
+    if(
+        completa &&
+        !hoje.missoesPremiadas[missao.id]
+    ){
+
+        hoje.missoesPremiadas[missao.id] = true;
+        hoje.missaoPremiada = true;
+
+        adicionarPontosLuz(
+            missao.recompensa,
+            "Missão diária completa: " + missao.nome,
+            "missao-diaria:" + missao.id + ":" + dataHojeFarol()
+        );
+
+        mostrarToast(
+            "🎯 Missão concluída! ⭐ " +
+            missao.recompensa +
+            " Pontos de Luz"
+        );
+
+        salvarDados();
+
     }
 
     atualizarMissaoDiaria();
+
+}
+
+function montarLinhasMissao(missao, estatistica){
+
+    return missao.requisitos.map(
+        requisito => {
+
+            const progresso =
+                progressoMissao(
+                    requisito,
+                    estatistica
+                );
+
+            return `
+                <p>
+                    ${requisito.icone}
+                    ${requisito.texto}:
+                    <strong>
+                        ${progresso.atual}/${progresso.meta}
+                    </strong>
+                </p>
+            `;
+
+        }
+    ).join("");
+
 }
 
 function atualizarMissaoDiaria(){
 
-    const area = document.getElementById("missaoDiaria");
+    const area =
+        document.getElementById(
+            "missaoDiaria"
+        );
 
-    if(!area){
+    const resumo =
+        document.getElementById(
+            "missaoDiariaResumoInicio"
+        );
+
+    const hoje =
+        garantirEstatisticaHoje();
+
+    const missao =
+        obterMissaoDiaria();
+
+    const concluida =
+        !!hoje.missoesPremiadas[missao.id];
+
+    const linhas =
+        montarLinhasMissao(
+            missao,
+            hoje
+        );
+
+    if(area){
+
+        area.innerHTML = `
+            <h3>
+                🎯 Hoje: ${missao.nome}
+            </h3>
+
+            <p>
+                ${missao.descricao}
+            </p>
+
+            <br>
+
+            ${linhas}
+
+            <br>
+
+            <strong>
+                ${
+                    concluida
+                    ? "🎉 Missão concluída hoje"
+                    : "⭐ Recompensa: " + missao.recompensa + " Pontos de Luz"
+                }
+            </strong>
+        `;
+
+    }
+
+    if(resumo){
+
+        resumo.innerHTML = `
+            <strong>
+                🎯 Missão do Dia: ${missao.nome}
+            </strong>
+
+            <span>
+                ${
+                    concluida
+                    ? "Concluída hoje."
+                    : "Ganhe ⭐ " + missao.recompensa + " Pontos de Luz."
+                }
+            </span>
+
+            <button
+                class="btn-ver-missao"
+                onclick="mostrarTela('estatisticas')">
+
+                Ver missão
+
+            </button>
+        `;
+
+    }
+
+}
+
+function exibirToastMissaoDiariaUmaVez(){
+
+    const hoje =
+        dataHojeFarol();
+
+    const chave =
+        "farol_toast_missao_" + hoje;
+
+    if(
+        localStorage.getItem(chave) === "true"
+    ){
         return;
     }
 
-    const hoje = garantirEstatisticaHoje();
+    const missao =
+        obterMissaoDiaria();
 
-    const acertos = hoje.acertos || 0;
-    const revisoes = hoje.revisoes || 0;
-    const tarefaFinal = (hoje.topicos || 0) + (hoje.simulados || 0);
+    mostrarToast(
+        "🎯 Missão do Dia: " +
+        missao.nome +
+        ". Ganhe ⭐ " +
+        missao.recompensa +
+        " Pontos de Luz."
+    );
 
-    area.innerHTML = `
-        <p>✅ Acertar 10 questões: <strong>${Math.min(acertos,10)}/10</strong></p>
-        <p>🔁 Revisar 3 erros: <strong>${Math.min(revisoes,3)}/3</strong></p>
-        <p>🏁 Concluir 1 tópico ou simulado: <strong>${Math.min(tarefaFinal,1)}/1</strong></p>
-        <br>
-        <strong>${hoje.missaoPremiada ? "🎉 Missão concluída hoje" : "🎯 Complete tudo e ganhe +50 Pontos de Luz"}</strong>
-    `;
+    localStorage.setItem(
+        chave,
+        "true"
+    );
+
 }
+
 
 async function salvarRankingFirebase(){
 
@@ -7504,22 +8103,106 @@ setInterval(carregarRankingPontos, 120000);
 // CADERNO DE ERROS INTELIGENTE
 // ==========================
 
-function revisarTodosErros(){
+
+function revisarProximoErroCaderno(){
 
     if(cadernoErros.length === 0){
         mostrarToast("Nenhum erro para revisar.");
         return;
     }
 
-    const indice = cadernoErros.findIndex(item => Array.isArray(item.alternativas));
+    const filtroAtual =
+        localStorage.getItem(
+            "farol_filtro_caderno_erros"
+        ) || "todos";
 
-    if(indice < 0){
-        mostrarToast("Os erros antigos precisam ser registrados novamente para liberar revisão com alternativas.");
+    const candidatos =
+        cadernoErros
+        .map((item, indice) => ({
+            item,
+            indice
+        }))
+        .filter(obj => {
+
+            const status =
+                obterStatusCadernoErro(obj.item);
+
+            if(status === "recuperada"){
+                return false;
+            }
+
+            if(!Array.isArray(obj.item.alternativas)){
+                return false;
+            }
+
+            if(filtroAtual === "pendentes"){
+                return status === "pendente";
+            }
+
+            if(filtroAtual === "revisao"){
+                return status === "revisao";
+            }
+
+            return true;
+
+        })
+        .sort((a,b) => (b.item.data || 0) - (a.item.data || 0));
+
+    if(candidatos.length === 0){
+
+        mostrarToast(
+            "Não há questões revisáveis neste filtro."
+        );
+
+        return;
+
+    }
+
+    revisarErro(
+        candidatos[0].indice
+    );
+
+}
+
+function revisarTodosErros(){
+
+    revisarProximoErroCaderno();
+
+}
+
+function removerErroCaderno(indice){
+
+    const item =
+        cadernoErros[indice];
+
+    if(!item){
+        mostrarToast("Erro não encontrado.");
         return;
     }
 
-    revisarErro(indice);
+    const confirmar =
+        confirm(
+            "Deseja remover esta questão do Caderno de Erros?"
+        );
+
+    if(!confirmar){
+        return;
+    }
+
+    cadernoErros.splice(
+        indice,
+        1
+    );
+
+    salvarDados();
+    atualizarCadernoErros();
+
+    mostrarToast(
+        "Questão removida do Caderno de Erros."
+    );
+
 }
+
 
 function revisarErro(indice){
 
@@ -7527,6 +8210,11 @@ function revisarErro(indice){
 
     if(!item || !Array.isArray(item.alternativas)){
         mostrarToast("Esta questão ainda não possui alternativas salvas para revisão.");
+        return;
+    }
+
+    if(obterStatusCadernoErro(item) === "recuperada"){
+        mostrarToast("Esta questão já foi recuperada.");
         return;
     }
 
@@ -7539,9 +8227,14 @@ function revisarErro(indice){
 
             <h2>🔁 Revisão do Caderno de Erros</h2>
 
+            <div class="aviso-farol aviso-farol-compacto">
+                <strong>⭐ Acerte a revisão e ganhe 5 Pontos de Luz.</strong>
+                <span>Ao acertar novamente, a questão será marcada como recuperada.</span>
+            </div>
+
             <br>
 
-            <button onclick="mostrarTela('erros')">
+            <button onclick="mostrarTela('erros'); atualizarCadernoErros();">
                 ⬅ Voltar ao Caderno
             </button>
 
@@ -7616,14 +8309,14 @@ function corrigirRevisaoErro(indice){
 
         if(!item.pontosRevisaoGanhos){
             const ganhou = adicionarPontosLuz(
-                3,
+                5,
                 "Revisão correta do caderno de erros",
                 "revisao:" + item.idErro
             );
 
             if(ganhou){
                 item.pontosRevisaoGanhos = true;
-                pontosHTML = `<p class="pontos-luz-feedback">⭐ +3 Pontos de Luz pela revisão</p>`;
+                pontosHTML = `<p class="pontos-luz-feedback">⭐ 5 Pontos de Luz pela revisão</p>`;
                 registrarAtividadeDiaria("revisoes", 1);
             }
         }
@@ -7637,11 +8330,13 @@ function corrigirRevisaoErro(indice){
         let mensagemStatus = "";
 
         if(item.acertosRevisao >= 2){
-            cadernoErros.splice(indice, 1);
-            mensagemStatus = "✅ Erro corrigido! A questão saiu do Caderno de Erros.";
+            item.status = "corrigida";
+            item.dataRecuperacao = Date.now();
+            mensagemStatus = "✅ Erro recuperado! A questão foi marcada como recuperada.";
         }
         else{
-            mensagemStatus = "🟡 Muito bom! A questão ficou em recuperação. Acerte novamente depois para remover do caderno.";
+            item.status = "recuperacao";
+            mensagemStatus = "🟡 Muito bom! A questão ficou em revisão. Acerte novamente depois para marcar como recuperada.";
         }
 
         salvarDados();
@@ -7679,7 +8374,7 @@ function corrigirRevisaoErro(indice){
                 <strong>Explicação:</strong><br><br>
                 ${item.feedbackErro || item.explicacao || "Sem explicação cadastrada."}
                 <br><br>
-                <button onclick="mostrarTela('erros')">
+                <button onclick="mostrarTela('erros'); atualizarCadernoErros();">
                     Voltar ao Caderno
                 </button>
             </div>
@@ -8241,6 +8936,14 @@ function comprarRecompensaLoja(id){
         lojaFarol.certificadoDigital = true;
         lojaFarol.codigoCertificado = lojaFarol.codigoCertificado || gerarCodigoCertificado();
         lojaFarol.dataCertificado = lojaFarol.dataCertificado || new Date().toLocaleDateString("pt-BR");
+
+        setTimeout(() => {
+            try{
+                gerarCertificadoDigital();
+            }catch(erro){
+                console.log(erro);
+            }
+        }, 500);
     }
 
     salvarDados();
@@ -8289,6 +8992,189 @@ function alterarVersaoAvatar(){
     mostrarToast("Escolha de versão liberada. Clique em usar avatar novamente.");
 }
 
+
+function recompensaEmUsoLoja(item){
+
+    if(!item){
+        return false;
+    }
+
+    if(item.tipo === "avatar"){
+        return (
+            lojaFarol.avatarAtual === item.avatarMasculino ||
+            lojaFarol.avatarAtual === item.avatarFeminino ||
+            lojaFarol.avatarAtual === item.avatar ||
+            lojaFarol.nomeAvatarAtual === item.nomeAvatarMasculino ||
+            lojaFarol.nomeAvatarAtual === item.nomeAvatarFeminino ||
+            lojaFarol.nomeAvatarAtual === item.nomeAvatar
+        );
+    }
+
+    if(item.tipo === "titulo"){
+        return lojaFarol.tituloAtual === "Guardião do Farol";
+    }
+
+    if(item.tipo === "medalha"){
+        return !!lojaFarol.medalhaEstudanteAtivo;
+    }
+
+    if(item.tipo === "card"){
+        return !!lojaFarol.cardPremium;
+    }
+
+    if(item.tipo === "certificado"){
+        return !!lojaFarol.certificadoDigital;
+    }
+
+    return false;
+
+}
+
+function classeStatusLoja(item, comprada, semSaldo, bloqueadaCertificado){
+
+    if(recompensaEmUsoLoja(item)){
+        return "em-uso";
+    }
+
+    if(comprada){
+        return "comprado";
+    }
+
+    if(semSaldo || bloqueadaCertificado){
+        return "bloqueado";
+    }
+
+    return "disponivel";
+
+}
+
+function textoStatusLoja(item, comprada, semSaldo, bloqueadaCertificado){
+
+    if(recompensaEmUsoLoja(item)){
+        return "✅ Em uso";
+    }
+
+    if(comprada){
+        return "✅ Desbloqueado";
+    }
+
+    if(bloqueadaCertificado){
+        return "🔒 Requisito pendente";
+    }
+
+    if(semSaldo){
+        return "🔒 Pontos insuficientes";
+    }
+
+    return "🛒 Disponível para troca";
+
+}
+
+
+function montarAcaoLoja(item, comprada, semSaldo, bloqueadaCertificado){
+
+    const emUso =
+        recompensaEmUsoLoja(item);
+
+    if(emUso){
+        return "";
+    }
+
+    if(comprada){
+
+        if(item.tipo === "avatar"){
+            return `
+                <button onclick="usarAvatarLoja('${item.id}')">
+                    Usar avatar
+                </button>
+            `;
+        }
+
+        if(item.tipo === "titulo"){
+            return `
+                <button onclick="usarTituloLoja('${item.id}')">
+                    Usar título
+                </button>
+            `;
+        }
+
+        if(item.tipo === "certificado"){
+            return `
+                <button onclick="gerarCertificadoDigital()">
+                    📜 Ver certificado
+                </button>
+            `;
+        }
+
+        if(item.tipo === "card"){
+            return `
+                <button onclick="compartilharProgresso()">
+                    📤 Compartilhar card premium
+                </button>
+            `;
+        }
+
+        return "";
+
+    }
+
+    if(item.custo === 0 && item.tipo === "avatar"){
+        return `
+            <button onclick="usarAvatarLoja('${item.id}')">
+                Usar avatar
+            </button>
+        `;
+    }
+
+    return `
+        <button
+            onclick="comprarRecompensaLoja('${item.id}')"
+            ${semSaldo || bloqueadaCertificado ? "disabled" : ""}>
+
+            ${
+                semSaldo
+                ? "Pontos insuficientes"
+                : bloqueadaCertificado
+                ? "Requisito pendente"
+                : "Trocar por " + item.custo + " ⭐"
+            }
+
+        </button>
+    `;
+
+}
+
+
+
+function usarTituloLoja(id){
+
+    const item =
+        recompensasLojaFarol.find(
+            recompensa => recompensa.id === id
+        );
+
+    if(!item){
+        mostrarToast("Título não encontrado.");
+        return;
+    }
+
+    if(!recompensaComprada(id)){
+        mostrarToast("Você ainda não desbloqueou este título.");
+        return;
+    }
+
+    lojaFarol.tituloAtual =
+        "Guardião do Farol";
+
+    salvarDados();
+    atualizarLojaFarol();
+    atualizarDashboard();
+    atualizarPainelEstudos();
+
+    mostrarToast("🎖 Título ativado!");
+
+}
+
 function atualizarLojaFarol(){
 
     const area = document.getElementById("conteudoLojaFarol");
@@ -8302,119 +9188,236 @@ function atualizarLojaFarol(){
     const grupos = [
         {
             titulo: "👤 Avatares gratuitos",
-            categoria: "avatares_gratuitos"
+            categoria: "avatares_gratuitos",
+            descricao: "Escolha seu avatar inicial para aparecer no perfil, ranking, fórum e duelos."
         },
         {
             titulo: "⭐ Avatares premium",
-            categoria: "avatares_premium"
+            categoria: "avatares_premium",
+            descricao: "Desbloqueie avatares especiais conforme avança nos estudos."
         },
         {
             titulo: "🎖 Títulos e medalhas",
-            categoria: "titulos_medalhas"
+            categoria: "titulos_medalhas",
+            descricao: "Mostre suas conquistas no perfil e no card de progresso."
         },
         {
             titulo: "📤 Extras de progresso",
-            categoria: "extras_progresso"
+            categoria: "extras_progresso",
+            descricao: "Deixe o compartilhamento do seu progresso mais bonito."
         },
         {
             titulo: "📜 Certificados",
-            categoria: "certificados"
+            categoria: "certificados",
+            descricao: "Recompensas especiais para destacar dedicação e desempenho."
         }
     ];
 
     const htmlGrupos = grupos.map(grupo => {
-        const itens = recompensasLojaFarol.filter(item => item.categoria === grupo.categoria);
+
+        const itens =
+            recompensasLojaFarol.filter(
+                item => item.categoria === grupo.categoria
+            );
 
         if(itens.length === 0){
             return "";
         }
 
         return `
-            <h3 class="titulo-secao-loja">${grupo.titulo}</h3>
-            <div class="grid-loja">
-                ${itens.map(item => {
-                    const comprada = recompensaComprada(item.id);
-                    const bloqueadaCertificado = item.id === "certificado_digital" && !certificadoDisponivel;
-                    const semSaldo = saldoPontosLuz < item.custo && !comprada;
-                    const custoTexto = item.custo === 0 ? "Grátis" : `${item.custo} Pontos de Luz`;
-                    const status = comprada
-                        ? "✅ Desbloqueado"
-                        : bloqueadaCertificado
-                            ? "🔒 Requer 100 acertos"
-                            : semSaldo
-                                ? "🔒 Pontos insuficientes"
-                                : "🛒 Disponível";
+            <div class="secao-loja-farol">
 
-                    let acao = `
-                        <button onclick="comprarRecompensaLoja('${item.id}')" ${semSaldo || bloqueadaCertificado ? "disabled" : ""}>
-                            Trocar por ${item.custo} ⭐
-                        </button>
-                    `;
+                <div class="cabecalho-secao-loja">
+                    <div>
+                        <h3>${grupo.titulo}</h3>
+                        <p>${grupo.descricao}</p>
+                    </div>
 
-                    if(item.custo === 0 && item.tipo === "avatar"){
-                        acao = `
-                            <button onclick="usarAvatarLoja('${item.id}')">
-                                Usar grátis
-                            </button>
+                    <span>
+                        ${itens.length} item(ns)
+                    </span>
+                </div>
+
+                <div class="grid-loja">
+                    ${itens.map(item => {
+
+                        const comprada =
+                            recompensaComprada(item.id);
+
+                        const bloqueadaCertificado =
+                            item.id === "certificado_digital" &&
+                            !certificadoDisponivel;
+
+                        const semSaldo =
+                            saldoPontosLuz < item.custo &&
+                            !comprada;
+
+                        const custoTexto =
+                            item.custo === 0
+                            ? "Grátis"
+                            : item.custo + " Pontos de Luz";
+
+                        const faltamPontos =
+                            Math.max(
+                                item.custo - saldoPontosLuz,
+                                0
+                            );
+
+                        const classeStatus =
+                            classeStatusLoja(
+                                item,
+                                comprada,
+                                semSaldo,
+                                bloqueadaCertificado
+                            );
+
+                        const status =
+                            textoStatusLoja(
+                                item,
+                                comprada,
+                                semSaldo,
+                                bloqueadaCertificado
+                            );
+
+                        const acao =
+                            montarAcaoLoja(
+                                item,
+                                comprada,
+                                semSaldo,
+                                bloqueadaCertificado
+                            );
+
+                        return `
+                            <div class="item-loja ${comprada ? "comprado" : ""} ${classeStatus}">
+
+                                <div class="topo-item-loja">
+                                    ${renderizarIconeLoja(item)}
+                                </div>
+
+                                <div class="corpo-item-loja">
+
+                                    <h3>${item.nome}</h3>
+
+                                    <p class="descricao-item-loja">
+                                        ${item.descricao}
+                                    </p>
+
+                                    <div class="linha-custo-loja">
+                                        <span>
+                                            <strong>Custo:</strong>
+                                            ${custoTexto}
+                                        </span>
+                                    </div>
+
+                                    ${
+                                        item.requisito
+                                        ? `
+                                            <div class="linha-requisito-loja">
+                                                <span>
+                                                    <strong>Requisito:</strong>
+                                                    ${item.requisito}
+                                                </span>
+                                            </div>
+                                        `
+                                        : ""
+                                    }
+
+                                    ${
+                                        !comprada &&
+                                        item.custo > 0 &&
+                                        semSaldo
+                                        ? `
+                                            <div class="linha-falta-loja">
+                                                Faltam ${faltamPontos} Pontos de Luz
+                                            </div>
+                                        `
+                                        : ""
+                                    }
+
+                                    ${
+                                        item.id === "certificado_digital" &&
+                                        !certificadoDisponivel
+                                        ? `
+                                            <div class="linha-falta-loja">
+                                                Faltam ${Math.max(100 - acertos, 0)} acertos
+                                            </div>
+                                        `
+                                        : ""
+                                    }
+
+                                </div>
+
+                                <div class="rodape-item-loja">
+
+                                    ${
+                                        semSaldo && !comprada
+                                        ? ""
+                                        : `
+                                            <p class="status-loja ${classeStatus}">
+                                                ${status}
+                                            </p>
+                                        `
+                                    }
+
+                                    ${acao}
+
+                                </div>
+
+                            </div>
                         `;
-                    }
 
-                    if(comprada){
-                        if(item.tipo === "avatar"){
-                            acao = `
-                                <button onclick="usarAvatarLoja('${item.id}')">
-                                    Usar avatar
-                                </button>
-                            `;
-                        }
-                        else if(item.tipo === "certificado"){
-                            acao = `
-                                <button onclick="gerarCertificadoDigital()">
-                                    📜 Ver certificado
-                                </button>
-                            `;
-                        }
-                        else if(item.tipo === "card"){
-                            acao = `
-                                <button onclick="compartilharProgresso()">
-                                    📤 Compartilhar card premium
-                                </button>
-                            `;
-                        }
-                        else{
-                            acao = `<button disabled>Desbloqueado</button>`;
-                        }
-                    }
+                    }).join("")}
+                </div>
 
-                    return `
-                        <div class="item-loja ${comprada ? "comprado" : ""}">
-                            ${renderizarIconeLoja(item)}
-                            <h3>${item.nome}</h3>
-                            <p>${item.descricao}</p>
-                            <p><strong>Custo:</strong> ${custoTexto}</p>
-                            ${item.requisito ? `<p><strong>Requisito:</strong> ${item.requisito}</p>` : ""}
-                            <p class="status-loja">${status}</p>
-                            ${acao}
-                        </div>
-                    `;
-                }).join("")}
             </div>
         `;
+
     }).join("");
 
     area.innerHTML = `
-        <div class="loja-resumo">
-            <p><strong>⭐ Pontos de Luz totais:</strong> ${pontosLuz}</p>
-            <p><strong>🛒 Saldo para trocar:</strong> ${saldoPontosLuz}</p>
-            <p class="perfil-loja-linha">
-                <strong>👤 Perfil:</strong>
-                ${montarAvatarHTML(lojaFarol.avatarAtual, lojaFarol.nomeAvatarAtual, "avatar-pequeno")}
-                <span>${lojaFarol.nomeAvatarAtual || "Estudante"}</span>
-                <button class="btn-versao-avatar" onclick="alterarVersaoAvatar()">
-                    Trocar versão M/F
-                </button>
-            </p>
-            <p><strong>🎖 Título:</strong> ${lojaFarol.tituloAtual || "Sem título especial"}</p>
+        <div class="loja-resumo loja-resumo-novo">
+
+            <div class="loja-resumo-card">
+                <span>⭐</span>
+                <strong>${pontosLuz}</strong>
+                <small>Pontos totais</small>
+            </div>
+
+            <div class="loja-resumo-card destaque">
+                <span>🛒</span>
+                <strong>${saldoPontosLuz}</strong>
+                <small>Saldo para trocar</small>
+            </div>
+
+            <div class="loja-resumo-card perfil">
+                <span>👤</span>
+                <div class="perfil-loja-resumo">
+                    ${montarAvatarHTML(
+                        lojaFarol.avatarAtual,
+                        lojaFarol.nomeAvatarAtual,
+                        "avatar-pequeno"
+                    )}
+                    <strong>${lojaFarol.nomeAvatarAtual || "Estudante"}</strong>
+                    <small>Perfil atual</small>
+                </div>
+            </div>
+
+            <div class="loja-resumo-card">
+                <span>🎖</span>
+                <strong>${lojaFarol.tituloAtual || "Sem título"}</strong>
+                <small>Título atual</small>
+            </div>
+
+        </div>
+
+        <div class="loja-acoes-rapidas">
+            <button
+                class="btn-versao-avatar"
+                onclick="alterarVersaoAvatar()">
+
+                Trocar versão M/F
+
+            </button>
         </div>
 
         <br>
@@ -8425,76 +9428,430 @@ function atualizarLojaFarol(){
     `;
 }
 
-function criarCanvasCertificadoDigital(){
 
-    const canvas = document.createElement("canvas");
-    canvas.width = 1600;
-    canvas.height = 1100;
 
-    const ctx = canvas.getContext("2d");
+function quebrarTextoCanvas(ctx, texto, larguraMaxima){
 
-    ctx.fillStyle = "#f7f2df";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    const palavras =
+        String(texto || "")
+        .split(" ");
 
-    ctx.strokeStyle = "#0d47a1";
-    ctx.lineWidth = 18;
-    ctx.strokeRect(60, 60, canvas.width - 120, canvas.height - 120);
+    const linhas = [];
+    let linha = "";
 
-    ctx.strokeStyle = "#f9a825";
-    ctx.lineWidth = 8;
-    ctx.strokeRect(95, 95, canvas.width - 190, canvas.height - 190);
+    palavras.forEach(palavra => {
 
-    ctx.textAlign = "center";
-    ctx.fillStyle = "#0d47a1";
-    ctx.font = "bold 66px Arial";
-    ctx.fillText("🗼 Farol do Saber", 800, 190);
+        const teste =
+            linha
+            ? linha + " " + palavra
+            : palavra;
 
-    ctx.fillStyle = "#222";
-    ctx.font = "bold 72px Arial";
-    ctx.fillText("CERTIFICADO DIGITAL", 800, 310);
+        if(ctx.measureText(teste).width > larguraMaxima && linha){
+            linhas.push(linha);
+            linha = palavra;
+        }
+        else{
+            linha = teste;
+        }
 
-    ctx.font = "34px Arial";
-    ctx.fillText("Certificado de participação e desempenho na plataforma", 800, 365);
+    });
 
-    const nome = usuarioForum || "Aluno";
-    const titulo = lojaFarol.tituloAtual || "Estudante";
-    const avatar = valorEhImagemAvatar(lojaFarol.avatarAtual) ? "" : (lojaFarol.avatarAtual || "👤");
-    const codigo = lojaFarol.codigoCertificado || gerarCodigoCertificado();
-    const data = lojaFarol.dataCertificado || new Date().toLocaleDateString("pt-BR");
+    if(linha){
+        linhas.push(linha);
+    }
 
-    ctx.font = "40px Arial";
-    ctx.fillStyle = "#333";
-    ctx.fillText("Certificamos que", 800, 470);
+    return linhas;
 
-    ctx.font = "bold 62px Arial";
-    ctx.fillStyle = "#0d47a1";
-    ctx.fillText(`${avatar ? avatar + " " : ""}${nome}`, 800, 550);
-
-    ctx.font = "34px Arial";
-    ctx.fillStyle = "#333";
-    ctx.fillText("demonstrou dedicação, constância e desempenho nos estudos", 800, 625);
-    ctx.fillText("realizados na plataforma Farol do Saber.", 800, 675);
-
-    ctx.font = "bold 36px Arial";
-    ctx.fillStyle = "#7a5200";
-    ctx.fillText(`🎖 ${titulo}`, 800, 755);
-
-    ctx.font = "34px Arial";
-    ctx.fillStyle = "#222";
-    ctx.fillText(`⭐ Pontos de Luz: ${pontosLuz}    ✅ Acertos: ${acertos}`, 800, 830);
-
-    ctx.font = "28px Arial";
-    ctx.fillStyle = "#555";
-    ctx.fillText(`Emitido em: ${data}`, 800, 930);
-    ctx.fillText(`Código de verificação: ${codigo}`, 800, 980);
-
-    ctx.font = "22px Arial";
-    ctx.fillText("Este certificado não possui validade oficial de curso; é um registro de participação e desempenho na plataforma.", 800, 1035);
-
-    return canvas;
 }
 
-function gerarCertificadoDigital(){
+function desenharTextoCentralizadoCanvas(ctx, texto, x, y, larguraMaxima, alturaLinha){
+
+    const linhas =
+        quebrarTextoCanvas(
+            ctx,
+            texto,
+            larguraMaxima
+        );
+
+    linhas.forEach((linha, indice) => {
+        ctx.fillText(
+            linha,
+            x,
+            y + (indice * alturaLinha)
+        );
+    });
+
+    return y + (linhas.length * alturaLinha);
+
+}
+
+function desenharSeloCertificado(ctx, x, y){
+
+    ctx.save();
+
+    ctx.beginPath();
+    ctx.arc(x, y, 78, 0, Math.PI * 2);
+    ctx.fillStyle = "#fff8e1";
+    ctx.fill();
+    ctx.lineWidth = 8;
+    ctx.strokeStyle = "#f9a825";
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(x, y, 52, 0, Math.PI * 2);
+    ctx.strokeStyle = "#0d47a1";
+    ctx.lineWidth = 4;
+    ctx.stroke();
+
+    ctx.fillStyle = "#0d47a1";
+    ctx.font = "bold 42px Arial";
+    ctx.textAlign = "center";
+    ctx.fillText("🗼", x, y + 14);
+
+    ctx.fillStyle = "#7a5200";
+    ctx.font = "bold 18px Arial";
+    ctx.fillText("FAROL", x, y + 104);
+
+    ctx.restore();
+
+}
+
+function desenharLinhaAssinaturaCertificado(ctx, x, y){
+
+    ctx.save();
+
+    ctx.strokeStyle = "#0d47a1";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(x - 220, y);
+    ctx.lineTo(x + 220, y);
+    ctx.stroke();
+
+    ctx.fillStyle = "#333";
+    ctx.font = "24px Arial";
+    ctx.textAlign = "center";
+    ctx.fillText("Capitão João Paulo Silva", x, y + 38);
+
+    ctx.fillStyle = "#666";
+    ctx.font = "20px Arial";
+    ctx.fillText("Idealizador do Farol do Saber", x, y + 68);
+
+    ctx.restore();
+
+}
+
+
+
+
+const caminhoModeloCertificadoFarol =
+    "imagens/certificados/modelo-certificado-farol.png";
+
+let imagemModeloCertificadoFarol = null;
+
+function carregarModeloCertificadoFarol(){
+
+    return new Promise((resolve) => {
+
+        if(imagemModeloCertificadoFarol){
+            resolve(imagemModeloCertificadoFarol);
+            return;
+        }
+
+        const imagem = new Image();
+        imagem.crossOrigin = "anonymous";
+
+        imagem.onload = () => {
+            imagemModeloCertificadoFarol = imagem;
+            resolve(imagem);
+        };
+
+        imagem.onerror = () => {
+            console.warn("Modelo do certificado não carregou. Usando desenho por código.");
+            resolve(null);
+        };
+
+        imagem.src =
+            caminhoModeloCertificadoFarol;
+
+    });
+
+}
+
+function obterNomeCertificado(){
+
+    const nomeCompletoLocal =
+        localStorage.getItem(
+            "usuarioNomeCompleto"
+        ) || "";
+
+    const nome =
+        (
+            usuarioNomeCompleto ||
+            nomeCompletoLocal ||
+            usuarioForum ||
+            "Aluno Farol do Saber"
+        ).trim();
+
+    if(
+        !nome ||
+        nome === "Visitante"
+    ){
+        return "Aluno Farol do Saber";
+    }
+
+    return nome;
+
+}
+
+
+
+function ajustarFonteTextoCanvas(ctx, texto, tamanhoInicial, tamanhoMinimo, familia, larguraMaxima){
+
+    let tamanho =
+        tamanhoInicial;
+
+    do{
+        ctx.font =
+            familia.replace(
+                "{size}",
+                tamanho
+            );
+
+        if(ctx.measureText(texto).width <= larguraMaxima){
+            return tamanho;
+        }
+
+        tamanho -= 2;
+
+    }while(tamanho >= tamanhoMinimo);
+
+    return tamanhoMinimo;
+
+}
+
+function desenharTextoComSombraCanvas(ctx, texto, x, y, cor, sombra){
+
+    ctx.save();
+
+    if(sombra){
+        ctx.fillStyle =
+            "rgba(0,0,0,0.18)";
+        ctx.fillText(
+            texto,
+            x + 3,
+            y + 3
+        );
+    }
+
+    ctx.fillStyle =
+        cor;
+
+    ctx.fillText(
+        texto,
+        x,
+        y
+    );
+
+    ctx.restore();
+
+}
+
+
+async function criarCanvasCertificadoDigital(){
+
+    if(!lojaFarol.codigoCertificado){
+        lojaFarol.codigoCertificado = gerarCodigoCertificado();
+    }
+
+    if(!lojaFarol.dataCertificado){
+        lojaFarol.dataCertificado = new Date().toLocaleDateString("pt-BR");
+    }
+
+    const canvas =
+        document.createElement("canvas");
+
+    canvas.width = 1800;
+    canvas.height = 1250;
+
+    const ctx =
+        canvas.getContext("2d");
+
+    const modelo =
+        await carregarModeloCertificadoFarol();
+
+    if(modelo){
+        ctx.drawImage(
+            modelo,
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+    }
+    else{
+        ctx.fillStyle = "#f7f2df";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    const respondidas =
+        acertos + erros;
+
+    const aproveitamento =
+        respondidas > 0
+        ? Math.round((acertos / respondidas) * 100)
+        : 0;
+
+    const nome =
+        obterNomeCertificado();
+
+    const titulo =
+        lojaFarol.tituloAtual ||
+        lojaFarol.nomeAvatarAtual ||
+        "Estudante do Farol";
+
+    const codigo =
+        lojaFarol.codigoCertificado;
+
+    const data =
+        lojaFarol.dataCertificado;
+
+    ctx.textAlign = "center";
+    ctx.textBaseline = "alphabetic";
+
+    // Nome completo do aluno
+    const tamanhoNome =
+        ajustarFonteTextoCanvas(
+            ctx,
+            nome,
+            74,
+            46,
+            "italic {size}px Georgia, 'Times New Roman', serif",
+            1160
+        );
+
+    ctx.font =
+        "italic " + tamanhoNome + "px Georgia, 'Times New Roman', serif";
+
+    desenharTextoComSombraCanvas(
+        ctx,
+        nome,
+        900,
+        675,
+        "#0d47a1",
+        true
+    );
+
+    // Título no banner dourado
+    const textoTitulo =
+        "Título: " + titulo;
+
+    const tamanhoTitulo =
+        ajustarFonteTextoCanvas(
+            ctx,
+            textoTitulo,
+            42,
+            28,
+            "bold {size}px Arial, sans-serif",
+            940
+        );
+
+    ctx.font =
+        "bold " + tamanhoTitulo + "px Arial, sans-serif";
+
+    desenharTextoComSombraCanvas(
+        ctx,
+        textoTitulo,
+        900,
+        890,
+        "#5f3d00",
+        true
+    );
+
+    // Métricas
+    const metricas = [
+        {
+            valor: pontosLuz,
+            x: 420,
+            y: 1028,
+            largura: 115,
+            fonteInicial: 48
+        },
+        {
+            valor: acertos,
+            x: 760,
+            y: 1028,
+            largura: 115,
+            fonteInicial: 48
+        },
+        {
+            valor: respondidas,
+            x: 1095,
+            y: 1028,
+            largura: 115,
+            fonteInicial: 48
+        },
+        {
+            valor: aproveitamento + "%",
+            x: 1435,
+            y: 1028,
+            largura: 130,
+            fonteInicial: 48
+        }
+    ];
+
+    metricas.forEach(metrica => {
+
+        const valor =
+            String(metrica.valor);
+
+        const tamanho =
+            ajustarFonteTextoCanvas(
+                ctx,
+                valor,
+                metrica.fonteInicial,
+                32,
+                "bold {size}px Arial, sans-serif",
+                metrica.largura
+            );
+
+        ctx.font =
+            "bold " + tamanho + "px Arial, sans-serif";
+
+        ctx.fillStyle =
+            "#0d47a1";
+
+        ctx.fillText(
+            valor,
+            metrica.x,
+            metrica.y
+        );
+
+    });
+
+    // Data e código
+    ctx.textAlign = "left";
+    ctx.fillStyle = "#111";
+    ctx.font = "26px Arial, sans-serif";
+    ctx.fillText(
+        "Emitido em: " + data,
+        120,
+        1160
+    );
+
+    ctx.fillText(
+        "Código de verificação: " + codigo,
+        560,
+        1160
+    );
+
+    return canvas;
+
+}
+
+
+
+
+async function gerarCertificadoDigital(){
 
     if(!lojaFarol.certificadoDigital){
         mostrarToast("Você ainda não desbloqueou o certificado digital.");
@@ -8517,30 +9874,88 @@ function gerarCertificadoDigital(){
         return;
     }
 
-    const canvas = criarCanvasCertificadoDigital();
+    const respondidas =
+        acertos + erros;
+
+    const aproveitamento =
+        respondidas > 0
+        ? Math.round((acertos / respondidas) * 100)
+        : 0;
+
+    const canvas = await criarCanvasCertificadoDigital();
     canvas.className = "canvas-certificado";
 
     area.innerHTML = `
-        <h3>📜 Meu Certificado Digital</h3>
-        <p>Você pode compartilhar o certificado pelo celular ou baixar a imagem.</p>
-        <br>
-        <div id="previewCertificado"></div>
-        <br>
-        <button onclick="compartilharCertificadoDigital()">
-            📤 Compartilhar certificado
-        </button>
-        <button onclick="baixarCertificadoDigital()">
-            ⬇️ Baixar certificado
-        </button>
+        <div class="certificado-preview-card">
+
+            <div class="certificado-preview-topo">
+                <div>
+                    <h3>📜 Meu Certificado Digital</h3>
+                    <p>
+                        Certificado de participação e desempenho gerado pelo Farol do Saber.
+                    </p>
+                </div>
+
+                <span>
+                    ${lojaFarol.codigoCertificado}
+                </span>
+            </div>
+
+            <div class="certificado-dados">
+                <div>
+                    <strong>⭐ ${pontosLuz}</strong>
+                    <small>Pontos de Luz</small>
+                </div>
+
+                <div>
+                    <strong>✅ ${acertos}</strong>
+                    <small>Acertos</small>
+                </div>
+
+                <div>
+                    <strong>📚 ${respondidas}</strong>
+                    <small>Questões</small>
+                </div>
+
+                <div>
+                    <strong>📊 ${aproveitamento}%</strong>
+                    <small>Aproveitamento</small>
+                </div>
+            </div>
+
+            <div id="previewCertificado" class="preview-certificado"></div>
+
+            <div class="certificado-acoes">
+                <button onclick="compartilharCertificadoDigital()">
+                    📤 Compartilhar certificado
+                </button>
+
+                <button onclick="baixarCertificadoDigital()">
+                    ⬇️ Baixar PNG
+                </button>
+            </div>
+
+            <p class="certificado-observacao">
+                O certificado é uma recompensa digital da plataforma e usa um código de verificação próprio.
+            </p>
+
+        </div>
     `;
 
-    document.getElementById("previewCertificado").appendChild(canvas);
+    document
+        .getElementById("previewCertificado")
+        .appendChild(canvas);
 
-    area.scrollIntoView({ behavior: "smooth", block: "start" });
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
 }
 
-function baixarCertificadoDigital(){
-    const canvas = criarCanvasCertificadoDigital();
+
+async function baixarCertificadoDigital(){
+    const canvas = await criarCanvasCertificadoDigital();
     const link = document.createElement("a");
     link.download = "certificado-farol-do-saber.png";
     link.href = canvas.toDataURL("image/png");
@@ -8550,7 +9965,7 @@ function baixarCertificadoDigital(){
 async function compartilharCertificadoDigital(){
 
     try{
-        const canvas = criarCanvasCertificadoDigital();
+        const canvas = await criarCanvasCertificadoDigital();
         const blob = await canvasParaBlob(canvas);
 
         if(blob){
