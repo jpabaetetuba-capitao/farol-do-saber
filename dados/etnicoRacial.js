@@ -6,12 +6,12 @@ const etnicoRacial = [
     alternativas: [
         "A abordagem desses conteúdos deve ocorrer exclusivamente na disciplina de História.",
         "Os conteúdos podem ser concentrados em projetos eventuais sem integração curricular.",
-        "A legislação determina a inserção desses conteúdos no currículo escolar de forma ampla e articulada.",
         "A obrigatoriedade restringe-se ao Ensino Médio.",
+        "A legislação determina a inserção desses conteúdos no currículo escolar de forma ampla e articulada.",
         "A implementação depende da adesão voluntária de cada instituição de ensino."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. As Leis nº 10.639/2003 e nº 11.645/2008 determinam a inclusão desses conteúdos no currículo escolar, de forma articulada e permanente.",
 
@@ -25,13 +25,13 @@ const etnicoRacial = [
 
     alternativas: [
         "A Lei nº 11.645/2008 revogou completamente a Lei nº 10.639/2003.",
-        "A Lei nº 11.645/2008 manteve a obrigatoriedade relativa à temática afro-brasileira e acrescentou a temática indígena.",
         "A Lei nº 11.645/2008 trata exclusivamente da educação escolar indígena.",
+        "A Lei nº 11.645/2008 manteve a obrigatoriedade relativa à temática afro-brasileira e acrescentou a temática indígena.",
         "A Lei nº 11.645/2008 tornou facultativo o ensino da História da África.",
         "As duas leis possuem objetos totalmente distintos e sem relação entre si."
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: "Correto. A Lei nº 11.645/2008 ampliou o alcance da Lei nº 10.639/2003 ao incluir a História e Cultura Indígena.",
 
@@ -45,13 +45,13 @@ const etnicoRacial = [
 
     alternativas: [
         "A prática atende plenamente à legislação porque novembro possui relevância simbólica.",
-        "A legislação exige apenas atividades comemorativas relacionadas ao tema.",
         "A abordagem exclusiva em datas comemorativas é insuficiente para atender aos objetivos legais.",
+        "A legislação exige apenas atividades comemorativas relacionadas ao tema.",
         "A escola possui liberdade para definir se trabalhará o tema durante o ano.",
         "A obrigatoriedade aplica-se somente quando houver estudantes negros matriculados."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. A legislação exige abordagem contínua e integrada ao currículo, e não apenas ações pontuais.",
 
@@ -64,14 +64,14 @@ const etnicoRacial = [
     pergunta: "Ao analisar a abrangência das Leis nº 10.639/2003 e nº 11.645/2008, uma candidata concluiu que sua aplicação alcança instituições públicas e privadas da Educação Básica. Essa conclusão está:",
 
     alternativas: [
-        "Correta.",
         "Incorreta, pois as leis aplicam-se apenas às escolas públicas.",
         "Incorreta, pois as leis aplicam-se apenas às redes estaduais.",
         "Incorreta, pois a obrigatoriedade restringe-se ao Ensino Fundamental.",
-        "Incorreta, pois instituições privadas possuem autonomia para não adotar esses conteúdos."
+        "Incorreta, pois instituições privadas possuem autonomia para não adotar esses conteúdos.",
+        "Correta."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. As leis alcançam toda a Educação Básica, independentemente da natureza pública ou privada da instituição.",
 
@@ -103,14 +103,14 @@ const etnicoRacial = [
     pergunta: "Durante uma formação continuada, um professor afirmou que as Diretrizes Curriculares Nacionais para a Educação das Relações Étnico-Raciais (DCNERER) possuem caráter apenas orientativo e não devem influenciar a organização curricular das escolas. Considerando os fundamentos dessas diretrizes, assinale a alternativa correta:",
 
     alternativas: [
+        "As DCNERER orientam a construção de práticas pedagógicas comprometidas com a valorização da diversidade e o combate ao racismo.",
         "As DCNERER possuem caráter meramente sugestivo e sem impacto pedagógico.",
         "As DCNERER aplicam-se exclusivamente às escolas públicas.",
-        "As DCNERER orientam a construção de práticas pedagógicas comprometidas com a valorização da diversidade e o combate ao racismo.",
         "As DCNERER restringem-se ao ensino da História da África.",
         "As DCNERER destinam-se apenas à formação inicial de professores."
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: "Correto. As DCNERER orientam currículos, práticas pedagógicas e processos formativos voltados à promoção da equidade racial.",
 
@@ -125,12 +125,12 @@ const etnicoRacial = [
     alternativas: [
         "A proposta atende integralmente às diretrizes.",
         "A valorização cultural dispensa discussões sobre desigualdades raciais.",
-        "As DCNERER defendem abordagem crítica das relações étnico-raciais, incluindo o enfrentamento das desigualdades.",
         "Questões relacionadas ao racismo não pertencem ao ambiente escolar.",
+        "As DCNERER defendem abordagem crítica das relações étnico-raciais, incluindo o enfrentamento das desigualdades.",
         "O estudo cultural deve ocorrer sem qualquer reflexão social."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. As diretrizes propõem uma abordagem crítica que ultrapassa a mera valorização cultural e enfrenta desigualdades e discriminações.",
 
@@ -143,14 +143,14 @@ const etnicoRacial = [
     pergunta: "Durante uma reunião pedagógica, uma professora afirmou que a educação para as relações étnico-raciais deve ser desenvolvida apenas quando ocorrerem episódios de preconceito entre estudantes. Considerando as DCNERER, assinale a alternativa correta:",
 
     alternativas: [
-        "A educação para as relações étnico-raciais possui caráter preventivo e permanente.",
         "O tema deve ser trabalhado apenas após conflitos raciais.",
         "A abordagem depende da existência de denúncias formais de discriminação.",
         "O tema deve ser tratado exclusivamente pela equipe gestora.",
-        "A legislação prevê atuação apenas corretiva."
+        "A legislação prevê atuação apenas corretiva.",
+        "A educação para as relações étnico-raciais possui caráter preventivo e permanente."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. As diretrizes defendem ações permanentes voltadas à construção de relações respeitosas e democráticas.",
 
@@ -183,14 +183,14 @@ const etnicoRacial = [
     pergunta: "Ao estudar as Diretrizes Curriculares Nacionais para a Educação das Relações Étnico-Raciais, um professor concluiu que elas buscam promover uma educação comprometida com a equidade, o reconhecimento da diversidade, a valorização das contribuições africanas, afro-brasileiras e indígenas e o combate ao racismo. Essa conclusão está:",
 
     alternativas: [
-        "Correta.",
         "Incorreta, pois as diretrizes limitam-se ao ensino da História da África.",
+        "Correta.",
         "Incorreta, pois tratam apenas de conteúdos culturais.",
         "Incorreta, pois não possuem relação com equidade.",
         "Incorreta, pois o combate ao racismo não integra seus objetivos."
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: "Correto. Essa síntese contempla os principais fundamentos das DCNERER.",
 
@@ -205,11 +205,11 @@ const etnicoRacial = [
         "A decisão está correta, pois a temática possui natureza essencialmente histórica.",
         "A abordagem das relações étnico-raciais deve ocorrer apenas nas Ciências Humanas.",
         "A legislação permite que cada escola escolha uma única disciplina responsável pelo tema.",
-        "A educação das relações étnico-raciais deve ser desenvolvida de forma transversal e interdisciplinar.",
-        "A interdisciplinaridade aplica-se apenas ao Ensino Médio."
+        "A interdisciplinaridade aplica-se apenas ao Ensino Médio.",
+        "A educação das relações étnico-raciais deve ser desenvolvida de forma transversal e interdisciplinar."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: "Correto. A legislação e as diretrizes orientam que a temática seja trabalhada de forma transversal, envolvendo diferentes áreas do conhecimento.",
 
@@ -223,13 +223,13 @@ const etnicoRacial = [
 
     alternativas: [
         "Currículo flexível.",
-        "Currículo oculto.",
         "Avaliação diagnóstica.",
         "Planejamento participativo.",
+        "Currículo oculto.",
         "Interdisciplinaridade."
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: "Correto. O currículo oculto compreende valores, mensagens e representações transmitidas implicitamente pela escola.",
 
@@ -243,13 +243,13 @@ const etnicoRacial = [
 
     alternativas: [
         "Substituir autores clássicos por autores contemporâneos.",
-        "Reduzir a autonomia dos professores na escolha de materiais.",
         "Promover representatividade e ampliar as referências culturais disponíveis aos estudantes.",
+        "Reduzir a autonomia dos professores na escolha de materiais.",
         "Restringir o acesso dos estudantes à literatura europeia.",
         "Atender exclusivamente a exigências administrativas."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. A ampliação das referências culturais fortalece a representatividade e contribui para uma formação mais plural e inclusiva.",
 
@@ -263,13 +263,13 @@ const etnicoRacial = [
 
     alternativas: [
         "Segmentação curricular.",
-        "Interdisciplinaridade.",
         "Especialização temática.",
+        "Interdisciplinaridade.",
         "Hierarquização curricular.",
         "Avaliação classificatória."
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: "Correto. A interdisciplinaridade permite integrar diferentes áreas do conhecimento na compreensão de temas complexos.",
 
@@ -301,14 +301,14 @@ const etnicoRacial = [
     pergunta: "Durante uma atividade escolar, um estudante afirmou que não gostaria de participar de um trabalho em grupo com determinado colega porque pessoas de sua origem étnico-racial seriam 'naturalmente menos capazes'. A professora decidiu utilizar a situação como oportunidade pedagógica. À luz da educação para as relações étnico-raciais, a afirmação do estudante expressa principalmente:",
 
     alternativas: [
-        "Diversidade cultural.",
         "Preconceito baseado em generalizações negativas sobre um grupo.",
+        "Diversidade cultural.",
         "Diferença de opinião sem implicações sociais.",
         "Pluralidade de perspectivas educacionais.",
         "Valorização das identidades culturais."
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. O preconceito envolve julgamentos prévios e generalizações negativas atribuídas a indivíduos em razão de sua pertença a determinado grupo.",
 
@@ -322,13 +322,13 @@ const etnicoRacial = [
 
     alternativas: [
         "Pluralismo cultural.",
-        "Diferença pedagógica legítima.",
         "Discriminação racial.",
+        "Diferença pedagógica legítima.",
         "Diversidade institucional.",
         "Interdisciplinaridade."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. A discriminação ocorre quando o preconceito se transforma em ação concreta que produz exclusão, restrição ou tratamento desigual.",
 
@@ -344,11 +344,11 @@ const etnicoRacial = [
         "Currículo flexível.",
         "Representatividade positiva.",
         "Interculturalidade.",
-        "Estereótipo.",
-        "Gestão democrática."
+        "Gestão democrática.",
+        "Estereótipo."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: "Correto. Estereótipos são representações simplificadas e generalizantes atribuídas a grupos sociais.",
 
@@ -363,12 +363,12 @@ const etnicoRacial = [
     alternativas: [
         "A afirmação está correta.",
         "O racismo existe apenas quando há intenção declarada de discriminar.",
-        "O racismo pode manifestar-se de formas explícitas e também por práticas, representações e mecanismos mais sutis de exclusão.",
         "O racismo limita-se às relações interpessoais.",
+        "O racismo pode manifestar-se de formas explícitas e também por práticas, representações e mecanismos mais sutis de exclusão.",
         "A legislação educacional trata apenas do racismo explícito."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. O racismo pode ocorrer de maneira aberta ou por mecanismos indiretos, institucionais e culturalmente naturalizados.",
 
@@ -381,14 +381,14 @@ const etnicoRacial = [
     pergunta: "Ao estudar a educação para as relações étnico-raciais, uma candidata concluiu que combater preconceitos, discriminações e estereótipos constitui parte essencial da formação cidadã e da construção de ambientes escolares democráticos. Essa conclusão está:",
 
     alternativas: [
-        "Correta.",
         "Incorreta, pois a escola deve limitar-se à transmissão de conteúdos acadêmicos.",
         "Incorreta, pois questões relacionadas ao preconceito pertencem exclusivamente ao ambiente familiar.",
+        "Correta.",
         "Incorreta, pois o combate à discriminação não integra os objetivos educacionais.",
         "Incorreta, pois a legislação trata apenas de conteúdos históricos."
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. A educação para as relações étnico-raciais possui compromisso com a formação cidadã, a equidade e o combate às discriminações.",
 
@@ -401,13 +401,13 @@ const etnicoRacial = [
 
     alternativas: [
         "Diversidade cultural.",
-        "Racismo estrutural.",
         "Pluralismo pedagógico.",
+        "Racismo estrutural.",
         "Interdisciplinaridade curricular.",
         "Gestão democrática."
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: "Correto. O racismo estrutural refere-se à produção e reprodução de desigualdades raciais por mecanismos incorporados às estruturas sociais e institucionais.",
 
@@ -420,14 +420,14 @@ const etnicoRacial = [
     pergunta: "Uma escola possuía regulamentos aparentemente neutros. Contudo, determinados procedimentos administrativos produziam impactos desproporcionais sobre estudantes pertencentes a grupos historicamente discriminados. À luz dos estudos sobre racismo institucional, assinale a alternativa correta:",
 
     alternativas: [
+        "O racismo institucional pode ocorrer quando práticas organizacionais geram desigualdades, mesmo sem intenção explícita de discriminar.",
         "A situação caracteriza apenas conflitos individuais.",
         "A neutralidade formal das regras elimina qualquer possibilidade de discriminação.",
-        "O racismo institucional pode ocorrer quando práticas organizacionais geram desigualdades, mesmo sem intenção explícita de discriminar.",
         "O racismo institucional depende exclusivamente de manifestações verbais ofensivas.",
         "A situação descreve apenas diferenças de desempenho escolar."
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: "Correto. O racismo institucional pode manifestar-se por procedimentos e práticas que produzem desigualdades raciais de forma sistemática.",
 
@@ -442,12 +442,12 @@ const etnicoRacial = [
     alternativas: [
         "A afirmação está correta.",
         "O racismo depende necessariamente de intenção declarada.",
-        "Práticas e estruturas sociais podem produzir efeitos racistas independentemente da intenção individual dos envolvidos.",
         "O racismo limita-se a comportamentos individuais.",
+        "Práticas e estruturas sociais podem produzir efeitos racistas independentemente da intenção individual dos envolvidos.",
         "Somente atos tipificados criminalmente podem ser considerados racistas."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. O racismo pode ser reproduzido por estruturas, instituições e práticas sociais, mesmo sem intenção consciente.",
 
@@ -461,13 +461,13 @@ const etnicoRacial = [
 
     alternativas: [
         "Diferenças naturais entre grupos sociais.",
-        "Problemas exclusivamente pedagógicos.",
         "Resultados produzidos por estruturas históricas e sociais que perpetuam desigualdades.",
+        "Problemas exclusivamente pedagógicos.",
         "Consequências inevitáveis da diversidade cultural.",
         "Ausência de políticas educacionais."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. O conceito de racismo estrutural busca explicar como desigualdades históricas são reproduzidas pelas estruturas sociais.",
 
@@ -480,14 +480,14 @@ const etnicoRacial = [
     pergunta: "Ao estudar educação para as relações étnico-raciais, uma candidata concluiu que o enfrentamento do racismo estrutural e institucional exige ações educativas permanentes, revisão de práticas escolares, análise crítica das desigualdades e promoção da equidade. Essa conclusão está:",
 
     alternativas: [
-        "Correta.",
         "Incorreta, pois o racismo é fenômeno exclusivamente individual.",
         "Incorreta, pois a escola não possui responsabilidade nesse processo.",
         "Incorreta, pois a equidade não possui relação com relações étnico-raciais.",
-        "Incorreta, pois as desigualdades raciais não constituem tema educacional."
+        "Incorreta, pois as desigualdades raciais não constituem tema educacional.",
+        "Correta."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. A educação para as relações étnico-raciais possui papel fundamental na compreensão e enfrentamento das desigualdades raciais.",
 
@@ -499,14 +499,14 @@ const etnicoRacial = [
     pergunta: "Durante uma atividade escolar, um estudante afirmou que todos os povos indígenas possuem a mesma cultura, falam a mesma língua e mantêm os mesmos costumes. Considerando os princípios da educação para as relações étnico-raciais e a legislação educacional brasileira, assinale a alternativa correta:",
 
     alternativas: [
+        "Os povos indígenas apresentam ampla diversidade cultural, linguística, histórica e social.",
         "A afirmação está correta, pois os povos indígenas formam um grupo cultural homogêneo.",
         "As diferenças entre povos indígenas são pouco relevantes para a educação.",
-        "Os povos indígenas apresentam ampla diversidade cultural, linguística, histórica e social.",
         "A diversidade indígena surgiu apenas após o período colonial.",
         "As características culturais indígenas são idênticas em todo o território nacional."
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: "Correto. O Brasil abriga uma grande diversidade de povos indígenas, com diferentes línguas, tradições, formas de organização social e visões de mundo.",
 
@@ -520,13 +520,13 @@ const etnicoRacial = [
 
     alternativas: [
         "A abordagem está adequada porque os povos indígenas pertencem principalmente ao passado histórico brasileiro.",
-        "A representação é incompleta, pois invisibiliza a presença e o protagonismo indígena na sociedade contemporânea.",
         "Os conteúdos indígenas devem restringir-se ao período anterior à colonização.",
         "A contemporaneidade indígena não possui relevância curricular.",
-        "A legislação prioriza exclusivamente aspectos históricos dos povos indígenas."
+        "A legislação prioriza exclusivamente aspectos históricos dos povos indígenas.",
+        "A representação é incompleta, pois invisibiliza a presença e o protagonismo indígena na sociedade contemporânea."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: "Correto. A educação para as relações étnico-raciais deve reconhecer os povos indígenas como sujeitos históricos contemporâneos.",
 
@@ -541,12 +541,12 @@ const etnicoRacial = [
     alternativas: [
         "A afirmação está correta.",
         "As contribuições indígenas restringem-se à formação histórica inicial do Brasil.",
-        "Os povos indígenas continuam contribuindo para a diversidade cultural, social, ambiental e política do país.",
         "As contribuições indígenas perderam relevância após a colonização.",
+        "Os povos indígenas continuam contribuindo para a diversidade cultural, social, ambiental e política do país.",
         "A legislação não trata das contribuições contemporâneas dos povos indígenas."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. Os povos indígenas participam ativamente da construção da sociedade brasileira contemporânea.",
 
@@ -560,13 +560,13 @@ const etnicoRacial = [
 
     alternativas: [
         "A estratégia facilita a compreensão dos estudantes e está pedagogicamente correta.",
+        "A prática reforça visões simplificadas e inadequadas sobre a diversidade dos povos indígenas.",
         "A utilização de estereótipos contribui para valorização da diversidade indígena.",
         "A abordagem é adequada quando utilizada em turmas dos anos iniciais.",
-        "A prática reforça visões simplificadas e inadequadas sobre a diversidade dos povos indígenas.",
         "A legislação recomenda representações padronizadas para facilitar o ensino."
     ],
 
-    correta: 3,
+    correta: 1,
 
     feedbackAcerto: "Correto. A educação para as relações étnico-raciais busca combater estereótipos e promover representações mais plurais e realistas.",
 
@@ -579,14 +579,14 @@ const etnicoRacial = [
     pergunta: "Ao estudar a temática indígena prevista na Lei nº 11.645/2008, uma candidata concluiu que seu ensino deve promover o reconhecimento da diversidade dos povos indígenas, valorizar suas contribuições históricas e contemporâneas e combater visões preconceituosas e estereotipadas. Essa conclusão está:",
 
     alternativas: [
-        "Correta.",
         "Incorreta, pois a legislação trata apenas de aspectos históricos.",
         "Incorreta, pois a diversidade indígena não constitui objetivo educacional.",
+        "Correta.",
         "Incorreta, pois o combate aos estereótipos não integra a proposta curricular.",
         "Incorreta, pois a temática indígena deve limitar-se às disciplinas de História e Geografia."
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. Essa síntese contempla os principais objetivos da abordagem da História e Cultura Indígena na educação brasileira.",
 
@@ -599,13 +599,13 @@ const etnicoRacial = [
 
     alternativas: [
         "A abordagem está adequada, pois a História da África inicia-se com a escravização.",
-        "A legislação prioriza exclusivamente o estudo do tráfico negreiro.",
         "A abordagem é insuficiente, pois invisibiliza a diversidade histórica e cultural dos povos africanos.",
+        "A legislação prioriza exclusivamente o estudo do tráfico negreiro.",
         "O estudo das civilizações africanas anteriores à colonização possui caráter opcional.",
         "A História da África deve restringir-se às relações com o Brasil."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. A legislação busca superar visões reducionistas da África, valorizando sua diversidade histórica, cultural, científica e política.",
 
@@ -619,13 +619,13 @@ const etnicoRacial = [
 
     alternativas: [
         "A representação está adequada por sintetizar características comuns do continente.",
-        "A abordagem reforça estereótipos e ignora a diversidade dos países e culturas africanas.",
         "A simplificação facilita o ensino e deve ser incentivada.",
         "A legislação recomenda abordagens unificadas sobre a África.",
-        "O continente africano possui características culturais praticamente idênticas."
+        "O continente africano possui características culturais praticamente idênticas.",
+        "A abordagem reforça estereótipos e ignora a diversidade dos países e culturas africanas."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: "Correto. O continente africano apresenta enorme diversidade cultural, linguística, histórica, econômica e social.",
 
@@ -639,13 +639,13 @@ const etnicoRacial = [
 
     alternativas: [
         "Substituir a história europeia pela história africana.",
-        "Valorizar as contribuições dos povos africanos e afro-brasileiros para a construção da sociedade brasileira.",
         "Restringir o estudo cultural às manifestações folclóricas.",
         "Demonstrar a superioridade de determinadas tradições culturais.",
+        "Valorizar as contribuições dos povos africanos e afro-brasileiros para a construção da sociedade brasileira.",
         "Limitar o ensino das relações étnico-raciais ao campo artístico."
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: "Correto. A legislação busca reconhecer e valorizar as contribuições africanas e afro-brasileiras para a formação do Brasil.",
 
@@ -658,14 +658,14 @@ const etnicoRacial = [
     pergunta: "Durante uma discussão em sala de aula, um estudante afirmou que a cultura afro-brasileira se resume à música e à dança. Considerando os fundamentos da educação para as relações étnico-raciais, assinale a alternativa correta:",
 
     alternativas: [
+        "A cultura afro-brasileira abrange dimensões históricas, sociais, religiosas, linguísticas, científicas e culturais.",
         "A afirmação está correta.",
         "A cultura afro-brasileira restringe-se às manifestações artísticas.",
-        "A cultura afro-brasileira abrange dimensões históricas, sociais, religiosas, linguísticas, científicas e culturais.",
         "A legislação trata apenas das manifestações culturais mais populares.",
         "Os aspectos religiosos e sociais não integram a cultura afro-brasileira."
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: "Correto. A cultura afro-brasileira possui múltiplas dimensões e não pode ser reduzida a manifestações artísticas específicas.",
 
@@ -678,14 +678,14 @@ const etnicoRacial = [
     pergunta: "Ao estudar a Lei nº 10.639/2003, uma candidata concluiu que o ensino da História da África e da Cultura Afro-Brasileira busca ampliar a compreensão da formação histórica do Brasil, combater estereótipos e promover o reconhecimento das contribuições dos povos africanos e afrodescendentes. Essa conclusão está:",
 
     alternativas: [
-        "Correta.",
         "Incorreta, pois a lei possui finalidade exclusivamente histórica.",
         "Incorreta, pois o combate aos estereótipos não integra seus objetivos.",
+        "Correta.",
         "Incorreta, pois a legislação trata apenas da escravidão.",
         "Incorreta, pois a temática afro-brasileira restringe-se às artes."
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. Essa síntese contempla os principais objetivos educacionais da Lei nº 10.639/2003.",
 
@@ -698,13 +698,13 @@ const etnicoRacial = [
 
     alternativas: [
         "A educação antirracista possui caráter exclusivamente corretivo.",
-        "A educação antirracista deve ocorrer apenas após denúncias formais de discriminação.",
         "A educação antirracista constitui prática permanente voltada à promoção da equidade e ao enfrentamento das desigualdades.",
+        "A educação antirracista deve ocorrer apenas após denúncias formais de discriminação.",
         "A educação antirracista restringe-se às disciplinas de Ciências Humanas.",
         "A educação antirracista é responsabilidade exclusiva da equipe gestora."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. A educação antirracista possui caráter contínuo e preventivo, promovendo respeito à diversidade e enfrentamento das desigualdades raciais.",
 
@@ -717,14 +717,14 @@ const etnicoRacial = [
     pergunta: "Uma escola passou a revisar seus materiais didáticos, exemplos utilizados em sala de aula, critérios de participação em projetos e representações presentes nos espaços escolares. O objetivo era identificar práticas que pudessem reproduzir desigualdades raciais de forma involuntária. Essa iniciativa está alinhada principalmente ao princípio de:",
 
     alternativas: [
+        "Análise crítica das práticas institucionais e promoção da equidade.",
         "Neutralidade curricular.",
         "Avaliação classificatória.",
-        "Análise crítica das práticas institucionais e promoção da equidade.",
         "Padronização pedagógica.",
         "Segmentação curricular."
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: "Correto. A educação antirracista envolve reflexão crítica sobre práticas institucionais que podem reproduzir desigualdades.",
 
@@ -738,13 +738,13 @@ const etnicoRacial = [
 
     alternativas: [
         "A afirmação está correta, pois igualdade formal sempre produz justiça social.",
-        "A promoção da equidade pode exigir estratégias diferenciadas para enfrentar desigualdades historicamente construídas.",
         "Qualquer ação voltada à equidade configura privilégio indevido.",
         "A educação antirracista rejeita o princípio da igualdade.",
-        "A equidade aplica-se apenas à educação especial."
+        "A equidade aplica-se apenas à educação especial.",
+        "A promoção da equidade pode exigir estratégias diferenciadas para enfrentar desigualdades historicamente construídas."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: "Correto. A educação antirracista reconhece que desigualdades históricas podem exigir medidas voltadas à promoção da equidade.",
 
@@ -759,12 +759,12 @@ const etnicoRacial = [
     alternativas: [
         "Substituir uma cultura por outra.",
         "Hierarquizar diferentes grupos culturais.",
-        "Promover reconhecimento, respeito à diversidade e construção de relações mais democráticas.",
         "Eliminar conteúdos históricos controversos.",
+        "Promover reconhecimento, respeito à diversidade e construção de relações mais democráticas.",
         "Restringir debates sobre desigualdades sociais."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. A educação antirracista busca fortalecer o respeito à diversidade e construir relações mais justas e democráticas.",
 
@@ -777,14 +777,14 @@ const etnicoRacial = [
     pergunta: "Ao estudar os fundamentos da educação antirracista, uma candidata concluiu que ela envolve revisão crítica do currículo, valorização das contribuições de diferentes grupos étnico-raciais, combate a estereótipos, promoção da equidade e construção de ambientes escolares inclusivos. Essa conclusão está:",
 
     alternativas: [
-        "Correta.",
         "Incorreta, pois a educação antirracista limita-se ao estudo da legislação.",
         "Incorreta, pois currículo e equidade não integram seus objetivos.",
+        "Correta.",
         "Incorreta, pois a temática restringe-se ao ensino da História da África.",
         "Incorreta, pois ambientes inclusivos não possuem relação com educação antirracista."
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. Essa síntese contempla os principais fundamentos e objetivos da educação antirracista contemporânea.",
 
@@ -798,12 +798,12 @@ const etnicoRacial = [
     alternativas: [
         "A conclusão está correta, pois a BNCC restringe-se aos conteúdos disciplinares.",
         "A BNCC trata diversidade e direitos humanos apenas como temas opcionais.",
-        "A valorização da diversidade e o respeito aos direitos humanos integram princípios presentes nas competências gerais da BNCC.",
         "A BNCC limita o debate sobre diversidade ao Ensino Médio.",
+        "A valorização da diversidade e o respeito aos direitos humanos integram princípios presentes nas competências gerais da BNCC.",
         "A abordagem desses temas depende exclusivamente da iniciativa dos professores."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. A BNCC valoriza a diversidade, os direitos humanos, a cidadania e o respeito às diferenças como elementos formativos essenciais.",
 
@@ -817,13 +817,13 @@ const etnicoRacial = [
 
     alternativas: [
         "A afirmação está correta.",
+        "A valorização da diversidade contribui para a formação cidadã e para a convivência democrática.",
         "Diversidade cultural e cidadania são conceitos independentes.",
         "Os direitos humanos tratam apenas de aspectos jurídicos.",
-        "A valorização da diversidade contribui para a formação cidadã e para a convivência democrática.",
         "A BNCC não relaciona cidadania e respeito às diferenças."
     ],
 
-    correta: 3,
+    correta: 1,
 
     feedbackAcerto: "Correto. A formação cidadã envolve reconhecimento da diversidade, respeito às diferenças e participação democrática.",
 
@@ -876,14 +876,14 @@ const etnicoRacial = [
     pergunta: "Ao estudar a BNCC, os direitos humanos e a educação para as relações étnico-raciais, uma candidata concluiu que esses documentos convergem para a promoção da dignidade humana, da cidadania, do respeito à diversidade, da equidade e da convivência democrática. Essa conclusão está:",
 
     alternativas: [
-        "Correta.",
         "Incorreta, pois a BNCC limita-se ao ensino de conteúdos curriculares.",
         "Incorreta, pois os direitos humanos não possuem relação com diversidade cultural.",
         "Incorreta, pois a equidade não integra os objetivos educacionais contemporâneos.",
-        "Incorreta, pois convivência democrática e cidadania não constituem finalidades da educação."
+        "Incorreta, pois convivência democrática e cidadania não constituem finalidades da educação.",
+        "Correta."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. Esses documentos compartilham princípios voltados à formação integral, à cidadania e ao respeito à diversidade.",
 
@@ -897,12 +897,12 @@ const etnicoRacial = [
     alternativas: [
         "A conclusão está correta, pois a legislação prioriza atividades comemorativas.",
         "Eventos anuais substituem a necessidade de integração curricular.",
-        "A implementação exige inserção contínua, crítica e transversal dos temas no currículo escolar.",
         "A obrigatoriedade restringe-se às datas comemorativas previstas no calendário escolar.",
+        "A implementação exige inserção contínua, crítica e transversal dos temas no currículo escolar.",
         "As leis tratam exclusivamente de atividades culturais extracurriculares."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. A legislação exige tratamento permanente, interdisciplinar e integrado ao currículo.",
 
@@ -937,12 +937,12 @@ const etnicoRacial = [
     alternativas: [
         "A afirmação está correta.",
         "O racismo restringe-se às relações interpessoais.",
-        "A educação antirracista também envolve análise crítica de estruturas e práticas que reproduzem desigualdades.",
         "A escola não possui papel no enfrentamento do racismo estrutural.",
-        "Questões estruturais pertencem exclusivamente ao campo jurídico."
+        "Questões estruturais pertencem exclusivamente ao campo jurídico.",
+        "A educação antirracista também envolve análise crítica de estruturas e práticas que reproduzem desigualdades."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. A educação antirracista busca compreender tanto manifestações individuais quanto mecanismos estruturais de desigualdade.",
 
@@ -975,20 +975,18 @@ const etnicoRacial = [
     pergunta: "Ao estudar conjuntamente as Leis nº 10.639/2003 e nº 11.645/2008, as DCNERER, a BNCC e os princípios da educação antirracista, uma candidata concluiu que a escola deve promover equidade, respeito à diversidade, reconhecimento das contribuições de diferentes povos, combate às discriminações e formação cidadã comprometida com os direitos humanos. Essa conclusão está:",
 
     alternativas: [
-        "Correta.",
         "Incorreta, pois a função da escola limita-se à transmissão de conteúdos acadêmicos.",
         "Incorreta, pois equidade e diversidade não integram as finalidades educacionais.",
+        "Correta.",
         "Incorreta, pois o combate às discriminações não constitui responsabilidade da educação.",
         "Incorreta, pois direitos humanos não possuem relação com o currículo escolar."
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. Essa síntese reúne os principais objetivos presentes nos documentos que fundamentam a Educação das Relações Étnico-Raciais no Brasil.",
 
     feedbackErro: "A educação contemporânea articula conhecimento, cidadania, direitos humanos, diversidade e equidade.",
 
     dicaBanca: "Equidade + diversidade + cidadania + direitos humanos = síntese do tema."
-}
-
-];
+}];

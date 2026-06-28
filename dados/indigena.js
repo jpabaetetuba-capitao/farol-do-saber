@@ -40,20 +40,14 @@ Uma escola indígena decidiu elaborar seu projeto pedagógico considerando a his
     `,
 
     alternativas: [
-
-        "Padronização curricular nacional obrigatória.",
-
         "Interculturalidade.",
-
+        "Padronização curricular nacional obrigatória.",
         "Centralização administrativa.",
-
         "Uniformização linguística.",
-
         "Homogeneização cultural."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A interculturalidade promove o diálogo entre diferentes culturas, valorizando os conhecimentos indígenas e articulando-os aos demais conhecimentos.
@@ -108,20 +102,14 @@ Em uma comunidade indígena, professores utilizam conhecimentos tradicionais sob
     `,
 
     alternativas: [
-
         "Doutrinação cultural.",
-
-        "Assimilação cultural.",
-
         "Interculturalidade pedagógica.",
-
+        "Assimilação cultural.",
         "Neutralização dos saberes tradicionais.",
-
         "Padronização curricular."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. A articulação entre saberes tradicionais e conhecimentos científicos é uma manifestação da interculturalidade pedagógica.
@@ -142,20 +130,14 @@ A Educação Escolar Indígena diferencia-se da educação convencional principa
     `,
 
     alternativas: [
-
         "Possui currículo desvinculado da legislação nacional.",
-
         "Dispensa a formação de professores.",
-
-        "É organizada para atender às especificidades históricas, linguísticas, culturais e territoriais dos povos indígenas.",
-
         "Não segue qualquer diretriz educacional.",
-
-        "É voltada exclusivamente para a educação infantil."
-
+        "É voltada exclusivamente para a educação infantil.",
+        "É organizada para atender às especificidades históricas, linguísticas, culturais e territoriais dos povos indígenas."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A principal característica da Educação Escolar Indígena é atender às especificidades culturais, linguísticas, históricas e territoriais dos povos indígenas.
@@ -176,20 +158,14 @@ A Constituição Federal de 1988 representa um marco para os direitos dos povos 
     `,
 
     alternativas: [
-
         "A obrigatoriedade da substituição das línguas indígenas pela língua portuguesa.",
-
-        "O direito dos povos indígenas à manutenção de suas línguas, culturas e processos próprios de aprendizagem.",
-
         "A extinção gradual das escolas indígenas.",
-
         "A adoção de currículo único nacional sem adaptações culturais.",
-
-        "A exclusividade do ensino urbano para estudantes indígenas."
-
+        "A exclusividade do ensino urbano para estudantes indígenas.",
+        "O direito dos povos indígenas à manutenção de suas línguas, culturas e processos próprios de aprendizagem."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A Constituição Federal reconhece os direitos culturais, linguísticos e educacionais dos povos indígenas, garantindo respeito às suas identidades.
@@ -210,20 +186,14 @@ A Lei de Diretrizes e Bases da Educação Nacional (LDB) determina que a Educaç
     `,
 
     alternativas: [
-
-        "Promover exclusivamente a alfabetização em língua portuguesa.",
-
         "Ser organizada com respeito às línguas maternas e aos processos próprios de aprendizagem.",
-
+        "Promover exclusivamente a alfabetização em língua portuguesa.",
         "Seguir currículo urbano obrigatório sem adaptações.",
-
         "Ser ofertada apenas no ensino fundamental.",
-
         "Eliminar conteúdos culturais tradicionais."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A LDB prevê o respeito às línguas maternas indígenas e aos processos próprios de aprendizagem.
@@ -244,20 +214,14 @@ As Diretrizes Curriculares Nacionais para a Educação Escolar Indígena estabel
     `,
 
     alternativas: [
-
         "As escolas indígenas devem ser administradas sem participação comunitária.",
-
-        "A interculturalidade deve orientar as práticas pedagógicas.",
-
         "O ensino deve priorizar exclusivamente conteúdos nacionais.",
-
         "Os saberes tradicionais não devem integrar o currículo.",
-
+        "A interculturalidade deve orientar as práticas pedagógicas.",
         "As escolas indígenas possuem caráter temporário."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. As Diretrizes Curriculares destacam a interculturalidade como princípio fundamental da Educação Escolar Indígena.
@@ -278,20 +242,14 @@ Segundo as Diretrizes Curriculares Nacionais, a gestão das escolas indígenas d
     `,
 
     alternativas: [
-
         "Ignorar as decisões da comunidade local.",
-
-        "Ser centralizada exclusivamente pelo poder público.",
-
         "Considerar a participação efetiva das comunidades indígenas.",
-
+        "Ser centralizada exclusivamente pelo poder público.",
         "Seguir exclusivamente critérios administrativos externos.",
-
         "Ser conduzida apenas por profissionais não indígenas."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. A participação da comunidade indígena é elemento essencial para a gestão democrática da escola indígena.
@@ -312,20 +270,14 @@ Uma Secretaria de Educação pretende implantar um currículo único para todas 
     `,
 
     alternativas: [
-
         "As escolas indígenas devem ser fechadas gradualmente.",
-
-        "Os currículos precisam considerar as especificidades de cada povo e comunidade indígena.",
-
         "As comunidades indígenas não participam da elaboração curricular.",
-
+        "Os currículos precisam considerar as especificidades de cada povo e comunidade indígena.",
         "O currículo deve ser exclusivamente científico.",
-
         "As escolas indígenas não seguem legislação educacional."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. As Diretrizes reconhecem a diversidade entre os povos indígenas e defendem currículos construídos conforme as especificidades locais.
@@ -345,20 +297,14 @@ O território ocupa papel central na Educação Escolar Indígena porque:
     `,
 
     alternativas: [
-
         "Representa apenas o espaço físico onde está localizada a escola.",
-
         "Serve exclusivamente para atividades econômicas da comunidade.",
-
-        "Constitui elemento fundamental da identidade, cultura, memória e organização social dos povos indígenas.",
-
         "Possui importância apenas para estudos geográficos.",
-
-        "Não influencia os processos educativos."
-
+        "Não influencia os processos educativos.",
+        "Constitui elemento fundamental da identidade, cultura, memória e organização social dos povos indígenas."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. Para os povos indígenas, o território está diretamente relacionado à identidade coletiva, à cultura, à espiritualidade, à memória e à produção dos conhecimentos tradicionais.
@@ -379,20 +325,14 @@ Durante uma aula, os estudantes investigam rios, plantas, trilhas e locais consi
     `,
 
     alternativas: [
-
-        "A desvalorização dos conteúdos científicos.",
-
         "A utilização do território como espaço educativo.",
-
+        "A desvalorização dos conteúdos científicos.",
         "A substituição do currículo escolar.",
-
         "A redução da aprendizagem interdisciplinar.",
-
         "O abandono dos conhecimentos acadêmicos."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. O território é reconhecido como espaço educativo que possibilita aprendizagens ligadas à cultura, ao meio ambiente e à história da comunidade.
@@ -514,20 +454,14 @@ O Brasil possui grande diversidade de povos indígenas. Essa diversidade caracte
     `,
 
     alternativas: [
-
-        "Existência de uma única cultura indígena nacional.",
-
-        "Uniformidade de costumes, crenças e línguas.",
-
         "Pluralidade de línguas, culturas, histórias e formas de organização social.",
-
+        "Existência de uma única cultura indígena nacional.",
+        "Uniformidade de costumes, crenças e línguas.",
         "Adoção obrigatória dos mesmos hábitos culturais.",
-
         "Ausência de diferenças entre os povos indígenas."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. Os povos indígenas brasileiros apresentam ampla diversidade cultural, linguística, histórica e social, constituindo uma riqueza fundamental para a sociedade brasileira.
@@ -582,20 +516,14 @@ A valorização da identidade indígena na escola contribui para:
     `,
 
     alternativas: [
-
         "O apagamento das tradições culturais.",
-
         "A assimilação cultural obrigatória.",
-
-        "O fortalecimento da autoestima, da memória coletiva e do pertencimento comunitário.",
-
         "A substituição dos conhecimentos tradicionais.",
-
-        "A descaracterização dos povos indígenas."
-
+        "A descaracterização dos povos indígenas.",
+        "O fortalecimento da autoestima, da memória coletiva e do pertencimento comunitário."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. O reconhecimento da identidade indígena fortalece o sentimento de pertencimento e contribui para a preservação cultural.
@@ -616,20 +544,14 @@ Uma proposta pedagógica que respeita a identidade indígena deve:
     `,
 
     alternativas: [
-
         "Ignorar as especificidades culturais locais.",
-
-        "Valorizar os conhecimentos, histórias e tradições da comunidade.",
-
         "Aplicar currículo totalmente desvinculado da realidade indígena.",
-
         "Eliminar conteúdos relacionados à cultura indígena.",
-
+        "Valorizar os conhecimentos, histórias e tradições da comunidade.",
         "Utilizar apenas materiais produzidos fora da comunidade."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. A valorização da história, da cultura e dos conhecimentos da comunidade é princípio fundamental da Educação Escolar Indígena.
@@ -650,20 +572,14 @@ O combate aos estereótipos sobre os povos indígenas é importante porque:
     `,
 
     alternativas: [
-
         "Permite manter visões simplificadas sobre as culturas indígenas.",
-
-        "Favorece a homogeneização cultural.",
-
         "Contribui para o respeito à diversidade e aos direitos dos povos indígenas.",
-
+        "Favorece a homogeneização cultural.",
         "Evita o estudo da história indígena.",
-
         "Reduz a importância da interculturalidade."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. O enfrentamento dos estereótipos promove o respeito à diversidade cultural e fortalece os direitos dos povos indígenas.
@@ -683,20 +599,14 @@ As línguas indígenas ocupam papel fundamental na Educação Escolar Indígena 
     `,
 
     alternativas: [
-
         "Devem ser utilizadas apenas em atividades culturais fora da escola.",
-
-        "Possuem função secundária em relação à língua portuguesa.",
-
         "Constituem patrimônio cultural e instrumento de transmissão de conhecimentos, valores e identidades.",
-
+        "Possuem função secundária em relação à língua portuguesa.",
         "São utilizadas apenas por pessoas idosas da comunidade.",
-
         "Não possuem relação com os processos educativos."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. As línguas indígenas são patrimônio cultural dos povos indígenas e desempenham papel essencial na transmissão de conhecimentos, valores, histórias e tradições.
@@ -717,20 +627,14 @@ A LDB estabelece que a Educação Escolar Indígena deve assegurar:
     `,
 
     alternativas: [
-
         "A substituição gradual das línguas indígenas pela língua portuguesa.",
-
         "A utilização exclusiva da língua portuguesa em todas as etapas da educação básica.",
-
-        "O respeito às línguas maternas e aos processos próprios de aprendizagem.",
-
         "A proibição do ensino bilíngue.",
-
-        "A uniformização linguística das comunidades indígenas."
-
+        "A uniformização linguística das comunidades indígenas.",
+        "O respeito às línguas maternas e aos processos próprios de aprendizagem."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A LDB garante o respeito às línguas maternas indígenas e aos processos próprios de aprendizagem.
@@ -751,20 +655,14 @@ Uma escola indígena utiliza a língua da comunidade juntamente com a língua po
     `,
 
     alternativas: [
-
-        "Monolinguismo.",
-
-        "Assimilação cultural.",
-
         "Educação bilíngue ou multilíngue.",
-
+        "Monolinguismo.",
+        "Assimilação cultural.",
         "Padronização curricular.",
-
         "Substituição linguística."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A Educação Escolar Indígena pode ser organizada de forma bilíngue ou multilíngue, valorizando tanto a língua indígena quanto a língua portuguesa.
@@ -819,20 +717,14 @@ Segundo os princípios da Educação Escolar Indígena, o ensino das línguas in
     `,
 
     alternativas: [
-
         "A descaracterização cultural das comunidades.",
-
-        "O fortalecimento da identidade étnica e cultural dos povos indígenas.",
-
         "A eliminação dos conhecimentos tradicionais.",
-
         "A substituição das práticas comunitárias.",
-
+        "O fortalecimento da identidade étnica e cultural dos povos indígenas.",
         "A redução da diversidade cultural."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. O fortalecimento das línguas indígenas contribui diretamente para a valorização da identidade étnica, da cultura e da memória coletiva dos povos indígenas.
@@ -886,20 +778,14 @@ Uma escola indígena desenvolve um projeto sobre preservação ambiental utiliza
     `,
 
     alternativas: [
-
-        "Currículo monocultural.",
-
-        "Assimilação cultural.",
-
         "Currículo intercultural.",
-
+        "Currículo monocultural.",
+        "Assimilação cultural.",
         "Padronização pedagógica.",
-
         "Neutralidade cultural."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A articulação entre conhecimentos tradicionais e científicos é uma das bases do currículo intercultural.
@@ -920,20 +806,14 @@ Segundo as Diretrizes Curriculares Nacionais para a Educação Escolar Indígena
     `,
 
     alternativas: [
-
         "Ignorar a realidade local da comunidade.",
-
-        "Ser construído considerando os contextos históricos, culturais, linguísticos e territoriais dos povos indígenas.",
-
         "Seguir modelo único para todas as escolas indígenas do país.",
-
         "Priorizar exclusivamente conteúdos urbanos.",
-
+        "Ser construído considerando os contextos históricos, culturais, linguísticos e territoriais dos povos indígenas.",
         "Excluir conhecimentos tradicionais."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. O currículo indígena deve ser contextualizado e respeitar as especificidades culturais, históricas, territoriais e linguísticas de cada povo.
@@ -954,20 +834,14 @@ A participação da comunidade indígena na elaboração curricular é important
     `,
 
     alternativas: [
-
         "Permite reproduzir currículos externos sem adaptações.",
-
-        "Garante que os conhecimentos e interesses da comunidade sejam considerados.",
-
         "Substitui a atuação dos professores.",
-
+        "Garante que os conhecimentos e interesses da comunidade sejam considerados.",
         "Elimina conteúdos científicos.",
-
         "Impede a interdisciplinaridade."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. A participação comunitária fortalece a identidade cultural e assegura que o currículo dialogue com a realidade local.
@@ -988,20 +862,14 @@ Em um currículo intercultural, os conhecimentos tradicionais indígenas devem s
     `,
 
     alternativas: [
-
         "Desconsiderados em favor dos conhecimentos científicos.",
-
         "Utilizados apenas em atividades comemorativas.",
-
-        "Reconhecidos e valorizados como parte do processo educativo.",
-
         "Substituídos gradualmente pela cultura dominante.",
-
-        "Restritos ao ambiente familiar."
-
+        "Restritos ao ambiente familiar.",
+        "Reconhecidos e valorizados como parte do processo educativo."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. Os conhecimentos tradicionais possuem valor educativo e cultural, devendo integrar o currículo escolar.
@@ -1021,20 +889,14 @@ Os saberes tradicionais dos povos indígenas podem ser definidos como:
     `,
 
     alternativas: [
-
         "Conhecimentos sem valor científico ou educativo.",
-
-        "Práticas ultrapassadas que devem ser substituídas pela educação formal.",
-
         "Conhecimentos construídos historicamente e transmitidos entre gerações no contexto das comunidades indígenas.",
-
+        "Práticas ultrapassadas que devem ser substituídas pela educação formal.",
         "Informações restritas exclusivamente às lideranças indígenas.",
-
         "Conteúdos que não podem ser trabalhados na escola."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. Os saberes tradicionais são conhecimentos acumulados ao longo das gerações, relacionados à cultura, à natureza, à organização social e à história dos povos indígenas.
@@ -1089,20 +951,14 @@ Na Educação Escolar Indígena, os saberes tradicionais devem:
     `,
 
     alternativas: [
-
-        "Ser excluídos do currículo.",
-
-        "Ser considerados inferiores aos conhecimentos científicos.",
-
         "Integrar o currículo em diálogo com outros conhecimentos.",
-
+        "Ser excluídos do currículo.",
+        "Ser considerados inferiores aos conhecimentos científicos.",
         "Ser ensinados apenas em atividades extracurriculares.",
-
         "Ser abordados apenas em datas comemorativas."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. Os saberes tradicionais devem compor o currículo e dialogar com diferentes áreas do conhecimento.
@@ -1123,20 +979,14 @@ Os conhecimentos tradicionais relacionados ao manejo sustentável dos recursos n
     `,
 
     alternativas: [
-
         "Ausência de conhecimento científico.",
-
         "Falta de preocupação ambiental.",
-
-        "Experiências acumuladas ao longo das gerações e relacionadas à sustentabilidade.",
-
         "Práticas incompatíveis com a preservação ambiental.",
-
+        "Experiências acumuladas ao longo das gerações e relacionadas à sustentabilidade.",
         "Conhecimentos sem aplicação prática."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. Muitos saberes indígenas contribuem para a conservação ambiental e refletem séculos de observação e interação com a natureza.
@@ -1157,20 +1007,14 @@ A valorização dos saberes tradicionais na escola contribui para:
     `,
 
     alternativas: [
-
         "O enfraquecimento da identidade cultural.",
-
         "A perda da memória coletiva.",
-
-        "O fortalecimento da cultura, da identidade e do pertencimento comunitário.",
-
         "A substituição dos conhecimentos locais.",
-
-        "A descaracterização das tradições indígenas."
-
+        "A descaracterização das tradições indígenas.",
+        "O fortalecimento da cultura, da identidade e do pertencimento comunitário."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A valorização dos saberes tradicionais fortalece a identidade cultural e contribui para a continuidade das tradições indígenas.
@@ -1258,20 +1102,14 @@ Na Educação Escolar Indígena, a participação das lideranças tradicionais n
     `,
 
     alternativas: [
-
         "O enfraquecimento dos vínculos culturais.",
-
-        "A valorização dos conhecimentos e das práticas comunitárias.",
-
         "A substituição do trabalho docente.",
-
         "A eliminação dos conteúdos curriculares.",
-
+        "A valorização dos conhecimentos e das práticas comunitárias.",
         "A redução da autonomia escolar."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. As lideranças tradicionais colaboram para a valorização cultural e para a aproximação entre escola e comunidade.
@@ -1292,20 +1130,14 @@ Segundo as Diretrizes Curriculares Nacionais para a Educação Escolar Indígena
     `,
 
     alternativas: [
-
-        "Ignorar os interesses da comunidade local.",
-
         "Ser construída com base na participação dos povos indígenas.",
-
+        "Ignorar os interesses da comunidade local.",
         "Ser conduzida exclusivamente por agentes externos.",
-
         "Seguir modelo único para todas as comunidades.",
-
         "Priorizar apenas aspectos administrativos."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A gestão escolar indígena deve considerar os projetos, interesses e formas de organização das comunidades indígenas.
@@ -1326,20 +1158,14 @@ A relação entre escola e comunidade indígena é fortalecida quando:
     `,
 
     alternativas: [
-
         "Os conhecimentos comunitários são ignorados.",
-
         "As decisões escolares são tomadas sem consulta à população local.",
-
         "A escola atua isoladamente da comunidade.",
-
-        "Existe diálogo permanente entre escola, famílias e lideranças.",
-
-        "A participação social é restringida."
-
+        "A participação social é restringida.",
+        "Existe diálogo permanente entre escola, famílias e lideranças."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. O diálogo permanente fortalece a gestão democrática e contribui para uma educação mais significativa e contextualizada.
@@ -1359,20 +1185,14 @@ A Educação Escolar Indígena contribui para a promoção dos Direitos Humanos 
     `,
 
     alternativas: [
-
         "Impor padrões culturais únicos para todos os estudantes.",
-
-        "Garantir o respeito à diversidade cultural, linguística e étnica dos povos indígenas.",
-
         "Substituir os conhecimentos tradicionais pelos conhecimentos científicos.",
-
         "Restringir a participação das comunidades nas decisões escolares.",
-
-        "Eliminar conteúdos relacionados à identidade cultural."
-
+        "Eliminar conteúdos relacionados à identidade cultural.",
+        "Garantir o respeito à diversidade cultural, linguística e étnica dos povos indígenas."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A Educação Escolar Indígena fortalece os Direitos Humanos ao valorizar a diversidade, combater discriminações e assegurar o respeito às identidades culturais dos povos indígenas.
@@ -1393,20 +1213,14 @@ Uma escola desenvolve ações para combater preconceitos contra os povos indíge
     `,
 
     alternativas: [
-
         "À homogeneização cultural.",
-
-        "À educação para os Direitos Humanos.",
-
         "À assimilação cultural.",
-
+        "À educação para os Direitos Humanos.",
         "À exclusão social.",
-
         "Ao isolamento das comunidades."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. A educação para os Direitos Humanos busca combater preconceitos, discriminações e promover o respeito à diversidade.
@@ -1427,20 +1241,14 @@ O princípio da equidade na Educação Escolar Indígena significa:
     `,
 
     alternativas: [
-
         "Oferecer exatamente a mesma educação para todos os grupos sociais.",
-
         "Ignorar as diferenças culturais existentes.",
-
-        "Reconhecer as especificidades dos povos indígenas e garantir condições adequadas para sua aprendizagem.",
-
         "Substituir políticas de inclusão por políticas de padronização.",
-
+        "Reconhecer as especificidades dos povos indígenas e garantir condições adequadas para sua aprendizagem.",
         "Aplicar currículos idênticos em todas as escolas."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. Equidade significa reconhecer diferenças e oferecer condições adequadas para que todos tenham oportunidades de aprendizagem.
@@ -1461,20 +1269,14 @@ A valorização da diversidade cultural indígena na escola contribui para:
     `,
 
     alternativas: [
-
         "A ampliação do preconceito.",
-
-        "A redução da participação comunitária.",
-
         "O fortalecimento do respeito mútuo e da convivência democrática.",
-
+        "A redução da participação comunitária.",
         "A perda das identidades culturais.",
-
         "A exclusão dos saberes tradicionais."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. A valorização da diversidade favorece relações mais respeitosas, democráticas e inclusivas.
@@ -1495,20 +1297,14 @@ A Educação Escolar Indígena, ao promover o reconhecimento das identidades ind
     `,
 
     alternativas: [
-
-        "A exclusão social dos povos indígenas.",
-
-        "A negação dos direitos coletivos.",
-
         "A construção de uma sociedade mais justa, inclusiva e democrática.",
-
+        "A exclusão social dos povos indígenas.",
+        "A negação dos direitos coletivos.",
         "A uniformização cultural da população brasileira.",
-
         "A diminuição da participação cidadã."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. O reconhecimento da diversidade e a garantia de direitos fortalecem a cidadania e a democracia.
@@ -1562,20 +1358,14 @@ De acordo com a legislação brasileira, a Educação Escolar Indígena deve ser
     `,
 
     alternativas: [
-
-        "Específica, diferenciada, intercultural, bilíngue ou multilíngue.",
-
         "Exclusivamente urbana.",
-
         "Idêntica às demais modalidades educacionais.",
-
         "Restrita à educação infantil.",
-
-        "Baseada apenas na língua portuguesa."
-
+        "Baseada apenas na língua portuguesa.",
+        "Específica, diferenciada, intercultural, bilíngue ou multilíngue."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A legislação brasileira reconhece a Educação Escolar Indígena como específica, diferenciada, intercultural, bilíngue ou multilíngue e comunitária.
@@ -1596,20 +1386,14 @@ Na Educação Escolar Indígena, o território é compreendido como:
     `,
 
     alternativas: [
-
         "Apenas uma área geográfica delimitada.",
-
-        "Um espaço sem relação com a cultura local.",
-
         "Elemento fundamental para identidade, memória, cultura e produção de conhecimentos.",
-
+        "Um espaço sem relação com a cultura local.",
         "Um tema exclusivo da disciplina de Geografia.",
-
         "Um conceito restrito à legislação fundiária."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. O território possui dimensão cultural, histórica, ambiental e identitária, sendo elemento central na vida dos povos indígenas.
@@ -1630,20 +1414,14 @@ A valorização das línguas indígenas na escola contribui diretamente para:
     `,
 
     alternativas: [
-
         "A substituição dos conhecimentos tradicionais.",
-
-        "A preservação da identidade cultural e da memória coletiva.",
-
         "A eliminação do ensino bilíngue.",
-
         "A uniformização cultural.",
-
+        "A preservação da identidade cultural e da memória coletiva.",
         "A redução da diversidade linguística."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. As línguas indígenas são fundamentais para a preservação cultural, para a transmissão de conhecimentos e para o fortalecimento identitário.
@@ -1664,20 +1442,14 @@ Uma proposta educacional comprometida com os Direitos Humanos, a diversidade e a
     `,
 
     alternativas: [
-
-        "Ignorar as especificidades culturais para garantir igualdade.",
-
         "Promover respeito às diferenças, participação comunitária e valorização das identidades indígenas.",
-
+        "Ignorar as especificidades culturais para garantir igualdade.",
         "Aplicar currículo único para todas as comunidades.",
-
         "Reduzir a presença dos conhecimentos tradicionais.",
-
         "Substituir as línguas indígenas pela língua portuguesa."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A Educação Escolar Indígena fundamenta-se no respeito à diversidade, na valorização cultural, na participação comunitária e na garantia dos direitos dos povos indígenas.
@@ -1690,6 +1462,4 @@ Os princípios da equidade e dos Direitos Humanos exigem o reconhecimento das di
     dicaBanca: `
 Direitos Humanos + Educação Indígena = diversidade, equidade, participação comunitária e valorização cultural.
     `
-}
-
-];
+}];

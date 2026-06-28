@@ -6,12 +6,12 @@ const lbi = [
     alternativas: [
         "A deficiência é definida exclusivamente por diagnóstico médico.",
         "A deficiência corresponde apenas às limitações físicas permanentes.",
-        "A deficiência resulta da interação entre impedimentos de longo prazo e barreiras que podem obstruir a participação plena e efetiva na sociedade.",
         "A deficiência depende exclusivamente da avaliação da capacidade laboral da pessoa.",
+        "A deficiência resulta da interação entre impedimentos de longo prazo e barreiras que podem obstruir a participação plena e efetiva na sociedade.",
         "A deficiência somente existe quando impede totalmente a autonomia do indivíduo."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. A LBI adota modelo biopsicossocial, entendendo a deficiência como resultado da interação entre impedimentos de longo prazo e barreiras presentes na sociedade.",
 
@@ -25,12 +25,12 @@ const lbi = [
     alternativas: [
         "Basear-se exclusivamente em laudo médico.",
         "Considerar apenas limitações físicas observáveis.",
-        "Ser realizada exclusivamente por assistente social.",
         "Ser biopsicossocial, realizada por equipe multiprofissional e interdisciplinar.",
+        "Ser realizada exclusivamente por assistente social.",
         "Depender apenas da existência de incapacidade para o trabalho."
     ],
 
-    correta: 3,
+    correta: 2,
 
     feedbackAcerto: "Correto. A LBI determina avaliação biopsicossocial realizada por equipe multiprofissional e interdisciplinar.",
 
@@ -43,13 +43,13 @@ const lbi = [
 
     alternativas: [
         "Atendimento prioritário.",
+        "Desenho universal.",
         "Tecnologia assistiva.",
         "Curatela preventiva.",
-        "Tomada de decisão apoiada.",
-        "Desenho universal."
+        "Tomada de decisão apoiada."
     ],
 
-    correta: 4,
+    correta: 1,
 
     feedbackAcerto: "Correto. O desenho universal busca conceber ambientes, produtos e serviços utilizáveis pelo maior número possível de pessoas desde sua origem.",
 
@@ -63,11 +63,11 @@ const lbi = [
         "A afirmação está correta.",
         "Desenho universal e adaptação razoável são conceitos equivalentes.",
         "A adaptação razoável substitui o desenho universal.",
-        "O desenho universal busca atender ao maior número de pessoas desde a concepção, enquanto a adaptação razoável consiste em ajustes específicos quando necessários.",
-        "A adaptação razoável somente pode ser aplicada em escolas."
+        "A adaptação razoável somente pode ser aplicada em escolas.",
+        "O desenho universal busca atender ao maior número de pessoas desde a concepção, enquanto a adaptação razoável consiste em ajustes específicos quando necessários."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: "Correto. O desenho universal atua preventivamente no projeto, enquanto a adaptação razoável envolve ajustes individualizados para garantir direitos.",
 
@@ -78,14 +78,14 @@ const lbi = [
     pergunta: "Uma candidata afirmou que somente pessoas com deficiência física podem ser reconhecidas como pessoas com deficiência para fins de proteção da LBI. Considerando a legislação, assinale a alternativa correta:",
 
     alternativas: [
+        "A legislação considera diferentes tipos de impedimentos de longo prazo, inclusive físicos, mentais, intelectuais e sensoriais.",
         "A afirmação está correta.",
         "A proteção alcança apenas deficiências motoras.",
         "A legislação protege apenas deficiências visíveis.",
-        "A legislação considera diferentes tipos de impedimentos de longo prazo, inclusive físicos, mentais, intelectuais e sensoriais.",
         "A condição de pessoa com deficiência depende exclusivamente da incapacidade laboral."
     ],
 
-    correta: 3,
+    correta: 0,
 
     feedbackAcerto: "Correto. A LBI contempla impedimentos físicos, mentais, intelectuais e sensoriais que, em interação com barreiras, possam limitar a participação social.",
 
@@ -96,14 +96,14 @@ const lbi = [
     pergunta: "Ao analisar um pedido de reconhecimento da condição de pessoa com deficiência, uma comissão discutiu quais critérios deveriam ser utilizados na avaliação. De acordo com a Lei Brasileira de Inclusão, a avaliação da deficiência, quando necessária, deve ser:",
 
     alternativas: [
+        "Biopsicossocial, realizada por equipe multiprofissional e interdisciplinar.",
         "Exclusivamente médica, baseada no diagnóstico clínico.",
         "Realizada apenas por profissional da área da saúde.",
         "Fundamentada apenas na existência de limitações físicas.",
-        "Biopsicossocial, realizada por equipe multiprofissional e interdisciplinar.",
         "Baseada exclusivamente na capacidade laboral da pessoa."
     ],
 
-    correta: 3,
+    correta: 0,
 
     feedbackAcerto: "Correto. A LBI determina que a avaliação da deficiência seja biopsicossocial e realizada por equipe multiprofissional e interdisciplinar.",
 
@@ -116,12 +116,12 @@ const lbi = [
     alternativas: [
         "A afirmação está correta.",
         "A avaliação limita-se às condições de saúde da pessoa.",
-        "A avaliação deve considerar fatores corporais, socioambientais, psicológicos e pessoais.",
         "Somente exames médicos possuem valor legal.",
+        "A avaliação deve considerar fatores corporais, socioambientais, psicológicos e pessoais.",
         "A análise restringe-se ao tipo de deficiência apresentado."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. A avaliação biopsicossocial considera diversos fatores que influenciam a participação da pessoa na sociedade.",
 
@@ -134,12 +134,12 @@ const lbi = [
     alternativas: [
         "A renda familiar da pessoa avaliada.",
         "A opinião exclusiva do médico responsável.",
-        "A funcionalidade e as restrições de participação da pessoa.",
         "O histórico escolar dos familiares.",
-        "A situação patrimonial do interessado."
+        "A situação patrimonial do interessado.",
+        "A funcionalidade e as restrições de participação da pessoa."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. A funcionalidade e as restrições de participação constituem elementos expressamente considerados na avaliação biopsicossocial.",
 
@@ -188,12 +188,12 @@ const lbi = [
     alternativas: [
         "A acessibilidade limita-se à eliminação de barreiras arquitetônicas.",
         "A acessibilidade refere-se apenas às pessoas com deficiência física.",
-        "A acessibilidade compreende a eliminação de barreiras físicas, comunicacionais, tecnológicas, informacionais e atitudinais.",
         "A acessibilidade aplica-se exclusivamente aos órgãos públicos.",
-        "A acessibilidade é obrigatória apenas em construções novas."
+        "A acessibilidade é obrigatória apenas em construções novas.",
+        "A acessibilidade compreende a eliminação de barreiras físicas, comunicacionais, tecnológicas, informacionais e atitudinais."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. A LBI adota conceito amplo de acessibilidade, abrangendo diferentes tipos de barreiras que podem limitar a participação social.",
 
@@ -224,13 +224,13 @@ const lbi = [
 
     alternativas: [
         "Arquitetônica.",
-        "Urbanística.",
         "Atitudinal.",
+        "Urbanística.",
         "Tecnológica.",
         "Instrumental."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. Barreiras atitudinais decorrem de preconceitos, estigmas e comportamentos discriminatórios.",
 
@@ -241,14 +241,14 @@ const lbi = [
     pergunta: "Uma prefeitura realizou obras para garantir circulação segura de pessoas com deficiência em calçadas, praças e vias públicas. O objetivo principal foi eliminar:",
 
     alternativas: [
-        "Barreiras urbanísticas.",
         "Barreiras tecnológicas.",
         "Barreiras pedagógicas.",
+        "Barreiras urbanísticas.",
         "Barreiras administrativas.",
         "Barreiras processuais."
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. Barreiras urbanísticas são aquelas presentes em vias públicas, espaços de uso coletivo e áreas urbanas.",
 
@@ -277,14 +277,14 @@ const lbi = [
     pergunta: "Ao planejar a construção de um novo terminal rodoviário, a equipe técnica decidiu incorporar recursos de acessibilidade desde a fase de elaboração do projeto, buscando atender ao maior número possível de usuários sem necessidade de adaptações futuras. Essa medida está alinhada ao conceito de:",
 
     alternativas: [
+        "Desenho universal.",
         "Adaptação razoável.",
         "Tecnologia assistiva.",
-        "Desenho universal.",
         "Acessibilidade corretiva.",
         "Atendimento prioritário."
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: "Correto. O desenho universal consiste na concepção de produtos, ambientes, programas e serviços utilizáveis pelo maior número possível de pessoas desde sua origem.",
 
@@ -319,12 +319,12 @@ const lbi = [
     alternativas: [
         "Correta, pois ambos os conceitos são sinônimos.",
         "Correta apenas em ambientes escolares.",
-        "Incorreta, pois o desenho universal atua na concepção inicial e a adaptação razoável consiste em ajustes específicos quando necessários.",
         "Incorreta apenas para órgãos públicos.",
-        "Correta quando houver pessoa com deficiência física."
+        "Correta quando houver pessoa com deficiência física.",
+        "Incorreta, pois o desenho universal atua na concepção inicial e a adaptação razoável consiste em ajustes específicos quando necessários."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. Embora relacionados à inclusão, os conceitos possuem finalidades distintas na legislação.",
 
@@ -338,13 +338,13 @@ const lbi = [
 
     alternativas: [
         "Barreiras tecnológicas.",
-        "Tecnologia assistiva.",
         "Acessibilidade arquitetônica.",
         "Adaptação curricular.",
+        "Tecnologia assistiva.",
         "Atendimento especializado."
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: "Correto. A tecnologia assistiva engloba produtos, recursos, metodologias, estratégias e serviços que promovem autonomia e participação da pessoa com deficiência.",
 
@@ -378,12 +378,12 @@ const lbi = [
     alternativas: [
         "A escola pode recusar a matrícula quando não possuir profissionais especializados.",
         "A recusa é permitida desde que a família seja encaminhada para outra instituição.",
-        "A escola pode limitar matrículas de estudantes com deficiência por razões pedagógicas.",
         "A recusa da matrícula viola o sistema educacional inclusivo assegurado pela legislação.",
+        "A escola pode limitar matrículas de estudantes com deficiência por razões pedagógicas.",
         "A matrícula depende da comprovação de viabilidade financeira da instituição."
     ],
 
-    correta: 3,
+    correta: 2,
 
     feedbackAcerto: "Correto. A LBI assegura sistema educacional inclusivo e veda práticas que impeçam o acesso da pessoa com deficiência à educação.",
 
@@ -396,14 +396,14 @@ const lbi = [
     pergunta: "Durante reunião pedagógica, um gestor afirmou que estudantes com deficiência devem ser matriculados preferencialmente em instituições especializadas para receberem atendimento mais adequado. Considerando a LBI, assinale a alternativa correta:",
 
     alternativas: [
+        "A legislação prioriza a inclusão da pessoa com deficiência no sistema regular de ensino.",
         "A segregação educacional é a regra prevista na legislação.",
         "A matrícula em classes comuns depende da inexistência de escolas especializadas.",
-        "A legislação prioriza a inclusão da pessoa com deficiência no sistema regular de ensino.",
         "O estudante com deficiência deve frequentar exclusivamente ambientes especializados.",
         "A escolha da escola depende exclusivamente da administração pública."
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: "Correto. A LBI assegura sistema educacional inclusivo em todos os níveis, favorecendo a participação do estudante na rede regular de ensino.",
 
@@ -437,13 +437,13 @@ const lbi = [
 
     alternativas: [
         "Professor de inclusão.",
-        "Monitor pedagógico.",
         "Profissional de apoio escolar.",
+        "Monitor pedagógico.",
         "Tutor educacional especializado.",
         "Assistente de aprendizagem."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. A LBI utiliza a expressão 'profissional de apoio escolar' para atividades relacionadas à alimentação, higiene e locomoção.",
 
@@ -474,14 +474,14 @@ const lbi = [
     pergunta: "Uma unidade de saúde passou a exigir que toda pessoa com deficiência estivesse acompanhada por familiar para receber informações sobre seu tratamento. Considerando a Lei Brasileira de Inclusão, assinale a alternativa correta:",
 
     alternativas: [
+        "A autonomia da pessoa com deficiência deve ser respeitada, não sendo admissíveis restrições generalizadas.",
         "A exigência é obrigatória para garantir segurança jurídica.",
         "A deficiência pressupõe incapacidade para compreender informações médicas.",
         "A presença de acompanhante é requisito para qualquer atendimento em saúde.",
-        "A autonomia da pessoa com deficiência deve ser respeitada, não sendo admissíveis restrições generalizadas.",
         "A medida é válida sempre que houver deficiência intelectual."
     ],
 
-    correta: 3,
+    correta: 0,
 
     feedbackAcerto: "Correto. A LBI reconhece a autonomia da pessoa com deficiência e combate práticas que limitem indevidamente sua participação nas decisões relacionadas à própria saúde.",
 
@@ -497,11 +497,11 @@ const lbi = [
         "Correta em qualquer situação.",
         "Correta sempre que houver deficiência física.",
         "Correta quando a pessoa possuir qualquer limitação funcional.",
-        "Incorreta, pois a deficiência não retira automaticamente a capacidade de decisão da pessoa.",
-        "Incorreta apenas para maiores de idade."
+        "Incorreta apenas para maiores de idade.",
+        "Incorreta, pois a deficiência não retira automaticamente a capacidade de decisão da pessoa."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: "Correto. A LBI afasta a ideia de incapacidade automática decorrente da deficiência e protege a autodeterminação da pessoa.",
 
@@ -516,12 +516,12 @@ const lbi = [
     alternativas: [
         "Curatela assistencial.",
         "Segregação protetiva.",
-        "Habilitação e reabilitação.",
         "Avaliação patrimonial.",
+        "Habilitação e reabilitação.",
         "Tutela institucional."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. A habilitação e a reabilitação visam desenvolver potencialidades, autonomia, independência e participação social.",
 
@@ -535,13 +535,13 @@ const lbi = [
 
     alternativas: [
         "A afirmação está correta.",
+        "A reabilitação deve considerar aspectos físicos, sociais, educacionais, profissionais e comunitários.",
         "A reabilitação limita-se à recuperação física e médica.",
         "A reabilitação possui finalidade exclusivamente terapêutica.",
-        "A reabilitação deve considerar aspectos físicos, sociais, educacionais, profissionais e comunitários.",
         "A legislação não trata da reabilitação."
     ],
 
-    correta: 3,
+    correta: 1,
 
     feedbackAcerto: "Correto. A LBI adota visão ampla da reabilitação, voltada à participação plena da pessoa em diversos contextos da vida social.",
 
@@ -555,13 +555,13 @@ const lbi = [
 
     alternativas: [
         "A acessibilidade em saúde restringe-se às instalações físicas.",
-        "A comunicação acessível integra o direito à saúde da pessoa com deficiência.",
         "Hospitais somente precisam adaptar documentos mediante decisão judicial.",
+        "A comunicação acessível integra o direito à saúde da pessoa com deficiência.",
         "A obrigação aplica-se exclusivamente a hospitais públicos.",
         "A oferta de informação acessível é facultativa."
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: "Correto. O acesso à informação e à comunicação em formatos acessíveis faz parte do direito à saúde assegurado pela LBI.",
 
@@ -595,12 +595,12 @@ const lbi = [
     alternativas: [
         "É permitida para aumentar a segurança do empregador.",
         "É obrigatória em qualquer seleção de pessoas com deficiência.",
-        "Configura tratamento diferenciado potencialmente discriminatório.",
         "É válida quando prevista em regulamento interno.",
-        "É recomendada para garantir inclusão adequada."
+        "É recomendada para garantir inclusão adequada.",
+        "Configura tratamento diferenciado potencialmente discriminatório."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. Exigências adicionais sem justificativa objetiva podem configurar discriminação e restrição indevida de direitos.",
 
@@ -633,14 +633,14 @@ const lbi = [
     pergunta: "Uma organização adaptou equipamentos, mobiliário e sistemas internos para possibilitar o exercício das atividades por trabalhadores com deficiência. Essa iniciativa está diretamente relacionada ao princípio da:",
 
     alternativas: [
-        "Segregação funcional.",
         "Acessibilidade no ambiente de trabalho.",
+        "Segregação funcional.",
         "Avaliação biopsicossocial.",
         "Tomada de decisão apoiada.",
         "Curatela laboral."
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. A acessibilidade deve estar presente também no ambiente de trabalho, permitindo participação em igualdade de condições.",
 
@@ -655,12 +655,12 @@ const lbi = [
     alternativas: [
         "A afirmação está correta.",
         "A igualdade aplica-se apenas ao ingresso no emprego.",
-        "A promoção profissional pode ser restringida por critérios relacionados à deficiência.",
         "A legislação assegura igualdade de oportunidades também quanto à carreira e crescimento profissional.",
+        "A promoção profissional pode ser restringida por critérios relacionados à deficiência.",
         "A progressão funcional depende exclusivamente da ausência de deficiência."
     ],
 
-    correta: 3,
+    correta: 2,
 
     feedbackAcerto: "Correto. A LBI protege o acesso, a permanência e o desenvolvimento profissional em igualdade de condições.",
 
@@ -672,13 +672,13 @@ const lbi = [
 
     alternativas: [
         "A deficiência gera incapacidade civil absoluta.",
-        "A deficiência impede a celebração de contratos sem autorização judicial.",
         "A pessoa com deficiência possui capacidade legal em igualdade de condições com as demais pessoas.",
+        "A deficiência impede a celebração de contratos sem autorização judicial.",
         "A prática de atos civis depende obrigatoriamente de curador.",
         "A deficiência intelectual torna a pessoa relativamente incapaz em qualquer situação."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. A LBI assegura à pessoa com deficiência capacidade legal em igualdade de condições com as demais pessoas em todos os aspectos da vida civil.",
 
@@ -691,14 +691,14 @@ const lbi = [
     pergunta: "Durante uma palestra, um participante afirmou que toda pessoa com deficiência deve ser submetida à curatela para sua própria proteção. Considerando a Lei Brasileira de Inclusão, assinale a alternativa correta:",
 
     alternativas: [
+        "A curatela é medida extraordinária e proporcional às necessidades da pessoa.",
         "A afirmação está correta para qualquer tipo de deficiência.",
         "A curatela é obrigatória sempre que houver deficiência intelectual.",
         "A curatela deve ser aplicada preventivamente para evitar prejuízos patrimoniais.",
-        "A curatela constitui medida ordinária de proteção prevista pela LBI.",
-        "A curatela é medida extraordinária e proporcional às necessidades da pessoa."
+        "A curatela constitui medida ordinária de proteção prevista pela LBI."
     ],
 
-    correta: 4,
+    correta: 0,
 
     feedbackAcerto: "Correto. A LBI estabelece que a curatela é medida protetiva extraordinária, proporcional às necessidades e aplicada pelo menor tempo possível.",
 
@@ -714,11 +714,11 @@ const lbi = [
         "Interdição automática.",
         "Curatela permanente.",
         "Representação obrigatória por familiar.",
-        "Tomada de decisão apoiada.",
-        "Substituição integral da vontade da pessoa."
+        "Substituição integral da vontade da pessoa.",
+        "Tomada de decisão apoiada."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: "Correto. A tomada de decisão apoiada permite que a própria pessoa escolha apoiadores para auxiliá-la na tomada de decisões, preservando sua autonomia.",
 
@@ -771,13 +771,13 @@ const lbi = [
 
     alternativas: [
         "A medida é válida quando as informações também estiverem disponíveis presencialmente.",
-        "A acessibilidade à informação constitui direito assegurado à pessoa com deficiência.",
         "A adaptação somente é exigida mediante decisão judicial.",
         "A obrigação aplica-se apenas aos órgãos federais.",
+        "A acessibilidade à informação constitui direito assegurado à pessoa com deficiência.",
         "A disponibilização em formato acessível é facultativa."
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: "Correto. A LBI assegura o acesso à informação e à comunicação em formatos acessíveis, garantindo igualdade de oportunidades.",
 
@@ -791,13 +791,13 @@ const lbi = [
 
     alternativas: [
         "A decisão é válida quando a maioria do público não possui deficiência.",
-        "A acessibilidade comunicacional é facultativa em eventos culturais.",
         "A ausência de recursos acessíveis pode restringir o exercício de direitos culturais pela pessoa com deficiência.",
+        "A acessibilidade comunicacional é facultativa em eventos culturais.",
         "A obrigação existe apenas para eventos financiados pelo poder público.",
         "A acessibilidade comunicacional aplica-se exclusivamente ao ambiente escolar."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. A LBI busca garantir participação plena da pessoa com deficiência em atividades culturais e sociais.",
 
@@ -810,14 +810,14 @@ const lbi = [
     pergunta: "Uma instituição educacional disponibilizou materiais didáticos em Braille para estudantes com deficiência visual. Essa iniciativa tem como principal objetivo:",
 
     alternativas: [
-        "Substituir o ensino regular.",
         "Garantir acessibilidade à comunicação e à informação.",
+        "Substituir o ensino regular.",
         "Promover segregação pedagógica.",
         "Dispensar outras formas de acessibilidade.",
         "Atender exclusivamente exigências administrativas."
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. O Braille constitui importante recurso de acessibilidade para garantir acesso à informação e ao conhecimento.",
 
@@ -853,11 +853,11 @@ const lbi = [
         "É aceitável quando o evento possui caráter privado.",
         "É permitida se houver limitação orçamentária dos organizadores.",
         "É legítima quando o público-alvo não for composto por pessoas com deficiência.",
-        "Representa obstáculo à participação social e ao exercício de direitos culturais.",
-        "Não possui relação com acessibilidade."
+        "Não possui relação com acessibilidade.",
+        "Representa obstáculo à participação social e ao exercício de direitos culturais."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: "Correto. A LBI assegura participação plena da pessoa com deficiência na vida cultural, artística, esportiva e social.",
 
@@ -870,13 +870,13 @@ const lbi = [
 
     alternativas: [
         "A institucionalização permanente é a regra prevista na legislação.",
-        "A moradia independente constitui direito assegurado à pessoa com deficiência.",
         "A vida independente depende exclusivamente de autorização judicial.",
         "A pessoa com deficiência deve residir obrigatoriamente com familiares.",
+        "A moradia independente constitui direito assegurado à pessoa com deficiência.",
         "A autonomia residencial é admitida apenas para deficiência física."
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: "Correto. A LBI assegura o direito à moradia digna e à vida independente, com os apoios necessários para o exercício da autonomia.",
 
@@ -890,13 +890,13 @@ const lbi = [
 
     alternativas: [
         "A medida promove igualdade formal e está correta.",
-        "O atendimento prioritário depende de autorização judicial.",
         "O atendimento prioritário é direito assegurado à pessoa com deficiência.",
+        "O atendimento prioritário depende de autorização judicial.",
         "O atendimento prioritário existe apenas em hospitais.",
         "A prioridade somente se aplica a crianças com deficiência."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. A LBI garante atendimento prioritário à pessoa com deficiência em diversas situações e serviços.",
 
@@ -912,11 +912,11 @@ const lbi = [
         "A acessibilidade não se aplica aos procedimentos judiciais.",
         "A obrigação de acessibilidade limita-se aos prédios do Poder Judiciário.",
         "A pessoa com deficiência deve providenciar os recursos necessários por conta própria.",
-        "O acesso à justiça deve ocorrer em condições de igualdade, com oferta de recursos de acessibilidade quando necessários.",
-        "A acessibilidade judicial depende exclusivamente da concordância do magistrado."
+        "A acessibilidade judicial depende exclusivamente da concordância do magistrado.",
+        "O acesso à justiça deve ocorrer em condições de igualdade, com oferta de recursos de acessibilidade quando necessários."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: "Correto. A LBI assegura acesso à justiça em igualdade de condições, incluindo recursos que garantam compreensão e participação efetiva.",
 
@@ -929,14 +929,14 @@ const lbi = [
     pergunta: "Um estabelecimento comercial recusou deliberadamente o atendimento de uma pessoa com deficiência exclusivamente em razão de sua condição. Considerando os dispositivos da LBI, assinale a alternativa correta:",
 
     alternativas: [
+        "A situação caracteriza discriminação vedada pela legislação e pode gerar responsabilização.",
         "A conduta configura mera irregularidade administrativa.",
         "A recusa é permitida em estabelecimentos privados.",
-        "A situação caracteriza discriminação vedada pela legislação e pode gerar responsabilização.",
         "A recusa somente é ilícita quando houver ofensa verbal.",
         "A discriminação depende da existência de dano patrimonial."
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: "Correto. A discriminação contra a pessoa com deficiência é expressamente vedada pela LBI e pode acarretar responsabilização legal.",
 
@@ -949,23 +949,18 @@ const lbi = [
     pergunta: "Ao estudar a Lei Brasileira de Inclusão, uma candidata concluiu que seu objetivo central é assegurar e promover, em condições de igualdade, o exercício dos direitos e das liberdades fundamentais da pessoa com deficiência, visando à inclusão social e à cidadania. Essa conclusão está:",
 
     alternativas: [
-        "Correta.",
         "Incorreta, pois a LBI trata apenas de acessibilidade.",
         "Incorreta, pois a lei se limita ao ambiente escolar.",
+        "Correta.",
         "Incorreta, pois a legislação possui natureza exclusivamente assistencial.",
         "Incorreta, pois a LBI regula apenas relações entre Estado e pessoa com deficiência."
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. Esse é o objetivo central da Lei Brasileira de Inclusão, expresso logo em suas disposições iniciais.",
 
     feedbackErro: "A LBI possui alcance amplo e busca garantir inclusão, cidadania, autonomia, igualdade de oportunidades e participação social.",
 
     dicaBanca: "Questões finais costumam cobrar o objetivo geral da lei."
-}
-
-
-
-
-];
+}];

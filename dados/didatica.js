@@ -6,20 +6,14 @@ Uma professora do Ensino Fundamental organiza suas aulas de modo que os estudant
     `,
 
     alternativas: [
-
         "A substituição do ensino sistematizado por experiências espontâneas dos estudantes, dispensando a mediação docente.",
-
-        "A compreensão do ensino como processo de mediação entre os conhecimentos sistematizados e a realidade sociocultural dos educandos.",
-
         "A adoção de uma perspectiva tecnicista centrada exclusivamente na eficiência operacional do processo de ensino.",
-
         "A priorização do desenvolvimento afetivo em detrimento da aprendizagem dos conteúdos curriculares.",
-
-        "A valorização exclusiva dos interesses imediatos dos estudantes, independentemente dos objetivos educacionais."
-
+        "A valorização exclusiva dos interesses imediatos dos estudantes, independentemente dos objetivos educacionais.",
+        "A compreensão do ensino como processo de mediação entre os conhecimentos sistematizados e a realidade sociocultural dos educandos."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A Didática contemporânea compreende o ensino como um processo de mediação realizado pelo professor, articulando os conhecimentos científicos aos contextos sociais e culturais dos estudantes.
@@ -40,20 +34,14 @@ Durante uma reunião pedagógica, os professores discutem o papel da Didática n
     `,
 
     alternativas: [
-
         "Restringe-se à elaboração de técnicas de ensino desvinculadas dos objetivos educacionais.",
-
         "Tem como objeto de estudo exclusivamente os métodos de avaliação da aprendizagem.",
-
-        "Investiga e orienta o processo de ensino em suas múltiplas dimensões, incluindo objetivos, conteúdos, métodos e avaliação.",
-
         "Dedica-se prioritariamente à organização administrativa da escola e dos sistemas de ensino.",
-
+        "Investiga e orienta o processo de ensino em suas múltiplas dimensões, incluindo objetivos, conteúdos, métodos e avaliação.",
         "Substitui os conhecimentos específicos das disciplinas escolares por metodologias gerais."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. A Didática estuda o processo de ensino de forma ampla, envolvendo planejamento, objetivos, conteúdos, métodos, recursos e avaliação.
@@ -108,20 +96,14 @@ Uma escola adota práticas pedagógicas que valorizam a participação ativa dos
     `,
 
     alternativas: [
-
         "Compreende o aluno como receptor passivo das informações transmitidas pelo professor.",
-
-        "Defende a centralização absoluta do processo educativo na figura docente.",
-
-        "Valoriza a aprendizagem mecânica baseada na repetição de conteúdos.",
-
         "Reconhece o ensino como prática social comprometida com a formação crítica dos sujeitos.",
-
+        "Defende a centralização absoluta do processo educativo na figura docente.",
+        "Valoriza a aprendizagem mecânica baseada na repetição de conteúdos.",
         "Prioriza exclusivamente o domínio técnico dos conteúdos escolares."
-
     ],
 
-    correta: 3,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. A Didática crítica compreende o ensino como prática social e educativa voltada à formação de sujeitos reflexivos e participativos.
@@ -142,20 +124,14 @@ Ao discutir os fundamentos da Didática, um grupo de professores conclui que ens
     `,
 
     alternativas: [
-
-        "A aprendizagem ocorre exclusivamente pela exposição oral do professor.",
-
-        "A função docente limita-se à reprodução dos conteúdos presentes nos livros didáticos.",
-
         "O ensino é um processo intencional que envolve mediação, interação e construção de conhecimentos.",
-
+        "A aprendizagem ocorre exclusivamente pela exposição oral do professor.",
+        "A função docente limita-se à reprodução dos conteúdos presentes nos livros didáticos.",
         "A aprendizagem depende apenas das capacidades individuais dos estudantes.",
-
         "Os recursos didáticos possuem maior relevância que os objetivos educacionais."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. O ensino é um processo intencional que envolve interação entre professor, estudante e conhecimento, favorecendo a construção da aprendizagem.
@@ -176,20 +152,14 @@ Durante uma formação continuada, um grupo de professores discutia o campo de e
     `,
 
     alternativas: [
-
-        "Limita-se ao estudo das técnicas utilizadas pelo professor em sala de aula.",
-
-        "Tem como foco exclusivo os processos psicológicos envolvidos na aprendizagem dos estudantes.",
-
         "Estuda o processo de ensino em sua totalidade, considerando suas finalidades, condições e formas de realização.",
-
+        "Limita-se ao estudo das técnicas utilizadas pelo professor em sala de aula.",
+        "Tem como foco exclusivo os processos psicológicos envolvidos na aprendizagem dos estudantes.",
         "Dedica-se apenas à elaboração de materiais pedagógicos e recursos tecnológicos.",
-
         "Restringe-se à organização administrativa das instituições escolares."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A Didática tem como objeto de estudo o processo de ensino em suas múltiplas dimensões, articulando objetivos, conteúdos, métodos, avaliação e contexto educacional.
@@ -244,20 +214,14 @@ Ao analisar uma situação de sala de aula, um pesquisador investiga como os con
     `,
 
     alternativas: [
-
         "Administração Escolar.",
-
-        "Didática.",
-
         "Legislação Educacional.",
-
         "Gestão Financeira da Educação.",
-
+        "Didática.",
         "Supervisão Administrativa."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. A Didática investiga as relações entre ensino e aprendizagem, incluindo a seleção de conteúdos, os métodos utilizados e os resultados obtidos.
@@ -278,20 +242,14 @@ Segundo a Didática, a escolha dos métodos de ensino deve ocorrer:
     `,
 
     alternativas: [
-
         "De forma independente dos objetivos educacionais.",
-
         "Com base exclusivamente na preferência pessoal do professor.",
-
         "Após a aplicação das avaliações.",
-
-        "Em articulação com os objetivos, conteúdos, características dos estudantes e contexto de ensino.",
-
-        "Sem considerar as especificidades da turma."
-
+        "Sem considerar as especificidades da turma.",
+        "Em articulação com os objetivos, conteúdos, características dos estudantes e contexto de ensino."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. Os métodos de ensino devem ser escolhidos de forma coerente com os objetivos propostos, os conteúdos trabalhados e as características dos estudantes.
@@ -312,20 +270,14 @@ Ao estudar o objeto da Didática, um candidato conclui que ela busca responder q
     `,
 
     alternativas: [
-
         "Parcialmente correta, pois a Didática preocupa-se apenas com o método de ensino.",
-
-        "Incorreta, pois essas questões pertencem exclusivamente ao currículo.",
-
-        "Incorreta, pois a Didática limita-se ao planejamento escolar.",
-
         "Correta, pois essas perguntas sintetizam aspectos centrais do processo de ensino estudado pela Didática.",
-
+        "Incorreta, pois essas questões pertencem exclusivamente ao currículo.",
+        "Incorreta, pois a Didática limita-se ao planejamento escolar.",
         "Correta apenas para a educação infantil."
-
     ],
 
-    correta: 3,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. As questões relacionadas aos objetivos, conteúdos, métodos e avaliação constituem elementos centrais do objeto de estudo da Didática.
@@ -345,20 +297,14 @@ Durante uma aula de Ciências, uma professora percebe que os estudantes apresent
     `,
 
     alternativas: [
-
         "A substituição dos conteúdos científicos pelas opiniões dos estudantes.",
-
-        "A compreensão da aprendizagem como processo ativo de construção e reconstrução do conhecimento.",
-
         "A redução da função docente à simples observação das atividades realizadas pelos alunos.",
-
         "A valorização exclusiva da experiência cotidiana em detrimento do conhecimento sistematizado.",
-
-        "A eliminação da necessidade de planejamento pedagógico."
-
+        "A eliminação da necessidade de planejamento pedagógico.",
+        "A compreensão da aprendizagem como processo ativo de construção e reconstrução do conhecimento."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A aprendizagem é compreendida como um processo ativo em que os estudantes confrontam ideias, elaboram hipóteses e constroem novos conhecimentos mediante a mediação pedagógica.
@@ -379,20 +325,14 @@ Ao planejar uma sequência didática, um professor considera os conhecimentos pr
     `,
 
     alternativas: [
-
-        "Os conhecimentos prévios devem ser ignorados para evitar interferências na aprendizagem.",
-
-        "A aprendizagem depende exclusivamente da exposição organizada dos conteúdos.",
-
         "Os conhecimentos prévios constituem referência importante para a construção de novas aprendizagens.",
-
+        "Os conhecimentos prévios devem ser ignorados para evitar interferências na aprendizagem.",
+        "A aprendizagem depende exclusivamente da exposição organizada dos conteúdos.",
         "O ensino deve começar sempre pelos conteúdos mais complexos, independentemente da turma.",
-
         "O papel do professor limita-se à transmissão das informações previstas no currículo."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. Os conhecimentos prévios funcionam como ponto de partida para novas aprendizagens e auxiliam o professor na organização das intervenções pedagógicas.
@@ -413,20 +353,14 @@ Durante uma atividade em grupo, os estudantes discutem diferentes estratégias p
     `,
 
     alternativas: [
-
         "Fiscalizador do comportamento dos estudantes.",
-
-        "Transmissor exclusivo das respostas corretas.",
-
         "Mediador do processo de aprendizagem.",
-
+        "Transmissor exclusivo das respostas corretas.",
         "Observador neutro sem participação pedagógica.",
-
         "Executor de procedimentos previamente definidos."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. O professor atua como mediador, promovendo condições para que os estudantes avancem em seus processos de aprendizagem.
@@ -447,20 +381,14 @@ Em uma discussão sobre ensino e aprendizagem, um professor afirma que o sucesso
     `,
 
     alternativas: [
-
         "A aprendizagem ocorre de forma automática quando existe interesse do aluno.",
-
         "Os resultados educacionais dependem apenas da metodologia utilizada.",
-
-        "A aprendizagem resulta da interação entre fatores individuais, sociais, pedagógicos e institucionais.",
-
         "O papel do professor é irrelevante para o desenvolvimento dos estudantes.",
-
+        "A aprendizagem resulta da interação entre fatores individuais, sociais, pedagógicos e institucionais.",
         "As condições de ensino possuem influência mínima sobre a aprendizagem."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. A aprendizagem é um fenômeno complexo influenciado por diversos fatores, incluindo as condições de ensino, a mediação docente e o contexto sociocultural.
@@ -481,20 +409,14 @@ Ao analisar os resultados de uma turma, uma professora percebe dificuldades reco
     `,
 
     alternativas: [
-
         "As dificuldades de aprendizagem decorrem exclusivamente da falta de interesse dos alunos.",
-
-        "O ensino e a aprendizagem constituem processos articulados que devem ser constantemente avaliados e ajustados.",
-
         "Os métodos de ensino possuem pouca influência nos resultados obtidos.",
-
+        "O ensino e a aprendizagem constituem processos articulados que devem ser constantemente avaliados e ajustados.",
         "A avaliação serve apenas para classificar os estudantes.",
-
         "A responsabilidade pela aprendizagem pertence exclusivamente ao estudante."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. A Didática entende que ensino e aprendizagem estão articulados, exigindo reflexão contínua sobre as práticas pedagógicas adotadas.
@@ -514,20 +436,14 @@ Em uma turma do Ensino Fundamental, um professor estimula os estudantes a expore
     `,
 
     alternativas: [
-
-        "A transferência da responsabilidade do ensino para os estudantes, reduzindo a função pedagógica do professor.",
-
-        "A compreensão de que a autoridade docente deve ser substituída integralmente pela autonomia discente.",
-
         "A valorização de uma relação pedagógica dialógica, na qual a participação dos estudantes contribui para a construção da aprendizagem.",
-
+        "A transferência da responsabilidade do ensino para os estudantes, reduzindo a função pedagógica do professor.",
+        "A compreensão de que a autoridade docente deve ser substituída integralmente pela autonomia discente.",
         "A adoção de uma postura permissiva incompatível com a organização do processo educativo.",
-
         "A substituição dos objetivos curriculares pelos interesses imediatos dos alunos."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A Didática contemporânea valoriza relações dialógicas entre professor e estudante, reconhecendo a importância da participação ativa dos educandos sem eliminar a mediação docente.
@@ -548,20 +464,14 @@ Ao analisar a relação professor-aluno, um candidato afirma que o respeito mút
     `,
 
     alternativas: [
-
         "Incorreta, pois o desempenho escolar depende exclusivamente dos métodos de ensino utilizados.",
-
         "Parcialmente correta, já que fatores afetivos possuem pouca influência no processo educativo.",
-
-        "Correta, pois a qualidade das interações pedagógicas influencia significativamente o processo de aprendizagem.",
-
         "Incorreta, porque a relação professor-aluno não interfere nos resultados educacionais.",
-
+        "Correta, pois a qualidade das interações pedagógicas influencia significativamente o processo de aprendizagem.",
         "Correta apenas na Educação Infantil."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. Estudos na área educacional demonstram que relações pedagógicas baseadas em respeito, diálogo e confiança favorecem a aprendizagem e a participação dos estudantes.
@@ -616,20 +526,14 @@ Um professor acredita que manter disciplina em sala de aula exige o uso constant
     `,
 
     alternativas: [
-
-        "A disciplina escolar deve ser construída por meio do diálogo, da participação e da compreensão compartilhada das normas.",
-
         "A autoridade docente deve ser totalmente eliminada para favorecer a autonomia discente.",
-
         "O comportamento dos estudantes não possui relação com a aprendizagem.",
-
+        "A disciplina escolar deve ser construída por meio do diálogo, da participação e da compreensão compartilhada das normas.",
         "A organização da sala de aula depende exclusivamente dos interesses dos alunos.",
-
         "As normas escolares não devem ser discutidas em ambientes educacionais."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. A gestão democrática da sala de aula busca construir relações baseadas em diálogo, respeito e corresponsabilidade, sem recorrer ao autoritarismo.
@@ -650,20 +554,14 @@ Ao refletir sobre a relação professor-aluno, uma professora conclui que sua at
     `,
 
     alternativas: [
-
         "Transferir integralmente aos estudantes a responsabilidade pela aprendizagem.",
-
         "Reduzir a intervenção pedagógica para estimular a independência absoluta dos alunos.",
-
-        "Promover situações em que os estudantes desenvolvam capacidade crítica, reflexão e tomada de decisões fundamentadas.",
-
         "Substituir os conteúdos curriculares por atividades livres sem orientação pedagógica.",
-
-        "Priorizar exclusivamente o desenvolvimento socioemocional em detrimento dos conhecimentos escolares."
-
+        "Priorizar exclusivamente o desenvolvimento socioemocional em detrimento dos conhecimentos escolares.",
+        "Promover situações em que os estudantes desenvolvam capacidade crítica, reflexão e tomada de decisões fundamentadas."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. Favorecer a autonomia significa criar condições para que os estudantes desenvolvam pensamento crítico, responsabilidade e capacidade de aprender de forma cada vez mais independente.
@@ -683,20 +581,14 @@ Uma professora de Ciências organiza uma sequência didática na qual os estudan
     `,
 
     alternativas: [
-
         "Priorizar a memorização de conceitos previamente definidos, reduzindo a necessidade de investigação pelos estudantes.",
-
         "Valorizar a aprendizagem baseada na transmissão direta de informações pelo professor.",
-
-        "Promover a participação ativa dos estudantes na construção do conhecimento por meio da investigação e da resolução de problemas.",
-
         "Substituir os conteúdos curriculares por atividades práticas desvinculadas dos objetivos de aprendizagem.",
-
-        "Transferir integralmente aos estudantes a responsabilidade pela condução do processo educativo."
-
+        "Transferir integralmente aos estudantes a responsabilidade pela condução do processo educativo.",
+        "Promover a participação ativa dos estudantes na construção do conhecimento por meio da investigação e da resolução de problemas."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. Metodologias investigativas favorecem a participação ativa dos estudantes, estimulando análise, reflexão e construção do conhecimento.
@@ -717,20 +609,14 @@ Ao selecionar um método de ensino, o professor deve considerar:
     `,
 
     alternativas: [
-
-        "Exclusivamente suas preferências pessoais e experiências profissionais.",
-
-        "A facilidade de aplicação da técnica escolhida, independentemente dos objetivos educacionais.",
-
         "A articulação entre objetivos, conteúdos, características dos estudantes e contexto de aprendizagem.",
-
+        "Exclusivamente suas preferências pessoais e experiências profissionais.",
+        "A facilidade de aplicação da técnica escolhida, independentemente dos objetivos educacionais.",
         "A utilização da mesma metodologia para todas as turmas e disciplinas.",
-
         "A substituição dos objetivos curriculares pelas demandas imediatas dos estudantes."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A escolha metodológica deve estar alinhada aos objetivos educacionais, aos conteúdos e às características dos estudantes.
@@ -751,20 +637,14 @@ Durante uma aula, o professor utiliza estudo de caso para discutir uma situaçã
     `,
 
     alternativas: [
-
         "A reprodução mecânica de conceitos previamente memorizados.",
-
-        "A análise crítica de situações concretas e a aplicação de conhecimentos em contextos reais.",
-
         "A eliminação da necessidade de fundamentação teórica.",
-
+        "A análise crítica de situações concretas e a aplicação de conhecimentos em contextos reais.",
         "A substituição integral das demais estratégias pedagógicas.",
-
         "A redução da participação dos estudantes no processo de aprendizagem."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. O estudo de caso favorece análise, interpretação e aplicação de conhecimentos em situações contextualizadas.
@@ -785,20 +665,14 @@ Uma professora utiliza aula expositiva dialogada para introduzir determinado con
     `,
 
     alternativas: [
-
         "Trata-se de metodologia incompatível com a participação dos estudantes.",
-
-        "Sua utilização elimina a necessidade de outras estratégias pedagógicas.",
-
         "Pode favorecer a aprendizagem quando articulada à participação, questionamentos e interação entre professor e estudantes.",
-
+        "Sua utilização elimina a necessidade de outras estratégias pedagógicas.",
         "É necessariamente vinculada a práticas pedagógicas autoritárias.",
-
         "Tem como principal objetivo a memorização mecânica dos conteúdos."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. A aula expositiva dialogada pode ser uma estratégia eficaz quando promove interação, reflexão e participação dos estudantes.
@@ -819,20 +693,14 @@ Ao analisar diferentes métodos de ensino, um professor conclui que não existe 
     `,
 
     alternativas: [
-
         "A qualidade da aprendizagem depende exclusivamente da motivação dos estudantes.",
-
         "Os métodos possuem a mesma eficácia em qualquer contexto educacional.",
-
-        "A escolha metodológica deve considerar objetivos, conteúdos, contexto e características da turma.",
-
         "As técnicas de ensino são irrelevantes para o processo educativo.",
-
+        "A escolha metodológica deve considerar objetivos, conteúdos, contexto e características da turma.",
         "O professor deve utilizar sempre a metodologia mais recente disponível."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. Não existe método universal. A adequação metodológica depende dos objetivos educacionais, dos conteúdos e do contexto de aprendizagem.
@@ -886,20 +754,14 @@ Ao analisar o planejamento de um professor, a coordenação pedagógica verifico
     `,
 
     alternativas: [
-
         "A utilização excessiva de recursos didáticos.",
-
         "A ausência de interdisciplinaridade no currículo.",
-
-        "A falta de coerência entre os elementos constitutivos do planejamento.",
-
         "O excesso de participação dos estudantes na construção do plano.",
-
-        "A valorização inadequada dos conhecimentos prévios dos alunos."
-
+        "A valorização inadequada dos conhecimentos prévios dos alunos.",
+        "A falta de coerência entre os elementos constitutivos do planejamento."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. Objetivos, conteúdos, metodologias e avaliação devem estar articulados. A ausência dessa coerência compromete a efetividade do processo educativo.
@@ -954,20 +816,14 @@ Uma professora utiliza os resultados das avaliações anteriores para redefinir 
     `,
 
     alternativas: [
-
         "Deve ser elaborado apenas no início do ano letivo.",
-
-        "É um processo contínuo que envolve acompanhamento, análise e replanejamento das ações pedagógicas.",
-
         "Perde sua validade quando ocorrem dificuldades de aprendizagem.",
-
         "Possui função exclusivamente administrativa.",
-
+        "É um processo contínuo que envolve acompanhamento, análise e replanejamento das ações pedagógicas.",
         "Deve permanecer inalterado após sua elaboração."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. O planejamento é um processo dinâmico que exige acompanhamento permanente e readequações sempre que necessário.
@@ -988,20 +844,14 @@ Ao elaborar um plano de ensino, um professor procura alinhar os objetivos de apr
     `,
 
     alternativas: [
-
-        "A centralidade exclusiva dos conteúdos conceituais.",
-
-        "A substituição da avaliação pelos objetivos educacionais.",
-
         "A compreensão do planejamento como articulação intencional dos elementos do processo didático.",
-
+        "A centralidade exclusiva dos conteúdos conceituais.",
+        "A substituição da avaliação pelos objetivos educacionais.",
         "A priorização da metodologia em detrimento dos objetivos.",
-
         "A independência entre planejamento e aprendizagem."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. O planejamento envolve a integração coerente dos diversos elementos do processo educativo, visando favorecer a aprendizagem dos estudantes.
@@ -1021,20 +871,14 @@ Durante uma reunião pedagógica, uma professora afirmou que utiliza a avaliaç�
     `,
 
     alternativas: [
-
         "Classificatória, pois tem como finalidade ordenar os estudantes segundo seu desempenho.",
-
         "Somativa, porque ocorre ao final de cada etapa letiva para registro de resultados.",
-
-        "Formativa, por utilizar informações da aprendizagem para orientar intervenções pedagógicas.",
-
         "Diagnóstica, por ser realizada exclusivamente antes do início do processo de ensino.",
-
+        "Formativa, por utilizar informações da aprendizagem para orientar intervenções pedagógicas.",
         "Normativa, por comparar os resultados individuais com padrões previamente estabelecidos."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. A avaliação formativa acompanha continuamente o processo de aprendizagem e fornece informações para aperfeiçoar tanto o ensino quanto a aprendizagem.
@@ -1055,20 +899,14 @@ Ao iniciar um novo conteúdo, um professor aplica uma atividade para identificar
     `,
 
     alternativas: [
-
         "Avaliação classificatória.",
-
-        "Avaliação somativa.",
-
         "Avaliação diagnóstica.",
-
+        "Avaliação somativa.",
         "Avaliação certificadora.",
-
         "Avaliação normativa."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. A avaliação diagnóstica busca levantar informações sobre os conhecimentos e necessidades dos estudantes antes ou no início do processo de ensino.
@@ -1089,20 +927,14 @@ Em determinada escola, a avaliação é utilizada exclusivamente para atribuir n
     `,
 
     alternativas: [
-
         "A avaliação deve eliminar completamente qualquer forma de registro do desempenho dos estudantes.",
-
         "A atribuição de notas é incompatível com qualquer proposta pedagógica democrática.",
-
-        "A avaliação reduz-se a uma função classificatória, deixando de contribuir para a melhoria do processo de ensino e aprendizagem.",
-
         "Os professores não devem utilizar instrumentos formais de avaliação.",
-
-        "Os resultados da aprendizagem não devem ser considerados no planejamento escolar."
-
+        "Os resultados da aprendizagem não devem ser considerados no planejamento escolar.",
+        "A avaliação reduz-se a uma função classificatória, deixando de contribuir para a melhoria do processo de ensino e aprendizagem."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A crítica central refere-se ao uso exclusivamente classificatório da avaliação, que limita seu potencial pedagógico e formativo.
@@ -1123,20 +955,14 @@ Durante a correção de uma atividade, uma professora analisa os erros cometidos
     `,
 
     alternativas: [
-
         "Os erros devem ser utilizados apenas para justificar a atribuição de notas baixas.",
-
-        "A avaliação possui função investigativa e pode fornecer informações relevantes sobre o processo de aprendizagem.",
-
         "O erro representa apenas falta de estudo por parte do estudante.",
-
+        "A avaliação possui função investigativa e pode fornecer informações relevantes sobre o processo de aprendizagem.",
         "A correção deve limitar-se à indicação das respostas corretas.",
-
         "A avaliação deve ocorrer somente ao final dos conteúdos."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. Os erros podem revelar hipóteses, dificuldades e formas de pensamento dos estudantes, auxiliando o professor na tomada de decisões pedagógicas.
@@ -1157,20 +983,14 @@ Um professor pretende elaborar instrumentos avaliativos coerentes com os objetiv
     `,
 
     alternativas: [
-
-        "A avaliação deve ser independente dos objetivos para garantir imparcialidade.",
-
-        "Os instrumentos avaliativos devem ser escolhidos apenas pela facilidade de aplicação.",
-
         "A coerência entre objetivos, ensino e avaliação contribui para a qualidade do processo educativo.",
-
+        "A avaliação deve ser independente dos objetivos para garantir imparcialidade.",
+        "Os instrumentos avaliativos devem ser escolhidos apenas pela facilidade de aplicação.",
         "Os objetivos educacionais possuem pouca relevância para a definição dos critérios avaliativos.",
-
         "A avaliação deve priorizar exclusivamente conteúdos memorizados."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A avaliação precisa estar articulada aos objetivos de aprendizagem e às experiências de ensino desenvolvidas ao longo do processo educativo.
@@ -1224,20 +1044,14 @@ Uma escola organiza suas práticas pedagógicas em torno de projetos investigati
     `,
 
     alternativas: [
-
         "Tradicional, por enfatizar a transmissão sistemática dos conteúdos.",
-
-        "Tecnicista, por priorizar eficiência operacional e treinamento de habilidades.",
-
         "Renovada Progressivista, por valorizar a experiência, a atividade e os interesses dos estudantes.",
-
+        "Tecnicista, por priorizar eficiência operacional e treinamento de habilidades.",
         "Crítico-Social dos Conteúdos, por defender a centralidade dos conteúdos sistematizados.",
-
         "Tradicional Renovada, por enfatizar disciplina e repetição."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. A tendência Renovada Progressivista valoriza a atividade do aluno, a experiência e a aprendizagem pela descoberta.
@@ -1258,20 +1072,14 @@ Em determinada rede de ensino, o planejamento pedagógico enfatiza objetivos ope
     `,
 
     alternativas: [
-
         "Libertadora.",
-
         "Crítico-Social dos Conteúdos.",
-
         "Renovada Não Diretiva.",
-
-        "Tecnicista.",
-
-        "Libertária."
-
+        "Libertária.",
+        "Tecnicista."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A pedagogia tecnicista enfatiza eficiência, racionalização, objetivos comportamentais e controle dos resultados educacionais.
@@ -1326,20 +1134,14 @@ Ao analisar diferentes tendências pedagógicas, um candidato conclui que a Peda
     `,
 
     alternativas: [
-
-        "Incorreta, pois essa tendência rejeita completamente os conteúdos escolares.",
-
-        "Incorreta, pois prioriza exclusivamente os interesses imediatos dos estudantes.",
-
         "Correta, pois busca relacionar conteúdos sistematizados à prática social dos educandos.",
-
+        "Incorreta, pois essa tendência rejeita completamente os conteúdos escolares.",
+        "Incorreta, pois prioriza exclusivamente os interesses imediatos dos estudantes.",
         "Correta apenas quando aplicada ao ensino superior.",
-
         "Incorreta, pois se aproxima integralmente do tecnicismo."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A Pedagogia Crítico-Social dos Conteúdos defende a apropriação dos conhecimentos sistematizados como instrumento para compreender e transformar a realidade.
@@ -1393,20 +1195,14 @@ Durante uma formação continuada, um professor afirmou que a BNCC exige a utili
     `,
 
     alternativas: [
-
         "Defende exclusivamente métodos expositivos centrados no professor.",
-
-        "Valoriza estratégias pedagógicas que promovam protagonismo, investigação, colaboração e resolução de problemas.",
-
         "Determina a utilização obrigatória de uma única metodologia para todas as disciplinas.",
-
+        "Valoriza estratégias pedagógicas que promovam protagonismo, investigação, colaboração e resolução de problemas.",
         "Substitui o planejamento docente pela autonomia dos estudantes.",
-
         "Restringe a aprendizagem ao desenvolvimento de habilidades técnicas."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. A BNCC incentiva práticas pedagógicas que favoreçam participação ativa, protagonismo e construção significativa da aprendizagem.
@@ -1427,20 +1223,14 @@ Ao elaborar instrumentos de avaliação, uma professora procura verificar não a
     `,
 
     alternativas: [
-
         "A avaliação deve concentrar-se exclusivamente nos conteúdos conceituais.",
-
         "A BNCC prioriza apenas aspectos comportamentais da aprendizagem.",
-
-        "O desenvolvimento de competências exige avaliar a mobilização dos conhecimentos em contextos diversos.",
-
         "As habilidades previstas na BNCC dispensam conteúdos curriculares.",
-
+        "O desenvolvimento de competências exige avaliar a mobilização dos conhecimentos em contextos diversos.",
         "A aplicação prática dos conhecimentos não integra os objetivos da educação básica."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. A BNCC propõe que os estudantes sejam capazes de utilizar conhecimentos e habilidades em diferentes contextos e situações.
@@ -1461,20 +1251,14 @@ Uma escola desenvolve projetos interdisciplinares envolvendo diferentes áreas d
     `,
 
     alternativas: [
-
         "A BNCC recomenda o isolamento das disciplinas para garantir maior profundidade conceitual.",
-
         "A interdisciplinaridade dificulta o desenvolvimento das competências gerais.",
-
-        "A integração de diferentes áreas favorece a construção de aprendizagens significativas e contextualizadas.",
-
         "Projetos interdisciplinares são incompatíveis com os objetivos da educação básica.",
-
-        "A BNCC prioriza exclusivamente conteúdos específicos de cada componente curricular."
-
+        "A BNCC prioriza exclusivamente conteúdos específicos de cada componente curricular.",
+        "A integração de diferentes áreas favorece a construção de aprendizagens significativas e contextualizadas."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A BNCC incentiva abordagens integradas que favoreçam contextualização, interdisciplinaridade e desenvolvimento de competências.
@@ -1495,20 +1279,14 @@ Ao analisar a relação entre Didática e BNCC, um candidato conclui que o traba
     `,
 
     alternativas: [
-
-        "Incorreta, pois a BNCC trata apenas de conteúdos curriculares.",
-
         "Correta, pois a prática pedagógica deve integrar os diferentes elementos do processo educativo.",
-
+        "Incorreta, pois a BNCC trata apenas de conteúdos curriculares.",
         "Incorreta, pois competências e habilidades substituem os objetivos educacionais.",
-
         "Correta apenas para os anos iniciais do ensino fundamental.",
-
         "Incorreta, pois avaliação e metodologia são independentes das competências previstas."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A BNCC exige coerência entre competências, habilidades, objetivos, metodologias e avaliação, fortalecendo a intencionalidade pedagógica.
@@ -1528,20 +1306,14 @@ Durante o conselho de classe, uma professora apresentou os resultados de aprendi
     `,
 
     alternativas: [
-
-        "A avaliação deve servir exclusivamente para verificar o rendimento dos estudantes ao final do processo.",
-
         "Planejamento, ensino, aprendizagem e avaliação constituem elementos articulados e passíveis de readequação contínua.",
-
+        "A avaliação deve servir exclusivamente para verificar o rendimento dos estudantes ao final do processo.",
         "As dificuldades de aprendizagem decorrem exclusivamente da falta de dedicação dos estudantes.",
-
         "O planejamento perde sua função após o início da execução das aulas.",
-
         "A avaliação deve ocorrer de forma independente dos objetivos de aprendizagem."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A Didática compreende planejamento, ensino, aprendizagem e avaliação como elementos interdependentes que exigem acompanhamento e ajustes permanentes.
@@ -1562,20 +1334,14 @@ Ao analisar duas propostas pedagógicas, um candidato observou que uma delas enf
     `,
 
     alternativas: [
-
         "Renovada Progressivista e Tecnicista.",
-
         "Libertária e Tradicional.",
-
-        "Tradicional e Libertadora.",
-
         "Crítico-Social dos Conteúdos e Renovada Não Diretiva.",
-
+        "Tradicional e Libertadora.",
         "Tecnicista e Tradicional."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. A primeira descrição caracteriza a tendência Tradicional, enquanto a segunda aproxima-se da Pedagogia Libertadora, associada a Paulo Freire.
@@ -1630,20 +1396,14 @@ Durante uma atividade avaliativa, uma professora percebeu que vários estudantes
     `,
 
     alternativas: [
-
         "Classificatória, centrada na hierarquização do desempenho dos estudantes.",
-
         "Somativa, voltada exclusivamente à atribuição de notas finais.",
-
         "Normativa, baseada na comparação entre estudantes.",
-
-        "Formativa, utilizada para orientar decisões pedagógicas e favorecer a aprendizagem.",
-
-        "Certificadora, destinada à promoção escolar."
-
+        "Certificadora, destinada à promoção escolar.",
+        "Formativa, utilizada para orientar decisões pedagógicas e favorecer a aprendizagem."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A avaliação formativa utiliza informações obtidas durante o processo para orientar intervenções e promover avanços na aprendizagem.
@@ -1664,20 +1424,14 @@ Ao refletir sobre os fundamentos da Didática, um professor concluiu que ensinar
     `,
 
     alternativas: [
-
         "A Didática restringe-se à escolha das técnicas utilizadas pelo professor.",
-
-        "O processo educativo depende prioritariamente das características individuais dos estudantes.",
-
         "O ensino constitui uma prática intencional, sistemática e socialmente situada.",
-
+        "O processo educativo depende prioritariamente das características individuais dos estudantes.",
         "Os conteúdos escolares possuem importância secundária em relação às metodologias.",
-
         "A aprendizagem ocorre independentemente da mediação pedagógica."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. A Didática compreende o ensino como uma prática intencional, organizada e comprometida com a formação humana e social dos estudantes.
@@ -1690,6 +1444,5 @@ A Didática não se limita a métodos ou técnicas; ela envolve a compreensão a
     dicaBanca: `
 Uma visão ampla da Didática integra objetivos, conteúdos, metodologia, avaliação e formação humana.
     `
-}
-];
+}];
 

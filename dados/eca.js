@@ -44,14 +44,14 @@ dicaBanca: "Família + Sociedade + Estado."
 pergunta: "Uma equipe gestora discutia o princípio da prioridade absoluta previsto no ECA. Durante o debate, um participante afirmou que esse princípio possui repercussões concretas na formulação das políticas públicas. Essa afirmação está correta porque a prioridade absoluta implica:",
 
 alternativas: [
-"A preferência na formulação e execução das políticas sociais públicas e na destinação privilegiada de recursos para a infância e juventude.",
-"A reserva obrigatória de recursos destinados exclusivamente aos programas de proteção social voltados às crianças em situação de risco.",
-"A garantia de atendimento prioritário nos serviços públicos de saúde, assistência social e educação mediante comprovação de vulnerabilidade.",
-"A adoção de medidas administrativas preferenciais destinadas às crianças e adolescentes em situação de abandono ou negligência.",
-"A destinação prioritária de recursos aos órgãos responsáveis pela proteção e fiscalização dos direitos infantojuvenis."
+        "A reserva obrigatória de recursos destinados exclusivamente aos programas de proteção social voltados às crianças em situação de risco.",
+        "A garantia de atendimento prioritário nos serviços públicos de saúde, assistência social e educação mediante comprovação de vulnerabilidade.",
+        "A adoção de medidas administrativas preferenciais destinadas às crianças e adolescentes em situação de abandono ou negligência.",
+        "A preferência na formulação e execução das políticas sociais públicas e na destinação privilegiada de recursos para a infância e juventude.",
+        "A destinação prioritária de recursos aos órgãos responsáveis pela proteção e fiscalização dos direitos infantojuvenis."
 ],
 
-correta: 0,
+correta: 3,
 
 feedbackAcerto: "Correto. A prioridade absoluta envolve políticas públicas, recursos e atendimento preferencial.",
 
@@ -64,14 +64,14 @@ dicaBanca: "Prioridade absoluta = recursos + políticas + atendimento."
 pergunta: "Durante um curso de formação para conselheiros tutelares, discutia-se o conceito legal de criança previsto no ECA. Segundo o Estatuto, considera-se criança a pessoa:",
 
 alternativas: [
-"Com idade inferior a doze anos completos, independentemente de sua condição social ou familiar.",
-"Com até doze anos de idade completos, observadas as situações excepcionais previstas em lei.",
-"Com idade igual ou inferior a onze anos e onze meses, considerada em condição peculiar de desenvolvimento.",
-"Até doze anos de idade incompletos, sendo adolescente aquela entre doze e dezoito anos de idade.",
-"Até treze anos incompletos, observadas as regras especiais de proteção previstas pelo Estatuto."
+        "Com idade inferior a doze anos completos, independentemente de sua condição social ou familiar.",
+        "Até doze anos de idade incompletos, sendo adolescente aquela entre doze e dezoito anos de idade.",
+        "Com até doze anos de idade completos, observadas as situações excepcionais previstas em lei.",
+        "Com idade igual ou inferior a onze anos e onze meses, considerada em condição peculiar de desenvolvimento.",
+        "Até treze anos incompletos, observadas as regras especiais de proteção previstas pelo Estatuto."
 ],
 
-correta: 3,
+correta: 1,
 
 feedbackAcerto: "Correto. Criança é a pessoa até doze anos de idade incompletos.",
 
@@ -84,14 +84,14 @@ dicaBanca: "12 incompletos = criança."
 pergunta: "Durante uma capacitação sobre direitos infantojuvenis, uma servidora afirmou que adolescentes possuem proteção especial porque se encontram em condição peculiar de desenvolvimento. Segundo o ECA, considera-se adolescente a pessoa:",
 
 alternativas: [
-"Com idade entre doze e dezoito anos completos, podendo a lei prever aplicação excepcional do Estatuto a pessoas entre dezoito e vinte e um anos.",
-"Com idade entre doze e dezoito anos incompletos, ressalvadas as hipóteses expressamente previstas na legislação.",
-"Com idade superior a doze e inferior a dezoito anos, observadas as disposições especiais do Estatuto.",
-"Com idade entre doze e dezoito anos, sendo possível a aplicação excepcional do ECA nos casos previstos em lei.",
-"Com idade compreendida entre doze e vinte e um anos, observadas as medidas protetivas cabíveis."
+        "Com idade entre doze e dezoito anos completos, podendo a lei prever aplicação excepcional do Estatuto a pessoas entre dezoito e vinte e um anos.",
+        "Com idade entre doze e dezoito anos incompletos, ressalvadas as hipóteses expressamente previstas na legislação.",
+        "Com idade superior a doze e inferior a dezoito anos, observadas as disposições especiais do Estatuto.",
+        "Com idade compreendida entre doze e vinte e um anos, observadas as medidas protetivas cabíveis.",
+        "Com idade entre doze e dezoito anos, sendo possível a aplicação excepcional do ECA nos casos previstos em lei."
 ],
 
-correta: 3,
+correta: 4,
 
 feedbackAcerto: "Correto. O adolescente é a pessoa entre doze e dezoito anos de idade, admitindo-se aplicação excepcional do ECA em situações previstas em lei.",
 
@@ -103,14 +103,14 @@ dicaBanca: "Adolescente = 12 a 18 anos."
 pergunta: "Durante uma capacitação para profissionais da rede de proteção, discutia-se o direito à vida previsto no ECA. Uma participante afirmou que esse direito não se limita à sobrevivência física, abrangendo também condições adequadas de desenvolvimento. Essa interpretação está correta porque o Estatuto assegura:",
 
 alternativas: [
-"A proteção integral da criança e do adolescente mediante políticas públicas voltadas à preservação da vida e ao desenvolvimento saudável e harmonioso.",
-"A garantia de atendimento prioritário às crianças e adolescentes em situação de vulnerabilidade social ou econômica.",
-"A oferta de serviços públicos destinados à proteção da infância durante as etapas iniciais do desenvolvimento humano.",
-"A implementação de ações preventivas voltadas à redução dos fatores de risco associados à mortalidade infantil.",
-"A assistência integral às famílias responsáveis pela criação e educação das crianças e adolescentes."
+        "A garantia de atendimento prioritário às crianças e adolescentes em situação de vulnerabilidade social ou econômica.",
+        "A oferta de serviços públicos destinados à proteção da infância durante as etapas iniciais do desenvolvimento humano.",
+        "A implementação de ações preventivas voltadas à redução dos fatores de risco associados à mortalidade infantil.",
+        "A assistência integral às famílias responsáveis pela criação e educação das crianças e adolescentes.",
+        "A proteção integral da criança e do adolescente mediante políticas públicas voltadas à preservação da vida e ao desenvolvimento saudável e harmonioso."
 ],
 
-correta: 0,
+correta: 4,
 
 feedbackAcerto: "Correto. O ECA assegura condições para o nascimento e o desenvolvimento sadio e harmonioso da criança e do adolescente.",
 
@@ -123,14 +123,14 @@ dicaBanca: "Vida = sobrevivência + desenvolvimento saudável."
 pergunta: "Uma unidade de saúde recusou atendimento imediato a uma criança em situação de urgência sob a justificativa de ausência de documentação. À luz do ECA, essa conduta é incompatível com o Estatuto porque:",
 
 alternativas: [
-"O atendimento à criança e ao adolescente deve observar critérios de universalidade e integralidade definidos pelas políticas públicas de saúde.",
-"A proteção à saúde da criança e do adolescente constitui dever compartilhado entre família, sociedade e Estado.",
-"A criança e o adolescente possuem direito à proteção à vida e à saúde mediante a efetivação de políticas sociais públicas.",
-"O acesso aos serviços de saúde destinados à infância não pode ser condicionado a exigências administrativas incompatíveis com a situação apresentada.",
-"A garantia do atendimento integral à saúde da criança constitui obrigação prioritária dos serviços públicos e privados."
+        "A criança e o adolescente possuem direito à proteção à vida e à saúde mediante a efetivação de políticas sociais públicas.",
+        "O atendimento à criança e ao adolescente deve observar critérios de universalidade e integralidade definidos pelas políticas públicas de saúde.",
+        "A proteção à saúde da criança e do adolescente constitui dever compartilhado entre família, sociedade e Estado.",
+        "O acesso aos serviços de saúde destinados à infância não pode ser condicionado a exigências administrativas incompatíveis com a situação apresentada.",
+        "A garantia do atendimento integral à saúde da criança constitui obrigação prioritária dos serviços públicos e privados."
 ],
 
-correta: 2,
+correta: 0,
 
 feedbackAcerto: "Correto. O ECA assegura o direito à vida e à saúde mediante políticas sociais públicas que permitam o nascimento e desenvolvimento saudável.",
 
@@ -143,14 +143,14 @@ dicaBanca: "Saúde = direito fundamental e prioridade."
 pergunta: "Durante uma atividade escolar, os estudantes discutiam os direitos relacionados à liberdade previstos no ECA. Segundo o Estatuto, o direito à liberdade compreende:",
 
 alternativas: [
-"A participação em atividades sociais e culturais compatíveis com a condição peculiar de pessoa em desenvolvimento, entre outras garantias legais.",
-"A possibilidade de manifestação de opiniões em ambientes escolares e comunitários previamente autorizados pelos responsáveis.",
-"A autonomia para tomar decisões relacionadas à vida pessoal, observadas as limitações impostas pela legislação civil.",
-"O exercício dos direitos individuais assegurados aos cidadãos brasileiros, respeitadas as condições estabelecidas pelos sistemas de proteção.",
-"A liberdade de expressão e participação social condicionada à supervisão dos pais ou responsáveis legais."
+        "A possibilidade de manifestação de opiniões em ambientes escolares e comunitários previamente autorizados pelos responsáveis.",
+        "A autonomia para tomar decisões relacionadas à vida pessoal, observadas as limitações impostas pela legislação civil.",
+        "O exercício dos direitos individuais assegurados aos cidadãos brasileiros, respeitadas as condições estabelecidas pelos sistemas de proteção.",
+        "A participação em atividades sociais e culturais compatíveis com a condição peculiar de pessoa em desenvolvimento, entre outras garantias legais.",
+        "A liberdade de expressão e participação social condicionada à supervisão dos pais ou responsáveis legais."
 ],
 
-correta: 0,
+correta: 3,
 
 feedbackAcerto: "Correto. O direito à liberdade inclui participação na vida familiar, comunitária, política, cultural e social.",
 
@@ -183,14 +183,14 @@ dicaBanca: "Respeito = integridade física, psíquica e moral."
 pergunta: "Durante uma campanha de conscientização, discutia-se o direito à dignidade da criança e do adolescente. Segundo o ECA, esse direito impõe que eles sejam protegidos contra:",
 
 alternativas: [
-"Situações que comprometam sua formação moral e seu desenvolvimento social adequado.",
-"Qualquer forma de negligência, discriminação, exploração, violência, crueldade e opressão.",
-"Práticas que possam restringir o acesso às oportunidades de desenvolvimento pessoal e comunitário.",
-"Condutas incompatíveis com os princípios da proteção integral e da prioridade absoluta.",
-"Ações ou omissões que prejudiquem o exercício pleno de seus direitos fundamentais."
+        "Situações que comprometam sua formação moral e seu desenvolvimento social adequado.",
+        "Práticas que possam restringir o acesso às oportunidades de desenvolvimento pessoal e comunitário.",
+        "Qualquer forma de negligência, discriminação, exploração, violência, crueldade e opressão.",
+        "Condutas incompatíveis com os princípios da proteção integral e da prioridade absoluta.",
+        "Ações ou omissões que prejudiquem o exercício pleno de seus direitos fundamentais."
 ],
 
-correta: 1,
+correta: 2,
 
 feedbackAcerto: "Correto. O ECA determina proteção contra negligência, discriminação, exploração, violência, crueldade e opressão.",
 
@@ -202,14 +202,14 @@ dicaBanca: "Dignidade = proteção contra toda forma de violência e opressão."
 pergunta: "Durante uma reunião da rede de proteção, discutia-se o direito à convivência familiar e comunitária. Uma assistente social destacou que a permanência da criança em sua família deve ser priorizada sempre que possível. Essa afirmação está de acordo com o ECA porque:",
 
 alternativas: [
-"A manutenção da criança em seu núcleo familiar constitui medida prioritária, devendo o afastamento ocorrer apenas quando indispensável à proteção de seus direitos.",
-"A convivência familiar representa direito fundamental cuja restrição depende exclusivamente de decisão judicial fundamentada.",
-"A permanência da criança junto à família natural deve ser preservada, salvo quando houver manifestação contrária dos órgãos de proteção.",
-"O vínculo familiar possui prioridade sobre outras medidas protetivas, independentemente das condições existentes no ambiente doméstico.",
-"A proteção integral exige que a convivência familiar seja preservada sempre que não houver risco iminente à integridade física da criança."
+        "A convivência familiar representa direito fundamental cuja restrição depende exclusivamente de decisão judicial fundamentada.",
+        "A permanência da criança junto à família natural deve ser preservada, salvo quando houver manifestação contrária dos órgãos de proteção.",
+        "O vínculo familiar possui prioridade sobre outras medidas protetivas, independentemente das condições existentes no ambiente doméstico.",
+        "A proteção integral exige que a convivência familiar seja preservada sempre que não houver risco iminente à integridade física da criança.",
+        "A manutenção da criança em seu núcleo familiar constitui medida prioritária, devendo o afastamento ocorrer apenas quando indispensável à proteção de seus direitos."
 ],
 
-correta: 0,
+correta: 4,
 
 feedbackAcerto: "Correto. O ECA prioriza a permanência na família natural, reservando o afastamento para situações excepcionais.",
 
@@ -242,14 +242,14 @@ dicaBanca: "Discriminação = vedada pelo ECA."
 pergunta: "Uma organização social desenvolveu programa destinado ao fortalecimento das capacidades físicas, emocionais, intelectuais e sociais de crianças e adolescentes. Essa iniciativa está alinhada ao ECA porque o Estatuto busca assegurar:",
 
 alternativas: [
-"A formação de cidadãos capazes de exercer plenamente seus direitos e deveres na sociedade.",
-"O desenvolvimento integral da criança e do adolescente em todas as dimensões de sua personalidade.",
-"A proteção das condições necessárias para o crescimento saudável e para a participação comunitária.",
-"O acesso às oportunidades indispensáveis ao desenvolvimento educacional e profissional futuro.",
-"A construção de competências sociais que favoreçam a inserção produtiva dos jovens na sociedade."
+        "A formação de cidadãos capazes de exercer plenamente seus direitos e deveres na sociedade.",
+        "A proteção das condições necessárias para o crescimento saudável e para a participação comunitária.",
+        "O acesso às oportunidades indispensáveis ao desenvolvimento educacional e profissional futuro.",
+        "O desenvolvimento integral da criança e do adolescente em todas as dimensões de sua personalidade.",
+        "A construção de competências sociais que favoreçam a inserção produtiva dos jovens na sociedade."
 ],
 
-correta: 1,
+correta: 3,
 
 feedbackAcerto: "Correto. O ECA adota uma visão integral do desenvolvimento humano.",
 
@@ -262,14 +262,14 @@ dicaBanca: "Desenvolvimento integral = físico + mental + moral + social."
 pergunta: "Durante um curso de formação profissional para adolescentes, discutiam-se as garantias previstas no ECA em relação ao trabalho. Segundo o Estatuto, a profissionalização deve observar:",
 
 alternativas: [
-"O respeito à condição peculiar de pessoa em desenvolvimento e a capacitação adequada para o exercício de atividade profissional.",
-"A preparação progressiva para o mercado de trabalho mediante programas de qualificação compatíveis com a legislação vigente.",
-"A proteção das atividades educativas voltadas à formação profissional dos adolescentes em processo de escolarização.",
-"O desenvolvimento de competências técnicas destinadas à inserção produtiva dos adolescentes no mundo do trabalho.",
-"A articulação entre educação, qualificação profissional e desenvolvimento econômico prevista nas políticas públicas."
+        "A preparação progressiva para o mercado de trabalho mediante programas de qualificação compatíveis com a legislação vigente.",
+        "O respeito à condição peculiar de pessoa em desenvolvimento e a capacitação adequada para o exercício de atividade profissional.",
+        "A proteção das atividades educativas voltadas à formação profissional dos adolescentes em processo de escolarização.",
+        "O desenvolvimento de competências técnicas destinadas à inserção produtiva dos adolescentes no mundo do trabalho.",
+        "A articulação entre educação, qualificação profissional e desenvolvimento econômico prevista nas políticas públicas."
 ],
 
-correta: 0,
+correta: 1,
 
 feedbackAcerto: "Correto. A profissionalização deve respeitar a condição peculiar de pessoa em desenvolvimento.",
 
@@ -282,14 +282,14 @@ dicaBanca: "Profissionalização = proteção + desenvolvimento."
 pergunta: "Uma empresa foi denunciada por submeter adolescentes trabalhadores a atividades incompatíveis com seu desenvolvimento físico e psicológico. À luz do ECA, essa prática é incompatível com o Estatuto porque:",
 
 alternativas: [
-"O trabalho do adolescente deve ocorrer em condições que favoreçam sua formação profissional e educacional.",
-"A proteção ao trabalho do adolescente exige respeito à sua condição peculiar de pessoa em desenvolvimento.",
-"As atividades laborais destinadas aos adolescentes devem priorizar objetivos educativos e formativos.",
-"O exercício de atividade profissional pelo adolescente depende da observância das garantias previstas na legislação especial.",
-"A formação para o trabalho não pode comprometer o acesso do adolescente às oportunidades de desenvolvimento pessoal."
+        "O trabalho do adolescente deve ocorrer em condições que favoreçam sua formação profissional e educacional.",
+        "As atividades laborais destinadas aos adolescentes devem priorizar objetivos educativos e formativos.",
+        "A proteção ao trabalho do adolescente exige respeito à sua condição peculiar de pessoa em desenvolvimento.",
+        "O exercício de atividade profissional pelo adolescente depende da observância das garantias previstas na legislação especial.",
+        "A formação para o trabalho não pode comprometer o acesso do adolescente às oportunidades de desenvolvimento pessoal."
 ],
 
-correta: 1,
+correta: 2,
 
 feedbackAcerto: "Correto. O ECA protege o adolescente trabalhador justamente em razão de sua condição peculiar de desenvolvimento.",
 
@@ -301,14 +301,14 @@ dicaBanca: "Trabalho do adolescente = proteção especial."
 pergunta: "Durante uma reunião com pais e responsáveis, a equipe pedagógica discutia a finalidade do direito à educação assegurado pelo ECA. Segundo o Estatuto, a educação deve visar:",
 
 alternativas: [
-"O desenvolvimento das capacidades intelectuais necessárias à participação na vida social e produtiva.",
-"A formação acadêmica indispensável à continuidade dos estudos e à inserção profissional futura.",
-"O pleno desenvolvimento da pessoa, o preparo para o exercício da cidadania e a qualificação para o trabalho.",
-"A construção de competências necessárias ao exercício dos direitos e deveres previstos na legislação brasileira.",
-"O desenvolvimento integral das potencialidades individuais e coletivas voltadas à participação social."
+        "O pleno desenvolvimento da pessoa, o preparo para o exercício da cidadania e a qualificação para o trabalho.",
+        "O desenvolvimento das capacidades intelectuais necessárias à participação na vida social e produtiva.",
+        "A formação acadêmica indispensável à continuidade dos estudos e à inserção profissional futura.",
+        "A construção de competências necessárias ao exercício dos direitos e deveres previstos na legislação brasileira.",
+        "O desenvolvimento integral das potencialidades individuais e coletivas voltadas à participação social."
 ],
 
-correta: 2,
+correta: 0,
 
 feedbackAcerto: "Correto. O ECA reproduz a finalidade clássica da educação: pleno desenvolvimento da pessoa, cidadania e qualificação para o trabalho.",
 
@@ -321,14 +321,14 @@ dicaBanca: "Pessoa + cidadania + trabalho."
 pergunta: "Uma estudante com bom desempenho acadêmico foi impedida de participar de determinada atividade escolar em razão de sua condição socioeconômica. Ao analisar o caso, concluiu-se que a situação afrontava o ECA porque este assegura:",
 
 alternativas: [
-"O acesso aos programas suplementares oferecidos pelas instituições educacionais públicas e privadas.",
-"A igualdade de condições para acesso e permanência na escola, independentemente das características pessoais ou sociais do estudante.",
-"A proteção integral dos estudantes contra práticas discriminatórias capazes de comprometer seu desenvolvimento educacional.",
-"O direito à participação em atividades pedagógicas compatíveis com as diretrizes curriculares da instituição.",
-"A garantia de tratamento educacional adequado às necessidades individuais dos estudantes."
+        "O acesso aos programas suplementares oferecidos pelas instituições educacionais públicas e privadas.",
+        "A proteção integral dos estudantes contra práticas discriminatórias capazes de comprometer seu desenvolvimento educacional.",
+        "A igualdade de condições para acesso e permanência na escola, independentemente das características pessoais ou sociais do estudante.",
+        "O direito à participação em atividades pedagógicas compatíveis com as diretrizes curriculares da instituição.",
+        "A garantia de tratamento educacional adequado às necessidades individuais dos estudantes."
 ],
 
-correta: 1,
+correta: 2,
 
 feedbackAcerto: "Correto. O ECA assegura igualdade de condições para acesso e permanência na escola.",
 
@@ -341,14 +341,14 @@ dicaBanca: "Acesso + permanência = garantia clássica."
 pergunta: "Durante uma fiscalização educacional, verificou-se que alguns responsáveis deixavam de matricular seus filhos em instituições de ensino. Segundo o ECA, é dever dos pais ou responsáveis:",
 
 alternativas: [
-"Assegurar a frequência escolar regular das crianças e adolescentes matriculados em instituições reconhecidas.",
-"Promover o acompanhamento permanente do desempenho escolar dos filhos durante toda a Educação Básica.",
-"Efetuar a matrícula dos filhos ou pupilos na rede regular de ensino.",
-"Participar das atividades pedagógicas desenvolvidas pela instituição educacional frequentada pelos filhos.",
-"Garantir o acesso das crianças aos programas educacionais oferecidos pelos sistemas de ensino."
+        "Assegurar a frequência escolar regular das crianças e adolescentes matriculados em instituições reconhecidas.",
+        "Promover o acompanhamento permanente do desempenho escolar dos filhos durante toda a Educação Básica.",
+        "Participar das atividades pedagógicas desenvolvidas pela instituição educacional frequentada pelos filhos.",
+        "Garantir o acesso das crianças aos programas educacionais oferecidos pelos sistemas de ensino.",
+        "Efetuar a matrícula dos filhos ou pupilos na rede regular de ensino."
 ],
 
-correta: 2,
+correta: 4,
 
 feedbackAcerto: "Correto. O ECA estabelece expressamente o dever de matricular os filhos ou pupilos na rede regular de ensino.",
 
@@ -381,14 +381,14 @@ dicaBanca: "Pais participam; não substituem a gestão."
 pergunta: "Uma escola identificou faltas reiteradas e injustificadas de determinado estudante. Após diversas tentativas de intervenção e contato com a família, a situação permaneceu inalterada. Segundo o ECA, nessa hipótese os dirigentes do estabelecimento de ensino devem:",
 
 alternativas: [
-"Encaminhar imediatamente o caso ao Ministério Público para adoção das providências cabíveis.",
-"Aplicar medidas disciplinares compatíveis com o regimento escolar antes de qualquer comunicação externa.",
-"Comunicar o fato ao Conselho Tutelar, após esgotados os recursos escolares disponíveis.",
-"Solicitar acompanhamento obrigatório dos responsáveis perante a equipe pedagógica da instituição.",
-"Informar o sistema de ensino responsável para abertura de procedimento administrativo específico."
+        "Encaminhar imediatamente o caso ao Ministério Público para adoção das providências cabíveis.",
+        "Comunicar o fato ao Conselho Tutelar, após esgotados os recursos escolares disponíveis.",
+        "Aplicar medidas disciplinares compatíveis com o regimento escolar antes de qualquer comunicação externa.",
+        "Solicitar acompanhamento obrigatório dos responsáveis perante a equipe pedagógica da instituição.",
+        "Informar o sistema de ensino responsável para abertura de procedimento administrativo específico."
 ],
 
-correta: 2,
+correta: 1,
 
 feedbackAcerto: "Correto. O ECA determina a comunicação ao Conselho Tutelar quando houver faltas injustificadas ou evasão escolar após esgotados os recursos da escola.",
 
@@ -400,14 +400,14 @@ dicaBanca: "Primeiro a escola atua; depois comunica ao Conselho Tutelar."
 pergunta: "Durante o acompanhamento de uma criança em situação de vulnerabilidade, a equipe técnica discutia a prioridade da convivência familiar prevista no ECA. Segundo o Estatuto, entende-se por família natural:",
 
 alternativas: [
-"A comunidade formada por parentes próximos com os quais a criança mantém vínculos afetivos permanentes e convivência habitual.",
-"A estrutura familiar constituída pelos pais biológicos e demais parentes que compartilham responsabilidades de cuidado e proteção.",
-"A comunidade formada pelos pais ou qualquer deles e seus descendentes, independentemente da configuração familiar existente.",
-"O núcleo familiar responsável pelo exercício do poder familiar e pela garantia dos direitos fundamentais da criança.",
-"A unidade familiar composta pelos responsáveis legais e pelas pessoas que exerçam funções permanentes de cuidado."
+        "A comunidade formada por parentes próximos com os quais a criança mantém vínculos afetivos permanentes e convivência habitual.",
+        "A comunidade formada pelos pais ou qualquer deles e seus descendentes, independentemente da configuração familiar existente.",
+        "A estrutura familiar constituída pelos pais biológicos e demais parentes que compartilham responsabilidades de cuidado e proteção.",
+        "O núcleo familiar responsável pelo exercício do poder familiar e pela garantia dos direitos fundamentais da criança.",
+        "A unidade familiar composta pelos responsáveis legais e pelas pessoas que exerçam funções permanentes de cuidado."
 ],
 
-correta: 2,
+correta: 1,
 
 feedbackAcerto: "Correto. O ECA define família natural como a comunidade formada pelos pais ou qualquer deles e seus descendentes.",
 
@@ -420,14 +420,14 @@ dicaBanca: "Família natural = pais (ou um deles) + descendentes."
 pergunta: "Em determinado processo de proteção, verificou-se que a criança mantinha fortes vínculos com avós e tios que participavam ativamente de sua criação. Segundo o ECA, esses familiares podem integrar a chamada:",
 
 alternativas: [
-"Família substituta, desde que assumam formalmente as responsabilidades parentais previstas em lei.",
-"Família ampliada ou extensa, formada por parentes próximos com os quais a criança convive e mantém vínculos de afinidade e afetividade.",
-"Comunidade familiar complementar, constituída por pessoas que participam da rede de apoio da criança.",
-"Família socioafetiva, caracterizada pela convivência contínua e pela existência de laços de cuidado e proteção.",
-"Estrutura familiar subsidiária, organizada para atender às necessidades específicas de desenvolvimento da criança."
+        "Família substituta, desde que assumam formalmente as responsabilidades parentais previstas em lei.",
+        "Comunidade familiar complementar, constituída por pessoas que participam da rede de apoio da criança.",
+        "Família socioafetiva, caracterizada pela convivência contínua e pela existência de laços de cuidado e proteção.",
+        "Estrutura familiar subsidiária, organizada para atender às necessidades específicas de desenvolvimento da criança.",
+        "Família ampliada ou extensa, formada por parentes próximos com os quais a criança convive e mantém vínculos de afinidade e afetividade."
 ],
 
-correta: 1,
+correta: 4,
 
 feedbackAcerto: "Correto. O ECA define família extensa ou ampliada como aquela formada por parentes próximos com vínculos de convivência e afetividade.",
 
@@ -440,14 +440,14 @@ dicaBanca: "Família extensa = parentes próximos + afetividade."
 pergunta: "Durante um processo judicial, discutia-se a aplicação da medida de guarda em favor de uma criança que já vivia há longo período com parentes próximos. Segundo o ECA, a guarda tem por finalidade principal:",
 
 alternativas: [
-"Transferir definitivamente a condição de filho à criança, assegurando igualdade de direitos perante os demais descendentes.",
-"Regularizar a posse de fato e assegurar à criança assistência material, moral e educacional.",
-"Substituir integralmente o poder familiar, atribuindo ao guardião todas as prerrogativas parentais previstas em lei.",
-"Permitir a colocação da criança em família substituta com efeitos equivalentes aos produzidos pela adoção.",
-"Estabelecer vínculo jurídico permanente destinado à proteção integral da criança em situação de vulnerabilidade."
+        "Regularizar a posse de fato e assegurar à criança assistência material, moral e educacional.",
+        "Transferir definitivamente a condição de filho à criança, assegurando igualdade de direitos perante os demais descendentes.",
+        "Substituir integralmente o poder familiar, atribuindo ao guardião todas as prerrogativas parentais previstas em lei.",
+        "Permitir a colocação da criança em família substituta com efeitos equivalentes aos produzidos pela adoção.",
+        "Estabelecer vínculo jurídico permanente destinado à proteção integral da criança em situação de vulnerabilidade."
 ],
 
-correta: 1,
+correta: 0,
 
 feedbackAcerto: "Correto. A guarda regulariza a posse de fato e assegura assistência material, moral e educacional.",
 
@@ -460,14 +460,14 @@ dicaBanca: "Guarda = posse de fato + assistência."
 pergunta: "Ao analisar as modalidades de colocação em família substituta, uma equipe técnica discutia as características da tutela. Segundo o ECA, a tutela será deferida:",
 
 alternativas: [
-"Quando houver necessidade de regularizar situação de convivência familiar sem alteração do poder familiar.",
-"Nas hipóteses em que a criança possua vínculos afetivos consolidados com parentes próximos da família extensa.",
-"À pessoa ou família responsável por acolher a criança até que seja possível o retorno ao convívio da família natural.",
-"A pessoa maior de idade que assuma a responsabilidade legal pela criança ou adolescente nos casos previstos em lei.",
-"Em situações de afastamento temporário da criança do convívio familiar determinadas pela autoridade competente."
+        "Quando houver necessidade de regularizar situação de convivência familiar sem alteração do poder familiar.",
+        "Nas hipóteses em que a criança possua vínculos afetivos consolidados com parentes próximos da família extensa.",
+        "A pessoa maior de idade que assuma a responsabilidade legal pela criança ou adolescente nos casos previstos em lei.",
+        "À pessoa ou família responsável por acolher a criança até que seja possível o retorno ao convívio da família natural.",
+        "Em situações de afastamento temporário da criança do convívio familiar determinadas pela autoridade competente."
 ],
 
-correta: 3,
+correta: 2,
 
 feedbackAcerto: "Correto. A tutela atribui responsabilidades legais à pessoa encarregada da proteção da criança ou adolescente nos casos previstos pelo ECA.",
 
@@ -480,14 +480,14 @@ dicaBanca: "Tutela = representação legal da criança."
 pergunta: "Durante uma audiência sobre adoção, o magistrado destacou que essa medida produz efeitos jurídicos específicos em relação ao adotado. Segundo o ECA, a adoção:",
 
 alternativas: [
-"Confere ao adotado condição semelhante à de filho biológico, preservando limitações sucessórias previstas em lei.",
-"Estabelece vínculo jurídico de filiação com direitos equivalentes aos dos filhos biológicos, inclusive sucessórios.",
-"Produz efeitos de guarda permanente, assegurando proteção integral até a maioridade civil do adotado.",
-"Regulariza a situação familiar da criança, mantendo os vínculos jurídicos essenciais com a família de origem.",
-"Constitui modalidade de acolhimento familiar destinada à integração progressiva da criança em novo núcleo familiar."
+        "Confere ao adotado condição semelhante à de filho biológico, preservando limitações sucessórias previstas em lei.",
+        "Produz efeitos de guarda permanente, assegurando proteção integral até a maioridade civil do adotado.",
+        "Regulariza a situação familiar da criança, mantendo os vínculos jurídicos essenciais com a família de origem.",
+        "Estabelece vínculo jurídico de filiação com direitos equivalentes aos dos filhos biológicos, inclusive sucessórios.",
+        "Constitui modalidade de acolhimento familiar destinada à integração progressiva da criança em novo núcleo familiar."
 ],
 
-correta: 1,
+correta: 3,
 
 feedbackAcerto: "Correto. A adoção atribui a condição de filho ao adotado, com os mesmos direitos e deveres, inclusive sucessórios.",
 
@@ -539,14 +539,14 @@ dicaBanca: "Conselho Tutelar = 5 membros."
 pergunta: "Durante o processo de escolha dos membros do Conselho Tutelar, um candidato alegou preencher todos os requisitos legais. Segundo o ECA, entre os requisitos para a candidatura encontra-se:",
 
 alternativas: [
-"Possuir experiência comprovada em atividades de proteção à infância e juventude por período mínimo definido em lei federal.",
-"Ter reconhecida idoneidade moral, idade superior a vinte e um anos e residência no município.",
-"Possuir formação superior em área relacionada às políticas públicas voltadas à infância e adolescência.",
-"Comprovar atuação prévia em programas sociais destinados à proteção dos direitos infantojuvenis.",
-"Ser servidor público efetivo vinculado a órgãos da rede de atendimento à criança e ao adolescente."
+        "Possuir experiência comprovada em atividades de proteção à infância e juventude por período mínimo definido em lei federal.",
+        "Possuir formação superior em área relacionada às políticas públicas voltadas à infância e adolescência.",
+        "Comprovar atuação prévia em programas sociais destinados à proteção dos direitos infantojuvenis.",
+        "Ter reconhecida idoneidade moral, idade superior a vinte e um anos e residência no município.",
+        "Ser servidor público efetivo vinculado a órgãos da rede de atendimento à criança e ao adolescente."
 ],
 
-correta: 1,
+correta: 3,
 
 feedbackAcerto: "Correto. O ECA exige idoneidade moral, idade superior a 21 anos e residência no município.",
 
@@ -579,14 +579,14 @@ dicaBanca: "Conselho Tutelar protege e encaminha."
 pergunta: "Durante uma reunião da rede de proteção, discutia-se uma situação em que o Conselho Tutelar pretendia decidir sobre a destituição do poder familiar de determinada criança. À luz do ECA, essa atuação seria inadequada porque:",
 
 alternativas: [
-"A destituição do poder familiar depende de parecer técnico emitido pelos órgãos responsáveis pela assistência social.",
-"Medidas que impliquem alteração definitiva dos vínculos familiares exigem procedimento judicial conduzido pela autoridade competente.",
-"O Conselho Tutelar possui competência apenas para recomendar providências relacionadas ao fortalecimento dos vínculos familiares.",
-"A destituição do poder familiar somente pode ocorrer mediante solicitação formulada pelo Ministério Público.",
-"Os Conselhos Tutelares atuam exclusivamente em situações de ameaça ou violação de direitos sem interferência nas relações familiares."
+        "A destituição do poder familiar depende de parecer técnico emitido pelos órgãos responsáveis pela assistência social.",
+        "O Conselho Tutelar possui competência apenas para recomendar providências relacionadas ao fortalecimento dos vínculos familiares.",
+        "A destituição do poder familiar somente pode ocorrer mediante solicitação formulada pelo Ministério Público.",
+        "Os Conselhos Tutelares atuam exclusivamente em situações de ameaça ou violação de direitos sem interferência nas relações familiares.",
+        "Medidas que impliquem alteração definitiva dos vínculos familiares exigem procedimento judicial conduzido pela autoridade competente."
 ],
 
-correta: 1,
+correta: 4,
 
 feedbackAcerto: "Correto. A destituição do poder familiar é matéria judicial e não pode ser decidida pelo Conselho Tutelar.",
 
@@ -598,14 +598,14 @@ dicaBanca: "Se envolve 'julgar' ou 'destituir', normalmente é competência do J
 pergunta: "Durante o atendimento de uma criança em situação de negligência familiar, a equipe da rede de proteção discutia a aplicação de medidas protetivas. Segundo o ECA, as medidas de proteção serão aplicáveis quando os direitos da criança ou do adolescente forem ameaçados ou violados:",
 
 alternativas: [
-"Por ação ou omissão da sociedade, do Estado, dos pais ou responsável, bem como em razão da própria conduta da criança ou do adolescente.",
-"Por ação dos responsáveis legais ou por falhas dos serviços públicos responsáveis pela garantia dos direitos fundamentais.",
-"Por situações de vulnerabilidade social que comprometam o desenvolvimento físico, psicológico ou educacional da criança.",
-"Por omissão dos órgãos de proteção ou por condutas familiares incompatíveis com o exercício do poder familiar.",
-"Por circunstâncias que impeçam o acesso regular da criança aos direitos assegurados pela legislação especial."
+        "Por ação dos responsáveis legais ou por falhas dos serviços públicos responsáveis pela garantia dos direitos fundamentais.",
+        "Por ação ou omissão da sociedade, do Estado, dos pais ou responsável, bem como em razão da própria conduta da criança ou do adolescente.",
+        "Por situações de vulnerabilidade social que comprometam o desenvolvimento físico, psicológico ou educacional da criança.",
+        "Por omissão dos órgãos de proteção ou por condutas familiares incompatíveis com o exercício do poder familiar.",
+        "Por circunstâncias que impeçam o acesso regular da criança aos direitos assegurados pela legislação especial."
 ],
 
-correta: 0,
+correta: 1,
 
 feedbackAcerto: "Correto. O art. 98 prevê as três hipóteses clássicas: ação ou omissão da sociedade/Estado, dos pais/responsáveis ou da própria conduta da criança/adolescente.",
 
@@ -638,14 +638,14 @@ dicaBanca: "Primeiro fortalecer a família; afastamento é exceção."
 pergunta: "Durante o acompanhamento de uma família em situação de vulnerabilidade, a equipe interdisciplinar concluiu que os responsáveis necessitavam de apoio contínuo para garantir adequadamente os direitos da criança. Segundo o ECA, uma medida protetiva compatível seria:",
 
 alternativas: [
-"A inclusão da criança em programa de acolhimento institucional até que os responsáveis demonstrem capacidade de cuidado.",
-"O encaminhamento dos pais ou responsável a programas oficiais ou comunitários de proteção, apoio e promoção da família.",
-"A suspensão temporária da guarda até o cumprimento das orientações estabelecidas pela autoridade competente.",
-"A substituição da responsabilidade familiar por acompanhamento permanente dos órgãos de assistência social.",
-"A colocação da criança sob tutela provisória de parentes próximos até a superação das dificuldades identificadas."
+        "O encaminhamento dos pais ou responsável a programas oficiais ou comunitários de proteção, apoio e promoção da família.",
+        "A inclusão da criança em programa de acolhimento institucional até que os responsáveis demonstrem capacidade de cuidado.",
+        "A suspensão temporária da guarda até o cumprimento das orientações estabelecidas pela autoridade competente.",
+        "A substituição da responsabilidade familiar por acompanhamento permanente dos órgãos de assistência social.",
+        "A colocação da criança sob tutela provisória de parentes próximos até a superação das dificuldades identificadas."
 ],
 
-correta: 1,
+correta: 0,
 
 feedbackAcerto: "Correto. O ECA prevê o encaminhamento dos pais a programas de apoio, orientação e promoção da família.",
 
@@ -658,14 +658,14 @@ dicaBanca: "Medida protetiva também pode ser dirigida aos pais."
 pergunta: "Uma criança em idade escolar obrigatória encontrava-se fora da escola há vários meses. Após intervenção dos órgãos competentes, verificou-se a necessidade de garantir imediatamente seu acesso à educação. Segundo o ECA, uma medida protetiva cabível seria:",
 
 alternativas: [
-"A aplicação de advertência formal aos responsáveis pela omissão educacional identificada.",
-"O encaminhamento da criança a programa de acompanhamento pedagógico especializado.",
-"A matrícula e frequência obrigatórias em estabelecimento oficial de ensino fundamental.",
-"A transferência da responsabilidade educacional para instituição integrante da rede de proteção social.",
-"A inclusão da criança em serviço educacional complementar mantido pelo sistema de ensino."
+        "A aplicação de advertência formal aos responsáveis pela omissão educacional identificada.",
+        "O encaminhamento da criança a programa de acompanhamento pedagógico especializado.",
+        "A transferência da responsabilidade educacional para instituição integrante da rede de proteção social.",
+        "A matrícula e frequência obrigatórias em estabelecimento oficial de ensino fundamental.",
+        "A inclusão da criança em serviço educacional complementar mantido pelo sistema de ensino."
 ],
 
-correta: 2,
+correta: 3,
 
 feedbackAcerto: "Correto. A matrícula e frequência obrigatórias em estabelecimento oficial de ensino fundamental constituem medida protetiva prevista no art. 101.",
 
@@ -678,14 +678,14 @@ dicaBanca: "Fora da escola = matrícula e frequência obrigatórias."
 pergunta: "Durante o atendimento de uma criança em situação de vulnerabilidade social, a equipe técnica concluiu que seria necessária a participação em programas públicos destinados ao fortalecimento dos vínculos familiares e comunitários. Essa medida encontra fundamento no ECA porque é possível determinar:",
 
 alternativas: [
-"A inclusão em programa oficial ou comunitário de auxílio, orientação e tratamento à criança, ao adolescente e à família.",
-"O acompanhamento obrigatório por equipe multidisciplinar vinculada ao sistema de justiça da infância e juventude.",
-"A inserção da criança em instituição especializada para monitoramento permanente de sua situação social.",
-"O acolhimento provisório em entidade de proteção até a estabilização das condições familiares identificadas.",
-"A transferência da criança para serviço de atendimento específico mantido pelos órgãos de assistência social."
+        "O acompanhamento obrigatório por equipe multidisciplinar vinculada ao sistema de justiça da infância e juventude.",
+        "A inserção da criança em instituição especializada para monitoramento permanente de sua situação social.",
+        "O acolhimento provisório em entidade de proteção até a estabilização das condições familiares identificadas.",
+        "A transferência da criança para serviço de atendimento específico mantido pelos órgãos de assistência social.",
+        "A inclusão em programa oficial ou comunitário de auxílio, orientação e tratamento à criança, ao adolescente e à família."
 ],
 
-correta: 0,
+correta: 4,
 
 feedbackAcerto: "Correto. A inclusão em programas oficiais ou comunitários é medida protetiva expressamente prevista no ECA.",
 
@@ -697,14 +697,14 @@ dicaBanca: "Art. 101 valoriza programas de apoio e fortalecimento familiar."
 pergunta: "Durante uma conferência municipal sobre direitos da criança e do adolescente, discutia-se a finalidade da política de atendimento prevista no ECA. Segundo o Estatuto, essa política corresponde:",
 
 alternativas: [
-"Ao conjunto articulado de ações governamentais e não governamentais destinadas à garantia dos direitos da criança e do adolescente.",
-"À estrutura administrativa responsável pela execução dos programas de proteção social voltados à infância e juventude.",
-"Aos serviços públicos especializados destinados ao atendimento de crianças e adolescentes em situação de risco social.",
-"À organização dos órgãos de proteção responsáveis pela fiscalização dos direitos infantojuvenis em âmbito nacional.",
-"Ao sistema de medidas preventivas destinado à redução das situações de vulnerabilidade que afetam crianças e adolescentes."
+        "À estrutura administrativa responsável pela execução dos programas de proteção social voltados à infância e juventude.",
+        "Ao conjunto articulado de ações governamentais e não governamentais destinadas à garantia dos direitos da criança e do adolescente.",
+        "Aos serviços públicos especializados destinados ao atendimento de crianças e adolescentes em situação de risco social.",
+        "À organização dos órgãos de proteção responsáveis pela fiscalização dos direitos infantojuvenis em âmbito nacional.",
+        "Ao sistema de medidas preventivas destinado à redução das situações de vulnerabilidade que afetam crianças e adolescentes."
 ],
 
-correta: 0,
+correta: 1,
 
 feedbackAcerto: "Correto. O ECA define a política de atendimento como um conjunto articulado de ações governamentais e não governamentais.",
 
@@ -737,14 +737,14 @@ dicaBanca: "Conselho de Direitos = formula e controla políticas."
 pergunta: "Durante a elaboração do plano municipal para a infância, discutia-se a composição do Conselho Municipal dos Direitos da Criança e do Adolescente. Segundo o ECA, esses conselhos devem observar:",
 
 alternativas: [
-"A participação exclusiva de representantes dos órgãos públicos responsáveis pelas políticas sociais.",
-"B) A composição formada por representantes governamentais e da sociedade civil, em conformidade com a legislação específica.",
-"C) A predominância de representantes da sociedade civil para garantir autonomia decisória nas deliberações.",
-"D) A participação obrigatória de membros do Conselho Tutelar e do Ministério Público em caráter permanente.",
-"E) A indicação de representantes técnicos especializados em infância e juventude pelos respectivos sistemas de ensino."
+        "A participação exclusiva de representantes dos órgãos públicos responsáveis pelas políticas sociais.",
+        "C) A predominância de representantes da sociedade civil para garantir autonomia decisória nas deliberações.",
+        "D) A participação obrigatória de membros do Conselho Tutelar e do Ministério Público em caráter permanente.",
+        "B) A composição formada por representantes governamentais e da sociedade civil, em conformidade com a legislação específica.",
+        "E) A indicação de representantes técnicos especializados em infância e juventude pelos respectivos sistemas de ensino."
 ],
 
-correta: 1,
+correta: 3,
 
 feedbackAcerto: "Correto. Os Conselhos dos Direitos possuem composição paritária entre governo e sociedade civil.",
 
@@ -757,14 +757,14 @@ dicaBanca: "Conselho de Direitos = governo + sociedade civil."
 pergunta: "Durante uma prestação de contas, um gestor explicou a utilização de recursos destinados a programas de proteção à infância e adolescência. Esses recursos estavam vinculados ao Fundo dos Direitos da Criança e do Adolescente. A finalidade desse fundo é:",
 
 alternativas: [
-"Financiar exclusivamente os serviços executados pelos Conselhos Tutelares no atendimento às situações de violação de direitos.",
-"B) Garantir recursos destinados à implementação de programas, projetos e ações voltados à promoção e proteção dos direitos da criança e do adolescente.",
-"C) Custear as despesas administrativas dos órgãos responsáveis pela formulação das políticas públicas de atendimento.",
-"D) Assegurar a manutenção financeira das instituições de acolhimento responsáveis pelo atendimento infantojuvenil.",
-"E) Financiar prioritariamente programas de assistência social direcionados às famílias em situação de vulnerabilidade."
+        "B) Garantir recursos destinados à implementação de programas, projetos e ações voltados à promoção e proteção dos direitos da criança e do adolescente.",
+        "Financiar exclusivamente os serviços executados pelos Conselhos Tutelares no atendimento às situações de violação de direitos.",
+        "C) Custear as despesas administrativas dos órgãos responsáveis pela formulação das políticas públicas de atendimento.",
+        "D) Assegurar a manutenção financeira das instituições de acolhimento responsáveis pelo atendimento infantojuvenil.",
+        "E) Financiar prioritariamente programas de assistência social direcionados às famílias em situação de vulnerabilidade."
 ],
 
-correta: 1,
+correta: 0,
 
 feedbackAcerto: "Correto. O Fundo financia programas, projetos e ações voltados à promoção e proteção dos direitos infantojuvenis.",
 
@@ -777,14 +777,14 @@ dicaBanca: "Fundo = financiamento de políticas e projetos."
 pergunta: "Durante uma capacitação sobre o Sistema de Garantia de Direitos, um participante afirmou que a efetivação dos direitos da criança e do adolescente depende da atuação integrada de diferentes órgãos e instituições. Essa afirmação está alinhada ao ECA porque:",
 
 alternativas: [
-"A proteção integral exige articulação permanente entre políticas públicas, órgãos de proteção e participação social.",
-"B) O atendimento às crianças e adolescentes deve ocorrer prioritariamente por meio de programas governamentais especializados.",
-"C) A garantia dos direitos fundamentais depende da coordenação exercida pelos Conselhos Tutelares sobre a rede de atendimento.",
-"D) A execução das políticas de proteção é responsabilidade exclusiva dos órgãos públicos instituídos para essa finalidade.",
-"E) A atuação dos Conselhos dos Direitos substitui a necessidade de integração entre os demais órgãos da rede de proteção."
+        "B) O atendimento às crianças e adolescentes deve ocorrer prioritariamente por meio de programas governamentais especializados.",
+        "C) A garantia dos direitos fundamentais depende da coordenação exercida pelos Conselhos Tutelares sobre a rede de atendimento.",
+        "D) A execução das políticas de proteção é responsabilidade exclusiva dos órgãos públicos instituídos para essa finalidade.",
+        "E) A atuação dos Conselhos dos Direitos substitui a necessidade de integração entre os demais órgãos da rede de proteção.",
+        "A proteção integral exige articulação permanente entre políticas públicas, órgãos de proteção e participação social."
 ],
 
-correta: 0,
+correta: 4,
 
 feedbackAcerto: "Correto. A efetivação dos direitos exige articulação entre diferentes políticas, órgãos e instituições.",
 
@@ -796,14 +796,14 @@ dicaBanca: "Garantia de direitos = atuação integrada."
 pergunta: "Durante o atendimento de um adolescente, discutia-se a caracterização jurídica de determinada conduta praticada por ele. Segundo o ECA, considera-se ato infracional:",
 
 alternativas: [
-"A conduta praticada por criança ou adolescente que represente descumprimento das normas de convivência social estabelecidas pela comunidade.",
-"B) O comportamento incompatível com os deveres inerentes à condição de estudante regularmente matriculado em instituição de ensino.",
-"C) A conduta descrita como crime ou contravenção penal quando praticada por criança ou adolescente.",
-"D) Qualquer ação ou omissão capaz de colocar em risco o desenvolvimento físico, psicológico ou social do adolescente.",
-"E) O comportamento ilícito praticado exclusivamente por adolescentes sujeitos à aplicação de medidas socioeducativas."
+        "A conduta praticada por criança ou adolescente que represente descumprimento das normas de convivência social estabelecidas pela comunidade.",
+        "B) O comportamento incompatível com os deveres inerentes à condição de estudante regularmente matriculado em instituição de ensino.",
+        "D) Qualquer ação ou omissão capaz de colocar em risco o desenvolvimento físico, psicológico ou social do adolescente.",
+        "E) O comportamento ilícito praticado exclusivamente por adolescentes sujeitos à aplicação de medidas socioeducativas.",
+        "C) A conduta descrita como crime ou contravenção penal quando praticada por criança ou adolescente."
 ],
 
-correta: 2,
+correta: 4,
 
 feedbackAcerto: "Correto. O ECA define ato infracional como a conduta descrita como crime ou contravenção penal.",
 
@@ -816,14 +816,14 @@ dicaBanca: "Ato infracional = crime ou contravenção."
 pergunta: "Durante uma audiência, um adolescente acusado da prática de ato infracional alegou não possuir os mesmos direitos processuais assegurados aos adultos. À luz do ECA, essa afirmação está incorreta porque o adolescente possui:",
 
 alternativas: [
-"Acesso restrito às garantias processuais em razão da natureza especial do procedimento socioeducativo.",
-"B) Garantias processuais específicas que substituem os direitos assegurados pela Constituição Federal.",
-"C) Direitos processuais limitados às hipóteses previstas expressamente na legislação da infância e juventude.",
-"D) Garantias processuais asseguradas pela legislação especial e pelos princípios constitucionais aplicáveis.",
-"E) Proteção jurídica condicionada à gravidade do ato infracional praticado."
+        "Acesso restrito às garantias processuais em razão da natureza especial do procedimento socioeducativo.",
+        "B) Garantias processuais específicas que substituem os direitos assegurados pela Constituição Federal.",
+        "D) Garantias processuais asseguradas pela legislação especial e pelos princípios constitucionais aplicáveis.",
+        "C) Direitos processuais limitados às hipóteses previstas expressamente na legislação da infância e juventude.",
+        "E) Proteção jurídica condicionada à gravidade do ato infracional praticado."
 ],
 
-correta: 3,
+correta: 2,
 
 feedbackAcerto: "Correto. O adolescente possui garantias processuais previstas no ECA e na Constituição Federal.",
 
@@ -836,14 +836,14 @@ dicaBanca: "Adolescente infrator continua sendo sujeito de direitos."
 pergunta: "Durante a apuração de um ato infracional, discutia-se a necessidade de assegurar tratamento compatível com a condição peculiar do adolescente. Segundo o ECA, essa proteção decorre do princípio de que o adolescente:",
 
 alternativas: [
-"Ainda não concluiu seu processo de formação educacional e profissional.",
-"B) Encontra-se em condição peculiar de pessoa em desenvolvimento.",
-"C) Possui responsabilidade reduzida em relação às consequências de seus atos.",
-"D) Deve receber tratamento prioritário por parte dos órgãos do sistema de justiça.",
-"E) Está sujeito a regime jurídico diferenciado em razão de sua dependência familiar."
+        "Ainda não concluiu seu processo de formação educacional e profissional.",
+        "C) Possui responsabilidade reduzida em relação às consequências de seus atos.",
+        "D) Deve receber tratamento prioritário por parte dos órgãos do sistema de justiça.",
+        "B) Encontra-se em condição peculiar de pessoa em desenvolvimento.",
+        "E) Está sujeito a regime jurídico diferenciado em razão de sua dependência familiar."
 ],
 
-correta: 1,
+correta: 3,
 
 feedbackAcerto: "Correto. A condição peculiar de pessoa em desenvolvimento é um dos fundamentos do ECA.",
 
@@ -856,14 +856,14 @@ dicaBanca: "Pessoa em desenvolvimento = princípio central do ECA."
 pergunta: "Durante um procedimento envolvendo ato infracional de menor potencial ofensivo, o Ministério Público avaliou a possibilidade de evitar a continuidade do processo mediante solução prevista no ECA. Essa medida é denominada:",
 
 alternativas: [
-"Acolhimento institucional.",
-"B) Advertência.",
-"C) Remissão.",
-"D) Liberdade assistida.",
-"E) Semiliberdade."
+        "Acolhimento institucional.",
+        "C) Remissão.",
+        "B) Advertência.",
+        "D) Liberdade assistida.",
+        "E) Semiliberdade."
 ],
 
-correta: 2,
+correta: 1,
 
 feedbackAcerto: "Correto. A remissão é forma de exclusão, suspensão ou extinção do processo, conforme previsto no ECA.",
 
@@ -876,14 +876,14 @@ dicaBanca: "Remissão = evita ou encerra o processo."
 pergunta: "Durante um curso de capacitação, um participante afirmou que a prática de ato infracional por criança e por adolescente gera exatamente as mesmas consequências jurídicas. À luz do ECA, essa afirmação está incorreta porque:",
 
 alternativas: [
-"Apenas adolescentes podem praticar atos infracionais reconhecidos pelo sistema de justiça juvenil.",
-"B) Crianças estão sujeitas a medidas de proteção, enquanto adolescentes podem receber medidas socioeducativas.",
-"C) Crianças recebem medidas socioeducativas simplificadas e adolescentes recebem medidas socioeducativas completas.",
-"D) A responsabilização da criança depende exclusivamente da atuação do Conselho Tutelar.",
-"E) Adolescentes somente podem ser responsabilizados quando houver reincidência infracional."
+        "B) Crianças estão sujeitas a medidas de proteção, enquanto adolescentes podem receber medidas socioeducativas.",
+        "Apenas adolescentes podem praticar atos infracionais reconhecidos pelo sistema de justiça juvenil.",
+        "C) Crianças recebem medidas socioeducativas simplificadas e adolescentes recebem medidas socioeducativas completas.",
+        "D) A responsabilização da criança depende exclusivamente da atuação do Conselho Tutelar.",
+        "E) Adolescentes somente podem ser responsabilizados quando houver reincidência infracional."
 ],
 
-correta: 1,
+correta: 0,
 
 feedbackAcerto: "Correto. Crianças recebem medidas de proteção; adolescentes podem receber medidas socioeducativas.",
 
@@ -895,14 +895,14 @@ dicaBanca: "Criança = proteção; adolescente = socioeducativa."
 pergunta: "Durante a apuração de um ato infracional de reduzida gravidade, verificou-se que o adolescente compreendia a inadequação de sua conduta e não possuía histórico de reincidência. Nessa situação, a medida socioeducativa mais branda prevista no ECA é:",
 
 alternativas: [
-"A obrigação de reparar o dano causado à vítima, sempre que possível.",
-"B) A advertência, consistente em admoestação verbal reduzida a termo.",
-"C) A liberdade assistida acompanhada por orientador designado pela autoridade competente.",
-"D) A prestação de serviços à comunidade em programas de interesse social.",
-"E) O regime de semiliberdade aplicado por prazo determinado."
+        "A obrigação de reparar o dano causado à vítima, sempre que possível.",
+        "C) A liberdade assistida acompanhada por orientador designado pela autoridade competente.",
+        "B) A advertência, consistente em admoestação verbal reduzida a termo.",
+        "D) A prestação de serviços à comunidade em programas de interesse social.",
+        "E) O regime de semiliberdade aplicado por prazo determinado."
 ],
 
-correta: 1,
+correta: 2,
 
 feedbackAcerto: "Correto. A advertência é a medida socioeducativa mais branda prevista no ECA.",
 
@@ -915,14 +915,14 @@ dicaBanca: "Advertência = medida socioeducativa mais leve."
 pergunta: "Um adolescente praticou ato infracional que resultou em prejuízo patrimonial à vítima. Durante a audiência, discutia-se a possibilidade de responsabilização compatível com os danos causados. Segundo o ECA, é cabível:",
 
 alternativas: [
-"A prestação de serviços à comunidade como forma prioritária de compensação dos prejuízos sofridos pela vítima.",
-"B) A liberdade assistida até que o adolescente demonstre compreensão das consequências de sua conduta.",
-"C) A obrigação de reparar o dano, sempre que houver possibilidade de compensação do prejuízo causado.",
-"D) A aplicação de medida protetiva destinada à orientação e acompanhamento do adolescente e de sua família.",
-"E) A internação em estabelecimento educacional quando houver prejuízo econômico relevante."
+        "A prestação de serviços à comunidade como forma prioritária de compensação dos prejuízos sofridos pela vítima.",
+        "B) A liberdade assistida até que o adolescente demonstre compreensão das consequências de sua conduta.",
+        "D) A aplicação de medida protetiva destinada à orientação e acompanhamento do adolescente e de sua família.",
+        "E) A internação em estabelecimento educacional quando houver prejuízo econômico relevante.",
+        "C) A obrigação de reparar o dano, sempre que houver possibilidade de compensação do prejuízo causado."
 ],
 
-correta: 2,
+correta: 4,
 
 feedbackAcerto: "Correto. A obrigação de reparar o dano é medida socioeducativa expressamente prevista no ECA.",
 
@@ -975,21 +975,18 @@ dicaBanca: "Liberdade assistida = acompanhamento por orientador."
 pergunta: "Durante um processo socioeducativo, discutia-se a aplicação da internação a um adolescente autor de ato infracional. Segundo o ECA, a internação deve ser compreendida como:",
 
 alternativas: [
-"A medida socioeducativa aplicável sempre que o ato infracional envolver violência ou grave ameaça, independentemente das circunstâncias do caso.",
-"B) O principal instrumento de responsabilização do adolescente autor de ato infracional, utilizado para assegurar a ordem pública.",
-"C) Medida privativa de liberdade sujeita aos princípios da brevidade, excepcionalidade e respeito à condição peculiar de pessoa em desenvolvimento.",
-"D) Sanção destinada aos adolescentes reincidentes em atos infracionais, com duração previamente estabelecida pela legislação.",
-"E) Medida obrigatória para adolescentes autores de atos infracionais equiparados a crimes considerados graves."
+        "C) Medida privativa de liberdade sujeita aos princípios da brevidade, excepcionalidade e respeito à condição peculiar de pessoa em desenvolvimento.",
+        "A medida socioeducativa aplicável sempre que o ato infracional envolver violência ou grave ameaça, independentemente das circunstâncias do caso.",
+        "B) O principal instrumento de responsabilização do adolescente autor de ato infracional, utilizado para assegurar a ordem pública.",
+        "D) Sanção destinada aos adolescentes reincidentes em atos infracionais, com duração previamente estabelecida pela legislação.",
+        "E) Medida obrigatória para adolescentes autores de atos infracionais equiparados a crimes considerados graves."
 ],
 
-correta: 2,
+correta: 0,
 
 feedbackAcerto: "Correto. A internação é medida excepcional, breve e aplicada com respeito à condição peculiar de pessoa em desenvolvimento.",
 
 feedbackErro: "A internação não é automática nem obrigatória; sua aplicação depende dos requisitos legais.",
 
 dicaBanca: "Internação = brevidade + excepcionalidade."
-}
-
-
-];
+}];

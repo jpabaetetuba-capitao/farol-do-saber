@@ -6,20 +6,14 @@ Durante uma reunião pedagógica, um professor afirmou que a principal função 
     `,
 
     alternativas: [
-
         "A avaliação deve restringir-se à observação informal dos estudantes, dispensando registros sistemáticos.",
-
         "A atribuição de notas perdeu completamente sua relevância nos sistemas educacionais atuais.",
-
-        "A avaliação deve produzir informações que orientem decisões pedagógicas e favoreçam a aprendizagem, além de eventualmente cumprir funções certificadoras.",
-
         "Os processos avaliativos devem priorizar exclusivamente aspectos socioemocionais em detrimento dos conteúdos curriculares.",
-
+        "A avaliação deve produzir informações que orientem decisões pedagógicas e favoreçam a aprendizagem, além de eventualmente cumprir funções certificadoras.",
         "A avaliação deve concentrar-se apenas no desempenho coletivo da turma para evitar comparações individuais."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. As concepções contemporâneas compreendem a avaliação como instrumento de acompanhamento, reflexão e tomada de decisões pedagógicas, não apenas como mecanismo classificatório.
@@ -40,20 +34,14 @@ Ao discutir os fundamentos da avaliação, uma coordenadora pedagógica afirmou 
     `,
 
     alternativas: [
-
         "Constitui procedimento neutro voltado apenas à mensuração objetiva do desempenho escolar.",
-
-        "Representa processo contínuo de obtenção de informações relevantes para orientar o ensino e a aprendizagem.",
-
         "Tem como finalidade principal selecionar estudantes com melhor rendimento acadêmico.",
-
+        "Representa processo contínuo de obtenção de informações relevantes para orientar o ensino e a aprendizagem.",
         "Deve limitar-se à aplicação periódica de instrumentos formais de verificação da aprendizagem.",
-
         "É atividade independente do planejamento e das práticas pedagógicas."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. A avaliação envolve coleta e análise de informações para orientar decisões relacionadas ao ensino e à aprendizagem.
@@ -74,20 +62,14 @@ Segundo Cipriano Luckesi, a avaliação da aprendizagem deve ser compreendida pr
     `,
 
     alternativas: [
-
         "Instrumento destinado à classificação e seleção dos estudantes segundo seu desempenho.",
-
-        "Processo de verificação utilizado para atribuição de conceitos e registros burocráticos.",
-
         "Ato investigativo voltado à compreensão da aprendizagem para subsidiar intervenções pedagógicas.",
-
+        "Processo de verificação utilizado para atribuição de conceitos e registros burocráticos.",
         "Mecanismo de controle disciplinar necessário à manutenção da ordem escolar.",
-
         "Estratégia utilizada para comparar resultados individuais em relação a padrões normativos."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. Luckesi defende uma avaliação diagnóstica e inclusiva, voltada à compreensão da aprendizagem e à tomada de decisões pedagógicas.
@@ -108,20 +90,14 @@ Uma professora utiliza diferentes evidências de aprendizagem — produções es
     `,
 
     alternativas: [
-
         "A aprendizagem pode ser adequadamente compreendida por um único instrumento avaliativo.",
-
-        "A diversidade de instrumentos amplia a qualidade das informações obtidas sobre a aprendizagem.",
-
         "A observação pedagógica possui menor validade que os testes padronizados.",
-
         "Os instrumentos qualitativos devem substituir completamente os quantitativos.",
-
-        "A avaliação deve priorizar exclusivamente resultados mensuráveis."
-
+        "A avaliação deve priorizar exclusivamente resultados mensuráveis.",
+        "A diversidade de instrumentos amplia a qualidade das informações obtidas sobre a aprendizagem."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A utilização de múltiplos instrumentos permite compreender diferentes dimensões da aprendizagem e reduz limitações associadas a avaliações únicas.
@@ -142,20 +118,14 @@ Ao refletir sobre os fundamentos da avaliação da aprendizagem, um candidato co
     `,
 
     alternativas: [
-
-        "Incorreta, pois a avaliação deve ocorrer de forma independente para garantir imparcialidade.",
-
-        "Correta apenas quando se utiliza avaliação formativa.",
-
-        "Incorreta, porque a avaliação deve concentrar-se exclusivamente nos resultados obtidos pelos estudantes.",
-
         "Correta, pois a avaliação integra o processo pedagógico e deve ser coerente com os objetivos e experiências de aprendizagem propostas.",
-
+        "Incorreta, pois a avaliação deve ocorrer de forma independente para garantir imparcialidade.",
+        "Correta apenas quando se utiliza avaliação formativa.",
+        "Incorreta, porque a avaliação deve concentrar-se exclusivamente nos resultados obtidos pelos estudantes.",
         "Incorreta, já que planejamento, ensino e avaliação possuem funções distintas e não complementares."
-
     ],
 
-    correta: 3,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A avaliação deve estar alinhada aos objetivos, conteúdos e metodologias para produzir informações relevantes sobre a aprendizagem.
@@ -176,20 +146,14 @@ Durante uma formação pedagógica, dois professores apresentaram visões distin
     `,
 
     alternativas: [
-
-        "Substitui completamente a necessidade de registrar resultados de aprendizagem.",
-
         "Compreende a avaliação como processo de acompanhamento e tomada de decisões voltadas à aprendizagem.",
-
+        "Substitui completamente a necessidade de registrar resultados de aprendizagem.",
         "Defende que todos os estudantes devem receber os mesmos resultados avaliativos.",
-
         "Elimina a utilização de instrumentos formais de avaliação.",
-
         "Considera irrelevante a verificação dos conhecimentos construídos pelos estudantes."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. As concepções contemporâneas entendem a avaliação como processo de acompanhamento, reflexão e intervenção pedagógica, superando a lógica exclusivamente classificatória.
@@ -210,20 +174,14 @@ Jussara Hoffmann critica práticas avaliativas centradas apenas na verificação
     `,
 
     alternativas: [
-
         "Priorizar a mensuração objetiva dos conteúdos memorizados.",
-
-        "Atuar como processo mediador que acompanha e favorece o desenvolvimento do estudante.",
-
         "Limitar-se à aplicação periódica de testes padronizados.",
-
         "Ser utilizada prioritariamente para fins classificatórios.",
-
+        "Atuar como processo mediador que acompanha e favorece o desenvolvimento do estudante.",
         "Basear-se exclusivamente em critérios quantitativos."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. Hoffmann é conhecida pela defesa da avaliação mediadora, compreendida como processo contínuo de acompanhamento da aprendizagem.
@@ -244,20 +202,14 @@ Philippe Perrenoud defende que a avaliação deve contribuir para a regulação 
     `,
 
     alternativas: [
-
         "Tem como finalidade principal ordenar os estudantes segundo seu desempenho.",
-
         "Serve exclusivamente para verificar a aprendizagem ao final de uma etapa.",
-
-        "Produz informações que permitem ajustar estratégias de ensino e favorecer avanços na aprendizagem.",
-
         "Substitui a necessidade de planejamento pedagógico.",
-
-        "Prioriza a comparação entre estudantes de uma mesma turma."
-
+        "Prioriza a comparação entre estudantes de uma mesma turma.",
+        "Produz informações que permitem ajustar estratégias de ensino e favorecer avanços na aprendizagem."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. Para Perrenoud, a avaliação deve produzir informações que permitam regular e aperfeiçoar os processos de ensino e aprendizagem.
@@ -278,20 +230,14 @@ Uma escola adota uma concepção emancipatória de avaliação, buscando desenvo
     `,
 
     alternativas: [
-
         "Destina-se prioritariamente à classificação e certificação dos estudantes.",
-
-        "Procura promover consciência crítica e participação ativa dos sujeitos na construção da aprendizagem.",
-
         "Limita-se à verificação do cumprimento dos conteúdos curriculares.",
-
+        "Procura promover consciência crítica e participação ativa dos sujeitos na construção da aprendizagem.",
         "Substitui completamente os processos de ensino e planejamento.",
-
         "Tem como principal objetivo comparar desempenhos individuais."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. A avaliação emancipatória busca favorecer autonomia, reflexão crítica e participação dos estudantes.
@@ -312,20 +258,14 @@ Ao analisar diferentes concepções de avaliação, um candidato concluiu que a 
     `,
 
     alternativas: [
-
-        "A avaliação classificatória preocupa-se principalmente com a hierarquização dos resultados, enquanto a formativa busca apoiar o processo de aprendizagem.",
-
         "A avaliação formativa elimina qualquer forma de registro do desempenho dos estudantes.",
-
+        "A avaliação classificatória preocupa-se principalmente com a hierarquização dos resultados, enquanto a formativa busca apoiar o processo de aprendizagem.",
         "A avaliação classificatória dispensa instrumentos formais de coleta de informações.",
-
         "A avaliação formativa ocorre apenas ao final dos períodos letivos.",
-
         "A avaliação classificatória possui caráter exclusivamente qualitativo."
-
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. A avaliação classificatória enfatiza resultados e ordenação dos estudantes, enquanto a avaliação formativa busca orientar e melhorar a aprendizagem.
@@ -345,20 +285,14 @@ No início do ano letivo, uma professora aplicou atividades investigativas, prom
     `,
 
     alternativas: [
-
         "Tem como principal finalidade atribuir conceitos e classificar os estudantes segundo seu desempenho inicial.",
-
-        "Busca levantar informações sobre as condições de aprendizagem dos estudantes para orientar o planejamento pedagógico.",
-
         "Destina-se exclusivamente à certificação dos conhecimentos adquiridos em etapas anteriores.",
-
         "Substitui a necessidade de avaliações formativas durante o processo educativo.",
-
-        "Prioriza a comparação entre estudantes para organizar turmas homogêneas."
-
+        "Prioriza a comparação entre estudantes para organizar turmas homogêneas.",
+        "Busca levantar informações sobre as condições de aprendizagem dos estudantes para orientar o planejamento pedagógico."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A avaliação diagnóstica procura identificar conhecimentos prévios, dificuldades e necessidades dos estudantes para subsidiar o planejamento e as intervenções pedagógicas.
@@ -379,20 +313,14 @@ Após analisar os resultados de uma avaliação diagnóstica, um professor decid
     `,
 
     alternativas: [
-
         "A avaliação diagnóstica possui função classificatória e seletiva.",
-
-        "Os resultados diagnósticos devem ser utilizados para orientar decisões pedagógicas.",
-
         "O planejamento inicial deve ser abandonado sempre que surgirem dificuldades.",
-
         "A avaliação diagnóstica substitui as avaliações formativas e somativas.",
-
+        "Os resultados diagnósticos devem ser utilizados para orientar decisões pedagógicas.",
         "O diagnóstico tem finalidade exclusivamente estatística."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. As informações produzidas pela avaliação diagnóstica devem orientar adaptações e intervenções pedagógicas voltadas à aprendizagem.
@@ -447,20 +375,14 @@ Ao iniciar uma unidade temática, uma professora identificou que parte da turma 
     `,
 
     alternativas: [
-
         "Serve apenas para localizar dificuldades de aprendizagem.",
-
-        "Pode identificar tanto dificuldades quanto conhecimentos já consolidados pelos estudantes.",
-
         "Tem como objetivo principal hierarquizar os estudantes segundo seu desempenho.",
-
+        "Pode identificar tanto dificuldades quanto conhecimentos já consolidados pelos estudantes.",
         "Deve ser utilizada exclusivamente na educação infantil.",
-
         "Possui função equivalente à avaliação somativa."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. A avaliação diagnóstica permite identificar conhecimentos prévios, potencialidades e dificuldades dos estudantes.
@@ -514,20 +436,14 @@ Durante o desenvolvimento de uma sequência didática, uma professora analisa co
     `,
 
     alternativas: [
-
-        "Tem como finalidade principal classificar os estudantes ao término do processo educativo.",
-
         "Busca produzir informações que permitam regular e aperfeiçoar continuamente o processo de ensino e aprendizagem.",
-
+        "Tem como finalidade principal classificar os estudantes ao término do processo educativo.",
         "Destina-se exclusivamente à certificação das aprendizagens alcançadas.",
-
         "Substitui a necessidade de planejamento pedagógico prévio.",
-
         "Prioriza a comparação dos resultados individuais em relação à média da turma."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A avaliação formativa produz informações que auxiliam professores e estudantes a aperfeiçoar continuamente o processo de aprendizagem.
@@ -548,20 +464,14 @@ Segundo Philippe Perrenoud, a avaliação formativa deve contribuir para a regul
     `,
 
     alternativas: [
-
         "Tem como objetivo principal produzir notas para composição dos resultados finais.",
-
-        "Serve para identificar erros e puni-los de forma pedagógica.",
-
         "Fornece informações que permitem ajustar estratégias de ensino e apoiar o progresso dos estudantes.",
-
+        "Serve para identificar erros e puni-los de forma pedagógica.",
         "Substitui integralmente os conteúdos curriculares por competências socioemocionais.",
-
         "Limita-se à observação informal do comportamento dos alunos."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. Para Perrenoud, a avaliação deve fornecer informações que permitam regular o processo de aprendizagem por meio de intervenções adequadas.
@@ -582,20 +492,14 @@ Uma professora identifica que diversos estudantes apresentam dificuldades semelh
     `,
 
     alternativas: [
-
         "Modelos exclusivamente classificatórios de avaliação.",
-
         "Perspectivas que utilizam a avaliação como instrumento de seleção escolar.",
-
-        "Jussara Hoffmann e a avaliação mediadora.",
-
         "Abordagens centradas apenas na mensuração objetiva dos resultados.",
-
-        "Concepções que restringem a avaliação aos momentos finais do processo educativo."
-
+        "Concepções que restringem a avaliação aos momentos finais do processo educativo.",
+        "Jussara Hoffmann e a avaliação mediadora."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. Hoffmann defende a avaliação mediadora, caracterizada pelo acompanhamento contínuo da aprendizagem e pela intervenção pedagógica.
@@ -616,20 +520,14 @@ Ao comentar os resultados de uma atividade, um professor fornece devolutivas esp
     `,
 
     alternativas: [
-
-        "O feedback permite orientar o estudante sobre seu processo de aprendizagem e possíveis formas de avanço.",
-
         "O feedback substitui a necessidade de avaliação formal.",
-
         "A devolutiva deve concentrar-se apenas nos erros para aumentar a exigência acadêmica.",
-
         "O estudante não precisa participar da análise de seus resultados.",
-
+        "O feedback permite orientar o estudante sobre seu processo de aprendizagem e possíveis formas de avanço.",
         "O feedback possui função exclusivamente motivacional."
-
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. O feedback é elemento fundamental da avaliação formativa, pois oferece informações que auxiliam o estudante a compreender e aperfeiçoar sua aprendizagem.
@@ -650,20 +548,14 @@ Um candidato afirmou que a avaliação formativa diferencia-se da avaliação so
     `,
 
     alternativas: [
-
         "Incorreta, pois ambas possuem exatamente a mesma finalidade.",
-
         "Correta apenas quando não há atribuição de notas.",
-
-        "Incorreta, porque a avaliação formativa ocorre exclusivamente antes do ensino.",
-
         "Correta, pois a avaliação formativa busca compreender e aperfeiçoar o percurso da aprendizagem.",
-
+        "Incorreta, porque a avaliação formativa ocorre exclusivamente antes do ensino.",
         "Incorreta, já que a avaliação somativa também possui função reguladora permanente."
-
     ],
 
-    correta: 3,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. A avaliação formativa concentra-se no acompanhamento e na melhoria contínua da aprendizagem, enquanto a somativa enfatiza a síntese dos resultados obtidos.
@@ -717,20 +609,14 @@ Uma professora afirma que a avaliação somativa é desnecessária porque a aval
     `,
 
     alternativas: [
-
-        "Correta, pois a avaliação formativa substitui completamente qualquer outra modalidade avaliativa.",
-
         "Incorreta, pois diferentes modalidades de avaliação possuem finalidades complementares dentro do processo educativo.",
-
+        "Correta, pois a avaliação formativa substitui completamente qualquer outra modalidade avaliativa.",
         "Correta apenas na educação infantil.",
-
         "Incorreta, porque a avaliação somativa deve substituir a avaliação formativa.",
-
         "Correta, desde que sejam utilizados instrumentos qualitativos."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. As modalidades diagnóstica, formativa e somativa possuem funções distintas e complementares, contribuindo para diferentes momentos do processo educativo.
@@ -751,20 +637,14 @@ Uma rede de ensino utiliza exclusivamente os resultados de provas finais para av
     `,
 
     alternativas: [
-
         "A avaliação somativa não pode utilizar provas como instrumento de coleta de evidências.",
-
-        "A síntese dos resultados deve ser construída a partir de múltiplas evidências de aprendizagem.",
-
         "Os resultados finais não possuem relevância para a tomada de decisões educacionais.",
-
         "As avaliações finais devem ser substituídas por autoavaliações.",
-
+        "A síntese dos resultados deve ser construída a partir de múltiplas evidências de aprendizagem.",
         "A avaliação somativa só pode ocorrer na educação superior."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. Embora a avaliação somativa possua função de síntese, ela deve considerar diferentes evidências e não se limitar a um único instrumento.
@@ -785,20 +665,14 @@ Ao analisar diferentes concepções de avaliação, um candidato concluiu que a 
     `,
 
     alternativas: [
-
-        "A somativa enfatiza a síntese dos resultados obtidos, enquanto a formativa prioriza o acompanhamento do processo de aprendizagem.",
-
         "A somativa utiliza apenas instrumentos quantitativos e a formativa apenas qualitativos.",
-
+        "A somativa enfatiza a síntese dos resultados obtidos, enquanto a formativa prioriza o acompanhamento do processo de aprendizagem.",
         "A somativa ocorre exclusivamente por meio de provas escritas.",
-
         "A formativa não produz registros de desempenho dos estudantes.",
-
         "A somativa dispensa critérios de avaliação previamente definidos."
-
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. A principal diferença está na finalidade: a somativa sintetiza resultados; a formativa acompanha e regula a aprendizagem.
@@ -819,20 +693,14 @@ Um professor elaborou uma avaliação final alinhada aos objetivos de aprendizag
     `,
 
     alternativas: [
-
         "A avaliação somativa deve ser independente dos objetivos para garantir imparcialidade.",
-
         "Os resultados finais não precisam manter relação com o planejamento pedagógico.",
-
-        "A coerência entre objetivos, ensino e avaliação contribui para a validade do processo avaliativo.",
-
         "As competências não podem ser consideradas em avaliações finais.",
-
-        "A avaliação somativa deve priorizar apenas conteúdos memorizados."
-
+        "A avaliação somativa deve priorizar apenas conteúdos memorizados.",
+        "A coerência entre objetivos, ensino e avaliação contribui para a validade do processo avaliativo."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A avaliação somativa deve estar alinhada aos objetivos de aprendizagem e às competências desenvolvidas durante o processo educativo.
@@ -886,20 +754,14 @@ Ao organizar um portfólio, os estudantes reúnem produções realizadas ao long
     `,
 
     alternativas: [
-
         "Mensurar exclusivamente resultados finais obtidos pelos estudantes.",
-
-        "Possibilitar acompanhamento processual do desenvolvimento das aprendizagens.",
-
         "Substituir completamente todos os demais instrumentos avaliativos.",
-
         "Produzir apenas informações quantitativas sobre desempenho escolar.",
-
-        "Servir prioritariamente para classificação dos estudantes."
-
+        "Servir prioritariamente para classificação dos estudantes.",
+        "Possibilitar acompanhamento processual do desenvolvimento das aprendizagens."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. O portfólio favorece a análise do percurso de aprendizagem, permitindo acompanhar progressos e necessidades de intervenção.
@@ -920,20 +782,14 @@ Um professor elaborou uma rubrica avaliativa com critérios explícitos relacion
     `,
 
     alternativas: [
-
         "Eliminar a subjetividade presente em qualquer processo avaliativo.",
-
         "Substituir a necessidade de feedback aos estudantes.",
-
-        "Tornar mais claros os critérios de avaliação e favorecer julgamentos mais consistentes.",
-
         "Garantir automaticamente melhores resultados de aprendizagem.",
-
+        "Tornar mais claros os critérios de avaliação e favorecer julgamentos mais consistentes.",
         "Dispensar a participação dos estudantes nos processos avaliativos."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. As rubricas tornam os critérios mais transparentes e favorecem avaliações mais coerentes e consistentes.
@@ -1021,20 +877,14 @@ Durante a análise dos resultados de aprendizagem de uma turma, uma professora i
     `,
 
     alternativas: [
-
         "A avaliação deve ocorrer independentemente do planejamento para garantir neutralidade pedagógica.",
-
-        "Os resultados avaliativos possuem função exclusivamente classificatória.",
-
         "Avaliação e planejamento constituem processos articulados que se retroalimentam continuamente.",
-
+        "Os resultados avaliativos possuem função exclusivamente classificatória.",
         "As dificuldades de aprendizagem decorrem exclusivamente das características individuais dos estudantes.",
-
         "O planejamento deve permanecer inalterado após sua elaboração inicial."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. Avaliação e planejamento mantêm relação de interdependência. As informações produzidas pela avaliação orientam ajustes e aperfeiçoamentos das ações pedagógicas.
@@ -1055,20 +905,14 @@ Ao elaborar um plano de ensino, um professor definiu objetivos de aprendizagem, 
     `,
 
     alternativas: [
-
         "A avaliação pode ser construída posteriormente sem prejuízo ao processo educativo.",
-
         "Os critérios avaliativos possuem importância secundária no planejamento.",
-
-        "Existe incoerência entre planejamento e avaliação, comprometendo a validade das evidências produzidas.",
-
         "As competências previstas dispensam a necessidade de avaliação.",
-
-        "A metodologia utilizada compensa automaticamente a ausência de critérios avaliativos."
-
+        "A metodologia utilizada compensa automaticamente a ausência de critérios avaliativos.",
+        "Existe incoerência entre planejamento e avaliação, comprometendo a validade das evidências produzidas."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A coerência entre objetivos, conteúdos, metodologias e avaliação é um dos princípios fundamentais do planejamento educacional.
@@ -1089,20 +933,14 @@ Uma escola realiza avaliações diagnósticas periódicas para acompanhar a evol
     `,
 
     alternativas: [
-
         "Uso burocrático dos dados avaliativos.",
-
         "Concepção classificatória da avaliação.",
-
-        "Integração entre avaliação institucional, planejamento e tomada de decisões pedagógicas.",
-
         "Substituição do planejamento pela avaliação.",
-
+        "Integração entre avaliação institucional, planejamento e tomada de decisões pedagógicas.",
         "Utilização inadequada da avaliação diagnóstica."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. Os dados avaliativos podem subsidiar decisões coletivas relacionadas ao planejamento e à melhoria das práticas pedagógicas.
@@ -1123,20 +961,14 @@ Um candidato afirmou que a principal função da avaliação no planejamento edu
     `,
 
     alternativas: [
-
-        "Incorreta, pois a avaliação limita-se à atribuição de notas e conceitos.",
-
-        "Correta apenas para avaliações somativas.",
-
-        "Incorreta, porque planejamento e avaliação possuem finalidades independentes.",
-
         "Correta, pois a avaliação fornece evidências necessárias para monitorar e aperfeiçoar o planejamento.",
-
+        "Incorreta, pois a avaliação limita-se à atribuição de notas e conceitos.",
+        "Correta apenas para avaliações somativas.",
+        "Incorreta, porque planejamento e avaliação possuem finalidades independentes.",
         "Incorreta, já que os objetivos não precisam ser considerados no processo avaliativo."
-
     ],
 
-    correta: 3,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A avaliação produz evidências que permitem verificar o alcance dos objetivos e orientar ajustes no planejamento.
@@ -1190,20 +1022,14 @@ Ao elaborar instrumentos avaliativos, uma professora buscou verificar não apena
     `,
 
     alternativas: [
-
         "A BNCC substitui os conteúdos curriculares por competências socioemocionais.",
-
-        "A avaliação deve concentrar-se exclusivamente em conteúdos conceituais.",
-
         "O desenvolvimento de competências exige avaliar a aplicação dos conhecimentos em contextos significativos.",
-
+        "A avaliação deve concentrar-se exclusivamente em conteúdos conceituais.",
         "As habilidades previstas na BNCC não podem ser objeto de avaliação.",
-
         "A resolução de problemas possui relevância secundária no processo educativo."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. A BNCC propõe o desenvolvimento de competências que envolvem mobilização integrada de conhecimentos, habilidades, atitudes e valores.
@@ -1224,20 +1050,14 @@ Uma escola revisou seus processos avaliativos para garantir alinhamento entre co
     `,
 
     alternativas: [
-
-        "Substituição da autonomia docente pelas prescrições curriculares.",
-
         "Articulação entre currículo, ensino e avaliação.",
-
+        "Substituição da autonomia docente pelas prescrições curriculares.",
         "Priorização exclusiva de resultados quantitativos.",
-
         "Redução da importância dos objetivos de aprendizagem.",
-
         "Desvinculação entre planejamento e avaliação."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A BNCC exige coerência entre as aprendizagens esperadas, as experiências de ensino e os processos avaliativos.
@@ -1258,20 +1078,14 @@ Ao avaliar um projeto interdisciplinar, uma professora observou a capacidade dos
     `,
 
     alternativas: [
-
         "As competências gerais devem ser desenvolvidas apenas em componentes curriculares específicos.",
-
         "A avaliação deve restringir-se aos conteúdos conceituais de cada disciplina.",
-
-        "O desenvolvimento de competências envolve aprendizagens complexas que podem mobilizar diferentes áreas do conhecimento.",
-
         "Projetos interdisciplinares não produzem evidências válidas de aprendizagem.",
-
-        "Competências e habilidades não devem ser consideradas nos processos avaliativos."
-
+        "Competências e habilidades não devem ser consideradas nos processos avaliativos.",
+        "O desenvolvimento de competências envolve aprendizagens complexas que podem mobilizar diferentes áreas do conhecimento."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A BNCC valoriza competências que articulam diferentes conhecimentos e podem ser desenvolvidas em contextos interdisciplinares.
@@ -1292,20 +1106,14 @@ Uma professora afirma que avaliar por competências significa abandonar completa
     `,
 
     alternativas: [
-
         "Correta, pois competências substituem integralmente os conteúdos.",
-
         "Correta apenas no ensino fundamental.",
-
-        "Incorreta, porque competências pressupõem a mobilização de conhecimentos, e não sua eliminação.",
-
         "Correta apenas para projetos interdisciplinares.",
-
+        "Incorreta, porque competências pressupõem a mobilização de conhecimentos, e não sua eliminação.",
         "Incorreta, porque a BNCC proíbe avaliações baseadas em competências."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. A BNCC não elimina conteúdos; ela propõe que eles sejam mobilizados no desenvolvimento de competências e habilidades.
@@ -1326,20 +1134,14 @@ Ao refletir sobre a avaliação na perspectiva da BNCC, um candidato concluiu qu
     `,
 
     alternativas: [
-
         "Incorreta, pois competências não podem ser observadas em situações avaliativas.",
-
         "Correta apenas para avaliações externas.",
-
-        "Incorreta, porque habilidades possuem caráter exclusivamente curricular.",
-
         "Correta, pois a avaliação deve verificar evidências do desenvolvimento das aprendizagens esperadas.",
-
+        "Incorreta, porque habilidades possuem caráter exclusivamente curricular.",
         "Incorreta, já que a BNCC não estabelece relação entre avaliação e competências."
-
     ],
 
-    correta: 3,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. A avaliação deve produzir evidências que permitam analisar o desenvolvimento das competências e habilidades previstas na BNCC.
@@ -1359,20 +1161,14 @@ Durante a correção de uma atividade, uma professora observou que vários estud
     `,
 
     alternativas: [
-
         "O erro deve ser utilizado prioritariamente para classificar os estudantes segundo seu desempenho.",
-
         "Os erros indicam falta de capacidade para aprender determinados conteúdos.",
-
-        "O erro pode constituir importante fonte de informação para compreender e favorecer a aprendizagem.",
-
         "A identificação de erros elimina a necessidade de avaliação futura.",
-
+        "O erro pode constituir importante fonte de informação para compreender e favorecer a aprendizagem.",
         "Os erros devem ser desconsiderados quando a maioria da turma apresenta dificuldades semelhantes."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. Nas concepções contemporâneas, o erro é compreendido como indicador do processo de construção do conhecimento e fonte importante para intervenções pedagógicas.
@@ -1427,20 +1223,14 @@ Segundo Jussara Hoffmann, a devolutiva avaliativa possui papel relevante porque:
     `,
 
     alternativas: [
-
-        "Permite justificar notas atribuídas ao final do período letivo.",
-
         "Favorece o diálogo pedagógico e acompanha o percurso de aprendizagem do estudante.",
-
+        "Permite justificar notas atribuídas ao final do período letivo.",
         "Substitui completamente os instrumentos de avaliação.",
-
         "Tem como finalidade principal comparar desempenhos individuais.",
-
         "Serve exclusivamente para comunicar resultados aos responsáveis."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. Para Hoffmann, a devolutiva integra o processo mediador da avaliação, favorecendo acompanhamento e construção das aprendizagens.
@@ -1461,20 +1251,14 @@ Uma escola oferece atividades de recuperação paralela durante todo o período 
     `,
 
     alternativas: [
-
         "A recuperação deve ocorrer apenas após o encerramento do ano letivo.",
-
-        "A recuperação contínua favorece intervenções oportunas e reduz o acúmulo de dificuldades.",
-
         "As ações de recuperação substituem o planejamento pedagógico regular.",
-
+        "A recuperação contínua favorece intervenções oportunas e reduz o acúmulo de dificuldades.",
         "A recuperação paralela destina-se apenas aos estudantes com baixo rendimento em provas.",
-
         "A recuperação possui finalidade exclusivamente classificatória."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. A recuperação contínua permite agir durante o processo de aprendizagem, aumentando as possibilidades de superação das dificuldades identificadas.
@@ -1495,20 +1279,14 @@ Um candidato afirmou que erro, feedback e recuperação da aprendizagem constitu
     `,
 
     alternativas: [
-
         "Incorreta, pois o erro deve ser eliminado dos processos avaliativos.",
-
         "Incorreta, porque feedback e recuperação possuem finalidades incompatíveis.",
-
         "Correta apenas em avaliações diagnósticas.",
-
-        "Correta, pois esses elementos fornecem informações e oportunidades para promover avanços na aprendizagem.",
-
-        "Incorreta, já que recuperação e feedback são independentes da avaliação."
-
+        "Incorreta, já que recuperação e feedback são independentes da avaliação.",
+        "Correta, pois esses elementos fornecem informações e oportunidades para promover avanços na aprendizagem."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. Erro, feedback e recuperação fazem parte de uma perspectiva avaliativa comprometida com o desenvolvimento das aprendizagens.
@@ -1528,20 +1306,14 @@ Durante uma reunião pedagógica, uma professora afirmou que a avaliação deve 
     `,
 
     alternativas: [
-
         "Modelos centrados exclusivamente na mensuração e classificação do rendimento escolar.",
-
-        "Concepções que compreendem a avaliação como instrumento de diagnóstico e intervenção pedagógica, como as defendidas por Luckesi.",
-
         "Abordagens que restringem a avaliação aos momentos finais do processo educativo.",
-
         "Perspectivas que utilizam a avaliação apenas para certificação e promoção escolar.",
-
+        "Concepções que compreendem a avaliação como instrumento de diagnóstico e intervenção pedagógica, como as defendidas por Luckesi.",
         "Modelos baseados exclusivamente em testes padronizados."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `
 Correto. Luckesi defende uma avaliação diagnóstica voltada à compreensão da aprendizagem e à tomada de decisões pedagógicas.
@@ -1562,20 +1334,14 @@ Ao analisar os resultados de diferentes instrumentos avaliativos, um professor i
     `,
 
     alternativas: [
-
         "Avaliação classificatória e certificação escolar.",
-
-        "Avaliação diagnóstica e promoção automática.",
-
         "Avaliação formativa, feedback e regulação das aprendizagens.",
-
+        "Avaliação diagnóstica e promoção automática.",
         "Avaliação somativa e mensuração padronizada.",
-
         "Avaliação normativa e ranqueamento dos estudantes."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `
 Correto. A avaliação formativa produz informações que orientam feedbacks e intervenções voltadas ao aperfeiçoamento da aprendizagem.
@@ -1596,20 +1362,14 @@ Uma escola alinhou seus instrumentos avaliativos às competências e habilidades
     `,
 
     alternativas: [
-
         "As competências substituem integralmente os conteúdos curriculares.",
-
         "A avaliação deve restringir-se à memorização de informações.",
-
-        "As competências exigem evidências de aplicação dos conhecimentos em contextos significativos.",
-
         "As habilidades previstas na BNCC não podem ser avaliadas diretamente.",
-
-        "A avaliação por competências elimina a necessidade de critérios avaliativos."
-
+        "A avaliação por competências elimina a necessidade de critérios avaliativos.",
+        "As competências exigem evidências de aplicação dos conhecimentos em contextos significativos."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `
 Correto. A BNCC propõe que os estudantes mobilizem conhecimentos, habilidades, atitudes e valores em diferentes contextos.
@@ -1630,20 +1390,14 @@ Uma professora utiliza provas, observações sistemáticas, portfólios, autoava
     `,
 
     alternativas: [
-
-        "Os instrumentos avaliativos devem produzir exatamente o mesmo tipo de informação.",
-
         "A utilização de múltiplos instrumentos amplia a qualidade das evidências sobre a aprendizagem.",
-
+        "Os instrumentos avaliativos devem produzir exatamente o mesmo tipo de informação.",
         "Os instrumentos qualitativos devem substituir totalmente os quantitativos.",
-
         "A diversidade de instrumentos elimina a necessidade de planejamento avaliativo.",
-
         "A observação sistemática possui menor validade que as provas escritas."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `
 Correto. A diversificação dos instrumentos permite compreender diferentes dimensões da aprendizagem e fortalece a qualidade do processo avaliativo.
@@ -1664,20 +1418,14 @@ Ao refletir sobre os fundamentos da avaliação da aprendizagem, um candidato co
     `,
 
     alternativas: [
-
         "Incorreta, pois a avaliação formativa substitui integralmente as demais.",
-
         "Incorreta, porque a avaliação somativa torna desnecessária a avaliação diagnóstica.",
-
-        "Correta apenas quando não há atribuição de notas.",
-
         "Correta, pois cada modalidade possui finalidades específicas e contribui para diferentes momentos do processo educativo.",
-
+        "Correta apenas quando não há atribuição de notas.",
         "Incorreta, já que apenas a avaliação formativa possui função pedagógica."
-
     ],
 
-    correta: 3,
+    correta: 2,
 
     feedbackAcerto: `
 Correto. Diagnóstica, formativa e somativa possuem funções distintas e complementares dentro do processo de ensino e aprendizagem.
@@ -1692,6 +1440,5 @@ Diagnóstica = ponto de partida.
 Formativa = acompanhamento.
 Somativa = síntese dos resultados.
     `
-}
-];
+}];
 

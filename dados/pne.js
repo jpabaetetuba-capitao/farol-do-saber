@@ -5,19 +5,14 @@ const pne = [
         "Durante a elaboração do Plano Municipal de Educação, uma equipe técnica discutia qual documento deveria servir de referência para a definição das metas locais. Conforme a Lei nº 13.005/2014, o Plano Nacional de Educação caracteriza-se como:",
 
     alternativas: [
-
         "Instrumento destinado exclusivamente à expansão da Educação Superior.",
-
-        "Plano decenal que estabelece diretrizes, metas e estratégias para a política educacional brasileira.",
-
         "Documento voltado apenas à universalização da Educação Básica.",
-
+        "Plano decenal que estabelece diretrizes, metas e estratégias para a política educacional brasileira.",
         "Norma que regulamenta exclusivamente o financiamento educacional.",
-
         "Plano destinado apenas à formação dos profissionais da educação."
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto:
         "Correto. O PNE é um plano decenal que estabelece diretrizes, metas e estratégias para orientar a educação nacional.",
@@ -33,19 +28,14 @@ const pne = [
         "Durante uma capacitação para gestores escolares, foi informado que o atual Plano Nacional de Educação possui prazo determinado de vigência. De acordo com a Lei nº 13.005/2014, essa vigência corresponde a:",
 
     alternativas: [
-
-        "Cinco anos, com revisão obrigatória ao final do período.",
-
-        "Oito anos, com avaliação intermediária.",
-
         "Dez anos, constituindo um plano decenal.",
-
+        "Cinco anos, com revisão obrigatória ao final do período.",
+        "Oito anos, com avaliação intermediária.",
         "Doze anos, alinhados ao ciclo federativo.",
-
         "Vinte anos, com atualização quinquenal."
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto:
         "Correto. O Plano Nacional de Educação possui vigência de dez anos.",
@@ -61,19 +51,14 @@ const pne = [
         "Uma Secretaria Municipal de Educação implementou ações voltadas à redução das desigualdades educacionais, ao combate à exclusão escolar e à ampliação das oportunidades de aprendizagem. Essas ações estão alinhadas principalmente à diretriz do PNE relacionada à:",
 
     alternativas: [
-
         "Universalização da pré-escola para crianças de 4 e 5 anos.",
-
-        "Erradicação do analfabetismo.",
-
         "Elevação das taxas de matrícula na Educação Superior.",
-
         "Formação em pós-graduação para professores da Educação Básica.",
-
+        "Erradicação do analfabetismo.",
         "Oferta de educação em tempo integral."
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto:
         "Correto. A erradicação do analfabetismo é uma das diretrizes expressamente previstas no PNE.",
@@ -117,19 +102,14 @@ const pne = [
         "Durante uma audiência pública sobre políticas educacionais, discutiu-se quais instituições possuem atribuições relacionadas ao monitoramento e à avaliação das metas do PNE. Segundo a legislação, esse acompanhamento envolve:",
 
     alternativas: [
-
         "Somente o Ministério da Educação.",
-
         "Exclusivamente o Conselho Nacional de Educação.",
-
-        "MEC, Congresso Nacional, Conselho Nacional de Educação e Fórum Nacional de Educação.",
-
         "Apenas o INEP e os Conselhos Estaduais de Educação.",
-
-        "Somente os Tribunais de Contas."
+        "Somente os Tribunais de Contas.",
+        "MEC, Congresso Nacional, Conselho Nacional de Educação e Fórum Nacional de Educação."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto:
         "Correto. O acompanhamento do PNE é compartilhado entre MEC, Congresso Nacional, CNE e Fórum Nacional de Educação.",
@@ -145,19 +125,14 @@ const pne = [
         "Durante uma reunião entre representantes da União, dos Estados e dos Municípios, discutiu-se a necessidade de atuação conjunta para o cumprimento das metas do Plano Nacional de Educação. Esse princípio está diretamente relacionado ao:",
 
     alternativas: [
-
-        "Regime de colaboração entre os entes federativos.",
-
         "Processo de universalização da pré-escola para crianças de 4 e 5 anos.",
-
         "Plano de carreira dos profissionais da educação básica.",
-
         "Aumento das matrículas na pós-graduação stricto sensu.",
-
-        "Oferta de educação em tempo integral."
+        "Oferta de educação em tempo integral.",
+        "Regime de colaboração entre os entes federativos."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto:
         "Correto. O regime de colaboração é um dos pilares para a implementação das metas do PNE, exigindo atuação articulada entre os entes federativos.",
@@ -173,19 +148,14 @@ const pne = [
         "Ao analisar a estrutura do Plano Nacional de Educação, uma supervisora observou que cada meta é acompanhada por ações destinadas a orientar sua implementação. Essas ações são denominadas:",
 
     alternativas: [
-
-        "Diretrizes.",
-
-        "Competências.",
-
         "Estratégias.",
-
+        "Diretrizes.",
+        "Competências.",
         "Indicadores educacionais.",
-
         "Planos setoriais."
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto:
         "Correto. As estratégias detalham os meios necessários para alcançar as metas previstas no PNE.",
@@ -201,19 +171,14 @@ const pne = [
         "Uma equipe de pesquisadores avaliava o cumprimento das metas do PNE e destacou que o acompanhamento deve ocorrer durante toda a vigência do plano. De acordo com a Lei nº 13.005/2014, o monitoramento das metas é realizado:",
 
     alternativas: [
-
         "Somente ao final da vigência do plano.",
-
         "A cada cinco anos.",
-
-        "De forma contínua, com avaliações periódicas.",
-
         "Exclusivamente por auditorias externas.",
-
+        "De forma contínua, com avaliações periódicas.",
         "Apenas quando solicitado pelo Congresso Nacional."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto:
         "Correto. O acompanhamento do PNE ocorre continuamente, permitindo verificar o progresso das metas e estratégias.",
@@ -257,19 +222,14 @@ const pne = [
         "Em uma conferência educacional, discutiu-se que a sociedade civil deve participar da formulação, acompanhamento e avaliação das políticas públicas educacionais. Essa concepção está associada, no âmbito do PNE, ao fortalecimento da:",
 
     alternativas: [
-
         "Expansão da Educação Superior.",
-
-        "Gestão democrática da educação.",
-
         "Educação Profissional Técnica de nível médio.",
-
+        "Gestão democrática da educação.",
         "Universalização do Ensino Médio.",
-
         "Alfabetização na idade certa."
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto:
         "Correto. A participação social e a gestão democrática são princípios importantes para o acompanhamento e execução das metas do PNE.",
@@ -285,19 +245,14 @@ const pne = [
         "Durante a elaboração do Plano Municipal de Educação, verificou-se que todas as crianças de 4 e 5 anos do município estavam matriculadas na escola. Segundo o PNE, essa situação demonstra o cumprimento de um dos principais objetivos da Meta 1, que consiste em:",
 
     alternativas: [
-
-        "Universalizar a pré-escola para as crianças de 4 e 5 anos.",
-
         "Universalizar o atendimento escolar da população de 15 a 17 anos.",
-
         "Garantir alfabetização até o final do 3º ano do Ensino Fundamental.",
-
         "Ofertar educação em tempo integral em parte das escolas públicas.",
-
-        "Elevar a taxa bruta de matrícula na Educação Superior."
+        "Elevar a taxa bruta de matrícula na Educação Superior.",
+        "Universalizar a pré-escola para as crianças de 4 e 5 anos."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto:
         "Correto. A universalização da pré-escola para crianças de 4 e 5 anos é um dos principais objetivos da Meta 1.",
@@ -313,19 +268,14 @@ const pne = [
         "Uma prefeitura anunciou a construção de novas unidades educacionais destinadas ao atendimento de crianças de até 3 anos. Essa ação está diretamente relacionada à Meta 1 do PNE porque busca:",
 
     alternativas: [
-
-        "Expandir a Educação Profissional Técnica de nível médio.",
-
         "Ampliar a oferta de vagas em creches.",
-
+        "Expandir a Educação Profissional Técnica de nível médio.",
         "Universalizar o Ensino Médio.",
-
         "Elevar a escolaridade média da população de 18 a 29 anos.",
-
         "Erradicar o analfabetismo absoluto."
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto:
         "Correto. A ampliação da oferta de creches constitui um dos objetivos centrais da Meta 1.",
@@ -341,19 +291,14 @@ const pne = [
         "Durante uma auditoria educacional, constatou-se que um município universalizou a pré-escola, mas ainda não alcançou a meta de atendimento às crianças de até 3 anos. Nessa situação, é correto afirmar que:",
 
     alternativas: [
-
         "A Meta 1 foi integralmente cumprida.",
-
-        "A Meta 1 foi parcialmente alcançada.",
-
         "O município já cumpriu a Meta 3.",
-
         "O município alcançou a Meta 6.",
-
+        "A Meta 1 foi parcialmente alcançada.",
         "A Meta 1 trata exclusivamente da pré-escola."
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto:
         "Correto. A Meta 1 envolve tanto a universalização da pré-escola quanto a ampliação do atendimento em creches.",
@@ -397,19 +342,14 @@ const pne = [
         "Ao comparar as metas do PNE, um estudante observou que apenas uma delas trata diretamente da ampliação de vagas em creches e da universalização da pré-escola. Trata-se da:",
 
     alternativas: [
-
         "Meta 2.",
-
         "Meta 3.",
-
-        "Meta 5.",
-
         "Meta 1.",
-
+        "Meta 5.",
         "Meta 6."
     ],
 
-    correta: 3,
+    correta: 2,
 
     feedbackAcerto:
         "Perfeito. A Meta 1 é dedicada à Educação Infantil, abrangendo creches e pré-escola.",
@@ -453,19 +393,14 @@ const pne = [
         "Uma rede de ensino identificou elevado índice de abandono escolar entre estudantes do Ensino Fundamental. Para atender plenamente à Meta 2 do PNE, não basta garantir matrícula; é necessário também:",
 
     alternativas: [
-
         "Elevar as matrículas na Educação Superior.",
-
-        "Assegurar a conclusão do Ensino Fundamental na idade recomendada.",
-
         "Ampliar a pós-graduação stricto sensu.",
-
+        "Assegurar a conclusão do Ensino Fundamental na idade recomendada.",
         "Expandir a Educação Profissional Técnica.",
-
         "Universalizar a pré-escola."
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto:
         "Correto. A Meta 2 também busca garantir que os estudantes concluam o Ensino Fundamental na idade adequada.",
@@ -481,19 +416,14 @@ const pne = [
         "Ao analisar os indicadores educacionais, uma equipe técnica observou que todos os estudantes estavam matriculados, mas muitos apresentavam atraso escolar. Essa situação indica que:",
 
     alternativas: [
-
         "A Meta 2 foi integralmente alcançada.",
-
         "A Meta 1 ainda não foi cumprida.",
-
-        "Ainda existem desafios relacionados ao fluxo escolar previsto na Meta 2.",
-
         "O município já cumpriu a Meta 12.",
-
-        "A Meta 6 foi atingida."
+        "A Meta 6 foi atingida.",
+        "Ainda existem desafios relacionados ao fluxo escolar previsto na Meta 2."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto:
         "Correto. O fluxo escolar adequado é fundamental para que os alunos concluam seus estudos na idade recomendada.",
@@ -509,19 +439,14 @@ const pne = [
         "Durante uma formação para gestores escolares, foi apresentado que a Meta 2 está vinculada a qual etapa da Educação Básica?",
 
     alternativas: [
-
         "Educação Infantil.",
-
-        "Ensino Fundamental.",
-
         "Ensino Médio.",
-
         "Educação Profissional.",
-
+        "Ensino Fundamental.",
         "Educação Superior."
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto:
         "Correto. A Meta 2 trata especificamente da universalização e conclusão do Ensino Fundamental.",
@@ -537,19 +462,14 @@ const pne = [
         "Uma prefeitura implementou programas de reforço escolar, combate à evasão e acompanhamento pedagógico com o objetivo de garantir que os estudantes concluam o Ensino Fundamental no tempo adequado. Essa iniciativa contribui principalmente para o cumprimento da:",
 
     alternativas: [
-
         "Meta 3 — Universalização do Ensino Médio.",
-
-        "Meta 5 — Alfabetização até o 3º ano.",
-
-        "Meta 6 — Educação Integral.",
-
         "Meta 2 — Universalização e conclusão do Ensino Fundamental.",
-
+        "Meta 5 — Alfabetização até o 3º ano.",
+        "Meta 6 — Educação Integral.",
         "Meta 12 — Expansão da Educação Superior."
     ],
 
-    correta: 3,
+    correta: 1,
 
     feedbackAcerto:
         "Correto. A Meta 2 envolve não apenas o acesso ao Ensino Fundamental, mas também sua conclusão na idade recomendada.",
@@ -565,19 +485,14 @@ const pne = [
         "Durante a elaboração do Plano Estadual de Educação, verificou-se que parte significativa dos jovens de 15 a 17 anos estava fora da escola. Segundo o PNE, a meta diretamente relacionada à superação desse problema é a que busca:",
 
     alternativas: [
-
         "Universalizar a pré-escola para crianças de 4 e 5 anos.",
-
-        "Universalizar o Ensino Fundamental para a população de 6 a 14 anos.",
-
         "Universalizar o atendimento escolar para a população de 15 a 17 anos.",
-
+        "Universalizar o Ensino Fundamental para a população de 6 a 14 anos.",
         "Garantir alfabetização até o final do 3º ano do Ensino Fundamental.",
-
         "Oferecer educação em tempo integral em parte das escolas públicas."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto:
         "Correto. A Meta 3 prevê a universalização do atendimento escolar para a população de 15 a 17 anos e a elevação da taxa líquida de matrículas no Ensino Médio.",
@@ -593,19 +508,14 @@ const pne = [
         "Uma Secretaria de Educação desenvolveu ações para reduzir a evasão escolar no Ensino Médio e ampliar o acesso dos jovens a essa etapa de ensino. Essas medidas estão alinhadas principalmente à:",
 
     alternativas: [
-
-        "Meta 3 do PNE.",
-
         "Meta 5 do PNE.",
-
         "Meta 9 do PNE.",
-
         "Meta 12 do PNE.",
-
-        "Meta 17 do PNE."
+        "Meta 17 do PNE.",
+        "Meta 3 do PNE."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto:
         "Correto. A Meta 3 está diretamente relacionada à universalização do atendimento escolar da população de 15 a 17 anos.",
@@ -621,19 +531,14 @@ const pne = [
         "Uma estudante com deficiência matriculada em escola regular recebe apoio especializado no contraturno para complementar sua formação. Essa situação exemplifica uma das estratégias relacionadas à:",
 
     alternativas: [
-
-        "Meta 2 — Ensino Fundamental.",
-
         "Meta 4 — Educação Especial na perspectiva inclusiva.",
-
+        "Meta 2 — Ensino Fundamental.",
         "Meta 6 — Educação Integral.",
-
         "Meta 11 — Educação Profissional Técnica.",
-
         "Meta 15 — Formação de Professores."
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto:
         "Correto. A Meta 4 prevê a universalização do acesso à educação e ao Atendimento Educacional Especializado (AEE) para estudantes público-alvo da Educação Especial.",
@@ -677,19 +582,14 @@ const pne = [
         "Durante uma capacitação, foi solicitado aos participantes que identificassem a meta do PNE relacionada à universalização do acesso à educação básica e ao Atendimento Educacional Especializado para estudantes com deficiência, transtornos globais do desenvolvimento e altas habilidades/superdotação. A resposta correta é:",
 
     alternativas: [
-
         "Meta 2.",
-
         "Meta 3.",
-
-        "Meta 4.",
-
         "Meta 5.",
-
+        "Meta 4.",
         "Meta 6."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto:
         "Perfeito. A Meta 4 é a meta específica voltada à Educação Especial na perspectiva inclusiva.",
@@ -705,19 +605,14 @@ const pne = [
         "Durante uma reunião pedagógica, professores analisavam os resultados de alfabetização dos estudantes dos anos iniciais. Segundo a Meta 5 do PNE, todas as crianças devem estar alfabetizadas, no máximo, até o final:",
 
     alternativas: [
-
         "Da pré-escola.",
-
-        "Do 2º ano do Ensino Fundamental.",
-
         "Do 3º ano do Ensino Fundamental.",
-
+        "Do 2º ano do Ensino Fundamental.",
         "Do 5º ano do Ensino Fundamental.",
-
         "Do Ensino Fundamental."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto:
         "Correto. A Meta 5 estabelece a alfabetização de todas as crianças, no máximo, até o final do 3º ano do Ensino Fundamental.",
@@ -733,19 +628,14 @@ const pne = [
         "Uma rede de ensino implementou programas de leitura, escrita e acompanhamento pedagógico para garantir que todos os estudantes desenvolvam as competências básicas de alfabetização na idade adequada. Essa ação está alinhada principalmente à:",
 
     alternativas: [
-
-        "Meta 3 — Universalização do Ensino Médio.",
-
         "Meta 5 — Alfabetização das crianças.",
-
+        "Meta 3 — Universalização do Ensino Médio.",
         "Meta 6 — Educação Integral.",
-
         "Meta 9 — Redução do analfabetismo.",
-
         "Meta 12 — Educação Superior."
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto:
         "Correto. A Meta 5 trata especificamente da alfabetização das crianças nos anos iniciais do Ensino Fundamental.",
@@ -761,19 +651,14 @@ const pne = [
         "Ao analisar as metas do PNE, uma pedagoga observou que determinada política busca ampliar o tempo de permanência do estudante na escola, favorecendo seu desenvolvimento integral. Essa política está relacionada à:",
 
     alternativas: [
-
         "Meta 1 — Educação Infantil.",
-
         "Meta 5 — Alfabetização.",
-
-        "Meta 6 — Educação Integral.",
-
         "Meta 8 — Escolaridade média.",
-
+        "Meta 6 — Educação Integral.",
         "Meta 17 — Valorização docente."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto:
         "Correto. A Meta 6 prevê a oferta de educação em tempo integral em parte significativa das escolas públicas.",
@@ -789,19 +674,14 @@ const pne = [
         "Uma escola ampliou sua jornada diária, passando a oferecer atividades culturais, esportivas, científicas e de reforço pedagógico no contraturno. Essa iniciativa contribui diretamente para o cumprimento da:",
 
     alternativas: [
-
         "Meta 2 — Ensino Fundamental.",
-
         "Meta 4 — Educação Especial.",
-
-        "Meta 5 — Alfabetização.",
-
         "Meta 6 — Educação Integral.",
-
+        "Meta 5 — Alfabetização.",
         "Meta 11 — Educação Profissional."
     ],
 
-    correta: 3,
+    correta: 2,
 
     feedbackAcerto:
         "Correto. A Meta 6 busca ampliar a oferta de educação em tempo integral, favorecendo o desenvolvimento integral do estudante.",
@@ -817,19 +697,14 @@ const pne = [
         "Durante um curso de formação, um professor afirmou que alfabetização e educação integral são conceitos equivalentes. À luz do PNE, essa afirmação é incorreta porque:",
 
     alternativas: [
-
         "Ambos os conceitos pertencem à Meta 1.",
-
-        "Alfabetização refere-se à Meta 5, enquanto educação integral está associada à Meta 6.",
-
         "Alfabetização é tratada pela Meta 9 e educação integral pela Meta 12.",
-
         "Educação integral corresponde à Meta 5 e alfabetização à Meta 6.",
-
-        "Os dois conceitos pertencem exclusivamente à BNCC."
+        "Os dois conceitos pertencem exclusivamente à BNCC.",
+        "Alfabetização refere-se à Meta 5, enquanto educação integral está associada à Meta 6."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto:
         "Correto. A Meta 5 trata da alfabetização das crianças, enquanto a Meta 6 aborda a educação integral em tempo integral.",
@@ -901,19 +776,14 @@ const pne = [
         "Ao estudar as metas do PNE, um candidato observou que uma delas busca elevar a escolaridade média da população de 18 a 29 anos, especialmente entre grupos historicamente vulneráveis. Trata-se da:",
 
     alternativas: [
-
-        "Meta 4.",
-
-        "Meta 6.",
-
         "Meta 8.",
-
+        "Meta 4.",
+        "Meta 6.",
         "Meta 11.",
-
         "Meta 17."
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto:
         "Correto. A Meta 8 visa elevar a escolaridade média da população de 18 a 29 anos e reduzir desigualdades educacionais.",
@@ -929,19 +799,14 @@ const pne = [
         "Em determinado município foi implementado um programa voltado à alfabetização de jovens, adultos e idosos que não tiveram acesso à educação na idade apropriada. Essa iniciativa contribui principalmente para o cumprimento da:",
 
     alternativas: [
-
         "Meta 5 — Alfabetização das crianças.",
-
         "Meta 7 — Qualidade da Educação Básica.",
-
-        "Meta 9 — Erradicação do analfabetismo absoluto e redução do analfabetismo funcional.",
-
         "Meta 10 — Educação Profissional integrada à EJA.",
-
+        "Meta 9 — Erradicação do analfabetismo absoluto e redução do analfabetismo funcional.",
         "Meta 12 — Educação Superior."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto:
         "Correto. A Meta 9 trata especificamente da erradicação do analfabetismo absoluto e da redução do analfabetismo funcional.",
@@ -957,19 +822,14 @@ const pne = [
         "Uma rede pública passou a oferecer cursos técnicos integrados aos programas de Educação de Jovens e Adultos (EJA), ampliando as oportunidades de qualificação profissional dos estudantes. Essa medida está alinhada à:",
 
     alternativas: [
-
         "Meta 6 — Educação Integral.",
-
         "Meta 8 — Escolaridade média.",
-
         "Meta 9 — Erradicação do analfabetismo.",
-
-        "Meta 10 — EJA integrada à Educação Profissional.",
-
-        "Meta 11 — Educação Profissional Técnica de nível médio."
+        "Meta 11 — Educação Profissional Técnica de nível médio.",
+        "Meta 10 — EJA integrada à Educação Profissional."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto:
         "Correto. A Meta 10 estabelece que parte das matrículas da EJA seja integrada à Educação Profissional.",
@@ -1013,19 +873,14 @@ const pne = [
         "Uma universidade pública ampliou significativamente o número de vagas de graduação com o objetivo de democratizar o acesso ao ensino superior. Essa ação está alinhada principalmente à:",
 
     alternativas: [
-
         "Meta 11 — Educação Profissional.",
-
-        "Meta 12 — Expansão da Educação Superior.",
-
         "Meta 13 — Qualidade da Educação Superior.",
-
+        "Meta 12 — Expansão da Educação Superior.",
         "Meta 14 — Pós-graduação stricto sensu.",
-
         "Meta 17 — Valorização docente."
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto:
         "Correto. A Meta 12 busca elevar as taxas de matrícula na Educação Superior.",
@@ -1041,19 +896,14 @@ const pne = [
         "Ao avaliar os indicadores de uma instituição de ensino superior, observou-se a necessidade de aumentar a proporção de mestres e doutores no corpo docente. Essa preocupação está relacionada principalmente à:",
 
     alternativas: [
-
         "Meta 11 — Educação Profissional.",
-
         "Meta 12 — Expansão da Educação Superior.",
-
-        "Meta 13 — Qualidade da Educação Superior.",
-
         "Meta 14 — Pós-graduação stricto sensu.",
-
+        "Meta 13 — Qualidade da Educação Superior.",
         "Meta 18 — Plano de carreira."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto:
         "Correto. A Meta 13 busca elevar a qualidade da Educação Superior por meio da ampliação da proporção de mestres e doutores no corpo docente.",
@@ -1069,19 +919,14 @@ const pne = [
         "Uma política nacional pretende ampliar a formação de pesquisadores e fortalecer a produção científica do país por meio da expansão dos cursos de mestrado e doutorado. Essa medida está associada à:",
 
     alternativas: [
-
-        "Meta 11 — Educação Profissional.",
-
-        "Meta 12 — Educação Superior.",
-
-        "Meta 13 — Qualidade da Educação Superior.",
-
         "Meta 14 — Pós-graduação stricto sensu.",
-
+        "Meta 11 — Educação Profissional.",
+        "Meta 12 — Educação Superior.",
+        "Meta 13 — Qualidade da Educação Superior.",
         "Meta 15 — Formação inicial docente."
     ],
 
-    correta: 3,
+    correta: 0,
 
     feedbackAcerto:
         "Correto. A Meta 14 trata da expansão das matrículas em programas de mestrado e doutorado.",
@@ -1097,19 +942,14 @@ const pne = [
         "Um candidato a concurso elaborou o seguinte resumo: 'Meta 11 trata da Educação Profissional Técnica; Meta 12 da expansão da Educação Superior; Meta 13 da qualidade da Educação Superior; e Meta 14 da pós-graduação stricto sensu'. O resumo está:",
 
     alternativas: [
-
-        "Totalmente correto.",
-
         "Incorreto apenas em relação à Meta 11.",
-
         "Incorreto apenas em relação à Meta 12.",
-
         "Incorreto apenas em relação à Meta 13.",
-
-        "Incorreto apenas em relação à Meta 14."
+        "Incorreto apenas em relação à Meta 14.",
+        "Totalmente correto."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto:
         "Perfeito. O resumo apresenta corretamente os temas centrais das Metas 11, 12, 13 e 14 do PNE.",
@@ -1125,19 +965,14 @@ const pne = [
         "Durante uma auditoria educacional, verificou-se que parte dos professores da Educação Básica atuava em áreas diferentes de sua formação acadêmica. Para enfrentar esse problema, o PNE estabelece uma meta voltada à garantia de formação específica de nível superior para os docentes. Trata-se da:",
 
     alternativas: [
-
         "Meta 12 — Expansão da Educação Superior.",
-
         "Meta 14 — Pós-graduação stricto sensu.",
-
-        "Meta 15 — Formação inicial dos profissionais da educação.",
-
         "Meta 16 — Formação continuada dos professores.",
-
-        "Meta 17 — Valorização do magistério."
+        "Meta 17 — Valorização do magistério.",
+        "Meta 15 — Formação inicial dos profissionais da educação."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto:
         "Correto. A Meta 15 busca assegurar que todos os professores da Educação Básica possuam formação específica de nível superior na área em que atuam.",
@@ -1181,19 +1016,14 @@ const pne = [
         "Ao analisar a valorização dos profissionais da educação, uma comissão observou que o PNE prevê a equiparação do rendimento médio dos professores ao de outros profissionais com escolaridade equivalente. Essa determinação corresponde à:",
 
     alternativas: [
-
         "Meta 15 — Formação inicial.",
-
         "Meta 16 — Formação continuada.",
-
-        "Meta 17 — Valorização salarial do magistério.",
-
         "Meta 18 — Plano de carreira.",
-
+        "Meta 17 — Valorização salarial do magistério.",
         "Meta 20 — Financiamento da educação."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto:
         "Correto. A Meta 17 busca valorizar os profissionais do magistério por meio da equiparação de seus rendimentos aos de outros profissionais com escolaridade equivalente.",
@@ -1209,19 +1039,14 @@ const pne = [
         "Um município aprovou um novo plano de carreira para os profissionais da Educação Básica pública, tomando como referência o piso salarial profissional nacional. Essa medida está alinhada à:",
 
     alternativas: [
-
         "Meta 15 — Formação inicial.",
-
-        "Meta 16 — Formação continuada.",
-
-        "Meta 17 — Equiparação salarial.",
-
         "Meta 18 — Plano de carreira dos profissionais da educação.",
-
+        "Meta 16 — Formação continuada.",
+        "Meta 17 — Equiparação salarial.",
         "Meta 19 — Gestão democrática."
     ],
 
-    correta: 3,
+    correta: 1,
 
     feedbackAcerto:
         "Correto. A Meta 18 prevê a existência de planos de carreira para os profissionais da educação básica pública, tomando como referência o piso salarial nacional.",
@@ -1237,19 +1062,14 @@ const pne = [
         "Uma banca de concurso apresentou as seguintes associações: Meta 15 – formação inicial; Meta 16 – formação continuada; Meta 17 – valorização salarial; Meta 18 – plano de carreira. Assinale a alternativa correta.",
 
     alternativas: [
-
-        "Apenas as Metas 15 e 16 estão corretas.",
-
-        "Apenas as Metas 17 e 18 estão corretas.",
-
-        "Apenas as Metas 15, 16 e 17 estão corretas.",
-
         "Todas as associações estão corretas.",
-
+        "Apenas as Metas 15 e 16 estão corretas.",
+        "Apenas as Metas 17 e 18 estão corretas.",
+        "Apenas as Metas 15, 16 e 17 estão corretas.",
         "Nenhuma associação está correta."
     ],
 
-    correta: 3,
+    correta: 0,
 
     feedbackAcerto:
         "Perfeito. As quatro associações correspondem exatamente ao conteúdo das Metas 15 a 18 do PNE.",
@@ -1293,19 +1113,14 @@ const pne = [
         "Uma rede de ensino implantou mecanismos de consulta à comunidade para escolha de diretores escolares e fortalecimento dos conselhos escolares. Essa iniciativa está mais diretamente associada à:",
 
     alternativas: [
-
         "Meta 15 — Formação inicial.",
-
         "Meta 16 — Formação continuada.",
-
         "Meta 17 — Valorização salarial.",
-
-        "Meta 19 — Gestão democrática.",
-
-        "Meta 20 — Investimento público."
+        "Meta 20 — Investimento público.",
+        "Meta 19 — Gestão democrática."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto:
         "Correto. A Meta 19 busca assegurar condições para a efetivação da gestão democrática da educação.",
@@ -1321,19 +1136,14 @@ const pne = [
         "Ao analisar o financiamento da educação, um candidato identificou a meta do PNE que prevê a ampliação do investimento público em educação pública até atingir percentual expressivo do Produto Interno Bruto (PIB). Trata-se da:",
 
     alternativas: [
-
         "Meta 12 — Educação Superior.",
-
+        "Meta 20 — Financiamento da educação.",
         "Meta 17 — Valorização do magistério.",
-
         "Meta 18 — Plano de carreira.",
-
-        "Meta 19 — Gestão democrática.",
-
-        "Meta 20 — Financiamento da educação."
+        "Meta 19 — Gestão democrática."
     ],
 
-    correta: 4,
+    correta: 1,
 
     feedbackAcerto:
         "Correto. A Meta 20 trata da ampliação do investimento público em educação pública.",
@@ -1377,19 +1187,14 @@ const pne = [
         "Um estudante elaborou o seguinte resumo das últimas metas do PNE: 'Meta 19: gestão democrática da educação. Meta 20: ampliação do investimento público em educação pública'. Considerando a Lei nº 13.005/2014, esse resumo está:",
 
     alternativas: [
-
-        "Correto apenas quanto à Meta 19.",
-
-        "Correto apenas quanto à Meta 20.",
-
-        "Incorreto em ambas as metas.",
-
         "Correto em ambas as metas.",
-
+        "Correto apenas quanto à Meta 19.",
+        "Correto apenas quanto à Meta 20.",
+        "Incorreto em ambas as metas.",
         "Correto apenas parcialmente, pois a Meta 20 trata de formação docente."
     ],
 
-    correta: 3,
+    correta: 0,
 
     feedbackAcerto:
         "Perfeito. As associações apresentadas correspondem exatamente aos conteúdos das Metas 19 e 20 do PNE.",
@@ -1399,7 +1204,4 @@ const pne = [
 
     dicaBanca:
         "19 = gestão democrática; 20 = financiamento."
-}
-
-
-];
+}];

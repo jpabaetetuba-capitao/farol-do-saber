@@ -4,14 +4,14 @@ const ldb = [
 pergunta: "Durante uma reunião pedagógica, um professor afirmou que a educação ocorre em diferentes espaços sociais e não apenas nas instituições escolares. Ao analisar essa afirmação à luz da LDB, conclui-se que ela está correta porque a educação compreende processos formativos desenvolvidos:",
 
 alternativas: [
-"Nas instituições escolares, nos ambientes de trabalho e nos espaços destinados à formação profissional regulamentada.",
-"Na vida familiar, na convivência humana, no trabalho, nas instituições de ensino e pesquisa, nos movimentos sociais, nas organizações da sociedade civil e nas manifestações culturais.",
-"Nos sistemas formais de ensino reconhecidos pelo poder público e nos programas educacionais complementares oferecidos pela sociedade.",
-"Nas instituições educacionais, nos espaços culturais e nas organizações sociais responsáveis pela formação da cidadania.",
-"Nos ambientes escolares e comunitários que promovam experiências de aprendizagem voltadas ao desenvolvimento humano."
+        "Nas instituições escolares, nos ambientes de trabalho e nos espaços destinados à formação profissional regulamentada.",
+        "Nos sistemas formais de ensino reconhecidos pelo poder público e nos programas educacionais complementares oferecidos pela sociedade.",
+        "Nas instituições educacionais, nos espaços culturais e nas organizações sociais responsáveis pela formação da cidadania.",
+        "Nos ambientes escolares e comunitários que promovam experiências de aprendizagem voltadas ao desenvolvimento humano.",
+        "Na vida familiar, na convivência humana, no trabalho, nas instituições de ensino e pesquisa, nos movimentos sociais, nas organizações da sociedade civil e nas manifestações culturais."
 ],
 
-correta: 1,
+correta: 4,
 
 feedbackAcerto: "Correto. A LDB adota uma concepção ampla de educação, reconhecendo múltiplos espaços de formação humana.",
 
@@ -24,14 +24,14 @@ dicaBanca: "Educação é mais ampla que educação escolar."
 pergunta: "Durante um debate sobre a função social da escola, uma equipe pedagógica analisava os objetivos atribuídos à educação nacional pela LDB. Nesse contexto, a finalidade da educação consiste em:",
 
 alternativas: [
-"Promover o desenvolvimento intelectual dos estudantes e sua preparação para o ingresso no mundo do trabalho.",
-"Favorecer a construção da cidadania e o desenvolvimento das competências necessárias à vida em sociedade.",
-"Promover o pleno desenvolvimento do educando, seu preparo para o exercício da cidadania e sua qualificação para o trabalho.",
-"Desenvolver conhecimentos acadêmicos indispensáveis à continuidade dos estudos e à participação social.",
-"Preparar os estudantes para o exercício profissional e para o desempenho de suas responsabilidades sociais."
+        "Promover o desenvolvimento intelectual dos estudantes e sua preparação para o ingresso no mundo do trabalho.",
+        "Promover o pleno desenvolvimento do educando, seu preparo para o exercício da cidadania e sua qualificação para o trabalho.",
+        "Favorecer a construção da cidadania e o desenvolvimento das competências necessárias à vida em sociedade.",
+        "Desenvolver conhecimentos acadêmicos indispensáveis à continuidade dos estudos e à participação social.",
+        "Preparar os estudantes para o exercício profissional e para o desempenho de suas responsabilidades sociais."
 ],
 
-correta: 2,
+correta: 1,
 
 feedbackAcerto: "Correto. A finalidade da educação prevista na LDB reúne três elementos inseparáveis: desenvolvimento, cidadania e trabalho.",
 
@@ -44,14 +44,14 @@ dicaBanca: "Desenvolvimento + cidadania + trabalho."
 pergunta: "Ao elaborar o Projeto Político-Pedagógico, uma escola decidiu adotar estratégias que assegurassem igualdade de oportunidades para estudantes de diferentes contextos sociais. Essa decisão está alinhada ao princípio da LDB que garante:",
 
 alternativas: [
-"A universalização dos conteúdos curriculares essenciais para todos os estudantes da Educação Básica.",
-"Condições adequadas para o desenvolvimento das aprendizagens previstas nos currículos escolares.",
-"Critérios comuns de acesso às instituições públicas responsáveis pela oferta da educação escolar.",
-"Diversificação das estratégias pedagógicas destinadas à melhoria dos indicadores educacionais.",
-"Igualdade de condições para o acesso e permanência na escola."
+        "A universalização dos conteúdos curriculares essenciais para todos os estudantes da Educação Básica.",
+        "Condições adequadas para o desenvolvimento das aprendizagens previstas nos currículos escolares.",
+        "Critérios comuns de acesso às instituições públicas responsáveis pela oferta da educação escolar.",
+        "Igualdade de condições para o acesso e permanência na escola.",
+        "Diversificação das estratégias pedagógicas destinadas à melhoria dos indicadores educacionais."
 ],
 
-correta: 4,
+correta: 3,
 
 feedbackAcerto: "Correto. A igualdade de condições para acesso e permanência constitui princípio expresso da LDB.",
 
@@ -64,14 +64,14 @@ dicaBanca: "Acesso + permanência = princípio clássico da LDB."
 pergunta: "Durante uma audiência pública sobre políticas educacionais, discutia-se a responsabilidade do Estado em relação à educação básica. Segundo a LDB, esse dever será efetivado mediante a garantia de:",
 
 alternativas: [
-"Educação básica gratuita em instituições públicas destinadas aos estudantes em idade escolar obrigatória.",
-"Educação obrigatória voltada à formação básica necessária ao exercício da cidadania e da vida profissional.",
-"Educação básica obrigatória e gratuita dos 4 aos 17 anos de idade, organizada segundo as normas nacionais de educação.",
-"Educação gratuita assegurada aos estudantes matriculados nas redes públicas de ensino durante a escolaridade obrigatória.",
-"Educação básica universal destinada às crianças e adolescentes em processo regular de escolarização."
+        "Educação básica obrigatória e gratuita dos 4 aos 17 anos de idade, organizada segundo as normas nacionais de educação.",
+        "Educação básica gratuita em instituições públicas destinadas aos estudantes em idade escolar obrigatória.",
+        "Educação obrigatória voltada à formação básica necessária ao exercício da cidadania e da vida profissional.",
+        "Educação gratuita assegurada aos estudantes matriculados nas redes públicas de ensino durante a escolaridade obrigatória.",
+        "Educação básica universal destinada às crianças e adolescentes em processo regular de escolarização."
 ],
 
-correta: 2,
+correta: 0,
 
 feedbackAcerto: "Correto. A LDB estabelece educação básica obrigatória e gratuita dos 4 aos 17 anos.",
 
@@ -104,14 +104,14 @@ dicaBanca: "Direito público subjetivo = exigível judicialmente."
 pergunta: "Durante um seminário sobre políticas educacionais, discutia-se a organização da educação nacional. Um dos participantes afirmou que a oferta educacional no Brasil depende da atuação articulada dos diferentes entes federativos. Essa afirmação está relacionada ao princípio da:",
 
 alternativas: [
-"Descentralização administrativa dos sistemas de ensino vinculada às diretrizes curriculares nacionais.",
-"Cooperação entre instituições educacionais responsáveis pela execução das políticas públicas de ensino.",
-"Gestão compartilhada das redes escolares mantidas pelos diferentes sistemas educacionais.",
-"Articulação dos sistemas de ensino por meio do regime de colaboração entre União, Estados, Distrito Federal e Municípios.",
-"Integração das políticas educacionais voltadas ao desenvolvimento das diferentes etapas da Educação Básica."
+        "Descentralização administrativa dos sistemas de ensino vinculada às diretrizes curriculares nacionais.",
+        "Cooperação entre instituições educacionais responsáveis pela execução das políticas públicas de ensino.",
+        "Articulação dos sistemas de ensino por meio do regime de colaboração entre União, Estados, Distrito Federal e Municípios.",
+        "Gestão compartilhada das redes escolares mantidas pelos diferentes sistemas educacionais.",
+        "Integração das políticas educacionais voltadas ao desenvolvimento das diferentes etapas da Educação Básica."
 ],
 
-correta: 3,
+correta: 2,
 
 feedbackAcerto: "Correto. A LDB prevê a organização da educação nacional com base no regime de colaboração entre os entes federativos.",
 
@@ -124,14 +124,14 @@ dicaBanca: "Regime de colaboração = União + Estados + DF + Municípios."
 pergunta: "Ao analisar a estrutura da educação escolar brasileira, uma professora observou que a LDB organiza a educação em dois níveis principais. Essa observação está correta porque a educação escolar é composta por:",
 
 alternativas: [
-"Educação Infantil e Ensino Fundamental, complementados pela Educação Superior.",
-"Educação Básica e Educação Superior, organizadas segundo finalidades e características próprias.",
-"Educação Básica, Educação Profissional e Educação Superior, distribuídas em níveis independentes.",
-"Educação Infantil, Ensino Fundamental, Ensino Médio e Educação Superior, considerados níveis equivalentes.",
-"Educação Básica obrigatória e Educação Superior facultativa, articuladas pelos sistemas de ensino."
+        "Educação Infantil e Ensino Fundamental, complementados pela Educação Superior.",
+        "Educação Básica, Educação Profissional e Educação Superior, distribuídas em níveis independentes.",
+        "Educação Infantil, Ensino Fundamental, Ensino Médio e Educação Superior, considerados níveis equivalentes.",
+        "Educação Básica e Educação Superior, organizadas segundo finalidades e características próprias.",
+        "Educação Básica obrigatória e Educação Superior facultativa, articuladas pelos sistemas de ensino."
 ],
 
-correta: 1,
+correta: 3,
 
 feedbackAcerto: "Correto. A LDB estabelece dois níveis: Educação Básica e Educação Superior.",
 
@@ -144,14 +144,14 @@ dicaBanca: "Níveis = Educação Básica + Educação Superior."
 pergunta: "Durante uma formação continuada, os professores discutiam a composição da Educação Básica prevista na LDB. Ao final do encontro, concluiu-se corretamente que ela é formada por:",
 
 alternativas: [
-"Educação Infantil, Ensino Fundamental e Ensino Médio, organizados de forma articulada e progressiva.",
-"Educação Infantil, Ensino Fundamental e Educação Profissional, responsáveis pela formação básica do cidadão.",
-"Ensino Fundamental e Ensino Médio, complementados por modalidades destinadas a públicos específicos.",
-"Educação Infantil, Ensino Fundamental, Ensino Médio e Educação Profissional Técnica de Nível Médio.",
-"Educação Infantil e Ensino Fundamental, responsáveis pelas aprendizagens essenciais da escolarização obrigatória."
+        "Educação Infantil, Ensino Fundamental e Educação Profissional, responsáveis pela formação básica do cidadão.",
+        "Ensino Fundamental e Ensino Médio, complementados por modalidades destinadas a públicos específicos.",
+        "Educação Infantil, Ensino Fundamental, Ensino Médio e Educação Profissional Técnica de Nível Médio.",
+        "Educação Infantil e Ensino Fundamental, responsáveis pelas aprendizagens essenciais da escolarização obrigatória.",
+        "Educação Infantil, Ensino Fundamental e Ensino Médio, organizados de forma articulada e progressiva."
 ],
 
-correta: 0,
+correta: 4,
 
 feedbackAcerto: "Correto. A Educação Básica é composta por Educação Infantil, Ensino Fundamental e Ensino Médio.",
 
@@ -164,14 +164,14 @@ dicaBanca: "Educação Básica = Infantil + Fundamental + Médio."
 pergunta: "Ao discutir as atribuições da União na organização da educação nacional, uma equipe gestora concluiu corretamente que compete a esse ente federativo:",
 
 alternativas: [
-"Administrar diretamente os estabelecimentos de ensino mantidos pelos sistemas estaduais e municipais.",
-"Elaborar os currículos das redes públicas e privadas de ensino em todo o território nacional.",
-"Coordenar a política nacional de educação, exercendo funções normativas, redistributivas e supletivas.",
-"Organizar e manter prioritariamente a Educação Infantil e o Ensino Fundamental em âmbito nacional.",
-"Definir as propostas pedagógicas das instituições educacionais integrantes dos diferentes sistemas de ensino."
+        "Coordenar a política nacional de educação, exercendo funções normativas, redistributivas e supletivas.",
+        "Administrar diretamente os estabelecimentos de ensino mantidos pelos sistemas estaduais e municipais.",
+        "Elaborar os currículos das redes públicas e privadas de ensino em todo o território nacional.",
+        "Organizar e manter prioritariamente a Educação Infantil e o Ensino Fundamental em âmbito nacional.",
+        "Definir as propostas pedagógicas das instituições educacionais integrantes dos diferentes sistemas de ensino."
 ],
 
-correta: 2,
+correta: 0,
 
 feedbackAcerto: "Correto. A União coordena a política nacional de educação e exerce funções normativas, redistributivas e supletivas.",
 
@@ -184,14 +184,14 @@ dicaBanca: "União = coordenação nacional + função normativa."
 pergunta: "Durante uma reunião entre gestores educacionais, discutia-se a responsabilidade dos Estados na oferta educacional. Segundo a LDB, uma incumbência dos Estados consiste em:",
 
 alternativas: [
-"Organizar, manter e desenvolver os órgãos e instituições oficiais dos respectivos sistemas de ensino.",
-"Coordenar nacionalmente a política educacional e estabelecer diretrizes para todos os sistemas de ensino.",
-"Atuar prioritariamente na oferta da Educação Infantil e garantir a universalização das creches.",
-"Elaborar as diretrizes curriculares nacionais aplicáveis a toda a Educação Básica.",
-"Definir os objetivos gerais da educação nacional e supervisionar diretamente os sistemas municipais."
+        "Coordenar nacionalmente a política educacional e estabelecer diretrizes para todos os sistemas de ensino.",
+        "Organizar, manter e desenvolver os órgãos e instituições oficiais dos respectivos sistemas de ensino.",
+        "Atuar prioritariamente na oferta da Educação Infantil e garantir a universalização das creches.",
+        "Elaborar as diretrizes curriculares nacionais aplicáveis a toda a Educação Básica.",
+        "Definir os objetivos gerais da educação nacional e supervisionar diretamente os sistemas municipais."
 ],
 
-correta: 0,
+correta: 1,
 
 feedbackAcerto: "Correto. Os Estados são responsáveis pela organização e manutenção de seus sistemas de ensino.",
 
@@ -203,14 +203,14 @@ dicaBanca: "Estado = sistema estadual de ensino."
 pergunta: "Durante uma reunião entre gestores municipais, discutia-se a responsabilidade dos Municípios na organização da educação nacional. Segundo a LDB, a atuação prioritária dos Municípios deve ocorrer:",
 
 alternativas: [
-"Na Educação Infantil e no Ensino Fundamental, sem prejuízo da atuação em outros níveis quando atendidas plenamente as necessidades de sua área de competência.",
-"Na Educação Infantil, sendo o Ensino Fundamental compartilhado exclusivamente com os Estados mediante convênios específicos.",
-"No Ensino Fundamental obrigatório, cabendo a oferta da Educação Infantil apenas quando houver disponibilidade orçamentária.",
-"Na Educação Infantil e no Ensino Fundamental, observadas as diretrizes estabelecidas pelos sistemas estaduais de ensino.",
-"No Ensino Fundamental e no Ensino Médio, especialmente em regiões onde não exista rede estadual estruturada."
+        "Na Educação Infantil, sendo o Ensino Fundamental compartilhado exclusivamente com os Estados mediante convênios específicos.",
+        "No Ensino Fundamental obrigatório, cabendo a oferta da Educação Infantil apenas quando houver disponibilidade orçamentária.",
+        "Na Educação Infantil e no Ensino Fundamental, sem prejuízo da atuação em outros níveis quando atendidas plenamente as necessidades de sua área de competência.",
+        "Na Educação Infantil e no Ensino Fundamental, observadas as diretrizes estabelecidas pelos sistemas estaduais de ensino.",
+        "No Ensino Fundamental e no Ensino Médio, especialmente em regiões onde não exista rede estadual estruturada."
 ],
 
-correta: 0,
+correta: 2,
 
 feedbackAcerto: "Correto. A LDB estabelece que os Municípios atuarão prioritariamente na Educação Infantil e no Ensino Fundamental.",
 
@@ -223,14 +223,14 @@ dicaBanca: "Município = Educação Infantil + Ensino Fundamental."
 pergunta: "Ao analisar a organização dos sistemas de ensino, uma professora observou que o Distrito Federal reúne competências normalmente atribuídas a diferentes entes federativos. Essa característica decorre do fato de que o Distrito Federal:",
 
 alternativas: [
-"Exerce simultaneamente competências educacionais próprias dos Estados e dos Municípios em seu sistema de ensino.",
-"Possui sistema de ensino subordinado diretamente às diretrizes operacionais definidas pela União.",
-"Atua prioritariamente na oferta do Ensino Médio, compartilhando as demais etapas com os Municípios.",
-"Coordena as políticas educacionais regionais em articulação com os sistemas estaduais vizinhos.",
-"Organiza seu sistema educacional mediante delegação das competências atribuídas constitucionalmente à União."
+        "Possui sistema de ensino subordinado diretamente às diretrizes operacionais definidas pela União.",
+        "Atua prioritariamente na oferta do Ensino Médio, compartilhando as demais etapas com os Municípios.",
+        "Coordena as políticas educacionais regionais em articulação com os sistemas estaduais vizinhos.",
+        "Organiza seu sistema educacional mediante delegação das competências atribuídas constitucionalmente à União.",
+        "Exerce simultaneamente competências educacionais próprias dos Estados e dos Municípios em seu sistema de ensino."
 ],
 
-correta: 0,
+correta: 4,
 
 feedbackAcerto: "Correto. O Distrito Federal acumula competências educacionais de Estado e Município.",
 
@@ -243,14 +243,14 @@ dicaBanca: "DF = competências de Estado + Município."
 pergunta: "Uma família procurou a rede pública para matricular uma criança em idade de escolaridade obrigatória, mas não encontrou vaga disponível. Nessa situação, a LDB assegura proteção especial ao estudante porque o acesso à educação básica obrigatória constitui:",
 
 alternativas: [
-"Direito social cuja efetivação depende da disponibilidade orçamentária do sistema de ensino responsável.",
-"Direito educacional assegurado aos estudantes regularmente inscritos nos sistemas públicos de ensino.",
-"Direito público subjetivo que pode ser exigido judicialmente pelo cidadão perante o Poder Público.",
-"Direito fundamental vinculado à capacidade de atendimento das instituições educacionais existentes.",
-"Direito coletivo cuja garantia depende de planejamento prévio dos órgãos responsáveis pela oferta educacional."
+        "Direito social cuja efetivação depende da disponibilidade orçamentária do sistema de ensino responsável.",
+        "Direito educacional assegurado aos estudantes regularmente inscritos nos sistemas públicos de ensino.",
+        "Direito fundamental vinculado à capacidade de atendimento das instituições educacionais existentes.",
+        "Direito público subjetivo que pode ser exigido judicialmente pelo cidadão perante o Poder Público.",
+        "Direito coletivo cuja garantia depende de planejamento prévio dos órgãos responsáveis pela oferta educacional."
 ],
 
-correta: 2,
+correta: 3,
 
 feedbackAcerto: "Correto. O acesso à educação básica obrigatória é direito público subjetivo e pode ser exigido judicialmente.",
 
@@ -302,14 +302,14 @@ dicaBanca: "AEE = preferencialmente na rede regular."
 pergunta: "Durante a revisão do Projeto Político-Pedagógico, a direção escolar decidiu envolver professores, funcionários, estudantes e famílias nas discussões sobre os objetivos e prioridades da instituição. Essa iniciativa está alinhada à LDB porque a gestão democrática pressupõe:",
 
 alternativas: [
-"A participação dos diferentes segmentos da comunidade escolar nos processos de planejamento e tomada de decisões da instituição.",
-"A consulta periódica à comunidade escolar para validação das decisões previamente definidas pela equipe gestora.",
-"A descentralização administrativa das atividades escolares com foco na melhoria dos indicadores educacionais.",
-"A autonomia das equipes pedagógicas para definir os objetivos institucionais sem interferência dos órgãos administrativos.",
-"A colaboração entre os profissionais da educação na execução das atividades previstas pelo sistema de ensino."
+        "A consulta periódica à comunidade escolar para validação das decisões previamente definidas pela equipe gestora.",
+        "A descentralização administrativa das atividades escolares com foco na melhoria dos indicadores educacionais.",
+        "A autonomia das equipes pedagógicas para definir os objetivos institucionais sem interferência dos órgãos administrativos.",
+        "A participação dos diferentes segmentos da comunidade escolar nos processos de planejamento e tomada de decisões da instituição.",
+        "A colaboração entre os profissionais da educação na execução das atividades previstas pelo sistema de ensino."
 ],
 
-correta: 0,
+correta: 3,
 
 feedbackAcerto: "Correto. A gestão democrática pressupõe participação efetiva da comunidade escolar nos processos decisórios da instituição.",
 
@@ -322,14 +322,14 @@ dicaBanca: "Gestão democrática = participação real."
 pergunta: "Durante uma formação continuada, os professores discutiam o papel do Projeto Político-Pedagógico na organização da escola. Segundo a LDB, esse documento deve ser compreendido como:",
 
 alternativas: [
-"Instrumento de planejamento que expressa a identidade da escola e orienta suas ações pedagógicas e administrativas.",
-"Documento normativo elaborado pelos sistemas de ensino para garantir a uniformidade curricular entre as instituições escolares.",
-"Plano de gestão destinado à definição das metas administrativas e financeiras das unidades educacionais.",
-"Referencial pedagógico elaborado pelos órgãos centrais de educação para orientar o funcionamento das escolas públicas.",
-"Documento institucional voltado ao acompanhamento dos indicadores de desempenho e qualidade da educação."
+        "Documento normativo elaborado pelos sistemas de ensino para garantir a uniformidade curricular entre as instituições escolares.",
+        "Plano de gestão destinado à definição das metas administrativas e financeiras das unidades educacionais.",
+        "Instrumento de planejamento que expressa a identidade da escola e orienta suas ações pedagógicas e administrativas.",
+        "Referencial pedagógico elaborado pelos órgãos centrais de educação para orientar o funcionamento das escolas públicas.",
+        "Documento institucional voltado ao acompanhamento dos indicadores de desempenho e qualidade da educação."
 ],
 
-correta: 0,
+correta: 2,
 
 feedbackAcerto: "Correto. O PPP expressa a identidade da escola e orienta suas ações educativas.",
 
@@ -382,14 +382,14 @@ dicaBanca: "Conselho Escolar = gestão democrática."
 pergunta: "Durante uma auditoria pedagógica, verificou-se que determinada escola elaborava regularmente sua proposta pedagógica, acompanhava o trabalho docente e promovia ações voltadas à melhoria da aprendizagem. Essas atividades correspondem às incumbências dos estabelecimentos de ensino porque a LDB determina que as escolas devem:",
 
 alternativas: [
-"Elaborar e executar sua proposta pedagógica, assegurando condições para o desenvolvimento do processo educativo.",
-"Implementar as diretrizes curriculares nacionais conforme os procedimentos definidos pelos órgãos centrais de educação.",
-"Organizar os currículos escolares de acordo com os parâmetros estabelecidos pelos respectivos sistemas de ensino.",
-"Coordenar a atuação dos profissionais da educação em consonância com os objetivos educacionais previstos em lei.",
-"Planejar e supervisionar as ações pedagógicas necessárias ao cumprimento das metas institucionais."
+        "Implementar as diretrizes curriculares nacionais conforme os procedimentos definidos pelos órgãos centrais de educação.",
+        "Organizar os currículos escolares de acordo com os parâmetros estabelecidos pelos respectivos sistemas de ensino.",
+        "Coordenar a atuação dos profissionais da educação em consonância com os objetivos educacionais previstos em lei.",
+        "Planejar e supervisionar as ações pedagógicas necessárias ao cumprimento das metas institucionais.",
+        "Elaborar e executar sua proposta pedagógica, assegurando condições para o desenvolvimento do processo educativo."
 ],
 
-correta: 0,
+correta: 4,
 
 feedbackAcerto: "Correto. Elaborar e executar a proposta pedagógica é uma das principais incumbências da escola previstas na LDB.",
 
@@ -401,14 +401,14 @@ dicaBanca: "Escola = elaborar e executar sua proposta pedagógica."
 pergunta: "Durante o início do ano letivo, uma professora participou da elaboração do planejamento pedagógico da escola, definiu estratégias de ensino e organizou atividades de acompanhamento da aprendizagem. Essas ações estão alinhadas às incumbências dos docentes previstas na LDB porque compete ao professor:",
 
 alternativas: [
-"Participar da elaboração da proposta pedagógica da escola e elaborar seu plano de trabalho em consonância com as diretrizes institucionais.",
-"Executar as orientações curriculares definidas pelos sistemas de ensino e supervisionar o cumprimento das metas educacionais.",
-"Coordenar os processos de avaliação institucional e organizar as atividades de formação dos demais profissionais da escola.",
-"Planejar as atividades pedagógicas de sua área de atuação e acompanhar a implementação do projeto pedagógico da rede de ensino.",
-"Conduzir o processo de ensino-aprendizagem observando os parâmetros curriculares estabelecidos pelos órgãos competentes."
+        "Executar as orientações curriculares definidas pelos sistemas de ensino e supervisionar o cumprimento das metas educacionais.",
+        "Coordenar os processos de avaliação institucional e organizar as atividades de formação dos demais profissionais da escola.",
+        "Planejar as atividades pedagógicas de sua área de atuação e acompanhar a implementação do projeto pedagógico da rede de ensino.",
+        "Participar da elaboração da proposta pedagógica da escola e elaborar seu plano de trabalho em consonância com as diretrizes institucionais.",
+        "Conduzir o processo de ensino-aprendizagem observando os parâmetros curriculares estabelecidos pelos órgãos competentes."
 ],
 
-correta: 0,
+correta: 3,
 
 feedbackAcerto: "Correto. A LDB prevê expressamente a participação do docente na elaboração da proposta pedagógica e a elaboração de seu plano de trabalho.",
 
@@ -421,14 +421,14 @@ dicaBanca: "Art. 13 = proposta pedagógica + plano de trabalho."
 pergunta: "Ao acompanhar o rendimento de uma turma, uma professora identificou dificuldades persistentes em parte dos estudantes e decidiu reorganizar suas estratégias de ensino. Essa conduta está de acordo com a LDB porque é incumbência do docente:",
 
 alternativas: [
-"Aplicar instrumentos avaliativos destinados à verificação periódica do desempenho dos estudantes.",
-"Estabelecer mecanismos de recuperação paralela destinados aos estudantes com baixo rendimento escolar.",
-"Cuidar da aprendizagem dos alunos e estabelecer estratégias de recuperação para aqueles de menor rendimento.",
-"Diversificar metodologias de ensino em função das necessidades identificadas durante o processo avaliativo.",
-"E) Desenvolver ações pedagógicas voltadas à melhoria dos indicadores de aprendizagem da instituição."
+        "Cuidar da aprendizagem dos alunos e estabelecer estratégias de recuperação para aqueles de menor rendimento.",
+        "Aplicar instrumentos avaliativos destinados à verificação periódica do desempenho dos estudantes.",
+        "Estabelecer mecanismos de recuperação paralela destinados aos estudantes com baixo rendimento escolar.",
+        "Diversificar metodologias de ensino em função das necessidades identificadas durante o processo avaliativo.",
+        "E) Desenvolver ações pedagógicas voltadas à melhoria dos indicadores de aprendizagem da instituição."
 ],
 
-correta: 2,
+correta: 0,
 
 feedbackAcerto: "Correto. A LDB determina que o docente deve zelar pela aprendizagem dos alunos e estabelecer estratégias de recuperação para os de menor rendimento.",
 
@@ -441,14 +441,14 @@ dicaBanca: "Aprendizagem + recuperação = dever docente."
 pergunta: "Durante uma reunião pedagógica, discutia-se a participação dos professores em momentos de planejamento, avaliação institucional e formação continuada. Segundo a LDB, essa participação:",
 
 alternativas: [
-"Constitui atribuição complementar dos docentes, condicionada às necessidades identificadas pela gestão escolar.",
-"Representa dever profissional associado ao desenvolvimento das atividades pedagógicas e ao aperfeiçoamento do ensino.",
-"Depende das diretrizes estabelecidas pelos respectivos sistemas de ensino para cada etapa da Educação Básica.",
-"Relaciona-se à autonomia profissional dos docentes para definir sua participação nas atividades institucionais.",
-"Corresponde a uma prática recomendada para fortalecer a integração entre currículo e avaliação."
+        "Constitui atribuição complementar dos docentes, condicionada às necessidades identificadas pela gestão escolar.",
+        "Depende das diretrizes estabelecidas pelos respectivos sistemas de ensino para cada etapa da Educação Básica.",
+        "Representa dever profissional associado ao desenvolvimento das atividades pedagógicas e ao aperfeiçoamento do ensino.",
+        "Relaciona-se à autonomia profissional dos docentes para definir sua participação nas atividades institucionais.",
+        "Corresponde a uma prática recomendada para fortalecer a integração entre currículo e avaliação."
 ],
 
-correta: 1,
+correta: 2,
 
 feedbackAcerto: "Correto. A LDB prevê a participação integral dos docentes nos períodos dedicados ao planejamento, avaliação e desenvolvimento profissional.",
 
@@ -461,14 +461,14 @@ dicaBanca: "Planejamento + avaliação + formação = obrigação docente."
 pergunta: "Ao analisar as disposições da LDB sobre formação docente, um grupo de professores concluiu corretamente que a regra geral para atuação na Educação Básica é a formação:",
 
 alternativas: [
-"Em nível superior, em curso de licenciatura plena, oferecido por instituição devidamente reconhecida.",
-"Em programas específicos de formação pedagógica voltados às áreas de conhecimento da Educação Básica.",
-"Em cursos de graduação destinados à formação de profissionais da educação para atuação em contextos escolares.",
-"Por meio de formação inicial complementada por programas permanentes de desenvolvimento profissional.",
-"Em cursos superiores voltados à preparação dos profissionais responsáveis pelas atividades educacionais."
+        "Em programas específicos de formação pedagógica voltados às áreas de conhecimento da Educação Básica.",
+        "Em cursos de graduação destinados à formação de profissionais da educação para atuação em contextos escolares.",
+        "Por meio de formação inicial complementada por programas permanentes de desenvolvimento profissional.",
+        "Em cursos superiores voltados à preparação dos profissionais responsáveis pelas atividades educacionais.",
+        "Em nível superior, em curso de licenciatura plena, oferecido por instituição devidamente reconhecida."
 ],
 
-correta: 0,
+correta: 4,
 
 feedbackAcerto: "Correto. A regra geral da LDB é a formação em nível superior, em curso de licenciatura plena.",
 
@@ -481,14 +481,14 @@ dicaBanca: "Regra geral = licenciatura plena."
 pergunta: "Durante um debate sobre valorização dos profissionais da educação, discutiam-se medidas necessárias para garantir melhores condições de trabalho e desenvolvimento profissional. Segundo a LDB, a valorização dos profissionais da educação está associada, entre outros aspectos, à:",
 
 alternativas: [
-"Implementação de políticas de formação continuada articuladas à melhoria das condições de trabalho e ao desenvolvimento da carreira.",
-"Organização de programas de aperfeiçoamento destinados ao atendimento das demandas pedagógicas identificadas pelos sistemas de ensino.",
-"Promoção de ações institucionais voltadas ao fortalecimento da qualidade do ensino e do desempenho profissional.",
-"Ampliação das oportunidades de qualificação associadas às necessidades educacionais das diferentes etapas de ensino.",
-"Construção de estratégias de desenvolvimento profissional vinculadas às metas educacionais estabelecidas pelos sistemas escolares."
+        "Organização de programas de aperfeiçoamento destinados ao atendimento das demandas pedagógicas identificadas pelos sistemas de ensino.",
+        "Implementação de políticas de formação continuada articuladas à melhoria das condições de trabalho e ao desenvolvimento da carreira.",
+        "Promoção de ações institucionais voltadas ao fortalecimento da qualidade do ensino e do desempenho profissional.",
+        "Ampliação das oportunidades de qualificação associadas às necessidades educacionais das diferentes etapas de ensino.",
+        "Construção de estratégias de desenvolvimento profissional vinculadas às metas educacionais estabelecidas pelos sistemas escolares."
 ],
 
-correta: 0,
+correta: 1,
 
 feedbackAcerto: "Correto. A valorização profissional envolve formação continuada, carreira e condições adequadas de trabalho.",
 
@@ -540,14 +540,14 @@ dicaBanca: "Creche = até 3 anos."
 pergunta: "Durante uma capacitação sobre a Educação Infantil, uma professora destacou que a pré-escola possui público específico definido em lei. Segundo a LDB, a pré-escola destina-se às crianças:",
 
 alternativas: [
-"De quatro a seis anos de idade, constituindo etapa preparatória para o Ensino Fundamental.",
-"De quatro a cinco anos de idade, integrando a Educação Infantil como segunda etapa de atendimento.",
-"De quatro a cinco anos de idade, com foco no desenvolvimento integral e nas experiências próprias da infância.",
-"De quatro anos completos até o ingresso obrigatório no Ensino Fundamental.",
-"De quatro a cinco anos, observadas as especificidades do desenvolvimento infantil e das aprendizagens essenciais."
+        "De quatro a seis anos de idade, constituindo etapa preparatória para o Ensino Fundamental.",
+        "De quatro a cinco anos de idade, com foco no desenvolvimento integral e nas experiências próprias da infância.",
+        "De quatro a cinco anos de idade, integrando a Educação Infantil como segunda etapa de atendimento.",
+        "De quatro anos completos até o ingresso obrigatório no Ensino Fundamental.",
+        "De quatro a cinco anos, observadas as especificidades do desenvolvimento infantil e das aprendizagens essenciais."
 ],
 
-correta: 2,
+correta: 1,
 
 feedbackAcerto: "Correto. A pré-escola atende crianças de quatro e cinco anos e integra a Educação Infantil.",
 
@@ -560,14 +560,14 @@ dicaBanca: "Pré-escola = 4 e 5 anos."
 pergunta: "Durante a elaboração do currículo da Educação Infantil, uma escola buscou assegurar práticas que respeitassem as características do desenvolvimento infantil. Essa preocupação está alinhada à LDB porque a avaliação nessa etapa deve:",
 
 alternativas: [
-"Identificar o nível de desenvolvimento das crianças para orientar seu ingresso no Ensino Fundamental.",
-"Verificar o alcance dos objetivos de aprendizagem previstos para cada faixa etária atendida.",
-"Realizar acompanhamento e registro do desenvolvimento das crianças, sem objetivo de promoção para o acesso ao Ensino Fundamental.",
-"Mensurar a evolução das aprendizagens essenciais relacionadas às competências previstas para a Educação Básica.",
-"Produzir informações pedagógicas destinadas à classificação das crianças segundo seu desempenho escolar."
+        "Identificar o nível de desenvolvimento das crianças para orientar seu ingresso no Ensino Fundamental.",
+        "Verificar o alcance dos objetivos de aprendizagem previstos para cada faixa etária atendida.",
+        "Mensurar a evolução das aprendizagens essenciais relacionadas às competências previstas para a Educação Básica.",
+        "Realizar acompanhamento e registro do desenvolvimento das crianças, sem objetivo de promoção para o acesso ao Ensino Fundamental.",
+        "Produzir informações pedagógicas destinadas à classificação das crianças segundo seu desempenho escolar."
 ],
 
-correta: 2,
+correta: 3,
 
 feedbackAcerto: "Correto. Na Educação Infantil, a avaliação ocorre por acompanhamento e registro do desenvolvimento, sem finalidade de promoção.",
 
@@ -580,14 +580,14 @@ dicaBanca: "Educação Infantil = avaliação sem promoção."
 pergunta: "Uma equipe pedagógica discutia a organização das experiências educativas na Educação Infantil. Segundo a LDB, essa etapa deve ser desenvolvida:",
 
 alternativas: [
-"Em instituições educacionais responsáveis pela oferta de experiências formativas adequadas às necessidades do desenvolvimento infantil.",
-"Por meio de práticas pedagógicas destinadas ao desenvolvimento progressivo das competências previstas para a Educação Básica.",
-"Em ambiente educacional estruturado para promover o desenvolvimento integral da criança em complementação à família e à comunidade.",
-"Mediante propostas curriculares que articulem cuidado, aprendizagem e socialização em consonância com as diretrizes nacionais.",
-"Por intermédio de ações pedagógicas voltadas à construção das bases necessárias para a continuidade da escolarização obrigatória."
+        "Em instituições educacionais responsáveis pela oferta de experiências formativas adequadas às necessidades do desenvolvimento infantil.",
+        "Por meio de práticas pedagógicas destinadas ao desenvolvimento progressivo das competências previstas para a Educação Básica.",
+        "Mediante propostas curriculares que articulem cuidado, aprendizagem e socialização em consonância com as diretrizes nacionais.",
+        "Por intermédio de ações pedagógicas voltadas à construção das bases necessárias para a continuidade da escolarização obrigatória.",
+        "Em ambiente educacional estruturado para promover o desenvolvimento integral da criança em complementação à família e à comunidade."
 ],
 
-correta: 2,
+correta: 4,
 
 feedbackAcerto: "Correto. A LDB destaca o desenvolvimento integral da criança em complementação à ação da família e da comunidade.",
 
@@ -599,14 +599,14 @@ dicaBanca: "Família + comunidade + desenvolvimento integral."
 pergunta: "Durante uma reunião com pais e responsáveis, a equipe gestora explicou a organização do Ensino Fundamental prevista na LDB. Nesse contexto, é correto afirmar que essa etapa possui duração de:",
 
 alternativas: [
-"Nove anos, iniciando-se aos seis anos de idade e tendo por objetivo a formação básica do cidadão.",
-"Oito anos, iniciando-se aos seis anos de idade e articulando-se ao Ensino Médio.",
-"Nove anos, iniciando-se aos cinco anos de idade para garantir a continuidade da escolarização obrigatória.",
-"Oito anos, destinando-se à consolidação das aprendizagens iniciadas na Educação Infantil.",
-"Nove anos, iniciando-se aos seis anos de idade e priorizando a preparação para o Ensino Médio."
+        "Oito anos, iniciando-se aos seis anos de idade e articulando-se ao Ensino Médio.",
+        "Nove anos, iniciando-se aos seis anos de idade e tendo por objetivo a formação básica do cidadão.",
+        "Nove anos, iniciando-se aos cinco anos de idade para garantir a continuidade da escolarização obrigatória.",
+        "Oito anos, destinando-se à consolidação das aprendizagens iniciadas na Educação Infantil.",
+        "Nove anos, iniciando-se aos seis anos de idade e priorizando a preparação para o Ensino Médio."
 ],
 
-correta: 0,
+correta: 1,
 
 feedbackAcerto: "Correto. A LDB estabelece que o Ensino Fundamental tem duração de nove anos e inicia-se aos seis anos de idade.",
 
@@ -619,14 +619,14 @@ dicaBanca: "Ensino Fundamental = 9 anos + início aos 6 anos."
 pergunta: "Ao discutir os objetivos do Ensino Fundamental, uma professora afirmou que essa etapa possui papel central na formação dos estudantes. Segundo a LDB, sua finalidade consiste principalmente em:",
 
 alternativas: [
-"Consolidar aprendizagens relacionadas à alfabetização e preparar os estudantes para o Ensino Médio.",
-"Promover a formação básica do cidadão mediante o desenvolvimento da capacidade de aprender e compreender o ambiente natural e social.",
-"Desenvolver competências voltadas à continuidade dos estudos e à inserção progressiva no mundo do trabalho.",
-"Organizar experiências educativas destinadas à construção dos conhecimentos necessários ao exercício da cidadania.",
-"Favorecer a ampliação das aprendizagens essenciais previstas para a Educação Básica e para a vida em sociedade."
+        "Promover a formação básica do cidadão mediante o desenvolvimento da capacidade de aprender e compreender o ambiente natural e social.",
+        "Consolidar aprendizagens relacionadas à alfabetização e preparar os estudantes para o Ensino Médio.",
+        "Desenvolver competências voltadas à continuidade dos estudos e à inserção progressiva no mundo do trabalho.",
+        "Organizar experiências educativas destinadas à construção dos conhecimentos necessários ao exercício da cidadania.",
+        "Favorecer a ampliação das aprendizagens essenciais previstas para a Educação Básica e para a vida em sociedade."
 ],
 
-correta: 1,
+correta: 0,
 
 feedbackAcerto: "Correto. A formação básica do cidadão é a finalidade central do Ensino Fundamental prevista na LDB.",
 
@@ -659,14 +659,14 @@ dicaBanca: "Leitura + escrita + cálculo = base do Ensino Fundamental."
 pergunta: "Uma equipe pedagógica discutia a importância da compreensão do ambiente natural e social para a formação dos estudantes. Segundo a LDB, esse aspecto integra os objetivos do Ensino Fundamental porque visa:",
 
 alternativas: [
-"Promover a construção de conhecimentos necessários à participação responsável na vida em sociedade.",
-"Favorecer a compreensão dos fenômenos históricos, culturais e científicos presentes na realidade dos estudantes.",
-"Desenvolver a capacidade de aprendizagem por meio da observação e interpretação dos diferentes contextos sociais.",
-"Fortalecer a formação básica do cidadão mediante a compreensão do ambiente natural, social, do sistema político, da tecnologia, das artes e dos valores da sociedade.",
-"Estimular o desenvolvimento de competências relacionadas à cidadania e à participação democrática."
+        "Promover a construção de conhecimentos necessários à participação responsável na vida em sociedade.",
+        "Favorecer a compreensão dos fenômenos históricos, culturais e científicos presentes na realidade dos estudantes.",
+        "Desenvolver a capacidade de aprendizagem por meio da observação e interpretação dos diferentes contextos sociais.",
+        "Estimular o desenvolvimento de competências relacionadas à cidadania e à participação democrática.",
+        "Fortalecer a formação básica do cidadão mediante a compreensão do ambiente natural, social, do sistema político, da tecnologia, das artes e dos valores da sociedade."
 ],
 
-correta: 3,
+correta: 4,
 
 feedbackAcerto: "Correto. A alternativa reproduz de forma mais completa o objetivo previsto na LDB.",
 
@@ -679,14 +679,14 @@ dicaBanca: "Ambiente natural + social + sistema político + tecnologia + artes +
 pergunta: "Durante a elaboração do calendário escolar, a direção analisava os requisitos mínimos previstos na LDB para a organização da jornada escolar do Ensino Fundamental. Nesse contexto, é correto afirmar que:",
 
 alternativas: [
-"A carga horária mínima anual será distribuída por um mínimo de duzentos dias de efetivo trabalho escolar, excluído o tempo reservado aos exames finais.",
-"Os sistemas de ensino podem definir livremente a quantidade de dias letivos desde que garantam a carga horária anual mínima.",
-"Os duzentos dias letivos incluem as atividades destinadas à aplicação dos exames finais previstos no calendário escolar.",
-"Os estabelecimentos de ensino devem assegurar duzentos dias letivos e frequência mínima de oitenta por cento dos estudantes.",
-"Os requisitos referentes aos dias letivos e à carga horária aplicam-se apenas ao Ensino Fundamental obrigatório."
+        "Os sistemas de ensino podem definir livremente a quantidade de dias letivos desde que garantam a carga horária anual mínima.",
+        "Os duzentos dias letivos incluem as atividades destinadas à aplicação dos exames finais previstos no calendário escolar.",
+        "Os estabelecimentos de ensino devem assegurar duzentos dias letivos e frequência mínima de oitenta por cento dos estudantes.",
+        "A carga horária mínima anual será distribuída por um mínimo de duzentos dias de efetivo trabalho escolar, excluído o tempo reservado aos exames finais.",
+        "Os requisitos referentes aos dias letivos e à carga horária aplicam-se apenas ao Ensino Fundamental obrigatório."
 ],
 
-correta: 0,
+correta: 3,
 
 feedbackAcerto: "Correto. A LDB prevê mínimo de 200 dias de efetivo trabalho escolar, excluído o tempo reservado aos exames finais.",
 
@@ -698,14 +698,14 @@ dicaBanca: "200 dias letivos = dado clássico da LDB."
 pergunta: "Durante uma reunião pedagógica, os professores discutiam as finalidades do Ensino Médio previstas na LDB. Ao final do encontro, concluiu-se corretamente que essa etapa deve:",
 
 alternativas: [
-"Consolidar e aprofundar os conhecimentos adquiridos no Ensino Fundamental, possibilitando o prosseguimento dos estudos.",
-"Promover a formação profissional dos estudantes como requisito para a conclusão da Educação Básica.",
-"Desenvolver competências voltadas prioritariamente à inserção dos jovens no mercado de trabalho.",
-"Preparar os estudantes para o ingresso na Educação Superior mediante o aprofundamento dos conteúdos curriculares.",
-"Organizar experiências educativas destinadas ao desenvolvimento das competências exigidas pelas avaliações externas."
+        "Promover a formação profissional dos estudantes como requisito para a conclusão da Educação Básica.",
+        "Desenvolver competências voltadas prioritariamente à inserção dos jovens no mercado de trabalho.",
+        "Preparar os estudantes para o ingresso na Educação Superior mediante o aprofundamento dos conteúdos curriculares.",
+        "Consolidar e aprofundar os conhecimentos adquiridos no Ensino Fundamental, possibilitando o prosseguimento dos estudos.",
+        "Organizar experiências educativas destinadas ao desenvolvimento das competências exigidas pelas avaliações externas."
 ],
 
-correta: 0,
+correta: 3,
 
 feedbackAcerto: "Correto. Uma das finalidades do Ensino Médio é consolidar e aprofundar os conhecimentos adquiridos no Ensino Fundamental.",
 
@@ -718,14 +718,14 @@ dicaBanca: "Ensino Médio = consolidar e aprofundar conhecimentos."
 pergunta: "Ao analisar a organização do Ensino Médio, uma equipe docente destacou a importância da preparação básica para o trabalho e para a cidadania. Segundo a LDB, essa preparação deve ocorrer:",
 
 alternativas: [
-"Por meio da formação profissional obrigatória integrada ao currículo escolar.",
-"Mediante o desenvolvimento da capacidade de adaptação às novas condições de ocupação e aperfeiçoamento posteriores.",
-"Por intermédio da oferta de itinerários formativos voltados às demandas econômicas regionais.",
-"Mediante a articulação entre educação profissional e formação geral básica para todos os estudantes.",
-"Por meio de experiências educativas direcionadas à construção de competências profissionais específicas."
+        "Por meio da formação profissional obrigatória integrada ao currículo escolar.",
+        "Por intermédio da oferta de itinerários formativos voltados às demandas econômicas regionais.",
+        "Mediante o desenvolvimento da capacidade de adaptação às novas condições de ocupação e aperfeiçoamento posteriores.",
+        "Mediante a articulação entre educação profissional e formação geral básica para todos os estudantes.",
+        "Por meio de experiências educativas direcionadas à construção de competências profissionais específicas."
 ],
 
-correta: 1,
+correta: 2,
 
 feedbackAcerto: "Correto. A LDB prevê preparação básica para o trabalho e a cidadania, com capacidade de adaptação a novas condições de ocupação.",
 
@@ -758,14 +758,14 @@ dicaBanca: "Autonomia intelectual + pensamento crítico."
 pergunta: "Ao discutir os objetivos do Ensino Médio, um professor destacou a importância da compreensão dos fundamentos científico-tecnológicos dos processos produtivos. Essa orientação está presente na LDB porque essa etapa deve:",
 
 alternativas: [
-"Promover o desenvolvimento das competências necessárias ao exercício das atividades produtivas contemporâneas.",
-"Favorecer a articulação entre os conhecimentos escolares e as transformações tecnológicas da sociedade.",
-"Possibilitar a compreensão dos fundamentos científico-tecnológicos dos processos produtivos, relacionando teoria e prática.",
-"Preparar os estudantes para interpretar criticamente as inovações científicas e tecnológicas presentes no mundo do trabalho.",
-"Desenvolver habilidades voltadas à utilização das tecnologias associadas aos diferentes setores econômicos."
+        "Promover o desenvolvimento das competências necessárias ao exercício das atividades produtivas contemporâneas.",
+        "Favorecer a articulação entre os conhecimentos escolares e as transformações tecnológicas da sociedade.",
+        "Preparar os estudantes para interpretar criticamente as inovações científicas e tecnológicas presentes no mundo do trabalho.",
+        "Desenvolver habilidades voltadas à utilização das tecnologias associadas aos diferentes setores econômicos.",
+        "Possibilitar a compreensão dos fundamentos científico-tecnológicos dos processos produtivos, relacionando teoria e prática."
 ],
 
-correta: 2,
+correta: 4,
 
 feedbackAcerto: "Correto. A LDB menciona expressamente a compreensão dos fundamentos científico-tecnológicos dos processos produtivos, relacionando teoria e prática.",
 
@@ -778,14 +778,14 @@ dicaBanca: "Teoria + prática = fundamento clássico do Ensino Médio."
 pergunta: "Durante a elaboração do currículo escolar, uma equipe pedagógica analisava o papel do Ensino Médio na trajetória educacional dos estudantes. À luz da LDB, é correto afirmar que essa etapa:",
 
 alternativas: [
-"Constitui a etapa final da Educação Básica, destinada ao aprofundamento das aprendizagens e à preparação para novos projetos de vida.",
-"Representa a conclusão da formação geral básica dos estudantes e a transição para a Educação Superior ou para o trabalho.",
-"Corresponde à fase final da escolarização obrigatória, articulando formação humana, cidadania e continuidade dos estudos.",
-"Configura a última etapa da Educação Básica, contribuindo para a formação integral e para o prosseguimento da trajetória educacional.",
-"Integra a Educação Básica como etapa voltada à consolidação das aprendizagens, ao desenvolvimento pessoal e à continuidade dos estudos."
+        "Configura a última etapa da Educação Básica, contribuindo para a formação integral e para o prosseguimento da trajetória educacional.",
+        "Constitui a etapa final da Educação Básica, destinada ao aprofundamento das aprendizagens e à preparação para novos projetos de vida.",
+        "Representa a conclusão da formação geral básica dos estudantes e a transição para a Educação Superior ou para o trabalho.",
+        "Corresponde à fase final da escolarização obrigatória, articulando formação humana, cidadania e continuidade dos estudos.",
+        "Integra a Educação Básica como etapa voltada à consolidação das aprendizagens, ao desenvolvimento pessoal e à continuidade dos estudos."
 ],
 
-correta: 3,
+correta: 0,
 
 feedbackAcerto: "Correto. O Ensino Médio é a etapa final da Educação Básica e contribui para a formação integral e continuidade dos estudos.",
 
@@ -837,14 +837,14 @@ dicaBanca: "EJA = acesso ou continuidade fora da idade própria."
 pergunta: "Ao discutir a Educação Profissional e Tecnológica, uma professora destacou que essa modalidade não deve ser compreendida isoladamente. Segundo a LDB, ela integra-se:",
 
 alternativas: [
-"Aos programas de formação profissional organizados pelos sistemas de ensino e pelas instituições empregadoras.",
-"Às diferentes etapas da Educação Básica, constituindo itinerário obrigatório para inserção profissional dos estudantes.",
-"Aos diferentes níveis e modalidades de educação e às dimensões do trabalho, da ciência e da tecnologia.",
-"À formação geral básica dos estudantes, articulando competências profissionais e desenvolvimento econômico regional.",
-"Às políticas públicas voltadas à qualificação profissional e ao desenvolvimento científico e tecnológico."
+        "Aos programas de formação profissional organizados pelos sistemas de ensino e pelas instituições empregadoras.",
+        "Às diferentes etapas da Educação Básica, constituindo itinerário obrigatório para inserção profissional dos estudantes.",
+        "À formação geral básica dos estudantes, articulando competências profissionais e desenvolvimento econômico regional.",
+        "Aos diferentes níveis e modalidades de educação e às dimensões do trabalho, da ciência e da tecnologia.",
+        "Às políticas públicas voltadas à qualificação profissional e ao desenvolvimento científico e tecnológico."
 ],
 
-correta: 2,
+correta: 3,
 
 feedbackAcerto: "Correto. A LDB estabelece a integração da Educação Profissional aos diferentes níveis e modalidades de educação e às dimensões do trabalho, ciência e tecnologia.",
 
@@ -857,14 +857,14 @@ dicaBanca: "Educação Profissional = trabalho + ciência + tecnologia."
 pergunta: "Durante uma conferência educacional, discutia-se a oferta de educação para populações residentes em áreas rurais. Segundo a LDB, a Educação do Campo deve considerar:",
 
 alternativas: [
-"As peculiaridades da vida rural e de cada região, especialmente quanto aos conteúdos curriculares, organização escolar e calendário.",
-"A organização dos sistemas de ensino locais de acordo com as demandas produtivas predominantes nas áreas rurais.",
-"As necessidades de formação profissional relacionadas às atividades econômicas desenvolvidas pelas comunidades do campo.",
-"A adaptação curricular voltada à valorização dos saberes tradicionais e das práticas produtivas regionais.",
-"A articulação entre educação básica e desenvolvimento comunitário observando as características das populações rurais."
+        "A organização dos sistemas de ensino locais de acordo com as demandas produtivas predominantes nas áreas rurais.",
+        "As peculiaridades da vida rural e de cada região, especialmente quanto aos conteúdos curriculares, organização escolar e calendário.",
+        "As necessidades de formação profissional relacionadas às atividades econômicas desenvolvidas pelas comunidades do campo.",
+        "A adaptação curricular voltada à valorização dos saberes tradicionais e das práticas produtivas regionais.",
+        "A articulação entre educação básica e desenvolvimento comunitário observando as características das populações rurais."
 ],
 
-correta: 0,
+correta: 1,
 
 feedbackAcerto: "Correto. A LDB determina que a Educação do Campo considere as peculiaridades da vida rural e de cada região.",
 
@@ -877,14 +877,14 @@ dicaBanca: "Educação do Campo = respeito às peculiaridades rurais."
 pergunta: "Ao elaborar propostas pedagógicas para comunidades indígenas, uma rede de ensino buscou atender às determinações da LDB. Nesse contexto, a educação escolar indígena deve assegurar:",
 
 alternativas: [
-"A valorização das identidades étnicas, das línguas maternas, dos conhecimentos tradicionais e dos processos próprios de aprendizagem.",
-"A integração progressiva das comunidades indígenas aos currículos nacionais comuns previstos para a Educação Básica.",
-"A preservação das manifestações culturais indígenas associada ao desenvolvimento das competências curriculares essenciais.",
-"A organização de experiências educativas que promovam o diálogo entre conhecimentos tradicionais e científicos.",
-"A formação escolar orientada pela valorização da diversidade cultural e pelo fortalecimento da cidadania indígena."
+        "A integração progressiva das comunidades indígenas aos currículos nacionais comuns previstos para a Educação Básica.",
+        "A preservação das manifestações culturais indígenas associada ao desenvolvimento das competências curriculares essenciais.",
+        "A organização de experiências educativas que promovam o diálogo entre conhecimentos tradicionais e científicos.",
+        "A formação escolar orientada pela valorização da diversidade cultural e pelo fortalecimento da cidadania indígena.",
+        "A valorização das identidades étnicas, das línguas maternas, dos conhecimentos tradicionais e dos processos próprios de aprendizagem."
 ],
 
-correta: 0,
+correta: 4,
 
 feedbackAcerto: "Correto. A LDB garante educação escolar indígena com valorização das línguas, culturas e processos próprios de aprendizagem.",
 
@@ -896,14 +896,14 @@ dicaBanca: "Educação Indígena = língua, cultura e identidade."
 pergunta: "Durante um seminário acadêmico, discutiam-se as finalidades da Educação Superior previstas na LDB. Segundo a legislação, essa etapa tem entre suas finalidades:",
 
 alternativas: [
-"Estimular a criação cultural, o desenvolvimento do espírito científico e do pensamento reflexivo, contribuindo para a produção e difusão do conhecimento.",
-"Promover a formação profissional especializada voltada às demandas econômicas e sociais contemporâneas.",
-"Desenvolver competências acadêmicas destinadas à qualificação profissional e à inserção no mercado de trabalho.",
-"Produzir conhecimentos científicos capazes de responder aos desafios tecnológicos e produtivos da sociedade.",
-"Favorecer a formação de profissionais qualificados para atuar nos diferentes setores da atividade humana."
+        "Promover a formação profissional especializada voltada às demandas econômicas e sociais contemporâneas.",
+        "Desenvolver competências acadêmicas destinadas à qualificação profissional e à inserção no mercado de trabalho.",
+        "Produzir conhecimentos científicos capazes de responder aos desafios tecnológicos e produtivos da sociedade.",
+        "Estimular a criação cultural, o desenvolvimento do espírito científico e do pensamento reflexivo, contribuindo para a produção e difusão do conhecimento.",
+        "Favorecer a formação de profissionais qualificados para atuar nos diferentes setores da atividade humana."
 ],
 
-correta: 0,
+correta: 3,
 
 feedbackAcerto: "Correto. A LDB destaca a criação cultural, o espírito científico e o pensamento reflexivo como finalidades da Educação Superior.",
 
@@ -916,14 +916,14 @@ dicaBanca: "Educação Superior = criação cultural + espírito científico."
 pergunta: "Durante uma discussão sobre organização universitária, um professor afirmou que as universidades possuem autonomia garantida em lei. À luz da LDB, essa autonomia compreende:",
 
 alternativas: [
-"Capacidade de organizar cursos, programas e atividades acadêmicas, observadas as normas gerais da educação nacional.",
-"Competência para definir integralmente seus currículos e critérios de certificação sem supervisão dos sistemas educacionais.",
-"Liberdade institucional para estabelecer normas acadêmicas próprias independentemente das diretrizes nacionais.",
-"Autorização para organizar sua estrutura administrativa e pedagógica de acordo com seus objetivos institucionais.",
-"Faculdade de definir suas políticas acadêmicas e científicas observando os princípios estabelecidos pela legislação educacional."
+        "Competência para definir integralmente seus currículos e critérios de certificação sem supervisão dos sistemas educacionais.",
+        "Liberdade institucional para estabelecer normas acadêmicas próprias independentemente das diretrizes nacionais.",
+        "Capacidade de organizar cursos, programas e atividades acadêmicas, observadas as normas gerais da educação nacional.",
+        "Autorização para organizar sua estrutura administrativa e pedagógica de acordo com seus objetivos institucionais.",
+        "Faculdade de definir suas políticas acadêmicas e científicas observando os princípios estabelecidos pela legislação educacional."
 ],
 
-correta: 0,
+correta: 2,
 
 feedbackAcerto: "Correto. A autonomia universitária existe, mas deve respeitar as normas gerais da educação nacional.",
 
@@ -936,14 +936,14 @@ dicaBanca: "Autonomia universitária ≠ soberania."
 pergunta: "Ao avaliar os objetivos institucionais de uma universidade, um grupo de gestores destacou a importância da pesquisa para o desenvolvimento da sociedade. Segundo a LDB, a pesquisa possui papel relevante porque:",
 
 alternativas: [
-"Contribui para a produção e difusão do conhecimento científico, tecnológico e cultural necessário ao desenvolvimento da sociedade.",
-"Favorece a construção de soluções acadêmicas destinadas à superação dos desafios enfrentados pelas instituições educacionais.",
-"Promove a articulação entre ensino e inovação científica por meio da formação de pesquisadores qualificados.",
-"Possibilita o avanço da produção científica e tecnológica em consonância com as necessidades sociais contemporâneas.",
-"Fortalece a formação acadêmica mediante a construção de conhecimentos voltados ao desenvolvimento científico."
+        "Favorece a construção de soluções acadêmicas destinadas à superação dos desafios enfrentados pelas instituições educacionais.",
+        "Promove a articulação entre ensino e inovação científica por meio da formação de pesquisadores qualificados.",
+        "Possibilita o avanço da produção científica e tecnológica em consonância com as necessidades sociais contemporâneas.",
+        "Fortalece a formação acadêmica mediante a construção de conhecimentos voltados ao desenvolvimento científico.",
+        "Contribui para a produção e difusão do conhecimento científico, tecnológico e cultural necessário ao desenvolvimento da sociedade."
 ],
 
-correta: 0,
+correta: 4,
 
 feedbackAcerto: "Correto. A pesquisa é elemento central para a produção e difusão do conhecimento científico, tecnológico e cultural.",
 
@@ -976,21 +976,18 @@ dicaBanca: "Extensão = universidade + sociedade."
 pergunta: "Durante a elaboração do calendário escolar, uma equipe gestora analisava os requisitos mínimos previstos na LDB para a organização do ano letivo. Nesse contexto, é correto afirmar que os estabelecimentos de ensino devem assegurar:",
 
 alternativas: [
-"No mínimo duzentos dias de efetivo trabalho escolar e carga horária anual compatível com as exigências legais para cada etapa de ensino.",
-"No mínimo duzentos dias letivos distribuídos conforme as necessidades pedagógicas definidas pelos sistemas de ensino.",
-"No mínimo oitocentas horas anuais organizadas segundo os critérios estabelecidos pelas instituições educacionais.",
-"Calendário escolar compatível com as características locais, observados os parâmetros nacionais de duração do ano letivo.",
-"No mínimo duzentos dias de atividades escolares e frequência obrigatória para validação das aprendizagens desenvolvidas."
+        "No mínimo duzentos dias letivos distribuídos conforme as necessidades pedagógicas definidas pelos sistemas de ensino.",
+        "No mínimo duzentos dias de efetivo trabalho escolar e carga horária anual compatível com as exigências legais para cada etapa de ensino.",
+        "No mínimo oitocentas horas anuais organizadas segundo os critérios estabelecidos pelas instituições educacionais.",
+        "Calendário escolar compatível com as características locais, observados os parâmetros nacionais de duração do ano letivo.",
+        "No mínimo duzentos dias de atividades escolares e frequência obrigatória para validação das aprendizagens desenvolvidas."
 ],
 
-correta: 0,
+correta: 1,
 
 feedbackAcerto: "Correto. A LDB exige mínimo de 200 dias de efetivo trabalho escolar e carga horária anual definida em lei.",
 
 feedbackErro: "As bancas costumam alterar a redação dos dispositivos relacionados a dias letivos e carga horária.",
 
 dicaBanca: "200 dias letivos = informação clássica da LDB."
-}
-
-
-];
+}];
