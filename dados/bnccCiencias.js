@@ -4,20 +4,14 @@ const bnccCiencias = [
     pergunta:"Segundo a BNCC, as aprendizagens essenciais devem assegurar o desenvolvimento de competências que permitam ao estudante mobilizar conhecimentos, habilidades, atitudes e valores para resolver demandas complexas da vida cotidiana, do exercício da cidadania e do mundo do trabalho. Essa definição refere-se ao conceito de:",
 
     alternativas:[
-
-        "Articulação de objetos de conhecimento e habilidades voltadas à formação integral do estudante.",
-
-        "Capacidade de aplicar procedimentos específicos em situações relacionadas a determinado campo do saber.",
-
         "Mobilização de conhecimentos, habilidades, atitudes e valores para enfrentar demandas complexas da vida cotidiana.",
-
+        "Articulação de objetos de conhecimento e habilidades voltadas à formação integral do estudante.",
+        "Capacidade de aplicar procedimentos específicos em situações relacionadas a determinado campo do saber.",
         "Integração de experiências escolares destinadas à ampliação do repertório cultural e acadêmico dos estudantes.",
-
         "Utilização de estratégias cognitivas e socioemocionais voltadas à resolução de problemas em contextos educacionais."
-
     ],
 
-    correta:2,
+    correta:0,
 
     explicacao:"A BNCC define competência como a mobilização de conhecimentos, habilidades, atitudes e valores para enfrentar demandas complexas da vida, da cidadania e do trabalho.",
 
@@ -31,20 +25,14 @@ const bnccCiencias = [
     pergunta:"A respeito da natureza jurídica da BNCC, assinale a alternativa correta.",
 
     alternativas:[
-
         "É um instrumento orientador destinado a subsidiar a elaboração de currículos pelos sistemas de ensino, sem caráter normativo próprio.",
-
-        "Constitui referência nacional obrigatória para a definição das aprendizagens essenciais da Educação Básica, possuindo natureza normativa.",
-
         "Corresponde ao currículo nacional destinado a uniformizar os conteúdos desenvolvidos pelas redes públicas e privadas de ensino.",
-
         "Estabelece diretrizes curriculares de aplicação facultativa, respeitando a autonomia dos sistemas educacionais.",
-
+        "Constitui referência nacional obrigatória para a definição das aprendizagens essenciais da Educação Básica, possuindo natureza normativa.",
         "Representa documento complementar às diretrizes curriculares, voltado exclusivamente ao planejamento pedagógico das escolas."
-
     ],
 
-    correta:1,
+    correta:3,
 
     explicacao:"A BNCC é um documento normativo que define as aprendizagens essenciais a serem desenvolvidas na Educação Básica.",
 
@@ -58,20 +46,14 @@ const bnccCiencias = [
     pergunta:"Constituem fundamentos legais diretamente relacionados à elaboração da BNCC:",
 
     alternativas:[
-
-        "Constituição Federal de 1988, Lei de Diretrizes e Bases da Educação Nacional e Plano Nacional de Educação.",
-
         "Constituição Federal, Estatuto da Criança e do Adolescente e Diretrizes Curriculares Nacionais para a Educação Básica.",
-
         "Lei de Diretrizes e Bases da Educação Nacional, Plano Nacional de Educação e Base Nacional Comum para Formação Docente.",
-
+        "Constituição Federal de 1988, Lei de Diretrizes e Bases da Educação Nacional e Plano Nacional de Educação.",
         "Constituição Federal, Plano Nacional de Educação e legislação específica dos sistemas estaduais de ensino.",
-
         "Lei de Diretrizes e Bases da Educação Nacional, Estatuto da Criança e do Adolescente e Plano Nacional de Educação."
-
     ],
 
-    correta:0,
+    correta:2,
 
     explicacao:"A BNCC fundamenta-se especialmente na Constituição Federal, na LDB e no Plano Nacional de Educação.",
 
@@ -85,20 +67,14 @@ const bnccCiencias = [
     pergunta:"Entre as Competências Gerais da BNCC, aquela que enfatiza a formulação, investigação e resolução de problemas com base nos conhecimentos das diferentes áreas é denominada:",
 
     alternativas:[
-
         "Conhecimento, por promover a valorização e utilização dos saberes historicamente construídos.",
-
-        "Pensamento científico, crítico e criativo, ao incentivar investigação, reflexão e resolução de problemas.",
-
         "Argumentação, por estimular a defesa de ideias fundamentadas em dados e informações confiáveis.",
-
         "Comunicação, por favorecer a expressão e o compartilhamento de conhecimentos em diferentes linguagens.",
-
-        "Cultura digital, ao incentivar o uso crítico e ético das tecnologias na produção do conhecimento."
-
+        "Cultura digital, ao incentivar o uso crítico e ético das tecnologias na produção do conhecimento.",
+        "Pensamento científico, crítico e criativo, ao incentivar investigação, reflexão e resolução de problemas."
     ],
 
-    correta:1,
+    correta:4,
 
     explicacao:"A Competência Geral nº 2 é denominada Pensamento Científico, Crítico e Criativo.",
 
@@ -112,20 +88,14 @@ const bnccCiencias = [
     pergunta:"Ao analisar dados científicos, verificar evidências e construir conclusões fundamentadas, o estudante desenvolve principalmente qual Competência Geral da BNCC?",
 
     alternativas:[
-
         "Argumentação, por utilizar informações confiáveis na defesa de posicionamentos relacionados à realidade social.",
-
-        "Conhecimento, por mobilizar saberes produzidos historicamente para compreender fenômenos e situações diversas.",
-
-        "Comunicação, por interpretar e expressar informações em diferentes linguagens e contextos.",
-
         "Pensamento científico, crítico e criativo, por envolver análise de evidências, investigação e construção de conclusões fundamentadas.",
-
+        "Conhecimento, por mobilizar saberes produzidos historicamente para compreender fenômenos e situações diversas.",
+        "Comunicação, por interpretar e expressar informações em diferentes linguagens e contextos.",
         "Responsabilidade e cidadania, por promover decisões conscientes diante de situações que exigem posicionamento ético."
-
     ],
 
-    correta:3,
+    correta:1,
 
     explicacao:"A análise de evidências e a construção de conclusões fundamentadas são características centrais do pensamento científico, crítico e criativo.",
 
@@ -139,20 +109,14 @@ const bnccCiencias = [
     pergunta:"A BNCC estabelece dez Competências Gerais para toda a Educação Básica. Entre elas, a competência relacionada ao uso crítico, significativo, reflexivo e ético das tecnologias digitais é denominada:",
 
     alternativas:[
-
         "Comunicação, por possibilitar a utilização de diferentes linguagens na produção e compartilhamento de informações.",
-
-        "Cultura Digital, por promover o uso crítico, significativo, reflexivo e ético das tecnologias digitais.",
-
         "Argumentação, por favorecer a análise de informações e a defesa de posicionamentos fundamentados.",
-
         "Conhecimento, por valorizar a compreensão e utilização dos saberes historicamente produzidos.",
-
-        "Responsabilidade e Cidadania, por orientar a tomada de decisões conscientes em contextos sociais diversos."
-
+        "Responsabilidade e Cidadania, por orientar a tomada de decisões conscientes em contextos sociais diversos.",
+        "Cultura Digital, por promover o uso crítico, significativo, reflexivo e ético das tecnologias digitais."
     ],
 
-    correta:1,
+    correta:4,
 
     explicacao:"A Competência Geral nº 5 da BNCC é Cultura Digital, relacionada ao uso crítico, ético e responsável das tecnologias digitais.",
 
@@ -166,20 +130,14 @@ const bnccCiencias = [
     pergunta:"Nas Competências Específicas de Ciências da Natureza, a análise de evidências, a construção de explicações e a resolução de problemas científicos estão associadas principalmente ao desenvolvimento de:",
 
     alternativas:[
-
         "Capacidade de utilizar conhecimentos científicos na interpretação de fenômenos e situações investigativas.",
-
         "Procedimentos relacionados à observação, experimentação e sistematização de informações científicas.",
-
-        "Pensamento científico, fundamentado na análise de evidências e na elaboração de explicações.",
-
         "Competências voltadas à compreensão dos processos tecnológicos presentes na sociedade contemporânea.",
-
+        "Pensamento científico, fundamentado na análise de evidências e na elaboração de explicações.",
         "Estratégias de aprendizagem relacionadas à apropriação progressiva dos conceitos científicos."
-
     ],
 
-    correta:2,
+    correta:3,
 
     explicacao:"A BNCC enfatiza o desenvolvimento do pensamento científico por meio da investigação, da análise de evidências e da resolução de problemas.",
 
@@ -193,20 +151,14 @@ const bnccCiencias = [
     pergunta:"Segundo a BNCC, o conhecimento científico deve ser compreendido como:",
 
     alternativas:[
-
         "Um conjunto de explicações produzidas mediante procedimentos sistemáticos e aceitas pela comunidade científica em determinado contexto histórico.",
-
         "Uma forma de conhecimento construída a partir da observação, da investigação e da interpretação de evidências empíricas.",
-
-        "Um sistema organizado de conhecimentos utilizado para compreender fenômenos naturais e sociais.",
-
         "Uma construção humana, histórica e social sujeita à revisão e ao aperfeiçoamento contínuo.",
-
+        "Um sistema organizado de conhecimentos utilizado para compreender fenômenos naturais e sociais.",
         "Uma produção intelectual fundamentada em evidências e destinada à explicação dos fenômenos observáveis."
-
     ],
 
-    correta:3,
+    correta:2,
 
     explicacao:"A BNCC reconhece a ciência como uma construção humana, histórica e social, sujeita a revisões e aperfeiçoamentos.",
 
@@ -220,20 +172,14 @@ const bnccCiencias = [
     pergunta:"São unidades temáticas da área de Ciências da Natureza previstas na BNCC:",
 
     alternativas:[
-
-        "Matéria e Energia; Vida e Evolução; Terra e Universo.",
-
         "Biologia, Física e Química, organizadas de acordo com os campos tradicionais da ciência.",
-
+        "Matéria e Energia; Vida e Evolução; Terra e Universo.",
         "Ciência, Tecnologia e Sociedade, estruturadas para promover a interdisciplinaridade curricular.",
-
         "Ambiente, Saúde e Sustentabilidade, articuladas em torno de temas contemporâneos.",
-
         "Conhecimento, Investigação Científica e Tecnologia, voltadas ao desenvolvimento de competências científicas."
-
     ],
 
-    correta:0,
+    correta:1,
 
     explicacao:"As três unidades temáticas oficiais da BNCC para Ciências da Natureza são Matéria e Energia, Vida e Evolução e Terra e Universo.",
 
@@ -367,20 +313,14 @@ const bnccCiencias = [
     pergunta:"A abordagem CTSA, amplamente utilizada no ensino de Ciências, refere-se à integração entre:",
 
     alternativas:[
-
         "Conhecimentos científicos, desenvolvimento tecnológico, práticas educativas e processos avaliativos.",
-
-        "Ciência, Tecnologia, Sociedade e Ambiente, considerando suas relações e impactos mútuos.",
-
         "Produção científica, inovação tecnológica, sustentabilidade e desenvolvimento econômico.",
-
         "Conhecimento científico, formação cidadã, cultura digital e preservação ambiental.",
-
-        "Investigação científica, tecnologia aplicada, participação social e educação ambiental."
-
+        "Investigação científica, tecnologia aplicada, participação social e educação ambiental.",
+        "Ciência, Tecnologia, Sociedade e Ambiente, considerando suas relações e impactos mútuos."
     ],
 
-    correta:1,
+    correta:4,
 
     explicacao:"CTSA significa Ciência, Tecnologia, Sociedade e Ambiente, enfatizando as relações entre esses elementos.",
 
@@ -397,20 +337,14 @@ const bnccCiencias = [
     pergunta:"Entre as Competências Específicas de Ciências da Natureza, destaca-se a capacidade de argumentar com base em evidências, dados e informações confiáveis. Essa competência está relacionada principalmente à:",
 
     alternativas:[
-
-        "Construção de posicionamentos fundamentados por meio da análise crítica de evidências e conhecimentos científicos.",
-
         "Utilização de procedimentos investigativos voltados à compreensão dos fenômenos naturais e tecnológicos.",
-
         "Mobilização de conhecimentos científicos para interpretar problemas presentes em diferentes contextos sociais.",
-
         "Aplicação de conceitos científicos na elaboração de soluções para situações relacionadas ao cotidiano.",
-
+        "Construção de posicionamentos fundamentados por meio da análise crítica de evidências e conhecimentos científicos.",
         "Compreensão dos processos de produção, validação e comunicação do conhecimento científico."
-
     ],
 
-    correta:0,
+    correta:3,
 
     explicacao:"Argumentação científica envolve analisar evidências, interpretar dados e sustentar conclusões de forma fundamentada.",
 
@@ -427,20 +361,14 @@ const bnccCiencias = [
     pergunta:"A sustentabilidade, frequentemente abordada na BNCC, deve ser compreendida como:",
 
     alternativas:[
-
-        "Busca do equilíbrio entre dimensões ambientais, sociais e econômicas, considerando as necessidades das gerações presentes e futuras.",
-
         "Conjunto de práticas voltadas à conservação dos recursos naturais e à redução dos impactos ambientais causados pelas atividades humanas.",
-
         "Estratégia de gestão dos recursos disponíveis com foco na preservação ambiental e no desenvolvimento econômico responsável.",
-
         "Processo de utilização consciente dos recursos naturais associado à promoção da qualidade de vida da população.",
-
+        "Busca do equilíbrio entre dimensões ambientais, sociais e econômicas, considerando as necessidades das gerações presentes e futuras.",
         "Modelo de desenvolvimento comprometido com a proteção ambiental e a melhoria das condições sociais das comunidades."
-
     ],
 
-    correta:0,
+    correta:3,
 
     explicacao:"A sustentabilidade envolve simultaneamente as dimensões ambiental, social e econômica.",
 
@@ -487,20 +415,14 @@ const bnccCiencias = [
     pergunta:"A avaliação formativa caracteriza-se por:",
 
     alternativas:[
-
-        "Acompanhar continuamente o processo de aprendizagem, produzindo informações que orientem intervenções pedagógicas.",
-
         "Coletar evidências sobre o desenvolvimento dos estudantes ao longo das atividades de ensino e aprendizagem.",
-
         "Monitorar a evolução das aprendizagens para subsidiar decisões relacionadas ao planejamento pedagógico.",
-
+        "Acompanhar continuamente o processo de aprendizagem, produzindo informações que orientem intervenções pedagógicas.",
         "Utilizar diferentes instrumentos avaliativos para identificar avanços e dificuldades dos estudantes.",
-
         "Favorecer o acompanhamento sistemático das competências e habilidades desenvolvidas durante o processo educativo."
-
     ],
 
-    correta:0,
+    correta:2,
 
     explicacao:"A avaliação formativa possui caráter processual e orientador, acompanhando continuamente a aprendizagem.",
 
@@ -517,20 +439,14 @@ const bnccCiencias = [
     pergunta:"Assinale a alternativa correta sobre a BNCC.",
 
     alternativas:[
-
-        "Constitui referência nacional obrigatória destinada a orientar a elaboração dos currículos e das propostas pedagógicas da Educação Básica.",
-
         "Estabelece um currículo nacional comum a ser aplicado integralmente por todos os sistemas de ensino do país.",
-
+        "Constitui referência nacional obrigatória destinada a orientar a elaboração dos currículos e das propostas pedagógicas da Educação Básica.",
         "Define conteúdos mínimos obrigatórios e substitui os currículos elaborados pelas redes estaduais e municipais.",
-
         "Apresenta orientações curriculares facultativas destinadas a subsidiar o planejamento pedagógico das escolas.",
-
         "Regulamenta exclusivamente a organização curricular do Ensino Fundamental, respeitando a autonomia dos demais níveis de ensino."
-
     ],
 
-    correta:0,
+    correta:1,
 
     explicacao:"A BNCC é um documento normativo que orienta a elaboração dos currículos e propostas pedagógicas da Educação Básica.",
 
@@ -547,20 +463,14 @@ const bnccCiencias = [
     pergunta:"A respeito da Investigação Científica no ensino de Ciências, assinale a alternativa INCORRETA.",
 
     alternativas:[
-
         "Favorece a construção de explicações fundamentadas por meio da análise de evidências produzidas durante a investigação.",
-
         "Estimula a participação ativa dos estudantes na formulação de perguntas e na busca de respostas para problemas investigados.",
-
         "Contribui para o desenvolvimento do pensamento científico por meio da observação, análise e argumentação.",
-
-        "Depende necessariamente de laboratórios especializados e equipamentos avançados para garantir a validade das investigações.",
-
-        "Pode ser desenvolvida a partir de situações do cotidiano, utilizando diferentes recursos e estratégias pedagógicas."
-
+        "Pode ser desenvolvida a partir de situações do cotidiano, utilizando diferentes recursos e estratégias pedagógicas.",
+        "Depende necessariamente de laboratórios especializados e equipamentos avançados para garantir a validade das investigações."
     ],
 
-    correta:3,
+    correta:4,
 
     explicacao:"A investigação científica não depende obrigatoriamente de laboratórios sofisticados, podendo ocorrer em diferentes contextos educativos.",
 
@@ -577,20 +487,14 @@ const bnccCiencias = [
     pergunta:"Segundo a BNCC, qual das alternativas representa corretamente as três unidades temáticas da área de Ciências da Natureza?",
 
     alternativas:[
-
-        "Vida e Evolução, Terra e Universo e Matéria e Energia.",
-
         "Biologia, Física e Química, organizadas de acordo com os campos clássicos das Ciências da Natureza.",
-
+        "Vida e Evolução, Terra e Universo e Matéria e Energia.",
         "Ciência, Tecnologia e Sociedade, estruturadas para promover a formação cidadã dos estudantes.",
-
         "Saúde, Ambiente e Sustentabilidade, articuladas em torno de problemas contemporâneos.",
-
         "Terra, Vida e Energia, organizadas segundo os principais fenômenos naturais estudados na Educação Básica."
-
     ],
 
-    correta:0,
+    correta:1,
 
     explicacao:"As três unidades temáticas da BNCC são Matéria e Energia, Vida e Evolução e Terra e Universo.",
 
@@ -607,20 +511,14 @@ const bnccCiencias = [
     pergunta:"A Alfabetização Científica busca formar estudantes capazes de:",
 
     alternativas:[
-
-        "Utilizar conhecimentos científicos para interpretar situações, analisar informações e tomar decisões fundamentadas em diferentes contextos.",
-
         "Compreender conceitos científicos essenciais para explicar fenômenos observados no cotidiano e na sociedade.",
-
         "Mobilizar procedimentos investigativos voltados à resolução de problemas relacionados à realidade vivenciada pelos estudantes.",
-
         "Avaliar criticamente informações científicas divulgadas em diferentes meios de comunicação e espaços sociais.",
-
+        "Utilizar conhecimentos científicos para interpretar situações, analisar informações e tomar decisões fundamentadas em diferentes contextos.",
         "Relacionar conhecimentos científicos, tecnológicos e ambientais na análise de questões relevantes para a cidadania."
-
     ],
 
-    correta:0,
+    correta:3,
 
     explicacao:"A Alfabetização Científica envolve a utilização crítica dos conhecimentos científicos na vida cotidiana e na participação social.",
 
@@ -637,20 +535,14 @@ const bnccCiencias = [
     pergunta:"Sobre o ensino de Ciências na perspectiva da BNCC, assinale a alternativa correta.",
 
     alternativas:[
-
-        "Promover investigação, argumentação, análise de evidências e formação para o exercício da cidadania científica.",
-
         "Desenvolver conhecimentos científicos por meio da articulação entre conceitos, procedimentos e contextos significativos.",
-
         "Favorecer a participação ativa dos estudantes em situações de aprendizagem relacionadas a problemas reais.",
-
+        "Promover investigação, argumentação, análise de evidências e formação para o exercício da cidadania científica.",
         "Estimular a construção de explicações fundamentadas e a utilização crítica de conhecimentos científicos.",
-
         "Contribuir para o desenvolvimento de competências e habilidades necessárias à compreensão da realidade contemporânea."
-
     ],
 
-    correta:0,
+    correta:2,
 
     explicacao:"A BNCC propõe um ensino de Ciências baseado na investigação, análise de evidências, argumentação e formação da cidadania científica.",
 
@@ -662,6 +554,4 @@ const bnccCiencias = [
 
     dicaBanca:
     "Observe qual alternativa reúne os principais pilares do ensino de Ciências proposto pela BNCC."
-}
-
-];
+}];

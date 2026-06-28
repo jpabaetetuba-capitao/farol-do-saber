@@ -5,14 +5,14 @@ const materiaQuimica = [
     `Em uma aula de Ciências, foram apresentados ar, água, madeira, vidro e gás de cozinha como exemplos de matéria. Considerando o conceito científico de matéria, assinale a alternativa correta.`,
 
     alternativas: [
-        `Todos são matéria, pois possuem massa e ocupam lugar no espaço, ainda que alguns não sejam visíveis a olho nu.`,
         `Apenas água, madeira e vidro são matéria, pois somente materiais visíveis possuem massa mensurável.`,
         `O ar não é matéria, pois gases não apresentam volume definido em recipientes abertos.`,
         `O gás de cozinha não é matéria, pois substâncias inflamáveis são classificadas apenas como energia.`,
         `Somente sólidos são matéria, pois líquidos e gases não mantêm forma própria.`,
+        `Todos são matéria, pois possuem massa e ocupam lugar no espaço, ainda que alguns não sejam visíveis a olho nu.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Matéria é tudo que possui massa e ocupa espaço. Gases também são matéria, embora não tenham forma nem volume fixos.`,
@@ -32,14 +32,14 @@ const materiaQuimica = [
     `A diferença entre corpo, objeto e material está corretamente representada em:`,
 
     alternativas: [
-        `Corpo é uma porção limitada de matéria; objeto é um corpo com finalidade de uso; material é o tipo de matéria que compõe o corpo.`,
         `Corpo é qualquer substância pura; objeto é uma mistura homogênea; material é sempre uma substância simples.`,
+        `Corpo é uma porção limitada de matéria; objeto é um corpo com finalidade de uso; material é o tipo de matéria que compõe o corpo.`,
         `Corpo é apenas matéria gasosa; objeto é qualquer líquido; material é a energia liberada nas reações.`,
         `Corpo é a função do produto; objeto é o elemento químico; material é o volume ocupado pelo sistema.`,
-        `Corpo, objeto e material são sinônimos e indicam sempre a mesma classificação química.`,
+        `Corpo, objeto e material são sinônimos e indicam sempre a mesma classificação química.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Uma barra de ferro é corpo; uma ferramenta de ferro é objeto; ferro é o material.`,
@@ -86,14 +86,14 @@ const materiaQuimica = [
     `A compressibilidade é mais evidente nos gases do que em líquidos e sólidos porque:`,
 
     alternativas: [
-        `As partículas gasosas encontram-se mais afastadas, permitindo redução significativa do volume sob pressão.`,
         `As partículas gasosas são indivisíveis e, por isso, desaparecem quando comprimidas.`,
         `Os gases não possuem massa, tornando possível comprimi-los sem alteração de volume.`,
         `Líquidos e sólidos são formados por partículas mais afastadas que as partículas dos gases.`,
-        `A compressibilidade é uma propriedade exclusiva das substâncias puras simples.`,
+        `As partículas gasosas encontram-se mais afastadas, permitindo redução significativa do volume sob pressão.`,
+        `A compressibilidade é uma propriedade exclusiva das substâncias puras simples.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Gases possuem grande espaço entre partículas, o que permite compressão mais acentuada.`,
@@ -113,14 +113,14 @@ const materiaQuimica = [
     `A densidade é uma propriedade específica da matéria porque:`,
 
     alternativas: [
-        `Permite diferenciar materiais ao relacionar massa e volume de uma amostra.`,
         `Está presente apenas em gases e não pode ser medida em líquidos ou sólidos.`,
         `Indica somente a massa total, sem considerar o volume ocupado pelo corpo.`,
+        `Permite diferenciar materiais ao relacionar massa e volume de uma amostra.`,
         `Depende exclusivamente da cor e do odor observados em cada substância.`,
-        `É igual para todas as substâncias quando estão sob a mesma temperatura.`,
+        `É igual para todas as substâncias quando estão sob a mesma temperatura.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Densidade é a relação entre massa e volume e pode auxiliar na identificação de substâncias.`,
@@ -140,14 +140,14 @@ const materiaQuimica = [
     `Um bloco flutua em água, enquanto outro bloco de mesmo volume afunda. Considerando a densidade, a explicação correta é:`,
 
     alternativas: [
-        `O bloco que flutua possui densidade média menor que a da água, enquanto o que afunda possui densidade maior.`,
         `O bloco que flutua possui obrigatoriamente massa maior que o bloco que afunda.`,
         `O bloco que afunda tem sempre menor volume que o bloco que flutua, independentemente da massa.`,
         `A flutuação depende apenas da cor do material e não da relação entre massa e volume.`,
-        `Todo corpo sólido afunda em líquido quando possui forma regular e superfície lisa.`,
+        `O bloco que flutua possui densidade média menor que a da água, enquanto o que afunda possui densidade maior.`,
+        `Todo corpo sólido afunda em líquido quando possui forma regular e superfície lisa.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Corpos menos densos que o líquido tendem a flutuar; corpos mais densos tendem a afundar.`,
@@ -167,14 +167,14 @@ const materiaQuimica = [
     `Um navio de aço consegue flutuar porque:`,
 
     alternativas: [
-        `Sua densidade média, considerando o casco e o ar interno, pode ser menor que a densidade da água deslocada.`,
         `O aço deixa de ser matéria quando moldado em casco, diminuindo completamente sua massa.`,
         `A água perde densidade ao tocar metais, permitindo que qualquer objeto metálico flutue.`,
         `O navio possui massa nula quando está em movimento, mas volta a ter massa quando parado.`,
         `A flutuação ocorre apenas porque o aço é uma substância simples menos densa que a água.`,
+        `Sua densidade média, considerando o casco e o ar interno, pode ser menor que a densidade da água deslocada.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `A flutuação do navio depende da densidade média do conjunto e do volume de água deslocado.`,
@@ -194,14 +194,14 @@ const materiaQuimica = [
     `Sobre os estados físicos da matéria, assinale a alternativa correta.`,
 
     alternativas: [
-        `No estado sólido, há forma e volume definidos; no líquido, volume definido e forma variável; no gasoso, forma e volume variáveis.`,
         `No estado sólido, forma e volume são variáveis; no líquido, ambos são definidos; no gasoso, ambos são fixos.`,
+        `No estado sólido, há forma e volume definidos; no líquido, volume definido e forma variável; no gasoso, forma e volume variáveis.`,
         `No estado gasoso, as partículas ficam fixas em posições organizadas e vibram pouco.`,
         `No estado líquido, as partículas ficam mais afastadas que nos gases e não possuem mobilidade.`,
-        `No estado sólido, a matéria não possui partículas, pois elas surgem apenas durante a fusão.`,
+        `No estado sólido, a matéria não possui partículas, pois elas surgem apenas durante a fusão.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A organização e a mobilidade das partículas diferenciam sólidos, líquidos e gases.`,
@@ -248,14 +248,14 @@ const materiaQuimica = [
     `Em uma mudança de estado físico, como a fusão do gelo, ocorre:`,
 
     alternativas: [
-        `Alteração no arranjo e na energia das partículas, sem formação de nova substância.`,
         `Reorganização de átomos com formação obrigatória de nova substância.`,
         `Quebra do núcleo atômico e transformação dos elementos químicos presentes.`,
+        `Alteração no arranjo e na energia das partículas, sem formação de nova substância.`,
         `Desaparecimento da massa inicial por conversão completa em energia.`,
-        `Formação de íons por perda definitiva de prótons durante o aquecimento.`,
+        `Formação de íons por perda definitiva de prótons durante o aquecimento.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Mudanças de estado são transformações físicas: a composição química permanece a mesma.`,
@@ -275,14 +275,14 @@ const materiaQuimica = [
     `A água pura, representada por H₂O, é classificada como:`,
 
     alternativas: [
-        `Substância composta, pois é formada por átomos de elementos químicos diferentes.`,
         `Substância simples, pois possui moléculas iguais entre si em uma amostra pura.`,
         `Mistura homogênea, pois apresenta hidrogênio e oxigênio dissolvidos em uma fase.`,
         `Mistura heterogênea, pois seus elementos formam fases visíveis separadas.`,
         `Elemento químico, pois sua fórmula apresenta mais de uma letra e mais de um átomo.`,
+        `Substância composta, pois é formada por átomos de elementos químicos diferentes.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Substância composta possui elementos diferentes quimicamente combinados.`,
@@ -302,14 +302,14 @@ const materiaQuimica = [
     `O gás oxigênio (O₂) e o ozônio (O₃) são classificados como:`,
 
     alternativas: [
-        `Substâncias simples formadas pelo mesmo elemento químico, mas com estruturas moleculares diferentes.`,
         `Substâncias compostas, pois possuem dois ou três átomos em suas moléculas.`,
         `Misturas homogêneas, pois apresentam uma única fase gasosa.`,
         `Elementos químicos diferentes, pois possuem fórmulas moleculares diferentes.`,
-        `Sais gasosos, pois apresentam oxigênio em composição definida.`,
+        `Substâncias simples formadas pelo mesmo elemento químico, mas com estruturas moleculares diferentes.`,
+        `Sais gasosos, pois apresentam oxigênio em composição definida.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `O₂ e O₃ são substâncias simples porque possuem apenas átomos de oxigênio.`,
@@ -356,14 +356,14 @@ const materiaQuimica = [
     `A mistura formada por água e óleo é classificada como heterogênea porque:`,
 
     alternativas: [
-        `Apresenta duas fases visíveis devido à imiscibilidade entre os componentes.`,
         `Apresenta uma única fase porque ambos os líquidos possuem volume definido.`,
         `Forma uma nova substância composta por reação química imediata.`,
+        `Apresenta duas fases visíveis devido à imiscibilidade entre os componentes.`,
         `Possui apenas um componente, pois o óleo dissolve completamente a água.`,
-        `É uma substância pura, pois seus componentes são líquidos à temperatura ambiente.`,
+        `É uma substância pura, pois seus componentes são líquidos à temperatura ambiente.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Água e óleo não se misturam completamente e formam fases distintas.`,
@@ -383,14 +383,14 @@ const materiaQuimica = [
     `O granito é frequentemente usado como exemplo de mistura heterogênea porque:`,
 
     alternativas: [
-        `Apresenta minerais diferentes que podem ser percebidos como fases distintas.`,
         `É formado por uma única substância pura com composição fixa e invariável.`,
+        `Apresenta minerais diferentes que podem ser percebidos como fases distintas.`,
         `Possui apenas um elemento químico organizado em rede cristalina metálica.`,
         `É uma solução sólida com uma fase invisível em qualquer observação.`,
-        `Resulta da neutralização entre ácido e base, formando sal e água.`,
+        `Resulta da neutralização entre ácido e base, formando sal e água.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Granito contém diferentes minerais, como quartzo, feldspato e mica.`,
@@ -410,14 +410,14 @@ const materiaQuimica = [
     `Para separar areia de água, o método mais adequado entre os listados é:`,
 
     alternativas: [
-        `Filtração, pois a areia é sólido não dissolvido retido por barreira porosa.`,
         `Destilação fracionada, pois ambos são líquidos miscíveis de ebulição próxima.`,
         `Evaporação, pois recupera simultaneamente água líquida e areia seca.`,
+        `Filtração, pois a areia é sólido não dissolvido retido por barreira porosa.`,
         `Imantação, pois a areia sempre apresenta propriedades magnéticas intensas.`,
-        `Cromatografia, pois separa exclusivamente sólidos por diferença de tamanho.`,
+        `Cromatografia, pois separa exclusivamente sólidos por diferença de tamanho.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Filtração separa sólido insolúvel de líquido.`,
@@ -464,14 +464,14 @@ const materiaQuimica = [
     `A destilação simples pode ser usada para separar:`,
 
     alternativas: [
-        `Água de sal dissolvido, recuperando o solvente por vaporização e condensação.`,
         `Areia de cascalho, por diferença de tamanho das partículas sólidas.`,
         `Limalha de ferro de enxofre, por atração magnética do enxofre.`,
         `Água de óleo, por separação manual das fases visíveis.`,
-        `Pigmentos de tinta, por diferença de afinidade em papel absorvente.`,
+        `Água de sal dissolvido, recuperando o solvente por vaporização e condensação.`,
+        `Pigmentos de tinta, por diferença de afinidade em papel absorvente.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Destilação simples separa líquido de sólido dissolvido em mistura homogênea.`,
@@ -491,14 +491,14 @@ const materiaQuimica = [
     `A destilação fracionada é mais adequada que a simples quando se deseja separar:`,
 
     alternativas: [
-        `Líquidos miscíveis com diferentes pontos de ebulição.`,
         `Sólidos grandes de sólidos pequenos por uma malha.`,
+        `Líquidos miscíveis com diferentes pontos de ebulição.`,
         `Um sólido magnético de outro sólido não magnético.`,
         `Um sólido insolúvel de um líquido por papel-filtro.`,
-        `Uma fase oleosa de uma fase aquosa por funil de separação.`,
+        `Uma fase oleosa de uma fase aquosa por funil de separação.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Destilação fracionada separa líquidos miscíveis com ebulições distintas.`,
@@ -518,14 +518,14 @@ const materiaQuimica = [
     `A cromatografia é um método de separação baseado principalmente:`,
 
     alternativas: [
-        `Na diferença de afinidade dos componentes entre uma fase móvel e uma fase estacionária.`,
         `Na diferença de tamanho das partículas em uma peneira metálica.`,
         `Na atração magnética entre todos os componentes da mistura.`,
         `Na sedimentação espontânea de fases líquidas imiscíveis.`,
         `Na transformação química dos componentes em novas substâncias.`,
+        `Na diferença de afinidade dos componentes entre uma fase móvel e uma fase estacionária.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Cromatografia separa componentes por diferentes interações com fases móvel e estacionária.`,
@@ -545,14 +545,14 @@ const materiaQuimica = [
     `Assinale a alternativa que apresenta apenas transformações físicas.`,
 
     alternativas: [
-        `Gelo derretendo, vidro quebrando e água evaporando.`,
         `Madeira queimando, ferro enferrujando e leite azedando.`,
         `Papel queimando, gasolina combustando e fruta amadurecendo.`,
         `Vinho avinagrando, pão mofando e magnésio queimando.`,
-        `Alimento cozinhando, ovo fritando e explosivo detonando.`,
+        `Gelo derretendo, vidro quebrando e água evaporando.`,
+        `Alimento cozinhando, ovo fritando e explosivo detonando.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Transformações físicas alteram estado, forma ou aparência sem formar nova substância.`,
@@ -572,14 +572,14 @@ const materiaQuimica = [
     `Assinale a alternativa que apresenta apenas transformações químicas.`,
 
     alternativas: [
-        `Ferro enferrujando, madeira queimando e leite azedando.`,
         `Gelo fundindo, água evaporando e vidro quebrando.`,
         `Sal dissolvendo em água, papel picado e açúcar triturado.`,
+        `Ferro enferrujando, madeira queimando e leite azedando.`,
         `Álcool evaporando, metal dilatando e areia peneirada.`,
-        `Cera derretendo, vapor condensando e gelo sublimando.`,
+        `Cera derretendo, vapor condensando e gelo sublimando.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Transformações químicas formam novas substâncias, como ferrugem, cinzas e compostos do leite azedo.`,
@@ -599,14 +599,14 @@ const materiaQuimica = [
     `Uma evidência que pode indicar reação química, quando analisada com o contexto, é:`,
 
     alternativas: [
-        `Formação de gás, precipitado, mudança persistente de cor ou liberação de energia.`,
         `Apenas mudança de forma geométrica do material por corte ou amassamento.`,
+        `Formação de gás, precipitado, mudança persistente de cor ou liberação de energia.`,
         `Somente mudança de posição de um corpo em relação ao observador.`,
         `Apenas redução do tamanho das partículas por trituração mecânica.`,
-        `Somente passagem do líquido para o gasoso por aquecimento brando.`,
+        `Somente passagem do líquido para o gasoso por aquecimento brando.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Evidências podem sugerir reação química, mas devem ser interpretadas com o contexto.`,
@@ -653,14 +653,14 @@ const materiaQuimica = [
     `A combustão de um combustível é considerada transformação química porque:`,
 
     alternativas: [
-        `Forma novas substâncias e libera energia, geralmente na presença de oxigênio.`,
         `Altera apenas o estado físico do combustível, sem mudar sua composição.`,
         `Consiste somente na separação de fases por diferença de densidade.`,
         `Produz sempre uma substância simples sem participação de reagentes.`,
         `É apenas evaporação acelerada, sem rearranjo de átomos.`,
+        `Forma novas substâncias e libera energia, geralmente na presença de oxigênio.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Combustão envolve reagentes que formam novos produtos e liberam energia.`,
@@ -707,14 +707,14 @@ const materiaQuimica = [
     `O balanceamento de equações químicas deve ser feito por meio:`,
 
     alternativas: [
-        `Do ajuste de coeficientes, preservando as fórmulas das substâncias.`,
         `Da alteração dos índices das fórmulas, mudando a identidade química.`,
         `Da retirada de elementos que aparecem em menor quantidade.`,
         `Da substituição de produtos por reagentes mais estáveis.`,
-        `Da mudança do número atômico dos elementos envolvidos.`,
+        `Do ajuste de coeficientes, preservando as fórmulas das substâncias.`,
+        `Da mudança do número atômico dos elementos envolvidos.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Balancear é ajustar coeficientes para conservar átomos; não se alteram índices.`,
@@ -734,14 +734,14 @@ const materiaQuimica = [
     `A Lei da Conservação da Massa afirma que, em sistema fechado:`,
 
     alternativas: [
-        `A massa total dos reagentes é igual à massa total dos produtos.`,
         `A massa dos produtos é sempre menor, pois parte desaparece na reação.`,
+        `A massa total dos reagentes é igual à massa total dos produtos.`,
         `A massa dos reagentes é sempre maior, pois produtos não possuem matéria.`,
         `Os átomos são destruídos e substituídos por energia luminosa.`,
-        `Somente gases obedecem à conservação da massa.`,
+        `Somente gases obedecem à conservação da massa.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Em sistema fechado, a matéria se conserva; átomos se reorganizam.`,
@@ -761,14 +761,14 @@ const materiaQuimica = [
     `O modelo atômico de Dalton ficou conhecido por propor o átomo como:`,
 
     alternativas: [
-        `Uma esfera maciça, indivisível e sem estrutura interna conhecida para a época.`,
         `Uma esfera positiva com elétrons incrustados em sua massa.`,
         `Um núcleo pequeno e positivo cercado por grande espaço vazio.`,
         `Um sistema com elétrons distribuídos em níveis de energia definidos.`,
         `Uma nuvem eletrônica probabilística sem qualquer partícula nuclear.`,
+        `Uma esfera maciça, indivisível e sem estrutura interna conhecida para a época.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Dalton propôs átomos como partículas maciças e indivisíveis.`,
@@ -788,14 +788,14 @@ const materiaQuimica = [
     `O modelo de Thomson foi importante porque:`,
 
     alternativas: [
-        `Incorporou a existência do elétron em um átomo com carga positiva distribuída.`,
         `Propôs o núcleo positivo pequeno após experimento com lâmina de ouro.`,
         `Organizou elétrons em níveis de energia quantizados ao redor do núcleo.`,
+        `Incorporou a existência do elétron em um átomo com carga positiva distribuída.`,
         `Eliminou a existência de partículas subatômicas no interior da matéria.`,
-        `Definiu orbitais probabilísticos por meio da mecânica quântica atual.`,
+        `Definiu orbitais probabilísticos por meio da mecânica quântica atual.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Thomson descobriu o elétron e propôs o modelo do pudim de passas.`,
@@ -815,14 +815,14 @@ const materiaQuimica = [
     `O experimento da lâmina de ouro levou Rutherford a concluir que o átomo possui:`,
 
     alternativas: [
-        `Núcleo pequeno, denso e positivo, com grande espaço vazio ao redor.`,
         `Esfera maciça e indivisível, sem espaços internos.`,
         `Carga positiva espalhada uniformemente com elétrons fixos na superfície.`,
+        `Núcleo pequeno, denso e positivo, com grande espaço vazio ao redor.`,
         `Elétrons imóveis presos ao núcleo por ligações covalentes.`,
-        `Somente partículas neutras, sem cargas elétricas internas.`,
+        `Somente partículas neutras, sem cargas elétricas internas.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A maioria das partículas atravessou a lâmina, mas algumas desviaram, indicando núcleo pequeno e denso.`,
@@ -869,14 +869,14 @@ const materiaQuimica = [
     `No modelo atômico atual, os elétrons são descritos como:`,
 
     alternativas: [
-        `Distribuídos em regiões de probabilidade chamadas orbitais.`,
         `Fixos em trajetórias circulares rígidas e sempre visíveis.`,
+        `Distribuídos em regiões de probabilidade chamadas orbitais.`,
         `Incrustados em uma massa positiva homogênea.`,
         `Localizados no núcleo ao lado dos prótons e nêutrons.`,
-        `Partículas sem carga que determinam o número de massa.`,
+        `Partículas sem carga que determinam o número de massa.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `O modelo atual usa probabilidade para descrever a localização eletrônica.`,
@@ -896,14 +896,14 @@ const materiaQuimica = [
     `A associação correta entre partículas subatômicas e cargas elétricas é:`,
 
     alternativas: [
-        `Próton positivo, nêutron neutro e elétron negativo.`,
         `Próton negativo, nêutron positivo e elétron neutro.`,
         `Próton neutro, nêutron negativo e elétron positivo.`,
         `Próton positivo, nêutron negativo e elétron positivo.`,
-        `Próton negativo, nêutron neutro e elétron positivo.`,
+        `Próton positivo, nêutron neutro e elétron negativo.`,
+        `Próton negativo, nêutron neutro e elétron positivo.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Prótons têm carga positiva, nêutrons são neutros e elétrons são negativos.`,
@@ -923,14 +923,14 @@ const materiaQuimica = [
     `Um átomo neutro possui número atômico 17 e número de massa 35. Ele apresenta:`,
 
     alternativas: [
-        `17 prótons, 17 elétrons e 18 nêutrons.`,
         `35 prótons, 17 elétrons e 18 nêutrons.`,
         `18 prótons, 18 elétrons e 17 nêutrons.`,
         `17 prótons, 35 elétrons e 17 nêutrons.`,
         `35 prótons, 35 elétrons e 17 nêutrons.`,
+        `17 prótons, 17 elétrons e 18 nêutrons.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Número atômico = prótons. Átomo neutro: prótons = elétrons. Nêutrons = massa - prótons = 35 - 17 = 18.`,
@@ -977,14 +977,14 @@ const materiaQuimica = [
     `Um ânion é formado quando um átomo:`,
 
     alternativas: [
-        `Ganha elétrons e adquire carga negativa.`,
         `Perde elétrons e adquire carga positiva.`,
         `Perde prótons e mantém identidade química.`,
+        `Ganha elétrons e adquire carga negativa.`,
         `Ganha nêutrons e se torna obrigatoriamente positivo.`,
-        `Transforma elétrons em prótons por neutralização.`,
+        `Transforma elétrons em prótons por neutralização.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Ânions são íons negativos formados por ganho de elétrons.`,
@@ -1004,14 +1004,14 @@ const materiaQuimica = [
     `O número atômico de um elemento químico corresponde ao número de:`,
 
     alternativas: [
-        `Prótons no núcleo.`,
         `Nêutrons na eletrosfera.`,
         `Elétrons no núcleo.`,
         `Prótons somados aos nêutrons.`,
-        `Nêutrons somados aos elétrons.`,
+        `Prótons no núcleo.`,
+        `Nêutrons somados aos elétrons.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `O número atômico identifica o elemento e corresponde aos prótons.`,
@@ -1031,14 +1031,14 @@ const materiaQuimica = [
     `Na Tabela Periódica, as famílias ou grupos correspondem:`,
 
     alternativas: [
-        `Às colunas, reunindo elementos com propriedades químicas semelhantes.`,
         `Às linhas, reunindo elementos com o mesmo número de massa.`,
+        `Às colunas, reunindo elementos com propriedades químicas semelhantes.`,
         `Aos períodos, formados apenas por gases nobres.`,
         `Aos blocos que possuem obrigatoriamente a mesma densidade.`,
-        `Às regiões que apresentam elementos com o mesmo número de nêutrons.`,
+        `Às regiões que apresentam elementos com o mesmo número de nêutrons.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Famílias são colunas; períodos são linhas.`,
@@ -1058,14 +1058,14 @@ const materiaQuimica = [
     `A ligação iônica caracteriza-se principalmente por:`,
 
     alternativas: [
-        `Transferência de elétrons e atração entre íons de cargas opostas.`,
         `Compartilhamento igualitário de prótons entre dois núcleos.`,
         `Movimentação livre de nêutrons entre átomos neutros.`,
         `Formação de orbitais sem interação entre cargas elétricas.`,
         `União de moléculas por simples diferença de densidade.`,
+        `Transferência de elétrons e atração entre íons de cargas opostas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Na ligação iônica há transferência de elétrons, formando cátion e ânion.`,
@@ -1085,14 +1085,14 @@ const materiaQuimica = [
     `A ligação covalente ocorre quando átomos:`,
 
     alternativas: [
-        `Compartilham pares de elétrons para adquirir maior estabilidade.`,
         `Transferem elétrons formando íons de cargas opostas.`,
         `Perdem prótons para formar núcleos positivos menores.`,
         `Compartilham nêutrons e alteram o número atômico.`,
         `Separam fases por diferença de ponto de ebulição.`,
+        `Compartilham pares de elétrons para adquirir maior estabilidade.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Na ligação covalente há compartilhamento de elétrons.`,
@@ -1112,14 +1112,14 @@ const materiaQuimica = [
     `A ligação metálica explica propriedades como condutividade e maleabilidade porque:`,
 
     alternativas: [
-        `Há elétrons relativamente livres entre cátions metálicos organizados.`,
         `Há transferência completa de elétrons para formar apenas ânions.`,
+        `Há elétrons relativamente livres entre cátions metálicos organizados.`,
         `Há moléculas isoladas unidas exclusivamente por pontes de hidrogênio.`,
         `Há núcleos sem prótons, permitindo condução de calor.`,
-        `Há evaporação contínua dos átomos metálicos em temperatura ambiente.`,
+        `Há evaporação contínua dos átomos metálicos em temperatura ambiente.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Metais apresentam elétrons deslocalizados, o que contribui para condução e maleabilidade.`,
@@ -1139,14 +1139,14 @@ const materiaQuimica = [
     `Uma característica comum dos ácidos em abordagem básica é:`,
 
     alternativas: [
-        `Apresentarem pH menor que 7 em soluções aquosas usuais.`,
         `Apresentarem sempre pH maior que 7 e sabor adstringente.`,
         `Formarem obrigatoriamente metais quando dissolvidos em água.`,
+        `Apresentarem pH menor que 7 em soluções aquosas usuais.`,
         `Serem sempre sólidos insolúveis e sem condutividade.`,
-        `Não reagirem com bases em nenhuma condição.`,
+        `Não reagirem com bases em nenhuma condição.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Ácidos, em escala usual de pH, apresentam valores menores que 7.`,
@@ -1193,14 +1193,14 @@ const materiaQuimica = [
     `Uma solução com pH igual a 7, na escala usual, é classificada como:`,
 
     alternativas: [
-        `Neutra.`,
         `Ácida forte.`,
         `Básica forte.`,
         `Oxidante metálica.`,
-        `Iônica gasosa.`,
+        `Neutra.`,
+        `Iônica gasosa.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `pH igual a 7 indica neutralidade em condições usuais.`,
@@ -1220,14 +1220,14 @@ const materiaQuimica = [
     `Em uma neutralização típica entre ácido e base, os produtos frequentemente formados são:`,
 
     alternativas: [
-        `Sal e água.`,
         `Metal e oxigênio.`,
         `Ácido e gás hidrogênio sempre.`,
         `Base e dióxido de carbono sempre.`,
-        `Prótons e elétrons livres no núcleo.`,
+        `Sal e água.`,
+        `Prótons e elétrons livres no núcleo.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Neutralização ácido-base geralmente forma sal e água.`,
@@ -1247,14 +1247,14 @@ const materiaQuimica = [
     `Os óxidos são, em regra geral, compostos binários em que:`,
 
     alternativas: [
-        `O oxigênio está combinado com outro elemento químico.`,
         `O hidrogênio aparece combinado apenas com metais alcalinos.`,
         `O carbono está combinado exclusivamente com outro carbono.`,
+        `O oxigênio está combinado com outro elemento químico.`,
         `O nitrogênio aparece sempre isolado na forma molecular.`,
-        `O cloro forma substância simples com número atômico variável.`,
+        `O cloro forma substância simples com número atômico variável.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Óxidos são compostos binários com oxigênio e outro elemento, com exceções específicas.`,
@@ -1274,14 +1274,14 @@ const materiaQuimica = [
     `Os sais podem ser compreendidos, em abordagem escolar, como compostos que frequentemente resultam:`,
 
     alternativas: [
-        `Da reação entre ácido e base em processo de neutralização.`,
         `Da fusão de um sólido sem alteração de composição química.`,
+        `Da reação entre ácido e base em processo de neutralização.`,
         `Da evaporação de um gás nobre em temperatura ambiente.`,
         `Da quebra do núcleo atômico por peneiração química.`,
-        `Da transformação de elétrons em nêutrons na eletrosfera.`,
+        `Da transformação de elétrons em nêutrons na eletrosfera.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Muitos sais são formados em reações de neutralização entre ácidos e bases.`,
@@ -1301,14 +1301,14 @@ const materiaQuimica = [
     `Uma reação de síntese é aquela em que:`,
 
     alternativas: [
-        `Duas ou mais substâncias se combinam formando um produto principal.`,
         `Uma substância se decompõe em duas ou mais substâncias mais simples.`,
         `Um elemento desloca outro em uma substância composta.`,
         `Dois compostos trocam íons formando novos compostos.`,
         `Uma mistura é separada por diferença de densidade.`,
+        `Duas ou mais substâncias se combinam formando um produto principal.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Síntese é combinação de reagentes formando produto.`,
@@ -1355,14 +1355,14 @@ const materiaQuimica = [
     `Uma reação de simples troca caracteriza-se quando:`,
 
     alternativas: [
-        `Um elemento desloca outro de uma substância composta.`,
         `Duas substâncias simples combinam-se em um único produto.`,
         `Uma substância composta se separa apenas por aquecimento físico.`,
         `Dois compostos trocam íons simultaneamente.`,
-        `Um soluto passa pelo papel-filtro sem interação química.`,
+        `Um elemento desloca outro de uma substância composta.`,
+        `Um soluto passa pelo papel-filtro sem interação química.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Na simples troca, um elemento ocupa o lugar de outro em um composto.`,
@@ -1382,14 +1382,14 @@ const materiaQuimica = [
     `Uma reação de dupla troca caracteriza-se quando:`,
 
     alternativas: [
-        `Dois compostos trocam componentes, formando novos compostos.`,
         `Um composto se separa em substâncias mais simples.`,
         `Dois elementos formam um único produto por combinação.`,
+        `Dois compostos trocam componentes, formando novos compostos.`,
         `Um elemento substitui outro em uma única substância composta.`,
-        `Uma solução é separada por destilação fracionada.`,
+        `Uma solução é separada por destilação fracionada.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Na dupla troca, compostos trocam íons ou grupos, formando novos compostos.`,
@@ -1436,14 +1436,14 @@ const materiaQuimica = [
     `Na fórmula CO₂, o índice 2 indica:`,
 
     alternativas: [
-        `Dois átomos de oxigênio ligados a cada átomo de carbono na molécula.`,
         `Duas moléculas completas de gás carbônico antes da reação.`,
         `Dois átomos de carbono ligados ao oxigênio molecular.`,
         `Duas cargas positivas no núcleo do oxigênio.`,
         `Dois coeficientes usados para balancear a equação.`,
+        `Dois átomos de oxigênio ligados a cada átomo de carbono na molécula.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `O índice indica quantidade de átomos do elemento na fórmula.`,
@@ -1463,14 +1463,14 @@ const materiaQuimica = [
     `Em uma reação realizada em recipiente fechado, mediram-se 40 g de reagentes. Ao final, a massa total dos produtos deve ser:`,
 
     alternativas: [
-        `40 g, pois a massa se conserva em sistema fechado.`,
         `Menor que 40 g, pois parte da matéria desaparece ao reagir.`,
+        `40 g, pois a massa se conserva em sistema fechado.`,
         `Maior que 40 g, pois reações sempre criam matéria adicional.`,
         `Zero, pois toda massa vira energia térmica mensurável.`,
-        `Indefinida, pois massa não se aplica a reações químicas.`,
+        `Indefinida, pois massa não se aplica a reações químicas.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Em sistema fechado, a massa total é conservada.`,
@@ -1517,14 +1517,14 @@ const materiaQuimica = [
     `O tratamento de água envolve processos físicos e químicos. Uma interpretação correta é:`,
 
     alternativas: [
-        `Filtração remove partículas, enquanto desinfecção reduz microrganismos, tornando a água mais segura.`,
         `Filtração transforma água contaminada em substância simples sem necessidade de outros cuidados.`,
         `Cloração separa areia por diferença de tamanho entre partículas sólidas.`,
         `Decantação elimina todos os vírus por alteração do número atômico da água.`,
         `Água tratada deixa de ser matéria porque perde massa durante o processo.`,
+        `Filtração remove partículas, enquanto desinfecção reduz microrganismos, tornando a água mais segura.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Tratamento de água combina etapas como decantação, filtração e desinfecção.`,
@@ -1544,14 +1544,14 @@ const materiaQuimica = [
     `A reciclagem de materiais exige conhecimento químico porque:`,
 
     alternativas: [
-        `Diferentes materiais possuem propriedades específicas que orientam separação, reaproveitamento e transformação.`,
         `Todos os materiais possuem exatamente a mesma composição e podem ser reciclados pelo mesmo processo.`,
         `A reciclagem ocorre apenas por reação nuclear e independe de propriedades da matéria.`,
+        `Diferentes materiais possuem propriedades específicas que orientam separação, reaproveitamento e transformação.`,
         `Materiais recicláveis não possuem massa, o que facilita sua separação automática.`,
-        `Plásticos, metais e vidros são sempre substâncias simples idênticas.`,
+        `Plásticos, metais e vidros são sempre substâncias simples idênticas.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Propriedades como densidade, composição, fusão e solubilidade influenciam processos de reciclagem.`,
@@ -1571,14 +1571,14 @@ const materiaQuimica = [
     `Em laboratório escolar, a conduta mais adequada ao manusear substâncias desconhecidas é:`,
 
     alternativas: [
-        `Seguir orientação, usar proteção quando indicada e não cheirar ou provar substâncias diretamente.`,
         `Provar pequena quantidade para reconhecer propriedades organolépticas com maior segurança.`,
         `Misturar substâncias desconhecidas para observar se há mudança de cor.`,
         `Aquecer qualquer líquido fechado para acelerar a identificação.`,
-        `Descartar resíduos em qualquer pia, pois pequenas quantidades não oferecem risco.`,
+        `Seguir orientação, usar proteção quando indicada e não cheirar ou provar substâncias diretamente.`,
+        `Descartar resíduos em qualquer pia, pois pequenas quantidades não oferecem risco.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Segurança em laboratório exige orientação, equipamentos adequados e descarte correto.`,
@@ -1598,14 +1598,14 @@ const materiaQuimica = [
     `Uma abordagem correta sobre Química no cotidiano deve reconhecer que:`,
 
     alternativas: [
-        `A Química explica fenômenos como combustão, corrosão, conservação de alimentos, medicamentos, poluição e tratamento de água.`,
         `A Química está restrita a laboratórios e não se relaciona com ambiente, tecnologia ou saúde.`,
+        `A Química explica fenômenos como combustão, corrosão, conservação de alimentos, medicamentos, poluição e tratamento de água.`,
         `A Química trata apenas de substâncias artificiais, sem envolver matéria presente nos seres vivos.`,
         `A Química substitui a Física e a Biologia, tornando desnecessário estudar outros fenômenos naturais.`,
-        `A Química existe apenas quando há explosões ou emissão de luz intensa.`,
+        `A Química existe apenas quando há explosões ou emissão de luz intensa.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A Química estuda matéria, propriedades e transformações em diversos contextos cotidianos.`,
@@ -1618,6 +1618,4 @@ const materiaQuimica = [
 
     dicaBanca:
     `Questões contextualizadas valorizam relação entre Química, ambiente, saúde e tecnologia.`
-}
-
-];
+}];

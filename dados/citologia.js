@@ -6,13 +6,13 @@ const citologia = [
 
     alternativas: [
         "Ecologia",
-        "Citologia",
         "Embriologia",
         "Taxonomia",
+        "Citologia",
         "Fisiologia"
     ],
 
-    correta: 1,
+    correta: 3,
 
     explicacao:
     "A Citologia é o ramo da Biologia responsável pelo estudo das células. Ela investiga sua estrutura, composição, funcionamento e importância para os seres vivos. Como a célula é considerada a unidade básica da vida, a Citologia constitui um dos pilares fundamentais da Biologia moderna.",
@@ -32,14 +32,14 @@ const citologia = [
     "Durante uma aula prática, o professor afirmou que a célula é considerada a unidade básica dos seres vivos. Essa afirmação significa que a célula:",
 
     alternativas: [
-        "É a menor estrutura capaz de realizar funções vitais.",
         "É formada exclusivamente por DNA.",
         "Existe apenas em organismos microscópicos.",
         "Está presente apenas nos animais.",
-        "Substitui tecidos e órgãos nos organismos complexos."
+        "Substitui tecidos e órgãos nos organismos complexos.",
+        "É a menor estrutura capaz de realizar funções vitais."
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     "A célula é considerada a unidade estrutural e funcional dos seres vivos porque representa a menor porção capaz de desempenhar atividades essenciais à vida, como nutrição, crescimento, reprodução e resposta a estímulos.",
@@ -60,13 +60,13 @@ const citologia = [
 
     alternativas: [
         "Louis Pasteur",
+        "Robert Hooke",
         "Gregor Mendel",
         "Antonie van Leeuwenhoek",
-        "Robert Hooke",
         "Charles Darwin"
     ],
 
-    correta: 3,
+    correta: 1,
 
     explicacao:
     "Robert Hooke observou cortes de cortiça e identificou pequenas cavidades que lembravam os quartos de um mosteiro. Por isso, utilizou o termo 'célula', que permanece em uso até os dias atuais.",
@@ -113,14 +113,14 @@ const citologia = [
     "Ao comparar um microscópio óptico com um microscópio eletrônico, um estudante concluiu corretamente que o microscópio eletrônico:",
 
     alternativas: [
+        "Utiliza feixes de elétrons para formar imagens.",
         "Utiliza exclusivamente luz natural.",
         "Possui menor capacidade de ampliação.",
-        "Utiliza feixes de elétrons para formar imagens.",
         "Foi utilizado por Robert Hooke no século XVII.",
         "Não permite observar estruturas celulares."
     ],
 
-    correta: 2,
+    correta: 0,
 
     explicacao:
     "O microscópio eletrônico utiliza feixes de elétrons em vez de luz, permitindo ampliações muito maiores e observação detalhada de estruturas celulares invisíveis ao microscópio óptico.",
@@ -141,12 +141,12 @@ const citologia = [
     alternativas: [
         "Somente os animais são formados por células.",
         "As células surgem espontaneamente da matéria sem vida.",
-        "Todos os seres vivos são constituídos por uma ou mais células.",
         "As células existem apenas em organismos microscópicos.",
+        "Todos os seres vivos são constituídos por uma ou mais células.",
         "Os vírus são formados por células completas."
     ],
 
-    correta: 2,
+    correta: 3,
 
     explicacao:
     "A Teoria Celular afirma que todos os seres vivos são constituídos por uma ou mais células. Esse princípio é considerado um dos fundamentos da Biologia moderna e aplica-se tanto a organismos unicelulares quanto multicelulares.",
@@ -249,12 +249,12 @@ const citologia = [
     alternativas: [
         "As células são independentes do organismo.",
         "Os tecidos funcionam sem participação celular.",
-        "A célula é a unidade básica estrutural e funcional da vida.",
         "Os órgãos produzem células espontaneamente.",
-        "As células não possuem especialização."
+        "As células não possuem especialização.",
+        "A célula é a unidade básica estrutural e funcional da vida."
     ],
 
-    correta: 2,
+    correta: 4,
 
     explicacao:
     "Como todos os tecidos e órgãos são formados por células, alterações celulares podem comprometer o funcionamento de estruturas mais complexas do organismo.",
@@ -273,14 +273,14 @@ const citologia = [
     "Durante uma análise microbiológica, um pesquisador observou organismos unicelulares que não possuíam núcleo delimitado por membrana. Esses organismos são classificados como células:",
 
     alternativas: [
+        "Procariontes",
         "Eucariontes",
         "Animais",
         "Vegetais",
-        "Procariontes",
         "Pluricelulares"
     ],
 
-    correta: 3,
+    correta: 0,
 
     explicacao:
     "As células procariontes não possuem núcleo organizado por membrana nuclear. Seu material genético encontra-se disperso no citoplasma, em uma região denominada nucleoide. As bactérias são os principais representantes desse grupo.",
@@ -328,13 +328,13 @@ const citologia = [
 
     alternativas: [
         "Eucariontes pluricelulares",
-        "Eucariontes unicelulares",
         "Procariontes unicelulares",
+        "Eucariontes unicelulares",
         "Acelulares",
         "Protozoários"
     ],
 
-    correta: 2,
+    correta: 1,
 
     explicacao:
     "As bactérias são organismos unicelulares formados por células procariontes. Apesar de sua simplicidade estrutural, apresentam grande diversidade metabólica e ecológica.",
@@ -356,12 +356,12 @@ const citologia = [
     alternativas: [
         "Bactérias e arqueias",
         "Bactérias e fungos",
-        "Protozoários, fungos, plantas e animais",
         "Vírus e bactérias",
-        "Arqueias e vírus"
+        "Arqueias e vírus",
+        "Protozoários, fungos, plantas e animais"
     ],
 
-    correta: 2,
+    correta: 4,
 
     explicacao:
     "Protozoários, fungos, plantas e animais possuem células eucariontes. Bactérias e arqueias pertencem ao grupo dos procariontes.",
@@ -434,14 +434,14 @@ const citologia = [
     "Segundo o modelo do mosaico fluido, a membrana plasmática é formada principalmente por:",
 
     alternativas: [
+        "Fosfolipídios e proteínas.",
         "DNA e RNA.",
         "Carboidratos e vitaminas.",
-        "Fosfolipídios e proteínas.",
         "Celulose e quitina.",
         "Água e sais minerais."
     ],
 
-    correta: 2,
+    correta: 0,
 
     explicacao:
     "O modelo do mosaico fluido descreve a membrana plasmática como uma estrutura dinâmica formada principalmente por uma bicamada de fosfolipídios com proteínas distribuídas entre ela.",
@@ -462,13 +462,13 @@ const citologia = [
 
     alternativas: [
         "Homeostase.",
-        "Permeabilidade seletiva.",
         "Difusão facilitada.",
         "Osmose.",
+        "Permeabilidade seletiva.",
         "Endocitose."
     ],
 
-    correta: 1,
+    correta: 3,
 
     explicacao:
     "A permeabilidade seletiva permite que a célula controle a troca de substâncias com o ambiente, selecionando o que entra e o que sai conforme suas necessidades.",
@@ -517,12 +517,12 @@ const citologia = [
     alternativas: [
         "Produzir ATP.",
         "Armazenar DNA.",
-        "Regular a fluidez da membrana.",
         "Produzir ribossomos.",
-        "Realizar divisão celular."
+        "Realizar divisão celular.",
+        "Regular a fluidez da membrana."
     ],
 
-    correta: 2,
+    correta: 4,
 
     explicacao:
     "O colesterol participa da estrutura da membrana plasmática das células animais, contribuindo para a estabilidade e regulando sua fluidez.",
@@ -543,12 +543,12 @@ const citologia = [
     alternativas: [
         "Osmose",
         "Transporte ativo",
-        "Difusão simples",
         "Endocitose",
-        "Exocitose"
+        "Exocitose",
+        "Difusão simples"
     ],
 
-    correta: 2,
+    correta: 4,
 
     explicacao:
     "A difusão simples é um transporte passivo no qual as moléculas se deslocam da região mais concentrada para a menos concentrada sem gasto de energia pela célula.",
@@ -569,13 +569,13 @@ const citologia = [
 
     alternativas: [
         "Transporte ativo",
-        "Difusão facilitada",
         "Exocitose",
+        "Difusão facilitada",
         "Pinocitose",
         "Fagocitose"
     ],
 
-    correta: 1,
+    correta: 2,
 
     explicacao:
     "Na difusão facilitada, proteínas transportadoras auxiliam a passagem de determinadas substâncias pela membrana sem gasto de energia, sempre a favor do gradiente de concentração.",
@@ -597,12 +597,12 @@ const citologia = [
     alternativas: [
         "Difusão simples",
         "Transporte ativo",
-        "Osmose",
         "Exocitose",
+        "Osmose",
         "Difusão facilitada"
     ],
 
-    correta: 2,
+    correta: 3,
 
     explicacao:
     "A osmose é o transporte passivo de água através de uma membrana semipermeável. A água desloca-se da região menos concentrada em solutos para a mais concentrada.",
@@ -622,14 +622,14 @@ const citologia = [
     "Uma célula transportou íons do meio menos concentrado para o mais concentrado utilizando ATP. Esse processo é conhecido como:",
 
     alternativas: [
+        "Transporte ativo",
         "Difusão simples",
         "Difusão facilitada",
         "Osmose",
-        "Transporte ativo",
         "Pinocitose"
     ],
 
-    correta: 3,
+    correta: 0,
 
     explicacao:
     "O transporte ativo ocorre contra o gradiente de concentração e exige gasto de energia na forma de ATP. Um exemplo clássico é a bomba de sódio e potássio.",
@@ -650,13 +650,13 @@ const citologia = [
 
     alternativas: [
         "Difusão facilitada",
+        "Fagocitose",
         "Exocitose",
         "Osmose",
-        "Fagocitose",
         "Transporte ativo"
     ],
 
-    correta: 3,
+    correta: 1,
 
     explicacao:
     "A fagocitose é um tipo de endocitose em que a célula engloba partículas sólidas ou microrganismos por meio de projeções da membrana plasmática.",
@@ -677,12 +677,12 @@ const citologia = [
     alternativas: [
         "Ser composto exclusivamente por DNA.",
         "Conter apenas água pura.",
-        "Ser a região entre a membrana plasmática e o núcleo, onde se encontram as organelas.",
         "Existir apenas em células vegetais.",
+        "Ser a região entre a membrana plasmática e o núcleo, onde se encontram as organelas.",
         "Ser responsável pela formação da carioteca."
     ],
 
-    correta: 2,
+    correta: 3,
 
     explicacao:
     "O citoplasma corresponde à região localizada entre a membrana plasmática e o núcleo. Nele encontram-se as organelas celulares mergulhadas no citosol, onde ocorrem inúmeras reações metabólicas.",
@@ -702,14 +702,14 @@ const citologia = [
     "Uma célula apresentou intensa produção de proteínas destinadas ao crescimento e manutenção do organismo. A organela diretamente responsável pela síntese dessas proteínas é:",
 
     alternativas: [
+        "Ribossomo",
         "Lisossomo",
         "Complexo Golgiense",
         "Mitocôndria",
-        "Ribossomo",
         "Peroxissomo"
     ],
 
-    correta: 3,
+    correta: 0,
 
     explicacao:
     "Os ribossomos são responsáveis pela síntese de proteínas. Eles podem estar livres no citoplasma ou associados ao retículo endoplasmático rugoso.",
@@ -729,14 +729,14 @@ const citologia = [
     "Em determinada célula observou-se uma extensa rede de membranas com ribossomos aderidos à sua superfície. Essa organela é denominada:",
 
     alternativas: [
-        "Retículo Endoplasmático Rugoso",
         "Retículo Endoplasmático Liso",
         "Complexo Golgiense",
         "Lisossomo",
-        "Vacúolo"
+        "Vacúolo",
+        "Retículo Endoplasmático Rugoso"
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     "O Retículo Endoplasmático Rugoso (RER) apresenta ribossomos aderidos à sua superfície e participa da síntese e transporte de proteínas.",
@@ -756,14 +756,14 @@ const citologia = [
     "Uma célula especializada na produção de hormônios esteroides apresentou grande quantidade de uma organela relacionada à síntese de lipídios. Trata-se do:",
 
     alternativas: [
-        "Retículo Endoplasmático Liso",
         "Ribossomo",
+        "Retículo Endoplasmático Liso",
         "Complexo Golgiense",
         "Lisossomo",
         "Nucléolo"
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     "O Retículo Endoplasmático Liso (REL) participa da síntese de lipídios, da desintoxicação celular e do armazenamento de cálcio em alguns tipos celulares.",
@@ -811,12 +811,12 @@ const citologia = [
     alternativas: [
         "Lisossomo",
         "Complexo Golgiense",
-        "Mitocôndria",
         "Centríolo",
-        "Peroxissomo"
+        "Peroxissomo",
+        "Mitocôndria"
     ],
 
-    correta: 2,
+    correta: 4,
 
     explicacao:
     "As mitocôndrias realizam a respiração celular, processo responsável pela produção de ATP, principal fonte de energia utilizada pelas células.",
@@ -837,13 +837,13 @@ const citologia = [
 
     alternativas: [
         "Peroxissomos",
-        "Lisossomos",
         "Ribossomos",
         "Vacúolos",
+        "Lisossomos",
         "Nucléolos"
     ],
 
-    correta: 1,
+    correta: 3,
 
     explicacao:
     "Os lisossomos possuem enzimas digestivas responsáveis pela digestão intracelular de partículas, organelas envelhecidas e substâncias diversas.",
@@ -863,14 +863,14 @@ const citologia = [
     "Uma célula apresentou intensa atividade de degradação de substâncias tóxicas produzidas pelo metabolismo. A organela mais relacionada a essa função é o:",
 
     alternativas: [
+        "Peroxissomo",
         "Retículo Rugoso",
         "Complexo Golgiense",
-        "Peroxissomo",
         "Centríolo",
         "Ribossomo"
     ],
 
-    correta: 2,
+    correta: 0,
 
     explicacao:
     "Os peroxissomos participam da degradação de substâncias tóxicas, especialmente do peróxido de hidrogênio (água oxigenada), utilizando enzimas específicas.",
@@ -891,13 +891,13 @@ const citologia = [
 
     alternativas: [
         "Vacúolos",
+        "Centríolos",
         "Mitocôndrias",
         "Lisossomos",
-        "Centríolos",
         "Ribossomos"
     ],
 
-    correta: 3,
+    correta: 1,
 
     explicacao:
     "Os centríolos participam da organização do fuso mitótico durante a divisão celular das células animais, auxiliando na distribuição dos cromossomos.",
@@ -918,13 +918,13 @@ const citologia = [
 
     alternativas: [
         "Ribossomos",
-        "Vacúolos",
         "Peroxissomos",
+        "Vacúolos",
         "Lisossomos",
         "Nucléolos"
     ],
 
-    correta: 1,
+    correta: 2,
 
     explicacao:
     "Os vacúolos são estruturas importantes principalmente nas células vegetais, atuando no armazenamento de água, nutrientes, pigmentos e resíduos metabólicos.",
@@ -944,13 +944,13 @@ const citologia = [
 
     alternativas: [
         "Complexo Golgiense",
-        "Citoplasma",
         "Material genético (DNA)",
+        "Citoplasma",
         "Retículo Endoplasmático",
         "Peroxissomo"
     ],
 
-    correta: 2,
+    correta: 1,
 
     explicacao:
     "O núcleo celular abriga o DNA, molécula responsável pelo armazenamento das informações genéticas que controlam o funcionamento e as características dos organismos.",
@@ -971,13 +971,13 @@ const citologia = [
 
     alternativas: [
         "Membrana plasmática",
-        "Carioteca",
         "Tonoplasto",
         "Parede celular",
+        "Carioteca",
         "Lamelas"
     ],
 
-    correta: 1,
+    correta: 3,
 
     explicacao:
     "A carioteca, também chamada de envoltório nuclear, é a membrana que delimita o núcleo e controla a comunicação entre núcleo e citoplasma através dos poros nucleares.",
@@ -998,13 +998,13 @@ const citologia = [
 
     alternativas: [
         "Ribossomo",
-        "Cromatina",
         "Fuso mitótico",
+        "Cromatina",
         "Nucléolo",
         "Centríolo"
     ],
 
-    correta: 1,
+    correta: 2,
 
     explicacao:
     "A cromatina é formada por DNA associado a proteínas. Durante a intérfase, ela permanece descondensada para permitir a atividade genética da célula.",
@@ -1024,14 +1024,14 @@ const citologia = [
     "Quando a célula inicia o processo de divisão celular, a cromatina sofre condensação e passa a ser observada na forma de:",
 
     alternativas: [
-        "Cromossomos",
         "Lisossomos",
         "Vacúolos",
         "Ribossomos",
-        "Mitocôndrias"
+        "Mitocôndrias",
+        "Cromossomos"
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     "Durante a divisão celular, a cromatina condensa-se formando os cromossomos, estruturas mais compactas que facilitam a distribuição do material genético entre as células-filhas.",
@@ -1051,14 +1051,14 @@ const citologia = [
     "O nucléolo é uma estrutura presente no interior do núcleo celular cuja principal função está relacionada à:",
 
     alternativas: [
+        "Síntese de ribossomos",
         "Produção de ATP",
         "Digestão intracelular",
-        "Síntese de ribossomos",
         "Armazenamento de lipídios",
         "Respiração celular"
     ],
 
-    correta: 2,
+    correta: 0,
 
     explicacao:
     "O nucléolo é responsável pela produção de RNA ribossômico (rRNA) e pela montagem das subunidades que formarão os ribossomos.",
@@ -1131,14 +1131,14 @@ const citologia = [
     "Durante a síntese de proteínas, uma molécula transporta a informação genética do DNA até os ribossomos. Essa molécula é o:",
 
     alternativas: [
-        "RNA mensageiro (RNAm)",
         "RNA transportador (RNAt)",
         "RNA ribossômico (RNAr)",
         "ATP",
+        "RNA mensageiro (RNAm)",
         "DNA complementar"
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     "O RNA mensageiro (RNAm) leva a informação genética copiada do DNA até os ribossomos, onde ocorrerá a produção das proteínas.",
@@ -1160,12 +1160,12 @@ const citologia = [
     alternativas: [
         "RNA mensageiro",
         "RNA ribossômico",
-        "RNA transportador",
         "DNA",
-        "ATP"
+        "ATP",
+        "RNA transportador"
     ],
 
-    correta: 2,
+    correta: 4,
 
     explicacao:
     "O RNA transportador (RNAt) leva aminoácidos até os ribossomos, onde eles serão unidos para formar proteínas.",
@@ -1185,14 +1185,14 @@ const citologia = [
     "Os ribossomos possuem em sua composição um tipo específico de RNA cuja função está relacionada à formação dessas estruturas. Esse RNA é denominado:",
 
     alternativas: [
+        "RNA ribossômico",
         "RNA mensageiro",
         "RNA transportador",
-        "RNA ribossômico",
         "RNA nuclear",
         "DNA ribossômico"
     ],
 
-    correta: 2,
+    correta: 0,
 
     explicacao:
     "O RNA ribossômico (RNAr) compõe estruturalmente os ribossomos e participa diretamente da síntese de proteínas.",
@@ -1213,12 +1213,12 @@ const citologia = [
     alternativas: [
         "Meiose",
         "Mutação",
-        "Mitose",
         "Fecundação",
-        "Transcrição"
+        "Transcrição",
+        "Mitose"
     ],
 
-    correta: 2,
+    correta: 4,
 
     explicacao:
     "A mitose é o processo de divisão celular responsável pelo crescimento dos organismos, reparação de tecidos e substituição de células desgastadas. Nesse processo, uma célula origina duas células-filhas geneticamente idênticas.",
@@ -1240,12 +1240,12 @@ const citologia = [
     alternativas: [
         "Quatro células geneticamente diferentes.",
         "Duas células geneticamente diferentes.",
-        "Duas células geneticamente idênticas.",
         "Quatro células geneticamente idênticas.",
+        "Duas células geneticamente idênticas.",
         "Uma única célula."
     ],
 
-    correta: 2,
+    correta: 3,
 
     explicacao:
     "Na mitose, uma célula origina duas células-filhas com o mesmo número de cromossomos e o mesmo material genético da célula original.",
@@ -1266,13 +1266,13 @@ const citologia = [
 
     alternativas: [
         "Mitose",
+        "Meiose",
         "Brotamento",
         "Fragmentação",
-        "Meiose",
         "Clonagem"
     ],
 
-    correta: 3,
+    correta: 1,
 
     explicacao:
     "A meiose é uma divisão celular especializada que reduz pela metade o número de cromossomos, permitindo a formação dos gametas.",
@@ -1292,14 +1292,14 @@ const citologia = [
     "Ao final da meiose, uma célula-mãe origina:",
 
     alternativas: [
+        "Quatro células geneticamente diferentes.",
         "Duas células idênticas.",
         "Duas células haploides.",
         "Quatro células geneticamente idênticas.",
-        "Quatro células geneticamente diferentes.",
         "Uma célula diploide."
     ],
 
-    correta: 3,
+    correta: 0,
 
     explicacao:
     "A meiose produz quatro células-filhas haploides geneticamente diferentes, aumentando a variabilidade genética das populações.",
@@ -1320,13 +1320,13 @@ const citologia = [
 
     alternativas: [
         "Produzir ATP.",
-        "Aumentar a variabilidade genética.",
         "Realizar a digestão celular.",
+        "Aumentar a variabilidade genética.",
         "Produzir ribossomos.",
         "Controlar a permeabilidade da membrana."
     ],
 
-    correta: 1,
+    correta: 2,
 
     explicacao:
     "Durante a meiose ocorrem eventos como crossing-over e segregação independente dos cromossomos, que aumentam a variabilidade genética dos descendentes.",
@@ -1339,6 +1339,4 @@ const citologia = [
 
     dicaBanca:
     "Variabilidade genética = meiose. Crescimento e regeneração = mitose."
-}
-
-];
+}];

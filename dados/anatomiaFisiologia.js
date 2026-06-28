@@ -5,14 +5,14 @@ const anatomiaFisiologia = [
     `Em uma aula sobre corpo humano, o professor diferenciou o estudo das estruturas corporais do estudo de seu funcionamento. A relação correta entre Anatomia e Fisiologia é:`,
 
     alternativas: [
-        `A Anatomia estuda a organização das estruturas corporais, enquanto a Fisiologia explica o funcionamento dessas estruturas.`,
         `A Anatomia analisa somente reações químicas celulares, enquanto a Fisiologia descreve apenas a posição externa dos órgãos.`,
         `A Anatomia trata exclusivamente das doenças infecciosas, enquanto a Fisiologia classifica apenas tecidos de revestimento.`,
         `A Anatomia interpreta a resposta imunológica, enquanto a Fisiologia limita-se à descrição dos ossos e articulações.`,
         `A Anatomia e a Fisiologia possuem o mesmo foco, diferenciando-se apenas pela nomenclatura usada nos livros.`,
+        `A Anatomia estuda a organização das estruturas corporais, enquanto a Fisiologia explica o funcionamento dessas estruturas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Anatomia relaciona-se à estrutura, forma e localização. Fisiologia relaciona-se ao funcionamento das estruturas corporais.`,
@@ -32,14 +32,14 @@ const anatomiaFisiologia = [
     `O corpo humano apresenta níveis de organização biológica. Em ordem crescente de complexidade, a sequência correta é:`,
 
     alternativas: [
-        `Célula, tecido, órgão, sistema e organismo.`,
         `Tecido, célula, sistema, órgão e organismo.`,
+        `Célula, tecido, órgão, sistema e organismo.`,
         `Órgão, tecido, célula, organismo e sistema.`,
         `Sistema, órgão, tecido, célula e organismo.`,
-        `Organismo, órgão, sistema, tecido e célula.`,
+        `Organismo, órgão, sistema, tecido e célula.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Células formam tecidos; tecidos formam órgãos; órgãos formam sistemas; sistemas integrados formam o organismo.`,
@@ -59,14 +59,14 @@ const anatomiaFisiologia = [
     `Durante uma corrida, o corpo aumenta a frequência respiratória, acelera os batimentos cardíacos e produz suor. Esses ajustes buscam conservar o equilíbrio interno. Esse processo é chamado de:`,
 
     alternativas: [
-        `Homeostase, pois envolve regulação integrada de variáveis internas do organismo.`,
         `Diferenciação celular, pois transforma rapidamente células adultas em tecidos novos.`,
         `Digestão química, pois enzimas passam a controlar diretamente a temperatura corporal.`,
+        `Homeostase, pois envolve regulação integrada de variáveis internas do organismo.`,
         `Imunização passiva, pois anticorpos prontos são transferidos pelo exercício.`,
-        `Excreção digestiva, pois todos os resíduos passam a ser eliminados pelo intestino.`,
+        `Excreção digestiva, pois todos os resíduos passam a ser eliminados pelo intestino.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Homeostase é a manutenção de condições internas adequadas, como temperatura, glicose, pressão e equilíbrio hídrico.`,
@@ -86,14 +86,14 @@ const anatomiaFisiologia = [
     `A integração entre sistemas corporais pode ser observada quando o organismo realiza atividade física. A explicação mais adequada é:`,
 
     alternativas: [
-        `Músculos, pulmões, coração, vasos, pele e sistema nervoso atuam conjuntamente para sustentar o esforço.`,
         `Os músculos executam todo o processo sozinhos, sem participação do sistema circulatório ou respiratório.`,
         `O sistema digestório substitui o sistema nervoso e passa a coordenar todos os movimentos voluntários.`,
         `O sistema urinário fornece oxigênio aos músculos por meio da filtração renal.`,
-        `A pele produz hemoglobina e transporta oxigênio diretamente para as fibras musculares.`,
+        `Músculos, pulmões, coração, vasos, pele e sistema nervoso atuam conjuntamente para sustentar o esforço.`,
+        `A pele produz hemoglobina e transporta oxigênio diretamente para as fibras musculares.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `O movimento depende de músculos, oxigenação, circulação, coordenação nervosa, energia e regulação térmica.`,
@@ -140,14 +140,14 @@ const anatomiaFisiologia = [
     `A pele humana é importante para a manutenção da saúde porque:`,
 
     alternativas: [
-        `Funciona como barreira protetora, participa da sensibilidade e contribui para a regulação térmica.`,
         `Filtra o sangue, elimina ureia e controla diretamente a formação de urina.`,
         `Produz todos os hormônios do organismo e substitui as glândulas endócrinas.`,
+        `Funciona como barreira protetora, participa da sensibilidade e contribui para a regulação térmica.`,
         `Realiza trocas gasosas nos alvéolos e distribui oxigênio para as células.`,
-        `Armazena bile, digere proteínas e absorve integralmente os nutrientes.`,
+        `Armazena bile, digere proteínas e absorve integralmente os nutrientes.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A pele protege contra agentes externos, participa da sensibilidade e ajuda a regular a temperatura corporal.`,
@@ -167,14 +167,14 @@ const anatomiaFisiologia = [
     `A camada mais externa da pele, associada principalmente à proteção do corpo, é a:`,
 
     alternativas: [
-        `Epiderme, formada por tecido epitelial e relacionada ao revestimento externo.`,
         `Derme, formada apenas por tecido ósseo e responsável pela sustentação dos membros.`,
+        `Epiderme, formada por tecido epitelial e relacionada ao revestimento externo.`,
         `Hipoderme, responsável pela produção direta de impulsos nervosos voluntários.`,
         `Medula, constituída por células sanguíneas e localizada acima da pele.`,
-        `Cartilagem, camada superficial que regula a produção de suor e melanina.`,
+        `Cartilagem, camada superficial que regula a produção de suor e melanina.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A epiderme é a camada mais externa da pele. A derme fica abaixo e contém vasos, nervos e glândulas.`,
@@ -221,14 +221,14 @@ const anatomiaFisiologia = [
     `Os músculos esqueléticos participam da locomoção porque:`,
 
     alternativas: [
-        `Contraem-se e tracionam os ossos, permitindo movimentos voluntários coordenados pelo sistema nervoso.`,
         `Produzem bile e enzimas digestivas, permitindo a absorção de nutrientes no intestino.`,
         `Filtram sangue continuamente e regulam a quantidade de ureia eliminada.`,
         `Realizam trocas gasosas diretamente com o ar atmosférico nos alvéolos.`,
-        `Secretam anticorpos específicos sem participação do sistema imunológico.`,
+        `Contraem-se e tracionam os ossos, permitindo movimentos voluntários coordenados pelo sistema nervoso.`,
+        `Secretam anticorpos específicos sem participação do sistema imunológico.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Músculos esqueléticos são ligados aos ossos e realizam movimentos voluntários por contração.`,
@@ -248,14 +248,14 @@ const anatomiaFisiologia = [
     `A distinção correta entre músculo esquelético, liso e cardíaco é:`,
 
     alternativas: [
-        `O esquelético atua em movimentos voluntários, o liso em órgãos internos e o cardíaco na contração do coração.`,
         `O esquelético filtra sangue, o liso produz neurônios e o cardíaco armazena gordura.`,
         `O esquelético é sempre involuntário, o liso é sempre voluntário e o cardíaco atua apenas nos ossos.`,
         `O esquelético forma glândulas, o liso reveste a pele e o cardíaco produz enzimas digestivas.`,
         `O esquelético controla hormônios, o liso forma cartilagens e o cardíaco conduz urina.`,
+        `O esquelético atua em movimentos voluntários, o liso em órgãos internos e o cardíaco na contração do coração.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `O músculo esquelético é geralmente voluntário; o liso atua em órgãos internos; o cardíaco forma o coração.`,
@@ -275,14 +275,14 @@ const anatomiaFisiologia = [
     `O sistema digestório transforma alimentos em substâncias utilizáveis pelas células. O processo envolve:`,
 
     alternativas: [
-        `Digestão mecânica e química, seguida de absorção de nutrientes principalmente no intestino delgado.`,
         `Filtração renal e produção de urina, seguida de armazenamento na bexiga.`,
         `Trocas gasosas nos alvéolos, seguidas de transporte de gás carbônico para os tecidos.`,
         `Produção de impulsos nervosos, seguida de resposta muscular involuntária.`,
-        `Formação de anticorpos, seguida de memória imunológica permanente.`,
+        `Digestão mecânica e química, seguida de absorção de nutrientes principalmente no intestino delgado.`,
+        `Formação de anticorpos, seguida de memória imunológica permanente.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A digestão envolve processos mecânicos e químicos; a absorção ocorre principalmente no intestino delgado.`,
@@ -302,14 +302,14 @@ const anatomiaFisiologia = [
     `Na boca, a enzima salivar que inicia a digestão de carboidratos é:`,
 
     alternativas: [
-        `Amilase salivar, que começa a decompor o amido na cavidade bucal.`,
         `Pepsina, que emulsifica gorduras e atua somente em meio básico.`,
         `Bile, que digere proteínas diretamente nas glândulas salivares.`,
+        `Amilase salivar, que começa a decompor o amido na cavidade bucal.`,
         `Insulina, que quebra amido em aminoácidos durante a mastigação.`,
-        `Hemoglobina, que transporta nutrientes da saliva para o estômago.`,
+        `Hemoglobina, que transporta nutrientes da saliva para o estômago.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A amilase salivar inicia a digestão do amido. A pepsina atua no estômago sobre proteínas.`,
@@ -356,14 +356,14 @@ const anatomiaFisiologia = [
     `A eficiência da absorção no intestino delgado relaciona-se à presença de:`,
 
     alternativas: [
-        `Vilosidades e microvilosidades que aumentam a superfície de contato com o alimento digerido.`,
         `Alvéolos e bronquíolos que ampliam a superfície de troca gasosa no sangue.`,
         `Néfrons que aumentam a filtração renal e a formação de urina.`,
         `Plaquetas que aceleram a coagulação na parede intestinal.`,
         `Cartilagens que impedem o contato entre nutrientes e vasos sanguíneos.`,
+        `Vilosidades e microvilosidades que aumentam a superfície de contato com o alimento digerido.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Vilosidades e microvilosidades aumentam a área de absorção intestinal.`,
@@ -383,14 +383,14 @@ const anatomiaFisiologia = [
     `A bile é frequentemente confundida com enzima. Sua função correta é:`,
 
     alternativas: [
-        `Emulsificar gorduras, facilitando a ação de enzimas sobre lipídios.`,
         `Quebrar proteínas em aminoácidos por ação direta no estômago.`,
+        `Emulsificar gorduras, facilitando a ação de enzimas sobre lipídios.`,
         `Transformar glicose em amido para armazenamento imediato no sangue.`,
         `Produzir anticorpos contra microrganismos presentes nos alimentos.`,
-        `Filtrar substâncias tóxicas do sangue e formar urina na vesícula biliar.`,
+        `Filtrar substâncias tóxicas do sangue e formar urina na vesícula biliar.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A bile é produzida no fígado, armazenada na vesícula biliar e emulsifica gorduras.`,
@@ -410,14 +410,14 @@ const anatomiaFisiologia = [
     `Carboidratos, proteínas e lipídios são, respectivamente, importantes para:`,
 
     alternativas: [
-        `Energia imediata, construção e reparo de tecidos, reserva energética e composição de membranas.`,
         `Formação de anticorpos, transporte de oxigênio, filtração renal e produção de urina.`,
+        `Energia imediata, construção e reparo de tecidos, reserva energética e composição de membranas.`,
         `Regulação hormonal exclusiva, visão noturna obrigatória e coagulação sem participação do sangue.`,
         `Digestão de fibras, eliminação de gás carbônico e formação direta de ossos no pulmão.`,
-        `Produção de bile, condução de impulsos e armazenamento de informações genéticas.`,
+        `Produção de bile, condução de impulsos e armazenamento de informações genéticas.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Carboidratos fornecem energia; proteínas participam de crescimento e reparo; lipídios atuam como reserva e compõem membranas.`,
@@ -464,14 +464,14 @@ const anatomiaFisiologia = [
     `As trocas gasosas do sistema respiratório ocorrem principalmente nos alvéolos porque eles:`,
 
     alternativas: [
-        `Possuem paredes finas e ampla superfície de contato com capilares sanguíneos.`,
         `Produzem bile e enzimas digestivas que quebram moléculas de oxigênio.`,
         `Filtram ureia e transformam gás carbônico em urina concentrada.`,
+        `Possuem paredes finas e ampla superfície de contato com capilares sanguíneos.`,
         `Armazenam cálcio e fósforo para manter a resistência dos ossos.`,
-        `Secretam hormônios que impedem a entrada de ar nos pulmões.`,
+        `Secretam hormônios que impedem a entrada de ar nos pulmões.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Os alvéolos têm paredes finas e contato com capilares, favorecendo a difusão de gases.`,
@@ -491,14 +491,14 @@ const anatomiaFisiologia = [
     `Na inspiração, o diafragma:`,
 
     alternativas: [
-        `Contrai-se e contribui para o aumento do volume da caixa torácica.`,
         `Relaxa e reduz o volume torácico, expulsando o ar para fora.`,
         `Produz muco e bloqueia a passagem de ar pelos bronquíolos.`,
         `Filtra o sangue e remove impurezas do plasma sanguíneo.`,
         `Libera anticorpos específicos contra o oxigênio inspirado.`,
+        `Contrai-se e contribui para o aumento do volume da caixa torácica.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Na inspiração, o diafragma contrai e desce, ampliando o volume torácico e favorecendo a entrada de ar.`,
@@ -518,14 +518,14 @@ const anatomiaFisiologia = [
     `A estrutura sanguínea diretamente relacionada ao transporte de oxigênio é:`,
 
     alternativas: [
-        `Hemoglobina presente nas hemácias.`,
         `Ureia presente nos néfrons.`,
         `Bile armazenada na vesícula.`,
         `Melanina presente na epiderme.`,
-        `Pepsina presente na saliva.`,
+        `Hemoglobina presente nas hemácias.`,
+        `Pepsina presente na saliva.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Hemácias contêm hemoglobina, proteína que transporta oxigênio.`,
@@ -545,14 +545,14 @@ const anatomiaFisiologia = [
     `A função das válvulas cardíacas é:`,
 
     alternativas: [
-        `Evitar o refluxo do sangue e manter o fluxo em sentido adequado dentro do coração.`,
         `Produzir hemácias e leucócitos durante a circulação sistêmica.`,
+        `Evitar o refluxo do sangue e manter o fluxo em sentido adequado dentro do coração.`,
         `Filtrar o plasma e eliminar ureia diretamente para a bexiga.`,
         `Realizar trocas gasosas no interior dos ventrículos.`,
-        `Armazenar bile e controlar a digestão dos lipídios.`,
+        `Armazenar bile e controlar a digestão dos lipídios.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `As válvulas impedem o retorno do sangue, garantindo fluxo adequado entre cavidades cardíacas.`,
@@ -572,14 +572,14 @@ const anatomiaFisiologia = [
     `A circulação pulmonar e a sistêmica diferenciam-se porque:`,
 
     alternativas: [
-        `A pulmonar leva sangue aos pulmões para trocas gasosas, enquanto a sistêmica distribui sangue aos tecidos.`,
         `A pulmonar transporta urina aos rins, enquanto a sistêmica conduz bile ao intestino grosso.`,
         `A pulmonar ocorre apenas nos ossos, enquanto a sistêmica ocorre apenas na pele.`,
         `A pulmonar elimina nutrientes, enquanto a sistêmica impede a oxigenação celular.`,
         `A pulmonar produz hormônios, enquanto a sistêmica degrada anticorpos no baço.`,
+        `A pulmonar leva sangue aos pulmões para trocas gasosas, enquanto a sistêmica distribui sangue aos tecidos.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `A pequena circulação envolve coração e pulmões. A grande circulação envolve coração e corpo.`,
@@ -599,14 +599,14 @@ const anatomiaFisiologia = [
     `A linfa e o sistema linfático são importantes porque:`,
 
     alternativas: [
-        `Retornam parte do líquido dos tecidos à circulação e participam do transporte de células de defesa.`,
         `Produzem bile, armazenam glicogênio e realizam digestão de gorduras.`,
         `Filtram sangue nos néfrons e conduzem urina até a bexiga.`,
+        `Retornam parte do líquido dos tecidos à circulação e participam do transporte de células de defesa.`,
         `Transportam ar aos alvéolos e realizam hematose diretamente nos brônquios.`,
-        `Secretam insulina e regulam exclusivamente a glicemia após as refeições.`,
+        `Secretam insulina e regulam exclusivamente a glicemia após as refeições.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `O sistema linfático recolhe excesso de líquido intersticial e participa da defesa imunológica.`,
@@ -626,14 +626,14 @@ const anatomiaFisiologia = [
     `As plaquetas são componentes do sangue associadas principalmente à:`,
 
     alternativas: [
-        `Coagulação, auxiliando na contenção de sangramentos após lesões vasculares.`,
         `Produção de bile, favorecendo a digestão de lipídios no intestino.`,
         `Transmissão de impulsos, permitindo resposta rápida dos neurônios.`,
         `Absorção de nutrientes, aumentando a superfície intestinal.`,
-        `Filtração de ureia, regulando a composição da urina.`,
+        `Coagulação, auxiliando na contenção de sangramentos após lesões vasculares.`,
+        `Filtração de ureia, regulando a composição da urina.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Plaquetas participam da coagulação sanguínea.`,
@@ -680,14 +680,14 @@ const anatomiaFisiologia = [
     `A unidade funcional do rim é:`,
 
     alternativas: [
-        `Néfron.`,
         `Alvéolo.`,
         `Vilosidade.`,
+        `Néfron.`,
         `Sarcômero.`,
-        `Neurônio.`,
+        `Neurônio.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `O néfron é a unidade funcional dos rins e participa da formação da urina.`,
@@ -707,14 +707,14 @@ const anatomiaFisiologia = [
     `A célula especializada na transmissão de impulsos nervosos é:`,
 
     alternativas: [
-        `Neurônio.`,
         `Hemácia.`,
+        `Neurônio.`,
         `Osteócito.`,
         `Plaqueta.`,
-        `Adipócito.`,
+        `Adipócito.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Neurônios recebem, processam e transmitem impulsos nervosos.`,
@@ -734,14 +734,14 @@ const anatomiaFisiologia = [
     `Em um ato reflexo, como retirar a mão de uma superfície quente, a resposta é rápida porque:`,
 
     alternativas: [
-        `A medula espinal pode coordenar a resposta antes da interpretação consciente completa pelo encéfalo.`,
         `O estômago produz ácido suficiente para neutralizar o estímulo doloroso.`,
         `As hemácias liberam anticorpos que bloqueiam os nervos sensoriais.`,
         `Os rins filtram o estímulo e eliminam a dor pela urina.`,
         `A bile interrompe a condução nervosa nos músculos esqueléticos.`,
+        `A medula espinal pode coordenar a resposta antes da interpretação consciente completa pelo encéfalo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Reflexos podem ser mediados pela medula espinal, permitindo resposta rápida de proteção.`,
@@ -761,14 +761,14 @@ const anatomiaFisiologia = [
     `A associação correta entre sentido e estrutura é:`,
 
     alternativas: [
-        `Visão e olhos; audição e orelhas; olfato e cavidade nasal; paladar e língua; tato e pele.`,
         `Visão e rins; audição e pâncreas; olfato e ossos; paladar e pulmões; tato e fígado.`,
         `Visão e estômago; audição e intestino; olfato e coração; paladar e baço; tato e bexiga.`,
         `Visão e alvéolos; audição e néfrons; olfato e tendões; paladar e hemácias; tato e bile.`,
-        `Visão e glândulas salivares; audição e vesícula; olfato e medula óssea; paladar e músculos; tato e cartilagem.`,
+        `Visão e olhos; audição e orelhas; olfato e cavidade nasal; paladar e língua; tato e pele.`,
+        `Visão e glândulas salivares; audição e vesícula; olfato e medula óssea; paladar e músculos; tato e cartilagem.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Os sentidos dependem de receptores especializados presentes em olhos, orelhas, nariz, língua e pele.`,
@@ -842,14 +842,14 @@ const anatomiaFisiologia = [
     `Uma barreira de defesa inata do organismo é:`,
 
     alternativas: [
-        `A pele íntegra, que dificulta a entrada de microrganismos.`,
         `A produção de anticorpos específicos após vacinação.`,
         `A memória imunológica formada depois de contato com antígeno.`,
+        `A pele íntegra, que dificulta a entrada de microrganismos.`,
         `A seleção de linfócitos específicos para determinado vírus.`,
-        `A produção de gametas com material genético recombinado.`,
+        `A produção de gametas com material genético recombinado.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Pele, mucosas e secreções são defesas inatas. Anticorpos específicos e memória são adaptativos.`,
@@ -869,14 +869,14 @@ const anatomiaFisiologia = [
     `A vacinação é relevante para a saúde pública porque:`,
 
     alternativas: [
-        `Estimula resposta imunológica e memória, protegendo indivíduos e contribuindo para proteção coletiva.`,
         `Substitui saneamento básico, higiene e tratamento de água em todas as comunidades.`,
         `Elimina imediatamente todos os microrganismos do ambiente após a aplicação.`,
         `Funciona apenas como tratamento de doenças já instaladas em estágio avançado.`,
-        `Impede qualquer contato futuro entre o organismo e agentes infecciosos.`,
+        `Estimula resposta imunológica e memória, protegendo indivíduos e contribuindo para proteção coletiva.`,
+        `Impede qualquer contato futuro entre o organismo e agentes infecciosos.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Vacinas estimulam o sistema imunológico e reduzem riscos individuais e coletivos.`,
@@ -896,14 +896,14 @@ const anatomiaFisiologia = [
     `A imunização ativa diferencia-se da passiva porque:`,
 
     alternativas: [
-        `Na ativa, o organismo produz sua resposta; na passiva, recebe anticorpos prontos.`,
         `Na ativa, anticorpos prontos são transferidos; na passiva, ocorre produção de gametas.`,
         `Na ativa, há filtração renal; na passiva, há digestão de proteínas no estômago.`,
         `Na ativa, a bile emulsifica gorduras; na passiva, a insulina regula glicose.`,
         `Na ativa, há contração muscular; na passiva, há formação de urina.`,
+        `Na ativa, o organismo produz sua resposta; na passiva, recebe anticorpos prontos.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Imunização ativa estimula produção própria; passiva fornece anticorpos prontos.`,
@@ -923,14 +923,14 @@ const anatomiaFisiologia = [
     `A memória imunológica é importante porque:`,
 
     alternativas: [
-        `Permite resposta mais rápida e eficiente em contatos posteriores com o mesmo antígeno.`,
         `Transforma todos os microrganismos em nutrientes absorvidos pelo intestino.`,
+        `Permite resposta mais rápida e eficiente em contatos posteriores com o mesmo antígeno.`,
         `Impede a ocorrência de qualquer doença não infecciosa ao longo da vida.`,
         `Substitui completamente hábitos de higiene e saneamento.`,
-        `Elimina a função dos linfócitos e torna anticorpos desnecessários.`,
+        `Elimina a função dos linfócitos e torna anticorpos desnecessários.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A memória imunológica decorre de células específicas que respondem melhor em exposições futuras.`,
@@ -950,14 +950,14 @@ const anatomiaFisiologia = [
     `Os leucócitos são componentes sanguíneos associados principalmente à:`,
 
     alternativas: [
-        `Defesa do organismo contra agentes estranhos e participação em respostas imunológicas.`,
         `Transporte de oxigênio por meio da hemoglobina presente em seu citoplasma.`,
         `Coagulação sanguínea pela formação direta de tampões plaquetários.`,
         `Emulsificação de gorduras no intestino delgado após as refeições.`,
-        `Produção de urina por filtração glomerular nos rins.`,
+        `Defesa do organismo contra agentes estranhos e participação em respostas imunológicas.`,
+        `Produção de urina por filtração glomerular nos rins.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Leucócitos atuam na defesa; hemácias transportam gases; plaquetas atuam na coagulação.`,
@@ -1004,14 +1004,14 @@ const anatomiaFisiologia = [
     `Doenças infecciosas são causadas por agentes biológicos. A alternativa que apresenta apenas agentes desse tipo é:`,
 
     alternativas: [
-        `Vírus, bactérias, fungos, protozoários e alguns vermes parasitas.`,
         `Vitaminas, sais minerais, fibras, água e proteínas alimentares.`,
         `Hormônios, enzimas digestivas, bile, insulina e glicogênio.`,
+        `Vírus, bactérias, fungos, protozoários e alguns vermes parasitas.`,
         `Ossos, músculos, articulações, tendões e cartilagens.`,
-        `Alvéolos, néfrons, vilosidades, plaquetas e hemácias.`,
+        `Alvéolos, néfrons, vilosidades, plaquetas e hemácias.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Doenças infecciosas decorrem de vírus, bactérias, fungos, protozoários e helmintos.`,
@@ -1031,14 +1031,14 @@ const anatomiaFisiologia = [
     `Uma diferença importante entre vírus e bactérias é:`,
 
     alternativas: [
-        `Vírus dependem de células hospedeiras para se multiplicar, enquanto bactérias possuem organização celular própria.`,
         `Vírus possuem metabolismo completo, enquanto bactérias sempre dependem de células humanas para respirar.`,
+        `Vírus dependem de células hospedeiras para se multiplicar, enquanto bactérias possuem organização celular própria.`,
         `Vírus são formados por tecidos, enquanto bactérias são órgãos microscópicos pluricelulares.`,
         `Vírus são combatidos apenas por antibióticos, enquanto bactérias nunca causam doenças.`,
-        `Vírus possuem núcleo verdadeiro, enquanto bactérias não apresentam material genético.`,
+        `Vírus possuem núcleo verdadeiro, enquanto bactérias não apresentam material genético.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Vírus são acelulares e dependem de células hospedeiras; bactérias são unicelulares procariontes.`,
@@ -1058,14 +1058,14 @@ const anatomiaFisiologia = [
     `O uso inadequado de antibióticos pode favorecer:`,
 
     alternativas: [
-        `Seleção de bactérias resistentes, dificultando o tratamento de infecções bacterianas.`,
         `Produção de anticorpos contra todos os vírus respiratórios existentes.`,
         `Formação imediata de vacinas naturais contra micoses e protozooses.`,
         `Transformação de bactérias em células humanas saudáveis.`,
         `Eliminação definitiva de parasitoses sem diagnóstico ou orientação.`,
+        `Seleção de bactérias resistentes, dificultando o tratamento de infecções bacterianas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `O uso incorreto de antibióticos seleciona bactérias resistentes.`,
@@ -1085,14 +1085,14 @@ const anatomiaFisiologia = [
     `Uma medida preventiva adequada contra micoses é:`,
 
     alternativas: [
-        `Manter higiene, evitar umidade prolongada na pele e não compartilhar objetos contaminados.`,
         `Usar antibióticos continuamente para impedir a multiplicação de fungos.`,
         `Eliminar todos os carboidratos, pois fungos surgem apenas por excesso de açúcar.`,
         `Aplicar vacinas contra todos os fungos existentes em ambientes úmidos.`,
         `Impedir a respiração pulmonar, pois fungos dependem do oxigênio dos alvéolos.`,
+        `Manter higiene, evitar umidade prolongada na pele e não compartilhar objetos contaminados.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Micoses são prevenidas com higiene, cuidado com umidade e redução do compartilhamento de objetos contaminados.`,
@@ -1139,14 +1139,14 @@ const anatomiaFisiologia = [
     `Na prevenção de protozooses transmitidas por vetores, uma medida importante é:`,
 
     alternativas: [
-        `Controlar criadouros e reduzir exposição ao vetor, fortalecendo ações comunitárias.`,
         `Utilizar antibióticos sem diagnóstico sempre que houver febre.`,
         `Consumir apenas alimentos ricos em gordura para impedir o protozoário.`,
         `Substituir água tratada por água de poços sem monitoramento.`,
-        `Evitar todas as vacinas, pois elas aumentam a presença de vetores.`,
+        `Controlar criadouros e reduzir exposição ao vetor, fortalecendo ações comunitárias.`,
+        `Evitar todas as vacinas, pois elas aumentam a presença de vetores.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Algumas protozooses dependem de vetores; controle ambiental e proteção individual reduzem riscos.`,
@@ -1166,14 +1166,14 @@ const anatomiaFisiologia = [
     `A prevenção de verminoses intestinais relaciona-se principalmente a:`,
 
     alternativas: [
-        `Saneamento básico, higiene das mãos, uso de calçados e consumo de água e alimentos seguros.`,
         `Exposição constante à fumaça para fortalecer a mucosa intestinal.`,
+        `Saneamento básico, higiene das mãos, uso de calçados e consumo de água e alimentos seguros.`,
         `Uso contínuo de analgésicos para eliminar ovos e larvas do ambiente.`,
         `Redução do sono, pois parasitas intestinais dependem do repouso.`,
-        `Suspensão da vacinação, pois vacinas aumentam a absorção de vermes.`,
+        `Suspensão da vacinação, pois vacinas aumentam a absorção de vermes.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Verminoses são prevenidas com saneamento, higiene, calçados, água tratada e alimentos higienizados.`,
@@ -1193,14 +1193,14 @@ const anatomiaFisiologia = [
     `A prevenção de doenças infecciosas na escola deve priorizar:`,
 
     alternativas: [
-        `Educação em saúde, higiene, vacinação, ventilação adequada, água segura e encaminhamento aos serviços de saúde.`,
         `Medicação coletiva sem diagnóstico, pois todos os sintomas possuem a mesma causa.`,
         `Isolamento permanente de estudantes, independentemente da orientação sanitária.`,
+        `Educação em saúde, higiene, vacinação, ventilação adequada, água segura e encaminhamento aos serviços de saúde.`,
         `Eliminação de atividades educativas, pois prevenção depende apenas de hospital.`,
-        `Substituição de saneamento por cartazes, pois informação visual impede transmissão sozinha.`,
+        `Substituição de saneamento por cartazes, pois informação visual impede transmissão sozinha.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Prevenção escolar envolve informação, higiene, vacinação, ambiente saudável e serviços de saúde.`,
@@ -1247,14 +1247,14 @@ const anatomiaFisiologia = [
     `A saúde pública diferencia-se do cuidado individual porque:`,
 
     alternativas: [
-        `Envolve ações coletivas de prevenção, promoção, vigilância, saneamento, vacinação e educação em saúde.`,
         `Limita-se ao tratamento particular de sintomas sem considerar ambiente e comunidade.`,
         `Atua apenas quando todas as doenças já foram eliminadas da população.`,
         `Dispensa dados epidemiológicos, pois decisões coletivas não precisam de monitoramento.`,
         `Substitui completamente a responsabilidade individual por hábitos saudáveis.`,
+        `Envolve ações coletivas de prevenção, promoção, vigilância, saneamento, vacinação e educação em saúde.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Saúde pública organiza ações que protegem comunidades, incluindo prevenção e vigilância.`,
@@ -1274,14 +1274,14 @@ const anatomiaFisiologia = [
     `A educação em saúde é mais efetiva quando:`,
 
     alternativas: [
-        `Relaciona informações científicas ao cotidiano, favorecendo decisões conscientes e prevenção de riscos.`,
         `Apresenta regras sem explicação, impedindo perguntas dos estudantes.`,
         `Prioriza medo e culpa, pois informação contextualizada reduz adesão.`,
+        `Relaciona informações científicas ao cotidiano, favorecendo decisões conscientes e prevenção de riscos.`,
         `Substitui evidências científicas por opiniões pessoais sobre tratamentos.`,
-        `Desconsidera saneamento, acesso à água e serviços de saúde.`,
+        `Desconsidera saneamento, acesso à água e serviços de saúde.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Educação em saúde deve ser contextualizada, científica, preventiva e voltada à autonomia.`,
@@ -1301,14 +1301,14 @@ const anatomiaFisiologia = [
     `O destino inadequado do lixo pode favorecer doenças porque:`,
 
     alternativas: [
-        `Atrai vetores, contamina solo e água e aumenta riscos ambientais e sanitários.`,
         `Impede a contração muscular voluntária e bloqueia a circulação sistêmica.`,
+        `Atrai vetores, contamina solo e água e aumenta riscos ambientais e sanitários.`,
         `Produz hormônios que reduzem a ação do sistema endócrino.`,
         `Transforma resíduos em vacinas naturais contra protozooses.`,
-        `Elimina microrganismos patogênicos por aumento da umidade.`,
+        `Elimina microrganismos patogênicos por aumento da umidade.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Resíduos mal destinados atraem vetores e contaminam água e solo.`,
@@ -1328,14 +1328,14 @@ const anatomiaFisiologia = [
     `Em uma comunidade com doença transmitida pela água, a medida mais adequada é:`,
 
     alternativas: [
-        `Investigar fontes de contaminação, garantir água segura, orientar higiene e fortalecer saneamento.`,
         `Distribuir antibióticos a todos sem diagnóstico, independentemente do agente.`,
         `Interromper vacinação de rotina, pois ela interfere no tratamento de água.`,
         `Priorizar somente cartazes, sem ações ambientais ou acompanhamento sanitário.`,
-        `Estimular consumo de água sem tratamento para acelerar adaptação do organismo.`,
+        `Investigar fontes de contaminação, garantir água segura, orientar higiene e fortalecer saneamento.`,
+        `Estimular consumo de água sem tratamento para acelerar adaptação do organismo.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Doenças ligadas à água exigem tratamento, vigilância, saneamento, higiene e orientação.`,
@@ -1355,14 +1355,14 @@ const anatomiaFisiologia = [
     `A produção de espermatozoides ocorre principalmente:`,
 
     alternativas: [
-        `Nos testículos, estruturas também relacionadas à produção de testosterona.`,
         `Na próstata, glândula responsável pela formação dos óvulos.`,
+        `Nos testículos, estruturas também relacionadas à produção de testosterona.`,
         `Na bexiga, órgão que armazena gametas antes da fecundação.`,
         `No epidídimo, local onde ocorre a produção primária de hormônios ovarianos.`,
-        `Na uretra, canal que produz células reprodutivas e realiza gestação.`,
+        `Na uretra, canal que produz células reprodutivas e realiza gestação.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Os testículos produzem espermatozoides e testosterona; o epidídimo participa da maturação.`,
@@ -1382,14 +1382,14 @@ const anatomiaFisiologia = [
     `No sistema reprodutor feminino, a ovulação corresponde:`,
 
     alternativas: [
-        `À liberação de um ovócito pelo ovário em determinado período do ciclo menstrual.`,
         `À implantação do embrião no útero logo após o parto.`,
         `À eliminação de todos os hormônios sexuais pela menstruação.`,
+        `À liberação de um ovócito pelo ovário em determinado período do ciclo menstrual.`,
         `À produção de espermatozoides nas tubas uterinas.`,
-        `À formação da placenta antes da fecundação.`,
+        `À formação da placenta antes da fecundação.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Ovulação é a liberação do ovócito pelo ovário.`,
@@ -1409,14 +1409,14 @@ const anatomiaFisiologia = [
     `A menstruação ocorre quando:`,
 
     alternativas: [
-        `Há descamação do endométrio em um ciclo sem implantação embrionária.`,
         `O ovário libera espermatozoides para possibilitar fecundação.`,
         `A placenta se forma antes da ovulação e impede mudanças hormonais.`,
         `O útero produz gametas masculinos após a puberdade.`,
         `A bexiga elimina sangue por filtração renal normal.`,
+        `Há descamação do endométrio em um ciclo sem implantação embrionária.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `A menstruação é a eliminação de parte do endométrio quando não ocorre implantação.`,
@@ -1463,14 +1463,14 @@ const anatomiaFisiologia = [
     `Durante a gestação, a placenta:`,
 
     alternativas: [
-        `Permite trocas de substâncias entre mãe e feto, contribuindo para nutrição, oxigenação e eliminação de resíduos.`,
         `Produz gametas masculinos e femininos durante todos os meses.`,
         `Substitui completamente o sistema nervoso fetal, impedindo sua formação.`,
         `Realiza digestão de alimentos no estômago materno e produz bile fetal.`,
-        `Impede qualquer troca de gases, nutrientes ou resíduos entre mãe e feto.`,
+        `Permite trocas de substâncias entre mãe e feto, contribuindo para nutrição, oxigenação e eliminação de resíduos.`,
+        `Impede qualquer troca de gases, nutrientes ou resíduos entre mãe e feto.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A placenta participa de trocas de gases, nutrientes e resíduos e produz hormônios importantes.`,
@@ -1517,14 +1517,14 @@ const anatomiaFisiologia = [
     `Sobre métodos contraceptivos e ISTs, a alternativa correta é:`,
 
     alternativas: [
-        `Preservativos podem reduzir risco de ISTs e gravidez; outros métodos podem prevenir gravidez sem proteger contra ISTs.`,
         `Todos os métodos hormonais protegem igualmente contra ISTs e dispensam orientação de saúde.`,
+        `Preservativos podem reduzir risco de ISTs e gravidez; outros métodos podem prevenir gravidez sem proteger contra ISTs.`,
         `O DIU protege contra todas as infecções por bloquear microrganismos no sangue.`,
         `Métodos cirúrgicos são temporários e sempre impedem doenças transmitidas por contato sexual.`,
-        `Métodos naturais eliminam qualquer risco de gravidez e ISTs sem acompanhamento.`,
+        `Métodos naturais eliminam qualquer risco de gravidez e ISTs sem acompanhamento.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Preservativos reduzem risco de ISTs e gravidez; outros métodos podem evitar gravidez sem proteger contra infecções.`,
@@ -1544,14 +1544,14 @@ const anatomiaFisiologia = [
     `A prevenção de ISTs envolve:`,
 
     alternativas: [
-        `Uso de preservativos, testagem, informação confiável e acompanhamento nos serviços de saúde.`,
         `Uso de antibióticos preventivamente sem diagnóstico após qualquer contato social.`,
         `Evitar vacinação de rotina, pois ela aumenta o risco de todas as ISTs.`,
         `Substituir preservativos por alimentação saudável, pois nutrientes impedem transmissão.`,
         `Considerar que ISTs só ocorrem quando há sintomas visíveis em todas as pessoas.`,
+        `Uso de preservativos, testagem, informação confiável e acompanhamento nos serviços de saúde.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `ISTs podem ser prevenidas com preservativos, testagem, informação, vacinação quando disponível e acompanhamento.`,
@@ -1571,14 +1571,14 @@ const anatomiaFisiologia = [
     `O uso de drogas psicoativas preocupa a saúde pública porque:`,
 
     alternativas: [
-        `Pode alterar o sistema nervoso, favorecer dependência e gerar impactos individuais, familiares e sociais.`,
         `Fortalece permanentemente os neurônios e melhora todas as funções cognitivas sem risco.`,
         `Substitui sono, alimentação e atividade física como fatores de qualidade de vida.`,
         `Impede qualquer doença infecciosa por estimular anticorpos específicos.`,
-        `Afeta apenas o sistema digestório, sem relação com comportamento ou vida social.`,
+        `Pode alterar o sistema nervoso, favorecer dependência e gerar impactos individuais, familiares e sociais.`,
+        `Afeta apenas o sistema digestório, sem relação com comportamento ou vida social.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Drogas psicoativas atuam no sistema nervoso e podem causar dependência e impactos sociais.`,
@@ -1598,14 +1598,14 @@ const anatomiaFisiologia = [
     `Uma proposta coerente de qualidade de vida deve integrar:`,
 
     alternativas: [
-        `Alimentação equilibrada, hidratação, atividade física, sono, prevenção de doenças e cuidado com a saúde mental e social.`,
         `Resultados rápidos, restrição alimentar severa e substituição de consultas por informações sem fonte.`,
         `Consumo exclusivo de proteínas, eliminação total de carboidratos e ausência de vacinação.`,
+        `Alimentação equilibrada, hidratação, atividade física, sono, prevenção de doenças e cuidado com a saúde mental e social.`,
         `Atividade física sem descanso, pouca hidratação e automedicação para manter produtividade.`,
-        `Foco apenas na aparência corporal, desconsiderando prevenção e bem-estar.`,
+        `Foco apenas na aparência corporal, desconsiderando prevenção e bem-estar.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Qualidade de vida envolve hábitos saudáveis, prevenção, equilíbrio, informação científica e condições sociais adequadas.`,
@@ -1618,6 +1618,4 @@ const anatomiaFisiologia = [
 
     dicaBanca:
     `Qualidade de vida envolve equilíbrio, prevenção e saúde integral.`
-}
-
-];
+}];

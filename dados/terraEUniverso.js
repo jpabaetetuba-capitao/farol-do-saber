@@ -7,12 +7,12 @@ const terraEUniverso = [
     alternativas: [
         "O conjunto formado apenas pelos planetas do Sistema Solar.",
         "A região do espaço ocupada exclusivamente pela Via Láctea.",
-        "O conjunto de todos os corpos celestes, matéria, energia, espaço e tempo existentes.",
         "O espaço localizado além da atmosfera terrestre.",
+        "O conjunto de todos os corpos celestes, matéria, energia, espaço e tempo existentes.",
         "A parte do espaço que pode ser observada a olho nu."
     ],
 
-    correta: 2,
+    correta: 3,
 
     explicacao:
     "O Universo é o conjunto de tudo o que existe, incluindo matéria, energia, espaço e tempo. Nele estão presentes galáxias, estrelas, planetas, satélites naturais, nebulosas e inúmeros outros corpos celestes.",
@@ -32,14 +32,14 @@ const terraEUniverso = [
     "Pesquisadores estimam que a Terra tenha se formado há aproximadamente 4,6 bilhões de anos. Segundo a hipótese científica mais aceita, a formação do planeta ocorreu a partir:",
 
     alternativas: [
+        "Da aglomeração de poeira e gases presentes na nebulosa que originou o Sistema Solar.",
         "Da fragmentação da Lua primitiva.",
         "Da explosão de uma estrela próxima ao Sol.",
-        "Da aglomeração de poeira e gases presentes na nebulosa que originou o Sistema Solar.",
         "Da união de diversos cometas que colidiram entre si.",
         "Da separação de um planeta gasoso gigante."
     ],
 
-    correta: 2,
+    correta: 0,
 
     explicacao:
     "A teoria mais aceita afirma que a Terra surgiu a partir da acreção de partículas de poeira e gás presentes na nebulosa solar. Com o tempo, essas partículas se agregaram formando planetesimais e posteriormente os planetas.",
@@ -61,12 +61,12 @@ const terraEUniverso = [
     alternativas: [
         "A crosta é a camada mais profunda do planeta.",
         "O núcleo localiza-se entre a crosta e o manto.",
-        "A estrutura interna da Terra é formada principalmente por crosta, manto e núcleo.",
         "O manto está localizado acima da atmosfera.",
-        "A Terra possui apenas duas camadas internas principais."
+        "A Terra possui apenas duas camadas internas principais.",
+        "A estrutura interna da Terra é formada principalmente por crosta, manto e núcleo."
     ],
 
-    correta: 2,
+    correta: 4,
 
     explicacao:
     "A estrutura interna da Terra é tradicionalmente dividida em três grandes camadas: crosta, manto e núcleo. Cada uma possui composição, temperatura e características próprias.",
@@ -87,13 +87,13 @@ const terraEUniverso = [
 
     alternativas: [
         "Núcleo externo.",
-        "Manto inferior.",
         "Crosta terrestre.",
+        "Manto inferior.",
         "Núcleo interno.",
         "Astenosfera."
     ],
 
-    correta: 2,
+    correta: 1,
 
     explicacao:
     "A crosta terrestre é a camada mais externa e menos espessa da Terra. É nela que estão os continentes, oceanos e todas as formas conhecidas de vida.",
@@ -141,12 +141,12 @@ const terraEUniverso = [
     alternativas: [
         "Produzir toda a água existente na Terra.",
         "Impedir completamente a entrada da luz solar.",
-        "Proteger a Terra, regular a temperatura e fornecer gases essenciais à vida.",
         "Controlar diretamente os movimentos das placas tectônicas.",
+        "Proteger a Terra, regular a temperatura e fornecer gases essenciais à vida.",
         "Formar exclusivamente as nuvens e os ventos."
     ],
 
-    correta: 2,
+    correta: 3,
 
     explicacao:
     "A atmosfera é a camada de gases que envolve a Terra. Ela protege o planeta contra parte da radiação solar, ajuda a regular a temperatura e fornece gases indispensáveis à vida, como oxigênio e gás carbônico.",
@@ -193,14 +193,14 @@ const terraEUniverso = [
     "A camada de ozônio é extremamente importante para a vida na Terra porque:",
 
     alternativas: [
+        "Absorve grande parte da radiação ultravioleta proveniente do Sol.",
         "Produz o oxigênio consumido pelos seres vivos.",
         "Impede totalmente a entrada da luz solar.",
-        "Absorve grande parte da radiação ultravioleta proveniente do Sol.",
         "Controla as marés oceânicas.",
         "Origina os ventos planetários."
     ],
 
-    correta: 2,
+    correta: 0,
 
     explicacao:
     "A camada de ozônio absorve grande parte da radiação ultravioleta emitida pelo Sol. Sem essa proteção, haveria maior incidência de problemas ambientais e de saúde nos seres vivos.",
@@ -221,13 +221,13 @@ const terraEUniverso = [
 
     alternativas: [
         "Bloqueiam completamente a energia solar.",
-        "Retêm parte do calor irradiado pela superfície terrestre.",
         "Impedem a formação das nuvens.",
         "Produzem oxigênio durante a noite.",
-        "Controlam os movimentos da Lua."
+        "Controlam os movimentos da Lua.",
+        "Retêm parte do calor irradiado pela superfície terrestre."
     ],
 
-    correta: 1,
+    correta: 4,
 
     explicacao:
     "O efeito estufa é um fenômeno natural que mantém a temperatura da Terra adequada para a vida. Ele ocorre porque alguns gases atmosféricos retêm parte do calor emitido pela superfície terrestre.",
@@ -275,12 +275,12 @@ const terraEUniverso = [
     alternativas: [
         "Intemperismo.",
         "Erosão.",
-        "Terremoto.",
         "Tsunami.",
+        "Terremoto.",
         "Assoreamento."
     ],
 
-    correta: 2,
+    correta: 3,
 
     explicacao:
     "Os terremotos são abalos sísmicos provocados pela liberação repentina de energia acumulada nas rochas, geralmente associados ao movimento das placas tectônicas.",
@@ -300,14 +300,14 @@ const terraEUniverso = [
     "Em determinada região do planeta, uma montanha passou a liberar gases, cinzas e material incandescente proveniente do interior da Terra. Esse fenômeno caracteriza a atividade de um:",
 
     alternativas: [
+        "Vulcão.",
         "Gêiser.",
         "Meteoro.",
-        "Vulcão.",
         "Glaciar.",
         "Tornado."
     ],
 
-    correta: 2,
+    correta: 0,
 
     explicacao:
     "Os vulcões são estruturas geológicas que permitem a saída de magma, gases e outros materiais do interior terrestre para a superfície.",
@@ -328,13 +328,13 @@ const terraEUniverso = [
 
     alternativas: [
         "Maré alta.",
-        "Ressaca.",
         "Tsunami.",
+        "Ressaca.",
         "Corrente marítima.",
         "Monção."
     ],
 
-    correta: 2,
+    correta: 1,
 
     explicacao:
     "Tsunamis são grandes ondas geradas principalmente por terremotos submarinos, podendo percorrer grandes distâncias e causar severos impactos em áreas costeiras.",
@@ -355,13 +355,13 @@ const terraEUniverso = [
 
     alternativas: [
         "Sedimentação.",
-        "Intemperismo.",
         "Assoreamento.",
+        "Intemperismo.",
         "Compactação.",
         "Subducção."
     ],
 
-    correta: 1,
+    correta: 2,
 
     explicacao:
     "O intemperismo corresponde ao conjunto de processos físicos, químicos e biológicos que promovem a alteração e a fragmentação das rochas na superfície terrestre.",
@@ -382,13 +382,13 @@ const terraEUniverso = [
 
     alternativas: [
         "Fotossíntese.",
-        "Erosão.",
         "Evaporação.",
         "Condensação.",
-        "Solidificação."
+        "Solidificação.",
+        "Erosão."
     ],
 
-    correta: 1,
+    correta: 4,
 
     explicacao:
     "A erosão consiste no desgaste e transporte de partículas do solo e de rochas pela ação da água, do vento ou de outros agentes naturais. A retirada da vegetação aumenta significativamente esse processo.",
@@ -408,13 +408,13 @@ const terraEUniverso = [
 
     alternativas: [
         "Teoria Geocêntrica.",
-        "Teoria da Deriva Continental.",
         "Hipótese Nebular.",
+        "Teoria da Deriva Continental.",
         "Teoria do Big Crunch.",
         "Teoria das Marés."
     ],
 
-    correta: 2,
+    correta: 1,
 
     explicacao:
     "A Hipótese Nebular afirma que o Sistema Solar surgiu a partir de uma enorme nuvem de gás e poeira. A ação da gravidade provocou a concentração de matéria, originando o Sol e os demais corpos do sistema.",
@@ -434,14 +434,14 @@ const terraEUniverso = [
     "No Sistema Solar, o corpo celeste responsável por fornecer luz e calor para os planetas é:",
 
     alternativas: [
+        "O Sol.",
         "A Lua.",
         "Júpiter.",
         "A Via Láctea.",
-        "O Sol.",
         "Marte."
     ],
 
-    correta: 3,
+    correta: 0,
 
     explicacao:
     "O Sol é a estrela localizada no centro do Sistema Solar. Sua energia é fundamental para a manutenção da vida na Terra e para o funcionamento de diversos processos naturais.",
@@ -463,12 +463,12 @@ const terraEUniverso = [
     alternativas: [
         "Planetas anões.",
         "Planetas gasosos.",
-        "Planetas exteriores.",
         "Planetas rochosos.",
+        "Planetas exteriores.",
         "Satélites naturais."
     ],
 
-    correta: 3,
+    correta: 2,
 
     explicacao:
     "Os planetas rochosos possuem superfície sólida e são compostos principalmente por rochas e metais. Mercúrio, Vênus, Terra e Marte fazem parte desse grupo.",
@@ -490,12 +490,12 @@ const terraEUniverso = [
     alternativas: [
         "Planetas interiores.",
         "Planetas anões.",
-        "Planetas gasosos.",
         "Corpos menores.",
+        "Planetas gasosos.",
         "Satélites artificiais."
     ],
 
-    correta: 2,
+    correta: 3,
 
     explicacao:
     "Os planetas gasosos possuem grande massa e são compostos predominantemente por gases. Júpiter e Saturno são os maiores representantes desse grupo.",
@@ -517,12 +517,12 @@ const terraEUniverso = [
     alternativas: [
         "Cometa.",
         "Asteroide.",
-        "Meteorito.",
         "Nebulosa.",
-        "Satélite."
+        "Satélite.",
+        "Meteorito."
     ],
 
-    correta: 2,
+    correta: 4,
 
     explicacao:
     "Meteorito é o nome dado ao fragmento que consegue atravessar a atmosfera e atingir a superfície terrestre. Antes disso, durante sua passagem luminosa pela atmosfera, o fenômeno é chamado de meteoro.",
@@ -543,12 +543,12 @@ const terraEUniverso = [
     alternativas: [
         "Primeiro planeta a partir do Sol.",
         "Segundo planeta a partir do Sol.",
-        "Terceiro planeta a partir do Sol.",
         "Quarto planeta a partir do Sol.",
+        "Terceiro planeta a partir do Sol.",
         "Quinto planeta a partir do Sol."
     ],
 
-    correta: 2,
+    correta: 3,
 
     explicacao:
     "A Terra é o terceiro planeta do Sistema Solar em ordem de distância ao Sol. Sua posição contribui para condições adequadas de temperatura que favorecem a existência de água líquida e vida.",
@@ -570,12 +570,12 @@ const terraEUniverso = [
     alternativas: [
         "Do Sol.",
         "Da Lua.",
-        "Do próprio eixo.",
         "Da Via Láctea.",
-        "Do núcleo terrestre."
+        "Do núcleo terrestre.",
+        "Do próprio eixo."
     ],
 
-    correta: 2,
+    correta: 4,
 
     explicacao:
     "A rotação é o movimento que a Terra realiza em torno de seu próprio eixo. Esse movimento dura aproximadamente 24 horas e é responsável pela sucessão dos dias e das noites.",
@@ -595,14 +595,14 @@ const terraEUniverso = [
     "O movimento que a Terra realiza ao redor do Sol recebe o nome de translação. Esse movimento tem duração aproximada de:",
 
     alternativas: [
+        "365 dias e 6 horas.",
         "24 horas.",
         "30 dias.",
         "180 dias.",
-        "365 dias e 6 horas.",
         "10 anos."
     ],
 
-    correta: 3,
+    correta: 0,
 
     explicacao:
     "A translação é o movimento realizado pela Terra ao redor do Sol. Sua duração é de aproximadamente 365 dias e 6 horas, período que corresponde a um ano.",
@@ -623,13 +623,13 @@ const terraEUniverso = [
 
     alternativas: [
         "À influência gravitacional da Lua.",
-        "À inclinação do eixo terrestre combinada com o movimento de translação.",
         "À rotação da Terra.",
+        "À inclinação do eixo terrestre combinada com o movimento de translação.",
         "À movimentação das placas tectônicas.",
         "Ao campo magnético terrestre."
     ],
 
-    correta: 1,
+    correta: 2,
 
     explicacao:
     "As estações do ano resultam da inclinação do eixo da Terra associada ao movimento de translação. Isso faz com que diferentes regiões recebam quantidades distintas de luz solar ao longo do ano.",
@@ -650,13 +650,13 @@ const terraEUniverso = [
 
     alternativas: [
         "Paralelos.",
+        "Fusos horários.",
         "Meridianos.",
         "Hemisférios.",
-        "Fusos horários.",
         "Zonas climáticas."
     ],
 
-    correta: 3,
+    correta: 1,
 
     explicacao:
     "Os fusos horários são divisões imaginárias da Terra utilizadas para padronizar os horários nas diferentes regiões do planeta, considerando o movimento de rotação terrestre.",
@@ -676,13 +676,13 @@ const terraEUniverso = [
 
     alternativas: [
         "Combustão de oxigênio.",
-        "Fusão nuclear.",
         "Movimentação das manchas solares.",
         "Reflexão da luz de outros astros.",
+        "Fusão nuclear.",
         "Explosões vulcânicas em sua superfície."
     ],
 
-    correta: 1,
+    correta: 3,
 
     explicacao:
     "A energia solar é produzida por reações de fusão nuclear que ocorrem no núcleo do Sol. Nelas, átomos de hidrogênio unem-se formando hélio e liberando enormes quantidades de energia.",
@@ -704,12 +704,12 @@ const terraEUniverso = [
     alternativas: [
         "Impede completamente a ocorrência de chuvas.",
         "Controla diretamente os terremotos.",
-        "Fornece luz e calor essenciais aos seres vivos e aos ecossistemas.",
         "Produz oxigênio em seu interior para abastecer a Terra.",
-        "Determina a movimentação das placas tectônicas."
+        "Determina a movimentação das placas tectônicas.",
+        "Fornece luz e calor essenciais aos seres vivos e aos ecossistemas."
     ],
 
-    correta: 2,
+    correta: 4,
 
     explicacao:
     "A energia solar fornece luz e calor, possibilita a fotossíntese, influencia o clima e sustenta diversos processos indispensáveis para a vida na Terra.",
@@ -730,13 +730,13 @@ const terraEUniverso = [
 
     alternativas: [
         "Produz luz própria.",
-        "Gira ao redor do Sol sem influência gravitacional.",
         "Orbita naturalmente um planeta.",
+        "Gira ao redor do Sol sem influência gravitacional.",
         "É uma estrela de pequeno porte.",
         "Possui atmosfera semelhante à da Terra."
     ],
 
-    correta: 2,
+    correta: 1,
 
     explicacao:
     "A Lua é o satélite natural da Terra porque realiza movimentos orbitais ao redor do nosso planeta devido à ação da gravidade.",
@@ -756,14 +756,14 @@ const terraEUniverso = [
     "Durante aproximadamente um mês, a porção iluminada da Lua visível da Terra parece mudar gradualmente. Esse fenômeno recebe o nome de:",
 
     alternativas: [
+        "Fases da Lua.",
         "Eclipse lunar.",
         "Translação lunar.",
-        "Fases da Lua.",
         "Maré astronômica.",
         "Solstício lunar."
     ],
 
-    correta: 2,
+    correta: 0,
 
     explicacao:
     "As fases da Lua resultam das diferentes posições relativas entre Sol, Terra e Lua, fazendo com que observemos diferentes porções iluminadas do satélite ao longo do mês.",
@@ -784,13 +784,13 @@ const terraEUniverso = [
 
     alternativas: [
         "A Lua posiciona-se entre a Terra e o Sol.",
-        "A Terra posiciona-se entre o Sol e a Lua.",
         "O Sol posiciona-se entre a Terra e a Lua.",
+        "A Terra posiciona-se entre o Sol e a Lua.",
         "A Lua deixa de refletir a luz solar.",
         "A Lua entra na atmosfera terrestre."
     ],
 
-    correta: 1,
+    correta: 2,
 
     explicacao:
     "No eclipse lunar, a Terra fica entre o Sol e a Lua, projetando sua sombra sobre o satélite natural. Esse fenômeno só pode ocorrer durante a Lua Cheia.",
@@ -836,14 +836,14 @@ const terraEUniverso = [
     "Qual das alternativas apresenta corretamente a sequência das camadas da Terra da mais externa para a mais interna?",
 
     alternativas: [
+        "Crosta, manto e núcleo.",
         "Manto, crosta e núcleo.",
         "Crosta, núcleo e manto.",
-        "Crosta, manto e núcleo.",
         "Núcleo, crosta e manto.",
         "Manto, núcleo e crosta."
     ],
 
-    correta: 2,
+    correta: 0,
 
     explicacao:
     "A estrutura interna da Terra é formada pela crosta (camada mais externa), manto (camada intermediária) e núcleo (camada mais interna).",
@@ -864,13 +864,13 @@ const terraEUniverso = [
 
     alternativas: [
         "Exosfera.",
+        "Troposfera.",
         "Mesosfera.",
         "Termosfera.",
-        "Estratosfera.",
-        "Troposfera."
+        "Estratosfera."
     ],
 
-    correta: 4,
+    correta: 1,
 
     explicacao:
     "A troposfera é a camada atmosférica mais próxima da superfície terrestre e concentra praticamente todos os fenômenos meteorológicos.",
@@ -891,13 +891,13 @@ const terraEUniverso = [
 
     alternativas: [
         "Terra, Marte, Júpiter e Saturno.",
-        "Mercúrio, Vênus, Terra e Marte.",
         "Marte, Júpiter, Saturno e Urano.",
         "Vênus, Terra, Netuno e Marte.",
-        "Mercúrio, Terra, Urano e Netuno."
+        "Mercúrio, Terra, Urano e Netuno.",
+        "Mercúrio, Vênus, Terra e Marte."
     ],
 
-    correta: 1,
+    correta: 4,
 
     explicacao:
     "Mercúrio, Vênus, Terra e Marte possuem superfície sólida e são classificados como planetas rochosos ou terrestres.",
@@ -919,12 +919,12 @@ const terraEUniverso = [
     alternativas: [
         "Correta, pois a rotação provoca as estações.",
         "Correta, pois a rotação altera a distância da Terra ao Sol.",
-        "Incorreta, pois as estações resultam da inclinação do eixo terrestre associada à translação.",
         "Incorreta, pois as estações dependem apenas da Lua.",
+        "Incorreta, pois as estações resultam da inclinação do eixo terrestre associada à translação.",
         "Correta, pois a rotação provoca os solstícios e equinócios."
     ],
 
-    correta: 2,
+    correta: 3,
 
     explicacao:
     "As estações do ano são consequência da inclinação do eixo da Terra combinada com o movimento de translação ao redor do Sol.",
@@ -943,14 +943,14 @@ const terraEUniverso = [
     "Ao comparar os corpos celestes do Sistema Solar, um estudante afirmou que o Sol, os planetas, os satélites naturais, os asteroides e os cometas fazem parte da mesma estrutura astronômica. Essa estrutura é denominada:",
 
     alternativas: [
+        "Sistema Solar.",
         "Via Láctea.",
         "Universo.",
-        "Sistema Solar.",
         "Constelação.",
         "Nebulosa."
     ],
 
-    correta: 2,
+    correta: 0,
 
     explicacao:
     "O Sistema Solar é formado pelo Sol e todos os corpos celestes que estão sob sua influência gravitacional, incluindo planetas, satélites naturais, asteroides, cometas e outros objetos menores.",
@@ -999,12 +999,12 @@ const terraEUniverso = [
     alternativas: [
         "À distribuição dos oceanos.",
         "À incidência da radiação solar.",
-        "Aos limites e movimentações das placas tectônicas.",
         "À formação das nuvens.",
+        "Aos limites e movimentações das placas tectônicas.",
         "À ação exclusiva dos ventos."
     ],
 
-    correta: 2,
+    correta: 3,
 
     explicacao:
     "Grande parte dos terremotos e vulcões ocorre em áreas próximas aos limites das placas tectônicas, onde há intensa movimentação da litosfera.",
@@ -1025,13 +1025,13 @@ const terraEUniverso = [
 
     alternativas: [
         "Da composição química da Lua.",
-        "Da interação entre Terra, Lua e Sol.",
         "Da atividade vulcânica lunar.",
         "Da presença da camada de ozônio.",
-        "Da movimentação das placas tectônicas."
+        "Da movimentação das placas tectônicas.",
+        "Da interação entre Terra, Lua e Sol."
     ],
 
-    correta: 1,
+    correta: 4,
 
     explicacao:
     "As fases da Lua, os eclipses e as marés são fenômenos que dependem das posições relativas e das interações gravitacionais entre Terra, Lua e Sol.",

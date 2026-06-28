@@ -5,14 +5,14 @@ const fundamentosFisica = [
     `Em uma atividade experimental, os estudantes mediram comprimento, massa, tempo e temperatura. Considerando o conceito de grandeza física, assinale a alternativa correta.`,
 
     alternativas: [
-        `Grandeza física é toda propriedade que pode ser medida e expressa por valor numérico e unidade adequada.`,
         `Grandeza física é apenas aquilo que pode ser observado sem instrumentos de medição.`,
         `Grandeza física corresponde somente a fenômenos que envolvem movimento acelerado.`,
         `Grandeza física é qualquer opinião qualitativa sobre um fenômeno natural.`,
-        `Grandeza física existe apenas quando está associada diretamente à eletricidade.`,
+        `Grandeza física é toda propriedade que pode ser medida e expressa por valor numérico e unidade adequada.`,
+        `Grandeza física existe apenas quando está associada diretamente à eletricidade.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Grandezas físicas são propriedades mensuráveis, como massa, tempo, comprimento, temperatura, força e energia.`,
@@ -32,14 +32,14 @@ const fundamentosFisica = [
     `A diferença entre grandezas escalares e vetoriais está corretamente expressa em:`,
 
     alternativas: [
-        `Grandezas escalares exigem valor e unidade; grandezas vetoriais exigem valor, unidade, direção e sentido.`,
         `Grandezas escalares possuem direção e sentido; grandezas vetoriais possuem apenas valor numérico.`,
+        `Grandezas escalares exigem valor e unidade; grandezas vetoriais exigem valor, unidade, direção e sentido.`,
         `Grandezas vetoriais são sempre menores que grandezas escalares quando medidas no Sistema Internacional.`,
         `Grandezas escalares são usadas apenas em óptica, enquanto vetoriais aparecem apenas em termologia.`,
-        `Grandezas vetoriais não podem ser representadas em situações de força ou velocidade.`,
+        `Grandezas vetoriais não podem ser representadas em situações de força ou velocidade.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Escalares, como massa e temperatura, não precisam de direção e sentido. Vetoriais, como força e velocidade, precisam.`,
@@ -86,14 +86,14 @@ const fundamentosFisica = [
     `Um estudante caminha 300 m em 5 min, mantendo ritmo aproximadamente constante. A rapidez média desse estudante é:`,
 
     alternativas: [
-        `60 m/min.`,
         `1500 m/min.`,
         `295 m/min.`,
+        `60 m/min.`,
         `5 m/min.`,
-        `0,016 m/min.`,
+        `0,016 m/min.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Rapidez média é distância dividida pelo tempo: 300 m ÷ 5 min = 60 m/min.`,
@@ -113,14 +113,14 @@ const fundamentosFisica = [
     `Um automóvel percorre 180 km em 3 h. Sua velocidade escalar média é:`,
 
     alternativas: [
-        `60 km/h.`,
         `540 km/h.`,
         `183 km/h.`,
         `177 km/h.`,
         `20 km/h.`,
+        `60 km/h.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Velocidade escalar média = distância percorrida ÷ tempo: 180 ÷ 3 = 60 km/h.`,
@@ -140,14 +140,14 @@ const fundamentosFisica = [
     `Uma velocidade de 20 m/s corresponde, em km/h, a:`,
 
     alternativas: [
-        `72 km/h.`,
         `5,5 km/h.`,
         `36 km/h.`,
         `80 km/h.`,
-        `200 km/h.`,
+        `72 km/h.`,
+        `200 km/h.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Para converter m/s em km/h, multiplica-se por 3,6. Assim, 20 × 3,6 = 72 km/h.`,
@@ -167,14 +167,14 @@ const fundamentosFisica = [
     `Um corpo passa de 10 m/s para 30 m/s em 5 s. A aceleração média é:`,
 
     alternativas: [
-        `4 m/s².`,
         `2 m/s².`,
+        `4 m/s².`,
         `8 m/s².`,
         `20 m/s².`,
-        `40 m/s².`,
+        `40 m/s².`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Aceleração média = variação da velocidade ÷ tempo. Logo, (30 - 10) ÷ 5 = 4 m/s².`,
@@ -221,14 +221,14 @@ const fundamentosFisica = [
     `A Primeira Lei de Newton, conhecida como princípio da inércia, afirma que:`,
 
     alternativas: [
-        `Um corpo tende a manter seu estado de repouso ou movimento retilíneo uniforme se a força resultante for nula.`,
         `Todo corpo em movimento precisa de força resultante constante no sentido do movimento.`,
         `A força de ação sempre atua no mesmo corpo que a força de reação.`,
         `A aceleração de um corpo independe da força resultante aplicada sobre ele.`,
         `A massa de um corpo desaparece quando ele entra em movimento uniforme.`,
+        `Um corpo tende a manter seu estado de repouso ou movimento retilíneo uniforme se a força resultante for nula.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `A inércia é a tendência de manter o estado de repouso ou movimento uniforme quando a força resultante é nula.`,
@@ -248,14 +248,14 @@ const fundamentosFisica = [
     `A relação entre força resultante, massa e aceleração é expressa pela Segunda Lei de Newton. Assim, para uma mesma força resultante:`,
 
     alternativas: [
-        `Quanto maior a massa, menor tende a ser a aceleração produzida.`,
         `Quanto maior a massa, maior necessariamente será a aceleração produzida.`,
         `A massa não interfere na aceleração quando a força resultante é constante.`,
+        `Quanto maior a massa, menor tende a ser a aceleração produzida.`,
         `A aceleração será sempre nula, mesmo com força resultante diferente de zero.`,
-        `A força resultante é medida em joule e não se relaciona à aceleração.`,
+        `A força resultante é medida em joule e não se relaciona à aceleração.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Pela relação F = m·a, mantendo a força constante, massa e aceleração são inversamente relacionadas.`,
@@ -275,14 +275,14 @@ const fundamentosFisica = [
     `A Terceira Lei de Newton é corretamente interpretada quando se afirma que:`,
 
     alternativas: [
-        `Forças de ação e reação têm mesma intensidade, mesma direção, sentidos opostos e atuam em corpos diferentes.`,
         `Forças de ação e reação anulam-se sempre porque atuam no mesmo corpo.`,
         `A força de ação é sempre maior que a reação quando há movimento acelerado.`,
         `A reação só ocorre depois que a ação termina completamente.`,
-        `A ação ocorre em corpos sólidos, enquanto a reação ocorre apenas em líquidos.`,
+        `Forças de ação e reação têm mesma intensidade, mesma direção, sentidos opostos e atuam em corpos diferentes.`,
+        `A ação ocorre em corpos sólidos, enquanto a reação ocorre apenas em líquidos.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Ação e reação formam par de forças em corpos diferentes, por isso não se anulam no mesmo corpo.`,
@@ -302,14 +302,14 @@ const fundamentosFisica = [
     `Uma pessoa empurra uma parede e sente a parede empurrá-la de volta. Esse exemplo ilustra:`,
 
     alternativas: [
-        `A Terceira Lei de Newton, pois há forças simultâneas entre corpos diferentes.`,
         `A Primeira Lei de Newton, pois a parede deixa de possuir inércia.`,
         `A conservação da energia térmica, pois há transferência de calor.`,
         `A refração da força, pois a parede muda o sentido da velocidade.`,
         `A indução magnética, pois o contato gera corrente elétrica.`,
+        `A Terceira Lei de Newton, pois há forças simultâneas entre corpos diferentes.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `O par de forças entre pessoa e parede representa ação e reação.`,
@@ -329,14 +329,14 @@ const fundamentosFisica = [
     `A diferença correta entre massa e peso é:`,
 
     alternativas: [
-        `Massa é quantidade de matéria; peso é força gravitacional exercida sobre a massa.`,
         `Massa é força gravitacional; peso é quantidade de matéria de um corpo.`,
         `Massa muda com a gravidade; peso permanece invariável em qualquer astro.`,
+        `Massa é quantidade de matéria; peso é força gravitacional exercida sobre a massa.`,
         `Massa e peso são sinônimos, pois ambos são medidos em newton.`,
-        `Peso é energia armazenada, enquanto massa é potência consumida.`,
+        `Peso é energia armazenada, enquanto massa é potência consumida.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Massa mede quantidade de matéria e é expressa em kg. Peso é força e é expresso em newton.`,
@@ -383,14 +383,14 @@ const fundamentosFisica = [
     `Em Física, trabalho mecânico ocorre quando:`,
 
     alternativas: [
-        `Uma força atua sobre um corpo e produz deslocamento na direção considerada.`,
         `Uma pessoa sente cansaço, ainda que não haja deslocamento do corpo.`,
+        `Uma força atua sobre um corpo e produz deslocamento na direção considerada.`,
         `Um corpo permanece parado sob ação de forças equilibradas durante todo o tempo.`,
         `A temperatura de um corpo aumenta sem qualquer interação mecânica.`,
-        `Uma onda se propaga no vácuo sem transportar energia.`,
+        `Uma onda se propaga no vácuo sem transportar energia.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Trabalho mecânico exige força e deslocamento associado à força.`,
@@ -410,14 +410,14 @@ const fundamentosFisica = [
     `Uma pessoa segura uma caixa parada no ar durante alguns segundos. Considerando apenas o trabalho mecânico da força aplicada sobre a caixa enquanto ela permanece parada:`,
 
     alternativas: [
-        `Não há trabalho mecânico, pois não ocorre deslocamento da caixa.`,
         `Há trabalho máximo, pois a força aplicada é vertical e constante.`,
         `O trabalho é sempre igual ao peso multiplicado pelo tempo.`,
         `O trabalho independe de deslocamento e depende apenas do esforço muscular.`,
         `Há trabalho elétrico, pois a caixa possui massa e energia potencial.`,
+        `Não há trabalho mecânico, pois não ocorre deslocamento da caixa.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Sem deslocamento, o trabalho mecânico da força sobre a caixa é nulo.`,
@@ -437,14 +437,14 @@ const fundamentosFisica = [
     `A energia cinética de um corpo está associada:`,
 
     alternativas: [
-        `Ao movimento do corpo.`,
         `À altura do corpo em relação a um nível de referência.`,
+        `Ao movimento do corpo.`,
         `À deformação elástica de uma mola em repouso.`,
         `À temperatura ambiente, independentemente do movimento.`,
-        `Ao número de prótons do material que compõe o corpo.`,
+        `Ao número de prótons do material que compõe o corpo.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Energia cinética é energia relacionada ao movimento.`,
@@ -464,14 +464,14 @@ const fundamentosFisica = [
     `A energia potencial gravitacional aumenta quando:`,
 
     alternativas: [
-        `A altura do corpo em relação a um nível de referência aumenta.`,
         `A velocidade do corpo diminui obrigatoriamente até zero.`,
         `A massa do corpo desaparece por transformação em calor.`,
+        `A altura do corpo em relação a um nível de referência aumenta.`,
         `O corpo passa de sólido para líquido sem mudança de posição.`,
-        `A frequência sonora produzida pelo corpo diminui.`,
+        `A frequência sonora produzida pelo corpo diminui.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Energia potencial gravitacional depende de massa, gravidade e altura.`,
@@ -491,14 +491,14 @@ const fundamentosFisica = [
     `Em uma montanha-russa ideal, desprezando perdas por atrito, durante a descida ocorre principalmente:`,
 
     alternativas: [
-        `Transformação de energia potencial gravitacional em energia cinética.`,
         `Transformação de energia cinética em energia nuclear sem conservação.`,
         `Criação de energia mecânica a partir do repouso absoluto.`,
         `Eliminação da massa do carrinho por aumento da velocidade.`,
-        `Conversão de energia sonora em carga elétrica estática.`,
+        `Transformação de energia potencial gravitacional em energia cinética.`,
+        `Conversão de energia sonora em carga elétrica estática.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Na descida, a altura diminui e a velocidade aumenta, transformando energia potencial em cinética.`,
@@ -545,14 +545,14 @@ const fundamentosFisica = [
     `A diferença correta entre calor e temperatura é:`,
 
     alternativas: [
-        `Temperatura mede agitação térmica; calor é energia em trânsito por diferença de temperatura.`,
         `Calor mede agitação térmica; temperatura é energia sempre armazenada no corpo.`,
         `Calor e temperatura são sinônimos e possuem sempre a mesma unidade.`,
+        `Temperatura mede agitação térmica; calor é energia em trânsito por diferença de temperatura.`,
         `Temperatura é transferência de massa; calor é medida de comprimento.`,
-        `Calor é força mecânica; temperatura é quantidade de movimento.`,
+        `Calor é força mecânica; temperatura é quantidade de movimento.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Temperatura indica estado térmico; calor é energia transferida entre corpos.`,
@@ -599,14 +599,14 @@ const fundamentosFisica = [
     `A escala Kelvin é considerada absoluta porque:`,
 
     alternativas: [
-        `Seu zero corresponde ao zero absoluto, limite teórico de mínima agitação térmica.`,
         `Usa o símbolo °K e possui valores sempre negativos.`,
+        `Seu zero corresponde ao zero absoluto, limite teórico de mínima agitação térmica.`,
         `É idêntica à escala Celsius em todos os pontos de medida.`,
         `Foi criada apenas para medir temperatura corporal humana.`,
-        `Indica calor transferido, e não temperatura.`,
+        `Indica calor transferido, e não temperatura.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A escala Kelvin parte do zero absoluto e não utiliza grau.`,
@@ -626,14 +626,14 @@ const fundamentosFisica = [
     `Uma colher metálica aquece quando fica em contato com alimento quente. O processo predominante de transferência de calor é:`,
 
     alternativas: [
-        `Condução.`,
         `Convecção.`,
         `Radiação.`,
         `Refração.`,
         `Indução elétrica.`,
+        `Condução.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Condução ocorre por contato direto, principalmente em sólidos.`,
@@ -653,14 +653,14 @@ const fundamentosFisica = [
     `A circulação de ar quente subindo e ar frio descendo em um ambiente caracteriza:`,
 
     alternativas: [
-        `Convecção, pois envolve movimento de fluido em razão de diferenças de densidade.`,
         `Condução, pois ocorre apenas por contato entre sólidos metálicos.`,
         `Radiação, pois depende exclusivamente de ondas eletromagnéticas no vácuo.`,
         `Refração, pois envolve mudança de direção da luz entre meios.`,
-        `Polarização, pois ocorre apenas com ondas transversais luminosas.`,
+        `Convecção, pois envolve movimento de fluido em razão de diferenças de densidade.`,
+        `Polarização, pois ocorre apenas com ondas transversais luminosas.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Convecção ocorre em fluidos, como líquidos e gases, com movimento de massa.`,
@@ -680,14 +680,14 @@ const fundamentosFisica = [
     `O calor do Sol chega à Terra principalmente por:`,
 
     alternativas: [
-        `Radiação, pois ondas eletromagnéticas podem se propagar no vácuo.`,
         `Condução, pois há contato direto entre Sol e Terra.`,
         `Convecção, pois o vácuo transporta matéria aquecida até a atmosfera.`,
         `Filtração, pois a luz passa por poros do espaço.`,
-        `Condensação, pois vapor solar forma calor na Terra.`,
+        `Radiação, pois ondas eletromagnéticas podem se propagar no vácuo.`,
+        `Condensação, pois vapor solar forma calor na Terra.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A radiação não precisa de meio material e pode ocorrer no vácuo.`,
@@ -707,14 +707,14 @@ const fundamentosFisica = [
     `As juntas de dilatação em pontes e trilhos são importantes porque:`,
 
     alternativas: [
-        `Permitem variações dimensionais causadas por mudanças de temperatura, evitando deformações e danos.`,
         `Impedem completamente qualquer transferência de calor por radiação.`,
         `Transformam energia térmica em energia nuclear durante o verão.`,
         `Aumentam a massa dos trilhos quando a temperatura diminui.`,
         `Eliminam a gravidade que atua sobre a estrutura metálica.`,
+        `Permitem variações dimensionais causadas por mudanças de temperatura, evitando deformações e danos.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Materiais podem dilatar ao aquecer e contrair ao resfriar.`,
@@ -734,14 +734,14 @@ const fundamentosFisica = [
     `Uma onda pode ser definida como:`,
 
     alternativas: [
-        `Uma perturbação que transporta energia sem transportar matéria de forma permanente.`,
         `Uma partícula material que leva massa de um ponto a outro sem energia.`,
+        `Uma perturbação que transporta energia sem transportar matéria de forma permanente.`,
         `Uma força que só existe em corpos em repouso absoluto.`,
         `Uma corrente elétrica formada apenas por prótons livres.`,
-        `Uma reação química que ocorre em qualquer meio material.`,
+        `Uma reação química que ocorre em qualquer meio material.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Ondas transportam energia; as partículas do meio apenas oscilam em torno de posições de equilíbrio.`,
@@ -761,14 +761,14 @@ const fundamentosFisica = [
     `A frequência de uma onda corresponde:`,
 
     alternativas: [
-        `Ao número de oscilações realizadas por unidade de tempo.`,
         `À distância entre o ponto inicial e final de uma trajetória.`,
         `À quantidade de matéria transportada pela onda.`,
+        `Ao número de oscilações realizadas por unidade de tempo.`,
         `À força gravitacional exercida sobre a crista da onda.`,
-        `À temperatura necessária para formar uma vibração.`,
+        `À temperatura necessária para formar uma vibração.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Frequência mede quantas oscilações ocorrem por unidade de tempo.`,
@@ -842,14 +842,14 @@ const fundamentosFisica = [
     `O som é classificado como onda:`,
 
     alternativas: [
-        `Mecânica e longitudinal.`,
         `Eletromagnética e transversal obrigatória.`,
         `Química e ionizante.`,
+        `Mecânica e longitudinal.`,
         `Gravitacional e estacionária apenas.`,
-        `Nuclear e corpuscular sem vibração.`,
+        `Nuclear e corpuscular sem vibração.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `O som precisa de meio material e sua propagação envolve compressões e rarefações.`,
@@ -869,14 +869,14 @@ const fundamentosFisica = [
     `A altura de um som está relacionada:`,
 
     alternativas: [
-        `À frequência, permitindo distinguir sons graves e agudos.`,
         `À intensidade, indicando exclusivamente volume forte ou fraco.`,
+        `À frequência, permitindo distinguir sons graves e agudos.`,
         `Ao timbre, medindo apenas a fonte sonora.`,
         `À velocidade da luz no vácuo.`,
-        `À temperatura de fusão do material sonoro.`,
+        `À temperatura de fusão do material sonoro.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Altura sonora relaciona-se à frequência: maior frequência, som mais agudo.`,
@@ -896,14 +896,14 @@ const fundamentosFisica = [
     `O timbre permite:`,
 
     alternativas: [
-        `Distinguir sons de mesma altura e intensidade produzidos por fontes diferentes.`,
         `Aumentar a velocidade da luz em meios transparentes.`,
         `Transformar som mecânico em radiação ionizante.`,
         `Medir o calor transferido entre instrumentos musicais.`,
-        `Eliminar a frequência de uma onda sonora.`,
+        `Distinguir sons de mesma altura e intensidade produzidos por fontes diferentes.`,
+        `Eliminar a frequência de uma onda sonora.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Timbre diferencia fontes sonoras, como vozes e instrumentos.`,
@@ -923,14 +923,14 @@ const fundamentosFisica = [
     `O eco é explicado principalmente pelo fenômeno de:`,
 
     alternativas: [
-        `Reflexão do som em uma superfície distante.`,
         `Refração da luz em meio transparente.`,
         `Condução térmica no ar.`,
         `Eletrização por atrito.`,
         `Indução magnética terrestre.`,
+        `Reflexão do som em uma superfície distante.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Eco ocorre quando o som reflete e retorna ao observador com intervalo perceptível.`,
@@ -977,14 +977,14 @@ const fundamentosFisica = [
     `O fenômeno que explica a formação da imagem em um espelho plano é:`,
 
     alternativas: [
-        `Reflexão da luz.`,
         `Refração do som.`,
+        `Reflexão da luz.`,
         `Condução térmica.`,
         `Convecção luminosa.`,
-        `Indução radioativa.`,
+        `Indução radioativa.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Espelhos formam imagens por reflexão da luz.`,
@@ -1004,14 +1004,14 @@ const fundamentosFisica = [
     `Um lápis parcialmente mergulhado em água parece torto devido:`,
 
     alternativas: [
-        `À refração da luz ao passar de um meio para outro.`,
         `À reflexão do som entre água e ar.`,
         `À dilatação térmica do lápis em temperatura ambiente.`,
+        `À refração da luz ao passar de um meio para outro.`,
         `À eletrização da água por contato com madeira.`,
-        `À decomposição química da luz em calor.`,
+        `À decomposição química da luz em calor.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A refração ocorre quando a luz muda de meio e altera sua velocidade e direção.`,
@@ -1031,14 +1031,14 @@ const fundamentosFisica = [
     `A dispersão da luz branca em um prisma mostra que:`,
 
     alternativas: [
-        `A luz branca pode ser decomposta em diferentes cores.`,
         `A luz branca é formada apenas por uma cor invisível.`,
         `O prisma transforma luz em som por reação química.`,
         `A luz perde toda energia ao tocar vidro.`,
-        `A refração não ocorre em meios transparentes.`,
+        `A luz branca pode ser decomposta em diferentes cores.`,
+        `A refração não ocorre em meios transparentes.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A dispersão separa componentes da luz branca, formando cores do espectro visível.`,
@@ -1058,14 +1058,14 @@ const fundamentosFisica = [
     `O espelho convexo é usado em retrovisores externos porque:`,
 
     alternativas: [
-        `Aumenta o campo de visão, embora forme imagem reduzida.`,
         `Forma sempre imagem real e maior que o objeto.`,
         `Concentra luz em um ponto, funcionando como lupa.`,
         `Impede totalmente a reflexão da luz incidente.`,
         `Transforma ondas sonoras em imagem luminosa.`,
+        `Aumenta o campo de visão, embora forme imagem reduzida.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Espelhos convexos ampliam o campo visual e formam imagens virtuais reduzidas.`,
@@ -1085,14 +1085,14 @@ const fundamentosFisica = [
     `Corrente elétrica em fios metálicos corresponde ao:`,
 
     alternativas: [
-        `Movimento ordenado de elétrons livres no condutor.`,
         `Movimento ordenado de prótons livres pelo núcleo metálico.`,
         `Transporte de nêutrons entre átomos vizinhos.`,
         `Fluxo de calor sem participação de cargas elétricas.`,
-        `Deslocamento de moléculas de ar em ondas sonoras.`,
+        `Movimento ordenado de elétrons livres no condutor.`,
+        `Deslocamento de moléculas de ar em ondas sonoras.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Nos metais, a corrente elétrica envolve elétrons livres em movimento ordenado.`,
@@ -1112,14 +1112,14 @@ const fundamentosFisica = [
     `Materiais condutores são aqueles que:`,
 
     alternativas: [
-        `Permitem com maior facilidade o movimento de cargas elétricas.`,
         `Impedem completamente qualquer interação elétrica em todas as condições.`,
         `Transformam toda energia elétrica em energia nuclear.`,
         `Possuem apenas partículas neutras e nenhum elétron.`,
         `Conduzem somente som, mas nunca corrente elétrica.`,
+        `Permitem com maior facilidade o movimento de cargas elétricas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Condutores, como metais, facilitam o movimento de cargas.`,
@@ -1139,14 +1139,14 @@ const fundamentosFisica = [
     `Para uma lâmpada acender em um circuito simples, é necessário que:`,
 
     alternativas: [
-        `O circuito esteja fechado e exista fonte de energia elétrica.`,
         `O circuito esteja aberto para impedir a passagem de corrente.`,
         `O fio seja isolante para acumular cargas no interruptor.`,
+        `O circuito esteja fechado e exista fonte de energia elétrica.`,
         `A lâmpada esteja desligada da fonte para evitar resistência.`,
-        `A corrente seja formada apenas por prótons em repouso.`,
+        `A corrente seja formada apenas por prótons em repouso.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Corrente elétrica requer caminho fechado e fonte de energia.`,
@@ -1166,14 +1166,14 @@ const fundamentosFisica = [
     `Na Lei de Ohm, a relação correta entre tensão, resistência e corrente elétrica é:`,
 
     alternativas: [
-        `U = R · i.`,
         `R = U · i.`,
+        `U = R · i.`,
         `i = U · R.`,
         `U = R / i apenas.`,
-        `R = i / U apenas.`,
+        `R = i / U apenas.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A Lei de Ohm é expressa por U = R·i para condutores ôhmicos.`,
@@ -1220,14 +1220,14 @@ const fundamentosFisica = [
     `Em instalações elétricas residenciais, os aparelhos são ligados predominantemente em paralelo porque:`,
 
     alternativas: [
-        `Podem funcionar de forma independente, recebendo tensão adequada.`,
         `Todos precisam desligar quando um único aparelho queima.`,
         `A ligação em série fornece maior independência aos equipamentos.`,
         `A corrente deixa de existir em qualquer ramificação do circuito.`,
         `A resistência total torna-se infinita em todos os pontos.`,
+        `Podem funcionar de forma independente, recebendo tensão adequada.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Em paralelo, cada aparelho possui ramo próprio, permitindo funcionamento independente.`,
@@ -1247,14 +1247,14 @@ const fundamentosFisica = [
     `Um curto-circuito é perigoso porque:`,
 
     alternativas: [
-        `Pode gerar corrente muito elevada, aquecimento intenso e risco de incêndio.`,
         `Reduz a corrente a zero e congela todos os fios metálicos.`,
+        `Pode gerar corrente muito elevada, aquecimento intenso e risco de incêndio.`,
         `Transforma tensão elétrica em campo gravitacional inofensivo.`,
         `Elimina a resistência do corpo humano a qualquer choque.`,
-        `Ocorre apenas em circuitos totalmente desligados e sem fonte.`,
+        `Ocorre apenas em circuitos totalmente desligados e sem fonte.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Curto-circuito reduz muito a resistência do caminho, podendo elevar a corrente e causar aquecimento.`,
@@ -1301,14 +1301,14 @@ const fundamentosFisica = [
     `A bússola orienta-se porque:`,
 
     alternativas: [
-        `Sua agulha magnetizada interage com o campo magnético terrestre.`,
         `A pressão atmosférica empurra a agulha sempre para o norte geográfico.`,
         `A radiação infravermelha do Sol aquece apenas uma ponta da agulha.`,
+        `Sua agulha magnetizada interage com o campo magnético terrestre.`,
         `A corrente elétrica do solo percorre a bússola continuamente.`,
-        `A gravidade elimina o polo sul da agulha magnética.`,
+        `A gravidade elimina o polo sul da agulha magnética.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A agulha da bússola é magnetizada e se orienta pelo campo magnético da Terra.`,
@@ -1328,14 +1328,14 @@ const fundamentosFisica = [
     `Um eletroímã funciona porque:`,
 
     alternativas: [
-        `Uma corrente elétrica em uma bobina gera campo magnético.`,
         `Um ímã permanente perde todos os polos quando é aquecido.`,
         `Um material isolante impede totalmente qualquer campo magnético.`,
         `Uma onda sonora transforma ar em corrente elétrica contínua.`,
-        `Uma lente convergente concentra prótons em um fio metálico.`,
+        `Uma corrente elétrica em uma bobina gera campo magnético.`,
+        `Uma lente convergente concentra prótons em um fio metálico.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Corrente elétrica pode gerar campo magnético, princípio usado em eletroímãs.`,
@@ -1382,14 +1382,14 @@ const fundamentosFisica = [
     `Motores elétricos e geradores têm em comum o uso de princípios de:`,
 
     alternativas: [
-        `Eletromagnetismo.`,
         `Digestão química.`,
+        `Eletromagnetismo.`,
         `Separação de misturas.`,
         `Refração acústica.`,
-        `Diluição térmica.`,
+        `Diluição térmica.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Motores e geradores dependem da interação entre eletricidade e magnetismo.`,
@@ -1409,14 +1409,14 @@ const fundamentosFisica = [
     `Radiação pode ser entendida como:`,
 
     alternativas: [
-        `Energia emitida e propagada no espaço ou em meios materiais.`,
         `Matéria sólida que não possui energia associada.`,
         `Somente calor transferido por contato direto entre sólidos.`,
         `Apenas corrente elétrica em fios metálicos.`,
         `Reação química que sempre forma precipitado.`,
+        `Energia emitida e propagada no espaço ou em meios materiais.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Radiação é energia em propagação, podendo ser eletromagnética ou corpuscular.`,
@@ -1436,14 +1436,14 @@ const fundamentosFisica = [
     `A diferença entre radiações ionizantes e não ionizantes está relacionada:`,
 
     alternativas: [
-        `À capacidade de arrancar elétrons de átomos e moléculas.`,
         `À obrigação de todas se propagarem apenas em líquidos.`,
         `À presença exclusiva de som audível em alta intensidade.`,
+        `À capacidade de arrancar elétrons de átomos e moléculas.`,
         `À ausência de energia em radiações não ionizantes.`,
-        `Ao fato de radiações ionizantes não interagirem com matéria.`,
+        `Ao fato de radiações ionizantes não interagirem com matéria.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Radiações ionizantes têm energia suficiente para ionizar átomos ou moléculas.`,
@@ -1463,14 +1463,14 @@ const fundamentosFisica = [
     `Raios X devem ser usados com controle e proteção porque:`,
 
     alternativas: [
-        `São radiações ionizantes e podem produzir efeitos biológicos dependendo da dose.`,
         `São ondas mecânicas incapazes de atravessar qualquer material.`,
         `São sons de baixa frequência sem interação com tecidos.`,
         `São correntes elétricas sem energia associada.`,
-        `São radiações sempre inofensivas em qualquer intensidade.`,
+        `São radiações ionizantes e podem produzir efeitos biológicos dependendo da dose.`,
+        `São radiações sempre inofensivas em qualquer intensidade.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Raios X são úteis em diagnóstico, mas exigem controle de exposição por serem ionizantes.`,
@@ -1490,14 +1490,14 @@ const fundamentosFisica = [
     `Ondas de rádio usadas em comunicação são exemplos de:`,
 
     alternativas: [
-        `Radiações eletromagnéticas não ionizantes em usos comuns.`,
         `Ondas mecânicas que precisam obrigatoriamente de ar para se propagar.`,
+        `Radiações eletromagnéticas não ionizantes em usos comuns.`,
         `Correntes elétricas que só existem em fios metálicos.`,
         `Radiações nucleares sempre fatais em qualquer intensidade.`,
-        `Ondas sonoras de alta frequência emitidas por antenas.`,
+        `Ondas sonoras de alta frequência emitidas por antenas.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Ondas de rádio são eletromagnéticas e usadas em comunicação.`,
@@ -1544,14 +1544,14 @@ const fundamentosFisica = [
     `A Física está presente nos transportes porque permite compreender:`,
 
     alternativas: [
-        `Forças, atrito, movimento, energia, potência e segurança.`,
         `Apenas composição química de combustíveis sem relação com movimento.`,
         `Somente reprodução dos seres vivos em ambientes urbanos.`,
         `Exclusivamente separação de misturas em laboratórios.`,
         `Apenas formação de rochas e placas tectônicas.`,
+        `Forças, atrito, movimento, energia, potência e segurança.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Transportes envolvem mecânica, energia, atrito, potência e segurança.`,
@@ -1571,14 +1571,14 @@ const fundamentosFisica = [
     `Em aparelhos elétricos, parte da energia fornecida pode ser dissipada em forma de calor. Isso indica que:`,
 
     alternativas: [
-        `Nem toda energia fornecida se transforma na forma útil desejada, havendo perdas no processo.`,
         `A energia desaparece definitivamente, contrariando qualquer conservação.`,
         `Todo aparelho real possui rendimento obrigatoriamente igual a 100%.`,
         `O calor dissipado mostra que não houve transformação de energia.`,
-        `A potência do aparelho deixa de existir quando há aquecimento.`,
+        `Nem toda energia fornecida se transforma na forma útil desejada, havendo perdas no processo.`,
+        `A potência do aparelho deixa de existir quando há aquecimento.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Em sistemas reais, parte da energia pode ser dissipada, reduzindo o rendimento útil.`,
@@ -1598,14 +1598,14 @@ const fundamentosFisica = [
     `Uma análise física adequada de fenômenos cotidianos deve:`,
 
     alternativas: [
-        `Relacionar conceitos, unidades, leis e condições do sistema antes de escolher a resposta.`,
         `Aplicar fórmulas aleatórias sem verificar grandezas e unidades envolvidas.`,
         `Desconsiderar o referencial, pois movimento e repouso são absolutos.`,
+        `Relacionar conceitos, unidades, leis e condições do sistema antes de escolher a resposta.`,
         `Ignorar perdas de energia, pois sistemas reais sempre são ideais.`,
-        `Substituir conceitos físicos por impressões visuais do fenômeno.`,
+        `Substituir conceitos físicos por impressões visuais do fenômeno.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Questões difíceis exigem interpretação das condições físicas antes de qualquer cálculo.`,
@@ -1618,6 +1618,4 @@ const fundamentosFisica = [
 
     dicaBanca:
     `Leia o enunciado procurando grandezas, unidades, sistema e fenômeno principal.`
-}
-
-];
+}];

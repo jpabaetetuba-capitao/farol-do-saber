@@ -6,20 +6,14 @@ const ecologia = [
     pergunta: "Considerando o conceito de Ecologia, é correto afirmar que essa área do conhecimento estuda principalmente:",
 
     alternativas: [
-
-        "as relações estabelecidas entre os seres vivos e entre estes e os fatores presentes no ambiente em que vivem.",
-
         "a estrutura interna dos organismos e os mecanismos fisiológicos responsáveis pela manutenção da vida.",
-
         "os processos celulares relacionados à produção de energia e à síntese de substâncias orgânicas.",
-
         "a classificação dos seres vivos de acordo com suas características evolutivas e genéticas.",
-
-        "a composição química dos ecossistemas e as transformações ocorridas nos ciclos geológicos da Terra."
-
+        "a composição química dos ecossistemas e as transformações ocorridas nos ciclos geológicos da Terra.",
+        "as relações estabelecidas entre os seres vivos e entre estes e os fatores presentes no ambiente em que vivem."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. A Ecologia estuda as interações entre os seres vivos e o ambiente.",
 
@@ -34,20 +28,14 @@ const ecologia = [
     pergunta: "Os exemplos apresentados evidenciam principalmente:",
 
     alternativas: [
-
-        "interações ecológicas que ocorrem entre organismos e que influenciam a dinâmica dos ecossistemas.",
-
         "processos fisiológicos responsáveis pela adaptação dos organismos às condições ambientais adversas.",
-
         "mecanismos evolutivos que promovem o surgimento de novas espécies ao longo do tempo geológico.",
-
+        "interações ecológicas que ocorrem entre organismos e que influenciam a dinâmica dos ecossistemas.",
         "transformações químicas relacionadas à circulação de nutrientes nos diferentes ambientes naturais.",
-
         "fenômenos geográficos responsáveis pela distribuição dos organismos na superfície terrestre."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. A Ecologia estuda justamente essas interações observadas na natureza.",
 
@@ -62,20 +50,14 @@ const ecologia = [
     pergunta: "De acordo com essa perspectiva, o estudo da Ecologia é importante porque contribui para:",
 
     alternativas: [
-
-        "a compreensão dos processos ambientais e a adoção de práticas voltadas ao uso sustentável dos recursos naturais.",
-
         "o desenvolvimento de técnicas laboratoriais destinadas à manipulação genética dos organismos vivos.",
-
         "a classificação dos seres vivos segundo critérios taxonômicos internacionalmente reconhecidos.",
-
         "a elaboração de modelos matemáticos voltados à previsão de eventos geológicos de grande magnitude.",
-
+        "a compreensão dos processos ambientais e a adoção de práticas voltadas ao uso sustentável dos recursos naturais.",
         "o aprofundamento dos conhecimentos relacionados à estrutura molecular das substâncias presentes na natureza."
-
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. A Ecologia possui forte relação com conservação ambiental e sustentabilidade.",
 
@@ -90,20 +72,14 @@ const ecologia = [
     pergunta: "Considerando os fundamentos da Ecologia, a afirmação correta é:",
 
     alternativas: [
-
-        "o segundo estudante está correto, pois a Ecologia considera tanto fatores bióticos quanto fatores abióticos.",
-
         "o primeiro estudante está correto, pois os fatores físicos do ambiente pertencem exclusivamente ao campo da Geografia.",
-
+        "o segundo estudante está correto, pois a Ecologia considera tanto fatores bióticos quanto fatores abióticos.",
         "ambos estão corretos, pois os fatores ambientais são analisados independentemente dos seres vivos.",
-
         "nenhum dos estudantes está correto, pois a Ecologia estuda apenas comunidades biológicas complexas.",
-
         "o primeiro estudante está correto, pois a Ecologia não considera variáveis físicas na análise dos ecossistemas."
-
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: "Correto. Ecologia envolve fatores bióticos e abióticos.",
 
@@ -173,20 +149,14 @@ const ecologia = [
     pergunta: "Nesse caso, o conjunto de indivíduos analisados corresponde a:",
 
     alternativas: [
-
-        "uma população, pois é formado por indivíduos da mesma espécie vivendo em uma mesma área.",
-
         "uma comunidade, pois reúne organismos que compartilham o mesmo ambiente físico.",
-
+        "uma população, pois é formado por indivíduos da mesma espécie vivendo em uma mesma área.",
         "um ecossistema, pois envolve organismos e fatores abióticos interagindo simultaneamente.",
-
         "um bioma, pois apresenta características ecológicas próprias de determinada região.",
-
         "uma biosfera, pois representa parte dos seres vivos existentes no planeta."
-
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: "Correto. População = indivíduos da mesma espécie em uma área.",
 
@@ -201,20 +171,14 @@ const ecologia = [
     pergunta: "A afirmação do estudante está correta porque uma comunidade é formada por:",
 
     alternativas: [
-
-        "populações de espécies diferentes que vivem e interagem em uma mesma área.",
-
         "indivíduos da mesma espécie distribuídos em diferentes ambientes naturais.",
-
         "organismos associados aos fatores físicos responsáveis pela manutenção da vida.",
-
+        "populações de espécies diferentes que vivem e interagem em uma mesma área.",
         "todos os componentes bióticos e abióticos presentes em um ambiente específico.",
-
         "conjuntos de ecossistemas que compartilham características climáticas semelhantes."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. Comunidade é o conjunto de populações de espécies diferentes.",
 
@@ -229,20 +193,14 @@ const ecologia = [
     pergunta: "Considerando os níveis de organização ecológica, o conjunto analisado corresponde a:",
 
     alternativas: [
-
-        "um ecossistema, por envolver componentes bióticos e abióticos interagindo entre si.",
-
         "uma comunidade, por reunir populações de diferentes espécies presentes na floresta.",
-
         "uma população, por representar organismos pertencentes ao mesmo grupo biológico.",
-
         "um organismo, por representar uma unidade funcional capaz de sobreviver isoladamente.",
-
-        "uma biosfera, por corresponder à totalidade dos ambientes existentes na Terra."
-
+        "uma biosfera, por corresponder à totalidade dos ambientes existentes na Terra.",
+        "um ecossistema, por envolver componentes bióticos e abióticos interagindo entre si."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. Ecossistema = seres vivos + ambiente físico.",
 
@@ -257,20 +215,14 @@ const ecologia = [
     pergunta: "A sequência apresentada representa:",
 
     alternativas: [
-
-        "os níveis de organização ecológica organizados do mais simples para o mais abrangente.",
-
         "as etapas do fluxo de energia observadas nas cadeias alimentares dos ecossistemas.",
-
         "a classificação dos seres vivos segundo critérios ecológicos e taxonômicos integrados.",
-
         "os principais processos responsáveis pela formação dos diferentes biomas terrestres.",
-
+        "os níveis de organização ecológica organizados do mais simples para o mais abrangente.",
         "a hierarquia utilizada para descrever os ciclos biogeoquímicos presentes na biosfera."
-
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. Essa é a sequência clássica dos níveis de organização ecológica.",
 
@@ -288,20 +240,14 @@ Durante a análise dessa cadeia alimentar, os estudantes discutiram os papéis d
     pergunta: "Nessa cadeia alimentar, o gafanhoto é classificado como:",
 
     alternativas: [
-
-        "consumidor primário, pois obtém energia alimentando-se diretamente do produtor.",
-
         "consumidor secundário, pois participa de uma transferência indireta de energia proveniente dos vegetais.",
-
+        "consumidor primário, pois obtém energia alimentando-se diretamente do produtor.",
         "produtor, pois ocupa posição próxima à base da cadeia alimentar.",
-
         "decompositor, pois participa da reciclagem da matéria orgânica presente no ambiente.",
-
         "consumidor terciário, pois serve de alimento para organismos localizados em níveis superiores."
-
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: "Correto. O gafanhoto alimenta-se do produtor, sendo consumidor primário.",
 
@@ -316,20 +262,14 @@ Durante a análise dessa cadeia alimentar, os estudantes discutiram os papéis d
     pergunta: "A principal função dos decompositores nos ecossistemas é:",
 
     alternativas: [
-
-        "promover a reciclagem da matéria orgânica, devolvendo nutrientes ao ambiente.",
-
         "transferir energia solar para os níveis superiores da cadeia alimentar.",
-
         "produzir matéria orgânica por meio da fotossíntese realizada em diferentes ambientes.",
-
         "regular o tamanho das populações por meio de relações de predação.",
-
-        "converter compostos inorgânicos em biomassa disponível aos consumidores."
-
+        "converter compostos inorgânicos em biomassa disponível aos consumidores.",
+        "promover a reciclagem da matéria orgânica, devolvendo nutrientes ao ambiente."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. Fungos e bactérias reciclam matéria orgânica e devolvem nutrientes ao ambiente.",
 
@@ -344,20 +284,14 @@ Durante a análise dessa cadeia alimentar, os estudantes discutiram os papéis d
     pergunta: "A afirmação está correta porque:",
 
     alternativas: [
-
-        "a teia alimentar resulta da interligação de várias cadeias alimentares presentes em um mesmo ecossistema.",
-
         "a cadeia alimentar inclui apenas produtores e consumidores, enquanto a teia alimentar inclui decompositores.",
-
         "a teia alimentar ocorre exclusivamente em ecossistemas terrestres, enquanto as cadeias ocorrem em todos os ambientes.",
-
+        "a teia alimentar resulta da interligação de várias cadeias alimentares presentes em um mesmo ecossistema.",
         "a cadeia alimentar representa relações reais, enquanto a teia alimentar representa relações hipotéticas.",
-
         "a teia alimentar descreve apenas relações ecológicas harmônicas entre os organismos."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. A teia alimentar é formada pela integração de diversas cadeias alimentares.",
 
@@ -372,20 +306,14 @@ Durante a análise dessa cadeia alimentar, os estudantes discutiram os papéis d
     pergunta: "A situação descrita evidencia:",
 
     alternativas: [
-
-        "a formação de uma teia alimentar, caracterizada por múltiplas relações de alimentação entre os organismos.",
-
         "a existência de diversas populações ocupando níveis tróficos equivalentes dentro de um único ecossistema.",
-
         "um exemplo de sucessão ecológica envolvendo organismos pertencentes a diferentes espécies.",
-
         "a atuação dos decompositores na manutenção do equilíbrio ecológico da região.",
-
+        "a formação de uma teia alimentar, caracterizada por múltiplas relações de alimentação entre os organismos.",
         "um processo de competição interespecífica associado à obtenção de recursos energéticos."
-
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. Diversas relações alimentares conectadas formam uma teia alimentar.",
 
@@ -459,20 +387,14 @@ II. A teia alimentar representa diversas cadeias interligadas, refletindo melhor
     pergunta: "A consequência desse fenômeno é:",
 
     alternativas: [
-
-        "a redução progressiva da energia disponível nos níveis tróficos mais elevados da cadeia alimentar.",
-
         "o aumento contínuo da energia disponível para os consumidores localizados no topo da cadeia.",
-
         "a reciclagem da energia perdida pelos organismos por meio da ação dos decompositores.",
-
+        "a redução progressiva da energia disponível nos níveis tróficos mais elevados da cadeia alimentar.",
         "a manutenção da mesma quantidade de energia em todos os níveis tróficos existentes no ecossistema.",
-
         "a transferência integral da energia captada pelos produtores para os consumidores terciários."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. A energia diminui ao longo dos níveis tróficos.",
 
@@ -493,20 +415,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "Com base nos conceitos ecológicos, assinale a alternativa correta.",
 
     alternativas: [
-
-        "As afirmações I, II e III estão corretas.",
-
         "Apenas as afirmações I e II estão corretas.",
-
         "Apenas as afirmações II e III estão corretas.",
-
         "Apenas a afirmação I está correta.",
-
+        "As afirmações I, II e III estão corretas.",
         "Apenas a afirmação III está correta."
-
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. Matéria recicla, energia não recicla e possui fluxo unidirecional.",
 
@@ -521,20 +437,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "O processo descrito corresponde à:",
 
     alternativas: [
-
-        "evaporação, responsável pela passagem da água líquida para o estado de vapor.",
-
         "condensação, caracterizada pela formação de nuvens a partir do resfriamento do vapor.",
-
+        "evaporação, responsável pela passagem da água líquida para o estado de vapor.",
         "precipitação, relacionada ao retorno da água para a superfície terrestre.",
-
         "infiltração, associada à penetração da água no solo.",
-
         "transpiração, processo exclusivo realizado pelos vegetais."
-
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: "Correto. Evaporação é a transformação da água líquida em vapor.",
 
@@ -549,20 +459,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "No ciclo da água, o processo descrito é denominado:",
 
     alternativas: [
-
-        "precipitação, etapa responsável pelo retorno da água da atmosfera para a superfície.",
-
         "condensação, etapa em que o vapor de água se transforma em nuvens.",
-
         "evaporação, responsável pela formação inicial do vapor de água atmosférico.",
-
         "infiltração, caracterizada pela absorção da água pelo solo.",
-
-        "escoamento superficial, associado ao deslocamento da água em direção aos rios."
-
+        "escoamento superficial, associado ao deslocamento da água em direção aos rios.",
+        "precipitação, etapa responsável pelo retorno da água da atmosfera para a superfície."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. Precipitação é o retorno da água à superfície.",
 
@@ -576,20 +480,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "A importância ecológica do ciclo da água está relacionada principalmente ao fato de que ele:",
 
     alternativas: [
-
-        "promove a circulação contínua da água entre atmosfera, continentes, oceanos e organismos vivos.",
-
         "aumenta permanentemente a quantidade total de água existente no planeta por meio da evaporação.",
-
         "transforma água salgada em água doce durante todas as etapas do processo de circulação hídrica.",
-
         "impede que a água retorne aos oceanos após sua utilização pelos organismos vivos.",
-
-        "garante que toda a água precipitada seja imediatamente absorvida pelos vegetais."
-
+        "garante que toda a água precipitada seja imediatamente absorvida pelos vegetais.",
+        "promove a circulação contínua da água entre atmosfera, continentes, oceanos e organismos vivos."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. O ciclo da água mantém sua circulação contínua na natureza.",
 
@@ -632,20 +530,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "No ciclo do carbono, o processo responsável por essa devolução de carbono à atmosfera é:",
 
     alternativas: [
-
-        "a respiração celular, que libera parte do carbono utilizado pelos organismos.",
-
         "a fotossíntese, que converte matéria orgânica em dióxido de carbono.",
-
         "a nitrificação, que transforma compostos nitrogenados em nitratos.",
-
         "a infiltração, que promove a transferência de carbono para o solo.",
-
+        "a respiração celular, que libera parte do carbono utilizado pelos organismos.",
         "a precipitação, que devolve compostos carbonados para a superfície terrestre."
-
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. A respiração devolve CO₂ ao ambiente.",
 
@@ -660,20 +552,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "Entre as atividades humanas abaixo, a que mais contribui diretamente para esse aumento é:",
 
     alternativas: [
-
-        "a queima de combustíveis fósseis, que libera grandes quantidades de carbono armazenado para a atmosfera.",
-
         "a infiltração da água da chuva no solo, que favorece a circulação dos nutrientes nos ecossistemas.",
-
         "a fotossíntese realizada pelos vegetais, responsável pela produção de matéria orgânica.",
-
+        "a queima de combustíveis fósseis, que libera grandes quantidades de carbono armazenado para a atmosfera.",
         "a decomposição natural da matéria orgânica realizada por fungos e bactérias.",
-
         "a formação de nuvens durante o processo de condensação do vapor de água."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. A queima de combustíveis fósseis é uma das principais fontes antrópicas de CO₂.",
 
@@ -688,20 +574,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "No ciclo do nitrogênio, o processo responsável por transformar o N₂ atmosférico em compostos utilizáveis pelos organismos é denominado:",
 
     alternativas: [
-
-        "fixação do nitrogênio.",
-
         "desnitrificação.",
-
+        "fixação do nitrogênio.",
         "assimilação.",
-
         "decomposição.",
-
         "respiração."
-
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: "Correto. A fixação converte o N₂ atmosférico em formas utilizáveis.",
 
@@ -715,20 +595,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "No ciclo do nitrogênio, o processo descrito corresponde à:",
 
     alternativas: [
-
-        "nitrificação, responsável pela formação de nitritos e nitratos a partir de compostos nitrogenados.",
-
         "fixação, responsável pela transformação do nitrogênio atmosférico em compostos utilizáveis.",
-
         "assimilação, caracterizada pela absorção direta de nitrogênio atmosférico pelos vegetais.",
-
         "desnitrificação, responsável pelo retorno imediato dos nitratos ao estado sólido.",
-
-        "decomposição, processo que converte matéria orgânica em gás nitrogênio atmosférico."
-
+        "decomposição, processo que converte matéria orgânica em gás nitrogênio atmosférico.",
+        "nitrificação, responsável pela formação de nitritos e nitratos a partir de compostos nitrogenados."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. A nitrificação produz nitritos e nitratos.",
 
@@ -743,20 +617,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "A etapa descrita corresponde à:",
 
     alternativas: [
-
-        "desnitrificação, responsável pelo retorno do nitrogênio à atmosfera.",
-
         "fixação, responsável pela incorporação do nitrogênio atmosférico ao solo.",
-
         "assimilação, responsável pela absorção de nitratos pelas plantas.",
-
         "nitrificação, responsável pela produção de nitritos e nitratos.",
-
+        "desnitrificação, responsável pelo retorno do nitrogênio à atmosfera.",
         "decomposição, responsável pela degradação da matéria orgânica dos organismos."
-
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. A desnitrificação devolve nitrogênio à atmosfera.",
 
@@ -771,20 +639,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "A relação ecológica descrita é classificada como:",
 
     alternativas: [
-
-        "mutualismo, pois ambos os organismos envolvidos são beneficiados pela interação.",
-
         "parasitismo, pois um organismo obtém benefício enquanto o outro sofre prejuízo.",
-
         "predação, pois um dos organismos depende da eliminação do outro para sobreviver.",
-
+        "mutualismo, pois ambos os organismos envolvidos são beneficiados pela interação.",
         "competição, pois ambos disputam os mesmos recursos disponíveis no ambiente.",
-
         "amensalismo, pois um organismo é prejudicado sem que o outro obtenha benefício."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. Mutualismo ocorre quando ambos são beneficiados.",
 
@@ -799,20 +661,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "Essa interação ecológica é classificada como:",
 
     alternativas: [
-
-        "parasitismo, pois um organismo se beneficia enquanto o outro é prejudicado.",
-
         "predação, pois ocorre morte imediata do organismo utilizado como alimento.",
-
+        "parasitismo, pois um organismo se beneficia enquanto o outro é prejudicado.",
         "mutualismo, pois ambos os organismos recebem benefícios da interação.",
-
         "comensalismo, pois apenas um organismo é beneficiado sem causar prejuízo ao outro.",
-
         "protocooperação, pois a associação é vantajosa para ambos os participantes."
-
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: "Correto. No parasitismo o parasita beneficia-se e o hospedeiro é prejudicado.",
 
@@ -854,20 +710,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "A relação ecológica descrita é classificada como:",
 
     alternativas: [
-
-        "competição, pois ocorre disputa por recursos limitados disponíveis no ambiente.",
-
         "predação, pois uma das espécies elimina a outra para obter alimento.",
-
         "parasitismo, pois uma espécie obtém benefícios causando prejuízos à outra.",
-
+        "competição, pois ocorre disputa por recursos limitados disponíveis no ambiente.",
         "mutualismo, pois ambas as espécies obtêm vantagens decorrentes da interação.",
-
         "amensalismo, pois apenas uma das espécies é prejudicada pela relação."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. Competição ocorre quando organismos disputam recursos limitados.",
 
@@ -882,20 +732,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "A relação ecológica descrita corresponde a:",
 
     alternativas: [
-
-        "amensalismo, pois um organismo é prejudicado enquanto o outro não é afetado.",
-
         "parasitismo, pois o fungo utiliza recursos fornecidos pelas bactérias.",
-
+        "amensalismo, pois um organismo é prejudicado enquanto o outro não é afetado.",
         "competição, pois fungos e bactérias disputam exatamente os mesmos recursos.",
-
         "mutualismo, pois ambos os organismos recebem benefícios da interação.",
-
         "protocooperação, pois a associação favorece os dois organismos envolvidos."
-
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: "Correto. No amensalismo um é prejudicado e o outro permanece indiferente.",
 
@@ -910,20 +754,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "A situação descrita representa um exemplo de:",
 
     alternativas: [
-
-        "sucessão ecológica primária, pois ocorre em uma área sem solo previamente desenvolvido.",
-
         "sucessão ecológica secundária, pois ocorre em uma área anteriormente ocupada por uma comunidade.",
-
         "sucessão ecológica acelerada, pois há participação direta da atividade humana.",
-
         "competição interespecífica, pois diferentes organismos disputam o mesmo espaço físico.",
-
-        "amensalismo ecológico, pois os organismos pioneiros modificam o ambiente para outras espécies."
-
+        "amensalismo ecológico, pois os organismos pioneiros modificam o ambiente para outras espécies.",
+        "sucessão ecológica primária, pois ocorre em uma área sem solo previamente desenvolvido."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. Sucessão primária ocorre em áreas sem solo e sem vida anterior.",
 
@@ -938,20 +776,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "O processo descrito corresponde a:",
 
     alternativas: [
-
-        "sucessão ecológica secundária, pois ocorre em uma área anteriormente ocupada e que ainda possui solo.",
-
         "sucessão ecológica primária, pois toda sucessão iniciada após um impacto ambiental recebe essa classificação.",
-
         "amensalismo, pois algumas espécies dificultam o crescimento de outras durante a recolonização.",
-
         "predação ecológica, pois ocorre substituição progressiva das espécies presentes no ambiente.",
-
+        "sucessão ecológica secundária, pois ocorre em uma área anteriormente ocupada e que ainda possui solo.",
         "mutualismo sucessional, pois as espécies colaboram para reconstruir a comunidade."
-
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. A presença de solo caracteriza sucessão secundária.",
 
@@ -993,20 +825,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "Com base nesse conceito, a biodiversidade pode ser compreendida como:",
 
     alternativas: [
-
-        "a variedade de formas de vida, incluindo diversidade genética, de espécies e de ecossistemas.",
-
         "o número total de indivíduos pertencentes à espécie mais abundante de um ecossistema.",
-
+        "a variedade de formas de vida, incluindo diversidade genética, de espécies e de ecossistemas.",
         "a quantidade de matéria orgânica produzida pelos organismos fotossintetizantes de uma região.",
-
         "o conjunto de fatores físicos responsáveis pela manutenção dos ecossistemas terrestres.",
-
         "a distribuição geográfica das populações humanas nos diferentes biomas do planeta."
-
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: "Correto. Biodiversidade envolve genes, espécies e ecossistemas.",
 
@@ -1021,20 +847,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "Os recursos mencionados são classificados como:",
 
     alternativas: [
-
-        "renováveis, pois podem ser repostos naturalmente em escalas de tempo compatíveis com sua utilização.",
-
         "não renováveis, pois dependem de processos geológicos extremamente lentos para sua reposição.",
-
         "esgotáveis, pois desaparecem definitivamente após serem utilizados pelos seres humanos.",
-
         "minerais, pois possuem origem exclusivamente associada à dinâmica geológica da Terra.",
-
-        "biológicos, pois são produzidos diretamente pelos organismos vivos presentes nos ecossistemas."
-
+        "biológicos, pois são produzidos diretamente pelos organismos vivos presentes nos ecossistemas.",
+        "renováveis, pois podem ser repostos naturalmente em escalas de tempo compatíveis com sua utilização."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. Sol, vento e água são exemplos clássicos de recursos renováveis.",
 
@@ -1049,20 +869,14 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "A situação descrita representa um exemplo de:",
 
     alternativas: [
-
-        "impacto ambiental decorrente da ação humana sobre os ecossistemas naturais.",
-
         "sucessão ecológica secundária associada à modificação dos recursos hídricos.",
-
         "relação ecológica desarmônica entre organismos pertencentes a diferentes espécies.",
-
+        "impacto ambiental decorrente da ação humana sobre os ecossistemas naturais.",
         "ciclo biogeoquímico responsável pela redistribuição dos nutrientes nos ambientes aquáticos.",
-
         "processo natural de renovação dos ecossistemas aquáticos ao longo do tempo."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. A poluição hídrica é um importante impacto ambiental.",
 
@@ -1105,26 +919,18 @@ III. O fluxo de energia é unidirecional.`,
     pergunta: "Esses fenômenos estão associados principalmente:",
 
     alternativas: [
-
-        "às mudanças climáticas relacionadas à intensificação do efeito estufa provocada pelo aumento das concentrações de gases na atmosfera.",
-
         "à sucessão ecológica observada nos ecossistemas terrestres após perturbações ambientais de grande escala.",
-
         "ao aumento natural da biodiversidade decorrente da expansão dos ecossistemas tropicais em diferentes continentes.",
-
         "à redução dos processos respiratórios realizados pelos organismos presentes nos ecossistemas naturais.",
-
+        "às mudanças climáticas relacionadas à intensificação do efeito estufa provocada pelo aumento das concentrações de gases na atmosfera.",
         "à interrupção dos ciclos biogeoquímicos responsáveis pela circulação da matéria na biosfera."
-
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. O aumento dos gases de efeito estufa está diretamente relacionado às mudanças climáticas atuais.",
 
     feedbackErro: "A intensificação do efeito estufa é um dos principais fatores associados ao aquecimento global.",
 
     dicaPedagogica: "Mudanças climáticas ↔ aumento dos gases de efeito estufa."
-}
-
-];
+}];
