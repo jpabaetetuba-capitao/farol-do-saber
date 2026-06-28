@@ -71,6 +71,42 @@ if(id === "login"){
 }
 
 
+
+
+function nomeDisciplinaForum(chave){
+
+    const nomes = {
+        portugues: "Língua Portuguesa",
+        informatica: "Informática",
+        ciencias: "Professor de Ciências",
+        didatica: "Didática e Legislação",
+        historia: "História",
+        etica: "Ética no Serviço Público",
+        apoioEscolar: "Apoio Escolar",
+        administrador: "Administrador"
+    };
+
+    return nomes[chave] || "Disciplina";
+
+}
+
+function atualizarTituloForum(){
+
+    const area =
+        document.getElementById("tituloForumDisciplina");
+
+    if(!area){
+        return;
+    }
+
+    area.innerHTML =
+        "Discussão da disciplina: <strong>" +
+        nomeDisciplinaForum(disciplinaForumAtual) +
+        "</strong>";
+
+}
+
+
 function abrirForum(disciplina){
 
     disciplinaForumAtual = disciplina;
@@ -86,7 +122,14 @@ function abrirForum(disciplina){
 
     mostrarTela("forum");
 
+    setTimeout(() => {
+        atualizarTituloForum();
+        renderizarForum();
+        atualizarContadorForum();
+    }, 0);
+
 }
+
 
 
 async function novaPergunta(){
@@ -119,6 +162,12 @@ const novaPerguntaObj = {
 
     autorEmail:
         usuarioEmail,
+
+    avatarAtual:
+        lojaFarol.avatarAtual || "👤",
+
+    nomeAvatarAtual:
+        lojaFarol.nomeAvatarAtual || "Estudante",
 
     pergunta:
         pergunta,
@@ -170,6 +219,9 @@ async function responderPergunta(firebaseId){
 
         {
             autor: usuarioForum,
+            autorEmail: usuarioEmail,
+            avatarAtual: lojaFarol.avatarAtual || "👤",
+            nomeAvatarAtual: lojaFarol.nomeAvatarAtual || "Estudante",
             data: new Date().toLocaleString(),
             texto: resposta,
             curtidas: 0,
@@ -203,6 +255,7 @@ async function responderPergunta(firebaseId){
 
 }
 
+
 function renderizarForum(){
 
     const listaForum =
@@ -214,54 +267,69 @@ function renderizarForum(){
         return;
     }
 
-    if(
-        perguntasForum.length === 0
-    ){
+    const perguntasDaDisciplina =
+        [...perguntasForum]
+        .filter(item =>
+            item.disciplina === disciplinaForumAtual
+        )
+        .sort((a,b) => a.id - b.id);
+
+    if(perguntasDaDisciplina.length === 0){
 
         listaForum.innerHTML =
-        "Nenhuma pergunta cadastrada.";
+        `
+            <div class="forum-vazio">
+                <strong>💬 Nenhuma pergunta cadastrada nesta disciplina.</strong>
+                <p>Seja o primeiro aluno a abrir uma discussão.</p>
+            </div>
+        `;
 
+        atualizarContadorForum();
         return;
 
     }
 
     listaForum.innerHTML = "";
 
-    [...perguntasForum]
+    perguntasDaDisciplina.forEach(item => {
 
-    .filter(
+        const avatarPergunta =
+            item.avatarAtual || "👤";
 
-        item =>
-
-        item.disciplina ===
-        disciplinaForumAtual
-
-    )
-
-    .sort(
-
-        (a,b) => a.id - b.id
-
-    )
-
-    .forEach(item => {
+        const nomePergunta =
+            item.autor || "Aluno";
 
         listaForum.innerHTML += `
 
-        <div class="card-forum">
+        <div class="card-forum card-forum-avatar">
 
-            <h3>
+            <div class="cabecalho-forum-avatar">
+
+                <div class="avatar-forum-msg">
+                    ${montarAvatarHTML(
+                        avatarPergunta,
+                        item.nomeAvatarAtual || "Avatar",
+                        "avatar-forum-img"
+                    )}
+                </div>
+
+                <div class="dados-forum-msg">
+
+                    <div class="autor-forum">
+                        ${nomePergunta}
+                    </div>
+
+                    <div class="data-forum">
+                        📅 ${item.data || ""}
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="pergunta-forum-texto">
                 ❓ ${item.pergunta}
-            </h3>
-
-            <p>
-                👤 ${item.autor}
-
-            </p>
-
-            <p>
-                📅 ${item.data}
-            </p>
+            </div>
 
 <div class="botoes-forum">
 
@@ -294,27 +362,50 @@ ${
 </div>
 
 
-<div class="respostas">
+<div class="respostas respostas-com-avatar">
 
 ${
     (item.respostas || [])
 
-    .map((resposta, indice) => `
+    .map((resposta, indice) => {
 
-    <div class="resposta-forum">
+        const avatarResposta =
+            resposta.avatarAtual || "👤";
 
-        👤 ${resposta.autor}
+        const nomeResposta =
+            resposta.autor || "Aluno";
 
+        return `
 
-        <br>
+    <div class="resposta-forum resposta-forum-avatar">
 
-        📅 ${resposta.data}
+        <div class="cabecalho-resposta-avatar">
 
-        <br><br>
+            <div class="avatar-forum-msg avatar-resposta-msg">
+                ${montarAvatarHTML(
+                    avatarResposta,
+                    resposta.nomeAvatarAtual || "Avatar",
+                    "avatar-forum-img avatar-resposta-img"
+                )}
+            </div>
 
-        💬 ${resposta.texto}
+            <div class="dados-forum-msg">
 
-        <br><br>
+                <div class="autor-forum">
+                    ${nomeResposta}
+                </div>
+
+                <div class="data-forum">
+                    📅 ${resposta.data || ""}
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="texto-resposta-forum">
+            💬 ${resposta.texto}
+        </div>
 
 <div class="botoes-resposta">
 
@@ -353,9 +444,9 @@ ${
 
     </div>
 
-    <br>
+    `;
 
-`)
+    })
 .join("")
 }
 
@@ -372,6 +463,7 @@ ${
     atualizarContadorForum();
 
 }
+
 
 
 
@@ -7190,6 +7282,7 @@ setInterval(
 
 );
 
+
 function atualizarContadorForum(){
 
     const disciplinasForum = [
@@ -7199,7 +7292,8 @@ function atualizarContadorForum(){
         { id: "btnForumDidatica", chave: "didatica" },
         { id: "btnForumHistoria", chave: "historia" },
         { id: "btnForumEtica", chave: "etica" },
-        { id: "btnForumApoioEscolar", chave: "apoioEscolar" }
+        { id: "btnForumApoioEscolar", chave: "apoioEscolar" },
+        { id: "btnForumAdministrador", chave: "administrador" }
     ];
 
     disciplinasForum.forEach(item => {
@@ -7221,6 +7315,7 @@ function atualizarContadorForum(){
     });
 
 }
+
 
 async function enviarMensagem(){
 

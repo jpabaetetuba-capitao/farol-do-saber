@@ -3527,3 +3527,118 @@ progress{
 }
 
 
+/* ==========================
+   FÓRUM COM AVATAR
+========================== */
+
+.card-forum-avatar{
+    background:rgba(255,255,255,0.92);
+    border-left:6px solid #1e88e5;
+    border-radius:16px;
+    padding:16px;
+    box-shadow:0 5px 16px rgba(0,0,0,0.10);
+}
+
+.cabecalho-forum-avatar,
+.cabecalho-resposta-avatar{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.avatar-forum-msg,
+.avatar-forum-img{
+    width:46px;
+    height:46px;
+    min-width:46px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff8e1;
+    border:2px solid #f9a825;
+    object-fit:cover;
+    font-size:24px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.14);
+}
+
+.avatar-resposta-msg,
+.avatar-resposta-img{
+    width:36px;
+    height:36px;
+    min-width:36px;
+    font-size:18px;
+}
+
+.dados-forum-msg{
+    min-width:0;
+}
+
+.autor-forum{
+    color:#0d47a1;
+    font-weight:bold;
+    line-height:1.3;
+}
+
+.data-forum{
+    color:#666;
+    font-size:13px;
+    margin-top:2px;
+}
+
+.pergunta-forum-texto{
+    background:#e3f2fd;
+    border-radius:12px;
+    padding:12px;
+    margin:10px 0;
+    color:#222;
+    line-height:1.6;
+    font-weight:bold;
+}
+
+.respostas-com-avatar{
+    margin-top:12px;
+}
+
+.resposta-forum-avatar{
+    background:rgba(248,249,250,0.95);
+    border-left:5px solid #f9a825;
+    border-radius:14px;
+    padding:12px;
+    margin:12px 0;
+}
+
+.texto-resposta-forum{
+    background:white;
+    border-radius:10px;
+    padding:10px;
+    margin:8px 0;
+    line-height:1.6;
+    color:#222;
+}
+
+.forum-vazio{
+    background:#fff8e1;
+    border-left:6px solid #f9a825;
+    border-radius:14px;
+    padding:16px;
+    line-height:1.6;
+    color:#333;
+}
+
+@media(max-width:768px){
+
+    .card-forum-avatar{
+        padding:13px;
+    }
+
+    .avatar-forum-msg,
+    .avatar-forum-img{
+        width:40px;
+        height:40px;
+        min-width:40px;
+    }
+
+}
+
