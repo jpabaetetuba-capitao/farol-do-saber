@@ -84,7 +84,6 @@ if(id === "login"){
 
 
 
-
 function nomeDisciplinaForum(chave){
 
     const nomes = {
@@ -118,7 +117,6 @@ function atualizarTituloForum(){
 
 }
 
-
 function abrirForum(disciplina){
 
     disciplinaForumAtual = disciplina;
@@ -141,7 +139,6 @@ function abrirForum(disciplina){
     }, 0);
 
 }
-
 
 
 async function novaPergunta(){
@@ -219,7 +216,6 @@ async function responderPergunta(firebaseId){
 
     );
 
-
     if(!perguntaEncontrada){
         mostrarToast("Pergunta não encontrada.");
         return;
@@ -264,9 +260,7 @@ async function responderPergunta(firebaseId){
 
 }
 
-
 }
-
 
 function renderizarForum(){
 
@@ -373,7 +367,6 @@ ${
 
 </div>
 
-
 <div class="respostas respostas-com-avatar">
 
 ${
@@ -478,7 +471,6 @@ ${
 
 
 
-
 function carregarForum(){
 
     db.collection("forumGlobal")
@@ -521,7 +513,6 @@ async function excluirPergunta(firebaseId){
     .delete();
 
 }
-
 
 async function excluirResposta(
     firebaseId,
@@ -584,7 +575,6 @@ async function excluirResposta(
     }
 
 }
-
 
 
 async function curtirResposta(
@@ -666,7 +656,6 @@ function voltarForum(){
     mostrarTela(destino);
 
 }
-
 
 // ==========================
 // BANCO DE QUESTÕES
@@ -751,7 +740,6 @@ const bancoQuestoes = {
     lai,
     lgpd,
 
-
     hardware,
 
     software,
@@ -783,7 +771,6 @@ const bancoQuestoes = {
     materiaQuimica,
 
     fundamentosFisica,
-
 
     fundamentosEnsinoHistoria,
 
@@ -843,7 +830,6 @@ function mostrarToast(mensagem){
 // ==========================
 // VARIÁVEIS GLOBAIS
 // ==========================
-
 
 let disciplinaAtual = "";
 let assuntoAtual = "";
@@ -1025,7 +1011,6 @@ localStorage.setItem(
 
 }
 
-
 function carregarDados() {
 
     acertos =
@@ -1102,7 +1087,6 @@ Number(
     }));
 
 }
-
 
 // ==========================
 // CARREGAR DISCIPLINA
@@ -1226,7 +1210,6 @@ if(
     paginaTeoriaAtual = 0;
 }
 
-
     const pagina =
         teoriaAtual[paginaTeoriaAtual];
 
@@ -1349,7 +1332,6 @@ function irParaPaginaTeoria(numero){
 
 }
 
-
 function proximaPaginaTeoria(){
 
     if(
@@ -1410,7 +1392,6 @@ function concluirTeoria(){
     abrirMapaMental();
 
 }
-
 
 const mapasMentaisPorAssunto = {
     "apoioOrganizacaoEducacao": {
@@ -1744,7 +1725,6 @@ function configurarMapaMentalAtual(){
 }
 
 
-
 function abrirMapaMental(){
 
     configurarMapaMentalAtual();
@@ -1752,7 +1732,6 @@ function abrirMapaMental(){
     mostrarTela("telaMapaMental");
 
 }
-
 
 
 // ==========================
@@ -1922,7 +1901,6 @@ atualizarAtividade();
     }
 
 const q = questaoExibida;
-
 
     const feedback =
         document.getElementById("feedback");
@@ -2095,7 +2073,6 @@ errosAssunto++;
     apoioEducacaoInclusiva: "🤝 Educação Especial na Perspectiva Inclusiva",
     apoioPapelProfissional: "👨‍🏫 Papel do Profissional de Apoio Escolar",
     apoioTrabalhoColaborativo: "🛡️ Trabalho Colaborativo, Ética e Segurança",
-
 
 
     hardware: "💻 Hardware",
@@ -2364,7 +2341,6 @@ else{
     classificacao = "🚨 REVISÃO NECESSÁRIA";
 medalha = "📚 SEM MEDALHA";
 
-
     mensagem =
     "Não desanime. Revise o conteúdo e tente novamente.";
 
@@ -2544,7 +2520,6 @@ function atualizarEstatisticas() {
 // ==========================
 // CADERNO DE ERROS
 // ==========================
-
 
 function obterStatusCadernoErro(item){
 
@@ -2941,7 +2916,6 @@ function atualizarCadernoErros() {
 
     `}).join("");
 }
-
 
 // ==========================
 // RESETAR PROGRESSO
@@ -3463,7 +3437,6 @@ function iniciarSimuladoPortugues(){
 
 }
 
-
 function iniciarSimuladoEtica(){
 
     const etica = [
@@ -3484,7 +3457,6 @@ function iniciarSimuladoEtica(){
     );
 
 }
-
 
 function iniciarSimuladoInformatica(){
 
@@ -3564,7 +3536,6 @@ function iniciarSimuladoApoioEscolar(){
 }
 
 
-
 // ==========================
 // ABRIR ASSUNTO
 // ==========================
@@ -3572,7 +3543,6 @@ function iniciarSimuladoApoioEscolar(){
 function abrirAssunto(assunto) {
 
     assuntoAtual = assunto;
-
 
     // ===== CORREÇÃO HISTÓRIA: abrir teoria primeiro ao clicar no tópico =====
     // Mantém o fluxo padrão: Tópico -> Teoria -> Mapa Mental -> Questões.
@@ -3670,7 +3640,6 @@ case "apoioOrganizacaoEducacao":
 
     break;
 
-
 case "apoioLDB":
 
     titulo.innerHTML =
@@ -3680,7 +3649,6 @@ case "apoioLDB":
         "imagens/mapas/ApoioLDB.png";
 
     break;
-
 
 case "apoioECA":
 
@@ -3692,7 +3660,6 @@ case "apoioECA":
 
     break;
 
-
 case "apoioLBI":
 
     titulo.innerHTML =
@@ -3702,7 +3669,6 @@ case "apoioLBI":
         "imagens/mapas/ApoioLBI.png";
 
     break;
-
 
 case "apoioTEA":
 
@@ -3714,7 +3680,6 @@ case "apoioTEA":
 
     break;
 
-
 case "apoioPoliticaEducacaoEspecial":
 
     titulo.innerHTML =
@@ -3724,7 +3689,6 @@ case "apoioPoliticaEducacaoEspecial":
         "imagens/mapas/ApoioPoliticaEducacaoEspecial.png";
 
     break;
-
 
 case "apoioBNCCDiretrizes":
 
@@ -3736,7 +3700,6 @@ case "apoioBNCCDiretrizes":
 
     break;
 
-
 case "apoioEducacaoInclusiva":
 
     titulo.innerHTML =
@@ -3746,7 +3709,6 @@ case "apoioEducacaoInclusiva":
         "imagens/mapas/ApoioEducacaoInclusiva.png";
 
     break;
-
 
 case "apoioPapelProfissional":
 
@@ -3758,7 +3720,6 @@ case "apoioPapelProfissional":
 
     break;
 
-
 case "apoioTrabalhoColaborativo":
 
     titulo.innerHTML =
@@ -3768,7 +3729,6 @@ case "apoioTrabalhoColaborativo":
         "imagens/mapas/ApoioTrabalhoColaborativo.png";
 
     break;
-
 
         case "bncc":
 
@@ -3860,7 +3820,6 @@ case "apoioTrabalhoColaborativo":
         "imagens/mapas/Planejamento.png";
 
     break;
-
 
 case "avaliacao":
 
@@ -4067,7 +4026,6 @@ case "redacaoOficial":
 
     break;
 
-
 case "eticaConceitos":
 
     titulo.innerHTML =
@@ -4077,7 +4035,6 @@ case "eticaConceitos":
         "imagens/mapas/EticaConceitos.png";
 
     break;
-
 
 case "principiosAdministracao":
 
@@ -4089,7 +4046,6 @@ case "principiosAdministracao":
 
     break;
 
-
 case "deveresServidor":
 
     titulo.innerHTML =
@@ -4099,7 +4055,6 @@ case "deveresServidor":
         "imagens/mapas/DeveresServidor.png";
 
     break;
-
 
 case "condutaEtica":
 
@@ -4111,7 +4066,6 @@ case "condutaEtica":
 
     break;
 
-
 case "lai":
 
     titulo.innerHTML =
@@ -4122,7 +4076,6 @@ case "lai":
 
     break;
 
-
 case "lgpd":
 
     titulo.innerHTML =
@@ -4132,7 +4085,6 @@ case "lgpd":
         "imagens/mapas/LGPD.png";
 
     break;
-
 
 case "hardware":
 
@@ -4244,7 +4196,6 @@ case "citologia":
 
     break;
 
-
 case "ecologia":
 
     titulo.innerHTML =
@@ -4264,7 +4215,6 @@ case "terraEUniverso":
         "imagens/mapas/TerraEUniverso.png";
 
     break;
-
 
 case "anatomiaFisiologia":
 
@@ -4297,7 +4247,6 @@ case "fundamentosFisica":
     break;
 
 
-
 case "fundamentosEnsinoHistoria":
 
     titulo.innerHTML =
@@ -4308,7 +4257,6 @@ case "fundamentosEnsinoHistoria":
 
     break;
 
-
 case "cienciaHistoricaOficioHistoriador":
 
     titulo.innerHTML =
@@ -4318,7 +4266,6 @@ case "cienciaHistoricaOficioHistoriador":
         "imagens/mapas/cienciaHistoricaOficioHistoriador.png";
 
     break;
-
 
 case "povosPreColombianos":
 
@@ -4437,7 +4384,6 @@ if(assuntoAtual === "terraEUniverso"){
     return;
 
 }
-
 
 if(assuntoAtual === "anatomiaFisiologia"){
 
@@ -4579,8 +4525,6 @@ if(assuntoAtual === "redacaoOficial"){
 
 
 
-
-
 // ==========================
 // TEORIAS DIDÁTICA E LEGISLAÇÃO - BLOCOS 1 E 2
 // ==========================
@@ -4636,7 +4580,6 @@ if(assuntoAtual === "educacaoCampo"){
 }
 
 
-
 // ==========================
 // TEORIAS DIDÁTICA E LEGISLAÇÃO - BLOCO 3
 // ==========================
@@ -4668,7 +4611,6 @@ if(assuntoAtual === "avaliacao"){
 
 
 
-
 if(assuntoAtual === "apoioOrganizacaoEducacao"){
 
     abrirTeoria(
@@ -4679,7 +4621,6 @@ if(assuntoAtual === "apoioOrganizacaoEducacao"){
     return;
 
 }
-
 
 if(assuntoAtual === "apoioLDB"){
 
@@ -4692,7 +4633,6 @@ if(assuntoAtual === "apoioLDB"){
 
 }
 
-
 if(assuntoAtual === "apoioECA"){
 
     abrirTeoria(
@@ -4703,7 +4643,6 @@ if(assuntoAtual === "apoioECA"){
     return;
 
 }
-
 
 if(assuntoAtual === "apoioLBI"){
 
@@ -4716,7 +4655,6 @@ if(assuntoAtual === "apoioLBI"){
 
 }
 
-
 if(assuntoAtual === "apoioTEA"){
 
     abrirTeoria(
@@ -4727,7 +4665,6 @@ if(assuntoAtual === "apoioTEA"){
     return;
 
 }
-
 
 if(assuntoAtual === "apoioPoliticaEducacaoEspecial"){
 
@@ -4740,7 +4677,6 @@ if(assuntoAtual === "apoioPoliticaEducacaoEspecial"){
 
 }
 
-
 if(assuntoAtual === "apoioBNCCDiretrizes"){
 
     abrirTeoria(
@@ -4751,7 +4687,6 @@ if(assuntoAtual === "apoioBNCCDiretrizes"){
     return;
 
 }
-
 
 if(assuntoAtual === "apoioEducacaoInclusiva"){
 
@@ -4764,7 +4699,6 @@ if(assuntoAtual === "apoioEducacaoInclusiva"){
 
 }
 
-
 if(assuntoAtual === "apoioPapelProfissional"){
 
     abrirTeoria(
@@ -4775,7 +4709,6 @@ if(assuntoAtual === "apoioPapelProfissional"){
     return;
 
 }
-
 
 if(assuntoAtual === "apoioTrabalhoColaborativo"){
 
@@ -4799,7 +4732,6 @@ if(assuntoAtual === "eticaConceitos"){
 
 }
 
-
 if(assuntoAtual === "principiosAdministracao"){
 
     abrirTeoria(
@@ -4810,7 +4742,6 @@ if(assuntoAtual === "principiosAdministracao"){
     return;
 
 }
-
 
 if(assuntoAtual === "deveresServidor"){
 
@@ -4823,7 +4754,6 @@ if(assuntoAtual === "deveresServidor"){
 
 }
 
-
 if(assuntoAtual === "condutaEtica"){
 
     abrirTeoria(
@@ -4835,7 +4765,6 @@ if(assuntoAtual === "condutaEtica"){
 
 }
 
-
 if(assuntoAtual === "lai"){
 
     abrirTeoria(
@@ -4846,7 +4775,6 @@ if(assuntoAtual === "lai"){
     return;
 
 }
-
 
 if(assuntoAtual === "lgpd"){
 
@@ -5016,7 +4944,6 @@ if (assuntoAtual === "povosPreColombianos") {
     return;
 }
 
-
 mostrarTela(
     "telaMapaMental"
 );
@@ -5045,7 +4972,6 @@ function iniciarBNCC() {
     );
 
 }
-
 
 // ==========================
 // CONTINUIDADE DAS QUESTÕES
@@ -5273,7 +5199,6 @@ function iniciarQuestoesAssunto() {
     mostrarQuestao();
 
 }
-
 
 window.onload = function () {
 
@@ -5517,7 +5442,6 @@ function voltarParaMapa(){
     mostrarTela("telaMapaMental");
 
 }
-
 
 function voltarParaTeoria(){
 
@@ -6421,7 +6345,6 @@ if(assuntoAtual === "bncc"){
 
 }
 
-
 const assuntosDidatica = [
         "bncc",
         "ldb",
@@ -6561,7 +6484,6 @@ function voltarParaAssuntos(){
 }
 
 
-
 function continuarQuestoes(){
 
     disciplinaAtual = assuntoAtual;
@@ -6595,7 +6517,6 @@ function continuarQuestoes(){
 
 }
 
-
 function refazerAssunto(){
 
     questaoAtual = 0;
@@ -6622,7 +6543,6 @@ function refazerAssunto(){
     mostrarQuestao();
 
 }
-
 
 function atualizarPainelEstudos(){
 
@@ -7294,7 +7214,6 @@ setInterval(
 
 );
 
-
 function atualizarContadorForum(){
 
     const disciplinasForum = [
@@ -7328,7 +7247,6 @@ function atualizarContadorForum(){
 
 }
 
-
 async function enviarMensagem(){
 
     const texto =
@@ -7336,7 +7254,6 @@ async function enviarMensagem(){
     document.getElementById(
         "mensagemChat"
     ).value.trim();
-
 
     if(!texto){
         return;
@@ -7438,7 +7355,6 @@ iniciarDigitando();
     .orderBy("data")
 
     .onSnapshot(snapshot => {
-
 
         let html = "";
 
@@ -7759,7 +7675,6 @@ db.collection("digitando")
 
 });
 
-
 // ==========================
 // PONTOS DE LUZ, MISSÕES E RANKING
 // ==========================
@@ -7804,7 +7719,6 @@ function adicionarPontosLuz(valor, motivo, chaveUnica){
 
     return true;
 }
-
 
 const missoesDiariasFarol = [
 
@@ -8158,7 +8072,6 @@ function exibirToastMissaoDiariaUmaVez(){
 
 }
 
-
 async function salvarRankingFirebase(){
 
     if(!auth.currentUser){
@@ -8247,7 +8160,6 @@ setInterval(carregarRankingPontos, 120000);
 // ==========================
 // CADERNO DE ERROS INTELIGENTE
 // ==========================
-
 
 function revisarProximoErroCaderno(){
 
@@ -8347,7 +8259,6 @@ function removerErroCaderno(indice){
     );
 
 }
-
 
 function revisarErro(indice){
 
@@ -8772,7 +8683,6 @@ function compartilharFacebook(){
     compartilharProgresso();
 }
 
-
 // ==========================
 // LOJA DO FAROL
 // ==========================
@@ -9137,7 +9047,6 @@ function alterarVersaoAvatar(){
     mostrarToast("Escolha de versão liberada. Clique em usar avatar novamente.");
 }
 
-
 function recompensaEmUsoLoja(item){
 
     if(!item){
@@ -9215,7 +9124,6 @@ function textoStatusLoja(item, comprada, semSaldo, bloqueadaCertificado){
 
 }
 
-
 function montarAcaoLoja(item, comprada, semSaldo, bloqueadaCertificado){
 
     const emUso =
@@ -9290,7 +9198,6 @@ function montarAcaoLoja(item, comprada, semSaldo, bloqueadaCertificado){
 }
 
 
-
 function usarTituloLoja(id){
 
     const item =
@@ -9319,8 +9226,6 @@ function usarTituloLoja(id){
     mostrarToast("🎖 Título ativado!");
 
 }
-
-
 
 
 
@@ -10047,7 +9952,6 @@ function finalizarConstruaFarol(){
 }
 
 
-
 // ==========================
 // JOGO DESAFIO RELÂMPAGO
 // ==========================
@@ -10504,7 +10408,6 @@ function finalizarDesafioRelampago(tempoEsgotado){
     salvarDados();
 
 }
-
 
 
 
@@ -10996,7 +10899,6 @@ function finalizarCacaErros(){
 
 
 
-
 // ==========================
 // JOGO MEMÓRIA DO SABER
 // ==========================
@@ -11017,7 +10919,6 @@ let memoriaHistoricoFarol = {};
 let memoriaPreviewAtivo = false;
 let memoriaTempoPreview = 30;
 let memoriaPreviewTimer = null;
-
 
 function pararPreviewMemoria(){
 
@@ -11102,7 +11003,6 @@ function limitarTextoMemoria(texto, limite){
     return bruto.substring(0, limite).trim() + "...";
 
 }
-
 
 function escolherModoMemoriaSaber(contraFarol){
 
@@ -11602,7 +11502,6 @@ function verificarParMemoria(){
 
 }
 
-
 function escolherCartasFarolMemoria(){
 
     const abertas =
@@ -11849,7 +11748,6 @@ function finalizarMemoriaSaber(){
     salvarDados();
 
 }
-
 
 
 
@@ -12314,8 +12212,6 @@ function finalizarBatalhaFarol(){
 
 
 
-
-
 function obterAvatarJogadorFarol(){
 
     const avatarAtual =
@@ -12380,7 +12276,6 @@ let rotaDisciplina = "todas";
 let rotaRespondido = false;
 let rotaIdPartida = "";
 
-
 function abrirJogoRotaFarol(){
 
     if(typeof pararTimerRelampago === "function"){
@@ -12435,7 +12330,6 @@ function abrirJogoRotaFarol(){
 }
 
 
-
 function iniciarRotaFarol(chaveDisciplina){
 
     const questoesDisponiveis =
@@ -12464,7 +12358,6 @@ function iniciarRotaFarol(chaveDisciplina){
 }
 
 
-
 function montarTrilhaRota(posicao, tipo){
 
     let html = "";
@@ -12486,8 +12379,6 @@ function montarTrilhaRota(posicao, tipo){
     return html;
 
 }
-
-
 
 
 
@@ -12519,7 +12410,6 @@ function escolherRespostaFarolRota(q){
     };
 
 }
-
 
 function garantirQuestoesRotaFarol(){
 
@@ -12931,7 +12821,6 @@ function finalizarRotaFarol(){
     salvarDados();
 
 }
-
 
 
 
@@ -13556,7 +13445,6 @@ function finalizarSenhaFarol(){
     salvarDados();
 
 }
-
 
 
 
@@ -14190,7 +14078,6 @@ function finalizarBauFarol(){
 
 }
 
-
 // ==========================
 // PERFIL DO ALUNO
 // ==========================
@@ -14772,7 +14659,6 @@ function atualizarLojaFarol(){
 }
 
 
-
 function quebrarTextoCanvas(ctx, texto, larguraMaxima){
 
     const palavras =
@@ -14885,7 +14771,6 @@ function desenharLinhaAssinaturaCertificado(ctx, x, y){
 
 
 
-
 const caminhoModeloCertificadoFarol =
     "imagens/certificados/modelo-certificado-farol.png";
 
@@ -14947,7 +14832,6 @@ function obterNomeCertificado(){
 }
 
 
-
 function ajustarFonteTextoCanvas(ctx, texto, tamanhoInicial, tamanhoMinimo, familia, larguraMaxima){
 
     let tamanho =
@@ -14998,7 +14882,6 @@ function desenharTextoComSombraCanvas(ctx, texto, x, y, cor, sombra){
     ctx.restore();
 
 }
-
 
 async function criarCanvasCertificadoDigital(){
 
@@ -15193,7 +15076,6 @@ async function criarCanvasCertificadoDigital(){
 
 
 
-
 async function gerarCertificadoDigital(){
 
     if(!lojaFarol.certificadoDigital){
@@ -15295,7 +15177,6 @@ async function gerarCertificadoDigital(){
     });
 
 }
-
 
 async function baixarCertificadoDigital(){
     const canvas = await criarCanvasCertificadoDigital();
