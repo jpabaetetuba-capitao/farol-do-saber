@@ -64,6 +64,10 @@ if(id === "login"){
         setTimeout(restaurarQuestaoAoAbrirTela, 0);
     }
 
+    if(id === "perfilAluno" && typeof atualizarPerfilAluno === "function"){
+        atualizarPerfilAluno();
+    }
+
 }
 
 
@@ -9172,6 +9176,335 @@ function usarTituloLoja(id){
     atualizarPainelEstudos();
 
     mostrarToast("🎖 Título ativado!");
+
+}
+
+
+
+// ==========================
+// PERFIL DO ALUNO
+// ==========================
+
+function obterDataCadastroPerfil(){
+
+    const dataLocal =
+        localStorage.getItem("farol_dataCadastro") ||
+        localStorage.getItem("dataCadastro") ||
+        "";
+
+    if(dataLocal){
+        return dataLocal;
+    }
+
+    return "Não informado";
+
+}
+
+function obterItensCompradosLoja(){
+
+    if(
+        !lojaFarol ||
+        !lojaFarol.comprados
+    ){
+        return [];
+    }
+
+    return Object.keys(lojaFarol.comprados)
+        .map(id => {
+            const item = obterRecompensaLoja(id);
+            return item
+                ? {
+                    id: id,
+                    nome: item.nome,
+                    tipo: item.tipo,
+                    icone: item.icone || "🏅",
+                    comprado: true
+                }
+                : null;
+        })
+        .filter(Boolean);
+
+}
+
+function montarSeloConquistaPerfil(icone, nome, status, classe){
+
+    return `
+        <div class="selo-conquista-perfil ${classe || ""}">
+            <span>${icone}</span>
+            <strong>${nome}</strong>
+            <small>${status}</small>
+        </div>
+    `;
+
+}
+
+function atualizarPerfilAluno(){
+
+    const area =
+        document.getElementById("conteudoPerfilAluno");
+
+    if(!area){
+        return;
+    }
+
+    const nomeCompleto =
+        typeof obterNomeCertificado === "function"
+        ? obterNomeCertificado()
+        : (
+            usuarioNomeCompleto ||
+            usuarioForum ||
+            "Aluno Farol do Saber"
+        );
+
+    const primeiroNome =
+        usuarioForum && usuarioForum !== "Visitante"
+        ? usuarioForum
+        : nomeCompleto.split(" ")[0];
+
+    const respondidas =
+        acertos + erros;
+
+    const aproveitamento =
+        respondidas > 0
+        ? Math.round((acertos / respondidas) * 100)
+        : 0;
+
+    const tituloAtual =
+        lojaFarol.tituloAtual ||
+        "Sem título especial";
+
+    const medalhaAtual =
+        lojaFarol.medalhaEstudanteAtivo
+        ? "Estudante Ativo"
+        : "Nenhuma medalha ativa";
+
+    const certificadoDesbloqueado =
+        !!lojaFarol.certificadoDigital;
+
+    const cardPremiumDesbloqueado =
+        !!lojaFarol.cardPremium;
+
+    const itensComprados =
+        obterItensCompradosLoja();
+
+    const totalConquistas =
+        itensComprados.length +
+        (lojaFarol.medalhaEstudanteAtivo ? 1 : 0) +
+        (lojaFarol.cardPremium ? 1 : 0) +
+        (lojaFarol.certificadoDigital ? 1 : 0);
+
+    const faltamAcertosCertificado =
+        Math.max(100 - acertos, 0);
+
+    const faltamPontosCertificado =
+        Math.max(2000 - saldoPontosLuz, 0);
+
+    const statusCertificado =
+        certificadoDesbloqueado
+        ? `
+            <div class="perfil-certificado-desbloqueado">
+                <strong>✅ Certificado Digital desbloqueado</strong>
+                <span>Código: ${lojaFarol.codigoCertificado || "Será gerado ao abrir"}</span>
+                <span>Emitido em: ${lojaFarol.dataCertificado || "Será registrado ao abrir"}</span>
+            </div>
+        `
+        : `
+            <div class="perfil-certificado-bloqueado">
+                <strong>🔒 Certificado ainda bloqueado</strong>
+                <span>Requisito: 100 acertos e 2000 Pontos de Luz</span>
+                <span>Faltam ${faltamAcertosCertificado} acertos</span>
+                <span>Faltam ${faltamPontosCertificado} Pontos de Luz</span>
+            </div>
+        `;
+
+    const conquistasHtml = [
+        montarSeloConquistaPerfil(
+            "👤",
+            lojaFarol.nomeAvatarAtual || "Estudante",
+            "Avatar atual",
+            "ativo"
+        ),
+        montarSeloConquistaPerfil(
+            "🎖",
+            tituloAtual,
+            lojaFarol.tituloAtual ? "Título ativo" : "Título não ativado",
+            lojaFarol.tituloAtual ? "ativo" : "bloqueado"
+        ),
+        montarSeloConquistaPerfil(
+            "🏅",
+            medalhaAtual,
+            lojaFarol.medalhaEstudanteAtivo ? "Medalha ativa" : "Ainda não desbloqueada",
+            lojaFarol.medalhaEstudanteAtivo ? "ativo" : "bloqueado"
+        ),
+        montarSeloConquistaPerfil(
+            "📤",
+            "Card Premium",
+            cardPremiumDesbloqueado ? "Desbloqueado" : "Bloqueado",
+            cardPremiumDesbloqueado ? "ativo" : "bloqueado"
+        ),
+        montarSeloConquistaPerfil(
+            "📜",
+            "Certificado Digital",
+            certificadoDesbloqueado ? "Desbloqueado" : "Bloqueado",
+            certificadoDesbloqueado ? "ativo" : "bloqueado"
+        )
+    ].join("");
+
+    area.innerHTML = `
+        <div class="perfil-hero">
+
+            <div class="perfil-avatar-area">
+                ${montarAvatarHTML(
+                    lojaFarol.avatarAtual,
+                    lojaFarol.nomeAvatarAtual,
+                    "avatar-perfil-grande"
+                )}
+            </div>
+
+            <div class="perfil-identidade">
+
+                <span class="perfil-tag">
+                    🗼 Farol do Saber
+                </span>
+
+                <h2>${nomeCompleto}</h2>
+
+                <p>
+                    👋 Olá, ${primeiroNome}! Este é o seu painel de progresso e conquistas.
+                </p>
+
+                <div class="perfil-badges">
+                    <span>🎖 ${tituloAtual}</span>
+                    <span>🏅 ${medalhaAtual}</span>
+                    <span>⭐ ${pontosLuz} Pontos de Luz</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="perfil-grid-resumo">
+
+            <div class="perfil-resumo-card">
+                <span>⭐</span>
+                <strong>${pontosLuz}</strong>
+                <small>Pontos de Luz</small>
+            </div>
+
+            <div class="perfil-resumo-card">
+                <span>🛒</span>
+                <strong>${saldoPontosLuz}</strong>
+                <small>Saldo disponível</small>
+            </div>
+
+            <div class="perfil-resumo-card">
+                <span>✅</span>
+                <strong>${acertos}</strong>
+                <small>Acertos</small>
+            </div>
+
+            <div class="perfil-resumo-card">
+                <span>❌</span>
+                <strong>${erros}</strong>
+                <small>Erros</small>
+            </div>
+
+            <div class="perfil-resumo-card">
+                <span>📚</span>
+                <strong>${respondidas}</strong>
+                <small>Questões respondidas</small>
+            </div>
+
+            <div class="perfil-resumo-card">
+                <span>📊</span>
+                <strong>${aproveitamento}%</strong>
+                <small>Aproveitamento</small>
+            </div>
+
+            <div class="perfil-resumo-card">
+                <span>⏱</span>
+                <strong>${formatarTempo(tempoEstudado)}</strong>
+                <small>Tempo estudado</small>
+            </div>
+
+            <div class="perfil-resumo-card">
+                <span>🏆</span>
+                <strong>${posicaoRankingUsuario || "-"}</strong>
+                <small>Ranking</small>
+            </div>
+
+        </div>
+
+        <div class="perfil-duas-colunas">
+
+            <div class="perfil-bloco">
+                <h3>🏅 Conquistas</h3>
+                <p>
+                    Itens desbloqueados e recompensas aplicadas ao seu perfil.
+                </p>
+
+                <div class="perfil-conquistas-grid">
+                    ${conquistasHtml}
+                </div>
+
+                <div class="perfil-total-conquistas">
+                    Total de conquistas registradas: <strong>${totalConquistas}</strong>
+                </div>
+            </div>
+
+            <div class="perfil-bloco">
+                <h3>📜 Certificado Digital</h3>
+                <p>
+                    O certificado usa seu nome completo, progresso e código de verificação.
+                </p>
+
+                ${statusCertificado}
+
+                <div class="perfil-acoes-certificado">
+                    ${
+                        certificadoDesbloqueado
+                        ? `
+                            <button onclick="mostrarTela('lojaFarol'); atualizarLojaFarol(); setTimeout(gerarCertificadoDigital, 300);">
+                                📜 Ver certificado
+                            </button>
+                        `
+                        : `
+                            <button onclick="mostrarTela('lojaFarol'); atualizarLojaFarol();">
+                                🛒 Ir para Loja
+                            </button>
+                        `
+                    }
+                </div>
+            </div>
+
+        </div>
+
+        <div class="perfil-bloco perfil-atalhos">
+            <h3>⚡ Atalhos rápidos</h3>
+
+            <div class="perfil-botoes-atalho">
+                <button onclick="mostrarTela('lojaFarol'); atualizarLojaFarol();">
+                    🛒 Loja Farol
+                </button>
+
+                <button onclick="mostrarTela('estatisticas')">
+                    📊 Estatísticas
+                </button>
+
+                <button onclick="mostrarTela('erros'); atualizarCadernoErros();">
+                    ❌ Caderno de Erros
+                </button>
+
+                <button onclick="mostrarTela('ranking'); carregarRankingFirebase();">
+                    🏆 Ranking
+                </button>
+
+                <button onclick="compartilharProgresso()">
+                    📤 Compartilhar progresso
+                </button>
+            </div>
+        </div>
+    `;
 
 }
 

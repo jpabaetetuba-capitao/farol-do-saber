@@ -161,6 +161,11 @@
     <button onclick="mostrarTela('estatisticas')">
         📊 Estatísticas
     </button>
+
+    <button onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">
+        👤 Perfil do Aluno
+    </button>
+
 <button onclick="mostrarTela('erros')">
         ❌ Caderno de Erros
     </button>
@@ -1703,6 +1708,40 @@ Li e revisei o mapa mental.
     </div>
 
 </section>
+
+
+<!-- PERFIL DO ALUNO -->
+
+<section id="perfilAluno" class="tela">
+
+    <div class="card perfil-card">
+
+        <button
+            class="btn-voltar"
+            onclick="mostrarTela('inicio')">
+
+            ⬅ Voltar para Início
+
+        </button>
+
+        <br><br>
+
+        <h2>👤 Perfil do Aluno</h2>
+
+        <p>
+            Veja sua identidade no Farol do Saber, progresso, conquistas e certificado digital.
+        </p>
+
+        <br>
+
+        <div id="conteudoPerfilAluno">
+            Carregando perfil...
+        </div>
+
+    </div>
+
+</section>
+
 
 <!-- ERROS -->
 
