@@ -7,10 +7,10 @@ Durante uma reunião pedagógica, um professor afirmou que a principal função 
 
     alternativas: [
         "A avaliação deve restringir-se à observação informal dos estudantes, dispensando registros sistemáticos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A atribuição de notas perdeu completamente sua relevância nos sistemas educacionais atuais, como finalidade central e suficiente para orientar todo o trabalho pedagógico da escola.",
-        "Os processos avaliativos devem priorizar exclusivamente aspectos socioemocionais em detrimento dos conteúdos curriculares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A atribuição de notas perdeu amplamente sua relevância nos sistemas educacionais atuais, como finalidade central e suficiente para orientar todo o trabalho pedagógico da escola.",
+        "Os processos avaliativos devem priorizar predominantemente aspectos socioemocionais em detrimento dos conteúdos curriculares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A avaliação deve produzir informações que orientem decisões pedagógicas e favoreçam a aprendizagem, além de eventualmente cumprir funções certificadoras.",
-        "A avaliação deve concentrar-se apenas no desempenho coletivo da turma para evitar comparações individuais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "A avaliação deve concentrar-se em geral no desempenho coletivo da turma para evitar comparações individuais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 3,
@@ -34,7 +34,7 @@ Ao discutir os fundamentos da avaliação, uma coordenadora pedagógica afirmou 
     `,
 
     alternativas: [
-        "Constitui procedimento neutro voltado apenas à mensuração objetiva do desempenho escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Constitui procedimento neutro voltado em geral à mensuração objetiva do desempenho escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Tem como finalidade principal selecionar estudantes com melhor rendimento acadêmico, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "Representa processo contínuo de obtenção de informações relevantes para orientar o ensino e a aprendizagem.",
         "Deve limitar-se à aplicação periódica de instrumentos formais de verificação da aprendizagem, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
@@ -92,8 +92,8 @@ Uma professora utiliza diferentes evidências de aprendizagem — produções es
     alternativas: [
         "A aprendizagem pode ser adequadamente compreendida por um único instrumento avaliativo.",
         "A observação pedagógica possui menor validade que os testes padronizados, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Os instrumentos qualitativos devem substituir completamente os quantitativos, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "A avaliação deve priorizar exclusivamente resultados mensuráveis, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Os instrumentos qualitativos devem substituir amplamente os quantitativos, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
+        "A avaliação deve priorizar predominantemente resultados mensuráveis, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A diversidade de instrumentos amplia a qualidade das informações obtidas sobre a aprendizagem."
     ],
 
@@ -120,8 +120,8 @@ Ao refletir sobre os fundamentos da avaliação da aprendizagem, um candidato co
     alternativas: [
         "Correta, pois a avaliação integra o processo pedagógico e deve ser coerente com os objetivos e experiências de aprendizagem propostas.",
         "Incorreta, pois a avaliação deve ocorrer de forma independente para garantir imparcialidade, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "Correta apenas quando se utiliza avaliação formativa, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Incorreta, porque a avaliação deve concentrar-se exclusivamente nos resultados obtidos pelos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Correta em geral quando se utiliza avaliação formativa, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Incorreta, porque a avaliação deve concentrar-se predominantemente nos resultados obtidos pelos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Incorreta, já que planejamento, ensino e avaliação possuem funções distintas e não complementares, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada."
     ],
 
@@ -147,7 +147,7 @@ Durante uma formação pedagógica, dois professores apresentaram visões distin
 
     alternativas: [
         "Compreende a avaliação como processo de acompanhamento e tomada de decisões voltadas à aprendizagem.",
-        "Substitui completamente a necessidade de registrar resultados de aprendizagem, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
+        "Substitui amplamente a necessidade de registrar resultados de aprendizagem, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
         "Defende que todos os estudantes devem receber os mesmos resultados avaliativos, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "Elimina a utilização de instrumentos formais de avaliação, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Considera irrelevante a verificação dos conhecimentos construídos pelos estudantes, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem."
@@ -178,7 +178,7 @@ Jussara Hoffmann critica práticas avaliativas centradas apenas na verificação
         "Limitar-se à aplicação periódica de testes padronizados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Ser utilizada prioritariamente para fins classificatórios, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Atuar como processo mediador que acompanha e favorece o desenvolvimento do estudante.",
-        "Basear-se exclusivamente em critérios quantitativos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "Basear-se predominantemente em critérios quantitativos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 3,
@@ -203,7 +203,7 @@ Philippe Perrenoud defende que a avaliação deve contribuir para a regulação 
 
     alternativas: [
         "Tem como finalidade principal ordenar os estudantes segundo seu desempenho, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "Serve exclusivamente para verificar a aprendizagem ao final de uma etapa, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Serve predominantemente para verificar a aprendizagem ao final de uma etapa, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Substitui a necessidade de planejamento pedagógico, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
         "Prioriza a comparação entre estudantes de uma mesma turma, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "Produz informações que permitem ajustar estratégias de ensino e favorecer avanços na aprendizagem."
@@ -231,9 +231,9 @@ Uma escola adota uma concepção emancipatória de avaliação, buscando desenvo
 
     alternativas: [
         "Destina-se prioritariamente à classificação e certificação dos estudantes, como finalidade central e suficiente para orientar todo o trabalho pedagógico da escola.",
-        "Limita-se à verificação do cumprimento dos conteúdos curriculares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Concentra-se à verificação do cumprimento dos conteúdos curriculares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Procura promover consciência crítica e participação ativa dos sujeitos na construção da aprendizagem.",
-        "Substitui completamente os processos de ensino e planejamento, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
+        "Substitui amplamente os processos de ensino e planejamento, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
         "Tem como principal objetivo comparar desempenhos individuais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
@@ -260,9 +260,9 @@ Ao analisar diferentes concepções de avaliação, um candidato concluiu que a 
     alternativas: [
         "A avaliação formativa elimina qualquer forma de registro do desempenho dos estudantes, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "A avaliação classificatória preocupa-se principalmente com a hierarquização dos resultados, enquanto a formativa busca apoiar o processo de aprendizagem.",
-        "A avaliação classificatória dispensa instrumentos formais de coleta de informações, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "A avaliação formativa ocorre apenas ao final dos períodos letivos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A avaliação classificatória possui caráter exclusivamente qualitativo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "A avaliação classificatória reduz a necessidade de instrumentos formais de coleta de informações, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
+        "A avaliação formativa ocorre em geral ao final dos períodos letivos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A avaliação classificatória possui caráter predominantemente qualitativo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 1,
@@ -286,7 +286,7 @@ No início do ano letivo, uma professora aplicou atividades investigativas, prom
 
     alternativas: [
         "Tem como principal finalidade atribuir conceitos e classificar os estudantes segundo seu desempenho inicial.",
-        "Destina-se exclusivamente à certificação dos conhecimentos adquiridos em etapas anteriores, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Destina-se predominantemente à certificação dos conhecimentos adquiridos em etapas anteriores, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Substitui a necessidade de avaliações formativas durante o processo educativo, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
         "Prioriza a comparação entre estudantes para organizar turmas homogêneas, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "Busca levantar informações sobre as condições de aprendizagem dos estudantes para orientar o planejamento pedagógico."
@@ -317,7 +317,7 @@ Após analisar os resultados de uma avaliação diagnóstica, um professor decid
         "O planejamento inicial deve ser abandonado sempre que surgirem dificuldades, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A avaliação diagnóstica substitui as avaliações formativas e somativas, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
         "Os resultados diagnósticos devem ser utilizados para orientar decisões pedagógicas.",
-        "O diagnóstico tem finalidade exclusivamente estatística, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "O diagnóstico tem finalidade predominantemente estatística, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 3,
@@ -341,9 +341,9 @@ Uma escola utiliza testes diagnósticos apenas para identificar quais estudantes
     `,
 
     alternativas: [
-        "A avaliação diagnóstica deve ocorrer somente ao final do período letivo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A avaliação diagnóstica deve ocorrer normalmente ao final do período letivo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A identificação das dificuldades precisa ser acompanhada de ações pedagógicas que favoreçam a aprendizagem.",
-        "O diagnóstico deve ser substituído exclusivamente por autoavaliações, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O diagnóstico deve ser substituído predominantemente por autoavaliações, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Os resultados diagnósticos não possuem relação com o planejamento docente, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
         "A avaliação diagnóstica deve limitar-se à produção de indicadores estatísticos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
@@ -369,10 +369,10 @@ Ao iniciar uma unidade temática, uma professora identificou que parte da turma 
     `,
 
     alternativas: [
-        "Serve apenas para localizar dificuldades de aprendizagem, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Serve em geral para localizar dificuldades de aprendizagem, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Tem como objetivo principal hierarquizar os estudantes segundo seu desempenho.",
         "Pode identificar tanto dificuldades quanto conhecimentos já consolidados pelos estudantes.",
-        "Deve ser utilizada exclusivamente na educação infantil, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Deve ser utilizada predominantemente na educação infantil, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Possui função equivalente à avaliação somativa, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
@@ -398,9 +398,9 @@ Segundo as concepções atuais de avaliação, a principal diferença entre a av
 
     alternativas: [
         "Busca compreender as condições iniciais da aprendizagem para orientar o ensino, enquanto a somativa concentra-se na síntese dos resultados obtidos.",
-        "Utiliza exclusivamente instrumentos qualitativos, enquanto a somativa utiliza apenas instrumentos quantitativos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Dispensa critérios avaliativos previamente definidos, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "Ocorre apenas no início do ano letivo, enquanto a somativa ocorre diariamente, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Utiliza predominantemente instrumentos qualitativos, enquanto a somativa utiliza em geral instrumentos quantitativos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Reduz a necessidade de critérios avaliativos previamente definidos, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
+        "Ocorre em geral no início do ano letivo, enquanto a somativa ocorre diariamente, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Não produz informações relevantes para o planejamento pedagógico, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
@@ -426,7 +426,7 @@ Durante o desenvolvimento de uma sequência didática, uma professora analisa co
     alternativas: [
         "Busca produzir informações que permitam regular e aperfeiçoar continuamente o processo de ensino e aprendizagem.",
         "Tem como finalidade principal classificar os estudantes ao término do processo educativo, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "Destina-se exclusivamente à certificação das aprendizagens alcançadas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Destina-se predominantemente à certificação das aprendizagens alcançadas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Substitui a necessidade de planejamento pedagógico prévio, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
         "Prioriza a comparação dos resultados individuais em relação à média da turma, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
@@ -456,7 +456,7 @@ Segundo Philippe Perrenoud, a avaliação formativa deve contribuir para a regul
         "Fornece informações que permitem ajustar estratégias de ensino e apoiar o progresso dos estudantes.",
         "Serve para identificar erros e puni-los de forma pedagógica, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Substitui integralmente os conteúdos curriculares por competências socioemocionais, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "Limita-se à observação informal do comportamento dos alunos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "Concentra-se à observação informal do comportamento dos alunos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 1,
@@ -480,9 +480,9 @@ Uma professora identifica que diversos estudantes apresentam dificuldades semelh
     `,
 
     alternativas: [
-        "Modelos exclusivamente classificatórios de avaliação.",
+        "Modelos predominantemente classificatórios de avaliação.",
         "Perspectivas que utilizam a avaliação como instrumento de seleção escolar.",
-        "Abordagens centradas apenas na mensuração objetiva dos resultados.",
+        "Abordagens centradas em geral na mensuração objetiva dos resultados.",
         "Concepções que restringem a avaliação aos momentos finais do processo educativo.",
         "Jussara Hoffmann e a avaliação mediadora."
     ],
@@ -509,10 +509,10 @@ Ao comentar os resultados de uma atividade, um professor fornece devolutivas esp
 
     alternativas: [
         "O feedback substitui a necessidade de avaliação formal, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "A devolutiva deve concentrar-se apenas nos erros para aumentar a exigência acadêmica, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A devolutiva deve concentrar-se em geral nos erros para aumentar a exigência acadêmica, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "O estudante não precisa participar da análise de seus resultados, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "O feedback permite orientar o estudante sobre seu processo de aprendizagem e possíveis formas de avanço.",
-        "O feedback possui função exclusivamente motivacional, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "O feedback possui função predominantemente motivacional, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 3,
@@ -537,9 +537,9 @@ Um candidato afirmou que a avaliação formativa diferencia-se da avaliação so
 
     alternativas: [
         "Incorreta, pois ambas possuem exatamente a mesma finalidade, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "Correta apenas quando não há atribuição de notas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Correta em geral quando não há atribuição de notas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Correta, pois a avaliação formativa busca compreender e aperfeiçoar o percurso da aprendizagem.",
-        "Incorreta, porque a avaliação formativa ocorre exclusivamente antes do ensino, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Incorreta, porque a avaliação formativa ocorre predominantemente antes do ensino, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Incorreta, já que a avaliação somativa também possui função reguladora permanente."
     ],
 
@@ -598,8 +598,8 @@ Uma professora afirma que a avaliação somativa é desnecessária porque a aval
 
     alternativas: [
         "Incorreta, pois diferentes modalidades de avaliação possuem finalidades complementares dentro do processo educativo.",
-        "Correta, pois a avaliação formativa substitui completamente qualquer outra modalidade avaliativa, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "Correta apenas na educação infantil, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Correta, pois a avaliação formativa substitui amplamente qualquer outra modalidade avaliativa, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
+        "Correta em geral na educação infantil, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Incorreta, porque a avaliação somativa deve substituir a avaliação formativa, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "Correta, desde que sejam utilizados instrumentos qualitativos, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada."
     ],
@@ -653,11 +653,11 @@ Ao analisar diferentes concepções de avaliação, um candidato concluiu que a 
     `,
 
     alternativas: [
-        "A somativa utiliza apenas instrumentos quantitativos e a formativa apenas qualitativos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A somativa utiliza em geral instrumentos quantitativos e a formativa em geral qualitativos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A somativa enfatiza a síntese dos resultados obtidos, enquanto a formativa prioriza o acompanhamento do processo de aprendizagem.",
-        "A somativa ocorre exclusivamente por meio de provas escritas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A somativa ocorre predominantemente por meio de provas escritas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A formativa não produz registros de desempenho dos estudantes, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "A somativa dispensa critérios de avaliação previamente definidos, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem."
+        "A somativa reduz a necessidade de critérios de avaliação previamente definidos, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem."
     ],
 
     correta: 1,
@@ -684,7 +684,7 @@ Um professor elaborou uma avaliação final alinhada aos objetivos de aprendizag
         "A avaliação somativa deve ser independente dos objetivos para garantir imparcialidade.",
         "Os resultados finais não precisam manter relação com o planejamento pedagógico, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "As competências não podem ser consideradas em avaliações finais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A avaliação somativa deve priorizar apenas conteúdos memorizados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A avaliação somativa deve priorizar em geral conteúdos memorizados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A coerência entre objetivos, ensino e avaliação contribui para a validade do processo avaliativo."
     ],
 
@@ -736,9 +736,9 @@ Ao organizar um portfólio, os estudantes reúnem produções realizadas ao long
     `,
 
     alternativas: [
-        "Mensurar exclusivamente resultados finais obtidos pelos estudantes.",
-        "Substituir completamente todos os demais instrumentos avaliativos.",
-        "Produzir apenas informações quantitativas sobre desempenho escolar.",
+        "Mensurar predominantemente resultados finais obtidos pelos estudantes.",
+        "Substituir amplamente todos os demais instrumentos avaliativos.",
+        "Produzir em geral informações quantitativas sobre desempenho escolar.",
         "Servir prioritariamente para classificação dos estudantes.",
         "Possibilitar acompanhamento processual do desenvolvimento das aprendizagens."
     ],
@@ -792,7 +792,7 @@ Durante as aulas, uma professora registra sistematicamente comportamentos, inter
     `,
 
     alternativas: [
-        "Avaliação exclusivamente somativa, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Avaliação predominantemente somativa, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Observação sistemática como instrumento de avaliação.",
         "Portfólio digital, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Teste padronizado de desempenho, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
@@ -855,8 +855,8 @@ Durante a análise dos resultados de aprendizagem de uma turma, uma professora i
     alternativas: [
         "A avaliação deve ocorrer independentemente do planejamento para garantir neutralidade pedagógica.",
         "Avaliação e planejamento constituem processos articulados que se retroalimentam continuamente.",
-        "Os resultados avaliativos possuem função exclusivamente classificatória.",
-        "As dificuldades de aprendizagem decorrem exclusivamente das características individuais dos estudantes.",
+        "Os resultados avaliativos possuem função predominantemente classificatória.",
+        "As dificuldades de aprendizagem decorrem predominantemente das características individuais dos estudantes.",
         "O planejamento deve permanecer inalterado após sua elaboração inicial."
     ],
 
@@ -883,7 +883,7 @@ Ao elaborar um plano de ensino, um professor definiu objetivos de aprendizagem, 
     alternativas: [
         "A avaliação pode ser construída posteriormente sem prejuízo ao processo educativo, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Os critérios avaliativos possuem importância secundária no planejamento, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "As competências previstas dispensam a necessidade de avaliação, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
+        "As competências previstas reduzem a necessidade de a necessidade de avaliação, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
         "A metodologia utilizada compensa automaticamente a ausência de critérios avaliativos, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Existe incoerência entre planejamento e avaliação, comprometendo a validade das evidências produzidas."
     ],
@@ -938,8 +938,8 @@ Um candidato afirmou que a principal função da avaliação no planejamento edu
 
     alternativas: [
         "Correta, pois a avaliação fornece evidências necessárias para monitorar e aperfeiçoar o planejamento.",
-        "Incorreta, pois a avaliação limita-se à atribuição de notas e conceitos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Correta apenas para avaliações somativas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Incorreta, pois a avaliação concentra-se à atribuição de notas e conceitos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Correta em geral para avaliações somativas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Incorreta, porque planejamento e avaliação possuem finalidades independentes, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "Incorreta, já que os objetivos não precisam ser considerados no processo avaliativo, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada."
     ],
@@ -965,11 +965,11 @@ Durante a construção de uma sequência didática, uma professora definiu compe
     `,
 
     alternativas: [
-        "A avaliação deve ser planejada apenas após a conclusão das atividades de ensino, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A avaliação deve ser planejada em geral após a conclusão das atividades de ensino, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Os instrumentos avaliativos são independentes das competências e habilidades desenvolvidas.",
         "A integração entre planejamento e avaliação favorece maior coerência e qualidade do processo educativo.",
         "As metodologias possuem relevância superior aos objetivos e à avaliação, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "O planejamento deve concentrar-se apenas nos conteúdos curriculares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "O planejamento deve concentrar-se em geral nos conteúdos curriculares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 2,
@@ -994,7 +994,7 @@ Ao elaborar instrumentos avaliativos, uma professora buscou verificar não apena
     alternativas: [
         "A BNCC substitui os conteúdos curriculares por competências socioemocionais, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
         "O desenvolvimento de competências exige avaliar a aplicação dos conhecimentos em contextos significativos.",
-        "A avaliação deve concentrar-se exclusivamente em conteúdos conceituais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A avaliação deve concentrar-se predominantemente em conteúdos conceituais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "As habilidades previstas na BNCC não podem ser objeto de avaliação, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A resolução de problemas possui relevância secundária no processo educativo, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
@@ -1048,7 +1048,7 @@ Ao avaliar um projeto interdisciplinar, uma professora observou a capacidade dos
     `,
 
     alternativas: [
-        "As competências gerais devem ser desenvolvidas apenas em componentes curriculares específicos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "As competências gerais devem ser desenvolvidas em componentes curriculares específicos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A avaliação deve restringir-se aos conteúdos conceituais de cada disciplina, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Projetos interdisciplinares não produzem evidências válidas de aprendizagem, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Competências e habilidades não devem ser consideradas nos processos avaliativos, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
@@ -1077,8 +1077,8 @@ Uma professora afirma que avaliar por competências significa abandonar completa
 
     alternativas: [
         "Correta, pois competências substituem integralmente os conteúdos, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "Correta apenas no ensino fundamental, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Correta apenas para projetos interdisciplinares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Correta em geral no ensino fundamental, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Correta em geral para projetos interdisciplinares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Incorreta, porque competências pressupõem a mobilização de conhecimentos, e não sua eliminação.",
         "Incorreta, porque a BNCC proíbe avaliações baseadas em competências, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada."
     ],
@@ -1105,9 +1105,9 @@ Ao refletir sobre a avaliação na perspectiva da BNCC, um candidato concluiu qu
 
     alternativas: [
         "Incorreta, pois competências não podem ser observadas em situações avaliativas, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "Correta apenas para avaliações externas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Correta em geral para avaliações externas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Correta, pois a avaliação deve verificar evidências do desenvolvimento das aprendizagens esperadas.",
-        "Incorreta, porque habilidades possuem caráter exclusivamente curricular, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Incorreta, porque habilidades possuem caráter predominantemente curricular, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Incorreta, já que a BNCC não estabelece relação entre avaliação e competências, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada."
     ],
 
@@ -1195,9 +1195,9 @@ Segundo Jussara Hoffmann, a devolutiva avaliativa possui papel relevante porque:
     alternativas: [
         "Favorece o diálogo pedagógico e acompanha o percurso de aprendizagem do estudante.",
         "Permite justificar notas atribuídas ao final do período letivo, como finalidade central e suficiente para orientar todo o trabalho pedagógico da escola.",
-        "Substitui completamente os instrumentos de avaliação, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
+        "Substitui amplamente os instrumentos de avaliação, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
         "Tem como finalidade principal comparar desempenhos individuais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Serve exclusivamente para comunicar resultados aos responsáveis, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "Serve predominantemente para comunicar resultados aos responsáveis, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 0,
@@ -1221,11 +1221,11 @@ Uma escola oferece atividades de recuperação paralela durante todo o período 
     `,
 
     alternativas: [
-        "A recuperação deve ocorrer apenas após o encerramento do ano letivo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A recuperação deve ocorrer em geral após o encerramento do ano letivo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "As ações de recuperação substituem o planejamento pedagógico regular, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A recuperação contínua favorece intervenções oportunas e reduz o acúmulo de dificuldades.",
-        "A recuperação paralela destina-se apenas aos estudantes com baixo rendimento em provas.",
-        "A recuperação possui finalidade exclusivamente classificatória, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "A recuperação paralela destina-se em geral aos estudantes com baixo rendimento em provas.",
+        "A recuperação possui finalidade predominantemente classificatória, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 2,
@@ -1251,7 +1251,7 @@ Um candidato afirmou que erro, feedback e recuperação da aprendizagem constitu
     alternativas: [
         "Incorreta, pois o erro deve ser eliminado dos processos avaliativos, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "Incorreta, porque feedback e recuperação possuem finalidades incompatíveis, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "Correta apenas em avaliações diagnósticas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Correta em avaliações diagnósticas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Incorreta, já que recuperação e feedback são independentes da avaliação, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "Correta, pois esses elementos fornecem informações e oportunidades para promover avanços na aprendizagem."
     ],
@@ -1276,11 +1276,11 @@ Durante uma reunião pedagógica, uma professora afirmou que a avaliação deve 
     `,
 
     alternativas: [
-        "Modelos centrados exclusivamente na mensuração e classificação do rendimento escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Modelos centrados predominantemente na mensuração e classificação do rendimento escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Abordagens que restringem a avaliação aos momentos finais do processo educativo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Perspectivas que utilizam a avaliação apenas para certificação e promoção escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Perspectivas que utilizam a avaliação em geral para certificação e promoção escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Concepções que compreendem a avaliação como instrumento de diagnóstico e intervenção pedagógica, como as defendidas por Luckesi.",
-        "Modelos baseados exclusivamente em testes padronizados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "Modelos baseados predominantemente em testes padronizados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 3,
@@ -1362,7 +1362,7 @@ Uma professora utiliza provas, observações sistemáticas, portfólios, autoava
     alternativas: [
         "A utilização de múltiplos instrumentos amplia a qualidade das evidências sobre a aprendizagem.",
         "Os instrumentos avaliativos devem produzir exatamente o mesmo tipo de informação, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Os instrumentos qualitativos devem substituir totalmente os quantitativos, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
+        "Os instrumentos qualitativos devem substituir amplamente os quantitativos, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
         "A diversidade de instrumentos elimina a necessidade de planejamento avaliativo, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A observação sistemática possui menor validade que as provas escritas, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
@@ -1391,8 +1391,8 @@ Ao refletir sobre os fundamentos da avaliação da aprendizagem, um candidato co
         "Incorreta, pois a avaliação formativa substitui integralmente as demais, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "Incorreta, porque a avaliação somativa torna desnecessária a avaliação diagnóstica, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "Correta, pois cada modalidade possui finalidades específicas e contribui para diferentes momentos do processo educativo.",
-        "Correta apenas quando não há atribuição de notas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Incorreta, já que apenas a avaliação formativa possui função pedagógica, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "Correta em geral quando não há atribuição de notas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Incorreta, já que em geral a avaliação formativa possui função pedagógica, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 2,

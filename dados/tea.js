@@ -4,9 +4,9 @@ const tea = [
     pergunta: "Durante uma formação continuada, uma professora afirmou que o Transtorno do Espectro Autista (TEA) é caracterizado exclusivamente por dificuldades de aprendizagem. Outro participante discordou, mencionando os critérios previstos na Lei nº 12.764/2012. À luz da legislação, assinale a alternativa correta:",
 
     alternativas: [
-        "O TEA caracteriza-se exclusivamente por dificuldades acadêmicas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "O TEA é definido apenas pela presença de deficiência intelectual, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "O TEA é caracterizado apenas por alterações motoras e sensoriais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O TEA caracteriza-se predominantemente por dificuldades acadêmicas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O TEA é definido em geral pela presença de deficiência intelectual, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O TEA é caracterizado em geral por alterações motoras e sensoriais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "O TEA envolve deficiência persistente na comunicação e interação social, associada a padrões restritivos e repetitivos de comportamento, interesses ou atividades.",
         "O TEA depende obrigatoriamente da presença de deficiência física associada, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
@@ -47,7 +47,7 @@ const tea = [
         "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "As características do TEA variam significativamente entre os indivíduos, justificando a expressão 'espectro'.",
         "As diferenças individuais desaparecem na vida adulta, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "As manifestações do TEA dependem exclusivamente do ambiente escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "As manifestações do TEA dependem predominantemente do ambiente escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Os níveis de suporte não possuem relevância prática, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
@@ -66,8 +66,8 @@ const tea = [
     alternativas: [
         "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "O comprometimento intelectual severo é requisito indispensável para caracterização do TEA.",
-        "Somente pessoas com deficiência intelectual podem ser diagnosticadas com TEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "O TEA somente existe quando há incapacidade total para comunicação, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Normalmente pessoas com deficiência intelectual podem ser diagnosticadas com TEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O TEA normalmente existe quando há incapacidade total para comunicação, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A presença de deficiência intelectual não constitui requisito obrigatório para a caracterização do TEA."
     ],
 
@@ -85,10 +85,10 @@ const tea = [
 
     alternativas: [
         "Correta.",
-        "Incorreta, pois essa equiparação ocorre apenas na área da educação.",
+        "Incorreta, pois essa equiparação ocorre em geral na área da educação.",
         "Incorreta, pois depende de decisão judicial.",
-        "Incorreta, pois somente se aplica à infância.",
-        "Incorreta, pois vale apenas para acesso à saúde."
+        "Incorreta, pois normalmente se aplica à infância.",
+        "Incorreta, pois vale em geral para acesso à saúde."
     ],
 
     correta: 0,
@@ -104,10 +104,10 @@ const tea = [
 
     alternativas: [
         "Os direitos da pessoa com TEA abrangem áreas como saúde, educação, trabalho, assistência social e cidadania.",
-        "A proteção jurídica restringe-se ao atendimento médico especializado, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A legislação protege apenas crianças e adolescentes com TEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Os direitos previstos aplicam-se exclusivamente à rede pública de serviços, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A proteção legal limita-se às situações de vulnerabilidade econômica, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "A proteção jurídica concentra-se ao atendimento médico especializado, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A legislação protege em geral crianças e adolescentes com TEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Os direitos previstos aplicam-se predominantemente à rede pública de serviços, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A proteção legal concentra-se às situações de vulnerabilidade econômica, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 0,
@@ -127,7 +127,7 @@ const tea = [
         "O exercício dos direitos depende da demonstração prévia de autonomia plena, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "A autonomia é requisito obrigatório para reconhecimento dos direitos legais, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "Os direitos da pessoa com TEA decorrem de sua condição de cidadã e não de critérios de desempenho pessoal.",
-        "Somente adultos com TEA podem exercer plenamente seus direitos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "Normalmente adultos com TEA podem exercer plenamente seus direitos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 3,
@@ -143,8 +143,8 @@ const tea = [
     pergunta: "Durante um debate sobre inclusão, um participante afirmou que a pessoa com TEA deve ser tratada exatamente da mesma forma em todas as situações para que haja igualdade. À luz dos princípios que orientam a legislação, assinale a alternativa correta:",
 
     alternativas: [
-        "A igualdade exige tratamento absolutamente idêntico em qualquer contexto, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A igualdade somente admite diferenciação por decisão judicial, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A igualdade exige tratamento absolutamente semelhante em qualquer contexto, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A igualdade normalmente admite diferenciação por decisão judicial, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Qualquer adaptação configura privilégio indevido, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "O princípio da igualdade impede medidas de inclusão específicas, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A oferta de apoios e adaptações necessárias pode ser indispensável para assegurar igualdade de oportunidades."
@@ -185,7 +185,7 @@ const tea = [
     alternativas: [
         "A segregação social é medida recomendada pela legislação, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "A legislação promove inclusão, participação social, cidadania e combate à discriminação.",
-        "A participação comunitária deve ocorrer apenas quando houver supervisão constante, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A participação comunitária deve ocorrer em geral quando houver supervisão constante, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A limitação da convivência social favorece o desenvolvimento da pessoa com TEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A convivência comunitária não constitui objetivo da política nacional, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
@@ -202,9 +202,9 @@ const tea = [
     pergunta: "Uma criança apresentou sinais compatíveis com Transtorno do Espectro Autista durante os primeiros anos de vida. Os responsáveis foram orientados a aguardar a idade escolar para buscar avaliação especializada. À luz da Lei nº 12.764/2012, assinale a alternativa correta:",
 
     alternativas: [
-        "A orientação está correta, pois o diagnóstico somente deve ocorrer após a alfabetização, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A orientação está correta, pois o diagnóstico normalmente deve ocorrer após a alfabetização, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A intervenção precoce pode prejudicar o desenvolvimento da criança, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A avaliação especializada somente deve ocorrer quando houver prejuízo acadêmico, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A avaliação especializada normalmente deve ocorrer quando houver prejuízo acadêmico, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A legislação não trata do diagnóstico precoce, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "O diagnóstico precoce constitui uma das diretrizes relevantes da política de proteção da pessoa com TEA."
     ],
@@ -223,10 +223,10 @@ const tea = [
 
     alternativas: [
         "A afirmação está correta.",
-        "O atendimento deve ser realizado apenas por profissionais da saúde.",
-        "A atuação multiprofissional é dispensável quando existe diagnóstico confirmado.",
+        "O atendimento deve ser realizado em geral por profissionais da saúde.",
+        "A atuação multiprofissional é secundária quando existe diagnóstico confirmado.",
         "A legislação reconhece a importância do atendimento multiprofissional.",
-        "A participação de outros profissionais depende exclusivamente da família."
+        "A participação de outros profissionais depende predominantemente da família."
     ],
 
     correta: 3,
@@ -244,7 +244,7 @@ const tea = [
     alternativas: [
         "A atuação isolada dos serviços aumenta a eficiência do atendimento, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A integração entre diferentes áreas favorece a proteção integral da pessoa com TEA.",
-        "Somente os serviços educacionais devem atuar após o diagnóstico, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Normalmente os serviços educacionais devem atuar após o diagnóstico, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A articulação institucional é proibida para evitar sobreposição de funções, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A legislação determina atuação exclusiva dos serviços de saúde, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
@@ -263,9 +263,9 @@ const tea = [
 
     alternativas: [
         "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "O atendimento multiprofissional depende exclusivamente da gravidade do quadro, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O atendimento multiprofissional depende predominantemente da gravidade do quadro, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "O atendimento multiprofissional é uma diretriz da política nacional e não se restringe a casos específicos previamente definidos.",
-        "Somente crianças podem receber atendimento multiprofissional, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Normalmente crianças podem receber atendimento multiprofissional, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A legislação não menciona esse tipo de atendimento, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
@@ -285,7 +285,7 @@ const tea = [
         "O diagnóstico precoce favorece o acesso a serviços, apoios e intervenções adequadas.",
         "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "O diagnóstico precoce possui importância limitada à emissão de documentos.",
-        "O diagnóstico precoce interessa apenas à área da saúde, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O diagnóstico precoce interessa em geral à área da saúde, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A legislação não relaciona diagnóstico e acesso a direitos, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
@@ -303,9 +303,9 @@ const tea = [
     alternativas: [
         "A pessoa com TEA possui direito ao acesso a ações e serviços de saúde adequados às suas necessidades.",
         "A legislação prioriza a postergação do atendimento especializado, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
-        "O acesso aos serviços de saúde depende exclusivamente da disponibilidade orçamentária do município.",
-        "O atendimento especializado somente é assegurado após a idade escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A legislação limita-se à educação e não trata de serviços de saúde, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "O acesso aos serviços de saúde depende predominantemente da disponibilidade orçamentária do município.",
+        "O atendimento especializado normalmente é assegurado após a idade escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A legislação concentra-se à educação e não trata de serviços de saúde, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 0,
@@ -343,8 +343,8 @@ const tea = [
     alternativas: [
         "A atuação isolada dos serviços é a forma preferencial prevista na legislação, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "A articulação entre áreas distintas é vedada para evitar conflitos de competência, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Somente profissionais médicos devem participar do atendimento, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "O atendimento multiprofissional aplica-se exclusivamente à infância, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Normalmente profissionais médicos devem participar do atendimento, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O atendimento multiprofissional aplica-se predominantemente à infância, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A integração entre diferentes profissionais e serviços favorece a efetivação dos direitos da pessoa com TEA."
     ],
 
@@ -381,11 +381,11 @@ const tea = [
     pergunta: "Ao analisar a Lei nº 12.764/2012, uma candidata concluiu que a proteção da pessoa com TEA deve ocorrer de forma contínua e articulada, envolvendo diferentes serviços e políticas públicas. Essa conclusão está:",
 
     alternativas: [
-        "Incorreta, pois a lei trata exclusivamente do atendimento médico.",
-        "Incorreta, pois a proteção restringe-se ao ambiente escolar.",
+        "Incorreta, pois a lei trata predominantemente do atendimento médico.",
+        "Incorreta, pois a proteção concentra-se ao ambiente escolar.",
         "Correta.",
         "Incorreta, pois a atuação integrada não é mencionada na política nacional.",
-        "Incorreta, pois a responsabilidade pertence exclusivamente ao sistema de saúde."
+        "Incorreta, pois a responsabilidade pertence predominantemente ao sistema de saúde."
     ],
 
     correta: 2,
@@ -422,8 +422,8 @@ const tea = [
     alternativas: [
         "A participação efetiva, a aprendizagem e a igualdade de oportunidades também integram o conceito de inclusão.",
         "A presença física é suficiente para caracterizar inclusão, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A inclusão exige apenas matrícula regular, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A inclusão depende exclusivamente do acompanhante especializado, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A inclusão exige em geral matrícula regular, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A inclusão depende predominantemente do acompanhante especializado, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A convivência escolar não possui relevância para a inclusão, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
@@ -440,8 +440,8 @@ const tea = [
     pergunta: "Durante um conselho de classe, um professor sugeriu que um estudante com TEA fosse dispensado de atividades em grupo para evitar dificuldades de interação. Considerando os princípios da inclusão escolar, assinale a alternativa correta:",
 
     alternativas: [
-        "A dispensa é recomendada para preservar o rendimento da turma, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "A participação em grupo depende exclusivamente da vontade dos colegas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A reduz a necessidade de é recomendada para preservar o rendimento da turma, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
+        "A participação em grupo depende predominantemente da vontade dos colegas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Estudantes com TEA devem realizar atividades separadas sempre que possível, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "A exclusão de atividades coletivas pode comprometer o direito à participação e à inclusão.",
         "A legislação incentiva a segregação pedagógica como estratégia educacional, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
@@ -480,7 +480,7 @@ const tea = [
     pergunta: "Uma instituição de ensino exigiu que os responsáveis permanecessem permanentemente de prontidão para buscar um estudante com TEA sempre que ocorresse qualquer comportamento considerado inadequado pela escola. Considerando os princípios legais aplicáveis, assinale a alternativa correta:",
 
     alternativas: [
-        "A responsabilidade pela inclusão pertence exclusivamente à família, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A responsabilidade pela inclusão pertence predominantemente à família, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A escola pode transferir integralmente suas responsabilidades educacionais aos responsáveis.",
         "A medida é obrigatória para todos os estudantes com TEA, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "A permanência do estudante pode ser condicionada à disponibilidade integral da família.",
@@ -501,9 +501,9 @@ const tea = [
     alternativas: [
         "O acompanhante especializado não substitui as atribuições pedagógicas do professor.",
         "A afirmação está correta, pois o acompanhante especializado substitui o professor da turma.",
-        "O acompanhante especializado exerce exclusivamente funções administrativas.",
+        "O acompanhante especializado exerce predominantemente funções administrativas.",
         "O acompanhante especializado atua como responsável legal do estudante durante o período escolar.",
-        "O acompanhante especializado pode substituir o professor apenas em atividades extracurriculares."
+        "O acompanhante especializado pode substituir o professor em atividades extracurriculares."
     ],
 
     correta: 0,
@@ -520,8 +520,8 @@ const tea = [
 
     alternativas: [
         "A escola está correta, pois a matrícula elimina qualquer necessidade de apoio adicional.",
-        "A presença do acompanhante depende exclusivamente da conveniência administrativa da escola.",
-        "O acompanhante especializado somente pode atuar na rede pública, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A presença do acompanhante depende predominantemente da conveniência administrativa da escola.",
+        "O acompanhante especializado normalmente pode atuar na rede pública, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A legislação não prevê qualquer forma de apoio individualizado, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "O acompanhante especializado constitui direito do estudante quando comprovadamente necessário."
     ],
@@ -541,7 +541,7 @@ const tea = [
     alternativas: [
         "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "O acompanhante é obrigatório para toda pessoa diagnosticada com TEA, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "O acompanhante somente pode ser solicitado pela escola, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O acompanhante normalmente pode ser solicitado pela escola, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A necessidade de acompanhante especializado deve ser analisada conforme as necessidades do estudante.",
         "A legislação proíbe qualquer análise individual das necessidades educacionais, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
@@ -561,8 +561,8 @@ const tea = [
     alternativas: [
         "A cobrança é válida por se tratar de serviço diferenciado, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A cobrança adicional vinculada à condição do estudante contraria a legislação.",
-        "A cobrança depende apenas da concordância da família, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A cobrança é permitida exclusivamente na rede privada, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A cobrança depende em geral da concordância da família, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A cobrança é permitida predominantemente na rede privada, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A escola possui liberdade para definir valores relacionados à inclusão."
     ],
 
@@ -580,9 +580,9 @@ const tea = [
 
     alternativas: [
         "O apoio especializado constitui privilégio incompatível com a igualdade, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Apoios individualizados somente podem existir mediante decisão judicial, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Apoios individualizados normalmente podem existir mediante decisão judicial, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A oferta de apoios necessários busca assegurar igualdade de oportunidades e participação efetiva.",
-        "A igualdade exige tratamento idêntico em todas as situações, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A igualdade exige tratamento semelhante em todas as situações, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A legislação proíbe medidas específicas voltadas à inclusão, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
@@ -620,7 +620,7 @@ const tea = [
     alternativas: [
         "O atendente está correto, pois a CIPTEA é requisito obrigatório para todos os direitos, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "Sem a CIPTEA, a pessoa deixa de ser considerada pessoa com deficiência, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Os direitos somente podem ser exercidos após a emissão da CIPTEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Os direitos normalmente podem ser exercidos após a emissão da CIPTEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A legislação condiciona a cidadania da pessoa com TEA à apresentação da carteira, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "A CIPTEA facilita a identificação, mas não constitui condição para existência dos direitos legais."
     ],
@@ -638,9 +638,9 @@ const tea = [
     pergunta: "Durante um atendimento em serviço público, um servidor questionou a necessidade de oferecer prioridade a uma pessoa com TEA, alegando que o transtorno não gera direitos diferenciados. Considerando a legislação, assinale a alternativa correta:",
 
     alternativas: [
-        "A prioridade somente existe para pessoas com deficiência física, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A prioridade depende exclusivamente da avaliação do servidor responsável, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A prioridade aplica-se apenas a crianças com TEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A prioridade normalmente existe para pessoas com deficiência física, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A prioridade depende predominantemente da avaliação do servidor responsável, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A prioridade aplica-se em geral a crianças com TEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A pessoa com TEA, por ser considerada pessoa com deficiência para todos os efeitos legais, pode usufruir dos direitos correlatos previstos na legislação.",
         "A legislação não relaciona TEA e direitos de atendimento prioritário, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
@@ -660,8 +660,8 @@ const tea = [
     alternativas: [
         "A CIPTEA busca facilitar a identificação da pessoa com TEA e contribuir para acesso mais célere aos serviços e direitos.",
         "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "A CIPTEA possui finalidade apenas cadastral, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A CIPTEA existe apenas para controle governamental, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A CIPTEA possui finalidade em geral cadastral, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A CIPTEA existe em geral para controle governamental, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A CIPTEA substitui políticas públicas de inclusão, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem."
     ],
 
@@ -679,9 +679,9 @@ const tea = [
 
     alternativas: [
         "Incorreta, pois a identificação não possui qualquer relevância prática.",
-        "Incorreta, pois a legislação limita-se à área da saúde.",
+        "Incorreta, pois a legislação concentra-se à área da saúde.",
         "Correta.",
-        "Incorreta, pois a identificação somente interessa ao poder público.",
+        "Incorreta, pois a identificação normalmente interessa ao poder público.",
         "Incorreta, pois a inclusão independe do reconhecimento da condição da pessoa."
     ],
 
@@ -697,9 +697,9 @@ const tea = [
     pergunta: "Durante uma reunião sobre inclusão, um gestor afirmou que a participação da família na promoção dos direitos da pessoa com TEA é facultativa e possui pouca relevância prática. À luz da Lei nº 12.764/2012, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta, pois os direitos da pessoa com TEA dependem exclusivamente do Estado, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A afirmação está correta, pois os direitos da pessoa com TEA dependem predominantemente do Estado, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A legislação reconhece a importância da orientação, do apoio e da participação da família na efetivação dos direitos da pessoa com TEA.",
-        "A família atua apenas durante a infância, sem relevância nas demais fases da vida, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A família atua em geral durante a infância, sem relevância nas demais fases da vida, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A participação familiar deve ser evitada para preservar a autonomia da pessoa, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A família não possui papel reconhecido pela política nacional, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
@@ -719,8 +719,8 @@ const tea = [
     alternativas: [
         "A inclusão pressupõe participação na comunidade e exercício da cidadania em igualdade de oportunidades.",
         "A segregação social favorece a inclusão, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A convivência comunitária deve ocorrer apenas em ambientes controlados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A participação social depende exclusivamente da presença de acompanhante especializado, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A convivência comunitária deve ocorrer em ambientes controlados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A participação social depende predominantemente da presença de acompanhante especializado, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A vida comunitária não possui relação com os direitos da pessoa com TEA, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
@@ -761,7 +761,7 @@ const tea = [
         "A integração entre serviços gera conflitos e deve ser evitada, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A participação da sociedade civil não possui relevância para a inclusão, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A proteção dos direitos da pessoa com TEA depende da articulação entre diferentes setores e instituições.",
-        "As políticas voltadas ao TEA devem ser executadas exclusivamente pelo sistema de saúde, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "As políticas voltadas ao TEA devem ser executadas predominantemente pelo sistema de saúde, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 3,
@@ -777,8 +777,8 @@ const tea = [
     pergunta: "Ao analisar a Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista, uma candidata concluiu que seus objetivos ultrapassam o acesso a serviços, buscando também promover cidadania, dignidade e participação social. Essa conclusão está:",
 
     alternativas: [
-        "Incorreta, pois a política nacional limita-se ao atendimento médico.",
-        "Incorreta, pois a legislação trata exclusivamente da educação.",
+        "Incorreta, pois a política nacional concentra-se ao atendimento médico.",
+        "Incorreta, pois a legislação trata predominantemente da educação.",
         "Correta.",
         "Incorreta, pois cidadania não integra os objetivos da norma.",
         "Incorreta, pois participação social não possui relevância jurídica."
@@ -818,9 +818,9 @@ const tea = [
     alternativas: [
         "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "A promoção da inclusão envolve acesso, permanência, desenvolvimento e participação em igualdade de oportunidades.",
-        "A inclusão profissional restringe-se à contratação inicial, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A pessoa com TEA possui direito apenas ao primeiro acesso ao mercado de trabalho, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "O crescimento profissional depende exclusivamente da ausência de necessidades de apoio, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "A inclusão profissional concentra-se à contratação inicial, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A pessoa com TEA possui direito em geral ao primeiro acesso ao mercado de trabalho, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O crescimento profissional depende predominantemente da ausência de necessidades de apoio, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 1,
@@ -838,9 +838,9 @@ const tea = [
     alternativas: [
         "A exclusão baseada exclusivamente na condição da pessoa pode configurar discriminação.",
         "A recusa é válida quando o curso possui alta complexidade técnica.",
-        "A instituição possui liberdade para selecionar apenas determinados perfis de alunos.",
+        "A instituição possui liberdade para selecionar em geral determinados perfis de alunos.",
         "A qualificação profissional pode ser restringida quando houver necessidade de adaptações.",
-        "A legislação protege apenas o acesso ao ensino regular."
+        "A legislação protege em geral o acesso ao ensino regular."
     ],
 
     correta: 0,
@@ -857,7 +857,7 @@ const tea = [
 
     alternativas: [
         "A afirmação está correta, pois o TEA determina previamente a capacidade profissional da pessoa.",
-        "A distribuição de funções deve ocorrer exclusivamente com base no diagnóstico.",
+        "A distribuição de funções deve ocorrer predominantemente com base no diagnóstico.",
         "As potencialidades individuais devem ser consideradas, evitando estigmas e generalizações.",
         "A especialização profissional é incompatível com o TEA.",
         "A legislação recomenda direcionamento ocupacional obrigatório."
@@ -876,10 +876,10 @@ const tea = [
     pergunta: "Uma candidata concluiu que a inclusão social da pessoa com TEA envolve não apenas acesso a serviços públicos, mas também oportunidades de participação na educação, trabalho, cultura, lazer e vida comunitária. Essa conclusão está:",
 
     alternativas: [
-        "Incorreta, pois a legislação limita-se à saúde e educação.",
+        "Incorreta, pois a legislação concentra-se à saúde e educação.",
         "Incorreta, pois trabalho e lazer não integram o conceito de inclusão.",
         "Incorreta, pois a participação social não constitui objetivo da política nacional.",
-        "Incorreta, pois a legislação trata apenas de atendimento especializado.",
+        "Incorreta, pois a legislação trata em geral de atendimento especializado.",
         "Correta."
     ],
 
@@ -899,7 +899,7 @@ const tea = [
         "Representa simples conflito interpessoal sem relevância para a inclusão, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "É justificável quando houver diferença de rendimento acadêmico, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Pode caracterizar discriminação e violação dos princípios de inclusão e igualdade de oportunidades.",
-        "Deve ser resolvida exclusivamente pela família do estudante, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "Deve ser resolvida predominantemente pela família do estudante, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 3,
@@ -936,9 +936,9 @@ const tea = [
 
     alternativas: [
         "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "O combate ao preconceito depende exclusivamente de atendimento médico, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O combate ao preconceito depende predominantemente de atendimento médico, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A legislação não trata de discriminação ou preconceito, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
-        "O preconceito somente possui relevância quando praticado por agentes públicos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O preconceito normalmente possui relevância quando praticado por agentes públicos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A conscientização social e a promoção da inclusão são instrumentos importantes para proteção dos direitos da pessoa com TEA."
     ],
 
@@ -956,10 +956,10 @@ const tea = [
 
     alternativas: [
         "Correta.",
-        "Incorreta, pois a lei limita-se ao atendimento médico.",
+        "Incorreta, pois a lei concentra-se ao atendimento médico.",
         "Incorreta, pois trabalho e participação social não integram a política nacional.",
         "Incorreta, pois educação e saúde são os únicos direitos previstos.",
-        "Incorreta, pois a legislação trata apenas de crianças e adolescentes."
+        "Incorreta, pois a legislação trata em geral de crianças e adolescentes."
     ],
 
     correta: 0,
@@ -975,11 +975,11 @@ const tea = [
     pergunta: "Após estudar toda a Lei nº 12.764/2012, uma candidata afirmou que seu principal objetivo é promover a proteção dos direitos da pessoa com Transtorno do Espectro Autista, assegurando inclusão social, cidadania, dignidade da pessoa humana, igualdade de oportunidades e participação plena na sociedade. Essa afirmação está:",
 
     alternativas: [
-        "Incorreta, pois a lei possui finalidade exclusivamente terapêutica.",
-        "Incorreta, pois a norma limita-se à regulamentação da educação especial.",
+        "Incorreta, pois a lei possui finalidade predominantemente terapêutica.",
+        "Incorreta, pois a norma concentra-se à regulamentação da educação especial.",
         "Correta.",
-        "Incorreta, pois a legislação trata apenas da emissão da CIPTEA.",
-        "Incorreta, pois a política nacional restringe-se aos serviços públicos de saúde."
+        "Incorreta, pois a legislação trata em geral da emissão da CIPTEA.",
+        "Incorreta, pois a política nacional concentra-se aos serviços públicos de saúde."
     ],
 
     correta: 2,

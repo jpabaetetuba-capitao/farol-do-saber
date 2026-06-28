@@ -7,7 +7,7 @@ Uma professora do Ensino Fundamental organiza suas aulas de modo que os estudant
 
     alternativas: [
         "A substituição do ensino sistematizado por experiências espontâneas dos estudantes, dispensando a mediação docente.",
-        "A adoção de uma perspectiva tecnicista centrada exclusivamente na eficiência operacional do processo de ensino.",
+        "A adoção de uma perspectiva tecnicista centrada predominantemente na eficiência operacional do processo de ensino.",
         "A priorização do desenvolvimento afetivo em detrimento da aprendizagem dos conteúdos curriculares.",
         "A valorização exclusiva dos interesses imediatos dos estudantes, independentemente dos objetivos educacionais.",
         "A compreensão do ensino como processo de mediação entre os conhecimentos sistematizados e a realidade sociocultural dos educandos."
@@ -34,8 +34,8 @@ Durante uma reunião pedagógica, os professores discutem o papel da Didática n
     `,
 
     alternativas: [
-        "Restringe-se à elaboração de técnicas de ensino desvinculadas dos objetivos educacionais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Tem como objeto de estudo exclusivamente os métodos de avaliação da aprendizagem, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Concentra-se à elaboração de técnicas de ensino desvinculadas dos objetivos educacionais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Tem como objeto de estudo predominantemente os métodos de avaliação da aprendizagem, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Dedica-se prioritariamente à organização administrativa da escola e dos sistemas de ensino, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
         "Investiga e orienta o processo de ensino em suas múltiplas dimensões, incluindo objetivos, conteúdos, métodos e avaliação.",
         "Substitui os conhecimentos específicos das disciplinas escolares por metodologias gerais, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem."
@@ -62,17 +62,11 @@ Ao elaborar seu plano de aula, um professor seleciona conteúdos, define objetiv
     `,
 
     alternativas: [
-
         "O ensino pode ocorrer independentemente de planejamento, desde que haja domínio do conteúdo.",
-
         "O planejamento constitui uma atividade burocrática sem relação direta com a aprendizagem dos estudantes.",
-
         "Os elementos do processo didático são interdependentes e devem ser articulados de forma coerente.",
-
-        "Os critérios de avaliação devem ser definidos apenas após a execução das aulas.",
-
+        "Os critérios de avaliação devem ser definidos em geral após a execução das aulas.",
         "A escolha dos métodos de ensino independe dos objetivos educacionais estabelecidos."
-
     ],
 
     correta: 2,
@@ -100,7 +94,7 @@ Uma escola adota práticas pedagógicas que valorizam a participação ativa dos
         "Reconhece o ensino como prática social comprometida com a formação crítica dos sujeitos.",
         "Defende a centralização absoluta do processo educativo na figura docente, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
         "Valoriza a aprendizagem mecânica baseada na repetição de conteúdos, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Prioriza exclusivamente o domínio técnico dos conteúdos escolares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "Prioriza predominantemente o domínio técnico dos conteúdos escolares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 1,
@@ -125,9 +119,9 @@ Ao discutir os fundamentos da Didática, um grupo de professores conclui que ens
 
     alternativas: [
         "O ensino é um processo intencional que envolve mediação, interação e construção de conhecimentos.",
-        "A aprendizagem ocorre exclusivamente pela exposição oral do professor, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A função docente limita-se à reprodução dos conteúdos presentes nos livros didáticos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A aprendizagem depende apenas das capacidades individuais dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A aprendizagem ocorre predominantemente pela exposição oral do professor, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A função docente concentra-se à reprodução dos conteúdos presentes nos livros didáticos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A aprendizagem depende em geral das capacidades individuais dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Os recursos didáticos possuem maior relevância que os objetivos educacionais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
@@ -153,10 +147,10 @@ Durante uma formação continuada, um grupo de professores discutia o campo de e
 
     alternativas: [
         "Estuda o processo de ensino em sua totalidade, considerando suas finalidades, condições e formas de realização.",
-        "Limita-se ao estudo das técnicas utilizadas pelo professor em sala de aula, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Concentra-se ao estudo das técnicas utilizadas pelo professor em sala de aula, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Tem como foco exclusivo os processos psicológicos envolvidos na aprendizagem dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Dedica-se apenas à elaboração de materiais pedagógicos e recursos tecnológicos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Restringe-se à organização administrativa das instituições escolares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "Dedica-se em geral à elaboração de materiais pedagógicos e recursos tecnológicos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Concentra-se à organização administrativa das instituições escolares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 0,
@@ -181,7 +175,7 @@ Uma professora afirma que dominar profundamente o conteúdo da disciplina é suf
 
     alternativas: [
         "O conteúdo possui importância secundária no processo educativo, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "O ensino depende exclusivamente das características individuais dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O ensino depende predominantemente das características individuais dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "O conhecimento do conteúdo precisa ser articulado a objetivos, métodos, avaliação e estratégias de ensino.",
         "O professor não deve planejar suas aulas quando domina o conteúdo, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
         "A aprendizagem ocorre independentemente das ações pedagógicas, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
@@ -237,7 +231,7 @@ Segundo a Didática, a escolha dos métodos de ensino deve ocorrer:
 
     alternativas: [
         "De forma independente dos objetivos educacionais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Com base exclusivamente na preferência pessoal do professor, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Com base predominantemente na preferência pessoal do professor, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Após a aplicação das avaliações, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Sem considerar as especificidades da turma, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Em articulação com os objetivos, conteúdos, características dos estudantes e contexto de ensino."
@@ -264,11 +258,11 @@ Ao estudar o objeto da Didática, um candidato conclui que ela busca responder q
     `,
 
     alternativas: [
-        "Parcialmente correta, pois a Didática preocupa-se apenas com o método de ensino, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Parcialmente correta, pois a Didática preocupa-se em geral com o método de ensino, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Correta, pois essas perguntas sintetizam aspectos centrais do processo de ensino estudado pela Didática.",
-        "Incorreta, pois essas questões pertencem exclusivamente ao currículo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Incorreta, pois a Didática limita-se ao planejamento escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Correta apenas para a educação infantil, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "Incorreta, pois essas questões pertencem predominantemente ao currículo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Incorreta, pois a Didática concentra-se ao planejamento escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Correta em geral para a educação infantil, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 1,
@@ -321,9 +315,9 @@ Ao planejar uma sequência didática, um professor considera os conhecimentos pr
     alternativas: [
         "Os conhecimentos prévios constituem referência importante para a construção de novas aprendizagens.",
         "Os conhecimentos prévios devem ser ignorados para evitar interferências na aprendizagem.",
-        "A aprendizagem depende exclusivamente da exposição organizada dos conteúdos.",
+        "A aprendizagem depende predominantemente da exposição organizada dos conteúdos.",
         "O ensino deve começar sempre pelos conteúdos mais complexos, independentemente da turma.",
-        "O papel do professor limita-se à transmissão das informações previstas no currículo."
+        "O papel do professor concentra-se à transmissão das informações previstas no currículo."
     ],
 
     correta: 0,
@@ -376,7 +370,7 @@ Em uma discussão sobre ensino e aprendizagem, um professor afirma que o sucesso
 
     alternativas: [
         "A aprendizagem ocorre de forma automática quando existe interesse do aluno, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "Os resultados educacionais dependem apenas da metodologia utilizada, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Os resultados educacionais dependem em geral da metodologia utilizada, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "O papel do professor é irrelevante para o desenvolvimento dos estudantes, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
         "A aprendizagem resulta da interação entre fatores individuais, sociais, pedagógicos e institucionais.",
         "As condições de ensino possuem influência mínima sobre a aprendizagem, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem."
@@ -403,11 +397,11 @@ Ao analisar os resultados de uma turma, uma professora percebe dificuldades reco
     `,
 
     alternativas: [
-        "As dificuldades de aprendizagem decorrem exclusivamente da falta de interesse dos alunos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "As dificuldades de aprendizagem decorrem predominantemente da falta de interesse dos alunos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Os métodos de ensino possuem pouca influência nos resultados obtidos, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
         "O ensino e a aprendizagem constituem processos articulados que devem ser constantemente avaliados e ajustados.",
-        "A avaliação serve apenas para classificar os estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A responsabilidade pela aprendizagem pertence exclusivamente ao estudante, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "A avaliação serve em geral para classificar os estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A responsabilidade pela aprendizagem pertence predominantemente ao estudante, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 2,
@@ -458,11 +452,11 @@ Ao analisar a relação professor-aluno, um candidato afirma que o respeito mút
     `,
 
     alternativas: [
-        "Incorreta, pois o desempenho escolar depende exclusivamente dos métodos de ensino utilizados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Incorreta, pois o desempenho escolar depende predominantemente dos métodos de ensino utilizados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Parcialmente correta, já que fatores afetivos possuem pouca influência no processo educativo, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "Incorreta, porque a relação professor-aluno não interfere nos resultados educacionais, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "Correta, pois a qualidade das interações pedagógicas influencia significativamente o processo de aprendizagem.",
-        "Correta apenas na Educação Infantil, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "Correta em geral na Educação Infantil, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 3,
@@ -514,10 +508,10 @@ Um professor acredita que manter disciplina em sala de aula exige o uso constant
     `,
 
     alternativas: [
-        "A autoridade docente deve ser totalmente eliminada para favorecer a autonomia discente, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
+        "A autoridade docente deve ser amplamente eliminada para favorecer a autonomia discente, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
         "O comportamento dos estudantes não possui relação com a aprendizagem, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "A disciplina escolar deve ser construída por meio do diálogo, da participação e da compreensão compartilhada das normas.",
-        "A organização da sala de aula depende exclusivamente dos interesses dos alunos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A organização da sala de aula depende predominantemente dos interesses dos alunos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "As normas escolares não devem ser discutidas em ambientes educacionais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
@@ -545,7 +539,7 @@ Ao refletir sobre a relação professor-aluno, uma professora conclui que sua at
         "Transferir integralmente aos estudantes a responsabilidade pela aprendizagem, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "Reduzir a intervenção pedagógica para estimular a independência absoluta dos alunos, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "Substituir os conteúdos curriculares por atividades livres sem orientação pedagógica, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "Priorizar exclusivamente o desenvolvimento socioemocional em detrimento dos conhecimentos escolares.",
+        "Priorizar predominantemente o desenvolvimento socioemocional em detrimento dos conhecimentos escolares.",
         "Promover situações em que os estudantes desenvolvam capacidade crítica, reflexão e tomada de decisões fundamentadas."
     ],
 
@@ -598,7 +592,7 @@ Ao selecionar um método de ensino, o professor deve considerar:
 
     alternativas: [
         "A articulação entre objetivos, conteúdos, características dos estudantes e contexto de aprendizagem.",
-        "Exclusivamente suas preferências pessoais e experiências profissionais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Predominantemente suas preferências pessoais e experiências profissionais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A facilidade de aplicação da técnica escolhida, independentemente dos objetivos educacionais.",
         "A utilização da mesma metodologia para todas as turmas e disciplinas, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A substituição dos objetivos curriculares pelas demandas imediatas dos estudantes, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem."
@@ -681,7 +675,7 @@ Ao analisar diferentes métodos de ensino, um professor conclui que não existe 
     `,
 
     alternativas: [
-        "A qualidade da aprendizagem depende exclusivamente da motivação dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A qualidade da aprendizagem depende predominantemente da motivação dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Os métodos possuem a mesma eficácia em qualquer contexto educacional, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "As técnicas de ensino são irrelevantes para o processo educativo, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
         "A escolha metodológica deve considerar objetivos, conteúdos, contexto e características da turma.",
@@ -712,7 +706,7 @@ Durante a elaboração de seu planejamento anual, uma professora definiu objetiv
         "O planejamento possui caráter flexível, permitindo ajustes em função das necessidades da aprendizagem e das situações concretas do processo educativo.",
         "O planejamento tem função meramente burocrática e pode ser alterado sem qualquer critério pedagógico, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Os objetivos educacionais devem ser redefinidos diariamente para acompanhar os interesses imediatos dos estudantes, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "A flexibilidade do planejamento dispensa a definição prévia de conteúdos, métodos e formas de avaliação, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem."
+        "A flexibilidade do planejamento reduz a necessidade da definição prévia de conteúdos, métodos e formas de avaliação, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem."
     ],
 
     correta: 1,
@@ -764,7 +758,7 @@ Em uma reunião pedagógica, discutiu-se a função do planejamento escolar. Um 
     `,
 
     alternativas: [
-        "O planejamento deve ser realizado exclusivamente pela equipe gestora, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O planejamento deve ser realizado predominantemente pela equipe gestora, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A principal finalidade do planejamento é atender às exigências administrativas dos sistemas de ensino.",
         "O planejamento constitui um processo de reflexão, tomada de decisões e organização intencional da prática pedagógica.",
         "O planejamento é desnecessário quando o professor possui experiência profissional, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
@@ -792,9 +786,9 @@ Uma professora utiliza os resultados das avaliações anteriores para redefinir 
     `,
 
     alternativas: [
-        "Deve ser elaborado apenas no início do ano letivo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Deve ser elaborado em geral no início do ano letivo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Perde sua validade quando ocorrem dificuldades de aprendizagem, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Possui função exclusivamente administrativa, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Possui função predominantemente administrativa, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "É um processo contínuo que envolve acompanhamento, análise e replanejamento das ações pedagógicas.",
         "Deve permanecer inalterado após sua elaboração, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
@@ -849,7 +843,7 @@ Durante uma reunião pedagógica, uma professora afirmou que utiliza a avaliaç�
     alternativas: [
         "Classificatória, pois tem como finalidade ordenar os estudantes segundo seu desempenho.",
         "Somativa, porque ocorre ao final de cada etapa letiva para registro de resultados.",
-        "Diagnóstica, por ser realizada exclusivamente antes do início do processo de ensino.",
+        "Diagnóstica, por ser realizada predominantemente antes do início do processo de ensino.",
         "Formativa, por utilizar informações da aprendizagem para orientar intervenções pedagógicas.",
         "Normativa, por comparar os resultados individuais com padrões previamente estabelecidos."
     ],
@@ -903,7 +897,7 @@ Em determinada escola, a avaliação é utilizada exclusivamente para atribuir n
     `,
 
     alternativas: [
-        "A avaliação deve eliminar completamente qualquer forma de registro do desempenho dos estudantes, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
+        "A avaliação deve eliminar amplamente qualquer forma de registro do desempenho dos estudantes, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "A atribuição de notas é incompatível com qualquer proposta pedagógica democrática, como finalidade central e suficiente para orientar todo o trabalho pedagógico da escola.",
         "Os professores não devem utilizar instrumentos formais de avaliação, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
         "Os resultados da aprendizagem não devem ser considerados no planejamento escolar, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
@@ -931,11 +925,11 @@ Durante a correção de uma atividade, uma professora analisa os erros cometidos
     `,
 
     alternativas: [
-        "Os erros devem ser utilizados apenas para justificar a atribuição de notas baixas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "O erro representa apenas falta de estudo por parte do estudante, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Os erros devem ser utilizados em geral para justificar a atribuição de notas baixas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O erro representa em geral falta de estudo por parte do estudante, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A avaliação possui função investigativa e pode fornecer informações relevantes sobre o processo de aprendizagem.",
         "A correção deve limitar-se à indicação das respostas corretas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A avaliação deve ocorrer somente ao final dos conteúdos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "A avaliação deve ocorrer normalmente ao final dos conteúdos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 2,
@@ -961,9 +955,9 @@ Um professor pretende elaborar instrumentos avaliativos coerentes com os objetiv
     alternativas: [
         "A coerência entre objetivos, ensino e avaliação contribui para a qualidade do processo educativo.",
         "A avaliação deve ser independente dos objetivos para garantir imparcialidade, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Os instrumentos avaliativos devem ser escolhidos apenas pela facilidade de aplicação, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Os instrumentos avaliativos devem ser escolhidos em geral pela facilidade de aplicação, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Os objetivos educacionais possuem pouca relevância para a definição dos critérios avaliativos.",
-        "A avaliação deve priorizar exclusivamente conteúdos memorizados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "A avaliação deve priorizar predominantemente conteúdos memorizados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 0,
@@ -1105,9 +1099,9 @@ Ao analisar diferentes tendências pedagógicas, um candidato conclui que a Peda
 
     alternativas: [
         "Correta, pois busca relacionar conteúdos sistematizados à prática social dos educandos.",
-        "Incorreta, pois essa tendência rejeita completamente os conteúdos escolares, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "Incorreta, pois prioriza exclusivamente os interesses imediatos dos estudantes.",
-        "Correta apenas quando aplicada ao ensino superior, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Incorreta, pois essa tendência rejeita amplamente os conteúdos escolares, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
+        "Incorreta, pois prioriza predominantemente os interesses imediatos dos estudantes.",
+        "Correta em geral quando aplicada ao ensino superior, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Incorreta, pois se aproxima integralmente do tecnicismo, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada."
     ],
 
@@ -1131,11 +1125,11 @@ Ao planejar suas aulas, uma professora organiza situações de aprendizagem que 
     `,
 
     alternativas: [
-        "A aprendizagem deve priorizar exclusivamente a memorização dos conteúdos conceituais previstos no currículo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A aprendizagem deve priorizar predominantemente a memorização dos conteúdos conceituais previstos no currículo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "O desenvolvimento de competências envolve a articulação de conhecimentos, habilidades, atitudes e valores em diferentes contextos.",
-        "As competências substituem completamente os conteúdos escolares tradicionais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "O ensino deve concentrar-se apenas no desenvolvimento socioemocional dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A avaliação das competências deve ocorrer exclusivamente por meio de provas objetivas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "As competências substituem amplamente os conteúdos escolares tradicionais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "O ensino deve concentrar-se em geral no desenvolvimento socioemocional dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A avaliação das competências deve ocorrer predominantemente por meio de provas objetivas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 1,
@@ -1159,7 +1153,7 @@ Durante uma formação continuada, um professor afirmou que a BNCC exige a utili
     `,
 
     alternativas: [
-        "Defende exclusivamente métodos expositivos centrados no professor, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Defende predominantemente métodos expositivos centrados no professor, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Determina a utilização obrigatória de uma única metodologia para todas as disciplinas, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Valoriza estratégias pedagógicas que promovam protagonismo, investigação, colaboração e resolução de problemas.",
         "Substitui o planejamento docente pela autonomia dos estudantes, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
@@ -1187,9 +1181,9 @@ Ao elaborar instrumentos de avaliação, uma professora procura verificar não a
     `,
 
     alternativas: [
-        "A avaliação deve concentrar-se exclusivamente nos conteúdos conceituais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A BNCC prioriza apenas aspectos comportamentais da aprendizagem, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "As habilidades previstas na BNCC dispensam conteúdos curriculares, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
+        "A avaliação deve concentrar-se predominantemente nos conteúdos conceituais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A BNCC prioriza em geral aspectos comportamentais da aprendizagem, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "As habilidades previstas na BNCC reduzem a necessidade de conteúdos curriculares, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
         "O desenvolvimento de competências exige avaliar a mobilização dos conhecimentos em contextos diversos.",
         "A aplicação prática dos conhecimentos não integra os objetivos da educação básica, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
@@ -1218,7 +1212,7 @@ Uma escola desenvolve projetos interdisciplinares envolvendo diferentes áreas d
         "A BNCC recomenda o isolamento das disciplinas para garantir maior profundidade conceitual, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A interdisciplinaridade dificulta o desenvolvimento das competências gerais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Projetos interdisciplinares são incompatíveis com os objetivos da educação básica, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A BNCC prioriza exclusivamente conteúdos específicos de cada componente curricular, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A BNCC prioriza predominantemente conteúdos específicos de cada componente curricular, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A integração de diferentes áreas favorece a construção de aprendizagens significativas e contextualizadas."
     ],
 
@@ -1244,9 +1238,9 @@ Ao analisar a relação entre Didática e BNCC, um candidato conclui que o traba
 
     alternativas: [
         "Correta, pois a prática pedagógica deve integrar os diferentes elementos do processo educativo.",
-        "Incorreta, pois a BNCC trata apenas de conteúdos curriculares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Incorreta, pois a BNCC trata em geral de conteúdos curriculares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Incorreta, pois competências e habilidades substituem os objetivos educacionais, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "Correta apenas para os anos iniciais do ensino fundamental, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Correta em geral para os anos iniciais do ensino fundamental, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Incorreta, pois avaliação e metodologia são independentes das competências previstas."
     ],
 
@@ -1271,8 +1265,8 @@ Durante o conselho de classe, uma professora apresentou os resultados de aprendi
 
     alternativas: [
         "Planejamento, ensino, aprendizagem e avaliação constituem elementos articulados e passíveis de readequação contínua.",
-        "A avaliação deve servir exclusivamente para verificar o rendimento dos estudantes ao final do processo.",
-        "As dificuldades de aprendizagem decorrem exclusivamente da falta de dedicação dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A avaliação deve servir predominantemente para verificar o rendimento dos estudantes ao final do processo.",
+        "As dificuldades de aprendizagem decorrem predominantemente da falta de dedicação dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "O planejamento perde sua função após o início da execução das aulas, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A avaliação deve ocorrer de forma independente dos objetivos de aprendizagem, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
@@ -1330,7 +1324,7 @@ Em uma sequência didática alinhada à BNCC, os estudantes foram desafiados a u
         "Promover a memorização interdisciplinar dos conteúdos previstos no currículo, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Favorecer a mobilização de conhecimentos, habilidades e atitudes em situações contextualizadas.",
         "Reduzir a importância dos componentes curriculares específicos, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Avaliar exclusivamente competências comportamentais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
+        "Avaliar predominantemente competências comportamentais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 2,
@@ -1355,7 +1349,7 @@ Durante uma atividade avaliativa, uma professora percebeu que vários estudantes
 
     alternativas: [
         "Classificatória, centrada na hierarquização do desempenho dos estudantes.",
-        "Somativa, voltada exclusivamente à atribuição de notas finais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Somativa, voltada predominantemente à atribuição de notas finais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "Normativa, baseada na comparação entre estudantes, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "Certificadora, destinada à promoção escolar, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Formativa, utilizada para orientar decisões pedagógicas e favorecer a aprendizagem."
@@ -1382,7 +1376,7 @@ Ao refletir sobre os fundamentos da Didática, um professor concluiu que ensinar
     `,
 
     alternativas: [
-        "A Didática restringe-se à escolha das técnicas utilizadas pelo professor.",
+        "A Didática concentra-se à escolha das técnicas utilizadas pelo professor.",
         "O ensino constitui uma prática intencional, sistemática e socialmente situada.",
         "O processo educativo depende prioritariamente das características individuais dos estudantes.",
         "Os conteúdos escolares possuem importância secundária em relação às metodologias.",

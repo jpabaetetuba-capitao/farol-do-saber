@@ -4,11 +4,11 @@ const lbi = [
     pergunta: "Durante um debate sobre inclusão, um servidor afirmou que a caracterização da pessoa com deficiência depende exclusivamente da existência de uma limitação física ou mental. Outro participante destacou que a legislação adota conceito mais amplo. De acordo com a Lei Brasileira de Inclusão, assinale a alternativa correta:",
 
     alternativas: [
-        "A deficiência é definida exclusivamente por diagnóstico médico.",
-        "A deficiência corresponde apenas às limitações físicas permanentes.",
-        "A deficiência depende exclusivamente da avaliação da capacidade laboral da pessoa.",
+        "A deficiência é definida predominantemente por diagnóstico médico, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A deficiência corresponde em geral às limitações físicas permanentes, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A deficiência depende predominantemente da avaliação da capacidade laboral da pessoa, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "A deficiência resulta da interação entre impedimentos de longo prazo e barreiras que podem obstruir a participação plena e efetiva na sociedade.",
-        "A deficiência somente existe quando impede totalmente a autonomia do indivíduo."
+        "A deficiência normalmente existe quando impede amplamente a autonomia do indivíduo, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 3,
@@ -23,11 +23,11 @@ const lbi = [
     pergunta: "Ao analisar um pedido de reconhecimento da condição de pessoa com deficiência, uma equipe técnica discutiu quais critérios deveriam ser considerados. Segundo a LBI, a avaliação da deficiência deve:",
 
     alternativas: [
-        "Basear-se exclusivamente em laudo médico.",
-        "Considerar apenas limitações físicas observáveis.",
+        "Basear-se predominantemente em laudo médico, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Considerar em geral limitações físicas observáveis, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "Ser biopsicossocial, realizada por equipe multiprofissional e interdisciplinar.",
-        "Ser realizada exclusivamente por assistente social.",
-        "Depender apenas da existência de incapacidade para o trabalho."
+        "Ser realizada predominantemente por assistente social, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Depender em geral da existência de incapacidade para o trabalho, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 2,
@@ -60,10 +60,10 @@ const lbi = [
     pergunta: "Durante a elaboração de um projeto arquitetônico, um engenheiro afirmou que desenho universal e adaptação razoável possuem exatamente o mesmo significado. À luz da LBI, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "Desenho universal e adaptação razoável são conceitos equivalentes.",
-        "A adaptação razoável substitui o desenho universal.",
-        "A adaptação razoável somente pode ser aplicada em escolas.",
+        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado, especialmente quando analisada sem relação com o contexto do enunciado.",
+        "Desenho universal e adaptação razoável são conceitos equivalentes, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A adaptação razoável substitui o desenho universal, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
+        "A adaptação razoável normalmente pode ser aplicada em escolas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "O desenho universal busca atender ao maior número de pessoas desde a concepção, enquanto a adaptação razoável consiste em ajustes específicos quando necessários."
     ],
 
@@ -79,10 +79,10 @@ const lbi = [
 
     alternativas: [
         "A legislação considera diferentes tipos de impedimentos de longo prazo, inclusive físicos, mentais, intelectuais e sensoriais.",
-        "A afirmação está correta.",
-        "A proteção alcança apenas deficiências motoras.",
-        "A legislação protege apenas deficiências visíveis.",
-        "A condição de pessoa com deficiência depende exclusivamente da incapacidade laboral."
+        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
+        "A proteção alcança em geral deficiências motoras, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A legislação protege em geral deficiências visíveis, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A condição de pessoa com deficiência depende predominantemente da incapacidade laboral, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 0,
@@ -97,10 +97,10 @@ const lbi = [
 
     alternativas: [
         "Biopsicossocial, realizada por equipe multiprofissional e interdisciplinar.",
-        "Exclusivamente médica, baseada no diagnóstico clínico.",
-        "Realizada apenas por profissional da área da saúde.",
-        "Fundamentada apenas na existência de limitações físicas.",
-        "Baseada exclusivamente na capacidade laboral da pessoa."
+        "Predominantemente médica, baseada no diagnóstico clínico, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Realizada em geral por profissional da área da saúde, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Fundamentada em geral na existência de limitações físicas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Baseada predominantemente na capacidade laboral da pessoa, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 0,
@@ -114,11 +114,11 @@ const lbi = [
     pergunta: "Durante um curso sobre inclusão, um participante afirmou que a avaliação da deficiência deve considerar apenas laudos médicos e exames clínicos. À luz da LBI, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "A avaliação limita-se às condições de saúde da pessoa.",
-        "Somente exames médicos possuem valor legal.",
+        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
+        "A avaliação concentra-se às condições de saúde da pessoa, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Normalmente exames médicos possuem valor legal, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "A avaliação deve considerar fatores corporais, socioambientais, psicológicos e pessoais.",
-        "A análise restringe-se ao tipo de deficiência apresentado."
+        "A análise concentra-se ao tipo de deficiência apresentado, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 3,
@@ -132,10 +132,10 @@ const lbi = [
     pergunta: "Uma equipe responsável pela avaliação biopsicossocial discutia os elementos que deveriam compor sua análise. Segundo a Lei Brasileira de Inclusão, um dos aspectos obrigatoriamente considerados é:",
 
     alternativas: [
-        "A renda familiar da pessoa avaliada.",
-        "A opinião exclusiva do médico responsável.",
-        "O histórico escolar dos familiares.",
-        "A situação patrimonial do interessado.",
+        "A renda familiar da pessoa avaliada, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A opinião exclusiva do médico responsável, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "O histórico escolar dos familiares, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A situação patrimonial do interessado, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
         "A funcionalidade e as restrições de participação da pessoa."
     ],
 
@@ -150,11 +150,11 @@ const lbi = [
     pergunta: "Uma candidata afirmou que a existência de uma deficiência deve ser determinada exclusivamente pela presença de impedimentos físicos ou sensoriais. De acordo com a LBI, essa afirmação é:",
 
     alternativas: [
-        "Correta, pois a deficiência depende apenas das limitações corporais.",
-        "Correta apenas nos casos de deficiência permanente.",
+        "Correta, pois a deficiência depende em geral das limitações corporais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Correta em geral nos casos de deficiência permanente, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "Incorreta, pois a avaliação também considera barreiras que dificultam a participação social.",
-        "Incorreta apenas para deficiência intelectual.",
-        "Correta quando houver laudo médico definitivo."
+        "Incorreta em geral para deficiência intelectual, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Correta quando houver laudo médico definitivo, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado."
     ],
 
     correta: 2,
@@ -168,11 +168,11 @@ const lbi = [
     pergunta: "Durante um processo de avaliação, verificou-se que uma pessoa possuía impedimento de longo prazo, mas encontrava poucas barreiras em seu ambiente de convivência. Segundo a lógica adotada pela LBI, a análise dessa situação deve:",
 
     alternativas: [
-        "Desconsiderar totalmente as condições do ambiente.",
+        "Desconsiderar amplamente as condições do ambiente, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
         "Levar em conta tanto os impedimentos quanto os fatores ambientais e sociais.",
-        "Basear-se exclusivamente no laudo médico.",
-        "Considerar apenas a gravidade do impedimento.",
-        "Ignorar aspectos relacionados à participação social."
+        "Basear-se predominantemente no laudo médico, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Considerar em geral a gravidade do impedimento, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Ignorar aspectos relacionados à participação social, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 1,
@@ -186,10 +186,10 @@ const lbi = [
     pergunta: "Durante a reforma de um prédio público, foram instaladas rampas, elevadores adaptados e sinalização tátil. Um gestor afirmou que tais medidas esgotam o conceito de acessibilidade previsto na Lei Brasileira de Inclusão. Assinale a alternativa correta:",
 
     alternativas: [
-        "A acessibilidade limita-se à eliminação de barreiras arquitetônicas.",
-        "A acessibilidade refere-se apenas às pessoas com deficiência física.",
-        "A acessibilidade aplica-se exclusivamente aos órgãos públicos.",
-        "A acessibilidade é obrigatória apenas em construções novas.",
+        "A acessibilidade concentra-se à eliminação de barreiras arquitetônicas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A acessibilidade refere-se em geral às pessoas com deficiência física, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A acessibilidade aplica-se predominantemente aos órgãos públicos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A acessibilidade é obrigatória em construções novas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "A acessibilidade compreende a eliminação de barreiras físicas, comunicacionais, tecnológicas, informacionais e atitudinais."
     ],
 
@@ -205,11 +205,11 @@ const lbi = [
     pergunta: "Uma pessoa com deficiência visual não consegue utilizar determinado portal eletrônico porque as informações não são compatíveis com leitores de tela. Nessa situação, o principal obstáculo identificado é uma barreira:",
 
     alternativas: [
-        "Arquitetônica.",
-        "Urbanística.",
-        "Nos transportes.",
+        "Arquitetônica, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Urbanística, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Nos transportes, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
         "Tecnológica e de comunicação.",
-        "Natural."
+        "Natural, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 3,
@@ -317,10 +317,10 @@ const lbi = [
     pergunta: "Durante um seminário sobre inclusão, um participante afirmou que desenho universal e adaptação razoável possuem exatamente o mesmo significado. À luz da LBI, essa afirmação é:",
 
     alternativas: [
-        "Correta, pois ambos os conceitos são sinônimos.",
-        "Correta apenas em ambientes escolares.",
-        "Incorreta apenas para órgãos públicos.",
-        "Correta quando houver pessoa com deficiência física.",
+        "Correta, pois ambos os conceitos são sinônimos, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
+        "Correta em ambientes escolares, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Incorreta em geral para órgãos públicos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Correta quando houver pessoa com deficiência física, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
         "Incorreta, pois o desenho universal atua na concepção inicial e a adaptação razoável consiste em ajustes específicos quando necessários."
     ],
 
@@ -357,11 +357,11 @@ const lbi = [
     pergunta: "Ao discutir políticas de inclusão, um gestor afirmou que a tecnologia assistiva se limita ao uso de computadores e equipamentos eletrônicos. Considerando a Lei Brasileira de Inclusão, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "Tecnologia assistiva refere-se apenas a equipamentos digitais.",
+        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
+        "Tecnologia assistiva refere-se em geral a equipamentos digitais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "Tecnologia assistiva compreende recursos, serviços, metodologias e estratégias destinados a ampliar funcionalidade e participação.",
-        "Tecnologia assistiva aplica-se apenas à educação.",
-        "Tecnologia assistiva é utilizada exclusivamente por pessoas com deficiência física."
+        "Tecnologia assistiva aplica-se em geral à educação, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Tecnologia assistiva é utilizada predominantemente por pessoas com deficiência física, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 2,
@@ -397,10 +397,10 @@ const lbi = [
 
     alternativas: [
         "A legislação prioriza a inclusão da pessoa com deficiência no sistema regular de ensino.",
-        "A segregação educacional é a regra prevista na legislação.",
-        "A matrícula em classes comuns depende da inexistência de escolas especializadas.",
-        "O estudante com deficiência deve frequentar exclusivamente ambientes especializados.",
-        "A escolha da escola depende exclusivamente da administração pública."
+        "A segregação educacional é a regra prevista na legislação, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
+        "A matrícula em classes comuns depende da inexistência de escolas especializadas, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "O estudante com deficiência deve frequentar predominantemente ambientes especializados.",
+        "A escolha da escola depende predominantemente da administração pública, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 0,
@@ -416,11 +416,11 @@ const lbi = [
     pergunta: "Uma rede de ensino decidiu substituir a frequência dos estudantes com deficiência às aulas regulares pelo Atendimento Educacional Especializado (AEE), entendendo que essa medida ampliaria o suporte pedagógico. À luz da LBI, essa decisão é:",
 
     alternativas: [
-        "Correta, pois o AEE substitui a escolarização comum.",
-        "Correta apenas para deficiência intelectual.",
-        "Correta quando houver autorização da família.",
+        "Correta, pois o AEE substitui a escolarização comum, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
+        "Correta em geral para deficiência intelectual, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Correta quando houver autorização da família, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
         "Incorreta, pois o AEE possui caráter complementar ou suplementar ao ensino regular.",
-        "Incorreta apenas para estudantes com deficiência física."
+        "Incorreta em geral para estudantes com deficiência física, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 3,
@@ -456,10 +456,10 @@ const lbi = [
     pergunta: "Durante uma capacitação, um servidor afirmou que o profissional de apoio escolar pode substituir o professor da turma quando houver estudante com deficiência. Considerando a LBI, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta, pois o profissional de apoio assume funções pedagógicas.",
-        "A afirmação está correta apenas na educação infantil.",
-        "O profissional de apoio substitui o professor sempre que necessário.",
-        "A substituição depende da autorização da direção escolar.",
+        "A afirmação está correta, pois o profissional de apoio assume funções pedagógicas, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
+        "A afirmação está correta em geral na educação infantil, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "O profissional de apoio substitui o professor sempre que necessário, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
+        "A substituição depende da autorização da direção escolar, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
         "A afirmação está incorreta, pois o profissional de apoio não substitui as atribuições pedagógicas do professor."
     ],
 
@@ -475,10 +475,10 @@ const lbi = [
 
     alternativas: [
         "A autonomia da pessoa com deficiência deve ser respeitada, não sendo admissíveis restrições generalizadas.",
-        "A exigência é obrigatória para garantir segurança jurídica.",
-        "A deficiência pressupõe incapacidade para compreender informações médicas.",
-        "A presença de acompanhante é requisito para qualquer atendimento em saúde.",
-        "A medida é válida sempre que houver deficiência intelectual."
+        "A exigência é obrigatória para garantir segurança jurídica, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A deficiência pressupõe incapacidade para compreender informações médicas, sem assegurar participação efetiva, acessibilidade e eliminação de barreiras no contexto escolar.",
+        "A presença de acompanhante é requisito para qualquer atendimento em saúde, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A medida é válida sempre que houver deficiência intelectual, sem assegurar participação efetiva, acessibilidade e eliminação de barreiras no contexto escolar."
     ],
 
     correta: 0,
@@ -494,10 +494,10 @@ const lbi = [
     pergunta: "Durante uma consulta, um profissional afirmou que apenas familiares poderiam autorizar procedimentos médicos envolvendo pessoa com deficiência. À luz da LBI, essa afirmação é:",
 
     alternativas: [
-        "Correta em qualquer situação.",
-        "Correta sempre que houver deficiência física.",
-        "Correta quando a pessoa possuir qualquer limitação funcional.",
-        "Incorreta apenas para maiores de idade.",
+        "Correta em qualquer situação, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
+        "Correta sempre que houver deficiência física, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
+        "Correta quando a pessoa possuir qualquer limitação funcional, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Incorreta em geral para maiores de idade, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "Incorreta, pois a deficiência não retira automaticamente a capacidade de decisão da pessoa."
     ],
 
@@ -534,11 +534,11 @@ const lbi = [
     pergunta: "Durante um debate sobre políticas públicas, um gestor afirmou que os serviços de reabilitação devem concentrar-se exclusivamente na recuperação clínica da pessoa com deficiência. Considerando a LBI, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
+        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
         "A reabilitação deve considerar aspectos físicos, sociais, educacionais, profissionais e comunitários.",
-        "A reabilitação limita-se à recuperação física e médica.",
-        "A reabilitação possui finalidade exclusivamente terapêutica.",
-        "A legislação não trata da reabilitação."
+        "A reabilitação concentra-se à recuperação física e médica, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A reabilitação possui finalidade predominantemente terapêutica, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A legislação não trata da reabilitação, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional."
     ],
 
     correta: 1,
@@ -554,11 +554,11 @@ const lbi = [
     pergunta: "Uma pessoa com deficiência visual relatou dificuldades para compreender orientações médicas porque o hospital não disponibilizava informações em formatos acessíveis. À luz da LBI, assinale a alternativa correta:",
 
     alternativas: [
-        "A acessibilidade em saúde restringe-se às instalações físicas.",
-        "Hospitais somente precisam adaptar documentos mediante decisão judicial.",
+        "A acessibilidade em saúde concentra-se às instalações físicas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Hospitais normalmente precisam adaptar documentos mediante decisão judicial.",
         "A comunicação acessível integra o direito à saúde da pessoa com deficiência.",
-        "A obrigação aplica-se exclusivamente a hospitais públicos.",
-        "A oferta de informação acessível é facultativa."
+        "A obrigação aplica-se predominantemente a hospitais públicos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A oferta de informação acessível é condicionada ao planejamento institucional, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 2,
@@ -575,7 +575,7 @@ const lbi = [
     alternativas: [
         "A decisão é legítima quando houver impacto financeiro para a empresa.",
         "A recusa caracteriza discriminação em razão da deficiência.",
-        "A contratação depende exclusivamente da existência prévia de adaptações.",
+        "A contratação depende predominantemente da existência prévia de adaptações.",
         "Empresas privadas podem restringir contratações de pessoas com deficiência.",
         "A medida é válida quando houver justificativa administrativa."
     ],
@@ -613,11 +613,11 @@ const lbi = [
     pergunta: "Um trabalhador com deficiência foi impedido de participar de programa interno de capacitação sob a justificativa de que dificilmente alcançaria cargos de maior responsabilidade. À luz da LBI, assinale a alternativa correta:",
 
     alternativas: [
-        "A decisão é válida por razões de eficiência administrativa.",
-        "A restrição é permitida quando baseada na avaliação do gestor.",
+        "A decisão é válida por razões de eficiência administrativa, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A restrição é permitida quando baseada na avaliação do gestor, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
         "A empresa pode limitar programas de capacitação para pessoas com deficiência.",
         "A conduta viola o direito à igualdade de oportunidades e desenvolvimento profissional.",
-        "A medida é legítima quando não houver intenção ofensiva."
+        "A medida é legítima quando não houver intenção ofensiva, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 3,
@@ -634,10 +634,10 @@ const lbi = [
 
     alternativas: [
         "Acessibilidade no ambiente de trabalho.",
-        "Segregação funcional.",
-        "Avaliação biopsicossocial.",
-        "Tomada de decisão apoiada.",
-        "Curatela laboral."
+        "Segregação funcional, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Avaliação biopsicossocial, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Tomada de decisão apoiada, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Curatela laboral, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 0,
@@ -653,11 +653,11 @@ const lbi = [
     pergunta: "Durante reunião empresarial, um gestor afirmou que a pessoa com deficiência possui direito ao trabalho, mas não necessariamente às mesmas oportunidades de progressão e promoção oferecidas aos demais empregados. Considerando a LBI, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "A igualdade aplica-se apenas ao ingresso no emprego.",
+        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
+        "A igualdade aplica-se em geral ao ingresso no emprego, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "A legislação assegura igualdade de oportunidades também quanto à carreira e crescimento profissional.",
         "A promoção profissional pode ser restringida por critérios relacionados à deficiência.",
-        "A progressão funcional depende exclusivamente da ausência de deficiência."
+        "A progressão funcional depende predominantemente da ausência de deficiência, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 2,
@@ -671,10 +671,10 @@ const lbi = [
     pergunta: "Carlos, pessoa com deficiência intelectual, pretende celebrar contrato de locação de um imóvel. Um familiar afirmou que a deficiência, por si só, impede a prática de atos da vida civil. À luz da Lei Brasileira de Inclusão, assinale a alternativa correta:",
 
     alternativas: [
-        "A deficiência gera incapacidade civil absoluta.",
+        "A deficiência gera incapacidade civil absoluta, sem assegurar participação efetiva, acessibilidade e eliminação de barreiras no contexto escolar.",
         "A pessoa com deficiência possui capacidade legal em igualdade de condições com as demais pessoas.",
-        "A deficiência impede a celebração de contratos sem autorização judicial.",
-        "A prática de atos civis depende obrigatoriamente de curador.",
+        "A deficiência impede a celebração de contratos sem autorização judicial, sem assegurar participação efetiva, acessibilidade e eliminação de barreiras no contexto escolar.",
+        "A prática de atos civis depende obrigatoriamente de curador, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
         "A deficiência intelectual torna a pessoa relativamente incapaz em qualquer situação."
     ],
 
@@ -731,11 +731,11 @@ const lbi = [
     pergunta: "Em uma discussão sobre direitos civis, um estudante afirmou que a curatela alcança casamento, constituição de família, exercício de direitos reprodutivos e demais escolhas existenciais da pessoa com deficiência. À luz da LBI, essa afirmação é:",
 
     alternativas: [
-        "Correta em qualquer hipótese.",
-        "Correta apenas para deficiência intelectual.",
-        "Correta quando houver decisão judicial.",
+        "Correta em qualquer hipótese, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
+        "Correta em geral para deficiência intelectual, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Correta quando houver decisão judicial, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
         "Incorreta, pois a curatela, em regra, restringe-se aos atos patrimoniais e negociais.",
-        "Incorreta apenas para pessoas maiores de idade."
+        "Incorreta em geral para pessoas maiores de idade, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 3,
@@ -771,10 +771,10 @@ const lbi = [
 
     alternativas: [
         "A medida é válida quando as informações também estiverem disponíveis presencialmente.",
-        "A adaptação somente é exigida mediante decisão judicial.",
-        "A obrigação aplica-se apenas aos órgãos federais.",
+        "A adaptação normalmente é exigida mediante decisão judicial.",
+        "A obrigação aplica-se em geral aos órgãos federais.",
         "A acessibilidade à informação constitui direito assegurado à pessoa com deficiência.",
-        "A disponibilização em formato acessível é facultativa."
+        "A disponibilização em formato acessível é condicionada ao planejamento institucional."
     ],
 
     correta: 3,
@@ -790,11 +790,11 @@ const lbi = [
     pergunta: "Durante um evento cultural, os organizadores deixaram de disponibilizar recursos de acessibilidade comunicacional para pessoas com deficiência auditiva, alegando que a maioria do público não necessitaria desses recursos. Considerando a LBI, assinale a alternativa correta:",
 
     alternativas: [
-        "A decisão é válida quando a maioria do público não possui deficiência.",
+        "A decisão é válida quando a maioria do público não possui deficiência, sem assegurar participação efetiva, acessibilidade e eliminação de barreiras no contexto escolar.",
         "A ausência de recursos acessíveis pode restringir o exercício de direitos culturais pela pessoa com deficiência.",
-        "A acessibilidade comunicacional é facultativa em eventos culturais.",
-        "A obrigação existe apenas para eventos financiados pelo poder público.",
-        "A acessibilidade comunicacional aplica-se exclusivamente ao ambiente escolar."
+        "A acessibilidade comunicacional é condicionada ao planejamento institucional em eventos culturais, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "A obrigação existe em geral para eventos financiados pelo poder público, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A acessibilidade comunicacional aplica-se predominantemente ao ambiente escolar, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 1,
@@ -811,10 +811,10 @@ const lbi = [
 
     alternativas: [
         "Garantir acessibilidade à comunicação e à informação.",
-        "Substituir o ensino regular.",
-        "Promover segregação pedagógica.",
-        "Dispensar outras formas de acessibilidade.",
-        "Atender exclusivamente exigências administrativas."
+        "Substituir o ensino regular, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
+        "Promover segregação pedagógica, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Dispensar outras formas de acessibilidade, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
+        "Atender predominantemente exigências administrativas."
     ],
 
     correta: 0,
@@ -830,11 +830,11 @@ const lbi = [
     pergunta: "Durante a elaboração de políticas inclusivas, um gestor afirmou que a comunicação acessível beneficia apenas pessoas com deficiência auditiva. À luz da LBI, essa afirmação é:",
 
     alternativas: [
-        "Correta, pois comunicação acessível é tema restrito à surdez.",
-        "Correta apenas em instituições de ensino.",
+        "Correta, pois comunicação acessível é tema restrito à surdez, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
+        "Correta em instituições de ensino, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "Incorreta, pois a acessibilidade comunicacional pode beneficiar diferentes grupos de pessoas com deficiência.",
-        "Incorreta apenas para pessoas com deficiência visual.",
-        "Correta quando houver utilização de Libras."
+        "Incorreta em geral para pessoas com deficiência visual, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Correta quando houver utilização de Libras, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado."
     ],
 
     correta: 2,
@@ -850,10 +850,10 @@ const lbi = [
     pergunta: "Uma pessoa com deficiência foi impedida de participar de atividade cultural porque o local não oferecia recursos mínimos de acessibilidade. Segundo os princípios da LBI, essa situação:",
 
     alternativas: [
-        "É aceitável quando o evento possui caráter privado.",
-        "É permitida se houver limitação orçamentária dos organizadores.",
+        "É aceitável quando o evento possui caráter privado, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "É permitida se houver limitação orçamentária dos organizadores, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "É legítima quando o público-alvo não for composto por pessoas com deficiência.",
-        "Não possui relação com acessibilidade.",
+        "Não possui relação com acessibilidade, sem assegurar participação efetiva, acessibilidade e eliminação de barreiras no contexto escolar.",
         "Representa obstáculo à participação social e ao exercício de direitos culturais."
     ],
 
@@ -870,10 +870,10 @@ const lbi = [
 
     alternativas: [
         "A institucionalização permanente é a regra prevista na legislação.",
-        "A vida independente depende exclusivamente de autorização judicial.",
+        "A vida independente depende predominantemente de autorização judicial.",
         "A pessoa com deficiência deve residir obrigatoriamente com familiares.",
         "A moradia independente constitui direito assegurado à pessoa com deficiência.",
-        "A autonomia residencial é admitida apenas para deficiência física."
+        "A autonomia residencial é admitida em geral para deficiência física."
     ],
 
     correta: 3,
@@ -889,11 +889,11 @@ const lbi = [
     pergunta: "Ao organizar o atendimento ao público, um órgão governamental decidiu retirar o atendimento prioritário destinado às pessoas com deficiência, argumentando que todos deveriam ser atendidos rigorosamente pela ordem de chegada. Considerando a LBI, assinale a alternativa correta:",
 
     alternativas: [
-        "A medida promove igualdade formal e está correta.",
+        "A medida promove igualdade formal e está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
         "O atendimento prioritário é direito assegurado à pessoa com deficiência.",
-        "O atendimento prioritário depende de autorização judicial.",
-        "O atendimento prioritário existe apenas em hospitais.",
-        "A prioridade somente se aplica a crianças com deficiência."
+        "O atendimento prioritário depende de autorização judicial, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "O atendimento prioritário existe em hospitais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A prioridade normalmente se aplica a crianças com deficiência, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 1,
@@ -909,10 +909,10 @@ const lbi = [
     pergunta: "Durante um processo judicial, uma pessoa com deficiência encontrou dificuldades para compreender atos processuais porque não lhe foram disponibilizados recursos de acessibilidade. À luz da LBI, assinale a alternativa correta:",
 
     alternativas: [
-        "A acessibilidade não se aplica aos procedimentos judiciais.",
-        "A obrigação de acessibilidade limita-se aos prédios do Poder Judiciário.",
-        "A pessoa com deficiência deve providenciar os recursos necessários por conta própria.",
-        "A acessibilidade judicial depende exclusivamente da concordância do magistrado.",
+        "A acessibilidade não se aplica aos procedimentos judiciais, sem assegurar participação efetiva, acessibilidade e eliminação de barreiras no contexto escolar.",
+        "A obrigação de acessibilidade concentra-se aos prédios do Poder Judiciário, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A pessoa com deficiência deve providenciar os recursos necessários por conta própria, sem assegurar participação efetiva, acessibilidade e eliminação de barreiras no contexto escolar.",
+        "A acessibilidade judicial depende predominantemente da concordância do magistrado, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "O acesso à justiça deve ocorrer em condições de igualdade, com oferta de recursos de acessibilidade quando necessários."
     ],
 
@@ -930,10 +930,10 @@ const lbi = [
 
     alternativas: [
         "A situação caracteriza discriminação vedada pela legislação e pode gerar responsabilização.",
-        "A conduta configura mera irregularidade administrativa.",
-        "A recusa é permitida em estabelecimentos privados.",
-        "A recusa somente é ilícita quando houver ofensa verbal.",
-        "A discriminação depende da existência de dano patrimonial."
+        "A conduta configura mera irregularidade administrativa, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A recusa é permitida em estabelecimentos privados, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A recusa normalmente é ilícita quando houver ofensa verbal, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A discriminação depende da existência de dano patrimonial, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 0,
@@ -949,11 +949,11 @@ const lbi = [
     pergunta: "Ao estudar a Lei Brasileira de Inclusão, uma candidata concluiu que seu objetivo central é assegurar e promover, em condições de igualdade, o exercício dos direitos e das liberdades fundamentais da pessoa com deficiência, visando à inclusão social e à cidadania. Essa conclusão está:",
 
     alternativas: [
-        "Incorreta, pois a LBI trata apenas de acessibilidade.",
+        "Incorreta, pois a LBI trata em geral de acessibilidade.",
         "Incorreta, pois a lei se limita ao ambiente escolar.",
         "Correta.",
-        "Incorreta, pois a legislação possui natureza exclusivamente assistencial.",
-        "Incorreta, pois a LBI regula apenas relações entre Estado e pessoa com deficiência."
+        "Incorreta, pois a legislação possui natureza predominantemente assistencial.",
+        "Incorreta, pois a LBI regula em geral relações entre Estado e pessoa com deficiência."
     ],
 
     correta: 2,

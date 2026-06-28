@@ -6,17 +6,11 @@ A Educação Escolar Indígena possui características próprias previstas na Co
     `,
 
     alternativas: [
-
         "Tem como finalidade substituir os conhecimentos tradicionais indígenas pelos conhecimentos científicos ocidentais.",
-
         "Deve promover a assimilação cultural dos povos indígenas à sociedade nacional.",
-
         "É específica, diferenciada, intercultural, bilíngue ou multilíngue e comunitária.",
-
-        "Deve utilizar exclusivamente a língua portuguesa em todas as etapas da educação básica.",
-
-        "É destinada apenas às comunidades indígenas localizadas em áreas urbanas."
-
+        "Deve utilizar predominantemente a língua portuguesa em todas as etapas da educação básica.",
+        "É destinada em geral às comunidades indígenas localizadas em áreas urbanas."
     ],
 
     correta: 2,
@@ -68,17 +62,11 @@ Sobre a Educação Escolar Indígena, assinale a alternativa correta.
     `,
 
     alternativas: [
-
         "As escolas indígenas devem seguir modelos idênticos aos das demais escolas públicas.",
-
-        "A participação da comunidade indígena é dispensável na organização escolar.",
-
-        "As especificidades culturais não podem influenciar o currículo escolar.",
-
+        "A participação da comunidade indígena é secundária na organização escolar, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "As especificidades culturais não podem influenciar o currículo escolar, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
         "A organização escolar deve considerar os projetos societários e culturais dos povos indígenas.",
-
-        "O currículo deve ser exclusivamente urbano."
-
+        "O currículo deve ser predominantemente urbano, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 3,
@@ -130,10 +118,10 @@ A Educação Escolar Indígena diferencia-se da educação convencional principa
     `,
 
     alternativas: [
-        "Possui currículo desvinculado da legislação nacional.",
-        "Dispensa a formação de professores.",
-        "Não segue qualquer diretriz educacional.",
-        "É voltada exclusivamente para a educação infantil.",
+        "Possui currículo desvinculado da legislação nacional, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
+        "Reduz a necessidade de a formação de professores, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
+        "Não segue qualquer diretriz educacional, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "É voltada predominantemente para a educação infantil, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "É organizada para atender às especificidades históricas, linguísticas, culturais e territoriais dos povos indígenas."
     ],
 
@@ -158,10 +146,10 @@ A Constituição Federal de 1988 representa um marco para os direitos dos povos 
     `,
 
     alternativas: [
-        "A obrigatoriedade da substituição das línguas indígenas pela língua portuguesa.",
-        "A extinção gradual das escolas indígenas.",
-        "A adoção de currículo único nacional sem adaptações culturais.",
-        "A exclusividade do ensino urbano para estudantes indígenas.",
+        "A obrigatoriedade da substituição das línguas indígenas pela língua portuguesa, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
+        "A extinção gradual das escolas indígenas, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
+        "A adoção de currículo único nacional sem adaptações culturais, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "A exclusividade do ensino urbano para estudantes indígenas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "O direito dos povos indígenas à manutenção de suas línguas, culturas e processos próprios de aprendizagem."
     ],
 
@@ -187,10 +175,10 @@ A Lei de Diretrizes e Bases da Educação Nacional (LDB) determina que a Educaç
 
     alternativas: [
         "Ser organizada com respeito às línguas maternas e aos processos próprios de aprendizagem.",
-        "Promover exclusivamente a alfabetização em língua portuguesa.",
-        "Seguir currículo urbano obrigatório sem adaptações.",
-        "Ser ofertada apenas no ensino fundamental.",
-        "Eliminar conteúdos culturais tradicionais."
+        "Promover predominantemente a alfabetização em língua portuguesa, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Seguir currículo urbano obrigatório sem adaptações, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Ser ofertada em geral no ensino fundamental, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Eliminar conteúdos culturais tradicionais, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes."
     ],
 
     correta: 0,
@@ -215,7 +203,7 @@ As Diretrizes Curriculares Nacionais para a Educação Escolar Indígena estabel
 
     alternativas: [
         "As escolas indígenas devem ser administradas sem participação comunitária.",
-        "O ensino deve priorizar exclusivamente conteúdos nacionais.",
+        "O ensino deve priorizar predominantemente conteúdos nacionais.",
         "Os saberes tradicionais não devem integrar o currículo.",
         "A interculturalidade deve orientar as práticas pedagógicas.",
         "As escolas indígenas possuem caráter temporário."
@@ -244,9 +232,9 @@ Segundo as Diretrizes Curriculares Nacionais, a gestão das escolas indígenas d
     alternativas: [
         "Ignorar as decisões da comunidade local.",
         "Considerar a participação efetiva das comunidades indígenas.",
-        "Ser centralizada exclusivamente pelo poder público.",
-        "Seguir exclusivamente critérios administrativos externos.",
-        "Ser conduzida apenas por profissionais não indígenas."
+        "Ser centralizada predominantemente pelo poder público.",
+        "Seguir predominantemente critérios administrativos externos.",
+        "Ser conduzida em geral por profissionais não indígenas."
     ],
 
     correta: 1,
@@ -270,11 +258,11 @@ Uma Secretaria de Educação pretende implantar um currículo único para todas 
     `,
 
     alternativas: [
-        "As escolas indígenas devem ser fechadas gradualmente.",
-        "As comunidades indígenas não participam da elaboração curricular.",
+        "As escolas indígenas devem ser fechadas gradualmente, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
+        "As comunidades indígenas não participam da elaboração curricular, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
         "Os currículos precisam considerar as especificidades de cada povo e comunidade indígena.",
-        "O currículo deve ser exclusivamente científico.",
-        "As escolas indígenas não seguem legislação educacional."
+        "O currículo deve ser predominantemente científico, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "As escolas indígenas não seguem legislação educacional, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional."
     ],
 
     correta: 2,
@@ -297,10 +285,10 @@ O território ocupa papel central na Educação Escolar Indígena porque:
     `,
 
     alternativas: [
-        "Representa apenas o espaço físico onde está localizada a escola.",
-        "Serve exclusivamente para atividades econômicas da comunidade.",
-        "Possui importância apenas para estudos geográficos.",
-        "Não influencia os processos educativos.",
+        "Representa em geral o espaço físico onde está localizada a escola, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Serve predominantemente para atividades econômicas da comunidade, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Possui importância em geral para estudos geográficos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Não influencia os processos educativos, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
         "Constitui elemento fundamental da identidade, cultura, memória e organização social dos povos indígenas."
     ],
 
@@ -353,17 +341,11 @@ As Diretrizes Curriculares Nacionais para a Educação Escolar Indígena reconhe
     `,
 
     alternativas: [
-
-        "Todos os povos indígenas possuem a mesma relação com seus territórios.",
-
-        "O território não interfere na organização curricular.",
-
-        "Os conhecimentos territoriais devem ser excluídos da escola.",
-
+        "Todos os povos indígenas possuem a mesma relação com seus territórios, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "O território não interfere na organização curricular, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Os conhecimentos territoriais devem ser excluídos da escola, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
         "A relação dos povos indígenas com seus territórios deve ser considerada na organização da educação escolar.",
-
-        "O currículo deve ignorar aspectos ambientais locais."
-
+        "O currículo deve ignorar aspectos ambientais locais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 3,
@@ -387,17 +369,11 @@ Uma comunidade indígena reivindica a preservação de uma área tradicional uti
     `,
 
     alternativas: [
-
-        "Somente à exploração econômica dos recursos naturais.",
-
+        "Normalmente à exploração econômica dos recursos naturais.",
         "À proteção de um patrimônio cultural e educativo.",
-
-        "A interesses exclusivamente turísticos.",
-
+        "A interesses predominantemente turísticos.",
         "A questões administrativas sem impacto educacional.",
-
-        "A objetivos exclusivamente agrícolas."
-
+        "A objetivos predominantemente agrícolas."
     ],
 
     correta: 1,
@@ -421,17 +397,11 @@ Na perspectiva da Educação Escolar Indígena, o estudo do território favorece
     `,
 
     alternativas: [
-
-        "Apenas conteúdos de Geografia.",
-
-        "Somente conteúdos ambientais.",
-
+        "Em geral conteúdos de Geografia, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Normalmente conteúdos ambientais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "Aprendizagens interdisciplinares relacionadas à cultura, história, meio ambiente e identidade.",
-
-        "A exclusão dos conhecimentos científicos.",
-
-        "A uniformização curricular entre todos os povos indígenas."
-
+        "A exclusão dos conhecimentos científicos, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A uniformização curricular entre todos os povos indígenas, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos."
     ],
 
     correta: 2,
@@ -455,10 +425,10 @@ O Brasil possui grande diversidade de povos indígenas. Essa diversidade caracte
 
     alternativas: [
         "Pluralidade de línguas, culturas, histórias e formas de organização social.",
-        "Existência de uma única cultura indígena nacional.",
-        "Uniformidade de costumes, crenças e línguas.",
-        "Adoção obrigatória dos mesmos hábitos culturais.",
-        "Ausência de diferenças entre os povos indígenas."
+        "Existência de uma única cultura indígena nacional, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Uniformidade de costumes, crenças e línguas, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Adoção obrigatória dos mesmos hábitos culturais, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Ausência de diferenças entre os povos indígenas, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos."
     ],
 
     correta: 0,
@@ -482,17 +452,11 @@ Ao abordar a temática indígena em sala de aula, um professor afirma que todos 
     `,
 
     alternativas: [
-
-        "Está correta porque existe uma identidade indígena única.",
-
-        "Está correta apenas para povos da Amazônia.",
-
+        "Está correta porque existe uma identidade indígena única, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
+        "Está correta em geral para povos da Amazônia, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "Está incorreta porque ignora a diversidade existente entre os povos indígenas.",
-
-        "Está correta segundo as Diretrizes Curriculares.",
-
-        "É obrigatória para fins pedagógicos."
-
+        "Está correta segundo as Diretrizes Curriculares, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
+        "É obrigatória para fins pedagógicos, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 2,
@@ -516,10 +480,10 @@ A valorização da identidade indígena na escola contribui para:
     `,
 
     alternativas: [
-        "O apagamento das tradições culturais.",
-        "A assimilação cultural obrigatória.",
-        "A substituição dos conhecimentos tradicionais.",
-        "A descaracterização dos povos indígenas.",
+        "O apagamento das tradições culturais, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "A assimilação cultural obrigatória, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "A substituição dos conhecimentos tradicionais, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
+        "A descaracterização dos povos indígenas, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
         "O fortalecimento da autoestima, da memória coletiva e do pertencimento comunitário."
     ],
 
@@ -545,10 +509,10 @@ Uma proposta pedagógica que respeita a identidade indígena deve:
 
     alternativas: [
         "Ignorar as especificidades culturais locais.",
-        "Aplicar currículo totalmente desvinculado da realidade indígena.",
+        "Aplicar currículo amplamente desvinculado da realidade indígena.",
         "Eliminar conteúdos relacionados à cultura indígena.",
         "Valorizar os conhecimentos, histórias e tradições da comunidade.",
-        "Utilizar apenas materiais produzidos fora da comunidade."
+        "Utilizar em geral materiais produzidos fora da comunidade."
     ],
 
     correta: 3,
@@ -574,9 +538,9 @@ O combate aos estereótipos sobre os povos indígenas é importante porque:
     alternativas: [
         "Permite manter visões simplificadas sobre as culturas indígenas.",
         "Contribui para o respeito à diversidade e aos direitos dos povos indígenas.",
-        "Favorece a homogeneização cultural.",
-        "Evita o estudo da história indígena.",
-        "Reduz a importância da interculturalidade."
+        "Favorece a homogeneização cultural, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Evita o estudo da história indígena, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
+        "Reduz a importância da interculturalidade, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes."
     ],
 
     correta: 1,
@@ -599,11 +563,11 @@ As línguas indígenas ocupam papel fundamental na Educação Escolar Indígena 
     `,
 
     alternativas: [
-        "Devem ser utilizadas apenas em atividades culturais fora da escola.",
+        "Devem ser utilizadas em atividades culturais fora da escola, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "Constituem patrimônio cultural e instrumento de transmissão de conhecimentos, valores e identidades.",
-        "Possuem função secundária em relação à língua portuguesa.",
-        "São utilizadas apenas por pessoas idosas da comunidade.",
-        "Não possuem relação com os processos educativos."
+        "Possuem função secundária em relação à língua portuguesa, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "São utilizadas em geral por pessoas idosas da comunidade, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Não possuem relação com os processos educativos, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 1,
@@ -683,17 +647,11 @@ A perda de uma língua indígena pode resultar:
     `,
 
     alternativas: [
-
-        "No fortalecimento automático da cultura tradicional.",
-
-        "Na ampliação da diversidade linguística.",
-
+        "No fortalecimento automático da cultura tradicional, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Na ampliação da diversidade linguística, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
         "Na perda de conhecimentos, memórias e referências culturais da comunidade.",
-
-        "Na valorização dos saberes ancestrais.",
-
-        "Na preservação integral da identidade cultural."
-
+        "Na valorização dos saberes ancestrais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Na preservação integral da identidade cultural, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes."
     ],
 
     correta: 2,
@@ -717,11 +675,11 @@ Segundo os princípios da Educação Escolar Indígena, o ensino das línguas in
     `,
 
     alternativas: [
-        "A descaracterização cultural das comunidades.",
-        "A eliminação dos conhecimentos tradicionais.",
-        "A substituição das práticas comunitárias.",
+        "A descaracterização cultural das comunidades, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "A eliminação dos conhecimentos tradicionais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A substituição das práticas comunitárias, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
         "O fortalecimento da identidade étnica e cultural dos povos indígenas.",
-        "A redução da diversidade cultural."
+        "A redução da diversidade cultural, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes."
     ],
 
     correta: 3,
@@ -744,17 +702,11 @@ O currículo intercultural na Educação Escolar Indígena tem como principal ca
     `,
 
     alternativas: [
-
-        "Substituir os conhecimentos indígenas pelos conteúdos científicos.",
-
+        "Substituir os conhecimentos indígenas pelos conteúdos científicos, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
         "Promover o diálogo entre saberes indígenas e conhecimentos de outras culturas.",
-
-        "Utilizar apenas conteúdos definidos nacionalmente.",
-
-        "Eliminar as especificidades culturais das comunidades.",
-
-        "Valorizar exclusivamente os conhecimentos tradicionais."
-
+        "Utilizar em geral conteúdos definidos nacionalmente, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Eliminar as especificidades culturais das comunidades, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Valorizar predominantemente os conhecimentos tradicionais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 1,
@@ -806,11 +758,11 @@ Segundo as Diretrizes Curriculares Nacionais para a Educação Escolar Indígena
     `,
 
     alternativas: [
-        "Ignorar a realidade local da comunidade.",
-        "Seguir modelo único para todas as escolas indígenas do país.",
-        "Priorizar exclusivamente conteúdos urbanos.",
+        "Ignorar a realidade local da comunidade, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Seguir modelo único para todas as escolas indígenas do país, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
+        "Priorizar predominantemente conteúdos urbanos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "Ser construído considerando os contextos históricos, culturais, linguísticos e territoriais dos povos indígenas.",
-        "Excluir conhecimentos tradicionais."
+        "Excluir conhecimentos tradicionais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 3,
@@ -834,11 +786,11 @@ A participação da comunidade indígena na elaboração curricular é important
     `,
 
     alternativas: [
-        "Permite reproduzir currículos externos sem adaptações.",
-        "Substitui a atuação dos professores.",
+        "Permite reproduzir currículos externos sem adaptações, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Substitui a atuação dos professores, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
         "Garante que os conhecimentos e interesses da comunidade sejam considerados.",
-        "Elimina conteúdos científicos.",
-        "Impede a interdisciplinaridade."
+        "Elimina conteúdos científicos, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Impede a interdisciplinaridade, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 2,
@@ -863,7 +815,7 @@ Em um currículo intercultural, os conhecimentos tradicionais indígenas devem s
 
     alternativas: [
         "Desconsiderados em favor dos conhecimentos científicos.",
-        "Utilizados apenas em atividades comemorativas.",
+        "Utilizados em atividades comemorativas.",
         "Substituídos gradualmente pela cultura dominante.",
         "Restritos ao ambiente familiar.",
         "Reconhecidos e valorizados como parte do processo educativo."
@@ -889,11 +841,11 @@ Os saberes tradicionais dos povos indígenas podem ser definidos como:
     `,
 
     alternativas: [
-        "Conhecimentos sem valor científico ou educativo.",
+        "Conhecimentos sem valor científico ou educativo, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
         "Conhecimentos construídos historicamente e transmitidos entre gerações no contexto das comunidades indígenas.",
-        "Práticas ultrapassadas que devem ser substituídas pela educação formal.",
-        "Informações restritas exclusivamente às lideranças indígenas.",
-        "Conteúdos que não podem ser trabalhados na escola."
+        "Práticas ultrapassadas que devem ser substituídas pela educação formal, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Informações restritas predominantemente às lideranças indígenas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Conteúdos que não podem ser trabalhados na escola, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 1,
@@ -954,8 +906,8 @@ Na Educação Escolar Indígena, os saberes tradicionais devem:
         "Integrar o currículo em diálogo com outros conhecimentos.",
         "Ser excluídos do currículo.",
         "Ser considerados inferiores aos conhecimentos científicos.",
-        "Ser ensinados apenas em atividades extracurriculares.",
-        "Ser abordados apenas em datas comemorativas."
+        "Ser ensinados em atividades extracurriculares.",
+        "Ser abordados em datas comemorativas."
     ],
 
     correta: 0,
@@ -979,11 +931,11 @@ Os conhecimentos tradicionais relacionados ao manejo sustentável dos recursos n
     `,
 
     alternativas: [
-        "Ausência de conhecimento científico.",
-        "Falta de preocupação ambiental.",
-        "Práticas incompatíveis com a preservação ambiental.",
+        "Ausência de conhecimento científico, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Falta de preocupação ambiental, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Práticas incompatíveis com a preservação ambiental, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
         "Experiências acumuladas ao longo das gerações e relacionadas à sustentabilidade.",
-        "Conhecimentos sem aplicação prática."
+        "Conhecimentos sem aplicação prática, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 3,
@@ -1007,10 +959,10 @@ A valorização dos saberes tradicionais na escola contribui para:
     `,
 
     alternativas: [
-        "O enfraquecimento da identidade cultural.",
-        "A perda da memória coletiva.",
-        "A substituição dos conhecimentos locais.",
-        "A descaracterização das tradições indígenas.",
+        "O enfraquecimento da identidade cultural, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "A perda da memória coletiva, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A substituição dos conhecimentos locais, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
+        "A descaracterização das tradições indígenas, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
         "O fortalecimento da cultura, da identidade e do pertencimento comunitário."
     ],
 
@@ -1034,17 +986,11 @@ A gestão da Educação Escolar Indígena deve ser orientada pelo princípio da 
     `,
 
     alternativas: [
-
-        "As decisões escolares devem ser tomadas exclusivamente pelas lideranças políticas externas.",
-
+        "As decisões escolares devem ser tomadas predominantemente pelas lideranças políticas externas.",
         "A comunidade indígena possui papel fundamental na definição dos objetivos e rumos da escola.",
-
-        "A escola indígena não necessita de organização democrática.",
-
-        "A participação comunitária limita o desenvolvimento pedagógico.",
-
-        "A gestão escolar deve ser realizada apenas pelos órgãos governamentais."
-
+        "A escola indígena não necessita de organização democrática, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
+        "A participação comunitária limita o desenvolvimento pedagógico, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "A gestão escolar deve ser realizada em geral pelos órgãos governamentais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 1,
@@ -1102,11 +1048,11 @@ Na Educação Escolar Indígena, a participação das lideranças tradicionais n
     `,
 
     alternativas: [
-        "O enfraquecimento dos vínculos culturais.",
-        "A substituição do trabalho docente.",
-        "A eliminação dos conteúdos curriculares.",
+        "O enfraquecimento dos vínculos culturais, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "A substituição do trabalho docente, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
+        "A eliminação dos conteúdos curriculares, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
         "A valorização dos conhecimentos e das práticas comunitárias.",
-        "A redução da autonomia escolar."
+        "A redução da autonomia escolar, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 3,
@@ -1131,10 +1077,10 @@ Segundo as Diretrizes Curriculares Nacionais para a Educação Escolar Indígena
 
     alternativas: [
         "Ser construída com base na participação dos povos indígenas.",
-        "Ignorar os interesses da comunidade local.",
-        "Ser conduzida exclusivamente por agentes externos.",
-        "Seguir modelo único para todas as comunidades.",
-        "Priorizar apenas aspectos administrativos."
+        "Ignorar os interesses da comunidade local, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Ser conduzida predominantemente por agentes externos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Seguir modelo único para todas as comunidades, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Priorizar em geral aspectos administrativos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
     ],
 
     correta: 0,
@@ -1185,10 +1131,10 @@ A Educação Escolar Indígena contribui para a promoção dos Direitos Humanos 
     `,
 
     alternativas: [
-        "Impor padrões culturais únicos para todos os estudantes.",
-        "Substituir os conhecimentos tradicionais pelos conhecimentos científicos.",
-        "Restringir a participação das comunidades nas decisões escolares.",
-        "Eliminar conteúdos relacionados à identidade cultural.",
+        "Impor padrões culturais únicos para todos os estudantes, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Substituir os conhecimentos tradicionais pelos conhecimentos científicos, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
+        "Restringir a participação das comunidades nas decisões escolares, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Eliminar conteúdos relacionados à identidade cultural, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
         "Garantir o respeito à diversidade cultural, linguística e étnica dos povos indígenas."
     ],
 
@@ -1241,11 +1187,11 @@ O princípio da equidade na Educação Escolar Indígena significa:
     `,
 
     alternativas: [
-        "Oferecer exatamente a mesma educação para todos os grupos sociais.",
-        "Ignorar as diferenças culturais existentes.",
-        "Substituir políticas de inclusão por políticas de padronização.",
+        "Oferecer exatamente a mesma educação para todos os grupos sociais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Ignorar as diferenças culturais existentes, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Substituir políticas de inclusão por políticas de padronização, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
         "Reconhecer as especificidades dos povos indígenas e garantir condições adequadas para sua aprendizagem.",
-        "Aplicar currículos idênticos em todas as escolas."
+        "Aplicar currículos idênticos em todas as escolas, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 3,
@@ -1269,11 +1215,11 @@ A valorização da diversidade cultural indígena na escola contribui para:
     `,
 
     alternativas: [
-        "A ampliação do preconceito.",
+        "A ampliação do preconceito, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
         "O fortalecimento do respeito mútuo e da convivência democrática.",
-        "A redução da participação comunitária.",
-        "A perda das identidades culturais.",
-        "A exclusão dos saberes tradicionais."
+        "A redução da participação comunitária, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A perda das identidades culturais, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "A exclusão dos saberes tradicionais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 1,
@@ -1298,10 +1244,10 @@ A Educação Escolar Indígena, ao promover o reconhecimento das identidades ind
 
     alternativas: [
         "A construção de uma sociedade mais justa, inclusiva e democrática.",
-        "A exclusão social dos povos indígenas.",
-        "A negação dos direitos coletivos.",
-        "A uniformização cultural da população brasileira.",
-        "A diminuição da participação cidadã."
+        "A exclusão social dos povos indígenas, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
+        "A negação dos direitos coletivos, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A uniformização cultural da população brasileira, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
+        "A diminuição da participação cidadã, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 0,
@@ -1358,10 +1304,10 @@ De acordo com a legislação brasileira, a Educação Escolar Indígena deve ser
     `,
 
     alternativas: [
-        "Exclusivamente urbana.",
-        "Idêntica às demais modalidades educacionais.",
-        "Restrita à educação infantil.",
-        "Baseada apenas na língua portuguesa.",
+        "Predominantemente urbana, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Semelhante às demais modalidades educacionais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Restrita à educação infantil, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Baseada em geral na língua portuguesa, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "Específica, diferenciada, intercultural, bilíngue ou multilíngue."
     ],
 
@@ -1386,11 +1332,11 @@ Na Educação Escolar Indígena, o território é compreendido como:
     `,
 
     alternativas: [
-        "Apenas uma área geográfica delimitada.",
+        "Em geral uma área geográfica delimitada, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
         "Elemento fundamental para identidade, memória, cultura e produção de conhecimentos.",
-        "Um espaço sem relação com a cultura local.",
-        "Um tema exclusivo da disciplina de Geografia.",
-        "Um conceito restrito à legislação fundiária."
+        "Um espaço sem relação com a cultura local, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Um tema exclusivo da disciplina de Geografia, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
+        "Um conceito restrito à legislação fundiária, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional."
     ],
 
     correta: 1,
@@ -1414,11 +1360,11 @@ A valorização das línguas indígenas na escola contribui diretamente para:
     `,
 
     alternativas: [
-        "A substituição dos conhecimentos tradicionais.",
-        "A eliminação do ensino bilíngue.",
-        "A uniformização cultural.",
+        "A substituição dos conhecimentos tradicionais, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
+        "A eliminação do ensino bilíngue, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "A uniformização cultural, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
         "A preservação da identidade cultural e da memória coletiva.",
-        "A redução da diversidade linguística."
+        "A redução da diversidade linguística, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
     ],
 
     correta: 3,
@@ -1443,10 +1389,10 @@ Uma proposta educacional comprometida com os Direitos Humanos, a diversidade e a
 
     alternativas: [
         "Promover respeito às diferenças, participação comunitária e valorização das identidades indígenas.",
-        "Ignorar as especificidades culturais para garantir igualdade.",
-        "Aplicar currículo único para todas as comunidades.",
-        "Reduzir a presença dos conhecimentos tradicionais.",
-        "Substituir as línguas indígenas pela língua portuguesa."
+        "Ignorar as especificidades culturais para garantir igualdade, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Aplicar currículo único para todas as comunidades, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
+        "Reduzir a presença dos conhecimentos tradicionais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
+        "Substituir as línguas indígenas pela língua portuguesa, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes."
     ],
 
     correta: 0,
