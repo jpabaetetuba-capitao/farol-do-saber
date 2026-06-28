@@ -140,20 +140,14 @@ Paradoxo = incompatibilidade aparente.
 A figura predominante no trecho é:`,
 
     alternativas: [
-
         "Metáfora, pois os corredores representam simbolicamente a instituição.",
-
-        "Prosopopeia, pois características humanas são atribuídas a elementos inanimados.",
-
         "Hipérbole, pois ocorre exagero relacionado à movimentação do campus.",
-
+        "Prosopopeia, pois características humanas são atribuídas a elementos inanimados.",
         "Metonímia, pois uma parte da universidade substitui o todo institucional.",
-
         "Catacrese, pois há emprego cristalizado de expressão figurada."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -205,20 +199,14 @@ São termos equivalentes.
 A expressão destacada exemplifica:`,
 
     alternativas: [
-
+        "Catacrese, pois utiliza expressão incorporada definitivamente ao uso cotidiano, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Hipérbole, pois exagera o tempo necessário para a realização da obra, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Comparação, pois aproxima duas realidades por meio de semelhança explícita, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "Metonímia, pois substitui a execução concreta do projeto por uma representação figurada.",
-
-        "Catacrese, pois utiliza expressão incorporada definitivamente ao uso cotidiano.",
-
-        "Hipérbole, pois exagera o tempo necessário para a realização da obra.",
-
-        "Comparação, pois aproxima duas realidades por meio de semelhança explícita.",
-
-        "Antonomásia, pois substitui um nome por característica conhecida."
-
+        "Antonomásia, pois substitui um nome por característica conhecida, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -270,20 +258,14 @@ Relação associativa = metonímia.
 A figura predominante no trecho é:`,
 
     alternativas: [
-
         "Hipérbole, pois intensifica os efeitos provocados pela falha do sistema.",
-
         "Eufemismo, pois suaviza os problemas ocorridos durante as inscrições.",
-
-        "Ironia, pois o sentido pretendido é oposto ao significado literal da afirmação.",
-
         "Antítese, pois contrapõe eficiência e indisponibilidade tecnológica.",
-
-        "Paradoxo, pois reúne conceitos logicamente incompatíveis."
-
+        "Paradoxo, pois reúne conceitos logicamente incompatíveis.",
+        "Ironia, pois o sentido pretendido é oposto ao significado literal da afirmação."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -335,17 +317,11 @@ Sentido literal ≠ sentido pretendido
 A figura de linguagem predominante na construção destacada é:`,
 
     alternativas: [
-
         "Prosopopeia, pois atribui características próprias de seres vivos a uma proposta institucional.",
-
-        "Metonímia, pois substitui os gestores pela proposta mencionada no texto.",
-
-        "Hipérbole, pois exagera o período em que a proposta permaneceu sem utilização.",
-
-        "Antítese, pois contrapõe momentos distintos da trajetória administrativa do projeto.",
-
-        "Catacrese, pois utiliza expressão incorporada ao vocabulário técnico."
-
+        "Metonímia, pois substitui os gestores pela proposta mencionada no texto, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
+        "Hipérbole, pois exagera o período em que a proposta permaneceu sem utilização, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Antítese, pois contrapõe momentos distintos da trajetória administrativa do projeto, porque identifica um efeito expressivo possível, mas não o principal recurso usado no trecho.",
+        "Catacrese, pois utiliza expressão incorporada ao vocabulário técnico, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
     correta: 0,
@@ -457,17 +433,11 @@ Polissíndeto = excesso de conectivos.
 A repetição da conjunção produz efeito associado à figura denominada:`,
 
     alternativas: [
-
         "Assíndeto, pois elimina elementos de ligação para acelerar a leitura.",
-
         "Zeugma, pois omite palavras repetidas no interior do período.",
-
         "Polissíndeto, pois repete conectivos para enfatizar a sequência das ações.",
-
-        "Anáfora, pois repete termos exclusivamente no início dos parágrafos.",
-
+        "Anáfora, pois repete termos predominantemente no início dos parágrafos.",
         "Elipse, pois reduz a estrutura sintática para evitar redundâncias."
-
     ],
 
     correta: 2,
@@ -514,20 +484,14 @@ Muitos "e", "ou", "nem" repetidos
 A construção "silêncio barulhento" exemplifica:`,
 
     alternativas: [
-
         "Antítese, pois aproxima conceitos opostos sem produzir incompatibilidade lógica.",
-
-        "Paradoxo, pois reúne ideias aparentemente contraditórias em uma mesma construção.",
-
         "Hipérbole, pois exagera a intensidade do silêncio observado.",
-
         "Metáfora, pois substitui uma ideia concreta por outra abstrata.",
-
+        "Paradoxo, pois reúne ideias aparentemente contraditórias em uma mesma construção.",
         "Ironia, pois expressa sentido contrário ao significado literal."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -577,20 +541,14 @@ Paradoxo → contradição aparente.
 A expressão destacada constitui exemplo de:`,
 
     alternativas: [
-
         "Metonímia, pois substitui um elemento sensorial por outro semanticamente próximo.",
-
-        "Sinestesia, pois associa percepções pertencentes a diferentes sentidos humanos.",
-
         "Catacrese, pois emprega expressão figurada já incorporada ao uso comum.",
-
         "Hipérbole, pois intensifica artificialmente uma sensação percebida.",
-
-        "Comparação, pois aproxima explicitamente duas experiências sensoriais."
-
+        "Comparação, pois aproxima explicitamente duas experiências sensoriais.",
+        "Sinestesia, pois associa percepções pertencentes a diferentes sentidos humanos."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -640,20 +598,14 @@ Cor quente
 Considerando a construção do período, a figura de linguagem predominante é:`,
 
     alternativas: [
-
-        "Anacoluto, pois ocorre ruptura da estrutura sintática inicialmente prevista.",
-
         "Zeugma, pois há omissão de um termo anteriormente expresso e facilmente recuperável pelo contexto.",
-
-        "Elipse, pois a supressão de termos impede a reconstrução completa do sentido.",
-
-        "Assíndeto, pois há enumeração de elementos sem utilização de conectivos.",
-
-        "Metonímia, pois ocorre substituição baseada em relação de proximidade semântica."
-
+        "Anacoluto, pois ocorre ruptura da estrutura sintática inicialmente prevista, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Elipse, pois a supressão de termos impede a reconstrução completa do sentido, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
+        "Assíndeto, pois há enumeração de elementos sem utilização de conectivos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Metonímia, pois ocorre substituição baseada em relação de proximidade semântica, porque identifica um efeito expressivo possível, mas não o principal recurso usado no trecho."
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -766,20 +718,14 @@ Com muitos conectivos → Polissíndeto.
 A figura presente na palavra "Brasília" é:`,
 
     alternativas: [
-
         "Metáfora, pois a cidade é comparada implicitamente ao governo federal.",
-
-        "Metonímia, pois o local é utilizado para representar a instituição nele sediada.",
-
         "Antonomásia, pois um nome próprio substitui uma característica conhecida.",
-
+        "Metonímia, pois o local é utilizado para representar a instituição nele sediada.",
         "Catacrese, pois ocorre emprego figurado já incorporado à língua.",
-
         "Prosopopeia, pois a cidade recebe características humanas."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -837,20 +783,14 @@ Todos são casos clássicos de metonímia.
 A expressão destacada constitui principalmente:`,
 
     alternativas: [
-
-        "Hipérbole, pois exagera o esforço realizado durante a análise.",
-
+        "Hipérbole, pois exagera o esforço realizado durante a análise, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "Catacrese, pois utiliza termo já cristalizado para indicar investigação detalhada.",
-
+        "Metonímia, pois substitui o pesquisador pelos dados analisados, porque identifica um efeito expressivo possível, mas não o principal recurso usado no trecho.",
         "Metáfora, pois transfere para uma atividade intelectual uma ação originalmente física.",
-
-        "Metonímia, pois substitui o pesquisador pelos dados analisados.",
-
-        "Prosopopeia, pois atribui comportamento humano aos dados."
-
+        "Prosopopeia, pois atribui comportamento humano aos dados, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -906,20 +846,14 @@ Explorar conceitos.
 A construção destacada apresenta predominantemente:`,
 
     alternativas: [
-
         "Hipérbole, pois exagera a duração do atraso observado.",
-
         "Antítese, pois contrapõe planejamento e atraso operacional.",
-
-        "Ironia, pois o elogio aparente funciona como forma de crítica.",
-
         "Paradoxo, pois reúne ideias logicamente incompatíveis.",
-
-        "Eufemismo, pois suaviza os problemas ocorridos durante o evento."
-
+        "Eufemismo, pois suaviza os problemas ocorridos durante o evento.",
+        "Ironia, pois o elogio aparente funciona como forma de crítica."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -967,20 +901,14 @@ Elogio aparente + crítica implícita
 O efeito de sentido predominante decorre da figura denominada:`,
 
     alternativas: [
-
-        "Metáfora, pois a circulação da notícia é comparada implicitamente a um deslocamento físico.",
-
         "Hipérbole, pois ocorre exagero intencional para enfatizar a velocidade de propagação.",
-
+        "Metáfora, pois a circulação da notícia é comparada implicitamente a um deslocamento físico.",
         "Metonímia, pois os continentes representam os habitantes que receberam a informação.",
-
         "Ironia, pois o autor questiona a credibilidade da notícia divulgada.",
-
         "Catacrese, pois a expressão já se encontra incorporada ao uso cotidiano."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -1022,20 +950,14 @@ Exagero expressivo = Hipérbole.
 A expressão destacada exemplifica principalmente:`,
 
     alternativas: [
-
         "Metonímia, pois substitui a divulgação da proposta pelo ambiente em que ocorreu.",
-
-        "Catacrese, pois emprega expressão figurada amplamente cristalizada no uso da língua.",
-
         "Metáfora, pois associa o surgimento da proposta à ideia de iluminação ou nascimento.",
-
+        "Catacrese, pois emprega expressão figurada amplamente cristalizada no uso da língua.",
         "Prosopopeia, pois atribui à proposta a capacidade humana de enxergar.",
-
         "Antítese, pois contrapõe obscuridade e visibilidade."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -1081,20 +1003,14 @@ Luz = conhecimento, revelação ou surgimento.
 A sequência destacada produz efeito estilístico associado principalmente a:`,
 
     alternativas: [
-
-        "Assíndeto, pela enumeração construída sem conectivos entre os elementos.",
-
         "Polissíndeto, pela repetição sistemática de conjunções coordenativas.",
-
         "Zeugma, pela omissão de verbos repetidos ao longo da enumeração.",
-
+        "Assíndeto, pela enumeração construída sem conectivos entre os elementos.",
         "Anacoluto, pela ruptura da estrutura sintática inicialmente planejada.",
-
         "Elipse, pela supressão de termos impossíveis de recuperar pelo contexto."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -1140,20 +1056,14 @@ Enumeração sem "e", "ou", "nem"
 A expressão destacada constitui exemplo de:`,
 
     alternativas: [
-
         "Hipérbole, pois exagera a distância percorrida pela pessoa mencionada.",
-
-        "Eufemismo, pois suaviza uma informação potencialmente desagradável.",
-
         "Metonímia, pois o mapa substitui o local onde a pessoa estava.",
-
         "Ironia, pois o autor não acredita que a pessoa realmente tenha partido.",
-
+        "Eufemismo, pois suaviza uma informação potencialmente desagradável.",
         "Paradoxo, pois reúne conceitos incompatíveis na mesma construção."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -1197,20 +1107,14 @@ Atenuar uma ideia desagradável
 A expressão "silêncio áspero" constitui exemplo de:`,
 
     alternativas: [
-
         "Hipérbole, pois amplia artificialmente a intensidade da reação dos presentes.",
-
-        "Sinestesia, pois associa percepções pertencentes a campos sensoriais distintos.",
-
         "Metonímia, pois uma sensação substitui outra semanticamente relacionada.",
-
         "Prosopopeia, pois o silêncio recebe comportamento humano.",
-
-        "Antítese, pois aproxima conceitos semanticamente opostos."
-
+        "Antítese, pois aproxima conceitos semanticamente opostos.",
+        "Sinestesia, pois associa percepções pertencentes a campos sensoriais distintos."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -1260,17 +1164,11 @@ Silêncio áspero.
 A construção destacada exemplifica principalmente:`,
 
     alternativas: [
-
         "Zeugma, pois ocorre omissão de termos anteriormente expressos e facilmente recuperáveis pelo contexto.",
-
-        "Anacoluto, pois a estrutura sintática é interrompida antes de sua conclusão lógica.",
-
-        "Polissíndeto, pois há repetição sistemática de conectivos coordenativos.",
-
-        "Metonímia, pois recursos e prazos representam os responsáveis pela pesquisa.",
-
-        "Paradoxo, pois ideias incompatíveis coexistem na mesma estrutura."
-
+        "Anacoluto, pois a estrutura sintática é interrompida antes de sua conclusão lógica, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Polissíndeto, pois há repetição sistemática de conectivos coordenativos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Metonímia, pois recursos e prazos representam os responsáveis pela pesquisa, porque identifica um efeito expressivo possível, mas não o principal recurso usado no trecho.",
+        "Paradoxo, pois ideias incompatíveis coexistem na mesma estrutura, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
     correta: 0,
@@ -1318,17 +1216,11 @@ Zeugma = repetição evitada.
 A figura predominante na construção é:`,
 
     alternativas: [
-
         "Elipse, pois verbos essenciais foram omitidos sem terem aparecido anteriormente.",
-
         "Zeugma, pois há supressão de verbo anteriormente expresso na mesma estrutura.",
-
-        "Assíndeto, pois inexiste qualquer relação sintática entre os segmentos.",
-
+        "Assíndeto, pois inexiste determinado relação sintática entre os segmentos.",
         "Anacoluto, pois ocorre quebra da construção sintática iniciada.",
-
         "Metáfora, pois respostas, caminhos e soluções são empregados figuradamente."
-
     ],
 
     correta: 1,
@@ -1379,20 +1271,14 @@ Verbo repetido oculto
 A estrutura do período apresenta principalmente:`,
 
     alternativas: [
-
         "Assíndeto, pela ausência de conectivos entre as orações.",
-
-        "Anacoluto, pela ruptura da organização sintática inicialmente estabelecida.",
-
         "Polissíndeto, pela repetição excessiva de elementos coordenativos.",
-
+        "Anacoluto, pela ruptura da organização sintática inicialmente estabelecida.",
         "Metonímia, pela substituição de um termo por outro semanticamente associado.",
-
         "Hipérbole, pela intensificação da discordância expressa pelo emissor."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -1436,20 +1322,14 @@ Quebra sintática
 A construção destacada exemplifica:`,
 
     alternativas: [
-
-        "Antítese, pois apenas aproxima conceitos opostos sem integrá-los.",
-
+        "Antítese, pois em geral aproxima conceitos opostos sem integrá-los, porque identifica um efeito expressivo possível, mas não o principal recurso usado no trecho.",
+        "Ironia, pois o sentido real contradiz amplamente o sentido literal, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
+        "Eufemismo, pois suaviza o impacto da derrota sofrida, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "Paradoxo, pois funde ideias aparentemente contraditórias em uma única expressão.",
-
-        "Ironia, pois o sentido real contradiz completamente o sentido literal.",
-
-        "Eufemismo, pois suaviza o impacto da derrota sofrida.",
-
-        "Hipérbole, pois exagera os efeitos produzidos pela competição."
-
+        "Hipérbole, pois exagera os efeitos produzidos pela competição, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -1495,20 +1375,14 @@ Paradoxo = fusão de opostos.
 A expressão "mestre de Avon" constitui exemplo de:`,
 
     alternativas: [
-
-        "Metonímia, pois substitui a obra pelo autor que a produziu.",
-
-        "Catacrese, pois utiliza expressão figurada incorporada ao uso comum.",
-
-        "Antonomásia (perífrase), pois substitui o nome próprio por uma característica identificadora.",
-
-        "Metáfora, pois estabelece comparação implícita entre autor e mestre.",
-
-        "Prosopopeia, pois atribui ações humanas à literatura."
-
+        "Metonímia, pois substitui a obra pelo autor que a produziu, porque identifica um efeito expressivo possível, mas não o principal recurso usado no trecho.",
+        "Catacrese, pois utiliza expressão figurada incorporada ao uso comum, porque identifica um efeito expressivo possível, mas não o principal recurso usado no trecho.",
+        "Metáfora, pois estabelece comparação implícita entre autor e mestre, porque identifica um efeito expressivo possível, mas não o principal recurso usado no trecho.",
+        "Prosopopeia, pois atribui ações humanas à literatura, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Antonomásia (perífrase), pois substitui o nome próprio por uma característica identificadora."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: `🎉 Excelente!
 
@@ -1556,20 +1430,14 @@ Pessoa famosa identificada por característica ou título
 A repetição do conectivo produz efeito associado principalmente a:`,
 
     alternativas: [
-
-        "Assíndeto, por eliminar conectivos e acelerar o ritmo do texto.",
-
         "Polissíndeto, por reforçar a sucessão e a acumulação das ações apresentadas.",
-
+        "Assíndeto, por eliminar conectivos e acelerar o ritmo do texto.",
         "Zeugma, por omitir termos repetidos ao longo da construção.",
-
         "Anacoluto, por interromper a estrutura sintática originalmente planejada.",
-
         "Hipérbole, por exagerar a quantidade de ações desenvolvidas."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. A repetição intencional da conjunção cria efeito de acumulação e reforça a progressão dos acontecimentos.",
 
@@ -1586,20 +1454,14 @@ A repetição do conectivo produz efeito associado principalmente a:`,
 A expressão 'clique' constitui exemplo de:`,
 
     alternativas: [
-
         "Assonância, por repetir sons vocálicos semelhantes ao longo da frase.",
-
-        "Aliteração, por enfatizar a repetição de consoantes específicas.",
-
         "Onomatopeia, por reproduzir linguisticamente um som associado à realidade.",
-
+        "Aliteração, por enfatizar a repetição de consoantes específicas.",
         "Sinestesia, por combinar percepções auditivas e táteis.",
-
         "Prosopopeia, por atribuir comportamento humano ao objeto."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. A palavra procura reproduzir o som produzido pelo objeto descrito.",
 
@@ -1646,20 +1508,14 @@ O efeito expressivo predominante decorre de:`,
 A expressão destacada exemplifica:`,
 
     alternativas: [
-
-        "Antítese, pois aproxima ideias opostas em segmentos diferentes do texto.",
-
-        "Ironia, pois o sentido pretendido contradiz o sentido literal.",
-
+        "Antítese, pois aproxima ideias opostas em segmentos diferentes do texto, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
+        "Ironia, pois o sentido pretendido contradiz o sentido literal, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
+        "Eufemismo, pois suaviza uma crítica ao relatório apresentado, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "Paradoxo, pois reúne elementos aparentemente incompatíveis dentro da mesma construção.",
-
-        "Eufemismo, pois suaviza uma crítica ao relatório apresentado.",
-
-        "Hipérbole, pois exagera a quantidade de dúvidas produzidas."
-
+        "Hipérbole, pois exagera a quantidade de dúvidas produzidas, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. A expressão combina conceitos aparentemente contraditórios para produzir reflexão.",
 
@@ -1676,20 +1532,14 @@ A expressão destacada exemplifica:`,
 A figura predominante no emprego do verbo 'falaram' é:`,
 
     alternativas: [
-
-        "Prosopopeia, pois atribui ação tipicamente humana a um elemento inanimado.",
-
         "Metonímia, pois os resultados substituem os responsáveis pela pesquisa.",
-
         "Hipérbole, pois exagera a importância dos resultados obtidos.",
-
         "Catacrese, pois utiliza expressão cristalizada pelo uso frequente.",
-
-        "Antítese, pois contrapõe resultados e discursos."
-
+        "Antítese, pois contrapõe resultados e discursos.",
+        "Prosopopeia, pois atribui ação tipicamente humana a um elemento inanimado."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. Os resultados recebem uma capacidade humana, sendo personificados pelo autor.",
 
@@ -1697,7 +1547,4 @@ A figura predominante no emprego do verbo 'falaram' é:`,
 
     dicaBanca: "As bancas costumam empregar prosopopeia em contextos argumentativos, atribuindo ações humanas a conceitos, dados ou instituições."
 
-}
-
-
-];
+}];

@@ -6,20 +6,14 @@ const interpretacao = [
     pergunta: "A argumentação desenvolvida no texto permite concluir que:",
 
     alternativas: [
-
-        "A ampliação do repertório cultural representa consequência secundária do processo de leitura quando comparada à aquisição de informações.",
-
         "A interpretação crítica dos textos assume relevância crescente em contextos caracterizados pela ampla circulação de informações.",
-
+        "A ampliação do repertório cultural representa consequência secundária do processo de leitura quando comparada à aquisição de informações.",
         "A formação cidadã decorre principalmente do acesso a conteúdos informativos produzidos por diferentes meios de comunicação.",
-
         "A construção de sentidos depende prioritariamente do domínio técnico da linguagem utilizada pelo autor do texto.",
-
         "O desenvolvimento do senso crítico ocorre independentemente da capacidade de estabelecer relações entre informações."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. O texto relaciona diretamente a grande circulação de informações à necessidade crescente de compreender, analisar e interpretar textos.",
 
@@ -35,20 +29,14 @@ const interpretacao = [
     pergunta: "A interpretação mais consistente com as informações do texto é que:",
 
     alternativas: [
-
-        "O aumento da frequência decorreu principalmente da ampliação das funções exercidas pela biblioteca junto à comunidade.",
-
         "A elevação do número de usuários resultou da substituição de outras formas de acesso à cultura existentes na cidade.",
-
+        "O aumento da frequência decorreu principalmente da ampliação das funções exercidas pela biblioteca junto à comunidade.",
         "A procura pela biblioteca aumentou em razão do interesse espontâneo da população pelos empréstimos de livros.",
-
         "A realização dos projetos de leitura teve influência limitada sobre a utilização posterior do espaço público.",
-
-        "A biblioteca passou a concentrar suas atividades exclusivamente em ações voltadas para o público estudantil."
-
+        "A biblioteca passou a concentrar suas atividades predominantemente em ações voltadas para o público estudantil."
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: "Correto. O texto sugere que os projetos e atividades desenvolvidos ampliaram a participação da comunidade e fortaleceram o papel social da biblioteca.",
 
@@ -64,17 +52,11 @@ const interpretacao = [
     pergunta: "A posição defendida pelos especialistas fundamenta-se na ideia de que:",
 
     alternativas: [
-
-        "Os benefícios associados ao uso da bicicleta dependem exclusivamente da adesão crescente da população ao modal.",
-
+        "Os benefícios associados ao uso da bicicleta dependem predominantemente da adesão crescente da população ao modal.",
         "A ampliação do número de ciclistas constitui condição suficiente para transformar a mobilidade urbana das cidades.",
-
         "Os impactos positivos da utilização da bicicleta tendem a ser potencializados por ações estruturais e educativas.",
-
         "As campanhas de conscientização apresentam maior relevância que os investimentos em infraestrutura cicloviária.",
-
         "A redução da poluição urbana decorre prioritariamente da adoção de medidas voltadas aos motoristas."
-
     ],
 
     correta: 2,
@@ -93,20 +75,14 @@ const interpretacao = [
     pergunta: "A tese central defendida no texto pode ser expressa adequadamente pela seguinte afirmação:",
 
     alternativas: [
-
         "A comunicação digital tornou-se suficiente para atender às necessidades de interação social da sociedade contemporânea.",
-
         "Os avanços tecnológicos produziram efeitos predominantemente negativos sobre as relações humanas presenciais.",
-
-        "O uso das tecnologias de comunicação deve ocorrer de forma compatível com a preservação das relações interpessoais diretas.",
-
         "As redes sociais representam o estágio mais avançado e completo das formas de comunicação atualmente existentes.",
-
+        "O uso das tecnologias de comunicação deve ocorrer de forma compatível com a preservação das relações interpessoais diretas.",
         "A valorização das relações presenciais exige a redução significativa da utilização de recursos digitais."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. O texto não rejeita a comunicação digital, mas defende sua utilização equilibrada e complementar.",
 
@@ -122,20 +98,14 @@ const interpretacao = [
     pergunta: "Com base na progressão argumentativa do texto, é correto afirmar que:",
 
     alternativas: [
-
-        "O desenvolvimento sustentável resulta da combinação de diferentes fatores, entre os quais se destacam educação e inovação.",
-
-        "A exploração de recursos naturais tornou-se incompatível com qualquer estratégia de crescimento econômico contemporâneo.",
-
+        "A exploração de recursos naturais tornou-se incompatível com determinado estratégia de crescimento econômico contemporâneo.",
         "Os avanços econômicos observados em diferentes países decorreram prioritariamente da qualificação profissional.",
-
         "A melhoria da qualidade de vida representa consequência indireta da inovação tecnológica, independentemente da educação.",
-
-        "Os estudos atuais substituíram completamente as teorias anteriores sobre desenvolvimento econômico regional."
-
+        "Os estudos atuais substituíram amplamente as teorias anteriores sobre desenvolvimento econômico regional.",
+        "O desenvolvimento sustentável resulta da combinação de diferentes fatores, entre os quais se destacam educação e inovação."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. O texto abandona a explicação baseada em um único fator e passa a defender uma visão multifatorial do desenvolvimento.",
 
@@ -152,17 +122,11 @@ const interpretacao = [
     pergunta: "A conclusão mais consistente com a argumentação apresentada é:",
 
     alternativas: [
-
         "A organização dos estudos constitui um fator relevante, embora os resultados acadêmicos sejam influenciados por múltiplas variáveis.",
-
-        "O desempenho escolar depende prioritariamente das condições socioeconômicas dos estudantes.",
-
-        "A motivação individual é suficiente para compensar limitações relacionadas ao contexto educacional.",
-
-        "A existência de uma rotina organizada elimina a influência de fatores externos sobre a aprendizagem.",
-
-        "O acesso a recursos educacionais apresenta impacto reduzido quando comparado aos hábitos de estudo."
-
+        "O desempenho escolar depende prioritariamente das condições socioeconômicas dos estudantes, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "A motivação individual é suficiente para compensar limitações relacionadas ao contexto educacional, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
+        "A existência de uma rotina organizada elimina a influência de fatores externos sobre a aprendizagem, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "O acesso a recursos educacionais apresenta impacto reduzido quando comparado aos hábitos de estudo, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
     correta: 0,
@@ -181,20 +145,14 @@ const interpretacao = [
     pergunta: "Uma inferência compatível com as ideias do texto é que:",
 
     alternativas: [
-
-        "As medidas adotadas até o momento contribuíram para avanços, mas não eliminaram os principais desafios ambientais.",
-
         "As iniciativas de preservação ambiental demonstraram resultados insuficientes para justificar sua continuidade.",
-
+        "As medidas adotadas até o momento contribuíram para avanços, mas não eliminaram os principais desafios ambientais.",
         "O consumo de recursos naturais deixou de representar preocupação para especialistas da área.",
-
-        "A responsabilidade pela preservação ambiental deve ser atribuída exclusivamente ao setor público.",
-
+        "A responsabilidade pela preservação ambiental deve ser atribuída predominantemente ao setor público.",
         "A produção de resíduos tornou-se um problema secundário diante dos demais desafios ambientais."
-
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: "Correto. O texto reconhece avanços, mas ressalta a permanência de desafios importantes.",
 
@@ -210,20 +168,14 @@ const interpretacao = [
     pergunta: "A finalidade predominante do texto é:",
 
     alternativas: [
-
         "Defender a substituição de tecnologias tradicionais por sistemas de inteligência artificial.",
-
+        "Demonstrar que os benefícios da inteligência artificial superam determinado preocupação existente.",
         "Apresentar um panorama de transformações tecnológicas e discutir algumas implicações contemporâneas.",
-
-        "Demonstrar que os benefícios da inteligência artificial superam qualquer preocupação existente.",
-
         "Convencer o leitor de que os avanços tecnológicos devem ser limitados por regulamentações rigorosas.",
-
         "Criticar os impactos provocados pelas invenções que marcaram diferentes períodos históricos."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: "Correto. O texto possui caráter predominantemente expositivo e informativo.",
 
@@ -239,20 +191,14 @@ const interpretacao = [
     pergunta: "A tese sustentada pelo texto pode ser sintetizada pela afirmação de que:",
 
     alternativas: [
-
         "A produção científica perde relevância quando associada a preocupações éticas e sociais.",
-
         "O conhecimento científico gera benefícios automáticos independentemente da forma como é utilizado.",
-
-        "O impacto positivo da ciência depende não apenas da produção de conhecimento, mas também de sua utilização responsável.",
-
         "O acesso aos resultados científicos deve ser restrito a especialistas para evitar interpretações equivocadas.",
-
+        "O impacto positivo da ciência depende não apenas da produção de conhecimento, mas também de sua utilização responsável.",
         "O progresso científico apresenta importância limitada diante de outros fatores de transformação social."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. O texto diferencia a produção do conhecimento de sua efetiva aplicação em benefício da sociedade.",
 
@@ -268,20 +214,14 @@ const interpretacao = [
     pergunta: "A progressão das ideias do texto permite concluir que:",
 
     alternativas: [
-
         "A ampliação do acesso à informação reduziu a necessidade de desenvolver competências analíticas.",
-
         "A abundância de informações torna dispensáveis mecanismos de verificação e seleção de conteúdo.",
-
         "A principal dificuldade contemporânea está associada à escassez de informações confiáveis disponíveis.",
-
-        "O desenvolvimento do pensamento crítico constitui resposta às exigências impostas pelo excesso de informações.",
-
-        "A formação cidadã depende prioritariamente da capacidade de acessar plataformas digitais de comunicação."
-
+        "A formação cidadã depende prioritariamente da capacidade de acessar plataformas digitais de comunicação.",
+        "O desenvolvimento do pensamento crítico constitui resposta às exigências impostas pelo excesso de informações."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: "Correto. O texto relaciona diretamente o excesso de informações à necessidade de pensamento crítico.",
 
@@ -326,20 +266,14 @@ const interpretacao = [
     pergunta: "A posição defendida pelos especialistas fundamenta-se na ideia de que:",
 
     alternativas: [
-
         "Os resultados educacionais independem das características dos alunos e do contexto escolar.",
-
-        "Uma metodologia eficiente em determinado cenário tende a produzir resultados idênticos em qualquer realidade.",
-
         "A diversidade de contextos exige adaptações das práticas pedagógicas às necessidades dos estudantes.",
-
-        "A aprendizagem depende exclusivamente da metodologia adotada pelo professor.",
-
+        "Uma metodologia eficiente em determinado cenário tende a produzir resultados idênticos em determinado realidade.",
+        "A aprendizagem depende predominantemente da metodologia adotada pelo professor.",
         "As diferenças existentes entre os estudantes possuem impacto reduzido sobre os processos de aprendizagem."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. O texto destaca a necessidade de adequação das práticas pedagógicas às diferentes realidades.",
 
@@ -384,20 +318,14 @@ const interpretacao = [
     pergunta: "A preocupação central apresentada pelo texto está relacionada:",
 
     alternativas: [
-
         "à substituição gradual dos meios tradicionais de comunicação pelas plataformas digitais.",
-
-        "ao crescimento da circulação de conteúdos sem avaliação adequada de sua confiabilidade.",
-
         "à dificuldade de produção de informações em ambientes digitais contemporâneos.",
-
         "à redução da velocidade de circulação das notícias nos meios eletrônicos.",
-
+        "ao crescimento da circulação de conteúdos sem avaliação adequada de sua confiabilidade.",
         "à limitação do acesso da população aos recursos tecnológicos disponíveis."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: "Correto. O texto enfatiza os riscos associados à circulação de informações sem análise crítica.",
 
@@ -413,20 +341,14 @@ const interpretacao = [
     pergunta: "A conclusão da direção da empresa demonstra uma postura:",
 
     alternativas: [
-
         "favorável à substituição definitiva do trabalho presencial pelo remoto.",
-
-        "contrária à manutenção de qualquer modalidade de trabalho a distância.",
-
-        "equilibrada, ao reconhecer simultaneamente benefícios e limitações do modelo adotado.",
-
-        "centrada exclusivamente nas dificuldades relatadas pelos colaboradores.",
-
-        "baseada na convicção de que a flexibilidade de horários compensa todos os demais problemas."
-
+        "contrária à manutenção de determinado modalidade de trabalho a distância.",
+        "centrada predominantemente nas dificuldades relatadas pelos colaboradores.",
+        "baseada na convicção de que a flexibilidade de horários compensa todos os demais problemas.",
+        "equilibrada, ao reconhecer simultaneamente benefícios e limitações do modelo adotado."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. A conclusão considera aspectos positivos e negativos do trabalho remoto.",
 
@@ -441,20 +363,14 @@ const interpretacao = [
     pergunta: "A defesa do incentivo contínuo à leitura fundamenta-se principalmente na ideia de que:",
 
     alternativas: [
-
-        "os benefícios da leitura restringem-se ao aprimoramento das habilidades exigidas no ambiente escolar.",
-
         "a leitura contribui para o desenvolvimento de competências intelectuais e sociais relevantes ao longo da vida.",
-
+        "os benefícios da leitura concentram-se ao aprimoramento das habilidades exigidas no ambiente escolar.",
         "o contato com diferentes perspectivas torna desnecessária a vivência de experiências concretas.",
-
-        "a formação da empatia depende exclusivamente da prática constante da leitura.",
-
+        "a formação da empatia depende predominantemente da prática constante da leitura.",
         "a capacidade de argumentação apresenta importância secundária em comparação ao desempenho acadêmico."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. O texto destaca benefícios que ultrapassam o contexto escolar, justificando o incentivo permanente à leitura.",
 
@@ -470,17 +386,11 @@ const interpretacao = [
     pergunta: "A progressão argumentativa do texto permite inferir que:",
 
     alternativas: [
-
         "as ações individuais possuem capacidade limitada para influenciar questões ambientais.",
-
         "a responsabilidade ambiental deve ser compartilhada entre diferentes agentes sociais.",
-
         "as conferências internacionais representam o principal mecanismo de preservação ambiental.",
-
         "as empresas exercem papel menos relevante que os indivíduos na proteção ambiental.",
-
-        "a redução dos impactos ambientais depende exclusivamente de mudanças legislativas."
-
+        "a redução dos impactos ambientais depende predominantemente de mudanças legislativas."
     ],
 
     correta: 1,
@@ -528,20 +438,14 @@ const interpretacao = [
     pergunta: "A distinção estabelecida pelo texto entre informação e conhecimento baseia-se na ideia de que:",
 
     alternativas: [
-
         "o acesso à informação constitui condição suficiente para a aprendizagem significativa.",
-
-        "a construção do conhecimento exige processos de análise e interpretação das informações disponíveis.",
-
         "as tecnologias digitais reduziram a importância das capacidades cognitivas relacionadas à aprendizagem.",
-
         "a oralidade e a escrita deixaram de exercer influência sobre a formação do conhecimento humano.",
-
+        "a construção do conhecimento exige processos de análise e interpretação das informações disponíveis.",
         "a circulação de informações apresenta relevância superior aos processos de reflexão crítica."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: "Correto. O texto diferencia claramente o acesso à informação da efetiva construção do conhecimento.",
 
@@ -557,27 +461,18 @@ const interpretacao = [
     pergunta: "A tese defendida pelo texto pode ser adequadamente resumida pela afirmação de que:",
 
     alternativas: [
-
-        "a cidadania resulta exclusivamente do conhecimento das normas que regulam a vida em sociedade.",
-
+        "a cidadania resulta predominantemente do conhecimento das normas que regulam a vida em sociedade.",
         "a observância das regras sociais independe das experiências vividas pelos indivíduos.",
-
-        "a formação cidadã envolve conhecimentos, valores e atitudes relacionados à convivência social.",
-
         "o respeito às normas representa consequência automática da educação formal recebida pelos cidadãos.",
-
-        "a participação social possui relevância secundária nos processos de formação cidadã."
-
+        "a participação social possui relevância secundária nos processos de formação cidadã.",
+        "a formação cidadã envolve conhecimentos, valores e atitudes relacionados à convivência social."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. O texto amplia o conceito de formação cidadã para além da simples transmissão de informações.",
 
     feedbackErro: "A resposta correta deve considerar todos os elementos apontados pelo autor como constitutivos da cidadania.",
 
     dicaBanca: "Em questões sobre tese, procure a alternativa que sintetiza a mensagem central defendida pelo texto."
-}
-
-
-];
+}];

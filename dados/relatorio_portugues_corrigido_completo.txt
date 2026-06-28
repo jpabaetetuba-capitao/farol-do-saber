@@ -1,0 +1,67 @@
+RELATÓRIO - PORTUGUÊS CORRIGIDO COMPLETO
+
+Correções realizadas:
+- Redistribuição das respostas corretas A/B/C/D/E.
+- Reordenação das alternativas, preservando a alternativa correta real.
+- Redução de pistas por tamanho da alternativa correta.
+- Remoção/neutralização de palavras-pista nas alternativas erradas.
+- Perguntas, explicações, feedbacks e dicas preservados.
+
+RESUMO FINAL
+Arquivos corrigidos: 15
+Questões: 650
+Distribuição final: A=130 | B=130 | C=130 | D=130 | E=130
+Suspeitas por tamanho após correção: 0
+Palavras-pista em alternativas erradas após correção: 0
+Arquivos com erro de sintaxe: Nenhum
+
+POR ARQUIVO
+acentuacao.js: Questões=50 | A=10 B=10 C=10 D=10 E=10 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+classesPalavras.js: Questões=50 | A=10 B=10 C=10 D=10 E=10 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+coesao.js: Questões=30 | A=6 B=6 C=6 D=6 E=6 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+concordancia.js: Questões=50 | A=10 B=10 C=10 D=10 E=10 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+crase.js: Questões=50 | A=10 B=10 C=10 D=10 E=10 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+figuras.js: Questões=30 | A=6 B=6 C=6 D=6 E=6 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+formacaoPalavras.js: Questões=50 | A=10 B=10 C=10 D=10 E=10 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+funcoes.js: Questões=30 | A=6 B=6 C=6 D=6 E=6 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+generos.js: Questões=40 | A=8 B=8 C=8 D=8 E=8 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+interpretacao.js: Questões=20 | A=4 B=4 C=4 D=4 E=4 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+pontuacao.js: Questões=50 | A=10 B=10 C=10 D=10 E=10 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+regencia.js: Questões=50 | A=10 B=10 C=10 D=10 E=10 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+sintaxe.js: Questões=50 | A=10 B=10 C=10 D=10 E=10 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+variacao.js: Questões=50 | A=10 B=10 C=10 D=10 E=10 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+vozesVerbais.js: Questões=50 | A=10 B=10 C=10 D=10 E=10 | Suspeitas tamanho=0 | Palavras-pista erradas=0 | Sintaxe=OK
+
+DETALHES DE REORDENAÇÃO
+acentuacao.js: antes=[50, 0, 0, 0, 0] | depois=[10, 10, 10, 10, 10] | questões reordenadas=40
+classesPalavras.js: antes=[50, 0, 0, 0, 0] | depois=[10, 10, 10, 10, 10] | questões reordenadas=40
+coesao.js: antes=[3, 6, 15, 6, 0] | depois=[6, 6, 6, 6, 6] | questões reordenadas=25
+concordancia.js: antes=[50, 0, 0, 0, 0] | depois=[10, 10, 10, 10, 10] | questões reordenadas=40
+crase.js: antes=[50, 0, 0, 0, 0] | depois=[10, 10, 10, 10, 10] | questões reordenadas=40
+figuras.js: antes=[6, 15, 9, 0, 0] | depois=[6, 6, 6, 6, 6] | questões reordenadas=21
+formacaoPalavras.js: antes=[50, 0, 0, 0, 0] | depois=[10, 10, 10, 10, 10] | questões reordenadas=40
+funcoes.js: antes=[5, 10, 7, 7, 1] | depois=[6, 6, 6, 6, 6] | questões reordenadas=23
+generos.js: antes=[20, 12, 5, 2, 1] | depois=[8, 8, 8, 8, 8] | questões reordenadas=31
+interpretacao.js: antes=[5, 6, 8, 1, 0] | depois=[4, 4, 4, 4, 4] | questões reordenadas=14
+pontuacao.js: antes=[50, 0, 0, 0, 0] | depois=[10, 10, 10, 10, 10] | questões reordenadas=40
+regencia.js: antes=[50, 0, 0, 0, 0] | depois=[10, 10, 10, 10, 10] | questões reordenadas=40
+sintaxe.js: antes=[50, 0, 0, 0, 0] | depois=[10, 10, 10, 10, 10] | questões reordenadas=40
+variacao.js: antes=[50, 0, 0, 0, 0] | depois=[10, 10, 10, 10, 10] | questões reordenadas=40
+vozesVerbais.js: antes=[50, 0, 0, 0, 0] | depois=[10, 10, 10, 10, 10] | questões reordenadas=40
+
+DETALHES DE AJUSTES DE TAMANHO/PALAVRAS-PISTA
+acentuacao.js: suspeitas antes=1 depois=0 | pistas erradas antes=0 depois=0 | questões ajustadas=1 | alternativas ajustadas=4
+classesPalavras.js: suspeitas antes=13 depois=0 | pistas erradas antes=0 depois=0 | questões ajustadas=13 | alternativas ajustadas=52
+coesao.js: suspeitas antes=7 depois=0 | pistas erradas antes=0 depois=0 | questões ajustadas=7 | alternativas ajustadas=28
+concordancia.js: suspeitas antes=0 depois=0 | pistas erradas antes=9 depois=0 | questões ajustadas=9 | alternativas ajustadas=9
+crase.js: suspeitas antes=0 depois=0 | pistas erradas antes=10 depois=0 | questões ajustadas=10 | alternativas ajustadas=10
+figuras.js: suspeitas antes=8 depois=0 | pistas erradas antes=4 depois=0 | questões ajustadas=10 | alternativas ajustadas=35
+formacaoPalavras.js: suspeitas antes=2 depois=0 | pistas erradas antes=11 depois=0 | questões ajustadas=13 | alternativas ajustadas=19
+funcoes.js: suspeitas antes=6 depois=0 | pistas erradas antes=0 depois=0 | questões ajustadas=6 | alternativas ajustadas=24
+generos.js: suspeitas antes=10 depois=0 | pistas erradas antes=7 depois=0 | questões ajustadas=15 | alternativas ajustadas=46
+interpretacao.js: suspeitas antes=1 depois=0 | pistas erradas antes=14 depois=0 | questões ajustadas=11 | alternativas ajustadas=18
+pontuacao.js: suspeitas antes=0 depois=0 | pistas erradas antes=0 depois=0 | questões ajustadas=0 | alternativas ajustadas=0
+regencia.js: suspeitas antes=0 depois=0 | pistas erradas antes=0 depois=0 | questões ajustadas=0 | alternativas ajustadas=0
+sintaxe.js: suspeitas antes=13 depois=0 | pistas erradas antes=13 depois=0 | questões ajustadas=14 | alternativas ajustadas=65
+variacao.js: suspeitas antes=24 depois=0 | pistas erradas antes=103 depois=0 | questões ajustadas=50 | alternativas ajustadas=126
+vozesVerbais.js: suspeitas antes=0 depois=0 | pistas erradas antes=2 depois=0 | questões ajustadas=2 | alternativas ajustadas=2

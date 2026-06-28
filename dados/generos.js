@@ -6,20 +6,14 @@ const generos = [
     pergunta: "Considerando a organização textual e os recursos linguísticos empregados, é correto afirmar que o trecho apresenta predominância:",
 
     alternativas: [
-
-        "narrativa, pois os acontecimentos são organizados em sequência temporal envolvendo mudanças progressivas no cenário.",
-
         "descritiva, pois o foco recai sobre a caracterização sensorial dos elementos que compõem a paisagem apresentada.",
-
+        "narrativa, pois os acontecimentos são organizados em sequência temporal envolvendo mudanças progressivas no cenário.",
         "argumentativa, pois o autor procura valorizar subjetivamente os aspectos observados no ambiente natural.",
-
         "injuntiva, pois conduz o leitor à observação detalhada dos componentes da cena retratada.",
-
         "expositiva, pois apresenta informações objetivas acerca de fenômenos naturais observáveis."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. O trecho concentra-se na caracterização do ambiente por meio de imagens visuais e sensoriais, característica típica da descrição.",
 
@@ -34,20 +28,14 @@ const generos = [
     pergunta: "A finalidade predominante do trecho permite classificá-lo como um texto:",
 
     alternativas: [
-
         "argumentativo, por defender explicitamente medidas de combate à poluição causada por resíduos plásticos.",
-
-        "injuntivo, por orientar o leitor quanto às formas adequadas de descarte de materiais recicláveis.",
-
-        "descritivo, por caracterizar detalhadamente os danos ambientais produzidos pelo plástico.",
-
         "expositivo, por apresentar informações e dados com finalidade prioritariamente informativa.",
-
+        "injuntivo, por orientar o leitor quanto às formas adequadas de descarte de materiais recicláveis.",
+        "descritivo, por caracterizar detalhadamente os danos ambientais produzidos pelo plástico.",
         "narrativo, por relatar acontecimentos relacionados ao descarte de resíduos em diferentes contextos."
-
     ],
 
-    correta: 3,
+    correta: 1,
 
     feedbackAcerto: "Correto. O texto apresenta informações e dados sobre determinado tema sem buscar convencer diretamente o leitor ou orientá-lo quanto a procedimentos específicos.",
 
@@ -62,20 +50,14 @@ const generos = [
     pergunta: "A predominância argumentativa do texto decorre principalmente do fato de que:",
 
     alternativas: [
-
+        "o texto descreve os principais comportamentos observados entre usuários de ambientes digitais, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
+        "a organização textual concentra-se na caracterização das notícias falsas e de seus impactos sociais, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "o autor apresenta informações sobre a internet e utiliza essas informações para sustentar uma conclusão defendida ao final do texto.",
-
-        "o texto descreve os principais comportamentos observados entre usuários de ambientes digitais.",
-
-        "a organização textual concentra-se na caracterização das notícias falsas e de seus impactos sociais.",
-
-        "o autor relata acontecimentos históricos relacionados à evolução da comunicação digital.",
-
-        "a exposição de conceitos técnicos substitui a necessidade de manifestação de posicionamento."
-
+        "o autor relata acontecimentos históricos relacionados à evolução da comunicação digital, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "a exposição de conceitos técnicos substitui a necessidade de manifestação de posicionamento, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. O autor apresenta uma ideia inicial e a utiliza para sustentar a necessidade do desenvolvimento do senso crítico.",
 
@@ -90,20 +72,14 @@ const generos = [
     pergunta: "O texto apresentado exemplifica predominantemente a tipologia:",
 
     alternativas: [
-
         "argumentativa, por demonstrar as vantagens de manter sistemas atualizados.",
-
         "expositiva, por explicar o funcionamento interno do software utilizado.",
-
         "descritiva, por caracterizar os recursos disponíveis no equipamento.",
-
-        "narrativa, por relatar as etapas normalmente observadas durante atualizações de sistema.",
-
-        "injuntiva, por apresentar orientações organizadas para a execução de uma tarefa."
-
+        "injuntiva, por apresentar orientações organizadas para a execução de uma tarefa.",
+        "narrativa, por relatar as etapas normalmente observadas durante atualizações de sistema."
     ],
 
-    correta: 4,
+    correta: 3,
 
     feedbackAcerto: "Correto. O texto orienta o leitor quanto aos procedimentos necessários para realizar determinada ação.",
 
@@ -118,20 +94,14 @@ const generos = [
     pergunta: "Embora apresente elementos descritivos, o texto é predominantemente narrativo porque:",
 
     alternativas: [
-
-        "os aspectos visuais do ambiente recebem destaque superior às ações realizadas pelo personagem.",
-
-        "a caracterização do cenário constitui a finalidade principal da construção textual.",
-
-        "a sequência textual organiza-se em torno das ações praticadas por um personagem em determinado contexto temporal.",
-
-        "os elementos descritivos impedem a classificação do texto como predominantemente descritivo.",
-
-        "a ambientação apresentada substitui a necessidade de desenvolvimento de acontecimentos."
-
+        "os aspectos visuais do ambiente recebem destaque superior às ações realizadas pelo personagem, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "a caracterização do cenário constitui a finalidade principal da construção textual, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "os elementos descritivos impedem a classificação do texto como predominantemente descritivo, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
+        "a ambientação apresentada substitui a necessidade de desenvolvimento de acontecimentos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "a sequência textual organiza-se em torno das ações praticadas por um personagem em determinado contexto temporal."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. Apesar da presença de descrições, a progressão do texto ocorre por meio das ações realizadas pelo personagem.",
 
@@ -179,17 +149,11 @@ const generos = [
     pergunta: "A tipologia predominante do texto pode ser identificada porque o autor:",
 
     alternativas: [
-
-        "relata mudanças observadas na mobilidade urbana sem defender qualquer posicionamento sobre o tema.",
-
+        "relata mudanças observadas na mobilidade urbana sem defender determinado posicionamento sobre o tema.",
         "utiliza informações sobre os benefícios da bicicleta para sustentar uma proposta apresentada ao final.",
-
         "descreve detalhadamente os impactos ambientais produzidos pelos meios de transporte urbanos.",
-
         "instrui os leitores quanto aos procedimentos necessários para utilizar bicicletas com segurança.",
-
-        "expõe dados estatísticos cuja finalidade limita-se à divulgação de informações públicas."
-
+        "expõe dados estatísticos cuja finalidade concentra-se à divulgação de informações públicas."
     ],
 
     correta: 1,
@@ -207,20 +171,14 @@ const generos = [
     pergunta: "Mesmo contendo uma explicação complementar, o texto permanece predominantemente injuntivo porque:",
 
     alternativas: [
-
-        "as informações explicativas possuem função secundária em relação às instruções dirigidas ao leitor.",
-
         "a justificativa apresentada possui caráter argumentativo superior às orientações fornecidas.",
-
         "a descrição do equipamento recebe maior destaque que os procedimentos recomendados.",
-
+        "as informações explicativas possuem função secundária em relação às instruções dirigidas ao leitor.",
         "o objetivo principal consiste em convencer o leitor sobre a qualidade do equipamento.",
-
-        "a sequência de ações mencionadas possui finalidade exclusivamente informativa."
-
+        "a sequência de ações mencionadas possui finalidade predominantemente informativa."
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. As explicações apenas reforçam as orientações, que continuam sendo o foco principal do texto.",
 
@@ -235,20 +193,14 @@ const generos = [
     pergunta: "A predominância descritiva do trecho decorre principalmente do fato de que:",
 
     alternativas: [
-
         "a sequência de ações realizadas pela personagem constitui o eixo central da construção textual.",
-
-        "os elementos sensoriais e visuais do ambiente recebem maior destaque que os acontecimentos narrados.",
-
         "a movimentação da personagem organiza integralmente a progressão dos fatos apresentados.",
-
         "a presença de verbos de ação impede a classificação do texto como predominantemente descritivo.",
-
+        "os elementos sensoriais e visuais do ambiente recebem maior destaque que os acontecimentos narrados.",
         "a caracterização do cenário desempenha papel secundário em relação ao deslocamento da personagem."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: "Correto. O foco principal está na caracterização do ambiente por meio de impressões visuais e sensoriais.",
 
@@ -263,20 +215,14 @@ const generos = [
     pergunta: "A tese defendida pelo autor pode ser sintetizada adequadamente pela seguinte afirmação:",
 
     alternativas: [
-
         "As tecnologias digitais eliminaram a necessidade de formação educacional voltada para a comunicação.",
-
-        "A ampliação das interações digitais exige ações educativas que favoreçam o uso consciente dessas ferramentas.",
-
         "O acesso às plataformas digitais garante automaticamente a formação de cidadãos críticos.",
-
         "Os meios digitais apresentam vantagens limitadas quando comparados às formas tradicionais de comunicação.",
-
-        "A educação digital possui importância secundária diante do avanço das tecnologias de informação."
-
+        "A educação digital possui importância secundária diante do avanço das tecnologias de informação.",
+        "A ampliação das interações digitais exige ações educativas que favoreçam o uso consciente dessas ferramentas."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: "Correto. O texto reconhece os benefícios das tecnologias digitais, mas enfatiza a necessidade de educação para seu uso responsável.",
 
@@ -291,20 +237,14 @@ const generos = [
     pergunta: "Considerando as características dos gêneros textuais, o texto descrito aproxima-se principalmente do gênero:",
 
     alternativas: [
-
-        "artigo de opinião, por apresentar análise argumentativa elaborada por colaborador especializado.",
-
         "editorial, por expressar o posicionamento institucional do veículo acerca de tema de interesse público.",
-
+        "artigo de opinião, por apresentar análise argumentativa elaborada por colaborador especializado.",
         "reportagem, por aprofundar o assunto mediante a apresentação de múltiplas perspectivas.",
-
         "notícia, por relatar fatos recentes de forma objetiva e impessoal.",
-
         "resenha crítica, por avaliar uma política pública com base em critérios técnicos previamente definidos."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. O editorial expressa a posição institucional do veículo de comunicação e normalmente não é assinado.",
 
@@ -319,20 +259,14 @@ const generos = [
     pergunta: "A situação comunicativa descrita corresponde predominantemente ao gênero:",
 
     alternativas: [
-
         "editorial, por representar oficialmente a posição institucional da revista sobre o tema discutido.",
-
-        "notícia, por informar acontecimentos recentes relacionados à educação nacional.",
-
         "artigo de opinião, por apresentar posicionamento pessoal sustentado por argumentos e exemplos.",
-
+        "notícia, por informar acontecimentos recentes relacionados à educação nacional.",
         "reportagem, por reunir diferentes fontes e perspectivas sobre determinado assunto.",
-
         "crônica, por abordar tema cotidiano mediante linguagem predominantemente literária."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. O artigo de opinião caracteriza-se pela defesa de uma tese ou posicionamento pessoal sustentado por argumentos.",
 
@@ -347,20 +281,14 @@ const generos = [
     pergunta: "A organização das informações permite classificar o texto como:",
 
     alternativas: [
-
         "reportagem, pois desenvolve o tema de forma aprofundada com múltiplas fontes e contextualização ampla.",
-
         "artigo de opinião, pois apresenta interpretação crítica acerca do fato relatado.",
-
-        "editorial, pois manifesta o posicionamento institucional do veículo responsável pela publicação.",
-
         "notícia, pois prioriza a divulgação objetiva de um acontecimento recente de interesse público.",
-
+        "editorial, pois manifesta o posicionamento institucional do veículo responsável pela publicação.",
         "resenha, pois avalia criticamente os resultados produzidos pelo evento mencionado."
-
     ],
 
-    correta: 3,
+    correta: 2,
 
     feedbackAcerto: "Correto. A notícia tem como principal finalidade informar fatos recentes de forma objetiva e direta.",
 
@@ -375,20 +303,14 @@ const generos = [
     pergunta: "A descrição apresentada corresponde mais adequadamente ao gênero:",
 
     alternativas: [
-
-        "reportagem, por aprofundar o tema mediante diferentes fontes, análises e contextualizações.",
-
         "notícia, por limitar-se à divulgação objetiva de um acontecimento recente.",
-
         "editorial, por representar o posicionamento institucional do veículo de comunicação.",
-
-        "artigo de opinião, por defender exclusivamente a visão pessoal do autor sobre o problema.",
-
+        "artigo de opinião, por defender predominantemente a visão pessoal do autor sobre o problema.",
+        "reportagem, por aprofundar o tema mediante diferentes fontes, análises e contextualizações.",
         "resenha crítica, por avaliar formalmente estudos relacionados ao tema abordado."
-
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. A reportagem caracteriza-se pelo aprofundamento das informações e pela utilização de múltiplas fontes.",
 
@@ -403,20 +325,14 @@ const generos = [
     pergunta: "A finalidade comunicativa predominante permite identificar o gênero como:",
 
     alternativas: [
-
-        "propaganda publicitária, por buscar influenciar comportamentos e estimular o consumo de determinado produto.",
-
         "notícia comercial, por divulgar objetivamente informações relacionadas ao mercado consumidor.",
-
         "editorial institucional, por expressar o posicionamento oficial da empresa acerca de seus produtos.",
-
         "artigo promocional, por apresentar análise crítica sobre a qualidade dos itens anunciados.",
-
-        "reportagem mercadológica, por investigar as características do produto sob diferentes perspectivas."
-
+        "reportagem mercadológica, por investigar as características do produto sob diferentes perspectivas.",
+        "propaganda publicitária, por buscar influenciar comportamentos e estimular o consumo de determinado produto."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. A propaganda tem como principal objetivo persuadir o público a adotar determinado comportamento ou consumir um produto.",
 
@@ -431,17 +347,11 @@ const generos = [
     pergunta: "Considerando a situação comunicativa descrita, o gênero textual predominante é:",
 
     alternativas: [
-
         "e-mail, por possibilitar comunicação escrita estruturada entre remetente e destinatário em ambiente digital.",
-
-        "memorando, por destinar-se exclusivamente à circulação de informações em instituições formais.",
-
-        "ofício, por exigir linguagem oficial e seguir protocolos administrativos específicos.",
-
-        "artigo de opinião, por apresentar manifestação pessoal sobre tema de interesse acadêmico.",
-
-        "relatório, por registrar formalmente informações relacionadas a determinada atividade."
-
+        "memorando, por destinar-se predominantemente à circulação de informações em instituições formais, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "ofício, por exigir linguagem oficial e seguir protocolos administrativos específicos, considerando uma característica secundária, mas não a finalidade predominante da construção.",
+        "artigo de opinião, por apresentar manifestação pessoal sobre tema de interesse acadêmico, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "relatório, por registrar formalmente informações relacionadas a determinada atividade, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
     correta: 0,
@@ -459,20 +369,14 @@ const generos = [
     pergunta: "A descrição apresentada permite identificar predominantemente o gênero:",
 
     alternativas: [
-
-        "resenha crítica, por combinar síntese de informações e apreciação avaliativa da obra analisada.",
-
         "artigo científico, por apresentar resultados de investigação sobre aspectos literários específicos.",
-
+        "resenha crítica, por combinar síntese de informações e apreciação avaliativa da obra analisada.",
         "editorial, por expressar o posicionamento institucional do veículo responsável pela publicação.",
-
         "reportagem cultural, por reunir diferentes opiniões acerca do lançamento de determinada obra.",
-
         "notícia, por informar objetivamente fatos relacionados ao mercado editorial."
-
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: "Correto. A resenha crítica reúne descrição, síntese e avaliação de uma obra ou produto cultural.",
 
@@ -487,20 +391,14 @@ const generos = [
     pergunta: "A construção do sentido do texto depende principalmente:",
 
     alternativas: [
-
-        "da combinação entre linguagem verbal e visual, culminando em um desfecho que produz humor.",
-
-        "da exposição objetiva de fatos cotidianos sem qualquer intenção de provocar interpretação subjetiva.",
-
+        "da exposição objetiva de fatos cotidianos sem determinado intenção de provocar interpretação subjetiva.",
         "da defesa explícita de uma tese relacionada à organização do trabalho contemporâneo.",
-
+        "da combinação entre linguagem verbal e visual, culminando em um desfecho que produz humor.",
         "da apresentação detalhada de informações necessárias à compreensão de determinado problema social.",
-
         "da reprodução fiel de acontecimentos reais com finalidade predominantemente documental."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. As tiras normalmente combinam elementos verbais e visuais para construir humor ou reflexão em poucos quadrinhos.",
 
@@ -515,20 +413,14 @@ const generos = [
     pergunta: "As características descritas aproximam o texto do gênero:",
 
     alternativas: [
-
-        "crônica, por abordar acontecimentos do cotidiano mediante olhar subjetivo e frequentemente reflexivo.",
-
         "notícia, por relatar fatos recentes de interesse coletivo com objetividade informativa.",
-
         "editorial, por expressar posicionamento institucional sobre tema relevante para a sociedade.",
-
         "reportagem, por aprofundar determinado assunto mediante entrevistas e contextualização.",
-
+        "crônica, por abordar acontecimentos do cotidiano mediante olhar subjetivo e frequentemente reflexivo.",
         "relatório, por registrar formalmente observações relacionadas a uma situação específica."
-
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. A crônica costuma partir de situações cotidianas para construir reflexões, humor ou críticas sociais.",
 
@@ -543,20 +435,14 @@ const generos = [
     pergunta: "A situação descrita corresponde mais adequadamente ao gênero:",
 
     alternativas: [
-
-        "ofício, por constituir instrumento formal de comunicação entre instituições ou autoridades.",
-
         "e-mail pessoal, por permitir troca rápida de informações entre diferentes destinatários.",
-
         "artigo de opinião, por apresentar posicionamento fundamentado acerca de tema administrativo.",
-
         "relatório técnico, por registrar detalhadamente resultados de atividades já executadas.",
-
-        "memorando informal, por priorizar comunicação espontânea sem exigência de formalidades."
-
+        "memorando informal, por priorizar comunicação espontânea sem exigência de formalidades.",
+        "ofício, por constituir instrumento formal de comunicação entre instituições ou autoridades."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. O ofício é amplamente utilizado na comunicação formal entre órgãos e autoridades da administração pública.",
 
@@ -627,20 +513,14 @@ const generos = [
     pergunta: "A finalidade comunicativa predominante permite classificar o texto como:",
 
     alternativas: [
-
-        "convite, por buscar informar e estimular a participação dos destinatários em determinado evento.",
-
         "relatório, por registrar formalmente informações produzidas durante atividade institucional.",
-
         "artigo de opinião, por apresentar posicionamento acerca da relevância do evento promovido.",
-
+        "convite, por buscar informar e estimular a participação dos destinatários em determinado evento.",
         "reportagem, por contextualizar fatos relacionados à organização de atividades acadêmicas.",
-
         "editorial, por expressar a posição oficial da instituição sobre temas educacionais."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. O convite tem como objetivo principal divulgar um evento e incentivar a participação do público-alvo.",
 
@@ -655,20 +535,14 @@ const generos = [
     pergunta: "A organização textual descrita corresponde predominantemente ao gênero:",
 
     alternativas: [
-
         "resenha crítica, por avaliar a qualidade metodológica de investigações acadêmicas recentes.",
-
-        "artigo científico, por divulgar procedimentos, resultados e conclusões de pesquisa.",
-
         "reportagem especializada, por contextualizar descobertas científicas para o público geral.",
-
         "editorial acadêmico, por expressar posicionamento institucional sobre temas científicos.",
-
+        "artigo científico, por divulgar procedimentos, resultados e conclusões de pesquisa.",
         "ensaio argumentativo, por desenvolver reflexão pessoal acerca de determinado problema."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: "Correto. O artigo científico possui estrutura voltada à divulgação formal de pesquisas e resultados acadêmicos.",
 
@@ -683,20 +557,14 @@ const generos = [
     pergunta: "Considerando a situação comunicativa apresentada, o gênero mais adequado é:",
 
     alternativas: [
-
         "ofício, por destinar-se prioritariamente à comunicação formal entre instituições distintas.",
-
-        "memorando, por viabilizar comunicação interna relacionada a assuntos administrativos.",
-
         "carta aberta, por permitir ampla divulgação de informações de interesse coletivo.",
-
         "relatório técnico, por registrar detalhadamente atividades e resultados alcançados.",
-
-        "e-mail pessoal, por privilegiar comunicação informal entre indivíduos específicos."
-
+        "e-mail pessoal, por privilegiar comunicação informal entre indivíduos específicos.",
+        "memorando, por viabilizar comunicação interna relacionada a assuntos administrativos."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: "Correto. O memorando é tradicionalmente utilizado para comunicação interna em instituições e organizações.",
 
@@ -711,20 +579,14 @@ const generos = [
     pergunta: "A finalidade comunicativa predominante permite identificar o texto como pertencente ao gênero:",
 
     alternativas: [
-
-        "manual de instruções, por apresentar procedimentos relacionados ao funcionamento de equipamentos específicos.",
-
         "campanha educativa, por orientar comportamentos e promover práticas consideradas socialmente benéficas.",
-
+        "manual de instruções, por apresentar procedimentos relacionados ao funcionamento de equipamentos específicos.",
         "artigo científico, por divulgar conhecimentos produzidos por meio de investigação sistemática.",
-
         "editorial, por expressar posicionamento institucional sobre questões de saúde pública.",
-
         "reportagem, por contextualizar informações relacionadas a problemas sanitários."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. O objetivo principal é orientar a população e incentivar comportamentos preventivos, característica comum de campanhas educativas.",
 
@@ -739,17 +601,11 @@ const generos = [
     pergunta: "A situação descrita aproxima-se mais adequadamente do gênero:",
 
     alternativas: [
-
-        "editorial, por representar o posicionamento institucional do veículo de comunicação.",
-
+        "editorial, por representar o posicionamento institucional do veículo de comunicação, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "carta do leitor, por permitir manifestação de opinião do público sobre temas de interesse coletivo.",
-
-        "notícia, por informar objetivamente acontecimentos relacionados ao trânsito urbano.",
-
-        "reportagem, por reunir diferentes perspectivas acerca do tema discutido.",
-
-        "resenha crítica, por avaliar formalmente políticas públicas de mobilidade."
-
+        "notícia, por informar objetivamente acontecimentos relacionados ao trânsito urbano, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "reportagem, por reunir diferentes perspectivas acerca do tema discutido, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "resenha crítica, por avaliar formalmente políticas públicas de mobilidade, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
     correta: 1,
@@ -767,20 +623,14 @@ const generos = [
     pergunta: "As características descritas correspondem predominantemente ao gênero:",
 
     alternativas: [
-
+        "memorando, por comunicar rapidamente informações internas entre setores da organização, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "ofício, por estabelecer comunicação formal entre instituições ou autoridades, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "relatório, por sistematizar informações relacionadas à execução e aos resultados de atividades realizadas.",
-
-        "memorando, por comunicar rapidamente informações internas entre setores da organização.",
-
-        "ofício, por estabelecer comunicação formal entre instituições ou autoridades.",
-
-        "ata, por registrar discussões e decisões ocorridas em reuniões específicas.",
-
-        "artigo de opinião, por apresentar avaliação crítica acerca do desempenho institucional."
-
+        "ata, por registrar discussões e decisões ocorridas em reuniões específicas, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "artigo de opinião, por apresentar avaliação crítica acerca do desempenho institucional, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. O relatório tem como finalidade registrar, organizar e apresentar informações sobre atividades executadas e seus resultados.",
 
@@ -795,20 +645,14 @@ const generos = [
     pergunta: "O registro produzido ao final da reunião corresponde ao gênero:",
 
     alternativas: [
-
         "memorando, por transmitir informações administrativas entre setores de uma instituição.",
-
         "ofício, por formalizar comunicação externa entre órgãos ou autoridades.",
-
-        "ata, por documentar oficialmente acontecimentos e deliberações ocorridas em reunião.",
-
         "relatório, por apresentar análise detalhada de resultados alcançados ao longo de determinado período.",
-
+        "ata, por documentar oficialmente acontecimentos e deliberações ocorridas em reunião.",
         "convite, por divulgar informações relacionadas à realização de eventos institucionais."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. A ata registra formalmente os fatos, debates e decisões ocorridos durante uma reunião.",
 
@@ -823,20 +667,14 @@ const generos = [
     pergunta: "A finalidade predominante do texto aproxima-o mais do gênero:",
 
     alternativas: [
-
         "artigo de opinião, por defender posicionamento relacionado à prestação de serviços públicos.",
-
         "editorial, por expressar oficialmente a visão institucional sobre questões administrativas.",
-
-        "comunicado, por transmitir informações relevantes de maneira objetiva aos destinatários.",
-
         "resenha, por avaliar criticamente as mudanças implementadas pela instituição.",
-
-        "crônica, por abordar situação cotidiana mediante linguagem subjetiva e reflexiva."
-
+        "crônica, por abordar situação cotidiana mediante linguagem subjetiva e reflexiva.",
+        "comunicado, por transmitir informações relevantes de maneira objetiva aos destinatários."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. O comunicado tem como objetivo principal informar o público sobre fatos, mudanças ou orientações de interesse comum.",
 
@@ -850,17 +688,11 @@ const generos = [
     pergunta: "Considerando a finalidade e a organização das informações, o gênero textual descrito corresponde a:",
 
     alternativas: [
-
         "edital, por estabelecer regras, condições e procedimentos relacionados a determinado processo público ou institucional.",
-
-        "memorando, por viabilizar a circulação interna de informações administrativas entre setores específicos.",
-
-        "ata, por registrar formalmente decisões e deliberações ocorridas em reuniões institucionais.",
-
-        "artigo de opinião, por apresentar posicionamentos acerca dos critérios adotados pela instituição.",
-
-        "reportagem, por contextualizar informações relacionadas ao processo seletivo mencionado."
-
+        "memorando, por viabilizar a circulação interna de informações administrativas entre setores específicos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "ata, por registrar formalmente decisões e deliberações ocorridas em reuniões institucionais, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "artigo de opinião, por apresentar posicionamentos acerca dos critérios adotados pela instituição, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "reportagem, por contextualizar informações relacionadas ao processo seletivo mencionado, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
     correta: 0,
@@ -878,17 +710,11 @@ const generos = [
     pergunta: "As características descritas aproximam o texto do gênero:",
 
     alternativas: [
-
-        "artigo científico, por apresentar obrigatoriamente metodologia, resultados e conclusões de pesquisa.",
-
+        "artigo científico, por apresentar em regra metodologia, resultados e conclusões de pesquisa.",
         "ensaio, por desenvolver reflexão analítica e interpretativa acerca de determinado tema.",
-
         "editorial, por expressar posicionamento institucional da publicação acadêmica.",
-
         "relatório técnico, por registrar dados produzidos durante investigação formal.",
-
         "resenha crítica, por avaliar especificamente uma obra ou produção intelectual."
-
     ],
 
     correta: 1,
@@ -906,20 +732,14 @@ const generos = [
     pergunta: "A finalidade comunicativa predominante permite classificar o texto como:",
 
     alternativas: [
-
         "notícia cultural, por informar objetivamente a estreia de determinada produção cinematográfica.",
-
-        "resenha crítica, por combinar apresentação da obra com apreciação avaliativa de seus elementos.",
-
         "editorial, por expressar o posicionamento institucional do veículo sobre produções artísticas.",
-
+        "resenha crítica, por combinar apresentação da obra com apreciação avaliativa de seus elementos.",
         "reportagem investigativa, por aprofundar questões relacionadas à indústria cinematográfica.",
-
         "ensaio acadêmico, por desenvolver reflexão teórica acerca da linguagem audiovisual."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: "Correto. A resenha crítica apresenta informações sobre a obra e realiza avaliação fundamentada de seus aspectos.",
 
@@ -934,20 +754,14 @@ const generos = [
     pergunta: "O documento utilizado para registrar formalmente as deliberações da assembleia pertence ao gênero:",
 
     alternativas: [
-
         "relatório, por apresentar resultados alcançados após a implementação das decisões tomadas.",
-
         "memorando, por comunicar informações internas entre setores de uma organização.",
-
-        "ata, por documentar acontecimentos, debates e decisões ocorridos durante a reunião.",
-
         "ofício, por formalizar comunicação entre entidades distintas.",
-
+        "ata, por documentar acontecimentos, debates e decisões ocorridos durante a reunião.",
         "comunicado, por divulgar informações de interesse coletivo ao público em geral."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. A ata registra oficialmente os fatos e decisões ocorridos durante reuniões e assembleias.",
 
@@ -962,20 +776,14 @@ const generos = [
     pergunta: "A situação comunicativa descrita aproxima-se mais adequadamente do gênero:",
 
     alternativas: [
-
-        "memorando, por viabilizar a comunicação interna de informações administrativas entre membros da instituição.",
-
-        "ofício, por estabelecer comunicação formal entre diferentes órgãos ou entidades.",
-
-        "editorial corporativo, por expressar posicionamento institucional sobre temas estratégicos.",
-
-        "artigo de opinião, por apresentar análise crítica acerca das mudanças implementadas.",
-
-        "relatório gerencial, por registrar resultados produzidos após a adoção dos novos procedimentos."
-
+        "ofício, por estabelecer comunicação formal entre diferentes órgãos ou entidades, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "editorial corporativo, por expressar posicionamento institucional sobre temas estratégicos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "artigo de opinião, por apresentar análise crítica acerca das mudanças implementadas, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "relatório gerencial, por registrar resultados produzidos após a adoção dos novos procedimentos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "memorando, por viabilizar a comunicação interna de informações administrativas entre membros da instituição."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. O memorando é utilizado principalmente para comunicações internas de caráter administrativo.",
 
@@ -990,17 +798,11 @@ const generos = [
     pergunta: "Considerando sua finalidade comunicativa, o documento descrito aproxima-se mais adequadamente do gênero:",
 
     alternativas: [
-
         "manifesto, por tornar pública uma posição coletiva e defender princípios relacionados a determinada causa.",
-
         "relatório técnico, por apresentar resultados produzidos após a implementação de políticas ambientais.",
-
-        "editorial, por expressar o posicionamento institucional de um veículo de comunicação.",
-
-        "notícia, por informar acontecimentos recentes de interesse público.",
-
-        "ata, por registrar formalmente debates ocorridos em reuniões internacionais."
-
+        "editorial, por expressar o posicionamento institucional de um veículo de comunicação, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "notícia, por informar acontecimentos recentes de interesse público, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "ata, por registrar formalmente debates ocorridos em reuniões internacionais, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
     correta: 0,
@@ -1018,20 +820,14 @@ const generos = [
     pergunta: "A situação comunicativa descrita corresponde predominantemente ao gênero:",
 
     alternativas: [
-
-        "seminário, por envolver apresentação oral estruturada de conhecimentos a um público específico.",
-
         "artigo científico, por divulgar formalmente resultados de pesquisa em publicação especializada.",
-
+        "seminário, por envolver apresentação oral estruturada de conhecimentos a um público específico.",
         "resenha crítica, por avaliar contribuições produzidas por outros pesquisadores.",
-
         "editorial acadêmico, por expressar posicionamento institucional acerca de determinado tema.",
-
         "ata de congresso, por registrar oficialmente as atividades desenvolvidas durante o evento."
-
     ],
 
-    correta: 0,
+    correta: 1,
 
     feedbackAcerto: "Correto. O seminário caracteriza-se pela exposição oral organizada de conhecimentos, frequentemente apoiada por recursos visuais.",
 
@@ -1046,20 +842,14 @@ const generos = [
     pergunta: "A estratégia comunicativa apresentada aproxima o texto principalmente do gênero:",
 
     alternativas: [
-
-        "campanha de conscientização, por buscar informar e influenciar comportamentos socialmente desejáveis.",
-
         "editorial digital, por expressar posicionamento institucional detalhado sobre políticas públicas.",
-
         "artigo de opinião, por desenvolver argumentação aprofundada acerca do tema tratado.",
-
+        "campanha de conscientização, por buscar informar e influenciar comportamentos socialmente desejáveis.",
         "reportagem multimodal, por investigar diferentes aspectos relacionados à vacinação.",
-
         "relatório informativo, por registrar dados produzidos por órgãos de saúde."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. O objetivo principal é conscientizar a população e estimular determinado comportamento.",
 
@@ -1074,20 +864,14 @@ const generos = [
     pergunta: "A organização textual descrita corresponde predominantemente ao gênero:",
 
     alternativas: [
-
+        "artigo científico, por desenvolver explicações fundamentadas em pesquisa especializada, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "editorial institucional, por expressar posicionamento oficial acerca do serviço oferecido, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "reportagem explicativa, por aprofundar diferentes aspectos relacionados ao tema abordado, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "guia de perguntas frequentes (FAQ), por estruturar informações a partir de dúvidas e respostas organizadas.",
-
-        "artigo científico, por desenvolver explicações fundamentadas em pesquisa especializada.",
-
-        "editorial institucional, por expressar posicionamento oficial acerca do serviço oferecido.",
-
-        "reportagem explicativa, por aprofundar diferentes aspectos relacionados ao tema abordado.",
-
-        "resenha informativa, por sintetizar e avaliar características do serviço mencionado."
-
+        "resenha informativa, por sintetizar e avaliar características do serviço mencionado, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. A estrutura de perguntas e respostas é característica dos textos organizados como FAQ.",
 
@@ -1102,26 +886,18 @@ const generos = [
     pergunta: "Considerando os objetivos comunicativos apresentados, o texto aproxima-se mais adequadamente do gênero:",
 
     alternativas: [
-
-        "carta aberta, por dirigir-se publicamente à sociedade ou às autoridades para defender determinada reivindicação.",
-
-        "ata, por registrar formalmente decisões tomadas pelos membros da associação.",
-
-        "memorando, por comunicar informações internas entre setores de uma instituição.",
-
-        "notícia, por relatar objetivamente fatos relacionados ao transporte público local.",
-
-        "relatório, por apresentar resultados decorrentes de ações previamente executadas."
-
+        "ata, por registrar formalmente decisões tomadas pelos membros da associação, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "memorando, por comunicar informações internas entre setores de uma instituição, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "notícia, por relatar objetivamente fatos relacionados ao transporte público local, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "relatório, por apresentar resultados decorrentes de ações previamente executadas, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "carta aberta, por dirigir-se publicamente à sociedade ou às autoridades para defender determinada reivindicação."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. A carta aberta tem caráter público e busca sensibilizar leitores ou autoridades em torno de determinada causa.",
 
     feedbackErro: "O texto não registra fatos nem comunica informações internas; ele procura mobilizar apoio para uma reivindicação coletiva.",
 
     dicaBanca: "Cartas abertas costumam combinar argumentação, reivindicação e ampla divulgação ao público."
-}
-
-];
+}];

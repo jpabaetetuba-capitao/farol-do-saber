@@ -32,14 +32,14 @@ const ortografia = [
     `Assinale a alternativa correta quanto ao uso de mal e mau.`,
 
     alternativas: [
-        `O mau atendimento causou mal-estar nos usuários do serviço.`,
         `O mal atendimento causou mau-estar nos usuários do serviço.`,
+        `O mau atendimento causou mal-estar nos usuários do serviço.`,
         `O mau atendimento causou mau-estar nos usuários do serviço.`,
         `O mal atendimento causou mal-estar nos usuários do serviço.`,
-        `O mau atendimento causou mal estar nos usuários do serviço.`,
+        `O mau atendimento causou mal estar nos usuários do serviço.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `'Mau' é adjetivo oposto de 'bom'; 'mal-estar' é substantivo composto com hífen.`,
@@ -59,14 +59,14 @@ const ortografia = [
     `A alternativa correta quanto ao emprego dos porquês é:`,
 
     alternativas: [
-        `Não explicou por que o processo foi arquivado.`,
         `Não explicou porque o processo foi arquivado, em pergunta indireta.`,
         `Não explicou porquê o processo foi arquivado.`,
+        `Não explicou por que o processo foi arquivado.`,
         `Não explicou por quê o processo foi arquivado.`,
-        `Não explicou o por que o processo foi arquivado.`,
+        `Não explicou o por que o processo foi arquivado.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Em pergunta indireta, usa-se 'por que' separado e sem acento.`,
@@ -86,14 +86,14 @@ const ortografia = [
     `Assinale a alternativa em que o hífen está empregado corretamente.`,
 
     alternativas: [
-        `micro-ondas, anti-inflamatório e ex-presidente.`,
         `microondas, antiinflamatório e ex presidente.`,
         `micro-ondas, antiinflamatório e ex presidente.`,
         `microondas, anti-inflamatório e ex-presidente.`,
-        `micro ondas, anti-inflamatório e ex presidente.`,
+        `micro-ondas, anti-inflamatório e ex-presidente.`,
+        `micro ondas, anti-inflamatório e ex presidente.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `As formas corretas são micro-ondas, anti-inflamatório e ex-presidente.`,
@@ -113,14 +113,14 @@ const ortografia = [
     `Assinale a alternativa em que não há erro ortográfico.`,
 
     alternativas: [
-        `A assessoria informou que a sessão extraordinária ocorrerá amanhã.`,
         `A acessoria informou que a sessão extraordinária ocorrerá amanhã.`,
         `A assessoria informou que a seção extraordinária ocorrerá amanhã.`,
         `A assessoria informou que a cessão extraordinária ocorrerá amanhã.`,
         `A acessoria informou que a cessão extraordinária ocorrerá amanhã.`,
+        `A assessoria informou que a sessão extraordinária ocorrerá amanhã.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `'Assessoria' e 'sessão' estão corretas no contexto de órgão de apoio e reunião.`,
@@ -167,14 +167,14 @@ const ortografia = [
     `A grafia está correta em:`,
 
     alternativas: [
-        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em conssonância com a legislação vigente.`,
+        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em consonansia com a legislação vigente.`,
         `A decisão foi tomada em conçonância com a legislação vigente.`,
-        `A decisão foi tomada em conssonansia com a legislação vigente.`,
+        `A decisão foi tomada em conssonansia com a legislação vigente.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A palavra correta é consonância.`,
@@ -194,14 +194,14 @@ const ortografia = [
     `Assinale a alternativa correta quanto à grafia.`,
 
     alternativas: [
-        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese consisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese conciza das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma sintese concisa das ocorrências registradas.`,
-        `O relatório trouxe uma síntese concissa das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concissa das ocorrências registradas.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `As formas corretas são síntese e concisa.`,
@@ -221,14 +221,14 @@ const ortografia = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `A medida foi imprescindível para o funcionamento do serviço.`,
         `A medida foi impresindível para o funcionamento do serviço.`,
         `A medida foi imprescindivel para o funcionamento do serviço.`,
         `A medida foi impreescindível para o funcionamento do serviço.`,
         `A medida foi imprescindível para o funcionamento do serviço.`,
+        `A medida foi imprescindível para o funcionamento do serviço.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A forma correta é imprescindível, com sc e acento.`,
@@ -248,14 +248,14 @@ const ortografia = [
     `Assinale a alternativa correta.`,
 
     alternativas: [
-        `O servidor agiu com discrição durante a apuração dos fatos.`,
         `O servidor agiu com descrição durante a apuração dos fatos.`,
         `O servidor agiu com discrissão durante a apuração dos fatos.`,
         `O servidor agiu com descrissão durante a apuração dos fatos.`,
         `O servidor agiu com descrisão durante a apuração dos fatos.`,
+        `O servidor agiu com discrição durante a apuração dos fatos.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Discrição significa reserva; descrição é ato de descrever.`,
@@ -302,14 +302,14 @@ const ortografia = [
     `Assinale a alternativa correta quanto à grafia.`,
 
     alternativas: [
-        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese consisa das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese conciza das ocorrências registradas.`,
         `O relatório trouxe uma sintese concisa das ocorrências registradas.`,
-        `O relatório trouxe uma síntese concissa das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concissa das ocorrências registradas.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `As formas corretas são síntese e concisa.`,
@@ -329,14 +329,14 @@ const ortografia = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `A medida foi imprescindível para o funcionamento do serviço.`,
         `A medida foi impresindível para o funcionamento do serviço.`,
         `A medida foi imprescindivel para o funcionamento do serviço.`,
-        `A medida foi impreescindível para o funcionamento do serviço.`,
         `A medida foi imprescindível para o funcionamento do serviço.`,
+        `A medida foi impreescindível para o funcionamento do serviço.`,
+        `A medida foi imprescindível para o funcionamento do serviço.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A forma correta é imprescindível, com sc e acento.`,
@@ -356,14 +356,14 @@ const ortografia = [
     `Assinale a alternativa correta.`,
 
     alternativas: [
-        `O servidor agiu com discrição durante a apuração dos fatos.`,
         `O servidor agiu com descrição durante a apuração dos fatos.`,
         `O servidor agiu com discrissão durante a apuração dos fatos.`,
         `O servidor agiu com descrissão durante a apuração dos fatos.`,
-        `O servidor agiu com descrisão durante a apuração dos fatos.`,
+        `O servidor agiu com discrição durante a apuração dos fatos.`,
+        `O servidor agiu com descrisão durante a apuração dos fatos.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Discrição significa reserva; descrição é ato de descrever.`,
@@ -383,14 +383,14 @@ const ortografia = [
     `A grafia está correta em:`,
 
     alternativas: [
-        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em conssonância com a legislação vigente.`,
         `A decisão foi tomada em consonansia com a legislação vigente.`,
         `A decisão foi tomada em conçonância com a legislação vigente.`,
         `A decisão foi tomada em conssonansia com a legislação vigente.`,
+        `A decisão foi tomada em consonância com a legislação vigente.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `A palavra correta é consonância.`,
@@ -437,14 +437,14 @@ const ortografia = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `A medida foi imprescindível para o funcionamento do serviço.`,
         `A medida foi impresindível para o funcionamento do serviço.`,
+        `A medida foi imprescindível para o funcionamento do serviço.`,
         `A medida foi imprescindivel para o funcionamento do serviço.`,
         `A medida foi impreescindível para o funcionamento do serviço.`,
-        `A medida foi imprescindível para o funcionamento do serviço.`,
+        `A medida foi imprescindível para o funcionamento do serviço.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A forma correta é imprescindível, com sc e acento.`,
@@ -464,14 +464,14 @@ const ortografia = [
     `Assinale a alternativa correta.`,
 
     alternativas: [
-        `O servidor agiu com discrição durante a apuração dos fatos.`,
         `O servidor agiu com descrição durante a apuração dos fatos.`,
         `O servidor agiu com discrissão durante a apuração dos fatos.`,
+        `O servidor agiu com discrição durante a apuração dos fatos.`,
         `O servidor agiu com descrissão durante a apuração dos fatos.`,
-        `O servidor agiu com descrisão durante a apuração dos fatos.`,
+        `O servidor agiu com descrisão durante a apuração dos fatos.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Discrição significa reserva; descrição é ato de descrever.`,
@@ -491,14 +491,14 @@ const ortografia = [
     `A grafia está correta em:`,
 
     alternativas: [
-        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em conssonância com a legislação vigente.`,
         `A decisão foi tomada em consonansia com a legislação vigente.`,
         `A decisão foi tomada em conçonância com a legislação vigente.`,
-        `A decisão foi tomada em conssonansia com a legislação vigente.`,
+        `A decisão foi tomada em consonância com a legislação vigente.`,
+        `A decisão foi tomada em conssonansia com a legislação vigente.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A palavra correta é consonância.`,
@@ -518,14 +518,14 @@ const ortografia = [
     `Assinale a alternativa correta quanto à grafia.`,
 
     alternativas: [
-        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese consisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese conciza das ocorrências registradas.`,
         `O relatório trouxe uma sintese concisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese concissa das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concisa das ocorrências registradas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `As formas corretas são síntese e concisa.`,
@@ -572,14 +572,14 @@ const ortografia = [
     `Assinale a alternativa correta.`,
 
     alternativas: [
-        `O servidor agiu com discrição durante a apuração dos fatos.`,
         `O servidor agiu com descrição durante a apuração dos fatos.`,
+        `O servidor agiu com discrição durante a apuração dos fatos.`,
         `O servidor agiu com discrissão durante a apuração dos fatos.`,
         `O servidor agiu com descrissão durante a apuração dos fatos.`,
-        `O servidor agiu com descrisão durante a apuração dos fatos.`,
+        `O servidor agiu com descrisão durante a apuração dos fatos.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Discrição significa reserva; descrição é ato de descrever.`,
@@ -599,14 +599,14 @@ const ortografia = [
     `A grafia está correta em:`,
 
     alternativas: [
-        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em conssonância com a legislação vigente.`,
         `A decisão foi tomada em consonansia com a legislação vigente.`,
+        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em conçonância com a legislação vigente.`,
-        `A decisão foi tomada em conssonansia com a legislação vigente.`,
+        `A decisão foi tomada em conssonansia com a legislação vigente.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A palavra correta é consonância.`,
@@ -626,14 +626,14 @@ const ortografia = [
     `Assinale a alternativa correta quanto à grafia.`,
 
     alternativas: [
-        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese consisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese conciza das ocorrências registradas.`,
         `O relatório trouxe uma sintese concisa das ocorrências registradas.`,
-        `O relatório trouxe uma síntese concissa das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concissa das ocorrências registradas.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `As formas corretas são síntese e concisa.`,
@@ -653,14 +653,14 @@ const ortografia = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `A medida foi imprescindível para o funcionamento do serviço.`,
         `A medida foi impresindível para o funcionamento do serviço.`,
         `A medida foi imprescindivel para o funcionamento do serviço.`,
         `A medida foi impreescindível para o funcionamento do serviço.`,
         `A medida foi imprescindível para o funcionamento do serviço.`,
+        `A medida foi imprescindível para o funcionamento do serviço.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `A forma correta é imprescindível, com sc e acento.`,
@@ -707,14 +707,14 @@ const ortografia = [
     `A grafia está correta em:`,
 
     alternativas: [
-        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em conssonância com a legislação vigente.`,
+        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em consonansia com a legislação vigente.`,
         `A decisão foi tomada em conçonância com a legislação vigente.`,
-        `A decisão foi tomada em conssonansia com a legislação vigente.`,
+        `A decisão foi tomada em conssonansia com a legislação vigente.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A palavra correta é consonância.`,
@@ -734,14 +734,14 @@ const ortografia = [
     `Assinale a alternativa correta quanto à grafia.`,
 
     alternativas: [
-        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese consisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese conciza das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma sintese concisa das ocorrências registradas.`,
-        `O relatório trouxe uma síntese concissa das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concissa das ocorrências registradas.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `As formas corretas são síntese e concisa.`,
@@ -761,14 +761,14 @@ const ortografia = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `A medida foi imprescindível para o funcionamento do serviço.`,
         `A medida foi impresindível para o funcionamento do serviço.`,
         `A medida foi imprescindivel para o funcionamento do serviço.`,
         `A medida foi impreescindível para o funcionamento do serviço.`,
         `A medida foi imprescindível para o funcionamento do serviço.`,
+        `A medida foi imprescindível para o funcionamento do serviço.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A forma correta é imprescindível, com sc e acento.`,
@@ -788,14 +788,14 @@ const ortografia = [
     `Assinale a alternativa correta.`,
 
     alternativas: [
-        `O servidor agiu com discrição durante a apuração dos fatos.`,
         `O servidor agiu com descrição durante a apuração dos fatos.`,
         `O servidor agiu com discrissão durante a apuração dos fatos.`,
         `O servidor agiu com descrissão durante a apuração dos fatos.`,
         `O servidor agiu com descrisão durante a apuração dos fatos.`,
+        `O servidor agiu com discrição durante a apuração dos fatos.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Discrição significa reserva; descrição é ato de descrever.`,
@@ -842,14 +842,14 @@ const ortografia = [
     `Assinale a alternativa correta quanto à grafia.`,
 
     alternativas: [
-        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese consisa das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese conciza das ocorrências registradas.`,
         `O relatório trouxe uma sintese concisa das ocorrências registradas.`,
-        `O relatório trouxe uma síntese concissa das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concissa das ocorrências registradas.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `As formas corretas são síntese e concisa.`,
@@ -869,14 +869,14 @@ const ortografia = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `A medida foi imprescindível para o funcionamento do serviço.`,
         `A medida foi impresindível para o funcionamento do serviço.`,
         `A medida foi imprescindivel para o funcionamento do serviço.`,
-        `A medida foi impreescindível para o funcionamento do serviço.`,
         `A medida foi imprescindível para o funcionamento do serviço.`,
+        `A medida foi impreescindível para o funcionamento do serviço.`,
+        `A medida foi imprescindível para o funcionamento do serviço.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A forma correta é imprescindível, com sc e acento.`,
@@ -896,14 +896,14 @@ const ortografia = [
     `Assinale a alternativa correta.`,
 
     alternativas: [
-        `O servidor agiu com discrição durante a apuração dos fatos.`,
         `O servidor agiu com descrição durante a apuração dos fatos.`,
         `O servidor agiu com discrissão durante a apuração dos fatos.`,
         `O servidor agiu com descrissão durante a apuração dos fatos.`,
-        `O servidor agiu com descrisão durante a apuração dos fatos.`,
+        `O servidor agiu com discrição durante a apuração dos fatos.`,
+        `O servidor agiu com descrisão durante a apuração dos fatos.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Discrição significa reserva; descrição é ato de descrever.`,
@@ -923,14 +923,14 @@ const ortografia = [
     `A grafia está correta em:`,
 
     alternativas: [
-        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em conssonância com a legislação vigente.`,
         `A decisão foi tomada em consonansia com a legislação vigente.`,
         `A decisão foi tomada em conçonância com a legislação vigente.`,
         `A decisão foi tomada em conssonansia com a legislação vigente.`,
+        `A decisão foi tomada em consonância com a legislação vigente.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `A palavra correta é consonância.`,
@@ -977,14 +977,14 @@ const ortografia = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `A medida foi imprescindível para o funcionamento do serviço.`,
         `A medida foi impresindível para o funcionamento do serviço.`,
+        `A medida foi imprescindível para o funcionamento do serviço.`,
         `A medida foi imprescindivel para o funcionamento do serviço.`,
         `A medida foi impreescindível para o funcionamento do serviço.`,
-        `A medida foi imprescindível para o funcionamento do serviço.`,
+        `A medida foi imprescindível para o funcionamento do serviço.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A forma correta é imprescindível, com sc e acento.`,
@@ -1004,14 +1004,14 @@ const ortografia = [
     `Assinale a alternativa correta.`,
 
     alternativas: [
-        `O servidor agiu com discrição durante a apuração dos fatos.`,
         `O servidor agiu com descrição durante a apuração dos fatos.`,
         `O servidor agiu com discrissão durante a apuração dos fatos.`,
+        `O servidor agiu com discrição durante a apuração dos fatos.`,
         `O servidor agiu com descrissão durante a apuração dos fatos.`,
-        `O servidor agiu com descrisão durante a apuração dos fatos.`,
+        `O servidor agiu com descrisão durante a apuração dos fatos.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Discrição significa reserva; descrição é ato de descrever.`,
@@ -1031,14 +1031,14 @@ const ortografia = [
     `A grafia está correta em:`,
 
     alternativas: [
-        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em conssonância com a legislação vigente.`,
         `A decisão foi tomada em consonansia com a legislação vigente.`,
         `A decisão foi tomada em conçonância com a legislação vigente.`,
-        `A decisão foi tomada em conssonansia com a legislação vigente.`,
+        `A decisão foi tomada em consonância com a legislação vigente.`,
+        `A decisão foi tomada em conssonansia com a legislação vigente.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A palavra correta é consonância.`,
@@ -1058,14 +1058,14 @@ const ortografia = [
     `Assinale a alternativa correta quanto à grafia.`,
 
     alternativas: [
-        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese consisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese conciza das ocorrências registradas.`,
         `O relatório trouxe uma sintese concisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese concissa das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concisa das ocorrências registradas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `As formas corretas são síntese e concisa.`,
@@ -1112,14 +1112,14 @@ const ortografia = [
     `Assinale a alternativa correta.`,
 
     alternativas: [
-        `O servidor agiu com discrição durante a apuração dos fatos.`,
         `O servidor agiu com descrição durante a apuração dos fatos.`,
+        `O servidor agiu com discrição durante a apuração dos fatos.`,
         `O servidor agiu com discrissão durante a apuração dos fatos.`,
         `O servidor agiu com descrissão durante a apuração dos fatos.`,
-        `O servidor agiu com descrisão durante a apuração dos fatos.`,
+        `O servidor agiu com descrisão durante a apuração dos fatos.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Discrição significa reserva; descrição é ato de descrever.`,
@@ -1139,14 +1139,14 @@ const ortografia = [
     `A grafia está correta em:`,
 
     alternativas: [
-        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em conssonância com a legislação vigente.`,
         `A decisão foi tomada em consonansia com a legislação vigente.`,
+        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em conçonância com a legislação vigente.`,
-        `A decisão foi tomada em conssonansia com a legislação vigente.`,
+        `A decisão foi tomada em conssonansia com a legislação vigente.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A palavra correta é consonância.`,
@@ -1166,14 +1166,14 @@ const ortografia = [
     `Assinale a alternativa correta quanto à grafia.`,
 
     alternativas: [
-        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese consisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese conciza das ocorrências registradas.`,
         `O relatório trouxe uma sintese concisa das ocorrências registradas.`,
-        `O relatório trouxe uma síntese concissa das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concissa das ocorrências registradas.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `As formas corretas são síntese e concisa.`,
@@ -1193,14 +1193,14 @@ const ortografia = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `A medida foi imprescindível para o funcionamento do serviço.`,
         `A medida foi impresindível para o funcionamento do serviço.`,
         `A medida foi imprescindivel para o funcionamento do serviço.`,
         `A medida foi impreescindível para o funcionamento do serviço.`,
         `A medida foi imprescindível para o funcionamento do serviço.`,
+        `A medida foi imprescindível para o funcionamento do serviço.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `A forma correta é imprescindível, com sc e acento.`,
@@ -1247,14 +1247,14 @@ const ortografia = [
     `A grafia está correta em:`,
 
     alternativas: [
-        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em conssonância com a legislação vigente.`,
+        `A decisão foi tomada em consonância com a legislação vigente.`,
         `A decisão foi tomada em consonansia com a legislação vigente.`,
         `A decisão foi tomada em conçonância com a legislação vigente.`,
-        `A decisão foi tomada em conssonansia com a legislação vigente.`,
+        `A decisão foi tomada em conssonansia com a legislação vigente.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A palavra correta é consonância.`,
@@ -1274,14 +1274,14 @@ const ortografia = [
     `Assinale a alternativa correta quanto à grafia.`,
 
     alternativas: [
-        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese consisa das ocorrências registradas.`,
         `O relatório trouxe uma síntese conciza das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concisa das ocorrências registradas.`,
         `O relatório trouxe uma sintese concisa das ocorrências registradas.`,
-        `O relatório trouxe uma síntese concissa das ocorrências registradas.`,
+        `O relatório trouxe uma síntese concissa das ocorrências registradas.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `As formas corretas são síntese e concisa.`,
@@ -1301,14 +1301,14 @@ const ortografia = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `A medida foi imprescindível para o funcionamento do serviço.`,
         `A medida foi impresindível para o funcionamento do serviço.`,
         `A medida foi imprescindivel para o funcionamento do serviço.`,
         `A medida foi impreescindível para o funcionamento do serviço.`,
         `A medida foi imprescindível para o funcionamento do serviço.`,
+        `A medida foi imprescindível para o funcionamento do serviço.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A forma correta é imprescindível, com sc e acento.`,
@@ -1328,14 +1328,14 @@ const ortografia = [
     `Assinale a alternativa correta.`,
 
     alternativas: [
-        `O servidor agiu com discrição durante a apuração dos fatos.`,
         `O servidor agiu com descrição durante a apuração dos fatos.`,
         `O servidor agiu com discrissão durante a apuração dos fatos.`,
         `O servidor agiu com descrissão durante a apuração dos fatos.`,
         `O servidor agiu com descrisão durante a apuração dos fatos.`,
+        `O servidor agiu com discrição durante a apuração dos fatos.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Discrição significa reserva; descrição é ato de descrever.`,
@@ -1348,6 +1348,4 @@ const ortografia = [
 
     dicaBanca:
     `Parônimos têm grafia e sentido próximos, mas não iguais.`
-}
-
-];
+}];

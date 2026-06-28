@@ -32,14 +32,14 @@ const crase = [
     `A frase correta quanto ao emprego da crase é:`,
 
     alternativas: [
-        `A reunião ocorrerá às quinze horas, na sala da coordenação.`,
         `A reunião ocorrerá as quinze horas, na sala da coordenação.`,
+        `A reunião ocorrerá às quinze horas, na sala da coordenação.`,
         `A reunião ocorrerá à quinze horas, na sala da coordenação.`,
         `A reunião ocorrerá às quinze hora, na sala da coordenação.`,
-        `A reunião ocorrerá a quinze horas da sala da coordenação.`,
+        `A reunião ocorrerá a quinze horas da sala da coordenação.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Na indicação de horas determinadas, usa-se crase: às quinze horas.`,
@@ -59,14 +59,14 @@ const crase = [
     `Assinale a alternativa sem erro quanto à crase.`,
 
     alternativas: [
-        `Entreguei o documento a uma servidora do protocolo.`,
         `Entreguei o documento à uma servidora do protocolo.`,
         `Entreguei o documento à servidoras do protocolo.`,
-        `Entreguei o documento à qualquer servidora do protocolo.`,
-        `Entreguei o documento à quem estava no protocolo.`,
+        `Entreguei o documento a uma servidora do protocolo.`,
+        `Entreguei o documento à determinado servidora do protocolo.`,
+        `Entreguei o documento à quem estava no protocolo.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Não ocorre crase antes de artigo indefinido 'uma'.`,
@@ -86,14 +86,14 @@ const crase = [
     `O uso da crase está correto em:`,
 
     alternativas: [
-        `O texto foi redigido à moda antiga, embora tratasse de assunto atual.`,
         `O texto foi redigido a moda antiga, embora tratasse de assunto atual.`,
         `O texto foi redigido à modo antigo, embora tratasse de assunto atual.`,
         `O texto foi redigido à maneiras antigas, embora tratasse de assunto atual.`,
-        `O texto foi redigido à estilo antigo, embora tratasse de assunto atual.`,
+        `O texto foi redigido à moda antiga, embora tratasse de assunto atual.`,
+        `O texto foi redigido à estilo antigo, embora tratasse de assunto atual.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Em locução com palavra feminina 'à moda de', ocorre crase, mesmo quando 'moda' está subentendida.`,
@@ -113,14 +113,14 @@ const crase = [
     `Assinale a alternativa correta.`,
 
     alternativas: [
-        `Fui à Bahia para participar do encontro regional.`,
         `Fui a Bahia para participar do encontro regional.`,
         `Fui à Pernambuco para participar do encontro regional.`,
         `Fui à Belém para participar do encontro regional.`,
         `Fui à Fortaleza para participar do encontro regional.`,
+        `Fui à Bahia para participar do encontro regional.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Bahia admite artigo ('a Bahia'), então ocorre crase com verbo ir: fui à Bahia.`,
@@ -167,14 +167,14 @@ const crase = [
     `A frase correta é:`,
 
     alternativas: [
-        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda à sexta-feira.`,
+        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda às sexta-feira.`,
         `O atendimento será realizado da segunda a sexta-feira.`,
-        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`,
+        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Na correlação 'de... a...' sem artigo, não se usa crase.`,
@@ -194,14 +194,14 @@ const crase = [
     `Assinale a alternativa em que a crase é facultativa.`,
 
     alternativas: [
-        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue àquela supervisora imediata.`,
         `O requerimento foi entregue à supervisora imediata.`,
+        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue às supervisoras imediatas.`,
-        `O requerimento foi entregue à responsável pelo setor.`,
+        `O requerimento foi entregue à responsável pelo setor.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Antes de pronome possessivo feminino no singular, a crase pode ser facultativa em certos contextos.`,
@@ -221,14 +221,14 @@ const crase = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Referiu-se àquilo que havia sido decidido na assembleia.`,
         `Referiu-se aquilo que havia sido decidido na assembleia.`,
         `Referiu-se à algo que havia sido decidido na assembleia.`,
         `Referiu-se à isso que havia sido decidido na assembleia.`,
-        `Referiu-se à tudo que havia sido decidido na assembleia.`,
+        `Referiu-se àquilo que havia sido decidido na assembleia.`,
+        `Referiu-se à tudo que havia sido decidido na assembleia.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com pronomes demonstrativos aquele(s), aquela(s), aquilo, pode haver crase quando há preposição a.`,
@@ -248,14 +248,14 @@ const crase = [
     `Assinale a frase sem emprego indevido de crase.`,
 
     alternativas: [
-        `O servidor apresentou a documentação a pessoas credenciadas.`,
         `O servidor apresentou à documentação a pessoas credenciadas.`,
         `O servidor apresentou a documentação à pessoas credenciadas.`,
         `O servidor apresentou à documentação à pessoas credenciadas.`,
-        `O servidor apresentou a documentação à qualquer pessoa credenciada.`,
+        `O servidor apresentou a documentação à determinado pessoa credenciada.`,
+        `O servidor apresentou a documentação a pessoas credenciadas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Não há crase antes de plural sem artigo definido: a pessoas.`,
@@ -302,14 +302,14 @@ const crase = [
     `A frase correta é:`,
 
     alternativas: [
-        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda à sexta-feira.`,
+        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda às sexta-feira.`,
         `O atendimento será realizado da segunda a sexta-feira.`,
-        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`,
+        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Na correlação 'de... a...' sem artigo, não se usa crase.`,
@@ -329,14 +329,14 @@ const crase = [
     `Assinale a alternativa em que a crase é facultativa.`,
 
     alternativas: [
-        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue àquela supervisora imediata.`,
         `O requerimento foi entregue à supervisora imediata.`,
+        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue às supervisoras imediatas.`,
-        `O requerimento foi entregue à responsável pelo setor.`,
+        `O requerimento foi entregue à responsável pelo setor.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Antes de pronome possessivo feminino no singular, a crase pode ser facultativa em certos contextos.`,
@@ -356,14 +356,14 @@ const crase = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Referiu-se àquilo que havia sido decidido na assembleia.`,
         `Referiu-se aquilo que havia sido decidido na assembleia.`,
         `Referiu-se à algo que havia sido decidido na assembleia.`,
         `Referiu-se à isso que havia sido decidido na assembleia.`,
-        `Referiu-se à tudo que havia sido decidido na assembleia.`,
+        `Referiu-se àquilo que havia sido decidido na assembleia.`,
+        `Referiu-se à tudo que havia sido decidido na assembleia.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com pronomes demonstrativos aquele(s), aquela(s), aquilo, pode haver crase quando há preposição a.`,
@@ -383,14 +383,14 @@ const crase = [
     `Assinale a frase sem emprego indevido de crase.`,
 
     alternativas: [
-        `O servidor apresentou a documentação a pessoas credenciadas.`,
         `O servidor apresentou à documentação a pessoas credenciadas.`,
         `O servidor apresentou a documentação à pessoas credenciadas.`,
         `O servidor apresentou à documentação à pessoas credenciadas.`,
-        `O servidor apresentou a documentação à qualquer pessoa credenciada.`,
+        `O servidor apresentou a documentação à determinado pessoa credenciada.`,
+        `O servidor apresentou a documentação a pessoas credenciadas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Não há crase antes de plural sem artigo definido: a pessoas.`,
@@ -437,14 +437,14 @@ const crase = [
     `A frase correta é:`,
 
     alternativas: [
-        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda à sexta-feira.`,
+        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda às sexta-feira.`,
         `O atendimento será realizado da segunda a sexta-feira.`,
-        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`,
+        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Na correlação 'de... a...' sem artigo, não se usa crase.`,
@@ -464,14 +464,14 @@ const crase = [
     `Assinale a alternativa em que a crase é facultativa.`,
 
     alternativas: [
-        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue àquela supervisora imediata.`,
         `O requerimento foi entregue à supervisora imediata.`,
+        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue às supervisoras imediatas.`,
-        `O requerimento foi entregue à responsável pelo setor.`,
+        `O requerimento foi entregue à responsável pelo setor.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Antes de pronome possessivo feminino no singular, a crase pode ser facultativa em certos contextos.`,
@@ -491,14 +491,14 @@ const crase = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Referiu-se àquilo que havia sido decidido na assembleia.`,
         `Referiu-se aquilo que havia sido decidido na assembleia.`,
         `Referiu-se à algo que havia sido decidido na assembleia.`,
         `Referiu-se à isso que havia sido decidido na assembleia.`,
-        `Referiu-se à tudo que havia sido decidido na assembleia.`,
+        `Referiu-se àquilo que havia sido decidido na assembleia.`,
+        `Referiu-se à tudo que havia sido decidido na assembleia.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com pronomes demonstrativos aquele(s), aquela(s), aquilo, pode haver crase quando há preposição a.`,
@@ -518,14 +518,14 @@ const crase = [
     `Assinale a frase sem emprego indevido de crase.`,
 
     alternativas: [
-        `O servidor apresentou a documentação a pessoas credenciadas.`,
         `O servidor apresentou à documentação a pessoas credenciadas.`,
         `O servidor apresentou a documentação à pessoas credenciadas.`,
         `O servidor apresentou à documentação à pessoas credenciadas.`,
-        `O servidor apresentou a documentação à qualquer pessoa credenciada.`,
+        `O servidor apresentou a documentação à determinado pessoa credenciada.`,
+        `O servidor apresentou a documentação a pessoas credenciadas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Não há crase antes de plural sem artigo definido: a pessoas.`,
@@ -572,14 +572,14 @@ const crase = [
     `A frase correta é:`,
 
     alternativas: [
-        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda à sexta-feira.`,
+        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda às sexta-feira.`,
         `O atendimento será realizado da segunda a sexta-feira.`,
-        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`,
+        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Na correlação 'de... a...' sem artigo, não se usa crase.`,
@@ -599,14 +599,14 @@ const crase = [
     `Assinale a alternativa em que a crase é facultativa.`,
 
     alternativas: [
-        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue àquela supervisora imediata.`,
         `O requerimento foi entregue à supervisora imediata.`,
+        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue às supervisoras imediatas.`,
-        `O requerimento foi entregue à responsável pelo setor.`,
+        `O requerimento foi entregue à responsável pelo setor.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Antes de pronome possessivo feminino no singular, a crase pode ser facultativa em certos contextos.`,
@@ -626,14 +626,14 @@ const crase = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Referiu-se àquilo que havia sido decidido na assembleia.`,
         `Referiu-se aquilo que havia sido decidido na assembleia.`,
         `Referiu-se à algo que havia sido decidido na assembleia.`,
         `Referiu-se à isso que havia sido decidido na assembleia.`,
-        `Referiu-se à tudo que havia sido decidido na assembleia.`,
+        `Referiu-se àquilo que havia sido decidido na assembleia.`,
+        `Referiu-se à tudo que havia sido decidido na assembleia.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com pronomes demonstrativos aquele(s), aquela(s), aquilo, pode haver crase quando há preposição a.`,
@@ -653,14 +653,14 @@ const crase = [
     `Assinale a frase sem emprego indevido de crase.`,
 
     alternativas: [
-        `O servidor apresentou a documentação a pessoas credenciadas.`,
         `O servidor apresentou à documentação a pessoas credenciadas.`,
         `O servidor apresentou a documentação à pessoas credenciadas.`,
         `O servidor apresentou à documentação à pessoas credenciadas.`,
-        `O servidor apresentou a documentação à qualquer pessoa credenciada.`,
+        `O servidor apresentou a documentação à determinado pessoa credenciada.`,
+        `O servidor apresentou a documentação a pessoas credenciadas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Não há crase antes de plural sem artigo definido: a pessoas.`,
@@ -707,14 +707,14 @@ const crase = [
     `A frase correta é:`,
 
     alternativas: [
-        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda à sexta-feira.`,
+        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda às sexta-feira.`,
         `O atendimento será realizado da segunda a sexta-feira.`,
-        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`,
+        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Na correlação 'de... a...' sem artigo, não se usa crase.`,
@@ -734,14 +734,14 @@ const crase = [
     `Assinale a alternativa em que a crase é facultativa.`,
 
     alternativas: [
-        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue àquela supervisora imediata.`,
         `O requerimento foi entregue à supervisora imediata.`,
+        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue às supervisoras imediatas.`,
-        `O requerimento foi entregue à responsável pelo setor.`,
+        `O requerimento foi entregue à responsável pelo setor.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Antes de pronome possessivo feminino no singular, a crase pode ser facultativa em certos contextos.`,
@@ -761,14 +761,14 @@ const crase = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Referiu-se àquilo que havia sido decidido na assembleia.`,
         `Referiu-se aquilo que havia sido decidido na assembleia.`,
         `Referiu-se à algo que havia sido decidido na assembleia.`,
         `Referiu-se à isso que havia sido decidido na assembleia.`,
-        `Referiu-se à tudo que havia sido decidido na assembleia.`,
+        `Referiu-se àquilo que havia sido decidido na assembleia.`,
+        `Referiu-se à tudo que havia sido decidido na assembleia.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com pronomes demonstrativos aquele(s), aquela(s), aquilo, pode haver crase quando há preposição a.`,
@@ -788,14 +788,14 @@ const crase = [
     `Assinale a frase sem emprego indevido de crase.`,
 
     alternativas: [
-        `O servidor apresentou a documentação a pessoas credenciadas.`,
         `O servidor apresentou à documentação a pessoas credenciadas.`,
         `O servidor apresentou a documentação à pessoas credenciadas.`,
         `O servidor apresentou à documentação à pessoas credenciadas.`,
-        `O servidor apresentou a documentação à qualquer pessoa credenciada.`,
+        `O servidor apresentou a documentação à determinado pessoa credenciada.`,
+        `O servidor apresentou a documentação a pessoas credenciadas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Não há crase antes de plural sem artigo definido: a pessoas.`,
@@ -842,14 +842,14 @@ const crase = [
     `A frase correta é:`,
 
     alternativas: [
-        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda à sexta-feira.`,
+        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda às sexta-feira.`,
         `O atendimento será realizado da segunda a sexta-feira.`,
-        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`,
+        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Na correlação 'de... a...' sem artigo, não se usa crase.`,
@@ -869,14 +869,14 @@ const crase = [
     `Assinale a alternativa em que a crase é facultativa.`,
 
     alternativas: [
-        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue àquela supervisora imediata.`,
         `O requerimento foi entregue à supervisora imediata.`,
+        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue às supervisoras imediatas.`,
-        `O requerimento foi entregue à responsável pelo setor.`,
+        `O requerimento foi entregue à responsável pelo setor.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Antes de pronome possessivo feminino no singular, a crase pode ser facultativa em certos contextos.`,
@@ -896,14 +896,14 @@ const crase = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Referiu-se àquilo que havia sido decidido na assembleia.`,
         `Referiu-se aquilo que havia sido decidido na assembleia.`,
         `Referiu-se à algo que havia sido decidido na assembleia.`,
         `Referiu-se à isso que havia sido decidido na assembleia.`,
-        `Referiu-se à tudo que havia sido decidido na assembleia.`,
+        `Referiu-se àquilo que havia sido decidido na assembleia.`,
+        `Referiu-se à tudo que havia sido decidido na assembleia.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com pronomes demonstrativos aquele(s), aquela(s), aquilo, pode haver crase quando há preposição a.`,
@@ -923,14 +923,14 @@ const crase = [
     `Assinale a frase sem emprego indevido de crase.`,
 
     alternativas: [
-        `O servidor apresentou a documentação a pessoas credenciadas.`,
         `O servidor apresentou à documentação a pessoas credenciadas.`,
         `O servidor apresentou a documentação à pessoas credenciadas.`,
         `O servidor apresentou à documentação à pessoas credenciadas.`,
-        `O servidor apresentou a documentação à qualquer pessoa credenciada.`,
+        `O servidor apresentou a documentação à determinado pessoa credenciada.`,
+        `O servidor apresentou a documentação a pessoas credenciadas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Não há crase antes de plural sem artigo definido: a pessoas.`,
@@ -977,14 +977,14 @@ const crase = [
     `A frase correta é:`,
 
     alternativas: [
-        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda à sexta-feira.`,
+        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda às sexta-feira.`,
         `O atendimento será realizado da segunda a sexta-feira.`,
-        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`,
+        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Na correlação 'de... a...' sem artigo, não se usa crase.`,
@@ -1004,14 +1004,14 @@ const crase = [
     `Assinale a alternativa em que a crase é facultativa.`,
 
     alternativas: [
-        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue àquela supervisora imediata.`,
         `O requerimento foi entregue à supervisora imediata.`,
+        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue às supervisoras imediatas.`,
-        `O requerimento foi entregue à responsável pelo setor.`,
+        `O requerimento foi entregue à responsável pelo setor.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Antes de pronome possessivo feminino no singular, a crase pode ser facultativa em certos contextos.`,
@@ -1031,14 +1031,14 @@ const crase = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Referiu-se àquilo que havia sido decidido na assembleia.`,
         `Referiu-se aquilo que havia sido decidido na assembleia.`,
         `Referiu-se à algo que havia sido decidido na assembleia.`,
         `Referiu-se à isso que havia sido decidido na assembleia.`,
-        `Referiu-se à tudo que havia sido decidido na assembleia.`,
+        `Referiu-se àquilo que havia sido decidido na assembleia.`,
+        `Referiu-se à tudo que havia sido decidido na assembleia.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com pronomes demonstrativos aquele(s), aquela(s), aquilo, pode haver crase quando há preposição a.`,
@@ -1058,14 +1058,14 @@ const crase = [
     `Assinale a frase sem emprego indevido de crase.`,
 
     alternativas: [
-        `O servidor apresentou a documentação a pessoas credenciadas.`,
         `O servidor apresentou à documentação a pessoas credenciadas.`,
         `O servidor apresentou a documentação à pessoas credenciadas.`,
         `O servidor apresentou à documentação à pessoas credenciadas.`,
-        `O servidor apresentou a documentação à qualquer pessoa credenciada.`,
+        `O servidor apresentou a documentação à determinado pessoa credenciada.`,
+        `O servidor apresentou a documentação a pessoas credenciadas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Não há crase antes de plural sem artigo definido: a pessoas.`,
@@ -1112,14 +1112,14 @@ const crase = [
     `A frase correta é:`,
 
     alternativas: [
-        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda à sexta-feira.`,
+        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda às sexta-feira.`,
         `O atendimento será realizado da segunda a sexta-feira.`,
-        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`,
+        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Na correlação 'de... a...' sem artigo, não se usa crase.`,
@@ -1139,14 +1139,14 @@ const crase = [
     `Assinale a alternativa em que a crase é facultativa.`,
 
     alternativas: [
-        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue àquela supervisora imediata.`,
         `O requerimento foi entregue à supervisora imediata.`,
+        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue às supervisoras imediatas.`,
-        `O requerimento foi entregue à responsável pelo setor.`,
+        `O requerimento foi entregue à responsável pelo setor.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Antes de pronome possessivo feminino no singular, a crase pode ser facultativa em certos contextos.`,
@@ -1166,14 +1166,14 @@ const crase = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Referiu-se àquilo que havia sido decidido na assembleia.`,
         `Referiu-se aquilo que havia sido decidido na assembleia.`,
         `Referiu-se à algo que havia sido decidido na assembleia.`,
         `Referiu-se à isso que havia sido decidido na assembleia.`,
-        `Referiu-se à tudo que havia sido decidido na assembleia.`,
+        `Referiu-se àquilo que havia sido decidido na assembleia.`,
+        `Referiu-se à tudo que havia sido decidido na assembleia.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com pronomes demonstrativos aquele(s), aquela(s), aquilo, pode haver crase quando há preposição a.`,
@@ -1193,14 +1193,14 @@ const crase = [
     `Assinale a frase sem emprego indevido de crase.`,
 
     alternativas: [
-        `O servidor apresentou a documentação a pessoas credenciadas.`,
         `O servidor apresentou à documentação a pessoas credenciadas.`,
         `O servidor apresentou a documentação à pessoas credenciadas.`,
         `O servidor apresentou à documentação à pessoas credenciadas.`,
-        `O servidor apresentou a documentação à qualquer pessoa credenciada.`,
+        `O servidor apresentou a documentação à determinado pessoa credenciada.`,
+        `O servidor apresentou a documentação a pessoas credenciadas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Não há crase antes de plural sem artigo definido: a pessoas.`,
@@ -1247,14 +1247,14 @@ const crase = [
     `A frase correta é:`,
 
     alternativas: [
-        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda à sexta-feira.`,
+        `O atendimento será realizado de segunda a sexta-feira.`,
         `O atendimento será realizado de segunda às sexta-feira.`,
         `O atendimento será realizado da segunda a sexta-feira.`,
-        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`,
+        `O atendimento será realizado da segunda à sexta-feira, sem artigo inicial.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Na correlação 'de... a...' sem artigo, não se usa crase.`,
@@ -1274,14 +1274,14 @@ const crase = [
     `Assinale a alternativa em que a crase é facultativa.`,
 
     alternativas: [
-        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue àquela supervisora imediata.`,
         `O requerimento foi entregue à supervisora imediata.`,
+        `O requerimento foi entregue à minha supervisora imediata.`,
         `O requerimento foi entregue às supervisoras imediatas.`,
-        `O requerimento foi entregue à responsável pelo setor.`,
+        `O requerimento foi entregue à responsável pelo setor.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Antes de pronome possessivo feminino no singular, a crase pode ser facultativa em certos contextos.`,
@@ -1301,14 +1301,14 @@ const crase = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Referiu-se àquilo que havia sido decidido na assembleia.`,
         `Referiu-se aquilo que havia sido decidido na assembleia.`,
         `Referiu-se à algo que havia sido decidido na assembleia.`,
         `Referiu-se à isso que havia sido decidido na assembleia.`,
-        `Referiu-se à tudo que havia sido decidido na assembleia.`,
+        `Referiu-se àquilo que havia sido decidido na assembleia.`,
+        `Referiu-se à tudo que havia sido decidido na assembleia.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com pronomes demonstrativos aquele(s), aquela(s), aquilo, pode haver crase quando há preposição a.`,
@@ -1328,14 +1328,14 @@ const crase = [
     `Assinale a frase sem emprego indevido de crase.`,
 
     alternativas: [
-        `O servidor apresentou a documentação a pessoas credenciadas.`,
         `O servidor apresentou à documentação a pessoas credenciadas.`,
         `O servidor apresentou a documentação à pessoas credenciadas.`,
         `O servidor apresentou à documentação à pessoas credenciadas.`,
-        `O servidor apresentou a documentação à qualquer pessoa credenciada.`,
+        `O servidor apresentou a documentação à determinado pessoa credenciada.`,
+        `O servidor apresentou a documentação a pessoas credenciadas.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Não há crase antes de plural sem artigo definido: a pessoas.`,
@@ -1348,6 +1348,4 @@ const crase = [
 
     dicaBanca:
     `Antes de plural sem 'as', não há crase.`
-}
-
-];
+}];

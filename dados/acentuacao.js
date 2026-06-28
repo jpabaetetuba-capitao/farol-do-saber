@@ -32,14 +32,14 @@ const acentuacao = [
     `A alternativa correta quanto à acentuação é:`,
 
     alternativas: [
-        `Os documentos contêm informações relevantes sobre o processo.`,
         `Os documentos contém informações relevantes sobre o processo.`,
+        `Os documentos contêm informações relevantes sobre o processo.`,
         `Os documentos contem informações relevantes sobre o processo.`,
         `Os documentos contêem informações relevantes sobre o processo.`,
-        `Os documentos contém informação relevantes sobre o processo.`,
+        `Os documentos contém informação relevantes sobre o processo.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Na terceira pessoa do plural do presente, usa-se 'contêm'.`,
@@ -59,14 +59,14 @@ const acentuacao = [
     `Assinale a alternativa corretamente acentuada.`,
 
     alternativas: [
-        `A assembleia discutiu a ideia de novas diretrizes.`,
         `A assembléia discutiu a idéia de novas diretrizes.`,
         `A assembléia discutiu a ideia de novas diretrizes.`,
+        `A assembleia discutiu a ideia de novas diretrizes.`,
         `A assembleia discutiu a idéia de novas diretrizes.`,
-        `A assembléia discutiu a idéía de novas diretrizes.`,
+        `A assembléia discutiu a idéía de novas diretrizes.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Após o Acordo Ortográfico, assembleia e ideia não recebem acento nos ditongos abertos de paroxítonas.`,
@@ -86,14 +86,14 @@ const acentuacao = [
     `A palavra corretamente acentuada pelo mesmo motivo de “saúde” é:`,
 
     alternativas: [
+        `ideia, pois há ditongo aberto em paroxítona, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.`,
+        `heroico, pois há ditongo aberto em paroxítona, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.`,
+        `jiboia, pois há encontro vocálico final átono, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.`,
         `país, pois há hiato com vogal tônica isolada ou seguida de s.`,
-        `ideia, pois há ditongo aberto em paroxítona.`,
-        `heroico, pois há ditongo aberto em paroxítona.`,
-        `jiboia, pois há encontro vocálico final átono.`,
-        `assembleia, pois há ditongo decrescente átono.`,
+        `assembleia, pois há ditongo decrescente átono, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Saúde e país têm hiato com vogal tônica que recebe acento.`,
@@ -113,14 +113,14 @@ const acentuacao = [
     `Assinale a alternativa correta.`,
 
     alternativas: [
-        `Ele pôde concluir o relatório ontem, mas hoje não pode revisá-lo.`,
         `Ele pode concluir o relatório ontem, mas hoje não pôde revisá-lo.`,
         `Ele pôde concluir o relatório ontem, mas hoje não pôde revisá-lo.`,
         `Ele pode concluir o relatório ontem, mas hoje não pode revisá-lo.`,
         `Ele pôde concluir o relatório ontem, mas hoje não póde revisá-lo.`,
+        `Ele pôde concluir o relatório ontem, mas hoje não pode revisá-lo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `'Pôde' indica passado; 'pode' indica presente.`,
@@ -167,14 +167,14 @@ const acentuacao = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos tem responsabilidade sobre a conferência final.`,
+        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos têem responsabilidade sobre a conferência final.`,
         `Todos teem responsabilidade sobre a conferência final.`,
-        `Todos têm responsabilidade sobre a conferencia final.`,
+        `Todos têm responsabilidade sobre a conferencia final.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `'Têm' é plural; 'conferência' recebe acento.`,
@@ -194,14 +194,14 @@ const acentuacao = [
     `Assinale a alternativa correta quanto ao Acordo Ortográfico.`,
 
     alternativas: [
-        `A palavra voo não recebe acento gráfico.`,
         `A palavra vôo mantém acento diferencial obrigatório.`,
         `A palavra voo recebe acento por ser monossílabo tônico.`,
+        `A palavra voo não recebe acento gráfico.`,
         `A palavra vôo recebe acento por apresentar hiato com o.`,
-        `A palavra voô recebe acento para indicar tonicidade final.`,
+        `A palavra voô recebe acento para indicar tonicidade final.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Após o Acordo, voo não recebe acento.`,
@@ -221,14 +221,14 @@ const acentuacao = [
     `A palavra que deve receber acento por ser proparoxítona é:`,
 
     alternativas: [
-        `lâmpada.`,
         `item.`,
         `jovem.`,
         `rubrica.`,
-        `gratuito.`,
+        `lâmpada.`,
+        `gratuito.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Todas as proparoxítonas são acentuadas; lâmpada é proparoxítona.`,
@@ -248,14 +248,14 @@ const acentuacao = [
     `Assinale a alternativa em que a acentuação está correta.`,
 
     alternativas: [
-        `A decisão será útil para a análise do processo.`,
         `A decisão será util para a análise do processo.`,
         `A decisão será útil para a analise do processo.`,
         `A decisão sera útil para a análise do processo.`,
         `A decisão será útil para a análize do processo.`,
+        `A decisão será útil para a análise do processo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Será, útil e análise estão corretamente acentuadas; 'análize' é grafia incorreta.`,
@@ -302,14 +302,14 @@ const acentuacao = [
     `Assinale a alternativa correta quanto ao Acordo Ortográfico.`,
 
     alternativas: [
-        `A palavra voo não recebe acento gráfico.`,
         `A palavra vôo mantém acento diferencial obrigatório.`,
+        `A palavra voo não recebe acento gráfico.`,
         `A palavra voo recebe acento por ser monossílabo tônico.`,
         `A palavra vôo recebe acento por apresentar hiato com o.`,
-        `A palavra voô recebe acento para indicar tonicidade final.`,
+        `A palavra voô recebe acento para indicar tonicidade final.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Após o Acordo, voo não recebe acento.`,
@@ -329,14 +329,14 @@ const acentuacao = [
     `A palavra que deve receber acento por ser proparoxítona é:`,
 
     alternativas: [
-        `lâmpada.`,
         `item.`,
         `jovem.`,
+        `lâmpada.`,
         `rubrica.`,
-        `gratuito.`,
+        `gratuito.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Todas as proparoxítonas são acentuadas; lâmpada é proparoxítona.`,
@@ -356,14 +356,14 @@ const acentuacao = [
     `Assinale a alternativa em que a acentuação está correta.`,
 
     alternativas: [
-        `A decisão será útil para a análise do processo.`,
         `A decisão será util para a análise do processo.`,
         `A decisão será útil para a analise do processo.`,
         `A decisão sera útil para a análise do processo.`,
-        `A decisão será útil para a análize do processo.`,
+        `A decisão será útil para a análise do processo.`,
+        `A decisão será útil para a análize do processo.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Será, útil e análise estão corretamente acentuadas; 'análize' é grafia incorreta.`,
@@ -383,14 +383,14 @@ const acentuacao = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos tem responsabilidade sobre a conferência final.`,
         `Todos têem responsabilidade sobre a conferência final.`,
         `Todos teem responsabilidade sobre a conferência final.`,
         `Todos têm responsabilidade sobre a conferencia final.`,
+        `Todos têm responsabilidade sobre a conferência final.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `'Têm' é plural; 'conferência' recebe acento.`,
@@ -437,14 +437,14 @@ const acentuacao = [
     `A palavra que deve receber acento por ser proparoxítona é:`,
 
     alternativas: [
-        `lâmpada.`,
         `item.`,
+        `lâmpada.`,
         `jovem.`,
         `rubrica.`,
-        `gratuito.`,
+        `gratuito.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Todas as proparoxítonas são acentuadas; lâmpada é proparoxítona.`,
@@ -464,14 +464,14 @@ const acentuacao = [
     `Assinale a alternativa em que a acentuação está correta.`,
 
     alternativas: [
-        `A decisão será útil para a análise do processo.`,
         `A decisão será util para a análise do processo.`,
         `A decisão será útil para a analise do processo.`,
+        `A decisão será útil para a análise do processo.`,
         `A decisão sera útil para a análise do processo.`,
-        `A decisão será útil para a análize do processo.`,
+        `A decisão será útil para a análize do processo.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Será, útil e análise estão corretamente acentuadas; 'análize' é grafia incorreta.`,
@@ -491,14 +491,14 @@ const acentuacao = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos tem responsabilidade sobre a conferência final.`,
         `Todos têem responsabilidade sobre a conferência final.`,
         `Todos teem responsabilidade sobre a conferência final.`,
-        `Todos têm responsabilidade sobre a conferencia final.`,
+        `Todos têm responsabilidade sobre a conferência final.`,
+        `Todos têm responsabilidade sobre a conferencia final.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `'Têm' é plural; 'conferência' recebe acento.`,
@@ -518,14 +518,14 @@ const acentuacao = [
     `Assinale a alternativa correta quanto ao Acordo Ortográfico.`,
 
     alternativas: [
-        `A palavra voo não recebe acento gráfico.`,
         `A palavra vôo mantém acento diferencial obrigatório.`,
         `A palavra voo recebe acento por ser monossílabo tônico.`,
         `A palavra vôo recebe acento por apresentar hiato com o.`,
         `A palavra voô recebe acento para indicar tonicidade final.`,
+        `A palavra voo não recebe acento gráfico.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Após o Acordo, voo não recebe acento.`,
@@ -572,14 +572,14 @@ const acentuacao = [
     `Assinale a alternativa em que a acentuação está correta.`,
 
     alternativas: [
-        `A decisão será útil para a análise do processo.`,
         `A decisão será util para a análise do processo.`,
+        `A decisão será útil para a análise do processo.`,
         `A decisão será útil para a analise do processo.`,
         `A decisão sera útil para a análise do processo.`,
-        `A decisão será útil para a análize do processo.`,
+        `A decisão será útil para a análize do processo.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Será, útil e análise estão corretamente acentuadas; 'análize' é grafia incorreta.`,
@@ -599,14 +599,14 @@ const acentuacao = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos tem responsabilidade sobre a conferência final.`,
         `Todos têem responsabilidade sobre a conferência final.`,
+        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos teem responsabilidade sobre a conferência final.`,
-        `Todos têm responsabilidade sobre a conferencia final.`,
+        `Todos têm responsabilidade sobre a conferencia final.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `'Têm' é plural; 'conferência' recebe acento.`,
@@ -626,14 +626,14 @@ const acentuacao = [
     `Assinale a alternativa correta quanto ao Acordo Ortográfico.`,
 
     alternativas: [
-        `A palavra voo não recebe acento gráfico.`,
         `A palavra vôo mantém acento diferencial obrigatório.`,
         `A palavra voo recebe acento por ser monossílabo tônico.`,
         `A palavra vôo recebe acento por apresentar hiato com o.`,
-        `A palavra voô recebe acento para indicar tonicidade final.`,
+        `A palavra voo não recebe acento gráfico.`,
+        `A palavra voô recebe acento para indicar tonicidade final.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Após o Acordo, voo não recebe acento.`,
@@ -653,14 +653,14 @@ const acentuacao = [
     `A palavra que deve receber acento por ser proparoxítona é:`,
 
     alternativas: [
-        `lâmpada.`,
         `item.`,
         `jovem.`,
         `rubrica.`,
         `gratuito.`,
+        `lâmpada.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Todas as proparoxítonas são acentuadas; lâmpada é proparoxítona.`,
@@ -707,14 +707,14 @@ const acentuacao = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos tem responsabilidade sobre a conferência final.`,
+        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos têem responsabilidade sobre a conferência final.`,
         `Todos teem responsabilidade sobre a conferência final.`,
-        `Todos têm responsabilidade sobre a conferencia final.`,
+        `Todos têm responsabilidade sobre a conferencia final.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `'Têm' é plural; 'conferência' recebe acento.`,
@@ -734,14 +734,14 @@ const acentuacao = [
     `Assinale a alternativa correta quanto ao Acordo Ortográfico.`,
 
     alternativas: [
-        `A palavra voo não recebe acento gráfico.`,
         `A palavra vôo mantém acento diferencial obrigatório.`,
         `A palavra voo recebe acento por ser monossílabo tônico.`,
+        `A palavra voo não recebe acento gráfico.`,
         `A palavra vôo recebe acento por apresentar hiato com o.`,
-        `A palavra voô recebe acento para indicar tonicidade final.`,
+        `A palavra voô recebe acento para indicar tonicidade final.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Após o Acordo, voo não recebe acento.`,
@@ -761,14 +761,14 @@ const acentuacao = [
     `A palavra que deve receber acento por ser proparoxítona é:`,
 
     alternativas: [
-        `lâmpada.`,
         `item.`,
         `jovem.`,
         `rubrica.`,
-        `gratuito.`,
+        `lâmpada.`,
+        `gratuito.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Todas as proparoxítonas são acentuadas; lâmpada é proparoxítona.`,
@@ -788,14 +788,14 @@ const acentuacao = [
     `Assinale a alternativa em que a acentuação está correta.`,
 
     alternativas: [
-        `A decisão será útil para a análise do processo.`,
         `A decisão será util para a análise do processo.`,
         `A decisão será útil para a analise do processo.`,
         `A decisão sera útil para a análise do processo.`,
         `A decisão será útil para a análize do processo.`,
+        `A decisão será útil para a análise do processo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Será, útil e análise estão corretamente acentuadas; 'análize' é grafia incorreta.`,
@@ -842,14 +842,14 @@ const acentuacao = [
     `Assinale a alternativa correta quanto ao Acordo Ortográfico.`,
 
     alternativas: [
-        `A palavra voo não recebe acento gráfico.`,
         `A palavra vôo mantém acento diferencial obrigatório.`,
+        `A palavra voo não recebe acento gráfico.`,
         `A palavra voo recebe acento por ser monossílabo tônico.`,
         `A palavra vôo recebe acento por apresentar hiato com o.`,
-        `A palavra voô recebe acento para indicar tonicidade final.`,
+        `A palavra voô recebe acento para indicar tonicidade final.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Após o Acordo, voo não recebe acento.`,
@@ -869,14 +869,14 @@ const acentuacao = [
     `A palavra que deve receber acento por ser proparoxítona é:`,
 
     alternativas: [
-        `lâmpada.`,
         `item.`,
         `jovem.`,
+        `lâmpada.`,
         `rubrica.`,
-        `gratuito.`,
+        `gratuito.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Todas as proparoxítonas são acentuadas; lâmpada é proparoxítona.`,
@@ -896,14 +896,14 @@ const acentuacao = [
     `Assinale a alternativa em que a acentuação está correta.`,
 
     alternativas: [
-        `A decisão será útil para a análise do processo.`,
         `A decisão será util para a análise do processo.`,
         `A decisão será útil para a analise do processo.`,
         `A decisão sera útil para a análise do processo.`,
-        `A decisão será útil para a análize do processo.`,
+        `A decisão será útil para a análise do processo.`,
+        `A decisão será útil para a análize do processo.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Será, útil e análise estão corretamente acentuadas; 'análize' é grafia incorreta.`,
@@ -923,14 +923,14 @@ const acentuacao = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos tem responsabilidade sobre a conferência final.`,
         `Todos têem responsabilidade sobre a conferência final.`,
         `Todos teem responsabilidade sobre a conferência final.`,
         `Todos têm responsabilidade sobre a conferencia final.`,
+        `Todos têm responsabilidade sobre a conferência final.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `'Têm' é plural; 'conferência' recebe acento.`,
@@ -977,14 +977,14 @@ const acentuacao = [
     `A palavra que deve receber acento por ser proparoxítona é:`,
 
     alternativas: [
-        `lâmpada.`,
         `item.`,
+        `lâmpada.`,
         `jovem.`,
         `rubrica.`,
-        `gratuito.`,
+        `gratuito.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Todas as proparoxítonas são acentuadas; lâmpada é proparoxítona.`,
@@ -1004,14 +1004,14 @@ const acentuacao = [
     `Assinale a alternativa em que a acentuação está correta.`,
 
     alternativas: [
-        `A decisão será útil para a análise do processo.`,
         `A decisão será util para a análise do processo.`,
         `A decisão será útil para a analise do processo.`,
+        `A decisão será útil para a análise do processo.`,
         `A decisão sera útil para a análise do processo.`,
-        `A decisão será útil para a análize do processo.`,
+        `A decisão será útil para a análize do processo.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Será, útil e análise estão corretamente acentuadas; 'análize' é grafia incorreta.`,
@@ -1031,14 +1031,14 @@ const acentuacao = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos tem responsabilidade sobre a conferência final.`,
         `Todos têem responsabilidade sobre a conferência final.`,
         `Todos teem responsabilidade sobre a conferência final.`,
-        `Todos têm responsabilidade sobre a conferencia final.`,
+        `Todos têm responsabilidade sobre a conferência final.`,
+        `Todos têm responsabilidade sobre a conferencia final.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `'Têm' é plural; 'conferência' recebe acento.`,
@@ -1058,14 +1058,14 @@ const acentuacao = [
     `Assinale a alternativa correta quanto ao Acordo Ortográfico.`,
 
     alternativas: [
-        `A palavra voo não recebe acento gráfico.`,
         `A palavra vôo mantém acento diferencial obrigatório.`,
         `A palavra voo recebe acento por ser monossílabo tônico.`,
         `A palavra vôo recebe acento por apresentar hiato com o.`,
         `A palavra voô recebe acento para indicar tonicidade final.`,
+        `A palavra voo não recebe acento gráfico.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Após o Acordo, voo não recebe acento.`,
@@ -1112,14 +1112,14 @@ const acentuacao = [
     `Assinale a alternativa em que a acentuação está correta.`,
 
     alternativas: [
-        `A decisão será útil para a análise do processo.`,
         `A decisão será util para a análise do processo.`,
+        `A decisão será útil para a análise do processo.`,
         `A decisão será útil para a analise do processo.`,
         `A decisão sera útil para a análise do processo.`,
-        `A decisão será útil para a análize do processo.`,
+        `A decisão será útil para a análize do processo.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Será, útil e análise estão corretamente acentuadas; 'análize' é grafia incorreta.`,
@@ -1139,14 +1139,14 @@ const acentuacao = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos tem responsabilidade sobre a conferência final.`,
         `Todos têem responsabilidade sobre a conferência final.`,
+        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos teem responsabilidade sobre a conferência final.`,
-        `Todos têm responsabilidade sobre a conferencia final.`,
+        `Todos têm responsabilidade sobre a conferencia final.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `'Têm' é plural; 'conferência' recebe acento.`,
@@ -1166,14 +1166,14 @@ const acentuacao = [
     `Assinale a alternativa correta quanto ao Acordo Ortográfico.`,
 
     alternativas: [
-        `A palavra voo não recebe acento gráfico.`,
         `A palavra vôo mantém acento diferencial obrigatório.`,
         `A palavra voo recebe acento por ser monossílabo tônico.`,
         `A palavra vôo recebe acento por apresentar hiato com o.`,
-        `A palavra voô recebe acento para indicar tonicidade final.`,
+        `A palavra voo não recebe acento gráfico.`,
+        `A palavra voô recebe acento para indicar tonicidade final.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Após o Acordo, voo não recebe acento.`,
@@ -1193,14 +1193,14 @@ const acentuacao = [
     `A palavra que deve receber acento por ser proparoxítona é:`,
 
     alternativas: [
-        `lâmpada.`,
         `item.`,
         `jovem.`,
         `rubrica.`,
         `gratuito.`,
+        `lâmpada.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Todas as proparoxítonas são acentuadas; lâmpada é proparoxítona.`,
@@ -1247,14 +1247,14 @@ const acentuacao = [
     `A alternativa correta é:`,
 
     alternativas: [
-        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos tem responsabilidade sobre a conferência final.`,
+        `Todos têm responsabilidade sobre a conferência final.`,
         `Todos têem responsabilidade sobre a conferência final.`,
         `Todos teem responsabilidade sobre a conferência final.`,
-        `Todos têm responsabilidade sobre a conferencia final.`,
+        `Todos têm responsabilidade sobre a conferencia final.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `'Têm' é plural; 'conferência' recebe acento.`,
@@ -1274,14 +1274,14 @@ const acentuacao = [
     `Assinale a alternativa correta quanto ao Acordo Ortográfico.`,
 
     alternativas: [
-        `A palavra voo não recebe acento gráfico.`,
         `A palavra vôo mantém acento diferencial obrigatório.`,
         `A palavra voo recebe acento por ser monossílabo tônico.`,
+        `A palavra voo não recebe acento gráfico.`,
         `A palavra vôo recebe acento por apresentar hiato com o.`,
-        `A palavra voô recebe acento para indicar tonicidade final.`,
+        `A palavra voô recebe acento para indicar tonicidade final.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Após o Acordo, voo não recebe acento.`,
@@ -1301,14 +1301,14 @@ const acentuacao = [
     `A palavra que deve receber acento por ser proparoxítona é:`,
 
     alternativas: [
-        `lâmpada.`,
         `item.`,
         `jovem.`,
         `rubrica.`,
-        `gratuito.`,
+        `lâmpada.`,
+        `gratuito.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Todas as proparoxítonas são acentuadas; lâmpada é proparoxítona.`,
@@ -1328,14 +1328,14 @@ const acentuacao = [
     `Assinale a alternativa em que a acentuação está correta.`,
 
     alternativas: [
-        `A decisão será útil para a análise do processo.`,
         `A decisão será util para a análise do processo.`,
         `A decisão será útil para a analise do processo.`,
         `A decisão sera útil para a análise do processo.`,
         `A decisão será útil para a análize do processo.`,
+        `A decisão será útil para a análise do processo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Será, útil e análise estão corretamente acentuadas; 'análize' é grafia incorreta.`,
@@ -1348,6 +1348,4 @@ const acentuacao = [
 
     dicaBanca:
     `Observe oxítonas, paroxítonas e proparoxítonas.`
-}
-
-];
+}];

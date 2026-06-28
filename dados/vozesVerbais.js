@@ -32,14 +32,14 @@ const vozesVerbais = [
     `Em “Vendem-se casas naquela região”, o termo “casas” exerce função de:`,
 
     alternativas: [
+        `objeto direto, pois o pronome se em geral indetermina o sujeito.`,
         `sujeito paciente, pois a construção está em voz passiva sintética.`,
-        `objeto direto, pois o pronome se apenas indetermina o sujeito.`,
         `objeto indireto, pois o verbo exige preposição obrigatória.`,
         `adjunto adverbial, pois indica circunstância de lugar.`,
-        `predicativo do sujeito, pois caracteriza o agente da ação.`,
+        `predicativo do sujeito, pois caracteriza o agente da ação.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Com verbo transitivo direto + se, forma-se voz passiva sintética: casas são vendidas.`,
@@ -59,14 +59,14 @@ const vozesVerbais = [
     `Assinale a alternativa em que o pronome “se” funciona como índice de indeterminação do sujeito.`,
 
     alternativas: [
-        `Precisa-se de servidores com experiência na área administrativa.`,
         `Vendem-se equipamentos novos no setor de patrimônio.`,
         `Elaboraram-se relatórios antes do encerramento do prazo.`,
+        `Precisa-se de servidores com experiência na área administrativa.`,
         `Divulgaram-se os resultados preliminares da seleção.`,
-        `Entregaram-se os documentos exigidos pela coordenação.`,
+        `Entregaram-se os documentos exigidos pela coordenação.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Com verbo transitivo indireto 'precisar de', o se indetermina o sujeito.`,
@@ -86,14 +86,14 @@ const vozesVerbais = [
     `A transposição correta de “A coordenação analisou os recursos” para a voz passiva analítica é:`,
 
     alternativas: [
-        `Os recursos foram analisados pela coordenação.`,
         `Os recursos analisaram-se pela coordenação.`,
         `A coordenação foi analisada pelos recursos.`,
         `Foram analisados a coordenação dos recursos.`,
-        `Analisou-se pela coordenação os recursos.`,
+        `Os recursos foram analisados pela coordenação.`,
+        `Analisou-se pela coordenação os recursos.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `O objeto direto da ativa torna-se sujeito paciente na passiva.`,
@@ -113,14 +113,14 @@ const vozesVerbais = [
     `Em “O servidor feriu-se durante a atividade”, ocorre:`,
 
     alternativas: [
-        `voz reflexiva, pois o sujeito pratica e sofre a ação verbal.`,
         `voz passiva sintética, pois o sujeito é paciente e o agente está expresso.`,
-        `voz ativa simples, pois o pronome apenas reforça o sujeito agente.`,
+        `voz ativa simples, pois o pronome em geral reforça o sujeito agente.`,
         `voz passiva analítica, pois há locução verbal com particípio.`,
         `voz recíproca, pois há ação mútua entre dois sujeitos.`,
+        `voz reflexiva, pois o sujeito pratica e sofre a ação verbal.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Na voz reflexiva, o sujeito pratica e recebe a ação.`,
@@ -167,14 +167,14 @@ const vozesVerbais = [
     `Em “Cumpriram-se as normas do edital”, a forma verbal está:`,
 
     alternativas: [
-        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz ativa, com sujeito oculto identificado pela desinência.`,
+        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz reflexiva, pois as normas praticam ação sobre si mesmas.`,
         `na voz passiva analítica, com agente da passiva explicitado.`,
-        `na voz recíproca, pois há ação mútua entre os participantes.`,
+        `na voz recíproca, pois há ação mútua entre os participantes.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `'As normas' são cumpridas; o verbo concorda com o sujeito paciente.`,
@@ -194,14 +194,14 @@ const vozesVerbais = [
     `A frase em que a passagem para a voz passiva preserva o sentido é:`,
 
     alternativas: [
-        `O relatório foi assinado pelo diretor após a conferência.`,
         `O diretor foi assinado pelo relatório após a conferência.`,
         `Após a conferência, assinou-se pelo diretor o relatório.`,
+        `O relatório foi assinado pelo diretor após a conferência.`,
         `O relatório assinou o diretor após a conferência.`,
-        `Pelo relatório, o diretor foi conferido após a assinatura.`,
+        `Pelo relatório, o diretor foi conferido após a assinatura.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A passiva correta mantém o relatório como paciente da ação de assinar.`,
@@ -221,14 +221,14 @@ const vozesVerbais = [
     `Assinale a alternativa com voz reflexiva recíproca.`,
 
     alternativas: [
-        `Os representantes cumprimentaram-se ao final da reunião.`,
         `O representante apresentou-se ao público presente.`,
         `Venderam-se os móveis antigos da repartição.`,
         `Precisa-se de apoio técnico especializado.`,
-        `Os documentos foram avaliados pela comissão.`,
+        `Os representantes cumprimentaram-se ao final da reunião.`,
+        `Os documentos foram avaliados pela comissão.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com sujeito plural e ação mútua, 'cumprimentaram-se' indica reciprocidade.`,
@@ -248,14 +248,14 @@ const vozesVerbais = [
     `Em “Foram publicados os editais”, a estrutura indica:`,
 
     alternativas: [
-        `voz passiva analítica, com sujeito paciente posposto ao verbo.`,
         `voz ativa, com sujeito indeterminado pela terceira pessoa plural.`,
         `voz reflexiva, com pronome indicando ação voltada ao sujeito.`,
         `voz recíproca, com ação mútua entre sujeitos compostos.`,
         `oração sem sujeito, pois a locução verbal impede concordância.`,
+        `voz passiva analítica, com sujeito paciente posposto ao verbo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `'Os editais' foram publicados; há passiva analítica com sujeito paciente.`,
@@ -302,14 +302,14 @@ const vozesVerbais = [
     `Em “Cumpriram-se as normas do edital”, a forma verbal está:`,
 
     alternativas: [
-        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz ativa, com sujeito oculto identificado pela desinência.`,
+        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz reflexiva, pois as normas praticam ação sobre si mesmas.`,
         `na voz passiva analítica, com agente da passiva explicitado.`,
-        `na voz recíproca, pois há ação mútua entre os participantes.`,
+        `na voz recíproca, pois há ação mútua entre os participantes.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `'As normas' são cumpridas; o verbo concorda com o sujeito paciente.`,
@@ -329,14 +329,14 @@ const vozesVerbais = [
     `A frase em que a passagem para a voz passiva preserva o sentido é:`,
 
     alternativas: [
-        `O relatório foi assinado pelo diretor após a conferência.`,
         `O diretor foi assinado pelo relatório após a conferência.`,
         `Após a conferência, assinou-se pelo diretor o relatório.`,
+        `O relatório foi assinado pelo diretor após a conferência.`,
         `O relatório assinou o diretor após a conferência.`,
-        `Pelo relatório, o diretor foi conferido após a assinatura.`,
+        `Pelo relatório, o diretor foi conferido após a assinatura.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A passiva correta mantém o relatório como paciente da ação de assinar.`,
@@ -356,14 +356,14 @@ const vozesVerbais = [
     `Assinale a alternativa com voz reflexiva recíproca.`,
 
     alternativas: [
-        `Os representantes cumprimentaram-se ao final da reunião.`,
         `O representante apresentou-se ao público presente.`,
         `Venderam-se os móveis antigos da repartição.`,
         `Precisa-se de apoio técnico especializado.`,
-        `Os documentos foram avaliados pela comissão.`,
+        `Os representantes cumprimentaram-se ao final da reunião.`,
+        `Os documentos foram avaliados pela comissão.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com sujeito plural e ação mútua, 'cumprimentaram-se' indica reciprocidade.`,
@@ -383,14 +383,14 @@ const vozesVerbais = [
     `Em “Foram publicados os editais”, a estrutura indica:`,
 
     alternativas: [
-        `voz passiva analítica, com sujeito paciente posposto ao verbo.`,
         `voz ativa, com sujeito indeterminado pela terceira pessoa plural.`,
         `voz reflexiva, com pronome indicando ação voltada ao sujeito.`,
         `voz recíproca, com ação mútua entre sujeitos compostos.`,
         `oração sem sujeito, pois a locução verbal impede concordância.`,
+        `voz passiva analítica, com sujeito paciente posposto ao verbo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `'Os editais' foram publicados; há passiva analítica com sujeito paciente.`,
@@ -437,14 +437,14 @@ const vozesVerbais = [
     `Em “Cumpriram-se as normas do edital”, a forma verbal está:`,
 
     alternativas: [
-        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz ativa, com sujeito oculto identificado pela desinência.`,
+        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz reflexiva, pois as normas praticam ação sobre si mesmas.`,
         `na voz passiva analítica, com agente da passiva explicitado.`,
-        `na voz recíproca, pois há ação mútua entre os participantes.`,
+        `na voz recíproca, pois há ação mútua entre os participantes.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `'As normas' são cumpridas; o verbo concorda com o sujeito paciente.`,
@@ -464,14 +464,14 @@ const vozesVerbais = [
     `A frase em que a passagem para a voz passiva preserva o sentido é:`,
 
     alternativas: [
-        `O relatório foi assinado pelo diretor após a conferência.`,
         `O diretor foi assinado pelo relatório após a conferência.`,
         `Após a conferência, assinou-se pelo diretor o relatório.`,
+        `O relatório foi assinado pelo diretor após a conferência.`,
         `O relatório assinou o diretor após a conferência.`,
-        `Pelo relatório, o diretor foi conferido após a assinatura.`,
+        `Pelo relatório, o diretor foi conferido após a assinatura.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A passiva correta mantém o relatório como paciente da ação de assinar.`,
@@ -491,14 +491,14 @@ const vozesVerbais = [
     `Assinale a alternativa com voz reflexiva recíproca.`,
 
     alternativas: [
-        `Os representantes cumprimentaram-se ao final da reunião.`,
         `O representante apresentou-se ao público presente.`,
         `Venderam-se os móveis antigos da repartição.`,
         `Precisa-se de apoio técnico especializado.`,
-        `Os documentos foram avaliados pela comissão.`,
+        `Os representantes cumprimentaram-se ao final da reunião.`,
+        `Os documentos foram avaliados pela comissão.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com sujeito plural e ação mútua, 'cumprimentaram-se' indica reciprocidade.`,
@@ -518,14 +518,14 @@ const vozesVerbais = [
     `Em “Foram publicados os editais”, a estrutura indica:`,
 
     alternativas: [
-        `voz passiva analítica, com sujeito paciente posposto ao verbo.`,
         `voz ativa, com sujeito indeterminado pela terceira pessoa plural.`,
         `voz reflexiva, com pronome indicando ação voltada ao sujeito.`,
         `voz recíproca, com ação mútua entre sujeitos compostos.`,
         `oração sem sujeito, pois a locução verbal impede concordância.`,
+        `voz passiva analítica, com sujeito paciente posposto ao verbo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `'Os editais' foram publicados; há passiva analítica com sujeito paciente.`,
@@ -572,14 +572,14 @@ const vozesVerbais = [
     `Em “Cumpriram-se as normas do edital”, a forma verbal está:`,
 
     alternativas: [
-        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz ativa, com sujeito oculto identificado pela desinência.`,
+        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz reflexiva, pois as normas praticam ação sobre si mesmas.`,
         `na voz passiva analítica, com agente da passiva explicitado.`,
-        `na voz recíproca, pois há ação mútua entre os participantes.`,
+        `na voz recíproca, pois há ação mútua entre os participantes.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `'As normas' são cumpridas; o verbo concorda com o sujeito paciente.`,
@@ -599,14 +599,14 @@ const vozesVerbais = [
     `A frase em que a passagem para a voz passiva preserva o sentido é:`,
 
     alternativas: [
-        `O relatório foi assinado pelo diretor após a conferência.`,
         `O diretor foi assinado pelo relatório após a conferência.`,
         `Após a conferência, assinou-se pelo diretor o relatório.`,
+        `O relatório foi assinado pelo diretor após a conferência.`,
         `O relatório assinou o diretor após a conferência.`,
-        `Pelo relatório, o diretor foi conferido após a assinatura.`,
+        `Pelo relatório, o diretor foi conferido após a assinatura.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A passiva correta mantém o relatório como paciente da ação de assinar.`,
@@ -626,14 +626,14 @@ const vozesVerbais = [
     `Assinale a alternativa com voz reflexiva recíproca.`,
 
     alternativas: [
-        `Os representantes cumprimentaram-se ao final da reunião.`,
         `O representante apresentou-se ao público presente.`,
         `Venderam-se os móveis antigos da repartição.`,
         `Precisa-se de apoio técnico especializado.`,
-        `Os documentos foram avaliados pela comissão.`,
+        `Os representantes cumprimentaram-se ao final da reunião.`,
+        `Os documentos foram avaliados pela comissão.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com sujeito plural e ação mútua, 'cumprimentaram-se' indica reciprocidade.`,
@@ -653,14 +653,14 @@ const vozesVerbais = [
     `Em “Foram publicados os editais”, a estrutura indica:`,
 
     alternativas: [
-        `voz passiva analítica, com sujeito paciente posposto ao verbo.`,
         `voz ativa, com sujeito indeterminado pela terceira pessoa plural.`,
         `voz reflexiva, com pronome indicando ação voltada ao sujeito.`,
         `voz recíproca, com ação mútua entre sujeitos compostos.`,
         `oração sem sujeito, pois a locução verbal impede concordância.`,
+        `voz passiva analítica, com sujeito paciente posposto ao verbo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `'Os editais' foram publicados; há passiva analítica com sujeito paciente.`,
@@ -707,14 +707,14 @@ const vozesVerbais = [
     `Em “Cumpriram-se as normas do edital”, a forma verbal está:`,
 
     alternativas: [
-        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz ativa, com sujeito oculto identificado pela desinência.`,
+        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz reflexiva, pois as normas praticam ação sobre si mesmas.`,
         `na voz passiva analítica, com agente da passiva explicitado.`,
-        `na voz recíproca, pois há ação mútua entre os participantes.`,
+        `na voz recíproca, pois há ação mútua entre os participantes.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `'As normas' são cumpridas; o verbo concorda com o sujeito paciente.`,
@@ -734,14 +734,14 @@ const vozesVerbais = [
     `A frase em que a passagem para a voz passiva preserva o sentido é:`,
 
     alternativas: [
-        `O relatório foi assinado pelo diretor após a conferência.`,
         `O diretor foi assinado pelo relatório após a conferência.`,
         `Após a conferência, assinou-se pelo diretor o relatório.`,
+        `O relatório foi assinado pelo diretor após a conferência.`,
         `O relatório assinou o diretor após a conferência.`,
-        `Pelo relatório, o diretor foi conferido após a assinatura.`,
+        `Pelo relatório, o diretor foi conferido após a assinatura.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A passiva correta mantém o relatório como paciente da ação de assinar.`,
@@ -761,14 +761,14 @@ const vozesVerbais = [
     `Assinale a alternativa com voz reflexiva recíproca.`,
 
     alternativas: [
-        `Os representantes cumprimentaram-se ao final da reunião.`,
         `O representante apresentou-se ao público presente.`,
         `Venderam-se os móveis antigos da repartição.`,
         `Precisa-se de apoio técnico especializado.`,
-        `Os documentos foram avaliados pela comissão.`,
+        `Os representantes cumprimentaram-se ao final da reunião.`,
+        `Os documentos foram avaliados pela comissão.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com sujeito plural e ação mútua, 'cumprimentaram-se' indica reciprocidade.`,
@@ -788,14 +788,14 @@ const vozesVerbais = [
     `Em “Foram publicados os editais”, a estrutura indica:`,
 
     alternativas: [
-        `voz passiva analítica, com sujeito paciente posposto ao verbo.`,
         `voz ativa, com sujeito indeterminado pela terceira pessoa plural.`,
         `voz reflexiva, com pronome indicando ação voltada ao sujeito.`,
         `voz recíproca, com ação mútua entre sujeitos compostos.`,
         `oração sem sujeito, pois a locução verbal impede concordância.`,
+        `voz passiva analítica, com sujeito paciente posposto ao verbo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `'Os editais' foram publicados; há passiva analítica com sujeito paciente.`,
@@ -842,14 +842,14 @@ const vozesVerbais = [
     `Em “Cumpriram-se as normas do edital”, a forma verbal está:`,
 
     alternativas: [
-        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz ativa, com sujeito oculto identificado pela desinência.`,
+        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz reflexiva, pois as normas praticam ação sobre si mesmas.`,
         `na voz passiva analítica, com agente da passiva explicitado.`,
-        `na voz recíproca, pois há ação mútua entre os participantes.`,
+        `na voz recíproca, pois há ação mútua entre os participantes.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `'As normas' são cumpridas; o verbo concorda com o sujeito paciente.`,
@@ -869,14 +869,14 @@ const vozesVerbais = [
     `A frase em que a passagem para a voz passiva preserva o sentido é:`,
 
     alternativas: [
-        `O relatório foi assinado pelo diretor após a conferência.`,
         `O diretor foi assinado pelo relatório após a conferência.`,
         `Após a conferência, assinou-se pelo diretor o relatório.`,
+        `O relatório foi assinado pelo diretor após a conferência.`,
         `O relatório assinou o diretor após a conferência.`,
-        `Pelo relatório, o diretor foi conferido após a assinatura.`,
+        `Pelo relatório, o diretor foi conferido após a assinatura.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A passiva correta mantém o relatório como paciente da ação de assinar.`,
@@ -896,14 +896,14 @@ const vozesVerbais = [
     `Assinale a alternativa com voz reflexiva recíproca.`,
 
     alternativas: [
-        `Os representantes cumprimentaram-se ao final da reunião.`,
         `O representante apresentou-se ao público presente.`,
         `Venderam-se os móveis antigos da repartição.`,
         `Precisa-se de apoio técnico especializado.`,
-        `Os documentos foram avaliados pela comissão.`,
+        `Os representantes cumprimentaram-se ao final da reunião.`,
+        `Os documentos foram avaliados pela comissão.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com sujeito plural e ação mútua, 'cumprimentaram-se' indica reciprocidade.`,
@@ -923,14 +923,14 @@ const vozesVerbais = [
     `Em “Foram publicados os editais”, a estrutura indica:`,
 
     alternativas: [
-        `voz passiva analítica, com sujeito paciente posposto ao verbo.`,
         `voz ativa, com sujeito indeterminado pela terceira pessoa plural.`,
         `voz reflexiva, com pronome indicando ação voltada ao sujeito.`,
         `voz recíproca, com ação mútua entre sujeitos compostos.`,
         `oração sem sujeito, pois a locução verbal impede concordância.`,
+        `voz passiva analítica, com sujeito paciente posposto ao verbo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `'Os editais' foram publicados; há passiva analítica com sujeito paciente.`,
@@ -977,14 +977,14 @@ const vozesVerbais = [
     `Em “Cumpriram-se as normas do edital”, a forma verbal está:`,
 
     alternativas: [
-        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz ativa, com sujeito oculto identificado pela desinência.`,
+        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz reflexiva, pois as normas praticam ação sobre si mesmas.`,
         `na voz passiva analítica, com agente da passiva explicitado.`,
-        `na voz recíproca, pois há ação mútua entre os participantes.`,
+        `na voz recíproca, pois há ação mútua entre os participantes.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `'As normas' são cumpridas; o verbo concorda com o sujeito paciente.`,
@@ -1004,14 +1004,14 @@ const vozesVerbais = [
     `A frase em que a passagem para a voz passiva preserva o sentido é:`,
 
     alternativas: [
-        `O relatório foi assinado pelo diretor após a conferência.`,
         `O diretor foi assinado pelo relatório após a conferência.`,
         `Após a conferência, assinou-se pelo diretor o relatório.`,
+        `O relatório foi assinado pelo diretor após a conferência.`,
         `O relatório assinou o diretor após a conferência.`,
-        `Pelo relatório, o diretor foi conferido após a assinatura.`,
+        `Pelo relatório, o diretor foi conferido após a assinatura.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A passiva correta mantém o relatório como paciente da ação de assinar.`,
@@ -1031,14 +1031,14 @@ const vozesVerbais = [
     `Assinale a alternativa com voz reflexiva recíproca.`,
 
     alternativas: [
-        `Os representantes cumprimentaram-se ao final da reunião.`,
         `O representante apresentou-se ao público presente.`,
         `Venderam-se os móveis antigos da repartição.`,
         `Precisa-se de apoio técnico especializado.`,
-        `Os documentos foram avaliados pela comissão.`,
+        `Os representantes cumprimentaram-se ao final da reunião.`,
+        `Os documentos foram avaliados pela comissão.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com sujeito plural e ação mútua, 'cumprimentaram-se' indica reciprocidade.`,
@@ -1058,14 +1058,14 @@ const vozesVerbais = [
     `Em “Foram publicados os editais”, a estrutura indica:`,
 
     alternativas: [
-        `voz passiva analítica, com sujeito paciente posposto ao verbo.`,
         `voz ativa, com sujeito indeterminado pela terceira pessoa plural.`,
         `voz reflexiva, com pronome indicando ação voltada ao sujeito.`,
         `voz recíproca, com ação mútua entre sujeitos compostos.`,
         `oração sem sujeito, pois a locução verbal impede concordância.`,
+        `voz passiva analítica, com sujeito paciente posposto ao verbo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `'Os editais' foram publicados; há passiva analítica com sujeito paciente.`,
@@ -1112,14 +1112,14 @@ const vozesVerbais = [
     `Em “Cumpriram-se as normas do edital”, a forma verbal está:`,
 
     alternativas: [
-        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz ativa, com sujeito oculto identificado pela desinência.`,
+        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz reflexiva, pois as normas praticam ação sobre si mesmas.`,
         `na voz passiva analítica, com agente da passiva explicitado.`,
-        `na voz recíproca, pois há ação mútua entre os participantes.`,
+        `na voz recíproca, pois há ação mútua entre os participantes.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `'As normas' são cumpridas; o verbo concorda com o sujeito paciente.`,
@@ -1139,14 +1139,14 @@ const vozesVerbais = [
     `A frase em que a passagem para a voz passiva preserva o sentido é:`,
 
     alternativas: [
-        `O relatório foi assinado pelo diretor após a conferência.`,
         `O diretor foi assinado pelo relatório após a conferência.`,
         `Após a conferência, assinou-se pelo diretor o relatório.`,
+        `O relatório foi assinado pelo diretor após a conferência.`,
         `O relatório assinou o diretor após a conferência.`,
-        `Pelo relatório, o diretor foi conferido após a assinatura.`,
+        `Pelo relatório, o diretor foi conferido após a assinatura.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A passiva correta mantém o relatório como paciente da ação de assinar.`,
@@ -1166,14 +1166,14 @@ const vozesVerbais = [
     `Assinale a alternativa com voz reflexiva recíproca.`,
 
     alternativas: [
-        `Os representantes cumprimentaram-se ao final da reunião.`,
         `O representante apresentou-se ao público presente.`,
         `Venderam-se os móveis antigos da repartição.`,
         `Precisa-se de apoio técnico especializado.`,
-        `Os documentos foram avaliados pela comissão.`,
+        `Os representantes cumprimentaram-se ao final da reunião.`,
+        `Os documentos foram avaliados pela comissão.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com sujeito plural e ação mútua, 'cumprimentaram-se' indica reciprocidade.`,
@@ -1193,14 +1193,14 @@ const vozesVerbais = [
     `Em “Foram publicados os editais”, a estrutura indica:`,
 
     alternativas: [
-        `voz passiva analítica, com sujeito paciente posposto ao verbo.`,
         `voz ativa, com sujeito indeterminado pela terceira pessoa plural.`,
         `voz reflexiva, com pronome indicando ação voltada ao sujeito.`,
         `voz recíproca, com ação mútua entre sujeitos compostos.`,
         `oração sem sujeito, pois a locução verbal impede concordância.`,
+        `voz passiva analítica, com sujeito paciente posposto ao verbo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `'Os editais' foram publicados; há passiva analítica com sujeito paciente.`,
@@ -1247,14 +1247,14 @@ const vozesVerbais = [
     `Em “Cumpriram-se as normas do edital”, a forma verbal está:`,
 
     alternativas: [
-        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz ativa, com sujeito oculto identificado pela desinência.`,
+        `na voz passiva sintética, com sujeito paciente no plural.`,
         `na voz reflexiva, pois as normas praticam ação sobre si mesmas.`,
         `na voz passiva analítica, com agente da passiva explicitado.`,
-        `na voz recíproca, pois há ação mútua entre os participantes.`,
+        `na voz recíproca, pois há ação mútua entre os participantes.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `'As normas' são cumpridas; o verbo concorda com o sujeito paciente.`,
@@ -1274,14 +1274,14 @@ const vozesVerbais = [
     `A frase em que a passagem para a voz passiva preserva o sentido é:`,
 
     alternativas: [
-        `O relatório foi assinado pelo diretor após a conferência.`,
         `O diretor foi assinado pelo relatório após a conferência.`,
         `Após a conferência, assinou-se pelo diretor o relatório.`,
+        `O relatório foi assinado pelo diretor após a conferência.`,
         `O relatório assinou o diretor após a conferência.`,
-        `Pelo relatório, o diretor foi conferido após a assinatura.`,
+        `Pelo relatório, o diretor foi conferido após a assinatura.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A passiva correta mantém o relatório como paciente da ação de assinar.`,
@@ -1301,14 +1301,14 @@ const vozesVerbais = [
     `Assinale a alternativa com voz reflexiva recíproca.`,
 
     alternativas: [
-        `Os representantes cumprimentaram-se ao final da reunião.`,
         `O representante apresentou-se ao público presente.`,
         `Venderam-se os móveis antigos da repartição.`,
         `Precisa-se de apoio técnico especializado.`,
-        `Os documentos foram avaliados pela comissão.`,
+        `Os representantes cumprimentaram-se ao final da reunião.`,
+        `Os documentos foram avaliados pela comissão.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com sujeito plural e ação mútua, 'cumprimentaram-se' indica reciprocidade.`,
@@ -1328,14 +1328,14 @@ const vozesVerbais = [
     `Em “Foram publicados os editais”, a estrutura indica:`,
 
     alternativas: [
-        `voz passiva analítica, com sujeito paciente posposto ao verbo.`,
         `voz ativa, com sujeito indeterminado pela terceira pessoa plural.`,
         `voz reflexiva, com pronome indicando ação voltada ao sujeito.`,
         `voz recíproca, com ação mútua entre sujeitos compostos.`,
         `oração sem sujeito, pois a locução verbal impede concordância.`,
+        `voz passiva analítica, com sujeito paciente posposto ao verbo.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `'Os editais' foram publicados; há passiva analítica com sujeito paciente.`,
@@ -1348,6 +1348,4 @@ const vozesVerbais = [
 
     dicaBanca:
     `Na passiva analítica, o sujeito pode aparecer depois do verbo.`
-}
-
-];
+}];

@@ -6,20 +6,14 @@ const coesao = [
     pergunta: "No trecho final, a expressão 'Essa combinação' retoma predominantemente:",
 
     alternativas: [
-
-        "Os investimentos realizados pelos municípios ao longo dos últimos anos.",
-
-        "A aquisição de equipamentos digitais destinados às escolas da rede pública.",
-
         "A integração entre infraestrutura tecnológica e formação profissional dos docentes.",
-
+        "Os investimentos realizados pelos municípios ao longo dos últimos anos.",
+        "A aquisição de equipamentos digitais destinados às escolas da rede pública.",
         "As diferentes estratégias adotadas pelas redes de ensino analisadas pelos especialistas.",
-
         "Os impactos observados sobre a aprendizagem dos estudantes participantes."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: "Correto. A expressão resume e retoma a ideia imediatamente anterior de integração entre infraestrutura e formação profissional.",
 
@@ -34,20 +28,14 @@ const coesao = [
     pergunta: "A expressão 'Tais iniciativas' estabelece relação de coesão ao retomar:",
 
     alternativas: [
-
-        "Os fatores econômicos associados ao abandono escolar.",
-
-        "As dificuldades de aprendizagem identificadas pelos sistemas educacionais.",
-
+        "Os fatores econômicos associados ao abandono escolar, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "Os programas de acompanhamento e as políticas de permanência mencionados anteriormente.",
-
-        "Os resultados duradouros esperados pelas redes de ensino.",
-
-        "O fenômeno da evasão escolar discutido no início do texto."
-
+        "As dificuldades de aprendizagem identificadas pelos sistemas educacionais, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Os resultados duradouros esperados pelas redes de ensino, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "O fenômeno da evasão escolar discutido no início do texto, quando analisada sem a articulação completa entre as ideias apresentadas no texto."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. A expressão retoma conjuntamente as medidas apresentadas no período anterior.",
 
@@ -62,20 +50,14 @@ const coesao = [
     pergunta: "O pronome demonstrativo 'isso', no último período, retoma principalmente:",
 
     alternativas: [
-
         "A consulta rápida e flexível aos conteúdos digitais pelos estudantes.",
-
         "A ampliação do acesso aos materiais de estudo promovida pelas bibliotecas digitais.",
-
-        "A disponibilização de recursos tecnológicos nas instituições de ensino.",
-
         "A ocorrência de melhorias significativas na aprendizagem dos estudantes.",
-
+        "A disponibilização de recursos tecnológicos nas instituições de ensino.",
         "O desenvolvimento de estratégias pedagógicas voltadas ao uso das tecnologias."
-
     ],
 
-    correta: 3,
+    correta: 2,
 
     feedbackAcerto: "Correto. O pronome retoma a ideia expressa imediatamente antes: a obtenção de melhorias significativas na aprendizagem.",
 
@@ -90,20 +72,14 @@ const coesao = [
     pergunta: "A expressão 'Por essa razão' estabelece, em relação ao trecho anterior, uma relação de:",
 
     alternativas: [
-
         "Contraste entre duas perspectivas relacionadas ao papel da pesquisa científica.",
-
-        "Conclusão construída a partir dos argumentos apresentados anteriormente.",
-
         "Explicação destinada a justificar uma afirmação já conhecida pelo leitor.",
-
         "Retificação de uma informação considerada insuficiente pelo autor.",
-
+        "Conclusão construída a partir dos argumentos apresentados anteriormente.",
         "Alternância entre benefícios e limitações da produção científica."
-
     ],
 
-    correta: 1,
+    correta: 3,
 
     feedbackAcerto: "Correto. O autor apresenta uma conclusão derivada dos argumentos desenvolvidos nos períodos anteriores.",
 
@@ -118,20 +94,14 @@ const coesao = [
     pergunta: "A expressão 'essa articulação' retoma principalmente:",
 
     alternativas: [
-
         "A melhoria da qualidade do ensino promovida pela formação continuada.",
-
         "Os resultados esperados pelos programas de capacitação docente.",
-
-        "A relação entre ações de formação e políticas institucionais mais amplas.",
-
         "Os avanços limitados observados nos sistemas educacionais.",
-
-        "Os programas de capacitação isolados mencionados pelo autor."
-
+        "Os programas de capacitação isolados mencionados pelo autor.",
+        "A relação entre ações de formação e políticas institucionais mais amplas."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. A expressão resume a integração entre formação continuada e políticas institucionais mais amplas.",
 
@@ -145,20 +115,14 @@ const coesao = [
     pergunta: "A expressão 'Tal constatação' retoma predominantemente:",
 
     alternativas: [
-
-        "A expansão do ensino remoto observada nas instituições educacionais.",
-
-        "Os investimentos realizados em plataformas digitais e formação tecnológica.",
-
         "A insuficiência das medidas adotadas para garantir, isoladamente, a qualidade do ensino.",
-
+        "A expansão do ensino remoto observada nas instituições educacionais.",
+        "Os investimentos realizados em plataformas digitais e formação tecnológica.",
         "Os desafios educacionais surgidos em decorrência das transformações tecnológicas.",
-
         "As diferentes estratégias implementadas pelas instituições de ensino analisadas."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: "Correto. A expressão resume a ideia de que as medidas adotadas, isoladamente, não garantiam a qualidade educacional.",
 
@@ -201,20 +165,14 @@ const coesao = [
     pergunta: "O conectivo 'Consequentemente' estabelece, entre os segmentos do texto, uma relação de:",
 
     alternativas: [
-
         "Explicação destinada a justificar um posicionamento previamente apresentado.",
-
         "Adição de uma nova informação sem dependência lógica da anterior.",
-
-        "Contraste entre perspectivas distintas acerca da matriz energética.",
-
         "Resultado decorrente das causas apresentadas anteriormente.",
-
+        "Contraste entre perspectivas distintas acerca da matriz energética.",
         "Retificação de uma informação considerada incompleta pelo autor."
-
     ],
 
-    correta: 3,
+    correta: 2,
 
     feedbackAcerto: "Correto. O investimento ampliado surge como consequência das razões apresentadas anteriormente.",
 
@@ -229,20 +187,14 @@ const coesao = [
     pergunta: "No último período, a expressão 'Esse cenário' retoma principalmente:",
 
     alternativas: [
-
         "A educação inclusiva enquanto política pública de acesso e permanência escolar.",
-
         "A atuação complementar desempenhada por escolas, famílias e profissionais especializados.",
-
-        "A situação em que a ausência de articulação compromete os resultados esperados.",
-
         "Os resultados obtidos pelas políticas voltadas à inclusão educacional.",
-
+        "A situação em que a ausência de articulação compromete os resultados esperados.",
         "O papel desempenhado pelos gestores no desenvolvimento das ações inclusivas."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. A expressão resume a situação descrita imediatamente antes: o comprometimento dos resultados quando falta articulação.",
 
@@ -257,20 +209,14 @@ const coesao = [
     pergunta: "O conectivo 'Ainda assim' estabelece, em relação ao período anterior, uma relação de:",
 
     alternativas: [
-
         "Conclusão construída a partir dos argumentos anteriormente apresentados.",
-
         "Explicação que detalha as razões das dificuldades enfrentadas pelos projetos.",
-
-        "Contraste entre uma expectativa lógica e o fato efetivamente observado.",
-
         "Adição de uma informação complementar ao argumento principal do texto.",
-
-        "Comparação entre diferentes modelos de financiamento da pesquisa científica."
-
+        "Comparação entre diferentes modelos de financiamento da pesquisa científica.",
+        "Contraste entre uma expectativa lógica e o fato efetivamente observado."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. O conectivo introduz uma ideia que contrasta com a expectativa criada pelo período anterior.",
 
@@ -284,20 +230,14 @@ const coesao = [
     pergunta: "A expressão 'Tal iniciativa' retoma predominantemente:",
 
     alternativas: [
-
-        "Os impactos duradouros observados no desenvolvimento infantil ao longo dos anos.",
-
         "A ampliação de programas voltados à primeira infância fundamentada em evidências científicas.",
-
-        "A atenção crescente dedicada por pesquisadores ao tema da infância.",
-
-        "A redução das desigualdades sociais observada em diferentes países.",
-
-        "Os investimentos realizados nos primeiros anos de vida das crianças."
-
+        "Os impactos duradouros observados no desenvolvimento infantil ao longo dos anos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "A atenção crescente dedicada por pesquisadores ao tema da infância, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "A redução das desigualdades sociais observada em diferentes países, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Os investimentos realizados nos primeiros anos de vida das crianças, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. A expressão retoma especificamente a ampliação dos programas direcionados à primeira infância.",
 
@@ -312,20 +252,14 @@ const coesao = [
     pergunta: "O conectivo 'Além disso' estabelece uma relação de:",
 
     alternativas: [
-
         "Retificação de uma ideia considerada insuficiente pelo autor.",
-
-        "Conclusão derivada dos argumentos apresentados anteriormente.",
-
         "Acrescentamento de um novo argumento ao raciocínio desenvolvido.",
-
+        "Conclusão derivada dos argumentos apresentados anteriormente.",
         "Contraste entre diferentes perspectivas sobre a formação de leitores.",
-
         "Explicação destinada a justificar a relevância da mediação familiar."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. O conectivo introduz mais um argumento favorável à formação de leitores.",
 
@@ -368,20 +302,14 @@ const coesao = [
     pergunta: "A expressão 'Caso contrário' estabelece uma relação semântica de:",
 
     alternativas: [
-
-        "Condição associada à ocorrência de uma consequência futura.",
-
         "Conclusão construída a partir dos benefícios observados.",
-
         "Explicação destinada a justificar os investimentos realizados.",
-
         "Comparação entre diferentes modelos de gestão ambiental.",
-
+        "Condição associada à ocorrência de uma consequência futura.",
         "Adição de uma nova informação relacionada às áreas verdes."
-
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. O conectivo introduz uma condição cuja não observância pode gerar determinada consequência.",
 
@@ -396,20 +324,14 @@ const coesao = [
     pergunta: "A expressão 'Essa característica' retoma predominantemente:",
 
     alternativas: [
-
         "A necessidade de recursos financeiros para o desenvolvimento de pesquisas.",
-
         "A produção de resultados considerados relevantes pela comunidade científica.",
-
-        "O fato de muitas investigações exigirem longos períodos para gerar resultados.",
-
         "As expectativas sociais relacionadas à solução de problemas complexos.",
-
-        "A importância dos investimentos destinados à produção do conhecimento."
-
+        "A importância dos investimentos destinados à produção do conhecimento.",
+        "O fato de muitas investigações exigirem longos períodos para gerar resultados."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. A expressão resume a ideia apresentada no período anterior: o longo tempo necessário para obtenção de resultados.",
 
@@ -423,20 +345,14 @@ const coesao = [
     pergunta: "A expressão 'Esse problema' retoma predominantemente:",
 
     alternativas: [
-
-        "A ampliação do acesso à internet observada nas últimas décadas.",
-
-        "A existência de múltiplas fontes de informação disponíveis aos usuários.",
-
-        "A dificuldade de obtenção de conteúdos em ambientes digitais.",
-
         "O risco de propagação de informações incorretas decorrente da ausência de avaliação crítica.",
-
-        "As transformações sociais provocadas pelo avanço das tecnologias de comunicação."
-
+        "A ampliação do acesso à internet observada nas últimas décadas, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "A existência de múltiplas fontes de informação disponíveis aos usuários, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "A dificuldade de obtenção de conteúdos em ambientes digitais, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "As transformações sociais provocadas pelo avanço das tecnologias de comunicação, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 3,
+    correta: 0,
 
     feedbackAcerto: "Correto. A expressão sintetiza a ideia imediatamente anterior relacionada à disseminação de informações incorretas.",
 
@@ -451,20 +367,14 @@ const coesao = [
     pergunta: "O pronome possessivo 'sua', no último período, refere-se principalmente a:",
 
     alternativas: [
-
         "Valorização da memória coletiva.",
-
-        "População envolvida nas ações de conscientização.",
-
         "Implementação conjunta das estratégias de proteção mencionadas.",
-
+        "População envolvida nas ações de conscientização.",
         "Características distintas das medidas adotadas.",
-
         "Preservação do patrimônio histórico realizada pelos órgãos públicos."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. O pronome retoma a implementação conjunta das estratégias apresentadas anteriormente.",
 
@@ -479,20 +389,14 @@ const coesao = [
     pergunta: "A relação estabelecida pelo conectivo 'Consequentemente' pode ser classificada como:",
 
     alternativas: [
-
         "Explicação de uma informação apresentada anteriormente.",
-
-        "Conclusão lógica derivada dos fatores descritos no texto.",
-
         "Adição de um argumento complementar à análise realizada.",
-
+        "Conclusão lógica derivada dos fatores descritos no texto.",
         "Contraposição entre causas naturais e ações humanas.",
-
         "Retificação de resultados obtidos durante a pesquisa."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: "Correto. O aumento das enchentes é apresentado como resultado dos fatores anteriormente mencionados.",
 
@@ -535,20 +439,14 @@ const coesao = [
     pergunta: "A expressão 'Por essa razão' estabelece relação de:",
 
     alternativas: [
-
         "Adição de uma nova informação relacionada ao tema principal.",
-
-        "Conclusão construída a partir dos argumentos anteriormente desenvolvidos.",
-
         "Explicação destinada a justificar uma afirmação secundária do texto.",
-
         "Contraste entre diferentes formas de leitura acadêmica.",
-
-        "Comparação entre estudantes experientes e iniciantes."
-
+        "Comparação entre estudantes experientes e iniciantes.",
+        "Conclusão construída a partir dos argumentos anteriormente desenvolvidos."
     ],
 
-    correta: 1,
+    correta: 4,
 
     feedbackAcerto: "Correto. O último período apresenta uma conclusão derivada das exigências descritas anteriormente.",
 
@@ -562,20 +460,14 @@ const coesao = [
     pergunta: "A expressão 'Essa perspectiva' retoma predominantemente:",
 
     alternativas: [
-
-        "A formação de cidadãos capazes de enfrentar desafios econômicos cotidianos.",
-
-        "A inclusão gradual da educação financeira nos currículos escolares.",
-
         "A importância atribuída à educação financeira na formação dos estudantes.",
-
+        "A formação de cidadãos capazes de enfrentar desafios econômicos cotidianos.",
+        "A inclusão gradual da educação financeira nos currículos escolares.",
         "Os desafios enfrentados pelas propostas curriculares contemporâneas.",
-
         "O desenvolvimento de competências relacionadas ao consumo consciente."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: "Correto. A expressão resume a visão apresentada anteriormente acerca da relevância da educação financeira.",
 
@@ -590,20 +482,14 @@ const coesao = [
     pergunta: "O pronome possessivo 'sua', no último período, refere-se principalmente a:",
 
     alternativas: [
-
         "Participação dos estudantes no processo educativo.",
-
-        "Autonomia intelectual desenvolvida pelos alunos.",
-
-        "Expansão das metodologias ativas em diferentes níveis de ensino.",
-
         "Implementação das metodologias ativas nas instituições educacionais.",
-
+        "Autonomia intelectual desenvolvida pelos alunos.",
+        "Expansão das metodologias ativas em diferentes níveis de ensino.",
         "Formação adequada dos docentes responsáveis pelas atividades."
-
     ],
 
-    correta: 3,
+    correta: 1,
 
     feedbackAcerto: "Correto. O pronome refere-se à implementação das metodologias ativas mencionadas anteriormente.",
 
@@ -674,20 +560,14 @@ const coesao = [
     pergunta: "A expressão 'Desse modo' estabelece uma relação de:",
 
     alternativas: [
-
-        "Conclusão fundamentada nas informações apresentadas anteriormente.",
-
         "Explicação destinada a esclarecer uma afirmação já realizada.",
-
         "Contraste entre duas perspectivas relacionadas à educação.",
-
         "Adição de uma nova evidência ao raciocínio desenvolvido.",
-
-        "Retificação de uma informação considerada insuficiente."
-
+        "Retificação de uma informação considerada insuficiente.",
+        "Conclusão fundamentada nas informações apresentadas anteriormente."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. O conectivo introduz uma conclusão construída a partir dos argumentos previamente apresentados.",
 
@@ -701,20 +581,14 @@ const coesao = [
     pergunta: "A expressão 'Essa competência' retoma predominantemente:",
 
     alternativas: [
-
-        "A capacidade de participação em debates públicos relacionados a temas científicos.",
-
-        "A ampla circulação de informações observada nas sociedades contemporâneas.",
-
         "A alfabetização científica apresentada como elemento essencial da formação cidadã.",
-
+        "A capacidade de participação em debates públicos relacionados a temas científicos.",
+        "A ampla circulação de informações observada nas sociedades contemporâneas.",
         "A necessidade de tomada de decisões fundamentadas em diferentes contextos sociais.",
-
         "A compreensão de fenômenos naturais associada ao desenvolvimento educacional."
-
     ],
 
-    correta: 2,
+    correta: 0,
 
     feedbackAcerto: "Correto. A expressão resume a ideia central de alfabetização científica apresentada anteriormente.",
 
@@ -729,20 +603,14 @@ const coesao = [
     pergunta: "O conectivo 'contudo' estabelece, no contexto, uma relação de:",
 
     alternativas: [
-
-        "Adição de uma informação complementar ao raciocínio anteriormente desenvolvido.",
-
-        "Conclusão derivada das medidas apresentadas ao longo do texto.",
-
+        "Adição de uma informação complementar ao raciocínio anteriormente desenvolvido, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "Contraste entre a adoção das medidas e a condição necessária para sua maior eficácia.",
-
-        "Explicação destinada a justificar os investimentos realizados pelas cidades.",
-
-        "Comparação entre diferentes estratégias de mobilidade urbana."
-
+        "Conclusão derivada das medidas apresentadas ao longo do texto, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
+        "Explicação destinada a justificar os investimentos realizados pelas cidades, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Comparação entre diferentes estratégias de mobilidade urbana, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. O conectivo introduz uma ressalva em relação à eficácia das medidas mencionadas.",
 
@@ -757,20 +625,14 @@ const coesao = [
     pergunta: "A expressão 'Esse processo' retoma principalmente:",
 
     alternativas: [
-
-        "O desenvolvimento de habilidades socioemocionais em ambientes colaborativos.",
-
+        "O desenvolvimento de habilidades socioemocionais em ambientes colaborativos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "A valorização das competências socioemocionais pelo mercado de trabalho, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "A negociação de ideias, a resolução de conflitos e a construção coletiva de soluções.",
-
-        "A valorização das competências socioemocionais pelo mercado de trabalho.",
-
-        "A existência de diferentes contextos profissionais contemporâneos.",
-
-        "A colaboração entre participantes durante atividades educacionais."
-
+        "A existência de diferentes contextos profissionais contemporâneos, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
+        "A colaboração entre participantes durante atividades educacionais, a partir de uma análise sintática parcial, que não contempla toda a estrutura da oração."
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: "Correto. A expressão resume o conjunto de ações descritas imediatamente antes.",
 
@@ -785,20 +647,14 @@ const coesao = [
     pergunta: "A expressão 'Por conseguinte' estabelece uma relação de:",
 
     alternativas: [
-
+        "Explicação destinada a detalhar os benefícios das fontes renováveis, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Adição de uma nova vantagem relacionada à matriz energética, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Contraste entre diferentes modelos de produção de energia, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "Conclusão ou consequência decorrente dos argumentos apresentados anteriormente.",
-
-        "Explicação destinada a detalhar os benefícios das fontes renováveis.",
-
-        "Adição de uma nova vantagem relacionada à matriz energética.",
-
-        "Contraste entre diferentes modelos de produção de energia.",
-
-        "Retificação de uma informação previamente apresentada pelo autor."
-
+        "Retificação de uma informação previamente apresentada pelo autor, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. O conectivo introduz uma consequência lógica derivada dos benefícios mencionados.",
 
@@ -813,27 +669,18 @@ const coesao = [
     pergunta: "A expressão 'Essa visão' retoma predominantemente:",
 
     alternativas: [
-
-        "A importância dos cursos de capacitação para a atualização dos conhecimentos docentes.",
-
-        "A formação continuada entendida como processo permanente de desenvolvimento profissional.",
-
-        "A ideia de que a aprendizagem docente ocorre também por meio da colaboração e da troca de experiências.",
-
-        "A formulação de programas destinados ao aperfeiçoamento profissional dos professores.",
-
-        "O papel desempenhado pelos especialistas na elaboração de políticas educacionais."
-
+        "A importância dos cursos de capacitação para a atualização dos conhecimentos docentes, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "A formação continuada entendida como processo permanente de desenvolvimento profissional, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "A formulação de programas destinados ao aperfeiçoamento profissional dos professores, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "O papel desempenhado pelos especialistas na elaboração de políticas educacionais, a partir de uma análise sintática parcial, que não contempla toda a estrutura da oração.",
+        "A ideia de que a aprendizagem docente ocorre também por meio da colaboração e da troca de experiências."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. A expressão resume o entendimento apresentado no período anterior sobre aprendizagem colaborativa.",
 
     feedbackErro: "Nem sempre a retomada recai sobre o tema geral; muitas vezes ela recupera uma tese específica defendida no texto.",
 
     dicaBanca: "Expressões como 'essa visão', 'esse entendimento' e 'essa concepção' costumam retomar posicionamentos ou teses."
-}
-
-
-];
+}];

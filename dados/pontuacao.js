@@ -32,14 +32,14 @@ const pontuacao = [
     `A vírgula foi corretamente empregada em:`,
 
     alternativas: [
-        `João, entregue os documentos à secretaria ainda hoje.`,
         `João entregue, os documentos à secretaria ainda hoje.`,
+        `João, entregue os documentos à secretaria ainda hoje.`,
         `João entregue os documentos, à secretaria ainda hoje.`,
         `João entregue os documentos à secretaria, ainda hoje.`,
-        `João, entregue, os documentos à secretaria ainda hoje.`,
+        `João, entregue, os documentos à secretaria ainda hoje.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A vírgula isola o vocativo 'João'.`,
@@ -59,14 +59,14 @@ const pontuacao = [
     `Assinale a frase em que a pontuação preserva corretamente a explicação do aposto.`,
 
     alternativas: [
-        `A coordenadora, responsável pelo setor, assinou o parecer final.`,
         `A coordenadora responsável, pelo setor assinou o parecer final.`,
         `A coordenadora responsável pelo setor, assinou o parecer final.`,
+        `A coordenadora, responsável pelo setor, assinou o parecer final.`,
         `A coordenadora, responsável pelo setor assinou, o parecer final.`,
-        `A coordenadora responsável pelo setor assinou, o parecer final.`,
+        `A coordenadora responsável pelo setor assinou, o parecer final.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `O aposto explicativo 'responsável pelo setor' deve ficar isolado por vírgulas.`,
@@ -86,14 +86,14 @@ const pontuacao = [
     `Em qual alternativa a vírgula separa corretamente orações coordenadas com sujeitos diferentes?`,
 
     alternativas: [
-        `O diretor revisou o documento, e a equipe encaminhou a versão final.`,
         `O diretor revisou, o documento e a equipe encaminhou a versão final.`,
         `O diretor revisou o documento e, a equipe encaminhou a versão final.`,
         `O diretor, revisou o documento e a equipe encaminhou a versão final.`,
-        `O diretor revisou o documento e a equipe, encaminhou a versão final.`,
+        `O diretor revisou o documento, e a equipe encaminhou a versão final.`,
+        `O diretor revisou o documento e a equipe, encaminhou a versão final.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A vírgula antes de 'e' pode ocorrer quando as orações coordenadas têm sujeitos diferentes.`,
@@ -113,14 +113,14 @@ const pontuacao = [
     `Assinale a alternativa em que os dois-pontos foram empregados adequadamente.`,
 
     alternativas: [
-        `A comissão solicitou três documentos: ofício, relatório e comprovante.`,
         `A comissão: solicitou três documentos, ofício, relatório e comprovante.`,
         `A comissão solicitou: três documentos ofício, relatório e comprovante.`,
         `A comissão solicitou três: documentos ofício, relatório e comprovante.`,
         `A comissão solicitou três documentos ofício: relatório e comprovante.`,
+        `A comissão solicitou três documentos: ofício, relatório e comprovante.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Os dois-pontos introduzem enumeração anunciada anteriormente.`,
@@ -167,14 +167,14 @@ const pontuacao = [
     `A pontuação está correta em:`,
 
     alternativas: [
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos que foram revisados ontem, serão publicados hoje.`,
+        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos, que foram revisados ontem serão publicados hoje.`,
         `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`,
+        `Os documentos que, foram revisados ontem, serão publicados hoje.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
@@ -194,14 +194,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula está inadequada.`,
 
     alternativas: [
-        `Os servidores, entregaram os formulários no protocolo central.`,
         `Os servidores entregaram os formulários no protocolo central.`,
         `No protocolo central, os servidores entregaram os formulários.`,
+        `Os servidores, entregaram os formulários no protocolo central.`,
         `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`,
+        `Os servidores, após a orientação, entregaram os formulários.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
@@ -221,14 +221,14 @@ const pontuacao = [
     `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
 
     alternativas: [
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
         `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
@@ -248,14 +248,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula foi usada corretamente.`,
 
     alternativas: [
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
         `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
+        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `A oração adverbial deslocada no início deve ser separada por vírgula.`,
@@ -302,14 +302,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula está inadequada.`,
 
     alternativas: [
-        `Os servidores, entregaram os formulários no protocolo central.`,
         `Os servidores entregaram os formulários no protocolo central.`,
+        `Os servidores, entregaram os formulários no protocolo central.`,
         `No protocolo central, os servidores entregaram os formulários.`,
         `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`,
+        `Os servidores, após a orientação, entregaram os formulários.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
@@ -329,14 +329,14 @@ const pontuacao = [
     `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
 
     alternativas: [
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
         `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
@@ -356,14 +356,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula foi usada corretamente.`,
 
     alternativas: [
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
         `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
+        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
+        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A oração adverbial deslocada no início deve ser separada por vírgula.`,
@@ -383,14 +383,14 @@ const pontuacao = [
     `A pontuação está correta em:`,
 
     alternativas: [
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos que foram revisados ontem, serão publicados hoje.`,
         `Os documentos, que foram revisados ontem serão publicados hoje.`,
         `Os documentos que foram revisados, ontem serão publicados hoje.`,
         `Os documentos que, foram revisados ontem, serão publicados hoje.`,
+        `Os documentos, que foram revisados ontem, serão publicados hoje.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
@@ -437,14 +437,14 @@ const pontuacao = [
     `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
 
     alternativas: [
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
         `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
@@ -464,14 +464,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula foi usada corretamente.`,
 
     alternativas: [
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
+        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
         `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
+        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A oração adverbial deslocada no início deve ser separada por vírgula.`,
@@ -491,14 +491,14 @@ const pontuacao = [
     `A pontuação está correta em:`,
 
     alternativas: [
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos que foram revisados ontem, serão publicados hoje.`,
         `Os documentos, que foram revisados ontem serão publicados hoje.`,
         `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`,
+        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
+        `Os documentos que, foram revisados ontem, serão publicados hoje.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
@@ -518,14 +518,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula está inadequada.`,
 
     alternativas: [
-        `Os servidores, entregaram os formulários no protocolo central.`,
         `Os servidores entregaram os formulários no protocolo central.`,
         `No protocolo central, os servidores entregaram os formulários.`,
         `Os servidores entregaram, no protocolo central, os formulários.`,
         `Os servidores, após a orientação, entregaram os formulários.`,
+        `Os servidores, entregaram os formulários no protocolo central.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
@@ -572,14 +572,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula foi usada corretamente.`,
 
     alternativas: [
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
+        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
         `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
+        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A oração adverbial deslocada no início deve ser separada por vírgula.`,
@@ -599,14 +599,14 @@ const pontuacao = [
     `A pontuação está correta em:`,
 
     alternativas: [
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos que foram revisados ontem, serão publicados hoje.`,
         `Os documentos, que foram revisados ontem serão publicados hoje.`,
+        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`,
+        `Os documentos que, foram revisados ontem, serão publicados hoje.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
@@ -626,14 +626,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula está inadequada.`,
 
     alternativas: [
-        `Os servidores, entregaram os formulários no protocolo central.`,
         `Os servidores entregaram os formulários no protocolo central.`,
         `No protocolo central, os servidores entregaram os formulários.`,
         `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`,
+        `Os servidores, entregaram os formulários no protocolo central.`,
+        `Os servidores, após a orientação, entregaram os formulários.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
@@ -653,14 +653,14 @@ const pontuacao = [
     `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
 
     alternativas: [
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
         `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
         `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
@@ -707,14 +707,14 @@ const pontuacao = [
     `A pontuação está correta em:`,
 
     alternativas: [
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos que foram revisados ontem, serão publicados hoje.`,
+        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos, que foram revisados ontem serão publicados hoje.`,
         `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`,
+        `Os documentos que, foram revisados ontem, serão publicados hoje.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
@@ -734,14 +734,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula está inadequada.`,
 
     alternativas: [
-        `Os servidores, entregaram os formulários no protocolo central.`,
         `Os servidores entregaram os formulários no protocolo central.`,
         `No protocolo central, os servidores entregaram os formulários.`,
+        `Os servidores, entregaram os formulários no protocolo central.`,
         `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`,
+        `Os servidores, após a orientação, entregaram os formulários.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
@@ -761,14 +761,14 @@ const pontuacao = [
     `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
 
     alternativas: [
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
         `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
@@ -788,14 +788,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula foi usada corretamente.`,
 
     alternativas: [
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
         `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
+        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `A oração adverbial deslocada no início deve ser separada por vírgula.`,
@@ -842,14 +842,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula está inadequada.`,
 
     alternativas: [
-        `Os servidores, entregaram os formulários no protocolo central.`,
         `Os servidores entregaram os formulários no protocolo central.`,
+        `Os servidores, entregaram os formulários no protocolo central.`,
         `No protocolo central, os servidores entregaram os formulários.`,
         `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`,
+        `Os servidores, após a orientação, entregaram os formulários.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
@@ -869,14 +869,14 @@ const pontuacao = [
     `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
 
     alternativas: [
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
         `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
@@ -896,14 +896,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula foi usada corretamente.`,
 
     alternativas: [
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
         `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
+        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
+        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A oração adverbial deslocada no início deve ser separada por vírgula.`,
@@ -923,14 +923,14 @@ const pontuacao = [
     `A pontuação está correta em:`,
 
     alternativas: [
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos que foram revisados ontem, serão publicados hoje.`,
         `Os documentos, que foram revisados ontem serão publicados hoje.`,
         `Os documentos que foram revisados, ontem serão publicados hoje.`,
         `Os documentos que, foram revisados ontem, serão publicados hoje.`,
+        `Os documentos, que foram revisados ontem, serão publicados hoje.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
@@ -977,14 +977,14 @@ const pontuacao = [
     `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
 
     alternativas: [
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
         `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
@@ -1004,14 +1004,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula foi usada corretamente.`,
 
     alternativas: [
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
+        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
         `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
+        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A oração adverbial deslocada no início deve ser separada por vírgula.`,
@@ -1031,14 +1031,14 @@ const pontuacao = [
     `A pontuação está correta em:`,
 
     alternativas: [
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos que foram revisados ontem, serão publicados hoje.`,
         `Os documentos, que foram revisados ontem serão publicados hoje.`,
         `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`,
+        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
+        `Os documentos que, foram revisados ontem, serão publicados hoje.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
@@ -1058,14 +1058,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula está inadequada.`,
 
     alternativas: [
-        `Os servidores, entregaram os formulários no protocolo central.`,
         `Os servidores entregaram os formulários no protocolo central.`,
         `No protocolo central, os servidores entregaram os formulários.`,
         `Os servidores entregaram, no protocolo central, os formulários.`,
         `Os servidores, após a orientação, entregaram os formulários.`,
+        `Os servidores, entregaram os formulários no protocolo central.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
@@ -1112,14 +1112,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula foi usada corretamente.`,
 
     alternativas: [
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
+        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
         `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
+        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A oração adverbial deslocada no início deve ser separada por vírgula.`,
@@ -1139,14 +1139,14 @@ const pontuacao = [
     `A pontuação está correta em:`,
 
     alternativas: [
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos que foram revisados ontem, serão publicados hoje.`,
         `Os documentos, que foram revisados ontem serão publicados hoje.`,
+        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`,
+        `Os documentos que, foram revisados ontem, serão publicados hoje.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
@@ -1166,14 +1166,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula está inadequada.`,
 
     alternativas: [
-        `Os servidores, entregaram os formulários no protocolo central.`,
         `Os servidores entregaram os formulários no protocolo central.`,
         `No protocolo central, os servidores entregaram os formulários.`,
         `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`,
+        `Os servidores, entregaram os formulários no protocolo central.`,
+        `Os servidores, após a orientação, entregaram os formulários.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
@@ -1193,14 +1193,14 @@ const pontuacao = [
     `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
 
     alternativas: [
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
         `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
         `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
@@ -1247,14 +1247,14 @@ const pontuacao = [
     `A pontuação está correta em:`,
 
     alternativas: [
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos que foram revisados ontem, serão publicados hoje.`,
+        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
         `Os documentos, que foram revisados ontem serão publicados hoje.`,
         `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`,
+        `Os documentos que, foram revisados ontem, serão publicados hoje.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
@@ -1274,14 +1274,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula está inadequada.`,
 
     alternativas: [
-        `Os servidores, entregaram os formulários no protocolo central.`,
         `Os servidores entregaram os formulários no protocolo central.`,
         `No protocolo central, os servidores entregaram os formulários.`,
+        `Os servidores, entregaram os formulários no protocolo central.`,
         `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`,
+        `Os servidores, após a orientação, entregaram os formulários.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
@@ -1301,14 +1301,14 @@ const pontuacao = [
     `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
 
     alternativas: [
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
         `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
         `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
+        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
@@ -1328,14 +1328,14 @@ const pontuacao = [
     `Assinale a alternativa em que a vírgula foi usada corretamente.`,
 
     alternativas: [
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
         `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
         `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
+        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `A oração adverbial deslocada no início deve ser separada por vírgula.`,
@@ -1348,6 +1348,4 @@ const pontuacao = [
 
     dicaBanca:
     `Oração adverbial anteposta pede vírgula.`
-}
-
-];
+}];

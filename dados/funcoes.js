@@ -90,20 +90,14 @@ const funcoes = [
     pergunta: "A função da linguagem predominante nesse trecho é:",
 
     alternativas: [
-
         "Emotiva, pois o texto apresenta sentimentos pessoais do emissor relacionados às lembranças evocadas.",
-
         "Referencial, pois descreve objetivamente fenômenos psicológicos associados ao processo de rememoração.",
-
-        "Poética, pois a construção da mensagem valoriza imagens, metáforas e efeitos expressivos da linguagem.",
-
         "Conativa, pois procura induzir o leitor a refletir sobre suas próprias experiências de vida.",
-
+        "Poética, pois a construção da mensagem valoriza imagens, metáforas e efeitos expressivos da linguagem.",
         "Metalinguística, pois utiliza recursos linguísticos para explicar mecanismos da produção literária."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. O destaque recai sobre a elaboração estética da mensagem e o emprego de linguagem figurada.",
 
@@ -118,20 +112,14 @@ const funcoes = [
     pergunta: "A função da linguagem predominante no texto é:",
 
     alternativas: [
-
-        "Referencial, pois o objetivo principal consiste na transmissão objetiva de informações fundamentadas em pesquisas.",
-
         "Conativa, pois os dados apresentados buscam persuadir o leitor a adotar hábitos regulares de leitura.",
-
         "Poética, pois a organização das ideias privilegia efeitos estéticos relacionados ao tema abordado.",
-
         "Emotiva, pois a seleção das informações revela posicionamento afetivo do emissor em relação à leitura.",
-
-        "Fática, pois a construção textual procura manter a atenção do leitor ao longo da exposição."
-
+        "Fática, pois a construção textual procura manter a atenção do leitor ao longo da exposição.",
+        "Referencial, pois o objetivo principal consiste na transmissão objetiva de informações fundamentadas em pesquisas."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. O texto apresenta informações de caráter objetivo e fundamentadas em estudos, característica da função referencial.",
 
@@ -146,20 +134,14 @@ const funcoes = [
     pergunta: "Considerando a finalidade predominante do texto, a função da linguagem presente é:",
 
     alternativas: [
-
-        "Referencial, pois os dados estatísticos constituem o núcleo informativo responsável pela organização da mensagem.",
-
         "Conativa, pois as informações apresentadas servem de apoio à tentativa de influenciar o comportamento do receptor.",
-
+        "Referencial, pois os dados estatísticos constituem o núcleo informativo responsável pela organização da mensagem.",
         "Emotiva, pois o texto evidencia sentimentos pessoais do emissor em relação às questões ambientais.",
-
         "Poética, pois a construção textual valoriza recursos expressivos voltados à elaboração estética da mensagem.",
-
         "Metalinguística, pois a linguagem é utilizada para explicar conceitos relacionados à preservação ambiental."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. Os dados ambientais funcionam como argumentos para convencer o leitor a adotar determinada conduta.",
 
@@ -174,20 +156,14 @@ const funcoes = [
     pergunta: "A função da linguagem predominante no texto é:",
 
     alternativas: [
-
         "Conativa, pois a divulgação dos resultados busca incentivar o ingresso dos leitores em cursos técnicos.",
-
-        "Emotiva, pois o texto manifesta satisfação institucional diante do crescimento registrado.",
-
         "Referencial, pois a mensagem prioriza a transmissão objetiva de informações fundamentadas em dados.",
-
+        "Emotiva, pois o texto manifesta satisfação institucional diante do crescimento registrado.",
         "Metalinguística, pois explica conceitos relacionados à educação profissional e tecnológica.",
-
         "Poética, pois organiza os dados por meio de recursos expressivos que valorizam a forma da mensagem."
-
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. O objetivo principal é informar o leitor acerca de um fato respaldado por dados oficiais.",
 
@@ -202,20 +178,14 @@ const funcoes = [
     pergunta: "A função da linguagem predominante nesse trecho é:",
 
     alternativas: [
-
-        "Referencial, pois transmite conhecimento teórico sobre fenômenos relacionados à produção textual.",
-
-        "Poética, pois evidencia preocupação estética na construção do conceito apresentado.",
-
-        "Conativa, pois orienta o leitor quanto ao uso adequado da intertextualidade em seus textos.",
-
+        "Referencial, pois transmite conhecimento teórico sobre fenômenos relacionados à produção textual, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Poética, pois evidencia preocupação estética na construção do conceito apresentado, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "Metalinguística, pois a linguagem é empregada para explicar um conceito pertencente ao próprio universo linguístico.",
-
-        "Fática, pois procura assegurar a compreensão do leitor acerca do tema desenvolvido."
-
+        "Conativa, pois orienta o leitor quanto ao uso adequado da intertextualidade em seus textos, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
+        "Fática, pois procura assegurar a compreensão do leitor acerca do tema desenvolvido, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 3,
+    correta: 2,
 
     feedbackAcerto: "Correto. O texto utiliza a linguagem para explicar um conceito relacionado ao funcionamento da própria linguagem.",
 
@@ -234,20 +204,14 @@ const funcoes = [
     pergunta: "No trecho inicial do diálogo, predomina a função:",
 
     alternativas: [
-
-        "Fática, pois a preocupação principal consiste em verificar o funcionamento do contato comunicativo.",
-
         "Conativa, pois o interlocutor busca induzir a professora a participar da apresentação.",
-
         "Referencial, pois as falas apresentam informações relacionadas ao conteúdo da pesquisa.",
-
         "Poética, pois a construção do diálogo valoriza a organização formal da mensagem.",
-
+        "Fática, pois a preocupação principal consiste em verificar o funcionamento do contato comunicativo.",
         "Emotiva, pois evidencia expectativas pessoais em relação ao desenvolvimento da atividade."
-
     ],
 
-    correta: 0,
+    correta: 3,
 
     feedbackAcerto: "Correto. A intenção inicial é confirmar se as condições de comunicação foram estabelecidas adequadamente.",
 
@@ -262,20 +226,14 @@ const funcoes = [
     pergunta: "A função da linguagem predominante no trecho é:",
 
     alternativas: [
-
         "Emotiva, pois o autor compartilha sentimentos íntimos relacionados ao ato de escrever.",
-
         "Referencial, pois descreve objetivamente o processo de produção de textos literários.",
-
         "Conativa, pois procura estimular o leitor a desenvolver hábitos de leitura e escrita.",
-
-        "Poética, pois a elaboração da mensagem valoriza imagens figuradas e efeitos expressivos.",
-
-        "Metalinguística, pois explica mecanismos relacionados à criação de textos ficcionais."
-
+        "Metalinguística, pois explica mecanismos relacionados à criação de textos ficcionais.",
+        "Poética, pois a elaboração da mensagem valoriza imagens figuradas e efeitos expressivos."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: "Correto. O texto destaca a construção estética da mensagem por meio de metáforas e imagens simbólicas.",
 
@@ -289,20 +247,14 @@ const funcoes = [
     pergunta: "Embora o texto apresente mais de uma função da linguagem, a predominante é:",
 
     alternativas: [
-
-        "Referencial, pois os resultados das pesquisas constituem o elemento central para a construção da mensagem.",
-
         "Conativa, pois as informações apresentadas servem principalmente para estimular uma ação por parte do leitor.",
-
+        "Referencial, pois os resultados das pesquisas constituem o elemento central para a construção da mensagem.",
         "Emotiva, pois o emissor revela sua admiração pessoal pelos benefícios proporcionados pela leitura.",
-
         "Poética, pois a mensagem valoriza recursos expressivos voltados à elaboração estética do texto.",
-
         "Metalinguística, pois explica o significado social e cultural atribuído ao ato de ler."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. Os dados funcionam como argumentos destinados a persuadir o leitor a adotar o hábito da leitura.",
 
@@ -317,20 +269,14 @@ const funcoes = [
     pergunta: "A função da linguagem predominante no trecho é:",
 
     alternativas: [
-
-        "Referencial, pois transmite conhecimento relacionado aos fenômenos observados no uso da língua.",
-
-        "Conativa, pois orienta o leitor sobre a utilização adequada das diferentes variedades linguísticas.",
-
+        "Referencial, pois transmite conhecimento relacionado aos fenômenos observados no uso da língua, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "Metalinguística, pois a linguagem é utilizada para explicar um conceito pertencente ao próprio sistema linguístico.",
-
-        "Poética, pois o conceito é apresentado por meio de recursos expressivos e figurativos.",
-
-        "Fática, pois busca assegurar que o leitor compreenda corretamente o significado do termo."
-
+        "Conativa, pois orienta o leitor sobre a utilização adequada das diferentes variedades linguísticas, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Poética, pois o conceito é apresentado por meio de recursos expressivos e figurativos, porque identifica um efeito expressivo possível, mas não o principal recurso usado no trecho.",
+        "Fática, pois busca assegurar que o leitor compreenda corretamente o significado do termo, a partir de uma análise sintática parcial, que não contempla toda a estrutura da oração."
     ],
 
-    correta: 2,
+    correta: 1,
 
     feedbackAcerto: "Correto. O texto utiliza a própria linguagem para explicar um conceito relacionado ao funcionamento da língua.",
 
@@ -345,20 +291,14 @@ const funcoes = [
     pergunta: "A função da linguagem predominante no texto é:",
 
     alternativas: [
-
         "Conativa, pois os dados apresentados buscam convencer o leitor acerca da eficácia das políticas educacionais.",
-
-        "Referencial, pois a finalidade principal consiste em informar resultados fundamentados em dados e análises.",
-
         "Emotiva, pois o emissor manifesta satisfação em relação aos avanços observados na educação.",
-
+        "Referencial, pois a finalidade principal consiste em informar resultados fundamentados em dados e análises.",
         "Poética, pois a construção textual prioriza a forma pela qual as informações são apresentadas.",
-
         "Metalinguística, pois discute conceitos relacionados ao sistema educacional brasileiro."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: "Correto. O texto prioriza a apresentação objetiva de informações e resultados estatísticos.",
 
@@ -405,20 +345,14 @@ const funcoes = [
     pergunta: "A função da linguagem predominante no trecho é:",
 
     alternativas: [
-
-        "Poética, pois a mensagem valoriza imagens simbólicas, metáforas e recursos expressivos da linguagem.",
-
         "Referencial, pois descreve fenômenos naturais observáveis durante o período noturno.",
-
         "Emotiva, pois evidencia sentimentos pessoais do emissor diante da paisagem contemplada.",
-
         "Conativa, pois procura despertar no leitor o interesse pela observação dos fenômenos naturais.",
-
-        "Metalinguística, pois utiliza recursos linguísticos para explicar técnicas de construção literária."
-
+        "Metalinguística, pois utiliza recursos linguísticos para explicar técnicas de construção literária.",
+        "Poética, pois a mensagem valoriza imagens simbólicas, metáforas e recursos expressivos da linguagem."
     ],
 
-    correta: 0,
+    correta: 4,
 
     feedbackAcerto: "Correto. O destaque está na elaboração estética da mensagem e não na simples transmissão de informações.",
 
@@ -432,20 +366,14 @@ const funcoes = [
     pergunta: "Considerando a intenção comunicativa predominante, a função da linguagem presente no texto é:",
 
     alternativas: [
-
-        "Referencial, pois apresenta informações fundamentadas em conhecimento científico relacionado à saúde pública.",
-
         "Conativa, pois utiliza informações como estratégia para incentivar uma ação específica por parte do receptor.",
-
+        "Referencial, pois apresenta informações fundamentadas em conhecimento científico relacionado à saúde pública.",
         "Emotiva, pois demonstra a preocupação pessoal do emissor com o bem-estar da população.",
-
         "Metalinguística, pois explica conceitos relacionados ao funcionamento dos programas de imunização.",
-
         "Poética, pois organiza a mensagem por meio de recursos expressivos destinados a sensibilizar o leitor."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. Os dados e informações funcionam como argumentos para estimular um comportamento desejado.",
 
@@ -460,17 +388,11 @@ const funcoes = [
     pergunta: "A função da linguagem predominante nesse trecho é:",
 
     alternativas: [
-
-        "Referencial, pois apresenta informações relacionadas à estrutura das frases da língua portuguesa.",
-
+        "Referencial, pois apresenta informações relacionadas à estrutura das frases da língua portuguesa, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "Metalinguística, pois utiliza a linguagem para explicar conceitos pertencentes ao próprio código linguístico.",
-
-        "Conativa, pois orienta o leitor quanto à construção adequada de períodos compostos.",
-
-        "Poética, pois evidencia preocupação com a organização formal da mensagem.",
-
-        "Fática, pois busca assegurar que emissor e receptor compartilhem o mesmo entendimento."
-
+        "Conativa, pois orienta o leitor quanto à construção adequada de períodos compostos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Poética, pois evidencia preocupação com a organização formal da mensagem, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Fática, pois busca assegurar que emissor e receptor compartilhem o mesmo entendimento, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
     correta: 1,
@@ -488,20 +410,14 @@ const funcoes = [
     pergunta: "A função predominante da linguagem no texto é:",
 
     alternativas: [
-
-        "Referencial, pois a mensagem prioriza a apresentação objetiva de resultados obtidos em pesquisas.",
-
         "Conativa, pois procura convencer os leitores a adotarem hábitos de leitura mais frequentes.",
-
         "Emotiva, pois revela admiração do emissor pelos benefícios proporcionados pela leitura.",
-
+        "Referencial, pois a mensagem prioriza a apresentação objetiva de resultados obtidos em pesquisas.",
         "Poética, pois utiliza recursos expressivos para tornar a informação mais impactante.",
-
         "Metalinguística, pois discute processos relacionados à construção dos textos escritos."
-
     ],
 
-    correta: 0,
+    correta: 2,
 
     feedbackAcerto: "Correto. O texto concentra-se na transmissão objetiva de uma informação respaldada por pesquisa.",
 
@@ -548,20 +464,14 @@ const funcoes = [
     pergunta: "A função da linguagem predominante nesse trecho é:",
 
     alternativas: [
-
         "Emotiva, pois evidencia sentimentos pessoais do emissor em relação ao universo da leitura.",
-
         "Referencial, pois descreve objetivamente o processo de produção e recepção dos textos escritos.",
-
-        "Poética, pois a elaboração da mensagem valoriza imagens figuradas e efeitos estéticos da linguagem.",
-
         "Conativa, pois procura incentivar o leitor a desenvolver hábitos permanentes de leitura.",
-
-        "Metalinguística, pois explica mecanismos relacionados à interpretação textual."
-
+        "Metalinguística, pois explica mecanismos relacionados à interpretação textual.",
+        "Poética, pois a elaboração da mensagem valoriza imagens figuradas e efeitos estéticos da linguagem."
     ],
 
-    correta: 2,
+    correta: 4,
 
     feedbackAcerto: "Correto. O texto explora metáforas e recursos expressivos que valorizam a forma da mensagem.",
 
@@ -575,20 +485,14 @@ const funcoes = [
     pergunta: "Embora o texto apresente informações objetivas, a função da linguagem predominante é:",
 
     alternativas: [
-
-        "Referencial, pois o foco principal recai sobre a divulgação de informações relacionadas ao consumo de água.",
-
         "Conativa, pois os dados apresentados atuam como argumento para influenciar o comportamento do receptor.",
-
+        "Referencial, pois o foco principal recai sobre a divulgação de informações relacionadas ao consumo de água.",
         "Emotiva, pois a mensagem evidencia preocupação subjetiva do emissor com questões ambientais.",
-
         "Poética, pois a construção textual privilegia a forma pela qual a mensagem é apresentada.",
-
         "Metalinguística, pois explica conceitos relacionados à preservação dos recursos hídricos."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. As informações servem principalmente para persuadir o leitor a adotar determinada conduta.",
 
@@ -603,20 +507,14 @@ const funcoes = [
     pergunta: "A função da linguagem predominante no trecho é:",
 
     alternativas: [
-
-        "Referencial, pois apresenta informações teóricas relacionadas à produção textual.",
-
-        "Poética, pois valoriza a construção formal da mensagem e a escolha dos recursos expressivos.",
-
-        "Conativa, pois orienta o leitor quanto à elaboração adequada de textos coesos.",
-
+        "Referencial, pois apresenta informações teóricas relacionadas à produção textual, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "Metalinguística, pois utiliza a linguagem para explicar um conceito pertencente ao próprio campo linguístico.",
-
-        "Fática, pois procura assegurar que emissor e receptor compartilhem o mesmo código."
-
+        "Poética, pois valoriza a construção formal da mensagem e a escolha dos recursos expressivos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Conativa, pois orienta o leitor quanto à elaboração adequada de textos coesos, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
+        "Fática, pois procura assegurar que emissor e receptor compartilhem o mesmo código, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 3,
+    correta: 1,
 
     feedbackAcerto: "Correto. O texto utiliza a linguagem para explicar um conceito relacionado à própria linguagem.",
 
@@ -631,20 +529,14 @@ const funcoes = [
     pergunta: "A função predominante da linguagem no texto é:",
 
     alternativas: [
-
         "Conativa, pois procura convencer o leitor a modificar seus hábitos de vida.",
-
-        "Referencial, pois a mensagem concentra-se na transmissão objetiva de informações baseadas em estudos.",
-
         "Poética, pois utiliza linguagem cuidadosamente elaborada para potencializar os efeitos da mensagem.",
-
+        "Referencial, pois a mensagem concentra-se na transmissão objetiva de informações baseadas em estudos.",
         "Emotiva, pois evidencia posicionamento pessoal do emissor em relação à atividade física.",
-
         "Metalinguística, pois apresenta explicações sobre conceitos relacionados à saúde."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: "Correto. O texto apresenta informações fundamentadas em pesquisas, priorizando a função informativa.",
 
@@ -663,20 +555,14 @@ const funcoes = [
     pergunta: "A função predominante da linguagem no trecho destacado é:",
 
     alternativas: [
-
         "Referencial, pois as falas apresentam informações relacionadas ao desenvolvimento da atividade.",
-
         "Conativa, pois os interlocutores procuram orientar os participantes sobre o andamento da transmissão.",
-
-        "Fática, pois a preocupação principal consiste em verificar o funcionamento do canal comunicativo.",
-
         "Emotiva, pois os participantes expressam satisfação quanto às condições da transmissão.",
-
+        "Fática, pois a preocupação principal consiste em verificar o funcionamento do canal comunicativo.",
         "Metalinguística, pois o diálogo aborda aspectos relacionados ao processo de comunicação."
-
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. O objetivo central é assegurar que o canal de comunicação esteja funcionando adequadamente.",
 
@@ -691,20 +577,14 @@ const funcoes = [
     pergunta: "A função da linguagem predominante nesse trecho é:",
 
     alternativas: [
-
         "Referencial, pois descreve objetivamente elementos observáveis do ambiente urbano.",
-
         "Emotiva, pois revela sentimentos pessoais do narrador diante da paisagem apresentada.",
-
         "Conativa, pois procura despertar no leitor interesse pela cena descrita.",
-
-        "Poética, pois a construção da mensagem valoriza imagens, metáforas e recursos expressivos.",
-
-        "Metalinguística, pois utiliza a linguagem para refletir sobre procedimentos de criação literária."
-
+        "Metalinguística, pois utiliza a linguagem para refletir sobre procedimentos de criação literária.",
+        "Poética, pois a construção da mensagem valoriza imagens, metáforas e recursos expressivos."
     ],
 
-    correta: 3,
+    correta: 4,
 
     feedbackAcerto: "Correto. O destaque recai sobre a elaboração estética da linguagem e os efeitos produzidos pela forma da mensagem.",
 
@@ -719,20 +599,14 @@ const funcoes = [
     pergunta: "Considerando a finalidade predominante da mensagem, a função da linguagem presente no texto é:",
 
     alternativas: [
-
-        "Referencial, pois a mensagem concentra-se na divulgação de informações relacionadas aos benefícios da leitura.",
-
         "Conativa, pois os dados apresentados servem principalmente para incentivar uma ação por parte do receptor.",
-
+        "Referencial, pois a mensagem concentra-se na divulgação de informações relacionadas aos benefícios da leitura.",
         "Emotiva, pois evidencia o entusiasmo do emissor em relação ao universo da leitura.",
-
         "Poética, pois a construção textual privilegia recursos expressivos voltados à elaboração estética da mensagem.",
-
         "Metalinguística, pois utiliza a linguagem para explicar conceitos relacionados ao processo de leitura."
-
     ],
 
-    correta: 1,
+    correta: 0,
 
     feedbackAcerto: "Correto. As informações funcionam como estratégia argumentativa para estimular o leitor a frequentar a biblioteca.",
 
@@ -747,20 +621,14 @@ const funcoes = [
     pergunta: "A função predominante da linguagem nesse trecho é:",
 
     alternativas: [
-
-        "Referencial, pois transmite conhecimento relacionado à interpretação textual.",
-
-        "Poética, pois evidencia preocupação com a forma pela qual a definição é apresentada.",
-
-        "Conativa, pois orienta o leitor quanto à produção de textos mais claros.",
-
+        "Referencial, pois transmite conhecimento relacionado à interpretação textual, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
         "Metalinguística, pois utiliza a linguagem para explicar um conceito pertencente ao próprio código.",
-
-        "Fática, pois busca assegurar a compreensão entre emissor e receptor."
-
+        "Poética, pois evidencia preocupação com a forma pela qual a definição é apresentada, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Conativa, pois orienta o leitor quanto à produção de textos mais claros, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
+        "Fática, pois busca assegurar a compreensão entre emissor e receptor, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 3,
+    correta: 1,
 
     feedbackAcerto: "Correto. O texto utiliza a linguagem para explicar um conceito relacionado ao funcionamento da própria linguagem.",
 
@@ -775,20 +643,14 @@ const funcoes = [
     pergunta: "A função da linguagem predominante no texto é:",
 
     alternativas: [
-
         "Conativa, pois os resultados apresentados procuram convencer o leitor da importância das energias renováveis.",
-
-        "Referencial, pois a finalidade principal consiste na transmissão objetiva de informações e dados.",
-
         "Emotiva, pois o emissor demonstra entusiasmo diante das transformações observadas no setor energético.",
-
+        "Referencial, pois a finalidade principal consiste na transmissão objetiva de informações e dados.",
         "Poética, pois a organização textual valoriza a forma pela qual os dados são apresentados.",
-
         "Metalinguística, pois explica conceitos relacionados à produção de energia."
-
     ],
 
-    correta: 1,
+    correta: 2,
 
     feedbackAcerto: "Correto. O texto prioriza a apresentação objetiva de informações fundamentadas em dados.",
 
@@ -807,20 +669,14 @@ const funcoes = [
     pergunta: "A função predominante da linguagem no diálogo é:",
 
     alternativas: [
-
-        "Referencial, pois as falas transmitem informações relacionadas ao conteúdo da apresentação.",
-
-        "Conativa, pois os interlocutores orientam a participação dos presentes na atividade.",
-
+        "Referencial, pois as falas transmitem informações relacionadas ao conteúdo da apresentação, em uma interpretação limitada da relação entre uso linguístico, contexto e adequação comunicativa.",
+        "Conativa, pois os interlocutores orientam a participação dos presentes na atividade, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
+        "Emotiva, pois os participantes revelam expectativas quanto ao andamento do evento, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
         "Fática, pois a preocupação principal consiste em verificar as condições necessárias para a comunicação.",
-
-        "Emotiva, pois os participantes revelam expectativas quanto ao andamento do evento.",
-
-        "Metalinguística, pois o diálogo aborda aspectos relacionados ao processo comunicativo."
-
+        "Metalinguística, pois o diálogo aborda aspectos relacionados ao processo comunicativo, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
     ],
 
-    correta: 2,
+    correta: 3,
 
     feedbackAcerto: "Correto. O objetivo principal é verificar se o canal de comunicação está funcionando adequadamente.",
 

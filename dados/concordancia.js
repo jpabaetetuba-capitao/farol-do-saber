@@ -32,14 +32,14 @@ const concordancia = [
     `Considerando a norma-padrão, assinale a frase correta quanto à concordância verbal.`,
 
     alternativas: [
-        `Mais de um candidato apresentou recurso contra o resultado preliminar.`,
         `Mais de um candidato apresentaram recurso contra o resultado preliminar.`,
+        `Mais de um candidato apresentou recurso contra o resultado preliminar.`,
         `Mais de um candidato se cumprimentaram após o resultado preliminar.`,
         `Mais de um candidato foram convocados para entregar recurso preliminar.`,
-        `Mais de um candidato tinham apresentado recurso contra o resultado preliminar.`,
+        `Mais de um candidato tinham apresentado recurso contra o resultado preliminar.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `A expressão 'mais de um' normalmente leva o verbo ao singular, salvo ideia de reciprocidade.`,
@@ -59,14 +59,14 @@ const concordancia = [
     `A concordância nominal está correta em:`,
 
     alternativas: [
-        `Seguem anexos ao relatório os documentos solicitados pela coordenação.`,
         `Segue anexos ao relatório os documentos solicitados pela coordenação.`,
         `Seguem anexo ao relatório os documentos solicitados pela coordenação.`,
+        `Seguem anexos ao relatório os documentos solicitados pela coordenação.`,
         `Segue anexo ao relatório os documentos solicitados pela coordenação.`,
-        `Seguem anexas ao relatório os documentos solicitados pela coordenação.`,
+        `Seguem anexas ao relatório os documentos solicitados pela coordenação.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `'Anexos' concorda com 'documentos'; o verbo 'seguem' concorda com o sujeito plural.`,
@@ -86,14 +86,14 @@ const concordancia = [
     `Assinale a alternativa em que a concordância está adequada.`,
 
     alternativas: [
-        `É necessária a revisão das atas antes do encaminhamento oficial.`,
         `É necessário a revisão das atas antes do encaminhamento oficial.`,
         `É necessário revisão das atas específicas antes do encaminhamento oficial.`,
         `São necessária a revisão das atas antes do encaminhamento oficial.`,
-        `São necessário as revisões das atas antes do encaminhamento oficial.`,
+        `É necessária a revisão das atas antes do encaminhamento oficial.`,
+        `São necessário as revisões das atas antes do encaminhamento oficial.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `Com artigo determinando o substantivo, o adjetivo concorda: 'a revisão' → 'necessária'.`,
@@ -113,14 +113,14 @@ const concordancia = [
     `Em relação à concordância com o verbo ser, assinale a opção correta.`,
 
     alternativas: [
-        `Hoje são duas horas, e a reunião permanece marcada para o mesmo local.`,
         `Hoje é duas horas, e a reunião permanece marcada para o mesmo local.`,
         `Hoje são uma hora, e a reunião permanece marcada para o mesmo local.`,
         `Hoje é duas hora, e a reunião permanece marcada para o mesmo local.`,
         `Hoje foram duas hora, e a reunião permanece marcada para o mesmo local.`,
+        `Hoje são duas horas, e a reunião permanece marcada para o mesmo local.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Na indicação de horas, o verbo ser concorda com o numeral: são duas horas.`,
@@ -167,14 +167,14 @@ const concordancia = [
     `A concordância verbal está adequada em:`,
 
     alternativas: [
+        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
         `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidores participaram obrigatoriamente da reunião extraordinária.`,
         `A maioria dos servidor participaram da reunião extraordinária.`,
         `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`,
+        `A maioria dos servidores foram participado da reunião extraordinária.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
@@ -194,14 +194,14 @@ const concordancia = [
     `Assinale a alternativa correta quanto à concordância nominal.`,
 
     alternativas: [
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
@@ -221,14 +221,14 @@ const concordancia = [
     `A frase adequada à norma-padrão é:`,
 
     alternativas: [
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
         `Estava bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`,
+        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
+        `Estava bastantes preocupados os responsáveis pela organização do evento.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
@@ -248,14 +248,14 @@ const concordancia = [
     `A concordância está correta em:`,
 
     alternativas: [
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentados pela equipe parece suficientes para a decisão.`,
         `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
         `O dados apresentados pela equipe parecem suficientes para a decisão.`,
+        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
@@ -302,14 +302,14 @@ const concordancia = [
     `A concordância verbal está adequada em:`,
 
     alternativas: [
+        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
         `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidores participaram obrigatoriamente da reunião extraordinária.`,
         `A maioria dos servidor participaram da reunião extraordinária.`,
         `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`,
+        `A maioria dos servidores foram participado da reunião extraordinária.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
@@ -329,14 +329,14 @@ const concordancia = [
     `Assinale a alternativa correta quanto à concordância nominal.`,
 
     alternativas: [
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
@@ -356,14 +356,14 @@ const concordancia = [
     `A frase adequada à norma-padrão é:`,
 
     alternativas: [
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
         `Estava bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`,
+        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
+        `Estava bastantes preocupados os responsáveis pela organização do evento.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
@@ -383,14 +383,14 @@ const concordancia = [
     `A concordância está correta em:`,
 
     alternativas: [
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentados pela equipe parece suficientes para a decisão.`,
         `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
         `O dados apresentados pela equipe parecem suficientes para a decisão.`,
+        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
@@ -437,14 +437,14 @@ const concordancia = [
     `A concordância verbal está adequada em:`,
 
     alternativas: [
+        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
         `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidores participaram obrigatoriamente da reunião extraordinária.`,
         `A maioria dos servidor participaram da reunião extraordinária.`,
         `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`,
+        `A maioria dos servidores foram participado da reunião extraordinária.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
@@ -464,14 +464,14 @@ const concordancia = [
     `Assinale a alternativa correta quanto à concordância nominal.`,
 
     alternativas: [
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
@@ -491,14 +491,14 @@ const concordancia = [
     `A frase adequada à norma-padrão é:`,
 
     alternativas: [
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
         `Estava bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`,
+        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
+        `Estava bastantes preocupados os responsáveis pela organização do evento.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
@@ -518,14 +518,14 @@ const concordancia = [
     `A concordância está correta em:`,
 
     alternativas: [
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentados pela equipe parece suficientes para a decisão.`,
         `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
         `O dados apresentados pela equipe parecem suficientes para a decisão.`,
+        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
@@ -572,14 +572,14 @@ const concordancia = [
     `A concordância verbal está adequada em:`,
 
     alternativas: [
+        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
         `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidores participaram obrigatoriamente da reunião extraordinária.`,
         `A maioria dos servidor participaram da reunião extraordinária.`,
         `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`,
+        `A maioria dos servidores foram participado da reunião extraordinária.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
@@ -599,14 +599,14 @@ const concordancia = [
     `Assinale a alternativa correta quanto à concordância nominal.`,
 
     alternativas: [
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
@@ -626,14 +626,14 @@ const concordancia = [
     `A frase adequada à norma-padrão é:`,
 
     alternativas: [
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
         `Estava bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`,
+        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
+        `Estava bastantes preocupados os responsáveis pela organização do evento.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
@@ -653,14 +653,14 @@ const concordancia = [
     `A concordância está correta em:`,
 
     alternativas: [
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentados pela equipe parece suficientes para a decisão.`,
         `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
         `O dados apresentados pela equipe parecem suficientes para a decisão.`,
+        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
@@ -707,14 +707,14 @@ const concordancia = [
     `A concordância verbal está adequada em:`,
 
     alternativas: [
+        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
         `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidores participaram obrigatoriamente da reunião extraordinária.`,
         `A maioria dos servidor participaram da reunião extraordinária.`,
         `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`,
+        `A maioria dos servidores foram participado da reunião extraordinária.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
@@ -734,14 +734,14 @@ const concordancia = [
     `Assinale a alternativa correta quanto à concordância nominal.`,
 
     alternativas: [
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
@@ -761,14 +761,14 @@ const concordancia = [
     `A frase adequada à norma-padrão é:`,
 
     alternativas: [
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
         `Estava bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`,
+        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
+        `Estava bastantes preocupados os responsáveis pela organização do evento.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
@@ -788,14 +788,14 @@ const concordancia = [
     `A concordância está correta em:`,
 
     alternativas: [
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentados pela equipe parece suficientes para a decisão.`,
         `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
         `O dados apresentados pela equipe parecem suficientes para a decisão.`,
+        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
@@ -842,14 +842,14 @@ const concordancia = [
     `A concordância verbal está adequada em:`,
 
     alternativas: [
+        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
         `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidores participaram obrigatoriamente da reunião extraordinária.`,
         `A maioria dos servidor participaram da reunião extraordinária.`,
         `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`,
+        `A maioria dos servidores foram participado da reunião extraordinária.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
@@ -869,14 +869,14 @@ const concordancia = [
     `Assinale a alternativa correta quanto à concordância nominal.`,
 
     alternativas: [
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
@@ -896,14 +896,14 @@ const concordancia = [
     `A frase adequada à norma-padrão é:`,
 
     alternativas: [
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
         `Estava bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`,
+        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
+        `Estava bastantes preocupados os responsáveis pela organização do evento.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
@@ -923,14 +923,14 @@ const concordancia = [
     `A concordância está correta em:`,
 
     alternativas: [
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentados pela equipe parece suficientes para a decisão.`,
         `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
         `O dados apresentados pela equipe parecem suficientes para a decisão.`,
+        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
@@ -977,14 +977,14 @@ const concordancia = [
     `A concordância verbal está adequada em:`,
 
     alternativas: [
+        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
         `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidores participaram obrigatoriamente da reunião extraordinária.`,
         `A maioria dos servidor participaram da reunião extraordinária.`,
         `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`,
+        `A maioria dos servidores foram participado da reunião extraordinária.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
@@ -1004,14 +1004,14 @@ const concordancia = [
     `Assinale a alternativa correta quanto à concordância nominal.`,
 
     alternativas: [
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
@@ -1031,14 +1031,14 @@ const concordancia = [
     `A frase adequada à norma-padrão é:`,
 
     alternativas: [
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
         `Estava bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`,
+        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
+        `Estava bastantes preocupados os responsáveis pela organização do evento.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
@@ -1058,14 +1058,14 @@ const concordancia = [
     `A concordância está correta em:`,
 
     alternativas: [
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentados pela equipe parece suficientes para a decisão.`,
         `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
         `O dados apresentados pela equipe parecem suficientes para a decisão.`,
+        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
@@ -1112,14 +1112,14 @@ const concordancia = [
     `A concordância verbal está adequada em:`,
 
     alternativas: [
+        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
         `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidores participaram obrigatoriamente da reunião extraordinária.`,
         `A maioria dos servidor participaram da reunião extraordinária.`,
         `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`,
+        `A maioria dos servidores foram participado da reunião extraordinária.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
@@ -1139,14 +1139,14 @@ const concordancia = [
     `Assinale a alternativa correta quanto à concordância nominal.`,
 
     alternativas: [
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
@@ -1166,14 +1166,14 @@ const concordancia = [
     `A frase adequada à norma-padrão é:`,
 
     alternativas: [
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
         `Estava bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`,
+        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
+        `Estava bastantes preocupados os responsáveis pela organização do evento.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
@@ -1193,14 +1193,14 @@ const concordancia = [
     `A concordância está correta em:`,
 
     alternativas: [
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentados pela equipe parece suficientes para a decisão.`,
         `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
         `O dados apresentados pela equipe parecem suficientes para a decisão.`,
+        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
@@ -1247,14 +1247,14 @@ const concordancia = [
     `A concordância verbal está adequada em:`,
 
     alternativas: [
+        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
         `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidores participaram obrigatoriamente da reunião extraordinária.`,
         `A maioria dos servidor participaram da reunião extraordinária.`,
         `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`,
+        `A maioria dos servidores foram participado da reunião extraordinária.`
     ],
 
-    correta: 0,
+    correta: 1,
 
     explicacao:
     `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
@@ -1274,14 +1274,14 @@ const concordancia = [
     `Assinale a alternativa correta quanto à concordância nominal.`,
 
     alternativas: [
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
         `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`,
+        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
     ],
 
-    correta: 0,
+    correta: 2,
 
     explicacao:
     `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
@@ -1301,14 +1301,14 @@ const concordancia = [
     `A frase adequada à norma-padrão é:`,
 
     alternativas: [
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
         `Estava bastante preocupados os responsáveis pela organização do evento.`,
         `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`,
+        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
+        `Estava bastantes preocupados os responsáveis pela organização do evento.`
     ],
 
-    correta: 0,
+    correta: 3,
 
     explicacao:
     `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
@@ -1328,14 +1328,14 @@ const concordancia = [
     `A concordância está correta em:`,
 
     alternativas: [
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
         `Os dados apresentados pela equipe parece suficientes para a decisão.`,
         `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
         `O dados apresentados pela equipe parecem suficientes para a decisão.`,
+        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
     ],
 
-    correta: 0,
+    correta: 4,
 
     explicacao:
     `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
@@ -1348,6 +1348,4 @@ const concordancia = [
 
     dicaBanca:
     `Localize o núcleo do sujeito antes de concordar.`
-}
-
-];
+}];
