@@ -4,10 +4,10 @@ const ldb = [
 pergunta: "Durante uma reunião pedagógica, um professor afirmou que a educação ocorre em diferentes espaços sociais e não apenas nas instituições escolares. Ao analisar essa afirmação à luz da LDB, conclui-se que ela está correta porque a educação compreende processos formativos desenvolvidos:",
 
 alternativas: [
-        "Nas instituições escolares, nos ambientes de trabalho e nos espaços destinados à formação profissional regulamentada.",
-        "Nos sistemas formais de ensino reconhecidos pelo poder público e nos programas educacionais complementares oferecidos pela sociedade.",
-        "Nas instituições educacionais, nos espaços culturais e nas organizações sociais responsáveis pela formação da cidadania.",
-        "Nos ambientes escolares e comunitários que promovam experiências de aprendizagem voltadas ao desenvolvimento humano.",
+        "Nas instituições escolares, nos ambientes de trabalho e nos espaços destinados à formação profissional regulamentada, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Nos sistemas formais de ensino reconhecidos pelo poder público e nos programas educacionais complementares oferecidos pela sociedade, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Nas instituições educacionais, nos espaços culturais e nas organizações sociais responsáveis pela formação da cidadania, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Nos ambientes escolares e comunitários que promovam experiências de aprendizagem voltadas ao desenvolvimento humano, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
         "Na vida familiar, na convivência humana, no trabalho, nas instituições de ensino e pesquisa, nos movimentos sociais, nas organizações da sociedade civil e nas manifestações culturais."
 ],
 
@@ -104,11 +104,11 @@ dicaBanca: "Direito público subjetivo = exigível judicialmente."
 pergunta: "Durante um seminário sobre políticas educacionais, discutia-se a organização da educação nacional. Um dos participantes afirmou que a oferta educacional no Brasil depende da atuação articulada dos diferentes entes federativos. Essa afirmação está relacionada ao princípio da:",
 
 alternativas: [
-        "Descentralização administrativa dos sistemas de ensino vinculada às diretrizes curriculares nacionais.",
-        "Cooperação entre instituições educacionais responsáveis pela execução das políticas públicas de ensino.",
+        "Descentralização administrativa dos sistemas de ensino vinculada às diretrizes curriculares nacionais, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Cooperação entre instituições educacionais responsáveis pela execução das políticas públicas de ensino, considerando os princípios legais de acesso, permanência e organização da educação básica.",
         "Articulação dos sistemas de ensino por meio do regime de colaboração entre União, Estados, Distrito Federal e Municípios.",
-        "Gestão compartilhada das redes escolares mantidas pelos diferentes sistemas educacionais.",
-        "Integração das políticas educacionais voltadas ao desenvolvimento das diferentes etapas da Educação Básica."
+        "Gestão compartilhada das redes escolares mantidas pelos diferentes sistemas educacionais, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Integração das políticas educacionais voltadas ao desenvolvimento das diferentes etapas da Educação Básica, considerando os princípios legais de acesso, permanência e organização da educação básica."
 ],
 
 correta: 2,
@@ -128,7 +128,7 @@ alternativas: [
         "Educação Básica, Educação Profissional e Educação Superior, distribuídas em níveis independentes.",
         "Educação Infantil, Ensino Fundamental, Ensino Médio e Educação Superior, considerados níveis equivalentes.",
         "Educação Básica e Educação Superior, organizadas segundo finalidades e características próprias.",
-        "Educação Básica obrigatória e Educação Superior facultativa, articuladas pelos sistemas de ensino."
+        "Educação Básica obrigatória e Educação Superior condicionada ao planejamento institucional, articuladas pelos sistemas de ensino."
 ],
 
 correta: 3,
@@ -203,11 +203,11 @@ dicaBanca: "Estado = sistema estadual de ensino."
 pergunta: "Durante uma reunião entre gestores municipais, discutia-se a responsabilidade dos Municípios na organização da educação nacional. Segundo a LDB, a atuação prioritária dos Municípios deve ocorrer:",
 
 alternativas: [
-        "Na Educação Infantil, sendo o Ensino Fundamental compartilhado exclusivamente com os Estados mediante convênios específicos.",
-        "No Ensino Fundamental obrigatório, cabendo a oferta da Educação Infantil apenas quando houver disponibilidade orçamentária.",
+        "Na Educação Infantil, sendo o Ensino Fundamental compartilhado predominantemente com os Estados mediante convênios específicos, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "No Ensino Fundamental obrigatório, cabendo a oferta da Educação Infantil em geral quando houver disponibilidade orçamentária, considerando os princípios legais de acesso, permanência e organização da educação básica.",
         "Na Educação Infantil e no Ensino Fundamental, sem prejuízo da atuação em outros níveis quando atendidas plenamente as necessidades de sua área de competência.",
-        "Na Educação Infantil e no Ensino Fundamental, observadas as diretrizes estabelecidas pelos sistemas estaduais de ensino.",
-        "No Ensino Fundamental e no Ensino Médio, especialmente em regiões onde não exista rede estadual estruturada."
+        "Na Educação Infantil e no Ensino Fundamental, observadas as diretrizes estabelecidas pelos sistemas estaduais de ensino, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "No Ensino Fundamental e no Ensino Médio, especialmente em regiões onde não exista rede estadual estruturada, considerando os princípios legais de acesso, permanência e organização da educação básica."
 ],
 
 correta: 2,
@@ -500,11 +500,11 @@ dicaBanca: "Valorização = formação + carreira + condições de trabalho."
 pergunta: "Durante uma reunião pedagógica, os professores discutiam a finalidade da Educação Infantil no contexto da Educação Básica. Segundo a LDB, essa etapa tem como finalidade:",
 
 alternativas: [
-"Promover experiências educativas que favoreçam a preparação progressiva da criança para o processo formal de alfabetização.",
-"Desenvolver competências e habilidades necessárias à inserção da criança nos anos iniciais do Ensino Fundamental.",
-"Promover o desenvolvimento integral da criança em seus aspectos físico, psicológico, intelectual e social, complementando a ação da família e da comunidade.",
-"Organizar aprendizagens essenciais voltadas à construção das bases cognitivas necessárias ao sucesso escolar futuro.",
-"Favorecer a formação de hábitos, atitudes e comportamentos que contribuam para a adaptação da criança ao ambiente escolar."
+        "Promover experiências educativas que favoreçam a preparação progressiva da criança para o processo formal de alfabetização, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
+        "Desenvolver competências e habilidades necessárias à inserção da criança nos anos iniciais do Ensino Fundamental, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
+        "Promover o desenvolvimento integral da criança em seus aspectos físico, psicológico, intelectual e social, complementando a ação da família e da comunidade.",
+        "Organizar aprendizagens essenciais voltadas à construção das bases cognitivas necessárias ao sucesso escolar futuro, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Favorecer a formação de hábitos, atitudes e comportamentos que contribuam para a adaptação da criança ao ambiente escolar, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado."
 ],
 
 correta: 2,
@@ -560,11 +560,11 @@ dicaBanca: "Pré-escola = 4 e 5 anos."
 pergunta: "Durante a elaboração do currículo da Educação Infantil, uma escola buscou assegurar práticas que respeitassem as características do desenvolvimento infantil. Essa preocupação está alinhada à LDB porque a avaliação nessa etapa deve:",
 
 alternativas: [
-        "Identificar o nível de desenvolvimento das crianças para orientar seu ingresso no Ensino Fundamental.",
-        "Verificar o alcance dos objetivos de aprendizagem previstos para cada faixa etária atendida.",
-        "Mensurar a evolução das aprendizagens essenciais relacionadas às competências previstas para a Educação Básica.",
+        "Identificar o nível de desenvolvimento das crianças para orientar seu ingresso no Ensino Fundamental, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Verificar o alcance dos objetivos de aprendizagem previstos para cada faixa etária atendida, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Mensurar a evolução das aprendizagens essenciais relacionadas às competências previstas para a Educação Básica, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
         "Realizar acompanhamento e registro do desenvolvimento das crianças, sem objetivo de promoção para o acesso ao Ensino Fundamental.",
-        "Produzir informações pedagógicas destinadas à classificação das crianças segundo seu desempenho escolar."
+        "Produzir informações pedagógicas destinadas à classificação das crianças segundo seu desempenho escolar, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado."
 ],
 
 correta: 3,
@@ -620,10 +620,10 @@ pergunta: "Ao discutir os objetivos do Ensino Fundamental, uma professora afirmo
 
 alternativas: [
         "Promover a formação básica do cidadão mediante o desenvolvimento da capacidade de aprender e compreender o ambiente natural e social.",
-        "Consolidar aprendizagens relacionadas à alfabetização e preparar os estudantes para o Ensino Médio.",
-        "Desenvolver competências voltadas à continuidade dos estudos e à inserção progressiva no mundo do trabalho.",
-        "Organizar experiências educativas destinadas à construção dos conhecimentos necessários ao exercício da cidadania.",
-        "Favorecer a ampliação das aprendizagens essenciais previstas para a Educação Básica e para a vida em sociedade."
+        "Consolidar aprendizagens relacionadas à alfabetização e preparar os estudantes para o Ensino Médio, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Desenvolver competências voltadas à continuidade dos estudos e à inserção progressiva no mundo do trabalho, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
+        "Organizar experiências educativas destinadas à construção dos conhecimentos necessários ao exercício da cidadania, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Favorecer a ampliação das aprendizagens essenciais previstas para a Educação Básica e para a vida em sociedade, considerando os princípios legais de acesso, permanência e organização da educação básica."
 ],
 
 correta: 0,
@@ -659,10 +659,10 @@ dicaBanca: "Leitura + escrita + cálculo = base do Ensino Fundamental."
 pergunta: "Uma equipe pedagógica discutia a importância da compreensão do ambiente natural e social para a formação dos estudantes. Segundo a LDB, esse aspecto integra os objetivos do Ensino Fundamental porque visa:",
 
 alternativas: [
-        "Promover a construção de conhecimentos necessários à participação responsável na vida em sociedade.",
-        "Favorecer a compreensão dos fenômenos históricos, culturais e científicos presentes na realidade dos estudantes.",
-        "Desenvolver a capacidade de aprendizagem por meio da observação e interpretação dos diferentes contextos sociais.",
-        "Estimular o desenvolvimento de competências relacionadas à cidadania e à participação democrática.",
+        "Promover a construção de conhecimentos necessários à participação responsável na vida em sociedade, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Favorecer a compreensão dos fenômenos históricos, culturais e científicos presentes na realidade dos estudantes, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Desenvolver a capacidade de aprendizagem por meio da observação e interpretação dos diferentes contextos sociais, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Estimular o desenvolvimento de competências relacionadas à cidadania e à participação democrática, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
         "Fortalecer a formação básica do cidadão mediante a compreensão do ambiente natural, social, do sistema político, da tecnologia, das artes e dos valores da sociedade."
 ],
 
@@ -679,11 +679,11 @@ dicaBanca: "Ambiente natural + social + sistema político + tecnologia + artes +
 pergunta: "Durante a elaboração do calendário escolar, a direção analisava os requisitos mínimos previstos na LDB para a organização da jornada escolar do Ensino Fundamental. Nesse contexto, é correto afirmar que:",
 
 alternativas: [
-        "Os sistemas de ensino podem definir livremente a quantidade de dias letivos desde que garantam a carga horária anual mínima.",
-        "Os duzentos dias letivos incluem as atividades destinadas à aplicação dos exames finais previstos no calendário escolar.",
-        "Os estabelecimentos de ensino devem assegurar duzentos dias letivos e frequência mínima de oitenta por cento dos estudantes.",
+        "Os sistemas de ensino podem definir livremente a quantidade de dias letivos desde que garantam a carga horária anual mínima, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Os duzentos dias letivos incluem as atividades destinadas à aplicação dos exames finais previstos no calendário escolar, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Os estabelecimentos de ensino devem assegurar duzentos dias letivos e frequência mínima de oitenta por cento dos estudantes, considerando os princípios legais de acesso, permanência e organização da educação básica.",
         "A carga horária mínima anual será distribuída por um mínimo de duzentos dias de efetivo trabalho escolar, excluído o tempo reservado aos exames finais.",
-        "Os requisitos referentes aos dias letivos e à carga horária aplicam-se apenas ao Ensino Fundamental obrigatório."
+        "Os requisitos referentes aos dias letivos e à carga horária aplicam-se em geral ao Ensino Fundamental obrigatório, considerando os princípios legais de acesso, permanência e organização da educação básica."
 ],
 
 correta: 3,
@@ -718,11 +718,11 @@ dicaBanca: "Ensino Médio = consolidar e aprofundar conhecimentos."
 pergunta: "Ao analisar a organização do Ensino Médio, uma equipe docente destacou a importância da preparação básica para o trabalho e para a cidadania. Segundo a LDB, essa preparação deve ocorrer:",
 
 alternativas: [
-        "Por meio da formação profissional obrigatória integrada ao currículo escolar.",
-        "Por intermédio da oferta de itinerários formativos voltados às demandas econômicas regionais.",
+        "Por meio da formação profissional obrigatória integrada ao currículo escolar, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
+        "Por intermédio da oferta de itinerários formativos voltados às demandas econômicas regionais, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
         "Mediante o desenvolvimento da capacidade de adaptação às novas condições de ocupação e aperfeiçoamento posteriores.",
-        "Mediante a articulação entre educação profissional e formação geral básica para todos os estudantes.",
-        "Por meio de experiências educativas direcionadas à construção de competências profissionais específicas."
+        "Mediante a articulação entre educação profissional e formação geral básica para todos os estudantes, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Por meio de experiências educativas direcionadas à construção de competências profissionais específicas, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede."
 ],
 
 correta: 2,
@@ -797,11 +797,11 @@ dicaBanca: "Ensino Médio = última etapa da Educação Básica."
 pergunta: "Durante a elaboração de políticas educacionais inclusivas, uma equipe técnica discutia a oferta da Educação Especial. Segundo a LDB, essa modalidade caracteriza-se por ser:",
 
 alternativas: [
-"Uma modalidade de educação escolar transversal destinada a estudantes com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação, ofertada preferencialmente na rede regular de ensino.",
-"Uma modalidade específica destinada ao atendimento dos estudantes com deficiência em instituições especializadas vinculadas aos sistemas de ensino.",
-"Um conjunto de serviços educacionais complementares oferecidos aos estudantes com necessidades educacionais específicas durante a Educação Básica.",
-"Uma modalidade organizada para garantir atendimento individualizado aos estudantes que apresentem dificuldades permanentes de aprendizagem.",
-"Um atendimento educacional especializado destinado à adaptação curricular dos estudantes público-alvo da educação inclusiva."
+        "Uma modalidade de educação escolar transversal destinada a estudantes com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação, ofertada preferencialmente na rede regular de ensino.",
+        "Uma modalidade específica destinada ao atendimento dos estudantes com deficiência em instituições especializadas vinculadas aos sistemas de ensino, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Um conjunto de serviços educacionais complementares oferecidos aos estudantes com necessidades educacionais específicas durante a Educação Básica, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Uma modalidade organizada para garantir atendimento individualizado aos estudantes que apresentem dificuldades permanentes de aprendizagem, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Um atendimento educacional especializado destinado à adaptação curricular dos estudantes público-alvo da educação inclusiva, considerando os princípios legais de acesso, permanência e organização da educação básica."
 ],
 
 correta: 0,
@@ -817,11 +817,11 @@ dicaBanca: "Educação Especial = modalidade transversal + inclusão."
 pergunta: "Durante uma reunião pedagógica, discutia-se o atendimento educacional destinado a pessoas que não tiveram acesso ou continuidade de estudos na idade própria. Segundo a LDB, essa modalidade corresponde à:",
 
 alternativas: [
-"Educação Especial, organizada para atender estudantes em situação de vulnerabilidade educacional.",
-"Educação Profissional, voltada à qualificação de jovens e adultos para o mundo do trabalho.",
-"Educação de Jovens e Adultos, destinada àqueles que não tiveram acesso ou continuidade de estudos na idade adequada.",
-"Educação Complementar, estruturada para atender demandas específicas de escolarização tardia.",
-"Educação Continuada, destinada à ampliação da escolaridade da população adulta."
+        "Educação Especial, organizada para atender estudantes em situação de vulnerabilidade educacional, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Educação Profissional, voltada à qualificação de jovens e adultos para o mundo do trabalho, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Educação de Jovens e Adultos, destinada àqueles que não tiveram acesso ou continuidade de estudos na idade adequada.",
+        "Educação Complementar, estruturada para atender demandas específicas de escolarização tardia, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Educação Continuada, destinada à ampliação da escolaridade da população adulta, considerando os princípios legais de acesso, permanência e organização da educação básica."
 ],
 
 correta: 2,
@@ -896,11 +896,11 @@ dicaBanca: "Educação Indígena = língua, cultura e identidade."
 pergunta: "Durante um seminário acadêmico, discutiam-se as finalidades da Educação Superior previstas na LDB. Segundo a legislação, essa etapa tem entre suas finalidades:",
 
 alternativas: [
-        "Promover a formação profissional especializada voltada às demandas econômicas e sociais contemporâneas.",
-        "Desenvolver competências acadêmicas destinadas à qualificação profissional e à inserção no mercado de trabalho.",
-        "Produzir conhecimentos científicos capazes de responder aos desafios tecnológicos e produtivos da sociedade.",
+        "Promover a formação profissional especializada voltada às demandas econômicas e sociais contemporâneas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Desenvolver competências acadêmicas destinadas à qualificação profissional e à inserção no mercado de trabalho, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
+        "Produzir conhecimentos científicos capazes de responder aos desafios tecnológicos e produtivos da sociedade, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
         "Estimular a criação cultural, o desenvolvimento do espírito científico e do pensamento reflexivo, contribuindo para a produção e difusão do conhecimento.",
-        "Favorecer a formação de profissionais qualificados para atuar nos diferentes setores da atividade humana."
+        "Favorecer a formação de profissionais qualificados para atuar nos diferentes setores da atividade humana, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
 ],
 
 correta: 3,
@@ -956,11 +956,11 @@ dicaBanca: "Pesquisa = produção e difusão do conhecimento."
 pergunta: "Durante um projeto desenvolvido em parceria com organizações da comunidade, estudantes universitários aplicavam conhecimentos acadêmicos na solução de problemas sociais concretos. Essa iniciativa está relacionada à função da extensão porque ela busca:",
 
 alternativas: [
-"Promover a interação entre a instituição de ensino superior e a sociedade por meio da troca de conhecimentos e experiências.",
-"Articular atividades acadêmicas destinadas à aplicação prática dos conhecimentos produzidos no ambiente universitário.",
-"Fortalecer a participação dos estudantes em ações voltadas ao desenvolvimento social e comunitário.",
-"Integrar ensino e pesquisa em projetos que favoreçam a aproximação entre universidade e comunidade.",
-"Desenvolver experiências formativas capazes de ampliar a relevância social da produção acadêmica."
+        "Promover a interação entre a instituição de ensino superior e a sociedade por meio da troca de conhecimentos e experiências.",
+        "Articular atividades acadêmicas destinadas à aplicação prática dos conhecimentos produzidos no ambiente universitário.",
+        "Fortalecer a participação dos estudantes em ações voltadas ao desenvolvimento social e comunitário, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Integrar ensino e pesquisa em projetos que favoreçam a aproximação entre universidade e comunidade, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Desenvolver experiências formativas capazes de ampliar a relevância social da produção acadêmica, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
 ],
 
 correta: 0,

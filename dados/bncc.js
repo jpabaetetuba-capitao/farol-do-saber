@@ -3,10 +3,10 @@ const bncc = [
 pergunta: "Durante a revisão curricular de uma rede municipal de ensino, a equipe pedagógica discutia o papel da Base Nacional Comum Curricular na organização das aprendizagens escolares. Um dos participantes afirmou que a BNCC deve ser compreendida como referência para a elaboração dos currículos, sem eliminar a necessidade de contextualização pelas redes e escolas. Considerando essa situação, assinale a alternativa correta.",
 
 alternativas: [
-        "A BNCC apresenta referenciais curriculares facultativos, cuja adoção depende da decisão de cada sistema de ensino.",
-        "A BNCC organiza conteúdos mínimos nacionais e determina metodologias pedagógicas obrigatórias para todas as escolas.",
-        "A BNCC substitui os currículos estaduais e municipais ao estabelecer parâmetros comuns para a Educação Básica.",
-        "A BNCC define aprendizagens essenciais e critérios nacionais de avaliação que devem ser adotados uniformemente pelas redes de ensino.",
+        "A BNCC apresenta referenciais curriculares facultativos, cuja adoção depende da decisão de cada sistema de ensino, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
+        "A BNCC organiza conteúdos mínimos nacionais e determina metodologias pedagógicas obrigatórias para todas as escolas, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
+        "A BNCC substitui os currículos estaduais e municipais ao estabelecer parâmetros comuns para a Educação Básica, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
+        "A BNCC define aprendizagens essenciais e critérios nacionais de avaliação que devem ser adotados uniformemente pelas redes de ensino, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
         "A BNCC estabelece as aprendizagens essenciais que devem orientar os currículos, preservando a possibilidade de adequações às características locais e regionais."
 ],
 
@@ -23,11 +23,11 @@ dicaBanca: "BNCC = referência nacional obrigatória; currículo = contextualiza
 pergunta: "Durante uma formação continuada, um grupo de professores discutia a concepção de competência adotada pela BNCC. Uma docente afirmou que o desenvolvimento das competências exige mais do que a simples aquisição de informações, envolvendo a mobilização de diferentes recursos para enfrentar situações concretas. A afirmação da professora está alinhada ao entendimento de que competência corresponde à:",
 
 alternativas: [
-"Capacidade de reproduzir conhecimentos sistematizados em situações previamente estruturadas.",
-"Mobilização integrada de conhecimentos, habilidades, atitudes e valores para responder a demandas da vida cotidiana e do exercício da cidadania.",
-"Aquisição progressiva de conteúdos conceituais organizados de acordo com a complexidade das disciplinas escolares.",
-"Utilização prioritária de habilidades cognitivas voltadas ao desempenho em avaliações internas e externas.",
-"Aplicação de conhecimentos científicos em atividades escolares previamente definidas pelos currículos."
+        "Capacidade de reproduzir conhecimentos sistematizados em situações previamente estruturadas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Mobilização integrada de conhecimentos, habilidades, atitudes e valores para responder a demandas da vida cotidiana e do exercício da cidadania.",
+        "Aquisição progressiva de conteúdos conceituais organizados de acordo com a complexidade das disciplinas escolares, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Utilização prioritária de habilidades cognitivas voltadas ao desempenho em avaliações internas e externas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Aplicação de conhecimentos científicos em atividades escolares previamente definidas pelos currículos, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede."
 ],
 
 correta: 1,
@@ -45,7 +45,7 @@ pergunta: "Ao elaborar seu currículo, uma rede de ensino decidiu incorporar con
 alternativas: [
         "A contextualização curricular pode ocorrer desde que não interfira nos conteúdos previstos pelos currículos nacionais obrigatórios.",
         "A autonomia curricular das redes permite substituir as aprendizagens essenciais por conteúdos considerados mais relevantes localmente.",
-        "A valorização da cultura local deve ocorrer apenas em componentes curriculares específicos definidos pelos sistemas de ensino.",
+        "A valorização da cultura local deve ocorrer em componentes curriculares específicos definidos pelos sistemas de ensino.",
         "A BNCC estabelece aprendizagens essenciais que devem dialogar com as características locais, regionais e culturais dos estudantes.",
         "A incorporação de elementos culturais regionais constitui estratégia complementar que não integra a construção curricular."
 ],
@@ -83,11 +83,11 @@ dicaBanca: "Competências Gerais = transversalidade e formação integral."
 pergunta: "Uma professora afirmou que a ampliação da jornada escolar, por si só, não garante uma educação integral. Segundo a perspectiva adotada pela BNCC, essa afirmação está correta porque a Educação Integral refere-se principalmente:",
 
 alternativas: [
-"À ampliação do tempo de permanência dos estudantes na escola associada à diversificação curricular.",
-"À oferta de atividades complementares voltadas ao reforço das aprendizagens acadêmicas essenciais.",
-"Ao desenvolvimento das diferentes dimensões humanas, incluindo aspectos cognitivos, sociais, culturais, físicos e emocionais.",
-"À implementação de programas educacionais destinados à melhoria dos indicadores de desempenho escolar.",
-"À organização de experiências formativas voltadas prioritariamente à preparação para o mundo do trabalho."
+        "À ampliação do tempo de permanência dos estudantes na escola associada à diversificação curricular, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "À oferta de atividades complementares voltadas ao reforço das aprendizagens acadêmicas essenciais, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Ao desenvolvimento das diferentes dimensões humanas, incluindo aspectos cognitivos, sociais, culturais, físicos e emocionais.",
+        "À implementação de programas educacionais destinados à melhoria dos indicadores de desempenho escolar, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "À organização de experiências formativas voltadas prioritariamente à preparação para o mundo do trabalho, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
 ],
 
 correta: 2,
@@ -103,7 +103,7 @@ dicaBanca: "Educação Integral ≠ apenas mais tempo na escola."
 pergunta: "Durante a construção do Projeto Político-Pedagógico, uma equipe escolar discutiu a diferença entre currículo e BNCC. Ao final da reunião, a conclusão correta foi que:",
 
 alternativas: [
-        "A BNCC e o currículo possuem a mesma função normativa, diferindo apenas quanto ao nível de detalhamento dos conteúdos.",
+        "A BNCC e o currículo possuem a mesma função normativa, diferindo em geral quanto ao nível de detalhamento dos conteúdos.",
         "A elaboração curricular consiste na reprodução integral das competências e habilidades previstas pela BNCC.",
         "O currículo corresponde à tradução contextualizada das aprendizagens essenciais previstas na BNCC para determinada realidade educacional.",
         "O currículo deve priorizar as demandas locais, mesmo quando estas contrariam as aprendizagens essenciais previstas nacionalmente.",
@@ -123,7 +123,7 @@ pergunta: "Durante uma atividade de planejamento, uma equipe docente analisava a
 
 alternativas: [
         "Aplicar procedimentos previamente definidos para resolver problemas rotineiros presentes nos materiais didáticos.",
-        "Utilizar conhecimentos científicos exclusivamente em atividades experimentais conduzidas pelo professor.",
+        "Utilizar conhecimentos científicos predominantemente em atividades experimentais conduzidas pelo professor.",
         "Priorizar a aquisição de conceitos teóricos independentemente de sua aplicação em contextos concretos.",
         "Investigar fenômenos, formular hipóteses, analisar evidências e construir soluções fundamentadas para diferentes situações.",
         "Empregar técnicas de pesquisa voltadas principalmente à obtenção de resultados em avaliações externas."
@@ -144,7 +144,7 @@ pergunta: "Ao discutir a Competência Geral relacionada à cultura digital, uma 
 alternativas: [
         "Utilizar recursos tecnológicos prioritariamente para ampliar o acesso a conteúdos escolares previamente selecionados.",
         "Dominar diferentes plataformas digitais com foco na adaptação às exigências do mercado de trabalho contemporâneo.",
-        "Empregar tecnologias digitais exclusivamente em atividades pedagógicas orientadas por profissionais especializados.",
+        "Empregar tecnologias digitais predominantemente em atividades pedagógicas orientadas por profissionais especializados.",
         "Desenvolver competências técnicas que permitam a utilização eficiente de recursos digitais em contextos acadêmicos.",
         "Compreender, utilizar e criar tecnologias digitais de forma crítica, significativa, reflexiva, ética e responsável."
 ],
@@ -221,10 +221,10 @@ dicaBanca: "Responsabilidade e Cidadania = ética + democracia + inclusão + sus
 pergunta: "Durante uma formação pedagógica, discutiu-se a Competência Geral relacionada ao repertório cultural. Os participantes concluíram corretamente que o desenvolvimento dessa competência pressupõe que os estudantes:",
 
 alternativas: [
-        "Conheçam prioritariamente as manifestações culturais reconhecidas pelos currículos oficiais e pelos materiais didáticos adotados.",
-        "Utilizem referências culturais exclusivamente para ampliar o desempenho acadêmico em componentes curriculares específicos.",
-        "Estabeleçam contato com manifestações culturais previamente selecionadas pelos sistemas de ensino como representativas da identidade nacional.",
-        "Compreendam a cultura como patrimônio histórico cuja preservação depende da reprodução de práticas tradicionalmente consolidadas.",
+        "Conheçam prioritariamente as manifestações culturais reconhecidas pelos currículos oficiais e pelos materiais didáticos adotados, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
+        "Utilizem referências culturais predominantemente para ampliar o desempenho acadêmico em componentes curriculares específicos, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Estabeleçam contato com manifestações culturais previamente selecionadas pelos sistemas de ensino como representativas da identidade nacional, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Compreendam a cultura como patrimônio histórico cuja preservação depende da reprodução de práticas tradicionalmente consolidadas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
         "Valorizem e participem de manifestações artístico-culturais diversas, reconhecendo a pluralidade das produções humanas ao longo do tempo e em diferentes contextos."
 ],
 
@@ -241,11 +241,11 @@ dicaBanca: "Repertório cultural = diversidade de experiências culturais."
 pergunta: "Ao planejar atividades voltadas à Competência Geral da comunicação, uma professora buscou criar situações em que os estudantes pudessem expressar ideias, sentimentos e conhecimentos em diferentes contextos. Essa proposta está alinhada à BNCC porque a comunicação envolve:",
 
 alternativas: [
-        "A utilização predominante da linguagem verbal escrita para transmissão de conhecimentos escolares.",
-        "O domínio das normas linguísticas necessárias à participação em situações formais de aprendizagem.",
-        "A aplicação de estratégias comunicativas voltadas prioritariamente à construção de conhecimentos acadêmicos.",
+        "A utilização predominante da linguagem verbal escrita para transmissão de conhecimentos escolares, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "O domínio das normas linguísticas necessárias à participação em situações formais de aprendizagem, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "A aplicação de estratégias comunicativas voltadas prioritariamente à construção de conhecimentos acadêmicos, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
         "C) A utilização de diferentes linguagens para expressar, compartilhar informações, produzir sentidos e participar da vida social.",
-        "E) O desenvolvimento da linguagem como instrumento de acesso aos conteúdos curriculares obrigatórios."
+        "E) O desenvolvimento da linguagem como instrumento de acesso aos conteúdos curriculares obrigatórios, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
 ],
 
 correta: 3,
@@ -340,11 +340,11 @@ dicaBanca: "Conhecimento = compreender e transformar a realidade."
 pergunta: "Ao analisar as Competências Gerais da BNCC, um professor observou que elas não devem ser trabalhadas isoladamente. Essa interpretação está correta porque:",
 
 alternativas: [
-"As competências gerais apresentam caráter complementar e podem ser desenvolvidas de forma articulada nas diferentes experiências educativas.",
-"As competências gerais foram organizadas em sequência hierárquica, exigindo o domínio de uma para o desenvolvimento das demais.",
-"As competências gerais correspondem a objetivos específicos que devem ser distribuídos entre os componentes curriculares obrigatórios.",
-"As competências gerais possuem autonomia conceitual e devem ser desenvolvidas separadamente para garantir maior efetividade pedagógica.",
-"As competências gerais representam conteúdos transversais que devem ser abordados exclusivamente em projetos interdisciplinares."
+        "As competências gerais apresentam caráter complementar e podem ser desenvolvidas de forma articulada nas diferentes experiências educativas.",
+        "As competências gerais foram organizadas em sequência hierárquica, exigindo o domínio de uma para o desenvolvimento das demais.",
+        "As competências gerais correspondem a objetivos específicos que devem ser distribuídos entre os componentes curriculares obrigatórios.",
+        "As competências gerais possuem autonomia conceitual e devem ser desenvolvidas separadamente para garantir maior efetividade pedagógica.",
+        "As competências gerais representam conteúdos transversais que devem ser abordados predominantemente em projetos interdisciplinares."
 ],
 
 correta: 0,
@@ -460,10 +460,10 @@ dicaBanca: "Explorar = investigar e descobrir."
 pergunta: "Durante uma atividade coletiva, as crianças foram incentivadas a compartilhar sentimentos, opiniões, hipóteses e interpretações por meio da fala, do desenho, da música e de outras linguagens. Essa experiência relaciona-se principalmente ao direito de:",
 
 alternativas: [
-        "Conhecer-se, por favorecer a construção da identidade e da autonomia pessoal.",
-        "Participar, por garantir o envolvimento ativo nas atividades propostas pelo professor.",
-        "Conviver, por promover interações e trocas entre crianças e adultos.",
-        "Explorar, por estimular a utilização de recursos e materiais diversificados.",
+        "Conhecer-se, por favorecer a construção da identidade e da autonomia pessoal, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Participar, por garantir o envolvimento ativo nas atividades propostas pelo professor, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Conviver, por promover interações e trocas entre crianças e adultos, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
+        "Explorar, por estimular a utilização de recursos e materiais diversificados, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
         "Expressar, por possibilitar diferentes formas de manifestação de ideias, emoções e experiências."
 ],
 
@@ -480,11 +480,11 @@ dicaBanca: "Expressar = comunicar-se de diferentes maneiras."
 pergunta: "Uma professora organizou atividades que favoreciam o reconhecimento das características pessoais das crianças, a valorização de suas histórias, preferências, emoções e pertencimentos culturais. Essa prática contribui diretamente para o desenvolvimento do direito de:",
 
 alternativas: [
-"Conviver, por fortalecer a construção de relações interpessoais respeitosas e colaborativas.",
-"Conhecer-se, por favorecer a construção da identidade, da autoestima e do reconhecimento de si mesmo.",
-"Participar, por ampliar o envolvimento das crianças nas experiências da instituição.",
-"Explorar, por estimular a investigação das diferentes realidades sociais e culturais.",
-"Expressar, por desenvolver formas variadas de comunicação e representação."
+        "Conviver, por fortalecer a construção de relações interpessoais respeitosas e colaborativas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Conhecer-se, por favorecer a construção da identidade, da autoestima e do reconhecimento de si mesmo.",
+        "Participar, por ampliar o envolvimento das crianças nas experiências da instituição, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
+        "Explorar, por estimular a investigação das diferentes realidades sociais e culturais, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Expressar, por desenvolver formas variadas de comunicação e representação, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
 ],
 
 correta: 1,
@@ -499,11 +499,11 @@ dicaBanca: "Conhecer-se = identidade, autoestima e pertencimento."
 pergunta: "Durante a rotina escolar, uma professora promoveu atividades que incentivavam as crianças a interagir com colegas e adultos, compartilhando experiências, respeitando diferenças e construindo relações de cooperação. Essa prática relaciona-se diretamente ao direito de aprendizagem denominado:",
 
 alternativas: [
-        "Participar, por envolver as crianças em decisões relacionadas à organização das experiências educativas.",
-        "Expressar, por possibilitar a manifestação de ideias, sentimentos e opiniões em diferentes situações.",
+        "Participar, por envolver as crianças em decisões relacionadas à organização das experiências educativas, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
+        "Expressar, por possibilitar a manifestação de ideias, sentimentos e opiniões em diferentes situações, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
         "Conviver, por favorecer a construção de relações sociais baseadas no respeito, na colaboração e na valorização das diferenças.",
-        "Conhecer-se, por contribuir para o reconhecimento das características individuais e coletivas.",
-        "Explorar, por ampliar as oportunidades de investigação dos espaços e objetos presentes no ambiente escolar."
+        "Conhecer-se, por contribuir para o reconhecimento das características individuais e coletivas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Explorar, por ampliar as oportunidades de investigação dos espaços e objetos presentes no ambiente escolar, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
 ],
 
 correta: 2,
@@ -600,9 +600,9 @@ pergunta: "Durante a revisão curricular de uma rede municipal, os professores d
 alternativas: [
         "Concentrar-se prioritariamente na consolidação das competências relacionadas à alfabetização e ao raciocínio lógico-matemático.",
         "Promover a ampliação progressiva das aprendizagens iniciadas na Educação Infantil, assegurando o desenvolvimento integral dos estudantes.",
-        "Organizar experiências educativas voltadas principalmente à preparação dos estudantes para o Ensino Médio.",
-        "Priorizar a aquisição sistemática de conhecimentos acadêmicos necessários ao desempenho em avaliações externas.",
-        "Desenvolver competências específicas associadas às áreas do conhecimento de forma independente e progressiva."
+        "Organizar experiências educativas voltadas principalmente à preparação dos estudantes para o Ensino Médio, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Priorizar a aquisição sistemática de conhecimentos acadêmicos necessários ao desempenho em avaliações externas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Desenvolver competências específicas associadas às áreas do conhecimento de forma independente e progressiva, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede."
 ],
 
 correta: 1,
@@ -619,10 +619,10 @@ pergunta: "Ao analisar a organização curricular do Ensino Fundamental, uma equ
 
 alternativas: [
         "Favorecer a articulação entre conhecimentos e competências relacionados a campos específicos da experiência humana.",
-        "Distribuir os componentes curriculares de forma equilibrada entre os diferentes anos escolares.",
-        "Estabelecer critérios comuns para a avaliação do desempenho dos estudantes em âmbito nacional.",
-        "Organizar conteúdos escolares segundo níveis crescentes de complexidade cognitiva.",
-        "Promover a integração dos currículos locais aos referenciais definidos pelos sistemas de ensino."
+        "Distribuir os componentes curriculares de forma equilibrada entre os diferentes anos escolares, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Estabelecer critérios comuns para a avaliação do desempenho dos estudantes em âmbito nacional, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Organizar conteúdos escolares segundo níveis crescentes de complexidade cognitiva, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Promover a integração dos currículos locais aos referenciais definidos pelos sistemas de ensino, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede."
 ],
 
 correta: 0,
@@ -638,11 +638,11 @@ dicaBanca: "Área do conhecimento = integração de saberes."
 pergunta: "Durante uma formação continuada, os professores discutiam o papel da área de Linguagens na BNCC. Concluiu-se corretamente que essa área busca:",
 
 alternativas: [
-        "Promover prioritariamente o domínio das normas linguísticas formais necessárias ao sucesso acadêmico dos estudantes.",
-        "Organizar aprendizagens destinadas à interpretação crítica dos fenômenos históricos e sociais contemporâneos.",
+        "Promover prioritariamente o domínio das normas linguísticas formais necessárias ao sucesso acadêmico dos estudantes, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Organizar aprendizagens destinadas à interpretação crítica dos fenômenos históricos e sociais contemporâneos, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
         "Desenvolver competências relacionadas à compreensão, produção e utilização de diferentes formas de linguagem em diversos contextos.",
-        "Fortalecer habilidades relacionadas ao raciocínio lógico e à resolução de problemas matemáticos.",
-        "Consolidar competências voltadas ao uso técnico das tecnologias digitais nos ambientes escolares."
+        "Fortalecer habilidades relacionadas ao raciocínio lógico e à resolução de problemas matemáticos, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Consolidar competências voltadas ao uso técnico das tecnologias digitais nos ambientes escolares, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede."
 ],
 
 correta: 2,
@@ -678,11 +678,11 @@ dicaBanca: "Matemática = raciocinar, argumentar e resolver problemas."
 pergunta: "Durante uma reunião pedagógica, discutia-se o papel da área de Ciências da Natureza no Ensino Fundamental. Um professor afirmou que sua principal finalidade consiste em:",
 
 alternativas: [
-        "Desenvolver conhecimentos científicos necessários à formação técnica e profissional dos estudantes.",
-        "Consolidar conteúdos conceituais relacionados aos processos físicos, químicos e biológicos presentes na natureza.",
-        "Favorecer a aquisição de procedimentos experimentais utilizados na produção do conhecimento científico.",
+        "Desenvolver conhecimentos científicos necessários à formação técnica e profissional dos estudantes, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Consolidar conteúdos conceituais relacionados aos processos físicos, químicos e biológicos presentes na natureza, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Favorecer a aquisição de procedimentos experimentais utilizados na produção do conhecimento científico, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
         "Promover a compreensão dos fenômenos naturais por meio da investigação, da análise crítica e da construção de explicações fundamentadas.",
-        "Preparar os estudantes para interpretar fenômenos naturais utilizando modelos explicativos validados pela ciência."
+        "Preparar os estudantes para interpretar fenômenos naturais utilizando modelos explicativos validados pela ciência, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
 ],
 
 correta: 3,
@@ -975,11 +975,11 @@ dicaBanca: "Implementar BNCC = transformar práticas, não apenas documentos."
 pergunta: "Durante uma análise sobre a finalidade da BNCC, uma professora afirmou que o documento busca garantir aprendizagens essenciais comuns sem desconsiderar a diversidade presente nas diferentes realidades educacionais brasileiras. Essa afirmação sintetiza adequadamente a BNCC porque ela procura:",
 
 alternativas: [
-        "Estabelecer parâmetros curriculares capazes de assegurar unidade educacional sem comprometer a autonomia das redes de ensino.",
+        "Estabelecer parâmetros curriculares capazes de assegurar unidade educacional sem comprometer a autonomia das redes de ensino, considerando os princípios legais de acesso, permanência e organização da educação básica.",
         "Conciliar a definição de referenciais nacionais comuns com o respeito às características locais, regionais, culturais e sociais dos estudantes.",
-        "Promover equidade educacional por meio da garantia de oportunidades de aprendizagem para diferentes grupos e contextos.",
-        "Articular formação integral, cidadania e desenvolvimento de competências necessárias à vida em sociedade.",
-        "Orientar a construção curricular preservando a diversidade e a pluralidade que caracterizam a educação brasileira."
+        "Promover equidade educacional por meio da garantia de oportunidades de aprendizagem para diferentes grupos e contextos, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Articular formação integral, cidadania e desenvolvimento de competências necessárias à vida em sociedade, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
+        "Orientar a construção curricular preservando a diversidade e a pluralidade que caracterizam a educação brasileira, considerando os princípios legais de acesso, permanência e organização da educação básica."
 ],
 
 correta: 1,

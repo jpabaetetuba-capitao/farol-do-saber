@@ -5,11 +5,11 @@ const pne = [
         "Durante a elaboração do Plano Municipal de Educação, uma equipe técnica discutia qual documento deveria servir de referência para a definição das metas locais. Conforme a Lei nº 13.005/2014, o Plano Nacional de Educação caracteriza-se como:",
 
     alternativas: [
-        "Instrumento destinado exclusivamente à expansão da Educação Superior.",
-        "Documento voltado apenas à universalização da Educação Básica.",
+        "Instrumento destinado predominantemente à expansão da Educação Superior, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Documento voltado em geral à universalização da Educação Básica, considerando os princípios legais de acesso, permanência e organização da educação básica.",
         "Plano decenal que estabelece diretrizes, metas e estratégias para a política educacional brasileira.",
-        "Norma que regulamenta exclusivamente o financiamento educacional.",
-        "Plano destinado apenas à formação dos profissionais da educação."
+        "Norma que regulamenta predominantemente o financiamento educacional, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Plano destinado em geral à formação dos profissionais da educação, considerando o acompanhamento das metas e a articulação entre os entes federativos."
     ],
 
     correta: 2,
@@ -102,10 +102,10 @@ const pne = [
         "Durante uma audiência pública sobre políticas educacionais, discutiu-se quais instituições possuem atribuições relacionadas ao monitoramento e à avaliação das metas do PNE. Segundo a legislação, esse acompanhamento envolve:",
 
     alternativas: [
-        "Somente o Ministério da Educação.",
-        "Exclusivamente o Conselho Nacional de Educação.",
-        "Apenas o INEP e os Conselhos Estaduais de Educação.",
-        "Somente os Tribunais de Contas.",
+        "Normalmente o Ministério da Educação, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Predominantemente o Conselho Nacional de Educação, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Em geral o INEP e os Conselhos Estaduais de Educação, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Normalmente os Tribunais de Contas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
         "MEC, Congresso Nacional, Conselho Nacional de Educação e Fórum Nacional de Educação."
     ],
 
@@ -171,11 +171,11 @@ const pne = [
         "Uma equipe de pesquisadores avaliava o cumprimento das metas do PNE e destacou que o acompanhamento deve ocorrer durante toda a vigência do plano. De acordo com a Lei nº 13.005/2014, o monitoramento das metas é realizado:",
 
     alternativas: [
-        "Somente ao final da vigência do plano.",
+        "Normalmente ao final da vigência do plano.",
         "A cada cinco anos.",
-        "Exclusivamente por auditorias externas.",
+        "Predominantemente por auditorias externas.",
         "De forma contínua, com avaliações periódicas.",
-        "Apenas quando solicitado pelo Congresso Nacional."
+        "Em geral quando solicitado pelo Congresso Nacional."
     ],
 
     correta: 3,
@@ -194,16 +194,11 @@ const pne = [
         "Durante a construção de um Plano Municipal de Educação, foi destacado que as metas locais deveriam estar alinhadas ao PNE, respeitando as necessidades regionais. Essa orientação demonstra que o PNE possui função:",
 
     alternativas: [
-
-        "Exclusivamente financeira.",
-
+        "Predominantemente financeira, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
         "Orientadora e articuladora das políticas educacionais.",
-
-        "Restrita à Educação Superior.",
-
-        "Limitada à formação docente.",
-
-        "Exclusivamente avaliativa."
+        "Restrita à Educação Superior, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Limitada à formação docente, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Predominantemente avaliativa, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
     ],
 
     correta: 1,
@@ -295,7 +290,7 @@ const pne = [
         "O município já cumpriu a Meta 3.",
         "O município alcançou a Meta 6.",
         "A Meta 1 foi parcialmente alcançada.",
-        "A Meta 1 trata exclusivamente da pré-escola."
+        "A Meta 1 trata predominantemente da pré-escola."
     ],
 
     correta: 3,
@@ -314,16 +309,11 @@ const pne = [
         "Uma secretaria municipal apresentou como prioridade a ampliação do acesso à Educação Infantil, garantindo melhores oportunidades de desenvolvimento na primeira infância. Essa política está alinhada principalmente à meta que prevê:",
 
     alternativas: [
-
-        "Elevação da qualidade da educação básica.",
-
+        "Elevação da qualidade da educação básica, considerando os princípios legais de acesso, permanência e organização da educação básica.",
         "Universalização da Educação Infantil na pré-escola e ampliação das creches.",
-
-        "Formação em pós-graduação para professores da educação básica.",
-
-        "Triplicação das matrículas da Educação Profissional Técnica.",
-
-        "Universalização do Ensino Fundamental."
+        "Formação em pós-graduação para professores da educação básica, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Triplicação das matrículas da Educação Profissional Técnica, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Universalização do Ensino Fundamental, considerando os princípios legais de acesso, permanência e organização da educação básica."
     ],
 
     correta: 1,
@@ -393,11 +383,11 @@ const pne = [
         "Uma rede de ensino identificou elevado índice de abandono escolar entre estudantes do Ensino Fundamental. Para atender plenamente à Meta 2 do PNE, não basta garantir matrícula; é necessário também:",
 
     alternativas: [
-        "Elevar as matrículas na Educação Superior.",
-        "Ampliar a pós-graduação stricto sensu.",
+        "Elevar as matrículas na Educação Superior, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Ampliar a pós-graduação stricto sensu, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
         "Assegurar a conclusão do Ensino Fundamental na idade recomendada.",
-        "Expandir a Educação Profissional Técnica.",
-        "Universalizar a pré-escola."
+        "Expandir a Educação Profissional Técnica, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Universalizar a pré-escola, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
     ],
 
     correta: 2,
@@ -416,10 +406,10 @@ const pne = [
         "Ao analisar os indicadores educacionais, uma equipe técnica observou que todos os estudantes estavam matriculados, mas muitos apresentavam atraso escolar. Essa situação indica que:",
 
     alternativas: [
-        "A Meta 2 foi integralmente alcançada.",
-        "A Meta 1 ainda não foi cumprida.",
-        "O município já cumpriu a Meta 12.",
-        "A Meta 6 foi atingida.",
+        "A Meta 2 foi integralmente alcançada, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "A Meta 1 ainda não foi cumprida, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "O município já cumpriu a Meta 12, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "A Meta 6 foi atingida, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
         "Ainda existem desafios relacionados ao fluxo escolar previsto na Meta 2."
     ],
 
@@ -462,11 +452,11 @@ const pne = [
         "Uma prefeitura implementou programas de reforço escolar, combate à evasão e acompanhamento pedagógico com o objetivo de garantir que os estudantes concluam o Ensino Fundamental no tempo adequado. Essa iniciativa contribui principalmente para o cumprimento da:",
 
     alternativas: [
-        "Meta 3 — Universalização do Ensino Médio.",
+        "Meta 3 — Universalização do Ensino Médio, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
         "Meta 2 — Universalização e conclusão do Ensino Fundamental.",
-        "Meta 5 — Alfabetização até o 3º ano.",
-        "Meta 6 — Educação Integral.",
-        "Meta 12 — Expansão da Educação Superior."
+        "Meta 5 — Alfabetização até o 3º ano, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 6 — Educação Integral, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 12 — Expansão da Educação Superior, considerando o acompanhamento das metas e a articulação entre os entes federativos."
     ],
 
     correta: 1,
@@ -532,10 +522,10 @@ const pne = [
 
     alternativas: [
         "Meta 4 — Educação Especial na perspectiva inclusiva.",
-        "Meta 2 — Ensino Fundamental.",
-        "Meta 6 — Educação Integral.",
-        "Meta 11 — Educação Profissional Técnica.",
-        "Meta 15 — Formação de Professores."
+        "Meta 2 — Ensino Fundamental, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 6 — Educação Integral, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 11 — Educação Profissional Técnica, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 15 — Formação de Professores, considerando o acompanhamento das metas e a articulação entre os entes federativos."
     ],
 
     correta: 0,
@@ -697,10 +687,10 @@ const pne = [
         "Durante um curso de formação, um professor afirmou que alfabetização e educação integral são conceitos equivalentes. À luz do PNE, essa afirmação é incorreta porque:",
 
     alternativas: [
-        "Ambos os conceitos pertencem à Meta 1.",
-        "Alfabetização é tratada pela Meta 9 e educação integral pela Meta 12.",
-        "Educação integral corresponde à Meta 5 e alfabetização à Meta 6.",
-        "Os dois conceitos pertencem exclusivamente à BNCC.",
+        "Ambos os conceitos pertencem à Meta 1, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Alfabetização é tratada pela Meta 9 e educação integral pela Meta 12, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Educação integral corresponde à Meta 5 e alfabetização à Meta 6, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Os dois conceitos pertencem predominantemente à BNCC, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
         "Alfabetização refere-se à Meta 5, enquanto educação integral está associada à Meta 6."
     ],
 
@@ -799,11 +789,11 @@ const pne = [
         "Em determinado município foi implementado um programa voltado à alfabetização de jovens, adultos e idosos que não tiveram acesso à educação na idade apropriada. Essa iniciativa contribui principalmente para o cumprimento da:",
 
     alternativas: [
-        "Meta 5 — Alfabetização das crianças.",
-        "Meta 7 — Qualidade da Educação Básica.",
-        "Meta 10 — Educação Profissional integrada à EJA.",
+        "Meta 5 — Alfabetização das crianças, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 7 — Qualidade da Educação Básica, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 10 — Educação Profissional integrada à EJA, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
         "Meta 9 — Erradicação do analfabetismo absoluto e redução do analfabetismo funcional.",
-        "Meta 12 — Educação Superior."
+        "Meta 12 — Educação Superior, considerando o acompanhamento das metas e a articulação entre os entes federativos."
     ],
 
     correta: 3,
@@ -845,16 +835,11 @@ const pne = [
         "Durante a elaboração de políticas públicas voltadas à qualificação profissional dos jovens, uma Secretaria Estadual de Educação definiu como prioridade a ampliação das matrículas na Educação Profissional Técnica de nível médio. Essa iniciativa está diretamente relacionada à:",
 
     alternativas: [
-
-        "Meta 10 — EJA integrada à Educação Profissional.",
-
+        "Meta 10 — EJA integrada à Educação Profissional, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
         "Meta 11 — Educação Profissional Técnica de nível médio.",
-
-        "Meta 12 — Educação Superior.",
-
-        "Meta 14 — Pós-graduação stricto sensu.",
-
-        "Meta 15 — Formação inicial dos professores."
+        "Meta 12 — Educação Superior, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 14 — Pós-graduação stricto sensu, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 15 — Formação inicial dos professores, considerando o acompanhamento das metas e a articulação entre os entes federativos."
     ],
 
     correta: 1,
@@ -942,10 +927,10 @@ const pne = [
         "Um candidato a concurso elaborou o seguinte resumo: 'Meta 11 trata da Educação Profissional Técnica; Meta 12 da expansão da Educação Superior; Meta 13 da qualidade da Educação Superior; e Meta 14 da pós-graduação stricto sensu'. O resumo está:",
 
     alternativas: [
-        "Incorreto apenas em relação à Meta 11.",
-        "Incorreto apenas em relação à Meta 12.",
-        "Incorreto apenas em relação à Meta 13.",
-        "Incorreto apenas em relação à Meta 14.",
+        "Incorreto em relação à Meta 11.",
+        "Incorreto em relação à Meta 12.",
+        "Incorreto em relação à Meta 13.",
+        "Incorreto em relação à Meta 14.",
         "Totalmente correto."
     ],
 
@@ -965,10 +950,10 @@ const pne = [
         "Durante uma auditoria educacional, verificou-se que parte dos professores da Educação Básica atuava em áreas diferentes de sua formação acadêmica. Para enfrentar esse problema, o PNE estabelece uma meta voltada à garantia de formação específica de nível superior para os docentes. Trata-se da:",
 
     alternativas: [
-        "Meta 12 — Expansão da Educação Superior.",
-        "Meta 14 — Pós-graduação stricto sensu.",
-        "Meta 16 — Formação continuada dos professores.",
-        "Meta 17 — Valorização do magistério.",
+        "Meta 12 — Expansão da Educação Superior, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 14 — Pós-graduação stricto sensu, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 16 — Formação continuada dos professores, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 17 — Valorização do magistério, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
         "Meta 15 — Formação inicial dos profissionais da educação."
     ],
 
@@ -988,16 +973,11 @@ const pne = [
         "Uma Secretaria de Educação passou a oferecer incentivos para que os professores cursassem especialização, mestrado e outras formações após a graduação. Essa iniciativa está diretamente alinhada à:",
 
     alternativas: [
-
-        "Meta 13 — Qualidade da Educação Superior.",
-
-        "Meta 15 — Formação inicial docente.",
-
+        "Meta 13 — Qualidade da Educação Superior, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 15 — Formação inicial docente, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
         "Meta 16 — Formação continuada e pós-graduação para professores.",
-
-        "Meta 17 — Equiparação salarial do magistério.",
-
-        "Meta 18 — Plano de carreira."
+        "Meta 17 — Equiparação salarial do magistério, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 18 — Plano de carreira, considerando o acompanhamento das metas e a articulação entre os entes federativos."
     ],
 
     correta: 2,
@@ -1039,11 +1019,11 @@ const pne = [
         "Um município aprovou um novo plano de carreira para os profissionais da Educação Básica pública, tomando como referência o piso salarial profissional nacional. Essa medida está alinhada à:",
 
     alternativas: [
-        "Meta 15 — Formação inicial.",
+        "Meta 15 — Formação inicial, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
         "Meta 18 — Plano de carreira dos profissionais da educação.",
-        "Meta 16 — Formação continuada.",
-        "Meta 17 — Equiparação salarial.",
-        "Meta 19 — Gestão democrática."
+        "Meta 16 — Formação continuada, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 17 — Equiparação salarial, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Meta 19 — Gestão democrática, considerando o acompanhamento das metas e a articulação entre os entes federativos."
     ],
 
     correta: 1,
@@ -1063,9 +1043,9 @@ const pne = [
 
     alternativas: [
         "Todas as associações estão corretas.",
-        "Apenas as Metas 15 e 16 estão corretas.",
-        "Apenas as Metas 17 e 18 estão corretas.",
-        "Apenas as Metas 15, 16 e 17 estão corretas.",
+        "Em geral as Metas 15 e 16 estão corretas.",
+        "Em geral as Metas 17 e 18 estão corretas.",
+        "Em geral as Metas 15, 16 e 17 estão corretas.",
         "Nenhuma associação está correta."
     ],
 
@@ -1188,10 +1168,10 @@ const pne = [
 
     alternativas: [
         "Correto em ambas as metas.",
-        "Correto apenas quanto à Meta 19.",
-        "Correto apenas quanto à Meta 20.",
+        "Correto em geral quanto à Meta 19.",
+        "Correto em geral quanto à Meta 20.",
         "Incorreto em ambas as metas.",
-        "Correto apenas parcialmente, pois a Meta 20 trata de formação docente."
+        "Correto em geral parcialmente, pois a Meta 20 trata de formação docente."
     ],
 
     correta: 0,

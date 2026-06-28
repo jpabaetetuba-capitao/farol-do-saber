@@ -24,11 +24,11 @@ dicaBanca: "Proteção Integral = sujeito de direitos."
 pergunta: "Durante uma audiência pública sobre políticas voltadas à infância, discutia-se quem possui responsabilidade pela garantia dos direitos da criança e do adolescente. À luz do ECA, é correto afirmar que essa responsabilidade é:",
 
 alternativas: [
-"Compartilhada entre família, sociedade e Estado, que devem atuar conjuntamente para assegurar os direitos infantojuvenis.",
-"Exercida prioritariamente pelo Estado, cabendo à família e à sociedade funções complementares de apoio e acompanhamento.",
-"Distribuída entre os órgãos de proteção à infância, com participação subsidiária da família e da comunidade.",
-"Concentrada nas instituições públicas responsáveis pela execução das políticas de atendimento à criança e ao adolescente.",
-"Compartilhada entre a família e o Estado, cabendo à sociedade civil papel colaborativo facultativo."
+        "Compartilhada entre família, sociedade e Estado, que devem atuar conjuntamente para assegurar os direitos infantojuvenis.",
+        "Exercida prioritariamente pelo Estado, cabendo à família e à sociedade funções complementares de apoio e acompanhamento.",
+        "Distribuída entre os órgãos de proteção à infância, com participação subsidiária da família e da comunidade.",
+        "Concentrada nas instituições públicas responsáveis pela execução das políticas de atendimento à criança e ao adolescente.",
+        "Compartilhada entre a família e o Estado, cabendo à sociedade civil papel colaborativo condicionado ao planejamento institucional."
 ],
 
 correta: 0,
@@ -44,7 +44,7 @@ dicaBanca: "Família + Sociedade + Estado."
 pergunta: "Uma equipe gestora discutia o princípio da prioridade absoluta previsto no ECA. Durante o debate, um participante afirmou que esse princípio possui repercussões concretas na formulação das políticas públicas. Essa afirmação está correta porque a prioridade absoluta implica:",
 
 alternativas: [
-        "A reserva obrigatória de recursos destinados exclusivamente aos programas de proteção social voltados às crianças em situação de risco.",
+        "A reserva obrigatória de recursos destinados predominantemente aos programas de proteção social voltados às crianças em situação de risco.",
         "A garantia de atendimento prioritário nos serviços públicos de saúde, assistência social e educação mediante comprovação de vulnerabilidade.",
         "A adoção de medidas administrativas preferenciais destinadas às crianças e adolescentes em situação de abandono ou negligência.",
         "A preferência na formulação e execução das políticas sociais públicas e na destinação privilegiada de recursos para a infância e juventude.",
@@ -103,10 +103,10 @@ dicaBanca: "Adolescente = 12 a 18 anos."
 pergunta: "Durante uma capacitação para profissionais da rede de proteção, discutia-se o direito à vida previsto no ECA. Uma participante afirmou que esse direito não se limita à sobrevivência física, abrangendo também condições adequadas de desenvolvimento. Essa interpretação está correta porque o Estatuto assegura:",
 
 alternativas: [
-        "A garantia de atendimento prioritário às crianças e adolescentes em situação de vulnerabilidade social ou econômica.",
-        "A oferta de serviços públicos destinados à proteção da infância durante as etapas iniciais do desenvolvimento humano.",
-        "A implementação de ações preventivas voltadas à redução dos fatores de risco associados à mortalidade infantil.",
-        "A assistência integral às famílias responsáveis pela criação e educação das crianças e adolescentes.",
+        "A garantia de atendimento prioritário às crianças e adolescentes em situação de vulnerabilidade social ou econômica, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
+        "A oferta de serviços públicos destinados à proteção da infância durante as etapas iniciais do desenvolvimento humano, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "A implementação de ações preventivas voltadas à redução dos fatores de risco associados à mortalidade infantil, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "A assistência integral às famílias responsáveis pela criação e educação das crianças e adolescentes, considerando os princípios legais de acesso, permanência e organização da educação básica.",
         "A proteção integral da criança e do adolescente mediante políticas públicas voltadas à preservação da vida e ao desenvolvimento saudável e harmonioso."
 ],
 
@@ -163,11 +163,11 @@ dicaBanca: "Liberdade = participação e expressão."
 pergunta: "Uma escola identificou situações de humilhação pública envolvendo determinado estudante. Ao analisar o caso, a equipe pedagógica concluiu que a situação afrontava diretamente o direito ao respeito previsto no ECA. Esse direito consiste principalmente na:",
 
 alternativas: [
-"Proteção da identidade pessoal e da integridade moral da criança e do adolescente contra interferências indevidas.",
-"Inviolabilidade da integridade física, psíquica e moral da criança e do adolescente, abrangendo imagem, identidade, autonomia, valores e crenças.",
-"Garantia de preservação das características individuais da criança nos ambientes familiares, escolares e comunitários.",
-"Proteção contra qualquer forma de discriminação que comprometa o desenvolvimento integral da personalidade.",
-"Defesa da dignidade humana mediante a proteção das relações familiares e sociais da criança e do adolescente."
+        "Proteção da identidade pessoal e da integridade moral da criança e do adolescente contra interferências indevidas, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
+        "Inviolabilidade da integridade física, psíquica e moral da criança e do adolescente, abrangendo imagem, identidade, autonomia, valores e crenças.",
+        "Garantia de preservação das características individuais da criança nos ambientes familiares, escolares e comunitários, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
+        "Proteção contra qualquer forma de discriminação que comprometa o desenvolvimento integral da personalidade, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
+        "Defesa da dignidade humana mediante a proteção das relações familiares e sociais da criança e do adolescente, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado."
 ],
 
 correta: 1,
@@ -202,10 +202,10 @@ dicaBanca: "Dignidade = proteção contra toda forma de violência e opressão."
 pergunta: "Durante uma reunião da rede de proteção, discutia-se o direito à convivência familiar e comunitária. Uma assistente social destacou que a permanência da criança em sua família deve ser priorizada sempre que possível. Essa afirmação está de acordo com o ECA porque:",
 
 alternativas: [
-        "A convivência familiar representa direito fundamental cuja restrição depende exclusivamente de decisão judicial fundamentada.",
-        "A permanência da criança junto à família natural deve ser preservada, salvo quando houver manifestação contrária dos órgãos de proteção.",
-        "O vínculo familiar possui prioridade sobre outras medidas protetivas, independentemente das condições existentes no ambiente doméstico.",
-        "A proteção integral exige que a convivência familiar seja preservada sempre que não houver risco iminente à integridade física da criança.",
+        "A convivência familiar representa direito fundamental cuja restrição depende predominantemente de decisão judicial fundamentada, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
+        "A permanência da criança junto à família natural deve ser preservada, salvo quando houver manifestação contrária dos órgãos de proteção, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
+        "O vínculo familiar possui prioridade sobre outras medidas protetivas, independentemente das condições existentes no ambiente doméstico, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "A proteção integral exige que a convivência familiar seja preservada sempre que não houver risco iminente à integridade física da criança, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
         "A manutenção da criança em seu núcleo familiar constitui medida prioritária, devendo o afastamento ocorrer apenas quando indispensável à proteção de seus direitos."
 ],
 
@@ -321,11 +321,11 @@ dicaBanca: "Pessoa + cidadania + trabalho."
 pergunta: "Uma estudante com bom desempenho acadêmico foi impedida de participar de determinada atividade escolar em razão de sua condição socioeconômica. Ao analisar o caso, concluiu-se que a situação afrontava o ECA porque este assegura:",
 
 alternativas: [
-        "O acesso aos programas suplementares oferecidos pelas instituições educacionais públicas e privadas.",
+        "O acesso aos programas suplementares oferecidos pelas instituições educacionais públicas e privadas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
         "A proteção integral dos estudantes contra práticas discriminatórias capazes de comprometer seu desenvolvimento educacional.",
         "A igualdade de condições para acesso e permanência na escola, independentemente das características pessoais ou sociais do estudante.",
-        "O direito à participação em atividades pedagógicas compatíveis com as diretrizes curriculares da instituição.",
-        "A garantia de tratamento educacional adequado às necessidades individuais dos estudantes."
+        "O direito à participação em atividades pedagógicas compatíveis com as diretrizes curriculares da instituição, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
+        "A garantia de tratamento educacional adequado às necessidades individuais dos estudantes, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
 ],
 
 correta: 2,
@@ -420,10 +420,10 @@ dicaBanca: "Família natural = pais (ou um deles) + descendentes."
 pergunta: "Em determinado processo de proteção, verificou-se que a criança mantinha fortes vínculos com avós e tios que participavam ativamente de sua criação. Segundo o ECA, esses familiares podem integrar a chamada:",
 
 alternativas: [
-        "Família substituta, desde que assumam formalmente as responsabilidades parentais previstas em lei.",
-        "Comunidade familiar complementar, constituída por pessoas que participam da rede de apoio da criança.",
-        "Família socioafetiva, caracterizada pela convivência contínua e pela existência de laços de cuidado e proteção.",
-        "Estrutura familiar subsidiária, organizada para atender às necessidades específicas de desenvolvimento da criança.",
+        "Família substituta, desde que assumam formalmente as responsabilidades parentais previstas em lei, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Comunidade familiar complementar, constituída por pessoas que participam da rede de apoio da criança, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
+        "Família socioafetiva, caracterizada pela convivência contínua e pela existência de laços de cuidado e proteção, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Estrutura familiar subsidiária, organizada para atender às necessidades específicas de desenvolvimento da criança, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
         "Família ampliada ou extensa, formada por parentes próximos com os quais a criança convive e mantém vínculos de afinidade e afetividade."
 ],
 
@@ -559,11 +559,11 @@ dicaBanca: "Idoneidade + 21 anos + residência."
 pergunta: "Uma escola encaminhou ao Conselho Tutelar situação envolvendo evasão escolar persistente, após esgotadas as medidas pedagógicas disponíveis. Nesse caso, a atuação do Conselho Tutelar decorre da atribuição de:",
 
 alternativas: [
-"Aplicar sanções administrativas aos responsáveis pela frequência irregular do estudante.",
-"Julgar conflitos familiares relacionados ao exercício do poder familiar e ao direito à educação.",
-"Atender crianças e adolescentes nas hipóteses previstas em lei e aplicar medidas de proteção quando necessário.",
-"Determinar o retorno imediato do estudante à escola mediante decisão com força judicial.",
-"Executar diretamente políticas públicas destinadas à prevenção da evasão e do abandono escolar."
+        "Aplicar sanções administrativas aos responsáveis pela frequência irregular do estudante, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Julgar conflitos familiares relacionados ao exercício do poder familiar e ao direito à educação, considerando os princípios legais de acesso, permanência e organização da educação básica.",
+        "Atender crianças e adolescentes nas hipóteses previstas em lei e aplicar medidas de proteção quando necessário.",
+        "Determinar o retorno imediato do estudante à escola mediante decisão com força judicial, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "Executar diretamente políticas públicas destinadas à prevenção da evasão e do abandono escolar, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
 ],
 
 correta: 2,
@@ -580,9 +580,9 @@ pergunta: "Durante uma reunião da rede de proteção, discutia-se uma situaçã
 
 alternativas: [
         "A destituição do poder familiar depende de parecer técnico emitido pelos órgãos responsáveis pela assistência social.",
-        "O Conselho Tutelar possui competência apenas para recomendar providências relacionadas ao fortalecimento dos vínculos familiares.",
-        "A destituição do poder familiar somente pode ocorrer mediante solicitação formulada pelo Ministério Público.",
-        "Os Conselhos Tutelares atuam exclusivamente em situações de ameaça ou violação de direitos sem interferência nas relações familiares.",
+        "O Conselho Tutelar possui competência em geral para recomendar providências relacionadas ao fortalecimento dos vínculos familiares.",
+        "A destituição do poder familiar normalmente pode ocorrer mediante solicitação formulada pelo Ministério Público.",
+        "Os Conselhos Tutelares atuam predominantemente em situações de ameaça ou violação de direitos sem interferência nas relações familiares.",
         "Medidas que impliquem alteração definitiva dos vínculos familiares exigem procedimento judicial conduzido pela autoridade competente."
 ],
 
@@ -758,10 +758,10 @@ pergunta: "Durante uma prestação de contas, um gestor explicou a utilização 
 
 alternativas: [
         "B) Garantir recursos destinados à implementação de programas, projetos e ações voltados à promoção e proteção dos direitos da criança e do adolescente.",
-        "Financiar exclusivamente os serviços executados pelos Conselhos Tutelares no atendimento às situações de violação de direitos.",
-        "C) Custear as despesas administrativas dos órgãos responsáveis pela formulação das políticas públicas de atendimento.",
-        "D) Assegurar a manutenção financeira das instituições de acolhimento responsáveis pelo atendimento infantojuvenil.",
-        "E) Financiar prioritariamente programas de assistência social direcionados às famílias em situação de vulnerabilidade."
+        "Financiar predominantemente os serviços executados pelos Conselhos Tutelares no atendimento às situações de violação de direitos, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
+        "C) Custear as despesas administrativas dos órgãos responsáveis pela formulação das políticas públicas de atendimento, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "D) Assegurar a manutenção financeira das instituições de acolhimento responsáveis pelo atendimento infantojuvenil, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
+        "E) Financiar prioritariamente programas de assistência social direcionados às famílias em situação de vulnerabilidade, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
 ],
 
 correta: 0,
@@ -799,7 +799,7 @@ alternativas: [
         "A conduta praticada por criança ou adolescente que represente descumprimento das normas de convivência social estabelecidas pela comunidade.",
         "B) O comportamento incompatível com os deveres inerentes à condição de estudante regularmente matriculado em instituição de ensino.",
         "D) Qualquer ação ou omissão capaz de colocar em risco o desenvolvimento físico, psicológico ou social do adolescente.",
-        "E) O comportamento ilícito praticado exclusivamente por adolescentes sujeitos à aplicação de medidas socioeducativas.",
+        "E) O comportamento ilícito praticado predominantemente por adolescentes sujeitos à aplicação de medidas socioeducativas.",
         "C) A conduta descrita como crime ou contravenção penal quando praticada por criança ou adolescente."
 ],
 
@@ -877,10 +877,10 @@ pergunta: "Durante um curso de capacitação, um participante afirmou que a prá
 
 alternativas: [
         "B) Crianças estão sujeitas a medidas de proteção, enquanto adolescentes podem receber medidas socioeducativas.",
-        "Apenas adolescentes podem praticar atos infracionais reconhecidos pelo sistema de justiça juvenil.",
+        "Em geral adolescentes podem praticar atos infracionais reconhecidos pelo sistema de justiça juvenil.",
         "C) Crianças recebem medidas socioeducativas simplificadas e adolescentes recebem medidas socioeducativas completas.",
-        "D) A responsabilização da criança depende exclusivamente da atuação do Conselho Tutelar.",
-        "E) Adolescentes somente podem ser responsabilizados quando houver reincidência infracional."
+        "D) A responsabilização da criança depende predominantemente da atuação do Conselho Tutelar.",
+        "E) Adolescentes normalmente podem ser responsabilizados quando houver reincidência infracional."
 ],
 
 correta: 0,
