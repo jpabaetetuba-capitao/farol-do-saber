@@ -3642,3 +3642,1838 @@ progress{
 
 }
 
+
+/* ==========================
+   JOGOS DO FAROL
+========================== */
+
+.jogos-card{
+    overflow:hidden;
+}
+
+.grid-jogos-farol{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:16px;
+    margin-top:10px;
+}
+
+.jogo-card-principal,
+.jogo-card-bloqueado{
+    background:rgba(255,255,255,0.92);
+    border-radius:18px;
+    padding:18px;
+    box-shadow:0 5px 16px rgba(0,0,0,0.12);
+    border:1px solid rgba(13,71,161,0.14);
+    min-height:230px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.jogo-card-principal{
+    border-left:7px solid #f9a825;
+    background:linear-gradient(135deg, rgba(255,248,225,0.96), rgba(227,242,253,0.96));
+}
+
+.jogo-card-bloqueado{
+    opacity:0.75;
+    background:#f5f5f5;
+}
+
+.icone-jogo{
+    width:74px;
+    height:74px;
+    border-radius:50%;
+    background:#fff8e1;
+    border:3px solid #f9a825;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:36px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.12);
+}
+
+.jogo-card-principal h3,
+.jogo-card-bloqueado h3{
+    color:#0d47a1;
+}
+
+.jogo-card-principal p,
+.jogo-card-bloqueado p{
+    line-height:1.5;
+    color:#333;
+}
+
+.jogo-card-bloqueado span{
+    background:#eeeeee;
+    color:#555;
+    padding:7px 10px;
+    border-radius:999px;
+    font-weight:bold;
+}
+
+.area-jogo-construa-farol{
+    margin-top:25px;
+}
+
+.painel-jogo-farol{
+    background:linear-gradient(135deg, rgba(255,248,225,0.96), rgba(227,242,253,0.96));
+    border-left:8px solid #f9a825;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 8px 22px rgba(0,0,0,0.13);
+    margin-top:20px;
+}
+
+.painel-jogo-farol h3{
+    color:#0d47a1;
+    margin-bottom:8px;
+}
+
+.painel-jogo-farol p{
+    line-height:1.6;
+    color:#333;
+}
+
+.grid-disciplinas-jogo{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+    gap:12px;
+    margin-top:16px;
+}
+
+.grid-disciplinas-jogo button{
+    width:100%;
+    min-height:62px;
+}
+
+.cabecalho-jogo-farol{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:14px;
+    background:rgba(255,255,255,0.78);
+    border-radius:14px;
+    padding:14px;
+    margin-bottom:14px;
+}
+
+.cabecalho-jogo-farol span{
+    background:#0d47a1;
+    color:white;
+    padding:8px 12px;
+    border-radius:999px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.farol-visual-jogo{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:10px;
+    margin:15px 0;
+}
+
+.parte-farol-jogo{
+    background:#eeeeee;
+    border:2px solid #cfcfcf;
+    border-radius:14px;
+    padding:12px 8px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    min-height:84px;
+    justify-content:center;
+    color:#555;
+}
+
+.parte-farol-jogo span{
+    font-size:26px;
+}
+
+.parte-farol-jogo.construida{
+    background:#e8f5e9;
+    border-color:#43a047;
+    color:#1b5e20;
+}
+
+.placar-jogo-farol{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:12px 0;
+}
+
+.placar-jogo-farol span{
+    background:rgba(255,255,255,0.85);
+    border-radius:999px;
+    padding:8px 12px;
+    font-weight:bold;
+    color:#0d47a1;
+    border:1px solid rgba(13,71,161,0.16);
+}
+
+.questao-jogo-farol{
+    background:rgba(255,255,255,0.88);
+    border-radius:16px;
+    padding:16px;
+    border:1px solid rgba(13,71,161,0.12);
+}
+
+.questao-jogo-farol h3{
+    color:#222;
+    margin:12px 0;
+    line-height:1.5;
+}
+
+.jogo-texto-base{
+    background:#f8f9fa;
+    border-left:5px solid #1e88e5;
+    border-radius:12px;
+    padding:12px;
+    margin-bottom:12px;
+}
+
+.alternativas-jogo-farol{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+    margin-top:14px;
+}
+
+.alternativas-jogo-farol button{
+    width:100%;
+    text-align:left;
+    background:#e3f2fd;
+    color:#0d47a1;
+    border:2px solid transparent;
+}
+
+.alternativas-jogo-farol button:hover{
+    background:#bbdefb;
+}
+
+.alternativas-jogo-farol button.correta{
+    background:#e8f5e9 !important;
+    border-color:#43a047;
+    color:#1b5e20;
+}
+
+.alternativas-jogo-farol button.errada{
+    background:#ffebee !important;
+    border-color:#c62828;
+    color:#b71c1c;
+}
+
+.alternativas-jogo-farol button:disabled{
+    cursor:not-allowed;
+    opacity:0.95;
+}
+
+.resultado-jogo-farol{
+    text-align:center;
+}
+
+.resultado-farol-percentual{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    background:#fff8e1;
+    border:8px solid #f9a825;
+    margin:20px auto;
+    box-shadow:0 6px 18px rgba(0,0,0,0.18);
+}
+
+.resultado-farol-percentual strong{
+    color:#0d47a1;
+    font-size:42px;
+}
+
+.resultado-farol-percentual span{
+    color:#333;
+    font-weight:bold;
+}
+
+.resultado-grid-jogo{
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.mensagem-final-jogo{
+    background:#e3f2fd;
+    border-radius:14px;
+    padding:14px;
+    font-weight:bold;
+    color:#0d47a1;
+    margin:16px 0;
+}
+
+.botoes-final-jogo{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+@media(max-width:768px){
+
+    .cabecalho-jogo-farol{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .cabecalho-jogo-farol span{
+        width:100%;
+        text-align:center;
+    }
+
+    .farol-visual-jogo{
+        grid-template-columns:1fr;
+    }
+
+    .botoes-final-jogo button{
+        width:100%;
+    }
+
+}
+
+
+/* ==========================
+   DESAFIO RELÂMPAGO
+========================== */
+
+.jogo-card-relampago{
+    border-left-color:#ff9800;
+}
+
+.painel-relampago{
+    border-left-color:#ff9800;
+}
+
+.aviso-jogo-relampago{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    background:#fff8e1;
+    border-left:6px solid #ff9800;
+    border-radius:14px;
+    padding:14px;
+    margin:14px 0;
+    line-height:1.5;
+}
+
+.cabecalho-relampago{
+    align-items:center;
+}
+
+.tempo-relampago-area{
+    min-width:120px;
+    height:90px;
+    border-radius:16px;
+    background:#fff8e1;
+    border:4px solid #ff9800;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 4px 14px rgba(0,0,0,0.12);
+}
+
+.tempo-relampago-area span{
+    color:#0d47a1;
+    font-size:34px;
+    font-weight:bold;
+}
+
+.tempo-relampago-area span.tempo-alerta{
+    color:#c62828;
+    animation:pulsoTempoRelampago 0.8s infinite;
+}
+
+.tempo-relampago-area small{
+    color:#333;
+    font-weight:bold;
+}
+
+.barra-tempo-relampago{
+    width:100%;
+    height:18px;
+    margin:4px 0 14px 0;
+}
+
+.questao-relampago{
+    border-left:6px solid #ff9800;
+}
+
+.feedback-relampago{
+    margin-top:12px;
+    border-radius:12px;
+    padding:12px;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.resultado-relampago-circulo{
+    border-color:#ff9800;
+}
+
+@keyframes pulsoTempoRelampago{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.08);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+@media(max-width:768px){
+
+    .tempo-relampago-area{
+        width:100%;
+    }
+
+}
+
+
+/* Correção visual do cronômetro do Desafio Relâmpago */
+.tempo-relampago-area #tempoRelampago{
+    background:transparent !important;
+    color:#0d47a1 !important;
+    padding:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    min-width:auto !important;
+    width:auto !important;
+    height:auto !important;
+    display:block !important;
+    font-size:38px !important;
+    line-height:1 !important;
+    text-align:center !important;
+}
+
+.tempo-relampago-area #tempoRelampago.tempo-alerta{
+    color:#c62828 !important;
+}
+
+.tempo-relampago-area small{
+    display:block;
+    text-align:center;
+    margin-top:6px;
+}
+
+
+/* ==========================
+   CAÇA AOS ERROS
+========================== */
+
+.jogo-card-caca-erros{
+    border-left-color:#2e7d32;
+}
+
+.painel-caca-erros{
+    border-left-color:#2e7d32;
+}
+
+.aviso-jogo-caca{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    background:#e8f5e9;
+    border-left:6px solid #2e7d32;
+    border-radius:14px;
+    padding:14px;
+    margin:14px 0;
+    line-height:1.5;
+}
+
+.resumo-caca-erros{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+    gap:12px;
+    margin:16px 0;
+}
+
+.resumo-caca-erros div{
+    background:rgba(255,255,255,0.88);
+    border-radius:16px;
+    padding:16px;
+    text-align:center;
+    border:1px solid rgba(46,125,50,0.2);
+}
+
+.resumo-caca-erros strong{
+    display:block;
+    font-size:32px;
+    color:#1b5e20;
+}
+
+.resumo-caca-erros span{
+    color:#333;
+    font-weight:bold;
+}
+
+.estado-vazio-caca-erros{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:12px;
+    background:rgba(255,255,255,0.85);
+    border-radius:18px;
+    padding:22px;
+}
+
+.cabecalho-caca-erros span{
+    background:#2e7d32;
+}
+
+.progresso-caca-erros{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:14px 0;
+}
+
+.progresso-caca-erros span{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    background:#eeeeee;
+    color:#555;
+    border:2px solid #cfcfcf;
+}
+
+.progresso-caca-erros span.atual{
+    background:#fff8e1;
+    color:#0d47a1;
+    border-color:#f9a825;
+}
+
+.progresso-caca-erros span.feito{
+    background:#e8f5e9;
+    color:#1b5e20;
+    border-color:#2e7d32;
+}
+
+.questao-caca-erros{
+    border-left:6px solid #2e7d32;
+}
+
+.resultado-caca-circulo{
+    border-color:#2e7d32;
+}
+
+.resultado-caca-circulo strong{
+    color:#1b5e20;
+}
+
+
+/* ==========================
+   MEMÓRIA DO SABER
+========================== */
+
+.jogo-card-memoria{
+    border-left-color:#1565c0;
+}
+
+.painel-memoria{
+    border-left-color:#1565c0;
+}
+
+.aviso-jogo-memoria{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    background:#e3f2fd;
+    border-left:6px solid #1565c0;
+    border-radius:14px;
+    padding:14px;
+    margin:14px 0;
+    line-height:1.5;
+}
+
+.cabecalho-memoria span{
+    background:#1565c0;
+}
+
+.grade-memoria-saber{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    gap:14px;
+    margin-top:16px;
+}
+
+.carta-memoria{
+    position:relative;
+    min-height:170px;
+    border:none;
+    border-radius:18px;
+    padding:0;
+    background:transparent;
+    perspective:900px;
+    cursor:pointer;
+    box-shadow:none;
+}
+
+.carta-memoria:hover{
+    transform:none;
+}
+
+.face-carta{
+    position:absolute;
+    inset:0;
+    border-radius:18px;
+    padding:12px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    backface-visibility:hidden;
+    transition:transform 0.45s ease;
+    box-shadow:0 5px 16px rgba(0,0,0,0.16);
+    border:2px solid rgba(21,101,192,0.22);
+    overflow:hidden;
+}
+
+.verso-carta{
+    background:linear-gradient(135deg, #0d47a1, #1976d2);
+    color:white;
+}
+
+.verso-carta span{
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.verso-carta strong{
+    font-size:20px;
+}
+
+.frente-carta{
+    background:#ffffff;
+    color:#222;
+    transform:rotateY(180deg);
+}
+
+.frente-carta small{
+    background:#e3f2fd;
+    color:#0d47a1;
+    border-radius:999px;
+    padding:5px 9px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.frente-carta p{
+    font-size:13px;
+    line-height:1.35;
+    margin:0;
+    text-align:center;
+    color:#222;
+    overflow:auto;
+    max-height:115px;
+}
+
+.carta-memoria.virada .verso-carta,
+.carta-memoria.encontrada .verso-carta{
+    transform:rotateY(180deg);
+}
+
+.carta-memoria.virada .frente-carta,
+.carta-memoria.encontrada .frente-carta{
+    transform:rotateY(360deg);
+}
+
+.carta-memoria.encontrada .frente-carta{
+    background:#e8f5e9;
+    border-color:#2e7d32;
+}
+
+.carta-memoria:disabled{
+    cursor:default;
+    opacity:1;
+}
+
+.feedback-memoria{
+    margin-top:15px;
+    border-radius:12px;
+    padding:12px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.area-botoes-memoria{
+    margin-top:18px;
+}
+
+.resultado-memoria-circulo{
+    border-color:#1565c0;
+}
+
+.resultado-memoria-circulo strong{
+    color:#0d47a1;
+}
+
+@media(max-width:650px){
+
+    .grade-memoria-saber{
+        grid-template-columns:repeat(2, 1fr);
+        gap:10px;
+    }
+
+    .carta-memoria{
+        min-height:150px;
+    }
+
+    .frente-carta p{
+        font-size:12px;
+        max-height:100px;
+    }
+
+}
+
+
+/* Correção: Memória do Saber com pré-visualização inicial */
+.aviso-preview-memoria{
+    background:#fff8e1;
+    border-left:7px solid #f9a825;
+    border-radius:16px;
+    padding:16px;
+    margin:14px 0;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    text-align:center;
+    color:#0d47a1;
+    box-shadow:0 4px 12px rgba(0,0,0,0.10);
+}
+
+.aviso-preview-memoria strong{
+    font-size:22px;
+}
+
+.aviso-preview-memoria b{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#0d47a1;
+    color:white;
+    font-size:22px;
+    margin:0 4px;
+}
+
+.jogo-em-andamento-memoria{
+    background:#e8f5e9;
+    border-left-color:#2e7d32;
+}
+
+.grade-memoria-saber{
+    align-items:stretch !important;
+}
+
+.carta-memoria{
+    display:block !important;
+    position:relative !important;
+    height:190px !important;
+    min-height:190px !important;
+    color:inherit !important;
+    overflow:visible !important;
+}
+
+.carta-memoria.preview{
+    cursor:default !important;
+}
+
+.carta-memoria.preview .frente-carta{
+    box-shadow:0 0 0 4px rgba(249,168,37,0.25), 0 5px 16px rgba(0,0,0,0.16);
+}
+
+.face-carta{
+    width:100% !important;
+    height:100% !important;
+    min-height:190px !important;
+}
+
+.frente-carta{
+    display:flex !important;
+    background:#ffffff !important;
+    color:#222 !important;
+}
+
+.verso-carta{
+    display:flex !important;
+}
+
+.frente-carta p{
+    display:block !important;
+    color:#222 !important;
+    visibility:visible !important;
+}
+
+
+/* Correção final: Memória do Saber sem efeito 3D, texto sempre visível */
+.memoria-simples{
+    display:grid !important;
+    grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)) !important;
+    gap:14px !important;
+    margin-top:16px !important;
+}
+
+.carta-memoria-simples{
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:center !important;
+    align-items:center !important;
+    width:100% !important;
+    min-height:190px !important;
+    height:auto !important;
+    border-radius:18px !important;
+    padding:14px !important;
+    border:3px solid #1565c0 !important;
+    box-shadow:0 5px 16px rgba(0,0,0,0.16) !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    overflow:visible !important;
+    position:relative !important;
+    z-index:1 !important;
+    text-align:center !important;
+    white-space:normal !important;
+}
+
+.carta-memoria-simples.aberta{
+    background:#ffffff !important;
+    color:#222 !important;
+}
+
+.carta-memoria-simples.fechada{
+    background:linear-gradient(135deg, #0d47a1, #1976d2) !important;
+    color:#ffffff !important;
+}
+
+.carta-memoria-simples.tipo-pergunta.aberta{
+    border-color:#f9a825 !important;
+    background:#fff8e1 !important;
+}
+
+.carta-memoria-simples.tipo-resposta.aberta{
+    border-color:#2e7d32 !important;
+    background:#e8f5e9 !important;
+}
+
+.carta-memoria-simples.encontrada{
+    border-color:#2e7d32 !important;
+    background:#c8e6c9 !important;
+}
+
+.tag-carta-memoria{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    background:#0d47a1 !important;
+    color:#ffffff !important;
+    border-radius:999px !important;
+    padding:7px 11px !important;
+    font-weight:bold !important;
+    margin-bottom:10px !important;
+    font-size:14px !important;
+}
+
+.tipo-pergunta .tag-carta-memoria{
+    background:#f9a825 !important;
+    color:#1b1b1b !important;
+}
+
+.tipo-resposta .tag-carta-memoria{
+    background:#2e7d32 !important;
+    color:#ffffff !important;
+}
+
+.texto-carta-memoria{
+    display:block !important;
+    color:#222 !important;
+    font-size:14px !important;
+    line-height:1.45 !important;
+    font-weight:600 !important;
+    margin:0 !important;
+    max-height:none !important;
+    overflow:visible !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    text-align:center !important;
+}
+
+.carta-fechada-conteudo{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:8px !important;
+    color:#ffffff !important;
+}
+
+.carta-fechada-conteudo span{
+    display:block !important;
+    font-size:42px !important;
+}
+
+.carta-fechada-conteudo strong{
+    display:block !important;
+    color:#ffffff !important;
+    font-size:22px !important;
+}
+
+.carta-memoria-simples:disabled{
+    cursor:default !important;
+    opacity:1 !important;
+}
+
+@media(max-width:650px){
+
+    .memoria-simples{
+        grid-template-columns:1fr !important;
+    }
+
+    .carta-memoria-simples{
+        min-height:150px !important;
+    }
+
+    .texto-carta-memoria{
+        font-size:13px !important;
+    }
+
+}
+
+
+/* Ajuste: Memória do Saber com perguntas em cima e respostas embaixo */
+.bloco-linha-memoria{
+    margin-top:18px;
+}
+
+.bloco-linha-memoria h4{
+    margin:0 0 10px 0;
+    color:#0d47a1;
+    background:#f5f7fb;
+    border-left:6px solid #1565c0;
+    border-radius:10px;
+    padding:10px 12px;
+    font-size:18px;
+}
+
+.linha-perguntas-memoria,
+.linha-respostas-memoria{
+    grid-template-columns:repeat(3, minmax(180px, 1fr)) !important;
+}
+
+@media(max-width:900px){
+    .linha-perguntas-memoria,
+    .linha-respostas-memoria{
+        grid-template-columns:repeat(2, minmax(160px, 1fr)) !important;
+    }
+}
+
+@media(max-width:650px){
+    .linha-perguntas-memoria,
+    .linha-respostas-memoria{
+        grid-template-columns:1fr !important;
+    }
+}
+
+
+/* Ajuste: cards menores no Memória do Saber */
+.memoria-simples{
+    gap:10px !important;
+}
+
+.linha-perguntas-memoria,
+.linha-respostas-memoria{
+    grid-template-columns:repeat(5, minmax(120px, 1fr)) !important;
+    gap:10px !important;
+}
+
+.carta-memoria-simples{
+    min-height:125px !important;
+    padding:9px !important;
+    border-radius:14px !important;
+}
+
+.tag-carta-memoria{
+    padding:4px 8px !important;
+    font-size:12px !important;
+    margin-bottom:6px !important;
+}
+
+.texto-carta-memoria{
+    font-size:12px !important;
+    line-height:1.3 !important;
+    font-weight:600 !important;
+}
+
+.carta-fechada-conteudo span{
+    font-size:30px !important;
+}
+
+.carta-fechada-conteudo strong{
+    font-size:16px !important;
+}
+
+.bloco-linha-memoria h4{
+    padding:8px 10px !important;
+    font-size:16px !important;
+}
+
+@media(max-width:1050px){
+    .linha-perguntas-memoria,
+    .linha-respostas-memoria{
+        grid-template-columns:repeat(3, minmax(120px, 1fr)) !important;
+    }
+}
+
+@media(max-width:700px){
+    .linha-perguntas-memoria,
+    .linha-respostas-memoria{
+        grid-template-columns:repeat(2, minmax(120px, 1fr)) !important;
+    }
+}
+
+@media(max-width:450px){
+    .linha-perguntas-memoria,
+    .linha-respostas-memoria{
+        grid-template-columns:1fr !important;
+    }
+}
+
+
+/* Critério de desempenho do Memória do Saber */
+.tabela-desempenho-memoria{
+    background:#f5f7fb;
+    border-left:6px solid #1565c0;
+    border-radius:14px;
+    padding:14px;
+    margin:16px auto;
+    max-width:520px;
+    text-align:left;
+}
+
+.tabela-desempenho-memoria h4{
+    color:#0d47a1;
+    margin-bottom:8px;
+}
+
+.tabela-desempenho-memoria p{
+    margin:5px 0;
+    color:#333;
+    font-weight:600;
+}
+
+.resultado-memoria-circulo strong{
+    font-size:44px !important;
+}
+
+
+/* ==========================
+   BATALHA DO SABER
+========================== */
+
+.jogo-card-batalha{
+    border-left-color:#c62828;
+}
+
+.painel-batalha{
+    border-left-color:#c62828;
+}
+
+.aviso-jogo-batalha{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    background:#ffebee;
+    border-left:6px solid #c62828;
+    border-radius:14px;
+    padding:14px;
+    margin:14px 0;
+    line-height:1.5;
+}
+
+.cabecalho-batalha span{
+    background:#c62828;
+}
+
+.arena-batalha-farol{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    gap:14px;
+    align-items:center;
+    margin:16px 0;
+}
+
+.combatente-batalha{
+    background:rgba(255,255,255,0.92);
+    border-radius:18px;
+    padding:16px;
+    text-align:center;
+    box-shadow:0 5px 16px rgba(0,0,0,0.12);
+    border:2px solid rgba(13,71,161,0.12);
+}
+
+.aluno-batalha{
+    border-color:#1565c0;
+}
+
+.farol-batalha{
+    border-color:#c62828;
+}
+
+.avatar-combatente{
+    font-size:44px;
+    margin-bottom:6px;
+}
+
+.combatente-batalha h4{
+    color:#0d47a1;
+    margin:5px 0;
+}
+
+.vidas-batalha{
+    font-size:25px;
+    letter-spacing:2px;
+    margin:8px 0;
+}
+
+.versus-batalha{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#c62828;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    box-shadow:0 5px 14px rgba(0,0,0,0.18);
+}
+
+.questao-batalha{
+    border-left:6px solid #c62828;
+}
+
+.feedback-batalha{
+    margin-top:12px;
+}
+
+.resultado-batalha-circulo{
+    border-color:#c62828;
+}
+
+.resultado-batalha-circulo strong{
+    font-size:46px !important;
+}
+
+.arena-final-batalha{
+    max-width:720px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+@media(max-width:700px){
+
+    .arena-batalha-farol{
+        grid-template-columns:1fr;
+    }
+
+    .versus-batalha{
+        margin:auto;
+    }
+
+}
+
+
+/* Modo Você x Farol no Memória do Saber */
+.modos-memoria-saber{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+    gap:16px;
+    margin-top:16px;
+}
+
+.modo-memoria-card{
+    background:rgba(255,255,255,0.92);
+    border-radius:18px;
+    padding:18px;
+    text-align:center;
+    box-shadow:0 5px 16px rgba(0,0,0,0.12);
+    border-left:7px solid #1565c0;
+}
+
+.modo-memoria-card.modo-farol{
+    border-left-color:#c62828;
+}
+
+.modo-memoria-card h3{
+    color:#0d47a1;
+    margin:8px 0;
+}
+
+.placar-memoria-farol{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin:14px 0;
+}
+
+.placar-jogador-memoria{
+    background:#ffffff;
+    border-radius:16px;
+    padding:14px;
+    text-align:center;
+    border:2px solid rgba(13,71,161,0.14);
+    box-shadow:0 4px 12px rgba(0,0,0,0.10);
+}
+
+.placar-jogador-memoria strong{
+    display:block;
+    color:#0d47a1;
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+.placar-jogador-memoria span{
+    font-weight:bold;
+    color:#333;
+}
+
+.placar-jogador-memoria.vez-ativa{
+    border-color:#f9a825;
+    background:#fff8e1;
+    box-shadow:0 0 0 4px rgba(249,168,37,0.18);
+}
+
+.carta-memoria-simples.dono-aluno{
+    border-color:#1565c0 !important;
+    background:#e3f2fd !important;
+}
+
+.carta-memoria-simples.dono-farol{
+    border-color:#c62828 !important;
+    background:#ffebee !important;
+}
+
+.dono-par-memoria{
+    display:block;
+    margin-top:8px;
+    font-weight:bold;
+    color:#0d47a1;
+}
+
+.placar-final-memoria{
+    max-width:520px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+@media(max-width:650px){
+    .placar-memoria-farol{
+        grid-template-columns:1fr;
+    }
+}
+
+
+/* ==========================
+   ROTA ATÉ O FAROL
+========================== */
+
+.jogo-card-rota{
+    border-left-color:#0288d1;
+}
+
+.painel-rota{
+    border-left-color:#0288d1;
+}
+
+.aviso-jogo-rota{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    background:#e1f5fe;
+    border-left:6px solid #0288d1;
+    border-radius:14px;
+    padding:14px;
+    margin:14px 0;
+    line-height:1.5;
+}
+
+.botoes-dificuldade-rota{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
+    gap:10px;
+    margin:12px 0 16px 0;
+}
+
+.dificuldade-atual-rota{
+    background:#fff8e1;
+    border-left:6px solid #f9a825;
+    border-radius:14px;
+    padding:12px;
+    margin:12px 0;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.dificuldade-atual-rota strong{
+    color:#0d47a1;
+}
+
+.cabecalho-rota span{
+    background:#0288d1;
+}
+
+.mapa-rota-farol{
+    background:linear-gradient(135deg, #e1f5fe, #ffffff);
+    border-radius:18px;
+    padding:16px;
+    margin:16px 0;
+    border:2px solid rgba(2,136,209,0.18);
+    box-shadow:0 5px 16px rgba(0,0,0,0.10);
+}
+
+.linha-rota-jogador{
+    display:grid;
+    grid-template-columns:90px 1fr 80px;
+    gap:10px;
+    align-items:center;
+    margin:10px 0;
+}
+
+.linha-rota-jogador strong{
+    color:#0d47a1;
+}
+
+.trilha-rota{
+    background:#ffffff;
+    border-radius:14px;
+    padding:12px;
+    font-size:28px;
+    letter-spacing:4px;
+    text-align:center;
+    overflow-x:auto;
+    white-space:nowrap;
+    border:1px solid rgba(13,71,161,0.12);
+}
+
+.linha-rota-jogador small{
+    text-align:right;
+    font-weight:bold;
+    color:#333;
+}
+
+.questao-rota{
+    border-left:6px solid #0288d1;
+}
+
+.feedback-rota{
+    margin-top:12px;
+}
+
+.resultado-rota-circulo{
+    border-color:#0288d1;
+}
+
+.resultado-rota-circulo strong{
+    font-size:46px !important;
+}
+
+.mapa-rota-final{
+    max-width:850px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+@media(max-width:700px){
+
+    .linha-rota-jogador{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .linha-rota-jogador small{
+        text-align:center;
+    }
+
+    .trilha-rota{
+        font-size:24px;
+        letter-spacing:2px;
+    }
+
+}
+
+
+/* Correção: Farol escolhe resposta na Rota até o Farol */
+.resumo-jogada-rota{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.jogada-farol-rota{
+    background:#ffffff;
+    border-radius:14px;
+    padding:14px;
+    border-left:6px solid #0288d1;
+    box-shadow:0 4px 12px rgba(0,0,0,0.10);
+    color:#222;
+}
+
+.jogada-farol-rota strong{
+    color:#0d47a1;
+}
+
+.jogada-farol-rota.farol-acertou{
+    background:#e8f5e9;
+    border-left-color:#2e7d32;
+}
+
+.jogada-farol-rota.farol-errou{
+    background:#ffebee;
+    border-left-color:#c62828;
+}
+
+
+/* Correção: Farol acerta 70% na Rota até o Farol */
+.resumo-jogada-rota{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.jogada-farol-rota{
+    background:#ffffff;
+    border-radius:14px;
+    padding:14px;
+    border-left:6px solid #0288d1;
+    box-shadow:0 4px 12px rgba(0,0,0,0.10);
+    color:#222;
+}
+
+.jogada-farol-rota strong{
+    color:#0d47a1;
+}
+
+.jogada-farol-rota.farol-acertou{
+    background:#e8f5e9;
+    border-left-color:#2e7d32;
+}
+
+.jogada-farol-rota.farol-errou{
+    background:#ffebee;
+    border-left-color:#c62828;
+}
+
+
+/* ==========================
+   SENHA DO FAROL
+========================== */
+
+.jogo-card-senha{
+    border-left-color:#6a1b9a;
+}
+
+.painel-senha{
+    border-left-color:#6a1b9a;
+}
+
+.aviso-jogo-senha{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    background:#f3e5f5;
+    border-left:6px solid #6a1b9a;
+    border-radius:14px;
+    padding:14px;
+    margin:14px 0;
+    line-height:1.5;
+}
+
+.cabecalho-senha span{
+    background:#6a1b9a;
+}
+
+.placar-senha-farol{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin:16px 0;
+}
+
+.senha-jogador-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:16px;
+    text-align:center;
+    box-shadow:0 5px 16px rgba(0,0,0,0.12);
+    border:2px solid rgba(106,27,154,0.16);
+}
+
+.senha-jogador-card strong{
+    display:block;
+    color:#0d47a1;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.senha-visual{
+    font-family:monospace;
+    font-size:32px;
+    font-weight:bold;
+    letter-spacing:8px;
+    background:#f5f7fb;
+    border-radius:14px;
+    padding:12px;
+    margin:8px 0;
+    color:#222;
+    overflow-x:auto;
+}
+
+.senha-aluno-card{
+    border-color:#1565c0;
+}
+
+.senha-farol-card{
+    border-color:#6a1b9a;
+}
+
+.questao-senha{
+    border-left:6px solid #6a1b9a;
+}
+
+.feedback-senha{
+    margin-top:12px;
+}
+
+.resumo-jogada-senha{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.jogada-farol-senha{
+    background:#ffffff;
+    border-radius:14px;
+    padding:14px;
+    border-left:6px solid #6a1b9a;
+    box-shadow:0 4px 12px rgba(0,0,0,0.10);
+    color:#222;
+}
+
+.jogada-farol-senha strong{
+    color:#0d47a1;
+}
+
+.jogada-farol-senha.farol-acertou{
+    background:#e8f5e9;
+    border-left-color:#2e7d32;
+}
+
+.jogada-farol-senha.farol-errou{
+    background:#ffebee;
+    border-left-color:#c62828;
+}
+
+.senha-preview-feedback{
+    background:#f5f7fb;
+    border-radius:14px;
+    padding:12px;
+    margin-top:12px;
+    border-left:6px solid #6a1b9a;
+}
+
+.resultado-senha-circulo{
+    border-color:#6a1b9a;
+}
+
+.resultado-senha-circulo strong{
+    font-size:46px !important;
+}
+
+.placar-senha-final{
+    max-width:850px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.senha-palavra-final{
+    background:#fff8e1;
+    border-left:6px solid #f9a825;
+    border-radius:14px;
+    padding:14px;
+    max-width:520px;
+    margin:14px auto;
+    text-align:center;
+    font-size:20px;
+}
+
+@media(max-width:700px){
+
+    .placar-senha-farol{
+        grid-template-columns:1fr;
+    }
+
+    .senha-visual{
+        font-size:26px;
+        letter-spacing:5px;
+    }
+
+}
+
+@media(max-width:430px){
+
+    .senha-visual{
+        font-size:22px;
+        letter-spacing:3px;
+    }
+
+}
+
+
+/* ==========================
+   BAÚ DO FAROL
+========================== */
+
+.jogo-card-bau{
+    border-left-color:#8d6e63;
+}
+
+.painel-bau{
+    border-left-color:#8d6e63;
+}
+
+.aviso-jogo-bau{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    background:#efebe9;
+    border-left:6px solid #8d6e63;
+    border-radius:14px;
+    padding:14px;
+    margin:14px 0;
+    line-height:1.5;
+}
+
+.cabecalho-bau span{
+    background:#8d6e63;
+}
+
+.bau-atual-area{
+    display:flex;
+    justify-content:center;
+    margin:16px 0;
+}
+
+.bau-grande{
+    width:min(100%, 420px);
+    background:linear-gradient(135deg, #fff8e1, #ffffff);
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    border:2px solid rgba(141,110,99,0.25);
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+
+.bau-grande span{
+    display:block;
+    font-size:64px;
+    margin-bottom:8px;
+}
+
+.bau-grande strong{
+    display:block;
+    color:#5d4037;
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.placar-bau-farol{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin:16px 0;
+}
+
+.bau-jogador-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:16px;
+    text-align:center;
+    box-shadow:0 5px 16px rgba(0,0,0,0.12);
+    border:2px solid rgba(141,110,99,0.16);
+}
+
+.bau-jogador-card strong{
+    display:block;
+    color:#0d47a1;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.chaves-bau{
+    font-size:34px;
+    letter-spacing:6px;
+    background:#f5f7fb;
+    border-radius:14px;
+    padding:12px;
+    margin:8px 0;
+    color:#222;
+    overflow-x:auto;
+}
+
+.bau-aluno-card{
+    border-color:#1565c0;
+}
+
+.bau-farol-card{
+    border-color:#8d6e63;
+}
+
+.questao-bau{
+    border-left:6px solid #8d6e63;
+}
+
+.feedback-bau{
+    margin-top:12px;
+}
+
+.resumo-jogada-bau{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.bau-aberto-feedback{
+    border-radius:14px;
+    padding:14px;
+    font-weight:bold;
+    box-shadow:0 4px 12px rgba(0,0,0,0.10);
+}
+
+.aluno-abriu-bau{
+    background:#e8f5e9;
+    border-left:6px solid #2e7d32;
+    color:#1b5e20;
+}
+
+.farol-abriu-bau{
+    background:#ffebee;
+    border-left:6px solid #c62828;
+    color:#b71c1c;
+}
+
+.resultado-bau-circulo{
+    border-color:#8d6e63;
+}
+
+.resultado-bau-circulo strong{
+    font-size:46px !important;
+}
+
+.placar-bau-final{
+    max-width:720px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+@media(max-width:700px){
+
+    .placar-bau-farol{
+        grid-template-columns:1fr;
+    }
+
+    .chaves-bau{
+        font-size:28px;
+        letter-spacing:4px;
+    }
+
+}
+
+
+/* Avatar do aluno dentro dos jogos */
+.avatar-jogador-game-img{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    object-fit:cover;
+    vertical-align:middle;
+    margin-right:6px;
+    border:2px solid #1565c0;
+    background:#ffffff;
+}
+
+.avatar-jogador-game-emoji{
+    display:inline-flex;
+    width:42px;
+    height:42px;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#e3f2fd;
+    border:2px solid #1565c0;
+    font-size:25px;
+    vertical-align:middle;
+    margin-right:6px;
+}
+
+.avatar-combatente-aluno .avatar-jogador-game-img,
+.avatar-combatente-aluno .avatar-jogador-game-emoji{
+    width:58px;
+    height:58px;
+    font-size:34px;
+    margin-right:0;
+}
+
+.placar-jogador-memoria strong,
+.linha-rota-jogador strong,
+.senha-jogador-card strong,
+.bau-jogador-card strong{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+}
+
+.linha-rota-jogador strong{
+    justify-content:flex-start;
+}
+
+.senha-preview-feedback .avatar-jogador-game-img,
+.senha-preview-feedback .avatar-jogador-game-emoji{
+    width:30px;
+    height:30px;
+    font-size:18px;
+}
+
+@media(max-width:700px){
+    .linha-rota-jogador strong{
+        justify-content:center;
+    }
+}
+
+

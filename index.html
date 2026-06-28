@@ -150,6 +150,10 @@
         📝 Simulados
     </button>
 
+    <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();">
+        🎮 Jogos
+    </button>
+
     <button onclick="mostrarTela('duelos'); prepararSelectDuelo(); carregarMeusDuelos();">
         ⚔️ Duelos
     </button>
@@ -1549,6 +1553,130 @@ Li e revisei o mapa mental.
 </section>
 
 <!-- DUELOS -->
+
+
+<!-- JOGOS DO FAROL -->
+
+<section id="jogosFarol" class="tela">
+
+    <div class="card jogos-card">
+
+        <button
+            class="btn-voltar"
+            onclick="mostrarTela('inicio')">
+
+            ⬅ Voltar para Início
+
+        </button>
+
+        <br><br>
+
+        <h2>🎮 Jogos do Farol</h2>
+
+        <p>
+            Aprenda de forma divertida usando as questões da plataforma.
+        </p>
+
+        <br>
+
+        <div class="grid-jogos-farol">
+
+            <div class="jogo-card-principal">
+                <div class="icone-jogo">🧱</div>
+                <h3>Construa o Farol</h3>
+                <p>
+                    Responda 5 questões. Cada acerto constrói uma parte do farol.
+                </p>
+                <button onclick="abrirJogoConstruaFarol()">
+                    Jogar agora
+                </button>
+            </div>
+
+            <div class="jogo-card-principal jogo-card-relampago">
+                <div class="icone-jogo">⚡</div>
+                <h3>Desafio Relâmpago</h3>
+                <p>
+                    Responda 10 questões contra o tempo e ganhe Pontos de Luz.
+                </p>
+                <button onclick="abrirJogoDesafioRelampago()">
+                    Jogar agora
+                </button>
+            </div>
+
+            <div class="jogo-card-principal jogo-card-caca-erros">
+                <div class="icone-jogo">🔎</div>
+                <h3>Caça aos Erros</h3>
+                <p>
+                    Revise as questões que você errou e recupere Pontos de Luz.
+                </p>
+                <button onclick="abrirJogoCacaErros()">
+                    Jogar agora
+                </button>
+            </div>
+
+            <div class="jogo-card-principal jogo-card-bau">
+                <div class="icone-jogo">🏴‍☠️</div>
+                <h3>Baú do Farol</h3>
+                <p>
+                    Dispute chaves contra o Farol e abra os baús do saber.
+                </p>
+                <button onclick="abrirJogoBauFarol()">
+                    Jogar agora
+                </button>
+            </div>
+
+            <div class="jogo-card-principal jogo-card-senha">
+                <div class="icone-jogo">🔐</div>
+                <h3>Senha do Farol</h3>
+                <p>
+                    Descubra a senha secreta antes do Farol.
+                </p>
+                <button onclick="abrirJogoSenhaFarol()">
+                    Jogar agora
+                </button>
+            </div>
+
+            <div class="jogo-card-principal jogo-card-rota">
+                <div class="icone-jogo">🚢</div>
+                <h3>Rota até o Farol</h3>
+                <p>
+                    Dispute uma corrida marítima contra o Farol.
+                </p>
+                <button onclick="abrirJogoRotaFarol()">
+                    Jogar agora
+                </button>
+            </div>
+
+            <div class="jogo-card-principal jogo-card-batalha">
+                <div class="icone-jogo">⚔️</div>
+                <h3>Batalha do Saber</h3>
+                <p>
+                    Enfrente o Farol em uma batalha de perguntas.
+                </p>
+                <button onclick="abrirJogoBatalhaFarol()">
+                    Jogar agora
+                </button>
+            </div>
+
+            <div class="jogo-card-principal jogo-card-memoria">
+                <div class="icone-jogo">🧠</div>
+                <h3>Memória do Saber</h3>
+                <p>
+                    Encontre os pares combinando pergunta e resposta correta.
+                </p>
+                <button onclick="abrirJogoMemoriaSaber()">
+                    Jogar agora
+                </button>
+            </div>
+
+        </div>
+
+        <div id="areaJogoConstruaFarol" class="area-jogo-construa-farol"></div>
+
+    </div>
+
+</section>
+
 
 <section id="duelos" class="tela">
 

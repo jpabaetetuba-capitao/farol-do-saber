@@ -26,6 +26,14 @@ if(typeof atualizarAtividade === "function"){
 
     telaDestino.classList.add("ativa");
 
+    if(id !== "jogosFarol" && typeof pararTimerRelampago === "function"){
+        pararTimerRelampago();
+    }
+
+    if(id !== "jogosFarol" && typeof pararPreviewMemoria === "function"){
+        pararPreviewMemoria();
+    }
+
 if(id === "cadastro"){
 
     document.getElementById("login").style.display = "none";
@@ -66,6 +74,10 @@ if(id === "login"){
 
     if(id === "perfilAluno" && typeof atualizarPerfilAluno === "function"){
         atualizarPerfilAluno();
+    }
+
+    if(id === "jogosFarol" && typeof abrirTelaJogosFarol === "function"){
+        abrirTelaJogosFarol();
     }
 
 }
@@ -9308,6 +9320,4875 @@ function usarTituloLoja(id){
 
 }
 
+
+
+
+
+// ==========================
+// JOGOS DO FAROL
+// ==========================
+
+let jogoFarolQuestoes = [];
+let jogoFarolIndice = 0;
+let jogoFarolAcertos = 0;
+let jogoFarolErros = 0;
+let jogoFarolDisciplina = "todas";
+let jogoFarolRespondido = false;
+let jogoFarolIdPartida = "";
+
+const partesFarolJogo = [
+    "Base",
+    "Torre",
+    "Janela",
+    "Luz",
+    "Topo"
+];
+
+const disciplinasJogoFarol = {
+    todas: {
+        nome: "🎯 Todas as disciplinas",
+        assuntos: []
+    },
+    portugues: {
+        nome: "📖 Língua Portuguesa",
+        assuntos: [
+            "interpretacao",
+            "generos",
+            "funcoes",
+            "coesao",
+            "semantica",
+            "figuras",
+            "variacao",
+            "classesPalavras",
+            "formacaoPalavras",
+            "sintaxe",
+            "periodoComposto",
+            "concordancia",
+            "regencia",
+            "crase",
+            "vozesVerbais",
+            "pontuacao",
+            "ortografia",
+            "acentuacao",
+            "redacaoOficial"
+        ]
+    },
+    informatica: {
+        nome: "💻 Informática",
+        assuntos: [
+            "hardware",
+            "software",
+            "arquivos",
+            "office",
+            "internet",
+            "redes",
+            "seguranca"
+        ]
+    },
+    ciencias: {
+        nome: "🔬 Professor de Ciências",
+        assuntos: [
+            "fundamentosCiencias",
+            "bnccCiencias",
+            "alfabetizacaoCientifica",
+            "citologia",
+            "ecologia",
+            "terraEUniverso",
+            "anatomiaFisiologia",
+            "materiaQuimica",
+            "fundamentosFisica"
+        ]
+    },
+    historia: {
+        nome: "📜 História",
+        assuntos: [
+            "fundamentosEnsinoHistoria",
+            "cienciaHistoricaOficioHistoriador",
+            "povosPreColombianos",
+            "formacaoSocialCulturalBrasileira",
+            "estadosModernosApropriacaoAmerica",
+            "mercantilismoColonizacaoAmerica",
+            "brasilColonialSociedadeEconomiaResistencias",
+            "administracaoAmericaLusitanaColonial",
+            "expansaoFronteirasAmericaPortuguesa"
+        ]
+    },
+    didatica: {
+        nome: "📚 Didática e Legislação",
+        assuntos: [
+            "bncc",
+            "ldb",
+            "eca",
+            "pne",
+            "fundeb",
+            "lbi",
+            "tea",
+            "inclusiva",
+            "etnicoRacial",
+            "educacaoCampo",
+            "quilombola",
+            "indigena",
+            "didatica",
+            "planejamento",
+            "avaliacao",
+            "curriculo"
+        ]
+    },
+    etica: {
+        nome: "⚖️ Ética no Serviço Público",
+        assuntos: [
+            "eticaConceitos",
+            "principiosAdministracao",
+            "deveresServidor",
+            "condutaEtica",
+            "lai",
+            "lgpd"
+        ]
+    },
+    apoioEscolar: {
+        nome: "👨‍🏫 Apoio Escolar",
+        assuntos: [
+            "apoioOrganizacaoEducacao",
+            "apoioLDB",
+            "apoioECA",
+            "apoioLBI",
+            "apoioTEA",
+            "apoioPoliticaEducacaoEspecial",
+            "apoioBNCCDiretrizes",
+            "apoioEducacaoInclusiva",
+            "apoioPapelProfissional",
+            "apoioTrabalhoColaborativo"
+        ]
+    }
+};
+
+function abrirTelaJogosFarol(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(area){
+        area.innerHTML = "";
+    }
+
+}
+
+function abrirJogoConstruaFarol(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol">
+            <h3>🧱 Construa o Farol</h3>
+            <p>
+                Escolha uma disciplina. O jogo sorteia 5 questões e cada acerto constrói uma parte do farol.
+            </p>
+
+            <div class="grid-disciplinas-jogo">
+                ${Object.keys(disciplinasJogoFarol).map(chave => `
+                    <button onclick="iniciarConstruaFarol('${chave}')">
+                        ${disciplinasJogoFarol[chave].nome}
+                    </button>
+                `).join("")}
+            </div>
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function embaralharArrayJogo(lista){
+
+    const copia =
+        [...lista];
+
+    for(
+        let i = copia.length - 1;
+        i > 0;
+        i--
+    ){
+        const j =
+            Math.floor(
+                Math.random() * (i + 1)
+            );
+
+        [copia[i], copia[j]] =
+        [copia[j], copia[i]];
+    }
+
+    return copia;
+
+}
+
+function obterAssuntosJogoFarol(chaveDisciplina){
+
+    if(chaveDisciplina === "todas"){
+
+        const todos =
+            Object.keys(disciplinasJogoFarol)
+            .filter(chave => chave !== "todas")
+            .flatMap(chave => disciplinasJogoFarol[chave].assuntos);
+
+        return [...new Set(todos)];
+
+    }
+
+    return (
+        disciplinasJogoFarol[chaveDisciplina] &&
+        disciplinasJogoFarol[chaveDisciplina].assuntos
+    ) || [];
+
+}
+
+function obterQuestoesJogoFarol(chaveDisciplina){
+
+    const assuntos =
+        obterAssuntosJogoFarol(chaveDisciplina);
+
+    const questoes = [];
+
+    assuntos.forEach(assunto => {
+
+        const lista =
+            bancoQuestoes[assunto];
+
+        if(
+            Array.isArray(lista) &&
+            lista.length > 0
+        ){
+            lista.forEach((questao, indice) => {
+
+                if(
+                    questao &&
+                    questao.pergunta &&
+                    Array.isArray(questao.alternativas) &&
+                    typeof questao.correta !== "undefined"
+                ){
+                    questoes.push({
+                        ...questao,
+                        assuntoJogo: assunto,
+                        indiceOriginalJogo: indice,
+                        disciplinaJogo: chaveDisciplina
+                    });
+                }
+
+            });
+        }
+
+    });
+
+    return embaralharArrayJogo(questoes);
+
+}
+
+function iniciarConstruaFarol(chaveDisciplina){
+
+    const questoesDisponiveis =
+        obterQuestoesJogoFarol(chaveDisciplina);
+
+    if(questoesDisponiveis.length < 5){
+        mostrarToast("Ainda não há questões suficientes para este jogo.");
+        return;
+    }
+
+    jogoFarolQuestoes =
+        questoesDisponiveis.slice(0, 5);
+
+    jogoFarolIndice = 0;
+    jogoFarolAcertos = 0;
+    jogoFarolErros = 0;
+    jogoFarolDisciplina = chaveDisciplina;
+    jogoFarolRespondido = false;
+    jogoFarolIdPartida = "jogo-farol-" + Date.now();
+
+    mostrarQuestaoConstruaFarol();
+
+}
+
+function montarFarolVisualJogo(){
+
+    const partesConstruidas =
+        jogoFarolAcertos;
+
+    return `
+        <div class="farol-visual-jogo">
+            ${partesFarolJogo.map((parte, indice) => `
+                <div class="parte-farol-jogo ${indice < partesConstruidas ? "construida" : ""}">
+                    <span>${indice < partesConstruidas ? "✅" : "⬜"}</span>
+                    <strong>${parte}</strong>
+                </div>
+            `).join("")}
+        </div>
+    `;
+
+}
+
+function mostrarQuestaoConstruaFarol(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    const q =
+        jogoFarolQuestoes[jogoFarolIndice];
+
+    jogoFarolRespondido = false;
+
+    const nomeDisciplina =
+        disciplinasJogoFarol[jogoFarolDisciplina]
+        ? disciplinasJogoFarol[jogoFarolDisciplina].nome
+        : "🎯 Desafio";
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-jogo-ativo">
+
+            <div class="cabecalho-jogo-farol">
+                <div>
+                    <h3>🧱 Construa o Farol</h3>
+                    <p>${nomeDisciplina}</p>
+                </div>
+
+                <span>
+                    Questão ${jogoFarolIndice + 1} de ${jogoFarolQuestoes.length}
+                </span>
+            </div>
+
+            ${montarFarolVisualJogo()}
+
+            <div class="placar-jogo-farol">
+                <span>✅ Acertos: ${jogoFarolAcertos}</span>
+                <span>❌ Erros: ${jogoFarolErros}</span>
+                <span>⭐ ${jogoFarolAcertos * 10} Pontos</span>
+            </div>
+
+            <div class="questao-jogo-farol">
+
+                ${q.texto ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.texto}
+                    </div>
+                ` : ""}
+
+                ${q.imagem ? `
+                    <img src="${q.imagem}" class="imagem-questao">
+                ` : ""}
+
+                ${q.afirmacoes ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.afirmacoes.map(af => `<p>${af}</p>`).join("")}
+                    </div>
+                ` : ""}
+
+                <h3>${q.pergunta}</h3>
+
+                <div class="alternativas-jogo-farol">
+                    ${q.alternativas.map((alt, indice) => `
+                        <button onclick="responderConstruaFarol(${indice})">
+                            ${alt}
+                        </button>
+                    `).join("")}
+                </div>
+
+                <div id="feedbackJogoFarol"></div>
+
+            </div>
+
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function nomeAssuntoJogoFarol(assunto){
+
+    const nomes = {
+        interpretacao: "📖 Interpretação de Textos",
+        generos: "📄 Gêneros Textuais",
+        funcoes: "📡 Funções da Linguagem",
+        coesao: "🔗 Coesão e Coerência",
+        semantica: "🧠 Semântica",
+        figuras: "🎭 Figuras de Linguagem",
+        variacao: "🌎 Variação Linguística",
+        classesPalavras: "📚 Classes de Palavras",
+        formacaoPalavras: "🏗 Formação de Palavras",
+        sintaxe: "📝 Sintaxe",
+        periodoComposto: "🔄 Período Simples e Composto",
+        concordancia: "📌 Concordância",
+        regencia: "🎯 Regência",
+        crase: "✍️ Crase",
+        vozesVerbais: "🗣️ Vozes Verbais",
+        pontuacao: "📍 Pontuação",
+        ortografia: "📖 Ortografia",
+        acentuacao: "🔠 Acentuação",
+        redacaoOficial: "🏛️ Redação Oficial",
+        hardware: "💻 Hardware",
+        software: "⚙️ Software",
+        arquivos: "📁 Arquivos",
+        office: "📊 Office e LibreOffice",
+        internet: "🌐 Internet e Correio Eletrônico",
+        redes: "🌐 Redes de Computadores",
+        seguranca: "🔒 Segurança da Informação",
+        fundamentosCiencias: "🔬 Fundamentos do Ensino de Ciências",
+        bnccCiencias: "📘 BNCC Ciências",
+        alfabetizacaoCientifica: "🔬 Alfabetização Científica",
+        citologia: "🧬 Citologia",
+        ecologia: "🌿 Ecologia",
+        terraEUniverso: "🌎 Terra e Universo",
+        anatomiaFisiologia: "🫀 Anatomia e Fisiologia Humana",
+        materiaQuimica: "⚗️ Matéria e Química",
+        fundamentosFisica: "⚡ Fundamentos da Física",
+        eticaConceitos: "⚖️ Ética no Serviço Público",
+        principiosAdministracao: "🏛️ Princípios da Administração Pública",
+        deveresServidor: "📋 Deveres do Servidor",
+        condutaEtica: "🤝 Conduta Ética",
+        lai: "🔎 LAI",
+        lgpd: "🛡️ LGPD",
+        bncc: "📘 BNCC",
+        ldb: "📘 LDB",
+        eca: "📘 ECA",
+        pne: "📘 PNE",
+        fundeb: "📘 FUNDEB",
+        lbi: "📘 LBI",
+        tea: "📘 TEA",
+        inclusiva: "📘 Educação Inclusiva",
+        etnicoRacial: "📘 Relações Étnico-Raciais",
+        educacaoCampo: "📘 Educação do Campo",
+        quilombola: "🏘 Quilombola",
+        indigena: "🪶 Educação Escolar Indígena",
+        didatica: "📚 Didática",
+        planejamento: "📋 Planejamento",
+        avaliacao: "📊 Avaliação",
+        curriculo: "📘 Currículo",
+        fundamentosEnsinoHistoria: "📚 Fundamentos do Ensino de História",
+        cienciaHistoricaOficioHistoriador: "🔎 Ciência Histórica",
+        povosPreColombianos: "🏺 Povos Pré-Colombianos",
+        formacaoSocialCulturalBrasileira: "🧬 Formação Social e Cultural Brasileira",
+        estadosModernosApropriacaoAmerica: "🏛️ Estados Modernos e América",
+        mercantilismoColonizacaoAmerica: "💰 Mercantilismo e Colonização",
+        brasilColonialSociedadeEconomiaResistencias: "🌾 Brasil Colonial",
+        administracaoAmericaLusitanaColonial: "🏛️ Administração Colonial",
+        expansaoFronteirasAmericaPortuguesa: "🗺️ Expansão das Fronteiras",
+        apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
+        apoioLDB: "📘 LDB",
+        apoioECA: "🧒 ECA",
+        apoioLBI: "♿ LBI",
+        apoioTEA: "🧩 TEA",
+        apoioPoliticaEducacaoEspecial: "🌐 Educação Especial Inclusiva",
+        apoioBNCCDiretrizes: "📚 BNCC e Diretrizes",
+        apoioEducacaoInclusiva: "🤝 Educação Inclusiva",
+        apoioPapelProfissional: "👨‍🏫 Papel do Profissional de Apoio",
+        apoioTrabalhoColaborativo: "🛡️ Trabalho Colaborativo"
+    };
+
+    return nomes[assunto] || assunto;
+
+}
+
+function registrarErroJogoFarol(q){
+
+    const respostaCorreta =
+        q.alternativas[q.correta];
+
+    const nomeDisciplina =
+        nomeAssuntoJogoFarol(q.assuntoJogo);
+
+    const indiceExistente =
+        cadernoErros.findIndex(
+            item =>
+                item.disciplina === nomeDisciplina &&
+                item.pergunta === q.pergunta
+        );
+
+    const dadosErro = {
+        idErro: chaveQuestaoPontuacao("erro-jogo", q.assuntoJogo, q),
+        assunto: q.assuntoJogo,
+        disciplina: nomeDisciplina,
+        pergunta: q.pergunta,
+        texto: q.texto || "",
+        imagem: q.imagem || "",
+        afirmacoes: q.afirmacoes || null,
+        alternativas: q.alternativas,
+        correta: q.correta,
+        respostaCorreta: respostaCorreta,
+        explicacao: q.feedbackErro || q.explicacao || "",
+        feedbackAcerto: q.feedbackAcerto || "",
+        feedbackErro: q.feedbackErro || q.explicacao || "",
+        dicaBanca: q.dicaBanca || "",
+        data: Date.now(),
+        status: "pendente"
+    };
+
+    if(indiceExistente >= 0){
+
+        cadernoErros[indiceExistente] = {
+            ...cadernoErros[indiceExistente],
+            ...dadosErro,
+            erros: (cadernoErros[indiceExistente].erros || 0) + 1
+        };
+
+    }
+    else{
+
+        cadernoErros.unshift({
+            ...dadosErro,
+            erros: 1,
+            acertosRevisao: 0,
+            pontosRevisaoGanhos: false
+        });
+
+    }
+
+}
+
+function responderConstruaFarol(indice){
+
+    if(jogoFarolRespondido){
+        return;
+    }
+
+    const q =
+        jogoFarolQuestoes[jogoFarolIndice];
+
+    const feedback =
+        document.getElementById("feedbackJogoFarol");
+
+    if(!feedback){
+        return;
+    }
+
+    jogoFarolRespondido = true;
+
+    const botoes =
+        document.querySelectorAll(".alternativas-jogo-farol button");
+
+    botoes.forEach((botao, i) => {
+        botao.disabled = true;
+        if(i === q.correta){
+            botao.classList.add("correta");
+        }
+        if(i === indice && i !== q.correta){
+            botao.classList.add("errada");
+        }
+    });
+
+    if(indice === q.correta){
+
+        jogoFarolAcertos++;
+
+        acertos++;
+
+        adicionarPontosLuz(
+            10,
+            "Jogo Construa o Farol",
+            jogoFarolIdPartida + ":" + jogoFarolIndice
+        );
+
+        registrarAtividadeDiaria("acertos", 1);
+
+        feedback.innerHTML = `
+            <div class="feedback-acerto">
+                <h3>✅ Acertou!</h3>
+                <p>Você construiu mais uma parte do farol.</p>
+                <p class="pontos-luz-feedback">⭐ 10 Pontos de Luz</p>
+                <br>
+                <button onclick="proximaQuestaoConstruaFarol()">
+                    Próxima etapa
+                </button>
+            </div>
+        `;
+
+    }
+    else{
+
+        jogoFarolErros++;
+        erros++;
+
+        registrarErroJogoFarol(q);
+
+        feedback.innerHTML = `
+            <div class="feedback-erro">
+                <h3>❌ Errou!</h3>
+                <strong>Resposta correta:</strong><br>
+                ${q.alternativas[q.correta]}
+                <br><br>
+                <strong>Explicação:</strong><br>
+                ${q.feedbackErro || q.explicacao || "Sem explicação cadastrada."}
+                <br><br>
+                <button onclick="proximaQuestaoConstruaFarol()">
+                    Próxima etapa
+                </button>
+            </div>
+        `;
+
+    }
+
+    atualizarEstatisticas();
+    atualizarDashboard();
+    atualizarPainelEstudos();
+    atualizarCadernoErros();
+    salvarDados();
+
+}
+
+function proximaQuestaoConstruaFarol(){
+
+    jogoFarolIndice++;
+
+    if(jogoFarolIndice >= jogoFarolQuestoes.length){
+        finalizarConstruaFarol();
+        return;
+    }
+
+    mostrarQuestaoConstruaFarol();
+
+}
+
+function finalizarConstruaFarol(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    const percentual =
+        Math.round(
+            (jogoFarolAcertos / jogoFarolQuestoes.length) * 100
+        );
+
+    let mensagem = "Continue treinando para iluminar mais o seu farol.";
+
+    if(jogoFarolAcertos === 5){
+        mensagem = "Farol completo! Excelente desempenho.";
+    }
+    else if(jogoFarolAcertos >= 4){
+        mensagem = "Ótimo resultado! Seu farol ficou quase completo.";
+    }
+    else if(jogoFarolAcertos >= 3){
+        mensagem = "Bom avanço! Continue praticando.";
+    }
+
+    registrarAtividadeDiaria("simulados", 1);
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol resultado-jogo-farol">
+
+            <h3>🧱 Resultado — Construa o Farol</h3>
+
+            ${montarFarolVisualJogo()}
+
+            <div class="resultado-farol-percentual">
+                <strong>${percentual}%</strong>
+                <span>Farol construído</span>
+            </div>
+
+            <div class="perfil-grid-resumo resultado-grid-jogo">
+                <div class="perfil-resumo-card">
+                    <span>✅</span>
+                    <strong>${jogoFarolAcertos}</strong>
+                    <small>Acertos</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>❌</span>
+                    <strong>${jogoFarolErros}</strong>
+                    <small>Erros</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>⭐</span>
+                    <strong>${jogoFarolAcertos * 10}</strong>
+                    <small>Pontos ganhos</small>
+                </div>
+            </div>
+
+            <p class="mensagem-final-jogo">
+                ${mensagem}
+            </p>
+
+            <div class="botoes-final-jogo">
+                <button onclick="abrirJogoConstruaFarol()">
+                    🔁 Jogar novamente
+                </button>
+
+                <button onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">
+                    👤 Ver Perfil
+                </button>
+
+                <button onclick="mostrarTela('erros'); atualizarCadernoErros();">
+                    ❌ Revisar erros
+                </button>
+            </div>
+
+        </div>
+    `;
+
+    atualizarDashboard();
+    atualizarPerfilAluno();
+    salvarDados();
+
+}
+
+
+
+// ==========================
+// JOGO DESAFIO RELÂMPAGO
+// ==========================
+
+let relampagoQuestoes = [];
+let relampagoIndice = 0;
+let relampagoAcertos = 0;
+let relampagoErros = 0;
+let relampagoDisciplina = "todas";
+let relampagoRespondido = false;
+let relampagoIdPartida = "";
+let relampagoTempoRestante = 100;
+let relampagoTimer = null;
+let relampagoInicio = 0;
+let relampagoFinalizado = false;
+
+function abrirJogoDesafioRelampago(){
+
+    pararTimerRelampago();
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-relampago">
+            <h3>⚡ Desafio Relâmpago</h3>
+            <p>
+                Escolha uma disciplina. O jogo sorteia 10 questões e você terá 100 segundos para responder.
+            </p>
+
+            <div class="aviso-jogo-relampago">
+                <strong>Regras:</strong>
+                <span>✅ Cada acerto vale 10 Pontos de Luz</span>
+                <span>⏱ O jogo termina ao acabar o tempo</span>
+                <span>❌ Questões erradas entram no Caderno de Erros</span>
+            </div>
+
+            <div class="grid-disciplinas-jogo">
+                ${Object.keys(disciplinasJogoFarol).map(chave => `
+                    <button onclick="iniciarDesafioRelampago('${chave}')">
+                        ${disciplinasJogoFarol[chave].nome}
+                    </button>
+                `).join("")}
+            </div>
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function iniciarDesafioRelampago(chaveDisciplina){
+
+    const questoesDisponiveis =
+        obterQuestoesJogoFarol(chaveDisciplina);
+
+    if(questoesDisponiveis.length < 10){
+        mostrarToast("Ainda não há questões suficientes para o Desafio Relâmpago.");
+        return;
+    }
+
+    relampagoQuestoes =
+        questoesDisponiveis.slice(0, 10);
+
+    relampagoIndice = 0;
+    relampagoAcertos = 0;
+    relampagoErros = 0;
+    relampagoDisciplina = chaveDisciplina;
+    relampagoRespondido = false;
+    relampagoIdPartida = "desafio-relampago-" + Date.now();
+    relampagoTempoRestante = 100;
+    relampagoInicio = Date.now();
+    relampagoFinalizado = false;
+
+    iniciarTimerRelampago();
+    mostrarQuestaoDesafioRelampago();
+
+}
+
+function iniciarTimerRelampago(){
+
+    pararTimerRelampago();
+
+    relampagoTimer =
+        setInterval(() => {
+
+            relampagoTempoRestante--;
+
+            atualizarTempoRelampagoTela();
+
+            if(relampagoTempoRestante <= 0){
+                finalizarDesafioRelampago(true);
+            }
+
+        }, 1000);
+
+}
+
+function pararTimerRelampago(){
+
+    if(relampagoTimer){
+        clearInterval(relampagoTimer);
+        relampagoTimer = null;
+    }
+
+}
+
+function atualizarTempoRelampagoTela(){
+
+    const areaTempo =
+        document.getElementById("tempoRelampago");
+
+    if(areaTempo){
+        areaTempo.textContent =
+            relampagoTempoRestante + "s";
+
+        if(relampagoTempoRestante <= 20){
+            areaTempo.classList.add("tempo-alerta");
+        }
+    }
+
+    const barra =
+        document.getElementById("barraTempoRelampago");
+
+    if(barra){
+        barra.value =
+            relampagoTempoRestante;
+    }
+
+}
+
+function mostrarQuestaoDesafioRelampago(){
+
+    if(relampagoFinalizado){
+        return;
+    }
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    const q =
+        relampagoQuestoes[relampagoIndice];
+
+    relampagoRespondido = false;
+
+    const nomeDisciplina =
+        disciplinasJogoFarol[relampagoDisciplina]
+        ? disciplinasJogoFarol[relampagoDisciplina].nome
+        : "🎯 Desafio";
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-relampago painel-relampago-ativo">
+
+            <div class="cabecalho-jogo-farol cabecalho-relampago">
+                <div>
+                    <h3>⚡ Desafio Relâmpago</h3>
+                    <p>${nomeDisciplina}</p>
+                </div>
+
+                <div class="tempo-relampago-area">
+                    <span id="tempoRelampago">${relampagoTempoRestante}s</span>
+                    <small>Tempo restante</small>
+                </div>
+            </div>
+
+            <progress
+                id="barraTempoRelampago"
+                value="${relampagoTempoRestante}"
+                max="100"
+                class="barra-tempo-relampago">
+            </progress>
+
+            <div class="placar-jogo-farol">
+                <span>Questão ${relampagoIndice + 1} de ${relampagoQuestoes.length}</span>
+                <span>✅ Acertos: ${relampagoAcertos}</span>
+                <span>❌ Erros: ${relampagoErros}</span>
+                <span>⭐ ${relampagoAcertos * 10} Pontos</span>
+            </div>
+
+            <div class="questao-jogo-farol questao-relampago">
+
+                ${q.texto ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.texto}
+                    </div>
+                ` : ""}
+
+                ${q.imagem ? `
+                    <img src="${q.imagem}" class="imagem-questao">
+                ` : ""}
+
+                ${q.afirmacoes ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.afirmacoes.map(af => `<p>${af}</p>`).join("")}
+                    </div>
+                ` : ""}
+
+                <h3>${q.pergunta}</h3>
+
+                <div class="alternativas-jogo-farol alternativas-relampago">
+                    ${q.alternativas.map((alt, indice) => `
+                        <button onclick="responderDesafioRelampago(${indice})">
+                            ${alt}
+                        </button>
+                    `).join("")}
+                </div>
+
+                <div id="feedbackRelampago"></div>
+
+            </div>
+
+        </div>
+    `;
+
+    atualizarTempoRelampagoTela();
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function responderDesafioRelampago(indice){
+
+    if(
+        relampagoRespondido ||
+        relampagoFinalizado
+    ){
+        return;
+    }
+
+    const q =
+        relampagoQuestoes[relampagoIndice];
+
+    const feedback =
+        document.getElementById("feedbackRelampago");
+
+    if(!feedback){
+        return;
+    }
+
+    relampagoRespondido = true;
+
+    const botoes =
+        document.querySelectorAll(".alternativas-relampago button");
+
+    botoes.forEach((botao, i) => {
+        botao.disabled = true;
+
+        if(i === q.correta){
+            botao.classList.add("correta");
+        }
+
+        if(i === indice && i !== q.correta){
+            botao.classList.add("errada");
+        }
+    });
+
+    if(indice === q.correta){
+
+        relampagoAcertos++;
+        acertos++;
+
+        adicionarPontosLuz(
+            10,
+            "Desafio Relâmpago",
+            relampagoIdPartida + ":" + relampagoIndice
+        );
+
+        registrarAtividadeDiaria("acertos", 1);
+
+        feedback.innerHTML = `
+            <div class="feedback-acerto feedback-relampago">
+                <strong>✅ Correta!</strong>
+                <span>⭐ 10 Pontos de Luz</span>
+            </div>
+        `;
+
+    }
+    else{
+
+        relampagoErros++;
+        erros++;
+
+        registrarErroJogoFarol(q);
+
+        feedback.innerHTML = `
+            <div class="feedback-erro feedback-relampago">
+                <strong>❌ Incorreta!</strong>
+                <span>Resposta: ${q.alternativas[q.correta]}</span>
+            </div>
+        `;
+
+    }
+
+    atualizarEstatisticas();
+    atualizarDashboard();
+    atualizarPainelEstudos();
+    atualizarCadernoErros();
+    salvarDados();
+
+    setTimeout(() => {
+        proximaQuestaoDesafioRelampago();
+    }, 850);
+
+}
+
+function proximaQuestaoDesafioRelampago(){
+
+    if(relampagoFinalizado){
+        return;
+    }
+
+    relampagoIndice++;
+
+    if(relampagoIndice >= relampagoQuestoes.length){
+        finalizarDesafioRelampago(false);
+        return;
+    }
+
+    mostrarQuestaoDesafioRelampago();
+
+}
+
+function finalizarDesafioRelampago(tempoEsgotado){
+
+    if(relampagoFinalizado){
+        return;
+    }
+
+    relampagoFinalizado = true;
+    pararTimerRelampago();
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    const respondidas =
+        relampagoAcertos + relampagoErros;
+
+    const naoRespondidas =
+        Math.max(
+            relampagoQuestoes.length - respondidas,
+            0
+        );
+
+    relampagoErros += naoRespondidas;
+
+    const tempoUsado =
+        Math.max(
+            0,
+            Math.round((Date.now() - relampagoInicio) / 1000)
+        );
+
+    const aproveitamento =
+        relampagoQuestoes.length > 0
+        ? Math.round((relampagoAcertos / relampagoQuestoes.length) * 100)
+        : 0;
+
+    let mensagem =
+        "Continue treinando para ganhar mais velocidade.";
+
+    if(relampagoAcertos === 10){
+        mensagem = "Perfeito! Você venceu o Desafio Relâmpago.";
+    }
+    else if(relampagoAcertos >= 8){
+        mensagem = "Excelente! Você foi muito bem no tempo.";
+    }
+    else if(relampagoAcertos >= 6){
+        mensagem = "Bom resultado! Continue praticando.";
+    }
+
+    if(tempoEsgotado){
+        mensagem =
+            "⏱ Tempo esgotado! " + mensagem;
+    }
+
+    registrarAtividadeDiaria("simulados", 1);
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol resultado-jogo-farol resultado-relampago">
+
+            <h3>⚡ Resultado — Desafio Relâmpago</h3>
+
+            <div class="resultado-farol-percentual resultado-relampago-circulo">
+                <strong>${aproveitamento}%</strong>
+                <span>Aproveitamento</span>
+            </div>
+
+            <div class="perfil-grid-resumo resultado-grid-jogo">
+                <div class="perfil-resumo-card">
+                    <span>✅</span>
+                    <strong>${relampagoAcertos}</strong>
+                    <small>Acertos</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>❌</span>
+                    <strong>${relampagoErros}</strong>
+                    <small>Erros</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>⭐</span>
+                    <strong>${relampagoAcertos * 10}</strong>
+                    <small>Pontos ganhos</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>⏱</span>
+                    <strong>${tempoUsado}s</strong>
+                    <small>Tempo usado</small>
+                </div>
+            </div>
+
+            <p class="mensagem-final-jogo">
+                ${mensagem}
+            </p>
+
+            <div class="botoes-final-jogo">
+                <button onclick="abrirJogoDesafioRelampago()">
+                    🔁 Jogar novamente
+                </button>
+
+                <button onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">
+                    👤 Ver Perfil
+                </button>
+
+                <button onclick="mostrarTela('erros'); atualizarCadernoErros();">
+                    ❌ Revisar erros
+                </button>
+            </div>
+
+        </div>
+    `;
+
+    atualizarDashboard();
+    atualizarPerfilAluno();
+    salvarDados();
+
+}
+
+
+
+
+// ==========================
+// JOGO CAÇA AOS ERROS
+// ==========================
+
+let cacaErrosQuestoes = [];
+let cacaErrosIndice = 0;
+let cacaErrosAcertos = 0;
+let cacaErrosErros = 0;
+let cacaErrosPontos = 0;
+let cacaErrosRespondido = false;
+let cacaErrosIdPartida = "";
+
+function abrirJogoCacaErros(){
+
+    if(typeof pararTimerRelampago === "function"){
+        pararTimerRelampago();
+    }
+
+    if(typeof pararPreviewMemoria === "function"){
+        pararPreviewMemoria();
+    }
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    const errosDisponiveis =
+        obterQuestoesCacaErros();
+
+    if(errosDisponiveis.length === 0){
+
+        area.innerHTML = `
+            <div class="painel-jogo-farol painel-caca-erros">
+                <h3>🔎 Caça aos Erros</h3>
+
+                <div class="estado-vazio-caca-erros">
+                    <div class="icone-jogo">🎉</div>
+                    <h3>Seu Caderno de Erros está limpo!</h3>
+                    <p>
+                        Quando você errar questões nas disciplinas ou nos jogos, elas aparecerão aqui para revisão.
+                    </p>
+
+                    <div class="botoes-final-jogo">
+                        <button onclick="mostrarTela('questoes')">
+                            📚 Estudar disciplinas
+                        </button>
+
+                        <button onclick="abrirJogoConstruaFarol()">
+                            🧱 Jogar Construa o Farol
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        area.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+        return;
+    }
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-caca-erros">
+            <h3>🔎 Caça aos Erros</h3>
+            <p>
+                Responda novamente as questões que você errou. Cada erro recuperado vale 5 Pontos de Luz.
+            </p>
+
+            <div class="aviso-jogo-caca">
+                <strong>Como funciona:</strong>
+                <span>✅ Acertou: questão marcada como recuperada</span>
+                <span>⭐ Recuperação correta: até 5 Pontos de Luz</span>
+                <span>❌ Errou: questão continua no Caderno de Erros</span>
+            </div>
+
+            <div class="resumo-caca-erros">
+                <div>
+                    <strong>${errosDisponiveis.length}</strong>
+                    <span>questões disponíveis</span>
+                </div>
+
+                <div>
+                    <strong>${Math.min(5, errosDisponiveis.length)}</strong>
+                    <span>questões nesta partida</span>
+                </div>
+            </div>
+
+            <button onclick="iniciarCacaErros()">
+                🔎 Iniciar Caça aos Erros
+            </button>
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function obterQuestoesCacaErros(){
+
+    if(!Array.isArray(cadernoErros)){
+        cadernoErros = [];
+    }
+
+    return cadernoErros.filter(item => {
+
+        return (
+            item &&
+            item.pergunta &&
+            Array.isArray(item.alternativas) &&
+            typeof item.correta !== "undefined" &&
+            item.status !== "recuperada"
+        );
+
+    });
+
+}
+
+function iniciarCacaErros(){
+
+    const errosDisponiveis =
+        obterQuestoesCacaErros();
+
+    if(errosDisponiveis.length === 0){
+        mostrarToast("Não há erros pendentes para revisar.");
+        abrirJogoCacaErros();
+        return;
+    }
+
+    cacaErrosQuestoes =
+        embaralharArrayJogo(errosDisponiveis)
+        .slice(0, 5);
+
+    cacaErrosIndice = 0;
+    cacaErrosAcertos = 0;
+    cacaErrosErros = 0;
+    cacaErrosPontos = 0;
+    cacaErrosRespondido = false;
+    cacaErrosIdPartida = "caca-erros-" + Date.now();
+
+    mostrarQuestaoCacaErros();
+
+}
+
+function mostrarQuestaoCacaErros(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    const q =
+        cacaErrosQuestoes[cacaErrosIndice];
+
+    cacaErrosRespondido = false;
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-caca-erros painel-caca-ativo">
+
+            <div class="cabecalho-jogo-farol cabecalho-caca-erros">
+                <div>
+                    <h3>🔎 Caça aos Erros</h3>
+                    <p>${q.disciplina || "Questão do Caderno de Erros"}</p>
+                </div>
+
+                <span>
+                    Questão ${cacaErrosIndice + 1} de ${cacaErrosQuestoes.length}
+                </span>
+            </div>
+
+            <div class="placar-jogo-farol">
+                <span>✅ Recuperadas: ${cacaErrosAcertos}</span>
+                <span>❌ Ainda erradas: ${cacaErrosErros}</span>
+                <span>⭐ ${cacaErrosPontos} Pontos</span>
+            </div>
+
+            <div class="progresso-caca-erros">
+                ${cacaErrosQuestoes.map((_, indice) => `
+                    <span class="${indice < cacaErrosIndice ? "feito" : indice === cacaErrosIndice ? "atual" : ""}">
+                        ${indice + 1}
+                    </span>
+                `).join("")}
+            </div>
+
+            <div class="questao-jogo-farol questao-caca-erros">
+
+                ${q.texto ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.texto}
+                    </div>
+                ` : ""}
+
+                ${q.imagem ? `
+                    <img src="${q.imagem}" class="imagem-questao">
+                ` : ""}
+
+                ${q.afirmacoes ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.afirmacoes.map(af => `<p>${af}</p>`).join("")}
+                    </div>
+                ` : ""}
+
+                <h3>${q.pergunta}</h3>
+
+                <div class="alternativas-jogo-farol alternativas-caca-erros">
+                    ${q.alternativas.map((alt, indice) => `
+                        <button onclick="responderCacaErros(${indice})">
+                            ${alt}
+                        </button>
+                    `).join("")}
+                </div>
+
+                <div id="feedbackCacaErros"></div>
+
+            </div>
+
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function atualizarItemCadernoErroRecuperado(q, acertou){
+
+    const indice =
+        cadernoErros.findIndex(item => {
+
+            if(q.idErro && item.idErro){
+                return item.idErro === q.idErro;
+            }
+
+            return item.pergunta === q.pergunta;
+        });
+
+    if(indice < 0){
+        return false;
+    }
+
+    if(acertou){
+
+        const jaPontuado =
+            cadernoErros[indice].pontosRevisaoGanhos === true;
+
+        cadernoErros[indice] = {
+            ...cadernoErros[indice],
+            status: "recuperada",
+            acertosRevisao: (cadernoErros[indice].acertosRevisao || 0) + 1,
+            dataRecuperacao: Date.now(),
+            pontosRevisaoGanhos: true
+        };
+
+        return !jaPontuado;
+
+    }
+
+    cadernoErros[indice] = {
+        ...cadernoErros[indice],
+        status: "em-revisao",
+        erros: (cadernoErros[indice].erros || 0) + 1,
+        data: Date.now()
+    };
+
+    return false;
+
+}
+
+function responderCacaErros(indiceResposta){
+
+    if(cacaErrosRespondido){
+        return;
+    }
+
+    const q =
+        cacaErrosQuestoes[cacaErrosIndice];
+
+    const feedback =
+        document.getElementById("feedbackCacaErros");
+
+    if(!feedback){
+        return;
+    }
+
+    cacaErrosRespondido = true;
+
+    const botoes =
+        document.querySelectorAll(".alternativas-caca-erros button");
+
+    botoes.forEach((botao, indice) => {
+
+        botao.disabled = true;
+
+        if(indice === q.correta){
+            botao.classList.add("correta");
+        }
+
+        if(indice === indiceResposta && indice !== q.correta){
+            botao.classList.add("errada");
+        }
+
+    });
+
+    if(indiceResposta === q.correta){
+
+        cacaErrosAcertos++;
+        acertos++;
+
+        const devePontuar =
+            atualizarItemCadernoErroRecuperado(q, true);
+
+        if(devePontuar){
+
+            adicionarPontosLuz(
+                5,
+                "Caça aos Erros",
+                "caca-erros:" + (q.idErro || q.pergunta)
+            );
+
+            cacaErrosPontos += 5;
+
+            registrarAtividadeDiaria("revisoes", 1);
+
+        }
+
+        feedback.innerHTML = `
+            <div class="feedback-acerto">
+                <h3>✅ Erro recuperado!</h3>
+                <p>
+                    Você acertou uma questão que estava no Caderno de Erros.
+                </p>
+                ${devePontuar
+                    ? `<p class="pontos-luz-feedback">⭐ 5 Pontos de Luz</p>`
+                    : `<p class="pontos-luz-feedback neutro">⭐ Essa questão já havia gerado pontos de revisão antes.</p>`
+                }
+                <br>
+                <button onclick="proximaQuestaoCacaErros()">
+                    Próxima caça
+                </button>
+            </div>
+        `;
+
+    }
+    else{
+
+        cacaErrosErros++;
+        erros++;
+
+        atualizarItemCadernoErroRecuperado(q, false);
+
+        feedback.innerHTML = `
+            <div class="feedback-erro">
+                <h3>❌ Ainda precisa revisar!</h3>
+
+                <strong>Resposta correta:</strong><br>
+                ${q.alternativas[q.correta]}
+
+                <br><br>
+
+                <strong>Explicação:</strong><br>
+                ${q.feedbackErro || q.explicacao || "Sem explicação cadastrada."}
+
+                <br><br>
+
+                <button onclick="proximaQuestaoCacaErros()">
+                    Próxima caça
+                </button>
+            </div>
+        `;
+
+    }
+
+    atualizarEstatisticas();
+    atualizarDashboard();
+    atualizarPainelEstudos();
+    atualizarCadernoErros();
+    salvarDados();
+
+}
+
+function proximaQuestaoCacaErros(){
+
+    cacaErrosIndice++;
+
+    if(cacaErrosIndice >= cacaErrosQuestoes.length){
+        finalizarCacaErros();
+        return;
+    }
+
+    mostrarQuestaoCacaErros();
+
+}
+
+function finalizarCacaErros(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    const aproveitamento =
+        cacaErrosQuestoes.length > 0
+        ? Math.round((cacaErrosAcertos / cacaErrosQuestoes.length) * 100)
+        : 0;
+
+    let mensagem =
+        "Continue revisando. Cada erro recuperado fortalece seu aprendizado.";
+
+    if(cacaErrosAcertos === cacaErrosQuestoes.length){
+        mensagem = "Excelente! Você recuperou todos os erros desta partida.";
+    }
+    else if(cacaErrosAcertos >= 3){
+        mensagem = "Muito bom! Você recuperou vários erros.";
+    }
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol resultado-jogo-farol resultado-caca-erros">
+
+            <h3>🔎 Resultado — Caça aos Erros</h3>
+
+            <div class="resultado-farol-percentual resultado-caca-circulo">
+                <strong>${aproveitamento}%</strong>
+                <span>Erros recuperados</span>
+            </div>
+
+            <div class="perfil-grid-resumo resultado-grid-jogo">
+                <div class="perfil-resumo-card">
+                    <span>✅</span>
+                    <strong>${cacaErrosAcertos}</strong>
+                    <small>Recuperadas</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>❌</span>
+                    <strong>${cacaErrosErros}</strong>
+                    <small>Ainda erradas</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>⭐</span>
+                    <strong>${cacaErrosPontos}</strong>
+                    <small>Pontos ganhos</small>
+                </div>
+            </div>
+
+            <p class="mensagem-final-jogo">
+                ${mensagem}
+            </p>
+
+            <div class="botoes-final-jogo">
+                <button onclick="abrirJogoCacaErros()">
+                    🔁 Jogar novamente
+                </button>
+
+                <button onclick="mostrarTela('erros'); atualizarCadernoErros();">
+                    ❌ Ver Caderno de Erros
+                </button>
+
+                <button onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">
+                    👤 Ver Perfil
+                </button>
+            </div>
+
+        </div>
+    `;
+
+    atualizarDashboard();
+    atualizarPerfilAluno();
+    atualizarCadernoErros();
+    salvarDados();
+
+}
+
+
+
+
+// ==========================
+// JOGO MEMÓRIA DO SABER
+// ==========================
+
+let memoriaCartas = [];
+let memoriaSelecionadas = [];
+let memoriaParesEncontrados = 0;
+let memoriaTentativas = 0;
+let memoriaBloqueada = false;
+let memoriaDisciplina = "todas";
+let memoriaIdPartida = "";
+let memoriaPontos = 0;
+let memoriaModoFarol = false;
+let memoriaVez = "aluno";
+let memoriaParesAluno = 0;
+let memoriaParesFarol = 0;
+let memoriaHistoricoFarol = {};
+let memoriaPreviewAtivo = false;
+let memoriaTempoPreview = 30;
+let memoriaPreviewTimer = null;
+
+
+function pararPreviewMemoria(){
+
+    if(memoriaPreviewTimer){
+        clearInterval(memoriaPreviewTimer);
+        memoriaPreviewTimer = null;
+    }
+
+}
+
+function abrirJogoMemoriaSaber(){
+
+    if(typeof pararTimerRelampago === "function"){
+        pararTimerRelampago();
+    }
+
+    if(typeof pararPreviewMemoria === "function"){
+        pararPreviewMemoria();
+    }
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-memoria">
+            <h3>🧠 Memória do Saber</h3>
+            <p>
+                Escolha o modo de jogo.
+            </p>
+
+            <div class="modos-memoria-saber">
+
+                <div class="modo-memoria-card">
+                    <div class="icone-jogo">👤</div>
+                    <h3>Jogar sozinho</h3>
+                    <p>
+                        Treine sua memória encontrando os pares de pergunta e resposta.
+                    </p>
+                    <button onclick="escolherModoMemoriaSaber(false)">
+                        Jogar sozinho
+                    </button>
+                </div>
+
+                <div class="modo-memoria-card modo-farol">
+                    <div class="icone-jogo">🗼</div>
+                    <h3>Você x Farol</h3>
+                    <p>
+                        Dispute contra o Farol. Quem encontrar mais pares vence.
+                    </p>
+                    <button onclick="escolherModoMemoriaSaber(true)">
+                        Jogar contra o Farol
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function limitarTextoMemoria(texto, limite){
+
+    const bruto =
+        String(texto || "")
+        .replace(/<[^>]*>/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+
+    if(bruto.length <= limite){
+        return bruto;
+    }
+
+    return bruto.substring(0, limite).trim() + "...";
+
+}
+
+
+function escolherModoMemoriaSaber(contraFarol){
+
+    memoriaModoFarol = contraFarol === true;
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-memoria">
+            <h3>🧠 Memória do Saber</h3>
+            <p>
+                ${memoriaModoFarol
+                    ? "Modo escolhido: 🗼 Você x Farol"
+                    : "Modo escolhido: 👤 Jogar sozinho"}
+            </p>
+
+            <div class="aviso-jogo-memoria">
+                <strong>Regras:</strong>
+                <span>📌 Perguntas ficam em cima</span>
+                <span>✅ Respostas ficam embaixo</span>
+                <span>👀 Você terá 30 segundos para visualizar</span>
+                ${memoriaModoFarol
+                    ? "<span>🗼 Se você errar, o Farol joga automaticamente</span>"
+                    : "<span>🎯 Seu desempenho depende da quantidade de tentativas</span>"}
+            </div>
+
+            <div class="grid-disciplinas-jogo">
+                ${Object.keys(disciplinasJogoFarol).map(chave => `
+                    <button onclick="iniciarMemoriaSaber('${chave}')">
+                        ${disciplinasJogoFarol[chave].nome}
+                    </button>
+                `).join("")}
+            </div>
+
+            <br>
+
+            <button onclick="abrirJogoMemoriaSaber()">
+                ⬅ Voltar aos modos
+            </button>
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function montarParesMemoriaSaber(chaveDisciplina){
+
+    const questoesBase =
+        obterQuestoesJogoFarol(chaveDisciplina);
+
+    const pares = [];
+
+    questoesBase.forEach(q => {
+
+        if(
+            !q ||
+            !q.pergunta ||
+            !Array.isArray(q.alternativas) ||
+            typeof q.correta === "undefined"
+        ){
+            return;
+        }
+
+        const respostaCorreta =
+            q.alternativas[q.correta];
+
+        if(!respostaCorreta){
+            return;
+        }
+
+        pares.push({
+            pergunta: limitarTextoMemoria(q.pergunta, 105),
+            resposta: limitarTextoMemoria(respostaCorreta, 105)
+        });
+
+    });
+
+    return embaralharArrayJogo(pares);
+
+}
+
+function iniciarMemoriaSaber(chaveDisciplina){
+
+    const paresDisponiveis =
+        montarParesMemoriaSaber(chaveDisciplina);
+
+    if(paresDisponiveis.length < 5){
+        mostrarToast("Ainda não há pares suficientes para este jogo.");
+        return;
+    }
+
+    pararPreviewMemoria();
+
+    const paresDaPartida =
+        paresDisponiveis.slice(0, 5);
+
+    memoriaCartas = [];
+    memoriaSelecionadas = [];
+    memoriaParesEncontrados = 0;
+    memoriaTentativas = 0;
+    memoriaBloqueada = true;
+    memoriaDisciplina = chaveDisciplina;
+    memoriaIdPartida = "memoria-saber-" + Date.now();
+    memoriaPontos = 0;
+    memoriaPreviewAtivo = true;
+    memoriaTempoPreview = 30;
+    memoriaVez = "aluno";
+    memoriaParesAluno = 0;
+    memoriaParesFarol = 0;
+    memoriaHistoricoFarol = {};
+
+    paresDaPartida.forEach((par, indice) => {
+
+        memoriaCartas.push({
+            id: "p" + indice + "-pergunta",
+            parId: "par-" + indice,
+            tipo: "pergunta",
+            titulo: "Pergunta",
+            texto: par.pergunta,
+            encontrada: false,
+            dono: "",
+            virada: true
+        });
+
+        memoriaCartas.push({
+            id: "p" + indice + "-resposta",
+            parId: "par-" + indice,
+            tipo: "resposta",
+            titulo: "Resposta",
+            texto: par.resposta,
+            encontrada: false,
+            dono: "",
+            virada: true
+        });
+
+    });
+
+    memoriaCartas =
+        embaralharArrayJogo(memoriaCartas);
+
+    renderizarMemoriaSaber();
+
+    memoriaPreviewTimer =
+        setInterval(() => {
+
+            memoriaTempoPreview--;
+
+            const contador =
+                document.getElementById("contadorPreviewMemoria");
+
+            if(contador){
+                contador.textContent = memoriaTempoPreview;
+            }
+
+            if(memoriaTempoPreview <= 0){
+
+                pararPreviewMemoria();
+
+                memoriaCartas.forEach(carta => {
+                    carta.virada = false;
+                });
+
+                memoriaPreviewAtivo = false;
+                memoriaBloqueada = false;
+                memoriaSelecionadas = [];
+
+                renderizarMemoriaSaber();
+
+            }
+
+        }, 1000);
+
+}
+
+function renderizarMemoriaSaber(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    const nomeDisciplina =
+        disciplinasJogoFarol[memoriaDisciplina]
+        ? disciplinasJogoFarol[memoriaDisciplina].nome
+        : "🎯 Desafio";
+
+    const cartasPergunta =
+        memoriaCartas
+        .map((carta, indice) => ({ carta, indice }))
+        .filter(item => item.carta.tipo === "pergunta");
+
+    const cartasResposta =
+        memoriaCartas
+        .map((carta, indice) => ({ carta, indice }))
+        .filter(item => item.carta.tipo === "resposta");
+
+    function montarCartaMemoria(item){
+
+        const carta = item.carta;
+        const indice = item.indice;
+
+        const aberta =
+            carta.virada ||
+            carta.encontrada ||
+            memoriaPreviewAtivo;
+
+        const classeDono =
+            carta.dono === "aluno"
+            ? "dono-aluno"
+            : carta.dono === "farol"
+            ? "dono-farol"
+            : "";
+
+        return `
+            <button
+                type="button"
+                class="carta-memoria-simples ${aberta ? "aberta" : "fechada"} ${carta.encontrada ? "encontrada" : ""} ${classeDono} ${carta.tipo === "pergunta" ? "tipo-pergunta" : "tipo-resposta"}"
+                onclick="virarCartaMemoria(${indice})"
+                ${carta.encontrada || memoriaPreviewAtivo || (memoriaModoFarol && memoriaVez === "farol") ? "disabled" : ""}>
+
+                ${aberta ? `
+                    <span class="tag-carta-memoria">
+                        ${carta.tipo === "pergunta" ? "📌 Pergunta" : "✅ Resposta"}
+                    </span>
+
+                    <p class="texto-carta-memoria">
+                        ${carta.texto}
+                    </p>
+
+                    ${carta.dono ? `
+                        <small class="dono-par-memoria">
+                            ${carta.dono === "aluno" ? "👤 Seu par" : "🗼 Par do Farol"}
+                        </small>
+                    ` : ""}
+                ` : `
+                    <div class="carta-fechada-conteudo">
+                        <span>🧠</span>
+                        <strong>Farol</strong>
+                    </div>
+                `}
+            </button>
+        `;
+    }
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-memoria painel-memoria-ativo">
+
+            <div class="cabecalho-jogo-farol cabecalho-memoria">
+                <div>
+                    <h3>🧠 Memória do Saber</h3>
+                    <p>${nomeDisciplina}</p>
+                </div>
+
+                <span>
+                    ${memoriaParesEncontrados} / 5 pares
+                </span>
+            </div>
+
+            ${memoriaModoFarol ? `
+                <div class="placar-memoria-farol">
+                    <div class="placar-jogador-memoria ${memoriaVez === "aluno" ? "vez-ativa" : ""}">
+                        <strong>${obterAvatarJogadorFarol()} ${obterNomeJogadorFarol()}</strong>
+                        <span>${memoriaParesAluno} pares</span>
+                    </div>
+
+                    <div class="placar-jogador-memoria ${memoriaVez === "farol" ? "vez-ativa" : ""}">
+                        <strong>🗼 Farol</strong>
+                        <span>${memoriaParesFarol} pares</span>
+                    </div>
+                </div>
+            ` : ""}
+
+            ${memoriaPreviewAtivo ? `
+                <div class="aviso-preview-memoria">
+                    <strong>👀 Observe as cartas!</strong>
+                    <span>
+                        Elas vão fechar em
+                        <b id="contadorPreviewMemoria">${memoriaTempoPreview}</b>
+                        segundos.
+                    </span>
+                </div>
+            ` : `
+                <div class="aviso-jogo-memoria jogo-em-andamento-memoria">
+                    <strong>${memoriaModoFarol
+                        ? (memoriaVez === "aluno" ? "Sua vez!" : "Vez do Farol!")
+                        : "Agora é sua vez!"}</strong>
+                    <span>${memoriaModoFarol
+                        ? (memoriaVez === "aluno"
+                            ? "Escolha uma pergunta e uma resposta."
+                            : "O Farol está escolhendo as cartas...")
+                        : "Encontre o par: Pergunta + Resposta correta."}</span>
+                </div>
+            `}
+
+            <div class="placar-jogo-farol">
+                <span>✅ Pares: ${memoriaParesEncontrados}</span>
+                <span>🔁 Tentativas: ${memoriaTentativas}</span>
+                <span>⭐ ${memoriaPontos} Pontos</span>
+            </div>
+
+            <div class="bloco-linha-memoria">
+                <h4>📌 Perguntas</h4>
+                <div class="grade-memoria-saber memoria-simples linha-perguntas-memoria">
+                    ${cartasPergunta.map(montarCartaMemoria).join("")}
+                </div>
+            </div>
+
+            <div class="bloco-linha-memoria">
+                <h4>✅ Respostas</h4>
+                <div class="grade-memoria-saber memoria-simples linha-respostas-memoria">
+                    ${cartasResposta.map(montarCartaMemoria).join("")}
+                </div>
+            </div>
+
+            <div id="feedbackMemoriaSaber"></div>
+
+            <div class="botoes-final-jogo area-botoes-memoria">
+                <button onclick="abrirJogoMemoriaSaber()">
+                    🔁 Reiniciar escolha
+                </button>
+            </div>
+
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+    if(
+        memoriaModoFarol &&
+        memoriaVez === "farol" &&
+        !memoriaPreviewAtivo &&
+        !memoriaBloqueada
+    ){
+        memoriaBloqueada = true;
+
+        setTimeout(() => {
+            jogarTurnoFarolMemoria();
+        }, 900);
+    }
+
+}
+
+function virarCartaMemoria(indice){
+
+    if(
+        memoriaBloqueada ||
+        memoriaPreviewAtivo
+    ){
+        return;
+    }
+
+    const carta =
+        memoriaCartas[indice];
+
+    if(
+        !carta ||
+        carta.virada ||
+        carta.encontrada
+    ){
+        return;
+    }
+
+    carta.virada = true;
+    memoriaSelecionadas.push(indice);
+
+    renderizarMemoriaSaber();
+
+    if(memoriaSelecionadas.length === 2){
+        verificarParMemoria();
+    }
+
+}
+
+function verificarParMemoria(){
+
+    memoriaBloqueada = true;
+    memoriaTentativas++;
+
+    const indice1 =
+        memoriaSelecionadas[0];
+
+    const indice2 =
+        memoriaSelecionadas[1];
+
+    const carta1 =
+        memoriaCartas[indice1];
+
+    const carta2 =
+        memoriaCartas[indice2];
+
+    const formouPar =
+        carta1 &&
+        carta2 &&
+        carta1.parId === carta2.parId &&
+        carta1.tipo !== carta2.tipo;
+
+    const jogadorAtual =
+        memoriaModoFarol ? memoriaVez : "aluno";
+
+    if(formouPar){
+
+        carta1.encontrada = true;
+        carta2.encontrada = true;
+        carta1.dono = jogadorAtual;
+        carta2.dono = jogadorAtual;
+
+        memoriaParesEncontrados++;
+        memoriaPontos += jogadorAtual === "aluno" ? 2 : 0;
+
+        if(jogadorAtual === "aluno"){
+            memoriaParesAluno++;
+        }
+        else{
+            memoriaParesFarol++;
+        }
+
+        memoriaSelecionadas = [];
+        memoriaBloqueada = false;
+
+        if(memoriaParesEncontrados >= 5){
+            finalizarMemoriaSaber();
+            return;
+        }
+
+        renderizarMemoriaSaber();
+
+        const feedback =
+            document.getElementById("feedbackMemoriaSaber");
+
+        if(feedback){
+            feedback.innerHTML = `
+                <div class="feedback-acerto feedback-memoria">
+                    ${jogadorAtual === "aluno"
+                        ? "✅ Você encontrou um par e continua jogando!"
+                        : "🗼 O Farol encontrou um par e continua jogando!"}
+                </div>
+            `;
+        }
+
+    }
+    else{
+
+        setTimeout(() => {
+
+            if(carta1){
+                carta1.virada = false;
+            }
+
+            if(carta2){
+                carta2.virada = false;
+            }
+
+            memoriaSelecionadas = [];
+
+            if(memoriaModoFarol){
+                memoriaVez =
+                    memoriaVez === "aluno"
+                    ? "farol"
+                    : "aluno";
+            }
+
+            memoriaBloqueada = false;
+            renderizarMemoriaSaber();
+
+            const feedback =
+                document.getElementById("feedbackMemoriaSaber");
+
+            if(feedback){
+                feedback.innerHTML = `
+                    <div class="feedback-erro feedback-memoria">
+                        ${jogadorAtual === "aluno"
+                            ? "❌ Não formou par. Agora é a vez do Farol."
+                            : "🗼 O Farol não formou par. Agora é sua vez."}
+                    </div>
+                `;
+            }
+
+        }, 900);
+
+    }
+
+    salvarDados();
+
+}
+
+
+function escolherCartasFarolMemoria(){
+
+    const abertas =
+        memoriaCartas
+        .map((carta, indice) => ({ carta, indice }))
+        .filter(item => !item.carta.encontrada);
+
+    const perguntas =
+        abertas.filter(item => item.carta.tipo === "pergunta");
+
+    const respostas =
+        abertas.filter(item => item.carta.tipo === "resposta");
+
+    // Farol nível fácil/médio: às vezes encontra par conhecido, mas muitas vezes escolhe aleatório.
+    const chanceAcerto =
+        Math.random();
+
+    if(chanceAcerto < 0.38){
+
+        for(const pergunta of perguntas){
+
+            const resposta =
+                respostas.find(item => item.carta.parId === pergunta.carta.parId);
+
+            if(resposta){
+                return [pergunta.indice, resposta.indice];
+            }
+
+        }
+
+    }
+
+    const perguntaAleatoria =
+        perguntas[Math.floor(Math.random() * perguntas.length)];
+
+    const respostaAleatoria =
+        respostas[Math.floor(Math.random() * respostas.length)];
+
+    if(
+        perguntaAleatoria &&
+        respostaAleatoria
+    ){
+        return [
+            perguntaAleatoria.indice,
+            respostaAleatoria.indice
+        ];
+    }
+
+    return [];
+
+}
+
+function jogarTurnoFarolMemoria(){
+
+    if(
+        !memoriaModoFarol ||
+        memoriaVez !== "farol" ||
+        memoriaParesEncontrados >= 5
+    ){
+        memoriaBloqueada = false;
+        return;
+    }
+
+    const escolha =
+        escolherCartasFarolMemoria();
+
+    if(escolha.length < 2){
+        finalizarMemoriaSaber();
+        return;
+    }
+
+    memoriaSelecionadas = escolha;
+
+    escolha.forEach(indice => {
+        if(memoriaCartas[indice]){
+            memoriaCartas[indice].virada = true;
+        }
+    });
+
+    renderizarMemoriaSaber();
+
+    setTimeout(() => {
+        verificarParMemoria();
+    }, 1000);
+
+}
+
+function finalizarMemoriaSaber(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    let desempenho = "Em treinamento";
+    let iconeDesempenho = "🔁";
+    let bonus = 0;
+    let mensagem =
+        "Você encontrou todos os pares. Continue treinando para virar menos cartas.";
+
+    if(memoriaModoFarol){
+
+        if(memoriaParesAluno > memoriaParesFarol){
+            desempenho = "Você venceu";
+            iconeDesempenho = "🏆";
+            bonus = 25;
+            mensagem = "Excelente! Você venceu o Farol no jogo da memória.";
+        }
+        else if(memoriaParesAluno < memoriaParesFarol){
+            desempenho = "Farol venceu";
+            iconeDesempenho = "🗼";
+            bonus = 0;
+            mensagem = "O Farol venceu desta vez. Tente memorizar melhor na próxima.";
+        }
+        else{
+            desempenho = "Empate";
+            iconeDesempenho = "🤝";
+            bonus = 10;
+            mensagem = "Empate! Você e o Farol encontraram a mesma quantidade de pares.";
+        }
+
+    }
+    else{
+
+        if(memoriaTentativas <= 5){
+            desempenho = "Perfeito";
+            iconeDesempenho = "🏆";
+            bonus = 25;
+            mensagem = "Perfeito! Você encontrou todos os pares com o mínimo de tentativas.";
+        }
+        else if(memoriaTentativas <= 7){
+            desempenho = "Excelente";
+            iconeDesempenho = "⭐";
+            bonus = 20;
+            mensagem = "Excelente memória! Você virou poucas cartas e foi muito eficiente.";
+        }
+        else if(memoriaTentativas <= 10){
+            desempenho = "Bom";
+            iconeDesempenho = "✅";
+            bonus = 10;
+            mensagem = "Bom desempenho! Você encontrou os pares com poucas tentativas.";
+        }
+        else{
+            desempenho = "Precisa treinar mais";
+            iconeDesempenho = "📚";
+            bonus = 0;
+            mensagem = "Você completou o jogo, mas virou muitas cartas. Tente memorizar melhor na próxima.";
+        }
+
+    }
+
+    const totalPontos =
+        memoriaPontos + bonus;
+
+    adicionarPontosLuz(
+        totalPontos,
+        "Memória do Saber",
+        memoriaIdPartida
+    );
+
+    registrarAtividadeDiaria("acertos", 1);
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol resultado-jogo-farol resultado-memoria">
+
+            <h3>🧠 Resultado — Memória do Saber</h3>
+
+            <div class="resultado-farol-percentual resultado-memoria-circulo">
+                <strong>${iconeDesempenho}</strong>
+                <span>${desempenho}</span>
+            </div>
+
+            ${memoriaModoFarol ? `
+                <div class="placar-memoria-farol placar-final-memoria">
+                    <div class="placar-jogador-memoria">
+                        <strong>${obterAvatarJogadorFarol()} ${obterNomeJogadorFarol()}</strong>
+                        <span>${memoriaParesAluno} pares</span>
+                    </div>
+
+                    <div class="placar-jogador-memoria">
+                        <strong>🗼 Farol</strong>
+                        <span>${memoriaParesFarol} pares</span>
+                    </div>
+                </div>
+            ` : ""}
+
+            <div class="perfil-grid-resumo resultado-grid-jogo">
+                <div class="perfil-resumo-card">
+                    <span>✅</span>
+                    <strong>${memoriaModoFarol ? memoriaParesAluno : memoriaParesEncontrados}</strong>
+                    <small>${memoriaModoFarol ? "Pares do aluno" : "Pares"}</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>🔁</span>
+                    <strong>${memoriaTentativas}</strong>
+                    <small>Tentativas</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>🎯</span>
+                    <strong>${desempenho}</strong>
+                    <small>Desempenho</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>⭐</span>
+                    <strong>${totalPontos}</strong>
+                    <small>Pontos ganhos</small>
+                </div>
+            </div>
+
+            ${!memoriaModoFarol ? `
+                <div class="tabela-desempenho-memoria">
+                    <h4>📊 Critério de desempenho</h4>
+                    <p>🏆 5 tentativas: Perfeito</p>
+                    <p>⭐ 6 a 7 tentativas: Excelente</p>
+                    <p>✅ 8 a 10 tentativas: Bom</p>
+                    <p>📚 Acima de 10 tentativas: Precisa treinar mais</p>
+                </div>
+            ` : ""}
+
+            <p class="mensagem-final-jogo">
+                ${mensagem}
+            </p>
+
+            <div class="botoes-final-jogo">
+                <button onclick="abrirJogoMemoriaSaber()">
+                    🔁 Jogar novamente
+                </button>
+
+                <button onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">
+                    👤 Ver Perfil
+                </button>
+            </div>
+
+        </div>
+    `;
+
+    atualizarDashboard();
+    atualizarPerfilAluno();
+    salvarDados();
+
+}
+
+
+
+
+// ==========================
+// JOGO BATALHA DO SABER — VOCÊ X FAROL
+// ==========================
+
+let batalhaQuestoes = [];
+let batalhaIndice = 0;
+let batalhaVidasAluno = 5;
+let batalhaVidasFarol = 5;
+let batalhaAcertos = 0;
+let batalhaErros = 0;
+let batalhaDisciplina = "todas";
+let batalhaRespondido = false;
+let batalhaIdPartida = "";
+
+function abrirJogoBatalhaFarol(){
+
+    if(typeof pararTimerRelampago === "function"){
+        pararTimerRelampago();
+    }
+
+    if(typeof pararPreviewMemoria === "function"){
+        pararPreviewMemoria();
+    }
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-batalha">
+            <h3>⚔️ Batalha do Saber</h3>
+            <p>
+                Enfrente o Farol em uma batalha de perguntas. Acerte para tirar vidas do Farol.
+            </p>
+
+            <div class="aviso-jogo-batalha">
+                <strong>Regras:</strong>
+                <span>👤 Você começa com 5 vidas</span>
+                <span>🗼 O Farol começa com 5 vidas</span>
+                <span>✅ Acertou: o Farol perde 1 vida</span>
+                <span>❌ Errou: você perde 1 vida</span>
+                <span>⭐ Vitória dá bônus de Pontos de Luz</span>
+            </div>
+
+            <div class="grid-disciplinas-jogo">
+                ${Object.keys(disciplinasJogoFarol).map(chave => `
+                    <button onclick="iniciarBatalhaFarol('${chave}')">
+                        ${disciplinasJogoFarol[chave].nome}
+                    </button>
+                `).join("")}
+            </div>
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function iniciarBatalhaFarol(chaveDisciplina){
+
+    const questoesDisponiveis =
+        obterQuestoesJogoFarol(chaveDisciplina);
+
+    if(questoesDisponiveis.length < 5){
+        mostrarToast("Ainda não há questões suficientes para a Batalha do Saber.");
+        return;
+    }
+
+    batalhaQuestoes =
+        questoesDisponiveis.slice(0, 15);
+
+    batalhaIndice = 0;
+    batalhaVidasAluno = 5;
+    batalhaVidasFarol = 5;
+    batalhaAcertos = 0;
+    batalhaErros = 0;
+    batalhaDisciplina = chaveDisciplina;
+    batalhaRespondido = false;
+    batalhaIdPartida = "batalha-farol-" + Date.now();
+
+    mostrarQuestaoBatalhaFarol();
+
+}
+
+function montarVidasBatalha(qtd){
+
+    let html = "";
+
+    for(let i = 0; i < 5; i++){
+        html += i < qtd ? "❤️" : "🖤";
+    }
+
+    return html;
+
+}
+
+function mostrarQuestaoBatalhaFarol(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    if(
+        batalhaVidasAluno <= 0 ||
+        batalhaVidasFarol <= 0 ||
+        batalhaIndice >= batalhaQuestoes.length
+    ){
+        finalizarBatalhaFarol();
+        return;
+    }
+
+    const q =
+        batalhaQuestoes[batalhaIndice];
+
+    batalhaRespondido = false;
+
+    const nomeDisciplina =
+        disciplinasJogoFarol[batalhaDisciplina]
+        ? disciplinasJogoFarol[batalhaDisciplina].nome
+        : "🎯 Desafio";
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-batalha painel-batalha-ativo">
+
+            <div class="cabecalho-jogo-farol cabecalho-batalha">
+                <div>
+                    <h3>⚔️ Batalha do Saber</h3>
+                    <p>${nomeDisciplina}</p>
+                </div>
+
+                <span>
+                    Rodada ${batalhaIndice + 1}
+                </span>
+            </div>
+
+            <div class="arena-batalha-farol">
+
+                <div class="combatente-batalha aluno-batalha">
+                    <div class="avatar-combatente avatar-combatente-aluno">${obterAvatarJogadorFarol()}</div>
+                    <h4>${obterNomeJogadorFarol()}</h4>
+                    <div class="vidas-batalha">${montarVidasBatalha(batalhaVidasAluno)}</div>
+                    <small>${batalhaAcertos} ataques certos</small>
+                </div>
+
+                <div class="versus-batalha">VS</div>
+
+                <div class="combatente-batalha farol-batalha">
+                    <div class="avatar-combatente">🗼</div>
+                    <h4>Farol</h4>
+                    <div class="vidas-batalha">${montarVidasBatalha(batalhaVidasFarol)}</div>
+                    <small>${batalhaErros} ataques do Farol</small>
+                </div>
+
+            </div>
+
+            <div class="questao-jogo-farol questao-batalha">
+
+                ${q.texto ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.texto}
+                    </div>
+                ` : ""}
+
+                ${q.imagem ? `
+                    <img src="${q.imagem}" class="imagem-questao">
+                ` : ""}
+
+                ${q.afirmacoes ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.afirmacoes.map(af => `<p>${af}</p>`).join("")}
+                    </div>
+                ` : ""}
+
+                <h3>${q.pergunta}</h3>
+
+                <div class="alternativas-jogo-farol alternativas-batalha">
+                    ${q.alternativas.map((alt, indice) => `
+                        <button onclick="responderBatalhaFarol(${indice})">
+                            ${alt}
+                        </button>
+                    `).join("")}
+                </div>
+
+                <div id="feedbackBatalhaFarol"></div>
+
+            </div>
+
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function responderBatalhaFarol(indiceResposta){
+
+    if(batalhaRespondido){
+        return;
+    }
+
+    const q =
+        batalhaQuestoes[batalhaIndice];
+
+    const feedback =
+        document.getElementById("feedbackBatalhaFarol");
+
+    if(!feedback){
+        return;
+    }
+
+    batalhaRespondido = true;
+
+    const botoes =
+        document.querySelectorAll(".alternativas-batalha button");
+
+    botoes.forEach((botao, indice) => {
+
+        botao.disabled = true;
+
+        if(indice === q.correta){
+            botao.classList.add("correta");
+        }
+
+        if(indice === indiceResposta && indice !== q.correta){
+            botao.classList.add("errada");
+        }
+
+    });
+
+    if(indiceResposta === q.correta){
+
+        batalhaAcertos++;
+        acertos++;
+        batalhaVidasFarol--;
+
+        adicionarPontosLuz(
+            10,
+            "Batalha do Saber",
+            batalhaIdPartida + ":rodada:" + batalhaIndice
+        );
+
+        registrarAtividadeDiaria("acertos", 1);
+
+        feedback.innerHTML = `
+            <div class="feedback-acerto feedback-batalha">
+                <h3>⚔️ Ataque certeiro!</h3>
+                <p>Você acertou e tirou 1 vida do Farol.</p>
+                <p class="pontos-luz-feedback">⭐ 10 Pontos de Luz</p>
+                <br>
+                <button onclick="proximaRodadaBatalhaFarol()">
+                    Próxima rodada
+                </button>
+            </div>
+        `;
+
+    }
+    else{
+
+        batalhaErros++;
+        erros++;
+        batalhaVidasAluno--;
+
+        registrarErroJogoFarol(q);
+
+        feedback.innerHTML = `
+            <div class="feedback-erro feedback-batalha">
+                <h3>🗼 O Farol atacou!</h3>
+                <p>Você errou e perdeu 1 vida.</p>
+
+                <strong>Resposta correta:</strong><br>
+                ${q.alternativas[q.correta]}
+
+                <br><br>
+
+                <strong>Explicação:</strong><br>
+                ${q.feedbackErro || q.explicacao || "Sem explicação cadastrada."}
+
+                <br><br>
+
+                <button onclick="proximaRodadaBatalhaFarol()">
+                    Próxima rodada
+                </button>
+            </div>
+        `;
+
+    }
+
+    atualizarEstatisticas();
+    atualizarDashboard();
+    atualizarPainelEstudos();
+    atualizarCadernoErros();
+    salvarDados();
+
+}
+
+function proximaRodadaBatalhaFarol(){
+
+    batalhaIndice++;
+
+    mostrarQuestaoBatalhaFarol();
+
+}
+
+function finalizarBatalhaFarol(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    const venceu =
+        batalhaVidasFarol <= 0 &&
+        batalhaVidasAluno > 0;
+
+    const perdeu =
+        batalhaVidasAluno <= 0 &&
+        batalhaVidasFarol > 0;
+
+    let titulo = "🤝 Batalha encerrada";
+    let mensagem = "A batalha terminou equilibrada. Continue treinando.";
+    let icone = "🤝";
+    let bonus = 0;
+
+    if(venceu){
+        titulo = "🏆 Você venceu o Farol!";
+        mensagem = "Excelente! Você derrotou o Farol na Batalha do Saber.";
+        icone = "🏆";
+        bonus = 30;
+    }
+    else if(perdeu){
+        titulo = "🗼 O Farol venceu!";
+        mensagem = "O Farol venceu desta vez. Revise seus erros e tente novamente.";
+        icone = "🗼";
+        bonus = 0;
+    }
+    else if(batalhaAcertos > batalhaErros){
+        titulo = "✅ Você venceu por desempenho!";
+        mensagem = "Você acertou mais do que errou e venceu por desempenho.";
+        icone = "✅";
+        bonus = 15;
+    }
+    else if(batalhaErros > batalhaAcertos){
+        titulo = "📚 O Farol venceu por desempenho";
+        mensagem = "Você errou mais do que acertou. Continue praticando.";
+        icone = "📚";
+        bonus = 0;
+    }
+
+    if(bonus > 0){
+
+        adicionarPontosLuz(
+            bonus,
+            "Bônus Batalha do Saber",
+            batalhaIdPartida + ":bonus"
+        );
+
+    }
+
+    const totalPontos =
+        (batalhaAcertos * 10) + bonus;
+
+    registrarAtividadeDiaria("simulados", 1);
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol resultado-jogo-farol resultado-batalha">
+
+            <h3>${titulo}</h3>
+
+            <div class="resultado-farol-percentual resultado-batalha-circulo">
+                <strong>${icone}</strong>
+                <span>Batalha finalizada</span>
+            </div>
+
+            <div class="arena-batalha-farol arena-final-batalha">
+
+                <div class="combatente-batalha aluno-batalha">
+                    <div class="avatar-combatente avatar-combatente-aluno">${obterAvatarJogadorFarol()}</div>
+                    <h4>${obterNomeJogadorFarol()}</h4>
+                    <div class="vidas-batalha">${montarVidasBatalha(Math.max(batalhaVidasAluno, 0))}</div>
+                </div>
+
+                <div class="versus-batalha">VS</div>
+
+                <div class="combatente-batalha farol-batalha">
+                    <div class="avatar-combatente">🗼</div>
+                    <h4>Farol</h4>
+                    <div class="vidas-batalha">${montarVidasBatalha(Math.max(batalhaVidasFarol, 0))}</div>
+                </div>
+
+            </div>
+
+            <div class="perfil-grid-resumo resultado-grid-jogo">
+                <div class="perfil-resumo-card">
+                    <span>✅</span>
+                    <strong>${batalhaAcertos}</strong>
+                    <small>Acertos</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>❌</span>
+                    <strong>${batalhaErros}</strong>
+                    <small>Erros</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>⭐</span>
+                    <strong>${totalPontos}</strong>
+                    <small>Pontos ganhos</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>🎁</span>
+                    <strong>${bonus}</strong>
+                    <small>Bônus</small>
+                </div>
+            </div>
+
+            <p class="mensagem-final-jogo">
+                ${mensagem}
+            </p>
+
+            <div class="botoes-final-jogo">
+                <button onclick="abrirJogoBatalhaFarol()">
+                    🔁 Jogar novamente
+                </button>
+
+                <button onclick="mostrarTela('erros'); atualizarCadernoErros();">
+                    ❌ Revisar erros
+                </button>
+
+                <button onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">
+                    👤 Ver Perfil
+                </button>
+            </div>
+
+        </div>
+    `;
+
+    atualizarDashboard();
+    atualizarPerfilAluno();
+    salvarDados();
+
+}
+
+
+
+
+
+
+function obterAvatarJogadorFarol(){
+
+    const avatarAtual =
+        lojaFarol && lojaFarol.avatarAtual
+        ? lojaFarol.avatarAtual
+        : "👤";
+
+    if(
+        typeof avatarAtual === "string" &&
+        (
+            avatarAtual.includes("/") ||
+            avatarAtual.includes(".png") ||
+            avatarAtual.includes(".jpg") ||
+            avatarAtual.includes(".jpeg") ||
+            avatarAtual.includes(".webp") ||
+            avatarAtual.includes(".svg")
+        )
+    ){
+        return `
+            <img
+                src="${avatarAtual}"
+                alt="Avatar do aluno"
+                class="avatar-jogador-game-img">
+        `;
+    }
+
+    return `
+        <span class="avatar-jogador-game-emoji">
+            ${avatarAtual || "👤"}
+        </span>
+    `;
+
+}
+
+function obterNomeJogadorFarol(){
+
+    const primeiroNome =
+        usuarioForum && usuarioForum !== "Visitante"
+        ? usuarioForum
+        : (
+            localStorage.getItem("usuarioPrimeiroNome") ||
+            localStorage.getItem("usuarioNome") ||
+            "Você"
+        );
+
+    return primeiroNome || "Você";
+
+}
+
+// ==========================
+// JOGO ROTA ATÉ O FAROL — VOCÊ X FAROL
+// ==========================
+
+let rotaQuestoes = [];
+let rotaIndice = 0;
+let rotaPosAluno = 0;
+let rotaPosFarol = 0;
+let rotaCasas = 7;
+let rotaAcertos = 0;
+let rotaErros = 0;
+let rotaDisciplina = "todas";
+let rotaRespondido = false;
+let rotaIdPartida = "";
+
+
+function abrirJogoRotaFarol(){
+
+    if(typeof pararTimerRelampago === "function"){
+        pararTimerRelampago();
+    }
+
+    if(typeof pararPreviewMemoria === "function"){
+        pararPreviewMemoria();
+    }
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-rota">
+            <h3>🚢 Rota até o Farol</h3>
+            <p>
+                Responda questões para avançar seu barco. Depois da sua resposta, o Farol também escolhe uma alternativa automaticamente.
+            </p>
+
+            <div class="aviso-jogo-rota">
+                <strong>Regras:</strong>
+                <span>🚢 Você avança 1 casa quando acerta</span>
+                <span>🌊 Se errar, seu barco fica parado</span>
+                <span>🗼 O Farol também escolhe uma resposta automaticamente</span>
+                <span>✅ Se o Farol acertar, ele avança</span>
+                <span>❌ Se o Farol errar, ele fica parado</span>
+                <span>🏁 Quem chegar primeiro ao Farol vence</span>
+            </div>
+
+            <h3>Escolha a disciplina:</h3>
+
+            <div class="grid-disciplinas-jogo">
+                ${Object.keys(disciplinasJogoFarol).map(chave => `
+                    <button onclick="iniciarRotaFarol('${chave}')">
+                        ${disciplinasJogoFarol[chave].nome}
+                    </button>
+                `).join("")}
+            </div>
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+
+
+function iniciarRotaFarol(chaveDisciplina){
+
+    const questoesDisponiveis =
+        obterQuestoesJogoFarol(chaveDisciplina);
+
+    if(questoesDisponiveis.length < 7){
+        mostrarToast("Ainda não há questões suficientes para a Rota até o Farol.");
+        return;
+    }
+
+    rotaQuestoes =
+        questoesDisponiveis.slice(0, 40);
+
+    rotaIndice = 0;
+    rotaPosAluno = 0;
+    rotaPosFarol = 0;
+    rotaCasas = 7;
+    rotaAcertos = 0;
+    rotaErros = 0;
+    rotaDisciplina = chaveDisciplina;
+    rotaRespondido = false;
+    rotaIdPartida = "rota-farol-" + Date.now();
+
+    mostrarQuestaoRotaFarol();
+
+}
+
+
+
+function montarTrilhaRota(posicao, tipo){
+
+    let html = "";
+
+    for(let i = 0; i <= rotaCasas; i++){
+
+        if(i === posicao){
+            html += tipo === "aluno" ? "🚢" : "🗼";
+        }
+        else if(i === rotaCasas){
+            html += "🏁";
+        }
+        else{
+            html += "🌊";
+        }
+
+    }
+
+    return html;
+
+}
+
+
+
+
+
+function escolherRespostaFarolRota(q){
+
+    const farolAcertou =
+        Math.random() < 0.70;
+
+    if(farolAcertou){
+        return {
+            indice: q.correta,
+            acertou: true
+        };
+    }
+
+    const erradas =
+        q.alternativas
+        .map((_, indice) => indice)
+        .filter(indice => indice !== q.correta);
+
+    const indiceErrado =
+        erradas[
+            Math.floor(Math.random() * erradas.length)
+        ];
+
+    return {
+        indice: indiceErrado,
+        acertou: false
+    };
+
+}
+
+
+function garantirQuestoesRotaFarol(){
+
+    if(rotaIndice < rotaQuestoes.length){
+        return true;
+    }
+
+    const novasQuestoes =
+        obterQuestoesJogoFarol(rotaDisciplina);
+
+    if(!novasQuestoes || novasQuestoes.length === 0){
+        return false;
+    }
+
+    rotaQuestoes =
+        novasQuestoes.slice(0, 40);
+
+    rotaIndice = 0;
+
+    return true;
+
+}
+
+function mostrarQuestaoRotaFarol(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    if(
+        rotaPosAluno >= rotaCasas ||
+        rotaPosFarol >= rotaCasas
+    ){
+        finalizarRotaFarol();
+        return;
+    }
+
+    if(!garantirQuestoesRotaFarol()){
+        finalizarRotaFarol();
+        return;
+    }
+
+    const q =
+        rotaQuestoes[rotaIndice];
+
+    rotaRespondido = false;
+
+    const nomeDisciplina =
+        disciplinasJogoFarol[rotaDisciplina]
+        ? disciplinasJogoFarol[rotaDisciplina].nome
+        : "🎯 Desafio";
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-rota painel-rota-ativo">
+
+            <div class="cabecalho-jogo-farol cabecalho-rota">
+                <div>
+                    <h3>🚢 Rota até o Farol</h3>
+                    <p>${nomeDisciplina}</p>
+                </div>
+
+                <span>
+                    Rodada ${rotaIndice + 1}
+                </span>
+            </div>
+
+            <div class="mapa-rota-farol">
+
+                <div class="linha-rota-jogador">
+                    <strong>${obterAvatarJogadorFarol()} ${obterNomeJogadorFarol()}</strong>
+                    <div class="trilha-rota">${montarTrilhaRota(rotaPosAluno, "aluno")}</div>
+                    <small>${rotaPosAluno}/${rotaCasas} casas</small>
+                </div>
+
+                <div class="linha-rota-jogador">
+                    <strong>🗼 Farol</strong>
+                    <div class="trilha-rota">${montarTrilhaRota(rotaPosFarol, "farol")}</div>
+                    <small>${rotaPosFarol}/${rotaCasas} casas</small>
+                </div>
+
+            </div>
+
+            <div class="placar-jogo-farol">
+                <span>✅ Acertos: ${rotaAcertos}</span>
+                <span>❌ Erros: ${rotaErros}</span>
+                <span>⭐ ${rotaAcertos * 10} Pontos</span>
+            </div>
+
+            <div class="questao-jogo-farol questao-rota">
+
+                ${q.texto ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.texto}
+                    </div>
+                ` : ""}
+
+                ${q.imagem ? `
+                    <img src="${q.imagem}" class="imagem-questao">
+                ` : ""}
+
+                ${q.afirmacoes ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.afirmacoes.map(af => `<p>${af}</p>`).join("")}
+                    </div>
+                ` : ""}
+
+                <h3>${q.pergunta}</h3>
+
+                <div class="alternativas-jogo-farol alternativas-rota">
+                    ${q.alternativas.map((alt, indice) => `
+                        <button onclick="responderRotaFarol(${indice})">
+                            ${alt}
+                        </button>
+                    `).join("")}
+                </div>
+
+                <div id="feedbackRotaFarol"></div>
+
+            </div>
+
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function responderRotaFarol(indiceResposta){
+
+    if(rotaRespondido){
+        return;
+    }
+
+    const q =
+        rotaQuestoes[rotaIndice];
+
+    const feedback =
+        document.getElementById("feedbackRotaFarol");
+
+    if(!feedback){
+        return;
+    }
+
+    rotaRespondido = true;
+
+    const botoes =
+        document.querySelectorAll(".alternativas-rota button");
+
+    botoes.forEach((botao, indice) => {
+
+        botao.disabled = true;
+
+        if(indice === q.correta){
+            botao.classList.add("correta");
+        }
+
+        if(indice === indiceResposta && indice !== q.correta){
+            botao.classList.add("errada");
+        }
+
+    });
+
+    let textoAluno = "";
+
+    if(indiceResposta === q.correta){
+
+        rotaAcertos++;
+        acertos++;
+        rotaPosAluno = Math.min(rotaPosAluno + 1, rotaCasas);
+
+        adicionarPontosLuz(
+            10,
+            "Rota até o Farol",
+            rotaIdPartida + ":rodada:" + rotaIndice
+        );
+
+        registrarAtividadeDiaria("acertos", 1);
+
+        textoAluno =
+            "✅ Você acertou e avançou 1 casa.";
+
+    }
+    else{
+
+        rotaErros++;
+        erros++;
+
+        registrarErroJogoFarol(q);
+
+        textoAluno =
+            "❌ Você errou e ficou parado.";
+
+    }
+
+    const jogadaFarol =
+        escolherRespostaFarolRota(q);
+
+    const alternativaFarol =
+        q.alternativas[jogadaFarol.indice];
+
+    let textoFarol =
+        "🗼 O Farol escolheu uma resposta errada e ficou parado.";
+
+    if(jogadaFarol.acertou){
+
+        rotaPosFarol =
+            Math.min(rotaPosFarol + 1, rotaCasas);
+
+        textoFarol =
+            "🗼 O Farol acertou a resposta e avançou 1 casa.";
+    }
+
+    let complemento = "";
+
+    if(indiceResposta !== q.correta){
+        complemento = `
+            <br><br>
+            <strong>Resposta correta:</strong><br>
+            ${q.alternativas[q.correta]}
+
+            <br><br>
+
+            <strong>Explicação:</strong><br>
+            ${q.feedbackErro || q.explicacao || "Sem explicação cadastrada."}
+        `;
+    }
+
+    feedback.innerHTML = `
+        <div class="${indiceResposta === q.correta ? "feedback-acerto" : "feedback-erro"} feedback-rota">
+            <h3>Rodada concluída</h3>
+
+            <div class="resumo-jogada-rota">
+                <p>${textoAluno}</p>
+
+                <div class="jogada-farol-rota ${jogadaFarol.acertou ? "farol-acertou" : "farol-errou"}">
+                    <strong>Resposta do Farol:</strong><br>
+                    ${alternativaFarol}
+                    <br><br>
+                    ${textoFarol}
+                </div>
+            </div>
+
+            ${complemento}
+
+            <br><br>
+            <button onclick="proximaRodadaRotaFarol()">
+                Continuar rota
+            </button>
+        </div>
+    `;
+
+    atualizarEstatisticas();
+    atualizarDashboard();
+    atualizarPainelEstudos();
+    atualizarCadernoErros();
+    salvarDados();
+
+}
+
+function proximaRodadaRotaFarol(){
+
+    rotaIndice++;
+
+    mostrarQuestaoRotaFarol();
+
+}
+
+function finalizarRotaFarol(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    const venceu =
+        rotaPosAluno >= rotaCasas &&
+        rotaPosAluno >= rotaPosFarol;
+
+    const perdeu =
+        rotaPosFarol >= rotaCasas &&
+        rotaPosFarol > rotaPosAluno;
+
+    let titulo = "🤝 Rota encerrada";
+    let icone = "🤝";
+    let mensagem = "A rota terminou equilibrada.";
+    let bonus = 0;
+
+    if(venceu){
+        titulo = "🏆 Você chegou primeiro ao Farol!";
+        icone = "🏆";
+        mensagem = "Excelente navegação! Você venceu a rota contra o Farol.";
+        bonus = 30;
+    }
+    else if(perdeu){
+        titulo = "🗼 O Farol chegou primeiro!";
+        icone = "🗼";
+        mensagem = "O Farol venceu esta rota. Revise seus erros e tente novamente.";
+        bonus = 0;
+    }
+    else if(rotaPosAluno > rotaPosFarol){
+        titulo = "✅ Você venceu por distância!";
+        icone = "✅";
+        mensagem = "Você avançou mais que o Farol.";
+        bonus = 15;
+    }
+    else if(rotaPosFarol > rotaPosAluno){
+        titulo = "📚 O Farol venceu por distância";
+        icone = "📚";
+        mensagem = "O Farol avançou mais. Continue praticando.";
+        bonus = 0;
+    }
+
+    if(bonus > 0){
+        adicionarPontosLuz(
+            bonus,
+            "Bônus Rota até o Farol",
+            rotaIdPartida + ":bonus"
+        );
+    }
+
+    const totalPontos =
+        rotaAcertos * 10 + bonus;
+
+    registrarAtividadeDiaria("simulados", 1);
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol resultado-jogo-farol resultado-rota">
+
+            <h3>${titulo}</h3>
+
+            <div class="resultado-farol-percentual resultado-rota-circulo">
+                <strong>${icone}</strong>
+                <span>Rota finalizada</span>
+            </div>
+
+            <div class="mapa-rota-farol mapa-rota-final">
+
+                <div class="linha-rota-jogador">
+                    <strong>${obterAvatarJogadorFarol()} ${obterNomeJogadorFarol()}</strong>
+                    <div class="trilha-rota">${montarTrilhaRota(Math.min(rotaPosAluno, rotaCasas), "aluno")}</div>
+                    <small>${Math.min(rotaPosAluno, rotaCasas)}/${rotaCasas} casas</small>
+                </div>
+
+                <div class="linha-rota-jogador">
+                    <strong>🗼 Farol</strong>
+                    <div class="trilha-rota">${montarTrilhaRota(Math.min(rotaPosFarol, rotaCasas), "farol")}</div>
+                    <small>${Math.min(rotaPosFarol, rotaCasas)}/${rotaCasas} casas</small>
+                </div>
+
+            </div>
+
+            <div class="perfil-grid-resumo resultado-grid-jogo">
+                <div class="perfil-resumo-card">
+                    <span>✅</span>
+                    <strong>${rotaAcertos}</strong>
+                    <small>Acertos</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>❌</span>
+                    <strong>${rotaErros}</strong>
+                    <small>Erros</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>🚢</span>
+                    <strong>${Math.min(rotaPosAluno, rotaCasas)}</strong>
+                    <small>Seu avanço</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>⭐</span>
+                    <strong>${totalPontos}</strong>
+                    <small>Pontos ganhos</small>
+                </div>
+            </div>
+
+            <p class="mensagem-final-jogo">
+                ${mensagem}
+            </p>
+
+            <div class="botoes-final-jogo">
+                <button onclick="abrirJogoRotaFarol()">
+                    🔁 Jogar novamente
+                </button>
+
+                <button onclick="mostrarTela('erros'); atualizarCadernoErros();">
+                    ❌ Revisar erros
+                </button>
+
+                <button onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">
+                    👤 Ver Perfil
+                </button>
+            </div>
+
+        </div>
+    `;
+
+    atualizarDashboard();
+    atualizarPerfilAluno();
+    salvarDados();
+
+}
+
+
+
+
+// ==========================
+// JOGO SENHA DO FAROL — VOCÊ X FAROL
+// ==========================
+
+let senhaQuestoes = [];
+let senhaIndice = 0;
+let senhaDisciplina = "todas";
+let senhaIdPartida = "";
+let senhaRespondido = false;
+let senhaPalavra = "";
+let senhaLetrasAluno = [];
+let senhaLetrasFarol = [];
+let senhaAcertosAluno = 0;
+let senhaErrosAluno = 0;
+let senhaAcertosFarol = 0;
+let senhaErrosFarol = 0;
+
+const senhasDoFarol = [
+    "FAROL",
+    "SABER",
+    "ESCOLA",
+    "CIENCIA",
+    "LEITURA",
+    "ESTUDO",
+    "BRASIL",
+    "DIDATICA",
+    "HISTORIA",
+    "PORTUGUES",
+    "APRENDER",
+    "CONHECER",
+    "PROVA",
+    "QUESTAO",
+    "ALUNO",
+    "MAPA",
+    "MENTAL"
+];
+
+function abrirJogoSenhaFarol(){
+
+    if(typeof pararTimerRelampago === "function"){
+        pararTimerRelampago();
+    }
+
+    if(typeof pararPreviewMemoria === "function"){
+        pararPreviewMemoria();
+    }
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-senha">
+            <h3>🔐 Senha do Farol</h3>
+            <p>
+                Responda questões para revelar letras da sua senha. O Farol também tenta completar a senha automaticamente.
+            </p>
+
+            <div class="aviso-jogo-senha">
+                <strong>Regras:</strong>
+                <span>✅ Se você acertar, revela uma letra da sua senha</span>
+                <span>❌ Se você errar, sua senha não avança</span>
+                <span>🗼 O Farol também tenta revelar letras da senha</span>
+                <span>🔐 Quem completar a senha primeiro vence</span>
+                <span>⭐ Cada acerto seu dá 10 Pontos de Luz</span>
+            </div>
+
+            <h3>Escolha a disciplina:</h3>
+
+            <div class="grid-disciplinas-jogo">
+                ${Object.keys(disciplinasJogoFarol).map(chave => `
+                    <button onclick="iniciarSenhaFarol('${chave}')">
+                        ${disciplinasJogoFarol[chave].nome}
+                    </button>
+                `).join("")}
+            </div>
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function escolherPalavraSenhaFarol(){
+
+    return senhasDoFarol[
+        Math.floor(Math.random() * senhasDoFarol.length)
+    ];
+
+}
+
+function iniciarSenhaFarol(chaveDisciplina){
+
+    const questoesDisponiveis =
+        obterQuestoesJogoFarol(chaveDisciplina);
+
+    if(questoesDisponiveis.length < 5){
+        mostrarToast("Ainda não há questões suficientes para a Senha do Farol.");
+        return;
+    }
+
+    senhaQuestoes =
+        questoesDisponiveis.slice(0, 40);
+
+    senhaIndice = 0;
+    senhaDisciplina = chaveDisciplina;
+    senhaIdPartida = "senha-farol-" + Date.now();
+    senhaRespondido = false;
+    senhaPalavra = escolherPalavraSenhaFarol();
+    senhaLetrasAluno = Array(senhaPalavra.length).fill(false);
+    senhaLetrasFarol = Array(senhaPalavra.length).fill(false);
+    senhaAcertosAluno = 0;
+    senhaErrosAluno = 0;
+    senhaAcertosFarol = 0;
+    senhaErrosFarol = 0;
+
+    mostrarQuestaoSenhaFarol();
+
+}
+
+function garantirQuestoesSenhaFarol(){
+
+    if(senhaIndice < senhaQuestoes.length){
+        return true;
+    }
+
+    const novasQuestoes =
+        obterQuestoesJogoFarol(senhaDisciplina);
+
+    if(!novasQuestoes || novasQuestoes.length === 0){
+        return false;
+    }
+
+    senhaQuestoes =
+        novasQuestoes.slice(0, 40);
+
+    senhaIndice = 0;
+
+    return true;
+
+}
+
+function senhaCompleta(lista){
+
+    return lista.every(item => item === true);
+
+}
+
+function revelarProximaLetraSenha(lista){
+
+    const indicesFechados =
+        lista
+        .map((aberta, indice) => ({ aberta, indice }))
+        .filter(item => !item.aberta)
+        .map(item => item.indice);
+
+    if(indicesFechados.length === 0){
+        return;
+    }
+
+    const escolhido =
+        indicesFechados[
+            Math.floor(Math.random() * indicesFechados.length)
+        ];
+
+    lista[escolhido] = true;
+
+}
+
+function montarSenhaVisual(lista){
+
+    return senhaPalavra
+        .split("")
+        .map((letra, indice) => {
+            return lista[indice] ? letra : "_";
+        })
+        .join(" ");
+
+}
+
+function mostrarQuestaoSenhaFarol(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    if(
+        senhaCompleta(senhaLetrasAluno) ||
+        senhaCompleta(senhaLetrasFarol)
+    ){
+        finalizarSenhaFarol();
+        return;
+    }
+
+    if(!garantirQuestoesSenhaFarol()){
+        finalizarSenhaFarol();
+        return;
+    }
+
+    const q =
+        senhaQuestoes[senhaIndice];
+
+    senhaRespondido = false;
+
+    const nomeDisciplina =
+        disciplinasJogoFarol[senhaDisciplina]
+        ? disciplinasJogoFarol[senhaDisciplina].nome
+        : "🎯 Desafio";
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-senha painel-senha-ativo">
+
+            <div class="cabecalho-jogo-farol cabecalho-senha">
+                <div>
+                    <h3>🔐 Senha do Farol</h3>
+                    <p>${nomeDisciplina}</p>
+                </div>
+
+                <span>
+                    Rodada ${senhaAcertosAluno + senhaErrosAluno + 1}
+                </span>
+            </div>
+
+            <div class="placar-senha-farol">
+
+                <div class="senha-jogador-card senha-aluno-card">
+                    <strong>${obterAvatarJogadorFarol()} ${obterNomeJogadorFarol()}</strong>
+                    <div class="senha-visual">${montarSenhaVisual(senhaLetrasAluno)}</div>
+                    <small>${senhaAcertosAluno} acertos | ${senhaErrosAluno} erros</small>
+                </div>
+
+                <div class="senha-jogador-card senha-farol-card">
+                    <strong>🗼 Farol</strong>
+                    <div class="senha-visual">${montarSenhaVisual(senhaLetrasFarol)}</div>
+                    <small>${senhaAcertosFarol} acertos | ${senhaErrosFarol} erros</small>
+                </div>
+
+            </div>
+
+            <div class="placar-jogo-farol">
+                <span>✅ Seus acertos: ${senhaAcertosAluno}</span>
+                <span>❌ Seus erros: ${senhaErrosAluno}</span>
+                <span>🗼 Farol: ${senhaAcertosFarol} acertos</span>
+                <span>⭐ ${senhaAcertosAluno * 10} Pontos</span>
+            </div>
+
+            <div class="questao-jogo-farol questao-senha">
+
+                ${q.texto ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.texto}
+                    </div>
+                ` : ""}
+
+                ${q.imagem ? `
+                    <img src="${q.imagem}" class="imagem-questao">
+                ` : ""}
+
+                ${q.afirmacoes ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.afirmacoes.map(af => `<p>${af}</p>`).join("")}
+                    </div>
+                ` : ""}
+
+                <h3>${q.pergunta}</h3>
+
+                <div class="alternativas-jogo-farol alternativas-senha">
+                    ${q.alternativas.map((alt, indice) => `
+                        <button onclick="responderSenhaFarol(${indice})">
+                            ${alt}
+                        </button>
+                    `).join("")}
+                </div>
+
+                <div id="feedbackSenhaFarol"></div>
+
+            </div>
+
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function escolherRespostaFarolSenha(q){
+
+    const farolAcertou =
+        Math.random() < 0.70;
+
+    if(farolAcertou){
+        return {
+            indice: q.correta,
+            acertou: true
+        };
+    }
+
+    const erradas =
+        q.alternativas
+        .map((_, indice) => indice)
+        .filter(indice => indice !== q.correta);
+
+    const indiceErrado =
+        erradas[
+            Math.floor(Math.random() * erradas.length)
+        ];
+
+    return {
+        indice: indiceErrado,
+        acertou: false
+    };
+
+}
+
+function responderSenhaFarol(indiceResposta){
+
+    if(senhaRespondido){
+        return;
+    }
+
+    const q =
+        senhaQuestoes[senhaIndice];
+
+    const feedback =
+        document.getElementById("feedbackSenhaFarol");
+
+    if(!feedback){
+        return;
+    }
+
+    senhaRespondido = true;
+
+    const botoes =
+        document.querySelectorAll(".alternativas-senha button");
+
+    botoes.forEach((botao, indice) => {
+
+        botao.disabled = true;
+
+        if(indice === q.correta){
+            botao.classList.add("correta");
+        }
+
+        if(indice === indiceResposta && indice !== q.correta){
+            botao.classList.add("errada");
+        }
+
+    });
+
+    let textoAluno = "";
+
+    if(indiceResposta === q.correta){
+
+        senhaAcertosAluno++;
+        acertos++;
+
+        revelarProximaLetraSenha(senhaLetrasAluno);
+
+        adicionarPontosLuz(
+            10,
+            "Senha do Farol",
+            senhaIdPartida + ":rodada:" + senhaIndice + ":" + senhaAcertosAluno
+        );
+
+        registrarAtividadeDiaria("acertos", 1);
+
+        textoAluno =
+            "✅ Você acertou e revelou uma letra da sua senha.";
+
+    }
+    else{
+
+        senhaErrosAluno++;
+        erros++;
+
+        registrarErroJogoFarol(q);
+
+        textoAluno =
+            "❌ Você errou e não revelou letra nesta rodada.";
+
+    }
+
+    const jogadaFarol =
+        escolherRespostaFarolSenha(q);
+
+    const alternativaFarol =
+        q.alternativas[jogadaFarol.indice];
+
+    let textoFarol =
+        "🗼 O Farol errou e não revelou letra.";
+
+    if(jogadaFarol.acertou){
+
+        senhaAcertosFarol++;
+        revelarProximaLetraSenha(senhaLetrasFarol);
+
+        textoFarol =
+            "🗼 O Farol acertou e revelou uma letra.";
+    }
+    else{
+        senhaErrosFarol++;
+    }
+
+    let complemento = "";
+
+    if(indiceResposta !== q.correta){
+        complemento = `
+            <br><br>
+            <strong>Resposta correta:</strong><br>
+            ${q.alternativas[q.correta]}
+
+            <br><br>
+
+            <strong>Explicação:</strong><br>
+            ${q.feedbackErro || q.explicacao || "Sem explicação cadastrada."}
+        `;
+    }
+
+    feedback.innerHTML = `
+        <div class="${indiceResposta === q.correta ? "feedback-acerto" : "feedback-erro"} feedback-senha">
+            <h3>Rodada concluída</h3>
+
+            <div class="resumo-jogada-senha">
+                <p>${textoAluno}</p>
+
+                <div class="jogada-farol-senha ${jogadaFarol.acertou ? "farol-acertou" : "farol-errou"}">
+                    <strong>Resposta do Farol:</strong><br>
+                    ${alternativaFarol}
+                    <br><br>
+                    ${textoFarol}
+                </div>
+            </div>
+
+            <div class="senha-preview-feedback">
+                <p><strong>${obterAvatarJogadorFarol()} Sua senha:</strong> ${montarSenhaVisual(senhaLetrasAluno)}</p>
+                <p><strong>🗼 Senha do Farol:</strong> ${montarSenhaVisual(senhaLetrasFarol)}</p>
+            </div>
+
+            ${complemento}
+
+            <br><br>
+            <button onclick="proximaRodadaSenhaFarol()">
+                Continuar senha
+            </button>
+        </div>
+    `;
+
+    atualizarEstatisticas();
+    atualizarDashboard();
+    atualizarPainelEstudos();
+    atualizarCadernoErros();
+    salvarDados();
+
+}
+
+function proximaRodadaSenhaFarol(){
+
+    senhaIndice++;
+
+    mostrarQuestaoSenhaFarol();
+
+}
+
+function finalizarSenhaFarol(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    const alunoCompletou =
+        senhaCompleta(senhaLetrasAluno);
+
+    const farolCompletou =
+        senhaCompleta(senhaLetrasFarol);
+
+    let titulo = "🤝 Senha encerrada";
+    let icone = "🤝";
+    let mensagem = "A disputa terminou equilibrada.";
+    let bonus = 0;
+
+    if(alunoCompletou && !farolCompletou){
+        titulo = "🏆 Você descobriu a senha!";
+        icone = "🏆";
+        mensagem = "Excelente! Você completou a senha antes do Farol.";
+        bonus = 30;
+    }
+    else if(farolCompletou && !alunoCompletou){
+        titulo = "🗼 O Farol descobriu a senha!";
+        icone = "🗼";
+        mensagem = "O Farol completou a senha primeiro. Revise seus erros e tente novamente.";
+        bonus = 0;
+    }
+    else if(alunoCompletou && farolCompletou){
+        titulo = "🤝 Empate na senha!";
+        icone = "🤝";
+        mensagem = "Você e o Farol completaram a senha na mesma rodada.";
+        bonus = 15;
+    }
+    else if(senhaAcertosAluno > senhaAcertosFarol){
+        titulo = "✅ Você venceu por desempenho!";
+        icone = "✅";
+        mensagem = "Você acertou mais do que o Farol.";
+        bonus = 15;
+    }
+    else if(senhaAcertosFarol > senhaAcertosAluno){
+        titulo = "📚 O Farol venceu por desempenho";
+        icone = "📚";
+        mensagem = "O Farol acertou mais nesta partida. Continue praticando.";
+        bonus = 0;
+    }
+
+    if(bonus > 0){
+        adicionarPontosLuz(
+            bonus,
+            "Bônus Senha do Farol",
+            senhaIdPartida + ":bonus"
+        );
+    }
+
+    const totalPontos =
+        senhaAcertosAluno * 10 + bonus;
+
+    registrarAtividadeDiaria("simulados", 1);
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol resultado-jogo-farol resultado-senha">
+
+            <h3>${titulo}</h3>
+
+            <div class="resultado-farol-percentual resultado-senha-circulo">
+                <strong>${icone}</strong>
+                <span>Senha finalizada</span>
+            </div>
+
+            <div class="placar-senha-farol placar-senha-final">
+
+                <div class="senha-jogador-card senha-aluno-card">
+                    <strong>${obterAvatarJogadorFarol()} ${obterNomeJogadorFarol()}</strong>
+                    <div class="senha-visual">${montarSenhaVisual(senhaLetrasAluno)}</div>
+                    <small>${senhaAcertosAluno} acertos | ${senhaErrosAluno} erros</small>
+                </div>
+
+                <div class="senha-jogador-card senha-farol-card">
+                    <strong>🗼 Farol</strong>
+                    <div class="senha-visual">${montarSenhaVisual(senhaLetrasFarol)}</div>
+                    <small>${senhaAcertosFarol} acertos | ${senhaErrosFarol} erros</small>
+                </div>
+
+            </div>
+
+            <div class="senha-palavra-final">
+                🔐 Senha: <strong>${senhaPalavra}</strong>
+            </div>
+
+            <div class="perfil-grid-resumo resultado-grid-jogo">
+                <div class="perfil-resumo-card">
+                    <span>✅</span>
+                    <strong>${senhaAcertosAluno}</strong>
+                    <small>Seus acertos</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>❌</span>
+                    <strong>${senhaErrosAluno}</strong>
+                    <small>Seus erros</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>🗼</span>
+                    <strong>${senhaAcertosFarol}</strong>
+                    <small>Acertos do Farol</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>⭐</span>
+                    <strong>${totalPontos}</strong>
+                    <small>Pontos ganhos</small>
+                </div>
+            </div>
+
+            <p class="mensagem-final-jogo">
+                ${mensagem}
+            </p>
+
+            <div class="botoes-final-jogo">
+                <button onclick="abrirJogoSenhaFarol()">
+                    🔁 Jogar novamente
+                </button>
+
+                <button onclick="mostrarTela('erros'); atualizarCadernoErros();">
+                    ❌ Revisar erros
+                </button>
+
+                <button onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">
+                    👤 Ver Perfil
+                </button>
+            </div>
+
+        </div>
+    `;
+
+    atualizarDashboard();
+    atualizarPerfilAluno();
+    salvarDados();
+
+}
+
+
+
+
+// ==========================
+// JOGO BAÚ DO FAROL — VOCÊ X FAROL
+// ==========================
+
+let bauQuestoes = [];
+let bauIndice = 0;
+let bauDisciplina = "todas";
+let bauIdPartida = "";
+let bauRespondido = false;
+let bauAtual = 0;
+let bauChavesAluno = 0;
+let bauChavesFarol = 0;
+let bauAbertosAluno = 0;
+let bauAbertosFarol = 0;
+let bauAcertosAluno = 0;
+let bauErrosAluno = 0;
+let bauAcertosFarol = 0;
+let bauErrosFarol = 0;
+
+const bausDoFarol = [
+    {
+        nome: "Baú Inicial",
+        icone: "📦",
+        bonus: 15
+    },
+    {
+        nome: "Baú Dourado",
+        icone: "🎁",
+        bonus: 25
+    },
+    {
+        nome: "Baú Especial",
+        icone: "🏆",
+        bonus: 40
+    }
+];
+
+function abrirJogoBauFarol(){
+
+    if(typeof pararTimerRelampago === "function"){
+        pararTimerRelampago();
+    }
+
+    if(typeof pararPreviewMemoria === "function"){
+        pararPreviewMemoria();
+    }
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-bau">
+            <h3>🏴‍☠️ Baú do Farol</h3>
+            <p>
+                Responda questões para ganhar chaves. Quem juntar 3 chaves primeiro abre o baú.
+            </p>
+
+            <div class="aviso-jogo-bau">
+                <strong>Regras:</strong>
+                <span>🔑 Cada acerto seu vale 1 chave</span>
+                <span>❌ Se errar, não ganha chave</span>
+                <span>🗼 O Farol também tenta ganhar chaves automaticamente</span>
+                <span>📦 Cada baú precisa de 3 chaves para abrir</span>
+                <span>🏆 A partida tem 3 baús</span>
+                <span>⭐ Cada acerto seu dá 10 Pontos de Luz</span>
+            </div>
+
+            <h3>Escolha a disciplina:</h3>
+
+            <div class="grid-disciplinas-jogo">
+                ${Object.keys(disciplinasJogoFarol).map(chave => `
+                    <button onclick="iniciarBauFarol('${chave}')">
+                        ${disciplinasJogoFarol[chave].nome}
+                    </button>
+                `).join("")}
+            </div>
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function iniciarBauFarol(chaveDisciplina){
+
+    const questoesDisponiveis =
+        obterQuestoesJogoFarol(chaveDisciplina);
+
+    if(questoesDisponiveis.length < 5){
+        mostrarToast("Ainda não há questões suficientes para o Baú do Farol.");
+        return;
+    }
+
+    bauQuestoes =
+        questoesDisponiveis.slice(0, 40);
+
+    bauIndice = 0;
+    bauDisciplina = chaveDisciplina;
+    bauIdPartida = "bau-farol-" + Date.now();
+    bauRespondido = false;
+    bauAtual = 0;
+    bauChavesAluno = 0;
+    bauChavesFarol = 0;
+    bauAbertosAluno = 0;
+    bauAbertosFarol = 0;
+    bauAcertosAluno = 0;
+    bauErrosAluno = 0;
+    bauAcertosFarol = 0;
+    bauErrosFarol = 0;
+
+    mostrarQuestaoBauFarol();
+
+}
+
+function garantirQuestoesBauFarol(){
+
+    if(bauIndice < bauQuestoes.length){
+        return true;
+    }
+
+    const novasQuestoes =
+        obterQuestoesJogoFarol(bauDisciplina);
+
+    if(!novasQuestoes || novasQuestoes.length === 0){
+        return false;
+    }
+
+    bauQuestoes =
+        novasQuestoes.slice(0, 40);
+
+    bauIndice = 0;
+
+    return true;
+
+}
+
+function montarChavesBau(qtd){
+
+    let html = "";
+
+    for(let i = 0; i < 3; i++){
+        html += i < qtd ? "🔑" : "▫️";
+    }
+
+    return html;
+
+}
+
+function farolGanhouChaveBau(){
+
+    return Math.random() < 0.70;
+
+}
+
+function verificarAberturaBau(){
+
+    let resultado = {
+        abriu: false,
+        vencedor: "",
+        bonus: 0
+    };
+
+    const bau =
+        bausDoFarol[bauAtual] || bausDoFarol[bausDoFarol.length - 1];
+
+    if(bauChavesAluno >= 3){
+
+        bauAbertosAluno++;
+        resultado.abriu = true;
+        resultado.vencedor = "aluno";
+        resultado.bonus = bau.bonus;
+
+        adicionarPontosLuz(
+            bau.bonus,
+            "Bônus Baú do Farol",
+            bauIdPartida + ":bau:" + bauAtual + ":bonus"
+        );
+
+    }
+    else if(bauChavesFarol >= 3){
+
+        bauAbertosFarol++;
+        resultado.abriu = true;
+        resultado.vencedor = "farol";
+        resultado.bonus = 0;
+
+    }
+
+    if(resultado.abriu){
+
+        bauAtual++;
+        bauChavesAluno = 0;
+        bauChavesFarol = 0;
+
+    }
+
+    return resultado;
+
+}
+
+function mostrarQuestaoBauFarol(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    if(bauAtual >= bausDoFarol.length){
+        finalizarBauFarol();
+        return;
+    }
+
+    if(!garantirQuestoesBauFarol()){
+        finalizarBauFarol();
+        return;
+    }
+
+    const q =
+        bauQuestoes[bauIndice];
+
+    const bau =
+        bausDoFarol[bauAtual];
+
+    bauRespondido = false;
+
+    const nomeDisciplina =
+        disciplinasJogoFarol[bauDisciplina]
+        ? disciplinasJogoFarol[bauDisciplina].nome
+        : "🎯 Desafio";
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol painel-bau painel-bau-ativo">
+
+            <div class="cabecalho-jogo-farol cabecalho-bau">
+                <div>
+                    <h3>🏴‍☠️ Baú do Farol</h3>
+                    <p>${nomeDisciplina}</p>
+                </div>
+
+                <span>
+                    Baú ${bauAtual + 1}/3
+                </span>
+            </div>
+
+            <div class="bau-atual-area">
+                <div class="bau-grande">
+                    <span>${bau.icone}</span>
+                    <strong>${bau.nome}</strong>
+                    <small>Precisa de 3 chaves para abrir</small>
+                </div>
+            </div>
+
+            <div class="placar-bau-farol">
+
+                <div class="bau-jogador-card bau-aluno-card">
+                    <strong>${obterAvatarJogadorFarol()} ${obterNomeJogadorFarol()}</strong>
+                    <div class="chaves-bau">${montarChavesBau(bauChavesAluno)}</div>
+                    <small>${bauAbertosAluno} baús abertos</small>
+                </div>
+
+                <div class="bau-jogador-card bau-farol-card">
+                    <strong>🗼 Farol</strong>
+                    <div class="chaves-bau">${montarChavesBau(bauChavesFarol)}</div>
+                    <small>${bauAbertosFarol} baús abertos</small>
+                </div>
+
+            </div>
+
+            <div class="placar-jogo-farol">
+                <span>✅ Seus acertos: ${bauAcertosAluno}</span>
+                <span>❌ Seus erros: ${bauErrosAluno}</span>
+                <span>📦 Seus baús: ${bauAbertosAluno}</span>
+                <span>⭐ ${bauAcertosAluno * 10} Pontos</span>
+            </div>
+
+            <div class="questao-jogo-farol questao-bau">
+
+                ${q.texto ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.texto}
+                    </div>
+                ` : ""}
+
+                ${q.imagem ? `
+                    <img src="${q.imagem}" class="imagem-questao">
+                ` : ""}
+
+                ${q.afirmacoes ? `
+                    <div class="texto-base jogo-texto-base">
+                        ${q.afirmacoes.map(af => `<p>${af}</p>`).join("")}
+                    </div>
+                ` : ""}
+
+                <h3>${q.pergunta}</h3>
+
+                <div class="alternativas-jogo-farol alternativas-bau">
+                    ${q.alternativas.map((alt, indice) => `
+                        <button onclick="responderBauFarol(${indice})">
+                            ${alt}
+                        </button>
+                    `).join("")}
+                </div>
+
+                <div id="feedbackBauFarol"></div>
+
+            </div>
+
+        </div>
+    `;
+
+    area.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+function responderBauFarol(indiceResposta){
+
+    if(bauRespondido){
+        return;
+    }
+
+    const q =
+        bauQuestoes[bauIndice];
+
+    const feedback =
+        document.getElementById("feedbackBauFarol");
+
+    if(!feedback){
+        return;
+    }
+
+    bauRespondido = true;
+
+    const botoes =
+        document.querySelectorAll(".alternativas-bau button");
+
+    botoes.forEach((botao, indice) => {
+
+        botao.disabled = true;
+
+        if(indice === q.correta){
+            botao.classList.add("correta");
+        }
+
+        if(indice === indiceResposta && indice !== q.correta){
+            botao.classList.add("errada");
+        }
+
+    });
+
+    let textoAluno = "";
+
+    if(indiceResposta === q.correta){
+
+        bauAcertosAluno++;
+        acertos++;
+        bauChavesAluno++;
+
+        adicionarPontosLuz(
+            10,
+            "Baú do Farol",
+            bauIdPartida + ":rodada:" + bauIndice + ":" + bauAcertosAluno
+        );
+
+        registrarAtividadeDiaria("acertos", 1);
+
+        textoAluno =
+            "✅ Você acertou e ganhou 1 chave.";
+
+    }
+    else{
+
+        bauErrosAluno++;
+        erros++;
+
+        registrarErroJogoFarol(q);
+
+        textoAluno =
+            "❌ Você errou e não ganhou chave.";
+
+    }
+
+    const farolGanhou =
+        farolGanhouChaveBau();
+
+    let textoFarol =
+        "🗼 O Farol não conseguiu uma chave nesta rodada.";
+
+    if(farolGanhou){
+
+        bauAcertosFarol++;
+        bauChavesFarol++;
+
+        textoFarol =
+            "🗼 O Farol conseguiu 1 chave nesta rodada.";
+
+    }
+    else{
+
+        bauErrosFarol++;
+
+    }
+
+    const resultadoBau =
+        verificarAberturaBau();
+
+    let textoBau = "";
+
+    if(resultadoBau.abriu){
+
+        if(resultadoBau.vencedor === "aluno"){
+            textoBau = `
+                <div class="bau-aberto-feedback aluno-abriu-bau">
+                    🎉 Você abriu o baú e ganhou bônus de ${resultadoBau.bonus} Pontos de Luz!
+                </div>
+            `;
+        }
+        else{
+            textoBau = `
+                <div class="bau-aberto-feedback farol-abriu-bau">
+                    🗼 O Farol abriu este baú primeiro.
+                </div>
+            `;
+        }
+
+    }
+
+    let complemento = "";
+
+    if(indiceResposta !== q.correta){
+        complemento = `
+            <br><br>
+            <strong>Resposta correta:</strong><br>
+            ${q.alternativas[q.correta]}
+
+            <br><br>
+
+            <strong>Explicação:</strong><br>
+            ${q.feedbackErro || q.explicacao || "Sem explicação cadastrada."}
+        `;
+    }
+
+    feedback.innerHTML = `
+        <div class="${indiceResposta === q.correta ? "feedback-acerto" : "feedback-erro"} feedback-bau">
+            <h3>Rodada concluída</h3>
+
+            <div class="resumo-jogada-bau">
+                <p>${textoAluno}</p>
+                <p>${textoFarol}</p>
+                ${textoBau}
+            </div>
+
+            <div class="senha-preview-feedback">
+                <p><strong>${obterAvatarJogadorFarol()} Suas chaves:</strong> ${montarChavesBau(bauChavesAluno)}</p>
+                <p><strong>🗼 Chaves do Farol:</strong> ${montarChavesBau(bauChavesFarol)}</p>
+            </div>
+
+            ${complemento}
+
+            <br><br>
+            <button onclick="proximaRodadaBauFarol()">
+                Continuar baú
+            </button>
+        </div>
+    `;
+
+    atualizarEstatisticas();
+    atualizarDashboard();
+    atualizarPainelEstudos();
+    atualizarCadernoErros();
+    salvarDados();
+
+}
+
+function proximaRodadaBauFarol(){
+
+    bauIndice++;
+
+    mostrarQuestaoBauFarol();
+
+}
+
+function finalizarBauFarol(){
+
+    const area =
+        document.getElementById("areaJogoConstruaFarol");
+
+    if(!area){
+        return;
+    }
+
+    let titulo = "🤝 Baús encerrados";
+    let icone = "🤝";
+    let mensagem = "A disputa dos baús terminou equilibrada.";
+    let bonusFinal = 0;
+
+    if(bauAbertosAluno > bauAbertosFarol){
+
+        titulo = "🏆 Você venceu o Baú do Farol!";
+        icone = "🏆";
+        mensagem = "Excelente! Você abriu mais baús que o Farol.";
+        bonusFinal = 25;
+
+    }
+    else if(bauAbertosFarol > bauAbertosAluno){
+
+        titulo = "🗼 O Farol venceu os baús!";
+        icone = "🗼";
+        mensagem = "O Farol abriu mais baús desta vez. Revise seus erros e tente novamente.";
+
+    }
+    else if(bauAcertosAluno > bauAcertosFarol){
+
+        titulo = "✅ Você venceu por desempenho!";
+        icone = "✅";
+        mensagem = "Você acertou mais questões que o Farol.";
+        bonusFinal = 15;
+
+    }
+    else if(bauAcertosFarol > bauAcertosAluno){
+
+        titulo = "📚 O Farol venceu por desempenho";
+        icone = "📚";
+        mensagem = "O Farol teve melhor desempenho. Continue praticando.";
+
+    }
+
+    if(bonusFinal > 0){
+        adicionarPontosLuz(
+            bonusFinal,
+            "Bônus Final Baú do Farol",
+            bauIdPartida + ":bonus-final"
+        );
+    }
+
+    const totalPontos =
+        bauAcertosAluno * 10 + bonusFinal;
+
+    registrarAtividadeDiaria("simulados", 1);
+
+    area.innerHTML = `
+        <div class="painel-jogo-farol resultado-jogo-farol resultado-bau">
+
+            <h3>${titulo}</h3>
+
+            <div class="resultado-farol-percentual resultado-bau-circulo">
+                <strong>${icone}</strong>
+                <span>Baús finalizados</span>
+            </div>
+
+            <div class="placar-bau-farol placar-bau-final">
+
+                <div class="bau-jogador-card bau-aluno-card">
+                    <strong>${obterAvatarJogadorFarol()} ${obterNomeJogadorFarol()}</strong>
+                    <div class="chaves-bau">📦 ${bauAbertosAluno}</div>
+                    <small>Baús abertos</small>
+                </div>
+
+                <div class="bau-jogador-card bau-farol-card">
+                    <strong>🗼 Farol</strong>
+                    <div class="chaves-bau">📦 ${bauAbertosFarol}</div>
+                    <small>Baús abertos</small>
+                </div>
+
+            </div>
+
+            <div class="perfil-grid-resumo resultado-grid-jogo">
+                <div class="perfil-resumo-card">
+                    <span>✅</span>
+                    <strong>${bauAcertosAluno}</strong>
+                    <small>Seus acertos</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>❌</span>
+                    <strong>${bauErrosAluno}</strong>
+                    <small>Seus erros</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>📦</span>
+                    <strong>${bauAbertosAluno}</strong>
+                    <small>Seus baús</small>
+                </div>
+
+                <div class="perfil-resumo-card">
+                    <span>⭐</span>
+                    <strong>${totalPontos}</strong>
+                    <small>Pontos ganhos</small>
+                </div>
+            </div>
+
+            <p class="mensagem-final-jogo">
+                ${mensagem}
+            </p>
+
+            <div class="botoes-final-jogo">
+                <button onclick="abrirJogoBauFarol()">
+                    🔁 Jogar novamente
+                </button>
+
+                <button onclick="mostrarTela('erros'); atualizarCadernoErros();">
+                    ❌ Revisar erros
+                </button>
+
+                <button onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">
+                    👤 Ver Perfil
+                </button>
+            </div>
+
+        </div>
+    `;
+
+    atualizarDashboard();
+    atualizarPerfilAluno();
+    salvarDados();
+
+}
 
 
 // ==========================
