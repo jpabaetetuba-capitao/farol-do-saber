@@ -6718,61 +6718,58 @@ function atualizarStatusAssuntos(){
             )
         ) || {};
 
-    if(
-        document.getElementById(
-            "btnHardware"
-        )
-        &&
-        resultados.hardware
-    ){
+    document
+        .querySelectorAll(".btn-assunto")
+        .forEach(botao => {
 
-        document.getElementById(
-            "btnHardware"
-        ).innerHTML = `
+            const onclick =
+                botao.getAttribute("onclick") || "";
 
-            💻 Hardware
+            const match =
+                onclick.match(/abrirAssunto\((['\"])(.*?)\1\)/);
 
-            <br><br>
+            if(!match){
+                return;
+            }
 
-            ✅ Concluído
+            const assunto = match[2];
 
-            <br>
+            if(!botao.dataset.tituloOriginal){
+                botao.dataset.tituloOriginal =
+                    botao.innerHTML.trim();
+            }
 
-            ${resultados.hardware.medalha}
+            const resultado =
+                resultados[assunto];
 
-            ${resultados.hardware.percentual}%
+            if(!resultado){
+                botao.innerHTML =
+                    botao.dataset.tituloOriginal;
+                return;
+            }
 
-        `;
+            const tituloOriginal =
+                mapasMentaisPorAssunto[assunto]
+                ? mapasMentaisPorAssunto[assunto].titulo
+                : botao.dataset.tituloOriginal;
 
-    }
+            botao.innerHTML = `
 
-    if(
-        document.getElementById(
-            "btnFundamentosCiencias"
-        )
-        &&
-        resultados.fundamentosCiencias
-    ){
+                ${tituloOriginal}
 
-        document.getElementById(
-            "btnFundamentosCiencias"
-        ).innerHTML = `
+                <br><br>
 
-            🔬 Fundamentos do Ensino de Ciências
+                ✅ Concluído
 
-            <br><br>
+                <br>
 
-            ✅ Concluído
+                ${resultado.medalha || ""}
 
-            <br>
+                ${resultado.percentual || 0}%
 
-            ${resultados.fundamentosCiencias.medalha}
+            `;
 
-            ${resultados.fundamentosCiencias.percentual}%
-
-        `;
-
-    }
+        });
 
 }
 
