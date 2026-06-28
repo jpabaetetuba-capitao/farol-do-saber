@@ -4,11 +4,11 @@ const tea = [
     pergunta: "Durante uma formação continuada, uma professora afirmou que o Transtorno do Espectro Autista (TEA) é caracterizado exclusivamente por dificuldades de aprendizagem. Outro participante discordou, mencionando os critérios previstos na Lei nº 12.764/2012. À luz da legislação, assinale a alternativa correta:",
 
     alternativas: [
-        "O TEA caracteriza-se exclusivamente por dificuldades acadêmicas.",
-        "O TEA é definido apenas pela presença de deficiência intelectual.",
-        "O TEA é caracterizado apenas por alterações motoras e sensoriais.",
+        "O TEA caracteriza-se exclusivamente por dificuldades acadêmicas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O TEA é definido apenas pela presença de deficiência intelectual, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O TEA é caracterizado apenas por alterações motoras e sensoriais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "O TEA envolve deficiência persistente na comunicação e interação social, associada a padrões restritivos e repetitivos de comportamento, interesses ou atividades.",
-        "O TEA depende obrigatoriamente da presença de deficiência física associada."
+        "O TEA depende obrigatoriamente da presença de deficiência física associada, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
     correta: 3,
@@ -24,11 +24,11 @@ const tea = [
     pergunta: "Durante uma avaliação clínica, verificou-se que determinada criança apresenta interesses extremamente restritos, necessidade intensa de rotinas e resistência significativa a mudanças. Considerando a definição legal do TEA, essas características estão relacionadas principalmente:",
 
     alternativas: [
-        "À deficiência visual associada.",
-        "À incapacidade civil da criança.",
+        "À deficiência visual associada, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "À incapacidade civil da criança, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A padrões restritivos e repetitivos de comportamento.",
-        "À ausência de desenvolvimento cognitivo.",
-        "Ao transtorno de aprendizagem específico."
+        "À ausência de desenvolvimento cognitivo, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "Ao transtorno de aprendizagem específico, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
     correta: 2,
@@ -44,11 +44,11 @@ const tea = [
     pergunta: "Durante um seminário, um palestrante afirmou que todas as pessoas com TEA apresentam exatamente as mesmas características, necessidades e potencialidades. À luz da legislação e dos conhecimentos atuais sobre o transtorno, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
+        "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "As características do TEA variam significativamente entre os indivíduos, justificando a expressão 'espectro'.",
-        "As diferenças individuais desaparecem na vida adulta.",
-        "As manifestações do TEA dependem exclusivamente do ambiente escolar.",
-        "Os níveis de suporte não possuem relevância prática."
+        "As diferenças individuais desaparecem na vida adulta, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "As manifestações do TEA dependem exclusivamente do ambiente escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Os níveis de suporte não possuem relevância prática, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
     correta: 1,
@@ -64,10 +64,10 @@ const tea = [
     pergunta: "Um candidato afirmou que a caracterização do TEA exige obrigatoriamente comprometimento intelectual severo. Considerando a Lei nº 12.764/2012, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
+        "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "O comprometimento intelectual severo é requisito indispensável para caracterização do TEA.",
-        "Somente pessoas com deficiência intelectual podem ser diagnosticadas com TEA.",
-        "O TEA somente existe quando há incapacidade total para comunicação.",
+        "Somente pessoas com deficiência intelectual podem ser diagnosticadas com TEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O TEA somente existe quando há incapacidade total para comunicação, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A presença de deficiência intelectual não constitui requisito obrigatório para a caracterização do TEA."
     ],
 
@@ -104,10 +104,10 @@ const tea = [
 
     alternativas: [
         "Os direitos da pessoa com TEA abrangem áreas como saúde, educação, trabalho, assistência social e cidadania.",
-        "A proteção jurídica restringe-se ao atendimento médico especializado.",
-        "A legislação protege apenas crianças e adolescentes com TEA.",
-        "Os direitos previstos aplicam-se exclusivamente à rede pública de serviços.",
-        "A proteção legal limita-se às situações de vulnerabilidade econômica."
+        "A proteção jurídica restringe-se ao atendimento médico especializado, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A legislação protege apenas crianças e adolescentes com TEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Os direitos previstos aplicam-se exclusivamente à rede pública de serviços, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A proteção legal limita-se às situações de vulnerabilidade econômica, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 0,
@@ -123,11 +123,11 @@ const tea = [
     pergunta: "Um servidor afirmou que a pessoa com TEA somente pode exercer plenamente seus direitos após comprovar elevado grau de autonomia e independência. Considerando a legislação vigente, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "O exercício dos direitos depende da demonstração prévia de autonomia plena.",
-        "A autonomia é requisito obrigatório para reconhecimento dos direitos legais.",
+        "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
+        "O exercício dos direitos depende da demonstração prévia de autonomia plena, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
+        "A autonomia é requisito obrigatório para reconhecimento dos direitos legais, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "Os direitos da pessoa com TEA decorrem de sua condição de cidadã e não de critérios de desempenho pessoal.",
-        "Somente adultos com TEA podem exercer plenamente seus direitos."
+        "Somente adultos com TEA podem exercer plenamente seus direitos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 3,
@@ -143,10 +143,10 @@ const tea = [
     pergunta: "Durante um debate sobre inclusão, um participante afirmou que a pessoa com TEA deve ser tratada exatamente da mesma forma em todas as situações para que haja igualdade. À luz dos princípios que orientam a legislação, assinale a alternativa correta:",
 
     alternativas: [
-        "A igualdade exige tratamento absolutamente idêntico em qualquer contexto.",
-        "A igualdade somente admite diferenciação por decisão judicial.",
-        "Qualquer adaptação configura privilégio indevido.",
-        "O princípio da igualdade impede medidas de inclusão específicas.",
+        "A igualdade exige tratamento absolutamente idêntico em qualquer contexto, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A igualdade somente admite diferenciação por decisão judicial, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Qualquer adaptação configura privilégio indevido, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "O princípio da igualdade impede medidas de inclusão específicas, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A oferta de apoios e adaptações necessárias pode ser indispensável para assegurar igualdade de oportunidades."
     ],
 
@@ -163,11 +163,11 @@ const tea = [
     pergunta: "Um município decidiu elaborar políticas públicas para pessoas com TEA sem consultar famílias, profissionais ou entidades representativas. Ao analisar a situação, um conselheiro destacou um princípio presente na legislação. Assinale a alternativa correta:",
 
     alternativas: [
-        "A formulação de políticas públicas é responsabilidade exclusiva da União.",
-        "A participação da sociedade deve ser evitada para garantir neutralidade técnica.",
+        "A formulação de políticas públicas é responsabilidade exclusiva da União, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A participação da sociedade deve ser evitada para garantir neutralidade técnica, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A efetivação dos direitos da pessoa com TEA envolve atuação articulada entre poder público, sociedade e famílias.",
-        "As famílias não possuem papel relevante na efetivação dos direitos.",
-        "A legislação atribui toda responsabilidade ao sistema de saúde."
+        "As famílias não possuem papel relevante na efetivação dos direitos, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
+        "A legislação atribui toda responsabilidade ao sistema de saúde, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
     correta: 2,
@@ -183,11 +183,11 @@ const tea = [
     pergunta: "Uma campanha institucional divulgou que pessoas com TEA possuem menor capacidade de participação social e, por isso, devem permanecer em ambientes específicos para evitar dificuldades de convivência. Considerando os princípios da Lei nº 12.764/2012, assinale a alternativa correta:",
 
     alternativas: [
-        "A segregação social é medida recomendada pela legislação.",
+        "A segregação social é medida recomendada pela legislação, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "A legislação promove inclusão, participação social, cidadania e combate à discriminação.",
-        "A participação comunitária deve ocorrer apenas quando houver supervisão constante.",
-        "A limitação da convivência social favorece o desenvolvimento da pessoa com TEA.",
-        "A convivência comunitária não constitui objetivo da política nacional."
+        "A participação comunitária deve ocorrer apenas quando houver supervisão constante, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A limitação da convivência social favorece o desenvolvimento da pessoa com TEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A convivência comunitária não constitui objetivo da política nacional, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
     correta: 1,
@@ -202,10 +202,10 @@ const tea = [
     pergunta: "Uma criança apresentou sinais compatíveis com Transtorno do Espectro Autista durante os primeiros anos de vida. Os responsáveis foram orientados a aguardar a idade escolar para buscar avaliação especializada. À luz da Lei nº 12.764/2012, assinale a alternativa correta:",
 
     alternativas: [
-        "A orientação está correta, pois o diagnóstico somente deve ocorrer após a alfabetização.",
-        "A intervenção precoce pode prejudicar o desenvolvimento da criança.",
-        "A avaliação especializada somente deve ocorrer quando houver prejuízo acadêmico.",
-        "A legislação não trata do diagnóstico precoce.",
+        "A orientação está correta, pois o diagnóstico somente deve ocorrer após a alfabetização, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A intervenção precoce pode prejudicar o desenvolvimento da criança, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A avaliação especializada somente deve ocorrer quando houver prejuízo acadêmico, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A legislação não trata do diagnóstico precoce, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "O diagnóstico precoce constitui uma das diretrizes relevantes da política de proteção da pessoa com TEA."
     ],
 
@@ -242,11 +242,11 @@ const tea = [
     pergunta: "Uma família procurou os serviços públicos após receber o diagnóstico de TEA de seu filho. O gestor responsável informou que a atuação dos serviços deveria ocorrer de forma isolada, sem articulação entre setores. À luz da política nacional, assinale a alternativa correta:",
 
     alternativas: [
-        "A atuação isolada dos serviços aumenta a eficiência do atendimento.",
+        "A atuação isolada dos serviços aumenta a eficiência do atendimento, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A integração entre diferentes áreas favorece a proteção integral da pessoa com TEA.",
-        "Somente os serviços educacionais devem atuar após o diagnóstico.",
-        "A articulação institucional é proibida para evitar sobreposição de funções.",
-        "A legislação determina atuação exclusiva dos serviços de saúde."
+        "Somente os serviços educacionais devem atuar após o diagnóstico, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A articulação institucional é proibida para evitar sobreposição de funções, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A legislação determina atuação exclusiva dos serviços de saúde, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 1,
@@ -262,11 +262,11 @@ const tea = [
     pergunta: "Durante um curso de capacitação, um participante afirmou que o atendimento multiprofissional deve ocorrer apenas quando houver comprometimento severo associado ao TEA. Considerando a legislação, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "O atendimento multiprofissional depende exclusivamente da gravidade do quadro.",
+        "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
+        "O atendimento multiprofissional depende exclusivamente da gravidade do quadro, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "O atendimento multiprofissional é uma diretriz da política nacional e não se restringe a casos específicos previamente definidos.",
-        "Somente crianças podem receber atendimento multiprofissional.",
-        "A legislação não menciona esse tipo de atendimento."
+        "Somente crianças podem receber atendimento multiprofissional, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A legislação não menciona esse tipo de atendimento, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
     correta: 2,
@@ -283,10 +283,10 @@ const tea = [
 
     alternativas: [
         "O diagnóstico precoce favorece o acesso a serviços, apoios e intervenções adequadas.",
-        "A afirmação está correta.",
+        "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "O diagnóstico precoce possui importância limitada à emissão de documentos.",
-        "O diagnóstico precoce interessa apenas à área da saúde.",
-        "A legislação não relaciona diagnóstico e acesso a direitos."
+        "O diagnóstico precoce interessa apenas à área da saúde, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A legislação não relaciona diagnóstico e acesso a direitos, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
     correta: 0,
@@ -302,10 +302,10 @@ const tea = [
 
     alternativas: [
         "A pessoa com TEA possui direito ao acesso a ações e serviços de saúde adequados às suas necessidades.",
-        "A legislação prioriza a postergação do atendimento especializado.",
+        "A legislação prioriza a postergação do atendimento especializado, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "O acesso aos serviços de saúde depende exclusivamente da disponibilidade orçamentária do município.",
-        "O atendimento especializado somente é assegurado após a idade escolar.",
-        "A legislação limita-se à educação e não trata de serviços de saúde."
+        "O atendimento especializado somente é assegurado após a idade escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A legislação limita-se à educação e não trata de serviços de saúde, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 0,
@@ -321,11 +321,11 @@ const tea = [
     pergunta: "Durante uma discussão sobre políticas públicas, um gestor afirmou que o atendimento da pessoa com TEA deve concentrar-se apenas no tratamento dos sintomas clínicos observados. Considerando a legislação, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
+        "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "A proteção da pessoa com TEA envolve abordagem ampla voltada ao desenvolvimento, autonomia e inclusão social.",
-        "O atendimento deve limitar-se às necessidades médicas imediatas.",
-        "O atendimento integral é incompatível com a política nacional.",
-        "A legislação não prevê ações voltadas ao desenvolvimento global da pessoa."
+        "O atendimento deve limitar-se às necessidades médicas imediatas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O atendimento integral é incompatível com a política nacional, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A legislação não prevê ações voltadas ao desenvolvimento global da pessoa, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
     correta: 1,
@@ -341,10 +341,10 @@ const tea = [
     pergunta: "Uma adolescente com TEA necessitava de acompanhamento realizado por profissionais de diferentes áreas. Entretanto, um órgão público decidiu oferecer apenas atendimento isolado, sem articulação entre os serviços. À luz da política nacional, assinale a alternativa correta:",
 
     alternativas: [
-        "A atuação isolada dos serviços é a forma preferencial prevista na legislação.",
-        "A articulação entre áreas distintas é vedada para evitar conflitos de competência.",
-        "Somente profissionais médicos devem participar do atendimento.",
-        "O atendimento multiprofissional aplica-se exclusivamente à infância.",
+        "A atuação isolada dos serviços é a forma preferencial prevista na legislação, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
+        "A articulação entre áreas distintas é vedada para evitar conflitos de competência, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "Somente profissionais médicos devem participar do atendimento, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O atendimento multiprofissional aplica-se exclusivamente à infância, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A integração entre diferentes profissionais e serviços favorece a efetivação dos direitos da pessoa com TEA."
     ],
 
@@ -361,11 +361,11 @@ const tea = [
     pergunta: "Um servidor afirmou que a pessoa com TEA somente pode acessar serviços especializados de saúde após comprovar incapacidade para realizar atividades da vida diária. Considerando a Lei nº 12.764/2012, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "O acesso aos serviços depende da demonstração de incapacidade total.",
-        "A comprovação de dependência permanente é requisito legal obrigatório.",
+        "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
+        "O acesso aos serviços depende da demonstração de incapacidade total, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A comprovação de dependência permanente é requisito legal obrigatório, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "O direito ao atendimento não está condicionado à demonstração de incapacidade absoluta.",
-        "A legislação restringe os serviços especializados aos casos mais graves."
+        "A legislação restringe os serviços especializados aos casos mais graves, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 3,
@@ -421,10 +421,10 @@ const tea = [
 
     alternativas: [
         "A participação efetiva, a aprendizagem e a igualdade de oportunidades também integram o conceito de inclusão.",
-        "A presença física é suficiente para caracterizar inclusão.",
-        "A inclusão exige apenas matrícula regular.",
-        "A inclusão depende exclusivamente do acompanhante especializado.",
-        "A convivência escolar não possui relevância para a inclusão."
+        "A presença física é suficiente para caracterizar inclusão, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A inclusão exige apenas matrícula regular, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A inclusão depende exclusivamente do acompanhante especializado, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A convivência escolar não possui relevância para a inclusão, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
     correta: 0,
@@ -440,11 +440,11 @@ const tea = [
     pergunta: "Durante um conselho de classe, um professor sugeriu que um estudante com TEA fosse dispensado de atividades em grupo para evitar dificuldades de interação. Considerando os princípios da inclusão escolar, assinale a alternativa correta:",
 
     alternativas: [
-        "A dispensa é recomendada para preservar o rendimento da turma.",
-        "A participação em grupo depende exclusivamente da vontade dos colegas.",
-        "Estudantes com TEA devem realizar atividades separadas sempre que possível.",
+        "A dispensa é recomendada para preservar o rendimento da turma, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
+        "A participação em grupo depende exclusivamente da vontade dos colegas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "Estudantes com TEA devem realizar atividades separadas sempre que possível, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "A exclusão de atividades coletivas pode comprometer o direito à participação e à inclusão.",
-        "A legislação incentiva a segregação pedagógica como estratégia educacional."
+        "A legislação incentiva a segregação pedagógica como estratégia educacional, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
     correta: 3,
@@ -460,11 +460,11 @@ const tea = [
     pergunta: "Uma escola informou aos pais de um aluno com TEA que ele poderia frequentar as aulas, mas não participaria de excursões, feiras científicas e eventos culturais promovidos pela instituição. À luz da legislação, assinale a alternativa correta:",
 
     alternativas: [
-        "A medida é válida por razões organizacionais.",
+        "A medida é válida por razões organizacionais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A exclusão de atividades escolares em razão do TEA pode configurar prática discriminatória.",
-        "A escola pode restringir atividades extracurriculares para estudantes com TEA.",
+        "A escola pode restringir atividades extracurriculares para estudantes com TEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A participação em atividades complementares depende da existência de laudo específico.",
-        "Eventos extracurriculares não integram o processo de inclusão."
+        "Eventos extracurriculares não integram o processo de inclusão, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
     correta: 1,
@@ -480,9 +480,9 @@ const tea = [
     pergunta: "Uma instituição de ensino exigiu que os responsáveis permanecessem permanentemente de prontidão para buscar um estudante com TEA sempre que ocorresse qualquer comportamento considerado inadequado pela escola. Considerando os princípios legais aplicáveis, assinale a alternativa correta:",
 
     alternativas: [
-        "A responsabilidade pela inclusão pertence exclusivamente à família.",
+        "A responsabilidade pela inclusão pertence exclusivamente à família, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A escola pode transferir integralmente suas responsabilidades educacionais aos responsáveis.",
-        "A medida é obrigatória para todos os estudantes com TEA.",
+        "A medida é obrigatória para todos os estudantes com TEA, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
         "A permanência do estudante pode ser condicionada à disponibilidade integral da família.",
         "A inclusão escolar resulta de responsabilidade compartilhada entre escola, família e poder público."
     ],
@@ -521,8 +521,8 @@ const tea = [
     alternativas: [
         "A escola está correta, pois a matrícula elimina qualquer necessidade de apoio adicional.",
         "A presença do acompanhante depende exclusivamente da conveniência administrativa da escola.",
-        "O acompanhante especializado somente pode atuar na rede pública.",
-        "A legislação não prevê qualquer forma de apoio individualizado.",
+        "O acompanhante especializado somente pode atuar na rede pública, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A legislação não prevê qualquer forma de apoio individualizado, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "O acompanhante especializado constitui direito do estudante quando comprovadamente necessário."
     ],
 
@@ -539,11 +539,11 @@ const tea = [
     pergunta: "Durante uma capacitação, um professor afirmou que todo estudante com TEA possui automaticamente direito ao acompanhante especializado, independentemente de avaliação das necessidades individuais. À luz da legislação, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "O acompanhante é obrigatório para toda pessoa diagnosticada com TEA.",
-        "O acompanhante somente pode ser solicitado pela escola.",
+        "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
+        "O acompanhante é obrigatório para toda pessoa diagnosticada com TEA, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "O acompanhante somente pode ser solicitado pela escola, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A necessidade de acompanhante especializado deve ser analisada conforme as necessidades do estudante.",
-        "A legislação proíbe qualquer análise individual das necessidades educacionais."
+        "A legislação proíbe qualquer análise individual das necessidades educacionais, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
     correta: 3,
@@ -559,10 +559,10 @@ const tea = [
     pergunta: "Uma instituição de ensino informou aos pais de um estudante com TEA que permitiria a presença do acompanhante especializado apenas mediante pagamento de taxa adicional destinada à cobertura dos custos do serviço. Considerando a legislação vigente, assinale a alternativa correta:",
 
     alternativas: [
-        "A cobrança é válida por se tratar de serviço diferenciado.",
+        "A cobrança é válida por se tratar de serviço diferenciado, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A cobrança adicional vinculada à condição do estudante contraria a legislação.",
-        "A cobrança depende apenas da concordância da família.",
-        "A cobrança é permitida exclusivamente na rede privada.",
+        "A cobrança depende apenas da concordância da família, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A cobrança é permitida exclusivamente na rede privada, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A escola possui liberdade para definir valores relacionados à inclusão."
     ],
 
@@ -579,11 +579,11 @@ const tea = [
     pergunta: "Ao analisar a situação de um estudante com TEA, a equipe escolar concluiu que ele necessitava de apoio especializado para participar adequadamente das atividades educacionais. Um gestor argumentou que a concessão desse apoio configuraria privilégio indevido em relação aos demais estudantes. Considerando os princípios da inclusão, assinale a alternativa correta:",
 
     alternativas: [
-        "O apoio especializado constitui privilégio incompatível com a igualdade.",
-        "Apoios individualizados somente podem existir mediante decisão judicial.",
+        "O apoio especializado constitui privilégio incompatível com a igualdade, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "Apoios individualizados somente podem existir mediante decisão judicial, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A oferta de apoios necessários busca assegurar igualdade de oportunidades e participação efetiva.",
-        "A igualdade exige tratamento idêntico em todas as situações.",
-        "A legislação proíbe medidas específicas voltadas à inclusão."
+        "A igualdade exige tratamento idêntico em todas as situações, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A legislação proíbe medidas específicas voltadas à inclusão, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
     correta: 2,
@@ -598,11 +598,11 @@ const tea = [
     pergunta: "Durante uma capacitação para servidores públicos, um participante afirmou que a Carteira de Identificação da Pessoa com Transtorno do Espectro Autista (CIPTEA) foi criada para conceder novos direitos aos seus portadores. Considerando a legislação vigente, assinale a alternativa correta:",
 
     alternativas: [
-        "A CIPTEA cria direitos exclusivos que não existem para outras pessoas com TEA.",
+        "A CIPTEA cria direitos exclusivos que não existem para outras pessoas com TEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A CIPTEA tem como principal finalidade facilitar a identificação da pessoa com TEA e o acesso aos direitos já assegurados em lei.",
-        "A CIPTEA substitui o diagnóstico e o laudo médico.",
-        "A CIPTEA é obrigatória para o reconhecimento da condição de pessoa com TEA.",
-        "A CIPTEA é exigida para matrícula escolar e atendimento em saúde."
+        "A CIPTEA substitui o diagnóstico e o laudo médico, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
+        "A CIPTEA é obrigatória para o reconhecimento da condição de pessoa com TEA, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A CIPTEA é exigida para matrícula escolar e atendimento em saúde, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
     correta: 1,
@@ -618,10 +618,10 @@ const tea = [
     pergunta: "Uma pessoa com TEA compareceu a um órgão público sem portar a CIPTEA. O atendente informou que, sem a carteira, nenhum dos direitos previstos na legislação poderia ser reconhecido. À luz da legislação vigente, assinale a alternativa correta:",
 
     alternativas: [
-        "O atendente está correto, pois a CIPTEA é requisito obrigatório para todos os direitos.",
-        "Sem a CIPTEA, a pessoa deixa de ser considerada pessoa com deficiência.",
-        "Os direitos somente podem ser exercidos após a emissão da CIPTEA.",
-        "A legislação condiciona a cidadania da pessoa com TEA à apresentação da carteira.",
+        "O atendente está correto, pois a CIPTEA é requisito obrigatório para todos os direitos, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
+        "Sem a CIPTEA, a pessoa deixa de ser considerada pessoa com deficiência, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "Os direitos somente podem ser exercidos após a emissão da CIPTEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A legislação condiciona a cidadania da pessoa com TEA à apresentação da carteira, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
         "A CIPTEA facilita a identificação, mas não constitui condição para existência dos direitos legais."
     ],
 
@@ -638,11 +638,11 @@ const tea = [
     pergunta: "Durante um atendimento em serviço público, um servidor questionou a necessidade de oferecer prioridade a uma pessoa com TEA, alegando que o transtorno não gera direitos diferenciados. Considerando a legislação, assinale a alternativa correta:",
 
     alternativas: [
-        "A prioridade somente existe para pessoas com deficiência física.",
-        "A prioridade depende exclusivamente da avaliação do servidor responsável.",
-        "A prioridade aplica-se apenas a crianças com TEA.",
+        "A prioridade somente existe para pessoas com deficiência física, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A prioridade depende exclusivamente da avaliação do servidor responsável, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A prioridade aplica-se apenas a crianças com TEA, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A pessoa com TEA, por ser considerada pessoa com deficiência para todos os efeitos legais, pode usufruir dos direitos correlatos previstos na legislação.",
-        "A legislação não relaciona TEA e direitos de atendimento prioritário."
+        "A legislação não relaciona TEA e direitos de atendimento prioritário, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
     correta: 3,
@@ -659,10 +659,10 @@ const tea = [
 
     alternativas: [
         "A CIPTEA busca facilitar a identificação da pessoa com TEA e contribuir para acesso mais célere aos serviços e direitos.",
-        "A afirmação está correta.",
-        "A CIPTEA possui finalidade apenas cadastral.",
-        "A CIPTEA existe apenas para controle governamental.",
-        "A CIPTEA substitui políticas públicas de inclusão."
+        "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
+        "A CIPTEA possui finalidade apenas cadastral, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A CIPTEA existe apenas para controle governamental, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A CIPTEA substitui políticas públicas de inclusão, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem."
     ],
 
     correta: 0,
@@ -697,11 +697,11 @@ const tea = [
     pergunta: "Durante uma reunião sobre inclusão, um gestor afirmou que a participação da família na promoção dos direitos da pessoa com TEA é facultativa e possui pouca relevância prática. À luz da Lei nº 12.764/2012, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta, pois os direitos da pessoa com TEA dependem exclusivamente do Estado.",
+        "A afirmação está correta, pois os direitos da pessoa com TEA dependem exclusivamente do Estado, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A legislação reconhece a importância da orientação, do apoio e da participação da família na efetivação dos direitos da pessoa com TEA.",
-        "A família atua apenas durante a infância, sem relevância nas demais fases da vida.",
-        "A participação familiar deve ser evitada para preservar a autonomia da pessoa.",
-        "A família não possui papel reconhecido pela política nacional."
+        "A família atua apenas durante a infância, sem relevância nas demais fases da vida, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A participação familiar deve ser evitada para preservar a autonomia da pessoa, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A família não possui papel reconhecido pela política nacional, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
     ],
 
     correta: 1,
@@ -718,10 +718,10 @@ const tea = [
 
     alternativas: [
         "A inclusão pressupõe participação na comunidade e exercício da cidadania em igualdade de oportunidades.",
-        "A segregação social favorece a inclusão.",
-        "A convivência comunitária deve ocorrer apenas em ambientes controlados.",
-        "A participação social depende exclusivamente da presença de acompanhante especializado.",
-        "A vida comunitária não possui relação com os direitos da pessoa com TEA."
+        "A segregação social favorece a inclusão, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A convivência comunitária deve ocorrer apenas em ambientes controlados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A participação social depende exclusivamente da presença de acompanhante especializado, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A vida comunitária não possui relação com os direitos da pessoa com TEA, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
     correta: 0,
@@ -737,10 +737,10 @@ const tea = [
     pergunta: "Durante um debate sobre autonomia, um participante afirmou que pessoas com TEA são incapazes de tomar decisões sobre a própria vida e devem ser permanentemente representadas por terceiros. À luz da legislação e dos princípios de inclusão, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta para todas as pessoas com TEA.",
-        "A autonomia é incompatível com o TEA.",
-        "A necessidade de apoio elimina automaticamente a capacidade de autodeterminação.",
-        "A representação permanente constitui regra geral para pessoas com TEA.",
+        "A afirmação está correta para todas as pessoas com TEA, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
+        "A autonomia é incompatível com o TEA, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A necessidade de apoio elimina automaticamente a capacidade de autodeterminação, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A representação permanente constitui regra geral para pessoas com TEA, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A legislação reconhece a dignidade, a autonomia e o direito ao desenvolvimento da pessoa com TEA."
     ],
 
@@ -757,11 +757,11 @@ const tea = [
     pergunta: "Um município decidiu elaborar ações voltadas à pessoa com TEA sem envolver escolas, serviços de saúde, assistência social ou entidades da sociedade civil. Considerando a política nacional, assinale a alternativa correta:",
 
     alternativas: [
-        "A medida está correta, pois a atuação deve ser centralizada.",
-        "A integração entre serviços gera conflitos e deve ser evitada.",
-        "A participação da sociedade civil não possui relevância para a inclusão.",
+        "A medida está correta, pois a atuação deve ser centralizada, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
+        "A integração entre serviços gera conflitos e deve ser evitada, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A participação da sociedade civil não possui relevância para a inclusão, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A proteção dos direitos da pessoa com TEA depende da articulação entre diferentes setores e instituições.",
-        "As políticas voltadas ao TEA devem ser executadas exclusivamente pelo sistema de saúde."
+        "As políticas voltadas ao TEA devem ser executadas exclusivamente pelo sistema de saúde, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 3,
@@ -796,11 +796,11 @@ const tea = [
     pergunta: "Uma empresa recusou a participação de um candidato com TEA em processo seletivo, alegando que pessoas com o transtorno apresentam dificuldades naturais de adaptação ao ambiente corporativo. À luz da legislação e dos princípios de inclusão, assinale a alternativa correta:",
 
     alternativas: [
-        "A decisão é legítima quando baseada em experiência anterior da empresa.",
-        "A empresa pode restringir a participação de pessoas com TEA para evitar riscos operacionais.",
-        "A seleção diferenciada é recomendada para proteger o candidato.",
+        "A decisão é legítima quando baseada em experiência anterior da empresa, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "A empresa pode restringir a participação de pessoas com TEA para evitar riscos operacionais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A seleção diferenciada é recomendada para proteger o candidato, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "A recusa caracteriza tratamento potencialmente discriminatório baseado em generalizações sobre a condição da pessoa.",
-        "A legislação não se aplica às relações privadas de trabalho."
+        "A legislação não se aplica às relações privadas de trabalho, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos."
     ],
 
     correta: 3,
@@ -816,11 +816,11 @@ const tea = [
     pergunta: "Durante uma palestra, um gestor afirmou que a inclusão profissional da pessoa com TEA limita-se ao acesso ao emprego, não abrangendo oportunidades de crescimento e desenvolvimento na carreira. Considerando os princípios da legislação, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
+        "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
         "A promoção da inclusão envolve acesso, permanência, desenvolvimento e participação em igualdade de oportunidades.",
-        "A inclusão profissional restringe-se à contratação inicial.",
-        "A pessoa com TEA possui direito apenas ao primeiro acesso ao mercado de trabalho.",
-        "O crescimento profissional depende exclusivamente da ausência de necessidades de apoio."
+        "A inclusão profissional restringe-se à contratação inicial, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A pessoa com TEA possui direito apenas ao primeiro acesso ao mercado de trabalho, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "O crescimento profissional depende exclusivamente da ausência de necessidades de apoio, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 1,
@@ -895,11 +895,11 @@ const tea = [
     pergunta: "Durante uma atividade escolar, alguns estudantes passaram a evitar deliberadamente a participação de um colega com TEA em trabalhos e projetos, alegando que sua presença dificultaria o desempenho do grupo. Ao tomar conhecimento da situação, a direção da escola deve compreender que essa conduta:",
 
     alternativas: [
-        "Constitui prática aceitável quando aprovada pela maioria dos estudantes.",
-        "Representa simples conflito interpessoal sem relevância para a inclusão.",
-        "É justificável quando houver diferença de rendimento acadêmico.",
+        "Constitui prática aceitável quando aprovada pela maioria dos estudantes, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
+        "Representa simples conflito interpessoal sem relevância para a inclusão, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
+        "É justificável quando houver diferença de rendimento acadêmico, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
         "Pode caracterizar discriminação e violação dos princípios de inclusão e igualdade de oportunidades.",
-        "Deve ser resolvida exclusivamente pela família do estudante."
+        "Deve ser resolvida exclusivamente pela família do estudante, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
     ],
 
     correta: 3,
@@ -935,10 +935,10 @@ const tea = [
     pergunta: "Um gestor público afirmou que o combate ao preconceito relacionado ao TEA deve ocorrer apenas por meio de ações de saúde, pois educação e conscientização social não possuem relevância jurídica. Considerando a Política Nacional de Proteção dos Direitos da Pessoa com TEA, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "O combate ao preconceito depende exclusivamente de atendimento médico.",
-        "A legislação não trata de discriminação ou preconceito.",
-        "O preconceito somente possui relevância quando praticado por agentes públicos.",
+        "A afirmação está correta, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
+        "O combate ao preconceito depende exclusivamente de atendimento médico, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
+        "A legislação não trata de discriminação ou preconceito, de maneira uniforme, sem análise das condições concretas e dos direitos envolvidos.",
+        "O preconceito somente possui relevância quando praticado por agentes públicos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
         "A conscientização social e a promoção da inclusão são instrumentos importantes para proteção dos direitos da pessoa com TEA."
     ],
 
