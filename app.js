@@ -7292,6 +7292,10 @@ async function enviarMensagem(){
 
         autorEmail: usuarioEmail,
 
+        avatarAtual: lojaFarol.avatarAtual || "👤",
+
+        nomeAvatarAtual: lojaFarol.nomeAvatarAtual || "Estudante",
+
         mensagem: texto,
 
         data: Date.now(),
@@ -7338,55 +7342,76 @@ iniciarDigitando();
 const idMensagem =
 doc.id;
 
+           const avatarMensagem =
+                msg.avatarAtual || "👤";
+
+            const nomeMensagem =
+                msg.autor || "Aluno";
+
            html += `
 
-<div class="msg-chat">
+<div class="msg-chat msg-chat-com-avatar">
 
-  <div class="autor-chat">
+  <div class="linha-autor-chat">
 
-    👤 ${msg.autor}
+    <div class="avatar-chat-msg">
+        ${montarAvatarHTML(
+            avatarMensagem,
+            msg.nomeAvatarAtual || "Avatar",
+            "avatar-chat-img"
+        )}
+    </div>
 
-    ${
-        administradores.includes(
-    msg.autorEmail
-)
-    ? " 👑"
-    : ""
+    <div class="dados-chat-msg">
 
-    }
+        <div class="autor-chat">
 
-    <span class="hora-chat">
+            ${nomeMensagem}
 
-        ${msg.horario || ""}
+            ${
+                administradores.includes(
+                    msg.autorEmail
+                )
+                ? " 👑"
+                : ""
+            }
 
-    </span>
+            <span class="hora-chat">
 
-</div>
+                ${msg.horario || ""}
 
-   <div class="bolha-chat">
+            </span>
 
-    ${msg.mensagem}
+        </div>
 
-</div>
+        <div class="bolha-chat">
 
-<div class="curtidas-chat">
+            ${msg.mensagem}
 
-    <button
-        class="btn-curtir-chat"
-        onclick="
-            curtirMensagem(
-                '${idMensagem}'
-            )">
+        </div>
 
-        🗼
+        <div class="curtidas-chat">
 
-    </button>
+            <button
+                class="btn-curtir-chat"
+                onclick="
+                    curtirMensagem(
+                        '${idMensagem}'
+                    )">
 
-    ${
-        msg.curtidas > 0
-        ? msg.curtidas
-        : ""
-    }
+                🗼
+
+            </button>
+
+            ${
+                msg.curtidas > 0
+                ? msg.curtidas
+                : ""
+            }
+
+        </div>
+
+    </div>
 
 </div>
 
@@ -7455,9 +7480,18 @@ async function carregarUsuariosOnlineChat(){
                 (dados.nome || "")
                 .split(" ")[0];
 
+            const avatarOnline =
+                dados.avatarAtual || "👤";
+
             html += `
-                <div class="usuario-online">
-                    🟢 ${primeiroNome}
+                <div class="usuario-online usuario-online-com-avatar">
+                    <span class="bolinha-online">🟢</span>
+                    ${montarAvatarHTML(
+                        avatarOnline,
+                        dados.nomeAvatarAtual || "Avatar",
+                        "avatar-online-chat"
+                    )}
+                    <span>${primeiroNome}</span>
                 </div>
             `;
 

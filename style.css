@@ -3446,3 +3446,84 @@ progress{
 }
 
 
+/* ==========================
+   CHAT GERAL COM AVATAR
+========================== */
+
+.msg-chat-com-avatar{
+    margin-bottom:14px;
+}
+
+.linha-autor-chat{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.avatar-chat-msg,
+.avatar-chat-img{
+    width:42px;
+    height:42px;
+    min-width:42px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff8e1;
+    border:2px solid #f9a825;
+    object-fit:cover;
+    font-size:22px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.14);
+}
+
+.dados-chat-msg{
+    flex:1;
+    min-width:0;
+}
+
+.dados-chat-msg .autor-chat{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    flex-wrap:wrap;
+    font-weight:bold;
+    color:#0d47a1;
+    margin-bottom:4px;
+}
+
+.dados-chat-msg .hora-chat{
+    font-size:12px;
+    color:#666;
+    font-weight:normal;
+}
+
+.dados-chat-msg .bolha-chat{
+    word-break:break-word;
+}
+
+.usuario-online-com-avatar{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    margin-bottom:6px;
+}
+
+.avatar-online-chat{
+    width:28px;
+    height:28px;
+    min-width:28px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff8e1;
+    border:1px solid #f9a825;
+    object-fit:cover;
+    font-size:15px;
+}
+
+.bolinha-online{
+    font-size:10px;
+}
+
+
