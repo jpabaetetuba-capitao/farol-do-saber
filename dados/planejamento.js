@@ -9,7 +9,7 @@ Durante uma reunião pedagógica, um professor afirmou que o planejamento é des
         "O planejamento tem como principal finalidade atender às exigências burocráticas dos sistemas de ensino.",
         "A experiência profissional substitui a necessidade de definir objetivos, metodologias e formas de avaliação.",
         "A improvisação favorece a adaptação do ensino às necessidades dos estudantes de forma mais eficiente que o planejamento.",
-        "O planejamento deve ocorrer apenas no início do ano letivo e não interfere diretamente na aprendizagem.",
+        "O planejamento deve ocorrer em geral no início do ano letivo e não interfere diretamente na aprendizagem.",
         "O planejamento constitui um processo intencional de reflexão, organização e tomada de decisões sobre a ação educativa."
     ],
 
@@ -35,10 +35,10 @@ Ao discutir o conceito de planejamento educacional, uma coordenadora pedagógica
 
     alternativas: [
         "Consiste na elaboração de documentos formais sem relação com a prática pedagógica.",
-        "Tem caráter exclusivamente administrativo e financeiro.",
-        "Limita-se à escolha dos conteúdos curriculares que serão ensinados.",
+        "Tem caráter predominantemente administrativo e financeiro.",
+        "Concentra-se à escolha dos conteúdos curriculares que serão ensinados.",
         "É um processo de intervenção consciente sobre a realidade educacional.",
-        "Restringe-se à organização das avaliações escolares."
+        "Concentra-se à organização das avaliações escolares."
     ],
 
     correta: 3,
@@ -62,17 +62,11 @@ Segundo uma perspectiva crítica do Planejamento Educacional, o ato de planejar 
     `,
 
     alternativas: [
-
         "Ser neutro e desvinculado das condições sociais e históricas em que ocorre.",
-
         "Limitar-se ao cumprimento das determinações legais impostas aos sistemas de ensino.",
-
         "Considerar o contexto social, político e cultural em que se desenvolvem as práticas educativas.",
-
-        "Priorizar exclusivamente aspectos técnicos relacionados à execução das atividades escolares.",
-
-        "Ser elaborado apenas pela equipe gestora da instituição."
-
+        "Priorizar predominantemente aspectos técnicos relacionados à execução das atividades escolares.",
+        "Ser elaborado em geral pela equipe gestora da instituição."
     ],
 
     correta: 2,
@@ -96,11 +90,11 @@ Uma escola identificou elevados índices de evasão e baixo rendimento escolar. 
     `,
 
     alternativas: [
-        "À execução das ações planejadas.",
+        "À execução das ações planejadas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Ao diagnóstico da realidade educacional, fundamental para o planejamento.",
-        "Ao controle disciplinar dos estudantes.",
-        "À avaliação final dos resultados obtidos.",
-        "À elaboração exclusiva dos instrumentos de avaliação."
+        "Ao controle disciplinar dos estudantes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "À avaliação final dos resultados obtidos, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "À elaboração exclusiva dos instrumentos de avaliação, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 1,
@@ -126,9 +120,9 @@ Ao refletir sobre os fundamentos do planejamento, um professor concluiu que plan
     alternativas: [
         "O planejamento possui caráter dinâmico e pode ser readequado diante das necessidades identificadas.",
         "O planejamento deve permanecer inalterado independentemente das situações encontradas na prática.",
-        "A flexibilidade compromete a eficiência do planejamento pedagógico.",
-        "A revisão do planejamento demonstra falha na elaboração inicial do documento.",
-        "Alterações no planejamento só podem ocorrer mediante autorização da gestão escolar."
+        "A flexibilidade compromete a eficiência do planejamento pedagógico, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "A revisão do planejamento demonstra falha na elaboração inicial do documento, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "Alterações no planejamento só podem ocorrer mediante autorização da gestão escolar, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 0,
@@ -153,10 +147,10 @@ Durante uma formação pedagógica, discutiu-se que o planejamento não deve ser
 
     alternativas: [
         "Orientar ações educativas intencionais voltadas à melhoria da aprendizagem e à transformação da realidade educacional.",
-        "Garantir o cumprimento automático das determinações administrativas dos sistemas de ensino.",
-        "Organizar tecnicamente as atividades escolares sem considerar as necessidades da comunidade.",
-        "Produzir registros burocráticos que permitam fiscalização das atividades docentes.",
-        "Padronizar as práticas pedagógicas independentemente das características dos estudantes."
+        "Garantir o cumprimento automático das determinações administrativas dos sistemas de ensino, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Organizar tecnicamente as atividades escolares sem considerar as necessidades da comunidade, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "Produzir registros burocráticos que permitam fiscalização das atividades docentes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Padronizar as práticas pedagógicas independentemente das características dos estudantes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 0,
@@ -180,7 +174,7 @@ Um coordenador pedagógico afirmou que toda ação educativa pressupõe algum ti
     `,
 
     alternativas: [
-        "Planejar significa apenas produzir documentos escritos.",
+        "Planejar significa em geral produzir documentos escritos.",
         "O planejamento só existe quando aprovado pela gestão escolar.",
         "O planejamento é inerente à ação humana intencional.",
         "As ações educativas podem ocorrer sem definição prévia de objetivos.",
@@ -208,11 +202,11 @@ Ao comparar diferentes concepções de planejamento, uma professora observou que
     `,
 
     alternativas: [
-        "Todas as concepções de planejamento possuem os mesmos fundamentos teóricos.",
-        "O planejamento é um processo neutro e desprovido de concepções educacionais.",
-        "A dimensão técnica é incompatível com qualquer forma de planejamento educacional.",
+        "Todas as concepções de planejamento possuem os mesmos fundamentos teóricos, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "O planejamento é um processo neutro e desprovido de concepções educacionais, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "A dimensão técnica é incompatível com qualquer forma de planejamento educacional, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
         "As concepções de planejamento refletem diferentes visões de educação, sociedade e formação humana.",
-        "A participação coletiva elimina a necessidade de organização técnica."
+        "A participação coletiva elimina a necessidade de organização técnica, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 3,
@@ -236,7 +230,7 @@ Uma escola decidiu elaborar seu planejamento anual envolvendo professores, estud
     `,
 
     alternativas: [
-        "O planejamento deve ser construído exclusivamente pelos especialistas da área educacional.",
+        "O planejamento deve ser construído predominantemente pelos especialistas da área educacional.",
         "A gestão democrática reduz a eficiência dos processos de planejamento.",
         "As decisões pedagógicas devem permanecer restritas aos professores.",
         "A participação da comunidade limita a autonomia da escola.",
@@ -264,11 +258,11 @@ Segundo autores como Libâneo e Vasconcellos, uma das finalidades centrais do pl
     `,
 
     alternativas: [
-        "Controlar rigidamente todas as ações dos professores durante o ano letivo.",
+        "Controlar rigidamente todas as ações dos professores durante o ano letivo, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Orientar a prática pedagógica de forma consciente, articulada e coerente com os objetivos educacionais.",
-        "Eliminar a necessidade de avaliação do processo educativo.",
-        "Substituir a autonomia docente por decisões administrativas centralizadas.",
-        "Garantir exclusivamente o cumprimento do calendário escolar."
+        "Eliminar a necessidade de avaliação do processo educativo, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "Substituir a autonomia docente por decisões administrativas centralizadas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Garantir predominantemente o cumprimento do calendário escolar, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 1,
@@ -292,10 +286,10 @@ Durante uma formação pedagógica, um professor afirmou que Planejamento Educac
     `,
 
     alternativas: [
-        "O Planejamento Educacional refere-se às ações do professor em sala de aula, enquanto os demais dizem respeito apenas à administração escolar.",
-        "O Planejamento Escolar possui abrangência nacional, enquanto o Planejamento Educacional restringe-se à escola.",
+        "O Planejamento Educacional refere-se às ações do professor em sala de aula, enquanto os demais dizem respeito em geral à administração escolar.",
+        "O Planejamento Escolar possui abrangência nacional, enquanto o Planejamento Educacional concentra-se à escola.",
         "O Planejamento de Ensino é elaborado pelos sistemas de ensino e o Planejamento Educacional pelos professores.",
-        "As diferenças entre essas modalidades são exclusivamente terminológicas.",
+        "As diferenças entre essas modalidades são predominantemente terminológicas.",
         "As três modalidades possuem níveis distintos de abrangência, objetivos e responsáveis por sua elaboração."
     ],
 
@@ -404,11 +398,11 @@ Ao analisar os diferentes níveis de planejamento, um candidato concluiu que ele
     `,
 
     alternativas: [
-        "Incorreta, pois cada modalidade de planejamento opera de forma independente.",
-        "Correta apenas para escolas privadas.",
+        "Incorreta, pois cada modalidade de planejamento opera de forma independente, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "Correta em geral para escolas privadas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Correta, pois os diferentes níveis de planejamento devem manter relação de complementaridade e coerência.",
-        "Incorreta, pois o Planejamento de Ensino não depende das diretrizes institucionais.",
-        "Incorreta, porque o Planejamento Escolar substitui os demais."
+        "Incorreta, pois o Planejamento de Ensino não depende das diretrizes institucionais, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Incorreta, porque o Planejamento Escolar substitui os demais, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 2,
@@ -432,7 +426,7 @@ Durante a elaboração do Projeto Político-Pedagógico, a direção de uma esco
 
     alternativas: [
         "A participação coletiva fortalece o compromisso dos diferentes segmentos com as decisões e metas definidas.",
-        "O planejamento escolar deve ser elaborado exclusivamente pela equipe gestora para garantir eficiência administrativa.",
+        "O planejamento escolar deve ser elaborado predominantemente pela equipe gestora para garantir eficiência administrativa.",
         "A gestão democrática limita a autonomia da equipe pedagógica.",
         "As decisões educacionais tornam-se menos eficazes quando compartilhadas com a comunidade.",
         "O planejamento participativo deve restringir-se às questões administrativas da escola."
@@ -459,9 +453,9 @@ Uma coordenadora pedagógica afirmou que o planejamento participativo não consi
     `,
 
     alternativas: [
-        "Incorreta, pois a participação da comunidade deve ocorrer apenas na execução das ações planejadas.",
-        "Incorreta, porque a tomada de decisões compete exclusivamente aos especialistas em educação.",
-        "Correta apenas para escolas privadas.",
+        "Incorreta, pois a participação da comunidade deve ocorrer em geral na execução das ações planejadas.",
+        "Incorreta, porque a tomada de decisões compete predominantemente aos especialistas em educação.",
+        "Correta em geral para escolas privadas.",
         "Correta, pois o planejamento participativo pressupõe envolvimento real nos processos decisórios.",
         "Incorreta, pois participação e planejamento são processos independentes."
     ],
@@ -515,17 +509,11 @@ Uma escola realizou reuniões, grupos de trabalho e consultas à comunidade para
     `,
 
     alternativas: [
-
-        "Deve ser construído exclusivamente a partir das determinações legais dos sistemas de ensino.",
-
-        "Dispensa o diagnóstico da realidade escolar.",
-
+        "Deve ser construído predominantemente a partir das determinações legais dos sistemas de ensino.",
+        "Reduz a necessidade de o diagnóstico da realidade escolar.",
         "Valoriza a análise coletiva da realidade como etapa fundamental do processo de planejamento.",
-
         "Substitui a necessidade de definição de objetivos educacionais.",
-
-        "Limita-se à organização de atividades extracurriculares."
-
+        "Concentra-se à organização de atividades extracurriculares."
     ],
 
     correta: 2,
@@ -549,10 +537,10 @@ Segundo autores que defendem o planejamento participativo, a construção coleti
     `,
 
     alternativas: [
-        "Dispensa a necessidade de liderança e coordenação das ações educativas.",
-        "Garante automaticamente a ausência de conflitos entre os participantes.",
-        "Substitui os objetivos pedagógicos pelos interesses individuais dos participantes.",
-        "Torna desnecessária a avaliação das ações desenvolvidas.",
+        "Reduz a necessidade de a necessidade de liderança e coordenação das ações educativas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Garante automaticamente a ausência de conflitos entre os participantes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Substitui os objetivos pedagógicos pelos interesses individuais dos participantes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Torna desnecessária a avaliação das ações desenvolvidas, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
         "Favorece maior legitimidade, compromisso e corresponsabilidade na execução das ações planejadas."
     ],
 
@@ -577,10 +565,10 @@ Durante uma formação pedagógica, um professor afirmou que o Plano de Ensino e
     `,
 
     alternativas: [
-        "O Plano de Aula possui abrangência anual, enquanto o Plano de Ensino é elaborado para uma única aula.",
-        "O Plano de Ensino é elaborado pela gestão escolar e o Plano de Aula pelos sistemas de ensino.",
-        "O Plano de Aula substitui completamente o Plano de Ensino durante o ano letivo.",
-        "As diferenças entre ambos são exclusivamente burocráticas.",
+        "O Plano de Aula possui abrangência anual, enquanto o Plano de Ensino é elaborado para uma única aula, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "O Plano de Ensino é elaborado pela gestão escolar e o Plano de Aula pelos sistemas de ensino, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "O Plano de Aula substitui amplamente o Plano de Ensino durante o ano letivo, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "As diferenças entre ambos são predominantemente burocráticas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "O Plano de Ensino organiza o trabalho pedagógico para um período mais amplo, enquanto o Plano de Aula detalha uma situação específica de ensino."
     ],
 
@@ -609,7 +597,7 @@ Ao elaborar um Plano de Ensino, uma professora definiu objetivos de aprendizagem
         "Permite substituir o planejamento das aulas individuais.",
         "Elimina a necessidade de adaptações durante o período letivo.",
         "Prioriza a avaliação em detrimento dos demais elementos didáticos.",
-        "Dispensa a consideração das características dos estudantes."
+        "Reduz a necessidade de a consideração das características dos estudantes."
     ],
 
     correta: 0,
@@ -706,8 +694,8 @@ Com base nos fundamentos do planejamento educacional, assinale a alternativa cor
     `,
 
     alternativas: [
-        "Apenas a afirmativa I está correta.",
-        "Apenas a afirmativa II está correta.",
+        "Em geral a afirmativa I está correta.",
+        "Em geral a afirmativa II está correta.",
         "As afirmativas I e II estão corretas, mas não possuem relação entre si.",
         "As afirmativas I e II estão corretas, e a II complementa a I.",
         "Ambas as afirmativas estão incorretas."
@@ -733,17 +721,11 @@ Durante a elaboração de seu plano de ensino, uma professora definiu objetivos 
     `,
 
     alternativas: [
-
-        "Os objetivos possuem função secundária no planejamento e servem apenas para registro documental.",
-
+        "Os objetivos possuem função secundária no planejamento e servem em geral para registro documental.",
         "A definição dos objetivos orienta a seleção dos demais elementos do processo de ensino-aprendizagem.",
-
-        "Os objetivos devem ser estabelecidos somente após a escolha dos instrumentos de avaliação.",
-
+        "Os objetivos devem ser estabelecidos normalmente após a escolha dos instrumentos de avaliação.",
         "A metodologia utilizada determina integralmente os objetivos educacionais.",
-
         "Os objetivos são independentes dos conteúdos e das competências previstas no currículo."
-
     ],
 
     correta: 1,
@@ -767,10 +749,10 @@ Ao analisar um plano de ensino, a coordenação pedagógica observou que vários
     `,
 
     alternativas: [
-        "O excesso de conteúdos conceituais previstos para a disciplina.",
-        "A ausência de alinhamento entre currículo e avaliação.",
-        "A utilização inadequada de metodologias participativas.",
-        "O uso excessivo de recursos tecnológicos.",
+        "O excesso de conteúdos conceituais previstos para a disciplina, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A ausência de alinhamento entre currículo e avaliação, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "A utilização inadequada de metodologias participativas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O uso excessivo de recursos tecnológicos, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
         "A falta de clareza e precisão na formulação dos objetivos de aprendizagem."
     ],
 
@@ -795,11 +777,11 @@ Uma professora formulou o seguinte objetivo: "Analisar criticamente diferentes f
     `,
 
     alternativas: [
-        "Ênfase exclusiva na memorização de conteúdos.",
-        "Ausência de relação com competências previstas na BNCC.",
+        "Ênfase exclusiva na memorização de conteúdos, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Ausência de relação com competências previstas na BNCC, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Desenvolvimento de habilidades cognitivas complexas relacionadas à análise e argumentação.",
-        "Priorização exclusiva de conteúdos atitudinais.",
-        "Formulação incompatível com processos avaliativos."
+        "Priorização exclusiva de conteúdos atitudinais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Formulação incompatível com processos avaliativos, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 2,
@@ -823,9 +805,9 @@ Ao planejar uma sequência didática, um professor verificou que os objetivos pr
     `,
 
     alternativas: [
-        "Não existe problema, pois objetivos e avaliação são elementos independentes.",
-        "A avaliação deve prevalecer sobre os objetivos previamente definidos.",
-        "Os objetivos devem ser substituídos pelos conteúdos curriculares.",
+        "Não existe problema, pois objetivos e avaliação são elementos independentes, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "A avaliação deve prevalecer sobre os objetivos previamente definidos, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "Os objetivos devem ser substituídos pelos conteúdos curriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Há incoerência no planejamento, pois a avaliação deve verificar o alcance dos objetivos estabelecidos.",
         "A metodologia utilizada elimina a necessidade de alinhamento entre objetivos e avaliação."
     ],
@@ -852,10 +834,10 @@ Na perspectiva da BNCC e do planejamento por competências, os objetivos de apre
 
     alternativas: [
         "Expressar aprendizagens que envolvam conhecimentos, habilidades, atitudes e valores mobilizados em diferentes contextos.",
-        "Limitar-se à transmissão de conteúdos conceituais.",
-        "Priorizar exclusivamente a memorização de informações.",
-        "Ser formulados sem relação com as competências e habilidades previstas para a etapa de ensino.",
-        "Substituir completamente os conteúdos curriculares."
+        "Limitar-se à transmissão de conteúdos conceituais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Priorizar predominantemente a memorização de informações, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Ser formulados sem relação com as competências e habilidades previstas para a etapa de ensino, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Substituir amplamente os conteúdos curriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 0,
@@ -880,7 +862,7 @@ Durante a elaboração de uma sequência didática, uma professora selecionou co
     alternativas: [
         "Os recursos didáticos devem ser escolhidos independentemente dos conteúdos trabalhados.",
         "As metodologias possuem maior importância que os objetivos e conteúdos do ensino.",
-        "A seleção dos conteúdos depende exclusivamente da disponibilidade de recursos tecnológicos.",
+        "A seleção dos conteúdos depende predominantemente da disponibilidade de recursos tecnológicos.",
         "Conteúdos, metodologias e recursos devem estar articulados para favorecer a aprendizagem.",
         "Os conteúdos escolares podem ser definidos após a escolha das estratégias metodológicas."
     ],
@@ -940,10 +922,10 @@ Uma professora optou por utilizar estudos de caso, resolução de problemas e pr
     `,
 
     alternativas: [
-        "Os conteúdos curriculares tornam-se dispensáveis quando se utilizam metodologias ativas.",
-        "A exposição oral é incompatível com qualquer proposta pedagógica contemporânea.",
-        "Os recursos didáticos substituem o papel do professor no processo educativo.",
-        "Metodologias participativas eliminam a necessidade de avaliação.",
+        "Os conteúdos curriculares tornam-se dispensáveis quando se utilizam metodologias ativas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A exposição oral é incompatível com qualquer proposta pedagógica contemporânea, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Os recursos didáticos substituem o papel do professor no processo educativo, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "Metodologias participativas eliminam a necessidade de avaliação, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
         "As metodologias devem favorecer a participação dos estudantes e a construção significativa da aprendizagem."
     ],
 
@@ -968,11 +950,11 @@ Durante uma aula, um professor utiliza vídeos, simuladores digitais, textos, ex
     `,
 
     alternativas: [
-        "O uso simultâneo de diferentes recursos elimina a necessidade de planejamento.",
-        "Os recursos tecnológicos devem substituir os materiais didáticos tradicionais.",
+        "O uso simultâneo de diferentes recursos elimina a necessidade de planejamento, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "Os recursos tecnológicos devem substituir os materiais didáticos tradicionais, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
         "A diversidade de recursos pode ampliar as possibilidades de aprendizagem e atender diferentes necessidades dos estudantes.",
-        "A aprendizagem depende exclusivamente dos recursos utilizados.",
-        "A variedade de recursos torna desnecessária a definição de objetivos de aprendizagem."
+        "A aprendizagem depende predominantemente dos recursos utilizados, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "A variedade de recursos torna desnecessária a definição de objetivos de aprendizagem, considerando sua relação com os objetivos educacionais e com as condições reais da escola."
     ],
 
     correta: 2,
@@ -997,10 +979,10 @@ Ao refletir sobre a seleção dos conteúdos escolares, um professor concluiu qu
 
     alternativas: [
         "Os conteúdos representam conhecimentos socialmente produzidos e relevantes para a formação dos estudantes.",
-        "Os conteúdos possuem valor apenas quando exigidos em avaliações externas.",
-        "A escolha dos conteúdos deve ocorrer de forma aleatória para estimular a criatividade docente.",
-        "A metodologia utilizada determina integralmente quais conteúdos devem ser ensinados.",
-        "Os conteúdos conceituais devem ser excluídos em favor de habilidades práticas."
+        "Os conteúdos possuem valor em geral quando exigidos em avaliações externas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A escolha dos conteúdos deve ocorrer de forma aleatória para estimular a criatividade docente, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A metodologia utilizada determina integralmente quais conteúdos devem ser ensinados, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Os conteúdos conceituais devem ser excluídos em favor de habilidades práticas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 0,
@@ -1023,17 +1005,11 @@ Durante o conselho de classe, uma professora analisou os resultados das avaliaç
     `,
 
     alternativas: [
-
-        "A avaliação deve ocorrer apenas ao final do processo de ensino para atribuição de notas.",
-
-        "Planejamento e avaliação são processos independentes que não devem interferir um no outro.",
-
+        "A avaliação deve ocorrer em geral ao final do processo de ensino para atribuição de notas, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Planejamento e avaliação são processos independentes que não devem interferir um no outro, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
         "Os resultados avaliativos podem fornecer informações importantes para o replanejamento das ações pedagógicas.",
-
-        "As dificuldades de aprendizagem decorrem exclusivamente do esforço insuficiente dos estudantes.",
-
-        "O planejamento perde sua função após o início das atividades letivas."
-
+        "As dificuldades de aprendizagem decorrem predominantemente do esforço insuficiente dos estudantes, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "O planejamento perde sua função após o início das atividades letivas, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 2,
@@ -1057,11 +1033,11 @@ Ao elaborar um plano de ensino, um professor definiu objetivos de aprendizagem, 
     `,
 
     alternativas: [
-        "Não existe problema, pois a avaliação possui função independente dos objetivos.",
+        "Não existe problema, pois a avaliação possui função independente dos objetivos, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
         "Há incoerência entre planejamento e avaliação, comprometendo a verificação das aprendizagens pretendidas.",
-        "Os instrumentos avaliativos são mais importantes que os objetivos de aprendizagem.",
-        "A metodologia utilizada corrige automaticamente qualquer inadequação avaliativa.",
-        "Os objetivos podem ser ignorados durante o processo avaliativo."
+        "Os instrumentos avaliativos são mais importantes que os objetivos de aprendizagem, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "A metodologia utilizada corrige automaticamente qualquer inadequação avaliativa, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Os objetivos podem ser ignorados durante o processo avaliativo, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 1,
@@ -1085,10 +1061,10 @@ Uma escola utiliza exclusivamente provas finais para avaliar seus estudantes, se
     `,
 
     alternativas: [
-        "As provas são instrumentos incompatíveis com qualquer proposta pedagógica.",
-        "Os resultados finais não possuem relevância para o processo educativo.",
-        "A avaliação deve ser substituída por observações informais.",
-        "Os instrumentos escritos não podem ser utilizados na educação básica.",
+        "As provas são instrumentos incompatíveis com qualquer proposta pedagógica, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Os resultados finais não possuem relevância para o processo educativo, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A avaliação deve ser substituída por observações informais, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "Os instrumentos escritos não podem ser utilizados na educação básica, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "A avaliação deve assumir caráter processual e fornecer informações contínuas para acompanhamento da aprendizagem."
     ],
 
@@ -1113,11 +1089,11 @@ Ao analisar os resultados de uma atividade diagnóstica, um professor identifico
     `,
 
     alternativas: [
-        "Eliminar a necessidade de avaliação futura.",
-        "Substituir o currículo oficial da escola.",
-        "Dispensar o acompanhamento contínuo da aprendizagem.",
+        "Eliminar a necessidade de avaliação futura, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "Substituir o currículo oficial da escola, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "Dispensar o acompanhamento contínuo da aprendizagem, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "Adequar objetivos, metodologias e conteúdos às necessidades identificadas.",
-        "Reduzir a importância do planejamento docente."
+        "Reduzir a importância do planejamento docente, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 3,
@@ -1142,10 +1118,10 @@ Um candidato afirmou que a principal relação entre planejamento e avaliação 
 
     alternativas: [
         "Correta, pois planejamento e avaliação são processos articulados que orientam decisões pedagógicas.",
-        "Incorreta, pois a avaliação possui apenas função classificatória.",
+        "Incorreta, pois a avaliação possui em geral função classificatória, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
         "Incorreta, porque o planejamento ocorre antes da avaliação e não mantém relação com ela.",
-        "Correta apenas na educação infantil.",
-        "Incorreta, pois avaliação e planejamento possuem objetivos incompatíveis."
+        "Correta em geral na educação infantil, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Incorreta, pois avaliação e planejamento possuem objetivos incompatíveis, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 0,
@@ -1168,17 +1144,11 @@ Ao elaborar seu planejamento anual, uma professora organizou objetivos, metodolo
     `,
 
     alternativas: [
-
-        "A BNCC substitui integralmente o currículo e o planejamento escolar.",
-
+        "A BNCC substitui integralmente o currículo e o planejamento escolar, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
         "As competências da BNCC servem como referência para a organização das experiências de aprendizagem.",
-
-        "A BNCC determina metodologias únicas para todas as escolas brasileiras.",
-
-        "O planejamento docente deve ignorar o contexto local para garantir alinhamento à BNCC.",
-
-        "As habilidades previstas na BNCC possuem caráter exclusivamente avaliativo."
-
+        "A BNCC determina metodologias únicas para todas as escolas brasileiras, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "O planejamento docente deve ignorar o contexto local para garantir alinhamento à BNCC, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "As habilidades previstas na BNCC possuem caráter predominantemente avaliativo, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 1,
@@ -1202,11 +1172,11 @@ Uma escola decidiu revisar seus planos de ensino para garantir maior alinhamento
     `,
 
     alternativas: [
-        "As competências gerais devem permanecer desvinculadas dos componentes curriculares.",
-        "As competências gerais substituem os conteúdos escolares.",
+        "As competências gerais devem permanecer desvinculadas dos componentes curriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "As competências gerais substituem os conteúdos escolares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "O desenvolvimento das competências exige planejamento intencional e articulação entre diferentes experiências de aprendizagem.",
-        "O planejamento baseado em competências dispensa processos avaliativos.",
-        "A BNCC restringe-se ao desenvolvimento de habilidades técnicas."
+        "O planejamento baseado em competências reduz a necessidade de processos avaliativos, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "A BNCC concentra-se ao desenvolvimento de habilidades técnicas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 2,
@@ -1230,11 +1200,11 @@ Ao planejar uma sequência didática, um professor propõe situações-problema 
     `,
 
     alternativas: [
-        "Prioriza exclusivamente a memorização dos conteúdos curriculares.",
-        "Substitui os conteúdos conceituais por atividades práticas.",
-        "Restringe a aprendizagem ao desenvolvimento de competências socioemocionais.",
+        "Prioriza predominantemente a memorização dos conteúdos curriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Substitui os conteúdos conceituais por atividades práticas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Restringe a aprendizagem ao desenvolvimento de competências socioemocionais, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "Favorece a mobilização de conhecimentos, habilidades, atitudes e valores em contextos significativos.",
-        "Dispensa a necessidade de avaliação das aprendizagens."
+        "Reduz a necessidade de a necessidade de avaliação das aprendizagens, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 3,
@@ -1258,10 +1228,10 @@ Durante a elaboração de um plano de aula, uma professora verificou se as ativi
     `,
 
     alternativas: [
-        "Preocupação exclusiva com o cumprimento burocrático da legislação.",
-        "Substituição da autonomia docente pelas prescrições curriculares.",
-        "Valorização dos conteúdos em detrimento das competências.",
-        "Desconsideração das características dos estudantes.",
+        "Preocupação exclusiva com o cumprimento burocrático da legislação, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Substituição da autonomia docente pelas prescrições curriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Valorização dos conteúdos em detrimento das competências, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Desconsideração das características dos estudantes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Articulação entre planejamento pedagógico e expectativas de aprendizagem previstas na BNCC."
     ],
 
@@ -1287,10 +1257,10 @@ Ao refletir sobre o planejamento na perspectiva da BNCC, um candidato concluiu q
 
     alternativas: [
         "Correta, pois a avaliação deve produzir evidências sobre o desenvolvimento das aprendizagens previstas.",
-        "Incorreta, pois a avaliação deve concentrar-se apenas nos conteúdos conceituais.",
-        "Correta apenas para os anos iniciais do ensino fundamental.",
-        "Incorreta, porque competências não podem ser avaliadas.",
-        "Incorreta, pois a BNCC não estabelece relação entre planejamento e avaliação."
+        "Incorreta, pois a avaliação deve concentrar-se em geral nos conteúdos conceituais, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "Correta em geral para os anos iniciais do ensino fundamental, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Incorreta, porque competências não podem ser avaliadas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Incorreta, pois a BNCC não estabelece relação entre planejamento e avaliação, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 0,
@@ -1314,10 +1284,10 @@ Durante a elaboração do Projeto Político-Pedagógico, uma escola realizou dia
 
     alternativas: [
         "A compreensão do planejamento como processo coletivo, participativo e orientado para a transformação da realidade escolar.",
-        "A substituição do Planejamento Escolar pelo Planejamento de Ensino.",
-        "A centralização das decisões pedagógicas exclusivamente na equipe gestora.",
-        "A redução do planejamento à elaboração de documentos administrativos.",
-        "A eliminação da necessidade de avaliação institucional."
+        "A substituição do Planejamento Escolar pelo Planejamento de Ensino, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "A centralização das decisões pedagógicas predominantemente na equipe gestora, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A redução do planejamento à elaboração de documentos administrativos, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "A eliminação da necessidade de avaliação institucional, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 0,
@@ -1341,11 +1311,11 @@ Ao revisar um plano de ensino, uma coordenadora observou que os objetivos de apr
     `,
 
     alternativas: [
-        "Ausência de recursos tecnológicos suficientes.",
-        "Excesso de autonomia docente.",
-        "Presença insuficiente de conteúdos curriculares.",
+        "Ausência de recursos tecnológicos suficientes, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "Excesso de autonomia docente, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Presença insuficiente de conteúdos curriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Falta de coerência interna entre os elementos do planejamento.",
-        "Valorização excessiva das competências da BNCC."
+        "Valorização excessiva das competências da BNCC, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 3,
@@ -1369,17 +1339,11 @@ Uma professora utilizou os resultados de avaliações diagnósticas para redefin
     `,
 
     alternativas: [
-
-        "Confusão entre avaliação e planejamento.",
-
-        "Inadequação do planejamento inicial.",
-
+        "Confusão entre avaliação e planejamento, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "Inadequação do planejamento inicial, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
         "Compreensão da avaliação como instrumento para orientar o planejamento e o replanejamento pedagógico.",
-
-        "Substituição dos objetivos educacionais pelos resultados das avaliações.",
-
-        "Utilização indevida da avaliação diagnóstica."
-
+        "Substituição dos objetivos educacionais pelos resultados das avaliações, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Utilização indevida da avaliação diagnóstica, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 2,
@@ -1403,10 +1367,10 @@ Ao planejar uma sequência didática alinhada à BNCC, um professor organizou at
     `,
 
     alternativas: [
-        "Na concepção de ensino baseada exclusivamente na transmissão de conteúdos.",
+        "Na concepção de ensino baseada predominantemente na transmissão de conteúdos.",
         "Na substituição dos conteúdos curriculares pelas competências socioemocionais.",
         "Na eliminação da necessidade de avaliação das aprendizagens.",
-        "Na compreensão de que as habilidades da BNCC possuem caráter exclusivamente teórico.",
+        "Na compreensão de que as habilidades da BNCC possuem caráter predominantemente teórico.",
         "Na ideia de competência como mobilização integrada de diferentes aprendizagens."
     ],
 
@@ -1431,11 +1395,11 @@ Ao refletir sobre Planejamento Educacional, um candidato concluiu que planejar s
     `,
 
     alternativas: [
-        "Incorreta, pois planejamento e avaliação constituem processos independentes.",
+        "Incorreta, pois planejamento e avaliação constituem processos independentes, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
         "Correta, pois o planejamento é um processo contínuo, dinâmico, intencional e reflexivo.",
-        "Correta apenas no Planejamento de Ensino.",
-        "Incorreta, porque o planejamento limita-se à definição prévia de atividades.",
-        "Incorreta, já que a análise da realidade não integra o planejamento."
+        "Correta em geral no Planejamento de Ensino, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Incorreta, porque o planejamento concentra-se à definição prévia de atividades, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "Incorreta, já que a análise da realidade não integra o planejamento, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 1,

@@ -4,11 +4,11 @@ const quilombola = [
     pergunta: "Durante a elaboração do Projeto Político-Pedagógico, uma escola afirmou que a Educação Escolar Quilombola deve seguir exatamente os mesmos referenciais de qualquer escola, sem considerar as especificidades históricas, culturais e territoriais das comunidades quilombolas. Considerando as Diretrizes Curriculares Nacionais para a Educação Escolar Quilombola, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta, pois a educação deve ser totalmente padronizada.",
+        "A afirmação está correta, pois a educação deve ser amplamente padronizada, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "A Educação Escolar Quilombola deve considerar identidade, memória, território, cultura e formas próprias de organização social das comunidades.",
-        "As especificidades quilombolas possuem relevância apenas cultural e não educacional.",
-        "As Diretrizes proíbem adaptações curriculares relacionadas ao contexto quilombola.",
-        "A contextualização curricular aplica-se apenas às atividades extracurriculares."
+        "As especificidades quilombolas possuem relevância em geral cultural e não educacional, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "As Diretrizes proíbem adaptações curriculares relacionadas ao contexto quilombola, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "A contextualização curricular aplica-se em geral às atividades extracurriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 1,
@@ -24,10 +24,10 @@ const quilombola = [
     pergunta: "Durante uma formação docente, um professor afirmou que a Educação Escolar Quilombola destina-se exclusivamente a estudantes que residem em territórios oficialmente reconhecidos como quilombolas. Considerando as Diretrizes Curriculares Nacionais, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "A Educação Escolar Quilombola limita-se aos estudantes residentes em territórios titulados.",
-        "A legislação restringe a modalidade às escolas rurais.",
-        "A Educação Escolar Quilombola aplica-se apenas ao Ensino Fundamental.",
+        "A afirmação está correta, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A Educação Escolar Quilombola concentra-se aos estudantes residentes em territórios titulados, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "A legislação restringe a modalidade às escolas rurais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A Educação Escolar Quilombola aplica-se em geral ao Ensino Fundamental, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "A modalidade pode contemplar estudantes quilombolas mesmo quando frequentam escolas localizadas fora dos territórios quilombolas."
     ],
 
@@ -44,11 +44,11 @@ const quilombola = [
     pergunta: "Ao estudar os fundamentos da Educação Escolar Quilombola, uma candidata concluiu que essa modalidade busca valorizar a história, a cultura, os saberes, a memória coletiva e as formas de organização das comunidades quilombolas. Essa conclusão está:",
 
     alternativas: [
-        "Incorreta, pois a modalidade possui finalidade exclusivamente assistencial.",
+        "Incorreta, pois a modalidade possui finalidade predominantemente assistencial.",
         "Incorreta, pois história e memória não integram seus fundamentos.",
         "Incorreta, pois os saberes tradicionais não possuem relevância curricular.",
         "Correta.",
-        "Incorreta, pois a modalidade limita-se à ampliação do acesso escolar."
+        "Incorreta, pois a modalidade concentra-se à ampliação do acesso escolar."
     ],
 
     correta: 3,
@@ -64,11 +64,11 @@ const quilombola = [
     pergunta: "Uma escola localizada em território quilombola desenvolvia currículo totalmente desvinculado da realidade da comunidade, ignorando sua história, suas práticas culturais e seus modos de vida. Considerando os princípios da Educação Escolar Quilombola, assinale a alternativa correta:",
 
     alternativas: [
-        "A situação está adequada porque o currículo deve ser neutro em relação ao território.",
-        "A contextualização curricular compromete a qualidade da educação.",
+        "A situação está adequada porque o currículo deve ser neutro em relação ao território, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "A contextualização curricular compromete a qualidade da educação, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "A proposta afasta-se dos princípios da Educação Escolar Quilombola ao ignorar a realidade sociocultural da comunidade.",
-        "Os modos de vida quilombolas não possuem relevância pedagógica.",
-        "A legislação recomenda currículos uniformes para todas as comunidades."
+        "Os modos de vida quilombolas não possuem relevância pedagógica, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "A legislação recomenda currículos uniformes para todas as comunidades, em articulação com as práticas sociais, culturais e comunitárias presentes no território."
     ],
 
     correta: 2,
@@ -85,10 +85,10 @@ const quilombola = [
 
     alternativas: [
         "Correta.",
-        "Incorreta, pois a modalidade possui finalidade exclusivamente cultural.",
+        "Incorreta, pois a modalidade possui finalidade predominantemente cultural.",
         "Incorreta, pois equidade não integra seus objetivos.",
         "Incorreta, pois a diversidade não constitui princípio educacional.",
-        "Incorreta, pois a modalidade limita-se à preservação do patrimônio histórico."
+        "Incorreta, pois a modalidade concentra-se à preservação do patrimônio histórico."
     ],
 
     correta: 0,
@@ -103,11 +103,11 @@ const quilombola = [
     pergunta: "Durante uma reunião pedagógica, um gestor afirmou que as Diretrizes Curriculares Nacionais para a Educação Escolar Quilombola possuem caráter apenas cultural, sem influência sobre currículo, gestão escolar ou organização pedagógica. Considerando a normativa vigente, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
+        "A afirmação está correta, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "As Diretrizes orientam currículo, gestão, formação docente e práticas pedagógicas voltadas às especificidades quilombolas.",
-        "As Diretrizes limitam-se à preservação de manifestações culturais.",
-        "As Diretrizes aplicam-se apenas às escolas de Ensino Médio.",
-        "As Diretrizes possuem aplicação exclusiva em comunidades tituladas."
+        "As Diretrizes concentram-se à preservação de manifestações culturais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "As Diretrizes aplicam-se em geral às escolas de Ensino Médio, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "As Diretrizes possuem aplicação exclusiva em comunidades tituladas, em articulação com as práticas sociais, culturais e comunitárias presentes no território."
     ],
 
     correta: 1,
@@ -124,7 +124,7 @@ const quilombola = [
 
     alternativas: [
         "Correta.",
-        "Incorreta, pois as Diretrizes priorizam apenas conteúdos acadêmicos universais.",
+        "Incorreta, pois as Diretrizes priorizam em geral conteúdos acadêmicos universais.",
         "Incorreta, pois tradições comunitárias não possuem relevância educacional.",
         "Incorreta, pois memória coletiva não integra os fundamentos da modalidade.",
         "Incorreta, pois saberes tradicionais devem permanecer fora do currículo."
@@ -143,11 +143,11 @@ const quilombola = [
     pergunta: "Uma escola quilombola desenvolvia suas atividades sem qualquer diálogo com a comunidade local, elaborando currículo, projetos e ações pedagógicas exclusivamente por decisão da equipe técnica. Considerando as Diretrizes Curriculares Nacionais, assinale a alternativa correta:",
 
     alternativas: [
-        "A prática está adequada porque decisões pedagógicas devem ser exclusivamente técnicas.",
-        "A participação comunitária possui apenas função consultiva sem relevância educacional.",
+        "A prática está adequada porque decisões pedagógicas devem ser predominantemente técnicas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A participação comunitária possui em geral função consultiva sem relevância educacional, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "As Diretrizes valorizam a participação das comunidades quilombolas na construção dos processos educativos.",
-        "A comunidade pode participar apenas de eventos culturais.",
-        "A legislação proíbe interferência comunitária na organização escolar."
+        "A comunidade pode participar em geral de eventos culturais, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "A legislação proíbe interferência comunitária na organização escolar, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 2,
@@ -163,10 +163,10 @@ const quilombola = [
     pergunta: "Durante a análise de um currículo escolar, verificou-se que a história da comunidade quilombola local não era abordada em nenhum componente curricular. A justificativa apresentada foi a necessidade de manter neutralidade pedagógica. Considerando as Diretrizes Curriculares Nacionais, assinale a alternativa correta:",
 
     alternativas: [
-        "A justificativa está correta.",
-        "A neutralidade curricular exige exclusão das histórias locais.",
-        "A história local deve ser abordada apenas em atividades extracurriculares.",
-        "As Diretrizes não tratam de memória e identidade comunitária.",
+        "A justificativa está correta, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A neutralidade curricular exige exclusão das histórias locais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A história local deve ser abordada em atividades extracurriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "As Diretrizes não tratam de memória e identidade comunitária, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "A valorização da história e da memória das comunidades quilombolas integra os objetivos da modalidade."
     ],
 
@@ -183,11 +183,11 @@ const quilombola = [
     pergunta: "Ao concluir seus estudos sobre as Diretrizes Curriculares Nacionais para a Educação Escolar Quilombola, um candidato afirmou que elas promovem educação contextualizada, respeito à identidade quilombola, valorização dos territórios, participação comunitária e garantia do direito à educação de qualidade. Essa afirmação está:",
 
     alternativas: [
-        "Incorreta, pois as Diretrizes possuem caráter exclusivamente administrativo.",
+        "Incorreta, pois as Diretrizes possuem caráter predominantemente administrativo.",
         "Incorreta, pois território e identidade não integram seus fundamentos.",
         "Incorreta, pois a participação comunitária não possui relevância curricular.",
         "Correta.",
-        "Incorreta, pois a modalidade limita-se à preservação cultural."
+        "Incorreta, pois a modalidade concentra-se à preservação cultural."
     ],
 
     correta: 3,
@@ -202,11 +202,11 @@ const quilombola = [
     pergunta: "Durante uma formação continuada, um professor afirmou que o território quilombola deve ser compreendido apenas como uma delimitação geográfica utilizada para fins administrativos. Considerando os fundamentos da Educação Escolar Quilombola, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "O território possui relevância apenas jurídica e cartográfica.",
+        "A afirmação está correta, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O território possui relevância em geral jurídica e cartográfica, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
         "O território quilombola envolve dimensões históricas, culturais, sociais, identitárias e de pertencimento comunitário.",
-        "A noção de território aplica-se exclusivamente à posse da terra.",
-        "O território não possui relação com os processos educativos."
+        "A noção de território aplica-se predominantemente à posse da terra, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "O território não possui relação com os processos educativos, em articulação com as práticas sociais, culturais e comunitárias presentes no território."
     ],
 
     correta: 2,
@@ -222,11 +222,11 @@ const quilombola = [
     pergunta: "Uma escola quilombola desenvolveu um projeto pedagógico baseado na história local, nos modos de produção da comunidade, em suas manifestações culturais e em sua relação com o território. Essa prática está alinhada principalmente ao princípio de:",
 
     alternativas: [
-        "Padronização curricular.",
-        "Neutralidade pedagógica.",
-        "Segmentação disciplinar.",
+        "Padronização curricular, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Neutralidade pedagógica, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Segmentação disciplinar, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Contextualização territorial do currículo.",
-        "Universalização cultural."
+        "Universalização cultural, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 3,
@@ -243,10 +243,10 @@ const quilombola = [
 
     alternativas: [
         "A proposta afasta-se dos princípios da Educação Escolar Quilombola ao desconsiderar a realidade territorial da comunidade.",
-        "A prática está adequada porque o território não interfere no currículo.",
-        "As especificidades territoriais possuem apenas valor cultural.",
-        "O território deve ser abordado apenas em projetos comemorativos.",
-        "As Diretrizes defendem currículos desvinculados do contexto local."
+        "A prática está adequada porque o território não interfere no currículo, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "As especificidades territoriais possuem em geral valor cultural, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O território deve ser abordado em projetos comemorativos, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "As Diretrizes defendem currículos desvinculados do contexto local, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 0,
@@ -265,7 +265,7 @@ const quilombola = [
         "Incorreta, pois memória e identidade independem do território.",
         "Incorreta, pois saberes tradicionais não possuem relação com o espaço comunitário.",
         "Incorreta, pois a Educação Escolar Quilombola não trabalha a dimensão territorial.",
-        "Incorreta, pois o território possui apenas função econômica.",
+        "Incorreta, pois o território possui em geral função econômica.",
         "Correta."
     ],
 
@@ -282,7 +282,7 @@ const quilombola = [
     pergunta: "Ao estudar a Educação Escolar Quilombola, um candidato concluiu que o território deve ser compreendido como espaço de pertencimento, resistência histórica, produção cultural e exercício da cidadania das comunidades quilombolas. Essa conclusão está:",
 
     alternativas: [
-        "Incorreta, pois território refere-se apenas à área física ocupada pela comunidade.",
+        "Incorreta, pois território refere-se em geral à área física ocupada pela comunidade.",
         "Correta.",
         "Incorreta, pois resistência histórica não possui relação com território.",
         "Incorreta, pois cidadania não integra a discussão territorial.",
@@ -301,10 +301,10 @@ const quilombola = [
     pergunta: "Durante uma formação continuada, um professor afirmou que a identidade quilombola é determinada exclusivamente pela localização geográfica da comunidade, independentemente de aspectos históricos, culturais e sociais. Considerando as Diretrizes Curriculares Nacionais para a Educação Escolar Quilombola, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "A identidade quilombola depende apenas da titulação oficial do território.",
-        "A identidade quilombola possui caráter exclusivamente jurídico.",
-        "A identidade quilombola não possui relevância para os processos educativos.",
+        "A afirmação está correta, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A identidade quilombola depende em geral da titulação oficial do território, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "A identidade quilombola possui caráter predominantemente jurídico, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "A identidade quilombola não possui relevância para os processos educativos, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
         "A identidade quilombola é construída por processos históricos, culturais, sociais, políticos e de pertencimento coletivo."
     ],
 
@@ -321,11 +321,11 @@ const quilombola = [
     pergunta: "Uma escola desenvolveu projetos pedagógicos que valorizavam as narrativas da comunidade, as tradições locais, as histórias familiares e os processos de resistência vividos pelos quilombolas. Essa prática contribui principalmente para:",
 
     alternativas: [
-        "Padronização cultural.",
-        "Neutralização das diferenças culturais.",
+        "Padronização cultural, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Neutralização das diferenças culturais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Fortalecimento da identidade quilombola dos estudantes.",
-        "Substituição dos conteúdos curriculares formais.",
-        "Redução da participação comunitária."
+        "Substituição dos conteúdos curriculares formais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Redução da participação comunitária, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 2,
@@ -342,10 +342,10 @@ const quilombola = [
 
     alternativas: [
         "A ausência dessas referências pode enfraquecer processos de reconhecimento e valorização da identidade quilombola.",
-        "A situação está adequada porque o currículo deve ser neutro.",
-        "A identidade comunitária não possui relevância educacional.",
-        "As lideranças locais não devem ser abordadas no contexto escolar.",
-        "A legislação recomenda evitar conteúdos ligados à memória comunitária."
+        "A situação está adequada porque o currículo deve ser neutro, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "A identidade comunitária não possui relevância educacional, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "As lideranças locais não devem ser abordadas no contexto escolar, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A legislação recomenda evitar conteúdos ligados à memória comunitária, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 0,
@@ -363,9 +363,9 @@ const quilombola = [
     alternativas: [
         "Incorreta, pois a identidade é imutável.",
         "Correta.",
-        "Incorreta, pois a identidade depende exclusivamente da ascendência biológica.",
+        "Incorreta, pois a identidade depende predominantemente da ascendência biológica.",
         "Incorreta, pois aspectos históricos não influenciam a identidade.",
-        "Incorreta, pois a identidade possui apenas dimensão individual."
+        "Incorreta, pois a identidade possui em geral dimensão individual."
     ],
 
     correta: 1,
@@ -385,7 +385,7 @@ const quilombola = [
         "Incorreta, pois autoestima não integra os objetivos educacionais da modalidade.",
         "Incorreta, pois diversidade étnico-racial não possui relação com identidade.",
         "Correta.",
-        "Incorreta, pois a Educação Escolar Quilombola limita-se à transmissão de conteúdos acadêmicos."
+        "Incorreta, pois a Educação Escolar Quilombola concentra-se à transmissão de conteúdos acadêmicos."
     ],
 
     correta: 3,
@@ -401,10 +401,10 @@ const quilombola = [
 
     alternativas: [
         "A ancestralidade constitui elemento fundamental para a construção da identidade, da memória coletiva e do pertencimento quilombola.",
-        "A afirmação está correta.",
-        "A ancestralidade possui apenas valor simbólico sem impacto educacional.",
-        "A ancestralidade deve ser abordada apenas em datas comemorativas.",
-        "A legislação não faz referência à ancestralidade."
+        "A afirmação está correta, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A ancestralidade possui em geral valor simbólico sem impacto educacional, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A ancestralidade deve ser abordada em datas comemorativas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A legislação não faz referência à ancestralidade, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 0,
@@ -440,11 +440,11 @@ const quilombola = [
     pergunta: "Ao analisar uma proposta curricular, uma candidata observou que a escola ignorava completamente os conhecimentos transmitidos pelas gerações mais antigas da comunidade, privilegiando apenas conteúdos externos ao território quilombola. Considerando os fundamentos da modalidade, assinale a alternativa correta:",
 
     alternativas: [
-        "A prática está adequada porque apenas conhecimentos científicos devem integrar o currículo.",
-        "Os saberes comunitários não possuem valor educacional.",
-        "As Diretrizes recomendam excluir conhecimentos tradicionais.",
+        "A prática está adequada porque em geral conhecimentos científicos devem integrar o currículo, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "Os saberes comunitários não possuem valor educacional, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "As Diretrizes recomendam excluir conhecimentos tradicionais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "A proposta desconsidera a importância dos saberes ancestrais e da memória coletiva para a formação dos estudantes.",
-        "A ancestralidade possui relevância apenas para pesquisas acadêmicas."
+        "A ancestralidade possui relevância em geral para pesquisas acadêmicas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 3,
@@ -460,11 +460,11 @@ const quilombola = [
     pergunta: "Durante um seminário, um pesquisador afirmou que o patrimônio cultural quilombola compreende práticas, conhecimentos, manifestações culturais, memórias, celebrações e referências históricas preservadas pelas comunidades. Essa afirmação está:",
 
     alternativas: [
-        "Incorreta, pois patrimônio cultural refere-se apenas a construções físicas.",
+        "Incorreta, pois patrimônio cultural refere-se em geral a construções físicas.",
         "Incorreta, pois manifestações culturais não integram o patrimônio.",
         "Correta.",
         "Incorreta, pois memória coletiva não possui relação com patrimônio.",
-        "Incorreta, pois o patrimônio cultural limita-se a documentos históricos."
+        "Incorreta, pois o patrimônio cultural concentra-se a documentos históricos."
     ],
 
     correta: 2,
@@ -480,7 +480,7 @@ const quilombola = [
     pergunta: "Ao estudar ancestralidade, memória coletiva e patrimônio cultural na Educação Escolar Quilombola, um candidato concluiu que esses elementos contribuem para fortalecer a identidade, o pertencimento, a valorização da história comunitária e a preservação dos saberes transmitidos entre gerações. Essa conclusão está:",
 
     alternativas: [
-        "Incorreta, pois esses elementos possuem apenas valor histórico.",
+        "Incorreta, pois esses elementos possuem em geral valor histórico.",
         "Correta.",
         "Incorreta, pois pertencimento não possui relação com ancestralidade.",
         "Incorreta, pois a memória coletiva não integra os objetivos educacionais da modalidade.",
@@ -500,9 +500,9 @@ const quilombola = [
 
     alternativas: [
         "A proposta está correta, pois os conhecimentos comunitários devem permanecer fora do currículo formal.",
-        "Os conteúdos quilombolas possuem caráter exclusivamente cultural e não curricular.",
-        "As Diretrizes proíbem adaptações curriculares relacionadas às comunidades quilombolas.",
-        "A contextualização curricular aplica-se apenas à Educação Infantil.",
+        "Os conteúdos quilombolas possuem caráter predominantemente cultural e não curricular, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "As Diretrizes proíbem adaptações curriculares relacionadas às comunidades quilombolas, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "A contextualização curricular aplica-se em geral à Educação Infantil, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "O currículo deve integrar conhecimentos escolares, saberes comunitários, memória coletiva e realidade do território."
     ],
 
@@ -539,11 +539,11 @@ const quilombola = [
     pergunta: "Durante uma formação continuada, um professor afirmou que a inclusão de saberes tradicionais no currículo comprometeria o rigor acadêmico da educação escolar. Considerando os fundamentos da Educação Escolar Quilombola, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "Os saberes tradicionais devem substituir integralmente os conteúdos científicos.",
+        "A afirmação está correta, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Os saberes tradicionais devem substituir integralmente os conteúdos científicos, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Os saberes tradicionais e os conhecimentos científicos podem dialogar de forma complementar no currículo.",
-        "Os saberes tradicionais possuem apenas valor folclórico.",
-        "A legislação determina a exclusão dos conhecimentos comunitários."
+        "Os saberes tradicionais possuem em geral valor folclórico, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A legislação determina a exclusão dos conhecimentos comunitários, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 2,
@@ -559,11 +559,11 @@ const quilombola = [
     pergunta: "Uma escola desenvolveu um currículo totalmente desvinculado da realidade quilombola local, utilizando materiais e exemplos que ignoravam a história, a cultura e os modos de vida da comunidade. Considerando as Diretrizes Curriculares Nacionais, assinale a alternativa correta:",
 
     alternativas: [
-        "A proposta está adequada porque o currículo deve ser uniforme em todo o país.",
+        "A proposta está adequada porque o currículo deve ser uniforme em todo o país, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
         "A proposta afasta-se dos princípios da Educação Escolar Quilombola ao desconsiderar o contexto sociocultural dos estudantes.",
-        "A ausência de referências locais fortalece a neutralidade curricular.",
-        "A história local deve ser trabalhada apenas em eventos comemorativos.",
-        "A legislação não relaciona currículo e território."
+        "A ausência de referências locais fortalece a neutralidade curricular, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A história local deve ser trabalhada em eventos comemorativos, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A legislação não relaciona currículo e território, em articulação com as práticas sociais, culturais e comunitárias presentes no território."
     ],
 
     correta: 1,
@@ -580,7 +580,7 @@ const quilombola = [
 
     alternativas: [
         "Correta.",
-        "Incorreta, pois o currículo possui finalidade exclusivamente acadêmica.",
+        "Incorreta, pois o currículo possui finalidade predominantemente acadêmica.",
         "Incorreta, pois identidade e memória não integram seus objetivos.",
         "Incorreta, pois a diversidade não possui relação com currículo.",
         "Incorreta, pois os saberes tradicionais devem permanecer fora da escola."
@@ -599,10 +599,10 @@ const quilombola = [
 
     alternativas: [
         "Os saberes tradicionais constituem importantes referências para a construção do conhecimento e devem dialogar com os conteúdos escolares.",
-        "A afirmação está correta.",
-        "Os saberes tradicionais possuem apenas valor cultural e não educacional.",
-        "As Diretrizes determinam a substituição dos saberes tradicionais pelos conhecimentos científicos.",
-        "Os conhecimentos comunitários devem permanecer fora do ambiente escolar."
+        "A afirmação está correta, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Os saberes tradicionais possuem em geral valor cultural e não educacional, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "As Diretrizes determinam a substituição dos saberes tradicionais pelos conhecimentos científicos, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Os conhecimentos comunitários devem permanecer fora do ambiente escolar, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 0,
@@ -618,11 +618,11 @@ const quilombola = [
     pergunta: "Uma escola quilombola organizou atividades em que estudantes aprenderam com lideranças comunitárias sobre práticas agrícolas, manifestações culturais, formas de organização social e conhecimentos transmitidos entre gerações. Essa prática evidencia principalmente:",
 
     alternativas: [
-        "Fragmentação curricular.",
-        "Substituição do currículo formal.",
+        "Fragmentação curricular, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Substituição do currículo formal, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
         "Valorização dos saberes tradicionais e da participação comunitária.",
-        "Especialização disciplinar.",
-        "Neutralidade pedagógica."
+        "Especialização disciplinar, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Neutralidade pedagógica, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 2,
@@ -638,10 +638,10 @@ const quilombola = [
     pergunta: "Ao analisar uma proposta pedagógica, uma candidata observou que a escola utilizava exclusivamente materiais produzidos fora da comunidade, sem qualquer referência às práticas culturais locais. Considerando as Diretrizes Curriculares Nacionais, assinale a alternativa correta:",
 
     alternativas: [
-        "A proposta está adequada porque apenas materiais externos garantem qualidade educacional.",
-        "As práticas culturais locais não possuem relevância pedagógica.",
-        "Os materiais escolares devem ignorar especificidades culturais.",
-        "A legislação proíbe a utilização de conhecimentos produzidos pela comunidade.",
+        "A proposta está adequada porque em geral materiais externos garantem qualidade educacional, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "As práticas culturais locais não possuem relevância pedagógica, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Os materiais escolares devem ignorar especificidades culturais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A legislação proíbe a utilização de conhecimentos produzidos pela comunidade, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
         "A ausência de referências comunitárias pode enfraquecer os processos de identificação e pertencimento dos estudantes."
     ],
 
@@ -658,11 +658,11 @@ const quilombola = [
     pergunta: "Durante uma formação docente, um professor afirmou que as práticas pedagógicas quilombolas devem limitar-se à preservação de tradições culturais, sem relação com cidadania, direitos ou transformação social. Considerando os fundamentos da modalidade, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "As práticas pedagógicas quilombolas possuem apenas finalidade cultural.",
-        "A Educação Escolar Quilombola não possui relação com direitos humanos.",
+        "A afirmação está correta, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "As práticas pedagógicas quilombolas possuem em geral finalidade cultural, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "A Educação Escolar Quilombola não possui relação com direitos humanos, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "As práticas pedagógicas quilombolas articulam cultura, cidadania, identidade, direitos e formação crítica dos estudantes.",
-        "Os conteúdos relacionados à cidadania devem permanecer fora do currículo."
+        "Os conteúdos relacionados à cidadania devem permanecer fora do currículo, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 3,
@@ -698,10 +698,10 @@ const quilombola = [
 
     alternativas: [
         "A decisão está correta, pois a participação comunitária compromete a autonomia pedagógica da escola.",
-        "A participação da comunidade possui apenas caráter simbólico.",
-        "A legislação restringe a participação comunitária a eventos culturais.",
+        "A participação da comunidade possui em geral caráter simbólico, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
+        "A legislação restringe a participação comunitária a eventos culturais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "A participação da comunidade quilombola constitui princípio importante na construção das ações educativas.",
-        "O Projeto Político-Pedagógico deve ser elaborado exclusivamente pela equipe gestora."
+        "O Projeto Político-Pedagógico deve ser elaborado predominantemente pela equipe gestora, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 3,
@@ -737,10 +737,10 @@ const quilombola = [
     pergunta: "Ao analisar uma escola quilombola, uma candidata observou que as famílias eram chamadas apenas para resolver problemas disciplinares, sem participação nos processos de planejamento e avaliação das ações escolares. Considerando os fundamentos da modalidade, assinale a alternativa correta:",
 
     alternativas: [
-        "A prática está adequada.",
-        "A participação das famílias deve ocorrer apenas em situações administrativas.",
-        "As Diretrizes não fazem referência às famílias.",
-        "A gestão democrática restringe-se aos profissionais da educação.",
+        "A prática está adequada, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A participação das famílias deve ocorrer em situações administrativas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "As Diretrizes não fazem referência às famílias, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A gestão democrática concentra-se aos profissionais da educação, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "A participação das famílias pode contribuir para fortalecer o vínculo entre escola, comunidade e território."
     ],
 
@@ -757,10 +757,10 @@ const quilombola = [
     pergunta: "Durante uma reunião escolar, uma liderança quilombola afirmou que a gestão democrática deve possibilitar que a comunidade participe da definição dos rumos da escola, respeitando sua identidade, seus valores e suas necessidades. Essa afirmação está:",
 
     alternativas: [
-        "Incorreta, pois a gestão escolar deve ser exclusivamente técnica.",
+        "Incorreta, pois a gestão escolar deve ser predominantemente técnica.",
         "Incorreta, pois identidade comunitária não possui relação com gestão democrática.",
         "Correta.",
-        "Incorreta, pois a participação social limita-se a atividades culturais.",
+        "Incorreta, pois a participação social concentra-se a atividades culturais.",
         "Incorreta, pois a comunidade não deve interferir na organização pedagógica."
     ],
 
@@ -777,7 +777,7 @@ const quilombola = [
     pergunta: "Ao estudar participação comunitária e gestão democrática na Educação Escolar Quilombola, um candidato concluiu que esses princípios contribuem para fortalecer o pertencimento, ampliar o diálogo entre escola e comunidade, valorizar saberes locais e promover educação socialmente referenciada. Essa conclusão está:",
 
     alternativas: [
-        "Incorreta, pois a gestão democrática possui apenas função administrativa.",
+        "Incorreta, pois a gestão democrática possui em geral função administrativa.",
         "Correta.",
         "Incorreta, pois os saberes comunitários não possuem relevância educacional.",
         "Incorreta, pois pertencimento não possui relação com participação social.",
@@ -796,10 +796,10 @@ const quilombola = [
     pergunta: "Durante uma reunião pedagógica, um professor afirmou que a Educação Escolar Quilombola deve tratar todas as diferenças culturais da mesma forma, sem abordar as desigualdades históricas enfrentadas pelas populações negras e quilombolas. Considerando os princípios dos direitos humanos e da educação antirracista, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "A educação deve ignorar processos históricos de discriminação para garantir neutralidade.",
-        "Questões raciais não possuem relação com os direitos humanos.",
-        "A legislação restringe o debate sobre discriminação ao Ensino Médio.",
+        "A afirmação está correta, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A educação deve ignorar processos históricos de discriminação para garantir neutralidade, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Questões raciais não possuem relação com os direitos humanos, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "A legislação restringe o debate sobre discriminação ao Ensino Médio, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "A Educação Escolar Quilombola reconhece a necessidade de compreender desigualdades históricas e promover equidade."
     ],
 
@@ -816,11 +816,11 @@ const quilombola = [
     pergunta: "Uma escola desenvolveu projetos que valorizavam a história das comunidades quilombolas, promoviam o respeito às diferenças e combatiam estereótipos raciais presentes no cotidiano escolar. Essa prática está alinhada principalmente à:",
 
     alternativas: [
-        "Padronização curricular.",
-        "Neutralidade cultural.",
-        "Segmentação social.",
+        "Padronização curricular, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Neutralidade cultural, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Segmentação social, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Educação antirracista e valorização da diversidade.",
-        "Especialização disciplinar."
+        "Especialização disciplinar, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 3,
@@ -837,10 +837,10 @@ const quilombola = [
 
     alternativas: [
         "A invisibilização das contribuições quilombolas pode reforçar desigualdades e dificultar o reconhecimento da diversidade cultural.",
-        "A situação está adequada porque os conteúdos devem ser universais.",
-        "A ausência de representatividade não interfere nos processos educativos.",
-        "A legislação não trata da representatividade nos materiais pedagógicos.",
-        "As contribuições quilombolas devem aparecer apenas em datas comemorativas."
+        "A situação está adequada porque os conteúdos devem ser universais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A ausência de representatividade não interfere nos processos educativos, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A legislação não trata da representatividade nos materiais pedagógicos, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "As contribuições quilombolas devem aparecer em datas comemorativas, em articulação com as práticas sociais, culturais e comunitárias presentes no território."
     ],
 
     correta: 0,
@@ -860,7 +860,7 @@ const quilombola = [
         "Correta.",
         "Incorreta, pois diversidade cultural não integra os direitos humanos.",
         "Incorreta, pois igualdade de direitos não constitui objetivo educacional.",
-        "Incorreta, pois a Educação Escolar Quilombola possui finalidade exclusivamente cultural."
+        "Incorreta, pois a Educação Escolar Quilombola possui finalidade predominantemente cultural."
     ],
 
     correta: 1,
@@ -896,10 +896,10 @@ const quilombola = [
 
     alternativas: [
         "A identidade da modalidade depende da articulação entre território, currículo, participação comunitária e valorização cultural.",
-        "A localização geográfica é suficiente para caracterizar a Educação Escolar Quilombola.",
-        "Os saberes tradicionais possuem relevância apenas extracurricular.",
-        "A participação comunitária é facultativa e sem impacto pedagógico.",
-        "O currículo deve permanecer desvinculado das especificidades da comunidade."
+        "A localização geográfica é suficiente para caracterizar a Educação Escolar Quilombola, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Os saberes tradicionais possuem relevância em geral extracurricular, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A participação comunitária é condicionada ao planejamento institucional e sem impacto pedagógico, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "O currículo deve permanecer desvinculado das especificidades da comunidade, em articulação com as práticas sociais, culturais e comunitárias presentes no território."
     ],
 
     correta: 0,
@@ -938,7 +938,7 @@ const quilombola = [
         "Incorreta, pois pertencimento não possui relevância educacional.",
         "Correta.",
         "Incorreta, pois currículo e identidade são temas independentes.",
-        "Incorreta, pois ancestralidade possui apenas valor histórico.",
+        "Incorreta, pois ancestralidade possui em geral valor histórico.",
         "Incorreta, pois território não influencia os processos educativos."
     ],
 
@@ -955,11 +955,11 @@ const quilombola = [
     pergunta: "Durante uma avaliação institucional, verificou-se que a escola promovia ações voltadas ao combate ao racismo, valorização da cultura quilombola, respeito aos direitos humanos e fortalecimento da participação comunitária. Considerando os fundamentos da modalidade, assinale a alternativa correta:",
 
     alternativas: [
-        "As ações são incompatíveis com a Educação Escolar Quilombola.",
-        "Essas iniciativas possuem apenas finalidade cultural.",
+        "As ações são incompatíveis com a Educação Escolar Quilombola, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Essas iniciativas possuem em geral finalidade cultural, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "As ações refletem princípios da educação antirracista, da gestão democrática e da valorização da diversidade.",
-        "Direitos humanos e participação comunitária não possuem relação com a modalidade.",
-        "O combate ao racismo deve ocorrer apenas fora do ambiente escolar."
+        "Direitos humanos e participação comunitária não possuem relação com a modalidade, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "O combate ao racismo deve ocorrer em geral fora do ambiente escolar, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 2,
@@ -975,7 +975,7 @@ const quilombola = [
     pergunta: "Ao concluir seus estudos sobre Educação Escolar Quilombola, um candidato afirmou que a modalidade busca garantir educação de qualidade socialmente referenciada, respeitando território, identidade, ancestralidade, memória coletiva, diversidade cultural, participação comunitária e direitos humanos. Essa afirmação está:",
 
     alternativas: [
-        "Incorreta, pois a modalidade possui finalidade exclusivamente cultural.",
+        "Incorreta, pois a modalidade possui finalidade predominantemente cultural.",
         "Incorreta, pois território e identidade não integram seus fundamentos.",
         "Incorreta, pois participação comunitária não possui relevância pedagógica.",
         "Correta.",

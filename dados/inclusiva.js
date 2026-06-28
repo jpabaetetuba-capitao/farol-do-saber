@@ -5,7 +5,7 @@ const inclusiva = [
 
     alternativas: [
         "A inclusão se concretiza no momento da matrícula do estudante na classe comum.",
-        "A inclusão depende exclusivamente da existência do Atendimento Educacional Especializado.",
+        "A inclusão depende predominantemente da existência do Atendimento Educacional Especializado.",
         "A inclusão ocorre quando o estudante frequenta o mesmo espaço físico que os demais colegas, independentemente de sua participação.",
         "A inclusão é responsabilidade exclusiva do professor regente.",
         "A inclusão pressupõe acesso, participação, aprendizagem, pertencimento e eliminação de barreiras."
@@ -44,11 +44,11 @@ const inclusiva = [
     pergunta: "Durante uma reunião pedagógica, um coordenador afirmou que a Educação Inclusiva busca adaptar os estudantes ao funcionamento tradicional da escola, exigindo que todos aprendam da mesma forma e no mesmo ritmo. À luz dos fundamentos da inclusão, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta, pois a inclusão pressupõe uniformidade de procedimentos.",
-        "A inclusão depende da padronização das formas de ensino e avaliação.",
+        "A afirmação está correta, pois a inclusão pressupõe uniformidade de procedimentos, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes.",
+        "A inclusão depende da padronização das formas de ensino e avaliação, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "A escola deve adaptar-se à diversidade dos estudantes, e não exigir a eliminação das diferenças.",
-        "A diversidade compromete a eficiência pedagógica e deve ser minimizada.",
-        "A inclusão somente é possível quando todos os estudantes atingem os mesmos resultados."
+        "A diversidade compromete a eficiência pedagógica e deve ser minimizada, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A inclusão normalmente é possível quando todos os estudantes atingem os mesmos resultados, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes."
     ],
 
     correta: 2,
@@ -64,11 +64,11 @@ const inclusiva = [
     pergunta: "Durante um debate acadêmico, uma candidata afirmou que igualdade e equidade possuem exatamente o mesmo significado no contexto educacional. Outro participante discordou. Considerando os princípios da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "Igualdade e equidade são conceitos idênticos e intercambiáveis.",
+        "Igualdade e equidade são conceitos idênticos e intercambiáveis, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "A equidade reconhece diferenças e busca fornecer apoios adequados para garantir oportunidades equivalentes de participação e aprendizagem.",
-        "Equidade consiste em oferecer menos oportunidades aos estudantes que apresentam maiores necessidades.",
-        "A igualdade exige recursos diferenciados para todos os estudantes.",
-        "A equidade aplica-se exclusivamente aos estudantes com deficiência."
+        "Equidade consiste em oferecer menos oportunidades aos estudantes que apresentam maiores necessidades, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A igualdade exige recursos diferenciados para todos os estudantes, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "A equidade aplica-se predominantemente aos estudantes com deficiência, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 1,
@@ -85,10 +85,10 @@ const inclusiva = [
 
     alternativas: [
         "A construção de ambientes inclusivos favorece toda a comunidade escolar ao ampliar participação, acessibilidade e respeito à diversidade.",
-        "A inclusão é uma política destinada exclusivamente aos estudantes com deficiência.",
-        "Os benefícios da inclusão restringem-se aos alunos atendidos pelo AEE.",
-        "A inclusão produz ganhos apenas para estudantes com dificuldades de aprendizagem.",
-        "As práticas inclusivas tendem a reduzir a qualidade do ensino para os demais estudantes."
+        "A inclusão é uma política destinada predominantemente aos estudantes com deficiência, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "Os benefícios da inclusão concentram-se aos alunos atendidos pelo AEE, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes.",
+        "A inclusão produz ganhos em geral para estudantes com dificuldades de aprendizagem, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "As práticas inclusivas tendem a reduzir a qualidade do ensino para os demais estudantes, considerando sua relação com os objetivos educacionais e com as condições reais da escola."
     ],
 
     correta: 0,
@@ -104,10 +104,10 @@ const inclusiva = [
 
     alternativas: [
         "A Educação Especial constitui modalidade de ensino que perpassa todos os níveis, etapas e modalidades da educação.",
-        "A Educação Especial foi extinta com a consolidação da Educação Inclusiva.",
-        "A Educação Especial destina-se exclusivamente às instituições especializadas.",
-        "A Educação Especial substitui o ensino regular dos estudantes com deficiência.",
-        "A Educação Especial restringe-se ao Atendimento Educacional Especializado."
+        "A Educação Especial foi extinta com a consolidação da Educação Inclusiva, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "A Educação Especial destina-se predominantemente às instituições especializadas, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "A Educação Especial substitui o ensino regular dos estudantes com deficiência, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "A Educação Especial concentra-se ao Atendimento Educacional Especializado, considerando sua relação com os objetivos educacionais e com as condições reais da escola."
     ],
 
     correta: 0,
@@ -123,11 +123,11 @@ const inclusiva = [
     pergunta: "Durante uma prova de concurso, foi questionado quais grupos compõem o público-alvo da Educação Especial. Um candidato afirmou que apenas pessoas com deficiência integram esse grupo. À luz da Política Nacional de Educação Especial na Perspectiva da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "Somente pessoas com deficiência integram o público-alvo da Educação Especial.",
-        "Pessoas com deficiência e estudantes com dificuldades temporárias de aprendizagem compõem esse público.",
+        "Normalmente pessoas com deficiência integram o público-alvo da Educação Especial, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Pessoas com deficiência e estudantes com dificuldades temporárias de aprendizagem compõem esse público, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "Pessoas com deficiência, estudantes com TEA e estudantes com altas habilidades/superdotação compõem o público-alvo da Educação Especial.",
-        "Somente pessoas com deficiência e TEA integram esse público.",
-        "Qualquer estudante com baixo rendimento escolar integra automaticamente o público-alvo."
+        "Normalmente pessoas com deficiência e TEA integram esse público, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Qualquer estudante com baixo rendimento escolar integra automaticamente o público-alvo, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 2,
@@ -143,11 +143,11 @@ const inclusiva = [
     pergunta: "Uma professora afirmou que estudantes com altas habilidades/superdotação não necessitam de atenção da Educação Especial porque já apresentam desempenho acima da média. Considerando as políticas inclusivas, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta, pois a Educação Especial atende apenas situações de deficiência.",
-        "Estudantes com altas habilidades devem receber exclusivamente acompanhamento psicológico.",
-        "O atendimento às altas habilidades é responsabilidade exclusiva da família.",
+        "A afirmação está correta, pois a Educação Especial atende em geral situações de deficiência, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Estudantes com altas habilidades devem receber predominantemente acompanhamento psicológico, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O atendimento às altas habilidades é responsabilidade exclusiva da família, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Altas habilidades e superdotação integram o público-alvo da Educação Especial e podem demandar atendimento específico.",
-        "Estudantes com altas habilidades não possuem direitos educacionais diferenciados."
+        "Estudantes com altas habilidades não possuem direitos educacionais diferenciados, conforme uma interpretação administrativa ampla das responsabilidades do poder público."
     ],
 
     correta: 3,
@@ -163,10 +163,10 @@ const inclusiva = [
     pergunta: "Durante uma reunião escolar, um gestor afirmou que o estudante público-alvo da Educação Especial deve ser encaminhado ao Atendimento Educacional Especializado para que o professor regente deixe de ser responsável por sua aprendizagem. Considerando os princípios da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "O professor regente deixa de ser responsável pelo estudante após o encaminhamento ao AEE.",
-        "A responsabilidade pela aprendizagem passa integralmente ao professor especializado.",
-        "O estudante passa a pertencer exclusivamente à Educação Especial.",
-        "O AEE substitui as funções pedagógicas da sala comum.",
+        "O professor regente deixa de ser responsável pelo estudante após o encaminhamento ao AEE, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A responsabilidade pela aprendizagem passa integralmente ao professor especializado, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "O estudante passa a pertencer predominantemente à Educação Especial, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "O AEE substitui as funções pedagógicas da sala comum, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "O professor regente continua responsável pela aprendizagem do estudante, em articulação com os demais profissionais."
     ],
 
@@ -183,11 +183,11 @@ const inclusiva = [
     pergunta: "Uma rede de ensino decidiu organizar suas políticas inclusivas partindo do princípio de que todos os estudantes público-alvo da Educação Especial possuem necessidades idênticas e devem receber exatamente os mesmos apoios. À luz da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "A decisão está correta, pois a padronização garante igualdade.",
+        "A decisão está correta, pois a padronização garante igualdade, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "As necessidades educacionais devem ser analisadas individualmente, respeitando as características de cada estudante.",
-        "Todos os estudantes público-alvo da Educação Especial apresentam necessidades equivalentes.",
-        "A individualização dos apoios é incompatível com a inclusão.",
-        "A oferta de apoios diferenciados configura privilégio indevido."
+        "Todos os estudantes público-alvo da Educação Especial apresentam necessidades equivalentes, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "A individualização dos apoios é incompatível com a inclusão, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes.",
+        "A oferta de apoios diferenciados configura privilégio indevido, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 1,
@@ -205,7 +205,7 @@ const inclusiva = [
         "O AEE substitui a escolarização sempre que houver deficiência.",
         "O AEE é responsável exclusivo pelo ensino dos estudantes público-alvo da Educação Especial.",
         "O AEE funciona como reforço escolar para conteúdos em que o estudante apresenta dificuldades.",
-        "O AEE deve ocorrer apenas quando o estudante não acompanha a turma.",
+        "O AEE deve ocorrer em geral quando o estudante não acompanha a turma.",
         "O AEE possui caráter complementar ou suplementar e não substitui a escolarização regular."
     ],
 
@@ -224,9 +224,9 @@ const inclusiva = [
     alternativas: [
         "A participação no AEE deve considerar as necessidades específicas identificadas em cada estudante.",
         "A decisão está correta porque o AEE é obrigatório para todos os estudantes do público-alvo.",
-        "O AEE deve ser oferecido exclusivamente aos estudantes com deficiência física.",
-        "O AEE é destinado apenas a estudantes com deficiência intelectual.",
-        "O encaminhamento coletivo garante maior eficiência pedagógica."
+        "O AEE deve ser oferecido predominantemente aos estudantes com deficiência física, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O AEE é destinado em geral a estudantes com deficiência intelectual, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O encaminhamento coletivo garante maior eficiência pedagógica, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 0,
@@ -242,11 +242,11 @@ const inclusiva = [
     pergunta: "Durante uma reunião pedagógica, um coordenador afirmou que o objetivo principal do AEE é ensinar os mesmos conteúdos curriculares trabalhados na sala comum, funcionando como uma segunda aula das disciplinas escolares. Considerando as políticas inclusivas, assinale a alternativa correta:",
 
     alternativas: [
-        "O AEE existe para repetir os conteúdos da sala comum.",
+        "O AEE existe para repetir os conteúdos da sala comum, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "O AEE tem como foco identificar, elaborar e organizar recursos pedagógicos e de acessibilidade que eliminem barreiras à participação e à aprendizagem.",
-        "O AEE substitui as atividades curriculares realizadas pelo professor regente.",
-        "O AEE é uma modalidade de reforço escolar individualizado.",
-        "O AEE deve seguir exatamente o mesmo planejamento da sala comum."
+        "O AEE substitui as atividades curriculares realizadas pelo professor regente, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O AEE é uma modalidade de reforço escolar individualizado, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O AEE deve seguir exatamente o mesmo planejamento da sala comum, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 1,
@@ -262,11 +262,11 @@ const inclusiva = [
     pergunta: "Uma candidata afirmou que o Atendimento Educacional Especializado deve ocorrer preferencialmente no mesmo horário das aulas regulares para evitar que o estudante permaneça mais tempo na escola. Considerando a legislação educacional brasileira, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "O AEE deve substituir parte da carga horária da sala comum.",
-        "O horário do AEE é irrelevante para a política inclusiva.",
+        "A afirmação está correta, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O AEE deve substituir parte da carga horária da sala comum, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O horário do AEE é irrelevante para a política inclusiva, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
         "O AEE deve ocorrer preferencialmente em horário distinto ao da escolarização regular.",
-        "O AEE deve ocorrer apenas durante o turno regular."
+        "O AEE deve ocorrer em geral durante o turno regular, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 3,
@@ -282,11 +282,11 @@ const inclusiva = [
     pergunta: "Ao analisar a atuação do professor do AEE, um gestor concluiu que sua principal função consiste em assumir a responsabilidade integral pelo estudante público-alvo da Educação Especial, dispensando a participação dos demais profissionais. À luz da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "A conclusão está correta.",
-        "O professor do AEE atua isoladamente no atendimento ao estudante.",
+        "A conclusão está correta, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O professor do AEE atua isoladamente no atendimento ao estudante, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "A atuação do professor do AEE deve ocorrer de forma articulada com professores, gestores, família e demais profissionais envolvidos.",
-        "O professor do AEE substitui o professor regente nas questões pedagógicas.",
-        "O professor do AEE possui responsabilidade exclusiva sobre o planejamento educacional do estudante."
+        "O professor do AEE substitui o professor regente nas questões pedagógicas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O professor do AEE possui responsabilidade exclusiva sobre o planejamento educacional do estudante, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 2,
@@ -302,10 +302,10 @@ const inclusiva = [
 
     alternativas: [
         "A utilização da SRM como ambiente principal de escolarização contraria os princípios da Educação Inclusiva.",
-        "A SRM foi criada para substituir a escolarização na sala comum.",
-        "A SRM deve receber permanentemente os estudantes público-alvo da Educação Especial.",
-        "A sala comum deve ser utilizada apenas para atividades recreativas.",
-        "A SRM possui função equivalente à de uma escola especializada."
+        "A SRM foi criada para substituir a escolarização na sala comum, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A SRM deve receber permanentemente os estudantes público-alvo da Educação Especial, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "A sala comum deve ser utilizada em geral para atividades recreativas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A SRM possui função equivalente à de uma escola especializada, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 0,
@@ -321,11 +321,11 @@ const inclusiva = [
     pergunta: "Durante uma formação continuada, um professor afirmou que a principal finalidade da Sala de Recursos Multifuncionais é oferecer reforço escolar dos conteúdos curriculares trabalhados em Matemática, Língua Portuguesa e Ciências. Considerando as políticas de Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta.",
-        "A SRM existe para repetir os conteúdos ministrados pelo professor regente.",
-        "A SRM funciona exclusivamente como espaço de recuperação paralela.",
+        "A afirmação está correta, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A SRM existe para repetir os conteúdos ministrados pelo professor regente, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A SRM funciona predominantemente como espaço de recuperação paralela, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "A SRM tem como finalidade disponibilizar recursos, estratégias e serviços de acessibilidade relacionados ao AEE.",
-        "A SRM destina-se apenas aos estudantes com dificuldades de aprendizagem."
+        "A SRM destina-se em geral aos estudantes com dificuldades de aprendizagem, considerando sua relação com os objetivos educacionais e com as condições reais da escola."
     ],
 
     correta: 3,
@@ -341,11 +341,11 @@ const inclusiva = [
     pergunta: "Uma secretaria de educação adquiriu impressoras Braille, softwares leitores de tela, materiais táteis, recursos de comunicação alternativa e equipamentos de tecnologia assistiva para equipar suas Salas de Recursos Multifuncionais. Essa iniciativa está alinhada principalmente à:",
 
     alternativas: [
-        "Substituição da escolarização regular.",
+        "Substituição da escolarização regular, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Organização de recursos de acessibilidade e apoio ao AEE.",
-        "Criação de classes especiais permanentes.",
-        "Redução das adaptações necessárias na sala comum.",
-        "Segregação pedagógica dos estudantes."
+        "Criação de classes especiais permanentes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Redução das adaptações necessárias na sala comum, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Segregação pedagógica dos estudantes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 1,
@@ -361,8 +361,8 @@ const inclusiva = [
     pergunta: "Durante uma auditoria pedagógica, verificou-se que a escola utilizava a Sala de Recursos Multifuncionais apenas para armazenar materiais e equipamentos, sem qualquer articulação com o planejamento pedagógico da instituição. Considerando os princípios da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "A situação está adequada, pois a SRM possui função exclusivamente patrimonial.",
-        "A utilização pedagógica da SRM é dispensável quando existem recursos físicos disponíveis.",
+        "A situação está adequada, pois a SRM possui função predominantemente patrimonial.",
+        "A utilização pedagógica da SRM é secundária quando existem recursos físicos disponíveis.",
         "A SRM deve integrar-se ao trabalho pedagógico da escola e ao planejamento do AEE.",
         "A articulação entre SRM e sala comum é desnecessária.",
         "A SRM deve funcionar de forma independente do restante da escola."
@@ -382,8 +382,8 @@ const inclusiva = [
 
     alternativas: [
         "Incorreta, pois a SRM substitui a escolarização comum.",
-        "Incorreta, pois a SRM funciona apenas como reforço escolar.",
-        "Incorreta, pois a SRM destina-se exclusivamente ao armazenamento de equipamentos.",
+        "Incorreta, pois a SRM funciona em geral como reforço escolar.",
+        "Incorreta, pois a SRM destina-se predominantemente ao armazenamento de equipamentos.",
         "Incorreta, pois a SRM atua independentemente do AEE.",
         "Correta."
     ],
@@ -400,10 +400,10 @@ const inclusiva = [
     pergunta: "Durante uma reunião pedagógica, uma professora afirmou que a principal barreira enfrentada pelos estudantes com deficiência é a ausência de rampas e elevadores. Outro professor discordou, argumentando que existem barreiras menos visíveis, porém igualmente prejudiciais. Considerando os conceitos de acessibilidade e inclusão, assinale a alternativa correta:",
 
     alternativas: [
-        "As barreiras arquitetônicas são as únicas reconhecidas pelas políticas inclusivas.",
-        "Barreiras comunicacionais afetam exclusivamente pessoas com deficiência auditiva.",
-        "Barreiras pedagógicas possuem relevância apenas na educação superior.",
-        "Barreiras arquitetônicas são mais graves que todas as demais.",
+        "As barreiras arquitetônicas são as únicas reconhecidas pelas políticas inclusivas, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "Barreiras comunicacionais afetam predominantemente pessoas com deficiência auditiva, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes.",
+        "Barreiras pedagógicas possuem relevância em geral na educação superior, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Barreiras arquitetônicas são mais graves que todas as demais, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes.",
         "Barreiras atitudinais decorrem de preconceitos, estereótipos e comportamentos que dificultam a participação das pessoas."
     ],
 
@@ -421,10 +421,10 @@ const inclusiva = [
 
     alternativas: [
         "Barreiras comunicacionais e informacionais.",
-        "Barreiras urbanísticas.",
-        "Barreiras arquitetônicas.",
-        "Barreiras sanitárias.",
-        "Barreiras ocupacionais."
+        "Barreiras urbanísticas, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes.",
+        "Barreiras arquitetônicas, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes.",
+        "Barreiras sanitárias, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes.",
+        "Barreiras ocupacionais, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes."
     ],
 
     correta: 0,
@@ -480,11 +480,11 @@ const inclusiva = [
     pergunta: "Ao analisar as políticas de acessibilidade, uma candidata concluiu que a eliminação de barreiras deve abranger dimensões físicas, comunicacionais, tecnológicas, pedagógicas e atitudinais para garantir participação plena dos estudantes. Essa conclusão está:",
 
     alternativas: [
-        "Incorreta, pois a acessibilidade limita-se à eliminação de barreiras arquitetônicas.",
+        "Incorreta, pois a acessibilidade concentra-se à eliminação de barreiras arquitetônicas.",
         "Incorreta, pois aspectos pedagógicos não integram as políticas inclusivas.",
         "Incorreta, pois barreiras tecnológicas não são reconhecidas pela legislação.",
         "Correta.",
-        "Incorreta, pois a acessibilidade refere-se exclusivamente ao ambiente escolar."
+        "Incorreta, pois a acessibilidade refere-se predominantemente ao ambiente escolar."
     ],
 
     correta: 3,
@@ -499,11 +499,11 @@ const inclusiva = [
     pergunta: "Durante uma formação pedagógica, um professor afirmou que o Desenho Universal para Aprendizagem (DUA) consiste em criar adaptações específicas apenas após identificar estudantes com deficiência na turma. Considerando os fundamentos do DUA, assinale a alternativa correta:",
 
     alternativas: [
-        "O DUA é aplicado somente depois que surgem dificuldades de aprendizagem.",
+        "O DUA é aplicado normalmente depois que surgem dificuldades de aprendizagem, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "O DUA propõe planejar o currículo desde o início para atender à diversidade dos estudantes.",
-        "O DUA destina-se exclusivamente aos estudantes público-alvo da Educação Especial.",
-        "O DUA substitui completamente as adaptações individualizadas.",
-        "O DUA limita-se à acessibilidade arquitetônica."
+        "O DUA destina-se predominantemente aos estudantes público-alvo da Educação Especial.",
+        "O DUA substitui amplamente as adaptações individualizadas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O DUA concentra-se à acessibilidade arquitetônica, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes."
     ],
 
     correta: 1,
@@ -580,10 +580,10 @@ const inclusiva = [
 
     alternativas: [
         "Correta.",
-        "Incorreta, pois o DUA trabalha apenas com representação e avaliação.",
-        "Incorreta, pois o DUA limita-se à acessibilidade física.",
+        "Incorreta, pois o DUA trabalha em geral com representação e avaliação.",
+        "Incorreta, pois o DUA concentra-se à acessibilidade física.",
         "Incorreta, pois o DUA substitui o currículo escolar.",
-        "Incorreta, pois o DUA destina-se exclusivamente a estudantes com deficiência."
+        "Incorreta, pois o DUA destina-se predominantemente a estudantes com deficiência."
     ],
 
     correta: 0,
@@ -598,11 +598,11 @@ const inclusiva = [
     pergunta: "Durante uma reunião pedagógica, uma professora afirmou que a avaliação inclusiva consiste em aplicar provas mais fáceis aos estudantes público-alvo da Educação Especial. Considerando os princípios da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "A avaliação inclusiva busca reduzir o nível de exigência acadêmica dos estudantes.",
-        "A avaliação inclusiva elimina os objetivos de aprendizagem previstos para a turma.",
-        "A avaliação inclusiva substitui o currículo comum por um currículo simplificado.",
+        "A avaliação inclusiva busca reduzir o nível de exigência acadêmica dos estudantes, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "A avaliação inclusiva elimina os objetivos de aprendizagem previstos para a turma, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "A avaliação inclusiva substitui o currículo comum por um currículo simplificado, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
         "A avaliação inclusiva procura remover barreiras e possibilitar formas adequadas de demonstrar a aprendizagem, preservando os objetivos educacionais.",
-        "A avaliação inclusiva dispensa critérios de acompanhamento do desenvolvimento do estudante."
+        "A avaliação inclusiva reduz a necessidade de critérios de acompanhamento do desenvolvimento do estudante, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 3,
@@ -618,11 +618,11 @@ const inclusiva = [
     pergunta: "Durante uma prova, uma estudante com deficiência visual recebeu exatamente o mesmo material impresso aplicado aos demais colegas, sem recursos de acessibilidade. A escola justificou a decisão afirmando que todos devem ser tratados igualmente. Considerando os princípios da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "A escola agiu corretamente, pois igualdade exige tratamento idêntico.",
+        "A escola agiu corretamente, pois igualdade exige tratamento semelhante, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "A equidade pode exigir adaptações para assegurar condições efetivamente equivalentes de participação.",
-        "A igualdade formal é suficiente para garantir justiça educacional.",
-        "A adaptação de avaliações caracteriza privilégio indevido.",
-        "A acessibilidade não possui relação com os processos avaliativos."
+        "A igualdade formal é suficiente para garantir justiça educacional, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A adaptação de avaliações caracteriza privilégio indevido, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A acessibilidade não possui relação com os processos avaliativos, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes."
     ],
 
     correta: 1,
@@ -638,10 +638,10 @@ const inclusiva = [
     pergunta: "Durante um conselho de classe, um docente afirmou que adaptações avaliativas comprometem a credibilidade da avaliação porque impedem a comparação entre os estudantes. À luz da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "A adaptação avaliativa elimina a validade do processo de avaliação.",
-        "Avaliações inclusivas devem ser evitadas para preservar a uniformidade.",
-        "Qualquer adaptação implica redução obrigatória dos conteúdos avaliados.",
-        "A avaliação inclusiva é incompatível com critérios pedagógicos.",
+        "A adaptação avaliativa elimina a validade do processo de avaliação, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "Avaliações inclusivas devem ser evitadas para preservar a uniformidade, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Qualquer adaptação implica redução obrigatória dos conteúdos avaliados, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A avaliação inclusiva é incompatível com critérios pedagógicos, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
         "A adaptação avaliativa busca remover barreiras sem alterar necessariamente os objetivos de aprendizagem."
     ],
 
@@ -679,10 +679,10 @@ const inclusiva = [
 
     alternativas: [
         "Correta.",
-        "Incorreta, pois a avaliação inclusiva busca apenas facilitar provas.",
+        "Incorreta, pois a avaliação inclusiva busca em geral facilitar provas.",
         "Incorreta, pois a inclusão exige avaliações idênticas para todos.",
         "Incorreta, pois adaptações avaliativas são incompatíveis com a equidade.",
-        "Incorreta, pois a avaliação inclusiva limita-se aos estudantes com deficiência."
+        "Incorreta, pois a avaliação inclusiva concentra-se aos estudantes com deficiência."
     ],
 
     correta: 0,
@@ -697,11 +697,11 @@ const inclusiva = [
     pergunta: "Durante uma reunião pedagógica, um professor afirmou que o estudante público-alvo da Educação Especial deve ser acompanhado exclusivamente pelo professor do AEE, já que este possui formação especializada. Considerando os princípios da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "O professor regente deixa de ser responsável pela aprendizagem do estudante.",
-        "O professor do AEE assume integralmente o processo de ensino do estudante.",
+        "O professor regente deixa de ser responsável pela aprendizagem do estudante, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "O professor do AEE assume integralmente o processo de ensino do estudante, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "A responsabilidade pela aprendizagem permanece com o professor regente, em articulação com o professor do AEE.",
-        "O estudante passa a pertencer exclusivamente à Educação Especial.",
-        "A atuação conjunta entre professor regente e professor do AEE é desnecessária."
+        "O estudante passa a pertencer predominantemente à Educação Especial, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "A atuação conjunta entre professor regente e professor do AEE é desnecessária, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 2,
@@ -717,11 +717,11 @@ const inclusiva = [
     pergunta: "Durante a elaboração de um plano educacional, a equipe escolar concluiu que o professor do AEE deveria concentrar seus esforços na identificação de barreiras, produção de recursos pedagógicos e promoção da acessibilidade. À luz das políticas inclusivas, essa conclusão está:",
 
     alternativas: [
-        "Incorreta, pois o professor do AEE deve atuar apenas como reforço escolar.",
+        "Incorreta, pois o professor do AEE deve atuar em geral como reforço escolar.",
         "Correta.",
         "Incorreta, pois o professor do AEE substitui o professor regente.",
-        "Incorreta, pois a função do AEE limita-se à elaboração de avaliações.",
-        "Incorreta, pois o professor do AEE atua exclusivamente na gestão escolar."
+        "Incorreta, pois a função do AEE concentra-se à elaboração de avaliações.",
+        "Incorreta, pois o professor do AEE atua predominantemente na gestão escolar."
     ],
 
     correta: 1,
@@ -737,10 +737,10 @@ const inclusiva = [
     pergunta: "Uma escola contratou um profissional de apoio escolar para auxiliar determinado estudante em atividades relacionadas à alimentação, higiene e locomoção. Após algum tempo, a direção passou a exigir que esse profissional elaborasse provas, atribuísse notas e definisse objetivos curriculares. Considerando a legislação e as políticas inclusivas, assinale a alternativa correta:",
 
     alternativas: [
-        "A medida está correta, pois o profissional de apoio substitui o professor quando necessário.",
-        "O profissional de apoio possui autonomia para alterar o currículo da turma.",
-        "A elaboração de avaliações é responsabilidade prioritária do profissional de apoio.",
-        "O profissional de apoio deve assumir integralmente o processo pedagógico do estudante.",
+        "A medida está correta, pois o profissional de apoio substitui o professor quando necessário, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O profissional de apoio possui autonomia para alterar o currículo da turma, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "A elaboração de avaliações é responsabilidade prioritária do profissional de apoio, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O profissional de apoio deve assumir integralmente o processo pedagógico do estudante, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "As atribuições pedagógicas pertencem aos profissionais da educação e não ao profissional de apoio escolar."
     ],
 
@@ -757,11 +757,11 @@ const inclusiva = [
     pergunta: "Uma rede de ensino decidiu implementar o coensino (ensino colaborativo) em suas escolas. Durante uma capacitação, um gestor afirmou que esse modelo consiste em retirar o professor regente da sala e substituí-lo por um especialista em Educação Especial. Considerando o conceito de coensino, assinale a alternativa correta:",
 
     alternativas: [
-        "O coensino pressupõe a substituição do professor regente.",
-        "O coensino elimina a necessidade de planejamento pedagógico.",
-        "O coensino destina-se exclusivamente aos estudantes com deficiência intelectual.",
+        "O coensino pressupõe a substituição do professor regente, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "O coensino elimina a necessidade de planejamento pedagógico, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "O coensino destina-se predominantemente aos estudantes com deficiência intelectual, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "O coensino consiste na atuação colaborativa entre profissionais, com planejamento e responsabilidade compartilhados.",
-        "O coensino substitui o Atendimento Educacional Especializado."
+        "O coensino substitui o Atendimento Educacional Especializado, considerando sua relação com os objetivos educacionais e com as condições reais da escola."
     ],
 
     correta: 3,
@@ -778,8 +778,8 @@ const inclusiva = [
 
     alternativas: [
         "Correta.",
-        "Incorreta, pois a inclusão depende exclusivamente do professor regente.",
-        "Incorreta, pois a responsabilidade pela inclusão pertence apenas ao AEE.",
+        "Incorreta, pois a inclusão depende predominantemente do professor regente.",
+        "Incorreta, pois a responsabilidade pela inclusão pertence em geral ao AEE.",
         "Incorreta, pois a participação da família não possui relevância pedagógica.",
         "Incorreta, pois a inclusão é responsabilidade exclusiva da gestão escolar."
     ],
@@ -796,11 +796,11 @@ const inclusiva = [
     pergunta: "Durante a revisão do Projeto Político-Pedagógico (PPP), um grupo de professores afirmou que as ações de inclusão deveriam aparecer apenas em documentos específicos da Educação Especial, sem integração com os objetivos gerais da escola. Considerando os princípios da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "A inclusão deve ser tratada exclusivamente pelo professor do AEE.",
+        "A inclusão deve ser tratada predominantemente pelo professor do AEE, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes.",
         "O PPP deve contemplar a inclusão como princípio orientador de toda a ação pedagógica da escola.",
-        "As ações inclusivas devem permanecer separadas do planejamento institucional.",
-        "O PPP possui caráter administrativo e não deve abordar questões inclusivas.",
-        "A inclusão é responsabilidade apenas da equipe gestora."
+        "As ações inclusivas devem permanecer separadas do planejamento institucional, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
+        "O PPP possui caráter administrativo e não deve abordar questões inclusivas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A inclusão é responsabilidade em geral da equipe gestora, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes."
     ],
 
     correta: 1,
@@ -836,11 +836,11 @@ const inclusiva = [
     pergunta: "Durante uma reunião escolar, um gestor afirmou que a participação das famílias deve limitar-se ao acompanhamento das notas dos estudantes, sem interferência nas discussões pedagógicas da escola. Considerando os fundamentos da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "A participação familiar deve restringir-se ao acompanhamento do rendimento escolar.",
-        "A família participa apenas quando o estudante apresenta deficiência.",
-        "A presença das famílias pode comprometer a autonomia da escola.",
+        "A participação familiar deve restringir-se ao acompanhamento do rendimento escolar, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A família participa em geral quando o estudante apresenta deficiência, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A presença das famílias pode comprometer a autonomia da escola, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "A participação das famílias fortalece a construção de ambientes inclusivos e o desenvolvimento dos estudantes.",
-        "A inclusão independe do diálogo entre escola e família."
+        "A inclusão independe do diálogo entre escola e família, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes."
     ],
 
     correta: 3,
@@ -856,10 +856,10 @@ const inclusiva = [
     pergunta: "Uma instituição possuía recursos de acessibilidade, professores capacitados e serviços especializados. Entretanto, eram frequentes comentários preconceituosos, baixas expectativas em relação a determinados estudantes e resistência à diversidade. Considerando a Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "A inclusão está plenamente consolidada porque existem recursos materiais.",
-        "Questões culturais e atitudinais não interferem nos processos inclusivos.",
-        "A existência de recursos elimina automaticamente as barreiras atitudinais.",
-        "A cultura escolar possui pouca influência sobre a inclusão.",
+        "A inclusão está plenamente consolidada porque existem recursos materiais, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "Questões culturais e atitudinais não interferem nos processos inclusivos, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A existência de recursos elimina automaticamente as barreiras atitudinais, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "A cultura escolar possui pouca influência sobre a inclusão, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes.",
         "A construção de uma cultura inclusiva exige transformação de valores, atitudes e práticas institucionais."
     ],
 
@@ -877,10 +877,10 @@ const inclusiva = [
 
     alternativas: [
         "Correta.",
-        "Incorreta, pois a inclusão depende exclusivamente dos professores.",
-        "Incorreta, pois a gestão escolar possui função apenas administrativa.",
+        "Incorreta, pois a inclusão depende predominantemente dos professores.",
+        "Incorreta, pois a gestão escolar possui função em geral administrativa.",
         "Incorreta, pois a diversidade não integra os objetivos institucionais da escola.",
-        "Incorreta, pois a inclusão limita-se ao atendimento do público-alvo da Educação Especial."
+        "Incorreta, pois a inclusão concentra-se ao atendimento do público-alvo da Educação Especial."
     ],
 
     correta: 0,
@@ -896,10 +896,10 @@ const inclusiva = [
 
     alternativas: [
         "Persistem barreiras à participação e ao pertencimento incompatíveis com os princípios da inclusão.",
-        "A inclusão está plenamente garantida porque os estudantes frequentam a sala comum.",
+        "A inclusão está plenamente garantida porque os estudantes frequentam a sala comum, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes.",
         "A existência do AEE elimina a necessidade de participação nas demais atividades escolares.",
-        "A exclusão de atividades extracurriculares não possui relevância pedagógica.",
-        "A escola atende integralmente às políticas inclusivas."
+        "A exclusão de atividades extracurriculares não possui relevância pedagógica, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A escola atende integralmente às políticas inclusivas, conforme uma interpretação administrativa ampla das responsabilidades do poder público."
     ],
 
     correta: 0,
@@ -915,11 +915,11 @@ const inclusiva = [
     pergunta: "Uma professora afirmou que a melhor estratégia para promover inclusão consiste em oferecer exatamente os mesmos recursos, atividades, avaliações e formas de participação para todos os estudantes. Considerando os princípios da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "A afirmação está correta porque igualdade e equidade são conceitos equivalentes.",
-        "A inclusão exige uniformização das práticas pedagógicas.",
-        "A oferta de recursos diferenciados configura privilégio indevido.",
+        "A afirmação está correta porque igualdade e equidade são conceitos equivalentes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A inclusão exige uniformização das práticas pedagógicas, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes.",
+        "A oferta de recursos diferenciados configura privilégio indevido, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
         "A equidade pode exigir apoios distintos para garantir oportunidades equivalentes de participação e aprendizagem.",
-        "As adaptações pedagógicas são incompatíveis com a inclusão."
+        "As adaptações pedagógicas são incompatíveis com a inclusão, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes."
     ],
 
     correta: 3,
@@ -935,11 +935,11 @@ const inclusiva = [
     pergunta: "Ao analisar uma proposta pedagógica, um candidato verificou que a escola utilizava princípios do DUA, oferecia AEE articulado com a sala comum, promovia trabalho colaborativo entre profissionais e mantinha participação ativa das famílias. Considerando os fundamentos da Educação Inclusiva, assinale a alternativa correta:",
 
     alternativas: [
-        "As medidas descritas são incompatíveis entre si.",
-        "O DUA elimina a necessidade do AEE.",
+        "As medidas descritas são incompatíveis entre si, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O DUA elimina a necessidade do AEE, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "As ações descritas representam estratégias complementares voltadas à construção de ambientes inclusivos.",
-        "A participação da família reduz a autonomia da escola.",
-        "O trabalho colaborativo substitui a necessidade de acessibilidade."
+        "A participação da família reduz a autonomia da escola, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O trabalho colaborativo substitui a necessidade de acessibilidade, desde que a escola organize recursos de apoio e acompanhamento pedagógico aos estudantes."
     ],
 
     correta: 2,
@@ -975,9 +975,9 @@ const inclusiva = [
     pergunta: "Ao concluir seus estudos sobre Educação Inclusiva, uma candidata afirmou que seu objetivo central é garantir acesso, participação, aprendizagem, pertencimento e valorização da diversidade para todos os estudantes, por meio da eliminação de barreiras e da promoção da equidade. Essa afirmação está:",
 
     alternativas: [
-        "Incorreta, pois a Educação Inclusiva destina-se apenas aos estudantes com deficiência.",
+        "Incorreta, pois a Educação Inclusiva destina-se em geral aos estudantes com deficiência.",
         "Correta.",
-        "Incorreta, pois a inclusão limita-se à matrícula em classes comuns.",
+        "Incorreta, pois a inclusão concentra-se à matrícula em classes comuns.",
         "Incorreta, pois participação e pertencimento não integram os objetivos da inclusão.",
         "Incorreta, pois a equidade não possui relação com a Educação Inclusiva."
     ],

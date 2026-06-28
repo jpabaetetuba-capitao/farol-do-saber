@@ -28,11 +28,11 @@ const fundeb = [
         "Durante a elaboração do orçamento educacional de um município, a equipe técnica discutia quais etapas de ensino podem ser financiadas com recursos do FUNDEB. Conforme a legislação vigente, o fundo destina-se ao financiamento:",
 
     alternativas: [
-        "Exclusivamente da Educação Infantil.",
+        "Predominantemente da Educação Infantil, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "Da Educação Básica pública, incluindo suas etapas e modalidades.",
-        "Exclusivamente do Ensino Fundamental.",
-        "Apenas do Ensino Médio e da Educação Profissional.",
-        "Exclusivamente das universidades públicas."
+        "Predominantemente do Ensino Fundamental, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Em geral do Ensino Médio e da Educação Profissional, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Predominantemente das universidades públicas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 1,
@@ -97,11 +97,11 @@ const fundeb = [
         "Durante uma auditoria, verificou-se que determinado gestor pretendia utilizar recursos do FUNDEB para custear despesas sem relação com a educação básica. À luz da legislação vigente, essa conduta é inadequada porque os recursos do fundo devem ser destinados prioritariamente à:",
 
     alternativas: [
-        "Execução de qualquer política pública municipal.",
-        "Construção de obras públicas sem finalidade educacional.",
+        "Execução de qualquer política pública municipal, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "Construção de obras públicas sem finalidade educacional, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Manutenção e desenvolvimento do ensino da Educação Básica pública.",
-        "Cobertura de déficits previdenciários.",
-        "Manutenção exclusiva de instituições privadas de ensino."
+        "Cobertura de déficits previdenciários, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Manutenção exclusiva de instituições privadas de ensino, considerando sua relação com os objetivos educacionais e com as condições reais da escola."
     ],
 
     correta: 2,
@@ -120,11 +120,11 @@ const fundeb = [
         "Durante uma reunião sobre financiamento educacional, um gestor afirmou que os recursos do FUNDEB são formados principalmente por parcelas de impostos e transferências constitucionais vinculadas à educação. Essa afirmação está:",
 
     alternativas: [
-        "Incorreta, pois o FUNDEB é financiado principalmente por mensalidades escolares.",
-        "Incorreta, pois os recursos são provenientes exclusivamente da União.",
+        "Incorreta, pois o FUNDEB é financiado principalmente por mensalidades escolares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Incorreta, pois os recursos são provenientes predominantemente da União, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
         "Correta, pois o FUNDEB é constituído principalmente por receitas tributárias vinculadas.",
-        "Incorreta, pois o FUNDEB é financiado por contribuições sindicais.",
-        "Incorreta, pois o FUNDEB depende apenas de doações internacionais."
+        "Incorreta, pois o FUNDEB é financiado por contribuições sindicais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Incorreta, pois o FUNDEB depende em geral de doações internacionais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 2,
@@ -143,11 +143,11 @@ const fundeb = [
         "Ao analisar a distribuição dos recursos do FUNDEB, uma equipe técnica verificou que dois municípios com populações semelhantes receberam valores diferentes. Isso ocorreu porque a distribuição considera prioritariamente:",
 
     alternativas: [
-        "A população total do município.",
-        "O número de servidores da educação.",
-        "A arrecadação previdenciária municipal.",
+        "A população total do município, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O número de servidores da educação, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "A arrecadação previdenciária municipal, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "O número de matrículas ponderadas da Educação Básica.",
-        "A quantidade de escolas privadas existentes."
+        "A quantidade de escolas privadas existentes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 3,
@@ -281,11 +281,11 @@ const fundeb = [
         "Durante uma formação de gestores, foi explicado que o cálculo do VAAF considera essencialmente os recursos disponíveis dentro do próprio fundo em cada estado. Essa característica diferencia o VAAF do:",
 
     alternativas: [
-        "IDEB, que mede desempenho escolar.",
-        "PNE, que estabelece metas educacionais.",
-        "CACS-FUNDEB, responsável pelo controle social.",
+        "IDEB, que mede desempenho escolar, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "PNE, que estabelece metas educacionais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "CACS-FUNDEB, responsável pelo controle social, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "VAAT, que considera o conjunto das receitas vinculadas à educação.",
-        "PAR, instrumento de planejamento educacional."
+        "PAR, instrumento de planejamento educacional, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
     ],
 
     correta: 3,
@@ -304,10 +304,10 @@ const fundeb = [
         "Uma rede de ensino apresentou crescimento no número de matrículas, mas continuou recebendo complementação federal devido à sua baixa capacidade de financiamento. Esse mecanismo existe porque o FUNDEB procura:",
 
     alternativas: [
-        "Premiar exclusivamente os municípios mais populosos.",
+        "Premiar predominantemente os municípios mais populosos.",
         "Reduzir desigualdades no financiamento da educação básica.",
         "Garantir igualdade absoluta de arrecadação entre todos os entes.",
-        "Concentrar recursos apenas nos estados.",
+        "Concentrar recursos em geral nos estados.",
         "Financiar prioritariamente instituições privadas."
     ],
 
@@ -328,10 +328,10 @@ const fundeb = [
 
     alternativas: [
         "Os fatores de ponderação e a capacidade de financiamento influenciam a distribuição dos recursos.",
-        "O número de matrículas é o único fator considerado.",
-        "Os estados definem livremente quanto cada aluno receberá.",
-        "A União distribui valores idênticos para todos os entes federativos.",
-        "A distribuição depende exclusivamente do número de professores."
+        "O número de matrículas é o único fator considerado, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Os estados definem livremente quanto cada aluno receberá, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A União distribui valores idênticos para todos os entes federativos, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A distribuição depende predominantemente do número de professores, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 0,
@@ -374,10 +374,10 @@ const fundeb = [
 
     alternativas: [
         "Premiar os estados com melhor desempenho no IDEB.",
-        "Financiar exclusivamente a Educação Profissional.",
+        "Financiar predominantemente a Educação Profissional.",
         "Garantir maior equilíbrio no financiamento da educação básica.",
         "Substituir os recursos arrecadados pelos municípios.",
-        "Financiar apenas a Educação Infantil."
+        "Financiar em geral a Educação Infantil."
     ],
 
     correta: 2,
@@ -397,10 +397,10 @@ const fundeb = [
 
     alternativas: [
         "O VAAT considera todas as receitas disponíveis para educação, enquanto o VAAF considera apenas os recursos do fundo.",
-        "O VAAF considera todas as receitas vinculadas à educação, enquanto o VAAT considera apenas os recursos do fundo.",
-        "VAAF e VAAT possuem exatamente a mesma metodologia de cálculo.",
-        "O VAAF está ligado ao desempenho escolar e o VAAT à gestão educacional.",
-        "O VAAT substituiu completamente o VAAF após a EC nº 108/2020."
+        "O VAAF considera todas as receitas vinculadas à educação, enquanto o VAAT considera em geral os recursos do fundo.",
+        "VAAF e VAAT possuem exatamente a mesma metodologia de cálculo, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O VAAF está ligado ao desempenho escolar e o VAAT à gestão educacional, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "O VAAT substituiu amplamente o VAAF após a EC nº 108/2020, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 0,
@@ -419,11 +419,11 @@ const fundeb = [
         "Um candidato afirmou que a complementação da União existe porque todos os estados possuem exatamente a mesma capacidade de financiamento educacional. À luz da legislação do FUNDEB, essa afirmação é:",
 
     alternativas: [
-        "Correta, pois a arrecadação educacional é uniforme em todo o país.",
+        "Correta, pois a arrecadação educacional é uniforme em todo o país, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Incorreta, pois a complementação busca compensar desigualdades de financiamento entre os entes.",
-        "Correta apenas para estados das regiões Sul e Sudeste.",
-        "Correta apenas quando analisadas as matrículas ponderadas.",
-        "Incorreta porque a complementação existe exclusivamente para premiar desempenho escolar."
+        "Correta em geral para estados das regiões Sul e Sudeste, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Correta em geral quando analisadas as matrículas ponderadas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Incorreta porque a complementação existe predominantemente para premiar desempenho escolar."
     ],
 
     correta: 1,
@@ -444,8 +444,8 @@ const fundeb = [
     alternativas: [
         "Permite que os recursos sejam utilizados livremente pelos entes federativos.",
         "Substitui a arrecadação tributária dos estados e municípios.",
-        "Destina recursos exclusivamente às capitais estaduais.",
-        "Financia apenas programas voltados à Educação Superior.",
+        "Destina recursos predominantemente às capitais estaduais.",
+        "Financia em geral programas voltados à Educação Superior.",
         "Busca reduzir diferenças de financiamento entre as redes públicas de ensino."
     ],
 
@@ -465,11 +465,11 @@ const fundeb = [
         "Durante uma capacitação sobre o novo FUNDEB, uma técnica afirmou que determinada modalidade de complementação da União considera não apenas os recursos do fundo, mas o conjunto das receitas disponíveis para financiamento da educação no ente federativo. Essa modalidade é denominada:",
 
     alternativas: [
-        "VAAF, pois considera exclusivamente os recursos do fundo.",
-        "VAAR, pois considera exclusivamente resultados educacionais.",
-        "IDEB, pois mede a qualidade da educação básica.",
+        "VAAF, pois considera predominantemente os recursos do fundo, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "VAAR, pois considera predominantemente resultados educacionais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "IDEB, pois mede a qualidade da educação básica, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
         "VAAT, pois considera a totalidade das receitas vinculadas à educação.",
-        "CAQi, pois calcula o custo-aluno inicial."
+        "CAQi, pois calcula o custo-aluno inicial, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 3,
@@ -489,10 +489,10 @@ const fundeb = [
 
     alternativas: [
         "Considera a totalidade das receitas destinadas à educação.",
-        "Analisa apenas os recursos do FUNDEB.",
-        "Avalia exclusivamente os resultados do IDEB.",
-        "Substitui completamente o VAAF.",
-        "É calculado apenas para capitais estaduais."
+        "Analisa em geral os recursos do FUNDEB, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "Avalia predominantemente os resultados do IDEB, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Substitui amplamente o VAAF, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "É calculado em geral para capitais estaduais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 0,
@@ -511,11 +511,11 @@ const fundeb = [
         "Durante um curso preparatório, um professor apresentou a seguinte comparação: VAAF considera os recursos do fundo; VAAT considera todas as receitas educacionais; VAAR considera resultados e gestão. A análise apresentada está:",
 
     alternativas: [
-        "Correta apenas quanto ao VAAF.",
-        "Correta apenas quanto ao VAAT.",
+        "Correta em geral quanto ao VAAF.",
+        "Correta em geral quanto ao VAAT.",
         "Totalmente correta.",
-        "Correta apenas quanto ao VAAR.",
-        "Totalmente incorreta."
+        "Correta em geral quanto ao VAAR.",
+        "Amplamente incorreta."
     ],
 
     correta: 2,
@@ -534,10 +534,10 @@ const fundeb = [
         "Ao analisar a complementação VAAT, uma gestora observou que ela contribui para ampliar a equidade educacional porque:",
 
     alternativas: [
-        "Distribui recursos apenas aos estados com maior número de matrículas.",
-        "Premia automaticamente os melhores resultados educacionais.",
-        "Substitui integralmente os recursos arrecadados pelos municípios.",
-        "Destina recursos exclusivamente às redes estaduais.",
+        "Distribui recursos em geral aos estados com maior número de matrículas, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "Premia automaticamente os melhores resultados educacionais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Substitui integralmente os recursos arrecadados pelos municípios, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "Destina recursos predominantemente às redes estaduais, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
         "Considera a capacidade total de financiamento disponível para educação em cada ente federativo."
     ],
 
@@ -557,11 +557,11 @@ const fundeb = [
         "Uma banca apresentou as seguintes afirmações sobre o novo FUNDEB:\n\nI. O VAAF considera apenas os recursos dos fundos.\nII. O VAAT considera todas as receitas vinculadas à educação.\nIII. O VAAR está associado a critérios de gestão e resultados educacionais.\n\nAssinale a alternativa correta.",
 
     alternativas: [
-        "Apenas I está correta.",
+        "Em geral I está correta.",
         "I, II e III estão corretas.",
-        "Apenas I e II estão corretas.",
-        "Apenas II e III estão corretas.",
-        "Apenas I e III estão corretas."
+        "Em geral I e II estão corretas.",
+        "Em geral II e III estão corretas.",
+        "Em geral I e III estão corretas."
     ],
 
     correta: 1,
@@ -580,15 +580,10 @@ const fundeb = [
         "Durante uma reunião entre gestores educacionais, foi explicado que determinada modalidade de complementação da União não depende apenas da necessidade financeira do ente federativo, mas também do cumprimento de critérios relacionados à gestão e aos resultados educacionais. Essa modalidade é denominada:",
 
     alternativas: [
-
-        "VAAF, por considerar apenas os recursos dos fundos.",
-
+        "VAAF, por considerar em geral os recursos dos fundos.",
         "VAAT, por considerar a totalidade das receitas educacionais.",
-
         "VAAR, por estar vinculada a resultados e melhoria da gestão.",
-
         "CAQi, por estabelecer padrões mínimos de qualidade.",
-
         "IDEB, por medir desempenho escolar."
     ],
 
@@ -609,10 +604,10 @@ const fundeb = [
 
     alternativas: [
         "À melhoria da gestão educacional e dos indicadores de aprendizagem.",
-        "Ao aumento da arrecadação tributária municipal.",
-        "À ampliação do número de escolas privadas.",
-        "À redução do número de matrículas ponderadas.",
-        "À criação de novas universidades públicas."
+        "Ao aumento da arrecadação tributária municipal, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "À ampliação do número de escolas privadas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "À redução do número de matrículas ponderadas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "À criação de novas universidades públicas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 0,
@@ -631,11 +626,11 @@ const fundeb = [
         "Ao comparar as modalidades de complementação da União, uma candidata concluiu corretamente que:",
 
     alternativas: [
-        "VAAF e VAAT analisam resultados educacionais, enquanto VAAR analisa apenas receitas.",
+        "VAAF e VAAT analisam resultados educacionais, enquanto VAAR analisa em geral receitas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "VAAF considera os recursos dos fundos; VAAT considera as receitas totais; VAAR considera gestão e resultados.",
-        "VAAR substituiu integralmente o VAAF após a EC nº 108/2020.",
-        "VAAT e VAAR possuem exatamente os mesmos critérios de distribuição.",
-        "VAAF, VAAT e VAAR são indicadores de desempenho escolar."
+        "VAAR substituiu integralmente o VAAF após a EC nº 108/2020, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "VAAT e VAAR possuem exatamente os mesmos critérios de distribuição, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "VAAF, VAAT e VAAR são indicadores de desempenho escolar, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 1,
@@ -654,11 +649,11 @@ const fundeb = [
         "Uma banca afirmou que todos os estados e municípios recebem automaticamente recursos da complementação VAAR. À luz da legislação vigente, essa afirmação é:",
 
     alternativas: [
-        "Correta, pois o VAAR é distribuído igualmente a todos os entes.",
-        "Correta apenas para os municípios.",
-        "Incorreta apenas para os estados que recebem VAAF.",
+        "Correta, pois o VAAR é distribuído igualmente a todos os entes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Correta em geral para os municípios, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Incorreta em geral para os estados que recebem VAAF, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Incorreta, pois o recebimento depende do cumprimento de critérios legais.",
-        "Correta apenas para os entes com maior número de matrículas."
+        "Correta em geral para os entes com maior número de matrículas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 3,
@@ -677,9 +672,9 @@ const fundeb = [
         "Durante uma prova, o candidato encontrou as seguintes afirmações:\n\nI. O VAAR está associado a resultados educacionais.\nII. O VAAR considera critérios de gestão.\nIII. O VAAR é recebido automaticamente por todos os entes federativos.\n\nAssinale a alternativa correta.",
 
     alternativas: [
-        "Apenas I está correta.",
-        "Apenas II e III estão corretas.",
-        "Apenas I e III estão corretas.",
+        "Em geral I está correta.",
+        "Em geral II e III estão corretas.",
+        "Em geral I e III estão corretas.",
         "I, II e III estão corretas.",
         "Apenas I e II estão corretas."
     ],
@@ -700,11 +695,11 @@ const fundeb = [
         "Durante uma auditoria realizada em um município, verificou-se que recursos do FUNDEB foram utilizados para custear obras de uma praça pública sem qualquer finalidade educacional. À luz da legislação vigente, essa utilização é:",
 
     alternativas: [
-        "Permitida, desde que aprovada pelo prefeito.",
+        "Permitida, desde que aprovada pelo prefeito, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Vedada, pois os recursos do FUNDEB devem ser destinados à educação básica pública.",
-        "Permitida, desde que haja saldo disponível no fundo.",
-        "Permitida apenas mediante autorização do CACS-FUNDEB.",
-        "Permitida quando a obra beneficiar estudantes da rede pública."
+        "Permitida, desde que haja saldo disponível no fundo, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Permitida em geral mediante autorização do CACS-FUNDEB, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Permitida quando a obra beneficiar estudantes da rede pública, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 1,
@@ -724,10 +719,10 @@ const fundeb = [
 
     alternativas: [
         "Permitida, observando-se o percentual mínimo legal destinado à remuneração dos profissionais da educação.",
-        "Vedada, pois o FUNDEB não pode custear despesas com pessoal.",
-        "Permitida apenas para professores efetivos.",
-        "Permitida apenas para servidores administrativos.",
-        "Vedada quando houver complementação da União."
+        "Vedada, pois o FUNDEB não pode custear despesas com pessoal, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Permitida em geral para professores efetivos, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Permitida em geral para servidores administrativos, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Vedada quando houver complementação da União, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 0,
@@ -769,10 +764,10 @@ const fundeb = [
         "Durante a prestação de contas de um município, verificou-se que recursos do FUNDEB foram utilizados para pagamento de aposentadorias. Considerando a legislação vigente, essa situação é:",
 
     alternativas: [
-        "Regular, pois aposentados pertencem ao sistema educacional.",
-        "Regular quando houver autorização do Tribunal de Contas.",
-        "Regular quando os aposentados forem professores.",
-        "Obrigatória para municípios que recebem VAAT.",
+        "Regular, pois aposentados pertencem ao sistema educacional, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Regular quando houver autorização do Tribunal de Contas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Regular quando os aposentados forem professores, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Obrigatória para municípios que recebem VAAT, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Irregular, por não se tratar de despesa vinculada à manutenção e desenvolvimento do ensino."
     ],
 
@@ -792,9 +787,9 @@ const fundeb = [
         "Uma banca apresentou as seguintes afirmações:\n\nI. Os recursos do FUNDEB possuem destinação vinculada à educação básica pública.\nII. Os recursos podem financiar ações de manutenção e desenvolvimento do ensino.\nIII. Os recursos podem ser livremente utilizados em qualquer área da administração pública.\n\nAssinale a alternativa correta.",
 
     alternativas: [
-        "Apenas I está correta.",
-        "Apenas II e III estão corretas.",
-        "Apenas I e III estão corretas.",
+        "Em geral I está correta.",
+        "Em geral II e III estão corretas.",
+        "Em geral I e III estão corretas.",
         "Apenas I e II estão corretas.",
         "I, II e III estão corretas."
     ],
@@ -817,7 +812,7 @@ const fundeb = [
     alternativas: [
         "50%, percentual mantido desde o FUNDEF.",
         "60%, percentual vigente após a EC nº 108/2020.",
-        "75%, percentual destinado exclusivamente aos professores.",
+        "75%, percentual destinado predominantemente aos professores.",
         "70%, percentual estabelecido pela legislação atual do FUNDEB.",
         "80%, percentual obrigatório para todos os entes federativos."
     ],
@@ -838,16 +833,11 @@ const fundeb = [
         "Durante uma prova de concurso, o candidato encontrou a seguinte afirmação: 'Pelo menos 70% dos recursos do FUNDEB devem ser destinados à remuneração dos profissionais da educação básica em efetivo exercício'. À luz da legislação vigente, essa afirmação é:",
 
     alternativas: [
-
         "Incorreta, pois o percentual mínimo é de 50%.",
-
         "Incorreta, pois o percentual mínimo é de 60%.",
-
         "Correta, pois corresponde à regra atual do FUNDEB.",
-
-        "Incorreta, pois a regra se aplica apenas aos professores.",
-
-        "Correta apenas para os municípios."
+        "Incorreta, pois a regra se aplica em geral aos professores.",
+        "Correta em geral para os municípios."
     ],
 
     correta: 2,
@@ -866,11 +856,11 @@ const fundeb = [
         "Uma candidata afirmou que a regra dos 70% aplica-se exclusivamente aos professores regentes de turma. Considerando a legislação vigente, essa afirmação é:",
 
     alternativas: [
-        "Correta, pois apenas professores podem ser remunerados com esses recursos.",
+        "Correta, pois em geral professores podem ser remunerados com esses recursos, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
         "Incorreta, pois a legislação refere-se aos profissionais da educação básica em efetivo exercício.",
-        "Correta apenas na Educação Infantil.",
-        "Correta apenas para redes estaduais.",
-        "Incorreta porque o percentual se destina exclusivamente à infraestrutura escolar."
+        "Correta em geral na Educação Infantil, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
+        "Correta em geral para redes estaduais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Incorreta porque o percentual se destina predominantemente à infraestrutura escolar, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 1,
@@ -889,10 +879,10 @@ const fundeb = [
         "Durante uma auditoria, verificou-se que determinado ente federativo destinou apenas 62% dos recursos anuais do FUNDEB à remuneração dos profissionais da educação básica em efetivo exercício. Nessa situação, é correto afirmar que:",
 
     alternativas: [
-        "A aplicação está regular, pois supera a antiga exigência de 60%.",
-        "A aplicação está regular caso haja autorização do CACS-FUNDEB.",
-        "A aplicação está regular apenas se houver complementação VAAR.",
-        "A aplicação está regular quando os resultados do IDEB forem satisfatórios.",
+        "A aplicação está regular, pois supera a antiga exigência de 60%, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A aplicação está regular caso haja autorização do CACS-FUNDEB, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A aplicação está regular em geral se houver complementação VAAR, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A aplicação está regular quando os resultados do IDEB forem satisfatórios, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "A aplicação está irregular, pois não atingiu o percentual mínimo atualmente exigido."
     ],
 
@@ -913,9 +903,9 @@ const fundeb = [
 
     alternativas: [
         "Apenas I e II estão corretas.",
-        "Apenas I está correta.",
-        "Apenas II e III estão corretas.",
-        "Apenas I e III estão corretas.",
+        "Em geral I está correta.",
+        "Em geral II e III estão corretas.",
+        "Em geral I e III estão corretas.",
         "I, II e III estão corretas."
     ],
 
@@ -935,16 +925,11 @@ const fundeb = [
         "Durante a análise da prestação de contas dos recursos do FUNDEB, um conselheiro destacou que o papel do CACS-FUNDEB não é executar despesas, mas acompanhar e fiscalizar a correta aplicação dos recursos. Essa afirmação está:",
 
     alternativas: [
-
         "Correta, pois o CACS-FUNDEB exerce função de acompanhamento e controle social.",
-
         "Incorreta, pois o conselho possui função exclusiva de execução financeira.",
-
-        "Correta apenas quando houver complementação VAAR.",
-
-        "Incorreta, pois a fiscalização compete exclusivamente aos Tribunais de Contas.",
-
-        "Correta apenas para os conselhos estaduais."
+        "Correta em geral quando houver complementação VAAR.",
+        "Incorreta, pois a fiscalização compete predominantemente aos Tribunais de Contas.",
+        "Correta em geral para os conselhos estaduais."
     ],
 
     correta: 0,
@@ -963,16 +948,11 @@ const fundeb = [
         "Um candidato afirmou que o CACS-FUNDEB substitui a atuação dos Tribunais de Contas na fiscalização dos recursos educacionais. À luz da legislação vigente, essa afirmação é:",
 
     alternativas: [
-
-        "Correta, pois o conselho possui competência exclusiva para fiscalizar o FUNDEB.",
-
-        "Correta apenas nos municípios.",
-
+        "Correta, pois o conselho possui competência exclusiva para fiscalizar o FUNDEB, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "Correta em geral nos municípios, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "Incorreta, pois o controle social complementa, mas não substitui, os mecanismos institucionais de fiscalização.",
-
-        "Correta apenas quando houver recursos da complementação da União.",
-
-        "Incorreta porque o conselho não possui qualquer função fiscalizatória."
+        "Correta em geral quando houver recursos da complementação da União, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
+        "Incorreta porque o conselho não possui qualquer função fiscalizatória, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
     ],
 
     correta: 2,
@@ -1014,11 +994,11 @@ const fundeb = [
         "Durante uma reunião do conselho, um membro afirmou que o CACS-FUNDEB possui competência para acompanhar a distribuição, a transferência e a aplicação dos recursos do fundo. Essa afirmação é:",
 
     alternativas: [
-        "Incorreta, pois o conselho atua apenas após a execução das despesas.",
+        "Incorreta, pois o conselho atua em geral após a execução das despesas.",
         "Correta, pois essas atribuições integram as competências do conselho.",
-        "Correta apenas para recursos provenientes do VAAR.",
-        "Incorreta, pois tais atribuições pertencem exclusivamente ao MEC.",
-        "Correta apenas nos estados."
+        "Correta em geral para recursos provenientes do VAAR.",
+        "Incorreta, pois tais atribuições pertencem predominantemente ao MEC.",
+        "Correta em geral nos estados."
     ],
 
     correta: 1,
@@ -1037,9 +1017,9 @@ const fundeb = [
         "Analise as afirmativas:\n\nI. O CACS-FUNDEB exerce função de controle social.\n\nII. O CACS-FUNDEB fiscaliza e acompanha a aplicação dos recursos.\n\nIII. O CACS-FUNDEB substitui os Tribunais de Contas no julgamento das contas públicas.\n\nAssinale a alternativa correta.",
 
     alternativas: [
-        "Apenas I está correta.",
-        "Apenas II e III estão corretas.",
-        "Apenas I e III estão corretas.",
+        "Em geral I está correta.",
+        "Em geral II e III estão corretas.",
+        "Em geral I e III estão corretas.",
         "I, II e III estão corretas.",
         "Apenas I e II estão corretas."
     ],
@@ -1060,16 +1040,11 @@ const fundeb = [
         "Durante uma capacitação sobre o novo FUNDEB, um gestor apresentou a seguinte afirmação: 'O VAAF considera apenas os recursos dos fundos; o VAAT considera a totalidade das receitas educacionais; e o VAAR está associado a resultados educacionais e melhoria da gestão'. Essa afirmação está:",
 
     alternativas: [
-
-        "Correta apenas quanto ao VAAF.",
-
-        "Correta apenas quanto ao VAAT.",
-
-        "Correta apenas quanto ao VAAR.",
-
+        "Correta em geral quanto ao VAAF.",
+        "Correta em geral quanto ao VAAT.",
+        "Correta em geral quanto ao VAAR.",
         "Totalmente correta.",
-
-        "Totalmente incorreta."
+        "Amplamente incorreta."
     ],
 
     correta: 3,
@@ -1111,10 +1086,10 @@ const fundeb = [
         "Durante uma auditoria, verificou-se que determinado município aplicou 72% dos recursos anuais totais do FUNDEB na remuneração dos profissionais da educação básica em efetivo exercício e manteve regularidade na aplicação dos demais recursos em ações de MDE. Nessa situação:",
 
     alternativas: [
-        "A aplicação está irregular porque deveria atingir 80%.",
-        "A aplicação está irregular porque o percentual mínimo é de 75%.",
-        "A aplicação está irregular porque o limite continua sendo 60%.",
-        "A aplicação está regular apenas se houver complementação VAAR.",
+        "A aplicação está irregular porque deveria atingir 80%, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A aplicação está irregular porque o percentual mínimo é de 75%, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A aplicação está irregular porque o limite continua sendo 60%, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
+        "A aplicação está regular em geral se houver complementação VAAR, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
         "A aplicação está regular quanto ao percentual mínimo exigido pela legislação."
     ],
 
@@ -1135,9 +1110,9 @@ const fundeb = [
 
     alternativas: [
         "Apenas I e II estão corretas.",
-        "Apenas I está correta.",
-        "Apenas II e III estão corretas.",
-        "Apenas I e III estão corretas.",
+        "Em geral I está correta.",
+        "Em geral II e III estão corretas.",
+        "Em geral I e III estão corretas.",
         "I, II e III estão corretas."
     ],
 
@@ -1157,9 +1132,9 @@ const fundeb = [
         "Um candidato elaborou o seguinte resumo:\n\n• FUNDEB: principal mecanismo de financiamento da Educação Básica pública.\n• EC nº 108/2020: tornou o FUNDEB permanente.\n• Lei nº 14.113/2020: regulamenta o novo FUNDEB.\n• Mínimo de 70%: remuneração dos profissionais da educação básica em efetivo exercício.\n• CACS-FUNDEB: acompanhamento e controle social.\n\nÀ luz da legislação vigente, esse resumo está:",
 
     alternativas: [
-        "Correto apenas quanto ao FUNDEB permanente.",
+        "Correto em geral quanto ao FUNDEB permanente.",
         "Totalmente correto.",
-        "Correto apenas quanto ao percentual de 70%.",
+        "Correto em geral quanto ao percentual de 70%.",
         "Incorreto quanto à função do CACS-FUNDEB.",
         "Incorreto quanto à Lei nº 14.113/2020."
     ],
