@@ -80,6 +80,10 @@ if(id === "login"){
         abrirTelaJogosFarol();
     }
 
+    if(id === "inicio" && typeof atualizarContinuarUltimoEstudo === "function"){
+        atualizarContinuarUltimoEstudo();
+    }
+
 }
 
 
@@ -179,7 +183,7 @@ const novaPerguntaObj = {
         lojaFarol.nomeAvatarAtual || "Estudante",
 
     pergunta:
-        pergunta,
+        pergunta.trim(),
 
     data:
         dataHora,
@@ -231,7 +235,7 @@ async function responderPergunta(firebaseId){
             avatarAtual: lojaFarol.avatarAtual || "👤",
             nomeAvatarAtual: lojaFarol.nomeAvatarAtual || "Estudante",
             data: new Date().toLocaleString(),
-            texto: resposta,
+            texto: resposta.trim(),
             curtidas: 0,
             curtidoPor: []
         }
@@ -302,8 +306,17 @@ function renderizarForum(){
         const avatarPergunta =
             item.avatarAtual || "👤";
 
-        const nomePergunta =
+        const nomePerguntaRaw =
             item.autor || "Aluno";
+
+        const nomePergunta =
+            escaparHTML(nomePerguntaRaw);
+
+        const dataPergunta =
+            escaparHTML(item.data || "");
+
+        const textoPergunta =
+            escaparHTML(item.pergunta || "");
 
         listaForum.innerHTML += `
 
@@ -326,7 +339,7 @@ function renderizarForum(){
                     </div>
 
                     <div class="data-forum">
-                        📅 ${item.data || ""}
+                        📅 ${dataPergunta}
                     </div>
 
                 </div>
@@ -334,7 +347,7 @@ function renderizarForum(){
             </div>
 
             <div class="pergunta-forum-texto">
-                ❓ ${item.pergunta}
+                ❓ ${textoPergunta}
             </div>
 
 <div class="botoes-forum">
@@ -377,8 +390,17 @@ ${
         const avatarResposta =
             resposta.avatarAtual || "👤";
 
-        const nomeResposta =
+        const nomeRespostaRaw =
             resposta.autor || "Aluno";
+
+        const nomeResposta =
+            escaparHTML(nomeRespostaRaw);
+
+        const dataResposta =
+            escaparHTML(resposta.data || "");
+
+        const textoResposta =
+            escaparHTML(resposta.texto || "");
 
         return `
 
@@ -401,7 +423,7 @@ ${
                 </div>
 
                 <div class="data-forum">
-                    📅 ${resposta.data || ""}
+                    📅 ${dataResposta}
                 </div>
 
             </div>
@@ -409,7 +431,7 @@ ${
         </div>
 
         <div class="texto-resposta-forum">
-            💬 ${resposta.texto}
+            💬 ${textoResposta}
         </div>
 
 <div class="botoes-resposta">
@@ -827,6 +849,33 @@ function mostrarToast(mensagem){
 
 }
 
+
+// ==========================
+// SEGURANÇA: TEXTO SEGURO NO CHAT/FÓRUM
+// ==========================
+
+function escaparHTML(texto){
+
+    return String(texto || "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+
+}
+
+function primeiroNomeSeguro(nome){
+
+    return escaparHTML(
+        String(nome || "Aluno")
+        .trim()
+        .split(" ")[0]
+        || "Aluno"
+    );
+
+}
+
 // ==========================
 // VARIÁVEIS GLOBAIS
 // ==========================
@@ -1170,6 +1219,19 @@ if (nome === "historia") {
 }
 
 function abrirTeoria(teoria, titulo){
+
+if(assuntoAtual){
+
+    localStorage.setItem(
+        "farol_ultimoAssunto",
+        assuntoAtual
+    );
+
+    if(typeof atualizarContinuarUltimoEstudo === "function"){
+        atualizarContinuarUltimoEstudo();
+    }
+
+}
 
 teoriaAtual = teoria;
 
@@ -6544,6 +6606,112 @@ function refazerAssunto(){
 
 }
 
+
+// ==========================
+// CONTINUAR ÚLTIMO ESTUDO - INÍCIO
+// ==========================
+
+function obterNomeBonitoAssunto(chave){
+
+    if(
+        typeof mapasMentaisPorAssunto !== "undefined" &&
+        mapasMentaisPorAssunto[chave] &&
+        mapasMentaisPorAssunto[chave].titulo
+    ){
+        return mapasMentaisPorAssunto[chave].titulo;
+    }
+
+    return chave || "Nenhum assunto";
+
+}
+
+function atualizarContinuarUltimoEstudo(){
+
+    const box =
+        document.getElementById("boxContinuarUltimoEstudo");
+
+    const texto =
+        document.getElementById("textoContinuarUltimoEstudo");
+
+    const botao =
+        document.getElementById("btnContinuarUltimoEstudo");
+
+    if(!box || !texto || !botao){
+        return;
+    }
+
+    const ultimo =
+        localStorage.getItem("farol_ultimoAssunto");
+
+    if(!ultimo || !bancoQuestoes[ultimo]){
+
+        box.classList.add("sem-estudo");
+        botao.disabled = true;
+        texto.textContent =
+            "Você ainda não iniciou um estudo. Escolha uma disciplina para começar.";
+        return;
+
+    }
+
+    const total =
+        bancoQuestoes[ultimo].length;
+
+    const progresso =
+        progressoAssuntos[ultimo] || 0;
+
+    const nome =
+        obterNomeBonitoAssunto(ultimo);
+
+    box.classList.remove("sem-estudo");
+    botao.disabled = false;
+
+    if(progresso > 0 && progresso < total){
+        texto.textContent =
+            "Continue em " + nome + " — questão " +
+            (progresso + 1) + " de " + total + ".";
+        return;
+    }
+
+    if(progresso >= total && total > 0){
+        texto.textContent =
+            nome + " já foi concluído. Toque para revisar ou refazer.";
+        return;
+    }
+
+    texto.textContent =
+        "Continue a teoria ou inicie as questões de " + nome + ".";
+
+}
+
+function continuarUltimoEstudo(){
+
+    const ultimo =
+        localStorage.getItem("farol_ultimoAssunto");
+
+    if(!ultimo || !bancoQuestoes[ultimo]){
+        mostrarToast("Você ainda não iniciou nenhum estudo.");
+        mostrarTela("questoes");
+        return;
+    }
+
+    assuntoAtual = ultimo;
+    disciplinaAtual = ultimo;
+
+    const total =
+        bancoQuestoes[ultimo].length;
+
+    const progresso =
+        progressoAssuntos[ultimo] || 0;
+
+    if(progresso > 0 && progresso < total){
+        continuarQuestoes();
+        return;
+    }
+
+    abrirAssunto(ultimo);
+
+}
+
 function atualizarPainelEstudos(){
 
     const nomesBonitos = {
@@ -6707,6 +6875,8 @@ fundamentosFisica:
     document.getElementById(
         "melhorResultado"
     ).textContent = melhorTexto;
+
+    atualizarContinuarUltimoEstudo();
 }
 
 function atualizarStatusAssuntos(){
@@ -6797,8 +6967,7 @@ async function carregarUsuariosOnline(){
         ){
 
             const primeiroNome =
-                (dados.nome || "")
-                .split(" ")[0];
+                primeiroNomeSeguro(dados.nome || "Aluno");
 
             html += `
                 🟢 ${primeiroNome}
@@ -7365,8 +7534,17 @@ doc.id;
            const avatarMensagem =
                 msg.avatarAtual || "👤";
 
-            const nomeMensagem =
+            const nomeMensagemRaw =
                 msg.autor || "Aluno";
+
+            const nomeMensagem =
+                escaparHTML(nomeMensagemRaw);
+
+            const horarioMensagem =
+                escaparHTML(msg.horario || "");
+
+            const textoMensagem =
+                escaparHTML(msg.mensagem || "");
 
            html += `
 
@@ -7398,7 +7576,7 @@ doc.id;
 
             <span class="hora-chat">
 
-                ${msg.horario || ""}
+                ${horarioMensagem}
 
             </span>
 
@@ -7406,7 +7584,7 @@ doc.id;
 
         <div class="bolha-chat">
 
-            ${msg.mensagem}
+            ${textoMensagem}
 
         </div>
 
@@ -7497,8 +7675,7 @@ async function carregarUsuariosOnlineChat(){
         ){
 
             const primeiroNome =
-                (dados.nome || "")
-                .split(" ")[0];
+                primeiroNomeSeguro(dados.nome || "Aluno");
 
             const avatarOnline =
                 dados.avatarAtual || "👤";
@@ -7665,7 +7842,7 @@ db.collection("digitando")
 
     if(area){
 
-        area.innerHTML =
+        area.textContent =
         texto;
 
     }
@@ -8164,10 +8341,10 @@ async function carregarRankingPontos(){
             const dados = doc.data();
             posicao++;
 
-            const nome = (dados.nome || "Aluno").split(" ")[0];
+            const nome = primeiroNomeSeguro(dados.nome || "Aluno");
             const pontos = dados.pontosLuz || 0;
             const avatar = dados.avatarAtual || "👤";
-            const titulo = dados.tituloAtual ? ` — ${dados.tituloAtual}` : "";
+            const titulo = dados.tituloAtual ? ` — ${escaparHTML(dados.tituloAtual)}` : "";
             const medalha = dados.medalhaEstudanteAtivo ? " 🏅" : "";
 
             if(auth.currentUser && doc.id === auth.currentUser.uid){
@@ -8837,22 +9014,27 @@ function valorEhImagemAvatar(valor){
 
 function montarAvatarHTML(valor, nome, classe){
     const classeFinal = classe || "avatar-pequeno";
+    const nomeSeguro = escaparHTML(nome || "Avatar");
 
     if(!valor){
         return `<span class="${classeFinal}">👤</span>`;
     }
 
     if(valorEhImagemAvatar(valor)){
+        const srcSeguro = String(valor || "")
+            .replaceAll('"', "%22")
+            .replaceAll("'", "%27");
+
         return `
             <img
-                src="${valor}"
-                alt="${nome || "Avatar"}"
+                src="${srcSeguro}"
+                alt="${nomeSeguro}"
                 class="${classeFinal}"
                 loading="lazy">
         `;
     }
 
-    return `<span class="${classeFinal}">${valor}</span>`;
+    return `<span class="${classeFinal}">${escaparHTML(valor)}</span>`;
 }
 
 function obterVersaoAvatarItem(item){
