@@ -8076,15 +8076,57 @@ async function salvarRankingFirebase(){
     }
 
     try{
-        await db.collection("usuarios")
-        .doc(auth.currentUser.uid)
-        .set({
+        const usuarioRef = db.collection("usuarios")
+        .doc(auth.currentUser.uid);
+
+        const docUsuario = await usuarioRef.get();
+        const dadosFirebase = docUsuario.exists ? (docUsuario.data() || {}) : {};
+
+        const pontosLocal = Number(pontosLuz) || 0;
+        const pontosFirebase = Number(dadosFirebase.pontosLuz) || 0;
+        const pontosFinais = Math.max(pontosLocal, pontosFirebase);
+
+        const acertosFinais = Math.max(
+            Number(acertos) || 0,
+            Number(dadosFirebase.acertos) || 0
+        );
+
+        const errosFinais = Math.max(
+            Number(erros) || 0,
+            Number(dadosFirebase.erros) || 0
+        );
+
+        let saldoFinal = Number(saldoPontosLuz) || 0;
+
+        if(
+            typeof dadosFirebase.saldoPontosLuz === "number" &&
+            pontosFirebase >= pontosLocal
+        ){
+            saldoFinal = dadosFirebase.saldoPontosLuz;
+        }
+
+        if(
+            pontosLuz !== pontosFinais ||
+            saldoPontosLuz !== saldoFinal ||
+            acertos !== acertosFinais ||
+            erros !== errosFinais
+        ){
+            pontosLuz = pontosFinais;
+            saldoPontosLuz = saldoFinal;
+            acertos = acertosFinais;
+            erros = errosFinais;
+
+            salvarDados();
+            atualizarDashboard();
+        }
+
+        await usuarioRef.set({
             nome: usuarioForum || "Aluno",
             email: usuarioEmail || (auth.currentUser.email || ""),
-            pontosLuz: pontosLuz,
-            saldoPontosLuz: saldoPontosLuz,
-            acertos: acertos,
-            erros: erros,
+            pontosLuz: pontosFinais,
+            saldoPontosLuz: saldoFinal,
+            acertos: acertosFinais,
+            erros: errosFinais,
             avatarAtual: lojaFarol.avatarAtual || "👤",
             nomeAvatarAtual: lojaFarol.nomeAvatarAtual || "Estudante",
             tituloAtual: lojaFarol.tituloAtual || "",
@@ -15273,12 +15315,25 @@ async function carregarLojaFirebase(){
                     }
                 };
             }
+            if(typeof dados.pontosLuz === "number" && dados.pontosLuz > pontosLuz){
+                pontosLuz = dados.pontosLuz;
+            }
+
+            if(typeof dados.acertos === "number" && dados.acertos > acertos){
+                acertos = dados.acertos;
+            }
+
+            if(typeof dados.erros === "number" && dados.erros > erros){
+                erros = dados.erros;
+            }
+
             if(typeof dados.saldoPontosLuz === "number"){
                 saldoPontosLuz = dados.saldoPontosLuz;
             }
             salvarDados();
             atualizarDashboard();
             atualizarLojaFarol();
+            salvarRankingFirebase();
         }
     }
     catch(erro){
