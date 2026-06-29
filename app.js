@@ -1009,8 +1009,6 @@ localStorage.setItem(
         JSON.stringify(progressoAssuntos)
     );
 
-    agendarSincronizacaoProgressoFirebase();
-
 }
 
 function carregarDados() {
@@ -1088,500 +1086,6 @@ Number(
         ...item
     }));
 
-}
-
-
-// ==========================
-// SINCRONIZAÇÃO FIREBASE x APARELHOS
-// ==========================
-
-let timerSincronizacaoProgressoFirebase = null;
-let sincronizacaoProgressoFirebaseAtiva = false;
-let sincronizacaoInicialProgressoConcluida = false;
-
-const CHAVE_ULTIMA_SINCRONIZACAO_LOCAL = "farol_ultima_sincronizacao_local";
-const CHAVE_LOJA_ATUALIZADA_LOCAL = "farol_loja_atualizada_em";
-
-function parseJSONSeguro(valorPadrao, texto){
-    try{
-        return JSON.parse(texto) || valorPadrao;
-    }
-    catch(erro){
-        return valorPadrao;
-    }
-}
-
-function numeroSeguro(valor){
-    const numero = Number(valor);
-    return Number.isFinite(numero) ? numero : 0;
-}
-
-function coletarLocalStoragePorPrefixo(prefixo){
-    const dados = {};
-
-    for(let i = 0; i < localStorage.length; i++){
-        const chave = localStorage.key(i);
-
-        if(chave && chave.startsWith(prefixo)){
-            dados[chave] = localStorage.getItem(chave);
-        }
-    }
-
-    return dados;
-}
-
-function aplicarLocalStoragePorMapa(mapa){
-    if(!mapa || typeof mapa !== "object"){
-        return;
-    }
-
-    Object.entries(mapa).forEach(([chave, valor]) => {
-        if(typeof chave === "string" && chave.startsWith("farol_")){
-            localStorage.setItem(chave, valor);
-        }
-    });
-}
-
-function mesclarObjetosMaiorValor(localObj, firebaseObj){
-    const resultado = {
-        ...(firebaseObj || {}),
-        ...(localObj || {})
-    };
-
-    Object.keys(firebaseObj || {}).forEach(chave => {
-        const valorLocal = numeroSeguro(localObj && localObj[chave]);
-        const valorFirebase = numeroSeguro(firebaseObj && firebaseObj[chave]);
-        resultado[chave] = Math.max(valorLocal, valorFirebase);
-    });
-
-    return resultado;
-}
-
-function mesclarResultadosAssuntos(localObj, firebaseObj){
-    const resultado = {
-        ...(firebaseObj || {}),
-        ...(localObj || {})
-    };
-
-    Object.keys(firebaseObj || {}).forEach(chave => {
-        const localItem = localObj && localObj[chave] ? localObj[chave] : null;
-        const firebaseItem = firebaseObj && firebaseObj[chave] ? firebaseObj[chave] : null;
-
-        if(!localItem){
-            resultado[chave] = firebaseItem;
-            return;
-        }
-
-        if(!firebaseItem){
-            resultado[chave] = localItem;
-            return;
-        }
-
-        resultado[chave] =
-            numeroSeguro(localItem.percentual) >= numeroSeguro(firebaseItem.percentual)
-            ? localItem
-            : firebaseItem;
-    });
-
-    return resultado;
-}
-
-function chaveCadernoErro(item){
-    if(!item){
-        return "";
-    }
-
-    return item.idErro || item.pergunta || (item.disciplina + ":" + item.assunto);
-}
-
-function mesclarItemCadernoErro(localItem, firebaseItem){
-    if(!localItem){
-        return firebaseItem;
-    }
-
-    if(!firebaseItem){
-        return localItem;
-    }
-
-    const dataLocal = numeroSeguro(localItem.data);
-    const dataFirebase = numeroSeguro(firebaseItem.data);
-    const maisNovo = dataLocal >= dataFirebase ? localItem : firebaseItem;
-
-    return {
-        ...firebaseItem,
-        ...localItem,
-        ...maisNovo,
-        erros: Math.max(
-            numeroSeguro(localItem.erros || 1),
-            numeroSeguro(firebaseItem.erros || 1)
-        ),
-        acertosRevisao: Math.max(
-            numeroSeguro(localItem.acertosRevisao),
-            numeroSeguro(firebaseItem.acertosRevisao)
-        ),
-        pontosRevisaoGanhos:
-            !!localItem.pontosRevisaoGanhos ||
-            !!firebaseItem.pontosRevisaoGanhos,
-        idErro:
-            localItem.idErro ||
-            firebaseItem.idErro ||
-            chaveCadernoErro(localItem) ||
-            chaveCadernoErro(firebaseItem)
-    };
-}
-
-function mesclarCadernoErros(localLista, firebaseLista){
-    const mapa = new Map();
-
-    (firebaseLista || []).forEach(item => {
-        const chave = chaveCadernoErro(item);
-        if(chave){
-            mapa.set(chave, item);
-        }
-    });
-
-    (localLista || []).forEach(item => {
-        const chave = chaveCadernoErro(item);
-        if(!chave){
-            return;
-        }
-
-        mapa.set(
-            chave,
-            mesclarItemCadernoErro(item, mapa.get(chave))
-        );
-    });
-
-    return Array.from(mapa.values())
-        .sort((a,b) => numeroSeguro(b.data) - numeroSeguro(a.data));
-}
-
-function mesclarPontosGerados(localObj, firebaseObj){
-    return {
-        ...(firebaseObj || {}),
-        ...(localObj || {})
-    };
-}
-
-function mesclarEstatisticasDiarias(localObj, firebaseObj){
-    const resultado = {
-        ...(firebaseObj || {}),
-        ...(localObj || {})
-    };
-
-    Object.keys(firebaseObj || {}).forEach(data => {
-        const localDia = localObj && localObj[data] ? localObj[data] : {};
-        const firebaseDia = firebaseObj && firebaseObj[data] ? firebaseObj[data] : {};
-        const dia = {
-            ...firebaseDia,
-            ...localDia
-        };
-
-        Object.keys(firebaseDia).forEach(campo => {
-            dia[campo] = Math.max(
-                numeroSeguro(localDia[campo]),
-                numeroSeguro(firebaseDia[campo])
-            );
-        });
-
-        resultado[data] = dia;
-    });
-
-    return resultado;
-}
-
-function mesclarLojaFarol(localLoja, firebaseLoja){
-    return {
-        ...(firebaseLoja || {}),
-        ...(localLoja || {}),
-        comprados: {
-            ...((firebaseLoja && firebaseLoja.comprados) || {}),
-            ...((localLoja && localLoja.comprados) || {})
-        }
-    };
-}
-
-function obterTempoTotalAtual(){
-    return tempoEstudado + Math.floor((Date.now() - inicioEstudo) / 1000);
-}
-
-function obterPacoteProgressoLocal(){
-    return {
-        pontosLuz: numeroSeguro(pontosLuz),
-        saldoPontosLuz: numeroSeguro(saldoPontosLuz),
-        acertos: numeroSeguro(acertos),
-        erros: numeroSeguro(erros),
-        medalhasOuro: numeroSeguro(medalhasOuro),
-        medalhasPrata: numeroSeguro(medalhasPrata),
-        medalhasBronze: numeroSeguro(medalhasBronze),
-        tempoEstudado: obterTempoTotalAtual(),
-        progressoAssuntos: progressoAssuntos || {},
-        cadernoErros: cadernoErros || [],
-        pontosLuzGerados: pontosLuzGerados || {},
-        estatisticasDiarias: estatisticasDiarias || {},
-        lojaFarol: lojaFarol || {},
-        resultadosAssuntos: parseJSONSeguro(
-            {},
-            localStorage.getItem("farol_resultados")
-        ),
-        ultimoAssunto: localStorage.getItem("farol_ultimoAssunto") || "",
-        progressoTeorias: {
-            ...coletarLocalStoragePorPrefixo("farol_teoria_"),
-            ...coletarLocalStoragePorPrefixo("farol_teoria_concluida_")
-        },
-        lojaAtualizadaEm: numeroSeguro(
-            localStorage.getItem(CHAVE_LOJA_ATUALIZADA_LOCAL)
-        ),
-        ultimaSincronizacaoLocal: numeroSeguro(
-            localStorage.getItem(CHAVE_ULTIMA_SINCRONIZACAO_LOCAL)
-        )
-    };
-}
-
-function mesclarPacotesProgresso(localPkg, firebasePkg){
-    const pacoteFirebase = firebasePkg || {};
-    const pacoteLocal = localPkg || {};
-
-    const lojaAtualizadaLocal = numeroSeguro(pacoteLocal.lojaAtualizadaEm);
-    const lojaAtualizadaFirebase = numeroSeguro(pacoteFirebase.lojaAtualizadaEm);
-
-    let saldoFinal = numeroSeguro(pacoteLocal.saldoPontosLuz);
-
-    if(lojaAtualizadaFirebase > lojaAtualizadaLocal){
-        saldoFinal = numeroSeguro(pacoteFirebase.saldoPontosLuz);
-    }
-    else if(lojaAtualizadaFirebase === 0 && numeroSeguro(pacoteFirebase.saldoPontosLuz) > saldoFinal){
-        saldoFinal = numeroSeguro(pacoteFirebase.saldoPontosLuz);
-    }
-
-    const pontosFinais = Math.max(
-        numeroSeguro(pacoteLocal.pontosLuz),
-        numeroSeguro(pacoteFirebase.pontosLuz)
-    );
-
-    saldoFinal = Math.min(
-        pontosFinais,
-        Math.max(0, saldoFinal)
-    );
-
-    return {
-        pontosLuz: pontosFinais,
-        saldoPontosLuz: saldoFinal,
-        acertos: Math.max(
-            numeroSeguro(pacoteLocal.acertos),
-            numeroSeguro(pacoteFirebase.acertos)
-        ),
-        erros: Math.max(
-            numeroSeguro(pacoteLocal.erros),
-            numeroSeguro(pacoteFirebase.erros)
-        ),
-        medalhasOuro: Math.max(
-            numeroSeguro(pacoteLocal.medalhasOuro),
-            numeroSeguro(pacoteFirebase.medalhasOuro)
-        ),
-        medalhasPrata: Math.max(
-            numeroSeguro(pacoteLocal.medalhasPrata),
-            numeroSeguro(pacoteFirebase.medalhasPrata)
-        ),
-        medalhasBronze: Math.max(
-            numeroSeguro(pacoteLocal.medalhasBronze),
-            numeroSeguro(pacoteFirebase.medalhasBronze)
-        ),
-        tempoEstudado: Math.max(
-            numeroSeguro(pacoteLocal.tempoEstudado),
-            numeroSeguro(pacoteFirebase.tempoEstudado)
-        ),
-        progressoAssuntos: mesclarObjetosMaiorValor(
-            pacoteLocal.progressoAssuntos,
-            pacoteFirebase.progressoAssuntos
-        ),
-        cadernoErros: mesclarCadernoErros(
-            pacoteLocal.cadernoErros,
-            pacoteFirebase.cadernoErros
-        ),
-        pontosLuzGerados: mesclarPontosGerados(
-            pacoteLocal.pontosLuzGerados,
-            pacoteFirebase.pontosLuzGerados
-        ),
-        estatisticasDiarias: mesclarEstatisticasDiarias(
-            pacoteLocal.estatisticasDiarias,
-            pacoteFirebase.estatisticasDiarias
-        ),
-        lojaFarol: mesclarLojaFarol(
-            pacoteLocal.lojaFarol,
-            pacoteFirebase.lojaFarol
-        ),
-        resultadosAssuntos: mesclarResultadosAssuntos(
-            pacoteLocal.resultadosAssuntos,
-            pacoteFirebase.resultadosAssuntos
-        ),
-        ultimoAssunto:
-            pacoteLocal.ultimoAssunto ||
-            pacoteFirebase.ultimoAssunto ||
-            "",
-        progressoTeorias: {
-            ...(pacoteFirebase.progressoTeorias || {}),
-            ...(pacoteLocal.progressoTeorias || {})
-        },
-        lojaAtualizadaEm: Math.max(
-            lojaAtualizadaLocal,
-            lojaAtualizadaFirebase
-        ),
-        sincronizadoEm: Date.now()
-    };
-}
-
-function aplicarPacoteProgresso(pacote){
-    if(!pacote){
-        return;
-    }
-
-    pontosLuz = numeroSeguro(pacote.pontosLuz);
-    saldoPontosLuz = numeroSeguro(pacote.saldoPontosLuz);
-    acertos = numeroSeguro(pacote.acertos);
-    erros = numeroSeguro(pacote.erros);
-    medalhasOuro = numeroSeguro(pacote.medalhasOuro);
-    medalhasPrata = numeroSeguro(pacote.medalhasPrata);
-    medalhasBronze = numeroSeguro(pacote.medalhasBronze);
-    progressoAssuntos = pacote.progressoAssuntos || {};
-    cadernoErros = pacote.cadernoErros || [];
-    pontosLuzGerados = pacote.pontosLuzGerados || {};
-    estatisticasDiarias = pacote.estatisticasDiarias || {};
-    lojaFarol = {
-        ...lojaFarol,
-        ...(pacote.lojaFarol || {})
-    };
-
-    lojaFarol.comprados = lojaFarol.comprados || {};
-    lojaFarol.avatarAtual = lojaFarol.avatarAtual || "👤";
-    lojaFarol.nomeAvatarAtual = lojaFarol.nomeAvatarAtual || "Estudante";
-
-    tempoEstudado = numeroSeguro(pacote.tempoEstudado);
-    inicioEstudo = Date.now();
-
-    localStorage.setItem(
-        "tempoEstudado",
-        tempoEstudado
-    );
-
-    localStorage.setItem(
-        "farol_resultados",
-        JSON.stringify(pacote.resultadosAssuntos || {})
-    );
-
-    if(pacote.ultimoAssunto){
-        localStorage.setItem(
-            "farol_ultimoAssunto",
-            pacote.ultimoAssunto
-        );
-    }
-
-    aplicarLocalStoragePorMapa(pacote.progressoTeorias || {});
-
-    localStorage.setItem(
-        CHAVE_ULTIMA_SINCRONIZACAO_LOCAL,
-        Date.now()
-    );
-
-    if(pacote.lojaAtualizadaEm){
-        localStorage.setItem(
-            CHAVE_LOJA_ATUALIZADA_LOCAL,
-            pacote.lojaAtualizadaEm
-        );
-    }
-
-    salvarDados();
-    atualizarEstatisticas();
-    atualizarDashboard();
-    atualizarPainelEstudos();
-    atualizarCadernoErros();
-
-    if(typeof atualizarLojaFarol === "function"){
-        atualizarLojaFarol();
-    }
-}
-
-function camposFirebaseProgresso(pacote){
-    return {
-        pontosLuz: pacote.pontosLuz,
-        saldoPontosLuz: pacote.saldoPontosLuz,
-        acertos: pacote.acertos,
-        erros: pacote.erros,
-        medalhasOuro: pacote.medalhasOuro,
-        medalhasPrata: pacote.medalhasPrata,
-        medalhasBronze: pacote.medalhasBronze,
-        tempoEstudado: pacote.tempoEstudado,
-        progressoAssuntos: pacote.progressoAssuntos,
-        cadernoErros: pacote.cadernoErros,
-        pontosLuzGerados: pacote.pontosLuzGerados,
-        estatisticasDiarias: pacote.estatisticasDiarias,
-        lojaFarol: pacote.lojaFarol,
-        resultadosAssuntos: pacote.resultadosAssuntos,
-        ultimoAssunto: pacote.ultimoAssunto,
-        progressoTeorias: pacote.progressoTeorias,
-        lojaAtualizadaEm: pacote.lojaAtualizadaEm,
-        sincronizadoEm: pacote.sincronizadoEm,
-        avatarAtual: pacote.lojaFarol.avatarAtual || "👤",
-        nomeAvatarAtual: pacote.lojaFarol.nomeAvatarAtual || "Estudante",
-        tituloAtual: pacote.lojaFarol.tituloAtual || "",
-        medalhaEstudanteAtivo: !!pacote.lojaFarol.medalhaEstudanteAtivo,
-        cardPremium: !!pacote.lojaFarol.cardPremium,
-        certificadoDigital: !!pacote.lojaFarol.certificadoDigital,
-        atualizadoEm: Date.now()
-    };
-}
-
-async function sincronizarProgressoCompletoFirebase(){
-    if(!auth.currentUser || sincronizacaoProgressoFirebaseAtiva){
-        return;
-    }
-
-    sincronizacaoProgressoFirebaseAtiva = true;
-
-    try{
-        const usuarioRef = db.collection("usuarios")
-            .doc(auth.currentUser.uid);
-
-        const docUsuario = await usuarioRef.get();
-        const dadosFirebase = docUsuario.exists ? (docUsuario.data() || {}) : {};
-        const pacoteLocal = obterPacoteProgressoLocal();
-        const pacoteFinal = mesclarPacotesProgresso(pacoteLocal, dadosFirebase);
-
-        aplicarPacoteProgresso(pacoteFinal);
-
-        await usuarioRef.set({
-            nome: usuarioForum || dadosFirebase.nome || "Aluno",
-            email: usuarioEmail || auth.currentUser.email || dadosFirebase.email || "",
-            ...camposFirebaseProgresso(pacoteFinal)
-        }, { merge: true });
-
-        sincronizacaoInicialProgressoConcluida = true;
-    }
-    catch(erro){
-        console.log("Erro ao sincronizar progresso", erro);
-    }
-    finally{
-        sincronizacaoProgressoFirebaseAtiva = false;
-    }
-}
-
-function agendarSincronizacaoProgressoFirebase(){
-    if(!auth.currentUser){
-        return;
-    }
-
-    clearTimeout(timerSincronizacaoProgressoFirebase);
-
-    timerSincronizacaoProgressoFirebase = setTimeout(() => {
-        sincronizarProgressoCompletoFirebase();
-    }, sincronizacaoInicialProgressoConcluida ? 2500 : 6000);
-}
-
-function marcarLojaAtualizadaLocalmente(){
-    localStorage.setItem(
-        CHAVE_LOJA_ATUALIZADA_LOCAL,
-        Date.now()
-    );
 }
 
 // ==========================
@@ -7496,8 +7000,6 @@ await db.collection("usuarios")
 
 });
 
-await sincronizarProgressoCompletoFirebase();
-
         mostrarTela("inicio");
 document.getElementById("login").style.display = "none";
 
@@ -8632,13 +8134,6 @@ async function salvarRankingFirebase(){
             cardPremium: !!lojaFarol.cardPremium,
             certificadoDigital: !!lojaFarol.certificadoDigital,
             lojaFarol: lojaFarol,
-            lojaAtualizadaEm: numeroSeguro(localStorage.getItem(CHAVE_LOJA_ATUALIZADA_LOCAL)),
-            progressoAssuntos: progressoAssuntos,
-            cadernoErros: cadernoErros,
-            pontosLuzGerados: pontosLuzGerados,
-            estatisticasDiarias: estatisticasDiarias,
-            resultadosAssuntos: parseJSONSeguro({}, localStorage.getItem("farol_resultados")),
-            ultimoAssunto: localStorage.getItem("farol_ultimoAssunto") || "",
             atualizadoEm: Date.now()
         }, { merge: true });
     }
@@ -9545,8 +9040,6 @@ function comprarRecompensaLoja(id){
         }, 500);
     }
 
-    marcarLojaAtualizadaLocalmente();
-
     salvarDados();
     atualizarDashboard();
     atualizarLojaFarol();
@@ -9578,8 +9071,6 @@ function usarAvatarLoja(id){
 
     lojaFarol.avatarAtual = versaoAvatar.avatar;
     lojaFarol.nomeAvatarAtual = versaoAvatar.nomeAvatar;
-
-    marcarLojaAtualizadaLocalmente();
 
     salvarDados();
     atualizarDashboard();
@@ -15785,16 +15276,11 @@ async function salvarLojaFirebase(){
         return;
     }
     try{
-        const lojaAtualizadaEm = numeroSeguro(
-            localStorage.getItem(CHAVE_LOJA_ATUALIZADA_LOCAL)
-        ) || Date.now();
-
         await db.collection("usuarios")
         .doc(auth.currentUser.uid)
         .set({
             saldoPontosLuz: saldoPontosLuz,
             lojaFarol: lojaFarol,
-            lojaAtualizadaEm: lojaAtualizadaEm,
             avatarAtual: lojaFarol.avatarAtual || "👤",
             nomeAvatarAtual: lojaFarol.nomeAvatarAtual || "Estudante",
             tituloAtual: lojaFarol.tituloAtual || "",
@@ -15802,8 +15288,6 @@ async function salvarLojaFirebase(){
             cardPremium: !!lojaFarol.cardPremium,
             certificadoDigital: !!lojaFarol.certificadoDigital
         }, { merge: true });
-
-        agendarSincronizacaoProgressoFirebase();
     }
     catch(erro){
         console.log("Erro ao salvar loja", erro);
@@ -15811,9 +15295,51 @@ async function salvarLojaFirebase(){
 }
 
 async function carregarLojaFirebase(){
-    await sincronizarProgressoCompletoFirebase();
-}
+    if(!auth.currentUser){
+        return;
+    }
+    try{
+        const doc = await db.collection("usuarios")
+        .doc(auth.currentUser.uid)
+        .get();
 
+        if(doc.exists){
+            const dados = doc.data() || {};
+            if(dados.lojaFarol){
+                lojaFarol = {
+                    ...lojaFarol,
+                    ...dados.lojaFarol,
+                    comprados: {
+                        ...(lojaFarol.comprados || {}),
+                        ...((dados.lojaFarol && dados.lojaFarol.comprados) || {})
+                    }
+                };
+            }
+            if(typeof dados.pontosLuz === "number" && dados.pontosLuz > pontosLuz){
+                pontosLuz = dados.pontosLuz;
+            }
+
+            if(typeof dados.acertos === "number" && dados.acertos > acertos){
+                acertos = dados.acertos;
+            }
+
+            if(typeof dados.erros === "number" && dados.erros > erros){
+                erros = dados.erros;
+            }
+
+            if(typeof dados.saldoPontosLuz === "number"){
+                saldoPontosLuz = dados.saldoPontosLuz;
+            }
+            salvarDados();
+            atualizarDashboard();
+            atualizarLojaFarol();
+            salvarRankingFirebase();
+        }
+    }
+    catch(erro){
+        console.log("Erro ao carregar loja", erro);
+    }
+}
 
 // Compatibilidade para bordas arredondadas no canvas
 if(!CanvasRenderingContext2D.prototype.roundRect){
