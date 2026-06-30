@@ -5232,6 +5232,49 @@ function chaveOrdemQuestoes(assunto){
     return "farol_ordemQuestoes_" + assunto;
 }
 
+// Cada rodada de um tópico deve mostrar no máximo 40 questões,
+// mesmo que o banco tenha 70, 100 ou 120 questões.
+const LIMITE_QUESTOES_POR_RODADA = 40;
+
+function obterLimiteQuestoesAssunto(assunto){
+    const base = bancoQuestoes[assunto];
+
+    if(!Array.isArray(base)){
+        return 0;
+    }
+
+    return Math.min(
+        LIMITE_QUESTOES_POR_RODADA,
+        base.length
+    );
+}
+
+function obterOrdemSalvaQuestoes(assunto){
+    try{
+        const ordem = JSON.parse(
+            localStorage.getItem(
+                chaveOrdemQuestoes(assunto)
+            )
+        ) || [];
+
+        return Array.isArray(ordem) ? ordem : [];
+    }catch(erro){
+        console.log("Ordem salva inválida:", erro);
+        return [];
+    }
+}
+
+function obterTotalRodadaAssunto(assunto){
+    const limite = obterLimiteQuestoesAssunto(assunto);
+    const ordem = obterOrdemSalvaQuestoes(assunto);
+
+    if(ordem.length > 0){
+        return Math.min(ordem.length, limite);
+    }
+
+    return limite;
+}
+
 function embaralharArray(lista){
     const copia = [...lista];
 
@@ -5263,31 +5306,29 @@ function carregarQuestoesNaOrdemSalva(assunto){
         return [];
     }
 
-    try{
-        const ordem = JSON.parse(
-            localStorage.getItem(
-                chaveOrdemQuestoes(assunto)
-            )
-        ) || [];
+    const limite = obterLimiteQuestoesAssunto(assunto);
+    const ordem = obterOrdemSalvaQuestoes(assunto);
 
-        if(ordem.length === base.length){
-            const mapaPerguntas = new Map(
-                base.map(q => [q.pergunta, q])
-            );
+    if(ordem.length > 0){
+        const mapaPerguntas = new Map(
+            base.map(q => [q.pergunta, q])
+        );
 
-            const ordenadas = ordem
-                .map(pergunta => mapaPerguntas.get(pergunta))
-                .filter(Boolean);
+        const ordenadas = ordem
+            .map(pergunta => mapaPerguntas.get(pergunta))
+            .filter(Boolean)
+            .slice(0, limite);
 
-            if(ordenadas.length === base.length){
-                return ordenadas;
-            }
+        if(ordenadas.length > 0){
+            // Corrige ordens antigas que tinham o banco inteiro salvo.
+            salvarOrdemQuestoes(assunto, ordenadas);
+            return ordenadas;
         }
-    }catch(erro){
-        console.log("Ordem salva inválida:", erro);
     }
 
-    return [...base];
+    const selecionadas = embaralharArray(base).slice(0, limite);
+    salvarOrdemQuestoes(assunto, selecionadas);
+    return selecionadas;
 }
 
 function prepararQuestoesDoAssunto(novaOrdem){
@@ -5300,8 +5341,10 @@ function prepararQuestoesDoAssunto(novaOrdem){
         return false;
     }
 
+    const limite = obterLimiteQuestoesAssunto(disciplinaAtual);
+
     if(novaOrdem){
-        questoesEmbaralhadas = embaralharArray(base);
+        questoesEmbaralhadas = embaralharArray(base).slice(0, limite);
         salvarOrdemQuestoes(disciplinaAtual, questoesEmbaralhadas);
     }else{
         questoesEmbaralhadas = carregarQuestoesNaOrdemSalva(disciplinaAtual);
@@ -5324,9 +5367,7 @@ function atualizarBotaoContinuarQuestoes(){
     }
 
     const total =
-        bancoQuestoes[assuntoAtual]
-        ? bancoQuestoes[assuntoAtual].length
-        : 0;
+        obterTotalRodadaAssunto(assuntoAtual);
 
     const progresso =
         progressoAssuntos[assuntoAtual] || 0;
@@ -5387,9 +5428,7 @@ function iniciarQuestoesAssunto() {
     disciplinaAtual = assuntoAtual;
 
     const total =
-        bancoQuestoes[disciplinaAtual]
-        ? bancoQuestoes[disciplinaAtual].length
-        : 0;
+        obterTotalRodadaAssunto(disciplinaAtual);
 
     if(total === 0){
         mostrarToast("Banco de questões não encontrado para este assunto.");
@@ -6744,7 +6783,7 @@ function continuarQuestoes(){
     }
 
     const total =
-        bancoQuestoes[assuntoAtual].length;
+        questoesEmbaralhadas.length;
 
     questaoAtual =
         progressoAssuntos[assuntoAtual] || 0;
@@ -6843,7 +6882,7 @@ function atualizarContinuarUltimoEstudo(){
     }
 
     const total =
-        bancoQuestoes[ultimo].length;
+        obterTotalRodadaAssunto(ultimo);
 
     const progresso =
         progressoAssuntos[ultimo] || 0;
@@ -6887,7 +6926,7 @@ function continuarUltimoEstudo(){
     disciplinaAtual = ultimo;
 
     const total =
-        bancoQuestoes[ultimo].length;
+        obterTotalRodadaAssunto(ultimo);
 
     const progresso =
         progressoAssuntos[ultimo] || 0;
@@ -7003,9 +7042,7 @@ fundamentosFisica:
     for(let assunto in progressoAssuntos){
 
         const total =
-            bancoQuestoes[assunto]
-            ? bancoQuestoes[assunto].length
-            : 0;
+            obterTotalRodadaAssunto(assunto);
 
         const atual =
             progressoAssuntos[assunto];
