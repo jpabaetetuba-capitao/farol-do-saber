@@ -865,14 +865,173 @@ function escaparHTML(texto){
 
 }
 
+function nomeEhGenericoFarol(nome){
+
+    const normalizado = String(nome || "")
+        .trim()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+
+    return (
+        !normalizado ||
+        normalizado === "aluno" ||
+        normalizado === "visitante" ||
+        normalizado === "estudante" ||
+        normalizado === "usuario" ||
+        normalizado === "undefined" ||
+        normalizado === "null"
+    );
+
+}
+
+function primeiroNomeSemHTML(nome){
+
+    return String(nome || "")
+        .trim()
+        .split(/\s+/)[0] || "";
+
+}
+
 function primeiroNomeSeguro(nome){
 
+    const primeiroNome = primeiroNomeSemHTML(nome);
+
     return escaparHTML(
-        String(nome || "Aluno")
-        .trim()
-        .split(" ")[0]
-        || "Aluno"
+        nomeEhGenericoFarol(primeiroNome)
+        ? "Aluno"
+        : primeiroNome
     );
+
+}
+
+function obterNomeCompletoValidoFarol(dadosFirebase){
+
+    const dados = dadosFirebase || {};
+
+    const candidatos = [
+        usuarioNomeCompleto,
+        localStorage.getItem("usuarioNomeCompleto"),
+        dados.nomeCompleto,
+        dados.nome,
+        auth && auth.currentUser ? auth.currentUser.displayName : ""
+    ];
+
+    for(const candidato of candidatos){
+
+        const nome = String(candidato || "").trim();
+
+        if(!nomeEhGenericoFarol(nome)){
+            return nome;
+        }
+
+    }
+
+    const emailAtual = (
+        usuarioEmail ||
+        (auth && auth.currentUser ? auth.currentUser.email : "") ||
+        ""
+    ).toLowerCase();
+
+    if(
+        emailAtual === "jp@gmail.com" ||
+        emailAtual === "farolsosaber@gmail.com"
+    ){
+        return "João Paulo Ferreira da Silva";
+    }
+
+    return "";
+
+}
+
+function obterNomeRankingSeguroFarol(dadosFirebase){
+
+    const nomeCompleto = obterNomeCompletoValidoFarol(dadosFirebase);
+    const primeiroDoCompleto = primeiroNomeSemHTML(nomeCompleto);
+
+    if(!nomeEhGenericoFarol(primeiroDoCompleto)){
+        return primeiroDoCompleto;
+    }
+
+    const candidatos = [
+        usuarioForum,
+        localStorage.getItem("usuarioForum"),
+        dadosFirebase && dadosFirebase.nome
+    ];
+
+    for(const candidato of candidatos){
+
+        const primeiro = primeiroNomeSemHTML(candidato);
+
+        if(!nomeEhGenericoFarol(primeiro)){
+            return primeiro;
+        }
+
+    }
+
+    const emailAtual = (
+        usuarioEmail ||
+        (auth && auth.currentUser ? auth.currentUser.email : "") ||
+        ""
+    );
+
+    const prefixoEmail = emailAtual.split("@")[0];
+
+    if(!nomeEhGenericoFarol(prefixoEmail)){
+        return prefixoEmail;
+    }
+
+    return "Aluno";
+
+}
+
+function atualizarNomeUsuarioLocalFarol(nomeRanking, nomeCompleto){
+
+    const nomeRankingFinal = nomeEhGenericoFarol(nomeRanking)
+        ? "Aluno"
+        : nomeRanking;
+
+    usuarioForum = nomeRankingFinal;
+    usuarioNomeCompleto = nomeCompleto || nomeRankingFinal;
+
+    localStorage.setItem("usuarioForum", usuarioForum);
+    localStorage.setItem("usuarioNomeCompleto", usuarioNomeCompleto);
+
+    const campoNome = document.getElementById("nomeUsuario");
+
+    if(campoNome){
+        campoNome.textContent = "👋 Olá, " + usuarioForum + "!";
+    }
+
+}
+
+async function corrigirMeuNomeJoao(){
+
+    if(!auth.currentUser){
+        mostrarToast("Faça login antes de corrigir o nome.");
+        return;
+    }
+
+    usuarioEmail = auth.currentUser.email || usuarioEmail || "";
+
+    atualizarNomeUsuarioLocalFarol(
+        "João",
+        "João Paulo Ferreira da Silva"
+    );
+
+    await db.collection("usuarios")
+        .doc(auth.currentUser.uid)
+        .set({
+            nome: "João",
+            nomeCompleto: "João Paulo Ferreira da Silva",
+            email: usuarioEmail,
+            atualizadoEm: Date.now()
+        }, { merge: true });
+
+    await salvarRankingFirebase();
+    await carregarRankingPontos();
+
+    mostrarToast("Nome corrigido para João no ranking.");
 
 }
 
@@ -3094,6 +3253,36 @@ function mostrarQuestaoSimulado() {
         <strong>
             ${percentual}% concluído
         </strong>
+
+${q.texto ? `
+
+<div class="card texto-base">
+
+    <h3>
+        📄 Texto de Apoio
+    </h3>
+
+    <br>
+
+    <p>
+        ${q.texto}
+    </p>
+
+</div>
+
+<br>
+
+` : ""}
+
+${q.imagem ? `
+<img
+    src="${q.imagem}"
+    class="imagem-questao"
+    loading="lazy"
+    decoding="async"
+    onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<div class=&quot;aviso-farol aviso-farol-compacto&quot;><strong>⚠️ Imagem não encontrada.</strong><span>Verifique o caminho da imagem no banco de questões.</span></div>');">
+<br><br>
+` : ""}
 
 ${q.afirmacoes ? `
 
@@ -7125,39 +7314,34 @@ async function entrar(){
 usuarioEhAdmin =
         doc.data().admin === true;
 
-    const nome =
-        doc.data().nome || "";
+    const dadosUsuario = doc.data() || {};
+
+    usuarioEmail =
+        credencial.user.email;
 
     const primeiroNome =
-        nome.split(" ")[0];
+        obterNomeRankingSeguroFarol(dadosUsuario);
 
-usuarioNomeCompleto =
-    nome || primeiroNome;
+    const nomeCompleto =
+        obterNomeCompletoValidoFarol(dadosUsuario) || primeiroNome;
 
-usuarioForum =
-    primeiroNome;
-usuarioEmail =
-    credencial.user.email;
+    atualizarNomeUsuarioLocalFarol(
+        primeiroNome,
+        nomeCompleto
+    );
 
 localStorage.setItem(
     "usuarioEmail",
     usuarioEmail
 );
 
-localStorage.setItem(
-    "usuarioForum",
-    primeiroNome
-);
-
-localStorage.setItem(
-    "usuarioNomeCompleto",
-    usuarioNomeCompleto
-);
-
-document.getElementById(
-    "nomeUsuario"
-).textContent =
-    "👋 Olá, " + primeiroNome;
+await db.collection("usuarios")
+.doc(credencial.user.uid)
+.set({
+    nome: primeiroNome,
+    nomeCompleto: nomeCompleto,
+    email: usuarioEmail
+}, { merge: true });
 
 }
 
@@ -7295,11 +7479,15 @@ async function finalizarCadastro(){
                 senha
             );
 
+        const primeiroNomeCadastro =
+            nome.split(/\s+/)[0] || nome;
+
         await db.collection("usuarios")
         .doc(credencial.user.uid)
         .set({
 
-            nome: nome,
+            nome: primeiroNomeCadastro,
+            nomeCompleto: nome,
             email: email,
             dataCadastro: new Date()
 
@@ -8297,8 +8485,20 @@ async function salvarRankingFirebase(){
             atualizarDashboard();
         }
 
+        usuarioEmail = usuarioEmail || (auth.currentUser.email || "");
+
+        const nomeRankingFinal = obterNomeRankingSeguroFarol(dadosFirebase);
+        const nomeCompletoFinal =
+            obterNomeCompletoValidoFarol(dadosFirebase) || nomeRankingFinal;
+
+        atualizarNomeUsuarioLocalFarol(
+            nomeRankingFinal,
+            nomeCompletoFinal
+        );
+
         await usuarioRef.set({
-            nome: usuarioForum || "Aluno",
+            nome: nomeRankingFinal,
+            nomeCompleto: nomeCompletoFinal,
             email: usuarioEmail || (auth.currentUser.email || ""),
             pontosLuz: pontosFinais,
             saldoPontosLuz: saldoFinal,

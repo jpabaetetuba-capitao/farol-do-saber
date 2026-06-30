@@ -20,6 +20,87 @@ const auth = firebase.auth();
 
 const db = firebase.firestore();
 
+function nomeEhGenericoFirebaseFarol(nome){
+
+    const normalizado = String(nome || "")
+        .trim()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+
+    return (
+        !normalizado ||
+        normalizado === "aluno" ||
+        normalizado === "visitante" ||
+        normalizado === "estudante" ||
+        normalizado === "usuario" ||
+        normalizado === "undefined" ||
+        normalizado === "null"
+    );
+
+}
+
+function primeiroNomeFirebaseFarol(nome){
+
+    return String(nome || "")
+        .trim()
+        .split(/\s+/)[0] || "";
+
+}
+
+function escolherNomeFirebaseFarol(dados, user){
+
+    const info = dados || {};
+    const email = (user && user.email ? user.email : "").toLowerCase();
+
+    const candidatosNomeCompleto = [
+        info.nomeCompleto,
+        localStorage.getItem("usuarioNomeCompleto"),
+        info.nome,
+        user && user.displayName ? user.displayName : ""
+    ];
+
+    let nomeCompleto = "";
+
+    for(const candidato of candidatosNomeCompleto){
+        const nome = String(candidato || "").trim();
+        if(!nomeEhGenericoFirebaseFarol(nome)){
+            nomeCompleto = nome;
+            break;
+        }
+    }
+
+    if(
+        !nomeCompleto &&
+        (email === "jp@gmail.com" || email === "farolsosaber@gmail.com")
+    ){
+        nomeCompleto = "João Paulo Ferreira da Silva";
+    }
+
+    let primeiroNome = primeiroNomeFirebaseFarol(nomeCompleto);
+
+    if(nomeEhGenericoFirebaseFarol(primeiroNome)){
+        primeiroNome = primeiroNomeFirebaseFarol(
+            localStorage.getItem("usuarioForum") || info.nome || ""
+        );
+    }
+
+    if(nomeEhGenericoFirebaseFarol(primeiroNome)){
+        primeiroNome = email.split("@")[0] || "Aluno";
+    }
+
+    if(nomeEhGenericoFirebaseFarol(primeiroNome)){
+        primeiroNome = "Aluno";
+    }
+
+    return {
+        primeiroNome: primeiroNome,
+        nomeCompleto: nomeCompleto || primeiroNome
+    };
+
+}
+
+
 auth.onAuthStateChanged(async (user) => {
 
     if(user){
@@ -48,13 +129,14 @@ auth.onAuthStateChanged(async (user) => {
 
                 const dados = doc.data();
 
+const nomeUsuarioFarol =
+    escolherNomeFirebaseFarol(dados, user);
+
 const nomeCompleto =
-    dados.nome || "";
+    nomeUsuarioFarol.nomeCompleto;
 
 const primeiroNome =
-    nomeCompleto
-    ? nomeCompleto.split(" ")[0]
-    : "Aluno";
+    nomeUsuarioFarol.primeiroNome;
 
 usuarioNomeCompleto = nomeCompleto;
 usuarioForum = primeiroNome;
@@ -68,6 +150,13 @@ localStorage.setItem(
     "usuarioForum",
     primeiroNome
 );
+
+await db.collection("usuarios")
+    .doc(user.uid)
+    .set({
+        nome: primeiroNome,
+        nomeCompleto: nomeCompleto
+    }, { merge: true });
 
 console.log("NOME:", nomeCompleto);
 
