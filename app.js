@@ -8557,78 +8557,97 @@ async function salvarRankingFirebase(){
     }
 
     try{
-        const usuarioRef = db.collection("usuarios")
-        .doc(auth.currentUser.uid);
 
-        const docUsuario = await usuarioRef.get();
-        const dadosFirebase = docUsuario.exists ? (docUsuario.data() || {}) : {};
+        const uid = auth.currentUser.uid;
+        const emailAtual = auth.currentUser.email || usuarioEmail || "";
+        const usuarioRef = db.collection("usuarios").doc(uid);
 
-        const pontosLocal = Number(pontosLuz) || 0;
-        const pontosFirebase = Number(dadosFirebase.pontosLuz) || 0;
-        const pontosFinais = Math.max(pontosLocal, pontosFirebase);
+        const resultadoRanking = await db.runTransaction(async (transaction) => {
 
-        const acertosFinais = Math.max(
-            Number(acertos) || 0,
-            Number(dadosFirebase.acertos) || 0
-        );
+            const docUsuario = await transaction.get(usuarioRef);
+            const dadosFirebase = docUsuario.exists ? (docUsuario.data() || {}) : {};
 
-        const errosFinais = Math.max(
-            Number(erros) || 0,
-            Number(dadosFirebase.erros) || 0
-        );
+            const pontosLocal = Number(pontosLuz) || 0;
+            const pontosFirebase = Number(dadosFirebase.pontosLuz) || 0;
 
-        let saldoFinal = Number(saldoPontosLuz) || 0;
+            // REGRA PRINCIPAL:
+            // o ranking nunca pode gravar uma pontuação menor que a já existente no Firebase.
+            const pontosFinais = Math.max(pontosLocal, pontosFirebase);
 
-        if(
-            typeof dadosFirebase.saldoPontosLuz === "number" &&
-            pontosFirebase >= pontosLocal
-        ){
-            saldoFinal = dadosFirebase.saldoPontosLuz;
-        }
+            const acertosFinais = Math.max(
+                Number(acertos) || 0,
+                Number(dadosFirebase.acertos) || 0
+            );
 
-        if(
-            pontosLuz !== pontosFinais ||
-            saldoPontosLuz !== saldoFinal ||
-            acertos !== acertosFinais ||
-            erros !== errosFinais
-        ){
-            pontosLuz = pontosFinais;
-            saldoPontosLuz = saldoFinal;
-            acertos = acertosFinais;
-            erros = errosFinais;
+            const errosFinais = Math.max(
+                Number(erros) || 0,
+                Number(dadosFirebase.erros) || 0
+            );
 
-            salvarDados();
-            atualizarDashboard();
-        }
+            const saldoLocal = Number(saldoPontosLuz) || 0;
+            const saldoFirebase =
+                typeof dadosFirebase.saldoPontosLuz === "number"
+                ? dadosFirebase.saldoPontosLuz
+                : saldoLocal;
 
-        usuarioEmail = usuarioEmail || (auth.currentUser.email || "");
+            let saldoFinal = saldoLocal;
 
-        const nomeRankingFinal = obterNomeRankingSeguroFarol(dadosFirebase);
-        const nomeCompletoFinal =
-            obterNomeCompletoValidoFarol(dadosFirebase) || nomeRankingFinal;
+            // Se o Firebase já tem pontuação maior, considera os dados do servidor mais confiáveis.
+            if(pontosFirebase > pontosLocal){
+                saldoFinal = saldoFirebase;
+            }
+
+            // Segurança básica para o saldo não ficar negativo nem maior que o total.
+            saldoFinal = Math.max(0, Math.min(saldoFinal, pontosFinais));
+
+            usuarioEmail = usuarioEmail || emailAtual;
+
+            const nomeRankingFinal = obterNomeRankingSeguroFarol(dadosFirebase);
+            const nomeCompletoFinal =
+                obterNomeCompletoValidoFarol(dadosFirebase) || nomeRankingFinal;
+
+            transaction.set(usuarioRef, {
+                nome: nomeRankingFinal,
+                nomeCompleto: nomeCompletoFinal,
+                email: emailAtual,
+                pontosLuz: pontosFinais,
+                saldoPontosLuz: saldoFinal,
+                acertos: acertosFinais,
+                erros: errosFinais,
+                avatarAtual: lojaFarol.avatarAtual || "👤",
+                nomeAvatarAtual: lojaFarol.nomeAvatarAtual || "Estudante",
+                tituloAtual: lojaFarol.tituloAtual || "",
+                medalhaEstudanteAtivo: !!lojaFarol.medalhaEstudanteAtivo,
+                cardPremium: !!lojaFarol.cardPremium,
+                certificadoDigital: !!lojaFarol.certificadoDigital,
+                lojaFarol: lojaFarol,
+                atualizadoEm: Date.now()
+            }, { merge: true });
+
+            return {
+                pontosLuz: pontosFinais,
+                saldoPontosLuz: saldoFinal,
+                acertos: acertosFinais,
+                erros: errosFinais,
+                nome: nomeRankingFinal,
+                nomeCompleto: nomeCompletoFinal
+            };
+
+        });
+
+        pontosLuz = resultadoRanking.pontosLuz;
+        saldoPontosLuz = resultadoRanking.saldoPontosLuz;
+        acertos = resultadoRanking.acertos;
+        erros = resultadoRanking.erros;
 
         atualizarNomeUsuarioLocalFarol(
-            nomeRankingFinal,
-            nomeCompletoFinal
+            resultadoRanking.nome,
+            resultadoRanking.nomeCompleto
         );
 
-        await usuarioRef.set({
-            nome: nomeRankingFinal,
-            nomeCompleto: nomeCompletoFinal,
-            email: usuarioEmail || (auth.currentUser.email || ""),
-            pontosLuz: pontosFinais,
-            saldoPontosLuz: saldoFinal,
-            acertos: acertosFinais,
-            erros: errosFinais,
-            avatarAtual: lojaFarol.avatarAtual || "👤",
-            nomeAvatarAtual: lojaFarol.nomeAvatarAtual || "Estudante",
-            tituloAtual: lojaFarol.tituloAtual || "",
-            medalhaEstudanteAtivo: !!lojaFarol.medalhaEstudanteAtivo,
-            cardPremium: !!lojaFarol.cardPremium,
-            certificadoDigital: !!lojaFarol.certificadoDigital,
-            lojaFarol: lojaFarol,
-            atualizadoEm: Date.now()
-        }, { merge: true });
+        salvarDados();
+        atualizarDashboard();
+
     }
     catch(erro){
         console.log("Erro ao salvar ranking", erro);
@@ -8685,6 +8704,13 @@ async function carregarRankingPontos(){
         area.innerHTML = "Ranking indisponível no momento.";
         console.log("Erro no ranking", erro);
     }
+}
+
+
+// Compatibilidade: alguns botões antigos chamam carregarRankingFirebase().
+// A função correta do ranking é carregarRankingPontos().
+function carregarRankingFirebase(){
+    return carregarRankingPontos();
 }
 
 setInterval(carregarRankingPontos, 120000);
