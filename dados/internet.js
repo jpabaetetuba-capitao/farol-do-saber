@@ -1,8 +1,5 @@
-// ==========================
-// FAROL DO SABER - INTERNET
-// Banco ampliado para 150 questões inéditas/revisadas em estilo concurso.
-// Mantém feedback de acerto, feedback de erro e dica da banca.
-// ==========================
+// Banco de questões de Internet - Farol do Saber
+// 150 questões organizadas por subtópico para sorteio balanceado de 40 questões.
 
 const internet = [
     {
@@ -17,7 +14,10 @@ const internet = [
         "correta": 4,
         "feedbackAcerto": "A Internet é uma rede global formada por milhões de dispositivos interconectados que utilizam protocolos de comunicação para compartilhar informações e serviços. A WWW é apenas um dos serviços disponíveis na Internet.",
         "feedbackErro": "A resposta correta é:\n\nA Internet consiste em uma rede mundial de computadores interligados que permite a troca de informações e serviços.\n\nComentário:\nA Internet é uma rede global formada por milhões de dispositivos interconectados que utilizam protocolos de comunicação para compartilhar informações e serviços. A WWW é apenas um dos serviços disponíveis na Internet.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "As bancas costumam diferenciar Internet (infraestrutura global de redes) de WWW (serviço de páginas web). Não confunda esses conceitos."
+        "dicaBanca": "As bancas costumam diferenciar Internet (infraestrutura global de redes) de WWW (serviço de páginas web). Não confunda esses conceitos.",
+        "id": "internet_001",
+        "assunto": "internet",
+        "subtopico": "conceitos de internet, intranet e extranet"
     },
     {
         "pergunta": "A World Wide Web (WWW) pode ser corretamente definida como:",
@@ -31,7 +31,10 @@ const internet = [
         "correta": 4,
         "feedbackAcerto": "A WWW (World Wide Web) é um dos principais serviços disponíveis na Internet. Ela permite acessar páginas e documentos conectados por hiperlinks, normalmente por meio de navegadores como Chrome, Firefox e Edge.",
         "feedbackErro": "A resposta correta é:\n\nUm serviço da Internet que permite o acesso a páginas e documentos interligados por hiperlinks.\n\nComentário:\nA WWW (World Wide Web) é um dos principais serviços disponíveis na Internet. Ela permite acessar páginas e documentos conectados por hiperlinks, normalmente por meio de navegadores como Chrome, Firefox e Edge.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Questão clássica de concurso: Internet é a rede; WWW é um serviço que funciona sobre essa rede."
+        "dicaBanca": "Questão clássica de concurso: Internet é a rede; WWW é um serviço que funciona sobre essa rede.",
+        "id": "internet_002",
+        "assunto": "internet",
+        "subtopico": "web, páginas e aplicações"
     },
     {
         "pergunta": "Ao acessar um endereço como https://www.faroldosaber.com.br, o trecho completo digitado pelo usuário recebe o nome de:",
@@ -45,7 +48,10 @@ const internet = [
         "correta": 2,
         "feedbackAcerto": "URL (Uniform Resource Locator) é o endereço utilizado para localizar recursos na Internet, como páginas, imagens, vídeos ou arquivos.",
         "feedbackErro": "A resposta correta é:\n\nURL.\n\nComentário:\nURL (Uniform Resource Locator) é o endereço utilizado para localizar recursos na Internet, como páginas, imagens, vídeos ou arquivos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "As bancas costumam apresentar exemplos de endereços e perguntar o significado de URL."
+        "dicaBanca": "As bancas costumam apresentar exemplos de endereços e perguntar o significado de URL.",
+        "id": "internet_003",
+        "assunto": "internet",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Assinale a alternativa que apresenta corretamente a diferença entre um site e uma página da Web.",
@@ -59,7 +65,10 @@ const internet = [
         "correta": 4,
         "feedbackAcerto": "Um site é formado por várias páginas da Web relacionadas entre si. Cada página corresponde a um documento individual acessado por meio de uma URL específica.",
         "feedbackErro": "A resposta correta é:\n\nSite é um conjunto organizado de páginas da Web relacionadas entre si.\n\nComentário:\nUm site é formado por várias páginas da Web relacionadas entre si. Cada página corresponde a um documento individual acessado por meio de uma URL específica.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Lembre-se: página é a unidade individual; site é o conjunto de páginas."
+        "dicaBanca": "Lembre-se: página é a unidade individual; site é o conjunto de páginas.",
+        "id": "internet_004",
+        "assunto": "internet",
+        "subtopico": "web, páginas e aplicações"
     },
     {
         "pergunta": "Uma organização mantém uma rede interna acessível apenas aos seus funcionários. Essa rede é corretamente denominada:",
@@ -73,7 +82,10 @@ const internet = [
         "correta": 0,
         "feedbackAcerto": "Intranet é uma rede privada utilizada dentro de uma organização, baseada nas mesmas tecnologias da Internet, mas restrita aos usuários autorizados.",
         "feedbackErro": "A resposta correta é:\n\nIntranet.\n\nComentário:\nIntranet é uma rede privada utilizada dentro de uma organização, baseada nas mesmas tecnologias da Internet, mas restrita aos usuários autorizados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Decore a diferença: Internet = pública; Intranet = interna; Extranet = acesso externo controlado a parte da rede interna."
+        "dicaBanca": "Decore a diferença: Internet = pública; Intranet = interna; Extranet = acesso externo controlado a parte da rede interna.",
+        "id": "internet_005",
+        "assunto": "internet",
+        "subtopico": "conceitos de internet, intranet e extranet"
     },
     {
         "pergunta": "O protocolo HTTP (HyperText Transfer Protocol) tem como principal finalidade:",
@@ -87,7 +99,10 @@ const internet = [
         "correta": 4,
         "feedbackAcerto": "O HTTP é o protocolo utilizado para a comunicação entre navegadores e servidores web, permitindo a transferência de páginas, imagens e outros recursos da Web.",
         "feedbackErro": "A resposta correta é:\n\nPermitir a transferência de páginas e recursos da Web entre cliente e servidor.\n\nComentário:\nO HTTP é o protocolo utilizado para a comunicação entre navegadores e servidores web, permitindo a transferência de páginas, imagens e outros recursos da Web.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Quando a banca citar navegação em páginas web, a resposta geralmente envolve o protocolo HTTP ou HTTPS."
+        "dicaBanca": "Quando a banca citar navegação em páginas web, a resposta geralmente envolve o protocolo HTTP ou HTTPS.",
+        "id": "internet_006",
+        "assunto": "internet",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "A principal diferença entre HTTP e HTTPS é que o HTTPS:",
@@ -101,7 +116,10 @@ const internet = [
         "correta": 1,
         "feedbackAcerto": "O HTTPS adiciona uma camada de segurança ao HTTP por meio da criptografia dos dados transmitidos, protegendo informações contra interceptações.",
         "feedbackErro": "A resposta correta é:\n\nUtiliza criptografia para proteger os dados transmitidos.\n\nComentário:\nO HTTPS adiciona uma camada de segurança ao HTTP por meio da criptografia dos dados transmitidos, protegendo informações contra interceptações.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Ao visualizar o cadeado ao lado do endereço do site, normalmente significa que a conexão utiliza HTTPS."
+        "dicaBanca": "Ao visualizar o cadeado ao lado do endereço do site, normalmente significa que a conexão utiliza HTTPS.",
+        "id": "internet_007",
+        "assunto": "internet",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "O protocolo DNS (Domain Name System) tem como função principal:",
@@ -115,7 +133,10 @@ const internet = [
         "correta": 1,
         "feedbackAcerto": "O DNS atua como uma espécie de agenda da Internet, traduzindo nomes amigáveis, como www.google.com, em endereços IP compreendidos pelos computadores.",
         "feedbackErro": "A resposta correta é:\n\nConverter nomes de domínio em endereços IP.\n\nComentário:\nO DNS atua como uma espécie de agenda da Internet, traduzindo nomes amigáveis, como www.google.com, em endereços IP compreendidos pelos computadores.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Questão extremamente frequente. DNS = resolução de nomes para IP."
+        "dicaBanca": "Questão extremamente frequente. DNS = resolução de nomes para IP.",
+        "id": "internet_008",
+        "assunto": "internet",
+        "subtopico": "domínios, DNS e infraestrutura"
     },
     {
         "pergunta": "O protocolo FTP é tradicionalmente utilizado para:",
@@ -129,7 +150,10 @@ const internet = [
         "correta": 3,
         "feedbackAcerto": "FTP significa File Transfer Protocol e é utilizado para transferência de arquivos entre dispositivos conectados a uma rede.",
         "feedbackErro": "A resposta correta é:\n\nTransferir arquivos entre computadores em rede.\n\nComentário:\nFTP significa File Transfer Protocol e é utilizado para transferência de arquivos entre dispositivos conectados a uma rede.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Lembre-se da sigla: File Transfer Protocol = protocolo de transferência de arquivos."
+        "dicaBanca": "Lembre-se da sigla: File Transfer Protocol = protocolo de transferência de arquivos.",
+        "id": "internet_009",
+        "assunto": "internet",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "A expressão TCP/IP refere-se:",
@@ -143,7 +167,10 @@ const internet = [
         "correta": 2,
         "feedbackAcerto": "TCP/IP é a suíte de protocolos que permite a comunicação entre dispositivos na Internet, sendo considerada a base do funcionamento das redes modernas.",
         "feedbackErro": "A resposta correta é:\n\nA um conjunto de protocolos que serve de base para a comunicação na Internet.\n\nComentário:\nTCP/IP é a suíte de protocolos que permite a comunicação entre dispositivos na Internet, sendo considerada a base do funcionamento das redes modernas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Quando aparecer a expressão 'suíte de protocolos da Internet', pense imediatamente em TCP/IP."
+        "dicaBanca": "Quando aparecer a expressão 'suíte de protocolos da Internet', pense imediatamente em TCP/IP.",
+        "id": "internet_010",
+        "assunto": "internet",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "Nos navegadores modernos, a funcionalidade Favoritos (Bookmarks) tem como principal objetivo:",
@@ -157,7 +184,10 @@ const internet = [
         "correta": 0,
         "feedbackAcerto": "Os Favoritos permitem salvar endereços de páginas para acesso rápido posteriormente, sem necessidade de redigitar a URL.",
         "feedbackErro": "A resposta correta é:\n\nPermitir o acesso rápido a páginas previamente salvas pelo usuário.\n\nComentário:\nOs Favoritos permitem salvar endereços de páginas para acesso rápido posteriormente, sem necessidade de redigitar a URL.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Favoritos não se confundem com Histórico. Favoritos são salvos manualmente; Histórico é registrado automaticamente."
+        "dicaBanca": "Favoritos não se confundem com Histórico. Favoritos são salvos manualmente; Histórico é registrado automaticamente.",
+        "id": "internet_011",
+        "assunto": "internet",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "Em navegadores como Google Chrome, Mozilla Firefox e Microsoft Edge, o Histórico de Navegação é utilizado para:",
@@ -171,7 +201,10 @@ const internet = [
         "correta": 0,
         "feedbackAcerto": "O Histórico registra automaticamente as páginas visitadas, permitindo sua consulta posterior pelo usuário.",
         "feedbackErro": "A resposta correta é:\n\nRegistrar automaticamente os sites visitados pelo usuário.\n\nComentário:\nO Histórico registra automaticamente as páginas visitadas, permitindo sua consulta posterior pelo usuário.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Questão recorrente: Histórico = automático; Favoritos = escolha do usuário."
+        "dicaBanca": "Questão recorrente: Histórico = automático; Favoritos = escolha do usuário.",
+        "id": "internet_012",
+        "assunto": "internet",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "Ao utilizar o modo de navegação anônima (privada) em um navegador, é correto afirmar que:",
@@ -185,7 +218,10 @@ const internet = [
         "correta": 0,
         "feedbackAcerto": "A navegação anônima reduz o armazenamento local de informações, como histórico, cookies e dados temporários após o encerramento da sessão.",
         "feedbackErro": "A resposta correta é:\n\nO navegador reduz o armazenamento local de histórico e cookies após o encerramento da sessão.\n\nComentário:\nA navegação anônima reduz o armazenamento local de informações, como histórico, cookies e dados temporários após o encerramento da sessão.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Muitas bancas exploram a falsa ideia de anonimato total. O modo anônimo protege apenas informações armazenadas localmente."
+        "dicaBanca": "Muitas bancas exploram a falsa ideia de anonimato total. O modo anônimo protege apenas informações armazenadas localmente.",
+        "id": "internet_013",
+        "assunto": "internet",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "Quando um arquivo é obtido da Internet e armazenado no computador do usuário, ocorre uma operação conhecida como:",
@@ -199,7 +235,10 @@ const internet = [
         "correta": 3,
         "feedbackAcerto": "Download corresponde à transferência de dados da Internet para o dispositivo do usuário.",
         "feedbackErro": "A resposta correta é:\n\nDownload.\n\nComentário:\nDownload corresponde à transferência de dados da Internet para o dispositivo do usuário.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Download = receber; Upload = enviar."
+        "dicaBanca": "Download = receber; Upload = enviar.",
+        "id": "internet_014",
+        "assunto": "internet",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "Sobre os navegadores Google Chrome, Mozilla Firefox e Microsoft Edge, assinale a alternativa correta.",
@@ -213,7 +252,10 @@ const internet = [
         "correta": 2,
         "feedbackAcerto": "Chrome, Firefox e Edge são navegadores web utilizados para acessar páginas, aplicações e serviços disponíveis na Internet.",
         "feedbackErro": "A resposta correta é:\n\nSão aplicativos utilizados para acessar páginas e serviços disponíveis na Web.\n\nComentário:\nChrome, Firefox e Edge são navegadores web utilizados para acessar páginas, aplicações e serviços disponíveis na Internet.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "A banca costuma perguntar a classificação desses programas. Eles são navegadores (browsers), não sistemas operacionais nem protocolos."
+        "dicaBanca": "A banca costuma perguntar a classificação desses programas. Eles são navegadores (browsers), não sistemas operacionais nem protocolos.",
+        "id": "internet_015",
+        "assunto": "internet",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "Os mecanismos de busca disponíveis na Internet têm como principal finalidade:",
@@ -227,7 +269,10 @@ const internet = [
         "correta": 4,
         "feedbackAcerto": "Mecanismos de busca, como Google e Bing, permitem localizar informações na Web a partir de palavras-chave fornecidas pelo usuário.",
         "feedbackErro": "A resposta correta é:\n\nPermitir a localização de informações e conteúdos na Web por meio de palavras-chave.\n\nComentário:\nMecanismos de busca, como Google e Bing, permitem localizar informações na Web a partir de palavras-chave fornecidas pelo usuário.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Google, Bing e Yahoo são exemplos clássicos de mecanismos de busca cobrados em concursos."
+        "dicaBanca": "Google, Bing e Yahoo são exemplos clássicos de mecanismos de busca cobrados em concursos.",
+        "id": "internet_016",
+        "assunto": "internet",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "Ao utilizar aspas duplas em uma pesquisa realizada no Google, o mecanismo de busca tende a:",
@@ -241,7 +286,10 @@ const internet = [
         "correta": 1,
         "feedbackAcerto": "O uso de aspas força a busca pela expressão exata, reduzindo resultados que contenham apenas palavras isoladas.",
         "feedbackErro": "A resposta correta é:\n\nLocalizar a expressão exatamente como foi digitada.\n\nComentário:\nO uso de aspas força a busca pela expressão exata, reduzindo resultados que contenham apenas palavras isoladas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Questões de pesquisa avançada costumam explorar operadores simples como aspas e sinais de exclusão."
+        "dicaBanca": "Questões de pesquisa avançada costumam explorar operadores simples como aspas e sinais de exclusão.",
+        "id": "internet_017",
+        "assunto": "internet",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "Em uma pesquisa na Internet, o uso de operadores avançados tem como principal objetivo:",
@@ -255,7 +303,10 @@ const internet = [
         "correta": 0,
         "feedbackAcerto": "Operadores avançados permitem refinar pesquisas, tornando os resultados mais precisos e relevantes para o usuário.",
         "feedbackErro": "A resposta correta é:\n\nRestringir ou refinar os resultados apresentados pelo mecanismo de busca.\n\nComentário:\nOperadores avançados permitem refinar pesquisas, tornando os resultados mais precisos e relevantes para o usuário.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Quando a questão mencionar pesquisa avançada, normalmente a resposta envolve refinamento de resultados."
+        "dicaBanca": "Quando a questão mencionar pesquisa avançada, normalmente a resposta envolve refinamento de resultados.",
+        "id": "internet_018",
+        "assunto": "internet",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "Em um endereço de correio eletrônico como usuario@empresa.com.br, o símbolo @ tem a função de:",
@@ -269,7 +320,10 @@ const internet = [
         "correta": 3,
         "feedbackAcerto": "O símbolo @ separa a identificação do usuário do domínio onde a conta de e-mail está hospedada.",
         "feedbackErro": "A resposta correta é:\n\nSeparar o nome do usuário do domínio do serviço de e-mail.\n\nComentário:\nO símbolo @ separa a identificação do usuário do domínio onde a conta de e-mail está hospedada.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Questão clássica de concursos. Saiba identificar corretamente as partes de um endereço eletrônico."
+        "dicaBanca": "Questão clássica de concursos. Saiba identificar corretamente as partes de um endereço eletrônico.",
+        "id": "internet_019",
+        "assunto": "internet",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "O serviço de Webmail caracteriza-se por:",
@@ -283,7 +337,10 @@ const internet = [
         "correta": 2,
         "feedbackAcerto": "Webmail é o acesso ao correio eletrônico por meio de navegadores como Chrome, Firefox ou Edge, sem necessidade de programas específicos.",
         "feedbackErro": "A resposta correta é:\n\nPermitir acesso ao correio eletrônico diretamente por meio de um navegador da Web.\n\nComentário:\nWebmail é o acesso ao correio eletrônico por meio de navegadores como Chrome, Firefox ou Edge, sem necessidade de programas específicos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Webmail = acesso via navegador. Cliente de e-mail = programa instalado."
+        "dicaBanca": "Webmail = acesso via navegador. Cliente de e-mail = programa instalado.",
+        "id": "internet_020",
+        "assunto": "internet",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Ao enviar uma mensagem eletrônica para vários destinatários, o campo CC (Com Cópia) tem como finalidade:",
@@ -297,7 +354,10 @@ const internet = [
         "correta": 2,
         "feedbackAcerto": "O campo CC permite que outros destinatários recebam uma cópia da mensagem, com seus endereços visíveis para os demais participantes.",
         "feedbackErro": "A resposta correta é:\n\nEncaminhar uma cópia visível da mensagem para outros destinatários.\n\nComentário:\nO campo CC permite que outros destinatários recebam uma cópia da mensagem, com seus endereços visíveis para os demais participantes.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "CC = Com Cópia. Todos veem quem recebeu a mensagem."
+        "dicaBanca": "CC = Com Cópia. Todos veem quem recebeu a mensagem.",
+        "id": "internet_021",
+        "assunto": "internet",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Em relação ao campo CCO (Com Cópia Oculta), assinale a alternativa correta.",
@@ -311,7 +371,10 @@ const internet = [
         "correta": 0,
         "feedbackAcerto": "Os destinatários inseridos em CCO recebem a mensagem normalmente, mas seus endereços não são exibidos aos demais participantes.",
         "feedbackErro": "A resposta correta é:\n\nOs destinatários inseridos em CCO ficam ocultos para os demais destinatários.\n\nComentário:\nOs destinatários inseridos em CCO recebem a mensagem normalmente, mas seus endereços não são exibidos aos demais participantes.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "CCO = Com Cópia Oculta. Os destinatários ficam escondidos dos demais."
+        "dicaBanca": "CCO = Com Cópia Oculta. Os destinatários ficam escondidos dos demais.",
+        "id": "internet_022",
+        "assunto": "internet",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Em sistemas de correio eletrônico, um anexo corresponde a:",
@@ -325,7 +388,10 @@ const internet = [
         "correta": 0,
         "feedbackAcerto": "Anexos são arquivos enviados junto à mensagem, como documentos, imagens, planilhas, apresentações ou outros tipos de conteúdo.",
         "feedbackErro": "A resposta correta é:\n\nUm arquivo enviado juntamente com a mensagem.\n\nComentário:\nAnexos são arquivos enviados junto à mensagem, como documentos, imagens, planilhas, apresentações ou outros tipos de conteúdo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Anexo = arquivo associado ao e-mail."
+        "dicaBanca": "Anexo = arquivo associado ao e-mail.",
+        "id": "internet_023",
+        "assunto": "internet",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Em correio eletrônico, a pasta ou caixa de entrada tem como principal finalidade:",
@@ -339,7 +405,10 @@ const internet = [
         "correta": 1,
         "feedbackAcerto": "A Caixa de Entrada é o local onde ficam armazenadas as mensagens recebidas pelo usuário até que sejam lidas, organizadas ou removidas.",
         "feedbackErro": "A resposta correta é:\n\nArmazenar mensagens recebidas pelo usuário.\n\nComentário:\nA Caixa de Entrada é o local onde ficam armazenadas as mensagens recebidas pelo usuário até que sejam lidas, organizadas ou removidas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Caixa de Entrada = mensagens recebidas. Itens Enviados = mensagens enviadas."
+        "dicaBanca": "Caixa de Entrada = mensagens recebidas. Itens Enviados = mensagens enviadas.",
+        "id": "internet_024",
+        "assunto": "internet",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "No contexto do correio eletrônico, spam é corretamente definido como:",
@@ -353,7 +422,10 @@ const internet = [
         "correta": 3,
         "feedbackAcerto": "Spam é uma mensagem eletrônica não solicitada, normalmente enviada para um grande número de destinatários, frequentemente com fins publicitários ou fraudulentos.",
         "feedbackErro": "A resposta correta é:\n\nMensagem eletrônica não solicitada, geralmente enviada em massa.\n\nComentário:\nSpam é uma mensagem eletrônica não solicitada, normalmente enviada para um grande número de destinatários, frequentemente com fins publicitários ou fraudulentos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Nem todo spam contém vírus, mas todo spam é considerado uma mensagem não solicitada."
+        "dicaBanca": "Nem todo spam contém vírus, mas todo spam é considerado uma mensagem não solicitada.",
+        "id": "internet_025",
+        "assunto": "internet",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Uma prática recomendada para reduzir riscos ao utilizar o correio eletrônico é:",
@@ -367,7 +439,10 @@ const internet = [
         "correta": 4,
         "feedbackAcerto": "A verificação do remetente e da legitimidade da mensagem é uma das principais medidas de segurança contra golpes e códigos maliciosos.",
         "feedbackErro": "A resposta correta é:\n\nVerificar a origem da mensagem antes de abrir anexos ou acessar links.\n\nComentário:\nA verificação do remetente e da legitimidade da mensagem é uma das principais medidas de segurança contra golpes e códigos maliciosos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Questões de segurança costumam associar anexos e links suspeitos aos principais vetores de ataque."
+        "dicaBanca": "Questões de segurança costumam associar anexos e links suspeitos aos principais vetores de ataque.",
+        "id": "internet_026",
+        "assunto": "internet",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "O golpe conhecido como phishing tem como objetivo principal:",
@@ -381,7 +456,10 @@ const internet = [
         "correta": 1,
         "feedbackAcerto": "O phishing busca enganar o usuário para que forneça informações sensíveis, como senhas, dados bancários ou informações pessoais.",
         "feedbackErro": "A resposta correta é:\n\nObter informações confidenciais por meio de mensagens ou páginas falsas.\n\nComentário:\nO phishing busca enganar o usuário para que forneça informações sensíveis, como senhas, dados bancários ou informações pessoais.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Phishing é um dos temas mais cobrados atualmente em provas de Informática."
+        "dicaBanca": "Phishing é um dos temas mais cobrados atualmente em provas de Informática.",
+        "id": "internet_027",
+        "assunto": "internet",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Ao observar um cadeado ao lado do endereço de um site e a utilização do protocolo HTTPS, pode-se concluir que:",
@@ -395,7 +473,10 @@ const internet = [
         "correta": 2,
         "feedbackAcerto": "O HTTPS indica que a comunicação entre o navegador e o servidor é protegida por criptografia, aumentando a segurança dos dados transmitidos.",
         "feedbackErro": "A resposta correta é:\n\nA conexão entre o navegador e o servidor utiliza criptografia.\n\nComentário:\nO HTTPS indica que a comunicação entre o navegador e o servidor é protegida por criptografia, aumentando a segurança dos dados transmitidos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "HTTPS significa segurança na transmissão dos dados, não garantia absoluta de legitimidade do site."
+        "dicaBanca": "HTTPS significa segurança na transmissão dos dados, não garantia absoluta de legitimidade do site.",
+        "id": "internet_028",
+        "assunto": "internet",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Os certificados digitais utilizados em conexões seguras na Internet têm como principal finalidade:",
@@ -409,7 +490,10 @@ const internet = [
         "correta": 3,
         "feedbackAcerto": "Os certificados digitais ajudam a validar a identidade de sites e possibilitam o uso de conexões criptografadas, como HTTPS.",
         "feedbackErro": "A resposta correta é:\n\nComprovar a identidade de sites e permitir conexões seguras.\n\nComentário:\nOs certificados digitais ajudam a validar a identidade de sites e possibilitam o uso de conexões criptografadas, como HTTPS.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Certificado Digital = autenticação + segurança da comunicação."
+        "dicaBanca": "Certificado Digital = autenticação + segurança da comunicação.",
+        "id": "internet_029",
+        "assunto": "internet",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Sobre segurança na Internet, assinale a alternativa correta.",
@@ -423,7 +507,10 @@ const internet = [
         "correta": 3,
         "feedbackAcerto": "Atualizações de segurança são fundamentais para corrigir falhas e vulnerabilidades exploradas por invasores.",
         "feedbackErro": "A resposta correta é:\n\nAtualizações de segurança podem corrigir vulnerabilidades em sistemas e aplicativos.\n\nComentário:\nAtualizações de segurança são fundamentais para corrigir falhas e vulnerabilidades exploradas por invasores.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Bancas modernas valorizam conceitos de atualização, prevenção e boas práticas de segurança."
+        "dicaBanca": "Bancas modernas valorizam conceitos de atualização, prevenção e boas práticas de segurança.",
+        "id": "internet_030",
+        "assunto": "internet",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Em redes de computadores e na Internet, o termo Upload refere-se à operação de:",
@@ -437,7 +524,10 @@ const internet = [
         "correta": 4,
         "feedbackAcerto": "Upload é o envio de dados do dispositivo do usuário para outro computador, servidor ou serviço na Internet. Um exemplo é anexar um arquivo em um e-mail ou enviar um documento para o Google Drive.",
         "feedbackErro": "A resposta correta é:\n\nEnviar arquivos ou informações do dispositivo do usuário para outro computador ou servidor.\n\nComentário:\nUpload é o envio de dados do dispositivo do usuário para outro computador, servidor ou serviço na Internet. Um exemplo é anexar um arquivo em um e-mail ou enviar um documento para o Google Drive.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Decore: Upload = enviar. Download = receber."
+        "dicaBanca": "Decore: Upload = enviar. Download = receber.",
+        "id": "internet_031",
+        "assunto": "internet",
+        "subtopico": "web, páginas e aplicações"
     },
     {
         "pergunta": "Sobre Internet, Intranet e Extranet, assinale a alternativa correta.",
@@ -451,7 +541,10 @@ const internet = [
         "correta": 3,
         "feedbackAcerto": "A Intranet é uma rede privada utilizada dentro de organizações para compartilhamento de informações e recursos entre usuários autorizados.",
         "feedbackErro": "A resposta correta é:\n\nA Intranet é uma rede privada utilizada internamente por uma organização.\n\nComentário:\nA Intranet é uma rede privada utilizada dentro de organizações para compartilhamento de informações e recursos entre usuários autorizados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "IVIN e Ágata costumam cobrar diretamente as diferenças entre Internet, Intranet e Extranet."
+        "dicaBanca": "IVIN e Ágata costumam cobrar diretamente as diferenças entre Internet, Intranet e Extranet.",
+        "id": "internet_032",
+        "assunto": "internet",
+        "subtopico": "conceitos de internet, intranet e extranet"
     },
     {
         "pergunta": "Em uma URL como https://www.concursos.com.br/edital.pdf, o trecho 'www.concursos.com.br' corresponde ao:",
@@ -465,7 +558,10 @@ const internet = [
         "correta": 2,
         "feedbackAcerto": "O domínio identifica o site ou serviço acessado na Internet. No exemplo, 'www.concursos.com.br' é o domínio.",
         "feedbackErro": "A resposta correta é:\n\nDomínio do site.\n\nComentário:\nO domínio identifica o site ou serviço acessado na Internet. No exemplo, &#039;www.concursos.com.br&#039; é o domínio.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Questões de URL costumam cobrar protocolo, domínio e caminho do arquivo."
+        "dicaBanca": "Questões de URL costumam cobrar protocolo, domínio e caminho do arquivo.",
+        "id": "internet_033",
+        "assunto": "internet",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Assinale a alternativa que apresenta corretamente uma diferença entre Webmail e Cliente de E-mail.",
@@ -479,7 +575,10 @@ const internet = [
         "correta": 1,
         "feedbackAcerto": "Webmail é acessado por navegadores como Chrome ou Edge. Já clientes de e-mail, como Outlook e Thunderbird, são programas instalados.",
         "feedbackErro": "A resposta correta é:\n\nWebmail é acessado via navegador, enquanto clientes de e-mail são programas instalados no dispositivo.\n\nComentário:\nWebmail é acessado por navegadores como Chrome ou Edge. Já clientes de e-mail, como Outlook e Thunderbird, são programas instalados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Gmail pelo navegador = Webmail. Outlook instalado = Cliente de E-mail."
+        "dicaBanca": "Gmail pelo navegador = Webmail. Outlook instalado = Cliente de E-mail.",
+        "id": "internet_034",
+        "assunto": "internet",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Em serviços de correio eletrônico, a pasta Rascunhos é utilizada para:",
@@ -493,7 +592,10 @@ const internet = [
         "correta": 1,
         "feedbackAcerto": "A pasta Rascunhos armazena mensagens que estão sendo elaboradas ou que foram salvas antes do envio definitivo.",
         "feedbackErro": "A resposta correta é:\n\nGuardar mensagens que ainda não foram enviadas.\n\nComentário:\nA pasta Rascunhos armazena mensagens que estão sendo elaboradas ou que foram salvas antes do envio definitivo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Saiba a função das principais pastas: Caixa de Entrada, Enviados, Rascunhos, Spam e Lixeira."
+        "dicaBanca": "Saiba a função das principais pastas: Caixa de Entrada, Enviados, Rascunhos, Spam e Lixeira.",
+        "id": "internet_035",
+        "assunto": "internet",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Em uma URL como https://site.com.br/pasta/arquivo.html?x=10#topo, o trecho após o símbolo '?' corresponde:",
@@ -507,7 +609,10 @@ const internet = [
         "correta": 0,
         "feedbackAcerto": "A parte após '?' é a query string, usada para enviar parâmetros na URL.",
         "feedbackErro": "A resposta correta é:\n\nA parâmetros de consulta enviados na requisição.\n\nComentário:\nA parte após '?' é a query string, usada para enviar parâmetros na URL.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Na URL, protocolo, domínio, caminho, query e fragmento têm funções diferentes."
+        "dicaBanca": "Na URL, protocolo, domínio, caminho, query e fragmento têm funções diferentes.",
+        "id": "internet_036",
+        "assunto": "internet",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Cookies de sessão diferenciam-se de cookies persistentes porque normalmente:",
@@ -521,7 +626,10 @@ const internet = [
         "correta": 1,
         "feedbackAcerto": "Cookies de sessão tendem a existir apenas enquanto a sessão está ativa; persistentes permanecem por prazo definido.",
         "feedbackErro": "A resposta correta é:\n\nSão mantidos apenas durante a sessão de navegação e removidos ao encerrá-la.\n\nComentário:\nCookies de sessão tendem a existir apenas enquanto a sessão está ativa; persistentes permanecem por prazo definido.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Cookie não é programa executável; é dado armazenado pelo navegador."
+        "dicaBanca": "Cookie não é programa executável; é dado armazenado pelo navegador.",
+        "id": "internet_037",
+        "assunto": "internet",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "O cache do navegador tem como objetivo principal:",
@@ -535,7 +643,10 @@ const internet = [
         "correta": 2,
         "feedbackAcerto": "Cache armazena cópias locais de recursos, como imagens e scripts, para melhorar desempenho.",
         "feedbackErro": "A resposta correta é:\n\nGuardar recursos já carregados para acelerar acessos posteriores e reduzir tráfego.\n\nComentário:\nCache armazena cópias locais de recursos, como imagens e scripts, para melhorar desempenho.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Não confunda cache com cookies, histórico ou gerenciador de senhas."
+        "dicaBanca": "Não confunda cache com cookies, histórico ou gerenciador de senhas.",
+        "id": "internet_038",
+        "assunto": "internet",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "No funcionamento do DNS, um resolvedor recursivo atua principalmente:",
@@ -549,7 +660,10 @@ const internet = [
         "correta": 3,
         "feedbackAcerto": "O resolvedor recursivo busca a resposta DNS consultando a hierarquia de servidores quando necessário.",
         "feedbackErro": "A resposta correta é:\n\nConsultando outros servidores DNS para obter a resposta solicitada pelo cliente.\n\nComentário:\nO resolvedor recursivo busca a resposta DNS consultando a hierarquia de servidores quando necessário.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "DNS traduz nomes em endereços; não transfere arquivos nem envia e-mail."
+        "dicaBanca": "DNS traduz nomes em endereços; não transfere arquivos nem envia e-mail.",
+        "id": "internet_039",
+        "assunto": "internet",
+        "subtopico": "domínios, DNS e infraestrutura"
     },
     {
         "pergunta": "Endereços IP privados, como muitos endereços 192.168.x.x, são utilizados principalmente:",
@@ -563,7 +677,10 @@ const internet = [
         "correta": 4,
         "feedbackAcerto": "IPs privados são usados em redes internas e geralmente acessam a Internet por NAT no roteador.",
         "feedbackErro": "A resposta correta é:\n\nDentro de redes locais, normalmente com tradução por NAT para acesso à Internet.\n\nComentário:\nIPs privados são usados em redes internas e geralmente acessam a Internet por NAT no roteador.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "IP privado não é roteável globalmente como endereço público comum."
+        "dicaBanca": "IP privado não é roteável globalmente como endereço público comum.",
+        "id": "internet_040",
+        "assunto": "internet",
+        "subtopico": "conceitos de internet, intranet e extranet"
     },
     {
         "pergunta": "No correio eletrônico, o protocolo SMTP é tradicionalmente associado:",
@@ -577,7 +694,10 @@ const internet = [
         "correta": 0,
         "feedbackAcerto": "SMTP é o protocolo clássico para envio/encaminhamento de e-mails.",
         "feedbackErro": "A resposta correta é:\n\nAo envio de mensagens entre cliente/servidor ou entre servidores de e-mail.\n\nComentário:\nSMTP é o protocolo clássico para envio/encaminhamento de e-mails.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "SMTP envia; POP3 e IMAP estão ligados ao recebimento/acesso às caixas."
+        "dicaBanca": "SMTP envia; POP3 e IMAP estão ligados ao recebimento/acesso às caixas.",
+        "id": "internet_041",
+        "assunto": "internet",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Comparando POP3 e IMAP, é correto afirmar que o IMAP geralmente:",
@@ -591,7 +711,10 @@ const internet = [
         "correta": 1,
         "feedbackAcerto": "IMAP é voltado ao acesso sincronizado da caixa postal, mantendo mensagens e pastas no servidor.",
         "feedbackErro": "A resposta correta é:\n\nMantém as mensagens no servidor e sincroniza o estado entre dispositivos.\n\nComentário:\nIMAP é voltado ao acesso sincronizado da caixa postal, mantendo mensagens e pastas no servidor.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "IMAP facilita múltiplos dispositivos; POP3 costuma baixar mensagens para o cliente."
+        "dicaBanca": "IMAP facilita múltiplos dispositivos; POP3 costuma baixar mensagens para o cliente.",
+        "id": "internet_042",
+        "assunto": "internet",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Um certificado digital HTTPS válido indica principalmente que:",
@@ -605,7 +728,10 @@ const internet = [
         "correta": 2,
         "feedbackAcerto": "HTTPS protege a comunicação e ajuda a autenticar o domínio, mas não transforma todo conteúdo em confiável.",
         "feedbackErro": "A resposta correta é:\n\nA conexão pode autenticar o domínio e usar criptografia, mas isso não garante que o conteúdo do site seja honesto.\n\nComentário:\nHTTPS protege a comunicação e ajuda a autenticar o domínio, mas não transforma todo conteúdo em confiável.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Cadeado não é garantia absoluta de legitimidade ou segurança do conteúdo."
+        "dicaBanca": "Cadeado não é garantia absoluta de legitimidade ou segurança do conteúdo.",
+        "id": "internet_043",
+        "assunto": "internet",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Uma CDN (Content Delivery Network) é utilizada principalmente para:",
@@ -619,7 +745,10 @@ const internet = [
         "correta": 3,
         "feedbackAcerto": "CDNs aproximam o conteúdo do usuário final e ajudam a reduzir latência e carga no servidor de origem.",
         "feedbackErro": "A resposta correta é:\n\nDistribuir conteúdo por servidores geograficamente espalhados, melhorando desempenho e disponibilidade.\n\nComentário:\nCDNs aproximam o conteúdo do usuário final e ajudam a reduzir latência e carga no servidor de origem.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "CDN não é DNS, mas pode trabalhar junto com DNS para direcionar acessos."
+        "dicaBanca": "CDN não é DNS, mas pode trabalhar junto com DNS para direcionar acessos.",
+        "id": "internet_044",
+        "assunto": "internet",
+        "subtopico": "comunicação, streaming e colaboração"
     },
     {
         "pergunta": "Uma VPN corporativa é usada principalmente para:",
@@ -633,7 +762,10 @@ const internet = [
         "correta": 4,
         "feedbackAcerto": "VPN cria um canal protegido entre o usuário e a rede/servidor, comum em acesso remoto corporativo.",
         "feedbackErro": "A resposta correta é:\n\nEstabelecer um túnel criptografado para acesso seguro a recursos de uma rede privada.\n\nComentário:\nVPN cria um canal protegido entre o usuário e a rede/servidor, comum em acesso remoto corporativo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "VPN não garante endpoint seguro nem anonimato absoluto; é uma camada de comunicação."
+        "dicaBanca": "VPN não garante endpoint seguro nem anonimato absoluto; é uma camada de comunicação.",
+        "id": "internet_045",
+        "assunto": "internet",
+        "subtopico": "conceitos de internet, intranet e extranet"
     },
     {
         "pergunta": "Um servidor proxy, em redes, pode ser utilizado para:",
@@ -647,7 +779,10 @@ const internet = [
         "correta": 0,
         "feedbackAcerto": "Proxy atua como intermediário nas comunicações, podendo controlar, registrar, filtrar ou acelerar acessos.",
         "feedbackErro": "A resposta correta é:\n\nIntermediar requisições entre clientes e servidores, podendo aplicar cache, filtros ou controle de acesso.\n\nComentário:\nProxy atua como intermediário nas comunicações, podendo controlar, registrar, filtrar ou acelerar acessos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Proxy não é igual a VPN, embora ambos possam intermediar tráfego."
+        "dicaBanca": "Proxy não é igual a VPN, embora ambos possam intermediar tráfego.",
+        "id": "internet_046",
+        "assunto": "internet",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "Em redes Wi-Fi, a faixa de 5 GHz, comparada à de 2,4 GHz, geralmente oferece:",
@@ -661,7 +796,10 @@ const internet = [
         "correta": 1,
         "feedbackAcerto": "5 GHz tende a permitir maior desempenho, mas com alcance menor que 2,4 GHz em muitos cenários.",
         "feedbackErro": "A resposta correta é:\n\nMaior velocidade potencial e menor alcance/penetração em obstáculos.\n\nComentário:\n5 GHz tende a permitir maior desempenho, mas com alcance menor que 2,4 GHz em muitos cenários.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Não confunda frequência Wi-Fi com velocidade contratada da Internet."
+        "dicaBanca": "Não confunda frequência Wi-Fi com velocidade contratada da Internet.",
+        "id": "internet_047",
+        "assunto": "internet",
+        "subtopico": "conceitos de internet, intranet e extranet"
     },
     {
         "pergunta": "Em mecanismos de busca, o operador site: é utilizado para:",
@@ -675,7 +813,10 @@ const internet = [
         "correta": 2,
         "feedbackAcerto": "O operador site: limita a busca a páginas pertencentes a determinado domínio.",
         "feedbackErro": "A resposta correta é:\n\nRestringir resultados a um domínio ou site específico.\n\nComentário:\nO operador site: limita a busca a páginas pertencentes a determinado domínio.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Operadores de busca refinam resultados; não alteram a configuração do navegador."
+        "dicaBanca": "Operadores de busca refinam resultados; não alteram a configuração do navegador.",
+        "id": "internet_048",
+        "assunto": "internet",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "Em uma pesquisa na Web, o operador filetype:pdf tende a:",
@@ -689,7 +830,10 @@ const internet = [
         "correta": 3,
         "feedbackAcerto": "filetype: é usado para restringir a pesquisa a determinado tipo de arquivo.",
         "feedbackErro": "A resposta correta é:\n\nRestringir os resultados a arquivos ou páginas associadas ao formato PDF.\n\nComentário:\nfiletype: é usado para restringir a pesquisa a determinado tipo de arquivo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "A banca gosta de cobrar aspas, site:, filetype: e o sinal de menos."
+        "dicaBanca": "A banca gosta de cobrar aspas, site:, filetype: e o sinal de menos.",
+        "id": "internet_049",
+        "assunto": "internet",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "O sinal de menos (-) em uma busca, quando usado antes de um termo, geralmente serve para:",
@@ -703,7 +847,10 @@ const internet = [
         "correta": 4,
         "feedbackAcerto": "O operador '-' ajuda a excluir termos indesejados da pesquisa.",
         "feedbackErro": "A resposta correta é:\n\nExcluir resultados que contenham aquele termo.\n\nComentário:\nO operador '-' ajuda a excluir termos indesejados da pesquisa.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Em pesquisa avançada, operadores ajudam a restringir ou refinar resultados."
+        "dicaBanca": "Em pesquisa avançada, operadores ajudam a restringir ou refinar resultados.",
+        "id": "internet_050",
+        "assunto": "internet",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "Um QR code usado em golpes digitais pode ser perigoso porque:",
@@ -717,7 +864,10 @@ const internet = [
         "correta": 0,
         "feedbackAcerto": "QR codes podem esconder URLs maliciosas ou falsas, exigindo verificação do destino antes de prosseguir.",
         "feedbackErro": "A resposta correta é:\n\nPode direcionar o usuário para páginas falsas sem que o destino seja percebido antes da leitura.\n\nComentário:\nQR codes podem esconder URLs maliciosas ou falsas, exigindo verificação do destino antes de prosseguir.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Atenção: o risco está no destino e na engenharia social, não no QR code em si."
+        "dicaBanca": "Atenção: o risco está no destino e na engenharia social, não no QR code em si.",
+        "id": "internet_051",
+        "assunto": "internet",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Quando um serviço permite login usando uma conta de terceiro, como 'Entrar com Google', ele geralmente utiliza mecanismos de:",
@@ -731,7 +881,10 @@ const internet = [
         "correta": 1,
         "feedbackAcerto": "Logins federados permitem usar um provedor de identidade para autenticar o usuário em outro serviço.",
         "feedbackErro": "A resposta correta é:\n\nAutorização/autenticação federada, evitando que o site receba diretamente a senha do provedor.\n\nComentário:\nLogins federados permitem usar um provedor de identidade para autenticar o usuário em outro serviço.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "O objetivo é reduzir compartilhamento direto de senha com múltiplos serviços."
+        "dicaBanca": "O objetivo é reduzir compartilhamento direto de senha com múltiplos serviços.",
+        "id": "internet_052",
+        "assunto": "internet",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "Webmail e cliente de e-mail instalado diferenciam-se porque o webmail:",
@@ -745,7 +898,10 @@ const internet = [
         "correta": 2,
         "feedbackAcerto": "Webmail é correio eletrônico acessado via navegador, como Gmail ou Outlook Web.",
         "feedbackErro": "A resposta correta é:\n\nÉ acessado por navegador, sem exigir instalação de um programa específico para a caixa postal.\n\nComentário:\nWebmail é correio eletrônico acessado via navegador, como Gmail ou Outlook Web.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Cliente instalado, como Outlook desktop ou Thunderbird, é um programa local."
+        "dicaBanca": "Cliente instalado, como Outlook desktop ou Thunderbird, é um programa local.",
+        "id": "internet_053",
+        "assunto": "internet",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Um formulário Web que usa método POST em vez de GET tende a:",
@@ -759,7 +915,10 @@ const internet = [
         "correta": 3,
         "feedbackAcerto": "Em POST, os dados vão no corpo da requisição; em GET, parâmetros frequentemente aparecem na URL.",
         "feedbackErro": "A resposta correta é:\n\nEnviar dados no corpo da requisição, em vez de expô-los diretamente na URL.\n\nComentário:\nEm POST, os dados vão no corpo da requisição; em GET, parâmetros frequentemente aparecem na URL.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "POST não garante segurança sozinho; HTTPS continua importante para proteção em trânsito."
+        "dicaBanca": "POST não garante segurança sozinho; HTTPS continua importante para proteção em trânsito.",
+        "id": "internet_054",
+        "assunto": "internet",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "Uma página responsiva é aquela que:",
@@ -773,7 +932,10 @@ const internet = [
         "correta": 4,
         "feedbackAcerto": "Design responsivo ajusta layout e elementos para melhorar uso em celulares, tablets e computadores.",
         "feedbackErro": "A resposta correta é:\n\nAdapta sua apresentação a diferentes tamanhos de tela e dispositivos.\n\nComentário:\nDesign responsivo ajusta layout e elementos para melhorar uso em celulares, tablets e computadores.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Responsividade é tema de apresentação/interface, não de segurança ou protocolo."
+        "dicaBanca": "Responsividade é tema de apresentação/interface, não de segurança ou protocolo.",
+        "id": "internet_055",
+        "assunto": "internet",
+        "subtopico": "web, páginas e aplicações"
     },
     {
         "pergunta": "Em uma URL como https://www.exemplo.com.br/arquivos/edital.pdf, qual elemento identifica o protocolo utilizado na comunicação?",
@@ -788,7 +950,9 @@ const internet = [
         "feedbackAcerto": "O trecho inicial da URL indica o protocolo ou esquema utilizado para acessar o recurso. Nesse exemplo, o protocolo é HTTPS.",
         "feedbackErro": "A resposta correta é:\n\nhttps\n\nComentário:\nO trecho inicial da URL indica o protocolo ou esquema utilizado para acessar o recurso. Nesse exemplo, o protocolo é HTTPS.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Quando a questão pedir protocolo em um endereço, observe o trecho antes de ://.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_056",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Ao comparar URI e URL, assinale a alternativa tecnicamente mais adequada.",
@@ -803,7 +967,9 @@ const internet = [
         "feedbackAcerto": "URI é um identificador de recurso. URL é um tipo de URI que também indica o local e o modo de acesso ao recurso.",
         "feedbackErro": "A resposta correta é:\n\nToda URL é uma URI, pois além de identificar o recurso também informa como localizá-lo.\n\nComentário:\nURI é um identificador de recurso. URL é um tipo de URI que também indica o local e o modo de acesso ao recurso.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Bancas mais técnicas cobram URL como caso específico de URI.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_057",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "No endereço suporte.faroldosaber.com.br, o termo suporte exerce, em relação ao domínio principal, a função de:",
@@ -818,7 +984,9 @@ const internet = [
         "feedbackAcerto": "Em nomes de domínio, termos à esquerda do domínio principal normalmente representam subdomínios, como suporte, mail ou www.",
         "feedbackErro": "A resposta correta é:\n\nsubdomínio associado ao domínio faroldosaber.com.br.\n\nComentário:\nEm nomes de domínio, termos à esquerda do domínio principal normalmente representam subdomínios, como suporte, mail ou www.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Não confunda subdomínio com protocolo, caminho ou extensão de domínio.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_058",
+        "subtopico": "domínios, DNS e infraestrutura"
     },
     {
         "pergunta": "Em nomes como prefeitura.gov.br e escola.edu.br, as terminações gov.br e edu.br indicam principalmente:",
@@ -833,7 +1001,9 @@ const internet = [
         "feedbackAcerto": "Algumas terminações de domínio indicam categoria institucional, finalidade ou país, como .gov.br, .edu.br e .com.br.",
         "feedbackErro": "A resposta correta é:\n\ncategorias de domínio relacionadas ao tipo de entidade ou finalidade do site.\n\nComentário:\nAlgumas terminações de domínio indicam categoria institucional, finalidade ou país, como .gov.br, .edu.br e .com.br.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Em questões de domínio, observe a parte final do endereço, não o conteúdo da página.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_059",
+        "subtopico": "conceitos de internet, intranet e extranet"
     },
     {
         "pergunta": "Assinale a alternativa que diferencia corretamente registro de domínio e hospedagem de site.",
@@ -848,7 +1018,9 @@ const internet = [
         "feedbackAcerto": "Registrar um domínio significa reservar um nome. Hospedagem é o serviço que mantém os arquivos, aplicações ou dados acessíveis na Internet.",
         "feedbackErro": "A resposta correta é:\n\nRegistro reserva o nome do domínio; hospedagem armazena os arquivos e serviços do site.\n\nComentário:\nRegistrar um domínio significa reservar um nome. Hospedagem é o serviço que mantém os arquivos, aplicações ou dados acessíveis na Internet.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Domínio é nome; hospedagem é onde o conteúdo fica disponível.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_060",
+        "subtopico": "domínios, DNS e infraestrutura"
     },
     {
         "pergunta": "Durante a resolução de um nome como www.exemplo.com, qual é o papel do servidor DNS recursivo?",
@@ -863,7 +1035,9 @@ const internet = [
         "feedbackAcerto": "O resolvedor recursivo recebe a consulta do cliente e busca a resposta consultando outros servidores DNS, podendo armazenar a resposta em cache.",
         "feedbackErro": "A resposta correta é:\n\nConsultar a hierarquia DNS em nome do cliente até obter a resposta ou informar falha.\n\nComentário:\nO resolvedor recursivo recebe a consulta do cliente e busca a resposta consultando outros servidores DNS, podendo armazenar a resposta em cache.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "DNS recursivo não hospeda site; ele resolve nomes em endereços.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_061",
+        "subtopico": "domínios, DNS e infraestrutura"
     },
     {
         "pergunta": "O cache DNS existente no sistema operacional ou no navegador tem como finalidade principal:",
@@ -878,7 +1052,9 @@ const internet = [
         "feedbackAcerto": "O cache DNS guarda por algum tempo respostas já obtidas, diminuindo latência e carga nos servidores DNS.",
         "feedbackErro": "A resposta correta é:\n\nreduzir novas consultas ao armazenar temporariamente respostas de nomes já resolvidos.\n\nComentário:\nO cache DNS guarda por algum tempo respostas já obtidas, diminuindo latência e carga nos servidores DNS.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Cache acelera consultas repetidas, mas pode manter resposta antiga até expirar.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_062",
+        "subtopico": "domínios, DNS e infraestrutura"
     },
     {
         "pergunta": "O arquivo hosts, presente em sistemas como Windows e Linux, pode ser usado para:",
@@ -893,7 +1069,9 @@ const internet = [
         "feedbackAcerto": "O arquivo hosts permite mapeamentos locais de nomes para IP. Em muitos sistemas, ele é consultado antes dos servidores DNS.",
         "feedbackErro": "A resposta correta é:\n\nassociar manualmente nomes de domínio a endereços IP antes da consulta ao DNS.\n\nComentário:\nO arquivo hosts permite mapeamentos locais de nomes para IP. Em muitos sistemas, ele é consultado antes dos servidores DNS.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Hosts não é histórico do navegador; é mapeamento local nome-IP.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_063",
+        "subtopico": "domínios, DNS e infraestrutura"
     },
     {
         "pergunta": "Em uma navegação Web, o método HTTP GET é mais adequado quando o cliente precisa:",
@@ -908,7 +1086,9 @@ const internet = [
         "feedbackAcerto": "GET é usado para solicitar recursos, geralmente com parâmetros na URL. Não é o método mais indicado para envio de dados sensíveis.",
         "feedbackErro": "A resposta correta é:\n\nsolicitar a leitura ou recuperação de um recurso sem enviar corpo de dados principal.\n\nComentário:\nGET é usado para solicitar recursos, geralmente com parâmetros na URL. Não é o método mais indicado para envio de dados sensíveis.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "GET costuma aparecer associado a consulta/recuperação de recurso.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_064",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "Em formulários Web, o método HTTP POST é normalmente preferido quando há necessidade de:",
@@ -923,7 +1103,9 @@ const internet = [
         "feedbackAcerto": "POST transmite dados no corpo da requisição e é muito usado em formulários, autenticação e envio de informações ao servidor.",
         "feedbackErro": "A resposta correta é:\n\nenviar dados ao servidor no corpo da requisição, como cadastros ou formulários.\n\nComentário:\nPOST transmite dados no corpo da requisição e é muito usado em formulários, autenticação e envio de informações ao servidor.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "POST não significa segurança automática; significa forma de envio da requisição.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_065",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "Ao acessar uma página e receber o código HTTP 200, o navegador obteve do servidor a indicação de que:",
@@ -938,7 +1120,9 @@ const internet = [
         "feedbackAcerto": "O código 200 OK indica que a requisição foi bem-sucedida e o servidor retornou a resposta esperada.",
         "feedbackErro": "A resposta correta é:\n\na requisição foi processada com sucesso.\n\nComentário:\nO código 200 OK indica que a requisição foi bem-sucedida e o servidor retornou a resposta esperada.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Códigos 2xx indicam sucesso; 4xx indicam problemas no cliente/recurso; 5xx no servidor.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_066",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "Quando um servidor responde com status HTTP 301, em regra ele está informando que:",
@@ -953,7 +1137,9 @@ const internet = [
         "feedbackAcerto": "O status 301 indica redirecionamento permanente. O navegador pode passar a utilizar a nova URL em acessos futuros.",
         "feedbackErro": "A resposta correta é:\n\no recurso foi movido permanentemente para outro endereço.\n\nComentário:\nO status 301 indica redirecionamento permanente. O navegador pode passar a utilizar a nova URL em acessos futuros.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "301 e 302 são redirecionamentos; 301 é permanente, 302 é temporário.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_067",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "O erro HTTP 404, muito cobrado em provas, está relacionado à situação em que:",
@@ -968,7 +1154,9 @@ const internet = [
         "feedbackAcerto": "O código 404 indica que o servidor foi alcançado, mas o recurso solicitado não foi localizado naquele endereço.",
         "feedbackErro": "A resposta correta é:\n\no recurso solicitado não foi encontrado no servidor.\n\nComentário:\nO código 404 indica que o servidor foi alcançado, mas o recurso solicitado não foi localizado naquele endereço.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "404 não significa falta de Internet; significa recurso não encontrado.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_068",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "Um código HTTP 500 normalmente indica:",
@@ -983,7 +1171,9 @@ const internet = [
         "feedbackAcerto": "Códigos 5xx indicam problemas do lado do servidor. O 500 é uma falha interna genérica no processamento da requisição.",
         "feedbackErro": "A resposta correta é:\n\nfalha interna no servidor ao processar a requisição.\n\nComentário:\nCódigos 5xx indicam problemas do lado do servidor. O 500 é uma falha interna genérica no processamento da requisição.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Em provas, 4xx aponta para cliente/recurso; 5xx aponta para servidor.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_069",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "A principal proteção oferecida pelo HTTPS, em relação ao HTTP simples, é:",
@@ -998,7 +1188,9 @@ const internet = [
         "feedbackAcerto": "HTTPS usa TLS para proteger a comunicação entre cliente e servidor, reduzindo risco de interceptação e alteração dos dados em trânsito.",
         "feedbackErro": "A resposta correta é:\n\nproteger a comunicação com criptografia e autenticação por certificados digitais.\n\nComentário:\nHTTPS usa TLS para proteger a comunicação entre cliente e servidor, reduzindo risco de interceptação e alteração dos dados em trânsito.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "HTTPS protege o canal; não garante que o conteúdo do site seja confiável.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_070",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Ao acessar um site HTTPS com certificado expirado, a conduta tecnicamente recomendada é:",
@@ -1013,7 +1205,9 @@ const internet = [
         "feedbackAcerto": "Certificado expirado compromete a validação da identidade do site. O alerta deve ser tratado com cautela, especialmente em páginas de login ou pagamento.",
         "feedbackErro": "A resposta correta é:\n\ninterromper o acesso ou verificar a legitimidade antes de prosseguir.\n\nComentário:\nCertificado expirado compromete a validação da identidade do site. O alerta deve ser tratado com cautela, especialmente em páginas de login ou pagamento.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Alerta de certificado não é detalhe visual; é sinal de problema na confiança.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_071",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Em uma conexão HTTPS, o certificado digital do site ajuda principalmente a:",
@@ -1028,7 +1222,9 @@ const internet = [
         "feedbackAcerto": "O certificado digital permite ao navegador validar a identidade do servidor e negociar uma conexão protegida por TLS.",
         "feedbackErro": "A resposta correta é:\n\ncomprovar a identidade do servidor e apoiar a criação de um canal seguro.\n\nComentário:\nO certificado digital permite ao navegador validar a identidade do servidor e negociar uma conexão protegida por TLS.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Certificado está ligado a identidade e criptografia, não a desempenho do navegador.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_072",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "O aviso de conteúdo misto em um navegador ocorre quando:",
@@ -1043,7 +1239,9 @@ const internet = [
         "feedbackAcerto": "Conteúdo misto reduz a segurança da página, pois parte dos elementos pode ser carregada sem a proteção do HTTPS.",
         "feedbackErro": "A resposta correta é:\n\numa página HTTPS tenta carregar parte de seus recursos por HTTP não protegido.\n\nComentário:\nConteúdo misto reduz a segurança da página, pois parte dos elementos pode ser carregada sem a proteção do HTTPS.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "HTTPS na barra não garante que todos os recursos internos também estejam protegidos.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_073",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "O recurso HSTS, quando corretamente configurado por um site, orienta o navegador a:",
@@ -1058,7 +1256,9 @@ const internet = [
         "feedbackAcerto": "HSTS informa ao navegador que aquele domínio deve ser acessado por HTTPS, reduzindo riscos de downgrade para HTTP.",
         "feedbackErro": "A resposta correta é:\n\nusar HTTPS em acessos futuros ao domínio por um período definido.\n\nComentário:\nHSTS informa ao navegador que aquele domínio deve ser acessado por HTTPS, reduzindo riscos de downgrade para HTTP.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "HSTS é política de transporte seguro, não recurso de favoritos ou e-mail.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_074",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Cookies de primeira parte são aqueles criados ou lidos normalmente:",
@@ -1073,7 +1273,9 @@ const internet = [
         "feedbackAcerto": "Cookies de primeira parte pertencem ao site visitado e costumam ser usados para sessão, preferências e funcionamento da página.",
         "feedbackErro": "A resposta correta é:\n\npelo próprio domínio que o usuário está acessando diretamente.\n\nComentário:\nCookies de primeira parte pertencem ao site visitado e costumam ser usados para sessão, preferências e funcionamento da página.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Primeira parte é o domínio acessado; terceira parte vem de outro domínio carregado na página.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_075",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "Cookies de terceiros costumam ser associados, em provas, a:",
@@ -1088,7 +1290,9 @@ const internet = [
         "feedbackAcerto": "Cookies de terceiros são gravados por domínios externos incorporados à página, frequentemente para medição, anúncios ou rastreamento.",
         "feedbackErro": "A resposta correta é:\n\nrastreamento e publicidade por domínios diferentes daquele visitado pelo usuário.\n\nComentário:\nCookies de terceiros são gravados por domínios externos incorporados à página, frequentemente para medição, anúncios ou rastreamento.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "A banca pode relacionar cookies de terceiros à privacidade na navegação.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_076",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "A diferença entre cookie de sessão e cookie persistente está principalmente no fato de que o cookie de sessão:",
@@ -1103,7 +1307,9 @@ const internet = [
         "feedbackAcerto": "Cookies de sessão duram enquanto a sessão está ativa. Cookies persistentes permanecem por prazo definido, mesmo após fechar o navegador.",
         "feedbackErro": "A resposta correta é:\n\ntende a expirar quando a sessão do navegador é encerrada.\n\nComentário:\nCookies de sessão duram enquanto a sessão está ativa. Cookies persistentes permanecem por prazo definido, mesmo após fechar o navegador.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Sessão lembra temporário; persistente permanece por mais tempo.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_077",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "O cache do navegador é utilizado principalmente para:",
@@ -1118,7 +1324,9 @@ const internet = [
         "feedbackAcerto": "O cache armazena imagens, scripts e outros recursos localmente, reduzindo tempo de carregamento e consumo de dados em acessos repetidos.",
         "feedbackErro": "A resposta correta é:\n\nguardar cópias locais de recursos para acelerar carregamentos posteriores.\n\nComentário:\nO cache armazena imagens, scripts e outros recursos localmente, reduzindo tempo de carregamento e consumo de dados em acessos repetidos.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Cache melhora desempenho, mas pode exibir versão antiga de uma página.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_078",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "Em navegadores, a combinação Ctrl + F5 costuma ser usada para:",
@@ -1133,7 +1341,9 @@ const internet = [
         "feedbackAcerto": "Ctrl + F5 força uma atualização mais completa da página, útil quando o cache local pode estar desatualizado.",
         "feedbackErro": "A resposta correta é:\n\nrecarregar a página ignorando parte do conteúdo armazenado em cache.\n\nComentário:\nCtrl + F5 força uma atualização mais completa da página, útil quando o cache local pode estar desatualizado.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "F5 recarrega; Ctrl + F5 costuma forçar recarregamento sem usar cache comum.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_079",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "A navegação anônima ou privada, em relação ao computador local, normalmente evita:",
@@ -1148,7 +1358,9 @@ const internet = [
         "feedbackAcerto": "O modo privado reduz rastros locais, mas não torna o usuário invisível para sites, redes corporativas, escolas ou provedores.",
         "feedbackErro": "A resposta correta é:\n\nguardar histórico, cookies da sessão e dados temporários após o fechamento da janela privada.\n\nComentário:\nO modo privado reduz rastros locais, mas não torna o usuário invisível para sites, redes corporativas, escolas ou provedores.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Modo anônimo não é anonimato total; a proteção principal é local.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_080",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "No navegador, o Histórico diferencia-se dos Favoritos porque o Histórico:",
@@ -1163,7 +1375,9 @@ const internet = [
         "feedbackAcerto": "Histórico é gerado pela navegação. Favoritos são páginas salvas intencionalmente para acesso rápido.",
         "feedbackErro": "A resposta correta é:\n\nregistra automaticamente páginas visitadas, enquanto Favoritos dependem de ação do usuário.\n\nComentário:\nHistórico é gerado pela navegação. Favoritos são páginas salvas intencionalmente para acesso rápido.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Histórico é automático; Favoritos são escolhidos pelo usuário.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_081",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "O recurso Favoritos ou Marcadores de um navegador serve principalmente para:",
@@ -1178,7 +1392,9 @@ const internet = [
         "feedbackAcerto": "Favoritos guardam links selecionados pelo usuário, facilitando o retorno a páginas importantes.",
         "feedbackErro": "A resposta correta é:\n\narmazenar endereços de páginas para acesso posterior mais rápido.\n\nComentário:\nFavoritos guardam links selecionados pelo usuário, facilitando o retorno a páginas importantes.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Não confunda favoritos com histórico, cache ou gerenciador de senhas.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_082",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "O preenchimento automático do navegador, quando habilitado, pode facilitar o uso de formulários, mas exige cuidado porque:",
@@ -1193,7 +1409,9 @@ const internet = [
         "feedbackAcerto": "Autofill agiliza formulários, mas pode expor dados pessoais se usado sem atenção em páginas falsas ou computadores compartilhados.",
         "feedbackErro": "A resposta correta é:\n\npode inserir dados pessoais em páginas inadequadas ou acessadas por engano.\n\nComentário:\nAutofill agiliza formulários, mas pode expor dados pessoais se usado sem atenção em páginas falsas ou computadores compartilhados.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Facilidade de uso não elimina cuidado com origem da página.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_083",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "O gerenciador de senhas do navegador tem como finalidade principal:",
@@ -1208,7 +1426,9 @@ const internet = [
         "feedbackAcerto": "Gerenciadores de senhas ajudam a armazenar credenciais e podem incentivar senhas diferentes para cada serviço.",
         "feedbackErro": "A resposta correta é:\n\nguardar e preencher credenciais de forma controlada para sites e serviços.\n\nComentário:\nGerenciadores de senhas ajudam a armazenar credenciais e podem incentivar senhas diferentes para cada serviço.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Gerenciador de senhas não substitui verificação em duas etapas nem atenção contra phishing.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_084",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Extensões de navegador devem ser instaladas com cautela porque podem:",
@@ -1223,7 +1443,9 @@ const internet = [
         "feedbackAcerto": "Extensões ampliam funcionalidades do navegador, mas podem solicitar permissões sensíveis. A origem e a reputação devem ser avaliadas.",
         "feedbackErro": "A resposta correta é:\n\nacessar páginas, permissões e dados conforme autorizações concedidas pelo usuário.\n\nComentário:\nExtensões ampliam funcionalidades do navegador, mas podem solicitar permissões sensíveis. A origem e a reputação devem ser avaliadas.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Em prova, extensão é software adicional: pode ajudar, mas também gerar risco.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_085",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "Em mecanismos de busca, o uso de aspas duplas em uma expressão tende a:",
@@ -1238,7 +1460,9 @@ const internet = [
         "feedbackAcerto": "Aspas duplas indicam busca por frase exata, reduzindo resultados em que as palavras aparecem separadas ou em outra ordem.",
         "feedbackErro": "A resposta correta é:\n\nbuscar a sequência exata de palavras digitada pelo usuário.\n\nComentário:\nAspas duplas indicam busca por frase exata, reduzindo resultados em que as palavras aparecem separadas ou em outra ordem.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Aspas = expressão exata. É uma pegadinha clássica de busca avançada.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_086",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "Em uma pesquisa na Web, o operador de exclusão representado pelo sinal de menos (-) é usado para:",
@@ -1253,7 +1477,9 @@ const internet = [
         "feedbackAcerto": "O operador - ajuda a filtrar resultados, excluindo páginas que contenham uma palavra indesejada na pesquisa.",
         "feedbackErro": "A resposta correta é:\n\nremover dos resultados páginas que contenham determinado termo.\n\nComentário:\nO operador - ajuda a filtrar resultados, excluindo páginas que contenham uma palavra indesejada na pesquisa.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Exemplo comum: jaguar -carro para reduzir resultados sobre veículos.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_087",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "O operador site: em mecanismos de busca é utilizado para:",
@@ -1268,7 +1494,9 @@ const internet = [
         "feedbackAcerto": "site: permite procurar termos dentro de um domínio específico, como site:gov.br edital.",
         "feedbackErro": "A resposta correta é:\n\nrestringir os resultados a um domínio ou site específico.\n\nComentário:\nsite: permite procurar termos dentro de um domínio específico, como site:gov.br edital.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Quando a banca falar em limitar a busca a um site, pense em site:.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_088",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "O operador filetype: em uma pesquisa é adequado para localizar:",
@@ -1283,7 +1511,9 @@ const internet = [
         "feedbackAcerto": "filetype: refina a pesquisa por extensão/formato, sendo comum para encontrar editais, provas e documentos em PDF.",
         "feedbackErro": "A resposta correta é:\n\nresultados em um formato de arquivo específico, como PDF ou DOCX.\n\nComentário:\nfiletype: refina a pesquisa por extensão/formato, sendo comum para encontrar editais, provas e documentos em PDF.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "filetype:pdf é muito cobrado quando a questão fala em formato específico.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_089",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "Em pesquisas na Web, o operador OR é usado principalmente para:",
@@ -1298,7 +1528,9 @@ const internet = [
         "feedbackAcerto": "OR amplia a busca ao aceitar alternativas. Por exemplo, edital OR concurso pode retornar páginas com qualquer um dos termos.",
         "feedbackErro": "A resposta correta é:\n\nbuscar resultados que contenham um termo ou outro termo indicado.\n\nComentário:\nOR amplia a busca ao aceitar alternativas. Por exemplo, edital OR concurso pode retornar páginas com qualquer um dos termos.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "OR trabalha com alternativa lógica: um termo ou outro.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_090",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "Em mecanismos de busca, o caractere curinga (*) é frequentemente utilizado para:",
@@ -1313,7 +1545,9 @@ const internet = [
         "feedbackAcerto": "O curinga pode representar uma palavra desconhecida, auxiliando pesquisas por expressões incompletas ou variantes.",
         "feedbackErro": "A resposta correta é:\n\nrepresentar termo desconhecido ou variável dentro de uma expressão pesquisada.\n\nComentário:\nO curinga pode representar uma palavra desconhecida, auxiliando pesquisas por expressões incompletas ou variantes.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Curinga é recurso de refinamento; não está ligado a e-mail ou protocolo.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_091",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "No correio eletrônico, o protocolo SMTP está relacionado principalmente à:",
@@ -1328,7 +1562,9 @@ const internet = [
         "feedbackAcerto": "SMTP é o protocolo tradicionalmente usado para envio e encaminhamento de e-mails.",
         "feedbackErro": "A resposta correta é:\n\ntransferência e envio de mensagens de e-mail entre clientes e servidores.\n\nComentário:\nSMTP é o protocolo tradicionalmente usado para envio e encaminhamento de e-mails.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "SMTP envia; POP3 e IMAP recebem/acessam mensagens.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_092",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "O protocolo IMAP é preferido em muitos clientes de e-mail porque:",
@@ -1343,7 +1579,9 @@ const internet = [
         "feedbackAcerto": "IMAP permite acessar a mesma caixa em vários dispositivos, preservando estrutura de pastas e estado das mensagens no servidor.",
         "feedbackErro": "A resposta correta é:\n\nmantém as mensagens no servidor e sincroniza pastas entre vários dispositivos.\n\nComentário:\nIMAP permite acessar a mesma caixa em vários dispositivos, preservando estrutura de pastas e estado das mensagens no servidor.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "IMAP = sincronização no servidor; POP3 = download mais tradicional.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_093",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "O protocolo POP3, em sua configuração tradicional, caracteriza-se por:",
@@ -1358,7 +1596,9 @@ const internet = [
         "feedbackAcerto": "POP3 é um protocolo de recebimento de e-mails mais simples, geralmente voltado ao download das mensagens para o cliente.",
         "feedbackErro": "A resposta correta é:\n\nbaixar mensagens para o cliente, podendo removê-las do servidor conforme configuração.\n\nComentário:\nPOP3 é um protocolo de recebimento de e-mails mais simples, geralmente voltado ao download das mensagens para o cliente.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "A banca costuma comparar POP3 com IMAP.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_094",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Em e-mails, o padrão MIME é importante porque permite:",
@@ -1373,7 +1613,9 @@ const internet = [
         "feedbackAcerto": "MIME estende o formato do e-mail para suportar anexos, HTML, acentuação e diferentes tipos de conteúdo.",
         "feedbackErro": "A resposta correta é:\n\nenviar conteúdos além de texto simples, como anexos e mensagens com formatação.\n\nComentário:\nMIME estende o formato do e-mail para suportar anexos, HTML, acentuação e diferentes tipos de conteúdo.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "MIME aparece ligado a anexos e tipos de conteúdo em mensagens eletrônicas.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_095",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Ao enviar uma mensagem a muitos destinatários que não devem ver os endereços uns dos outros, o campo mais indicado é:",
@@ -1388,7 +1630,9 @@ const internet = [
         "feedbackAcerto": "CCO, ou BCC, oculta os endereços dos destinatários inseridos nesse campo, preservando a privacidade da lista.",
         "feedbackErro": "A resposta correta é:\n\nCCO/BCC.\n\nComentário:\nCCO, ou BCC, oculta os endereços dos destinatários inseridos nesse campo, preservando a privacidade da lista.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "CC é visível; CCO é oculto.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_096",
+        "subtopico": "conceitos de internet, intranet e extranet"
     },
     {
         "pergunta": "A opção Responder a todos em um sistema de e-mail deve ser usada com cuidado porque:",
@@ -1403,7 +1647,9 @@ const internet = [
         "feedbackAcerto": "Responder a todos inclui participantes da mensagem original, podendo expor informação a pessoas que não precisavam receber a resposta.",
         "feedbackErro": "A resposta correta é:\n\nenvia a resposta ao remetente e aos demais destinatários da conversa.\n\nComentário:\nResponder a todos inclui participantes da mensagem original, podendo expor informação a pessoas que não precisavam receber a resposta.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Responder = remetente; responder a todos = grupo da conversa.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_097",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Ao encaminhar uma mensagem de e-mail, o usuário normalmente:",
@@ -1418,7 +1664,9 @@ const internet = [
         "feedbackAcerto": "Encaminhar permite repassar a mensagem recebida a terceiros, geralmente preservando parte do conteúdo original.",
         "feedbackErro": "A resposta correta é:\n\nenvia o conteúdo recebido para outro destinatário, podendo acrescentar comentário próprio.\n\nComentário:\nEncaminhar permite repassar a mensagem recebida a terceiros, geralmente preservando parte do conteúdo original.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Encaminhar não é o mesmo que responder.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_098",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Em sistemas de correio eletrônico, a pasta Rascunhos armazena normalmente:",
@@ -1433,7 +1681,9 @@ const internet = [
         "feedbackAcerto": "Rascunhos guardam mensagens em elaboração. Caixa de saída e enviados têm finalidades diferentes.",
         "feedbackErro": "A resposta correta é:\n\nmensagens iniciadas pelo usuário e ainda não enviadas.\n\nComentário:\nRascunhos guardam mensagens em elaboração. Caixa de saída e enviados têm finalidades diferentes.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Rascunho = mensagem preparada, mas ainda não enviada.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_099",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Filtros antispam costumam analisar diversos sinais da mensagem, como:",
@@ -1448,7 +1698,9 @@ const internet = [
         "feedbackAcerto": "Filtros de spam avaliam características técnicas e comportamentais para reduzir mensagens indesejadas ou fraudulentas.",
         "feedbackErro": "A resposta correta é:\n\nremetente, conteúdo, links, reputação e padrões de envio em massa.\n\nComentário:\nFiltros de spam avaliam características técnicas e comportamentais para reduzir mensagens indesejadas ou fraudulentas.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Spam não é identificado por um único elemento visual; há vários critérios.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_100",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Uma mensagem de phishing pode apresentar aparência legítima, mas geralmente busca:",
@@ -1463,7 +1715,9 @@ const internet = [
         "feedbackAcerto": "Phishing usa fraude e engenharia social para capturar senhas, dados bancários ou outras informações confidenciais.",
         "feedbackErro": "A resposta correta é:\n\ninduzir o usuário a informar dados sensíveis em página ou formulário falso.\n\nComentário:\nPhishing usa fraude e engenharia social para capturar senhas, dados bancários ou outras informações confidenciais.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "A banca cobra phishing como golpe de engano, não como simples falha técnica.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_101",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "O pharming diferencia-se do phishing comum porque pode envolver:",
@@ -1478,7 +1732,9 @@ const internet = [
         "feedbackAcerto": "Pharming busca desviar o usuário para páginas falsas, muitas vezes explorando DNS, hosts ou redirecionamentos maliciosos.",
         "feedbackErro": "A resposta correta é:\n\nredirecionamento indevido para site falso mesmo quando o usuário digita endereço aparentemente correto.\n\nComentário:\nPharming busca desviar o usuário para páginas falsas, muitas vezes explorando DNS, hosts ou redirecionamentos maliciosos.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Phishing engana por mensagem; pharming destaca redirecionamento para página falsa.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_102",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "A diferença entre Webmail e cliente de e-mail instalado é que o Webmail:",
@@ -1493,7 +1749,9 @@ const internet = [
         "feedbackAcerto": "Webmail é acessado via navegador, como Gmail ou Outlook na Web. Clientes instalados usam programas próprios configurados com protocolos como IMAP, POP3 e SMTP.",
         "feedbackErro": "A resposta correta é:\n\npermite acessar a caixa postal por meio de navegador, sem aplicativo específico instalado.\n\nComentário:\nWebmail é acessado via navegador, como Gmail ou Outlook na Web. Clientes instalados usam programas próprios configurados com protocolos como IMAP, POP3 e SMTP.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Webmail = navegador; cliente de e-mail = programa/aplicativo específico.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_103",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Quando um serviço de e-mail substitui anexo grande por link de nuvem, o objetivo geralmente é:",
@@ -1508,7 +1766,9 @@ const internet = [
         "feedbackAcerto": "Muitos serviços possuem limite de anexo. O compartilhamento por link de nuvem permite enviar referência ao arquivo sem anexá-lo diretamente.",
         "feedbackErro": "A resposta correta é:\n\ncontornar limites de tamanho e permitir acesso ao arquivo armazenado remotamente.\n\nComentário:\nMuitos serviços possuem limite de anexo. O compartilhamento por link de nuvem permite enviar referência ao arquivo sem anexá-lo diretamente.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Anexo grande e link de nuvem aparecem juntos em questões de e-mail e armazenamento.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_104",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Uma lista de discussão por e-mail caracteriza-se por:",
@@ -1523,7 +1783,9 @@ const internet = [
         "feedbackAcerto": "Listas de discussão permitem comunicação coletiva: uma mensagem enviada à lista é repassada aos membros cadastrados.",
         "feedbackErro": "A resposta correta é:\n\ndistribuir mensagens enviadas a um endereço da lista para vários participantes inscritos.\n\nComentário:\nListas de discussão permitem comunicação coletiva: uma mensagem enviada à lista é repassada aos membros cadastrados.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Lista de discussão não é campo CCO; é mecanismo de distribuição coletiva.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_105",
+        "subtopico": "correio eletrônico e webmail"
     },
     {
         "pergunta": "Em armazenamento em nuvem, a sincronização automática tem como característica:",
@@ -1538,7 +1800,9 @@ const internet = [
         "feedbackAcerto": "Sincronização replica alterações entre dispositivos e nuvem. Isso ajuda no acesso, mas não substitui uma estratégia adequada de backup.",
         "feedbackErro": "A resposta correta é:\n\nmanter cópias locais e remotas atualizadas conforme alterações realizadas.\n\nComentário:\nSincronização replica alterações entre dispositivos e nuvem. Isso ajuda no acesso, mas não substitui uma estratégia adequada de backup.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Sincronizar não é o mesmo que fazer backup protegido.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_106",
+        "subtopico": "nuvem e aplicações online"
     },
     {
         "pergunta": "O histórico de versões em serviços de nuvem é útil porque permite:",
@@ -1553,7 +1817,9 @@ const internet = [
         "feedbackAcerto": "Versionamento permite restaurar estados anteriores de um documento, reduzindo impacto de edições indevidas ou acidentais.",
         "feedbackErro": "A resposta correta é:\n\nrecuperar versões anteriores de um arquivo alterado ou editado.\n\nComentário:\nVersionamento permite restaurar estados anteriores de um documento, reduzindo impacto de edições indevidas ou acidentais.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Nuvem pode ter histórico de versões; isso não é a mesma coisa que cache.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_107",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "Ao compartilhar um arquivo por link em serviço de nuvem, a configuração mais sensível é:",
@@ -1568,7 +1834,9 @@ const internet = [
         "feedbackAcerto": "Links de compartilhamento exigem controle de permissão. Um link público com edição liberada pode expor dados ou permitir alterações indevidas.",
         "feedbackErro": "A resposta correta é:\n\ndefinir corretamente quem pode acessar e se pode visualizar, comentar ou editar.\n\nComentário:\nLinks de compartilhamento exigem controle de permissão. Um link público com edição liberada pode expor dados ou permitir alterações indevidas.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Em nuvem, atenção a permissões: visualizar, comentar, editar e público/restrito.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_108",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "Um exemplo de SaaS na Internet é um serviço em que o usuário:",
@@ -1583,7 +1851,9 @@ const internet = [
         "feedbackAcerto": "SaaS é software como serviço, como e-mail, editores online e sistemas acessados pelo navegador.",
         "feedbackErro": "A resposta correta é:\n\nutiliza um software pronto pela Web, sem administrar a infraestrutura da aplicação.\n\nComentário:\nSaaS é software como serviço, como e-mail, editores online e sistemas acessados pelo navegador.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "SaaS = usuário usa a aplicação pronta, geralmente pela Web.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_109",
+        "subtopico": "nuvem e aplicações online"
     },
     {
         "pergunta": "Uma aplicação Web progressiva (PWA) procura combinar características de sites e aplicativos, podendo oferecer:",
@@ -1598,7 +1868,9 @@ const internet = [
         "feedbackAcerto": "PWA usa tecnologias Web para fornecer experiência semelhante a aplicativo, dependendo de navegador, manifest e service workers.",
         "feedbackErro": "A resposta correta é:\n\ninstalação no dispositivo, notificações e uso parcial offline conforme implementação.\n\nComentário:\nPWA usa tecnologias Web para fornecer experiência semelhante a aplicativo, dependendo de navegador, manifest e service workers.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "PWA não é aplicativo nativo tradicional, mas pode se comportar como app em alguns recursos.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_110",
+        "subtopico": "nuvem e aplicações online"
     },
     {
         "pergunta": "No streaming de vídeo, o usuário normalmente:",
@@ -1613,7 +1885,9 @@ const internet = [
         "feedbackAcerto": "Streaming permite reprodução contínua enquanto os dados chegam, dependendo de banda, latência e estabilidade da conexão.",
         "feedbackErro": "A resposta correta é:\n\nconsome o conteúdo à medida que os dados são recebidos, sem baixar o arquivo inteiro antes.\n\nComentário:\nStreaming permite reprodução contínua enquanto os dados chegam, dependendo de banda, latência e estabilidade da conexão.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Streaming não exige download completo prévio para iniciar a reprodução.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_111",
+        "subtopico": "comunicação, streaming e colaboração"
     },
     {
         "pergunta": "Tecnologias como WebRTC são associadas principalmente a:",
@@ -1628,7 +1902,9 @@ const internet = [
         "feedbackAcerto": "WebRTC permite comunicação em tempo real entre navegadores ou aplicações, sendo usado em chamadas de áudio e vídeo.",
         "feedbackErro": "A resposta correta é:\n\ncomunicação em tempo real pelo navegador, como áudio, vídeo e dados.\n\nComentário:\nWebRTC permite comunicação em tempo real entre navegadores ou aplicações, sendo usado em chamadas de áudio e vídeo.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Tempo real na Web geralmente remete a WebRTC ou serviços similares.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_112",
+        "subtopico": "comunicação, streaming e colaboração"
     },
     {
         "pergunta": "Uma CDN (Content Delivery Network) melhora o acesso a conteúdos Web porque:",
@@ -1643,7 +1919,9 @@ const internet = [
         "feedbackAcerto": "CDNs espalham conteúdo estático ou recursos por vários pontos de presença, reduzindo latência e carga no servidor de origem.",
         "feedbackErro": "A resposta correta é:\n\ndistribui cópias de recursos em servidores próximos aos usuários.\n\nComentário:\nCDNs espalham conteúdo estático ou recursos por vários pontos de presença, reduzindo latência e carga no servidor de origem.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "CDN está ligada a distribuição geográfica e desempenho de acesso.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_113",
+        "subtopico": "comunicação, streaming e colaboração"
     },
     {
         "pergunta": "Em páginas Web, HTML, CSS e JavaScript possuem papéis distintos. Assinale a associação correta.",
@@ -1658,7 +1936,9 @@ const internet = [
         "feedbackAcerto": "HTML organiza elementos, CSS cuida da aparência e JavaScript implementa interações e lógica no lado do cliente.",
         "feedbackErro": "A resposta correta é:\n\nHTML estrutura o conteúdo; CSS define apresentação; JavaScript adiciona comportamento.\n\nComentário:\nHTML organiza elementos, CSS cuida da aparência e JavaScript implementa interações e lógica no lado do cliente.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Essa tríade é muito cobrada: estrutura, estilo e comportamento.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_114",
+        "subtopico": "web, páginas e aplicações"
     },
     {
         "pergunta": "A diferença entre hyperlink e URL pode ser descrita corretamente assim:",
@@ -1673,7 +1953,9 @@ const internet = [
         "feedbackAcerto": "Um hyperlink pode usar texto, botão ou imagem clicável. A URL é o endereço do recurso de destino.",
         "feedbackErro": "A resposta correta é:\n\nhyperlink é o elemento clicável; URL é o endereço para onde ele aponta.\n\nComentário:\nUm hyperlink pode usar texto, botão ou imagem clicável. A URL é o endereço do recurso de destino.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Link é o elemento; URL é o endereço.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_115",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "Em uma URL, o trecho após o símbolo #, conhecido como fragmento, costuma indicar:",
@@ -1688,7 +1970,9 @@ const internet = [
         "feedbackAcerto": "O fragmento # pode levar o navegador a uma seção interna da página, como um título ou elemento identificado.",
         "feedbackErro": "A resposta correta é:\n\numa posição ou seção específica dentro do recurso acessado.\n\nComentário:\nO fragmento # pode levar o navegador a uma seção interna da página, como um título ou elemento identificado.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Fragmento # atua no recurso carregado; não é enviado como domínio DNS.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_116",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "Em uma URL como /pesquisa?q=edital&ano=2026, a parte após o ponto de interrogação representa:",
@@ -1703,7 +1987,9 @@ const internet = [
         "feedbackAcerto": "A query string contém parâmetros no formato chave=valor, muito usados em buscas, filtros e páginas dinâmicas.",
         "feedbackErro": "A resposta correta é:\n\nparâmetros de consulta enviados na própria URL.\n\nComentário:\nA query string contém parâmetros no formato chave=valor, muito usados em buscas, filtros e páginas dinâmicas.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Ponto de interrogação na URL costuma iniciar parâmetros de consulta.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_117",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "A codificação de URL é necessária, por exemplo, quando:",
@@ -1718,7 +2004,9 @@ const internet = [
         "feedbackAcerto": "Espaços e caracteres especiais podem ser codificados, como %20 para espaço, permitindo transmissão correta em URLs.",
         "feedbackErro": "A resposta correta é:\n\ncaracteres especiais ou espaços precisam ser representados de forma válida no endereço.\n\nComentário:\nEspaços e caracteres especiais podem ser codificados, como %20 para espaço, permitindo transmissão correta em URLs.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Em prova, %20 geralmente remete a espaço codificado em URL.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_118",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "Ao ler um QR Code que abre uma página, a cautela principal é:",
@@ -1733,7 +2021,9 @@ const internet = [
         "feedbackAcerto": "QR Codes podem direcionar para URLs legítimas ou maliciosas. O usuário deve conferir o destino antes de prosseguir.",
         "feedbackErro": "A resposta correta é:\n\nverificar o endereço de destino antes de inserir dados pessoais ou credenciais.\n\nComentário:\nQR Codes podem direcionar para URLs legítimas ou maliciosas. O usuário deve conferir o destino antes de prosseguir.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "QR Code é apenas uma forma de representar informação, não garantia de segurança.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_119",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Em redes e Internet, download corresponde à operação de:",
@@ -1748,7 +2038,9 @@ const internet = [
         "feedbackAcerto": "Download é o recebimento de dados pelo usuário, como baixar edital, imagem, vídeo ou aplicativo.",
         "feedbackErro": "A resposta correta é:\n\nreceber dados de um servidor ou serviço remoto para o dispositivo do usuário.\n\nComentário:\nDownload é o recebimento de dados pelo usuário, como baixar edital, imagem, vídeo ou aplicativo.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Download = receber; upload = enviar.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_120",
+        "subtopico": "web, páginas e aplicações"
     },
     {
         "pergunta": "Em um formulário Web, upload ocorre quando o usuário:",
@@ -1763,7 +2055,9 @@ const internet = [
         "feedbackAcerto": "Upload é o envio de dados do dispositivo do usuário para outro sistema, como anexar arquivo em formulário ou enviar documento à nuvem.",
         "feedbackErro": "A resposta correta é:\n\nenvia um arquivo ou dado local para um servidor ou serviço na Internet.\n\nComentário:\nUpload é o envio de dados do dispositivo do usuário para outro sistema, como anexar arquivo em formulário ou enviar documento à nuvem.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Upload aparece ligado a envio de arquivo para a Internet.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_121",
+        "subtopico": "web, páginas e aplicações"
     },
     {
         "pergunta": "A sincronização em nuvem não substitui completamente uma política de backup porque:",
@@ -1778,7 +2072,9 @@ const internet = [
         "feedbackAcerto": "Na sincronização, mudanças locais podem refletir no ambiente remoto e nos demais dispositivos. Backup exige retenção e recuperação planejadas.",
         "feedbackErro": "A resposta correta é:\n\nalterações ou exclusões indevidas podem ser replicadas para todos os dispositivos sincronizados.\n\nComentário:\nNa sincronização, mudanças locais podem refletir no ambiente remoto e nos demais dispositivos. Backup exige retenção e recuperação planejadas.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Banca gosta da pegadinha: sincronizar facilita acesso, mas não é backup completo.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_122",
+        "subtopico": "nuvem e aplicações online"
     },
     {
         "pergunta": "Um feed RSS é utilizado para:",
@@ -1793,7 +2089,9 @@ const internet = [
         "feedbackAcerto": "RSS permite assinar atualizações de sites, blogs e portais, reunindo novos conteúdos em leitores ou agregadores.",
         "feedbackErro": "A resposta correta é:\n\nacompanhar atualizações de sites e publicações em um leitor compatível.\n\nComentário:\nRSS permite assinar atualizações de sites, blogs e portais, reunindo novos conteúdos em leitores ou agregadores.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "RSS aparece ligado a atualização e agregação de conteúdo.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_123",
+        "subtopico": "comunicação, streaming e colaboração"
     },
     {
         "pergunta": "No contexto da Internet, podcast é melhor descrito como:",
@@ -1808,7 +2106,9 @@ const internet = [
         "feedbackAcerto": "Podcasts são programas em episódios, normalmente de áudio, distribuídos por feeds ou plataformas de streaming.",
         "feedbackErro": "A resposta correta é:\n\nconteúdo de áudio distribuído em episódios, geralmente acessível por assinatura ou plataformas.\n\nComentário:\nPodcasts são programas em episódios, normalmente de áudio, distribuídos por feeds ou plataformas de streaming.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Podcast não é protocolo; é formato de publicação de conteúdo.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_124",
+        "subtopico": "busca e pesquisa avançada"
     },
     {
         "pergunta": "Uma diferença comum entre blog e wiki é que a wiki geralmente:",
@@ -1823,7 +2123,9 @@ const internet = [
         "feedbackAcerto": "Blogs costumam organizar publicações em ordem cronológica. Wikis favorecem edição colaborativa e construção coletiva de conhecimento.",
         "feedbackErro": "A resposta correta é:\n\npermite construção colaborativa e edição organizada de páginas por usuários autorizados.\n\nComentário:\nBlogs costumam organizar publicações em ordem cronológica. Wikis favorecem edição colaborativa e construção coletiva de conhecimento.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Wiki remete a colaboração e edição de conteúdo.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_125",
+        "subtopico": "comunicação, streaming e colaboração"
     },
     {
         "pergunta": "Em ambientes online, fórum e chat diferenciam-se porque o fórum normalmente:",
@@ -1838,7 +2140,9 @@ const internet = [
         "feedbackAcerto": "Fóruns armazenam discussões por tópicos. Chats são mais voltados à conversa imediata e sequencial.",
         "feedbackErro": "A resposta correta é:\n\norganiza discussões em tópicos, com interação menos imediata e mais persistente.\n\nComentário:\nFóruns armazenam discussões por tópicos. Chats são mais voltados à conversa imediata e sequencial.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Fórum = tópicos persistentes; chat = conversa instantânea.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_126",
+        "subtopico": "comunicação, streaming e colaboração"
     },
     {
         "pergunta": "O CAPTCHA em formulários Web é usado principalmente para:",
@@ -1853,7 +2157,9 @@ const internet = [
         "feedbackAcerto": "CAPTCHAs tentam distinguir usuários humanos de automações, reduzindo cadastros e envios abusivos.",
         "feedbackErro": "A resposta correta é:\n\ndificultar envios automatizados por robôs e scripts.\n\nComentário:\nCAPTCHAs tentam distinguir usuários humanos de automações, reduzindo cadastros e envios abusivos.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "CAPTCHA não é antivírus; é barreira contra automação indevida.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_127",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "A verificação em duas etapas em contas online aumenta a proteção porque:",
@@ -1868,7 +2174,9 @@ const internet = [
         "feedbackAcerto": "A verificação em duas etapas adiciona uma camada de autenticação, como código temporário, aplicativo autenticador ou chave física.",
         "feedbackErro": "A resposta correta é:\n\nexige um segundo fator além da senha para concluir o acesso.\n\nComentário:\nA verificação em duas etapas adiciona uma camada de autenticação, como código temporário, aplicativo autenticador ou chave física.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "2FA reduz risco, mas não dispensa atenção contra golpes.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_128",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Banners de consentimento de cookies estão relacionados principalmente à:",
@@ -1883,7 +2191,9 @@ const internet = [
         "feedbackAcerto": "Avisos de cookies informam o uso de tecnologias de rastreamento e preferências, especialmente para privacidade e conformidade legal.",
         "feedbackErro": "A resposta correta é:\n\ninformação e controle sobre coleta e uso de dados de navegação.\n\nComentário:\nAvisos de cookies informam o uso de tecnologias de rastreamento e preferências, especialmente para privacidade e conformidade legal.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Cookies envolvem privacidade, rastreamento e preferências de navegação.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_129",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "Alterar o mecanismo de busca padrão do navegador significa:",
@@ -1898,7 +2208,9 @@ const internet = [
         "feedbackAcerto": "O buscador padrão processa consultas feitas pela barra de pesquisa ou endereço, conforme configuração do navegador.",
         "feedbackErro": "A resposta correta é:\n\ndefinir qual serviço será usado nas pesquisas digitadas na barra de endereço.\n\nComentário:\nO buscador padrão processa consultas feitas pela barra de pesquisa ou endereço, conforme configuração do navegador.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Buscador padrão não é provedor de Internet nem DNS.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_130",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "Ao limpar cookies de um navegador, um efeito comum é:",
@@ -1913,7 +2225,9 @@ const internet = [
         "feedbackAcerto": "Cookies podem armazenar sessões, preferências e identificadores. Ao removê-los, sites podem pedir novo login ou perder configurações.",
         "feedbackErro": "A resposta correta é:\n\nencerrar sessões salvas e apagar preferências mantidas por sites.\n\nComentário:\nCookies podem armazenar sessões, preferências e identificadores. Ao removê-los, sites podem pedir novo login ou perder configurações.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Limpar cookies afeta sessões e preferências, não arquivos baixados.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_131",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "Em navegadores, uma aba diferencia-se de uma nova janela porque a aba:",
@@ -1928,7 +2242,9 @@ const internet = [
         "feedbackAcerto": "Abas permitem múltiplas páginas dentro da mesma janela, facilitando navegação e organização.",
         "feedbackErro": "A resposta correta é:\n\nabre outra página dentro da mesma janela do navegador.\n\nComentário:\nAbas permitem múltiplas páginas dentro da mesma janela, facilitando navegação e organização.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Aba é organização da interface; não significa modo privado.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_132",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "Mesmo em navegação privada, uma rede corporativa ou escolar ainda pode:",
@@ -1943,7 +2259,9 @@ const internet = [
         "feedbackAcerto": "O modo privado reduz dados armazenados no dispositivo, mas não impede controles de rede, logs de proxy, firewall ou provedor.",
         "feedbackErro": "A resposta correta é:\n\nregistrar ou controlar acessos conforme suas políticas e infraestrutura.\n\nComentário:\nO modo privado reduz dados armazenados no dispositivo, mas não impede controles de rede, logs de proxy, firewall ou provedor.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Privado no navegador não significa invisível para a rede.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_133",
+        "subtopico": "navegadores, cookies e cache"
     },
     {
         "pergunta": "Sobre o cadeado exibido no navegador em sites HTTPS, assinale a alternativa correta.",
@@ -1958,7 +2276,9 @@ const internet = [
         "feedbackAcerto": "O cadeado mostra proteção do canal e validação do certificado, mas sites falsos também podem usar HTTPS.",
         "feedbackErro": "A resposta correta é:\n\nIndica conexão criptografada, mas não garante sozinho que o site seja honesto.\n\nComentário:\nO cadeado mostra proteção do canal e validação do certificado, mas sites falsos também podem usar HTTPS.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Cadeado ajuda, mas não dispensa verificar domínio e contexto.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_134",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "O TLS, usado em conexões HTTPS, atua principalmente na:",
@@ -1973,7 +2293,9 @@ const internet = [
         "feedbackAcerto": "TLS fornece confidencialidade, integridade e autenticação do servidor durante a comunicação.",
         "feedbackErro": "A resposta correta é:\n\nproteção criptográfica da comunicação entre cliente e servidor.\n\nComentário:\nTLS fornece confidencialidade, integridade e autenticação do servidor durante a comunicação.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "TLS é a camada de segurança por trás do HTTPS.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_135",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Em HTTP/2, um recurso técnico frequentemente citado é:",
@@ -1988,7 +2310,9 @@ const internet = [
         "feedbackAcerto": "HTTP/2 melhora eficiência ao permitir múltiplas requisições/respostas simultâneas em uma conexão, reduzindo limitações do HTTP/1.1.",
         "feedbackErro": "A resposta correta é:\n\nmultiplexação de várias requisições em uma mesma conexão.\n\nComentário:\nHTTP/2 melhora eficiência ao permitir múltiplas requisições/respostas simultâneas em uma conexão, reduzindo limitações do HTTP/1.1.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "HTTP/2 é assunto mais avançado; pense em eficiência e multiplexação.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_136",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "Em APIs Web do tipo REST, os métodos HTTP costumam ser usados para:",
@@ -2003,7 +2327,9 @@ const internet = [
         "feedbackAcerto": "APIs REST usam conceitos de recursos e métodos HTTP, como GET, POST, PUT/PATCH e DELETE.",
         "feedbackErro": "A resposta correta é:\n\nrepresentar operações sobre recursos, como consultar, criar, atualizar ou remover.\n\nComentário:\nAPIs REST usam conceitos de recursos e métodos HTTP, como GET, POST, PUT/PATCH e DELETE.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "REST não é programa de escritório; é estilo de comunicação em serviços Web.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_137",
+        "subtopico": "protocolos web, URL e HTTP"
     },
     {
         "pergunta": "Em serviços Web, JSON é frequentemente utilizado para:",
@@ -2018,7 +2344,9 @@ const internet = [
         "feedbackAcerto": "JSON é um formato textual comum para representação e troca de dados em APIs e aplicações Web.",
         "feedbackErro": "A resposta correta é:\n\ntrocar dados estruturados entre sistemas de forma leve e legível por software.\n\nComentário:\nJSON é um formato textual comum para representação e troca de dados em APIs e aplicações Web.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "JSON aparece muito em APIs; não é protocolo de e-mail nem criptografia.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_138",
+        "subtopico": "web, páginas e aplicações"
     },
     {
         "pergunta": "Um Web service pode ser entendido como:",
@@ -2033,7 +2361,9 @@ const internet = [
         "feedbackAcerto": "Web services disponibilizam funcionalidades por meio de padrões e protocolos de rede, permitindo comunicação entre aplicações.",
         "feedbackErro": "A resposta correta é:\n\nserviço acessível pela rede que permite integração entre sistemas.\n\nComentário:\nWeb services disponibilizam funcionalidades por meio de padrões e protocolos de rede, permitindo comunicação entre aplicações.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Serviço Web é integração entre sistemas, não apenas página visual para usuário.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_139",
+        "subtopico": "web, páginas e aplicações"
     },
     {
         "pergunta": "No DNS, um registro do tipo A é utilizado para:",
@@ -2048,7 +2378,9 @@ const internet = [
         "feedbackAcerto": "Registros A apontam nomes para endereços IPv4. Para IPv6, usa-se o registro AAAA.",
         "feedbackErro": "A resposta correta é:\n\nassociar um nome de domínio a um endereço IPv4.\n\nComentário:\nRegistros A apontam nomes para endereços IPv4. Para IPv6, usa-se o registro AAAA.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "A = IPv4; AAAA = IPv6.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_140",
+        "subtopico": "domínios, DNS e infraestrutura"
     },
     {
         "pergunta": "No DNS, registros MX estão relacionados a:",
@@ -2063,7 +2395,9 @@ const internet = [
         "feedbackAcerto": "MX, Mail Exchange, indica os servidores de e-mail que recebem mensagens para determinado domínio.",
         "feedbackErro": "A resposta correta é:\n\nservidores responsáveis pelo recebimento de e-mails de um domínio.\n\nComentário:\nMX, Mail Exchange, indica os servidores de e-mail que recebem mensagens para determinado domínio.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "MX lembra Mail: e-mail do domínio.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_141",
+        "subtopico": "domínios, DNS e infraestrutura"
     },
     {
         "pergunta": "Um registro DNS CNAME é usado para:",
@@ -2078,7 +2412,9 @@ const internet = [
         "feedbackAcerto": "CNAME cria um apelido DNS, permitindo que um nome aponte para outro nome já existente.",
         "feedbackErro": "A resposta correta é:\n\ncriar um alias que aponta um nome para outro nome canônico.\n\nComentário:\nCNAME cria um apelido DNS, permitindo que um nome aponte para outro nome já existente.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "CNAME = canonical name, usado como alias.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_142",
+        "subtopico": "domínios, DNS e infraestrutura"
     },
     {
         "pergunta": "No DNS, o TTL de um registro indica:",
@@ -2093,7 +2429,9 @@ const internet = [
         "feedbackAcerto": "TTL significa Time To Live e define o tempo em que resolvers podem manter a informação em cache.",
         "feedbackErro": "A resposta correta é:\n\npor quanto tempo a resposta pode permanecer em cache.\n\nComentário:\nTTL significa Time To Live e define o tempo em que resolvers podem manter a informação em cache.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "TTL aparece em DNS associado a cache e expiração.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_143",
+        "subtopico": "domínios, DNS e infraestrutura"
     },
     {
         "pergunta": "Uma consulta WHOIS é usada tradicionalmente para obter informações sobre:",
@@ -2108,7 +2446,9 @@ const internet = [
         "feedbackAcerto": "WHOIS permite consultar dados de registro, contatos e informações administrativas, conforme regras de privacidade aplicáveis.",
         "feedbackErro": "A resposta correta é:\n\nregistro e dados administrativos de um domínio ou bloco de endereços.\n\nComentário:\nWHOIS permite consultar dados de registro, contatos e informações administrativas, conforme regras de privacidade aplicáveis.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "WHOIS está ligado a registro de domínio e identificação administrativa.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_144",
+        "subtopico": "domínios, DNS e infraestrutura"
     },
     {
         "pergunta": "Ataques de homógrafo em domínios exploram principalmente:",
@@ -2123,7 +2463,9 @@ const internet = [
         "feedbackAcerto": "Domínios com caracteres parecidos podem enganar visualmente o usuário, levando-o a sites falsos.",
         "feedbackErro": "A resposta correta é:\n\ncaracteres visualmente semelhantes para criar endereços falsos parecidos com legítimos.\n\nComentário:\nDomínios com caracteres parecidos podem enganar visualmente o usuário, levando-o a sites falsos.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Em segurança de Internet, conferir o domínio real é essencial.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_145",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "Encurtadores de URL exigem cautela porque:",
@@ -2138,7 +2480,9 @@ const internet = [
         "feedbackAcerto": "URLs encurtadas são úteis, mas podem esconder links maliciosos ou inesperados. Serviços de pré-visualização ajudam a verificar o destino.",
         "feedbackErro": "A resposta correta é:\n\npodem ocultar o endereço final, dificultando a avaliação prévia do destino.\n\nComentário:\nURLs encurtadas são úteis, mas podem esconder links maliciosos ou inesperados. Serviços de pré-visualização ajudam a verificar o destino.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Link curto não é ruim por si só; o risco é esconder o destino.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_146",
+        "subtopico": "segurança, privacidade e golpes online"
     },
     {
         "pergunta": "A compressão de conteúdo Web, como gzip ou Brotli, é usada para:",
@@ -2153,7 +2497,9 @@ const internet = [
         "feedbackAcerto": "Servidores podem comprimir recursos textuais, reduzindo tráfego e melhorando o tempo de carregamento.",
         "feedbackErro": "A resposta correta é:\n\nreduzir o volume de dados transferidos entre servidor e navegador.\n\nComentário:\nServidores podem comprimir recursos textuais, reduzindo tráfego e melhorando o tempo de carregamento.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Compressão Web está ligada a desempenho de transferência.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_147",
+        "subtopico": "web, páginas e aplicações"
     },
     {
         "pergunta": "Em acessibilidade Web, o texto alternativo em imagens é importante porque:",
@@ -2168,7 +2514,9 @@ const internet = [
         "feedbackAcerto": "Textos alternativos ajudam acessibilidade, compreensão e indexação adequada de conteúdo visual.",
         "feedbackErro": "A resposta correta é:\n\npermite que leitores de tela descrevam a imagem a usuários com deficiência visual.\n\nComentário:\nTextos alternativos ajudam acessibilidade, compreensão e indexação adequada de conteúdo visual.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Acessibilidade não é enfeite; é requisito de inclusão e usabilidade.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_148",
+        "subtopico": "web, páginas e aplicações"
     },
     {
         "pergunta": "Em edição colaborativa na nuvem, um conflito de versão pode ocorrer quando:",
@@ -2183,7 +2531,9 @@ const internet = [
         "feedbackAcerto": "Conflitos surgem quando múltiplas edições não são automaticamente conciliadas, exigindo comparação ou escolha de versão.",
         "feedbackErro": "A resposta correta é:\n\nalterações simultâneas ou offline precisam ser conciliadas pelo serviço.\n\nComentário:\nConflitos surgem quando múltiplas edições não são automaticamente conciliadas, exigindo comparação ou escolha de versão.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Colaboração em nuvem exige atenção a versão, permissões e histórico.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_149",
+        "subtopico": "nuvem e aplicações online"
     },
     {
         "pergunta": "As notificações push em aplicações Web são usadas para:",
@@ -2198,6 +2548,8 @@ const internet = [
         "feedbackAcerto": "Notificações push permitem que sites ou aplicações Web autorizadas exibam alertas ao usuário, respeitando permissões do navegador e configurações do sistema.",
         "feedbackErro": "A resposta correta é:\n\nenviar avisos ao usuário mesmo fora da página aberta, desde que haja permissão e suporte do navegador.\n\nComentário:\nNotificações push permitem que sites ou aplicações Web autorizadas exibam alertas ao usuário, respeitando permissões do navegador e configurações do sistema.\n\nRevise a dica da banca para fixar o ponto cobrado.",
         "dicaBanca": "Notificação push depende de permissão; não é mensagem de e-mail nem registro DNS.",
-        "assunto": "internet"
+        "assunto": "internet",
+        "id": "internet_150",
+        "subtopico": "comunicação, streaming e colaboração"
     }
 ];

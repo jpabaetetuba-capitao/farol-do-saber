@@ -1,7 +1,7 @@
 // ==========================
-// FAROL DO SABER - ARQUIVOS
-// Banco ampliado para 150 questões.
-// Questões inéditas, distratores fortes e gabarito balanceado.
+// FAROL DO SABER - ARQUIVOS, PASTAS E BACKUP
+// Banco com 150 questões balanceadas por subtópico.
+// Uso: o app.js sorteia 40 questões distribuídas entre os subtópicos.
 // ==========================
 
 const arquivos = [
@@ -17,7 +17,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "\nArquivo é uma estrutura lógica utilizada para armazenar informações digitais, independentemente do dispositivo físico em que esteja gravado.\n",
         "feedbackErro": "A resposta correta é:\n\nUma estrutura lógica destinada ao armazenamento organizado de informações digitais.\n\nComentário:\nArquivo é uma estrutura lógica utilizada para armazenar informações digitais, independentemente do dispositivo físico em que esteja gravado.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nMuitas bancas confundem conceitos físicos (HD, SSD) com conceitos lógicos (arquivo e pasta).\n"
+        "dicaBanca": "\nMuitas bancas confundem conceitos físicos (HD, SSD) com conceitos lógicos (arquivo e pasta).\n",
+        "id": "arquivos_001",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Considere os arquivos RELATORIO.docx, RELATORIO.pdf e RELATORIO.xlsx. Assinale a afirmativa correta.",
@@ -31,7 +33,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "\nAs extensões indicam formatos diferentes de arquivos e geralmente estão associadas a aplicações específicas.\n",
         "feedbackErro": "A resposta correta é:\n\nOs três arquivos possuem extensões distintas que indicam formatos diferentes.\n\nComentário:\nAs extensões indicam formatos diferentes de arquivos e geralmente estão associadas a aplicações específicas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nDecorar extensões famosas é uma das exigências mais comuns das bancas.\n"
+        "dicaBanca": "\nDecorar extensões famosas é uma das exigências mais comuns das bancas.\n",
+        "id": "arquivos_002",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Ao copiar um arquivo de uma pasta para outra localizada na mesma unidade de armazenamento, o resultado da operação será:",
@@ -45,7 +49,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "\nA operação de cópia mantém o arquivo original e cria uma nova cópia no local de destino.\n",
         "feedbackErro": "A resposta correta é:\n\nA existência simultânea do arquivo original e da cópia.\n\nComentário:\nA operação de cópia mantém o arquivo original e cria uma nova cópia no local de destino.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nA banca costuma misturar os conceitos de copiar e mover.\n"
+        "dicaBanca": "\nA banca costuma misturar os conceitos de copiar e mover.\n",
+        "id": "arquivos_003",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "No Windows, um usuário selecionou um arquivo e pressionou Shift + Delete. Nessa situação, é correto afirmar que:",
@@ -59,7 +65,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "\nA combinação Shift + Delete realiza a exclusão direta do arquivo, sem enviá-lo para a Lixeira.\n",
         "feedbackErro": "A resposta correta é:\n\nO arquivo será excluído sem passar pela Lixeira.\n\nComentário:\nA combinação Shift + Delete realiza a exclusão direta do arquivo, sem enviá-lo para a Lixeira.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nUma das pegadinhas mais frequentes em concursos de informática.\n"
+        "dicaBanca": "\nUma das pegadinhas mais frequentes em concursos de informática.\n",
+        "id": "arquivos_004",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Sobre as propriedades de um arquivo em sistemas operacionais, assinale a alternativa correta.",
@@ -73,7 +81,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "\nAs propriedades de um arquivo fornecem diversas informações relevantes, como tamanho, tipo, localização e datas.\n",
         "feedbackErro": "A resposta correta é:\n\nAs propriedades permitem consultar informações como tamanho, localização e datas relacionadas ao arquivo.\n\nComentário:\nAs propriedades de um arquivo fornecem diversas informações relevantes, como tamanho, tipo, localização e datas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nQuestões sobre propriedades costumam explorar tamanho, localização e atributos.\n"
+        "dicaBanca": "\nQuestões sobre propriedades costumam explorar tamanho, localização e atributos.\n",
+        "id": "arquivos_005",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Um arquivo com extensão .exe normalmente está associado a:",
@@ -87,7 +97,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "\nA extensão .exe identifica programas executáveis no ambiente Windows.\n",
         "feedbackErro": "A resposta correta é:\n\nPrograma executável.\n\nComentário:\nA extensão .exe identifica programas executáveis no ambiente Windows.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nExtensões de arquivos aparecem com enorme frequência em provas.\n"
+        "dicaBanca": "\nExtensões de arquivos aparecem com enorme frequência em provas.\n",
+        "id": "arquivos_006",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "A alteração manual da extensão de um arquivo, sem conversão adequada, produz necessariamente qual efeito?",
@@ -101,7 +113,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "\nMudar apenas a extensão não converte o conteúdo do arquivo.\n",
         "feedbackErro": "A resposta correta é:\n\nAltera apenas o nome do arquivo, não seu conteúdo interno.\n\nComentário:\nMudar apenas a extensão não converte o conteúdo do arquivo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nMuitas bancas exploram a falsa ideia de que trocar a extensão converte arquivos.\n"
+        "dicaBanca": "\nMuitas bancas exploram a falsa ideia de que trocar a extensão converte arquivos.\n",
+        "id": "arquivos_007",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Assinale a alternativa que apresenta apenas extensões normalmente associadas a arquivos de imagem.",
@@ -115,7 +129,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "\nJPG, PNG e GIF são extensões tradicionalmente associadas a imagens digitais.\n",
         "feedbackErro": "A resposta correta é:\n\n.jpg, .png e .gif\n\nComentário:\nJPG, PNG e GIF são extensões tradicionalmente associadas a imagens digitais.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nMemorize os principais grupos de extensões: documentos, imagens, áudio, vídeo e executáveis.\n"
+        "dicaBanca": "\nMemorize os principais grupos de extensões: documentos, imagens, áudio, vídeo e executáveis.\n",
+        "id": "arquivos_008",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Em relação ao tamanho de arquivos digitais, é correto afirmar que:",
@@ -129,7 +145,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "\nO tamanho depende da quantidade de dados armazenados e não apenas do tipo de arquivo.\n",
         "feedbackErro": "A resposta correta é:\n\nArquivos de mesmo tipo podem apresentar tamanhos diferentes.\n\nComentário:\nO tamanho depende da quantidade de dados armazenados e não apenas do tipo de arquivo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nA banca costuma tentar associar tamanho à extensão. Isso está errado.\n"
+        "dicaBanca": "\nA banca costuma tentar associar tamanho à extensão. Isso está errado.\n",
+        "id": "arquivos_009",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Em um ambiente corporativo, a principal finalidade da organização de arquivos em pastas é:",
@@ -143,7 +161,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "\nA organização em pastas facilita a administração, localização e controle dos arquivos.\n",
         "feedbackErro": "A resposta correta é:\n\nFacilitar o armazenamento, localização e gerenciamento das informações.\n\nComentário:\nA organização em pastas facilita a administração, localização e controle dos arquivos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nQuando a questão mencionar organização lógica, geralmente a resposta estará relacionada às pastas e diretórios.\n"
+        "dicaBanca": "\nQuando a questão mencionar organização lógica, geralmente a resposta estará relacionada às pastas e diretórios.\n",
+        "id": "arquivos_010",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Em sistemas operacionais modernos, uma pasta pode ser corretamente definida como:",
@@ -157,7 +177,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "\nPastas são estruturas lógicas utilizadas para organizar arquivos e subpastas, facilitando a administração dos dados.\n",
         "feedbackErro": "A resposta correta é:\n\nUma estrutura lógica destinada à organização de arquivos e outras pastas.\n\nComentário:\nPastas são estruturas lógicas utilizadas para organizar arquivos e subpastas, facilitando a administração dos dados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nBancas costumam diferenciar conceitos físicos (HD, SSD) de conceitos lógicos (arquivo e pasta).\n"
+        "dicaBanca": "\nBancas costumam diferenciar conceitos físicos (HD, SSD) de conceitos lógicos (arquivo e pasta).\n",
+        "id": "arquivos_011",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Em uma estrutura hierárquica de diretórios, uma subpasta é:",
@@ -171,7 +193,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "\nSubpasta é qualquer pasta contida dentro de outra pasta.\n",
         "feedbackErro": "A resposta correta é:\n\nUma pasta localizada dentro de outra pasta.\n\nComentário:\nSubpasta é qualquer pasta contida dentro de outra pasta.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nHierarquia de diretórios é assunto recorrente em provas de informática.\n"
+        "dicaBanca": "\nHierarquia de diretórios é assunto recorrente em provas de informática.\n",
+        "id": "arquivos_012",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "No contexto de sistemas de arquivos, o diretório raiz corresponde:",
@@ -185,7 +209,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "\nO diretório raiz representa o ponto inicial da estrutura hierárquica de diretórios.\n",
         "feedbackErro": "A resposta correta é:\n\nAo nível mais alto da estrutura hierárquica de diretórios.\n\nComentário:\nO diretório raiz representa o ponto inicial da estrutura hierárquica de diretórios.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nEm Windows costuma aparecer associado a C:.\n"
+        "dicaBanca": "\nEm Windows costuma aparecer associado a C:.\n",
+        "id": "arquivos_013",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Considere o caminho C:\\Usuarios\\Joao\\Documentos\\Relatorio.docx. Nesse caso, Relatorio.docx corresponde a:",
@@ -199,7 +225,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "\nO elemento final do caminho apresentado é um arquivo identificado pela extensão .docx.\n",
         "feedbackErro": "A resposta correta é:\n\nUm arquivo.\n\nComentário:\nO elemento final do caminho apresentado é um arquivo identificado pela extensão .docx.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nObserve sempre o último elemento do caminho e sua extensão.\n"
+        "dicaBanca": "\nObserve sempre o último elemento do caminho e sua extensão.\n",
+        "id": "arquivos_014",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Ao mover um arquivo de uma pasta para outra na mesma unidade utilizando o comando Recortar e Colar, ocorre:",
@@ -213,7 +241,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "\nMover significa transferir o arquivo de um local para outro, removendo-o da origem.\n",
         "feedbackErro": "A resposta correta é:\n\nA transferência do arquivo para o novo local sem manutenção da cópia original.\n\nComentário:\nMover significa transferir o arquivo de um local para outro, removendo-o da origem.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nCopiar gera duas versões. Mover mantém apenas uma.\n"
+        "dicaBanca": "\nCopiar gera duas versões. Mover mantém apenas uma.\n",
+        "id": "arquivos_015",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Um caminho absoluto é aquele que:",
@@ -227,7 +257,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "\nO caminho absoluto descreve toda a localização do arquivo desde a raiz da estrutura.\n",
         "feedbackErro": "A resposta correta é:\n\nComeça sempre pelo diretório raiz ou unidade de armazenamento.\n\nComentário:\nO caminho absoluto descreve toda a localização do arquivo desde a raiz da estrutura.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nA diferença entre caminho absoluto e relativo aparece frequentemente em concursos.\n"
+        "dicaBanca": "\nA diferença entre caminho absoluto e relativo aparece frequentemente em concursos.\n",
+        "id": "arquivos_016",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Um atalho criado na Área de Trabalho para um arquivo possui como característica principal:",
@@ -241,7 +273,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "\nO atalho apenas referencia o arquivo original, permitindo acesso mais rápido.\n",
         "feedbackErro": "A resposta correta é:\n\nPermitir acesso rápido ao arquivo sem alterar sua localização original.\n\nComentário:\nO atalho apenas referencia o arquivo original, permitindo acesso mais rápido.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nExcluir um atalho não exclui o arquivo original.\n"
+        "dicaBanca": "\nExcluir um atalho não exclui o arquivo original.\n",
+        "id": "arquivos_017",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Assinale a alternativa que representa corretamente uma unidade de medida de armazenamento superior ao megabyte (MB).",
@@ -255,7 +289,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "\nGigabyte possui capacidade superior ao Megabyte.\n",
         "feedbackErro": "A resposta correta é:\n\nGigabyte (GB)\n\nComentário:\nGigabyte possui capacidade superior ao Megabyte.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nDecore a ordem crescente das unidades de armazenamento.\n"
+        "dicaBanca": "\nDecore a ordem crescente das unidades de armazenamento.\n",
+        "id": "arquivos_018",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Sobre o atributo 'Somente Leitura' aplicado a um arquivo, assinale a alternativa correta.",
@@ -269,7 +305,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "\nO atributo Somente Leitura dificulta alterações no conteúdo do arquivo.\n",
         "feedbackErro": "A resposta correta é:\n\nImpede alterações no conteúdo do arquivo sem remoção do atributo.\n\nComentário:\nO atributo Somente Leitura dificulta alterações no conteúdo do arquivo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nNão confunda os atributos Somente Leitura, Oculto e Sistema.\n"
+        "dicaBanca": "\nNão confunda os atributos Somente Leitura, Oculto e Sistema.\n",
+        "id": "arquivos_019",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Em relação aos atalhos do Windows, assinale a afirmativa correta.",
@@ -283,7 +321,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "\nSe o arquivo original for removido ou movido inadequadamente, o atalho poderá deixar de funcionar.\n",
         "feedbackErro": "A resposta correta é:\n\nA exclusão do arquivo original torna o atalho inválido.\n\nComentário:\nSe o arquivo original for removido ou movido inadequadamente, o atalho poderá deixar de funcionar.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nQuestões sobre atalhos normalmente exploram a diferença entre referência e cópia.\n"
+        "dicaBanca": "\nQuestões sobre atalhos normalmente exploram a diferença entre referência e cópia.\n",
+        "id": "arquivos_020",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Ao excluir um arquivo utilizando apenas a tecla Delete no Windows, o comportamento padrão será:",
@@ -297,7 +337,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "\nPor padrão, arquivos excluídos com a tecla Delete são enviados para a Lixeira, permitindo recuperação posterior.\n",
         "feedbackErro": "A resposta correta é:\n\nO envio do arquivo para a Lixeira.\n\nComentário:\nPor padrão, arquivos excluídos com a tecla Delete são enviados para a Lixeira, permitindo recuperação posterior.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nA banca frequentemente cobra a diferença entre Delete e Shift + Delete.\n"
+        "dicaBanca": "\nA banca frequentemente cobra a diferença entre Delete e Shift + Delete.\n",
+        "id": "arquivos_021",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "A principal finalidade da Lixeira do Windows é:",
@@ -311,7 +353,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "\nA Lixeira permite recuperar arquivos excluídos antes da remoção definitiva.\n",
         "feedbackErro": "A resposta correta é:\n\nServir como local de recuperação para arquivos excluídos.\n\nComentário:\nA Lixeira permite recuperar arquivos excluídos antes da remoção definitiva.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nLixeira não é backup.\n"
+        "dicaBanca": "\nLixeira não é backup.\n",
+        "id": "arquivos_022",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Ao restaurar um arquivo da Lixeira, ele será normalmente enviado para:",
@@ -325,7 +369,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "\nA restauração devolve o arquivo para o local de onde ele foi excluído.\n",
         "feedbackErro": "A resposta correta é:\n\nSua localização original.\n\nComentário:\nA restauração devolve o arquivo para o local de onde ele foi excluído.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nRestaurar não significa escolher um novo local.\n"
+        "dicaBanca": "\nRestaurar não significa escolher um novo local.\n",
+        "id": "arquivos_023",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Assinale a alternativa correta sobre arquivos compactados.",
@@ -339,7 +385,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "\nA compactação reduz o tamanho dos dados e facilita armazenamento e compartilhamento.\n",
         "feedbackErro": "A resposta correta é:\n\nServem para reduzir espaço ocupado e facilitar transporte de dados.\n\nComentário:\nA compactação reduz o tamanho dos dados e facilita armazenamento e compartilhamento.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nZIP e RAR são os formatos mais cobrados.\n"
+        "dicaBanca": "\nZIP e RAR são os formatos mais cobrados.\n",
+        "id": "arquivos_024",
+        "subtopico": "compactacao_midias_imagens"
     },
     {
         "pergunta": "Qual das extensões abaixo está normalmente associada a arquivos compactados?",
@@ -353,7 +401,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "\nA extensão .zip é amplamente utilizada para compactação de arquivos.\n",
         "feedbackErro": "A resposta correta é:\n\n.zip\n\nComentário:\nA extensão .zip é amplamente utilizada para compactação de arquivos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nTambém memorize a extensão .rar.\n"
+        "dicaBanca": "\nTambém memorize a extensão .rar.\n",
+        "id": "arquivos_025",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Em relação aos arquivos ZIP, assinale a alternativa correta.",
@@ -367,7 +417,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "\nUm arquivo ZIP pode armazenar vários arquivos e diretórios em um único pacote compactado.\n",
         "feedbackErro": "A resposta correta é:\n\nPodem conter múltiplos arquivos e pastas.\n\nComentário:\nUm arquivo ZIP pode armazenar vários arquivos e diretórios em um único pacote compactado.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nZIP é um contêiner de arquivos.\n"
+        "dicaBanca": "\nZIP é um contêiner de arquivos.\n",
+        "id": "arquivos_026",
+        "subtopico": "compactacao_midias_imagens"
     },
     {
         "pergunta": "Sobre SSD e HD, assinale a afirmativa correta.",
@@ -381,7 +433,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "\nSSDs normalmente oferecem acesso mais rápido aos dados que os HDs tradicionais.\n",
         "feedbackErro": "A resposta correta é:\n\nSSD tende a apresentar maior velocidade de acesso aos dados.\n\nComentário:\nSSDs normalmente oferecem acesso mais rápido aos dados que os HDs tradicionais.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nVelocidade e ausência de partes móveis são características clássicas dos SSDs.\n"
+        "dicaBanca": "\nVelocidade e ausência de partes móveis são características clássicas dos SSDs.\n",
+        "id": "arquivos_027",
+        "subtopico": "armazenamento_dispositivos_nuvem"
     },
     {
         "pergunta": "Qual dos dispositivos abaixo é considerado armazenamento removível?",
@@ -395,7 +449,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "\nO pendrive é um dispositivo portátil de armazenamento removível.\n",
         "feedbackErro": "A resposta correta é:\n\nPendrive.\n\nComentário:\nO pendrive é um dispositivo portátil de armazenamento removível.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nPendrive, cartão SD e HD externo aparecem frequentemente em provas.\n"
+        "dicaBanca": "\nPendrive, cartão SD e HD externo aparecem frequentemente em provas.\n",
+        "id": "arquivos_028",
+        "subtopico": "armazenamento_dispositivos_nuvem"
     },
     {
         "pergunta": "O armazenamento em nuvem caracteriza-se principalmente por:",
@@ -409,7 +465,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "\nA nuvem utiliza servidores remotos acessados pela internet.\n",
         "feedbackErro": "A resposta correta é:\n\nUtilizar servidores acessíveis pela internet para guardar informações.\n\nComentário:\nA nuvem utiliza servidores remotos acessados pela internet.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nGoogle Drive, OneDrive e Dropbox são exemplos clássicos.\n"
+        "dicaBanca": "\nGoogle Drive, OneDrive e Dropbox são exemplos clássicos.\n",
+        "id": "arquivos_029",
+        "subtopico": "armazenamento_dispositivos_nuvem"
     },
     {
         "pergunta": "Assinale a alternativa que apresenta apenas exemplos de serviços de armazenamento em nuvem.",
@@ -423,7 +481,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "\nGoogle Drive, OneDrive e Dropbox são serviços amplamente utilizados para armazenamento em nuvem.\n",
         "feedbackErro": "A resposta correta é:\n\nGoogle Drive, OneDrive e Dropbox.\n\nComentário:\nGoogle Drive, OneDrive e Dropbox são serviços amplamente utilizados para armazenamento em nuvem.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nAs bancas adoram misturar navegadores, sistemas operacionais e serviços de nuvem.\n"
+        "dicaBanca": "\nAs bancas adoram misturar navegadores, sistemas operacionais e serviços de nuvem.\n",
+        "id": "arquivos_030",
+        "subtopico": "armazenamento_dispositivos_nuvem"
     },
     {
         "pergunta": "Em sistemas operacionais, um arquivo marcado com o atributo 'Oculto' possui qual característica?",
@@ -437,7 +497,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "\nArquivos ocultos não são exibidos normalmente pelo Explorador de Arquivos, mas podem ser visualizados mediante configuração adequada.\n",
         "feedbackErro": "A resposta correta é:\n\nNão é exibido normalmente nas configurações padrão do explorador de arquivos.\n\nComentário:\nArquivos ocultos não são exibidos normalmente pelo Explorador de Arquivos, mas podem ser visualizados mediante configuração adequada.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nNão confunda arquivo oculto com arquivo protegido ou criptografado.\n"
+        "dicaBanca": "\nNão confunda arquivo oculto com arquivo protegido ou criptografado.\n",
+        "id": "arquivos_031",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Qual sequência apresenta corretamente as unidades de armazenamento em ordem crescente?",
@@ -451,7 +513,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "\nA sequência correta é KB (Kilobyte), MB (Megabyte), GB (Gigabyte) e TB (Terabyte).\n",
         "feedbackErro": "A resposta correta é:\n\nKB → MB → GB → TB\n\nComentário:\nA sequência correta é KB (Kilobyte), MB (Megabyte), GB (Gigabyte) e TB (Terabyte).\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nDecore também: Byte → KB → MB → GB → TB → PB.\n"
+        "dicaBanca": "\nDecore também: Byte → KB → MB → GB → TB → PB.\n",
+        "id": "arquivos_032",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Considerando as unidades de armazenamento, assinale a afirmativa correta.",
@@ -465,7 +529,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "\nO Terabyte possui capacidade superior ao Gigabyte.\n",
         "feedbackErro": "A resposta correta é:\n\n1 TB corresponde a uma capacidade superior a 1 GB.\n\nComentário:\nO Terabyte possui capacidade superior ao Gigabyte.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nA banca costuma inverter propositalmente as unidades.\n"
+        "dicaBanca": "\nA banca costuma inverter propositalmente as unidades.\n",
+        "id": "arquivos_033",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Em um caminho relativo, a localização de um arquivo é definida:",
@@ -479,7 +545,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "\nCaminhos relativos dependem da localização atual do usuário dentro da estrutura de diretórios.\n",
         "feedbackErro": "A resposta correta é:\n\nA partir do diretório atual.\n\nComentário:\nCaminhos relativos dependem da localização atual do usuário dentro da estrutura de diretórios.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nA diferença entre caminho absoluto e relativo é tema clássico de concurso.\n"
+        "dicaBanca": "\nA diferença entre caminho absoluto e relativo é tema clássico de concurso.\n",
+        "id": "arquivos_034",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Ao compartilhar uma pasta em rede, o administrador normalmente pode definir:",
@@ -493,7 +561,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "\nO compartilhamento geralmente envolve a definição de permissões de leitura, gravação ou controle total.\n",
         "feedbackErro": "A resposta correta é:\n\nPermissões de acesso para outros usuários.\n\nComentário:\nO compartilhamento geralmente envolve a definição de permissões de leitura, gravação ou controle total.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nPermissões costumam aparecer associadas a leitura, gravação e modificação.\n"
+        "dicaBanca": "\nPermissões costumam aparecer associadas a leitura, gravação e modificação.\n",
+        "id": "arquivos_035",
+        "subtopico": "permissoes_compartilhamento_rede"
     },
     {
         "pergunta": "Sobre arquivos compactados, assinale a alternativa correta.",
@@ -507,7 +577,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "\nO nível de compactação depende do tipo de dado armazenado.\n",
         "feedbackErro": "A resposta correta é:\n\nA compactação pode reduzir o tamanho de determinados arquivos, dependendo de seu conteúdo.\n\nComentário:\nO nível de compactação depende do tipo de dado armazenado.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nArquivos já compactados costumam apresentar pouca redução adicional.\n"
+        "dicaBanca": "\nArquivos já compactados costumam apresentar pouca redução adicional.\n",
+        "id": "arquivos_036",
+        "subtopico": "compactacao_midias_imagens"
     },
     {
         "pergunta": "Qual dispositivo abaixo normalmente oferece maior capacidade de armazenamento?",
@@ -521,7 +593,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "\nEntre as opções apresentadas, o SSD de 1 TB possui a maior capacidade.\n",
         "feedbackErro": "A resposta correta é:\n\nSSD de 1 TB.\n\nComentário:\nEntre as opções apresentadas, o SSD de 1 TB possui a maior capacidade.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nQuestões desse tipo exigem atenção às unidades de medida.\n"
+        "dicaBanca": "\nQuestões desse tipo exigem atenção às unidades de medida.\n",
+        "id": "arquivos_037",
+        "subtopico": "armazenamento_dispositivos_nuvem"
     },
     {
         "pergunta": "Quando um arquivo é renomeado, ocorre necessariamente:",
@@ -535,7 +609,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "\nRenomear modifica apenas o nome do arquivo, não seu conteúdo.\n",
         "feedbackErro": "A resposta correta é:\n\nA alteração apenas de sua identificação nominal.\n\nComentário:\nRenomear modifica apenas o nome do arquivo, não seu conteúdo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nTrocar nome não significa converter nem modificar o arquivo.\n"
+        "dicaBanca": "\nTrocar nome não significa converter nem modificar o arquivo.\n",
+        "id": "arquivos_038",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Sobre o armazenamento em nuvem, assinale a alternativa incorreta.",
@@ -549,7 +625,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "\nMesmo em serviços de nuvem, continuam existindo preocupações relacionadas à segurança dos dados.\n",
         "feedbackErro": "A resposta correta é:\n\nDispensa totalmente qualquer preocupação com segurança.\n\nComentário:\nMesmo em serviços de nuvem, continuam existindo preocupações relacionadas à segurança dos dados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nQuestões com palavras como \"sempre\", \"nunca\" e \"totalmente\" costumam esconder pegadinhas.\n"
+        "dicaBanca": "\nQuestões com palavras como \"sempre\", \"nunca\" e \"totalmente\" costumam esconder pegadinhas.\n",
+        "id": "arquivos_039",
+        "subtopico": "armazenamento_dispositivos_nuvem"
     },
     {
         "pergunta": "Assinale a alternativa que apresenta apenas dispositivos destinados ao armazenamento de dados.",
@@ -563,7 +641,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "\nSSD, HD e Pendrive são dispositivos utilizados para armazenamento de dados.\n",
         "feedbackErro": "A resposta correta é:\n\nSSD, HD e Pendrive.\n\nComentário:\nSSD, HD e Pendrive são dispositivos utilizados para armazenamento de dados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nA banca adora misturar hardware de armazenamento com hardware de processamento.\n"
+        "dicaBanca": "\nA banca adora misturar hardware de armazenamento com hardware de processamento.\n",
+        "id": "arquivos_040",
+        "subtopico": "armazenamento_dispositivos_nuvem"
     },
     {
         "pergunta": "Em uma política de proteção de dados, o backup completo caracteriza-se por:",
@@ -577,7 +657,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "\nO backup completo realiza uma cópia integral de todos os dados selecionados, independentemente de alterações anteriores.\n",
         "feedbackErro": "A resposta correta é:\n\nCopiar todos os dados selecionados em cada execução.\n\nComentário:\nO backup completo realiza uma cópia integral de todos os dados selecionados, independentemente de alterações anteriores.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nBackup completo = todos os dados.\n"
+        "dicaBanca": "\nBackup completo = todos os dados.\n",
+        "id": "arquivos_041",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "O backup incremental tem como principal característica:",
@@ -591,7 +673,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "\nO backup incremental copia apenas os arquivos modificados desde o último backup, seja ele completo ou incremental.\n",
         "feedbackErro": "A resposta correta é:\n\nCopiar apenas os arquivos alterados desde o último backup realizado.\n\nComentário:\nO backup incremental copia apenas os arquivos modificados desde o último backup, seja ele completo ou incremental.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nIncremental = desde o último backup.\n"
+        "dicaBanca": "\nIncremental = desde o último backup.\n",
+        "id": "arquivos_042",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "O backup diferencial copia:",
@@ -605,7 +689,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "\nO diferencial considera sempre como referência o último backup completo.\n",
         "feedbackErro": "A resposta correta é:\n\nOs arquivos alterados desde o último backup completo.\n\nComentário:\nO diferencial considera sempre como referência o último backup completo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nDiferencial = desde o último backup completo.\n"
+        "dicaBanca": "\nDiferencial = desde o último backup completo.\n",
+        "id": "arquivos_043",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "Assinale a alternativa que apresenta corretamente uma vantagem do backup incremental.",
@@ -619,7 +705,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "\nComo apenas as alterações são copiadas, o backup incremental tende a ser mais rápido e econômico.\n",
         "feedbackErro": "A resposta correta é:\n\nExecução normalmente mais rápida e com menor volume de dados copiados.\n\nComentário:\nComo apenas as alterações são copiadas, o backup incremental tende a ser mais rápido e econômico.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nIncremental economiza tempo e armazenamento.\n"
+        "dicaBanca": "\nIncremental economiza tempo e armazenamento.\n",
+        "id": "arquivos_044",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "Uma desvantagem típica do backup incremental durante a restauração é:",
@@ -633,7 +721,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "\nA restauração exige o backup completo e todos os incrementais posteriores.\n",
         "feedbackErro": "A resposta correta é:\n\nNecessidade de utilizar o backup completo e todos os incrementais subsequentes.\n\nComentário:\nA restauração exige o backup completo e todos os incrementais posteriores.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nIncremental = backup pequeno, restauração mais complexa.\n"
+        "dicaBanca": "\nIncremental = backup pequeno, restauração mais complexa.\n",
+        "id": "arquivos_045",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "Uma organização executou um backup completo no domingo e backups diferenciais de segunda a sexta. Na sexta-feira, o backup diferencial conterá:",
@@ -647,7 +737,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "\nO backup diferencial acumula todas as alterações desde o último backup completo.\n",
         "feedbackErro": "A resposta correta é:\n\nAs alterações realizadas desde o último backup completo.\n\nComentário:\nO backup diferencial acumula todas as alterações desde o último backup completo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nDiferencial cresce a cada dia até o próximo backup completo.\n"
+        "dicaBanca": "\nDiferencial cresce a cada dia até o próximo backup completo.\n",
+        "id": "arquivos_046",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "Assinale a alternativa correta sobre a restauração de backups.",
@@ -661,7 +753,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "\nA restauração é o processo de recuperação dos dados armazenados em backup.\n",
         "feedbackErro": "A resposta correta é:\n\nA restauração permite recuperar dados previamente armazenados em backup.\n\nComentário:\nA restauração é o processo de recuperação dos dados armazenados em backup.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nBackup sem restauração não possui utilidade prática.\n"
+        "dicaBanca": "\nBackup sem restauração não possui utilidade prática.\n",
+        "id": "arquivos_047",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "Uma estratégia recomendada para proteção de dados consiste em:",
@@ -675,7 +769,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "\nBoas práticas recomendam múltiplas cópias armazenadas em locais diferentes.\n",
         "feedbackErro": "A resposta correta é:\n\nManter múltiplas cópias dos dados em locais distintos.\n\nComentário:\nBoas práticas recomendam múltiplas cópias armazenadas em locais diferentes.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nA regra 3-2-1 aparece frequentemente em provas de informática.\n"
+        "dicaBanca": "\nA regra 3-2-1 aparece frequentemente em provas de informática.\n",
+        "id": "arquivos_048",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "A chamada regra 3-2-1 de backup recomenda, entre outros aspectos:",
@@ -689,7 +785,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "\nA regra 3-2-1 é uma das práticas mais conhecidas para proteção de dados.\n",
         "feedbackErro": "A resposta correta é:\n\nTrês cópias dos dados, em dois tipos de mídia, sendo uma fora do local principal.\n\nComentário:\nA regra 3-2-1 é uma das práticas mais conhecidas para proteção de dados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\n3 cópias, 2 mídias diferentes, 1 cópia externa.\n"
+        "dicaBanca": "\n3 cópias, 2 mídias diferentes, 1 cópia externa.\n",
+        "id": "arquivos_049",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "A principal finalidade de um sistema de backup é:",
@@ -703,7 +801,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "\nO objetivo fundamental do backup é possibilitar a recuperação dos dados quando ocorrer algum incidente.\n",
         "feedbackErro": "A resposta correta é:\n\nPermitir a recuperação de dados em caso de perda, corrupção ou exclusão.\n\nComentário:\nO objetivo fundamental do backup é possibilitar a recuperação dos dados quando ocorrer algum incidente.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "\nQuando aparecer \"recuperação de dados\", pense imediatamente em backup.\n"
+        "dicaBanca": "\nQuando aparecer \"recuperação de dados\", pense imediatamente em backup.\n",
+        "id": "arquivos_050",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "Em um ambiente Windows com sistema de arquivos NTFS, as permissões aplicadas a uma pasta servem principalmente para:",
@@ -717,7 +817,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "Permissões NTFS controlam ações como leitura, gravação, modificação e execução sobre arquivos e pastas.",
         "feedbackErro": "A resposta correta é:\n\nDefinir quem pode acessar, modificar ou executar os arquivos contidos na pasta.\n\nComentário:\nPermissões NTFS controlam ações como leitura, gravação, modificação e execução sobre arquivos e pastas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Permissão está ligada a controle de acesso, não a conversão, velocidade ou tipo de arquivo."
+        "dicaBanca": "Permissão está ligada a controle de acesso, não a conversão, velocidade ou tipo de arquivo.",
+        "id": "arquivos_051",
+        "subtopico": "permissoes_compartilhamento_rede"
     },
     {
         "pergunta": "Em uma política de backup, a regra 3-2-1 recomenda manter:",
@@ -731,7 +833,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "A regra 3-2-1 é uma prática de resiliência: várias cópias, mídias diferentes e pelo menos uma cópia externa.",
         "feedbackErro": "A resposta correta é:\n\nTrês cópias dos dados, em dois tipos de mídia, com uma cópia fora do local principal.\n\nComentário:\nA regra 3-2-1 é uma prática de resiliência: várias cópias, mídias diferentes e pelo menos uma cópia externa.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "A banca pode misturar backup com senha, licença ou permissões. O núcleo da regra é cópia e localização."
+        "dicaBanca": "A banca pode misturar backup com senha, licença ou permissões. O núcleo da regra é cópia e localização.",
+        "id": "arquivos_052",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "Ao usar um caminho relativo como ..\\Relatorios\\maio.xlsx, o elemento '..' indica:",
@@ -745,7 +849,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "Em caminhos relativos, '..' representa o nível superior em relação ao diretório atual.",
         "feedbackErro": "A resposta correta é:\n\nO diretório imediatamente superior ao diretório atual.\n\nComentário:\nEm caminhos relativos, '..' representa o nível superior em relação ao diretório atual.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Caminho relativo depende da posição atual; caminho absoluto começa na raiz ou unidade."
+        "dicaBanca": "Caminho relativo depende da posição atual; caminho absoluto começa na raiz ou unidade.",
+        "id": "arquivos_053",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Em arquivos digitais, um hash criptográfico é útil principalmente para:",
@@ -759,7 +865,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "Um hash funciona como uma impressão digital do arquivo; alterações no conteúdo mudam o valor calculado.",
         "feedbackErro": "A resposta correta é:\n\nVerificar se o conteúdo de um arquivo foi alterado.\n\nComentário:\nUm hash funciona como uma impressão digital do arquivo; alterações no conteúdo mudam o valor calculado.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Hash está associado à integridade, não à compactação nem à recuperação de senha."
+        "dicaBanca": "Hash está associado à integridade, não à compactação nem à recuperação de senha.",
+        "id": "arquivos_054",
+        "subtopico": "seguranca_integridade_criptografia"
     },
     {
         "pergunta": "Quando um arquivo é sincronizado por um serviço de nuvem e editado simultaneamente em dois dispositivos sem conciliação adequada, pode ocorrer:",
@@ -773,7 +881,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "Serviços de sincronização podem gerar conflitos quando versões diferentes são alteradas antes de serem sincronizadas.",
         "feedbackErro": "A resposta correta é:\n\nA criação de cópias conflitantes ou versões divergentes do mesmo arquivo.\n\nComentário:\nServiços de sincronização podem gerar conflitos quando versões diferentes são alteradas antes de serem sincronizadas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Sincronização não é o mesmo que backup perfeito; conflitos e versões são temas cobrados em prova."
+        "dicaBanca": "Sincronização não é o mesmo que backup perfeito; conflitos e versões são temas cobrados em prova.",
+        "id": "arquivos_055",
+        "subtopico": "sincronizacao_versionamento_gestao"
     },
     {
         "pergunta": "A extensão de arquivo e o tipo MIME têm em comum o fato de:",
@@ -787,7 +897,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "Tanto a extensão quanto o tipo MIME ajudam sistemas e aplicações a identificar o tipo de conteúdo.",
         "feedbackErro": "A resposta correta é:\n\nIndicarem ou descreverem o tipo/formato de um conteúdo digital.\n\nComentário:\nTanto a extensão quanto o tipo MIME ajudam sistemas e aplicações a identificar o tipo de conteúdo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Identificação de tipo não significa segurança nem conversão automática."
+        "dicaBanca": "Identificação de tipo não significa segurança nem conversão automática.",
+        "id": "arquivos_056",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Em sistemas de arquivos, metadados de um arquivo podem incluir:",
@@ -801,7 +913,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "Metadados descrevem informações sobre o arquivo, como tamanho, datas, dono, permissões e atributos.",
         "feedbackErro": "A resposta correta é:\n\nTamanho, datas de criação/modificação, proprietário e atributos.\n\nComentário:\nMetadados descrevem informações sobre o arquivo, como tamanho, datas, dono, permissões e atributos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Metadado é dado sobre o dado; não se limita ao conteúdo visível do documento."
+        "dicaBanca": "Metadado é dado sobre o dado; não se limita ao conteúdo visível do documento.",
+        "id": "arquivos_057",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Ao excluir um arquivo localizado em uma pasta compartilhada de rede, é comum que:",
@@ -815,7 +929,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "Arquivos apagados em compartilhamentos de rede nem sempre passam pela Lixeira local; a recuperação depende da estrutura do servidor e de backups.",
         "feedbackErro": "A resposta correta é:\n\nA recuperação dependa das configurações do servidor, versões anteriores ou backup.\n\nComentário:\nArquivos apagados em compartilhamentos de rede nem sempre passam pela Lixeira local; a recuperação depende da estrutura do servidor e de backups.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Cuidado: comportamento de exclusão local e exclusão em rede pode ser diferente."
+        "dicaBanca": "Cuidado: comportamento de exclusão local e exclusão em rede pode ser diferente.",
+        "id": "arquivos_058",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Um arquivo marcado como 'somente leitura' geralmente:",
@@ -829,7 +945,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "O atributo somente leitura restringe modificações diretas, mas não impede necessariamente a visualização.",
         "feedbackErro": "A resposta correta é:\n\nPode ser aberto para consulta, mas sua alteração direta pode ser bloqueada ou exigir remoção do atributo.\n\nComentário:\nO atributo somente leitura restringe modificações diretas, mas não impede necessariamente a visualização.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Somente leitura não é o mesmo que oculto, criptografado ou protegido por senha."
+        "dicaBanca": "Somente leitura não é o mesmo que oculto, criptografado ou protegido por senha.",
+        "id": "arquivos_059",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "No Windows, caracteres como \\ / : * ? \" < > | são relevantes em nomes de arquivos porque:",
@@ -843,7 +961,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "Esses caracteres possuem funções especiais em caminhos e comandos, por isso são inválidos em nomes comuns de arquivos no Windows.",
         "feedbackErro": "A resposta correta é:\n\nSão reservados ou inválidos para nomes de arquivos e caminhos.\n\nComentário:\nEsses caracteres possuem funções especiais em caminhos e comandos, por isso são inválidos em nomes comuns de arquivos no Windows.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "A banca costuma cobrar restrições de nomes de arquivos junto com caminhos e extensões."
+        "dicaBanca": "A banca costuma cobrar restrições de nomes de arquivos junto com caminhos e extensões.",
+        "id": "arquivos_060",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Em um backup diferencial, se o último backup completo ocorreu no domingo, o backup diferencial de quarta-feira copiará:",
@@ -857,7 +977,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "O diferencial usa como referência o último backup completo, copiando tudo que mudou desde ele.",
         "feedbackErro": "A resposta correta é:\n\nOs arquivos alterados desde o backup completo de domingo.\n\nComentário:\nO diferencial usa como referência o último backup completo, copiando tudo que mudou desde ele.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Incremental olha para o último backup realizado; diferencial olha para o último completo."
+        "dicaBanca": "Incremental olha para o último backup realizado; diferencial olha para o último completo.",
+        "id": "arquivos_061",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "A principal diferença entre compactação com perda e compactação sem perda é que a compactação com perda:",
@@ -871,7 +993,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "Na compactação com perda, parte da informação é descartada para reduzir tamanho, comum em imagens, áudio e vídeo.",
         "feedbackErro": "A resposta correta é:\n\nRemove informações consideradas menos perceptíveis, podendo reduzir a fidelidade do arquivo.\n\nComentário:\nNa compactação com perda, parte da informação é descartada para reduzir tamanho, comum em imagens, áudio e vídeo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Sem perda permite recuperar os dados originais; com perda sacrifica fidelidade para reduzir tamanho."
+        "dicaBanca": "Sem perda permite recuperar os dados originais; com perda sacrifica fidelidade para reduzir tamanho.",
+        "id": "arquivos_062",
+        "subtopico": "compactacao_midias_imagens"
     },
     {
         "pergunta": "Um link simbólico em um sistema de arquivos é melhor compreendido como:",
@@ -885,7 +1009,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "Link simbólico é uma referência para outro local, não uma duplicação completa do conteúdo.",
         "feedbackErro": "A resposta correta é:\n\nUm caminho de referência que aponta para outro arquivo ou diretório.\n\nComentário:\nLink simbólico é uma referência para outro local, não uma duplicação completa do conteúdo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Não confunda link, atalho e cópia: todos facilitam acesso, mas não têm a mesma natureza técnica."
+        "dicaBanca": "Não confunda link, atalho e cópia: todos facilitam acesso, mas não têm a mesma natureza técnica.",
+        "id": "arquivos_063",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Um arquivo de imagem ISO normalmente representa:",
@@ -899,7 +1025,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "ISO é frequentemente usado como imagem de disco, podendo representar o conteúdo de uma mídia ou instalador.",
         "feedbackErro": "A resposta correta é:\n\nUma imagem de disco ou mídia óptica em formato de arquivo.\n\nComentário:\nISO é frequentemente usado como imagem de disco, podendo representar o conteúdo de uma mídia ou instalador.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "A extensão .iso costuma aparecer em instalação de sistemas e imagens de mídia."
+        "dicaBanca": "A extensão .iso costuma aparecer em instalação de sistemas e imagens de mídia.",
+        "id": "arquivos_064",
+        "subtopico": "compactacao_midias_imagens"
     },
     {
         "pergunta": "Em um controle de versões de documentos, o principal benefício é:",
@@ -913,7 +1041,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "Versionamento permite rastrear mudanças e voltar a estados anteriores, útil em colaboração e recuperação.",
         "feedbackErro": "A resposta correta é:\n\nPermitir acompanhar alterações e recuperar versões anteriores.\n\nComentário:\nVersionamento permite rastrear mudanças e voltar a estados anteriores, útil em colaboração e recuperação.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Versionamento não impede edição; ele registra ou organiza a evolução do arquivo."
+        "dicaBanca": "Versionamento não impede edição; ele registra ou organiza a evolução do arquivo.",
+        "id": "arquivos_065",
+        "subtopico": "sincronizacao_versionamento_gestao"
     },
     {
         "pergunta": "A expressão 'permissão herdada' em pastas indica que:",
@@ -927,7 +1057,9 @@ const arquivos = [
         "correta": 0,
         "feedbackAcerto": "Permissões herdadas são repassadas de um diretório pai para arquivos ou subpastas.",
         "feedbackErro": "A resposta correta é:\n\nAs regras de acesso foram recebidas de uma pasta superior na hierarquia.\n\nComentário:\nPermissões herdadas são repassadas de um diretório pai para arquivos ou subpastas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Em provas, herança costuma aparecer junto com permissões e estrutura hierárquica."
+        "dicaBanca": "Em provas, herança costuma aparecer junto com permissões e estrutura hierárquica.",
+        "id": "arquivos_066",
+        "subtopico": "permissoes_compartilhamento_rede"
     },
     {
         "pergunta": "Ao comparar 1 byte e 1 bit, é correto afirmar que:",
@@ -941,7 +1073,9 @@ const arquivos = [
         "correta": 1,
         "feedbackAcerto": "Um byte é formado por 8 bits, distinção fundamental em armazenamento e transmissão de dados.",
         "feedbackErro": "A resposta correta é:\n\n1 byte corresponde a 8 bits.\n\nComentário:\nUm byte é formado por 8 bits, distinção fundamental em armazenamento e transmissão de dados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Atenção às unidades: B maiúsculo geralmente byte; b minúsculo geralmente bit."
+        "dicaBanca": "Atenção às unidades: B maiúsculo geralmente byte; b minúsculo geralmente bit.",
+        "id": "arquivos_067",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Quando um arquivo é aberto diretamente de um anexo de e-mail e editado sem salvá-lo em local conhecido, há risco de:",
@@ -955,7 +1089,9 @@ const arquivos = [
         "correta": 2,
         "feedbackAcerto": "Editar anexos diretamente pode salvar alterações em locais temporários, dificultando a localização posterior.",
         "feedbackErro": "A resposta correta é:\n\nA edição ficar em pasta temporária ou não ser preservada como o usuário espera.\n\nComentário:\nEditar anexos diretamente pode salvar alterações em locais temporários, dificultando a localização posterior.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Boas práticas: baixar/salvar em pasta conhecida antes de editar documentos importantes."
+        "dicaBanca": "Boas práticas: baixar/salvar em pasta conhecida antes de editar documentos importantes.",
+        "id": "arquivos_068",
+        "subtopico": "sincronizacao_versionamento_gestao"
     },
     {
         "pergunta": "Um snapshot de volume ou sistema pode ser entendido como:",
@@ -969,7 +1105,9 @@ const arquivos = [
         "correta": 3,
         "feedbackAcerto": "Snapshot registra um estado em um ponto no tempo, podendo auxiliar em restauração ou recuperação.",
         "feedbackErro": "A resposta correta é:\n\nUm registro do estado de arquivos ou sistema em determinado momento.\n\nComentário:\nSnapshot registra um estado em um ponto no tempo, podendo auxiliar em restauração ou recuperação.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Snapshot não substitui necessariamente backup externo; ele é uma fotografia lógica do estado."
+        "dicaBanca": "Snapshot não substitui necessariamente backup externo; ele é uma fotografia lógica do estado.",
+        "id": "arquivos_069",
+        "subtopico": "armazenamento_dispositivos_nuvem"
     },
     {
         "pergunta": "Em relação a backup e sincronização em nuvem, assinale a alternativa mais adequada.",
@@ -983,7 +1121,9 @@ const arquivos = [
         "correta": 4,
         "feedbackAcerto": "Sincronizar mantém dispositivos alinhados; backup deve preservar cópias recuperáveis em caso de erro, falha ou exclusão.",
         "feedbackErro": "A resposta correta é:\n\nSincronização pode replicar alterações e exclusões, enquanto backup busca permitir recuperação de versões ou dados perdidos.\n\nComentário:\nSincronizar mantém dispositivos alinhados; backup deve preservar cópias recuperáveis em caso de erro, falha ou exclusão.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "A banca gosta de confundir nuvem com backup perfeito. Nem toda sincronização é backup."
+        "dicaBanca": "A banca gosta de confundir nuvem com backup perfeito. Nem toda sincronização é backup.",
+        "id": "arquivos_070",
+        "subtopico": "armazenamento_dispositivos_nuvem"
     },
     {
         "pergunta": "Em sistemas Windows, qual alternativa descreve corretamente uma limitação comum do FAT32 em comparação ao NTFS?",
@@ -998,7 +1138,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O FAT32 possui limite clássico de aproximadamente 4 GB por arquivo individual, enquanto o NTFS suporta arquivos maiores e recursos avançados.",
         "feedbackErro": "A resposta correta é:\n\nNão permite arquivos individuais maiores que 4 GB.\n\nComentário:\nO FAT32 possui limite clássico de aproximadamente 4 GB por arquivo individual, enquanto o NTFS suporta arquivos maiores e recursos avançados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "FAT32 costuma ser cobrado junto com NTFS e exFAT. Atenção ao limite de tamanho de arquivo.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_071",
+        "subtopico": "sistemas_arquivos_particoes"
     },
     {
         "pergunta": "No gerenciamento de arquivos, a extensão de um arquivo tem como principal finalidade:",
@@ -1013,7 +1155,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! A extensão ajuda o sistema operacional e os aplicativos a identificar o formato esperado, mas não altera nem garante o conteúdo interno.",
         "feedbackErro": "A resposta correta é:\n\nIndicar ao sistema e aos programas o formato esperado do arquivo.\n\nComentário:\nA extensão ajuda o sistema operacional e os aplicativos a identificar o formato esperado, mas não altera nem garante o conteúdo interno.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "A banca gosta de confundir extensão com conversão real de formato. Trocar .docx por .pdf não converte o arquivo.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_072",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Ao analisar um arquivo suspeito, qual informação é mais confiável para identificar seu tipo real do que apenas sua extensão?",
@@ -1028,7 +1172,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! A assinatura interna, também chamada de cabeçalho ou magic number, ajuda a identificar o formato real independentemente da extensão visível.",
         "feedbackErro": "A resposta correta é:\n\nA assinatura interna ou cabeçalho do arquivo.\n\nComentário:\nA assinatura interna, também chamada de cabeçalho ou magic number, ajuda a identificar o formato real independentemente da extensão visível.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Extensão pode ser alterada pelo usuário. A identificação técnica do formato depende também da estrutura interna do arquivo.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_073",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Em um caminho como C:\\Users\\Joao\\Documentos\\relatorio.pdf, a expressão C: representa:",
@@ -1043,7 +1189,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! No Windows, C: normalmente representa uma unidade lógica de armazenamento, como a partição principal do disco.",
         "feedbackErro": "A resposta correta é:\n\nA unidade lógica de armazenamento usada no caminho.\n\nComentário:\nNo Windows, C: normalmente representa uma unidade lógica de armazenamento, como a partição principal do disco.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Em caminhos do Windows, observe a unidade, as pastas intermediárias e o arquivo final.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_074",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Em sistemas do tipo Unix/Linux, um caminho iniciado por / geralmente indica:",
@@ -1058,7 +1206,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! A barra inicial / indica que o caminho parte do diretório raiz do sistema, caracterizando caminho absoluto.",
         "feedbackErro": "A resposta correta é:\n\nUm caminho absoluto a partir do diretório raiz.\n\nComentário:\nA barra inicial / indica que o caminho parte do diretório raiz do sistema, caracterizando caminho absoluto.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Windows costuma usar C:\\; Linux e Unix usam / como raiz do sistema de arquivos.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_075",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "O uso do caractere curinga * em pesquisas de arquivos normalmente permite:",
@@ -1073,7 +1223,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O asterisco funciona como curinga para representar qualquer sequência de caracteres em buscas e filtros de nomes.",
         "feedbackErro": "A resposta correta é:\n\nSubstituir qualquer sequência de caracteres no nome pesquisado.\n\nComentário:\nO asterisco funciona como curinga para representar qualquer sequência de caracteres em buscas e filtros de nomes.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Exemplo clássico: *.pdf localiza arquivos com extensão .pdf.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_076",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Em pesquisas por arquivos, o caractere ? normalmente é utilizado para:",
@@ -1088,7 +1240,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O ponto de interrogação representa um único caractere, enquanto o asterisco representa uma sequência de caracteres.",
         "feedbackErro": "A resposta correta é:\n\nRepresentar um único caractere desconhecido no nome pesquisado.\n\nComentário:\nO ponto de interrogação representa um único caractere, enquanto o asterisco representa uma sequência de caracteres.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "A diferença entre * e ? é simples e aparece muito em questões de busca de arquivos.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_077",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "No Windows, qual alternativa apresenta caracteres normalmente inválidos em nomes de arquivos?",
@@ -1103,7 +1257,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Caracteres como \\, /, :, *, ?, \" , <, > e | são reservados ou inválidos em nomes de arquivos no Windows.",
         "feedbackErro": "A resposta correta é:\n\nBarra, dois-pontos, asterisco e interrogação.\n\nComentário:\nCaracteres como \\, /, :, *, ?, \" , <, > e | são reservados ou inválidos em nomes de arquivos no Windows.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "A banca pode cobrar caracteres inválidos porque alguns deles têm função especial em caminhos e pesquisas.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_078",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Em relação à diferenciação entre letras maiúsculas e minúsculas em nomes de arquivos, assinale a alternativa mais adequada.",
@@ -1118,7 +1274,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Sistemas como Linux geralmente distinguem maiúsculas e minúsculas; Windows costuma não distinguir por padrão em nomes de arquivos.",
         "feedbackErro": "A resposta correta é:\n\nAlguns sistemas são sensíveis a maiúsculas e minúsculas, enquanto outros não são por padrão.\n\nComentário:\nSistemas como Linux geralmente distinguem maiúsculas e minúsculas; Windows costuma não distinguir por padrão em nomes de arquivos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Cuidado com afirmações absolutas. A regra depende do sistema de arquivos e da configuração.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_079",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "O conceito de diretório raiz em uma estrutura hierárquica de arquivos refere-se:",
@@ -1133,7 +1291,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O diretório raiz é o nível inicial da árvore de diretórios, a partir do qual os demais caminhos podem ser organizados.",
         "feedbackErro": "A resposta correta é:\n\nAo ponto inicial da árvore de diretórios.\n\nComentário:\nO diretório raiz é o nível inicial da árvore de diretórios, a partir do qual os demais caminhos podem ser organizados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Raiz é ponto de partida da estrutura; subpastas ficam abaixo dela.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_080",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Um caminho relativo difere de um caminho absoluto porque o caminho relativo:",
@@ -1148,7 +1308,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O caminho relativo parte do diretório atual; o caminho absoluto descreve a localização desde a raiz ou unidade.",
         "feedbackErro": "A resposta correta é:\n\nDepende do diretório atual como referência.\n\nComentário:\nO caminho relativo parte do diretório atual; o caminho absoluto descreve a localização desde a raiz ou unidade.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "A pergunta costuma trocar absoluto e relativo. Leia a referência do caminho.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_081",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Em redes Windows, um caminho no formato \\\\Servidor\\Compartilhamento\\Arquivo.docx é exemplo de:",
@@ -1163,7 +1325,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O formato UNC identifica recursos de rede, indicando servidor, compartilhamento e, quando necessário, pastas ou arquivos.",
         "feedbackErro": "A resposta correta é:\n\nCaminho UNC para recurso compartilhado em rede.\n\nComentário:\nO formato UNC identifica recursos de rede, indicando servidor, compartilhamento e, quando necessário, pastas ou arquivos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "UNC aparece muito em questões de arquivos em rede: \\\\servidor\\compartilhamento.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_082",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Em sistemas de arquivos, o journaling tem como finalidade principal:",
@@ -1178,7 +1342,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O journaling registra operações do sistema de arquivos, ajudando a preservar ou restaurar a consistência após interrupções inesperadas.",
         "feedbackErro": "A resposta correta é:\n\nRegistrar operações para facilitar a recuperação da consistência após falhas.\n\nComentário:\nO journaling registra operações do sistema de arquivos, ajudando a preservar ou restaurar a consistência após interrupções inesperadas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Journaling está ligado à integridade do sistema de arquivos, não à compactação ou segurança total.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_083",
+        "subtopico": "sistemas_arquivos_particoes"
     },
     {
         "pergunta": "Em um sistema de arquivos, a alocação de espaço tem relação direta com:",
@@ -1193,7 +1359,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O sistema de arquivos organiza dados em unidades como blocos ou clusters, controlando como o espaço do dispositivo é ocupado.",
         "feedbackErro": "A resposta correta é:\n\nA forma como blocos ou clusters são usados para armazenar dados.\n\nComentário:\nO sistema de arquivos organiza dados em unidades como blocos ou clusters, controlando como o espaço do dispositivo é ocupado.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Cluster e bloco aparecem como unidades de alocação; não confunda com pasta ou extensão.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_084",
+        "subtopico": "sistemas_arquivos_particoes"
     },
     {
         "pergunta": "No gerenciamento de arquivos, fragmentação ocorre quando:",
@@ -1208,7 +1376,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! A fragmentação ocorre quando partes do arquivo ficam espalhadas em diferentes regiões do disco, principalmente em discos magnéticos.",
         "feedbackErro": "A resposta correta é:\n\nPartes de um arquivo ficam gravadas em áreas não contíguas do disco.\n\nComentário:\nA fragmentação ocorre quando partes do arquivo ficam espalhadas em diferentes regiões do disco, principalmente em discos magnéticos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Fragmentação é mais associada a HDs. SSDs não devem ser tratados como HDs em questões de desfragmentação.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_085",
+        "subtopico": "sistemas_arquivos_particoes"
     },
     {
         "pergunta": "Sobre desfragmentação, assinale a alternativa mais adequada para provas de Informática.",
@@ -1223,7 +1393,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! A desfragmentação faz sentido principalmente em discos rígidos magnéticos; SSDs usam outra lógica e não se beneficiam da mesma forma.",
         "feedbackErro": "A resposta correta é:\n\nPode melhorar a organização de dados em HDs, mas não é indicada da mesma forma para SSDs.\n\nComentário:\nA desfragmentação faz sentido principalmente em discos rígidos magnéticos; SSDs usam outra lógica e não se beneficiam da mesma forma.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Bancas atuais cobram a diferença entre manutenção de HD e SSD.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_086",
+        "subtopico": "sistemas_arquivos_particoes"
     },
     {
         "pergunta": "Uma partição de disco pode ser corretamente compreendida como:",
@@ -1238,7 +1410,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Partição é uma divisão lógica criada em uma unidade física ou virtual, podendo receber sistema de arquivos próprio.",
         "feedbackErro": "A resposta correta é:\n\nUma divisão lógica de uma unidade de armazenamento.\n\nComentário:\nPartição é uma divisão lógica criada em uma unidade física ou virtual, podendo receber sistema de arquivos próprio.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Partição não é pasta comum. Ela organiza o espaço da unidade em divisões lógicas.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_087",
+        "subtopico": "sistemas_arquivos_particoes"
     },
     {
         "pergunta": "A formatação de uma partição normalmente envolve:",
@@ -1253,7 +1427,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Formatar prepara a partição com um sistema de arquivos, permitindo que dados sejam gravados e organizados.",
         "feedbackErro": "A resposta correta é:\n\nA preparação da área com um sistema de arquivos para uso.\n\nComentário:\nFormatar prepara a partição com um sistema de arquivos, permitindo que dados sejam gravados e organizados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Formatação não é sinônimo de backup. Em geral, pode causar perda de dados se feita sem cuidado.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_088",
+        "subtopico": "sistemas_arquivos_particoes"
     },
     {
         "pergunta": "Em armazenamento, montar uma unidade ou volume significa:",
@@ -1268,7 +1444,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Montar um volume torna seu sistema de arquivos acessível ao sistema operacional por meio de uma letra, pasta ou ponto de montagem.",
         "feedbackErro": "A resposta correta é:\n\nTornar o sistema de arquivos acessível em determinado ponto da estrutura.\n\nComentário:\nMontar um volume torna seu sistema de arquivos acessível ao sistema operacional por meio de uma letra, pasta ou ponto de montagem.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Montagem está ligada ao acesso ao volume, não à conversão de arquivos.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_089",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Um arquivo ISO é mais associado a:",
@@ -1283,7 +1461,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Arquivos ISO são imagens de disco, frequentemente usadas para representar mídias de instalação ou cópias estruturadas de discos.",
         "feedbackErro": "A resposta correta é:\n\nUm protocolo de compartilhamento de impressoras.\n\nComentário:\nArquivos ISO são imagens de disco, frequentemente usadas para representar mídias de instalação ou cópias estruturadas de discos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "ISO não é extensão de planilha nem de atalho. É comum aparecer em instalação de sistemas.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_090",
+        "subtopico": "compactacao_midias_imagens"
     },
     {
         "pergunta": "No Windows, ao excluir arquivo de uma unidade de rede compartilhada, o comportamento pode diferir da exclusão local porque:",
@@ -1298,7 +1478,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Arquivos excluídos de locais de rede podem não ir para a Lixeira local, dependendo da configuração e do ambiente.",
         "feedbackErro": "A resposta correta é:\n\nO arquivo pode não passar pela Lixeira local do usuário.\n\nComentário:\nArquivos excluídos de locais de rede podem não ir para a Lixeira local, dependendo da configuração e do ambiente.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Delete local e delete em rede não devem ser tratados sempre como idênticos.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_091",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "O atributo Somente Leitura em um arquivo indica, em regra, que:",
@@ -1313,7 +1495,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Somente Leitura dificulta ou impede alterações no arquivo, mas não equivale a criptografia nem a controle completo de permissões.",
         "feedbackErro": "A resposta correta é:\n\nAlterações no conteúdo tendem a ser impedidas ou exigem remoção do atributo.\n\nComentário:\nSomente Leitura dificulta ou impede alterações no arquivo, mas não equivale a criptografia nem a controle completo de permissões.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Não confunda atributo simples com segurança robusta. Somente Leitura não é senha.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_092",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "O atributo Oculto em um arquivo tem como efeito típico:",
@@ -1328,7 +1512,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Arquivo oculto pode deixar de aparecer na visualização padrão, mas continua existindo e pode ser exibido mediante configuração.",
         "feedbackErro": "A resposta correta é:\n\nNão exibir o arquivo nas configurações padrão do gerenciador de arquivos.\n\nComentário:\nArquivo oculto pode deixar de aparecer na visualização padrão, mas continua existindo e pode ser exibido mediante configuração.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Oculto não significa protegido, criptografado ou excluído.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_093",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Em sistemas com controle de acesso, permissões de leitura, gravação e execução servem para:",
@@ -1343,7 +1529,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Permissões definem o que usuários ou grupos podem fazer, como ler, alterar, executar ou administrar arquivos e diretórios.",
         "feedbackErro": "A resposta correta é:\n\nControlar ações permitidas aos usuários sobre arquivos e pastas.\n\nComentário:\nPermissões definem o que usuários ou grupos podem fazer, como ler, alterar, executar ou administrar arquivos e diretórios.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Permissão é tema de segurança e administração. Não confunda com atributo visual do arquivo.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_094",
+        "subtopico": "permissoes_compartilhamento_rede"
     },
     {
         "pergunta": "No contexto de permissões, herança significa que:",
@@ -1358,7 +1546,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! A herança permite que subpastas e arquivos recebam permissões definidas na pasta superior, salvo configurações específicas.",
         "feedbackErro": "A resposta correta é:\n\nPermissões de uma pasta podem ser propagadas para itens contidos nela.\n\nComentário:\nA herança permite que subpastas e arquivos recebam permissões definidas na pasta superior, salvo configurações específicas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Herança de permissões é muito cobrada quando a questão fala em pastas, subpastas e grupos de usuários.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_095",
+        "subtopico": "permissoes_compartilhamento_rede"
     },
     {
         "pergunta": "Em uma pasta compartilhada do Windows, permissões de compartilhamento e permissões NTFS devem ser analisadas porque:",
@@ -1373,7 +1563,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Quando há compartilhamento em rede e NTFS, o acesso efetivo pode resultar da combinação entre permissões de compartilhamento e permissões locais.",
         "feedbackErro": "A resposta correta é:\n\nO acesso efetivo pode depender da combinação entre elas.\n\nComentário:\nQuando há compartilhamento em rede e NTFS, o acesso efetivo pode resultar da combinação entre permissões de compartilhamento e permissões locais.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Em provas, a palavra 'efetivo' costuma indicar soma ou restrição prática das permissões aplicáveis.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_096",
+        "subtopico": "permissoes_compartilhamento_rede"
     },
     {
         "pergunta": "Um atalho no Windows é diferente do arquivo original porque o atalho:",
@@ -1388,7 +1580,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Atalho é uma referência para um destino. Excluir o atalho não exclui necessariamente o arquivo original.",
         "feedbackErro": "A resposta correta é:\n\nApenas aponta para um destino, facilitando o acesso ao recurso.\n\nComentário:\nAtalho é uma referência para um destino. Excluir o atalho não exclui necessariamente o arquivo original.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "A banca gosta de perguntar se atalho é cópia. Não é: é referência.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_097",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Um link simbólico em sistemas de arquivos pode ser entendido como:",
@@ -1403,7 +1597,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Link simbólico é uma referência no sistema de arquivos que aponta para outro caminho, arquivo ou diretório.",
         "feedbackErro": "A resposta correta é:\n\nUma referência especial que aponta para outro arquivo ou diretório.\n\nComentário:\nLink simbólico é uma referência no sistema de arquivos que aponta para outro caminho, arquivo ou diretório.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Link simbólico e atalho têm ideia de referência, mas podem funcionar em nível diferente do sistema de arquivos.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_098",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Em sistemas que suportam hard links, é correto afirmar que um hard link:",
@@ -1418,7 +1614,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Hard links permitem que mais de um nome de arquivo referencie o mesmo conteúdo/inode, conforme suporte do sistema de arquivos.",
         "feedbackErro": "A resposta correta é:\n\nPode permitir que mais de um nome referencie o mesmo conteúdo no sistema de arquivos.\n\nComentário:\nHard links permitem que mais de um nome de arquivo referencie o mesmo conteúdo/inode, conforme suporte do sistema de arquivos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Hard link não é simples cópia; a ideia central é múltipla referência ao mesmo conteúdo.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_099",
+        "subtopico": "pastas_caminhos_links"
     },
     {
         "pergunta": "Ao renomear um arquivo sem alterar sua extensão, o que normalmente permanece inalterado?",
@@ -1433,7 +1631,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Renomear altera a identificação nominal, mas não modifica necessariamente o conteúdo armazenado no arquivo.",
         "feedbackErro": "A resposta correta é:\n\nO conteúdo interno do arquivo.\n\nComentário:\nRenomear altera a identificação nominal, mas não modifica necessariamente o conteúdo armazenado no arquivo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Trocar nome não significa editar conteúdo. Essa é pegadinha clássica.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_100",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Ao copiar um arquivo para outra pasta na mesma unidade, mantendo o original, ocorre:",
@@ -1448,7 +1648,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Copiar cria outra ocorrência do arquivo no destino e preserva o arquivo na origem.",
         "feedbackErro": "A resposta correta é:\n\nA criação de uma nova cópia no destino.\n\nComentário:\nCopiar cria outra ocorrência do arquivo no destino e preserva o arquivo na origem.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Copiar preserva origem; mover transfere. A banca troca esses verbos com frequência.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_101",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Ao mover um arquivo para outra pasta na mesma unidade, em regra, o sistema tende a:",
@@ -1463,7 +1665,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Na mesma unidade, mover geralmente altera a referência/localização lógica; o arquivo deixa de aparecer na origem.",
         "feedbackErro": "A resposta correta é:\n\nAtualizar a localização lógica do arquivo sem manter cópia na origem.\n\nComentário:\nNa mesma unidade, mover geralmente altera a referência/localização lógica; o arquivo deixa de aparecer na origem.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Mover dentro da mesma unidade pode ser mais rápido que copiar entre unidades.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_102",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Ao mover um arquivo entre unidades diferentes, é comum que a operação envolva:",
@@ -1478,7 +1682,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Entre unidades diferentes, mover costuma equivaler a copiar para o destino e remover da origem quando a cópia é concluída.",
         "feedbackErro": "A resposta correta é:\n\nCópia para o destino e remoção da origem ao final.\n\nComentário:\nEntre unidades diferentes, mover costuma equivaler a copiar para o destino e remover da origem quando a cópia é concluída.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "A diferença entre mover na mesma unidade e entre unidades é uma cobrança mais refinada.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_103",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "A opção 'Enviar para > Pasta compactada' no Windows está relacionada à criação de arquivo:",
@@ -1493,7 +1699,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O recurso cria normalmente um arquivo ZIP, agrupando e compactando itens selecionados.",
         "feedbackErro": "A resposta correta é:\n\nZIP\n\nComentário:\nO recurso cria normalmente um arquivo ZIP, agrupando e compactando itens selecionados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Pasta compactada do Windows remete a ZIP, não a EXE ou ISO.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_104",
+        "subtopico": "compactacao_midias_imagens"
     },
     {
         "pergunta": "Ao extrair um arquivo ZIP, o usuário normalmente:",
@@ -1508,7 +1716,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Extrair ou descompactar significa recuperar os itens armazenados dentro do arquivo compactado.",
         "feedbackErro": "A resposta correta é:\n\nObtém os arquivos contidos no pacote compactado.\n\nComentário:\nExtrair ou descompactar significa recuperar os itens armazenados dentro do arquivo compactado.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Compactar junta/reduz; extrair recupera o conteúdo.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_105",
+        "subtopico": "compactacao_midias_imagens"
     },
     {
         "pergunta": "Uma compactação sem perdas é aquela que:",
@@ -1523,7 +1733,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Na compactação sem perdas, os dados originais podem ser reconstruídos após a descompactação.",
         "feedbackErro": "A resposta correta é:\n\nPermite recuperar o conteúdo original após a descompactação.\n\nComentário:\nNa compactação sem perdas, os dados originais podem ser reconstruídos após a descompactação.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "ZIP é exemplo comum de compactação sem perdas aplicada a arquivos.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_106",
+        "subtopico": "compactacao_midias_imagens"
     },
     {
         "pergunta": "Em comparação com documentos de texto simples, arquivos de imagem JPEG geralmente usam técnica associada a:",
@@ -1538,7 +1750,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! JPEG costuma empregar compressão com perdas, reduzindo tamanho ao descartar parte de informações visuais.",
         "feedbackErro": "A resposta correta é:\n\nCompressão com perdas para reduzir tamanho.\n\nComentário:\nJPEG costuma empregar compressão com perdas, reduzindo tamanho ao descartar parte de informações visuais.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Nem toda compactação é igual. Em imagens, diferencie PNG e JPEG em termos gerais.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_107",
+        "subtopico": "compactacao_midias_imagens"
     },
     {
         "pergunta": "Um arquivo com extensão .lnk no Windows está normalmente associado a:",
@@ -1553,7 +1767,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! A extensão .lnk é associada a atalhos do Windows, que apontam para programas, arquivos, pastas ou recursos.",
         "feedbackErro": "A resposta correta é:\n\nAtalho para outro recurso do sistema.\n\nComentário:\nA extensão .lnk é associada a atalhos do Windows, que apontam para programas, arquivos, pastas ou recursos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Extensões menos lembradas, como .lnk, aparecem em questões de nível intermediário.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_108",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Arquivos temporários são, em regra, criados para:",
@@ -1568,7 +1784,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Arquivos temporários auxiliam processos em execução, instalações, edições e caches, podendo ser removidos quando não necessários.",
         "feedbackErro": "A resposta correta é:\n\nApoiar operações momentâneas de programas ou do sistema.\n\nComentário:\nArquivos temporários auxiliam processos em execução, instalações, edições e caches, podendo ser removidos quando não necessários.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Temporário não significa automaticamente inútil durante o uso. A remoção exige cuidado conforme o contexto.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_109",
+        "subtopico": "operacoes_lixeira_atributos"
     },
     {
         "pergunta": "Um arquivo CSV é normalmente utilizado para:",
@@ -1583,7 +1801,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! CSV é um formato textual simples usado para representar dados em linhas e colunas, separados por vírgula, ponto e vírgula ou outro delimitador.",
         "feedbackErro": "A resposta correta é:\n\nArmazenar dados tabulares em formato textual separado por delimitadores.\n\nComentário:\nCSV é um formato textual simples usado para representar dados em linhas e colunas, separados por vírgula, ponto e vírgula ou outro delimitador.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "CSV não é planilha completa; é texto estruturado que pode ser aberto por planilhas.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_110",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Arquivos PDF são frequentemente usados porque:",
@@ -1598,7 +1818,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O PDF é usado para preservar a aparência do documento, facilitando compartilhamento e impressão com layout consistente.",
         "feedbackErro": "A resposta correta é:\n\nPreservam layout e apresentação do documento em diferentes ambientes.\n\nComentário:\nO PDF é usado para preservar a aparência do documento, facilitando compartilhamento e impressão com layout consistente.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "PDF pode conter texto, imagens e outros elementos. Não confunda com imagem simples.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_111",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Um arquivo executável recebido por e-mail deve ser tratado com cautela porque:",
@@ -1613,7 +1835,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Arquivos executáveis podem rodar código e, se maliciosos, comprometer o sistema.",
         "feedbackErro": "A resposta correta é:\n\nPode executar código no computador do usuário.\n\nComentário:\nArquivos executáveis podem rodar código e, se maliciosos, comprometer o sistema.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Extensões como .exe, .bat, .cmd, .scr e .msi exigem atenção em provas de segurança e arquivos.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_112",
+        "subtopico": "seguranca_integridade_criptografia"
     },
     {
         "pergunta": "Um arquivo .bat no Windows normalmente contém:",
@@ -1628,7 +1852,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Arquivos .bat são scripts em lote que podem executar comandos no ambiente Windows.",
         "feedbackErro": "A resposta correta é:\n\nComandos em lote executáveis pelo interpretador de comandos.\n\nComentário:\nArquivos .bat são scripts em lote que podem executar comandos no ambiente Windows.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Nem todo arquivo perigoso é .exe. Scripts também podem executar comandos.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_113",
+        "subtopico": "seguranca_integridade_criptografia"
     },
     {
         "pergunta": "Extensões como .docm e .xlsm indicam, respectivamente, documentos do Office:",
@@ -1643,7 +1869,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! No Microsoft Office, extensões terminadas em m, como .docm e .xlsm, indicam arquivos com suporte a macros.",
         "feedbackErro": "A resposta correta é:\n\nCom suporte a macros.\n\nComentário:\nNo Microsoft Office, extensões terminadas em m, como .docm e .xlsm, indicam arquivos com suporte a macros.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Macros são muito cobradas em segurança, pois podem automatizar tarefas e também ser usadas de forma maliciosa.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_114",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "A propriedade 'tamanho em disco' pode ser maior que o 'tamanho' do arquivo porque:",
@@ -1658,7 +1886,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O tamanho em disco considera a ocupação real nas unidades de alocação, podendo superar o tamanho lógico do arquivo.",
         "feedbackErro": "A resposta correta é:\n\nO sistema de arquivos aloca espaço em unidades mínimas como clusters.\n\nComentário:\nO tamanho em disco considera a ocupação real nas unidades de alocação, podendo superar o tamanho lógico do arquivo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Tamanho do arquivo e tamanho em disco não são necessariamente iguais.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_115",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Metadados de um arquivo podem incluir:",
@@ -1673,7 +1903,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Metadados são dados sobre o arquivo, como datas, autor, tamanho, dimensões, localização ou informações de câmera, conforme o tipo.",
         "feedbackErro": "A resposta correta é:\n\nInformações como autor, data, localização, dimensões ou propriedades do documento.\n\nComentário:\nMetadados são dados sobre o arquivo, como datas, autor, tamanho, dimensões, localização ou informações de câmera, conforme o tipo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Metadado é dado sobre dado. Em imagens, pode aparecer como EXIF.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_116",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Em fotografias digitais, dados EXIF podem armazenar:",
@@ -1688,7 +1920,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! EXIF é um conjunto de metadados comum em imagens, podendo registrar dados da câmera, data, orientação e localização, se disponível.",
         "feedbackErro": "A resposta correta é:\n\nInformações da captura, como câmera, data e, em alguns casos, localização.\n\nComentário:\nEXIF é um conjunto de metadados comum em imagens, podendo registrar dados da câmera, data, orientação e localização, se disponível.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "EXIF é muito associado a fotos. Pode envolver privacidade quando guarda localização.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_117",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "O uso de hash em arquivos, como SHA-256, está relacionado principalmente a:",
@@ -1703,7 +1937,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Funções hash geram um resumo do conteúdo; alterações no arquivo tendem a mudar o resultado, auxiliando a verificação de integridade.",
         "feedbackErro": "A resposta correta é:\n\nVerificar integridade ou identificar alterações no conteúdo.\n\nComentário:\nFunções hash geram um resumo do conteúdo; alterações no arquivo tendem a mudar o resultado, auxiliando a verificação de integridade.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Hash não criptografa o arquivo por si só. Ele ajuda a comparar integridade.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_118",
+        "subtopico": "seguranca_integridade_criptografia"
     },
     {
         "pergunta": "Um checksum utilizado na distribuição de arquivos serve principalmente para:",
@@ -1718,7 +1954,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O checksum permite comparar um valor calculado no arquivo baixado com o valor publicado pelo fornecedor, detectando alterações ou corrupção.",
         "feedbackErro": "A resposta correta é:\n\nConferir se o arquivo recebido corresponde ao arquivo esperado.\n\nComentário:\nO checksum permite comparar um valor calculado no arquivo baixado com o valor publicado pelo fornecedor, detectando alterações ou corrupção.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Checksum e hash aparecem ligados à integridade de downloads.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_119",
+        "subtopico": "seguranca_integridade_criptografia"
     },
     {
         "pergunta": "O backup completo é caracterizado por:",
@@ -1733,7 +1971,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O backup completo realiza uma cópia integral do conjunto selecionado, independentemente de alterações anteriores.",
         "feedbackErro": "A resposta correta é:\n\nCopiar todos os dados selecionados na execução do backup.\n\nComentário:\nO backup completo realiza uma cópia integral do conjunto selecionado, independentemente de alterações anteriores.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Full backup costuma consumir mais tempo e espaço, mas simplifica a restauração.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_120",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "O backup incremental diferencia-se do diferencial porque o incremental:",
@@ -1748,7 +1988,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O incremental copia mudanças desde o backup anterior mais recente; o diferencial considera o último backup completo.",
         "feedbackErro": "A resposta correta é:\n\nCopia alterações desde o último backup realizado, completo ou incremental.\n\nComentário:\nO incremental copia mudanças desde o backup anterior mais recente; o diferencial considera o último backup completo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Incremental = desde o último backup. Diferencial = desde o último completo.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_121",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "O backup diferencial copia, em regra:",
@@ -1763,7 +2005,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! O diferencial acumula as alterações ocorridas desde o último backup completo.",
         "feedbackErro": "A resposta correta é:\n\nOs arquivos alterados desde o último backup completo.\n\nComentário:\nO diferencial acumula as alterações ocorridas desde o último backup completo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Diferencial cresce com o tempo até o próximo backup completo.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_122",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "Na estratégia de backup 3-2-1, a ideia central é manter:",
@@ -1778,7 +2022,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! A regra 3-2-1 recomenda múltiplas cópias, diversidade de mídia e ao menos uma cópia externa/off-site.",
         "feedbackErro": "A resposta correta é:\n\nTrês cópias, em dois tipos de mídia, com uma cópia fora do local principal.\n\nComentário:\nA regra 3-2-1 recomenda múltiplas cópias, diversidade de mídia e ao menos uma cópia externa/off-site.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "A banca pode cobrar backup como continuidade e recuperação, não só como cópia simples.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_123",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "RPO, em contexto de backup e recuperação, está mais ligado a:",
@@ -1793,7 +2039,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! RPO indica o ponto de recuperação desejado, isto é, quanto dado a organização tolera perder em termos de tempo.",
         "feedbackErro": "A resposta correta é:\n\nQuantidade máxima aceitável de perda de dados medida no tempo.\n\nComentário:\nRPO indica o ponto de recuperação desejado, isto é, quanto dado a organização tolera perder em termos de tempo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "RPO trata perda de dados aceitável; RTO trata tempo de retorno do serviço.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_124",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "RTO, em planos de recuperação, refere-se principalmente:",
@@ -1808,7 +2056,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! RTO é o objetivo de tempo de recuperação, isto é, o prazo aceitável para retomada do serviço após incidente.",
         "feedbackErro": "A resposta correta é:\n\nAo tempo máximo aceitável para restaurar um serviço ou sistema.\n\nComentário:\nRTO é o objetivo de tempo de recuperação, isto é, o prazo aceitável para retomada do serviço após incidente.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "RTO = tempo para voltar. RPO = ponto de perda aceitável.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_125",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "Uma cópia de sombra ou snapshot é mais bem descrita como:",
@@ -1823,7 +2073,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Snapshot registra o estado de arquivos, volume ou sistema em um momento, auxiliando restauração ou versionamento.",
         "feedbackErro": "A resposta correta é:\n\nUm registro do estado de dados em determinado momento.\n\nComentário:\nSnapshot registra o estado de arquivos, volume ou sistema em um momento, auxiliando restauração ou versionamento.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Snapshot pode ajudar, mas não substitui necessariamente uma política completa de backup externo.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_126",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "Versionamento de arquivos em serviços de armazenamento tem como vantagem:",
@@ -1838,7 +2090,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Versionamento permite voltar a versões anteriores, útil em edições indevidas, corrupção ou alterações acidentais.",
         "feedbackErro": "A resposta correta é:\n\nPermitir recuperar versões anteriores de um arquivo, conforme a política do serviço.\n\nComentário:\nVersionamento permite voltar a versões anteriores, útil em edições indevidas, corrupção ou alterações acidentais.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Versionamento não é garantia infinita. Depende de retenção e configuração do serviço.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_127",
+        "subtopico": "sincronizacao_versionamento_gestao"
     },
     {
         "pergunta": "RAID, embora aumente disponibilidade ou desempenho em certas configurações, não deve ser tratado como backup porque:",
@@ -1853,7 +2107,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! RAID pode proteger contra falha de disco em alguns níveis, mas não substitui backup contra exclusão, ransomware ou corrupção lógica.",
         "feedbackErro": "A resposta correta é:\n\nPode replicar falhas lógicas, exclusões ou corrupção de dados.\n\nComentário:\nRAID pode proteger contra falha de disco em alguns níveis, mas não substitui backup contra exclusão, ransomware ou corrupção lógica.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Frase clássica de prova e prática: RAID não é backup.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_128",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "Deduplicação em armazenamento e backup consiste em:",
@@ -1868,7 +2124,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Deduplicação identifica dados repetidos e reduz redundância, economizando espaço em armazenamento ou backup.",
         "feedbackErro": "A resposta correta é:\n\nReduzir dados redundantes armazenando blocos repetidos de forma otimizada.\n\nComentário:\nDeduplicação identifica dados repetidos e reduz redundância, economizando espaço em armazenamento ou backup.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Deduplicação é otimização de espaço; não é o mesmo que compactação tradicional, embora ambas possam reduzir volume.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_129",
+        "subtopico": "backup_recuperacao_retencao"
     },
     {
         "pergunta": "Sincronização de arquivos em nuvem difere de backup porque a sincronização:",
@@ -1883,7 +2141,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Sincronização mantém conteúdos alinhados; por isso, exclusões ou alterações indevidas podem ser replicadas se não houver versionamento ou retenção adequada.",
         "feedbackErro": "A resposta correta é:\n\nPode replicar alterações e exclusões entre dispositivos conectados.\n\nComentário:\nSincronização mantém conteúdos alinhados; por isso, exclusões ou alterações indevidas podem ser replicadas se não houver versionamento ou retenção adequada.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Nuvem não é automaticamente backup. Analise se há histórico, retenção e restauração.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_130",
+        "subtopico": "sincronizacao_versionamento_gestao"
     },
     {
         "pergunta": "Em serviços como OneDrive ou Google Drive, um conflito de sincronização pode ocorrer quando:",
@@ -1898,7 +2158,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Conflitos surgem quando alterações concorrentes impedem o serviço de decidir automaticamente qual versão deve prevalecer.",
         "feedbackErro": "A resposta correta é:\n\nDuas versões do mesmo arquivo são alteradas em locais diferentes antes da sincronização completa.\n\nComentário:\nConflitos surgem quando alterações concorrentes impedem o serviço de decidir automaticamente qual versão deve prevalecer.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Conflito de sincronização é comum quando há edição offline ou simultânea.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_131",
+        "subtopico": "sincronizacao_versionamento_gestao"
     },
     {
         "pergunta": "Ao compartilhar um arquivo por link público, o principal risco é:",
@@ -1913,7 +2175,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Links públicos podem permitir acesso a qualquer pessoa que obtenha o link, conforme a configuração de compartilhamento.",
         "feedbackErro": "A resposta correta é:\n\nPessoas não previstas acessarem o conteúdo se o link for divulgado.\n\nComentário:\nLinks públicos podem permitir acesso a qualquer pessoa que obtenha o link, conforme a configuração de compartilhamento.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Em provas, observe a diferença entre compartilhar com usuários específicos e compartilhar por link.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_132",
+        "subtopico": "sincronizacao_versionamento_gestao"
     },
     {
         "pergunta": "A opção de compartilhar arquivo com permissão 'visualizar' geralmente permite:",
@@ -1928,7 +2192,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Permissão de visualização permite acesso ao conteúdo, mas não edição, salvo configurações adicionais do serviço.",
         "feedbackErro": "A resposta correta é:\n\nAbrir ou consultar o conteúdo sem editar, conforme configuração.\n\nComentário:\nPermissão de visualização permite acesso ao conteúdo, mas não edição, salvo configurações adicionais do serviço.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Visualizar, comentar e editar são níveis diferentes de permissão em muitos serviços.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_133",
+        "subtopico": "sincronizacao_versionamento_gestao"
     },
     {
         "pergunta": "Em organização documental, uma nomenclatura padronizada de arquivos contribui principalmente para:",
@@ -1943,7 +2209,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Padrões de nomes ajudam a localizar, ordenar, controlar versões e compreender o conteúdo sem abrir cada arquivo.",
         "feedbackErro": "A resposta correta é:\n\nFacilitar localização, controle de versões e identificação do conteúdo.\n\nComentário:\nPadrões de nomes ajudam a localizar, ordenar, controlar versões e compreender o conteúdo sem abrir cada arquivo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Organização de arquivos não é só estética; é gestão da informação.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_134",
+        "subtopico": "sincronizacao_versionamento_gestao"
     },
     {
         "pergunta": "Na gestão de versões, o nome relatorio_final_final2.pdf representa um problema porque:",
@@ -1958,7 +2226,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Nomes improvisados e repetitivos dificultam controle de versão, revisão e auditoria do documento.",
         "feedbackErro": "A resposta correta é:\n\nPode dificultar a identificação clara da versão correta do documento.\n\nComentário:\nNomes improvisados e repetitivos dificultam controle de versão, revisão e auditoria do documento.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Bancas podem cobrar boas práticas de organização, não apenas comandos do Windows.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_135",
+        "subtopico": "sincronizacao_versionamento_gestao"
     },
     {
         "pergunta": "O arquivamento de documentos difere de backup porque o arquivamento costuma ter foco em:",
@@ -1973,7 +2243,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Arquivamento prioriza guarda, organização e retenção; backup prioriza recuperação após falha, perda ou incidente.",
         "feedbackErro": "A resposta correta é:\n\nGuarda organizada de informações para consulta, retenção ou histórico.\n\nComentário:\nArquivamento prioriza guarda, organização e retenção; backup prioriza recuperação após falha, perda ou incidente.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Arquivo morto/arquivamento não é a mesma coisa que backup operacional.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_136",
+        "subtopico": "sincronizacao_versionamento_gestao"
     },
     {
         "pergunta": "Em ambiente corporativo, uma política de retenção de arquivos define:",
@@ -1988,7 +2260,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Política de retenção estabelece por quanto tempo documentos devem ser mantidos e quando podem ser descartados ou arquivados.",
         "feedbackErro": "A resposta correta é:\n\nPrazos e critérios para manter, arquivar ou eliminar documentos.\n\nComentário:\nPolítica de retenção estabelece por quanto tempo documentos devem ser mantidos e quando podem ser descartados ou arquivados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Retenção de documentos aparece em contexto administrativo, segurança e gestão da informação.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_137",
+        "subtopico": "sincronizacao_versionamento_gestao"
     },
     {
         "pergunta": "Uma quota de armazenamento aplicada a usuários tem como objetivo:",
@@ -2003,7 +2277,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Quotas controlam o uso de espaço por usuário, grupo ou volume, evitando consumo desorganizado do armazenamento.",
         "feedbackErro": "A resposta correta é:\n\nLimitar ou controlar o espaço que cada usuário pode ocupar.\n\nComentário:\nQuotas controlam o uso de espaço por usuário, grupo ou volume, evitando consumo desorganizado do armazenamento.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Quota está ligada a limite de espaço, não a velocidade de processamento.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_138",
+        "subtopico": "armazenamento_dispositivos_nuvem"
     },
     {
         "pergunta": "Um servidor de arquivos em uma rede corporativa tem como finalidade típica:",
@@ -2018,7 +2294,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Servidor de arquivos centraliza documentos e permite aplicar permissões, backup e organização de forma mais controlada.",
         "feedbackErro": "A resposta correta é:\n\nCentralizar armazenamento e compartilhamento de documentos com controle de acesso.\n\nComentário:\nServidor de arquivos centraliza documentos e permite aplicar permissões, backup e organização de forma mais controlada.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Servidor de arquivos não é apenas um computador comum; sua função principal é disponibilizar arquivos na rede.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_139",
+        "subtopico": "permissoes_compartilhamento_rede"
     },
     {
         "pergunta": "NAS, em armazenamento, é melhor definido como:",
@@ -2033,7 +2311,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! NAS é um armazenamento conectado à rede, permitindo acesso compartilhado a arquivos por usuários e dispositivos.",
         "feedbackErro": "A resposta correta é:\n\nDispositivo de armazenamento conectado à rede para compartilhamento de dados.\n\nComentário:\nNAS é um armazenamento conectado à rede, permitindo acesso compartilhado a arquivos por usuários e dispositivos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "NAS aparece em questões que misturam rede e arquivos. Pense em armazenamento compartilhado.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_140",
+        "subtopico": "armazenamento_dispositivos_nuvem"
     },
     {
         "pergunta": "SMB/CIFS em ambiente Windows está associado principalmente a:",
@@ -2048,7 +2328,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! SMB/CIFS é associado ao compartilhamento de arquivos e impressoras, muito comum em redes Windows.",
         "feedbackErro": "A resposta correta é:\n\nCompartilhamento de arquivos e impressoras em rede.\n\nComentário:\nSMB/CIFS é associado ao compartilhamento de arquivos e impressoras, muito comum em redes Windows.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Protocolos de compartilhamento podem aparecer junto com caminhos UNC.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_141",
+        "subtopico": "permissoes_compartilhamento_rede"
     },
     {
         "pergunta": "NFS é um protocolo geralmente relacionado a:",
@@ -2063,7 +2345,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! NFS permite compartilhamento de sistemas de arquivos pela rede, sendo tradicional em ambientes Unix/Linux.",
         "feedbackErro": "A resposta correta é:\n\nCompartilhamento de sistemas de arquivos em rede, comum em Unix/Linux.\n\nComentário:\nNFS permite compartilhamento de sistemas de arquivos pela rede, sendo tradicional em ambientes Unix/Linux.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "SMB costuma aparecer com Windows; NFS costuma aparecer com Unix/Linux.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_142",
+        "subtopico": "permissoes_compartilhamento_rede"
     },
     {
         "pergunta": "Ao mapear uma unidade de rede no Windows, o usuário normalmente:",
@@ -2078,7 +2362,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Mapear unidade atribui uma letra, como Z:, a um recurso compartilhado em rede, facilitando o acesso.",
         "feedbackErro": "A resposta correta é:\n\nAssocia um compartilhamento de rede a uma letra de unidade.\n\nComentário:\nMapear unidade atribui uma letra, como Z:, a um recurso compartilhado em rede, facilitando o acesso.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Unidade mapeada parece local, mas aponta para recurso de rede.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_143",
+        "subtopico": "permissoes_compartilhamento_rede"
     },
     {
         "pergunta": "Arquivos offline em sistemas de sincronização corporativa permitem:",
@@ -2093,7 +2379,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Arquivos offline mantêm cópias locais para uso sem conexão e sincronizam alterações quando a rede retorna.",
         "feedbackErro": "A resposta correta é:\n\nAcessar cópias locais de arquivos de rede quando desconectado, com sincronização posterior.\n\nComentário:\nArquivos offline mantêm cópias locais para uso sem conexão e sincronizam alterações quando a rede retorna.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Offline não significa fora de controle; pode haver conflito de versões ao reconectar.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_144",
+        "subtopico": "armazenamento_dispositivos_nuvem"
     },
     {
         "pergunta": "Um arquivo criptografado tem como característica principal:",
@@ -2108,7 +2396,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Criptografia protege o conteúdo por codificação, exigindo chave, senha ou autorização para leitura compreensível.",
         "feedbackErro": "A resposta correta é:\n\nConteúdo codificado para ser lido apenas com chave ou autorização adequada.\n\nComentário:\nCriptografia protege o conteúdo por codificação, exigindo chave, senha ou autorização para leitura compreensível.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Criptografar não é o mesmo que ocultar. O foco é proteger o conteúdo.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_145",
+        "subtopico": "seguranca_integridade_criptografia"
     },
     {
         "pergunta": "A compactação com senha de um arquivo ZIP deve ser entendida como:",
@@ -2123,7 +2413,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! ZIP com senha restringe o acesso ao conteúdo, mas a segurança depende do algoritmo e da força da senha.",
         "feedbackErro": "A resposta correta é:\n\nProteção de acesso ao conteúdo, conforme o método de criptografia usado.\n\nComentário:\nZIP com senha restringe o acesso ao conteúdo, mas a segurança depende do algoritmo e da força da senha.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Senha fraca compromete proteção. Não confunda senha com impossibilidade de cópia.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_146",
+        "subtopico": "compactacao_midias_imagens"
     },
     {
         "pergunta": "Assinatura digital aplicada a um documento eletrônico busca garantir principalmente:",
@@ -2138,7 +2430,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! Assinatura digital permite verificar a autoria/origem e detectar alterações posteriores no documento.",
         "feedbackErro": "A resposta correta é:\n\nAutenticidade e integridade do documento assinado.\n\nComentário:\nAssinatura digital permite verificar a autoria/origem e detectar alterações posteriores no documento.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Assinatura digital não é apenas imagem de assinatura escaneada. Envolve mecanismo criptográfico.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_147",
+        "subtopico": "seguranca_integridade_criptografia"
     },
     {
         "pergunta": "Um documento digitalizado por scanner em formato de imagem difere de um documento com OCR porque o OCR:",
@@ -2153,7 +2447,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! OCR reconhece caracteres em imagens ou PDFs digitalizados, permitindo busca textual e, em alguns casos, edição.",
         "feedbackErro": "A resposta correta é:\n\nReconhece caracteres e pode tornar o texto pesquisável ou editável.\n\nComentário:\nOCR reconhece caracteres em imagens ou PDFs digitalizados, permitindo busca textual e, em alguns casos, edição.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Scanner captura imagem; OCR interpreta texto na imagem.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_148",
+        "subtopico": "seguranca_integridade_criptografia"
     },
     {
         "pergunta": "Ao escolher formato para preservar transparência em imagem, um formato frequentemente adequado é:",
@@ -2168,7 +2464,9 @@ const arquivos = [
         "feedbackAcerto": "Correto! PNG é um formato de imagem que pode preservar transparência, diferentemente do JPEG em uso comum.",
         "feedbackErro": "A resposta correta é:\n\nPNG\n\nComentário:\nPNG é um formato de imagem que pode preservar transparência, diferentemente do JPEG em uso comum.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "Para imagens, memorize: JPEG é comum para fotos; PNG é comum para transparência e sem perdas.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_149",
+        "subtopico": "conceitos_extensoes_formatos"
     },
     {
         "pergunta": "Em relação a arquivos com extensão .tmp, assinale a alternativa mais adequada.",
@@ -2183,6 +2481,8 @@ const arquivos = [
         "feedbackAcerto": "Correto! Arquivos .tmp normalmente são temporários e podem ser criados durante instalações, edições, downloads ou execução de programas.",
         "feedbackErro": "A resposta correta é:\n\nCostumam estar associados a dados temporários criados por sistemas ou aplicativos.\n\nComentário:\nArquivos .tmp normalmente são temporários e podem ser criados durante instalações, edições, downloads ou execução de programas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
         "dicaBanca": "TMP remete a temporário. A banca pode cobrar sem afirmar que todo .tmp pode ser apagado sem risco naquele momento.",
-        "assunto": "arquivos"
+        "assunto": "arquivos",
+        "id": "arquivos_150",
+        "subtopico": "conceitos_extensoes_formatos"
     }
 ];

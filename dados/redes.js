@@ -13,7 +13,8 @@ const redes = [
         "feedbackAcerto": "Correto. O gateway padrão é o próximo salto usado para alcançar redes fora da sub-rede local.",
         "feedbackErro": "Resposta correta: Encaminhar pacotes destinados a redes externas à rede local. O gateway padrão é o próximo salto usado para alcançar redes fora da sub-rede local.",
         "dicaBanca": "Dica da banca: Gateway é a porta de saída lógica da rede local.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_002",
@@ -29,7 +30,8 @@ const redes = [
         "feedbackAcerto": "Correto. O gateway padrão é o próximo salto usado para alcançar redes fora da sub-rede local.",
         "feedbackErro": "Resposta correta: gateway padrão. O gateway padrão é o próximo salto usado para alcançar redes fora da sub-rede local.",
         "dicaBanca": "Dica da banca: Gateway é a porta de saída lógica da rede local.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_003",
@@ -45,7 +47,8 @@ const redes = [
         "feedbackAcerto": "Correto. O DHCP automatiza a entrega de parâmetros de rede, reduzindo configuração manual e conflitos.",
         "feedbackErro": "Resposta correta: Fornecer automaticamente configurações de rede aos dispositivos clientes. O DHCP automatiza a entrega de parâmetros de rede, reduzindo configuração manual e conflitos.",
         "dicaBanca": "Dica da banca: DHCP entrega configuração IP; DNS resolve nomes.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_004",
@@ -61,7 +64,8 @@ const redes = [
         "feedbackAcerto": "Correto. O DHCP automatiza a entrega de parâmetros de rede, reduzindo configuração manual e conflitos.",
         "feedbackErro": "Resposta correta: DHCP. O DHCP automatiza a entrega de parâmetros de rede, reduzindo configuração manual e conflitos.",
         "dicaBanca": "Dica da banca: DHCP entrega configuração IP; DNS resolve nomes.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_005",
@@ -77,7 +81,8 @@ const redes = [
         "feedbackAcerto": "Correto. O ARP mapeia IP para MAC no mesmo enlace, permitindo a entrega do quadro na LAN.",
         "feedbackErro": "Resposta correta: Descobrir o endereço MAC correspondente a um endereço IPv4 na rede local. O ARP mapeia IP para MAC no mesmo enlace, permitindo a entrega do quadro na LAN.",
         "dicaBanca": "Dica da banca: ARP relaciona IP e MAC; DNS relaciona nome e IP.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_006",
@@ -93,7 +98,8 @@ const redes = [
         "feedbackAcerto": "Correto. O ARP mapeia IP para MAC no mesmo enlace, permitindo a entrega do quadro na LAN.",
         "feedbackErro": "Resposta correta: ARP. O ARP mapeia IP para MAC no mesmo enlace, permitindo a entrega do quadro na LAN.",
         "dicaBanca": "Dica da banca: ARP relaciona IP e MAC; DNS relaciona nome e IP.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_007",
@@ -109,7 +115,8 @@ const redes = [
         "feedbackAcerto": "Correto. Faixas como 10/8, 172.16/12 e 192.168/16 são privadas e normalmente usam NAT para acesso externo.",
         "feedbackErro": "Resposta correta: Endereçamento usado em redes internas, sem roteamento direto na Internet pública. Faixas como 10/8, 172.16/12 e 192.168/16 são privadas e normalmente usam NAT para acesso externo.",
         "dicaBanca": "Dica da banca: Memorize as três faixas privadas do IPv4.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_008",
@@ -125,7 +132,8 @@ const redes = [
         "feedbackAcerto": "Correto. Faixas como 10/8, 172.16/12 e 192.168/16 são privadas e normalmente usam NAT para acesso externo.",
         "feedbackErro": "Resposta correta: endereço IPv4 privado. Faixas como 10/8, 172.16/12 e 192.168/16 são privadas e normalmente usam NAT para acesso externo.",
         "dicaBanca": "Dica da banca: Memorize as três faixas privadas do IPv4.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_009",
@@ -141,7 +149,8 @@ const redes = [
         "feedbackAcerto": "Correto. Endereços 169.254.x.x indicam autoconfiguração local, comum quando o DHCP falha.",
         "feedbackErro": "Resposta correta: Autoconfiguração IPv4 usada quando o cliente não obtém endereço via DHCP. Endereços 169.254.x.x indicam autoconfiguração local, comum quando o DHCP falha.",
         "dicaBanca": "Dica da banca: 169.254.x.x é forte indício de problema com DHCP.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_010",
@@ -157,7 +166,8 @@ const redes = [
         "feedbackAcerto": "Correto. Endereços 169.254.x.x indicam autoconfiguração local, comum quando o DHCP falha.",
         "feedbackErro": "Resposta correta: APIPA. Endereços 169.254.x.x indicam autoconfiguração local, comum quando o DHCP falha.",
         "dicaBanca": "Dica da banca: 169.254.x.x é forte indício de problema com DHCP.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_011",
@@ -173,7 +183,8 @@ const redes = [
         "feedbackAcerto": "Correto. SLAAC permite autoconfiguração IPv6 sem o mesmo modelo clássico do DHCPv4.",
         "feedbackErro": "Resposta correta: Autoconfiguração de endereços IPv6 a partir de anúncios de roteador. SLAAC permite autoconfiguração IPv6 sem o mesmo modelo clássico do DHCPv4.",
         "dicaBanca": "Dica da banca: SLAAC é tema típico de transição IPv6.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_012",
@@ -189,7 +200,8 @@ const redes = [
         "feedbackAcerto": "Correto. SLAAC permite autoconfiguração IPv6 sem o mesmo modelo clássico do DHCPv4.",
         "feedbackErro": "Resposta correta: SLAAC. SLAAC permite autoconfiguração IPv6 sem o mesmo modelo clássico do DHCPv4.",
         "dicaBanca": "Dica da banca: SLAAC é tema típico de transição IPv6.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_013",
@@ -205,7 +217,8 @@ const redes = [
         "feedbackAcerto": "Correto. PAT, também chamado NAT overload, usa portas para multiplexar conexões de vários hosts.",
         "feedbackErro": "Resposta correta: Permitir que vários hosts compartilhem um IP público diferenciando conexões por portas. PAT, também chamado NAT overload, usa portas para multiplexar conexões de vários hosts.",
         "dicaBanca": "Dica da banca: PAT é a forma doméstica mais comum de NAT.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_014",
@@ -221,7 +234,8 @@ const redes = [
         "feedbackAcerto": "Correto. PAT, também chamado NAT overload, usa portas para multiplexar conexões de vários hosts.",
         "feedbackErro": "Resposta correta: PAT. PAT, também chamado NAT overload, usa portas para multiplexar conexões de vários hosts.",
         "dicaBanca": "Dica da banca: PAT é a forma doméstica mais comum de NAT.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
     },
     {
         "id": "redes_015",
@@ -237,7 +251,8 @@ const redes = [
         "feedbackAcerto": "Correto. O redirecionamento de portas publica serviço interno por meio do IP/porta do equipamento de borda.",
         "feedbackErro": "Resposta correta: Redirecionar conexão recebida em uma porta externa para um host interno específico. O redirecionamento de portas publica serviço interno por meio do IP/porta do equipamento de borda.",
         "dicaBanca": "Dica da banca: Port forwarding exige cautela de segurança.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_016",
@@ -253,7 +268,8 @@ const redes = [
         "feedbackAcerto": "Correto. O redirecionamento de portas publica serviço interno por meio do IP/porta do equipamento de borda.",
         "feedbackErro": "Resposta correta: port forwarding. O redirecionamento de portas publica serviço interno por meio do IP/porta do equipamento de borda.",
         "dicaBanca": "Dica da banca: Port forwarding exige cautela de segurança.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
     },
     {
         "id": "redes_017",
@@ -269,7 +285,8 @@ const redes = [
         "feedbackAcerto": "Correto. Hub é equipamento simples de camada física, associado a colisões e tráfego desnecessário.",
         "feedbackErro": "Resposta correta: Repetir sinais recebidos para todas as portas conectadas. Hub é equipamento simples de camada física, associado a colisões e tráfego desnecessário.",
         "dicaBanca": "Dica da banca: Hub é menos inteligente que switch.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_018",
@@ -285,7 +302,8 @@ const redes = [
         "feedbackAcerto": "Correto. Hub é equipamento simples de camada física, associado a colisões e tráfego desnecessário.",
         "feedbackErro": "Resposta correta: hub. Hub é equipamento simples de camada física, associado a colisões e tráfego desnecessário.",
         "dicaBanca": "Dica da banca: Hub é menos inteligente que switch.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
     },
     {
         "id": "redes_019",
@@ -301,7 +319,8 @@ const redes = [
         "feedbackAcerto": "Correto. O Access Point cria ou amplia a cobertura WLAN, conectando clientes sem fio à rede.",
         "feedbackErro": "Resposta correta: Fornecer acesso sem fio a uma rede local. O Access Point cria ou amplia a cobertura WLAN, conectando clientes sem fio à rede.",
         "dicaBanca": "Dica da banca: AP não é necessariamente roteador; é ponto de acesso sem fio.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_020",
@@ -317,7 +336,8 @@ const redes = [
         "feedbackAcerto": "Correto. O Access Point cria ou amplia a cobertura WLAN, conectando clientes sem fio à rede.",
         "feedbackErro": "Resposta correta: access point. O Access Point cria ou amplia a cobertura WLAN, conectando clientes sem fio à rede.",
         "dicaBanca": "Dica da banca: AP não é necessariamente roteador; é ponto de acesso sem fio.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_021",
@@ -333,7 +353,8 @@ const redes = [
         "feedbackAcerto": "Correto. O modem está ligado ao acesso ao provedor; roteadores domésticos podem integrar modem e roteador no mesmo aparelho.",
         "feedbackErro": "Resposta correta: Adaptar o sinal da rede do provedor para o acesso do usuário. O modem está ligado ao acesso ao provedor; roteadores domésticos podem integrar modem e roteador no mesmo aparelho.",
         "dicaBanca": "Dica da banca: Identifique a função do equipamento, não apenas o nome comercial.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_022",
@@ -349,7 +370,8 @@ const redes = [
         "feedbackAcerto": "Correto. O modem está ligado ao acesso ao provedor; roteadores domésticos podem integrar modem e roteador no mesmo aparelho.",
         "feedbackErro": "Resposta correta: modem. O modem está ligado ao acesso ao provedor; roteadores domésticos podem integrar modem e roteador no mesmo aparelho.",
         "dicaBanca": "Dica da banca: Identifique a função do equipamento, não apenas o nome comercial.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
     },
     {
         "id": "redes_023",
@@ -365,7 +387,8 @@ const redes = [
         "feedbackAcerto": "Correto. Um firewall stateful acompanha sessões/conexões para tomar decisões mais contextuais.",
         "feedbackErro": "Resposta correta: Avaliar o tráfego considerando o estado das conexões. Um firewall stateful acompanha sessões/conexões para tomar decisões mais contextuais.",
         "dicaBanca": "Dica da banca: Stateful acompanha conexão; stateless examina pacotes de forma mais isolada.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_024",
@@ -381,7 +404,8 @@ const redes = [
         "feedbackAcerto": "Correto. Um firewall stateful acompanha sessões/conexões para tomar decisões mais contextuais.",
         "feedbackErro": "Resposta correta: firewall stateful. Um firewall stateful acompanha sessões/conexões para tomar decisões mais contextuais.",
         "dicaBanca": "Dica da banca: Stateful acompanha conexão; stateless examina pacotes de forma mais isolada.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_025",
@@ -397,7 +421,8 @@ const redes = [
         "feedbackAcerto": "Correto. VPN protege a comunicação e permite acesso remoto ou interligação entre redes.",
         "feedbackErro": "Resposta correta: Criar túnel seguro sobre rede pública ou não confiável. VPN protege a comunicação e permite acesso remoto ou interligação entre redes.",
         "dicaBanca": "Dica da banca: VPN não significa anonimato absoluto; significa túnel seguro conforme configuração.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_026",
@@ -413,7 +438,8 @@ const redes = [
         "feedbackAcerto": "Correto. VPN protege a comunicação e permite acesso remoto ou interligação entre redes.",
         "feedbackErro": "Resposta correta: VPN. VPN protege a comunicação e permite acesso remoto ou interligação entre redes.",
         "dicaBanca": "Dica da banca: VPN não significa anonimato absoluto; significa túnel seguro conforme configuração.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "roteamento-disponibilidade"
     },
     {
         "id": "redes_027",
@@ -429,7 +455,8 @@ const redes = [
         "feedbackAcerto": "Correto. O trunk usa marcação, geralmente 802.1Q, para carregar várias VLANs.",
         "feedbackErro": "Resposta correta: Transportar tráfego de múltiplas VLANs em um mesmo enlace. O trunk usa marcação, geralmente 802.1Q, para carregar várias VLANs.",
         "dicaBanca": "Dica da banca: Access carrega uma VLAN para host final; trunk carrega várias VLANs.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "vlan-comutacao-stp"
     },
     {
         "id": "redes_028",
@@ -445,7 +472,8 @@ const redes = [
         "feedbackAcerto": "Correto. O trunk usa marcação, geralmente 802.1Q, para carregar várias VLANs.",
         "feedbackErro": "Resposta correta: trunk 802.1Q. O trunk usa marcação, geralmente 802.1Q, para carregar várias VLANs.",
         "dicaBanca": "Dica da banca: Access carrega uma VLAN para host final; trunk carrega várias VLANs.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "vlan-comutacao-stp"
     },
     {
         "id": "redes_029",
@@ -461,7 +489,8 @@ const redes = [
         "feedbackAcerto": "Correto. O Spanning Tree Protocol previne loops em topologias Ethernet redundantes.",
         "feedbackErro": "Resposta correta: Evitar loops de camada 2 em redes com caminhos redundantes. O Spanning Tree Protocol previne loops em topologias Ethernet redundantes.",
         "dicaBanca": "Dica da banca: Loops em camada 2 podem gerar tempestade de broadcast.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "vlan-comutacao-stp"
     },
     {
         "id": "redes_030",
@@ -477,7 +506,8 @@ const redes = [
         "feedbackAcerto": "Correto. O Spanning Tree Protocol previne loops em topologias Ethernet redundantes.",
         "feedbackErro": "Resposta correta: STP. O Spanning Tree Protocol previne loops em topologias Ethernet redundantes.",
         "dicaBanca": "Dica da banca: Loops em camada 2 podem gerar tempestade de broadcast.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
     },
     {
         "id": "redes_031",
@@ -493,7 +523,8 @@ const redes = [
         "feedbackAcerto": "Correto. Roteadores e VLANs separam domínios de broadcast; switches simples não separam por padrão.",
         "feedbackErro": "Resposta correta: Conjunto de dispositivos que recebe broadcasts da mesma rede/VLAN. Roteadores e VLANs separam domínios de broadcast; switches simples não separam por padrão.",
         "dicaBanca": "Dica da banca: Broadcast é limitado por roteamento/VLAN.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "vlan-comutacao-stp"
     },
     {
         "id": "redes_032",
@@ -509,7 +540,8 @@ const redes = [
         "feedbackAcerto": "Correto. Roteadores e VLANs separam domínios de broadcast; switches simples não separam por padrão.",
         "feedbackErro": "Resposta correta: domínio de broadcast. Roteadores e VLANs separam domínios de broadcast; switches simples não separam por padrão.",
         "dicaBanca": "Dica da banca: Broadcast é limitado por roteamento/VLAN.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "vlan-comutacao-stp"
     },
     {
         "id": "redes_033",
@@ -525,7 +557,8 @@ const redes = [
         "feedbackAcerto": "Correto. A estrela é comum em redes locais modernas com switches centrais.",
         "feedbackErro": "Resposta correta: Conectar dispositivos a um ponto central, como switch. A estrela é comum em redes locais modernas com switches centrais.",
         "dicaBanca": "Dica da banca: Estrela = ponto central.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
     },
     {
         "id": "redes_034",
@@ -541,7 +574,8 @@ const redes = [
         "feedbackAcerto": "Correto. A estrela é comum em redes locais modernas com switches centrais.",
         "feedbackErro": "Resposta correta: topologia estrela. A estrela é comum em redes locais modernas com switches centrais.",
         "dicaBanca": "Dica da banca: Estrela = ponto central.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
     },
     {
         "id": "redes_035",
@@ -557,7 +591,8 @@ const redes = [
         "feedbackAcerto": "Correto. LAN é Local Area Network, usada em ambientes geograficamente limitados.",
         "feedbackErro": "Resposta correta: Rede local de área limitada, como residência, escola ou escritório. LAN é Local Area Network, usada em ambientes geograficamente limitados.",
         "dicaBanca": "Dica da banca: LAN = local.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
     },
     {
         "id": "redes_036",
@@ -573,7 +608,8 @@ const redes = [
         "feedbackAcerto": "Correto. LAN é Local Area Network, usada em ambientes geograficamente limitados.",
         "feedbackErro": "Resposta correta: LAN. LAN é Local Area Network, usada em ambientes geograficamente limitados.",
         "dicaBanca": "Dica da banca: LAN = local.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
     },
     {
         "id": "redes_037",
@@ -589,7 +625,8 @@ const redes = [
         "feedbackAcerto": "Correto. PAN geralmente é associada a dispositivos pessoais e Bluetooth.",
         "feedbackErro": "Resposta correta: Rede pessoal de curtíssimo alcance entre dispositivos do usuário. PAN geralmente é associada a dispositivos pessoais e Bluetooth.",
         "dicaBanca": "Dica da banca: PAN = Personal Area Network.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
     },
     {
         "id": "redes_038",
@@ -605,7 +642,8 @@ const redes = [
         "feedbackAcerto": "Correto. PAN geralmente é associada a dispositivos pessoais e Bluetooth.",
         "feedbackErro": "Resposta correta: PAN. PAN geralmente é associada a dispositivos pessoais e Bluetooth.",
         "dicaBanca": "Dica da banca: PAN = Personal Area Network.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
     },
     {
         "id": "redes_039",
@@ -621,7 +659,8 @@ const redes = [
         "feedbackAcerto": "Correto. WAN conecta localidades distantes e a Internet é exemplo clássico.",
         "feedbackErro": "Resposta correta: Rede de grande abrangência geográfica que interliga redes distantes. WAN conecta localidades distantes e a Internet é exemplo clássico.",
         "dicaBanca": "Dica da banca: WAN = longa distância.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
     },
     {
         "id": "redes_040",
@@ -637,7 +676,8 @@ const redes = [
         "feedbackAcerto": "Correto. WAN conecta localidades distantes e a Internet é exemplo clássico.",
         "feedbackErro": "Resposta correta: WAN. WAN conecta localidades distantes e a Internet é exemplo clássico.",
         "dicaBanca": "Dica da banca: WAN = longa distância.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
     },
     {
         "id": "redes_041",
@@ -653,7 +693,8 @@ const redes = [
         "feedbackAcerto": "Correto. WLAN é uma LAN sem fio.",
         "feedbackErro": "Resposta correta: Rede local sem fio baseada em tecnologias como Wi-Fi. WLAN é uma LAN sem fio.",
         "dicaBanca": "Dica da banca: Wireless = sem fio.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
     },
     {
         "id": "redes_042",
@@ -669,7 +710,8 @@ const redes = [
         "feedbackAcerto": "Correto. WLAN é uma LAN sem fio.",
         "feedbackErro": "Resposta correta: WLAN. WLAN é uma LAN sem fio.",
         "dicaBanca": "Dica da banca: Wireless = sem fio.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
     },
     {
         "id": "redes_043",
@@ -685,7 +727,8 @@ const redes = [
         "feedbackAcerto": "Correto. BSSID identifica a célula/AP específico, mesmo que o SSID seja o mesmo.",
         "feedbackErro": "Resposta correta: Identificador geralmente baseado no MAC de um ponto de acesso Wi-Fi. BSSID identifica a célula/AP específico, mesmo que o SSID seja o mesmo.",
         "dicaBanca": "Dica da banca: Mesmo SSID pode ter vários BSSIDs.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_044",
@@ -701,7 +744,8 @@ const redes = [
         "feedbackAcerto": "Correto. BSSID identifica a célula/AP específico, mesmo que o SSID seja o mesmo.",
         "feedbackErro": "Resposta correta: BSSID. BSSID identifica a célula/AP específico, mesmo que o SSID seja o mesmo.",
         "dicaBanca": "Dica da banca: Mesmo SSID pode ter vários BSSIDs.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_045",
@@ -717,7 +761,8 @@ const redes = [
         "feedbackAcerto": "Correto. WEP é considerado inseguro e não recomendado em redes atuais.",
         "feedbackErro": "Resposta correta: Padrão antigo de segurança Wi-Fi com fragilidades conhecidas. WEP é considerado inseguro e não recomendado em redes atuais.",
         "dicaBanca": "Dica da banca: Quando aparecer WEP, pense em inseguro/obsoleto.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_046",
@@ -733,7 +778,8 @@ const redes = [
         "feedbackAcerto": "Correto. WEP é considerado inseguro e não recomendado em redes atuais.",
         "feedbackErro": "Resposta correta: WEP. WEP é considerado inseguro e não recomendado em redes atuais.",
         "dicaBanca": "Dica da banca: Quando aparecer WEP, pense em inseguro/obsoleto.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "roteamento-disponibilidade"
     },
     {
         "id": "redes_047",
@@ -749,7 +795,8 @@ const redes = [
         "feedbackAcerto": "Correto. A faixa de 2,4 GHz atravessa melhor obstáculos, mas é mais congestionada.",
         "feedbackErro": "Resposta correta: Maior alcance relativo e maior tendência a interferências. A faixa de 2,4 GHz atravessa melhor obstáculos, mas é mais congestionada.",
         "dicaBanca": "Dica da banca: 2,4 GHz = alcance; 5 GHz = menos interferência e mais canais.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_048",
@@ -765,7 +812,8 @@ const redes = [
         "feedbackAcerto": "Correto. A faixa de 2,4 GHz atravessa melhor obstáculos, mas é mais congestionada.",
         "feedbackErro": "Resposta correta: 2,4 GHz no Wi-Fi. A faixa de 2,4 GHz atravessa melhor obstáculos, mas é mais congestionada.",
         "dicaBanca": "Dica da banca: 2,4 GHz = alcance; 5 GHz = menos interferência e mais canais.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_049",
@@ -781,7 +829,8 @@ const redes = [
         "feedbackAcerto": "Correto. CSMA/CA busca evitar colisões em redes sem fio.",
         "feedbackErro": "Resposta correta: Método usado no Wi-Fi para reduzir colisões no meio sem fio. CSMA/CA busca evitar colisões em redes sem fio.",
         "dicaBanca": "Dica da banca: CA = collision avoidance; CD = collision detection.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_050",
@@ -797,7 +846,8 @@ const redes = [
         "feedbackAcerto": "Correto. CSMA/CA busca evitar colisões em redes sem fio.",
         "feedbackErro": "Resposta correta: CSMA/CA. CSMA/CA busca evitar colisões em redes sem fio.",
         "dicaBanca": "Dica da banca: CA = collision avoidance; CD = collision detection.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_051",
@@ -813,7 +863,8 @@ const redes = [
         "feedbackAcerto": "Correto. IEEE 802.11 define tecnologias Wi-Fi.",
         "feedbackErro": "Resposta correta: Família de padrões de redes locais sem fio. IEEE 802.11 define tecnologias Wi-Fi.",
         "dicaBanca": "Dica da banca: 802.11 = Wi-Fi.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_052",
@@ -829,7 +880,8 @@ const redes = [
         "feedbackAcerto": "Correto. IEEE 802.11 define tecnologias Wi-Fi.",
         "feedbackErro": "Resposta correta: Wi-Fi IEEE 802.11. IEEE 802.11 define tecnologias Wi-Fi.",
         "dicaBanca": "Dica da banca: 802.11 = Wi-Fi.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_053",
@@ -845,7 +897,8 @@ const redes = [
         "feedbackAcerto": "Correto. UTP é Unshielded Twisted Pair, o par trançado sem blindagem comum em LANs.",
         "feedbackErro": "Resposta correta: Par trançado não blindado usado em muitas redes Ethernet. UTP é Unshielded Twisted Pair, o par trançado sem blindagem comum em LANs.",
         "dicaBanca": "Dica da banca: UTP é o cabo mais lembrado em redes locais.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "meios-fisicos-cabeamento"
     },
     {
         "id": "redes_054",
@@ -861,7 +914,8 @@ const redes = [
         "feedbackAcerto": "Correto. UTP é Unshielded Twisted Pair, o par trançado sem blindagem comum em LANs.",
         "feedbackErro": "Resposta correta: cabo UTP. UTP é Unshielded Twisted Pair, o par trançado sem blindagem comum em LANs.",
         "dicaBanca": "Dica da banca: UTP é o cabo mais lembrado em redes locais.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "meios-fisicos-cabeamento"
     },
     {
         "id": "redes_055",
@@ -877,7 +931,8 @@ const redes = [
         "feedbackAcerto": "Correto. A fibra óptica usa luz e é indicada para alto desempenho e distâncias maiores.",
         "feedbackErro": "Resposta correta: Meio que transmite dados por pulsos de luz e sofre pouca interferência eletromagnética. A fibra óptica usa luz e é indicada para alto desempenho e distâncias maiores.",
         "dicaBanca": "Dica da banca: Fibra = luz e baixa interferência.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "meios-fisicos-cabeamento"
     },
     {
         "id": "redes_056",
@@ -893,7 +948,8 @@ const redes = [
         "feedbackAcerto": "Correto. A fibra óptica usa luz e é indicada para alto desempenho e distâncias maiores.",
         "feedbackErro": "Resposta correta: fibra óptica. A fibra óptica usa luz e é indicada para alto desempenho e distâncias maiores.",
         "dicaBanca": "Dica da banca: Fibra = luz e baixa interferência.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "meios-fisicos-cabeamento"
     },
     {
         "id": "redes_057",
@@ -909,7 +965,8 @@ const redes = [
         "feedbackAcerto": "Correto. Monomodo usa núcleo menor e é comum em enlaces longos.",
         "feedbackErro": "Resposta correta: Fibra indicada para distâncias maiores e enlaces de alta capacidade. Monomodo usa núcleo menor e é comum em enlaces longos.",
         "dicaBanca": "Dica da banca: Monomodo = maior distância; multimodo = menor distância.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "meios-fisicos-cabeamento"
     },
     {
         "id": "redes_058",
@@ -925,7 +982,8 @@ const redes = [
         "feedbackAcerto": "Correto. Monomodo usa núcleo menor e é comum em enlaces longos.",
         "feedbackErro": "Resposta correta: fibra monomodo. Monomodo usa núcleo menor e é comum em enlaces longos.",
         "dicaBanca": "Dica da banca: Monomodo = maior distância; multimodo = menor distância.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "meios-fisicos-cabeamento"
     },
     {
         "id": "redes_059",
@@ -941,7 +999,8 @@ const redes = [
         "feedbackAcerto": "Correto. Power over Ethernet alimenta dispositivos como APs, câmeras IP e telefones VoIP.",
         "feedbackErro": "Resposta correta: Transmitir energia elétrica e dados pelo mesmo cabo Ethernet compatível. Power over Ethernet alimenta dispositivos como APs, câmeras IP e telefones VoIP.",
         "dicaBanca": "Dica da banca: PoE aparece muito com câmeras IP e access points.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "meios-fisicos-cabeamento"
     },
     {
         "id": "redes_060",
@@ -957,7 +1016,8 @@ const redes = [
         "feedbackAcerto": "Correto. Power over Ethernet alimenta dispositivos como APs, câmeras IP e telefones VoIP.",
         "feedbackErro": "Resposta correta: PoE. Power over Ethernet alimenta dispositivos como APs, câmeras IP e telefones VoIP.",
         "dicaBanca": "Dica da banca: PoE aparece muito com câmeras IP e access points.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
     },
     {
         "id": "redes_061",
@@ -973,7 +1033,8 @@ const redes = [
         "feedbackAcerto": "Correto. Jitter alto prejudica voz e vídeo em tempo real.",
         "feedbackErro": "Resposta correta: Variação da latência entre pacotes sucessivos. Jitter alto prejudica voz e vídeo em tempo real.",
         "dicaBanca": "Dica da banca: Jitter = variação do atraso.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_062",
@@ -989,7 +1050,8 @@ const redes = [
         "feedbackAcerto": "Correto. Jitter alto prejudica voz e vídeo em tempo real.",
         "feedbackErro": "Resposta correta: jitter. Jitter alto prejudica voz e vídeo em tempo real.",
         "dicaBanca": "Dica da banca: Jitter = variação do atraso.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_063",
@@ -1005,7 +1067,8 @@ const redes = [
         "feedbackAcerto": "Correto. Throughput é o desempenho real observado, que pode ser menor que a banda nominal.",
         "feedbackErro": "Resposta correta: Taxa efetiva de dados transmitidos com sucesso. Throughput é o desempenho real observado, que pode ser menor que a banda nominal.",
         "dicaBanca": "Dica da banca: Banda é capacidade; throughput é vazão real.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_064",
@@ -1021,7 +1084,8 @@ const redes = [
         "feedbackAcerto": "Correto. Throughput é o desempenho real observado, que pode ser menor que a banda nominal.",
         "feedbackErro": "Resposta correta: throughput. Throughput é o desempenho real observado, que pode ser menor que a banda nominal.",
         "dicaBanca": "Dica da banca: Banda é capacidade; throughput é vazão real.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_065",
@@ -1037,7 +1101,8 @@ const redes = [
         "feedbackAcerto": "Correto. VoIP transporta voz sobre IP e é sensível a latência, jitter e perda.",
         "feedbackErro": "Resposta correta: Transmitir voz por redes IP. VoIP transporta voz sobre IP e é sensível a latência, jitter e perda.",
         "dicaBanca": "Dica da banca: VoIP exige atenção a QoS.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_066",
@@ -1053,7 +1118,8 @@ const redes = [
         "feedbackAcerto": "Correto. VoIP transporta voz sobre IP e é sensível a latência, jitter e perda.",
         "feedbackErro": "Resposta correta: VoIP. VoIP transporta voz sobre IP e é sensível a latência, jitter e perda.",
         "dicaBanca": "Dica da banca: VoIP exige atenção a QoS.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_067",
@@ -1069,7 +1135,8 @@ const redes = [
         "feedbackAcerto": "Correto. Traceroute usa o comportamento do TTL para revelar roteadores intermediários.",
         "feedbackErro": "Resposta correta: Identificar os saltos do caminho até um destino. Traceroute usa o comportamento do TTL para revelar roteadores intermediários.",
         "dicaBanca": "Dica da banca: Rota até o destino = traceroute/tracert.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_068",
@@ -1085,7 +1152,8 @@ const redes = [
         "feedbackAcerto": "Correto. Traceroute usa o comportamento do TTL para revelar roteadores intermediários.",
         "feedbackErro": "Resposta correta: traceroute/tracert. Traceroute usa o comportamento do TTL para revelar roteadores intermediários.",
         "dicaBanca": "Dica da banca: Rota até o destino = traceroute/tracert.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
     },
     {
         "id": "redes_069",
@@ -1101,7 +1169,8 @@ const redes = [
         "feedbackAcerto": "Correto. nslookup é usado para diagnóstico de DNS.",
         "feedbackErro": "Resposta correta: Consultar informações e respostas DNS. nslookup é usado para diagnóstico de DNS.",
         "dicaBanca": "Dica da banca: Problema de resolução de nomes combina com nslookup.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_070",
@@ -1117,7 +1186,8 @@ const redes = [
         "feedbackAcerto": "Correto. nslookup é usado para diagnóstico de DNS.",
         "feedbackErro": "Resposta correta: nslookup. nslookup é usado para diagnóstico de DNS.",
         "dicaBanca": "Dica da banca: Problema de resolução de nomes combina com nslookup.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_071",
@@ -1133,7 +1203,8 @@ const redes = [
         "feedbackAcerto": "Correto. ipconfig /all exibe detalhes das interfaces de rede no Windows.",
         "feedbackErro": "Resposta correta: Mostrar detalhes da configuração de rede no Windows. ipconfig /all exibe detalhes das interfaces de rede no Windows.",
         "dicaBanca": "Dica da banca: Configuração IP local no Windows: ipconfig.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_072",
@@ -1149,7 +1220,8 @@ const redes = [
         "feedbackAcerto": "Correto. ipconfig /all exibe detalhes das interfaces de rede no Windows.",
         "feedbackErro": "Resposta correta: ipconfig /all. ipconfig /all exibe detalhes das interfaces de rede no Windows.",
         "dicaBanca": "Dica da banca: Configuração IP local no Windows: ipconfig.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_073",
@@ -1165,7 +1237,8 @@ const redes = [
         "feedbackAcerto": "Correto. MTU define o maior tamanho transportável sem fragmentação no enlace.",
         "feedbackErro": "Resposta correta: Tamanho máximo da unidade de transmissão em um enlace. MTU define o maior tamanho transportável sem fragmentação no enlace.",
         "dicaBanca": "Dica da banca: MTU padrão comum em Ethernet é 1500 bytes.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_074",
@@ -1181,7 +1254,8 @@ const redes = [
         "feedbackAcerto": "Correto. MTU define o maior tamanho transportável sem fragmentação no enlace.",
         "feedbackErro": "Resposta correta: MTU. MTU define o maior tamanho transportável sem fragmentação no enlace.",
         "dicaBanca": "Dica da banca: MTU padrão comum em Ethernet é 1500 bytes.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_075",
@@ -1197,7 +1271,8 @@ const redes = [
         "feedbackAcerto": "Correto. O TTL de DNS controla a validade de respostas armazenadas em cache.",
         "feedbackErro": "Resposta correta: Definir por quanto tempo uma resposta DNS pode ficar em cache. O TTL de DNS controla a validade de respostas armazenadas em cache.",
         "dicaBanca": "Dica da banca: TTL DNS = tempo de cache da resposta.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_076",
@@ -1213,7 +1288,8 @@ const redes = [
         "feedbackAcerto": "Correto. O TTL de DNS controla a validade de respostas armazenadas em cache.",
         "feedbackErro": "Resposta correta: DNS TTL. O TTL de DNS controla a validade de respostas armazenadas em cache.",
         "dicaBanca": "Dica da banca: TTL DNS = tempo de cache da resposta.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_077",
@@ -1229,7 +1305,8 @@ const redes = [
         "feedbackAcerto": "Correto. O registro AAAA retorna endereço IPv6 associado ao nome consultado.",
         "feedbackErro": "Resposta correta: Associar nome de domínio a endereço IPv6. O registro AAAA retorna endereço IPv6 associado ao nome consultado.",
         "dicaBanca": "Dica da banca: AAAA tem relação com IPv6.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_078",
@@ -1245,7 +1322,8 @@ const redes = [
         "feedbackAcerto": "Correto. O registro AAAA retorna endereço IPv6 associado ao nome consultado.",
         "feedbackErro": "Resposta correta: registro AAAA. O registro AAAA retorna endereço IPv6 associado ao nome consultado.",
         "dicaBanca": "Dica da banca: AAAA tem relação com IPv6.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_079",
@@ -1261,7 +1339,8 @@ const redes = [
         "feedbackAcerto": "Correto. MX é o registro usado no roteamento de e-mails de um domínio.",
         "feedbackErro": "Resposta correta: Indicar servidores responsáveis por e-mail de um domínio. MX é o registro usado no roteamento de e-mails de um domínio.",
         "dicaBanca": "Dica da banca: MX = mail exchange.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_080",
@@ -1277,7 +1356,8 @@ const redes = [
         "feedbackAcerto": "Correto. MX é o registro usado no roteamento de e-mails de um domínio.",
         "feedbackErro": "Resposta correta: registro MX. MX é o registro usado no roteamento de e-mails de um domínio.",
         "dicaBanca": "Dica da banca: MX = mail exchange.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_081",
@@ -1293,7 +1373,8 @@ const redes = [
         "feedbackAcerto": "Correto. PTR é usado em DNS reverso.",
         "feedbackErro": "Resposta correta: Permitir consulta reversa de IP para nome. PTR é usado em DNS reverso.",
         "dicaBanca": "Dica da banca: PTR = reverse DNS.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_082",
@@ -1309,7 +1390,8 @@ const redes = [
         "feedbackAcerto": "Correto. PTR é usado em DNS reverso.",
         "feedbackErro": "Resposta correta: registro PTR. PTR é usado em DNS reverso.",
         "dicaBanca": "Dica da banca: PTR = reverse DNS.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_083",
@@ -1325,7 +1407,8 @@ const redes = [
         "feedbackAcerto": "Correto. SMTP é o protocolo clássico de envio de e-mail.",
         "feedbackErro": "Resposta correta: Enviar e encaminhar mensagens de correio eletrônico. SMTP é o protocolo clássico de envio de e-mail.",
         "dicaBanca": "Dica da banca: SMTP envia; POP3/IMAP recebem.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_084",
@@ -1341,7 +1424,8 @@ const redes = [
         "feedbackAcerto": "Correto. SMTP é o protocolo clássico de envio de e-mail.",
         "feedbackErro": "Resposta correta: SMTP. SMTP é o protocolo clássico de envio de e-mail.",
         "dicaBanca": "Dica da banca: SMTP envia; POP3/IMAP recebem.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_085",
@@ -1357,7 +1441,8 @@ const redes = [
         "feedbackAcerto": "Correto. POP3 é protocolo de recebimento, tradicionalmente ligado ao download de mensagens.",
         "feedbackErro": "Resposta correta: Receber mensagens com foco no download para o cliente. POP3 é protocolo de recebimento, tradicionalmente ligado ao download de mensagens.",
         "dicaBanca": "Dica da banca: POP3 recebe; SMTP envia.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_086",
@@ -1373,7 +1458,8 @@ const redes = [
         "feedbackAcerto": "Correto. POP3 é protocolo de recebimento, tradicionalmente ligado ao download de mensagens.",
         "feedbackErro": "Resposta correta: POP3. POP3 é protocolo de recebimento, tradicionalmente ligado ao download de mensagens.",
         "dicaBanca": "Dica da banca: POP3 recebe; SMTP envia.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_087",
@@ -1389,7 +1475,8 @@ const redes = [
         "feedbackAcerto": "Correto. HTTPS protege o canal com TLS, aumentando confidencialidade e integridade.",
         "feedbackErro": "Resposta correta: Proteger comunicação web usando HTTP sobre TLS. HTTPS protege o canal com TLS, aumentando confidencialidade e integridade.",
         "dicaBanca": "Dica da banca: HTTPS não garante que o site seja honesto; protege a conexão.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_088",
@@ -1405,7 +1492,8 @@ const redes = [
         "feedbackAcerto": "Correto. HTTPS protege o canal com TLS, aumentando confidencialidade e integridade.",
         "feedbackErro": "Resposta correta: HTTPS. HTTPS protege o canal com TLS, aumentando confidencialidade e integridade.",
         "dicaBanca": "Dica da banca: HTTPS não garante que o site seja honesto; protege a conexão.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_089",
@@ -1421,7 +1509,8 @@ const redes = [
         "feedbackAcerto": "Correto. SSH substitui Telnet quando há necessidade de acesso remoto seguro.",
         "feedbackErro": "Resposta correta: Fornecer acesso remoto seguro e criptografado. SSH substitui Telnet quando há necessidade de acesso remoto seguro.",
         "dicaBanca": "Dica da banca: SSH porta 22; Telnet porta 23.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_090",
@@ -1437,7 +1526,8 @@ const redes = [
         "feedbackAcerto": "Correto. SSH substitui Telnet quando há necessidade de acesso remoto seguro.",
         "feedbackErro": "Resposta correta: SSH. SSH substitui Telnet quando há necessidade de acesso remoto seguro.",
         "dicaBanca": "Dica da banca: SSH porta 22; Telnet porta 23.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_091",
@@ -1453,7 +1543,8 @@ const redes = [
         "feedbackAcerto": "Correto. FTP tradicional usa porta 21 para controle e não é seguro por padrão.",
         "feedbackErro": "Resposta correta: Transferir arquivos usando protocolo tradicional, geralmente sem criptografia nativa. FTP tradicional usa porta 21 para controle e não é seguro por padrão.",
         "dicaBanca": "Dica da banca: FTP, FTPS e SFTP são diferentes.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_092",
@@ -1469,7 +1560,8 @@ const redes = [
         "feedbackAcerto": "Correto. FTP tradicional usa porta 21 para controle e não é seguro por padrão.",
         "feedbackErro": "Resposta correta: FTP. FTP tradicional usa porta 21 para controle e não é seguro por padrão.",
         "dicaBanca": "Dica da banca: FTP, FTPS e SFTP são diferentes.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_093",
@@ -1485,7 +1577,8 @@ const redes = [
         "feedbackAcerto": "Correto. NTP mantém horário sincronizado, essencial para logs, autenticação e auditoria.",
         "feedbackErro": "Resposta correta: Sincronizar relógios de dispositivos na rede. NTP mantém horário sincronizado, essencial para logs, autenticação e auditoria.",
         "dicaBanca": "Dica da banca: NTP = Network Time Protocol.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_094",
@@ -1501,7 +1594,8 @@ const redes = [
         "feedbackAcerto": "Correto. NTP mantém horário sincronizado, essencial para logs, autenticação e auditoria.",
         "feedbackErro": "Resposta correta: NTP. NTP mantém horário sincronizado, essencial para logs, autenticação e auditoria.",
         "dicaBanca": "Dica da banca: NTP = Network Time Protocol.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
     },
     {
         "id": "redes_095",
@@ -1517,7 +1611,8 @@ const redes = [
         "feedbackAcerto": "Correto. SNMP é usado em monitoramento e gerenciamento de ativos de rede.",
         "feedbackErro": "Resposta correta: Monitorar e gerenciar dispositivos de rede. SNMP é usado em monitoramento e gerenciamento de ativos de rede.",
         "dicaBanca": "Dica da banca: SNMP aparece com MIB, traps e gerência de rede.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_096",
@@ -1533,7 +1628,8 @@ const redes = [
         "feedbackAcerto": "Correto. SNMP é usado em monitoramento e gerenciamento de ativos de rede.",
         "feedbackErro": "Resposta correta: SNMP. SNMP é usado em monitoramento e gerenciamento de ativos de rede.",
         "dicaBanca": "Dica da banca: SNMP aparece com MIB, traps e gerência de rede.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
     },
     {
         "id": "redes_097",
@@ -1549,7 +1645,8 @@ const redes = [
         "feedbackAcerto": "Correto. HTTPS usa tradicionalmente TCP 443.",
         "feedbackErro": "Resposta correta: Porta tradicional do HTTPS. HTTPS usa tradicionalmente TCP 443.",
         "dicaBanca": "Dica da banca: HTTPS = 443.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_098",
@@ -1565,7 +1662,8 @@ const redes = [
         "feedbackAcerto": "Correto. HTTPS usa tradicionalmente TCP 443.",
         "feedbackErro": "Resposta correta: porta 443. HTTPS usa tradicionalmente TCP 443.",
         "dicaBanca": "Dica da banca: HTTPS = 443.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_099",
@@ -1581,7 +1679,8 @@ const redes = [
         "feedbackAcerto": "Correto. DNS usa a porta 53, em UDP e também TCP em situações específicas.",
         "feedbackErro": "Resposta correta: Porta tradicional do DNS. DNS usa a porta 53, em UDP e também TCP em situações específicas.",
         "dicaBanca": "Dica da banca: DNS = 53.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_100",
@@ -1597,7 +1696,8 @@ const redes = [
         "feedbackAcerto": "Correto. DNS usa a porta 53, em UDP e também TCP em situações específicas.",
         "feedbackErro": "Resposta correta: porta 53. DNS usa a porta 53, em UDP e também TCP em situações específicas.",
         "dicaBanca": "Dica da banca: DNS = 53.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_101",
@@ -1613,7 +1713,8 @@ const redes = [
         "feedbackAcerto": "Correto. RDP usa tradicionalmente TCP 3389.",
         "feedbackErro": "Resposta correta: Porta tradicional do RDP. RDP usa tradicionalmente TCP 3389.",
         "dicaBanca": "Dica da banca: RDP = área de trabalho remota.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_102",
@@ -1629,7 +1730,8 @@ const redes = [
         "feedbackAcerto": "Correto. RDP usa tradicionalmente TCP 3389.",
         "feedbackErro": "Resposta correta: porta 3389. RDP usa tradicionalmente TCP 3389.",
         "dicaBanca": "Dica da banca: RDP = área de trabalho remota.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_103",
@@ -1645,7 +1747,8 @@ const redes = [
         "feedbackAcerto": "Correto. IDS é focado em detecção e alerta; o IPS pode bloquear/prevenir.",
         "feedbackErro": "Resposta correta: Detectar eventos suspeitos e gerar alertas. IDS é focado em detecção e alerta; o IPS pode bloquear/prevenir.",
         "dicaBanca": "Dica da banca: IDS detecta; IPS pode bloquear.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_104",
@@ -1661,7 +1764,8 @@ const redes = [
         "feedbackAcerto": "Correto. IDS é focado em detecção e alerta; o IPS pode bloquear/prevenir.",
         "feedbackErro": "Resposta correta: IDS. IDS é focado em detecção e alerta; o IPS pode bloquear/prevenir.",
         "dicaBanca": "Dica da banca: IDS detecta; IPS pode bloquear.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_105",
@@ -1677,7 +1781,8 @@ const redes = [
         "feedbackAcerto": "Correto. IPS atua de forma preventiva, podendo bloquear tráfego suspeito.",
         "feedbackErro": "Resposta correta: Detectar e bloquear/prevenir tráfego malicioso conforme política. IPS atua de forma preventiva, podendo bloquear tráfego suspeito.",
         "dicaBanca": "Dica da banca: IPS = prevenção.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_106",
@@ -1693,7 +1798,8 @@ const redes = [
         "feedbackAcerto": "Correto. IPS atua de forma preventiva, podendo bloquear tráfego suspeito.",
         "feedbackErro": "Resposta correta: IPS. IPS atua de forma preventiva, podendo bloquear tráfego suspeito.",
         "dicaBanca": "Dica da banca: IPS = prevenção.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_107",
@@ -1709,7 +1815,8 @@ const redes = [
         "feedbackAcerto": "Correto. Proxy pode aplicar filtros, cache, autenticação e registro de acessos.",
         "feedbackErro": "Resposta correta: Intermediar requisições entre cliente e serviço de destino. Proxy pode aplicar filtros, cache, autenticação e registro de acessos.",
         "dicaBanca": "Dica da banca: Proxy = intermediário.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_108",
@@ -1725,7 +1832,8 @@ const redes = [
         "feedbackAcerto": "Correto. Proxy pode aplicar filtros, cache, autenticação e registro de acessos.",
         "feedbackErro": "Resposta correta: proxy. Proxy pode aplicar filtros, cache, autenticação e registro de acessos.",
         "dicaBanca": "Dica da banca: Proxy = intermediário.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_109",
@@ -1741,7 +1849,8 @@ const redes = [
         "feedbackAcerto": "Correto. MFA reduz o risco de acesso indevido quando uma senha é comprometida.",
         "feedbackErro": "Resposta correta: Exigir múltiplos fatores para autenticação. MFA reduz o risco de acesso indevido quando uma senha é comprometida.",
         "dicaBanca": "Dica da banca: MFA fortalece acesso remoto.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_110",
@@ -1757,7 +1866,8 @@ const redes = [
         "feedbackAcerto": "Correto. MFA reduz o risco de acesso indevido quando uma senha é comprometida.",
         "feedbackErro": "Resposta correta: MFA. MFA reduz o risco de acesso indevido quando uma senha é comprometida.",
         "dicaBanca": "Dica da banca: MFA fortalece acesso remoto.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_111",
@@ -1773,7 +1883,8 @@ const redes = [
         "feedbackAcerto": "Correto. 802.1X é usado em controle de acesso a redes cabeadas e sem fio.",
         "feedbackErro": "Resposta correta: Controlar acesso à rede por autenticação de porta ou conexão. 802.1X é usado em controle de acesso a redes cabeadas e sem fio.",
         "dicaBanca": "Dica da banca: 802.1X é comum com RADIUS.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_112",
@@ -1789,7 +1900,8 @@ const redes = [
         "feedbackAcerto": "Correto. 802.1X é usado em controle de acesso a redes cabeadas e sem fio.",
         "feedbackErro": "Resposta correta: 802.1X. 802.1X é usado em controle de acesso a redes cabeadas e sem fio.",
         "dicaBanca": "Dica da banca: 802.1X é comum com RADIUS.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
     },
     {
         "id": "redes_113",
@@ -1805,7 +1917,8 @@ const redes = [
         "feedbackAcerto": "Correto. NAC avalia dispositivos e aplica políticas antes ou durante o acesso à rede.",
         "feedbackErro": "Resposta correta: Controlar acesso de dispositivos à rede conforme identidade e conformidade. NAC avalia dispositivos e aplica políticas antes ou durante o acesso à rede.",
         "dicaBanca": "Dica da banca: NAC = Network Access Control.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_114",
@@ -1821,7 +1934,8 @@ const redes = [
         "feedbackAcerto": "Correto. NAC avalia dispositivos e aplica políticas antes ou durante o acesso à rede.",
         "feedbackErro": "Resposta correta: NAC. NAC avalia dispositivos e aplica políticas antes ou durante o acesso à rede.",
         "dicaBanca": "Dica da banca: NAC = Network Access Control.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_115",
@@ -1837,7 +1951,8 @@ const redes = [
         "feedbackAcerto": "Correto. Segmentação melhora segurança, organização e controle de comunicação.",
         "feedbackErro": "Resposta correta: Separar ambientes para reduzir riscos e controlar tráfego. Segmentação melhora segurança, organização e controle de comunicação.",
         "dicaBanca": "Dica da banca: Segmentar reduz movimento lateral.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "vlan-comutacao-stp"
     },
     {
         "id": "redes_116",
@@ -1853,7 +1968,8 @@ const redes = [
         "feedbackAcerto": "Correto. Segmentação melhora segurança, organização e controle de comunicação.",
         "feedbackErro": "Resposta correta: segmentação de rede. Segmentação melhora segurança, organização e controle de comunicação.",
         "dicaBanca": "Dica da banca: Segmentar reduz movimento lateral.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_117",
@@ -1869,7 +1985,8 @@ const redes = [
         "feedbackAcerto": "Correto. Zero Trust exige verificação contínua e acesso mínimo necessário.",
         "feedbackErro": "Resposta correta: Não confiar automaticamente por estar dentro da rede. Zero Trust exige verificação contínua e acesso mínimo necessário.",
         "dicaBanca": "Dica da banca: Ideia central: nunca confiar automaticamente, sempre verificar.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_118",
@@ -1885,7 +2002,8 @@ const redes = [
         "feedbackAcerto": "Correto. Zero Trust exige verificação contínua e acesso mínimo necessário.",
         "feedbackErro": "Resposta correta: Zero Trust. Zero Trust exige verificação contínua e acesso mínimo necessário.",
         "dicaBanca": "Dica da banca: Ideia central: nunca confiar automaticamente, sempre verificar.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_119",
@@ -1901,7 +2019,8 @@ const redes = [
         "feedbackAcerto": "Correto. Sniffing pode ser legítimo em diagnóstico ou indevido em espionagem.",
         "feedbackErro": "Resposta correta: Capturar ou analisar tráfego de rede. Sniffing pode ser legítimo em diagnóstico ou indevido em espionagem.",
         "dicaBanca": "Dica da banca: Sniffing = captura/análise de pacotes.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_120",
@@ -1917,7 +2036,8 @@ const redes = [
         "feedbackAcerto": "Correto. Sniffing pode ser legítimo em diagnóstico ou indevido em espionagem.",
         "feedbackErro": "Resposta correta: sniffing. Sniffing pode ser legítimo em diagnóstico ou indevido em espionagem.",
         "dicaBanca": "Dica da banca: Sniffing = captura/análise de pacotes.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_121",
@@ -1933,7 +2053,8 @@ const redes = [
         "feedbackAcerto": "Correto. Spoofing envolve falsificação de origem, identidade ou informação.",
         "feedbackErro": "Resposta correta: Falsificar identidade ou origem em uma comunicação. Spoofing envolve falsificação de origem, identidade ou informação.",
         "dicaBanca": "Dica da banca: Spoofing = falsificação.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_122",
@@ -1949,7 +2070,8 @@ const redes = [
         "feedbackAcerto": "Correto. Spoofing envolve falsificação de origem, identidade ou informação.",
         "feedbackErro": "Resposta correta: spoofing. Spoofing envolve falsificação de origem, identidade ou informação.",
         "dicaBanca": "Dica da banca: Spoofing = falsificação.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_123",
@@ -1965,7 +2087,8 @@ const redes = [
         "feedbackAcerto": "Correto. DNS spoofing manipula resolução de nomes e pode redirecionar acessos.",
         "feedbackErro": "Resposta correta: Fornecer resposta DNS falsa para redirecionar o usuário. DNS spoofing manipula resolução de nomes e pode redirecionar acessos.",
         "dicaBanca": "Dica da banca: DNS falso pode levar a site falso.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_124",
@@ -1981,7 +2104,8 @@ const redes = [
         "feedbackAcerto": "Correto. DNS spoofing manipula resolução de nomes e pode redirecionar acessos.",
         "feedbackErro": "Resposta correta: DNS spoofing. DNS spoofing manipula resolução de nomes e pode redirecionar acessos.",
         "dicaBanca": "Dica da banca: DNS falso pode levar a site falso.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_125",
@@ -1997,7 +2121,8 @@ const redes = [
         "feedbackAcerto": "Correto. DNSSEC adiciona assinaturas ao DNS, mas não garante sigilo da consulta.",
         "feedbackErro": "Resposta correta: Validar autenticidade e integridade de respostas DNS. DNSSEC adiciona assinaturas ao DNS, mas não garante sigilo da consulta.",
         "dicaBanca": "Dica da banca: DNSSEC protege autenticidade/integridade, não confidencialidade.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_126",
@@ -2013,7 +2138,8 @@ const redes = [
         "feedbackAcerto": "Correto. DNSSEC adiciona assinaturas ao DNS, mas não garante sigilo da consulta.",
         "feedbackErro": "Resposta correta: DNSSEC. DNSSEC adiciona assinaturas ao DNS, mas não garante sigilo da consulta.",
         "dicaBanca": "Dica da banca: DNSSEC protege autenticidade/integridade, não confidencialidade.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_127",
@@ -2029,7 +2155,8 @@ const redes = [
         "feedbackAcerto": "Correto. DNS over HTTPS encapsula consultas DNS em HTTPS.",
         "feedbackErro": "Resposta correta: Transportar consultas DNS por HTTPS. DNS over HTTPS encapsula consultas DNS em HTTPS.",
         "dicaBanca": "Dica da banca: DoH está associado à privacidade das consultas DNS.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_128",
@@ -2045,7 +2172,8 @@ const redes = [
         "feedbackAcerto": "Correto. DNS over HTTPS encapsula consultas DNS em HTTPS.",
         "feedbackErro": "Resposta correta: DoH. DNS over HTTPS encapsula consultas DNS em HTTPS.",
         "dicaBanca": "Dica da banca: DoH está associado à privacidade das consultas DNS.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_129",
@@ -2061,7 +2189,8 @@ const redes = [
         "feedbackAcerto": "Correto. Logs ajudam a identificar falhas, acessos e eventos suspeitos.",
         "feedbackErro": "Resposta correta: Registrar eventos para auditoria, diagnóstico e investigação. Logs ajudam a identificar falhas, acessos e eventos suspeitos.",
         "dicaBanca": "Dica da banca: Sem log, investigação fica fraca.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_130",
@@ -2077,7 +2206,8 @@ const redes = [
         "feedbackAcerto": "Correto. Logs ajudam a identificar falhas, acessos e eventos suspeitos.",
         "feedbackErro": "Resposta correta: logs de rede. Logs ajudam a identificar falhas, acessos e eventos suspeitos.",
         "dicaBanca": "Dica da banca: Sem log, investigação fica fraca.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_131",
@@ -2093,7 +2223,8 @@ const redes = [
         "feedbackAcerto": "Correto. SIEM centraliza e correlaciona eventos para apoiar detecção e resposta.",
         "feedbackErro": "Resposta correta: Coletar e correlacionar eventos e logs de segurança. SIEM centraliza e correlaciona eventos para apoiar detecção e resposta.",
         "dicaBanca": "Dica da banca: SIEM = gestão/correlação de eventos de segurança.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_132",
@@ -2109,7 +2240,8 @@ const redes = [
         "feedbackAcerto": "Correto. SIEM centraliza e correlaciona eventos para apoiar detecção e resposta.",
         "feedbackErro": "Resposta correta: SIEM. SIEM centraliza e correlaciona eventos para apoiar detecção e resposta.",
         "dicaBanca": "Dica da banca: SIEM = gestão/correlação de eventos de segurança.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_133",
@@ -2125,7 +2257,8 @@ const redes = [
         "feedbackAcerto": "Correto. Backups de configuração reduzem tempo de recuperação após falhas.",
         "feedbackErro": "Resposta correta: Permitir restauração rápida de parâmetros de equipamentos de rede. Backups de configuração reduzem tempo de recuperação após falhas.",
         "dicaBanca": "Dica da banca: Equipamentos de rede também precisam de backup.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_134",
@@ -2141,7 +2274,8 @@ const redes = [
         "feedbackAcerto": "Correto. Backups de configuração reduzem tempo de recuperação após falhas.",
         "feedbackErro": "Resposta correta: backup de configuração. Backups de configuração reduzem tempo de recuperação após falhas.",
         "dicaBanca": "Dica da banca: Equipamentos de rede também precisam de backup.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "vlan-comutacao-stp"
     },
     {
         "id": "redes_135",
@@ -2157,7 +2291,8 @@ const redes = [
         "feedbackAcerto": "Correto. Failover reduz indisponibilidade ao acionar alternativa previamente preparada.",
         "feedbackErro": "Resposta correta: Transferir operação para recurso secundário quando o principal falha. Failover reduz indisponibilidade ao acionar alternativa previamente preparada.",
         "dicaBanca": "Dica da banca: Failover = assumir após falha.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "roteamento-disponibilidade"
     },
     {
         "id": "redes_136",
@@ -2173,7 +2308,8 @@ const redes = [
         "feedbackAcerto": "Correto. Failover reduz indisponibilidade ao acionar alternativa previamente preparada.",
         "feedbackErro": "Resposta correta: failover. Failover reduz indisponibilidade ao acionar alternativa previamente preparada.",
         "dicaBanca": "Dica da banca: Failover = assumir após falha.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "roteamento-disponibilidade"
     },
     {
         "id": "redes_137",
@@ -2189,7 +2325,8 @@ const redes = [
         "feedbackAcerto": "Correto. Load balancing reparte carga para evitar sobrecarga e melhorar continuidade.",
         "feedbackErro": "Resposta correta: Distribuir requisições entre múltiplos recursos disponíveis. Load balancing reparte carga para evitar sobrecarga e melhorar continuidade.",
         "dicaBanca": "Dica da banca: Balanceamento não é igual a backup.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "roteamento-disponibilidade"
     },
     {
         "id": "redes_138",
@@ -2205,7 +2342,8 @@ const redes = [
         "feedbackAcerto": "Correto. Load balancing reparte carga para evitar sobrecarga e melhorar continuidade.",
         "feedbackErro": "Resposta correta: balanceamento de carga. Load balancing reparte carga para evitar sobrecarga e melhorar continuidade.",
         "dicaBanca": "Dica da banca: Balanceamento não é igual a backup.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "roteamento-disponibilidade"
     },
     {
         "id": "redes_139",
@@ -2221,7 +2359,8 @@ const redes = [
         "feedbackAcerto": "Correto. Protocolos dinâmicos ajustam rotas automaticamente conforme a topologia.",
         "feedbackErro": "Resposta correta: Aprender e atualizar rotas por protocolos de roteamento. Protocolos dinâmicos ajustam rotas automaticamente conforme a topologia.",
         "dicaBanca": "Dica da banca: Dinâmico = protocolo troca rotas.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "roteamento-disponibilidade"
     },
     {
         "id": "redes_140",
@@ -2237,7 +2376,8 @@ const redes = [
         "feedbackAcerto": "Correto. Protocolos dinâmicos ajustam rotas automaticamente conforme a topologia.",
         "feedbackErro": "Resposta correta: roteamento dinâmico. Protocolos dinâmicos ajustam rotas automaticamente conforme a topologia.",
         "dicaBanca": "Dica da banca: Dinâmico = protocolo troca rotas.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
     },
     {
         "id": "redes_141",
@@ -2253,7 +2393,8 @@ const redes = [
         "feedbackAcerto": "Correto. RIP usa vetor de distância e métrica por saltos, sendo mais simples e limitado.",
         "feedbackErro": "Resposta correta: Protocolo de roteamento dinâmico baseado em vetor de distância. RIP usa vetor de distância e métrica por saltos, sendo mais simples e limitado.",
         "dicaBanca": "Dica da banca: RIP = hops/saltos.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "roteamento-disponibilidade"
     },
     {
         "id": "redes_142",
@@ -2269,7 +2410,8 @@ const redes = [
         "feedbackAcerto": "Correto. RIP usa vetor de distância e métrica por saltos, sendo mais simples e limitado.",
         "feedbackErro": "Resposta correta: RIP. RIP usa vetor de distância e métrica por saltos, sendo mais simples e limitado.",
         "dicaBanca": "Dica da banca: RIP = hops/saltos.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "roteamento-disponibilidade"
     },
     {
         "id": "redes_143",
@@ -2285,7 +2427,8 @@ const redes = [
         "feedbackAcerto": "Correto. BGP é o protocolo central de roteamento interdomínios na Internet.",
         "feedbackErro": "Resposta correta: Protocolo de roteamento entre sistemas autônomos na Internet. BGP é o protocolo central de roteamento interdomínios na Internet.",
         "dicaBanca": "Dica da banca: BGP aparece em contexto de Internet e operadoras.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "roteamento-disponibilidade"
     },
     {
         "id": "redes_144",
@@ -2301,7 +2444,8 @@ const redes = [
         "feedbackAcerto": "Correto. BGP é o protocolo central de roteamento interdomínios na Internet.",
         "feedbackErro": "Resposta correta: BGP. BGP é o protocolo central de roteamento interdomínios na Internet.",
         "dicaBanca": "Dica da banca: BGP aparece em contexto de Internet e operadoras.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "roteamento-disponibilidade"
     },
     {
         "id": "redes_145",
@@ -2317,7 +2461,8 @@ const redes = [
         "feedbackAcerto": "Correto. A rota padrão IPv4 é representada por 0.0.0.0/0.",
         "feedbackErro": "Resposta correta: Caminho usado quando não há rota mais específica para o destino. A rota padrão IPv4 é representada por 0.0.0.0/0.",
         "dicaBanca": "Dica da banca: Rota padrão = caminho para o restante.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "roteamento-disponibilidade"
     },
     {
         "id": "redes_146",
@@ -2333,7 +2478,8 @@ const redes = [
         "feedbackAcerto": "Correto. A rota padrão IPv4 é representada por 0.0.0.0/0.",
         "feedbackErro": "Resposta correta: rota padrão. A rota padrão IPv4 é representada por 0.0.0.0/0.",
         "dicaBanca": "Dica da banca: Rota padrão = caminho para o restante.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_147",
@@ -2349,7 +2495,8 @@ const redes = [
         "feedbackAcerto": "Correto. A máscara define o bloco de rede ao qual o host pertence.",
         "feedbackErro": "Resposta correta: Separar porção de rede e porção de host em um endereço IP. A máscara define o bloco de rede ao qual o host pertence.",
         "dicaBanca": "Dica da banca: Máscara responde se destinos estão na mesma rede.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_148",
@@ -2365,7 +2512,8 @@ const redes = [
         "feedbackAcerto": "Correto. A máscara define o bloco de rede ao qual o host pertence.",
         "feedbackErro": "Resposta correta: máscara de sub-rede. A máscara define o bloco de rede ao qual o host pertence.",
         "dicaBanca": "Dica da banca: Máscara responde se destinos estão na mesma rede.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
     },
     {
         "id": "redes_149",
@@ -2381,7 +2529,8 @@ const redes = [
         "feedbackAcerto": "Correto. VLSM permite sub-redes dimensionadas conforme necessidade.",
         "feedbackErro": "Resposta correta: Usar máscaras de tamanhos variáveis para aproveitar melhor endereços. VLSM permite sub-redes dimensionadas conforme necessidade.",
         "dicaBanca": "Dica da banca: VLSM = máscara variável.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_150",
@@ -2397,6 +2546,7 @@ const redes = [
         "feedbackAcerto": "Correto. VLSM permite sub-redes dimensionadas conforme necessidade.",
         "feedbackErro": "Resposta correta: VLSM. VLSM permite sub-redes dimensionadas conforme necessidade.",
         "dicaBanca": "Dica da banca: VLSM = máscara variável.",
-        "assunto": "redes"
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
     }
 ];
