@@ -5286,6 +5286,85 @@ function embaralharArray(lista){
     return copia;
 }
 
+
+function selecionarQuestoesBalanceadasPorSubtopico(base, limite){
+    if(!Array.isArray(base) || base.length === 0 || limite <= 0){
+        return [];
+    }
+
+    const grupos = {};
+
+    base.forEach(questao => {
+        const subtopico = String(
+            questao.subtopico || "geral"
+        ).trim() || "geral";
+
+        if(!grupos[subtopico]){
+            grupos[subtopico] = [];
+        }
+
+        grupos[subtopico].push(questao);
+    });
+
+    const nomesSubtopicos = Object.keys(grupos);
+
+    // Se o banco ainda não estiver marcado por subtopico,
+    // mantém o sorteio aleatório tradicional.
+    if(
+        nomesSubtopicos.length <= 1 ||
+        base.filter(q => q.subtopico).length < Math.min(base.length, limite)
+    ){
+        return embaralharArray(base).slice(0, limite);
+    }
+
+    const ordemSubtopicos = embaralharArray(nomesSubtopicos);
+    const quantidadeBase = Math.floor(limite / ordemSubtopicos.length);
+    let restante = limite % ordemSubtopicos.length;
+
+    const selecionadas = [];
+    const sobras = [];
+    const usadas = new Set();
+
+    ordemSubtopicos.forEach(subtopico => {
+        const grupo = embaralharArray(grupos[subtopico]);
+        const quantidadeDoGrupo = quantidadeBase + (restante > 0 ? 1 : 0);
+
+        if(restante > 0){
+            restante--;
+        }
+
+        const escolhidas = grupo.slice(0, quantidadeDoGrupo);
+        const excedentes = grupo.slice(quantidadeDoGrupo);
+
+        escolhidas.forEach(questao => {
+            selecionadas.push(questao);
+            usadas.add(questao.id || questao.pergunta);
+        });
+
+        sobras.push(...excedentes);
+    });
+
+    if(selecionadas.length < limite){
+        const complemento = embaralharArray(sobras).filter(questao => {
+            return !usadas.has(questao.id || questao.pergunta);
+        });
+
+        selecionadas.push(
+            ...complemento.slice(0, limite - selecionadas.length)
+        );
+    }
+
+    return embaralharArray(selecionadas).slice(0, limite);
+}
+
+function selecionarQuestoesParaRodada(assunto, base, limite){
+    if(!Array.isArray(base) || base.length === 0){
+        return [];
+    }
+
+    return selecionarQuestoesBalanceadasPorSubtopico(base, limite);
+}
+
 function salvarOrdemQuestoes(assunto, questoes){
     if(!assunto || !Array.isArray(questoes)){
         return;
@@ -5326,7 +5405,7 @@ function carregarQuestoesNaOrdemSalva(assunto){
         }
     }
 
-    const selecionadas = embaralharArray(base).slice(0, limite);
+    const selecionadas = selecionarQuestoesParaRodada(assunto, base, limite);
     salvarOrdemQuestoes(assunto, selecionadas);
     return selecionadas;
 }
@@ -5344,7 +5423,7 @@ function prepararQuestoesDoAssunto(novaOrdem){
     const limite = obterLimiteQuestoesAssunto(disciplinaAtual);
 
     if(novaOrdem){
-        questoesEmbaralhadas = embaralharArray(base).slice(0, limite);
+        questoesEmbaralhadas = selecionarQuestoesParaRodada(disciplinaAtual, base, limite);
         salvarOrdemQuestoes(disciplinaAtual, questoesEmbaralhadas);
     }else{
         questoesEmbaralhadas = carregarQuestoesNaOrdemSalva(disciplinaAtual);
