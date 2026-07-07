@@ -5607,3 +5607,253 @@ progress{
     }
 
 }
+
+/* ==========================
+   ROTAS DE ESTUDO
+========================== */
+
+.card-preparacoes-farol h2{
+    margin-bottom:15px;
+}
+
+.texto-preparacao{
+    font-size:17px;
+    margin:10px 0 18px 0;
+    line-height:1.6;
+}
+
+.titulo-grupo-preparacao{
+    margin:22px 0 12px 0;
+    color:#0d47a1;
+    font-size:20px;
+}
+
+.grid-preparacoes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:16px;
+    margin-bottom:10px;
+}
+
+.card-preparacao{
+    width:100%;
+    min-height:145px;
+    padding:18px;
+    border-radius:18px;
+    border:2px solid transparent;
+    background:rgba(255,255,255,0.92);
+    box-shadow:0 6px 16px rgba(0,0,0,0.14);
+    display:flex;
+    align-items:center;
+    gap:16px;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+    color:#263238;
+}
+
+.card-preparacao:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 22px rgba(0,0,0,0.20);
+}
+
+.card-preparacao-verde{
+    border-left:8px solid #43a047;
+}
+
+.card-preparacao-azul{
+    border-left:8px solid #1e88e5;
+}
+
+.card-preparacao-bloqueado,
+.card-preparacao.bloqueada{
+    opacity:0.72;
+    filter:grayscale(0.35);
+    background:rgba(238,238,238,0.95);
+    border-left:8px solid #666;
+}
+
+.icone-preparacao{
+    width:62px;
+    height:62px;
+    min-width:62px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(30,136,229,0.10);
+    font-size:34px;
+}
+
+.conteudo-preparacao{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.conteudo-preparacao strong{
+    font-size:20px;
+    color:#0d47a1;
+}
+
+.conteudo-preparacao p{
+    font-size:14px;
+    line-height:1.45;
+    color:#444;
+    margin:0;
+}
+
+.nivel-preparacao{
+    font-size:13px;
+    font-weight:bold;
+    color:#2e7d32;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+}
+
+.acao-preparacao{
+    margin-top:6px;
+    font-weight:bold;
+    color:#1e88e5;
+}
+
+.painel-trilha-estudo{
+    display:none;
+    margin-top:18px;
+}
+
+.cabecalho-trilha{
+    display:flex;
+    justify-content:space-between;
+    gap:18px;
+    align-items:flex-start;
+    padding:20px;
+    border-radius:18px;
+    background:linear-gradient(135deg, rgba(227,242,253,0.98), rgba(255,248,225,0.98));
+    border-left:8px solid #1e88e5;
+    box-shadow:0 4px 12px rgba(0,0,0,0.10);
+    margin-bottom:18px;
+}
+
+.cabecalho-trilha h3{
+    color:#0d47a1;
+    font-size:25px;
+    margin:8px 0;
+}
+
+.cabecalho-trilha p{
+    line-height:1.6;
+    margin:0;
+    color:#333;
+}
+
+.selo-nivel-trilha{
+    display:inline-block;
+    padding:7px 12px;
+    border-radius:999px;
+    background:#0d47a1;
+    color:white;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.btn-alterar-preparacao{
+    background:#f9a825;
+    color:#3e2f00;
+    white-space:nowrap;
+    font-weight:bold;
+}
+
+.btn-alterar-preparacao:hover{
+    background:#f57f17;
+    color:white;
+}
+
+.grid-disciplinas-trilha{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+    gap:14px;
+}
+
+.card-disciplina-trilha{
+    min-height:120px;
+    padding:18px;
+    border-radius:18px;
+    background:#43a047;
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-align:left;
+    box-shadow:0 6px 16px rgba(0,0,0,0.16);
+    transition:0.25s;
+}
+
+.card-disciplina-trilha:hover{
+    transform:scale(1.02);
+    background:#2e7d32;
+}
+
+.numero-trilha{
+    width:38px;
+    height:38px;
+    min-width:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,0.22);
+    border:2px solid rgba(255,255,255,0.65);
+    border-radius:50%;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.icone-disciplina-trilha{
+    font-size:32px;
+}
+
+.dados-disciplina-trilha{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.dados-disciplina-trilha strong{
+    font-size:19px;
+}
+
+.dados-disciplina-trilha small{
+    font-size:13px;
+    line-height:1.35;
+    color:rgba(255,255,255,0.90);
+}
+
+.atalho-todas-disciplinas{
+    margin-top:22px;
+    text-align:center;
+}
+
+.atalho-todas-disciplinas button{
+    background:#1565c0;
+}
+
+.atalho-todas-disciplinas button:hover{
+    background:#0d47a1;
+}
+
+@media(max-width:768px){
+
+    .cabecalho-trilha{
+        flex-direction:column;
+    }
+
+    .btn-alterar-preparacao{
+        width:100%;
+    }
+
+    .card-preparacao{
+        min-height:auto;
+    }
+
+}
+

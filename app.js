@@ -62,6 +62,10 @@ if(id === "login"){
             areaQuestao.innerHTML = "";
         }
 
+        if(typeof renderizarTelaPreparacoes === "function"){
+            setTimeout(renderizarTelaPreparacoes, 0);
+        }
+
     }
 
     if(id === "telaMapaMental"){
@@ -1313,6 +1317,418 @@ Number(
 // ==========================
 // CARREGAR DISCIPLINA
 // ==========================
+
+// ==========================
+// ROTAS DE ESTUDO
+// ==========================
+
+const disciplinasTrilhaFarol = {
+    portugues: {
+        nome: "Português",
+        icone: "📖",
+        descricao: "Gramática, interpretação e produção textual."
+    },
+    informatica: {
+        nome: "Informática",
+        icone: "💻",
+        descricao: "Conteúdos de informática cobrados no concurso."
+    },
+    etica: {
+        nome: "Ética",
+        icone: "⚖️",
+        descricao: "Conteúdo exigido para cargo de nível médio."
+    },
+    apoioEscolar: {
+        nome: "Apoio Escolar",
+        icone: "👨‍🏫",
+        descricao: "Conhecimento específico do cargo."
+    },
+    didatica: {
+        nome: "Didática e Legislação",
+        icone: "📚",
+        descricao: "Formação pedagógica para professor."
+    },
+    historia: {
+        nome: "História",
+        icone: "📜",
+        descricao: "Conhecimento específico de Professor de História."
+    },
+    ciencias: {
+        nome: "Professor de Ciências",
+        icone: "🔬",
+        descricao: "Conhecimento específico de Professor de Ciências."
+    }
+};
+
+const trilhasPreparacaoFarol = {
+    apoioEscolar: {
+        nome: "Apoio Escolar",
+        nivel: "Nível Médio",
+        icone: "👨‍🏫",
+        cor: "verde",
+        descricao: "Português, Informática, Ética e o conteúdo específico de Apoio Escolar.",
+        disciplinas: [
+            "portugues",
+            "informatica",
+            "etica",
+            "apoioEscolar"
+        ]
+    },
+    professorHistoria: {
+        nome: "Professor de História",
+        nivel: "Nível Superior",
+        icone: "📜",
+        cor: "azul",
+        descricao: "Português, Informática, Didática e o conteúdo específico de História.",
+        disciplinas: [
+            "portugues",
+            "informatica",
+            "didatica",
+            "historia"
+        ]
+    },
+    professorCiencias: {
+        nome: "Professor de Ciências",
+        nivel: "Nível Superior",
+        icone: "🔬",
+        cor: "azul",
+        descricao: "Português, Informática, Didática e o conteúdo específico de Ciências.",
+        disciplinas: [
+            "portugues",
+            "informatica",
+            "didatica",
+            "ciencias"
+        ]
+    },
+    professorMatematica: {
+        nome: "Professor de Matemática",
+        nivel: "Nível Superior",
+        icone: "📐",
+        cor: "bloqueado",
+        descricao: "Rota em desenvolvimento.",
+        bloqueado: true,
+        disciplinas: []
+    },
+    professorEducacaoFisica: {
+        nome: "Professor de Educação Física",
+        nivel: "Nível Superior",
+        icone: "🏃",
+        cor: "bloqueado",
+        descricao: "Rota em desenvolvimento.",
+        bloqueado: true,
+        disciplinas: []
+    },
+    administrador: {
+        nome: "Administrador",
+        nivel: "Nível Superior",
+        icone: "👨‍💼",
+        cor: "bloqueado",
+        descricao: "Rota em desenvolvimento.",
+        bloqueado: true,
+        disciplinas: []
+    }
+};
+
+function obterTrilhaAtualFarol(){
+
+    const chave = localStorage.getItem("farol_trilha_atual") || "";
+
+    if(
+        chave &&
+        trilhasPreparacaoFarol[chave] &&
+        !trilhasPreparacaoFarol[chave].bloqueado
+    ){
+        return chave;
+    }
+
+    return "";
+
+}
+
+function montarCardPreparacaoFarol(chave, trilha){
+
+    const classeBloqueado = trilha.bloqueado ? " bloqueada" : "";
+    const textoBotao = trilha.bloqueado ? "🔒 Em breve" : "🧭 Iniciar rota";
+    const nivel = escaparHTML(trilha.nivel || "");
+    const nome = escaparHTML(trilha.nome || "");
+    const descricao = escaparHTML(trilha.descricao || "");
+
+    return `
+        <button
+            class="card-preparacao card-preparacao-${trilha.cor || "verde"}${classeBloqueado}"
+            onclick="abrirTrilhaEstudo('${chave}')">
+
+            <div class="icone-preparacao">
+                ${trilha.icone || "🎯"}
+            </div>
+
+            <div class="conteudo-preparacao">
+                <span class="nivel-preparacao">
+                    ${nivel}
+                </span>
+
+                <strong>
+                    ${nome}
+                </strong>
+
+                <p>
+                    ${descricao}
+                </p>
+
+                <span class="acao-preparacao">
+                    ${textoBotao}
+                </span>
+            </div>
+
+        </button>
+    `;
+
+}
+
+function renderizarTelaPreparacoes(){
+
+    const painelPreparacoes =
+        document.getElementById("painelPreparacoes");
+
+    const painelTrilha =
+        document.getElementById("painelTrilhaEstudo");
+
+    if(!painelPreparacoes || !painelTrilha){
+        return;
+    }
+
+    const trilhaAtual = obterTrilhaAtualFarol();
+
+    if(trilhaAtual){
+        renderizarTrilhaEstudo(trilhaAtual);
+        return;
+    }
+
+    painelTrilha.style.display = "none";
+    painelTrilha.innerHTML = "";
+    painelPreparacoes.style.display = "block";
+
+    painelPreparacoes.innerHTML = `
+        <p class="texto-preparacao">
+            Escolha o cargo para o Farol traçar sua Rota de Estudos com as etapas certas.
+        </p>
+
+        <h3 class="titulo-grupo-preparacao">
+            🟢 Nível Médio
+        </h3>
+
+        <div class="grid-preparacoes">
+            ${montarCardPreparacaoFarol("apoioEscolar", trilhasPreparacaoFarol.apoioEscolar)}
+        </div>
+
+        <h3 class="titulo-grupo-preparacao">
+            🔵 Nível Superior — Professor
+        </h3>
+
+        <div class="grid-preparacoes">
+            ${montarCardPreparacaoFarol("professorHistoria", trilhasPreparacaoFarol.professorHistoria)}
+            ${montarCardPreparacaoFarol("professorCiencias", trilhasPreparacaoFarol.professorCiencias)}
+        </div>
+
+        <h3 class="titulo-grupo-preparacao">
+            🔒 Em breve
+        </h3>
+
+        <div class="grid-preparacoes">
+            ${montarCardPreparacaoFarol("professorMatematica", trilhasPreparacaoFarol.professorMatematica)}
+            ${montarCardPreparacaoFarol("professorEducacaoFisica", trilhasPreparacaoFarol.professorEducacaoFisica)}
+            ${montarCardPreparacaoFarol("administrador", trilhasPreparacaoFarol.administrador)}
+        </div>
+    `;
+
+}
+
+function abrirTrilhaEstudo(chave){
+
+    const trilha = trilhasPreparacaoFarol[chave];
+
+    if(!trilha){
+        mostrarToast("Rota não encontrada.");
+        return;
+    }
+
+    if(trilha.bloqueado){
+        mostrarToast("Esta rota ainda está em desenvolvimento.");
+        return;
+    }
+
+    localStorage.setItem("farol_trilha_atual", chave);
+
+    renderizarTrilhaEstudo(chave);
+
+}
+
+function alterarPreparacaoFarol(){
+
+    localStorage.removeItem("farol_trilha_atual");
+
+    renderizarTelaPreparacoes();
+
+}
+
+function renderizarTrilhaEstudo(chave){
+
+    const trilha = trilhasPreparacaoFarol[chave];
+
+    const painelPreparacoes =
+        document.getElementById("painelPreparacoes");
+
+    const painelTrilha =
+        document.getElementById("painelTrilhaEstudo");
+
+    if(!trilha || !painelPreparacoes || !painelTrilha){
+        return;
+    }
+
+    painelPreparacoes.style.display = "none";
+    painelTrilha.style.display = "block";
+
+    const cardsDisciplinas = trilha.disciplinas.map((disciplina, indice) => {
+
+        const dados = disciplinasTrilhaFarol[disciplina] || {
+            nome: disciplina,
+            icone: "📚",
+            descricao: "Etapa da sua Rota de Estudos."
+        };
+
+        return `
+            <button
+                class="card-disciplina-trilha"
+                onclick="abrirDisciplina('${disciplina}')">
+
+                <span class="numero-trilha">
+                    ${indice + 1}
+                </span>
+
+                <span class="icone-disciplina-trilha">
+                    ${dados.icone || "📚"}
+                </span>
+
+                <span class="dados-disciplina-trilha">
+                    <strong>
+                        ${escaparHTML(dados.nome)}
+                    </strong>
+
+                    <small>
+                        ${escaparHTML(dados.descricao)}
+                    </small>
+                </span>
+
+            </button>
+        `;
+
+    }).join("");
+
+    painelTrilha.innerHTML = `
+        <div class="cabecalho-trilha">
+            <div>
+                <span class="selo-nivel-trilha">
+                    ${escaparHTML(trilha.nivel)}
+                </span>
+
+                <h3>
+                    🧭 Minha Rota de Aprovação
+                </h3>
+
+                <p>
+                    <strong>${trilha.icone || "🎯"} ${escaparHTML(trilha.nome)}</strong>
+                    <br>
+                    Complete as etapas abaixo para avançar rumo à aprovação.
+                </p>
+            </div>
+
+            <button
+                class="btn-alterar-preparacao"
+                onclick="alterarPreparacaoFarol()">
+                ⚓ Alterar Rota
+            </button>
+        </div>
+
+        <div class="grid-disciplinas-trilha">
+            ${cardsDisciplinas}
+        </div>
+    `;
+
+}
+
+function mostrarTodasDisciplinasFarol(){
+
+    localStorage.removeItem("farol_trilha_atual");
+
+    const painelPreparacoes =
+        document.getElementById("painelPreparacoes");
+
+    const painelTrilha =
+        document.getElementById("painelTrilhaEstudo");
+
+    if(!painelPreparacoes || !painelTrilha){
+        return;
+    }
+
+    painelPreparacoes.style.display = "none";
+    painelTrilha.style.display = "block";
+
+    const todas = [
+        "portugues",
+        "informatica",
+        "etica",
+        "apoioEscolar",
+        "didatica",
+        "ciencias",
+        "historia"
+    ];
+
+    const cards = todas.map((disciplina, indice) => {
+
+        const dados = disciplinasTrilhaFarol[disciplina];
+
+        return `
+            <button
+                class="card-disciplina-trilha"
+                onclick="abrirDisciplina('${disciplina}')">
+
+                <span class="numero-trilha">
+                    ${indice + 1}
+                </span>
+
+                <span class="icone-disciplina-trilha">
+                    ${dados.icone}
+                </span>
+
+                <span class="dados-disciplina-trilha">
+                    <strong>${escaparHTML(dados.nome)}</strong>
+                    <small>${escaparHTML(dados.descricao)}</small>
+                </span>
+
+            </button>
+        `;
+
+    }).join("");
+
+    painelTrilha.innerHTML = `
+        <div class="cabecalho-trilha">
+            <div>
+                <span class="selo-nivel-trilha">
+                    Visão geral
+                </span>
+                <h3>🗺️ Todas as disciplinas liberadas</h3>
+                <p>Use esta opção apenas quando quiser navegar por todo o conteúdo da plataforma.</p>
+            </div>
+            <button class="btn-alterar-preparacao" onclick="alterarPreparacaoFarol()">
+                ⚓ Voltar às Rotas
+            </button>
+        </div>
+        <div class="grid-disciplinas-trilha">
+            ${cards}
+        </div>
+    `;
+
+}
 
 function abrirDisciplina(nome) {
 
@@ -7123,7 +7539,7 @@ function atualizarContinuarUltimoEstudo(){
         box.classList.add("sem-estudo");
         botao.disabled = true;
         texto.textContent =
-            "Você ainda não iniciou um estudo. Escolha uma disciplina para começar.";
+            "Você ainda não iniciou um estudo. Escolha uma rota de estudos para começar.";
         return;
 
     }
@@ -9989,7 +10405,7 @@ const partesFarolJogo = [
 
 const disciplinasJogoFarol = {
     todas: {
-        nome: "🎯 Todas as disciplinas",
+        nome: "🗺️ Todas as disciplinas",
         assuntos: []
     },
     portugues: {
@@ -11205,7 +11621,7 @@ function abrirJogoCacaErros(){
 
                     <div class="botoes-final-jogo">
                         <button onclick="mostrarTela('questoes')">
-                            📚 Estudar disciplinas
+                            🧭 Ir para Rota de Estudos
                         </button>
 
                         <button onclick="abrirJogoConstruaFarol()">
