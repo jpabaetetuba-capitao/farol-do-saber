@@ -5864,9 +5864,9 @@ function chaveOrdemQuestoes(assunto){
     return "farol_ordemQuestoes_" + assunto;
 }
 
-// Cada rodada de um tópico deve mostrar no máximo 40 questões,
+// Cada rodada de um tópico deve mostrar no máximo 50 questões,
 // mesmo que o banco tenha 70, 100 ou 120 questões.
-const LIMITE_QUESTOES_POR_RODADA = 40;
+const LIMITE_QUESTOES_POR_RODADA = 50;
 
 function obterLimiteQuestoesAssunto(assunto){
     const base = bancoQuestoes[assunto];
@@ -13644,7 +13644,7 @@ function iniciarRotaFarol(chaveDisciplina){
     }
 
     rotaQuestoes =
-        questoesDisponiveis.slice(0, 40);
+        questoesDisponiveis.slice(0, 50);
 
     rotaIndice = 0;
     rotaPosAluno = 0;
@@ -13728,7 +13728,7 @@ function garantirQuestoesRotaFarol(){
     }
 
     rotaQuestoes =
-        novasQuestoes.slice(0, 40);
+        novasQuestoes.slice(0, 50);
 
     rotaIndice = 0;
 
@@ -14235,7 +14235,7 @@ function iniciarSenhaFarol(chaveDisciplina){
     }
 
     senhaQuestoes =
-        questoesDisponiveis.slice(0, 40);
+        questoesDisponiveis.slice(0, 50);
 
     senhaIndice = 0;
     senhaDisciplina = chaveDisciplina;
@@ -14267,7 +14267,7 @@ function garantirQuestoesSenhaFarol(){
     }
 
     senhaQuestoes =
-        novasQuestoes.slice(0, 40);
+        novasQuestoes.slice(0, 50);
 
     senhaIndice = 0;
 
@@ -14852,7 +14852,7 @@ function iniciarBauFarol(chaveDisciplina){
     }
 
     bauQuestoes =
-        questoesDisponiveis.slice(0, 40);
+        questoesDisponiveis.slice(0, 50);
 
     bauIndice = 0;
     bauDisciplina = chaveDisciplina;
@@ -14886,7 +14886,7 @@ function garantirQuestoesBauFarol(){
     }
 
     bauQuestoes =
-        novasQuestoes.slice(0, 40);
+        novasQuestoes.slice(0, 50);
 
     bauIndice = 0;
 
@@ -17720,3 +17720,494 @@ async function arquivarDuelo(codigo){
         mostrarToast("Não foi possível ocultar o duelo.");
     }
 }
+
+
+/* ==========================================================
+   PATCH FAROL DO SABER — EDUCAÇÃO FÍSICA + MATEMÁTICA
+   Libera as duas rotas e cria Matemática com primeiro tópico
+========================================================== */
+
+(function() {
+
+    const topicosEducacaoFisicaFarol = [
+    {
+        "chave": "relacoesFundamentaisEducacaoFisica",
+        "nome": "🏃 Relações Fundamentais da Educação Física"
+    },
+    {
+        "chave": "tendenciasPedagogicasEducacaoFisica",
+        "nome": "📚 Tendências Pedagógicas da Educação Física"
+    },
+    {
+        "chave": "atividadesLudicasLazerRecreacao",
+        "nome": "🎲 Atividades Lúdicas, Lazer e Recreação"
+    },
+    {
+        "chave": "conteudosMetodologiaEducacaoFisica",
+        "nome": "⚽ Conteúdos e Metodologia"
+    },
+    {
+        "chave": "experienciasPraticoTeoricasEducacaoFisica",
+        "nome": "🧠 Experiências Prático-Teóricas"
+    },
+    {
+        "chave": "educacaoFisicaInclusiva",
+        "nome": "🤝 Educação Física e Educação Inclusiva"
+    },
+    {
+        "chave": "pcnsEducacaoFisica",
+        "nome": "📘 PCNs e Educação Física"
+    },
+    {
+        "chave": "bnccEducacaoFisica",
+        "nome": "📗 BNCC e Educação Física"
+    },
+    {
+        "chave": "socorrosUrgenciaEducacaoFisica",
+        "nome": "🚑 Socorros de Urgência"
+    },
+    {
+        "chave": "gestaoEventosEsportivosEducacaoFisica",
+        "nome": "🏟️ Organização e Gestão de Eventos Esportivos"
+    },
+    {
+        "chave": "dimensoesBiologicasFisiologicasEducacaoFisica",
+        "nome": "🫀 Dimensões Biológicas e Fisiológicas"
+    },
+    {
+        "chave": "educacaoFisicaNaLDB",
+        "nome": "📜 Educação Física na LDB"
+    },
+    {
+        "chave": "avaliacaoEducacaoFisicaEscolar",
+        "nome": "📊 Avaliação em Educação Física Escolar"
+    },
+    {
+        "chave": "historiaEducacaoFisica",
+        "nome": "🏛️ História da Educação Física"
+    },
+    {
+        "chave": "educacaoFisicaEspecial",
+        "nome": "♿ Educação Física Especial"
+    },
+    {
+        "chave": "educacaoFisicaGruposEspeciais",
+        "nome": "🧩 Educação Física para Grupos Especiais"
+    },
+    {
+        "chave": "anatomiaBasicaEducacaoFisica",
+        "nome": "🦴 Anatomia Básica"
+    },
+    {
+        "chave": "planosEixosMovimento",
+        "nome": "📐 Planos e Eixos de Movimento"
+    },
+    {
+        "chave": "abordagensPedagogicasEducacaoFisica",
+        "nome": "🧭 Abordagens Pedagógicas da Educação Física"
+    },
+    {
+        "chave": "eticaProfissionalEducacaoFisica",
+        "nome": "⚖️ Ética Profissional"
+    }
+];
+    const topicosMatematicaFarol = [
+    {
+        "chave": "educacaoMatematicaMetodologias",
+        "nome": "📚 Educação Matemática e Metodologias"
+    },
+    {
+        "chave": "bnccMatematica",
+        "nome": "📘 BNCC e Matemática no Ensino Fundamental"
+    },
+    {
+        "chave": "conjuntosNumericos",
+        "nome": "🔢 Conjuntos e Conjuntos Numéricos"
+    },
+    {
+        "chave": "proporcionalidadeMatematicaFinanceira",
+        "nome": "💰 Proporcionalidade e Matemática Financeira"
+    },
+    {
+        "chave": "funcoesReais",
+        "nome": "📈 Funções Reais de Variável Real"
+    },
+    {
+        "chave": "equacoesInequacoesSistemas",
+        "nome": "🧮 Equações, Inequações e Sistemas"
+    },
+    {
+        "chave": "monomiosPolinomios",
+        "nome": "➗ Monômios e Polinômios"
+    },
+    {
+        "chave": "sequenciasNumericas",
+        "nome": "🔁 Sequências Numéricas: PA e PG"
+    },
+    {
+        "chave": "geometriaPlana",
+        "nome": "📐 Geometria Plana"
+    },
+    {
+        "chave": "relacoesMetricasTrigonometricas",
+        "nome": "📏 Relações Métricas e Trigonometria"
+    },
+    {
+        "chave": "talesTransformacoesGeometricas",
+        "nome": "📐 Tales e Transformações Geométricas"
+    },
+    {
+        "chave": "geometriaEspacial",
+        "nome": "🧊 Geometria Espacial"
+    },
+    {
+        "chave": "geometriaAnalitica",
+        "nome": "📍 Geometria Analítica"
+    },
+    {
+        "chave": "contagemProbabilidade",
+        "nome": "🎲 Contagem e Probabilidade"
+    },
+    {
+        "chave": "estatisticaMatematica",
+        "nome": "📊 Estatística"
+    }
+];
+
+    const primeiroTopicoEducacaoFisicaFarol = "relacoesFundamentaisEducacaoFisica";
+    const primeiroTopicoMatematicaFarol = "educacaoMatematicaMetodologias";
+
+    function existeTopico(lista, chave) {
+        return lista.some(item => item.chave === chave);
+    }
+
+    function nomeTopico(lista, chave) {
+        const item = lista.find(t => t.chave === chave);
+        return item ? item.nome : "Tópico em desenvolvimento";
+    }
+
+    if (typeof bancoQuestoes !== "undefined") {
+        if (typeof relacoesFundamentaisEducacaoFisica !== "undefined") {
+            bancoQuestoes.relacoesFundamentaisEducacaoFisica = relacoesFundamentaisEducacaoFisica;
+        }
+        if (typeof educacaoMatematicaMetodologias !== "undefined") {
+            bancoQuestoes.educacaoMatematicaMetodologias = educacaoMatematicaMetodologias;
+        }
+    }
+
+    if (typeof mapasMentaisPorAssunto !== "undefined") {
+        mapasMentaisPorAssunto.relacoesFundamentaisEducacaoFisica = {
+            titulo: "🏃 Relações Fundamentais da Educação Física",
+            imagem: "imagens/mapas/relacoesFundamentaisEducacaoFisica.png"
+        };
+        mapasMentaisPorAssunto.educacaoMatematicaMetodologias = {
+            titulo: "📚 Educação Matemática e Metodologias",
+            imagem: "imagens/mapas/educacaoMatematicaMetodologias.png"
+        };
+    }
+
+    if (typeof disciplinasTrilhaFarol !== "undefined") {
+        disciplinasTrilhaFarol.educacaoFisica = {
+            nome: "Educação Física",
+            icone: "🏃",
+            descricao: "Conhecimento específico de Professor de Educação Física."
+        };
+        disciplinasTrilhaFarol.matematica = {
+            nome: "Matemática",
+            icone: "📐",
+            descricao: "Conhecimento específico de Professor de Matemática."
+        };
+    }
+
+    if (typeof trilhasPreparacaoFarol !== "undefined") {
+        trilhasPreparacaoFarol.professorEducacaoFisica = {
+            nome: "Professor de Educação Física",
+            nivel: "Nível Superior",
+            icone: "🏃",
+            cor: "azul",
+            descricao: "Português, Informática, Didática e o conteúdo específico de Educação Física.",
+            bloqueado: false,
+            disciplinas: ["portugues", "informatica", "didatica", "educacaoFisica"]
+        };
+        trilhasPreparacaoFarol.professorMatematica = {
+            nome: "Professor de Matemática",
+            nivel: "Nível Superior",
+            icone: "📐",
+            cor: "azul",
+            descricao: "Português, Informática, Didática e o conteúdo específico de Matemática.",
+            bloqueado: false,
+            disciplinas: ["portugues", "informatica", "didatica", "matematica"]
+        };
+    }
+
+    if (typeof nomeDisciplinaForum === "function") {
+        const nomeDisciplinaForumOriginalPatchProf = nomeDisciplinaForum;
+        nomeDisciplinaForum = function(chave) {
+            if (chave === "educacaoFisica") return "Educação Física";
+            if (chave === "matematica") return "Matemática";
+            return nomeDisciplinaForumOriginalPatchProf(chave);
+        };
+    }
+
+    if (typeof abrirDisciplina === "function") {
+        const abrirDisciplinaOriginalPatchProf = abrirDisciplina;
+        abrirDisciplina = function(nome) {
+            if (nome === "educacaoFisica") {
+                disciplinaAtual = "educacaoFisica";
+                mostrarTela("educacaoFisica");
+                return;
+            }
+            if (nome === "matematica") {
+                disciplinaAtual = "matematica";
+                mostrarTela("matematica");
+                return;
+            }
+            return abrirDisciplinaOriginalPatchProf(nome);
+        };
+    }
+
+    if (typeof abrirAssunto === "function") {
+        const abrirAssuntoOriginalPatchProf = abrirAssunto;
+        abrirAssunto = function(assunto) {
+
+            if (assunto === primeiroTopicoEducacaoFisicaFarol) {
+                disciplinaAtual = "educacaoFisica";
+                assuntoAtual = assunto;
+
+                if (
+                    typeof relacoesFundamentaisEducacaoFisicaTeoria !== "undefined" &&
+                    Array.isArray(relacoesFundamentaisEducacaoFisicaTeoria) &&
+                    relacoesFundamentaisEducacaoFisicaTeoria.length > 0
+                ) {
+                    abrirTeoria(
+                        relacoesFundamentaisEducacaoFisicaTeoria,
+                        "🏃 Relações Fundamentais da Educação Física"
+                    );
+                    return;
+                }
+
+                mostrarToast("Teoria de Educação Física não encontrada.");
+                return;
+            }
+
+            if (assunto === primeiroTopicoMatematicaFarol) {
+                disciplinaAtual = "matematica";
+                assuntoAtual = assunto;
+
+                if (
+                    typeof educacaoMatematicaMetodologiasTeoria !== "undefined" &&
+                    Array.isArray(educacaoMatematicaMetodologiasTeoria) &&
+                    educacaoMatematicaMetodologiasTeoria.length > 0
+                ) {
+                    abrirTeoria(
+                        educacaoMatematicaMetodologiasTeoria,
+                        "📚 Educação Matemática e Metodologias"
+                    );
+                    return;
+                }
+
+                mostrarToast("Teoria de Matemática não encontrada.");
+                return;
+            }
+
+            if (existeTopico(topicosEducacaoFisicaFarol, assunto)) {
+                disciplinaAtual = "educacaoFisica";
+                assuntoAtual = assunto;
+                mostrarToast("Tópico em desenvolvimento: " + nomeTopico(topicosEducacaoFisicaFarol, assunto));
+                mostrarTela("educacaoFisica");
+                return;
+            }
+
+            if (existeTopico(topicosMatematicaFarol, assunto)) {
+                disciplinaAtual = "matematica";
+                assuntoAtual = assunto;
+                mostrarToast("Tópico em desenvolvimento: " + nomeTopico(topicosMatematicaFarol, assunto));
+                mostrarTela("matematica");
+                return;
+            }
+
+            return abrirAssuntoOriginalPatchProf(assunto);
+        };
+    }
+
+    if (typeof abrirTeoriaDoAssunto === "function") {
+        const abrirTeoriaDoAssuntoOriginalPatchProf = abrirTeoriaDoAssunto;
+        abrirTeoriaDoAssunto = function() {
+            if (assuntoAtual === primeiroTopicoEducacaoFisicaFarol) {
+                abrirTeoria(relacoesFundamentaisEducacaoFisicaTeoria, "🏃 Relações Fundamentais da Educação Física");
+                return;
+            }
+            if (assuntoAtual === primeiroTopicoMatematicaFarol) {
+                abrirTeoria(educacaoMatematicaMetodologiasTeoria, "📚 Educação Matemática e Metodologias");
+                return;
+            }
+            return abrirTeoriaDoAssuntoOriginalPatchProf();
+        };
+    }
+
+    if (typeof voltarParaAssuntos === "function") {
+        const voltarParaAssuntosOriginalPatchProf = voltarParaAssuntos;
+        voltarParaAssuntos = function() {
+            if (existeTopico(topicosEducacaoFisicaFarol, assuntoAtual)) {
+                mostrarTela("educacaoFisica");
+                return;
+            }
+            if (existeTopico(topicosMatematicaFarol, assuntoAtual)) {
+                mostrarTela("matematica");
+                return;
+            }
+            return voltarParaAssuntosOriginalPatchProf();
+        };
+    }
+
+    window.iniciarSimuladoEducacaoFisica = function() {
+        if (typeof relacoesFundamentaisEducacaoFisica === "undefined" || !Array.isArray(relacoesFundamentaisEducacaoFisica)) {
+            mostrarToast("Banco de Educação Física ainda não carregou.");
+            return;
+        }
+        iniciarSimuladoPersonalizado([...relacoesFundamentaisEducacaoFisica], 30, "educacaoFisica");
+    };
+
+    window.iniciarSimuladoMatematica = function() {
+        if (typeof educacaoMatematicaMetodologias === "undefined" || !Array.isArray(educacaoMatematicaMetodologias)) {
+            mostrarToast("Banco de Matemática ainda não carregou.");
+            return;
+        }
+        iniciarSimuladoPersonalizado([...educacaoMatematicaMetodologias], 30, "matematica");
+    };
+
+    renderizarTelaPreparacoes = function() {
+
+        const painelPreparacoes = document.getElementById("painelPreparacoes");
+        const painelTrilha = document.getElementById("painelTrilhaEstudo");
+
+        if (!painelPreparacoes || !painelTrilha) {
+            return;
+        }
+
+        const trilhaAtual = obterTrilhaAtualFarol();
+
+        if (trilhaAtual) {
+            renderizarTrilhaEstudo(trilhaAtual);
+            return;
+        }
+
+        painelTrilha.style.display = "none";
+        painelTrilha.innerHTML = "";
+        painelPreparacoes.style.display = "block";
+
+        painelPreparacoes.innerHTML = `
+            <p class="texto-preparacao">
+                Escolha o cargo para o Farol traçar sua Rota de Estudos com as etapas certas.
+            </p>
+
+            <h3 class="titulo-grupo-preparacao">🟢 Nível Médio</h3>
+
+            <div class="grid-preparacoes">
+                ${montarCardPreparacaoFarol("apoioEscolar", trilhasPreparacaoFarol.apoioEscolar)}
+            </div>
+
+            <h3 class="titulo-grupo-preparacao">🔵 Nível Superior — Professor</h3>
+
+            <div class="grid-preparacoes">
+                ${montarCardPreparacaoFarol("professorHistoria", trilhasPreparacaoFarol.professorHistoria)}
+                ${montarCardPreparacaoFarol("professorCiencias", trilhasPreparacaoFarol.professorCiencias)}
+                ${montarCardPreparacaoFarol("professorEducacaoFisica", trilhasPreparacaoFarol.professorEducacaoFisica)}
+                ${montarCardPreparacaoFarol("professorMatematica", trilhasPreparacaoFarol.professorMatematica)}
+            </div>
+
+            <h3 class="titulo-grupo-preparacao">🔒 Em breve</h3>
+
+            <div class="grid-preparacoes">
+                ${montarCardPreparacaoFarol("professorEducacaoFisica", {...trilhasPreparacaoFarol.professorEducacaoFisica, bloqueado:false, cor:"azul"}) === "" ? "" : ""}
+                ${montarCardPreparacaoFarol("administrador", trilhasPreparacaoFarol.administrador)}
+            </div>
+        `;
+    };
+
+})();
+
+
+/* ==========================================================
+   PATCH EXTRA — MATEMÁTICA TÓPICOS 2 E 3
+========================================================== */
+
+(function() {
+
+    const abrirAssuntoAnteriorTopicos23 = abrirAssunto;
+    abrirAssunto = function(assunto) {
+
+        if (assunto === "bnccMatematica") {
+            disciplinaAtual = "matematica";
+            assuntoAtual = assunto;
+
+            if (
+                typeof bnccMatematicaTeoria !== "undefined" &&
+                Array.isArray(bnccMatematicaTeoria) &&
+                bnccMatematicaTeoria.length > 0
+            ) {
+                abrirTeoria(
+                    bnccMatematicaTeoria,
+                    "📘 BNCC e Matemática no Ensino Fundamental"
+                );
+                return;
+            }
+
+            mostrarToast("Teoria de BNCC Matemática não encontrada.");
+            return;
+        }
+
+        if (assunto === "conjuntosNumericos") {
+            disciplinaAtual = "matematica";
+            assuntoAtual = assunto;
+
+            if (
+                typeof conjuntosNumericosTeoria !== "undefined" &&
+                Array.isArray(conjuntosNumericosTeoria) &&
+                conjuntosNumericosTeoria.length > 0
+            ) {
+                abrirTeoria(
+                    conjuntosNumericosTeoria,
+                    "🔢 Conjuntos e Conjuntos Numéricos"
+                );
+                return;
+            }
+
+            mostrarToast("Teoria de Conjuntos Numéricos não encontrada.");
+            return;
+        }
+
+        return abrirAssuntoAnteriorTopicos23(assunto);
+    };
+
+    if (typeof bancoQuestoes !== "undefined") {
+        if (typeof bnccMatematica !== "undefined") {
+            bancoQuestoes.bnccMatematica = bnccMatematica;
+        }
+        if (typeof conjuntosNumericos !== "undefined") {
+            bancoQuestoes.conjuntosNumericos = conjuntosNumericos;
+        }
+    }
+
+    const abrirTeoriaDoAssuntoAnteriorTopicos23 = abrirTeoriaDoAssunto;
+    abrirTeoriaDoAssunto = function() {
+        if (assuntoAtual === "bnccMatematica") {
+            abrirTeoria(
+                bnccMatematicaTeoria,
+                "📘 BNCC e Matemática no Ensino Fundamental"
+            );
+            return;
+        }
+
+        if (assuntoAtual === "conjuntosNumericos") {
+            abrirTeoria(
+                conjuntosNumericosTeoria,
+                "🔢 Conjuntos e Conjuntos Numéricos"
+            );
+            return;
+        }
+
+        return abrirTeoriaDoAssuntoAnteriorTopicos23();
+    };
+
+})();
