@@ -1907,6 +1907,41 @@ progress{
     color:#222;
 }
 
+.ranking-nome-medalhas{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.ranking-medalhas{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:5px;
+    font-size:13px;
+    font-weight:bold;
+    color:#0d47a1;
+    margin-top:2px;
+}
+
+.icone-medalhas-ranking{
+    opacity:0.9;
+}
+
+.selo-medalha-ranking{
+    background:rgba(227,242,253,0.95);
+    border:1px solid rgba(30,136,229,0.20);
+    border-radius:999px;
+    padding:2px 6px;
+    line-height:1.2;
+    white-space:nowrap;
+}
+
+.ranking-pontos{
+    font-weight:bold;
+    white-space:nowrap;
+}
+
 .card-erro-inteligente details{
     background:#f5f7fa;
     padding:12px;
@@ -5604,6 +5639,19 @@ progress{
 
     .linha-ranking span{
         word-break:break-word;
+    }
+
+    .ranking-medalhas{
+        gap:4px;
+        font-size:12px;
+    }
+
+    .selo-medalha-ranking{
+        padding:2px 5px;
+    }
+
+    .ranking-pontos{
+        white-space:normal;
     }
 
 }

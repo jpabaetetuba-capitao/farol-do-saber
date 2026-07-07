@@ -1105,6 +1105,10 @@ let medalhasOuro = 0;
 let medalhasPrata = 0;
 let medalhasBronze = 0;
 
+// Medalhas por assunto: impede acumular medalha infinita ao refazer o mesmo tópico.
+// O ranking soma apenas a melhor medalha conquistada em cada assunto.
+let medalhasPorAssunto = {};
+
 let cadernoErros = [];
 
 let perguntasForum = [];
@@ -1169,6 +1173,116 @@ let acertosSimulado = 0;
 
 let errosSimulado = 0;
 
+
+// ==========================
+// MEDALHAS POR ASSUNTO
+// ==========================
+
+const valorMedalhaFarol = {
+    "": 0,
+    sem: 0,
+    bronze: 1,
+    prata: 2,
+    ouro: 3
+};
+
+function tipoMedalhaPorPercentual(percentual){
+    if(percentual >= 95){ return "ouro"; }
+    if(percentual >= 75){ return "prata"; }
+    if(percentual >= 60){ return "bronze"; }
+    return "sem";
+}
+
+function textoMedalhaFarol(tipo){
+    if(tipo === "ouro"){ return "🥇 OURO"; }
+    if(tipo === "prata"){ return "🥈 PRATA"; }
+    if(tipo === "bronze"){ return "🥉 BRONZE"; }
+    return "📚 SEM MEDALHA";
+}
+
+function recalcularMedalhasFarol(){
+    const medalhas = medalhasPorAssunto || {};
+
+    medalhasOuro = 0;
+    medalhasPrata = 0;
+    medalhasBronze = 0;
+
+    Object.values(medalhas).forEach(item => {
+        const tipo = typeof item === "string" ? item : (item && item.tipo) || "sem";
+
+        if(tipo === "ouro"){
+            medalhasOuro++;
+        }
+        else if(tipo === "prata"){
+            medalhasPrata++;
+        }
+        else if(tipo === "bronze"){
+            medalhasBronze++;
+        }
+    });
+}
+
+function registrarMedalhaAssuntoFarol(assunto, percentual){
+    const chaveAssunto = assunto || disciplinaAtual || "assunto";
+    const novaMedalha = tipoMedalhaPorPercentual(percentual);
+    const atual = medalhasPorAssunto[chaveAssunto] || { tipo: "sem", percentual: 0 };
+    const tipoAtual = typeof atual === "string" ? atual : (atual.tipo || "sem");
+    const percentualAtual = typeof atual === "object" ? Number(atual.percentual) || 0 : 0;
+
+    const novaValeMais =
+        (valorMedalhaFarol[novaMedalha] || 0) > (valorMedalhaFarol[tipoAtual] || 0);
+
+    const mesmaMedalhaMelhorPercentual =
+        novaMedalha === tipoAtual && percentual > percentualAtual;
+
+    if(novaValeMais || mesmaMedalhaMelhorPercentual){
+        medalhasPorAssunto[chaveAssunto] = {
+            tipo: novaMedalha,
+            percentual: percentual,
+            data: Date.now()
+        };
+    }
+
+    recalcularMedalhasFarol();
+
+    return {
+        tipo: novaMedalha,
+        texto: textoMedalhaFarol(novaMedalha),
+        melhorTipo: (medalhasPorAssunto[chaveAssunto] || {}).tipo || novaMedalha
+    };
+}
+
+function htmlMedalhasRankingFarol(dados){
+    const ouro = Number(dados.medalhasOuro) || 0;
+    const prata = Number(dados.medalhasPrata) || 0;
+    const bronze = Number(dados.medalhasBronze) || 0;
+
+    const medalhas = [];
+
+    if(ouro > 0){
+        medalhas.push(`<span class="selo-medalha-ranking">🥇×${ouro}</span>`);
+    }
+
+    if(prata > 0){
+        medalhas.push(`<span class="selo-medalha-ranking">🥈×${prata}</span>`);
+    }
+
+    if(bronze > 0){
+        medalhas.push(`<span class="selo-medalha-ranking">🥉×${bronze}</span>`);
+    }
+
+    if(medalhas.length === 0){
+        return "";
+    }
+
+    return `
+        <div class="ranking-medalhas" title="Medalhas conquistadas">
+            <span class="icone-medalhas-ranking">🏅</span>
+            ${medalhas.join("")}
+        </div>
+    `;
+}
+
 // ==========================
 // SALVAMENTO AUTOMÁTICO v0.5
 // ==========================
@@ -1198,6 +1312,11 @@ localStorage.setItem(
 localStorage.setItem(
     "farol_bronze",
     medalhasBronze
+);
+
+localStorage.setItem(
+    "farol_medalhas_por_assunto",
+    JSON.stringify(medalhasPorAssunto || {})
 );
 
     localStorage.setItem(
@@ -1263,6 +1382,15 @@ medalhasBronze =
 Number(
     localStorage.getItem("farol_bronze")
 ) || 0;
+
+medalhasPorAssunto =
+    JSON.parse(
+        localStorage.getItem("farol_medalhas_por_assunto")
+    ) || {};
+
+if(Object.keys(medalhasPorAssunto).length > 0){
+    recalcularMedalhasFarol();
+}
 
     cadernoErros =
         JSON.parse(
@@ -2978,7 +3106,6 @@ if(percentual >= 95){
 
     classificacao = "🏆 EXCELENTE";
 medalha = "🥇 OURO";
-medalhasOuro++;
 
     mensagem =
     "Parabéns! Você demonstrou excelente domínio do conteúdo. Continue revisando para manter esse alto desempenho.";
@@ -2988,7 +3115,6 @@ else if(percentual >= 75){
 
     classificacao = "🥈 MUITO BOM";
  medalha = "🥈 PRATA";
-medalhasPrata++;
 
     mensagem =
     "Ótimo resultado! Você está muito próximo da excelência.";
@@ -2998,7 +3124,6 @@ else if(percentual >= 60){
 
     classificacao = "🥉 BOM";
 medalha = "🥉 BRONZE";
-medalhasBronze++;
 
     mensagem =
     "Bom desempenho. Continue reforçando os pontos em que apresentou dificuldade.";
@@ -3031,6 +3156,13 @@ medalha = "📚 SEM MEDALHA";
     "Não desanime. Revise o conteúdo e tente novamente.";
 
 }
+
+const registroMedalhaFarol = registrarMedalhaAssuntoFarol(
+    disciplinaAtual,
+    percentual
+);
+
+medalha = registroMedalhaFarol.texto;
 
 let resultadosAssuntos =
     JSON.parse(
@@ -9209,6 +9341,10 @@ async function salvarRankingFirebase(){
                 nomeAvatarAtual: lojaFarol.nomeAvatarAtual || "Estudante",
                 tituloAtual: lojaFarol.tituloAtual || "",
                 medalhaEstudanteAtivo: !!lojaFarol.medalhaEstudanteAtivo,
+                medalhasOuro: Number(medalhasOuro) || 0,
+                medalhasPrata: Number(medalhasPrata) || 0,
+                medalhasBronze: Number(medalhasBronze) || 0,
+                medalhasPorAssunto: medalhasPorAssunto || {},
                 cardPremium: !!lojaFarol.cardPremium,
                 certificadoDigital: !!lojaFarol.certificadoDigital,
                 lojaFarol: lojaFarol,
@@ -9272,6 +9408,7 @@ async function carregarRankingPontos(){
             const avatar = dados.avatarAtual || "👤";
             const titulo = dados.tituloAtual ? ` — ${escaparHTML(dados.tituloAtual)}` : "";
             const medalha = dados.medalhaEstudanteAtivo ? " 🏅" : "";
+            const medalhasRanking = htmlMedalhasRankingFarol(dados);
 
             if(auth.currentUser && doc.id === auth.currentUser.uid){
                 posicaoRankingUsuario = posicao + "º";
@@ -9282,9 +9419,12 @@ async function carregarRankingPontos(){
                     <div class="ranking-identidade">
                         <strong>${posicao}º</strong>
                         ${montarAvatarHTML(avatar, dados.nomeAvatarAtual || "Avatar", "avatar-ranking")}
-                        <span>${nome}${titulo}${medalha}</span>
+                        <div class="ranking-nome-medalhas">
+                            <span>${nome}${titulo}${medalha}</span>
+                            ${medalhasRanking}
+                        </div>
                     </div>
-                    <span>${pontos} ⭐</span>
+                    <span class="ranking-pontos">${pontos} ⭐</span>
                 </div>
             `;
         });
