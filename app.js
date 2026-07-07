@@ -810,6 +810,20 @@ const bancoQuestoes = {
 
     administracaoAmericaLusitanaColonial,
 
+    aspectosEconomicosFormasTrabalhoBrasilColonialImperial,
+
+    sociedadeColonialImperialBrasileira,
+
+    influenciasIdeologiasLiberaisBrasilSeculoXVIII,
+
+    movimentosAnticoloniaisBrasil,
+
+    cortePortuguesaFormacaoEstadoNacionalBrasileiro,
+
+    estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro,
+
+    revoltasMovimentosBrasilImperial,
+
     expansaoFronteirasAmericaPortuguesa,
 
     
@@ -1915,6 +1929,34 @@ const mapasMentaisPorAssunto = {
         "titulo": "🏛️ Administração da América Lusitana Colonial",
         "imagem": "imagens/mapas/administracaoAmericaLusitanaColonial.png"
     },
+    "aspectosEconomicosFormasTrabalhoBrasilColonialImperial": {
+        "titulo": "⚒️ Aspectos Econômicos e Formas de Trabalho no Brasil Colonial e Imperial",
+        "imagem": "imagens/mapas/aspectosEconomicosFormasTrabalhoBrasilColonialImperial.png"
+    },
+    "sociedadeColonialImperialBrasileira": {
+        "titulo": "🏛️ Sociedade Colonial e Imperial Brasileira",
+        "imagem": "imagens/mapas/sociedadeColonialImperialBrasileira.png"
+    },
+    "influenciasIdeologiasLiberaisBrasilSeculoXVIII": {
+        "titulo": "🕯️ Influências das Ideologias Liberais no Brasil do Século XVIII",
+        "imagem": "imagens/mapas/influenciasIdeologiasLiberaisBrasilSeculoXVIII.png"
+    },
+    "movimentosAnticoloniaisBrasil": {
+        "titulo": "🔥 Movimentos Anticoloniais no Brasil",
+        "imagem": "imagens/mapas/movimentosAnticoloniaisBrasil.png"
+    },
+    "cortePortuguesaFormacaoEstadoNacionalBrasileiro": {
+        "titulo": "👑 Corte Portuguesa no Brasil e Formação do Estado Nacional Brasileiro",
+        "imagem": "imagens/mapas/cortePortuguesaFormacaoEstadoNacionalBrasileiro.png"
+    },
+    "estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro": {
+        "titulo": "🏛️ Estruturas Políticas, Econômicas e Sociais do Estado Imperial Brasileiro",
+        "imagem": "imagens/mapas/estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro.png"
+    },
+    "revoltasMovimentosBrasilImperial": {
+        "titulo": "⚔️ Revoltas e Movimentos no Brasil Imperial",
+        "imagem": "imagens/mapas/revoltasMovimentosBrasilImperial.png"
+    },
     "expansaoFronteirasAmericaPortuguesa": {
         "titulo": "🗺️ Expansão das Fronteiras da América Portuguesa",
         "imagem": "imagens/mapas/expansaoFronteirasAmericaPortuguesa.png"
@@ -2283,6 +2325,13 @@ errosAssunto++;
     mercantilismoColonizacaoAmerica: "💰 Mercantilismo e Colonização da América",
     brasilColonialSociedadeEconomiaResistencias: "🌾 Brasil Colonial: Sociedade, Economia e Resistências",
     administracaoAmericaLusitanaColonial: "🏛️ Administração da América Lusitana Colonial",
+    aspectosEconomicosFormasTrabalhoBrasilColonialImperial: "⚒️ Aspectos Econômicos e Formas de Trabalho no Brasil Colonial e Imperial",
+    sociedadeColonialImperialBrasileira: "🏛️ Sociedade Colonial e Imperial Brasileira",
+    influenciasIdeologiasLiberaisBrasilSeculoXVIII: "🕯️ Influências das Ideologias Liberais no Brasil do Século XVIII",
+    movimentosAnticoloniaisBrasil: "🔥 Movimentos Anticoloniais no Brasil",
+    cortePortuguesaFormacaoEstadoNacionalBrasileiro: "👑 Corte Portuguesa no Brasil e Formação do Estado Nacional Brasileiro",
+    estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro: "🏛️ Estruturas Políticas, Econômicas e Sociais do Estado Imperial Brasileiro",
+    revoltasMovimentosBrasilImperial: "⚔️ Revoltas e Movimentos no Brasil Imperial",
     expansaoFronteirasAmericaPortuguesa: "🗺️ Expansão das Fronteiras da América Portuguesa",
     apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
     apoioLDB: "📘 LDB e Bases da Educação Nacional",
@@ -3642,6 +3691,13 @@ function iniciarSimuladoHistoria(){
         ...mercantilismoColonizacaoAmerica,
         ...brasilColonialSociedadeEconomiaResistencias,
         ...administracaoAmericaLusitanaColonial,
+        ...aspectosEconomicosFormasTrabalhoBrasilColonialImperial,
+        ...sociedadeColonialImperialBrasileira,
+        ...influenciasIdeologiasLiberaisBrasilSeculoXVIII,
+        ...movimentosAnticoloniaisBrasil,
+        ...cortePortuguesaFormacaoEstadoNacionalBrasileiro,
+        ...estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro,
+        ...revoltasMovimentosBrasilImperial,
         ...expansaoFronteirasAmericaPortuguesa
 
     ];
@@ -3829,6 +3885,34 @@ function abrirAssunto(assunto) {
         administracaoAmericaLusitanaColonial: {
             teoria: typeof administracaoAmericaLusitanaColonialTeoria !== "undefined" ? administracaoAmericaLusitanaColonialTeoria : null,
             titulo: "🏛️ Administração da América Lusitana Colonial"
+        },
+        aspectosEconomicosFormasTrabalhoBrasilColonialImperial: {
+            teoria: typeof aspectosEconomicosFormasTrabalhoBrasilColonialImperialTeoria !== "undefined" ? aspectosEconomicosFormasTrabalhoBrasilColonialImperialTeoria : null,
+            titulo: "⚒️ Aspectos Econômicos e Formas de Trabalho no Brasil Colonial e Imperial"
+        },
+        sociedadeColonialImperialBrasileira: {
+            teoria: typeof sociedadeColonialImperialBrasileiraTeoria !== "undefined" ? sociedadeColonialImperialBrasileiraTeoria : null,
+            titulo: "🏛️ Sociedade Colonial e Imperial Brasileira"
+        },
+        influenciasIdeologiasLiberaisBrasilSeculoXVIII: {
+            teoria: typeof influenciasIdeologiasLiberaisBrasilSeculoXVIIITeoria !== "undefined" ? influenciasIdeologiasLiberaisBrasilSeculoXVIIITeoria : null,
+            titulo: "🕯️ Influências das Ideologias Liberais no Brasil do Século XVIII"
+        },
+        movimentosAnticoloniaisBrasil: {
+            teoria: typeof movimentosAnticoloniaisBrasilTeoria !== "undefined" ? movimentosAnticoloniaisBrasilTeoria : null,
+            titulo: "🔥 Movimentos Anticoloniais no Brasil"
+        },
+        cortePortuguesaFormacaoEstadoNacionalBrasileiro: {
+            teoria: typeof cortePortuguesaFormacaoEstadoNacionalBrasileiroTeoria !== "undefined" ? cortePortuguesaFormacaoEstadoNacionalBrasileiroTeoria : null,
+            titulo: "👑 Corte Portuguesa no Brasil e Formação do Estado Nacional Brasileiro"
+        },
+        estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro: {
+            teoria: typeof estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiroTeoria !== "undefined" ? estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiroTeoria : null,
+            titulo: "🏛️ Estruturas Políticas, Econômicas e Sociais do Estado Imperial Brasileiro"
+        },
+        revoltasMovimentosBrasilImperial: {
+            teoria: typeof revoltasMovimentosBrasilImperialTeoria !== "undefined" ? revoltasMovimentosBrasilImperialTeoria : null,
+            titulo: "⚔️ Revoltas e Movimentos no Brasil Imperial"
         },
         expansaoFronteirasAmericaPortuguesa: {
             teoria: typeof expansaoFronteirasAmericaPortuguesaTeoria !== "undefined" ? expansaoFronteirasAmericaPortuguesaTeoria : null,
@@ -6580,6 +6664,83 @@ if(assuntoAtual === "bncc"){
 
     }
 
+    if(assuntoAtual === "aspectosEconomicosFormasTrabalhoBrasilColonialImperial"){
+
+        abrirTeoria(
+            aspectosEconomicosFormasTrabalhoBrasilColonialImperialTeoria,
+            "⚒️ Aspectos Econômicos e Formas de Trabalho no Brasil Colonial e Imperial"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "sociedadeColonialImperialBrasileira"){
+
+        abrirTeoria(
+            sociedadeColonialImperialBrasileiraTeoria,
+            "🏛️ Sociedade Colonial e Imperial Brasileira"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "influenciasIdeologiasLiberaisBrasilSeculoXVIII"){
+
+        abrirTeoria(
+            influenciasIdeologiasLiberaisBrasilSeculoXVIIITeoria,
+            "🕯️ Influências das Ideologias Liberais no Brasil do Século XVIII"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "movimentosAnticoloniaisBrasil"){
+
+        abrirTeoria(
+            movimentosAnticoloniaisBrasilTeoria,
+            "🔥 Movimentos Anticoloniais no Brasil"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "cortePortuguesaFormacaoEstadoNacionalBrasileiro"){
+
+        abrirTeoria(
+            cortePortuguesaFormacaoEstadoNacionalBrasileiroTeoria,
+            "👑 Corte Portuguesa no Brasil e Formação do Estado Nacional Brasileiro"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro"){
+
+        abrirTeoria(
+            estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiroTeoria,
+            "🏛️ Estruturas Políticas, Econômicas e Sociais do Estado Imperial Brasileiro"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "revoltasMovimentosBrasilImperial"){
+
+        abrirTeoria(
+            revoltasMovimentosBrasilImperialTeoria,
+            "⚔️ Revoltas e Movimentos no Brasil Imperial"
+        );
+
+        return;
+
+    }
+
     if(assuntoAtual === "expansaoFronteirasAmericaPortuguesa"){
 
         abrirTeoria(
@@ -6795,6 +6956,13 @@ const assuntosHistoria = [
         "mercantilismoColonizacaoAmerica",
         "brasilColonialSociedadeEconomiaResistencias",
         "administracaoAmericaLusitanaColonial",
+        "aspectosEconomicosFormasTrabalhoBrasilColonialImperial",
+        "sociedadeColonialImperialBrasileira",
+        "influenciasIdeologiasLiberaisBrasilSeculoXVIII",
+        "movimentosAnticoloniaisBrasil",
+        "cortePortuguesaFormacaoEstadoNacionalBrasileiro",
+        "estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro",
+        "revoltasMovimentosBrasilImperial",
         "expansaoFronteirasAmericaPortuguesa",
     ];
 
@@ -7049,6 +7217,13 @@ function atualizarPainelEstudos(){
     mercantilismoColonizacaoAmerica: "💰 Mercantilismo e Colonização da América",
     brasilColonialSociedadeEconomiaResistencias: "🌾 Brasil Colonial: Sociedade, Economia e Resistências",
     administracaoAmericaLusitanaColonial: "🏛️ Administração da América Lusitana Colonial",
+    aspectosEconomicosFormasTrabalhoBrasilColonialImperial: "⚒️ Aspectos Econômicos e Formas de Trabalho no Brasil Colonial e Imperial",
+    sociedadeColonialImperialBrasileira: "🏛️ Sociedade Colonial e Imperial Brasileira",
+    influenciasIdeologiasLiberaisBrasilSeculoXVIII: "🕯️ Influências das Ideologias Liberais no Brasil do Século XVIII",
+    movimentosAnticoloniaisBrasil: "🔥 Movimentos Anticoloniais no Brasil",
+    cortePortuguesaFormacaoEstadoNacionalBrasileiro: "👑 Corte Portuguesa no Brasil e Formação do Estado Nacional Brasileiro",
+    estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro: "🏛️ Estruturas Políticas, Econômicas e Sociais do Estado Imperial Brasileiro",
+    revoltasMovimentosBrasilImperial: "⚔️ Revoltas e Movimentos no Brasil Imperial",
     expansaoFronteirasAmericaPortuguesa: "🗺️ Expansão das Fronteiras da América Portuguesa",
         interpretacao: "📖 Interpretação de Textos",
         generos: "📄 Tipologia e Gêneros Textuais",
@@ -9878,6 +10053,8 @@ const disciplinasJogoFarol = {
             "mercantilismoColonizacaoAmerica",
             "brasilColonialSociedadeEconomiaResistencias",
             "administracaoAmericaLusitanaColonial",
+            "aspectosEconomicosFormasTrabalhoBrasilColonialImperial",
+            "sociedadeColonialImperialBrasileira",
             "expansaoFronteirasAmericaPortuguesa"
         ]
     },
@@ -10251,6 +10428,13 @@ function nomeAssuntoJogoFarol(assunto){
         mercantilismoColonizacaoAmerica: "💰 Mercantilismo e Colonização",
         brasilColonialSociedadeEconomiaResistencias: "🌾 Brasil Colonial",
         administracaoAmericaLusitanaColonial: "🏛️ Administração Colonial",
+        aspectosEconomicosFormasTrabalhoBrasilColonialImperial: "⚒️ Economia e Trabalho",
+        sociedadeColonialImperialBrasileira: "🏛️ Sociedade Colonial e Imperial",
+        influenciasIdeologiasLiberaisBrasilSeculoXVIII: "🕯️ Ideologias Liberais no Século XVIII",
+        movimentosAnticoloniaisBrasil: "🔥 Movimentos Anticoloniais",
+        cortePortuguesaFormacaoEstadoNacionalBrasileiro: "👑 Corte e Estado Nacional",
+        estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro: "🏛️ Estado Imperial Brasileiro",
+        revoltasMovimentosBrasilImperial: "⚔️ Revoltas Imperiais",
         expansaoFronteirasAmericaPortuguesa: "🗺️ Expansão das Fronteiras",
         apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
         apoioLDB: "📘 LDB",
@@ -16167,6 +16351,13 @@ const gruposDuelo = [
             { chave: "mercantilismoColonizacaoAmerica", nome: "💰 Mercantilismo e Colonização da América" },
             { chave: "brasilColonialSociedadeEconomiaResistencias", nome: "🌾 Brasil Colonial: Sociedade, Economia e Resistências" },
             { chave: "administracaoAmericaLusitanaColonial", nome: "🏛️ Administração da América Lusitana Colonial" },
+            { chave: "aspectosEconomicosFormasTrabalhoBrasilColonialImperial", nome: "⚒️ Aspectos Econômicos e Formas de Trabalho" },
+            { chave: "sociedadeColonialImperialBrasileira", nome: "🏛️ Sociedade Colonial e Imperial Brasileira" },
+            { chave: "influenciasIdeologiasLiberaisBrasilSeculoXVIII", nome: "🕯️ Ideologias Liberais no Brasil do Século XVIII" },
+            { chave: "movimentosAnticoloniaisBrasil", nome: "🔥 Movimentos Anticoloniais no Brasil" },
+            { chave: "cortePortuguesaFormacaoEstadoNacionalBrasileiro", nome: "👑 Corte Portuguesa e Estado Nacional" },
+            { chave: "estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro", nome: "🏛️ Estado Imperial Brasileiro" },
+            { chave: "revoltasMovimentosBrasilImperial", nome: "⚔️ Revoltas e Movimentos no Brasil Imperial" },
             { chave: "expansaoFronteirasAmericaPortuguesa", nome: "🗺️ Expansão das Fronteiras da América Portuguesa" }
         ]
     }
