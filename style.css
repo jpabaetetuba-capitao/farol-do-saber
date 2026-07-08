@@ -62,6 +62,40 @@ nav button:hover{
     background:#1565c0;
 }
 
+
+/* ==========================
+   BOTÃO PRINCIPAL - COMEÇAR ESTUDOS
+========================== */
+.btn-comecar-estudos{
+    flex-basis:100%;
+    max-width:520px;
+    margin:0 auto 8px auto !important;
+    padding:18px 22px !important;
+    border-radius:16px !important;
+    background:linear-gradient(135deg, #ffd54f, #f9a825, #f57f17) !important;
+    color:#1f1600 !important;
+    font-size:20px !important;
+    font-weight:900 !important;
+    box-shadow:0 8px 20px rgba(249,168,37,0.42);
+    border:1px solid rgba(255,255,255,0.35) !important;
+    text-shadow:0 1px 0 rgba(255,255,255,0.35);
+}
+
+.btn-comecar-estudos span{
+    display:block;
+    margin-top:5px;
+    font-size:13px;
+    font-weight:700;
+    color:#3b2700;
+    opacity:0.92;
+}
+
+.btn-comecar-estudos:hover{
+    background:linear-gradient(135deg, #ffe082, #fbc02d, #f9a825) !important;
+    transform:translateY(-2px) scale(1.01);
+    box-shadow:0 10px 24px rgba(249,168,37,0.55);
+}
+
 .tela{
     display:none;
 }
@@ -6528,5 +6562,21 @@ progress{
 
     .btn-voltar-cargos-provas{
         width:100%;
+    }
+}
+
+
+@media(max-width:768px){
+    .btn-comecar-estudos{
+        grid-column:1 / -1;
+        width:100% !important;
+        max-width:100%;
+        padding:14px 12px !important;
+        font-size:17px !important;
+        margin:0 0 8px 0 !important;
+    }
+
+    .btn-comecar-estudos span{
+        font-size:11px;
     }
 }
