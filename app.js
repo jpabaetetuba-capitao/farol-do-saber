@@ -88,8 +88,9 @@ if(id === "login"){
         atualizarContinuarUltimoEstudo();
     }
 
+
     if(id === "provasAnteriores" && typeof prepararTelaProvasAnterioresFarol === "function"){
-        setTimeout(prepararTelaProvasAnterioresFarol, 0);
+        prepararTelaProvasAnterioresFarol();
     }
 
 }
@@ -791,20 +792,6 @@ const bancoQuestoes = {
     alfabetizacaoCientifica,
 
     citologia,
-
-    microbiologia,
-
-    botanica,
-
-    zoologia,
-
-    evolucao,
-
-    genetica,
-
-    hereditariedade,
-
-    biotecnologia,
 
     ecologia,
 
@@ -2439,34 +2426,6 @@ const mapasMentaisPorAssunto = {
         "titulo": "🧬 Citologia",
         "imagem": "imagens/mapas/Citologia.png"
     },
-    "microbiologia": {
-        "titulo": "🦠 Microbiologia",
-        "imagem": "imagens/mapas/Microbiologia.png"
-    },
-    "botanica": {
-        "titulo": "🌿 Botânica",
-        "imagem": "imagens/mapas/Botanica.png"
-    },
-    "zoologia": {
-        "titulo": "🐾 Zoologia",
-        "imagem": "imagens/mapas/Zoologia.png"
-    },
-    "evolucao": {
-        "titulo": "🧬 Evolução",
-        "imagem": "imagens/mapas/Evolucao.png"
-    },
-    "genetica": {
-        "titulo": "🧬 Genética",
-        "imagem": "imagens/mapas/Genetica.png"
-    },
-    "hereditariedade": {
-        "titulo": "👨‍👩‍👧‍👦 Hereditariedade",
-        "imagem": "imagens/mapas/Hereditariedade.png"
-    },
-    "biotecnologia": {
-        "titulo": "🧬 Biotecnologia",
-        "imagem": "imagens/mapas/Biotecnologia.png"
-    },
     "ecologia": {
         "titulo": "🌿 Ecologia",
         "imagem": "imagens/mapas/Ecologia.png"
@@ -2958,27 +2917,6 @@ alfabetizacaoCientifica:
     
 citologia:
 "🧬 Citologia",
-
-microbiologia:
-"🦠 Microbiologia",
-
-botanica:
-"🌿 Botânica",
-
-zoologia:
-"🐾 Zoologia",
-
-evolucao:
-"🧬 Evolução",
-
-genetica:
-"🧬 Genética",
-
-hereditariedade:
-"👨‍👩‍👧‍👦 Hereditariedade",
-
-biotecnologia:
-"🧬 Biotecnologia",
 
 ecologia:
 "🌿 Ecologia",
@@ -4370,13 +4308,6 @@ function obterBancoDisciplinaSimuladoFarol(disciplina){
             ...bnccCiencias,
             ...alfabetizacaoCientifica,
             ...citologia,
-        ...microbiologia,
-        ...botanica,
-        ...zoologia,
-        ...evolucao,
-        ...genetica,
-        ...hereditariedade,
-        ...biotecnologia,
             ...ecologia,
             ...terraEUniverso
         ],
@@ -4418,14 +4349,14 @@ function iniciarSimuladoBancoFarol(banco, quantidade, tipo){
 
 }
 
-function obterBancoMinhaRotaFarol(){
+function iniciarSimuladoMinhaRotaFarol(){
 
     const chaveTrilha = obterTrilhaAtualFarol();
 
     if(!chaveTrilha){
         mostrarToast("Escolha uma Rota de Estudos antes de iniciar este simulado.");
         mostrarTela("questoes");
-        return null;
+        return;
     }
 
     const trilha = trilhasPreparacaoFarol[chaveTrilha];
@@ -4436,46 +4367,17 @@ function obterBancoMinhaRotaFarol(){
         trilha.disciplinas.length === 0
     ){
         mostrarToast("Rota sem disciplinas liberadas.");
-        return null;
-    }
-
-    return {
-        chaveTrilha: chaveTrilha,
-        banco: trilha.disciplinas.flatMap(
-            disciplina => obterBancoDisciplinaSimuladoFarol(disciplina)
-        )
-    };
-
-}
-
-function iniciarSimuladoMinhaRotaFarol(){
-
-    const dadosRota = obterBancoMinhaRotaFarol();
-
-    if(!dadosRota){
         return;
     }
 
-    iniciarSimuladoBancoFarol(
-        dadosRota.banco,
-        50,
-        "minhaRota:" + dadosRota.chaveTrilha
+    const banco = trilha.disciplinas.flatMap(
+        disciplina => obterBancoDisciplinaSimuladoFarol(disciplina)
     );
 
-}
-
-function iniciarTreinoRapidoMinhaRotaFarol(quantidade){
-
-    const dadosRota = obterBancoMinhaRotaFarol();
-
-    if(!dadosRota){
-        return;
-    }
-
     iniciarSimuladoBancoFarol(
-        dadosRota.banco,
-        quantidade,
-        "treinoRota:" + dadosRota.chaveTrilha + ":" + quantidade
+        banco,
+        50,
+        "minhaRota:" + chaveTrilha
     );
 
 }
@@ -4545,99 +4447,6 @@ function abrirArquivoProvaAnteriorFarol(caminho){
 
 }
 
-function prepararTelaProvasAnterioresFarol(){
-
-    document
-        .querySelectorAll(".grupo-provas-cargo")
-        .forEach(grupo => {
-            grupo.classList.add("grupo-provas-oculto");
-        });
-
-    document
-        .querySelectorAll(".botao-cargo-provas")
-        .forEach(card => {
-            card.classList.remove("selecionado");
-        });
-
-    const mensagem =
-        document.getElementById("mensagemEscolhaProvas");
-
-    if(mensagem){
-        mensagem.style.display = "flex";
-    }
-
-}
-
-function selecionarCargoProvasFarol(cargo){
-
-    const grupos = {
-        historia: "grupoProvasHistoria",
-        ciencias: "grupoProvasCiencias"
-    };
-
-    const cards = {
-        historia: "cardProvasHistoria",
-        ciencias: "cardProvasCiencias"
-    };
-
-    document
-        .querySelectorAll(".grupo-provas-cargo")
-        .forEach(grupo => {
-            grupo.classList.add("grupo-provas-oculto");
-        });
-
-    document
-        .querySelectorAll(".botao-cargo-provas")
-        .forEach(card => {
-            card.classList.remove("selecionado");
-        });
-
-    const grupo =
-        document.getElementById(grupos[cargo]);
-
-    const card =
-        document.getElementById(cards[cargo]);
-
-    const mensagem =
-        document.getElementById("mensagemEscolhaProvas");
-
-    if(mensagem){
-        mensagem.style.display = "none";
-    }
-
-    if(card){
-        card.classList.add("selecionado");
-    }
-
-    if(grupo){
-        grupo.classList.remove("grupo-provas-oculto");
-
-        setTimeout(() => {
-            grupo.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        }, 80);
-    }
-
-}
-
-function voltarCargosProvasFarol(){
-
-    prepararTelaProvasAnterioresFarol();
-
-    const grid =
-        document.querySelector("#provasAnteriores .provas-resumo-grid");
-
-    if(grid){
-        grid.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    }
-
-}
-
 // ==========================
 // SIMULADOS POR DISCIPLINA
 // ==========================
@@ -4650,13 +4459,6 @@ function iniciarSimuladoCiencias(){
         ...bnccCiencias,
         ...alfabetizacaoCientifica,
         ...citologia,
-        ...microbiologia,
-        ...botanica,
-        ...zoologia,
-        ...evolucao,
-        ...genetica,
-        ...hereditariedade,
-        ...biotecnologia,
         ...ecologia,
         ...terraEUniverso
 
@@ -5522,77 +5324,6 @@ case "citologia":
 
     break;
 
-
-case "microbiologia":
-
-    titulo.innerHTML =
-        "🦠 Microbiologia";
-
-    imagem.src =
-        "imagens/mapas/Microbiologia.png";
-
-    break;
-
-case "botanica":
-
-    titulo.innerHTML =
-        "🌿 Botânica";
-
-    imagem.src =
-        "imagens/mapas/Botanica.png";
-
-    break;
-
-case "zoologia":
-
-    titulo.innerHTML =
-        "🐾 Zoologia";
-
-    imagem.src =
-        "imagens/mapas/Zoologia.png";
-
-    break;
-
-case "evolucao":
-
-    titulo.innerHTML =
-        "🧬 Evolução";
-
-    imagem.src =
-        "imagens/mapas/Evolucao.png";
-
-    break;
-
-case "genetica":
-
-    titulo.innerHTML =
-        "🧬 Genética";
-
-    imagem.src =
-        "imagens/mapas/Genetica.png";
-
-    break;
-
-case "hereditariedade":
-
-    titulo.innerHTML =
-        "👨‍👩‍👧‍👦 Hereditariedade";
-
-    imagem.src =
-        "imagens/mapas/Hereditariedade.png";
-
-    break;
-
-case "biotecnologia":
-
-    titulo.innerHTML =
-        "🧬 Biotecnologia";
-
-    imagem.src =
-        "imagens/mapas/Biotecnologia.png";
-
-    break;
-
 case "ecologia":
 
     titulo.innerHTML =
@@ -5754,84 +5485,6 @@ if(assuntoAtual === "citologia"){
     abrirTeoria(
         citologiaTeoria,
         "🧬 Citologia"
-    );
-
-    return;
-
-}
-
-
-if(assuntoAtual === "microbiologia"){
-
-    abrirTeoria(
-        microbiologiaTeoria,
-        "🦠 Microbiologia"
-    );
-
-    return;
-
-}
-
-if(assuntoAtual === "botanica"){
-
-    abrirTeoria(
-        botanicaTeoria,
-        "🌿 Botânica"
-    );
-
-    return;
-
-}
-
-if(assuntoAtual === "zoologia"){
-
-    abrirTeoria(
-        zoologiaTeoria,
-        "🐾 Zoologia"
-    );
-
-    return;
-
-}
-
-if(assuntoAtual === "evolucao"){
-
-    abrirTeoria(
-        evolucaoTeoria,
-        "🧬 Evolução"
-    );
-
-    return;
-
-}
-
-if(assuntoAtual === "genetica"){
-
-    abrirTeoria(
-        geneticaTeoria,
-        "🧬 Genética"
-    );
-
-    return;
-
-}
-
-if(assuntoAtual === "hereditariedade"){
-
-    abrirTeoria(
-        hereditariedadeTeoria,
-        "👨‍👩‍👧‍👦 Hereditariedade"
-    );
-
-    return;
-
-}
-
-if(assuntoAtual === "biotecnologia"){
-
-    abrirTeoria(
-        biotecnologiaTeoria,
-        "🧬 Biotecnologia"
     );
 
     return;
@@ -7661,83 +7314,6 @@ if(assuntoAtual === "bncc"){
 
     }
 
-    if(assuntoAtual === "microbiologia"){
-
-        abrirTeoria(
-            microbiologiaTeoria,
-            "🦠 Microbiologia"
-        );
-
-        return;
-
-    }
-
-    if(assuntoAtual === "botanica"){
-
-        abrirTeoria(
-            botanicaTeoria,
-            "🌿 Botânica"
-        );
-
-        return;
-
-    }
-
-    if(assuntoAtual === "zoologia"){
-
-        abrirTeoria(
-            zoologiaTeoria,
-            "🐾 Zoologia"
-        );
-
-        return;
-
-    }
-
-    if(assuntoAtual === "evolucao"){
-
-        abrirTeoria(
-            evolucaoTeoria,
-            "🧬 Evolução"
-        );
-
-        return;
-
-    }
-
-    if(assuntoAtual === "genetica"){
-
-        abrirTeoria(
-            geneticaTeoria,
-            "🧬 Genética"
-        );
-
-        return;
-
-    }
-
-    if(assuntoAtual === "hereditariedade"){
-
-        abrirTeoria(
-            hereditariedadeTeoria,
-            "👨‍👩‍👧‍👦 Hereditariedade"
-        );
-
-        return;
-
-    }
-
-    if(assuntoAtual === "biotecnologia"){
-
-        abrirTeoria(
-            biotecnologiaTeoria,
-            "🧬 Biotecnologia"
-        );
-
-        return;
-
-    }
-
     if(assuntoAtual === "ecologia"){
 
         abrirTeoria(
@@ -8157,13 +7733,6 @@ const assuntosCiencias = [
         "bnccCiencias",
         "alfabetizacaoCientifica",
         "citologia",
-        "microbiologia",
-        "botanica",
-        "zoologia",
-        "evolucao",
-        "genetica",
-        "hereditariedade",
-        "biotecnologia",
         "ecologia",
         "terraEUniverso",
         "anatomiaFisiologia",
@@ -11267,13 +10836,6 @@ const disciplinasJogoFarol = {
             "bnccCiencias",
             "alfabetizacaoCientifica",
             "citologia",
-            "microbiologia",
-            "botanica",
-            "zoologia",
-            "evolucao",
-            "genetica",
-            "hereditariedade",
-            "biotecnologia",
             "ecologia",
             "terraEUniverso",
             "anatomiaFisiologia",
@@ -11632,13 +11194,6 @@ function nomeAssuntoJogoFarol(assunto){
         bnccCiencias: "📘 BNCC Ciências",
         alfabetizacaoCientifica: "🔬 Alfabetização Científica",
         citologia: "🧬 Citologia",
-        microbiologia: "🦠 Microbiologia",
-        botanica: "🌿 Botânica",
-        zoologia: "🐾 Zoologia",
-        evolucao: "🧬 Evolução",
-        genetica: "🧬 Genética",
-        hereditariedade: "👨‍👩‍👧‍👦 Hereditariedade",
-        biotecnologia: "🧬 Biotecnologia",
         ecologia: "🌿 Ecologia",
         terraEUniverso: "🌎 Terra e Universo",
         anatomiaFisiologia: "🫀 Anatomia e Fisiologia Humana",
@@ -17550,13 +17105,6 @@ const gruposDuelo = [
             { chave: "bnccCiencias", nome: "📘 BNCC Ciências" },
             { chave: "alfabetizacaoCientifica", nome: "🧪 Alfabetização Científica" },
             { chave: "citologia", nome: "🧫 Citologia" },
-            { chave: "microbiologia", nome: "🦠 Microbiologia" },
-            { chave: "botanica", nome: "🌿 Botânica" },
-            { chave: "zoologia", nome: "🐾 Zoologia" },
-            { chave: "evolucao", nome: "🧬 Evolução" },
-            { chave: "genetica", nome: "🧬 Genética" },
-            { chave: "hereditariedade", nome: "👨‍👩‍👧‍👦 Hereditariedade" },
-            { chave: "biotecnologia", nome: "🧬 Biotecnologia" },
             { chave: "ecologia", nome: "🌱 Ecologia" },
             { chave: "terraEUniverso", nome: "🌎 Terra e Universo" },
             { chave: "anatomiaFisiologia", nome: "🫀 Anatomia e Fisiologia" },
@@ -18908,3 +18456,100 @@ async function arquivarDuelo(codigo){
     };
 
 })();
+
+
+/* ==========================================================
+   PROVAS ANTERIORES POR CARGO — CORREÇÃO APOIO ESCOLAR
+   Garante que História, Ciências e Apoio Escolar abram separadamente.
+========================================================== */
+
+function obterConfigProvasFarol(){
+    return {
+        historia: {
+            grupo: "grupoProvasHistoria",
+            card: "cardProvasHistoria"
+        },
+        ciencias: {
+            grupo: "grupoProvasCiencias",
+            card: "cardProvasCiencias"
+        },
+        apoioEscolar: {
+            grupo: "grupoProvasApoioEscolar",
+            card: "cardProvasApoioEscolar"
+        }
+    };
+}
+
+function prepararTelaProvasAnterioresFarol(){
+    const config = obterConfigProvasFarol();
+
+    Object.values(config).forEach(item => {
+        const grupo = document.getElementById(item.grupo);
+        const card = document.getElementById(item.card);
+
+        if(grupo){
+            grupo.classList.add("grupo-provas-oculto");
+            grupo.style.display = "none";
+        }
+
+        if(card){
+            card.classList.remove("selecionado");
+        }
+    });
+
+    const mensagem = document.getElementById("mensagemEscolhaProvas");
+    if(mensagem){
+        mensagem.style.display = "flex";
+    }
+}
+
+function selecionarCargoProvasFarol(cargo){
+    const config = obterConfigProvasFarol();
+    const itemSelecionado = config[cargo];
+
+    if(!itemSelecionado){
+        if(typeof mostrarToast === "function"){
+            mostrarToast("Cargo de provas não encontrado.");
+        }
+        return;
+    }
+
+    Object.values(config).forEach(item => {
+        const grupo = document.getElementById(item.grupo);
+        const card = document.getElementById(item.card);
+
+        if(grupo){
+            grupo.classList.add("grupo-provas-oculto");
+            grupo.style.display = "none";
+        }
+
+        if(card){
+            card.classList.remove("selecionado");
+        }
+    });
+
+    const grupoSelecionado = document.getElementById(itemSelecionado.grupo);
+    const cardSelecionado = document.getElementById(itemSelecionado.card);
+    const mensagem = document.getElementById("mensagemEscolhaProvas");
+
+    if(grupoSelecionado){
+        grupoSelecionado.classList.remove("grupo-provas-oculto");
+        grupoSelecionado.style.display = "block";
+    }
+
+    if(cardSelecionado){
+        cardSelecionado.classList.add("selecionado");
+    }
+
+    if(mensagem){
+        mensagem.style.display = "none";
+    }
+}
+
+function voltarCargosProvasFarol(){
+    prepararTelaProvasAnterioresFarol();
+    const tela = document.getElementById("provasAnteriores");
+    if(tela){
+        tela.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+}

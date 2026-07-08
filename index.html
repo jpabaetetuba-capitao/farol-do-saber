@@ -141,12 +141,8 @@
     <span>Escolha seu cargo e siga o caminho certo</span>
 </button>
 
-    <button onclick="mostrarTela('chatGlobal')">
-    💬 Chat Geral
-</button>
-
     <button onclick="mostrarTela('inicio')">
-        🏠 Início
+        🏠 Meu Painel
     </button>
 
     <button onclick="mostrarTela('simulados')">
@@ -156,6 +152,10 @@
     <button onclick="mostrarTela('provasAnteriores')">
         📄 Provas Anteriores
     </button>
+
+    <button onclick="mostrarTela('chatGlobal')">
+    💬 Chat Geral
+</button>
 
     <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();">
         🎮 Jogos
@@ -1991,6 +1991,19 @@ Li e revisei o mapa mental.
                 <em>Clique para abrir as provas de Ciências</em>
 
             </button>
+
+            <button
+                type="button"
+                id="cardProvasApoioEscolar"
+                class="provas-resumo-card ativo botao-cargo-provas"
+                onclick="selecionarCargoProvasFarol('apoioEscolar')">
+
+                <span>👨‍🏫</span>
+                <strong>Profissional de Apoio Escolar</strong>
+                <small>1 prova cadastrada</small>
+                <em>Clique para abrir as provas de Apoio Escolar</em>
+
+            </button>
         </div>
 
         <div
@@ -2190,6 +2203,47 @@ Li e revisei o mapa mental.
                 </div>
 
             </div>
+        </div>
+
+        <div id="grupoProvasApoioEscolar" class="grupo-provas-cargo grupo-provas-oculto">
+            <div class="cabecalho-grupo-provas">
+                <div>
+                    <span class="tag-cargo-provas">👨‍🏫 Profissional de Apoio Escolar</span>
+                    <h3>Provas cadastradas</h3>
+                    <p>Provas reais de nível médio/apoio escolar com gabarito comentado premium.</p>
+                </div>
+                <div class="acoes-cabecalho-provas">
+                    <strong class="contador-provas-cargo">1 prova</strong>
+                    <button
+                        type="button"
+                        class="btn-voltar-cargos-provas"
+                        onclick="voltarCargosProvasFarol()">
+                        ⬅ Cargos
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid-provas-anteriores">
+
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova">
+                            <span class="tag-prova-anterior">Instituto Ágata</span>
+                            <span class="tag-ano-prova">2025</span>
+                        </div>
+                        <h3>👨‍🏫 Juruti/PA — Apoio Escolar II - Cuidador</h3>
+                        <p>Língua Portuguesa, Informática, Didática/Legislação e Conhecimentos Específicos de Apoio Escolar.</p>
+                        <small>Prova original oficial externa + gabarito comentado premium local.</small>
+                    </div>
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('https://arquivos.qconcursos.com/prova/arquivo_prova/143301/instituto-agata-2025-prefeitura-de-juruti-pa-apoio-escolar-ii-cuidador-prova.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/apoio-escolar/gabarito_comentado_apoio_escolar_cuidador_juruti_2025.pdf')">✅ Gabarito comentado</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         </div>
 
     </div>
