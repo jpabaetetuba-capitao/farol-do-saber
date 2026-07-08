@@ -150,6 +150,10 @@
         📝 Simulados
     </button>
 
+    <button onclick="mostrarTela('provasAnteriores')">
+        📄 Provas Anteriores
+    </button>
+
     <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();">
         🎮 Jogos
     </button>
@@ -1749,123 +1753,326 @@ Li e revisei o mapa mental.
 
 <section id="simulados" class="tela">
 
-    <div class="card">
+    <div class="card simulados-card-principal">
 
-        <h2>📝 Simulados</h2>
+        <div class="simulados-topo">
+            <div>
+                <h2>📝 Simulados</h2>
+                <p>
+                    Treine por rota, disciplina ou cargo com questões da plataforma.
+                </p>
+            </div>
 
-        <div class="aviso-farol">
+            <span class="selo-simulados">
+                ⭐ Vale Pontos de Luz
+            </span>
+        </div>
+
+        <div class="aviso-farol aviso-simulado-premium">
             <h3>🚀 Simulado também gera recompensa</h3>
             <p>
                 Finalize um simulado e ganhe <strong>100 Pontos de Luz</strong>. Com 80% ou mais de aproveitamento, você pode receber bônus extra.
             </p>
         </div>
 
-        <p>
-            Escolha o tipo de simulado.
-        </p>
-
-        <br>
-
-        <h3>📚 Simulados por Disciplina</h3>
-
-        <br>
-
-        <div class="grid-assuntos">
+        <div class="bloco-simulado destaque-rota-simulado">
+            <div class="bloco-simulado-texto">
+                <span class="tag-simulado">🎯 Principal</span>
+                <h3>Simulado da Minha Rota</h3>
+                <p>
+                    Mistura automaticamente as disciplinas do cargo escolhido na Rota de Estudos.
+                </p>
+                <small class="info-qtd-simulado">📌 Este simulado possui <strong>50 questões</strong>.</small>
+            </div>
 
             <button
-                class="btn-assunto"
-                onclick="iniciarSimuladoPortugues()">
-
-                📖 Português
-
+                class="btn-simulado-rota"
+                onclick="iniciarSimuladoMinhaRotaFarol()">
+                🚀 Iniciar Simulado
             </button>
-
-            <button
-                class="btn-assunto"
-                onclick="iniciarSimuladoInformatica()">
-
-                💻 Informática
-
-            </button>
-
-            <button
-                class="btn-assunto"
-                onclick="iniciarSimuladoEtica()">
-
-                ⚖️ Ética
-
-            </button>
-
-            <button
-                class="btn-assunto"
-                onclick="iniciarSimuladoDidatica()">
-
-                📚 Didática e Legislação
-
-            </button>
-
         </div>
 
-        <br><br>
+        <div class="bloco-simulado">
+            <div class="titulo-bloco-simulado">
+                <h3>⚡ Treino Rápido da Minha Rota</h3>
+                <p>Escolha a quantidade e treine somente com questões das disciplinas do cargo escolhido.</p>
+            </div>
 
-        <h3>👨‍🏫 Simulados por Cargo</h3>
+            <div class="grid-treino-rapido">
+                <button onclick="iniciarTreinoRapidoMinhaRotaFarol(10)">10 questões</button>
+                <button onclick="iniciarTreinoRapidoMinhaRotaFarol(15)">15 questões</button>
+                <button onclick="iniciarTreinoRapidoMinhaRotaFarol(20)">20 questões</button>
+                <button onclick="iniciarTreinoRapidoMinhaRotaFarol(25)">25 questões</button>
+            </div>
+        </div>
 
-        <br>
+        <div class="bloco-simulado">
+            <div class="titulo-bloco-simulado">
+                <h3>📚 Simulados por Disciplina</h3>
+                <p>Treine uma área específica com <strong>30 questões</strong> por simulado.</p>
+            </div>
 
-        <div class="grid-assuntos">
+            <div class="grid-simulados-farol">
+                <button class="card-simulado disciplina" onclick="iniciarSimuladoPortugues()">
+                    <span>📖</span>
+                    <strong>Português</strong>
+                    <small>30 questões</small>
+                </button>
 
-            <button
-                class="btn-assunto"
-                onclick="iniciarSimuladoApoioEscolar()">
+                <button class="card-simulado disciplina" onclick="iniciarSimuladoInformatica()">
+                    <span>💻</span>
+                    <strong>Informática</strong>
+                    <small>30 questões</small>
+                </button>
 
-                👨‍🏫 Apoio Escolar
+                <button class="card-simulado disciplina" onclick="iniciarSimuladoEtica()">
+                    <span>⚖️</span>
+                    <strong>Ética</strong>
+                    <small>30 questões</small>
+                </button>
 
-            </button>
+                <button class="card-simulado disciplina" onclick="iniciarSimuladoDidatica()">
+                    <span>📚</span>
+                    <strong>Didática e Legislação</strong>
+                    <small>30 questões</small>
+                </button>
 
-            <button
-                class="btn-disciplina premium">
+                <button class="card-simulado disciplina" onclick="iniciarSimuladoHistoria()">
+                    <span>📜</span>
+                    <strong>História</strong>
+                    <small>30 questões</small>
+                </button>
 
-                <div class="cadeado-premium">
-                    🔒
-                </div>
+                <button class="card-simulado disciplina" onclick="iniciarSimuladoCiencias()">
+                    <span>🔬</span>
+                    <strong>Ciências</strong>
+                    <small>30 questões</small>
+                </button>
 
-                Professor de Matemática
+                <button class="card-simulado disciplina" onclick="iniciarSimuladoApoioEscolar()">
+                    <span>👨‍🏫</span>
+                    <strong>Apoio Escolar</strong>
+                    <small>30 questões</small>
+                </button>
+            </div>
+        </div>
 
-            </button>
+        <div class="bloco-simulado">
+            <div class="titulo-bloco-simulado">
+                <h3>🎓 Simulados por Cargo / Área</h3>
+                <p>Simulados completos com as disciplinas que compõem cada preparação.</p>
+            </div>
 
-<button
-    class="btn-assunto"
-    onclick="iniciarSimuladoHistoria()">
+            <div class="grid-simulados-farol">
+                <button class="card-simulado cargo" onclick="iniciarSimuladoCargoApoioEscolarFarol()">
+                    <span>👨‍🏫</span>
+                    <strong>Apoio Escolar</strong>
+                    <small><strong>50 questões</strong></small>
+                    <small>Português + Informática + Ética + Específicas</small>
+                </button>
 
-    📜 Professor de História
+                <button class="card-simulado cargo" onclick="iniciarSimuladoCargoHistoriaFarol()">
+                    <span>📜</span>
+                    <strong>Professor de História</strong>
+                    <small><strong>50 questões</strong></small>
+                    <small>Português + Informática + Didática + História</small>
+                </button>
 
-</button>
+                <button class="card-simulado cargo" onclick="iniciarSimuladoCargoCienciasFarol()">
+                    <span>🔬</span>
+                    <strong>Professor de Ciências</strong>
+                    <small><strong>50 questões</strong></small>
+                    <small>Português + Informática + Didática + Ciências</small>
+                </button>
 
-<button
-    class="btn-disciplina premium"
-    onclick="alert('🚧 Disciplina em desenvolvimento!')">
+                <button class="card-simulado bloqueado" onclick="mostrarToast('Professor de Matemática em desenvolvimento.')">
+                    <span>🔒</span>
+                    <strong>Professor de Matemática</strong>
+                    <small>Em breve</small>
+                </button>
 
-    <div class="cadeado-premium">
-        🔒
-    </div>
-
-    Professor de Educação Física
-
-</button>
-
-           <button
-    class="btn-assunto"
-    onclick="iniciarSimuladoCiencias()">
-
-    🔬 Professor de Ciências
-
-</button>
-
+                <button class="card-simulado bloqueado" onclick="mostrarToast('Professor de Educação Física em desenvolvimento.')">
+                    <span>🔒</span>
+                    <strong>Professor de Educação Física</strong>
+                    <small>Em breve</small>
+                </button>
+            </div>
         </div>
 
     </div>
 
 </section>
+
+
+<!-- PROVAS ANTERIORES -->
+
+<section id="provasAnteriores" class="tela">
+
+    <div class="card simulados-card-principal provas-anteriores-premium">
+
+        <div class="simulados-topo provas-topo-premium">
+            <div>
+                <span class="mini-label-provas">📄 Banco de provas reais</span>
+                <h2>Provas Anteriores Comentadas</h2>
+                <p>
+                    Escolha o cargo, abra a prova original e depois revise com o gabarito comentado premium do Farol do Saber.
+                </p>
+            </div>
+</div>
+
+        <div class="aviso-farol aviso-simulado-premium aviso-provas-premium">
+            <h3>📌 Como usar esta área</h3>
+            <p>
+                Primeiro resolva a prova original como treino real. Depois abra o gabarito comentado para entender a resposta correta, os distratores e a dica da banca.
+            </p>
+        </div>
+
+        <div class="provas-resumo-grid">
+            <div class="provas-resumo-card ativo">
+                <span>📜</span>
+                <strong>Professor de História</strong>
+                <small>3 provas cadastradas</small>
+            </div>
+
+            <div class="provas-resumo-card ativo">
+                <span>🔬</span>
+                <strong>Professor de Ciências</strong>
+                <small>1 prova cadastrada</small>
+            </div>
+        </div>
+
+        <div class="grupo-provas-cargo">
+            <div class="cabecalho-grupo-provas">
+                <div>
+                    <span class="tag-cargo-provas">📜 Professor de História</span>
+                    <h3>Provas cadastradas</h3>
+                    <p>Provas reais da banca Ágata com gabarito comentado premium.</p>
+                </div>
+                <strong class="contador-provas-cargo">3 provas</strong>
+            </div>
+
+            <div class="grid-provas-anteriores">
+
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova">
+                            <span class="tag-prova-anterior">Instituto Ágata</span>
+                            <span class="tag-ano-prova">2024</span>
+                        </div>
+                        <h3>📜 Anajás/PA — Professor de História</h3>
+                        <p>
+                            Português, Informática, Didática e Conhecimentos Específicos de História.
+                        </p>
+                        <small>
+                            Prova original + gabarito comentado premium.
+                        </small>
+                    </div>
+
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/historia/professor_historia_anajas_2024.pdf')">
+                            📕 Abrir prova
+                        </button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/historia/gabarito_comentado_professor_historia_anajas_2024.pdf')">
+                            ✅ Gabarito comentado
+                        </button>
+                    </div>
+                </div>
+
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova">
+                            <span class="tag-prova-anterior">Instituto Ágata</span>
+                            <span class="tag-ano-prova">2025</span>
+                        </div>
+                        <h3>📜 Piçarra/PA — Professor de História</h3>
+                        <p>
+                            Português, Informática, Legislação e Conhecimentos Específicos de História.
+                        </p>
+                        <small>
+                            Prova original + gabarito comentado premium.
+                        </small>
+                    </div>
+
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/historia/professor_historia_picarra_2025.pdf')">
+                            📕 Abrir prova
+                        </button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/historia/gabarito_comentado_professor_historia_picarra_2025.pdf')">
+                            ✅ Gabarito comentado
+                        </button>
+                    </div>
+                </div>
+
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova">
+                            <span class="tag-prova-anterior">Instituto Ágata</span>
+                            <span class="tag-ano-prova">2025</span>
+                        </div>
+                        <h3>📜 Juruti/PA — Professor de História</h3>
+                        <p>
+                            Português, Informática, Didática/Legislação e Conhecimentos Específicos de História.
+                        </p>
+                        <small>
+                            Prova original + gabarito comentado premium.
+                        </small>
+                    </div>
+
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/historia/professor_historia_juruti_2025.pdf')">
+                            📕 Abrir prova
+                        </button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/historia/gabarito_comentado_professor_historia_juruti_2025.pdf')">
+                            ✅ Gabarito comentado
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="grupo-provas-cargo">
+            <div class="cabecalho-grupo-provas">
+                <div>
+                    <span class="tag-cargo-provas ciencias">🔬 Professor de Ciências</span>
+                    <h3>Provas cadastradas</h3>
+                    <p>Provas reais da banca Ágata com gabarito comentado premium.</p>
+                </div>
+                <strong class="contador-provas-cargo">1 prova</strong>
+            </div>
+
+            <div class="grid-provas-anteriores">
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova">
+                            <span class="tag-prova-anterior">Instituto Ágata</span>
+                            <span class="tag-ano-prova">2025</span>
+                        </div>
+                        <h3>🔬 Juruti/PA — Professor de Ciências Biológicas</h3>
+                        <p>
+                            Português, Informática, Didática/Legislação e Conhecimentos Específicos de Ciências.
+                        </p>
+                        <small>
+                            Prova original oficial + gabarito comentado premium.
+                        </small>
+                    </div>
+
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/ciencias/professor_ciencias_juruti_2025.pdf')">
+                            📕 Abrir prova
+                        </button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/ciencias/gabarito_comentado_professor_ciencias_juruti_2025.pdf')">
+                            ✅ Gabarito comentado
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
 
 <!-- LOJA DO FAROL -->
 

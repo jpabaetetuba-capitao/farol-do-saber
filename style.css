@@ -491,23 +491,43 @@ footer small{
 
 }
 
+/* ==========================
+   LUZ ANIMADA DO FAROL - TELA INICIAL
+   Efeito suave, sem atrapalhar o dashboard
+========================== */
+
+#inicio{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+#inicio .dashboard-container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
 .luz-farol{
 
     position:absolute;
 
-    top:150px;
-    left:350px;
+    top:120px;
+    left:300px;
 
-    width:1600px;
-    height:220px;
+    width:1300px;
+    height:200px;
 
     background:linear-gradient(
         90deg,
-   rgba(255,255,180,1) 0%,
-    rgba(255,245,120,1) 10%,
-    rgba(255,230,70,0.95) 30%,
-    rgba(255,210,40,0.70) 60%,
-    rgba(255,180,20,0) 100%
+        rgba(255,255,210,0.90) 0%,
+        rgba(255,240,130,0.70) 18%,
+        rgba(255,210,60,0.35) 55%,
+        rgba(255,180,20,0) 100%
     );
 
     clip-path:polygon(
@@ -523,47 +543,38 @@ footer small{
 
     z-index:1;
 
-    filter:blur(8px);
+    filter:blur(10px);
 
     mix-blend-mode:screen;
 
-    animation:luzGirando 20s linear infinite;
+    animation:luzFarolSuave 12s ease-in-out infinite;
 
 }
 
-@keyframes luzGirando {
+@keyframes luzFarolSuave{
 
     0%{
-        transform: rotate(-15deg);
-        opacity:0.4;
+        transform:rotate(-10deg);
+        opacity:0.25;
     }
 
     25%{
-        transform: rotate(0deg);
-        opacity:1;
+        opacity:0.65;
     }
 
     50%{
-        transform: rotate(15deg);
-        opacity:0.4;
+        transform:rotate(10deg);
+        opacity:0.45;
     }
 
     75%{
-        transform: rotate(0deg);
-        opacity:1;
+        opacity:0.75;
     }
 
     100%{
-        transform: rotate(-15deg);
-        opacity:0.4;
+        transform:rotate(-10deg);
+        opacity:0.25;
     }
-
-}
-#inicio{
-
-    position:relative;
-
-    overflow:hidden;
 
 }
 
@@ -5905,3 +5916,277 @@ progress{
 
 }
 
+
+/* ================================
+   PROVAS ANTERIORES - LAYOUT POR CARGO
+   ================================ */
+.provas-anteriores-premium{
+    background:rgba(255,255,255,0.90);
+    backdrop-filter:blur(8px);
+}
+
+.provas-topo-premium{
+    align-items:center;
+    gap:18px;
+}
+
+.mini-label-provas{
+    display:inline-block;
+    margin-bottom:8px;
+    padding:7px 12px;
+    border-radius:999px;
+    background:#e3f2fd;
+    color:#0d47a1;
+    font-weight:800;
+    font-size:13px;
+}
+
+.selo-provas-premium{
+    background:linear-gradient(135deg,#0d47a1,#1e88e5);
+    color:#fff;
+    border-radius:999px;
+    padding:10px 16px;
+    font-weight:800;
+    box-shadow:0 6px 16px rgba(13,71,161,0.25);
+}
+
+.aviso-provas-premium{
+    border-left:6px solid #f9a825;
+}
+
+.provas-resumo-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:14px;
+    margin:22px 0;
+}
+
+.provas-resumo-card{
+    padding:18px;
+    border-radius:18px;
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    background:#f8fafc;
+    border:1px solid rgba(0,0,0,0.08);
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+}
+
+.provas-resumo-card span{
+    font-size:32px;
+}
+
+.provas-resumo-card strong{
+    font-size:18px;
+    color:#0d47a1;
+}
+
+.provas-resumo-card small{
+    color:#555;
+    font-weight:700;
+}
+
+.provas-resumo-card.ativo{
+    background:linear-gradient(135deg,#e3f2fd,#fffde7);
+    border:1px solid rgba(30,136,229,0.35);
+}
+
+.provas-resumo-card.em-breve{
+    background:linear-gradient(135deg,#f3e5f5,#f8fafc);
+    border:1px dashed rgba(106,27,154,0.35);
+}
+
+.grupo-provas-cargo{
+    margin-top:26px;
+    padding:20px;
+    border-radius:22px;
+    background:rgba(255,255,255,0.92);
+    border:1px solid rgba(0,0,0,0.08);
+    box-shadow:0 8px 24px rgba(0,0,0,0.10);
+}
+
+.grupo-provas-em-breve{
+    background:rgba(248,250,252,0.92);
+}
+
+.cabecalho-grupo-provas{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    align-items:flex-start;
+    margin-bottom:18px;
+}
+
+.cabecalho-grupo-provas h3{
+    margin:8px 0 5px;
+    color:#0d47a1;
+    font-size:24px;
+}
+
+.cabecalho-grupo-provas p{
+    margin:0;
+    color:#444;
+    line-height:1.45;
+}
+
+.tag-cargo-provas{
+    display:inline-block;
+    padding:7px 13px;
+    border-radius:999px;
+    background:#0d47a1;
+    color:#fff;
+    font-weight:800;
+    font-size:13px;
+}
+
+.tag-cargo-provas.ciencias{
+    background:#2e7d32;
+}
+
+.contador-provas-cargo{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:92px;
+    padding:10px 14px;
+    border-radius:999px;
+    background:#fff8e1;
+    color:#7a4f00;
+    border:1px solid #fbc02d;
+    font-size:14px;
+}
+
+.contador-provas-cargo.vazio{
+    background:#eeeeee;
+    color:#555;
+    border-color:#cccccc;
+}
+
+.grid-provas-anteriores{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:16px;
+}
+
+.prova-card-premium{
+    border-radius:20px;
+    padding:18px;
+    background:linear-gradient(180deg,#ffffff,#f8fafc);
+    border:1px solid rgba(13,71,161,0.14);
+    box-shadow:0 8px 20px rgba(0,0,0,0.10);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:16px;
+    transition:0.25s;
+}
+
+.prova-card-premium:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 26px rgba(0,0,0,0.16);
+}
+
+.card-prova-vazio{
+    border-style:dashed;
+    opacity:0.92;
+}
+
+.linha-tags-prova{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-bottom:10px;
+}
+
+.tag-prova-anterior,
+.tag-ano-prova{
+    display:inline-block;
+    padding:6px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:800;
+}
+
+.tag-prova-anterior{
+    background:#e3f2fd;
+    color:#0d47a1;
+}
+
+.tag-ano-prova{
+    background:#fff8e1;
+    color:#7a4f00;
+}
+
+.prova-card-premium h3{
+    margin:0 0 8px;
+    color:#0d47a1;
+    font-size:20px;
+    line-height:1.25;
+}
+
+.prova-card-premium p{
+    margin:0 0 8px;
+    color:#333;
+    line-height:1.45;
+}
+
+.prova-card-premium small{
+    color:#666;
+    line-height:1.35;
+}
+
+.prova-anterior-acoes{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.prova-anterior-acoes button{
+    flex:1;
+    min-width:150px;
+    border:none;
+    border-radius:12px;
+    padding:11px 12px;
+    background:#1e88e5;
+    color:white;
+    font-weight:800;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.prova-anterior-acoes button:hover{
+    background:#0d47a1;
+    transform:scale(1.02);
+}
+
+.prova-anterior-acoes button:nth-child(2){
+    background:#43a047;
+}
+
+.prova-anterior-acoes button:nth-child(2):hover{
+    background:#2e7d32;
+}
+
+.prova-anterior-acoes .btn-prova-bloqueada{
+    background:#757575;
+    cursor:not-allowed;
+}
+
+.prova-anterior-acoes .btn-prova-bloqueada:hover{
+    background:#616161;
+    transform:none;
+}
+
+@media(max-width:768px){
+    .cabecalho-grupo-provas{
+        flex-direction:column;
+    }
+
+    .contador-provas-cargo{
+        align-self:flex-start;
+    }
+
+    .prova-anterior-acoes button{
+        min-width:100%;
+    }
+}

@@ -4202,6 +4202,275 @@ tipoSimuladoAtual = tipo || "personalizado";
 
 }
 
+
+// ==========================
+// SIMULADOS - ROTA E PROVAS ANTERIORES
+// ==========================
+
+function limitarQuantidadeSimuladoFarol(banco, quantidadePadrao){
+
+    const total = Array.isArray(banco) ? banco.length : 0;
+
+    if(total === 0){
+        return 0;
+    }
+
+    return Math.min(
+        quantidadePadrao || 30,
+        total
+    );
+
+}
+
+function obterBancoDisciplinaSimuladoFarol(disciplina){
+
+    const bancos = {
+        portugues: [
+            ...interpretacao,
+            ...generos,
+            ...funcoes,
+            ...coesao,
+            ...semantica,
+            ...figuras,
+            ...variacao,
+            ...classesPalavras,
+            ...formacaoPalavras,
+            ...sintaxe,
+            ...periodoComposto,
+            ...concordancia,
+            ...regencia,
+            ...crase,
+            ...vozesVerbais,
+            ...pontuacao,
+            ...ortografia,
+            ...acentuacao,
+            ...redacaoOficial
+        ],
+        informatica: [
+            ...hardware,
+            ...software,
+            ...arquivos,
+            ...office,
+            ...internet,
+            ...redes,
+            ...seguranca
+        ],
+        etica: [
+            ...eticaConceitos,
+            ...principiosAdministracao,
+            ...deveresServidor,
+            ...condutaEtica,
+            ...lai,
+            ...lgpd
+        ],
+        didatica: [
+            ...bncc,
+            ...ldb,
+            ...eca,
+            ...pne,
+            ...fundeb,
+            ...lbi,
+            ...tea,
+            ...inclusiva,
+            ...etnicoRacial,
+            ...educacaoCampo,
+            ...quilombola,
+            ...indigena,
+            ...didatica,
+            ...planejamento,
+            ...avaliacao
+        ],
+        historia: [
+            ...fundamentosEnsinoHistoria,
+            ...cienciaHistoricaOficioHistoriador,
+            ...povosPreColombianos,
+            ...formacaoSocialCulturalBrasileira,
+            ...estadosModernosApropriacaoAmerica,
+            ...mercantilismoColonizacaoAmerica,
+            ...brasilColonialSociedadeEconomiaResistencias,
+            ...administracaoAmericaLusitanaColonial,
+            ...aspectosEconomicosFormasTrabalhoBrasilColonialImperial,
+            ...sociedadeColonialImperialBrasileira,
+            ...influenciasIdeologiasLiberaisBrasilSeculoXVIII,
+            ...movimentosAnticoloniaisBrasil,
+            ...cortePortuguesaFormacaoEstadoNacionalBrasileiro,
+            ...estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro,
+            ...revoltasMovimentosBrasilImperial,
+            ...expansaoFronteirasAmericaPortuguesa
+        ],
+        ciencias: [
+            ...fundamentosCiencias,
+            ...bnccCiencias,
+            ...alfabetizacaoCientifica,
+            ...citologia,
+            ...ecologia,
+            ...terraEUniverso
+        ],
+        apoioEscolar: [
+            ...apoioOrganizacaoEducacao,
+            ...apoioLDB,
+            ...apoioECA,
+            ...apoioLBI,
+            ...apoioTEA,
+            ...apoioPoliticaEducacaoEspecial,
+            ...apoioBNCCDiretrizes,
+            ...apoioEducacaoInclusiva,
+            ...apoioPapelProfissional,
+            ...apoioTrabalhoColaborativo
+        ]
+    };
+
+    return bancos[disciplina] || [];
+
+}
+
+function iniciarSimuladoBancoFarol(banco, quantidade, tipo){
+
+    const total = limitarQuantidadeSimuladoFarol(
+        banco,
+        quantidade || 30
+    );
+
+    if(total === 0){
+        mostrarToast("Nenhuma questão encontrada para este simulado.");
+        return;
+    }
+
+    iniciarSimuladoPersonalizado(
+        banco,
+        total,
+        tipo || "simuladoFarol"
+    );
+
+}
+
+function obterBancoMinhaRotaFarol(){
+
+    const chaveTrilha = obterTrilhaAtualFarol();
+
+    if(!chaveTrilha){
+        mostrarToast("Escolha uma Rota de Estudos antes de iniciar este simulado.");
+        mostrarTela("questoes");
+        return null;
+    }
+
+    const trilha = trilhasPreparacaoFarol[chaveTrilha];
+
+    if(
+        !trilha ||
+        !Array.isArray(trilha.disciplinas) ||
+        trilha.disciplinas.length === 0
+    ){
+        mostrarToast("Rota sem disciplinas liberadas.");
+        return null;
+    }
+
+    return {
+        chaveTrilha: chaveTrilha,
+        banco: trilha.disciplinas.flatMap(
+            disciplina => obterBancoDisciplinaSimuladoFarol(disciplina)
+        )
+    };
+
+}
+
+function iniciarSimuladoMinhaRotaFarol(){
+
+    const dadosRota = obterBancoMinhaRotaFarol();
+
+    if(!dadosRota){
+        return;
+    }
+
+    iniciarSimuladoBancoFarol(
+        dadosRota.banco,
+        50,
+        "minhaRota:" + dadosRota.chaveTrilha
+    );
+
+}
+
+function iniciarTreinoRapidoMinhaRotaFarol(quantidade){
+
+    const dadosRota = obterBancoMinhaRotaFarol();
+
+    if(!dadosRota){
+        return;
+    }
+
+    iniciarSimuladoBancoFarol(
+        dadosRota.banco,
+        quantidade,
+        "treinoRota:" + dadosRota.chaveTrilha + ":" + quantidade
+    );
+
+}
+
+function iniciarSimuladoCargoApoioEscolarFarol(){
+
+    const banco = [
+        ...obterBancoDisciplinaSimuladoFarol("portugues"),
+        ...obterBancoDisciplinaSimuladoFarol("informatica"),
+        ...obterBancoDisciplinaSimuladoFarol("etica"),
+        ...obterBancoDisciplinaSimuladoFarol("apoioEscolar")
+    ];
+
+    iniciarSimuladoBancoFarol(
+        banco,
+        50,
+        "cargo:apoioEscolar"
+    );
+
+}
+
+function iniciarSimuladoCargoHistoriaFarol(){
+
+    const banco = [
+        ...obterBancoDisciplinaSimuladoFarol("portugues"),
+        ...obterBancoDisciplinaSimuladoFarol("informatica"),
+        ...obterBancoDisciplinaSimuladoFarol("didatica"),
+        ...obterBancoDisciplinaSimuladoFarol("historia")
+    ];
+
+    iniciarSimuladoBancoFarol(
+        banco,
+        50,
+        "cargo:professorHistoria"
+    );
+
+}
+
+function iniciarSimuladoCargoCienciasFarol(){
+
+    const banco = [
+        ...obterBancoDisciplinaSimuladoFarol("portugues"),
+        ...obterBancoDisciplinaSimuladoFarol("informatica"),
+        ...obterBancoDisciplinaSimuladoFarol("didatica"),
+        ...obterBancoDisciplinaSimuladoFarol("ciencias")
+    ];
+
+    iniciarSimuladoBancoFarol(
+        banco,
+        50,
+        "cargo:professorCiencias"
+    );
+
+}
+
+function abrirArquivoProvaAnteriorFarol(caminho){
+
+    if(!caminho){
+        mostrarToast("Arquivo não encontrado.");
+        return;
+    }
+
+    window.open(
+        caminho,
+        "_blank"
+    );
+
+}
+
 // ==========================
 // SIMULADOS POR DISCIPLINA
 // ==========================
