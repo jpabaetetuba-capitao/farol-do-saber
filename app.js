@@ -88,6 +88,10 @@ if(id === "login"){
         atualizarContinuarUltimoEstudo();
     }
 
+    if(id === "provasAnteriores" && typeof prepararTelaProvasAnterioresFarol === "function"){
+        setTimeout(prepararTelaProvasAnterioresFarol, 0);
+    }
+
 }
 
 
@@ -787,6 +791,20 @@ const bancoQuestoes = {
     alfabetizacaoCientifica,
 
     citologia,
+
+    microbiologia,
+
+    botanica,
+
+    zoologia,
+
+    evolucao,
+
+    genetica,
+
+    hereditariedade,
+
+    biotecnologia,
 
     ecologia,
 
@@ -2421,6 +2439,34 @@ const mapasMentaisPorAssunto = {
         "titulo": "🧬 Citologia",
         "imagem": "imagens/mapas/Citologia.png"
     },
+    "microbiologia": {
+        "titulo": "🦠 Microbiologia",
+        "imagem": "imagens/mapas/Microbiologia.png"
+    },
+    "botanica": {
+        "titulo": "🌿 Botânica",
+        "imagem": "imagens/mapas/Botanica.png"
+    },
+    "zoologia": {
+        "titulo": "🐾 Zoologia",
+        "imagem": "imagens/mapas/Zoologia.png"
+    },
+    "evolucao": {
+        "titulo": "🧬 Evolução",
+        "imagem": "imagens/mapas/Evolucao.png"
+    },
+    "genetica": {
+        "titulo": "🧬 Genética",
+        "imagem": "imagens/mapas/Genetica.png"
+    },
+    "hereditariedade": {
+        "titulo": "👨‍👩‍👧‍👦 Hereditariedade",
+        "imagem": "imagens/mapas/Hereditariedade.png"
+    },
+    "biotecnologia": {
+        "titulo": "🧬 Biotecnologia",
+        "imagem": "imagens/mapas/Biotecnologia.png"
+    },
     "ecologia": {
         "titulo": "🌿 Ecologia",
         "imagem": "imagens/mapas/Ecologia.png"
@@ -2912,6 +2958,27 @@ alfabetizacaoCientifica:
     
 citologia:
 "🧬 Citologia",
+
+microbiologia:
+"🦠 Microbiologia",
+
+botanica:
+"🌿 Botânica",
+
+zoologia:
+"🐾 Zoologia",
+
+evolucao:
+"🧬 Evolução",
+
+genetica:
+"🧬 Genética",
+
+hereditariedade:
+"👨‍👩‍👧‍👦 Hereditariedade",
+
+biotecnologia:
+"🧬 Biotecnologia",
 
 ecologia:
 "🌿 Ecologia",
@@ -4303,6 +4370,13 @@ function obterBancoDisciplinaSimuladoFarol(disciplina){
             ...bnccCiencias,
             ...alfabetizacaoCientifica,
             ...citologia,
+        ...microbiologia,
+        ...botanica,
+        ...zoologia,
+        ...evolucao,
+        ...genetica,
+        ...hereditariedade,
+        ...biotecnologia,
             ...ecologia,
             ...terraEUniverso
         ],
@@ -4471,6 +4545,99 @@ function abrirArquivoProvaAnteriorFarol(caminho){
 
 }
 
+function prepararTelaProvasAnterioresFarol(){
+
+    document
+        .querySelectorAll(".grupo-provas-cargo")
+        .forEach(grupo => {
+            grupo.classList.add("grupo-provas-oculto");
+        });
+
+    document
+        .querySelectorAll(".botao-cargo-provas")
+        .forEach(card => {
+            card.classList.remove("selecionado");
+        });
+
+    const mensagem =
+        document.getElementById("mensagemEscolhaProvas");
+
+    if(mensagem){
+        mensagem.style.display = "flex";
+    }
+
+}
+
+function selecionarCargoProvasFarol(cargo){
+
+    const grupos = {
+        historia: "grupoProvasHistoria",
+        ciencias: "grupoProvasCiencias"
+    };
+
+    const cards = {
+        historia: "cardProvasHistoria",
+        ciencias: "cardProvasCiencias"
+    };
+
+    document
+        .querySelectorAll(".grupo-provas-cargo")
+        .forEach(grupo => {
+            grupo.classList.add("grupo-provas-oculto");
+        });
+
+    document
+        .querySelectorAll(".botao-cargo-provas")
+        .forEach(card => {
+            card.classList.remove("selecionado");
+        });
+
+    const grupo =
+        document.getElementById(grupos[cargo]);
+
+    const card =
+        document.getElementById(cards[cargo]);
+
+    const mensagem =
+        document.getElementById("mensagemEscolhaProvas");
+
+    if(mensagem){
+        mensagem.style.display = "none";
+    }
+
+    if(card){
+        card.classList.add("selecionado");
+    }
+
+    if(grupo){
+        grupo.classList.remove("grupo-provas-oculto");
+
+        setTimeout(() => {
+            grupo.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }, 80);
+    }
+
+}
+
+function voltarCargosProvasFarol(){
+
+    prepararTelaProvasAnterioresFarol();
+
+    const grid =
+        document.querySelector("#provasAnteriores .provas-resumo-grid");
+
+    if(grid){
+        grid.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+
+}
+
 // ==========================
 // SIMULADOS POR DISCIPLINA
 // ==========================
@@ -4483,6 +4650,13 @@ function iniciarSimuladoCiencias(){
         ...bnccCiencias,
         ...alfabetizacaoCientifica,
         ...citologia,
+        ...microbiologia,
+        ...botanica,
+        ...zoologia,
+        ...evolucao,
+        ...genetica,
+        ...hereditariedade,
+        ...biotecnologia,
         ...ecologia,
         ...terraEUniverso
 
@@ -5348,6 +5522,77 @@ case "citologia":
 
     break;
 
+
+case "microbiologia":
+
+    titulo.innerHTML =
+        "🦠 Microbiologia";
+
+    imagem.src =
+        "imagens/mapas/Microbiologia.png";
+
+    break;
+
+case "botanica":
+
+    titulo.innerHTML =
+        "🌿 Botânica";
+
+    imagem.src =
+        "imagens/mapas/Botanica.png";
+
+    break;
+
+case "zoologia":
+
+    titulo.innerHTML =
+        "🐾 Zoologia";
+
+    imagem.src =
+        "imagens/mapas/Zoologia.png";
+
+    break;
+
+case "evolucao":
+
+    titulo.innerHTML =
+        "🧬 Evolução";
+
+    imagem.src =
+        "imagens/mapas/Evolucao.png";
+
+    break;
+
+case "genetica":
+
+    titulo.innerHTML =
+        "🧬 Genética";
+
+    imagem.src =
+        "imagens/mapas/Genetica.png";
+
+    break;
+
+case "hereditariedade":
+
+    titulo.innerHTML =
+        "👨‍👩‍👧‍👦 Hereditariedade";
+
+    imagem.src =
+        "imagens/mapas/Hereditariedade.png";
+
+    break;
+
+case "biotecnologia":
+
+    titulo.innerHTML =
+        "🧬 Biotecnologia";
+
+    imagem.src =
+        "imagens/mapas/Biotecnologia.png";
+
+    break;
+
 case "ecologia":
 
     titulo.innerHTML =
@@ -5509,6 +5754,84 @@ if(assuntoAtual === "citologia"){
     abrirTeoria(
         citologiaTeoria,
         "🧬 Citologia"
+    );
+
+    return;
+
+}
+
+
+if(assuntoAtual === "microbiologia"){
+
+    abrirTeoria(
+        microbiologiaTeoria,
+        "🦠 Microbiologia"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "botanica"){
+
+    abrirTeoria(
+        botanicaTeoria,
+        "🌿 Botânica"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "zoologia"){
+
+    abrirTeoria(
+        zoologiaTeoria,
+        "🐾 Zoologia"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "evolucao"){
+
+    abrirTeoria(
+        evolucaoTeoria,
+        "🧬 Evolução"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "genetica"){
+
+    abrirTeoria(
+        geneticaTeoria,
+        "🧬 Genética"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "hereditariedade"){
+
+    abrirTeoria(
+        hereditariedadeTeoria,
+        "👨‍👩‍👧‍👦 Hereditariedade"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "biotecnologia"){
+
+    abrirTeoria(
+        biotecnologiaTeoria,
+        "🧬 Biotecnologia"
     );
 
     return;
@@ -7338,6 +7661,83 @@ if(assuntoAtual === "bncc"){
 
     }
 
+    if(assuntoAtual === "microbiologia"){
+
+        abrirTeoria(
+            microbiologiaTeoria,
+            "🦠 Microbiologia"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "botanica"){
+
+        abrirTeoria(
+            botanicaTeoria,
+            "🌿 Botânica"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "zoologia"){
+
+        abrirTeoria(
+            zoologiaTeoria,
+            "🐾 Zoologia"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "evolucao"){
+
+        abrirTeoria(
+            evolucaoTeoria,
+            "🧬 Evolução"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "genetica"){
+
+        abrirTeoria(
+            geneticaTeoria,
+            "🧬 Genética"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "hereditariedade"){
+
+        abrirTeoria(
+            hereditariedadeTeoria,
+            "👨‍👩‍👧‍👦 Hereditariedade"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "biotecnologia"){
+
+        abrirTeoria(
+            biotecnologiaTeoria,
+            "🧬 Biotecnologia"
+        );
+
+        return;
+
+    }
+
     if(assuntoAtual === "ecologia"){
 
         abrirTeoria(
@@ -7757,6 +8157,13 @@ const assuntosCiencias = [
         "bnccCiencias",
         "alfabetizacaoCientifica",
         "citologia",
+        "microbiologia",
+        "botanica",
+        "zoologia",
+        "evolucao",
+        "genetica",
+        "hereditariedade",
+        "biotecnologia",
         "ecologia",
         "terraEUniverso",
         "anatomiaFisiologia",
@@ -10860,6 +11267,13 @@ const disciplinasJogoFarol = {
             "bnccCiencias",
             "alfabetizacaoCientifica",
             "citologia",
+            "microbiologia",
+            "botanica",
+            "zoologia",
+            "evolucao",
+            "genetica",
+            "hereditariedade",
+            "biotecnologia",
             "ecologia",
             "terraEUniverso",
             "anatomiaFisiologia",
@@ -11218,6 +11632,13 @@ function nomeAssuntoJogoFarol(assunto){
         bnccCiencias: "📘 BNCC Ciências",
         alfabetizacaoCientifica: "🔬 Alfabetização Científica",
         citologia: "🧬 Citologia",
+        microbiologia: "🦠 Microbiologia",
+        botanica: "🌿 Botânica",
+        zoologia: "🐾 Zoologia",
+        evolucao: "🧬 Evolução",
+        genetica: "🧬 Genética",
+        hereditariedade: "👨‍👩‍👧‍👦 Hereditariedade",
+        biotecnologia: "🧬 Biotecnologia",
         ecologia: "🌿 Ecologia",
         terraEUniverso: "🌎 Terra e Universo",
         anatomiaFisiologia: "🫀 Anatomia e Fisiologia Humana",
@@ -17129,6 +17550,13 @@ const gruposDuelo = [
             { chave: "bnccCiencias", nome: "📘 BNCC Ciências" },
             { chave: "alfabetizacaoCientifica", nome: "🧪 Alfabetização Científica" },
             { chave: "citologia", nome: "🧫 Citologia" },
+            { chave: "microbiologia", nome: "🦠 Microbiologia" },
+            { chave: "botanica", nome: "🌿 Botânica" },
+            { chave: "zoologia", nome: "🐾 Zoologia" },
+            { chave: "evolucao", nome: "🧬 Evolução" },
+            { chave: "genetica", nome: "🧬 Genética" },
+            { chave: "hereditariedade", nome: "👨‍👩‍👧‍👦 Hereditariedade" },
+            { chave: "biotecnologia", nome: "🧬 Biotecnologia" },
             { chave: "ecologia", nome: "🌱 Ecologia" },
             { chave: "terraEUniverso", nome: "🌎 Terra e Universo" },
             { chave: "anatomiaFisiologia", nome: "🫀 Anatomia e Fisiologia" },

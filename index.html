@@ -882,6 +882,42 @@ onclick="abrirAssunto('citologia')">
 🧬 Citologia
 </button>
 
+
+<button class="btn-assunto"
+onclick="abrirAssunto('microbiologia')">
+🦠 Microbiologia
+</button>
+
+<button class="btn-assunto"
+onclick="abrirAssunto('botanica')">
+🌿 Botânica
+</button>
+
+<button class="btn-assunto"
+onclick="abrirAssunto('zoologia')">
+🐾 Zoologia
+</button>
+
+<button class="btn-assunto"
+onclick="abrirAssunto('evolucao')">
+🧬 Evolução
+</button>
+
+<button class="btn-assunto"
+onclick="abrirAssunto('genetica')">
+🧬 Genética
+</button>
+
+<button class="btn-assunto"
+onclick="abrirAssunto('hereditariedade')">
+👨‍👩‍👧‍👦 Hereditariedade
+</button>
+
+<button class="btn-assunto"
+onclick="abrirAssunto('biotecnologia')">
+🧬 Biotecnologia
+</button>
+
 <button class="btn-assunto"
 onclick="abrirAssunto('ecologia')">
 🌿 Ecologia
@@ -1418,7 +1454,6 @@ Li e revisei o mapa mental.
 
 <section id="inicio" class="tela ativa">
 
-<div class="luz-farol"></div>
 
     <div class="dashboard-container">
 
@@ -1928,27 +1963,58 @@ Li e revisei o mapa mental.
         </div>
 
         <div class="provas-resumo-grid">
-            <div class="provas-resumo-card ativo">
+            <button
+                type="button"
+                id="cardProvasHistoria"
+                class="provas-resumo-card ativo botao-cargo-provas"
+                onclick="selecionarCargoProvasFarol('historia')">
+
                 <span>📜</span>
                 <strong>Professor de História</strong>
                 <small>3 provas cadastradas</small>
-            </div>
+                <em>Clique para abrir as provas de História</em>
 
-            <div class="provas-resumo-card ativo">
+            </button>
+
+            <button
+                type="button"
+                id="cardProvasCiencias"
+                class="provas-resumo-card ativo botao-cargo-provas"
+                onclick="selecionarCargoProvasFarol('ciencias')">
+
                 <span>🔬</span>
                 <strong>Professor de Ciências</strong>
                 <small>1 prova cadastrada</small>
-            </div>
+                <em>Clique para abrir as provas de Ciências</em>
+
+            </button>
         </div>
 
-        <div class="grupo-provas-cargo">
+        <div
+            id="mensagemEscolhaProvas"
+            class="provas-orientacao-cargo">
+
+            <strong>👆 Escolha um cargo acima.</strong>
+            <span>As provas só aparecem depois que você clicar no cargo desejado.</span>
+
+        </div>
+
+        <div id="grupoProvasHistoria" class="grupo-provas-cargo grupo-provas-oculto">
             <div class="cabecalho-grupo-provas">
                 <div>
                     <span class="tag-cargo-provas">📜 Professor de História</span>
                     <h3>Provas cadastradas</h3>
                     <p>Provas reais da banca Ágata com gabarito comentado premium.</p>
                 </div>
-                <strong class="contador-provas-cargo">3 provas</strong>
+                <div class="acoes-cabecalho-provas">
+                    <strong class="contador-provas-cargo">3 provas</strong>
+                    <button
+                        type="button"
+                        class="btn-voltar-cargos-provas"
+                        onclick="voltarCargosProvasFarol()">
+                        ⬅ Cargos
+                    </button>
+                </div>
             </div>
 
             <div class="grid-provas-anteriores">
@@ -2031,14 +2097,22 @@ Li e revisei o mapa mental.
             </div>
         </div>
 
-        <div class="grupo-provas-cargo">
+        <div id="grupoProvasCiencias" class="grupo-provas-cargo grupo-provas-oculto">
             <div class="cabecalho-grupo-provas">
                 <div>
                     <span class="tag-cargo-provas ciencias">🔬 Professor de Ciências</span>
                     <h3>Provas cadastradas</h3>
                     <p>Provas reais da banca Ágata com gabarito comentado premium.</p>
                 </div>
-                <strong class="contador-provas-cargo">1 prova</strong>
+                <div class="acoes-cabecalho-provas">
+                    <strong class="contador-provas-cargo">1 prova</strong>
+                    <button
+                        type="button"
+                        class="btn-voltar-cargos-provas"
+                        onclick="voltarCargosProvasFarol()">
+                        ⬅ Cargos
+                    </button>
+                </div>
             </div>
 
             <div class="grid-provas-anteriores">
@@ -2721,6 +2795,20 @@ Li e revisei o mapa mental.
 
 <script src="dados/citologia.js"></script>
 
+<script src="dados/microbiologia.js"></script>
+
+<script src="dados/botanica.js"></script>
+
+<script src="dados/zoologia.js"></script>
+
+<script src="dados/evolucao.js"></script>
+
+<script src="dados/genetica.js"></script>
+
+<script src="dados/hereditariedade.js"></script>
+
+<script src="dados/biotecnologia.js"></script>
+
 <script src="dados/ecologia.js"></script>
 
 <script src="dados/terraEUniverso.js"></script>
@@ -2732,6 +2820,20 @@ Li e revisei o mapa mental.
 <script src="dados/teorias/alfabetizacaoCientificaTeoria.js"></script>
 
 <script src="dados/teorias/citologiaTeoria.js"></script>
+
+<script src="dados/teorias/microbiologiaTeoria.js"></script>
+
+<script src="dados/teorias/botanicaTeoria.js"></script>
+
+<script src="dados/teorias/zoologiaTeoria.js"></script>
+
+<script src="dados/teorias/evolucaoTeoria.js"></script>
+
+<script src="dados/teorias/geneticaTeoria.js"></script>
+
+<script src="dados/teorias/hereditariedadeTeoria.js"></script>
+
+<script src="dados/teorias/biotecnologiaTeoria.js"></script>
 
 <script src="dados/teorias/ecologiaTeoria.js"></script>
 

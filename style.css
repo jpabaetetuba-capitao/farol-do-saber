@@ -491,93 +491,6 @@ footer small{
 
 }
 
-/* ==========================
-   LUZ ANIMADA DO FAROL - TELA INICIAL
-   Efeito suave, sem atrapalhar o dashboard
-========================== */
-
-#inicio{
-
-    position:relative;
-
-    overflow:hidden;
-
-}
-
-#inicio .dashboard-container{
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-.luz-farol{
-
-    position:absolute;
-
-    top:120px;
-    left:300px;
-
-    width:1300px;
-    height:200px;
-
-    background:linear-gradient(
-        90deg,
-        rgba(255,255,210,0.90) 0%,
-        rgba(255,240,130,0.70) 18%,
-        rgba(255,210,60,0.35) 55%,
-        rgba(255,180,20,0) 100%
-    );
-
-    clip-path:polygon(
-        0% 45%,
-        100% 0%,
-        100% 100%,
-        0% 55%
-    );
-
-    transform-origin:left center;
-
-    pointer-events:none;
-
-    z-index:1;
-
-    filter:blur(10px);
-
-    mix-blend-mode:screen;
-
-    animation:luzFarolSuave 12s ease-in-out infinite;
-
-}
-
-@keyframes luzFarolSuave{
-
-    0%{
-        transform:rotate(-10deg);
-        opacity:0.25;
-    }
-
-    25%{
-        opacity:0.65;
-    }
-
-    50%{
-        transform:rotate(10deg);
-        opacity:0.45;
-    }
-
-    75%{
-        opacity:0.75;
-    }
-
-    100%{
-        transform:rotate(-10deg);
-        opacity:0.25;
-    }
-
-}
-
 .texto-base{
 
     background:#f8f9fa;
@@ -2314,9 +2227,6 @@ progress{
         background-attachment:scroll;
     }
 
-    .luz-farol{
-        display:none;
-    }
 
     .card,
     .dashboard-card,
@@ -6188,5 +6098,435 @@ progress{
 
     .prova-anterior-acoes button{
         min-width:100%;
+    }
+}
+
+/* =====================================================
+   SIMULADOS - LAYOUT PREMIUM POR ROTA, DISCIPLINA E CARGO
+   Ajuste para deixar a tela igual ao modelo enviado.
+===================================================== */
+
+#simulados{
+    max-width:1160px;
+    margin:0 auto;
+}
+
+#simulados .simulados-card-principal{
+    background:transparent !important;
+    box-shadow:none !important;
+    border-radius:0 !important;
+    padding:0 !important;
+    margin-bottom:30px;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+}
+
+#simulados .simulados-topo{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:16px;
+}
+
+#simulados .simulados-topo h2{
+    color:#1e88e5;
+    font-size:30px;
+    line-height:1.15;
+    margin:0 0 14px 0;
+    font-weight:800;
+}
+
+#simulados .simulados-topo p{
+    margin:0;
+    color:#333;
+    font-size:16px;
+    line-height:1.5;
+}
+
+#simulados .selo-simulados{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    white-space:nowrap;
+    background:rgba(255,248,225,0.96);
+    color:#7a5200;
+    border:1px solid rgba(249,168,37,0.35);
+    border-radius:999px;
+    padding:8px 18px;
+    font-size:15px;
+    font-weight:800;
+    box-shadow:0 4px 14px rgba(0,0,0,0.16);
+}
+
+#simulados .aviso-simulado-premium{
+    background:linear-gradient(135deg, rgba(255,248,225,0.96), rgba(227,242,253,0.96));
+    border-left:6px solid #f9a825;
+    border-radius:14px;
+    padding:17px 20px;
+    margin:0 0 20px 0;
+    box-shadow:0 4px 12px rgba(0,0,0,0.10);
+}
+
+#simulados .aviso-simulado-premium h3{
+    color:#0d47a1;
+    margin:0 0 10px 0;
+    font-size:18px;
+    font-weight:800;
+}
+
+#simulados .aviso-simulado-premium p{
+    margin:0;
+    color:#333;
+    line-height:1.6;
+}
+
+#simulados .bloco-simulado{
+    background:rgba(255,255,255,0.88);
+    border:1px solid rgba(30,136,229,0.16);
+    border-radius:16px;
+    padding:22px;
+    margin:19px 0;
+    box-shadow:0 6px 16px rgba(0,0,0,0.10);
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+}
+
+#simulados .destaque-rota-simulado{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:22px;
+    min-height:160px;
+    background:linear-gradient(135deg, rgba(227,242,253,0.94), rgba(255,248,225,0.94));
+    border-left:6px solid #1e88e5;
+}
+
+#simulados .bloco-simulado-texto{
+    flex:1;
+    min-width:0;
+}
+
+#simulados .tag-simulado{
+    display:inline-block;
+    color:#0d47a1;
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+#simulados .bloco-simulado h3,
+#simulados .titulo-bloco-simulado h3{
+    color:#0d47a1;
+    margin:0 0 9px 0;
+    font-size:20px;
+    line-height:1.3;
+    font-weight:800;
+}
+
+#simulados .bloco-simulado p,
+#simulados .titulo-bloco-simulado p{
+    margin:0;
+    color:#333;
+    line-height:1.55;
+    font-size:15px;
+}
+
+#simulados .info-qtd-simulado{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    background:rgba(255,248,225,0.96);
+    color:#7a5200;
+    border:1px solid rgba(249,168,37,0.55);
+    border-radius:999px;
+    padding:8px 14px;
+    margin-top:12px;
+    font-size:13px;
+    font-weight:700;
+}
+
+#simulados .btn-simulado-rota{
+    background:#1565c0 !important;
+    color:#fff !important;
+    min-width:198px;
+    height:44px;
+    border-radius:8px;
+    padding:0 18px;
+    margin:0;
+    font-weight:800;
+    box-shadow:none;
+}
+
+#simulados .btn-simulado-rota:hover{
+    background:#0d47a1 !important;
+    transform:translateY(-1px);
+}
+
+#simulados .titulo-bloco-simulado{
+    margin-bottom:18px;
+}
+
+#simulados .grid-treino-rapido{
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:20px;
+}
+
+#simulados .grid-treino-rapido button{
+    width:100%;
+    height:52px;
+    margin:0;
+    background:#3fa047 !important;
+    color:white;
+    border-radius:8px;
+    font-weight:800;
+    box-shadow:none;
+}
+
+#simulados .grid-treino-rapido button:hover{
+    background:#2e7d32 !important;
+    transform:translateY(-2px);
+}
+
+#simulados .grid-simulados-farol{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(165px, 1fr));
+    gap:12px;
+    align-items:stretch;
+}
+
+#simulados .card-simulado{
+    width:100%;
+    min-height:128px;
+    margin:0;
+    padding:18px 14px;
+    border-radius:14px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    text-align:center;
+    color:white !important;
+    font-weight:800;
+    line-height:1.2;
+    box-shadow:0 5px 12px rgba(0,0,0,0.14);
+    transition:transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+#simulados .card-simulado span{
+    display:block;
+    font-size:25px;
+    line-height:1;
+}
+
+#simulados .card-simulado strong{
+    color:white;
+    font-size:15px;
+}
+
+#simulados .card-simulado small{
+    display:block;
+    color:white;
+    opacity:0.96;
+    font-size:11px;
+    font-weight:700;
+    line-height:1.35;
+}
+
+#simulados .card-simulado.disciplina{
+    background:#3fa047 !important;
+}
+
+#simulados .card-simulado.disciplina:hover{
+    background:#2e7d32 !important;
+}
+
+#simulados .card-simulado.cargo{
+    background:#7b1fa2 !important;
+    min-height:148px;
+}
+
+#simulados .card-simulado.cargo:hover{
+    background:#6a1b9a !important;
+}
+
+#simulados .card-simulado.bloqueado{
+    background:#757575 !important;
+    cursor:pointer;
+    opacity:0.86;
+}
+
+#simulados .card-simulado:hover{
+    transform:translateY(-3px);
+    box-shadow:0 9px 18px rgba(0,0,0,0.18);
+    filter:saturate(1.05);
+}
+
+@media(max-width:900px){
+    #simulados .simulados-topo,
+    #simulados .destaque-rota-simulado{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    #simulados .selo-simulados,
+    #simulados .btn-simulado-rota{
+        align-self:stretch;
+        width:100%;
+    }
+
+    #simulados .grid-treino-rapido{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:12px;
+    }
+}
+
+@media(max-width:520px){
+    #simulados .simulados-topo h2{
+        font-size:25px;
+    }
+
+    #simulados .bloco-simulado{
+        padding:16px;
+    }
+
+    #simulados .grid-treino-rapido,
+    #simulados .grid-simulados-farol{
+        grid-template-columns:1fr;
+    }
+
+    #simulados .card-simulado{
+        min-height:105px;
+    }
+}
+
+
+/* =====================================================
+   AJUSTE FINAL - SIMULADOS COMO NO MODELO ENVIADO
+   Disciplina verde, Cargo roxo e bloqueados cinza.
+   A luz animada extra do farol foi removida da tela inicial.
+===================================================== */
+#simulados .card-simulado.disciplina{
+    background:#3fa047 !important;
+}
+
+#simulados .card-simulado.disciplina:hover{
+    background:#2e7d32 !important;
+}
+
+#simulados .card-simulado.cargo{
+    background:#7b1fa2 !important;
+    min-height:148px;
+}
+
+#simulados .card-simulado.cargo:hover{
+    background:#6a1b9a !important;
+}
+
+#simulados .card-simulado.bloqueado{
+    background:#616161 !important;
+    opacity:0.92;
+}
+
+#simulados .card-simulado.bloqueado:hover{
+    background:#555 !important;
+}
+
+
+/* ==========================
+   PROVAS ANTERIORES POR CARGO
+   Clique no cargo para abrir somente as provas dele
+========================== */
+.botao-cargo-provas{
+    width:100%;
+    margin:0 !important;
+    text-align:left;
+    color:#333 !important;
+    cursor:pointer;
+    align-items:flex-start;
+    transition:0.25s ease;
+}
+
+.botao-cargo-provas:hover{
+    transform:translateY(-3px);
+    background:linear-gradient(135deg,#dff1ff,#fff8d8) !important;
+    box-shadow:0 10px 24px rgba(30,136,229,0.18);
+}
+
+.botao-cargo-provas.selecionado{
+    outline:3px solid rgba(30,136,229,0.35);
+    background:linear-gradient(135deg,#d6ecff,#fff4bf) !important;
+    box-shadow:0 12px 28px rgba(13,71,161,0.22);
+}
+
+.provas-resumo-card em{
+    display:inline-block;
+    margin-top:6px;
+    color:#1565c0;
+    font-style:normal;
+    font-weight:800;
+    font-size:13px;
+    background:rgba(227,242,253,0.9);
+    padding:7px 10px;
+    border-radius:999px;
+}
+
+.provas-orientacao-cargo{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    margin:8px 0 24px 0;
+    padding:16px 18px;
+    border-radius:16px;
+    background:rgba(255,255,255,0.88);
+    border:1px dashed rgba(30,136,229,0.45);
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+}
+
+.provas-orientacao-cargo strong{
+    color:#0d47a1;
+    font-size:17px;
+}
+
+.provas-orientacao-cargo span{
+    color:#444;
+    line-height:1.5;
+}
+
+.grupo-provas-oculto{
+    display:none !important;
+}
+
+.acoes-cabecalho-provas{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:10px;
+}
+
+.btn-voltar-cargos-provas{
+    background:#1e88e5 !important;
+    color:white !important;
+    padding:9px 13px !important;
+    margin:0 !important;
+    border-radius:999px !important;
+    font-size:13px;
+    font-weight:800;
+}
+
+.btn-voltar-cargos-provas:hover{
+    background:#1565c0 !important;
+}
+
+@media(max-width:768px){
+    .acoes-cabecalho-provas{
+        align-items:flex-start;
+        width:100%;
+    }
+
+    .btn-voltar-cargos-provas{
+        width:100%;
     }
 }
