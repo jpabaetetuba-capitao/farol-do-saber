@@ -793,6 +793,20 @@ const bancoQuestoes = {
 
     citologia,
 
+    microbiologia,
+
+    botanica,
+
+    zoologia,
+
+    evolucao,
+
+    genetica,
+
+    hereditariedade,
+
+    biotecnologia,
+
     ecologia,
 
     terraEUniverso,
@@ -2425,6 +2439,34 @@ const mapasMentaisPorAssunto = {
     "citologia": {
         "titulo": "🧬 Citologia",
         "imagem": "imagens/mapas/Citologia.png"
+    },
+    "microbiologia": {
+        "titulo": "🦠 Microbiologia",
+        "imagem": "imagens/mapas/Microbiologia.png"
+    },
+    "botanica": {
+        "titulo": "🌿 Botânica",
+        "imagem": "imagens/mapas/Botanica.png"
+    },
+    "zoologia": {
+        "titulo": "🐾 Zoologia",
+        "imagem": "imagens/mapas/Zoologia.png"
+    },
+    "evolucao": {
+        "titulo": "🧬 Evolução",
+        "imagem": "imagens/mapas/Evolucao.png"
+    },
+    "genetica": {
+        "titulo": "🧬 Genética",
+        "imagem": "imagens/mapas/Genetica.png"
+    },
+    "hereditariedade": {
+        "titulo": "👨‍👩‍👧‍👦 Hereditariedade",
+        "imagem": "imagens/mapas/Hereditariedade.png"
+    },
+    "biotecnologia": {
+        "titulo": "🧬 Biotecnologia",
+        "imagem": "imagens/mapas/Biotecnologia.png"
     },
     "ecologia": {
         "titulo": "🌿 Ecologia",
@@ -5324,6 +5366,76 @@ case "citologia":
 
     break;
 
+case "microbiologia":
+
+    titulo.innerHTML =
+        "🦠 Microbiologia";
+
+    imagem.src =
+        "imagens/mapas/Microbiologia.png";
+
+    break;
+
+case "botanica":
+
+    titulo.innerHTML =
+        "🌿 Botânica";
+
+    imagem.src =
+        "imagens/mapas/Botanica.png";
+
+    break;
+
+case "zoologia":
+
+    titulo.innerHTML =
+        "🐾 Zoologia";
+
+    imagem.src =
+        "imagens/mapas/Zoologia.png";
+
+    break;
+
+case "evolucao":
+
+    titulo.innerHTML =
+        "🧬 Evolução";
+
+    imagem.src =
+        "imagens/mapas/Evolucao.png";
+
+    break;
+
+case "genetica":
+
+    titulo.innerHTML =
+        "🧬 Genética";
+
+    imagem.src =
+        "imagens/mapas/Genetica.png";
+
+    break;
+
+case "hereditariedade":
+
+    titulo.innerHTML =
+        "👨‍👩‍👧‍👦 Hereditariedade";
+
+    imagem.src =
+        "imagens/mapas/Hereditariedade.png";
+
+    break;
+
+case "biotecnologia":
+
+    titulo.innerHTML =
+        "🧬 Biotecnologia";
+
+    imagem.src =
+        "imagens/mapas/Biotecnologia.png";
+
+    break;
+
 case "ecologia":
 
     titulo.innerHTML =
@@ -5485,6 +5597,83 @@ if(assuntoAtual === "citologia"){
     abrirTeoria(
         citologiaTeoria,
         "🧬 Citologia"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "microbiologia"){
+
+    abrirTeoria(
+        microbiologiaTeoria,
+        "🦠 Microbiologia"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "botanica"){
+
+    abrirTeoria(
+        botanicaTeoria,
+        "🌿 Botânica"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "zoologia"){
+
+    abrirTeoria(
+        zoologiaTeoria,
+        "🐾 Zoologia"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "evolucao"){
+
+    abrirTeoria(
+        evolucaoTeoria,
+        "🧬 Evolução"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "genetica"){
+
+    abrirTeoria(
+        geneticaTeoria,
+        "🧬 Genética"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "hereditariedade"){
+
+    abrirTeoria(
+        hereditariedadeTeoria,
+        "👨‍👩‍👧‍👦 Hereditariedade"
+    );
+
+    return;
+
+}
+
+if(assuntoAtual === "biotecnologia"){
+
+    abrirTeoria(
+        biotecnologiaTeoria,
+        "🧬 Biotecnologia"
     );
 
     return;
