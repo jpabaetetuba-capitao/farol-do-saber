@@ -6857,12 +6857,50 @@ if(campoAvatarAluno){
 
 const campoTituloAluno = document.getElementById("tituloAluno");
 if(campoTituloAluno){
-    campoTituloAluno.textContent = lojaFarol.tituloAtual || "Sem título especial";
+    const linhaTituloAluno = campoTituloAluno.closest("p");
+
+    if(lojaFarol.tituloAtual){
+        campoTituloAluno.textContent = lojaFarol.tituloAtual;
+
+        if(linhaTituloAluno){
+            linhaTituloAluno.style.display = "";
+        }
+    }
+    else if(linhaTituloAluno){
+        linhaTituloAluno.style.display = "none";
+    }
 }
 
 const campoMedalhaEspecial = document.getElementById("medalhaEspecialAluno");
 if(campoMedalhaEspecial){
     campoMedalhaEspecial.textContent = lojaFarol.medalhaEstudanteAtivo ? "🏅 Estudante Ativo" : "Nenhuma medalha especial";
+}
+
+const nivelLuzAtual = obterNivelLuzFarol(pontosLuz);
+const cardNivelLuzAluno = document.getElementById("cardNivelLuzAluno");
+const campoNivelLuzAluno = document.getElementById("nivelLuzAluno");
+const campoFaltamNivelAluno = document.getElementById("faltamNivelAluno");
+const barraNivelAluno = document.getElementById("barraNivelAluno");
+const textoProgressoNivelAluno = document.getElementById("textoProgressoNivelAluno");
+
+if(cardNivelLuzAluno){
+    cardNivelLuzAluno.className = "nivel-luz-painel " + nivelLuzAtual.classe;
+}
+
+if(campoNivelLuzAluno){
+    campoNivelLuzAluno.textContent = nivelLuzAtual.icone + " " + nivelLuzAtual.nome;
+}
+
+if(campoFaltamNivelAluno){
+    campoFaltamNivelAluno.textContent = nivelLuzAtual.textoFalta;
+}
+
+if(barraNivelAluno){
+    barraNivelAluno.style.width = nivelLuzAtual.percentual + "%";
+}
+
+if(textoProgressoNivelAluno){
+    textoProgressoNivelAluno.textContent = nivelLuzAtual.percentual + "% do caminho deste nível";
 }
 
 atualizarMissaoDiaria();
@@ -9815,6 +9853,103 @@ async function salvarRankingFirebase(){
     }
 }
 
+function obterNiveisLuzFarol(){
+
+    return [
+        {
+            nivel: 1,
+            minimo: 0,
+            icone: "🌱",
+            nome: "Nível 1 - Iniciante",
+            classe: "nivel-luz-1"
+        },
+        {
+            nivel: 2,
+            minimo: 500,
+            icone: "🎖️",
+            nome: "Nível 2 - Cadete",
+            classe: "nivel-luz-2"
+        },
+        {
+            nivel: 3,
+            minimo: 1500,
+            icone: "🧭",
+            nome: "Nível 3 - Aspirante",
+            classe: "nivel-luz-3"
+        },
+        {
+            nivel: 4,
+            minimo: 3000,
+            icone: "⭐",
+            nome: "Nível 4 - Oficial",
+            classe: "nivel-luz-4"
+        },
+        {
+            nivel: 5,
+            minimo: 5000,
+            icone: "⚓",
+            nome: "Nível 5 - Imediato",
+            classe: "nivel-luz-5"
+        },
+        {
+            nivel: 6,
+            minimo: 7500,
+            icone: "👨‍✈️",
+            nome: "Nível 6 - Comandante",
+            classe: "nivel-luz-6"
+        }
+    ];
+
+}
+
+function obterNivelLuzFarol(pontos){
+
+    const total = Number(pontos) || 0;
+    const niveis = obterNiveisLuzFarol();
+
+    let atual = niveis[0];
+    let proximo = null;
+
+    for(let i = 0; i < niveis.length; i++){
+        if(total >= niveis[i].minimo){
+            atual = niveis[i];
+            proximo = niveis[i + 1] || null;
+        }
+    }
+
+    if(!proximo){
+        return {
+            ...atual,
+            proximo: null,
+            faltam: 0,
+            percentual: 100,
+            textoFalta: "Nível máximo alcançado no Farol do Saber.",
+            faixa: `${atual.minimo}+ Pontos de Luz`
+        };
+    }
+
+    const pontosNoNivel = Math.max(0, total - atual.minimo);
+    const pontosNecessarios = proximo.minimo - atual.minimo;
+    const faltam = Math.max(0, proximo.minimo - total);
+    const percentual = pontosNecessarios > 0
+        ? Math.min(100, Math.round((pontosNoNivel / pontosNecessarios) * 100))
+        : 100;
+
+    return {
+        ...atual,
+        proximo: proximo,
+        faltam: faltam,
+        percentual: percentual,
+        textoFalta: `Faltam ${faltam} Pontos de Luz para ${proximo.nome}.`,
+        faixa: `${atual.minimo} a ${proximo.minimo - 1} Pontos de Luz`
+    };
+
+}
+
+function obterPatenteVisualRankingFarol(pontos){
+    return obterNivelLuzFarol(pontos);
+}
+
 async function carregarRankingPontos(){
 
     const area = document.getElementById("rankingPontos");
@@ -9838,27 +9973,56 @@ async function carregarRankingPontos(){
             posicao++;
 
             const nome = primeiroNomeSeguro(dados.nome || "Aluno");
-            const pontos = dados.pontosLuz || 0;
+            const pontos = Number(dados.pontosLuz) || 0;
             const avatar = dados.avatarAtual || "👤";
-            const titulo = dados.tituloAtual ? ` — ${escaparHTML(dados.tituloAtual)}` : "";
-            const medalha = dados.medalhaEstudanteAtivo ? " 🏅" : "";
+            const nomeAvatar = dados.nomeAvatarAtual || "Avatar";
+            const tituloAtual = dados.tituloAtual
+                ? escaparHTML(dados.tituloAtual)
+                : "";
+            const htmlTituloRanking = tituloAtual
+                ? `<div class="ranking-titulo">🚩 ${tituloAtual}</div>`
+                : "";
+            const medalhaEspecial = dados.medalhaEstudanteAtivo ? " 🏅" : "";
             const medalhasRanking = htmlMedalhasRankingFarol(dados);
+            const nivelLuz = obterNivelLuzFarol(pontos);
+            const souEu = auth.currentUser && doc.id === auth.currentUser.uid;
 
-            if(auth.currentUser && doc.id === auth.currentUser.uid){
+            if(souEu){
                 posicaoRankingUsuario = posicao + "º";
             }
 
             html += `
-                <div class="linha-ranking">
-                    <div class="ranking-identidade">
-                        <strong>${posicao}º</strong>
-                        ${montarAvatarHTML(avatar, dados.nomeAvatarAtual || "Avatar", "avatar-ranking")}
-                        <div class="ranking-nome-medalhas">
-                            <span>${nome}${titulo}${medalha}</span>
-                            ${medalhasRanking}
-                        </div>
+                <div class="linha-ranking ranking-card-visual ${souEu ? "ranking-eu" : ""}">
+                    <div class="ranking-posicao">
+                        ${posicao}º
                     </div>
-                    <span class="ranking-pontos">${pontos} ⭐</span>
+
+                    <div class="ranking-avatar-box">
+                        ${montarAvatarHTML(
+                            avatar,
+                            nomeAvatar,
+                            "avatar-ranking"
+                        )}
+                    </div>
+
+                    <div class="ranking-info">
+                        <div class="ranking-nome">
+                            ${nome}${medalhaEspecial}
+                        </div>
+
+                        ${htmlTituloRanking}
+
+                        <div class="ranking-nivel-luz ${nivelLuz.classe}">
+                            ${nivelLuz.icone} ${nivelLuz.nome}
+                        </div>
+
+                        ${medalhasRanking}
+                    </div>
+
+                    <div class="ranking-pontos-box">
+                        <strong>${pontos}</strong>
+                        <span>⭐</span>
+                    </div>
                 </div>
             `;
         });
@@ -10491,8 +10655,29 @@ const recompensasLojaFarol = [
         tipo: "titulo",
         icone: "🎖",
         nome: "Título Guardião do Farol",
+        tituloAplicado: "Guardião do Farol",
         custo: 800,
         descricao: "Título especial exibido no perfil, ranking e compartilhamento."
+    },
+    {
+        id: "titulo_mestre_questoes",
+        categoria: "titulos_medalhas",
+        tipo: "titulo",
+        icone: "🧠",
+        nome: "Título Mestre das Questões",
+        tituloAplicado: "Mestre das Questões",
+        custo: 1200,
+        descricao: "Título especial para alunos que gostam de mostrar domínio nas questões."
+    },
+    {
+        id: "titulo_faroleiro_persistente",
+        categoria: "titulos_medalhas",
+        tipo: "titulo",
+        icone: "🗼",
+        nome: "Título Faroleiro Persistente",
+        tituloAplicado: "Faroleiro Persistente",
+        custo: 1500,
+        descricao: "Título especial para quem mantém constância na jornada de estudos."
     },
     {
         id: "card_premium_progresso",
@@ -10645,6 +10830,22 @@ function obterRecompensaLoja(id){
     return recompensasLojaFarol.find(item => item.id === id);
 }
 
+function obterTituloAplicadoLoja(item){
+
+    if(!item){
+        return "";
+    }
+
+    if(item.tituloAplicado){
+        return item.tituloAplicado;
+    }
+
+    return String(item.nome || "")
+        .replace(/^Título\s+/i, "")
+        .trim();
+
+}
+
 function gerarCodigoCertificado(){
     const ano = new Date().getFullYear();
     const numero = Math.floor(100000 + Math.random() * 900000);
@@ -10696,7 +10897,7 @@ function comprarRecompensaLoja(id){
     }
 
     if(item.tipo === "titulo"){
-        lojaFarol.tituloAtual = "Guardião do Farol";
+        lojaFarol.tituloAtual = obterTituloAplicadoLoja(item);
     }
 
     if(item.tipo === "avatar"){
@@ -10793,7 +10994,7 @@ function recompensaEmUsoLoja(item){
     }
 
     if(item.tipo === "titulo"){
-        return lojaFarol.tituloAtual === "Guardião do Farol";
+        return lojaFarol.tituloAtual === obterTituloAplicadoLoja(item);
     }
 
     if(item.tipo === "medalha"){
@@ -10944,12 +11145,14 @@ function usarTituloLoja(id){
     }
 
     lojaFarol.tituloAtual =
-        "Guardião do Farol";
+        obterTituloAplicadoLoja(item);
 
     salvarDados();
     atualizarLojaFarol();
     atualizarDashboard();
     atualizarPainelEstudos();
+    salvarRankingFirebase();
+    salvarLojaFirebase();
 
     mostrarToast("🎖 Título ativado!");
 
