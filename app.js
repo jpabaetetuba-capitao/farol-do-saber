@@ -18949,7 +18949,7 @@ function voltarCargosProvasFarol(){
 
 /* ==========================================================
    PATCH FAROL DO SABER — PROFESSOR DE GEOGRAFIA
-   Etapa 4: Tópicos 1, 2, 3 e 12 liberados
+   Etapa 3: Tópicos 1, 2 e 3 liberados
 ========================================================== */
 (function(){
     const topicosGeografiaFarol = [
@@ -19145,6 +19145,50 @@ function voltarCargosProvasFarol(){
         }
         iniciarSimuladoPersonalizado(banco, 30, "geografia");
     };
+
+
+    window.obterBancoGeografiaFarol = bancosGeografiaFarol;
+
+    window.iniciarSimuladoCargoGeografiaFarol = function(){
+        const banco = [
+            ...obterBancoDisciplinaSimuladoFarol("portugues"),
+            ...obterBancoDisciplinaSimuladoFarol("informatica"),
+            ...obterBancoDisciplinaSimuladoFarol("didatica"),
+            ...obterBancoDisciplinaSimuladoFarol("geografia")
+        ];
+
+        iniciarSimuladoBancoFarol(
+            banco,
+            50,
+            "cargo:professorGeografia"
+        );
+    };
+
+    if(typeof disciplinasJogoFarol !== "undefined"){
+        disciplinasJogoFarol.geografia = {
+            nome:"🌍 Professor de Geografia",
+            assuntos: topicosGeografiaFarol
+                .filter(item => item.liberado && item.bancoNome)
+                .map(item => item.chave)
+        };
+    }
+
+    if(typeof gruposDuelo !== "undefined" && Array.isArray(gruposDuelo)){
+        const grupoGeografiaExiste = gruposDuelo.some(grupo => grupo.disciplina === "geografia");
+
+        if(!grupoGeografiaExiste){
+            gruposDuelo.push({
+                disciplina:"geografia",
+                nome:"🌍 Geografia",
+                assuntos: topicosGeografiaFarol
+                    .filter(item => item.liberado && item.bancoNome)
+                    .map(item => ({
+                        chave:item.chave,
+                        nome:item.nome
+                    }))
+            });
+        }
+    }
 
     if(typeof renderizarTelaPreparacoes === "function"){
         renderizarTelaPreparacoes = function(){
