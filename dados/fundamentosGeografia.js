@@ -1,7 +1,7 @@
 // Questões — Fundamentos da Geografia
 // Farol do Saber
-// 50 questões inéditas, contextualizadas e revisadas no estilo de bancas como Instituto Ágata.
-// Questões originais para estudo, sem cópia literal de provas anteriores.
+// 50 questões inéditas, contextualizadas e revisadas com distratores fortes.
+// Respostas corretas rebalanceadas entre A, B, C, D e E.
 
 const fundamentosGeografia = [
     {
@@ -9,12 +9,12 @@ const fundamentosGeografia = [
         "pergunta": "Assinale a alternativa que melhor identifica o objeto central da Geografia no contexto apresentado.",
         "alternativas": [
             "A memorização de capitais e rios, sem análise dos processos sociais.",
-            "A organização do espaço geográfico produzida pela relação entre sociedade, natureza, técnica e poder.",
             "A descrição isolada de elementos naturais sem considerar trabalho e economia.",
+            "A organização do espaço geográfico produzida pela relação entre sociedade, natureza, técnica e poder.",
             "O estudo exclusivo dos mapas físicos e das coordenadas geográficas.",
             "A classificação de países apenas pela posição latitudinal."
         ],
-        "correta": 1,
+        "correta": 2,
         "feedbackAcerto": "Correto. O espaço geográfico é produzido historicamente pela interação entre sociedade, natureza, técnica, economia e relações de poder.",
         "feedbackErro": "A alternativa correta é: A organização do espaço geográfico produzida pela relação entre sociedade, natureza, técnica e poder.. O espaço geográfico é produzido historicamente pela interação entre sociedade, natureza, técnica, economia e relações de poder.",
         "dicaBanca": "Quando o texto une obras, circulação, economia e sociedade, pense em espaço geográfico."
@@ -24,12 +24,12 @@ const fundamentosGeografia = [
         "pergunta": "Assinale a alternativa que indica um fator central para a ampliação dos fluxos comerciais no período atual.",
         "alternativas": [
             "O isolamento das economias nacionais e a redução dos sistemas de transporte.",
-            "A maior conectividade entre os lugares por redes técnicas e informacionais.",
             "O desaparecimento das empresas transnacionais da produção mundial.",
             "A eliminação completa das desigualdades entre os territórios.",
-            "A substituição da comunicação digital por meios exclusivamente artesanais."
+            "A substituição da comunicação digital por meios exclusivamente artesanais.",
+            "A maior conectividade entre os lugares por redes técnicas e informacionais."
         ],
-        "correta": 1,
+        "correta": 4,
         "feedbackAcerto": "Correto. A globalização intensifica fluxos por redes de transporte, comunicação, informação e finanças, mas de modo desigual.",
         "feedbackErro": "A alternativa correta é: A maior conectividade entre os lugares por redes técnicas e informacionais.. A globalização intensifica fluxos por redes de transporte, comunicação, informação e finanças, mas de modo desigual.",
         "dicaBanca": "Redes, fluxos e conectividade são pistas fortes de globalização."
@@ -53,13 +53,13 @@ const fundamentosGeografia = [
         "texto": "No século XIX, a Geografia passou a organizar métodos, conceitos e descrições sobre a superfície terrestre, os povos e suas relações com o meio, consolidando-se como campo científico moderno.",
         "pergunta": "O trecho refere-se principalmente:",
         "alternativas": [
-            "à sistematização da ciência geográfica no século XIX.",
             "ao surgimento da Geografia Crítica brasileira no fim do século XX.",
             "ao abandono definitivo da relação sociedade-natureza.",
             "à substituição da Geografia por estudos apenas matemáticos.",
+            "à sistematização da ciência geográfica no século XIX.",
             "ao fim da cartografia como instrumento de análise espacial."
         ],
-        "correta": 0,
+        "correta": 3,
         "feedbackAcerto": "Correto. A sistematização da Geografia moderna está ligada ao século XIX e à consolidação acadêmica da disciplina.",
         "feedbackErro": "A alternativa correta é: à sistematização da ciência geográfica no século XIX.. A sistematização da Geografia moderna está ligada ao século XIX e à consolidação acadêmica da disciplina.",
         "dicaBanca": "Sistematização + século XIX = formação da Geografia moderna."
@@ -68,13 +68,13 @@ const fundamentosGeografia = [
         "texto": "Uma interpretação antiga afirmava que povos de áreas frias, quentes ou temperadas teriam comportamentos sociais definidos quase exclusivamente pelas condições naturais, reduzindo história e cultura ao clima.",
         "pergunta": "A corrente geográfica criticada no texto é o:",
         "alternativas": [
-            "possibilismo geográfico.",
             "determinismo geográfico.",
+            "possibilismo geográfico.",
             "método humanista.",
             "paradigma crítico marxista.",
             "regionalismo cultural contemporâneo."
         ],
-        "correta": 1,
+        "correta": 0,
         "feedbackAcerto": "Correto. O determinismo geográfico atribui ao meio natural influência rígida e decisiva sobre as sociedades.",
         "feedbackErro": "A alternativa correta é: determinismo geográfico.. O determinismo geográfico atribui ao meio natural influência rígida e decisiva sobre as sociedades.",
         "dicaBanca": "Determinismo = natureza determinando a sociedade."
@@ -83,13 +83,13 @@ const fundamentosGeografia = [
         "texto": "Uma mesma planície fluvial pode abrigar agricultura familiar, polo logístico, área de proteção ou turismo. O ambiente oferece condições, mas a organização social e técnica define usos diferentes.",
         "pergunta": "A interpretação apresentada aproxima-se do:",
         "alternativas": [
-            "possibilismo geográfico, por reconhecer possibilidades do meio e escolhas sociais.",
             "determinismo geográfico, por afirmar destino natural único.",
             "naturalismo absoluto, por negar ação humana.",
+            "possibilismo geográfico, por reconhecer possibilidades do meio e escolhas sociais.",
             "cartografismo puro, por reduzir o espaço a coordenadas.",
             "isolacionismo regional, por negar relações entre lugares."
         ],
-        "correta": 0,
+        "correta": 2,
         "feedbackAcerto": "Correto. O possibilismo reconhece influência do meio, mas valoriza as escolhas sociais, culturais, econômicas e técnicas.",
         "feedbackErro": "A alternativa correta é: possibilismo geográfico, por reconhecer possibilidades do meio e escolhas sociais.. O possibilismo reconhece influência do meio, mas valoriza as escolhas sociais, culturais, econômicas e técnicas.",
         "dicaBanca": "Possibilismo = possibilidades do meio + ação humana."
@@ -99,12 +99,12 @@ const fundamentosGeografia = [
         "pergunta": "A categoria geográfica central nessa análise é:",
         "alternativas": [
             "território.",
-            "paisagem.",
             "longitude.",
             "escala numérica.",
-            "projeção cartográfica."
+            "projeção cartográfica.",
+            "paisagem."
         ],
-        "correta": 1,
+        "correta": 4,
         "feedbackAcerto": "Correto. Paisagem é o conjunto de formas visíveis e perceptíveis, naturais e humanas, carregadas de marcas históricas.",
         "feedbackErro": "A alternativa correta é: paisagem.. Paisagem é o conjunto de formas visíveis e perceptíveis, naturais e humanas, carregadas de marcas históricas.",
         "dicaBanca": "O que se vê e se percebe no espaço indica paisagem."
@@ -114,12 +114,12 @@ const fundamentosGeografia = [
         "pergunta": "A situação mostra que a paisagem:",
         "alternativas": [
             "é neutra, imóvel e sem relação com a história.",
-            "expressa apenas elementos naturais.",
             "pode acumular marcas de diferentes tempos históricos.",
+            "expressa apenas elementos naturais.",
             "corresponde obrigatoriamente a um território estatal.",
             "é sinônimo de região administrativa."
         ],
-        "correta": 2,
+        "correta": 1,
         "feedbackAcerto": "Correto. A paisagem registra permanências, mudanças e temporalidades diferentes no mesmo espaço.",
         "feedbackErro": "A alternativa correta é: pode acumular marcas de diferentes tempos históricos.. A paisagem registra permanências, mudanças e temporalidades diferentes no mesmo espaço.",
         "dicaBanca": "Paisagem revela marcas do tempo."
@@ -130,11 +130,11 @@ const fundamentosGeografia = [
         "alternativas": [
             "exclusivamente natural, porque há manguezais.",
             "exclusivamente cultural, porque há casas.",
-            "conjunto de elementos naturais e humanos articulados historicamente.",
             "território sem relação com percepção visual.",
+            "conjunto de elementos naturais e humanos articulados historicamente.",
             "região homogênea definida apenas pelo clima."
         ],
-        "correta": 2,
+        "correta": 3,
         "feedbackAcerto": "Correto. Paisagens reais geralmente combinam elementos naturais e culturais em uma totalidade dinâmica.",
         "feedbackErro": "A alternativa correta é: conjunto de elementos naturais e humanos articulados historicamente.. Paisagens reais geralmente combinam elementos naturais e culturais em uma totalidade dinâmica.",
         "dicaBanca": "Cuidado com alternativas que separam rigidamente natureza e sociedade."
@@ -158,13 +158,13 @@ const fundamentosGeografia = [
         "texto": "Uma área de floresta passa a ser disputada por uma comunidade tradicional, uma empresa mineradora e o Estado. Cada grupo apresenta projetos distintos de uso, controle e reconhecimento da área.",
         "pergunta": "A categoria geográfica mais adequada para analisar a disputa descrita é:",
         "alternativas": [
-            "território.",
             "paisagem apenas visual.",
             "longitude.",
+            "território.",
             "escala gráfica.",
             "rotação terrestre."
         ],
-        "correta": 0,
+        "correta": 2,
         "feedbackAcerto": "Correto. Território envolve apropriação, controle, poder, disputa e uso do espaço.",
         "feedbackErro": "A alternativa correta é: território.. Território envolve apropriação, controle, poder, disputa e uso do espaço.",
         "dicaBanca": "Poder, controle e disputa indicam território."
@@ -173,13 +173,13 @@ const fundamentosGeografia = [
         "texto": "Em certos bairros, festas locais, memórias familiares, relações de vizinhança e trajetórias de vida fazem com que os moradores atribuam sentido e pertencimento ao espaço.",
         "pergunta": "O conceito geográfico evidenciado é:",
         "alternativas": [
-            "lugar.",
             "território exclusivamente militar.",
             "região climática.",
             "coordenada geográfica.",
-            "projeção equivalente."
+            "projeção equivalente.",
+            "lugar."
         ],
-        "correta": 0,
+        "correta": 4,
         "feedbackAcerto": "Correto. Lugar é o espaço vivido, carregado de identidade, experiência, memória e pertencimento.",
         "feedbackErro": "A alternativa correta é: lugar.. Lugar é o espaço vivido, carregado de identidade, experiência, memória e pertencimento.",
         "dicaBanca": "Lugar = vivência e pertencimento."
@@ -188,13 +188,13 @@ const fundamentosGeografia = [
         "texto": "Para planejar políticas públicas, um governo divide o território em áreas com características semelhantes de economia, clima, rede urbana e indicadores sociais. A divisão depende dos critérios selecionados.",
         "pergunta": "O processo descrito corresponde à:",
         "alternativas": [
-            "regionalização.",
             "desterritorialização absoluta.",
+            "regionalização.",
             "paisagem sensorial.",
             "determinação climática.",
             "orientação por bússola."
         ],
-        "correta": 0,
+        "correta": 1,
         "feedbackAcerto": "Correto. Regionalização é a divisão do espaço em regiões conforme critérios e objetivos de análise ou gestão.",
         "feedbackErro": "A alternativa correta é: regionalização.. Regionalização é a divisão do espaço em regiões conforme critérios e objetivos de análise ou gestão.",
         "dicaBanca": "Divisão por critérios = regionalização."
@@ -205,11 +205,11 @@ const fundamentosGeografia = [
         "alternativas": [
             "é sempre definida por um único critério natural.",
             "não depende de objetivos de análise ou planejamento.",
-            "pode variar conforme os critérios e objetivos adotados.",
             "é obrigatoriamente igual a um território nacional.",
+            "pode variar conforme os critérios e objetivos adotados.",
             "exclui qualquer relação com economia ou cultura."
         ],
-        "correta": 2,
+        "correta": 3,
         "feedbackAcerto": "Correto. As regiões são recortes construídos com base em critérios naturais, econômicos, culturais, políticos ou administrativos.",
         "feedbackErro": "A alternativa correta é: pode variar conforme os critérios e objetivos adotados.. As regiões são recortes construídos com base em critérios naturais, econômicos, culturais, políticos ou administrativos.",
         "dicaBanca": "Região é recorte analítico, não uma verdade única e imutável."
@@ -234,12 +234,12 @@ const fundamentosGeografia = [
         "pergunta": "Assinale a alternativa compatível com a Geografia Crítica.",
         "alternativas": [
             "Defesa da memorização descontextualizada de capitais.",
-            "Análise das relações sociais, econômicas e políticas na produção do espaço.",
             "Negação de conflitos e desigualdades na organização territorial.",
+            "Análise das relações sociais, econômicas e políticas na produção do espaço.",
             "Afirmação de que o clima determina sozinho todos os processos sociais.",
             "Redução da Geografia ao desenho de mapas sem interpretação."
         ],
-        "correta": 1,
+        "correta": 2,
         "feedbackAcerto": "Correto. A Geografia Crítica interpreta o espaço como produção social marcada por conflitos, desigualdades e relações de poder.",
         "feedbackErro": "A alternativa correta é: Análise das relações sociais, econômicas e políticas na produção do espaço.. A Geografia Crítica interpreta o espaço como produção social marcada por conflitos, desigualdades e relações de poder.",
         "dicaBanca": "Crítica = desigualdade, poder e produção social do espaço."
@@ -248,13 +248,13 @@ const fundamentosGeografia = [
         "texto": "Em uma atividade de campo, estudantes relatam medo, pertencimento, memória e afetos ligados ao caminho entre casa e escola. O professor usa essas experiências para discutir significados do espaço.",
         "pergunta": "A perspectiva geográfica predominante nessa abordagem é a:",
         "alternativas": [
-            "humanista.",
             "determinista.",
             "quantitativa estrita.",
             "exclusivamente geológica.",
-            "fisiográfica clássica."
+            "fisiográfica clássica.",
+            "humanista."
         ],
-        "correta": 0,
+        "correta": 4,
         "feedbackAcerto": "Correto. A Geografia Humanista valoriza experiência, percepção, sentido, subjetividade e lugar.",
         "feedbackErro": "A alternativa correta é: humanista.. A Geografia Humanista valoriza experiência, percepção, sentido, subjetividade e lugar.",
         "dicaBanca": "Humanista = experiência, percepção e lugar."
@@ -263,13 +263,13 @@ const fundamentosGeografia = [
         "texto": "Na segunda metade do século XX, uma vertente passou a empregar modelos matemáticos, estatísticas, análise de localização e padrões espaciais, buscando maior formalização dos estudos geográficos.",
         "pergunta": "Essa vertente é conhecida como Geografia:",
         "alternativas": [
-            "Quantitativa.",
             "Humanista.",
+            "Quantitativa.",
             "Possibilista clássica.",
             "Determinista ambiental.",
             "Anarquista medieval."
         ],
-        "correta": 0,
+        "correta": 1,
         "feedbackAcerto": "Correto. A Geografia Quantitativa valoriza modelos, estatísticas, padrões espaciais e técnicas de mensuração.",
         "feedbackErro": "A alternativa correta é: Quantitativa.. A Geografia Quantitativa valoriza modelos, estatísticas, padrões espaciais e técnicas de mensuração.",
         "dicaBanca": "Números, modelos e estatísticas indicam Geografia Quantitativa."
@@ -278,13 +278,13 @@ const fundamentosGeografia = [
         "texto": "Em muitos manuais antigos, o estudo geográfico era organizado pela descrição de relevo, clima, vegetação, população e economia de países ou regiões, com pouca problematização social.",
         "pergunta": "Essa característica está mais associada à Geografia:",
         "alternativas": [
-            "tradicional ou descritiva.",
             "crítica marxista contemporânea.",
             "humanista fenomenológica.",
             "radical urbana exclusivamente brasileira.",
+            "tradicional ou descritiva.",
             "digital em redes sociais."
         ],
-        "correta": 0,
+        "correta": 3,
         "feedbackAcerto": "Correto. A Geografia tradicional valorizava descrição, classificação e enumeração de elementos naturais e humanos.",
         "feedbackErro": "A alternativa correta é: tradicional ou descritiva.. A Geografia tradicional valorizava descrição, classificação e enumeração de elementos naturais e humanos.",
         "dicaBanca": "Descrição e enumeração sem análise crítica apontam para a Geografia tradicional."
@@ -308,13 +308,13 @@ const fundamentosGeografia = [
         "texto": "Um aplicativo de entrega depende de celulares, antenas, vias, motocicletas, centros comerciais, trabalhadores, algoritmos, consumidores e empresas. O serviço combina infraestrutura e práticas sociais.",
         "pergunta": "Na perspectiva de Milton Santos, essa situação exemplifica:",
         "alternativas": [
-            "a articulação entre sistemas de objetos e sistemas de ações.",
             "a ausência de técnica na vida urbana.",
             "a separação completa entre sociedade e espaço.",
+            "a articulação entre sistemas de objetos e sistemas de ações.",
             "a inexistência de redes no período atual.",
             "a transformação do espaço em fenômeno exclusivamente natural."
         ],
-        "correta": 0,
+        "correta": 2,
         "feedbackAcerto": "Correto. Objetos técnicos e ações sociais se combinam para produzir e organizar o espaço.",
         "feedbackErro": "A alternativa correta é: a articulação entre sistemas de objetos e sistemas de ações.. Objetos técnicos e ações sociais se combinam para produzir e organizar o espaço.",
         "dicaBanca": "Infraestrutura + uso social = objetos e ações."
@@ -325,11 +325,11 @@ const fundamentosGeografia = [
         "alternativas": [
             "é sempre neutra e gera os mesmos efeitos para todos.",
             "não interfere na produção do espaço geográfico.",
-            "organiza o espaço, mas seus efeitos variam conforme interesses, poder e desigualdades.",
             "elimina automaticamente conflitos territoriais.",
-            "atua apenas em paisagens naturais intocadas."
+            "atua apenas em paisagens naturais intocadas.",
+            "organiza o espaço, mas seus efeitos variam conforme interesses, poder e desigualdades."
         ],
-        "correta": 2,
+        "correta": 4,
         "feedbackAcerto": "Correto. A técnica não é neutra; ela integra projetos, interesses e relações de poder.",
         "feedbackErro": "A alternativa correta é: organiza o espaço, mas seus efeitos variam conforme interesses, poder e desigualdades.. A técnica não é neutra; ela integra projetos, interesses e relações de poder.",
         "dicaBanca": "Técnica em Geografia deve ser ligada a poder, uso social e desigualdade."
@@ -338,13 +338,13 @@ const fundamentosGeografia = [
         "texto": "As redes de transporte, energia, internet, bancos e comunicação articulam cidades, regiões e países. Por elas circulam mercadorias, pessoas, capitais, ordens, dados e informações.",
         "pergunta": "O texto descreve principalmente a importância das redes e fluxos na constituição do:",
         "alternativas": [
-            "espaço geográfico contemporâneo.",
             "clima zonal do planeta.",
+            "espaço geográfico contemporâneo.",
             "movimento de translação terrestre.",
             "relevo estrutural antigo.",
             "processo de laterização do solo."
         ],
-        "correta": 0,
+        "correta": 1,
         "feedbackAcerto": "Correto. Redes e fluxos são fundamentais para entender o espaço geográfico contemporâneo e a globalização.",
         "feedbackErro": "A alternativa correta é: espaço geográfico contemporâneo.. Redes e fluxos são fundamentais para entender o espaço geográfico contemporâneo e a globalização.",
         "dicaBanca": "Redes e fluxos são palavras-chave do período atual."
@@ -353,13 +353,13 @@ const fundamentosGeografia = [
         "texto": "A sensação de que lugares distantes estão mais próximos decorre da velocidade dos transportes e comunicações. Entretanto, essa aproximação não significa participação igual na globalização.",
         "pergunta": "A interpretação mais adequada é que a globalização:",
         "alternativas": [
-            "promove compressão relativa do espaço-tempo, mas de modo seletivo e desigual.",
             "impede a conexão entre economias nacionais.",
             "elimina qualquer diferença de infraestrutura entre territórios.",
             "depende apenas de fenômenos climáticos.",
+            "promove compressão relativa do espaço-tempo, mas de modo seletivo e desigual.",
             "substitui a Geografia por memorização cartográfica."
         ],
-        "correta": 0,
+        "correta": 3,
         "feedbackAcerto": "Correto. A globalização acelera fluxos e reduz distâncias relativas, mas de maneira desigual.",
         "feedbackErro": "A alternativa correta é: promove compressão relativa do espaço-tempo, mas de modo seletivo e desigual.. A globalização acelera fluxos e reduz distâncias relativas, mas de maneira desigual.",
         "dicaBanca": "Velocidade não significa igualdade."
@@ -383,13 +383,13 @@ const fundamentosGeografia = [
         "texto": "Uma prefeitura define uma área portuária com regras especiais de circulação, segurança, acesso e uso econômico. Moradores, empresas e Estado disputam limites e impactos.",
         "pergunta": "O conceito mais adequado para analisar esse recorte, considerando poder e controle, é:",
         "alternativas": [
-            "território.",
             "lugar apenas afetivo.",
             "paisagem natural.",
+            "território.",
             "paralelo geográfico.",
             "escala gráfica."
         ],
-        "correta": 0,
+        "correta": 2,
         "feedbackAcerto": "Correto. Território envolve controle, normas, limites, poder e disputa pelo uso do espaço.",
         "feedbackErro": "A alternativa correta é: território.. Território envolve controle, normas, limites, poder e disputa pelo uso do espaço.",
         "dicaBanca": "Regras de acesso e controle indicam território."
@@ -399,12 +399,12 @@ const fundamentosGeografia = [
         "pergunta": "A análise geográfica crítica da situação deve considerar que:",
         "alternativas": [
             "a paisagem mostrada esgota toda a realidade do espaço.",
-            "a paisagem é aparência visível, mas precisa ser relacionada aos processos sociais que a produzem.",
             "a imagem turística prova a ausência de desigualdade.",
             "o espaço turístico é apenas natureza, sem relações econômicas.",
-            "o território não envolve poder nem conflitos."
+            "o território não envolve poder nem conflitos.",
+            "a paisagem é aparência visível, mas precisa ser relacionada aos processos sociais que a produzem."
         ],
-        "correta": 1,
+        "correta": 4,
         "feedbackAcerto": "Correto. A paisagem visível deve ser interpretada junto aos processos sociais, econômicos e territoriais que a produzem.",
         "feedbackErro": "A alternativa correta é: a paisagem é aparência visível, mas precisa ser relacionada aos processos sociais que a produzem.. A paisagem visível deve ser interpretada junto aos processos sociais, econômicos e territoriais que a produzem.",
         "dicaBanca": "Paisagem não é só beleza visual; precisa ser explicada."
@@ -413,13 +413,13 @@ const fundamentosGeografia = [
         "texto": "Uma comunidade ribeirinha reconhece o rio como caminho, fonte de alimento, memória familiar e referência cultural. Para visitantes, o mesmo rio pode aparecer apenas como atrativo turístico.",
         "pergunta": "A diferença de significado atribuída ao rio aproxima-se do conceito de:",
         "alternativas": [
-            "lugar, pois envolve experiência vivida e pertencimento.",
             "rotação, pois depende do movimento da Terra.",
+            "lugar, pois envolve experiência vivida e pertencimento.",
             "relevo, pois explica a altitude do terreno.",
             "escala cartográfica, pois mede distâncias no mapa.",
             "projeção, pois representa a Terra em plano."
         ],
-        "correta": 0,
+        "correta": 1,
         "feedbackAcerto": "Correto. O lugar envolve experiências, memórias, identidades e significados atribuídos ao espaço.",
         "feedbackErro": "A alternativa correta é: lugar, pois envolve experiência vivida e pertencimento.. O lugar envolve experiências, memórias, identidades e significados atribuídos ao espaço.",
         "dicaBanca": "Espaço com significado para as pessoas = lugar."
@@ -428,13 +428,13 @@ const fundamentosGeografia = [
         "texto": "A Amazônia Legal é um recorte usado para planejamento e políticas públicas. Ela não corresponde exatamente a um bioma nem a uma única paisagem; é uma delimitação criada por critérios políticos, econômicos e administrativos.",
         "pergunta": "O exemplo apresentado corresponde a uma:",
         "alternativas": [
-            "regionalização.",
             "paisagem natural homogênea.",
             "coordenada geográfica.",
             "área sem finalidade política.",
+            "regionalização.",
             "fronteira climática universal."
         ],
-        "correta": 0,
+        "correta": 3,
         "feedbackAcerto": "Correto. A Amazônia Legal é uma forma de regionalização definida por critérios de planejamento e política pública.",
         "feedbackErro": "A alternativa correta é: regionalização.. A Amazônia Legal é uma forma de regionalização definida por critérios de planejamento e política pública.",
         "dicaBanca": "Amazônia Legal é exemplo clássico de região criada por critérios políticos."
@@ -443,13 +443,13 @@ const fundamentosGeografia = [
         "texto": "Em Geografia, escala pode indicar relações entre fenômenos locais, regionais, nacionais e globais. Na Cartografia, escala também indica proporção entre distância no mapa e distância real.",
         "pergunta": "Assinale a alternativa correta sobre escala geográfica e escala cartográfica.",
         "alternativas": [
-            "São sempre sinônimos e nunca possuem usos diferentes.",
             "A escala geográfica relaciona níveis de análise; a cartográfica expressa proporção de representação.",
+            "São sempre sinônimos e nunca possuem usos diferentes.",
             "A escala cartográfica trata apenas de identidade e pertencimento.",
             "A escala geográfica é usada somente para medir centímetros em mapas.",
             "Nenhuma escala pode ser usada para interpretar fenômenos espaciais."
         ],
-        "correta": 1,
+        "correta": 0,
         "feedbackAcerto": "Correto. A escala geográfica refere-se aos níveis de análise; a cartográfica, à proporção de representação no mapa.",
         "feedbackErro": "A alternativa correta é: A escala geográfica relaciona níveis de análise; a cartográfica expressa proporção de representação.. A escala geográfica refere-se aos níveis de análise; a cartográfica, à proporção de representação no mapa.",
         "dicaBanca": "Escala geográfica não é a mesma coisa que escala cartográfica."
@@ -459,12 +459,12 @@ const fundamentosGeografia = [
         "pergunta": "A leitura geográfica do fenômeno deve considerar:",
         "alternativas": [
             "a separação absoluta entre sociedade e natureza.",
-            "a interação entre processos naturais e ações sociais na produção do espaço.",
             "apenas a classificação botânica das plantas retiradas.",
+            "a interação entre processos naturais e ações sociais na produção do espaço.",
             "somente a latitude do município.",
             "a inexistência de conflitos no uso do solo."
         ],
-        "correta": 1,
+        "correta": 2,
         "feedbackAcerto": "Correto. A Geografia interpreta a relação sociedade-natureza e seus efeitos na produção do espaço.",
         "feedbackErro": "A alternativa correta é: a interação entre processos naturais e ações sociais na produção do espaço.. A Geografia interpreta a relação sociedade-natureza e seus efeitos na produção do espaço.",
         "dicaBanca": "Problema ambiental em Geografia também é social e territorial."
@@ -473,13 +473,13 @@ const fundamentosGeografia = [
         "texto": "Um enunciado afirma que determinado povo é pobre exclusivamente porque vive em área de clima quente e úmido, desconsiderando colonização, concentração de renda e políticas públicas.",
         "pergunta": "A crítica geográfica mais adequada a esse enunciado é que ele:",
         "alternativas": [
-            "adota visão determinista e simplifica fenômenos sociais complexos.",
             "expressa corretamente a Geografia Crítica contemporânea.",
             "valoriza a multiescalaridade e a história econômica.",
             "reconhece a produção social do espaço.",
-            "aplica corretamente a categoria lugar."
+            "aplica corretamente a categoria lugar.",
+            "adota visão determinista e simplifica fenômenos sociais complexos."
         ],
-        "correta": 0,
+        "correta": 4,
         "feedbackAcerto": "Correto. A explicação reduz a sociedade ao clima, característica do determinismo geográfico.",
         "feedbackErro": "A alternativa correta é: adota visão determinista e simplifica fenômenos sociais complexos.. A explicação reduz a sociedade ao clima, característica do determinismo geográfico.",
         "dicaBanca": "'Exclusivamente pelo clima' é sinal de determinismo."
@@ -503,13 +503,13 @@ const fundamentosGeografia = [
         "texto": "Na história do pensamento geográfico, Friedrich Ratzel ficou associado a formulações que relacionavam Estado, território e expansão, além de ideias vinculadas ao determinismo ambiental.",
         "pergunta": "No estudo das correntes geográficas, Ratzel costuma ser relacionado principalmente ao:",
         "alternativas": [
-            "determinismo geográfico e à noção de território vinculada ao Estado.",
             "humanismo fenomenológico centrado apenas na memória afetiva.",
             "possibilismo francês de Vidal de La Blache.",
             "método exclusivamente estatístico da Nova Geografia.",
+            "determinismo geográfico e à noção de território vinculada ao Estado.",
             "abandono completo do conceito de território."
         ],
-        "correta": 0,
+        "correta": 3,
         "feedbackAcerto": "Correto. Ratzel é frequentemente associado ao determinismo e à relação entre Estado e território.",
         "feedbackErro": "A alternativa correta é: determinismo geográfico e à noção de território vinculada ao Estado.. Ratzel é frequentemente associado ao determinismo e à relação entre Estado e território.",
         "dicaBanca": "Ratzel = determinismo/Estado/território; Vidal = possibilismo."
@@ -533,13 +533,13 @@ const fundamentosGeografia = [
         "texto": "A ideia de 'gênero de vida' procura compreender formas pelas quais grupos humanos organizam práticas, técnicas e hábitos em interação com as condições do meio.",
         "pergunta": "No pensamento geográfico clássico, essa ideia aproxima-se mais da tradição:",
         "alternativas": [
-            "possibilista.",
             "determinista absoluta.",
             "cartográfica matemática pura.",
+            "possibilista.",
             "geológica estrutural.",
             "climática zonal sem sociedade."
         ],
-        "correta": 0,
+        "correta": 2,
         "feedbackAcerto": "Correto. Gênero de vida relaciona-se ao possibilismo e à interação entre grupos humanos e meio.",
         "feedbackErro": "A alternativa correta é: possibilista.. Gênero de vida relaciona-se ao possibilismo e à interação entre grupos humanos e meio.",
         "dicaBanca": "Gênero de vida é pista para Vidal de La Blache e possibilismo."
@@ -548,13 +548,13 @@ const fundamentosGeografia = [
         "texto": "Na Geografia Crítica, o espaço não é visto apenas como palco onde a sociedade atua, mas como produto das relações sociais e também como condição que influencia novas ações.",
         "pergunta": "A afirmação significa que o espaço geográfico:",
         "alternativas": [
-            "é produzido socialmente e participa da reprodução das relações sociais.",
             "existe sem história e sem trabalho humano.",
             "é apenas uma paisagem natural contemplativa.",
             "não possui relação com economia ou política.",
-            "pode ser explicado somente por latitude e longitude."
+            "pode ser explicado somente por latitude e longitude.",
+            "é produzido socialmente e participa da reprodução das relações sociais."
         ],
-        "correta": 0,
+        "correta": 4,
         "feedbackAcerto": "Correto. O espaço é produto e condição das relações sociais, econômicas e políticas.",
         "feedbackErro": "A alternativa correta é: é produzido socialmente e participa da reprodução das relações sociais.. O espaço é produto e condição das relações sociais, econômicas e políticas.",
         "dicaBanca": "Produto e condição do espaço é formulação típica da análise crítica."
@@ -578,13 +578,13 @@ const fundamentosGeografia = [
         "texto": "Uma moradora diz que uma praça faz parte de sua história; para um investidor, a mesma praça é área valorizável para empreendimento imobiliário.",
         "pergunta": "A comparação evidencia principalmente a diferença entre:",
         "alternativas": [
-            "lugar vivido e uso econômico do espaço.",
             "latitude e longitude.",
             "rotação e translação.",
             "clima e tempo atmosférico.",
+            "lugar vivido e uso econômico do espaço.",
             "projeção cilíndrica e cônica."
         ],
-        "correta": 0,
+        "correta": 3,
         "feedbackAcerto": "Correto. A praça possui sentido de lugar para a moradora e valor econômico para outro agente social.",
         "feedbackErro": "A alternativa correta é: lugar vivido e uso econômico do espaço.. A praça possui sentido de lugar para a moradora e valor econômico para outro agente social.",
         "dicaBanca": "Um mesmo espaço pode ter sentidos diferentes para grupos distintos."
@@ -593,13 +593,13 @@ const fundamentosGeografia = [
         "texto": "A chegada de internet de alta velocidade a áreas antes pouco conectadas permite ensino remoto, vendas on-line e monitoramento da produção. Porém, quem não tem renda ou equipamento permanece excluído.",
         "pergunta": "O exemplo demonstra que o meio técnico-científico-informacional:",
         "alternativas": [
-            "distribui benefícios de forma homogênea e universal.",
             "articula ciência, técnica e informação, mas sua apropriação é socialmente desigual.",
+            "distribui benefícios de forma homogênea e universal.",
             "elimina a necessidade de infraestrutura material.",
             "só existe em áreas sem redes de comunicação.",
             "corresponde ao retorno ao meio natural."
         ],
-        "correta": 1,
+        "correta": 0,
         "feedbackAcerto": "Correto. O meio atual combina ciência, técnica e informação, mas seu acesso é desigual.",
         "feedbackErro": "A alternativa correta é: articula ciência, técnica e informação, mas sua apropriação é socialmente desigual.. O meio atual combina ciência, técnica e informação, mas seu acesso é desigual.",
         "dicaBanca": "Tecnologia não significa inclusão automática."
@@ -608,13 +608,13 @@ const fundamentosGeografia = [
         "texto": "Uma empresa utiliza satélites, sensores, bancos de dados e softwares para definir onde plantar, quando colher e como transportar. A produção agrícola depende de informação científica e redes técnicas.",
         "pergunta": "A situação caracteriza a presença do:",
         "alternativas": [
-            "meio técnico-científico-informacional no campo.",
             "meio natural sem ação técnica.",
             "determinismo climático sem sociedade.",
+            "meio técnico-científico-informacional no campo.",
             "lugar apenas afetivo sem economia.",
             "território sem controle ou uso."
         ],
-        "correta": 0,
+        "correta": 2,
         "feedbackAcerto": "Correto. Ciência, tecnologia, informação e redes também reorganizam o espaço rural.",
         "feedbackErro": "A alternativa correta é: meio técnico-científico-informacional no campo.. Ciência, tecnologia, informação e redes também reorganizam o espaço rural.",
         "dicaBanca": "Satélites, sensores e softwares indicam meio técnico-científico-informacional."
@@ -626,10 +626,10 @@ const fundamentosGeografia = [
             "I, apenas.",
             "II, apenas.",
             "I e III, apenas.",
-            "II e III, apenas.",
-            "I, II e III."
+            "I, II e III.",
+            "II e III, apenas."
         ],
-        "correta": 3,
+        "correta": 4,
         "feedbackAcerto": "Correto. II e III estão corretas. A paisagem não é apenas natural; pode conter elementos culturais e históricos.",
         "feedbackErro": "A alternativa correta é: II e III, apenas.. II e III estão corretas. A paisagem não é apenas natural; pode conter elementos culturais e históricos.",
         "dicaBanca": "Veja se a banca tentou limitar paisagem ao natural."
@@ -654,12 +654,12 @@ const fundamentosGeografia = [
         "pergunta": "A análise geográfica mais completa deve considerar:",
         "alternativas": [
             "apenas a aparência final dos prédios construídos.",
-            "paisagem, território, lugar e relações de poder na produção do espaço.",
             "somente o clima da cidade.",
             "a inexistência de conflitos sociais no espaço urbano.",
+            "paisagem, território, lugar e relações de poder na produção do espaço.",
             "a localização absoluta como única explicação possível."
         ],
-        "correta": 1,
+        "correta": 3,
         "feedbackAcerto": "Correto. O caso envolve paisagem modificada, território disputado, perda de lugar vivido e relações de poder.",
         "feedbackErro": "A alternativa correta é: paisagem, território, lugar e relações de poder na produção do espaço.. O caso envolve paisagem modificada, território disputado, perda de lugar vivido e relações de poder.",
         "dicaBanca": "Remoção e valorização imobiliária indicam produção desigual do espaço."
@@ -668,13 +668,13 @@ const fundamentosGeografia = [
         "texto": "Em uma prova, o enunciado afirma que a Geografia estuda a superfície terrestre apenas como palco físico dos fenômenos, sem considerar trabalho, técnica, cultura, economia e política.",
         "pergunta": "A afirmação deve ser considerada:",
         "alternativas": [
-            "correta, pois o espaço geográfico é apenas base natural.",
             "incorreta, pois reduz a Geografia à descrição física e ignora a produção social do espaço.",
+            "correta, pois o espaço geográfico é apenas base natural.",
             "correta, pois a Geografia abandonou a relação sociedade-natureza.",
             "incorreta apenas porque não menciona longitude.",
             "correta, pois técnica e política não alteram o espaço."
         ],
-        "correta": 1,
+        "correta": 0,
         "feedbackAcerto": "Correto. A Geografia contemporânea analisa a produção social do espaço e a relação sociedade-natureza.",
         "feedbackErro": "A alternativa correta é: incorreta, pois reduz a Geografia à descrição física e ignora a produção social do espaço.. A Geografia contemporânea analisa a produção social do espaço e a relação sociedade-natureza.",
         "dicaBanca": "Cuidado com definições estreitas demais do objeto da Geografia."
@@ -683,13 +683,13 @@ const fundamentosGeografia = [
         "texto": "Em uma comunidade, a implantação de uma torre de telefonia muda a comunicação, facilita serviços digitais, permite vendas por aplicativos e altera a relação com cidades próximas. Nem todos conseguem pagar pelos equipamentos.",
         "pergunta": "O fenômeno descrito revela principalmente:",
         "alternativas": [
-            "a articulação entre técnica, informação, redes e desigualdade de acesso.",
             "a ausência completa de globalização em áreas locais.",
             "a redução do espaço geográfico ao clima.",
+            "a articulação entre técnica, informação, redes e desigualdade de acesso.",
             "o desaparecimento das relações entre cidade e campo.",
             "a impossibilidade de estudar tecnologia pela Geografia."
         ],
-        "correta": 0,
+        "correta": 2,
         "feedbackAcerto": "Correto. A torre integra redes técnicas e informacionais, mas o acesso aos benefícios é desigual.",
         "feedbackErro": "A alternativa correta é: a articulação entre técnica, informação, redes e desigualdade de acesso.. A torre integra redes técnicas e informacionais, mas o acesso aos benefícios é desigual.",
         "dicaBanca": "Local conectado ao digital = meio técnico-científico-informacional."
@@ -698,13 +698,13 @@ const fundamentosGeografia = [
         "texto": "Um professor propõe estudar o bairro da escola com mapas mentais dos alunos, fotografias da paisagem, entrevistas com moradores e análise de serviços públicos. Depois relaciona os dados ao crescimento urbano municipal.",
         "pergunta": "A prática pedagógica é adequada porque:",
         "alternativas": [
-            "parte do espaço vivido e o relaciona a processos mais amplos de produção do espaço.",
             "impede qualquer relação entre cotidiano e conceitos científicos.",
             "substitui a análise geográfica por memorização de capitais.",
             "trata o bairro como fenômeno isolado do município.",
-            "nega o uso de categorias como paisagem, lugar e território."
+            "nega o uso de categorias como paisagem, lugar e território.",
+            "parte do espaço vivido e o relaciona a processos mais amplos de produção do espaço."
         ],
-        "correta": 0,
+        "correta": 4,
         "feedbackAcerto": "Correto. A proposta parte do lugar vivido e amplia para análise geográfica mais complexa.",
         "feedbackErro": "A alternativa correta é: parte do espaço vivido e o relaciona a processos mais amplos de produção do espaço.. A proposta parte do lugar vivido e amplia para análise geográfica mais complexa.",
         "dicaBanca": "O cotidiano deve ser ponto de partida, não limite da análise."
@@ -714,12 +714,12 @@ const fundamentosGeografia = [
         "pergunta": "Está correto o que se afirma em:",
         "alternativas": [
             "I, apenas.",
+            "I, II e III.",
             "II, apenas.",
             "I e III, apenas.",
-            "II e III, apenas.",
-            "I, II e III."
+            "II e III, apenas."
         ],
-        "correta": 4,
+        "correta": 1,
         "feedbackAcerto": "Correto. As três afirmações estão alinhadas à compreensão contemporânea do espaço geográfico.",
         "feedbackErro": "A alternativa correta é: I, II e III.. As três afirmações estão alinhadas à compreensão contemporânea do espaço geográfico.",
         "dicaBanca": "História, técnica e informação são bases fortes da análise geográfica atual."
@@ -728,13 +728,13 @@ const fundamentosGeografia = [
         "texto": "Um bairro popular aparece no mapa municipal apenas como 'área de risco'. Para moradores, é espaço de vizinhança, trabalho, memória, resistência e pertencimento. A classificação oficial não esgota seus significados.",
         "pergunta": "O texto chama atenção para:",
         "alternativas": [
-            "a diferença entre recorte técnico-administrativo e experiência vivida do espaço.",
             "a inexistência de identidade nos bairros populares.",
             "a impossibilidade de mapas representarem qualquer informação.",
             "a superioridade absoluta da leitura administrativa sobre a vivência.",
+            "a diferença entre recorte técnico-administrativo e experiência vivida do espaço.",
             "a ausência de relações sociais na produção do espaço urbano."
         ],
-        "correta": 0,
+        "correta": 3,
         "feedbackAcerto": "Correto. O espaço pode ser classificado tecnicamente, mas também vivido e significado pelos sujeitos.",
         "feedbackErro": "A alternativa correta é: a diferença entre recorte técnico-administrativo e experiência vivida do espaço.. O espaço pode ser classificado tecnicamente, mas também vivido e significado pelos sujeitos.",
         "dicaBanca": "A banca pode contrapor leitura técnica e vivência dos sujeitos."
