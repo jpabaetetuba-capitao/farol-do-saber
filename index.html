@@ -2071,8 +2071,21 @@ Li e revisei o mapa mental.
 
                 <span>🔬</span>
                 <strong>Professor de Ciências</strong>
-                <small>4 provas cadastradas</small>
+                <small>5 provas cadastradas</small>
                 <em>Clique para abrir as provas de Ciências</em>
+
+            </button>
+
+            <button
+                type="button"
+                id="cardProvasGeografia"
+                class="provas-resumo-card ativo botao-cargo-provas"
+                onclick="selecionarCargoProvasFarol('geografia')">
+
+                <span>🌍</span>
+                <strong>Professor de Geografia</strong>
+                <small>4 provas cadastradas</small>
+                <em>Clique para abrir as provas de Geografia</em>
 
             </button>
 
@@ -2194,7 +2207,7 @@ Li e revisei o mapa mental.
                         <small>Prova original oficial externa + gabarito comentado premium local.</small>
                     </div>
                     <div class="prova-anterior-acoes">
-                        <button onclick="abrirArquivoProvaAnteriorFarol('https://arquivos.qconcursos.com/prova/arquivo_prova/150770/ivin-2026-prefeitura-de-simoes-pi-professor-historia-prova.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/historia/professor_historia_simoes_2026.pdf')">📕 Abrir prova</button>
                         <button onclick="abrirArquivoProvaAnteriorFarol('provas/historia/gabarito_comentado_professor_historia_simoes_2026.pdf')">✅ Gabarito comentado</button>
                     </div>
                 </div>
@@ -2210,7 +2223,7 @@ Li e revisei o mapa mental.
                     <p>Provas reais das bancas Ágata e IVIN com gabarito comentado premium.</p>
                 </div>
                 <div class="acoes-cabecalho-provas">
-                    <strong class="contador-provas-cargo">4 provas</strong>
+                    <strong class="contador-provas-cargo">5 provas</strong>
                     <button
                         type="button"
                         class="btn-voltar-cargos-provas"
@@ -2249,7 +2262,7 @@ Li e revisei o mapa mental.
                         <small>Prova original oficial externa + gabarito comentado premium local.</small>
                     </div>
                     <div class="prova-anterior-acoes">
-                        <button onclick="abrirArquivoProvaAnteriorFarol('https://arquivos.qconcursos.com/prova/arquivo_prova/110632/instituto-agata-2024-prefeitura-de-anajas-pa-professor-ciencias-prova.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/ciencias/professor_ciencias_anajas_2024.pdf')">📕 Abrir prova</button>
                         <button onclick="abrirArquivoProvaAnteriorFarol('provas/ciencias/gabarito_comentado_professor_ciencias_anajas_2024.pdf')">✅ Gabarito comentado</button>
                     </div>
                 </div>
@@ -2265,7 +2278,7 @@ Li e revisei o mapa mental.
                         <small>Prova original oficial externa + gabarito comentado premium local.</small>
                     </div>
                     <div class="prova-anterior-acoes">
-                        <button onclick="abrirArquivoProvaAnteriorFarol('https://arquivos.qconcursos.com/prova/arquivo_prova/150765/ivin-2026-prefeitura-de-simoes-pi-professor-ciencias-prova.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/ciencias/professor_ciencias_simoes_2026.pdf')">📕 Abrir prova</button>
                         <button onclick="abrirArquivoProvaAnteriorFarol('provas/ciencias/gabarito_comentado_professor_ciencias_simoes_2026.pdf')">✅ Gabarito comentado</button>
                     </div>
                 </div>
@@ -2281,8 +2294,113 @@ Li e revisei o mapa mental.
                         <small>Prova original oficial externa + gabarito comentado premium local.</small>
                     </div>
                     <div class="prova-anterior-acoes">
-                        <button onclick="abrirArquivoProvaAnteriorFarol('https://anexos.cdn.selecao.net.br/uploads/763/concursos/97/anexos/de1b63f8-c045-41a9-b304-a2119cfcb4fe.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/ciencias/professor_ciencias_cajazeiras_2025.pdf')">📕 Abrir prova</button>
                         <button onclick="abrirArquivoProvaAnteriorFarol('provas/ciencias/gabarito_comentado_professor_ciencias_cajazeiras_2025.pdf')">✅ Gabarito comentado</button>
+                    </div>
+                </div>
+
+
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova">
+                            <span class="tag-prova-anterior">Instituto Ágata</span>
+                            <span class="tag-ano-prova">2023</span>
+                        </div>
+                        <h3>🔬 Medicilândia/PA — Professor de Ciências Naturais</h3>
+                        <p>Língua Portuguesa, Informática, Didática/Legislação e Conhecimentos Específicos de Ciências Naturais.</p>
+                        <small>Prova original oficial local + gabarito comentado premium local.</small>
+                    </div>
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/ciencias/professor_ciencias_medicilandia_2023.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/ciencias/gabarito_comentado_professor_ciencias_medicilandia_2023.pdf')">✅ Gabarito comentado</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="grupoProvasGeografia" class="grupo-provas-cargo grupo-provas-oculto">
+            <div class="cabecalho-grupo-provas">
+                <div>
+                    <span class="tag-cargo-provas">🌍 Professor de Geografia</span>
+                    <h3>Provas cadastradas</h3>
+                    <p>Provas reais do Instituto Ágata com gabarito comentado premium.</p>
+                </div>
+                <div class="acoes-cabecalho-provas">
+                    <strong class="contador-provas-cargo">4 provas</strong>
+                    <button
+                        type="button"
+                        class="btn-voltar-cargos-provas"
+                        onclick="voltarCargosProvasFarol()">
+                        ⬅ Cargos
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid-provas-anteriores">
+
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova">
+                            <span class="tag-prova-anterior">Instituto Ágata</span>
+                            <span class="tag-ano-prova">2025</span>
+                        </div>
+                        <h3>🌍 Juruti/PA — Professor de Geografia</h3>
+                        <p>Português, Informática, Didática/Legislação e Conhecimentos Específicos de Geografia.</p>
+                        <small>Prova original oficial externa + gabarito comentado premium local.</small>
+                    </div>
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/geografia/professor_geografia_juruti_2025.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/geografia/gabarito_comentado_professor_geografia_juruti_2025.pdf')">✅ Gabarito comentado</button>
+                    </div>
+                </div>
+
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova">
+                            <span class="tag-prova-anterior">Instituto Ágata</span>
+                            <span class="tag-ano-prova">2025</span>
+                        </div>
+                        <h3>🌍 Piçarra/PA — Professor de Geografia</h3>
+                        <p>Português, Informática, Legislação e Conhecimentos Específicos de Geografia.</p>
+                        <small>Prova original oficial externa + gabarito comentado premium local.</small>
+                    </div>
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/geografia/professor_geografia_picarra_2025.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/geografia/gabarito_comentado_professor_geografia_picarra_2025.pdf')">✅ Gabarito comentado</button>
+                    </div>
+                </div>
+
+
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova">
+                            <span class="tag-prova-anterior">Instituto Ágata</span>
+                            <span class="tag-ano-prova">2024</span>
+                        </div>
+                        <h3>🌍 Anajás/PA — Professor de Geografia</h3>
+                        <p>Português, Informática, Didática/Legislação e Conhecimentos Específicos de Geografia.</p>
+                        <small>Prova original oficial local + gabarito comentado premium local.</small>
+                    </div>
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/geografia/professor_geografia_anajas_2024.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/geografia/gabarito_comentado_professor_geografia_anajas_2024.pdf')">✅ Gabarito comentado</button>
+                    </div>
+                </div>
+
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova">
+                            <span class="tag-prova-anterior">Instituto Ágata</span>
+                            <span class="tag-ano-prova">2023</span>
+                        </div>
+                        <h3>🌍 Medicilândia/PA — Professor de Geografia</h3>
+                        <p>Português, Informática, Didática/Legislação e Conhecimentos Específicos de Geografia.</p>
+                        <small>Prova original oficial local + gabarito comentado premium local.</small>
+                    </div>
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/geografia/professor_geografia_medicilandia_2023.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/geografia/gabarito_comentado_professor_geografia_medicilandia_2023.pdf')">✅ Gabarito comentado</button>
                     </div>
                 </div>
 
@@ -2297,7 +2415,7 @@ Li e revisei o mapa mental.
                     <p>Provas reais de nível médio/apoio escolar com gabarito comentado premium.</p>
                 </div>
                 <div class="acoes-cabecalho-provas">
-                    <strong class="contador-provas-cargo">2 provas</strong>
+                    <strong class="contador-provas-cargo">4 provas</strong>
                     <button
                         type="button"
                         class="btn-voltar-cargos-provas"
@@ -2320,7 +2438,7 @@ Li e revisei o mapa mental.
                         <small>Prova original oficial externa + gabarito comentado premium local.</small>
                     </div>
                     <div class="prova-anterior-acoes">
-                        <button onclick="abrirArquivoProvaAnteriorFarol('https://arquivos.qconcursos.com/prova/arquivo_prova/94533/ivin-2023-prefeitura-de-canto-do-buriti-pi-cuidador-de-aluno-prova.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/apoio-escolar/cuidador_aluno_canto_buriti_2023_ivin.pdf')">📕 Abrir prova</button>
                         <button onclick="abrirArquivoProvaAnteriorFarol('provas/apoio-escolar/gabarito_comentado_cuidador_aluno_canto_buriti_2023.pdf')">✅ Gabarito comentado</button>
                     </div>
                 </div>
@@ -2336,7 +2454,7 @@ Li e revisei o mapa mental.
                         <small>Prova original oficial externa + gabarito comentado premium local.</small>
                     </div>
                     <div class="prova-anterior-acoes">
-                        <button onclick="abrirArquivoProvaAnteriorFarol('https://arquivos.qconcursos.com/prova/arquivo_prova/143301/instituto-agata-2025-prefeitura-de-juruti-pa-apoio-escolar-ii-cuidador-prova.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/apoio-escolar/apoio_escolar_cuidador_juruti_2025.pdf')">📕 Abrir prova</button>
                         <button onclick="abrirArquivoProvaAnteriorFarol('provas/apoio-escolar/gabarito_comentado_apoio_escolar_cuidador_juruti_2025.pdf')">✅ Gabarito comentado</button>
                     </div>
                 </div>

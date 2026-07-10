@@ -18865,6 +18865,10 @@ function obterConfigProvasFarol(){
             grupo: "grupoProvasCiencias",
             card: "cardProvasCiencias"
         },
+        geografia: {
+            grupo: "grupoProvasGeografia",
+            card: "cardProvasGeografia"
+        },
         apoioEscolar: {
             grupo: "grupoProvasApoioEscolar",
             card: "cardProvasApoioEscolar"
