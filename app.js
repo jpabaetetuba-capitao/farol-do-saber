@@ -18949,24 +18949,302 @@ function voltarCargosProvasFarol(){
 
 /* ==========================================================
    PATCH FAROL DO SABER — PROFESSOR DE GEOGRAFIA
-   Etapa 1: estrutura completa + Tópico 1 liberado
+   Etapa 3: Tópicos 1, 2 e 3 liberados
 ========================================================== */
 (function(){
-    const topicosGeografiaFarol=[{chave:"fundamentosGeografia",nome:"🌍 Fundamentos da Geografia"},{chave:"cartografiaGeografia",nome:"🗺️ Cartografia e Representação do Espaço"},{chave:"geografiaFisicaEstruturaTerra",nome:"⛰️ Geografia Física e Estrutura da Terra"},{chave:"climaDinamicaClimatica",nome:"🌦️ Clima e Dinâmica Climática"},{chave:"hidrografiaVegetacaoMeioAmbienteGeo",nome:"💧 Hidrografia, Vegetação e Meio Ambiente"},{chave:"populacaoMundialBrasileira",nome:"👥 População Mundial e Brasileira"},{chave:"espacoIndustrialMundialBrasileiro",nome:"🏭 Espaço Industrial Mundial e Brasileiro"},{chave:"espacoUrbanoMundialBrasileiro",nome:"🏙️ Espaço Urbano Mundial e Brasileiro"},{chave:"espacoAgrarioMundialBrasileiro",nome:"🌾 Espaço Agrário Mundial e Brasileiro"},{chave:"regionalizacaoEspacoMundialBrasileiro",nome:"🧭 Regionalização do Espaço Mundial e Brasileiro"},{chave:"geopoliticaMundial",nome:"🌐 Geopolítica Mundial"},{chave:"geografiaParaBarcarena",nome:"🏞️ Geografia do Pará e de Barcarena"}];
-    const primeiroTopicoGeografiaFarol="fundamentosGeografia";
-    function existeTopicoGeografiaFarol(chave){return topicosGeografiaFarol.some(item=>item.chave===chave);}
-    function nomeTopicoGeografiaFarol(chave){const item=topicosGeografiaFarol.find(t=>t.chave===chave);return item?item.nome:"Tópico de Geografia";}
-    if(typeof bancoQuestoes!=="undefined"&&typeof fundamentosGeografia!=="undefined"){bancoQuestoes.fundamentosGeografia=fundamentosGeografia;}
-    if(typeof mapasMentaisPorAssunto!=="undefined"){mapasMentaisPorAssunto.fundamentosGeografia={titulo:"🌍 Fundamentos da Geografia",imagem:"imagens/mapas/FundamentosGeografia.png"};}
-    if(typeof disciplinasTrilhaFarol!=="undefined"){disciplinasTrilhaFarol.geografia={nome:"Professor de Geografia",icone:"🌍",descricao:"Conhecimento específico de Professor de Geografia."};}
-    if(typeof trilhasPreparacaoFarol!=="undefined"){trilhasPreparacaoFarol.professorGeografia={nome:"Professor de Geografia",nivel:"Nível Superior",icone:"🌍",cor:"azul",descricao:"Português, Informática, Didática e o conteúdo específico de Geografia.",bloqueado:false,disciplinas:["portugues","informatica","didatica","geografia"]};}
-    if(typeof nomeDisciplinaForum==="function"){const anterior=nomeDisciplinaForum;nomeDisciplinaForum=function(chave){if(chave==="geografia"){return "Professor de Geografia";}return anterior(chave);};}
-    if(typeof abrirDisciplina==="function"){const anterior=abrirDisciplina;abrirDisciplina=function(nome){if(nome==="geografia"){disciplinaAtual="geografia";mostrarTela("geografia");return;}return anterior(nome);};}
-    if(typeof abrirAssunto==="function"){const anterior=abrirAssunto;abrirAssunto=function(assunto){if(assunto===primeiroTopicoGeografiaFarol){disciplinaAtual="geografia";assuntoAtual=assunto;if(typeof fundamentosGeografiaTeoria!=="undefined"&&Array.isArray(fundamentosGeografiaTeoria)&&fundamentosGeografiaTeoria.length>0){abrirTeoria(fundamentosGeografiaTeoria,"🌍 Fundamentos da Geografia");return;}mostrarToast("Teoria de Geografia não encontrada.");return;}if(existeTopicoGeografiaFarol(assunto)){disciplinaAtual="geografia";assuntoAtual=assunto;mostrarToast("Tópico em construção: "+nomeTopicoGeografiaFarol(assunto));mostrarTela("geografia");return;}return anterior(assunto);};}
-    if(typeof abrirTeoriaDoAssunto==="function"){const anterior=abrirTeoriaDoAssunto;abrirTeoriaDoAssunto=function(){if(assuntoAtual===primeiroTopicoGeografiaFarol){abrirTeoria(fundamentosGeografiaTeoria,"🌍 Fundamentos da Geografia");return;}return anterior();};}
-    if(typeof voltarParaAssuntos==="function"){const anterior=voltarParaAssuntos;voltarParaAssuntos=function(){if(existeTopicoGeografiaFarol(assuntoAtual)){mostrarTela("geografia");return;}return anterior();};}
-    if(typeof obterBancoDisciplinaSimuladoFarol==="function"){const anterior=obterBancoDisciplinaSimuladoFarol;obterBancoDisciplinaSimuladoFarol=function(disciplina){if(disciplina==="geografia"){return typeof fundamentosGeografia!=="undefined"?[...fundamentosGeografia]:[];}return anterior(disciplina);};}
-    window.iniciarSimuladoGeografia=function(){if(typeof fundamentosGeografia==="undefined"||!Array.isArray(fundamentosGeografia)){mostrarToast("Banco de Geografia ainda não carregou.");return;}iniciarSimuladoPersonalizado([...fundamentosGeografia],30,"geografia");};
-    if(typeof renderizarTelaPreparacoes==="function"){renderizarTelaPreparacoes=function(){const painelPreparacoes=document.getElementById("painelPreparacoes");const painelTrilha=document.getElementById("painelTrilhaEstudo");if(!painelPreparacoes||!painelTrilha){return;}const trilhaAtual=obterTrilhaAtualFarol();if(trilhaAtual){renderizarTrilhaEstudo(trilhaAtual);return;}painelTrilha.style.display="none";painelTrilha.innerHTML="";painelPreparacoes.style.display="block";painelPreparacoes.innerHTML=`<p class="texto-preparacao">Escolha o cargo para o Farol traçar sua Rota de Estudos com as etapas certas.</p><h3 class="titulo-grupo-preparacao">🟢 Nível Médio</h3><div class="grid-preparacoes">${montarCardPreparacaoFarol("apoioEscolar",trilhasPreparacaoFarol.apoioEscolar)}</div><h3 class="titulo-grupo-preparacao">🔵 Nível Superior — Professor</h3><div class="grid-preparacoes">${montarCardPreparacaoFarol("professorHistoria",trilhasPreparacaoFarol.professorHistoria)}${montarCardPreparacaoFarol("professorCiencias",trilhasPreparacaoFarol.professorCiencias)}${montarCardPreparacaoFarol("professorGeografia",trilhasPreparacaoFarol.professorGeografia)}${trilhasPreparacaoFarol.professorEducacaoFisica?montarCardPreparacaoFarol("professorEducacaoFisica",trilhasPreparacaoFarol.professorEducacaoFisica):""}${trilhasPreparacaoFarol.professorMatematica?montarCardPreparacaoFarol("professorMatematica",trilhasPreparacaoFarol.professorMatematica):""}</div><h3 class="titulo-grupo-preparacao">🔒 Em breve</h3><div class="grid-preparacoes">${montarCardPreparacaoFarol("administrador",trilhasPreparacaoFarol.administrador)}</div>`;};}
-    if(typeof mostrarTodasDisciplinasFarol==="function"){mostrarTodasDisciplinasFarol=function(){localStorage.removeItem("farol_trilha_atual");const painelPreparacoes=document.getElementById("painelPreparacoes");const painelTrilha=document.getElementById("painelTrilhaEstudo");if(!painelPreparacoes||!painelTrilha){return;}painelPreparacoes.style.display="none";painelTrilha.style.display="block";const todas=["portugues","informatica","etica","apoioEscolar","didatica","ciencias","historia","geografia","educacaoFisica","matematica"].filter(disciplina=>disciplinasTrilhaFarol[disciplina]);const cards=todas.map((disciplina,indice)=>{const dados=disciplinasTrilhaFarol[disciplina];return `<button class="card-disciplina-trilha" onclick="abrirDisciplina('${disciplina}')"><span class="numero-trilha">${indice+1}</span><span class="icone-disciplina-trilha">${dados.icone}</span><span class="dados-disciplina-trilha"><strong>${escaparHTML(dados.nome)}</strong><small>${escaparHTML(dados.descricao)}</small></span></button>`;}).join("");painelTrilha.innerHTML=`<div class="cabecalho-trilha"><div><span class="selo-nivel-trilha">Visão geral</span><h3>🗺️ Todas as disciplinas liberadas</h3><p>Use esta opção apenas quando quiser navegar por todo o conteúdo da plataforma.</p></div><button class="btn-alterar-preparacao" onclick="alterarPreparacaoFarol()">⚓ Voltar às Rotas</button></div><div class="grid-disciplinas-trilha">${cards}</div>`;};}
+    const topicosGeografiaFarol = [
+        {chave:"fundamentosGeografia", nome:"🌍 Fundamentos da Geografia", titulo:"🌍 Fundamentos da Geografia", teoriaNome:"fundamentosGeografiaTeoria", bancoNome:"fundamentosGeografia", mapa:"imagens/mapas/FundamentosGeografia.png", liberado:true},
+        {chave:"cartografiaGeografia", nome:"🗺️ Cartografia e Representação do Espaço", titulo:"🗺️ Cartografia e Representação do Espaço", teoriaNome:"cartografiaGeografiaTeoria", bancoNome:"cartografiaGeografia", mapa:"imagens/mapas/CartografiaGeografia.png", liberado:true},
+        {chave:"geografiaFisicaEstruturaTerra", nome:"⛰️ Geografia Física e Estrutura da Terra", titulo:"⛰️ Geografia Física e Estrutura da Terra", teoriaNome:"geografiaFisicaEstruturaTerraTeoria", bancoNome:"geografiaFisicaEstruturaTerra", mapa:"imagens/mapas/GeografiaFisicaEstruturaTerra.png", liberado:true},
+        {chave:"climaDinamicaClimatica", nome:"🌦️ Clima e Dinâmica Climática", liberado:false},
+        {chave:"hidrografiaVegetacaoMeioAmbienteGeo", nome:"💧 Hidrografia, Vegetação e Meio Ambiente", liberado:false},
+        {chave:"populacaoMundialBrasileira", nome:"👥 População Mundial e Brasileira", liberado:false},
+        {chave:"espacoIndustrialMundialBrasileiro", nome:"🏭 Espaço Industrial Mundial e Brasileiro", liberado:false},
+        {chave:"espacoUrbanoMundialBrasileiro", nome:"🏙️ Espaço Urbano Mundial e Brasileiro", liberado:false},
+        {chave:"espacoAgrarioMundialBrasileiro", nome:"🌾 Espaço Agrário Mundial e Brasileiro", liberado:false},
+        {chave:"regionalizacaoEspacoMundialBrasileiro", nome:"🧭 Regionalização do Espaço Mundial e Brasileiro", liberado:false},
+        {chave:"geopoliticaMundial", nome:"🌐 Geopolítica Mundial", liberado:false},
+        {chave:"geografiaParaBarcarena", nome:"🏞️ Geografia do Pará e de Barcarena", liberado:false}
+    ];
+
+    function obterTopicoGeografiaFarol(chave){
+        return topicosGeografiaFarol.find(item => item.chave === chave) || null;
+    }
+
+    function existeTopicoGeografiaFarol(chave){
+        return !!obterTopicoGeografiaFarol(chave);
+    }
+
+    function obterVariavelGlobalFarol(nome){
+        try{
+            if(typeof window !== "undefined" && typeof window[nome] !== "undefined"){
+                return window[nome];
+            }
+
+            // Os arquivos de dados usam "const". Em scripts normais do navegador,
+            // const cria uma variável global lexical, mas não cria window[nome].
+            // Este fallback permite localizar essas variáveis sem mexer nas outras abas.
+            return Function(
+                "return typeof " + nome + " !== 'undefined' ? " + nome + " : undefined;"
+            )();
+        }catch(erro){
+            return undefined;
+        }
+    }
+
+    function bancosGeografiaFarol(){
+        const bancos = [];
+        topicosGeografiaFarol.forEach(item => {
+            if(item.liberado && item.bancoNome){
+                const banco = obterVariavelGlobalFarol(item.bancoNome);
+                if(Array.isArray(banco)){
+                    bancos.push(...banco);
+                }
+            }
+        });
+        return bancos;
+    }
+
+    if(typeof bancoQuestoes !== "undefined"){
+        topicosGeografiaFarol.forEach(item => {
+            if(item.liberado && item.bancoNome){
+                const banco = obterVariavelGlobalFarol(item.bancoNome);
+                if(Array.isArray(banco)){
+                    bancoQuestoes[item.chave] = banco;
+                }
+            }
+        });
+    }
+
+    if(typeof mapasMentaisPorAssunto !== "undefined"){
+        topicosGeografiaFarol.forEach(item => {
+            if(item.liberado && item.mapa){
+                mapasMentaisPorAssunto[item.chave] = {
+                    titulo: item.titulo,
+                    imagem: item.mapa
+                };
+            }
+        });
+    }
+
+    if(typeof disciplinasTrilhaFarol !== "undefined"){
+        disciplinasTrilhaFarol.geografia = {
+            nome:"Professor de Geografia",
+            icone:"🌍",
+            descricao:"Conhecimento específico de Professor de Geografia."
+        };
+    }
+
+    if(typeof trilhasPreparacaoFarol !== "undefined"){
+        trilhasPreparacaoFarol.professorGeografia = {
+            nome:"Professor de Geografia",
+            nivel:"Nível Superior",
+            icone:"🌍",
+            cor:"azul",
+            descricao:"Português, Informática, Didática e o conteúdo específico de Geografia.",
+            bloqueado:false,
+            disciplinas:["portugues","informatica","didatica","geografia"]
+        };
+    }
+
+    if(typeof nomeDisciplinaForum === "function"){
+        const anteriorNomeDisciplinaForum = nomeDisciplinaForum;
+        nomeDisciplinaForum = function(chave){
+            if(chave === "geografia"){
+                return "Professor de Geografia";
+            }
+            return anteriorNomeDisciplinaForum(chave);
+        };
+    }
+
+    if(typeof abrirDisciplina === "function"){
+        const anteriorAbrirDisciplina = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            if(nome === "geografia"){
+                disciplinaAtual = "geografia";
+                mostrarTela("geografia");
+                return;
+            }
+            return anteriorAbrirDisciplina(nome);
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const anteriorAbrirAssunto = abrirAssunto;
+        abrirAssunto = function(assunto){
+            const item = obterTopicoGeografiaFarol(assunto);
+
+            if(item){
+                disciplinaAtual = assunto;
+                assuntoAtual = assunto;
+
+                if(!item.liberado){
+                    mostrarToast("Tópico em construção: " + item.nome);
+                    mostrarTela("geografia");
+                    return;
+                }
+
+                const teoria = obterVariavelGlobalFarol(item.teoriaNome);
+
+                if(Array.isArray(teoria) && teoria.length > 0){
+                    abrirTeoria(teoria, item.titulo);
+                    return;
+                }
+
+                mostrarToast("Teoria de Geografia não encontrada.");
+                return;
+            }
+
+            return anteriorAbrirAssunto(assunto);
+        };
+    }
+
+    if(typeof abrirTeoriaDoAssunto === "function"){
+        const anteriorAbrirTeoriaDoAssunto = abrirTeoriaDoAssunto;
+        abrirTeoriaDoAssunto = function(){
+            const item = obterTopicoGeografiaFarol(assuntoAtual);
+
+            if(item && item.liberado){
+                const teoria = obterVariavelGlobalFarol(item.teoriaNome);
+                if(Array.isArray(teoria) && teoria.length > 0){
+                    abrirTeoria(teoria, item.titulo);
+                    return;
+                }
+            }
+
+            return anteriorAbrirTeoriaDoAssunto();
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const anteriorVoltarParaAssuntos = voltarParaAssuntos;
+        voltarParaAssuntos = function(){
+            if(existeTopicoGeografiaFarol(assuntoAtual)){
+                mostrarTela("geografia");
+                return;
+            }
+            return anteriorVoltarParaAssuntos();
+        };
+    }
+
+    if(typeof obterBancoDisciplinaSimuladoFarol === "function"){
+        const anteriorObterBancoDisciplinaSimuladoFarol = obterBancoDisciplinaSimuladoFarol;
+        obterBancoDisciplinaSimuladoFarol = function(disciplina){
+            if(disciplina === "geografia"){
+                return bancosGeografiaFarol();
+            }
+            return anteriorObterBancoDisciplinaSimuladoFarol(disciplina);
+        };
+    }
+
+    window.iniciarSimuladoGeografia = function(){
+        const banco = bancosGeografiaFarol();
+        if(!Array.isArray(banco) || banco.length === 0){
+            mostrarToast("Banco de Geografia ainda não carregou.");
+            return;
+        }
+        iniciarSimuladoPersonalizado(banco, 30, "geografia");
+    };
+
+    if(typeof renderizarTelaPreparacoes === "function"){
+        renderizarTelaPreparacoes = function(){
+            const painelPreparacoes = document.getElementById("painelPreparacoes");
+            const painelTrilha = document.getElementById("painelTrilhaEstudo");
+
+            if(!painelPreparacoes || !painelTrilha){
+                return;
+            }
+
+            const trilhaAtual = obterTrilhaAtualFarol();
+
+            if(trilhaAtual){
+                renderizarTrilhaEstudo(trilhaAtual);
+                return;
+            }
+
+            painelTrilha.style.display = "none";
+            painelTrilha.innerHTML = "";
+            painelPreparacoes.style.display = "block";
+
+            painelPreparacoes.innerHTML = `
+                <p class="texto-preparacao">Escolha o cargo para o Farol traçar sua Rota de Estudos com as etapas certas.</p>
+
+                <h3 class="titulo-grupo-preparacao">🟢 Nível Médio</h3>
+                <div class="grid-preparacoes">
+                    ${montarCardPreparacaoFarol("apoioEscolar", trilhasPreparacaoFarol.apoioEscolar)}
+                </div>
+
+                <h3 class="titulo-grupo-preparacao">🔵 Nível Superior — Professor</h3>
+                <div class="grid-preparacoes">
+                    ${montarCardPreparacaoFarol("professorHistoria", trilhasPreparacaoFarol.professorHistoria)}
+                    ${montarCardPreparacaoFarol("professorCiencias", trilhasPreparacaoFarol.professorCiencias)}
+                    ${montarCardPreparacaoFarol("professorGeografia", trilhasPreparacaoFarol.professorGeografia)}
+                    ${trilhasPreparacaoFarol.professorEducacaoFisica ? montarCardPreparacaoFarol("professorEducacaoFisica", trilhasPreparacaoFarol.professorEducacaoFisica) : ""}
+                    ${trilhasPreparacaoFarol.professorMatematica ? montarCardPreparacaoFarol("professorMatematica", trilhasPreparacaoFarol.professorMatematica) : ""}
+                </div>
+
+                <h3 class="titulo-grupo-preparacao">🔒 Em breve</h3>
+                <div class="grid-preparacoes">
+                    ${montarCardPreparacaoFarol("administrador", trilhasPreparacaoFarol.administrador)}
+                </div>
+            `;
+        };
+    }
+
+    if(typeof mostrarTodasDisciplinasFarol === "function"){
+        mostrarTodasDisciplinasFarol = function(){
+            localStorage.removeItem("farol_trilha_atual");
+
+            const painelPreparacoes = document.getElementById("painelPreparacoes");
+            const painelTrilha = document.getElementById("painelTrilhaEstudo");
+
+            if(!painelPreparacoes || !painelTrilha){
+                return;
+            }
+
+            painelPreparacoes.style.display = "none";
+            painelTrilha.style.display = "block";
+
+            const todas = [
+                "portugues",
+                "informatica",
+                "etica",
+                "apoioEscolar",
+                "didatica",
+                "ciencias",
+                "historia",
+                "geografia",
+                "educacaoFisica",
+                "matematica"
+            ].filter(disciplina => disciplinasTrilhaFarol[disciplina]);
+
+            const cards = todas.map((disciplina, indice) => {
+                const dados = disciplinasTrilhaFarol[disciplina];
+                return `
+                    <button class="card-disciplina-trilha" onclick="abrirDisciplina('${disciplina}')">
+                        <span class="numero-trilha">${indice + 1}</span>
+                        <span class="icone-disciplina-trilha">${dados.icone}</span>
+                        <span class="dados-disciplina-trilha">
+                            <strong>${escaparHTML(dados.nome)}</strong>
+                            <small>${escaparHTML(dados.descricao)}</small>
+                        </span>
+                    </button>
+                `;
+            }).join("");
+
+            painelTrilha.innerHTML = `
+                <div class="cabecalho-trilha">
+                    <div>
+                        <span class="selo-nivel-trilha">Visão geral</span>
+                        <h3>🗺️ Todas as disciplinas liberadas</h3>
+                        <p>Use esta opção apenas quando quiser navegar por todo o conteúdo da plataforma.</p>
+                    </div>
+                    <button class="btn-alterar-preparacao" onclick="alterarPreparacaoFarol()">
+                        ⚓ Voltar às Rotas
+                    </button>
+                </div>
+                <div class="grid-disciplinas-trilha">${cards}</div>
+            `;
+        };
+    }
 })();
