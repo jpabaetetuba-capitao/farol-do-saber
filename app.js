@@ -18949,7 +18949,7 @@ function voltarCargosProvasFarol(){
 
 /* ==========================================================
    PATCH FAROL DO SABER — PROFESSOR DE GEOGRAFIA
-   Etapa 3: Tópicos 1, 2 e 3 liberados
+   Etapa 4: Tópicos 1, 2, 3 e 12 liberados
 ========================================================== */
 (function(){
     const topicosGeografiaFarol = [
@@ -18964,7 +18964,7 @@ function voltarCargosProvasFarol(){
         {chave:"espacoAgrarioMundialBrasileiro", nome:"🌾 Espaço Agrário Mundial e Brasileiro", liberado:false},
         {chave:"regionalizacaoEspacoMundialBrasileiro", nome:"🧭 Regionalização do Espaço Mundial e Brasileiro", liberado:false},
         {chave:"geopoliticaMundial", nome:"🌐 Geopolítica Mundial", liberado:false},
-        {chave:"geografiaParaBarcarena", nome:"🏞️ Geografia do Pará e de Barcarena", liberado:false}
+        {chave:"geografiaParaBarcarena", nome:"🏞️ Geografia do Pará e de Barcarena", titulo:"🏞️ Geografia do Pará e de Barcarena", teoriaNome:"geografiaParaBarcarenaTeoria", bancoNome:"geografiaParaBarcarena", mapa:"imagens/mapas/GeografiaParaBarcarena.png", liberado:true}
     ];
 
     function obterTopicoGeografiaFarol(chave){
