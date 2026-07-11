@@ -18953,14 +18953,14 @@ function voltarCargosProvasFarol(){
 
 /* ==========================================================
    PATCH FAROL DO SABER — PROFESSOR DE GEOGRAFIA
-   Etapa 3: Tópicos 1, 2 e 3 liberados
+   Etapa 4: Tópicos 1, 2, 3 e 4 liberados
 ========================================================== */
 (function(){
     const topicosGeografiaFarol = [
         {chave:"fundamentosGeografia", nome:"🌍 Fundamentos da Geografia", titulo:"🌍 Fundamentos da Geografia", teoriaNome:"fundamentosGeografiaTeoria", bancoNome:"fundamentosGeografia", mapa:"imagens/mapas/FundamentosGeografia.png", liberado:true},
         {chave:"cartografiaGeografia", nome:"🗺️ Cartografia e Representação do Espaço", titulo:"🗺️ Cartografia e Representação do Espaço", teoriaNome:"cartografiaGeografiaTeoria", bancoNome:"cartografiaGeografia", mapa:"imagens/mapas/CartografiaGeografia.png", liberado:true},
         {chave:"geografiaFisicaEstruturaTerra", nome:"⛰️ Geografia Física e Estrutura da Terra", titulo:"⛰️ Geografia Física e Estrutura da Terra", teoriaNome:"geografiaFisicaEstruturaTerraTeoria", bancoNome:"geografiaFisicaEstruturaTerra", mapa:"imagens/mapas/GeografiaFisicaEstruturaTerra.png", liberado:true},
-        {chave:"climaDinamicaClimatica", nome:"🌦️ Clima e Dinâmica Climática", liberado:false},
+        {chave:"climaDinamicaClimatica", nome:"🌦️ Clima e Dinâmica Climática", titulo:"🌦️ Clima e Dinâmica Climática", teoriaNome:"climaDinamicaClimaticaTeoria", bancoNome:"climaDinamicaClimatica", mapa:"imagens/mapas/ClimaDinamicaClimatica.png", liberado:true},
         {chave:"hidrografiaVegetacaoMeioAmbienteGeo", nome:"💧 Hidrografia, Vegetação e Meio Ambiente", liberado:false},
         {chave:"populacaoMundialBrasileira", nome:"👥 População Mundial e Brasileira", liberado:false},
         {chave:"espacoIndustrialMundialBrasileiro", nome:"🏭 Espaço Industrial Mundial e Brasileiro", liberado:false},
