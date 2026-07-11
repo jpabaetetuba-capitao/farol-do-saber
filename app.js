@@ -849,8 +849,14 @@ const bancoQuestoes = {
 
     expansaoFronteirasAmericaPortuguesa,
 
-    
-    
+    brasilTransicaoSeculoXIXParaXX,
+
+    primeiraRepublicaEraVargas,
+
+    republicaLiberalDemocraticaDutraJoaoGoulart,
+
+    golpe1964DitaduraCivilMilitarBrasileira,
+
     apoioOrganizacaoEducacao,
     apoioLDB,
     apoioECA,
@@ -2551,6 +2557,22 @@ const mapasMentaisPorAssunto = {
     "expansaoFronteirasAmericaPortuguesa": {
         "titulo": "🗺️ Expansão das Fronteiras da América Portuguesa",
         "imagem": "imagens/mapas/expansaoFronteirasAmericaPortuguesa.png"
+    },
+    "brasilTransicaoSeculoXIXParaXX": {
+        "titulo": "⏳ Brasil na Transição do Século XIX para o XX",
+        "imagem": "imagens/mapas/brasilTransicaoSeculoXIXParaXX.png"
+    },
+    "primeiraRepublicaEraVargas": {
+        "titulo": "🏛️ Primeira República Brasileira e Era Vargas",
+        "imagem": "imagens/mapas/primeiraRepublicaEraVargas.png"
+    },
+    "republicaLiberalDemocraticaDutraJoaoGoulart": {
+        "titulo": "🗳️ República Liberal Democrática Brasileira: de Eurico Dutra a João Goulart",
+        "imagem": "imagens/mapas/republicaLiberalDemocraticaDutraJoaoGoulart.png"
+    },
+    "golpe1964DitaduraCivilMilitarBrasileira": {
+        "titulo": "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira",
+        "imagem": "imagens/mapas/golpe1964DitaduraCivilMilitarBrasileira.png"
     }
 };
 
@@ -2924,6 +2946,10 @@ errosAssunto++;
     estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro: "🏛️ Estruturas Políticas, Econômicas e Sociais do Estado Imperial Brasileiro",
     revoltasMovimentosBrasilImperial: "⚔️ Revoltas e Movimentos no Brasil Imperial",
     expansaoFronteirasAmericaPortuguesa: "🗺️ Expansão das Fronteiras da América Portuguesa",
+    brasilTransicaoSeculoXIXParaXX: "⏳ Brasil na Transição do Século XIX para o XX",
+    primeiraRepublicaEraVargas: "🏛️ Primeira República Brasileira e Era Vargas",
+    republicaLiberalDemocraticaDutraJoaoGoulart: "🗳️ República Liberal Democrática Brasileira: de Eurico Dutra a João Goulart",
+    golpe1964DitaduraCivilMilitarBrasileira: "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira",
     apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
     apoioLDB: "📘 LDB e Bases da Educação Nacional",
     apoioECA: "🧒 ECA e Proteção Integral",
@@ -4343,7 +4369,11 @@ function obterBancoDisciplinaSimuladoFarol(disciplina){
             ...cortePortuguesaFormacaoEstadoNacionalBrasileiro,
             ...estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro,
             ...revoltasMovimentosBrasilImperial,
-            ...expansaoFronteirasAmericaPortuguesa
+            ...expansaoFronteirasAmericaPortuguesa,
+            ...brasilTransicaoSeculoXIXParaXX,
+            ...primeiraRepublicaEraVargas,
+            ...republicaLiberalDemocraticaDutraJoaoGoulart,
+            ...golpe1964DitaduraCivilMilitarBrasileira
         ],
         ciencias: [
             ...fundamentosCiencias,
@@ -4533,7 +4563,11 @@ function iniciarSimuladoHistoria(){
         ...cortePortuguesaFormacaoEstadoNacionalBrasileiro,
         ...estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro,
         ...revoltasMovimentosBrasilImperial,
-        ...expansaoFronteirasAmericaPortuguesa
+        ...expansaoFronteirasAmericaPortuguesa,
+        ...brasilTransicaoSeculoXIXParaXX,
+        ...primeiraRepublicaEraVargas,
+        ...republicaLiberalDemocraticaDutraJoaoGoulart,
+        ...golpe1964DitaduraCivilMilitarBrasileira
 
     ];
 
@@ -4753,13 +4787,21 @@ function abrirAssunto(assunto) {
             teoria: typeof expansaoFronteirasAmericaPortuguesaTeoria !== "undefined" ? expansaoFronteirasAmericaPortuguesaTeoria : null,
             titulo: "🗺️ Expansão das Fronteiras da América Portuguesa"
         },
-        administracaoAmericaLusitanaColonial: {
-            teoria: typeof administracaoAmericaLusitanaColonialTeoria !== "undefined" ? administracaoAmericaLusitanaColonialTeoria : null,
-            titulo: "🏛️ Administração da América Lusitana Colonial"
+        brasilTransicaoSeculoXIXParaXX: {
+            teoria: typeof brasilTransicaoSeculoXIXParaXXTeoria !== "undefined" ? brasilTransicaoSeculoXIXParaXXTeoria : null,
+            titulo: "⏳ Brasil na Transição do Século XIX para o XX"
         },
-        expansaoFronteirasAmericaPortuguesa: {
-            teoria: typeof expansaoFronteirasAmericaPortuguesaTeoria !== "undefined" ? expansaoFronteirasAmericaPortuguesaTeoria : null,
-            titulo: "🗺️ Expansão das Fronteiras da América Portuguesa"
+        primeiraRepublicaEraVargas: {
+            teoria: typeof primeiraRepublicaEraVargasTeoria !== "undefined" ? primeiraRepublicaEraVargasTeoria : null,
+            titulo: "🏛️ Primeira República Brasileira e Era Vargas"
+        },
+        republicaLiberalDemocraticaDutraJoaoGoulart: {
+            teoria: typeof republicaLiberalDemocraticaDutraJoaoGoulartTeoria !== "undefined" ? republicaLiberalDemocraticaDutraJoaoGoulartTeoria : null,
+            titulo: "🗳️ República Liberal Democrática Brasileira: de Eurico Dutra a João Goulart"
+        },
+        golpe1964DitaduraCivilMilitarBrasileira: {
+            teoria: typeof golpe1964DitaduraCivilMilitarBrasileiraTeoria !== "undefined" ? golpe1964DitaduraCivilMilitarBrasileiraTeoria : null,
+            titulo: "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira"
         }
     };
 
@@ -7772,6 +7814,28 @@ if(assuntoAtual === "bncc"){
 
     }
 
+    if(assuntoAtual === "brasilTransicaoSeculoXIXParaXX"){
+
+        abrirTeoria(
+            brasilTransicaoSeculoXIXParaXXTeoria,
+            "⏳ Brasil na Transição do Século XIX para o XX"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "primeiraRepublicaEraVargas"){
+
+        abrirTeoria(
+            primeiraRepublicaEraVargasTeoria,
+            "🏛️ Primeira República Brasileira e Era Vargas"
+        );
+
+        return;
+
+    }
+
     if(assuntoAtual === "apoioOrganizacaoEducacao"){
 
         abrirTeoria(
@@ -7984,6 +8048,10 @@ const assuntosHistoria = [
         "estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro",
         "revoltasMovimentosBrasilImperial",
         "expansaoFronteirasAmericaPortuguesa",
+        "brasilTransicaoSeculoXIXParaXX",
+        "primeiraRepublicaEraVargas",
+        "republicaLiberalDemocraticaDutraJoaoGoulart",
+        "golpe1964DitaduraCivilMilitarBrasileira",
     ];
 
 const assuntosApoioEscolar = [
@@ -8245,6 +8313,10 @@ function atualizarPainelEstudos(){
     estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro: "🏛️ Estruturas Políticas, Econômicas e Sociais do Estado Imperial Brasileiro",
     revoltasMovimentosBrasilImperial: "⚔️ Revoltas e Movimentos no Brasil Imperial",
     expansaoFronteirasAmericaPortuguesa: "🗺️ Expansão das Fronteiras da América Portuguesa",
+    brasilTransicaoSeculoXIXParaXX: "⏳ Brasil na Transição do Século XIX para o XX",
+    primeiraRepublicaEraVargas: "🏛️ Primeira República Brasileira e Era Vargas",
+    republicaLiberalDemocraticaDutraJoaoGoulart: "🗳️ República Liberal Democrática Brasileira: de Eurico Dutra a João Goulart",
+    golpe1964DitaduraCivilMilitarBrasileira: "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira",
         interpretacao: "📖 Interpretação de Textos",
         generos: "📄 Tipologia e Gêneros Textuais",
         funcoes: "📡 Funções da Linguagem",
@@ -11248,7 +11320,16 @@ const disciplinasJogoFarol = {
             "administracaoAmericaLusitanaColonial",
             "aspectosEconomicosFormasTrabalhoBrasilColonialImperial",
             "sociedadeColonialImperialBrasileira",
-            "expansaoFronteirasAmericaPortuguesa"
+            "expansaoFronteirasAmericaPortuguesa",
+            "influenciasIdeologiasLiberaisBrasilSeculoXVIII",
+            "movimentosAnticoloniaisBrasil",
+            "cortePortuguesaFormacaoEstadoNacionalBrasileiro",
+            "estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro",
+            "revoltasMovimentosBrasilImperial",
+            "brasilTransicaoSeculoXIXParaXX",
+            "primeiraRepublicaEraVargas",
+            "republicaLiberalDemocraticaDutraJoaoGoulart",
+            "golpe1964DitaduraCivilMilitarBrasileira"
         ]
     },
     didatica: {
@@ -11629,6 +11710,10 @@ function nomeAssuntoJogoFarol(assunto){
         estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro: "🏛️ Estado Imperial Brasileiro",
         revoltasMovimentosBrasilImperial: "⚔️ Revoltas Imperiais",
         expansaoFronteirasAmericaPortuguesa: "🗺️ Expansão das Fronteiras",
+        brasilTransicaoSeculoXIXParaXX: "⏳ Brasil: Transição XIX–XX",
+        primeiraRepublicaEraVargas: "🏛️ Primeira República e Era Vargas",
+        republicaLiberalDemocraticaDutraJoaoGoulart: "🗳️ República Liberal Democrática",
+        golpe1964DitaduraCivilMilitarBrasileira: "🛡️ Golpe de 1964 e Ditadura",
         apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
         apoioLDB: "📘 LDB",
         apoioECA: "🧒 ECA",
@@ -17551,7 +17636,11 @@ const gruposDuelo = [
             { chave: "cortePortuguesaFormacaoEstadoNacionalBrasileiro", nome: "👑 Corte Portuguesa e Estado Nacional" },
             { chave: "estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro", nome: "🏛️ Estado Imperial Brasileiro" },
             { chave: "revoltasMovimentosBrasilImperial", nome: "⚔️ Revoltas e Movimentos no Brasil Imperial" },
-            { chave: "expansaoFronteirasAmericaPortuguesa", nome: "🗺️ Expansão das Fronteiras da América Portuguesa" }
+            { chave: "expansaoFronteirasAmericaPortuguesa", nome: "🗺️ Expansão das Fronteiras da América Portuguesa" },
+            { chave: "brasilTransicaoSeculoXIXParaXX", nome: "⏳ Brasil na Transição do Século XIX para o XX" },
+            { chave: "primeiraRepublicaEraVargas", nome: "🏛️ Primeira República Brasileira e Era Vargas" },
+            { chave: "republicaLiberalDemocraticaDutraJoaoGoulart", nome: "🗳️ República Liberal Democrática Brasileira: de Eurico Dutra a João Goulart" },
+            { chave: "golpe1964DitaduraCivilMilitarBrasileira", nome: "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira" }
         ]
     }
 ];
@@ -18953,14 +19042,14 @@ function voltarCargosProvasFarol(){
 
 /* ==========================================================
    PATCH FAROL DO SABER — PROFESSOR DE GEOGRAFIA
-   Etapa 4: Tópicos 1, 2, 3 e 4 liberados
+   Etapa 3: Tópicos 1, 2 e 3 liberados
 ========================================================== */
 (function(){
     const topicosGeografiaFarol = [
         {chave:"fundamentosGeografia", nome:"🌍 Fundamentos da Geografia", titulo:"🌍 Fundamentos da Geografia", teoriaNome:"fundamentosGeografiaTeoria", bancoNome:"fundamentosGeografia", mapa:"imagens/mapas/FundamentosGeografia.png", liberado:true},
         {chave:"cartografiaGeografia", nome:"🗺️ Cartografia e Representação do Espaço", titulo:"🗺️ Cartografia e Representação do Espaço", teoriaNome:"cartografiaGeografiaTeoria", bancoNome:"cartografiaGeografia", mapa:"imagens/mapas/CartografiaGeografia.png", liberado:true},
         {chave:"geografiaFisicaEstruturaTerra", nome:"⛰️ Geografia Física e Estrutura da Terra", titulo:"⛰️ Geografia Física e Estrutura da Terra", teoriaNome:"geografiaFisicaEstruturaTerraTeoria", bancoNome:"geografiaFisicaEstruturaTerra", mapa:"imagens/mapas/GeografiaFisicaEstruturaTerra.png", liberado:true},
-        {chave:"climaDinamicaClimatica", nome:"🌦️ Clima e Dinâmica Climática", titulo:"🌦️ Clima e Dinâmica Climática", teoriaNome:"climaDinamicaClimaticaTeoria", bancoNome:"climaDinamicaClimatica", mapa:"imagens/mapas/ClimaDinamicaClimatica.png", liberado:true},
+        {chave:"climaDinamicaClimatica", nome:"🌦️ Clima e Dinâmica Climática", liberado:false},
         {chave:"hidrografiaVegetacaoMeioAmbienteGeo", nome:"💧 Hidrografia, Vegetação e Meio Ambiente", liberado:false},
         {chave:"populacaoMundialBrasileira", nome:"👥 População Mundial e Brasileira", liberado:false},
         {chave:"espacoIndustrialMundialBrasileiro", nome:"🏭 Espaço Industrial Mundial e Brasileiro", liberado:false},
