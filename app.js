@@ -857,6 +857,10 @@ const bancoQuestoes = {
 
     golpe1964DitaduraCivilMilitarBrasileira,
 
+    politicaMilitarAmazonia,
+
+    redemocratizacaoNovaRepublicaSarneyBolsonaro,
+
     apoioOrganizacaoEducacao,
     apoioLDB,
     apoioECA,
@@ -2573,6 +2577,14 @@ const mapasMentaisPorAssunto = {
     "golpe1964DitaduraCivilMilitarBrasileira": {
         "titulo": "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira",
         "imagem": "imagens/mapas/golpe1964DitaduraCivilMilitarBrasileira.png"
+    },
+    "politicaMilitarAmazonia": {
+        "titulo": "🌳 A Política Militar Voltada para a Amazônia",
+        "imagem": "imagens/mapas/politicaMilitarAmazonia.png"
+    },
+    "redemocratizacaoNovaRepublicaSarneyBolsonaro": {
+        "titulo": "🗳️ Redemocratização e Nova República: de Sarney a Bolsonaro",
+        "imagem": "imagens/mapas/redemocratizacaoNovaRepublicaSarneyBolsonaro.png"
     }
 };
 
@@ -2950,6 +2962,8 @@ errosAssunto++;
     primeiraRepublicaEraVargas: "🏛️ Primeira República Brasileira e Era Vargas",
     republicaLiberalDemocraticaDutraJoaoGoulart: "🗳️ República Liberal Democrática Brasileira: de Eurico Dutra a João Goulart",
     golpe1964DitaduraCivilMilitarBrasileira: "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira",
+    politicaMilitarAmazonia: "🌳 A Política Militar Voltada para a Amazônia",
+    redemocratizacaoNovaRepublicaSarneyBolsonaro: "🗳️ Redemocratização e Nova República: de Sarney a Bolsonaro",
     apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
     apoioLDB: "📘 LDB e Bases da Educação Nacional",
     apoioECA: "🧒 ECA e Proteção Integral",
@@ -4373,7 +4387,9 @@ function obterBancoDisciplinaSimuladoFarol(disciplina){
             ...brasilTransicaoSeculoXIXParaXX,
             ...primeiraRepublicaEraVargas,
             ...republicaLiberalDemocraticaDutraJoaoGoulart,
-            ...golpe1964DitaduraCivilMilitarBrasileira
+            ...golpe1964DitaduraCivilMilitarBrasileira,
+            ...politicaMilitarAmazonia,
+            ...redemocratizacaoNovaRepublicaSarneyBolsonaro
         ],
         ciencias: [
             ...fundamentosCiencias,
@@ -4567,7 +4583,9 @@ function iniciarSimuladoHistoria(){
         ...brasilTransicaoSeculoXIXParaXX,
         ...primeiraRepublicaEraVargas,
         ...republicaLiberalDemocraticaDutraJoaoGoulart,
-        ...golpe1964DitaduraCivilMilitarBrasileira
+        ...golpe1964DitaduraCivilMilitarBrasileira,
+        ...politicaMilitarAmazonia,
+        ...redemocratizacaoNovaRepublicaSarneyBolsonaro
 
     ];
 
@@ -4802,6 +4820,14 @@ function abrirAssunto(assunto) {
         golpe1964DitaduraCivilMilitarBrasileira: {
             teoria: typeof golpe1964DitaduraCivilMilitarBrasileiraTeoria !== "undefined" ? golpe1964DitaduraCivilMilitarBrasileiraTeoria : null,
             titulo: "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira"
+        },
+        politicaMilitarAmazonia: {
+            teoria: typeof politicaMilitarAmazoniaTeoria !== "undefined" ? politicaMilitarAmazoniaTeoria : null,
+            titulo: "🌳 A Política Militar Voltada para a Amazônia"
+        },
+        redemocratizacaoNovaRepublicaSarneyBolsonaro: {
+            teoria: typeof redemocratizacaoNovaRepublicaSarneyBolsonaroTeoria !== "undefined" ? redemocratizacaoNovaRepublicaSarneyBolsonaroTeoria : null,
+            titulo: "🗳️ O Processo de Redemocratização e a Nova República Brasileira: de Sarney a Bolsonaro"
         }
     };
 
@@ -8052,6 +8078,8 @@ const assuntosHistoria = [
         "primeiraRepublicaEraVargas",
         "republicaLiberalDemocraticaDutraJoaoGoulart",
         "golpe1964DitaduraCivilMilitarBrasileira",
+        "politicaMilitarAmazonia",
+        "redemocratizacaoNovaRepublicaSarneyBolsonaro",
     ];
 
 const assuntosApoioEscolar = [
@@ -8317,6 +8345,8 @@ function atualizarPainelEstudos(){
     primeiraRepublicaEraVargas: "🏛️ Primeira República Brasileira e Era Vargas",
     republicaLiberalDemocraticaDutraJoaoGoulart: "🗳️ República Liberal Democrática Brasileira: de Eurico Dutra a João Goulart",
     golpe1964DitaduraCivilMilitarBrasileira: "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira",
+    politicaMilitarAmazonia: "🌳 A Política Militar Voltada para a Amazônia",
+    redemocratizacaoNovaRepublicaSarneyBolsonaro: "🗳️ Redemocratização e Nova República: de Sarney a Bolsonaro",
         interpretacao: "📖 Interpretação de Textos",
         generos: "📄 Tipologia e Gêneros Textuais",
         funcoes: "📡 Funções da Linguagem",
@@ -11329,7 +11359,9 @@ const disciplinasJogoFarol = {
             "brasilTransicaoSeculoXIXParaXX",
             "primeiraRepublicaEraVargas",
             "republicaLiberalDemocraticaDutraJoaoGoulart",
-            "golpe1964DitaduraCivilMilitarBrasileira"
+            "golpe1964DitaduraCivilMilitarBrasileira",
+            "politicaMilitarAmazonia",
+            "redemocratizacaoNovaRepublicaSarneyBolsonaro"
         ]
     },
     didatica: {
@@ -11714,6 +11746,8 @@ function nomeAssuntoJogoFarol(assunto){
         primeiraRepublicaEraVargas: "🏛️ Primeira República e Era Vargas",
         republicaLiberalDemocraticaDutraJoaoGoulart: "🗳️ República Liberal Democrática",
         golpe1964DitaduraCivilMilitarBrasileira: "🛡️ Golpe de 1964 e Ditadura",
+        politicaMilitarAmazonia: "🌳 Política Militar para a Amazônia",
+        redemocratizacaoNovaRepublicaSarneyBolsonaro: "🗳️ Redemocratização e Nova República",
         apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
         apoioLDB: "📘 LDB",
         apoioECA: "🧒 ECA",
@@ -17640,7 +17674,9 @@ const gruposDuelo = [
             { chave: "brasilTransicaoSeculoXIXParaXX", nome: "⏳ Brasil na Transição do Século XIX para o XX" },
             { chave: "primeiraRepublicaEraVargas", nome: "🏛️ Primeira República Brasileira e Era Vargas" },
             { chave: "republicaLiberalDemocraticaDutraJoaoGoulart", nome: "🗳️ República Liberal Democrática Brasileira: de Eurico Dutra a João Goulart" },
-            { chave: "golpe1964DitaduraCivilMilitarBrasileira", nome: "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira" }
+            { chave: "golpe1964DitaduraCivilMilitarBrasileira", nome: "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira" },
+            { chave: "politicaMilitarAmazonia", nome: "🌳 A Política Militar Voltada para a Amazônia" },
+            { chave: "redemocratizacaoNovaRepublicaSarneyBolsonaro", nome: "🗳️ O Processo de Redemocratização e a Nova República Brasileira: de Sarney a Bolsonaro" }
         ]
     }
 ];
