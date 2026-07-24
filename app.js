@@ -861,6 +861,18 @@ const bancoQuestoes = {
 
     redemocratizacaoNovaRepublicaSarneyBolsonaro,
 
+    novasRelacoesEconomicasBrasilGlobalizacaoMercosul,
+
+    populacoesTradicionaisBrasilOntemHoje,
+
+    civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia,
+
+    imperiosReinosAfricanosSonghaiMaliGanaPovoBanto,
+
+    civilizacoesAntiguidadeClassicaGreciaRoma,
+
+    trabalhoCulturaEconomiaMentalidadeMedievoOcidental,
+
     apoioOrganizacaoEducacao,
     apoioLDB,
     apoioECA,
@@ -2585,6 +2597,30 @@ const mapasMentaisPorAssunto = {
     "redemocratizacaoNovaRepublicaSarneyBolsonaro": {
         "titulo": "🗳️ Redemocratização e Nova República: de Sarney a Bolsonaro",
         "imagem": "imagens/mapas/redemocratizacaoNovaRepublicaSarneyBolsonaro.png"
+    },
+    "novasRelacoesEconomicasBrasilGlobalizacaoMercosul": {
+        "titulo": "🌐 Globalização e Mercosul",
+        "imagem": "imagens/mapas/novasRelacoesEconomicasBrasilGlobalizacaoMercosul.png"
+    },
+    "populacoesTradicionaisBrasilOntemHoje": {
+        "titulo": "🌿 Populações Tradicionais no Brasil",
+        "imagem": "imagens/mapas/populacoesTradicionaisBrasilOntemHoje.png"
+    },
+    "civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia": {
+        "titulo": "🏺 Civilizações da Antiguidade Oriental: Mesopotâmia, China e Índia",
+        "imagem": "imagens/mapas/civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia.png"
+    },
+    "imperiosReinosAfricanosSonghaiMaliGanaPovoBanto": {
+        "titulo": "🌍 Impérios e Reinos Africanos: Songhai, Mali, Gana e o Povo Banto",
+        "imagem": "imagens/mapas/imperiosReinosAfricanosSonghaiMaliGanaPovoBanto.png"
+    },
+    "civilizacoesAntiguidadeClassicaGreciaRoma": {
+        "titulo": "🏛️ Civilizações da Antiguidade Clássica: Grécia e Roma",
+        "imagem": "imagens/mapas/civilizacoesAntiguidadeClassicaGreciaRoma.png"
+    },
+    "trabalhoCulturaEconomiaMentalidadeMedievoOcidental": {
+        "titulo": "🏰 Trabalho, Cultura, Economia e Mentalidade no Medievo Ocidental",
+        "imagem": "imagens/mapas/trabalhoCulturaEconomiaMentalidadeMedievoOcidental.png"
     }
 };
 
@@ -2964,6 +3000,12 @@ errosAssunto++;
     golpe1964DitaduraCivilMilitarBrasileira: "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira",
     politicaMilitarAmazonia: "🌳 A Política Militar Voltada para a Amazônia",
     redemocratizacaoNovaRepublicaSarneyBolsonaro: "🗳️ Redemocratização e Nova República: de Sarney a Bolsonaro",
+    novasRelacoesEconomicasBrasilGlobalizacaoMercosul: "🌐 Globalização e Mercosul",
+    populacoesTradicionaisBrasilOntemHoje: "🌿 Populações Tradicionais no Brasil",
+    civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia: "🏺 Civilizações da Antiguidade Oriental: Mesopotâmia, China e Índia",
+    imperiosReinosAfricanosSonghaiMaliGanaPovoBanto: "🌍 Impérios e Reinos Africanos: Songhai, Mali, Gana e o Povo Banto",
+    civilizacoesAntiguidadeClassicaGreciaRoma: "🏛️ Civilizações da Antiguidade Clássica: Grécia e Roma",
+    trabalhoCulturaEconomiaMentalidadeMedievoOcidental: "🏰 Trabalho, Cultura, Economia e Mentalidade no Medievo Ocidental",
     apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
     apoioLDB: "📘 LDB e Bases da Educação Nacional",
     apoioECA: "🧒 ECA e Proteção Integral",
@@ -4389,7 +4431,13 @@ function obterBancoDisciplinaSimuladoFarol(disciplina){
             ...republicaLiberalDemocraticaDutraJoaoGoulart,
             ...golpe1964DitaduraCivilMilitarBrasileira,
             ...politicaMilitarAmazonia,
-            ...redemocratizacaoNovaRepublicaSarneyBolsonaro
+            ...redemocratizacaoNovaRepublicaSarneyBolsonaro,
+            ...novasRelacoesEconomicasBrasilGlobalizacaoMercosul,
+            ...populacoesTradicionaisBrasilOntemHoje,
+            ...civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia,
+            ...imperiosReinosAfricanosSonghaiMaliGanaPovoBanto,
+            ...civilizacoesAntiguidadeClassicaGreciaRoma,
+            ...trabalhoCulturaEconomiaMentalidadeMedievoOcidental
         ],
         ciencias: [
             ...fundamentosCiencias,
@@ -4585,7 +4633,13 @@ function iniciarSimuladoHistoria(){
         ...republicaLiberalDemocraticaDutraJoaoGoulart,
         ...golpe1964DitaduraCivilMilitarBrasileira,
         ...politicaMilitarAmazonia,
-        ...redemocratizacaoNovaRepublicaSarneyBolsonaro
+        ...redemocratizacaoNovaRepublicaSarneyBolsonaro,
+        ...novasRelacoesEconomicasBrasilGlobalizacaoMercosul,
+        ...populacoesTradicionaisBrasilOntemHoje,
+        ...civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia,
+        ...imperiosReinosAfricanosSonghaiMaliGanaPovoBanto,
+        ...civilizacoesAntiguidadeClassicaGreciaRoma,
+        ...trabalhoCulturaEconomiaMentalidadeMedievoOcidental
 
     ];
 
@@ -4828,6 +4882,30 @@ function abrirAssunto(assunto) {
         redemocratizacaoNovaRepublicaSarneyBolsonaro: {
             teoria: typeof redemocratizacaoNovaRepublicaSarneyBolsonaroTeoria !== "undefined" ? redemocratizacaoNovaRepublicaSarneyBolsonaroTeoria : null,
             titulo: "🗳️ O Processo de Redemocratização e a Nova República Brasileira: de Sarney a Bolsonaro"
+        },
+        novasRelacoesEconomicasBrasilGlobalizacaoMercosul: {
+            teoria: typeof novasRelacoesEconomicasBrasilGlobalizacaoMercosulTeoria !== "undefined" ? novasRelacoesEconomicasBrasilGlobalizacaoMercosulTeoria : null,
+            titulo: "🌐 As Novas Relações Econômicas no Brasil: Globalização e Mercosul"
+        },
+        populacoesTradicionaisBrasilOntemHoje: {
+            teoria: typeof populacoesTradicionaisBrasilOntemHojeTeoria !== "undefined" ? populacoesTradicionaisBrasilOntemHojeTeoria : null,
+            titulo: "🌿 As Populações Tradicionais no Brasil de Ontem e de Hoje"
+        },
+        civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia: {
+            teoria: typeof civilizacoesAntiguidadeOrientalMesopotamiaChinaIndiaTeoria !== "undefined" ? civilizacoesAntiguidadeOrientalMesopotamiaChinaIndiaTeoria : null,
+            titulo: "🏺 As Civilizações da Antiguidade Oriental: Mesopotâmia, China e Índia"
+        },
+        imperiosReinosAfricanosSonghaiMaliGanaPovoBanto: {
+            teoria: typeof imperiosReinosAfricanosSonghaiMaliGanaPovoBantoTeoria !== "undefined" ? imperiosReinosAfricanosSonghaiMaliGanaPovoBantoTeoria : null,
+            titulo: "🌍 Impérios e Reinos Africanos: Songhai, Mali, Gana e o Povo Banto"
+        },
+        civilizacoesAntiguidadeClassicaGreciaRoma: {
+            teoria: typeof civilizacoesAntiguidadeClassicaGreciaRomaTeoria !== "undefined" ? civilizacoesAntiguidadeClassicaGreciaRomaTeoria : null,
+            titulo: "🏛️ As Civilizações da Antiguidade Clássica: Grécia e Roma"
+        },
+        trabalhoCulturaEconomiaMentalidadeMedievoOcidental: {
+            teoria: typeof trabalhoCulturaEconomiaMentalidadeMedievoOcidentalTeoria !== "undefined" ? trabalhoCulturaEconomiaMentalidadeMedievoOcidentalTeoria : null,
+            titulo: "🏰 Trabalho, Cultura, Economia e Mentalidade no Medievo Ocidental"
         }
     };
 
@@ -8080,6 +8158,12 @@ const assuntosHistoria = [
         "golpe1964DitaduraCivilMilitarBrasileira",
         "politicaMilitarAmazonia",
         "redemocratizacaoNovaRepublicaSarneyBolsonaro",
+        "novasRelacoesEconomicasBrasilGlobalizacaoMercosul",
+        "populacoesTradicionaisBrasilOntemHoje",
+        "civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia",
+        "imperiosReinosAfricanosSonghaiMaliGanaPovoBanto",
+        "civilizacoesAntiguidadeClassicaGreciaRoma",
+        "trabalhoCulturaEconomiaMentalidadeMedievoOcidental",
     ];
 
 const assuntosApoioEscolar = [
@@ -8347,6 +8431,12 @@ function atualizarPainelEstudos(){
     golpe1964DitaduraCivilMilitarBrasileira: "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira",
     politicaMilitarAmazonia: "🌳 A Política Militar Voltada para a Amazônia",
     redemocratizacaoNovaRepublicaSarneyBolsonaro: "🗳️ Redemocratização e Nova República: de Sarney a Bolsonaro",
+    novasRelacoesEconomicasBrasilGlobalizacaoMercosul: "🌐 Globalização e Mercosul",
+    populacoesTradicionaisBrasilOntemHoje: "🌿 Populações Tradicionais no Brasil",
+    civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia: "🏺 Civilizações da Antiguidade Oriental",
+    imperiosReinosAfricanosSonghaiMaliGanaPovoBanto: "🌍 Impérios e Reinos Africanos",
+    civilizacoesAntiguidadeClassicaGreciaRoma: "🏛️ Antiguidade Clássica: Grécia e Roma",
+    trabalhoCulturaEconomiaMentalidadeMedievoOcidental: "🏰 Medievo Ocidental",
         interpretacao: "📖 Interpretação de Textos",
         generos: "📄 Tipologia e Gêneros Textuais",
         funcoes: "📡 Funções da Linguagem",
@@ -11361,7 +11451,13 @@ const disciplinasJogoFarol = {
             "republicaLiberalDemocraticaDutraJoaoGoulart",
             "golpe1964DitaduraCivilMilitarBrasileira",
             "politicaMilitarAmazonia",
-            "redemocratizacaoNovaRepublicaSarneyBolsonaro"
+            "redemocratizacaoNovaRepublicaSarneyBolsonaro",
+            "novasRelacoesEconomicasBrasilGlobalizacaoMercosul",
+            "populacoesTradicionaisBrasilOntemHoje",
+            "civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia",
+            "imperiosReinosAfricanosSonghaiMaliGanaPovoBanto",
+            "civilizacoesAntiguidadeClassicaGreciaRoma",
+            "trabalhoCulturaEconomiaMentalidadeMedievoOcidental"
         ]
     },
     didatica: {
@@ -11748,6 +11844,12 @@ function nomeAssuntoJogoFarol(assunto){
         golpe1964DitaduraCivilMilitarBrasileira: "🛡️ Golpe de 1964 e Ditadura",
         politicaMilitarAmazonia: "🌳 Política Militar para a Amazônia",
         redemocratizacaoNovaRepublicaSarneyBolsonaro: "🗳️ Redemocratização e Nova República",
+        novasRelacoesEconomicasBrasilGlobalizacaoMercosul: "🌐 Globalização e Mercosul",
+        populacoesTradicionaisBrasilOntemHoje: "🌿 Populações Tradicionais",
+        civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia: "🏺 Antiguidade Oriental",
+        imperiosReinosAfricanosSonghaiMaliGanaPovoBanto: "🌍 Impérios e Reinos Africanos",
+        civilizacoesAntiguidadeClassicaGreciaRoma: "🏛️ Antiguidade Clássica",
+        trabalhoCulturaEconomiaMentalidadeMedievoOcidental: "🏰 Medievo Ocidental",
         apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
         apoioLDB: "📘 LDB",
         apoioECA: "🧒 ECA",
@@ -17676,7 +17778,13 @@ const gruposDuelo = [
             { chave: "republicaLiberalDemocraticaDutraJoaoGoulart", nome: "🗳️ República Liberal Democrática Brasileira: de Eurico Dutra a João Goulart" },
             { chave: "golpe1964DitaduraCivilMilitarBrasileira", nome: "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira" },
             { chave: "politicaMilitarAmazonia", nome: "🌳 A Política Militar Voltada para a Amazônia" },
-            { chave: "redemocratizacaoNovaRepublicaSarneyBolsonaro", nome: "🗳️ O Processo de Redemocratização e a Nova República Brasileira: de Sarney a Bolsonaro" }
+            { chave: "redemocratizacaoNovaRepublicaSarneyBolsonaro", nome: "🗳️ O Processo de Redemocratização e a Nova República Brasileira: de Sarney a Bolsonaro" },
+            { chave: "novasRelacoesEconomicasBrasilGlobalizacaoMercosul", nome: "🌐 As Novas Relações Econômicas no Brasil: Globalização e Mercosul" },
+            { chave: "populacoesTradicionaisBrasilOntemHoje", nome: "🌿 As Populações Tradicionais no Brasil de Ontem e de Hoje" },
+            { chave: "civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia", nome: "🏺 As Civilizações da Antiguidade Oriental: Mesopotâmia, China e Índia" },
+            { chave: "imperiosReinosAfricanosSonghaiMaliGanaPovoBanto", nome: "🌍 Impérios e Reinos Africanos: Songhai, Mali, Gana e o Povo Banto" },
+            { chave: "civilizacoesAntiguidadeClassicaGreciaRoma", nome: "🏛️ Civilizações da Antiguidade Clássica: Grécia e Roma" },
+            { chave: "trabalhoCulturaEconomiaMentalidadeMedievoOcidental", nome: "🏰 Trabalho, Cultura, Economia e Mentalidade no Medievo Ocidental" }
         ]
     }
 ];
