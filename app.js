@@ -873,6 +873,16 @@ const bancoQuestoes = {
 
     trabalhoCulturaEconomiaMentalidadeMedievoOcidental,
 
+    transicaoFeudalismoCapitalismo,
+
+    europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes,
+
+    revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX,
+
+    primeiraGuerraRevolucaoRussaUniaoSovietica,
+
+    criseEconomicaMundialAvancoRegimesTotalitariosEuropa,
+
     apoioOrganizacaoEducacao,
     apoioLDB,
     apoioECA,
@@ -2621,6 +2631,26 @@ const mapasMentaisPorAssunto = {
     "trabalhoCulturaEconomiaMentalidadeMedievoOcidental": {
         "titulo": "🏰 Trabalho, Cultura, Economia e Mentalidade no Medievo Ocidental",
         "imagem": "imagens/mapas/trabalhoCulturaEconomiaMentalidadeMedievoOcidental.png"
+    },
+    "transicaoFeudalismoCapitalismo": {
+        "titulo": "💰 Transição do Feudalismo para o Capitalismo",
+        "imagem": "imagens/mapas/transicaoFeudalismoCapitalismo.png"
+    },
+    "europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes": {
+        "titulo": "👑 A Europa Moderna: Política, Cultura, Mentalidade, Religiosidade e Revoluções",
+        "imagem": "imagens/mapas/europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes.png"
+    },
+    "revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX": {
+        "titulo": "🏭 Revolução Industrial e Expansão Imperialista",
+        "imagem": "imagens/mapas/revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX.png"
+    },
+    "primeiraGuerraRevolucaoRussaUniaoSovietica": {
+        "titulo": "🌍 Primeira Guerra, Revolução Russa e União Soviética",
+        "imagem": "imagens/mapas/primeiraGuerraRevolucaoRussaUniaoSovietica.png"
+    },
+    "criseEconomicaMundialAvancoRegimesTotalitariosEuropa": {
+        "titulo": "📉 Crise Econômica Mundial e Regimes Totalitários",
+        "imagem": "imagens/mapas/criseEconomicaMundialAvancoRegimesTotalitariosEuropa.png"
     }
 };
 
@@ -3006,6 +3036,11 @@ errosAssunto++;
     imperiosReinosAfricanosSonghaiMaliGanaPovoBanto: "🌍 Impérios e Reinos Africanos: Songhai, Mali, Gana e o Povo Banto",
     civilizacoesAntiguidadeClassicaGreciaRoma: "🏛️ Civilizações da Antiguidade Clássica: Grécia e Roma",
     trabalhoCulturaEconomiaMentalidadeMedievoOcidental: "🏰 Trabalho, Cultura, Economia e Mentalidade no Medievo Ocidental",
+    transicaoFeudalismoCapitalismo: "💰 Transição do Feudalismo para o Capitalismo",
+    europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes: "👑 A Europa Moderna: Política, Cultura, Mentalidade, Religiosidade e Revoluções",
+    revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX: "🏭 A Europa da Revolução Industrial e a Expansão Imperialista dos Séculos XIX e XX",
+    primeiraGuerraRevolucaoRussaUniaoSovietica: "🌍 A Primeira Grande Guerra, a Revolução Russa e a União Soviética",
+    criseEconomicaMundialAvancoRegimesTotalitariosEuropa: "📉 A Crise Econômica Mundial e o Avanço dos Regimes Totalitários pela Europa",
     apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
     apoioLDB: "📘 LDB e Bases da Educação Nacional",
     apoioECA: "🧒 ECA e Proteção Integral",
@@ -4437,7 +4472,12 @@ function obterBancoDisciplinaSimuladoFarol(disciplina){
             ...civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia,
             ...imperiosReinosAfricanosSonghaiMaliGanaPovoBanto,
             ...civilizacoesAntiguidadeClassicaGreciaRoma,
-            ...trabalhoCulturaEconomiaMentalidadeMedievoOcidental
+            ...trabalhoCulturaEconomiaMentalidadeMedievoOcidental,
+            ...transicaoFeudalismoCapitalismo,
+            ...europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes,
+            ...revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX,
+            ...primeiraGuerraRevolucaoRussaUniaoSovietica,
+            ...criseEconomicaMundialAvancoRegimesTotalitariosEuropa
         ],
         ciencias: [
             ...fundamentosCiencias,
@@ -4639,7 +4679,12 @@ function iniciarSimuladoHistoria(){
         ...civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia,
         ...imperiosReinosAfricanosSonghaiMaliGanaPovoBanto,
         ...civilizacoesAntiguidadeClassicaGreciaRoma,
-        ...trabalhoCulturaEconomiaMentalidadeMedievoOcidental
+        ...trabalhoCulturaEconomiaMentalidadeMedievoOcidental,
+        ...transicaoFeudalismoCapitalismo,
+        ...europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes,
+        ...revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX,
+        ...primeiraGuerraRevolucaoRussaUniaoSovietica,
+        ...criseEconomicaMundialAvancoRegimesTotalitariosEuropa
 
     ];
 
@@ -4906,6 +4951,26 @@ function abrirAssunto(assunto) {
         trabalhoCulturaEconomiaMentalidadeMedievoOcidental: {
             teoria: typeof trabalhoCulturaEconomiaMentalidadeMedievoOcidentalTeoria !== "undefined" ? trabalhoCulturaEconomiaMentalidadeMedievoOcidentalTeoria : null,
             titulo: "🏰 Trabalho, Cultura, Economia e Mentalidade no Medievo Ocidental"
+        },
+        transicaoFeudalismoCapitalismo: {
+            teoria: typeof transicaoFeudalismoCapitalismoTeoria !== "undefined" ? transicaoFeudalismoCapitalismoTeoria : null,
+            titulo: "💰 Transição do Feudalismo para o Capitalismo"
+        },
+        europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes: {
+            teoria: typeof europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoesTeoria !== "undefined" ? europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoesTeoria : null,
+            titulo: "👑 A Europa Moderna: Política, Cultura, Mentalidade, Religiosidade e Revoluções"
+        },
+        revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX: {
+            teoria: typeof revolucaoIndustrialExpansaoImperialistaSeculosXIXeXXTeoria !== "undefined" ? revolucaoIndustrialExpansaoImperialistaSeculosXIXeXXTeoria : null,
+            titulo: "🏭 A Europa da Revolução Industrial e a Expansão Imperialista dos Séculos XIX e XX"
+        },
+        primeiraGuerraRevolucaoRussaUniaoSovietica: {
+            teoria: typeof primeiraGuerraRevolucaoRussaUniaoSovieticaTeoria !== "undefined" ? primeiraGuerraRevolucaoRussaUniaoSovieticaTeoria : null,
+            titulo: "🌍 A Primeira Grande Guerra, a Revolução Russa e a União Soviética"
+        },
+        criseEconomicaMundialAvancoRegimesTotalitariosEuropa: {
+            teoria: typeof criseEconomicaMundialAvancoRegimesTotalitariosEuropaTeoria !== "undefined" ? criseEconomicaMundialAvancoRegimesTotalitariosEuropaTeoria : null,
+            titulo: "📉 A Crise Econômica Mundial e o Avanço dos Regimes Totalitários pela Europa"
         }
     };
 
@@ -8164,6 +8229,11 @@ const assuntosHistoria = [
         "imperiosReinosAfricanosSonghaiMaliGanaPovoBanto",
         "civilizacoesAntiguidadeClassicaGreciaRoma",
         "trabalhoCulturaEconomiaMentalidadeMedievoOcidental",
+        "transicaoFeudalismoCapitalismo",
+        "europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes",
+        "revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX",
+        "primeiraGuerraRevolucaoRussaUniaoSovietica",
+        "criseEconomicaMundialAvancoRegimesTotalitariosEuropa",
     ];
 
 const assuntosApoioEscolar = [
@@ -8437,6 +8507,11 @@ function atualizarPainelEstudos(){
     imperiosReinosAfricanosSonghaiMaliGanaPovoBanto: "🌍 Impérios e Reinos Africanos",
     civilizacoesAntiguidadeClassicaGreciaRoma: "🏛️ Antiguidade Clássica: Grécia e Roma",
     trabalhoCulturaEconomiaMentalidadeMedievoOcidental: "🏰 Medievo Ocidental",
+    transicaoFeudalismoCapitalismo: "💰 Transição Feudalismo–Capitalismo",
+    europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes: "👑 Europa Moderna",
+    revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX: "🏭 Revolução Industrial e Imperialismo",
+    primeiraGuerraRevolucaoRussaUniaoSovietica: "🌍 Primeira Guerra e Revolução Russa",
+    criseEconomicaMundialAvancoRegimesTotalitariosEuropa: "📉 Crise de 1929 e Totalitarismos",
         interpretacao: "📖 Interpretação de Textos",
         generos: "📄 Tipologia e Gêneros Textuais",
         funcoes: "📡 Funções da Linguagem",
@@ -11457,7 +11532,12 @@ const disciplinasJogoFarol = {
             "civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia",
             "imperiosReinosAfricanosSonghaiMaliGanaPovoBanto",
             "civilizacoesAntiguidadeClassicaGreciaRoma",
-            "trabalhoCulturaEconomiaMentalidadeMedievoOcidental"
+            "trabalhoCulturaEconomiaMentalidadeMedievoOcidental",
+            "transicaoFeudalismoCapitalismo",
+            "europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes",
+            "revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX",
+            "primeiraGuerraRevolucaoRussaUniaoSovietica",
+            "criseEconomicaMundialAvancoRegimesTotalitariosEuropa"
         ]
     },
     didatica: {
@@ -11850,6 +11930,11 @@ function nomeAssuntoJogoFarol(assunto){
         imperiosReinosAfricanosSonghaiMaliGanaPovoBanto: "🌍 Impérios e Reinos Africanos",
         civilizacoesAntiguidadeClassicaGreciaRoma: "🏛️ Antiguidade Clássica",
         trabalhoCulturaEconomiaMentalidadeMedievoOcidental: "🏰 Medievo Ocidental",
+        transicaoFeudalismoCapitalismo: "💰 Transição Feudalismo–Capitalismo",
+        europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes: "👑 Europa Moderna",
+        revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX: "🏭 Revolução Industrial e Imperialismo",
+        primeiraGuerraRevolucaoRussaUniaoSovietica: "🌍 Primeira Guerra e Revolução Russa",
+        criseEconomicaMundialAvancoRegimesTotalitariosEuropa: "📉 Crise de 1929 e Totalitarismos",
         apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
         apoioLDB: "📘 LDB",
         apoioECA: "🧒 ECA",
@@ -17784,7 +17869,12 @@ const gruposDuelo = [
             { chave: "civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia", nome: "🏺 As Civilizações da Antiguidade Oriental: Mesopotâmia, China e Índia" },
             { chave: "imperiosReinosAfricanosSonghaiMaliGanaPovoBanto", nome: "🌍 Impérios e Reinos Africanos: Songhai, Mali, Gana e o Povo Banto" },
             { chave: "civilizacoesAntiguidadeClassicaGreciaRoma", nome: "🏛️ Civilizações da Antiguidade Clássica: Grécia e Roma" },
-            { chave: "trabalhoCulturaEconomiaMentalidadeMedievoOcidental", nome: "🏰 Trabalho, Cultura, Economia e Mentalidade no Medievo Ocidental" }
+            { chave: "trabalhoCulturaEconomiaMentalidadeMedievoOcidental", nome: "🏰 Trabalho, Cultura, Economia e Mentalidade no Medievo Ocidental" },
+            { chave: "transicaoFeudalismoCapitalismo", nome: "💰 Transição do Feudalismo para o Capitalismo" },
+            { chave: "europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes", nome: "👑 A Europa Moderna: Política, Cultura, Mentalidade, Religiosidade e Revoluções" },
+            { chave: "revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX", nome: "🏭 A Europa da Revolução Industrial e a Expansão Imperialista dos Séculos XIX e XX" },
+            { chave: "primeiraGuerraRevolucaoRussaUniaoSovietica", nome: "🌍 A Primeira Grande Guerra, a Revolução Russa e a União Soviética" },
+            { chave: "criseEconomicaMundialAvancoRegimesTotalitariosEuropa", nome: "📉 A Crise Econômica Mundial e o Avanço dos Regimes Totalitários pela Europa" }
         ]
     }
 ];
