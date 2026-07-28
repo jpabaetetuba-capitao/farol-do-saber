@@ -883,6 +883,14 @@ const bancoQuestoes = {
 
     criseEconomicaMundialAvancoRegimesTotalitariosEuropa,
 
+    segundaGuerraMundialGuerraFria,
+
+    dissolucaoBlocoSocialista,
+
+    lutasResistenciasIndependenciasDescolonizacoesAfricaAsia,
+
+    mundoContemporaneoEraGlobalizacao,
+
     apoioOrganizacaoEducacao,
     apoioLDB,
     apoioECA,
@@ -2651,6 +2659,22 @@ const mapasMentaisPorAssunto = {
     "criseEconomicaMundialAvancoRegimesTotalitariosEuropa": {
         "titulo": "📉 Crise Econômica Mundial e Regimes Totalitários",
         "imagem": "imagens/mapas/criseEconomicaMundialAvancoRegimesTotalitariosEuropa.png"
+    },
+    "segundaGuerraMundialGuerraFria": {
+        "titulo": "🌐 Segunda Guerra Mundial e Guerra Fria",
+        "imagem": "imagens/mapas/segundaGuerraMundialGuerraFria.png"
+    },
+    "dissolucaoBlocoSocialista": {
+        "titulo": "🧱 Dissolução do Bloco Socialista",
+        "imagem": "imagens/mapas/dissolucaoBlocoSocialista.png"
+    },
+    "lutasResistenciasIndependenciasDescolonizacoesAfricaAsia": {
+        "titulo": "✊ Descolonizações da África e Ásia",
+        "imagem": "imagens/mapas/lutasResistenciasIndependenciasDescolonizacoesAfricaAsia.png"
+    },
+    "mundoContemporaneoEraGlobalizacao": {
+        "titulo": "🌍 Mundo Contemporâneo e Globalização",
+        "imagem": "imagens/mapas/mundoContemporaneoEraGlobalizacao.png"
     }
 };
 
@@ -3041,6 +3065,10 @@ errosAssunto++;
     revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX: "🏭 A Europa da Revolução Industrial e a Expansão Imperialista dos Séculos XIX e XX",
     primeiraGuerraRevolucaoRussaUniaoSovietica: "🌍 A Primeira Grande Guerra, a Revolução Russa e a União Soviética",
     criseEconomicaMundialAvancoRegimesTotalitariosEuropa: "📉 A Crise Econômica Mundial e o Avanço dos Regimes Totalitários pela Europa",
+    segundaGuerraMundialGuerraFria: "🌐 A Segunda Guerra Mundial e a Guerra Fria",
+    dissolucaoBlocoSocialista: "🧱 Dissolução do Bloco Socialista",
+    lutasResistenciasIndependenciasDescolonizacoesAfricaAsia: "✊ Lutas e Resistências nas Descolonizações da África e Ásia",
+    mundoContemporaneoEraGlobalizacao: "🌍 O Mundo Contemporâneo na Era da Globalização",
     apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
     apoioLDB: "📘 LDB e Bases da Educação Nacional",
     apoioECA: "🧒 ECA e Proteção Integral",
@@ -4477,7 +4505,11 @@ function obterBancoDisciplinaSimuladoFarol(disciplina){
             ...europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes,
             ...revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX,
             ...primeiraGuerraRevolucaoRussaUniaoSovietica,
-            ...criseEconomicaMundialAvancoRegimesTotalitariosEuropa
+            ...criseEconomicaMundialAvancoRegimesTotalitariosEuropa,
+            ...segundaGuerraMundialGuerraFria,
+            ...dissolucaoBlocoSocialista,
+            ...lutasResistenciasIndependenciasDescolonizacoesAfricaAsia,
+            ...mundoContemporaneoEraGlobalizacao
         ],
         ciencias: [
             ...fundamentosCiencias,
@@ -4684,7 +4716,11 @@ function iniciarSimuladoHistoria(){
         ...europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes,
         ...revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX,
         ...primeiraGuerraRevolucaoRussaUniaoSovietica,
-        ...criseEconomicaMundialAvancoRegimesTotalitariosEuropa
+        ...criseEconomicaMundialAvancoRegimesTotalitariosEuropa,
+        ...segundaGuerraMundialGuerraFria,
+        ...dissolucaoBlocoSocialista,
+        ...lutasResistenciasIndependenciasDescolonizacoesAfricaAsia,
+        ...mundoContemporaneoEraGlobalizacao
 
     ];
 
@@ -4971,6 +5007,22 @@ function abrirAssunto(assunto) {
         criseEconomicaMundialAvancoRegimesTotalitariosEuropa: {
             teoria: typeof criseEconomicaMundialAvancoRegimesTotalitariosEuropaTeoria !== "undefined" ? criseEconomicaMundialAvancoRegimesTotalitariosEuropaTeoria : null,
             titulo: "📉 A Crise Econômica Mundial e o Avanço dos Regimes Totalitários pela Europa"
+        },
+        segundaGuerraMundialGuerraFria: {
+            teoria: typeof segundaGuerraMundialGuerraFriaTeoria !== "undefined" ? segundaGuerraMundialGuerraFriaTeoria : null,
+            titulo: "🌐 A Segunda Guerra Mundial e a Guerra Fria"
+        },
+        dissolucaoBlocoSocialista: {
+            teoria: typeof dissolucaoBlocoSocialistaTeoria !== "undefined" ? dissolucaoBlocoSocialistaTeoria : null,
+            titulo: "🧱 Dissolução do Bloco Socialista"
+        },
+        lutasResistenciasIndependenciasDescolonizacoesAfricaAsia: {
+            teoria: typeof lutasResistenciasIndependenciasDescolonizacoesAfricaAsiaTeoria !== "undefined" ? lutasResistenciasIndependenciasDescolonizacoesAfricaAsiaTeoria : null,
+            titulo: "✊ Lutas e Resistências nas Independências e Descolonizações da África e Ásia"
+        },
+        mundoContemporaneoEraGlobalizacao: {
+            teoria: typeof mundoContemporaneoEraGlobalizacaoTeoria !== "undefined" ? mundoContemporaneoEraGlobalizacaoTeoria : null,
+            titulo: "🌍 O Mundo Contemporâneo na Era da Globalização"
         }
     };
 
@@ -8234,6 +8286,10 @@ const assuntosHistoria = [
         "revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX",
         "primeiraGuerraRevolucaoRussaUniaoSovietica",
         "criseEconomicaMundialAvancoRegimesTotalitariosEuropa",
+        "segundaGuerraMundialGuerraFria",
+        "dissolucaoBlocoSocialista",
+        "lutasResistenciasIndependenciasDescolonizacoesAfricaAsia",
+        "mundoContemporaneoEraGlobalizacao",
     ];
 
 const assuntosApoioEscolar = [
@@ -8512,6 +8568,10 @@ function atualizarPainelEstudos(){
     revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX: "🏭 Revolução Industrial e Imperialismo",
     primeiraGuerraRevolucaoRussaUniaoSovietica: "🌍 Primeira Guerra e Revolução Russa",
     criseEconomicaMundialAvancoRegimesTotalitariosEuropa: "📉 Crise de 1929 e Totalitarismos",
+    segundaGuerraMundialGuerraFria: "🌐 Segunda Guerra e Guerra Fria",
+    dissolucaoBlocoSocialista: "🧱 Dissolução do Bloco Socialista",
+    lutasResistenciasIndependenciasDescolonizacoesAfricaAsia: "✊ Descolonizações da África e Ásia",
+    mundoContemporaneoEraGlobalizacao: "🌍 Mundo Contemporâneo e Globalização",
         interpretacao: "📖 Interpretação de Textos",
         generos: "📄 Tipologia e Gêneros Textuais",
         funcoes: "📡 Funções da Linguagem",
@@ -11537,7 +11597,11 @@ const disciplinasJogoFarol = {
             "europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes",
             "revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX",
             "primeiraGuerraRevolucaoRussaUniaoSovietica",
-            "criseEconomicaMundialAvancoRegimesTotalitariosEuropa"
+            "criseEconomicaMundialAvancoRegimesTotalitariosEuropa",
+            "segundaGuerraMundialGuerraFria",
+            "dissolucaoBlocoSocialista",
+            "lutasResistenciasIndependenciasDescolonizacoesAfricaAsia",
+            "mundoContemporaneoEraGlobalizacao"
         ]
     },
     didatica: {
@@ -11935,6 +11999,10 @@ function nomeAssuntoJogoFarol(assunto){
         revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX: "🏭 Revolução Industrial e Imperialismo",
         primeiraGuerraRevolucaoRussaUniaoSovietica: "🌍 Primeira Guerra e Revolução Russa",
         criseEconomicaMundialAvancoRegimesTotalitariosEuropa: "📉 Crise de 1929 e Totalitarismos",
+        segundaGuerraMundialGuerraFria: "🌐 Segunda Guerra e Guerra Fria",
+        dissolucaoBlocoSocialista: "🧱 Dissolução do Bloco Socialista",
+        lutasResistenciasIndependenciasDescolonizacoesAfricaAsia: "✊ Descolonizações da África e Ásia",
+        mundoContemporaneoEraGlobalizacao: "🌍 Mundo Contemporâneo e Globalização",
         apoioOrganizacaoEducacao: "🏫 Organização da Educação Básica",
         apoioLDB: "📘 LDB",
         apoioECA: "🧒 ECA",
@@ -17874,7 +17942,11 @@ const gruposDuelo = [
             { chave: "europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes", nome: "👑 A Europa Moderna: Política, Cultura, Mentalidade, Religiosidade e Revoluções" },
             { chave: "revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX", nome: "🏭 A Europa da Revolução Industrial e a Expansão Imperialista dos Séculos XIX e XX" },
             { chave: "primeiraGuerraRevolucaoRussaUniaoSovietica", nome: "🌍 A Primeira Grande Guerra, a Revolução Russa e a União Soviética" },
-            { chave: "criseEconomicaMundialAvancoRegimesTotalitariosEuropa", nome: "📉 A Crise Econômica Mundial e o Avanço dos Regimes Totalitários pela Europa" }
+            { chave: "criseEconomicaMundialAvancoRegimesTotalitariosEuropa", nome: "📉 A Crise Econômica Mundial e o Avanço dos Regimes Totalitários pela Europa" },
+            { chave: "segundaGuerraMundialGuerraFria", nome: "🌐 A Segunda Guerra Mundial e a Guerra Fria" },
+            { chave: "dissolucaoBlocoSocialista", nome: "🧱 Dissolução do Bloco Socialista" },
+            { chave: "lutasResistenciasIndependenciasDescolonizacoesAfricaAsia", nome: "✊ Lutas e Resistências nas Independências e Descolonizações da África e Ásia" },
+            { chave: "mundoContemporaneoEraGlobalizacao", nome: "🌍 O Mundo Contemporâneo na Era da Globalização" }
         ]
     }
 ];
