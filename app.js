@@ -4376,11 +4376,12 @@ function iniciarSimuladoPersonalizado(
 
 tipoSimuladoAtual = tipo || "personalizado";
 
-    questoesSimulado =
-
-        [...banco]
-        .sort(() => Math.random() - 0.5)
-        .slice(0, quantidade);
+    // Distribui a rodada entre os subtemas do conteúdo. Assim, simulados
+    // personalizados não ficam concentrados em apenas um capítulo.
+    questoesSimulado = selecionarQuestoesBalanceadasPorSubtopico(
+        banco,
+        Math.min(quantidade, banco.length)
+    );
 
     modoSimulado = true;
 
@@ -6707,6 +6708,30 @@ function salvarOrdemQuestoes(assunto, questoes){
     );
 }
 
+function selecaoCobreTodosSubtopicosPossiveis(base, selecionadas, limite){
+    if(!Array.isArray(base) || !Array.isArray(selecionadas)){
+        return false;
+    }
+
+    const subtopicosBanco = new Set(
+        base.map(q => String(q.subtopico || "geral").trim() || "geral")
+    );
+
+    // Só é possível exigir todos os subtemas quando a rodada comporta
+    // pelo menos uma questão de cada grupo.
+    if(limite < subtopicosBanco.size){
+        return selecionadas.length === limite;
+    }
+
+    const subtopicosSelecionados = new Set(
+        selecionadas.map(q => String(q.subtopico || "geral").trim() || "geral")
+    );
+
+    return [...subtopicosBanco].every(subtopico => {
+        return subtopicosSelecionados.has(subtopico);
+    });
+}
+
 function carregarQuestoesNaOrdemSalva(assunto){
     const base = bancoQuestoes[assunto];
 
@@ -6727,7 +6752,10 @@ function carregarQuestoesNaOrdemSalva(assunto){
             .filter(Boolean)
             .slice(0, limite);
 
-        if(ordenadas.length > 0){
+        if(
+            ordenadas.length === limite &&
+            selecaoCobreTodosSubtopicosPossiveis(base, ordenadas, limite)
+        ){
             // Corrige ordens antigas que tinham o banco inteiro salvo.
             salvarOrdemQuestoes(assunto, ordenadas);
             return ordenadas;
@@ -19348,7 +19376,7 @@ function voltarCargosProvasFarol(){
 
 /* ==========================================================
    PATCH FAROL DO SABER — PROFESSOR DE GEOGRAFIA
-   Etapa 4: Tópicos 1, 2, 3 e 4 liberados
+   Etapa 6: módulos 1, 2, 3, 4, 5, 6 e 12 liberados
 ========================================================== */
 (function(){
     const topicosGeografiaFarol = [
@@ -19356,13 +19384,13 @@ function voltarCargosProvasFarol(){
         {chave:"cartografiaGeografia", nome:"🗺️ Cartografia e Representação do Espaço", titulo:"🗺️ Cartografia e Representação do Espaço", teoriaNome:"cartografiaGeografiaTeoria", bancoNome:"cartografiaGeografia", mapa:"imagens/mapas/CartografiaGeografia.png", liberado:true},
         {chave:"geografiaFisicaEstruturaTerra", nome:"⛰️ Geografia Física e Estrutura da Terra", titulo:"⛰️ Geografia Física e Estrutura da Terra", teoriaNome:"geografiaFisicaEstruturaTerraTeoria", bancoNome:"geografiaFisicaEstruturaTerra", mapa:"imagens/mapas/GeografiaFisicaEstruturaTerra.png", liberado:true},
         {chave:"climaDinamicaClimatica", nome:"🌦️ Clima e Dinâmica Climática", titulo:"🌦️ Clima e Dinâmica Climática", teoriaNome:"climaDinamicaClimaticaTeoria", bancoNome:"climaDinamicaClimatica", mapa:"imagens/mapas/ClimaDinamicaClimatica.png", liberado:true},
-        {chave:"hidrografiaVegetacaoMeioAmbienteGeo", nome:"💧 Hidrografia, Vegetação e Meio Ambiente", liberado:false},
-        {chave:"populacaoMundialBrasileira", nome:"👥 População Mundial e Brasileira", liberado:false},
-        {chave:"espacoIndustrialMundialBrasileiro", nome:"🏭 Espaço Industrial Mundial e Brasileiro", liberado:false},
-        {chave:"espacoUrbanoMundialBrasileiro", nome:"🏙️ Espaço Urbano Mundial e Brasileiro", liberado:false},
-        {chave:"espacoAgrarioMundialBrasileiro", nome:"🌾 Espaço Agrário Mundial e Brasileiro", liberado:false},
-        {chave:"regionalizacaoEspacoMundialBrasileiro", nome:"🧭 Regionalização do Espaço Mundial e Brasileiro", liberado:false},
-        {chave:"geopoliticaMundial", nome:"🌐 Geopolítica Mundial", liberado:false},
+        {chave:"hidrografiaVegetacaoMeioAmbienteGeo", nome:"💧 Hidrografia, Vegetação e Meio Ambiente", titulo:"💧 Hidrografia, Vegetação e Meio Ambiente", teoriaNome:"hidrografiaVegetacaoMeioAmbienteGeoTeoria", bancoNome:"hidrografiaVegetacaoMeioAmbienteGeo", mapa:"imagens/mapas/HidrografiaVegetacaoMeioAmbienteGeo.png", liberado:true},
+        {chave:"populacaoMundialBrasileira", nome:"👥 População Mundial e Brasileira", titulo:"👥 População Mundial e Brasileira", teoriaNome:"populacaoMundialBrasileiraTeoria", bancoNome:"populacaoMundialBrasileira", mapa:"imagens/mapas/PopulacaoMundialBrasileira.png", liberado:true},
+        {chave:"espacoIndustrialMundialBrasileiro", nome:"🏭 Espaço Industrial Mundial e Brasileiro", titulo:"🏭 Espaço Industrial Mundial e Brasileiro", teoriaNome:"espacoIndustrialMundialBrasileiroTeoria", bancoNome:"espacoIndustrialMundialBrasileiro", mapa:"imagens/mapas/EspacoIndustrialMundialBrasileiro.png", liberado:true},
+        {chave:"espacoUrbanoMundialBrasileiro", nome:"🏙️ Espaço Urbano Mundial e Brasileiro", titulo:"🏙️ Espaço Urbano Mundial e Brasileiro", teoriaNome:"espacoUrbanoMundialBrasileiroTeoria", bancoNome:"espacoUrbanoMundialBrasileiro", mapa:"imagens/mapas/EspacoUrbanoMundialBrasileiro.png", liberado:true},
+        {chave:"espacoAgrarioMundialBrasileiro", nome:"🌾 Espaço Agrário Mundial e Brasileiro", titulo:"🌾 Espaço Agrário Mundial e Brasileiro", teoriaNome:"espacoAgrarioMundialBrasileiroTeoria", bancoNome:"espacoAgrarioMundialBrasileiro", mapa:"imagens/mapas/EspacoAgrarioMundialBrasileiro.png", liberado:true},
+        {chave:"regionalizacaoEspacoMundialBrasileiro", nome:"🧭 Regionalização do Espaço Mundial e Brasileiro", titulo:"🧭 Regionalização do Espaço Mundial e Brasileiro", teoriaNome:"regionalizacaoEspacoMundialBrasileiroTeoria", bancoNome:"regionalizacaoEspacoMundialBrasileiro", mapa:"imagens/mapas/RegionalizacaoEspacoMundialBrasileiro.png", liberado:true},
+        {chave:"geopoliticaMundial", nome:"🌐 Geopolítica Mundial", titulo:"🌐 Geopolítica Mundial", teoriaNome:"geopoliticaMundialTeoria", bancoNome:"geopoliticaMundial", mapa:"imagens/mapas/GeopoliticaMundial.png", liberado:true},
         {chave:"geografiaParaBarcarena", nome:"🏞️ Geografia do Pará e de Barcarena", titulo:"🏞️ Geografia do Pará e de Barcarena", teoriaNome:"geografiaParaBarcarenaTeoria", bancoNome:"geografiaParaBarcarena", mapa:"imagens/mapas/GeografiaParaBarcarena.png", liberado:true}
     ];
 

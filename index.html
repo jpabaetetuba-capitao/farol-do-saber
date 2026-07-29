@@ -7,6 +7,100 @@
     <title>🗼 Farol do Saber</title>
 
     <link rel="stylesheet" href="style.css">
+<style>
+/* Recursos editoriais Farol do Saber — teoria premium de Geografia */
+.farol-quadro{
+    margin:18px 0;
+    padding:16px 18px;
+    border-radius:12px;
+    border-left:6px solid #1565c0;
+    background:#eef6ff;
+    line-height:1.55;
+}
+.farol-quadro strong{
+    display:block;
+    margin-bottom:7px;
+    color:#0d3f75;
+}
+.farol-dica{background:#fff8df;border-color:#f0a000;}
+.farol-expert{background:#eef8ee;border-color:#2e7d32;}
+.farol-alerta{background:#fff0ed;border-color:#d84315;}
+.farol-memorize{background:#f5efff;border-color:#6a1b9a;}
+.farol-tabela-wrap{
+    width:100%;
+    overflow-x:auto;
+    margin:18px 0;
+}
+.farol-tabela{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    font-size:.96rem;
+}
+.farol-tabela th,
+.farol-tabela td{
+    padding:11px 12px;
+    border:1px solid #cfd8dc;
+    text-align:left;
+    vertical-align:top;
+}
+.farol-tabela th{
+    background:#123e68;
+    color:#fff;
+}
+.farol-tabela tbody tr:nth-child(even){background:#f5f8fa;}
+.farol-fluxo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:18px 0;
+    padding:14px;
+    border:1px solid #bbdefb;
+    border-radius:12px;
+    background:#f4f9ff;
+}
+.farol-fluxo span{
+    padding:9px 12px;
+    border-radius:9px;
+    background:#1565c0;
+    color:#fff;
+    font-weight:700;
+}
+.farol-fluxo b{color:#ef6c00;font-size:1.25rem;}
+.farol-titulo-premium{
+    margin:0 0 18px;
+    color:#087f5b;
+    font-size:1.55rem;
+}
+.caixa-exemplo,
+.farol-pegadinhas,
+.farol-questoes-comentadas{
+    margin:18px 0;
+    padding:16px 18px;
+    border-radius:12px;
+    background:#f7fbff;
+    border:1px solid #bbdefb;
+    line-height:1.55;
+}
+.farol-pegadinhas{background:#fff8ed;border-color:#ffd29c;}
+.farol-pegadinhas ul{margin:10px 0 0;padding-left:22px;}
+.farol-pegadinhas li{margin:10px 0;}
+.farol-revisao-titulo{color:#087f5b;margin-top:22px;}
+.farol-questao-comentada{
+    margin:14px 0;
+    padding:14px;
+    border-left:5px solid #087f5b;
+    border-radius:8px;
+    background:#fff;
+    line-height:1.65;
+}
+@media(max-width:640px){
+    .farol-tabela{font-size:.88rem;}
+    .farol-tabela th,.farol-tabela td{padding:9px;}
+}
+</style>
 </head>
 
 <body>
@@ -1141,11 +1235,11 @@ onclick="abrirAssunto('fundamentosFisica')">
 
         <br><br>
 
-        <p>Selecione um assunto do edital:</p>
+        <p>Selecione um módulo da trilha, organizado a partir dos itens do edital:</p>
 
         <div class="aviso-farol aviso-farol-compacto">
-            <strong>✅ Tópicos 1, 2, 3, 4 e 12 liberados.</strong>
-            <span>Os demais tópicos já aparecem na trilha e serão liberados um por um.</span>
+            <strong>✅ Módulos 1 a 12 liberados.</strong>
+            <span>A numeração abaixo organiza pedagogicamente todo o conteúdo do edital de Geografia.</span>
         </div>
 
         <br>
@@ -1155,13 +1249,13 @@ onclick="abrirAssunto('fundamentosFisica')">
             <button class="btn-assunto" onclick="abrirAssunto('cartografiaGeografia')">🗺️ 2. Cartografia e Representação do Espaço</button>
             <button class="btn-assunto" onclick="abrirAssunto('geografiaFisicaEstruturaTerra')">⛰️ 3. Geografia Física e Estrutura da Terra</button>
             <button class="btn-assunto" onclick="abrirAssunto('climaDinamicaClimatica')">🌦️ 4. Clima e Dinâmica Climática</button>
-            <button class="btn-assunto btn-assunto-bloqueado" onclick="abrirAssunto('hidrografiaVegetacaoMeioAmbienteGeo')">💧 5. Hidrografia, Vegetação e Meio Ambiente<small>Em construção</small></button>
-            <button class="btn-assunto btn-assunto-bloqueado" onclick="abrirAssunto('populacaoMundialBrasileira')">👥 6. População Mundial e Brasileira<small>Em construção</small></button>
-            <button class="btn-assunto btn-assunto-bloqueado" onclick="abrirAssunto('espacoIndustrialMundialBrasileiro')">🏭 7. Espaço Industrial Mundial e Brasileiro<small>Em construção</small></button>
-            <button class="btn-assunto btn-assunto-bloqueado" onclick="abrirAssunto('espacoUrbanoMundialBrasileiro')">🏙️ 8. Espaço Urbano Mundial e Brasileiro<small>Em construção</small></button>
-            <button class="btn-assunto btn-assunto-bloqueado" onclick="abrirAssunto('espacoAgrarioMundialBrasileiro')">🌾 9. Espaço Agrário Mundial e Brasileiro<small>Em construção</small></button>
-            <button class="btn-assunto btn-assunto-bloqueado" onclick="abrirAssunto('regionalizacaoEspacoMundialBrasileiro')">🧭 10. Regionalização do Espaço Mundial e Brasileiro<small>Em construção</small></button>
-            <button class="btn-assunto btn-assunto-bloqueado" onclick="abrirAssunto('geopoliticaMundial')">🌐 11. Geopolítica Mundial<small>Em construção</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('hidrografiaVegetacaoMeioAmbienteGeo')">💧 5. Hidrografia, Vegetação e Meio Ambiente</button>
+            <button class="btn-assunto" onclick="abrirAssunto('populacaoMundialBrasileira')">👥 6. População Mundial e Brasileira</button>
+            <button class="btn-assunto" onclick="abrirAssunto('espacoIndustrialMundialBrasileiro')">🏭 7. Espaço Industrial Mundial e Brasileiro</button>
+            <button class="btn-assunto" onclick="abrirAssunto('espacoUrbanoMundialBrasileiro')">🏙️ 8. Espaço Urbano Mundial e Brasileiro</button>
+            <button class="btn-assunto" onclick="abrirAssunto('espacoAgrarioMundialBrasileiro')">🌾 9. Espaço Agrário Mundial e Brasileiro</button>
+            <button class="btn-assunto" onclick="abrirAssunto('regionalizacaoEspacoMundialBrasileiro')">🧭 10. Regionalização do Espaço Mundial e Brasileiro</button>
+            <button class="btn-assunto" onclick="abrirAssunto('geopoliticaMundial')">🌐 11. Geopolítica Mundial</button>
             <button class="btn-assunto" onclick="abrirAssunto('geografiaParaBarcarena')">🏞️ 12. Geografia do Pará e de Barcarena</button>
         </div>
 
@@ -3513,6 +3607,20 @@ Li e revisei o mapa mental.
 <script src="dados/teorias/geografiaFisicaEstruturaTerraTeoria.js"></script>
 <script src="dados/climaDinamicaClimatica.js"></script>
 <script src="dados/teorias/climaDinamicaClimaticaTeoria.js"></script>
+<script src="dados/hidrografiaVegetacaoMeioAmbienteGeo.js"></script>
+<script src="dados/teorias/hidrografiaVegetacaoMeioAmbienteGeoTeoria.js"></script>
+<script src="dados/populacaoMundialBrasileira.js"></script>
+<script src="dados/teorias/populacaoMundialBrasileiraTeoria.js"></script>
+<script src="dados/espacoIndustrialMundialBrasileiro.js"></script>
+<script src="dados/teorias/espacoIndustrialMundialBrasileiroTeoria.js"></script>
+<script src="dados/espacoUrbanoMundialBrasileiro.js"></script>
+<script src="dados/teorias/espacoUrbanoMundialBrasileiroTeoria.js"></script>
+<script src="dados/espacoAgrarioMundialBrasileiro.js"></script>
+<script src="dados/teorias/espacoAgrarioMundialBrasileiroTeoria.js"></script>
+<script src="dados/regionalizacaoEspacoMundialBrasileiro.js"></script>
+<script src="dados/teorias/regionalizacaoEspacoMundialBrasileiroTeoria.js"></script>
+<script src="dados/geopoliticaMundial.js"></script>
+<script src="dados/teorias/geopoliticaMundialTeoria.js"></script>
 <script src="dados/geografiaParaBarcarena.js"></script>
 <script src="dados/teorias/geografiaParaBarcarenaTeoria.js"></script>
 
