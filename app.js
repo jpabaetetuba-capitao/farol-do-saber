@@ -3,7 +3,33 @@
 // ==========================
 
 // TROCA DE TELAS
-function mostrarTela(id) {
+let navegandoPeloHistoricoFarol = false;
+
+function registrarEstadoNavegacaoFarol(tela, abaInicio, substituir = false){
+
+    if(navegandoPeloHistoricoFarol){
+        return;
+    }
+
+    const estado = {
+        farol: true,
+        tela: tela || "inicio",
+        abaInicio: abaInicio || null
+    };
+
+    const url =
+        tela === "inicio" && abaInicio
+        ? `#inicio-${abaInicio}`
+        : `#${tela}`;
+
+    if(substituir){
+        history.replaceState(estado, "", url);
+    }else{
+        history.pushState(estado, "", url);
+    }
+}
+
+function mostrarTela(id, opcoes = {}) {
 
 if(typeof atualizarStatusAssuntos === "function"){
     atualizarStatusAssuntos();
@@ -129,6 +155,13 @@ if(id === "login"){
         id
     );
 
+    if(!opcoes.semHistorico){
+        registrarEstadoNavegacaoFarol(
+            id,
+            id === "inicio" ? "resumo" : null
+        );
+    }
+
     if(id === "questoes"){
 
         const areaQuestao =
@@ -165,7 +198,7 @@ if(id === "login"){
 
         if(typeof abrirAbaInicioFarol === "function"){
             setTimeout(() => {
-                abrirAbaInicioFarol("resumo");
+                abrirAbaInicioFarol("resumo", { semHistorico: true });
             }, 0);
         }
     }
@@ -237,7 +270,7 @@ function atualizarNavegacaoInferiorFarol(idTela){
     });
 }
 
-function abrirAbaInicioFarol(nomeAba){
+function abrirAbaInicioFarol(nomeAba, opcoes = {}){
 
     const abaPermitida = [
         "resumo",
@@ -307,6 +340,13 @@ function abrirAbaInicioFarol(nomeAba){
         abaPermitida
     );
 
+    if(!opcoes.semHistorico){
+        registrarEstadoNavegacaoFarol(
+            "inicio",
+            abaPermitida
+        );
+    }
+
     window.scrollTo({
         top: 0,
         left: 0,
@@ -316,13 +356,51 @@ function abrirAbaInicioFarol(nomeAba){
 
 document.addEventListener("DOMContentLoaded", function(){
 
-    abrirAbaInicioFarol("resumo");
+    abrirAbaInicioFarol("resumo", { semHistorico: true });
 
     const telaAtual =
         localStorage.getItem("farol_telaAtual") ||
         "inicio";
 
     atualizarNavegacaoInferiorFarol(telaAtual);
+
+    registrarEstadoNavegacaoFarol(
+        "inicio",
+        "resumo",
+        true
+    );
+});
+
+window.addEventListener("popstate", function(event){
+
+    const estado =
+        event.state && event.state.farol
+        ? event.state
+        : null;
+
+    if(!estado){
+        return;
+    }
+
+    navegandoPeloHistoricoFarol = true;
+
+    try{
+        if(estado.tela === "inicio"){
+            abrirAbaInicioFarol(
+                estado.abaInicio || "resumo",
+                { semHistorico: true }
+            );
+        }else{
+            mostrarTela(
+                estado.tela,
+                { semHistorico: true }
+            );
+        }
+    }finally{
+        setTimeout(() => {
+            navegandoPeloHistoricoFarol = false;
+        }, 0);
+    }
 });
 
 
