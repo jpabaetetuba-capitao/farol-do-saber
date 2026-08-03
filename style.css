@@ -13613,3 +13613,89 @@ progress{
         font-size:14px;
     }
 }
+
+
+/* ==========================================================
+   FAROL V39 — BOTÕES DE CONCURSO NA ARENA
+========================================================== */
+
+.escolha-concurso-arena-v39{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:12px;
+    margin-top:10px;
+}
+
+.botao-concurso-arena-v39{
+    width:100%;
+    min-height:96px;
+    margin:0 !important;
+    padding:14px !important;
+    display:grid;
+    grid-template-columns:46px 1fr 18px;
+    align-items:center;
+    gap:10px;
+    text-align:left;
+    border:2px solid transparent !important;
+    border-radius:16px !important;
+}
+
+.botao-concurso-arena-v39 > span:nth-child(2){
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.botao-concurso-arena-v39 strong{
+    font-size:16px;
+}
+
+.botao-concurso-arena-v39 small{
+    color:inherit;
+    opacity:.82;
+    font-size:11px;
+    line-height:1.3;
+}
+
+.botao-concurso-arena-v39 b{
+    font-size:23px;
+}
+
+.icone-concurso-arena-v39{
+    width:44px;
+    height:44px;
+    display:grid;
+    place-items:center;
+    border-radius:13px;
+    background:rgba(255,255,255,.2);
+    font-size:23px;
+}
+
+.botao-concurso-arena-v39.selecionado{
+    border-color:#ffd24d !important;
+    box-shadow:0 0 0 3px rgba(255,210,77,.22);
+}
+
+@media(max-width:600px){
+
+    .escolha-concurso-arena-v39{
+        grid-template-columns:1fr;
+        gap:9px;
+    }
+
+    .botao-concurso-arena-v39{
+        min-height:76px;
+        padding:11px 12px !important;
+        grid-template-columns:42px 1fr 16px;
+    }
+
+    .icone-concurso-arena-v39{
+        width:40px;
+        height:40px;
+        font-size:21px;
+    }
+
+    .botao-concurso-arena-v39 strong{
+        font-size:14px;
+    }
+}
