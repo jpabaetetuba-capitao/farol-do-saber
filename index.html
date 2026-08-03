@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=77-fluxo-caderno-erros">
+    <link rel="stylesheet" href="style.css?v=78-fluxo-loja">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -3650,30 +3650,31 @@ Li e revisei o mapa mental.
 
 <section id="lojaFarol" class="tela">
 
-    <div class="card">
+    <div class="card loja-card-v33">
 
-        <button
-            class="btn-voltar"
-            onclick="mostrarTela('inicio')">
-            ⬅ Voltar ao Início
-        </button>
+        <div id="cabecalhoFluxoLojaV33" class="cabecalho-fluxo-loja-v33">
+            <button
+                id="btnVoltarFluxoLojaV33"
+                class="btn-voltar-fluxo-loja-v33"
+                type="button"
+                onclick="voltarFluxoLojaV33()"
+                style="display:none;"
+                aria-label="Voltar">
+                ←
+            </button>
 
-        <br><br>
+            <div class="titulo-fluxo-loja-v33">
+                <span id="etapaFluxoLojaV33" class="etapa-fluxo-loja-v33">Etapa 1 de 3</span>
+                <h2 id="tituloFluxoLojaV33">🛒 Loja do Farol</h2>
+                <p id="descricaoFluxoLojaV33">Escolha uma categoria.</p>
+            </div>
 
-        <h2>🛒 Loja do Farol</h2>
-
-        <p>
-            Troque seu saldo de Pontos de Luz por recompensas visuais, títulos, avatares, card premium e certificado digital.
-        </p>
-
-        <div class="aviso-farol">
-            <h3>🛒 Use seus pontos para evoluir seu perfil</h3>
-            <p>
-                Os Pontos de Luz conquistados nas questões, simulados, revisões e missões podem ser trocados por recompensas da Loja Farol.
-            </p>
+            <div class="saldo-fixo-loja-v33">
+                <span>⭐</span>
+                <strong id="saldoLojaV33">0</strong>
+                <small>saldo</small>
+            </div>
         </div>
-
-        <br>
 
         <div id="conteudoLojaFarol">
             Carregando recompensas...
@@ -5401,7 +5402,7 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=76-fluxo-caderno-erros"></script>
+<script src="app.js?v=77-fluxo-loja"></script>
 <script src="admin.js?v=42-historico-atividades"></script>
 
 

@@ -33252,3 +33252,464 @@ function renderizarSalaArenaAoVivoFarol(){
     });
 
 })();
+
+
+// ==========================================================
+// FAROL V33 — LOJA EM TELAS ENCADEADAS
+// ==========================================================
+
+(function(){
+
+    const estadoLojaV33 = {
+        etapa: "categorias",
+        categoria: "",
+        itemId: ""
+    };
+
+    const categoriasLojaV33 = [
+        {
+            id: "avatares_gratuitos",
+            icone: "👤",
+            titulo: "Avatares gratuitos",
+            descricao: "Escolha a identidade inicial do seu perfil."
+        },
+        {
+            id: "avatares_premium",
+            icone: "⭐",
+            titulo: "Avatares premium",
+            descricao: "Desbloqueie personagens especiais."
+        },
+        {
+            id: "titulos_medalhas",
+            icone: "🎖️",
+            titulo: "Títulos e medalhas",
+            descricao: "Mostre suas conquistas no perfil."
+        },
+        {
+            id: "extras_progresso",
+            icone: "📤",
+            titulo: "Extras de progresso",
+            descricao: "Personalize e compartilhe sua evolução."
+        },
+        {
+            id: "certificados",
+            icone: "📜",
+            titulo: "Certificados",
+            descricao: "Recompensas especiais de desempenho."
+        }
+    ];
+
+    function elLojaV33(id){
+        return document.getElementById(id);
+    }
+
+    function categoriaLojaV33(id){
+        return categoriasLojaV33.find(item => item.id === id);
+    }
+
+    function itemLojaV33(id){
+        return typeof obterRecompensaLoja === "function"
+            ? obterRecompensaLoja(id)
+            : recompensasLojaFarol.find(item => item.id === id);
+    }
+
+    function atualizarSaldoLojaV33(){
+        const saldo = elLojaV33("saldoLojaV33");
+        if(saldo){
+            saldo.textContent = saldoPontosLuz || 0;
+        }
+    }
+
+    function atualizarCabecalhoLojaV33(etapa){
+        const titulo = elLojaV33("tituloFluxoLojaV33");
+        const descricao = elLojaV33("descricaoFluxoLojaV33");
+        const indicador = elLojaV33("etapaFluxoLojaV33");
+        const voltar = elLojaV33("btnVoltarFluxoLojaV33");
+        const categoria = categoriaLojaV33(estadoLojaV33.categoria);
+        const item = itemLojaV33(estadoLojaV33.itemId);
+
+        if(etapa === "categorias"){
+            titulo.textContent = "🛒 Loja do Farol";
+            descricao.textContent = "Escolha uma categoria.";
+            indicador.textContent = "Etapa 1 de 3";
+            voltar.style.display = "none";
+        }
+
+        if(etapa === "itens"){
+            titulo.textContent = categoria ? categoria.titulo : "Recompensas";
+            descricao.textContent = "Escolha um item.";
+            indicador.textContent = "Etapa 2 de 3";
+            voltar.style.display = "grid";
+        }
+
+        if(etapa === "detalhe"){
+            titulo.textContent = item ? item.nome : "Detalhes";
+            descricao.textContent = "Confira antes de continuar.";
+            indicador.textContent = "Etapa 3 de 3";
+            voltar.style.display = "grid";
+        }
+
+        atualizarSaldoLojaV33();
+    }
+
+    function registrarHistoricoLojaV33(etapa, substituir = false){
+        const estado = {
+            farol: true,
+            tela: "lojaFarol",
+            lojaStep: etapa,
+            lojaCategoria: estadoLojaV33.categoria,
+            lojaItem: estadoLojaV33.itemId
+        };
+
+        const hash = `#loja-${etapa}`;
+
+        if(substituir){
+            history.replaceState(estado, "", hash);
+        }else{
+            history.pushState(estado, "", hash);
+        }
+    }
+
+    function statusResumoCategoriaV33(itens){
+        const comprados = itens.filter(item => recompensaComprada(item.id)).length;
+        return `${itens.length} item(ns) • ${comprados} adquirido(s)`;
+    }
+
+    function renderizarCategoriasLojaV33(){
+        const area = elLojaV33("conteudoLojaFarol");
+        atualizarCabecalhoLojaV33("categorias");
+
+        const categorias = categoriasLojaV33
+            .map(categoria => {
+                const itens = recompensasLojaFarol.filter(
+                    item => item.categoria === categoria.id
+                );
+
+                if(!itens.length){
+                    return "";
+                }
+
+                return `
+                    <button
+                        type="button"
+                        class="opcao-categoria-loja-v33"
+                        onclick="abrirCategoriaLojaV33('${categoria.id}')">
+                        <span class="icone-categoria-loja-v33">${categoria.icone}</span>
+                        <span>
+                            <strong>${categoria.titulo}</strong>
+                            <small>${categoria.descricao}</small>
+                            <em>${statusResumoCategoriaV33(itens)}</em>
+                        </span>
+                        <b>›</b>
+                    </button>
+                `;
+            }).join("");
+
+        area.innerHTML = `
+            <div class="resumo-perfil-loja-v33">
+                <div>
+                    ${montarAvatarHTML(
+                        lojaFarol.avatarAtual,
+                        lojaFarol.nomeAvatarAtual,
+                        "avatar-pequeno"
+                    )}
+                    <span>
+                        <strong>${lojaFarol.nomeAvatarAtual || "Estudante"}</strong>
+                        <small>${lojaFarol.tituloAtual || "Sem título ativo"}</small>
+                    </span>
+                </div>
+
+                <button type="button" onclick="alterarVersaoAvatar()">
+                    Trocar versão M/F
+                </button>
+            </div>
+
+            <div class="menu-categorias-loja-v33">
+                ${categorias}
+            </div>
+        `;
+    }
+
+    window.abrirCategoriaLojaV33 = function(categoria){
+        estadoLojaV33.categoria = categoria;
+        estadoLojaV33.itemId = "";
+        abrirEtapaLojaV33("itens");
+    };
+
+    function montarCardItemLojaV33(item){
+        const comprada = recompensaComprada(item.id);
+        const bloqueadaCertificado =
+            item.id === "certificado_digital" && acertos < 100;
+        const semSaldo =
+            saldoPontosLuz < item.custo && !comprada;
+        const emUso = recompensaEmUsoLoja(item);
+
+        const custo =
+            item.custo === 0
+                ? "Grátis"
+                : `${item.custo} Pontos de Luz`;
+
+        const status =
+            emUso
+                ? "✅ Em uso"
+                : comprada
+                    ? "✅ Adquirido"
+                    : bloqueadaCertificado
+                        ? "🔒 Requisito pendente"
+                        : semSaldo
+                            ? "🔒 Pontos insuficientes"
+                            : "🛒 Disponível";
+
+        return `
+            <button
+                type="button"
+                class="item-lista-loja-v33 ${comprada ? "comprado" : ""} ${emUso ? "em-uso" : ""}"
+                onclick="abrirDetalheLojaV33('${item.id}')">
+                <span class="visual-item-loja-v33">
+                    ${renderizarIconeLoja(item)}
+                </span>
+
+                <span class="texto-item-loja-v33">
+                    <strong>${item.nome}</strong>
+                    <small>${custo}</small>
+                    <em>${status}</em>
+                </span>
+
+                <b>›</b>
+            </button>
+        `;
+    }
+
+    function renderizarItensLojaV33(){
+        const area = elLojaV33("conteudoLojaFarol");
+        const itens = recompensasLojaFarol.filter(
+            item => item.categoria === estadoLojaV33.categoria
+        );
+
+        const adquiridos = itens.filter(item => recompensaComprada(item.id));
+        const disponiveis = itens.filter(item => !recompensaComprada(item.id));
+
+        area.innerHTML = `
+            ${disponiveis.length ? `
+                <section class="grupo-itens-loja-v33">
+                    <h3>Disponíveis</h3>
+                    <div class="lista-itens-loja-v33">
+                        ${disponiveis.map(montarCardItemLojaV33).join("")}
+                    </div>
+                </section>
+            ` : ""}
+
+            ${adquiridos.length ? `
+                <section class="grupo-itens-loja-v33">
+                    <h3>Meus itens</h3>
+                    <div class="lista-itens-loja-v33">
+                        ${adquiridos.map(montarCardItemLojaV33).join("")}
+                    </div>
+                </section>
+            ` : ""}
+
+            ${!itens.length ? `
+                <div class="estado-vazio-loja-v33">
+                    Nenhum item disponível nesta categoria.
+                </div>
+            ` : ""}
+        `;
+    }
+
+    window.abrirDetalheLojaV33 = function(id){
+        estadoLojaV33.itemId = id;
+        abrirEtapaLojaV33("detalhe");
+    };
+
+    function renderizarDetalheLojaV33(){
+        const area = elLojaV33("conteudoLojaFarol");
+        const item = itemLojaV33(estadoLojaV33.itemId);
+
+        if(!item){
+            area.innerHTML = `
+                <div class="estado-vazio-loja-v33">
+                    Recompensa não encontrada.
+                </div>
+            `;
+            return;
+        }
+
+        const comprada = recompensaComprada(item.id);
+        const bloqueadaCertificado =
+            item.id === "certificado_digital" && acertos < 100;
+        const semSaldo =
+            saldoPontosLuz < item.custo && !comprada;
+        const faltamPontos = Math.max(item.custo - saldoPontosLuz, 0);
+        const custo =
+            item.custo === 0
+                ? "Grátis"
+                : `${item.custo} Pontos de Luz`;
+        const acao = montarAcaoLoja(
+            item,
+            comprada,
+            semSaldo,
+            bloqueadaCertificado
+        );
+
+        area.innerHTML = `
+            <div class="detalhe-item-loja-v33">
+
+                <div class="visual-detalhe-loja-v33">
+                    ${renderizarIconeLoja(item)}
+                </div>
+
+                <h3>${item.nome}</h3>
+                <p>${item.descricao}</p>
+
+                <div class="informacoes-item-loja-v33">
+                    <div>
+                        <small>Custo</small>
+                        <strong>${custo}</strong>
+                    </div>
+
+                    <div>
+                        <small>Status</small>
+                        <strong>${
+                            recompensaEmUsoLoja(item)
+                                ? "Em uso"
+                                : comprada
+                                    ? "Adquirido"
+                                    : "Disponível"
+                        }</strong>
+                    </div>
+                </div>
+
+                ${item.requisito ? `
+                    <div class="aviso-detalhe-loja-v33">
+                        <strong>Requisito</strong>
+                        <span>${item.requisito}</span>
+                    </div>
+                ` : ""}
+
+                ${semSaldo ? `
+                    <div class="aviso-detalhe-loja-v33 bloqueado">
+                        Faltam ${faltamPontos} Pontos de Luz.
+                    </div>
+                ` : ""}
+
+                ${bloqueadaCertificado ? `
+                    <div class="aviso-detalhe-loja-v33 bloqueado">
+                        Faltam ${Math.max(100 - acertos, 0)} acertos para liberar.
+                    </div>
+                ` : ""}
+
+                <div class="acao-detalhe-loja-v33">
+                    ${acao || `
+                        <button type="button" disabled>
+                            ${recompensaEmUsoLoja(item) ? "Item em uso" : "Item adquirido"}
+                        </button>
+                    `}
+                </div>
+
+            </div>
+        `;
+    }
+
+    window.abrirEtapaLojaV33 = function(etapa, opcoes = {}){
+        estadoLojaV33.etapa = etapa;
+        atualizarCabecalhoLojaV33(etapa);
+
+        if(etapa === "categorias") renderizarCategoriasLojaV33();
+        if(etapa === "itens") renderizarItensLojaV33();
+        if(etapa === "detalhe") renderizarDetalheLojaV33();
+
+        window.scrollTo({top: 0, behavior: "smooth"});
+
+        if(!opcoes.semHistorico){
+            registrarHistoricoLojaV33(
+                etapa,
+                Boolean(opcoes.substituirHistorico)
+            );
+        }
+    };
+
+    window.voltarFluxoLojaV33 = function(){
+        if(estadoLojaV33.etapa === "detalhe"){
+            abrirEtapaLojaV33("itens");
+            return;
+        }
+
+        if(estadoLojaV33.etapa === "itens"){
+            abrirEtapaLojaV33("categorias");
+            return;
+        }
+
+        mostrarTela("inicio");
+    };
+
+    // Preserve the original updater, but use the new flow while the store is open.
+    const atualizarLojaOriginalV33 = window.atualizarLojaFarol;
+
+    window.atualizarLojaFarol = function(){
+        atualizarSaldoLojaV33();
+
+        if(
+            document.getElementById("lojaFarol")
+                ?.classList.contains("ativa")
+        ){
+            abrirEtapaLojaV33(
+                estadoLojaV33.etapa || "categorias",
+                {semHistorico: true}
+            );
+            return;
+        }
+
+        if(typeof atualizarLojaOriginalV33 === "function"){
+            atualizarLojaOriginalV33();
+        }
+    };
+
+    const mostrarTelaAntesLojaV33 = window.mostrarTela;
+
+    if(typeof mostrarTelaAntesLojaV33 === "function"){
+        window.mostrarTela = function(id, opcoes = {}){
+            const retorno =
+                mostrarTelaAntesLojaV33.apply(this, arguments);
+
+            if(id === "lojaFarol"){
+                setTimeout(() => {
+                    if(!opcoes.semHistorico){
+                        estadoLojaV33.categoria = "";
+                        estadoLojaV33.itemId = "";
+                        abrirEtapaLojaV33("categorias", {
+                            substituirHistorico: true
+                        });
+                    }
+                }, 20);
+            }
+
+            return retorno;
+        };
+    }
+
+    window.addEventListener("popstate", evento => {
+        const estado = evento.state;
+
+        if(
+            estado &&
+            estado.tela === "lojaFarol" &&
+            estado.lojaStep
+        ){
+            estadoLojaV33.categoria =
+                estado.lojaCategoria || "";
+            estadoLojaV33.itemId =
+                estado.lojaItem || "";
+
+            mostrarTela("lojaFarol", {semHistorico: true});
+            abrirEtapaLojaV33(
+                estado.lojaStep,
+                {semHistorico: true}
+            );
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        atualizarSaldoLojaV33();
+    });
+
+})();
