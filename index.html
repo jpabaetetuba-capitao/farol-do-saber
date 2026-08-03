@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=74-questao-foco">
+    <link rel="stylesheet" href="style.css?v=75-fluxo-provas">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -3201,22 +3201,28 @@ Li e revisei o mapa mental.
 
     <div class="card simulados-card-principal provas-anteriores-premium">
 
-        <div class="simulados-topo provas-topo-premium">
+        <div id="cabecalhoFluxoProvasV30" class="cabecalho-fluxo-provas-v30">
+            <button
+                id="btnVoltarFluxoProvasV30"
+                class="btn-voltar-fluxo-provas-v30"
+                type="button"
+                onclick="voltarFluxoProvasV30()"
+                style="display:none;"
+                aria-label="Voltar">
+                ←
+            </button>
+
             <div>
-                <span class="mini-label-provas">📄 Banco de provas reais</span>
-                <h2>Provas Anteriores Comentadas</h2>
-                <p>
-                    Escolha o cargo, abra a prova original e depois revise com o gabarito comentado premium do Farol do Saber.
-                </p>
+                <span id="etapaFluxoProvasV30" class="etapa-fluxo-provas-v30">Etapa 1 de 3</span>
+                <h2 id="tituloFluxoProvasV30">📄 Provas anteriores</h2>
+                <p id="descricaoFluxoProvasV30">Escolha o cargo.</p>
             </div>
         </div>
 
-        <div class="aviso-farol aviso-simulado-premium aviso-provas-premium">
-            <h3>📌 Como usar esta área</h3>
-            <p>
-                Primeiro resolva a prova original como treino real. Depois abra o gabarito comentado para entender a resposta correta, os distratores e a dica da banca.
-            </p>
-        </div>
+        <details class="orientacao-provas-v30">
+            <summary>ℹ️ Como usar</summary>
+            <p>Resolva a prova original e depois revise pelo gabarito comentado.</p>
+        </details>
 
         <div class="provas-resumo-grid">
             <button
@@ -3280,6 +3286,8 @@ Li e revisei o mapa mental.
             <span>As provas só aparecem depois que você clicar no cargo desejado.</span>
 
         </div>
+
+        <div id="detalheProvaAnteriorV30" class="detalhe-prova-anterior-v30" style="display:none;"></div>
 
         <div id="grupoProvasHistoria" class="grupo-provas-cargo grupo-provas-oculto">
             <div class="cabecalho-grupo-provas">
@@ -5405,7 +5413,7 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=73-questao-foco"></script>
+<script src="app.js?v=74-fluxo-provas"></script>
 <script src="admin.js?v=42-historico-atividades"></script>
 
 

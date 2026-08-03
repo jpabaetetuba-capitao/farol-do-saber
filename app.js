@@ -31995,3 +31995,340 @@ function renderizarSalaArenaAoVivoFarol(){
     });
 
 })();
+
+
+// ==========================================================
+// FAROL V30 — PROVAS ANTERIORES EM TELAS ENCADEADAS
+// ==========================================================
+
+(function(){
+
+    const estadoProvasV30 = {
+        etapa: "cargos",
+        cargo: "",
+        grupoId: ""
+    };
+
+    const nomesCargoProvasV30 = {
+        historia: "Professor de História",
+        ciencias: "Professor de Ciências",
+        geografia: "Professor de Geografia",
+        apoioEscolar: "Profissional de Apoio Escolar"
+    };
+
+    function elProvasV30(id){
+        return document.getElementById(id);
+    }
+
+    function atualizarCabecalhoProvasV30(etapa, tituloPersonalizado = ""){
+        const titulo = elProvasV30("tituloFluxoProvasV30");
+        const descricao = elProvasV30("descricaoFluxoProvasV30");
+        const indicador = elProvasV30("etapaFluxoProvasV30");
+        const voltar = elProvasV30("btnVoltarFluxoProvasV30");
+
+        if(etapa === "cargos"){
+            titulo.textContent = "📄 Provas anteriores";
+            descricao.textContent = "Escolha o cargo.";
+            indicador.textContent = "Etapa 1 de 3";
+            voltar.style.display = "none";
+        }
+
+        if(etapa === "lista"){
+            titulo.textContent =
+                tituloPersonalizado ||
+                nomesCargoProvasV30[estadoProvasV30.cargo] ||
+                "Escolha a prova";
+
+            descricao.textContent = "Selecione uma prova para continuar.";
+            indicador.textContent = "Etapa 2 de 3";
+            voltar.style.display = "grid";
+        }
+
+        if(etapa === "detalhe"){
+            titulo.textContent = "Abrir prova";
+            descricao.textContent = "Escolha o material.";
+            indicador.textContent = "Etapa 3 de 3";
+            voltar.style.display = "grid";
+        }
+    }
+
+    function registrarHistoricoProvasV30(etapa, substituir = false){
+        const estado = {
+            farol: true,
+            tela: "provasAnteriores",
+            provasStep: etapa,
+            cargoProvas: estadoProvasV30.cargo,
+            grupoProvas: estadoProvasV30.grupoId
+        };
+
+        const hash = `#provas-${etapa}`;
+
+        if(substituir){
+            history.replaceState(estado, "", hash);
+        }else{
+            history.pushState(estado, "", hash);
+        }
+    }
+
+    function esconderDetalheProvaV30(){
+        const detalhe = elProvasV30("detalheProvaAnteriorV30");
+        if(detalhe){
+            detalhe.style.display = "none";
+            detalhe.innerHTML = "";
+        }
+    }
+
+    function prepararCardsProvasV30(){
+        document.querySelectorAll(
+            "#provasAnteriores .prova-anterior-card"
+        ).forEach((card, indice) => {
+            if(card.dataset.fluxoProvasV30 === "ok"){
+                return;
+            }
+
+            card.dataset.fluxoProvasV30 = "ok";
+            card.setAttribute("role", "button");
+            card.setAttribute("tabindex", "0");
+            card.classList.add("prova-card-fluxo-v30");
+
+            const acoes = card.querySelector(".prova-anterior-acoes");
+            if(acoes){
+                acoes.style.display = "none";
+            }
+
+            const seta = document.createElement("span");
+            seta.className = "seta-prova-v30";
+            seta.textContent = "›";
+            card.appendChild(seta);
+
+            const abrir = () => abrirDetalheProvaV30(card);
+
+            card.addEventListener("click", evento => {
+                if(evento.target.closest("button")){
+                    return;
+                }
+                abrir();
+            });
+
+            card.addEventListener("keydown", evento => {
+                if(evento.key === "Enter" || evento.key === " "){
+                    evento.preventDefault();
+                    abrir();
+                }
+            });
+        });
+    }
+
+    window.abrirDetalheProvaV30 = function(card){
+        if(!card) return;
+
+        const info = card.querySelector(".prova-anterior-info");
+        const acoes = card.querySelector(".prova-anterior-acoes");
+        const detalhe = elProvasV30("detalheProvaAnteriorV30");
+        const grupo = card.closest(".grupo-provas-cargo");
+
+        if(!info || !acoes || !detalhe){
+            return;
+        }
+
+        estadoProvasV30.etapa = "detalhe";
+        estadoProvasV30.grupoId = grupo ? grupo.id : estadoProvasV30.grupoId;
+
+        document.querySelectorAll(
+            "#provasAnteriores .grupo-provas-cargo"
+        ).forEach(el => el.style.display = "none");
+
+        detalhe.innerHTML = `
+            <div class="detalhe-prova-conteudo-v30">
+                ${info.innerHTML}
+
+                <div class="acoes-detalhe-prova-v30">
+                    ${acoes.innerHTML}
+                </div>
+
+                <small class="orientacao-detalhe-prova-v30">
+                    Faça primeiro a prova e depois consulte a correção.
+                </small>
+            </div>
+        `;
+
+        detalhe.style.display = "block";
+        atualizarCabecalhoProvasV30("detalhe");
+        window.scrollTo({top: 0, behavior: "smooth"});
+        registrarHistoricoProvasV30("detalhe");
+    };
+
+    function abrirListaCargoProvasV30(cargo, opcoes = {}){
+        const config = obterConfigProvasFarol();
+        const item = config[cargo];
+
+        if(!item){
+            mostrarToast("Cargo de provas não encontrado.");
+            return;
+        }
+
+        estadoProvasV30.etapa = "lista";
+        estadoProvasV30.cargo = cargo;
+        estadoProvasV30.grupoId = item.grupo;
+
+        const grupo = elProvasV30(item.grupo);
+        const cardPrincipal = document.querySelector(
+            "#provasAnteriores .provas-anteriores-premium"
+        );
+
+        if(cardPrincipal){
+            Array.from(cardPrincipal.children).forEach(elemento => {
+                elemento.style.display = "none";
+            });
+        }
+
+        const cabecalho = elProvasV30("cabecalhoFluxoProvasV30");
+        if(cabecalho) cabecalho.style.display = "flex";
+
+        if(grupo){
+            grupo.style.display = "block";
+            grupo.classList.remove("grupo-provas-oculto");
+
+            const cabecalhoAntigo =
+                grupo.querySelector(".cabecalho-grupo-provas");
+            if(cabecalhoAntigo){
+                cabecalhoAntigo.style.display = "none";
+            }
+        }
+
+        esconderDetalheProvaV30();
+        atualizarCabecalhoProvasV30(
+            "lista",
+            nomesCargoProvasV30[cargo]
+        );
+        prepararCardsProvasV30();
+        window.scrollTo({top: 0, behavior: "smooth"});
+
+        if(!opcoes.semHistorico){
+            registrarHistoricoProvasV30("lista");
+        }
+    }
+
+    function abrirCargosProvasV30(opcoes = {}){
+        estadoProvasV30.etapa = "cargos";
+        estadoProvasV30.cargo = "";
+        estadoProvasV30.grupoId = "";
+
+        const cardPrincipal = document.querySelector(
+            "#provasAnteriores .provas-anteriores-premium"
+        );
+
+        if(cardPrincipal){
+            Array.from(cardPrincipal.children).forEach(elemento => {
+                elemento.style.display = "";
+            });
+        }
+
+        [
+            "grupoProvasHistoria",
+            "grupoProvasCiencias",
+            "grupoProvasGeografia",
+            "grupoProvasApoioEscolar",
+            "detalheProvaAnteriorV30",
+            "mensagemEscolhaProvas"
+        ].forEach(id => {
+            const elemento = elProvasV30(id);
+            if(elemento) elemento.style.display = "none";
+        });
+
+        const resumo = document.querySelector(
+            "#provasAnteriores .provas-resumo-grid"
+        );
+        const orientacao = document.querySelector(
+            "#provasAnteriores .orientacao-provas-v30"
+        );
+        const cabecalho = elProvasV30("cabecalhoFluxoProvasV30");
+
+        if(resumo) resumo.style.display = "grid";
+        if(orientacao) orientacao.style.display = "block";
+        if(cabecalho) cabecalho.style.display = "flex";
+
+        atualizarCabecalhoProvasV30("cargos");
+        window.scrollTo({top: 0, behavior: "smooth"});
+
+        if(!opcoes.semHistorico){
+            registrarHistoricoProvasV30(
+                "cargos",
+                Boolean(opcoes.substituirHistorico)
+            );
+        }
+    }
+
+    window.voltarFluxoProvasV30 = function(){
+        if(estadoProvasV30.etapa === "detalhe"){
+            abrirListaCargoProvasV30(estadoProvasV30.cargo);
+            return;
+        }
+
+        if(estadoProvasV30.etapa === "lista"){
+            abrirCargosProvasV30();
+            return;
+        }
+
+        mostrarTela("inicio");
+    };
+
+    const selecionarCargoAntesV30 = window.selecionarCargoProvasFarol;
+    window.selecionarCargoProvasFarol = function(cargo){
+        abrirListaCargoProvasV30(cargo);
+    };
+
+    window.voltarCargosProvasFarol = function(){
+        abrirCargosProvasV30();
+    };
+
+    const mostrarTelaAntesProvasV30 = window.mostrarTela;
+
+    if(typeof mostrarTelaAntesProvasV30 === "function"){
+        window.mostrarTela = function(id, opcoes = {}){
+            const retorno =
+                mostrarTelaAntesProvasV30.apply(this, arguments);
+
+            if(id === "provasAnteriores"){
+                setTimeout(() => {
+                    prepararCardsProvasV30();
+
+                    if(!opcoes.semHistorico){
+                        abrirCargosProvasV30({
+                            substituirHistorico: true
+                        });
+                    }
+                }, 20);
+            }
+
+            return retorno;
+        };
+    }
+
+    window.addEventListener("popstate", evento => {
+        const estado = evento.state;
+
+        if(
+            estado &&
+            estado.tela === "provasAnteriores" &&
+            estado.provasStep
+        ){
+            estadoProvasV30.cargo = estado.cargoProvas || "";
+            estadoProvasV30.grupoId = estado.grupoProvas || "";
+
+            if(estado.provasStep === "cargos"){
+                abrirCargosProvasV30({semHistorico: true});
+            }else if(estado.provasStep === "lista"){
+                abrirListaCargoProvasV30(
+                    estadoProvasV30.cargo,
+                    {semHistorico: true}
+                );
+            }
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        prepararCardsProvasV30();
+    });
+
+})();

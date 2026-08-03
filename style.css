@@ -12379,3 +12379,178 @@ progress{
         line-height:1.55;
     }
 }
+
+
+/* ==========================================================
+   FAROL V30 — PROVAS ANTERIORES EM ETAPAS
+========================================================== */
+
+.cabecalho-fluxo-provas-v30{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:13px;
+}
+
+.cabecalho-fluxo-provas-v30 h2{
+    margin:0 0 4px;
+}
+
+.cabecalho-fluxo-provas-v30 p{
+    margin:0;
+    color:#66756e;
+}
+
+.btn-voltar-fluxo-provas-v30{
+    width:42px !important;
+    height:42px;
+    min-width:42px;
+    padding:0 !important;
+    display:grid;
+    place-items:center;
+    border-radius:50% !important;
+    font-size:24px;
+}
+
+.etapa-fluxo-provas-v30{
+    display:block;
+    margin-bottom:3px;
+    color:#087f5b;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+}
+
+.orientacao-provas-v30{
+    margin-bottom:13px;
+    border:1px solid #dce7e2;
+    border-radius:14px;
+    background:#f7faf9;
+    overflow:hidden;
+}
+
+.orientacao-provas-v30 summary{
+    padding:10px 12px;
+    cursor:pointer;
+    list-style:none;
+    font-size:13px;
+    font-weight:800;
+}
+
+.orientacao-provas-v30 summary::-webkit-details-marker{
+    display:none;
+}
+
+.orientacao-provas-v30 p{
+    margin:0;
+    padding:0 12px 11px;
+    color:#5f7069;
+    font-size:13px;
+}
+
+.prova-card-fluxo-v30{
+    position:relative;
+    cursor:pointer;
+    padding-right:44px !important;
+}
+
+.prova-card-fluxo-v30:hover{
+    transform:translateY(-1px);
+}
+
+.seta-prova-v30{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:26px;
+    font-weight:800;
+    color:#698078;
+}
+
+.detalhe-prova-anterior-v30{
+    max-width:720px;
+    margin:0 auto;
+}
+
+.detalhe-prova-conteudo-v30{
+    padding:16px;
+    border:1px solid #dbe6e1;
+    border-radius:17px;
+    background:#fff;
+}
+
+.detalhe-prova-conteudo-v30 h3{
+    margin:10px 0;
+}
+
+.acoes-detalhe-prova-v30{
+    display:grid;
+    gap:10px;
+    margin-top:17px;
+}
+
+.acoes-detalhe-prova-v30 button{
+    width:100%;
+    min-height:52px;
+    margin:0 !important;
+}
+
+.orientacao-detalhe-prova-v30{
+    display:block;
+    margin-top:12px;
+    color:#66756e;
+    line-height:1.4;
+}
+
+@media(max-width:768px){
+
+    #provasAnteriores{
+        padding-top:8px;
+    }
+
+    #provasAnteriores > .card{
+        padding:14px !important;
+    }
+
+    .cabecalho-fluxo-provas-v30 h2{
+        font-size:21px;
+    }
+
+    .cabecalho-fluxo-provas-v30 p{
+        font-size:13px;
+    }
+
+    .provas-resumo-grid,
+    .grid-provas-anteriores{
+        grid-template-columns:1fr !important;
+        gap:9px !important;
+    }
+
+    .provas-resumo-card{
+        min-height:70px;
+        padding:12px !important;
+    }
+
+    .provas-resumo-card em{
+        display:none;
+    }
+
+    .prova-card-fluxo-v30{
+        min-height:100px;
+        padding:12px 42px 12px 12px !important;
+    }
+
+    .prova-card-fluxo-v30 p{
+        display:none;
+    }
+
+    .prova-card-fluxo-v30 small{
+        font-size:11px;
+    }
+
+    .detalhe-prova-conteudo-v30{
+        padding:14px;
+    }
+}
