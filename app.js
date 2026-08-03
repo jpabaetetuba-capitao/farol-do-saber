@@ -33916,7 +33916,7 @@ function renderizarSalaArenaAoVivoFarol(){
 
         area.innerHTML = `
             <article class="detalhe-sobre-v35">
-                <div class="icone-detalhe-sobre-v35">${secao.icone}</div>
+                ${etapa === "idealizador" ? "" : `<div class="icone-detalhe-sobre-v35">${secao.icone}</div>`}
                 ${secao.conteudo}
             </article>
         `;
