@@ -26,6 +26,74 @@ if(typeof atualizarAtividade === "function"){
 
     telaDestino.classList.add("ativa");
 
+    // Garante botão de retorno em todos os menus principais que antes
+    // dependiam do menu superior para voltar.
+    const telasComVoltarAutomatico = {
+        questoes: { destino: "inicio", texto: "⬅ Voltar para o Início" },
+        simulados: { destino: "inicio", texto: "⬅ Voltar para o Início" },
+        provasAnteriores: { destino: "inicio", texto: "⬅ Voltar para o Início" },
+        duelos: { destino: "inicio", texto: "⬅ Voltar para o Início" },
+        estatisticas: { destino: "inicio", texto: "⬅ Voltar para o Início" },
+        erros: { destino: "inicio", texto: "⬅ Voltar para o Início" },
+        telaBNCC: { destino: "questoes", texto: "⬅ Voltar para a Rota de Estudos" }
+    };
+
+    const configuracaoVoltar = telasComVoltarAutomatico[id];
+
+    if(configuracaoVoltar){
+        const areaPrincipal =
+            telaDestino.querySelector(":scope > .card") ||
+            telaDestino.querySelector(".card") ||
+            telaDestino;
+
+        const jaPossuiBotaoVoltar = Array.from(
+            telaDestino.querySelectorAll("button")
+        ).some(botao =>
+            botao.classList.contains("btn-voltar") ||
+            /voltar/i.test(botao.textContent || "")
+        );
+
+        if(areaPrincipal && !jaPossuiBotaoVoltar){
+            const botaoVoltar = document.createElement("button");
+            botaoVoltar.id = `btnVoltarAutomatico-${id}`;
+            botaoVoltar.type = "button";
+            botaoVoltar.className = "btn-voltar btn-voltar-automatico";
+            botaoVoltar.textContent = configuracaoVoltar.texto;
+            botaoVoltar.addEventListener("click", function(){
+                mostrarTela(configuracaoVoltar.destino);
+            });
+
+            areaPrincipal.insertBefore(botaoVoltar, areaPrincipal.firstChild);
+
+            const espacamento = document.createElement("div");
+            espacamento.className = "espacamento-voltar-automatico";
+            espacamento.style.height = "12px";
+            botaoVoltar.insertAdjacentElement("afterend", espacamento);
+        }
+    }
+
+    // MODO APP: nas telas internas, o cabeçalho e o menu principal
+    // desaparecem para que o conteúdo abra como uma nova tela,
+    // em vez de surgir abaixo dos botões da página inicial.
+    const cabecalhoPrincipal = document.querySelector("body > header");
+    const menuPrincipal = document.querySelector("body > nav");
+    const mostrarEstruturaInicial = id === "inicio";
+
+    if(cabecalhoPrincipal){
+        cabecalhoPrincipal.style.display = mostrarEstruturaInicial ? "" : "none";
+    }
+
+    if(menuPrincipal){
+        menuPrincipal.style.display = mostrarEstruturaInicial ? "" : "none";
+    }
+
+    // Toda tela nova começa no topo, como acontece em um aplicativo.
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto"
+    });
+
     if(typeof window.registrarPresencaFarol === "function"){
         setTimeout(() => window.registrarPresencaFarol(id, true), 0);
     }
@@ -1255,6 +1323,8 @@ let indiceSimulado = 0;
 let acertosSimulado = 0;
 
 let errosSimulado = 0;
+
+let telaOrigemSimuladoFarol = "simulados";
 
 
 // ==========================
@@ -4089,6 +4159,40 @@ const todasQuestoes = Object.values(
 }
 
 // ==========================
+// SAIR DO SIMULADO
+// ==========================
+
+function voltarDaQuestaoSimuladoFarol(){
+
+    const respondidas =
+        acertosSimulado + errosSimulado;
+
+    const mensagem =
+        respondidas > 0
+        ? "Deseja sair do simulado? O progresso desta tentativa será perdido."
+        : "Deseja voltar para a tela anterior?";
+
+    if(!confirm(mensagem)){
+        return;
+    }
+
+    modoSimulado = false;
+    questoesSimulado = [];
+    indiceSimulado = 0;
+    acertosSimulado = 0;
+    errosSimulado = 0;
+
+    const destino =
+        telaOrigemSimuladoFarol &&
+        telaOrigemSimuladoFarol !== "resolverQuestao"
+        ? telaOrigemSimuladoFarol
+        : "simulados";
+
+    mostrarTela(destino);
+}
+
+
+// ==========================
 // MOSTRAR QUESTÃO SIMULADO
 // ==========================
 
@@ -4106,11 +4210,30 @@ function mostrarQuestaoSimulado() {
             questoesSimulado.length) * 100
         );
 
+    const telaAtualAntesDoSimulado =
+        localStorage.getItem("farol_telaAtual") || "";
+
+    if(
+        telaAtualAntesDoSimulado &&
+        telaAtualAntesDoSimulado !== "resolverQuestao"
+    ){
+        telaOrigemSimuladoFarol = telaAtualAntesDoSimulado;
+    }
+
     mostrarTela("resolverQuestao");
 
     area.innerHTML = `
 
     <div class="card">
+
+        <button
+            type="button"
+            class="btn-voltar"
+            onclick="voltarDaQuestaoSimuladoFarol()">
+            ⬅ Voltar
+        </button>
+
+        <br><br>
 
         <div class="aviso-farol aviso-farol-compacto">
             <strong>📝 Finalize o simulado e ganhe 100 Pontos de Luz.</strong>
@@ -4456,8 +4579,16 @@ function finalizarSimulado() {
 
             <br><br>
 
-            <button onclick="mostrarTela('simulados')">
-                📝 Voltar aos Simulados
+            <button onclick="
+                modoSimulado = false;
+                mostrarTela(
+                    telaOrigemSimuladoFarol &&
+                    telaOrigemSimuladoFarol !== 'resolverQuestao'
+                    ? telaOrigemSimuladoFarol
+                    : 'simulados'
+                );
+            ">
+                ⬅ Voltar para a tela anterior
             </button>
 
         </div>
@@ -12699,6 +12830,130 @@ const disciplinasJogoFarol = {
     }
 };
 
+// Controla a navegação interna dos jogos.
+// Ao abrir um jogo, esconde a tela anterior com os cartões e mostra somente
+// o jogo escolhido. Ao voltar, restaura a Central de Jogos.
+function definirModoJogoInternoFarol(ativo){
+
+    const area = document.getElementById("areaJogoConstruaFarol");
+    const card = area ? area.closest(".jogos-card") : null;
+
+    if(!area || !card){
+        return;
+    }
+
+    Array.from(card.children).forEach(elemento => {
+        if(elemento === area){
+            return;
+        }
+
+        if(ativo){
+            if(!elemento.dataset.displayAntesJogoFarol){
+                elemento.dataset.displayAntesJogoFarol =
+                    elemento.style.display || "__vazio__";
+            }
+            elemento.style.display = "none";
+        }else{
+            const displayAnterior = elemento.dataset.displayAntesJogoFarol;
+
+            if(displayAnterior){
+                elemento.style.display =
+                    displayAnterior === "__vazio__" ? "" : displayAnterior;
+                delete elemento.dataset.displayAntesJogoFarol;
+            }else{
+                elemento.style.display = "";
+            }
+        }
+    });
+
+    card.classList.toggle("jogo-interno-ativo", ativo);
+    area.classList.toggle("jogo-interno-visivel", ativo);
+
+    if(ativo){
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+}
+
+// Garante retorno dentro de qualquer jogo aberto na área dinâmica.
+// Os jogos usam a mesma tela e substituem o conteúdo por JavaScript;
+// por isso o botão precisa ser inserido sempre que a área for atualizada.
+function garantirBotaoVoltarNosJogosFarol(){
+
+    const area = document.getElementById("areaJogoConstruaFarol");
+
+    if(!area || !area.innerHTML.trim()){
+        definirModoJogoInternoFarol(false);
+        return;
+    }
+
+    definirModoJogoInternoFarol(true);
+
+    if(area.querySelector(".btn-voltar-jogos-automatico")){
+        return;
+    }
+
+    const botao = document.createElement("button");
+    botao.type = "button";
+    botao.className = "btn-voltar btn-voltar-jogos-automatico";
+    botao.textContent = "⬅ Voltar para Jogos";
+
+    botao.addEventListener("click", function(){
+        if(typeof pararTimerRelampago === "function"){
+            pararTimerRelampago();
+        }
+
+        if(typeof pararPreviewMemoria === "function"){
+            pararPreviewMemoria();
+        }
+
+        area.innerHTML = "";
+        definirModoJogoInternoFarol(false);
+
+        const telaJogos = document.getElementById("jogosFarol");
+        if(telaJogos){
+            telaJogos.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }else{
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        }
+    });
+
+    area.insertBefore(botao, area.firstChild);
+
+    const espacamento = document.createElement("div");
+    espacamento.className = "espacamento-voltar-automatico";
+    espacamento.style.height = "12px";
+    botao.insertAdjacentElement("afterend", espacamento);
+}
+
+function ativarObservadorVoltarJogosFarol(){
+
+    const area = document.getElementById("areaJogoConstruaFarol");
+
+    if(!area || area.dataset.observadorVoltarAtivo === "true"){
+        return;
+    }
+
+    area.dataset.observadorVoltarAtivo = "true";
+
+    const observador = new MutationObserver(function(){
+        setTimeout(garantirBotaoVoltarNosJogosFarol, 0);
+    });
+
+    observador.observe(area, {
+        childList: true,
+        subtree: false
+    });
+}
+
+if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", ativarObservadorVoltarJogosFarol);
+}else{
+    ativarObservadorVoltarJogosFarol();
+}
+
 function abrirTelaJogosFarol(){
 
     const area =
@@ -12707,6 +12962,8 @@ function abrirTelaJogosFarol(){
     if(area){
         area.innerHTML = "";
     }
+
+    definirModoJogoInternoFarol(false);
 
 }
 
