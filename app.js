@@ -30393,7 +30393,8 @@ function renderizarSalaArenaAoVivoFarol(){
 
     const titulosFluxoFarol = {
         inicio: ["⚔️ Competir", "Escolha como deseja jogar."],
-        dueloConcurso: ["Desafio por convite", "Escolha o concurso."],
+        dueloInicio: ["Duelos", "Escolha uma opção."],
+        dueloConcurso: ["Criar novo duelo", "Escolha o concurso."],
         dueloDisciplina: ["Escolha a disciplina", "Toque em uma opção para continuar."],
         dueloTopico: ["Escolha o tópico", "Selecione o conteúdo do desafio."],
         dueloQuantidade: ["Configurar duelo", "Escolha a quantidade e confirme."],
@@ -30449,20 +30450,11 @@ function renderizarSalaArenaAoVivoFarol(){
         inicio.id = "competicaoInicioFarolV21";
         inicio.className = "menu-fluxo-competicao-v21";
         inicio.innerHTML = `
-            <button type="button" onclick="abrirFluxoCompeticaoFarolV21('dueloConcurso')">
+            <button type="button" onclick="abrirFluxoCompeticaoFarolV21('dueloInicio')">
                 <span class="icone-opcao-fluxo-v21">⚔️</span>
                 <span>
-                    <strong>Desafio por convite</strong>
-                    <small>Crie um duelo e compartilhe o código.</small>
-                </span>
-                <b>›</b>
-            </button>
-
-            <button type="button" onclick="abrirFluxoCompeticaoFarolV21('dueloEntrar')">
-                <span class="icone-opcao-fluxo-v21">🔑</span>
-                <span>
-                    <strong>Entrar com código</strong>
-                    <small>Entre no desafio de outro aluno.</small>
+                    <strong>Duelos</strong>
+                    <small>Crie um desafio ou entre com um código.</small>
                 </span>
                 <b>›</b>
             </button>
@@ -30476,6 +30468,33 @@ function renderizarSalaArenaAoVivoFarol(){
                 <b>›</b>
             </button>
 
+        `;
+
+        const painelDesafio = elemento("painelDesafioConviteFarol");
+        card.insertBefore(inicio, painelDesafio || null);
+
+        const dueloMenu = document.createElement("div");
+        dueloMenu.id = "dueloInicioFarolV22";
+        dueloMenu.className = "menu-fluxo-competicao-v21";
+        dueloMenu.innerHTML = `
+            <button type="button" onclick="abrirFluxoCompeticaoFarolV21('dueloConcurso')">
+                <span class="icone-opcao-fluxo-v21">➕</span>
+                <span>
+                    <strong>Criar novo duelo</strong>
+                    <small>Escolha concurso, disciplina, tópico e questões.</small>
+                </span>
+                <b>›</b>
+            </button>
+
+            <button type="button" onclick="abrirFluxoCompeticaoFarolV21('dueloEntrar')">
+                <span class="icone-opcao-fluxo-v21">🔑</span>
+                <span>
+                    <strong>Entrar com código</strong>
+                    <small>Entre no desafio enviado por outro aluno.</small>
+                </span>
+                <b>›</b>
+            </button>
+
             <button type="button" onclick="abrirFluxoCompeticaoFarolV21('meusDuelos')">
                 <span class="icone-opcao-fluxo-v21">🏆</span>
                 <span>
@@ -30485,9 +30504,7 @@ function renderizarSalaArenaAoVivoFarol(){
                 <b>›</b>
             </button>
         `;
-
-        const painelDesafio = elemento("painelDesafioConviteFarol");
-        card.insertBefore(inicio, painelDesafio || null);
+        card.insertBefore(dueloMenu, elemento("painelDesafioConviteFarol"));
 
         const arenaMenu = document.createElement("div");
         arenaMenu.id = "arenaInicioFarolV21";
@@ -30622,6 +30639,7 @@ function renderizarSalaArenaAoVivoFarol(){
     function esconderTudoFluxoFarol(){
         const ids = [
             "competicaoInicioFarolV21",
+            "dueloInicioFarolV22",
             "arenaInicioFarolV21",
             "painelDesafioConviteFarol",
             "painelArenaAoVivoFarol",
@@ -30749,6 +30767,10 @@ function renderizarSalaArenaAoVivoFarol(){
 
         if(etapa === "inicio"){
             elemento("competicaoInicioFarolV21").style.display = "grid";
+        }
+
+        if(etapa === "dueloInicio"){
+            elemento("dueloInicioFarolV22").style.display = "grid";
         }
 
         if(etapa === "dueloConcurso"){
@@ -30890,13 +30912,14 @@ function renderizarSalaArenaAoVivoFarol(){
 
     window.voltarFluxoCompeticaoFarolV21 = function(){
         const anteriores = {
-            dueloConcurso: "inicio",
+            dueloInicio: "inicio",
+            dueloConcurso: "dueloInicio",
             dueloDisciplina: "dueloConcurso",
             dueloTopico: "dueloDisciplina",
             dueloQuantidade: "dueloTopico",
-            dueloCodigo: "inicio",
-            dueloEntrar: "inicio",
-            meusDuelos: "inicio",
+            dueloCodigo: "dueloInicio",
+            dueloEntrar: "dueloInicio",
+            meusDuelos: "dueloInicio",
             arenaInicio: "inicio",
             arenaConcurso: "arenaInicio",
             arenaDisciplina: "arenaConcurso",
@@ -30974,7 +30997,7 @@ function renderizarSalaArenaAoVivoFarol(){
                 if(modo === "arena"){
                     abrirFluxoCompeticaoFarolV21("arenaInicio");
                 }else{
-                    abrirFluxoCompeticaoFarolV21("dueloConcurso");
+                    abrirFluxoCompeticaoFarolV21("dueloInicio");
                 }
             };
         }
