@@ -9980,3 +9980,869 @@ progress{
     margin-bottom:12px;
     color:#455a64;
 }
+
+
+/* ==========================================================
+   FAROL DO SABER — VISUAL DE APLICATIVO NO CELULAR
+========================================================== */
+
+.barra-inferior-farol{
+    display:none;
+}
+
+.inicio-app-cabecalho,
+.abas-inicio-farol{
+    display:none;
+}
+
+@media(max-width:768px){
+
+    html{
+        scroll-behavior:smooth;
+    }
+
+    body{
+        padding:10px 10px calc(86px + env(safe-area-inset-bottom));
+        background-attachment:scroll;
+        overflow-x:hidden;
+    }
+
+    body > header{
+        padding:16px 12px 12px;
+    }
+
+    body > header h1{
+        font-size:28px;
+        margin-bottom:5px;
+    }
+
+    body > header > p{
+        font-size:15px;
+    }
+
+    body > nav:not(.barra-inferior-farol){
+        display:none !important;
+    }
+
+    .barra-inferior-farol{
+        position:fixed;
+        z-index:10000;
+        left:0;
+        right:0;
+        bottom:0;
+        display:flex;
+        justify-content:space-around;
+        align-items:stretch;
+        gap:0;
+        height:68px;
+        margin:0;
+        padding:4px 4px calc(4px + env(safe-area-inset-bottom));
+        background:rgba(255,255,255,0.97);
+        border-top:1px solid rgba(0,0,0,0.10);
+        box-shadow:0 -5px 18px rgba(0,0,0,0.12);
+        backdrop-filter:blur(14px);
+        -webkit-backdrop-filter:blur(14px);
+    }
+
+    .barra-inferior-farol.barra-inferior-oculta{
+        display:none !important;
+    }
+
+    .barra-inferior-farol .item-barra-inferior{
+        flex:1;
+        min-width:0;
+        width:auto;
+        height:58px;
+        margin:0;
+        padding:5px 2px;
+        border-radius:12px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:2px;
+        background:transparent;
+        color:#61706a;
+        box-shadow:none;
+        font-size:11px;
+        font-weight:700;
+    }
+
+    .barra-inferior-farol .item-barra-inferior:hover{
+        background:#edf7f2;
+        color:#087f5b;
+    }
+
+    .barra-inferior-farol .item-barra-inferior.ativo{
+        background:#e4f5ed;
+        color:#087f5b;
+    }
+
+    .icone-barra-app{
+        display:block;
+        font-size:21px;
+        line-height:1;
+    }
+
+    #inicio{
+        width:100%;
+    }
+
+    .inicio-app-cabecalho{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:12px;
+        margin:0 0 10px;
+        padding:14px 15px;
+        background:rgba(255,255,255,0.94);
+        border:1px solid rgba(255,255,255,0.55);
+        border-radius:18px;
+        box-shadow:0 5px 18px rgba(0,0,0,0.10);
+    }
+
+    .inicio-app-cabecalho h2{
+        margin:3px 0 0;
+        color:#087f5b;
+        font-size:21px;
+    }
+
+    .inicio-app-saudacao{
+        color:#65736d;
+        font-size:13px;
+        font-weight:700;
+    }
+
+    .inicio-app-perfil{
+        flex:0 0 44px;
+        width:44px;
+        height:44px;
+        margin:0;
+        padding:0;
+        display:grid;
+        place-items:center;
+        border-radius:50%;
+        font-size:21px;
+        background:#087f5b;
+    }
+
+    .abas-inicio-farol{
+        display:flex;
+        gap:8px;
+        width:100%;
+        margin:0 0 12px;
+        padding:2px 1px 7px;
+        overflow-x:auto;
+        scrollbar-width:none;
+        scroll-snap-type:x proximity;
+    }
+
+    .abas-inicio-farol::-webkit-scrollbar{
+        display:none;
+    }
+
+    .aba-inicio-farol{
+        flex:0 0 auto;
+        margin:0;
+        padding:10px 14px;
+        border-radius:999px;
+        background:rgba(255,255,255,0.93);
+        color:#3d4c46;
+        border:1px solid rgba(0,0,0,0.08);
+        box-shadow:0 2px 8px rgba(0,0,0,0.07);
+        scroll-snap-align:start;
+        font-size:13px;
+        white-space:nowrap;
+    }
+
+    .aba-inicio-farol.ativa{
+        background:#087f5b;
+        color:white;
+        border-color:#087f5b;
+    }
+
+    .dashboard-container-app{
+        display:block;
+        width:100%;
+        padding:0;
+    }
+
+    .dashboard-container-app .painel-inicio-bloco{
+        display:none;
+        width:100%;
+        max-width:none;
+        margin:0;
+        animation:entradaPainelInicioFarol .22s ease;
+    }
+
+    .dashboard-container-app .painel-inicio-bloco.painel-inicio-visivel{
+        display:block;
+    }
+
+    .dashboard-container-app .dashboard-card{
+        border-radius:18px;
+        padding:18px;
+    }
+
+    .dashboard-container-app .dashboard-card h2{
+        font-size:21px;
+    }
+
+    .tela.ativa{
+        animation:entradaTelaFarol .22s ease;
+    }
+
+    .tela > .card{
+        width:100%;
+        margin:0;
+        padding:16px;
+        border-radius:18px;
+    }
+
+    .btn-voltar,
+    .btn-voltar-automatico{
+        width:auto !important;
+        max-width:100%;
+        margin:0 0 8px !important;
+        padding:10px 13px !important;
+        font-size:14px !important;
+    }
+
+    @keyframes entradaPainelInicioFarol{
+        from{
+            opacity:0;
+            transform:translateY(7px);
+        }
+        to{
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+
+    @keyframes entradaTelaFarol{
+        from{
+            opacity:0;
+        }
+        to{
+            opacity:1;
+        }
+    }
+}
+
+@media(min-width:769px){
+    .dashboard-container-app .painel-inicio-bloco{
+        display:block !important;
+    }
+}
+
+
+/* ==========================================================
+   FAROL DO SABER — AJUSTES DA TELA INICIAL MOBILE (V9)
+========================================================== */
+
+.btn-comecar-estudos-inicio{
+    width:100%;
+    max-width:none;
+    margin:6px 0 14px !important;
+    display:block;
+}
+
+.resumo-nivel-inicio-card{
+    margin:0 0 14px;
+    padding:14px;
+    border-radius:16px;
+    background:linear-gradient(135deg, rgba(255,248,236,0.98), rgba(255,255,255,0.98));
+    border:2px solid rgba(255,166,0,0.35);
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.resumo-nivel-topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+    margin-bottom:8px;
+}
+
+.resumo-nivel-topo small{
+    display:block;
+    color:#8a5a1f;
+    margin-bottom:4px;
+}
+
+.resumo-nivel-topo strong{
+    color:#8b4a00;
+    font-size:18px;
+}
+
+.resumo-pontos-luz-badge{
+    flex:0 0 auto;
+    padding:6px 10px;
+    border-radius:999px;
+    background:#fff3dd;
+    color:#8b4a00;
+    font-weight:700;
+    font-size:13px;
+}
+
+.resumo-nivel-inicio-card p{
+    margin:0 0 10px;
+    line-height:1.5;
+    color:#8b4a00;
+    font-weight:700;
+}
+
+.barra-nivel-luz-resumo{
+    margin-bottom:8px;
+}
+
+.atalhos-inicio-grid{
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:8px;
+    margin:0 0 10px;
+}
+
+.atalhos-inicio-grid button,
+.atalhos-inicio-secundarios button{
+    margin:0 !important;
+    padding:11px 8px !important;
+    border-radius:14px !important;
+    background:linear-gradient(135deg, #2388e6, #1e88e5) !important;
+    color:white !important;
+    font-size:13px !important;
+    font-weight:700 !important;
+    line-height:1.25;
+    box-shadow:0 6px 14px rgba(30,136,229,0.22);
+}
+
+.atalhos-inicio-grid button:hover,
+.atalhos-inicio-secundarios button:hover{
+    background:linear-gradient(135deg, #2179cb, #1565c0) !important;
+}
+
+.atalhos-inicio-secundarios{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:8px;
+    margin:0 0 14px;
+}
+
+@media(max-width:768px){
+    .abas-inicio-farol{
+        margin-bottom:10px;
+    }
+
+    .dashboard-container-app .dashboard-card.painel-inicio-resumo{
+        padding:16px;
+    }
+
+    .atalhos-inicio-grid{
+        grid-template-columns:repeat(4, minmax(0, 1fr));
+    }
+
+    .atalhos-inicio-grid button,
+    .atalhos-inicio-secundarios button{
+        min-height:62px;
+    }
+}
+
+@media(max-width:430px){
+    .atalhos-inicio-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+
+    .resumo-nivel-topo{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+
+/* ==========================================================
+   FAROL DO SABER — ESTRUTURA COMPLETA DE APP (V10)
+========================================================== */
+
+.cabecalho-tela-app,
+.perfil-app-cabecalho{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:14px;
+    margin-bottom:16px;
+}
+
+.cabecalho-tela-app h2,
+.perfil-app-cabecalho h2{
+    margin:3px 0 5px;
+    color:#087f5b;
+}
+
+.cabecalho-tela-app p,
+.perfil-app-cabecalho p{
+    margin:0;
+    color:#5f6f69;
+    line-height:1.45;
+}
+
+.mini-titulo-app{
+    display:block;
+    color:#087f5b;
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+}
+
+.botao-cabecalho-app{
+    flex:0 0 44px;
+    width:44px;
+    height:44px;
+    margin:0;
+    padding:0;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    font-size:19px;
+}
+
+.atalhos-contexto-app{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0,1fr));
+    gap:10px;
+    margin:0 0 18px;
+}
+
+.atalhos-contexto-app button{
+    min-height:58px;
+    margin:0;
+    padding:10px 8px;
+    border-radius:14px;
+    background:#eef7f3;
+    border:1px solid #d9ebe3;
+    color:#176447;
+    font-weight:800;
+    box-shadow:none;
+}
+
+.atalhos-contexto-app button:hover{
+    background:#dff1e9;
+    color:#0d5a3d;
+}
+
+.central-recursos-perfil{
+    margin:4px 0 22px;
+    padding:17px;
+    border-radius:18px;
+    background:rgba(247,251,249,.96);
+    border:1px solid #dce9e3;
+}
+
+.central-recursos-perfil > h3{
+    margin:0 0 5px;
+    color:#087f5b;
+}
+
+.central-recursos-perfil > p{
+    margin:0 0 14px;
+    color:#64736d;
+}
+
+.grade-recursos-perfil{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0,1fr));
+    gap:10px;
+}
+
+.grade-recursos-perfil button{
+    min-height:88px;
+    margin:0;
+    padding:12px;
+    border-radius:15px;
+    display:grid;
+    grid-template-columns:34px minmax(0,1fr);
+    grid-template-rows:auto auto;
+    column-gap:9px;
+    text-align:left;
+    background:white;
+    color:#27332e;
+    border:1px solid #e0e9e5;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+
+.grade-recursos-perfil button:hover{
+    background:#edf7f2;
+    color:#174f3a;
+}
+
+.grade-recursos-perfil button > span{
+    grid-row:1 / span 2;
+    align-self:center;
+    font-size:25px;
+}
+
+.grade-recursos-perfil button > strong{
+    align-self:end;
+    font-size:14px;
+}
+
+.grade-recursos-perfil button > small{
+    align-self:start;
+    color:#718079;
+    font-size:11px;
+    font-weight:600;
+}
+
+.grade-recursos-perfil .recurso-sair-perfil{
+    border-color:#ffd6d6;
+    background:#fff6f6;
+    color:#a22020;
+}
+
+.separador-perfil-app{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:2px 0 17px;
+    color:#66746e;
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.03em;
+}
+
+.separador-perfil-app::before,
+.separador-perfil-app::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:#dce5e1;
+}
+
+@media(max-width:768px){
+
+    body > header{
+        display:none;
+    }
+
+    #inicio,
+    #questoes,
+    #simulados,
+    #perfilAluno{
+        padding-top:2px;
+    }
+
+    .card-preparacoes-farol,
+    .simulados-card-principal,
+    .perfil-card{
+        margin-top:0 !important;
+    }
+
+    .cabecalho-tela-app,
+    .perfil-app-cabecalho{
+        padding:2px 0 5px;
+    }
+
+    .atalhos-contexto-app{
+        overflow-x:auto;
+        grid-template-columns:repeat(3, minmax(132px,1fr));
+        scrollbar-width:none;
+    }
+
+    .atalhos-contexto-app::-webkit-scrollbar{
+        display:none;
+    }
+
+    .grade-recursos-perfil{
+        grid-template-columns:repeat(2, minmax(0,1fr));
+    }
+}
+
+@media(max-width:390px){
+    .grade-recursos-perfil{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(min-width:769px){
+    .central-recursos-perfil{
+        max-width:980px;
+    }
+
+    .grade-recursos-perfil{
+        grid-template-columns:repeat(5, minmax(0,1fr));
+    }
+}
+
+
+/* ==========================================================
+   FAROL DO SABER — CORREÇÕES DE NAVEGAÇÃO E AVATAR (V11)
+========================================================== */
+
+.inicio-app-saudacao{
+    color:#087f5b;
+    font-weight:800;
+    letter-spacing:.01em;
+}
+
+.inicio-app-perfil{
+    overflow:hidden;
+    border:2px solid rgba(8,127,91,.18);
+    background:#edf7f2;
+}
+
+.avatar-topo-farol{
+    width:100%;
+    height:100%;
+    display:grid;
+    place-items:center;
+}
+
+.avatar-topo-farol-img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.avatar-topo-farol .avatar-imagem,
+.avatar-topo-farol img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    border-radius:50% !important;
+}
+
+.avatar-topo-farol .avatar-emoji{
+    font-size:24px;
+}
+
+@media(max-width:768px){
+    .inicio-app-cabecalho{
+        background:rgba(255,255,255,.97);
+    }
+
+    .inicio-app-saudacao{
+        font-size:12px;
+    }
+}
+
+
+/* ==========================================================
+   FAROL DO SABER — ACABAMENTO MOBILE V13
+========================================================== */
+
+/* Tela inicial mais compacta */
+@media(max-width:768px){
+
+    .inicio-app-cabecalho{
+        padding:12px 14px;
+        border-radius:17px;
+    }
+
+    .inicio-app-cabecalho h2{
+        font-size:20px;
+    }
+
+    .dashboard-container-app .dashboard-card.painel-inicio-resumo{
+        padding:14px;
+    }
+
+    .dashboard-container-app .painel-inicio-resumo > h2{
+        margin-bottom:10px;
+        font-size:21px;
+    }
+
+    .btn-comecar-estudos-inicio{
+        min-height:70px;
+        padding:13px 12px !important;
+        margin-bottom:12px !important;
+    }
+
+    .resumo-nivel-inicio-card{
+        padding:12px;
+        margin-bottom:12px;
+    }
+
+    .resumo-nivel-topo strong{
+        font-size:17px;
+    }
+
+    .resumo-nivel-inicio-card p{
+        font-size:14px;
+        margin-bottom:8px;
+    }
+
+    .missao-inicio{
+        margin:0 0 12px !important;
+        padding:13px !important;
+    }
+
+    .missao-inicio button{
+        min-height:46px;
+        margin-top:8px !important;
+    }
+
+    .continuar-estudo-box{
+        margin-bottom:12px;
+        padding:12px !important;
+    }
+
+    .btn-continuar-ultimo{
+        min-height:52px;
+        padding:11px !important;
+    }
+
+    .continuar-estudo-box p{
+        margin-top:9px !important;
+        font-size:14px;
+        line-height:1.45;
+    }
+
+    .atalhos-inicio-principais{
+        grid-template-columns:repeat(4, minmax(0,1fr)) !important;
+        gap:7px;
+        margin-bottom:10px;
+    }
+
+    .atalhos-inicio-principais button{
+        min-height:54px !important;
+        padding:8px 4px !important;
+        font-size:12px !important;
+        border-radius:13px !important;
+    }
+
+    .mais-recursos-inicio{
+        margin:0;
+        border:1px solid rgba(255,255,255,.38);
+        border-radius:14px;
+        background:rgba(255,255,255,.18);
+        overflow:hidden;
+    }
+
+    .mais-recursos-inicio summary{
+        padding:12px 14px;
+        cursor:pointer;
+        list-style:none;
+        font-weight:800;
+        color:white;
+        text-align:center;
+        background:rgba(0,54,99,.58);
+    }
+
+    .mais-recursos-inicio summary::-webkit-details-marker{
+        display:none;
+    }
+
+    .mais-recursos-inicio[open] summary{
+        border-bottom:1px solid rgba(255,255,255,.25);
+    }
+
+    .atalhos-inicio-extras{
+        grid-template-columns:repeat(3, minmax(0,1fr)) !important;
+        gap:7px;
+        padding:10px;
+        margin:0;
+    }
+
+    .atalhos-inicio-extras button{
+        min-height:52px !important;
+        padding:8px 4px !important;
+        font-size:11px !important;
+        border-radius:12px !important;
+    }
+
+    .atalhos-inicio-extras .atalho-sair-inicio{
+        background:#c93a3a !important;
+    }
+}
+
+/* Progresso organizado em cartões */
+.progresso-estudos-resumo{
+    margin:16px 0 4px;
+    padding:14px;
+    border-radius:16px;
+    background:rgba(255,255,255,.66);
+    border:1px solid rgba(255,255,255,.55);
+}
+
+.progresso-estudos-resumo h3{
+    margin:0 0 11px;
+    color:#087f5b;
+}
+
+.grade-progresso-estudos{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;
+}
+
+.grade-progresso-estudos > div{
+    min-width:0;
+    padding:11px;
+    border-radius:12px;
+    background:white;
+    border:1px solid #e1e8e5;
+}
+
+.grade-progresso-estudos small{
+    display:block;
+    margin-bottom:5px;
+    color:#6a7872;
+    font-size:12px;
+}
+
+.grade-progresso-estudos strong{
+    display:block;
+    overflow-wrap:anywhere;
+    color:#24322c;
+}
+
+.grade-progresso-estudos .progresso-estudo-largo{
+    grid-column:1 / -1;
+}
+
+/* Simulados: melhora contraste */
+#simulados .simulados-topo h2{
+    color:#f7fbff !important;
+}
+
+#simulados .simulados-topo p{
+    color:rgba(255,255,255,.88) !important;
+}
+
+#simulados .simulados-topo{
+    margin-bottom:13px;
+}
+
+#simulados .selo-simulados{
+    color:#805900 !important;
+}
+
+/* Ranking mais compacto para mostrar mais posições */
+@media(max-width:768px){
+    #inicio .ranking-card{
+        padding:13px;
+    }
+
+    #inicio .ranking-card > h2{
+        margin-bottom:8px;
+        font-size:21px;
+    }
+
+    #inicio .ranking-card > br{
+        display:none;
+    }
+
+    #rankingPontos .ranking-item,
+    #rankingPontos .item-ranking,
+    #rankingPontos > div{
+        margin-bottom:8px;
+    }
+}
+
+/* Arena: a aba já apresenta o modo; remove espaço desnecessário */
+#painelArenaAoVivoFarol .arena-layout-farol{
+    margin-top:4px;
+}

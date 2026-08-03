@@ -26,6 +26,10 @@ if(typeof atualizarAtividade === "function"){
 
     telaDestino.classList.add("ativa");
 
+    if(typeof atualizarNavegacaoInferiorFarol === "function"){
+        atualizarNavegacaoInferiorFarol(id);
+    }
+
     // Garante botão de retorno em todos os menus principais que antes
     // dependiam do menu superior para voltar.
     const telasComVoltarAutomatico = {
@@ -158,6 +162,12 @@ if(id === "login"){
 
     if(id === "inicio" && typeof atualizarContinuarUltimoEstudo === "function"){
         atualizarContinuarUltimoEstudo();
+
+        if(typeof abrirAbaInicioFarol === "function"){
+            setTimeout(() => {
+                abrirAbaInicioFarol("resumo");
+            }, 0);
+        }
     }
 
 
@@ -167,6 +177,153 @@ if(id === "login"){
 
 }
 
+
+// ==========================
+// NAVEGAÇÃO MOBILE E ABAS DO INÍCIO
+// ==========================
+
+function atualizarNavegacaoInferiorFarol(idTela){
+
+    const barra =
+        document.getElementById("barraInferiorFarol");
+
+    if(!barra){
+        return;
+    }
+
+    const telasSemBarra = [
+        "login",
+        "cadastro",
+        "confirmacaoAdminFarol"
+    ];
+
+    barra.classList.toggle(
+        "barra-inferior-oculta",
+        telasSemBarra.includes(idTela)
+    );
+
+    let itemAtivo = idTela;
+
+    const telasDoEstudo = [
+        "questoes",
+        "historia",
+        "ciencias",
+        "geografia",
+        "portugues",
+        "informatica",
+        "didatica",
+        "etica",
+        "apoioEscolar",
+        "teoria",
+        "telaMapaMental",
+        "resolverQuestao",
+        "telaBNCC",
+        "forum"
+    ];
+
+    if(telasDoEstudo.includes(idTela)){
+        itemAtivo = "questoes";
+    }
+
+    if(idTela === "duelos"){
+        itemAtivo = "duelos";
+    }
+
+    barra.querySelectorAll(".item-barra-inferior").forEach(botao => {
+        botao.classList.toggle(
+            "ativo",
+            botao.dataset.telaApp === itemAtivo
+        );
+    });
+}
+
+function abrirAbaInicioFarol(nomeAba){
+
+    const abaPermitida = [
+        "resumo",
+        "progresso",
+        "ranking",
+        "online"
+    ].includes(nomeAba)
+        ? nomeAba
+        : "resumo";
+
+    const telaInicio =
+        document.getElementById("inicio");
+
+    if(!telaInicio){
+        return;
+    }
+
+    if(!telaInicio.classList.contains("ativa")){
+        document.querySelectorAll(".tela").forEach(tela => {
+            tela.classList.remove("ativa");
+        });
+
+        telaInicio.classList.add("ativa");
+
+        localStorage.setItem(
+            "farol_telaAtual",
+            "inicio"
+        );
+    }
+
+    telaInicio.querySelectorAll(".painel-inicio-bloco").forEach(bloco => {
+        bloco.classList.remove("painel-inicio-visivel");
+    });
+
+    const destino =
+        telaInicio.querySelector(
+            ".painel-inicio-" + abaPermitida
+        );
+
+    if(destino){
+        destino.classList.add("painel-inicio-visivel");
+    }
+
+    telaInicio.querySelectorAll(".aba-inicio-farol").forEach(botao => {
+        botao.classList.toggle(
+            "ativa",
+            botao.dataset.abaInicio === abaPermitida
+        );
+    });
+
+    const barra =
+        document.getElementById("barraInferiorFarol");
+
+    if(barra){
+        barra.querySelectorAll(".item-barra-inferior").forEach(botao => {
+            const ativo =
+                abaPermitida === "ranking"
+                ? botao.dataset.telaApp === "ranking"
+                : botao.dataset.telaApp === "inicio";
+
+            botao.classList.toggle("ativo", ativo);
+        });
+    }
+
+    sessionStorage.setItem(
+        "farol_abaInicioAtual",
+        abaPermitida
+    );
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    abrirAbaInicioFarol("resumo");
+
+    const telaAtual =
+        localStorage.getItem("farol_telaAtual") ||
+        "inicio";
+
+    atualizarNavegacaoInferiorFarol(telaAtual);
+});
 
 
 function nomeDisciplinaForum(chave){
@@ -7445,6 +7602,15 @@ if(campoAvatarAluno){
     `;
 }
 
+const avatarTopoFarol = document.getElementById("avatarTopoFarol");
+if(avatarTopoFarol){
+    avatarTopoFarol.innerHTML = montarAvatarHTML(
+        lojaFarol.avatarAtual,
+        lojaFarol.nomeAvatarAtual,
+        "avatar-topo-farol-img"
+    );
+}
+
 const campoTituloAluno = document.getElementById("tituloAluno");
 if(campoTituloAluno){
     const linhaTituloAluno = campoTituloAluno.closest("p");
@@ -7496,6 +7662,35 @@ if(barraNivelAluno){
 
 if(textoProgressoNivelAluno){
     textoProgressoNivelAluno.textContent = nivelLuzAtual.percentual + "% do caminho deste nível";
+}
+
+const resumoNivelLuzAluno = document.getElementById("resumoNivelLuzAluno");
+const resumoFaltamNivelAluno = document.getElementById("resumoFaltamNivelAluno");
+const resumoBarraNivelAluno = document.getElementById("resumoBarraNivelAluno");
+const resumoTextoProgressoNivelAluno = document.getElementById("resumoTextoProgressoNivelAluno");
+const resumoPontosLuzAluno = document.getElementById("resumoPontosLuzAluno");
+
+if(resumoNivelLuzAluno){
+    resumoNivelLuzAluno.textContent =
+        nivelLuzAtual.icone + " " + nivelLuzAtual.nome;
+}
+
+if(resumoFaltamNivelAluno){
+    resumoFaltamNivelAluno.textContent = nivelLuzAtual.textoFalta;
+}
+
+if(resumoBarraNivelAluno){
+    resumoBarraNivelAluno.style.width =
+        nivelLuzAtual.percentual + "%";
+}
+
+if(resumoTextoProgressoNivelAluno){
+    resumoTextoProgressoNivelAluno.textContent =
+        nivelLuzAtual.percentual + "% do caminho deste nível";
+}
+
+if(resumoPontosLuzAluno){
+    resumoPontosLuzAluno.textContent = pontosLuz;
 }
 
 atualizarMissaoDiaria();

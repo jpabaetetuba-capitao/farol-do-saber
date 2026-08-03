@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🗼 Farol do Saber</title>
 
-    <link rel="stylesheet" href="style.css?v=56-saida-arena">
+    <link rel="stylesheet" href="style.css?v=62-app-mobile-refinado">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -236,7 +236,7 @@
 </button>
 
     <button onclick="mostrarTela('inicio')">
-        🏠 Meu Painel
+        🏠 Início
     </button>
 
     <button onclick="mostrarTela('simulados')">
@@ -289,6 +289,38 @@
     🚪 Sair
 </button>
 
+</nav>
+
+<!-- NAVEGAÇÃO PRINCIPAL NO CELULAR -->
+<nav id="barraInferiorFarol" class="barra-inferior-farol" aria-label="Navegação principal">
+    <button type="button" class="item-barra-inferior ativo" data-tela-app="inicio" onclick="abrirAbaInicioFarol('resumo')">
+        <span class="icone-barra-app">🏠</span>
+        <span>Início</span>
+    </button>
+
+    <button type="button" class="item-barra-inferior" data-tela-app="questoes" onclick="mostrarTela('questoes')">
+        <span class="icone-barra-app">📚</span>
+        <span>Estudar</span>
+    </button>
+
+    <button type="button" class="item-barra-inferior" data-tela-app="simulados" onclick="mostrarTela('simulados')">
+        <span class="icone-barra-app">📝</span>
+        <span>Simulados</span>
+    </button>
+
+    <button type="button" class="item-barra-inferior" data-tela-app="ranking" onclick="abrirAbaInicioFarol('ranking')">
+        <span class="icone-barra-app">🏆</span>
+        <span>Ranking</span>
+    </button>
+
+    <button
+        type="button"
+        class="item-barra-inferior"
+        data-tela-app="duelos"
+        onclick="mostrarTela('duelos'); prepararSelectDuelo(); carregarMeusDuelos();">
+        <span class="icone-barra-app">⚔️</span>
+        <span>Duelos</span>
+    </button>
 </nav>
 
 <!-- HISTORIA -->
@@ -2275,12 +2307,37 @@ Li e revisei o mapa mental.
 
 <section id="inicio" class="tela ativa">
 
+    <div class="inicio-app-cabecalho">
+        <div>
+            <span class="inicio-app-saudacao">Sua rota rumo à aprovação</span>
+            <h2>🗼 Farol do Saber</h2>
+        </div>
+        <button
+            type="button"
+            class="inicio-app-perfil"
+            aria-label="Abrir perfil do aluno"
+            onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">
+            <span id="avatarTopoFarol" class="avatar-topo-farol">👤</span>
+        </button>
+    </div>
 
-    <div class="dashboard-container">
+    <div class="abas-inicio-farol" role="tablist" aria-label="Informações do painel">
+        <button type="button" class="aba-inicio-farol ativa" data-aba-inicio="resumo" onclick="abrirAbaInicioFarol('resumo')">
+            ✨ Resumo
+        </button>
+        <button type="button" class="aba-inicio-farol" data-aba-inicio="progresso" onclick="abrirAbaInicioFarol('progresso')">
+            📊 Progresso
+        </button>
+        <button type="button" class="aba-inicio-farol" data-aba-inicio="online" onclick="abrirAbaInicioFarol('online')">
+            👥 Online
+        </button>
+    </div>
+
+    <div class="dashboard-container dashboard-container-app">
 
         <!-- DASHBOARD ESQUERDA -->
 
-        <div class="dashboard-card">
+        <div class="dashboard-card painel-inicio-bloco painel-inicio-progresso">
 
             <h2>📊 Dashboard</h2>
 
@@ -2408,6 +2465,37 @@ Li e revisei o mapa mental.
     </button>
 </div>
 
+<div class="progresso-estudos-resumo">
+    <h3>📚 Progresso nos estudos</h3>
+
+    <div class="grade-progresso-estudos">
+        <div>
+            <small>Concluídos</small>
+            <strong id="assuntosConcluidos">0</strong>
+        </div>
+
+        <div>
+            <small>Em andamento</small>
+            <strong id="assuntosAndamento">0</strong>
+        </div>
+
+        <div class="progresso-estudo-largo">
+            <small>Último assunto</small>
+            <strong id="ultimoAssunto">Nenhum</strong>
+        </div>
+
+        <div>
+            <small>Próxima questão</small>
+            <strong id="proximaQuestaoPainel">-</strong>
+        </div>
+
+        <div>
+            <small>Melhor resultado</small>
+            <strong id="melhorResultado">-</strong>
+        </div>
+    </div>
+</div>
+
 <br>
 
 <h3>🏅 Medalhas</h3>
@@ -2443,9 +2531,41 @@ Li e revisei o mapa mental.
 
         <!-- PAINEL DIREITA -->
 
-        <div class="dashboard-card">
+        <div class="dashboard-card painel-inicio-bloco painel-inicio-resumo">
 
-            <h2>📚 Estudos</h2>
+            <h2>🏠 Início</h2>
+
+            <button
+                class="btn-comecar-estudos btn-comecar-estudos-inicio"
+                onclick="mostrarTela('questoes')">
+                🚀 Começar meus Estudos
+                <span>Escolha seu concurso e cargo e continue sua rota.</span>
+            </button>
+
+            <div class="resumo-nivel-inicio-card">
+                <div class="resumo-nivel-topo">
+                    <div>
+                        <small>Seu nível atual</small>
+                        <strong id="resumoNivelLuzAluno">🌱 Nível 1 - Iniciante</strong>
+                    </div>
+                    <span class="resumo-pontos-luz-badge">
+                        ⭐ <strong id="resumoPontosLuzAluno">0</strong> pts
+                    </span>
+                </div>
+
+                <p id="resumoFaltamNivelAluno">
+                    Faltam 500 Pontos de Luz para o próximo nível.
+                </p>
+
+                <div class="barra-nivel-luz barra-nivel-luz-resumo">
+                    <span id="resumoBarraNivelAluno"></span>
+                </div>
+
+                <small id="resumoTextoProgressoNivelAluno">
+                    0% do caminho deste nível
+                </small>
+            </div>
+
 
             <div class="aviso-farol aviso-farol-compacto missao-inicio" id="missaoDiariaResumoInicio">
                 <strong>🎯 Missão do Dia</strong>
@@ -2464,54 +2584,30 @@ Li e revisei o mapa mental.
                 </p>
             </div>
 
-            <br>
+            <div class="atalhos-inicio-grid atalhos-inicio-principais" aria-label="Atalhos principais">
+                <button onclick="mostrarTela('provasAnteriores')">📄 Provas</button>
+                <button onclick="mostrarTela('chatGlobal')">💬 Chat</button>
+                <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();">🎮 Jogos</button>
+                <button onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">👤 Perfil</button>
+            </div>
 
-            <p>
-                Concluídos:
-                <strong id="assuntosConcluidos">
-                    0
-                </strong>
-            </p>
+            <details class="mais-recursos-inicio">
+                <summary>☰ Mais recursos</summary>
 
-            <br>
+                <div class="atalhos-inicio-grid atalhos-inicio-extras">
+                    <button onclick="mostrarTela('lojaFarol'); atualizarLojaFarol();">🛒 Loja</button>
+                    <button onclick="mostrarTela('estatisticas')">📊 Estatísticas</button>
+                    <button onclick="mostrarTela('erros')">❌ Erros</button>
+                    <button onclick="mostrarTela('sobre')">ℹ️ Sobre</button>
+                    <button onclick="abrirPainelAcessosFarol()">🔐 Área Admin</button>
+                    <button class="atalho-sair-inicio" onclick="sair()">🚪 Sair</button>
+                </div>
+            </details>
 
-            <p>
-                Em andamento:
-                <strong id="assuntosAndamento">
-                    0
-                </strong>
-            </p>
-
-            <br>
-
-            <p>
-                Último assunto:
-                <strong id="ultimoAssunto">
-                    Nenhum
-                </strong>
-            </p>
-
-            <br>
-
-            <p>
-                Próxima questão:
-                <strong id="proximaQuestaoPainel">
-                    -
-                </strong>
-            </p>
-
-<br>
-
-<p>
-    Melhor resultado:
-    <strong id="melhorResultado">
-        -
-    </strong>
-</p>
 
 </div>
 
-<div class="dashboard-card ranking-card">
+<div class="dashboard-card ranking-card painel-inicio-bloco painel-inicio-ranking">
 
     <h2>🏆 Ranking</h2>
 
@@ -2523,7 +2619,7 @@ Li e revisei o mapa mental.
 
 </div>
 
-<div class="dashboard-card online-card">
+<div class="dashboard-card online-card painel-inicio-bloco painel-inicio-online">
 
     <h2>
 
@@ -2558,6 +2654,26 @@ Li e revisei o mapa mental.
 <section id="questoes" class="tela">
 
     <div class="card card-preparacoes-farol">
+
+        <div class="cabecalho-tela-app">
+            <div>
+                <span class="mini-titulo-app">Sua rota de aprendizagem</span>
+                <h2>📚 Estudar</h2>
+                <p>Escolha seu concurso, cargo, disciplina e assunto.</p>
+            </div>
+        </div>
+
+        <div class="atalhos-contexto-app">
+            <button onclick="mostrarTela('provasAnteriores')">
+                📄 Provas anteriores
+            </button>
+            <button onclick="mostrarTela('chatGlobal')">
+                💬 Chat geral
+            </button>
+            <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();">
+                🎮 Jogos
+            </button>
+        </div>
 
        <h2 id="tituloEscolhaPreparacaoFarol">🧭 Escolha seu Concurso</h2>
 
@@ -2652,6 +2768,18 @@ Li e revisei o mapa mental.
             <p>
                 Finalize um simulado e ganhe <strong>100 Pontos de Luz</strong>. Com 80% ou mais de aproveitamento, você pode receber bônus extra.
             </p>
+        </div>
+
+        <div class="atalhos-contexto-app atalhos-simulados-app">
+            <button onclick="mostrarTela('provasAnteriores')">
+                📄 Provas anteriores
+            </button>
+            <button onclick="mostrarTela('duelos'); prepararSelectDuelo(); carregarMeusDuelos();">
+                ⚔️ Duelos
+            </button>
+            <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();">
+                🎮 Jogos
+            </button>
         </div>
 
 
@@ -3758,21 +3886,6 @@ Li e revisei o mapa mental.
 
         <div id="painelArenaAoVivoFarol" style="display:none;">
 
-            <div class="arena-apresentacao-farol">
-                <div>
-                    <span class="arena-selo-farol">🏟️ NOVO MODO</span>
-                    <h3>Arena do Farol — Ao Vivo</h3>
-                    <p>
-                        Crie uma sala coletiva ou entre com um código. O anfitrião poderá iniciar
-                        quando houver pelo menos dois jogadores, com limite máximo de seis participantes.
-                    </p>
-                </div>
-                <div class="arena-status-farol">
-                    <strong>Etapa 3</strong>
-                    <span>Questões, cronômetro e placar ao vivo</span>
-                </div>
-            </div>
-
             <div class="arena-layout-farol">
 
                 <div class="arena-bloco-farol">
@@ -4042,13 +4155,86 @@ Li e revisei o mapa mental.
 
         <br><br>
 
-        <h2>👤 Perfil do Aluno</h2>
+        <div class="perfil-app-cabecalho">
+            <div>
+                <span class="mini-titulo-app">Sua conta e seus recursos</span>
+                <h2>👤 Perfil do Aluno</h2>
+                <p>
+                    Veja sua identidade, progresso, conquistas e certificado digital.
+                </p>
+            </div>
+        </div>
 
-        <p>
-            Veja sua identidade no Farol do Saber, progresso, conquistas e certificado digital.
-        </p>
+        <div class="central-recursos-perfil">
+            <h3>Todos os recursos do Farol</h3>
+            <p>Você sempre encontrará aqui as funções que não ficam na barra inferior.</p>
 
-        <br>
+            <div class="grade-recursos-perfil">
+                <button onclick="mostrarTela('estatisticas')">
+                    <span>📊</span>
+                    <strong>Estatísticas</strong>
+                    <small>Veja seu desempenho</small>
+                </button>
+
+                <button onclick="mostrarTela('erros')">
+                    <span>❌</span>
+                    <strong>Caderno de Erros</strong>
+                    <small>Revise suas dificuldades</small>
+                </button>
+
+                <button onclick="mostrarTela('lojaFarol'); atualizarLojaFarol();">
+                    <span>🛒</span>
+                    <strong>Loja</strong>
+                    <small>Avatares e recompensas</small>
+                </button>
+
+                <button onclick="mostrarTela('chatGlobal')">
+                    <span>💬</span>
+                    <strong>Chat Geral</strong>
+                    <small>Converse com os alunos</small>
+                </button>
+
+                <button onclick="mostrarTela('provasAnteriores')">
+                    <span>📄</span>
+                    <strong>Provas Anteriores</strong>
+                    <small>Treine com provas reais</small>
+                </button>
+
+                <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();">
+                    <span>🎮</span>
+                    <strong>Jogos</strong>
+                    <small>Aprenda jogando</small>
+                </button>
+
+                <button onclick="mostrarTela('duelos'); prepararSelectDuelo(); carregarMeusDuelos();">
+                    <span>⚔️</span>
+                    <strong>Duelos</strong>
+                    <small>Desafie outros alunos</small>
+                </button>
+
+                <button onclick="mostrarTela('sobre')">
+                    <span>ℹ️</span>
+                    <strong>Sobre</strong>
+                    <small>Conheça a plataforma</small>
+                </button>
+
+                <button onclick="abrirPainelAcessosFarol()">
+                    <span>🔐</span>
+                    <strong>Área Administrativa</strong>
+                    <small>Acesso do administrador</small>
+                </button>
+
+                <button class="recurso-sair-perfil" onclick="sair()">
+                    <span>🚪</span>
+                    <strong>Sair</strong>
+                    <small>Encerrar sua sessão</small>
+                </button>
+            </div>
+        </div>
+
+        <div class="separador-perfil-app">
+            <span>Dados, conquistas e certificado</span>
+        </div>
 
         <div id="conteudoPerfilAluno">
             Carregando perfil...
