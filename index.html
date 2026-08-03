@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🗼 Farol do Saber</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=56-saida-arena">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -232,7 +232,7 @@
     class="btn-comecar-estudos"
     onclick="mostrarTela('questoes')">
     🚀 Começar meus Estudos
-    <span>Escolha seu cargo e navegue rumo à sua aprovação.</span>
+    <span>Escolha seu concurso e cargo e navegue rumo à sua aprovação.</span>
 </button>
 
     <button onclick="mostrarTela('inicio')">
@@ -278,6 +278,13 @@
 <button onclick="mostrarTela('sobre')">
         ℹ️ Sobre
     </button>
+
+<button
+    id="btnPainelAcessosAdmin"
+    style="display:inline-block;"
+    onclick="abrirPainelAcessosFarol()">
+    🔐 Área Administrativa
+</button>
 <button onclick="sair()">
     🚪 Sair
 </button>
@@ -625,6 +632,300 @@
 
 </section>
 
+<!-- HISTÓRIA — ABAETETUBA -->
+<section id="historiaAbaetetuba" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="mostrarTela('questoes')">⬅ Voltar para a Rota de Estudos</button>
+        <br><br>
+        <span class="selo-rota-ivin">IVIN • Abaetetuba 2026</span>
+        <h2>🧭 Conhecimentos Específicos — Professor de História</h2>
+        <p class="texto-rota-abaetetuba">
+            Os conteúdos foram organizados conforme os eixos temáticos do edital da IVIN, com teoria, mapas mentais, questões e treinos próprios da rota.
+        </p>
+        <div class="aviso-farol aviso-farol-compacto">
+            <strong>✅ História de Abaetetuba completa: acesse os 10 eixos temáticos abaixo.</strong>
+        </div>
+        <div class="grid-assuntos grid-eixos-abaetetuba">
+            <button class="btn-assunto eixo-abaetetuba eixo-disponivel" onclick="abrirModuloHistoriaAbaetetuba(1)">
+                <span class="numero-eixo">1</span>
+                <strong>Ensino de História, historiografia, fontes e temporalidade</strong>
+                <small>3 subtemas • teoria, mapas e questões</small>
+            </button>
+            <button class="btn-assunto eixo-abaetetuba eixo-disponivel" onclick="abrirModuloHistoriaAbaetetuba(2)">
+                <span class="numero-eixo">2</span>
+                <strong>História do Brasil, identidades e historiografia brasileira</strong>
+                <small>5 subtemas • teoria, mapas e questões</small>
+            </button>
+            <button class="btn-assunto eixo-abaetetuba eixo-disponivel" onclick="abrirModuloHistoriaAbaetetuba(3)"><span class="numero-eixo">3</span><strong>História regional, local, Amazônia e Pará</strong><small>3 subtemas • teoria, mapas e questões</small></button>
+            <button class="btn-assunto eixo-abaetetuba eixo-disponivel" onclick="abrirModuloHistoriaAbaetetuba(4)"><span class="numero-eixo">4</span><strong>História da América e suas identidades</strong><small>4 subtemas • teoria, mapas e questões</small></button>
+            <button class="btn-assunto eixo-abaetetuba eixo-disponivel" onclick="abrirModuloHistoriaAbaetetuba(5)"><span class="numero-eixo">5</span><strong>Lutas sociais e identidades sociais, culturais e nacionais</strong><small>4 subtemas • teoria, mapas e questões</small></button>
+            <button class="btn-assunto eixo-abaetetuba eixo-disponivel" onclick="abrirModuloHistoriaAbaetetuba(6)"><span class="numero-eixo">6</span><strong>Antiguidade clássica e seus legados culturais</strong><small>2 subtemas • teoria, mapas e questões</small></button>
+            <button class="btn-assunto eixo-abaetetuba eixo-disponivel" onclick="abrirModuloHistoriaAbaetetuba(7)"><span class="numero-eixo">7</span><strong>Europa Medieval: convívios e confrontos culturais</strong><small>2 subtemas • teoria, mapas e questões</small></button>
+            <button class="btn-assunto eixo-abaetetuba eixo-disponivel" onclick="abrirModuloHistoriaAbaetetuba(8)"><span class="numero-eixo">8</span><strong>História africana e relações com Europa e América</strong><small>4 subtemas • teoria, mapas e questões</small></button>
+            <button class="btn-assunto eixo-abaetetuba eixo-disponivel" onclick="abrirModuloHistoriaAbaetetuba(9)"><span class="numero-eixo">9</span><strong>Capitalismo, lutas sociais, cidadania e cultura</strong><small>7 subtemas • teoria, mapas e questões</small></button>
+            <button class="btn-assunto eixo-abaetetuba eixo-disponivel" onclick="abrirModuloHistoriaAbaetetuba(10)"><span class="numero-eixo">10</span><strong>Didática, currículo, BNCC e legislação educacional</strong><small>10 subtemas • teoria, mapas e questões</small></button>
+        </div>
+    </div>
+</section>
+
+<section id="moduloHistoriaAbaetetuba1" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="voltarParaHistoriaAbaetetuba()">⬅ Voltar aos Eixos de História</button>
+        <br><br>
+        <span class="selo-rota-ivin">Eixo 1 • Conteúdo do edital IVIN</span>
+        <h2>📚 Ensino de História, Historiografia, Fontes e Temporalidade</h2>
+        <p class="texto-rota-abaetetuba">
+            Este eixo integra fundamentos do ensino, produção do conhecimento histórico, análise documental e uso de diferentes linguagens em sala de aula.
+        </p>
+        <div class="quadro-conteudo-eixo-abaetetuba">
+            <div><strong>📚 Fundamentos</strong><span>Ensino de História e mediação pedagógica</span></div>
+            <div><strong>🔎 Método histórico</strong><span>Historiografia, temporalidade e ofício do historiador</span></div>
+            <div><strong>🗂️ Aplicação didática</strong><span>Fontes, documentos e diferentes linguagens</span></div>
+        </div>
+        <div class="grid-assuntos">
+            <button class="btn-assunto" onclick="abrirAssunto('fundamentosEnsinoHistoria')">📚 Fundamentos do Ensino de História<small class="subtexto-botao-abaetetuba">Fundamentos pedagógicos e metodológicos</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('cienciaHistoricaOficioHistoriador')">🔎 Ciência Histórica e Ofício do Historiador<small class="subtexto-botao-abaetetuba">Historiografia, temporalidade e método</small></button>
+            <button class="btn-assunto destaque-complemento-ivin" onclick="abrirAssunto('fontesLinguagensHistoriaAbaetetuba')">🗂️ Fontes, Documentos e Diferentes Linguagens<small class="subtexto-botao-abaetetuba">10 páginas premium • mapa mental • 60 questões</small></button>
+        </div>
+        <br>
+        <button onclick="iniciarTreinoModuloUmHistoriaAbaetetuba()">📝 Treino misto do Eixo 1 — 30 questões</button>
+    </div>
+</section>
+
+<section id="moduloHistoriaAbaetetuba2" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="voltarParaHistoriaAbaetetuba()">⬅ Voltar aos Eixos de História</button>
+        <br><br>
+        <span class="selo-rota-ivin">Eixo 2 • Conteúdo do edital IVIN</span>
+        <h2>🧭 História do Brasil, Identidades e Historiografia Brasileira</h2>
+        <p class="texto-rota-abaetetuba">
+            O eixo relaciona formação social, construção do Estado nacional, cidadania, projetos de país, interpretações historiográficas e identidades brasileiras.
+        </p>
+        <div class="quadro-conteudo-eixo-abaetetuba">
+            <div><strong>🧬 Formação social</strong><span>Diversidade cultural, trabalho e relações de poder</span></div>
+            <div><strong>🏛️ Estado e cidadania</strong><span>Projetos de nação no Império e na República</span></div>
+            <div><strong>🧭 Historiografia</strong><span>Interpretações do Brasil, memória e identidades</span></div>
+        </div>
+        <div class="grid-assuntos">
+            <button class="btn-assunto" onclick="abrirAssunto('formacaoSocialCulturalBrasileira')">🧬 Formação Social e Cultural Brasileira<small class="subtexto-botao-abaetetuba">Matrizes culturais, conflitos e diversidade</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('cortePortuguesaFormacaoEstadoNacionalBrasileiro')">👑 Corte Portuguesa e Formação do Estado Nacional<small class="subtexto-botao-abaetetuba">Independência, instituições e projetos políticos</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro')">🏛️ Estado Imperial Brasileiro<small class="subtexto-botao-abaetetuba">Política, economia, sociedade e cidadania</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('brasilTransicaoSeculoXIXParaXX')">🔄 Brasil na Transição dos Séculos XIX e XX<small class="subtexto-botao-abaetetuba">Abolição, República e reorganização social</small></button>
+            <button class="btn-assunto destaque-complemento-ivin" onclick="abrirAssunto('historiografiaIdentidadesBrasilAbaetetuba')">🧭 Historiografia Brasileira, Nação e Identidades<small class="subtexto-botao-abaetetuba">10 páginas premium • mapa mental • 60 questões</small></button>
+        </div>
+        <br>
+        <button onclick="iniciarTreinoModuloDoisHistoriaAbaetetuba()">📝 Treino misto do Eixo 2 — 30 questões</button>
+    </div>
+</section>
+
+<section id="moduloHistoriaAbaetetuba3" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="voltarParaHistoriaAbaetetuba()">⬅ Voltar aos Eixos de História</button>
+        <br><br>
+        <span class="selo-rota-ivin">Eixo 3 • História nacional, regional e local</span>
+        <h2>🌊 História Regional, Local, Amazônia e Pará</h2>
+        <p class="texto-rota-abaetetuba">
+            O eixo articula escalas históricas, fontes locais, formação da Amazônia, conflitos no Pará, projetos territoriais, populações tradicionais, memória e patrimônio.
+        </p>
+        <div class="quadro-conteudo-eixo-abaetetuba">
+            <div><strong>🧭 Escalas e método</strong><span>História local, regional e nacional em conexão</span></div>
+            <div><strong>🌿 Amazônia e Pará</strong><span>Colonização, Cabanagem, economia e território</span></div>
+            <div><strong>🚣 Memória e sujeitos</strong><span>Populações tradicionais, patrimônio e ensino</span></div>
+        </div>
+        <div class="grid-assuntos">
+            <button class="btn-assunto destaque-complemento-ivin" onclick="abrirAssunto('historiaRegionalLocalAmazoniaParaAbaetetuba')">🌊 História Regional, Local, Amazônia e Pará<small class="subtexto-botao-abaetetuba">10 páginas premium • mapa mental • 60 questões</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('politicaMilitarAmazonia')">🛣️ Política Territorial e Integração da Amazônia<small class="subtexto-botao-abaetetuba">Projetos estatais, território e conflitos</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('populacoesTradicionaisBrasilOntemHoje')">🚣 Populações Tradicionais: Ontem e Hoje<small class="subtexto-botao-abaetetuba">Território, identidade, direitos e memória</small></button>
+        </div>
+        <br>
+        <button onclick="iniciarTreinoModuloTresHistoriaAbaetetuba()">📝 Treino misto do Eixo 3 — 30 questões</button>
+    </div>
+</section>
+
+
+<section id="moduloHistoriaAbaetetuba4" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="voltarParaHistoriaAbaetetuba()">⬅ Voltar aos Eixos de História</button>
+        <br><br>
+        <span class="selo-rota-ivin">Eixo 4 • História da América e suas identidades</span>
+        <h2>🌎 História da América e suas Identidades</h2>
+        <p class="texto-rota-abaetetuba">
+            O eixo percorre sociedades originárias, conquista, colonizações, diáspora africana, independências, Estados nacionais, relações interamericanas, revoluções, ditaduras e disputas de identidade e memória.
+        </p>
+        <div class="quadro-conteudo-eixo-abaetetuba">
+            <div><strong>🏺 Povos e conquista</strong><span>Diversidade indígena, alianças, violência e permanências</span></div>
+            <div><strong>⛵ Colonizações e diáspora</strong><span>Trabalho, fronteiras, escravidão e resistências</span></div>
+            <div><strong>🗽 Independências e identidades</strong><span>Estados, cidadania, conflitos e memória continental</span></div>
+        </div>
+        <div class="grid-assuntos">
+            <button class="btn-assunto" onclick="abrirAssunto('povosPreColombianos')">🏺 Povos Pré-Colombianos<small class="subtexto-botao-abaetetuba">Diversidade, sociedades e conhecimentos originários</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('estadosModernosApropriacaoAmerica')">🏛️ Estados Modernos e Apropriação da América<small class="subtexto-botao-abaetetuba">Conquista, expansão marítima e disputas imperiais</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('mercantilismoColonizacaoAmerica')">💰 Mercantilismo e Colonização da América<small class="subtexto-botao-abaetetuba">Sistemas coloniais, trabalho e redes atlânticas</small></button>
+            <button class="btn-assunto destaque-complemento-ivin" onclick="abrirAssunto('historiaAmericaIdentidadesAbaetetuba')">🌎 Independências, Estados Nacionais e Identidades Americanas<small class="subtexto-botao-abaetetuba">10 páginas premium • mapa mental • 60 questões</small></button>
+        </div>
+        <br>
+        <button onclick="iniciarTreinoModuloQuatroHistoriaAbaetetuba()">📝 Treino misto do Eixo 4 — 30 questões</button>
+    </div>
+</section>
+
+<section id="moduloHistoriaAbaetetuba5" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="voltarParaHistoriaAbaetetuba()">⬅ Voltar aos Eixos de História</button>
+        <br><br>
+        <span class="selo-rota-ivin">Eixo 5 • Lutas sociais e identidades sociais, culturais e nacionais</span>
+        <h2>✊ Lutas Sociais e Construção de Identidades</h2>
+        <p class="texto-rota-abaetetuba">
+            O eixo analisa resistências, movimentos anticoloniais, revoltas do Império, abolição, trabalhadores, povos indígenas, movimento negro, mulheres, juventudes, cultura, memória e construção da cidadania.
+        </p>
+        <div class="quadro-conteudo-eixo-abaetetuba">
+            <div><strong>⛓️ Resistências</strong><span>Indígenas, africanas, escravizadas e quilombolas</span></div>
+            <div><strong>🏛️ Revoltas e cidadania</strong><span>Projetos políticos, participação popular e repressão</span></div>
+            <div><strong>✊ Identidades e direitos</strong><span>Classe, raça, gênero, território, cultura e memória</span></div>
+        </div>
+        <div class="grid-assuntos">
+            <button class="btn-assunto" onclick="abrirAssunto('brasilColonialSociedadeEconomiaResistencias')">⛓️ Brasil Colonial: Sociedade, Economia e Resistências<small class="subtexto-botao-abaetetuba">Indígenas, escravizados, quilombos e ação cotidiana</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('movimentosAnticoloniaisBrasil')">🗡️ Movimentos Anticoloniais no Brasil<small class="subtexto-botao-abaetetuba">Emancipação, projetos políticos e participação social</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('revoltasMovimentosBrasilImperial')">🏛️ Revoltas e Movimentos no Brasil Imperial<small class="subtexto-botao-abaetetuba">Cabanagem, cidadania, abolição e conflitos regionais</small></button>
+            <button class="btn-assunto destaque-complemento-ivin" onclick="abrirAssunto('lutasSociaisIdentidadesAbaetetuba')">✊ Lutas Sociais e Construção de Identidades<small class="subtexto-botao-abaetetuba">10 páginas premium • mapa mental • 60 questões</small></button>
+        </div>
+        <br>
+        <button onclick="iniciarTreinoModuloCincoHistoriaAbaetetuba()">📝 Treino misto do Eixo 5 — 30 questões</button>
+    </div>
+</section>
+
+<section id="moduloHistoriaAbaetetuba6" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="voltarParaHistoriaAbaetetuba()">⬅ Voltar aos Eixos de História</button>
+        <br><br>
+        <span class="selo-rota-ivin">Eixo 6 • Legados culturais da Antiguidade Clássica</span>
+        <h2>🏛️ Antiguidade Clássica e seus Legados Culturais</h2>
+        <p class="texto-rota-abaetetuba">
+            O eixo estuda Grécia e Roma em suas diferenças históricas e analisa como democracia, cidadania, filosofia, direito, língua, arte, urbanismo e religião foram reinterpretados em outros períodos.
+        </p>
+        <div class="quadro-conteudo-eixo-abaetetuba">
+            <div><strong>🏺 Mundo grego</strong><span>Pólis, cidadania, conflitos, helenismo e cultura</span></div>
+            <div><strong>🦅 Mundo romano</strong><span>República, Império, províncias, sociedade e cristianismo</span></div>
+            <div><strong>⚖️ Legados críticos</strong><span>Direito, política, línguas, artes e apropriações modernas</span></div>
+        </div>
+        <div class="grid-assuntos">
+            <button class="btn-assunto" onclick="abrirAssunto('civilizacoesAntiguidadeClassicaGreciaRoma')">🏺 Civilizações da Antiguidade Clássica: Grécia e Roma<small class="subtexto-botao-abaetetuba">Formação histórica, sociedade, política e cultura</small></button>
+            <button class="btn-assunto destaque-complemento-ivin" onclick="abrirAssunto('legadosAntiguidadeClassicaAbaetetuba')">🏛️ Legados Culturais da Antiguidade Clássica<small class="subtexto-botao-abaetetuba">10 páginas premium • mapa mental • 60 questões</small></button>
+        </div>
+        <br>
+        <button onclick="iniciarTreinoModuloSeisHistoriaAbaetetuba()">📝 Treino misto do Eixo 6 — 30 questões</button>
+    </div>
+</section>
+
+<section id="moduloHistoriaAbaetetuba7" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="voltarParaHistoriaAbaetetuba()">⬅ Voltar aos Eixos de História</button>
+        <br><br>
+        <span class="selo-rota-ivin">Eixo 7 • Convívios e confrontos entre povos e culturas na Europa Medieval</span>
+        <h2>🏰 Europa Medieval: Convívios e Confrontos entre Povos e Culturas</h2>
+        <p class="texto-rota-abaetetuba">
+            O eixo analisa a pluralidade medieval, reinos pós-romanos, feudalização, Bizâncio, sociedades islâmicas, cristandade latina, comunidades judaicas, Cruzadas, cidades, universidades e crises dos séculos XIV e XV.
+        </p>
+        <div class="quadro-conteudo-eixo-abaetetuba">
+            <div><strong>Poder e sociedade</strong><span>Reinos, senhorios, camponeses, Igreja e cidades</span></div>
+            <div><strong>Culturas em contato</strong><span>Bizâncio, Islã, judaísmo e circulação de saberes</span></div>
+            <div><strong>Fronteiras e conflitos</strong><span>Cruzadas, Península Ibérica, perseguições e negociações</span></div>
+        </div>
+        <div class="grid-assuntos">
+            <button class="btn-assunto" onclick="abrirAssunto('trabalhoCulturaEconomiaMentalidadeMedievoOcidental')">🏰 Trabalho, Cultura, Economia e Mentalidade no Medievo Ocidental<small class="subtexto-botao-abaetetuba">Sociedade feudal, trabalho, religiosidade e transformações</small></button>
+            <button class="btn-assunto destaque-complemento-ivin" onclick="abrirAssunto('conviviosConfrontosEuropaMedievalAbaetetuba')">🌍 Convívios e Confrontos na Europa Medieval<small class="subtexto-botao-abaetetuba">10 páginas premium • mapa mental • 60 questões</small></button>
+        </div>
+        <br>
+        <button onclick="iniciarTreinoModuloSeteHistoriaAbaetetuba()">📝 Treino misto do Eixo 7 — 30 questões</button>
+    </div>
+</section>
+
+<section id="moduloHistoriaAbaetetuba8" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="voltarParaHistoriaAbaetetuba()">⬅ Voltar aos Eixos de História</button>
+        <br><br>
+        <span class="selo-rota-ivin">Eixo 8 • História africana e suas relações com a Europa e a América</span>
+        <h2>🌍 História Africana, Diáspora e Relações Intercontinentais</h2>
+        <p class="texto-rota-abaetetuba">
+            O eixo estuda a pluralidade das sociedades africanas, impérios e redes comerciais, contatos com a Europa, tráfico atlântico, diáspora nas Américas, imperialismo, resistências, descolonização e desafios contemporâneos.
+        </p>
+        <div class="quadro-conteudo-eixo-abaetetuba">
+            <div><strong>🏛️ Sociedades africanas</strong><span>Cuxe, Axum, Gana, Mali, Songhai, Congo, povos bantos e redes suaílis</span></div>
+            <div><strong>⛓️ Atlântico e diáspora</strong><span>Tráfico, escravidão, trabalhos, culturas e resistências nas Américas</span></div>
+            <div><strong>✊ Colonialismo e liberdade</strong><span>Imperialismo, resistências, pan-africanismo e descolonização</span></div>
+        </div>
+        <div class="grid-assuntos">
+            <button class="btn-assunto" onclick="abrirAssunto('imperiosReinosAfricanosSonghaiMaliGanaPovoBanto')">🏛️ Impérios, Reinos Africanos e Povos Bantos<small class="subtexto-botao-abaetetuba">Gana, Mali, Songhai, sociedades e circulação africana</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('aspectosEconomicosFormasTrabalhoBrasilColonialImperial')">⛓️ Trabalho no Brasil Colonial e Imperial<small class="subtexto-botao-abaetetuba">Escravidão, economia, sujeitos e formas de resistência</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('lutasResistenciasIndependenciasDescolonizacoesAfricaAsia')">✊ Independências e Descolonizações da África e Ásia<small class="subtexto-botao-abaetetuba">Imperialismo, nacionalismos, conflitos e soberania</small></button>
+            <button class="btn-assunto destaque-complemento-ivin" onclick="abrirAssunto('historiaAfricaRelacoesEuropaAmericaAbaetetuba')">🌍 História Africana e Relações com Europa e América<small class="subtexto-botao-abaetetuba">10 páginas premium • mapa mental • 60 questões</small></button>
+        </div>
+        <br>
+        <button onclick="iniciarTreinoModuloOitoHistoriaAbaetetuba()">📝 Treino misto do Eixo 8 — 30 questões</button>
+    </div>
+</section>
+
+<section id="moduloHistoriaAbaetetuba9" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="voltarParaHistoriaAbaetetuba()">⬅ Voltar aos Eixos de História</button>
+        <br><br>
+        <span class="selo-rota-ivin">Eixo 9 • Lutas sociais, cidadania e cultura no mundo capitalista</span>
+        <h2>💰 Capitalismo, Lutas Sociais, Cidadania e Cultura</h2>
+        <p class="texto-rota-abaetetuba">
+            O eixo acompanha a formação histórica do capitalismo, industrialização, movimentos operários, imperialismo, crises, direitos sociais, cultura de massas, globalização e novas formas de trabalho e cidadania.
+        </p>
+        <div class="quadro-conteudo-eixo-abaetetuba">
+            <div><strong>🏭 Capital e trabalho</strong><span>Transição, fábrica, classe trabalhadora e movimentos sociais</span></div>
+            <div><strong>🗳️ Direitos e poder</strong><span>Liberalismo, cidadania, crises, autoritarismos e proteção social</span></div>
+            <div><strong>🎭 Cultura e presente</strong><span>Cultura de massas, globalização, plataformas e novas lutas</span></div>
+        </div>
+        <div class="grid-assuntos">
+            <button class="btn-assunto" onclick="abrirAssunto('transicaoFeudalismoCapitalismo')">💰 Transição do Feudalismo para o Capitalismo<small class="subtexto-botao-abaetetuba">Mercados, acumulação, propriedade e trabalho</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX')">🏭 Revolução Industrial e Expansão Imperialista<small class="subtexto-botao-abaetetuba">Fábrica, classe trabalhadora, imperialismo e desigualdades</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('primeiraGuerraRevolucaoRussaUniaoSovietica')">⚔️ Primeira Guerra, Revolução Russa e União Soviética<small class="subtexto-botao-abaetetuba">Guerra total, revolução, socialismo e conflitos políticos</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('criseEconomicaMundialAvancoRegimesTotalitariosEuropa')">⚠️ Crise Mundial e Regimes Totalitários<small class="subtexto-botao-abaetetuba">1929, fascismo, nazismo, propaganda e retirada de direitos</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('segundaGuerraMundialGuerraFria')">🌐 Segunda Guerra Mundial e Guerra Fria<small class="subtexto-botao-abaetetuba">Conflito global, direitos, blocos e disputas ideológicas</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('mundoContemporaneoEraGlobalizacao')">📱 Mundo Contemporâneo e Globalização<small class="subtexto-botao-abaetetuba">Neoliberalismo, redes, trabalho e transformações atuais</small></button>
+            <button class="btn-assunto destaque-complemento-ivin" onclick="abrirAssunto('capitalismoLutasCidadaniaCulturaAbaetetuba')">✊ Lutas Sociais, Cidadania e Cultura no Capitalismo<small class="subtexto-botao-abaetetuba">10 páginas premium • mapa mental • 60 questões</small></button>
+        </div>
+        <br>
+        <button onclick="iniciarTreinoModuloNoveHistoriaAbaetetuba()">📝 Treino misto do Eixo 9 — 30 questões</button>
+    </div>
+</section>
+
+<section id="moduloHistoriaAbaetetuba10" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="voltarParaHistoriaAbaetetuba()">⬅ Voltar aos Eixos de História</button>
+        <br><br>
+        <span class="selo-rota-ivin">Eixo 10 • Formação pedagógica e legislação indicada no edital</span>
+        <h2>⚖️ Didática, Currículo, BNCC e Legislação Educacional</h2>
+        <p class="texto-rota-abaetetuba">
+            O eixo integra organização do ensino, planejamento, PPP, sistemas educacionais, avaliação, currículo, BNCC, Constituição Federal, LDB, ECA, o PNE citado no edital e educação inclusiva.
+        </p>
+        <div class="quadro-conteudo-eixo-abaetetuba">
+            <div><strong>📚 Trabalho pedagógico</strong><span>Didática, planejamento, PPP, avaliação e progressão</span></div>
+            <div><strong>🧭 Currículo e BNCC</strong><span>Aprendizagens essenciais, competências e contextualização</span></div>
+            <div><strong>⚖️ Direitos educacionais</strong><span>Constituição, LDB, ECA, PNE do edital e inclusão</span></div>
+        </div>
+        <div class="grid-assuntos">
+            <button class="btn-assunto" onclick="abrirAssunto('didatica')">📚 Didática Geral<small class="subtexto-botao-abaetetuba">Ensino, aprendizagem, métodos e mediação</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('planejamento')">🗂️ Planejamento Educacional e PPP<small class="subtexto-botao-abaetetuba">Objetivos, planos, participação e acompanhamento</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('avaliacao')">📊 Avaliação, Recuperação e Progressão<small class="subtexto-botao-abaetetuba">Diagnóstico, formação, critérios e intervenção</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('curriculo')">🧭 Currículo<small class="subtexto-botao-abaetetuba">Seleção cultural, prática e organização pedagógica</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('bncc')">📘 Base Nacional Comum Curricular<small class="subtexto-botao-abaetetuba">Aprendizagens essenciais, competências e habilidades</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('ldb')">🏫 Lei de Diretrizes e Bases da Educação<small class="subtexto-botao-abaetetuba">Organização, princípios e atribuições escolares</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('eca')">🧒 Estatuto da Criança e do Adolescente<small class="subtexto-botao-abaetetuba">Proteção integral, direitos e rede de proteção</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('pne')">📈 Plano Nacional de Educação<small class="subtexto-botao-abaetetuba">Lei nº 13.005/2014, conforme referência expressa do edital</small></button>
+            <button class="btn-assunto" onclick="abrirAssunto('inclusiva')">♿ Educação Inclusiva<small class="subtexto-botao-abaetetuba">Acesso, participação, aprendizagem e acessibilidade</small></button>
+            <button class="btn-assunto destaque-complemento-ivin" onclick="abrirAssunto('constituicaoGestaoLegislacaoEducacionalAbaetetuba')">🇧🇷 Constituição, Gestão e Legislação Educacional<small class="subtexto-botao-abaetetuba">10 páginas premium • mapa mental • 60 questões</small></button>
+        </div>
+        <div class="aviso-eixo-abaetetuba" style="margin-top:18px;">
+            <strong>📌 Recorte de prova:</strong> o material mantém a Lei nº 13.005/2014 porque é a norma expressamente indicada no edital de Abaetetuba.
+        </div>
+        <br>
+        <button onclick="iniciarTreinoModuloDezHistoriaAbaetetuba()">📝 Treino misto do Eixo 10 — 30 questões</button>
+    </div>
+</section>
+
 <!-- DIDÁTICA -->
 
 <!-- APOIO ESCOLAR -->
@@ -928,6 +1229,15 @@
 🏛 Redação Oficial
 </button>
 
+
+<button class="btn-assunto" onclick="abrirAssunto('parafraseResumoAbaetetuba')">
+✍️ Paráfrase, Perífrase, Síntese e Resumo
+</button>
+
+<button class="btn-assunto" onclick="abrirAssunto('discursoDiretoIndiretoAbaetetuba')">
+💬 Discurso Direto e Indireto
+</button>
+
 </div>
 
     </div>
@@ -1048,27 +1358,27 @@
     💻 Hardware
 
 </button>
-<button class="btn-assunto" onclick="abrirAssunto('software')">
-⚙️ Software, Windows e Linux
+<button id="btnInformaticaSoftware" class="btn-assunto" onclick="abrirAssunto('software')">
+<span id="textoInformaticaSoftware">⚙️ Software, Windows e Linux</span>
 </button>
 
-<button class="btn-assunto" onclick="abrirAssunto('arquivos')">
+<button id="btnInformaticaArquivos" class="btn-assunto" onclick="abrirAssunto('arquivos')">
 🗂 Arquivos, Pastas e Backup
 </button>
 
-<button class="btn-assunto" onclick="abrirAssunto('office')">
+<button id="btnInformaticaOffice" class="btn-assunto" onclick="abrirAssunto('office')">
 📊 Office e LibreOffice
 </button>
 
-<button class="btn-assunto" onclick="abrirAssunto('internet')">
+<button id="btnInformaticaInternet" class="btn-assunto" onclick="abrirAssunto('internet')">
 🌐 Internet e Correio Eletrônico
 </button>
 
-<button class="btn-assunto" onclick="abrirAssunto('redes')">
+<button id="btnInformaticaRedes" class="btn-assunto" onclick="abrirAssunto('redes')">
 🖧 Redes de Computadores
 </button>
 
-<button class="btn-assunto" onclick="abrirAssunto('seguranca')">
+<button id="btnInformaticaSeguranca" class="btn-assunto" onclick="abrirAssunto('seguranca')">
 🔐 Segurança da Informação
 </button>
 
@@ -1076,6 +1386,204 @@
 
     </div>
 
+</section>
+
+
+
+<!-- CIÊNCIAS — ABAETETUBA -->
+<section id="cienciasAbaetetuba" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="mostrarTela('questoes')">
+            ⬅ Voltar para a Rota de Estudos
+        </button>
+
+        <br><br>
+
+        <span class="selo-rota-ivin">IVIN • Abaetetuba 2026</span>
+        <h2>🔬 Conhecimentos Específicos — Professor de Ciências</h2>
+        <p class="texto-rota-abaetetuba">
+            Conteúdos organizados conforme os eixos de Ciências do edital, com teoria visual,
+            mapas mentais, questões contextualizadas e treinos próprios da rota.
+        </p>
+
+        <div class="aviso-farol aviso-farol-compacto">
+            <strong>🧪 Eixos 1 e 2 disponíveis para estudo.</strong>
+            <span>Citologia e Histologia já possuem teoria, mapas mentais e questões.</span>
+        </div>
+
+        <div class="grid-assuntos grid-eixos-abaetetuba grid-eixos-ciencias-abaetetuba">
+            <button class="btn-assunto eixo-abaetetuba eixo-disponivel" onclick="abrirModuloCienciasAbaetetuba(1)">
+                <span class="numero-eixo">1</span>
+                <strong>Citologia e morfologia celular</strong>
+                <small>10 páginas • 60 questões • diagramas próprios</small>
+            </button>
+
+            <button class="btn-assunto eixo-abaetetuba eixo-disponivel" onclick="abrirModuloCienciasAbaetetuba(2)">
+                <span class="numero-eixo">2</span>
+                <strong>Histologia, Embriologia e Reprodução</strong>
+                <small>10 páginas • 60 questões • mapas e imagens</small>
+            </button>
+
+            <button class="btn-assunto eixo-abaetetuba eixo-em-preparacao" onclick="abrirModuloCienciasAbaetetuba(3)">
+                <span class="numero-eixo">3</span>
+                <strong>Embriologia e reprodução humana</strong>
+                <small>Em preparação</small>
+            </button>
+
+            <button class="btn-assunto eixo-abaetetuba eixo-em-preparacao" onclick="abrirModuloCienciasAbaetetuba(4)">
+                <span class="numero-eixo">4</span>
+                <strong>Anatomia e Fisiologia Humana</strong>
+                <small>Em preparação</small>
+            </button>
+
+            <button class="btn-assunto eixo-abaetetuba eixo-em-preparacao" onclick="abrirModuloCienciasAbaetetuba(5)">
+                <span class="numero-eixo">5</span>
+                <strong>Taxonomia, vírus e reinos</strong>
+                <small>Em preparação</small>
+            </button>
+
+            <button class="btn-assunto eixo-abaetetuba eixo-em-preparacao" onclick="abrirModuloCienciasAbaetetuba(6)">
+                <span class="numero-eixo">6</span>
+                <strong>Microbiologia e Parasitologia</strong>
+                <small>Em preparação</small>
+            </button>
+
+            <button class="btn-assunto eixo-abaetetuba eixo-em-preparacao" onclick="abrirModuloCienciasAbaetetuba(7)">
+                <span class="numero-eixo">7</span>
+                <strong>Botânica, Zoologia e diversidade</strong>
+                <small>Em preparação</small>
+            </button>
+
+            <button class="btn-assunto eixo-abaetetuba eixo-em-preparacao" onclick="abrirModuloCienciasAbaetetuba(8)">
+                <span class="numero-eixo">8</span>
+                <strong>Genética e Hereditariedade</strong>
+                <small>Em preparação</small>
+            </button>
+
+            <button class="btn-assunto eixo-abaetetuba eixo-em-preparacao" onclick="abrirModuloCienciasAbaetetuba(9)">
+                <span class="numero-eixo">9</span>
+                <strong>Ecologia e Educação Ambiental</strong>
+                <small>Em preparação</small>
+            </button>
+
+            <button class="btn-assunto eixo-abaetetuba eixo-em-preparacao" onclick="abrirModuloCienciasAbaetetuba(10)">
+                <span class="numero-eixo">10</span>
+                <strong>Solo, água, ar e Hidrosfera</strong>
+                <small>Em preparação</small>
+            </button>
+
+            <button class="btn-assunto eixo-abaetetuba eixo-em-preparacao" onclick="abrirModuloCienciasAbaetetuba(11)">
+                <span class="numero-eixo">11</span>
+                <strong>Sistema Solar</strong>
+                <small>Em preparação</small>
+            </button>
+
+            <button class="btn-assunto eixo-abaetetuba eixo-em-preparacao" onclick="abrirModuloCienciasAbaetetuba(12)">
+                <span class="numero-eixo">12</span>
+                <strong>Química e Física básicas</strong>
+                <small>Em preparação</small>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section id="moduloCienciasAbaetetuba1" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="voltarParaCienciasAbaetetuba()">
+            ⬅ Voltar aos Eixos de Ciências
+        </button>
+
+        <br><br>
+
+        <span class="selo-rota-ivin">Eixo 1 • Professor de Ciências</span>
+        <h2>🧬 Citologia e Morfologia Celular</h2>
+        <p class="texto-rota-abaetetuba">
+            Estudo das células, da membrana plasmática, das organelas, do núcleo,
+            da morfologia celular, da mitose, da meiose e dos processos de morte celular.
+        </p>
+
+        <div class="quadro-conteudo-eixo-abaetetuba quadro-ciencias-v27">
+            <div>
+                <strong>📘 Teoria visual</strong>
+                <span>10 páginas com explicações, comparações e diagramas originais.</span>
+            </div>
+            <div>
+                <strong>🖼️ Leitura de imagens</strong>
+                <span>Células, organelas, transportes, mitose, meiose e osmose.</span>
+            </div>
+            <div>
+                <strong>📝 Banco IVIN</strong>
+                <span>60 questões originais, contextualizadas e com alternativas equilibradas.</span>
+            </div>
+        </div>
+
+        <div class="grid-assuntos">
+            <button class="btn-assunto btn-ciencias-v27" onclick="abrirAssuntoCienciasAbaetetuba()">
+                🧬 Abrir teoria completa e questões
+            </button>
+        </div>
+
+        <div class="acoes-modulo-ciencias-v27">
+            <button onclick="abrirMapaCienciasAbaetetubaEixo1()">
+                🧠 Abrir mapa mental
+            </button>
+            <button onclick="iniciarTreinoModuloUmCienciasAbaetetuba()">
+                🎯 Treino de 30 questões
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="moduloCienciasAbaetetuba2" class="tela">
+    <div class="card">
+        <button class="btn-voltar" onclick="voltarParaCienciasAbaetetuba()">
+            ⬅ Voltar aos Eixos de Ciências
+        </button>
+
+        <br><br>
+
+        <span class="selo-rota-ivin">Eixo 2 • Professor de Ciências</span>
+        <h2>🧬 Histologia, Embriologia e Reprodução Humana</h2>
+
+        <p class="texto-rota-abaetetuba">
+            Estudo dos tecidos humanos, organização do corpo, reprodução,
+            gametogênese, fecundação, desenvolvimento embrionário, anexos e gestação.
+        </p>
+
+        <div class="quadro-conteudo-eixo-abaetetuba quadro-ciencias-v27">
+            <div>
+                <strong>📘 Teoria visual</strong>
+                <span>10 páginas com tecidos, reprodução e desenvolvimento embrionário.</span>
+            </div>
+            <div>
+                <strong>🖼️ Leitura de imagens</strong>
+                <span>Epitélios, conjuntivos, músculos, neurônio, fecundação e embriologia.</span>
+            </div>
+            <div>
+                <strong>📝 Banco IVIN</strong>
+                <span>60 questões com feedback, imagens e alternativas equilibradas.</span>
+            </div>
+        </div>
+
+        <div class="grid-assuntos">
+            <button class="btn-assunto btn-ciencias-v27"
+                    onclick="abrirAssuntoHistologiaAbaetetuba()">
+                🧬 Abrir teoria completa e questões
+            </button>
+        </div>
+
+        <div class="acoes-modulo-ciencias-v27">
+            <button onclick="abrirMapaCienciasAbaetetubaEixo2()">
+                🧠 Abrir mapa mental
+            </button>
+
+            <button onclick="iniciarTreinoModuloDoisCienciasAbaetetuba()">
+                🎯 Treino de 30 questões
+            </button>
+        </div>
+    </div>
 </section>
 
 <section id="ciencias" class="tela">
@@ -2051,7 +2559,7 @@ Li e revisei o mapa mental.
 
     <div class="card card-preparacoes-farol">
 
-       <h2>🧭 Escolha seu Cargo</h2>
+       <h2 id="tituloEscolhaPreparacaoFarol">🧭 Escolha seu Concurso</h2>
 
 <div class="aviso-farol">
     <h3>⭐ Estude e acumule Pontos de Luz</h3>
@@ -2146,6 +2654,213 @@ Li e revisei o mapa mental.
             </p>
         </div>
 
+
+        <div class="seletor-concurso-simulados-farol">
+            <div class="cabecalho-seletor-simulados-farol">
+                <div>
+                    <span class="mini-label-simulados-concurso">🏛️ Simulados por concurso</span>
+                    <h3>Escolha qual preparação deseja treinar</h3>
+                    <p>Barcarena e Abaetetuba permanecem separadas, cada uma com a estrutura da sua prova.</p>
+                </div>
+                <span id="statusConcursoSimuladosFarol" class="status-concurso-simulados-farol">Selecione um concurso</span>
+            </div>
+
+            <div class="grid-concursos-simulados-farol">
+                <button
+                    id="btnSimuladosBarcarenaFarol"
+                    class="card-concurso-simulado-farol"
+                    onclick="selecionarConcursoSimuladosFarol('barcarena2026')">
+                    <span class="icone-concurso-simulado-farol">🏛️</span>
+                    <span class="dados-concurso-simulado-farol">
+                        <strong>Prefeitura de Barcarena — 2026</strong>
+                        <small>Instituto Ágata • simulados por rota, disciplina e cargo</small>
+                    </span>
+                    <span class="estado-concurso-simulado-farol">Acesso disponível</span>
+                </button>
+
+                <button
+                    id="btnSimuladosAbaetetubaFarol"
+                    class="card-concurso-simulado-farol"
+                    onclick="selecionarConcursoSimuladosFarol('abaetetuba2026')">
+                    <span class="icone-concurso-simulado-farol">🧭</span>
+                    <span class="dados-concurso-simulado-farol">
+                        <strong>Prefeitura de Abaetetuba — 2026</strong>
+                        <small>IVIN • pacotes comuns e simulados conforme o cargo liberado</small>
+                    </span>
+                    <span id="estadoAcessoSimuladosAbaetetubaFarol" class="estado-concurso-simulado-farol">Acesso por cargo</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="painelSimuladosConcursoAbaetetubaFarol" class="painel-concurso-simulados-farol" style="display:none;">
+
+        <div
+            id="simuladosAbaetetubaComunsSuperiorFarol"
+            class="bloco-simulado bloco-simulado-ivin bloco-comuns-superior-v25"
+            style="display:none;">
+
+            <div class="cabecalho-simulado-ivin">
+                <div>
+                    <span class="selo-rota-ivin">IVIN • Abaetetuba 2026</span>
+                    <h3>📚 Disciplinas Comuns — Nível Superior</h3>
+                    <p>
+                        Português e Informática podem ser adquiridos como pacote independente e também acompanham automaticamente qualquer cargo superior liberado.
+                    </p>
+                </div>
+                <span class="status-simulado-ivin">✅ Acesso liberado</span>
+            </div>
+
+            <div class="card-simulado-oficial-ivin card-comum-oficial-v25">
+                <div>
+                    <span class="tag-simulado">🎯 Parte comum da prova</span>
+                    <h4>Simulado Comum IVIN — Nível Superior</h4>
+                    <p>15 questões de Língua Portuguesa + 10 questões de Informática.</p>
+                    <strong>25 questões</strong>
+                </div>
+                <button onclick="iniciarSimuladoComumAbaetetubaSuperiorFarol(25)">
+                    🚀 Iniciar simulado comum
+                </button>
+            </div>
+
+            <div class="grid-simulados-comuns-v25">
+                <div class="subbloco-simulado-ivin card-disciplina-comum-v25">
+                    <span class="icone-disciplina-comum-v25">📖</span>
+                    <h4>Língua Portuguesa — Nível Superior</h4>
+                    <p>Treinos exclusivos da disciplina, usando o banco atual de Português do Farol.</p>
+                    <div class="grid-treino-rapido">
+                        <button onclick="iniciarSimuladoPortuguesAbaetetubaSuperiorFarol(15)">15 questões</button>
+                        <button onclick="iniciarSimuladoPortuguesAbaetetubaSuperiorFarol(30)">30 questões</button>
+                        <button onclick="iniciarSimuladoPortuguesAbaetetubaSuperiorFarol(50)">50 questões</button>
+                    </div>
+                </div>
+
+                <div class="subbloco-simulado-ivin card-disciplina-comum-v25">
+                    <span class="icone-disciplina-comum-v25">💻</span>
+                    <h4>Informática — Nível Superior</h4>
+                    <p>Treinos exclusivos da disciplina, separados das questões específicas dos cargos.</p>
+                    <div class="grid-treino-rapido">
+                        <button onclick="iniciarSimuladoInformaticaAbaetetubaSuperiorFarol(10)">10 questões</button>
+                        <button onclick="iniciarSimuladoInformaticaAbaetetubaSuperiorFarol(30)">30 questões</button>
+                        <button onclick="iniciarSimuladoInformaticaAbaetetubaSuperiorFarol(50)">50 questões</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subbloco-simulado-ivin">
+                <h4>⚡ Treino misto das disciplinas comuns</h4>
+                <p>A distribuição mantém aproximadamente 60% de Português e 40% de Informática.</p>
+                <div class="grid-treino-rapido">
+                    <button onclick="iniciarSimuladoComumAbaetetubaSuperiorFarol(10)">10 questões</button>
+                    <button onclick="iniciarSimuladoComumAbaetetubaSuperiorFarol(20)">20 questões</button>
+                    <button onclick="iniciarSimuladoComumAbaetetubaSuperiorFarol(25)">25 questões</button>
+                </div>
+            </div>
+
+            <div class="subbloco-simulado-ivin historico-simulados-ivin">
+                <h4>📈 Últimos resultados das disciplinas comuns</h4>
+                <div id="historicoSimuladosAbaetetubaComunsSuperiorFarol"></div>
+            </div>
+        </div>
+
+        <div
+            id="simuladosAbaetetubaHistoriaFarol"
+            class="bloco-simulado bloco-simulado-ivin"
+            style="display:none;">
+
+            <div class="cabecalho-simulado-ivin">
+                <div>
+                    <span class="selo-rota-ivin">IVIN • Abaetetuba 2026</span>
+                    <h3>📜 Professor de História</h3>
+                    <p>
+                        Simulados exclusivos para a conta com acesso ao cargo, organizados de acordo com a composição da prova.
+                    </p>
+                </div>
+                <span class="status-simulado-ivin">✅ Acesso liberado</span>
+            </div>
+
+            <div class="card-simulado-oficial-ivin">
+                <div>
+                    <span class="tag-simulado">🎯 Modelo completo</span>
+                    <h4>Simulado Completo IVIN</h4>
+                    <p>15 questões de Português + 10 de Informática + 15 de Conhecimentos Específicos.</p>
+                    <strong>40 questões</strong>
+                </div>
+                <button onclick="iniciarSimuladoCompletoAbaetetubaHistoriaFarol()">
+                    🚀 Iniciar prova completa
+                </button>
+            </div>
+
+            <div class="subbloco-simulado-ivin">
+                <h4>📚 Treino de Conhecimentos Específicos</h4>
+                <p>As questões são distribuídas entre os dez eixos de História de Abaetetuba.</p>
+                <div class="grid-treino-rapido">
+                    <button onclick="iniciarTreinoEspecificoHistoriaAbaetetubaFarol(15)">15 questões</button>
+                    <button onclick="iniciarTreinoEspecificoHistoriaAbaetetubaFarol(30)">30 questões</button>
+                    <button onclick="iniciarTreinoEspecificoHistoriaAbaetetubaFarol(50)">50 questões</button>
+                </div>
+            </div>
+
+            <details class="detalhes-eixos-simulado-ivin">
+                <summary>🧭 Treinar por eixo temático</summary>
+                <p>Escolha um eixo para realizar um treino de 15 questões.</p>
+                <div class="grid-eixos-simulado-ivin">
+                    <button onclick="iniciarTreinoEixoHistoriaAbaetetubaFarol(1,15)"><span>1</span> Ensino de História e historiografia</button>
+                    <button onclick="iniciarTreinoEixoHistoriaAbaetetubaFarol(2,15)"><span>2</span> Brasil, identidades e historiografia</button>
+                    <button onclick="iniciarTreinoEixoHistoriaAbaetetubaFarol(3,15)"><span>3</span> História regional, Amazônia e Pará</button>
+                    <button onclick="iniciarTreinoEixoHistoriaAbaetetubaFarol(4,15)"><span>4</span> História da América</button>
+                    <button onclick="iniciarTreinoEixoHistoriaAbaetetubaFarol(5,15)"><span>5</span> Lutas sociais e identidades</button>
+                    <button onclick="iniciarTreinoEixoHistoriaAbaetetubaFarol(6,15)"><span>6</span> Antiguidade Clássica</button>
+                    <button onclick="iniciarTreinoEixoHistoriaAbaetetubaFarol(7,15)"><span>7</span> Europa Medieval</button>
+                    <button onclick="iniciarTreinoEixoHistoriaAbaetetubaFarol(8,15)"><span>8</span> História Africana</button>
+                    <button onclick="iniciarTreinoEixoHistoriaAbaetetubaFarol(9,15)"><span>9</span> Capitalismo e cidadania</button>
+                    <button onclick="iniciarTreinoEixoHistoriaAbaetetubaFarol(10,15)"><span>10</span> Didática e legislação</button>
+                </div>
+            </details>
+
+            <div class="subbloco-simulado-ivin historico-simulados-ivin">
+                <h4>📈 Últimos resultados neste dispositivo</h4>
+                <div id="historicoSimuladosAbaetetubaHistoriaFarol"></div>
+            </div>
+
+        </div>
+
+            <div class="niveis-futuros-comuns-v25">
+                <div class="nivel-futuro-comum-v25">
+                    <span>🏫</span>
+                    <div><strong>Disciplinas Comuns — Nível Médio</strong><small>Estrutura reservada para banco e simulados próprios.</small></div>
+                    <em>Em preparação</em>
+                </div>
+                <div class="nivel-futuro-comum-v25">
+                    <span>🧩</span>
+                    <div><strong>Disciplinas Comuns — Nível Fundamental</strong><small>Terá dificuldade e questões adequadas ao nível do edital.</small></div>
+                    <em>Em preparação</em>
+                </div>
+            </div>
+
+            <div id="simuladosAbaetetubaSemAcessoFarol" class="simulados-concurso-bloqueado-farol" style="display:none;">
+                <span class="icone-bloqueio-simulado-farol">🔒</span>
+                <div>
+                    <h3>Simulados de Abaetetuba protegidos por cargo</h3>
+                    <p id="mensagemSemAcessoSimuladosAbaetetubaFarol">Sua conta ainda não possui um cargo de Abaetetuba com simulado publicado.</p>
+                    <button onclick="abrirRotasAbaetetubaSimuladosFarol()">🧭 Ver meus cargos de Abaetetuba</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="painelSimuladosConcursoBarcarenaFarol" class="painel-concurso-simulados-farol" style="display:none;">
+
+            <div class="cabecalho-painel-simulados-barcarena-farol">
+                <div>
+                    <span class="selo-simulado-barcarena-farol">Instituto Ágata • Barcarena 2026</span>
+                    <h3>🏛️ Simulados de Barcarena</h3>
+                    <p>Continue usando os simulados antigos por rota, disciplina e cargo, sem misturar a composição da prova da IVIN.</p>
+                </div>
+                <button onclick="abrirRotasBarcarenaSimuladosFarol()">⚓ Escolher cargo de Barcarena</button>
+            </div>
+
+            <div id="simuladosMinhaRotaBarcarenaFarol">
+
         <div class="bloco-simulado destaque-rota-simulado">
             <div class="bloco-simulado-texto">
                 <span class="tag-simulado">🎯 Principal</span>
@@ -2176,6 +2891,16 @@ Li e revisei o mapa mental.
                 <button onclick="iniciarTreinoRapidoMinhaRotaFarol(25)">25 questões</button>
             </div>
         </div>
+
+            </div>
+
+            <div id="avisoEscolherRotaBarcarenaSimuladosFarol" class="aviso-escolher-rota-barcarena-farol" style="display:none;">
+                <div>
+                    <strong>🎯 Simulado da Minha Rota</strong>
+                    <p>Escolha primeiro um cargo de Barcarena para usar o simulado automático da rota. Os simulados por disciplina e por cargo abaixo já podem ser iniciados.</p>
+                </div>
+                <button onclick="abrirRotasBarcarenaSimuladosFarol()">Escolher cargo</button>
+            </div>
 
         <div class="bloco-simulado">
             <div class="titulo-bloco-simulado">
@@ -2281,6 +3006,8 @@ Li e revisei o mapa mental.
                     <small>Em breve</small>
                 </button>
             </div>
+        </div>
+
         </div>
 
     </div>
@@ -2896,11 +3623,46 @@ Li e revisei o mapa mental.
 
     <div class="card duelo-card-principal">
 
-        <h2>⚔️ Duelo do Saber</h2>
+        <h2 id="tituloDueloFarolV26">⚔️ Central de Duelos e Arenas</h2>
 
-        <p>
-            Crie um desafio em etapas: primeiro escolha a disciplina, depois o tópico, selecione a quantidade de questões e envie o código para outro aluno.
+        <p id="descricaoDueloFarolV26">
+            Escolha entre o desafio por convite, que já funciona normalmente, e a nova Arena do Farol ao vivo.
         </p>
+
+        <div class="competicao-abas-farol" role="tablist" aria-label="Modos de competição">
+            <button
+                id="abaDesafioConviteFarol"
+                class="competicao-aba-farol ativa"
+                type="button"
+                onclick="alternarModoCompeticaoFarol('duelo')">
+                <span>⚔️</span>
+                <strong>Desafio por convite</strong>
+                <small>Crie um código e compartilhe com os participantes.</small>
+            </button>
+
+            <button
+                id="abaArenaAoVivoFarol"
+                class="competicao-aba-farol"
+                type="button"
+                onclick="alternarModoCompeticaoFarol('arena')">
+                <span>🏟️</span>
+                <strong>Arena do Farol — Ao Vivo</strong>
+                <small>Sala coletiva, placar ao vivo e todos jogando juntos.</small>
+            </button>
+        </div>
+
+        <div id="painelDesafioConviteFarol">
+
+        <div class="seletor-concurso-duelo-v26">
+            <strong>Escolha o concurso do duelo</strong>
+            <p class="duelo-ajuda">
+                Os bancos e as permissões ficam separados entre Barcarena e Abaetetuba.
+            </p>
+            <div id="dueloConcursosFarolV26" class="duelo-grid-concursos-v26">
+                Carregando concursos...
+            </div>
+            <div id="estadoAcessoDueloAbaetetubaV26" class="estado-acesso-duelo-v26" style="display:none;"></div>
+        </div>
 
         <br>
 
@@ -2924,19 +3686,21 @@ Li e revisei o mapa mental.
                     <strong>2. Escolha o tópico</strong>
                     <p id="dueloDisciplinaSelecionadaTexto" class="duelo-ajuda">Nenhuma disciplina selecionada.</p>
 
-                    <input
-                        id="buscaTopicoDuelo"
-                        type="text"
-                        placeholder="🔎 Buscar tópico..."
-                        oninput="renderizarTopicosDuelo()"
-                        class="input-duelo-busca">
+                    <div id="dueloBuscaTopicoBlocoV26">
+                        <input
+                            id="buscaTopicoDuelo"
+                            type="text"
+                            placeholder="🔎 Buscar tópico..."
+                            oninput="renderizarTopicosDuelo()"
+                            class="input-duelo-busca">
+                    </div>
 
                     <div id="dueloTopicos" class="duelo-grid-topicos">
                         Escolha uma disciplina para listar os tópicos.
                     </div>
                 </div>
 
-                <div class="duelo-etapa">
+                <div id="dueloQuantidadeBlocoV26" class="duelo-etapa">
                     <strong>3. Quantidade de questões</strong>
 
                     <select id="dueloQuantidade" onchange="atualizarResumoDuelo()">
@@ -2990,9 +3754,220 @@ Li e revisei o mapa mental.
 
         </div>
 
+        </div>
+
+        <div id="painelArenaAoVivoFarol" style="display:none;">
+
+            <div class="arena-apresentacao-farol">
+                <div>
+                    <span class="arena-selo-farol">🏟️ NOVO MODO</span>
+                    <h3>Arena do Farol — Ao Vivo</h3>
+                    <p>
+                        Crie uma sala coletiva ou entre com um código. O anfitrião poderá iniciar
+                        quando houver pelo menos dois jogadores, com limite máximo de seis participantes.
+                    </p>
+                </div>
+                <div class="arena-status-farol">
+                    <strong>Etapa 3</strong>
+                    <span>Questões, cronômetro e placar ao vivo</span>
+                </div>
+            </div>
+
+            <div class="arena-layout-farol">
+
+                <div class="arena-bloco-farol">
+                    <h3>🏟️ Criar uma Arena</h3>
+                    <p class="duelo-ajuda">
+                        Configure a futura sala ao vivo. Nesta primeira etapa, a tela já fica pronta
+                        sem alterar o funcionamento dos duelos atuais.
+                    </p>
+
+                    <label class="arena-label-farol" for="arenaConcursoFarol">1. Concurso</label>
+                    <select id="arenaConcursoFarol" onchange="atualizarResumoArenaVisualFarol()">
+                        <option value="barcarena2026">Barcarena 2026</option>
+                        <option value="abaetetuba2026">Abaetetuba 2026</option>
+                    </select>
+
+                    <label class="arena-label-farol" for="arenaDisciplinaFarol">2. Disciplina</label>
+                    <select id="arenaDisciplinaFarol" onchange="atualizarTopicosArenaVisualFarol()">
+                        <option value="">Escolha a disciplina</option>
+                    </select>
+
+                    <label class="arena-label-farol" for="arenaTopicoFarol">3. Tópico</label>
+                    <select id="arenaTopicoFarol" onchange="atualizarResumoArenaVisualFarol()">
+                        <option value="">Escolha primeiro a disciplina</option>
+                    </select>
+
+                    <div class="arena-grid-config-farol">
+                        <div>
+                            <label class="arena-label-farol" for="arenaQuantidadeFarol">4. Questões</label>
+                            <select id="arenaQuantidadeFarol" onchange="atualizarResumoArenaVisualFarol()">
+                                <option value="5">5 questões</option>
+                                <option value="10" selected>10 questões</option>
+                                <option value="15">15 questões</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="arena-label-farol" for="arenaTempoFarol">5. Tempo</label>
+                            <select id="arenaTempoFarol" onchange="atualizarResumoArenaVisualFarol()">
+                                <option value="30" selected>30 segundos</option>
+                                <option value="45">45 segundos</option>
+                                <option value="60">60 segundos</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div id="arenaResumoVisualFarol" class="arena-resumo-farol">
+                        Escolha a disciplina e o tópico para visualizar a configuração.
+                    </div>
+
+                    <button
+                        id="btnCriarArenaFarol"
+                        type="button"
+                        onclick="criarArenaVisualFarol()">
+                        🏟️ Criar sala da Arena
+                    </button>
+                </div>
+
+                <div class="arena-bloco-farol">
+                    <h3>🔑 Entrar em uma Arena</h3>
+                    <p class="duelo-ajuda">
+                        Digite o código enviado pelo anfitrião para entrar na sala em tempo real.
+                    </p>
+
+                    <input
+                        id="codigoArenaEntradaFarol"
+                        class="arena-codigo-input-farol"
+                        type="text"
+                        maxlength="12"
+                        placeholder="Exemplo: ARENA-4821">
+
+                    <button
+                        id="btnEntrarArenaFarol"
+                        type="button"
+                        onclick="entrarArenaVisualFarol()">
+                        🚀 Entrar na Arena
+                    </button>
+
+                    <div class="arena-regras-farol">
+                        <h4>⚡ Regras da sala</h4>
+                        <ul>
+                            <li>O anfitrião pode iniciar com 2, 3, 4, 5 ou 6 jogadores.</li>
+                            <li>Todos recebem a mesma questão ao mesmo tempo.</li>
+                            <li>Erro tira 1 ponto e permite uma segunda tentativa.</li>
+                            <li>O placar será atualizado ao vivo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="arena-publicas-farol">
+                <div class="arena-publicas-topo-farol">
+                    <div>
+                        <span class="arena-selo-publica-farol">🌐 ARENAS PÚBLICAS</span>
+                        <h3>🟢 Arenas acontecendo agora</h3>
+                        <p>
+                            Entre para jogar enquanto a sala estiver aguardando ou assista ao vivo
+                            depois que a partida começar.
+                        </p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="arena-atualizar-lista-farol"
+                        onclick="carregarArenasPublicasFarol(true)">
+                        🔄 Atualizar
+                    </button>
+                </div>
+
+                <div id="listaArenasPublicasFarol" class="arena-lista-publica-farol">
+                    <div class="arena-publica-vazia-farol">
+                        Procurando Arenas abertas...
+                    </div>
+                </div>
+            </div>
+
+            <div id="arenaSalaEsperaVisualFarol" class="arena-sala-espera-farol" style="display:none;">
+                <div class="arena-sala-topo-farol">
+                    <div>
+                        <span>🏟️ Sala de espera</span>
+                        <h3 id="arenaSalaTituloFarol">Arena do Farol</h3>
+                    </div>
+                    <div class="arena-codigo-destaque-farol">
+                        <small>Código</small>
+                        <strong id="arenaCodigoVisualFarol">ARENA-0000</strong>
+
+                        <div class="duelo-botoes-codigo arena-botoes-convite-farol">
+                            <button
+                                type="button"
+                                onclick="copiarCodigoArenaFarol()">
+                                📋 Copiar código
+                            </button>
+
+                            <button
+                                type="button"
+                                onclick="copiarLinkArenaFarol()">
+                                🔗 Copiar link
+                            </button>
+
+                            <button
+                                type="button"
+                                onclick="compartilharArenaFarol()">
+                                📤 Compartilhar convite
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arena-sala-grid-farol">
+                    <div>
+                        <h4>👥 Jogadores</h4>
+                        <div id="arenaJogadoresVisualFarol" class="arena-jogadores-farol">
+                            <div class="arena-jogador-farol anfitriao">
+                                <span>👑</span>
+                                <div>
+                                    <strong>Anfitrião</strong>
+                                    <small>Aguardando outros jogadores...</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4>📋 Configuração</h4>
+                        <div id="arenaConfiguracaoSalaFarol" class="arena-configuracao-sala-farol"></div>
+                        <div id="arenaMensagemStatusFarol" class="arena-mensagem-status-farol">
+                            Aguardando pelo menos 2 jogadores.
+                        </div>
+
+                        <button
+                            id="btnIniciarArenaFarol"
+                            type="button"
+                            class="arena-botao-bloqueado-farol"
+                            onclick="iniciarArenaAoVivoFarol()"
+                            disabled>
+                            Aguardando pelo menos 2 jogadores
+                        </button>
+
+                        <button
+                            id="btnSairArenaFarol"
+                            type="button"
+                            class="arena-botao-sair-farol"
+                            onclick="sairArenaAoVivoFarol()">
+                            🚪 Sair da sala
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="card">
+    <div id="cardMeusDuelosFarol" class="card">
 
         <h3>🏆 Meus Duelos</h3>
 
@@ -3147,7 +4122,7 @@ Li e revisei o mapa mental.
 
                 <img
                     src="imagens/autor/capitao-joao-paulo.webp"
-                    alt="Capitão João Paulo Silva"
+                    alt="Comandante João Paulo Silva"
                     class="foto-autor">
 
             </div>
@@ -3158,23 +4133,26 @@ Li e revisei o mapa mental.
                     🗼 Farol do Saber
                 </span>
 
-                
+                <h2>Uma plataforma criada para orientar sua jornada de estudos</h2>
 
                 <p>
-                    O Farol do Saber é uma plataforma de estudos criada para ajudar alunos e candidatos
-                    a estudarem com mais organização, constância e motivação.
+                    O <strong>Farol do Saber</strong> é uma plataforma educacional criada para ajudar estudantes
+                    e candidatos a concursos a organizarem seus estudos com mais clareza, constância e estratégia.
                 </p>
 
                 <p>
                     A plataforma reúne teoria, mapas mentais, questões comentadas, simulados, caderno de erros,
-                    ranking, missões diárias e sistema de Pontos de Luz, tornando o aprendizado mais dinâmico
-                    e gamificado.
+                    acompanhamento de desempenho, missões de estudo e recursos de gamificação. Cada ferramenta
+                    foi pensada para tornar a preparação mais objetiva, dinâmica e eficiente.
                 </p>
 
                 <p>
-                    A proposta é transformar o estudo em uma jornada mais clara, onde cada aluno possa acompanhar
-                    seu progresso, revisar seus erros e avançar passo a passo rumo aos seus objetivos.
+                    Mais do que disponibilizar conteúdos, o Farol do Saber oferece uma jornada completa de
+                    aprendizagem, permitindo ao estudante acompanhar sua evolução, identificar dificuldades,
+                    revisar pontos importantes e avançar com mais segurança rumo aos seus objetivos.
                 </p>
+
+                <p><strong>Organização para estudar. Estratégia para evoluir. Conhecimento para avançar.</strong></p>
 
             </div>
 
@@ -3187,35 +4165,34 @@ Li e revisei o mapa mental.
             <div class="sobre-bloco sobre-bloco-destaque">
 
                 <h3>
-                    👨‍✈️ Sobre o autor
+                    👨‍✈️ Sobre o idealizador
                 </h3>
 
                 <p>
                     O Farol do Saber foi idealizado por <strong>João Paulo Silva</strong>,
-                    Capitão de Cabotagem da Marinha Mercante, com mais de 10 anos de experiência
-                    na carreira marítima.
+                    <strong>Comandante da Marinha Mercante, educador e administrador</strong>, profissional com
+                    mais de 10 anos de experiência na carreira marítima e atuação em funções de liderança,
+                    responsabilidade e tomada de decisão.
                 </p>
 
                 <p>
-                    João Paulo é formado em <strong>Licenciatura em Matemática</strong> pela
-                    Universidade Federal do Pará, possui pós-graduação em
-                    <strong>Matemática Financeira</strong>, Bacharelado em
-                    <strong>Administração</strong>, Curso Técnico em
-                    <strong>Processos Industriais</strong> e Curso Técnico em
-                    <strong>Mecânica Industrial</strong>.
+                    Sua formação reúne conhecimentos em diferentes áreas: <strong>Licenciatura em Matemática</strong>
+                    pela Universidade Federal do Pará, pós-graduação em <strong>Matemática Financeira</strong>,
+                    Bacharelado em <strong>Administração</strong>, formação técnica em
+                    <strong>Processos Industriais</strong> e em <strong>Mecânica Industrial</strong>.
                 </p>
 
                 <p>
-                    Antes de ingressar na Marinha Mercante, trabalhou por 5 anos na Hydro Alunorte,
-                    atuando como operador de produção e sala de controle. Após esse período,
-                    realizou o curso de Oficial de Náutica da Marinha Mercante, iniciando sua trajetória
-                    como Oficial de Náutica e alcançando posteriormente a ascensão a Capitão de Cabotagem.
+                    Antes de ingressar na Marinha Mercante, desenvolveu experiência profissional no setor
+                    industrial. Posteriormente, concluiu o Curso de Oficial de Náutica da Marinha Mercante,
+                    iniciou sua trajetória como Oficial de Náutica e avançou profissionalmente até exercer
+                    funções de comando.
                 </p>
 
                 <p>
-                    Unindo sua experiência na educação, na indústria e na área marítima, criou o Farol do Saber
-                    com o objetivo de tornar o estudo mais organizado, acessível e motivador para quem busca
-                    aprovação em concursos, cursos de formação e crescimento profissional.
+                    A experiência acumulada na educação, na gestão, na indústria e na área marítima deu origem
+                    ao Farol do Saber: uma plataforma construída com organização, disciplina e compromisso com
+                    o desenvolvimento de quem estuda para transformar sua realidade.
                 </p>
 
             </div>
@@ -3227,8 +4204,8 @@ Li e revisei o mapa mental.
                 </h3>
 
                 <p>
-                    Oferecer uma experiência de estudo simples, prática e motivadora,
-                    ajudando o aluno a aprender, revisar e evoluir com acompanhamento de progresso.
+                    Oferecer uma experiência de estudo estruturada, prática e motivadora, ajudando o estudante
+                    a compreender conteúdos, revisar pontos importantes e acompanhar sua evolução.
                 </p>
 
             </div>
@@ -3240,8 +4217,8 @@ Li e revisei o mapa mental.
                 </h3>
 
                 <p>
-                    O Farol do Saber combina teoria, mapas mentais, questões, simulados,
-                    caderno de erros e gamificação para estimular a constância nos estudos.
+                    Combinar teoria, mapas mentais, questões comentadas, simulados, revisão de erros e
+                    gamificação para estimular constância, participação e aprendizagem ativa.
                 </p>
 
             </div>
@@ -3253,8 +4230,8 @@ Li e revisei o mapa mental.
                 </h3>
 
                 <p>
-                    Iluminar o caminho do estudante, tornando a preparação mais clara,
-                    organizada e acessível para quem busca aprovação e desenvolvimento profissional.
+                    Tornar o estudo mais claro, acessível e organizado, contribuindo para que cada estudante
+                    avance com autonomia, confiança e propósito.
                 </p>
 
             </div>
@@ -3529,7 +4506,7 @@ Li e revisei o mapa mental.
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 
-<script src="firebase.js"></script>
+<script src="firebase.js?v=56-saida-arena?v=14-estavel"></script>
 
 <!-- SISTEMA -->
 
@@ -3624,7 +4601,27 @@ Li e revisei o mapa mental.
 <script src="dados/geografiaParaBarcarena.js"></script>
 <script src="dados/teorias/geografiaParaBarcarenaTeoria.js"></script>
 
-<script src="app.js"></script>
+<script src="dados/abaetetuba/historia/fontesLinguagensHistoriaAbaetetuba.js"></script>
+<script src="dados/abaetetuba/historia/teorias/fontesLinguagensHistoriaAbaetetubaTeoria.js"></script>
+<script src="dados/abaetetuba/historia/historiografiaIdentidadesBrasilAbaetetuba.js"></script>
+<script src="dados/abaetetuba/historia/teorias/historiografiaIdentidadesBrasilAbaetetubaTeoria.js"></script>
+<script src="dados/abaetetuba/historia/historiaRegionalLocalAmazoniaParaAbaetetuba.js"></script>
+<script src="dados/abaetetuba/historia/teorias/historiaRegionalLocalAmazoniaParaAbaetetubaTeoria.js"></script>
+<script src="dados/abaetetuba/historia/historiaAmericaIdentidadesAbaetetuba.js"></script>
+<script src="dados/abaetetuba/historia/teorias/historiaAmericaIdentidadesAbaetetubaTeoria.js"></script>
+<script src="dados/abaetetuba/historia/lutasSociaisIdentidadesAbaetetuba.js"></script>
+<script src="dados/abaetetuba/historia/teorias/lutasSociaisIdentidadesAbaetetubaTeoria.js"></script>
+<script src="dados/abaetetuba/historia/legadosAntiguidadeClassicaAbaetetuba.js"></script>
+<script src="dados/abaetetuba/historia/teorias/legadosAntiguidadeClassicaAbaetetubaTeoria.js"></script>
+<script src="dados/abaetetuba/historia/conviviosConfrontosEuropaMedievalAbaetetuba.js"></script>
+<script src="dados/abaetetuba/historia/teorias/conviviosConfrontosEuropaMedievalAbaetetubaTeoria.js"></script>
+<script src="dados/abaetetuba/historia/historiaAfricaRelacoesEuropaAmericaAbaetetuba.js"></script>
+<script src="dados/abaetetuba/historia/teorias/historiaAfricaRelacoesEuropaAmericaAbaetetubaTeoria.js"></script>
+<script src="dados/abaetetuba/historia/capitalismoLutasCidadaniaCulturaAbaetetuba.js"></script>
+<script src="dados/abaetetuba/historia/teorias/capitalismoLutasCidadaniaCulturaAbaetetubaTeoria.js"></script>
+<script src="dados/abaetetuba/historia/constituicaoGestaoLegislacaoEducacionalAbaetetuba.js"></script>
+<script src="dados/abaetetuba/historia/teorias/constituicaoGestaoLegislacaoEducacionalAbaetetubaTeoria.js"></script>
+
 
 <footer>
 
@@ -3810,7 +4807,266 @@ Li e revisei o mapa mental.
 
 </section>
 
+
+<section id="confirmacaoAdminFarol" class="tela">
+
+    <div class="card confirmacao-admin-card">
+
+        <button class="btn-voltar" onclick="cancelarConfirmacaoAdminFarol()">
+            ⬅ Voltar ao Painel
+        </button>
+
+        <div class="confirmacao-admin-icone">🔐</div>
+        <span class="selo-admin-acessos">Área administrativa protegida</span>
+        <h2>Acesso administrativo</h2>
+
+        <p>
+            Esta área é restrita. Somente o administrador autorizado pode continuar.
+        </p>
+
+        <div class="confirmacao-admin-formulario">
+            <label for="senhaConfirmacaoAdminFarol">Senha do administrador</label>
+            <input
+                type="password"
+                id="senhaConfirmacaoAdminFarol"
+                placeholder="Digite a senha do administrador"
+                autocomplete="current-password"
+                onkeypress="if(event.key==='Enter') confirmarSenhaAdministradorFarol();">
+
+            <div
+                id="mensagemConfirmacaoAdminFarol"
+                class="mensagem-confirmacao-admin"
+                aria-live="polite"></div>
+
+            <button
+                id="btnConfirmarSenhaAdminFarol"
+                onclick="confirmarSenhaAdministradorFarol()">
+                🔓 Validar acesso administrativo
+            </button>
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section id="painelAcessosAdmin" class="tela">
+
+    <div class="card painel-admin-acessos painel-admin-v19">
+
+        <button class="btn-voltar" onclick="sairPainelAdministrativoFarol()">
+            ⬅ Sair da Área Administrativa
+        </button>
+
+        <div class="admin-acessos-topo">
+            <div>
+                <span class="selo-admin-acessos">🔐 Área administrativa</span>
+                <h2>Gerenciamento de Acessos</h2>
+                <p>
+                    Consulte os alunos já liberados, edite cargos ou autorize uma nova conta.
+                </p>
+            </div>
+        </div>
+
+        <div id="resumoAcessosAdminFarol" class="resumo-acessos-admin">
+            <div class="resumo-admin-card total">
+                <span>⏳</span>
+                <div><strong>—</strong><small>Carregando acessos</small></div>
+            </div>
+        </div>
+
+        <div class="abas-painel-admin">
+            <button
+                id="btnAbaLiberadosFarol"
+                class="aba-painel-admin ativa"
+                onclick="mostrarAbaAcessosFarol('liberados')">
+                👥 Acessos liberados
+            </button>
+            <button
+                id="btnAbaEditarFarol"
+                class="aba-painel-admin"
+                onclick="mostrarAbaAcessosFarol('editar')">
+                ➕ Liberar ou editar acesso
+            </button>
+            <button
+                id="btnAbaOnlineFarol"
+                class="aba-painel-admin"
+                onclick="mostrarAbaAcessosFarol('online')">
+                🟢 Alunos on-line
+                <span id="contadorOnlineAbaFarol" class="contador-online-aba">0</span>
+            </button>
+        </div>
+
+        <div id="abaAcessosLiberadosFarol" class="conteudo-aba-admin">
+            <div class="barra-lista-acessos-admin">
+                <div class="campo-filtro-acessos-admin">
+                    <label for="filtroListaAcessosFarol">Pesquisar aluno ou cargo</label>
+                    <input
+                        type="search"
+                        id="filtroListaAcessosFarol"
+                        placeholder="Nome, e-mail, História, Ciências..."
+                        oninput="filtrarListaAcessosFarol()">
+                </div>
+
+                <div class="acoes-lista-acessos-admin">
+                    <span id="contadorFiltroAcessosFarol">0 aluno(s)</span>
+                    <button
+                        id="btnAtualizarListaAcessosFarol"
+                        onclick="carregarListaAcessosFarol()">
+                        🔄 Atualizar lista
+                    </button>
+                </div>
+            </div>
+
+            <div id="listaAcessosLiberadosFarol" class="lista-acessos-liberados-admin">
+                Carregando alunos liberados...
+            </div>
+        </div>
+
+        <div id="abaEditarAcessoFarol" class="conteudo-aba-admin" style="display:none;">
+            <div class="admin-busca-acesso">
+                <label for="emailBuscaAcessoFarol">E-mail cadastrado do aluno</label>
+                <div class="admin-busca-linha">
+                    <input
+                        type="email"
+                        id="emailBuscaAcessoFarol"
+                        placeholder="aluno@email.com"
+                        onkeypress="if(event.key==='Enter') buscarUsuarioAcessoFarol();">
+                    <button onclick="buscarUsuarioAcessoFarol()">
+                        🔎 Buscar aluno
+                    </button>
+                </div>
+            </div>
+
+            <div id="resultadoBuscaAcessoFarol" class="resultado-busca-acesso">
+                Digite o e-mail de uma conta cadastrada ou escolha um aluno na lista de acessos liberados.
+            </div>
+        </div>
+
+    
+<section
+            id="abaAlunosOnlineFarol"
+            class="painel-aba-admin painel-alunos-online-admin"
+            style="display:none;">
+
+            <div class="cabecalho-alunos-online-admin">
+                <div>
+                    <h3>🟢 Alunos on-line agora</h3>
+                    <p>
+                        Acompanhamento das páginas e recursos utilizados dentro do Farol do Saber.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    onclick="carregarAlunosOnlineFarol(true)">
+                    🔄 Atualizar
+                </button>
+            </div>
+
+            <div class="privacidade-online-admin">
+                🔒 O painel registra apenas a navegação dentro do Farol. Não acessa câmera,
+                arquivos pessoais nem o conteúdo da tela do aluno.
+            </div>
+
+            <div id="resumoAlunosOnlineFarol" class="resumo-online-admin">
+                <div class="resumo-online-card">
+                    <strong>0</strong>
+                    <span>on-line agora</span>
+                </div>
+                <div class="resumo-online-card">
+                    <strong>0</strong>
+                    <span>ativos hoje</span>
+                </div>
+            </div>
+
+            <div class="filtros-online-admin">
+                <label>
+                    Buscar aluno
+                    <input
+                        id="filtroAlunosOnlineFarol"
+                        type="search"
+                        placeholder="Nome, e-mail, concurso, cargo ou conteúdo"
+                        oninput="filtrarAlunosOnlineFarol()">
+                </label>
+
+                <label>
+                    Situação
+                    <select
+                        id="situacaoAlunosOnlineFarol"
+                        onchange="filtrarAlunosOnlineFarol()">
+                        <option value="online">Somente on-line</option>
+                        <option value="todos">On-line e vistos recentemente</option>
+                    </select>
+                </label>
+            </div>
+
+            <div
+                id="listaAlunosOnlineFarol"
+                class="lista-alunos-online-admin"
+                aria-live="polite">
+                <div class="admin-lista-vazia">
+                    <span>⏳</span>
+                    <h3>Carregando presença dos alunos...</h3>
+                </div>
+            </div>
+
+        
+
+            <section
+                id="painelHistoricoAlunoFarol"
+                class="painel-historico-aluno-admin"
+                style="display:none;">
+
+                <div class="cabecalho-historico-admin">
+                    <div>
+                        <h3 id="tituloHistoricoAlunoFarol">
+                            📚 Histórico do aluno
+                        </h3>
+                        <p id="subtituloHistoricoAlunoFarol"></p>
+                    </div>
+
+                    <button
+                        type="button"
+                        onclick="fecharHistoricoAlunoFarol()">
+                        ✖ Fechar
+                    </button>
+                </div>
+
+                <div class="aviso-historico-admin">
+                    O histórico registra somente páginas e funções usadas
+                    dentro do Farol do Saber.
+                </div>
+
+                <div
+                    id="listaHistoricoAlunoFarol"
+                    class="lista-historico-aluno-admin">
+                </div>
+
+            </section>
+
+</section>
+
+</div>
+</section>
+
 <div id="toast" class="toast"></div>
+
+<script src="dados/abaetetuba/ciencias/citologiaMorfologiaCelularAbaetetuba.js"></script>
+<script src="dados/abaetetuba/ciencias/teorias/citologiaMorfologiaCelularAbaetetubaTeoria.js"></script>
+
+<script src="dados/abaetetuba/ciencias/histologiaEmbriologiaReproducaoAbaetetuba.js?v=45-histologia-eixo2"></script>
+<script src="dados/abaetetuba/ciencias/teorias/histologiaEmbriologiaReproducaoAbaetetubaTeoria.js?v=45-histologia-eixo2"></script>
+
+
+<script src="dados/abaetetuba/portugues/parafraseResumoAbaetetuba.js?v=46-unificado"></script>
+<script src="dados/abaetetuba/portugues/teorias/parafraseResumoAbaetetubaTeoria.js?v=46-unificado"></script>
+<script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
+<script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
+
+<script src="app.js?v=56-saida-arena"></script>
+<script src="admin.js?v=42-historico-atividades"></script>
 
 </body>
 

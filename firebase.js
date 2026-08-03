@@ -20,6 +20,11 @@ const auth = firebase.auth();
 
 const db = firebase.firestore();
 
+// Referência pública controlada para os módulos adicionais do Farol.
+// As permissões continuam sendo verificadas pelas regras do Firestore.
+window.farolFirebase = { auth, db };
+window.farolUsuarioAtualFirebase = null;
+
 function nomeEhGenericoFirebaseFarol(nome){
 
     const normalizado = String(nome || "")
@@ -103,10 +108,16 @@ function escolherNomeFirebaseFarol(dados, user){
 
 auth.onAuthStateChanged(async (user) => {
 
+    window.farolUsuarioAtualFirebase = user
+        ? { uid: user.uid, email: user.email || "" }
+        : null;
+
     if(user){
 
-        document.getElementById("login")
-            .style.display = "none";
+        const telaLoginFarol = document.getElementById("login");
+        if(telaLoginFarol){
+            telaLoginFarol.style.display = "none";
+        }
 
         try{
 
@@ -115,6 +126,7 @@ auth.onAuthStateChanged(async (user) => {
                 .set({
 
                     email: user.email || "",
+                    emailNormalizado: String(user.email || "").trim().toLowerCase(),
                     ultimoAcesso: firebase.firestore.FieldValue.serverTimestamp(),
                     ultimaAtividade: Date.now()
 
@@ -138,9 +150,6 @@ const nomeCompleto =
 const primeiroNome =
     nomeUsuarioFarol.primeiroNome;
 
-usuarioNomeCompleto = nomeCompleto;
-usuarioForum = primeiroNome;
-
 localStorage.setItem(
     "usuarioNomeCompleto",
     nomeCompleto
@@ -150,6 +159,20 @@ localStorage.setItem(
     "usuarioForum",
     primeiroNome
 );
+
+const nomeAtualFirebaseFarol = {
+    primeiroNome,
+    nomeCompleto
+};
+
+if(typeof window.aplicarNomeUsuarioFirebaseFarol === "function"){
+    window.aplicarNomeUsuarioFirebaseFarol(
+        primeiroNome,
+        nomeCompleto
+    );
+}else{
+    window.farolNomeUsuarioPendente = nomeAtualFirebaseFarol;
+}
 
 await db.collection("usuarios")
     .doc(user.uid)

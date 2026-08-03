@@ -1,0 +1,1720 @@
+/* ==========================================================
+   FAROL DO SABER — ÁREA ADMINISTRATIVA V25
+   - Acesso exclusivo da conta administrativa
+   - Reautenticação pelo Firebase
+   - Lista alunos que já possuem acesso liberado
+   - Pacote comum superior + cargos, busca, edição e revogação
+========================================================== */
+(function(){
+    "use strict";
+
+    const EMAIL_ADMIN_FAROL = "jp@gmail.com";
+    const DURACAO_SESSAO_ADMIN_MS = 15 * 60 * 1000;
+
+    const firebaseFarol = window.farolFirebase || {};
+    const authFarol = firebaseFarol.auth || (typeof auth !== "undefined" ? auth : null);
+    const dbFarol = firebaseFarol.db || (typeof db !== "undefined" ? db : null);
+
+    let adminConfirmadoEm = 0;
+    let usuarioSelecionado = null;
+    let acessosLiberadosCache = [];
+    let abaAdminAtual = "liberados";
+
+    const PACOTES_ABAETETUBA = [
+        {
+            chave: "comunsSuperior",
+            nome: "Disciplinas Comuns — Nível Superior",
+            icone: "📚",
+            checkbox: "acessoAbaetetubaComunsSuperior",
+            classe: "comuns-superior",
+            tipo: "pacote"
+        }
+    ];
+
+    const CARGOS_ABAETETUBA = [
+        {
+            chave: "professorHistoria",
+            nome: "Professor de História",
+            icone: "📜",
+            checkbox: "acessoAbaetetubaHistoria",
+            classe: "historia"
+        },
+        {
+            chave: "professorCiencias",
+            nome: "Professor de Ciências",
+            icone: "🔬",
+            checkbox: "acessoAbaetetubaCiencias",
+            classe: "ciencias"
+        },
+        {
+            chave: "professorGeografia",
+            nome: "Professor de Geografia",
+            icone: "🌍",
+            checkbox: "acessoAbaetetubaGeografia",
+            classe: "geografia"
+        }
+    ];
+
+    const ACESSOS_ABAETETUBA = [
+        ...PACOTES_ABAETETUBA,
+        ...CARGOS_ABAETETUBA
+    ];
+
+    function textoSeguro(valor){
+        if(typeof window.escaparHTML === "function"){
+            return window.escaparHTML(valor);
+        }
+
+        return String(valor || "")
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("'", "&#039;");
+    }
+
+    function normalizarTexto(valor){
+        return String(valor || "")
+            .trim()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase();
+    }
+
+    function aviso(mensagem){
+        if(typeof window.mostrarToast === "function"){
+            window.mostrarToast(mensagem);
+            return;
+        }
+        alert(mensagem);
+    }
+
+    function abrirTela(id){
+        if(typeof window.mostrarTela === "function"){
+            window.mostrarTela(id);
+            return;
+        }
+
+        document.querySelectorAll(".tela").forEach(tela => {
+            tela.classList.remove("ativa");
+        });
+
+        const destino = document.getElementById(id);
+        if(destino){
+            destino.classList.add("ativa");
+        }
+    }
+
+    function usuarioAtual(){
+        return authFarol && authFarol.currentUser
+            ? authFarol.currentUser
+            : null;
+    }
+
+    function emailAtual(){
+        const usuario = usuarioAtual();
+        return String(usuario && usuario.email ? usuario.email : "")
+            .trim()
+            .toLowerCase();
+    }
+
+    function ehAdministrador(){
+        return emailAtual() === EMAIL_ADMIN_FAROL;
+    }
+
+    function sessaoConfirmada(){
+        return ehAdministrador() &&
+            adminConfirmadoEm > 0 &&
+            (Date.now() - adminConfirmadoEm) <= DURACAO_SESSAO_ADMIN_MS;
+    }
+
+    function exigirSessaoAdmin(mensagem){
+        if(sessaoConfirmada()){
+            return true;
+        }
+
+        aviso(mensagem || "Confirme novamente a senha do administrador para continuar.");
+        window.abrirPainelAcessosFarol();
+        return false;
+    }
+
+    // Funções compartilhadas com o módulo de alunos on-line.
+    // Elas precisam ser expostas porque o painel on-line está em outra IIFE.
+    window.sessaoAdminFarolConfirmada = sessaoConfirmada;
+    window.textoSeguroAdminFarol = textoSeguro;
+    window.dbAdminFarol = dbFarol;
+
+    function limparConfirmacao(){
+        adminConfirmadoEm = 0;
+        usuarioSelecionado = null;
+        acessosLiberadosCache = [];
+
+        const senha = document.getElementById("senhaConfirmacaoAdminFarol");
+        const mensagem = document.getElementById("mensagemConfirmacaoAdminFarol");
+        const botao = document.getElementById("btnConfirmarSenhaAdminFarol");
+
+        if(senha){
+            senha.value = "";
+        }
+        if(mensagem){
+            mensagem.textContent = "";
+            mensagem.className = "mensagem-confirmacao-admin";
+        }
+        if(botao){
+            botao.disabled = false;
+            botao.textContent = "🔓 Validar acesso administrativo";
+        }
+    }
+
+    function cargoEstaLiberado(valor){
+        return valor === true || !!(
+            valor &&
+            typeof valor === "object" &&
+            valor.liberado === true
+        );
+    }
+
+    function obterAbaetetuba(documento){
+        const concursos = documento && documento.concursos
+            ? documento.concursos
+            : {};
+
+        return concursos.abaetetuba2026 || {};
+    }
+
+    function possuiCargoSuperiorLiberado(documento){
+        const abaetetuba = obterAbaetetuba(documento);
+        return CARGOS_ABAETETUBA.some(cargo =>
+            cargoEstaLiberado(abaetetuba[cargo.chave])
+        );
+    }
+
+    function obterCargosLiberados(documento){
+        const abaetetuba = obterAbaetetuba(documento);
+        const pacoteComumEfetivo =
+            cargoEstaLiberado(abaetetuba.comunsSuperior) ||
+            possuiCargoSuperiorLiberado(documento);
+
+        return ACESSOS_ABAETETUBA.filter(item => {
+            if(item.chave === "comunsSuperior"){
+                return pacoteComumEfetivo;
+            }
+            return cargoEstaLiberado(abaetetuba[item.chave]);
+        });
+    }
+
+    function converterData(valor){
+        if(!valor){
+            return null;
+        }
+
+        if(typeof valor.toDate === "function"){
+            return valor.toDate();
+        }
+
+        if(valor instanceof Date){
+            return valor;
+        }
+
+        if(typeof valor === "number" || typeof valor === "string"){
+            const data = new Date(valor);
+            return Number.isNaN(data.getTime()) ? null : data;
+        }
+
+        if(typeof valor.seconds === "number"){
+            return new Date(valor.seconds * 1000);
+        }
+
+        return null;
+    }
+
+    function formatarData(valor){
+        const data = converterData(valor);
+
+        if(!data){
+            return "Data não registrada";
+        }
+
+        return data.toLocaleString("pt-BR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+    }
+
+    function obterTempoOrdenacao(valor){
+        const data = converterData(valor);
+        return data ? data.getTime() : 0;
+    }
+
+    function limparResultadoEdicao(){
+        usuarioSelecionado = null;
+        const area = document.getElementById("resultadoBuscaAcessoFarol");
+        if(area){
+            area.innerHTML = "Digite o e-mail de uma conta cadastrada ou escolha um aluno na lista de acessos liberados.";
+        }
+    }
+
+    window.abrirPainelAcessosFarol = function(){
+        const usuario = usuarioAtual();
+
+        if(!usuario){
+            aviso("Faça login para continuar.");
+            return;
+        }
+
+        if(!ehAdministrador()){
+            alert(
+                "⛔ Acesso negado.\n\n" +
+                "Esta área é exclusiva do administrador do Farol do Saber."
+            );
+            return;
+        }
+
+        limparConfirmacao();
+        abrirTela("confirmacaoAdminFarol");
+
+        const campo = document.getElementById("senhaConfirmacaoAdminFarol");
+        if(campo){
+            setTimeout(() => campo.focus(), 0);
+        }
+    };
+
+    window.cancelarConfirmacaoAdminFarol = function(){
+        limparConfirmacao();
+        abrirTela("inicio");
+    };
+
+    window.sairPainelAdministrativoFarol = function(){
+        limparConfirmacao();
+        abrirTela("inicio");
+    };
+
+    window.confirmarSenhaAdministradorFarol = async function(){
+        const usuario = usuarioAtual();
+        const campo = document.getElementById("senhaConfirmacaoAdminFarol");
+        const mensagem = document.getElementById("mensagemConfirmacaoAdminFarol");
+        const botao = document.getElementById("btnConfirmarSenhaAdminFarol");
+        const senha = String(campo ? campo.value : "");
+
+        if(!usuario || !ehAdministrador()){
+            limparConfirmacao();
+            alert("⛔ Acesso negado. Esta área é exclusiva do administrador.");
+            abrirTela("inicio");
+            return;
+        }
+
+        if(!senha){
+            if(mensagem){
+                mensagem.textContent = "Informe a senha do administrador.";
+                mensagem.className = "mensagem-confirmacao-admin erro";
+            }
+            if(campo){
+                campo.focus();
+            }
+            return;
+        }
+
+        if(typeof firebase === "undefined" || !firebase.auth || !firebase.auth.EmailAuthProvider){
+            if(mensagem){
+                mensagem.textContent = "O Firebase Auth não foi carregado corretamente.";
+                mensagem.className = "mensagem-confirmacao-admin erro";
+            }
+            return;
+        }
+
+        try{
+            if(botao){
+                botao.disabled = true;
+                botao.textContent = "Confirmando...";
+            }
+            if(mensagem){
+                mensagem.textContent = "Validando o acesso administrativo...";
+                mensagem.className = "mensagem-confirmacao-admin";
+            }
+
+            const credencial = firebase.auth.EmailAuthProvider.credential(
+                usuario.email,
+                senha
+            );
+
+            await usuario.reauthenticateWithCredential(credencial);
+            adminConfirmadoEm = Date.now();
+
+            if(campo){
+                campo.value = "";
+            }
+            if(mensagem){
+                mensagem.textContent = "Identidade confirmada.";
+                mensagem.className = "mensagem-confirmacao-admin sucesso";
+            }
+
+            abrirTela("painelAcessosAdmin");
+            window.mostrarAbaAcessosFarol("liberados");
+            await window.carregarListaAcessosFarol();
+        }catch(erro){
+            console.error("Falha na confirmação administrativa:", erro);
+            adminConfirmadoEm = 0;
+
+            if(mensagem){
+                mensagem.textContent = erro && erro.code === "auth/too-many-requests"
+                    ? "Muitas tentativas. Aguarde alguns minutos e tente novamente."
+                    : "Senha do administrador incorreta ou não foi possível confirmar o acesso.";
+                mensagem.className = "mensagem-confirmacao-admin erro";
+            }
+            if(campo){
+                campo.select();
+                campo.focus();
+            }
+        }finally{
+            if(botao){
+                botao.disabled = false;
+                botao.textContent = "🔓 Validar acesso administrativo";
+            }
+        }
+    };
+
+    window.mostrarAbaAcessosFarol = function(aba){
+        if(!sessaoConfirmada()){
+            return;
+        }
+
+        abaAdminAtual = aba === "editar" ? "editar" : "liberados";
+
+        const painelLiberados = document.getElementById("abaAcessosLiberadosFarol");
+        const painelEditar = document.getElementById("abaEditarAcessoFarol");
+        const botaoLiberados = document.getElementById("btnAbaLiberadosFarol");
+        const botaoEditar = document.getElementById("btnAbaEditarFarol");
+
+        if(painelLiberados){
+            painelLiberados.style.display = abaAdminAtual === "liberados" ? "block" : "none";
+        }
+        if(painelEditar){
+            painelEditar.style.display = abaAdminAtual === "editar" ? "block" : "none";
+        }
+        if(botaoLiberados){
+            botaoLiberados.classList.toggle("ativa", abaAdminAtual === "liberados");
+        }
+        if(botaoEditar){
+            botaoEditar.classList.toggle("ativa", abaAdminAtual === "editar");
+        }
+
+        if(abaAdminAtual === "editar"){
+            const busca = document.getElementById("emailBuscaAcessoFarol");
+            if(busca){
+                setTimeout(() => busca.focus(), 0);
+            }
+        }
+    };
+
+    async function complementarDadosDoUsuario(item){
+        if((item.nome && item.email) || !dbFarol){
+            return item;
+        }
+
+        try{
+            const docUsuario = await dbFarol.collection("usuarios")
+                .doc(item.uid)
+                .get();
+
+            if(docUsuario.exists){
+                const dadosUsuario = docUsuario.data() || {};
+                item.nome = item.nome || dadosUsuario.nomeCompleto || dadosUsuario.nome || "Aluno";
+                item.email = item.email || dadosUsuario.email || "";
+            }
+        }catch(erro){
+            console.warn("Não foi possível complementar os dados do usuário:", item.uid, erro);
+        }
+
+        return item;
+    }
+
+    function renderizarResumoAcessos(lista){
+        const area = document.getElementById("resumoAcessosAdminFarol");
+        if(!area){
+            return;
+        }
+
+        const contagem = {
+            comunsSuperior: 0,
+            professorHistoria: 0,
+            professorCiencias: 0,
+            professorGeografia: 0
+        };
+
+        lista.forEach(item => {
+            item.cargos.forEach(cargo => {
+                contagem[cargo.chave] = (contagem[cargo.chave] || 0) + 1;
+            });
+        });
+
+        area.innerHTML = `
+            <div class="resumo-admin-card total">
+                <span>👥</span>
+                <div><strong>${lista.length}</strong><small>Alunos com acesso</small></div>
+            </div>
+            <div class="resumo-admin-card comuns-superior">
+                <span>📚</span>
+                <div><strong>${contagem.comunsSuperior}</strong><small>Comuns Superior</small></div>
+            </div>
+            <div class="resumo-admin-card historia">
+                <span>📜</span>
+                <div><strong>${contagem.professorHistoria}</strong><small>História</small></div>
+            </div>
+            <div class="resumo-admin-card ciencias">
+                <span>🔬</span>
+                <div><strong>${contagem.professorCiencias}</strong><small>Ciências</small></div>
+            </div>
+            <div class="resumo-admin-card geografia">
+                <span>🌍</span>
+                <div><strong>${contagem.professorGeografia}</strong><small>Geografia</small></div>
+            </div>
+        `;
+    }
+
+    function renderizarListaAcessos(){
+        const area = document.getElementById("listaAcessosLiberadosFarol");
+        const campoFiltro = document.getElementById("filtroListaAcessosFarol");
+
+        if(!area){
+            return;
+        }
+
+        const filtro = normalizarTexto(campoFiltro ? campoFiltro.value : "");
+        const listaFiltrada = acessosLiberadosCache.filter(item => {
+            if(!filtro){
+                return true;
+            }
+
+            const busca = normalizarTexto([
+                item.nome,
+                item.email,
+                ...item.cargos.map(cargo => cargo.nome)
+            ].join(" "));
+
+            return busca.includes(filtro);
+        });
+
+        const contador = document.getElementById("contadorFiltroAcessosFarol");
+        if(contador){
+            contador.textContent = filtro
+                ? `${listaFiltrada.length} de ${acessosLiberadosCache.length} aluno(s)`
+                : `${acessosLiberadosCache.length} aluno(s)`;
+        }
+
+        if(listaFiltrada.length === 0){
+            area.innerHTML = acessosLiberadosCache.length === 0
+                ? `
+                    <div class="admin-lista-vazia">
+                        <span>🔒</span>
+                        <h3>Nenhum acesso liberado</h3>
+                        <p>Quando você liberar um pacote ou cargo, o aluno aparecerá automaticamente nesta lista.</p>
+                        <button onclick="mostrarAbaAcessosFarol('editar')">➕ Liberar primeiro acesso</button>
+                    </div>
+                `
+                : `
+                    <div class="admin-lista-vazia">
+                        <span>🔎</span>
+                        <h3>Nenhum resultado encontrado</h3>
+                        <p>Tente pesquisar por outro nome, e-mail, pacote ou cargo.</p>
+                    </div>
+                `;
+            return;
+        }
+
+        area.innerHTML = listaFiltrada.map(item => {
+            const etiquetas = item.cargos.map(cargo => `
+                <span class="etiqueta-cargo-admin ${cargo.classe}">
+                    ${cargo.icone} ${textoSeguro(cargo.nome)}
+                </span>
+            `).join("");
+
+            return `
+                <article class="card-aluno-liberado-admin">
+                    <div class="dados-aluno-liberado-admin">
+                        <div class="avatar-aluno-admin">${textoSeguro((item.nome || "A").trim().charAt(0).toUpperCase() || "A")}</div>
+                        <div>
+                            <h3>${textoSeguro(item.nome || "Aluno")}</h3>
+                            <p>${textoSeguro(item.email || "E-mail não registrado")}</p>
+                            <small>Atualizado em: ${textoSeguro(formatarData(item.atualizadoEm))}</small>
+                        </div>
+                    </div>
+
+                    <div class="cargos-aluno-liberado-admin">
+                        ${etiquetas}
+                    </div>
+
+                    <div class="acoes-aluno-liberado-admin">
+                        <button onclick="editarAcessoAlunoFarol('${textoSeguro(item.uid)}')">✏️ Editar acesso</button>
+                        <button class="btn-excluir" onclick="revogarAcessosDaListaFarol('${textoSeguro(item.uid)}')">🔒 Retirar todos</button>
+                    </div>
+                </article>
+            `;
+        }).join("");
+    }
+
+    window.filtrarListaAcessosFarol = function(){
+        renderizarListaAcessos();
+    };
+
+    window.carregarListaAcessosFarol = async function(){
+        if(!exigirSessaoAdmin("Confirme novamente a senha do administrador para visualizar os acessos.")){
+            return;
+        }
+
+        if(!dbFarol){
+            aviso("O Firestore não foi carregado corretamente.");
+            return;
+        }
+
+        const area = document.getElementById("listaAcessosLiberadosFarol");
+        const botao = document.getElementById("btnAtualizarListaAcessosFarol");
+
+        if(area){
+            area.innerHTML = `
+                <div class="admin-carregando-lista">
+                    <span>⏳</span>
+                    <strong>Carregando alunos liberados...</strong>
+                </div>
+            `;
+        }
+        if(botao){
+            botao.disabled = true;
+            botao.textContent = "Atualizando...";
+        }
+
+        try{
+            const consultaAcessos = dbFarol
+                .collection("acessosConcursos")
+                .get();
+
+            const timeoutAcessos = new Promise((_, rejeitar) => {
+                setTimeout(() => {
+                    const erroTimeout = new Error(
+                        "A consulta ao Firestore demorou mais de 15 segundos."
+                    );
+                    erroTimeout.code = "farol/timeout";
+                    rejeitar(erroTimeout);
+                }, 15000);
+            });
+
+            const snapshot = await Promise.race([
+                consultaAcessos,
+                timeoutAcessos
+            ]);
+
+            const lista = [];
+
+            snapshot.forEach(doc => {
+                const dados = doc.data() || {};
+                const item = {
+                    uid: doc.id,
+                    nome: dados.nome || "",
+                    email: dados.email || "",
+                    concursos: dados.concursos || {},
+                    atualizadoEm: dados.atualizadoEm || dados.criadoEm || null,
+                    atualizadoPor: dados.atualizadoPor || ""
+                };
+
+                item.cargos = obterCargosLiberados(item);
+
+                if(item.cargos.length > 0){
+                    lista.push(item);
+                }
+            });
+
+            await Promise.all(lista.map(complementarDadosDoUsuario));
+
+            lista.sort((a, b) => {
+                const diferencaData = obterTempoOrdenacao(b.atualizadoEm) - obterTempoOrdenacao(a.atualizadoEm);
+                if(diferencaData !== 0){
+                    return diferencaData;
+                }
+                return String(a.nome || "").localeCompare(String(b.nome || ""), "pt-BR");
+            });
+
+            acessosLiberadosCache = lista;
+            renderizarResumoAcessos(lista);
+            renderizarListaAcessos();
+        }catch(erro){
+            console.error("Erro ao listar acessos liberados:", erro);
+            acessosLiberadosCache = [];
+            renderizarResumoAcessos([]);
+
+            if(area){
+                const permissaoNegada = erro && erro.code === "permission-denied";
+                area.innerHTML = `
+                    <div class="admin-erro-lista">
+                        <span>⚠️</span>
+                        <h3>Não foi possível carregar os alunos</h3>
+                        <p>${permissaoNegada
+                            ? "As regras do Firestore ainda não permitem que o administrador liste a coleção acessosConcursos."
+                            : (
+                                erro && erro.code === "farol/timeout"
+                                    ? "O Firestore não respondeu em 15 segundos. Verifique a internet e se o projeto Firebase está correto."
+                                    : "Verifique sua conexão e tente novamente."
+                            )}</p>
+                        <small class="codigo-erro-admin">
+                            Código: ${textoSeguro((erro && erro.code) || "erro-desconhecido")}
+                        </small>
+                        <button onclick="carregarListaAcessosFarol()">🔄 Tentar novamente</button>
+                    </div>
+                `;
+            }
+        }finally{
+            if(botao){
+                botao.disabled = false;
+                botao.textContent = "🔄 Atualizar lista";
+            }
+        }
+    };
+
+    async function localizarUsuarioPorEmail(emailBuscado){
+        let encontrado = null;
+
+        const consultaNormalizada = await dbFarol.collection("usuarios")
+            .where("emailNormalizado", "==", emailBuscado)
+            .limit(1)
+            .get();
+
+        if(!consultaNormalizada.empty){
+            const doc = consultaNormalizada.docs[0];
+            encontrado = { uid: doc.id, ...(doc.data() || {}) };
+        }
+
+        if(!encontrado){
+            const consultaEmail = await dbFarol.collection("usuarios")
+                .where("email", "==", emailBuscado)
+                .limit(1)
+                .get();
+
+            if(!consultaEmail.empty){
+                const doc = consultaEmail.docs[0];
+                encontrado = { uid: doc.id, ...(doc.data() || {}) };
+            }
+        }
+
+        return encontrado;
+    }
+
+    async function localizarUsuarioPorUid(uid){
+        const docUsuario = await dbFarol.collection("usuarios")
+            .doc(uid)
+            .get();
+
+        if(!docUsuario.exists){
+            return null;
+        }
+
+        return { uid: docUsuario.id, ...(docUsuario.data() || {}) };
+    }
+
+    function renderizarEditorUsuario(usuario, dadosAcesso){
+        const area = document.getElementById("resultadoBuscaAcessoFarol");
+        if(!area){
+            return;
+        }
+
+        const concursos = dadosAcesso && dadosAcesso.concursos
+            ? dadosAcesso.concursos
+            : {};
+        const abaetetuba = concursos.abaetetuba2026 || {};
+
+        usuarioSelecionado = {
+            uid: usuario.uid,
+            nome: usuario.nomeCompleto || usuario.nome || dadosAcesso.nome || "Aluno",
+            email: usuario.email || dadosAcesso.email || "",
+            concursos
+        };
+
+        const campoBusca = document.getElementById("emailBuscaAcessoFarol");
+        if(campoBusca){
+            campoBusca.value = usuarioSelecionado.email;
+        }
+
+        const itensPacotes = PACOTES_ABAETETUBA.map(pacote => `
+            <label class="item-cargo-acesso item-pacote-acesso">
+                <input
+                    type="checkbox"
+                    id="${pacote.checkbox}"
+                    ${cargoEstaLiberado(abaetetuba[pacote.chave]) ? "checked" : ""}>
+                <span>
+                    <strong>${pacote.icone} ${textoSeguro(pacote.nome)}</strong>
+                    <small>Marque para vender somente Português e Informática, sem cargo específico.</small>
+                </span>
+            </label>
+        `).join("");
+
+        const itensCargos = CARGOS_ABAETETUBA.map(cargo => `
+            <label class="item-cargo-acesso">
+                <input
+                    type="checkbox"
+                    id="${cargo.checkbox}"
+                    ${cargoEstaLiberado(abaetetuba[cargo.chave]) ? "checked" : ""}>
+                <span>
+                    <strong>${cargo.icone} ${textoSeguro(cargo.nome)}</strong>
+                    <small>O cargo inclui automaticamente o pacote comum do nível superior.</small>
+                </span>
+            </label>
+        `).join("");
+
+        area.innerHTML = `
+            <div class="aluno-acesso-cabecalho">
+                <h3>${textoSeguro(usuarioSelecionado.nome)}</h3>
+                <p>${textoSeguro(usuarioSelecionado.email || "E-mail não registrado")}</p>
+            </div>
+
+            <h3>🏛️ Abaetetuba 2026 — pacotes e cargos</h3>
+
+            <div class="nota-seguranca-acesso">
+                Qualquer cargo de nível superior libera Português e Informática automaticamente.
+                Marque o pacote comum somente quando ele for vendido separadamente.
+            </div>
+
+            <h4 class="titulo-grupo-acesso-admin">📚 Pacote de disciplinas comuns</h4>
+            <div class="lista-cargos-acesso lista-pacotes-acesso">
+                ${itensPacotes}
+            </div>
+
+            <h4 class="titulo-grupo-acesso-admin">🎯 Conhecimentos específicos por cargo</h4>
+            <div class="lista-cargos-acesso">
+                ${itensCargos}
+            </div>
+
+            <div class="acoes-admin-acesso">
+                <button onclick="salvarAcessosUsuarioFarol()">💾 Salvar acessos</button>
+                <button class="btn-excluir" onclick="limparAcessosUsuarioFarol()">🔒 Retirar todos</button>
+            </div>
+        `;
+    }
+
+    window.buscarUsuarioAcessoFarol = async function(){
+        if(!exigirSessaoAdmin("Confirme novamente a senha do administrador para usar esta área.")){
+            return;
+        }
+
+        if(!dbFarol){
+            aviso("O Firestore não foi carregado corretamente.");
+            return;
+        }
+
+        const campo = document.getElementById("emailBuscaAcessoFarol");
+        const area = document.getElementById("resultadoBuscaAcessoFarol");
+        const emailBuscado = String(campo ? campo.value : "").trim().toLowerCase();
+
+        if(!area){
+            return;
+        }
+        if(!emailBuscado){
+            area.innerHTML = "Digite o e-mail cadastrado do aluno.";
+            return;
+        }
+
+        area.innerHTML = "🔎 Buscando conta...";
+
+        try{
+            const usuario = await localizarUsuarioPorEmail(emailBuscado);
+
+            if(!usuario){
+                usuarioSelecionado = null;
+                area.innerHTML = `❌ Nenhuma conta encontrada para <strong>${textoSeguro(emailBuscado)}</strong>.`;
+                return;
+            }
+
+            const docAcesso = await dbFarol.collection("acessosConcursos")
+                .doc(usuario.uid)
+                .get();
+
+            const dadosAcesso = docAcesso.exists ? (docAcesso.data() || {}) : {};
+            renderizarEditorUsuario(usuario, dadosAcesso);
+        }catch(erro){
+            console.error("Erro ao buscar usuário para liberação:", erro);
+            area.innerHTML = "❌ Não foi possível consultar as contas. Verifique as regras do Firestore.";
+        }
+    };
+
+    window.editarAcessoAlunoFarol = async function(uid){
+        if(!exigirSessaoAdmin("Confirme novamente a senha do administrador para editar este acesso.")){
+            return;
+        }
+
+        const itemCache = acessosLiberadosCache.find(item => item.uid === uid) || null;
+        window.mostrarAbaAcessosFarol("editar");
+
+        const area = document.getElementById("resultadoBuscaAcessoFarol");
+        if(area){
+            area.innerHTML = "⏳ Carregando dados do aluno...";
+        }
+
+        try{
+            const [usuario, docAcesso] = await Promise.all([
+                localizarUsuarioPorUid(uid),
+                dbFarol.collection("acessosConcursos").doc(uid).get()
+            ]);
+
+            const dadosAcesso = docAcesso.exists ? (docAcesso.data() || {}) : (itemCache || {});
+            const usuarioFinal = usuario || {
+                uid,
+                nomeCompleto: dadosAcesso.nome || (itemCache && itemCache.nome) || "Aluno",
+                email: dadosAcesso.email || (itemCache && itemCache.email) || ""
+            };
+
+            renderizarEditorUsuario(usuarioFinal, dadosAcesso);
+        }catch(erro){
+            console.error("Erro ao abrir edição do acesso:", erro);
+            if(area){
+                area.innerHTML = "❌ Não foi possível carregar os dados deste aluno.";
+            }
+        }
+    };
+
+    function checkboxMarcado(id){
+        const campo = document.getElementById(id);
+        return !!(campo && campo.checked);
+    }
+
+    window.salvarAcessosUsuarioFarol = async function(){
+        if(!exigirSessaoAdmin("Confirme novamente a senha do administrador para salvar acessos.")){
+            return;
+        }
+        if(!usuarioSelecionado){
+            aviso("Busque uma conta antes de salvar.");
+            return;
+        }
+
+        const concursosExistentes = usuarioSelecionado.concursos || {};
+        const momentoAtual = firebase.firestore.FieldValue.serverTimestamp();
+        const abaetetubaAnterior = obterAbaetetuba({ concursos: concursosExistentes });
+        const abaetetuba = { ...abaetetubaAnterior };
+
+        ACESSOS_ABAETETUBA.forEach(item => {
+            const liberado = checkboxMarcado(item.checkbox);
+            const anterior = abaetetubaAnterior[item.chave];
+            const jaEstavaLiberado = cargoEstaLiberado(anterior);
+
+            abaetetuba[item.chave] = {
+                liberado,
+                liberadoEm: liberado && !jaEstavaLiberado
+                    ? momentoAtual
+                    : (anterior && anterior.liberadoEm ? anterior.liberadoEm : null)
+            };
+        });
+
+        try{
+            await dbFarol.collection("acessosConcursos")
+                .doc(usuarioSelecionado.uid)
+                .set({
+                    uid: usuarioSelecionado.uid,
+                    nome: usuarioSelecionado.nome,
+                    email: usuarioSelecionado.email,
+                    emailNormalizado: String(usuarioSelecionado.email || "").trim().toLowerCase(),
+                    concursos: {
+                        ...concursosExistentes,
+                        abaetetuba2026: abaetetuba
+                    },
+                    atualizadoPor: emailAtual(),
+                    atualizadoEm: momentoAtual
+                }, { merge: true });
+
+            usuarioSelecionado.concursos = {
+                ...concursosExistentes,
+                abaetetuba2026: abaetetuba
+            };
+
+            if(
+                authFarol.currentUser &&
+                authFarol.currentUser.uid === usuarioSelecionado.uid &&
+                typeof window.carregarAcessosConcursosFarol === "function"
+            ){
+                await window.carregarAcessosConcursosFarol();
+            }
+
+            aviso("Acessos salvos com sucesso.");
+            await window.carregarListaAcessosFarol();
+            window.mostrarAbaAcessosFarol("liberados");
+        }catch(erro){
+            console.error("Erro ao salvar acessos:", erro);
+            aviso("Não foi possível salvar. Verifique as regras do Firestore.");
+        }
+    };
+
+    async function retirarTodosAcessosDoUid(uid, nome, email, concursosExistentes){
+        const concursos = concursosExistentes || {};
+        const abaetetubaAnterior = obterAbaetetuba({ concursos });
+        const abaetetuba = { ...abaetetubaAnterior };
+
+        ACESSOS_ABAETETUBA.forEach(item => {
+            abaetetuba[item.chave] = { liberado: false, liberadoEm: null };
+        });
+
+        await dbFarol.collection("acessosConcursos")
+            .doc(uid)
+            .set({
+                uid,
+                nome: nome || "Aluno",
+                email: email || "",
+                emailNormalizado: String(email || "").trim().toLowerCase(),
+                concursos: {
+                    ...concursos,
+                    abaetetuba2026: abaetetuba
+                },
+                atualizadoPor: emailAtual(),
+                atualizadoEm: firebase.firestore.FieldValue.serverTimestamp()
+            }, { merge: true });
+    }
+
+    window.limparAcessosUsuarioFarol = async function(){
+        if(!exigirSessaoAdmin("Confirme novamente a senha do administrador para retirar acessos.")){
+            return;
+        }
+        if(!usuarioSelecionado){
+            aviso("Busque uma conta antes de retirar acessos.");
+            return;
+        }
+        if(!confirm("Deseja retirar todos os pacotes e cargos de Abaetetuba desta conta?")){
+            return;
+        }
+
+        try{
+            await retirarTodosAcessosDoUid(
+                usuarioSelecionado.uid,
+                usuarioSelecionado.nome,
+                usuarioSelecionado.email,
+                usuarioSelecionado.concursos
+            );
+
+            aviso("Todos os acessos desta conta foram retirados.");
+            limparResultadoEdicao();
+            await window.carregarListaAcessosFarol();
+            window.mostrarAbaAcessosFarol("liberados");
+        }catch(erro){
+            console.error("Erro ao retirar acessos:", erro);
+            aviso("Não foi possível retirar os acessos. Verifique as regras do Firestore.");
+        }
+    };
+
+    window.revogarAcessosDaListaFarol = async function(uid){
+        if(!exigirSessaoAdmin("Confirme novamente a senha do administrador para retirar acessos.")){
+            return;
+        }
+
+        const item = acessosLiberadosCache.find(registro => registro.uid === uid);
+        if(!item){
+            aviso("Aluno não encontrado na lista atual.");
+            return;
+        }
+
+        const nome = item.nome || "este aluno";
+        if(!confirm(`Deseja retirar todos os pacotes e cargos de Abaetetuba de ${nome}?`)){
+            return;
+        }
+
+        try{
+            await retirarTodosAcessosDoUid(
+                item.uid,
+                item.nome,
+                item.email,
+                item.concursos
+            );
+
+            aviso("Acessos retirados com sucesso.");
+            await window.carregarListaAcessosFarol();
+        }catch(erro){
+            console.error("Erro ao retirar acessos pela lista:", erro);
+            aviso("Não foi possível retirar os acessos. Verifique as regras do Firestore.");
+        }
+    };
+
+    if(authFarol && typeof authFarol.onAuthStateChanged === "function"){
+        authFarol.onAuthStateChanged(() => {
+            limparConfirmacao();
+            const botao = document.getElementById("btnPainelAcessosAdmin");
+            if(botao){
+                botao.style.display = "inline-block";
+            }
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const botao = document.getElementById("btnPainelAcessosAdmin");
+        if(botao){
+            botao.style.display = "inline-block";
+        }
+    });
+})();
+
+/* ==========================================================
+   FAROL DO SABER — PAINEL ALUNOS ON-LINE V1
+========================================================== */
+(function(){
+    "use strict";
+
+    const COLECAO_PRESENCA_ADMIN = "presencaAlunos";
+    const LIMITE_ONLINE_ADMIN_MS = 90 * 1000;
+    const LIMITE_RECENTE_ADMIN_MS = 24 * 60 * 60 * 1000;
+
+    let alunosPresencaCacheFarol = [];
+    let cancelarEscutaPresencaFarol = null;
+    let relogioOnlineFarol = null;
+
+    function dbPresencaAdminFarol(){
+        return (
+            window.farolFirebase &&
+            window.farolFirebase.db
+        ) || window.dbAdminFarol || null;
+    }
+
+    function tempoDesdeFarol(valor){
+        const tempo = Number(valor) || 0;
+        if(!tempo){
+            return "não registrado";
+        }
+
+        const diferenca = Math.max(0, Date.now() - tempo);
+        const segundos = Math.floor(diferenca / 1000);
+
+        if(segundos < 20){
+            return "agora";
+        }
+        if(segundos < 60){
+            return `há ${segundos} segundos`;
+        }
+
+        const minutos = Math.floor(segundos / 60);
+        if(minutos < 60){
+            return `há ${minutos} minuto${minutos === 1 ? "" : "s"}`;
+        }
+
+        const horas = Math.floor(minutos / 60);
+        if(horas < 24){
+            return `há ${horas} hora${horas === 1 ? "" : "s"}`;
+        }
+
+        const dias = Math.floor(horas / 24);
+        return `há ${dias} dia${dias === 1 ? "" : "s"}`;
+    }
+
+    function duracaoFarol(inicio){
+        const valor = Number(inicio) || 0;
+        if(!valor){
+            return "tempo não registrado";
+        }
+
+        const minutos = Math.max(
+            0,
+            Math.floor((Date.now() - valor) / 60000)
+        );
+
+        if(minutos < 1){
+            return "menos de 1 minuto";
+        }
+        if(minutos < 60){
+            return `${minutos} minuto${minutos === 1 ? "" : "s"}`;
+        }
+
+        const horas = Math.floor(minutos / 60);
+        const resto = minutos % 60;
+
+        return resto
+            ? `${horas}h ${resto}min`
+            : `${horas} hora${horas === 1 ? "" : "s"}`;
+    }
+
+    function estaOnlineFarol(item){
+        return (
+            item &&
+            item.online === true &&
+            Date.now() - (Number(item.ultimaAtividade) || 0)
+                <= LIMITE_ONLINE_ADMIN_MS
+        );
+    }
+
+    function textoVisualizandoFarol(item){
+        const partes = [];
+
+        if(item.disciplina){
+            partes.push(item.disciplina);
+        }
+        if(item.assunto){
+            partes.push(item.assunto);
+        }
+        if(item.tipoTela){
+            partes.push(item.tipoTela);
+        }else if(item.telaNome){
+            partes.push(item.telaNome);
+        }
+
+        return partes.length
+            ? partes.join(" → ")
+            : (item.telaNome || "Navegação no Farol");
+    }
+
+    function renderizarResumoOnlineFarol(lista){
+        const area = document.getElementById("resumoAlunosOnlineFarol");
+        const contadorAba = document.getElementById("contadorOnlineAbaFarol");
+
+        const agora = Date.now();
+        const online = lista.filter(estaOnlineFarol).length;
+        const ativosHoje = lista.filter(item =>
+            agora - (Number(item.ultimaAtividade) || 0)
+                <= LIMITE_RECENTE_ADMIN_MS
+        ).length;
+
+        if(contadorAba){
+            contadorAba.textContent = String(online);
+        }
+
+        if(area){
+            area.innerHTML = `
+                <div class="resumo-online-card online">
+                    <strong>${online}</strong>
+                    <span>on-line agora</span>
+                </div>
+                <div class="resumo-online-card hoje">
+                    <strong>${ativosHoje}</strong>
+                    <span>ativos nas últimas 24h</span>
+                </div>
+                <div class="resumo-online-card total">
+                    <strong>${lista.length}</strong>
+                    <span>presenças registradas</span>
+                </div>
+            `;
+        }
+    }
+
+    function renderizarAlunosOnlineFarol(){
+        const area = document.getElementById("listaAlunosOnlineFarol");
+        if(!area){
+            return;
+        }
+
+        const filtro = String(
+            document.getElementById("filtroAlunosOnlineFarol")?.value || ""
+        )
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .trim();
+
+        const situacao =
+            document.getElementById("situacaoAlunosOnlineFarol")?.value ||
+            "online";
+
+        const agora = Date.now();
+
+        const lista = alunosPresencaCacheFarol
+            .filter(item => {
+                const atividade =
+                    Number(item.ultimaAtividade) || 0;
+
+                if(situacao === "online"){
+                    return estaOnlineFarol(item);
+                }
+
+                return agora - atividade <= LIMITE_RECENTE_ADMIN_MS;
+            })
+            .filter(item => {
+                if(!filtro){
+                    return true;
+                }
+
+                const busca = [
+                    item.nome,
+                    item.email,
+                    item.concurso,
+                    item.cargo,
+                    item.disciplina,
+                    item.assunto,
+                    item.tipoTela,
+                    item.dispositivo
+                ]
+                    .join(" ")
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "")
+                    .toLowerCase();
+
+                return busca.includes(filtro);
+            })
+            .sort((a, b) => {
+                const onlineA = estaOnlineFarol(a) ? 1 : 0;
+                const onlineB = estaOnlineFarol(b) ? 1 : 0;
+
+                if(onlineA !== onlineB){
+                    return onlineB - onlineA;
+                }
+
+                return (
+                    Number(b.ultimaAtividade) || 0
+                ) - (
+                    Number(a.ultimaAtividade) || 0
+                );
+            });
+
+        renderizarResumoOnlineFarol(alunosPresencaCacheFarol);
+
+        if(lista.length === 0){
+            area.innerHTML = `
+                <div class="admin-lista-vazia">
+                    <span>🛰️</span>
+                    <h3>Nenhum aluno encontrado</h3>
+                    <p>
+                        Não há alunos on-line com os filtros escolhidos.
+                    </p>
+                </div>
+            `;
+            return;
+        }
+
+        area.innerHTML = lista.map(item => {
+            const online = estaOnlineFarol(item);
+            const nome = window.textoSeguroAdminFarol(item.nome || "Aluno");
+            const email = window.textoSeguroAdminFarol(item.email || "E-mail não informado");
+            const visualizando = window.textoSeguroAdminFarol(textoVisualizandoFarol(item));
+            const concurso = window.textoSeguroAdminFarol(item.concurso || "Não selecionado");
+            const cargo = window.textoSeguroAdminFarol(item.cargo || "Não selecionado");
+            const dispositivo = window.textoSeguroAdminFarol(item.dispositivo || "Não identificado");
+
+            return `
+                <article class="card-aluno-online-admin ${online ? "online" : "offline"}">
+                    <div class="linha-principal-online-admin">
+                        <div class="status-online-admin ${online ? "ativo" : "inativo"}"></div>
+
+                        <div class="identificacao-online-admin">
+                            <h3>
+                                ${online ? "🟢" : "⚪"} ${nome}
+                            </h3>
+                            <p>${email}</p>
+                        </div>
+
+                        <span class="selo-situacao-online ${online ? "ativo" : "inativo"}">
+                            ${online ? "ON-LINE" : "VISTO RECENTEMENTE"}
+                        </span>
+                    </div>
+
+                    <div class="acoes-card-online-admin">
+                        <button
+                            type="button"
+                            onclick="abrirHistoricoAlunoFarol(
+                                '${item.uid}',
+                                '${String(item.nome || "Aluno").replaceAll("'", "\'")}',
+                                '${String(item.email || "").replaceAll("'", "\'")}'
+                            )">
+                            📚 Ver histórico
+                        </button>
+                    </div>
+
+                    <div class="grade-detalhes-online-admin">
+                        <div>
+                            <span>Concurso</span>
+                            <strong>${concurso}</strong>
+                        </div>
+                        <div>
+                            <span>Cargo/Rota</span>
+                            <strong>${cargo}</strong>
+                        </div>
+                        <div class="detalhe-visualizando-online">
+                            <span>Visualizando</span>
+                            <strong>${visualizando}</strong>
+                        </div>
+                        <div>
+                            <span>Nesta página</span>
+                            <strong>${duracaoFarol(item.paginaDesde)}</strong>
+                        </div>
+                        <div>
+                            <span>Na plataforma</span>
+                            <strong>${duracaoFarol(item.entrouEm)}</strong>
+                        </div>
+                        <div>
+                            <span>Última atividade</span>
+                            <strong>${tempoDesdeFarol(item.ultimaAtividade)}</strong>
+                        </div>
+                        <div>
+                            <span>Dispositivo</span>
+                            <strong>${dispositivo}</strong>
+                        </div>
+                    </div>
+                </article>
+            `;
+        }).join("");
+    }
+
+    window.filtrarAlunosOnlineFarol =
+        renderizarAlunosOnlineFarol;
+
+    window.carregarAlunosOnlineFarol = function(forcar){
+        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()){
+            return;
+        }
+
+        const banco = dbPresencaAdminFarol();
+        const area = document.getElementById("listaAlunosOnlineFarol");
+
+        if(!banco){
+            if(area){
+                area.innerHTML = `
+                    <div class="admin-lista-vazia">
+                        <span>⚠️</span>
+                        <h3>Firebase indisponível</h3>
+                        <p>Não foi possível acessar os registros de presença.</p>
+                    </div>
+                `;
+            }
+            return;
+        }
+
+        if(cancelarEscutaPresencaFarol && !forcar){
+            renderizarAlunosOnlineFarol();
+            return;
+        }
+
+        if(cancelarEscutaPresencaFarol){
+            cancelarEscutaPresencaFarol();
+            cancelarEscutaPresencaFarol = null;
+        }
+
+        cancelarEscutaPresencaFarol = banco
+            .collection(COLECAO_PRESENCA_ADMIN)
+            .onSnapshot(snapshot => {
+                alunosPresencaCacheFarol = [];
+
+                snapshot.forEach(doc => {
+                    alunosPresencaCacheFarol.push({
+                        uid: doc.id,
+                        ...(doc.data() || {})
+                    });
+                });
+
+                renderizarAlunosOnlineFarol();
+            }, erro => {
+                console.error("Falha ao acompanhar alunos on-line:", erro);
+
+                if(area){
+                    area.innerHTML = `
+                        <div class="admin-lista-vazia">
+                            <span>🔐</span>
+                            <h3>Sem permissão para ler a presença</h3>
+                            <p>
+                                Publique as regras do Firestore incluídas no pacote.
+                            </p>
+                        </div>
+                    `;
+                }
+            });
+
+        if(relogioOnlineFarol){
+            clearInterval(relogioOnlineFarol);
+        }
+
+        relogioOnlineFarol = setInterval(
+            renderizarAlunosOnlineFarol,
+            15000
+        );
+    };
+
+    const mostrarAbaAntesOnlineFarol =
+        window.mostrarAbaAcessosFarol;
+
+    window.mostrarAbaAcessosFarol = function(aba){
+        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()){
+            return;
+        }
+
+        const abaFinal =
+            aba === "editar"
+                ? "editar"
+                : (
+                    aba === "online"
+                        ? "online"
+                        : "liberados"
+                );
+
+        const painelLiberados =
+            document.getElementById("abaAcessosLiberadosFarol");
+
+        const painelEditar =
+            document.getElementById("abaEditarAcessoFarol");
+
+        const painelOnline =
+            document.getElementById("abaAlunosOnlineFarol");
+
+        const botaoLiberados =
+            document.getElementById("btnAbaLiberadosFarol");
+
+        const botaoEditar =
+            document.getElementById("btnAbaEditarFarol");
+
+        const botaoOnline =
+            document.getElementById("btnAbaOnlineFarol");
+
+        if(painelLiberados){
+            painelLiberados.style.display =
+                abaFinal === "liberados" ? "block" : "none";
+        }
+
+        if(painelEditar){
+            painelEditar.style.display =
+                abaFinal === "editar" ? "block" : "none";
+        }
+
+        if(painelOnline){
+            painelOnline.style.display =
+                abaFinal === "online" ? "block" : "none";
+        }
+
+        if(botaoLiberados){
+            botaoLiberados.classList.toggle(
+                "ativa",
+                abaFinal === "liberados"
+            );
+        }
+
+        if(botaoEditar){
+            botaoEditar.classList.toggle(
+                "ativa",
+                abaFinal === "editar"
+            );
+        }
+
+        if(botaoOnline){
+            botaoOnline.classList.toggle(
+                "ativa",
+                abaFinal === "online"
+            );
+        }
+
+        if(abaFinal === "online"){
+            window.carregarAlunosOnlineFarol(false);
+        }else if(
+            typeof mostrarAbaAntesOnlineFarol === "function"
+        ){
+            mostrarAbaAntesOnlineFarol(abaFinal);
+        }
+    };
+})();
+
+/* ==========================================================
+   FAROL DO SABER — HISTÓRICO DE ATIVIDADES V1
+========================================================== */
+(function(){
+    "use strict";
+
+    const COLECAO_HISTORICO_ADMIN = "historicoAtividades";
+    let historicoAlunoAtualFarol = [];
+
+    function dbHistoricoAdminFarol(){
+        return (
+            window.farolFirebase &&
+            window.farolFirebase.db
+        ) || window.dbAdminFarol || null;
+    }
+
+    function textoSeguroHistoricoFarol(valor){
+        if(typeof window.textoSeguroAdminFarol === "function"){
+            return window.textoSeguroAdminFarol(valor);
+        }
+
+        return String(valor || "")
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("'", "&#039;");
+    }
+
+    function formatarDataHistoricoFarol(valor){
+        const data = new Date(Number(valor) || 0);
+
+        if(Number.isNaN(data.getTime())){
+            return "Horário não registrado";
+        }
+
+        return data.toLocaleString("pt-BR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        });
+    }
+
+    function descricaoEventoHistoricoFarol(item){
+        const partes = [];
+
+        if(item.disciplina){
+            partes.push(item.disciplina);
+        }
+
+        if(item.assunto){
+            partes.push(item.assunto);
+        }
+
+        if(item.tipoTela){
+            partes.push(item.tipoTela);
+        }else if(item.telaNome){
+            partes.push(item.telaNome);
+        }
+
+        return partes.length
+            ? partes.join(" → ")
+            : "Navegação no Farol";
+    }
+
+    function renderizarHistoricoAlunoFarol(lista, nome, email){
+        const painel = document.getElementById("painelHistoricoAlunoFarol");
+        const titulo = document.getElementById("tituloHistoricoAlunoFarol");
+        const subtitulo = document.getElementById("subtituloHistoricoAlunoFarol");
+        const area = document.getElementById("listaHistoricoAlunoFarol");
+
+        if(!painel || !area){
+            return;
+        }
+
+        painel.style.display = "block";
+
+        if(titulo){
+            titulo.textContent = `📚 Histórico de ${nome || "Aluno"}`;
+        }
+
+        if(subtitulo){
+            subtitulo.textContent = email || "";
+        }
+
+        if(lista.length === 0){
+            area.innerHTML = `
+                <div class="admin-lista-vazia">
+                    <span>🕘</span>
+                    <h3>Nenhuma atividade registrada</h3>
+                    <p>
+                        O histórico começará a aparecer quando o aluno navegar
+                        usando a nova versão do Farol.
+                    </p>
+                </div>
+            `;
+            return;
+        }
+
+        area.innerHTML = lista.map(item => {
+            const evento = textoSeguroHistoricoFarol(
+                descricaoEventoHistoricoFarol(item)
+            );
+
+            const concurso = textoSeguroHistoricoFarol(
+                item.concurso || "Não selecionado"
+            );
+
+            const cargo = textoSeguroHistoricoFarol(
+                item.cargo || "Não selecionado"
+            );
+
+            const dispositivo = textoSeguroHistoricoFarol(
+                item.dispositivo || "Não identificado"
+            );
+
+            return `
+                <article class="item-historico-admin">
+                    <div class="linha-tempo-historico-admin">
+                        <span class="ponto-historico-admin"></span>
+                        <span class="linha-historico-admin"></span>
+                    </div>
+
+                    <div class="conteudo-historico-admin">
+                        <div class="cabecalho-item-historico">
+                            <strong>${evento}</strong>
+                            <time>${formatarDataHistoricoFarol(item.criadoEm)}</time>
+                        </div>
+
+                        <div class="detalhes-item-historico">
+                            <span>🏛️ ${concurso}</span>
+                            <span>🎯 ${cargo}</span>
+                            <span>💻 ${dispositivo}</span>
+                        </div>
+                    </div>
+                </article>
+            `;
+        }).join("");
+    }
+
+    window.abrirHistoricoAlunoFarol = async function(uid, nome, email){
+        if(
+            !window.sessaoAdminFarolConfirmada ||
+            !window.sessaoAdminFarolConfirmada()
+        ){
+            return;
+        }
+
+        const banco = dbHistoricoAdminFarol();
+        const area = document.getElementById("listaHistoricoAlunoFarol");
+        const painel = document.getElementById("painelHistoricoAlunoFarol");
+
+        if(!banco || !area || !painel){
+            return;
+        }
+
+        painel.style.display = "block";
+        area.innerHTML = `
+            <div class="admin-lista-vazia">
+                <span>⏳</span>
+                <h3>Carregando histórico...</h3>
+            </div>
+        `;
+
+        painel.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+        try{
+            const snapshot = await banco
+                .collection(COLECAO_HISTORICO_ADMIN)
+                .where("uid", "==", uid)
+                .limit(200)
+                .get();
+
+            historicoAlunoAtualFarol = [];
+
+            snapshot.forEach(doc => {
+                historicoAlunoAtualFarol.push({
+                    id: doc.id,
+                    ...(doc.data() || {})
+                });
+            });
+
+            historicoAlunoAtualFarol.sort(
+                (a, b) =>
+                    (Number(b.criadoEm) || 0) -
+                    (Number(a.criadoEm) || 0)
+            );
+
+            renderizarHistoricoAlunoFarol(
+                historicoAlunoAtualFarol,
+                nome,
+                email
+            );
+        }catch(erro){
+            console.error("Erro ao carregar histórico:", erro);
+
+            area.innerHTML = `
+                <div class="admin-lista-vazia">
+                    <span>⚠️</span>
+                    <h3>Não foi possível carregar o histórico</h3>
+                    <p>
+                        Código: ${textoSeguroHistoricoFarol(
+                            (erro && erro.code) || "erro-desconhecido"
+                        )}
+                    </p>
+                </div>
+            `;
+        }
+    };
+
+    window.fecharHistoricoAlunoFarol = function(){
+        const painel = document.getElementById("painelHistoricoAlunoFarol");
+
+        if(painel){
+            painel.style.display = "none";
+        }
+    };
+})();

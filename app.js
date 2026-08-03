@@ -26,6 +26,10 @@ if(typeof atualizarAtividade === "function"){
 
     telaDestino.classList.add("ativa");
 
+    if(typeof window.registrarPresencaFarol === "function"){
+        setTimeout(() => window.registrarPresencaFarol(id, true), 0);
+    }
+
     if(id !== "jogosFarol" && typeof pararTimerRelampago === "function"){
         pararTimerRelampago();
     }
@@ -821,6 +825,26 @@ const bancoQuestoes = {
 
     cienciaHistoricaOficioHistoriador,
 
+    fontesLinguagensHistoriaAbaetetuba,
+
+    historiografiaIdentidadesBrasilAbaetetuba,
+
+    historiaRegionalLocalAmazoniaParaAbaetetuba,
+
+    historiaAmericaIdentidadesAbaetetuba,
+
+    lutasSociaisIdentidadesAbaetetuba,
+
+    legadosAntiguidadeClassicaAbaetetuba,
+
+    conviviosConfrontosEuropaMedievalAbaetetuba,
+
+    historiaAfricaRelacoesEuropaAmericaAbaetetuba,
+
+    capitalismoLutasCidadaniaCulturaAbaetetuba,
+
+    constituicaoGestaoLegislacaoEducacionalAbaetetuba,
+
     povosPreColombianos,
 
     formacaoSocialCulturalBrasileira,
@@ -1513,7 +1537,7 @@ const disciplinasTrilhaFarol = {
     portugues: {
         nome: "Português",
         icone: "📖",
-        descricao: "Gramática, interpretação e produção textual."
+        descricao: "Conteúdo de Língua Portuguesa da rota de Barcarena."
     },
     informatica: {
         nome: "Informática",
@@ -1539,6 +1563,11 @@ const disciplinasTrilhaFarol = {
         nome: "História",
         icone: "📜",
         descricao: "Conhecimento específico de Professor de História."
+    },
+    historiaAbaetetuba: {
+        nome: "Conhecimentos Específicos — História",
+        icone: "🧭",
+        descricao: "Eixos de História, Didática e legislação organizados conforme o edital da IVIN."
     },
     ciencias: {
         nome: "Professor de Ciências",
@@ -1974,6 +2003,10 @@ if (nome === "etica") {
 
 if (nome === "informatica") {
 
+    if(typeof configurarInformaticaPorRotaV47 === "function"){
+        configurarInformaticaPorRotaV47();
+    }
+
     mostrarTela("informatica");
 
     return;
@@ -1983,6 +2016,14 @@ if (nome === "informatica") {
 if (nome === "historia") {
 
     mostrarTela("historia");
+
+    return;
+
+}
+
+if (nome === "historiaAbaetetuba") {
+
+    mostrarTela("historiaAbaetetuba");
 
     return;
 
@@ -2675,6 +2716,46 @@ const mapasMentaisPorAssunto = {
     "mundoContemporaneoEraGlobalizacao": {
         "titulo": "🌍 Mundo Contemporâneo e Globalização",
         "imagem": "imagens/mapas/mundoContemporaneoEraGlobalizacao.png"
+    },
+    "fontesLinguagensHistoriaAbaetetuba": {
+        "titulo": "🗂️ Fontes, Documentos e Diferentes Linguagens no Ensino de História",
+        "imagem": "imagens/mapas/abaetetuba/FontesLinguagensHistoriaAbaetetuba.png"
+    },
+    "historiografiaIdentidadesBrasilAbaetetuba": {
+        "titulo": "🧭 Historiografia Brasileira, Nação e Identidades",
+        "imagem": "imagens/mapas/abaetetuba/HistoriografiaIdentidadesBrasilAbaetetuba.png"
+    },
+    "historiaRegionalLocalAmazoniaParaAbaetetuba": {
+        "titulo": "🌊 História Regional, Local, Amazônia e Pará",
+        "imagem": "imagens/mapas/abaetetuba/HistoriaRegionalLocalAmazoniaParaAbaetetuba.png"
+    },
+    "historiaAmericaIdentidadesAbaetetuba": {
+        "titulo": "🌎 História da América e suas Identidades",
+        "imagem": "imagens/mapas/abaetetuba/HistoriaAmericaIdentidadesAbaetetuba.png"
+    },
+    "lutasSociaisIdentidadesAbaetetuba": {
+        "titulo": "✊ Lutas Sociais e Construção de Identidades",
+        "imagem": "imagens/mapas/abaetetuba/LutasSociaisIdentidadesAbaetetuba.png"
+    },
+    "legadosAntiguidadeClassicaAbaetetuba": {
+        "titulo": "🏛️ Antiguidade Clássica e seus Legados Culturais",
+        "imagem": "imagens/mapas/abaetetuba/LegadosAntiguidadeClassicaAbaetetuba.png"
+    },
+    "conviviosConfrontosEuropaMedievalAbaetetuba": {
+        "titulo": "🏰 Europa Medieval: Convívios e Confrontos entre Povos e Culturas",
+        "imagem": "imagens/mapas/abaetetuba/ConviviosConfrontosEuropaMedievalAbaetetuba.png"
+    },
+    "historiaAfricaRelacoesEuropaAmericaAbaetetuba": {
+        "titulo": "🌍 História Africana e suas Relações com a Europa e a América",
+        "imagem": "imagens/mapas/abaetetuba/HistoriaAfricaRelacoesEuropaAmericaAbaetetuba.png"
+    },
+    "capitalismoLutasCidadaniaCulturaAbaetetuba": {
+        "titulo": "💰 Capitalismo, Lutas Sociais, Cidadania e Cultura",
+        "imagem": "imagens/mapas/abaetetuba/CapitalismoLutasCidadaniaCulturaAbaetetuba.png"
+    },
+    "constituicaoGestaoLegislacaoEducacionalAbaetetuba": {
+        "titulo": "⚖️ Didática, Currículo e Legislação Educacional",
+        "imagem": "imagens/mapas/abaetetuba/ConstituicaoGestaoLegislacaoEducacionalAbaetetuba.png"
     }
 };
 
@@ -3104,6 +3185,27 @@ alfabetizacaoCientifica:
     
 citologia:
 "🧬 Citologia",
+
+microbiologia:
+"🦠 Microbiologia",
+
+botanica:
+"🌿 Botânica",
+
+zoologia:
+"🐾 Zoologia",
+
+evolucao:
+"🧬 Evolução",
+
+genetica:
+"🧬 Genética",
+
+hereditariedade:
+"👨‍👩‍👧‍👦 Hereditariedade",
+
+biotecnologia:
+"🧪 Biotecnologia",
 
 ecologia:
 "🌿 Ecologia",
@@ -4517,8 +4619,18 @@ function obterBancoDisciplinaSimuladoFarol(disciplina){
             ...bnccCiencias,
             ...alfabetizacaoCientifica,
             ...citologia,
+            ...microbiologia,
+            ...botanica,
+            ...zoologia,
+            ...evolucao,
+            ...genetica,
+            ...hereditariedade,
+            ...biotecnologia,
             ...ecologia,
-            ...terraEUniverso
+            ...terraEUniverso,
+            ...anatomiaFisiologia,
+            ...materiaQuimica,
+            ...fundamentosFisica
         ],
         apoioEscolar: [
             ...apoioOrganizacaoEducacao,
@@ -4668,8 +4780,18 @@ function iniciarSimuladoCiencias(){
         ...bnccCiencias,
         ...alfabetizacaoCientifica,
         ...citologia,
+        ...microbiologia,
+        ...botanica,
+        ...zoologia,
+        ...evolucao,
+        ...genetica,
+        ...hereditariedade,
+        ...biotecnologia,
         ...ecologia,
-        ...terraEUniverso
+        ...terraEUniverso,
+        ...anatomiaFisiologia,
+        ...materiaQuimica,
+        ...fundamentosFisica
 
     ];
 
@@ -4790,17 +4912,23 @@ function iniciarSimuladoEtica(){
 
 function iniciarSimuladoInformatica(){
 
-    const informatica = [
-
-        ...hardware,
-        ...software,
-        ...arquivos,
-        ...office,
-        ...internet,
-        ...redes,
-        ...seguranca
-
-    ];
+    const informatica = ehRotaAbaetetubaV47()
+        ? [
+            ...hardware,
+            ...software,
+            ...arquivos,
+            ...office,
+            ...internet
+        ]
+        : [
+            ...hardware,
+            ...software,
+            ...arquivos,
+            ...office,
+            ...internet,
+            ...redes,
+            ...seguranca
+        ];
 
     iniciarSimuladoPersonalizado(
         informatica,
@@ -4884,6 +5012,46 @@ function abrirAssunto(assunto) {
         cienciaHistoricaOficioHistoriador: {
             teoria: typeof cienciaHistoricaOficioHistoriadorTeoria !== "undefined" ? cienciaHistoricaOficioHistoriadorTeoria : null,
             titulo: "🔎 Ciência Histórica e Ofício do Historiador"
+        },
+        fontesLinguagensHistoriaAbaetetuba: {
+            teoria: typeof fontesLinguagensHistoriaAbaetetubaTeoria !== "undefined" ? fontesLinguagensHistoriaAbaetetubaTeoria : null,
+            titulo: "🗂️ Fontes, Documentos e Diferentes Linguagens no Ensino de História"
+        },
+        historiografiaIdentidadesBrasilAbaetetuba: {
+            teoria: typeof historiografiaIdentidadesBrasilAbaetetubaTeoria !== "undefined" ? historiografiaIdentidadesBrasilAbaetetubaTeoria : null,
+            titulo: "🧭 Historiografia Brasileira, Nação e Identidades"
+        },
+        historiaRegionalLocalAmazoniaParaAbaetetuba: {
+            teoria: typeof historiaRegionalLocalAmazoniaParaAbaetetubaTeoria !== "undefined" ? historiaRegionalLocalAmazoniaParaAbaetetubaTeoria : null,
+            titulo: "🌊 História Regional, Local, Amazônia e Pará"
+        },
+        historiaAmericaIdentidadesAbaetetuba: {
+            teoria: typeof historiaAmericaIdentidadesAbaetetubaTeoria !== "undefined" ? historiaAmericaIdentidadesAbaetetubaTeoria : null,
+            titulo: "🌎 História da América e suas Identidades"
+        },
+        lutasSociaisIdentidadesAbaetetuba: {
+            teoria: typeof lutasSociaisIdentidadesAbaetetubaTeoria !== "undefined" ? lutasSociaisIdentidadesAbaetetubaTeoria : null,
+            titulo: "✊ Lutas Sociais e Construção de Identidades"
+        },
+        legadosAntiguidadeClassicaAbaetetuba: {
+            teoria: typeof legadosAntiguidadeClassicaAbaetetubaTeoria !== "undefined" ? legadosAntiguidadeClassicaAbaetetubaTeoria : null,
+            titulo: "🏛️ Antiguidade Clássica e seus Legados Culturais"
+        },
+        conviviosConfrontosEuropaMedievalAbaetetuba: {
+            teoria: typeof conviviosConfrontosEuropaMedievalAbaetetubaTeoria !== "undefined" ? conviviosConfrontosEuropaMedievalAbaetetubaTeoria : null,
+            titulo: "🏰 Europa Medieval: Convívios e Confrontos entre Povos e Culturas"
+        },
+        historiaAfricaRelacoesEuropaAmericaAbaetetuba: {
+            teoria: typeof historiaAfricaRelacoesEuropaAmericaAbaetetubaTeoria !== "undefined" ? historiaAfricaRelacoesEuropaAmericaAbaetetubaTeoria : null,
+            titulo: "🌍 História Africana e suas Relações com a Europa e a América"
+        },
+        capitalismoLutasCidadaniaCulturaAbaetetuba: {
+            teoria: typeof capitalismoLutasCidadaniaCulturaAbaetetubaTeoria !== "undefined" ? capitalismoLutasCidadaniaCulturaAbaetetubaTeoria : null,
+            titulo: "💰 Capitalismo, Lutas Sociais, Cidadania e Cultura"
+        },
+        constituicaoGestaoLegislacaoEducacionalAbaetetuba: {
+            teoria: typeof constituicaoGestaoLegislacaoEducacionalAbaetetubaTeoria !== "undefined" ? constituicaoGestaoLegislacaoEducacionalAbaetetubaTeoria : null,
+            titulo: "⚖️ Didática, Currículo e Legislação Educacional"
         },
         povosPreColombianos: {
             teoria: typeof povosPreColombianosTeoria !== "undefined" ? povosPreColombianosTeoria : null,
@@ -7168,6 +7336,11 @@ if(campoMedalhaEspecial){
 }
 
 const nivelLuzAtual = obterNivelLuzFarol(pontosLuz);
+
+if(typeof verificarPromocaoNivelFarol === "function"){
+    verificarPromocaoNivelFarol(nivelLuzAtual);
+}
+
 const cardNivelLuzAluno = document.getElementById("cardNivelLuzAluno");
 const campoNivelLuzAluno = document.getElementById("nivelLuzAluno");
 const campoFaltamNivelAluno = document.getElementById("faltamNivelAluno");
@@ -7233,6 +7406,46 @@ function abrirTeoriaDoAssunto(){
         cienciaHistoricaOficioHistoriador: {
             teoria: typeof cienciaHistoricaOficioHistoriadorTeoria !== "undefined" ? cienciaHistoricaOficioHistoriadorTeoria : null,
             titulo: "🔎 Ciência Histórica e Ofício do Historiador"
+        },
+        fontesLinguagensHistoriaAbaetetuba: {
+            teoria: typeof fontesLinguagensHistoriaAbaetetubaTeoria !== "undefined" ? fontesLinguagensHistoriaAbaetetubaTeoria : null,
+            titulo: "🗂️ Fontes, Documentos e Diferentes Linguagens no Ensino de História"
+        },
+        historiografiaIdentidadesBrasilAbaetetuba: {
+            teoria: typeof historiografiaIdentidadesBrasilAbaetetubaTeoria !== "undefined" ? historiografiaIdentidadesBrasilAbaetetubaTeoria : null,
+            titulo: "🧭 Historiografia Brasileira, Nação e Identidades"
+        },
+        historiaRegionalLocalAmazoniaParaAbaetetuba: {
+            teoria: typeof historiaRegionalLocalAmazoniaParaAbaetetubaTeoria !== "undefined" ? historiaRegionalLocalAmazoniaParaAbaetetubaTeoria : null,
+            titulo: "🌊 História Regional, Local, Amazônia e Pará"
+        },
+        historiaAmericaIdentidadesAbaetetuba: {
+            teoria: typeof historiaAmericaIdentidadesAbaetetubaTeoria !== "undefined" ? historiaAmericaIdentidadesAbaetetubaTeoria : null,
+            titulo: "🌎 História da América e suas Identidades"
+        },
+        lutasSociaisIdentidadesAbaetetuba: {
+            teoria: typeof lutasSociaisIdentidadesAbaetetubaTeoria !== "undefined" ? lutasSociaisIdentidadesAbaetetubaTeoria : null,
+            titulo: "✊ Lutas Sociais e Construção de Identidades"
+        },
+        legadosAntiguidadeClassicaAbaetetuba: {
+            teoria: typeof legadosAntiguidadeClassicaAbaetetubaTeoria !== "undefined" ? legadosAntiguidadeClassicaAbaetetubaTeoria : null,
+            titulo: "🏛️ Antiguidade Clássica e seus Legados Culturais"
+        },
+        conviviosConfrontosEuropaMedievalAbaetetuba: {
+            teoria: typeof conviviosConfrontosEuropaMedievalAbaetetubaTeoria !== "undefined" ? conviviosConfrontosEuropaMedievalAbaetetubaTeoria : null,
+            titulo: "🏰 Europa Medieval: Convívios e Confrontos entre Povos e Culturas"
+        },
+        historiaAfricaRelacoesEuropaAmericaAbaetetuba: {
+            teoria: typeof historiaAfricaRelacoesEuropaAmericaAbaetetubaTeoria !== "undefined" ? historiaAfricaRelacoesEuropaAmericaAbaetetubaTeoria : null,
+            titulo: "🌍 História Africana e suas Relações com a Europa e a América"
+        },
+        capitalismoLutasCidadaniaCulturaAbaetetuba: {
+            teoria: typeof capitalismoLutasCidadaniaCulturaAbaetetubaTeoria !== "undefined" ? capitalismoLutasCidadaniaCulturaAbaetetubaTeoria : null,
+            titulo: "💰 Capitalismo, Lutas Sociais, Cidadania e Cultura"
+        },
+        constituicaoGestaoLegislacaoEducacionalAbaetetuba: {
+            teoria: typeof constituicaoGestaoLegislacaoEducacionalAbaetetubaTeoria !== "undefined" ? constituicaoGestaoLegislacaoEducacionalAbaetetubaTeoria : null,
+            titulo: "⚖️ Didática, Currículo e Legislação Educacional"
         },
         povosPreColombianos: {
             teoria: typeof povosPreColombianosTeoria !== "undefined" ? povosPreColombianosTeoria : null,
@@ -7832,6 +8045,83 @@ if(assuntoAtual === "bncc"){
 
     }
 
+    if(assuntoAtual === "microbiologia"){
+
+        abrirTeoria(
+            microbiologiaTeoria,
+            "🦠 Microbiologia"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "botanica"){
+
+        abrirTeoria(
+            botanicaTeoria,
+            "🌿 Botânica"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "zoologia"){
+
+        abrirTeoria(
+            zoologiaTeoria,
+            "🐾 Zoologia"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "evolucao"){
+
+        abrirTeoria(
+            evolucaoTeoria,
+            "🧬 Evolução"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "genetica"){
+
+        abrirTeoria(
+            geneticaTeoria,
+            "🧬 Genética"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "hereditariedade"){
+
+        abrirTeoria(
+            hereditariedadeTeoria,
+            "👨‍👩‍👧‍👦 Hereditariedade"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "biotecnologia"){
+
+        abrirTeoria(
+            biotecnologiaTeoria,
+            "🧪 Biotecnologia"
+        );
+
+        return;
+
+    }
+
     if(assuntoAtual === "ecologia"){
 
         abrirTeoria(
@@ -8085,6 +8375,215 @@ if(assuntoAtual === "bncc"){
 
     }
 
+    if(assuntoAtual === "republicaLiberalDemocraticaDutraJoaoGoulart"){
+
+        abrirTeoria(
+            republicaLiberalDemocraticaDutraJoaoGoulartTeoria,
+            "🗳️ República Liberal Democrática Brasileira: de Eurico Dutra a João Goulart"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "golpe1964DitaduraCivilMilitarBrasileira"){
+
+        abrirTeoria(
+            golpe1964DitaduraCivilMilitarBrasileiraTeoria,
+            "🛡️ O Golpe de 1964 e a Ditadura Civil-Militar Brasileira"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "politicaMilitarAmazonia"){
+
+        abrirTeoria(
+            politicaMilitarAmazoniaTeoria,
+            "🌳 A Política Militar Voltada para a Amazônia"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "redemocratizacaoNovaRepublicaSarneyBolsonaro"){
+
+        abrirTeoria(
+            redemocratizacaoNovaRepublicaSarneyBolsonaroTeoria,
+            "🗳️ O Processo de Redemocratização e a Nova República Brasileira: de Sarney a Bolsonaro"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "novasRelacoesEconomicasBrasilGlobalizacaoMercosul"){
+
+        abrirTeoria(
+            novasRelacoesEconomicasBrasilGlobalizacaoMercosulTeoria,
+            "🌐 As Novas Relações Econômicas no Brasil: Globalização e Mercosul"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "populacoesTradicionaisBrasilOntemHoje"){
+
+        abrirTeoria(
+            populacoesTradicionaisBrasilOntemHojeTeoria,
+            "🌿 As Populações Tradicionais no Brasil de Ontem e de Hoje"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "civilizacoesAntiguidadeOrientalMesopotamiaChinaIndia"){
+
+        abrirTeoria(
+            civilizacoesAntiguidadeOrientalMesopotamiaChinaIndiaTeoria,
+            "🏺 As Civilizações da Antiguidade Oriental: Mesopotâmia, China e Índia"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "imperiosReinosAfricanosSonghaiMaliGanaPovoBanto"){
+
+        abrirTeoria(
+            imperiosReinosAfricanosSonghaiMaliGanaPovoBantoTeoria,
+            "🌍 Impérios e Reinos Africanos: Songhai, Mali, Gana e o Povo Banto"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "civilizacoesAntiguidadeClassicaGreciaRoma"){
+
+        abrirTeoria(
+            civilizacoesAntiguidadeClassicaGreciaRomaTeoria,
+            "🏛️ As Civilizações da Antiguidade Clássica: Grécia e Roma"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "trabalhoCulturaEconomiaMentalidadeMedievoOcidental"){
+
+        abrirTeoria(
+            trabalhoCulturaEconomiaMentalidadeMedievoOcidentalTeoria,
+            "🏰 Trabalho, Cultura, Economia e Mentalidade no Medievo Ocidental"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "transicaoFeudalismoCapitalismo"){
+
+        abrirTeoria(
+            transicaoFeudalismoCapitalismoTeoria,
+            "💰 Transição do Feudalismo para o Capitalismo"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoes"){
+
+        abrirTeoria(
+            europaModernaPoliticaCulturaMentalidadeReligiosidadeRevolucoesTeoria,
+            "👑 A Europa Moderna: Política, Cultura, Mentalidade, Religiosidade e Revoluções"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX"){
+
+        abrirTeoria(
+            revolucaoIndustrialExpansaoImperialistaSeculosXIXeXXTeoria,
+            "🏭 A Europa da Revolução Industrial e a Expansão Imperialista dos Séculos XIX e XX"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "primeiraGuerraRevolucaoRussaUniaoSovietica"){
+
+        abrirTeoria(
+            primeiraGuerraRevolucaoRussaUniaoSovieticaTeoria,
+            "🌍 A Primeira Grande Guerra, a Revolução Russa e a União Soviética"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "criseEconomicaMundialAvancoRegimesTotalitariosEuropa"){
+
+        abrirTeoria(
+            criseEconomicaMundialAvancoRegimesTotalitariosEuropaTeoria,
+            "📉 A Crise Econômica Mundial e o Avanço dos Regimes Totalitários pela Europa"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "segundaGuerraMundialGuerraFria"){
+
+        abrirTeoria(
+            segundaGuerraMundialGuerraFriaTeoria,
+            "🌐 A Segunda Guerra Mundial e a Guerra Fria"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "dissolucaoBlocoSocialista"){
+
+        abrirTeoria(
+            dissolucaoBlocoSocialistaTeoria,
+            "🧱 Dissolução do Bloco Socialista"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "lutasResistenciasIndependenciasDescolonizacoesAfricaAsia"){
+
+        abrirTeoria(
+            lutasResistenciasIndependenciasDescolonizacoesAfricaAsiaTeoria,
+            "✊ Lutas e Resistências nas Independências e Descolonizações da África e Ásia"
+        );
+
+        return;
+
+    }
+
+    if(assuntoAtual === "mundoContemporaneoEraGlobalizacao"){
+
+        abrirTeoria(
+            mundoContemporaneoEraGlobalizacaoTeoria,
+            "🌍 O Mundo Contemporâneo na Era da Globalização"
+        );
+
+        return;
+
+    }
+
     if(assuntoAtual === "apoioOrganizacaoEducacao"){
 
         abrirTeoria(
@@ -8273,6 +8772,13 @@ const assuntosCiencias = [
         "bnccCiencias",
         "alfabetizacaoCientifica",
         "citologia",
+        "microbiologia",
+        "botanica",
+        "zoologia",
+        "evolucao",
+        "genetica",
+        "hereditariedade",
+        "biotecnologia",
         "ecologia",
         "terraEUniverso",
         "anatomiaFisiologia",
@@ -8283,6 +8789,16 @@ const assuntosCiencias = [
 const assuntosHistoria = [
         "fundamentosEnsinoHistoria",
         "cienciaHistoricaOficioHistoriador",
+        "fontesLinguagensHistoriaAbaetetuba",
+        "historiografiaIdentidadesBrasilAbaetetuba",
+        "historiaRegionalLocalAmazoniaParaAbaetetuba",
+        "historiaAmericaIdentidadesAbaetetuba",
+        "lutasSociaisIdentidadesAbaetetuba",
+        "legadosAntiguidadeClassicaAbaetetuba",
+        "conviviosConfrontosEuropaMedievalAbaetetuba",
+        "historiaAfricaRelacoesEuropaAmericaAbaetetuba",
+        "capitalismoLutasCidadaniaCulturaAbaetetuba",
+        "constituicaoGestaoLegislacaoEducacionalAbaetetuba",
         "povosPreColombianos",
         "formacaoSocialCulturalBrasileira",
         "estadosModernosApropriacaoAmerica",
@@ -8335,6 +8851,31 @@ const assuntosApoioEscolar = [
 
 function voltarParaAssuntos(){
 
+    // Retorno contextual da rota Professor de História de Abaetetuba.
+    // Os conteúdos pedagógicos também pertencem à disciplina geral de Didática,
+    // por isso esta verificação precisa ocorrer antes do retorno genérico.
+    const rotaAtualRetornoFarol = localStorage.getItem("farol_trilha_atual") || "";
+    const assuntosPedagogicosHistoriaAbaetetuba = [
+        "didatica",
+        "planejamento",
+        "avaliacao",
+        "curriculo",
+        "bncc",
+        "ldb",
+        "eca",
+        "pne",
+        "inclusiva",
+        "constituicaoGestaoLegislacaoEducacionalAbaetetuba"
+    ];
+
+    if(
+        rotaAtualRetornoFarol === "abaetetubaProfessorHistoria" &&
+        assuntosPedagogicosHistoriaAbaetetuba.includes(assuntoAtual)
+    ){
+        mostrarTela("moduloHistoriaAbaetetuba10");
+        return;
+    }
+
     if(assuntosApoioEscolar.includes(assuntoAtual)){
         mostrarTela("apoioEscolar");
         return;
@@ -8363,6 +8904,124 @@ function voltarParaAssuntos(){
     if(assuntosCiencias.includes(assuntoAtual)){
         mostrarTela("ciencias");
         return;
+    }
+
+    const trilhaSelecionadaFarol = localStorage.getItem("farol_trilha_atual") || "";
+    const assuntosModuloUmHistoriaAbaetetuba = [
+        "fundamentosEnsinoHistoria",
+        "cienciaHistoricaOficioHistoriador",
+        "fontesLinguagensHistoriaAbaetetuba"
+    ];
+    const assuntosModuloDoisHistoriaAbaetetuba = [
+        "formacaoSocialCulturalBrasileira",
+        "cortePortuguesaFormacaoEstadoNacionalBrasileiro",
+        "estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro",
+        "brasilTransicaoSeculoXIXParaXX",
+        "historiografiaIdentidadesBrasilAbaetetuba"
+    ];
+    const assuntosModuloTresHistoriaAbaetetuba = [
+        "historiaRegionalLocalAmazoniaParaAbaetetuba",
+        "politicaMilitarAmazonia",
+        "populacoesTradicionaisBrasilOntemHoje"
+    ];
+    const assuntosModuloQuatroHistoriaAbaetetuba = [
+        "povosPreColombianos",
+        "estadosModernosApropriacaoAmerica",
+        "mercantilismoColonizacaoAmerica",
+        "historiaAmericaIdentidadesAbaetetuba"
+    ];
+    const assuntosModuloCincoHistoriaAbaetetuba = [
+        "brasilColonialSociedadeEconomiaResistencias",
+        "movimentosAnticoloniaisBrasil",
+        "revoltasMovimentosBrasilImperial",
+        "lutasSociaisIdentidadesAbaetetuba"
+    ];
+    const assuntosModuloSeisHistoriaAbaetetuba = [
+        "civilizacoesAntiguidadeClassicaGreciaRoma",
+        "legadosAntiguidadeClassicaAbaetetuba"
+    ];
+    const assuntosModuloSeteHistoriaAbaetetuba = [
+        "trabalhoCulturaEconomiaMentalidadeMedievoOcidental",
+        "conviviosConfrontosEuropaMedievalAbaetetuba"
+    ];
+    const assuntosModuloOitoHistoriaAbaetetuba = [
+        "imperiosReinosAfricanosSonghaiMaliGanaPovoBanto",
+        "aspectosEconomicosFormasTrabalhoBrasilColonialImperial",
+        "lutasResistenciasIndependenciasDescolonizacoesAfricaAsia",
+        "historiaAfricaRelacoesEuropaAmericaAbaetetuba"
+    ];
+    const assuntosModuloNoveHistoriaAbaetetuba = [
+        "transicaoFeudalismoCapitalismo",
+        "revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX",
+        "primeiraGuerraRevolucaoRussaUniaoSovietica",
+        "criseEconomicaMundialAvancoRegimesTotalitariosEuropa",
+        "segundaGuerraMundialGuerraFria",
+        "mundoContemporaneoEraGlobalizacao",
+        "capitalismoLutasCidadaniaCulturaAbaetetuba"
+    ];
+    const assuntosModuloDezHistoriaAbaetetuba = [
+        "didatica",
+        "planejamento",
+        "avaliacao",
+        "curriculo",
+        "bncc",
+        "ldb",
+        "eca",
+        "pne",
+        "inclusiva",
+        "constituicaoGestaoLegislacaoEducacionalAbaetetuba"
+    ];
+
+    if(trilhaSelecionadaFarol === "abaetetubaProfessorHistoria"){
+        if(assuntosModuloUmHistoriaAbaetetuba.includes(assuntoAtual)){
+            mostrarTela("moduloHistoriaAbaetetuba1");
+            return;
+        }
+
+        if(assuntosModuloDoisHistoriaAbaetetuba.includes(assuntoAtual)){
+            mostrarTela("moduloHistoriaAbaetetuba2");
+            return;
+        }
+
+        if(assuntosModuloTresHistoriaAbaetetuba.includes(assuntoAtual)){
+            mostrarTela("moduloHistoriaAbaetetuba3");
+            return;
+        }
+
+        if(assuntosModuloQuatroHistoriaAbaetetuba.includes(assuntoAtual)){
+            mostrarTela("moduloHistoriaAbaetetuba4");
+            return;
+        }
+
+        if(assuntosModuloCincoHistoriaAbaetetuba.includes(assuntoAtual)){
+            mostrarTela("moduloHistoriaAbaetetuba5");
+            return;
+        }
+
+        if(assuntosModuloSeisHistoriaAbaetetuba.includes(assuntoAtual)){
+            mostrarTela("moduloHistoriaAbaetetuba6");
+            return;
+        }
+
+        if(assuntosModuloSeteHistoriaAbaetetuba.includes(assuntoAtual)){
+            mostrarTela("moduloHistoriaAbaetetuba7");
+            return;
+        }
+
+        if(assuntosModuloOitoHistoriaAbaetetuba.includes(assuntoAtual)){
+            mostrarTela("moduloHistoriaAbaetetuba8");
+            return;
+        }
+
+        if(assuntosModuloNoveHistoriaAbaetetuba.includes(assuntoAtual)){
+            mostrarTela("moduloHistoriaAbaetetuba9");
+            return;
+        }
+
+        if(assuntosModuloDezHistoriaAbaetetuba.includes(assuntoAtual)){
+            mostrarTela("moduloHistoriaAbaetetuba10");
+            return;
+        }
     }
 
     if(assuntosHistoria.includes(assuntoAtual)){
@@ -10248,9 +10907,37 @@ function obterNiveisLuzFarol(){
         },
         {
             nivel: 6,
-            minimo: 7500,
+            minimo: 10000,
             icone: "👨‍✈️",
             nome: "Nível 6 - Comandante",
+            classe: "nivel-luz-6"
+        },
+        {
+            nivel: 7,
+            minimo: 15000,
+            icone: "⭐",
+            nome: "Nível 7 - Comandante ⭐",
+            classe: "nivel-luz-6"
+        },
+        {
+            nivel: 8,
+            minimo: 22500,
+            icone: "⭐⭐",
+            nome: "Nível 8 - Comandante ⭐⭐",
+            classe: "nivel-luz-6"
+        },
+        {
+            nivel: 9,
+            minimo: 35000,
+            icone: "⭐⭐⭐",
+            nome: "Nível 9 - Comandante ⭐⭐⭐",
+            classe: "nivel-luz-6"
+        },
+        {
+            nivel: 10,
+            minimo: 50000,
+            icone: "🏆",
+            nome: "Nível 10 - Comandante de Honra",
             classe: "nivel-luz-6"
         }
     ];
@@ -10298,6 +10985,330 @@ function obterNivelLuzFarol(pontos){
         textoFalta: `Faltam ${faltam} Pontos de Luz para ${proximo.nome}.`,
         faixa: `${atual.minimo} a ${proximo.minimo - 1} Pontos de Luz`
     };
+
+}
+
+
+// ==========================
+// CARD DE PROMOÇÃO DE NÍVEL
+// ==========================
+
+function chaveMaiorNivelFarol(){
+
+    const identificador =
+        auth && auth.currentUser
+        ? auth.currentUser.uid
+        : (usuarioEmail || "visitante");
+
+    return "farol_maior_nivel_luz_" + identificador;
+
+}
+
+function garantirEstiloPromocaoNivelFarol(){
+
+    if(document.getElementById("estiloPromocaoNivelFarol")){
+        return;
+    }
+
+    const estilo = document.createElement("style");
+    estilo.id = "estiloPromocaoNivelFarol";
+
+    estilo.textContent = `
+        .promocao-nivel-farol-overlay{
+            position:fixed;
+            inset:0;
+            z-index:99999;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:20px;
+            background:rgba(4, 20, 45, .78);
+            backdrop-filter:blur(5px);
+            animation:promocaoFarolFundo .28s ease-out;
+        }
+
+        .promocao-nivel-farol-card{
+            position:relative;
+            width:min(520px, 94vw);
+            overflow:hidden;
+            border:2px solid rgba(255, 215, 80, .92);
+            border-radius:26px;
+            padding:32px 26px 26px;
+            text-align:center;
+            color:#102a43;
+            background:
+                radial-gradient(circle at top, rgba(255,224,112,.42), transparent 38%),
+                linear-gradient(145deg, #ffffff 0%, #f4f9ff 58%, #e8f2ff 100%);
+            box-shadow:
+                0 28px 80px rgba(0,0,0,.38),
+                0 0 32px rgba(255,210,74,.32);
+            animation:promocaoFarolCard .5s cubic-bezier(.2,.9,.3,1.15);
+        }
+
+        .promocao-nivel-farol-card::before{
+            content:"";
+            position:absolute;
+            inset:0 0 auto;
+            height:8px;
+            background:linear-gradient(90deg,#f7b500,#fff1a8,#1976d2,#f7b500);
+        }
+
+        .promocao-nivel-brilho{
+            position:absolute;
+            width:150px;
+            height:150px;
+            border-radius:50%;
+            background:rgba(255,215,64,.18);
+            filter:blur(3px);
+            pointer-events:none;
+        }
+
+        .promocao-nivel-brilho.um{top:-70px;left:-55px}
+        .promocao-nivel-brilho.dois{right:-65px;bottom:-75px}
+
+        .promocao-nivel-selo{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            padding:7px 14px;
+            border-radius:999px;
+            color:#674900;
+            background:#fff0b3;
+            border:1px solid #e3b62f;
+            font-size:.84rem;
+            font-weight:800;
+            letter-spacing:.04em;
+            text-transform:uppercase;
+        }
+
+        .promocao-nivel-icone{
+            margin:18px 0 6px;
+            font-size:4.5rem;
+            line-height:1;
+            filter:drop-shadow(0 7px 10px rgba(16,42,67,.18));
+            animation:promocaoFarolIcone 1.15s ease-in-out infinite alternate;
+        }
+
+        .promocao-nivel-farol-card h2{
+            margin:8px 0 6px;
+            color:#0d47a1;
+            font-size:clamp(1.55rem, 5vw, 2.15rem);
+        }
+
+        .promocao-nivel-nome{
+            margin:12px 0;
+            color:#143b67;
+            font-size:clamp(1.18rem, 4vw, 1.55rem);
+            font-weight:900;
+        }
+
+        .promocao-nivel-mensagem{
+            margin:0 auto 18px;
+            max-width:430px;
+            color:#40566f;
+            line-height:1.55;
+        }
+
+        .promocao-nivel-proxima{
+            margin:16px 0 20px;
+            padding:14px;
+            border-radius:16px;
+            background:rgba(21,101,192,.08);
+            border:1px solid rgba(21,101,192,.18);
+            color:#174f88;
+            font-weight:700;
+        }
+
+        .promocao-nivel-botoes{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:10px;
+        }
+
+        .promocao-nivel-botoes button{
+            min-width:150px;
+            border:0;
+            border-radius:13px;
+            padding:12px 18px;
+            cursor:pointer;
+            font-weight:800;
+            font-size:.96rem;
+        }
+
+        .promocao-nivel-continuar{
+            color:white;
+            background:linear-gradient(135deg,#0d6fd1,#0a4f9c);
+            box-shadow:0 8px 20px rgba(13,111,209,.25);
+        }
+
+        .promocao-nivel-fechar{
+            color:#25425f;
+            background:#e8eef5;
+        }
+
+        @keyframes promocaoFarolFundo{
+            from{opacity:0}
+            to{opacity:1}
+        }
+
+        @keyframes promocaoFarolCard{
+            from{opacity:0;transform:translateY(26px) scale(.88)}
+            to{opacity:1;transform:translateY(0) scale(1)}
+        }
+
+        @keyframes promocaoFarolIcone{
+            from{transform:translateY(0) rotate(-2deg)}
+            to{transform:translateY(-7px) rotate(2deg)}
+        }
+
+        @media(max-width:520px){
+            .promocao-nivel-farol-card{
+                padding:27px 18px 20px;
+                border-radius:22px;
+            }
+
+            .promocao-nivel-botoes{
+                flex-direction:column;
+            }
+
+            .promocao-nivel-botoes button{
+                width:100%;
+            }
+        }
+    `;
+
+    document.head.appendChild(estilo);
+
+}
+
+function fecharCardPromocaoNivelFarol(){
+
+    const overlay =
+        document.getElementById("promocaoNivelFarolOverlay");
+
+    if(overlay){
+        overlay.remove();
+    }
+
+}
+
+function continuarAposPromocaoNivelFarol(){
+
+    fecharCardPromocaoNivelFarol();
+
+    if(typeof mostrarTela === "function"){
+        mostrarTela("questoes");
+    }
+
+}
+
+function mostrarCardPromocaoNivelFarol(nivelAtual){
+
+    if(!nivelAtual){
+        return;
+    }
+
+    garantirEstiloPromocaoNivelFarol();
+    fecharCardPromocaoNivelFarol();
+
+    const nomeAluno =
+        primeiroNomeSemHTML(usuarioForum || usuarioNomeCompleto || "Aluno");
+
+    const proximo = nivelAtual.proximo;
+
+    const textoProximaMeta = proximo
+        ? `Próxima meta: ${escaparHTML(proximo.nome)} — faltam ${nivelAtual.faltam} Pontos de Luz.`
+        : "Você alcançou o nível máximo do Farol do Saber!";
+
+    const overlay = document.createElement("div");
+    overlay.id = "promocaoNivelFarolOverlay";
+    overlay.className = "promocao-nivel-farol-overlay";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-label", "Promoção de nível");
+
+    overlay.innerHTML = `
+        <div class="promocao-nivel-farol-card">
+            <span class="promocao-nivel-brilho um"></span>
+            <span class="promocao-nivel-brilho dois"></span>
+
+            <div class="promocao-nivel-selo">
+                ⚓ Promoção no Farol do Saber
+            </div>
+
+            <div class="promocao-nivel-icone">
+                ${nivelAtual.icone || "⭐"}
+            </div>
+
+            <h2>Parabéns, ${escaparHTML(nomeAluno || "Aluno")}!</h2>
+
+            <div class="promocao-nivel-nome">
+                Você agora é ${escaparHTML(nivelAtual.nome)}!
+            </div>
+
+            <p class="promocao-nivel-mensagem">
+                Seu esforço e sua dedicação fizeram você avançar.
+                Continue estudando e mantenha o Farol aceso rumo à aprovação!
+            </p>
+
+            <div class="promocao-nivel-proxima">
+                ${textoProximaMeta}
+            </div>
+
+            <div class="promocao-nivel-botoes">
+                <button
+                    type="button"
+                    class="promocao-nivel-continuar"
+                    onclick="continuarAposPromocaoNivelFarol()">
+                    📚 Continuar estudando
+                </button>
+
+                <button
+                    type="button"
+                    class="promocao-nivel-fechar"
+                    onclick="fecharCardPromocaoNivelFarol()">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    `;
+
+    overlay.addEventListener("click", function(event){
+        if(event.target === overlay){
+            fecharCardPromocaoNivelFarol();
+        }
+    });
+
+    document.body.appendChild(overlay);
+
+}
+
+function verificarPromocaoNivelFarol(nivelAtual){
+
+    if(!nivelAtual || !auth || !auth.currentUser){
+        return;
+    }
+
+    const chave = chaveMaiorNivelFarol();
+    const salvo = localStorage.getItem(chave);
+
+    // Na primeira execução, registra o nível atual sem abrir o card.
+    // Assim alunos antigos não recebem uma promoção falsa ao atualizar o site.
+    if(salvo === null){
+        localStorage.setItem(chave, String(nivelAtual.nivel));
+        return;
+    }
+
+    const maiorNivelRegistrado = Number(salvo) || 1;
+
+    if(nivelAtual.nivel > maiorNivelRegistrado){
+        localStorage.setItem(chave, String(nivelAtual.nivel));
+
+        setTimeout(function(){
+            mostrarCardPromocaoNivelFarol(nivelAtual);
+        }, 350);
+    }
 
 }
 
@@ -11583,6 +12594,13 @@ const disciplinasJogoFarol = {
             "bnccCiencias",
             "alfabetizacaoCientifica",
             "citologia",
+            "microbiologia",
+            "botanica",
+            "zoologia",
+            "evolucao",
+            "genetica",
+            "hereditariedade",
+            "biotecnologia",
             "ecologia",
             "terraEUniverso",
             "anatomiaFisiologia",
@@ -14569,7 +15587,7 @@ function obterAvatarJogadorFarol(){
             avatarAtual.includes(".jpg") ||
             avatarAtual.includes(".jpeg") ||
             avatarAtual.includes(".webp") ||
-            avatarAtual.includes(".svg")
+            avatarAtual.includes(".png")
         )
     ){
         return `
@@ -17899,6 +18917,13 @@ const gruposDuelo = [
             { chave: "bnccCiencias", nome: "📘 BNCC Ciências" },
             { chave: "alfabetizacaoCientifica", nome: "🧪 Alfabetização Científica" },
             { chave: "citologia", nome: "🧫 Citologia" },
+            { chave: "microbiologia", nome: "🦠 Microbiologia" },
+            { chave: "botanica", nome: "🌿 Botânica" },
+            { chave: "zoologia", nome: "🐾 Zoologia" },
+            { chave: "evolucao", nome: "🧬 Evolução" },
+            { chave: "genetica", nome: "🧬 Genética" },
+            { chave: "hereditariedade", nome: "👨‍👩‍👧‍👦 Hereditariedade" },
+            { chave: "biotecnologia", nome: "🧪 Biotecnologia" },
             { chave: "ecologia", nome: "🌱 Ecologia" },
             { chave: "terraEUniverso", nome: "🌎 Terra e Universo" },
             { chave: "anatomiaFisiologia", nome: "🫀 Anatomia e Fisiologia" },
@@ -19719,3 +20744,8966 @@ function voltarCargosProvasFarol(){
         };
     }
 })();
+
+
+/* ==========================================================
+   HISTÓRIA ABAETETUBA — ROTA EDITORIAL POR EIXOS
+========================================================== */
+
+function abrirModuloHistoriaAbaetetuba(numeroModulo){
+    const telasDisponiveis = {
+        1: "moduloHistoriaAbaetetuba1",
+        2: "moduloHistoriaAbaetetuba2",
+        3: "moduloHistoriaAbaetetuba3",
+        4: "moduloHistoriaAbaetetuba4",
+        5: "moduloHistoriaAbaetetuba5",
+        6: "moduloHistoriaAbaetetuba6",
+        7: "moduloHistoriaAbaetetuba7",
+        8: "moduloHistoriaAbaetetuba8",
+        9: "moduloHistoriaAbaetetuba9",
+        10: "moduloHistoriaAbaetetuba10"
+    };
+
+    if(telasDisponiveis[numeroModulo]){
+        mostrarTela(telasDisponiveis[numeroModulo]);
+        return;
+    }
+
+    mostrarToast("Este eixo será ativado após a conclusão da revisão editorial.");
+}
+
+function voltarParaHistoriaAbaetetuba(){
+    mostrarTela("historiaAbaetetuba");
+}
+
+function iniciarTreinoModuloUmHistoriaAbaetetuba(){
+    const bancoModulo = [
+        ...fundamentosEnsinoHistoria,
+        ...cienciaHistoricaOficioHistoriador,
+        ...fontesLinguagensHistoriaAbaetetuba
+    ];
+
+    iniciarSimuladoPersonalizado(
+        bancoModulo,
+        30,
+        "historiaAbaetetubaModulo1"
+    );
+}
+
+function iniciarTreinoModuloDoisHistoriaAbaetetuba(){
+    const bancoModulo = [
+        ...formacaoSocialCulturalBrasileira,
+        ...cortePortuguesaFormacaoEstadoNacionalBrasileiro,
+        ...estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro,
+        ...brasilTransicaoSeculoXIXParaXX,
+        ...historiografiaIdentidadesBrasilAbaetetuba
+    ];
+
+    iniciarSimuladoPersonalizado(
+        bancoModulo,
+        30,
+        "historiaAbaetetubaModulo2"
+    );
+}
+
+function iniciarTreinoModuloTresHistoriaAbaetetuba(){
+    const bancoModulo = [
+        ...historiaRegionalLocalAmazoniaParaAbaetetuba,
+        ...politicaMilitarAmazonia,
+        ...populacoesTradicionaisBrasilOntemHoje
+    ];
+
+    iniciarSimuladoPersonalizado(
+        bancoModulo,
+        30,
+        "historiaAbaetetubaModulo3"
+    );
+}
+
+function iniciarTreinoModuloQuatroHistoriaAbaetetuba(){
+    const bancoModulo = [
+        ...povosPreColombianos,
+        ...estadosModernosApropriacaoAmerica,
+        ...mercantilismoColonizacaoAmerica,
+        ...historiaAmericaIdentidadesAbaetetuba
+    ];
+
+    iniciarSimuladoPersonalizado(
+        bancoModulo,
+        30,
+        "historiaAbaetetubaModulo4"
+    );
+}
+
+function iniciarTreinoModuloCincoHistoriaAbaetetuba(){
+    const bancoModulo = [
+        ...brasilColonialSociedadeEconomiaResistencias,
+        ...movimentosAnticoloniaisBrasil,
+        ...revoltasMovimentosBrasilImperial,
+        ...lutasSociaisIdentidadesAbaetetuba
+    ];
+
+    iniciarSimuladoPersonalizado(
+        bancoModulo,
+        30,
+        "historiaAbaetetubaModulo5"
+    );
+}
+
+function iniciarTreinoModuloSeisHistoriaAbaetetuba(){
+    const bancoModulo = [
+        ...civilizacoesAntiguidadeClassicaGreciaRoma,
+        ...legadosAntiguidadeClassicaAbaetetuba
+    ];
+
+    iniciarSimuladoPersonalizado(
+        bancoModulo,
+        30,
+        "historiaAbaetetubaModulo6"
+    );
+}
+
+function iniciarTreinoModuloSeteHistoriaAbaetetuba(){
+    const bancoModulo = [
+        ...trabalhoCulturaEconomiaMentalidadeMedievoOcidental,
+        ...conviviosConfrontosEuropaMedievalAbaetetuba
+    ];
+
+    iniciarSimuladoPersonalizado(
+        bancoModulo,
+        30,
+        "historiaAbaetetubaModulo7"
+    );
+}
+
+function iniciarTreinoModuloOitoHistoriaAbaetetuba(){
+    const bancoModulo = [
+        ...imperiosReinosAfricanosSonghaiMaliGanaPovoBanto,
+        ...aspectosEconomicosFormasTrabalhoBrasilColonialImperial,
+        ...lutasResistenciasIndependenciasDescolonizacoesAfricaAsia,
+        ...historiaAfricaRelacoesEuropaAmericaAbaetetuba
+    ];
+
+    iniciarSimuladoPersonalizado(
+        bancoModulo,
+        30,
+        "historiaAbaetetubaModulo8"
+    );
+}
+
+function iniciarTreinoModuloNoveHistoriaAbaetetuba(){
+    const bancoModulo = [
+        ...transicaoFeudalismoCapitalismo,
+        ...revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX,
+        ...primeiraGuerraRevolucaoRussaUniaoSovietica,
+        ...criseEconomicaMundialAvancoRegimesTotalitariosEuropa,
+        ...segundaGuerraMundialGuerraFria,
+        ...mundoContemporaneoEraGlobalizacao,
+        ...capitalismoLutasCidadaniaCulturaAbaetetuba
+    ];
+
+    iniciarSimuladoPersonalizado(
+        bancoModulo,
+        30,
+        "historiaAbaetetubaModulo9"
+    );
+}
+
+function iniciarTreinoModuloDezHistoriaAbaetetuba(){
+    const bancoModulo = [
+        ...didatica,
+        ...planejamento,
+        ...avaliacao,
+        ...curriculo,
+        ...bncc,
+        ...ldb,
+        ...eca,
+        ...pne,
+        ...inclusiva,
+        ...constituicaoGestaoLegislacaoEducacionalAbaetetuba
+    ];
+
+    iniciarSimuladoPersonalizado(
+        bancoModulo,
+        30,
+        "historiaAbaetetubaModulo10"
+    );
+}
+
+/* ==========================================================
+   FAROL DO SABER — MULTICONCURSO V11
+   Barcarena + Abaetetuba | acesso individual por cargo
+========================================================== */
+
+(function(){
+
+    const CONCURSOS_FAROL = {
+        barcarena2026: {
+            nome: "Prefeitura de Barcarena",
+            titulo: "SEMED — Concurso Público 2026",
+            banca: "Instituto Ágata",
+            edital: "Edital nº 001.00/2026",
+            icone: "🏛️",
+            classe: "barcarena",
+            acessoLivre: true,
+            descricao: "Preparações atuais do Farol do Saber voltadas ao edital da SEMED de Barcarena.",
+            rotas: [
+                "apoioEscolar",
+                "professorHistoria",
+                "professorCiencias",
+                "professorGeografia",
+                "professorMatematica",
+                "professorEducacaoFisica"
+            ]
+        },
+        abaetetuba2026: {
+            nome: "Prefeitura de Abaetetuba",
+            titulo: "Concurso Público nº 001/2026",
+            banca: "Instituto Vicente Nelson — IVIN",
+            edital: "Edital nº 001/2026",
+            icone: "🧭",
+            classe: "abaetetuba",
+            acessoLivre: false,
+            descricao: "Conteúdo separado por cargo e liberado individualmente pelo administrador.",
+            rotas: [
+                "abaetetubaComunsSuperior",
+                "abaetetubaProfessorHistoria",
+                "abaetetubaProfessorCiencias",
+                "abaetetubaProfessorGeografia"
+            ]
+        }
+    };
+
+    let acessosConcursosUsuarioFarol = {};
+    let usuarioAdminAcessoSelecionadoFarol = null;
+    let cancelarObservadorAcessosFarol = null;
+
+    // As rotas são criadas separadamente para não misturar concurso,
+    // nível, pacote comum, cargo escolhido e acessos do aluno.
+    trilhasPreparacaoFarol.abaetetubaComunsSuperior = {
+        nome: "Disciplinas Comuns — Nível Superior",
+        nivel: "Nível Superior",
+        icone: "📚",
+        cor: "verde",
+        concurso: "abaetetuba2026",
+        cargoAcesso: "comunsSuperior",
+        publicado: true,
+        descricao: "Língua Portuguesa e Informática para os cargos de nível superior de Abaetetuba.",
+        disciplinas: ["portugues", "informatica"]
+    };
+
+    trilhasPreparacaoFarol.abaetetubaProfessorHistoria = {
+        nome: "Professor de História",
+        nivel: "Nível Superior",
+        icone: "📜",
+        cor: "azul",
+        concurso: "abaetetuba2026",
+        cargoAcesso: "professorHistoria",
+        publicado: true,
+        descricao: "Português, Informática e conhecimentos específicos de formação pedagógica e História.",
+        disciplinas: ["portugues", "informatica", "historiaAbaetetuba"]
+    };
+
+    trilhasPreparacaoFarol.abaetetubaProfessorCiencias = {
+        nome: "Professor de Ciências",
+        nivel: "Nível Superior",
+        icone: "🔬",
+        cor: "azul",
+        concurso: "abaetetuba2026",
+        cargoAcesso: "professorCiencias",
+        publicado: false,
+        descricao: "Português, Informática e conhecimentos específicos de formação pedagógica e Ciências.",
+        disciplinas: ["portugues", "informatica", "didatica", "ciencias"]
+    };
+
+    trilhasPreparacaoFarol.abaetetubaProfessorGeografia = {
+        nome: "Professor de Geografia",
+        nivel: "Nível Superior",
+        icone: "🌍",
+        cor: "azul",
+        concurso: "abaetetuba2026",
+        cargoAcesso: "professorGeografia",
+        publicado: false,
+        descricao: "Português, Informática e conhecimentos específicos de formação pedagógica e Geografia.",
+        disciplinas: ["portugues", "informatica", "didatica", "geografia"]
+    };
+
+    window.concursosFarol = CONCURSOS_FAROL;
+    window.acessosConcursosUsuarioFarol = acessosConcursosUsuarioFarol;
+
+    function emailAtualFarol(){
+        return String(
+            (auth.currentUser && auth.currentUser.email) ||
+            usuarioEmail ||
+            ""
+        ).trim().toLowerCase();
+    }
+
+    function ehAdministradorAcessosFarol(){
+        const email = emailAtualFarol();
+        return usuarioEhAdmin === true ||
+            administradores.map(item => String(item).toLowerCase()).includes(email);
+    }
+
+    function obterConcursoAtualFarol(){
+        const concurso = localStorage.getItem("farol_concurso_atual") || "";
+        return CONCURSOS_FAROL[concurso] ? concurso : "";
+    }
+
+    function inferirConcursoDaRotaFarol(chaveTrilha){
+        const trilha = trilhasPreparacaoFarol[chaveTrilha];
+        return trilha && trilha.concurso
+            ? trilha.concurso
+            : "barcarena2026";
+    }
+
+    function normalizarSelecaoAntigaFarol(){
+        const trilhaSalva = localStorage.getItem("farol_trilha_atual") || "";
+        const concursoSalvo = obterConcursoAtualFarol();
+
+        // Preserva quem já usava o Farol antes da criação da tela de concursos.
+        if(trilhaSalva && !concursoSalvo && trilhasPreparacaoFarol[trilhaSalva]){
+            localStorage.setItem(
+                "farol_concurso_atual",
+                inferirConcursoDaRotaFarol(trilhaSalva)
+            );
+        }
+    }
+
+    function dadosAcessoCargoFarol(concurso, cargo){
+        const dadosConcurso = acessosConcursosUsuarioFarol[concurso] || {};
+        return dadosConcurso[cargo];
+    }
+
+    function acessoLiberadoFarol(valor){
+        return valor === true || !!(
+            valor &&
+            typeof valor === "object" &&
+            valor.liberado === true
+        );
+    }
+
+    function temAcessoCargoFarol(concurso, cargo){
+        if(concurso === "barcarena2026"){
+            return true;
+        }
+
+        if(ehAdministradorAcessosFarol()){
+            return true;
+        }
+
+        const acesso = dadosAcessoCargoFarol(concurso, cargo);
+
+        if(acessoLiberadoFarol(acesso)){
+            return true;
+        }
+
+        // O pacote comum superior também é incluído automaticamente quando
+        // a conta possui um dos cargos superiores publicados/planejados.
+        if(concurso === "abaetetuba2026" && cargo === "comunsSuperior"){
+            const dadosConcurso = acessosConcursosUsuarioFarol[concurso] || {};
+            return [
+                "professorHistoria",
+                "professorCiencias",
+                "professorGeografia"
+            ].some(chave => acessoLiberadoFarol(dadosConcurso[chave]));
+        }
+
+        return false;
+    }
+
+    window.temAcessoCargoFarol = temAcessoCargoFarol;
+
+    function aplicarDocumentoAcessosFarol(doc){
+        const dados = doc && doc.exists ? (doc.data() || {}) : {};
+        acessosConcursosUsuarioFarol = dados.concursos || {};
+        window.acessosConcursosUsuarioFarol = acessosConcursosUsuarioFarol;
+
+        console.log(
+            "[Farol Acessos] UID:",
+            auth.currentUser ? auth.currentUser.uid : "sem usuário",
+            "| documento:",
+            doc && doc.exists ? "encontrado" : "não encontrado",
+            "| concursos:",
+            acessosConcursosUsuarioFarol
+        );
+    }
+
+    function atualizarTelaDepoisDeCarregarAcessosFarol(){
+        if(
+            localStorage.getItem("farol_telaAtual") === "questoes" &&
+            typeof renderizarTelaPreparacoes === "function"
+        ){
+            renderizarTelaPreparacoes();
+        }
+    }
+
+    async function carregarAcessosConcursosFarol(opcoes = {}){
+        const renderizar = opcoes.renderizar !== false;
+
+        acessosConcursosUsuarioFarol = {};
+        window.acessosConcursosUsuarioFarol = acessosConcursosUsuarioFarol;
+
+        if(!auth.currentUser){
+            return false;
+        }
+
+        const referencia = db.collection("acessosConcursos")
+            .doc(auth.currentUser.uid);
+
+        try{
+            let doc;
+
+            // Prioriza o servidor para não manter um acesso recém-liberado preso no cache.
+            try{
+                doc = await referencia.get({ source: "server" });
+            }catch(erroServidor){
+                console.warn(
+                    "[Farol Acessos] Leitura direta do servidor falhou; usando leitura padrão.",
+                    erroServidor
+                );
+                doc = await referencia.get();
+            }
+
+            aplicarDocumentoAcessosFarol(doc);
+
+            if(renderizar){
+                atualizarTelaDepoisDeCarregarAcessosFarol();
+            }
+
+            return true;
+        }catch(erro){
+            console.error("Não foi possível carregar os acessos de concursos.", erro);
+            return false;
+        }
+    }
+
+    function iniciarObservadorAcessosConcursosFarol(user){
+        if(typeof cancelarObservadorAcessosFarol === "function"){
+            cancelarObservadorAcessosFarol();
+        }
+
+        cancelarObservadorAcessosFarol = null;
+
+        if(!user){
+            return;
+        }
+
+        cancelarObservadorAcessosFarol = db.collection("acessosConcursos")
+            .doc(user.uid)
+            .onSnapshot(
+                doc => {
+                    aplicarDocumentoAcessosFarol(doc);
+                    atualizarTelaDepoisDeCarregarAcessosFarol();
+                },
+                erro => {
+                    console.error(
+                        "Não foi possível acompanhar as alterações de acesso em tempo real.",
+                        erro
+                    );
+                }
+            );
+    }
+
+    window.carregarAcessosConcursosFarol = carregarAcessosConcursosFarol;
+
+    function atualizarVisibilidadePainelAcessosFarol(){
+        const botao = document.getElementById("btnPainelAcessosAdmin");
+        if(botao){
+            botao.style.display = ehAdministradorAcessosFarol() ? "inline-block" : "none";
+        }
+    }
+
+    window.atualizarVisibilidadePainelAcessosFarol = atualizarVisibilidadePainelAcessosFarol;
+
+    function atualizarTituloSelecaoFarol(texto){
+        const titulo = document.getElementById("tituloEscolhaPreparacaoFarol");
+        if(titulo){
+            titulo.textContent = texto;
+        }
+    }
+
+    function atualizarAtalhoTodasDisciplinasFarol(mostrar){
+        const area = document.querySelector(".atalho-todas-disciplinas");
+        if(area){
+            area.style.display = mostrar ? "block" : "none";
+        }
+    }
+
+    function montarCardConcursoFarol(chave, concurso){
+        return `
+            <button
+                class="card-concurso-farol ${concurso.classe || ""}"
+                onclick="selecionarConcursoFarol('${chave}')">
+
+                <div class="concurso-cabecalho-farol">
+                    <span class="icone-concurso-farol">${concurso.icone || "🏛️"}</span>
+                    <div>
+                        <h3>${escaparHTML(concurso.nome)}</h3>
+                        <p><strong>${escaparHTML(concurso.titulo)}</strong></p>
+                    </div>
+                </div>
+
+                <p>${escaparHTML(concurso.descricao)}</p>
+
+                <div class="metadados-concurso-farol">
+                    <span>🏷️ ${escaparHTML(concurso.banca)}</span>
+                    <span>📄 ${escaparHTML(concurso.edital)}</span>
+                    <span>${concurso.acessoLivre ? "✅ Acesso atual" : "🔐 Liberação por cargo"}</span>
+                </div>
+
+                <span class="acao-concurso-farol">Ver cargos →</span>
+            </button>
+        `;
+    }
+
+    function renderizarSelecaoConcursosFarol(){
+        const painelPreparacoes = document.getElementById("painelPreparacoes");
+        const painelTrilha = document.getElementById("painelTrilhaEstudo");
+
+        if(!painelPreparacoes || !painelTrilha){
+            return;
+        }
+
+        atualizarTituloSelecaoFarol("🧭 Escolha seu Concurso");
+        atualizarAtalhoTodasDisciplinasFarol(false);
+
+        painelTrilha.style.display = "none";
+        painelTrilha.innerHTML = "";
+        painelPreparacoes.style.display = "block";
+
+        painelPreparacoes.innerHTML = `
+            <p class="texto-preparacao">
+                Selecione primeiro a prefeitura. Depois o Farol mostrará somente os cargos e as rotas daquele concurso.
+            </p>
+
+            <div class="grid-concursos-farol">
+                ${Object.entries(CONCURSOS_FAROL)
+                    .map(([chave, concurso]) => montarCardConcursoFarol(chave, concurso))
+                    .join("")}
+            </div>
+        `;
+    }
+
+    function estadoCardCargoFarol(trilha){
+        const ehAdmin = ehAdministradorAcessosFarol();
+
+        // O administrador pode testar rotas ainda não publicadas.
+        if(ehAdmin && trilha.publicado === false){
+            return {
+                classe: "teste-admin",
+                texto: "🧪 Testar estrutura (administrador)",
+                permitido: true
+            };
+        }
+
+        // Para alunos, primeiro informa se o cargo foi ou não liberado.
+        // Assim, uma conta sem compra não recebe a mensagem enganosa
+        // de que já possui o cargo, apenas porque ele ainda está em revisão.
+        if(!temAcessoCargoFarol(trilha.concurso, trilha.cargoAcesso)){
+            return {
+                classe: "acesso-negado",
+                texto: "🔒 Acesso não liberado",
+                permitido: false
+            };
+        }
+
+        // O aluno pode ter o cargo registrado, mas a rota ainda não estar publicada.
+        if(trilha.publicado === false){
+            return {
+                classe: "em-preparacao",
+                texto: "🚧 Conteúdo em preparação",
+                permitido: false
+            };
+        }
+
+        return {
+            classe: "",
+            texto: "🧭 Iniciar rota",
+            permitido: true
+        };
+    }
+
+    function montarCardCargoConcursoFarol(chave, trilha){
+        if(!trilha){
+            return "";
+        }
+
+        let estado = {
+            classe: trilha.bloqueado ? "em-preparacao" : "",
+            texto: trilha.bloqueado ? "🚧 Em desenvolvimento" : "🧭 Iniciar rota",
+            permitido: !trilha.bloqueado
+        };
+
+        if(trilha.concurso === "abaetetuba2026"){
+            estado = estadoCardCargoFarol(trilha);
+        }
+
+        return `
+            <button
+                class="card-preparacao card-preparacao-${trilha.cor || "azul"} card-cargo-concurso-farol ${estado.classe}"
+                onclick="abrirCargoConcursoFarol('${chave}')">
+
+                <div class="icone-preparacao">${trilha.icone || "🎯"}</div>
+
+                <div class="conteudo-preparacao">
+                    <span class="nivel-preparacao">${escaparHTML(trilha.nivel || "")}</span>
+                    <strong>${escaparHTML(trilha.nome || "Cargo")}</strong>
+                    <p>${escaparHTML(trilha.descricao || "")}</p>
+                    <span class="status-acesso-cargo">${estado.texto}</span>
+                </div>
+            </button>
+        `;
+    }
+
+    function renderizarCargosConcursoFarol(chaveConcurso){
+        const concurso = CONCURSOS_FAROL[chaveConcurso];
+        const painelPreparacoes = document.getElementById("painelPreparacoes");
+        const painelTrilha = document.getElementById("painelTrilhaEstudo");
+
+        if(!concurso || !painelPreparacoes || !painelTrilha){
+            renderizarSelecaoConcursosFarol();
+            return;
+        }
+
+        atualizarTituloSelecaoFarol("🧭 Escolha seu Cargo");
+        atualizarAtalhoTodasDisciplinasFarol(chaveConcurso === "barcarena2026");
+
+        painelTrilha.style.display = "none";
+        painelTrilha.innerHTML = "";
+        painelPreparacoes.style.display = "block";
+
+        const cards = concurso.rotas
+            .map(chave => montarCardCargoConcursoFarol(chave, trilhasPreparacaoFarol[chave]))
+            .join("");
+
+        const avisoAbaetetuba = chaveConcurso === "abaetetuba2026"
+            ? `
+                <div class="nota-seguranca-acesso">
+                    <strong>🔐 Acesso por pacote e cargo:</strong>
+                    o pacote de Disciplinas Comuns do Nível Superior pode ser vendido separadamente
+                    e também é incluído automaticamente em qualquer cargo superior liberado. História
+                    está concluída; Ciências e Geografia permanecem em preparação.
+                </div>
+            `
+            : "";
+
+        painelPreparacoes.innerHTML = `
+            <div class="cabecalho-cargos-concurso">
+                <div>
+                    <span class="selo-concurso-rota">${concurso.icone} ${escaparHTML(concurso.nome)}</span>
+                    <h3>${escaparHTML(concurso.titulo)}</h3>
+                    <p>Banca: <strong>${escaparHTML(concurso.banca)}</strong></p>
+                </div>
+
+                <button class="btn-trocar-concurso-farol" onclick="trocarConcursoFarol()">
+                    🏛️ Trocar concurso
+                </button>
+            </div>
+
+            ${avisoAbaetetuba}
+
+            <div class="grid-preparacoes">
+                ${cards}
+            </div>
+        `;
+    }
+
+    window.selecionarConcursoFarol = async function(chave){
+        if(!CONCURSOS_FAROL[chave]){
+            mostrarToast("Concurso não encontrado.");
+            return;
+        }
+
+        localStorage.setItem("farol_concurso_atual", chave);
+        localStorage.removeItem("farol_trilha_atual");
+
+        if(chave === "abaetetuba2026"){
+            await carregarAcessosConcursosFarol({ renderizar: false });
+        }
+
+        renderizarCargosConcursoFarol(chave);
+    };
+
+    window.trocarConcursoFarol = function(){
+        localStorage.removeItem("farol_concurso_atual");
+        localStorage.removeItem("farol_trilha_atual");
+        renderizarSelecaoConcursosFarol();
+    };
+
+    window.abrirCargoConcursoFarol = async function(chaveTrilha){
+        const trilha = trilhasPreparacaoFarol[chaveTrilha];
+
+        if(!trilha){
+            mostrarToast("Rota não encontrada.");
+            return;
+        }
+
+        const concurso = inferirConcursoDaRotaFarol(chaveTrilha);
+        localStorage.setItem("farol_concurso_atual", concurso);
+
+        if(trilha.bloqueado){
+            mostrarToast("Esta rota ainda está em desenvolvimento.");
+            return;
+        }
+
+        if(trilha.concurso === "abaetetuba2026"){
+            // Confere novamente no servidor no momento do clique.
+            // Assim, uma liberação feita pelo administrador passa a valer imediatamente.
+            await carregarAcessosConcursosFarol({ renderizar: false });
+
+            // Verifica primeiro a compra/liberação do cargo.
+            if(!temAcessoCargoFarol(trilha.concurso, trilha.cargoAcesso)){
+                mostrarToast("Seu acesso ainda não inclui este cargo de Abaetetuba.");
+                return;
+            }
+
+            // Depois verifica se o conteúdo já foi publicado para alunos.
+            if(trilha.publicado === false && !ehAdministradorAcessosFarol()){
+                mostrarToast("Este cargo ainda está em preparação para o edital de Abaetetuba.");
+                return;
+            }
+        }
+
+        localStorage.setItem("farol_trilha_atual", chaveTrilha);
+        renderizarTrilhaEstudo(chaveTrilha);
+    };
+
+    // Impede que uma rota bloqueada seja restaurada apenas alterando o localStorage.
+    const obterTrilhaAtualFarolOriginalMulticoncurso = obterTrilhaAtualFarol;
+    obterTrilhaAtualFarol = function(){
+        const chave = obterTrilhaAtualFarolOriginalMulticoncurso();
+        if(!chave){
+            return "";
+        }
+
+        const trilha = trilhasPreparacaoFarol[chave];
+        if(!trilha || trilha.concurso !== "abaetetuba2026"){
+            return chave;
+        }
+
+        if(!temAcessoCargoFarol(trilha.concurso, trilha.cargoAcesso)){
+            localStorage.removeItem("farol_trilha_atual");
+            return "";
+        }
+
+        if(trilha.publicado === false && !ehAdministradorAcessosFarol()){
+            localStorage.removeItem("farol_trilha_atual");
+            return "";
+        }
+
+        return chave;
+    };
+
+    renderizarTelaPreparacoes = function(){
+        normalizarSelecaoAntigaFarol();
+
+        const trilhaAtual = obterTrilhaAtualFarol();
+        if(trilhaAtual){
+            renderizarTrilhaEstudo(trilhaAtual);
+            return;
+        }
+
+        const concursoAtual = obterConcursoAtualFarol();
+        if(concursoAtual){
+            renderizarCargosConcursoFarol(concursoAtual);
+            return;
+        }
+
+        renderizarSelecaoConcursosFarol();
+    };
+
+    alterarPreparacaoFarol = function(){
+        localStorage.removeItem("farol_trilha_atual");
+        const concursoAtual = obterConcursoAtualFarol();
+
+        if(concursoAtual){
+            renderizarCargosConcursoFarol(concursoAtual);
+        }else{
+            renderizarSelecaoConcursosFarol();
+        }
+    };
+
+    renderizarTrilhaEstudo = function(chave){
+        const trilha = trilhasPreparacaoFarol[chave];
+        const painelPreparacoes = document.getElementById("painelPreparacoes");
+        const painelTrilha = document.getElementById("painelTrilhaEstudo");
+
+        if(!trilha || !painelPreparacoes || !painelTrilha){
+            return;
+        }
+
+        const chaveConcurso = inferirConcursoDaRotaFarol(chave);
+        const concurso = CONCURSOS_FAROL[chaveConcurso];
+
+        painelPreparacoes.style.display = "none";
+        painelTrilha.style.display = "block";
+        atualizarTituloSelecaoFarol("🧭 Sua Rota de Estudos");
+        atualizarAtalhoTodasDisciplinasFarol(chaveConcurso === "barcarena2026");
+
+        const cardsDisciplinas = trilha.disciplinas.map((disciplina, indice) => {
+            const base = disciplinasTrilhaFarol[disciplina] || {
+                nome: disciplina,
+                icone: "📚",
+                descricao: "Etapa da sua Rota de Estudos."
+            };
+
+            const dados = { ...base };
+
+            if(chaveConcurso === "abaetetuba2026"){
+                if(disciplina === "didatica"){
+                    dados.nome = "Formação Pedagógica e Legislação";
+                    dados.descricao = "Parte dos Conhecimentos Específicos previstos no edital da IVIN.";
+                }
+                if(["historia", "ciencias", "geografia"].includes(disciplina)){
+                    dados.descricao = "Conhecimento específico da área, organizado para a rota de Abaetetuba.";
+                }
+            }
+
+            return `
+                <button class="card-disciplina-trilha" onclick="abrirDisciplina('${disciplina}')">
+                    <span class="numero-trilha">${indice + 1}</span>
+                    <span class="icone-disciplina-trilha">${dados.icone || "📚"}</span>
+                    <span class="dados-disciplina-trilha">
+                        <strong>${escaparHTML(dados.nome)}</strong>
+                        <small>${escaparHTML(dados.descricao)}</small>
+                    </span>
+                </button>
+            `;
+        }).join("");
+
+        const avisoRevisao = trilha.concurso === "abaetetuba2026" && trilha.publicado === false
+            ? `
+                <div class="aviso-rota-revisao">
+                    <strong>🧪 Visualização administrativa:</strong>
+                    esta rota já está separada por concurso e cargo, mas os conteúdos ainda serão
+                    filtrados e complementados de acordo com o edital de Abaetetuba antes da publicação.
+                </div>
+            `
+            : "";
+
+        painelTrilha.innerHTML = `
+            ${avisoRevisao}
+
+            <div class="cabecalho-trilha">
+                <div>
+                    <span class="selo-nivel-trilha">${escaparHTML(trilha.nivel || "")}</span>
+                    <span class="selo-concurso-rota">${concurso ? concurso.icone : "🏛️"} ${escaparHTML(concurso ? concurso.nome : "Concurso")}</span>
+                    <h3>🧭 Minha Rota de Aprovação</h3>
+                    <p>
+                        <strong>${trilha.icone || "🎯"} ${escaparHTML(trilha.nome)}</strong><br>
+                        Complete as etapas abaixo para avançar rumo à aprovação.
+                    </p>
+                </div>
+
+                <div class="acoes-rota-concurso">
+                    <button class="btn-alterar-preparacao" onclick="alterarPreparacaoFarol()">
+                        ⚓ Alterar cargo
+                    </button>
+                    <button class="btn-trocar-concurso-farol" onclick="trocarConcursoFarol()">
+                        🏛️ Trocar concurso
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid-disciplinas-trilha">${cardsDisciplinas}</div>
+        `;
+    };
+
+    const mostrarTodasDisciplinasOriginalMulticoncurso = mostrarTodasDisciplinasFarol;
+    mostrarTodasDisciplinasFarol = function(){
+        const concursoAtual = obterConcursoAtualFarol();
+        if(concursoAtual && concursoAtual !== "barcarena2026"){
+            mostrarToast("A visão geral de todas as disciplinas não está disponível nesta rota.");
+            renderizarCargosConcursoFarol(concursoAtual);
+            return;
+        }
+        return mostrarTodasDisciplinasOriginalMulticoncurso();
+    };
+
+    // Enquanto o conteúdo da IVIN está em revisão, evita apresentar um simulado
+    // de 50 questões como se fosse o modelo oficial de Abaetetuba.
+    const iniciarSimuladoMinhaRotaOriginalMulticoncurso = iniciarSimuladoMinhaRotaFarol;
+    iniciarSimuladoMinhaRotaFarol = function(){
+        const trilhaAtual = trilhasPreparacaoFarol[localStorage.getItem("farol_trilha_atual") || ""];
+        if(trilhaAtual && trilhaAtual.concurso === "abaetetuba2026" && trilhaAtual.publicado === false){
+            mostrarToast("O simulado fiel ao edital da IVIN será ativado após a conclusão da adaptação da rota.");
+            return;
+        }
+        return iniciarSimuladoMinhaRotaOriginalMulticoncurso();
+    };
+
+    const iniciarTreinoRapidoOriginalMulticoncurso =
+        typeof iniciarTreinoRapidoMinhaRotaFarol === "function"
+            ? iniciarTreinoRapidoMinhaRotaFarol
+            : function(quantidade){
+                const chaveTrilha = obterTrilhaAtualFarol();
+
+                if(!chaveTrilha){
+                    mostrarToast("Escolha uma Rota de Estudos antes de iniciar este treino.");
+                    mostrarTela("questoes");
+                    return;
+                }
+
+                const trilha = trilhasPreparacaoFarol[chaveTrilha];
+
+                if(!trilha || !Array.isArray(trilha.disciplinas)){
+                    mostrarToast("Rota sem disciplinas liberadas.");
+                    return;
+                }
+
+                const banco = trilha.disciplinas.flatMap(
+                    disciplina => obterBancoDisciplinaSimuladoFarol(disciplina)
+                );
+
+                iniciarSimuladoBancoFarol(
+                    banco,
+                    quantidade || 10,
+                    "treinoRota:" + chaveTrilha
+                );
+            };
+    iniciarTreinoRapidoMinhaRotaFarol = function(quantidade){
+        const trilhaAtual = trilhasPreparacaoFarol[localStorage.getItem("farol_trilha_atual") || ""];
+        if(trilhaAtual && trilhaAtual.concurso === "abaetetuba2026" && trilhaAtual.publicado === false){
+            mostrarToast("O treino da rota de Abaetetuba será ativado após a revisão do conteúdo.");
+            return;
+        }
+        return iniciarTreinoRapidoOriginalMulticoncurso(quantidade);
+    };
+
+    window.abrirPainelAcessosFarol = function(){
+        if(!ehAdministradorAcessosFarol()){
+            mostrarToast("Apenas o administrador pode liberar acessos.");
+            return;
+        }
+
+        mostrarTela("painelAcessosAdmin");
+
+        const campo = document.getElementById("emailBuscaAcessoFarol");
+        if(campo){
+            setTimeout(() => campo.focus(), 0);
+        }
+    };
+
+    window.buscarUsuarioAcessoFarol = async function(){
+        if(!ehAdministradorAcessosFarol()){
+            mostrarToast("Acesso administrativo necessário.");
+            return;
+        }
+
+        const campo = document.getElementById("emailBuscaAcessoFarol");
+        const area = document.getElementById("resultadoBuscaAcessoFarol");
+        const emailBuscado = String(campo ? campo.value : "").trim().toLowerCase();
+
+        if(!area){
+            return;
+        }
+
+        if(!emailBuscado){
+            area.innerHTML = "Digite o e-mail cadastrado do aluno.";
+            return;
+        }
+
+        area.innerHTML = "🔎 Buscando conta...";
+
+        try{
+            // Busca exata pelo campo normalizado. O fallback mantém compatibilidade
+            // com contas antigas que ainda não possuam emailNormalizado.
+            let usuarioEncontrado = null;
+
+            const consultaNormalizada = await db.collection("usuarios")
+                .where("emailNormalizado", "==", emailBuscado)
+                .limit(1)
+                .get();
+
+            if(!consultaNormalizada.empty){
+                const doc = consultaNormalizada.docs[0];
+                usuarioEncontrado = {
+                    uid: doc.id,
+                    ...(doc.data() || {})
+                };
+            }
+
+            if(!usuarioEncontrado){
+                const consultaEmail = await db.collection("usuarios")
+                    .where("email", "==", emailBuscado)
+                    .limit(1)
+                    .get();
+
+                if(!consultaEmail.empty){
+                    const doc = consultaEmail.docs[0];
+                    usuarioEncontrado = {
+                        uid: doc.id,
+                        ...(doc.data() || {})
+                    };
+                }
+            }
+
+            if(!usuarioEncontrado){
+                const snapshotLegado = await db.collection("usuarios").get();
+
+                snapshotLegado.forEach(doc => {
+                    if(usuarioEncontrado){
+                        return;
+                    }
+
+                    const dados = doc.data() || {};
+                    const emailDocumento = String(dados.email || "").trim().toLowerCase();
+
+                    if(emailDocumento === emailBuscado){
+                        usuarioEncontrado = {
+                            uid: doc.id,
+                            ...dados
+                        };
+                    }
+                });
+            }
+
+            if(!usuarioEncontrado){
+                usuarioAdminAcessoSelecionadoFarol = null;
+                area.innerHTML = `❌ Nenhuma conta encontrada para <strong>${escaparHTML(emailBuscado)}</strong>.`;
+                return;
+            }
+
+            const docAcesso = await db.collection("acessosConcursos")
+                .doc(usuarioEncontrado.uid)
+                .get();
+
+            const dadosAcesso = docAcesso.exists ? (docAcesso.data() || {}) : {};
+            const concursos = dadosAcesso.concursos || {};
+            const abaetetuba = concursos.abaetetuba2026 || {};
+
+            usuarioAdminAcessoSelecionadoFarol = {
+                uid: usuarioEncontrado.uid,
+                nome: usuarioEncontrado.nomeCompleto || usuarioEncontrado.nome || "Aluno",
+                email: usuarioEncontrado.email || emailBuscado,
+                concursos
+            };
+
+            function marcado(cargo){
+                const acesso = abaetetuba[cargo];
+                return acesso === true || !!(acesso && acesso.liberado === true);
+            }
+
+            area.innerHTML = `
+                <div class="aluno-acesso-cabecalho">
+                    <h3>${escaparHTML(usuarioAdminAcessoSelecionadoFarol.nome)}</h3>
+                    <p>${escaparHTML(usuarioAdminAcessoSelecionadoFarol.email)}</p>
+                    <small>UID: ${escaparHTML(usuarioAdminAcessoSelecionadoFarol.uid)}</small>
+                </div>
+
+                <h3>🏛️ Abaetetuba 2026 — cargos liberados</h3>
+
+                <div class="nota-seguranca-acesso">
+                    Marque apenas o cargo comprado. As disciplinas comuns e os materiais ligados à
+                    rota serão exibidos automaticamente; não há limite de aparelhos nem sessão única.
+                </div>
+
+                <div class="lista-cargos-acesso">
+                    <label class="item-cargo-acesso">
+                        <input type="checkbox" id="acessoAbaetetubaHistoria" ${marcado("professorHistoria") ? "checked" : ""}>
+                        <span>
+                            <strong>📜 Professor de História</strong>
+                            <small>Liberação individual deste cargo.</small>
+                        </span>
+                    </label>
+
+                    <label class="item-cargo-acesso">
+                        <input type="checkbox" id="acessoAbaetetubaCiencias" ${marcado("professorCiencias") ? "checked" : ""}>
+                        <span>
+                            <strong>🔬 Professor de Ciências</strong>
+                            <small>Liberação individual deste cargo.</small>
+                        </span>
+                    </label>
+
+                    <label class="item-cargo-acesso">
+                        <input type="checkbox" id="acessoAbaetetubaGeografia" ${marcado("professorGeografia") ? "checked" : ""}>
+                        <span>
+                            <strong>🌍 Professor de Geografia</strong>
+                            <small>Liberação individual deste cargo.</small>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="acoes-admin-acesso">
+                    <button onclick="salvarAcessosUsuarioFarol()">💾 Salvar acessos</button>
+                    <button class="btn-excluir" onclick="limparAcessosUsuarioFarol()">🔒 Retirar todos</button>
+                </div>
+
+                <div class="nota-seguranca-acesso">
+                    A liberação já fica registrada no Firebase. Enquanto uma rota estiver marcada como
+                    “em preparação”, somente o administrador poderá testá-la. Para publicar cada cargo,
+                    alteraremos a propriedade <code>publicado</code> após concluir a adaptação do edital.
+                </div>
+            `;
+
+        }catch(erro){
+            console.log("Erro ao buscar usuário para liberação", erro);
+            area.innerHTML = "❌ Não foi possível consultar as contas. Verifique as regras do Firestore.";
+        }
+    };
+
+    function valorCheckboxAcessoFarol(id){
+        const campo = document.getElementById(id);
+        return !!(campo && campo.checked);
+    }
+
+    window.salvarAcessosUsuarioFarol = async function(){
+        if(!ehAdministradorAcessosFarol() || !usuarioAdminAcessoSelecionadoFarol){
+            mostrarToast("Busque uma conta antes de salvar.");
+            return;
+        }
+
+        const concursosExistentes = usuarioAdminAcessoSelecionadoFarol.concursos || {};
+        const acessosAbaetetuba = {
+            professorHistoria: {
+                liberado: valorCheckboxAcessoFarol("acessoAbaetetubaHistoria")
+            },
+            professorCiencias: {
+                liberado: valorCheckboxAcessoFarol("acessoAbaetetubaCiencias")
+            },
+            professorGeografia: {
+                liberado: valorCheckboxAcessoFarol("acessoAbaetetubaGeografia")
+            }
+        };
+
+        try{
+            await db.collection("acessosConcursos")
+                .doc(usuarioAdminAcessoSelecionadoFarol.uid)
+                .set({
+                    uid: usuarioAdminAcessoSelecionadoFarol.uid,
+                    nome: usuarioAdminAcessoSelecionadoFarol.nome,
+                    email: usuarioAdminAcessoSelecionadoFarol.email,
+                    concursos: {
+                        ...concursosExistentes,
+                        abaetetuba2026: acessosAbaetetuba
+                    },
+                    atualizadoPor: emailAtualFarol(),
+                    atualizadoEm: firebase.firestore.FieldValue.serverTimestamp()
+                }, { merge: true });
+
+            usuarioAdminAcessoSelecionadoFarol.concursos = {
+                ...concursosExistentes,
+                abaetetuba2026: acessosAbaetetuba
+            };
+
+            if(
+                auth.currentUser &&
+                auth.currentUser.uid === usuarioAdminAcessoSelecionadoFarol.uid
+            ){
+                await carregarAcessosConcursosFarol();
+            }
+
+            mostrarToast("Acessos salvos com sucesso.");
+        }catch(erro){
+            console.log("Erro ao salvar acessos", erro);
+            mostrarToast("Não foi possível salvar. Verifique as regras do Firestore.");
+        }
+    };
+
+    window.limparAcessosUsuarioFarol = async function(){
+        if(!usuarioAdminAcessoSelecionadoFarol){
+            mostrarToast("Busque uma conta antes de retirar acessos.");
+            return;
+        }
+
+        const confirmar = confirm("Deseja retirar todos os cargos de Abaetetuba desta conta?");
+        if(!confirmar){
+            return;
+        }
+
+        [
+            "acessoAbaetetubaHistoria",
+            "acessoAbaetetubaCiencias",
+            "acessoAbaetetubaGeografia"
+        ].forEach(id => {
+            const campo = document.getElementById(id);
+            if(campo){
+                campo.checked = false;
+            }
+        });
+
+        await window.salvarAcessosUsuarioFarol();
+    };
+
+    auth.onAuthStateChanged(async user => {
+        if(user){
+            usuarioEmail = user.email || usuarioEmail || "";
+            localStorage.setItem("usuarioEmail", usuarioEmail);
+
+            try{
+                const docUsuario = await db.collection("usuarios").doc(user.uid).get();
+                if(docUsuario.exists){
+                    usuarioEhAdmin = docUsuario.data().admin === true;
+                }
+            }catch(erro){
+                console.log("Não foi possível confirmar o perfil administrativo.", erro);
+            }
+
+            atualizarVisibilidadePainelAcessosFarol();
+            await carregarAcessosConcursosFarol();
+            iniciarObservadorAcessosConcursosFarol(user);
+        }else{
+            if(typeof cancelarObservadorAcessosFarol === "function"){
+                cancelarObservadorAcessosFarol();
+            }
+            cancelarObservadorAcessosFarol = null;
+            acessosConcursosUsuarioFarol = {};
+            window.acessosConcursosUsuarioFarol = acessosConcursosUsuarioFarol;
+            atualizarVisibilidadePainelAcessosFarol();
+        }
+    });
+
+    normalizarSelecaoAntigaFarol();
+
+})();
+
+
+/* ==========================================================
+   FAROL DO SABER — SIMULADOS ABAETETUBA / HISTÓRIA V23
+   Prova completa IVIN: 15 Português + 10 Informática +
+   15 Conhecimentos Específicos. Inclui treino por eixo,
+   treino específico e resultado detalhado por bloco.
+========================================================== */
+
+(function(){
+
+    let contextoSimuladoAbaetetubaHistoriaFarol = null;
+    let desempenhoBlocosSimuladoAbaetetubaFarol = {};
+    let simuladoAbaetetubaEmPreparacaoFarol = false;
+
+    const CHAVE_HISTORICO_SIMULADO_ABAETETUBA_HISTORIA =
+        "farol_simulados_abaetetuba_historia";
+
+    function obterBancoPorChavesFarol(chaves){
+        return (Array.isArray(chaves) ? chaves : []).flatMap(chave => {
+            const banco = (
+                typeof bancoQuestoes !== "undefined" &&
+                Array.isArray(bancoQuestoes[chave])
+            ) ? bancoQuestoes[chave] : [];
+
+            return banco;
+        });
+    }
+
+    function obterEixosHistoriaAbaetetubaSimuladoFarol(){
+        return [
+            {
+                id: 1,
+                nome: "Ensino de História, historiografia, fontes e temporalidade",
+                chaves: [
+                    "fundamentosEnsinoHistoria",
+                    "cienciaHistoricaOficioHistoriador",
+                    "fontesLinguagensHistoriaAbaetetuba"
+                ]
+            },
+            {
+                id: 2,
+                nome: "História do Brasil, identidades e historiografia brasileira",
+                chaves: [
+                    "formacaoSocialCulturalBrasileira",
+                    "cortePortuguesaFormacaoEstadoNacionalBrasileiro",
+                    "estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro",
+                    "brasilTransicaoSeculoXIXParaXX",
+                    "historiografiaIdentidadesBrasilAbaetetuba"
+                ]
+            },
+            {
+                id: 3,
+                nome: "História regional, local, Amazônia e Pará",
+                chaves: [
+                    "historiaRegionalLocalAmazoniaParaAbaetetuba",
+                    "politicaMilitarAmazonia",
+                    "populacoesTradicionaisBrasilOntemHoje"
+                ]
+            },
+            {
+                id: 4,
+                nome: "História da América e suas identidades",
+                chaves: [
+                    "povosPreColombianos",
+                    "estadosModernosApropriacaoAmerica",
+                    "mercantilismoColonizacaoAmerica",
+                    "historiaAmericaIdentidadesAbaetetuba"
+                ]
+            },
+            {
+                id: 5,
+                nome: "Lutas sociais e construção de identidades",
+                chaves: [
+                    "brasilColonialSociedadeEconomiaResistencias",
+                    "movimentosAnticoloniaisBrasil",
+                    "revoltasMovimentosBrasilImperial",
+                    "lutasSociaisIdentidadesAbaetetuba"
+                ]
+            },
+            {
+                id: 6,
+                nome: "Antiguidade Clássica e seus legados culturais",
+                chaves: [
+                    "civilizacoesAntiguidadeClassicaGreciaRoma",
+                    "legadosAntiguidadeClassicaAbaetetuba"
+                ]
+            },
+            {
+                id: 7,
+                nome: "Europa Medieval: convívios e confrontos culturais",
+                chaves: [
+                    "trabalhoCulturaEconomiaMentalidadeMedievoOcidental",
+                    "conviviosConfrontosEuropaMedievalAbaetetuba"
+                ]
+            },
+            {
+                id: 8,
+                nome: "História africana e relações com Europa e América",
+                chaves: [
+                    "imperiosReinosAfricanosSonghaiMaliGanaPovoBanto",
+                    "aspectosEconomicosFormasTrabalhoBrasilColonialImperial",
+                    "lutasResistenciasIndependenciasDescolonizacoesAfricaAsia",
+                    "historiaAfricaRelacoesEuropaAmericaAbaetetuba"
+                ]
+            },
+            {
+                id: 9,
+                nome: "Capitalismo, lutas sociais, cidadania e cultura",
+                chaves: [
+                    "transicaoFeudalismoCapitalismo",
+                    "revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX",
+                    "primeiraGuerraRevolucaoRussaUniaoSovietica",
+                    "criseEconomicaMundialAvancoRegimesTotalitariosEuropa",
+                    "segundaGuerraMundialGuerraFria",
+                    "mundoContemporaneoEraGlobalizacao",
+                    "capitalismoLutasCidadaniaCulturaAbaetetuba"
+                ]
+            },
+            {
+                id: 10,
+                nome: "Didática, currículo, BNCC e legislação educacional",
+                chaves: [
+                    "didatica",
+                    "planejamento",
+                    "avaliacao",
+                    "curriculo",
+                    "bncc",
+                    "ldb",
+                    "eca",
+                    "pne",
+                    "inclusiva",
+                    "constituicaoGestaoLegislacaoEducacionalAbaetetuba"
+                ]
+            }
+        ].map(eixo => ({
+            ...eixo,
+            banco: obterBancoPorChavesFarol(eixo.chaves)
+        }));
+    }
+
+    function embaralharArraySimuladoFarol(lista){
+        const copia = [...(Array.isArray(lista) ? lista : [])];
+
+        for(let i = copia.length - 1; i > 0; i--){
+            const j = Math.floor(Math.random() * (i + 1));
+            [copia[i], copia[j]] = [copia[j], copia[i]];
+        }
+
+        return copia;
+    }
+
+    function marcarQuestaoSimuladoFarol(questao, bloco, eixo){
+        return {
+            ...questao,
+            __farolBloco: bloco,
+            __farolEixo: eixo || "",
+            __farolContabilizada: false
+        };
+    }
+
+    function selecionarQuestoesBlocoFarol(banco, quantidade, bloco, eixo){
+        const total = Math.min(
+            Math.max(Number(quantidade) || 0, 0),
+            Array.isArray(banco) ? banco.length : 0
+        );
+
+        return embaralharArraySimuladoFarol(banco)
+            .slice(0, total)
+            .map(questao => marcarQuestaoSimuladoFarol(
+                questao,
+                bloco,
+                eixo
+            ));
+    }
+
+    function selecionarEspecificasBalanceadasAbaetetubaFarol(quantidade){
+        const eixos = embaralharArraySimuladoFarol(
+            obterEixosHistoriaAbaetetubaSimuladoFarol()
+                .filter(eixo => eixo.banco.length > 0)
+                .map(eixo => ({
+                    ...eixo,
+                    fila: embaralharArraySimuladoFarol(eixo.banco),
+                    indice: 0
+                }))
+        );
+
+        const selecionadas = [];
+        const alvo = Math.max(Number(quantidade) || 0, 0);
+
+        while(selecionadas.length < alvo){
+            let adicionouNestaRodada = false;
+
+            for(const eixo of eixos){
+                if(selecionadas.length >= alvo){
+                    break;
+                }
+
+                if(eixo.indice >= eixo.fila.length){
+                    continue;
+                }
+
+                const questao = eixo.fila[eixo.indice++];
+                selecionadas.push(
+                    marcarQuestaoSimuladoFarol(
+                        questao,
+                        "Conhecimentos Específicos",
+                        "Eixo " + eixo.id + " — " + eixo.nome
+                    )
+                );
+                adicionouNestaRodada = true;
+            }
+
+            if(!adicionouNestaRodada){
+                break;
+            }
+        }
+
+        return selecionadas;
+    }
+
+    function temAcessoSimuladoHistoriaAbaetetubaFarol(){
+        if(typeof window.temAcessoCargoFarol === "function"){
+            return window.temAcessoCargoFarol(
+                "abaetetuba2026",
+                "professorHistoria"
+            );
+        }
+
+        const acessos = window.acessosConcursosUsuarioFarol || {};
+        const acesso = acessos.abaetetuba2026 &&
+            acessos.abaetetuba2026.professorHistoria;
+
+        return acesso === true || !!(
+            acesso &&
+            typeof acesso === "object" &&
+            acesso.liberado === true
+        );
+    }
+
+    function exigirAcessoSimuladoHistoriaAbaetetubaFarol(){
+        if(!auth || !auth.currentUser){
+            mostrarToast("Faça login para acessar este simulado.");
+            return false;
+        }
+
+        if(!temAcessoSimuladoHistoriaAbaetetubaFarol()){
+            mostrarToast("Seu acesso a Professor de História — Abaetetuba não está liberado.");
+            return false;
+        }
+
+        return true;
+    }
+
+    function iniciarQuestoesSimuladoAbaetetubaFarol(questoes, tipo, titulo, modo){
+        if(!Array.isArray(questoes) || questoes.length === 0){
+            mostrarToast("Nenhuma questão disponível para este simulado.");
+            return;
+        }
+
+        contextoSimuladoAbaetetubaHistoriaFarol = {
+            concurso: "abaetetuba2026",
+            cargo: "professorHistoria",
+            tipo: tipo,
+            titulo: titulo,
+            modo: modo || "especifico",
+            iniciadoEm: Date.now()
+        };
+
+        desempenhoBlocosSimuladoAbaetetubaFarol = {};
+        simuladoAbaetetubaEmPreparacaoFarol = true;
+
+        tipoSimuladoAtual = tipo;
+        questoesSimulado = questoes;
+        modoSimulado = true;
+        indiceSimulado = 0;
+        acertosSimulado = 0;
+        errosSimulado = 0;
+
+        mostrarQuestaoSimulado();
+        simuladoAbaetetubaEmPreparacaoFarol = false;
+    }
+
+    window.iniciarSimuladoCompletoAbaetetubaHistoriaFarol = function(){
+        if(!exigirAcessoSimuladoHistoriaAbaetetubaFarol()){
+            return;
+        }
+
+        const portugues = selecionarQuestoesBlocoFarol(
+            obterBancoDisciplinaSimuladoFarol("portugues"),
+            15,
+            "Língua Portuguesa"
+        );
+
+        const informatica = selecionarQuestoesBlocoFarol(
+            obterBancoDisciplinaSimuladoFarol("informatica"),
+            10,
+            "Informática"
+        );
+
+        const especificas = selecionarEspecificasBalanceadasAbaetetubaFarol(15);
+
+        iniciarQuestoesSimuladoAbaetetubaFarol(
+            [
+                ...portugues,
+                ...informatica,
+                ...especificas
+            ],
+            "abaetetuba2026:professorHistoria:completo40",
+            "Simulado Completo IVIN — Professor de História",
+            "completo"
+        );
+    };
+
+    window.iniciarTreinoEspecificoHistoriaAbaetetubaFarol = function(quantidade){
+        if(!exigirAcessoSimuladoHistoriaAbaetetubaFarol()){
+            return;
+        }
+
+        const total = Math.max(Number(quantidade) || 15, 1);
+        const questoes = selecionarEspecificasBalanceadasAbaetetubaFarol(total);
+
+        iniciarQuestoesSimuladoAbaetetubaFarol(
+            questoes,
+            "abaetetuba2026:professorHistoria:especificas" + total,
+            "Treino de Conhecimentos Específicos — História",
+            "especifico"
+        );
+    };
+
+    window.iniciarTreinoEixoHistoriaAbaetetubaFarol = function(numeroEixo, quantidade){
+        if(!exigirAcessoSimuladoHistoriaAbaetetubaFarol()){
+            return;
+        }
+
+        const eixo = obterEixosHistoriaAbaetetubaSimuladoFarol()
+            .find(item => item.id === Number(numeroEixo));
+
+        if(!eixo || eixo.banco.length === 0){
+            mostrarToast("Este eixo ainda não possui questões disponíveis.");
+            return;
+        }
+
+        const total = Math.min(
+            Math.max(Number(quantidade) || 15, 1),
+            eixo.banco.length
+        );
+
+        const nomeEixo = "Eixo " + eixo.id + " — " + eixo.nome;
+        const questoes = selecionarQuestoesBlocoFarol(
+            eixo.banco,
+            total,
+            "Conhecimentos Específicos",
+            nomeEixo
+        );
+
+        iniciarQuestoesSimuladoAbaetetubaFarol(
+            questoes,
+            "abaetetuba2026:professorHistoria:eixo" + eixo.id,
+            nomeEixo,
+            "eixo"
+        );
+    };
+
+    function obterDistribuicaoTreinoRapidoAbaetetubaFarol(total){
+        const quantidade = Math.max(Number(total) || 10, 1);
+        let portugues = Math.round(quantidade * 15 / 40);
+        let informatica = Math.round(quantidade * 10 / 40);
+        let especificas = quantidade - portugues - informatica;
+
+        if(especificas < 1){
+            especificas = 1;
+            if(portugues >= informatica && portugues > 1){
+                portugues--;
+            }else if(informatica > 1){
+                informatica--;
+            }
+        }
+
+        return { portugues, informatica, especificas };
+    }
+
+    window.iniciarTreinoRapidoAbaetetubaHistoriaFarol = function(quantidade){
+        if(!exigirAcessoSimuladoHistoriaAbaetetubaFarol()){
+            return;
+        }
+
+        const total = Math.max(Number(quantidade) || 10, 1);
+        const distribuicao = obterDistribuicaoTreinoRapidoAbaetetubaFarol(total);
+
+        const portugues = selecionarQuestoesBlocoFarol(
+            obterBancoDisciplinaSimuladoFarol("portugues"),
+            distribuicao.portugues,
+            "Língua Portuguesa"
+        );
+
+        const informatica = selecionarQuestoesBlocoFarol(
+            obterBancoDisciplinaSimuladoFarol("informatica"),
+            distribuicao.informatica,
+            "Informática"
+        );
+
+        const especificas = selecionarEspecificasBalanceadasAbaetetubaFarol(
+            distribuicao.especificas
+        );
+
+        iniciarQuestoesSimuladoAbaetetubaFarol(
+            embaralharArraySimuladoFarol([
+                ...portugues,
+                ...informatica,
+                ...especificas
+            ]),
+            "abaetetuba2026:professorHistoria:rapido" + total,
+            "Treino Rápido — Professor de História",
+            "rapido"
+        );
+    };
+
+    function registrarDesempenhoQuestaoAbaetetubaFarol(questao, acertou){
+        if(!contextoSimuladoAbaetetubaHistoriaFarol || !questao){
+            return;
+        }
+
+        if(questao.__farolContabilizada === true){
+            return;
+        }
+
+        questao.__farolContabilizada = true;
+
+        const bloco = questao.__farolBloco || "Questões";
+        const atual = desempenhoBlocosSimuladoAbaetetubaFarol[bloco] || {
+            total: 0,
+            acertos: 0,
+            erros: 0
+        };
+
+        atual.total++;
+
+        if(acertou){
+            atual.acertos++;
+        }else{
+            atual.erros++;
+        }
+
+        desempenhoBlocosSimuladoAbaetetubaFarol[bloco] = atual;
+    }
+
+    function montarResumoBlocosSimuladoAbaetetubaFarol(){
+        const entradas = Object.entries(desempenhoBlocosSimuladoAbaetetubaFarol);
+
+        if(entradas.length === 0){
+            return "";
+        }
+
+        return `
+            <div class="resultado-blocos-ivin">
+                <h3>📊 Desempenho por bloco</h3>
+                <div class="grid-resultado-blocos-ivin">
+                    ${entradas.map(([nome, dados]) => {
+                        const percentual = dados.total > 0
+                            ? Math.round((dados.acertos / dados.total) * 100)
+                            : 0;
+
+                        return `
+                            <div class="resultado-bloco-ivin">
+                                <strong>${escaparHTML(nome)}</strong>
+                                <span>${dados.acertos}/${dados.total} acertos</span>
+                                <small>${percentual}% de aproveitamento</small>
+                            </div>
+                        `;
+                    }).join("")}
+                </div>
+            </div>
+        `;
+    }
+
+    function obterHistoricoLocalSimuladosAbaetetubaFarol(){
+        try{
+            const dados = JSON.parse(
+                localStorage.getItem(CHAVE_HISTORICO_SIMULADO_ABAETETUBA_HISTORIA) || "[]"
+            );
+            return Array.isArray(dados) ? dados : [];
+        }catch(erro){
+            return [];
+        }
+    }
+
+    function salvarResultadoSimuladoAbaetetubaFarol(resultado){
+        const historico = obterHistoricoLocalSimuladosAbaetetubaFarol();
+        historico.unshift(resultado);
+        localStorage.setItem(
+            CHAVE_HISTORICO_SIMULADO_ABAETETUBA_HISTORIA,
+            JSON.stringify(historico.slice(0, 10))
+        );
+
+        atualizarHistoricoSimuladosAbaetetubaHistoriaFarol();
+
+        if(!auth.currentUser){
+            return;
+        }
+
+        const referencia = db.collection("usuarios").doc(auth.currentUser.uid);
+
+        db.runTransaction(async transaction => {
+            const doc = await transaction.get(referencia);
+            const dados = doc.exists ? (doc.data() || {}) : {};
+            const atual = (
+                dados.simuladosAbaetetuba &&
+                dados.simuladosAbaetetuba.professorHistoria
+            ) || {};
+
+            const realizados = Number(atual.realizados || 0) + 1;
+            const melhorNota = Math.max(
+                Number(atual.melhorNota || 0),
+                Number(resultado.acertos || 0)
+            );
+
+            transaction.set(referencia, {
+                simuladosAbaetetuba: {
+                    professorHistoria: {
+                        realizados,
+                        melhorNota,
+                        ultimoResultado: resultado,
+                        atualizadoEm: firebase.firestore.FieldValue.serverTimestamp()
+                    }
+                }
+            }, { merge: true });
+        }).catch(erro => {
+            console.warn(
+                "O resultado foi salvo neste dispositivo, mas a sincronização com o Firestore falhou.",
+                erro
+            );
+        });
+    }
+
+    window.atualizarHistoricoSimuladosAbaetetubaHistoriaFarol = function(){
+        const area = document.getElementById("historicoSimuladosAbaetetubaHistoriaFarol");
+
+        if(!area){
+            return;
+        }
+
+        const historico = obterHistoricoLocalSimuladosAbaetetubaFarol();
+
+        if(historico.length === 0){
+            area.innerHTML = `
+                <div class="historico-simulado-vazio">
+                    Nenhum simulado de História de Abaetetuba concluído neste dispositivo.
+                </div>
+            `;
+            return;
+        }
+
+        area.innerHTML = historico.slice(0, 5).map(item => {
+            const data = new Date(item.finalizadoEm || Date.now());
+            const percentual = item.total > 0
+                ? Math.round((item.acertos / item.total) * 100)
+                : 0;
+
+            return `
+                <div class="item-historico-simulado-ivin">
+                    <div>
+                        <strong>${escaparHTML(item.titulo || "Simulado de História")}</strong>
+                        <small>${data.toLocaleString("pt-BR")}</small>
+                    </div>
+                    <span>${item.acertos}/${item.total} • ${percentual}%</span>
+                </div>
+            `;
+        }).join("");
+    };
+
+    window.atualizarPainelSimuladosAbaetetubaHistoriaFarol = function(){
+        const painel = document.getElementById("simuladosAbaetetubaHistoriaFarol");
+
+        if(!painel){
+            return;
+        }
+
+        const acesso = temAcessoSimuladoHistoriaAbaetetubaFarol();
+        painel.style.display = acesso ? "block" : "none";
+
+        if(acesso){
+            atualizarHistoricoSimuladosAbaetetubaHistoriaFarol();
+        }
+
+        const trilhaAtual = localStorage.getItem("farol_trilha_atual") || "";
+        const blocoRota = document.querySelector(".destaque-rota-simulado");
+
+        if(blocoRota){
+            const titulo = blocoRota.querySelector("h3");
+            const texto = blocoRota.querySelector("p");
+            const quantidade = blocoRota.querySelector(".info-qtd-simulado");
+            const botao = blocoRota.querySelector(".btn-simulado-rota");
+
+            if(trilhaAtual === "abaetetubaProfessorHistoria" && acesso){
+                if(titulo) titulo.textContent = "Simulado Completo IVIN — História";
+                if(texto) texto.textContent = "Reproduz a divisão do edital de Abaetetuba: Português, Informática e Conhecimentos Específicos.";
+                if(quantidade) quantidade.innerHTML = "📌 <strong>40 questões:</strong> 15 Português + 10 Informática + 15 Específicas.";
+                if(botao) botao.textContent = "🚀 Iniciar Simulado IVIN";
+            }else{
+                if(titulo) titulo.textContent = "Simulado da Minha Rota";
+                if(texto) texto.textContent = "Mistura automaticamente as disciplinas do cargo escolhido na Rota de Estudos.";
+                if(quantidade) quantidade.innerHTML = "📌 Este simulado possui <strong>50 questões</strong>.";
+                if(botao) botao.textContent = "🚀 Iniciar Simulado";
+            }
+        }
+    };
+
+    const mostrarTelaOriginalSimuladosV23 = mostrarTela;
+    mostrarTela = function(id){
+        const retorno = mostrarTelaOriginalSimuladosV23.apply(this, arguments);
+
+        if(id === "simulados"){
+            setTimeout(() => {
+                atualizarPainelSimuladosAbaetetubaHistoriaFarol();
+            }, 0);
+        }
+
+        return retorno;
+    };
+
+    const iniciarSimuladoPersonalizadoOriginalV23 = iniciarSimuladoPersonalizado;
+    iniciarSimuladoPersonalizado = function(banco, quantidade, tipo){
+        if(!simuladoAbaetetubaEmPreparacaoFarol){
+            contextoSimuladoAbaetetubaHistoriaFarol = null;
+            desempenhoBlocosSimuladoAbaetetubaFarol = {};
+        }
+
+        return iniciarSimuladoPersonalizadoOriginalV23.apply(this, arguments);
+    };
+
+    const mostrarQuestaoSimuladoOriginalV23 = mostrarQuestaoSimulado;
+    mostrarQuestaoSimulado = function(){
+        const retorno = mostrarQuestaoSimuladoOriginalV23.apply(this, arguments);
+
+        if(!contextoSimuladoAbaetetubaHistoriaFarol){
+            return retorno;
+        }
+
+        const questao = questoesSimulado[indiceSimulado];
+        const card = document.querySelector("#areaQuestao > .card");
+
+        if(card && !card.querySelector(".cabecalho-questao-simulado-ivin")){
+            const cabecalho = document.createElement("div");
+            cabecalho.className = "cabecalho-questao-simulado-ivin";
+            cabecalho.innerHTML = `
+                <span>IVIN • Abaetetuba 2026</span>
+                <strong>${escaparHTML(contextoSimuladoAbaetetubaHistoriaFarol.titulo)}</strong>
+                <small>
+                    ${escaparHTML(questao && questao.__farolBloco ? questao.__farolBloco : "Questões")}
+                    ${questao && questao.__farolEixo ? " • " + escaparHTML(questao.__farolEixo) : ""}
+                </small>
+            `;
+
+            const aviso = card.querySelector(".aviso-farol");
+            if(aviso){
+                aviso.insertAdjacentElement("afterend", cabecalho);
+            }else{
+                card.prepend(cabecalho);
+            }
+        }
+
+        return retorno;
+    };
+
+    const corrigirSimuladoOriginalV23 = corrigirSimulado;
+    corrigirSimulado = function(){
+        const resposta = document.querySelector('input[name="resposta"]:checked');
+        const questao = questoesSimulado[indiceSimulado];
+
+        if(
+            contextoSimuladoAbaetetubaHistoriaFarol &&
+            resposta &&
+            questao
+        ){
+            registrarDesempenhoQuestaoAbaetetubaFarol(
+                questao,
+                Number(resposta.value) === questao.correta
+            );
+        }
+
+        return corrigirSimuladoOriginalV23.apply(this, arguments);
+    };
+
+    const finalizarSimuladoOriginalV23 = finalizarSimulado;
+    finalizarSimulado = function(){
+        const contexto = contextoSimuladoAbaetetubaHistoriaFarol
+            ? { ...contextoSimuladoAbaetetubaHistoriaFarol }
+            : null;
+        const desempenho = JSON.parse(JSON.stringify(
+            desempenhoBlocosSimuladoAbaetetubaFarol || {}
+        ));
+        const totalAntes = acertosSimulado + errosSimulado;
+        const acertosAntes = acertosSimulado;
+        const errosAntes = errosSimulado;
+
+        const retorno = finalizarSimuladoOriginalV23.apply(this, arguments);
+
+        if(!contexto){
+            return retorno;
+        }
+
+        desempenhoBlocosSimuladoAbaetetubaFarol = desempenho;
+        const resumo = montarResumoBlocosSimuladoAbaetetubaFarol();
+        const card = document.querySelector("#areaQuestao > .card");
+
+        if(card && resumo){
+            const botoes = card.querySelectorAll("button");
+            const botaoVoltar = botoes.length ? botoes[botoes.length - 1] : null;
+
+            if(botaoVoltar){
+                botaoVoltar.insertAdjacentHTML("beforebegin", resumo + "<br>");
+            }else{
+                card.insertAdjacentHTML("beforeend", resumo);
+            }
+        }
+
+        salvarResultadoSimuladoAbaetetubaFarol({
+            concurso: contexto.concurso,
+            cargo: contexto.cargo,
+            tipo: contexto.tipo,
+            titulo: contexto.titulo,
+            modo: contexto.modo,
+            total: totalAntes,
+            acertos: acertosAntes,
+            erros: errosAntes,
+            blocos: desempenho,
+            iniciadoEm: contexto.iniciadoEm,
+            finalizadoEm: Date.now()
+        });
+
+        contextoSimuladoAbaetetubaHistoriaFarol = null;
+        desempenhoBlocosSimuladoAbaetetubaFarol = {};
+
+        return retorno;
+    };
+
+    const iniciarSimuladoMinhaRotaOriginalV23 = iniciarSimuladoMinhaRotaFarol;
+    iniciarSimuladoMinhaRotaFarol = function(){
+        const trilhaAtual = localStorage.getItem("farol_trilha_atual") || "";
+
+        if(trilhaAtual === "abaetetubaProfessorHistoria"){
+            return iniciarSimuladoCompletoAbaetetubaHistoriaFarol();
+        }
+
+        return iniciarSimuladoMinhaRotaOriginalV23.apply(this, arguments);
+    };
+
+    const iniciarTreinoRapidoMinhaRotaOriginalV23 = iniciarTreinoRapidoMinhaRotaFarol;
+    iniciarTreinoRapidoMinhaRotaFarol = function(quantidade){
+        const trilhaAtual = localStorage.getItem("farol_trilha_atual") || "";
+
+        if(trilhaAtual === "abaetetubaProfessorHistoria"){
+            return iniciarTreinoRapidoAbaetetubaHistoriaFarol(quantidade);
+        }
+
+        return iniciarTreinoRapidoMinhaRotaOriginalV23.apply(this, arguments);
+    };
+
+    const iniciarSimuladoCargoHistoriaOriginalV23 = iniciarSimuladoCargoHistoriaFarol;
+    iniciarSimuladoCargoHistoriaFarol = function(){
+        const trilhaAtual = localStorage.getItem("farol_trilha_atual") || "";
+
+        if(trilhaAtual === "abaetetubaProfessorHistoria"){
+            return iniciarSimuladoCompletoAbaetetubaHistoriaFarol();
+        }
+
+        return iniciarSimuladoCargoHistoriaOriginalV23.apply(this, arguments);
+    };
+
+    const iniciarSimuladoHistoriaOriginalV23 = iniciarSimuladoHistoria;
+    iniciarSimuladoHistoria = function(){
+        const trilhaAtual = localStorage.getItem("farol_trilha_atual") || "";
+
+        if(trilhaAtual === "abaetetubaProfessorHistoria"){
+            return iniciarTreinoEspecificoHistoriaAbaetetubaFarol(30);
+        }
+
+        return iniciarSimuladoHistoriaOriginalV23.apply(this, arguments);
+    };
+
+    auth.onAuthStateChanged(() => {
+        setTimeout(() => {
+            atualizarPainelSimuladosAbaetetubaHistoriaFarol();
+        }, 0);
+    });
+
+})();
+
+/* ==========================================================
+   FAROL DO SABER — SIMULADOS POR CONCURSO V24
+   Mantém os simulados de Barcarena e Abaetetuba separados.
+========================================================== */
+
+(function(){
+
+    const CHAVE_CONCURSO_SIMULADOS_FAROL = "farol_concurso_simulados";
+    const CONCURSOS_VALIDOS_SIMULADOS_FAROL = [
+        "barcarena2026",
+        "abaetetuba2026"
+    ];
+
+    function obterConcursoSimuladosInicialFarol(){
+        const concursoRota = localStorage.getItem("farol_concurso_atual") || "";
+        const concursoSalvo = localStorage.getItem(CHAVE_CONCURSO_SIMULADOS_FAROL) || "";
+
+        if(CONCURSOS_VALIDOS_SIMULADOS_FAROL.includes(concursoRota)){
+            return concursoRota;
+        }
+
+        if(CONCURSOS_VALIDOS_SIMULADOS_FAROL.includes(concursoSalvo)){
+            return concursoSalvo;
+        }
+
+        return "barcarena2026";
+    }
+
+    function obterTrilhaAtualSimuladosFarol(){
+        const chave = localStorage.getItem("farol_trilha_atual") || "";
+        return {
+            chave: chave,
+            dados: (
+                typeof trilhasPreparacaoFarol !== "undefined" &&
+                trilhasPreparacaoFarol[chave]
+            ) ? trilhasPreparacaoFarol[chave] : null
+        };
+    }
+
+    function trilhaEhBarcarenaSimuladosFarol(trilha){
+        if(!trilha || !trilha.dados){
+            return false;
+        }
+
+        return !trilha.dados.concurso ||
+            trilha.dados.concurso === "barcarena2026";
+    }
+
+    function temAcessoHistoriaAbaetetubaSimuladosFarol(){
+        if(typeof window.temAcessoCargoFarol === "function"){
+            return window.temAcessoCargoFarol(
+                "abaetetuba2026",
+                "professorHistoria"
+            );
+        }
+
+        const acessos = window.acessosConcursosUsuarioFarol || {};
+        const cargo = acessos.abaetetuba2026 &&
+            acessos.abaetetuba2026.professorHistoria;
+
+        return cargo === true || !!(
+            cargo &&
+            typeof cargo === "object" &&
+            cargo.liberado === true
+        );
+    }
+
+    function possuiAlgumCargoAbaetetubaSimuladosFarol(){
+        const acessos = window.acessosConcursosUsuarioFarol || {};
+        const concurso = acessos.abaetetuba2026 || {};
+
+        return Object.values(concurso).some(acesso => {
+            return acesso === true || !!(
+                acesso &&
+                typeof acesso === "object" &&
+                acesso.liberado === true
+            );
+        });
+    }
+
+    function definirBotaoConcursoSimuladosFarol(id, ativo){
+        const botao = document.getElementById(id);
+
+        if(!botao){
+            return;
+        }
+
+        botao.classList.toggle("ativo", ativo);
+        botao.setAttribute("aria-pressed", ativo ? "true" : "false");
+    }
+
+    function restaurarTextoMinhaRotaBarcarenaFarol(trilha){
+        const bloco = document.querySelector(
+            "#simuladosMinhaRotaBarcarenaFarol .destaque-rota-simulado"
+        );
+
+        if(!bloco){
+            return;
+        }
+
+        const titulo = bloco.querySelector("h3");
+        const texto = bloco.querySelector("p");
+        const quantidade = bloco.querySelector(".info-qtd-simulado");
+        const botao = bloco.querySelector(".btn-simulado-rota");
+        const nomeRota = trilha && trilha.dados
+            ? String(trilha.dados.nome || "Minha Rota")
+            : "Minha Rota";
+
+        if(titulo){
+            titulo.textContent = "Simulado da Minha Rota — " + nomeRota;
+        }
+
+        if(texto){
+            texto.textContent = "Mistura automaticamente as disciplinas do cargo escolhido na preparação de Barcarena.";
+        }
+
+        if(quantidade){
+            quantidade.innerHTML = "📌 Este simulado possui <strong>50 questões</strong>.";
+        }
+
+        if(botao){
+            botao.textContent = "🚀 Iniciar Simulado";
+        }
+    }
+
+    function atualizarBlocoMinhaRotaBarcarenaFarol(){
+        const areaRota = document.getElementById("simuladosMinhaRotaBarcarenaFarol");
+        const aviso = document.getElementById("avisoEscolherRotaBarcarenaSimuladosFarol");
+        const trilha = obterTrilhaAtualSimuladosFarol();
+        const possuiRotaBarcarena = trilhaEhBarcarenaSimuladosFarol(trilha);
+
+        if(areaRota){
+            areaRota.style.display = possuiRotaBarcarena ? "block" : "none";
+        }
+
+        if(aviso){
+            aviso.style.display = possuiRotaBarcarena ? "none" : "flex";
+        }
+
+        if(possuiRotaBarcarena){
+            restaurarTextoMinhaRotaBarcarenaFarol(trilha);
+        }
+    }
+
+    function atualizarEstadoAbaetetubaSimuladosFarol(){
+        const blocoHistoria = document.getElementById(
+            "simuladosAbaetetubaHistoriaFarol"
+        );
+        const blocoSemAcesso = document.getElementById(
+            "simuladosAbaetetubaSemAcessoFarol"
+        );
+        const mensagemSemAcesso = document.getElementById(
+            "mensagemSemAcessoSimuladosAbaetetubaFarol"
+        );
+        const estadoCartao = document.getElementById(
+            "estadoAcessoSimuladosAbaetetubaFarol"
+        );
+        const acessoHistoria = temAcessoHistoriaAbaetetubaSimuladosFarol();
+        const algumCargo = possuiAlgumCargoAbaetetubaSimuladosFarol();
+
+        if(blocoHistoria){
+            blocoHistoria.style.display = acessoHistoria ? "block" : "none";
+        }
+
+        if(blocoSemAcesso){
+            blocoSemAcesso.style.display = acessoHistoria ? "none" : "flex";
+        }
+
+        if(estadoCartao){
+            estadoCartao.textContent = acessoHistoria
+                ? "História liberada"
+                : (algumCargo ? "Acesso conforme o cargo" : "Acesso por cargo");
+        }
+
+        if(mensagemSemAcesso){
+            mensagemSemAcesso.textContent = algumCargo
+                ? "Sua conta possui acesso a Abaetetuba, mas ainda não possui Professor de História, que é o simulado publicado nesta etapa."
+                : "Sua conta ainda não possui um cargo de Abaetetuba liberado pelo administrador.";
+        }
+
+        if(
+            acessoHistoria &&
+            typeof window.atualizarHistoricoSimuladosAbaetetubaHistoriaFarol === "function"
+        ){
+            window.atualizarHistoricoSimuladosAbaetetubaHistoriaFarol();
+        }
+    }
+
+    function atualizarInterfaceSimuladosPorConcursoFarol(concurso){
+        const selecionado = CONCURSOS_VALIDOS_SIMULADOS_FAROL.includes(concurso)
+            ? concurso
+            : obterConcursoSimuladosInicialFarol();
+        const painelBarcarena = document.getElementById(
+            "painelSimuladosConcursoBarcarenaFarol"
+        );
+        const painelAbaetetuba = document.getElementById(
+            "painelSimuladosConcursoAbaetetubaFarol"
+        );
+        const status = document.getElementById("statusConcursoSimuladosFarol");
+        const barcarenaAtiva = selecionado === "barcarena2026";
+
+        localStorage.setItem(CHAVE_CONCURSO_SIMULADOS_FAROL, selecionado);
+
+        if(painelBarcarena){
+            painelBarcarena.style.display = barcarenaAtiva ? "block" : "none";
+        }
+
+        if(painelAbaetetuba){
+            painelAbaetetuba.style.display = barcarenaAtiva ? "none" : "block";
+        }
+
+        definirBotaoConcursoSimuladosFarol(
+            "btnSimuladosBarcarenaFarol",
+            barcarenaAtiva
+        );
+        definirBotaoConcursoSimuladosFarol(
+            "btnSimuladosAbaetetubaFarol",
+            !barcarenaAtiva
+        );
+
+        if(status){
+            status.textContent = barcarenaAtiva
+                ? "Exibindo: Barcarena 2026"
+                : "Exibindo: Abaetetuba 2026";
+        }
+
+        if(barcarenaAtiva){
+            atualizarBlocoMinhaRotaBarcarenaFarol();
+        }else{
+            atualizarEstadoAbaetetubaSimuladosFarol();
+        }
+    }
+
+    window.selecionarConcursoSimuladosFarol = function(concurso){
+        if(!CONCURSOS_VALIDOS_SIMULADOS_FAROL.includes(concurso)){
+            mostrarToast("Concurso de simulados não encontrado.");
+            return;
+        }
+
+        atualizarInterfaceSimuladosPorConcursoFarol(concurso);
+    };
+
+    window.abrirRotasBarcarenaSimuladosFarol = async function(){
+        mostrarTela("questoes");
+
+        if(typeof window.selecionarConcursoFarol === "function"){
+            await window.selecionarConcursoFarol("barcarena2026");
+        }
+    };
+
+    window.abrirRotasAbaetetubaSimuladosFarol = async function(){
+        mostrarTela("questoes");
+
+        if(typeof window.selecionarConcursoFarol === "function"){
+            await window.selecionarConcursoFarol("abaetetuba2026");
+        }
+    };
+
+    window.atualizarInterfaceSimuladosPorConcursoFarol =
+        atualizarInterfaceSimuladosPorConcursoFarol;
+
+    const mostrarTelaOriginalSimuladosV24 = mostrarTela;
+    mostrarTela = function(id){
+        const retorno = mostrarTelaOriginalSimuladosV24.apply(this, arguments);
+
+        if(id === "simulados"){
+            setTimeout(() => {
+                atualizarInterfaceSimuladosPorConcursoFarol(
+                    obterConcursoSimuladosInicialFarol()
+                );
+            }, 20);
+        }
+
+        return retorno;
+    };
+
+    auth.onAuthStateChanged(() => {
+        setTimeout(() => {
+            if(localStorage.getItem("farol_telaAtual") === "simulados"){
+                atualizarInterfaceSimuladosPorConcursoFarol(
+                    localStorage.getItem(CHAVE_CONCURSO_SIMULADOS_FAROL) ||
+                    obterConcursoSimuladosInicialFarol()
+                );
+            }
+        }, 50);
+    });
+
+})();
+
+/* Correção V24: os botões de História do painel de Barcarena
+   não podem herdar a rota ativa de Abaetetuba. */
+(function(){
+
+    function concursoSimuladosSelecionadoV24(){
+        return localStorage.getItem("farol_concurso_simulados") ||
+            localStorage.getItem("farol_concurso_atual") ||
+            "barcarena2026";
+    }
+
+    const iniciarSimuladoHistoriaV23AntesV24 = iniciarSimuladoHistoria;
+    iniciarSimuladoHistoria = function(){
+        if(concursoSimuladosSelecionadoV24() === "barcarena2026"){
+            const banco = obterBancoDisciplinaSimuladoFarol("historia");
+            return iniciarSimuladoPersonalizado(
+                banco,
+                limitarQuantidadeSimuladoFarol(banco, 30),
+                "historia"
+            );
+        }
+
+        return iniciarSimuladoHistoriaV23AntesV24.apply(this, arguments);
+    };
+
+    const iniciarSimuladoCargoHistoriaV23AntesV24 =
+        iniciarSimuladoCargoHistoriaFarol;
+
+    iniciarSimuladoCargoHistoriaFarol = function(){
+        if(concursoSimuladosSelecionadoV24() === "barcarena2026"){
+            const banco = [
+                ...obterBancoDisciplinaSimuladoFarol("portugues"),
+                ...obterBancoDisciplinaSimuladoFarol("informatica"),
+                ...obterBancoDisciplinaSimuladoFarol("didatica"),
+                ...obterBancoDisciplinaSimuladoFarol("historia")
+            ];
+
+            return iniciarSimuladoBancoFarol(
+                banco,
+                50,
+                "cargo:professorHistoria"
+            );
+        }
+
+        return iniciarSimuladoCargoHistoriaV23AntesV24.apply(this, arguments);
+    };
+
+})();
+
+
+/* ==========================================================
+   FAROL DO SABER — DISCIPLINAS COMUNS ABAETETUBA V25
+   - Pacote independente: comunsSuperior
+   - Acesso automático para História, Ciências ou Geografia
+   - Simulados separados de Português e Informática
+   - Treino misto seguindo 15 Português + 10 Informática
+========================================================== */
+(function(){
+    "use strict";
+
+    let contextoComunsSuperiorV25 = null;
+    let desempenhoComunsSuperiorV25 = {};
+    let iniciandoComunsSuperiorV25 = false;
+
+    const CHAVE_HISTORICO_COMUNS_SUPERIOR_V25 =
+        "farol_simulados_abaetetuba_comuns_superior";
+
+    function acessoLiberadoV25(valor){
+        return valor === true || !!(
+            valor &&
+            typeof valor === "object" &&
+            valor.liberado === true
+        );
+    }
+
+    function temAcessoComunsSuperiorV25(){
+        if(typeof window.temAcessoCargoFarol === "function"){
+            return window.temAcessoCargoFarol(
+                "abaetetuba2026",
+                "comunsSuperior"
+            );
+        }
+
+        const concurso = (
+            window.acessosConcursosUsuarioFarol || {}
+        ).abaetetuba2026 || {};
+
+        return acessoLiberadoV25(concurso.comunsSuperior) ||
+            [
+                "professorHistoria",
+                "professorCiencias",
+                "professorGeografia"
+            ].some(chave => acessoLiberadoV25(concurso[chave]));
+    }
+
+    window.temAcessoComunsSuperiorAbaetetubaFarol =
+        temAcessoComunsSuperiorV25;
+
+    function exigirAcessoComunsSuperiorV25(){
+        if(!auth || !auth.currentUser){
+            mostrarToast("Faça login para acessar este simulado.");
+            return false;
+        }
+
+        if(!temAcessoComunsSuperiorV25()){
+            mostrarToast("Seu acesso ao pacote de Disciplinas Comuns — Nível Superior ainda não foi liberado.");
+            return false;
+        }
+
+        return true;
+    }
+
+    function embaralharV25(lista){
+        const copia = [...(Array.isArray(lista) ? lista : [])];
+
+        for(let i = copia.length - 1; i > 0; i--){
+            const j = Math.floor(Math.random() * (i + 1));
+            [copia[i], copia[j]] = [copia[j], copia[i]];
+        }
+
+        return copia;
+    }
+
+    function selecionarV25(banco, quantidade, bloco){
+        const lista = Array.isArray(banco) ? banco : [];
+        const total = Math.min(
+            Math.max(Number(quantidade) || 0, 0),
+            lista.length
+        );
+
+        return embaralharV25(lista)
+            .slice(0, total)
+            .map(questao => ({
+                ...questao,
+                __farolBlocoComumV25: bloco,
+                __farolContabilizadaComumV25: false
+            }));
+    }
+
+    function iniciarQuestoesComunsSuperiorV25(questoes, tipo, titulo, modo){
+        if(!Array.isArray(questoes) || questoes.length === 0){
+            mostrarToast("Nenhuma questão disponível para este simulado.");
+            return;
+        }
+
+        contextoComunsSuperiorV25 = {
+            concurso: "abaetetuba2026",
+            cargo: "comunsSuperior",
+            tipo,
+            titulo,
+            modo: modo || "comum",
+            iniciadoEm: Date.now()
+        };
+
+        desempenhoComunsSuperiorV25 = {};
+        iniciandoComunsSuperiorV25 = true;
+
+        tipoSimuladoAtual = tipo;
+        questoesSimulado = questoes;
+        modoSimulado = true;
+        indiceSimulado = 0;
+        acertosSimulado = 0;
+        errosSimulado = 0;
+
+        mostrarQuestaoSimulado();
+        iniciandoComunsSuperiorV25 = false;
+    }
+
+    window.iniciarSimuladoPortuguesAbaetetubaSuperiorFarol = function(quantidade){
+        if(!exigirAcessoComunsSuperiorV25()){
+            return;
+        }
+
+        const total = Math.max(Number(quantidade) || 15, 1);
+        const questoes = selecionarV25(
+            obterBancoDisciplinaSimuladoFarol("portugues"),
+            total,
+            "Língua Portuguesa"
+        );
+
+        iniciarQuestoesComunsSuperiorV25(
+            questoes,
+            "abaetetuba2026:comunsSuperior:portugues" + total,
+            "Língua Portuguesa — Nível Superior",
+            "portugues"
+        );
+    };
+
+    window.iniciarSimuladoInformaticaAbaetetubaSuperiorFarol = function(quantidade){
+        if(!exigirAcessoComunsSuperiorV25()){
+            return;
+        }
+
+        const total = Math.max(Number(quantidade) || 10, 1);
+        const questoes = selecionarV25(
+            obterBancoDisciplinaSimuladoFarol("informatica"),
+            total,
+            "Informática"
+        );
+
+        iniciarQuestoesComunsSuperiorV25(
+            questoes,
+            "abaetetuba2026:comunsSuperior:informatica" + total,
+            "Informática — Nível Superior",
+            "informatica"
+        );
+    };
+
+    function distribuicaoComumV25(quantidade){
+        const total = Math.max(Number(quantidade) || 25, 2);
+        const portugues = Math.max(1, Math.round(total * 15 / 25));
+        const informatica = Math.max(1, total - portugues);
+
+        return { total, portugues, informatica };
+    }
+
+    window.iniciarSimuladoComumAbaetetubaSuperiorFarol = function(quantidade){
+        if(!exigirAcessoComunsSuperiorV25()){
+            return;
+        }
+
+        const distribuicao = distribuicaoComumV25(quantidade);
+        const portugues = selecionarV25(
+            obterBancoDisciplinaSimuladoFarol("portugues"),
+            distribuicao.portugues,
+            "Língua Portuguesa"
+        );
+        const informatica = selecionarV25(
+            obterBancoDisciplinaSimuladoFarol("informatica"),
+            distribuicao.informatica,
+            "Informática"
+        );
+        const questoes = embaralharV25([...portugues, ...informatica]);
+
+        iniciarQuestoesComunsSuperiorV25(
+            questoes,
+            "abaetetuba2026:comunsSuperior:misto" + distribuicao.total,
+            distribuicao.total === 25
+                ? "Simulado Comum IVIN — Nível Superior"
+                : "Treino Misto — Disciplinas Comuns",
+            distribuicao.total === 25 ? "completoComum" : "misto"
+        );
+    };
+
+    function registrarDesempenhoComumV25(questao, acertou){
+        if(!contextoComunsSuperiorV25 || !questao){
+            return;
+        }
+
+        if(questao.__farolContabilizadaComumV25 === true){
+            return;
+        }
+
+        questao.__farolContabilizadaComumV25 = true;
+        const bloco = questao.__farolBlocoComumV25 || "Questões";
+        const atual = desempenhoComunsSuperiorV25[bloco] || {
+            total: 0,
+            acertos: 0,
+            erros: 0
+        };
+
+        atual.total++;
+        if(acertou){
+            atual.acertos++;
+        }else{
+            atual.erros++;
+        }
+
+        desempenhoComunsSuperiorV25[bloco] = atual;
+    }
+
+    function resumoDesempenhoComumV25(){
+        const entradas = Object.entries(desempenhoComunsSuperiorV25);
+
+        if(entradas.length === 0){
+            return "";
+        }
+
+        return `
+            <div class="resultado-blocos-ivin resultado-comuns-superior-v25">
+                <h3>📊 Desempenho nas disciplinas comuns</h3>
+                <div class="grid-resultado-blocos-ivin">
+                    ${entradas.map(([nome, dados]) => {
+                        const percentual = dados.total > 0
+                            ? Math.round((dados.acertos / dados.total) * 100)
+                            : 0;
+
+                        return `
+                            <div class="resultado-bloco-ivin">
+                                <strong>${escaparHTML(nome)}</strong>
+                                <span>${dados.acertos}/${dados.total} acertos</span>
+                                <small>${percentual}% de aproveitamento</small>
+                            </div>
+                        `;
+                    }).join("")}
+                </div>
+            </div>
+        `;
+    }
+
+    function obterHistoricoComunsV25(){
+        try{
+            const dados = JSON.parse(
+                localStorage.getItem(CHAVE_HISTORICO_COMUNS_SUPERIOR_V25) || "[]"
+            );
+            return Array.isArray(dados) ? dados : [];
+        }catch(erro){
+            return [];
+        }
+    }
+
+    function salvarResultadoComunsV25(resultado){
+        const historico = obterHistoricoComunsV25();
+        historico.unshift(resultado);
+        localStorage.setItem(
+            CHAVE_HISTORICO_COMUNS_SUPERIOR_V25,
+            JSON.stringify(historico.slice(0, 10))
+        );
+
+        atualizarHistoricoComunsV25();
+
+        if(!auth.currentUser){
+            return;
+        }
+
+        const referencia = db.collection("usuarios").doc(auth.currentUser.uid);
+
+        db.runTransaction(async transaction => {
+            const doc = await transaction.get(referencia);
+            const dados = doc.exists ? (doc.data() || {}) : {};
+            const simuladosAtuais = dados.simuladosAbaetetuba || {};
+            const atual = simuladosAtuais.comunsSuperior || {};
+            const realizados = Number(atual.realizados || 0) + 1;
+            const melhorPercentual = Math.max(
+                Number(atual.melhorPercentual || 0),
+                resultado.total > 0
+                    ? Math.round((resultado.acertos / resultado.total) * 100)
+                    : 0
+            );
+
+            transaction.set(referencia, {
+                simuladosAbaetetuba: {
+                    ...simuladosAtuais,
+                    comunsSuperior: {
+                        realizados,
+                        melhorPercentual,
+                        ultimoResultado: resultado,
+                        atualizadoEm: firebase.firestore.FieldValue.serverTimestamp()
+                    }
+                }
+            }, { merge: true });
+        }).catch(erro => {
+            console.warn(
+                "O resultado comum foi salvo neste dispositivo, mas a sincronização com o Firestore falhou.",
+                erro
+            );
+        });
+    }
+
+    function atualizarHistoricoComunsV25(){
+        const area = document.getElementById(
+            "historicoSimuladosAbaetetubaComunsSuperiorFarol"
+        );
+
+        if(!area){
+            return;
+        }
+
+        const historico = obterHistoricoComunsV25();
+
+        if(historico.length === 0){
+            area.innerHTML = `
+                <div class="historico-simulado-vazio">
+                    Nenhum simulado das disciplinas comuns concluído neste dispositivo.
+                </div>
+            `;
+            return;
+        }
+
+        area.innerHTML = historico.slice(0, 5).map(item => {
+            const data = new Date(item.finalizadoEm || Date.now());
+            const percentual = item.total > 0
+                ? Math.round((item.acertos / item.total) * 100)
+                : 0;
+
+            return `
+                <div class="item-historico-simulado-ivin">
+                    <div>
+                        <strong>${escaparHTML(item.titulo || "Disciplinas Comuns")}</strong>
+                        <small>${data.toLocaleString("pt-BR")}</small>
+                    </div>
+                    <span>${item.acertos}/${item.total} • ${percentual}%</span>
+                </div>
+            `;
+        }).join("");
+    }
+
+    window.atualizarHistoricoSimuladosAbaetetubaComunsSuperiorFarol =
+        atualizarHistoricoComunsV25;
+
+    function atualizarPainelComunsSuperiorV25(){
+        const painel = document.getElementById(
+            "simuladosAbaetetubaComunsSuperiorFarol"
+        );
+        const bloqueio = document.getElementById(
+            "simuladosAbaetetubaSemAcessoFarol"
+        );
+        const estado = document.getElementById(
+            "estadoAcessoSimuladosAbaetetubaFarol"
+        );
+        const acessoComum = temAcessoComunsSuperiorV25();
+        const acessoHistoria = typeof window.temAcessoCargoFarol === "function"
+            ? window.temAcessoCargoFarol("abaetetuba2026", "professorHistoria")
+            : false;
+
+        if(painel){
+            painel.style.display = acessoComum ? "block" : "none";
+        }
+
+        if(acessoComum && bloqueio){
+            bloqueio.style.display = "none";
+        }
+
+        if(estado && acessoComum){
+            estado.textContent = acessoHistoria
+                ? "Comuns Superior + História"
+                : "Comuns Superior liberado";
+        }
+
+        if(acessoComum){
+            atualizarHistoricoComunsV25();
+        }
+    }
+
+    window.atualizarPainelComunsSuperiorAbaetetubaFarol =
+        atualizarPainelComunsSuperiorV25;
+
+    const mostrarTelaAntesV25 = mostrarTela;
+    mostrarTela = function(id){
+        const retorno = mostrarTelaAntesV25.apply(this, arguments);
+
+        if(id === "simulados"){
+            setTimeout(atualizarPainelComunsSuperiorV25, 35);
+        }
+
+        return retorno;
+    };
+
+    const selecionarConcursoAntesV25 =
+        window.selecionarConcursoSimuladosFarol;
+
+    if(typeof selecionarConcursoAntesV25 === "function"){
+        window.selecionarConcursoSimuladosFarol = function(concurso){
+            const retorno = selecionarConcursoAntesV25.apply(this, arguments);
+            setTimeout(atualizarPainelComunsSuperiorV25, 0);
+            return retorno;
+        };
+    }
+
+    const iniciarPersonalizadoAntesV25 = iniciarSimuladoPersonalizado;
+    iniciarSimuladoPersonalizado = function(){
+        if(!iniciandoComunsSuperiorV25){
+            contextoComunsSuperiorV25 = null;
+            desempenhoComunsSuperiorV25 = {};
+        }
+        return iniciarPersonalizadoAntesV25.apply(this, arguments);
+    };
+
+    const mostrarQuestaoAntesV25 = mostrarQuestaoSimulado;
+    mostrarQuestaoSimulado = function(){
+        const retorno = mostrarQuestaoAntesV25.apply(this, arguments);
+
+        if(!contextoComunsSuperiorV25){
+            return retorno;
+        }
+
+        const questao = questoesSimulado[indiceSimulado];
+        const card = document.querySelector("#areaQuestao > .card");
+
+        if(card && !card.querySelector(".cabecalho-questao-comuns-v25")){
+            const cabecalho = document.createElement("div");
+            cabecalho.className =
+                "cabecalho-questao-simulado-ivin cabecalho-questao-comuns-v25";
+            cabecalho.innerHTML = `
+                <span>IVIN • Abaetetuba 2026 • Nível Superior</span>
+                <strong>${escaparHTML(contextoComunsSuperiorV25.titulo)}</strong>
+                <small>${escaparHTML(
+                    questao && questao.__farolBlocoComumV25
+                        ? questao.__farolBlocoComumV25
+                        : "Disciplinas Comuns"
+                )}</small>
+            `;
+
+            const aviso = card.querySelector(".aviso-farol");
+            if(aviso){
+                aviso.insertAdjacentElement("afterend", cabecalho);
+            }else{
+                card.prepend(cabecalho);
+            }
+        }
+
+        return retorno;
+    };
+
+    const corrigirAntesV25 = corrigirSimulado;
+    corrigirSimulado = function(){
+        const resposta = document.querySelector('input[name="resposta"]:checked');
+        const questao = questoesSimulado[indiceSimulado];
+
+        if(contextoComunsSuperiorV25 && resposta && questao){
+            registrarDesempenhoComumV25(
+                questao,
+                Number(resposta.value) === questao.correta
+            );
+        }
+
+        return corrigirAntesV25.apply(this, arguments);
+    };
+
+    const finalizarAntesV25 = finalizarSimulado;
+    finalizarSimulado = function(){
+        const contexto = contextoComunsSuperiorV25
+            ? { ...contextoComunsSuperiorV25 }
+            : null;
+        const desempenho = JSON.parse(JSON.stringify(
+            desempenhoComunsSuperiorV25 || {}
+        ));
+        const totalAntes = acertosSimulado + errosSimulado;
+        const acertosAntes = acertosSimulado;
+        const errosAntes = errosSimulado;
+
+        const retorno = finalizarAntesV25.apply(this, arguments);
+
+        if(!contexto){
+            return retorno;
+        }
+
+        desempenhoComunsSuperiorV25 = desempenho;
+        const resumo = resumoDesempenhoComumV25();
+        const card = document.querySelector("#areaQuestao > .card");
+
+        if(card && resumo){
+            const botoes = card.querySelectorAll("button");
+            const botaoVoltar = botoes.length ? botoes[botoes.length - 1] : null;
+
+            if(botaoVoltar){
+                botaoVoltar.insertAdjacentHTML("beforebegin", resumo + "<br>");
+            }else{
+                card.insertAdjacentHTML("beforeend", resumo);
+            }
+        }
+
+        salvarResultadoComunsV25({
+            concurso: contexto.concurso,
+            pacote: contexto.cargo,
+            tipo: contexto.tipo,
+            titulo: contexto.titulo,
+            modo: contexto.modo,
+            total: totalAntes,
+            acertos: acertosAntes,
+            erros: errosAntes,
+            blocos: desempenho,
+            iniciadoEm: contexto.iniciadoEm,
+            finalizadoEm: Date.now()
+        });
+
+        contextoComunsSuperiorV25 = null;
+        desempenhoComunsSuperiorV25 = {};
+        return retorno;
+    };
+
+    // Quando a rota comum estiver selecionada, o botão genérico da Minha Rota
+    // inicia o simulado comum de 25 questões, e o treino rápido mantém 60/40.
+    const iniciarMinhaRotaAntesV25 = iniciarSimuladoMinhaRotaFarol;
+    iniciarSimuladoMinhaRotaFarol = function(){
+        const trilhaAtual = localStorage.getItem("farol_trilha_atual") || "";
+
+        if(trilhaAtual === "abaetetubaComunsSuperior"){
+            return window.iniciarSimuladoComumAbaetetubaSuperiorFarol(25);
+        }
+
+        return iniciarMinhaRotaAntesV25.apply(this, arguments);
+    };
+
+    const iniciarRapidoAntesV25 = iniciarTreinoRapidoMinhaRotaFarol;
+    iniciarTreinoRapidoMinhaRotaFarol = function(quantidade){
+        const trilhaAtual = localStorage.getItem("farol_trilha_atual") || "";
+
+        if(trilhaAtual === "abaetetubaComunsSuperior"){
+            return window.iniciarSimuladoComumAbaetetubaSuperiorFarol(
+                quantidade || 10
+            );
+        }
+
+        return iniciarRapidoAntesV25.apply(this, arguments);
+    };
+
+    auth.onAuthStateChanged(() => {
+        setTimeout(atualizarPainelComunsSuperiorV25, 70);
+    });
+
+})();
+
+/* ==========================================================
+   FAROL DO SABER — DUELOS ABAETETUBA V26
+   Mantém Barcarena intacta e acrescenta:
+   - Português Superior
+   - Informática Superior
+   - Disciplinas Comuns (6 Português + 4 Informática)
+   - História Específica (10 questões balanceadas pelos eixos)
+   - Duelo Completo de História (4 Português + 2 Informática + 4 História)
+========================================================== */
+
+(function(){
+
+    const CHAVE_CONCURSO_DUELO_V26 = "farol_duelo_concurso_atual";
+
+    let concursoDueloAtualV26 =
+        localStorage.getItem(CHAVE_CONCURSO_DUELO_V26) || "barcarena2026";
+
+    const chavesPortuguesDueloV26 = [
+        "parafraseResumoAbaetetuba",
+        "discursoDiretoIndiretoAbaetetuba"
+    ];
+
+    const chavesInformaticaDueloV26 = [
+        "hardware",
+        "software",
+        "arquivos",
+        "office",
+        "internet"
+    ];
+
+    const eixosHistoriaDueloV26 = [
+        {
+            id: 1,
+            nome: "Ensino de História, historiografia, fontes e temporalidade",
+            chaves: [
+                "fundamentosEnsinoHistoria",
+                "cienciaHistoricaOficioHistoriador",
+                "fontesLinguagensHistoriaAbaetetuba"
+            ]
+        },
+        {
+            id: 2,
+            nome: "História do Brasil, identidades e historiografia brasileira",
+            chaves: [
+                "formacaoSocialCulturalBrasileira",
+                "cortePortuguesaFormacaoEstadoNacionalBrasileiro",
+                "estruturasPoliticasEconomicasSociaisEstadoImperialBrasileiro",
+                "brasilTransicaoSeculoXIXParaXX",
+                "historiografiaIdentidadesBrasilAbaetetuba"
+            ]
+        },
+        {
+            id: 3,
+            nome: "História regional, local, Amazônia e Pará",
+            chaves: [
+                "historiaRegionalLocalAmazoniaParaAbaetetuba",
+                "politicaMilitarAmazonia",
+                "populacoesTradicionaisBrasilOntemHoje"
+            ]
+        },
+        {
+            id: 4,
+            nome: "História da América e suas identidades",
+            chaves: [
+                "povosPreColombianos",
+                "estadosModernosApropriacaoAmerica",
+                "mercantilismoColonizacaoAmerica",
+                "historiaAmericaIdentidadesAbaetetuba"
+            ]
+        },
+        {
+            id: 5,
+            nome: "Lutas sociais e construção de identidades",
+            chaves: [
+                "brasilColonialSociedadeEconomiaResistencias",
+                "movimentosAnticoloniaisBrasil",
+                "revoltasMovimentosBrasilImperial",
+                "lutasSociaisIdentidadesAbaetetuba"
+            ]
+        },
+        {
+            id: 6,
+            nome: "Antiguidade Clássica e seus legados culturais",
+            chaves: [
+                "civilizacoesAntiguidadeClassicaGreciaRoma",
+                "legadosAntiguidadeClassicaAbaetetuba"
+            ]
+        },
+        {
+            id: 7,
+            nome: "Europa Medieval: convívios e confrontos culturais",
+            chaves: [
+                "trabalhoCulturaEconomiaMentalidadeMedievoOcidental",
+                "conviviosConfrontosEuropaMedievalAbaetetuba"
+            ]
+        },
+        {
+            id: 8,
+            nome: "História africana e relações com Europa e América",
+            chaves: [
+                "imperiosReinosAfricanosSonghaiMaliGanaPovoBanto",
+                "aspectosEconomicosFormasTrabalhoBrasilColonialImperial",
+                "lutasResistenciasIndependenciasDescolonizacoesAfricaAsia",
+                "historiaAfricaRelacoesEuropaAmericaAbaetetuba"
+            ]
+        },
+        {
+            id: 9,
+            nome: "Capitalismo, lutas sociais, cidadania e cultura",
+            chaves: [
+                "transicaoFeudalismoCapitalismo",
+                "revolucaoIndustrialExpansaoImperialistaSeculosXIXeXX",
+                "primeiraGuerraRevolucaoRussaUniaoSovietica",
+                "criseEconomicaMundialAvancoRegimesTotalitariosEuropa",
+                "segundaGuerraMundialGuerraFria",
+                "mundoContemporaneoEraGlobalizacao",
+                "capitalismoLutasCidadaniaCulturaAbaetetuba"
+            ]
+        },
+        {
+            id: 10,
+            nome: "Didática, currículo, BNCC e legislação educacional",
+            chaves: [
+                "didatica",
+                "planejamento",
+                "avaliacao",
+                "curriculo",
+                "bncc",
+                "ldb",
+                "eca",
+                "pne",
+                "inclusiva",
+                "constituicaoGestaoLegislacaoEducacionalAbaetetuba"
+            ]
+        }
+    ];
+
+    const nomesTopicosDueloAbaetetubaV27 = {
+        parafraseResumoAbaetetuba: "🧠 Paráfrase, perífrase, síntese e resumo",
+        discursoDiretoIndiretoAbaetetuba: "🗣️ Discurso direto e indireto",
+        hardware: "💻 Hardware e periféricos",
+        software: "⚙️ Software e Sistema Operacional Windows",
+        arquivos: "🗂️ Arquivos, pastas e backup",
+        office: "📊 Word, Excel, Writer e Calc",
+        internet: "🌐 Internet, intranet e correio eletrônico"
+    };
+
+    const assuntosPortuguesDueloAbaetetubaV27 =
+        chavesPortuguesDueloV26.map(chave => ({
+            chave,
+            nome: nomesTopicosDueloAbaetetubaV27[chave] || chave,
+            descricao: "Duelo específico deste tópico de Língua Portuguesa.",
+            modo: "topicoPortugues"
+        }));
+
+    const assuntosInformaticaDueloAbaetetubaV27 =
+        chavesInformaticaDueloV26.map(chave => ({
+            chave,
+            nome: nomesTopicosDueloAbaetetubaV27[chave] || chave,
+            descricao: "Duelo específico deste tópico de Informática.",
+            modo: "topicoInformatica"
+        }));
+
+    const assuntosHistoriaDueloAbaetetubaV27 =
+        eixosHistoriaDueloV26.map(eixo => ({
+            chave: `abaetetubaDueloHistoriaEixo${eixo.id}`,
+            nome: `Eixo ${eixo.id} — ${eixo.nome}`,
+            descricao: "Duelo equilibrado entre os subtemas deste eixo.",
+            modo: "historiaEixo",
+            eixoId: eixo.id
+        }));
+
+    const gruposDueloAbaetetubaV26 = [
+        {
+            disciplina: "abaetetubaPortuguesSuperior",
+            nome: "📖 Português — Superior",
+            exige: "comunsSuperior",
+            assuntos: assuntosPortuguesDueloAbaetetubaV27
+        },
+        {
+            disciplina: "abaetetubaInformaticaSuperior",
+            nome: "💻 Informática — Superior",
+            exige: "comunsSuperior",
+            assuntos: assuntosInformaticaDueloAbaetetubaV27
+        },
+        {
+            disciplina: "abaetetubaComunsSuperior",
+            nome: "📚 Disciplinas Comuns",
+            exige: "comunsSuperior",
+            assuntos: [
+                {
+                    chave: "abaetetubaDueloComumMistoSuperior",
+                    nome: "📚 Português + Informática",
+                    descricao: "Distribuição proporcional: 60% de Português e 40% de Informática.",
+                    modo: "comumMisto"
+                }
+            ]
+        },
+        {
+            disciplina: "abaetetubaHistoriaEspecifica",
+            nome: "📜 História Específica",
+            exige: "professorHistoria",
+            assuntos: assuntosHistoriaDueloAbaetetubaV27
+        },
+        {
+            disciplina: "abaetetubaHistoriaCompleto",
+            nome: "🧭 Duelo Completo — História",
+            exige: "professorHistoria",
+            assuntos: [
+                {
+                    chave: "abaetetubaDueloHistoriaCompleto",
+                    nome: "🧭 Duelo completo do cargo",
+                    descricao: "Distribuição proporcional: 40% Português, 20% Informática e 40% História.",
+                    modo: "historiaCompleto"
+                }
+            ]
+        }
+    ];
+
+    function embaralharDueloV26(lista){
+        const copia = [...(Array.isArray(lista) ? lista : [])];
+
+        for(let i = copia.length - 1; i > 0; i--){
+            const j = Math.floor(Math.random() * (i + 1));
+            [copia[i], copia[j]] = [copia[j], copia[i]];
+        }
+
+        return copia;
+    }
+
+    function acessoLiberadoDueloV26(valor){
+        return valor === true || !!(
+            valor &&
+            typeof valor === "object" &&
+            valor.liberado === true
+        );
+    }
+
+    function temAcessoDueloV26(tipo){
+        if(typeof window.temAcessoCargoFarol === "function"){
+            return window.temAcessoCargoFarol("abaetetuba2026", tipo);
+        }
+
+        const concursos = window.acessosConcursosUsuarioFarol || {};
+        const abaetetuba = concursos.abaetetuba2026 || {};
+
+        if(tipo === "comunsSuperior"){
+            return acessoLiberadoDueloV26(abaetetuba.comunsSuperior) ||
+                [
+                    "professorHistoria",
+                    "professorCiencias",
+                    "professorGeografia"
+                ].some(chave => acessoLiberadoDueloV26(abaetetuba[chave]));
+        }
+
+        return acessoLiberadoDueloV26(abaetetuba[tipo]);
+    }
+
+    function grupoAbaetetubaDueloV26(disciplina){
+        return gruposDueloAbaetetubaV26.find(
+            grupo => grupo.disciplina === disciplina
+        ) || null;
+    }
+
+    function assuntoAbaetetubaDueloV26(chave){
+        for(const grupo of gruposDueloAbaetetubaV26){
+            const assunto = grupo.assuntos.find(item => item.chave === chave);
+
+            if(assunto){
+                return {
+                    ...assunto,
+                    disciplina: grupo.disciplina,
+                    nomeDisciplina: grupo.nome,
+                    exige: grupo.exige
+                };
+            }
+        }
+
+        return null;
+    }
+
+    function refsPorChavesDueloV26(chaves, bloco, eixo){
+        return (Array.isArray(chaves) ? chaves : []).flatMap(chave => {
+            const banco = Array.isArray(bancoQuestoes[chave])
+                ? bancoQuestoes[chave]
+                : [];
+
+            return banco.map((_, indice) => ({
+                chave,
+                indice,
+                bloco: bloco || "Questões",
+                eixo: eixo || ""
+            }));
+        });
+    }
+
+    function selecionarRefsDueloV26(refs, quantidade){
+        return embaralharDueloV26(refs)
+            .slice(0, Math.min(Number(quantidade) || 0, refs.length));
+    }
+
+    function selecionarRefsHistoriaDueloV26(quantidade){
+        const filas = embaralharDueloV26(
+            eixosHistoriaDueloV26.map(eixo => ({
+                ...eixo,
+                refs: embaralharDueloV26(
+                    refsPorChavesDueloV26(
+                        eixo.chaves,
+                        "Conhecimentos Específicos",
+                        `Eixo ${eixo.id} — ${eixo.nome}`
+                    )
+                ),
+                indiceAtual: 0
+            })).filter(eixo => eixo.refs.length > 0)
+        );
+
+        const selecionadas = [];
+        const alvo = Math.max(Number(quantidade) || 0, 0);
+
+        while(selecionadas.length < alvo){
+            let adicionou = false;
+
+            for(const eixo of filas){
+                if(selecionadas.length >= alvo){
+                    break;
+                }
+
+                if(eixo.indiceAtual >= eixo.refs.length){
+                    continue;
+                }
+
+                selecionadas.push(eixo.refs[eixo.indiceAtual++]);
+                adicionou = true;
+            }
+
+            if(!adicionou){
+                break;
+            }
+        }
+
+        return selecionadas;
+    }
+
+    function quantidadeSelecionadaDueloAbaetetubaV26(){
+        const campo = document.getElementById("dueloQuantidade");
+        const valor = Number(campo ? campo.value : 10);
+
+        return [10, 15, 20].includes(valor) ? valor : 10;
+    }
+
+    function distribuirQuantidadeDueloV26(total, percentuais){
+        const valores = percentuais.map(percentual =>
+            Math.floor(total * percentual)
+        );
+
+        let restante = total - valores.reduce((soma, valor) => soma + valor, 0);
+        let indice = 0;
+
+        while(restante > 0){
+            valores[indice % valores.length]++;
+            indice++;
+            restante--;
+        }
+
+        return valores;
+    }
+
+    function construirRefsModoDueloV26(chaveAssunto){
+        const quantidade = quantidadeSelecionadaDueloAbaetetubaV26();
+
+        const refsPortugues = refsPorChavesDueloV26(
+            chavesPortuguesDueloV26,
+            "Língua Portuguesa"
+        );
+
+        const refsInformatica = refsPorChavesDueloV26(
+            chavesInformaticaDueloV26,
+            "Informática"
+        );
+
+        if(
+            chavesPortuguesDueloV26.includes(chaveAssunto) ||
+            chavesInformaticaDueloV26.includes(chaveAssunto)
+        ){
+            return selecionarRefsDueloV26(
+                refsPorChavesDueloV26(
+                    [chaveAssunto],
+                    chavesPortuguesDueloV26.includes(chaveAssunto)
+                        ? "Língua Portuguesa"
+                        : "Informática"
+                ),
+                quantidade
+            );
+        }
+
+        const correspondenciaEixo =
+            String(chaveAssunto || "").match(
+                /^abaetetubaDueloHistoriaEixo(\d+)$/
+            );
+
+        if(correspondenciaEixo){
+            const eixoId = Number(correspondenciaEixo[1]);
+            const eixo = eixosHistoriaDueloV26.find(
+                item => item.id === eixoId
+            );
+
+            if(!eixo){
+                return [];
+            }
+
+            return selecionarRefsDueloV26(
+                refsPorChavesDueloV26(
+                    eixo.chaves,
+                    "Conhecimentos Específicos",
+                    `Eixo ${eixo.id} — ${eixo.nome}`
+                ),
+                quantidade
+            );
+        }
+
+        if(chaveAssunto === "abaetetubaDueloPortuguesSuperior"){
+            return selecionarRefsDueloV26(refsPortugues, quantidade);
+        }
+
+        if(chaveAssunto === "abaetetubaDueloInformaticaSuperior"){
+            return selecionarRefsDueloV26(refsInformatica, quantidade);
+        }
+
+        if(chaveAssunto === "abaetetubaDueloComumMistoSuperior"){
+            const [qtdPortugues, qtdInformatica] =
+                distribuirQuantidadeDueloV26(quantidade, [0.60, 0.40]);
+
+            return embaralharDueloV26([
+                ...selecionarRefsDueloV26(refsPortugues, qtdPortugues),
+                ...selecionarRefsDueloV26(refsInformatica, qtdInformatica)
+            ]);
+        }
+
+        if(chaveAssunto === "abaetetubaDueloHistoriaEspecifica"){
+            return embaralharDueloV26(
+                selecionarRefsHistoriaDueloV26(quantidade)
+            );
+        }
+
+        if(chaveAssunto === "abaetetubaDueloHistoriaCompleto"){
+            const [qtdPortugues, qtdInformatica, qtdHistoria] =
+                distribuirQuantidadeDueloV26(quantidade, [0.40, 0.20, 0.40]);
+
+            return embaralharDueloV26([
+                ...selecionarRefsDueloV26(refsPortugues, qtdPortugues),
+                ...selecionarRefsDueloV26(refsInformatica, qtdInformatica),
+                ...selecionarRefsHistoriaDueloV26(qtdHistoria)
+            ]);
+        }
+
+        return [];
+    }
+
+    function reconstruirQuestoesRefsDueloV26(refs){
+        return (Array.isArray(refs) ? refs : []).map(ref => {
+            const banco = Array.isArray(bancoQuestoes[ref.chave])
+                ? bancoQuestoes[ref.chave]
+                : [];
+            const questao = banco[Number(ref.indice)];
+
+            if(!questao){
+                return null;
+            }
+
+            return {
+                ...questao,
+                __dueloBlocoV26: ref.bloco || "Questões",
+                __dueloEixoV26: ref.eixo || ""
+            };
+        }).filter(Boolean);
+    }
+
+    function mostrarBloqueioDueloAbaetetubaV26(tipo){
+        if(tipo === "professorHistoria"){
+            mostrarToast(
+                "Este duelo exige acesso a Professor de História — Abaetetuba."
+            );
+            return;
+        }
+
+        mostrarToast(
+            "Este duelo exige o pacote Disciplinas Comuns — Nível Superior ou um cargo superior de Abaetetuba."
+        );
+    }
+
+    window.mostrarBloqueioDueloAbaetetubaV26 =
+        mostrarBloqueioDueloAbaetetubaV26;
+
+    function renderizarSeletorConcursoDueloV26(){
+        const area = document.getElementById("dueloConcursosFarolV26");
+
+        if(!area){
+            return;
+        }
+
+        area.innerHTML = `
+            <button
+                class="duelo-concurso-v26 ${concursoDueloAtualV26 === "barcarena2026" ? "selecionado" : ""}"
+                onclick="selecionarConcursoDueloFarol('barcarena2026')">
+                <span>🏛️</span>
+                <strong>Barcarena 2026</strong>
+                <small>Duelos atuais do Farol</small>
+            </button>
+
+            <button
+                class="duelo-concurso-v26 ${concursoDueloAtualV26 === "abaetetuba2026" ? "selecionado" : ""}"
+                onclick="selecionarConcursoDueloFarol('abaetetuba2026')">
+                <span>🧭</span>
+                <strong>Abaetetuba 2026</strong>
+                <small>Comuns e História</small>
+            </button>
+        `;
+    }
+
+    function atualizarCabecalhoDueloV26(){
+        const titulo = document.getElementById("tituloDueloFarolV26");
+        const descricao = document.getElementById("descricaoDueloFarolV26");
+        const quantidade = document.getElementById("dueloQuantidade");
+        const quantidadeBloco = document.getElementById("dueloQuantidadeBlocoV26");
+        const buscaBloco = document.getElementById("dueloBuscaTopicoBlocoV26");
+        const estado = document.getElementById("estadoAcessoDueloAbaetetubaV26");
+
+        if(concursoDueloAtualV26 === "abaetetuba2026"){
+            if(titulo){
+                titulo.textContent = "⚔️ Duelos — Abaetetuba 2026";
+            }
+
+            if(descricao){
+                descricao.textContent =
+                    "Escolha um modo de duelo. Português e Informática são compartilhados entre os cargos superiores; História exige acesso ao cargo.";
+            }
+
+            if(quantidade){
+                const valorAtual = Number(quantidade.value);
+
+                quantidade.innerHTML = `
+                    <option value="10">10 questões</option>
+                    <option value="15">15 questões</option>
+                    <option value="20">20 questões</option>
+                `;
+
+                quantidade.value = [10, 15, 20].includes(valorAtual)
+                    ? String(valorAtual)
+                    : "10";
+
+                quantidade.disabled = false;
+            }
+
+            if(quantidadeBloco){
+                quantidadeBloco.querySelector("strong").textContent =
+                    "3. Quantidade de questões";
+            }
+
+            if(buscaBloco){
+                buscaBloco.style.display = "none";
+            }
+
+            if(estado){
+                const comum = temAcessoDueloV26("comunsSuperior");
+                const historia = temAcessoDueloV26("professorHistoria");
+
+                estado.style.display = "block";
+                estado.innerHTML = `
+                    <strong>Seu acesso nesta área:</strong>
+                    <span>${comum ? "✅ Disciplinas Comuns — Superior" : "🔒 Disciplinas Comuns — Superior"}</span>
+                    <span>${historia ? "✅ Professor de História" : "🔒 Professor de História"}</span>
+                `;
+            }
+        }
+        else{
+            if(titulo){
+                titulo.textContent = "⚔️ Duelo do Saber — Barcarena";
+            }
+
+            if(descricao){
+                descricao.textContent =
+                    "Crie um desafio em etapas: primeiro escolha a disciplina, depois o tópico, selecione a quantidade de questões e envie o código para outro aluno.";
+            }
+
+            if(quantidade){
+                const valorAtual = Number(quantidade.value);
+
+                quantidade.innerHTML = `
+                    <option value="5">5 questões</option>
+                    <option value="10">10 questões</option>
+                    <option value="15">15 questões</option>
+                `;
+
+                quantidade.value = [5, 10, 15].includes(valorAtual)
+                    ? String(valorAtual)
+                    : "5";
+
+                quantidade.disabled = false;
+            }
+
+            if(buscaBloco){
+                buscaBloco.style.display = "block";
+            }
+
+            if(estado){
+                estado.style.display = "none";
+                estado.innerHTML = "";
+            }
+        }
+    }
+
+    window.selecionarConcursoDueloFarol = function(concurso){
+        concursoDueloAtualV26 = concurso === "abaetetuba2026"
+            ? "abaetetuba2026"
+            : "barcarena2026";
+
+        localStorage.setItem(
+            CHAVE_CONCURSO_DUELO_V26,
+            concursoDueloAtualV26
+        );
+
+        dueloDisciplinaSelecionada = "";
+        dueloAssuntoSelecionado = "";
+
+        const busca = document.getElementById("buscaTopicoDuelo");
+        if(busca){
+            busca.value = "";
+        }
+
+        const criado = document.getElementById("codigoDueloCriado");
+        if(criado){
+            criado.innerHTML = "";
+        }
+
+        renderizarSeletorConcursoDueloV26();
+        atualizarCabecalhoDueloV26();
+        prepararSelectDuelo();
+    };
+
+    const obterGrupoDueloAntesV26 = obterGrupoDuelo;
+    obterGrupoDuelo = function(disciplina){
+        if(concursoDueloAtualV26 === "abaetetuba2026"){
+            return grupoAbaetetubaDueloV26(disciplina);
+        }
+
+        return obterGrupoDueloAntesV26.apply(this, arguments);
+    };
+
+    const obterAssuntoDueloAntesV26 = obterAssuntoDuelo;
+    obterAssuntoDuelo = function(chave){
+        const assuntoAbaetetuba = assuntoAbaetetubaDueloV26(chave);
+
+        if(assuntoAbaetetuba){
+            return assuntoAbaetetuba;
+        }
+
+        return obterAssuntoDueloAntesV26.apply(this, arguments);
+    };
+
+    const assuntosDisponiveisDueloAntesV26 = assuntosDisponiveisDuelo;
+    assuntosDisponiveisDuelo = function(grupo){
+        if(
+            concursoDueloAtualV26 === "abaetetuba2026" &&
+            grupoAbaetetubaDueloV26(grupo && grupo.disciplina)
+        ){
+            return grupo.assuntos || [];
+        }
+
+        return assuntosDisponiveisDueloAntesV26.apply(this, arguments);
+    };
+
+    const renderizarDisciplinasDueloAntesV26 = renderizarDisciplinasDuelo;
+    renderizarDisciplinasDuelo = function(){
+        if(concursoDueloAtualV26 !== "abaetetuba2026"){
+            return renderizarDisciplinasDueloAntesV26.apply(this, arguments);
+        }
+
+        const area = document.getElementById("dueloDisciplinas");
+
+        if(!area){
+            return;
+        }
+
+        area.innerHTML = gruposDueloAbaetetubaV26.map(grupo => {
+            const liberado = temAcessoDueloV26(grupo.exige);
+
+            return `
+                <button
+                    class="duelo-opcao-disciplina duelo-opcao-abaetetuba-v26 ${grupo.disciplina === dueloDisciplinaSelecionada ? "selecionado" : ""} ${liberado ? "" : "bloqueado"}"
+                    onclick="${liberado
+                        ? `selecionarDisciplinaDuelo('${grupo.disciplina}')`
+                        : `mostrarBloqueioDueloAbaetetubaV26('${grupo.exige}')`
+                    }">
+                    <span>${grupo.nome}</span>
+                    <small>${liberado ? "Acesso liberado" : "Acesso necessário"}</small>
+                </button>
+            `;
+        }).join("");
+    };
+
+    const renderizarTopicosDueloAntesV26 = renderizarTopicosDuelo;
+    renderizarTopicosDuelo = function(){
+        if(concursoDueloAtualV26 !== "abaetetuba2026"){
+            return renderizarTopicosDueloAntesV26.apply(this, arguments);
+        }
+
+        const area = document.getElementById("dueloTopicos");
+        const textoDisciplina = document.getElementById(
+            "dueloDisciplinaSelecionadaTexto"
+        );
+
+        if(!area){
+            return;
+        }
+
+        const grupo = grupoAbaetetubaDueloV26(
+            dueloDisciplinaSelecionada
+        );
+
+        if(!grupo){
+            area.innerHTML =
+                "Escolha uma disciplina e depois um tópico de Abaetetuba.";
+
+            if(textoDisciplina){
+                textoDisciplina.innerHTML =
+                    "Nenhuma disciplina selecionada.";
+            }
+            return;
+        }
+
+        const liberado = temAcessoDueloV26(grupo.exige);
+
+        if(textoDisciplina){
+            textoDisciplina.innerHTML =
+                `Disciplina selecionada: <strong>${grupo.nome}</strong>`;
+        }
+
+        area.innerHTML = grupo.assuntos.map(item => `
+            <button
+                class="duelo-opcao-topico duelo-topico-abaetetuba-v26 ${item.chave === dueloAssuntoSelecionado ? "selecionado" : ""} ${liberado ? "" : "bloqueado"}"
+                onclick="${liberado
+                    ? `selecionarAssuntoDuelo('${item.chave}')`
+                    : `mostrarBloqueioDueloAbaetetubaV26('${grupo.exige}')`
+                }">
+                <span>${item.nome}</span>
+                <small>${item.descricao}</small>
+            </button>
+        `).join("");
+    };
+
+    const atualizarResumoDueloAntesV26 = atualizarResumoDuelo;
+    atualizarResumoDuelo = function(){
+        if(concursoDueloAtualV26 !== "abaetetuba2026"){
+            return atualizarResumoDueloAntesV26.apply(this, arguments);
+        }
+
+        const area = document.getElementById("dueloResumoCriacao");
+
+        if(!area){
+            return;
+        }
+
+        if(!dueloAssuntoSelecionado){
+            area.innerHTML =
+                "Escolha uma disciplina, um tópico e depois selecione 10, 15 ou 20 questões.";
+            return;
+        }
+
+        const assunto = assuntoAbaetetubaDueloV26(
+            dueloAssuntoSelecionado
+        );
+
+        if(!assunto){
+            area.innerHTML = "Modo de duelo não encontrado.";
+            return;
+        }
+
+        area.innerHTML = `
+            <span class="selo-duelo-abaetetuba-v26">IVIN • Abaetetuba 2026</span>
+            <strong>${assunto.nomeDisciplina}</strong><br>
+            ${assunto.nome}<br>
+            <small>${assunto.descricao}</small><br>
+            <b>${quantidadeSelecionadaDueloAbaetetubaV26()} questões</b>
+        `;
+    };
+
+    const prepararSelectDueloAntesV26 = prepararSelectDuelo;
+    prepararSelectDuelo = function(){
+        renderizarSeletorConcursoDueloV26();
+        atualizarCabecalhoDueloV26();
+
+        if(concursoDueloAtualV26 !== "abaetetuba2026"){
+            return prepararSelectDueloAntesV26.apply(this, arguments);
+        }
+
+        renderizarDisciplinasDuelo();
+
+        const grupoAtual = grupoAbaetetubaDueloV26(
+            dueloDisciplinaSelecionada
+        );
+
+        if(!grupoAtual){
+            const primeiroLiberado = gruposDueloAbaetetubaV26.find(
+                grupo => temAcessoDueloV26(grupo.exige)
+            );
+
+            if(primeiroLiberado){
+                dueloDisciplinaSelecionada = primeiroLiberado.disciplina;
+                dueloAssuntoSelecionado = "";
+                renderizarDisciplinasDuelo();
+            }
+        }
+
+        renderizarTopicosDuelo();
+        atualizarResumoDuelo();
+    };
+
+    function nomeDisciplinaDocumentoDueloV26(assunto){
+        if(assunto.modo === "topicoPortugues"){
+            return "Abaetetuba • Língua Portuguesa";
+        }
+
+        if(assunto.modo === "topicoInformatica"){
+            return "Abaetetuba • Informática";
+        }
+
+        if(assunto.modo === "comumMisto"){
+            return "Abaetetuba • Disciplinas Comuns";
+        }
+
+        if(assunto.modo === "historiaEixo"){
+            return "Abaetetuba • História Específica";
+        }
+
+        return "Abaetetuba • Professor de História";
+    }
+
+    const criarDueloAntesV26 = criarDuelo;
+    criarDuelo = async function(){
+        if(concursoDueloAtualV26 !== "abaetetuba2026"){
+            return criarDueloAntesV26.apply(this, arguments);
+        }
+
+        if(!auth.currentUser){
+            mostrarToast("Faça login para criar um duelo.");
+            return;
+        }
+
+        const assunto = assuntoAbaetetubaDueloV26(
+            dueloAssuntoSelecionado
+        );
+
+        if(!assunto){
+            mostrarToast("Escolha uma disciplina e depois um tópico de Abaetetuba.");
+            return;
+        }
+
+        if(!temAcessoDueloV26(assunto.exige)){
+            mostrarBloqueioDueloAbaetetubaV26(assunto.exige);
+            return;
+        }
+
+        const quantidadeSelecionada =
+            quantidadeSelecionadaDueloAbaetetubaV26();
+
+        const refs = construirRefsModoDueloV26(assunto.chave);
+        const questoes = reconstruirQuestoesRefsDueloV26(refs);
+
+        if(
+            refs.length < quantidadeSelecionada ||
+            questoes.length < quantidadeSelecionada
+        ){
+            mostrarToast(
+                "Não há questões suficientes para montar um duelo com " +
+                quantidadeSelecionada +
+                " questões."
+            );
+            return;
+        }
+
+        const codigo = gerarCodigoDuelo();
+        const nomeDisciplina = nomeDisciplinaDocumentoDueloV26(assunto);
+        const indices = refs.map((_, indice) => indice);
+
+        try{
+            await db.collection("duelos")
+                .doc(codigo)
+                .set({
+                    codigo,
+                    concurso: "abaetetuba2026",
+                    nomeConcurso: "Prefeitura de Abaetetuba — 2026",
+                    banca: "IVIN",
+                    nivel: "Nível Superior",
+                    disciplina: assunto.disciplina,
+                    nomeDisciplina,
+                    assunto: assunto.chave,
+                    nomeAssunto: assunto.nome,
+                    modoDuelo: assunto.modo,
+                    acessoExigido: assunto.exige,
+                    quantidade: refs.length,
+                    questaoRefs: refs,
+                    indices,
+                    criadoPor: auth.currentUser.uid,
+                    criadoPorNome: usuarioForum || "Aluno",
+                    criadoEm: Date.now(),
+                    cancelado: false,
+                    ocultoPara: [],
+                    uids: [auth.currentUser.uid],
+                    participantes: {
+                        [auth.currentUser.uid]: {
+                            nome: usuarioForum || "Aluno",
+                            acertos: 0,
+                            erros: 0,
+                            finalizado: false,
+                            entrouEm: Date.now()
+                        }
+                    }
+                });
+
+            bancoQuestoes[assunto.chave] = questoes;
+
+            const linkDuelo = montarLinkDuelo(codigo);
+            const areaCriado = document.getElementById(
+                "codigoDueloCriado"
+            );
+
+            if(areaCriado){
+                areaCriado.innerHTML = `
+                    <div class="duelo-codigo duelo-codigo-abaetetuba-v26">
+                        <span class="selo-duelo-abaetetuba-v26">IVIN • Abaetetuba 2026</span>
+                        <h3>✅ Duelo criado!</h3>
+                        <p><strong>Código:</strong></p>
+                        <div class="duelo-codigo-grande">${codigo}</div>
+                        <p>${nomeDisciplina}</p>
+                        <p>${assunto.nome}</p>
+                        <p>${refs.length} questões</p>
+                        <p class="duelo-link"><strong>Link do convite:</strong><br>${linkDuelo}</p>
+                        <div class="duelo-botoes-codigo">
+                            <button onclick="copiarCodigoDuelo('${codigo}')">📋 Copiar código</button>
+                            <button onclick="copiarLinkDuelo('${codigo}')">🔗 Copiar link</button>
+                            <button onclick="compartilharDuelo('${codigo}')">📤 Compartilhar convite</button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            mostrarToast("Duelo de Abaetetuba criado com sucesso!");
+            carregarMeusDuelos();
+        }
+        catch(erro){
+            console.error("Erro ao criar duelo de Abaetetuba", erro);
+            mostrarToast(
+                "Não foi possível criar o duelo. Verifique sua conexão e as regras do Firestore."
+            );
+        }
+    };
+
+    async function atualizarAcessosAntesDueloV26(){
+        if(typeof window.carregarAcessosConcursosFarol === "function"){
+            try{
+                await window.carregarAcessosConcursosFarol({
+                    renderizar: false
+                });
+            }
+            catch(erro){
+                console.warn(
+                    "Não foi possível atualizar os acessos antes do duelo.",
+                    erro
+                );
+            }
+        }
+    }
+
+    const entrarDueloAntesV26 = entrarDuelo;
+    entrarDuelo = async function(codigo){
+        if(!auth.currentUser){
+            mostrarToast("Faça login para entrar no duelo.");
+            return;
+        }
+
+        const codigoNormalizado = normalizarCodigoDuelo(codigo);
+
+        try{
+            const ref = db.collection("duelos").doc(codigoNormalizado);
+            const doc = await ref.get();
+
+            if(!doc.exists){
+                return entrarDueloAntesV26.call(this, codigoNormalizado);
+            }
+
+            const dados = doc.data() || {};
+
+            if(dados.concurso !== "abaetetuba2026"){
+                return entrarDueloAntesV26.call(this, codigoNormalizado);
+            }
+
+            if(dados.cancelado){
+                mostrarToast("Este duelo foi cancelado pelo criador.");
+                return;
+            }
+
+            await atualizarAcessosAntesDueloV26();
+
+            const exigencia = dados.acessoExigido || "comunsSuperior";
+            const ehCriador = dados.criadoPor === auth.currentUser.uid;
+
+            /*
+             * O criador já teve o acesso validado na criação.
+             * A exceção abaixo evita que uma demora na sincronização dos acessos
+             * impeça o próprio criador de abrir o duelo recém-criado.
+             */
+            if(!ehCriador && !temAcessoDueloV26(exigencia)){
+                localStorage.removeItem(CHAVE_DUELO_PENDENTE);
+                atualizarAvisoConviteDuelo();
+                mostrarBloqueioDueloAbaetetubaV26(exigencia);
+                return;
+            }
+
+            const questoes = reconstruirQuestoesRefsDueloV26(
+                dados.questaoRefs || []
+            );
+
+            const quantidadeEsperada = Number(dados.quantidade || 0);
+
+            if(
+                questoes.length === 0 ||
+                (quantidadeEsperada > 0 && questoes.length !== quantidadeEsperada)
+            ){
+                console.error(
+                    "Falha ao reconstruir questões do duelo:",
+                    {
+                        codigo: codigoNormalizado,
+                        esperadas: quantidadeEsperada,
+                        carregadas: questoes.length,
+                        refs: dados.questaoRefs || []
+                    }
+                );
+
+                mostrarToast(
+                    "Não foi possível carregar todas as questões deste duelo. Atualize os arquivos do Farol."
+                );
+                return;
+            }
+
+            const participantesAtuais = dados.participantes || {};
+            const participanteAtual =
+                participantesAtuais[auth.currentUser.uid] || {};
+
+            await ref.set({
+                uids: firebase.firestore.FieldValue.arrayUnion(
+                    auth.currentUser.uid
+                ),
+                ocultoPara: firebase.firestore.FieldValue.arrayRemove(
+                    auth.currentUser.uid
+                ),
+                participantes: {
+                    ...participantesAtuais,
+                    [auth.currentUser.uid]: {
+                        nome:
+                            usuarioForum ||
+                            participanteAtual.nome ||
+                            "Aluno",
+                        acertos: participanteAtual.acertos || 0,
+                        erros: participanteAtual.erros || 0,
+                        respostas: participanteAtual.respostas || [],
+                        finalizado: !!participanteAtual.finalizado,
+                        entrouEm:
+                            participanteAtual.entrouEm ||
+                            Date.now()
+                    }
+                }
+            }, { merge: true });
+
+            dueloAtual = {
+                codigo: codigoNormalizado,
+                ...dados
+            };
+
+            dueloQuestoes = questoes;
+            dueloIndiceAtual = 0;
+            dueloAcertos = 0;
+            dueloErros = 0;
+            dueloRespostas = [];
+
+            localStorage.removeItem(CHAVE_DUELO_PENDENTE);
+            atualizarAvisoConviteDuelo();
+
+            const avisoDuelos =
+                document.getElementById("dueloConviteRecebido");
+
+            if(avisoDuelos){
+                avisoDuelos.style.display = "none";
+                avisoDuelos.innerHTML = "";
+            }
+
+            mostrarQuestaoDuelo();
+        }
+        catch(erro){
+            console.error("Erro ao entrar no duelo de Abaetetuba", erro);
+            mostrarToast(
+                "Não foi possível entrar no duelo. Verifique a conexão e tente novamente."
+            );
+        }
+    };
+
+    const mostrarQuestaoDueloAntesV26 = mostrarQuestaoDuelo;
+    mostrarQuestaoDuelo = function(){
+        const retorno = mostrarQuestaoDueloAntesV26.apply(this, arguments);
+
+        if(
+            !dueloAtual ||
+            dueloAtual.concurso !== "abaetetuba2026"
+        ){
+            return retorno;
+        }
+
+        const questao = dueloQuestoes[dueloIndiceAtual];
+        const card = document.querySelector("#areaQuestao > .card");
+
+        if(card && !card.querySelector(".cabecalho-duelo-abaetetuba-v26")){
+            const cabecalho = document.createElement("div");
+            cabecalho.className = "cabecalho-duelo-abaetetuba-v26";
+            cabecalho.innerHTML = `
+                <span>IVIN • Abaetetuba 2026</span>
+                <strong>${escaparHTMLDuelo(dueloAtual.nomeAssunto || "Duelo")}</strong>
+                <small>
+                    ${escaparHTMLDuelo(
+                        questao && questao.__dueloBlocoV26
+                            ? questao.__dueloBlocoV26
+                            : "Questões"
+                    )}
+                    ${
+                        questao && questao.__dueloEixoV26
+                            ? " • " + escaparHTMLDuelo(questao.__dueloEixoV26)
+                            : ""
+                    }
+                </small>
+            `;
+
+            card.prepend(cabecalho);
+        }
+
+        return retorno;
+    };
+
+    const mostrarTelaAntesDuelosV26 = mostrarTela;
+    mostrarTela = function(id){
+        const retorno = mostrarTelaAntesDuelosV26.apply(this, arguments);
+
+        if(id === "duelos"){
+            setTimeout(() => {
+                renderizarSeletorConcursoDueloV26();
+                atualizarCabecalhoDueloV26();
+                prepararSelectDuelo();
+                preencherConviteDueloPendente();
+            }, 0);
+        }
+
+        return retorno;
+    };
+
+    window.obterConcursoDueloAtualFarolV26 = function(){
+        return concursoDueloAtualV26;
+    };
+
+})();
+
+// ============================================================
+// V27 — CIÊNCIAS DE ABAETETUBA — EIXO 1
+// Citologia e Morfologia Celular
+// ============================================================
+(function integrarCienciasAbaetetubaV27(){
+
+    const ASSUNTO_CITOLOGIA_ABAETETUBA_V27 =
+        "citologiaMorfologiaCelularAbaetetuba";
+
+    if(typeof disciplinasTrilhaFarol !== "undefined"){
+        disciplinasTrilhaFarol.cienciasAbaetetuba = {
+            nome: "Conhecimentos Específicos — Ciências",
+            icone: "🔬",
+            descricao: "Eixos de Ciências organizados conforme o edital da IVIN."
+        };
+    }
+
+    if(
+        typeof trilhasPreparacaoFarol !== "undefined" &&
+        trilhasPreparacaoFarol.abaetetubaProfessorCiencias
+    ){
+        trilhasPreparacaoFarol.abaetetubaProfessorCiencias.descricao =
+            "Português, Informática e conhecimentos específicos de Ciências organizados por eixos da IVIN.";
+
+        trilhasPreparacaoFarol.abaetetubaProfessorCiencias.disciplinas = [
+            "portugues",
+            "informatica",
+            "cienciasAbaetetuba"
+        ];
+
+        // Permanece em revisão enquanto os demais eixos são construídos.
+        trilhasPreparacaoFarol.abaetetubaProfessorCiencias.publicado = false;
+    }
+
+    if(
+        typeof bancoQuestoes !== "undefined" &&
+        typeof citologiaMorfologiaCelularAbaetetuba !== "undefined"
+    ){
+        bancoQuestoes[ASSUNTO_CITOLOGIA_ABAETETUBA_V27] =
+            citologiaMorfologiaCelularAbaetetuba;
+    }
+
+    if(typeof mapasMentaisPorAssunto !== "undefined"){
+        mapasMentaisPorAssunto[ASSUNTO_CITOLOGIA_ABAETETUBA_V27] = {
+            titulo: "🧬 Citologia e Morfologia Celular",
+            imagem: "imagens/mapas/abaetetuba/CitologiaMorfologiaCelularAbaetetuba.png"
+        };
+    }
+
+    const abrirDisciplinaAntesV27 = abrirDisciplina;
+    abrirDisciplina = function(nome){
+        if(nome === "cienciasAbaetetuba"){
+            disciplinaAtual = "cienciasAbaetetuba";
+            mostrarTela("cienciasAbaetetuba");
+            return;
+        }
+
+        return abrirDisciplinaAntesV27.apply(this, arguments);
+    };
+
+    window.abrirModuloCienciasAbaetetuba = function(numero){
+        if(Number(numero) === 1){
+            mostrarTela("moduloCienciasAbaetetuba1");
+            return;
+        }
+
+        mostrarToast("Este eixo ainda está em preparação.");
+    };
+
+    window.voltarParaCienciasAbaetetuba = function(){
+        mostrarTela("cienciasAbaetetuba");
+    };
+
+    window.abrirAssuntoCienciasAbaetetuba = function(){
+        localStorage.setItem(
+            "farol_contexto_ciencias_abaetetuba",
+            "eixo1"
+        );
+
+        abrirAssunto(ASSUNTO_CITOLOGIA_ABAETETUBA_V27);
+    };
+
+    window.iniciarTreinoModuloUmCienciasAbaetetuba = function(){
+        if(typeof citologiaMorfologiaCelularAbaetetuba === "undefined"){
+            mostrarToast("Banco de Citologia não foi carregado.");
+            return;
+        }
+
+        disciplinaAtual = "cienciasAbaetetuba";
+        assuntoAtual = ASSUNTO_CITOLOGIA_ABAETETUBA_V27;
+
+        iniciarSimuladoPersonalizado(
+            [...citologiaMorfologiaCelularAbaetetuba],
+            30,
+            "cienciasAbaetetubaEixo1"
+        );
+    };
+
+    window.abrirMapaCienciasAbaetetubaEixo1 = function(){
+        disciplinaAtual = "cienciasAbaetetuba";
+        assuntoAtual = ASSUNTO_CITOLOGIA_ABAETETUBA_V27;
+        configurarMapaMentalAtual();
+        mostrarTela("telaMapaMental");
+    };
+
+    const abrirAssuntoAntesV27 = abrirAssunto;
+    abrirAssunto = function(assunto){
+        if(assunto === ASSUNTO_CITOLOGIA_ABAETETUBA_V27){
+            assuntoAtual = ASSUNTO_CITOLOGIA_ABAETETUBA_V27;
+            disciplinaAtual = "cienciasAbaetetuba";
+
+            localStorage.setItem(
+                "farol_contexto_ciencias_abaetetuba",
+                "eixo1"
+            );
+
+            abrirTeoria(
+                citologiaMorfologiaCelularAbaetetubaTeoria,
+                "🧬 Citologia e Morfologia Celular"
+            );
+            return;
+        }
+
+        return abrirAssuntoAntesV27.apply(this, arguments);
+    };
+
+    const abrirTeoriaDoAssuntoAntesV27 = abrirTeoriaDoAssunto;
+    abrirTeoriaDoAssunto = function(){
+        if(assuntoAtual === ASSUNTO_CITOLOGIA_ABAETETUBA_V27){
+            abrirTeoria(
+                citologiaMorfologiaCelularAbaetetubaTeoria,
+                "🧬 Citologia e Morfologia Celular"
+            );
+            return;
+        }
+
+        return abrirTeoriaDoAssuntoAntesV27.apply(this, arguments);
+    };
+
+    const voltarParaAssuntosAntesV27 = voltarParaAssuntos;
+    voltarParaAssuntos = function(){
+        if(assuntoAtual === ASSUNTO_CITOLOGIA_ABAETETUBA_V27){
+            mostrarTela("moduloCienciasAbaetetuba1");
+            return;
+        }
+
+        return voltarParaAssuntosAntesV27.apply(this, arguments);
+    };
+
+})();
+
+
+
+/* ===== V28 PORTUGUÊS ABAETETUBA — MAPAS PNG COMPLETOS ===== */
+(function integrarMapasPngPortuguesAbaetetubaV28(){
+    const mapasPortuguesAbaetetubaV28 = {
+        "interpretacaoAbaetetuba": { titulo: "🧠 Compreensão e interpretação de textos", imagem: "imagens/mapas/abaetetuba/portugues/interpretacao.png" },
+        "tipologiaGenerosAbaetetuba": { titulo: "🧠 Tipologia, gênero, domínio e finalidade", imagem: "imagens/mapas/abaetetuba/portugues/tipologia-generos.png" },
+        "parafraseResumoAbaetetuba": { titulo: "🧠 Paráfrase, perífrase, síntese e resumo", imagem: "imagens/mapas/abaetetuba/portugues/parafrase-resumo.png" },
+        "semanticaAbaetetuba": { titulo: "🧠 Significação literal e contextual", imagem: "imagens/mapas/abaetetuba/portugues/semantica.png" },
+        "coesaoReferenciaAbaetetuba": { titulo: "🧠 Coesão textual e referenciação", imagem: "imagens/mapas/abaetetuba/portugues/coesao-referencia.png" },
+        "classesPalavrasTextoAbaetetuba": { titulo: "🧠 Classes de palavras no texto", imagem: "imagens/mapas/abaetetuba/portugues/classes-palavras.png" },
+        "coordenacaoSubordinacaoAbaetetuba": { titulo: "🧠 Coordenação e subordinação", imagem: "imagens/mapas/abaetetuba/portugues/coordenacao-subordinacao.png" },
+        "concordanciaAbaetetuba": { titulo: "🧠 Concordância nominal e verbal", imagem: "imagens/mapas/abaetetuba/portugues/concordancia.png" },
+        "discursoDiretoIndiretoAbaetetuba": { titulo: "🧠 Discurso direto e indireto", imagem: "imagens/mapas/abaetetuba/portugues/discurso-direto-indireto.png" },
+        "regenciaCraseAbaetetuba": { titulo: "🧠 Regência nominal, verbal e crase", imagem: "imagens/mapas/abaetetuba/portugues/regencia-crase.png" },
+        "formacaoPalavrasAbaetetuba": { titulo: "🧠 Estrutura e formação das palavras", imagem: "imagens/mapas/abaetetuba/portugues/formacao-palavras.png" },
+        "ortografiaPontuacaoAcentuacaoAbaetetuba": { titulo: "🧠 Ortografia, pontuação e acentuação", imagem: "imagens/mapas/abaetetuba/portugues/ortografia-pontuacao-acentuacao.png" },
+        "morfologiaSintaxeAbaetetuba": { titulo: "🧠 Morfologia e sintaxe da oração", imagem: "imagens/mapas/abaetetuba/portugues/morfologia-sintaxe.png" }
+    };
+
+    function registrarMapasPortuguesAbaetetubaV28(){
+        if(typeof mapasMentaisPorAssunto === "undefined"){
+            console.warn("mapasMentaisPorAssunto ainda não está disponível.");
+            return;
+        }
+
+        Object.entries(mapasPortuguesAbaetetubaV28).forEach(([chave, mapa]) => {
+            mapasMentaisPorAssunto[chave] = mapa;
+        });
+    }
+
+    registrarMapasPortuguesAbaetetubaV28();
+    window.mapasPortuguesAbaetetubaV28 = mapasPortuguesAbaetetubaV28;
+})();
+
+/* ===== FILTRO PORTUGUÊS ABAETETUBA V32 ===== */
+(function(){
+    "use strict";
+
+    const CHAVES_VISIVEIS_ABAETETUBA = [
+        "interpretacao",
+        "generos",
+        "coesao",
+        "semantica",
+        "classesPalavras",
+        "formacaoPalavras",
+        "sintaxe",
+        "periodoComposto",
+        "concordancia",
+        "regencia",
+        "crase",
+        "pontuacao",
+        "ortografia",
+        "acentuacao"
+    ];
+
+    const CHAVES_OCULTAS_ABAETETUBA = [
+        "funcoes",
+        "figuras",
+        "variacao",
+        "vozesVerbais",
+        "redacaoOficial"
+    ];
+
+    function concursoAtualEhAbaetetuba(){
+        return localStorage.getItem("farol_concurso_atual") === "abaetetuba2026";
+    }
+
+    function chaveDoBotao(botao){
+        const acao = String(botao.getAttribute("onclick") || "");
+        const resultado = acao.match(/abrirAssunto\(\s*['"]([^'"]+)['"]\s*\)/);
+        return resultado ? resultado[1] : "";
+    }
+
+    function aplicarFiltroPortuguesAbaetetuba(){
+        const tela = document.getElementById("portugues");
+        if(!tela){
+            return;
+        }
+
+        const filtrar = concursoAtualEhAbaetetuba();
+
+        tela.querySelectorAll(".grid-assuntos .btn-assunto").forEach(botao => {
+            const chave = chaveDoBotao(botao);
+            const ocultar = filtrar && CHAVES_OCULTAS_ABAETETUBA.includes(chave);
+
+            botao.hidden = ocultar;
+            botao.style.display = ocultar ? "none" : "";
+            botao.setAttribute("aria-hidden", ocultar ? "true" : "false");
+        });
+
+        const titulo = tela.querySelector("h2");
+        if(titulo){
+            titulo.textContent = filtrar
+                ? "📖 Língua Portuguesa — Abaetetuba"
+                : "📖 Língua Portuguesa";
+        }
+    }
+
+    if(typeof mostrarTela === "function"){
+        const mostrarTelaOriginal = mostrarTela;
+
+        mostrarTela = function(id){
+            const retorno = mostrarTelaOriginal.apply(this, arguments);
+
+            if(id === "portugues"){
+                setTimeout(aplicarFiltroPortuguesAbaetetuba, 0);
+            }
+
+            return retorno;
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const abrirAssuntoOriginal = abrirAssunto;
+
+        abrirAssunto = function(assunto){
+            if(
+                concursoAtualEhAbaetetuba() &&
+                CHAVES_OCULTAS_ABAETETUBA.includes(assunto)
+            ){
+                mostrarToast("Este assunto não integra o conteúdo de Português de Abaetetuba.");
+                aplicarFiltroPortuguesAbaetetuba();
+                return;
+            }
+
+            return abrirAssuntoOriginal.apply(this, arguments);
+        };
+    }
+
+    window.aplicarFiltroPortuguesAbaetetuba = aplicarFiltroPortuguesAbaetetuba;
+    window.chavesPortuguesAbaetetuba = [...CHAVES_VISIVEIS_ABAETETUBA];
+
+    setTimeout(aplicarFiltroPortuguesAbaetetuba, 0);
+})();
+
+/* ==========================================================
+   FAROL DO SABER — PRESENÇA DOS ALUNOS V1
+   - Usa Firestore já existente no projeto
+   - Atualização a cada 30 segundos
+   - On-line: atividade nos últimos 90 segundos
+   - Registra tela, concurso, cargo, disciplina, assunto e dispositivo
+========================================================== */
+(function(){
+    "use strict";
+
+    const INTERVALO_PRESENCA_MS = 30 * 1000;
+    const LIMITE_ONLINE_MS = 90 * 1000;
+    const COLECAO_PRESENCA = "presencaAlunos";
+    const COLECAO_HISTORICO = "historicoAtividades";
+
+    let intervaloPresencaFarol = null;
+    let entradaNaPlataformaFarol = Date.now();
+    let ultimaTelaRegistradaFarol = "";
+    let ultimoRegistroPresencaFarol = 0;
+    let ultimaChaveHistoricoFarol = "";
+    let ultimoRegistroHistoricoFarol = 0;
+
+    function usuarioFirebasePresencaFarol(){
+        try{
+            return (
+                window.farolFirebase &&
+                window.farolFirebase.auth &&
+                window.farolFirebase.auth.currentUser
+            ) || (
+                typeof auth !== "undefined" &&
+                auth.currentUser
+            ) || null;
+        }catch(erro){
+            return null;
+        }
+    }
+
+    function firestorePresencaFarol(){
+        try{
+            return (
+                window.farolFirebase &&
+                window.farolFirebase.db
+            ) || (
+                typeof db !== "undefined" ? db : null
+            );
+        }catch(erro){
+            return null;
+        }
+    }
+
+    function textoNomeTelaPresencaFarol(id){
+        const nomes = {
+            inicio: "Meu Painel",
+            questoes: "Rota de Estudos",
+            portugues: "Língua Portuguesa",
+            informatica: "Informática",
+            historia: "História",
+            historiaAbaetetuba: "História — Abaetetuba",
+            ciencias: "Ciências",
+            didatica: "Didática e Legislação",
+            etica: "Ética",
+            apoioEscolar: "Apoio Escolar",
+            teoria: "Teoria",
+            telaMapaMental: "Mapa Mental",
+            resolverQuestao: "Questões",
+            simulados: "Simulados",
+            jogosFarol: "Jogos",
+            duelos: "Duelos",
+            erros: "Caderno de Erros",
+            estatisticas: "Estatísticas",
+            perfilAluno: "Perfil do Aluno",
+            provasAnteriores: "Provas Anteriores",
+            chatGlobal: "Chat Geral",
+            forum: "Fórum"
+        };
+
+        return nomes[id] || id || "Navegação";
+    }
+
+    function nomeConcursoPresencaFarol(chave){
+        const nomes = {
+            abaetetuba2026: "Abaetetuba",
+            barcarena2026: "Barcarena"
+        };
+        return nomes[chave] || chave || "Não selecionado";
+    }
+
+    function nomeCargoPresencaFarol(chave){
+        try{
+            if(
+                typeof trilhasPreparacaoFarol !== "undefined" &&
+                trilhasPreparacaoFarol[chave]
+            ){
+                return trilhasPreparacaoFarol[chave].nome || chave;
+            }
+        }catch(erro){}
+
+        return chave || "Não selecionado";
+    }
+
+    function nomeDisciplinaPresencaFarol(chave){
+        try{
+            if(
+                typeof disciplinasTrilhaFarol !== "undefined" &&
+                disciplinasTrilhaFarol[chave]
+            ){
+                return disciplinasTrilhaFarol[chave].nome || chave;
+            }
+        }catch(erro){}
+
+        if(typeof nomeDisciplinaForum === "function"){
+            return nomeDisciplinaForum(chave);
+        }
+
+        return chave || "";
+    }
+
+    function nomeAssuntoPresencaFarol(chave){
+        if(!chave){
+            return "";
+        }
+
+        try{
+            const botao = document.querySelector(
+                `[onclick*="abrirAssunto('${CSS.escape(chave)}')"],` +
+                `[onclick*='abrirAssunto("${CSS.escape(chave)}")']`
+            );
+
+            if(botao){
+                return String(botao.textContent || "")
+                    .replace(/\s+/g, " ")
+                    .trim();
+            }
+        }catch(erro){}
+
+        return String(chave)
+            .replace(/([a-z])([A-Z])/g, "$1 $2")
+            .replace(/^./, letra => letra.toUpperCase());
+    }
+
+    function detectarDispositivoPresencaFarol(){
+        const ua = navigator.userAgent || "";
+        let navegador = "Navegador";
+        let dispositivo = /Mobi|Android/i.test(ua) ? "Celular" : "Computador";
+
+        if(/Edg\//i.test(ua)){
+            navegador = "Microsoft Edge";
+        }else if(/Chrome\//i.test(ua)){
+            navegador = "Google Chrome";
+        }else if(/Firefox\//i.test(ua)){
+            navegador = "Mozilla Firefox";
+        }else if(/Safari\//i.test(ua)){
+            navegador = "Safari";
+        }
+
+        return `${dispositivo} • ${navegador}`;
+    }
+
+    function tipoConteudoPresencaFarol(tela){
+        if(tela === "teoria"){
+            return "Teoria";
+        }
+        if(tela === "telaMapaMental"){
+            return "Mapa mental";
+        }
+        if(tela === "resolverQuestao"){
+            return modoSimulado ? "Simulado" : "Questões";
+        }
+        if(tela === "simulados"){
+            return "Simulados";
+        }
+        if(tela === "jogosFarol"){
+            return "Jogo";
+        }
+        if(tela === "duelos"){
+            return "Duelo";
+        }
+        return textoNomeTelaPresencaFarol(tela);
+    }
+
+    function montarDadosPresencaFarol(telaInformada){
+        const usuario = usuarioFirebasePresencaFarol();
+        const tela =
+            telaInformada ||
+            localStorage.getItem("farol_telaAtual") ||
+            "inicio";
+
+        const concursoChave =
+            localStorage.getItem("farol_concurso_atual") || "";
+
+        const cargoChave =
+            localStorage.getItem("farol_trilha_atual") || "";
+
+        const disciplinaChave =
+            typeof disciplinaAtual !== "undefined"
+                ? disciplinaAtual
+                : "";
+
+        const assuntoChave =
+            typeof assuntoAtual !== "undefined"
+                ? assuntoAtual
+                : "";
+
+        return {
+            uid: usuario ? usuario.uid : "",
+            nome:
+                String(
+                    localStorage.getItem("usuarioNomeCompleto") ||
+                    localStorage.getItem("usuarioForum") ||
+                    (usuario && usuario.displayName) ||
+                    "Aluno"
+                ).trim(),
+            email:
+                String(
+                    (usuario && usuario.email) ||
+                    localStorage.getItem("usuarioEmail") ||
+                    ""
+                ).trim().toLowerCase(),
+            online: true,
+            concursoChave,
+            concurso: nomeConcursoPresencaFarol(concursoChave),
+            cargoChave,
+            cargo: nomeCargoPresencaFarol(cargoChave),
+            disciplinaChave,
+            disciplina: nomeDisciplinaPresencaFarol(disciplinaChave),
+            assuntoChave,
+            assunto: nomeAssuntoPresencaFarol(assuntoChave),
+            tela,
+            telaNome: textoNomeTelaPresencaFarol(tela),
+            tipoTela: tipoConteudoPresencaFarol(tela),
+            dispositivo: detectarDispositivoPresencaFarol(),
+            entrouEm: entradaNaPlataformaFarol,
+            ultimaAtividade: Date.now(),
+            paginaDesde:
+                tela === ultimaTelaRegistradaFarol
+                    ? (Number(localStorage.getItem("farol_pagina_desde")) || Date.now())
+                    : Date.now(),
+            limiteOnlineMs: LIMITE_ONLINE_MS
+        };
+    }
+
+
+    async function registrarHistoricoAtividadeFarol(dados, eventoEspecial){
+        const usuario = usuarioFirebasePresencaFarol();
+        const banco = firestorePresencaFarol();
+
+        if(!usuario || !banco || !dados){
+            return;
+        }
+
+        const agora = Date.now();
+        const tipoEvento = eventoEspecial || dados.tipoTela || dados.telaNome || "Navegação";
+
+        const chaveEvento = [
+            dados.tela || "",
+            dados.disciplinaChave || "",
+            dados.assuntoChave || "",
+            tipoEvento
+        ].join("|");
+
+        if(
+            !eventoEspecial &&
+            chaveEvento === ultimaChaveHistoricoFarol &&
+            agora - ultimoRegistroHistoricoFarol < 15000
+        ){
+            return;
+        }
+
+        ultimaChaveHistoricoFarol = chaveEvento;
+        ultimoRegistroHistoricoFarol = agora;
+
+        const evento = {
+            uid: usuario.uid,
+            nome: dados.nome || "Aluno",
+            email: dados.email || "",
+            concursoChave: dados.concursoChave || "",
+            concurso: dados.concurso || "Não selecionado",
+            cargoChave: dados.cargoChave || "",
+            cargo: dados.cargo || "Não selecionado",
+            disciplinaChave: dados.disciplinaChave || "",
+            disciplina: dados.disciplina || "",
+            assuntoChave: dados.assuntoChave || "",
+            assunto: dados.assunto || "",
+            tela: dados.tela || "",
+            telaNome: dados.telaNome || "",
+            tipoTela: tipoEvento,
+            dispositivo: dados.dispositivo || "",
+            criadoEm: agora
+        };
+
+        try{
+            await banco.collection(COLECAO_HISTORICO).add(evento);
+        }catch(erro){
+            console.warn("Não foi possível registrar o histórico:", erro);
+        }
+    }
+
+    async function registrarPresencaFarol(telaInformada, forcar){
+        const usuario = usuarioFirebasePresencaFarol();
+        const banco = firestorePresencaFarol();
+
+        if(!usuario || !banco){
+            return;
+        }
+
+        const agora = Date.now();
+        if(!forcar && agora - ultimoRegistroPresencaFarol < 5000){
+            return;
+        }
+
+        const dados = montarDadosPresencaFarol(telaInformada);
+
+        const mudouTela =
+            dados.tela !== ultimaTelaRegistradaFarol;
+
+        if(mudouTela){
+            ultimaTelaRegistradaFarol = dados.tela;
+            localStorage.setItem("farol_pagina_desde", String(agora));
+            dados.paginaDesde = agora;
+        }
+
+        ultimoRegistroPresencaFarol = agora;
+
+        try{
+            await banco.collection(COLECAO_PRESENCA)
+                .doc(usuario.uid)
+                .set(dados, { merge: true });
+
+            if(mudouTela){
+                await registrarHistoricoAtividadeFarol(dados);
+            }
+        }catch(erro){
+            console.warn("Não foi possível registrar presença:", erro);
+        }
+    }
+
+    async function marcarAlunoOfflineFarol(){
+        const usuario = usuarioFirebasePresencaFarol();
+        const banco = firestorePresencaFarol();
+
+        if(!usuario || !banco){
+            return;
+        }
+
+        try{
+            await banco.collection(COLECAO_PRESENCA)
+                .doc(usuario.uid)
+                .set({
+                    online: false,
+                    ultimaAtividade: Date.now(),
+                    saiuEm: Date.now()
+                }, { merge: true });
+        }catch(erro){
+            console.warn("Não foi possível marcar saída:", erro);
+        }
+    }
+
+    function iniciarPresencaFarol(){
+        if(intervaloPresencaFarol){
+            clearInterval(intervaloPresencaFarol);
+        }
+
+        entradaNaPlataformaFarol = Date.now();
+
+        const dadosEntrada = montarDadosPresencaFarol(
+            localStorage.getItem("farol_telaAtual") || "inicio"
+        );
+
+        registrarHistoricoAtividadeFarol(
+            dadosEntrada,
+            "Entrou na plataforma"
+        );
+
+        registrarPresencaFarol(
+            dadosEntrada.tela,
+            true
+        );
+
+        intervaloPresencaFarol = setInterval(() => {
+            if(document.visibilityState === "visible"){
+                registrarPresencaFarol(
+                    localStorage.getItem("farol_telaAtual") || "inicio",
+                    true
+                );
+            }
+        }, INTERVALO_PRESENCA_MS);
+    }
+
+    function registrarInteracaoPresencaFarol(){
+        registrarPresencaFarol(
+            localStorage.getItem("farol_telaAtual") || "inicio",
+            false
+        );
+    }
+
+    window.registrarPresencaFarol = registrarPresencaFarol;
+    window.registrarHistoricoAtividadeFarol = registrarHistoricoAtividadeFarol;
+    window.marcarAlunoOfflineFarol = marcarAlunoOfflineFarol;
+    window.iniciarPresencaFarol = iniciarPresencaFarol;
+    window.LIMITE_ONLINE_FAROL_MS = LIMITE_ONLINE_MS;
+
+    ["click", "keydown", "touchstart"].forEach(evento => {
+        document.addEventListener(
+            evento,
+            registrarInteracaoPresencaFarol,
+            { passive: true }
+        );
+    });
+
+    document.addEventListener("visibilitychange", () => {
+        if(document.visibilityState === "visible"){
+            registrarPresencaFarol(
+                localStorage.getItem("farol_telaAtual") || "inicio",
+                true
+            );
+        }else{
+            marcarAlunoOfflineFarol();
+        }
+    });
+
+    window.addEventListener("beforeunload", () => {
+        marcarAlunoOfflineFarol();
+    });
+
+    const authPresenca =
+        window.farolFirebase &&
+        window.farolFirebase.auth;
+
+    if(authPresenca && typeof authPresenca.onAuthStateChanged === "function"){
+        authPresenca.onAuthStateChanged(usuario => {
+            if(usuario){
+                iniciarPresencaFarol();
+            }else if(intervaloPresencaFarol){
+                clearInterval(intervaloPresencaFarol);
+                intervaloPresencaFarol = null;
+            }
+        });
+    }
+})();
+
+
+// ============================================================
+// V45 — CIÊNCIAS DE ABAETETUBA — EIXO 2
+// Histologia, Embriologia e Reprodução Humana
+// ============================================================
+(function integrarHistologiaAbaetetubaV45(){
+    "use strict";
+
+    const ASSUNTO_HISTOLOGIA_ABAETETUBA_V45 =
+        "histologiaEmbriologiaReproducaoAbaetetuba";
+
+    function bancoHistologiaDisponivelV45(){
+        return (
+            typeof histologiaEmbriologiaReproducaoAbaetetuba !== "undefined" &&
+            Array.isArray(histologiaEmbriologiaReproducaoAbaetetuba)
+        );
+    }
+
+    function teoriaHistologiaDisponivelV45(){
+        return (
+            typeof histologiaEmbriologiaReproducaoAbaetetubaTeoria !== "undefined" &&
+            Array.isArray(histologiaEmbriologiaReproducaoAbaetetubaTeoria)
+        );
+    }
+
+    if(
+        typeof bancoQuestoes !== "undefined" &&
+        bancoHistologiaDisponivelV45()
+    ){
+        bancoQuestoes[ASSUNTO_HISTOLOGIA_ABAETETUBA_V45] =
+            histologiaEmbriologiaReproducaoAbaetetuba;
+    }
+
+    if(typeof mapasMentaisPorAssunto !== "undefined"){
+        mapasMentaisPorAssunto[ASSUNTO_HISTOLOGIA_ABAETETUBA_V45] = {
+            titulo: "🧬 Histologia, Embriologia e Reprodução Humana",
+            imagem: "imagens/mapas/abaetetuba/ciencias/HistologiaEmbriologiaReproducaoAbaetetuba.png"
+        };
+    }
+
+    const abrirModuloAntesV45 =
+        typeof window.abrirModuloCienciasAbaetetuba === "function"
+            ? window.abrirModuloCienciasAbaetetuba
+            : null;
+
+    window.abrirModuloCienciasAbaetetuba = function(numero){
+        const eixo = Number(numero);
+
+        if(eixo === 2){
+            mostrarTela("moduloCienciasAbaetetuba2");
+            return;
+        }
+
+        if(abrirModuloAntesV45){
+            return abrirModuloAntesV45.apply(this, arguments);
+        }
+
+        mostrarToast("Este eixo ainda está em preparação.");
+    };
+
+    window.abrirAssuntoHistologiaAbaetetuba = function(){
+        if(!teoriaHistologiaDisponivelV45()){
+            mostrarToast("A teoria de Histologia não foi carregada.");
+            return;
+        }
+
+        localStorage.setItem(
+            "farol_contexto_ciencias_abaetetuba",
+            "eixo2"
+        );
+
+        abrirAssunto(ASSUNTO_HISTOLOGIA_ABAETETUBA_V45);
+    };
+
+    window.abrirMapaCienciasAbaetetubaEixo2 = function(){
+        disciplinaAtual = "cienciasAbaetetuba";
+        assuntoAtual = ASSUNTO_HISTOLOGIA_ABAETETUBA_V45;
+
+        if(typeof configurarMapaMentalAtual === "function"){
+            configurarMapaMentalAtual();
+        }
+
+        mostrarTela("telaMapaMental");
+    };
+
+    window.iniciarTreinoModuloDoisCienciasAbaetetuba = function(){
+        if(!bancoHistologiaDisponivelV45()){
+            mostrarToast("O banco de questões de Histologia não foi carregado.");
+            return;
+        }
+
+        disciplinaAtual = "cienciasAbaetetuba";
+        assuntoAtual = ASSUNTO_HISTOLOGIA_ABAETETUBA_V45;
+
+        iniciarSimuladoPersonalizado(
+            [...histologiaEmbriologiaReproducaoAbaetetuba],
+            30,
+            "cienciasAbaetetubaEixo2"
+        );
+    };
+
+    const abrirAssuntoAntesV45 = abrirAssunto;
+    abrirAssunto = function(assunto){
+        if(assunto === ASSUNTO_HISTOLOGIA_ABAETETUBA_V45){
+            if(!teoriaHistologiaDisponivelV45()){
+                mostrarToast("A teoria de Histologia não foi carregada.");
+                return;
+            }
+
+            assuntoAtual = ASSUNTO_HISTOLOGIA_ABAETETUBA_V45;
+            disciplinaAtual = "cienciasAbaetetuba";
+
+            localStorage.setItem(
+                "farol_contexto_ciencias_abaetetuba",
+                "eixo2"
+            );
+
+            abrirTeoria(
+                histologiaEmbriologiaReproducaoAbaetetubaTeoria,
+                "🧬 Histologia, Embriologia e Reprodução Humana"
+            );
+            return;
+        }
+
+        return abrirAssuntoAntesV45.apply(this, arguments);
+    };
+
+    const abrirTeoriaDoAssuntoAntesV45 = abrirTeoriaDoAssunto;
+    abrirTeoriaDoAssunto = function(){
+        if(assuntoAtual === ASSUNTO_HISTOLOGIA_ABAETETUBA_V45){
+            abrirTeoria(
+                histologiaEmbriologiaReproducaoAbaetetubaTeoria,
+                "🧬 Histologia, Embriologia e Reprodução Humana"
+            );
+            return;
+        }
+
+        return abrirTeoriaDoAssuntoAntesV45.apply(this, arguments);
+    };
+
+    const voltarParaAssuntosAntesV45 = voltarParaAssuntos;
+    voltarParaAssuntos = function(){
+        if(assuntoAtual === ASSUNTO_HISTOLOGIA_ABAETETUBA_V45){
+            mostrarTela("moduloCienciasAbaetetuba2");
+            return;
+        }
+
+        return voltarParaAssuntosAntesV45.apply(this, arguments);
+    };
+
+})();
+
+
+/* ==========================================================
+   V43 — PARÁFRASE, PERÍFRASE, SÍNTESE E RESUMO — ABAETETUBA
+   Integra botão, teoria, mapa mental e banco de questões.
+========================================================== */
+(function integrarParafraseResumoAbaetetubaV43(){
+    "use strict";
+
+    const CHAVE_PARAFRASE_ABAETETUBA = "parafraseResumoAbaetetuba";
+    const TITULO_PARAFRASE_ABAETETUBA =
+        "✍️ Paráfrase, Perífrase, Síntese e Resumo";
+
+    function dadosDisponiveisParafraseAbaetetuba(){
+        return (
+            typeof parafraseResumoAbaetetuba !== "undefined" &&
+            Array.isArray(parafraseResumoAbaetetuba) &&
+            parafraseResumoAbaetetuba.length > 0
+        );
+    }
+
+    function teoriaDisponivelParafraseAbaetetuba(){
+        return (
+            typeof parafraseResumoAbaetetubaTeoria !== "undefined" &&
+            Array.isArray(parafraseResumoAbaetetubaTeoria) &&
+            parafraseResumoAbaetetubaTeoria.length > 0
+        );
+    }
+
+    if(typeof bancoQuestoes !== "undefined" && dadosDisponiveisParafraseAbaetetuba()){
+        bancoQuestoes[CHAVE_PARAFRASE_ABAETETUBA] =
+            parafraseResumoAbaetetuba;
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const abrirAssuntoAntesParafraseV43 = abrirAssunto;
+
+        abrirAssunto = function(assunto){
+            if(assunto === CHAVE_PARAFRASE_ABAETETUBA){
+                assuntoAtual = CHAVE_PARAFRASE_ABAETETUBA;
+                disciplinaAtual = CHAVE_PARAFRASE_ABAETETUBA;
+
+                if(typeof bancoQuestoes !== "undefined" && dadosDisponiveisParafraseAbaetetuba()){
+                    bancoQuestoes[CHAVE_PARAFRASE_ABAETETUBA] =
+                        parafraseResumoAbaetetuba;
+                }
+
+                if(!teoriaDisponivelParafraseAbaetetuba()){
+                    mostrarToast(
+                        "A teoria de Paráfrase, Perífrase, Síntese e Resumo não foi carregada."
+                    );
+                    return;
+                }
+
+                abrirTeoria(
+                    parafraseResumoAbaetetubaTeoria,
+                    TITULO_PARAFRASE_ABAETETUBA
+                );
+                return;
+            }
+
+            return abrirAssuntoAntesParafraseV43.apply(this, arguments);
+        };
+    }
+
+    if(typeof abrirTeoriaDoAssunto === "function"){
+        const abrirTeoriaAntesParafraseV43 = abrirTeoriaDoAssunto;
+
+        abrirTeoriaDoAssunto = function(){
+            if(assuntoAtual === CHAVE_PARAFRASE_ABAETETUBA){
+                if(!teoriaDisponivelParafraseAbaetetuba()){
+                    mostrarToast("Teoria de Paráfrase não encontrada.");
+                    return;
+                }
+
+                abrirTeoria(
+                    parafraseResumoAbaetetubaTeoria,
+                    TITULO_PARAFRASE_ABAETETUBA
+                );
+                return;
+            }
+
+            return abrirTeoriaAntesParafraseV43.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const voltarAssuntosAntesParafraseV43 = voltarParaAssuntos;
+
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === CHAVE_PARAFRASE_ABAETETUBA){
+                mostrarTela("portugues");
+                return;
+            }
+
+            return voltarAssuntosAntesParafraseV43.apply(this, arguments);
+        };
+    }
+
+    window.assuntoParafraseResumoAbaetetubaV43 =
+        CHAVE_PARAFRASE_ABAETETUBA;
+})();
+
+
+/* ==========================================================
+   V44 — DISCURSO DIRETO E INDIRETO — ABAETETUBA
+   Integra botão, teoria, mapa mental e banco de questões.
+========================================================== */
+(function integrarDiscursoDiretoIndiretoAbaetetubaV44(){
+    "use strict";
+
+    const CHAVE_DISCURSO_ABAETETUBA = "discursoDiretoIndiretoAbaetetuba";
+    const TITULO_DISCURSO_ABAETETUBA = "💬 Discurso Direto e Indireto";
+
+    function dadosDisponiveisDiscursoAbaetetuba(){
+        return (
+            typeof discursoDiretoIndiretoAbaetetuba !== "undefined" &&
+            Array.isArray(discursoDiretoIndiretoAbaetetuba) &&
+            discursoDiretoIndiretoAbaetetuba.length > 0
+        );
+    }
+
+    function teoriaDisponivelDiscursoAbaetetuba(){
+        return (
+            typeof discursoDiretoIndiretoAbaetetubaTeoria !== "undefined" &&
+            Array.isArray(discursoDiretoIndiretoAbaetetubaTeoria) &&
+            discursoDiretoIndiretoAbaetetubaTeoria.length > 0
+        );
+    }
+
+    if(typeof bancoQuestoes !== "undefined" && dadosDisponiveisDiscursoAbaetetuba()){
+        bancoQuestoes[CHAVE_DISCURSO_ABAETETUBA] = discursoDiretoIndiretoAbaetetuba;
+    }
+
+    if(typeof mapasMentaisPorAssunto !== "undefined"){
+        mapasMentaisPorAssunto[CHAVE_DISCURSO_ABAETETUBA] = {
+            titulo: "🧠 Discurso direto e indireto",
+            imagem: "imagens/mapas/abaetetuba/portugues/discurso-direto-indireto.png"
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const abrirAssuntoAntesDiscursoV44 = abrirAssunto;
+
+        abrirAssunto = function(assunto){
+            if(assunto === CHAVE_DISCURSO_ABAETETUBA){
+                assuntoAtual = CHAVE_DISCURSO_ABAETETUBA;
+                disciplinaAtual = CHAVE_DISCURSO_ABAETETUBA;
+
+                if(typeof bancoQuestoes !== "undefined" && dadosDisponiveisDiscursoAbaetetuba()){
+                    bancoQuestoes[CHAVE_DISCURSO_ABAETETUBA] = discursoDiretoIndiretoAbaetetuba;
+                }
+
+                if(!teoriaDisponivelDiscursoAbaetetuba()){
+                    mostrarToast("A teoria de Discurso Direto e Indireto não foi carregada.");
+                    return;
+                }
+
+                abrirTeoria(discursoDiretoIndiretoAbaetetubaTeoria, TITULO_DISCURSO_ABAETETUBA);
+                return;
+            }
+
+            return abrirAssuntoAntesDiscursoV44.apply(this, arguments);
+        };
+    }
+
+    if(typeof abrirTeoriaDoAssunto === "function"){
+        const abrirTeoriaAntesDiscursoV44 = abrirTeoriaDoAssunto;
+
+        abrirTeoriaDoAssunto = function(){
+            if(assuntoAtual === CHAVE_DISCURSO_ABAETETUBA){
+                if(!teoriaDisponivelDiscursoAbaetetuba()){
+                    mostrarToast("Teoria de Discurso Direto e Indireto não encontrada.");
+                    return;
+                }
+
+                abrirTeoria(discursoDiretoIndiretoAbaetetubaTeoria, TITULO_DISCURSO_ABAETETUBA);
+                return;
+            }
+
+            return abrirTeoriaAntesDiscursoV44.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const voltarAssuntosAntesDiscursoV44 = voltarParaAssuntos;
+
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === CHAVE_DISCURSO_ABAETETUBA){
+                mostrarTela("portugues");
+                return;
+            }
+
+            return voltarAssuntosAntesDiscursoV44.apply(this, arguments);
+        };
+    }
+
+    window.assuntoDiscursoDiretoIndiretoAbaetetubaV44 = CHAVE_DISCURSO_ABAETETUBA;
+})();
+
+
+// ============================================================
+// V47 — INFORMÁTICA POR ROTA
+// Abaetetuba oculta conteúdos não previstos sem apagar Barcarena.
+// ============================================================
+function ehRotaAbaetetubaV47(){
+
+    const concurso =
+        localStorage.getItem("farol_concurso_atual") || "";
+
+    const trilha =
+        localStorage.getItem("farol_trilha_atual") || "";
+
+    if(concurso === "abaetetuba2026"){
+        return true;
+    }
+
+    if(
+        trilha &&
+        typeof trilhasPreparacaoFarol !== "undefined" &&
+        trilhasPreparacaoFarol[trilha] &&
+        trilhasPreparacaoFarol[trilha].concurso === "abaetetuba2026"
+    ){
+        return true;
+    }
+
+    return false;
+}
+
+function configurarInformaticaPorRotaV47(){
+
+    const abaetetuba = ehRotaAbaetetubaV47();
+
+    const btnRedes =
+        document.getElementById("btnInformaticaRedes");
+
+    const btnSeguranca =
+        document.getElementById("btnInformaticaSeguranca");
+
+    const textoSoftware =
+        document.getElementById("textoInformaticaSoftware");
+
+    if(btnRedes){
+        btnRedes.style.display =
+            abaetetuba ? "none" : "";
+    }
+
+    if(btnSeguranca){
+        btnSeguranca.style.display =
+            abaetetuba ? "none" : "";
+    }
+
+    if(textoSoftware){
+        textoSoftware.textContent =
+            abaetetuba
+            ? "⚙️ Software e Sistema Operacional Windows"
+            : "⚙️ Software, Windows e Linux";
+    }
+}
+
+function assuntoInformaticaPermitidoV47(assunto){
+
+    if(!ehRotaAbaetetubaV47()){
+        return true;
+    }
+
+    return [
+        "hardware",
+        "software",
+        "arquivos",
+        "office",
+        "internet"
+    ].includes(assunto);
+}
+
+const abrirAssuntoAntesInformaticaV47 = abrirAssunto;
+
+abrirAssunto = function(assunto){
+
+    if(
+        ["redes", "seguranca"].includes(assunto) &&
+        !assuntoInformaticaPermitidoV47(assunto)
+    ){
+        mostrarToast(
+            "Este conteúdo não integra a rota de Informática de Abaetetuba."
+        );
+        return;
+    }
+
+    return abrirAssuntoAntesInformaticaV47.apply(
+        this,
+        arguments
+    );
+};
+
+const assuntosDisponiveisDueloAntesV47 =
+    assuntosDisponiveisDuelo;
+
+assuntosDisponiveisDuelo = function(grupo){
+
+    const assuntos =
+        assuntosDisponiveisDueloAntesV47(grupo);
+
+    if(
+        ehRotaAbaetetubaV47() &&
+        grupo &&
+        grupo.disciplina === "informatica"
+    ){
+        return assuntos.filter(item =>
+            assuntoInformaticaPermitidoV47(item.chave)
+        );
+    }
+
+    return assuntos;
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    configurarInformaticaPorRotaV47();
+});
+
+
+// ============================================================
+// V49 — CENTRAL DE DUELOS E ARENA DO FAROL
+// Etapa 1: abas, configuração visual e sala de espera local.
+// A sincronização em tempo real será adicionada em etapa posterior.
+// ============================================================
+function alternarModoCompeticaoFarol(modo){
+
+    const arenaAtiva = modo === "arena";
+
+    const painelDuelo =
+        document.getElementById("painelDesafioConviteFarol");
+
+    const painelArena =
+        document.getElementById("painelArenaAoVivoFarol");
+
+    const abaDuelo =
+        document.getElementById("abaDesafioConviteFarol");
+
+    const abaArena =
+        document.getElementById("abaArenaAoVivoFarol");
+
+    const cardMeusDuelos =
+        document.getElementById("cardMeusDuelosFarol");
+
+    if(painelDuelo){
+        painelDuelo.style.display =
+            arenaAtiva ? "none" : "block";
+    }
+
+    if(painelArena){
+        painelArena.style.display =
+            arenaAtiva ? "block" : "none";
+    }
+
+    if(abaDuelo){
+        abaDuelo.classList.toggle(
+            "ativa",
+            !arenaAtiva
+        );
+    }
+
+    if(abaArena){
+        abaArena.classList.toggle(
+            "ativa",
+            arenaAtiva
+        );
+    }
+
+    if(cardMeusDuelos){
+        cardMeusDuelos.style.display =
+            arenaAtiva ? "none" : "block";
+    }
+
+    localStorage.setItem(
+        "farol_modo_competicao",
+        arenaAtiva ? "arena" : "duelo"
+    );
+
+    if(arenaAtiva){
+        prepararArenaVisualFarol();
+    }else{
+        if(typeof prepararSelectDuelo === "function"){
+            prepararSelectDuelo();
+        }
+
+        if(typeof carregarMeusDuelos === "function"){
+            carregarMeusDuelos();
+        }
+    }
+}
+
+function gruposArenaVisualFarol(){
+
+    const concurso =
+        (document.getElementById("arenaConcursoFarol") || {}).value
+        || "barcarena2026";
+
+    if(concurso === "abaetetuba2026"){
+        return [
+            {
+                nome: "Língua Portuguesa",
+                topicos: [
+                    ["parafraseResumoAbaetetuba", "Paráfrase, perífrase, síntese e resumo"],
+                    ["discursoDiretoIndiretoAbaetetuba", "Discurso direto e indireto"]
+                ]
+            },
+            {
+                nome: "Informática",
+                topicos: [
+                    ["hardware", "Hardware e periféricos"],
+                    ["software", "Software e Sistema Operacional Windows"],
+                    ["arquivos", "Arquivos, pastas e backup"],
+                    ["office", "Word, Excel, Writer e Calc"],
+                    ["internet", "Internet, intranet e correio eletrônico"]
+                ]
+            }
+        ];
+    }
+
+    if(typeof gruposDuelo !== "undefined"){
+        return gruposDuelo
+            .map(grupo => ({
+                nome: grupo.nome,
+                topicos: (typeof assuntosDisponiveisDuelo === "function"
+                    ? assuntosDisponiveisDuelo(grupo)
+                    : (grupo.assuntos || [])
+                ).map(item => [
+                    item.chave,
+                    item.nome
+                ])
+            }))
+            .filter(grupo => grupo.topicos.length > 0);
+    }
+
+    return [];
+}
+
+function prepararArenaVisualFarol(){
+
+    const selectDisciplina =
+        document.getElementById("arenaDisciplinaFarol");
+
+    const selectTopico =
+        document.getElementById("arenaTopicoFarol");
+
+    if(!selectDisciplina || !selectTopico){
+        return;
+    }
+
+    const grupos = gruposArenaVisualFarol();
+    const valorAnterior = selectDisciplina.value;
+
+    selectDisciplina.innerHTML =
+        '<option value="">Escolha a disciplina</option>' +
+        grupos.map((grupo, indice) => `
+            <option value="${indice}">
+                ${escaparHTMLDuelo(grupo.nome)}
+            </option>
+        `).join("");
+
+    if(
+        valorAnterior !== "" &&
+        grupos[Number(valorAnterior)]
+    ){
+        selectDisciplina.value = valorAnterior;
+    }
+
+    atualizarTopicosArenaVisualFarol();
+}
+
+function atualizarTopicosArenaVisualFarol(){
+
+    const selectDisciplina =
+        document.getElementById("arenaDisciplinaFarol");
+
+    const selectTopico =
+        document.getElementById("arenaTopicoFarol");
+
+    if(!selectDisciplina || !selectTopico){
+        return;
+    }
+
+    const grupos = gruposArenaVisualFarol();
+    const indice = Number(selectDisciplina.value);
+    const grupo = Number.isInteger(indice)
+        ? grupos[indice]
+        : null;
+
+    if(!grupo){
+        selectTopico.innerHTML =
+            '<option value="">Escolha primeiro a disciplina</option>';
+
+        atualizarResumoArenaVisualFarol();
+        return;
+    }
+
+    selectTopico.innerHTML =
+        '<option value="">Escolha o tópico</option>' +
+        grupo.topicos.map(item => `
+            <option value="${escaparHTMLDuelo(item[0])}">
+                ${escaparHTMLDuelo(item[1])}
+            </option>
+        `).join("");
+
+    atualizarResumoArenaVisualFarol();
+}
+
+function obterConfiguracaoArenaVisualFarol(){
+
+    const grupos = gruposArenaVisualFarol();
+
+    const selectDisciplina =
+        document.getElementById("arenaDisciplinaFarol");
+
+    const selectTopico =
+        document.getElementById("arenaTopicoFarol");
+
+    const indice = Number(
+        selectDisciplina ? selectDisciplina.value : ""
+    );
+
+    const grupo = Number.isInteger(indice)
+        ? grupos[indice]
+        : null;
+
+    const chaveTopico =
+        selectTopico ? selectTopico.value : "";
+
+    const topico = grupo
+        ? grupo.topicos.find(item => item[0] === chaveTopico)
+        : null;
+
+    return {
+        concurso:
+            (document.getElementById("arenaConcursoFarol") || {}).value
+            || "barcarena2026",
+        disciplina:
+            grupo ? grupo.nome : "",
+        topicoChave:
+            topico ? topico[0] : "",
+        topicoNome:
+            topico ? topico[1] : "",
+        quantidade:
+            Number((document.getElementById("arenaQuantidadeFarol") || {}).value)
+            || 10,
+        tempo:
+            Number((document.getElementById("arenaTempoFarol") || {}).value)
+            || 30,
+        limite: 6
+    };
+}
+
+function atualizarResumoArenaVisualFarol(){
+
+    const area =
+        document.getElementById("arenaResumoVisualFarol");
+
+    if(!area){
+        return;
+    }
+
+    const config = obterConfiguracaoArenaVisualFarol();
+
+    if(!config.disciplina || !config.topicoNome){
+        area.innerHTML =
+            "Escolha a disciplina e o tópico para visualizar a configuração.";
+        return;
+    }
+
+    area.innerHTML = `
+        <strong>🏟️ Arena configurada</strong><br>
+        ${escaparHTMLDuelo(config.disciplina)}<br>
+        ${escaparHTMLDuelo(config.topicoNome)}<br>
+        ${config.quantidade} questões •
+        ${config.tempo} segundos por questão •
+        até ${config.limite} jogadores
+    `;
+}
+
+function gerarCodigoArenaVisualFarol(){
+    return "ARENA-" +
+        Math.floor(1000 + Math.random() * 9000);
+}
+
+function criarArenaVisualFarol(){
+
+    const config = obterConfiguracaoArenaVisualFarol();
+
+    if(!config.disciplina){
+        mostrarToast("Escolha a disciplina da Arena.");
+        return;
+    }
+
+    if(!config.topicoNome){
+        mostrarToast("Escolha o tópico da Arena.");
+        return;
+    }
+
+    const sala =
+        document.getElementById("arenaSalaEsperaVisualFarol");
+
+    const codigo =
+        document.getElementById("arenaCodigoVisualFarol");
+
+    const titulo =
+        document.getElementById("arenaSalaTituloFarol");
+
+    const configuracao =
+        document.getElementById("arenaConfiguracaoSalaFarol");
+
+    if(codigo){
+        codigo.textContent =
+            gerarCodigoArenaVisualFarol();
+    }
+
+    if(titulo){
+        titulo.textContent =
+            config.topicoNome;
+    }
+
+    if(configuracao){
+        configuracao.innerHTML = `
+            <p><strong>Disciplina:</strong> ${escaparHTMLDuelo(config.disciplina)}</p>
+            <p><strong>Questões:</strong> ${config.quantidade}</p>
+            <p><strong>Tempo:</strong> ${config.tempo} segundos</p>
+            <p><strong>Limite:</strong> ${config.limite} jogadores</p>
+        `;
+    }
+
+    if(sala){
+        sala.style.display = "block";
+        sala.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+
+    mostrarToast(
+        "Sala visual preparada. O modo ao vivo será conectado ao Firebase na próxima etapa."
+    );
+}
+
+function entrarArenaVisualFarol(){
+
+    const campo =
+        document.getElementById("codigoArenaEntradaFarol");
+
+    const codigo =
+        String(campo ? campo.value : "")
+            .trim()
+            .toUpperCase();
+
+    if(!/^ARENA-\d{4}$/.test(codigo)){
+        mostrarToast(
+            "Digite um código no formato ARENA-1234."
+        );
+        return;
+    }
+
+    mostrarToast(
+        "Entrada visual reconhecida. A conexão em tempo real será ativada na próxima etapa."
+    );
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const modoSalvo =
+        localStorage.getItem("farol_modo_competicao")
+        || "duelo";
+
+    alternarModoCompeticaoFarol(
+        modoSalvo === "arena"
+            ? "arena"
+            : "duelo"
+    );
+});
+
+
+// ============================================================
+// V52 — ARENA DO FAROL: SALA DE ESPERA REAL NO FIRESTORE
+// Criação, entrada por código, participantes ao vivo,
+// limite de 6 e início permitido apenas ao anfitrião com 2+.
+// ============================================================
+
+let arenaSalaAtualFarol = null;
+let arenaSalaAtualCodigoFarol = "";
+let arenaSalaListenerFarol = null;
+
+function usuarioArenaAtualFarol(){
+
+    const user =
+        (typeof auth !== "undefined" && auth.currentUser)
+        ? auth.currentUser
+        : null;
+
+    if(!user){
+        return null;
+    }
+
+    const nomeCompleto =
+        String(
+            localStorage.getItem("usuarioNomeCompleto")
+            || user.displayName
+            || localStorage.getItem("usuarioForum")
+            || "Aluno"
+        ).trim();
+
+    const primeiroNome =
+        String(
+            localStorage.getItem("usuarioForum")
+            || nomeCompleto.split(/\s+/)[0]
+            || "Aluno"
+        ).trim();
+
+    return {
+        uid: user.uid,
+        email: user.email || "",
+        nome: primeiroNome || "Aluno",
+        nomeCompleto: nomeCompleto || primeiroNome || "Aluno"
+    };
+}
+
+function normalizarCodigoArenaFarol(codigo){
+
+    return String(codigo || "")
+        .trim()
+        .toUpperCase()
+        .replace(/\s+/g, "");
+}
+
+function gerarCodigoArenaVisualFarol(){
+
+    const letras = "ABCDEFGHJKLMNPQRSTUVWXYZ";
+    let sufixo = "";
+
+    for(let i = 0; i < 2; i++){
+        sufixo += letras[
+            Math.floor(Math.random() * letras.length)
+        ];
+    }
+
+    return "ARENA-" +
+        sufixo +
+        Math.floor(1000 + Math.random() * 9000);
+}
+
+async function gerarCodigoArenaUnicoFarol(){
+
+    for(let tentativa = 0; tentativa < 12; tentativa++){
+
+        const codigo = gerarCodigoArenaVisualFarol();
+
+        const doc = await db
+            .collection("arenasAoVivo")
+            .doc(codigo)
+            .get();
+
+        if(!doc.exists){
+            return codigo;
+        }
+    }
+
+    throw new Error(
+        "Não foi possível gerar um código livre. Tente novamente."
+    );
+}
+
+function definirCarregamentoBotaoArenaFarol(id, carregando, texto){
+
+    const botao = document.getElementById(id);
+
+    if(!botao){
+        return;
+    }
+
+    if(carregando){
+        botao.dataset.textoOriginal =
+            botao.textContent.trim();
+
+        botao.disabled = true;
+        botao.textContent = texto || "Aguarde...";
+        return;
+    }
+
+    botao.disabled = false;
+
+    if(botao.dataset.textoOriginal){
+        botao.textContent =
+            botao.dataset.textoOriginal;
+    }
+}
+
+async function criarArenaVisualFarol(){
+
+    const usuario = usuarioArenaAtualFarol();
+
+    if(!usuario){
+        mostrarToast("Faça login para criar uma Arena.");
+        return;
+    }
+
+    const config = obterConfiguracaoArenaVisualFarol();
+
+    if(!config.disciplina){
+        mostrarToast("Escolha a disciplina da Arena.");
+        return;
+    }
+
+    if(!config.topicoNome){
+        mostrarToast("Escolha o tópico da Arena.");
+        return;
+    }
+
+    definirCarregamentoBotaoArenaFarol(
+        "btnCriarArenaFarol",
+        true,
+        "Criando sala..."
+    );
+
+    try{
+
+        if(arenaSalaAtualCodigoFarol){
+            await sairArenaAoVivoFarol(true);
+        }
+
+        const codigo =
+            await gerarCodigoArenaUnicoFarol();
+
+        const participante = {
+            uid: usuario.uid,
+            nome: usuario.nome,
+            nomeCompleto: usuario.nomeCompleto,
+            email: usuario.email,
+            entrouEm: Date.now(),
+            pronto: true,
+            anfitriao: true
+        };
+
+        const sala = {
+            codigo: codigo,
+            criadoPor: usuario.uid,
+            anfitriaoNome: usuario.nome,
+            concurso: config.concurso,
+            disciplina: config.disciplina,
+            topicoChave: config.topicoChave,
+            topicoNome: config.topicoNome,
+            quantidadeQuestoes: config.quantidade,
+            tempoPorQuestao: config.tempo,
+            limiteJogadores: 6,
+            minimoJogadores: 2,
+            status: "aguardando",
+            publica: true,
+            limiteEspectadores: 15,
+            espectadorUids: [],
+            espectadores: {},
+            uids: [usuario.uid],
+            participantes: {
+                [usuario.uid]: participante
+            },
+            criadoEm: firebase.firestore.FieldValue.serverTimestamp(),
+            atualizadoEm: Date.now()
+        };
+
+        await db
+            .collection("arenasAoVivo")
+            .doc(codigo)
+            .set(sala);
+
+        acompanharArenaAoVivoFarol(codigo);
+
+        mostrarToast(
+            "Arena criada. Compartilhe o código com os participantes."
+        );
+
+    }catch(erro){
+
+        console.error("Erro ao criar Arena:", erro);
+
+        mostrarToast(
+            "Não foi possível criar a Arena: " +
+            (erro.message || "erro desconhecido")
+        );
+
+    }finally{
+
+        definirCarregamentoBotaoArenaFarol(
+            "btnCriarArenaFarol",
+            false
+        );
+    }
+}
+
+async function entrarArenaVisualFarol(){
+
+    const usuario = usuarioArenaAtualFarol();
+
+    if(!usuario){
+        mostrarToast("Faça login para entrar na Arena.");
+        return;
+    }
+
+    const campo =
+        document.getElementById("codigoArenaEntradaFarol");
+
+    const codigo =
+        normalizarCodigoArenaFarol(
+            campo ? campo.value : ""
+        );
+
+    if(!/^ARENA-[A-Z]{2}\d{4}$/.test(codigo)){
+        mostrarToast(
+            "Digite um código no formato ARENA-AB1234."
+        );
+        return;
+    }
+
+    definirCarregamentoBotaoArenaFarol(
+        "btnEntrarArenaFarol",
+        true,
+        "Entrando..."
+    );
+
+    try{
+
+        if(
+            arenaSalaAtualCodigoFarol &&
+            arenaSalaAtualCodigoFarol !== codigo
+        ){
+            await sairArenaAoVivoFarol(true);
+        }
+
+        const ref = db
+            .collection("arenasAoVivo")
+            .doc(codigo);
+
+        await db.runTransaction(async transacao => {
+
+            const snapshot =
+                await transacao.get(ref);
+
+            if(!snapshot.exists){
+                throw new Error("Arena não encontrada.");
+            }
+
+            const dados = snapshot.data() || {};
+            const uids = Array.isArray(dados.uids)
+                ? [...dados.uids]
+                : [];
+
+            const participantes =
+                dados.participantes
+                ? { ...dados.participantes }
+                : {};
+
+            if(dados.status !== "aguardando"){
+                throw new Error(
+                    "Esta Arena já foi iniciada ou encerrada."
+                );
+            }
+
+            if(
+                !uids.includes(usuario.uid) &&
+                uids.length >= 6
+            ){
+                throw new Error(
+                    "Esta Arena já atingiu o limite de 6 jogadores."
+                );
+            }
+
+            if(!uids.includes(usuario.uid)){
+                uids.push(usuario.uid);
+            }
+
+            participantes[usuario.uid] = {
+                uid: usuario.uid,
+                nome: usuario.nome,
+                nomeCompleto: usuario.nomeCompleto,
+                email: usuario.email,
+                entrouEm: Date.now(),
+                pronto: true,
+                anfitriao:
+                    dados.criadoPor === usuario.uid
+            };
+
+            transacao.update(ref, {
+                uids: uids,
+                participantes: participantes,
+                atualizadoEm: Date.now()
+            });
+        });
+
+        acompanharArenaAoVivoFarol(codigo);
+
+        localStorage.removeItem(
+            CHAVE_ARENA_PENDENTE
+        );
+
+        mostrarToast("Você entrou na Arena.");
+
+    }catch(erro){
+
+        console.error("Erro ao entrar na Arena:", erro);
+
+        mostrarToast(
+            erro.message ||
+            "Não foi possível entrar na Arena."
+        );
+
+    }finally{
+
+        definirCarregamentoBotaoArenaFarol(
+            "btnEntrarArenaFarol",
+            false
+        );
+    }
+}
+
+function acompanharArenaAoVivoFarol(codigo){
+
+    if(arenaSalaListenerFarol){
+        arenaSalaListenerFarol();
+        arenaSalaListenerFarol = null;
+    }
+
+    arenaSalaAtualCodigoFarol =
+        normalizarCodigoArenaFarol(codigo);
+
+    localStorage.setItem(
+        "farol_arena_codigo_atual",
+        arenaSalaAtualCodigoFarol
+    );
+
+    arenaSalaListenerFarol = db
+        .collection("arenasAoVivo")
+        .doc(arenaSalaAtualCodigoFarol)
+        .onSnapshot(snapshot => {
+
+            if(!snapshot.exists){
+
+                limparArenaLocalFarol();
+                mostrarToast("A Arena não está mais disponível.");
+                return;
+            }
+
+            arenaSalaAtualFarol = {
+                id: snapshot.id,
+                ...snapshot.data()
+            };
+
+            renderizarSalaArenaAoVivoFarol();
+
+        }, erro => {
+
+            console.error("Erro no acompanhamento da Arena:", erro);
+
+            mostrarToast(
+                "A conexão com a Arena foi interrompida."
+            );
+        });
+}
+
+function renderizarSalaArenaAoVivoFarol(){
+
+    const sala = arenaSalaAtualFarol;
+
+    if(!sala){
+        return;
+    }
+
+    const usuario = usuarioArenaAtualFarol();
+    const participantesObj =
+        sala.participantes || {};
+
+    const participantes =
+        Object.values(participantesObj)
+            .sort((a, b) => {
+                if(a.uid === sala.criadoPor) return -1;
+                if(b.uid === sala.criadoPor) return 1;
+                return (a.entrouEm || 0) - (b.entrouEm || 0);
+            });
+
+    const areaSala =
+        document.getElementById("arenaSalaEsperaVisualFarol");
+
+    const codigo =
+        document.getElementById("arenaCodigoVisualFarol");
+
+    const titulo =
+        document.getElementById("arenaSalaTituloFarol");
+
+    const lista =
+        document.getElementById("arenaJogadoresVisualFarol");
+
+    const configuracao =
+        document.getElementById("arenaConfiguracaoSalaFarol");
+
+    const botaoIniciar =
+        document.getElementById("btnIniciarArenaFarol");
+
+    const mensagem =
+        document.getElementById("arenaMensagemStatusFarol");
+
+    if(areaSala){
+        areaSala.style.display = "block";
+    }
+
+    if(codigo){
+        codigo.textContent =
+            sala.codigo || arenaSalaAtualCodigoFarol;
+    }
+
+    if(titulo){
+        titulo.textContent =
+            sala.topicoNome || "Arena do Farol";
+    }
+
+    if(lista){
+
+        lista.innerHTML = participantes
+            .map(item => {
+
+                const anfitriao =
+                    item.uid === sala.criadoPor;
+
+                return `
+                    <div class="arena-jogador-farol ${anfitriao ? "anfitriao" : ""}">
+                        <span>${anfitriao ? "👑" : "🟢"}</span>
+                        <div>
+                            <strong>${escaparHTMLDuelo(item.nome || "Aluno")}</strong>
+                            <small>
+                                ${anfitriao ? "Anfitrião" : "Pronto para jogar"}
+                            </small>
+                        </div>
+                    </div>
+                `;
+            })
+            .join("");
+    }
+
+    if(configuracao){
+        configuracao.innerHTML = `
+            <p><strong>Disciplina:</strong> ${escaparHTMLDuelo(sala.disciplina || "")}</p>
+            <p><strong>Tópico:</strong> ${escaparHTMLDuelo(sala.topicoNome || "")}</p>
+            <p><strong>Questões:</strong> ${Number(sala.quantidadeQuestoes || 0)}</p>
+            <p><strong>Tempo:</strong> ${Number(sala.tempoPorQuestao || 0)} segundos</p>
+            <p><strong>Jogadores:</strong> ${participantes.length}/6</p>
+            <p><strong>Status:</strong> ${escaparHTMLDuelo(sala.status || "aguardando")}</p>
+        `;
+    }
+
+    const ehAnfitriao =
+        usuario &&
+        sala.criadoPor === usuario.uid;
+
+    const podeIniciar =
+        ehAnfitriao &&
+        sala.status === "aguardando" &&
+        participantes.length >= 2;
+
+    if(botaoIniciar){
+
+        botaoIniciar.disabled = !podeIniciar;
+
+        botaoIniciar.classList.toggle(
+            "arena-botao-bloqueado-farol",
+            !podeIniciar
+        );
+
+        botaoIniciar.classList.toggle(
+            "arena-botao-iniciar-farol",
+            podeIniciar
+        );
+
+        if(sala.status === "iniciada"){
+            botaoIniciar.textContent =
+                "✅ Arena iniciada";
+            botaoIniciar.disabled = true;
+        }else if(!ehAnfitriao){
+            botaoIniciar.textContent =
+                "Aguardando o anfitrião iniciar";
+        }else if(participantes.length < 2){
+            botaoIniciar.textContent =
+                "Aguardando pelo menos 2 jogadores";
+        }else{
+            botaoIniciar.textContent =
+                "🚀 Iniciar Arena";
+        }
+    }
+
+    if(mensagem){
+
+        if(sala.status === "iniciada"){
+            mensagem.textContent =
+                "A Arena foi iniciada. A tela das questões será ligada na próxima etapa.";
+        }else if(participantes.length < 2){
+            mensagem.textContent =
+                "Aguardando mais um jogador para liberar o início.";
+        }else if(ehAnfitriao){
+            mensagem.textContent =
+                "A sala está pronta. Você pode iniciar com " +
+                participantes.length +
+                " jogadores.";
+        }else{
+            mensagem.textContent =
+                "Sala pronta. Aguarde o anfitrião iniciar.";
+        }
+    }
+
+    if(areaSala){
+        areaSala.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+}
+
+async function iniciarArenaAoVivoFarol(){
+
+    const usuario = usuarioArenaAtualFarol();
+    const sala = arenaSalaAtualFarol;
+
+    if(!usuario || !sala){
+        mostrarToast("Nenhuma Arena ativa.");
+        return;
+    }
+
+    if(sala.criadoPor !== usuario.uid){
+        mostrarToast("Somente o anfitrião pode iniciar.");
+        return;
+    }
+
+    const participantes =
+        Object.keys(sala.participantes || {});
+
+    if(participantes.length < 2){
+        mostrarToast(
+            "É necessário ter pelo menos 2 jogadores."
+        );
+        return;
+    }
+
+    try{
+
+        await db
+            .collection("arenasAoVivo")
+            .doc(arenaSalaAtualCodigoFarol)
+            .update({
+                status: "iniciada",
+                iniciadaEm:
+                    firebase.firestore.FieldValue.serverTimestamp(),
+                atualizadoEm: Date.now()
+            });
+
+        mostrarToast(
+            "Arena iniciada. Na próxima etapa entraremos nas questões ao vivo."
+        );
+
+    }catch(erro){
+
+        console.error("Erro ao iniciar Arena:", erro);
+
+        mostrarToast(
+            "Não foi possível iniciar a Arena."
+        );
+    }
+}
+
+async function sairArenaAoVivoFarol(silencioso){
+
+    const usuario = usuarioArenaAtualFarol();
+    const codigo = arenaSalaAtualCodigoFarol;
+
+    if(!usuario || !codigo){
+        limparArenaLocalFarol();
+        return;
+    }
+
+    try{
+
+        const ref = db
+            .collection("arenasAoVivo")
+            .doc(codigo);
+
+        await db.runTransaction(async transacao => {
+
+            const snapshot =
+                await transacao.get(ref);
+
+            if(!snapshot.exists){
+                return;
+            }
+
+            const dados = snapshot.data() || {};
+            const uids = Array.isArray(dados.uids)
+                ? dados.uids.filter(uid => uid !== usuario.uid)
+                : [];
+
+            const participantes =
+                dados.participantes
+                ? { ...dados.participantes }
+                : {};
+
+            delete participantes[usuario.uid];
+
+            if(dados.criadoPor === usuario.uid){
+
+                transacao.update(ref, {
+                    status: "cancelada",
+                    uids: [],
+                    participantes: {},
+                    canceladaEm:
+                        firebase.firestore.FieldValue.serverTimestamp(),
+                    atualizadoEm: Date.now()
+                });
+
+            }else{
+
+                transacao.update(ref, {
+                    uids: uids,
+                    participantes: participantes,
+                    atualizadoEm: Date.now()
+                });
+            }
+        });
+
+        if(!silencioso){
+            mostrarToast("Você saiu da Arena.");
+        }
+
+    }catch(erro){
+
+        console.error("Erro ao sair da Arena:", erro);
+
+        if(!silencioso){
+            mostrarToast("Não foi possível sair da Arena.");
+        }
+
+    }finally{
+
+        limparArenaLocalFarol();
+    }
+}
+
+function limparArenaLocalFarol(){
+
+    if(arenaSalaListenerFarol){
+        arenaSalaListenerFarol();
+        arenaSalaListenerFarol = null;
+    }
+
+    arenaSalaAtualFarol = null;
+    arenaSalaAtualCodigoFarol = "";
+
+    localStorage.removeItem(
+        "farol_arena_codigo_atual"
+    );
+
+    const areaSala =
+        document.getElementById("arenaSalaEsperaVisualFarol");
+
+    if(areaSala){
+        areaSala.style.display = "none";
+    }
+}
+
+async function restaurarArenaAtualFarol(){
+
+    const usuario = usuarioArenaAtualFarol();
+
+    if(!usuario){
+        return;
+    }
+
+    const codigo =
+        normalizarCodigoArenaFarol(
+            localStorage.getItem("farol_arena_codigo_atual")
+        );
+
+    if(!codigo){
+        return;
+    }
+
+    try{
+
+        const snapshot = await db
+            .collection("arenasAoVivo")
+            .doc(codigo)
+            .get();
+
+        if(
+            snapshot.exists &&
+            Array.isArray(snapshot.data().uids) &&
+            snapshot.data().uids.includes(usuario.uid)
+        ){
+            acompanharArenaAoVivoFarol(codigo);
+        }else{
+            limparArenaLocalFarol();
+        }
+
+    }catch(erro){
+        console.error("Erro ao restaurar Arena:", erro);
+    }
+}
+
+if(typeof auth !== "undefined"){
+
+    auth.onAuthStateChanged(user => {
+
+        if(user){
+            setTimeout(restaurarArenaAtualFarol, 700);
+        }else{
+            limparArenaLocalFarol();
+        }
+    });
+}
+
+
+// ============================================================
+// V53 — CONVITE DA ARENA ADAPTADO DO SISTEMA DE DUELOS
+// Copiar código, copiar link, compartilhar e preencher convite
+// automaticamente após login.
+// ============================================================
+
+const CHAVE_ARENA_PENDENTE =
+    "farol_arena_pendente";
+
+function montarLinkArenaFarol(codigo){
+
+    const codigoLimpo =
+        normalizarCodigoArenaFarol(codigo);
+
+    return `${FAROL_SABER_URL}/?arena=${encodeURIComponent(codigoLimpo)}`;
+}
+
+function obterCodigoArenaDaURL(){
+
+    try{
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+        return normalizarCodigoArenaFarol(
+            params.get("arena")
+            || params.get("codigoArena")
+            || ""
+        );
+
+    }catch(erro){
+
+        return "";
+    }
+}
+
+function codigoArenaPendenteFarol(){
+
+    return normalizarCodigoArenaFarol(
+        localStorage.getItem(CHAVE_ARENA_PENDENTE)
+        || ""
+    );
+}
+
+function capturarConviteArenaDaURLFarol(){
+
+    const codigo =
+        obterCodigoArenaDaURL();
+
+    if(codigo){
+
+        localStorage.setItem(
+            CHAVE_ARENA_PENDENTE,
+            codigo
+        );
+
+        localStorage.setItem(
+            "farol_telaAtual",
+            "duelos"
+        );
+
+        localStorage.setItem(
+            "farol_modo_competicao",
+            "arena"
+        );
+    }
+
+    atualizarAvisoConviteArenaFarol();
+
+    return codigo;
+}
+
+function atualizarAvisoConviteArenaFarol(){
+
+    const codigo =
+        codigoArenaPendenteFarol();
+
+    const avisoLogin =
+        document.getElementById("conviteDueloLogin");
+
+    if(!avisoLogin || !codigo){
+        return;
+    }
+
+    avisoLogin.style.display = "block";
+
+    avisoLogin.innerHTML = `
+        <strong>🏟️ Convite para a Arena do Farol!</strong><br>
+        Código: <strong>${escaparHTMLDuelo(codigo)}</strong><br><br>
+        Faça login ou crie sua conta. O código será preenchido automaticamente.
+    `;
+}
+
+function preencherConviteArenaPendenteFarol(){
+
+    const codigo =
+        codigoArenaPendenteFarol();
+
+    if(!codigo){
+        return false;
+    }
+
+    const campo =
+        document.getElementById(
+            "codigoArenaEntradaFarol"
+        );
+
+    if(campo){
+        campo.value = codigo;
+    }
+
+    alternarModoCompeticaoFarol("arena");
+
+    setTimeout(() => {
+
+        if(campo){
+            campo.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            campo.focus();
+        }
+
+    }, 150);
+
+    return true;
+}
+
+function abrirArenaPendenteAposLoginFarol(){
+
+    const codigo =
+        codigoArenaPendenteFarol();
+
+    if(
+        !codigo ||
+        typeof auth === "undefined" ||
+        !auth.currentUser
+    ){
+        return false;
+    }
+
+    localStorage.setItem(
+        "farol_telaAtual",
+        "duelos"
+    );
+
+    localStorage.setItem(
+        "farol_modo_competicao",
+        "arena"
+    );
+
+    mostrarTela("duelos");
+    preencherConviteArenaPendenteFarol();
+
+    mostrarToast(
+        "Código da Arena preenchido automaticamente."
+    );
+
+    return true;
+}
+
+function obterCodigoSalaArenaAtualFarol(){
+
+    return normalizarCodigoArenaFarol(
+        arenaSalaAtualCodigoFarol
+        || (
+            document.getElementById(
+                "arenaCodigoVisualFarol"
+            ) || {}
+        ).textContent
+        || ""
+    );
+}
+
+async function copiarCodigoArenaFarol(){
+
+    const codigo =
+        obterCodigoSalaArenaAtualFarol();
+
+    if(!codigo || codigo === "ARENA-0000"){
+        mostrarToast("Crie ou entre em uma Arena primeiro.");
+        return;
+    }
+
+    try{
+
+        await navigator.clipboard.writeText(codigo);
+        mostrarToast("Código da Arena copiado!");
+
+    }catch(erro){
+
+        prompt(
+            "Copie o código da Arena:",
+            codigo
+        );
+    }
+}
+
+async function copiarLinkArenaFarol(){
+
+    const codigo =
+        obterCodigoSalaArenaAtualFarol();
+
+    if(!codigo || codigo === "ARENA-0000"){
+        mostrarToast("Crie ou entre em uma Arena primeiro.");
+        return;
+    }
+
+    const link =
+        montarLinkArenaFarol(codigo);
+
+    try{
+
+        await navigator.clipboard.writeText(link);
+        mostrarToast("Link da Arena copiado!");
+
+    }catch(erro){
+
+        prompt(
+            "Copie o link da Arena:",
+            link
+        );
+    }
+}
+
+function montarMensagemArenaFarol(dados){
+
+    const sala = dados || {};
+    const codigo =
+        normalizarCodigoArenaFarol(
+            sala.codigo
+            || arenaSalaAtualCodigoFarol
+        );
+
+    const link =
+        montarLinkArenaFarol(codigo);
+
+    const anfitriao =
+        sala.anfitriaoNome
+        || usuarioForum
+        || "Um aluno";
+
+    return `🏟️ Você foi convidado para a Arena do Farol!
+
+${anfitriao} criou uma competição ao vivo no Farol do Saber.
+
+📚 Disciplina: ${sala.disciplina || "Geral"}
+🧠 Tópico: ${sala.topicoNome || "Questões variadas"}
+📝 Questões: ${sala.quantidadeQuestoes || "-"}
+⏱️ Tempo por questão: ${sala.tempoPorQuestao || "-"} segundos
+👥 Participantes: de 2 até 6
+
+🔑 Código da Arena: ${codigo}
+
+Acesse pelo link abaixo. Caso ainda não esteja conectado, faça login e o código será preenchido automaticamente:
+${link}
+
+A partida começa quando o anfitrião iniciar. 🏆🗼`;
+}
+
+async function compartilharArenaFarol(){
+
+    const codigo =
+        obterCodigoSalaArenaAtualFarol();
+
+    if(!codigo || codigo === "ARENA-0000"){
+        mostrarToast("Crie ou entre em uma Arena primeiro.");
+        return;
+    }
+
+    let dados =
+        arenaSalaAtualFarol || null;
+
+    if(!dados){
+
+        try{
+
+            const doc = await db
+                .collection("arenasAoVivo")
+                .doc(codigo)
+                .get();
+
+            if(doc.exists){
+                dados = doc.data();
+            }
+
+        }catch(erro){
+
+            console.log(
+                "Erro ao buscar dados da Arena:",
+                erro
+            );
+        }
+    }
+
+    const mensagem =
+        montarMensagemArenaFarol({
+            ...(dados || {}),
+            codigo: codigo
+        });
+
+    if(navigator.share){
+
+        try{
+
+            await navigator.share({
+                title: "Arena do Farol",
+                text: mensagem
+            });
+
+            return;
+
+        }catch(erro){
+
+            if(
+                erro &&
+                erro.name === "AbortError"
+            ){
+                return;
+            }
+
+            console.log(
+                "Compartilhamento nativo da Arena não funcionou.",
+                erro
+            );
+        }
+    }
+
+    if(
+        navigator.clipboard &&
+        window.isSecureContext
+    ){
+
+        try{
+
+            await navigator.clipboard.writeText(
+                mensagem
+            );
+
+            mostrarToast(
+                "Convite copiado. Agora cole no WhatsApp."
+            );
+
+            return;
+
+        }catch(erro){
+
+            console.log(
+                "Clipboard da Arena não funcionou.",
+                erro
+            );
+        }
+    }
+
+    prompt(
+        "Copie o convite da Arena:",
+        mensagem
+    );
+}
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        capturarConviteArenaDaURLFarol();
+
+        if(
+            typeof auth !== "undefined" &&
+            auth.currentUser
+        ){
+            abrirArenaPendenteAposLoginFarol();
+        }
+    }
+);
+
+if(typeof auth !== "undefined"){
+
+    auth.onAuthStateChanged(user => {
+
+        if(user){
+
+            setTimeout(() => {
+                abrirArenaPendenteAposLoginFarol();
+            }, 900);
+
+        }else{
+
+            atualizarAvisoConviteArenaFarol();
+        }
+    });
+}
+
+
+// ============================================================
+// V54 — ARENA DO FAROL: PARTIDA AO VIVO
+// Questões sincronizadas, cronômetro, duas tentativas,
+// pontuação e placar em tempo real.
+// ============================================================
+
+let arenaTimerIntervalFarol = null;
+let arenaUltimaRodadaRenderizadaFarol = "";
+let arenaAvancoEmAndamentoFarol = false;
+
+function pararCronometroArenaFarol(){
+
+    if(arenaTimerIntervalFarol){
+        clearInterval(arenaTimerIntervalFarol);
+        arenaTimerIntervalFarol = null;
+    }
+}
+
+function obterBancoArenaFarol(sala){
+
+    if(!sala){
+        return [];
+    }
+
+    const chave = sala.topicoChave;
+
+    if(
+        chave &&
+        typeof bancoQuestoes !== "undefined" &&
+        Array.isArray(bancoQuestoes[chave])
+    ){
+        return bancoQuestoes[chave];
+    }
+
+    return [];
+}
+
+function embaralharIndicesArenaFarol(total, quantidade){
+
+    const indices =
+        Array.from({ length: total }, (_, i) => i);
+
+    for(let i = indices.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [indices[i], indices[j]] = [indices[j], indices[i]];
+    }
+
+    return indices.slice(
+        0,
+        Math.min(quantidade, total)
+    );
+}
+
+function obterQuestaoAtualArenaFarol(sala){
+
+    const banco = obterBancoArenaFarol(sala);
+    const indices = Array.isArray(sala.indices)
+        ? sala.indices
+        : [];
+
+    const indiceRodada =
+        Number(sala.questaoAtual || 0);
+
+    const indiceBanco =
+        indices[indiceRodada];
+
+    return banco[indiceBanco] || null;
+}
+
+function obterParticipantesOrdenadosArenaFarol(sala){
+
+    return Object.values(
+        (sala && sala.participantes) || {}
+    ).sort((a, b) => {
+
+        const pontosA = Number(a.pontos || 0);
+        const pontosB = Number(b.pontos || 0);
+
+        if(pontosB !== pontosA){
+            return pontosB - pontosA;
+        }
+
+        const acertosA = Number(a.acertosArena || 0);
+        const acertosB = Number(b.acertosArena || 0);
+
+        if(acertosB !== acertosA){
+            return acertosB - acertosA;
+        }
+
+        return String(a.nome || "")
+            .localeCompare(String(b.nome || ""));
+    });
+}
+
+function textoPontuacaoArenaFarol(valor){
+
+    const numero = Number(valor || 0);
+
+    return numero > 0
+        ? `+${numero}`
+        : String(numero);
+}
+
+function calcularFimRodadaArenaFarol(sala){
+
+    const inicio = sala && sala.rodadaIniciadaEm;
+
+    if(!inicio){
+        return 0;
+    }
+
+    let inicioMs = 0;
+
+    if(typeof inicio.toMillis === "function"){
+        inicioMs = inicio.toMillis();
+    }else if(typeof inicio.seconds === "number"){
+        inicioMs = inicio.seconds * 1000;
+    }else{
+        inicioMs = Number(inicio || 0);
+    }
+
+    return inicioMs +
+        Number(sala.tempoPorQuestao || 30) * 1000;
+}
+
+function renderizarPlacarArenaFarol(sala){
+
+    const jogadores =
+        obterParticipantesOrdenadosArenaFarol(sala);
+
+    return `
+        <div class="arena-placar-jogo-farol">
+            <h3>🏆 Placar ao vivo</h3>
+
+            <div class="arena-placar-lista-farol">
+                ${jogadores.map((jogador, indice) => `
+                    <div class="arena-placar-linha-farol">
+                        <span class="arena-posicao-farol">
+                            ${indice + 1}º
+                        </span>
+
+                        <strong>
+                            ${escaparHTMLDuelo(jogador.nome || "Aluno")}
+                        </strong>
+
+                        <span>
+                            ${Number(jogador.pontos || 0)} pts
+                        </span>
+                    </div>
+                `).join("")}
+            </div>
+        </div>
+    `;
+}
+
+function renderizarEventosRodadaArenaFarol(sala){
+
+    const respostas =
+        Object.values(sala.respostasRodada || {})
+            .sort((a, b) =>
+                Number(a.respondidaEm || 0) -
+                Number(b.respondidaEm || 0)
+            );
+
+    if(respostas.length === 0){
+        return `
+            <div class="arena-eventos-farol">
+                <h4>⚡ Acontecendo agora</h4>
+                <p>Aguardando as primeiras respostas...</p>
+            </div>
+        `;
+    }
+
+    return `
+        <div class="arena-eventos-farol">
+            <h4>⚡ Acontecendo agora</h4>
+
+            ${respostas.slice(-6).reverse().map(item => `
+                <div class="arena-evento-linha-farol">
+                    <strong>${escaparHTMLDuelo(item.nome || "Aluno")}</strong>
+                    ${
+                        item.acertou
+                        ? ` acertou ${item.primeiroAcerto ? "primeiro" : ""} (${textoPontuacaoArenaFarol(item.pontosGanhos)} ponto${Math.abs(Number(item.pontosGanhos || 0)) === 1 ? "" : "s"})`
+                        : ` errou (${textoPontuacaoArenaFarol(item.pontosGanhos)} ponto)`
+                    }
+                </div>
+            `).join("")}
+        </div>
+    `;
+}
+
+function renderizarPartidaArenaFarol(){
+
+    const sala = arenaSalaAtualFarol;
+    const usuario = usuarioArenaAtualFarol();
+
+    if(
+        !sala ||
+        !usuario ||
+        sala.status !== "jogando"
+    ){
+        return;
+    }
+
+    const questao =
+        obterQuestaoAtualArenaFarol(sala);
+
+    if(!questao){
+        mostrarToast(
+            "A questão atual da Arena não foi encontrada."
+        );
+        return;
+    }
+
+    const indiceAtual =
+        Number(sala.questaoAtual || 0);
+
+    const total =
+        Array.isArray(sala.indices)
+        ? sala.indices.length
+        : Number(sala.quantidadeQuestoes || 0);
+
+    const respostaUsuario =
+        (sala.respostasRodada || {})[usuario.uid]
+        || null;
+
+    const tentativas =
+        Number(
+            respostaUsuario
+            ? respostaUsuario.tentativas || 0
+            : 0
+        );
+
+    const acertou =
+        !!(
+            respostaUsuario &&
+            respostaUsuario.acertou
+        );
+
+    const bloqueado =
+        acertou ||
+        tentativas >= 2;
+
+    const rodadaChave =
+        `${sala.codigo}:${indiceAtual}:${sala.rodadaNumero || 0}`;
+
+    if(arenaUltimaRodadaRenderizadaFarol !== rodadaChave){
+        arenaUltimaRodadaRenderizadaFarol = rodadaChave;
+        mostrarTela("resolverQuestao");
+    }
+
+    const area =
+        document.getElementById("areaQuestao");
+
+    if(!area){
+        return;
+    }
+
+    area.innerHTML = `
+        <div class="arena-jogo-layout-farol">
+
+            <div class="card arena-questao-card-farol">
+
+                <div class="arena-jogo-topo-farol">
+                    <div>
+                        <span class="arena-jogo-selo-farol">
+                            🏟️ ARENA AO VIVO
+                        </span>
+
+                        <h2>
+                            ${escaparHTMLDuelo(sala.topicoNome || "Arena do Farol")}
+                        </h2>
+
+                        <p>
+                            Questão ${indiceAtual + 1} de ${total}
+                        </p>
+                    </div>
+
+                    <div class="arena-cronometro-farol">
+                        <small>Tempo restante</small>
+                        <strong id="arenaTempoRestanteFarol">--</strong>
+                    </div>
+                </div>
+
+                <progress
+                    value="${indiceAtual + 1}"
+                    max="${total}"
+                    class="arena-progresso-farol">
+                </progress>
+
+                ${questao.texto ? `
+                    <div class="card texto-base arena-texto-apoio-farol">
+                        <h3>📄 Texto de apoio</h3>
+                        <p>${questao.texto}</p>
+                    </div>
+                ` : ""}
+
+                ${questao.imagem ? `
+                    <img
+                        src="${questao.imagem}"
+                        class="imagem-questao"
+                        alt="Imagem da questão">
+                ` : ""}
+
+                ${questao.afirmacoes ? `
+                    <div class="card texto-base">
+                        ${questao.afirmacoes
+                            .map(item => `<p>${item}</p>`)
+                            .join("")}
+                    </div>
+                ` : ""}
+
+                <p class="pergunta arena-pergunta-farol">
+                    ${questao.pergunta}
+                </p>
+
+                <div class="arena-alternativas-farol">
+                    ${questao.alternativas.map((alternativa, indice) => `
+                        <button
+                            type="button"
+                            class="arena-alternativa-farol"
+                            onclick="responderQuestaoArenaFarol(${indice})"
+                            ${bloqueado ? "disabled" : ""}>
+                            <span>${String.fromCharCode(65 + indice)}</span>
+                            <strong>${alternativa}</strong>
+                        </button>
+                    `).join("")}
+                </div>
+
+                <div id="arenaFeedbackJogadorFarol">
+                    ${
+                        respostaUsuario
+                        ? `
+                            <div class="${acertou ? "feedback-acerto" : "feedback-erro"} arena-feedback-farol">
+                                <strong>
+                                    ${
+                                        acertou
+                                        ? `✅ Você acertou e ganhou ${textoPontuacaoArenaFarol(respostaUsuario.pontosGanhos)} ponto${Math.abs(Number(respostaUsuario.pontosGanhos || 0)) === 1 ? "" : "s"}.`
+                                        : tentativas < 2
+                                            ? "❌ Você perdeu 1 ponto, mas ainda tem uma segunda tentativa."
+                                            : "❌ Segunda tentativa incorreta. Aguarde a próxima questão."
+                                    }
+                                </strong>
+                            </div>
+                        `
+                        : `
+                            <div class="arena-aviso-resposta-farol">
+                                Você tem até duas tentativas. Um erro tira 1 ponto.
+                            </div>
+                        `
+                    }
+                </div>
+
+            </div>
+
+            <aside class="arena-jogo-lateral-farol">
+                ${renderizarPlacarArenaFarol(sala)}
+                ${renderizarEventosRodadaArenaFarol(sala)}
+
+                <button
+                    type="button"
+                    class="arena-sair-partida-farol"
+                    onclick="sairArenaAoVivoFarol()">
+                    🚪 Sair da Arena
+                </button>
+            </aside>
+
+        </div>
+    `;
+
+    iniciarCronometroVisualArenaFarol();
+}
+
+function iniciarCronometroVisualArenaFarol(){
+
+    pararCronometroArenaFarol();
+
+    const atualizar = () => {
+
+        const sala = arenaSalaAtualFarol;
+
+        if(!sala || sala.status !== "jogando"){
+            pararCronometroArenaFarol();
+            return;
+        }
+
+        const fim = calcularFimRodadaArenaFarol(sala);
+        const restanteMs = Math.max(0, fim - Date.now());
+        const restante =
+            Math.ceil(restanteMs / 1000);
+
+        const campo =
+            document.getElementById(
+                "arenaTempoRestanteFarol"
+            );
+
+        if(campo){
+            campo.textContent = restante + "s";
+            campo.classList.toggle(
+                "acabando",
+                restante <= 10
+            );
+        }
+
+        if(restanteMs <= 0){
+
+            pararCronometroArenaFarol();
+
+            const usuario =
+                usuarioArenaAtualFarol();
+
+            if(
+                usuario &&
+                sala.criadoPor === usuario.uid
+            ){
+                setTimeout(
+                    avancarQuestaoArenaFarol,
+                    1200
+                );
+            }
+        }
+    };
+
+    atualizar();
+
+    arenaTimerIntervalFarol =
+        setInterval(atualizar, 250);
+}
+
+async function responderQuestaoArenaFarol(alternativa){
+
+    const usuario = usuarioArenaAtualFarol();
+    const sala = arenaSalaAtualFarol;
+
+    if(
+        !usuario ||
+        !sala ||
+        sala.status !== "jogando"
+    ){
+        mostrarToast("A Arena não está em andamento.");
+        return;
+    }
+
+    if(Date.now() >= calcularFimRodadaArenaFarol(sala)){
+        mostrarToast("O tempo desta questão acabou.");
+        return;
+    }
+
+    const questao =
+        obterQuestaoAtualArenaFarol(sala);
+
+    if(!questao){
+        mostrarToast("Questão não encontrada.");
+        return;
+    }
+
+    const acertou =
+        Number(alternativa) === Number(questao.correta);
+
+    const ref = db
+        .collection("arenasAoVivo")
+        .doc(sala.codigo);
+
+    try{
+
+        await db.runTransaction(async transacao => {
+
+            const snapshot =
+                await transacao.get(ref);
+
+            if(!snapshot.exists){
+                throw new Error("Arena não encontrada.");
+            }
+
+            const dados = snapshot.data() || {};
+
+            if(
+                dados.status !== "jogando" ||
+                Number(dados.questaoAtual || 0) !==
+                    Number(sala.questaoAtual || 0) ||
+                Number(dados.rodadaNumero || 0) !==
+                    Number(sala.rodadaNumero || 0)
+            ){
+                throw new Error(
+                    "A questão já foi encerrada."
+                );
+            }
+
+            const participantes = {
+                ...(dados.participantes || {})
+            };
+
+            const jogador = {
+                ...(participantes[usuario.uid] || {})
+            };
+
+            if(!jogador.uid){
+                throw new Error(
+                    "Você não está nesta Arena."
+                );
+            }
+
+            const respostas = {
+                ...(dados.respostasRodada || {})
+            };
+
+            const respostaAnterior =
+                respostas[usuario.uid] || {};
+
+            const tentativasAnteriores =
+                Number(respostaAnterior.tentativas || 0);
+
+            if(
+                respostaAnterior.acertou ||
+                tentativasAnteriores >= 2
+            ){
+                throw new Error(
+                    "Você já encerrou suas tentativas nesta questão."
+                );
+            }
+
+            const novaTentativa =
+                tentativasAnteriores + 1;
+
+            let primeiroAcerto = false;
+            let pontosGanhos = -1;
+
+            if(acertou){
+
+                primeiroAcerto =
+                    !Object.values(respostas)
+                        .some(item => item && item.acertou);
+
+                if(novaTentativa === 2){
+                    pontosGanhos = 1;
+                }else if(primeiroAcerto){
+                    pontosGanhos = 5;
+                }else{
+                    pontosGanhos = 3;
+                }
+            }
+
+            respostas[usuario.uid] = {
+                uid: usuario.uid,
+                nome: usuario.nome,
+                alternativa: Number(alternativa),
+                acertou: acertou,
+                tentativas: novaTentativa,
+                primeiroAcerto: primeiroAcerto,
+                pontosGanhos: pontosGanhos,
+                respondidaEm: Date.now(),
+                rodadaNumero:
+                    Number(dados.rodadaNumero || 0)
+            };
+
+            jogador.pontos =
+                Number(jogador.pontos || 0) +
+                pontosGanhos;
+
+            if(acertou){
+                jogador.acertosArena =
+                    Number(jogador.acertosArena || 0) + 1;
+            }else{
+                jogador.errosArena =
+                    Number(jogador.errosArena || 0) + 1;
+            }
+
+            jogador.ultimaRespostaEm =
+                Date.now();
+
+            participantes[usuario.uid] =
+                jogador;
+
+            transacao.update(ref, {
+                participantes: participantes,
+                respostasRodada: respostas,
+                atualizadoEm: Date.now()
+            });
+        });
+
+    }catch(erro){
+
+        console.error(
+            "Erro ao responder na Arena:",
+            erro
+        );
+
+        mostrarToast(
+            erro.message ||
+            "Não foi possível registrar a resposta."
+        );
+    }
+}
+
+async function avancarQuestaoArenaFarol(){
+
+    if(arenaAvancoEmAndamentoFarol){
+        return;
+    }
+
+    const usuario = usuarioArenaAtualFarol();
+    const sala = arenaSalaAtualFarol;
+
+    if(
+        !usuario ||
+        !sala ||
+        sala.criadoPor !== usuario.uid ||
+        sala.status !== "jogando"
+    ){
+        return;
+    }
+
+    arenaAvancoEmAndamentoFarol = true;
+
+    const ref = db
+        .collection("arenasAoVivo")
+        .doc(sala.codigo);
+
+    try{
+
+        await db.runTransaction(async transacao => {
+
+            const snapshot =
+                await transacao.get(ref);
+
+            if(!snapshot.exists){
+                return;
+            }
+
+            const dados = snapshot.data() || {};
+
+            if(dados.status !== "jogando"){
+                return;
+            }
+
+            const fim =
+                calcularFimRodadaArenaFarol(dados);
+
+            if(Date.now() + 500 < fim){
+                return;
+            }
+
+            const atual =
+                Number(dados.questaoAtual || 0);
+
+            const total =
+                Array.isArray(dados.indices)
+                ? dados.indices.length
+                : 0;
+
+            if(atual + 1 >= total){
+
+                transacao.update(ref, {
+                    status: "finalizada",
+                    finalizadaEm:
+                        firebase.firestore.FieldValue.serverTimestamp(),
+                    atualizadoEm: Date.now()
+                });
+
+                return;
+            }
+
+            transacao.update(ref, {
+                questaoAtual: atual + 1,
+                rodadaNumero:
+                    Number(dados.rodadaNumero || 0) + 1,
+                rodadaIniciadaEm:
+                    firebase.firestore.FieldValue.serverTimestamp(),
+                respostasRodada: {},
+                atualizadoEm: Date.now()
+            });
+        });
+
+    }catch(erro){
+
+        console.error(
+            "Erro ao avançar questão da Arena:",
+            erro
+        );
+
+    }finally{
+
+        arenaAvancoEmAndamentoFarol = false;
+    }
+}
+
+function renderizarResultadoArenaFarol(){
+
+    const sala = arenaSalaAtualFarol;
+
+    if(!sala || sala.status !== "finalizada"){
+        return;
+    }
+
+    pararCronometroArenaFarol();
+
+    const jogadores =
+        obterParticipantesOrdenadosArenaFarol(sala);
+
+    mostrarTela("resolverQuestao");
+
+    const area =
+        document.getElementById("areaQuestao");
+
+    if(!area){
+        return;
+    }
+
+    area.innerHTML = `
+        <div class="card arena-resultado-final-farol">
+
+            <span class="arena-jogo-selo-farol">
+                🏟️ ARENA ENCERRADA
+            </span>
+
+            <h2>🏆 Resultado da Arena do Farol</h2>
+
+            <p>
+                ${escaparHTMLDuelo(sala.disciplina || "")}
+                •
+                ${escaparHTMLDuelo(sala.topicoNome || "")}
+            </p>
+
+            <div class="arena-podio-farol">
+                ${jogadores.map((jogador, indice) => `
+                    <div class="arena-podio-linha-farol ${indice === 0 ? "vencedor" : ""}">
+                        <span>
+                            ${indice === 0 ? "🥇" : indice === 1 ? "🥈" : indice === 2 ? "🥉" : `${indice + 1}º`}
+                        </span>
+
+                        <strong>
+                            ${escaparHTMLDuelo(jogador.nome || "Aluno")}
+                        </strong>
+
+                        <div>
+                            <b>${Number(jogador.pontos || 0)} pontos</b>
+                            <small>
+                                ${Number(jogador.acertosArena || 0)} acertos
+                                •
+                                ${Number(jogador.errosArena || 0)} erros
+                            </small>
+                        </div>
+                    </div>
+                `).join("")}
+            </div>
+
+            <button
+                type="button"
+                onclick="mostrarTela('duelos'); alternarModoCompeticaoFarol('arena');">
+                🏟️ Voltar à Arena
+            </button>
+
+        </div>
+    `;
+}
+
+// Sobrescreve o início visual da V52 e inicia a partida real.
+async function iniciarArenaAoVivoFarol(){
+
+    const usuario = usuarioArenaAtualFarol();
+    const sala = arenaSalaAtualFarol;
+
+    if(!usuario || !sala){
+        mostrarToast("Nenhuma Arena ativa.");
+        return;
+    }
+
+    if(sala.criadoPor !== usuario.uid){
+        mostrarToast("Somente o anfitrião pode iniciar.");
+        return;
+    }
+
+    const participantes =
+        Object.keys(sala.participantes || {});
+
+    if(participantes.length < 2){
+        mostrarToast(
+            "É necessário ter pelo menos 2 jogadores."
+        );
+        return;
+    }
+
+    const banco = obterBancoArenaFarol(sala);
+
+    if(banco.length === 0){
+        mostrarToast(
+            "O tópico escolhido não possui questões disponíveis."
+        );
+        return;
+    }
+
+    const quantidade =
+        Math.min(
+            Number(sala.quantidadeQuestoes || 10),
+            banco.length
+        );
+
+    const indices =
+        embaralharIndicesArenaFarol(
+            banco.length,
+            quantidade
+        );
+
+    const participantesAtualizados = {};
+
+    Object.entries(sala.participantes || {})
+        .forEach(([uid, participante]) => {
+
+            participantesAtualizados[uid] = {
+                ...participante,
+                pontos: 0,
+                acertosArena: 0,
+                errosArena: 0
+            };
+        });
+
+    try{
+
+        await db
+            .collection("arenasAoVivo")
+            .doc(arenaSalaAtualCodigoFarol)
+            .update({
+                status: "jogando",
+                indices: indices,
+                questaoAtual: 0,
+                rodadaNumero: 1,
+                rodadaIniciadaEm:
+                    firebase.firestore.FieldValue.serverTimestamp(),
+                respostasRodada: {},
+                participantes:
+                    participantesAtualizados,
+                iniciadaEm:
+                    firebase.firestore.FieldValue.serverTimestamp(),
+                atualizadoEm: Date.now()
+            });
+
+        mostrarToast("Arena iniciada!");
+
+    }catch(erro){
+
+        console.error("Erro ao iniciar Arena:", erro);
+
+        mostrarToast(
+            "Não foi possível iniciar a Arena."
+        );
+    }
+}
+
+// Sobrescreve a renderização da V52 para também abrir a partida.
+function renderizarSalaArenaAoVivoFarol(){
+
+    const sala = arenaSalaAtualFarol;
+
+    if(!sala){
+        return;
+    }
+
+    if(sala.status === "jogando"){
+        renderizarPartidaArenaFarol();
+        return;
+    }
+
+    if(sala.status === "finalizada"){
+        renderizarResultadoArenaFarol();
+        return;
+    }
+
+    pararCronometroArenaFarol();
+
+    const usuario = usuarioArenaAtualFarol();
+    const participantesObj =
+        sala.participantes || {};
+
+    const participantes =
+        Object.values(participantesObj)
+            .sort((a, b) => {
+                if(a.uid === sala.criadoPor) return -1;
+                if(b.uid === sala.criadoPor) return 1;
+                return (a.entrouEm || 0) - (b.entrouEm || 0);
+            });
+
+    const areaSala =
+        document.getElementById("arenaSalaEsperaVisualFarol");
+
+    const codigo =
+        document.getElementById("arenaCodigoVisualFarol");
+
+    const titulo =
+        document.getElementById("arenaSalaTituloFarol");
+
+    const lista =
+        document.getElementById("arenaJogadoresVisualFarol");
+
+    const configuracao =
+        document.getElementById("arenaConfiguracaoSalaFarol");
+
+    const botaoIniciar =
+        document.getElementById("btnIniciarArenaFarol");
+
+    const mensagem =
+        document.getElementById("arenaMensagemStatusFarol");
+
+    if(areaSala){
+        areaSala.style.display = "block";
+    }
+
+    if(codigo){
+        codigo.textContent =
+            sala.codigo || arenaSalaAtualCodigoFarol;
+    }
+
+    if(titulo){
+        titulo.textContent =
+            sala.topicoNome || "Arena do Farol";
+    }
+
+    if(lista){
+
+        lista.innerHTML = participantes
+            .map(item => {
+
+                const anfitriao =
+                    item.uid === sala.criadoPor;
+
+                return `
+                    <div class="arena-jogador-farol ${anfitriao ? "anfitriao" : ""}">
+                        <span>${anfitriao ? "👑" : "🟢"}</span>
+                        <div>
+                            <strong>${escaparHTMLDuelo(item.nome || "Aluno")}</strong>
+                            <small>
+                                ${anfitriao ? "Anfitrião" : "Pronto para jogar"}
+                            </small>
+                        </div>
+                    </div>
+                `;
+            })
+            .join("");
+    }
+
+    if(configuracao){
+        configuracao.innerHTML = `
+            <p><strong>Disciplina:</strong> ${escaparHTMLDuelo(sala.disciplina || "")}</p>
+            <p><strong>Tópico:</strong> ${escaparHTMLDuelo(sala.topicoNome || "")}</p>
+            <p><strong>Questões:</strong> ${Number(sala.quantidadeQuestoes || 0)}</p>
+            <p><strong>Tempo:</strong> ${Number(sala.tempoPorQuestao || 0)} segundos</p>
+            <p><strong>Jogadores:</strong> ${participantes.length}/6</p>
+            <p><strong>Status:</strong> ${escaparHTMLDuelo(sala.status || "aguardando")}</p>
+        `;
+    }
+
+    const ehAnfitriao =
+        usuario &&
+        sala.criadoPor === usuario.uid;
+
+    const podeIniciar =
+        ehAnfitriao &&
+        sala.status === "aguardando" &&
+        participantes.length >= 2;
+
+    if(botaoIniciar){
+
+        botaoIniciar.disabled = !podeIniciar;
+
+        botaoIniciar.classList.toggle(
+            "arena-botao-bloqueado-farol",
+            !podeIniciar
+        );
+
+        botaoIniciar.classList.toggle(
+            "arena-botao-iniciar-farol",
+            podeIniciar
+        );
+
+        if(!ehAnfitriao){
+            botaoIniciar.textContent =
+                "Aguardando o anfitrião iniciar";
+        }else if(participantes.length < 2){
+            botaoIniciar.textContent =
+                "Aguardando pelo menos 2 jogadores";
+        }else{
+            botaoIniciar.textContent =
+                "🚀 Iniciar Arena";
+        }
+    }
+
+    if(mensagem){
+
+        if(participantes.length < 2){
+            mensagem.textContent =
+                "Aguardando mais um jogador para liberar o início.";
+        }else if(ehAnfitriao){
+            mensagem.textContent =
+                "A sala está pronta. Você pode iniciar com " +
+                participantes.length +
+                " jogadores.";
+        }else{
+            mensagem.textContent =
+                "Sala pronta. Aguarde o anfitrião iniciar.";
+        }
+    }
+}
+
+
+// ============================================================
+// V55 — ARENAS PÚBLICAS E MODO ESPECTADOR
+// Todas as Arenas aparecem na lista pública.
+// Aguardando: entrada como jogador (até 6).
+// Jogando: entrada como espectador (até 15).
+// ============================================================
+
+let arenasPublicasListenerFarol = null;
+let arenasPublicasCacheFarol = [];
+
+function formatarStatusArenaPublicaFarol(status){
+
+    if(status === "aguardando"){
+        return {
+            classe: "aguardando",
+            icone: "🟢",
+            texto: "Aguardando jogadores"
+        };
+    }
+
+    if(status === "jogando"){
+        return {
+            classe: "ao-vivo",
+            icone: "🔴",
+            texto: "AO VIVO"
+        };
+    }
+
+    return {
+        classe: "encerrada",
+        icone: "⚪",
+        texto: "Encerrada"
+    };
+}
+
+function carregarArenasPublicasFarol(forcar){
+
+    if(
+        typeof auth === "undefined" ||
+        !auth.currentUser ||
+        typeof db === "undefined"
+    ){
+        return;
+    }
+
+    if(arenasPublicasListenerFarol && !forcar){
+        renderizarArenasPublicasFarol();
+        return;
+    }
+
+    if(arenasPublicasListenerFarol){
+        arenasPublicasListenerFarol();
+        arenasPublicasListenerFarol = null;
+    }
+
+    const area =
+        document.getElementById("listaArenasPublicasFarol");
+
+    if(area){
+        area.innerHTML = `
+            <div class="arena-publica-vazia-farol">
+                Procurando Arenas abertas...
+            </div>
+        `;
+    }
+
+    arenasPublicasListenerFarol = db
+        .collection("arenasAoVivo")
+        .where(
+            "status",
+            "in",
+            ["aguardando", "jogando"]
+        )
+        .onSnapshot(snapshot => {
+
+            arenasPublicasCacheFarol = [];
+
+            snapshot.forEach(doc => {
+
+                const dados = doc.data() || {};
+
+                arenasPublicasCacheFarol.push({
+                    id: doc.id,
+                    ...dados
+                });
+            });
+
+            arenasPublicasCacheFarol.sort((a, b) => {
+
+                if(
+                    a.status === "aguardando" &&
+                    b.status !== "aguardando"
+                ){
+                    return -1;
+                }
+
+                if(
+                    b.status === "aguardando" &&
+                    a.status !== "aguardando"
+                ){
+                    return 1;
+                }
+
+                return Number(b.atualizadoEm || 0) -
+                    Number(a.atualizadoEm || 0);
+            });
+
+            renderizarArenasPublicasFarol();
+
+        }, erro => {
+
+            console.error(
+                "Erro ao carregar Arenas públicas:",
+                erro
+            );
+
+            if(area){
+                area.innerHTML = `
+                    <div class="arena-publica-vazia-farol erro">
+                        Não foi possível carregar as Arenas agora.
+                    </div>
+                `;
+            }
+        });
+}
+
+function renderizarArenasPublicasFarol(){
+
+    const area =
+        document.getElementById("listaArenasPublicasFarol");
+
+    if(!area){
+        return;
+    }
+
+    const usuario = usuarioArenaAtualFarol();
+
+    if(arenasPublicasCacheFarol.length === 0){
+
+        area.innerHTML = `
+            <div class="arena-publica-vazia-farol">
+                <strong>🏟️ Nenhuma Arena aberta neste momento.</strong>
+                <span>Crie a primeira e convide outros alunos.</span>
+            </div>
+        `;
+
+        return;
+    }
+
+    area.innerHTML = arenasPublicasCacheFarol
+        .map(sala => {
+
+            const status =
+                formatarStatusArenaPublicaFarol(
+                    sala.status
+                );
+
+            const jogadores =
+                Array.isArray(sala.uids)
+                ? sala.uids.length
+                : Object.keys(
+                    sala.participantes || {}
+                ).length;
+
+            const espectadores =
+                Array.isArray(sala.espectadorUids)
+                ? sala.espectadorUids.length
+                : Object.keys(
+                    sala.espectadores || {}
+                ).length;
+
+            const jaJogador =
+                usuario &&
+                Array.isArray(sala.uids) &&
+                sala.uids.includes(usuario.uid);
+
+            const jaEspectador =
+                usuario &&
+                Array.isArray(sala.espectadorUids) &&
+                sala.espectadorUids.includes(usuario.uid);
+
+            const lotada =
+                jogadores >= 6;
+
+            const espectadoresLotados =
+                espectadores >= 15;
+
+            let botao = "";
+
+            if(sala.status === "aguardando"){
+
+                if(jaJogador){
+                    botao = `
+                        <button
+                            type="button"
+                            onclick="acompanharArenaAoVivoFarol('${escaparHTMLDuelo(sala.codigo || sala.id)}')">
+                            ↩️ Voltar para a sala
+                        </button>
+                    `;
+                }else if(lotada){
+                    botao = `
+                        <button type="button" disabled>
+                            Sala completa — 6 jogadores
+                        </button>
+                    `;
+                }else{
+                    botao = `
+                        <button
+                            type="button"
+                            onclick="entrarArenaPublicaFarol('${escaparHTMLDuelo(sala.codigo || sala.id)}')">
+                            🚀 Entrar para jogar
+                        </button>
+                    `;
+                }
+
+            }else if(sala.status === "jogando"){
+
+                if(jaJogador || jaEspectador){
+                    botao = `
+                        <button
+                            type="button"
+                            onclick="acompanharArenaAoVivoFarol('${escaparHTMLDuelo(sala.codigo || sala.id)}')">
+                            👁️ Voltar ao ao vivo
+                        </button>
+                    `;
+                }else if(espectadoresLotados){
+                    botao = `
+                        <button type="button" disabled>
+                            Limite de 15 espectadores
+                        </button>
+                    `;
+                }else{
+                    botao = `
+                        <button
+                            type="button"
+                            onclick="assistirArenaPublicaFarol('${escaparHTMLDuelo(sala.codigo || sala.id)}')">
+                            👁️ Assistir ao vivo
+                        </button>
+                    `;
+                }
+            }
+
+            return `
+                <article class="arena-publica-card-farol ${status.classe}">
+                    <div class="arena-publica-status-farol">
+                        ${status.icone} ${status.texto}
+                    </div>
+
+                    <h4>
+                        🏟️ Arena de
+                        ${escaparHTMLDuelo(sala.anfitriaoNome || "Aluno")}
+                    </h4>
+
+                    <p class="arena-publica-disciplina-farol">
+                        <strong>${escaparHTMLDuelo(sala.disciplina || "Disciplina")}</strong>
+                        <span>•</span>
+                        ${escaparHTMLDuelo(sala.topicoNome || "Tópico")}
+                    </p>
+
+                    <div class="arena-publica-dados-farol">
+                        <span>👥 ${jogadores}/6 jogadores</span>
+                        <span>📝 ${Number(sala.quantidadeQuestoes || 0)} questões</span>
+                        <span>⏱️ ${Number(sala.tempoPorQuestao || 0)}s</span>
+                    </div>
+
+                    ${
+                        sala.status === "jogando"
+                        ? `
+                            <div class="arena-publica-andamento-farol">
+                                Questão ${Number(sala.questaoAtual || 0) + 1}
+                                de
+                                ${
+                                    Array.isArray(sala.indices)
+                                    ? sala.indices.length
+                                    : Number(sala.quantidadeQuestoes || 0)
+                                }
+                            </div>
+                        `
+                        : ""
+                    }
+
+                    <div class="arena-publica-acao-farol">
+                        ${botao}
+                    </div>
+                </article>
+            `;
+        })
+        .join("");
+}
+
+async function entrarArenaPublicaFarol(codigo){
+
+    const campo =
+        document.getElementById(
+            "codigoArenaEntradaFarol"
+        );
+
+    if(campo){
+        campo.value =
+            normalizarCodigoArenaFarol(codigo);
+    }
+
+    await entrarArenaVisualFarol();
+}
+
+async function assistirArenaPublicaFarol(codigo){
+
+    const usuario = usuarioArenaAtualFarol();
+
+    if(!usuario){
+        mostrarToast(
+            "Faça login para assistir à Arena."
+        );
+        return;
+    }
+
+    const codigoLimpo =
+        normalizarCodigoArenaFarol(codigo);
+
+    if(!codigoLimpo){
+        mostrarToast("Arena não encontrada.");
+        return;
+    }
+
+    try{
+
+        if(
+            arenaSalaAtualCodigoFarol &&
+            arenaSalaAtualCodigoFarol !== codigoLimpo
+        ){
+            await sairArenaAoVivoFarol(true);
+        }
+
+        const ref = db
+            .collection("arenasAoVivo")
+            .doc(codigoLimpo);
+
+        await db.runTransaction(async transacao => {
+
+            const snapshot =
+                await transacao.get(ref);
+
+            if(!snapshot.exists){
+                throw new Error(
+                    "Esta Arena não está mais disponível."
+                );
+            }
+
+            const dados = snapshot.data() || {};
+
+            if(dados.status !== "jogando"){
+                throw new Error(
+                    "Esta Arena ainda não começou ou já terminou."
+                );
+            }
+
+            if(
+                Array.isArray(dados.uids) &&
+                dados.uids.includes(usuario.uid)
+            ){
+                return;
+            }
+
+            const espectadorUids =
+                Array.isArray(dados.espectadorUids)
+                ? [...dados.espectadorUids]
+                : [];
+
+            const espectadores =
+                dados.espectadores
+                ? { ...dados.espectadores }
+                : {};
+
+            if(
+                !espectadorUids.includes(usuario.uid) &&
+                espectadorUids.length >= 15
+            ){
+                throw new Error(
+                    "A Arena atingiu o limite de 15 espectadores."
+                );
+            }
+
+            if(!espectadorUids.includes(usuario.uid)){
+                espectadorUids.push(usuario.uid);
+            }
+
+            espectadores[usuario.uid] = {
+                uid: usuario.uid,
+                nome: usuario.nome,
+                entrouEm: Date.now()
+            };
+
+            transacao.update(ref, {
+                espectadorUids: espectadorUids,
+                espectadores: espectadores,
+                atualizadoEm: Date.now()
+            });
+        });
+
+        acompanharArenaAoVivoFarol(codigoLimpo);
+
+        mostrarToast(
+            "Você entrou como espectador."
+        );
+
+    }catch(erro){
+
+        console.error(
+            "Erro ao assistir Arena:",
+            erro
+        );
+
+        mostrarToast(
+            erro.message ||
+            "Não foi possível assistir à Arena."
+        );
+    }
+}
+
+// Versão V55: jogadores saem normalmente e espectadores
+// são retirados da lista de audiência.
+async function sairArenaAoVivoFarol(silencioso){
+
+    const usuario = usuarioArenaAtualFarol();
+    const codigo = arenaSalaAtualCodigoFarol;
+
+    if(!usuario || !codigo){
+        limparArenaLocalFarol();
+        return;
+    }
+
+    try{
+
+        const ref = db
+            .collection("arenasAoVivo")
+            .doc(codigo);
+
+        await db.runTransaction(async transacao => {
+
+            const snapshot =
+                await transacao.get(ref);
+
+            if(!snapshot.exists){
+                return;
+            }
+
+            const dados = snapshot.data() || {};
+
+            const ehJogador =
+                Array.isArray(dados.uids) &&
+                dados.uids.includes(usuario.uid);
+
+            const ehEspectador =
+                Array.isArray(dados.espectadorUids) &&
+                dados.espectadorUids.includes(usuario.uid);
+
+            if(ehEspectador && !ehJogador){
+
+                const espectadorUids =
+                    dados.espectadorUids
+                        .filter(uid => uid !== usuario.uid);
+
+                const espectadores = {
+                    ...(dados.espectadores || {})
+                };
+
+                delete espectadores[usuario.uid];
+
+                transacao.update(ref, {
+                    espectadorUids: espectadorUids,
+                    espectadores: espectadores,
+                    atualizadoEm: Date.now()
+                });
+
+                return;
+            }
+
+            if(!ehJogador){
+                return;
+            }
+
+            const uids =
+                dados.uids.filter(
+                    uid => uid !== usuario.uid
+                );
+
+            const participantes = {
+                ...(dados.participantes || {})
+            };
+
+            delete participantes[usuario.uid];
+
+            if(dados.criadoPor === usuario.uid){
+
+                transacao.update(ref, {
+                    status: "cancelada",
+                    uids: [],
+                    participantes: {},
+                    canceladaEm:
+                        firebase.firestore.FieldValue.serverTimestamp(),
+                    atualizadoEm: Date.now()
+                });
+
+            }else{
+
+                transacao.update(ref, {
+                    uids: uids,
+                    participantes: participantes,
+                    atualizadoEm: Date.now()
+                });
+            }
+        });
+
+        if(!silencioso){
+            mostrarToast("Você saiu da Arena.");
+        }
+
+    }catch(erro){
+
+        console.error(
+            "Erro ao sair da Arena:",
+            erro
+        );
+
+        if(!silencioso){
+            mostrarToast(
+                "Não foi possível sair da Arena."
+            );
+        }
+
+    }finally{
+
+        limparArenaLocalFarol();
+    }
+}
+
+// Versão V55 da partida: espectador acompanha a mesma questão,
+// cronômetro, placar e eventos, mas não recebe botões de resposta.
+function renderizarPartidaArenaFarol(){
+
+    const sala = arenaSalaAtualFarol;
+    const usuario = usuarioArenaAtualFarol();
+
+    if(
+        !sala ||
+        !usuario ||
+        sala.status !== "jogando"
+    ){
+        return;
+    }
+
+    const ehJogador =
+        Array.isArray(sala.uids) &&
+        sala.uids.includes(usuario.uid);
+
+    const ehEspectador =
+        Array.isArray(sala.espectadorUids) &&
+        sala.espectadorUids.includes(usuario.uid);
+
+    if(!ehJogador && !ehEspectador){
+        mostrarToast(
+            "Você não faz parte desta Arena."
+        );
+        return;
+    }
+
+    const questao =
+        obterQuestaoAtualArenaFarol(sala);
+
+    if(!questao){
+        mostrarToast(
+            "A questão atual da Arena não foi encontrada."
+        );
+        return;
+    }
+
+    const indiceAtual =
+        Number(sala.questaoAtual || 0);
+
+    const total =
+        Array.isArray(sala.indices)
+        ? sala.indices.length
+        : Number(sala.quantidadeQuestoes || 0);
+
+    const respostaUsuario =
+        ehJogador
+        ? (
+            (sala.respostasRodada || {})[usuario.uid]
+            || null
+        )
+        : null;
+
+    const tentativas =
+        Number(
+            respostaUsuario
+            ? respostaUsuario.tentativas || 0
+            : 0
+        );
+
+    const acertou =
+        !!(
+            respostaUsuario &&
+            respostaUsuario.acertou
+        );
+
+    const bloqueado =
+        !ehJogador ||
+        acertou ||
+        tentativas >= 2;
+
+    const rodadaChave =
+        `${sala.codigo}:${indiceAtual}:${sala.rodadaNumero || 0}:${ehEspectador ? "espectador" : "jogador"}`;
+
+    if(arenaUltimaRodadaRenderizadaFarol !== rodadaChave){
+        arenaUltimaRodadaRenderizadaFarol = rodadaChave;
+        mostrarTela("resolverQuestao");
+    }
+
+    const area =
+        document.getElementById("areaQuestao");
+
+    if(!area){
+        return;
+    }
+
+    area.innerHTML = `
+        <div class="arena-jogo-layout-farol">
+
+            <div class="card arena-questao-card-farol">
+
+                <div class="arena-jogo-topo-farol">
+                    <div>
+                        <span class="arena-jogo-selo-farol">
+                            ${
+                                ehEspectador
+                                ? "👁️ ASSISTINDO AO VIVO"
+                                : "🏟️ ARENA AO VIVO"
+                            }
+                        </span>
+
+                        <h2>
+                            ${escaparHTMLDuelo(sala.topicoNome || "Arena do Farol")}
+                        </h2>
+
+                        <p>
+                            Questão ${indiceAtual + 1} de ${total}
+                        </p>
+                    </div>
+
+                    <div class="arena-cronometro-farol">
+                        <small>Tempo restante</small>
+                        <strong id="arenaTempoRestanteFarol">--</strong>
+                    </div>
+                </div>
+
+                <progress
+                    value="${indiceAtual + 1}"
+                    max="${total}"
+                    class="arena-progresso-farol">
+                </progress>
+
+                ${questao.texto ? `
+                    <div class="card texto-base arena-texto-apoio-farol">
+                        <h3>📄 Texto de apoio</h3>
+                        <p>${questao.texto}</p>
+                    </div>
+                ` : ""}
+
+                ${questao.imagem ? `
+                    <img
+                        src="${questao.imagem}"
+                        class="imagem-questao"
+                        alt="Imagem da questão">
+                ` : ""}
+
+                ${questao.afirmacoes ? `
+                    <div class="card texto-base">
+                        ${questao.afirmacoes
+                            .map(item => `<p>${item}</p>`)
+                            .join("")}
+                    </div>
+                ` : ""}
+
+                <p class="pergunta arena-pergunta-farol">
+                    ${questao.pergunta}
+                </p>
+
+                ${
+                    ehJogador
+                    ? `
+                        <div class="arena-alternativas-farol">
+                            ${questao.alternativas.map((alternativa, indice) => `
+                                <button
+                                    type="button"
+                                    class="arena-alternativa-farol"
+                                    onclick="responderQuestaoArenaFarol(${indice})"
+                                    ${bloqueado ? "disabled" : ""}>
+                                    <span>${String.fromCharCode(65 + indice)}</span>
+                                    <strong>${alternativa}</strong>
+                                </button>
+                            `).join("")}
+                        </div>
+                    `
+                    : `
+                        <div class="arena-modo-espectador-farol">
+                            <strong>👁️ Modo espectador</strong>
+                            <p>
+                                Você acompanha a questão, o tempo e o placar,
+                                mas não pode enviar respostas.
+                            </p>
+                        </div>
+                    `
+                }
+
+                <div id="arenaFeedbackJogadorFarol">
+                    ${
+                        ehEspectador
+                        ? ""
+                        : respostaUsuario
+                            ? `
+                                <div class="${acertou ? "feedback-acerto" : "feedback-erro"} arena-feedback-farol">
+                                    <strong>
+                                        ${
+                                            acertou
+                                            ? `✅ Você acertou e ganhou ${textoPontuacaoArenaFarol(respostaUsuario.pontosGanhos)} ponto${Math.abs(Number(respostaUsuario.pontosGanhos || 0)) === 1 ? "" : "s"}.`
+                                            : tentativas < 2
+                                                ? "❌ Você perdeu 1 ponto, mas ainda tem uma segunda tentativa."
+                                                : "❌ Segunda tentativa incorreta. Aguarde a próxima questão."
+                                        }
+                                    </strong>
+                                </div>
+                            `
+                            : `
+                                <div class="arena-aviso-resposta-farol">
+                                    Você tem até duas tentativas. Um erro tira 1 ponto.
+                                </div>
+                            `
+                    }
+                </div>
+
+            </div>
+
+            <aside class="arena-jogo-lateral-farol">
+                ${renderizarPlacarArenaFarol(sala)}
+                ${renderizarEventosRodadaArenaFarol(sala)}
+
+                <button
+                    type="button"
+                    class="arena-sair-partida-farol"
+                    onclick="sairArenaAoVivoFarol()">
+                    🚪 ${ehEspectador ? "Parar de assistir" : "Sair da Arena"}
+                </button>
+            </aside>
+
+        </div>
+    `;
+
+    iniciarCronometroVisualArenaFarol();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    setTimeout(() => {
+        carregarArenasPublicasFarol(false);
+    }, 1100);
+});
+
+if(typeof auth !== "undefined"){
+
+    auth.onAuthStateChanged(user => {
+
+        if(user){
+            setTimeout(() => {
+                carregarArenasPublicasFarol(true);
+            }, 1200);
+        }else if(arenasPublicasListenerFarol){
+            arenasPublicasListenerFarol();
+            arenasPublicasListenerFarol = null;
+        }
+    });
+}
+
+
+// ============================================================
+// V56 — SAÍDA DA ARENA E ENCERRAMENTO POR FALTA DE JOGADORES
+// ============================================================
+
+async function sairArenaAoVivoFarol(silencioso){
+
+    const usuario = usuarioArenaAtualFarol();
+    const codigo = arenaSalaAtualCodigoFarol;
+
+    if(!usuario || !codigo){
+        limparArenaLocalFarol();
+        return;
+    }
+
+    try{
+
+        const ref = db
+            .collection("arenasAoVivo")
+            .doc(codigo);
+
+        await db.runTransaction(async transacao => {
+
+            const snapshot =
+                await transacao.get(ref);
+
+            if(!snapshot.exists){
+                return;
+            }
+
+            const dados = snapshot.data() || {};
+
+            const ehJogador =
+                Array.isArray(dados.uids) &&
+                dados.uids.includes(usuario.uid);
+
+            const ehEspectador =
+                Array.isArray(dados.espectadorUids) &&
+                dados.espectadorUids.includes(usuario.uid);
+
+            // Espectador apenas deixa de acompanhar.
+            if(ehEspectador && !ehJogador){
+
+                const espectadorUids =
+                    dados.espectadorUids
+                        .filter(uid => uid !== usuario.uid);
+
+                const espectadores = {
+                    ...(dados.espectadores || {})
+                };
+
+                delete espectadores[usuario.uid];
+
+                transacao.update(ref, {
+                    espectadorUids: espectadorUids,
+                    espectadores: espectadores,
+                    atualizadoEm: Date.now()
+                });
+
+                return;
+            }
+
+            if(!ehJogador){
+                return;
+            }
+
+            const uidsRestantes =
+                dados.uids.filter(
+                    uid => uid !== usuario.uid
+                );
+
+            const participantesRestantes = {
+                ...(dados.participantes || {})
+            };
+
+            delete participantesRestantes[usuario.uid];
+
+            const anfitriaoSaiu =
+                dados.criadoPor === usuario.uid;
+
+            // Antes de começar: o anfitrião cancela; demais apenas saem.
+            if(dados.status === "aguardando"){
+
+                if(anfitriaoSaiu){
+
+                    transacao.update(ref, {
+                        status: "cancelada",
+                        motivoEncerramento:
+                            "O anfitrião saiu antes do início.",
+                        uids: [],
+                        participantes: {},
+                        canceladaEm:
+                            firebase.firestore.FieldValue.serverTimestamp(),
+                        atualizadoEm: Date.now()
+                    });
+
+                }else{
+
+                    transacao.update(ref, {
+                        uids: uidsRestantes,
+                        participantes: participantesRestantes,
+                        atualizadoEm: Date.now()
+                    });
+                }
+
+                return;
+            }
+
+            // Durante a partida, a saída do anfitrião encerra a Arena,
+            // pois ele controla o avanço das questões.
+            if(
+                dados.status === "jogando" &&
+                anfitriaoSaiu
+            ){
+
+                transacao.update(ref, {
+                    status: "encerrada",
+                    motivoEncerramento:
+                        "A Arena foi encerrada porque o anfitrião saiu.",
+                    uids: uidsRestantes,
+                    participantes: participantesRestantes,
+                    encerradaEm:
+                        firebase.firestore.FieldValue.serverTimestamp(),
+                    atualizadoEm: Date.now()
+                });
+
+                return;
+            }
+
+            // Se a saída deixar menos de dois jogadores,
+            // a partida é encerrada automaticamente.
+            if(
+                dados.status === "jogando" &&
+                uidsRestantes.length < 2
+            ){
+
+                transacao.update(ref, {
+                    status: "encerrada",
+                    motivoEncerramento:
+                        "A Arena foi encerrada por falta de jogadores.",
+                    uids: uidsRestantes,
+                    participantes: participantesRestantes,
+                    encerradaEm:
+                        firebase.firestore.FieldValue.serverTimestamp(),
+                    atualizadoEm: Date.now()
+                });
+
+                return;
+            }
+
+            // Caso ainda restem pelo menos dois jogadores,
+            // a partida continua normalmente.
+            transacao.update(ref, {
+                uids: uidsRestantes,
+                participantes: participantesRestantes,
+                atualizadoEm: Date.now()
+            });
+        });
+
+        if(!silencioso){
+            mostrarToast(
+                "Você saiu da Arena."
+            );
+        }
+
+    }catch(erro){
+
+        console.error(
+            "Erro ao sair da Arena:",
+            erro
+        );
+
+        if(!silencioso){
+            mostrarToast(
+                "Não foi possível sair da Arena: " +
+                (erro.message || "erro de permissão")
+            );
+        }
+
+        return;
+
+    }finally{
+
+        limparArenaLocalFarol();
+
+        if(!silencioso){
+            mostrarTela("duelos");
+            alternarModoCompeticaoFarol("arena");
+        }
+    }
+}
+
+function renderizarArenaEncerradaFarol(){
+
+    const sala = arenaSalaAtualFarol;
+
+    if(
+        !sala ||
+        !["encerrada", "cancelada"].includes(sala.status)
+    ){
+        return;
+    }
+
+    pararCronometroArenaFarol();
+
+    mostrarTela("resolverQuestao");
+
+    const area =
+        document.getElementById("areaQuestao");
+
+    if(!area){
+        return;
+    }
+
+    const motivo =
+        sala.motivoEncerramento ||
+        (
+            sala.status === "cancelada"
+            ? "A Arena foi cancelada pelo anfitrião."
+            : "A Arena foi encerrada."
+        );
+
+    const jogadores =
+        obterParticipantesOrdenadosArenaFarol(sala);
+
+    area.innerHTML = `
+        <div class="card arena-encerrada-farol">
+
+            <span class="arena-jogo-selo-farol">
+                ⚠️ ARENA ENCERRADA
+            </span>
+
+            <h2>${escaparHTMLDuelo(motivo)}</h2>
+
+            <p>
+                A partida não continuará. Você pode voltar à lista
+                e entrar em outra Arena pública.
+            </p>
+
+            ${
+                jogadores.length
+                ? `
+                    <div class="arena-placar-encerrado-farol">
+                        <h3>Placar no momento do encerramento</h3>
+
+                        ${jogadores.map((jogador, indice) => `
+                            <div class="arena-placar-linha-farol">
+                                <span>${indice + 1}º</span>
+                                <strong>${escaparHTMLDuelo(jogador.nome || "Aluno")}</strong>
+                                <span>${Number(jogador.pontos || 0)} pts</span>
+                            </div>
+                        `).join("")}
+                    </div>
+                `
+                : ""
+            }
+
+            <button
+                type="button"
+                onclick="limparArenaLocalFarol(); mostrarTela('duelos'); alternarModoCompeticaoFarol('arena');">
+                🏟️ Voltar às Arenas públicas
+            </button>
+
+        </div>
+    `;
+}
+
+// Versão final da renderização da sala com tratamento de encerramento.
+function renderizarSalaArenaAoVivoFarol(){
+
+    const sala = arenaSalaAtualFarol;
+
+    if(!sala){
+        return;
+    }
+
+    if(sala.status === "jogando"){
+        renderizarPartidaArenaFarol();
+        return;
+    }
+
+    if(sala.status === "finalizada"){
+        renderizarResultadoArenaFarol();
+        return;
+    }
+
+    if(
+        sala.status === "encerrada" ||
+        sala.status === "cancelada"
+    ){
+        renderizarArenaEncerradaFarol();
+        return;
+    }
+
+    pararCronometroArenaFarol();
+
+    const usuario = usuarioArenaAtualFarol();
+    const participantesObj =
+        sala.participantes || {};
+
+    const participantes =
+        Object.values(participantesObj)
+            .sort((a, b) => {
+                if(a.uid === sala.criadoPor) return -1;
+                if(b.uid === sala.criadoPor) return 1;
+                return (a.entrouEm || 0) - (b.entrouEm || 0);
+            });
+
+    const areaSala =
+        document.getElementById("arenaSalaEsperaVisualFarol");
+
+    const codigo =
+        document.getElementById("arenaCodigoVisualFarol");
+
+    const titulo =
+        document.getElementById("arenaSalaTituloFarol");
+
+    const lista =
+        document.getElementById("arenaJogadoresVisualFarol");
+
+    const configuracao =
+        document.getElementById("arenaConfiguracaoSalaFarol");
+
+    const botaoIniciar =
+        document.getElementById("btnIniciarArenaFarol");
+
+    const mensagem =
+        document.getElementById("arenaMensagemStatusFarol");
+
+    if(areaSala){
+        areaSala.style.display = "block";
+    }
+
+    if(codigo){
+        codigo.textContent =
+            sala.codigo || arenaSalaAtualCodigoFarol;
+    }
+
+    if(titulo){
+        titulo.textContent =
+            sala.topicoNome || "Arena do Farol";
+    }
+
+    if(lista){
+
+        lista.innerHTML = participantes
+            .map(item => {
+
+                const anfitriao =
+                    item.uid === sala.criadoPor;
+
+                return `
+                    <div class="arena-jogador-farol ${anfitriao ? "anfitriao" : ""}">
+                        <span>${anfitriao ? "👑" : "🟢"}</span>
+                        <div>
+                            <strong>${escaparHTMLDuelo(item.nome || "Aluno")}</strong>
+                            <small>
+                                ${anfitriao ? "Anfitrião" : "Pronto para jogar"}
+                            </small>
+                        </div>
+                    </div>
+                `;
+            })
+            .join("");
+    }
+
+    if(configuracao){
+        configuracao.innerHTML = `
+            <p><strong>Disciplina:</strong> ${escaparHTMLDuelo(sala.disciplina || "")}</p>
+            <p><strong>Tópico:</strong> ${escaparHTMLDuelo(sala.topicoNome || "")}</p>
+            <p><strong>Questões:</strong> ${Number(sala.quantidadeQuestoes || 0)}</p>
+            <p><strong>Tempo:</strong> ${Number(sala.tempoPorQuestao || 0)} segundos</p>
+            <p><strong>Jogadores:</strong> ${participantes.length}/6</p>
+            <p><strong>Status:</strong> ${escaparHTMLDuelo(sala.status || "aguardando")}</p>
+        `;
+    }
+
+    const ehAnfitriao =
+        usuario &&
+        sala.criadoPor === usuario.uid;
+
+    const podeIniciar =
+        ehAnfitriao &&
+        sala.status === "aguardando" &&
+        participantes.length >= 2;
+
+    if(botaoIniciar){
+
+        botaoIniciar.disabled = !podeIniciar;
+
+        botaoIniciar.classList.toggle(
+            "arena-botao-bloqueado-farol",
+            !podeIniciar
+        );
+
+        botaoIniciar.classList.toggle(
+            "arena-botao-iniciar-farol",
+            podeIniciar
+        );
+
+        if(!ehAnfitriao){
+            botaoIniciar.textContent =
+                "Aguardando o anfitrião iniciar";
+        }else if(participantes.length < 2){
+            botaoIniciar.textContent =
+                "Aguardando pelo menos 2 jogadores";
+        }else{
+            botaoIniciar.textContent =
+                "🚀 Iniciar Arena";
+        }
+    }
+
+    if(mensagem){
+
+        if(participantes.length < 2){
+            mensagem.textContent =
+                "Aguardando mais um jogador para liberar o início.";
+        }else if(ehAnfitriao){
+            mensagem.textContent =
+                "A sala está pronta. Você pode iniciar com " +
+                participantes.length +
+                " jogadores.";
+        }else{
+            mensagem.textContent =
+                "Sala pronta. Aguarde o anfitrião iniciar.";
+        }
+    }
+}
