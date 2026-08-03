@@ -30378,3 +30378,647 @@ function renderizarSalaArenaAoVivoFarol(){
         }
     }
 }
+
+
+// ==========================================================
+// FAROL V21 — FLUXO MOBILE EM ETAPAS: DUELOS E ARENA
+// ==========================================================
+
+(function(){
+
+    const fluxoFarol = {
+        modo: "inicio",
+        etapa: "inicio"
+    };
+
+    const titulosFluxoFarol = {
+        inicio: ["⚔️ Competir", "Escolha como deseja jogar."],
+        dueloConcurso: ["Desafio por convite", "Escolha o concurso."],
+        dueloDisciplina: ["Escolha a disciplina", "Toque em uma opção para continuar."],
+        dueloTopico: ["Escolha o tópico", "Selecione o conteúdo do desafio."],
+        dueloQuantidade: ["Configurar duelo", "Escolha a quantidade e confirme."],
+        dueloCodigo: ["Duelo criado", "Compartilhe o código com outro aluno."],
+        dueloEntrar: ["Entrar no duelo", "Digite o código recebido."],
+        meusDuelos: ["Meus duelos", "Continue ou acompanhe seus desafios."],
+        arenaInicio: ["Arena do Farol", "Escolha uma opção."],
+        arenaConcurso: ["Criar Arena", "Escolha o concurso."],
+        arenaDisciplina: ["Escolha a disciplina", "Defina a matéria da Arena."],
+        arenaTopico: ["Escolha o tópico", "Defina o conteúdo da partida."],
+        arenaConfig: ["Configurar partida", "Escolha questões e tempo."],
+        arenaConfirmar: ["Confirmar Arena", "Revise e crie a sala."],
+        arenaEntrar: ["Entrar em uma Arena", "Digite o código da sala."],
+        arenaPublicas: ["Arenas ao vivo", "Entre ou assista a uma partida."],
+        arenaSala: ["Sala da Arena", "Aguarde os jogadores ou inicie a partida."]
+    };
+
+    function elemento(id){
+        return document.getElementById(id);
+    }
+
+    function garantirEstruturaFluxoFarol(){
+        const secao = elemento("duelos");
+        const card = secao ? secao.querySelector(".duelo-card-principal") : null;
+
+        if(!secao || !card || elemento("competicaoInicioFarolV21")){
+            return;
+        }
+
+        const cabecalho = document.createElement("div");
+        cabecalho.id = "cabecalhoFluxoCompeticaoFarolV21";
+        cabecalho.className = "cabecalho-fluxo-competicao-v21";
+        cabecalho.innerHTML = `
+            <button
+                id="btnVoltarFluxoCompeticaoFarolV21"
+                class="btn-voltar-fluxo-v21"
+                type="button"
+                onclick="voltarFluxoCompeticaoFarolV21()"
+                style="display:none;"
+                aria-label="Voltar">
+                ←
+            </button>
+            <div>
+                <span id="etapaFluxoCompeticaoFarolV21" class="etapa-fluxo-v21"></span>
+                <h2 id="tituloFluxoCompeticaoFarolV21">⚔️ Competir</h2>
+                <p id="descricaoFluxoCompeticaoFarolV21">Escolha como deseja jogar.</p>
+            </div>
+        `;
+
+        card.insertBefore(cabecalho, card.firstChild);
+
+        const inicio = document.createElement("div");
+        inicio.id = "competicaoInicioFarolV21";
+        inicio.className = "menu-fluxo-competicao-v21";
+        inicio.innerHTML = `
+            <button type="button" onclick="abrirFluxoCompeticaoFarolV21('dueloConcurso')">
+                <span class="icone-opcao-fluxo-v21">⚔️</span>
+                <span>
+                    <strong>Desafio por convite</strong>
+                    <small>Crie um duelo e compartilhe o código.</small>
+                </span>
+                <b>›</b>
+            </button>
+
+            <button type="button" onclick="abrirFluxoCompeticaoFarolV21('dueloEntrar')">
+                <span class="icone-opcao-fluxo-v21">🔑</span>
+                <span>
+                    <strong>Entrar com código</strong>
+                    <small>Entre no desafio de outro aluno.</small>
+                </span>
+                <b>›</b>
+            </button>
+
+            <button type="button" onclick="abrirFluxoCompeticaoFarolV21('arenaInicio')">
+                <span class="icone-opcao-fluxo-v21">🏟️</span>
+                <span>
+                    <strong>Arena do Farol</strong>
+                    <small>Partida coletiva com placar ao vivo.</small>
+                </span>
+                <b>›</b>
+            </button>
+
+            <button type="button" onclick="abrirFluxoCompeticaoFarolV21('meusDuelos')">
+                <span class="icone-opcao-fluxo-v21">🏆</span>
+                <span>
+                    <strong>Meus duelos</strong>
+                    <small>Veja desafios em andamento e finalizados.</small>
+                </span>
+                <b>›</b>
+            </button>
+        `;
+
+        const painelDesafio = elemento("painelDesafioConviteFarol");
+        card.insertBefore(inicio, painelDesafio || null);
+
+        const arenaMenu = document.createElement("div");
+        arenaMenu.id = "arenaInicioFarolV21";
+        arenaMenu.className = "menu-fluxo-competicao-v21";
+        arenaMenu.innerHTML = `
+            <button type="button" onclick="abrirFluxoCompeticaoFarolV21('arenaConcurso')">
+                <span class="icone-opcao-fluxo-v21">➕</span>
+                <span>
+                    <strong>Criar nova Arena</strong>
+                    <small>Configure uma sala para até 6 jogadores.</small>
+                </span>
+                <b>›</b>
+            </button>
+
+            <button type="button" onclick="abrirFluxoCompeticaoFarolV21('arenaEntrar')">
+                <span class="icone-opcao-fluxo-v21">🔑</span>
+                <span>
+                    <strong>Entrar com código</strong>
+                    <small>Use o convite enviado pelo anfitrião.</small>
+                </span>
+                <b>›</b>
+            </button>
+
+            <button type="button" onclick="abrirFluxoCompeticaoFarolV21('arenaPublicas')">
+                <span class="icone-opcao-fluxo-v21">🌐</span>
+                <span>
+                    <strong>Arenas acontecendo agora</strong>
+                    <small>Entre em salas abertas ou assista.</small>
+                </span>
+                <b>›</b>
+            </button>
+        `;
+        card.insertBefore(arenaMenu, elemento("painelArenaAoVivoFarol"));
+
+        // Oculta o cabeçalho e as antigas abas, que foram substituídos pelo fluxo.
+        ["tituloDueloFarolV26", "descricaoDueloFarolV26"].forEach(id => {
+            const el = elemento(id);
+            if(el) el.style.display = "none";
+        });
+
+        const abas = card.querySelector(".competicao-abas-farol");
+        if(abas) abas.style.display = "none";
+
+        prepararBlocosArenaFluxoFarolV21();
+    }
+
+    function prepararBlocosArenaFluxoFarolV21(){
+        const blocoCriar = document.querySelector(
+            "#painelArenaAoVivoFarol .arena-bloco-farol"
+        );
+
+        if(!blocoCriar || elemento("arenaEtapaConcursoFarolV21")){
+            return;
+        }
+
+        const concurso = elemento("arenaConcursoFarol");
+        const disciplina = elemento("arenaDisciplinaFarol");
+        const topico = elemento("arenaTopicoFarol");
+        const gridConfig = blocoCriar.querySelector(".arena-grid-config-farol");
+        const resumo = elemento("arenaResumoVisualFarol");
+        const botao = elemento("btnCriarArenaFarol");
+
+        function envolver(id, nos){
+            const div = document.createElement("div");
+            div.id = id;
+            div.className = "etapa-interna-fluxo-v21";
+            blocoCriar.insertBefore(div, nos[0] || null);
+            nos.forEach(no => {
+                if(no) div.appendChild(no);
+            });
+            return div;
+        }
+
+        const labelConcurso = blocoCriar.querySelector('label[for="arenaConcursoFarol"]');
+        const labelDisciplina = blocoCriar.querySelector('label[for="arenaDisciplinaFarol"]');
+        const labelTopico = blocoCriar.querySelector('label[for="arenaTopicoFarol"]');
+
+        envolver("arenaEtapaConcursoFarolV21", [labelConcurso, concurso]);
+
+        const etapaDisciplina = envolver(
+            "arenaEtapaDisciplinaFarolV21",
+            [labelDisciplina, disciplina]
+        );
+        const btnDisciplina = document.createElement("button");
+        btnDisciplina.type = "button";
+        btnDisciplina.className = "btn-continuar-fluxo-v21";
+        btnDisciplina.textContent = "Continuar";
+        btnDisciplina.onclick = () => {
+            if(!disciplina.value){
+                mostrarToast("Escolha uma disciplina.");
+                return;
+            }
+            abrirFluxoCompeticaoFarolV21("arenaTopico");
+        };
+        etapaDisciplina.appendChild(btnDisciplina);
+
+        const etapaTopico = envolver(
+            "arenaEtapaTopicoFarolV21",
+            [labelTopico, topico]
+        );
+        const btnTopico = document.createElement("button");
+        btnTopico.type = "button";
+        btnTopico.className = "btn-continuar-fluxo-v21";
+        btnTopico.textContent = "Continuar";
+        btnTopico.onclick = () => {
+            if(!topico.value){
+                mostrarToast("Escolha um tópico.");
+                return;
+            }
+            abrirFluxoCompeticaoFarolV21("arenaConfig");
+        };
+        etapaTopico.appendChild(btnTopico);
+
+        const etapaConfig = envolver(
+            "arenaEtapaConfigFarolV21",
+            [gridConfig]
+        );
+        const btnConfig = document.createElement("button");
+        btnConfig.type = "button";
+        btnConfig.className = "btn-continuar-fluxo-v21";
+        btnConfig.textContent = "Revisar Arena";
+        btnConfig.onclick = () =>
+            abrirFluxoCompeticaoFarolV21("arenaConfirmar");
+        etapaConfig.appendChild(btnConfig);
+
+        envolver(
+            "arenaEtapaConfirmarFarolV21",
+            [resumo, botao]
+        );
+    }
+
+    function esconderTudoFluxoFarol(){
+        const ids = [
+            "competicaoInicioFarolV21",
+            "arenaInicioFarolV21",
+            "painelDesafioConviteFarol",
+            "painelArenaAoVivoFarol",
+            "cardMeusDuelosFarol"
+        ];
+
+        ids.forEach(id => {
+            const el = elemento(id);
+            if(el) el.style.display = "none";
+        });
+
+        const seletor = document.querySelector(".seletor-concurso-duelo-v26");
+        const layout = document.querySelector("#painelDesafioConviteFarol .duelo-layout");
+        if(seletor) seletor.style.display = "none";
+        if(layout) layout.style.display = "none";
+
+        document.querySelectorAll(
+            "#painelDesafioConviteFarol .duelo-etapa"
+        ).forEach(el => el.style.display = "none");
+
+        const blocosDuelo = document.querySelectorAll(
+            "#painelDesafioConviteFarol .duelo-bloco"
+        );
+        blocosDuelo.forEach(el => el.style.display = "none");
+
+        [
+            "dueloResumoCriacao",
+            "codigoDueloCriado",
+            "arenaEtapaConcursoFarolV21",
+            "arenaEtapaDisciplinaFarolV21",
+            "arenaEtapaTopicoFarolV21",
+            "arenaEtapaConfigFarolV21",
+            "arenaEtapaConfirmarFarolV21"
+        ].forEach(id => {
+            const el = elemento(id);
+            if(el) el.style.display = "none";
+        });
+
+        const arenaBlocos = document.querySelectorAll(
+            "#painelArenaAoVivoFarol .arena-bloco-farol"
+        );
+        arenaBlocos.forEach(el => el.style.display = "none");
+
+        const publicas = document.querySelector(
+            "#painelArenaAoVivoFarol .arena-publicas-farol"
+        );
+        if(publicas) publicas.style.display = "none";
+
+        const sala = elemento("arenaSalaEsperaVisualFarol");
+        if(sala && sala.style.display !== "none"){
+            sala.dataset.estavaAbertaV21 = "true";
+        }
+        if(sala) sala.style.display = "none";
+    }
+
+    function atualizarCabecalhoFluxoFarol(etapa){
+        const dados = titulosFluxoFarol[etapa] || titulosFluxoFarol.inicio;
+        const titulo = elemento("tituloFluxoCompeticaoFarolV21");
+        const descricao = elemento("descricaoFluxoCompeticaoFarolV21");
+        const voltar = elemento("btnVoltarFluxoCompeticaoFarolV21");
+        const indicador = elemento("etapaFluxoCompeticaoFarolV21");
+
+        if(titulo) titulo.textContent = dados[0];
+        if(descricao) descricao.textContent = dados[1];
+        if(voltar) voltar.style.display = etapa === "inicio" ? "none" : "grid";
+
+        const mapaEtapas = {
+            dueloConcurso: "Etapa 1 de 4",
+            dueloDisciplina: "Etapa 2 de 4",
+            dueloTopico: "Etapa 3 de 4",
+            dueloQuantidade: "Etapa 4 de 4",
+            arenaConcurso: "Etapa 1 de 5",
+            arenaDisciplina: "Etapa 2 de 5",
+            arenaTopico: "Etapa 3 de 5",
+            arenaConfig: "Etapa 4 de 5",
+            arenaConfirmar: "Etapa 5 de 5"
+        };
+
+        if(indicador){
+            indicador.textContent = mapaEtapas[etapa] || "";
+            indicador.style.display = mapaEtapas[etapa] ? "block" : "none";
+        }
+    }
+
+    function registrarHistoricoFluxoFarol(etapa, substituir){
+        const estado = {
+            farol: true,
+            tela: "duelos",
+            competicaoStep: etapa
+        };
+
+        const hash = `#duelos-${etapa}`;
+
+        if(substituir){
+            history.replaceState(estado, "", hash);
+        }else{
+            history.pushState(estado, "", hash);
+        }
+    }
+
+    window.abrirFluxoCompeticaoFarolV21 = function(
+        etapa = "inicio",
+        opcoes = {}
+    ){
+        garantirEstruturaFluxoFarol();
+        esconderTudoFluxoFarol();
+
+        fluxoFarol.etapa = etapa;
+        atualizarCabecalhoFluxoFarol(etapa);
+
+        const painelDesafio = elemento("painelDesafioConviteFarol");
+        const painelArena = elemento("painelArenaAoVivoFarol");
+        const layoutDuelo = document.querySelector(
+            "#painelDesafioConviteFarol .duelo-layout"
+        );
+        const seletorConcurso = document.querySelector(
+            ".seletor-concurso-duelo-v26"
+        );
+        const blocosDuelo = document.querySelectorAll(
+            "#painelDesafioConviteFarol .duelo-bloco"
+        );
+        const etapasDuelo = document.querySelectorAll(
+            "#painelDesafioConviteFarol .duelo-etapa"
+        );
+
+        if(etapa === "inicio"){
+            elemento("competicaoInicioFarolV21").style.display = "grid";
+        }
+
+        if(etapa === "dueloConcurso"){
+            painelDesafio.style.display = "block";
+            seletorConcurso.style.display = "block";
+            prepararSelectDuelo();
+        }
+
+        if(["dueloDisciplina", "dueloTopico", "dueloQuantidade", "dueloCodigo", "dueloEntrar"].includes(etapa)){
+            painelDesafio.style.display = "block";
+            layoutDuelo.style.display = "block";
+        }
+
+        if(etapa === "dueloDisciplina"){
+            blocosDuelo[0].style.display = "block";
+            etapasDuelo[0].style.display = "block";
+            renderizarDisciplinasDuelo();
+        }
+
+        if(etapa === "dueloTopico"){
+            blocosDuelo[0].style.display = "block";
+            etapasDuelo[1].style.display = "block";
+            renderizarTopicosDuelo();
+        }
+
+        if(etapa === "dueloQuantidade"){
+            blocosDuelo[0].style.display = "block";
+            etapasDuelo[2].style.display = "block";
+            const resumo = elemento("dueloResumoCriacao");
+            if(resumo) resumo.style.display = "block";
+
+            const botaoCriar = blocosDuelo[0].querySelector(
+                'button[onclick="criarDuelo()"]'
+            );
+            if(botaoCriar) botaoCriar.style.display = "block";
+            atualizarResumoDuelo();
+        }
+
+        if(etapa === "dueloCodigo"){
+            blocosDuelo[0].style.display = "block";
+            const codigo = elemento("codigoDueloCriado");
+            if(codigo) codigo.style.display = "block";
+        }
+
+        if(etapa === "dueloEntrar"){
+            blocosDuelo[1].style.display = "block";
+        }
+
+        if(etapa === "meusDuelos"){
+            const cardMeus = elemento("cardMeusDuelosFarol");
+            cardMeus.style.display = "block";
+            carregarMeusDuelos();
+        }
+
+        if(etapa === "arenaInicio"){
+            elemento("arenaInicioFarolV21").style.display = "grid";
+            prepararArenaVisualFarol();
+        }
+
+        if([
+            "arenaConcurso",
+            "arenaDisciplina",
+            "arenaTopico",
+            "arenaConfig",
+            "arenaConfirmar",
+            "arenaEntrar",
+            "arenaPublicas",
+            "arenaSala"
+        ].includes(etapa)){
+            painelArena.style.display = "block";
+            prepararArenaVisualFarol();
+        }
+
+        const arenaBlocos = document.querySelectorAll(
+            "#painelArenaAoVivoFarol .arena-bloco-farol"
+        );
+
+        if(etapa === "arenaConcurso"){
+            arenaBlocos[0].style.display = "block";
+            elemento("arenaEtapaConcursoFarolV21").style.display = "block";
+
+            const select = elemento("arenaConcursoFarol");
+            if(select){
+                select.onchange = function(){
+                    atualizarResumoArenaVisualFarol();
+                    prepararArenaVisualFarol();
+                    abrirFluxoCompeticaoFarolV21("arenaDisciplina");
+                };
+            }
+        }
+
+        if(etapa === "arenaDisciplina"){
+            arenaBlocos[0].style.display = "block";
+            elemento("arenaEtapaDisciplinaFarolV21").style.display = "block";
+        }
+
+        if(etapa === "arenaTopico"){
+            arenaBlocos[0].style.display = "block";
+            elemento("arenaEtapaTopicoFarolV21").style.display = "block";
+        }
+
+        if(etapa === "arenaConfig"){
+            arenaBlocos[0].style.display = "block";
+            elemento("arenaEtapaConfigFarolV21").style.display = "block";
+        }
+
+        if(etapa === "arenaConfirmar"){
+            arenaBlocos[0].style.display = "block";
+            elemento("arenaEtapaConfirmarFarolV21").style.display = "block";
+            atualizarResumoArenaVisualFarol();
+        }
+
+        if(etapa === "arenaEntrar"){
+            arenaBlocos[1].style.display = "block";
+        }
+
+        if(etapa === "arenaPublicas"){
+            const publicas = document.querySelector(
+                "#painelArenaAoVivoFarol .arena-publicas-farol"
+            );
+            if(publicas) publicas.style.display = "block";
+            carregarArenasPublicasFarol(true);
+        }
+
+        if(etapa === "arenaSala"){
+            const sala = elemento("arenaSalaEsperaVisualFarol");
+            if(sala) sala.style.display = "block";
+        }
+
+        window.scrollTo({top: 0, behavior: "smooth"});
+
+        if(!opcoes.semHistorico){
+            registrarHistoricoFluxoFarol(
+                etapa,
+                Boolean(opcoes.substituirHistorico)
+            );
+        }
+    };
+
+    window.voltarFluxoCompeticaoFarolV21 = function(){
+        const anteriores = {
+            dueloConcurso: "inicio",
+            dueloDisciplina: "dueloConcurso",
+            dueloTopico: "dueloDisciplina",
+            dueloQuantidade: "dueloTopico",
+            dueloCodigo: "inicio",
+            dueloEntrar: "inicio",
+            meusDuelos: "inicio",
+            arenaInicio: "inicio",
+            arenaConcurso: "arenaInicio",
+            arenaDisciplina: "arenaConcurso",
+            arenaTopico: "arenaDisciplina",
+            arenaConfig: "arenaTopico",
+            arenaConfirmar: "arenaConfig",
+            arenaEntrar: "arenaInicio",
+            arenaPublicas: "arenaInicio",
+            arenaSala: "arenaInicio"
+        };
+
+        abrirFluxoCompeticaoFarolV21(
+            anteriores[fluxoFarol.etapa] || "inicio"
+        );
+    };
+
+    function instalarAvancoAutomaticoFluxoFarol(){
+        if(window.__fluxoCompeticaoFarolV21Instalado){
+            return;
+        }
+        window.__fluxoCompeticaoFarolV21Instalado = true;
+
+        const selecionarConcursoOriginal =
+            window.selecionarConcursoDueloFarol;
+
+        if(typeof selecionarConcursoOriginal === "function"){
+            window.selecionarConcursoDueloFarol = function(){
+                const resultado = selecionarConcursoOriginal.apply(this, arguments);
+                setTimeout(() =>
+                    abrirFluxoCompeticaoFarolV21("dueloDisciplina"), 0
+                );
+                return resultado;
+            };
+        }
+
+        const selecionarDisciplinaOriginal = window.selecionarDisciplinaDuelo;
+        if(typeof selecionarDisciplinaOriginal === "function"){
+            window.selecionarDisciplinaDuelo = function(){
+                const resultado = selecionarDisciplinaOriginal.apply(this, arguments);
+                setTimeout(() =>
+                    abrirFluxoCompeticaoFarolV21("dueloTopico"), 0
+                );
+                return resultado;
+            };
+        }
+
+        const selecionarAssuntoOriginal = window.selecionarAssuntoDuelo;
+        if(typeof selecionarAssuntoOriginal === "function"){
+            window.selecionarAssuntoDuelo = function(){
+                const resultado = selecionarAssuntoOriginal.apply(this, arguments);
+                setTimeout(() =>
+                    abrirFluxoCompeticaoFarolV21("dueloQuantidade"), 0
+                );
+                return resultado;
+            };
+        }
+
+        const criarDueloOriginal = window.criarDuelo;
+        if(typeof criarDueloOriginal === "function"){
+            window.criarDuelo = async function(){
+                const resultado = await criarDueloOriginal.apply(this, arguments);
+                setTimeout(() => {
+                    const codigo = elemento("codigoDueloCriado");
+                    if(codigo && codigo.textContent.trim()){
+                        abrirFluxoCompeticaoFarolV21("dueloCodigo");
+                    }
+                }, 300);
+                return resultado;
+            };
+        }
+
+        const alternarOriginal = window.alternarModoCompeticaoFarol;
+        if(typeof alternarOriginal === "function"){
+            window.alternarModoCompeticaoFarol = function(modo){
+                if(modo === "arena"){
+                    abrirFluxoCompeticaoFarolV21("arenaInicio");
+                }else{
+                    abrirFluxoCompeticaoFarolV21("dueloConcurso");
+                }
+            };
+        }
+    }
+
+    const mostrarTelaOriginalV21 = window.mostrarTela;
+    if(typeof mostrarTelaOriginalV21 === "function"){
+        window.mostrarTela = function(id, opcoes = {}){
+            const resultado = mostrarTelaOriginalV21.apply(this, arguments);
+
+            if(id === "duelos"){
+                setTimeout(() => {
+                    garantirEstruturaFluxoFarol();
+                    instalarAvancoAutomaticoFluxoFarol();
+
+                    if(!opcoes.semHistorico){
+                        abrirFluxoCompeticaoFarolV21("inicio", {
+                            substituirHistorico: true
+                        });
+                    }
+                }, 0);
+            }
+
+            return resultado;
+        };
+    }
+
+    window.addEventListener("popstate", evento => {
+        const estado = evento.state;
+        if(
+            estado &&
+            estado.tela === "duelos" &&
+            estado.competicaoStep
+        ){
+            abrirFluxoCompeticaoFarolV21(
+                estado.competicaoStep,
+                {semHistorico: true}
+            );
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        garantirEstruturaFluxoFarol();
+        instalarAvancoAutomaticoFluxoFarol();
+    });
+
+})();

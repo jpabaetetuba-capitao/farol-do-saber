@@ -11362,3 +11362,185 @@ progress{
         margin-bottom:8px;
     }
 }
+
+
+/* ==========================================================
+   FAROL V21 — DUELOS E ARENA EM TELAS ENCADEADAS
+========================================================== */
+
+.cabecalho-fluxo-competicao-v21{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.cabecalho-fluxo-competicao-v21 h2{
+    margin:0 0 4px;
+}
+
+.cabecalho-fluxo-competicao-v21 p{
+    margin:0;
+    color:#66756e;
+}
+
+.btn-voltar-fluxo-v21{
+    width:42px !important;
+    height:42px;
+    min-width:42px;
+    padding:0 !important;
+    display:grid;
+    place-items:center;
+    border-radius:50% !important;
+    font-size:24px;
+    line-height:1;
+}
+
+.etapa-fluxo-v21{
+    display:block;
+    margin-bottom:3px;
+    color:#087f5b;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+}
+
+.menu-fluxo-competicao-v21{
+    display:grid;
+    gap:11px;
+}
+
+.menu-fluxo-competicao-v21 > button{
+    width:100%;
+    min-height:76px;
+    margin:0 !important;
+    padding:14px !important;
+    display:grid;
+    grid-template-columns:46px 1fr 18px;
+    align-items:center;
+    gap:11px;
+    text-align:left;
+    border-radius:17px !important;
+}
+
+.menu-fluxo-competicao-v21 > button > span:nth-child(2){
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.menu-fluxo-competicao-v21 strong{
+    font-size:15px;
+}
+
+.menu-fluxo-competicao-v21 small{
+    color:inherit;
+    opacity:.76;
+    font-size:12px;
+    line-height:1.35;
+}
+
+.menu-fluxo-competicao-v21 b{
+    font-size:24px;
+}
+
+.icone-opcao-fluxo-v21{
+    width:44px;
+    height:44px;
+    display:grid;
+    place-items:center;
+    border-radius:13px;
+    background:rgba(255,255,255,.2);
+    font-size:24px;
+}
+
+.etapa-interna-fluxo-v21{
+    display:none;
+}
+
+.btn-continuar-fluxo-v21{
+    width:100%;
+    margin-top:14px !important;
+}
+
+#painelDesafioConviteFarol .duelo-layout,
+#painelArenaAoVivoFarol .arena-layout-farol{
+    grid-template-columns:1fr !important;
+}
+
+#painelDesafioConviteFarol .duelo-bloco,
+#painelArenaAoVivoFarol .arena-bloco-farol{
+    max-width:760px;
+    margin:0 auto;
+}
+
+#cardMeusDuelosFarol{
+    margin-top:0;
+}
+
+@media(max-width:768px){
+    #duelos{
+        padding-top:8px;
+    }
+
+    #duelos > .card{
+        padding:14px !important;
+    }
+
+    .cabecalho-fluxo-competicao-v21{
+        margin-bottom:13px;
+    }
+
+    .cabecalho-fluxo-competicao-v21 h2{
+        font-size:21px;
+    }
+
+    .cabecalho-fluxo-competicao-v21 p{
+        font-size:13px;
+    }
+
+    .menu-fluxo-competicao-v21{
+        gap:9px;
+    }
+
+    .menu-fluxo-competicao-v21 > button{
+        min-height:70px;
+        grid-template-columns:42px 1fr 16px;
+        padding:12px !important;
+    }
+
+    .icone-opcao-fluxo-v21{
+        width:40px;
+        height:40px;
+        font-size:21px;
+    }
+
+    #dueloConcursosFarolV26,
+    #dueloDisciplinas,
+    #dueloTopicos{
+        grid-template-columns:1fr !important;
+    }
+
+    #painelDesafioConviteFarol .duelo-etapa,
+    #painelDesafioConviteFarol .duelo-bloco,
+    #painelArenaAoVivoFarol .arena-bloco-farol{
+        padding:0 !important;
+        border:0 !important;
+        box-shadow:none !important;
+        background:transparent !important;
+    }
+
+    #painelDesafioConviteFarol select,
+    #painelDesafioConviteFarol input,
+    #painelArenaAoVivoFarol select,
+    #painelArenaAoVivoFarol input{
+        min-height:52px;
+        font-size:16px;
+    }
+
+    #dueloResumoCriacao,
+    #arenaResumoVisualFarol{
+        margin-top:12px;
+    }
+}
