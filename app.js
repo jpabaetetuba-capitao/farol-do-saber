@@ -19600,6 +19600,31 @@ async function entrarDuelo(codigo){
     mostrarQuestaoDuelo();
 }
 
+function voltarDaQuestaoDueloFarol(){
+
+    const respondidas =
+        dueloAcertos + dueloErros;
+
+    const mensagem =
+        respondidas > 0
+        ? "Deseja sair do duelo? O progresso atual desta tentativa pode ser perdido."
+        : "Deseja voltar para a Central de Duelos?";
+
+    if(!confirm(mensagem)){
+        return;
+    }
+
+    mostrarTela("duelos");
+
+    if(typeof prepararSelectDuelo === "function"){
+        prepararSelectDuelo();
+    }
+
+    if(typeof carregarMeusDuelos === "function"){
+        carregarMeusDuelos();
+    }
+}
+
 function mostrarQuestaoDuelo(){
 
     if(!dueloAtual || dueloQuestoes.length === 0){
@@ -19614,6 +19639,16 @@ function mostrarQuestaoDuelo(){
 
     document.getElementById("areaQuestao").innerHTML = `
         <div class="card">
+
+            <button
+                type="button"
+                class="btn-voltar"
+                onclick="voltarDaQuestaoDueloFarol()">
+                ⬅ Voltar para Duelos
+            </button>
+
+            <br><br>
+
             <h2>⚔️ Duelo do Saber</h2>
             <p><strong>Código:</strong> ${dueloAtual.codigo}</p>
             <p><strong>Disciplina:</strong> ${dueloAtual.nomeDisciplina || dueloAtual.disciplina || "Geral"}</p>
@@ -20645,13 +20680,59 @@ function selecionarCargoProvasFarol(cargo){
     if(mensagem){
         mensagem.style.display = "none";
     }
+
+    const telaProvas = document.getElementById("provasAnteriores");
+
+    if(telaProvas){
+        const cardPrincipal = telaProvas.querySelector(".provas-anteriores-premium");
+
+        if(cardPrincipal){
+            Array.from(cardPrincipal.children).forEach(elemento => {
+                if(elemento === grupoSelecionado){
+                    return;
+                }
+
+                if(!elemento.dataset.displayAntesGrupoProvasFarol){
+                    elemento.dataset.displayAntesGrupoProvasFarol =
+                        elemento.style.display || "__vazio__";
+                }
+
+                elemento.style.display = "none";
+            });
+        }
+
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
 }
 
 function voltarCargosProvasFarol(){
-    prepararTelaProvasAnterioresFarol();
+
     const tela = document.getElementById("provasAnteriores");
+
     if(tela){
-        tela.scrollIntoView({ behavior: "smooth", block: "start" });
+        const cardPrincipal = tela.querySelector(".provas-anteriores-premium");
+
+        if(cardPrincipal){
+            Array.from(cardPrincipal.children).forEach(elemento => {
+                const displayAnterior =
+                    elemento.dataset.displayAntesGrupoProvasFarol;
+
+                if(displayAnterior){
+                    elemento.style.display =
+                        displayAnterior === "__vazio__"
+                        ? ""
+                        : displayAnterior;
+
+                    delete elemento.dataset.displayAntesGrupoProvasFarol;
+                }
+            });
+        }
+    }
+
+    prepararTelaProvasAnterioresFarol();
+
+    if(tela){
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
 }
 
@@ -26571,10 +26652,7 @@ function criarArenaVisualFarol(){
 
     if(sala){
         sala.style.display = "block";
-        sala.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
+        definirModoSalaArenaFarol(true);
     }
 
     mostrarToast(
@@ -27044,6 +27122,7 @@ function renderizarSalaArenaAoVivoFarol(){
 
     if(areaSala){
         areaSala.style.display = "block";
+        definirModoSalaArenaFarol(true);
     }
 
     if(codigo){
@@ -27283,6 +27362,51 @@ async function sairArenaAoVivoFarol(silencioso){
     }
 }
 
+function definirModoSalaArenaFarol(ativo){
+
+    const painel =
+        document.getElementById("painelArenaAoVivoFarol");
+
+    const sala =
+        document.getElementById("arenaSalaEsperaVisualFarol");
+
+    if(!painel || !sala){
+        return;
+    }
+
+    Array.from(painel.children).forEach(elemento => {
+        if(elemento === sala){
+            return;
+        }
+
+        if(ativo){
+            if(!elemento.dataset.displayAntesSalaArenaFarol){
+                elemento.dataset.displayAntesSalaArenaFarol =
+                    elemento.style.display || "__vazio__";
+            }
+
+            elemento.style.display = "none";
+        }else{
+            const displayAnterior =
+                elemento.dataset.displayAntesSalaArenaFarol;
+
+            if(displayAnterior){
+                elemento.style.display =
+                    displayAnterior === "__vazio__"
+                    ? ""
+                    : displayAnterior;
+
+                delete elemento.dataset.displayAntesSalaArenaFarol;
+            }
+        }
+    });
+
+    if(ativo){
+        sala.style.display = "block";
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+}
+
 function limparArenaLocalFarol(){
 
     if(arenaSalaListenerFarol){
@@ -27303,6 +27427,8 @@ function limparArenaLocalFarol(){
     if(areaSala){
         areaSala.style.display = "none";
     }
+
+    definirModoSalaArenaFarol(false);
 }
 
 async function restaurarArenaAtualFarol(){
