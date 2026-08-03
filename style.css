@@ -13227,3 +13227,210 @@ progress{
         min-height:110px;
     }
 }
+
+
+/* ==========================================================
+   FAROL V34 — AJUSTE VISUAL DA LOJA
+========================================================== */
+
+#lojaFarol{
+    padding-bottom:110px !important;
+}
+
+.grupo-itens-loja-v33{
+    margin-bottom:14px;
+}
+
+.grupo-itens-loja-v33 > h3{
+    margin:0 0 7px;
+    font-size:14px;
+    color:#23352f;
+}
+
+.item-lista-loja-v33{
+    min-height:66px;
+    padding:10px 12px !important;
+    gap:10px;
+    border:1px solid rgba(8,127,91,.18) !important;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+
+.item-lista-loja-v33 strong{
+    font-size:14px;
+    line-height:1.25;
+}
+
+.item-lista-loja-v33 small{
+    font-size:11px;
+    font-weight:700;
+    opacity:.92;
+}
+
+.item-lista-loja-v33 em{
+    font-size:11px;
+    font-weight:700;
+    opacity:.92;
+}
+
+.visual-item-loja-v33{
+    width:40px;
+    min-height:40px;
+}
+
+.visual-item-loja-v33 .avatar-loja-duplo,
+.visual-item-loja-v33 .avatar-loja-preview{
+    transform:scale(.62);
+}
+
+.item-lista-loja-v33 b{
+    font-size:22px;
+    color:inherit;
+    opacity:.9;
+}
+
+.item-lista-loja-v33:not(.comprado){
+    background:linear-gradient(180deg, #43a844 0%, #368f38 100%) !important;
+    color:#ffffff !important;
+    border-color:rgba(255,255,255,.16) !important;
+}
+
+.item-lista-loja-v33:not(.comprado) small,
+.item-lista-loja-v33:not(.comprado) em,
+.item-lista-loja-v33:not(.comprado) b{
+    color:#ffffff !important;
+}
+
+.item-lista-loja-v33.comprado{
+    background:#f6fbf8 !important;
+    color:#17352b !important;
+    border-color:#d3e7db !important;
+}
+
+.item-lista-loja-v33.comprado small,
+.item-lista-loja-v33.comprado em,
+.item-lista-loja-v33.comprado b{
+    color:#315244 !important;
+    opacity:1 !important;
+}
+
+.item-lista-loja-v33.em-uso{
+    background:#edf9f0 !important;
+    border:2px solid #34a853 !important;
+    color:#133a27 !important;
+    box-shadow:0 4px 14px rgba(52,168,83,.12);
+}
+
+.item-lista-loja-v33.em-uso small,
+.item-lista-loja-v33.em-uso em,
+.item-lista-loja-v33.em-uso b{
+    color:#1f6b3a !important;
+}
+
+.item-lista-loja-v33.em-uso .texto-item-loja-v33::after{
+    content:"Em uso";
+    display:inline-flex;
+    width:max-content;
+    margin-top:4px;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#dff5e5;
+    color:#1e7b3b;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:.02em;
+    text-transform:uppercase;
+}
+
+.opcao-categoria-loja-v33{
+    min-height:70px;
+    padding:11px !important;
+}
+
+.opcao-categoria-loja-v33 strong{
+    font-size:14px;
+}
+
+.opcao-categoria-loja-v33 small{
+    font-size:11px;
+}
+
+.opcao-categoria-loja-v33 em{
+    font-size:10px;
+    font-weight:800;
+}
+
+.resumo-perfil-loja-v33{
+    margin-bottom:11px;
+    padding:10px 12px;
+}
+
+.detalhe-item-loja-v33{
+    padding-bottom:10px;
+}
+
+@media(max-width:768px){
+
+    #lojaFarol{
+        padding:8px 8px 102px !important;
+    }
+
+    #lojaFarol > .card{
+        padding:14px !important;
+    }
+
+    .cabecalho-fluxo-loja-v33{
+        margin-bottom:10px;
+    }
+
+    .grupo-itens-loja-v33{
+        margin-bottom:12px;
+    }
+
+    .grupo-itens-loja-v33 > h3{
+        margin-bottom:6px;
+        font-size:13px;
+    }
+
+    .item-lista-loja-v33{
+        min-height:62px;
+        padding:9px 10px !important;
+        grid-template-columns:38px 1fr 14px;
+        border-radius:14px !important;
+    }
+
+    .item-lista-loja-v33 strong{
+        font-size:13px;
+    }
+
+    .item-lista-loja-v33 small,
+    .item-lista-loja-v33 em{
+        font-size:10px;
+    }
+
+    .visual-item-loja-v33{
+        width:36px;
+        min-height:36px;
+    }
+
+    .visual-item-loja-v33 .avatar-loja-duplo,
+    .visual-item-loja-v33 .avatar-loja-preview{
+        transform:scale(.55);
+    }
+
+    .item-lista-loja-v33 b{
+        font-size:18px;
+    }
+
+    .resumo-perfil-loja-v33{
+        padding:9px 10px;
+    }
+
+    .resumo-perfil-loja-v33 > div{
+        gap:8px;
+    }
+
+    .resumo-perfil-loja-v33 button{
+        padding:7px 8px !important;
+        font-size:10px;
+    }
+}
