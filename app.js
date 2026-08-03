@@ -31045,3 +31045,273 @@ function renderizarSalaArenaAoVivoFarol(){
     });
 
 })();
+
+
+// ==========================================================
+// FAROL V23 — ESTUDAR EM TELAS ENCADEADAS
+// ==========================================================
+
+(function(){
+
+    const estadoEstudarV23 = {
+        etapa: "concurso",
+        concurso: "",
+        cargo: ""
+    };
+
+    const dadosEtapaEstudarV23 = {
+        concurso: {
+            titulo: "📚 Estudar",
+            descricao: "Escolha o concurso.",
+            indicador: "Etapa 1 de 3"
+        },
+        cargo: {
+            titulo: "Escolha o cargo",
+            descricao: "Selecione sua rota de preparação.",
+            indicador: "Etapa 2 de 3"
+        },
+        disciplina: {
+            titulo: "Escolha a disciplina",
+            descricao: "Selecione a matéria para continuar.",
+            indicador: "Etapa 3 de 3"
+        }
+    };
+
+    function elEstudarV23(id){
+        return document.getElementById(id);
+    }
+
+    function atualizarCabecalhoEstudarV23(etapa){
+        const dados = dadosEtapaEstudarV23[etapa] || dadosEtapaEstudarV23.concurso;
+        const titulo = elEstudarV23("tituloFluxoEstudarV23");
+        const descricao = elEstudarV23("descricaoFluxoEstudarV23");
+        const indicador = elEstudarV23("etapaFluxoEstudarV23");
+        const voltar = elEstudarV23("btnVoltarFluxoEstudarV23");
+        const tituloAntigo = elEstudarV23("tituloEscolhaPreparacaoFarol");
+
+        if(titulo) titulo.textContent = dados.titulo;
+        if(descricao) descricao.textContent = dados.descricao;
+        if(indicador) indicador.textContent = dados.indicador;
+        if(voltar) voltar.style.display = etapa === "concurso" ? "none" : "grid";
+        if(tituloAntigo) tituloAntigo.style.display = "none";
+    }
+
+    function registrarHistoricoEstudarV23(etapa, substituir = false){
+        const estado = {
+            farol: true,
+            tela: "questoes",
+            estudarStep: etapa,
+            concurso: estadoEstudarV23.concurso,
+            cargo: estadoEstudarV23.cargo
+        };
+
+        const hash = `#estudar-${etapa}`;
+        if(substituir){
+            history.replaceState(estado, "", hash);
+        }else{
+            history.pushState(estado, "", hash);
+        }
+    }
+
+    window.abrirEtapaEstudarV23 = function(etapa, opcoes = {}){
+        estadoEstudarV23.etapa = etapa;
+        atualizarCabecalhoEstudarV23(etapa);
+
+        if(etapa === "concurso"){
+            localStorage.removeItem("farol_concurso_atual");
+            localStorage.removeItem("farol_trilha_atual");
+            estadoEstudarV23.concurso = "";
+            estadoEstudarV23.cargo = "";
+
+            if(typeof renderizarSelecaoConcursosFarol === "function"){
+                renderizarSelecaoConcursosFarol();
+            }else if(typeof renderizarTelaPreparacoes === "function"){
+                renderizarTelaPreparacoes();
+            }
+        }
+
+        if(etapa === "cargo"){
+            const concurso =
+                estadoEstudarV23.concurso ||
+                localStorage.getItem("farol_concurso_atual") ||
+                "";
+
+            if(concurso && typeof renderizarCargosConcursoFarol === "function"){
+                renderizarCargosConcursoFarol(concurso);
+            }
+        }
+
+        if(etapa === "disciplina"){
+            const cargo =
+                estadoEstudarV23.cargo ||
+                localStorage.getItem("farol_trilha_atual") ||
+                "";
+
+            if(cargo && typeof renderizarTrilhaEstudo === "function"){
+                renderizarTrilhaEstudo(cargo);
+            }
+        }
+
+        const atalhoTodas = document.querySelector(".atalho-todas-disciplinas");
+        if(atalhoTodas){
+            atalhoTodas.style.display = "none";
+        }
+
+        window.scrollTo({top: 0, behavior: "smooth"});
+
+        if(!opcoes.semHistorico){
+            registrarHistoricoEstudarV23(
+                etapa,
+                Boolean(opcoes.substituirHistorico)
+            );
+        }
+    };
+
+    window.voltarFluxoEstudarV23 = function(){
+        if(estadoEstudarV23.etapa === "disciplina"){
+            abrirEtapaEstudarV23("cargo");
+            return;
+        }
+
+        if(estadoEstudarV23.etapa === "cargo"){
+            abrirEtapaEstudarV23("concurso");
+            return;
+        }
+
+        mostrarTela("inicio");
+    };
+
+    function instalarFluxoEstudarV23(){
+        if(window.__fluxoEstudarV23Instalado){
+            return;
+        }
+        window.__fluxoEstudarV23Instalado = true;
+
+        if(typeof selecionarConcursoFarol === "function"){
+            const selecionarConcursoOriginalV23 = selecionarConcursoFarol;
+
+            window.selecionarConcursoFarol = async function(chave){
+                estadoEstudarV23.concurso = chave;
+
+                const resultado =
+                    await selecionarConcursoOriginalV23.apply(this, arguments);
+
+                setTimeout(() => {
+                    estadoEstudarV23.etapa = "cargo";
+                    atualizarCabecalhoEstudarV23("cargo");
+                    registrarHistoricoEstudarV23("cargo");
+                    window.scrollTo({top: 0, behavior: "smooth"});
+                }, 0);
+
+                return resultado;
+            };
+        }
+
+        if(typeof abrirCargoConcursoFarol === "function"){
+            const abrirCargoOriginalV23 = abrirCargoConcursoFarol;
+
+            window.abrirCargoConcursoFarol = async function(chave){
+                const resultado =
+                    await abrirCargoOriginalV23.apply(this, arguments);
+
+                const cargoAtual =
+                    localStorage.getItem("farol_trilha_atual") || "";
+
+                if(cargoAtual === chave){
+                    estadoEstudarV23.cargo = chave;
+
+                    setTimeout(() => {
+                        estadoEstudarV23.etapa = "disciplina";
+                        atualizarCabecalhoEstudarV23("disciplina");
+                        registrarHistoricoEstudarV23("disciplina");
+                        window.scrollTo({top: 0, behavior: "smooth"});
+                    }, 0);
+                }
+
+                return resultado;
+            };
+        }
+
+        if(typeof trocarConcursoFarol === "function"){
+            const trocarConcursoOriginalV23 = trocarConcursoFarol;
+            window.trocarConcursoFarol = function(){
+                const resultado = trocarConcursoOriginalV23.apply(this, arguments);
+                estadoEstudarV23.etapa = "concurso";
+                estadoEstudarV23.concurso = "";
+                estadoEstudarV23.cargo = "";
+                atualizarCabecalhoEstudarV23("concurso");
+                registrarHistoricoEstudarV23("concurso");
+                return resultado;
+            };
+        }
+
+        if(typeof alterarPreparacaoFarol === "function"){
+            const alterarPreparacaoOriginalV23 = alterarPreparacaoFarol;
+            window.alterarPreparacaoFarol = function(){
+                const resultado = alterarPreparacaoOriginalV23.apply(this, arguments);
+                estadoEstudarV23.etapa = "cargo";
+                estadoEstudarV23.cargo = "";
+                atualizarCabecalhoEstudarV23("cargo");
+                registrarHistoricoEstudarV23("cargo");
+                return resultado;
+            };
+        }
+    }
+
+    const mostrarTelaAntesEstudarV23 = window.mostrarTela;
+
+    if(typeof mostrarTelaAntesEstudarV23 === "function"){
+        window.mostrarTela = function(id, opcoes = {}){
+            const resultado = mostrarTelaAntesEstudarV23.apply(this, arguments);
+
+            if(id === "questoes"){
+                setTimeout(() => {
+                    instalarFluxoEstudarV23();
+
+                    if(!opcoes.semHistorico){
+                        const concurso = localStorage.getItem("farol_concurso_atual") || "";
+                        const cargo = localStorage.getItem("farol_trilha_atual") || "";
+
+                        estadoEstudarV23.concurso = concurso;
+                        estadoEstudarV23.cargo = cargo;
+
+                        const etapa = cargo
+                            ? "disciplina"
+                            : concurso
+                                ? "cargo"
+                                : "concurso";
+
+                        estadoEstudarV23.etapa = etapa;
+                        atualizarCabecalhoEstudarV23(etapa);
+                        registrarHistoricoEstudarV23(etapa, true);
+                    }
+                }, 10);
+            }
+
+            return resultado;
+        };
+    }
+
+    window.addEventListener("popstate", evento => {
+        const estado = evento.state;
+
+        if(
+            estado &&
+            estado.tela === "questoes" &&
+            estado.estudarStep
+        ){
+            estadoEstudarV23.concurso = estado.concurso || "";
+            estadoEstudarV23.cargo = estado.cargo || "";
+
+            abrirEtapaEstudarV23(
+                estado.estudarStep,
+                {semHistorico: true}
+            );
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        instalarFluxoEstudarV23();
+    });
+
+})();

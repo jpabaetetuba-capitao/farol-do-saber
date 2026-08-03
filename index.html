@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=68-fluxo-duelos-arena">
+    <link rel="stylesheet" href="style.css?v=69-fluxo-estudar">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -2677,33 +2677,43 @@ Li e revisei o mapa mental.
 
     <div class="card card-preparacoes-farol">
 
-        <div class="cabecalho-tela-app">
+        <div id="cabecalhoFluxoEstudarV23" class="cabecalho-fluxo-estudar-v23">
+            <button
+                id="btnVoltarFluxoEstudarV23"
+                class="btn-voltar-fluxo-estudar-v23"
+                type="button"
+                onclick="voltarFluxoEstudarV23()"
+                style="display:none;"
+                aria-label="Voltar">
+                ←
+            </button>
+
             <div>
-                <span class="mini-titulo-app">Preparação</span>
-                <h2>📚 Estudar</h2>
-                <p>Escolha sua preparação.</p>
+                <span id="etapaFluxoEstudarV23" class="etapa-fluxo-estudar-v23"></span>
+                <h2 id="tituloFluxoEstudarV23">📚 Estudar</h2>
+                <p id="descricaoFluxoEstudarV23">Escolha o concurso.</p>
             </div>
         </div>
 
-        <div class="atalhos-contexto-app">
-            <button onclick="mostrarTela('provasAnteriores')" aria-label="Abrir provas anteriores">
-                <span>📄</span><small>Provas</small>
-            </button>
-            <button onclick="mostrarTela('chatGlobal')" aria-label="Abrir chat geral">
-                <span>💬</span><small>Chat</small>
-            </button>
-            <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();" aria-label="Abrir jogos">
-                <span>🎮</span><small>Jogos</small>
-            </button>
-        </div>
+        <details class="recursos-estudar-v23">
+            <summary>Mais recursos</summary>
+            <div class="atalhos-contexto-app">
+                <button onclick="mostrarTela('provasAnteriores')" aria-label="Abrir provas anteriores">
+                    <span>📄</span><small>Provas</small>
+                </button>
+                <button onclick="mostrarTela('chatGlobal')" aria-label="Abrir chat geral">
+                    <span>💬</span><small>Chat</small>
+                </button>
+                <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();" aria-label="Abrir jogos">
+                    <span>🎮</span><small>Jogos</small>
+                </button>
+            </div>
+        </details>
 
        <h2 id="tituloEscolhaPreparacaoFarol" class="titulo-secao-mobile">🧭 Escolha sua preparação</h2>
 
-<div class="aviso-farol">
-    <h3>⭐ Estude e acumule Pontos de Luz</h3>
-    <p>
-        Cada acerto nas questões vale <strong>10 Pontos de Luz</strong>. Ao concluir um tópico, você também pode ganhar bônus e medalhas.
-    </p>
+<div class="selo-pontos-estudar-v23">
+    ⭐ Cada acerto vale 10 Pontos de Luz
 </div>
 
 <div id="painelPreparacoes"></div>
@@ -5269,7 +5279,7 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=67-duelos-submenu"></script>
+<script src="app.js?v=68-fluxo-estudar"></script>
 <script src="admin.js?v=42-historico-atividades"></script>
 
 

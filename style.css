@@ -11544,3 +11544,184 @@ progress{
         margin-top:12px;
     }
 }
+
+
+/* ==========================================================
+   FAROL V23 — ESTUDAR EM ETAPAS
+========================================================== */
+
+.cabecalho-fluxo-estudar-v23{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:14px;
+}
+
+.cabecalho-fluxo-estudar-v23 h2{
+    margin:0 0 4px;
+}
+
+.cabecalho-fluxo-estudar-v23 p{
+    margin:0;
+    color:#66756e;
+}
+
+.btn-voltar-fluxo-estudar-v23{
+    width:42px !important;
+    height:42px;
+    min-width:42px;
+    padding:0 !important;
+    display:grid;
+    place-items:center;
+    border-radius:50% !important;
+    font-size:24px;
+}
+
+.etapa-fluxo-estudar-v23{
+    display:block;
+    margin-bottom:3px;
+    color:#087f5b;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+}
+
+.recursos-estudar-v23{
+    margin-bottom:12px;
+    border:1px solid #dce7e2;
+    border-radius:14px;
+    background:#f7faf9;
+    overflow:hidden;
+}
+
+.recursos-estudar-v23 summary{
+    padding:10px 12px;
+    cursor:pointer;
+    list-style:none;
+    font-size:13px;
+    font-weight:800;
+    color:#355349;
+}
+
+.recursos-estudar-v23 summary::-webkit-details-marker{
+    display:none;
+}
+
+.recursos-estudar-v23 .atalhos-contexto-app{
+    margin:0;
+    padding:0 10px 10px;
+}
+
+.selo-pontos-estudar-v23{
+    width:max-content;
+    max-width:100%;
+    margin:0 0 12px;
+    padding:7px 10px;
+    border-radius:999px;
+    background:#fff6d7;
+    color:#6b5100;
+    font-size:12px;
+    font-weight:800;
+}
+
+#painelPreparacoes .texto-preparacao{
+    display:none;
+}
+
+#painelPreparacoes .grid-concursos-farol,
+#painelPreparacoes .grid-preparacoes,
+#painelTrilhaEstudo .grid-disciplinas-trilha{
+    gap:10px;
+}
+
+#painelPreparacoes .card-concurso-farol,
+#painelPreparacoes .card-preparacao,
+#painelTrilhaEstudo .card-disciplina-trilha{
+    min-height:72px;
+    border-radius:16px;
+}
+
+#painelPreparacoes .cabecalho-cargos-concurso,
+#painelTrilhaEstudo .cabecalho-trilha{
+    margin-bottom:12px;
+}
+
+#painelPreparacoes .cabecalho-cargos-concurso > div > p,
+#painelTrilhaEstudo .cabecalho-trilha > div > p{
+    margin-bottom:0;
+}
+
+@media(max-width:768px){
+
+    #questoes{
+        padding-top:8px;
+    }
+
+    #questoes > .card{
+        padding:14px !important;
+    }
+
+    .cabecalho-fluxo-estudar-v23{
+        margin-bottom:11px;
+    }
+
+    .cabecalho-fluxo-estudar-v23 h2{
+        font-size:21px;
+    }
+
+    .cabecalho-fluxo-estudar-v23 p{
+        font-size:13px;
+    }
+
+    #painelPreparacoes .grid-concursos-farol,
+    #painelPreparacoes .grid-preparacoes,
+    #painelTrilhaEstudo .grid-disciplinas-trilha{
+        grid-template-columns:1fr !important;
+    }
+
+    #painelPreparacoes .card-concurso-farol,
+    #painelPreparacoes .card-preparacao,
+    #painelTrilhaEstudo .card-disciplina-trilha{
+        padding:12px !important;
+        min-height:68px;
+    }
+
+    #painelPreparacoes .card-concurso-farol > p,
+    #painelPreparacoes .card-preparacao p,
+    #painelTrilhaEstudo .card-disciplina-trilha small{
+        font-size:12px;
+        line-height:1.35;
+    }
+
+    #painelPreparacoes .metadados-concurso-farol{
+        display:none;
+    }
+
+    #painelPreparacoes .acao-concurso-farol{
+        margin-top:4px;
+    }
+
+    #painelPreparacoes .cabecalho-cargos-concurso,
+    #painelTrilhaEstudo .cabecalho-trilha{
+        display:block;
+    }
+
+    #painelPreparacoes .cabecalho-cargos-concurso h3,
+    #painelTrilhaEstudo .cabecalho-trilha h3{
+        font-size:18px;
+        margin:5px 0;
+    }
+
+    #painelPreparacoes .btn-trocar-concurso-farol,
+    #painelTrilhaEstudo .acoes-rota-concurso{
+        display:none !important;
+    }
+
+    #painelPreparacoes .nota-seguranca-acesso,
+    #painelTrilhaEstudo .aviso-rota-revisao{
+        font-size:12px;
+        line-height:1.4;
+        padding:10px;
+    }
+}
