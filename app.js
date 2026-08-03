@@ -3125,55 +3125,20 @@ const percentual =
 
     area.innerHTML = `
     
-    <div class="card">
+    <div class="card card-questao-foco-v29">
 
-<div class="aviso-farol aviso-farol-compacto">
-    <strong>⭐ Cada acerto vale 10 Pontos de Luz.</strong>
-    <span>Conclua o tópico para buscar bônus e medalhas.</span>
-</div>
+        <div class="cabecalho-questao-foco-v29">
+            <span>Questão ${questaoAtual + 1} de ${questoes.length}</span>
+            <strong>${percentual}%</strong>
+        </div>
 
-<br>
+        <progress
+            class="progresso-questao-foco-v29"
+            value="${questaoAtual + 1}"
+            max="${questoes.length}">
+        </progress>
 
-<div style="display:flex;gap:10px;flex-wrap:wrap;">
-
-<button onclick="abrirTeoriaDoAssunto()">
-    📚 Teoria
-</button>
-
-<button onclick="voltarParaMapa()">
-    🧠 Mapa Mental
-</button>
-
-<button onclick="voltarParaAssuntos()">
-    ⬅ Assuntos
-</button>
-
-</div>
-
-<br><br>
-
-        <h3>
-    Questão ${questaoAtual + 1} de ${questoes.length}
-</h3>
-
-<br>
-
-<progress
-    value="${questaoAtual + 1}"
-    max="${questoes.length}"
-    style="
-        width:100%;
-        height:25px;
-    ">
-</progress>
-
-<br>
-
-<strong>
-    ${percentual}% concluído
-</strong>
-
-        <br>
+        <div id="inicioQuestaoFarol" class="inicio-questao-farol-v29">
 
 ${q.texto ? `
 
@@ -3243,8 +3208,19 @@ ${q.afirmacoes.map(item => `
 
         <div id="feedback"></div>
 
+        </div>
     </div>
     `;
+
+    requestAnimationFrame(() => {
+        const inicio = document.getElementById("inicioQuestaoFarol");
+        if(inicio){
+            inicio.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    });
 }
 
 // ==========================
@@ -4478,49 +4454,20 @@ function mostrarQuestaoSimulado() {
 
     area.innerHTML = `
 
-    <div class="card">
+    <div class="card card-questao-foco-v29">
 
-        <button
-            type="button"
-            class="btn-voltar"
-            onclick="voltarDaQuestaoSimuladoFarol()">
-            ⬅ Voltar
-        </button>
-
-        <br><br>
-
-        <div class="aviso-farol aviso-farol-compacto">
-            <strong>📝 Finalize o simulado e ganhe 100 Pontos de Luz.</strong>
-            <span>Com 80% ou mais, você pode receber bônus extra.</span>
+        <div class="cabecalho-questao-foco-v29">
+            <span>Questão ${indiceSimulado + 1} de ${questoesSimulado.length}</span>
+            <strong>${percentual}%</strong>
         </div>
 
-        <br>
-
-        <h3>
-            Simulado
-        </h3>
-
-        <br>
-
-        Questão ${indiceSimulado + 1}
-        de ${questoesSimulado.length}
-
-        <br><br>
-
         <progress
+            class="progresso-questao-foco-v29"
             value="${indiceSimulado + 1}"
-            max="${questoesSimulado.length}"
-            style="
-                width:100%;
-                height:25px;
-            ">
+            max="${questoesSimulado.length}">
         </progress>
 
-        <br><br>
-
-        <strong>
-            ${percentual}% concluído
-        </strong>
+        <div id="inicioQuestaoFarol" class="inicio-questao-farol-v29">
 
 ${q.texto ? `
 
@@ -4598,9 +4545,20 @@ ${q.afirmacoes.map(item => `
 
         <div id="feedback"></div>
 
+        </div>
     </div>
 
     `;
+
+    requestAnimationFrame(() => {
+        const inicio = document.getElementById("inicioQuestaoFarol");
+        if(inicio){
+            inicio.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    });
 
 }
 
