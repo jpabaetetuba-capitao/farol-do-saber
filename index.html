@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=75-fluxo-provas">
+    <link rel="stylesheet" href="style.css?v=76-fluxo-jogos">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -3689,27 +3689,27 @@ Li e revisei o mapa mental.
 
 <section id="jogosFarol" class="tela">
 
-    <div class="card jogos-card">
+    <div class="card jogos-card jogos-card-v31">
 
-        <button
-            class="btn-voltar"
-            onclick="mostrarTela('inicio')">
+        <div id="cabecalhoFluxoJogosV31" class="cabecalho-fluxo-jogos-v31">
+            <button
+                id="btnVoltarFluxoJogosV31"
+                class="btn-voltar-fluxo-jogos-v31"
+                type="button"
+                onclick="voltarFluxoJogosV31()"
+                style="display:none;"
+                aria-label="Voltar">
+                ←
+            </button>
 
-            ⬅ Voltar para Início
+            <div>
+                <span id="etapaFluxoJogosV31" class="etapa-fluxo-jogos-v31">Etapa 1 de 3</span>
+                <h2 id="tituloFluxoJogosV31">🎮 Jogos</h2>
+                <p id="descricaoFluxoJogosV31">Escolha um jogo.</p>
+            </div>
+        </div>
 
-        </button>
-
-        <br><br>
-
-        <h2>🎮 Jogos do Farol</h2>
-
-        <p>
-            Aprenda de forma divertida usando as questões da plataforma.
-        </p>
-
-        <br>
-
-        <div class="grid-jogos-farol">
+        <div id="menuJogosFarolV31" class="grid-jogos-farol">
 
             <div class="jogo-card-principal">
                 <div class="icone-jogo">🧱</div>
@@ -5413,7 +5413,7 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=74-fluxo-provas"></script>
+<script src="app.js?v=75-fluxo-jogos"></script>
 <script src="admin.js?v=42-historico-atividades"></script>
 
 

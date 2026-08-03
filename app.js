@@ -32332,3 +32332,313 @@ function renderizarSalaArenaAoVivoFarol(){
     });
 
 })();
+
+
+// ==========================================================
+// FAROL V31 — JOGOS EM TELAS ENCADEADAS
+// ==========================================================
+
+(function(){
+
+    const estadoJogosV31 = {
+        etapa: "menu",
+        jogo: "",
+        abrir: null
+    };
+
+    const jogosV31 = {
+        construa: {
+            titulo: "🧱 Construa o Farol",
+            abrir: "abrirJogoConstruaFarol",
+            iniciar: ["iniciarConstruaFarol"]
+        },
+        relampago: {
+            titulo: "⚡ Desafio Relâmpago",
+            abrir: "abrirJogoDesafioRelampago",
+            iniciar: ["iniciarDesafioRelampago"]
+        },
+        cacaErros: {
+            titulo: "🔎 Caça aos Erros",
+            abrir: "abrirJogoCacaErros",
+            iniciar: ["iniciarCacaErros", "iniciarJogoCacaErros"]
+        },
+        bau: {
+            titulo: "🏴‍☠️ Baú do Farol",
+            abrir: "abrirJogoBauFarol",
+            iniciar: ["iniciarBauFarol"]
+        },
+        senha: {
+            titulo: "🔐 Senha do Farol",
+            abrir: "abrirJogoSenhaFarol",
+            iniciar: ["iniciarSenhaFarol"]
+        },
+        rota: {
+            titulo: "🚢 Rota até o Farol",
+            abrir: "abrirJogoRotaFarol",
+            iniciar: ["iniciarRotaFarol"]
+        },
+        batalha: {
+            titulo: "⚔️ Batalha do Saber",
+            abrir: "abrirJogoBatalhaFarol",
+            iniciar: ["iniciarBatalhaFarol"]
+        },
+        memoria: {
+            titulo: "🧠 Memória do Saber",
+            abrir: "abrirJogoMemoriaSaber",
+            iniciar: [
+                "escolherModoMemoriaSaber",
+                "iniciarMemoriaSaber",
+                "iniciarJogoMemoriaSaber"
+            ]
+        }
+    };
+
+    function elJogosV31(id){
+        return document.getElementById(id);
+    }
+
+    function atualizarCabecalhoJogosV31(etapa){
+        const titulo = elJogosV31("tituloFluxoJogosV31");
+        const descricao = elJogosV31("descricaoFluxoJogosV31");
+        const indicador = elJogosV31("etapaFluxoJogosV31");
+        const voltar = elJogosV31("btnVoltarFluxoJogosV31");
+        const jogo = jogosV31[estadoJogosV31.jogo];
+
+        if(etapa === "menu"){
+            titulo.textContent = "🎮 Jogos";
+            descricao.textContent = "Escolha um jogo.";
+            indicador.textContent = "Etapa 1 de 3";
+            voltar.style.display = "none";
+        }
+
+        if(etapa === "config"){
+            titulo.textContent = jogo ? jogo.titulo : "Configurar jogo";
+            descricao.textContent = "Escolha o modo ou a disciplina.";
+            indicador.textContent = "Etapa 2 de 3";
+            voltar.style.display = "grid";
+        }
+
+        if(etapa === "jogando"){
+            titulo.textContent = jogo ? jogo.titulo : "Jogo";
+            descricao.textContent = "Boa partida!";
+            indicador.textContent = "Etapa 3 de 3";
+            voltar.style.display = "grid";
+        }
+    }
+
+    function registrarHistoricoJogosV31(etapa, substituir = false){
+        const estado = {
+            farol: true,
+            tela: "jogosFarol",
+            jogosStep: etapa,
+            jogoFarol: estadoJogosV31.jogo
+        };
+
+        const hash = `#jogos-${etapa}`;
+
+        if(substituir){
+            history.replaceState(estado, "", hash);
+        }else{
+            history.pushState(estado, "", hash);
+        }
+    }
+
+    function mostrarMenuJogosV31(opcoes = {}){
+        estadoJogosV31.etapa = "menu";
+        estadoJogosV31.jogo = "";
+        estadoJogosV31.abrir = null;
+
+        const menu = elJogosV31("menuJogosFarolV31");
+        const area = elJogosV31("areaJogoConstruaFarol");
+
+        if(menu) menu.style.display = "grid";
+        if(area){
+            area.innerHTML = "";
+            area.style.display = "none";
+        }
+
+        atualizarCabecalhoJogosV31("menu");
+        window.scrollTo({top: 0, behavior: "smooth"});
+
+        if(!opcoes.semHistorico){
+            registrarHistoricoJogosV31(
+                "menu",
+                Boolean(opcoes.substituirHistorico)
+            );
+        }
+    }
+
+    function abrirConfiguracaoJogoV31(chave, funcaoOriginal, args){
+        estadoJogosV31.etapa = "config";
+        estadoJogosV31.jogo = chave;
+        estadoJogosV31.abrir = () => funcaoOriginal.apply(window, args || []);
+
+        const menu = elJogosV31("menuJogosFarolV31");
+        const area = elJogosV31("areaJogoConstruaFarol");
+
+        if(menu) menu.style.display = "none";
+        if(area) area.style.display = "block";
+
+        atualizarCabecalhoJogosV31("config");
+        const retorno = funcaoOriginal.apply(window, args || []);
+
+        setTimeout(() => {
+            const painel = area ? area.firstElementChild : null;
+            if(painel){
+                painel.classList.add("painel-jogo-fluxo-v31");
+            }
+            window.scrollTo({top: 0, behavior: "smooth"});
+        }, 0);
+
+        registrarHistoricoJogosV31("config");
+        return retorno;
+    }
+
+    function marcarJogoIniciadoV31(){
+        estadoJogosV31.etapa = "jogando";
+        atualizarCabecalhoJogosV31("jogando");
+        registrarHistoricoJogosV31("jogando");
+
+        setTimeout(() => {
+            const area = elJogosV31("areaJogoConstruaFarol");
+            if(area){
+                area.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        }, 20);
+    }
+
+    function instalarFluxoJogosV31(){
+        if(window.__fluxoJogosV31Instalado){
+            return;
+        }
+
+        window.__fluxoJogosV31Instalado = true;
+
+        Object.entries(jogosV31).forEach(([chave, config]) => {
+            const original = window[config.abrir];
+
+            if(typeof original === "function"){
+                window[config.abrir] = function(){
+                    return abrirConfiguracaoJogoV31(
+                        chave,
+                        original,
+                        Array.from(arguments)
+                    );
+                };
+            }
+
+            config.iniciar.forEach(nomeFuncao => {
+                const iniciarOriginal = window[nomeFuncao];
+
+                if(typeof iniciarOriginal === "function"){
+                    window[nomeFuncao] = function(){
+                        const retorno =
+                            iniciarOriginal.apply(this, arguments);
+
+                        marcarJogoIniciadoV31();
+                        return retorno;
+                    };
+                }
+            });
+        });
+    }
+
+    window.voltarFluxoJogosV31 = function(){
+        if(estadoJogosV31.etapa === "jogando"){
+            if(typeof pararTimerRelampago === "function"){
+                pararTimerRelampago();
+            }
+
+            if(typeof pararPreviewMemoria === "function"){
+                pararPreviewMemoria();
+            }
+
+            if(typeof estadoJogosV31.abrir === "function"){
+                estadoJogosV31.etapa = "config";
+                atualizarCabecalhoJogosV31("config");
+                estadoJogosV31.abrir();
+                registrarHistoricoJogosV31("config");
+                return;
+            }
+        }
+
+        if(estadoJogosV31.etapa === "config"){
+            mostrarMenuJogosV31();
+            return;
+        }
+
+        mostrarTela("inicio");
+    };
+
+    const abrirTelaJogosAntesV31 = window.abrirTelaJogosFarol;
+
+    window.abrirTelaJogosFarol = function(){
+        if(typeof abrirTelaJogosAntesV31 === "function"){
+            abrirTelaJogosAntesV31();
+        }
+
+        instalarFluxoJogosV31();
+        mostrarMenuJogosV31({
+            substituirHistorico: true
+        });
+    };
+
+    const mostrarTelaAntesJogosV31 = window.mostrarTela;
+
+    if(typeof mostrarTelaAntesJogosV31 === "function"){
+        window.mostrarTela = function(id, opcoes = {}){
+            const retorno =
+                mostrarTelaAntesJogosV31.apply(this, arguments);
+
+            if(id === "jogosFarol"){
+                setTimeout(() => {
+                    instalarFluxoJogosV31();
+
+                    if(!opcoes.semHistorico){
+                        mostrarMenuJogosV31({
+                            substituirHistorico: true
+                        });
+                    }
+                }, 20);
+            }
+
+            return retorno;
+        };
+    }
+
+    window.addEventListener("popstate", evento => {
+        const estado = evento.state;
+
+        if(
+            estado &&
+            estado.tela === "jogosFarol" &&
+            estado.jogosStep
+        ){
+            estadoJogosV31.jogo = estado.jogoFarol || "";
+
+            if(estado.jogosStep === "menu"){
+                mostrarMenuJogosV31({semHistorico: true});
+                return;
+            }
+
+            const jogo = jogosV31[estadoJogosV31.jogo];
+
+            if(
+                jogo &&
+                typeof window[jogo.abrir] === "function"
+            ){
+                window[jogo.abrir]();
+            }
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        instalarFluxoJogosV31();
+        const area = elJogosV31("areaJogoConstruaFarol");
+        if(area) area.style.display = "none";
+    });
+
+})();
