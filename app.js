@@ -1559,6 +1559,8 @@ let acertosSimulado = 0;
 
 let errosSimulado = 0;
 
+let respostasSimulado = [];
+
 let telaOrigemSimuladoFarol = "simulados";
 
 
@@ -3300,35 +3302,40 @@ if (Number(resposta.value) === q.correta) {
 
     registrarAtividadeDiaria("acertos", ganhouPontosQuestao ? 1 : 0);
 
-        feedback.innerHTML = `
-        <div class="feedback-acerto">
+        document.getElementById("areaQuestao").innerHTML = `
+        <div class="card tela-feedback-questao feedback-questao-acerto">
 
-            <h3>✅ Resposta Correta!</h3>
+            <div class="icone-feedback-questao">✅</div>
 
-            ${ganhouPontosQuestao ? `<p class="pontos-luz-feedback">⭐ 10 Pontos de Luz</p>` : `<p class="pontos-luz-feedback neutro">⭐ Pontos desta questão já foram registrados antes.</p>`}
+            <span class="rotulo-feedback-questao">
+                Questão ${questaoAtual + 1}
+            </span>
 
-            <br>
+            <h2>Resposta correta!</h2>
 
-            <div>
-${(q.feedbackAcerto || "").trim()}
-</div>
+            ${ganhouPontosQuestao
+                ? `<p class="pontos-luz-feedback">⭐ 10 Pontos de Luz</p>`
+                : `<p class="pontos-luz-feedback neutro">⭐ Os pontos desta questão já foram registrados.</p>`
+            }
 
-            <br>
+            <div class="bloco-feedback-explicacao">
+                <strong>📘 Explicação</strong>
+                <p>${(q.feedbackAcerto || "Resposta correta. Continue avançando na sua revisão.").trim()}</p>
+            </div>
 
-            <strong>💡 Dica da banca:</strong>
+            <div class="bloco-feedback-dica">
+                <strong>💡 Dica da banca</strong>
+                <p>${q.dicaBanca || "Sem dica cadastrada."}</p>
+            </div>
 
-            <br>
-
-            ${q.dicaBanca || "Sem dica cadastrada."}
-
-            <br><br>
-
-            <button onclick="proximaQuestao()">
-                Próxima
+            <button class="btn-proxima-feedback" onclick="proximaQuestao()">
+                Próxima questão ➜
             </button>
 
         </div>
         `;
+
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
     } else {
 
@@ -3616,37 +3623,40 @@ const nomeDisciplina =
 
         }
 
-        feedback.innerHTML = `
-        <div class="feedback-erro">
+        document.getElementById("areaQuestao").innerHTML = `
+        <div class="card tela-feedback-questao feedback-questao-erro">
 
-           <h3>❌ Resposta Incorreta!</h3>
+            <div class="icone-feedback-questao">❌</div>
 
-<strong>Resposta correta:</strong><br>
-${respostaCorreta}
+            <span class="rotulo-feedback-questao">
+                Questão ${questaoAtual + 1}
+            </span>
 
-<br><br>
+            <h2>Resposta incorreta</h2>
 
-<strong>Explicação:</strong>
+            <div class="bloco-resposta-correta">
+                <strong>✅ Resposta correta</strong>
+                <p>${respostaCorreta}</p>
+            </div>
 
-<br><br>
+            <div class="bloco-feedback-explicacao">
+                <strong>📘 Explicação</strong>
+                <p>${q.feedbackErro || "Sem explicação cadastrada."}</p>
+            </div>
 
-${q.feedbackErro || "Sem explicação cadastrada."}
+            <div class="bloco-feedback-dica">
+                <strong>💡 Dica da banca</strong>
+                <p>${q.dicaBanca || "Sem dica cadastrada."}</p>
+            </div>
 
-<br><br>
-
-<strong>💡 Dica da banca:</strong>
-
-<br><br>
-
-${q.dicaBanca || "Sem dica cadastrada."}
-
-           
-            <button onclick="proximaQuestao()">
-                Próxima
+            <button class="btn-proxima-feedback" onclick="proximaQuestao()">
+                Próxima questão ➜
             </button>
 
         </div>
         `;
+
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
 
 atualizarEstatisticas();
@@ -4416,6 +4426,7 @@ function voltarDaQuestaoSimuladoFarol(){
     indiceSimulado = 0;
     acertosSimulado = 0;
     errosSimulado = 0;
+    respostasSimulado = [];
 
     const destino =
         telaOrigemSimuladoFarol &&
@@ -4432,6 +4443,14 @@ function voltarDaQuestaoSimuladoFarol(){
 // ==========================
 
 function mostrarQuestaoSimulado() {
+
+    if(
+        indiceSimulado === 0 &&
+        acertosSimulado === 0 &&
+        errosSimulado === 0
+    ){
+        respostasSimulado = [];
+    }
 
     const area =
         document.getElementById("areaQuestao");
@@ -4595,96 +4614,34 @@ function corrigirSimulado() {
         'input[name="resposta"]:checked'
     );
 
-    if (!resposta) {
-
-        mostrarToast(
-            "Selecione uma alternativa."
-        );
-
+    if(!resposta){
+        mostrarToast("Selecione uma alternativa.");
         return;
     }
 
-    const q =
-        questoesSimulado[indiceSimulado];
+    const q = questoesSimulado[indiceSimulado];
+    const respostaMarcada = Number(resposta.value);
+    const acertou = respostaMarcada === q.correta;
 
-    const feedback =
-        document.getElementById("feedback");
+    respostasSimulado.push({
+        numero: indiceSimulado + 1,
+        pergunta: q.pergunta,
+        alternativas: q.alternativas,
+        respostaMarcada: respostaMarcada,
+        correta: q.correta,
+        acertou: acertou,
+        feedbackAcerto: q.feedbackAcerto || "",
+        feedbackErro: q.feedbackErro || q.explicacao || "",
+        dicaBanca: q.dicaBanca || ""
+    });
 
-    document
-        .querySelectorAll(
-            'input[name="resposta"]'
-        )
-        .forEach(opcao => {
-
-            opcao.disabled = true;
-
-        });
-
-    if (
-        Number(resposta.value)
-        === q.correta
-    ) {
-
+    if(acertou){
         acertosSimulado++;
-
-        feedback.innerHTML = `
-
-        <div class="feedback-acerto">
-
-            <h3>
-                ✅ Resposta Correta!
-            </h3>
-
-            <br>
-
-            <button
-                onclick="proximaQuestaoSimulado()">
-
-                Próxima
-
-            </button>
-
-        </div>
-
-        `;
-
-    } else {
-
+    }else{
         errosSimulado++;
-
-        feedback.innerHTML = `
-
-        <div class="feedback-erro">
-
-            <h3>
-                ❌ Resposta Incorreta!
-            </h3>
-
-            <br>
-
-            <strong>
-                Resposta correta:
-            </strong>
-
-            <br><br>
-
-            ${q.alternativas[q.correta]}
-
-            <br><br>
-
-            <button
-                onclick="proximaQuestaoSimulado()">
-
-                Próxima
-
-            </button>
-
-        </div>
-
-        `;
-
     }
 
+    proximaQuestaoSimulado();
 }
 
 // ==========================
@@ -4761,6 +4718,58 @@ function finalizarSimulado() {
 
     registrarAtividadeDiaria("simulados", 1);
 
+    const revisaoSimuladoHTML = respostasSimulado.map(item => {
+        const respostaAluno =
+            item.alternativas[item.respostaMarcada] ||
+            "Resposta não registrada";
+
+        const respostaCorreta =
+            item.alternativas[item.correta] ||
+            "Resposta correta não cadastrada";
+
+        const explicacao =
+            item.acertou
+            ? (item.feedbackAcerto || "Resposta correta.")
+            : (item.feedbackErro || "Sem explicação cadastrada.");
+
+        return `
+            <details class="item-correcao-simulado ${item.acertou ? "acertou" : "errou"}">
+                <summary>
+                    <span>${item.acertou ? "✅" : "❌"} Questão ${item.numero}</span>
+                    <strong>${item.acertou ? "Acertou" : "Errou"}</strong>
+                </summary>
+
+                <div class="conteudo-correcao-simulado">
+                    <p class="pergunta-correcao-simulado">${item.pergunta}</p>
+
+                    <div class="resposta-aluno-simulado">
+                        <strong>Sua resposta</strong>
+                        <p>${respostaAluno}</p>
+                    </div>
+
+                    ${!item.acertou ? `
+                        <div class="resposta-correta-simulado">
+                            <strong>Resposta correta</strong>
+                            <p>${respostaCorreta}</p>
+                        </div>
+                    ` : ""}
+
+                    <div class="explicacao-correcao-simulado">
+                        <strong>📘 Explicação</strong>
+                        <p>${explicacao}</p>
+                    </div>
+
+                    ${item.dicaBanca ? `
+                        <div class="dica-correcao-simulado">
+                            <strong>💡 Dica da banca</strong>
+                            <p>${item.dicaBanca}</p>
+                        </div>
+                    ` : ""}
+                </div>
+            </details>
+        `;
+    }).join("");
+
     document
         .getElementById(
             "areaQuestao"
@@ -4812,7 +4821,13 @@ function finalizarSimulado() {
                 </div>
             ` : ""}
 
-            <br><br>
+            <div class="correcao-final-simulado">
+                <h3>📋 Correção das questões</h3>
+                <p>Toque em cada questão para ver sua resposta, o gabarito e a explicação.</p>
+                ${revisaoSimuladoHTML}
+            </div>
+
+            <br>
 
             <button onclick="
                 modoSimulado = false;

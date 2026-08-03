@@ -11019,3 +11019,199 @@ progress{
         display:none;
     }
 }
+
+
+/* ==========================================================
+   FAROL DO SABER — QUESTÕES E SIMULADOS MOBILE V19
+========================================================== */
+
+.tela-feedback-questao{
+    max-width:720px;
+    margin:0 auto !important;
+    text-align:left;
+}
+
+.tela-feedback-questao .icone-feedback-questao{
+    width:70px;
+    height:70px;
+    margin:0 auto 12px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    font-size:38px;
+}
+
+.feedback-questao-acerto .icone-feedback-questao{
+    background:#dcf7e6;
+}
+
+.feedback-questao-erro .icone-feedback-questao{
+    background:#ffe3e3;
+}
+
+.rotulo-feedback-questao{
+    display:block;
+    margin-bottom:5px;
+    text-align:center;
+    color:#66756e;
+    font-size:13px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.tela-feedback-questao > h2{
+    margin:0 0 14px;
+    text-align:center;
+    color:#087f5b;
+}
+
+.feedback-questao-erro > h2{
+    color:#a32626;
+}
+
+.tela-feedback-questao .pontos-luz-feedback{
+    text-align:center;
+}
+
+.bloco-resposta-correta,
+.bloco-feedback-explicacao,
+.bloco-feedback-dica{
+    margin:12px 0;
+    padding:14px;
+    border-radius:14px;
+    line-height:1.55;
+}
+
+.bloco-resposta-correta{
+    background:#e9f8ef;
+    border-left:5px solid #2e9b61;
+}
+
+.bloco-feedback-explicacao{
+    background:#eef6ff;
+    border-left:5px solid #1e88e5;
+}
+
+.bloco-feedback-dica{
+    background:#fff7df;
+    border-left:5px solid #e8a018;
+}
+
+.bloco-resposta-correta p,
+.bloco-feedback-explicacao p,
+.bloco-feedback-dica p{
+    margin:8px 0 0;
+    white-space:pre-line;
+}
+
+.btn-proxima-feedback{
+    width:100%;
+    min-height:54px;
+    margin:8px 0 0 !important;
+    font-size:16px;
+    font-weight:900;
+}
+
+.correcao-final-simulado{
+    margin-top:20px;
+    padding-top:18px;
+    border-top:1px solid #dce5e1;
+}
+
+.correcao-final-simulado > h3{
+    color:#087f5b;
+    margin-bottom:5px;
+}
+
+.correcao-final-simulado > p{
+    margin-bottom:13px;
+    color:#65736d;
+}
+
+.item-correcao-simulado{
+    margin:9px 0;
+    border:1px solid #dce5e1;
+    border-radius:14px;
+    background:white;
+    overflow:hidden;
+}
+
+.item-correcao-simulado.acertou{
+    border-left:5px solid #2e9b61;
+}
+
+.item-correcao-simulado.errou{
+    border-left:5px solid #d64545;
+}
+
+.item-correcao-simulado summary{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    padding:13px;
+    cursor:pointer;
+    list-style:none;
+    font-weight:800;
+}
+
+.item-correcao-simulado summary::-webkit-details-marker{
+    display:none;
+}
+
+.item-correcao-simulado.acertou summary strong{
+    color:#187344;
+}
+
+.item-correcao-simulado.errou summary strong{
+    color:#a32626;
+}
+
+.conteudo-correcao-simulado{
+    padding:0 13px 14px;
+}
+
+.pergunta-correcao-simulado{
+    padding:12px;
+    border-radius:12px;
+    background:#f4f7f6;
+    font-weight:700;
+    line-height:1.5;
+}
+
+.resposta-aluno-simulado,
+.resposta-correta-simulado,
+.explicacao-correcao-simulado,
+.dica-correcao-simulado{
+    margin-top:10px;
+    padding:12px;
+    border-radius:12px;
+}
+
+.resposta-aluno-simulado{ background:#f3f5f4; }
+.resposta-correta-simulado{ background:#e9f8ef; }
+.explicacao-correcao-simulado{ background:#eef6ff; }
+.dica-correcao-simulado{ background:#fff7df; }
+
+.resposta-aluno-simulado p,
+.resposta-correta-simulado p,
+.explicacao-correcao-simulado p,
+.dica-correcao-simulado p{
+    margin:6px 0 0;
+    white-space:pre-line;
+}
+
+@media(max-width:768px){
+    #resolverQuestao{ padding-top:0; }
+
+    .tela-feedback-questao{
+        min-height:calc(100vh - 105px);
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+
+    .item-correcao-simulado summary{
+        align-items:center;
+        font-size:14px;
+    }
+}
