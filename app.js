@@ -32642,3 +32642,613 @@ function renderizarSalaArenaAoVivoFarol(){
     });
 
 })();
+
+
+// ==========================================================
+// FAROL V32 — CADERNO DE ERROS EM TELAS ENCADEADAS
+// ==========================================================
+
+(function(){
+
+    const estadoErrosV32 = {
+        etapa: "disciplinas",
+        disciplina: "",
+        assunto: "",
+        indiceAtual: -1,
+        fila: []
+    };
+
+    function elErrosV32(id){
+        return document.getElementById(id);
+    }
+
+    function normalizarTextoErrosV32(valor){
+        return String(valor || "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .trim();
+    }
+
+    function rotuloAssuntoErrosV32(item){
+        if(item.assunto){
+            const chave = item.assunto;
+            const nome =
+                typeof nomeAssuntoJogoFarol === "function"
+                ? nomeAssuntoJogoFarol(chave)
+                : chave;
+
+            return nome || chave;
+        }
+
+        return item.disciplina || "Conteúdo geral";
+    }
+
+    function itensDaDisciplinaErrosV32(){
+        return cadernoErros.filter(item =>
+            (item.disciplina || "Sem disciplina") === estadoErrosV32.disciplina
+        );
+    }
+
+    function itensDoAssuntoErrosV32(){
+        return itensDaDisciplinaErrosV32().filter(item =>
+            rotuloAssuntoErrosV32(item) === estadoErrosV32.assunto
+        );
+    }
+
+    function atualizarCabecalhoErrosV32(etapa){
+        const titulo = elErrosV32("tituloFluxoErrosV32");
+        const descricao = elErrosV32("descricaoFluxoErrosV32");
+        const indicador = elErrosV32("etapaFluxoErrosV32");
+        const voltar = elErrosV32("btnVoltarFluxoErrosV32");
+
+        const dados = {
+            disciplinas: [
+                "🧠 Caderno de erros",
+                "Escolha uma disciplina.",
+                "Etapa 1 de 4"
+            ],
+            assuntos: [
+                estadoErrosV32.disciplina || "Disciplina",
+                "Escolha o tópico.",
+                "Etapa 2 de 4"
+            ],
+            questoes: [
+                estadoErrosV32.assunto || "Questões erradas",
+                "Escolha uma questão para revisar.",
+                "Etapa 3 de 4"
+            ],
+            revisao: [
+                "Revisão",
+                "Responda novamente a questão.",
+                "Etapa 4 de 4"
+            ]
+        };
+
+        const atual = dados[etapa] || dados.disciplinas;
+
+        if(titulo) titulo.textContent = atual[0];
+        if(descricao) descricao.textContent = atual[1];
+        if(indicador) indicador.textContent = atual[2];
+        if(voltar) voltar.style.display =
+            etapa === "disciplinas" ? "none" : "grid";
+    }
+
+    function registrarHistoricoErrosV32(etapa, substituir = false){
+        const estado = {
+            farol: true,
+            tela: "erros",
+            errosStep: etapa,
+            errosDisciplina: estadoErrosV32.disciplina,
+            errosAssunto: estadoErrosV32.assunto
+        };
+
+        const hash = `#erros-${etapa}`;
+
+        if(substituir){
+            history.replaceState(estado, "", hash);
+        }else{
+            history.pushState(estado, "", hash);
+        }
+    }
+
+    function resumoStatusErrosV32(itens){
+        return itens.reduce((resumo, item) => {
+            const status = obterStatusCadernoErro(item);
+            resumo.total++;
+
+            if(status === "pendente") resumo.pendentes++;
+            if(status === "revisao") resumo.revisao++;
+            if(status === "recuperada") resumo.recuperadas++;
+
+            return resumo;
+        }, {
+            total: 0,
+            pendentes: 0,
+            revisao: 0,
+            recuperadas: 0
+        });
+    }
+
+    function botaoListaErrosV32(icone, titulo, subtitulo, onclick){
+        return `
+            <button
+                type="button"
+                class="opcao-fluxo-erros-v32"
+                onclick="${onclick}">
+                <span class="icone-opcao-erros-v32">${icone}</span>
+                <span>
+                    <strong>${titulo}</strong>
+                    <small>${subtitulo}</small>
+                </span>
+                <b>›</b>
+            </button>
+        `;
+    }
+
+    function renderizarDisciplinasErrosV32(){
+        const conteudo = elErrosV32("conteudoFluxoErrosV32");
+        atualizarCabecalhoErrosV32("disciplinas");
+
+        if(!conteudo) return;
+
+        if(!Array.isArray(cadernoErros) || cadernoErros.length === 0){
+            conteudo.innerHTML = `
+                <div class="estado-vazio-erros-v32">
+                    <span>✅</span>
+                    <h3>Seu caderno está vazio</h3>
+                    <p>Quando você errar uma questão, ela aparecerá aqui para revisão.</p>
+                    <button onclick="mostrarTela('questoes')">
+                        Ir para Estudar
+                    </button>
+                </div>
+            `;
+            return;
+        }
+
+        const grupos = {};
+
+        cadernoErros.forEach(item => {
+            const nome = item.disciplina || "Sem disciplina";
+            if(!grupos[nome]) grupos[nome] = [];
+            grupos[nome].push(item);
+        });
+
+        const botoes = Object.entries(grupos)
+            .sort((a,b) => a[0].localeCompare(b[0], "pt-BR"))
+            .map(([disciplina, itens]) => {
+                const resumo = resumoStatusErrosV32(itens);
+                const segura = encodeURIComponent(disciplina);
+
+                return botaoListaErrosV32(
+                    "📚",
+                    disciplina,
+                    `${resumo.pendentes} pendente(s) • ${resumo.revisao} em revisão • ${resumo.recuperadas} recuperada(s)`,
+                    `selecionarDisciplinaErrosV32('${segura}')`
+                );
+            }).join("");
+
+        const resumoGeral = resumoStatusErrosV32(cadernoErros);
+
+        conteudo.innerHTML = `
+            <div class="resumo-erros-v32">
+                <div><strong>${resumoGeral.pendentes}</strong><small>Pendentes</small></div>
+                <div><strong>${resumoGeral.revisao}</strong><small>Em revisão</small></div>
+                <div><strong>${resumoGeral.recuperadas}</strong><small>Recuperadas</small></div>
+            </div>
+
+            <div class="menu-fluxo-erros-v32">
+                ${botoes}
+            </div>
+        `;
+    }
+
+    window.selecionarDisciplinaErrosV32 = function(valorCodificado){
+        estadoErrosV32.disciplina = decodeURIComponent(valorCodificado);
+        estadoErrosV32.assunto = "";
+        abrirEtapaErrosV32("assuntos");
+    };
+
+    function renderizarAssuntosErrosV32(){
+        const conteudo = elErrosV32("conteudoFluxoErrosV32");
+        const grupos = {};
+
+        itensDaDisciplinaErrosV32().forEach(item => {
+            const assunto = rotuloAssuntoErrosV32(item);
+            if(!grupos[assunto]) grupos[assunto] = [];
+            grupos[assunto].push(item);
+        });
+
+        conteudo.innerHTML = `
+            <div class="menu-fluxo-erros-v32">
+                ${Object.entries(grupos)
+                    .sort((a,b) => a[0].localeCompare(b[0], "pt-BR"))
+                    .map(([assunto, itens]) => {
+                        const resumo = resumoStatusErrosV32(itens);
+                        const segura = encodeURIComponent(assunto);
+
+                        return botaoListaErrosV32(
+                            "📌",
+                            assunto,
+                            `${resumo.total} questão(ões) • ${resumo.pendentes + resumo.revisao} para revisar`,
+                            `selecionarAssuntoErrosV32('${segura}')`
+                        );
+                    }).join("")}
+            </div>
+        `;
+    }
+
+    window.selecionarAssuntoErrosV32 = function(valorCodificado){
+        estadoErrosV32.assunto = decodeURIComponent(valorCodificado);
+        abrirEtapaErrosV32("questoes");
+    };
+
+    function renderizarQuestoesErrosV32(){
+        const conteudo = elErrosV32("conteudoFluxoErrosV32");
+        const itens = itensDoAssuntoErrosV32();
+
+        estadoErrosV32.fila = itens
+            .map(item => cadernoErros.indexOf(item))
+            .filter(indice => indice >= 0);
+
+        conteudo.innerHTML = `
+            <button
+                class="btn-revisar-todos-erros-v32"
+                onclick="revisarPrimeiroErroV32()">
+                🚀 Revisar próximo erro
+            </button>
+
+            <div class="lista-questoes-erros-v32">
+                ${itens.map(item => {
+                    const indice = cadernoErros.indexOf(item);
+                    const status = obterStatusCadernoErro(item);
+                    const revisavel =
+                        Array.isArray(item.alternativas) &&
+                        status !== "recuperada";
+
+                    return `
+                        <button
+                            type="button"
+                            class="questao-lista-erros-v32 status-${status}"
+                            ${revisavel
+                                ? `onclick="abrirRevisaoErroV32(${indice})"`
+                                : status === "recuperada"
+                                    ? `onclick="removerErroCaderno(${indice})"`
+                                    : `onclick="mostrarToast('Esta questão ainda não possui alternativas salvas para revisão.')"`
+                            }>
+                            <span>${status === "recuperada" ? "✅" : status === "revisao" ? "🔁" : "❌"}</span>
+                            <span>
+                                <strong>${item.pergunta || "Questão sem enunciado"}</strong>
+                                <small>${obterRotuloStatusCaderno(item)} • ${item.erros || 1} erro(s)</small>
+                            </span>
+                            <b>›</b>
+                        </button>
+                    `;
+                }).join("")}
+            </div>
+        `;
+    }
+
+    window.revisarPrimeiroErroV32 = function(){
+        const indice = estadoErrosV32.fila.find(indice => {
+            const item = cadernoErros[indice];
+            return item &&
+                Array.isArray(item.alternativas) &&
+                obterStatusCadernoErro(item) !== "recuperada";
+        });
+
+        if(indice === undefined){
+            mostrarToast("Não há questões pendentes para revisar neste tópico.");
+            return;
+        }
+
+        abrirRevisaoErroV32(indice);
+    };
+
+    window.abrirEtapaErrosV32 = function(etapa, opcoes = {}){
+        estadoErrosV32.etapa = etapa;
+        atualizarCabecalhoErrosV32(etapa);
+
+        if(etapa === "disciplinas") renderizarDisciplinasErrosV32();
+        if(etapa === "assuntos") renderizarAssuntosErrosV32();
+        if(etapa === "questoes") renderizarQuestoesErrosV32();
+
+        window.scrollTo({top: 0, behavior: "smooth"});
+
+        if(!opcoes.semHistorico){
+            registrarHistoricoErrosV32(
+                etapa,
+                Boolean(opcoes.substituirHistorico)
+            );
+        }
+    };
+
+    window.voltarFluxoErrosV32 = function(){
+        if(estadoErrosV32.etapa === "revisao"){
+            mostrarTela("erros", {semHistorico: true});
+            abrirEtapaErrosV32("questoes");
+            return;
+        }
+
+        if(estadoErrosV32.etapa === "questoes"){
+            abrirEtapaErrosV32("assuntos");
+            return;
+        }
+
+        if(estadoErrosV32.etapa === "assuntos"){
+            abrirEtapaErrosV32("disciplinas");
+            return;
+        }
+
+        mostrarTela("inicio");
+    };
+
+    window.abrirRevisaoErroV32 = function(indice){
+        const item = cadernoErros[indice];
+
+        if(!item || !Array.isArray(item.alternativas)){
+            mostrarToast("Esta questão ainda não possui alternativas salvas para revisão.");
+            return;
+        }
+
+        if(obterStatusCadernoErro(item) === "recuperada"){
+            mostrarToast("Esta questão já foi recuperada.");
+            return;
+        }
+
+        estadoErrosV32.etapa = "revisao";
+        estadoErrosV32.indiceAtual = indice;
+
+        mostrarTela("resolverQuestao");
+        registrarHistoricoErrosV32("revisao");
+
+        const area = document.getElementById("areaQuestao");
+
+        area.innerHTML = `
+            <div class="card card-revisao-erros-v32">
+
+                <div class="cabecalho-revisao-erros-v32">
+                    <span>Revisão do Caderno de Erros</span>
+                    <strong>⭐ Vale 5 pontos</strong>
+                </div>
+
+                <div id="inicioRevisaoErroV32">
+
+                    ${item.texto ? `
+                        <div class="texto-base texto-base-revisao-v32">
+                            <p>${item.texto}</p>
+                        </div>
+                    ` : ""}
+
+                    ${item.imagem ? `
+                        <img src="${item.imagem}" class="imagem-questao">
+                    ` : ""}
+
+                    ${item.afirmacoes ? `
+                        <div class="texto-base texto-base-revisao-v32">
+                            ${item.afirmacoes.map(af => `<p>${af}</p>`).join("")}
+                        </div>
+                    ` : ""}
+
+                    <p class="pergunta">${item.pergunta}</p>
+
+                    ${item.alternativas.map((alt, i) => `
+                        <label class="alternativa">
+                            <input type="radio" name="respostaRevisao" value="${i}">
+                            ${alt}
+                        </label>
+                    `).join("")}
+
+                    <button onclick="corrigirRevisaoErroV32(${indice})">
+                        Responder
+                    </button>
+
+                    <div id="feedbackRevisaoErroV32"></div>
+
+                </div>
+            </div>
+        `;
+
+        requestAnimationFrame(() => {
+            document.getElementById("inicioRevisaoErroV32")
+                ?.scrollIntoView({behavior: "smooth", block: "start"});
+        });
+    };
+
+    function proximoIndiceRevisaoErrosV32(indiceAtual){
+        const posicao = estadoErrosV32.fila.indexOf(indiceAtual);
+
+        for(let i = posicao + 1; i < estadoErrosV32.fila.length; i++){
+            const indice = estadoErrosV32.fila[i];
+            const item = cadernoErros[indice];
+
+            if(
+                item &&
+                Array.isArray(item.alternativas) &&
+                obterStatusCadernoErro(item) !== "recuperada"
+            ){
+                return indice;
+            }
+        }
+
+        return -1;
+    }
+
+    window.corrigirRevisaoErroV32 = function(indice){
+        const item = cadernoErros[indice];
+        const resposta =
+            document.querySelector('input[name="respostaRevisao"]:checked');
+
+        if(!item || !resposta){
+            mostrarToast("Selecione uma alternativa.");
+            return;
+        }
+
+        document.querySelectorAll(
+            'input[name="respostaRevisao"]'
+        ).forEach(opcao => opcao.disabled = true);
+
+        const acertou = Number(resposta.value) === item.correta;
+        let pontosHTML = "";
+
+        if(acertou){
+            item.acertosRevisao = (item.acertosRevisao || 0) + 1;
+            item.status =
+                item.acertosRevisao >= 2 ? "corrigida" : "recuperacao";
+
+            if(!item.pontosRevisaoGanhos){
+                const ganhou = adicionarPontosLuz(
+                    5,
+                    "Revisão correta do caderno de erros",
+                    "revisao:" + item.idErro
+                );
+
+                if(ganhou){
+                    item.pontosRevisaoGanhos = true;
+                    pontosHTML =
+                        `<p class="pontos-luz-feedback">⭐ 5 Pontos de Luz</p>`;
+                    registrarAtividadeDiaria("revisoes", 1);
+                }
+            }
+
+            if(item.acertosRevisao >= 2){
+                item.dataRecuperacao = Date.now();
+            }
+        }else{
+            item.erros = (item.erros || 0) + 1;
+            item.status = "pendente";
+            item.data = Date.now();
+        }
+
+        salvarDados();
+
+        const proximo = proximoIndiceRevisaoErrosV32(indice);
+        const feedback = document.getElementById("feedbackRevisaoErroV32");
+
+        feedback.innerHTML = `
+            <div class="tela-feedback-questao ${
+                acertou
+                    ? "feedback-questao-acerto"
+                    : "feedback-questao-erro"
+            }">
+
+                <div class="icone-feedback-questao">
+                    ${acertou ? "✅" : "❌"}
+                </div>
+
+                <h2>${acertou ? "Resposta correta!" : "Resposta incorreta"}</h2>
+
+                ${pontosHTML}
+
+                ${!acertou ? `
+                    <div class="bloco-resposta-correta">
+                        <strong>✅ Resposta correta</strong>
+                        <p>${item.respostaCorreta || item.alternativas[item.correta]}</p>
+                    </div>
+                ` : ""}
+
+                <div class="bloco-feedback-explicacao">
+                    <strong>📘 Explicação</strong>
+                    <p>${
+                        acertou
+                            ? (item.feedbackAcerto || "Boa revisão!")
+                            : (item.feedbackErro || item.explicacao || "Sem explicação cadastrada.")
+                    }</p>
+                </div>
+
+                ${item.dicaBanca ? `
+                    <div class="bloco-feedback-dica">
+                        <strong>💡 Dica da banca</strong>
+                        <p>${item.dicaBanca}</p>
+                    </div>
+                ` : ""}
+
+                <button
+                    class="btn-proxima-feedback"
+                    onclick="${
+                        proximo >= 0
+                            ? `abrirRevisaoErroV32(${proximo})`
+                            : `mostrarTela('erros', {semHistorico:true}); abrirEtapaErrosV32('questoes')`
+                    }">
+                    ${proximo >= 0 ? "Próxima questão ➜" : "Voltar às questões"}
+                </button>
+            </div>
+        `;
+
+        document.querySelector(
+            ".card-revisao-erros-v32 #inicioRevisaoErroV32"
+        ).innerHTML = feedback.outerHTML;
+
+        requestAnimationFrame(() => {
+            document.querySelector(
+                ".card-revisao-erros-v32 .tela-feedback-questao"
+            )?.scrollIntoView({behavior: "smooth", block: "start"});
+        });
+    };
+
+    // Compatibilidade com os botões antigos.
+    window.revisarErro = window.abrirRevisaoErroV32;
+    window.atualizarCadernoErros = function(){
+        if(document.getElementById("erros")?.classList.contains("ativa")){
+            abrirEtapaErrosV32(
+                estadoErrosV32.etapa === "revisao"
+                    ? "questoes"
+                    : estadoErrosV32.etapa,
+                {semHistorico: true}
+            );
+        }
+    };
+
+    const mostrarTelaAntesErrosV32 = window.mostrarTela;
+
+    if(typeof mostrarTelaAntesErrosV32 === "function"){
+        window.mostrarTela = function(id, opcoes = {}){
+            const retorno =
+                mostrarTelaAntesErrosV32.apply(this, arguments);
+
+            if(id === "erros"){
+                setTimeout(() => {
+                    if(!opcoes.semHistorico){
+                        estadoErrosV32.disciplina = "";
+                        estadoErrosV32.assunto = "";
+                        abrirEtapaErrosV32("disciplinas", {
+                            substituirHistorico: true
+                        });
+                    }
+                }, 20);
+            }
+
+            return retorno;
+        };
+    }
+
+    window.addEventListener("popstate", evento => {
+        const estado = evento.state;
+
+        if(
+            estado &&
+            estado.tela === "erros" &&
+            estado.errosStep
+        ){
+            estadoErrosV32.disciplina =
+                estado.errosDisciplina || "";
+            estadoErrosV32.assunto =
+                estado.errosAssunto || "";
+
+            mostrarTela("erros", {semHistorico: true});
+            abrirEtapaErrosV32(
+                estado.errosStep === "revisao"
+                    ? "questoes"
+                    : estado.errosStep,
+                {semHistorico: true}
+            );
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        if(elErrosV32("conteudoFluxoErrosV32")){
+            renderizarDisciplinasErrosV32();
+        }
+    });
+
+})();

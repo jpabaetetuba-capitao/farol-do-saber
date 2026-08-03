@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=76-fluxo-jogos">
+    <link rel="stylesheet" href="style.css?v=77-fluxo-caderno-erros">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -4410,39 +4410,27 @@ Li e revisei o mapa mental.
 
 <section id="erros" class="tela">
 
-    <div class="card">
+    <div class="card caderno-erros-card-v32">
 
-        <h2>❌ Caderno de Erros Inteligente</h2>
+        <div id="cabecalhoFluxoErrosV32" class="cabecalho-fluxo-erros-v32">
+            <button
+                id="btnVoltarFluxoErrosV32"
+                class="btn-voltar-fluxo-erros-v32"
+                type="button"
+                onclick="voltarFluxoErrosV32()"
+                style="display:none;"
+                aria-label="Voltar">
+                ←
+            </button>
 
-        <div class="aviso-farol">
-            <h3>🔁 Revisão também vale recompensa</h3>
-            <p>
-                Revise as questões que você errou. Cada revisão correta pode render <strong>5 Pontos de Luz</strong> e ajuda a recuperar o conteúdo.
-            </p>
+            <div>
+                <span id="etapaFluxoErrosV32" class="etapa-fluxo-erros-v32">Etapa 1 de 4</span>
+                <h2 id="tituloFluxoErrosV32">🧠 Caderno de erros</h2>
+                <p id="descricaoFluxoErrosV32">Escolha uma disciplina.</p>
+            </div>
         </div>
 
-        <p>
-            Aqui o aluno revisa as questões que errou, acompanha a recuperação do conteúdo
-            e transforma erro em aprendizado.
-        </p>
-
-        <br>
-
-        <div id="painelResumoCadernoErros" class="painel-caderno-erros">
-            Carregando resumo...
-        </div>
-
-        <div id="filtrosCadernoErros" class="filtros-caderno-erros">
-            Carregando filtros...
-        </div>
-
-        <br>
-
-        <div id="listaErros">
-
-            Nenhum erro registrado.
-
-        </div>
+        <div id="conteudoFluxoErrosV32"></div>
 
     </div>
 
@@ -5413,7 +5401,7 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=75-fluxo-jogos"></script>
+<script src="app.js?v=76-fluxo-caderno-erros"></script>
 <script src="admin.js?v=42-historico-atividades"></script>
 
 
