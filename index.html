@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=66-questoes-feedback">
+    <link rel="stylesheet" href="style.css?v=67-mobile-clean">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -2331,7 +2331,7 @@ Li e revisei o mapa mental.
 
     <div class="inicio-app-cabecalho">
         <div>
-            <span class="inicio-app-saudacao">Sua rota rumo à aprovação</span>
+            <span class="inicio-app-saudacao">Rumo à sua aprovação</span>
             <h2>🗼 Farol do Saber</h2>
         </div>
         <button
@@ -2561,7 +2561,7 @@ Li e revisei o mapa mental.
                 class="btn-comecar-estudos btn-comecar-estudos-inicio"
                 onclick="mostrarTela('questoes')">
                 🚀 Começar meus Estudos
-                <span>Escolha seu concurso e cargo e continue sua rota.</span>
+                <span>Continue sua preparação.</span>
             </button>
 
             <div class="resumo-nivel-inicio-card">
@@ -2679,25 +2679,25 @@ Li e revisei o mapa mental.
 
         <div class="cabecalho-tela-app">
             <div>
-                <span class="mini-titulo-app">Sua rota de aprendizagem</span>
+                <span class="mini-titulo-app">Preparação</span>
                 <h2>📚 Estudar</h2>
-                <p>Escolha seu concurso, cargo, disciplina e assunto.</p>
+                <p>Escolha sua preparação.</p>
             </div>
         </div>
 
         <div class="atalhos-contexto-app">
-            <button onclick="mostrarTela('provasAnteriores')">
-                📄 Provas anteriores
+            <button onclick="mostrarTela('provasAnteriores')" aria-label="Abrir provas anteriores">
+                <span>📄</span><small>Provas</small>
             </button>
-            <button onclick="mostrarTela('chatGlobal')">
-                💬 Chat geral
+            <button onclick="mostrarTela('chatGlobal')" aria-label="Abrir chat geral">
+                <span>💬</span><small>Chat</small>
             </button>
-            <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();">
-                🎮 Jogos
+            <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();" aria-label="Abrir jogos">
+                <span>🎮</span><small>Jogos</small>
             </button>
         </div>
 
-       <h2 id="tituloEscolhaPreparacaoFarol">🧭 Escolha seu Concurso</h2>
+       <h2 id="tituloEscolhaPreparacaoFarol" class="titulo-secao-mobile">🧭 Escolha sua preparação</h2>
 
 <div class="aviso-farol">
     <h3>⭐ Estude e acumule Pontos de Luz</h3>
@@ -2775,32 +2775,28 @@ Li e revisei o mapa mental.
         <div class="simulados-topo">
             <div>
                 <h2>📝 Simulados</h2>
-                <p>
-                    Treine por rota, disciplina ou cargo com questões da plataforma.
-                </p>
+                <p>Escolha um modo e comece.</p>
             </div>
 
-            <span class="selo-simulados">
-                ⭐ Vale Pontos de Luz
+            <span class="selo-simulados" title="Os simulados geram Pontos de Luz">
+                ⭐ Vale pontos
             </span>
         </div>
 
-        <div class="aviso-farol aviso-simulado-premium">
-            <h3>🚀 Simulado também gera recompensa</h3>
-            <p>
-                Finalize um simulado e ganhe <strong>100 Pontos de Luz</strong>. Com 80% ou mais de aproveitamento, você pode receber bônus extra.
-            </p>
-        </div>
+        <details class="recompensa-simulado-compacta">
+            <summary>⭐ Recompensas do simulado</summary>
+            <p>Ganhe 100 Pontos de Luz e bônus com bom desempenho.</p>
+        </details>
 
         <div class="atalhos-contexto-app atalhos-simulados-app">
-            <button onclick="mostrarTela('provasAnteriores')">
-                📄 Provas anteriores
+            <button onclick="mostrarTela('provasAnteriores')" aria-label="Abrir provas anteriores">
+                <span>📄</span><small>Provas</small>
             </button>
-            <button onclick="mostrarTela('duelos'); prepararSelectDuelo(); carregarMeusDuelos();">
-                ⚔️ Duelos
+            <button onclick="mostrarTela('duelos'); prepararSelectDuelo(); carregarMeusDuelos();" aria-label="Abrir duelos">
+                <span>⚔️</span><small>Duelos</small>
             </button>
-            <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();">
-                🎮 Jogos
+            <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();" aria-label="Abrir jogos">
+                <span>🎮</span><small>Jogos</small>
             </button>
         </div>
 

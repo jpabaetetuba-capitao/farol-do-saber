@@ -11215,3 +11215,150 @@ progress{
         font-size:14px;
     }
 }
+
+
+/* ==========================================================
+   FAROL DO SABER — SIMPLIFICAÇÃO MOBILE V20
+========================================================== */
+
+.titulo-secao-mobile{
+    margin-top:8px;
+}
+
+.recompensa-simulado-compacta,
+.como-funciona-duelos{
+    margin:0 0 14px;
+    border:1px solid rgba(255,255,255,.32);
+    border-radius:14px;
+    overflow:hidden;
+    background:rgba(255,255,255,.12);
+}
+
+.recompensa-simulado-compacta summary,
+.como-funciona-duelos summary{
+    padding:11px 13px;
+    cursor:pointer;
+    list-style:none;
+    font-weight:800;
+    color:inherit;
+}
+
+.recompensa-simulado-compacta summary::-webkit-details-marker,
+.como-funciona-duelos summary::-webkit-details-marker{
+    display:none;
+}
+
+.recompensa-simulado-compacta p,
+.como-funciona-duelos > .arena-explicacao-farol{
+    margin:0;
+    padding:0 13px 13px;
+    line-height:1.45;
+}
+
+@media(max-width:768px){
+
+    .cabecalho-tela-app,
+    .simulados-topo,
+    .perfil-app-cabecalho{
+        margin-bottom:10px;
+    }
+
+    .cabecalho-tela-app h2,
+    .simulados-topo h2,
+    #duelos h2{
+        font-size:22px;
+        margin-bottom:3px;
+    }
+
+    .cabecalho-tela-app p,
+    .simulados-topo p,
+    #duelos p{
+        font-size:14px;
+        line-height:1.4;
+    }
+
+    .mini-titulo-app{
+        font-size:11px;
+    }
+
+    .atalhos-contexto-app{
+        grid-template-columns:repeat(3, minmax(0,1fr));
+        gap:7px;
+        margin-bottom:12px;
+        overflow:visible;
+    }
+
+    .atalhos-contexto-app button{
+        min-width:0;
+        min-height:52px;
+        padding:8px 4px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:3px;
+        border-radius:13px;
+    }
+
+    .atalhos-contexto-app button span{
+        font-size:20px;
+        line-height:1;
+    }
+
+    .atalhos-contexto-app button small{
+        font-size:11px;
+        font-weight:800;
+    }
+
+    .card-preparacoes-farol,
+    .simulados-card-principal,
+    #duelos > .card{
+        padding:14px !important;
+    }
+
+    .titulo-secao-mobile{
+        font-size:19px !important;
+        margin:8px 0 10px !important;
+    }
+
+    .recompensa-simulado-compacta{
+        background:rgba(255,255,255,.92);
+        color:#5f4700;
+        border-color:#ead8a5;
+    }
+
+    .recompensa-simulado-compacta summary{
+        padding:10px 12px;
+        font-size:13px;
+    }
+
+    .recompensa-simulado-compacta p{
+        padding:0 12px 11px;
+        font-size:13px;
+    }
+
+    #duelos .aviso-farol,
+    #duelos .arena-explicacao-farol,
+    #duelos .arena-apresentacao-farol{
+        font-size:13px;
+        line-height:1.42;
+    }
+
+    #duelos .como-funciona-duelos{
+        background:rgba(255,255,255,.92);
+        color:#27423a;
+        border-color:#dbe7e2;
+    }
+
+    #duelos .como-funciona-duelos summary{
+        font-size:13px;
+    }
+
+    #duelos button{
+        border-radius:13px;
+    }
+
+    #inicio .painel-inicio-resumo > h2{
+        margin-bottom:8px;
+    }
+}
