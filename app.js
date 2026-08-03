@@ -4623,6 +4623,14 @@ function corrigirSimulado() {
     const respostaMarcada = Number(resposta.value);
     const acertou = respostaMarcada === q.correta;
 
+    const respostaAluno =
+        q.alternativas[respostaMarcada] ||
+        "Resposta não registrada";
+
+    const respostaCorreta =
+        q.alternativas[q.correta] ||
+        "Resposta correta não cadastrada";
+
     respostasSimulado.push({
         numero: indiceSimulado + 1,
         pergunta: q.pergunta,
@@ -4641,7 +4649,79 @@ function corrigirSimulado() {
         errosSimulado++;
     }
 
-    proximaQuestaoSimulado();
+    const explicacao = acertou
+        ? (
+            q.feedbackAcerto ||
+            "Resposta correta. Continue avançando no simulado."
+        )
+        : (
+            q.feedbackErro ||
+            q.explicacao ||
+            "Sem explicação cadastrada."
+        );
+
+    document.getElementById("areaQuestao").innerHTML = `
+        <div class="card tela-feedback-questao ${
+            acertou
+            ? "feedback-questao-acerto"
+            : "feedback-questao-erro"
+        }">
+
+            <div class="icone-feedback-questao">
+                ${acertou ? "✅" : "❌"}
+            </div>
+
+            <span class="rotulo-feedback-questao">
+                Simulado • Questão ${indiceSimulado + 1}
+                de ${questoesSimulado.length}
+            </span>
+
+            <h2>
+                ${acertou ? "Resposta correta!" : "Resposta incorreta"}
+            </h2>
+
+            <div class="resposta-aluno-simulado">
+                <strong>Sua resposta</strong>
+                <p>${respostaAluno}</p>
+            </div>
+
+            ${!acertou ? `
+                <div class="bloco-resposta-correta">
+                    <strong>✅ Resposta correta</strong>
+                    <p>${respostaCorreta}</p>
+                </div>
+            ` : ""}
+
+            <div class="bloco-feedback-explicacao">
+                <strong>📘 Explicação</strong>
+                <p>${explicacao}</p>
+            </div>
+
+            ${q.dicaBanca ? `
+                <div class="bloco-feedback-dica">
+                    <strong>💡 Dica da banca</strong>
+                    <p>${q.dicaBanca}</p>
+                </div>
+            ` : ""}
+
+            <button
+                class="btn-proxima-feedback"
+                onclick="proximaQuestaoSimulado()">
+                ${
+                    indiceSimulado + 1 >= questoesSimulado.length
+                    ? "Ver resultado final ➜"
+                    : "Próxima questão ➜"
+                }
+            </button>
+
+        </div>
+    `;
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
 }
 
 // ==========================
