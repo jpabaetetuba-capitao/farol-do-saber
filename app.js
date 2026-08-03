@@ -31717,3 +31717,170 @@ function renderizarSalaArenaAoVivoFarol(){
     });
 
 })();
+
+
+// ==========================================================
+// FAROL V25 — PERFIL EM TELAS ENCADEADAS
+// ==========================================================
+
+(function(){
+
+    const estadoPerfilV25 = {
+        etapa: "inicio"
+    };
+
+    const titulosPerfilV25 = {
+        inicio: ["👤 Perfil", "Escolha uma opção.", ""],
+        dados: ["Meus dados", "Identidade, nível e conquistas.", "Perfil"],
+        desempenho: ["Desempenho", "Acompanhe sua evolução.", "Perfil"],
+        revisao: ["Revisão e recompensas", "Revise e use seus pontos.", "Perfil"],
+        recursos: ["Outros recursos", "Acesse as demais áreas.", "Perfil"],
+        conta: ["Conta", "Gerencie sua sessão.", "Perfil"]
+    };
+
+    function elPerfilV25(id){
+        return document.getElementById(id);
+    }
+
+    function esconderSubtelasPerfilV25(){
+        [
+            "menuPerfilV25",
+            "perfilDadosV25",
+            "perfilDesempenhoV25",
+            "perfilRevisaoV25",
+            "perfilRecursosV25",
+            "perfilContaV25"
+        ].forEach(id => {
+            const el = elPerfilV25(id);
+            if(el) el.style.display = "none";
+        });
+    }
+
+    function atualizarCabecalhoPerfilV25(etapa){
+        const dados = titulosPerfilV25[etapa] || titulosPerfilV25.inicio;
+        const titulo = elPerfilV25("tituloFluxoPerfilV25");
+        const descricao = elPerfilV25("descricaoFluxoPerfilV25");
+        const indicador = elPerfilV25("etapaFluxoPerfilV25");
+        const voltar = elPerfilV25("btnVoltarFluxoPerfilV25");
+
+        if(titulo) titulo.textContent = dados[0];
+        if(descricao) descricao.textContent = dados[1];
+
+        if(indicador){
+            indicador.textContent = dados[2];
+            indicador.style.display = dados[2] ? "block" : "none";
+        }
+
+        if(voltar){
+            voltar.style.display = etapa === "inicio" ? "none" : "grid";
+        }
+    }
+
+    function registrarHistoricoPerfilV25(etapa, substituir = false){
+        const estado = {
+            farol: true,
+            tela: "perfilAluno",
+            perfilStep: etapa
+        };
+
+        const hash = `#perfil-${etapa}`;
+
+        if(substituir){
+            history.replaceState(estado, "", hash);
+        }else{
+            history.pushState(estado, "", hash);
+        }
+    }
+
+    window.abrirEtapaPerfilV25 = function(etapa = "inicio", opcoes = {}){
+        estadoPerfilV25.etapa = etapa;
+        esconderSubtelasPerfilV25();
+        atualizarCabecalhoPerfilV25(etapa);
+
+        const mapa = {
+            inicio: "menuPerfilV25",
+            dados: "perfilDadosV25",
+            desempenho: "perfilDesempenhoV25",
+            revisao: "perfilRevisaoV25",
+            recursos: "perfilRecursosV25",
+            conta: "perfilContaV25"
+        };
+
+        const destino = elPerfilV25(mapa[etapa] || mapa.inicio);
+        if(destino){
+            destino.style.display =
+                etapa === "inicio" ||
+                etapa === "desempenho" ||
+                etapa === "revisao" ||
+                etapa === "recursos" ||
+                etapa === "conta"
+                ? "grid"
+                : "block";
+        }
+
+        if(etapa === "dados" && typeof carregarPerfilAluno === "function"){
+            carregarPerfilAluno();
+        }
+
+        window.scrollTo({top: 0, behavior: "smooth"});
+
+        if(!opcoes.semHistorico){
+            registrarHistoricoPerfilV25(
+                etapa,
+                Boolean(opcoes.substituirHistorico)
+            );
+        }
+    };
+
+    window.voltarFluxoPerfilV25 = function(){
+        if(estadoPerfilV25.etapa !== "inicio"){
+            abrirEtapaPerfilV25("inicio");
+            return;
+        }
+
+        mostrarTela("inicio");
+    };
+
+    const mostrarTelaAntesPerfilV25 = window.mostrarTela;
+
+    if(typeof mostrarTelaAntesPerfilV25 === "function"){
+        window.mostrarTela = function(id, opcoes = {}){
+            const retorno =
+                mostrarTelaAntesPerfilV25.apply(this, arguments);
+
+            if(id === "perfilAluno"){
+                setTimeout(() => {
+                    if(!opcoes.semHistorico){
+                        abrirEtapaPerfilV25("inicio", {
+                            substituirHistorico: true
+                        });
+                    }
+                }, 20);
+            }
+
+            return retorno;
+        };
+    }
+
+    window.addEventListener("popstate", evento => {
+        const estado = evento.state;
+
+        if(
+            estado &&
+            estado.tela === "perfilAluno" &&
+            estado.perfilStep
+        ){
+            abrirEtapaPerfilV25(
+                estado.perfilStep,
+                {semHistorico: true}
+            );
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        esconderSubtelasPerfilV25();
+        const menu = elPerfilV25("menuPerfilV25");
+        if(menu) menu.style.display = "grid";
+    });
+
+})();

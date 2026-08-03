@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=70-fluxo-simulados">
+    <link rel="stylesheet" href="style.css?v=71-fluxo-perfil">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -4185,101 +4185,203 @@ Li e revisei o mapa mental.
 
 <section id="perfilAluno" class="tela">
 
-    <div class="card perfil-card">
+    <div class="card perfil-card perfil-card-v25">
 
-        <button
-            class="btn-voltar"
-            onclick="mostrarTela('inicio')">
+        <div id="cabecalhoFluxoPerfilV25" class="cabecalho-fluxo-perfil-v25">
+            <button
+                id="btnVoltarFluxoPerfilV25"
+                class="btn-voltar-fluxo-perfil-v25"
+                type="button"
+                onclick="voltarFluxoPerfilV25()"
+                style="display:none;"
+                aria-label="Voltar">
+                ←
+            </button>
 
-            ⬅ Voltar para Início
-
-        </button>
-
-        <br><br>
-
-        <div class="perfil-app-cabecalho">
             <div>
-                <span class="mini-titulo-app">Sua conta e seus recursos</span>
-                <h2>👤 Perfil do Aluno</h2>
-                <p>
-                    Veja sua identidade, progresso, conquistas e certificado digital.
-                </p>
+                <span id="etapaFluxoPerfilV25" class="etapa-fluxo-perfil-v25"></span>
+                <h2 id="tituloFluxoPerfilV25">👤 Perfil</h2>
+                <p id="descricaoFluxoPerfilV25">Escolha uma opção.</p>
             </div>
         </div>
 
-        <div class="central-recursos-perfil">
-            <h3>Todos os recursos do Farol</h3>
-            <p>Você sempre encontrará aqui as funções que não ficam na barra inferior.</p>
+        <div id="menuPerfilV25" class="menu-fluxo-perfil-v25">
 
-            <div class="grade-recursos-perfil">
-                <button onclick="mostrarTela('estatisticas')">
-                    <span>📊</span>
-                    <strong>Estatísticas</strong>
-                    <small>Veja seu desempenho</small>
+            <button type="button" onclick="abrirEtapaPerfilV25('dados')">
+                <span>👤</span>
+                <div>
+                    <strong>Meus dados</strong>
+                    <small>Identidade, nível, conquistas e certificado.</small>
+                </div>
+                <b>›</b>
+            </button>
+
+            <button type="button" onclick="abrirEtapaPerfilV25('desempenho')">
+                <span>📊</span>
+                <div>
+                    <strong>Desempenho</strong>
+                    <small>Estatísticas, ranking e progresso.</small>
+                </div>
+                <b>›</b>
+            </button>
+
+            <button type="button" onclick="abrirEtapaPerfilV25('revisao')">
+                <span>🧠</span>
+                <div>
+                    <strong>Revisão e recompensas</strong>
+                    <small>Caderno de erros, loja e conquistas.</small>
+                </div>
+                <b>›</b>
+            </button>
+
+            <button type="button" onclick="abrirEtapaPerfilV25('recursos')">
+                <span>🧭</span>
+                <div>
+                    <strong>Outros recursos</strong>
+                    <small>Chat, provas, jogos, duelos e informações.</small>
+                </div>
+                <b>›</b>
+            </button>
+
+            <button type="button" onclick="abrirEtapaPerfilV25('conta')">
+                <span>⚙️</span>
+                <div>
+                    <strong>Conta</strong>
+                    <small>Administração e encerramento da sessão.</small>
+                </div>
+                <b>›</b>
+            </button>
+
+        </div>
+
+        <div id="perfilDadosV25" class="subtela-perfil-v25">
+            <div id="conteudoPerfilAluno">
+                Carregando perfil...
+            </div>
+        </div>
+
+        <div id="perfilDesempenhoV25" class="subtela-perfil-v25">
+            <div class="menu-fluxo-perfil-v25">
+                <button type="button" onclick="mostrarTela('estatisticas')">
+                    <span>📈</span>
+                    <div>
+                        <strong>Estatísticas</strong>
+                        <small>Veja acertos, erros e evolução.</small>
+                    </div>
+                    <b>›</b>
                 </button>
 
-                <button onclick="mostrarTela('erros')">
+                <button type="button" onclick="mostrarTela('ranking')">
+                    <span>🏆</span>
+                    <div>
+                        <strong>Ranking</strong>
+                        <small>Compare sua pontuação na plataforma.</small>
+                    </div>
+                    <b>›</b>
+                </button>
+
+                <button type="button" onclick="mostrarTela('inicio'); abrirAbaInicioFarol('progresso');">
+                    <span>🗺️</span>
+                    <div>
+                        <strong>Meu progresso</strong>
+                        <small>Nível, metas e atividade recente.</small>
+                    </div>
+                    <b>›</b>
+                </button>
+            </div>
+        </div>
+
+        <div id="perfilRevisaoV25" class="subtela-perfil-v25">
+            <div class="menu-fluxo-perfil-v25">
+                <button type="button" onclick="mostrarTela('erros')">
                     <span>❌</span>
-                    <strong>Caderno de Erros</strong>
-                    <small>Revise suas dificuldades</small>
+                    <div>
+                        <strong>Caderno de erros</strong>
+                        <small>Revise as questões que você errou.</small>
+                    </div>
+                    <b>›</b>
                 </button>
 
-                <button onclick="mostrarTela('lojaFarol'); atualizarLojaFarol();">
+                <button type="button" onclick="mostrarTela('lojaFarol'); atualizarLojaFarol();">
                     <span>🛒</span>
-                    <strong>Loja</strong>
-                    <small>Avatares e recompensas</small>
-                </button>
-
-                <button onclick="mostrarTela('chatGlobal')">
-                    <span>💬</span>
-                    <strong>Chat Geral</strong>
-                    <small>Converse com os alunos</small>
-                </button>
-
-                <button onclick="mostrarTela('provasAnteriores')">
-                    <span>📄</span>
-                    <strong>Provas Anteriores</strong>
-                    <small>Treine com provas reais</small>
-                </button>
-
-                <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();">
-                    <span>🎮</span>
-                    <strong>Jogos</strong>
-                    <small>Aprenda jogando</small>
-                </button>
-
-                <button onclick="mostrarTela('duelos'); prepararSelectDuelo(); carregarMeusDuelos();">
-                    <span>⚔️</span>
-                    <strong>Duelos</strong>
-                    <small>Desafie outros alunos</small>
-                </button>
-
-                <button onclick="mostrarTela('sobre')">
-                    <span>ℹ️</span>
-                    <strong>Sobre</strong>
-                    <small>Conheça a plataforma</small>
-                </button>
-
-                <button onclick="abrirPainelAcessosFarol()">
-                    <span>🔐</span>
-                    <strong>Área Administrativa</strong>
-                    <small>Acesso do administrador</small>
-                </button>
-
-                <button class="recurso-sair-perfil" onclick="sair()">
-                    <span>🚪</span>
-                    <strong>Sair</strong>
-                    <small>Encerrar sua sessão</small>
+                    <div>
+                        <strong>Loja do Farol</strong>
+                        <small>Avatares, títulos e recompensas.</small>
+                    </div>
+                    <b>›</b>
                 </button>
             </div>
         </div>
 
-        <div class="separador-perfil-app">
-            <span>Dados, conquistas e certificado</span>
+        <div id="perfilRecursosV25" class="subtela-perfil-v25">
+            <div class="menu-fluxo-perfil-v25">
+                <button type="button" onclick="mostrarTela('chatGlobal')">
+                    <span>💬</span>
+                    <div>
+                        <strong>Chat geral</strong>
+                        <small>Converse com outros alunos.</small>
+                    </div>
+                    <b>›</b>
+                </button>
+
+                <button type="button" onclick="mostrarTela('provasAnteriores')">
+                    <span>📄</span>
+                    <div>
+                        <strong>Provas anteriores</strong>
+                        <small>Treine com provas já aplicadas.</small>
+                    </div>
+                    <b>›</b>
+                </button>
+
+                <button type="button" onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();">
+                    <span>🎮</span>
+                    <div>
+                        <strong>Jogos</strong>
+                        <small>Aprenda com atividades interativas.</small>
+                    </div>
+                    <b>›</b>
+                </button>
+
+                <button type="button" onclick="mostrarTela('duelos'); prepararSelectDuelo(); carregarMeusDuelos();">
+                    <span>⚔️</span>
+                    <div>
+                        <strong>Duelos e Arena</strong>
+                        <small>Desafie outros estudantes.</small>
+                    </div>
+                    <b>›</b>
+                </button>
+
+                <button type="button" onclick="mostrarTela('sobre')">
+                    <span>ℹ️</span>
+                    <div>
+                        <strong>Sobre o Farol</strong>
+                        <small>Conheça a plataforma e seu idealizador.</small>
+                    </div>
+                    <b>›</b>
+                </button>
+            </div>
         </div>
 
-        <div id="conteudoPerfilAluno">
-            Carregando perfil...
+        <div id="perfilContaV25" class="subtela-perfil-v25">
+            <div class="menu-fluxo-perfil-v25">
+                <button type="button" onclick="abrirPainelAcessosFarol()">
+                    <span>🔐</span>
+                    <div>
+                        <strong>Área administrativa</strong>
+                        <small>Acesso restrito ao administrador.</small>
+                    </div>
+                    <b>›</b>
+                </button>
+
+                <button class="perfil-sair-v25" type="button" onclick="sair()">
+                    <span>🚪</span>
+                    <div>
+                        <strong>Sair da conta</strong>
+                        <small>Encerrar a sessão neste aparelho.</small>
+                    </div>
+                    <b>›</b>
+                </button>
+            </div>
         </div>
 
     </div>
@@ -5293,7 +5395,7 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=69-fluxo-simulados"></script>
+<script src="app.js?v=70-fluxo-perfil"></script>
 <script src="admin.js?v=42-historico-atividades"></script>
 
 

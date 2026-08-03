@@ -11943,3 +11943,166 @@ progress{
         line-height:1.4;
     }
 }
+
+
+/* ==========================================================
+   FAROL V25 — PERFIL EM ETAPAS
+========================================================== */
+
+.perfil-card-v25{
+    max-width:820px;
+    margin:0 auto;
+}
+
+.cabecalho-fluxo-perfil-v25{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:15px;
+}
+
+.cabecalho-fluxo-perfil-v25 h2{
+    margin:0 0 4px;
+}
+
+.cabecalho-fluxo-perfil-v25 p{
+    margin:0;
+    color:#66756e;
+}
+
+.btn-voltar-fluxo-perfil-v25{
+    width:42px !important;
+    height:42px;
+    min-width:42px;
+    padding:0 !important;
+    display:grid;
+    place-items:center;
+    border-radius:50% !important;
+    font-size:24px;
+}
+
+.etapa-fluxo-perfil-v25{
+    display:block;
+    margin-bottom:3px;
+    color:#087f5b;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+}
+
+.menu-fluxo-perfil-v25{
+    display:grid;
+    gap:10px;
+}
+
+.menu-fluxo-perfil-v25 > button{
+    width:100%;
+    min-height:74px;
+    margin:0 !important;
+    padding:13px !important;
+    display:grid;
+    grid-template-columns:44px 1fr 18px;
+    align-items:center;
+    gap:11px;
+    text-align:left;
+    border-radius:16px !important;
+}
+
+.menu-fluxo-perfil-v25 > button > span{
+    width:42px;
+    height:42px;
+    display:grid;
+    place-items:center;
+    border-radius:12px;
+    background:rgba(255,255,255,.2);
+    font-size:22px;
+}
+
+.menu-fluxo-perfil-v25 > button > div{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.menu-fluxo-perfil-v25 strong{
+    font-size:15px;
+}
+
+.menu-fluxo-perfil-v25 small{
+    color:inherit;
+    opacity:.76;
+    font-size:12px;
+    line-height:1.35;
+}
+
+.menu-fluxo-perfil-v25 b{
+    font-size:23px;
+}
+
+.subtela-perfil-v25{
+    display:none;
+}
+
+.perfil-sair-v25{
+    background:#fff1f1 !important;
+    color:#9a2727 !important;
+    border-color:#f0caca !important;
+}
+
+#perfilDadosV25 #conteudoPerfilAluno{
+    margin-top:0;
+}
+
+@media(max-width:768px){
+
+    #perfilAluno{
+        padding-top:8px;
+    }
+
+    #perfilAluno > .card{
+        padding:14px !important;
+    }
+
+    .cabecalho-fluxo-perfil-v25{
+        margin-bottom:12px;
+    }
+
+    .cabecalho-fluxo-perfil-v25 h2{
+        font-size:21px;
+    }
+
+    .cabecalho-fluxo-perfil-v25 p{
+        font-size:13px;
+    }
+
+    .menu-fluxo-perfil-v25{
+        gap:9px;
+    }
+
+    .menu-fluxo-perfil-v25 > button{
+        min-height:70px;
+        padding:12px !important;
+        grid-template-columns:40px 1fr 16px;
+    }
+
+    .menu-fluxo-perfil-v25 > button > span{
+        width:39px;
+        height:39px;
+        font-size:20px;
+    }
+
+    #perfilDadosV25 .perfil-grid,
+    #perfilDadosV25 .grade-conquistas,
+    #perfilDadosV25 .certificado-grid{
+        grid-template-columns:1fr !important;
+    }
+
+    #perfilDadosV25 .perfil-resumo,
+    #perfilDadosV25 .perfil-identidade,
+    #perfilDadosV25 .perfil-conquistas,
+    #perfilDadosV25 .perfil-certificado{
+        padding:12px !important;
+        border-radius:14px !important;
+    }
+}
