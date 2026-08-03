@@ -30620,7 +30620,39 @@ function renderizarSalaArenaAoVivoFarol(){
         const labelDisciplina = blocoCriar.querySelector('label[for="arenaDisciplinaFarol"]');
         const labelTopico = blocoCriar.querySelector('label[for="arenaTopicoFarol"]');
 
-        envolver("arenaEtapaConcursoFarolV21", [labelConcurso, concurso]);
+        const botoesConcursoArenaV40 = document.createElement("div");
+        botoesConcursoArenaV40.id = "botoesConcursoArenaV40";
+        botoesConcursoArenaV40.className = "botoes-concurso-arena-v40";
+        botoesConcursoArenaV40.innerHTML = `
+            <button type="button" onclick="selecionarConcursoArenaV40('barcarena2026')">
+                <span>🏛️</span>
+                <span>
+                    <strong>Barcarena</strong>
+                    <small>Concurso Barcarena 2026</small>
+                </span>
+                <b>›</b>
+            </button>
+            <button type="button" onclick="selecionarConcursoArenaV40('abaetetuba2026')">
+                <span>⚓</span>
+                <span>
+                    <strong>Abaetetuba</strong>
+                    <small>Concurso Abaetetuba 2026</small>
+                </span>
+                <b>›</b>
+            </button>
+        `;
+
+        if(concurso){
+            concurso.style.display = "none";
+            concurso.setAttribute("aria-hidden", "true");
+            concurso.tabIndex = -1;
+        }
+
+        envolver("arenaEtapaConcursoFarolV21", [
+            labelConcurso,
+            botoesConcursoArenaV40,
+            concurso
+        ]);
 
         const etapaDisciplina = envolver(
             "arenaEtapaDisciplinaFarolV21",
@@ -33998,150 +34030,37 @@ function renderizarSalaArenaAoVivoFarol(){
 
 
 // ==========================================================
-// FAROL V39 — ESCOLHA DO CONCURSO DA ARENA POR BOTÕES
+// FAROL V40 — CORREÇÃO: BOTÕES SOMENTE NA NOVA ARENA
 // ==========================================================
 
-(function(){
+window.selecionarConcursoArenaV40 = function(concurso){
+    const select = document.getElementById("arenaConcursoFarol");
+    if(!select) return;
 
-    function elementoArenaV39(id){
-        return document.getElementById(id);
-    }
+    select.value = concurso;
 
-    function garantirEscolhaConcursoArenaV39(){
-        const etapa = elementoArenaV39("arenaEtapaConcursoFarolV21");
-        const select = elementoArenaV39("arenaConcursoFarol");
-
-        if(!etapa || !select){
-            return;
-        }
-
-        let painel = elementoArenaV39("escolhaConcursoArenaV39");
-
-        if(!painel){
-            painel = document.createElement("div");
-            painel.id = "escolhaConcursoArenaV39";
-            painel.className = "escolha-concurso-arena-v39";
-            painel.innerHTML = `
-                <button
-                    type="button"
-                    class="botao-concurso-arena-v39"
-                    data-concurso="barcarena2026"
-                    onclick="selecionarConcursoArenaV39('barcarena2026')">
-                    <span class="icone-concurso-arena-v39">🏛️</span>
-                    <span>
-                        <strong>Barcarena</strong>
-                        <small>Concurso Barcarena 2026</small>
-                    </span>
-                    <b>›</b>
-                </button>
-
-                <button
-                    type="button"
-                    class="botao-concurso-arena-v39"
-                    data-concurso="abaetetuba2026"
-                    onclick="selecionarConcursoArenaV39('abaetetuba2026')">
-                    <span class="icone-concurso-arena-v39">⚓</span>
-                    <span>
-                        <strong>Abaetetuba</strong>
-                        <small>Concurso Abaetetuba 2026</small>
-                    </span>
-                    <b>›</b>
-                </button>
-            `;
-
-            etapa.appendChild(painel);
-        }
-
-        const label = etapa.querySelector('label[for="arenaConcursoFarol"]');
-        if(label){
-            label.textContent = "Escolha o concurso";
-        }
-
-        select.style.display = "none";
-        select.setAttribute("aria-hidden", "true");
-        select.tabIndex = -1;
-
-        painel.querySelectorAll(".botao-concurso-arena-v39").forEach(botao => {
-            botao.classList.toggle(
-                "selecionado",
-                botao.dataset.concurso === select.value
-            );
+    document
+        .querySelectorAll("#botoesConcursoArenaV40 button")
+        .forEach(botao => {
+            const alvo = botao.getAttribute("onclick") || "";
+            botao.classList.toggle("selecionado", alvo.includes(concurso));
         });
+
+    if(typeof prepararArenaVisualFarol === "function"){
+        prepararArenaVisualFarol();
     }
 
-    window.selecionarConcursoArenaV39 = function(concurso){
-        const select = elementoArenaV39("arenaConcursoFarol");
-
-        if(!select){
-            return;
-        }
-
-        select.value = concurso;
-
-        select.dispatchEvent(
-            new Event("change", {
-                bubbles: true
-            })
-        );
-
-        if(typeof atualizarResumoArenaVisualFarol === "function"){
-            atualizarResumoArenaVisualFarol();
-        }
-
-        if(typeof prepararArenaVisualFarol === "function"){
-            prepararArenaVisualFarol();
-        }
-
-        document
-            .querySelectorAll(".botao-concurso-arena-v39")
-            .forEach(botao => {
-                botao.classList.toggle(
-                    "selecionado",
-                    botao.dataset.concurso === concurso
-                );
-            });
-
-        setTimeout(() => {
-            if(typeof abrirFluxoCompeticaoFarolV21 === "function"){
-                abrirFluxoCompeticaoFarolV21("arenaDisciplina");
-            }
-        }, 40);
-    };
-
-    const abrirFluxoAnteriorArenaV39 =
-        window.abrirFluxoCompeticaoFarolV21;
-
-    if(typeof abrirFluxoAnteriorArenaV39 === "function"){
-        window.abrirFluxoCompeticaoFarolV21 = function(etapa, opcoes){
-            const resultado =
-                abrirFluxoAnteriorArenaV39.apply(this, arguments);
-
-            if(etapa === "arenaConcurso"){
-                setTimeout(() => {
-                    garantirEscolhaConcursoArenaV39();
-
-                    const titulo =
-                        elementoArenaV39("tituloFluxoCompeticaoFarolV21");
-                    const descricao =
-                        elementoArenaV39("descricaoFluxoCompeticaoFarolV21");
-
-                    if(titulo){
-                        titulo.textContent = "Escolha o concurso";
-                    }
-
-                    if(descricao){
-                        descricao.textContent =
-                            "Selecione Barcarena ou Abaetetuba para continuar.";
-                    }
-                }, 20);
-            }
-
-            return resultado;
-        };
+    if(typeof atualizarTopicosArenaVisualFarol === "function"){
+        atualizarTopicosArenaVisualFarol();
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
-        setTimeout(garantirEscolhaConcursoArenaV39, 100);
-    });
+    if(typeof atualizarResumoArenaVisualFarol === "function"){
+        atualizarResumoArenaVisualFarol();
+    }
 
-})();
+    setTimeout(() => {
+        if(typeof abrirFluxoCompeticaoFarolV21 === "function"){
+            abrirFluxoCompeticaoFarolV21("arenaDisciplina");
+        }
+    }, 30);
+};

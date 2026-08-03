@@ -13699,3 +13699,71 @@ progress{
         font-size:14px;
     }
 }
+
+
+/* ==========================================================
+   FAROL V40 — BOTÕES EXCLUSIVOS DA NOVA ARENA
+========================================================== */
+
+#arenaEtapaConcursoFarolV21 > label[for="arenaConcursoFarol"]{
+    display:block;
+    margin-bottom:10px;
+}
+
+.botoes-concurso-arena-v40{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+}
+
+.botoes-concurso-arena-v40 > button{
+    width:100%;
+    min-height:92px;
+    margin:0 !important;
+    padding:13px !important;
+    display:grid;
+    grid-template-columns:44px 1fr 18px;
+    align-items:center;
+    gap:10px;
+    text-align:left;
+    border:2px solid transparent !important;
+    border-radius:16px !important;
+}
+
+.botoes-concurso-arena-v40 > button > span:first-child{
+    width:42px;
+    height:42px;
+    display:grid;
+    place-items:center;
+    border-radius:12px;
+    background:rgba(255,255,255,.2);
+    font-size:22px;
+}
+
+.botoes-concurso-arena-v40 > button > span:nth-child(2){
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.botoes-concurso-arena-v40 strong{font-size:15px;}
+.botoes-concurso-arena-v40 small{color:inherit;opacity:.82;font-size:11px;line-height:1.3;}
+.botoes-concurso-arena-v40 b{font-size:22px;}
+
+.botoes-concurso-arena-v40 > button.selecionado{
+    border-color:#ffd24d !important;
+    box-shadow:0 0 0 3px rgba(255,210,77,.22);
+}
+
+@media(max-width:600px){
+    .botoes-concurso-arena-v40{grid-template-columns:1fr;gap:9px;}
+    .botoes-concurso-arena-v40 > button{
+        min-height:74px;
+        grid-template-columns:40px 1fr 16px;
+        padding:10px 12px !important;
+    }
+    .botoes-concurso-arena-v40 > button > span:first-child{
+        width:38px;height:38px;font-size:20px;
+    }
+    .botoes-concurso-arena-v40 strong{font-size:14px;}
+}
