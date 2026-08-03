@@ -6,7 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🗼 Farol do Saber</title>
 
-    <link rel="stylesheet" href="style.css?v=62-app-mobile-refinado">
+    <meta name="theme-color" content="#087f5b">
+    <meta name="application-name" content="Farol do Saber">
+    <meta name="description" content="Plataforma de estudos, simulados, ranking, jogos e preparação para concursos.">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Farol do Saber">
+
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+    <link rel="apple-touch-icon" href="./icons/icon-192.png">
+
+    <link rel="stylesheet" href="style.css?v=63-pwa-instalavel">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -104,6 +116,16 @@
 </head>
 
 <body>
+
+<div id="splashFarolPWA" class="splash-farol-pwa" aria-hidden="true">
+    <div class="splash-farol-conteudo">
+        <img src="./icons/icon-512.png" alt="">
+        <h1>Farol do Saber</h1>
+        <p>Iluminando o caminho para a sua aprovação.</p>
+        <div class="splash-farol-carregando" aria-hidden="true"></div>
+    </div>
+</div>
+
 
 <section id="login" class="tela">
 
@@ -5253,6 +5275,9 @@ Li e revisei o mapa mental.
 
 <script src="app.js?v=56-saida-arena"></script>
 <script src="admin.js?v=42-historico-atividades"></script>
+
+
+<script src="./pwa.js?v=2"></script>
 
 </body>
 

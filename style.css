@@ -10846,3 +10846,176 @@ progress{
 #painelArenaAoVivoFarol .arena-layout-farol{
     margin-top:4px;
 }
+
+
+/* ==========================================================
+   FAROL DO SABER — PWA INSTALÁVEL V14
+========================================================== */
+
+.aviso-pwa-farol{
+    position:fixed;
+    z-index:20000;
+    left:50%;
+    bottom:calc(82px + env(safe-area-inset-bottom));
+    width:min(520px, calc(100% - 24px));
+    padding:14px;
+    display:none;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    border-radius:18px;
+    background:rgba(255,255,255,.98);
+    color:#20302a;
+    border:1px solid rgba(0,0,0,.10);
+    box-shadow:0 12px 34px rgba(0,0,0,.24);
+    transform:translateX(-50%);
+}
+
+.aviso-pwa-farol.visivel{
+    display:flex;
+    animation:entradaAvisoPWAFarol .24s ease;
+}
+
+.aviso-pwa-farol strong,
+.aviso-pwa-farol small{
+    display:block;
+}
+
+.aviso-pwa-farol strong{
+    margin-bottom:4px;
+    color:#087f5b;
+}
+
+.aviso-pwa-farol small{
+    color:#68766f;
+    line-height:1.35;
+}
+
+.acoes-aviso-pwa{
+    flex:0 0 auto;
+    display:flex;
+    gap:7px;
+}
+
+.acoes-aviso-pwa button{
+    margin:0;
+    padding:9px 12px;
+    border-radius:11px;
+    font-size:13px;
+    font-weight:800;
+    background:#087f5b;
+}
+
+.acoes-aviso-pwa button.secundario{
+    background:#edf3f0;
+    color:#44534c;
+}
+
+@keyframes entradaAvisoPWAFarol{
+    from{
+        opacity:0;
+        transform:translate(-50%, 12px);
+    }
+    to{
+        opacity:1;
+        transform:translate(-50%, 0);
+    }
+}
+
+@media(max-width:520px){
+    .aviso-pwa-farol{
+        align-items:stretch;
+        flex-direction:column;
+    }
+
+    .acoes-aviso-pwa{
+        width:100%;
+    }
+
+    .acoes-aviso-pwa button{
+        flex:1;
+    }
+}
+
+
+/* ==========================================================
+   FAROL DO SABER — TELA DE ABERTURA PWA V16
+========================================================== */
+
+.splash-farol-pwa{
+    position:fixed;
+    inset:0;
+    z-index:30000;
+    display:grid;
+    place-items:center;
+    padding:24px;
+    background:
+        radial-gradient(circle at 50% 25%, rgba(255,190,55,.16), transparent 28%),
+        linear-gradient(160deg, #061f3d, #0b3e68 58%, #087f5b);
+    opacity:1;
+    visibility:visible;
+    transition:opacity .35s ease, visibility .35s ease;
+}
+
+.splash-farol-pwa.oculta{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+
+.splash-farol-conteudo{
+    width:min(340px, 88vw);
+    text-align:center;
+    color:white;
+}
+
+.splash-farol-conteudo img{
+    width:min(210px, 58vw);
+    aspect-ratio:1;
+    object-fit:cover;
+    border-radius:28%;
+    box-shadow:0 20px 50px rgba(0,0,0,.28);
+}
+
+.splash-farol-conteudo h1{
+    margin:20px 0 6px;
+    font-size:31px;
+    color:white;
+}
+
+.splash-farol-conteudo p{
+    margin:0;
+    color:rgba(255,255,255,.88);
+    line-height:1.45;
+}
+
+.splash-farol-carregando{
+    width:48px;
+    height:4px;
+    margin:24px auto 0;
+    border-radius:999px;
+    background:rgba(255,255,255,.24);
+    overflow:hidden;
+    position:relative;
+}
+
+.splash-farol-carregando::after{
+    content:"";
+    position:absolute;
+    inset:0 auto 0 0;
+    width:45%;
+    border-radius:inherit;
+    background:#f5bd38;
+    animation:splashFarolCarregando 1s ease-in-out infinite alternate;
+}
+
+@keyframes splashFarolCarregando{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(120%); }
+}
+
+@media(min-width:769px){
+    .splash-farol-pwa{
+        display:none;
+    }
+}
