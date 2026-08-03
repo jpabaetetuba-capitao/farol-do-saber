@@ -31884,3 +31884,76 @@ function renderizarSalaArenaAoVivoFarol(){
     });
 
 })();
+
+
+// ==========================================================
+// FAROL V26 — INÍCIO LIMPO E NAVEGAÇÃO COMPACTA
+// ==========================================================
+
+(function(){
+
+    function garantirCabecalhosInicioV26(){
+        const progresso = document.querySelector(".painel-inicio-progresso");
+        const online = document.querySelector(".painel-inicio-online");
+        const ranking = document.querySelector(".painel-inicio-ranking");
+
+        function inserirCabecalho(painel, titulo, subtitulo){
+            if(!painel || painel.querySelector(".cabecalho-subtela-inicio-v26")){
+                return;
+            }
+
+            const cabecalho = document.createElement("div");
+            cabecalho.className = "cabecalho-subtela-inicio-v26";
+            cabecalho.innerHTML = `
+                <button
+                    type="button"
+                    onclick="abrirAbaInicioFarol('resumo')"
+                    aria-label="Voltar para o início">
+                    ←
+                </button>
+                <div>
+                    <h2>${titulo}</h2>
+                    <p>${subtitulo}</p>
+                </div>
+            `;
+
+            painel.insertBefore(cabecalho, painel.firstChild);
+        }
+
+        inserirCabecalho(
+            progresso,
+            "Meu progresso",
+            "Acompanhe seus resultados e evolução."
+        );
+
+        inserirCabecalho(
+            online,
+            "Alunos online",
+            "Veja quem está conectado agora."
+        );
+
+        inserirCabecalho(
+            ranking,
+            "Ranking",
+            "Confira sua posição na plataforma."
+        );
+    }
+
+    const abrirAbaInicioAntesV26 = window.abrirAbaInicioFarol;
+
+    if(typeof abrirAbaInicioAntesV26 === "function"){
+        window.abrirAbaInicioFarol = function(nomeAba, opcoes = {}){
+            garantirCabecalhosInicioV26();
+            const retorno =
+                abrirAbaInicioAntesV26.apply(this, arguments);
+
+            window.scrollTo({top: 0, behavior: "smooth"});
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        garantirCabecalhosInicioV26();
+    });
+
+})();

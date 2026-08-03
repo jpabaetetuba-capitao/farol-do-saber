@@ -12106,3 +12106,211 @@ progress{
         border-radius:14px !important;
     }
 }
+
+
+/* ==========================================================
+   FAROL V26 — TELA INÍCIO LIMPA E MOBILE
+========================================================== */
+
+.abas-inicio-farol-v26{
+    display:none !important;
+}
+
+.painel-inicio-resumo-v26{
+    display:none;
+}
+
+.painel-inicio-resumo-v26.painel-inicio-visivel{
+    display:block;
+}
+
+.inicio-hero-v26{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:12px;
+}
+
+.inicio-hero-v26 span{
+    color:#617169;
+    font-size:12px;
+    font-weight:700;
+}
+
+.inicio-hero-v26 h2{
+    margin:3px 0 0;
+    font-size:22px;
+}
+
+.resumo-pontos-v26{
+    flex:0 0 auto;
+}
+
+.resumo-nivel-v26{
+    margin-bottom:12px;
+}
+
+.continuar-estudo-v26{
+    margin:0 0 12px;
+}
+
+.btn-continuar-principal-v26{
+    min-height:54px;
+    font-size:16px;
+    font-weight:900;
+}
+
+.continuar-estudo-v26 p{
+    margin:8px 0 0;
+    font-size:12px;
+    color:#66756e;
+    line-height:1.4;
+}
+
+.missao-inicio-v26{
+    margin-bottom:12px;
+}
+
+.atalhos-principais-inicio-v26{
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0,1fr));
+    gap:9px;
+    margin-bottom:12px;
+}
+
+.atalhos-principais-inicio-v26 button{
+    min-height:76px;
+    margin:0 !important;
+    padding:10px 6px !important;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    border-radius:15px !important;
+}
+
+.atalhos-principais-inicio-v26 button span{
+    font-size:24px;
+    line-height:1;
+}
+
+.atalhos-principais-inicio-v26 button strong{
+    font-size:12px;
+}
+
+.mais-recursos-inicio-v26{
+    margin-top:0;
+}
+
+.mais-recursos-inicio-v26 > summary{
+    font-size:13px;
+}
+
+.cabecalho-subtela-inicio-v26{
+    display:flex;
+    align-items:flex-start;
+    gap:11px;
+    margin-bottom:14px;
+}
+
+.cabecalho-subtela-inicio-v26 > button{
+    width:42px !important;
+    height:42px;
+    min-width:42px;
+    margin:0 !important;
+    padding:0 !important;
+    display:grid;
+    place-items:center;
+    border-radius:50% !important;
+    font-size:24px;
+}
+
+.cabecalho-subtela-inicio-v26 h2{
+    margin:0 0 3px !important;
+}
+
+.cabecalho-subtela-inicio-v26 p{
+    margin:0;
+    color:#66756e;
+    font-size:13px;
+}
+
+.painel-inicio-progresso > h2,
+.painel-inicio-online > h2,
+.painel-inicio-ranking > h2{
+    display:none;
+}
+
+@media(max-width:768px){
+
+    #inicio{
+        padding-top:8px;
+    }
+
+    .inicio-app-cabecalho{
+        margin-bottom:10px;
+    }
+
+    .inicio-app-cabecalho h2{
+        font-size:21px;
+    }
+
+    .inicio-app-saudacao{
+        font-size:11px;
+    }
+
+    .painel-inicio-resumo-v26{
+        padding:14px !important;
+    }
+
+    .inicio-hero-v26 h2{
+        font-size:20px;
+    }
+
+    .resumo-pontos-v26{
+        font-size:12px;
+        padding:7px 9px;
+    }
+
+    .resumo-nivel-v26{
+        padding:12px;
+        border-radius:14px;
+    }
+
+    .resumo-nivel-v26 p{
+        margin:8px 0;
+        font-size:12px;
+    }
+
+    .atalhos-principais-inicio-v26{
+        grid-template-columns:repeat(2, minmax(0,1fr));
+    }
+
+    .atalhos-principais-inicio-v26 button{
+        min-height:68px;
+        flex-direction:row;
+        justify-content:flex-start;
+        padding:11px !important;
+        text-align:left;
+    }
+
+    .atalhos-principais-inicio-v26 button span{
+        font-size:22px;
+    }
+
+    .atalhos-principais-inicio-v26 button strong{
+        font-size:13px;
+    }
+
+    .mais-recursos-inicio-v26 .atalhos-inicio-grid{
+        grid-template-columns:repeat(2, minmax(0,1fr));
+    }
+
+    .painel-inicio-progresso,
+    .painel-inicio-online,
+    .painel-inicio-ranking{
+        padding:14px !important;
+    }
+}
