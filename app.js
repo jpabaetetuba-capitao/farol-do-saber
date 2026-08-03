@@ -33713,3 +33713,285 @@ function renderizarSalaArenaAoVivoFarol(){
     });
 
 })();
+
+
+// ==========================================================
+// FAROL V35 — SOBRE EM TELAS ENCADEADAS
+// ==========================================================
+
+(function(){
+
+    const estadoSobreV35 = {
+        etapa: "menu"
+    };
+
+    const secoesSobreV35 = {
+        plataforma: {
+            icone: "🗼",
+            titulo: "Conheça a plataforma",
+            descricao: "Veja a proposta e os principais recursos.",
+            conteudo: `
+                <h3>Farol do Saber</h3>
+                <p>
+                    O Farol do Saber é uma plataforma educacional criada para
+                    organizar a preparação de estudantes e candidatos a concursos.
+                </p>
+                <p>
+                    Ela reúne teoria, mapas mentais, questões comentadas, simulados,
+                    provas anteriores, jogos, duelos, Arena, Caderno de Erros e
+                    acompanhamento de desempenho.
+                </p>
+            `
+        },
+        funcionamento: {
+            icone: "🧭",
+            titulo: "Como funciona",
+            descricao: "Entenda sua jornada de estudo.",
+            conteudo: `
+                <h3>Uma rota organizada</h3>
+                <p>
+                    Escolha o concurso, o cargo, a disciplina e o tópico.
+                    Depois avance entre teoria, mapa mental, questões e simulados.
+                </p>
+                <p>
+                    O progresso fica salvo para que você continue de onde parou.
+                    Os erros também podem ser revisados posteriormente.
+                </p>
+            `
+        },
+        pontos: {
+            icone: "⭐",
+            titulo: "Pontos de Luz e níveis",
+            descricao: "Saiba como funciona a progressão.",
+            conteudo: `
+                <h3>Pontos de Luz</h3>
+                <p>
+                    Os Pontos de Luz são obtidos ao estudar, responder questões,
+                    concluir simulados e revisar erros.
+                </p>
+                <p>
+                    Eles ajudam na evolução de nível e podem ser usados na Loja
+                    do Farol para adquirir recompensas disponíveis.
+                </p>
+            `
+        },
+        duelos: {
+            icone: "⚔️",
+            titulo: "Duelos e Arena",
+            descricao: "Conheça os modos competitivos.",
+            conteudo: `
+                <h3>Aprendizado em competição</h3>
+                <p>
+                    Nos Duelos, um aluno cria um desafio e compartilha o código
+                    com outro participante.
+                </p>
+                <p>
+                    Na Arena do Farol, vários jogadores podem participar de uma
+                    partida coletiva com pontuação em tempo real.
+                </p>
+            `
+        },
+        seguranca: {
+            icone: "🔐",
+            titulo: "Privacidade e segurança",
+            descricao: "Veja como os dados são protegidos.",
+            conteudo: `
+                <h3>Uso seguro</h3>
+                <p>
+                    O acesso utiliza autenticação e permissões para proteger
+                    informações dos alunos, progresso, mensagens e recursos
+                    administrativos.
+                </p>
+                <p>
+                    Cada usuário acessa somente os dados permitidos para sua conta.
+                </p>
+            `
+        },
+        idealizador: {
+            icone: "👨‍✈️",
+            titulo: "Idealizador",
+            descricao: "Conheça quem criou o Farol.",
+            conteudo: `
+                <div class="foto-idealizador-sobre-v35">
+                    <img
+                        src="imagens/autor/capitao-joao-paulo.webp"
+                        alt="Idealizador do Farol do Saber">
+                </div>
+                <h3>João Paulo Silva</h3>
+                <p>
+                    O Farol do Saber foi idealizado por João Paulo Silva,
+                    comandante da Marinha Mercante, educador e administrador.
+                </p>
+                <p>
+                    O projeto foi criado para oferecer uma preparação organizada,
+                    interativa e acessível aos estudantes.
+                </p>
+            `
+        },
+        suporte: {
+            icone: "💬",
+            titulo: "Contato e suporte",
+            descricao: "Encontre ajuda para usar a plataforma.",
+            conteudo: `
+                <h3>Precisa de ajuda?</h3>
+                <p>
+                    Em caso de dúvida sobre acesso, conteúdo ou funcionamento,
+                    utilize os canais oficiais informados pelo responsável pela
+                    plataforma.
+                </p>
+                <button type="button" onclick="mostrarTela('chatGlobal')">
+                    Abrir Chat Geral
+                </button>
+            `
+        }
+    };
+
+    function elSobreV35(id){
+        return document.getElementById(id);
+    }
+
+    function atualizarCabecalhoSobreV35(etapa){
+        const titulo = elSobreV35("tituloFluxoSobreV35");
+        const descricao = elSobreV35("descricaoFluxoSobreV35");
+        const indicador = elSobreV35("etapaFluxoSobreV35");
+        const voltar = elSobreV35("btnVoltarFluxoSobreV35");
+
+        if(etapa === "menu"){
+            titulo.textContent = "ℹ️ Sobre o Farol";
+            descricao.textContent = "Escolha uma opção.";
+            indicador.textContent = "";
+            indicador.style.display = "none";
+            voltar.style.display = "none";
+            return;
+        }
+
+        const secao = secoesSobreV35[etapa];
+        titulo.textContent = secao ? secao.titulo : "Sobre";
+        descricao.textContent = secao ? secao.descricao : "";
+        indicador.textContent = "Sobre o Farol";
+        indicador.style.display = "block";
+        voltar.style.display = "grid";
+    }
+
+    function registrarHistoricoSobreV35(etapa, substituir = false){
+        const estado = {
+            farol: true,
+            tela: "sobre",
+            sobreStep: etapa
+        };
+
+        const hash = `#sobre-${etapa}`;
+
+        if(substituir){
+            history.replaceState(estado, "", hash);
+        }else{
+            history.pushState(estado, "", hash);
+        }
+    }
+
+    function renderizarMenuSobreV35(){
+        const area = elSobreV35("conteudoFluxoSobreV35");
+
+        area.innerHTML = `
+            <div class="menu-fluxo-sobre-v35">
+                ${Object.entries(secoesSobreV35).map(([chave, secao]) => `
+                    <button
+                        type="button"
+                        onclick="abrirEtapaSobreV35('${chave}')">
+                        <span>${secao.icone}</span>
+                        <span>
+                            <strong>${secao.titulo}</strong>
+                            <small>${secao.descricao}</small>
+                        </span>
+                        <b>›</b>
+                    </button>
+                `).join("")}
+            </div>
+        `;
+    }
+
+    function renderizarDetalheSobreV35(etapa){
+        const area = elSobreV35("conteudoFluxoSobreV35");
+        const secao = secoesSobreV35[etapa];
+
+        area.innerHTML = `
+            <article class="detalhe-sobre-v35">
+                <div class="icone-detalhe-sobre-v35">${secao.icone}</div>
+                ${secao.conteudo}
+            </article>
+        `;
+    }
+
+    window.abrirEtapaSobreV35 = function(etapa = "menu", opcoes = {}){
+        estadoSobreV35.etapa = etapa;
+        atualizarCabecalhoSobreV35(etapa);
+
+        if(etapa === "menu"){
+            renderizarMenuSobreV35();
+        }else{
+            renderizarDetalheSobreV35(etapa);
+        }
+
+        window.scrollTo({top: 0, behavior: "smooth"});
+
+        if(!opcoes.semHistorico){
+            registrarHistoricoSobreV35(
+                etapa,
+                Boolean(opcoes.substituirHistorico)
+            );
+        }
+    };
+
+    window.voltarFluxoSobreV35 = function(){
+        if(estadoSobreV35.etapa !== "menu"){
+            abrirEtapaSobreV35("menu");
+            return;
+        }
+
+        mostrarTela("inicio");
+    };
+
+    const mostrarTelaAntesSobreV35 = window.mostrarTela;
+
+    if(typeof mostrarTelaAntesSobreV35 === "function"){
+        window.mostrarTela = function(id, opcoes = {}){
+            const retorno =
+                mostrarTelaAntesSobreV35.apply(this, arguments);
+
+            if(id === "sobre"){
+                setTimeout(() => {
+                    if(!opcoes.semHistorico){
+                        abrirEtapaSobreV35("menu", {
+                            substituirHistorico: true
+                        });
+                    }
+                }, 20);
+            }
+
+            return retorno;
+        };
+    }
+
+    window.addEventListener("popstate", evento => {
+        const estado = evento.state;
+
+        if(
+            estado &&
+            estado.tela === "sobre" &&
+            estado.sobreStep
+        ){
+            mostrarTela("sobre", {semHistorico: true});
+            abrirEtapaSobreV35(
+                estado.sobreStep,
+                {semHistorico: true}
+            );
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        if(elSobreV35("conteudoFluxoSobreV35")){
+            renderizarMenuSobreV35();
+        }
+    });
+
+})();

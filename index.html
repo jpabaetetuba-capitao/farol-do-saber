@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=79-loja-visual-ajustado">
+    <link rel="stylesheet" href="style.css?v=80-fluxo-sobre">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -4441,139 +4441,27 @@ Li e revisei o mapa mental.
 
 <section id="sobre" class="tela">
 
-    <div class="card sobre-card">
+    <div class="card sobre-card-v35">
 
-        <button
-            class="btn-voltar"
-            onclick="mostrarTela('inicio')">
+        <div id="cabecalhoFluxoSobreV35" class="cabecalho-fluxo-sobre-v35">
+            <button
+                id="btnVoltarFluxoSobreV35"
+                class="btn-voltar-fluxo-sobre-v35"
+                type="button"
+                onclick="voltarFluxoSobreV35()"
+                style="display:none;"
+                aria-label="Voltar">
+                ←
+            </button>
 
-            ⬅ Voltar para Início
-
-        </button>
-
-        <br><br>
-
-        <div class="sobre-hero">
-
-            <div class="sobre-foto-area">
-
-                <img
-                    src="imagens/autor/capitao-joao-paulo.webp"
-                    alt="Comandante João Paulo Silva"
-                    class="foto-autor">
-
+            <div>
+                <span id="etapaFluxoSobreV35" class="etapa-fluxo-sobre-v35"></span>
+                <h2 id="tituloFluxoSobreV35">ℹ️ Sobre o Farol</h2>
+                <p id="descricaoFluxoSobreV35">Escolha uma opção.</p>
             </div>
-
-            <div class="sobre-intro">
-
-                <span class="sobre-tag">
-                    🗼 Farol do Saber
-                </span>
-
-                <h2>Uma plataforma criada para orientar sua jornada de estudos</h2>
-
-                <p>
-                    O <strong>Farol do Saber</strong> é uma plataforma educacional criada para ajudar estudantes
-                    e candidatos a concursos a organizarem seus estudos com mais clareza, constância e estratégia.
-                </p>
-
-                <p>
-                    A plataforma reúne teoria, mapas mentais, questões comentadas, simulados, caderno de erros,
-                    acompanhamento de desempenho, missões de estudo e recursos de gamificação. Cada ferramenta
-                    foi pensada para tornar a preparação mais objetiva, dinâmica e eficiente.
-                </p>
-
-                <p>
-                    Mais do que disponibilizar conteúdos, o Farol do Saber oferece uma jornada completa de
-                    aprendizagem, permitindo ao estudante acompanhar sua evolução, identificar dificuldades,
-                    revisar pontos importantes e avançar com mais segurança rumo aos seus objetivos.
-                </p>
-
-                <p><strong>Organização para estudar. Estratégia para evoluir. Conhecimento para avançar.</strong></p>
-
-            </div>
-
         </div>
 
-        <br>
-
-        <div class="sobre-grid">
-
-            <div class="sobre-bloco sobre-bloco-destaque">
-
-                <h3>
-                    👨‍✈️ Sobre o idealizador
-                </h3>
-
-                <p>
-                    O Farol do Saber foi idealizado por <strong>João Paulo Silva</strong>,
-                    <strong>Comandante da Marinha Mercante, educador e administrador</strong>, profissional com
-                    mais de 10 anos de experiência na carreira marítima e atuação em funções de liderança,
-                    responsabilidade e tomada de decisão.
-                </p>
-
-                <p>
-                    Sua formação reúne conhecimentos em diferentes áreas: <strong>Licenciatura em Matemática</strong>
-                    pela Universidade Federal do Pará, pós-graduação em <strong>Matemática Financeira</strong>,
-                    Bacharelado em <strong>Administração</strong>, formação técnica em
-                    <strong>Processos Industriais</strong> e em <strong>Mecânica Industrial</strong>.
-                </p>
-
-                <p>
-                    Antes de ingressar na Marinha Mercante, desenvolveu experiência profissional no setor
-                    industrial. Posteriormente, concluiu o Curso de Oficial de Náutica da Marinha Mercante,
-                    iniciou sua trajetória como Oficial de Náutica e avançou profissionalmente até exercer
-                    funções de comando.
-                </p>
-
-                <p>
-                    A experiência acumulada na educação, na gestão, na indústria e na área marítima deu origem
-                    ao Farol do Saber: uma plataforma construída com organização, disciplina e compromisso com
-                    o desenvolvimento de quem estuda para transformar sua realidade.
-                </p>
-
-            </div>
-
-            <div class="sobre-bloco">
-
-                <h3>
-                    🎯 Objetivo
-                </h3>
-
-                <p>
-                    Oferecer uma experiência de estudo estruturada, prática e motivadora, ajudando o estudante
-                    a compreender conteúdos, revisar pontos importantes e acompanhar sua evolução.
-                </p>
-
-            </div>
-
-            <div class="sobre-bloco">
-
-                <h3>
-                    ⭐ Metodologia
-                </h3>
-
-                <p>
-                    Combinar teoria, mapas mentais, questões comentadas, simulados, revisão de erros e
-                    gamificação para estimular constância, participação e aprendizagem ativa.
-                </p>
-
-            </div>
-
-            <div class="sobre-bloco">
-
-                <h3>
-                    🚀 Missão
-                </h3>
-
-                <p>
-                    Tornar o estudo mais claro, acessível e organizado, contribuindo para que cada estudante
-                    avance com autonomia, confiança e propósito.
-                </p>
-
-            </div>
-
-        </div>
+        <div id="conteudoFluxoSobreV35"></div>
 
     </div>
 
@@ -5402,7 +5290,7 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=77-fluxo-loja"></script>
+<script src="app.js?v=78-fluxo-sobre"></script>
 <script src="admin.js?v=42-historico-atividades"></script>
 
 
