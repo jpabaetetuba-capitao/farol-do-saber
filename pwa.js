@@ -81,35 +81,34 @@
     }
   });
 
-  function mostrarAtualizacaoDisponivel(registro){
-    const aviso = criarAvisoPWA(
+  function aplicarAtualizacaoAutomaticamente(registro){
+    const worker =
+      registro.waiting ||
+      registro.installing;
+
+    criarAvisoPWA(
       "avisoAtualizarFarol",
       `
         <div>
-          <strong>✨ Nova versão disponível</strong>
-          <small>Atualize para receber os conteúdos e melhorias mais recentes.</small>
-        </div>
-        <div class="acoes-aviso-pwa">
-          <button type="button" id="btnAtualizarFarolPWA">Atualizar</button>
-          <button type="button" class="secundario" id="btnDepoisAtualizarFarol">Depois</button>
+          <strong>✨ Atualizando o Farol</strong>
+          <small>A versão mais recente será aplicada automaticamente.</small>
         </div>
       `,
       "atualizacao"
     );
 
-    aviso.querySelector("#btnAtualizarFarolPWA")?.addEventListener("click", () => {
-      const worker = registro.waiting;
+    if(registro.waiting){
+      registro.waiting.postMessage({ type: "SKIP_WAITING" });
+      return;
+    }
 
-      if(worker){
-        worker.postMessage({ type: "SKIP_WAITING" });
-      }else{
-        window.location.reload();
-      }
-    });
-
-    aviso.querySelector("#btnDepoisAtualizarFarol")?.addEventListener("click", () => {
-      esconderAvisoPWA("avisoAtualizarFarol");
-    });
+    if(worker){
+      worker.addEventListener("statechange", () => {
+        if(worker.state === "installed" && registro.waiting){
+          registro.waiting.postMessage({ type: "SKIP_WAITING" });
+        }
+      });
+    }
   }
 
   async function registrarPWA(){
@@ -124,7 +123,7 @@
       );
 
       if(registroServiceWorker.waiting){
-        mostrarAtualizacaoDisponivel(registroServiceWorker);
+        aplicarAtualizacaoAutomaticamente(registroServiceWorker);
       }
 
       registroServiceWorker.addEventListener("updatefound", () => {
@@ -139,7 +138,7 @@
             novoWorker.state === "installed" &&
             navigator.serviceWorker.controller
           ){
-            mostrarAtualizacaoDisponivel(registroServiceWorker);
+            aplicarAtualizacaoAutomaticamente(registroServiceWorker);
           }
         });
       });
@@ -150,6 +149,18 @@
       document.addEventListener("visibilitychange", () => {
         if(document.visibilityState === "visible"){
           registroServiceWorker.update();
+        }
+      });
+
+      window.addEventListener("online", async () => {
+        try{
+          await registroServiceWorker.update();
+
+          if(registroServiceWorker.waiting){
+            aplicarAtualizacaoAutomaticamente(registroServiceWorker);
+          }
+        }catch(erro){
+          console.warn("Não foi possível verificar atualização ao reconectar:", erro);
         }
       });
     }catch(erro){
