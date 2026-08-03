@@ -31315,3 +31315,405 @@ function renderizarSalaArenaAoVivoFarol(){
     });
 
 })();
+
+
+// ==========================================================
+// FAROL V24 — SIMULADOS EM TELAS ENCADEADAS
+// ==========================================================
+
+(function(){
+
+    const estadoSimuladosV24 = {
+        etapa: "concurso",
+        concurso: "",
+        modo: ""
+    };
+
+    const titulosSimuladosV24 = {
+        concurso: ["📝 Simulados", "Escolha o concurso.", "Etapa 1 de 3"],
+        modoBarcarena: ["Simulados de Barcarena", "Escolha o tipo de treino.", "Etapa 2 de 3"],
+        modoAbaetetuba: ["Simulados de Abaetetuba", "Escolha sua preparação.", "Etapa 2 de 3"],
+        rotaBarcarena: ["Minha rota", "Escolha um simulado.", "Etapa 3 de 3"],
+        disciplinaBarcarena: ["Por disciplina", "Selecione a matéria.", "Etapa 3 de 3"],
+        cargoBarcarena: ["Por cargo", "Selecione a preparação.", "Etapa 3 de 3"],
+        abaetetubaComuns: ["Disciplinas comuns", "Escolha o treino.", "Etapa 3 de 3"],
+        abaetetubaHistoria: ["Professor de História", "Escolha o simulado.", "Etapa 3 de 3"],
+        abaetetubaMedio: ["Nível médio", "Escolha o treino.", "Etapa 3 de 3"],
+        abaetetubaSemAcesso: ["Acesso necessário", "Escolha uma rota liberada.", "Etapa 3 de 3"]
+    };
+
+    function elSimV24(id){
+        return document.getElementById(id);
+    }
+
+    function garantirMenusSimuladosV24(){
+        const card = document.querySelector("#simulados .simulados-card-principal");
+        const seletor = document.querySelector(".seletor-concurso-simulados-farol");
+
+        if(!card || !seletor || elSimV24("menuModosBarcarenaV24")){
+            return;
+        }
+
+        const menuBarcarena = document.createElement("div");
+        menuBarcarena.id = "menuModosBarcarenaV24";
+        menuBarcarena.className = "menu-fluxo-simulados-v24";
+        menuBarcarena.innerHTML = `
+            <button type="button" onclick="abrirEtapaSimuladosV24('rotaBarcarena')">
+                <span>🎯</span>
+                <div>
+                    <strong>Minha rota</strong>
+                    <small>Simulado completo ou treino rápido do cargo escolhido.</small>
+                </div>
+                <b>›</b>
+            </button>
+
+            <button type="button" onclick="abrirEtapaSimuladosV24('disciplinaBarcarena')">
+                <span>📚</span>
+                <div>
+                    <strong>Por disciplina</strong>
+                    <small>Treine uma matéria específica.</small>
+                </div>
+                <b>›</b>
+            </button>
+
+            <button type="button" onclick="abrirEtapaSimuladosV24('cargoBarcarena')">
+                <span>🎓</span>
+                <div>
+                    <strong>Por cargo</strong>
+                    <small>Faça uma prova completa da sua área.</small>
+                </div>
+                <b>›</b>
+            </button>
+        `;
+        card.insertBefore(menuBarcarena, seletor.nextSibling);
+
+        const menuAbaetetuba = document.createElement("div");
+        menuAbaetetuba.id = "menuModosAbaetetubaV24";
+        menuAbaetetuba.className = "menu-fluxo-simulados-v24";
+        card.insertBefore(menuAbaetetuba, menuBarcarena.nextSibling);
+    }
+
+    function prepararBlocosBarcarenaV24(){
+        const painel = elSimV24("painelSimuladosConcursoBarcarenaFarol");
+        if(!painel || painel.dataset.fluxoV24 === "ok"){
+            return;
+        }
+
+        painel.dataset.fluxoV24 = "ok";
+
+        const cabecalho = painel.querySelector(
+            ".cabecalho-painel-simulados-barcarena-farol"
+        );
+        if(cabecalho) cabecalho.style.display = "none";
+
+        const blocos = Array.from(painel.children);
+        const rota = elSimV24("simuladosMinhaRotaBarcarenaFarol");
+        const aviso = elSimV24("avisoEscolherRotaBarcarenaSimuladosFarol");
+
+        const blocosSimulado = Array.from(
+            painel.querySelectorAll(":scope > .bloco-simulado")
+        );
+
+        const disciplina = blocosSimulado.find(bloco =>
+            bloco.textContent.includes("Simulados por Disciplina")
+        );
+        const cargo = blocosSimulado.find(bloco =>
+            bloco.textContent.includes("Simulados por Cargo")
+        );
+
+        if(rota) rota.dataset.grupoSimuladoV24 = "rotaBarcarena";
+        if(aviso) aviso.dataset.grupoSimuladoV24 = "rotaBarcarena";
+        if(disciplina) disciplina.dataset.grupoSimuladoV24 = "disciplinaBarcarena";
+        if(cargo) cargo.dataset.grupoSimuladoV24 = "cargoBarcarena";
+    }
+
+    function atualizarMenuAbaetetubaV24(){
+        const menu = elSimV24("menuModosAbaetetubaV24");
+        if(!menu) return;
+
+        const opcoes = [
+            {
+                id: "simuladosAbaetetubaComunsSuperiorFarol",
+                etapa: "abaetetubaComuns",
+                icone: "📚",
+                titulo: "Disciplinas comuns",
+                texto: "Português, Informática e treino misto."
+            },
+            {
+                id: "simuladosAbaetetubaHistoriaFarol",
+                etapa: "abaetetubaHistoria",
+                icone: "📜",
+                titulo: "Professor de História",
+                texto: "Prova completa, específicos e eixos temáticos."
+            },
+            {
+                id: "simuladosAbaetetubaComunsMedioFarol",
+                etapa: "abaetetubaMedio",
+                icone: "🧭",
+                titulo: "Nível médio",
+                texto: "Simulados das disciplinas e cargos liberados."
+            },
+            {
+                id: "simuladosAbaetetubaSemAcessoFarol",
+                etapa: "abaetetubaSemAcesso",
+                icone: "🔒",
+                titulo: "Ver acesso disponível",
+                texto: "Consulte os cargos liberados para sua conta."
+            }
+        ];
+
+        const visiveis = opcoes.filter(opcao => {
+            const bloco = elSimV24(opcao.id);
+            return bloco && bloco.style.display !== "none";
+        });
+
+        menu.innerHTML = visiveis.map(opcao => `
+            <button type="button" onclick="abrirEtapaSimuladosV24('${opcao.etapa}')">
+                <span>${opcao.icone}</span>
+                <div>
+                    <strong>${opcao.titulo}</strong>
+                    <small>${opcao.texto}</small>
+                </div>
+                <b>›</b>
+            </button>
+        `).join("");
+
+        if(!visiveis.length){
+            menu.innerHTML = `
+                <div class="aviso-fluxo-simulado-v24">
+                    Nenhum simulado está liberado para esta conta.
+                </div>
+            `;
+        }
+    }
+
+    function esconderTelasSimuladosV24(){
+        const ids = [
+            "menuModosBarcarenaV24",
+            "menuModosAbaetetubaV24",
+            "painelSimuladosConcursoBarcarenaFarol",
+            "painelSimuladosConcursoAbaetetubaFarol"
+        ];
+
+        ids.forEach(id => {
+            const el = elSimV24(id);
+            if(el) el.style.display = "none";
+        });
+
+        const seletor = document.querySelector(
+            ".seletor-concurso-simulados-farol"
+        );
+        if(seletor) seletor.style.display = "none";
+
+        document.querySelectorAll(
+            "[data-grupo-simulado-v24]"
+        ).forEach(bloco => bloco.style.display = "none");
+
+        [
+            "simuladosAbaetetubaComunsSuperiorFarol",
+            "simuladosAbaetetubaHistoriaFarol",
+            "simuladosAbaetetubaComunsMedioFarol",
+            "simuladosAbaetetubaSemAcessoFarol"
+        ].forEach(id => {
+            const bloco = elSimV24(id);
+            if(bloco) bloco.style.display = "none";
+        });
+    }
+
+    function atualizarCabecalhoSimuladosV24(etapa){
+        const dados = titulosSimuladosV24[etapa] || titulosSimuladosV24.concurso;
+        const titulo = elSimV24("tituloFluxoSimuladosV24");
+        const descricao = elSimV24("descricaoFluxoSimuladosV24");
+        const indicador = elSimV24("etapaFluxoSimuladosV24");
+        const voltar = elSimV24("btnVoltarFluxoSimuladosV24");
+
+        if(titulo) titulo.textContent = dados[0];
+        if(descricao) descricao.textContent = dados[1];
+        if(indicador) indicador.textContent = dados[2];
+        if(voltar) voltar.style.display = etapa === "concurso" ? "none" : "grid";
+    }
+
+    function registrarHistoricoSimuladosV24(etapa, substituir = false){
+        const estado = {
+            farol: true,
+            tela: "simulados",
+            simuladosStep: etapa,
+            concursoSimulado: estadoSimuladosV24.concurso
+        };
+
+        const hash = `#simulados-${etapa}`;
+        if(substituir){
+            history.replaceState(estado, "", hash);
+        }else{
+            history.pushState(estado, "", hash);
+        }
+    }
+
+    window.abrirEtapaSimuladosV24 = function(etapa, opcoes = {}){
+        garantirMenusSimuladosV24();
+        prepararBlocosBarcarenaV24();
+        esconderTelasSimuladosV24();
+
+        estadoSimuladosV24.etapa = etapa;
+        atualizarCabecalhoSimuladosV24(etapa);
+
+        const seletor = document.querySelector(
+            ".seletor-concurso-simulados-farol"
+        );
+        const painelBarcarena =
+            elSimV24("painelSimuladosConcursoBarcarenaFarol");
+        const painelAbaetetuba =
+            elSimV24("painelSimuladosConcursoAbaetetubaFarol");
+
+        if(etapa === "concurso"){
+            if(seletor) seletor.style.display = "block";
+        }
+
+        if(etapa === "modoBarcarena"){
+            const menu = elSimV24("menuModosBarcarenaV24");
+            if(menu) menu.style.display = "grid";
+        }
+
+        if(etapa === "modoAbaetetuba"){
+            if(typeof window.atualizarInterfaceSimuladosPorConcursoFarol === "function"){
+                window.atualizarInterfaceSimuladosPorConcursoFarol("abaetetuba2026");
+            }
+
+            setTimeout(() => {
+                atualizarMenuAbaetetubaV24();
+                const menu = elSimV24("menuModosAbaetetubaV24");
+                if(menu) menu.style.display = "grid";
+            }, 20);
+        }
+
+        if([
+            "rotaBarcarena",
+            "disciplinaBarcarena",
+            "cargoBarcarena"
+        ].includes(etapa)){
+            if(painelBarcarena) painelBarcarena.style.display = "block";
+
+            painelBarcarena
+                .querySelectorAll(`[data-grupo-simulado-v24="${etapa}"]`)
+                .forEach(bloco => bloco.style.display = "block");
+        }
+
+        const mapaAbaetetuba = {
+            abaetetubaComuns: "simuladosAbaetetubaComunsSuperiorFarol",
+            abaetetubaHistoria: "simuladosAbaetetubaHistoriaFarol",
+            abaetetubaMedio: "simuladosAbaetetubaComunsMedioFarol",
+            abaetetubaSemAcesso: "simuladosAbaetetubaSemAcessoFarol"
+        };
+
+        if(mapaAbaetetuba[etapa]){
+            if(painelAbaetetuba) painelAbaetetuba.style.display = "block";
+            const bloco = elSimV24(mapaAbaetetuba[etapa]);
+            if(bloco) bloco.style.display = "block";
+        }
+
+        window.scrollTo({top: 0, behavior: "smooth"});
+
+        if(!opcoes.semHistorico){
+            registrarHistoricoSimuladosV24(
+                etapa,
+                Boolean(opcoes.substituirHistorico)
+            );
+        }
+    };
+
+    window.voltarFluxoSimuladosV24 = function(){
+        const mapa = {
+            modoBarcarena: "concurso",
+            modoAbaetetuba: "concurso",
+            rotaBarcarena: "modoBarcarena",
+            disciplinaBarcarena: "modoBarcarena",
+            cargoBarcarena: "modoBarcarena",
+            abaetetubaComuns: "modoAbaetetuba",
+            abaetetubaHistoria: "modoAbaetetuba",
+            abaetetubaMedio: "modoAbaetetuba",
+            abaetetubaSemAcesso: "modoAbaetetuba"
+        };
+
+        abrirEtapaSimuladosV24(
+            mapa[estadoSimuladosV24.etapa] || "concurso"
+        );
+    };
+
+    function instalarFluxoSimuladosV24(){
+        if(window.__fluxoSimuladosV24Instalado){
+            return;
+        }
+        window.__fluxoSimuladosV24Instalado = true;
+
+        const selecionarOriginal =
+            window.selecionarConcursoSimuladosFarol;
+
+        if(typeof selecionarOriginal === "function"){
+            window.selecionarConcursoSimuladosFarol = function(concurso){
+                estadoSimuladosV24.concurso = concurso;
+                const retorno = selecionarOriginal.apply(this, arguments);
+
+                setTimeout(() => {
+                    abrirEtapaSimuladosV24(
+                        concurso === "barcarena2026"
+                            ? "modoBarcarena"
+                            : "modoAbaetetuba"
+                    );
+                }, 30);
+
+                return retorno;
+            };
+        }
+    }
+
+    const mostrarTelaAntesSimuladosV24 = window.mostrarTela;
+
+    if(typeof mostrarTelaAntesSimuladosV24 === "function"){
+        window.mostrarTela = function(id, opcoes = {}){
+            const retorno =
+                mostrarTelaAntesSimuladosV24.apply(this, arguments);
+
+            if(id === "simulados"){
+                setTimeout(() => {
+                    garantirMenusSimuladosV24();
+                    prepararBlocosBarcarenaV24();
+                    instalarFluxoSimuladosV24();
+
+                    if(!opcoes.semHistorico){
+                        estadoSimuladosV24.concurso = "";
+                        abrirEtapaSimuladosV24("concurso", {
+                            substituirHistorico: true
+                        });
+                    }
+                }, 60);
+            }
+
+            return retorno;
+        };
+    }
+
+    window.addEventListener("popstate", evento => {
+        const estado = evento.state;
+
+        if(
+            estado &&
+            estado.tela === "simulados" &&
+            estado.simuladosStep
+        ){
+            estadoSimuladosV24.concurso =
+                estado.concursoSimulado || "";
+
+            abrirEtapaSimuladosV24(
+                estado.simuladosStep,
+                {semHistorico: true}
+            );
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        garantirMenusSimuladosV24();
+        prepararBlocosBarcarenaV24();
+        instalarFluxoSimuladosV24();
+    });
+
+})();

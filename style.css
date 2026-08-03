@@ -11725,3 +11725,221 @@ progress{
         padding:10px;
     }
 }
+
+
+/* ==========================================================
+   FAROL V24 — SIMULADOS EM ETAPAS
+========================================================== */
+
+.cabecalho-fluxo-simulados-v24{
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    align-items:start;
+    gap:12px;
+    margin-bottom:13px;
+}
+
+.cabecalho-fluxo-simulados-v24 h2{
+    margin:0 0 4px;
+}
+
+.cabecalho-fluxo-simulados-v24 p{
+    margin:0;
+    color:#66756e;
+}
+
+.btn-voltar-fluxo-simulados-v24{
+    width:42px !important;
+    height:42px;
+    min-width:42px;
+    padding:0 !important;
+    display:grid;
+    place-items:center;
+    border-radius:50% !important;
+    font-size:24px;
+}
+
+.etapa-fluxo-simulados-v24{
+    display:block;
+    margin-bottom:3px;
+    color:#087f5b;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+}
+
+.recursos-simulados-v24{
+    margin-bottom:12px;
+    border:1px solid #dce7e2;
+    border-radius:14px;
+    background:#f7faf9;
+    overflow:hidden;
+}
+
+.recursos-simulados-v24 > summary{
+    padding:10px 12px;
+    cursor:pointer;
+    list-style:none;
+    font-size:13px;
+    font-weight:800;
+    color:#355349;
+}
+
+.recursos-simulados-v24 > summary::-webkit-details-marker{
+    display:none;
+}
+
+.recursos-simulados-v24 > .recompensa-simulado-compacta{
+    margin:0 10px 8px;
+}
+
+.recursos-simulados-v24 > .atalhos-contexto-app{
+    margin:0;
+    padding:0 10px 10px;
+}
+
+.menu-fluxo-simulados-v24{
+    display:grid;
+    gap:10px;
+}
+
+.menu-fluxo-simulados-v24 > button{
+    width:100%;
+    min-height:74px;
+    margin:0 !important;
+    padding:13px !important;
+    display:grid;
+    grid-template-columns:44px 1fr 18px;
+    align-items:center;
+    gap:11px;
+    text-align:left;
+    border-radius:16px !important;
+}
+
+.menu-fluxo-simulados-v24 > button > span{
+    width:42px;
+    height:42px;
+    display:grid;
+    place-items:center;
+    border-radius:12px;
+    background:rgba(255,255,255,.2);
+    font-size:22px;
+}
+
+.menu-fluxo-simulados-v24 > button > div{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.menu-fluxo-simulados-v24 strong{
+    font-size:15px;
+}
+
+.menu-fluxo-simulados-v24 small{
+    color:inherit;
+    opacity:.76;
+    font-size:12px;
+    line-height:1.35;
+}
+
+.menu-fluxo-simulados-v24 b{
+    font-size:23px;
+}
+
+.aviso-fluxo-simulado-v24{
+    padding:15px;
+    border-radius:14px;
+    background:#f4f7f6;
+    color:#52625d;
+    text-align:center;
+}
+
+#painelSimuladosConcursoBarcarenaFarol,
+#painelSimuladosConcursoAbaetetubaFarol{
+    margin-top:0;
+}
+
+@media(max-width:768px){
+
+    #simulados{
+        padding-top:8px;
+    }
+
+    #simulados > .card{
+        padding:14px !important;
+    }
+
+    .cabecalho-fluxo-simulados-v24{
+        grid-template-columns:auto 1fr;
+    }
+
+    .cabecalho-fluxo-simulados-v24 .selo-simulados{
+        grid-column:2;
+        justify-self:start;
+        margin-top:2px;
+    }
+
+    .cabecalho-fluxo-simulados-v24 h2{
+        font-size:21px;
+    }
+
+    .cabecalho-fluxo-simulados-v24 p{
+        font-size:13px;
+    }
+
+    .seletor-concurso-simulados-farol{
+        padding:0 !important;
+        border:0 !important;
+        box-shadow:none !important;
+        background:transparent !important;
+    }
+
+    .cabecalho-seletor-simulados-farol{
+        display:none !important;
+    }
+
+    .grid-concursos-simulados-farol,
+    .grid-simulados-farol,
+    .grid-simulados-comuns-v25{
+        grid-template-columns:1fr !important;
+    }
+
+    .card-concurso-simulado-farol{
+        min-height:72px;
+        padding:12px !important;
+    }
+
+    .card-concurso-simulado-farol small,
+    .card-concurso-simulado-farol .estado-concurso-simulado-farol{
+        font-size:11px;
+    }
+
+    .menu-fluxo-simulados-v24 > button{
+        min-height:70px;
+        padding:12px !important;
+        grid-template-columns:40px 1fr 16px;
+    }
+
+    .menu-fluxo-simulados-v24 > button > span{
+        width:39px;
+        height:39px;
+        font-size:20px;
+    }
+
+    #painelSimuladosConcursoBarcarenaFarol .bloco-simulado,
+    #painelSimuladosConcursoAbaetetubaFarol .bloco-simulado{
+        margin:0 !important;
+        padding:0 !important;
+        border:0 !important;
+        box-shadow:none !important;
+        background:transparent !important;
+    }
+
+    #painelSimuladosConcursoBarcarenaFarol .titulo-bloco-simulado p,
+    #painelSimuladosConcursoAbaetetubaFarol .cabecalho-simulado-ivin p{
+        font-size:13px;
+        line-height:1.4;
+    }
+}

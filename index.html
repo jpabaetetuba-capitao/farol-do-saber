@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=69-fluxo-estudar">
+    <link rel="stylesheet" href="style.css?v=70-fluxo-simulados">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -2782,10 +2782,21 @@ Li e revisei o mapa mental.
 
     <div class="card simulados-card-principal">
 
-        <div class="simulados-topo">
+        <div id="cabecalhoFluxoSimuladosV24" class="cabecalho-fluxo-simulados-v24">
+            <button
+                id="btnVoltarFluxoSimuladosV24"
+                class="btn-voltar-fluxo-simulados-v24"
+                type="button"
+                onclick="voltarFluxoSimuladosV24()"
+                style="display:none;"
+                aria-label="Voltar">
+                ←
+            </button>
+
             <div>
-                <h2>📝 Simulados</h2>
-                <p>Escolha um modo e comece.</p>
+                <span id="etapaFluxoSimuladosV24" class="etapa-fluxo-simulados-v24"></span>
+                <h2 id="tituloFluxoSimuladosV24">📝 Simulados</h2>
+                <p id="descricaoFluxoSimuladosV24">Escolha o concurso.</p>
             </div>
 
             <span class="selo-simulados" title="Os simulados geram Pontos de Luz">
@@ -2793,12 +2804,15 @@ Li e revisei o mapa mental.
             </span>
         </div>
 
-        <details class="recompensa-simulado-compacta">
-            <summary>⭐ Recompensas do simulado</summary>
-            <p>Ganhe 100 Pontos de Luz e bônus com bom desempenho.</p>
-        </details>
+        <details class="recursos-simulados-v24">
+            <summary>Mais recursos</summary>
 
-        <div class="atalhos-contexto-app atalhos-simulados-app">
+            <details class="recompensa-simulado-compacta">
+                <summary>⭐ Recompensas</summary>
+                <p>Ganhe 100 Pontos de Luz e bônus com bom desempenho.</p>
+            </details>
+
+            <div class="atalhos-contexto-app atalhos-simulados-app">
             <button onclick="mostrarTela('provasAnteriores')" aria-label="Abrir provas anteriores">
                 <span>📄</span><small>Provas</small>
             </button>
@@ -2808,8 +2822,8 @@ Li e revisei o mapa mental.
             <button onclick="mostrarTela('jogosFarol'); abrirTelaJogosFarol();" aria-label="Abrir jogos">
                 <span>🎮</span><small>Jogos</small>
             </button>
-        </div>
-
+            </div>
+        </details>
 
         <div class="seletor-concurso-simulados-farol">
             <div class="cabecalho-seletor-simulados-farol">
@@ -5279,7 +5293,7 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=68-fluxo-estudar"></script>
+<script src="app.js?v=69-fluxo-simulados"></script>
 <script src="admin.js?v=42-historico-atividades"></script>
 
 
