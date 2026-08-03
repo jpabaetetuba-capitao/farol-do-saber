@@ -26798,6 +26798,7 @@ function prepararArenaVisualFarol(){
 
     const grupos = gruposArenaVisualFarol();
     const valorAnterior = selectDisciplina.value;
+    const topicoAnterior = selectTopico.value;
 
     selectDisciplina.innerHTML =
         '<option value="">Escolha a disciplina</option>' +
@@ -26815,6 +26816,16 @@ function prepararArenaVisualFarol(){
     }
 
     atualizarTopicosArenaVisualFarol();
+
+    if(
+        topicoAnterior &&
+        Array.from(selectTopico.options)
+            .some(option => option.value === topicoAnterior)
+    ){
+        selectTopico.value = topicoAnterior;
+    }
+
+    atualizarResumoArenaVisualFarol();
 }
 
 function atualizarTopicosArenaVisualFarol(){
@@ -27213,6 +27224,10 @@ async function criarArenaVisualFarol(){
             .set(sala);
 
         acompanharArenaAoVivoFarol(codigo);
+
+        if(typeof abrirFluxoCompeticaoFarolV21 === "function"){
+            abrirFluxoCompeticaoFarolV21("arenaSala");
+        }
 
         mostrarToast(
             "Arena criada. Compartilhe o código com os participantes."
@@ -30696,8 +30711,23 @@ function renderizarSalaArenaAoVivoFarol(){
         btnConfig.type = "button";
         btnConfig.className = "btn-continuar-fluxo-v21";
         btnConfig.textContent = "Revisar Arena";
-        btnConfig.onclick = () =>
+        btnConfig.onclick = () => {
+            const config = obterConfiguracaoArenaVisualFarol();
+
+            if(!config.disciplina){
+                mostrarToast("Escolha a disciplina da Arena.");
+                abrirFluxoCompeticaoFarolV21("arenaDisciplina");
+                return;
+            }
+
+            if(!config.topicoNome){
+                mostrarToast("Escolha o tópico da Arena.");
+                abrirFluxoCompeticaoFarolV21("arenaTopico");
+                return;
+            }
+
             abrirFluxoCompeticaoFarolV21("arenaConfirmar");
+        };
         etapaConfig.appendChild(btnConfig);
 
         envolver(
