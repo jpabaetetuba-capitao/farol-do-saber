@@ -16070,3 +16070,81 @@ body.efeito-ondas-v65 #conteudoPerfilAluno .perfil-cabecalho,
         gap:7px;
     }
 }
+
+
+/* ==========================================================
+   FAROL V70 — CABEÇALHO MOBILE EM DUAS LINHAS
+========================================================== */
+
+@media(max-width:768px){
+    .inicio-app-cabecalho{
+        display:grid !important;
+        grid-template-columns:minmax(0,1fr) !important;
+        align-items:center !important;
+        gap:9px !important;
+        padding:13px 15px !important;
+    }
+
+    .inicio-app-cabecalho > div:first-child{
+        width:100%;
+        min-width:0;
+    }
+
+    .inicio-app-cabecalho h2{
+        margin-top:3px !important;
+        font-size:19px !important;
+        line-height:1.2 !important;
+        white-space:nowrap !important;
+    }
+
+    .acoes-topo-mobile-v69{
+        width:100%;
+        display:flex !important;
+        justify-content:flex-end !important;
+        align-items:center !important;
+        gap:9px !important;
+    }
+
+    .saudacao-sino-mobile-v69{
+        min-width:0;
+        display:flex !important;
+        align-items:center !important;
+        gap:8px !important;
+    }
+
+    .saudacao-sino-mobile-v69 > span{
+        max-width:190px !important;
+        font-size:12px !important;
+        line-height:1.2 !important;
+    }
+}
+
+@media(max-width:420px){
+    .inicio-app-cabecalho h2{
+        font-size:18px !important;
+    }
+
+    .acoes-topo-mobile-v69{
+        gap:7px !important;
+    }
+
+    .saudacao-sino-mobile-v69 > span{
+        max-width:155px !important;
+        font-size:11px !important;
+    }
+}
+
+@media(max-width:350px){
+    .inicio-app-cabecalho{
+        padding-left:12px !important;
+        padding-right:12px !important;
+    }
+
+    .inicio-app-cabecalho h2{
+        font-size:17px !important;
+    }
+
+    .saudacao-sino-mobile-v69 > span{
+        max-width:120px !important;
+    }
+}
