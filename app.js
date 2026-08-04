@@ -31936,7 +31936,15 @@ function renderizarSalaArenaAoVivoFarol(){
         }
 
         if(voltar){
-            voltar.style.display = etapa === "inicio" ? "none" : "grid";
+            // No menu inicial, o botão leva para a tela Início.
+            // Nas subtelas, ele retorna ao menu do Perfil.
+            voltar.style.display = "grid";
+            voltar.setAttribute(
+                "aria-label",
+                etapa === "inicio"
+                    ? "Voltar para o Início"
+                    : "Voltar para o menu do Perfil"
+            );
         }
     }
 
@@ -32534,7 +32542,11 @@ function renderizarSalaArenaAoVivoFarol(){
             titulo.textContent = "🎮 Jogos";
             descricao.textContent = "Escolha um jogo.";
             indicador.textContent = "Etapa 1 de 3";
-            voltar.style.display = "none";
+            voltar.style.display = "grid";
+            voltar.setAttribute(
+                "aria-label",
+                "Voltar para o Início"
+            );
         }
 
         if(etapa === "config"){
@@ -32542,6 +32554,10 @@ function renderizarSalaArenaAoVivoFarol(){
             descricao.textContent = "Escolha o modo ou a disciplina.";
             indicador.textContent = "Etapa 2 de 3";
             voltar.style.display = "grid";
+            voltar.setAttribute(
+                "aria-label",
+                "Voltar para a lista de Jogos"
+            );
         }
 
         if(etapa === "jogando"){
@@ -33458,7 +33474,11 @@ function renderizarSalaArenaAoVivoFarol(){
             titulo.textContent = "🛒 Loja do Farol";
             descricao.textContent = "Escolha uma categoria.";
             indicador.textContent = "Etapa 1 de 3";
-            voltar.style.display = "none";
+            voltar.style.display = "grid";
+            voltar.setAttribute(
+                "aria-label",
+                "Voltar para o Início"
+            );
         }
 
         if(etapa === "itens"){
@@ -33466,6 +33486,10 @@ function renderizarSalaArenaAoVivoFarol(){
             descricao.textContent = "Escolha um item.";
             indicador.textContent = "Etapa 2 de 3";
             voltar.style.display = "grid";
+            voltar.setAttribute(
+                "aria-label",
+                "Voltar para as categorias da Loja"
+            );
         }
 
         if(etapa === "detalhe"){
@@ -33987,7 +34011,11 @@ function renderizarSalaArenaAoVivoFarol(){
             descricao.textContent = "Escolha uma opção.";
             indicador.textContent = "";
             indicador.style.display = "none";
-            voltar.style.display = "none";
+            voltar.style.display = "grid";
+            voltar.setAttribute(
+                "aria-label",
+                "Voltar para o Início"
+            );
             return;
         }
 
