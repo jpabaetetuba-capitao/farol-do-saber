@@ -3127,13 +3127,6 @@ const percentual =
     
     <div class="card card-questao-foco-v29">
 
-        <button
-            type="button"
-            class="btn-voltar-questoes-v45"
-            onclick="voltarParaAssuntos()">
-            ← Voltar
-        </button>
-
         <div class="cabecalho-questao-foco-v29">
             <span>Questão ${questaoAtual + 1} de ${questoes.length}</span>
             <strong>${percentual}%</strong>
@@ -3220,7 +3213,10 @@ ${q.afirmacoes.map(item => `
     `;
 
     requestAnimationFrame(() => {
-        const inicio = document.getElementById("inicioQuestaoFarol");
+        const inicio = document.querySelector(
+            "#areaQuestao .card-questao-foco-v29"
+        );
+
         if(inicio){
             inicio.scrollIntoView({
                 behavior: "smooth",
@@ -3311,10 +3307,10 @@ if (Number(resposta.value) === q.correta) {
                 <p>${q.dicaBanca || "Sem dica cadastrada."}</p>
             </div>
 
-            <div class="acoes-feedback-questao-v45">
+            <div class="acoes-feedback-questao-v47">
                 <button
                     type="button"
-                    class="btn-voltar-feedback-v45"
+                    class="btn-voltar-feedback-v47"
                     onclick="voltarParaAssuntos()">
                     ← Voltar
                 </button>
@@ -3644,10 +3640,10 @@ const nomeDisciplina =
                 <p>${q.dicaBanca || "Sem dica cadastrada."}</p>
             </div>
 
-            <div class="acoes-feedback-questao-v45">
+            <div class="acoes-feedback-questao-v47">
                 <button
                     type="button"
-                    class="btn-voltar-feedback-v45"
+                    class="btn-voltar-feedback-v47"
                     onclick="voltarParaAssuntos()">
                     ← Voltar
                 </button>

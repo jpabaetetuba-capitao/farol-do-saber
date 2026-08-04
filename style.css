@@ -13809,56 +13809,46 @@ progress{
 }
 
 
+
+
 /* ==========================================================
-   FAROL V45 — BOTÃO VOLTAR NAS QUESTÕES DAS DISCIPLINAS
+   FAROL V47 — NAVEGAÇÃO INFERIOR DAS QUESTÕES
 ========================================================== */
 
-.btn-voltar-questoes-v45{
-    width:auto !important;
-    min-height:38px;
-    margin:0 0 10px !important;
-    padding:8px 13px !important;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    background:#eef5f1 !important;
-    color:#23513d !important;
-    border:1px solid #cfe1d7 !important;
-    border-radius:12px !important;
-    font-size:13px;
-    font-weight:800;
-}
-
-.acoes-feedback-questao-v45{
+.acoes-feedback-questao-v47{
     display:grid;
-    grid-template-columns:minmax(110px, .7fr) minmax(170px, 1.3fr);
-    gap:9px;
+    grid-template-columns:minmax(110px, .8fr) minmax(170px, 1.2fr);
+    gap:10px;
     margin-top:14px;
 }
 
-.acoes-feedback-questao-v45 button{
+.acoes-feedback-questao-v47 button{
     width:100%;
     min-height:48px;
     margin:0 !important;
 }
 
-.btn-voltar-feedback-v45{
+.btn-voltar-feedback-v47{
     background:#eef5f1 !important;
     color:#23513d !important;
     border:1px solid #cfe1d7 !important;
 }
 
-@media(max-width:520px){
+.acoes-feedback-questao-v47 .btn-proxima-feedback{
+    background:#1f7a45 !important;
+    color:#ffffff !important;
+}
 
-    .acoes-feedback-questao-v45{
-        grid-template-columns:1fr;
+@media(max-width:430px){
+
+    .acoes-feedback-questao-v47{
+        grid-template-columns:minmax(96px, .82fr) minmax(150px, 1.18fr);
+        gap:8px;
     }
 
-    .acoes-feedback-questao-v45 .btn-proxima-feedback{
-        order:1;
-    }
-
-    .acoes-feedback-questao-v45 .btn-voltar-feedback-v45{
-        order:2;
+    .acoes-feedback-questao-v47 button{
+        min-height:46px;
+        padding:10px 8px !important;
+        font-size:12px;
     }
 }
