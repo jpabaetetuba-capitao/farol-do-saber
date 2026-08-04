@@ -1718,3 +1718,448 @@
         }
     };
 })();
+
+
+// ==========================================================
+// FAROL ADMIN V43 — HISTÓRICO DE ARENAS
+// ==========================================================
+
+(function(){
+    "use strict";
+
+    let historicoArenasCacheFarol = [];
+    let historicoArenasCarregadoFarol = false;
+
+    function bancoHistoricoArenasFarol(){
+        return window.dbAdminFarol || null;
+    }
+
+    function textoSeguroArenaAdminFarol(valor){
+        if(typeof window.textoSeguroAdminFarol === "function"){
+            return window.textoSeguroAdminFarol(valor);
+        }
+
+        return String(valor || "")
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("'", "&#039;");
+    }
+
+    function dataArenaAdminFarol(valor){
+        if(!valor){
+            return null;
+        }
+
+        if(typeof valor.toDate === "function"){
+            return valor.toDate();
+        }
+
+        if(typeof valor.seconds === "number"){
+            return new Date(valor.seconds * 1000);
+        }
+
+        const data = new Date(valor);
+        return Number.isNaN(data.getTime()) ? null : data;
+    }
+
+    function formatarDataArenaAdminFarol(valor){
+        const data = dataArenaAdminFarol(valor);
+
+        if(!data){
+            return "Data não registrada";
+        }
+
+        return data.toLocaleString("pt-BR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+    }
+
+    function formatarDuracaoArenaAdminFarol(ms){
+        const totalSegundos =
+            Math.max(0, Math.floor(Number(ms || 0) / 1000));
+
+        if(totalSegundos < 60){
+            return `${totalSegundos}s`;
+        }
+
+        const minutos = Math.floor(totalSegundos / 60);
+        const segundos = totalSegundos % 60;
+
+        return segundos
+            ? `${minutos}min ${segundos}s`
+            : `${minutos}min`;
+    }
+
+    function normalizarArenaAdminFarol(valor){
+        return String(valor || "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase();
+    }
+
+    function classeStatusArenaAdminFarol(status){
+        if(status === "finalizada"){
+            return "finalizada";
+        }
+
+        if(status === "cancelada"){
+            return "cancelada";
+        }
+
+        return "encerrada";
+    }
+
+    function tituloStatusArenaAdminFarol(status){
+        if(status === "finalizada"){
+            return "Finalizada";
+        }
+
+        if(status === "cancelada"){
+            return "Cancelada";
+        }
+
+        return "Encerrada";
+    }
+
+    function renderizarHistoricoArenasAdminFarol(lista){
+        const area =
+            document.getElementById("listaHistoricoArenasFarol");
+
+        const resumo =
+            document.getElementById("resumoHistoricoArenasFarol");
+
+        if(!area || !resumo){
+            return;
+        }
+
+        resumo.textContent =
+            `${lista.length} Arena(s) encontrada(s)`;
+
+        if(!lista.length){
+            area.innerHTML = `
+                <div class="admin-lista-vazia">
+                    <span>🏟️</span>
+                    <h3>Nenhuma Arena encontrada</h3>
+                    <p>
+                        As partidas concluídas depois desta atualização
+                        aparecerão aqui.
+                    </p>
+                </div>
+            `;
+            return;
+        }
+
+        area.innerHTML = lista.map(arena => {
+            const participantes =
+                Array.isArray(arena.classificacao)
+                ? arena.classificacao
+                : Array.isArray(arena.participantes)
+                    ? arena.participantes
+                    : [];
+
+            const vencedor =
+                arena.vencedorNome ||
+                (
+                    arena.vencedores &&
+                    arena.vencedores[0] &&
+                    arena.vencedores[0].nome
+                ) ||
+                "Não definido";
+
+            return `
+                <article class="item-historico-arena-v51">
+                    <div class="cabecalho-historico-arena-v51">
+                        <div>
+                            <span class="status-historico-arena-v51 ${classeStatusArenaAdminFarol(arena.status)}">
+                                ${tituloStatusArenaAdminFarol(arena.status)}
+                            </span>
+                            <h4>${textoSeguroArenaAdminFarol(arena.codigo || arena.id)}</h4>
+                        </div>
+
+                        <time>
+                            ${formatarDataArenaAdminFarol(
+                                arena.finalizadaEm ||
+                                arena.registradoEm
+                            )}
+                        </time>
+                    </div>
+
+                    <div class="grade-resumo-arena-v51">
+                        <span>
+                            <small>Disciplina</small>
+                            <strong>${textoSeguroArenaAdminFarol(arena.disciplina || "Não informada")}</strong>
+                        </span>
+                        <span>
+                            <small>Tópico</small>
+                            <strong>${textoSeguroArenaAdminFarol(arena.topicoNome || arena.topico || "Não informado")}</strong>
+                        </span>
+                        <span>
+                            <small>Participantes</small>
+                            <strong>${Number(arena.totalParticipantes || participantes.length || 0)}</strong>
+                        </span>
+                        <span>
+                            <small>Vencedor</small>
+                            <strong>${textoSeguroArenaAdminFarol(vencedor)}</strong>
+                        </span>
+                        <span>
+                            <small>Duração</small>
+                            <strong>${formatarDuracaoArenaAdminFarol(arena.duracaoMs)}</strong>
+                        </span>
+                    </div>
+
+                    <details class="detalhes-historico-arena-v51">
+                        <summary>Ver resultado completo</summary>
+
+                        <div class="configuracao-historico-arena-v51">
+                            <span>
+                                Criador:
+                                <strong>${textoSeguroArenaAdminFarol(arena.criadorNome || arena.criadoPor || "Não informado")}</strong>
+                            </span>
+                            <span>
+                                Questões:
+                                <strong>${Number(arena.quantidadeQuestoes || 0)}</strong>
+                            </span>
+                            <span>
+                                Tempo:
+                                <strong>${Number(arena.tempoPorQuestao || 0)}s</strong>
+                            </span>
+                        </div>
+
+                        <div class="classificacao-historico-arena-v51">
+                            ${participantes.map((jogador, indice) => `
+                                <div>
+                                    <b>${Number(jogador.posicao || indice + 1)}º</b>
+                                    <span>
+                                        <strong>${textoSeguroArenaAdminFarol(jogador.nome || "Aluno")}</strong>
+                                        <small>${textoSeguroArenaAdminFarol(jogador.email || "")}</small>
+                                    </span>
+                                    <span>
+                                        <strong>${Number(jogador.pontos || 0)} pts</strong>
+                                        <small>
+                                            ${Number(jogador.acertos || 0)} acertos •
+                                            ${Number(jogador.erros || 0)} erros
+                                        </small>
+                                    </span>
+                                </div>
+                            `).join("")}
+                        </div>
+
+                        ${
+                            arena.motivoEncerramento
+                            ? `
+                                <p class="motivo-historico-arena-v51">
+                                    <strong>Motivo:</strong>
+                                    ${textoSeguroArenaAdminFarol(arena.motivoEncerramento)}
+                                </p>
+                            `
+                            : ""
+                        }
+                    </details>
+                </article>
+            `;
+        }).join("");
+    }
+
+    window.filtrarHistoricoArenasAdminFarol = function(){
+        const busca = normalizarArenaAdminFarol(
+            document.getElementById(
+                "filtroHistoricoArenaBuscaFarol"
+            )?.value
+        );
+
+        const status = String(
+            document.getElementById(
+                "filtroHistoricoArenaStatusFarol"
+            )?.value || ""
+        );
+
+        const lista = historicoArenasCacheFarol.filter(arena => {
+            if(status && arena.status !== status){
+                return false;
+            }
+
+            if(!busca){
+                return true;
+            }
+
+            const participantes =
+                Array.isArray(arena.participantes)
+                ? arena.participantes
+                : [];
+
+            const texto = normalizarArenaAdminFarol([
+                arena.codigo,
+                arena.criadorNome,
+                arena.disciplina,
+                arena.topico,
+                arena.topicoNome,
+                arena.vencedorNome,
+                ...participantes.flatMap(item => [
+                    item.nome,
+                    item.email
+                ])
+            ].join(" "));
+
+            return texto.includes(busca);
+        });
+
+        renderizarHistoricoArenasAdminFarol(lista);
+    };
+
+    window.carregarHistoricoArenasAdminFarol =
+        async function(forcar = false){
+
+        if(
+            !window.sessaoAdminFarolConfirmada ||
+            !window.sessaoAdminFarolConfirmada()
+        ){
+            return;
+        }
+
+        if(historicoArenasCarregadoFarol && !forcar){
+            window.filtrarHistoricoArenasAdminFarol();
+            return;
+        }
+
+        const banco = bancoHistoricoArenasFarol();
+        const area =
+            document.getElementById("listaHistoricoArenasFarol");
+
+        if(!banco || !area){
+            return;
+        }
+
+        area.innerHTML = `
+            <div class="admin-lista-vazia">
+                <span>⏳</span>
+                <h3>Carregando histórico das Arenas...</h3>
+            </div>
+        `;
+
+        try{
+            const snapshot = await banco
+                .collection("historicoArenas")
+                .limit(200)
+                .get();
+
+            historicoArenasCacheFarol = [];
+
+            snapshot.forEach(doc => {
+                historicoArenasCacheFarol.push({
+                    id: doc.id,
+                    ...(doc.data() || {})
+                });
+            });
+
+            historicoArenasCacheFarol.sort((a, b) => {
+                const dataA =
+                    dataArenaAdminFarol(
+                        a.finalizadaEm || a.registradoEm
+                    )?.getTime() || 0;
+
+                const dataB =
+                    dataArenaAdminFarol(
+                        b.finalizadaEm || b.registradoEm
+                    )?.getTime() || 0;
+
+                return dataB - dataA;
+            });
+
+            historicoArenasCarregadoFarol = true;
+            window.filtrarHistoricoArenasAdminFarol();
+
+        }catch(erro){
+            console.error(
+                "Erro ao carregar histórico das Arenas:",
+                erro
+            );
+
+            area.innerHTML = `
+                <div class="admin-lista-vazia">
+                    <span>⚠️</span>
+                    <h3>Não foi possível carregar o histórico</h3>
+                    <p>
+                        Verifique as regras do Firestore e publique
+                        o arquivo de regras atualizado.
+                    </p>
+                </div>
+            `;
+        }
+    };
+
+    const mostrarAbaAntesHistoricoArena =
+        window.mostrarAbaAcessosFarol;
+
+    window.mostrarAbaAcessosFarol = function(aba){
+        const historico =
+            document.getElementById("abaHistoricoArenasFarol");
+
+        const botaoHistorico =
+            document.getElementById(
+                "btnAbaHistoricoArenasFarol"
+            );
+
+        if(aba !== "historicoArenas"){
+            if(historico){
+                historico.style.display = "none";
+            }
+
+            if(botaoHistorico){
+                botaoHistorico.classList.remove("ativa");
+            }
+
+            if(typeof mostrarAbaAntesHistoricoArena === "function"){
+                return mostrarAbaAntesHistoricoArena
+                    .apply(this, arguments);
+            }
+
+            return;
+        }
+
+        if(
+            !window.sessaoAdminFarolConfirmada ||
+            !window.sessaoAdminFarolConfirmada()
+        ){
+            return;
+        }
+
+        [
+            "abaAcessosLiberadosFarol",
+            "abaEditarAcessoFarol",
+            "abaAlunosOnlineFarol"
+        ].forEach(id => {
+            const painel = document.getElementById(id);
+            if(painel){
+                painel.style.display = "none";
+            }
+        });
+
+        [
+            "btnAbaLiberadosFarol",
+            "btnAbaEditarFarol",
+            "btnAbaOnlineFarol"
+        ].forEach(id => {
+            const botao = document.getElementById(id);
+            if(botao){
+                botao.classList.remove("ativa");
+            }
+        });
+
+        if(historico){
+            historico.style.display = "block";
+        }
+
+        if(botaoHistorico){
+            botaoHistorico.classList.add("ativa");
+        }
+
+        window.carregarHistoricoArenasAdminFarol();
+    };
+
+})();

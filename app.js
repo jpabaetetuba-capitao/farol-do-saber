@@ -34513,3 +34513,219 @@ window.selecionarConcursoArenaV40 = function(concurso){
     }
 
 })();
+
+
+// ==========================================================
+// FAROL V51 — HISTÓRICO ADMINISTRATIVO DAS ARENAS
+// ==========================================================
+
+(function(){
+
+    const historicosArenaSalvosV51 = new Set();
+
+    function dataEmMilissegundosArenaV51(valor){
+        if(!valor){
+            return 0;
+        }
+
+        if(typeof valor.toMillis === "function"){
+            return valor.toMillis();
+        }
+
+        if(typeof valor.toDate === "function"){
+            return valor.toDate().getTime();
+        }
+
+        if(typeof valor.seconds === "number"){
+            return valor.seconds * 1000;
+        }
+
+        const numero = Number(valor);
+        return Number.isFinite(numero) ? numero : 0;
+    }
+
+    function classificacaoArenaV51(sala){
+        return Object.values((sala && sala.participantes) || {})
+            .map(participante => ({
+                uid: String(participante.uid || ""),
+                nome: String(
+                    participante.nomeCompleto ||
+                    participante.nome ||
+                    "Aluno"
+                ),
+                email: String(participante.email || ""),
+                pontos: Number(participante.pontos || 0),
+                acertos: Number(participante.acertosArena || 0),
+                erros: Number(participante.errosArena || 0),
+                anfitriao:
+                    String(participante.uid || "") ===
+                    String(sala.criadoPor || "")
+            }))
+            .sort((a, b) =>
+                b.pontos - a.pontos ||
+                b.acertos - a.acertos ||
+                a.erros - b.erros ||
+                a.nome.localeCompare(b.nome, "pt-BR")
+            )
+            .map((participante, indice) => ({
+                ...participante,
+                posicao: indice + 1
+            }));
+    }
+
+    async function salvarHistoricoArenaV51(sala){
+        if(
+            !sala ||
+            !["finalizada", "encerrada", "cancelada"].includes(sala.status) ||
+            typeof auth === "undefined" ||
+            !auth.currentUser ||
+            typeof db === "undefined"
+        ){
+            return;
+        }
+
+        const codigo = String(
+            sala.codigo ||
+            sala.id ||
+            arenaSalaAtualCodigoFarol ||
+            ""
+        ).trim();
+
+        if(
+            !codigo ||
+            String(sala.criadoPor || "") !== auth.currentUser.uid ||
+            historicosArenaSalvosV51.has(codigo)
+        ){
+            return;
+        }
+
+        historicosArenaSalvosV51.add(codigo);
+
+        const classificacao = classificacaoArenaV51(sala);
+        const maiorPontuacao =
+            classificacao.length
+            ? classificacao[0].pontos
+            : 0;
+
+        const vencedores = classificacao
+            .filter(item => item.pontos === maiorPontuacao)
+            .map(item => ({
+                uid: item.uid,
+                nome: item.nome,
+                email: item.email,
+                pontos: item.pontos
+            }));
+
+        const inicioMs =
+            dataEmMilissegundosArenaV51(sala.iniciadaEm);
+
+        const fimMs =
+            dataEmMilissegundosArenaV51(
+                sala.finalizadaEm ||
+                sala.encerradaEm ||
+                sala.canceladaEm
+            ) || Date.now();
+
+        const participantes = classificacao.map(item => ({
+            uid: item.uid,
+            nome: item.nome,
+            email: item.email,
+            pontos: item.pontos,
+            acertos: item.acertos,
+            erros: item.erros,
+            posicao: item.posicao,
+            anfitriao: item.anfitriao
+        }));
+
+        try{
+            await db
+                .collection("historicoArenas")
+                .doc(codigo)
+                .set({
+                    codigo: codigo,
+                    tipo: "arena",
+                    status: String(sala.status || ""),
+                    motivoEncerramento:
+                        String(sala.motivoEncerramento || ""),
+                    criadoPor: String(sala.criadoPor || ""),
+                    criadorNome: String(
+                        (
+                            sala.participantes &&
+                            sala.participantes[sala.criadoPor] &&
+                            (
+                                sala.participantes[sala.criadoPor].nomeCompleto ||
+                                sala.participantes[sala.criadoPor].nome
+                            )
+                        ) || ""
+                    ),
+                    concurso: String(sala.concurso || ""),
+                    disciplina: String(sala.disciplina || ""),
+                    topico: String(sala.topico || ""),
+                    topicoNome: String(sala.topicoNome || ""),
+                    quantidadeQuestoes:
+                        Number(sala.quantidadeQuestoes || 0),
+                    tempoPorQuestao:
+                        Number(sala.tempoPorQuestao || 0),
+                    totalParticipantes: participantes.length,
+                    participantes: participantes,
+                    participanteUids:
+                        participantes.map(item => item.uid),
+                    classificacao: classificacao,
+                    vencedores: vencedores,
+                    vencedorNome:
+                        vencedores.length === 1
+                        ? vencedores[0].nome
+                        : vencedores.length > 1
+                            ? "Empate"
+                            : "",
+                    iniciadaEm: sala.iniciadaEm || null,
+                    finalizadaEm:
+                        sala.finalizadaEm ||
+                        sala.encerradaEm ||
+                        sala.canceladaEm ||
+                        firebase.firestore.FieldValue.serverTimestamp(),
+                    duracaoMs:
+                        inicioMs > 0
+                        ? Math.max(0, fimMs - inicioMs)
+                        : 0,
+                    registradoEm:
+                        firebase.firestore.FieldValue.serverTimestamp(),
+                    atualizadoEm: Date.now()
+                }, { merge: true });
+
+        }catch(erro){
+            historicosArenaSalvosV51.delete(codigo);
+
+            console.error(
+                "Erro ao salvar histórico da Arena:",
+                erro
+            );
+        }
+    }
+
+    window.salvarHistoricoArenaFarol =
+        salvarHistoricoArenaV51;
+
+    const renderizarSalaAntesV51 =
+        window.renderizarSalaArenaAoVivoFarol;
+
+    if(typeof renderizarSalaAntesV51 === "function"){
+        window.renderizarSalaArenaAoVivoFarol = function(){
+            const resultado =
+                renderizarSalaAntesV51.apply(this, arguments);
+
+            const sala = arenaSalaAtualFarol;
+
+            if(
+                sala &&
+                ["finalizada", "encerrada", "cancelada"]
+                    .includes(sala.status)
+            ){
+                salvarHistoricoArenaV51(sala);
+            }
+
+            return resultado;
+        };
+    }
+
+})();

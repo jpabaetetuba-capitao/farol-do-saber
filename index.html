@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=87-arena-avanco-automatico">
+    <link rel="stylesheet" href="style.css?v=88-historico-arenas-admin">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -5121,6 +5121,12 @@ Li e revisei o mapa mental.
                 🟢 Alunos on-line
                 <span id="contadorOnlineAbaFarol" class="contador-online-aba">0</span>
             </button>
+            <button
+                id="btnAbaHistoricoArenasFarol"
+                class="aba-painel-admin"
+                onclick="mostrarAbaAcessosFarol('historicoArenas')">
+                🏟️ Histórico de Arenas
+            </button>
         </div>
 
         <div id="abaAcessosLiberadosFarol" class="conteudo-aba-admin">
@@ -5168,6 +5174,58 @@ Li e revisei o mapa mental.
                 Digite o e-mail de uma conta cadastrada ou escolha um aluno na lista de acessos liberados.
             </div>
         </div>
+
+
+        <section
+            id="abaHistoricoArenasFarol"
+            class="conteudo-aba-admin historico-arenas-admin-v51"
+            style="display:none;">
+
+            <div class="historico-arenas-topo-v51">
+                <div>
+                    <h3>🏟️ Histórico de Arenas</h3>
+                    <p>
+                        Consulte partidas concluídas, encerradas ou canceladas.
+                        Esta área é visível somente para o administrador.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    onclick="carregarHistoricoArenasAdminFarol(true)">
+                    🔄 Atualizar
+                </button>
+            </div>
+
+            <div class="filtros-historico-arenas-v51">
+                <input
+                    id="filtroHistoricoArenaBuscaFarol"
+                    type="search"
+                    placeholder="Código, aluno, disciplina ou tópico"
+                    oninput="filtrarHistoricoArenasAdminFarol()">
+
+                <select
+                    id="filtroHistoricoArenaStatusFarol"
+                    onchange="filtrarHistoricoArenasAdminFarol()">
+                    <option value="">Todos os status</option>
+                    <option value="finalizada">Finalizadas</option>
+                    <option value="encerrada">Encerradas</option>
+                    <option value="cancelada">Canceladas</option>
+                </select>
+            </div>
+
+            <div
+                id="resumoHistoricoArenasFarol"
+                class="resumo-historico-arenas-v51">
+                Nenhuma consulta realizada.
+            </div>
+
+            <div
+                id="listaHistoricoArenasFarol"
+                class="lista-historico-arenas-v51">
+            </div>
+
+        </section>
 
     
 <section
@@ -5290,8 +5348,8 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=90-arena-avanco-corrigido"></script>
-<script src="admin.js?v=42-historico-atividades"></script>
+<script src="app.js?v=91-historico-arenas-admin"></script>
+<script src="admin.js?v=43-historico-arenas-admin"></script>
 
 
 <script src="./pwa.js?v=17-atualizacao-segura"></script>

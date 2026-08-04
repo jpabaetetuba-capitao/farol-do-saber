@@ -13924,3 +13924,218 @@ progress{
     line-height:1.35;
     opacity:.84;
 }
+
+
+/* ==========================================================
+   FAROL V51 — HISTÓRICO ADMINISTRATIVO DAS ARENAS
+========================================================== */
+
+.historico-arenas-admin-v51{
+    margin-top:16px;
+}
+
+.historico-arenas-topo-v51{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:14px;
+    margin-bottom:14px;
+}
+
+.historico-arenas-topo-v51 h3{
+    margin:0 0 5px;
+    color:#087f5b;
+}
+
+.historico-arenas-topo-v51 p{
+    margin:0;
+    color:#5d6d66;
+    line-height:1.45;
+}
+
+.filtros-historico-arenas-v51{
+    display:grid;
+    grid-template-columns:minmax(220px, 1fr) minmax(170px, .35fr);
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.filtros-historico-arenas-v51 input,
+.filtros-historico-arenas-v51 select{
+    width:100%;
+    min-height:44px;
+}
+
+.resumo-historico-arenas-v51{
+    margin-bottom:10px;
+    color:#52625a;
+    font-size:13px;
+    font-weight:800;
+}
+
+.lista-historico-arenas-v51{
+    display:grid;
+    gap:12px;
+}
+
+.item-historico-arena-v51{
+    padding:14px;
+    background:#ffffff;
+    border:1px solid #dce8e1;
+    border-radius:15px;
+    box-shadow:0 4px 14px rgba(20,72,48,.06);
+}
+
+.cabecalho-historico-arena-v51{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:12px;
+}
+
+.cabecalho-historico-arena-v51 h4{
+    margin:5px 0 0;
+    color:#253c31;
+    font-size:17px;
+}
+
+.cabecalho-historico-arena-v51 time{
+    color:#687871;
+    font-size:11px;
+    font-weight:700;
+}
+
+.status-historico-arena-v51{
+    display:inline-flex;
+    padding:4px 8px;
+    border-radius:999px;
+    font-size:10px;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.status-historico-arena-v51.finalizada{
+    background:#dff4e6;
+    color:#176b35;
+}
+
+.status-historico-arena-v51.encerrada{
+    background:#fff0ce;
+    color:#835800;
+}
+
+.status-historico-arena-v51.cancelada{
+    background:#fde3e3;
+    color:#a02020;
+}
+
+.grade-resumo-arena-v51{
+    display:grid;
+    grid-template-columns:repeat(5, minmax(110px, 1fr));
+    gap:8px;
+}
+
+.grade-resumo-arena-v51 > span{
+    padding:9px;
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+    background:#f5faf7;
+    border-radius:10px;
+}
+
+.grade-resumo-arena-v51 small{
+    color:#738179;
+    font-size:10px;
+    text-transform:uppercase;
+    font-weight:800;
+}
+
+.grade-resumo-arena-v51 strong{
+    color:#294437;
+    font-size:12px;
+}
+
+.detalhes-historico-arena-v51{
+    margin-top:12px;
+    border-top:1px solid #e2ebe6;
+    padding-top:10px;
+}
+
+.detalhes-historico-arena-v51 summary{
+    cursor:pointer;
+    color:#087f5b;
+    font-weight:900;
+}
+
+.configuracao-historico-arena-v51{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 16px;
+    margin:12px 0;
+    color:#566860;
+    font-size:12px;
+}
+
+.classificacao-historico-arena-v51{
+    display:grid;
+    gap:7px;
+}
+
+.classificacao-historico-arena-v51 > div{
+    display:grid;
+    grid-template-columns:34px minmax(140px, 1fr) minmax(120px, auto);
+    align-items:center;
+    gap:9px;
+    padding:9px 10px;
+    background:#f7faf8;
+    border-radius:10px;
+}
+
+.classificacao-historico-arena-v51 > div > span{
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+}
+
+.classificacao-historico-arena-v51 small{
+    color:#75837c;
+    font-size:10px;
+}
+
+.motivo-historico-arena-v51{
+    margin-top:10px;
+    padding:10px;
+    background:#fff8e9;
+    border-radius:9px;
+    color:#70551f;
+}
+
+@media(max-width:760px){
+
+    .historico-arenas-topo-v51{
+        flex-direction:column;
+    }
+
+    .historico-arenas-topo-v51 button{
+        width:100%;
+        margin:0 !important;
+    }
+
+    .filtros-historico-arenas-v51{
+        grid-template-columns:1fr;
+    }
+
+    .grade-resumo-arena-v51{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+
+    .classificacao-historico-arena-v51 > div{
+        grid-template-columns:30px 1fr;
+    }
+
+    .classificacao-historico-arena-v51 > div > span:last-child{
+        grid-column:2;
+    }
+}
