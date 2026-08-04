@@ -1412,6 +1412,14 @@ function atualizarNomeUsuarioLocalFarol(nomeRanking, nomeCompleto){
         campoNome.textContent = "👋 Olá, " + usuarioForum + "!";
     }
 
+    const campoNomeMobileV69 =
+        document.getElementById("nomeUsuarioMobileV69");
+
+    if(campoNomeMobileV69){
+        campoNomeMobileV69.textContent =
+            "👋 Olá, " + usuarioForum + "!";
+    }
+
 }
 
 async function corrigirMeuNomeJoao(){
@@ -38583,14 +38591,33 @@ limparArenaLocalFarol = function(){
     }
 
     function atualizarSinoNotificacoesV68(){
-        const contador = document.getElementById("contadorNotificacoesV68");
-        const botao = document.getElementById("btnSinoNotificacoesV68");
-        if(!contador || !botao) return;
+        const pares = [
+            [
+                document.getElementById("contadorNotificacoesV68"),
+                document.getElementById("btnSinoNotificacoesV68")
+            ],
+            [
+                document.getElementById("contadorNotificacoesMobileV69"),
+                document.getElementById("btnSinoNotificacoesMobileV69")
+            ]
+        ];
+
         const lidas = idsLidosNotificacoesV68();
-        const naoLidas = notificacoesCacheV68.filter(item => !lidas.has(item.id)).length;
-        contador.textContent = naoLidas > 99 ? "99+" : String(naoLidas);
-        contador.hidden = naoLidas < 1;
-        botao.classList.toggle("tem-novas", naoLidas > 0);
+        const naoLidas = notificacoesCacheV68.filter(
+            item => !lidas.has(item.id)
+        ).length;
+
+        pares.forEach(([contador, botao]) => {
+            if(!contador || !botao) return;
+
+            contador.textContent =
+                naoLidas > 99 ? "99+" : String(naoLidas);
+            contador.hidden = naoLidas < 1;
+            botao.classList.toggle(
+                "tem-novas",
+                naoLidas > 0
+            );
+        });
     }
 
     async function buscarNotificacoesFarolV68(forcar=false){

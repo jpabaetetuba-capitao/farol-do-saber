@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=101-notificacoes-novidades">
+    <link rel="stylesheet" href="style.css?v=102-sino-celular">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -2360,13 +2360,29 @@ Li e revisei o mapa mental.
             <span class="inicio-app-saudacao">Rumo à sua aprovação</span>
             <h2>🗼 Farol do Saber</h2>
         </div>
-        <button
-            type="button"
-            class="inicio-app-perfil"
-            aria-label="Abrir perfil do aluno"
-            onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">
-            <span id="avatarTopoFarol" class="avatar-topo-farol">👤</span>
-        </button>
+        <div class="acoes-topo-mobile-v69">
+            <div class="saudacao-sino-mobile-v69">
+                <span id="nomeUsuarioMobileV69">👋 Olá!</span>
+                <button
+                    id="btnSinoNotificacoesMobileV69"
+                    class="btn-sino-notificacoes-v68 btn-sino-mobile-v69"
+                    type="button"
+                    onclick="abrirCentralNotificacoesV68()"
+                    aria-label="Abrir notificações e novidades"
+                    title="Notificações e novidades">
+                    🔔
+                    <span id="contadorNotificacoesMobileV69" hidden>0</span>
+                </button>
+            </div>
+
+            <button
+                type="button"
+                class="inicio-app-perfil"
+                aria-label="Abrir perfil do aluno"
+                onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">
+                <span id="avatarTopoFarol" class="avatar-topo-farol">👤</span>
+            </button>
+        </div>
     </div>
 
     <div class="abas-inicio-farol abas-inicio-farol-v26" role="tablist" aria-label="Informações do painel">
@@ -5546,7 +5562,7 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=106-notificacoes-novidades"></script>
+<script src="app.js?v=107-sino-celular"></script>
 <script src="admin.js?v=48-notificacoes-novidades"></script>
 
 
