@@ -13784,38 +13784,157 @@ function montarAvatarHTML(valor, nome, classe){
     return `<span class="${classeFinal}">${escaparHTML(valor)}</span>`;
 }
 
+function garantirSeletorAvatarV67(){
+    let fundo = document.getElementById("seletorAvatarFarolV67");
+
+    if(fundo){
+        return fundo;
+    }
+
+    fundo = document.createElement("div");
+    fundo.id = "seletorAvatarFarolV67";
+    fundo.className = "seletor-avatar-farol-v67";
+    fundo.setAttribute("aria-hidden", "true");
+
+    fundo.innerHTML = `
+        <div class="card-seletor-avatar-v67" role="dialog" aria-modal="true">
+            <button
+                type="button"
+                class="fechar-seletor-avatar-v67"
+                aria-label="Fechar">
+                ×
+            </button>
+
+            <span class="tag-seletor-avatar-v67">ESCOLHA A VERSÃO</span>
+            <h3>Qual avatar você deseja usar?</h3>
+            <p>Toque em uma imagem. A opção escolhida ficará destacada.</p>
+
+            <div class="opcoes-seletor-avatar-v67"></div>
+
+            <div class="confirmacao-seletor-avatar-v67">
+                <span>Selecionado:</span>
+                <strong id="nomeSelecionadoAvatarV67">Nenhum</strong>
+            </div>
+
+            <button
+                type="button"
+                id="confirmarSeletorAvatarV67"
+                class="confirmar-seletor-avatar-v67"
+                disabled>
+                Confirmar escolha
+            </button>
+        </div>
+    `;
+
+    document.body.appendChild(fundo);
+    return fundo;
+}
+
 function obterVersaoAvatarItem(item){
-    let genero = localStorage.getItem("farol_genero_avatar") || "";
+    return new Promise(resolve => {
+        const fundo = garantirSeletorAvatarV67();
+        const opcoes = fundo.querySelector(".opcoes-seletor-avatar-v67");
+        const confirmar = fundo.querySelector("#confirmarSeletorAvatarV67");
+        const nomeSelecionado = fundo.querySelector("#nomeSelecionadoAvatarV67");
+        const fechar = fundo.querySelector(".fechar-seletor-avatar-v67");
 
-    if(!genero){
-        const escolha = prompt(
-            "Escolha a versão do avatar:\n1 - Masculino\n2 - Feminino"
-        );
+        const versoes = [
+            {
+                genero: "masculino",
+                rotulo: "Masculino",
+                avatar: item.avatarMasculino || item.avatar || "👤",
+                nomeAvatar: item.nomeAvatarMasculino || item.nomeAvatar || item.nome || "Estudante"
+            },
+            {
+                genero: "feminino",
+                rotulo: "Feminino",
+                avatar: item.avatarFeminino || item.avatar || "👤",
+                nomeAvatar: item.nomeAvatarFeminino || item.nomeAvatar || item.nome || "Estudante"
+            }
+        ];
 
-        if(escolha === "1"){
-            genero = "masculino";
-        }
-        else if(escolha === "2"){
-            genero = "feminino";
-        }
-        else{
-            return null;
-        }
+        let escolhida = null;
+        const generoSalvo = localStorage.getItem("farol_genero_avatar") || "";
 
-        localStorage.setItem("farol_genero_avatar", genero);
-    }
+        opcoes.innerHTML = versoes.map(versao => `
+            <button
+                type="button"
+                class="opcao-seletor-avatar-v67"
+                data-genero="${versao.genero}">
+                ${montarAvatarHTML(
+                    versao.avatar,
+                    versao.nomeAvatar,
+                    "imagem-seletor-avatar-v67"
+                )}
+                <strong>${versao.rotulo}</strong>
+                <small>${versao.nomeAvatar}</small>
+                <span class="marca-selecao-avatar-v67">✓ Selecionado</span>
+            </button>
+        `).join("");
 
-    if(genero === "feminino"){
-        return {
-            avatar: item.avatarFeminino || item.avatar || "👤",
-            nomeAvatar: item.nomeAvatarFeminino || item.nomeAvatar || item.nome || "Estudante"
+        const selecionar = genero => {
+            escolhida = versoes.find(itemVersao => itemVersao.genero === genero) || null;
+
+            opcoes.querySelectorAll(".opcao-seletor-avatar-v67").forEach(botao => {
+                botao.classList.toggle(
+                    "selecionada",
+                    botao.dataset.genero === genero
+                );
+            });
+
+            nomeSelecionado.textContent = escolhida
+                ? `${escolhida.rotulo} — ${escolhida.nomeAvatar}`
+                : "Nenhum";
+
+            confirmar.disabled = !escolhida;
         };
-    }
 
-    return {
-        avatar: item.avatarMasculino || item.avatar || "👤",
-        nomeAvatar: item.nomeAvatarMasculino || item.nomeAvatar || item.nome || "Estudante"
-    };
+        opcoes.querySelectorAll(".opcao-seletor-avatar-v67").forEach(botao => {
+            botao.addEventListener("click", () => selecionar(botao.dataset.genero));
+        });
+
+        if(versoes.some(versao => versao.genero === generoSalvo)){
+            selecionar(generoSalvo);
+        }else{
+            nomeSelecionado.textContent = "Nenhum";
+            confirmar.disabled = true;
+        }
+
+        let finalizado = false;
+
+        const encerrar = resultado => {
+            if(finalizado){
+                return;
+            }
+
+            finalizado = true;
+            fundo.classList.remove("visivel");
+            fundo.setAttribute("aria-hidden", "true");
+            confirmar.onclick = null;
+            fechar.onclick = null;
+            resolve(resultado);
+        };
+
+        confirmar.onclick = () => {
+            if(!escolhida){
+                return;
+            }
+
+            localStorage.setItem("farol_genero_avatar", escolhida.genero);
+
+            encerrar({
+                avatar: escolhida.avatar,
+                nomeAvatar: escolhida.nomeAvatar,
+                genero: escolhida.genero,
+                rotuloGenero: escolhida.rotulo
+            });
+        };
+
+        fechar.onclick = () => encerrar(null);
+
+        fundo.classList.add("visivel");
+        fundo.setAttribute("aria-hidden", "false");
+    });
 }
 
 function renderizarIconeLoja(item){
@@ -13907,7 +14026,7 @@ function gerarCodigoCertificado(){
     return `FAROL-${ano}-${numero}`;
 }
 
-function comprarRecompensaLoja(id){
+async function comprarRecompensaLoja(id){
 
     const item = obterRecompensaLoja(id);
 
@@ -13931,7 +14050,7 @@ function comprarRecompensaLoja(id){
     let versaoAvatarPendenteV65 = null;
 
     if(item.tipo === "avatar"){
-        versaoAvatarPendenteV65 = obterVersaoAvatarItem(item);
+        versaoAvatarPendenteV65 = await obterVersaoAvatarItem(item);
 
         if(!versaoAvatarPendenteV65){
             mostrarToast("Escolha do avatar cancelada.");
@@ -14011,10 +14130,14 @@ function comprarRecompensaLoja(id){
     salvarRankingFirebase();
     salvarLojaFirebase();
 
-    mostrarToast("Recompensa desbloqueada com sucesso!");
+    mostrarToast(
+        item.tipo === "avatar"
+            ? `Avatar ${versaoAvatarPendenteV65.rotuloGenero} adquirido e aplicado!`
+            : "Recompensa desbloqueada com sucesso!"
+    );
 }
 
-function usarAvatarLoja(id){
+async function usarAvatarLoja(id){
 
     const item = obterRecompensaLoja(id);
 
@@ -14027,7 +14150,7 @@ function usarAvatarLoja(id){
         return;
     }
 
-    const versaoAvatar = obterVersaoAvatarItem(item);
+    const versaoAvatar = await obterVersaoAvatarItem(item);
 
     if(!versaoAvatar){
         mostrarToast("Escolha do avatar cancelada.");
@@ -14043,7 +14166,9 @@ function usarAvatarLoja(id){
     salvarRankingFirebase();
     salvarLojaFirebase();
 
-    mostrarToast("Avatar aplicado ao seu perfil.");
+    mostrarToast(
+        `Avatar ${versaoAvatar.rotuloGenero} aplicado ao seu perfil.`
+    );
 }
 
 function alterarVersaoAvatar(){

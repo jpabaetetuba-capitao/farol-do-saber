@@ -15818,3 +15818,182 @@ body.efeito-ondas-v65 #conteudoPerfilAluno .perfil-cabecalho,
         padding-left:8px;
     }
 }
+
+
+/* ==========================================================
+   FAROL V67 — ESCOLHA VISUAL DO AVATAR
+========================================================== */
+
+.seletor-avatar-farol-v67{
+    position:fixed;
+    inset:0;
+    z-index:100300;
+    display:grid;
+    place-items:center;
+    padding:18px;
+    background:rgba(4,18,30,.76);
+    backdrop-filter:blur(6px);
+    opacity:0;
+    visibility:hidden;
+    transition:.2s ease;
+}
+
+.seletor-avatar-farol-v67.visivel{
+    opacity:1;
+    visibility:visible;
+}
+
+.card-seletor-avatar-v67{
+    position:relative;
+    width:min(540px,100%);
+    padding:26px 21px 22px;
+    text-align:center;
+    border-radius:24px;
+    background:#fff;
+    box-shadow:0 25px 75px rgba(0,0,0,.38);
+}
+
+.fechar-seletor-avatar-v67{
+    position:absolute;
+    top:10px;
+    right:11px;
+    width:38px;
+    height:38px;
+    margin:0;
+    padding:0;
+    border-radius:50%;
+    background:#edf2ef;
+    color:#29493a;
+    font-size:24px;
+}
+
+.tag-seletor-avatar-v67{
+    color:#087f5b;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:1.1px;
+}
+
+.card-seletor-avatar-v67 h3{
+    margin:8px 0 5px;
+    color:#244c39;
+}
+
+.card-seletor-avatar-v67 > p{
+    margin:0 0 17px;
+    color:#68776f;
+}
+
+.opcoes-seletor-avatar-v67{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:13px;
+}
+
+.opcao-seletor-avatar-v67{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-width:0;
+    margin:0;
+    padding:15px 12px;
+    border:2px solid #dbe7e0;
+    border-radius:17px;
+    background:#f7faf8;
+    color:#294b3b;
+    transition:.16s ease;
+}
+
+.opcao-seletor-avatar-v67.selecionada{
+    border-color:#12a36e;
+    background:#eaf9f1;
+    box-shadow:0 0 0 4px rgba(18,163,110,.13);
+    transform:translateY(-2px);
+}
+
+.imagem-seletor-avatar-v67{
+    width:118px;
+    height:118px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #fff;
+    box-shadow:0 5px 16px rgba(20,65,44,.17);
+}
+
+.opcao-seletor-avatar-v67 strong{
+    margin-top:10px;
+    font-size:16px;
+}
+
+.opcao-seletor-avatar-v67 small{
+    margin-top:3px;
+    color:#68776f;
+}
+
+.marca-selecao-avatar-v67{
+    display:none;
+    margin-top:9px;
+    padding:4px 9px;
+    border-radius:999px;
+    background:#12a36e;
+    color:#fff;
+    font-size:10px;
+    font-weight:900;
+}
+
+.opcao-seletor-avatar-v67.selecionada .marca-selecao-avatar-v67{
+    display:inline-flex;
+}
+
+.confirmacao-seletor-avatar-v67{
+    margin:15px 0 12px;
+    padding:10px 12px;
+    border-radius:12px;
+    background:#f0f6f3;
+    color:#52655b;
+}
+
+.confirmacao-seletor-avatar-v67 span,
+.confirmacao-seletor-avatar-v67 strong{
+    display:block;
+}
+
+.confirmacao-seletor-avatar-v67 strong{
+    margin-top:3px;
+    color:#087f5b;
+}
+
+.confirmar-seletor-avatar-v67{
+    width:100%;
+    margin:0;
+}
+
+.confirmar-seletor-avatar-v67:disabled{
+    opacity:.55;
+    cursor:not-allowed;
+}
+
+@media(max-width:560px){
+    .opcoes-seletor-avatar-v67{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:8px;
+    }
+
+    .opcao-seletor-avatar-v67{
+        padding:12px 7px;
+    }
+
+    .imagem-seletor-avatar-v67{
+        width:86px;
+        height:86px;
+    }
+
+    .opcao-seletor-avatar-v67 strong{
+        font-size:14px;
+    }
+
+    .opcao-seletor-avatar-v67 small{
+        font-size:10px;
+    }
+}
