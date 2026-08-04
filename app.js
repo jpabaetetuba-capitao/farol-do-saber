@@ -3565,6 +3565,10 @@ const nomeDisciplina =
                 dicaBanca: q.dicaBanca || "",
                 erros: (cadernoErros[indiceExistente].erros || 0) + 1,
                 data: Date.now(),
+                dataPrimeiroErro:
+                    cadernoErros[indiceExistente].dataPrimeiroErro ||
+                    cadernoErros[indiceExistente].data ||
+                    Date.now(),
                 status: "pendente"
             };
 
@@ -33199,7 +33203,15 @@ function renderizarSalaArenaAoVivoFarol(){
         disciplina: "",
         assunto: "",
         indiceAtual: -1,
-        fila: []
+        fila: [],
+        filtroStatus: "todos",
+        sessaoAtiva: false,
+        sessaoFila: [],
+        sessaoPosicao: 0,
+        sessaoAcertos: 0,
+        sessaoErros: 0,
+        sessaoRecuperadas: 0,
+        sessaoQuantidade: 0
     };
 
     function elErrosV32(id){
@@ -33314,6 +33326,61 @@ function renderizarSalaArenaAoVivoFarol(){
         });
     }
 
+
+    function formatarDataErrosV61(valor){
+        const numero = Number(valor || 0);
+
+        if(!numero){
+            return "Não registrada";
+        }
+
+        return new Date(numero).toLocaleDateString("pt-BR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric"
+        });
+    }
+
+    function taxaRecuperacaoErrosV61(itens){
+        const resumo = resumoStatusErrosV32(itens);
+
+        return resumo.total > 0
+            ? Math.round(
+                (resumo.recuperadas / resumo.total) * 100
+            )
+            : 0;
+    }
+
+    function itemRevisavelErrosV61(item){
+        return Boolean(
+            item &&
+            Array.isArray(item.alternativas) &&
+            obterStatusCadernoErro(item) !== "recuperada"
+        );
+    }
+
+    function filtrarItensStatusErrosV61(itens){
+        const filtro = estadoErrosV32.filtroStatus;
+
+        if(filtro === "todos"){
+            return itens;
+        }
+
+        return itens.filter(item =>
+            obterStatusCadernoErro(item) === filtro
+        );
+    }
+
+    function limparSessaoErrosV61(){
+        estadoErrosV32.sessaoAtiva = false;
+        estadoErrosV32.sessaoFila = [];
+        estadoErrosV32.sessaoPosicao = 0;
+        estadoErrosV32.sessaoAcertos = 0;
+        estadoErrosV32.sessaoErros = 0;
+        estadoErrosV32.sessaoRecuperadas = 0;
+        estadoErrosV32.sessaoQuantidade = 0;
+    }
+
     function botaoListaErrosV32(icone, titulo, subtitulo, onclick){
         return `
             <button
@@ -33414,7 +33481,7 @@ function renderizarSalaArenaAoVivoFarol(){
                         return botaoListaErrosV32(
                             "📌",
                             assunto,
-                            `${resumo.total} questão(ões) • ${resumo.pendentes + resumo.revisao} para revisar`,
+                            `${resumo.total} questão(ões) • ${resumo.pendentes + resumo.revisao} para revisar • ${taxaRecuperacaoErrosV61(itens)}% recuperadas`,
                             `selecionarAssuntoErrosV32('${segura}')`
                         );
                     }).join("")}
@@ -33424,54 +33491,242 @@ function renderizarSalaArenaAoVivoFarol(){
 
     window.selecionarAssuntoErrosV32 = function(valorCodificado){
         estadoErrosV32.assunto = decodeURIComponent(valorCodificado);
+        estadoErrosV32.filtroStatus = "todos";
+        limparSessaoErrosV61();
         abrirEtapaErrosV32("questoes");
     };
 
     function renderizarQuestoesErrosV32(){
         const conteudo = elErrosV32("conteudoFluxoErrosV32");
-        const itens = itensDoAssuntoErrosV32();
+        const todosItens = itensDoAssuntoErrosV32();
+        const itens = filtrarItensStatusErrosV61(todosItens);
+        const resumo = resumoStatusErrosV32(todosItens);
+        const taxa = taxaRecuperacaoErrosV61(todosItens);
 
-        estadoErrosV32.fila = itens
+        estadoErrosV32.fila = todosItens
             .map(item => cadernoErros.indexOf(item))
             .filter(indice => indice >= 0);
 
+        const revisaveis = todosItens.filter(
+            itemRevisavelErrosV61
+        ).length;
+
         conteudo.innerHTML = `
+            <div class="painel-topico-erros-v61">
+                <div class="taxa-recuperacao-erros-v61">
+                    <span>📈 Taxa de recuperação</span>
+                    <strong>${taxa}%</strong>
+                    <small>
+                        ${resumo.recuperadas} de ${resumo.total}
+                        questão(ões) recuperada(s)
+                    </small>
+                    <div>
+                        <i style="width:${taxa}%"></i>
+                    </div>
+                </div>
+
+                <div class="filtros-status-erros-v61">
+                    ${[
+                        ["todos", "Todos", resumo.total],
+                        ["pendente", "Pendentes", resumo.pendentes],
+                        ["revisao", "Em revisão", resumo.revisao],
+                        ["recuperada", "Recuperadas", resumo.recuperadas]
+                    ].map(([valor, texto, quantidade]) => `
+                        <button
+                            type="button"
+                            class="${estadoErrosV32.filtroStatus === valor ? "ativo" : ""}"
+                            onclick="definirFiltroStatusErrosV61('${valor}')">
+                            ${texto}
+                            <span>${quantidade}</span>
+                        </button>
+                    `).join("")}
+                </div>
+
+                <div class="acoes-sessao-erros-v61">
+                    <button
+                        type="button"
+                        onclick="iniciarSessaoErrosV61(5)"
+                        ${revisaveis < 1 ? "disabled" : ""}>
+                        Revisar 5
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="iniciarSessaoErrosV61(10)"
+                        ${revisaveis < 1 ? "disabled" : ""}>
+                        Revisar 10
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="iniciarSessaoErrosV61(20)"
+                        ${revisaveis < 1 ? "disabled" : ""}>
+                        Revisar 20
+                    </button>
+                </div>
+            </div>
+
             <button
                 class="btn-revisar-todos-erros-v32"
-                onclick="revisarPrimeiroErroV32()">
+                onclick="revisarPrimeiroErroV32()"
+                ${revisaveis < 1 ? "disabled" : ""}>
                 🚀 Revisar próximo erro
             </button>
 
-            <div class="lista-questoes-erros-v32">
-                ${itens.map(item => {
-                    const indice = cadernoErros.indexOf(item);
-                    const status = obterStatusCadernoErro(item);
-                    const revisavel =
-                        Array.isArray(item.alternativas) &&
-                        status !== "recuperada";
+            ${itens.length === 0 ? `
+                <div class="estado-vazio-erros-v32">
+                    <span>🔎</span>
+                    <h3>Nenhuma questão neste filtro</h3>
+                    <p>Escolha outro status para visualizar as questões.</p>
+                </div>
+            ` : `
+                <div class="lista-questoes-erros-v32">
+                    ${itens.map(item => {
+                        const indice = cadernoErros.indexOf(item);
+                        const status = obterStatusCadernoErro(item);
+                        const revisavel = itemRevisavelErrosV61(item);
 
-                    return `
-                        <button
-                            type="button"
-                            class="questao-lista-erros-v32 status-${status}"
-                            ${revisavel
-                                ? `onclick="abrirRevisaoErroV32(${indice})"`
-                                : status === "recuperada"
-                                    ? `onclick="removerErroCaderno(${indice})"`
-                                    : `onclick="mostrarToast('Esta questão ainda não possui alternativas salvas para revisão.')"`
-                            }>
-                            <span>${status === "recuperada" ? "✅" : status === "revisao" ? "🔁" : "❌"}</span>
-                            <span>
-                                <strong>${item.pergunta || "Questão sem enunciado"}</strong>
-                                <small>${obterRotuloStatusCaderno(item)} • ${item.erros || 1} erro(s)</small>
-                            </span>
-                            <b>›</b>
-                        </button>
-                    `;
-                }).join("")}
-            </div>
+                        return `
+                            <button
+                                type="button"
+                                class="questao-lista-erros-v32 status-${status}"
+                                ${revisavel
+                                    ? `onclick="abrirRevisaoErroV32(${indice})"`
+                                    : status === "recuperada"
+                                        ? `onclick="removerErroCaderno(${indice})"`
+                                        : `onclick="mostrarToast('Esta questão ainda não possui alternativas salvas para revisão.')"`
+                                }>
+                                <span>${status === "recuperada" ? "✅" : status === "revisao" ? "🔁" : "❌"}</span>
+                                <span>
+                                    <strong>${item.pergunta || "Questão sem enunciado"}</strong>
+                                    <small>
+                                        ${obterRotuloStatusCaderno(item)}
+                                        • ${item.erros || 1} erro(s)
+                                        • primeiro erro: ${formatarDataErrosV61(item.dataPrimeiroErro || item.data)}
+                                        ${item.dataUltimaRevisao
+                                            ? ` • última revisão: ${formatarDataErrosV61(item.dataUltimaRevisao)}`
+                                            : ""
+                                        }
+                                    </small>
+                                </span>
+                                <b>›</b>
+                            </button>
+                        `;
+                    }).join("")}
+                </div>
+            `}
         `;
     }
+
+    window.definirFiltroStatusErrosV61 = function(filtro){
+        estadoErrosV32.filtroStatus = [
+            "todos",
+            "pendente",
+            "revisao",
+            "recuperada"
+        ].includes(filtro) ? filtro : "todos";
+
+        renderizarQuestoesErrosV32();
+    };
+
+    window.iniciarSessaoErrosV61 = function(quantidade){
+        const candidatos = itensDoAssuntoErrosV32()
+            .map(item => cadernoErros.indexOf(item))
+            .filter(indice =>
+                indice >= 0 &&
+                itemRevisavelErrosV61(cadernoErros[indice])
+            );
+
+        if(candidatos.length === 0){
+            mostrarToast(
+                "Não há questões revisáveis neste tópico."
+            );
+            return;
+        }
+
+        const limite = Math.min(
+            Number(quantidade) || 5,
+            candidatos.length
+        );
+
+        estadoErrosV32.sessaoAtiva = true;
+        estadoErrosV32.sessaoFila =
+            candidatos.slice(0, limite);
+        estadoErrosV32.sessaoPosicao = 0;
+        estadoErrosV32.sessaoAcertos = 0;
+        estadoErrosV32.sessaoErros = 0;
+        estadoErrosV32.sessaoRecuperadas = 0;
+        estadoErrosV32.sessaoQuantidade = limite;
+
+        abrirRevisaoErroV32(
+            estadoErrosV32.sessaoFila[0]
+        );
+    };
+
+    window.finalizarSessaoErrosV61 = function(){
+        const total =
+            estadoErrosV32.sessaoQuantidade;
+
+        const acertos =
+            estadoErrosV32.sessaoAcertos;
+
+        const errosSessao =
+            estadoErrosV32.sessaoErros;
+
+        const recuperadas =
+            estadoErrosV32.sessaoRecuperadas;
+
+        const aproveitamento = total > 0
+            ? Math.round((acertos / total) * 100)
+            : 0;
+
+        mostrarTela("resolverQuestao");
+
+        const area =
+            document.getElementById("areaQuestao");
+
+        area.innerHTML = `
+            <div class="card resultado-sessao-erros-v61">
+                <span class="icone-resultado-sessao-v61">🧠</span>
+                <h2>Revisão concluída!</h2>
+                <p>
+                    Você terminou a sessão do Caderno de Erros.
+                </p>
+
+                <div class="grade-resultado-sessao-v61">
+                    <div>
+                        <strong>${total}</strong>
+                        <small>Revisadas</small>
+                    </div>
+                    <div>
+                        <strong>${acertos}</strong>
+                        <small>Acertos</small>
+                    </div>
+                    <div>
+                        <strong>${errosSessao}</strong>
+                        <small>Ainda pendentes</small>
+                    </div>
+                    <div>
+                        <strong>${recuperadas}</strong>
+                        <small>Recuperadas</small>
+                    </div>
+                </div>
+
+                <div class="aproveitamento-sessao-v61">
+                    <span>Aproveitamento</span>
+                    <strong>${aproveitamento}%</strong>
+                    <div><i style="width:${aproveitamento}%"></i></div>
+                </div>
+
+                <button
+                    onclick="mostrarTela('erros', {semHistorico:true}); abrirEtapaErrosV32('questoes')">
+                    Voltar ao tópico
+                </button>
+            </div>
+        `;
+
+        limparSessaoErrosV61();
+    };
 
     window.revisarPrimeiroErroV32 = function(){
         const indice = estadoErrosV32.fila.find(indice => {
@@ -33600,17 +33855,22 @@ function renderizarSalaArenaAoVivoFarol(){
     };
 
     function proximoIndiceRevisaoErrosV32(indiceAtual){
+
+        if(estadoErrosV32.sessaoAtiva){
+            estadoErrosV32.sessaoPosicao++;
+
+            return estadoErrosV32.sessaoFila[
+                estadoErrosV32.sessaoPosicao
+            ] ?? -1;
+        }
+
         const posicao = estadoErrosV32.fila.indexOf(indiceAtual);
 
         for(let i = posicao + 1; i < estadoErrosV32.fila.length; i++){
             const indice = estadoErrosV32.fila[i];
             const item = cadernoErros[indice];
 
-            if(
-                item &&
-                Array.isArray(item.alternativas) &&
-                obterStatusCadernoErro(item) !== "recuperada"
-            ){
+            if(itemRevisavelErrosV61(item)){
                 return indice;
             }
         }
@@ -33633,6 +33893,18 @@ function renderizarSalaArenaAoVivoFarol(){
         ).forEach(opcao => opcao.disabled = true);
 
         const acertou = Number(resposta.value) === item.correta;
+        const statusAntes = obterStatusCadernoErro(item);
+        const agoraRevisao = Date.now();
+
+        item.dataPrimeiroErro =
+            item.dataPrimeiroErro ||
+            item.data ||
+            agoraRevisao;
+
+        item.dataUltimaRevisao = agoraRevisao;
+        item.totalRevisoes =
+            Number(item.totalRevisoes || 0) + 1;
+
         let pontosHTML = "";
 
         if(acertou){
@@ -33662,6 +33934,21 @@ function renderizarSalaArenaAoVivoFarol(){
             item.erros = (item.erros || 0) + 1;
             item.status = "pendente";
             item.data = Date.now();
+        }
+
+        if(estadoErrosV32.sessaoAtiva){
+            if(acertou){
+                estadoErrosV32.sessaoAcertos++;
+            }else{
+                estadoErrosV32.sessaoErros++;
+            }
+
+            if(
+                statusAntes !== "recuperada" &&
+                obterStatusCadernoErro(item) === "recuperada"
+            ){
+                estadoErrosV32.sessaoRecuperadas++;
+            }
         }
 
         salvarDados();
@@ -33712,9 +33999,17 @@ function renderizarSalaArenaAoVivoFarol(){
                     onclick="${
                         proximo >= 0
                             ? `abrirRevisaoErroV32(${proximo})`
-                            : `mostrarTela('erros', {semHistorico:true}); abrirEtapaErrosV32('questoes')`
+                            : estadoErrosV32.sessaoAtiva
+                                ? `finalizarSessaoErrosV61()`
+                                : `mostrarTela('erros', {semHistorico:true}); abrirEtapaErrosV32('questoes')`
                     }">
-                    ${proximo >= 0 ? "Próxima questão ➜" : "Voltar às questões"}
+                    ${
+                        proximo >= 0
+                            ? "Próxima questão ➜"
+                            : estadoErrosV32.sessaoAtiva
+                                ? "Ver resultado da revisão"
+                                : "Voltar às questões"
+                    }
                 </button>
             </div>
         `;

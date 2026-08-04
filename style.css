@@ -14561,3 +14561,150 @@ progress{
     background:rgba(255,235,238,.96);
     color:#9b1c1c !important;
 }
+
+
+/* ==========================================================
+   FAROL V61 — CADERNO DE ERROS APRIMORADO
+========================================================== */
+
+.painel-topico-erros-v61{
+    display:grid;
+    gap:14px;
+    margin-bottom:14px;
+}
+
+.taxa-recuperacao-erros-v61{
+    padding:16px;
+    border:1px solid #d7e8df;
+    border-radius:16px;
+    background:#f5fbf7;
+}
+
+.taxa-recuperacao-erros-v61 > span,
+.taxa-recuperacao-erros-v61 > small{
+    display:block;
+    color:#5a6b62;
+}
+
+.taxa-recuperacao-erros-v61 > strong{
+    display:block;
+    margin:5px 0;
+    color:#087f5b;
+    font-size:30px;
+}
+
+.taxa-recuperacao-erros-v61 > div,
+.aproveitamento-sessao-v61 > div{
+    height:10px;
+    margin-top:10px;
+    overflow:hidden;
+    border-radius:999px;
+    background:#dce9e2;
+}
+
+.taxa-recuperacao-erros-v61 i,
+.aproveitamento-sessao-v61 i{
+    display:block;
+    height:100%;
+    border-radius:inherit;
+    background:linear-gradient(90deg,#43a047,#087f5b);
+}
+
+.filtros-status-erros-v61,
+.acoes-sessao-erros-v61{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.filtros-status-erros-v61 button{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    margin:0;
+    background:#eaf2ee;
+    color:#315344;
+}
+
+.filtros-status-erros-v61 button.ativo{
+    background:#087f5b;
+    color:#fff;
+}
+
+.filtros-status-erros-v61 span{
+    padding:2px 7px;
+    border-radius:999px;
+    background:rgba(255,255,255,.7);
+    color:#174c37;
+    font-size:11px;
+}
+
+.acoes-sessao-erros-v61 button{
+    flex:1 1 110px;
+    margin:0;
+}
+
+.acoes-sessao-erros-v61 button:disabled,
+.btn-revisar-todos-erros-v32:disabled{
+    opacity:.55;
+    cursor:not-allowed;
+}
+
+.resultado-sessao-erros-v61{
+    max-width:680px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.icone-resultado-sessao-v61{
+    display:block;
+    font-size:58px;
+}
+
+.grade-resultado-sessao-v61{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(100px,1fr));
+    gap:10px;
+    margin:20px 0;
+}
+
+.grade-resultado-sessao-v61 > div{
+    padding:14px 10px;
+    border-radius:14px;
+    background:#f3f8f5;
+}
+
+.grade-resultado-sessao-v61 strong{
+    display:block;
+    color:#087f5b;
+    font-size:26px;
+}
+
+.grade-resultado-sessao-v61 small{
+    color:#607168;
+}
+
+.aproveitamento-sessao-v61{
+    margin:16px 0 22px;
+    text-align:left;
+}
+
+.aproveitamento-sessao-v61 span{
+    color:#617169;
+}
+
+.aproveitamento-sessao-v61 strong{
+    float:right;
+    color:#087f5b;
+}
+
+@media(max-width:640px){
+    .grade-resultado-sessao-v61{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .filtros-status-erros-v61 button{
+        flex:1 1 calc(50% - 8px);
+        justify-content:center;
+    }
+}
