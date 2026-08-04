@@ -189,6 +189,11 @@ if(id === "login"){
         atualizarPerfilAluno();
     }
 
+    if(id === "estatisticas" && typeof atualizarEstatisticas === "function"){
+        atualizarEstatisticas();
+        atualizarMissaoDiaria();
+    }
+
     if(id === "jogosFarol" && typeof abrirTelaJogosFarol === "function"){
         abrirTelaJogosFarol();
     }
@@ -3932,22 +3937,470 @@ ${medalha}
 
 function atualizarEstatisticas() {
 
-    const total = acertos + erros;
+    const area =
+        document.getElementById("estatisticasConteudo");
 
-    const percentual = total > 0
-        ? ((acertos / total) * 100).toFixed(1)
+    if(!area){
+        return;
+    }
+
+    const totalQuestoes = acertos + erros;
+
+    const aproveitamento = totalQuestoes > 0
+        ? Math.round((acertos / totalQuestoes) * 100)
         : 0;
 
-    document.getElementById("estatisticasConteudo").innerHTML = `
-    
-    <strong>Acertos:</strong> ${acertos}
-    <br><br>
+    const itensCaderno = Array.isArray(cadernoErros)
+        ? cadernoErros
+        : [];
 
-    <strong>Erros:</strong> ${erros}
-    <br><br>
+    const resumoCaderno = itensCaderno.reduce(
+        (resumo, item) => {
+            const status = obterStatusCadernoErro(item);
 
-    <strong>Aproveitamento:</strong> ${percentual}%
+            resumo.total++;
 
+            if(status === "recuperada"){
+                resumo.recuperadas++;
+            }else if(status === "revisao"){
+                resumo.revisao++;
+            }else{
+                resumo.pendentes++;
+            }
+
+            resumo.totalErros += Number(item.erros || 1);
+            resumo.totalRevisoes += Number(
+                item.totalRevisoes ||
+                item.acertosRevisao ||
+                0
+            );
+
+            return resumo;
+        },
+        {
+            total: 0,
+            pendentes: 0,
+            revisao: 0,
+            recuperadas: 0,
+            totalErros: 0,
+            totalRevisoes: 0
+        }
+    );
+
+    const taxaRecuperacao = resumoCaderno.total > 0
+        ? Math.round(
+            (
+                resumoCaderno.recuperadas /
+                resumoCaderno.total
+            ) * 100
+        )
+        : 0;
+
+    const dias = [];
+
+    for(let i = 6; i >= 0; i--){
+        const data = new Date();
+        data.setHours(12, 0, 0, 0);
+        data.setDate(data.getDate() - i);
+
+        const chave = [
+            data.getFullYear(),
+            String(data.getMonth() + 1).padStart(2, "0"),
+            String(data.getDate()).padStart(2, "0")
+        ].join("-");
+
+        const estatistica =
+            estatisticasDiarias[chave] || {};
+
+        dias.push({
+            chave,
+            rotulo: data.toLocaleDateString("pt-BR", {
+                weekday: "short"
+            }).replace(".", ""),
+            acertos: Number(estatistica.acertos || 0),
+            revisoes: Number(estatistica.revisoes || 0),
+            topicos: Number(estatistica.topicos || 0),
+            simulados: Number(estatistica.simulados || 0)
+        });
+    }
+
+    const resumoSeteDias = dias.reduce(
+        (total, dia) => ({
+            acertos: total.acertos + dia.acertos,
+            revisoes: total.revisoes + dia.revisoes,
+            topicos: total.topicos + dia.topicos,
+            simulados: total.simulados + dia.simulados
+        }),
+        {
+            acertos: 0,
+            revisoes: 0,
+            topicos: 0,
+            simulados: 0
+        }
+    );
+
+    const maiorAtividadeDia = Math.max(
+        1,
+        ...dias.map(dia =>
+            dia.acertos +
+            dia.revisoes +
+            dia.topicos +
+            dia.simulados
+        )
+    );
+
+    const porDisciplina = {};
+
+    itensCaderno.forEach(item => {
+        const disciplina =
+            item.disciplinaNome ||
+            item.disciplina ||
+            "Não identificada";
+
+        if(!porDisciplina[disciplina]){
+            porDisciplina[disciplina] = {
+                nome: disciplina,
+                total: 0,
+                recuperadas: 0,
+                pendentes: 0,
+                erros: 0
+            };
+        }
+
+        const grupo = porDisciplina[disciplina];
+        const status = obterStatusCadernoErro(item);
+
+        grupo.total++;
+        grupo.erros += Number(item.erros || 1);
+
+        if(status === "recuperada"){
+            grupo.recuperadas++;
+        }else{
+            grupo.pendentes++;
+        }
+    });
+
+    const disciplinas = Object.values(porDisciplina)
+        .sort((a, b) =>
+            b.pendentes - a.pendentes ||
+            b.erros - a.erros ||
+            a.nome.localeCompare(b.nome, "pt-BR")
+        );
+
+    const assuntosDificeis = {};
+
+    itensCaderno.forEach(item => {
+        if(obterStatusCadernoErro(item) === "recuperada"){
+            return;
+        }
+
+        const assunto =
+            item.assuntoNome ||
+            item.assunto ||
+            item.topico ||
+            "Assunto não identificado";
+
+        if(!assuntosDificeis[assunto]){
+            assuntosDificeis[assunto] = {
+                nome: assunto,
+                quantidade: 0,
+                erros: 0
+            };
+        }
+
+        assuntosDificeis[assunto].quantidade++;
+        assuntosDificeis[assunto].erros +=
+            Number(item.erros || 1);
+    });
+
+    const maioresDificuldades =
+        Object.values(assuntosDificeis)
+            .sort((a, b) =>
+                b.erros - a.erros ||
+                b.quantidade - a.quantidade
+            )
+            .slice(0, 5);
+
+    const progressoValores = Object.values(
+        progressoAssuntos || {}
+    );
+
+    const topicosConcluidos =
+        progressoValores.filter(valor =>
+            valor === true ||
+            valor === "concluido" ||
+            (
+                valor &&
+                typeof valor === "object" &&
+                (
+                    valor.concluido === true ||
+                    valor.status === "concluido"
+                )
+            )
+        ).length;
+
+    area.innerHTML = `
+        <div class="estatisticas-grade-principal-v62">
+            <article class="estatistica-card-v62 destaque">
+                <span>📝</span>
+                <div>
+                    <small>Questões respondidas</small>
+                    <strong>${totalQuestoes}</strong>
+                </div>
+            </article>
+
+            <article class="estatistica-card-v62 acerto">
+                <span>✅</span>
+                <div>
+                    <small>Acertos</small>
+                    <strong>${acertos}</strong>
+                </div>
+            </article>
+
+            <article class="estatistica-card-v62 erro">
+                <span>❌</span>
+                <div>
+                    <small>Erros</small>
+                    <strong>${erros}</strong>
+                </div>
+            </article>
+
+            <article class="estatistica-card-v62 aproveitamento">
+                <span>🎯</span>
+                <div>
+                    <small>Aproveitamento geral</small>
+                    <strong>${aproveitamento}%</strong>
+                </div>
+            </article>
+        </div>
+
+        <section class="painel-estatisticas-v62">
+            <div class="cabecalho-painel-estatisticas-v62">
+                <div>
+                    <h3>📈 Desempenho geral</h3>
+                    <p>
+                        Visão acumulada das questões respondidas.
+                    </p>
+                </div>
+                <strong>${aproveitamento}%</strong>
+            </div>
+
+            <div class="barra-estatistica-v62">
+                <i style="width:${aproveitamento}%"></i>
+            </div>
+
+            <div class="legenda-estatistica-v62">
+                <span>✅ ${acertos} acertos</span>
+                <span>❌ ${erros} erros</span>
+            </div>
+        </section>
+
+        <section class="painel-estatisticas-v62">
+            <div class="cabecalho-painel-estatisticas-v62">
+                <div>
+                    <h3>🧠 Caderno de Erros</h3>
+                    <p>
+                        Recuperação das questões registradas.
+                    </p>
+                </div>
+                <strong>${taxaRecuperacao}%</strong>
+            </div>
+
+            <div class="barra-estatistica-v62 recuperacao">
+                <i style="width:${taxaRecuperacao}%"></i>
+            </div>
+
+            <div class="grade-resumo-caderno-v62">
+                <div>
+                    <strong>${resumoCaderno.pendentes}</strong>
+                    <small>Pendentes</small>
+                </div>
+                <div>
+                    <strong>${resumoCaderno.revisao}</strong>
+                    <small>Em revisão</small>
+                </div>
+                <div>
+                    <strong>${resumoCaderno.recuperadas}</strong>
+                    <small>Recuperadas</small>
+                </div>
+                <div>
+                    <strong>${resumoCaderno.totalRevisoes}</strong>
+                    <small>Revisões</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="painel-estatisticas-v62">
+            <div class="cabecalho-painel-estatisticas-v62">
+                <div>
+                    <h3>📅 Últimos 7 dias</h3>
+                    <p>
+                        Atividades registradas diariamente.
+                    </p>
+                </div>
+            </div>
+
+            <div class="resumo-sete-dias-v62">
+                <span>✅ ${resumoSeteDias.acertos} acertos</span>
+                <span>🔁 ${resumoSeteDias.revisoes} revisões</span>
+                <span>📚 ${resumoSeteDias.topicos} tópicos</span>
+                <span>📝 ${resumoSeteDias.simulados} simulados</span>
+            </div>
+
+            <div class="grafico-sete-dias-v62">
+                ${dias.map(dia => {
+                    const atividade =
+                        dia.acertos +
+                        dia.revisoes +
+                        dia.topicos +
+                        dia.simulados;
+
+                    const altura = Math.max(
+                        atividade > 0 ? 12 : 3,
+                        Math.round(
+                            (atividade / maiorAtividadeDia) * 100
+                        )
+                    );
+
+                    return `
+                        <div>
+                            <span title="${atividade} atividade(s)">
+                                <i style="height:${altura}%"></i>
+                            </span>
+                            <small>${dia.rotulo}</small>
+                        </div>
+                    `;
+                }).join("")}
+            </div>
+        </section>
+
+        <section class="painel-estatisticas-v62">
+            <div class="cabecalho-painel-estatisticas-v62">
+                <div>
+                    <h3>📚 Indicadores de estudo</h3>
+                    <p>
+                        Resumo das atividades concluídas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grade-indicadores-estudo-v62">
+                <div>
+                    <span>📖</span>
+                    <strong>${topicosConcluidos}</strong>
+                    <small>Tópicos concluídos</small>
+                </div>
+                <div>
+                    <span>📝</span>
+                    <strong>${resumoSeteDias.simulados}</strong>
+                    <small>Simulados em 7 dias</small>
+                </div>
+                <div>
+                    <span>🔁</span>
+                    <strong>${resumoCaderno.totalRevisoes}</strong>
+                    <small>Revisões acumuladas</small>
+                </div>
+                <div>
+                    <span>⭐</span>
+                    <strong>${pontosLuz}</strong>
+                    <small>Pontos de Luz</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="painel-estatisticas-v62">
+            <div class="cabecalho-painel-estatisticas-v62">
+                <div>
+                    <h3>📊 Erros por disciplina</h3>
+                    <p>
+                        Baseado nas questões salvas no Caderno de Erros.
+                    </p>
+                </div>
+            </div>
+
+            ${
+                disciplinas.length === 0
+                    ? `
+                        <div class="estado-vazio-estatisticas-v62">
+                            Nenhum erro por disciplina registrado.
+                        </div>
+                    `
+                    : `
+                        <div class="lista-disciplinas-estatisticas-v62">
+                            ${disciplinas.map(item => {
+                                const taxa = item.total > 0
+                                    ? Math.round(
+                                        (
+                                            item.recuperadas /
+                                            item.total
+                                        ) * 100
+                                    )
+                                    : 0;
+
+                                return `
+                                    <div>
+                                        <span>
+                                            <strong>${item.nome}</strong>
+                                            <small>
+                                                ${item.pendentes} pendente(s)
+                                                • ${item.recuperadas} recuperada(s)
+                                            </small>
+                                        </span>
+                                        <b>${taxa}%</b>
+                                        <div>
+                                            <i style="width:${taxa}%"></i>
+                                        </div>
+                                    </div>
+                                `;
+                            }).join("")}
+                        </div>
+                    `
+            }
+        </section>
+
+        <section class="painel-estatisticas-v62">
+            <div class="cabecalho-painel-estatisticas-v62">
+                <div>
+                    <h3>⚠️ Assuntos com maior dificuldade</h3>
+                    <p>
+                        Questões ainda pendentes ou em revisão.
+                    </p>
+                </div>
+            </div>
+
+            ${
+                maioresDificuldades.length === 0
+                    ? `
+                        <div class="estado-vazio-estatisticas-v62">
+                            Nenhuma dificuldade pendente no momento.
+                        </div>
+                    `
+                    : `
+                        <div class="lista-dificuldades-v62">
+                            ${maioresDificuldades.map(
+                                (item, indice) => `
+                                    <div>
+                                        <b>${indice + 1}</b>
+                                        <span>
+                                            <strong>${item.nome}</strong>
+                                            <small>
+                                                ${item.quantidade} questão(ões)
+                                                • ${item.erros} erro(s)
+                                            </small>
+                                        </span>
+                                    </div>
+                                `
+                            ).join("")}
+                        </div>
+                    `
+            }
+        </section>
+
+        <p class="nota-estatisticas-v62">
+            Os dados por disciplina e assunto usam o Caderno de Erros.
+            As atividades dos últimos sete dias usam os registros diários
+            salvos neste aparelho.
+        </p>
     `;
 }
 

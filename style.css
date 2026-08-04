@@ -14708,3 +14708,325 @@ progress{
         justify-content:center;
     }
 }
+
+
+/* ==========================================================
+   FAROL V62 — ESTATÍSTICAS APRIMORADAS
+========================================================== */
+
+.subtitulo-estatisticas-v62{
+    margin:-8px 0 18px;
+    color:#5f7168;
+    line-height:1.45;
+}
+
+.estatisticas-grade-principal-v62{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(130px,1fr));
+    gap:12px;
+    margin-bottom:14px;
+}
+
+.estatistica-card-v62{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:16px;
+    border:1px solid #dce8e1;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(26,75,51,.06);
+}
+
+.estatistica-card-v62 > span{
+    width:45px;
+    height:45px;
+    display:grid;
+    place-items:center;
+    flex:0 0 auto;
+    border-radius:13px;
+    background:#edf6f1;
+    font-size:23px;
+}
+
+.estatistica-card-v62 small,
+.estatistica-card-v62 strong{
+    display:block;
+}
+
+.estatistica-card-v62 small{
+    color:#68786f;
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.estatistica-card-v62 strong{
+    margin-top:4px;
+    color:#1d4634;
+    font-size:24px;
+}
+
+.estatistica-card-v62.acerto > span{
+    background:#e6f5ea;
+}
+
+.estatistica-card-v62.erro > span{
+    background:#fde9e9;
+}
+
+.estatistica-card-v62.aproveitamento > span{
+    background:#fff4d8;
+}
+
+.painel-estatisticas-v62{
+    margin-top:14px;
+    padding:17px;
+    border:1px solid #dce8e1;
+    border-radius:17px;
+    background:#fff;
+}
+
+.cabecalho-painel-estatisticas-v62{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:13px;
+}
+
+.cabecalho-painel-estatisticas-v62 h3{
+    margin:0 0 4px;
+    color:#1d513b;
+}
+
+.cabecalho-painel-estatisticas-v62 p{
+    margin:0;
+    color:#6b7a72;
+    line-height:1.4;
+}
+
+.cabecalho-painel-estatisticas-v62 > strong{
+    color:#087f5b;
+    font-size:25px;
+}
+
+.barra-estatistica-v62,
+.lista-disciplinas-estatisticas-v62 > div > div{
+    height:11px;
+    overflow:hidden;
+    border-radius:999px;
+    background:#e4ede8;
+}
+
+.barra-estatistica-v62 i,
+.lista-disciplinas-estatisticas-v62 i{
+    display:block;
+    height:100%;
+    border-radius:inherit;
+    background:linear-gradient(90deg,#43a047,#087f5b);
+}
+
+.barra-estatistica-v62.recuperacao i{
+    background:linear-gradient(90deg,#1e88e5,#087f5b);
+}
+
+.legenda-estatistica-v62,
+.resumo-sete-dias-v62{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 16px;
+    margin-top:11px;
+    color:#586a61;
+    font-size:13px;
+    font-weight:700;
+}
+
+.grade-resumo-caderno-v62,
+.grade-indicadores-estudo-v62{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(100px,1fr));
+    gap:9px;
+    margin-top:13px;
+}
+
+.grade-resumo-caderno-v62 > div,
+.grade-indicadores-estudo-v62 > div{
+    padding:13px 10px;
+    text-align:center;
+    border-radius:12px;
+    background:#f4f8f6;
+}
+
+.grade-resumo-caderno-v62 strong,
+.grade-indicadores-estudo-v62 strong{
+    display:block;
+    color:#087f5b;
+    font-size:22px;
+}
+
+.grade-resumo-caderno-v62 small,
+.grade-indicadores-estudo-v62 small{
+    color:#65766d;
+}
+
+.grade-indicadores-estudo-v62 span{
+    display:block;
+    margin-bottom:4px;
+    font-size:22px;
+}
+
+.grafico-sete-dias-v62{
+    height:165px;
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    align-items:end;
+    gap:8px;
+    margin-top:16px;
+}
+
+.grafico-sete-dias-v62 > div{
+    height:100%;
+    display:grid;
+    grid-template-rows:1fr auto;
+    gap:6px;
+    text-align:center;
+}
+
+.grafico-sete-dias-v62 > div > span{
+    min-height:110px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    padding:0 4px;
+    border-radius:10px;
+    background:#f3f8f5;
+}
+
+.grafico-sete-dias-v62 i{
+    width:100%;
+    max-width:34px;
+    min-height:3px;
+    border-radius:8px 8px 3px 3px;
+    background:linear-gradient(180deg,#43a047,#087f5b);
+}
+
+.grafico-sete-dias-v62 small{
+    color:#67776f;
+    text-transform:capitalize;
+}
+
+.lista-disciplinas-estatisticas-v62{
+    display:grid;
+    gap:12px;
+}
+
+.lista-disciplinas-estatisticas-v62 > div{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:8px 12px;
+}
+
+.lista-disciplinas-estatisticas-v62 strong,
+.lista-disciplinas-estatisticas-v62 small{
+    display:block;
+}
+
+.lista-disciplinas-estatisticas-v62 strong{
+    color:#294a3b;
+}
+
+.lista-disciplinas-estatisticas-v62 small{
+    margin-top:3px;
+    color:#6b7a72;
+}
+
+.lista-disciplinas-estatisticas-v62 b{
+    color:#087f5b;
+}
+
+.lista-disciplinas-estatisticas-v62 > div > div{
+    grid-column:1/-1;
+}
+
+.lista-dificuldades-v62{
+    display:grid;
+    gap:9px;
+}
+
+.lista-dificuldades-v62 > div{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    padding:11px;
+    border-radius:12px;
+    background:#fff8ea;
+}
+
+.lista-dificuldades-v62 b{
+    width:30px;
+    height:30px;
+    display:grid;
+    place-items:center;
+    flex:0 0 auto;
+    border-radius:50%;
+    background:#f1a928;
+    color:#fff;
+}
+
+.lista-dificuldades-v62 strong,
+.lista-dificuldades-v62 small{
+    display:block;
+}
+
+.lista-dificuldades-v62 strong{
+    color:#5a431e;
+}
+
+.lista-dificuldades-v62 small{
+    color:#7d6b4a;
+}
+
+.estado-vazio-estatisticas-v62{
+    padding:18px;
+    text-align:center;
+    border-radius:12px;
+    background:#f5f8f6;
+    color:#6b7a72;
+}
+
+.nota-estatisticas-v62{
+    margin:14px 2px 0;
+    color:#728078;
+    font-size:12px;
+    line-height:1.5;
+}
+
+@media(max-width:850px){
+    .estatisticas-grade-principal-v62{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+}
+
+@media(max-width:620px){
+    .estatisticas-grade-principal-v62{
+        grid-template-columns:1fr;
+    }
+
+    .grade-resumo-caderno-v62,
+    .grade-indicadores-estudo-v62{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .cabecalho-painel-estatisticas-v62{
+        flex-direction:column;
+    }
+
+    .grafico-sete-dias-v62{
+        gap:4px;
+    }
+
+    .grafico-sete-dias-v62 > div > span{
+        padding:0 2px;
+    }
+}
