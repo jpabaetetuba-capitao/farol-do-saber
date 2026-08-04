@@ -4563,12 +4563,21 @@ ${q.afirmacoes.map(item => `
 
         <br>
 
-        <button
-            onclick="corrigirSimulado()">
+        <div class="acoes-simulado-v48">
+            <button
+                type="button"
+                class="btn-voltar-simulado-v48"
+                onclick="voltarDaQuestaoSimuladoFarol()">
+                ← Voltar
+            </button>
 
-            Responder
-
-        </button>
+            <button
+                type="button"
+                class="btn-responder-simulado-v48"
+                onclick="corrigirSimulado()">
+                Responder
+            </button>
+        </div>
 
         <div id="feedback"></div>
 
@@ -4689,15 +4698,25 @@ function corrigirSimulado() {
                 </div>
             ` : ""}
 
-            <button
-                class="btn-proxima-feedback"
-                onclick="proximaQuestaoSimulado()">
-                ${
-                    indiceSimulado + 1 >= questoesSimulado.length
-                    ? "Ver resultado final ➜"
-                    : "Próxima questão ➜"
-                }
-            </button>
+            <div class="acoes-simulado-v48">
+                <button
+                    type="button"
+                    class="btn-voltar-simulado-v48"
+                    onclick="voltarDaQuestaoSimuladoFarol()">
+                    ← Voltar
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-proxima-feedback"
+                    onclick="proximaQuestaoSimulado()">
+                    ${
+                        indiceSimulado + 1 >= questoesSimulado.length
+                        ? "Ver resultado final ➜"
+                        : "Próxima questão ➜"
+                    }
+                </button>
+            </div>
 
         </div>
     `;

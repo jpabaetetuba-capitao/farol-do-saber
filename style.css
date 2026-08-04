@@ -13852,3 +13852,47 @@ progress{
         font-size:12px;
     }
 }
+
+
+/* ==========================================================
+   FAROL V48 — BOTÃO VOLTAR NOS SIMULADOS
+========================================================== */
+
+.acoes-simulado-v48{
+    display:grid;
+    grid-template-columns:minmax(105px, .78fr) minmax(165px, 1.22fr);
+    gap:9px;
+    margin-top:14px;
+}
+
+.acoes-simulado-v48 button{
+    width:100%;
+    min-height:48px;
+    margin:0 !important;
+}
+
+.btn-voltar-simulado-v48{
+    background:#eef5f1 !important;
+    color:#23513d !important;
+    border:1px solid #cfe1d7 !important;
+}
+
+.btn-responder-simulado-v48,
+.acoes-simulado-v48 .btn-proxima-feedback{
+    background:#1f7a45 !important;
+    color:#ffffff !important;
+}
+
+@media(max-width:430px){
+
+    .acoes-simulado-v48{
+        grid-template-columns:minmax(94px, .8fr) minmax(148px, 1.2fr);
+        gap:8px;
+    }
+
+    .acoes-simulado-v48 button{
+        min-height:46px;
+        padding:10px 8px !important;
+        font-size:12px;
+    }
+}
