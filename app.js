@@ -37409,3 +37409,588 @@ limparArenaLocalFarol = function(){
     };
 
 })();
+
+
+// ==========================================================
+// FAROL V64 — CONQUISTAS E MEDALHAS AUTOMÁTICAS
+// ==========================================================
+
+(function(){
+    "use strict";
+
+    let verificandoConquistasV64 = false;
+    let popupConquistaFilaV64 = [];
+    let popupConquistaAbertoV64 = false;
+
+    const CATALOGO_CONQUISTAS_V64 = [
+        {
+            id: "primeiros-passos",
+            categoria: "estudos",
+            nome: "Primeiros Passos",
+            descricao: "Responda 10 questões.",
+            icone: "🌱",
+            meta: 10,
+            recompensa: 20,
+            progresso: () => Number(acertos + erros)
+        },
+        {
+            id: "maratona-100",
+            categoria: "estudos",
+            nome: "Maratona",
+            descricao: "Responda 100 questões.",
+            icone: "🏃",
+            meta: 100,
+            recompensa: 40,
+            progresso: () => Number(acertos + erros)
+        },
+        {
+            id: "veterano-500",
+            categoria: "estudos",
+            nome: "Veterano do Farol",
+            descricao: "Responda 500 questões.",
+            icone: "🗼",
+            meta: 500,
+            recompensa: 80,
+            progresso: () => Number(acertos + erros)
+        },
+        {
+            id: "cem-acertos",
+            categoria: "estudos",
+            nome: "Mente Afiada",
+            descricao: "Alcance 100 acertos.",
+            icone: "🎯",
+            meta: 100,
+            recompensa: 50,
+            progresso: () => Number(acertos)
+        },
+        {
+            id: "recuperador-10",
+            categoria: "revisao",
+            nome: "Recuperador",
+            descricao: "Recupere 10 questões do Caderno de Erros.",
+            icone: "🧠",
+            meta: 10,
+            recompensa: 35,
+            progresso: () =>
+                (Array.isArray(cadernoErros) ? cadernoErros : [])
+                    .filter(item =>
+                        typeof obterStatusCadernoErro === "function" &&
+                        obterStatusCadernoErro(item) === "recuperada"
+                    ).length
+        },
+        {
+            id: "mestre-revisao-25",
+            categoria: "revisao",
+            nome: "Mestre da Revisão",
+            descricao: "Recupere 25 questões do Caderno de Erros.",
+            icone: "🔁",
+            meta: 25,
+            recompensa: 60,
+            progresso: () =>
+                (Array.isArray(cadernoErros) ? cadernoErros : [])
+                    .filter(item =>
+                        typeof obterStatusCadernoErro === "function" &&
+                        obterStatusCadernoErro(item) === "recuperada"
+                    ).length
+        },
+        {
+            id: "duelista-5",
+            categoria: "competicao",
+            nome: "Duelista",
+            descricao: "Conclua 5 Duelos.",
+            icone: "⚔️",
+            meta: 5,
+            recompensa: 40,
+            progresso: () =>
+                Number(localStorage.getItem(
+                    "farol_total_duelos_concluidos_v64"
+                ) || 0)
+        },
+        {
+            id: "arena-5",
+            categoria: "competicao",
+            nome: "Competidor da Arena",
+            descricao: "Conclua 5 Arenas.",
+            icone: "🏟️",
+            meta: 5,
+            recompensa: 40,
+            progresso: () =>
+                Number(localStorage.getItem(
+                    "farol_total_arenas_concluidas_v64"
+                ) || 0)
+        },
+        {
+            id: "farol-aceso-7",
+            categoria: "sequencia",
+            nome: "Farol Aceso",
+            descricao: "Complete as três missões por 7 dias.",
+            icone: "🔥",
+            meta: 7,
+            recompensa: 70,
+            progresso: () =>
+                typeof calcularSequenciaMissoesV63 === "function"
+                    ? calcularSequenciaMissoesV63()
+                    : 0
+        },
+        {
+            id: "colecionador-ouro-3",
+            categoria: "desempenho",
+            nome: "Colecionador de Ouro",
+            descricao: "Conquiste 3 medalhas de ouro em assuntos.",
+            icone: "🥇",
+            meta: 3,
+            recompensa: 50,
+            progresso: () => Number(medalhasOuro || 0)
+        }
+    ];
+
+    function garantirEstruturaConquistasV64(){
+        lojaFarol.conquistasDesbloqueadas =
+            lojaFarol.conquistasDesbloqueadas || {};
+
+        lojaFarol.conquistasRecompensadas =
+            lojaFarol.conquistasRecompensadas || {};
+    }
+
+    function conquistaDesbloqueadaV64(id){
+        garantirEstruturaConquistasV64();
+
+        return Boolean(
+            lojaFarol.conquistasDesbloqueadas[id]
+        );
+    }
+
+    function dadosConquistaV64(conquista){
+        const atual = Math.max(
+            0,
+            Number(conquista.progresso() || 0)
+        );
+
+        const limitado = Math.min(
+            atual,
+            conquista.meta
+        );
+
+        return {
+            atual,
+            limitado,
+            percentual: Math.min(
+                100,
+                Math.round(
+                    (limitado / conquista.meta) * 100
+                )
+            ),
+            completa: atual >= conquista.meta
+        };
+    }
+
+    function salvarConquistaV64(conquista){
+        garantirEstruturaConquistasV64();
+
+        if(conquistaDesbloqueadaV64(conquista.id)){
+            return false;
+        }
+
+        lojaFarol.conquistasDesbloqueadas[
+            conquista.id
+        ] = {
+            desbloqueadaEm: Date.now(),
+            nome: conquista.nome,
+            icone: conquista.icone,
+            categoria: conquista.categoria
+        };
+
+        if(
+            !lojaFarol.conquistasRecompensadas[
+                conquista.id
+            ]
+        ){
+            lojaFarol.conquistasRecompensadas[
+                conquista.id
+            ] = true;
+
+            adicionarPontosLuz(
+                conquista.recompensa,
+                "Conquista: " + conquista.nome,
+                "conquista-v64:" + conquista.id
+            );
+        }
+
+        enfileirarPopupConquistaV64(conquista);
+        return true;
+    }
+
+    function garantirPopupConquistaV64(){
+        let fundo = document.getElementById(
+            "popupConquistaFarolV64"
+        );
+
+        if(fundo){
+            return fundo;
+        }
+
+        fundo = document.createElement("div");
+        fundo.id = "popupConquistaFarolV64";
+        fundo.className = "popup-conquista-farol-v64";
+        fundo.setAttribute("aria-hidden", "true");
+
+        fundo.innerHTML = `
+            <div
+                class="popup-conquista-card-v64"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="tituloPopupConquistaV64">
+
+                <div class="brilho-conquista-v64">✨</div>
+
+                <div
+                    id="iconePopupConquistaV64"
+                    class="icone-popup-conquista-v64">
+                    🏅
+                </div>
+
+                <span class="tag-popup-conquista-v64">
+                    CONQUISTA DESBLOQUEADA
+                </span>
+
+                <h3 id="tituloPopupConquistaV64">
+                    Nova conquista
+                </h3>
+
+                <p id="descricaoPopupConquistaV64"></p>
+
+                <strong id="recompensaPopupConquistaV64"></strong>
+
+                <button
+                    id="btnFecharPopupConquistaV64"
+                    type="button">
+                    Continuar
+                </button>
+            </div>
+        `;
+
+        document.body.appendChild(fundo);
+
+        fundo.querySelector(
+            "#btnFecharPopupConquistaV64"
+        ).addEventListener("click", () => {
+            fecharPopupConquistaV64();
+        });
+
+        return fundo;
+    }
+
+    function enfileirarPopupConquistaV64(conquista){
+        popupConquistaFilaV64.push(conquista);
+
+        if(!popupConquistaAbertoV64){
+            mostrarProximoPopupConquistaV64();
+        }
+    }
+
+    function mostrarProximoPopupConquistaV64(){
+        const conquista =
+            popupConquistaFilaV64.shift();
+
+        if(!conquista){
+            popupConquistaAbertoV64 = false;
+            return;
+        }
+
+        popupConquistaAbertoV64 = true;
+
+        const fundo =
+            garantirPopupConquistaV64();
+
+        fundo.querySelector(
+            "#iconePopupConquistaV64"
+        ).textContent = conquista.icone;
+
+        fundo.querySelector(
+            "#tituloPopupConquistaV64"
+        ).textContent = conquista.nome;
+
+        fundo.querySelector(
+            "#descricaoPopupConquistaV64"
+        ).textContent = conquista.descricao;
+
+        fundo.querySelector(
+            "#recompensaPopupConquistaV64"
+        ).textContent =
+            `+${conquista.recompensa} Pontos de Luz`;
+
+        fundo.classList.add("visivel");
+        fundo.setAttribute("aria-hidden", "false");
+    }
+
+    function fecharPopupConquistaV64(){
+        const fundo = document.getElementById(
+            "popupConquistaFarolV64"
+        );
+
+        if(fundo){
+            fundo.classList.remove("visivel");
+            fundo.setAttribute("aria-hidden", "true");
+        }
+
+        popupConquistaAbertoV64 = false;
+
+        setTimeout(
+            mostrarProximoPopupConquistaV64,
+            250
+        );
+    }
+
+    function verificarConquistasV64(){
+        if(verificandoConquistasV64){
+            return;
+        }
+
+        verificandoConquistasV64 = true;
+
+        try{
+            garantirEstruturaConquistasV64();
+
+            let houveMudanca = false;
+
+            CATALOGO_CONQUISTAS_V64.forEach(
+                conquista => {
+                    const dados =
+                        dadosConquistaV64(conquista);
+
+                    if(
+                        dados.completa &&
+                        !conquistaDesbloqueadaV64(
+                            conquista.id
+                        )
+                    ){
+                        houveMudanca =
+                            salvarConquistaV64(
+                                conquista
+                            ) || houveMudanca;
+                    }
+                }
+            );
+
+            if(houveMudanca){
+                localStorage.setItem(
+                    "farol_loja",
+                    JSON.stringify(lojaFarol)
+                );
+            }
+
+        }catch(erro){
+            console.error(
+                "Erro ao verificar conquistas:",
+                erro
+            );
+        }finally{
+            verificandoConquistasV64 = false;
+        }
+    }
+
+    function registrarCompeticaoConquistaV64(
+        tipo,
+        codigo
+    ){
+        if(!codigo){
+            return;
+        }
+
+        const chaveUnica =
+            `farol_conquista_${tipo}_${codigo}`;
+
+        if(localStorage.getItem(chaveUnica) === "true"){
+            return;
+        }
+
+        localStorage.setItem(chaveUnica, "true");
+
+        const chaveTotal =
+            tipo === "duelos"
+                ? "farol_total_duelos_concluidos_v64"
+                : "farol_total_arenas_concluidas_v64";
+
+        const total =
+            Number(localStorage.getItem(chaveTotal) || 0) + 1;
+
+        localStorage.setItem(
+            chaveTotal,
+            String(total)
+        );
+
+        verificarConquistasV64();
+    }
+
+    function nomeCategoriaConquistaV64(categoria){
+        const nomes = {
+            estudos: "Estudos",
+            revisao: "Revisão",
+            competicao: "Competições",
+            sequencia: "Sequência",
+            desempenho: "Desempenho"
+        };
+
+        return nomes[categoria] || "Conquista";
+    }
+
+    function renderizarConquistasPerfilV64(){
+        const bloco = Array.from(
+            document.querySelectorAll(
+                "#conteudoPerfilAluno .perfil-bloco"
+            )
+        ).find(elemento =>
+            /Conquistas/i.test(
+                elemento.querySelector("h3")?.textContent || ""
+            )
+        );
+
+        if(!bloco){
+            return;
+        }
+
+        garantirEstruturaConquistasV64();
+
+        const desbloqueadas =
+            CATALOGO_CONQUISTAS_V64.filter(
+                item => conquistaDesbloqueadaV64(item.id)
+            ).length;
+
+        bloco.innerHTML = `
+            <div class="cabecalho-conquistas-v64">
+                <div>
+                    <h3>🏅 Conquistas e Medalhas</h3>
+                    <p>
+                        Medalhas conquistadas pelo desempenho do aluno.
+                    </p>
+                </div>
+
+                <strong>
+                    ${desbloqueadas}/${CATALOGO_CONQUISTAS_V64.length}
+                </strong>
+            </div>
+
+            <div class="grade-conquistas-perfil-v64">
+                ${CATALOGO_CONQUISTAS_V64.map(
+                    conquista => {
+                        const dados =
+                            dadosConquistaV64(conquista);
+
+                        const desbloqueada =
+                            conquistaDesbloqueadaV64(
+                                conquista.id
+                            );
+
+                        return `
+                            <article
+                                class="item-conquista-perfil-v64 ${desbloqueada ? "desbloqueada" : "bloqueada"}">
+
+                                <div class="medalha-conquista-v64">
+                                    ${desbloqueada
+                                        ? conquista.icone
+                                        : "🔒"
+                                    }
+                                </div>
+
+                                <div class="conteudo-conquista-v64">
+                                    <small>
+                                        ${nomeCategoriaConquistaV64(
+                                            conquista.categoria
+                                        )}
+                                    </small>
+
+                                    <h4>${conquista.nome}</h4>
+
+                                    <p>${conquista.descricao}</p>
+
+                                    <div class="barra-conquista-v64">
+                                        <i style="width:${dados.percentual}%"></i>
+                                    </div>
+
+                                    <span>
+                                        ${
+                                            desbloqueada
+                                                ? `✅ Desbloqueada • +${conquista.recompensa} ⭐`
+                                                : `${dados.limitado}/${conquista.meta}`
+                                        }
+                                    </span>
+                                </div>
+                            </article>
+                        `;
+                    }
+                ).join("")}
+            </div>
+
+            <div class="aviso-medalhas-loja-v64">
+                🏅 Medalhas são conquistadas pelo desempenho.
+                Avatares, títulos e molduras continuam disponíveis na Loja.
+            </div>
+        `;
+    }
+
+    // Verifica após qualquer salvamento relevante.
+    const salvarDadosAntesV64 = salvarDados;
+
+    salvarDados = function(){
+        const resultado =
+            salvarDadosAntesV64.apply(this, arguments);
+
+        setTimeout(
+            verificarConquistasV64,
+            0
+        );
+
+        return resultado;
+    };
+
+    // Atualiza o perfil com as conquistas automáticas.
+    const atualizarPerfilAntesV64 =
+        atualizarPerfilAluno;
+
+    atualizarPerfilAluno = function(){
+        const resultado =
+            atualizarPerfilAntesV64.apply(this, arguments);
+
+        verificarConquistasV64();
+        renderizarConquistasPerfilV64();
+
+        return resultado;
+    };
+
+    // Soma Duelos e Arenas concluídos sem duplicar o mesmo código.
+    const registrarCompeticaoAntesV64 =
+        typeof registrarCompeticaoDiariaV63 === "function"
+            ? registrarCompeticaoDiariaV63
+            : null;
+
+    if(registrarCompeticaoAntesV64){
+        registrarCompeticaoDiariaV63 =
+            function(tipo, codigo){
+
+                const resultado =
+                    registrarCompeticaoAntesV64
+                        .apply(this, arguments);
+
+                registrarCompeticaoConquistaV64(
+                    tipo,
+                    codigo
+                );
+
+                return resultado;
+            };
+    }
+
+    window.verificarConquistasFarol =
+        verificarConquistasV64;
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        () => {
+            setTimeout(
+                verificarConquistasV64,
+                900
+            );
+        }
+    );
+
+})();
