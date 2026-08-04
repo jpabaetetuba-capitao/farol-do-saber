@@ -13767,3 +13767,43 @@ progress{
     }
     .botoes-concurso-arena-v40 strong{font-size:14px;}
 }
+
+
+/* ==========================================================
+   FAROL V43 — CONTRASTE DO BLOCO CONTINUAR ESTUDANDO
+========================================================== */
+
+#boxContinuarUltimoEstudo.continuar-estudo-box{
+    background:#f3faf6 !important;
+    border:1px solid #cfe5d8 !important;
+    box-shadow:0 5px 14px rgba(22,83,55,.08) !important;
+}
+
+#btnContinuarUltimoEstudo.btn-continuar-ultimo{
+    background:#1f7a45 !important;
+    color:#ffffff !important;
+    opacity:1 !important;
+    text-shadow:none !important;
+}
+
+#btnContinuarUltimoEstudo.btn-continuar-ultimo:hover,
+#btnContinuarUltimoEstudo.btn-continuar-ultimo:focus{
+    background:#176438 !important;
+    color:#ffffff !important;
+}
+
+#btnContinuarUltimoEstudo.btn-continuar-ultimo:disabled{
+    background:#687b71 !important;
+    color:#ffffff !important;
+    opacity:1 !important;
+}
+
+#textoContinuarUltimoEstudo{
+    color:#243d32 !important;
+    opacity:1 !important;
+    font-weight:600;
+}
+
+#boxContinuarUltimoEstudo.sem-estudo{
+    opacity:1 !important;
+}

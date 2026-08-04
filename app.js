@@ -7525,33 +7525,28 @@ window.onload = function () {
                 "login-ativo"
             );
 
-            if(deveAbrirDuelosPorConvite()){
+            const conviteDueloAtual =
+                typeof obterCodigoDueloDaURL === "function"
+                ? obterCodigoDueloDaURL()
+                : "";
+
+            if(conviteDueloAtual){
 
                 localStorage.setItem("farol_telaAtual", "duelos");
                 mostrarTela("duelos");
                 prepararSelectDuelo();
                 preencherConviteDueloPendente();
 
+                localStorage.removeItem("farol_forcar_duelos");
+
             }else{
 
-                const telaSalva =
-                    localStorage.getItem(
-                        "farol_telaAtual"
-                    );
+                // Ao abrir novamente o aplicativo, começa sempre no Início.
+                // Etapas temporárias antigas não são restauradas.
+                localStorage.setItem("farol_telaAtual", "inicio");
+                localStorage.removeItem("farol_forcar_duelos");
 
-                if(telaSalva){
-
-                    mostrarTela(
-                        telaSalva
-                    );
-
-                }else{
-
-                    mostrarTela(
-                        "inicio"
-                    );
-
-                }
+                mostrarTela("inicio");
 
             }
 
@@ -19391,9 +19386,17 @@ function preencherConviteDueloPendente(){
 }
 
 function abrirDueloPendenteAposLogin(){
+    const codigoURL =
+        typeof obterCodigoDueloDaURL === "function"
+        ? obterCodigoDueloDaURL()
+        : "";
+
     const codigo = codigoDueloPendente();
 
-    if(!codigo || !auth.currentUser){
+    // Só abre automaticamente quando o acesso veio de um link de convite atual.
+    // Um código antigo salvo não deve mandar o aluno para Duelos ao entrar.
+    if(!codigoURL || !codigo || !auth.currentUser){
+        localStorage.removeItem("farol_forcar_duelos");
         return false;
     }
 
@@ -34094,3 +34097,69 @@ window.selecionarConcursoArenaV40 = function(concurso){
         }
     }, 30);
 };
+
+
+// ==========================================================
+// FAROL V43 — ABERTURA LIMPA DO APLICATIVO
+// ==========================================================
+
+(function(){
+
+    const mostrarTelaAntesV43 = window.mostrarTela;
+
+    if(typeof mostrarTelaAntesV43 !== "function"){
+        return;
+    }
+
+    window.mostrarTela = function(id, opcoes = {}){
+        const resultado =
+            mostrarTelaAntesV43.apply(this, arguments);
+
+        // Ao entrar em Estudar pelo menu, começa pela primeira etapa.
+        if(
+            id === "questoes" &&
+            !opcoes.semHistorico &&
+            typeof abrirEtapaEstudarV23 === "function"
+        ){
+            setTimeout(() => {
+                abrirEtapaEstudarV23("concurso", {
+                    substituirHistorico: true
+                });
+            }, 20);
+        }
+
+        return resultado;
+    };
+
+})();
+
+
+// ==========================================================
+// FAROL V44 — AVISO DE MUDANÇA DE TELA PARA O PWA
+// ==========================================================
+
+(function(){
+
+    const mostrarTelaAntesV44 = window.mostrarTela;
+
+    if(typeof mostrarTelaAntesV44 !== "function"){
+        return;
+    }
+
+    window.mostrarTela = function(id, opcoes = {}){
+        const resultado =
+            mostrarTelaAntesV44.apply(this, arguments);
+
+        window.dispatchEvent(
+            new CustomEvent("farol:tela-alterada", {
+                detail: {
+                    tela: id,
+                    opcoes: opcoes
+                }
+            })
+        );
+
+        return resultado;
+    };
+
+})();

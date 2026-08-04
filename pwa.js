@@ -81,31 +81,81 @@
     }
   });
 
-  function aplicarAtualizacaoAutomaticamente(registro){
-    const worker =
-      registro.waiting ||
-      registro.installing;
+  const TELAS_PROTEGIDAS_ATUALIZACAO = new Set([
+    "questoes",
+    "simulados",
+    "duelos",
+    "jogosFarol",
+    "erros"
+  ]);
+
+  let atualizacaoPendente = false;
+  let atualizacaoAutorizada = false;
+
+  function telaAtivaFarol(){
+    return document.querySelector(".tela.ativa")?.id || "inicio";
+  }
+
+  function atividadeEmAndamento(){
+    return TELAS_PROTEGIDAS_ATUALIZACAO.has(telaAtivaFarol());
+  }
+
+  function mostrarAtualizacaoAguardando(){
+    criarAvisoPWA(
+      "avisoAtualizarFarol",
+      `
+        <div>
+          <strong>✨ Nova versão disponível</strong>
+          <small>A atualização será aplicada quando você voltar ao Início. Sua atividade não será interrompida.</small>
+        </div>
+      `,
+      "atualizacao"
+    );
+  }
+
+  function ativarAtualizacaoQuandoSeguro(registro){
+    if(!registro?.waiting){
+      return false;
+    }
+
+    if(atividadeEmAndamento()){
+      atualizacaoPendente = true;
+      mostrarAtualizacaoAguardando();
+      return false;
+    }
+
+    atualizacaoPendente = false;
+    atualizacaoAutorizada = true;
 
     criarAvisoPWA(
       "avisoAtualizarFarol",
       `
         <div>
           <strong>✨ Atualizando o Farol</strong>
-          <small>A versão mais recente será aplicada automaticamente.</small>
+          <small>A nova versão está sendo aplicada.</small>
         </div>
       `,
       "atualizacao"
     );
 
+    registro.waiting.postMessage({ type: "SKIP_WAITING" });
+    return true;
+  }
+
+  function aplicarAtualizacaoAutomaticamente(registro){
+    const worker =
+      registro.waiting ||
+      registro.installing;
+
     if(registro.waiting){
-      registro.waiting.postMessage({ type: "SKIP_WAITING" });
+      ativarAtualizacaoQuandoSeguro(registro);
       return;
     }
 
     if(worker){
       worker.addEventListener("statechange", () => {
         if(worker.state === "installed" && registro.waiting){
-          registro.waiting.postMessage({ type: "SKIP_WAITING" });
+          ativarAtualizacaoQuandoSeguro(registro);
         }
       });
     }
@@ -168,10 +218,22 @@
     }
   }
 
+  window.addEventListener("farol:tela-alterada", event => {
+    const tela = event.detail?.tela || telaAtivaFarol();
+
+    if(
+      tela === "inicio" &&
+      atualizacaoPendente &&
+      registroServiceWorker?.waiting
+    ){
+      ativarAtualizacaoQuandoSeguro(registroServiceWorker);
+    }
+  });
+
   let recarregando = false;
 
   navigator.serviceWorker?.addEventListener("controllerchange", () => {
-    if(recarregando){
+    if(recarregando || !atualizacaoAutorizada){
       return;
     }
 
