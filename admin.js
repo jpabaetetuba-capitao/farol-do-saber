@@ -1096,15 +1096,21 @@
         return `há ${dias} dia${dias === 1 ? "" : "s"}`;
     }
 
-    function duracaoFarol(inicio){
-        const valor = Number(inicio) || 0;
-        if(!valor){
+    function duracaoFarol(inicio, fim){
+        const valorInicio = Number(inicio) || 0;
+
+        if(!valorInicio){
             return "tempo não registrado";
         }
 
+        const valorFim =
+            Number(fim) > 0
+                ? Number(fim)
+                : Date.now();
+
         const minutos = Math.max(
             0,
-            Math.floor((Date.now() - valor) / 60000)
+            Math.floor((valorFim - valorInicio) / 60000)
         );
 
         if(minutos < 1){
@@ -1120,6 +1126,18 @@
         return resto
             ? `${horas}h ${resto}min`
             : `${horas} hora${horas === 1 ? "" : "s"}`;
+    }
+
+    function fimSessaoExibicaoFarol(item){
+        if(estaOnlineFarol(item)){
+            return Date.now();
+        }
+
+        return (
+            Number(item && item.saiuEm) ||
+            Number(item && item.ultimaAtividade) ||
+            Date.now()
+        );
     }
 
     function estaOnlineFarol(item){
@@ -1320,11 +1338,17 @@
                         </div>
                         <div>
                             <span>Nesta página</span>
-                            <strong>${duracaoFarol(item.paginaDesde)}</strong>
+                            <strong>${duracaoFarol(
+                                item.paginaDesde,
+                                fimSessaoExibicaoFarol(item)
+                            )}</strong>
                         </div>
                         <div>
                             <span>Na plataforma</span>
-                            <strong>${duracaoFarol(item.entrouEm)}</strong>
+                            <strong>${duracaoFarol(
+                                item.entrouEm,
+                                fimSessaoExibicaoFarol(item)
+                            )}</strong>
                         </div>
                         <div>
                             <span>Última atividade</span>

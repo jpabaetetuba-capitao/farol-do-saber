@@ -26215,10 +26215,25 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
     document.addEventListener("visibilitychange", () => {
         if(document.visibilityState === "visible"){
+
+            // Ao voltar para o aplicativo, começa uma nova sessão ativa.
+            // Assim, o tempo em segundo plano não entra no total.
+            const agora = Date.now();
+
+            entradaNaPlataformaFarol = agora;
+            ultimaTelaRegistradaFarol =
+                localStorage.getItem("farol_telaAtual") || "inicio";
+
+            localStorage.setItem(
+                "farol_pagina_desde",
+                String(agora)
+            );
+
             registrarPresencaFarol(
-                localStorage.getItem("farol_telaAtual") || "inicio",
+                ultimaTelaRegistradaFarol,
                 true
             );
+
         }else{
             marcarAlunoOfflineFarol();
         }
