@@ -14377,3 +14377,98 @@ progress{
         grid-template-columns:repeat(2, minmax(0, 1fr));
     }
 }
+
+
+/* ==========================================================
+   FAROL V58 — POPUPS E CONEXÃO DA ARENA
+========================================================== */
+
+.popup-arena-farol{
+    position:fixed;
+    inset:0;
+    z-index:100000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:rgba(4,18,31,.68);
+    backdrop-filter:blur(5px);
+    opacity:0;
+    visibility:hidden;
+    transition:opacity .2s ease, visibility .2s ease;
+}
+
+.popup-arena-farol.visivel{
+    opacity:1;
+    visibility:visible;
+}
+
+.popup-arena-card-farol{
+    width:min(430px, 100%);
+    padding:25px;
+    text-align:center;
+    background:#ffffff;
+    border-radius:22px;
+    box-shadow:0 24px 65px rgba(0,0,0,.3);
+    transform:translateY(14px) scale(.97);
+    transition:transform .2s ease;
+}
+
+.popup-arena-farol.visivel .popup-arena-card-farol{
+    transform:translateY(0) scale(1);
+}
+
+.popup-arena-icone-farol{
+    width:70px;
+    height:70px;
+    margin:0 auto 13px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:#e8f7ef;
+    font-size:36px;
+}
+
+.popup-arena-card-farol h3{
+    margin:0 0 9px;
+    color:#174733;
+    font-size:22px;
+}
+
+.popup-arena-card-farol p{
+    margin:0;
+    color:#5a6962;
+    line-height:1.55;
+}
+
+.popup-arena-acoes-farol{
+    display:flex;
+    justify-content:center;
+    gap:9px;
+    margin-top:20px;
+}
+
+.popup-arena-acoes-farol button{
+    min-width:130px;
+    margin:0;
+}
+
+.popup-arena-cancelar-farol{
+    background:#e8ecea !important;
+    color:#34443c !important;
+}
+
+@media(max-width:540px){
+
+    .popup-arena-card-farol{
+        padding:22px 17px;
+    }
+
+    .popup-arena-acoes-farol{
+        flex-direction:column-reverse;
+    }
+
+    .popup-arena-acoes-farol button{
+        width:100%;
+    }
+}

@@ -27473,7 +27473,53 @@ async function entrarArenaVisualFarol(){
     }
 }
 
-function acompanharArenaAoVivoFarol(codigo){
+let arenaReconexaoTimerFarol = null;
+let arenaTentativasReconexaoFarol = 0;
+let arenaParticipantesAnterioresFarol = {};
+let arenaStatusAnteriorFarol = "";
+let arenaConexaoInterrompidaFarol = false;
+
+function nomesAlteradosArenaFarol(anteriores, atuais){
+    const antes = anteriores || {};
+    const agora = atuais || {};
+
+    const entraram = Object.keys(agora)
+        .filter(uid => !antes[uid])
+        .map(uid => agora[uid]?.nome || "Um jogador");
+
+    const sairam = Object.keys(antes)
+        .filter(uid => !agora[uid])
+        .map(uid => antes[uid]?.nome || "Um jogador");
+
+    return { entraram, sairam };
+}
+
+function agendarReconexaoArenaFarol(codigo){
+
+    if(arenaReconexaoTimerFarol){
+        clearTimeout(arenaReconexaoTimerFarol);
+    }
+
+    arenaTentativasReconexaoFarol += 1;
+
+    const espera = Math.min(
+        12000,
+        1500 * arenaTentativasReconexaoFarol
+    );
+
+    arenaReconexaoTimerFarol = setTimeout(() => {
+
+        if(
+            arenaSalaAtualCodigoFarol === codigo &&
+            navigator.onLine
+        ){
+            acompanharArenaAoVivoFarol(codigo, true);
+        }
+
+    }, espera);
+}
+
+function acompanharArenaAoVivoFarol(codigo, reconectando = false){
 
     if(arenaSalaListenerFarol){
         arenaSalaListenerFarol();
@@ -27488,22 +27534,95 @@ function acompanharArenaAoVivoFarol(codigo){
         arenaSalaAtualCodigoFarol
     );
 
+    if(reconectando){
+        mostrarToast(
+            "Tentando restabelecer a conexão com a Arena..."
+        );
+    }
+
     arenaSalaListenerFarol = db
         .collection("arenasAoVivo")
         .doc(arenaSalaAtualCodigoFarol)
         .onSnapshot(snapshot => {
 
+            if(arenaReconexaoTimerFarol){
+                clearTimeout(arenaReconexaoTimerFarol);
+                arenaReconexaoTimerFarol = null;
+            }
+
+            arenaTentativasReconexaoFarol = 0;
+
+            if(arenaConexaoInterrompidaFarol){
+                arenaConexaoInterrompidaFarol = false;
+                fecharPopupArenaFarol();
+                mostrarToast("Conexão com a Arena restabelecida.");
+            }
+
             if(!snapshot.exists){
 
                 limparArenaLocalFarol();
-                mostrarToast("A Arena não está mais disponível.");
+                abrirPopupArenaFarol({
+                    icone: "⚠️",
+                    titulo: "Arena indisponível",
+                    mensagem:
+                        "Esta Arena foi removida ou não está mais disponível.",
+                    textoConfirmar: "Voltar aos Duelos",
+                    aoConfirmar: () => {
+                        mostrarTela("duelos");
+                        alternarModoCompeticaoFarol("arena");
+                    }
+                });
                 return;
             }
 
-            arenaSalaAtualFarol = {
+            const novosDados = {
                 id: snapshot.id,
                 ...snapshot.data()
             };
+
+            const alteracoes = nomesAlteradosArenaFarol(
+                arenaParticipantesAnterioresFarol,
+                novosDados.participantes || {}
+            );
+
+            alteracoes.entraram.forEach(nome => {
+                mostrarToast(`${nome} entrou na Arena.`);
+            });
+
+            alteracoes.sairam.forEach(nome => {
+                mostrarToast(`${nome} saiu da Arena.`);
+            });
+
+            if(
+                arenaStatusAnteriorFarol &&
+                arenaStatusAnteriorFarol !== "jogando" &&
+                novosDados.status === "jogando"
+            ){
+                abrirPopupArenaFarol({
+                    icone: "🏟️",
+                    titulo: "A Arena começou!",
+                    mensagem:
+                        "Prepare-se. A primeira questão já está disponível.",
+                    textoConfirmar: "Começar",
+                    fechamentoAutomatico: 3500
+                });
+            }
+
+            if(
+                arenaStatusAnteriorFarol === "jogando" &&
+                novosDados.status === "finalizada"
+            ){
+                mostrarToast("Resultado final da Arena disponível.");
+            }
+
+            arenaParticipantesAnterioresFarol = {
+                ...(novosDados.participantes || {})
+            };
+
+            arenaStatusAnteriorFarol =
+                String(novosDados.status || "");
+
+            arenaSalaAtualFarol = novosDados;
 
             renderizarSalaArenaAoVivoFarol();
 
@@ -27511,8 +27630,26 @@ function acompanharArenaAoVivoFarol(codigo){
 
             console.error("Erro no acompanhamento da Arena:", erro);
 
-            mostrarToast(
-                "A conexão com a Arena foi interrompida."
+            arenaConexaoInterrompidaFarol = true;
+
+            abrirPopupArenaFarol({
+                icone: "📡",
+                titulo: "Conexão interrompida",
+                mensagem:
+                    "O Farol tentará reconectar automaticamente. " +
+                    "Não feche esta tela.",
+                textoConfirmar: "Tentar agora",
+                podeFechar: false,
+                aoConfirmar: () => {
+                    acompanharArenaAoVivoFarol(
+                        arenaSalaAtualCodigoFarol,
+                        true
+                    );
+                }
+            });
+
+            agendarReconexaoArenaFarol(
+                arenaSalaAtualCodigoFarol
             );
         });
 }
@@ -28966,6 +29103,16 @@ async function avancarQuestaoArenaFarol(){
                 return;
             }
 
+            // Impede que um callback antigo avance uma rodada nova.
+            if(
+                Number(dados.questaoAtual || 0) !==
+                    Number(sala.questaoAtual || 0) ||
+                Number(dados.rodadaNumero || 0) !==
+                    Number(sala.rodadaNumero || 0)
+            ){
+                return;
+            }
+
             const fim =
                 calcularFimRodadaArenaFarol(dados);
 
@@ -30117,6 +30264,191 @@ if(typeof auth !== "undefined"){
 }
 
 
+
+
+// ==========================================================
+// FAROL V58 — POPUPS IMPORTANTES DA ARENA
+// ==========================================================
+
+let popupArenaTimerFarol = null;
+let popupArenaAcaoFarol = null;
+
+function garantirPopupArenaFarol(){
+
+    let fundo =
+        document.getElementById("popupArenaFarol");
+
+    if(fundo){
+        return fundo;
+    }
+
+    fundo = document.createElement("div");
+    fundo.id = "popupArenaFarol";
+    fundo.className = "popup-arena-farol";
+    fundo.setAttribute("aria-hidden", "true");
+
+    fundo.innerHTML = `
+        <div
+            class="popup-arena-card-farol"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="popupArenaTituloFarol">
+
+            <div
+                id="popupArenaIconeFarol"
+                class="popup-arena-icone-farol">
+                🏟️
+            </div>
+
+            <h3 id="popupArenaTituloFarol">
+                Arena do Farol
+            </h3>
+
+            <p id="popupArenaMensagemFarol"></p>
+
+            <div class="popup-arena-acoes-farol">
+                <button
+                    id="btnPopupArenaCancelarFarol"
+                    type="button"
+                    class="popup-arena-cancelar-farol">
+                    Cancelar
+                </button>
+
+                <button
+                    id="btnPopupArenaConfirmarFarol"
+                    type="button">
+                    Continuar
+                </button>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(fundo);
+
+    fundo.querySelector(
+        "#btnPopupArenaConfirmarFarol"
+    ).addEventListener("click", () => {
+
+        const acao = popupArenaAcaoFarol;
+        fecharPopupArenaFarol();
+
+        if(typeof acao === "function"){
+            acao();
+        }
+    });
+
+    fundo.querySelector(
+        "#btnPopupArenaCancelarFarol"
+    ).addEventListener("click", () => {
+        fecharPopupArenaFarol();
+    });
+
+    return fundo;
+}
+
+function abrirPopupArenaFarol(opcoes = {}){
+
+    const fundo = garantirPopupArenaFarol();
+
+    const icone =
+        fundo.querySelector("#popupArenaIconeFarol");
+
+    const titulo =
+        fundo.querySelector("#popupArenaTituloFarol");
+
+    const mensagem =
+        fundo.querySelector("#popupArenaMensagemFarol");
+
+    const confirmar =
+        fundo.querySelector("#btnPopupArenaConfirmarFarol");
+
+    const cancelar =
+        fundo.querySelector("#btnPopupArenaCancelarFarol");
+
+    icone.textContent = opcoes.icone || "🏟️";
+    titulo.textContent = opcoes.titulo || "Arena do Farol";
+    mensagem.textContent = opcoes.mensagem || "";
+    confirmar.textContent =
+        opcoes.textoConfirmar || "Continuar";
+
+    cancelar.textContent =
+        opcoes.textoCancelar || "Cancelar";
+
+    cancelar.style.display =
+        opcoes.podeFechar === false ||
+        !opcoes.textoCancelar
+            ? "none"
+            : "";
+
+    popupArenaAcaoFarol =
+        typeof opcoes.aoConfirmar === "function"
+            ? opcoes.aoConfirmar
+            : null;
+
+    fundo.classList.add("visivel");
+    fundo.setAttribute("aria-hidden", "false");
+
+    if(popupArenaTimerFarol){
+        clearTimeout(popupArenaTimerFarol);
+    }
+
+    if(Number(opcoes.fechamentoAutomatico) > 0){
+        popupArenaTimerFarol = setTimeout(
+            fecharPopupArenaFarol,
+            Number(opcoes.fechamentoAutomatico)
+        );
+    }
+}
+
+function fecharPopupArenaFarol(){
+
+    const fundo =
+        document.getElementById("popupArenaFarol");
+
+    if(fundo){
+        fundo.classList.remove("visivel");
+        fundo.setAttribute("aria-hidden", "true");
+    }
+
+    if(popupArenaTimerFarol){
+        clearTimeout(popupArenaTimerFarol);
+        popupArenaTimerFarol = null;
+    }
+
+    popupArenaAcaoFarol = null;
+}
+
+window.addEventListener("online", () => {
+
+    if(
+        arenaConexaoInterrompidaFarol &&
+        arenaSalaAtualCodigoFarol
+    ){
+        acompanharArenaAoVivoFarol(
+            arenaSalaAtualCodigoFarol,
+            true
+        );
+    }
+});
+
+window.addEventListener("offline", () => {
+
+    if(arenaSalaAtualCodigoFarol){
+        arenaConexaoInterrompidaFarol = true;
+
+        abrirPopupArenaFarol({
+            icone: "📴",
+            titulo: "Você está sem internet",
+            mensagem:
+                "A Arena será reconectada automaticamente " +
+                "quando a conexão voltar.",
+            textoConfirmar: "Aguardando conexão",
+            podeFechar: false
+        });
+    }
+});
+
+
 // ============================================================
 // V56 — SAÍDA DA ARENA E ENCERRAMENTO POR FALTA DE JOGADORES
 // ============================================================
@@ -30128,6 +30460,27 @@ async function sairArenaAoVivoFarol(silencioso){
 
     if(!usuario || !codigo){
         limparArenaLocalFarol();
+        return;
+    }
+
+    const salaAntesDeSair = arenaSalaAtualFarol || {};
+    const ehAnfitriaoAtivo =
+        salaAntesDeSair.criadoPor === usuario.uid &&
+        salaAntesDeSair.status === "jogando";
+
+    if(!silencioso && ehAnfitriaoAtivo){
+
+        abrirPopupArenaFarol({
+            icone: "⚠️",
+            titulo: "Encerrar a Arena?",
+            mensagem:
+                "Você é o anfitrião. Ao sair agora, a partida será " +
+                "encerrada para todos os jogadores.",
+            textoCancelar: "Continuar jogando",
+            textoConfirmar: "Encerrar e sair",
+            aoConfirmar: () => sairArenaAoVivoFarol(true)
+        });
+
         return;
     }
 
@@ -35088,3 +35441,24 @@ window.selecionarConcursoArenaV40 = function(concurso){
     }
 
 })();
+
+
+// Limpa também o estado visual e de reconexão da Arena.
+const limparArenaLocalFarolAntesV58 = limparArenaLocalFarol;
+limparArenaLocalFarol = function(){
+
+    if(arenaReconexaoTimerFarol){
+        clearTimeout(arenaReconexaoTimerFarol);
+        arenaReconexaoTimerFarol = null;
+    }
+
+    arenaTentativasReconexaoFarol = 0;
+    arenaParticipantesAnterioresFarol = {};
+    arenaStatusAnteriorFarol = "";
+    arenaConexaoInterrompidaFarol = false;
+
+    fecharPopupArenaFarol();
+
+    return limparArenaLocalFarolAntesV58
+        .apply(this, arguments);
+};
