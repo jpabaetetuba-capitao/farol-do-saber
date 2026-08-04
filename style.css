@@ -15558,3 +15558,216 @@ progress{
         font-size:24px;
     }
 }
+
+
+/* ==========================================================
+   FAROL V65 — LOJA APRIMORADA
+========================================================== */
+
+.linha-nome-item-v65{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:6px;
+}
+
+.selo-raridade-v65,
+.selo-detalhe-loja-v65{
+    width:max-content;
+    padding:3px 7px;
+    border-radius:999px;
+    font-size:9px;
+    font-style:normal;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.selo-raridade-v65.comum{
+    background:#e8eeeb;
+    color:#53665c;
+}
+
+.selo-raridade-v65.raro{
+    background:#dceeff;
+    color:#17639d;
+}
+
+.selo-raridade-v65.epico{
+    background:#eee2ff;
+    color:#7040a7;
+}
+
+.selo-raridade-v65.lendario{
+    background:#fff0c2;
+    color:#946500;
+}
+
+.item-lista-loja-v33.raridade-raro{
+    border-left:4px solid #268bd2;
+}
+
+.item-lista-loja-v33.raridade-epico{
+    border-left:4px solid #8e5ac7;
+}
+
+.item-lista-loja-v33.raridade-lendario{
+    border-left:4px solid #e0a000;
+}
+
+.selo-detalhe-loja-v65{
+    margin:0 auto 9px;
+    background:#fff0c2;
+    color:#8a6100;
+}
+
+.btn-previsualizar-loja-v65{
+    width:auto;
+    margin:0 auto 15px;
+    padding:9px 14px;
+    background:#edf5f1;
+    color:#28523e;
+}
+
+.preview-loja-farol-v65{
+    position:fixed;
+    inset:0;
+    z-index:100200;
+    display:grid;
+    place-items:center;
+    padding:20px;
+    background:rgba(5,18,31,.72);
+    backdrop-filter:blur(6px);
+    opacity:0;
+    visibility:hidden;
+    transition:.2s ease;
+}
+
+.preview-loja-farol-v65.visivel{
+    opacity:1;
+    visibility:visible;
+}
+
+.preview-card-loja-v65{
+    position:relative;
+    width:min(440px,100%);
+    max-height:90vh;
+    overflow:auto;
+    padding:26px 21px;
+    text-align:center;
+    border-radius:23px;
+    background:#fff;
+    box-shadow:0 25px 70px rgba(0,0,0,.36);
+}
+
+.fechar-preview-loja-v65{
+    position:absolute;
+    top:9px;
+    right:10px;
+    width:38px;
+    height:38px;
+    margin:0;
+    padding:0;
+    border-radius:50%;
+    background:#edf2ef;
+    color:#324d40;
+    font-size:25px;
+}
+
+.tag-preview-loja-v65{
+    color:#087f5b;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:1.1px;
+}
+
+.preview-card-loja-v65 h3{
+    margin:10px 0 6px;
+    color:#244c39;
+}
+
+.preview-card-loja-v65 > p{
+    color:#68766f;
+    line-height:1.45;
+}
+
+.perfil-preview-loja-v65{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:min(260px,100%);
+    margin:17px auto 0;
+    padding:20px;
+    overflow:hidden;
+    border:1px solid #dae7e0;
+    border-radius:19px;
+    background:#f6faf8;
+}
+
+.avatar-preview-loja-v65{
+    width:92px;
+    height:92px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.perfil-preview-loja-v65 strong{
+    margin-top:10px;
+    color:#244c39;
+}
+
+.perfil-preview-loja-v65 small{
+    color:#718078;
+}
+
+body.moldura-maritima-v65 #avatarAluno,
+body.moldura-maritima-v65 .avatar-perfil,
+body.moldura-maritima-v65 .avatar-grande,
+.perfil-preview-loja-v65.moldura-maritima-v65 .avatar-preview-loja-v65{
+    outline:5px double #0a5688;
+    box-shadow:0 0 0 4px #d9f1ff;
+}
+
+body.moldura-dourada-v65 #avatarAluno,
+body.moldura-dourada-v65 .avatar-perfil,
+body.moldura-dourada-v65 .avatar-grande,
+.perfil-preview-loja-v65.moldura-dourada-v65 .avatar-preview-loja-v65{
+    outline:5px double #d8a315;
+    box-shadow:0 0 0 4px #fff0ad;
+}
+
+body.efeito-brilho-v65 #conteudoPerfilAluno .perfil-cabecalho,
+.perfil-preview-loja-v65.efeito-brilho-v65{
+    animation:brilhoLojaV65 2s ease-in-out infinite;
+}
+
+body.efeito-ondas-v65 #conteudoPerfilAluno .perfil-cabecalho,
+.perfil-preview-loja-v65.efeito-ondas-v65{
+    background:
+        radial-gradient(circle at 20% 100%,rgba(39,152,219,.25),transparent 38%),
+        radial-gradient(circle at 80% 100%,rgba(12,91,151,.22),transparent 42%),
+        #f5fbff;
+    animation:ondasLojaV65 3s ease-in-out infinite;
+}
+
+@keyframes brilhoLojaV65{
+    0%,100%{
+        box-shadow:0 0 0 rgba(255,199,55,0);
+    }
+    50%{
+        box-shadow:0 0 25px rgba(255,199,55,.52);
+    }
+}
+
+@keyframes ondasLojaV65{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-3px)}
+}
+
+@media(prefers-reduced-motion:reduce){
+    body.efeito-brilho-v65 #conteudoPerfilAluno .perfil-cabecalho,
+    body.efeito-ondas-v65 #conteudoPerfilAluno .perfil-cabecalho,
+    .perfil-preview-loja-v65{
+        animation:none !important;
+    }
+}

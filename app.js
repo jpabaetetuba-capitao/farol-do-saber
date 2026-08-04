@@ -13513,9 +13513,247 @@ const recompensasLojaFarol = [
         nome: "Certificado Digital de Destaque",
         custo: 2000,
         requisito: "100 acertos",
+        raridade: "epico",
         descricao: "Gera um certificado de participação e desempenho no Farol do Saber."
+    },
+    {
+        id: "titulo_mestre_farol",
+        categoria: "titulos",
+        tipo: "titulo",
+        icone: "🗼",
+        nome: "Título Mestre do Farol",
+        tituloAplicado: "Mestre do Farol",
+        custo: 1800,
+        raridade: "epico",
+        nivelMinimo: 5,
+        descricao: "Título especial para estudantes que alcançaram o nível Imediato."
+    },
+    {
+        id: "titulo_campeao_arena",
+        categoria: "titulos",
+        tipo: "titulo",
+        icone: "🏆",
+        nome: "Título Campeão da Arena",
+        tituloAplicado: "Campeão da Arena",
+        custo: 2200,
+        raridade: "lendario",
+        conquistaNecessaria: "arena-5",
+        descricao: "Título exclusivo liberado pela conquista Competidor da Arena."
+    },
+    {
+        id: "moldura_maritima",
+        categoria: "molduras",
+        tipo: "moldura",
+        icone: "⚓",
+        nome: "Moldura Marítima",
+        custo: 900,
+        raridade: "raro",
+        classeAplicada: "moldura-maritima-v65",
+        descricao: "Moldura azul-marinho com identidade náutica para destacar o avatar."
+    },
+    {
+        id: "moldura_dourada",
+        categoria: "molduras",
+        tipo: "moldura",
+        icone: "👑",
+        nome: "Moldura Dourada",
+        custo: 1600,
+        raridade: "epico",
+        nivelMinimo: 4,
+        classeAplicada: "moldura-dourada-v65",
+        descricao: "Moldura dourada para alunos que alcançaram o nível Oficial."
+    },
+    {
+        id: "efeito_brilho_farol",
+        categoria: "efeitos",
+        tipo: "efeito",
+        icone: "✨",
+        nome: "Brilho do Farol",
+        custo: 1400,
+        raridade: "epico",
+        classeAplicada: "efeito-brilho-v65",
+        descricao: "Efeito luminoso aplicado ao avatar e ao cartão do perfil."
+    },
+    {
+        id: "efeito_ondas",
+        categoria: "efeitos",
+        tipo: "efeito",
+        icone: "🌊",
+        nome: "Ondas do Saber",
+        custo: 1900,
+        raridade: "lendario",
+        conquistaNecessaria: "farol-aceso-7",
+        classeAplicada: "efeito-ondas-v65",
+        descricao: "Efeito animado exclusivo liberado pela conquista Farol Aceso."
     }
 ];
+
+
+recompensasLojaFarol.forEach(item => {
+    if(item.categoria === "avatares_gratuitos" ||
+       item.categoria === "avatares_premium"){
+        item.categoriaV65 = "avatares";
+    }else if(item.categoria === "titulos_medalhas"){
+        item.categoriaV65 =
+            item.tipo === "titulo" ? "titulos" : "extras";
+    }else if(item.categoria === "extras_progresso" ||
+             item.categoria === "certificados"){
+        item.categoriaV65 = "extras";
+    }else{
+        item.categoriaV65 = item.categoria;
+    }
+
+    if(!item.raridade){
+        item.raridade =
+            item.custo >= 1800 ? "lendario" :
+            item.custo >= 1100 ? "epico" :
+            item.custo >= 500 ? "raro" :
+            "comum";
+    }
+});
+
+function nivelAtualLojaV65(){
+    try{
+        return Number(
+            obterNivelLuzFarol(pontosLuz)?.nivel || 1
+        );
+    }catch(erro){
+        return 1;
+    }
+}
+
+function conquistaLojaLiberadaV65(id){
+    if(!id){
+        return true;
+    }
+
+    return Boolean(
+        lojaFarol.conquistasDesbloqueadas &&
+        lojaFarol.conquistasDesbloqueadas[id]
+    );
+}
+
+function bloqueioItemLojaV65(item){
+    if(!item){
+        return {
+            bloqueado: true,
+            motivo: "Item não encontrado."
+        };
+    }
+
+    if(item.nivelMinimo && nivelAtualLojaV65() < item.nivelMinimo){
+        return {
+            bloqueado: true,
+            motivo: `Alcance o nível ${item.nivelMinimo} para liberar.`
+        };
+    }
+
+    if(
+        item.conquistaNecessaria &&
+        !conquistaLojaLiberadaV65(item.conquistaNecessaria)
+    ){
+        return {
+            bloqueado: true,
+            motivo: "Desbloqueie a conquista exigida para liberar."
+        };
+    }
+
+    if(item.id === "certificado_digital" && acertos < 100){
+        return {
+            bloqueado: true,
+            motivo: `Faltam ${Math.max(100 - acertos, 0)} acertos para liberar.`
+        };
+    }
+
+    return {
+        bloqueado: false,
+        motivo: ""
+    };
+}
+
+function nomeRaridadeLojaV65(raridade){
+    const nomes = {
+        comum: "Comum",
+        raro: "Raro",
+        epico: "Épico",
+        lendario: "Lendário"
+    };
+
+    return nomes[raridade] || "Comum";
+}
+
+function aplicarPersonalizacaoLojaV65(){
+    const classes = [
+        "moldura-maritima-v65",
+        "moldura-dourada-v65",
+        "efeito-brilho-v65",
+        "efeito-ondas-v65"
+    ];
+
+    document.body.classList.remove(...classes);
+
+    if(lojaFarol.molduraAtual){
+        document.body.classList.add(lojaFarol.molduraAtual);
+    }
+
+    if(lojaFarol.efeitoAtual){
+        document.body.classList.add(lojaFarol.efeitoAtual);
+    }
+}
+
+function usarPersonalizacaoLojaV65(id){
+    const item = obterRecompensaLoja(id);
+
+    if(!item || !["moldura", "efeito"].includes(item.tipo)){
+        mostrarToast("Personalização não encontrada.");
+        return;
+    }
+
+    if(!recompensaComprada(id)){
+        mostrarToast("Você ainda não adquiriu este item.");
+        return;
+    }
+
+    if(item.tipo === "moldura"){
+        lojaFarol.molduraAtual = item.classeAplicada;
+        lojaFarol.molduraAtualId = item.id;
+    }else{
+        lojaFarol.efeitoAtual = item.classeAplicada;
+        lojaFarol.efeitoAtualId = item.id;
+    }
+
+    aplicarPersonalizacaoLojaV65();
+    salvarDados();
+    atualizarDashboard();
+    atualizarLojaFarol();
+    salvarLojaFirebase();
+
+    mostrarToast("✨ Personalização aplicada!");
+}
+
+function removerPersonalizacaoLojaV65(tipo){
+    if(tipo === "moldura"){
+        lojaFarol.molduraAtual = "";
+        lojaFarol.molduraAtualId = "";
+    }else{
+        lojaFarol.efeitoAtual = "";
+        lojaFarol.efeitoAtualId = "";
+    }
+
+    aplicarPersonalizacaoLojaV65();
+    salvarDados();
+    atualizarDashboard();
+    atualizarLojaFarol();
+    salvarLojaFirebase();
+
+    mostrarToast("Personalização removida.");
+}
+
+window.usarPersonalizacaoLojaV65 =
+    usarPersonalizacaoLojaV65;
+
+window.removerPersonalizacaoLojaV65 =
+    removerPersonalizacaoLojaV65;
 
 function valorEhImagemAvatar(valor){
     return typeof valor === "string" && /\.(png|jpg|jpeg|webp|gif)$/i.test(valor);
@@ -13683,9 +13921,22 @@ function comprarRecompensaLoja(id){
         return;
     }
 
-    if(item.id === "certificado_digital" && acertos < 100){
-        mostrarToast("Para emitir o certificado, alcance pelo menos 100 acertos.");
+    const bloqueioV65 = bloqueioItemLojaV65(item);
+
+    if(bloqueioV65.bloqueado){
+        mostrarToast(bloqueioV65.motivo);
         return;
+    }
+
+    let versaoAvatarPendenteV65 = null;
+
+    if(item.tipo === "avatar"){
+        versaoAvatarPendenteV65 = obterVersaoAvatarItem(item);
+
+        if(!versaoAvatarPendenteV65){
+            mostrarToast("Escolha do avatar cancelada.");
+            return;
+        }
     }
 
     if(saldoPontosLuz < item.custo){
@@ -13718,15 +13969,22 @@ function comprarRecompensaLoja(id){
     }
 
     if(item.tipo === "avatar"){
-        const versaoAvatar = obterVersaoAvatarItem(item);
+        lojaFarol.avatarAtual =
+            versaoAvatarPendenteV65.avatar;
+        lojaFarol.nomeAvatarAtual =
+            versaoAvatarPendenteV65.nomeAvatar;
+    }
 
-        if(!versaoAvatar){
-            mostrarToast("Escolha do avatar cancelada.");
-            return;
-        }
+    if(item.tipo === "moldura"){
+        lojaFarol.molduraAtual = item.classeAplicada;
+        lojaFarol.molduraAtualId = item.id;
+        aplicarPersonalizacaoLojaV65();
+    }
 
-        lojaFarol.avatarAtual = versaoAvatar.avatar;
-        lojaFarol.nomeAvatarAtual = versaoAvatar.nomeAvatar;
+    if(item.tipo === "efeito"){
+        lojaFarol.efeitoAtual = item.classeAplicada;
+        lojaFarol.efeitoAtualId = item.id;
+        aplicarPersonalizacaoLojaV65();
     }
 
     if(item.tipo === "card"){
@@ -13826,6 +14084,14 @@ function recompensaEmUsoLoja(item){
         return !!lojaFarol.certificadoDigital;
     }
 
+    if(item.tipo === "moldura"){
+        return lojaFarol.molduraAtualId === item.id;
+    }
+
+    if(item.tipo === "efeito"){
+        return lojaFarol.efeitoAtualId === item.id;
+    }
+
     return false;
 
 }
@@ -13909,6 +14175,14 @@ function montarAcaoLoja(item, comprada, semSaldo, bloqueadaCertificado){
             return `
                 <button onclick="compartilharProgresso()">
                     📤 Compartilhar card premium
+                </button>
+            `;
+        }
+
+        if(item.tipo === "moldura" || item.tipo === "efeito"){
+            return `
+                <button onclick="usarPersonalizacaoLojaV65('${item.id}')">
+                    Usar ${item.tipo === "moldura" ? "moldura" : "efeito"}
                 </button>
             `;
         }
@@ -35056,34 +35330,40 @@ function renderizarSalaArenaAoVivoFarol(){
 
     const categoriasLojaV33 = [
         {
-            id: "avatares_gratuitos",
+            id: "avatares",
             icone: "👤",
-            titulo: "Avatares gratuitos",
-            descricao: "Escolha a identidade inicial do seu perfil."
+            titulo: "Avatares",
+            descricao: "Escolha a identidade visual do seu perfil."
         },
         {
-            id: "avatares_premium",
-            icone: "⭐",
-            titulo: "Avatares premium",
-            descricao: "Desbloqueie personagens especiais."
-        },
-        {
-            id: "titulos_medalhas",
+            id: "titulos",
             icone: "🎖️",
-            titulo: "Títulos e medalhas",
-            descricao: "Mostre suas conquistas no perfil."
+            titulo: "Títulos",
+            descricao: "Mostre sua evolução junto ao seu nome."
         },
         {
-            id: "extras_progresso",
-            icone: "📤",
-            titulo: "Extras de progresso",
-            descricao: "Personalize e compartilhe sua evolução."
+            id: "molduras",
+            icone: "🖼️",
+            titulo: "Molduras",
+            descricao: "Destaque o avatar com estilos especiais."
         },
         {
-            id: "certificados",
-            icone: "📜",
-            titulo: "Certificados",
-            descricao: "Recompensas especiais de desempenho."
+            id: "efeitos",
+            icone: "✨",
+            titulo: "Efeitos",
+            descricao: "Adicione movimento e brilho ao perfil."
+        },
+        {
+            id: "extras",
+            icone: "🎁",
+            titulo: "Extras",
+            descricao: "Cards, medalha especial e certificado."
+        },
+        {
+            id: "meus_itens",
+            icone: "🎒",
+            titulo: "Meus Itens",
+            descricao: "Veja tudo o que você já adquiriu."
         }
     ];
 
@@ -35177,9 +35457,13 @@ function renderizarSalaArenaAoVivoFarol(){
 
         const categorias = categoriasLojaV33
             .map(categoria => {
-                const itens = recompensasLojaFarol.filter(
-                    item => item.categoria === categoria.id
-                );
+                const itens = categoria.id === "meus_itens"
+                    ? recompensasLojaFarol.filter(
+                        item => recompensaComprada(item.id)
+                    )
+                    : recompensasLojaFarol.filter(
+                        item => item.categoriaV65 === categoria.id
+                    );
 
                 if(!itens.length){
                     return "";
@@ -35234,8 +35518,8 @@ function renderizarSalaArenaAoVivoFarol(){
 
     function montarCardItemLojaV33(item){
         const comprada = recompensaComprada(item.id);
-        const bloqueadaCertificado =
-            item.id === "certificado_digital" && acertos < 100;
+        const bloqueioV65 = bloqueioItemLojaV65(item);
+        const bloqueadaCertificado = bloqueioV65.bloqueado;
         const semSaldo =
             saldoPontosLuz < item.custo && !comprada;
         const emUso = recompensaEmUsoLoja(item);
@@ -35259,16 +35543,21 @@ function renderizarSalaArenaAoVivoFarol(){
         return `
             <button
                 type="button"
-                class="item-lista-loja-v33 ${comprada ? "comprado" : ""} ${emUso ? "em-uso" : ""}"
+                class="item-lista-loja-v33 raridade-${item.raridade || "comum"} ${comprada ? "comprado" : ""} ${emUso ? "em-uso" : ""}"
                 onclick="abrirDetalheLojaV33('${item.id}')">
                 <span class="visual-item-loja-v33">
                     ${renderizarIconeLoja(item)}
                 </span>
 
                 <span class="texto-item-loja-v33">
-                    <strong>${item.nome}</strong>
+                    <span class="linha-nome-item-v65">
+                        <strong>${item.nome}</strong>
+                        <i class="selo-raridade-v65 ${item.raridade || "comum"}">
+                            ${nomeRaridadeLojaV65(item.raridade)}
+                        </i>
+                    </span>
                     <small>${custo}</small>
-                    <em>${status}</em>
+                    <em>${bloqueioV65.bloqueado && !comprada ? bloqueioV65.motivo : status}</em>
                 </span>
 
                 <b>›</b>
@@ -35278,9 +35567,13 @@ function renderizarSalaArenaAoVivoFarol(){
 
     function renderizarItensLojaV33(){
         const area = elLojaV33("conteudoLojaFarol");
-        const itens = recompensasLojaFarol.filter(
-            item => item.categoria === estadoLojaV33.categoria
-        );
+        const itens = estadoLojaV33.categoria === "meus_itens"
+            ? recompensasLojaFarol.filter(
+                item => recompensaComprada(item.id)
+            )
+            : recompensasLojaFarol.filter(
+                item => item.categoriaV65 === estadoLojaV33.categoria
+            );
 
         const adquiridos = itens.filter(item => recompensaComprada(item.id));
         const disponiveis = itens.filter(item => !recompensaComprada(item.id));
@@ -35331,8 +35624,8 @@ function renderizarSalaArenaAoVivoFarol(){
         }
 
         const comprada = recompensaComprada(item.id);
-        const bloqueadaCertificado =
-            item.id === "certificado_digital" && acertos < 100;
+        const bloqueioV65 = bloqueioItemLojaV65(item);
+        const bloqueadaCertificado = bloqueioV65.bloqueado;
         const semSaldo =
             saldoPontosLuz < item.custo && !comprada;
         const faltamPontos = Math.max(item.custo - saldoPontosLuz, 0);
@@ -35354,8 +35647,19 @@ function renderizarSalaArenaAoVivoFarol(){
                     ${renderizarIconeLoja(item)}
                 </div>
 
+                <div class="selo-detalhe-loja-v65">
+                    ${nomeRaridadeLojaV65(item.raridade)}
+                </div>
+
                 <h3>${item.nome}</h3>
                 <p>${item.descricao}</p>
+
+                <button
+                    type="button"
+                    class="btn-previsualizar-loja-v65"
+                    onclick="previsualizarItemLojaV65('${item.id}')">
+                    👁️ Pré-visualizar
+                </button>
 
                 <div class="informacoes-item-loja-v33">
                     <div>
@@ -35388,9 +35692,9 @@ function renderizarSalaArenaAoVivoFarol(){
                     </div>
                 ` : ""}
 
-                ${bloqueadaCertificado ? `
+                ${bloqueadaCertificado && !comprada ? `
                     <div class="aviso-detalhe-loja-v33 bloqueado">
-                        Faltam ${Math.max(100 - acertos, 0)} acertos para liberar.
+                        ${bloqueioV65.motivo}
                     </div>
                 ` : ""}
 
@@ -37993,4 +38297,110 @@ limparArenaLocalFarol = function(){
         }
     );
 
+})();
+
+
+// ==========================================================
+// FAROL V65 — PRÉ-VISUALIZAÇÃO E PERSONALIZAÇÃO DA LOJA
+// ==========================================================
+
+(function(){
+    function garantirPreviewLojaV65(){
+        let fundo = document.getElementById("previewLojaFarolV65");
+
+        if(fundo){
+            return fundo;
+        }
+
+        fundo = document.createElement("div");
+        fundo.id = "previewLojaFarolV65";
+        fundo.className = "preview-loja-farol-v65";
+        fundo.setAttribute("aria-hidden", "true");
+
+        fundo.innerHTML = `
+            <div class="preview-card-loja-v65" role="dialog" aria-modal="true">
+                <button
+                    type="button"
+                    class="fechar-preview-loja-v65"
+                    onclick="fecharPreviewLojaV65()"
+                    aria-label="Fechar">
+                    ×
+                </button>
+
+                <span class="tag-preview-loja-v65">
+                    PRÉ-VISUALIZAÇÃO
+                </span>
+
+                <div id="visualPreviewLojaV65"></div>
+                <h3 id="nomePreviewLojaV65"></h3>
+                <p id="descricaoPreviewLojaV65"></p>
+
+                <div class="perfil-preview-loja-v65">
+                    <div id="avatarPreviewLojaV65"></div>
+                    <strong id="tituloPreviewLojaV65"></strong>
+                    <small>Farol do Saber</small>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(fundo);
+        return fundo;
+    }
+
+    window.previsualizarItemLojaV65 = function(id){
+        const item = obterRecompensaLoja(id);
+
+        if(!item){
+            mostrarToast("Item não encontrado.");
+            return;
+        }
+
+        const fundo = garantirPreviewLojaV65();
+        const avatarArea = fundo.querySelector("#avatarPreviewLojaV65");
+        const perfil = fundo.querySelector(".perfil-preview-loja-v65");
+
+        perfil.className = "perfil-preview-loja-v65";
+
+        if(item.tipo === "moldura" || item.tipo === "efeito"){
+            perfil.classList.add(item.classeAplicada);
+        }
+
+        fundo.querySelector("#visualPreviewLojaV65").innerHTML =
+            renderizarIconeLoja(item);
+
+        fundo.querySelector("#nomePreviewLojaV65").textContent =
+            item.nome;
+
+        fundo.querySelector("#descricaoPreviewLojaV65").textContent =
+            item.descricao;
+
+        avatarArea.innerHTML = montarAvatarHTML(
+            item.tipo === "avatar"
+                ? (item.avatarMasculino || item.avatar || item.icone)
+                : lojaFarol.avatarAtual,
+            item.nome,
+            "avatar-preview-loja-v65"
+        );
+
+        fundo.querySelector("#tituloPreviewLojaV65").textContent =
+            item.tipo === "titulo"
+                ? obterTituloAplicadoLoja(item)
+                : (lojaFarol.tituloAtual || lojaFarol.nomeAvatarAtual || "Estudante");
+
+        fundo.classList.add("visivel");
+        fundo.setAttribute("aria-hidden", "false");
+    };
+
+    window.fecharPreviewLojaV65 = function(){
+        const fundo = document.getElementById("previewLojaFarolV65");
+
+        if(fundo){
+            fundo.classList.remove("visivel");
+            fundo.setAttribute("aria-hidden", "true");
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+        aplicarPersonalizacaoLojaV65();
+    });
 })();
