@@ -2497,3 +2497,539 @@
     };
 
 })();
+
+
+// ==========================================================
+// FAROL ADMIN V46 — HISTÓRICO DE DUELOS
+// ==========================================================
+
+(function(){
+    "use strict";
+
+    let historicoDuelosCacheFarol = [];
+    let historicoDuelosCarregadoFarol = false;
+
+    function bancoHistoricoDuelosFarol(){
+        return window.dbAdminFarol || null;
+    }
+
+    function textoSeguroDueloAdminFarol(valor){
+        if(typeof window.textoSeguroAdminFarol === "function"){
+            return window.textoSeguroAdminFarol(valor);
+        }
+
+        return String(valor || "")
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("'", "&#039;");
+    }
+
+    function dataDueloAdminFarol(valor){
+        if(!valor){
+            return null;
+        }
+
+        if(typeof valor.toDate === "function"){
+            return valor.toDate();
+        }
+
+        if(typeof valor.seconds === "number"){
+            return new Date(valor.seconds * 1000);
+        }
+
+        const data = new Date(valor);
+        return Number.isNaN(data.getTime()) ? null : data;
+    }
+
+    function formatarDataDueloAdminFarol(valor){
+        const data = dataDueloAdminFarol(valor);
+
+        if(!data){
+            return "Data não registrada";
+        }
+
+        return data.toLocaleString("pt-BR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+    }
+
+    function normalizarDueloAdminFarol(valor){
+        return String(valor || "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase();
+    }
+
+    function renderizarHistoricoDuelosAdminFarol(lista){
+        const area =
+            document.getElementById("listaHistoricoDuelosFarol");
+
+        const resumo =
+            document.getElementById("resumoHistoricoDuelosFarol");
+
+        if(!area || !resumo){
+            return;
+        }
+
+        resumo.textContent =
+            `${lista.length} Duelo(s) encontrado(s)`;
+
+        if(!lista.length){
+            area.innerHTML = `
+                <div class="admin-lista-vazia">
+                    <span>⚔️</span>
+                    <h3>Nenhum Duelo encontrado</h3>
+                    <p>
+                        Os Duelos concluídos depois desta atualização
+                        aparecerão aqui.
+                    </p>
+                </div>
+            `;
+            return;
+        }
+
+        area.innerHTML = lista.map(duelo => {
+            const participantes =
+                Array.isArray(duelo.classificacao)
+                ? duelo.classificacao
+                : Array.isArray(duelo.participantes)
+                    ? duelo.participantes
+                    : [];
+
+            return `
+                <article class="item-historico-duelo-v56">
+
+                    <div class="cabecalho-historico-duelo-v56">
+                        <div>
+                            <span class="status-historico-duelo-v56 ${duelo.status === "cancelado" ? "cancelado" : "finalizado"}">
+                                ${duelo.status === "cancelado" ? "Cancelado" : "Finalizado"}
+                            </span>
+
+                            <h4>
+                                ${textoSeguroDueloAdminFarol(
+                                    duelo.codigo || duelo.id
+                                )}
+                            </h4>
+                        </div>
+
+                        <div class="acoes-item-historico-arena-v52">
+                            <time>
+                                ${formatarDataDueloAdminFarol(
+                                    duelo.finalizadoEm ||
+                                    duelo.registradoEm
+                                )}
+                            </time>
+
+                            <button
+                                type="button"
+                                class="btn-excluir-arena-admin-v52"
+                                onclick="excluirDueloHistoricoAdminFarol('${textoSeguroDueloAdminFarol(duelo.id || duelo.codigo)}')">
+                                🗑️ Excluir
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grade-resumo-duelo-v56">
+                        <span>
+                            <small>Disciplina</small>
+                            <strong>${textoSeguroDueloAdminFarol(duelo.disciplina || "Não informada")}</strong>
+                        </span>
+
+                        <span>
+                            <small>Assunto</small>
+                            <strong>${textoSeguroDueloAdminFarol(duelo.assunto || "Não informado")}</strong>
+                        </span>
+
+                        <span>
+                            <small>Participantes</small>
+                            <strong>${Number(duelo.totalParticipantes || participantes.length || 0)}</strong>
+                        </span>
+
+                        <span>
+                            <small>Resultado</small>
+                            <strong>${textoSeguroDueloAdminFarol(duelo.vencedorNome || "Não definido")}</strong>
+                        </span>
+                    </div>
+
+                    <details class="detalhes-historico-duelo-v56">
+                        <summary>Ver resultado completo</summary>
+
+                        <div class="configuracao-historico-arena-v51">
+                            <span>
+                                Criador:
+                                <strong>${textoSeguroDueloAdminFarol(duelo.criadoPorNome || duelo.criadoPor || "Não informado")}</strong>
+                            </span>
+
+                            <span>
+                                Questões:
+                                <strong>${Number(duelo.quantidade || 0)}</strong>
+                            </span>
+                        </div>
+
+                        <div class="classificacao-historico-arena-v51">
+                            ${participantes.map((jogador, indice) => `
+                                <div>
+                                    <b>${Number(jogador.posicao || indice + 1)}º</b>
+
+                                    <span>
+                                        <strong>${textoSeguroDueloAdminFarol(jogador.nome || "Aluno")}</strong>
+                                        <small>${textoSeguroDueloAdminFarol(jogador.email || "")}</small>
+                                    </span>
+
+                                    <span>
+                                        <strong>${Number(jogador.acertos || 0)} acertos</strong>
+                                        <small>
+                                            ${Number(jogador.erros || 0)} erros
+                                            ${jogador.finalizado ? "" : " • não finalizou"}
+                                        </small>
+                                    </span>
+                                </div>
+                            `).join("")}
+                        </div>
+                    </details>
+
+                </article>
+            `;
+        }).join("");
+    }
+
+    window.filtrarHistoricoDuelosAdminFarol = function(){
+        const busca = normalizarDueloAdminFarol(
+            document.getElementById(
+                "filtroHistoricoDueloBuscaFarol"
+            )?.value
+        );
+
+        const status = String(
+            document.getElementById(
+                "filtroHistoricoDueloStatusFarol"
+            )?.value || ""
+        );
+
+        const lista = historicoDuelosCacheFarol.filter(duelo => {
+            if(status && duelo.status !== status){
+                return false;
+            }
+
+            if(!busca){
+                return true;
+            }
+
+            const participantes =
+                Array.isArray(duelo.participantes)
+                ? duelo.participantes
+                : [];
+
+            const texto = normalizarDueloAdminFarol([
+                duelo.codigo,
+                duelo.criadoPorNome,
+                duelo.disciplina,
+                duelo.assunto,
+                duelo.vencedorNome,
+                ...participantes.flatMap(item => [
+                    item.nome,
+                    item.email
+                ])
+            ].join(" "));
+
+            return texto.includes(busca);
+        });
+
+        renderizarHistoricoDuelosAdminFarol(lista);
+    };
+
+    window.carregarHistoricoDuelosAdminFarol =
+        async function(forcar = false){
+
+        if(
+            !window.sessaoAdminFarolConfirmada ||
+            !window.sessaoAdminFarolConfirmada()
+        ){
+            return;
+        }
+
+        if(historicoDuelosCarregadoFarol && !forcar){
+            window.filtrarHistoricoDuelosAdminFarol();
+            return;
+        }
+
+        const banco = bancoHistoricoDuelosFarol();
+        const area =
+            document.getElementById("listaHistoricoDuelosFarol");
+
+        if(!banco || !area){
+            return;
+        }
+
+        area.innerHTML = `
+            <div class="admin-lista-vazia">
+                <span>⏳</span>
+                <h3>Carregando histórico dos Duelos...</h3>
+            </div>
+        `;
+
+        try{
+            const snapshot = await banco
+                .collection("historicoDuelos")
+                .limit(200)
+                .get();
+
+            historicoDuelosCacheFarol = [];
+
+            snapshot.forEach(doc => {
+                historicoDuelosCacheFarol.push({
+                    id: doc.id,
+                    ...(doc.data() || {})
+                });
+            });
+
+            historicoDuelosCacheFarol.sort((a, b) => {
+                const dataA =
+                    dataDueloAdminFarol(
+                        a.finalizadoEm || a.registradoEm
+                    )?.getTime() || 0;
+
+                const dataB =
+                    dataDueloAdminFarol(
+                        b.finalizadoEm || b.registradoEm
+                    )?.getTime() || 0;
+
+                return dataB - dataA;
+            });
+
+            historicoDuelosCarregadoFarol = true;
+            window.filtrarHistoricoDuelosAdminFarol();
+
+        }catch(erro){
+            console.error(
+                "Erro ao carregar histórico dos Duelos:",
+                erro
+            );
+
+            area.innerHTML = `
+                <div class="admin-lista-vazia">
+                    <span>⚠️</span>
+                    <h3>Não foi possível carregar o histórico</h3>
+                    <p>
+                        Verifique se as regras atualizadas
+                        foram publicadas no Firestore.
+                    </p>
+                </div>
+            `;
+        }
+    };
+
+    window.excluirDueloHistoricoAdminFarol =
+        async function(documentoId){
+
+        if(
+            !window.sessaoAdminFarolConfirmada ||
+            !window.sessaoAdminFarolConfirmada()
+        ){
+            return;
+        }
+
+        const duelo = historicoDuelosCacheFarol.find(
+            item =>
+                String(item.id || item.codigo) ===
+                String(documentoId)
+        );
+
+        if(!duelo){
+            return;
+        }
+
+        const confirmou = confirm(
+            "Excluir o Duelo " +
+            (duelo.codigo || documentoId) +
+            " do histórico?\n\n" +
+            "Esta ação não poderá ser desfeita."
+        );
+
+        if(!confirmou){
+            return;
+        }
+
+        try{
+            await bancoHistoricoDuelosFarol()
+                .collection("historicoDuelos")
+                .doc(String(documentoId))
+                .delete();
+
+            historicoDuelosCacheFarol =
+                historicoDuelosCacheFarol.filter(
+                    item =>
+                        String(item.id || item.codigo) !==
+                        String(documentoId)
+                );
+
+            window.filtrarHistoricoDuelosAdminFarol();
+
+            if(typeof window.mostrarToast === "function"){
+                window.mostrarToast(
+                    "Duelo excluído do histórico."
+                );
+            }
+
+        }catch(erro){
+            console.error(
+                "Erro ao excluir Duelo do histórico:",
+                erro
+            );
+
+            alert(
+                "Não foi possível excluir o Duelo."
+            );
+        }
+    };
+
+    window.limparHistoricoDuelosAdminFarol =
+        async function(){
+
+        if(
+            !window.sessaoAdminFarolConfirmada ||
+            !window.sessaoAdminFarolConfirmada()
+        ){
+            return;
+        }
+
+        const confirmou = confirm(
+            "ATENÇÃO!\n\n" +
+            "Deseja apagar TODO o histórico de Duelos?\n\n" +
+            "Esta ação não poderá ser desfeita."
+        );
+
+        if(!confirmou){
+            return;
+        }
+
+        try{
+            const banco = bancoHistoricoDuelosFarol();
+
+            const snapshot = await banco
+                .collection("historicoDuelos")
+                .get();
+
+            for(
+                let inicio = 0;
+                inicio < snapshot.docs.length;
+                inicio += 400
+            ){
+                const lote = banco.batch();
+
+                snapshot.docs
+                    .slice(inicio, inicio + 400)
+                    .forEach(doc => lote.delete(doc.ref));
+
+                await lote.commit();
+            }
+
+            historicoDuelosCacheFarol = [];
+            historicoDuelosCarregadoFarol = true;
+            window.filtrarHistoricoDuelosAdminFarol();
+
+            if(typeof window.mostrarToast === "function"){
+                window.mostrarToast(
+                    "Histórico de Duelos limpo."
+                );
+            }
+
+        }catch(erro){
+            console.error(
+                "Erro ao limpar histórico dos Duelos:",
+                erro
+            );
+
+            alert(
+                "Não foi possível limpar o histórico."
+            );
+        }
+    };
+
+    const mostrarAbaAntesHistoricoDuelos =
+        window.mostrarAbaAcessosFarol;
+
+    window.mostrarAbaAcessosFarol = function(aba){
+
+        const painel =
+            document.getElementById(
+                "abaHistoricoDuelosFarol"
+            );
+
+        const botao =
+            document.getElementById(
+                "btnAbaHistoricoDuelosFarol"
+            );
+
+        if(aba !== "historicoDuelos"){
+
+            if(painel){
+                painel.style.display = "none";
+            }
+
+            if(botao){
+                botao.classList.remove("ativa");
+            }
+
+            if(
+                typeof mostrarAbaAntesHistoricoDuelos ===
+                "function"
+            ){
+                return mostrarAbaAntesHistoricoDuelos
+                    .apply(this, arguments);
+            }
+
+            return;
+        }
+
+        if(
+            !window.sessaoAdminFarolConfirmada ||
+            !window.sessaoAdminFarolConfirmada()
+        ){
+            return;
+        }
+
+        [
+            "abaAcessosLiberadosFarol",
+            "abaEditarAcessoFarol",
+            "abaAlunosOnlineFarol",
+            "abaHistoricoArenasFarol"
+        ].forEach(id => {
+            const elemento = document.getElementById(id);
+
+            if(elemento){
+                elemento.style.display = "none";
+            }
+        });
+
+        [
+            "btnAbaLiberadosFarol",
+            "btnAbaEditarFarol",
+            "btnAbaOnlineFarol",
+            "btnAbaHistoricoArenasFarol"
+        ].forEach(id => {
+            const elemento = document.getElementById(id);
+
+            if(elemento){
+                elemento.classList.remove("ativa");
+            }
+        });
+
+        if(painel){
+            painel.style.display = "block";
+        }
+
+        if(botao){
+            botao.classList.add("ativa");
+        }
+
+        window.carregarHistoricoDuelosAdminFarol();
+    };
+
+})();

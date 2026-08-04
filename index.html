@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=89-exclusao-historicos">
+    <link rel="stylesheet" href="style.css?v=90-historico-duelos-admin">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -5127,6 +5127,12 @@ Li e revisei o mapa mental.
                 onclick="mostrarAbaAcessosFarol('historicoArenas')">
                 🏟️ Histórico de Arenas
             </button>
+            <button
+                id="btnAbaHistoricoDuelosFarol"
+                class="aba-painel-admin"
+                onclick="mostrarAbaAcessosFarol('historicoDuelos')">
+                ⚔️ Histórico de Duelos
+            </button>
         </div>
 
         <div id="abaAcessosLiberadosFarol" class="conteudo-aba-admin">
@@ -5175,6 +5181,66 @@ Li e revisei o mapa mental.
             </div>
         </div>
 
+
+
+        <section
+            id="abaHistoricoDuelosFarol"
+            class="conteudo-aba-admin historico-duelos-admin-v56"
+            style="display:none;">
+
+            <div class="historico-duelos-topo-v56">
+                <div>
+                    <h3>⚔️ Histórico de Duelos</h3>
+                    <p>
+                        Consulte os resultados dos Duelos finalizados
+                        ou cancelados.
+                    </p>
+                </div>
+
+                <div class="acoes-topo-historico-v52">
+                    <button
+                        type="button"
+                        onclick="carregarHistoricoDuelosAdminFarol(true)">
+                        🔄 Atualizar
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn-perigo-admin-v52"
+                        onclick="limparHistoricoDuelosAdminFarol()">
+                        🧹 Limpar histórico
+                    </button>
+                </div>
+            </div>
+
+            <div class="filtros-historico-duelos-v56">
+                <input
+                    id="filtroHistoricoDueloBuscaFarol"
+                    type="search"
+                    placeholder="Código, aluno, disciplina ou assunto"
+                    oninput="filtrarHistoricoDuelosAdminFarol()">
+
+                <select
+                    id="filtroHistoricoDueloStatusFarol"
+                    onchange="filtrarHistoricoDuelosAdminFarol()">
+                    <option value="">Todos os status</option>
+                    <option value="finalizado">Finalizados</option>
+                    <option value="cancelado">Cancelados</option>
+                </select>
+            </div>
+
+            <div
+                id="resumoHistoricoDuelosFarol"
+                class="resumo-historico-duelos-v56">
+                Nenhuma consulta realizada.
+            </div>
+
+            <div
+                id="listaHistoricoDuelosFarol"
+                class="lista-historico-duelos-v56">
+            </div>
+
+        </section>
 
         <section
             id="abaHistoricoArenasFarol"
@@ -5366,8 +5432,8 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=94-nao-restaurar-arena-encerrada"></script>
-<script src="admin.js?v=45-tempo-presenca-corrigido"></script>
+<script src="app.js?v=95-historico-duelos-admin"></script>
+<script src="admin.js?v=46-historico-duelos-admin"></script>
 
 
 <script src="./pwa.js?v=17-atualizacao-segura"></script>

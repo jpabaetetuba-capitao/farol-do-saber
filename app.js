@@ -34788,3 +34788,259 @@ window.selecionarConcursoArenaV40 = function(concurso){
     }
 
 })();
+
+
+// ==========================================================
+// FAROL V56 — HISTÓRICO ADMINISTRATIVO DOS DUELOS
+// ==========================================================
+
+(function(){
+
+    const historicosDuelosSalvosV56 = new Set();
+
+    function ordenarParticipantesDueloV56(dados){
+        return Object.entries((dados && dados.participantes) || {})
+            .map(([uid, participante]) => ({
+                uid: String(uid || ""),
+                nome: String(
+                    participante.nomeCompleto ||
+                    participante.nome ||
+                    "Aluno"
+                ),
+                email: String(participante.email || ""),
+                acertos: Number(participante.acertos || 0),
+                erros: Number(participante.erros || 0),
+                finalizado: Boolean(participante.finalizado),
+                entrouEm: participante.entrouEm || null,
+                finalizadoEm: participante.finalizadoEm || null,
+                respostas: Array.isArray(participante.respostas)
+                    ? participante.respostas
+                    : []
+            }))
+            .sort((a, b) =>
+                b.acertos - a.acertos ||
+                a.erros - b.erros ||
+                a.nome.localeCompare(b.nome, "pt-BR")
+            )
+            .map((participante, indice) => ({
+                ...participante,
+                posicao: indice + 1
+            }));
+    }
+
+    function dueloProntoParaHistoricoV56(dados){
+        if(!dados){
+            return false;
+        }
+
+        if(dados.cancelado === true){
+            return true;
+        }
+
+        const participantes =
+            Object.values(dados.participantes || {});
+
+        return participantes.length >= 2 &&
+            participantes.every(item => item && item.finalizado === true);
+    }
+
+    async function salvarHistoricoDueloV56(codigoOuDados){
+
+        if(
+            typeof auth === "undefined" ||
+            !auth.currentUser ||
+            typeof db === "undefined"
+        ){
+            return;
+        }
+
+        let dados = null;
+        let codigo = "";
+
+        if(typeof codigoOuDados === "string"){
+            codigo = String(codigoOuDados).trim();
+
+            const snapshot = await db
+                .collection("duelos")
+                .doc(codigo)
+                .get();
+
+            if(!snapshot.exists){
+                return;
+            }
+
+            dados = snapshot.data() || {};
+        }else{
+            dados = codigoOuDados || {};
+            codigo = String(dados.codigo || "").trim();
+        }
+
+        if(
+            !codigo ||
+            String(dados.criadoPor || "") !== auth.currentUser.uid ||
+            historicosDuelosSalvosV56.has(codigo) ||
+            !dueloProntoParaHistoricoV56(dados)
+        ){
+            return;
+        }
+
+        historicosDuelosSalvosV56.add(codigo);
+
+        const participantes =
+            ordenarParticipantesDueloV56(dados);
+
+        const finalizados =
+            participantes.filter(item => item.finalizado);
+
+        const maiorPontuacao =
+            finalizados.length
+            ? Math.max(...finalizados.map(item => item.acertos))
+            : 0;
+
+        const vencedores =
+            dados.cancelado
+            ? []
+            : finalizados
+                .filter(item => item.acertos === maiorPontuacao)
+                .map(item => ({
+                    uid: item.uid,
+                    nome: item.nome,
+                    email: item.email,
+                    acertos: item.acertos
+                }));
+
+        const finalizadoEm = Math.max(
+            Number(dados.canceladoEm || 0),
+            ...participantes.map(item =>
+                Number(item.finalizadoEm || 0)
+            ),
+            Date.now()
+        );
+
+        try{
+            await db
+                .collection("historicoDuelos")
+                .doc(codigo)
+                .set({
+                    codigo: codigo,
+                    tipo: "duelo",
+                    status:
+                        dados.cancelado
+                        ? "cancelado"
+                        : "finalizado",
+                    cancelado: Boolean(dados.cancelado),
+                    canceladoPor:
+                        String(dados.canceladoPor || ""),
+                    criadoPor:
+                        String(dados.criadoPor || ""),
+                    criadoPorNome:
+                        String(dados.criadoPorNome || ""),
+                    disciplina:
+                        String(
+                            dados.nomeDisciplina ||
+                            dados.disciplina ||
+                            ""
+                        ),
+                    disciplinaChave:
+                        String(dados.disciplina || ""),
+                    assunto:
+                        String(
+                            dados.nomeAssunto ||
+                            dados.assunto ||
+                            ""
+                        ),
+                    assuntoChave:
+                        String(dados.assunto || ""),
+                    quantidade:
+                        Number(
+                            dados.quantidade ||
+                            (dados.indices || []).length ||
+                            0
+                        ),
+                    criadoEm:
+                        dados.criadoEm || null,
+                    finalizadoEm:
+                        dados.canceladoEm ||
+                        finalizadoEm,
+                    totalParticipantes:
+                        participantes.length,
+                    participanteUids:
+                        participantes.map(item => item.uid),
+                    participantes:
+                        participantes,
+                    classificacao:
+                        participantes,
+                    vencedores:
+                        vencedores,
+                    vencedorNome:
+                        dados.cancelado
+                        ? "Duelo cancelado"
+                        : vencedores.length === 1
+                            ? vencedores[0].nome
+                            : vencedores.length > 1
+                                ? "Empate"
+                                : "Não definido",
+                    registradoEm:
+                        firebase.firestore.FieldValue.serverTimestamp(),
+                    atualizadoEm:
+                        Date.now()
+                }, { merge: true });
+
+        }catch(erro){
+            historicosDuelosSalvosV56.delete(codigo);
+
+            console.error(
+                "Erro ao salvar histórico do Duelo:",
+                erro
+            );
+        }
+    }
+
+    window.salvarHistoricoDueloFarol =
+        salvarHistoricoDueloV56;
+
+    const mostrarResultadoAntesV56 =
+        window.mostrarResultadoDuelo;
+
+    if(typeof mostrarResultadoAntesV56 === "function"){
+        window.mostrarResultadoDuelo = async function(codigo){
+            const resultado =
+                await mostrarResultadoAntesV56
+                    .apply(this, arguments);
+
+            try{
+                await salvarHistoricoDueloV56(codigo);
+            }catch(erro){
+                console.error(
+                    "Erro ao registrar resultado do Duelo:",
+                    erro
+                );
+            }
+
+            return resultado;
+        };
+    }
+
+    const cancelarDueloAntesV56 =
+        window.cancelarDuelo;
+
+    if(typeof cancelarDueloAntesV56 === "function"){
+        window.cancelarDuelo = async function(codigo){
+            const resultado =
+                await cancelarDueloAntesV56
+                    .apply(this, arguments);
+
+            try{
+                await salvarHistoricoDueloV56(codigo);
+            }catch(erro){
+                console.error(
+                    "Erro ao registrar cancelamento do Duelo:",
+                    erro
+                );
+            }
+
+            return resultado;
+        };
+    }
+
+})();

@@ -14223,3 +14223,157 @@ progress{
         grid-template-columns:minmax(0,1fr) auto;
     }
 }
+
+
+/* ==========================================================
+   FAROL V56 — HISTÓRICO ADMINISTRATIVO DOS DUELOS
+========================================================== */
+
+.historico-duelos-admin-v56{
+    margin-top:16px;
+}
+
+.historico-duelos-topo-v56{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:14px;
+    margin-bottom:14px;
+}
+
+.historico-duelos-topo-v56 h3{
+    margin:0 0 5px;
+    color:#087f5b;
+}
+
+.historico-duelos-topo-v56 p{
+    margin:0;
+    color:#5d6d66;
+    line-height:1.45;
+}
+
+.filtros-historico-duelos-v56{
+    display:grid;
+    grid-template-columns:minmax(220px, 1fr) minmax(170px, .35fr);
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.filtros-historico-duelos-v56 input,
+.filtros-historico-duelos-v56 select{
+    width:100%;
+    min-height:44px;
+}
+
+.resumo-historico-duelos-v56{
+    margin-bottom:10px;
+    color:#52625a;
+    font-size:13px;
+    font-weight:800;
+}
+
+.lista-historico-duelos-v56{
+    display:grid;
+    gap:12px;
+}
+
+.item-historico-duelo-v56{
+    padding:14px;
+    background:#ffffff;
+    border:1px solid #dce8e1;
+    border-radius:15px;
+    box-shadow:0 4px 14px rgba(20,72,48,.06);
+}
+
+.cabecalho-historico-duelo-v56{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:12px;
+}
+
+.cabecalho-historico-duelo-v56 h4{
+    margin:5px 0 0;
+    color:#253c31;
+    font-size:17px;
+}
+
+.cabecalho-historico-duelo-v56 time{
+    color:#687871;
+    font-size:11px;
+    font-weight:700;
+}
+
+.status-historico-duelo-v56{
+    display:inline-flex;
+    padding:4px 8px;
+    border-radius:999px;
+    font-size:10px;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.status-historico-duelo-v56.finalizado{
+    background:#dff4e6;
+    color:#176b35;
+}
+
+.status-historico-duelo-v56.cancelado{
+    background:#fde3e3;
+    color:#a02020;
+}
+
+.grade-resumo-duelo-v56{
+    display:grid;
+    grid-template-columns:repeat(4, minmax(120px, 1fr));
+    gap:8px;
+}
+
+.grade-resumo-duelo-v56 > span{
+    padding:9px;
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+    background:#f5faf7;
+    border-radius:10px;
+}
+
+.grade-resumo-duelo-v56 small{
+    color:#738179;
+    font-size:10px;
+    text-transform:uppercase;
+    font-weight:800;
+}
+
+.grade-resumo-duelo-v56 strong{
+    color:#294437;
+    font-size:12px;
+}
+
+.detalhes-historico-duelo-v56{
+    margin-top:12px;
+    border-top:1px solid #e2ebe6;
+    padding-top:10px;
+}
+
+.detalhes-historico-duelo-v56 summary{
+    cursor:pointer;
+    color:#087f5b;
+    font-weight:900;
+}
+
+@media(max-width:760px){
+
+    .historico-duelos-topo-v56{
+        flex-direction:column;
+    }
+
+    .filtros-historico-duelos-v56{
+        grid-template-columns:1fr;
+    }
+
+    .grade-resumo-duelo-v56{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+}
