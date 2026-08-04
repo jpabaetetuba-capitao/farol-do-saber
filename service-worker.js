@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v56-2026-08-04";
+const CACHE_VERSION = "farol-v57-2026-08-04";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -19,8 +19,11 @@ self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then(cache => cache.addAll(APP_SHELL))
-      .then(() => self.skipWaiting())
   );
+
+  // A nova versão permanece aguardando.
+  // O pwa.js enviará SKIP_WAITING somente quando o aluno
+  // estiver em uma tela segura, evitando interromper atividades.
 });
 
 self.addEventListener("activate", event => {

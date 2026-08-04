@@ -20148,6 +20148,21 @@ async function finalizarDuelo(){
         participantes: participantes
     });
 
+    // O participante que terminar por último registra o histórico,
+    // sem depender de o criador abrir novamente a tela de resultado.
+    if(typeof window.salvarHistoricoDueloFarol === "function"){
+        try{
+            await window.salvarHistoricoDueloFarol(
+                dueloAtual.codigo
+            );
+        }catch(erro){
+            console.error(
+                "Erro ao registrar automaticamente o histórico do Duelo:",
+                erro
+            );
+        }
+    }
+
     adicionarPontosLuz(
         20,
         "Participação em duelo",
@@ -20175,9 +20190,27 @@ async function mostrarResultadoDuelo(codigo){
         : "Aguardando o outro participante finalizar.";
 
     if(!dados.cancelado && finalizados.length >= 2){
-        const ordenado = [...finalizados].sort((a,b) => (b.acertos - a.acertos));
-        const vencedor = ordenado[0];
-        vencedorTexto = `🏆 Vencedor: ${vencedor.nome} com ${vencedor.acertos} acertos`;
+        const maiorPontuacao = Math.max(
+            ...finalizados.map(participante =>
+                Number(participante.acertos || 0)
+            )
+        );
+
+        const vencedores = finalizados.filter(
+            participante =>
+                Number(participante.acertos || 0) ===
+                maiorPontuacao
+        );
+
+        if(vencedores.length > 1){
+            vencedorTexto =
+                `🤝 Empate: ${vencedores
+                    .map(participante => participante.nome)
+                    .join(" e ")} com ${maiorPontuacao} acertos`;
+        }else{
+            vencedorTexto =
+                `🏆 Vencedor: ${vencedores[0].nome} com ${maiorPontuacao} acertos`;
+        }
     }
 
     mostrarTela("resolverQuestao");
@@ -34877,10 +34910,21 @@ window.selecionarConcursoArenaV40 = function(concurso){
 
         if(
             !codigo ||
-            String(dados.criadoPor || "") !== auth.currentUser.uid ||
             historicosDuelosSalvosV56.has(codigo) ||
             !dueloProntoParaHistoricoV56(dados)
         ){
+            return;
+        }
+
+        const uidAtual = String(auth.currentUser.uid || "");
+        const participanteDoDuelo =
+            Array.isArray(dados.uids) &&
+            dados.uids.includes(uidAtual);
+
+        const criadorDoDuelo =
+            String(dados.criadoPor || "") === uidAtual;
+
+        if(!participanteDoDuelo && !criadorDoDuelo){
             return;
         }
 
