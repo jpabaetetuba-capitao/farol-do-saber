@@ -21675,7 +21675,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         cor: "azul",
         concurso: "abaetetuba2026",
         cargoAcesso: "professorCiencias",
-        publicado: false,
+        publicado: true,
         descricao: "Português, Informática e conhecimentos específicos de formação pedagógica e Ciências.",
         disciplinas: ["portugues", "informatica", "didatica", "ciencias"]
     };
