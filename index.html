@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=100-escolha-avatar-visual">
+    <link rel="stylesheet" href="style.css?v=101-notificacoes-novidades">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -249,15 +249,28 @@
         Iluminando o caminho para a sua aprovação.
     </p>
 
-<p
-    id="nomeUsuario"
-    style="
-        font-size:16px;
-        font-weight:normal;
-        color:rgba(255,255,255,0.75);
-        margin-top:15px;
-    ">
-</p>
+<div class="usuario-topo-notificacoes-v68">
+    <p
+        id="nomeUsuario"
+        style="
+            font-size:16px;
+            font-weight:normal;
+            color:rgba(255,255,255,0.75);
+            margin:0;
+        ">
+    </p>
+
+    <button
+        id="btnSinoNotificacoesV68"
+        class="btn-sino-notificacoes-v68"
+        type="button"
+        onclick="abrirCentralNotificacoesV68()"
+        aria-label="Abrir notificações e novidades"
+        title="Notificações e novidades">
+        🔔
+        <span id="contadorNotificacoesV68" hidden>0</span>
+    </button>
+</div>
 
 </header>
 
@@ -5049,6 +5062,38 @@ Li e revisei o mapa mental.
 </section>
 
 
+<section id="notificacoesFarolV68" class="tela">
+    <div class="card central-notificacoes-v68">
+        <button class="btn-voltar" onclick="voltarCentralNotificacoesV68()">
+            ⬅ Voltar
+        </button>
+
+        <div class="cabecalho-central-notificacoes-v68">
+            <div>
+                <span class="selo-central-notificacoes-v68">🔔 CENTRAL DO FAROL</span>
+                <h2>Notificações e Novidades</h2>
+                <p>Leia os comunicados oficiais e as atualizações publicadas pelo administrador.</p>
+            </div>
+            <button type="button" onclick="marcarTodasNotificacoesComoLidasV68()">
+                ✓ Marcar todas como lidas
+            </button>
+        </div>
+
+        <div id="listaNotificacoesFarolV68" class="lista-notificacoes-v68">
+            <div class="estado-notificacoes-v68">Carregando novidades...</div>
+        </div>
+    </div>
+</section>
+
+<section id="detalheNotificacaoFarolV68" class="tela">
+    <div class="card detalhe-notificacao-v68">
+        <button class="btn-voltar" onclick="mostrarTela('notificacoesFarolV68'); carregarNotificacoesFarolV68(true)">
+            ⬅ Voltar para notificações
+        </button>
+        <article id="conteudoDetalheNotificacaoV68"></article>
+    </div>
+</section>
+
 <section id="confirmacaoAdminFarol" class="tela">
 
     <div class="card confirmacao-admin-card">
@@ -5149,6 +5194,12 @@ Li e revisei o mapa mental.
                 onclick="mostrarAbaAcessosFarol('historicoDuelos')">
                 ⚔️ Histórico de Duelos
             </button>
+            <button
+                id="btnAbaNovidadesFarolV68"
+                class="aba-painel-admin"
+                onclick="mostrarAbaAcessosFarol('novidadesV68')">
+                📢 Publicar novidades
+            </button>
         </div>
 
         <div id="abaAcessosLiberadosFarol" class="conteudo-aba-admin">
@@ -5198,6 +5249,53 @@ Li e revisei o mapa mental.
         </div>
 
 
+
+        <div id="abaNovidadesFarolV68" class="conteudo-aba-admin" style="display:none;">
+            <div class="painel-novidades-admin-v68">
+                <div class="cabecalho-novidades-admin-v68">
+                    <div>
+                        <h3>📢 Publicar atualização do Farol</h3>
+                        <p>O aviso aparecerá no sino de todos os alunos autenticados.</p>
+                    </div>
+                </div>
+
+                <form id="formNovidadeFarolV68" onsubmit="publicarNovidadeFarolV68(event)">
+                    <label for="tituloNovidadeFarolV68">Título</label>
+                    <input id="tituloNovidadeFarolV68" maxlength="100" required placeholder="Ex.: Nova atualização no Farol">
+
+                    <label for="resumoNovidadeFarolV68">Resumo curto</label>
+                    <input id="resumoNovidadeFarolV68" maxlength="180" required placeholder="Texto que aparecerá na lista de notificações">
+
+                    <label for="textoNovidadeFarolV68">Texto completo</label>
+                    <textarea id="textoNovidadeFarolV68" rows="8" maxlength="6000" required placeholder="Explique todas as novidades, correções e orientações..."></textarea>
+
+                    <div class="grade-opcoes-novidade-v68">
+                        <div>
+                            <label for="categoriaNovidadeFarolV68">Categoria</label>
+                            <select id="categoriaNovidadeFarolV68">
+                                <option value="atualizacao">Atualização</option>
+                                <option value="conteudo">Novo conteúdo</option>
+                                <option value="manutencao">Manutenção</option>
+                                <option value="aviso">Aviso importante</option>
+                            </select>
+                        </div>
+                        <label class="check-urgente-novidade-v68">
+                            <input id="urgenteNovidadeFarolV68" type="checkbox">
+                            Marcar como importante
+                        </label>
+                    </div>
+
+                    <button id="btnPublicarNovidadeFarolV68" type="submit">📢 Publicar para os alunos</button>
+                </form>
+
+                <div class="historico-novidades-admin-v68">
+                    <h3>Publicações recentes</h3>
+                    <div id="listaNovidadesAdminV68" class="lista-novidades-admin-v68">
+                        <div class="admin-lista-vazia">Abra esta aba para carregar as publicações.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section
             id="abaHistoricoDuelosFarol"
@@ -5448,8 +5546,8 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=105-escolha-avatar-visual"></script>
-<script src="admin.js?v=46-historico-duelos-admin"></script>
+<script src="app.js?v=106-notificacoes-novidades"></script>
+<script src="admin.js?v=48-notificacoes-novidades"></script>
 
 
 <script src="./pwa.js?v=15-atualizacao-segura"></script>

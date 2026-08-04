@@ -3033,3 +3033,97 @@
     };
 
 })();
+
+
+// ==========================================================
+// FAROL V68 — PUBLICAÇÃO DE NOVIDADES PELO ADMINISTRADOR
+// ==========================================================
+(function(){
+    "use strict";
+
+    function textoSeguroV68(valor){
+        if(typeof window.escaparHTML === "function") return window.escaparHTML(String(valor || ""));
+        const div=document.createElement("div"); div.textContent=String(valor||""); return div.innerHTML;
+    }
+
+    function dataAdminV68(valor){
+        try{ const d=valor&&typeof valor.toDate==="function"?valor.toDate():new Date(valor||Date.now()); return d.toLocaleString("pt-BR"); }catch(e){ return "—"; }
+    }
+
+    window.publicarNovidadeFarolV68 = async function(event){
+        event.preventDefault();
+        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()) return;
+        if(!dbFarol){ aviso("Banco de dados indisponível."); return; }
+        const titulo=(document.getElementById("tituloNovidadeFarolV68")?.value||"").trim();
+        const resumo=(document.getElementById("resumoNovidadeFarolV68")?.value||"").trim();
+        const texto=(document.getElementById("textoNovidadeFarolV68")?.value||"").trim();
+        const categoria=document.getElementById("categoriaNovidadeFarolV68")?.value||"atualizacao";
+        const urgente=Boolean(document.getElementById("urgenteNovidadeFarolV68")?.checked);
+        if(!titulo||!resumo||!texto){ aviso("Preencha título, resumo e texto completo."); return; }
+        if(!confirm("Publicar esta novidade para todos os alunos?")) return;
+        const btn=document.getElementById("btnPublicarNovidadeFarolV68");
+        if(btn){ btn.disabled=true; btn.textContent="Publicando..."; }
+        try{
+            await dbFarol.collection("novidadesFarol").add({
+                titulo, resumo, texto, categoria, urgente, ativa:true,
+                publicadoEm: firebase.firestore.FieldValue.serverTimestamp(),
+                criadoPor: usuarioAtual()?.uid || "",
+                autorEmail: emailAtual() || ""
+            });
+            document.getElementById("formNovidadeFarolV68")?.reset();
+            aviso("📢 Novidade publicada para os alunos.");
+            await window.carregarNovidadesAdminV68();
+        }catch(erro){
+            console.error("Erro ao publicar novidade:", erro);
+            aviso("Não foi possível publicar. Confira as regras do Firestore.");
+        }finally{
+            if(btn){ btn.disabled=false; btn.textContent="📢 Publicar para os alunos"; }
+        }
+    };
+
+    window.carregarNovidadesAdminV68 = async function(){
+        const area=document.getElementById("listaNovidadesAdminV68");
+        if(!area||!dbFarol) return;
+        area.innerHTML='<div class="admin-carregando-lista">Carregando publicações...</div>';
+        try{
+            const snap=await dbFarol.collection("novidadesFarol").orderBy("publicadoEm","desc").limit(30).get();
+            if(snap.empty){ area.innerHTML='<div class="admin-lista-vazia">Nenhuma novidade publicada.</div>'; return; }
+            area.innerHTML=snap.docs.map(doc=>{
+                const item=doc.data()||{};
+                return `<article class="item-novidade-admin-v68 ${item.ativa===false?"inativa":""}"><div><small>${item.urgente?"⚠️ IMPORTANTE":"📢 PUBLICAÇÃO"} • ${dataAdminV68(item.publicadoEm)}</small><h4>${textoSeguroV68(item.titulo)}</h4><p>${textoSeguroV68(item.resumo)}</p></div><div class="acoes-novidade-admin-v68"><button type="button" onclick="alternarNovidadeAdminV68('${doc.id}', ${item.ativa===false?'true':'false'})">${item.ativa===false?'Reativar':'Ocultar'}</button><button type="button" class="btn-perigo-admin-v52" onclick="excluirNovidadeAdminV68('${doc.id}')">Excluir</button></div></article>`;
+            }).join('');
+        }catch(erro){
+            console.error(erro); area.innerHTML='<div class="admin-lista-vazia">Não foi possível carregar as publicações.</div>';
+        }
+    };
+
+    window.alternarNovidadeAdminV68 = async function(id, ativa){
+        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()) return;
+        try{ await dbFarol.collection("novidadesFarol").doc(id).update({ativa:Boolean(ativa), atualizadoEm:firebase.firestore.FieldValue.serverTimestamp()}); await window.carregarNovidadesAdminV68(); }
+        catch(erro){ aviso("Não foi possível alterar a publicação."); }
+    };
+
+    window.excluirNovidadeAdminV68 = async function(id){
+        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()) return;
+        if(!confirm("Excluir definitivamente esta novidade?")) return;
+        try{ await dbFarol.collection("novidadesFarol").doc(id).delete(); aviso("Publicação excluída."); await window.carregarNovidadesAdminV68(); }
+        catch(erro){ aviso("Não foi possível excluir a publicação."); }
+    };
+
+    const mostrarAbaAntesV68=window.mostrarAbaAcessosFarol;
+    window.mostrarAbaAcessosFarol=function(aba){
+        const painel=document.getElementById("abaNovidadesFarolV68");
+        const botao=document.getElementById("btnAbaNovidadesFarolV68");
+        if(aba!=="novidadesV68"){
+            if(painel) painel.style.display="none";
+            if(botao) botao.classList.remove("ativa");
+            return typeof mostrarAbaAntesV68==="function" ? mostrarAbaAntesV68.apply(this,arguments) : undefined;
+        }
+        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()) return;
+        ["abaAcessosLiberadosFarol","abaEditarAcessoFarol","abaAlunosOnlineFarol","abaHistoricoArenasFarol","abaHistoricoDuelosFarol"].forEach(id=>{const e=document.getElementById(id); if(e)e.style.display="none";});
+        ["btnAbaLiberadosFarol","btnAbaEditarFarol","btnAbaOnlineFarol","btnAbaHistoricoArenasFarol","btnAbaHistoricoDuelosFarol"].forEach(id=>{const e=document.getElementById(id); if(e)e.classList.remove("ativa");});
+        if(painel) painel.style.display="block";
+        if(botao) botao.classList.add("ativa");
+        window.carregarNovidadesAdminV68();
+    };
+})();

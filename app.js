@@ -38529,3 +38529,186 @@ limparArenaLocalFarol = function(){
         aplicarPersonalizacaoLojaV65();
     });
 })();
+
+
+// ==========================================================
+// FAROL V68 — CENTRAL DE NOTIFICAÇÕES E NOVIDADES OFICIAIS
+// ==========================================================
+(function(){
+    "use strict";
+
+    let notificacoesCacheV68 = [];
+    let telaAnteriorNotificacoesV68 = "painel";
+    let carregamentoNotificacoesV68 = null;
+
+    function uidNotificacoesV68(){
+        return auth && auth.currentUser ? auth.currentUser.uid : "visitante";
+    }
+
+    function chaveLidasNotificacoesV68(){
+        return "farol_notificacoes_lidas_v68_" + uidNotificacoesV68();
+    }
+
+    function idsLidosNotificacoesV68(){
+        try{
+            const valor = JSON.parse(localStorage.getItem(chaveLidasNotificacoesV68()) || "[]");
+            return new Set(Array.isArray(valor) ? valor : []);
+        }catch(erro){
+            return new Set();
+        }
+    }
+
+    function salvarIdsLidosNotificacoesV68(conjunto){
+        localStorage.setItem(chaveLidasNotificacoesV68(), JSON.stringify(Array.from(conjunto).slice(-300)));
+    }
+
+    function escaparNotificacaoV68(valor){
+        if(typeof escaparHTML === "function") return escaparHTML(String(valor || ""));
+        const div = document.createElement("div");
+        div.textContent = String(valor || "");
+        return div.innerHTML;
+    }
+
+    function dataNotificacaoV68(valor){
+        try{
+            const data = valor && typeof valor.toDate === "function" ? valor.toDate() : new Date(valor || Date.now());
+            return data.toLocaleString("pt-BR", {day:"2-digit", month:"2-digit", year:"numeric", hour:"2-digit", minute:"2-digit"});
+        }catch(erro){
+            return "Data não informada";
+        }
+    }
+
+    function iconeCategoriaNotificacaoV68(categoria){
+        return ({atualizacao:"🚀", conteudo:"📚", manutencao:"🛠️", aviso:"📢"})[categoria] || "📢";
+    }
+
+    function atualizarSinoNotificacoesV68(){
+        const contador = document.getElementById("contadorNotificacoesV68");
+        const botao = document.getElementById("btnSinoNotificacoesV68");
+        if(!contador || !botao) return;
+        const lidas = idsLidosNotificacoesV68();
+        const naoLidas = notificacoesCacheV68.filter(item => !lidas.has(item.id)).length;
+        contador.textContent = naoLidas > 99 ? "99+" : String(naoLidas);
+        contador.hidden = naoLidas < 1;
+        botao.classList.toggle("tem-novas", naoLidas > 0);
+    }
+
+    async function buscarNotificacoesFarolV68(forcar=false){
+        if(carregamentoNotificacoesV68 && !forcar) return carregamentoNotificacoesV68;
+        if(!auth || !auth.currentUser || typeof db === "undefined"){
+            notificacoesCacheV68 = [];
+            atualizarSinoNotificacoesV68();
+            return [];
+        }
+
+        carregamentoNotificacoesV68 = (async()=>{
+            try{
+                const snap = await db.collection("novidadesFarol")
+                    .where("ativa", "==", true)
+                    .orderBy("publicadoEm", "desc")
+                    .limit(30)
+                    .get();
+                notificacoesCacheV68 = snap.docs.map(doc => ({id:doc.id, ...doc.data()}));
+            }catch(erro){
+                console.warn("Não foi possível carregar as novidades do Farol:", erro);
+                // Fallback sem orderBy para evitar indisponibilidade enquanto o índice é criado.
+                try{
+                    const snap = await db.collection("novidadesFarol").where("ativa", "==", true).limit(30).get();
+                    notificacoesCacheV68 = snap.docs.map(doc => ({id:doc.id, ...doc.data()})).sort((a,b)=>{
+                        const ta = a.publicadoEm && a.publicadoEm.seconds ? a.publicadoEm.seconds : 0;
+                        const tb = b.publicadoEm && b.publicadoEm.seconds ? b.publicadoEm.seconds : 0;
+                        return tb-ta;
+                    });
+                }catch(segundoErro){
+                    notificacoesCacheV68 = [];
+                    throw segundoErro;
+                }
+            }finally{
+                atualizarSinoNotificacoesV68();
+                carregamentoNotificacoesV68 = null;
+            }
+            return notificacoesCacheV68;
+        })();
+        return carregamentoNotificacoesV68;
+    }
+
+    function renderizarListaNotificacoesV68(){
+        const area = document.getElementById("listaNotificacoesFarolV68");
+        if(!area) return;
+        const lidas = idsLidosNotificacoesV68();
+        if(notificacoesCacheV68.length === 0){
+            area.innerHTML = `<div class="estado-notificacoes-v68"><span>🔕</span><h3>Nenhuma novidade publicada</h3><p>Quando o administrador publicar uma atualização, ela aparecerá aqui.</p></div>`;
+            return;
+        }
+        area.innerHTML = notificacoesCacheV68.map(item => {
+            const lida = lidas.has(item.id);
+            return `<button type="button" class="item-notificacao-v68 ${lida ? "lida" : "nao-lida"} ${item.urgente ? "urgente" : ""}" onclick="abrirDetalheNotificacaoV68('${item.id}')">
+                <span class="icone-item-notificacao-v68">${iconeCategoriaNotificacaoV68(item.categoria)}</span>
+                <span class="texto-item-notificacao-v68">
+                    <span class="linha-titulo-notificacao-v68"><strong>${escaparNotificacaoV68(item.titulo)}</strong>${!lida ? "<i>NOVA</i>" : ""}</span>
+                    <small>${escaparNotificacaoV68(item.resumo)}</small>
+                    <em>${dataNotificacaoV68(item.publicadoEm)}</em>
+                </span>
+                <b>›</b>
+            </button>`;
+        }).join("");
+    }
+
+    window.carregarNotificacoesFarolV68 = async function(forcar=false){
+        const area = document.getElementById("listaNotificacoesFarolV68");
+        if(area) area.innerHTML = `<div class="estado-notificacoes-v68">Carregando novidades...</div>`;
+        try{
+            await buscarNotificacoesFarolV68(forcar);
+            renderizarListaNotificacoesV68();
+        }catch(erro){
+            if(area) area.innerHTML = `<div class="estado-notificacoes-v68 erro"><span>⚠️</span><h3>Não foi possível carregar</h3><p>Verifique a conexão e tente novamente.</p><button onclick="carregarNotificacoesFarolV68(true)">Tentar novamente</button></div>`;
+        }
+    };
+
+    window.abrirCentralNotificacoesV68 = function(){
+        const ativa = document.querySelector(".tela.ativa, .tela[style*='block']");
+        if(ativa && ativa.id && !["notificacoesFarolV68","detalheNotificacaoFarolV68"].includes(ativa.id)) telaAnteriorNotificacoesV68 = ativa.id;
+        mostrarTela("notificacoesFarolV68");
+        carregarNotificacoesFarolV68(true);
+    };
+
+    window.voltarCentralNotificacoesV68 = function(){
+        mostrarTela(telaAnteriorNotificacoesV68 || "painel");
+    };
+
+    window.abrirDetalheNotificacaoV68 = function(id){
+        const item = notificacoesCacheV68.find(n => n.id === id);
+        if(!item) return;
+        const lidas = idsLidosNotificacoesV68();
+        lidas.add(id);
+        salvarIdsLidosNotificacoesV68(lidas);
+        atualizarSinoNotificacoesV68();
+        renderizarListaNotificacoesV68();
+        const area = document.getElementById("conteudoDetalheNotificacaoV68");
+        if(area){
+            const paragrafos = String(item.texto || "").split(/\n+/).filter(Boolean).map(p=>`<p>${escaparNotificacaoV68(p)}</p>`).join("");
+            area.innerHTML = `<div class="topo-detalhe-notificacao-v68"><span>${iconeCategoriaNotificacaoV68(item.categoria)}</span><div><small>${item.urgente ? "AVISO IMPORTANTE" : "NOVIDADE DO FAROL"}</small><h2>${escaparNotificacaoV68(item.titulo)}</h2><em>${dataNotificacaoV68(item.publicadoEm)}</em></div></div><div class="corpo-detalhe-notificacao-v68">${paragrafos || "<p>Sem texto adicional.</p>"}</div>`;
+        }
+        mostrarTela("detalheNotificacaoFarolV68");
+    };
+
+    window.marcarTodasNotificacoesComoLidasV68 = function(){
+        const lidas = idsLidosNotificacoesV68();
+        notificacoesCacheV68.forEach(item => lidas.add(item.id));
+        salvarIdsLidosNotificacoesV68(lidas);
+        atualizarSinoNotificacoesV68();
+        renderizarListaNotificacoesV68();
+        if(typeof mostrarToast === "function") mostrarToast("✓ Todas as novidades foram marcadas como lidas.");
+    };
+
+    if(auth && typeof auth.onAuthStateChanged === "function"){
+        auth.onAuthStateChanged(usuario => {
+            if(usuario){
+                setTimeout(()=>buscarNotificacoesFarolV68(false).catch(()=>{}), 700);
+            }else{
+                notificacoesCacheV68=[];
+                atualizarSinoNotificacoesV68();
+            }
+        });
+    }
+})();
