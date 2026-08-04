@@ -27860,11 +27860,27 @@ async function restaurarArenaAtualFarol(){
             .doc(codigo)
             .get();
 
-        if(
-            snapshot.exists &&
-            Array.isArray(snapshot.data().uids) &&
-            snapshot.data().uids.includes(usuario.uid)
-        ){
+        if(!snapshot.exists){
+            limparArenaLocalFarol();
+            return;
+        }
+
+        const dadosArena = snapshot.data() || {};
+        const statusAtivo =
+            dadosArena.status === "aguardando" ||
+            dadosArena.status === "jogando";
+
+        const participante =
+            Array.isArray(dadosArena.uids) &&
+            dadosArena.uids.includes(usuario.uid);
+
+        const espectador =
+            Array.isArray(dadosArena.espectadorUids) &&
+            dadosArena.espectadorUids.includes(usuario.uid);
+
+        // Ao atualizar a página, restaura somente uma Arena ainda ativa.
+        // Arenas finalizadas, encerradas ou canceladas não voltam a abrir.
+        if(statusAtivo && (participante || espectador)){
             acompanharArenaAoVivoFarol(codigo);
         }else{
             limparArenaLocalFarol();
