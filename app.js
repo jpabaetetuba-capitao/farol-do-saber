@@ -35462,3 +35462,556 @@ limparArenaLocalFarol = function(){
     return limparArenaLocalFarolAntesV58
         .apply(this, arguments);
 };
+
+
+// ==========================================================
+// FAROL V59 — NOTIFICAÇÕES E CONVITES DOS DUELOS
+// ==========================================================
+
+(function(){
+    "use strict";
+
+    let listenerNotificacoesDuelosFarol = null;
+    let estadoDuelosNotificadosFarol = new Map();
+    let primeiraLeituraDuelosFarol = true;
+    let convitePopupAbertoFarol = "";
+
+    const SELETOR_BOTOES_DUELOS_V59 =
+        `button[onclick*="mostrarTela('duelos')"], ` +
+        `[data-tela-app="duelos"]`;
+
+    function usuarioNotificacaoDueloFarol(){
+        return (
+            typeof auth !== "undefined" &&
+            auth.currentUser
+        ) ? auth.currentUser : null;
+    }
+
+    function garantirBadgeDuelosFarol(){
+
+        const botoes = Array.from(
+            document.querySelectorAll(
+                SELETOR_BOTOES_DUELOS_V59
+            )
+        );
+
+        botoes.forEach(botao => {
+            if(botao.querySelector(".badge-duelos-farol-v59")){
+                return;
+            }
+
+            botao.classList.add("botao-com-badge-duelos-v59");
+
+            const badge = document.createElement("span");
+            badge.className = "badge-duelos-farol-v59";
+            badge.textContent = "0";
+            badge.style.display = "none";
+            badge.setAttribute(
+                "aria-label",
+                "Notificações de Duelos"
+            );
+
+            botao.appendChild(badge);
+        });
+    }
+
+    function quantidadeNotificacoesDuelosFarol(){
+
+        let quantidade = 0;
+
+        if(
+            typeof codigoDueloPendente === "function" &&
+            codigoDueloPendente()
+        ){
+            quantidade += 1;
+        }
+
+        try{
+            quantidade += Number(
+                sessionStorage.getItem(
+                    "farol_duelos_notificacoes_pendentes"
+                ) || 0
+            );
+        }catch(erro){
+            // sessionStorage pode estar indisponível.
+        }
+
+        return Math.max(0, quantidade);
+    }
+
+    function atualizarBadgeDuelosFarol(){
+
+        garantirBadgeDuelosFarol();
+
+        const quantidade =
+            quantidadeNotificacoesDuelosFarol();
+
+        document.querySelectorAll(
+            ".badge-duelos-farol-v59"
+        ).forEach(badge => {
+            badge.textContent =
+                quantidade > 9 ? "9+" : String(quantidade);
+
+            badge.style.display =
+                quantidade > 0 ? "grid" : "none";
+        });
+    }
+
+    function adicionarNotificacaoDueloFarol(){
+
+        let atual = 0;
+
+        try{
+            atual = Number(
+                sessionStorage.getItem(
+                    "farol_duelos_notificacoes_pendentes"
+                ) || 0
+            );
+
+            sessionStorage.setItem(
+                "farol_duelos_notificacoes_pendentes",
+                String(atual + 1)
+            );
+        }catch(erro){
+            // Sem armazenamento, o toast ainda funciona.
+        }
+
+        atualizarBadgeDuelosFarol();
+    }
+
+    function marcarNotificacoesDuelosComoLidasFarol(){
+
+        try{
+            sessionStorage.removeItem(
+                "farol_duelos_notificacoes_pendentes"
+            );
+        }catch(erro){
+            // Ignora.
+        }
+
+        atualizarBadgeDuelosFarol();
+    }
+
+    window.marcarNotificacoesDuelosComoLidasFarol =
+        marcarNotificacoesDuelosComoLidasFarol;
+
+    function abrirCentralDuelosNotificacaoFarol(){
+
+        marcarNotificacoesDuelosComoLidasFarol();
+
+        if(typeof mostrarTela === "function"){
+            mostrarTela("duelos");
+        }
+
+        if(typeof prepararSelectDuelo === "function"){
+            prepararSelectDuelo();
+        }
+
+        if(typeof carregarMeusDuelos === "function"){
+            carregarMeusDuelos();
+        }
+    }
+
+    function recusarConviteDueloPendenteFarol(){
+
+        const codigo =
+            typeof codigoDueloPendente === "function"
+                ? codigoDueloPendente()
+                : "";
+
+        localStorage.removeItem("farol_duelo_pendente");
+        localStorage.removeItem("farol_forcar_duelos");
+
+        if(typeof atualizarAvisoConviteDuelo === "function"){
+            atualizarAvisoConviteDuelo();
+        }
+
+        atualizarBadgeDuelosFarol();
+
+        if(codigo && typeof mostrarToast === "function"){
+            mostrarToast(
+                `Convite ${codigo} recusado.`
+            );
+        }
+    }
+
+    window.aceitarConviteDueloPendenteFarol =
+        function(){
+
+        const codigo =
+            typeof codigoDueloPendente === "function"
+                ? codigoDueloPendente()
+                : "";
+
+        if(!codigo){
+            return;
+        }
+
+        convitePopupAbertoFarol = "";
+        abrirCentralDuelosNotificacaoFarol();
+
+        if(typeof preencherConviteDueloPendente === "function"){
+            preencherConviteDueloPendente();
+        }
+
+        setTimeout(() => {
+            const campo =
+                document.getElementById("codigoDueloEntrada");
+
+            if(campo){
+                campo.focus();
+                campo.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }
+        }, 100);
+    };
+
+    window.recusarConviteDueloPendenteFarol =
+        recusarConviteDueloPendenteFarol;
+
+    function abrirPopupConviteDueloFarol(){
+
+        const usuario = usuarioNotificacaoDueloFarol();
+
+        const codigo =
+            typeof codigoDueloPendente === "function"
+                ? codigoDueloPendente()
+                : "";
+
+        if(
+            !usuario ||
+            !codigo ||
+            convitePopupAbertoFarol === codigo ||
+            typeof abrirPopupArenaFarol !== "function"
+        ){
+            atualizarBadgeDuelosFarol();
+            return;
+        }
+
+        convitePopupAbertoFarol = codigo;
+        atualizarBadgeDuelosFarol();
+
+        abrirPopupArenaFarol({
+            icone: "⚔️",
+            titulo: "Convite para Duelo",
+            mensagem:
+                `Você recebeu o convite ${codigo}. ` +
+                "Deseja abrir a Central de Duelos?",
+            textoCancelar: "Recusar",
+            textoConfirmar: "Aceitar convite",
+            aoConfirmar: () => {
+                window.aceitarConviteDueloPendenteFarol();
+            }
+        });
+
+        const popup =
+            document.getElementById("popupArenaFarol");
+
+        const cancelar = popup?.querySelector(
+            "#btnPopupArenaCancelarFarol"
+        );
+
+        if(cancelar){
+            cancelar.onclick = () => {
+                fecharPopupArenaFarol();
+                convitePopupAbertoFarol = "";
+                recusarConviteDueloPendenteFarol();
+            };
+        }
+
+        if(typeof mostrarToast === "function"){
+            mostrarToast(
+                "Novo convite de Duelo recebido."
+            );
+        }
+    }
+
+    function participantesDueloV59(dados){
+        return dados && dados.participantes
+            ? dados.participantes
+            : {};
+    }
+
+    function criarEstadoDueloV59(dados, uidAtual){
+
+        const participantes =
+            participantesDueloV59(dados);
+
+        const outros = Object.entries(participantes)
+            .filter(([uid]) => uid !== uidAtual);
+
+        return {
+            totalParticipantes:
+                Object.keys(participantes).length,
+            outrosUids:
+                outros.map(([uid]) => uid).sort().join("|"),
+            outrosFinalizados:
+                outros
+                    .filter(([, item]) => item && item.finalizado)
+                    .map(([uid]) => uid)
+                    .sort()
+                    .join("|"),
+            todosFinalizados:
+                Object.keys(participantes).length >= 2 &&
+                Object.values(participantes).every(
+                    item => item && item.finalizado
+                ),
+            cancelado:
+                Boolean(dados && dados.cancelado)
+        };
+    }
+
+    function nomeOutroParticipanteV59(dados, uidAtual){
+
+        const entrada = Object.entries(
+            participantesDueloV59(dados)
+        ).find(([uid]) => uid !== uidAtual);
+
+        return entrada && entrada[1]
+            ? String(entrada[1].nome || "O adversário")
+            : "O adversário";
+    }
+
+    function notificarMudancaDueloV59(
+        codigo,
+        dados,
+        anterior,
+        atual,
+        uidAtual
+    ){
+
+        const criadoPorMim =
+            String(dados.criadoPor || "") === uidAtual;
+
+        const nomeOutro =
+            nomeOutroParticipanteV59(dados, uidAtual);
+
+        if(
+            criadoPorMim &&
+            anterior.totalParticipantes < 2 &&
+            atual.totalParticipantes >= 2
+        ){
+            adicionarNotificacaoDueloFarol();
+
+            if(typeof mostrarToast === "function"){
+                mostrarToast(
+                    `${nomeOutro} aceitou o Duelo ${codigo}.`
+                );
+            }
+        }
+
+        if(
+            anterior.outrosFinalizados !==
+                atual.outrosFinalizados &&
+            atual.outrosFinalizados
+        ){
+            adicionarNotificacaoDueloFarol();
+
+            if(typeof mostrarToast === "function"){
+                mostrarToast(
+                    `${nomeOutro} terminou o Duelo ${codigo}.`
+                );
+            }
+        }
+
+        if(
+            !anterior.todosFinalizados &&
+            atual.todosFinalizados
+        ){
+            adicionarNotificacaoDueloFarol();
+
+            if(typeof abrirPopupArenaFarol === "function"){
+                abrirPopupArenaFarol({
+                    icone: "🏆",
+                    titulo: "Resultado disponível",
+                    mensagem:
+                        `Todos finalizaram o Duelo ${codigo}. ` +
+                        "O resultado já pode ser consultado.",
+                    textoCancelar: "Depois",
+                    textoConfirmar: "Ver resultado",
+                    aoConfirmar: () => {
+                        marcarNotificacoesDuelosComoLidasFarol();
+
+                        if(
+                            typeof mostrarResultadoDuelo ===
+                            "function"
+                        ){
+                            mostrarResultadoDuelo(codigo);
+                        }
+                    }
+                });
+            }
+        }
+
+        if(
+            !anterior.cancelado &&
+            atual.cancelado &&
+            String(dados.canceladoPor || "") !== uidAtual
+        ){
+            adicionarNotificacaoDueloFarol();
+
+            if(typeof mostrarToast === "function"){
+                mostrarToast(
+                    `O Duelo ${codigo} foi cancelado.`
+                );
+            }
+        }
+    }
+
+    function iniciarListenerNotificacoesDuelosFarol(){
+
+        const usuario = usuarioNotificacaoDueloFarol();
+
+        if(!usuario || typeof db === "undefined"){
+            return;
+        }
+
+        if(listenerNotificacoesDuelosFarol){
+            listenerNotificacoesDuelosFarol();
+            listenerNotificacoesDuelosFarol = null;
+        }
+
+        estadoDuelosNotificadosFarol = new Map();
+        primeiraLeituraDuelosFarol = true;
+
+        listenerNotificacoesDuelosFarol = db
+            .collection("duelos")
+            .where(
+                "uids",
+                "array-contains",
+                usuario.uid
+            )
+            .limit(40)
+            .onSnapshot(snapshot => {
+
+                snapshot.docChanges().forEach(mudanca => {
+
+                    if(mudanca.type === "removed"){
+                        estadoDuelosNotificadosFarol.delete(
+                            mudanca.doc.id
+                        );
+                        return;
+                    }
+
+                    const dados =
+                        mudanca.doc.data() || {};
+
+                    const codigo =
+                        String(
+                            dados.codigo ||
+                            mudanca.doc.id
+                        );
+
+                    const atual =
+                        criarEstadoDueloV59(
+                            dados,
+                            usuario.uid
+                        );
+
+                    const anterior =
+                        estadoDuelosNotificadosFarol.get(codigo);
+
+                    estadoDuelosNotificadosFarol.set(
+                        codigo,
+                        atual
+                    );
+
+                    if(
+                        primeiraLeituraDuelosFarol ||
+                        !anterior
+                    ){
+                        return;
+                    }
+
+                    notificarMudancaDueloV59(
+                        codigo,
+                        dados,
+                        anterior,
+                        atual,
+                        usuario.uid
+                    );
+                });
+
+                primeiraLeituraDuelosFarol = false;
+
+            }, erro => {
+                console.warn(
+                    "Não foi possível acompanhar notificações de Duelos:",
+                    erro
+                );
+            });
+    }
+
+    function pararListenerNotificacoesDuelosFarol(){
+
+        if(listenerNotificacoesDuelosFarol){
+            listenerNotificacoesDuelosFarol();
+            listenerNotificacoesDuelosFarol = null;
+        }
+
+        estadoDuelosNotificadosFarol.clear();
+        primeiraLeituraDuelosFarol = true;
+    }
+
+    if(
+        typeof auth !== "undefined" &&
+        auth &&
+        typeof auth.onAuthStateChanged === "function"
+    ){
+        auth.onAuthStateChanged(usuario => {
+
+            if(usuario){
+                setTimeout(() => {
+                    garantirBadgeDuelosFarol();
+                    atualizarBadgeDuelosFarol();
+                    abrirPopupConviteDueloFarol();
+                    iniciarListenerNotificacoesDuelosFarol();
+                }, 700);
+            }else{
+                pararListenerNotificacoesDuelosFarol();
+            }
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        garantirBadgeDuelosFarol();
+        atualizarBadgeDuelosFarol();
+
+        document.querySelectorAll(
+            SELETOR_BOTOES_DUELOS_V59
+        ).forEach(botao => {
+            botao.addEventListener(
+                "click",
+                marcarNotificacoesDuelosComoLidasFarol
+            );
+        });
+    });
+
+    const capturarConviteAntesV59 =
+        typeof capturarConviteDueloDaURL === "function"
+            ? capturarConviteDueloDaURL
+            : null;
+
+    if(capturarConviteAntesV59){
+        capturarConviteDueloDaURL = function(){
+
+            const codigo =
+                capturarConviteAntesV59
+                    .apply(this, arguments);
+
+            atualizarBadgeDuelosFarol();
+
+            if(codigo){
+                setTimeout(
+                    abrirPopupConviteDueloFarol,
+                    800
+                );
+            }
+
+            return codigo;
+        };
+    }
+
+})();
