@@ -15771,3 +15771,50 @@ body.efeito-ondas-v65 #conteudoPerfilAluno .perfil-cabecalho,
         animation:none !important;
     }
 }
+
+
+/* ==========================================================
+   FAROL V66 — AJUSTE VISUAL DOS ITENS DA LOJA
+========================================================== */
+
+.item-lista-loja-v33{
+    grid-template-columns:72px 1fr 18px !important;
+    gap:14px !important;
+}
+
+.visual-item-loja-v33{
+    width:64px !important;
+    min-height:64px !important;
+    justify-self:start;
+}
+
+.visual-item-loja-v33 .avatar-loja-duplo,
+.visual-item-loja-v33 .avatar-loja-preview{
+    transform:scale(.88) !important;
+    transform-origin:center;
+}
+
+.texto-item-loja-v33{
+    padding-left:6px;
+}
+
+.linha-nome-item-v65{
+    gap:8px;
+}
+
+@media (max-width: 560px){
+    .item-lista-loja-v33{
+        grid-template-columns:78px 1fr 18px !important;
+        gap:12px !important;
+        align-items:center;
+    }
+
+    .visual-item-loja-v33{
+        width:68px !important;
+        min-height:68px !important;
+    }
+
+    .texto-item-loja-v33{
+        padding-left:8px;
+    }
+}
