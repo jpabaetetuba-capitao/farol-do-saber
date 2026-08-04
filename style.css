@@ -14512,3 +14512,52 @@ progress{
         right:5px;
     }
 }
+
+
+/* ==========================================================
+   FAROL V60 — RECUPERAÇÃO DE SENHA
+========================================================== */
+
+.btn-recuperar-senha-farol-v60{
+    background:rgba(255,255,255,.18) !important;
+    color:#ffffff !important;
+    border:1px solid rgba(255,255,255,.42) !important;
+}
+
+.btn-recuperar-senha-farol-v60:hover{
+    background:rgba(255,255,255,.28) !important;
+}
+
+.btn-recuperar-senha-farol-v60:disabled{
+    opacity:.7;
+    cursor:wait;
+}
+
+.mensagem-recuperacao-senha-farol-v60{
+    min-height:0;
+    margin:8px 0 0;
+    padding:0;
+    border-radius:9px;
+    font-size:13px;
+    line-height:1.45;
+    text-align:left !important;
+}
+
+.mensagem-recuperacao-senha-farol-v60:not(:empty){
+    padding:10px 12px;
+}
+
+.mensagem-recuperacao-senha-farol-v60.processando{
+    background:rgba(227,242,253,.94);
+    color:#0d47a1 !important;
+}
+
+.mensagem-recuperacao-senha-farol-v60.sucesso{
+    background:rgba(232,245,233,.96);
+    color:#1b5e20 !important;
+}
+
+.mensagem-recuperacao-senha-farol-v60.erro{
+    background:rgba(255,235,238,.96);
+    color:#9b1c1c !important;
+}

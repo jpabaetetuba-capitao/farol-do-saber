@@ -36015,3 +36015,153 @@ limparArenaLocalFarol = function(){
     }
 
 })();
+
+
+// ==========================================================
+// FAROL V60 — RECUPERAÇÃO DE SENHA
+// ==========================================================
+
+(function(){
+    "use strict";
+
+    function mensagemRecuperacaoSenhaFarol(
+        texto,
+        tipo = ""
+    ){
+        const area = document.getElementById(
+            "mensagemRecuperacaoSenhaFarol"
+        );
+
+        if(!area){
+            return;
+        }
+
+        area.textContent = texto || "";
+        area.className =
+            "mensagem-recuperacao-senha-farol-v60" +
+            (tipo ? ` ${tipo}` : "");
+    }
+
+    function traduzirErroRecuperacaoSenhaFarol(erro){
+
+        const codigo = String(
+            erro && erro.code ? erro.code : ""
+        );
+
+        const mensagens = {
+            "auth/invalid-email":
+                "Informe um endereço de e-mail válido.",
+            "auth/missing-email":
+                "Informe o e-mail usado no cadastro.",
+            "auth/too-many-requests":
+                "Foram feitas muitas tentativas. Aguarde alguns minutos e tente novamente.",
+            "auth/network-request-failed":
+                "Não foi possível conectar ao Firebase. Verifique sua internet."
+        };
+
+        return mensagens[codigo] ||
+            "Não foi possível enviar o e-mail agora. Tente novamente em alguns minutos.";
+    }
+
+    window.abrirRecuperacaoSenhaFarol =
+        async function(){
+
+        const campoEmail =
+            document.getElementById("emailLogin");
+
+        const email = String(
+            campoEmail ? campoEmail.value : ""
+        )
+            .trim()
+            .toLowerCase();
+
+        if(!email){
+            mensagemRecuperacaoSenhaFarol(
+                "Digite primeiro o e-mail usado no cadastro.",
+                "erro"
+            );
+
+            if(campoEmail){
+                campoEmail.focus();
+            }
+
+            return;
+        }
+
+        const confirmou = confirm(
+            "Enviar um link de recuperação de senha para:\n\n" +
+            email +
+            "\n\nConfira se o endereço está correto."
+        );
+
+        if(!confirmou){
+            return;
+        }
+
+        if(
+            typeof auth === "undefined" ||
+            !auth ||
+            typeof auth.sendPasswordResetEmail !== "function"
+        ){
+            mensagemRecuperacaoSenhaFarol(
+                "O serviço de recuperação ainda não foi carregado. Atualize a página e tente novamente.",
+                "erro"
+            );
+            return;
+        }
+
+        const botao = document.querySelector(
+            ".btn-recuperar-senha-farol-v60"
+        );
+
+        try{
+            if(botao){
+                botao.disabled = true;
+                botao.textContent = "Enviando link...";
+            }
+
+            mensagemRecuperacaoSenhaFarol(
+                "Enviando o link de recuperação...",
+                "processando"
+            );
+
+            if(typeof auth.useDeviceLanguage === "function"){
+                auth.useDeviceLanguage();
+            }else{
+                auth.languageCode = "pt-BR";
+            }
+
+            await auth.sendPasswordResetEmail(email);
+
+            // Mensagem neutra: não revela se o endereço está cadastrado.
+            mensagemRecuperacaoSenhaFarol(
+                "Se este e-mail estiver cadastrado, o link para criar uma nova senha será enviado. Verifique também o spam e o lixo eletrônico.",
+                "sucesso"
+            );
+
+            if(typeof mostrarToast === "function"){
+                mostrarToast(
+                    "Solicitação de recuperação enviada."
+                );
+            }
+
+        }catch(erro){
+            console.error(
+                "Erro na recuperação de senha:",
+                erro
+            );
+
+            mensagemRecuperacaoSenhaFarol(
+                traduzirErroRecuperacaoSenhaFarol(erro),
+                "erro"
+            );
+
+        }finally{
+            if(botao){
+                botao.disabled = false;
+                botao.textContent = "🔑 Esqueci minha senha";
+            }
+        }
+    };
+
+})();
