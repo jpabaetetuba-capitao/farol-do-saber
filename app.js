@@ -3127,6 +3127,13 @@ const percentual =
     
     <div class="card card-questao-foco-v29">
 
+        <button
+            type="button"
+            class="btn-voltar-questoes-v45"
+            onclick="voltarParaAssuntos()">
+            ← Voltar
+        </button>
+
         <div class="cabecalho-questao-foco-v29">
             <span>Questão ${questaoAtual + 1} de ${questoes.length}</span>
             <strong>${percentual}%</strong>
@@ -3304,9 +3311,21 @@ if (Number(resposta.value) === q.correta) {
                 <p>${q.dicaBanca || "Sem dica cadastrada."}</p>
             </div>
 
-            <button class="btn-proxima-feedback" onclick="proximaQuestao()">
-                Próxima questão ➜
-            </button>
+            <div class="acoes-feedback-questao-v45">
+                <button
+                    type="button"
+                    class="btn-voltar-feedback-v45"
+                    onclick="voltarParaAssuntos()">
+                    ← Voltar
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-proxima-feedback"
+                    onclick="proximaQuestao()">
+                    Próxima questão ➜
+                </button>
+            </div>
 
         </div>
         `;
@@ -3625,9 +3644,21 @@ const nomeDisciplina =
                 <p>${q.dicaBanca || "Sem dica cadastrada."}</p>
             </div>
 
-            <button class="btn-proxima-feedback" onclick="proximaQuestao()">
-                Próxima questão ➜
-            </button>
+            <div class="acoes-feedback-questao-v45">
+                <button
+                    type="button"
+                    class="btn-voltar-feedback-v45"
+                    onclick="voltarParaAssuntos()">
+                    ← Voltar
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-proxima-feedback"
+                    onclick="proximaQuestao()">
+                    Próxima questão ➜
+                </button>
+            </div>
 
         </div>
         `;

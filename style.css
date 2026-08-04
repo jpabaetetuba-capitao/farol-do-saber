@@ -13807,3 +13807,58 @@ progress{
 #boxContinuarUltimoEstudo.sem-estudo{
     opacity:1 !important;
 }
+
+
+/* ==========================================================
+   FAROL V45 — BOTÃO VOLTAR NAS QUESTÕES DAS DISCIPLINAS
+========================================================== */
+
+.btn-voltar-questoes-v45{
+    width:auto !important;
+    min-height:38px;
+    margin:0 0 10px !important;
+    padding:8px 13px !important;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:#eef5f1 !important;
+    color:#23513d !important;
+    border:1px solid #cfe1d7 !important;
+    border-radius:12px !important;
+    font-size:13px;
+    font-weight:800;
+}
+
+.acoes-feedback-questao-v45{
+    display:grid;
+    grid-template-columns:minmax(110px, .7fr) minmax(170px, 1.3fr);
+    gap:9px;
+    margin-top:14px;
+}
+
+.acoes-feedback-questao-v45 button{
+    width:100%;
+    min-height:48px;
+    margin:0 !important;
+}
+
+.btn-voltar-feedback-v45{
+    background:#eef5f1 !important;
+    color:#23513d !important;
+    border:1px solid #cfe1d7 !important;
+}
+
+@media(max-width:520px){
+
+    .acoes-feedback-questao-v45{
+        grid-template-columns:1fr;
+    }
+
+    .acoes-feedback-questao-v45 .btn-proxima-feedback{
+        order:1;
+    }
+
+    .acoes-feedback-questao-v45 .btn-voltar-feedback-v45{
+        order:2;
+    }
+}
