@@ -3361,33 +3361,231 @@
         vincularBotaoPublicacaoV72();
     }
 
+    function avisoNovidadesAdminV74(mensagem){
+        if(
+            typeof window.mostrarAvisoAdminFarol ===
+            "function"
+        ){
+            window.mostrarAvisoAdminFarol(mensagem);
+            return;
+        }
+
+        if(typeof window.mostrarToast === "function"){
+            window.mostrarToast(mensagem);
+            return;
+        }
+
+        window.alert(mensagem);
+    }
+
+    function timestampNovidadeAdminV74(item){
+        const valor =
+            item.publicadoEm ||
+            item.criadoEmLocal ||
+            item.atualizadoEm ||
+            0;
+
+        if(valor && typeof valor.toMillis === "function"){
+            return valor.toMillis();
+        }
+
+        if(valor && typeof valor.toDate === "function"){
+            return valor.toDate().getTime();
+        }
+
+        return Number(valor || 0);
+    }
+
     window.carregarNovidadesAdminV68 = async function(){
-        const area=document.getElementById("listaNovidadesAdminV68");
-        if(!area||!dbFarol) return;
-        area.innerHTML='<div class="admin-carregando-lista">Carregando publicações...</div>';
+        const area = document.getElementById(
+            "listaNovidadesAdminV68"
+        );
+
+        if(!area){
+            return;
+        }
+
+        const banco = obterBancoNovidadesV72();
+
+        if(!banco){
+            area.innerHTML =
+                '<div class="admin-lista-vazia">' +
+                'O Firestore ainda não foi carregado. Atualize a página.' +
+                '</div>';
+            return;
+        }
+
+        area.innerHTML =
+            '<div class="admin-carregando-lista">' +
+            'Carregando publicações...' +
+            '</div>';
+
         try{
-            const snap=await dbFarol.collection("novidadesFarol").orderBy("publicadoEm","desc").limit(30).get();
-            if(snap.empty){ area.innerHTML='<div class="admin-lista-vazia">Nenhuma novidade publicada.</div>'; return; }
-            area.innerHTML=snap.docs.map(doc=>{
-                const item=doc.data()||{};
-                return `<article class="item-novidade-admin-v68 ${item.ativa===false?"inativa":""}"><div><small>${item.urgente?"⚠️ IMPORTANTE":"📢 PUBLICAÇÃO"} • ${dataAdminV68(item.publicadoEm)}</small><h4>${textoSeguroV68(item.titulo)}</h4><p>${textoSeguroV68(item.resumo)}</p></div><div class="acoes-novidade-admin-v68"><button type="button" onclick="alternarNovidadeAdminV68('${doc.id}', ${item.ativa===false?'true':'false'})">${item.ativa===false?'Reativar':'Ocultar'}</button><button type="button" class="btn-perigo-admin-v52" onclick="excluirNovidadeAdminV68('${doc.id}')">Excluir</button></div></article>`;
-            }).join('');
+            // Sem orderBy: também recupera publicações antigas que possam
+            // não possuir o campo publicadoEm.
+            const snap = await banco
+                .collection("novidadesFarol")
+                .limit(50)
+                .get();
+
+            if(snap.empty){
+                area.innerHTML =
+                    '<div class="admin-lista-vazia">' +
+                    'Nenhuma novidade publicada.' +
+                    '</div>';
+                return;
+            }
+
+            const documentos = snap.docs
+                .map(doc => ({
+                    id: doc.id,
+                    item: doc.data() || {}
+                }))
+                .sort(
+                    (a, b) =>
+                        timestampNovidadeAdminV74(b.item) -
+                        timestampNovidadeAdminV74(a.item)
+                )
+                .slice(0, 30);
+
+            area.innerHTML = documentos.map(({id, item}) => {
+                return `
+                    <article class="item-novidade-admin-v68 ${item.ativa === false ? "inativa" : ""}">
+                        <div>
+                            <small>
+                                ${item.urgente ? "⚠️ IMPORTANTE" : "📢 PUBLICAÇÃO"}
+                                • ${dataAdminV68(
+                                    item.publicadoEm ||
+                                    item.criadoEmLocal
+                                )}
+                            </small>
+
+                            <h4>${textoSeguroV68(item.titulo)}</h4>
+                            <p>${textoSeguroV68(item.resumo)}</p>
+                        </div>
+
+                        <div class="acoes-novidade-admin-v68">
+                            <button
+                                type="button"
+                                onclick="alternarNovidadeAdminV68('${id}', ${item.ativa === false ? "true" : "false"})">
+                                ${item.ativa === false ? "Reativar" : "Ocultar"}
+                            </button>
+
+                            <button
+                                type="button"
+                                class="btn-perigo-admin-v52"
+                                onclick="excluirNovidadeAdminV68('${id}')">
+                                Excluir
+                            </button>
+                        </div>
+                    </article>
+                `;
+            }).join("");
+
         }catch(erro){
-            console.error(erro); area.innerHTML='<div class="admin-lista-vazia">Não foi possível carregar as publicações.</div>';
+            console.error(
+                "Erro ao carregar publicações administrativas:",
+                erro
+            );
+
+            area.innerHTML =
+                '<div class="admin-lista-vazia">' +
+                'Não foi possível carregar as publicações. ' +
+                'Código: ' +
+                textoSeguroV68(
+                    erro && erro.code
+                        ? erro.code
+                        : "não informado"
+                ) +
+                '</div>';
         }
     };
 
     window.alternarNovidadeAdminV68 = async function(id, ativa){
-        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()) return;
-        try{ await dbFarol.collection("novidadesFarol").doc(id).update({ativa:Boolean(ativa), atualizadoEm:firebase.firestore.FieldValue.serverTimestamp()}); await window.carregarNovidadesAdminV68(); }
-        catch(erro){ aviso("Não foi possível alterar a publicação."); }
+        if(
+            !window.sessaoAdminFarolConfirmada ||
+            !window.sessaoAdminFarolConfirmada()
+        ){
+            avisoNovidadesAdminV74(
+                "Confirme novamente a senha do administrador."
+            );
+            return;
+        }
+
+        const banco = obterBancoNovidadesV72();
+
+        if(!banco){
+            avisoNovidadesAdminV74(
+                "Firestore indisponível. Atualize a página."
+            );
+            return;
+        }
+
+        try{
+            await banco
+                .collection("novidadesFarol")
+                .doc(id)
+                .update({
+                    ativa: Boolean(ativa),
+                    atualizadoEm:
+                        firebase.firestore.FieldValue
+                            .serverTimestamp()
+                });
+
+            await window.carregarNovidadesAdminV68();
+
+        }catch(erro){
+            console.error(erro);
+            avisoNovidadesAdminV74(
+                "Não foi possível alterar a publicação."
+            );
+        }
     };
 
     window.excluirNovidadeAdminV68 = async function(id){
-        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()) return;
-        if(!confirm("Excluir definitivamente esta novidade?")) return;
-        try{ await dbFarol.collection("novidadesFarol").doc(id).delete(); aviso("Publicação excluída."); await window.carregarNovidadesAdminV68(); }
-        catch(erro){ aviso("Não foi possível excluir a publicação."); }
+        if(
+            !window.sessaoAdminFarolConfirmada ||
+            !window.sessaoAdminFarolConfirmada()
+        ){
+            avisoNovidadesAdminV74(
+                "Confirme novamente a senha do administrador."
+            );
+            return;
+        }
+
+        if(!window.confirm(
+            "Excluir definitivamente esta novidade para todos os alunos?"
+        )){
+            return;
+        }
+
+        const banco = obterBancoNovidadesV72();
+
+        if(!banco){
+            avisoNovidadesAdminV74(
+                "Firestore indisponível. Atualize a página."
+            );
+            return;
+        }
+
+        try{
+            await banco
+                .collection("novidadesFarol")
+                .doc(id)
+                .delete();
+
+            avisoNovidadesAdminV74(
+                "Publicação excluída para todos os alunos."
+            );
+
+            await window.carregarNovidadesAdminV68();
+
+        }catch(erro){
+            console.error(erro);
+            avisoNovidadesAdminV74(
+                "Não foi possível excluir a publicação."
+            );
+        }
     };
 
     const mostrarAbaAntesV68=window.mostrarAbaAcessosFarol;
