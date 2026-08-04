@@ -13896,3 +13896,31 @@ progress{
         font-size:12px;
     }
 }
+
+
+/* ==========================================================
+   FAROL V49 — PROGRESSO DAS RESPOSTAS NA ARENA
+========================================================== */
+
+.arena-progresso-respostas-v49{
+    margin-top:10px;
+    padding:10px 12px;
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+    background:#f1f8f4;
+    color:#244b39;
+    border:1px solid #d1e6da;
+    border-radius:12px;
+    text-align:center;
+}
+
+.arena-progresso-respostas-v49 strong{
+    font-size:13px;
+}
+
+.arena-progresso-respostas-v49 span{
+    font-size:11px;
+    line-height:1.35;
+    opacity:.84;
+}

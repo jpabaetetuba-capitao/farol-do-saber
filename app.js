@@ -34209,3 +34209,307 @@ window.selecionarConcursoArenaV40 = function(concurso){
     };
 
 })();
+
+
+// ==========================================================
+// FAROL V49 — AVANÇO AUTOMÁTICO DA ARENA
+// ==========================================================
+
+(function(){
+
+    let timerAvancoTodosResponderamV49 = null;
+    let rodadaAgendadaV49 = "";
+
+    function jogadoresAtivosArenaV49(sala){
+        const uids = Array.isArray(sala && sala.uids)
+            ? sala.uids
+            : [];
+
+        const participantes =
+            (sala && sala.participantes) || {};
+
+        return uids.filter(uid => participantes[uid]);
+    }
+
+    function respostaEncerradaArenaV49(resposta){
+        if(!resposta){
+            return false;
+        }
+
+        return Boolean(resposta.acertou) ||
+            Number(resposta.tentativas || 0) >= 2;
+    }
+
+    function situacaoRespostasArenaV49(sala){
+        const jogadores =
+            jogadoresAtivosArenaV49(sala);
+
+        const respostas =
+            (sala && sala.respostasRodada) || {};
+
+        const concluidos = jogadores.filter(uid =>
+            respostaEncerradaArenaV49(respostas[uid])
+        );
+
+        return {
+            total: jogadores.length,
+            concluidos: concluidos.length,
+            todosResponderam:
+                jogadores.length >= 2 &&
+                concluidos.length === jogadores.length
+        };
+    }
+
+    function cancelarAvancoArenaV49(){
+        if(timerAvancoTodosResponderamV49){
+            clearTimeout(timerAvancoTodosResponderamV49);
+            timerAvancoTodosResponderamV49 = null;
+        }
+
+        rodadaAgendadaV49 = "";
+    }
+
+    function agendarAvancoArenaV49(sala){
+        const usuario =
+            typeof usuarioArenaAtualFarol === "function"
+            ? usuarioArenaAtualFarol()
+            : null;
+
+        if(
+            !sala ||
+            !usuario ||
+            sala.status !== "jogando" ||
+            sala.criadoPor !== usuario.uid
+        ){
+            return;
+        }
+
+        const situacao =
+            situacaoRespostasArenaV49(sala);
+
+        if(!situacao.todosResponderam){
+            cancelarAvancoArenaV49();
+            return;
+        }
+
+        const rodada =
+            `${sala.codigo}:${sala.questaoAtual || 0}:${sala.rodadaNumero || 0}`;
+
+        if(rodadaAgendadaV49 === rodada){
+            return;
+        }
+
+        cancelarAvancoArenaV49();
+        rodadaAgendadaV49 = rodada;
+
+        timerAvancoTodosResponderamV49 =
+            setTimeout(() => {
+                timerAvancoTodosResponderamV49 = null;
+
+                if(
+                    typeof avancarQuestaoArenaFarol === "function"
+                ){
+                    avancarQuestaoArenaFarol(true);
+                }
+            }, 2000);
+    }
+
+    const avancarArenaAntesV49 =
+        window.avancarQuestaoArenaFarol;
+
+    window.avancarQuestaoArenaFarol =
+        async function(forcarPorRespostas = false){
+
+            if(arenaAvancoEmAndamentoFarol){
+                return;
+            }
+
+            const usuario = usuarioArenaAtualFarol();
+            const sala = arenaSalaAtualFarol;
+
+            if(
+                !usuario ||
+                !sala ||
+                sala.criadoPor !== usuario.uid ||
+                sala.status !== "jogando"
+            ){
+                return;
+            }
+
+            arenaAvancoEmAndamentoFarol = true;
+
+            const ref = db
+                .collection("arenasAoVivo")
+                .doc(sala.codigo);
+
+            try{
+
+                await db.runTransaction(async transacao => {
+
+                    const snapshot =
+                        await transacao.get(ref);
+
+                    if(!snapshot.exists){
+                        return;
+                    }
+
+                    const dados =
+                        snapshot.data() || {};
+
+                    if(dados.status !== "jogando"){
+                        return;
+                    }
+
+                    const fim =
+                        calcularFimRodadaArenaFarol(dados);
+
+                    const tempoEsgotado =
+                        Date.now() + 500 >= fim;
+
+                    const todosResponderam =
+                        situacaoRespostasArenaV49(dados)
+                            .todosResponderam;
+
+                    if(
+                        !tempoEsgotado &&
+                        !(forcarPorRespostas && todosResponderam)
+                    ){
+                        return;
+                    }
+
+                    const atual =
+                        Number(dados.questaoAtual || 0);
+
+                    const total =
+                        Array.isArray(dados.indices)
+                        ? dados.indices.length
+                        : 0;
+
+                    if(atual + 1 >= total){
+
+                        transacao.update(ref, {
+                            status: "finalizada",
+                            finalizadaEm:
+                                firebase.firestore.FieldValue.serverTimestamp(),
+                            atualizadoEm: Date.now()
+                        });
+
+                        return;
+                    }
+
+                    transacao.update(ref, {
+                        questaoAtual: atual + 1,
+                        rodadaNumero:
+                            Number(dados.rodadaNumero || 0) + 1,
+                        rodadaIniciadaEm:
+                            firebase.firestore.FieldValue.serverTimestamp(),
+                        respostasRodada: {},
+                        atualizadoEm: Date.now()
+                    });
+                });
+
+            }catch(erro){
+
+                console.error(
+                    "Erro ao avançar questão da Arena:",
+                    erro
+                );
+
+            }finally{
+
+                arenaAvancoEmAndamentoFarol = false;
+                cancelarAvancoArenaV49();
+            }
+        };
+
+    const renderizarPartidaAntesV49 =
+        window.renderizarPartidaArenaFarol;
+
+    if(typeof renderizarPartidaAntesV49 === "function"){
+
+        window.renderizarPartidaArenaFarol = function(){
+
+            const resultado =
+                renderizarPartidaAntesV49.apply(
+                    this,
+                    arguments
+                );
+
+            const sala = arenaSalaAtualFarol;
+
+            if(!sala || sala.status !== "jogando"){
+                cancelarAvancoArenaV49();
+                return resultado;
+            }
+
+            const situacao =
+                situacaoRespostasArenaV49(sala);
+
+            const feedback =
+                document.getElementById(
+                    "arenaFeedbackJogadorFarol"
+                );
+
+            if(feedback){
+
+                let aviso =
+                    document.getElementById(
+                        "arenaProgressoRespostasV49"
+                    );
+
+                if(!aviso){
+                    aviso = document.createElement("div");
+                    aviso.id = "arenaProgressoRespostasV49";
+                    aviso.className =
+                        "arena-progresso-respostas-v49";
+                    feedback.appendChild(aviso);
+                }
+
+                aviso.innerHTML =
+                    situacao.todosResponderam
+                    ? `
+                        <strong>✅ Todos responderam.</strong>
+                        <span>Próxima questão em 2 segundos...</span>
+                    `
+                    : `
+                        <strong>
+                            ${situacao.concluidos}/${situacao.total}
+                            jogadores concluíram
+                        </strong>
+                        <span>
+                            A próxima questão será liberada quando todos concluírem ou o tempo acabar.
+                        </span>
+                    `;
+            }
+
+            agendarAvancoArenaV49(sala);
+
+            return resultado;
+        };
+    }
+
+    const renderizarSalaAntesV49 =
+        window.renderizarSalaArenaAoVivoFarol;
+
+    if(typeof renderizarSalaAntesV49 === "function"){
+
+        window.renderizarSalaArenaAoVivoFarol = function(){
+
+            const resultado =
+                renderizarSalaAntesV49.apply(
+                    this,
+                    arguments
+                );
+
+            if(
+                !arenaSalaAtualFarol ||
+                arenaSalaAtualFarol.status !== "jogando"
+            ){
+                cancelarAvancoArenaV49();
+            }
+
+            return resultado;
+        };
+    }
+
+})();
