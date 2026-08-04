@@ -11362,110 +11362,206 @@ function adicionarPontosLuz(valor, motivo, chaveUnica){
     return true;
 }
 
-const missoesDiariasFarol = [
+const missoesDiariasFarol = {
 
-    {
-        id: "foco-questoes",
-        nome: "Foco nas Questões",
-        descricao: "Responda questões e mantenha um bom ritmo de acertos.",
-        recompensa: 50,
-        requisitos: [
-            {
-                tipo: "acertos",
-                meta: 10,
-                texto: "Acertar 10 questões",
-                icone: "✅"
-            }
-        ]
-    },
+    facil: [
+        {
+            id: "facil-acertos-5",
+            dificuldade: "facil",
+            nome: "Aquecimento",
+            descricao: "Comece o dia acertando algumas questões.",
+            recompensa: 20,
+            requisitos: [
+                {
+                    tipo: "acertos",
+                    meta: 5,
+                    texto: "Acertar 5 questões",
+                    icone: "✅"
+                }
+            ]
+        },
+        {
+            id: "facil-revisoes-2",
+            dificuldade: "facil",
+            nome: "Revisão Rápida",
+            descricao: "Revise seus erros para fixar o conteúdo.",
+            recompensa: 20,
+            requisitos: [
+                {
+                    tipo: "revisoes",
+                    meta: 2,
+                    texto: "Revisar 2 erros",
+                    icone: "🔁"
+                }
+            ]
+        },
+        {
+            id: "facil-topico-1",
+            dificuldade: "facil",
+            nome: "Primeiro Passo",
+            descricao: "Conclua um tópico de estudo.",
+            recompensa: 20,
+            requisitos: [
+                {
+                    tipo: "topicos",
+                    meta: 1,
+                    texto: "Concluir 1 tópico",
+                    icone: "📚"
+                }
+            ]
+        }
+    ],
 
-    {
-        id: "revisao-inteligente",
-        nome: "Revisão Inteligente",
-        descricao: "Volte ao Caderno de Erros e recupere conteúdos importantes.",
-        recompensa: 40,
-        requisitos: [
-            {
-                tipo: "revisoes",
-                meta: 5,
-                texto: "Revisar 5 erros",
-                icone: "🔁"
-            }
-        ]
-    },
+    media: [
+        {
+            id: "media-acertos-10",
+            dificuldade: "media",
+            nome: "Ritmo de Estudos",
+            descricao: "Mantenha a concentração e amplie seus acertos.",
+            recompensa: 35,
+            requisitos: [
+                {
+                    tipo: "acertos",
+                    meta: 10,
+                    texto: "Acertar 10 questões",
+                    icone: "✅"
+                }
+            ]
+        },
+        {
+            id: "media-revisoes-5",
+            dificuldade: "media",
+            nome: "Mestre da Revisão",
+            descricao: "Volte ao Caderno de Erros e recupere conteúdos.",
+            recompensa: 35,
+            requisitos: [
+                {
+                    tipo: "revisoes",
+                    meta: 5,
+                    texto: "Revisar 5 erros",
+                    icone: "🔁"
+                }
+            ]
+        },
+        {
+            id: "media-duelo-1",
+            dificuldade: "media",
+            nome: "Desafio Aceito",
+            descricao: "Conclua uma disputa no modo Duelo.",
+            recompensa: 35,
+            requisitos: [
+                {
+                    tipo: "duelos",
+                    meta: 1,
+                    texto: "Concluir 1 Duelo",
+                    icone: "⚔️"
+                }
+            ]
+        }
+    ],
 
-    {
-        id: "simulado-farol",
-        nome: "Simulado do Farol",
-        descricao: "Conclua um simulado para testar seu desempenho geral.",
-        recompensa: 80,
-        requisitos: [
-            {
-                tipo: "simulados",
-                meta: 1,
-                texto: "Concluir 1 simulado",
-                icone: "📝"
-            }
-        ]
-    },
+    dificil: [
+        {
+            id: "dificil-simulado-1",
+            dificuldade: "dificil",
+            nome: "Simulado do Farol",
+            descricao: "Conclua um simulado e teste seu desempenho.",
+            recompensa: 55,
+            requisitos: [
+                {
+                    tipo: "simulados",
+                    meta: 1,
+                    texto: "Concluir 1 simulado",
+                    icone: "📝"
+                }
+            ]
+        },
+        {
+            id: "dificil-arena-1",
+            dificuldade: "dificil",
+            nome: "Competidor da Arena",
+            descricao: "Participe até o fim de uma Arena do Farol.",
+            recompensa: 55,
+            requisitos: [
+                {
+                    tipo: "arenas",
+                    meta: 1,
+                    texto: "Concluir 1 Arena",
+                    icone: "🏟️"
+                }
+            ]
+        },
+        {
+            id: "dificil-combinada",
+            dificuldade: "dificil",
+            nome: "Jornada Completa",
+            descricao: "Combine questões e revisões no mesmo dia.",
+            recompensa: 55,
+            requisitos: [
+                {
+                    tipo: "acertos",
+                    meta: 12,
+                    texto: "Acertar 12 questões",
+                    icone: "✅"
+                },
+                {
+                    tipo: "revisoes",
+                    meta: 4,
+                    texto: "Revisar 4 erros",
+                    icone: "🔁"
+                }
+            ]
+        }
+    ]
 
-    {
-        id: "disciplina-em-dia",
-        nome: "Disciplina em Dia",
-        descricao: "Avance em qualquer disciplina e conclua um tópico de estudo.",
-        recompensa: 60,
-        requisitos: [
-            {
-                tipo: "topicos",
-                meta: 1,
-                texto: "Concluir 1 tópico",
-                icone: "📚"
-            }
-        ]
-    },
+};
 
-    {
-        id: "estudante-constante",
-        nome: "Estudante Constante",
-        descricao: "Combine novas questões com revisão para manter a constância.",
-        recompensa: 50,
-        requisitos: [
-            {
-                tipo: "acertos",
-                meta: 5,
-                texto: "Acertar 5 questões",
-                icone: "✅"
-            },
-            {
-                tipo: "revisoes",
-                meta: 2,
-                texto: "Revisar 2 erros",
-                icone: "🔁"
-            }
-        ]
-    }
+const BONUS_TRES_MISSOES_FAROL = 50;
 
-];
-
-function obterMissaoDiaria(){
+function indiceMissaoDiariaV63(tamanho, deslocamento){
 
     const hoje = dataHojeFarol();
 
-    const data =
-        new Date(
-            hoje + "T00:00:00Z"
-        );
+    const data = new Date(
+        hoje + "T12:00:00"
+    );
 
-    const dias =
-        Math.floor(
-            data.getTime() / 86400000
-        );
+    const dias = Math.floor(
+        data.getTime() / 86400000
+    );
 
-    const indice =
-        dias % missoesDiariasFarol.length;
+    return Math.abs(
+        dias + deslocamento
+    ) % tamanho;
+}
 
-    return missoesDiariasFarol[indice];
+function obterMissoesDiarias(){
 
+    return [
+        missoesDiariasFarol.facil[
+            indiceMissaoDiariaV63(
+                missoesDiariasFarol.facil.length,
+                0
+            )
+        ],
+        missoesDiariasFarol.media[
+            indiceMissaoDiariaV63(
+                missoesDiariasFarol.media.length,
+                3
+            )
+        ],
+        missoesDiariasFarol.dificil[
+            indiceMissaoDiariaV63(
+                missoesDiariasFarol.dificil.length,
+                7
+            )
+        ]
+    ];
+}
+
+// Mantém compatibilidade com pontos antigos do código.
+function obterMissaoDiaria(){
+    return obterMissoesDiarias()[0];
 }
 
 function garantirEstatisticaHoje(){
@@ -11478,29 +11574,44 @@ function garantirEstatisticaHoje(){
             revisoes: 0,
             topicos: 0,
             simulados: 0,
+            duelos: 0,
+            arenas: 0,
             missaoPremiada: false,
-            missoesPremiadas: {}
+            missoesPremiadas: {},
+            missoesConcluidasAvisadas: {},
+            bonusTresMissoesResgatado: false
         };
     }
 
-    estatisticasDiarias[hoje].missoesPremiadas =
-        estatisticasDiarias[hoje].missoesPremiadas || {};
+    const registro = estatisticasDiarias[hoje];
 
-    return estatisticasDiarias[hoje];
+    registro.missoesPremiadas =
+        registro.missoesPremiadas || {};
 
+    registro.missoesConcluidasAvisadas =
+        registro.missoesConcluidasAvisadas || {};
+
+    registro.duelos = Number(registro.duelos || 0);
+    registro.arenas = Number(registro.arenas || 0);
+
+    return registro;
 }
 
 function progressoMissao(requisito, estatistica){
 
     const valor =
-        estatistica[requisito.tipo] || 0;
+        Number(estatistica[requisito.tipo] || 0);
 
     return {
         atual: Math.min(valor, requisito.meta),
+        real: valor,
         meta: requisito.meta,
-        completa: valor >= requisito.meta
+        completa: valor >= requisito.meta,
+        percentual: Math.min(
+            100,
+            Math.round((valor / requisito.meta) * 100)
+        )
     };
-
 }
 
 function missaoDiariaCompleta(missao, estatistica){
@@ -11512,65 +11623,98 @@ function missaoDiariaCompleta(missao, estatistica){
                 estatistica
             ).completa
     );
-
 }
 
 function registrarAtividadeDiaria(tipo, quantidade){
 
-    if(!quantidade){
+    const valor = Number(quantidade || 0);
+
+    if(valor <= 0){
         return;
     }
 
     const hoje = garantirEstatisticaHoje();
 
-    hoje[tipo] = (hoje[tipo] || 0) + quantidade;
+    hoje[tipo] =
+        Number(hoje[tipo] || 0) + valor;
 
     salvarDados();
     atualizarMissaoDiaria();
     verificarMissaoDiaria();
-
 }
 
 function verificarMissaoDiaria(){
 
-    const hoje =
-        garantirEstatisticaHoje();
+    const hoje = garantirEstatisticaHoje();
+    const missoes = obterMissoesDiarias();
 
-    const missao =
-        obterMissaoDiaria();
+    missoes.forEach(missao => {
 
-    const completa =
-        missaoDiariaCompleta(
-            missao,
-            hoje
-        );
+        const completa =
+            missaoDiariaCompleta(
+                missao,
+                hoje
+            );
 
-    if(
-        completa &&
-        !hoje.missoesPremiadas[missao.id]
-    ){
+        if(
+            completa &&
+            !hoje.missoesConcluidasAvisadas[missao.id]
+        ){
+            hoje.missoesConcluidasAvisadas[missao.id] = true;
 
-        hoje.missoesPremiadas[missao.id] = true;
-        hoje.missaoPremiada = true;
+            mostrarToast(
+                `🎯 Missão ${rotuloDificuldadeMissaoV63(
+                    missao.dificuldade
+                )} concluída! Resgate sua recompensa.`
+            );
+        }
+    });
 
-        adicionarPontosLuz(
-            missao.recompensa,
-            "Missão diária completa: " + missao.nome,
-            "missao-diaria:" + missao.id + ":" + dataHojeFarol()
-        );
+    salvarDados();
+    atualizarMissaoDiaria();
+}
 
-        mostrarToast(
-            "🎯 Missão concluída! ⭐ " +
-            missao.recompensa +
-            " Pontos de Luz"
-        );
+function rotuloDificuldadeMissaoV63(dificuldade){
 
-        salvarDados();
+    const rotulos = {
+        facil: "Fácil",
+        media: "Média",
+        dificil: "Difícil"
+    };
 
+    return rotulos[dificuldade] || "Diária";
+}
+
+function iconeDificuldadeMissaoV63(dificuldade){
+
+    const icones = {
+        facil: "🌱",
+        media: "⚓",
+        dificil: "🔥"
+    };
+
+    return icones[dificuldade] || "🎯";
+}
+
+function progressoGeralMissaoV63(missao, estatistica){
+
+    if(!missao.requisitos.length){
+        return 0;
     }
 
-    atualizarMissaoDiaria();
+    const soma = missao.requisitos.reduce(
+        (total, requisito) =>
+            total +
+            progressoMissao(
+                requisito,
+                estatistica
+            ).percentual,
+        0
+    );
 
+    return Math.round(
+        soma / missao.requisitos.length
+    );
 }
 
 function montarLinhasMissao(missao, estatistica){
@@ -11585,18 +11729,224 @@ function montarLinhasMissao(missao, estatistica){
                 );
 
             return `
-                <p>
-                    ${requisito.icone}
-                    ${requisito.texto}:
+                <div class="requisito-missao-v63">
+                    <span>
+                        ${requisito.icone}
+                        ${requisito.texto}
+                    </span>
+
                     <strong>
                         ${progresso.atual}/${progresso.meta}
                     </strong>
-                </p>
+                </div>
             `;
-
         }
     ).join("");
+}
 
+function calcularSequenciaMissoesV63(){
+
+    let sequencia = 0;
+    const hoje = new Date();
+    hoje.setHours(12, 0, 0, 0);
+
+    for(let i = 0; i < 365; i++){
+
+        const data = new Date(hoje);
+        data.setDate(data.getDate() - i);
+
+        const chave = [
+            data.getFullYear(),
+            String(data.getMonth() + 1).padStart(2, "0"),
+            String(data.getDate()).padStart(2, "0")
+        ].join("-");
+
+        const registro =
+            estatisticasDiarias[chave];
+
+        if(
+            registro &&
+            registro.bonusTresMissoesResgatado === true
+        ){
+            sequencia++;
+            continue;
+        }
+
+        // O dia de hoje ainda pode estar em andamento.
+        if(i === 0){
+            continue;
+        }
+
+        break;
+    }
+
+    return sequencia;
+}
+
+window.resgatarMissaoDiariaV63 = function(idMissao){
+
+    const hoje = garantirEstatisticaHoje();
+
+    const missao = obterMissoesDiarias().find(
+        item => item.id === idMissao
+    );
+
+    if(!missao){
+        mostrarToast("Missão não encontrada.");
+        return;
+    }
+
+    if(!missaoDiariaCompleta(missao, hoje)){
+        mostrarToast(
+            "Complete os requisitos antes de resgatar."
+        );
+        return;
+    }
+
+    if(hoje.missoesPremiadas[missao.id]){
+        mostrarToast(
+            "Esta recompensa já foi resgatada."
+        );
+        return;
+    }
+
+    hoje.missoesPremiadas[missao.id] = true;
+
+    adicionarPontosLuz(
+        missao.recompensa,
+        "Missão diária: " + missao.nome,
+        "missao-diaria-v63:" +
+            missao.id +
+            ":" +
+            dataHojeFarol()
+    );
+
+    mostrarToast(
+        `⭐ ${missao.recompensa} Pontos de Luz resgatados!`
+    );
+
+    salvarDados();
+    atualizarMissaoDiaria();
+};
+
+window.resgatarBonusMissoesV63 = function(){
+
+    const hoje = garantirEstatisticaHoje();
+    const missoes = obterMissoesDiarias();
+
+    const todasCompletas = missoes.every(
+        missao =>
+            missaoDiariaCompleta(
+                missao,
+                hoje
+            )
+    );
+
+    if(!todasCompletas){
+        mostrarToast(
+            "Complete as três missões para liberar o bônus."
+        );
+        return;
+    }
+
+    if(hoje.bonusTresMissoesResgatado){
+        mostrarToast(
+            "O bônus de hoje já foi resgatado."
+        );
+        return;
+    }
+
+    hoje.bonusTresMissoesResgatado = true;
+    hoje.missaoPremiada = true;
+
+    adicionarPontosLuz(
+        BONUS_TRES_MISSOES_FAROL,
+        "Bônus pelas três missões diárias",
+        "bonus-tres-missoes-v63:" +
+            dataHojeFarol()
+    );
+
+    mostrarToast(
+        `🏆 Bônus completo! ⭐ ${BONUS_TRES_MISSOES_FAROL} Pontos de Luz`
+    );
+
+    salvarDados();
+    atualizarMissaoDiaria();
+};
+
+function cardMissaoDiariaV63(missao, hoje){
+
+    const completa =
+        missaoDiariaCompleta(
+            missao,
+            hoje
+        );
+
+    const resgatada =
+        Boolean(
+            hoje.missoesPremiadas[missao.id]
+        );
+
+    const percentual =
+        progressoGeralMissaoV63(
+            missao,
+            hoje
+        );
+
+    return `
+        <article
+            class="card-missao-diaria-v63 dificuldade-${missao.dificuldade} ${completa ? "completa" : ""} ${resgatada ? "resgatada" : ""}">
+
+            <div class="topo-card-missao-v63">
+                <span class="icone-missao-v63">
+                    ${iconeDificuldadeMissaoV63(
+                        missao.dificuldade
+                    )}
+                </span>
+
+                <div>
+                    <small>
+                        Missão ${rotuloDificuldadeMissaoV63(
+                            missao.dificuldade
+                        )}
+                    </small>
+                    <h4>${missao.nome}</h4>
+                </div>
+
+                <b>${missao.recompensa} ⭐</b>
+            </div>
+
+            <p>${missao.descricao}</p>
+
+            <div class="lista-requisitos-missao-v63">
+                ${montarLinhasMissao(
+                    missao,
+                    hoje
+                )}
+            </div>
+
+            <div class="barra-missao-v63">
+                <i style="width:${percentual}%"></i>
+            </div>
+
+            <div class="rodape-card-missao-v63">
+                <span>${percentual}% concluída</span>
+
+                <button
+                    type="button"
+                    onclick="resgatarMissaoDiariaV63('${missao.id}')"
+                    ${!completa || resgatada ? "disabled" : ""}>
+                    ${
+                        resgatada
+                            ? "✅ Resgatada"
+                            : completa
+                                ? "🎁 Resgatar"
+                                : "Em andamento"
+                    }
+                </button>
+            </div>
+        </article>
+    `;
 }
 
 function atualizarMissaoDiaria(){
@@ -11614,72 +11964,114 @@ function atualizarMissaoDiaria(){
     const hoje =
         garantirEstatisticaHoje();
 
-    const missao =
-        obterMissaoDiaria();
+    const missoes =
+        obterMissoesDiarias();
 
-    const concluida =
-        !!hoje.missoesPremiadas[missao.id];
+    const completas = missoes.filter(
+        missao =>
+            missaoDiariaCompleta(
+                missao,
+                hoje
+            )
+    ).length;
 
-    const linhas =
-        montarLinhasMissao(
-            missao,
-            hoje
-        );
+    const todasCompletas =
+        completas === missoes.length;
+
+    const sequencia =
+        calcularSequenciaMissoesV63();
 
     if(area){
 
         area.innerHTML = `
-            <h3>
-                🎯 Hoje: ${missao.nome}
-            </h3>
+            <div class="cabecalho-missoes-v63">
+                <div>
+                    <h3>🎯 Missões Diárias</h3>
+                    <p>
+                        Complete as três missões e resgate suas recompensas.
+                    </p>
+                </div>
 
-            <p>
-                ${missao.descricao}
-            </p>
+                <div class="sequencia-missoes-v63">
+                    <span>🔥</span>
+                    <strong>${sequencia}</strong>
+                    <small>dia(s) de sequência</small>
+                </div>
+            </div>
 
-            <br>
+            <div class="grade-missoes-diarias-v63">
+                ${missoes.map(
+                    missao =>
+                        cardMissaoDiariaV63(
+                            missao,
+                            hoje
+                        )
+                ).join("")}
+            </div>
 
-            ${linhas}
+            <div class="bonus-missoes-v63 ${todasCompletas ? "liberado" : ""}">
+                <div>
+                    <span>🏆</span>
+                    <div>
+                        <strong>Bônus das três missões</strong>
+                        <small>
+                            Complete todas para ganhar
+                            ${BONUS_TRES_MISSOES_FAROL} Pontos de Luz.
+                        </small>
+                    </div>
+                </div>
 
-            <br>
-
-            <strong>
-                ${
-                    concluida
-                    ? "🎉 Missão concluída hoje"
-                    : "⭐ Recompensa: " + missao.recompensa + " Pontos de Luz"
-                }
-            </strong>
+                <button
+                    type="button"
+                    onclick="resgatarBonusMissoesV63()"
+                    ${
+                        !todasCompletas ||
+                        hoje.bonusTresMissoesResgatado
+                            ? "disabled"
+                            : ""
+                    }>
+                    ${
+                        hoje.bonusTresMissoesResgatado
+                            ? "✅ Bônus resgatado"
+                            : todasCompletas
+                                ? "🎁 Resgatar bônus"
+                                : `${completas}/3 concluídas`
+                    }
+                </button>
+            </div>
         `;
-
     }
 
     if(resumo){
 
         resumo.innerHTML = `
             <strong>
-                🎯 Missão do Dia: ${missao.nome}
+                🎯 Missões do Dia: ${completas}/3
             </strong>
 
             <span>
                 ${
-                    concluida
-                    ? "Concluída hoje."
-                    : "Ganhe ⭐ " + missao.recompensa + " Pontos de Luz."
+                    hoje.bonusTresMissoesResgatado
+                        ? `Bônus resgatado • sequência de ${sequencia} dia(s).`
+                        : todasCompletas
+                            ? "As três estão completas. Resgate o bônus!"
+                            : "Complete as três para liberar o bônus."
                 }
             </span>
+
+            <div class="mini-progresso-missoes-v63">
+                <i style="width:${Math.round(
+                    (completas / 3) * 100
+                )}%"></i>
+            </div>
 
             <button
                 class="btn-ver-missao"
                 onclick="mostrarTela('estatisticas')">
-
-                Ver missão
-
+                Ver missões
             </button>
         `;
-
     }
-
 }
 
 function exibirToastMissaoDiariaUmaVez(){
@@ -11688,7 +12080,7 @@ function exibirToastMissaoDiariaUmaVez(){
         dataHojeFarol();
 
     const chave =
-        "farol_toast_missao_" + hoje;
+        "farol_toast_missoes_v63_" + hoje;
 
     if(
         localStorage.getItem(chave) === "true"
@@ -11696,23 +12088,127 @@ function exibirToastMissaoDiariaUmaVez(){
         return;
     }
 
-    const missao =
-        obterMissaoDiaria();
-
     mostrarToast(
-        "🎯 Missão do Dia: " +
-        missao.nome +
-        ". Ganhe ⭐ " +
-        missao.recompensa +
-        " Pontos de Luz."
+        "🎯 Três novas missões estão disponíveis hoje."
     );
 
     localStorage.setItem(
         chave,
         "true"
     );
-
 }
+
+// Registra Duelo e Arena somente uma vez por código e por dia.
+function registrarCompeticaoDiariaV63(tipo, codigo){
+
+    const chave =
+        `farol_${tipo}_diario_v63_${dataHojeFarol()}_${codigo}`;
+
+    if(localStorage.getItem(chave) === "true"){
+        return;
+    }
+
+    localStorage.setItem(chave, "true");
+
+    registrarAtividadeDiaria(
+        tipo,
+        1
+    );
+}
+
+setTimeout(() => {
+
+    const resultadoDueloAntesV63 =
+        window.mostrarResultadoDuelo;
+
+    if(typeof resultadoDueloAntesV63 === "function"){
+
+        window.mostrarResultadoDuelo =
+            async function(codigo){
+
+                const resultado =
+                    await resultadoDueloAntesV63
+                        .apply(this, arguments);
+
+                try{
+                    const snapshot = await db
+                        .collection("duelos")
+                        .doc(String(codigo || ""))
+                        .get();
+
+                    if(snapshot.exists){
+                        const dados = snapshot.data() || {};
+                        const participantes =
+                            Object.values(
+                                dados.participantes || {}
+                            );
+
+                        if(
+                            dados.cancelado !== true &&
+                            participantes.length >= 2 &&
+                            participantes.every(
+                                item =>
+                                    item &&
+                                    item.finalizado === true
+                            )
+                        ){
+                            registrarCompeticaoDiariaV63(
+                                "duelos",
+                                codigo
+                            );
+                        }
+                    }
+                }catch(erro){
+                    console.warn(
+                        "Não foi possível registrar o Duelo na missão diária:",
+                        erro
+                    );
+                }
+
+                return resultado;
+            };
+    }
+
+    const renderArenaAntesV63 =
+        window.renderizarSalaArenaAoVivoFarol;
+
+    if(typeof renderArenaAntesV63 === "function"){
+
+        window.renderizarSalaArenaAoVivoFarol =
+            function(){
+
+                const resultado =
+                    renderArenaAntesV63
+                        .apply(this, arguments);
+
+                try{
+                    const sala =
+                        window.arenaSalaAtualFarol ||
+                        arenaSalaAtualFarol ||
+                        null;
+
+                    if(
+                        sala &&
+                        sala.status === "finalizada" &&
+                        sala.codigo
+                    ){
+                        registrarCompeticaoDiariaV63(
+                            "arenas",
+                            sala.codigo
+                        );
+                    }
+                }catch(erro){
+                    console.warn(
+                        "Não foi possível registrar a Arena na missão diária:",
+                        erro
+                    );
+                }
+
+                return resultado;
+            };
+    }
+
+}, 0);
 
 async function salvarRankingFirebase(){
 
