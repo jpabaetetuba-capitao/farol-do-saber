@@ -16148,3 +16148,35 @@ body.efeito-ondas-v65 #conteudoPerfilAluno .perfil-cabecalho,
         max-width:120px !important;
     }
 }
+
+
+/* ==========================================================
+   FAROL V72 — STATUS DA PUBLICAÇÃO DE NOVIDADES
+========================================================== */
+
+.status-publicacao-novidade-v72{
+    margin-top:10px;
+    padding:11px 13px;
+    border-radius:12px;
+    font-size:13px;
+    line-height:1.45;
+    font-weight:700;
+}
+
+.status-publicacao-novidade-v72.info{
+    background:#edf5ff;
+    color:#285d87;
+    border:1px solid #cfe3f5;
+}
+
+.status-publicacao-novidade-v72.sucesso{
+    background:#eaf8ef;
+    color:#1b6b3a;
+    border:1px solid #b9dfc8;
+}
+
+.status-publicacao-novidade-v72.erro{
+    background:#fff0f0;
+    color:#9a2929;
+    border:1px solid #efc4c4;
+}

@@ -3050,52 +3050,307 @@
         try{ const d=valor&&typeof valor.toDate==="function"?valor.toDate():new Date(valor||Date.now()); return d.toLocaleString("pt-BR"); }catch(e){ return "—"; }
     }
 
-    window.publicarNovidadeFarolV68 = async function(event){
-        if(event && typeof event.preventDefault === "function"){ event.preventDefault(); }
-        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()){
-            aviso("Sua confirmação de administrador expirou. Confirme novamente a senha do administrador e tente publicar.");
-            if(typeof window.abrirPainelAcessosFarol === "function"){ window.abrirPainelAcessosFarol(); }
-            return false;
-        }
-        if(!dbFarol){ aviso("Banco de dados indisponível. Atualize a página e tente novamente."); return false; }
-        const titulo=(document.getElementById("tituloNovidadeFarolV68")?.value||"").trim();
-        const resumo=(document.getElementById("resumoNovidadeFarolV68")?.value||"").trim();
-        const texto=(document.getElementById("textoNovidadeFarolV68")?.value||"").trim();
-        const categoria=document.getElementById("categoriaNovidadeFarolV68")?.value||"atualizacao";
-        const urgente=Boolean(document.getElementById("urgenteNovidadeFarolV68")?.checked);
-        if(!titulo||!resumo||!texto){ aviso("Preencha título, resumo e texto completo."); return; }
-        if(!confirm("Publicar esta novidade para todos os alunos?")) return;
-        const btn=document.getElementById("btnPublicarNovidadeFarolV68");
-        if(btn){ btn.disabled=true; btn.textContent="Publicando..."; }
-        try{
-            await dbFarol.collection("novidadesFarol").add({
-                titulo, resumo, texto, categoria, urgente, ativa:true,
-                publicadoEm: firebase.firestore.FieldValue.serverTimestamp(),
-                criadoPor: usuarioAtual()?.uid || "",
-                autorEmail: emailAtual() || ""
-            });
-            document.getElementById("formNovidadeFarolV68")?.reset();
-            aviso("📢 Novidade publicada para os alunos.");
-            await window.carregarNovidadesAdminV68();
-        }catch(erro){
-            console.error("Erro ao publicar novidade:", erro);
-            const codigo=String(erro&&erro.code?erro.code:"");
-            let mensagem="Não foi possível publicar a atualização.";
-            if(codigo.includes("permission-denied")||codigo.includes("PERMISSION_DENIED")){
-                mensagem+=" O Firestore recusou a gravação. Publique as regras da v68/v71 e confirme que você entrou com a conta administradora jp@gmail.com.";
-            }else if(codigo.includes("unauthenticated")){
-                mensagem+=" Sua sessão de login expirou. Entre novamente na plataforma.";
-            }else if(codigo.includes("unavailable")){
-                mensagem+=" Verifique sua conexão com a internet e tente novamente.";
-            }else{
-                mensagem+=" Código: "+(codigo||"erro desconhecido")+". Consulte o console do navegador para mais detalhes.";
-            }
+    function obterBancoNovidadesV72(){
+        return (
+            (window.farolFirebase && window.farolFirebase.db) ||
+            (typeof db !== "undefined" ? db : null) ||
+            dbFarol ||
+            null
+        );
+    }
+
+    function obterAuthNovidadesV72(){
+        return (
+            (window.farolFirebase && window.farolFirebase.auth) ||
+            (typeof auth !== "undefined" ? auth : null) ||
+            authFarol ||
+            null
+        );
+    }
+
+    function mostrarStatusPublicacaoV72(mensagem, tipo){
+        const area = document.getElementById(
+            "statusPublicacaoNovidadeV72"
+        );
+
+        if(!area){
             aviso(mensagem);
-        }finally{
-            if(btn){ btn.disabled=false; btn.textContent="📢 Publicar para os alunos"; }
+            return;
         }
+
+        area.textContent = mensagem;
+        area.className =
+            "status-publicacao-novidade-v72 " +
+            (tipo || "info");
+        area.hidden = false;
+    }
+
+    window.publicarNovidadeFarolV68 = async function(event){
+        if(event && typeof event.preventDefault === "function"){
+            event.preventDefault();
+        }
+
+        const botao = document.getElementById(
+            "btnPublicarNovidadeFarolV68"
+        );
+
+        try{
+            mostrarStatusPublicacaoV72(
+                "Verificando os dados da publicação...",
+                "info"
+            );
+
+            if(
+                !window.sessaoAdminFarolConfirmada ||
+                !window.sessaoAdminFarolConfirmada()
+            ){
+                mostrarStatusPublicacaoV72(
+                    "A confirmação administrativa expirou. " +
+                    "Confirme novamente sua senha e tente publicar.",
+                    "erro"
+                );
+
+                if(
+                    typeof window.abrirPainelAcessosFarol ===
+                    "function"
+                ){
+                    window.abrirPainelAcessosFarol();
+                }
+
+                return false;
+            }
+
+            const banco = obterBancoNovidadesV72();
+            const autenticacao = obterAuthNovidadesV72();
+            const usuario = autenticacao && autenticacao.currentUser
+                ? autenticacao.currentUser
+                : null;
+
+            if(!usuario){
+                mostrarStatusPublicacaoV72(
+                    "Sua sessão de login não está ativa. " +
+                    "Saia da plataforma, entre novamente e tente publicar.",
+                    "erro"
+                );
+                return false;
+            }
+
+            const email = String(usuario.email || "")
+                .trim()
+                .toLowerCase();
+
+            const uidAdmin =
+                "EEIvdSpr4uPEiyvrDkGWgMBoXAH2";
+
+            if(
+                usuario.uid !== uidAdmin &&
+                email !== "jp@gmail.com"
+            ){
+                mostrarStatusPublicacaoV72(
+                    "A conta conectada não possui permissão administrativa. " +
+                    "Conta atual: " + (email || usuario.uid),
+                    "erro"
+                );
+                return false;
+            }
+
+            if(!banco){
+                mostrarStatusPublicacaoV72(
+                    "O Firestore não foi carregado. " +
+                    "Atualize a página e tente novamente.",
+                    "erro"
+                );
+                return false;
+            }
+
+            const titulo = String(
+                document.getElementById(
+                    "tituloNovidadeFarolV68"
+                )?.value || ""
+            ).trim();
+
+            const resumo = String(
+                document.getElementById(
+                    "resumoNovidadeFarolV68"
+                )?.value || ""
+            ).trim();
+
+            const texto = String(
+                document.getElementById(
+                    "textoNovidadeFarolV68"
+                )?.value || ""
+            ).trim();
+
+            const categoria =
+                document.getElementById(
+                    "categoriaNovidadeFarolV68"
+                )?.value || "atualizacao";
+
+            const urgente = Boolean(
+                document.getElementById(
+                    "urgenteNovidadeFarolV68"
+                )?.checked
+            );
+
+            if(!titulo || !resumo || !texto){
+                mostrarStatusPublicacaoV72(
+                    "Preencha o título, o resumo curto e o texto completo.",
+                    "erro"
+                );
+                return false;
+            }
+
+            const confirmou = window.confirm(
+                "Publicar esta novidade para todos os alunos?"
+            );
+
+            if(!confirmou){
+                mostrarStatusPublicacaoV72(
+                    "Publicação cancelada.",
+                    "info"
+                );
+                return false;
+            }
+
+            if(botao){
+                botao.disabled = true;
+                botao.textContent = "Publicando...";
+            }
+
+            mostrarStatusPublicacaoV72(
+                "Enviando a novidade para o Firestore...",
+                "info"
+            );
+
+            const referencia = await banco
+                .collection("novidadesFarol")
+                .add({
+                    titulo,
+                    resumo,
+                    texto,
+                    categoria,
+                    urgente,
+                    ativa: true,
+                    publicadoEm:
+                        firebase.firestore.FieldValue
+                            .serverTimestamp(),
+                    criadoEmLocal: Date.now(),
+                    criadoPor: usuario.uid,
+                    autorEmail: email
+                });
+
+            document.getElementById(
+                "formNovidadeFarolV68"
+            )?.reset();
+
+            mostrarStatusPublicacaoV72(
+                "✅ Novidade publicada com sucesso. " +
+                "Código: " + referencia.id,
+                "sucesso"
+            );
+
+            aviso(
+                "📢 Novidade publicada para os alunos."
+            );
+
+            if(
+                typeof window.carregarNovidadesAdminV68 ===
+                "function"
+            ){
+                await window.carregarNovidadesAdminV68();
+            }
+
+        }catch(erro){
+            console.error(
+                "Erro detalhado ao publicar novidade:",
+                erro
+            );
+
+            const codigo = String(
+                erro && erro.code ? erro.code : ""
+            );
+
+            let mensagem =
+                "Não foi possível publicar.";
+
+            if(codigo.includes("permission-denied")){
+                mensagem =
+                    "O Firestore recusou a publicação. " +
+                    "Confirme se as regras foram publicadas e se a conta " +
+                    "administradora está conectada.";
+            }else if(codigo.includes("unauthenticated")){
+                mensagem =
+                    "A sessão do Firebase expirou. " +
+                    "Entre novamente na plataforma.";
+            }else if(codigo.includes("unavailable")){
+                mensagem =
+                    "O Firebase está indisponível ou sem conexão. " +
+                    "Verifique a internet e tente novamente.";
+            }else if(codigo.includes("failed-precondition")){
+                mensagem =
+                    "O Firestore ainda não está pronto para esta operação. " +
+                    "Atualize a página e tente novamente.";
+            }else{
+                mensagem +=
+                    " Código: " +
+                    (codigo || "não informado") +
+                    ". Detalhe: " +
+                    String(
+                        erro && erro.message
+                            ? erro.message
+                            : erro
+                    );
+            }
+
+            mostrarStatusPublicacaoV72(
+                mensagem,
+                "erro"
+            );
+
+            aviso(mensagem);
+
+        }finally{
+            if(botao){
+                botao.disabled = false;
+                botao.textContent =
+                    "📢 Publicar para os alunos";
+            }
+        }
+
         return false;
     };
+
+    function vincularBotaoPublicacaoV72(){
+        const formulario = document.getElementById(
+            "formNovidadeFarolV68"
+        );
+
+        const botao = document.getElementById(
+            "btnPublicarNovidadeFarolV68"
+        );
+
+        if(formulario && formulario.dataset.vinculadoV72 !== "true"){
+            formulario.dataset.vinculadoV72 = "true";
+
+            formulario.addEventListener(
+                "submit",
+                window.publicarNovidadeFarolV68
+            );
+        }
+
+        if(botao){
+            botao.type = "submit";
+        }
+    }
+
+    if(document.readyState === "loading"){
+        document.addEventListener(
+            "DOMContentLoaded",
+            vincularBotaoPublicacaoV72
+        );
+    }else{
+        vincularBotaoPublicacaoV72();
+    }
 
     window.carregarNovidadesAdminV68 = async function(){
         const area=document.getElementById("listaNovidadesAdminV68");
