@@ -3068,13 +3068,22 @@
         );
     }
 
+    function mostrarAvisoNovidadesV73(mensagem){
+        if(typeof window.mostrarToast === "function"){
+            window.mostrarToast(mensagem);
+            return;
+        }
+
+        window.alert(mensagem);
+    }
+
     function mostrarStatusPublicacaoV72(mensagem, tipo){
         const area = document.getElementById(
             "statusPublicacaoNovidadeV72"
         );
 
         if(!area){
-            aviso(mensagem);
+            mostrarAvisoNovidadesV73(mensagem);
             return;
         }
 
@@ -3232,7 +3241,7 @@
                     urgente,
                     ativa: true,
                     publicadoEm:
-                        firebase.firestore.FieldValue
+                        window.firebase.firestore.FieldValue
                             .serverTimestamp(),
                     criadoEmLocal: Date.now(),
                     criadoPor: usuario.uid,
@@ -3249,7 +3258,7 @@
                 "sucesso"
             );
 
-            aviso(
+            mostrarAvisoNovidadesV73(
                 "📢 Novidade publicada para os alunos."
             );
 
@@ -3307,7 +3316,7 @@
                 "erro"
             );
 
-            aviso(mensagem);
+            mostrarAvisoNovidadesV73(mensagem);
 
         }finally{
             if(botao){
