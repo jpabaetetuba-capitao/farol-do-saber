@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v49-2026-08-03";
+const CACHE_VERSION = "farol-v50-2026-08-03";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 

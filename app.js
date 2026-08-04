@@ -34307,9 +34307,9 @@ window.selecionarConcursoArenaV40 = function(concurso){
                 timerAvancoTodosResponderamV49 = null;
 
                 if(
-                    typeof avancarQuestaoArenaFarol === "function"
+                    typeof window.avancarQuestaoArenaFarol === "function"
                 ){
-                    avancarQuestaoArenaFarol(true);
+                    window.avancarQuestaoArenaFarol(true);
                 }
             }, 2000);
     }
