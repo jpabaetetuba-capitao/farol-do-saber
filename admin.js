@@ -3051,9 +3051,13 @@
     }
 
     window.publicarNovidadeFarolV68 = async function(event){
-        event.preventDefault();
-        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()) return;
-        if(!dbFarol){ aviso("Banco de dados indisponível."); return; }
+        if(event && typeof event.preventDefault === "function"){ event.preventDefault(); }
+        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()){
+            aviso("Sua confirmação de administrador expirou. Confirme novamente a senha do administrador e tente publicar.");
+            if(typeof window.abrirPainelAcessosFarol === "function"){ window.abrirPainelAcessosFarol(); }
+            return false;
+        }
+        if(!dbFarol){ aviso("Banco de dados indisponível. Atualize a página e tente novamente."); return false; }
         const titulo=(document.getElementById("tituloNovidadeFarolV68")?.value||"").trim();
         const resumo=(document.getElementById("resumoNovidadeFarolV68")?.value||"").trim();
         const texto=(document.getElementById("textoNovidadeFarolV68")?.value||"").trim();
@@ -3075,10 +3079,22 @@
             await window.carregarNovidadesAdminV68();
         }catch(erro){
             console.error("Erro ao publicar novidade:", erro);
-            aviso("Não foi possível publicar. Confira as regras do Firestore.");
+            const codigo=String(erro&&erro.code?erro.code:"");
+            let mensagem="Não foi possível publicar a atualização.";
+            if(codigo.includes("permission-denied")||codigo.includes("PERMISSION_DENIED")){
+                mensagem+=" O Firestore recusou a gravação. Publique as regras da v68/v71 e confirme que você entrou com a conta administradora jp@gmail.com.";
+            }else if(codigo.includes("unauthenticated")){
+                mensagem+=" Sua sessão de login expirou. Entre novamente na plataforma.";
+            }else if(codigo.includes("unavailable")){
+                mensagem+=" Verifique sua conexão com a internet e tente novamente.";
+            }else{
+                mensagem+=" Código: "+(codigo||"erro desconhecido")+". Consulte o console do navegador para mais detalhes.";
+            }
+            aviso(mensagem);
         }finally{
             if(btn){ btn.disabled=false; btn.textContent="📢 Publicar para os alunos"; }
         }
+        return false;
     };
 
     window.carregarNovidadesAdminV68 = async function(){
