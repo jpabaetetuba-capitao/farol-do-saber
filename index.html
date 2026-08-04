@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=88-historico-arenas-admin">
+    <link rel="stylesheet" href="style.css?v=89-exclusao-historicos">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -5190,11 +5190,20 @@ Li e revisei o mapa mental.
                     </p>
                 </div>
 
-                <button
-                    type="button"
-                    onclick="carregarHistoricoArenasAdminFarol(true)">
-                    🔄 Atualizar
-                </button>
+                <div class="acoes-topo-historico-v52">
+                    <button
+                        type="button"
+                        onclick="carregarHistoricoArenasAdminFarol(true)">
+                        🔄 Atualizar
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn-perigo-admin-v52"
+                        onclick="limparHistoricoArenasAdminFarol()">
+                        🧹 Limpar histórico
+                    </button>
+                </div>
             </div>
 
             <div class="filtros-historico-arenas-v51">
@@ -5310,11 +5319,20 @@ Li e revisei o mapa mental.
                         <p id="subtituloHistoricoAlunoFarol"></p>
                     </div>
 
-                    <button
-                        type="button"
-                        onclick="fecharHistoricoAlunoFarol()">
-                        ✖ Fechar
-                    </button>
+                    <div class="acoes-topo-historico-v52">
+                        <button
+                            type="button"
+                            class="btn-perigo-admin-v52"
+                            onclick="limparHistoricoAlunoFarol()">
+                            🧹 Limpar histórico
+                        </button>
+
+                        <button
+                            type="button"
+                            onclick="fecharHistoricoAlunoFarol()">
+                            ✖ Fechar
+                        </button>
+                    </div>
                 </div>
 
                 <div class="aviso-historico-admin">
@@ -5349,7 +5367,7 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
 <script src="app.js?v=91-historico-arenas-admin"></script>
-<script src="admin.js?v=43-historico-arenas-admin"></script>
+<script src="admin.js?v=44-exclusao-historicos"></script>
 
 
 <script src="./pwa.js?v=17-atualizacao-segura"></script>

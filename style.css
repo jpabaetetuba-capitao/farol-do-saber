@@ -14139,3 +14139,87 @@ progress{
         grid-column:2;
     }
 }
+
+
+/* ==========================================================
+   FAROL V52 — EXCLUSÃO DOS HISTÓRICOS ADMINISTRATIVOS
+========================================================== */
+
+.acoes-topo-historico-v52{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:8px;
+}
+
+.acoes-topo-historico-v52 button{
+    margin:0 !important;
+}
+
+.btn-perigo-admin-v52,
+.btn-excluir-arena-admin-v52,
+.btn-excluir-registro-admin-v52{
+    background:#b83232 !important;
+    color:#ffffff !important;
+}
+
+.btn-perigo-admin-v52:hover,
+.btn-excluir-arena-admin-v52:hover,
+.btn-excluir-registro-admin-v52:hover{
+    background:#922828 !important;
+}
+
+.acoes-item-historico-arena-v52{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:7px;
+}
+
+.btn-excluir-arena-admin-v52,
+.btn-excluir-registro-admin-v52{
+    min-height:34px;
+    padding:7px 10px !important;
+    margin:0 !important;
+    border-radius:9px !important;
+    font-size:11px;
+    font-weight:900;
+}
+
+.cabecalho-item-historico > div{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.cabecalho-item-historico{
+    align-items:flex-start;
+    gap:10px;
+}
+
+@media(max-width:640px){
+
+    .acoes-topo-historico-v52{
+        width:100%;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+
+    .acoes-topo-historico-v52 button{
+        width:100%;
+    }
+
+    .cabecalho-historico-arena-v51{
+        align-items:flex-start;
+    }
+
+    .acoes-item-historico-arena-v52{
+        min-width:88px;
+    }
+
+    .cabecalho-item-historico{
+        display:grid;
+        grid-template-columns:minmax(0,1fr) auto;
+    }
+}

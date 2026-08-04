@@ -1502,6 +1502,9 @@
 
     const COLECAO_HISTORICO_ADMIN = "historicoAtividades";
     let historicoAlunoAtualFarol = [];
+    let historicoAlunoUidAtualFarol = "";
+    let historicoAlunoNomeAtualFarol = "";
+    let historicoAlunoEmailAtualFarol = "";
 
     function dbHistoricoAdminFarol(){
         return (
@@ -1622,8 +1625,17 @@
 
                     <div class="conteudo-historico-admin">
                         <div class="cabecalho-item-historico">
-                            <strong>${evento}</strong>
-                            <time>${formatarDataHistoricoFarol(item.criadoEm)}</time>
+                            <div>
+                                <strong>${evento}</strong>
+                                <time>${formatarDataHistoricoFarol(item.criadoEm)}</time>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="btn-excluir-registro-admin-v52"
+                                onclick="excluirRegistroHistoricoAlunoFarol('${textoSeguroHistoricoFarol(item.id)}')">
+                                🗑️ Excluir
+                            </button>
                         </div>
 
                         <div class="detalhes-item-historico">
@@ -1652,6 +1664,10 @@
         if(!banco || !area || !painel){
             return;
         }
+
+        historicoAlunoUidAtualFarol = String(uid || "");
+        historicoAlunoNomeAtualFarol = String(nome || "Aluno");
+        historicoAlunoEmailAtualFarol = String(email || "");
 
         painel.style.display = "block";
         area.innerHTML = `
@@ -1710,12 +1726,161 @@
         }
     };
 
+
+    async function excluirDocumentosEmLotesHistoricoV52(referencias){
+        const banco = dbHistoricoAdminFarol();
+
+        if(!banco || !referencias.length){
+            return;
+        }
+
+        for(let inicio = 0; inicio < referencias.length; inicio += 400){
+            const lote = banco.batch();
+
+            referencias
+                .slice(inicio, inicio + 400)
+                .forEach(referencia => lote.delete(referencia));
+
+            await lote.commit();
+        }
+    }
+
+    window.excluirRegistroHistoricoAlunoFarol =
+        async function(documentoId){
+
+        if(
+            !window.sessaoAdminFarolConfirmada ||
+            !window.sessaoAdminFarolConfirmada()
+        ){
+            return;
+        }
+
+        const item = historicoAlunoAtualFarol.find(
+            registro => registro.id === documentoId
+        );
+
+        if(!item){
+            return;
+        }
+
+        const confirmou = confirm(
+            "Excluir este registro do histórico de visualização?\n\n" +
+            "Esta ação não poderá ser desfeita."
+        );
+
+        if(!confirmou){
+            return;
+        }
+
+        const banco = dbHistoricoAdminFarol();
+
+        try{
+            await banco
+                .collection(COLECAO_HISTORICO_ADMIN)
+                .doc(documentoId)
+                .delete();
+
+            historicoAlunoAtualFarol =
+                historicoAlunoAtualFarol.filter(
+                    registro => registro.id !== documentoId
+                );
+
+            renderizarHistoricoAlunoFarol(
+                historicoAlunoAtualFarol,
+                historicoAlunoNomeAtualFarol,
+                historicoAlunoEmailAtualFarol
+            );
+
+            if(typeof window.mostrarToast === "function"){
+                window.mostrarToast(
+                    "Registro do histórico excluído."
+                );
+            }
+
+        }catch(erro){
+            console.error(
+                "Erro ao excluir registro do histórico:",
+                erro
+            );
+
+            alert(
+                "Não foi possível excluir o registro. " +
+                "Verifique as regras do Firestore."
+            );
+        }
+    };
+
+    window.limparHistoricoAlunoFarol = async function(){
+
+        if(
+            !window.sessaoAdminFarolConfirmada ||
+            !window.sessaoAdminFarolConfirmada() ||
+            !historicoAlunoUidAtualFarol
+        ){
+            return;
+        }
+
+        const confirmou = confirm(
+            "ATENÇÃO!\n\n" +
+            "Deseja apagar todo o histórico de visualização de " +
+            historicoAlunoNomeAtualFarol +
+            "?\n\nEsta ação não poderá ser desfeita."
+        );
+
+        if(!confirmou){
+            return;
+        }
+
+        const banco = dbHistoricoAdminFarol();
+
+        try{
+            const snapshot = await banco
+                .collection(COLECAO_HISTORICO_ADMIN)
+                .where("uid", "==", historicoAlunoUidAtualFarol)
+                .get();
+
+            await excluirDocumentosEmLotesHistoricoV52(
+                snapshot.docs.map(doc => doc.ref)
+            );
+
+            historicoAlunoAtualFarol = [];
+
+            renderizarHistoricoAlunoFarol(
+                [],
+                historicoAlunoNomeAtualFarol,
+                historicoAlunoEmailAtualFarol
+            );
+
+            if(typeof window.mostrarToast === "function"){
+                window.mostrarToast(
+                    "Histórico de visualização limpo."
+                );
+            }
+
+        }catch(erro){
+            console.error(
+                "Erro ao limpar histórico do aluno:",
+                erro
+            );
+
+            alert(
+                "Não foi possível limpar o histórico. " +
+                "Verifique as regras do Firestore."
+            );
+        }
+    };
+
     window.fecharHistoricoAlunoFarol = function(){
         const painel = document.getElementById("painelHistoricoAlunoFarol");
 
         if(painel){
             painel.style.display = "none";
         }
+
+        historicoAlunoUidAtualFarol = "";
+        historicoAlunoNomeAtualFarol = "";
+        historicoAlunoEmailAtualFarol = "";
+        historicoAlunoAtualFarol = [];
     };
 })();
 
@@ -1882,12 +2047,21 @@
                             <h4>${textoSeguroArenaAdminFarol(arena.codigo || arena.id)}</h4>
                         </div>
 
-                        <time>
-                            ${formatarDataArenaAdminFarol(
-                                arena.finalizadaEm ||
-                                arena.registradoEm
-                            )}
-                        </time>
+                        <div class="acoes-item-historico-arena-v52">
+                            <time>
+                                ${formatarDataArenaAdminFarol(
+                                    arena.finalizadaEm ||
+                                    arena.registradoEm
+                                )}
+                            </time>
+
+                            <button
+                                type="button"
+                                class="btn-excluir-arena-admin-v52"
+                                onclick="excluirArenaHistoricoAdminFarol('${textoSeguroArenaAdminFarol(arena.id || arena.codigo)}')">
+                                🗑️ Excluir
+                            </button>
+                        </div>
                     </div>
 
                     <div class="grade-resumo-arena-v51">
@@ -1965,6 +2139,142 @@
             `;
         }).join("");
     }
+
+
+    async function excluirReferenciasArenaEmLotesV52(referencias){
+        const banco = bancoHistoricoArenasFarol();
+
+        for(let inicio = 0; inicio < referencias.length; inicio += 400){
+            const lote = banco.batch();
+
+            referencias
+                .slice(inicio, inicio + 400)
+                .forEach(referencia => lote.delete(referencia));
+
+            await lote.commit();
+        }
+    }
+
+    window.excluirArenaHistoricoAdminFarol =
+        async function(documentoId){
+
+        if(
+            !window.sessaoAdminFarolConfirmada ||
+            !window.sessaoAdminFarolConfirmada()
+        ){
+            return;
+        }
+
+        const arena = historicoArenasCacheFarol.find(
+            item =>
+                String(item.id || item.codigo) ===
+                String(documentoId)
+        );
+
+        if(!arena){
+            return;
+        }
+
+        const confirmou = confirm(
+            "Excluir a Arena " +
+            (arena.codigo || documentoId) +
+            " do histórico?\n\n" +
+            "Esta ação não poderá ser desfeita."
+        );
+
+        if(!confirmou){
+            return;
+        }
+
+        const banco = bancoHistoricoArenasFarol();
+
+        try{
+            await banco
+                .collection("historicoArenas")
+                .doc(String(documentoId))
+                .delete();
+
+            historicoArenasCacheFarol =
+                historicoArenasCacheFarol.filter(
+                    item =>
+                        String(item.id || item.codigo) !==
+                        String(documentoId)
+                );
+
+            window.filtrarHistoricoArenasAdminFarol();
+
+            if(typeof window.mostrarToast === "function"){
+                window.mostrarToast(
+                    "Arena excluída do histórico."
+                );
+            }
+
+        }catch(erro){
+            console.error(
+                "Erro ao excluir Arena do histórico:",
+                erro
+            );
+
+            alert(
+                "Não foi possível excluir a Arena. " +
+                "Verifique as regras do Firestore."
+            );
+        }
+    };
+
+    window.limparHistoricoArenasAdminFarol =
+        async function(){
+
+        if(
+            !window.sessaoAdminFarolConfirmada ||
+            !window.sessaoAdminFarolConfirmada()
+        ){
+            return;
+        }
+
+        const confirmou = confirm(
+            "ATENÇÃO!\n\n" +
+            "Deseja apagar TODO o histórico de Arenas?\n\n" +
+            "Esta ação não poderá ser desfeita."
+        );
+
+        if(!confirmou){
+            return;
+        }
+
+        const banco = bancoHistoricoArenasFarol();
+
+        try{
+            const snapshot = await banco
+                .collection("historicoArenas")
+                .get();
+
+            await excluirReferenciasArenaEmLotesV52(
+                snapshot.docs.map(doc => doc.ref)
+            );
+
+            historicoArenasCacheFarol = [];
+            historicoArenasCarregadoFarol = true;
+            window.filtrarHistoricoArenasAdminFarol();
+
+            if(typeof window.mostrarToast === "function"){
+                window.mostrarToast(
+                    "Histórico de Arenas limpo."
+                );
+            }
+
+        }catch(erro){
+            console.error(
+                "Erro ao limpar histórico das Arenas:",
+                erro
+            );
+
+            alert(
+                "Não foi possível limpar o histórico. " +
+                "Verifique as regras do Firestore."
+            );
+        }
+    };
 
     window.filtrarHistoricoArenasAdminFarol = function(){
         const busca = normalizarArenaAdminFarol(
