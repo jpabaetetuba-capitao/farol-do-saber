@@ -329,7 +329,7 @@
 
 <button
     id="btnPainelAcessosAdmin"
-    style="display:inline-block;"
+    style="display:none;"
     onclick="abrirPainelAcessosFarol()">
     🔐 Área Administrativa
 </button>
@@ -4428,7 +4428,11 @@ Li e revisei o mapa mental.
 
         <div id="perfilContaV25" class="subtela-perfil-v25">
             <div class="menu-fluxo-perfil-v25">
-                <button type="button" onclick="abrirPainelAcessosFarol()">
+                <button
+                    id="btnPainelAcessosAdminPerfil"
+                    type="button"
+                    style="display:none;"
+                    onclick="abrirPainelAcessosFarol()">
                     <span>🔐</span>
                     <div>
                         <strong>Área administrativa</strong>
@@ -4776,7 +4780,7 @@ Li e revisei o mapa mental.
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 
-<script src="firebase.js?v=57-duelos-pwa-corrigidos"></script>
+<script src="firebase.js?v=75-admin-claim"></script>
 
 <!-- SISTEMA -->
 
@@ -5567,8 +5571,8 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=105-cabecalho-mobile-alinhado"></script>
-<script src="admin.js?v=74-lista-novidades-admin"></script>
+<script src="app.js?v=106-seguranca-etapa1"></script>
+<script src="admin.js?v=75-seguranca-etapa1"></script>
 
 
 <script src="./pwa.js?v=15-atualizacao-segura"></script>

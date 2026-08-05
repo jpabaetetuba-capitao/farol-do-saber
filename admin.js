@@ -8,7 +8,6 @@
 (function(){
     "use strict";
 
-    const EMAIL_ADMIN_FAROL = "jp@gmail.com";
     const DURACAO_SESSAO_ADMIN_MS = 15 * 60 * 1000;
 
     const firebaseFarol = window.farolFirebase || {};
@@ -111,15 +110,15 @@
             : null;
     }
 
-    function emailAtual(){
-        const usuario = usuarioAtual();
-        return String(usuario && usuario.email ? usuario.email : "")
-            .trim()
-            .toLowerCase();
-    }
-
     function ehAdministrador(){
-        return emailAtual() === EMAIL_ADMIN_FAROL;
+        return Boolean(
+            (
+                typeof window.farolTemPermissaoAdmin === "function" &&
+                window.farolTemPermissaoAdmin()
+            )
+            ||
+            window.farolUsuarioEhAdmin === true
+        );
     }
 
     function sessaoConfirmada(){
@@ -1027,21 +1026,57 @@
         }
     };
 
-    if(authFarol && typeof authFarol.onAuthStateChanged === "function"){
-        authFarol.onAuthStateChanged(() => {
-            limparConfirmacao();
-            const botao = document.getElementById("btnPainelAcessosAdmin");
+    function atualizarBotoesAdminV75(mostrar){
+        [
+            "btnPainelAcessosAdmin",
+            "btnPainelAcessosAdminPerfil"
+        ].forEach(id => {
+            const botao = document.getElementById(id);
+
             if(botao){
-                botao.style.display = "inline-block";
+                botao.style.display = mostrar
+                    ? "inline-flex"
+                    : "none";
             }
         });
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const botao = document.getElementById("btnPainelAcessosAdmin");
-        if(botao){
-            botao.style.display = "inline-block";
+    if(authFarol && typeof authFarol.onAuthStateChanged === "function"){
+        authFarol.onAuthStateChanged(async user => {
+            limparConfirmacao();
+
+            let permitido = false;
+
+            if(
+                user &&
+                typeof window.verificarPermissaoAdminFarol ===
+                "function"
+            ){
+                permitido =
+                    await window.verificarPermissaoAdminFarol(true);
+            }
+
+            atualizarBotoesAdminV75(permitido);
+        });
+    }
+
+    window.addEventListener(
+        "farol:permissao-admin",
+        event => {
+            atualizarBotoesAdminV75(
+                Boolean(
+                    event &&
+                    event.detail &&
+                    event.detail.admin === true
+                )
+            );
         }
+    );
+
+    document.addEventListener("DOMContentLoaded", () => {
+        atualizarBotoesAdminV75(
+            ehAdministrador()
+        );
     });
 })();
 
@@ -1314,11 +1349,8 @@
                     <div class="acoes-card-online-admin">
                         <button
                             type="button"
-                            onclick="abrirHistoricoAlunoFarol(
-                                '${item.uid}',
-                                '${String(item.nome || "Aluno").replaceAll("'", "\'")}',
-                                '${String(item.email || "").replaceAll("'", "\'")}'
-                            )">
+                            class="btn-historico-aluno-v75"
+                            data-uid="${window.textoSeguroAdminFarol(item.uid)}">
                             📚 Ver histórico
                         </button>
                     </div>
@@ -1362,6 +1394,31 @@
                 </article>
             `;
         }).join("");
+
+        area.querySelectorAll(
+            ".btn-historico-aluno-v75"
+        ).forEach(botao => {
+            botao.addEventListener("click", () => {
+                const uid = String(
+                    botao.dataset.uid || ""
+                );
+
+                const aluno =
+                    alunosPresencaCacheFarol.find(
+                        item => String(item.uid || "") === uid
+                    );
+
+                if(!aluno){
+                    return;
+                }
+
+                window.abrirHistoricoAlunoFarol(
+                    String(aluno.uid || ""),
+                    String(aluno.nome || "Aluno"),
+                    String(aluno.email || "")
+                );
+            });
+        });
     }
 
     window.filtrarAlunosOnlineFarol =
@@ -3148,16 +3205,14 @@
                 .trim()
                 .toLowerCase();
 
-            const uidAdmin =
-                "EEIvdSpr4uPEiyvrDkGWgMBoXAH2";
+            const permitido =
+                typeof window.verificarPermissaoAdminFarol === "function"
+                    ? await window.verificarPermissaoAdminFarol(true)
+                    : ehAdministrador();
 
-            if(
-                usuario.uid !== uidAdmin &&
-                email !== "jp@gmail.com"
-            ){
+            if(!permitido){
                 mostrarStatusPublicacaoV72(
-                    "A conta conectada não possui permissão administrativa. " +
-                    "Conta atual: " + (email || usuario.uid),
+                    "A conta conectada não possui a permissão administrativa.",
                     "erro"
                 );
                 return false;

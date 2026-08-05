@@ -23,6 +23,71 @@ const db = firebase.firestore();
 // Referência pública controlada para os módulos adicionais do Farol.
 // As permissões continuam sendo verificadas pelas regras do Firestore.
 window.farolFirebase = { auth, db };
+
+// ==========================================================
+// FAROL V75 — PERMISSÃO ADMINISTRATIVA POR CUSTOM CLAIM
+// ==========================================================
+
+window.farolUsuarioEhAdmin = false;
+
+window.farolTemPermissaoAdmin = function(){
+    return window.farolUsuarioEhAdmin === true;
+};
+
+window.atualizarBotoesAdminFarol = function(){
+    const mostrar = window.farolTemPermissaoAdmin();
+
+    [
+        "btnPainelAcessosAdmin",
+        "btnPainelAcessosAdminPerfil"
+    ].forEach(id => {
+        const botao = document.getElementById(id);
+
+        if(botao){
+            botao.style.display = mostrar
+                ? "inline-flex"
+                : "none";
+        }
+    });
+};
+
+window.verificarPermissaoAdminFarol = async function(forcarAtualizacao){
+    const usuario = auth.currentUser;
+    let permitido = false;
+
+    if(usuario){
+        try{
+            const token = await usuario.getIdTokenResult(
+                Boolean(forcarAtualizacao)
+            );
+
+            permitido = Boolean(
+                token &&
+                token.claims &&
+                token.claims.admin === true
+            );
+        }catch(erro){
+            console.error(
+                "Não foi possível verificar a permissão administrativa.",
+                erro
+            );
+        }
+    }
+
+    window.farolUsuarioEhAdmin = permitido;
+    window.atualizarBotoesAdminFarol();
+
+    window.dispatchEvent(
+        new CustomEvent("farol:permissao-admin", {
+            detail: {
+                admin: permitido
+            }
+        })
+    );
+
+    return permitido;
+};
+
 window.farolUsuarioAtualFirebase = null;
 
 function nomeEhGenericoFirebaseFarol(nome){
@@ -75,13 +140,6 @@ function escolherNomeFirebaseFarol(dados, user){
         }
     }
 
-    if(
-        !nomeCompleto &&
-        (email === "jp@gmail.com" || email === "farolsosaber@gmail.com")
-    ){
-        nomeCompleto = "João Paulo Ferreira da Silva";
-    }
-
     let primeiroNome = primeiroNomeFirebaseFarol(nomeCompleto);
 
     if(nomeEhGenericoFirebaseFarol(primeiroNome)){
@@ -113,6 +171,8 @@ auth.onAuthStateChanged(async (user) => {
         : null;
 
     if(user){
+
+        await window.verificarPermissaoAdminFarol(true);
 
         const telaLoginFarol = document.getElementById("login");
         if(telaLoginFarol){
@@ -207,6 +267,17 @@ campoNome.innerHTML =
         }
 
         
+    }else{
+        window.farolUsuarioEhAdmin = false;
+        window.atualizarBotoesAdminFarol();
+
+        window.dispatchEvent(
+            new CustomEvent("farol:permissao-admin", {
+                detail: {
+                    admin: false
+                }
+            })
+        );
     }
 
 });

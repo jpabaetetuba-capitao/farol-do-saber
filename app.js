@@ -1336,19 +1336,6 @@ function obterNomeCompletoValidoFarol(dadosFirebase){
 
     }
 
-    const emailAtual = (
-        usuarioEmail ||
-        (auth && auth.currentUser ? auth.currentUser.email : "") ||
-        ""
-    ).toLowerCase();
-
-    if(
-        emailAtual === "jp@gmail.com" ||
-        emailAtual === "farolsosaber@gmail.com"
-    ){
-        return "João Paulo Ferreira da Silva";
-    }
-
     return "";
 
 }
@@ -1536,19 +1523,38 @@ let dueloAcertos = 0;
 let dueloErros = 0;
 let dueloRespostas = [];
 
-const administradores = [
-
-    "jp@gmail.com"
-
-];
-
 function ehAdmin(){
 
-    return administradores.includes(
-        usuarioEmail
+    return Boolean(
+        (
+            typeof window.farolTemPermissaoAdmin === "function" &&
+            window.farolTemPermissaoAdmin()
+        )
+        ||
+        window.farolUsuarioEhAdmin === true
+        ||
+        usuarioEhAdmin === true
     );
 
 }
+
+window.addEventListener(
+    "farol:permissao-admin",
+    event => {
+        usuarioEhAdmin = Boolean(
+            event &&
+            event.detail &&
+            event.detail.admin === true
+        );
+
+        if(
+            typeof window.atualizarVisibilidadePainelAcessosFarol ===
+            "function"
+        ){
+            window.atualizarVisibilidadePainelAcessosFarol();
+        }
+    }
+);
 
 // ==========================
 // TEORIAS
@@ -10600,7 +10606,9 @@ async function entrar(){
     );
 
 usuarioEhAdmin =
-        doc.data().admin === true;
+        typeof window.verificarPermissaoAdminFarol === "function"
+            ? await window.verificarPermissaoAdminFarol(true)
+            : false;
 
     const dadosUsuario = doc.data() || {};
 
@@ -10958,6 +10966,8 @@ async function enviarMensagem(){
 
         autorEmail: usuarioEmail,
 
+        autorAdmin: ehAdmin(),
+
         avatarAtual: lojaFarol.avatarAtual || "👤",
 
         nomeAvatarAtual: lojaFarol.nomeAvatarAtual || "Estudante",
@@ -11043,9 +11053,7 @@ doc.id;
             ${nomeMensagem}
 
             ${
-                administradores.includes(
-                    msg.autorEmail
-                )
+                msg.autorAdmin === true
                 ? " 👑"
                 : ""
             }
@@ -23146,9 +23154,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
     }
 
     function ehAdministradorAcessosFarol(){
-        const email = emailAtualFarol();
-        return usuarioEhAdmin === true ||
-            administradores.map(item => String(item).toLowerCase()).includes(email);
+        return ehAdmin();
     }
 
     function obterConcursoAtualFarol(){
@@ -23314,10 +23320,20 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
     window.carregarAcessosConcursosFarol = carregarAcessosConcursosFarol;
 
     function atualizarVisibilidadePainelAcessosFarol(){
-        const botao = document.getElementById("btnPainelAcessosAdmin");
-        if(botao){
-            botao.style.display = ehAdministradorAcessosFarol() ? "inline-block" : "none";
-        }
+        const mostrar = ehAdministradorAcessosFarol();
+
+        [
+            "btnPainelAcessosAdmin",
+            "btnPainelAcessosAdminPerfil"
+        ].forEach(id => {
+            const botao = document.getElementById(id);
+
+            if(botao){
+                botao.style.display = mostrar
+                    ? "inline-flex"
+                    : "none";
+            }
+        });
     }
 
     window.atualizarVisibilidadePainelAcessosFarol = atualizarVisibilidadePainelAcessosFarol;
@@ -24038,12 +24054,16 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             localStorage.setItem("usuarioEmail", usuarioEmail);
 
             try{
-                const docUsuario = await db.collection("usuarios").doc(user.uid).get();
-                if(docUsuario.exists){
-                    usuarioEhAdmin = docUsuario.data().admin === true;
-                }
+                usuarioEhAdmin =
+                    typeof window.verificarPermissaoAdminFarol === "function"
+                        ? await window.verificarPermissaoAdminFarol(true)
+                        : false;
             }catch(erro){
-                console.log("Não foi possível confirmar o perfil administrativo.", erro);
+                usuarioEhAdmin = false;
+                console.log(
+                    "Não foi possível confirmar a permissão administrativa.",
+                    erro
+                );
             }
 
             atualizarVisibilidadePainelAcessosFarol();
