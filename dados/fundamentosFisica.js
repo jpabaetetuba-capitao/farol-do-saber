@@ -1,1621 +1,902 @@
 const fundamentosFisica = [
-
-{
-    pergunta:
-    `Em uma atividade experimental, os estudantes mediram comprimento, massa, tempo e temperatura. Considerando o conceito de grandeza física, assinale a alternativa correta.`,
-
-    alternativas: [
-        `Grandeza física é apenas aquilo que pode ser observado sem instrumentos de medição.`,
-        `Grandeza física corresponde somente a fenômenos que envolvem movimento acelerado.`,
-        `Grandeza física é qualquer opinião qualitativa sobre um fenômeno natural.`,
-        `Grandeza física é toda propriedade que pode ser medida e expressa por valor numérico e unidade adequada.`,
-        `Grandeza física existe apenas quando está associada diretamente à eletricidade.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Grandezas físicas são propriedades mensuráveis, como massa, tempo, comprimento, temperatura, força e energia.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Procure sempre valor numérico e unidade quando o enunciado falar em grandeza física.`
-},
-
-{
-    pergunta:
-    `A diferença entre grandezas escalares e vetoriais está corretamente expressa em:`,
-
-    alternativas: [
-        `Grandezas escalares possuem direção e sentido; grandezas vetoriais possuem apenas valor numérico.`,
-        `Grandezas escalares exigem valor e unidade; grandezas vetoriais exigem valor, unidade, direção e sentido.`,
-        `Grandezas vetoriais são sempre menores que grandezas escalares quando medidas no Sistema Internacional.`,
-        `Grandezas escalares são usadas apenas em óptica, enquanto vetoriais aparecem apenas em termologia.`,
-        `Grandezas vetoriais não podem ser representadas em situações de força ou velocidade.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Escalares, como massa e temperatura, não precisam de direção e sentido. Vetoriais, como força e velocidade, precisam.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Força, velocidade e deslocamento costumam ser vetoriais; massa, tempo e temperatura costumam ser escalares.`
-},
-
-{
-    pergunta:
-    `Um passageiro sentado em um ônibus em movimento está em repouso em relação ao banco, mas em movimento em relação à rua. Essa situação demonstra que:`,
-
-    alternativas: [
-        `Repouso e movimento dependem do referencial adotado.`,
-        `Todo corpo em repouso permanece parado para qualquer observador possível.`,
-        `A trajetória de um corpo é sempre absoluta e independe do observador.`,
-        `O movimento só existe quando há aceleração diferente de zero.`,
-        `A velocidade de um corpo é sempre idêntica para todos os referenciais.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Repouso e movimento são conceitos relativos ao referencial escolhido.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Quando o enunciado comparar observadores, pense em referencial.`
-},
-
-{
-    pergunta:
-    `Um estudante caminha 300 m em 5 min, mantendo ritmo aproximadamente constante. A rapidez média desse estudante é:`,
-
-    alternativas: [
-        `1500 m/min.`,
-        `295 m/min.`,
-        `60 m/min.`,
-        `5 m/min.`,
-        `0,016 m/min.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Rapidez média é distância dividida pelo tempo: 300 m ÷ 5 min = 60 m/min.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Velocidade média e rapidez média envolvem relação entre espaço percorrido e tempo.`
-},
-
-{
-    pergunta:
-    `Um automóvel percorre 180 km em 3 h. Sua velocidade escalar média é:`,
-
-    alternativas: [
-        `540 km/h.`,
-        `183 km/h.`,
-        `177 km/h.`,
-        `20 km/h.`,
-        `60 km/h.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Velocidade escalar média = distância percorrida ÷ tempo: 180 ÷ 3 = 60 km/h.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Cuidado com distratores que somam ou subtraem os valores do enunciado.`
-},
-
-{
-    pergunta:
-    `Uma velocidade de 20 m/s corresponde, em km/h, a:`,
-
-    alternativas: [
-        `5,5 km/h.`,
-        `36 km/h.`,
-        `80 km/h.`,
-        `72 km/h.`,
-        `200 km/h.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Para converter m/s em km/h, multiplica-se por 3,6. Assim, 20 × 3,6 = 72 km/h.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `m/s para km/h: multiplique por 3,6. km/h para m/s: divida por 3,6.`
-},
-
-{
-    pergunta:
-    `Um corpo passa de 10 m/s para 30 m/s em 5 s. A aceleração média é:`,
-
-    alternativas: [
-        `2 m/s².`,
-        `4 m/s².`,
-        `8 m/s².`,
-        `20 m/s².`,
-        `40 m/s².`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Aceleração média = variação da velocidade ÷ tempo. Logo, (30 - 10) ÷ 5 = 4 m/s².`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Aceleração mede variação da velocidade no tempo.`
-},
-
-{
-    pergunta:
-    `Sobre aceleração, assinale a alternativa correta.`,
-
-    alternativas: [
-        `Um corpo pode estar acelerado quando sua velocidade aumenta, diminui ou muda de direção.`,
-        `Um corpo só possui aceleração quando está aumentando a velocidade escalar.`,
-        `Um corpo em trajetória curva nunca possui aceleração se mantiver o mesmo valor de velocidade.`,
-        `A aceleração é sempre medida em joule, pois depende da energia do corpo.`,
-        `A aceleração indica apenas a distância total percorrida por unidade de tempo.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Aceleração é variação da velocidade; como velocidade é vetorial, mudança de direção também caracteriza aceleração.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Não associe aceleração apenas a aumento de velocidade.`
-},
-
-{
-    pergunta:
-    `A Primeira Lei de Newton, conhecida como princípio da inércia, afirma que:`,
-
-    alternativas: [
-        `Todo corpo em movimento precisa de força resultante constante no sentido do movimento.`,
-        `A força de ação sempre atua no mesmo corpo que a força de reação.`,
-        `A aceleração de um corpo independe da força resultante aplicada sobre ele.`,
-        `A massa de um corpo desaparece quando ele entra em movimento uniforme.`,
-        `Um corpo tende a manter seu estado de repouso ou movimento retilíneo uniforme se a força resultante for nula.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `A inércia é a tendência de manter o estado de repouso ou movimento uniforme quando a força resultante é nula.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Inércia costuma aparecer em freadas, arrancadas e permanência do movimento.`
-},
-
-{
-    pergunta:
-    `A relação entre força resultante, massa e aceleração é expressa pela Segunda Lei de Newton. Assim, para uma mesma força resultante:`,
-
-    alternativas: [
-        `Quanto maior a massa, maior necessariamente será a aceleração produzida.`,
-        `A massa não interfere na aceleração quando a força resultante é constante.`,
-        `Quanto maior a massa, menor tende a ser a aceleração produzida.`,
-        `A aceleração será sempre nula, mesmo com força resultante diferente de zero.`,
-        `A força resultante é medida em joule e não se relaciona à aceleração.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Pela relação F = m·a, mantendo a força constante, massa e aceleração são inversamente relacionadas.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `F = m·a é uma relação central em mecânica.`
-},
-
-{
-    pergunta:
-    `A Terceira Lei de Newton é corretamente interpretada quando se afirma que:`,
-
-    alternativas: [
-        `Forças de ação e reação anulam-se sempre porque atuam no mesmo corpo.`,
-        `A força de ação é sempre maior que a reação quando há movimento acelerado.`,
-        `A reação só ocorre depois que a ação termina completamente.`,
-        `Forças de ação e reação têm mesma intensidade, mesma direção, sentidos opostos e atuam em corpos diferentes.`,
-        `A ação ocorre em corpos sólidos, enquanto a reação ocorre apenas em líquidos.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Ação e reação formam par de forças em corpos diferentes, por isso não se anulam no mesmo corpo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Pegadinha comum: ação e reação não atuam no mesmo corpo.`
-},
-
-{
-    pergunta:
-    `Uma pessoa empurra uma parede e sente a parede empurrá-la de volta. Esse exemplo ilustra:`,
-
-    alternativas: [
-        `A Primeira Lei de Newton, pois a parede deixa de possuir inércia.`,
-        `A conservação da energia térmica, pois há transferência de calor.`,
-        `A refração da força, pois a parede muda o sentido da velocidade.`,
-        `A indução magnética, pois o contato gera corrente elétrica.`,
-        `A Terceira Lei de Newton, pois há forças simultâneas entre corpos diferentes.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `O par de forças entre pessoa e parede representa ação e reação.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Interações por contato também geram pares ação-reação.`
-},
-
-{
-    pergunta:
-    `A diferença correta entre massa e peso é:`,
-
-    alternativas: [
-        `Massa é força gravitacional; peso é quantidade de matéria de um corpo.`,
-        `Massa muda com a gravidade; peso permanece invariável em qualquer astro.`,
-        `Massa é quantidade de matéria; peso é força gravitacional exercida sobre a massa.`,
-        `Massa e peso são sinônimos, pois ambos são medidos em newton.`,
-        `Peso é energia armazenada, enquanto massa é potência consumida.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Massa mede quantidade de matéria e é expressa em kg. Peso é força e é expresso em newton.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Massa em kg; peso em N.`
-},
-
-{
-    pergunta:
-    `Um corpo de massa 8 kg está em local onde g = 10 m/s². Seu peso aproximado é:`,
-
-    alternativas: [
-        `80 N.`,
-        `8 N.`,
-        `18 N.`,
-        `0,8 N.`,
-        `800 N.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Peso = massa × gravidade. Logo, P = 8 × 10 = 80 N.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Use P = m·g.`
-},
-
-{
-    pergunta:
-    `Em Física, trabalho mecânico ocorre quando:`,
-
-    alternativas: [
-        `Uma pessoa sente cansaço, ainda que não haja deslocamento do corpo.`,
-        `Uma força atua sobre um corpo e produz deslocamento na direção considerada.`,
-        `Um corpo permanece parado sob ação de forças equilibradas durante todo o tempo.`,
-        `A temperatura de um corpo aumenta sem qualquer interação mecânica.`,
-        `Uma onda se propaga no vácuo sem transportar energia.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Trabalho mecânico exige força e deslocamento associado à força.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Esforço cotidiano não é sempre trabalho físico no sentido mecânico.`
-},
-
-{
-    pergunta:
-    `Uma pessoa segura uma caixa parada no ar durante alguns segundos. Considerando apenas o trabalho mecânico da força aplicada sobre a caixa enquanto ela permanece parada:`,
-
-    alternativas: [
-        `Há trabalho máximo, pois a força aplicada é vertical e constante.`,
-        `O trabalho é sempre igual ao peso multiplicado pelo tempo.`,
-        `O trabalho independe de deslocamento e depende apenas do esforço muscular.`,
-        `Há trabalho elétrico, pois a caixa possui massa e energia potencial.`,
-        `Não há trabalho mecânico, pois não ocorre deslocamento da caixa.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Sem deslocamento, o trabalho mecânico da força sobre a caixa é nulo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Trabalho mecânico depende de deslocamento, não apenas de esforço.`
-},
-
-{
-    pergunta:
-    `A energia cinética de um corpo está associada:`,
-
-    alternativas: [
-        `À altura do corpo em relação a um nível de referência.`,
-        `Ao movimento do corpo.`,
-        `À deformação elástica de uma mola em repouso.`,
-        `À temperatura ambiente, independentemente do movimento.`,
-        `Ao número de prótons do material que compõe o corpo.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Energia cinética é energia relacionada ao movimento.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Cinética lembra movimento.`
-},
-
-{
-    pergunta:
-    `A energia potencial gravitacional aumenta quando:`,
-
-    alternativas: [
-        `A velocidade do corpo diminui obrigatoriamente até zero.`,
-        `A massa do corpo desaparece por transformação em calor.`,
-        `A altura do corpo em relação a um nível de referência aumenta.`,
-        `O corpo passa de sólido para líquido sem mudança de posição.`,
-        `A frequência sonora produzida pelo corpo diminui.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Energia potencial gravitacional depende de massa, gravidade e altura.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Potencial gravitacional está ligada à altura.`
-},
-
-{
-    pergunta:
-    `Em uma montanha-russa ideal, desprezando perdas por atrito, durante a descida ocorre principalmente:`,
-
-    alternativas: [
-        `Transformação de energia cinética em energia nuclear sem conservação.`,
-        `Criação de energia mecânica a partir do repouso absoluto.`,
-        `Eliminação da massa do carrinho por aumento da velocidade.`,
-        `Transformação de energia potencial gravitacional em energia cinética.`,
-        `Conversão de energia sonora em carga elétrica estática.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Na descida, a altura diminui e a velocidade aumenta, transformando energia potencial em cinética.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Montanha-russa é exemplo clássico de conversão entre energia potencial e cinética.`
-},
-
-{
-    pergunta:
-    `Potência, em Física, mede:`,
-
-    alternativas: [
-        `A rapidez com que energia é transformada ou trabalho é realizado.`,
-        `A quantidade total de matéria presente em um corpo.`,
-        `A força gravitacional exercida pela Terra sobre um corpo.`,
-        `A capacidade de um material refletir a luz incidente.`,
-        `A oposição à passagem da corrente elétrica em qualquer circuito.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Potência é energia por unidade de tempo ou trabalho por unidade de tempo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Potência está ligada à rapidez da transformação energética.`
-},
-
-{
-    pergunta:
-    `A diferença correta entre calor e temperatura é:`,
-
-    alternativas: [
-        `Calor mede agitação térmica; temperatura é energia sempre armazenada no corpo.`,
-        `Calor e temperatura são sinônimos e possuem sempre a mesma unidade.`,
-        `Temperatura mede agitação térmica; calor é energia em trânsito por diferença de temperatura.`,
-        `Temperatura é transferência de massa; calor é medida de comprimento.`,
-        `Calor é força mecânica; temperatura é quantidade de movimento.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Temperatura indica estado térmico; calor é energia transferida entre corpos.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Calor não é algo contido no corpo; é energia em transferência.`
-},
-
-{
-    pergunta:
-    `Quando dois corpos a temperaturas diferentes entram em contato térmico, o calor flui espontaneamente:`,
-
-    alternativas: [
-        `Do corpo de maior temperatura para o de menor temperatura, até tendência ao equilíbrio térmico.`,
-        `Do corpo de menor massa para o de maior massa, independentemente da temperatura.`,
-        `Do corpo de menor temperatura para o de maior temperatura, sempre aumentando a diferença térmica.`,
-        `Apenas do corpo sólido para o corpo líquido, sem considerar temperatura.`,
-        `Apenas quando ambos possuem exatamente a mesma temperatura inicial.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `O fluxo espontâneo de calor ocorre do mais quente para o mais frio.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Fluxo de calor depende da diferença de temperatura.`
-},
-
-{
-    pergunta:
-    `A escala Kelvin é considerada absoluta porque:`,
-
-    alternativas: [
-        `Usa o símbolo °K e possui valores sempre negativos.`,
-        `Seu zero corresponde ao zero absoluto, limite teórico de mínima agitação térmica.`,
-        `É idêntica à escala Celsius em todos os pontos de medida.`,
-        `Foi criada apenas para medir temperatura corporal humana.`,
-        `Indica calor transferido, e não temperatura.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `A escala Kelvin parte do zero absoluto e não utiliza grau.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Kelvin é K, não °K.`
-},
-
-{
-    pergunta:
-    `Uma colher metálica aquece quando fica em contato com alimento quente. O processo predominante de transferência de calor é:`,
-
-    alternativas: [
-        `Convecção.`,
-        `Radiação.`,
-        `Refração.`,
-        `Indução elétrica.`,
-        `Condução.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Condução ocorre por contato direto, principalmente em sólidos.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Contato direto em sólido geralmente indica condução.`
-},
-
-{
-    pergunta:
-    `A circulação de ar quente subindo e ar frio descendo em um ambiente caracteriza:`,
-
-    alternativas: [
-        `Condução, pois ocorre apenas por contato entre sólidos metálicos.`,
-        `Radiação, pois depende exclusivamente de ondas eletromagnéticas no vácuo.`,
-        `Refração, pois envolve mudança de direção da luz entre meios.`,
-        `Convecção, pois envolve movimento de fluido em razão de diferenças de densidade.`,
-        `Polarização, pois ocorre apenas com ondas transversais luminosas.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Convecção ocorre em fluidos, como líquidos e gases, com movimento de massa.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Movimento de fluidos aquecidos indica convecção.`
-},
-
-{
-    pergunta:
-    `O calor do Sol chega à Terra principalmente por:`,
-
-    alternativas: [
-        `Condução, pois há contato direto entre Sol e Terra.`,
-        `Convecção, pois o vácuo transporta matéria aquecida até a atmosfera.`,
-        `Filtração, pois a luz passa por poros do espaço.`,
-        `Radiação, pois ondas eletromagnéticas podem se propagar no vácuo.`,
-        `Condensação, pois vapor solar forma calor na Terra.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `A radiação não precisa de meio material e pode ocorrer no vácuo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Sol aquecendo a Terra é exemplo clássico de radiação.`
-},
-
-{
-    pergunta:
-    `As juntas de dilatação em pontes e trilhos são importantes porque:`,
-
-    alternativas: [
-        `Impedem completamente qualquer transferência de calor por radiação.`,
-        `Transformam energia térmica em energia nuclear durante o verão.`,
-        `Aumentam a massa dos trilhos quando a temperatura diminui.`,
-        `Eliminam a gravidade que atua sobre a estrutura metálica.`,
-        `Permitem variações dimensionais causadas por mudanças de temperatura, evitando deformações e danos.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Materiais podem dilatar ao aquecer e contrair ao resfriar.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Dilatação térmica aparece em pontes, trilhos e tampas metálicas.`
-},
-
-{
-    pergunta:
-    `Uma onda pode ser definida como:`,
-
-    alternativas: [
-        `Uma partícula material que leva massa de um ponto a outro sem energia.`,
-        `Uma perturbação que transporta energia sem transportar matéria de forma permanente.`,
-        `Uma força que só existe em corpos em repouso absoluto.`,
-        `Uma corrente elétrica formada apenas por prótons livres.`,
-        `Uma reação química que ocorre em qualquer meio material.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Ondas transportam energia; as partículas do meio apenas oscilam em torno de posições de equilíbrio.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Onda transporta energia, não matéria permanentemente.`
-},
-
-{
-    pergunta:
-    `A frequência de uma onda corresponde:`,
-
-    alternativas: [
-        `À distância entre o ponto inicial e final de uma trajetória.`,
-        `À quantidade de matéria transportada pela onda.`,
-        `Ao número de oscilações realizadas por unidade de tempo.`,
-        `À força gravitacional exercida sobre a crista da onda.`,
-        `À temperatura necessária para formar uma vibração.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Frequência mede quantas oscilações ocorrem por unidade de tempo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Frequência é medida em hertz.`
-},
-
-{
-    pergunta:
-    `No mesmo meio, quando a frequência de uma onda aumenta, mantendo-se a velocidade de propagação constante:`,
-
-    alternativas: [
-        `O comprimento de onda diminui.`,
-        `O comprimento de onda aumenta sempre na mesma proporção.`,
-        `A onda deixa de transportar energia.`,
-        `A amplitude torna-se obrigatoriamente nula.`,
-        `A onda passa a ser uma partícula material.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Como v = λ·f, se v é constante e f aumenta, λ diminui.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Frequência e comprimento de onda são inversamente relacionados no mesmo meio.`
-},
-
-{
-    pergunta:
-    `A principal diferença entre ondas mecânicas e eletromagnéticas é que:`,
-
-    alternativas: [
-        `Ondas mecânicas precisam de meio material; ondas eletromagnéticas podem se propagar no vácuo.`,
-        `Ondas eletromagnéticas precisam de meio material; ondas mecânicas só existem no vácuo.`,
-        `Ondas mecânicas sempre são luminosas; ondas eletromagnéticas sempre são sonoras.`,
-        `Ondas mecânicas transportam matéria; ondas eletromagnéticas não transportam energia.`,
-        `Ondas eletromagnéticas possuem massa de repouso maior que a matéria comum.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Som é mecânico; luz é eletromagnética e pode se propagar no vácuo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Som não se propaga no vácuo; luz se propaga.`
-},
-
-{
-    pergunta:
-    `O som é classificado como onda:`,
-
-    alternativas: [
-        `Eletromagnética e transversal obrigatória.`,
-        `Química e ionizante.`,
-        `Mecânica e longitudinal.`,
-        `Gravitacional e estacionária apenas.`,
-        `Nuclear e corpuscular sem vibração.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `O som precisa de meio material e sua propagação envolve compressões e rarefações.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Som = onda mecânica.`
-},
-
-{
-    pergunta:
-    `A altura de um som está relacionada:`,
-
-    alternativas: [
-        `À intensidade, indicando exclusivamente volume forte ou fraco.`,
-        `À frequência, permitindo distinguir sons graves e agudos.`,
-        `Ao timbre, medindo apenas a fonte sonora.`,
-        `À velocidade da luz no vácuo.`,
-        `À temperatura de fusão do material sonoro.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Altura sonora relaciona-se à frequência: maior frequência, som mais agudo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Altura não é volume; altura é grave/agudo.`
-},
-
-{
-    pergunta:
-    `O timbre permite:`,
-
-    alternativas: [
-        `Aumentar a velocidade da luz em meios transparentes.`,
-        `Transformar som mecânico em radiação ionizante.`,
-        `Medir o calor transferido entre instrumentos musicais.`,
-        `Distinguir sons de mesma altura e intensidade produzidos por fontes diferentes.`,
-        `Eliminar a frequência de uma onda sonora.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Timbre diferencia fontes sonoras, como vozes e instrumentos.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Timbre identifica a fonte do som.`
-},
-
-{
-    pergunta:
-    `O eco é explicado principalmente pelo fenômeno de:`,
-
-    alternativas: [
-        `Refração da luz em meio transparente.`,
-        `Condução térmica no ar.`,
-        `Eletrização por atrito.`,
-        `Indução magnética terrestre.`,
-        `Reflexão do som em uma superfície distante.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Eco ocorre quando o som reflete e retorna ao observador com intervalo perceptível.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Eco = reflexão sonora.`
-},
-
-{
-    pergunta:
-    `A luz é considerada uma onda:`,
-
-    alternativas: [
-        `Eletromagnética, capaz de se propagar no vácuo.`,
-        `Mecânica, incapaz de se propagar sem ar.`,
-        `Longitudinal material, dependente de água.`,
-        `Sonora, formada por compressões do ar.`,
-        `Elétrica, formada apenas por corrente contínua.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `A luz é radiação eletromagnética e não precisa de meio material.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Luz do Sol chega à Terra pelo vácuo.`
-},
-
-{
-    pergunta:
-    `O fenômeno que explica a formação da imagem em um espelho plano é:`,
-
-    alternativas: [
-        `Refração do som.`,
-        `Reflexão da luz.`,
-        `Condução térmica.`,
-        `Convecção luminosa.`,
-        `Indução radioativa.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Espelhos formam imagens por reflexão da luz.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Espelho lembra reflexão.`
-},
-
-{
-    pergunta:
-    `Um lápis parcialmente mergulhado em água parece torto devido:`,
-
-    alternativas: [
-        `À reflexão do som entre água e ar.`,
-        `À dilatação térmica do lápis em temperatura ambiente.`,
-        `À refração da luz ao passar de um meio para outro.`,
-        `À eletrização da água por contato com madeira.`,
-        `À decomposição química da luz em calor.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `A refração ocorre quando a luz muda de meio e altera sua velocidade e direção.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Lápis na água é exemplo clássico de refração.`
-},
-
-{
-    pergunta:
-    `A dispersão da luz branca em um prisma mostra que:`,
-
-    alternativas: [
-        `A luz branca é formada apenas por uma cor invisível.`,
-        `O prisma transforma luz em som por reação química.`,
-        `A luz perde toda energia ao tocar vidro.`,
-        `A luz branca pode ser decomposta em diferentes cores.`,
-        `A refração não ocorre em meios transparentes.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `A dispersão separa componentes da luz branca, formando cores do espectro visível.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Prisma e arco-íris indicam dispersão da luz.`
-},
-
-{
-    pergunta:
-    `O espelho convexo é usado em retrovisores externos porque:`,
-
-    alternativas: [
-        `Forma sempre imagem real e maior que o objeto.`,
-        `Concentra luz em um ponto, funcionando como lupa.`,
-        `Impede totalmente a reflexão da luz incidente.`,
-        `Transforma ondas sonoras em imagem luminosa.`,
-        `Aumenta o campo de visão, embora forme imagem reduzida.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Espelhos convexos ampliam o campo visual e formam imagens virtuais reduzidas.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Convexo em retrovisor = maior campo de visão.`
-},
-
-{
-    pergunta:
-    `Corrente elétrica em fios metálicos corresponde ao:`,
-
-    alternativas: [
-        `Movimento ordenado de prótons livres pelo núcleo metálico.`,
-        `Transporte de nêutrons entre átomos vizinhos.`,
-        `Fluxo de calor sem participação de cargas elétricas.`,
-        `Movimento ordenado de elétrons livres no condutor.`,
-        `Deslocamento de moléculas de ar em ondas sonoras.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Nos metais, a corrente elétrica envolve elétrons livres em movimento ordenado.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Corrente em metais = elétrons.`
-},
-
-{
-    pergunta:
-    `Materiais condutores são aqueles que:`,
-
-    alternativas: [
-        `Impedem completamente qualquer interação elétrica em todas as condições.`,
-        `Transformam toda energia elétrica em energia nuclear.`,
-        `Possuem apenas partículas neutras e nenhum elétron.`,
-        `Conduzem somente som, mas nunca corrente elétrica.`,
-        `Permitem com maior facilidade o movimento de cargas elétricas.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Condutores, como metais, facilitam o movimento de cargas.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Condutor facilita; isolante dificulta.`
-},
-
-{
-    pergunta:
-    `Para uma lâmpada acender em um circuito simples, é necessário que:`,
-
-    alternativas: [
-        `O circuito esteja aberto para impedir a passagem de corrente.`,
-        `O fio seja isolante para acumular cargas no interruptor.`,
-        `O circuito esteja fechado e exista fonte de energia elétrica.`,
-        `A lâmpada esteja desligada da fonte para evitar resistência.`,
-        `A corrente seja formada apenas por prótons em repouso.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Corrente elétrica requer caminho fechado e fonte de energia.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Circuito aberto interrompe a corrente.`
-},
-
-{
-    pergunta:
-    `Na Lei de Ohm, a relação correta entre tensão, resistência e corrente elétrica é:`,
-
-    alternativas: [
-        `R = U · i.`,
-        `U = R · i.`,
-        `i = U · R.`,
-        `U = R / i apenas.`,
-        `R = i / U apenas.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `A Lei de Ohm é expressa por U = R·i para condutores ôhmicos.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Memorize: tensão = resistência × corrente.`
-},
-
-{
-    pergunta:
-    `Se a tensão é mantida constante em um resistor, o aumento da resistência provoca:`,
-
-    alternativas: [
-        `Diminuição da corrente elétrica.`,
-        `Aumento obrigatório da corrente elétrica.`,
-        `Desaparecimento da tensão elétrica.`,
-        `Transformação da resistência em frequência sonora.`,
-        `Criação de energia elétrica sem fonte.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Pela Lei de Ohm, i = U/R. Se U é constante e R aumenta, i diminui.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Para tensão fixa, resistência e corrente são inversamente relacionadas.`
-},
-
-{
-    pergunta:
-    `Em instalações elétricas residenciais, os aparelhos são ligados predominantemente em paralelo porque:`,
-
-    alternativas: [
-        `Todos precisam desligar quando um único aparelho queima.`,
-        `A ligação em série fornece maior independência aos equipamentos.`,
-        `A corrente deixa de existir em qualquer ramificação do circuito.`,
-        `A resistência total torna-se infinita em todos os pontos.`,
-        `Podem funcionar de forma independente, recebendo tensão adequada.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Em paralelo, cada aparelho possui ramo próprio, permitindo funcionamento independente.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Residência usa paralelo, não série.`
-},
-
-{
-    pergunta:
-    `Um curto-circuito é perigoso porque:`,
-
-    alternativas: [
-        `Reduz a corrente a zero e congela todos os fios metálicos.`,
-        `Pode gerar corrente muito elevada, aquecimento intenso e risco de incêndio.`,
-        `Transforma tensão elétrica em campo gravitacional inofensivo.`,
-        `Elimina a resistência do corpo humano a qualquer choque.`,
-        `Ocorre apenas em circuitos totalmente desligados e sem fonte.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Curto-circuito reduz muito a resistência do caminho, podendo elevar a corrente e causar aquecimento.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Segurança elétrica envolve evitar corrente excessiva.`
-},
-
-{
-    pergunta:
-    `Ímãs apresentam polos magnéticos. A interação correta é:`,
-
-    alternativas: [
-        `Polos iguais se repelem e polos opostos se atraem.`,
-        `Polos iguais se atraem e polos opostos se repelem.`,
-        `Todo ímã possui apenas polo norte isolado.`,
-        `Todo ímã possui apenas polo sul isolado.`,
-        `Polos magnéticos só existem quando há corrente elétrica em fios.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Ímãs possuem polos norte e sul; iguais repelem, opostos atraem.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Polos magnéticos seguem regra de atração e repulsão.`
-},
-
-{
-    pergunta:
-    `A bússola orienta-se porque:`,
-
-    alternativas: [
-        `A pressão atmosférica empurra a agulha sempre para o norte geográfico.`,
-        `A radiação infravermelha do Sol aquece apenas uma ponta da agulha.`,
-        `Sua agulha magnetizada interage com o campo magnético terrestre.`,
-        `A corrente elétrica do solo percorre a bússola continuamente.`,
-        `A gravidade elimina o polo sul da agulha magnética.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `A agulha da bússola é magnetizada e se orienta pelo campo magnético da Terra.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Bússola = campo magnético terrestre.`
-},
-
-{
-    pergunta:
-    `Um eletroímã funciona porque:`,
-
-    alternativas: [
-        `Um ímã permanente perde todos os polos quando é aquecido.`,
-        `Um material isolante impede totalmente qualquer campo magnético.`,
-        `Uma onda sonora transforma ar em corrente elétrica contínua.`,
-        `Uma corrente elétrica em uma bobina gera campo magnético.`,
-        `Uma lente convergente concentra prótons em um fio metálico.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Corrente elétrica pode gerar campo magnético, princípio usado em eletroímãs.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Eletroímã depende de corrente elétrica.`
-},
-
-{
-    pergunta:
-    `A indução eletromagnética ocorre quando:`,
-
-    alternativas: [
-        `Uma variação de campo magnético pode gerar corrente elétrica em um circuito.`,
-        `Uma corrente elétrica impede qualquer campo magnético ao redor do fio.`,
-        `Um corpo aquecido gera massa adicional sem fonte de energia.`,
-        `Um espelho plano transforma luz em corrente contínua.`,
-        `Uma onda sonora forma íons em qualquer material isolante.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `A variação do campo magnético pode induzir corrente elétrica.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Geradores elétricos utilizam indução eletromagnética.`
-},
-
-{
-    pergunta:
-    `Motores elétricos e geradores têm em comum o uso de princípios de:`,
-
-    alternativas: [
-        `Digestão química.`,
-        `Eletromagnetismo.`,
-        `Separação de misturas.`,
-        `Refração acústica.`,
-        `Diluição térmica.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Motores e geradores dependem da interação entre eletricidade e magnetismo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Máquinas elétricas costumam envolver eletromagnetismo.`
-},
-
-{
-    pergunta:
-    `Radiação pode ser entendida como:`,
-
-    alternativas: [
-        `Matéria sólida que não possui energia associada.`,
-        `Somente calor transferido por contato direto entre sólidos.`,
-        `Apenas corrente elétrica em fios metálicos.`,
-        `Reação química que sempre forma precipitado.`,
-        `Energia emitida e propagada no espaço ou em meios materiais.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Radiação é energia em propagação, podendo ser eletromagnética ou corpuscular.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Não trate radiação como sinônimo automático de perigo extremo.`
-},
-
-{
-    pergunta:
-    `A diferença entre radiações ionizantes e não ionizantes está relacionada:`,
-
-    alternativas: [
-        `À obrigação de todas se propagarem apenas em líquidos.`,
-        `À presença exclusiva de som audível em alta intensidade.`,
-        `À capacidade de arrancar elétrons de átomos e moléculas.`,
-        `À ausência de energia em radiações não ionizantes.`,
-        `Ao fato de radiações ionizantes não interagirem com matéria.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Radiações ionizantes têm energia suficiente para ionizar átomos ou moléculas.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Ionizante = pode arrancar elétrons.`
-},
-
-{
-    pergunta:
-    `Raios X devem ser usados com controle e proteção porque:`,
-
-    alternativas: [
-        `São ondas mecânicas incapazes de atravessar qualquer material.`,
-        `São sons de baixa frequência sem interação com tecidos.`,
-        `São correntes elétricas sem energia associada.`,
-        `São radiações ionizantes e podem produzir efeitos biológicos dependendo da dose.`,
-        `São radiações sempre inofensivas em qualquer intensidade.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Raios X são úteis em diagnóstico, mas exigem controle de exposição por serem ionizantes.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Uso médico de radiação exige benefício, dose e proteção.`
-},
-
-{
-    pergunta:
-    `Ondas de rádio usadas em comunicação são exemplos de:`,
-
-    alternativas: [
-        `Ondas mecânicas que precisam obrigatoriamente de ar para se propagar.`,
-        `Radiações eletromagnéticas não ionizantes em usos comuns.`,
-        `Correntes elétricas que só existem em fios metálicos.`,
-        `Radiações nucleares sempre fatais em qualquer intensidade.`,
-        `Ondas sonoras de alta frequência emitidas por antenas.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Ondas de rádio são eletromagnéticas e usadas em comunicação.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Rádio, micro-ondas e luz são ondas eletromagnéticas.`
-},
-
-{
-    pergunta:
-    `Um forno de micro-ondas aquece alimentos por interação de radiação eletromagnética com moléculas, especialmente água. Essa situação mostra que:`,
-
-    alternativas: [
-        `Radiações não ionizantes também podem transferir energia à matéria.`,
-        `Somente radiações ionizantes transferem energia aos materiais.`,
-        `Micro-ondas são ondas sonoras que dependem do ar do forno.`,
-        `O aquecimento ocorre por reação nuclear dentro do alimento.`,
-        `A matéria deixa de possuir massa durante o aquecimento.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Micro-ondas são radiações eletromagnéticas não ionizantes capazes de transferir energia.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Não ionizante não significa ausência de interação com a matéria.`
-},
-
-{
-    pergunta:
-    `A Física está presente nos transportes porque permite compreender:`,
-
-    alternativas: [
-        `Apenas composição química de combustíveis sem relação com movimento.`,
-        `Somente reprodução dos seres vivos em ambientes urbanos.`,
-        `Exclusivamente separação de misturas em laboratórios.`,
-        `Apenas formação de rochas e placas tectônicas.`,
-        `Forças, atrito, movimento, energia, potência e segurança.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Transportes envolvem mecânica, energia, atrito, potência e segurança.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Questões contextualizadas relacionam Física ao cotidiano.`
-},
-
-{
-    pergunta:
-    `Em aparelhos elétricos, parte da energia fornecida pode ser dissipada em forma de calor. Isso indica que:`,
-
-    alternativas: [
-        `A energia desaparece definitivamente, contrariando qualquer conservação.`,
-        `Todo aparelho real possui rendimento obrigatoriamente igual a 100%.`,
-        `O calor dissipado mostra que não houve transformação de energia.`,
-        `Nem toda energia fornecida se transforma na forma útil desejada, havendo perdas no processo.`,
-        `A potência do aparelho deixa de existir quando há aquecimento.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Em sistemas reais, parte da energia pode ser dissipada, reduzindo o rendimento útil.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Rendimento real geralmente é menor que 100%.`
-},
-
-{
-    pergunta:
-    `Uma análise física adequada de fenômenos cotidianos deve:`,
-
-    alternativas: [
-        `Aplicar fórmulas aleatórias sem verificar grandezas e unidades envolvidas.`,
-        `Desconsiderar o referencial, pois movimento e repouso são absolutos.`,
-        `Relacionar conceitos, unidades, leis e condições do sistema antes de escolher a resposta.`,
-        `Ignorar perdas de energia, pois sistemas reais sempre são ideais.`,
-        `Substituir conceitos físicos por impressões visuais do fenômeno.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Questões difíceis exigem interpretação das condições físicas antes de qualquer cálculo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou distratores próximos ao conceito cobrado.`,
-
-    feedbackErro:
-    `Revise o conceito central. A alternativa correta é a que respeita a relação física entre grandezas, leis e fenômenos.`,
-
-    dicaBanca:
-    `Leia o enunciado procurando grandezas, unidades, sistema e fenômeno principal.`
-}];
+    {
+        pergunta: "Em um experimento, um estudante registra 2,5 m, 40 s, 18 °C e a observação “a superfície parece áspera”. Quais registros correspondem a grandezas físicas medidas?",
+        alternativas: [
+            "apenas 2,5 m, porque comprimento é a única grandeza mensurável do conjunto.",
+            "2,5 m, 40 s e 18 °C, pois apresentam valor numérico associado a uma unidade.",
+            "os quatro registros, pois toda descrição sensorial corresponde a uma medida física.",
+            "somente 40 s e 18 °C, porque o metro não pertence ao Sistema Internacional.",
+            "apenas a observação de aspereza, porque medidas numéricas são interpretações subjetivas."
+        ],
+        correta: 1,
+        explicacao: "Grandeza física é uma propriedade mensurável expressa por número e unidade. A descrição de aspereza, sem escala ou instrumento, é qualitativa.",
+        feedbackAcerto: "Correto. Você separou medidas quantitativas de uma observação meramente qualitativa.",
+        feedbackErro: "Procure sempre número e unidade; uma percepção sem quantificação não é uma medida física.",
+        dicaBanca: "Grandeza medida = valor numérico + unidade."
+    },
+    {
+        pergunta: "Um aplicativo informa: massa de 70 kg, temperatura de 36,5 °C, deslocamento de 200 m para leste e velocidade de 5 m/s para norte. A classificação correta é:",
+        alternativas: [
+            "todas são vetoriais porque possuem valor numérico e unidade.",
+            "massa e deslocamento são escalares; temperatura e velocidade são vetoriais.",
+            "massa e temperatura são escalares; deslocamento e velocidade são vetoriais.",
+            "somente a velocidade é vetorial, pois deslocamento não possui sentido.",
+            "todas são escalares porque nenhuma envolve força resultante."
+        ],
+        correta: 2,
+        explicacao: "Grandezas vetoriais exigem módulo, direção e sentido; escalares exigem apenas valor e unidade.",
+        feedbackAcerto: "Correto. Você utilizou direção e sentido como critério de classificação.",
+        feedbackErro: "Não basta haver unidade: verifique se a grandeza precisa de orientação espacial.",
+        dicaBanca: "Deslocamento, velocidade, aceleração e força são vetoriais."
+    },
+    {
+        pergunta: "Uma mochila está parada no bagageiro de um ônibus que se desloca em linha reta. Para um passageiro sentado, ela está em repouso; para uma pessoa na calçada, está em movimento. Isso ocorre porque:",
+        alternativas: [
+            "a mochila possui duas velocidades absolutas ao mesmo tempo.",
+            "movimento e repouso dependem do referencial adotado.",
+            "o movimento só existe quando há aceleração diferente de zero.",
+            "a pessoa na calçada observa uma trajetória fisicamente incorreta.",
+            "o ônibus elimina a inércia dos objetos transportados."
+        ],
+        correta: 1,
+        explicacao: "A posição de um corpo e sua variação devem ser descritas em relação a um referencial.",
+        feedbackAcerto: "Correto. Você reconheceu o caráter relativo de movimento e repouso.",
+        feedbackErro: "O corpo não muda de estado por causa do observador; muda a descrição em relação ao referencial.",
+        dicaBanca: "Pergunte sempre: em relação a quê?"
+    },
+    {
+        pergunta: "Um corredor percorre 300 m em 50 s e depois 200 m em 30 s. Qual é sua rapidez média no percurso completo?",
+        alternativas: [
+            "5,00 m/s.",
+            "6,67 m/s.",
+            "6,25 m/s.",
+            "7,50 m/s.",
+            "10,00 m/s."
+        ],
+        correta: 2,
+        explicacao: "Rapidez média = distância total/tempo total = 500 m/80 s = 6,25 m/s.",
+        feedbackAcerto: "Correto. Você somou distâncias e tempos antes de calcular a média.",
+        feedbackErro: "Não faça a média aritmética das rapidez dos trechos sem considerar seus tempos.",
+        dicaBanca: "Use distância total dividida pelo tempo total."
+    },
+    {
+        pergunta: "Um automóvel percorre 180 km em 3 h, sem considerar paradas intermediárias. Sua velocidade escalar média é:",
+        alternativas: [
+            "60 km/h.",
+            "20 km/h.",
+            "90 km/h.",
+            "180 km/h.",
+            "540 km/h."
+        ],
+        correta: 0,
+        explicacao: "Velocidade escalar média = distância percorrida/tempo = 180/3 = 60 km/h.",
+        feedbackAcerto: "Correto. O cálculo respeitou a relação entre distância e tempo.",
+        feedbackErro: "Somar ou multiplicar os valores não representa a definição de velocidade média.",
+        dicaBanca: "v = Δs/Δt."
+    },
+    {
+        pergunta: "Um veículo mantém 25 m/s em uma rodovia. Esse valor corresponde a:",
+        alternativas: [
+            "6,9 km/h.",
+            "90 km/h.",
+            "25 km/h.",
+            "69 km/h.",
+            "250 km/h."
+        ],
+        correta: 1,
+        explicacao: "Para converter m/s em km/h, multiplica-se por 3,6: 25 × 3,6 = 90.",
+        feedbackAcerto: "Correto. Você aplicou corretamente o fator de conversão.",
+        feedbackErro: "m/s e km/h não possuem o mesmo valor numérico.",
+        dicaBanca: "De m/s para km/h: × 3,6."
+    },
+    {
+        pergunta: "Um ciclista aumenta sua velocidade de 4 m/s para 16 m/s em 6 s. A aceleração média é:",
+        alternativas: [
+            "0,5 m/s².",
+            "3 m/s².",
+            "12 m/s².",
+            "20 m/s².",
+            "2 m/s²."
+        ],
+        correta: 4,
+        explicacao: "a = Δv/Δt = (16 − 4)/6 = 2 m/s².",
+        feedbackAcerto: "Correto. Você calculou a variação da velocidade antes de dividir pelo tempo.",
+        feedbackErro: "A aceleração não é a velocidade final dividida pelo tempo; use a variação.",
+        dicaBanca: "a = (vfinal − vinicial)/Δt."
+    },
+    {
+        pergunta: "Um carro faz uma curva com rapidez constante de 60 km/h. Mesmo sem aumentar o valor indicado no velocímetro, ele apresenta aceleração porque:",
+        alternativas: [
+            "a direção do vetor velocidade está mudando.",
+            "qualquer movimento possui aceleração igual à rapidez.",
+            "a massa do carro aumenta durante a curva.",
+            "a força resultante é necessariamente nula.",
+            "o tempo deixa de ser medido durante a mudança de direção."
+        ],
+        correta: 0,
+        explicacao: "Aceleração é qualquer variação do vetor velocidade, incluindo mudanças de módulo, direção ou sentido.",
+        feedbackAcerto: "Correto. Você distinguiu rapidez constante de velocidade vetorial constante.",
+        feedbackErro: "Em trajetória curva, a direção muda; portanto, existe aceleração.",
+        dicaBanca: "Aceleração não significa apenas aumentar a rapidez."
+    },
+    {
+        pergunta: "Quando um ônibus freia bruscamente, passageiros tendem a continuar deslocando-se para a frente. O fenômeno é explicado pela:",
+        alternativas: [
+            "ação e reação entre passageiro e banco, que atuam no mesmo corpo.",
+            "redução instantânea da massa dos passageiros.",
+            "ausência de gravidade dentro do ônibus.",
+            "transformação da velocidade em energia potencial gravitacional.",
+            "inércia, tendência de manter o estado de movimento."
+        ],
+        correta: 4,
+        explicacao: "Pela Primeira Lei, um corpo tende a manter repouso ou movimento retilíneo uniforme se a resultante for nula.",
+        feedbackAcerto: "Correto. A tendência de conservar o movimento explica o deslocamento para a frente.",
+        feedbackErro: "O ônibus reduz sua velocidade antes do corpo do passageiro acompanhar a mudança.",
+        dicaBanca: "Freadas e arrancadas são situações clássicas de inércia."
+    },
+    {
+        pergunta: "Dois carrinhos recebem a mesma força resultante. O carrinho A tem massa de 2 kg e o B, de 4 kg. Comparando as acelerações:",
+        alternativas: [
+            "A aceleração de A é o dobro da aceleração de B.",
+            "as acelerações são iguais porque a força é a mesma.",
+            "a aceleração de B é o dobro da aceleração de A.",
+            "A não acelera porque possui menor massa.",
+            "B possui aceleração quatro vezes maior."
+        ],
+        correta: 0,
+        explicacao: "Pela relação a = F/m, para a mesma força a aceleração é inversamente proporcional à massa.",
+        feedbackAcerto: "Correto. Menor massa produz maior aceleração sob a mesma força.",
+        feedbackErro: "A força igual não garante aceleração igual quando as massas são diferentes.",
+        dicaBanca: "Com F constante: maior massa, menor aceleração."
+    },
+    {
+        pergunta: "Ao caminhar, uma pessoa empurra o chão para trás e o chão exerce força para a frente sobre seus pés. Essas forças:",
+        alternativas: [
+            "anulam-se porque atuam ambas sobre a pessoa.",
+            "possuem intensidades diferentes para permitir o movimento.",
+            "existem apenas enquanto a pessoa permanece parada.",
+            "são produzidas pela inércia e não constituem um par de interação, considerando os dados fornecidos no enunciado.",
+            "têm mesma intensidade e sentidos opostos, mas atuam em corpos diferentes."
+        ],
+        correta: 4,
+        explicacao: "Pares de ação e reação atuam em corpos diferentes, têm mesma intensidade, mesma direção e sentidos opostos.",
+        feedbackAcerto: "Correto. Você evitou a ideia de que ação e reação se anulam no mesmo corpo.",
+        feedbackErro: "Forças só se anulam diretamente quando atuam no mesmo corpo.",
+        dicaBanca: "Ação e reação: corpos diferentes."
+    },
+    {
+        pergunta: "Uma pessoa empurra uma parede com força de 150 N. A parede permanece parada. A força que a parede exerce sobre a pessoa é, aproximadamente:",
+        alternativas: [
+            "0 N, porque a parede não se move.",
+            "75 N no mesmo sentido.",
+            "150 N no mesmo sentido.",
+            "150 N em sentido oposto.",
+            "300 N em sentido oposto."
+        ],
+        correta: 3,
+        explicacao: "A Terceira Lei estabelece forças de mesma intensidade e sentidos opostos entre os corpos.",
+        feedbackAcerto: "Correto. Ausência de movimento não significa ausência de força de reação.",
+        feedbackErro: "A parede pode exercer força mesmo sem se deslocar.",
+        dicaBanca: "Movimento não é requisito para existir ação e reação."
+    },
+    {
+        pergunta: "Um astronauta leva um objeto da Terra para a Lua. Comparando massa e peso do objeto:",
+        alternativas: [
+            "massa e peso diminuem na mesma proporção.",
+            "a massa diminui, mas o peso permanece constante.",
+            "a massa permanece praticamente constante, mas o peso diminui devido à menor gravidade.",
+            "massa e peso permanecem iguais aos valores terrestres, sem alterar as demais grandezas do sistema.",
+            "o peso torna-se nulo e a massa aumenta."
+        ],
+        correta: 2,
+        explicacao: "Massa é propriedade do corpo; peso é força gravitacional P = m·g.",
+        feedbackAcerto: "Correto. Você relacionou a variação do peso à aceleração da gravidade.",
+        feedbackErro: "A massa não depende do planeta, enquanto o peso depende de g.",
+        dicaBanca: "Massa em kg; peso em newtons."
+    },
+    {
+        pergunta: "Uma caixa de 8 kg está em um local onde g = 10 m/s². O módulo de seu peso é:",
+        alternativas: [
+            "80 N.",
+            "0,8 N.",
+            "8 N.",
+            "18 N.",
+            "800 N."
+        ],
+        correta: 0,
+        explicacao: "P = m·g = 8 × 10 = 80 N.",
+        feedbackAcerto: "Correto. Você aplicou a relação entre massa e gravidade.",
+        feedbackErro: "O valor 8 kg representa massa, não peso.",
+        dicaBanca: "Peso = massa × gravidade."
+    },
+    {
+        pergunta: "Uma força horizontal constante de 50 N desloca uma caixa 4 m na mesma direção. O trabalho realizado pela força é:",
+        alternativas: [
+            "12,5 J.",
+            "46 J.",
+            "200 J.",
+            "54 J.",
+            "400 J."
+        ],
+        correta: 2,
+        explicacao: "Quando força e deslocamento têm a mesma direção, W = F·d = 50 × 4 = 200 J.",
+        feedbackAcerto: "Correto. Você considerou força, deslocamento e alinhamento.",
+        feedbackErro: "Trabalho mecânico não é calculado pela soma dos valores.",
+        dicaBanca: "Mesma direção: W = Fd."
+    },
+    {
+        pergunta: "Uma pessoa segura uma mala parada a 1,2 m do chão durante 20 s. Considerando o deslocamento da mala nulo, o trabalho mecânico da força exercida pela pessoa sobre ela é:",
+        alternativas: [
+            "igual ao peso multiplicado por 20 s.",
+            "positivo porque existe esforço muscular.",
+            "negativo porque a gravidade atua para baixo.",
+            "igual à energia potencial da mala.",
+            "zero."
+        ],
+        correta: 4,
+        explicacao: "Trabalho mecânico depende do deslocamento do ponto de aplicação da força. Sem deslocamento, o trabalho é zero.",
+        feedbackAcerto: "Correto. Você distinguiu esforço fisiológico de trabalho mecânico.",
+        feedbackErro: "A pessoa consome energia, mas a força sobre a mala não realiza trabalho mecânico sem deslocamento.",
+        dicaBanca: "Força sem deslocamento: trabalho nulo."
+    },
+    {
+        pergunta: "Dois corpos possuem a mesma massa. O corpo B move-se com o dobro da velocidade do corpo A. A energia cinética de B é:",
+        alternativas: [
+            "metade da energia de A.",
+            "igual à energia de A.",
+            "duas vezes a energia de A, nas condições físicas apresentadas.",
+            "quatro vezes a energia cinética de A.",
+            "oito vezes a energia de A."
+        ],
+        correta: 3,
+        explicacao: "Ec = m·v²/2. Ao dobrar a velocidade, a energia cinética é multiplicada por quatro.",
+        feedbackAcerto: "Correto. Você considerou a dependência quadrática da velocidade.",
+        feedbackErro: "Energia cinética não cresce linearmente com a velocidade.",
+        dicaBanca: "Na energia cinética, a velocidade está ao quadrado."
+    },
+    {
+        pergunta: "Uma caixa é elevada do chão para uma prateleira, mantendo a mesma massa. Sua energia potencial gravitacional aumenta porque:",
+        alternativas: [
+            "sua velocidade aumentou obrigatoriamente.",
+            "sua massa foi transformada em energia.",
+            "a gravidade deixou de atuar durante a elevação, sem alterar as demais grandezas do sistema.",
+            "o corpo passou a possuir aceleração horizontal.",
+            "a altura em relação ao nível de referência aumentou."
+        ],
+        correta: 4,
+        explicacao: "Ep = mgh. Para massa e gravidade constantes, maior altura implica maior energia potencial.",
+        feedbackAcerto: "Correto. Você identificou a variável que mudou.",
+        feedbackErro: "A energia potencial depende da posição no campo gravitacional, não de uma velocidade obrigatória.",
+        dicaBanca: "Energia potencial gravitacional cresce com a altura."
+    },
+    {
+        pergunta: "Em uma montanha-russa ideal, o carrinho desce de um ponto alto sem motor e sem atrito. Durante a descida:",
+        alternativas: [
+            "a energia cinética transforma-se integralmente em massa.",
+            "a energia mecânica aumenta porque a gravidade cria energia.",
+            "a energia potencial permanece constante enquanto a velocidade aumenta, de acordo com o modelo utilizado na questão.",
+            "energia potencial gravitacional transforma-se em energia cinética, mantendo a energia mecânica.",
+            "toda a energia é dissipada em calor, mesmo sem atrito."
+        ],
+        correta: 3,
+        explicacao: "Sem forças dissipativas, a energia mecânica se conserva e ocorre transformação entre potencial e cinética.",
+        feedbackAcerto: "Correto. Você aplicou conservação da energia mecânica.",
+        feedbackErro: "A gravidade transforma a forma da energia, mas não cria energia mecânica adicional.",
+        dicaBanca: "Sem atrito: Ep diminui e Ec aumenta."
+    },
+    {
+        pergunta: "Duas máquinas realizam o mesmo trabalho. A máquina A conclui em 10 s e a B em 25 s. A comparação correta é:",
+        alternativas: [
+            "B possui maior potência porque permanece ligada por mais tempo, durante o intervalo analisado.",
+            "as potências são iguais porque o trabalho é o mesmo.",
+            "A possui menor potência porque usa menos segundos.",
+            "A possui maior potência porque realiza o mesmo trabalho em menos tempo.",
+            "não é possível comparar potência usando trabalho e tempo."
+        ],
+        correta: 3,
+        explicacao: "Potência é a taxa de realização de trabalho: P = W/Δt.",
+        feedbackAcerto: "Correto. Menor tempo para o mesmo trabalho significa maior potência.",
+        feedbackErro: "Potência mede rapidez de transformação de energia, não apenas quantidade de trabalho.",
+        dicaBanca: "Mesmo trabalho em menor tempo = maior potência."
+    },
+    {
+        pergunta: "Duas panelas contêm água: a primeira a 80 °C e a segunda a 40 °C. A afirmação correta é:",
+        alternativas: [
+            "a panela mais quente contém uma substância chamada calor.",
+            "temperatura indica o estado térmico; calor é energia transferida devido à diferença de temperatura.",
+            "calor e temperatura são grandezas idênticas medidas na mesma unidade, considerando os dados fornecidos no enunciado.",
+            "a panela mais fria não possui energia interna.",
+            "temperatura mede diretamente a quantidade total de matéria."
+        ],
+        correta: 1,
+        explicacao: "Temperatura está relacionada à agitação térmica; calor é energia em trânsito entre corpos a temperaturas diferentes.",
+        feedbackAcerto: "Correto. Você separou estado térmico de transferência de energia.",
+        feedbackErro: "Corpos não armazenam 'calor'; eles possuem energia interna.",
+        dicaBanca: "Calor é transferência; temperatura é estado térmico."
+    },
+    {
+        pergunta: "Um bloco metálico a 90 °C é colocado em contato com outro a 20 °C, em sistema isolado. Inicialmente, o calor flui:",
+        alternativas: [
+            "do bloco frio para o quente, por possuir menor energia.",
+            "nos dois sentidos com a mesma taxa, sem transferência líquida.",
+            "do bloco a 90 °C para o bloco a 20 °C.",
+            "apenas quando os blocos tiverem a mesma temperatura.",
+            "do corpo de menor massa para o de maior massa."
+        ],
+        correta: 2,
+        explicacao: "O fluxo espontâneo de calor ocorre do corpo de maior temperatura para o de menor temperatura.",
+        feedbackAcerto: "Correto. Você utilizou a diferença de temperatura como direção do fluxo.",
+        feedbackErro: "Massa não define sozinha o sentido da transferência térmica.",
+        dicaBanca: "Calor espontâneo: quente → frio."
+    },
+    {
+        pergunta: "Uma temperatura de 27 °C corresponde aproximadamente a 300 K. Sobre a escala Kelvin, é correto afirmar que:",
+        alternativas: [
+            "0 K corresponde ao ponto de congelamento da água.",
+            "valores em kelvin são obtidos multiplicando Celsius por 273, sem alterar as demais grandezas do sistema.",
+            "seu zero corresponde ao zero absoluto e o símbolo é K, sem o sinal de grau.",
+            "a escala apresenta temperaturas negativas abaixo de 0 K.",
+            "1 K possui tamanho diferente de uma variação de 1 °C."
+        ],
+        correta: 2,
+        explicacao: "A relação aproximada é K = °C + 273, e o zero absoluto é o limite inferior da escala.",
+        feedbackAcerto: "Correto. Você reconheceu a origem e a notação da escala absoluta.",
+        feedbackErro: "0 °C corresponde a cerca de 273 K, não a 0 K.",
+        dicaBanca: "Kelvin usa K, não °K."
+    },
+    {
+        pergunta: "Uma extremidade de uma barra metálica é aquecida, e algum tempo depois a outra extremidade também esquenta, sem transporte macroscópico do metal. O mecanismo predominante é:",
+        alternativas: [
+            "convecção, devido ao deslocamento de massa do sólido.",
+            "condução térmica.",
+            "radiação, pois todo calor exige propagação no vácuo.",
+            "evaporação, pela mudança do metal para o estado gasoso.",
+            "refração, pela mudança de direção da energia."
+        ],
+        correta: 1,
+        explicacao: "Na condução, energia térmica é transferida por interações entre partículas, especialmente em sólidos.",
+        feedbackAcerto: "Correto. Você associou contato e sólido à condução.",
+        feedbackErro: "Convecção exige movimento de fluido; a barra sólida não circula.",
+        dicaBanca: "Contato em sólido geralmente indica condução."
+    },
+    {
+        pergunta: "Ao aquecer água em uma panela, porções mais quentes sobem e porções mais frias descem. Esse movimento ocorre porque:",
+        alternativas: [
+            "a água transfere calor apenas por contato entre partículas imóveis, durante o intervalo analisado.",
+            "ondas eletromagnéticas obrigam toda a água a subir ao mesmo tempo.",
+            "a massa das moléculas desaparece quando são aquecidas.",
+            "diferenças de temperatura geram diferenças de densidade e correntes de convecção.",
+            "a gravidade deixa de atuar sobre as regiões mais quentes."
+        ],
+        correta: 3,
+        explicacao: "Convecção envolve transporte de energia pelo movimento do fluido causado por diferenças de densidade.",
+        feedbackAcerto: "Correto. Você relacionou aquecimento, densidade e circulação.",
+        feedbackErro: "A água não perde massa nem deixa de sofrer ação da gravidade.",
+        dicaBanca: "Convecção ocorre em líquidos e gases."
+    },
+    {
+        pergunta: "A Terra recebe energia do Sol através do espaço praticamente vazio. O mecanismo que permite essa transferência é:",
+        alternativas: [
+            "condução por contato direto entre as superfícies.",
+            "convecção de matéria solar até o planeta.",
+            "difusão de partículas do ar interplanetário.",
+            "evaporação da superfície solar.",
+            "radiação eletromagnética."
+        ],
+        correta: 4,
+        explicacao: "Radiação eletromagnética não necessita de meio material para se propagar.",
+        feedbackAcerto: "Correto. Você identificou o único mecanismo capaz de atravessar o vácuo.",
+        feedbackErro: "Condução e convecção dependem de matéria.",
+        dicaBanca: "No vácuo, a transferência térmica ocorre por radiação."
+    },
+    {
+        pergunta: "Trilhos ferroviários são instalados com pequenas folgas entre segmentos. Essas folgas servem para:",
+        alternativas: [
+            "impedir que os trilhos conduzam corrente elétrica.",
+            "eliminar a força peso durante dias quentes.",
+            "permitir a dilatação térmica e reduzir o risco de deformações.",
+            "aumentar a massa do metal quando a temperatura sobe, nas condições físicas apresentadas.",
+            "converter calor em energia química."
+        ],
+        correta: 2,
+        explicacao: "Materiais tendem a dilatar quando aquecidos; folgas acomodam a variação dimensional.",
+        feedbackAcerto: "Correto. Você relacionou a solução de engenharia à dilatação.",
+        feedbackErro: "A massa não aumenta de modo relevante; mudam as dimensões.",
+        dicaBanca: "Pontes e trilhos precisam de espaço para dilatar."
+    },
+    {
+        pergunta: "Uma perturbação produzida em uma corda desloca-se até a outra extremidade, enquanto cada ponto da corda apenas oscila em torno de sua posição. Isso mostra que uma onda:",
+        alternativas: [
+            "transporta todas as partículas da corda até a outra extremidade.",
+            "só pode existir quando há corrente elétrica.",
+            "é um corpo material que se move no meio.",
+            "transporta energia sem transportar permanentemente matéria junto com a perturbação.",
+            "não transfere energia porque as partículas retornam à posição inicial, sem alterar as demais grandezas do sistema."
+        ],
+        correta: 3,
+        explicacao: "Ondas propagam energia e informação; as partículas do meio geralmente oscilam localmente.",
+        feedbackAcerto: "Correto. Você diferenciou propagação da onda de transporte líquido de matéria.",
+        feedbackErro: "O retorno das partículas à posição de equilíbrio não impede a transferência de energia.",
+        dicaBanca: "A onda avança; o meio oscila."
+    },
+    {
+        pergunta: "Uma fonte realiza 120 oscilações em 4 s. A frequência da onda produzida é:",
+        alternativas: [
+            "30 Hz.",
+            "0,03 Hz.",
+            "4 Hz.",
+            "116 Hz.",
+            "480 Hz."
+        ],
+        correta: 0,
+        explicacao: "f = número de oscilações/tempo = 120/4 = 30 Hz.",
+        feedbackAcerto: "Correto. Você calculou quantos ciclos ocorrem por segundo.",
+        feedbackErro: "Hertz representa oscilações por segundo.",
+        dicaBanca: "f = N/Δt."
+    },
+    {
+        pergunta: "Em um mesmo meio, uma onda mantém velocidade de 12 m/s. Quando sua frequência aumenta de 3 Hz para 6 Hz, o comprimento de onda:",
+        alternativas: [
+            "aumenta de 4 m para 8 m.",
+            "permanece em 4 m.",
+            "diminui de 12 m para 6 m.",
+            "diminui de 4 m para 2 m.",
+            "aumenta de 2 m para 4 m."
+        ],
+        correta: 3,
+        explicacao: "Pela relação v = λf, com velocidade constante, λ é inversamente proporcional à frequência.",
+        feedbackAcerto: "Correto. Ao dobrar a frequência, o comprimento de onda caiu pela metade.",
+        feedbackErro: "Não confunda velocidade de propagação com frequência.",
+        dicaBanca: "No mesmo meio: frequência sobe, comprimento diminui."
+    },
+    {
+        pergunta: "Uma onda sonora não atravessa o vácuo, mas a luz solar atravessa o espaço. A diferença ocorre porque:",
+        alternativas: [
+            "a luz possui massa e transporta o meio material consigo.",
+            "o som é eletromagnético, mas possui frequência insuficiente, considerando os dados fornecidos no enunciado.",
+            "ondas mecânicas existem apenas em sólidos.",
+            "o som é mecânico e necessita de meio material; a luz é eletromagnética e pode propagar-se no vácuo.",
+            "ondas eletromagnéticas não transportam energia."
+        ],
+        correta: 3,
+        explicacao: "Ondas mecânicas dependem da oscilação de partículas de um meio; eletromagnéticas não.",
+        feedbackAcerto: "Correto. Você utilizou a necessidade de meio como critério.",
+        feedbackErro: "Som pode propagar-se em sólidos, líquidos e gases, mas não no vácuo.",
+        dicaBanca: "Som precisa de meio; luz não."
+    },
+    {
+        pergunta: "No ar, o som produzido por uma caixa acústica é classificado como:",
+        alternativas: [
+            "onda eletromagnética transversal.",
+            "onda mecânica exclusivamente transversal.",
+            "radiação ionizante longitudinal.",
+            "corrente de elétrons no ar.",
+            "onda mecânica longitudinal."
+        ],
+        correta: 4,
+        explicacao: "O som no ar precisa de meio e produz compressões e rarefações na direção de propagação.",
+        feedbackAcerto: "Correto. Você identificou natureza mecânica e comportamento longitudinal.",
+        feedbackErro: "O som não é radiação eletromagnética.",
+        dicaBanca: "No ar, som = mecânico e longitudinal."
+    },
+    {
+        pergunta: "Duas notas têm a mesma intensidade, mas uma é percebida como mais aguda. A nota mais aguda possui:",
+        alternativas: [
+            "maior amplitude e mesma frequência.",
+            "menor velocidade no mesmo ar.",
+            "maior timbre por possuir mais energia.",
+            "menor frequência e maior comprimento de onda.",
+            "maior frequência."
+        ],
+        correta: 4,
+        explicacao: "A altura sonora — grave ou agudo — depende principalmente da frequência.",
+        feedbackAcerto: "Correto. Você associou som agudo a frequência maior.",
+        feedbackErro: "Amplitude está mais ligada à intensidade sonora.",
+        dicaBanca: "Agudo = frequência alta; grave = frequência baixa."
+    },
+    {
+        pergunta: "Um violino e uma flauta executam a mesma nota com a mesma intensidade, mas soam diferentes. A característica responsável é o:",
+        alternativas: [
+            "timbre, relacionado à forma de onda e aos harmônicos.",
+            "eco, causado pela reflexão do som.",
+            "tom, determinado apenas pela amplitude.",
+            "nível de pressão, que define a frequência fundamental.",
+            "comprimento da sala, que elimina os harmônicos."
+        ],
+        correta: 0,
+        explicacao: "Timbre permite distinguir fontes que emitem sons com mesma altura e intensidade.",
+        feedbackAcerto: "Correto. Você relacionou a identidade sonora à composição de frequências.",
+        feedbackErro: "Altura e intensidade podem ser iguais, mas a forma de onda permanecer diferente.",
+        dicaBanca: "Timbre identifica a fonte sonora."
+    },
+    {
+        pergunta: "Uma pessoa grita diante de uma montanha e ouve novamente sua voz após certo intervalo. O fenômeno é causado pela:",
+        alternativas: [
+            "refração do som ao entrar no ouvido.",
+            "reflexão das ondas sonoras.",
+            "difração que destrói a onda original.",
+            "polarização das ondas longitudinais.",
+            "interferência que impede o retorno da onda."
+        ],
+        correta: 1,
+        explicacao: "O eco resulta do retorno perceptível do som após refletir em uma superfície distante.",
+        feedbackAcerto: "Correto. Você identificou o retorno da onda como reflexão.",
+        feedbackErro: "Difração contorna obstáculos; refração muda velocidade e direção entre meios.",
+        dicaBanca: "Eco é reflexão com atraso perceptível."
+    },
+    {
+        pergunta: "A luz de uma lanterna atravessa o ar e também pode propagar-se no vácuo. Ela é uma onda:",
+        alternativas: [
+            "mecânica e longitudinal.",
+            "eletromagnética e transversal.",
+            "mecânica e transversal.",
+            "sonora e ionizante.",
+            "material e dependente de ar, considerando os dados fornecidos no enunciado."
+        ],
+        correta: 1,
+        explicacao: "A luz é radiação eletromagnética e suas oscilações são transversais.",
+        feedbackAcerto: "Correto. Você diferenciou luz de ondas mecânicas.",
+        feedbackErro: "A luz não precisa de partículas materiais para se propagar.",
+        dicaBanca: "Luz = onda eletromagnética."
+    },
+    {
+        pergunta: "Uma pessoa vê sua imagem em um espelho plano porque os raios luminosos:",
+        alternativas: [
+            "refletem no espelho e chegam aos olhos com ângulo de reflexão igual ao de incidência.",
+            "atravessam o espelho e retornam por refração, nas condições físicas apresentadas.",
+            "são absorvidos integralmente pela superfície.",
+            "transformam-se em ondas sonoras.",
+            "sofrem dispersão em todas as cores."
+        ],
+        correta: 0,
+        explicacao: "A formação da imagem em espelho plano decorre da reflexão regular da luz.",
+        feedbackAcerto: "Correto. Você aplicou a lei da reflexão.",
+        feedbackErro: "O espelho não precisa deixar a luz atravessar para formar imagem.",
+        dicaBanca: "Espelho plano: reflexão."
+    },
+    {
+        pergunta: "Um canudo parcialmente mergulhado em água parece quebrado na superfície. Isso ocorre porque a luz:",
+        alternativas: [
+            "é refletida integralmente e não atravessa a água.",
+            "sofre difração apenas na extremidade do canudo.",
+            "transforma-se em onda mecânica ao entrar no líquido, sem alterar as demais grandezas do sistema.",
+            "é absorvida pela água e recriada no ar.",
+            "muda de velocidade e direção ao passar entre água e ar."
+        ],
+        correta: 4,
+        explicacao: "Refração é a mudança de velocidade e, em geral, de direção quando a luz passa entre meios.",
+        feedbackAcerto: "Correto. Você relacionou a aparência deslocada à refração.",
+        feedbackErro: "A luz atravessa a interface; não é totalmente refletida.",
+        dicaBanca: "Mudança de meio e desvio da luz indicam refração."
+    },
+    {
+        pergunta: "A luz branca atravessa um prisma e forma uma faixa de cores. O fenômeno ocorre porque:",
+        alternativas: [
+            "o prisma cria novas cores por reação química.",
+            "todas as cores possuem exatamente a mesma refração, de acordo com o modelo utilizado na questão.",
+            "a luz branca é formada por uma única frequência.",
+            "o prisma transforma luz em som visível.",
+            "cada cor sofre refração diferente devido à dependência do índice com o comprimento de onda."
+        ],
+        correta: 4,
+        explicacao: "A dispersão separa componentes da luz branca porque diferentes comprimentos de onda desviam de modo diferente.",
+        feedbackAcerto: "Correto. Você explicou o fenômeno pelo comportamento das diferentes cores.",
+        feedbackErro: "As cores já compõem a luz branca; o prisma apenas as separa.",
+        dicaBanca: "Prisma e arco-íris lembram dispersão."
+    },
+    {
+        pergunta: "Retrovisores externos utilizam espelhos convexos principalmente porque eles:",
+        alternativas: [
+            "formam imagens reais ampliadas sobre a superfície.",
+            "formam imagens virtuais reduzidas e ampliam o campo de visão.",
+            "convergem todos os raios para um foco à frente do espelho, durante o intervalo analisado.",
+            "eliminam a distância aparente dos veículos.",
+            "produzem imagens do mesmo tamanho que o objeto."
+        ],
+        correta: 1,
+        explicacao: "Espelhos convexos oferecem maior campo visual, embora reduzam a imagem e alterem a percepção de distância.",
+        feedbackAcerto: "Correto. Você reconheceu a vantagem e a consequência do uso do espelho convexo.",
+        feedbackErro: "A imagem convexa é virtual, direita e reduzida.",
+        dicaBanca: "Convexo = campo maior e imagem menor."
+    },
+    {
+        pergunta: "Em um fio metálico ligado a uma fonte, os elétrons livres passam a apresentar movimento orientado. Esse movimento constitui:",
+        alternativas: [
+            "onda sonora longitudinal.",
+            "fluxo de prótons através do núcleo dos átomos.",
+            "transferência de calor sem deslocamento de cargas.",
+            "corrente elétrica.",
+            "indução magnética sem diferença de potencial."
+        ],
+        correta: 3,
+        explicacao: "Nos metais, a corrente elétrica corresponde ao movimento ordenado de elétrons livres.",
+        feedbackAcerto: "Correto. Você identificou o portador de carga no condutor metálico.",
+        feedbackErro: "Prótons permanecem ligados aos núcleos; quem se desloca pelo metal são elétrons.",
+        dicaBanca: "Corrente em metais = movimento ordenado de elétrons."
+    },
+    {
+        pergunta: "Cobre e alumínio são usados em fios porque:",
+        alternativas: [
+            "possuem cargas que se movimentam com relativa facilidade no material.",
+            "não possuem elétrons em sua estrutura.",
+            "impedem completamente a passagem de corrente.",
+            "transformam toda energia elétrica em energia nuclear, nas condições físicas apresentadas.",
+            "só conduzem quando estão no estado gasoso."
+        ],
+        correta: 0,
+        explicacao: "Condutores apresentam portadores de carga com maior mobilidade.",
+        feedbackAcerto: "Correto. Você relacionou condução à mobilidade das cargas.",
+        feedbackErro: "Todo metal possui elétrons; a diferença está na facilidade de movimento.",
+        dicaBanca: "Condutor facilita movimento de cargas."
+    },
+    {
+        pergunta: "Uma pilha, fios e uma lâmpada foram conectados, mas um dos fios ficou interrompido. A lâmpada não acendeu porque:",
+        alternativas: [
+            "a pilha perdeu instantaneamente toda sua energia química, sem alterar as demais grandezas do sistema.",
+            "a corrente elétrica só existe dentro da lâmpada.",
+            "o circuito ficou aberto e não houve caminho contínuo para a corrente.",
+            "um circuito precisa ter obrigatoriamente duas pilhas.",
+            "os elétrons foram consumidos antes de chegar à lâmpada."
+        ],
+        correta: 2,
+        explicacao: "Para haver corrente sustentada, o circuito deve formar um caminho fechado.",
+        feedbackAcerto: "Correto. Você identificou a interrupção como causa da ausência de corrente.",
+        feedbackErro: "Cargas não são consumidas pela lâmpada; energia é transferida no circuito.",
+        dicaBanca: "Lâmpada acesa exige circuito fechado."
+    },
+    {
+        pergunta: "Um resistor de 20 Ω é submetido a uma tensão de 10 V. A corrente elétrica é:",
+        alternativas: [
+            "2 A.",
+            "10 A.",
+            "0,5 A.",
+            "20 A.",
+            "200 A."
+        ],
+        correta: 2,
+        explicacao: "Pela Lei de Ohm, I = U/R = 10/20 = 0,5 A.",
+        feedbackAcerto: "Correto. Você aplicou a relação entre tensão, resistência e corrente.",
+        feedbackErro: "Multiplicar tensão por resistência não fornece corrente.",
+        dicaBanca: "I = U/R."
+    },
+    {
+        pergunta: "Em um circuito, a tensão permanece constante. Se a resistência elétrica dobra, a corrente:",
+        alternativas: [
+            "dobra.",
+            "cai para a metade.",
+            "permanece igual.",
+            "quadruplica.",
+            "torna-se necessariamente zero."
+        ],
+        correta: 1,
+        explicacao: "Pela Lei de Ohm, com U constante, corrente e resistência são inversamente proporcionais.",
+        feedbackAcerto: "Correto. Você interpretou a relação I = U/R.",
+        feedbackErro: "Aumentar a resistência dificulta a passagem de corrente.",
+        dicaBanca: "Tensão fixa: R sobe, I desce."
+    },
+    {
+        pergunta: "Em uma residência, lâmpadas e aparelhos são ligados predominantemente em paralelo. Uma vantagem é:",
+        alternativas: [
+            "a corrente é obrigatoriamente igual em todos os aparelhos.",
+            "cada aparelho recebe a mesma tensão e pode funcionar independentemente dos demais.",
+            "se um aparelho for desligado, todos os outros também param.",
+            "a tensão total é dividida igualmente entre todos os equipamentos, considerando os dados fornecidos no enunciado.",
+            "o circuito dispensa dispositivos de proteção."
+        ],
+        correta: 1,
+        explicacao: "Em paralelo, os ramos estão submetidos à mesma tensão e podem ser controlados separadamente.",
+        feedbackAcerto: "Correto. Você relacionou associação em paralelo à independência dos aparelhos.",
+        feedbackErro: "Em série, uma interrupção pode desligar todo o circuito.",
+        dicaBanca: "Residências: ligação em paralelo."
+    },
+    {
+        pergunta: "Um fio de resistência muito baixa conecta diretamente os terminais de uma fonte. A situação é perigosa porque:",
+        alternativas: [
+            "a resistência elevada impede totalmente o movimento de cargas, nas condições físicas apresentadas.",
+            "a tensão da fonte desaparece sem transformação de energia.",
+            "a corrente pode tornar-se muito elevada e provocar aquecimento intenso.",
+            "o circuito passa a produzir apenas energia luminosa.",
+            "os elétrons deixam de interagir com o material do fio."
+        ],
+        correta: 2,
+        explicacao: "Baixa resistência sob determinada tensão pode produzir corrente intensa, aquecimento e risco de incêndio.",
+        feedbackAcerto: "Correto. Você aplicou a Lei de Ohm à situação de risco.",
+        feedbackErro: "Curto-circuito está associado a resistência muito baixa, não muito alta.",
+        dicaBanca: "Curto: caminho de baixa resistência e corrente elevada."
+    },
+    {
+        pergunta: "Dois ímãs são aproximados. Quando polos norte e sul ficam frente a frente, ocorre:",
+        alternativas: [
+            "atração.",
+            "repulsão.",
+            "neutralização permanente dos ímãs.",
+            "criação de carga elétrica líquida.",
+            "desaparecimento do campo magnético."
+        ],
+        correta: 0,
+        explicacao: "Polos opostos se atraem; polos de mesmo nome se repelem.",
+        feedbackAcerto: "Correto. Você aplicou a regra de interação magnética.",
+        feedbackErro: "A aproximação não destrói obrigatoriamente o magnetismo.",
+        dicaBanca: "Polos diferentes atraem; iguais repelem."
+    },
+    {
+        pergunta: "A agulha de uma bússola orienta-se aproximadamente na direção norte-sul porque:",
+        alternativas: [
+            "interage com o campo magnético terrestre.",
+            "é atraída diretamente pela força gravitacional do Polo Norte.",
+            "recebe corrente elétrica contínua da atmosfera.",
+            "aponta sempre na direção do vento predominante.",
+            "reflete a luz solar em direção aos polos."
+        ],
+        correta: 0,
+        explicacao: "A agulha imantada sofre torque e se alinha ao campo magnético da Terra.",
+        feedbackAcerto: "Correto. Você identificou a interação responsável pela orientação.",
+        feedbackErro: "Gravidade atua verticalmente e não explica a direção horizontal da agulha.",
+        dicaBanca: "Bússola é um pequeno ímã no campo terrestre."
+    },
+    {
+        pergunta: "Uma bobina enrolada em um núcleo de ferro torna-se magnética quando ligada a uma bateria. O fenômeno ocorre porque:",
+        alternativas: [
+            "o ferro transforma elétrons em polos elétricos permanentes.",
+            "a bateria envia ímãs prontos para o interior da bobina.",
+            "o núcleo elimina a resistência e cria energia do nada.",
+            "a corrente elétrica na bobina produz campo magnético.",
+            "a corrente converte integralmente o ferro em carga elétrica."
+        ],
+        correta: 3,
+        explicacao: "Correntes elétricas geram campos magnéticos, e o núcleo de ferro intensifica o efeito.",
+        feedbackAcerto: "Correto. Você relacionou eletricidade e magnetismo.",
+        feedbackErro: "A bateria fornece energia e mantém corrente; não envia ímãs.",
+        dicaBanca: "Corrente em bobina gera campo magnético."
+    },
+    {
+        pergunta: "Ao mover um ímã para dentro e para fora de uma bobina, um medidor registra corrente elétrica. A corrente surge devido:",
+        alternativas: [
+            "ao contato mecânico obrigatório entre ímã e fio.",
+            "à transformação direta da massa do ímã em elétrons.",
+            "à variação do fluxo magnético através da bobina.",
+            "à presença de campo magnético constante sem qualquer movimento.",
+            "ao aquecimento da bobina pela luz ambiente."
+        ],
+        correta: 2,
+        explicacao: "A indução eletromagnética ocorre quando o fluxo magnético através de um circuito varia.",
+        feedbackAcerto: "Correto. Você identificou a variação, e não apenas a presença, do campo.",
+        feedbackErro: "Um campo constante em relação à bobina não induz necessariamente corrente.",
+        dicaBanca: "Indução exige mudança do fluxo magnético."
+    },
+    {
+        pergunta: "Um motor transforma energia elétrica em movimento, enquanto um gerador transforma movimento em energia elétrica. Ambos utilizam:",
+        alternativas: [
+            "apenas transferência de calor por condução.",
+            "reações nucleares de fissão em pequenos ímãs.",
+            "interações entre campos magnéticos, correntes e movimento.",
+            "refração da luz em fios metálicos.",
+            "transformações químicas sem participação de campos, nas condições físicas apresentadas."
+        ],
+        correta: 2,
+        explicacao: "Motores e geradores baseiam-se em princípios do eletromagnetismo.",
+        feedbackAcerto: "Correto. Você reconheceu a conversão em sentidos opostos dentro do mesmo campo físico.",
+        feedbackErro: "O funcionamento central não depende de óptica nem de reações nucleares.",
+        dicaBanca: "Motor e gerador são aplicações do eletromagnetismo."
+    },
+    {
+        pergunta: "Energia pode ser emitida e propagar-se na forma de ondas eletromagnéticas ou partículas. Em Física, esse transporte é chamado de:",
+        alternativas: [
+            "condução elétrica.",
+            "convecção térmica.",
+            "trabalho mecânico.",
+            "radiação.",
+            "refração."
+        ],
+        correta: 3,
+        explicacao: "Radiação é energia em propagação, podendo ser eletromagnética ou corpuscular.",
+        feedbackAcerto: "Correto. Você utilizou uma definição ampla e fisicamente adequada.",
+        feedbackErro: "Radiação não é sinônimo exclusivo de radioatividade ou perigo.",
+        dicaBanca: "Radiação é energia emitida e propagada."
+    },
+    {
+        pergunta: "A diferença fundamental entre radiação ionizante e não ionizante é que a ionizante:",
+        alternativas: [
+            "só se propaga em líquidos e sólidos, de acordo com o modelo utilizado na questão.",
+            "pode transferir energia suficiente para arrancar elétrons de átomos ou moléculas.",
+            "não interage com a matéria.",
+            "não transporta energia.",
+            "é sempre letal em qualquer dose."
+        ],
+        correta: 1,
+        explicacao: "Ionização ocorre quando a radiação remove elétrons e forma íons.",
+        feedbackAcerto: "Correto. Você identificou o critério energético da classificação.",
+        feedbackErro: "Efeito biológico depende de tipo, dose e condições de exposição.",
+        dicaBanca: "Ionizante = energia suficiente para remover elétrons."
+    },
+    {
+        pergunta: "Em exames médicos, raios X atravessam tecidos de modo diferente e formam imagens internas. O controle de dose é necessário porque eles:",
+        alternativas: [
+            "são ondas sonoras que rompem tecidos por vibração.",
+            "não transportam energia e por isso exigem amplificação.",
+            "são correntes elétricas que permanecem no corpo.",
+            "produzem sempre danos graves mesmo em qualquer exposição mínima.",
+            "são radiações ionizantes e podem causar efeitos biológicos."
+        ],
+        correta: 4,
+        explicacao: "Raios X são úteis no diagnóstico, mas a exposição deve ser justificada e otimizada.",
+        feedbackAcerto: "Correto. Você reconheceu benefício e risco dependente da exposição.",
+        feedbackErro: "Ionizante não significa automaticamente fatal; dose e proteção importam.",
+        dicaBanca: "Uso médico: benefício, dose e proteção."
+    },
+    {
+        pergunta: "Uma antena transmite sinais que atravessam o espaço e são captados por um receptor. As ondas de rádio são:",
+        alternativas: [
+            "ondas eletromagnéticas não ionizantes em aplicações usuais.",
+            "ondas mecânicas que dependem obrigatoriamente de ar.",
+            "correntes de elétrons que viajam diretamente da antena ao receptor.",
+            "ondas sonoras acima do limite de audição.",
+            "radiações ionizantes equivalentes aos raios X."
+        ],
+        correta: 0,
+        explicacao: "Ondas de rádio pertencem ao espectro eletromagnético e podem propagar-se no vácuo.",
+        feedbackAcerto: "Correto. Você diferenciou sinal eletromagnético de som e corrente no fio.",
+        feedbackErro: "A antena produz campos variáveis; elétrons não viajam até o receptor.",
+        dicaBanca: "Rádio é eletromagnético, não sonoro."
+    },
+    {
+        pergunta: "Em um forno, micro-ondas transferem energia ao alimento e favorecem o aquecimento de regiões com moléculas polares. Isso demonstra que:",
+        alternativas: [
+            "apenas radiação ionizante consegue aquecer materiais.",
+            "micro-ondas são ondas sonoras produzidas pelo aparelho.",
+            "o aquecimento resulta de reações nucleares no alimento.",
+            "não ionizante significa incapaz de produzir qualquer efeito físico, nas condições físicas apresentadas.",
+            "radiação não ionizante pode interagir com a matéria e transferir energia."
+        ],
+        correta: 4,
+        explicacao: "Micro-ondas são eletromagnéticas não ionizantes e podem provocar aquecimento.",
+        feedbackAcerto: "Correto. Você evitou confundir não ionizante com ausência de interação.",
+        feedbackErro: "A classificação trata da capacidade de ionizar, não da incapacidade de transferir energia.",
+        dicaBanca: "Não ionizante também transporta energia."
+    },
+    {
+        pergunta: "Ao projetar um sistema de frenagem, engenheiros analisam velocidade, massa, atrito, distância de parada e dissipação de energia. O exemplo mostra que a Física:",
+        alternativas: [
+            "atua somente na composição química do combustível.",
+            "é dispensável quando o veículo possui controle eletrônico.",
+            "estuda movimento sem considerar forças ou energia.",
+            "permite relacionar grandezas e leis para aumentar eficiência e segurança nos transportes.",
+            "substitui testes práticos por fórmulas sem condições reais, sem alterar as demais grandezas do sistema."
+        ],
+        correta: 3,
+        explicacao: "Mecânica, energia, atrito e potência são fundamentais no estudo de transportes.",
+        feedbackAcerto: "Correto. Você reconheceu a aplicação integrada de conceitos físicos.",
+        feedbackErro: "Modelos físicos orientam projetos, mas devem dialogar com testes e condições reais.",
+        dicaBanca: "Transporte envolve movimento, força, energia e segurança."
+    },
+    {
+        pergunta: "Um aparelho recebe 500 J de energia e transforma 350 J na forma útil desejada. Seu rendimento é:",
+        alternativas: [
+            "70%.",
+            "30%.",
+            "50%.",
+            "85%.",
+            "150%."
+        ],
+        correta: 0,
+        explicacao: "η = Eútil/Etotal × 100 = 350/500 × 100 = 70%.",
+        feedbackAcerto: "Correto. Você comparou energia útil com energia fornecida.",
+        feedbackErro: "A energia restante foi dissipada em outras formas; rendimento real é menor que 100%.",
+        dicaBanca: "Rendimento = útil/total × 100."
+    },
+    {
+        pergunta: "Uma questão fornece massa em gramas, velocidade em m/s e pede energia cinética em joules. Antes de substituir valores na fórmula, o procedimento mais adequado é:",
+        alternativas: [
+            "usar os números diretamente, pois unidades não interferem no resultado.",
+            "identificar as grandezas, converter a massa para quilogramas e verificar a coerência das unidades.",
+            "somar massa e velocidade para obter uma estimativa.",
+            "escolher a alternativa com maior número de casas decimais.",
+            "converter a velocidade para km/h, mesmo que a fórmula use unidades do SI, durante o intervalo analisado."
+        ],
+        correta: 1,
+        explicacao: "A resolução física exige leitura das grandezas, conversão de unidades e escolha coerente da relação matemática.",
+        feedbackAcerto: "Correto. Você priorizou análise dimensional antes do cálculo.",
+        feedbackErro: "Substituir valores incompatíveis produz resultados numericamente possíveis, mas fisicamente incorretos.",
+        dicaBanca: "Antes da fórmula: grandezas, unidades e condições."
+    }
+];

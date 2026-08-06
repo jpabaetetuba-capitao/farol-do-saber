@@ -1,1621 +1,902 @@
 const anatomiaFisiologia = [
-
-{
-    pergunta:
-    `Em uma aula sobre corpo humano, o professor diferenciou o estudo das estruturas corporais do estudo de seu funcionamento. A relação correta entre Anatomia e Fisiologia é:`,
-
-    alternativas: [
-        `A Anatomia analisa somente reações químicas celulares, enquanto a Fisiologia descreve apenas a posição externa dos órgãos.`,
-        `A Anatomia trata exclusivamente das doenças infecciosas, enquanto a Fisiologia classifica apenas tecidos de revestimento.`,
-        `A Anatomia interpreta a resposta imunológica, enquanto a Fisiologia limita-se à descrição dos ossos e articulações.`,
-        `A Anatomia e a Fisiologia possuem o mesmo foco, diferenciando-se apenas pela nomenclatura usada nos livros.`,
-        `A Anatomia estuda a organização das estruturas corporais, enquanto a Fisiologia explica o funcionamento dessas estruturas.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Anatomia relaciona-se à estrutura, forma e localização. Fisiologia relaciona-se ao funcionamento das estruturas corporais.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Quando o enunciado opuser estrutura e função, associe estrutura à Anatomia e funcionamento à Fisiologia.`
-},
-
-{
-    pergunta:
-    `O corpo humano apresenta níveis de organização biológica. Em ordem crescente de complexidade, a sequência correta é:`,
-
-    alternativas: [
-        `Tecido, célula, sistema, órgão e organismo.`,
-        `Célula, tecido, órgão, sistema e organismo.`,
-        `Órgão, tecido, célula, organismo e sistema.`,
-        `Sistema, órgão, tecido, célula e organismo.`,
-        `Organismo, órgão, sistema, tecido e célula.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Células formam tecidos; tecidos formam órgãos; órgãos formam sistemas; sistemas integrados formam o organismo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Questões desse tipo costumam inverter a ordem. Comece pela célula.`
-},
-
-{
-    pergunta:
-    `Durante uma corrida, o corpo aumenta a frequência respiratória, acelera os batimentos cardíacos e produz suor. Esses ajustes buscam conservar o equilíbrio interno. Esse processo é chamado de:`,
-
-    alternativas: [
-        `Diferenciação celular, pois transforma rapidamente células adultas em tecidos novos.`,
-        `Digestão química, pois enzimas passam a controlar diretamente a temperatura corporal.`,
-        `Homeostase, pois envolve regulação integrada de variáveis internas do organismo.`,
-        `Imunização passiva, pois anticorpos prontos são transferidos pelo exercício.`,
-        `Excreção digestiva, pois todos os resíduos passam a ser eliminados pelo intestino.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Homeostase é a manutenção de condições internas adequadas, como temperatura, glicose, pressão e equilíbrio hídrico.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Equilíbrio interno, estabilidade e regulação indicam homeostase.`
-},
-
-{
-    pergunta:
-    `A integração entre sistemas corporais pode ser observada quando o organismo realiza atividade física. A explicação mais adequada é:`,
-
-    alternativas: [
-        `Os músculos executam todo o processo sozinhos, sem participação do sistema circulatório ou respiratório.`,
-        `O sistema digestório substitui o sistema nervoso e passa a coordenar todos os movimentos voluntários.`,
-        `O sistema urinário fornece oxigênio aos músculos por meio da filtração renal.`,
-        `Músculos, pulmões, coração, vasos, pele e sistema nervoso atuam conjuntamente para sustentar o esforço.`,
-        `A pele produz hemoglobina e transporta oxigênio diretamente para as fibras musculares.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `O movimento depende de músculos, oxigenação, circulação, coordenação nervosa, energia e regulação térmica.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Desconfie de alternativas que isolam um sistema como se ele realizasse tudo sozinho.`
-},
-
-{
-    pergunta:
-    `O tecido epitelial apresenta revestimento, proteção, absorção e secreção. Um exemplo correto de sua atuação é:`,
-
-    alternativas: [
-        `O epitélio intestinal participa da absorção de nutrientes após a digestão.`,
-        `O tecido ósseo contrai-se para movimentar articulações durante a locomoção.`,
-        `O tecido nervoso armazena gordura para reserva energética de longo prazo.`,
-        `O tecido muscular produz anticorpos específicos após a vacinação.`,
-        `O tecido sanguíneo reveste externamente a pele e impede totalmente a perda de água.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `O epitélio reveste superfícies e pode atuar na absorção, como ocorre no intestino delgado.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Epitelial = revestimento, proteção, absorção e secreção.`
-},
-
-{
-    pergunta:
-    `A pele humana é importante para a manutenção da saúde porque:`,
-
-    alternativas: [
-        `Filtra o sangue, elimina ureia e controla diretamente a formação de urina.`,
-        `Produz todos os hormônios do organismo e substitui as glândulas endócrinas.`,
-        `Funciona como barreira protetora, participa da sensibilidade e contribui para a regulação térmica.`,
-        `Realiza trocas gasosas nos alvéolos e distribui oxigênio para as células.`,
-        `Armazena bile, digere proteínas e absorve integralmente os nutrientes.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `A pele protege contra agentes externos, participa da sensibilidade e ajuda a regular a temperatura corporal.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Pele está ligada a proteção, percepção e controle térmico.`
-},
-
-{
-    pergunta:
-    `A camada mais externa da pele, associada principalmente à proteção do corpo, é a:`,
-
-    alternativas: [
-        `Derme, formada apenas por tecido ósseo e responsável pela sustentação dos membros.`,
-        `Epiderme, formada por tecido epitelial e relacionada ao revestimento externo.`,
-        `Hipoderme, responsável pela produção direta de impulsos nervosos voluntários.`,
-        `Medula, constituída por células sanguíneas e localizada acima da pele.`,
-        `Cartilagem, camada superficial que regula a produção de suor e melanina.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `A epiderme é a camada mais externa da pele. A derme fica abaixo e contém vasos, nervos e glândulas.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Epiderme = externa; derme = mais profunda e vascularizada.`
-},
-
-{
-    pergunta:
-    `Uma função corretamente atribuída ao sistema esquelético é:`,
-
-    alternativas: [
-        `Sustentar o corpo, proteger órgãos, participar dos movimentos e armazenar minerais.`,
-        `Produzir bile, absorver lipídios, controlar glicose e secretar insulina.`,
-        `Filtrar sangue, eliminar gás carbônico e produzir urina concentrada.`,
-        `Transmitir impulsos, produzir hormônios sexuais e digerir proteínas.`,
-        `Realizar trocas gasosas, transportar oxigênio e formar anticorpos específicos.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `O esqueleto sustenta, protege, participa dos movimentos, armazena minerais e abriga a medula óssea.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Ossos não servem apenas para sustentação.`
-},
-
-{
-    pergunta:
-    `Os músculos esqueléticos participam da locomoção porque:`,
-
-    alternativas: [
-        `Produzem bile e enzimas digestivas, permitindo a absorção de nutrientes no intestino.`,
-        `Filtram sangue continuamente e regulam a quantidade de ureia eliminada.`,
-        `Realizam trocas gasosas diretamente com o ar atmosférico nos alvéolos.`,
-        `Contraem-se e tracionam os ossos, permitindo movimentos voluntários coordenados pelo sistema nervoso.`,
-        `Secretam anticorpos específicos sem participação do sistema imunológico.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Músculos esqueléticos são ligados aos ossos e realizam movimentos voluntários por contração.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Músculo esquelético = movimento voluntário, postura e locomoção.`
-},
-
-{
-    pergunta:
-    `A distinção correta entre músculo esquelético, liso e cardíaco é:`,
-
-    alternativas: [
-        `O esquelético filtra sangue, o liso produz neurônios e o cardíaco armazena gordura.`,
-        `O esquelético é sempre involuntário, o liso é sempre voluntário e o cardíaco atua apenas nos ossos.`,
-        `O esquelético forma glândulas, o liso reveste a pele e o cardíaco produz enzimas digestivas.`,
-        `O esquelético controla hormônios, o liso forma cartilagens e o cardíaco conduz urina.`,
-        `O esquelético atua em movimentos voluntários, o liso em órgãos internos e o cardíaco na contração do coração.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `O músculo esquelético é geralmente voluntário; o liso atua em órgãos internos; o cardíaco forma o coração.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Compare músculos pela localização, controle e função.`
-},
-
-{
-    pergunta:
-    `O sistema digestório transforma alimentos em substâncias utilizáveis pelas células. O processo envolve:`,
-
-    alternativas: [
-        `Filtração renal e produção de urina, seguida de armazenamento na bexiga.`,
-        `Trocas gasosas nos alvéolos, seguidas de transporte de gás carbônico para os tecidos.`,
-        `Produção de impulsos nervosos, seguida de resposta muscular involuntária.`,
-        `Digestão mecânica e química, seguida de absorção de nutrientes principalmente no intestino delgado.`,
-        `Formação de anticorpos, seguida de memória imunológica permanente.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `A digestão envolve processos mecânicos e químicos; a absorção ocorre principalmente no intestino delgado.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Digestão quebra alimentos; absorção leva nutrientes ao sangue e à linfa.`
-},
-
-{
-    pergunta:
-    `Na boca, a enzima salivar que inicia a digestão de carboidratos é:`,
-
-    alternativas: [
-        `Pepsina, que emulsifica gorduras e atua somente em meio básico.`,
-        `Bile, que digere proteínas diretamente nas glândulas salivares.`,
-        `Amilase salivar, que começa a decompor o amido na cavidade bucal.`,
-        `Insulina, que quebra amido em aminoácidos durante a mastigação.`,
-        `Hemoglobina, que transporta nutrientes da saliva para o estômago.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `A amilase salivar inicia a digestão do amido. A pepsina atua no estômago sobre proteínas.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Amilase aparece ligada a carboidratos.`
-},
-
-{
-    pergunta:
-    `No estômago humano, o suco gástrico contribui para a digestão porque:`,
-
-    alternativas: [
-        `Apresenta ácido e enzimas que favorecem a digestão de proteínas.`,
-        `Neutraliza todos os ácidos do organismo e absorve a maior parte das vitaminas.`,
-        `Produz bile e emulsifica os lipídios ingeridos durante as refeições.`,
-        `Filtra resíduos nitrogenados e transforma amônia em urina concentrada.`,
-        `Realiza trocas gasosas e distribui oxigênio diretamente para o sangue.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `O suco gástrico contém ácido clorídrico e enzimas, como a pepsina, que atuam sobre proteínas.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Estômago está ligado a ácido gástrico e proteínas.`
-},
-
-{
-    pergunta:
-    `A eficiência da absorção no intestino delgado relaciona-se à presença de:`,
-
-    alternativas: [
-        `Alvéolos e bronquíolos que ampliam a superfície de troca gasosa no sangue.`,
-        `Néfrons que aumentam a filtração renal e a formação de urina.`,
-        `Plaquetas que aceleram a coagulação na parede intestinal.`,
-        `Cartilagens que impedem o contato entre nutrientes e vasos sanguíneos.`,
-        `Vilosidades e microvilosidades que aumentam a superfície de contato com o alimento digerido.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Vilosidades e microvilosidades aumentam a área de absorção intestinal.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Superfície ampliada no intestino = vilosidades e microvilosidades.`
-},
-
-{
-    pergunta:
-    `A bile é frequentemente confundida com enzima. Sua função correta é:`,
-
-    alternativas: [
-        `Quebrar proteínas em aminoácidos por ação direta no estômago.`,
-        `Emulsificar gorduras, facilitando a ação de enzimas sobre lipídios.`,
-        `Transformar glicose em amido para armazenamento imediato no sangue.`,
-        `Produzir anticorpos contra microrganismos presentes nos alimentos.`,
-        `Filtrar substâncias tóxicas do sangue e formar urina na vesícula biliar.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `A bile é produzida no fígado, armazenada na vesícula biliar e emulsifica gorduras.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Bile não é enzima; ela emulsifica lipídios.`
-},
-
-{
-    pergunta:
-    `Carboidratos, proteínas e lipídios são, respectivamente, importantes para:`,
-
-    alternativas: [
-        `Formação de anticorpos, transporte de oxigênio, filtração renal e produção de urina.`,
-        `Energia imediata, construção e reparo de tecidos, reserva energética e composição de membranas.`,
-        `Regulação hormonal exclusiva, visão noturna obrigatória e coagulação sem participação do sangue.`,
-        `Digestão de fibras, eliminação de gás carbônico e formação direta de ossos no pulmão.`,
-        `Produção de bile, condução de impulsos e armazenamento de informações genéticas.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Carboidratos fornecem energia; proteínas participam de crescimento e reparo; lipídios atuam como reserva e compõem membranas.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Evite alternativas que atribuem função absoluta a um único nutriente.`
-},
-
-{
-    pergunta:
-    `Uma orientação adequada de educação alimentar deve estimular:`,
-
-    alternativas: [
-        `Alimentação variada, hidratação, moderação no consumo de ultraprocessados e prática regular de atividade física.`,
-        `Eliminação completa de carboidratos, pois qualquer consumo desse nutriente impede a saúde.`,
-        `Substituição de refeições por suplementos sem orientação, pois eles são sempre superiores.`,
-        `Consumo apenas de proteínas, pois vitaminas e minerais são dispensáveis.`,
-        `Busca de perda rápida de massa corporal, independentemente da qualidade alimentar.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Promoção da saúde envolve equilíbrio, variedade, hidratação, sono, atividade física e redução de ultraprocessados.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Saúde alimentar envolve equilíbrio, não medidas extremas.`
-},
-
-{
-    pergunta:
-    `As trocas gasosas do sistema respiratório ocorrem principalmente nos alvéolos porque eles:`,
-
-    alternativas: [
-        `Produzem bile e enzimas digestivas que quebram moléculas de oxigênio.`,
-        `Filtram ureia e transformam gás carbônico em urina concentrada.`,
-        `Possuem paredes finas e ampla superfície de contato com capilares sanguíneos.`,
-        `Armazenam cálcio e fósforo para manter a resistência dos ossos.`,
-        `Secretam hormônios que impedem a entrada de ar nos pulmões.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Os alvéolos têm paredes finas e contato com capilares, favorecendo a difusão de gases.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Trocas gasosas = alvéolos, capilares e difusão.`
-},
-
-{
-    pergunta:
-    `Na inspiração, o diafragma:`,
-
-    alternativas: [
-        `Relaxa e reduz o volume torácico, expulsando o ar para fora.`,
-        `Produz muco e bloqueia a passagem de ar pelos bronquíolos.`,
-        `Filtra o sangue e remove impurezas do plasma sanguíneo.`,
-        `Libera anticorpos específicos contra o oxigênio inspirado.`,
-        `Contrai-se e contribui para o aumento do volume da caixa torácica.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Na inspiração, o diafragma contrai e desce, ampliando o volume torácico e favorecendo a entrada de ar.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Inspiração: diafragma contrai; expiração: relaxa.`
-},
-
-{
-    pergunta:
-    `A estrutura sanguínea diretamente relacionada ao transporte de oxigênio é:`,
-
-    alternativas: [
-        `Ureia presente nos néfrons.`,
-        `Bile armazenada na vesícula.`,
-        `Melanina presente na epiderme.`,
-        `Hemoglobina presente nas hemácias.`,
-        `Pepsina presente na saliva.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Hemácias contêm hemoglobina, proteína que transporta oxigênio.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Hemácia e hemoglobina indicam transporte de oxigênio.`
-},
-
-{
-    pergunta:
-    `A função das válvulas cardíacas é:`,
-
-    alternativas: [
-        `Produzir hemácias e leucócitos durante a circulação sistêmica.`,
-        `Evitar o refluxo do sangue e manter o fluxo em sentido adequado dentro do coração.`,
-        `Filtrar o plasma e eliminar ureia diretamente para a bexiga.`,
-        `Realizar trocas gasosas no interior dos ventrículos.`,
-        `Armazenar bile e controlar a digestão dos lipídios.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `As válvulas impedem o retorno do sangue, garantindo fluxo adequado entre cavidades cardíacas.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Válvula cardíaca evita refluxo sanguíneo.`
-},
-
-{
-    pergunta:
-    `A circulação pulmonar e a sistêmica diferenciam-se porque:`,
-
-    alternativas: [
-        `A pulmonar transporta urina aos rins, enquanto a sistêmica conduz bile ao intestino grosso.`,
-        `A pulmonar ocorre apenas nos ossos, enquanto a sistêmica ocorre apenas na pele.`,
-        `A pulmonar elimina nutrientes, enquanto a sistêmica impede a oxigenação celular.`,
-        `A pulmonar produz hormônios, enquanto a sistêmica degrada anticorpos no baço.`,
-        `A pulmonar leva sangue aos pulmões para trocas gasosas, enquanto a sistêmica distribui sangue aos tecidos.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `A pequena circulação envolve coração e pulmões. A grande circulação envolve coração e corpo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Pulmonar = pulmões; sistêmica = corpo.`
-},
-
-{
-    pergunta:
-    `A linfa e o sistema linfático são importantes porque:`,
-
-    alternativas: [
-        `Produzem bile, armazenam glicogênio e realizam digestão de gorduras.`,
-        `Filtram sangue nos néfrons e conduzem urina até a bexiga.`,
-        `Retornam parte do líquido dos tecidos à circulação e participam do transporte de células de defesa.`,
-        `Transportam ar aos alvéolos e realizam hematose diretamente nos brônquios.`,
-        `Secretam insulina e regulam exclusivamente a glicemia após as refeições.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `O sistema linfático recolhe excesso de líquido intersticial e participa da defesa imunológica.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Linfa relaciona-se ao retorno de líquidos e à defesa.`
-},
-
-{
-    pergunta:
-    `As plaquetas são componentes do sangue associadas principalmente à:`,
-
-    alternativas: [
-        `Produção de bile, favorecendo a digestão de lipídios no intestino.`,
-        `Transmissão de impulsos, permitindo resposta rápida dos neurônios.`,
-        `Absorção de nutrientes, aumentando a superfície intestinal.`,
-        `Coagulação, auxiliando na contenção de sangramentos após lesões vasculares.`,
-        `Filtração de ureia, regulando a composição da urina.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Plaquetas participam da coagulação sanguínea.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Plaquetas = coagulação; leucócitos = defesa; hemácias = gases.`
-},
-
-{
-    pergunta:
-    `O sistema urinário contribui para a homeostase porque:`,
-
-    alternativas: [
-        `Filtra o sangue, elimina resíduos metabólicos e ajuda a regular água e sais minerais.`,
-        `Produz bile, emulsifica gorduras e absorve proteínas no intestino grosso.`,
-        `Realiza trocas gasosas e transforma oxigênio em nutrientes energéticos.`,
-        `Coordena reflexos motores por meio de neurônios e sinapses.`,
-        `Forma anticorpos específicos exclusivamente após contato com vacinas.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Os rins removem resíduos, regulam água, sais e pH, contribuindo para o equilíbrio interno.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Rins e néfrons indicam filtração e formação da urina.`
-},
-
-{
-    pergunta:
-    `A unidade funcional do rim é:`,
-
-    alternativas: [
-        `Alvéolo.`,
-        `Vilosidade.`,
-        `Néfron.`,
-        `Sarcômero.`,
-        `Neurônio.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `O néfron é a unidade funcional dos rins e participa da formação da urina.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Néfron aparece em questões sobre rim e urina.`
-},
-
-{
-    pergunta:
-    `A célula especializada na transmissão de impulsos nervosos é:`,
-
-    alternativas: [
-        `Hemácia.`,
-        `Neurônio.`,
-        `Osteócito.`,
-        `Plaqueta.`,
-        `Adipócito.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Neurônios recebem, processam e transmitem impulsos nervosos.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Neurônio = impulso nervoso.`
-},
-
-{
-    pergunta:
-    `Em um ato reflexo, como retirar a mão de uma superfície quente, a resposta é rápida porque:`,
-
-    alternativas: [
-        `O estômago produz ácido suficiente para neutralizar o estímulo doloroso.`,
-        `As hemácias liberam anticorpos que bloqueiam os nervos sensoriais.`,
-        `Os rins filtram o estímulo e eliminam a dor pela urina.`,
-        `A bile interrompe a condução nervosa nos músculos esqueléticos.`,
-        `A medula espinal pode coordenar a resposta antes da interpretação consciente completa pelo encéfalo.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Reflexos podem ser mediados pela medula espinal, permitindo resposta rápida de proteção.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Ato reflexo costuma envolver medula espinal.`
-},
-
-{
-    pergunta:
-    `A associação correta entre sentido e estrutura é:`,
-
-    alternativas: [
-        `Visão e rins; audição e pâncreas; olfato e ossos; paladar e pulmões; tato e fígado.`,
-        `Visão e estômago; audição e intestino; olfato e coração; paladar e baço; tato e bexiga.`,
-        `Visão e alvéolos; audição e néfrons; olfato e tendões; paladar e hemácias; tato e bile.`,
-        `Visão e olhos; audição e orelhas; olfato e cavidade nasal; paladar e língua; tato e pele.`,
-        `Visão e glândulas salivares; audição e vesícula; olfato e medula óssea; paladar e músculos; tato e cartilagem.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Os sentidos dependem de receptores especializados presentes em olhos, orelhas, nariz, língua e pele.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Associe receptor, órgão e estímulo.`
-},
-
-{
-    pergunta:
-    `O sistema endócrino diferencia-se do sistema nervoso porque:`,
-
-    alternativas: [
-        `Utiliza hormônios lançados no sangue, produzindo respostas geralmente mais lentas e duradouras.`,
-        `Conduz impulsos elétricos por neurônios, gerando respostas sempre imediatas e localizadas.`,
-        `Realiza digestão dos alimentos por enzimas secretadas diretamente nos pulmões.`,
-        `Produz células sanguíneas nos rins, mantendo a oxigenação dos tecidos.`,
-        `Elimina resíduos metabólicos pela pele e pela vesícula biliar.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `O sistema endócrino usa hormônios transportados pelo sangue; o nervoso usa impulsos e neurotransmissores.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Endócrino = hormônios; nervoso = impulsos.`
-},
-
-{
-    pergunta:
-    `A insulina, produzida pelo pâncreas, é importante porque:`,
-
-    alternativas: [
-        `Favorece a entrada de glicose nas células e contribui para o controle da glicemia.`,
-        `Transforma oxigênio em gás carbônico durante as trocas alveolares.`,
-        `Emulsifica gorduras no intestino e substitui a ação da bile.`,
-        `Produz anticorpos específicos após infecções virais.`,
-        `Filtra o sangue nos néfrons e concentra a urina na bexiga.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `A insulina reduz a glicemia ao favorecer o uso e armazenamento da glicose.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Insulina e glucagon aparecem em controle da glicose.`
-},
-
-{
-    pergunta:
-    `Uma barreira de defesa inata do organismo é:`,
-
-    alternativas: [
-        `A produção de anticorpos específicos após vacinação.`,
-        `A memória imunológica formada depois de contato com antígeno.`,
-        `A pele íntegra, que dificulta a entrada de microrganismos.`,
-        `A seleção de linfócitos específicos para determinado vírus.`,
-        `A produção de gametas com material genético recombinado.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Pele, mucosas e secreções são defesas inatas. Anticorpos específicos e memória são adaptativos.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Inata = inespecífica; adaptativa = específica e com memória.`
-},
-
-{
-    pergunta:
-    `A vacinação é relevante para a saúde pública porque:`,
-
-    alternativas: [
-        `Substitui saneamento básico, higiene e tratamento de água em todas as comunidades.`,
-        `Elimina imediatamente todos os microrganismos do ambiente após a aplicação.`,
-        `Funciona apenas como tratamento de doenças já instaladas em estágio avançado.`,
-        `Estimula resposta imunológica e memória, protegendo indivíduos e contribuindo para proteção coletiva.`,
-        `Impede qualquer contato futuro entre o organismo e agentes infecciosos.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Vacinas estimulam o sistema imunológico e reduzem riscos individuais e coletivos.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Vacina é prevenção e proteção coletiva.`
-},
-
-{
-    pergunta:
-    `A imunização ativa diferencia-se da passiva porque:`,
-
-    alternativas: [
-        `Na ativa, anticorpos prontos são transferidos; na passiva, ocorre produção de gametas.`,
-        `Na ativa, há filtração renal; na passiva, há digestão de proteínas no estômago.`,
-        `Na ativa, a bile emulsifica gorduras; na passiva, a insulina regula glicose.`,
-        `Na ativa, há contração muscular; na passiva, há formação de urina.`,
-        `Na ativa, o organismo produz sua resposta; na passiva, recebe anticorpos prontos.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Imunização ativa estimula produção própria; passiva fornece anticorpos prontos.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Ativa = organismo produz; passiva = recebe pronto.`
-},
-
-{
-    pergunta:
-    `A memória imunológica é importante porque:`,
-
-    alternativas: [
-        `Transforma todos os microrganismos em nutrientes absorvidos pelo intestino.`,
-        `Permite resposta mais rápida e eficiente em contatos posteriores com o mesmo antígeno.`,
-        `Impede a ocorrência de qualquer doença não infecciosa ao longo da vida.`,
-        `Substitui completamente hábitos de higiene e saneamento.`,
-        `Elimina a função dos linfócitos e torna anticorpos desnecessários.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `A memória imunológica decorre de células específicas que respondem melhor em exposições futuras.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Memória imunológica liga-se à vacinação e resposta adaptativa.`
-},
-
-{
-    pergunta:
-    `Os leucócitos são componentes sanguíneos associados principalmente à:`,
-
-    alternativas: [
-        `Transporte de oxigênio por meio da hemoglobina presente em seu citoplasma.`,
-        `Coagulação sanguínea pela formação direta de tampões plaquetários.`,
-        `Emulsificação de gorduras no intestino delgado após as refeições.`,
-        `Defesa do organismo contra agentes estranhos e participação em respostas imunológicas.`,
-        `Produção de urina por filtração glomerular nos rins.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Leucócitos atuam na defesa; hemácias transportam gases; plaquetas atuam na coagulação.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Leucócitos = defesa.`
-},
-
-{
-    pergunta:
-    `Uma campanha de vacinação escolar deve ser entendida como ação coletiva porque:`,
-
-    alternativas: [
-        `Maior cobertura vacinal reduz a circulação de agentes infecciosos preveníveis na comunidade.`,
-        `A vacinação protege apenas pessoas doentes e não interfere na circulação de microrganismos.`,
-        `A vacinação substitui informação, higiene e acompanhamento dos serviços de saúde.`,
-        `A cobertura vacinal é irrelevante quando há muitas pessoas no mesmo ambiente.`,
-        `A aplicação de vacinas impede todas as doenças, inclusive as hereditárias.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Alta cobertura vacinal protege indivíduos e reduz a circulação de doenças preveníveis.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Cobertura vacinal alta é tema recorrente em saúde pública.`
-},
-
-{
-    pergunta:
-    `Doenças infecciosas são causadas por agentes biológicos. A alternativa que apresenta apenas agentes desse tipo é:`,
-
-    alternativas: [
-        `Vitaminas, sais minerais, fibras, água e proteínas alimentares.`,
-        `Hormônios, enzimas digestivas, bile, insulina e glicogênio.`,
-        `Vírus, bactérias, fungos, protozoários e alguns vermes parasitas.`,
-        `Ossos, músculos, articulações, tendões e cartilagens.`,
-        `Alvéolos, néfrons, vilosidades, plaquetas e hemácias.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Doenças infecciosas decorrem de vírus, bactérias, fungos, protozoários e helmintos.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Agente infeccioso é biológico.`
-},
-
-{
-    pergunta:
-    `Uma diferença importante entre vírus e bactérias é:`,
-
-    alternativas: [
-        `Vírus possuem metabolismo completo, enquanto bactérias sempre dependem de células humanas para respirar.`,
-        `Vírus dependem de células hospedeiras para se multiplicar, enquanto bactérias possuem organização celular própria.`,
-        `Vírus são formados por tecidos, enquanto bactérias são órgãos microscópicos pluricelulares.`,
-        `Vírus são combatidos apenas por antibióticos, enquanto bactérias nunca causam doenças.`,
-        `Vírus possuem núcleo verdadeiro, enquanto bactérias não apresentam material genético.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Vírus são acelulares e dependem de células hospedeiras; bactérias são unicelulares procariontes.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Antibiótico atua contra bactérias, não contra vírus.`
-},
-
-{
-    pergunta:
-    `O uso inadequado de antibióticos pode favorecer:`,
-
-    alternativas: [
-        `Produção de anticorpos contra todos os vírus respiratórios existentes.`,
-        `Formação imediata de vacinas naturais contra micoses e protozooses.`,
-        `Transformação de bactérias em células humanas saudáveis.`,
-        `Eliminação definitiva de parasitoses sem diagnóstico ou orientação.`,
-        `Seleção de bactérias resistentes, dificultando o tratamento de infecções bacterianas.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `O uso incorreto de antibióticos seleciona bactérias resistentes.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Antibiótico sem orientação é pegadinha frequente.`
-},
-
-{
-    pergunta:
-    `Uma medida preventiva adequada contra micoses é:`,
-
-    alternativas: [
-        `Usar antibióticos continuamente para impedir a multiplicação de fungos.`,
-        `Eliminar todos os carboidratos, pois fungos surgem apenas por excesso de açúcar.`,
-        `Aplicar vacinas contra todos os fungos existentes em ambientes úmidos.`,
-        `Impedir a respiração pulmonar, pois fungos dependem do oxigênio dos alvéolos.`,
-        `Manter higiene, evitar umidade prolongada na pele e não compartilhar objetos contaminados.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Micoses são prevenidas com higiene, cuidado com umidade e redução do compartilhamento de objetos contaminados.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Fungos se relacionam a umidade e higiene.`
-},
-
-{
-    pergunta:
-    `Doenças transmitidas por água ou alimentos contaminados relacionam-se diretamente à falta de:`,
-
-    alternativas: [
-        `Saneamento básico, tratamento de água, higiene e destino adequado de resíduos.`,
-        `Atividade física intensa, exposição solar diária e consumo exclusivo de proteínas.`,
-        `Contração muscular voluntária, crescimento ósseo e controle da postura.`,
-        `Respiração celular, produção de bile e formação de neurônios.`,
-        `Memória imunológica contra doenças hereditárias e não transmissíveis.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Saneamento, água tratada e higiene reduzem doenças de transmissão fecal-oral.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Água e alimento contaminados indicam saneamento e higiene.`
-},
-
-{
-    pergunta:
-    `Na prevenção de protozooses transmitidas por vetores, uma medida importante é:`,
-
-    alternativas: [
-        `Utilizar antibióticos sem diagnóstico sempre que houver febre.`,
-        `Consumir apenas alimentos ricos em gordura para impedir o protozoário.`,
-        `Substituir água tratada por água de poços sem monitoramento.`,
-        `Controlar criadouros e reduzir exposição ao vetor, fortalecendo ações comunitárias.`,
-        `Evitar todas as vacinas, pois elas aumentam a presença de vetores.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Algumas protozooses dependem de vetores; controle ambiental e proteção individual reduzem riscos.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Quando houver vetor, pense em ambiente, proteção e ação coletiva.`
-},
-
-{
-    pergunta:
-    `A prevenção de verminoses intestinais relaciona-se principalmente a:`,
-
-    alternativas: [
-        `Exposição constante à fumaça para fortalecer a mucosa intestinal.`,
-        `Saneamento básico, higiene das mãos, uso de calçados e consumo de água e alimentos seguros.`,
-        `Uso contínuo de analgésicos para eliminar ovos e larvas do ambiente.`,
-        `Redução do sono, pois parasitas intestinais dependem do repouso.`,
-        `Suspensão da vacinação, pois vacinas aumentam a absorção de vermes.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Verminoses são prevenidas com saneamento, higiene, calçados, água tratada e alimentos higienizados.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Verminoses costumam envolver saneamento e higiene.`
-},
-
-{
-    pergunta:
-    `A prevenção de doenças infecciosas na escola deve priorizar:`,
-
-    alternativas: [
-        `Medicação coletiva sem diagnóstico, pois todos os sintomas possuem a mesma causa.`,
-        `Isolamento permanente de estudantes, independentemente da orientação sanitária.`,
-        `Educação em saúde, higiene, vacinação, ventilação adequada, água segura e encaminhamento aos serviços de saúde.`,
-        `Eliminação de atividades educativas, pois prevenção depende apenas de hospital.`,
-        `Substituição de saneamento por cartazes, pois informação visual impede transmissão sozinha.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Prevenção escolar envolve informação, higiene, vacinação, ambiente saudável e serviços de saúde.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Saúde escolar combina educação, prevenção e cuidado.`
-},
-
-{
-    pergunta:
-    `Saneamento básico impacta a saúde coletiva porque:`,
-
-    alternativas: [
-        `Reduz exposição a esgoto, resíduos e água contaminada, prevenindo diversas doenças.`,
-        `Substitui integralmente a vacinação, tornando desnecessárias campanhas.`,
-        `Elimina apenas doenças hereditárias, sem influência sobre infecções.`,
-        `Atua somente no tratamento individual de pessoas hospitalizadas.`,
-        `Depende exclusivamente de escolhas pessoais, sem relação com políticas públicas.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Saneamento inclui água tratada, esgoto, resíduos e drenagem, reduzindo riscos sanitários.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Saneamento é política pública e prevenção coletiva.`
-},
-
-{
-    pergunta:
-    `A saúde pública diferencia-se do cuidado individual porque:`,
-
-    alternativas: [
-        `Limita-se ao tratamento particular de sintomas sem considerar ambiente e comunidade.`,
-        `Atua apenas quando todas as doenças já foram eliminadas da população.`,
-        `Dispensa dados epidemiológicos, pois decisões coletivas não precisam de monitoramento.`,
-        `Substitui completamente a responsabilidade individual por hábitos saudáveis.`,
-        `Envolve ações coletivas de prevenção, promoção, vigilância, saneamento, vacinação e educação em saúde.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `Saúde pública organiza ações que protegem comunidades, incluindo prevenção e vigilância.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Saúde pública trabalha com coletividade.`
-},
-
-{
-    pergunta:
-    `A educação em saúde é mais efetiva quando:`,
-
-    alternativas: [
-        `Apresenta regras sem explicação, impedindo perguntas dos estudantes.`,
-        `Prioriza medo e culpa, pois informação contextualizada reduz adesão.`,
-        `Relaciona informações científicas ao cotidiano, favorecendo decisões conscientes e prevenção de riscos.`,
-        `Substitui evidências científicas por opiniões pessoais sobre tratamentos.`,
-        `Desconsidera saneamento, acesso à água e serviços de saúde.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Educação em saúde deve ser contextualizada, científica, preventiva e voltada à autonomia.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Valorize ciência, contexto e prevenção.`
-},
-
-{
-    pergunta:
-    `O destino inadequado do lixo pode favorecer doenças porque:`,
-
-    alternativas: [
-        `Impede a contração muscular voluntária e bloqueia a circulação sistêmica.`,
-        `Atrai vetores, contamina solo e água e aumenta riscos ambientais e sanitários.`,
-        `Produz hormônios que reduzem a ação do sistema endócrino.`,
-        `Transforma resíduos em vacinas naturais contra protozooses.`,
-        `Elimina microrganismos patogênicos por aumento da umidade.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Resíduos mal destinados atraem vetores e contaminam água e solo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Lixo, vetores e contaminação ambiental são temas de saúde pública.`
-},
-
-{
-    pergunta:
-    `Em uma comunidade com doença transmitida pela água, a medida mais adequada é:`,
-
-    alternativas: [
-        `Distribuir antibióticos a todos sem diagnóstico, independentemente do agente.`,
-        `Interromper vacinação de rotina, pois ela interfere no tratamento de água.`,
-        `Priorizar somente cartazes, sem ações ambientais ou acompanhamento sanitário.`,
-        `Investigar fontes de contaminação, garantir água segura, orientar higiene e fortalecer saneamento.`,
-        `Estimular consumo de água sem tratamento para acelerar adaptação do organismo.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Doenças ligadas à água exigem tratamento, vigilância, saneamento, higiene e orientação.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Problemas coletivos pedem ações coletivas.`
-},
-
-{
-    pergunta:
-    `A produção de espermatozoides ocorre principalmente:`,
-
-    alternativas: [
-        `Na próstata, glândula responsável pela formação dos óvulos.`,
-        `Nos testículos, estruturas também relacionadas à produção de testosterona.`,
-        `Na bexiga, órgão que armazena gametas antes da fecundação.`,
-        `No epidídimo, local onde ocorre a produção primária de hormônios ovarianos.`,
-        `Na uretra, canal que produz células reprodutivas e realiza gestação.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Os testículos produzem espermatozoides e testosterona; o epidídimo participa da maturação.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Testículos = espermatozoides e testosterona.`
-},
-
-{
-    pergunta:
-    `No sistema reprodutor feminino, a ovulação corresponde:`,
-
-    alternativas: [
-        `À implantação do embrião no útero logo após o parto.`,
-        `À eliminação de todos os hormônios sexuais pela menstruação.`,
-        `À liberação de um ovócito pelo ovário em determinado período do ciclo menstrual.`,
-        `À produção de espermatozoides nas tubas uterinas.`,
-        `À formação da placenta antes da fecundação.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Ovulação é a liberação do ovócito pelo ovário.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Ovulação não é menstruação.`
-},
-
-{
-    pergunta:
-    `A menstruação ocorre quando:`,
-
-    alternativas: [
-        `O ovário libera espermatozoides para possibilitar fecundação.`,
-        `A placenta se forma antes da ovulação e impede mudanças hormonais.`,
-        `O útero produz gametas masculinos após a puberdade.`,
-        `A bexiga elimina sangue por filtração renal normal.`,
-        `Há descamação do endométrio em um ciclo sem implantação embrionária.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `A menstruação é a eliminação de parte do endométrio quando não ocorre implantação.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Endométrio é palavra-chave em menstruação.`
-},
-
-{
-    pergunta:
-    `A fecundação humana ocorre, em geral, quando:`,
-
-    alternativas: [
-        `Um espermatozoide encontra o ovócito, formando uma célula inicial com material genético dos dois gametas.`,
-        `O embrião se fixa no ovário antes da formação do zigoto.`,
-        `A menstruação inicia a produção de espermatozoides no útero.`,
-        `A placenta elimina o material genético dos gametas antes da gestação.`,
-        `A uretra feminina conduz o ovócito até os testículos.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Fecundação é a união dos gametas, originando o zigoto.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Fecundação = união de gametas.`
-},
-
-{
-    pergunta:
-    `Durante a gestação, a placenta:`,
-
-    alternativas: [
-        `Produz gametas masculinos e femininos durante todos os meses.`,
-        `Substitui completamente o sistema nervoso fetal, impedindo sua formação.`,
-        `Realiza digestão de alimentos no estômago materno e produz bile fetal.`,
-        `Permite trocas de substâncias entre mãe e feto, contribuindo para nutrição, oxigenação e eliminação de resíduos.`,
-        `Impede qualquer troca de gases, nutrientes ou resíduos entre mãe e feto.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `A placenta participa de trocas de gases, nutrientes e resíduos e produz hormônios importantes.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Placenta está ligada a trocas e gestação.`
-},
-
-{
-    pergunta:
-    `Uma abordagem adequada sobre sexualidade na escola deve:`,
-
-    alternativas: [
-        `Promover informação científica, respeito, responsabilidade, prevenção, consentimento e cuidado com a saúde.`,
-        `Limitar-se à memorização de órgãos, evitando prevenção e tomada de decisão.`,
-        `Substituir informações científicas por opiniões pessoais sem diálogo com saúde pública.`,
-        `Apresentar apenas riscos, sem orientar prevenção e direitos relacionados à saúde.`,
-        `Tratar sexualidade exclusivamente como reprodução, ignorando aspectos sociais e preventivos.`,
-    ],
-
-    correta: 0,
-
-    explicacao:
-    `Educação em sexualidade deve ser informativa, respeitosa, preventiva e adequada ao contexto escolar.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Valorize ciência, respeito, prevenção e responsabilidade.`
-},
-
-{
-    pergunta:
-    `Sobre métodos contraceptivos e ISTs, a alternativa correta é:`,
-
-    alternativas: [
-        `Todos os métodos hormonais protegem igualmente contra ISTs e dispensam orientação de saúde.`,
-        `Preservativos podem reduzir risco de ISTs e gravidez; outros métodos podem prevenir gravidez sem proteger contra ISTs.`,
-        `O DIU protege contra todas as infecções por bloquear microrganismos no sangue.`,
-        `Métodos cirúrgicos são temporários e sempre impedem doenças transmitidas por contato sexual.`,
-        `Métodos naturais eliminam qualquer risco de gravidez e ISTs sem acompanhamento.`
-    ],
-
-    correta: 1,
-
-    explicacao:
-    `Preservativos reduzem risco de ISTs e gravidez; outros métodos podem evitar gravidez sem proteger contra infecções.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Contracepção e prevenção de ISTs não são sempre a mesma coisa.`
-},
-
-{
-    pergunta:
-    `A prevenção de ISTs envolve:`,
-
-    alternativas: [
-        `Uso de antibióticos preventivamente sem diagnóstico após qualquer contato social.`,
-        `Evitar vacinação de rotina, pois ela aumenta o risco de todas as ISTs.`,
-        `Substituir preservativos por alimentação saudável, pois nutrientes impedem transmissão.`,
-        `Considerar que ISTs só ocorrem quando há sintomas visíveis em todas as pessoas.`,
-        `Uso de preservativos, testagem, informação confiável e acompanhamento nos serviços de saúde.`
-    ],
-
-    correta: 4,
-
-    explicacao:
-    `ISTs podem ser prevenidas com preservativos, testagem, informação, vacinação quando disponível e acompanhamento.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Algumas infecções podem ser assintomáticas.`
-},
-
-{
-    pergunta:
-    `O uso de drogas psicoativas preocupa a saúde pública porque:`,
-
-    alternativas: [
-        `Fortalece permanentemente os neurônios e melhora todas as funções cognitivas sem risco.`,
-        `Substitui sono, alimentação e atividade física como fatores de qualidade de vida.`,
-        `Impede qualquer doença infecciosa por estimular anticorpos específicos.`,
-        `Pode alterar o sistema nervoso, favorecer dependência e gerar impactos individuais, familiares e sociais.`,
-        `Afeta apenas o sistema digestório, sem relação com comportamento ou vida social.`
-    ],
-
-    correta: 3,
-
-    explicacao:
-    `Drogas psicoativas atuam no sistema nervoso e podem causar dependência e impactos sociais.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Drogas e saúde envolvem sistema nervoso, dependência e prevenção.`
-},
-
-{
-    pergunta:
-    `Uma proposta coerente de qualidade de vida deve integrar:`,
-
-    alternativas: [
-        `Resultados rápidos, restrição alimentar severa e substituição de consultas por informações sem fonte.`,
-        `Consumo exclusivo de proteínas, eliminação total de carboidratos e ausência de vacinação.`,
-        `Alimentação equilibrada, hidratação, atividade física, sono, prevenção de doenças e cuidado com a saúde mental e social.`,
-        `Atividade física sem descanso, pouca hidratação e automedicação para manter produtividade.`,
-        `Foco apenas na aparência corporal, desconsiderando prevenção e bem-estar.`
-    ],
-
-    correta: 2,
-
-    explicacao:
-    `Qualidade de vida envolve hábitos saudáveis, prevenção, equilíbrio, informação científica e condições sociais adequadas.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e evitou os distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o conceito principal. A alternativa correta é a que mantém relação adequada entre estrutura, função, prevenção e saúde.`,
-
-    dicaBanca:
-    `Qualidade de vida envolve equilíbrio, prevenção e saúde integral.`
-}];
+    {
+        pergunta: "Uma ressonância mostra a forma e a posição do coração, enquanto um eletrocardiograma registra sua atividade elétrica. Esses exames enfatizam, respectivamente:",
+        alternativas: [
+            "aspectos fisiológicos e anatômicos do coração.",
+            "aspectos anatômicos e fisiológicos do coração.",
+            "somente processos bioquímicos sem relação com estrutura.",
+            "apenas doenças infecciosas e respostas imunológicas.",
+            "dois aspectos exclusivamente anatômicos."
+        ],
+        correta: 1,
+        explicacao: "Anatomia estuda forma, organização e localização; Fisiologia estuda funcionamento e processos.",
+        feedbackAcerto: "Correto. Você aplicou a diferença entre estrutura e função a dois exames.",
+        feedbackErro: "Imagem estrutural e registro funcional não investigam exatamente o mesmo aspecto.",
+        dicaBanca: "Anatomia = estrutura; Fisiologia = função."
+    },
+    {
+        pergunta: "Células musculares organizam-se em tecido muscular; diferentes tecidos formam o coração; o coração participa do sistema circulatório. A sequência crescente é:",
+        alternativas: [
+            "tecido → célula → sistema → órgão → organismo.",
+            "órgão → tecido → célula → sistema → organismo.",
+            "célula → tecido → órgão → sistema → organismo.",
+            "célula → órgão → tecido → organismo → sistema.",
+            "sistema → órgão → tecido → célula → organismo."
+        ],
+        correta: 2,
+        explicacao: "Os níveis de organização aumentam de células para tecidos, órgãos, sistemas e organismo.",
+        feedbackAcerto: "Correto. Você acompanhou a integração progressiva das estruturas.",
+        feedbackErro: "Um órgão é formado por tecidos, e um sistema reúne órgãos coordenados.",
+        dicaBanca: "Menor para maior: célula, tecido, órgão, sistema, organismo."
+    },
+    {
+        pergunta: "Durante uma corrida, a temperatura corporal aumenta, o suor é produzido e vasos da pele se dilatam. Essas respostas exemplificam:",
+        alternativas: [
+            "perda permanente da capacidade de regulação corporal.",
+            "transformação do calor em matéria eliminada pelo suor.",
+            "funcionamento isolado da pele, sem participação de outros sistemas, sem alterar os demais processos corporais.",
+            "aumento indefinido da temperatura para melhorar o desempenho.",
+            "mecanismos de homeostase que ajudam a manter o meio interno dentro de limites adequados."
+        ],
+        correta: 4,
+        explicacao: "Homeostase é a manutenção dinâmica de condições internas por ajustes coordenados.",
+        feedbackAcerto: "Correto. Você reconheceu uma resposta regulatória, não ausência de mudança.",
+        feedbackErro: "Homeostase não significa valores totalmente fixos, mas controle dentro de faixas.",
+        dicaBanca: "Homeostase envolve ajustes que compensam alterações."
+    },
+    {
+        pergunta: "Durante atividade física, músculos consomem mais oxigênio e nutrientes. Em resposta, coração e pulmões intensificam sua atividade. A explicação adequada é:",
+        alternativas: [
+            "cada sistema trabalha de forma independente e sem troca de substâncias.",
+            "os sistemas locomotor, respiratório e circulatório atuam de forma integrada para atender à maior demanda celular.",
+            "o sistema respiratório substitui temporariamente a circulação sanguínea em toda situação de esforço físico intenso e prolongado.",
+            "os músculos produzem oxigênio quando a frequência cardíaca aumenta.",
+            "o coração realiza diretamente as contrações dos músculos esqueléticos."
+        ],
+        correta: 1,
+        explicacao: "O organismo depende da integração entre captação de oxigênio, transporte sanguíneo e uso pelos tecidos.",
+        feedbackAcerto: "Correto. Você relacionou demanda metabólica e cooperação entre sistemas.",
+        feedbackErro: "Nenhum desses sistemas substitui os demais; eles realizam funções complementares.",
+        dicaBanca: "Questões de exercício costumam cobrar integração entre sistemas."
+    },
+    {
+        pergunta: "Uma lesão remove parte do revestimento interno do intestino e reduz a absorção de nutrientes. O tecido diretamente comprometido é o:",
+        alternativas: [
+            "tecido epitelial, responsável por revestimento e absorção.",
+            "tecido nervoso, responsável por produzir enzimas digestivas.",
+            "tecido ósseo, responsável por transportar nutrientes.",
+            "tecido muscular cardíaco, responsável por formar vilosidades.",
+            "tecido adiposo, responsável por revestir o lúmen intestinal."
+        ],
+        correta: 0,
+        explicacao: "Epitélios revestem superfícies e podem especializar-se em absorção, secreção e proteção.",
+        feedbackAcerto: "Correto. Você relacionou localização e função do tecido.",
+        feedbackErro: "O intestino possui outros tecidos, mas o revestimento absortivo é epitelial.",
+        dicaBanca: "Revestimento e absorção apontam para tecido epitelial."
+    },
+    {
+        pergunta: "Uma queimadura extensa compromete a barreira contra microrganismos, aumenta a perda de água e altera o controle térmico. Isso demonstra que a pele:",
+        alternativas: [
+            "tem função exclusivamente estética.",
+            "substitui o sistema imunológico em todas as infecções, considerando as condições descritas.",
+            "produz diretamente hemácias e plaquetas.",
+            "é responsável pela digestão de nutrientes.",
+            "atua na proteção, na redução da perda hídrica e na termorregulação."
+        ],
+        correta: 4,
+        explicacao: "A pele é barreira física, participa da regulação térmica e limita perda de água.",
+        feedbackAcerto: "Correto. Você reconheceu funções integradas da pele.",
+        feedbackErro: "A pele coopera com outros sistemas, mas não os substitui.",
+        dicaBanca: "Pele: barreira, sensibilidade e termorregulação."
+    },
+    {
+        pergunta: "Um produto cosmético atua apenas na camada mais superficial e avascular da pele. Essa camada é a:",
+        alternativas: [
+            "derme.",
+            "hipoderme.",
+            "fáscia muscular.",
+            "medula óssea.",
+            "epiderme."
+        ],
+        correta: 4,
+        explicacao: "A epiderme é o revestimento mais externo da pele e não possui vasos sanguíneos.",
+        feedbackAcerto: "Correto. Você utilizou posição e vascularização como pistas.",
+        feedbackErro: "A derme fica abaixo e contém vasos, nervos e estruturas anexas.",
+        dicaBanca: "Epiderme = camada externa."
+    },
+    {
+        pergunta: "Além de sustentar o corpo, o sistema esquelético participa da proteção de órgãos, da movimentação e da produção de células sanguíneas. Essa produção ocorre principalmente:",
+        alternativas: [
+            "na cartilagem articular, sem alterar os demais processos corporais.",
+            "nos tendões.",
+            "no líquido sinovial.",
+            "na medula óssea vermelha.",
+            "na epiderme."
+        ],
+        correta: 3,
+        explicacao: "A medula óssea vermelha realiza hematopoese, produzindo células do sangue.",
+        feedbackAcerto: "Correto. Você reconheceu uma função menos evidente do sistema esquelético.",
+        feedbackErro: "Cartilagens e tendões participam do sistema locomotor, mas não são o principal local de hematopoese.",
+        dicaBanca: "Produção de células do sangue = medula óssea vermelha."
+    },
+    {
+        pergunta: "Ao flexionar o antebraço, um músculo encurta e transmite força ao osso por meio de um tendão. O movimento ocorre porque:",
+        alternativas: [
+            "o osso encurta e empurra o músculo para trás.",
+            "o tendão produz impulsos nervosos que substituem o músculo.",
+            "a contração muscular traciona os ossos nas articulações.",
+            "a cartilagem contrai e movimenta diretamente o membro.",
+            "o sangue empurra o osso durante a flexão."
+        ],
+        correta: 2,
+        explicacao: "Músculos esqueléticos geram força por contração e movimentam ossos por meio de tendões.",
+        feedbackAcerto: "Correto. Você relacionou músculo, tendão, osso e articulação.",
+        feedbackErro: "O osso funciona como alavanca; quem encurta ativamente é o músculo.",
+        dicaBanca: "Músculo puxa; tendão transmite; osso se move."
+    },
+    {
+        pergunta: "Uma biópsia identifica três tecidos: um ligado aos ossos e de controle voluntário; outro na parede intestinal e involuntário; e outro exclusivo do coração. Eles são, respectivamente:",
+        alternativas: [
+            "músculo liso, músculo esquelético e músculo cardíaco.",
+            "músculo cardíaco, músculo liso e músculo esquelético.",
+            "músculo esquelético, músculo cardíaco e músculo liso.",
+            "músculo esquelético, músculo liso e músculo cardíaco.",
+            "músculo liso, músculo cardíaco e músculo esquelético."
+        ],
+        correta: 3,
+        explicacao: "Esquelético é voluntário e ligado aos ossos; liso atua em vísceras; cardíaco forma o coração.",
+        feedbackAcerto: "Correto. Você combinou localização e tipo de controle.",
+        feedbackErro: "O músculo cardíaco é involuntário, mas não é classificado como liso.",
+        dicaBanca: "Ossos = esquelético; vísceras = liso; coração = cardíaco."
+    },
+    {
+        pergunta: "Após uma refeição, moléculas grandes são quebradas, nutrientes são absorvidos e resíduos não aproveitados são eliminados. O sistema digestório realiza:",
+        alternativas: [
+            "somente armazenamento de alimentos, sem transformação, considerando as condições descritas.",
+            "produção de oxigênio para as células intestinais.",
+            "filtração do sangue e formação de urina.",
+            "transporte direto de impulsos nervosos ao estômago.",
+            "digestão, absorção e eliminação de resíduos não digeridos."
+        ],
+        correta: 4,
+        explicacao: "O sistema digestório transforma alimentos e disponibiliza nutrientes para absorção.",
+        feedbackAcerto: "Correto. Você identificou as etapas gerais do processo digestório.",
+        feedbackErro: "Digestão não termina no estômago e não se confunde com excreção urinária.",
+        dicaBanca: "Digestão quebra; absorção transfere; eliminação remove restos."
+    },
+    {
+        pergunta: "Um alimento rico em amido permanece algum tempo na boca. A enzima que inicia sua digestão é a:",
+        alternativas: [
+            "pepsina.",
+            "lipase pancreática.",
+            "tripsina.",
+            "lactase intestinal.",
+            "amilase salivar."
+        ],
+        correta: 4,
+        explicacao: "A amilase salivar inicia a quebra do amido em moléculas menores.",
+        feedbackAcerto: "Correto. Você relacionou substrato, local e enzima.",
+        feedbackErro: "Pepsina atua principalmente sobre proteínas no estômago.",
+        dicaBanca: "Amido na boca = amilase salivar."
+    },
+    {
+        pergunta: "No estômago, o ambiente ácido ajuda a desnaturar proteínas e favorece a ação da pepsina. Isso significa que o suco gástrico:",
+        alternativas: [
+            "participa principalmente do início da digestão de proteínas.",
+            "neutraliza completamente todos os ácidos da alimentação, sem alterar os demais processos corporais.",
+            "realiza a maior parte da absorção de nutrientes.",
+            "digere apenas carboidratos por ação da amilase.",
+            "emulsifica gorduras por meio da bile."
+        ],
+        correta: 0,
+        explicacao: "Ácido clorídrico e pepsina participam da digestão proteica no estômago.",
+        feedbackAcerto: "Correto. Você relacionou pH, enzima e nutriente.",
+        feedbackErro: "A maior parte da absorção ocorre no intestino delgado, e a bile não é produzida no estômago.",
+        dicaBanca: "Estômago: ácido + pepsina + proteínas."
+    },
+    {
+        pergunta: "Uma doença reduz as vilosidades e microvilosidades do intestino delgado. A consequência mais direta é:",
+        alternativas: [
+            "aumento da produção de hemácias.",
+            "bloqueio da passagem de ar aos pulmões.",
+            "redução da filtração realizada pelos rins, de acordo com os dados do enunciado.",
+            "diminuição da superfície de absorção de nutrientes.",
+            "aumento da produção de bile no estômago."
+        ],
+        correta: 3,
+        explicacao: "Vilosidades e microvilosidades ampliam a área disponível para absorção.",
+        feedbackAcerto: "Correto. Você conectou estrutura microscópica e função.",
+        feedbackErro: "Essas estruturas não pertencem aos sistemas respiratório ou urinário.",
+        dicaBanca: "Maior superfície intestinal = maior absorção."
+    },
+    {
+        pergunta: "Após a retirada da vesícula biliar, a bile continua sendo produzida pelo fígado. Sua função digestiva principal é:",
+        alternativas: [
+            "digerir proteínas por ação de enzimas próprias, durante a situação apresentada.",
+            "emulsificar gorduras, aumentando a área de contato para ação das lipases.",
+            "transformar glicose em aminoácidos.",
+            "neutralizar toda a água presente no intestino.",
+            "quebrar amido por ação da amilase."
+        ],
+        correta: 1,
+        explicacao: "A bile não é enzima; ela dispersa gorduras em gotículas menores.",
+        feedbackAcerto: "Correto. Você distinguiu emulsificação de digestão enzimática.",
+        feedbackErro: "A bile facilita o trabalho das lipases, mas não quebra ligações químicas como uma enzima.",
+        dicaBanca: "Bile emulsifica; lipase digere."
+    },
+    {
+        pergunta: "Em uma dieta equilibrada, carboidratos, proteínas e lipídios exercem funções distintas. Uma associação adequada é:",
+        alternativas: [
+            "carboidratos formam anticorpos; proteínas armazenam oxigênio; lipídios produzem DNA.",
+            "proteínas são a única fonte de energia; carboidratos formam ossos; lipídios não possuem função.",
+            "carboidratos fornecem energia; proteínas participam da construção e reparo; lipídios formam reservas e membranas.",
+            "lipídios transportam impulsos nervosos; proteínas formam urina; carboidratos produzem hormônios, considerando as condições descritas.",
+            "todos exercem exatamente a mesma função no organismo."
+        ],
+        correta: 2,
+        explicacao: "Macronutrientes podem fornecer energia e também participar de estruturas e processos específicos.",
+        feedbackAcerto: "Correto. Você evitou reduzir todos os nutrientes a uma única função.",
+        feedbackErro: "Nenhum macronutriente deve ser tratado como desnecessário em uma alimentação equilibrada.",
+        dicaBanca: "Energia, construção e reserva são associações frequentes."
+    },
+    {
+        pergunta: "Uma orientação escolar sobre alimentação deve priorizar:",
+        alternativas: [
+            "variedade de alimentos, equilíbrio, hidratação e adequação às necessidades individuais.",
+            "eliminação completa de grupos alimentares sem indicação profissional, conforme o funcionamento do sistema analisado.",
+            "uso de suplementos como substitutos obrigatórios das refeições.",
+            "restrição extrema para alcançar um padrão corporal.",
+            "consumo de um único alimento considerado saudável."
+        ],
+        correta: 0,
+        explicacao: "Educação alimentar promove escolhas variadas e sustentáveis, sem dietas extremas ou padrões corporais rígidos.",
+        feedbackAcerto: "Correto. Você escolheu uma orientação baseada em saúde e equilíbrio.",
+        feedbackErro: "Restrições severas e substituições indiscriminadas podem prejudicar crescimento e saúde.",
+        dicaBanca: "Alimentação saudável envolve variedade e equilíbrio."
+    },
+    {
+        pergunta: "Os alvéolos possuem paredes muito finas, grande área total e intensa rede capilar. Essas características favorecem:",
+        alternativas: [
+            "a produção de hemácias no interior dos pulmões, sem alterar os demais processos corporais.",
+            "a difusão de oxigênio e dióxido de carbono entre ar e sangue.",
+            "a digestão de proteínas inaladas.",
+            "a filtração de ureia do sangue.",
+            "o bombeamento do sangue para o corpo."
+        ],
+        correta: 1,
+        explicacao: "A estrutura alveolar reduz a distância de difusão e amplia a superfície de trocas gasosas.",
+        feedbackAcerto: "Correto. Você relacionou características anatômicas e eficiência fisiológica.",
+        feedbackErro: "Alvéolos realizam trocas gasosas, não produção de sangue nem filtração renal.",
+        dicaBanca: "Parede fina + capilares + grande área = troca gasosa."
+    },
+    {
+        pergunta: "Durante a inspiração tranquila, o diafragma contrai e se desloca para baixo. Como consequência:",
+        alternativas: [
+            "o volume torácico aumenta, a pressão interna diminui e o ar entra.",
+            "o volume torácico diminui e o ar é expulso.",
+            "a pressão interna aumenta e impede a entrada de ar, de acordo com os dados do enunciado.",
+            "os pulmões produzem ar para preencher o tórax.",
+            "o diafragma bloqueia a passagem de oxigênio."
+        ],
+        correta: 0,
+        explicacao: "A contração do diafragma aumenta o volume da caixa torácica e favorece a entrada de ar.",
+        feedbackAcerto: "Correto. Você conectou movimento muscular, pressão e fluxo de ar.",
+        feedbackErro: "O ar entra devido à diferença de pressão, não por produção pulmonar.",
+        dicaBanca: "Inspiração: diafragma contrai, volume aumenta, pressão cai."
+    },
+    {
+        pergunta: "Uma pessoa apresenta redução importante de hemoglobina. O efeito mais direto tende a ser:",
+        alternativas: [
+            "aumento da coagulação por excesso de plaquetas, durante a situação apresentada.",
+            "produção excessiva de bile.",
+            "menor capacidade de transporte de oxigênio pelo sangue.",
+            "redução da digestão de carboidratos.",
+            "bloqueio da filtração renal."
+        ],
+        correta: 2,
+        explicacao: "A hemoglobina das hemácias liga-se ao oxigênio e o transporta aos tecidos.",
+        feedbackAcerto: "Correto. Você relacionou molécula, célula e função.",
+        feedbackErro: "Plaquetas, bile e néfrons pertencem a funções diferentes.",
+        dicaBanca: "Hemoglobina = transporte de oxigênio."
+    },
+    {
+        pergunta: "Uma válvula cardíaca não fecha adequadamente e parte do sangue retorna à cavidade anterior. A função normal das válvulas é:",
+        alternativas: [
+            "impedir refluxo e manter o fluxo sanguíneo em sentido adequado.",
+            "produzir hemácias durante cada batimento.",
+            "realizar trocas gasosas dentro dos ventrículos, considerando as condições descritas.",
+            "filtrar ureia e excesso de sais.",
+            "armazenar glicose para o músculo cardíaco."
+        ],
+        correta: 0,
+        explicacao: "As válvulas abrem e fecham conforme diferenças de pressão, evitando retorno do sangue.",
+        feedbackAcerto: "Correto. Você relacionou alteração estrutural e consequência funcional.",
+        feedbackErro: "Válvulas orientam o fluxo; não produzem sangue nem realizam filtração.",
+        dicaBanca: "Válvula cardíaca evita refluxo."
+    },
+    {
+        pergunta: "Um glóbulo vermelho sai do ventrículo direito, passa pelos pulmões, retorna ao coração e depois segue aos tecidos. Os dois trajetos correspondem, respectivamente:",
+        alternativas: [
+            "à circulação sistêmica e à circulação pulmonar.",
+            "à circulação linfática e à circulação coronariana.",
+            "à circulação pulmonar e à circulação sistêmica.",
+            "ao sistema urinário e ao sistema digestório.",
+            "à circulação portal e à circulação linfática."
+        ],
+        correta: 2,
+        explicacao: "A circulação pulmonar liga coração e pulmões; a sistêmica liga coração e demais tecidos.",
+        feedbackAcerto: "Correto. Você acompanhou o percurso do sangue pelos dois circuitos.",
+        feedbackErro: "O ventrículo direito envia sangue aos pulmões; o esquerdo envia ao corpo.",
+        dicaBanca: "Direito → pulmões; esquerdo → corpo."
+    },
+    {
+        pergunta: "Após passar pelos capilares, parte do líquido fica entre as células. O sistema linfático ajuda a:",
+        alternativas: [
+            "produzir ácido gástrico e enzimas digestivas, sem alterar os demais processos corporais.",
+            "recolher esse excesso, devolvê-lo à circulação e participar da defesa.",
+            "bombear sangue diretamente aos pulmões.",
+            "formar urina concentrada nos linfonodos.",
+            "transportar impulsos motores aos músculos."
+        ],
+        correta: 1,
+        explicacao: "Vasos linfáticos drenam líquido intersticial, e órgãos linfáticos participam da resposta imune.",
+        feedbackAcerto: "Correto. Você integrou drenagem e defesa.",
+        feedbackErro: "Linfa não substitui sangue nem urina.",
+        dicaBanca: "Sistema linfático: drenagem + imunidade."
+    },
+    {
+        pergunta: "Uma pessoa apresenta número muito baixo de plaquetas. A alteração aumenta principalmente o risco de:",
+        alternativas: [
+            "falta de oxigênio por ausência de hemoglobina, de acordo com os dados do enunciado.",
+            "infecções por redução de todos os leucócitos.",
+            "digestão incompleta de gorduras.",
+            "produção excessiva de insulina.",
+            "sangramentos, devido à dificuldade de formação do tampão plaquetário."
+        ],
+        correta: 4,
+        explicacao: "Plaquetas participam das etapas iniciais da hemostasia e da coagulação.",
+        feedbackAcerto: "Correto. Você associou componente sanguíneo e função.",
+        feedbackErro: "Hemácias transportam oxigênio; leucócitos atuam na defesa.",
+        dicaBanca: "Plaquetas = controle de sangramentos."
+    },
+    {
+        pergunta: "Após grande ingestão de água, os rins eliminam urina mais diluída. Em situação de desidratação, conservam mais água. Isso demonstra participação renal:",
+        alternativas: [
+            "na produção direta de oxigênio.",
+            "na digestão de proteínas alimentares, durante a situação apresentada.",
+            "na condução de impulsos nervosos.",
+            "na regulação do volume e da composição dos líquidos corporais.",
+            "na movimentação dos ossos."
+        ],
+        correta: 3,
+        explicacao: "Os rins ajustam água, sais, pH e eliminam resíduos metabólicos.",
+        feedbackAcerto: "Correto. Você reconheceu a função regulatória, além da simples eliminação.",
+        feedbackErro: "Os rins não apenas filtram; eles reabsorvem e secretam substâncias seletivamente.",
+        dicaBanca: "Rins são fundamentais para a homeostase."
+    },
+    {
+        pergunta: "Uma doença compromete glomérulos, túbulos e ductos responsáveis por filtração, reabsorção e secreção. A unidade funcional afetada é o:",
+        alternativas: [
+            "néfron.",
+            "alvéolo.",
+            "neurônio.",
+            "sarcômero.",
+            "hepatócito."
+        ],
+        correta: 0,
+        explicacao: "O néfron é a unidade microscópica responsável pela formação da urina.",
+        feedbackAcerto: "Correto. Você identificou a unidade renal pelo conjunto de processos.",
+        feedbackErro: "Alvéolos pertencem aos pulmões; neurônios, ao sistema nervoso.",
+        dicaBanca: "Rim e urina apontam para néfron."
+    },
+    {
+        pergunta: "Uma célula recebe sinais por prolongamentos, integra informações e conduz impulsos até outras células. Ela é um:",
+        alternativas: [
+            "osteócito.",
+            "neurônio.",
+            "adipócito.",
+            "eritrócito.",
+            "queratinócito."
+        ],
+        correta: 1,
+        explicacao: "Neurônios são especializados em comunicação por sinais elétricos e químicos.",
+        feedbackAcerto: "Correto. Você reconheceu a especialização funcional da célula.",
+        feedbackErro: "As demais células exercem funções em ossos, tecido adiposo, sangue e pele.",
+        dicaBanca: "Dendritos, corpo celular e axônio indicam neurônio."
+    },
+    {
+        pergunta: "Ao tocar uma superfície muito quente, a mão é retirada antes da percepção consciente completa da dor. Isso ocorre porque:",
+        alternativas: [
+            "a medula espinal pode integrar rapidamente o arco reflexo, enquanto a informação também segue ao encéfalo.",
+            "o músculo identifica sozinho a temperatura e decide a resposta.",
+            "as hemácias enviam o comando diretamente ao braço.",
+            "o encéfalo deixa de receber qualquer informação sobre o estímulo, sem alterar os demais processos corporais.",
+            "a pele produz hormônios que contraem os músculos."
+        ],
+        correta: 0,
+        explicacao: "No arco reflexo, receptores, neurônios e medula coordenam uma resposta rápida de proteção.",
+        feedbackAcerto: "Correto. Você compreendeu rapidez e posterior percepção consciente.",
+        feedbackErro: "O encéfalo recebe informação, mas não precisa iniciar toda resposta reflexa.",
+        dicaBanca: "Reflexo rápido costuma envolver medula espinal."
+    },
+    {
+        pergunta: "Um paciente percebe luz, sons e odores, mas perdeu sensibilidade tátil em uma área da pele. A associação correta entre estímulo e órgão receptor é:",
+        alternativas: [
+            "luz—pele; som—olhos; odor—língua; tato—orelhas.",
+            "luz—olhos; som—orelhas; odor—cavidade nasal; tato—pele.",
+            "luz—cavidade nasal; som—pele; odor—olhos; tato—língua, de acordo com os dados do enunciado.",
+            "luz—orelhas; som—língua; odor—pele; tato—olhos.",
+            "luz—língua; som—nariz; odor—orelhas; tato—retina."
+        ],
+        correta: 1,
+        explicacao: "Cada sistema sensorial possui receptores especializados para determinados estímulos.",
+        feedbackAcerto: "Correto. Você associou adequadamente estímulos e estruturas receptoras.",
+        feedbackErro: "Os órgãos dos sentidos não são intercambiáveis.",
+        dicaBanca: "Visão, audição, olfato e tato possuem receptores específicos."
+    },
+    {
+        pergunta: "Um impulso nervoso produz resposta muscular em milissegundos, enquanto um hormônio circulante pode agir mais lentamente e por período prolongado. A comparação mostra que:",
+        alternativas: [
+            "o sistema nervoso usa sinais rápidos e localizados, e o endócrino usa hormônios transportados pelo sangue.",
+            "o sistema endócrino conduz impulsos elétricos por nervos.",
+            "o sistema nervoso produz apenas respostas lentas e duradouras, sem participação de sinais rápidos ou integração hormonal.",
+            "hormônios não participam da regulação do organismo.",
+            "os dois sistemas atuam sem qualquer integração."
+        ],
+        correta: 0,
+        explicacao: "Nervoso e endócrino diferem no tipo de sinal, velocidade e duração, mas trabalham de modo integrado.",
+        feedbackAcerto: "Correto. Você comparou os dois mecanismos sem tratá-los como sistemas isolados.",
+        feedbackErro: "Hormônios circulam no sangue; impulsos percorrem neurônios.",
+        dicaBanca: "Nervoso: rápido; endócrino: hormônios e ação geralmente mais duradoura."
+    },
+    {
+        pergunta: "Após uma refeição rica em carboidratos, a glicose sanguínea aumenta. A insulina contribui para reduzi-la porque:",
+        alternativas: [
+            "transforma toda glicose em proteínas no sangue.",
+            "bloqueia permanentemente a digestão de carboidratos, considerando as condições descritas.",
+            "favorece a entrada e o armazenamento de glicose em células e tecidos.",
+            "faz o fígado liberar mais glicose para a circulação.",
+            "substitui a ação de todas as enzimas digestivas."
+        ],
+        correta: 2,
+        explicacao: "A insulina facilita captação e armazenamento de glicose, contribuindo para o controle glicêmico.",
+        feedbackAcerto: "Correto. Você relacionou hormônio, estímulo e resposta.",
+        feedbackErro: "A insulina não elimina toda a glicose nem interrompe a digestão.",
+        dicaBanca: "Insulina ajuda a baixar a glicemia."
+    },
+    {
+        pergunta: "Pele íntegra, muco e acidez do estômago atuam antes do reconhecimento específico de um microrganismo. Eles pertencem:",
+        alternativas: [
+            "à memória imunológica adquirida por vacinação.",
+            "à produção específica de anticorpos por linfócitos, conforme o funcionamento do sistema analisado.",
+            "à imunização passiva por soro.",
+            "ao sistema de coagulação exclusivamente.",
+            "à defesa inata, por funcionarem como barreiras gerais."
+        ],
+        correta: 4,
+        explicacao: "Defesas inatas atuam rapidamente e sem especificidade para um agente particular.",
+        feedbackAcerto: "Correto. Você diferenciou barreiras gerais de respostas adaptativas.",
+        feedbackErro: "Anticorpos e memória pertencem à imunidade adaptativa.",
+        dicaBanca: "Pele e mucosas são barreiras inatas."
+    },
+    {
+        pergunta: "Uma vacina apresenta ao sistema imune antígenos ou instruções relacionadas a um agente, sem causar a doença nas condições de uso. O objetivo é:",
+        alternativas: [
+            "fornecer antibióticos prontos contra qualquer infecção.",
+            "substituir definitivamente os leucócitos do organismo.",
+            "produzir imunidade apenas durante algumas horas.",
+            "impedir qualquer mutação futura do agente.",
+            "induzir resposta específica e memória imunológica."
+        ],
+        correta: 4,
+        explicacao: "Vacinas promovem imunização ativa e preparação do sistema imune para exposições futuras.",
+        feedbackAcerto: "Correto. Você identificou o mecanismo central da vacinação.",
+        feedbackErro: "Vacinas não são antibióticos e não impedem mutações.",
+        dicaBanca: "Vacina = resposta ativa + memória."
+    },
+    {
+        pergunta: "Uma pessoa vacinada produz sua própria resposta imune; outra recebe anticorpos prontos por meio de um soro. Os casos representam, respectivamente:",
+        alternativas: [
+            "imunização passiva e imunização ativa.",
+            "duas formas de imunização ativa.",
+            "imunização ativa e imunização passiva.",
+            "duas formas de imunização passiva.",
+            "tratamento antibiótico e vacinação."
+        ],
+        correta: 2,
+        explicacao: "Na ativa, o organismo responde ao antígeno; na passiva, recebe anticorpos já formados.",
+        feedbackAcerto: "Correto. Você diferenciou origem da proteção e formação de memória.",
+        feedbackErro: "A imunização passiva tende a ser imediata e temporária, sem a mesma memória da ativa.",
+        dicaBanca: "Ativa produz; passiva recebe."
+    },
+    {
+        pergunta: "Em uma segunda exposição ao mesmo agente, a resposta pode ser mais rápida e intensa. Isso ocorre devido:",
+        alternativas: [
+            "ao aumento permanente da temperatura corporal.",
+            "à transformação de hemácias em anticorpos.",
+            "à perda de especificidade do sistema imune.",
+            "à presença de células de memória formadas após o primeiro contato.",
+            "à eliminação de todos os microrganismos do ambiente, durante a situação apresentada."
+        ],
+        correta: 3,
+        explicacao: "Células de memória permitem reconhecimento e resposta mais eficientes em contatos posteriores.",
+        feedbackAcerto: "Correto. Você relacionou memória e resposta secundária.",
+        feedbackErro: "A memória é específica e não elimina todos os agentes do ambiente.",
+        dicaBanca: "Segundo contato mais rápido = memória imunológica."
+    },
+    {
+        pergunta: "Um hemograma indica redução importante de leucócitos. A consequência mais diretamente relacionada é:",
+        alternativas: [
+            "maior dificuldade de defesa contra agentes infecciosos.",
+            "perda da capacidade de transportar oxigênio por falta de hemoglobina.",
+            "diminuição exclusiva da coagulação por falta de plaquetas.",
+            "bloqueio da digestão de lipídios.",
+            "redução da produção de urina."
+        ],
+        correta: 0,
+        explicacao: "Leucócitos participam de diferentes mecanismos de defesa do organismo.",
+        feedbackAcerto: "Correto. Você distinguiu as funções dos componentes sanguíneos.",
+        feedbackErro: "Hemácias transportam gases e plaquetas participam da coagulação.",
+        dicaBanca: "Leucócitos = defesa."
+    },
+    {
+        pergunta: "Quando grande parte da população está imunizada, a circulação de um agente pode diminuir e pessoas vulneráveis recebem proteção indireta. Esse benefício coletivo ocorre porque:",
+        alternativas: [
+            "a vacina elimina todos os microrganismos do ambiente.",
+            "pessoas vacinadas deixam de ter qualquer contato social, conforme o funcionamento do sistema analisado.",
+            "há menos indivíduos suscetíveis capazes de manter cadeias de transmissão.",
+            "a imunização transforma vírus em bactérias inofensivas.",
+            "somente indivíduos não vacinados produzem anticorpos."
+        ],
+        correta: 2,
+        explicacao: "Cobertura vacinal elevada pode reduzir transmissão e proteger coletivamente.",
+        feedbackAcerto: "Correto. Você explicou o efeito populacional da vacinação.",
+        feedbackErro: "Nenhuma vacina elimina automaticamente todos os agentes do ambiente.",
+        dicaBanca: "Vacinação coletiva reduz oportunidades de transmissão."
+    },
+    {
+        pergunta: "Qual alternativa reúne apenas agentes biológicos capazes de causar doenças infecciosas?",
+        alternativas: [
+            "vírus, poeira, calor e bactérias.",
+            "fungos, radiação, protozoários e frio.",
+            "bactérias, toxinas industriais, vermes e ruído.",
+            "protozoários, desidratação, vírus e poluição.",
+            "vírus, bactérias, fungos e protozoários."
+        ],
+        correta: 4,
+        explicacao: "Agentes infecciosos incluem microrganismos e parasitas biológicos.",
+        feedbackAcerto: "Correto. Você separou agentes biológicos de fatores físicos e químicos.",
+        feedbackErro: "Frio, calor, radiação e poluição podem afetar a saúde, mas não são agentes infecciosos.",
+        dicaBanca: "Infeccioso envolve agente biológico transmissível."
+    },
+    {
+        pergunta: "Uma amostra contém um agente acelular que só se multiplica em células e outro que possui membrana, ribossomos e DNA próprio. Eles são, respectivamente:",
+        alternativas: [
+            "bactéria e vírus.",
+            "fungo e protozoário.",
+            "vírus e fungo.",
+            "vírus e bactéria.",
+            "protozoário e bactéria."
+        ],
+        correta: 3,
+        explicacao: "Vírus são acelulares e dependentes de células; bactérias são células procariontes.",
+        feedbackAcerto: "Correto. Você comparou organização e capacidade metabólica.",
+        feedbackErro: "Bactérias possuem ribossomos e metabolismo; vírus não.",
+        dicaBanca: "Vírus = acelular; bactéria = procarionte."
+    },
+    {
+        pergunta: "Uma pessoa interrompe o antibiótico antes do período orientado e reutiliza sobras em outra infecção. Essa prática pode:",
+        alternativas: [
+            "transformar bactérias em vírus.",
+            "favorecer seleção de bactérias resistentes e tratamento inadequado.",
+            "garantir imunidade permanente contra infecções.",
+            "aumentar a eficácia do medicamento em todas as situações, durante a situação apresentada.",
+            "substituir a necessidade de diagnóstico."
+        ],
+        correta: 1,
+        explicacao: "Uso incorreto cria pressão seletiva e pode favorecer sobrevivência de bactérias resistentes.",
+        feedbackAcerto: "Correto. Você relacionou comportamento individual e problema coletivo.",
+        feedbackErro: "Antibióticos devem ser usados com orientação e não atuam contra vírus.",
+        dicaBanca: "Uso inadequado favorece resistência bacteriana."
+    },
+    {
+        pergunta: "Em um vestiário úmido, várias pessoas passam a apresentar micose nos pés. Uma medida preventiva adequada é:",
+        alternativas: [
+            "usar antibióticos preventivamente antes de frequentar o local, considerando as condições descritas.",
+            "manter os pés secos e evitar compartilhar calçados, toalhas e objetos pessoais.",
+            "manter calçados fechados e úmidos por longos períodos.",
+            "compartilhar toalhas apenas com pessoas sem sintomas.",
+            "aplicar qualquer produto químico sem orientação."
+        ],
+        correta: 1,
+        explicacao: "Fungos desenvolvem-se melhor em ambientes quentes e úmidos, e objetos compartilhados podem favorecer transmissão.",
+        feedbackAcerto: "Correto. Você escolheu uma medida coerente com o modo de transmissão e o ambiente.",
+        feedbackErro: "Antibióticos não previnem micoses e o compartilhamento pode transmitir fungos.",
+        dicaBanca: "Micose: reduzir umidade e evitar compartilhamento."
+    },
+    {
+        pergunta: "Em uma comunidade sem água tratada, aumentam casos de diarreia após consumo de água de poços contaminados. A prevenção mais abrangente envolve:",
+        alternativas: [
+            "uso rotineiro de antibióticos por toda a população.",
+            "eliminação de frutas e verduras da alimentação.",
+            "vacinação como única medida para qualquer doença intestinal, conforme o funcionamento do sistema analisado.",
+            "tratamento da água, saneamento e higiene no preparo dos alimentos.",
+            "redução da ingestão de água para evitar contato com agentes."
+        ],
+        correta: 3,
+        explicacao: "Doenças de transmissão fecal-oral são reduzidas por água segura, esgotamento sanitário e higiene.",
+        feedbackAcerto: "Correto. Você selecionou medidas coletivas e individuais complementares.",
+        feedbackErro: "Medicamentos não substituem saneamento e podem ser inadequados ao agente.",
+        dicaBanca: "Água segura + esgoto + higiene quebram a transmissão fecal-oral."
+    },
+    {
+        pergunta: "Uma protozoose é transmitida por um inseto vetor que se reproduz em determinados ambientes. A estratégia preventiva mais adequada combina:",
+        alternativas: [
+            "controle do vetor, redução de criadouros ou abrigos e proteção contra o contato.",
+            "uso de antibióticos em pessoas sem sintomas.",
+            "eliminação de toda a vegetação da região.",
+            "tratamento apenas dos reservatórios de água potável.",
+            "isolamento permanente de todas as pessoas infectadas, sem alterar os demais processos corporais."
+        ],
+        correta: 0,
+        explicacao: "Prevenção de doenças vetoriais exige conhecer ciclo, vetor, ambiente e formas de exposição.",
+        feedbackAcerto: "Correto. Você propôs medidas baseadas na cadeia de transmissão.",
+        feedbackErro: "Uma medida isolada e sem relação com o vetor costuma ser insuficiente.",
+        dicaBanca: "Doença vetorial: interrompa o contato com o vetor e seu ciclo."
+    },
+    {
+        pergunta: "Em uma região, crianças brincam descalças em solo contaminado por fezes e consomem alimentos sem higienização. Para reduzir verminoses, é necessário:",
+        alternativas: [
+            "tomar vermífugos continuamente sem avaliação, de acordo com os dados do enunciado.",
+            "evitar qualquer atividade ao ar livre.",
+            "substituir água por bebidas industrializadas.",
+            "ampliar saneamento, usar calçados e higienizar mãos e alimentos.",
+            "usar antibióticos após contato com o solo."
+        ],
+        correta: 3,
+        explicacao: "Verminoses intestinais relacionam-se frequentemente a solo, água e alimentos contaminados.",
+        feedbackAcerto: "Correto. Você integrou prevenção ambiental e hábitos individuais.",
+        feedbackErro: "Medicamentos podem tratar casos, mas não substituem prevenção e diagnóstico.",
+        dicaBanca: "Verminoses: saneamento, higiene e proteção contra solo contaminado."
+    },
+    {
+        pergunta: "Durante um surto de doença respiratória na escola, a estratégia mais adequada é:",
+        alternativas: [
+            "fechar permanentemente todas as janelas.",
+            "compartilhar copos apenas entre colegas da mesma turma.",
+            "combinar ventilação, higiene das mãos, etiqueta respiratória e orientação conforme autoridades de saúde.",
+            "usar antibióticos por conta própria ao primeiro sintoma, para evitar qualquer interrupção das aulas e das atividades escolares.",
+            "ocultar casos para evitar preocupação das famílias."
+        ],
+        correta: 2,
+        explicacao: "Prevenção escolar deve combinar medidas ambientais, comportamentais e comunicação responsável.",
+        feedbackAcerto: "Correto. Você escolheu uma abordagem integrada e proporcional.",
+        feedbackErro: "Ambientes fechados e compartilhamento de objetos podem aumentar transmissão.",
+        dicaBanca: "Prevenção coletiva exige informação, ventilação e higiene."
+    },
+    {
+        pergunta: "A implantação de rede de esgoto, coleta de resíduos, drenagem e abastecimento seguro reduz doenças porque:",
+        alternativas: [
+            "elimina a necessidade de vacinação e atendimento médico, considerando as condições descritas.",
+            "impede toda doença genética e crônica.",
+            "substitui hábitos de higiene pessoal.",
+            "diminui a exposição da população a agentes presentes em água, solo e resíduos.",
+            "remove microrganismos benéficos do ambiente."
+        ],
+        correta: 3,
+        explicacao: "Saneamento atua sobre determinantes ambientais da saúde e interrompe várias rotas de transmissão.",
+        feedbackAcerto: "Correto. Você relacionou infraestrutura e prevenção coletiva.",
+        feedbackErro: "Saneamento é essencial, mas não substitui todas as demais ações de saúde.",
+        dicaBanca: "Saneamento reduz exposição ambiental a agentes."
+    },
+    {
+        pergunta: "Uma campanha de vacinação, vigilância de surtos e melhoria do saneamento diferem de uma consulta individual porque:",
+        alternativas: [
+            "dispensam profissionais de saúde.",
+            "buscam proteger populações e atuar sobre determinantes coletivos da saúde.",
+            "tratam apenas doenças raras.",
+            "não utilizam dados científicos.",
+            "impedem qualquer escolha individual, conforme o funcionamento do sistema analisado."
+        ],
+        correta: 1,
+        explicacao: "Saúde pública organiza ações populacionais de prevenção, vigilância e promoção.",
+        feedbackAcerto: "Correto. Você reconheceu a escala coletiva das intervenções.",
+        feedbackErro: "Cuidado individual e saúde pública são complementares.",
+        dicaBanca: "Saúde pública olha para a população e seus determinantes."
+    },
+    {
+        pergunta: "Uma ação educativa apresenta dados locais, ouve dúvidas da comunidade e constrói orientações viáveis com participação dos moradores. Ela tende a ser mais efetiva porque:",
+        alternativas: [
+            "substitui evidências científicas por opiniões.",
+            "impõe regras sem explicar motivos.",
+            "culpabiliza indivíduos por problemas estruturais.",
+            "usa linguagem técnica para impedir questionamentos, sem alterar os demais processos corporais.",
+            "considera conhecimentos, condições reais e participação das pessoas nas decisões."
+        ],
+        correta: 4,
+        explicacao: "Educação em saúde efetiva combina evidências, diálogo, contexto e autonomia.",
+        feedbackAcerto: "Correto. Você identificou uma prática participativa e não autoritária.",
+        feedbackErro: "Informar não é apenas transmitir ordens; é apoiar compreensão e ação possível.",
+        dicaBanca: "Educação em saúde precisa dialogar com a realidade."
+    },
+    {
+        pergunta: "Resíduos acumulados a céu aberto retêm água e atraem animais. Isso pode aumentar doenças porque:",
+        alternativas: [
+            "todo lixo produz radiação ionizante.",
+            "resíduos eliminam microrganismos do solo.",
+            "favorece criadouros de vetores e contato com agentes contaminantes.",
+            "animais atraídos tornam-se automaticamente imunes, de acordo com os dados do enunciado.",
+            "o lixo impede a reprodução de insetos."
+        ],
+        correta: 2,
+        explicacao: "Destino inadequado de resíduos favorece vetores, animais sinantrópicos e contaminação ambiental.",
+        feedbackAcerto: "Correto. Você relacionou manejo de resíduos e cadeia de transmissão.",
+        feedbackErro: "O risco depende do tipo de resíduo e das condições ambientais, não de radiação.",
+        dicaBanca: "Lixo acumulado pode virar abrigo e criadouro."
+    },
+    {
+        pergunta: "Após enchentes, surgem muitos casos de doença transmitida por água contaminada. A resposta de saúde mais adequada é:",
+        alternativas: [
+            "distribuir antibióticos sem identificar a doença.",
+            "esperar o fim do surto antes de coletar dados.",
+            "fechar unidades de saúde para evitar aglomeração.",
+            "recomendar que a população deixe de beber líquidos até o fim da investigação e da identificação do agente.",
+            "garantir água segura, orientar higiene, investigar fontes e atender rapidamente os casos."
+        ],
+        correta: 4,
+        explicacao: "Controle de surtos exige interromper transmissão, investigar e oferecer cuidado.",
+        feedbackAcerto: "Correto. Você integrou vigilância, prevenção e assistência.",
+        feedbackErro: "Medicamento sem diagnóstico pode ser ineficaz e causar outros problemas.",
+        dicaBanca: "Surto: investigar, interromper transmissão e cuidar dos casos."
+    },
+    {
+        pergunta: "No sistema reprodutor masculino, a produção de espermatozoides ocorre principalmente:",
+        alternativas: [
+            "na próstata.",
+            "nos túbulos seminíferos dos testículos.",
+            "na uretra.",
+            "nas vesículas seminais, considerando as condições descritas.",
+            "no epidídimo."
+        ],
+        correta: 1,
+        explicacao: "Os túbulos seminíferos são o local da espermatogênese; o epidídimo participa da maturação e armazenamento.",
+        feedbackAcerto: "Correto. Você diferenciou produção de maturação e transporte.",
+        feedbackErro: "Próstata e vesículas produzem secreções, não espermatozoides.",
+        dicaBanca: "Testículos produzem; epidídimo matura e armazena."
+    },
+    {
+        pergunta: "Em um ciclo menstrual, um folículo ovariano maduro libera uma célula reprodutiva. Esse evento é a:",
+        alternativas: [
+            "menstruação.",
+            "fecundação.",
+            "implantação.",
+            "ovulação.",
+            "gestação."
+        ],
+        correta: 3,
+        explicacao: "Ovulação é a liberação do ovócito pelo ovário.",
+        feedbackAcerto: "Correto. Você reconheceu o evento ovariano específico.",
+        feedbackErro: "Menstruação é a eliminação de parte do endométrio, e fecundação é a união dos gametas.",
+        dicaBanca: "Ovulação = liberação do ovócito."
+    },
+    {
+        pergunta: "Quando não ocorre implantação, parte do revestimento interno do útero é eliminada com sangue. Esse processo é:",
+        alternativas: [
+            "menstruação.",
+            "ovulação.",
+            "fecundação, sem alterar os demais processos corporais.",
+            "nidação.",
+            "lactação."
+        ],
+        correta: 0,
+        explicacao: "A menstruação envolve descamação parcial do endométrio ao final de um ciclo sem gestação estabelecida.",
+        feedbackAcerto: "Correto. Você relacionou endométrio e ausência de implantação.",
+        feedbackErro: "Ovulação ocorre no ovário; menstruação envolve o revestimento uterino.",
+        dicaBanca: "Menstruação = eliminação de parte do endométrio."
+    },
+    {
+        pergunta: "Na reprodução humana, a fecundação ocorre geralmente:",
+        alternativas: [
+            "no útero, durante a menstruação.",
+            "no ovário, antes da ovulação.",
+            "na tuba uterina, quando os gametas se unem e formam o zigoto.",
+            "na vagina, durante a implantação, de acordo com os dados do enunciado.",
+            "na placenta, após o nascimento."
+        ],
+        correta: 2,
+        explicacao: "A fecundação costuma ocorrer na tuba uterina; depois, o embrião inicial desloca-se em direção ao útero.",
+        feedbackAcerto: "Correto. Você diferenciou fecundação e implantação.",
+        feedbackErro: "A implantação ocorre no endométrio, não é sinônimo de fecundação.",
+        dicaBanca: "Fecundação geralmente na tuba; implantação no útero."
+    },
+    {
+        pergunta: "Durante a gestação, a placenta permite trocas entre os organismos materno e fetal sem que os sangues se misturem diretamente em condições normais. Ela participa:",
+        alternativas: [
+            "da digestão completa dos alimentos do feto.",
+            "da produção de neurônios maternos.",
+            "da substituição permanente dos pulmões da gestante, durante a situação apresentada.",
+            "da troca de gases e nutrientes, da remoção de resíduos e da produção de hormônios.",
+            "da formação de todos os órgãos após o nascimento."
+        ],
+        correta: 3,
+        explicacao: "A placenta é órgão temporário de trocas e regulação hormonal na gestação.",
+        feedbackAcerto: "Correto. Você reconheceu várias funções da placenta.",
+        feedbackErro: "Placenta não mistura diretamente os sangues nem substitui todos os órgãos.",
+        dicaBanca: "Placenta = trocas + hormônios."
+    },
+    {
+        pergunta: "Uma abordagem escolar responsável sobre sexualidade deve:",
+        alternativas: [
+            "usar medo e constrangimento como principal estratégia.",
+            "limitar-se a proibir perguntas dos estudantes.",
+            "reforçar preconceitos e estereótipos.",
+            "substituir orientação profissional por informações sem fonte, considerando as condições descritas.",
+            "oferecer informação científica, respeito, prevenção, consentimento e espaço seguro para dúvidas."
+        ],
+        correta: 4,
+        explicacao: "Educação em sexualidade deve ser informativa, respeitosa e voltada à saúde e aos direitos.",
+        feedbackAcerto: "Correto. Você escolheu uma abordagem protetiva e baseada em evidências.",
+        feedbackErro: "Constrangimento e desinformação dificultam prevenção e busca de ajuda.",
+        dicaBanca: "Informação, respeito e consentimento são centrais."
+    },
+    {
+        pergunta: "Sobre métodos contraceptivos e prevenção de infecções sexualmente transmissíveis, é correto afirmar que:",
+        alternativas: [
+            "preservativos ajudam a prevenir ISTs e gravidez, enquanto outros métodos contraceptivos não protegem necessariamente contra ISTs.",
+            "todos os métodos contraceptivos previnem igualmente todas as ISTs.",
+            "anticoncepcionais hormonais substituem a necessidade de preservativos e oferecem proteção equivalente contra todas as ISTs em qualquer situação clínica.",
+            "vacinas disponíveis eliminam o risco de todas as ISTs.",
+            "a ausência de sintomas garante ausência de infecção."
+        ],
+        correta: 0,
+        explicacao: "Métodos têm finalidades e eficácias diferentes; preservativos têm papel importante na dupla prevenção.",
+        feedbackAcerto: "Correto. Você diferenciou contracepção de prevenção de ISTs.",
+        feedbackErro: "Muitas ISTs podem ser assintomáticas, e métodos hormonais não funcionam como barreira.",
+        dicaBanca: "Contracepção e prevenção de ISTs não são sinônimos."
+    },
+    {
+        pergunta: "Uma estratégia ampla de prevenção de ISTs inclui:",
+        alternativas: [
+            "automedicação após qualquer contato.",
+            "interrupção de tratamento quando desaparecem sintomas, sem alterar os demais processos corporais.",
+            "uso de preservativos, vacinação quando disponível, testagem e acompanhamento em saúde.",
+            "uso de antibióticos para prevenir infecções virais.",
+            "confiança apenas na aparência saudável de uma pessoa."
+        ],
+        correta: 2,
+        explicacao: "Prevenção combinada utiliza diferentes medidas conforme a infecção e a situação.",
+        feedbackAcerto: "Correto. Você reconheceu que prevenção não depende de uma única ação.",
+        feedbackErro: "Ausência de sintomas não exclui infecção, e antibióticos não previnem vírus.",
+        dicaBanca: "Prevenção combinada = barreira, vacina, testagem e cuidado."
+    },
+    {
+        pergunta: "O uso de drogas psicoativas pode afetar percepção, julgamento e comportamento. Em saúde pública, a abordagem adequada deve:",
+        alternativas: [
+            "tratar dependência apenas como falta de vontade e aplicar punições como principal medida de saúde no contexto analisado.",
+            "combinar prevenção, informação, redução de danos e acesso a cuidado sem estigmatização.",
+            "ocultar riscos para evitar curiosidade.",
+            "estimular uso para testar autocontrole.",
+            "substituir atendimento profissional por punição."
+        ],
+        correta: 1,
+        explicacao: "Problemas relacionados a drogas envolvem fatores biológicos, psicológicos e sociais e exigem cuidado baseado em evidências.",
+        feedbackAcerto: "Correto. Você escolheu uma abordagem de saúde, não de estigma.",
+        feedbackErro: "Estigmatização pode afastar pessoas do cuidado e não resolve fatores de risco.",
+        dicaBanca: "Prevenção e cuidado funcionam melhor com informação e acolhimento."
+    },
+    {
+        pergunta: "Uma proposta de qualidade de vida para adolescentes deve integrar:",
+        alternativas: [
+            "exercício excessivo, restrição alimentar e redução do sono como condições necessárias para melhorar a saúde e a produtividade.",
+            "foco exclusivo na aparência corporal.",
+            "automedicação para manter produtividade.",
+            "alimentação equilibrada, sono adequado, atividade física segura, saúde mental, vínculos sociais e prevenção.",
+            "eliminação do descanso e das atividades de lazer."
+        ],
+        correta: 3,
+        explicacao: "Saúde integral envolve dimensões físicas, emocionais e sociais, respeitando necessidades individuais.",
+        feedbackAcerto: "Correto. Você reconheceu uma visão ampla e equilibrada de saúde.",
+        feedbackErro: "Condutas extremas podem prejudicar crescimento, bem-estar e aprendizagem.",
+        dicaBanca: "Qualidade de vida é equilíbrio, não desempenho extremo."
+    }
+];

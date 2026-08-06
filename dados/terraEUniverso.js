@@ -1,1076 +1,752 @@
 const terraEUniverso = [
-
-{
-    pergunta:
-    "Desde a Antiguidade, os seres humanos observam o céu em busca de explicações para fenômenos naturais e para compreender seu lugar no Universo. Atualmente, a ciência define o Universo como:",
-
-    alternativas: [
-        "O conjunto formado apenas pelos planetas do Sistema Solar.",
-        "A região do espaço ocupada exclusivamente pela Via Láctea.",
-        "O espaço localizado além da atmosfera terrestre.",
-        "O conjunto de todos os corpos celestes, matéria, energia, espaço e tempo existentes.",
-        "A parte do espaço que pode ser observada a olho nu."
-    ],
-
-    correta: 3,
-
-    explicacao:
-    "O Universo é o conjunto de tudo o que existe, incluindo matéria, energia, espaço e tempo. Nele estão presentes galáxias, estrelas, planetas, satélites naturais, nebulosas e inúmeros outros corpos celestes.",
-
-    feedbackAcerto:
-    "Excelente! Você compreendeu que o Universo engloba tudo o que existe, não apenas os corpos celestes conhecidos.",
-
-    feedbackErro:
-    "O Universo não corresponde apenas ao Sistema Solar ou à Via Láctea. Ele abrange toda a matéria, energia, espaço e tempo existentes.",
-
-    dicaBanca:
-    "Questões de introdução costumam confundir Universo com Sistema Solar ou Via Láctea. Lembre-se: Universo = tudo o que existe."
-},
-
-{
-    pergunta:
-    "Pesquisadores estimam que a Terra tenha se formado há aproximadamente 4,6 bilhões de anos. Segundo a hipótese científica mais aceita, a formação do planeta ocorreu a partir:",
-
-    alternativas: [
-        "Da aglomeração de poeira e gases presentes na nebulosa que originou o Sistema Solar.",
-        "Da fragmentação da Lua primitiva.",
-        "Da explosão de uma estrela próxima ao Sol.",
-        "Da união de diversos cometas que colidiram entre si.",
-        "Da separação de um planeta gasoso gigante."
-    ],
-
-    correta: 0,
-
-    explicacao:
-    "A teoria mais aceita afirma que a Terra surgiu a partir da acreção de partículas de poeira e gás presentes na nebulosa solar. Com o tempo, essas partículas se agregaram formando planetesimais e posteriormente os planetas.",
-
-    feedbackAcerto:
-    "Muito bem! Você identificou corretamente o processo de formação da Terra a partir da nebulosa solar.",
-
-    feedbackErro:
-    "A Terra não surgiu da Lua nem da explosão de uma estrela. Ela se formou pela aglomeração gradual de partículas presentes na nebulosa que originou o Sistema Solar.",
-
-    dicaBanca:
-    "As bancas costumam associar a formação dos planetas ao processo de acreção, caracterizado pela união progressiva de partículas de matéria."
-},
-
-{
-    pergunta:
-    "Durante uma aula de Ciências, um estudante afirmou que a Terra é composta por diferentes camadas internas. Sobre essa estrutura, assinale a alternativa correta.",
-
-    alternativas: [
-        "A crosta é a camada mais profunda do planeta.",
-        "O núcleo localiza-se entre a crosta e o manto.",
-        "O manto está localizado acima da atmosfera.",
-        "A Terra possui apenas duas camadas internas principais.",
-        "A estrutura interna da Terra é formada principalmente por crosta, manto e núcleo."
-    ],
-
-    correta: 4,
-
-    explicacao:
-    "A estrutura interna da Terra é tradicionalmente dividida em três grandes camadas: crosta, manto e núcleo. Cada uma possui composição, temperatura e características próprias.",
-
-    feedbackAcerto:
-    "Excelente! Você reconheceu corretamente as três principais camadas internas da Terra.",
-
-    feedbackErro:
-    "A divisão clássica da estrutura terrestre compreende crosta, manto e núcleo. É importante memorizar essa organização básica.",
-
-    dicaBanca:
-    "Quando a questão pedir a divisão geral da Terra, a resposta costuma envolver crosta, manto e núcleo."
-},
-
-{
-    pergunta:
-    "A camada onde vivemos, construímos cidades e desenvolvemos atividades econômicas recebe o nome de:",
-
-    alternativas: [
-        "Núcleo externo.",
-        "Crosta terrestre.",
-        "Manto inferior.",
-        "Núcleo interno.",
-        "Astenosfera."
-    ],
-
-    correta: 1,
-
-    explicacao:
-    "A crosta terrestre é a camada mais externa e menos espessa da Terra. É nela que estão os continentes, oceanos e todas as formas conhecidas de vida.",
-
-    feedbackAcerto:
-    "Perfeito! A vida humana se desenvolve sobre a crosta terrestre.",
-
-    feedbackErro:
-    "A camada superficial da Terra é a crosta terrestre. As demais camadas encontram-se abaixo dela.",
-
-    dicaBanca:
-    "Sempre que a questão mencionar superfície terrestre, continentes ou local onde vivemos, pense primeiro em crosta terrestre."
-},
-
-{
-    pergunta:
-    "A movimentação das placas tectônicas é responsável por diversos fenômenos geológicos observados na superfície terrestre. Essas placas correspondem a fragmentos da:",
-
-    alternativas: [
-        "Atmosfera.",
-        "Hidrosfera.",
-        "Litosfera.",
-        "Biosfera.",
-        "Estratosfera."
-    ],
-
-    correta: 2,
-
-    explicacao:
-    "As placas tectônicas são blocos rígidos que compõem a litosfera. Elas movimentam-se lentamente sobre a astenosfera, provocando terremotos, formação de montanhas e atividade vulcânica.",
-
-    feedbackAcerto:
-    "Excelente! Você relacionou corretamente as placas tectônicas à litosfera.",
-
-    feedbackErro:
-    "As placas tectônicas fazem parte da litosfera, camada rígida formada pela crosta e pela porção superior do manto.",
-
-    dicaBanca:
-    "Litosfera = camada rígida. Astenosfera = camada mais plástica sobre a qual as placas se movimentam."
-},
-{
-    pergunta:
-    "A atmosfera terrestre desempenha papel fundamental para a manutenção da vida no planeta. Sua principal função é:",
-
-    alternativas: [
-        "Produzir toda a água existente na Terra.",
-        "Impedir completamente a entrada da luz solar.",
-        "Controlar diretamente os movimentos das placas tectônicas.",
-        "Proteger a Terra, regular a temperatura e fornecer gases essenciais à vida.",
-        "Formar exclusivamente as nuvens e os ventos."
-    ],
-
-    correta: 3,
-
-    explicacao:
-    "A atmosfera é a camada de gases que envolve a Terra. Ela protege o planeta contra parte da radiação solar, ajuda a regular a temperatura e fornece gases indispensáveis à vida, como oxigênio e gás carbônico.",
-
-    feedbackAcerto:
-    "Excelente! Você reconheceu a importância da atmosfera para a proteção e manutenção da vida na Terra.",
-
-    feedbackErro:
-    "A atmosfera não serve apenas para formar nuvens ou ventos. Sua função é muito mais ampla, incluindo proteção contra radiações e manutenção das condições necessárias à vida.",
-
-    dicaBanca:
-    "Quando a questão abordar a função da atmosfera, procure alternativas relacionadas à proteção da Terra e à manutenção da vida."
-},
-
-{
-    pergunta:
-    "Um avião comercial realiza a maior parte de seus voos na camada atmosférica conhecida por apresentar menor ocorrência de fenômenos meteorológicos. Essa camada é chamada de:",
-
-    alternativas: [
-        "Troposfera.",
-        "Estratosfera.",
-        "Mesosfera.",
-        "Termosfera.",
-        "Exosfera."
-    ],
-
-    correta: 1,
-
-    explicacao:
-    "A estratosfera localiza-se acima da troposfera e apresenta maior estabilidade atmosférica. Por isso, muitas aeronaves comerciais operam nessa camada durante boa parte do voo.",
-
-    feedbackAcerto:
-    "Muito bem! A estratosfera apresenta condições mais estáveis para a navegação aérea.",
-
-    feedbackErro:
-    "A troposfera concentra a maioria dos fenômenos meteorológicos. Por isso, voos comerciais costumam operar em regiões da estratosfera para evitar turbulências frequentes.",
-
-    dicaBanca:
-    "Troposfera = tempo atmosférico. Estratosfera = camada da ozonosfera e de muitos voos comerciais."
-},
-
-{
-    pergunta:
-    "A camada de ozônio é extremamente importante para a vida na Terra porque:",
-
-    alternativas: [
-        "Absorve grande parte da radiação ultravioleta proveniente do Sol.",
-        "Produz o oxigênio consumido pelos seres vivos.",
-        "Impede totalmente a entrada da luz solar.",
-        "Controla as marés oceânicas.",
-        "Origina os ventos planetários."
-    ],
-
-    correta: 0,
-
-    explicacao:
-    "A camada de ozônio absorve grande parte da radiação ultravioleta emitida pelo Sol. Sem essa proteção, haveria maior incidência de problemas ambientais e de saúde nos seres vivos.",
-
-    feedbackAcerto:
-    "Excelente! Você identificou corretamente a principal função da camada de ozônio.",
-
-    feedbackErro:
-    "A camada de ozônio não produz oxigênio nem controla as marés. Sua principal função é filtrar parte da radiação ultravioleta solar.",
-
-    dicaBanca:
-    "Ozônio está associado à proteção contra raios ultravioleta. Essa é uma das associações mais cobradas em provas."
-},
-
-{
-    pergunta:
-    "O efeito estufa é um fenômeno natural que ocorre porque determinados gases presentes na atmosfera:",
-
-    alternativas: [
-        "Bloqueiam completamente a energia solar.",
-        "Impedem a formação das nuvens.",
-        "Produzem oxigênio durante a noite.",
-        "Controlam os movimentos da Lua.",
-        "Retêm parte do calor irradiado pela superfície terrestre."
-    ],
-
-    correta: 4,
-
-    explicacao:
-    "O efeito estufa é um fenômeno natural que mantém a temperatura da Terra adequada para a vida. Ele ocorre porque alguns gases atmosféricos retêm parte do calor emitido pela superfície terrestre.",
-
-    feedbackAcerto:
-    "Perfeito! Você compreendeu o mecanismo básico do efeito estufa.",
-
-    feedbackErro:
-    "O efeito estufa não consiste em bloquear a luz solar. Ele ocorre pela retenção de parte do calor irradiado pela superfície terrestre.",
-
-    dicaBanca:
-    "Cuidado: efeito estufa não é sinônimo de problema ambiental. Ele é um fenômeno natural e essencial à vida."
-},
-
-{
-    pergunta:
-    "O aquecimento global tem sido associado ao aumento da concentração de gases de efeito estufa na atmosfera. Entre as possíveis consequências desse fenômeno está:",
-
-    alternativas: [
-        "Redução permanente da temperatura média global.",
-        "Desaparecimento completo das estações do ano.",
-        "Elevação do nível dos oceanos devido ao derretimento de geleiras.",
-        "Interrupção da rotação terrestre.",
-        "Extinção imediata da camada de ozônio."
-    ],
-
-    correta: 2,
-
-    explicacao:
-    "O aumento da temperatura média global pode acelerar o derretimento de geleiras e calotas polares, contribuindo para a elevação do nível dos oceanos e provocando impactos ambientais significativos.",
-
-    feedbackAcerto:
-    "Excelente! Você relacionou corretamente o aquecimento global ao aumento do nível dos oceanos.",
-
-    feedbackErro:
-    "Uma das principais consequências do aquecimento global é o derretimento de geleiras, que contribui para a elevação do nível do mar.",
-
-    dicaBanca:
-    "As bancas costumam diferenciar efeito estufa (fenômeno natural) de aquecimento global (intensificação relacionada à ação humana)."
-},
-{
-    pergunta:
-    "Em uma região próxima ao encontro de placas tectônicas, moradores sentiram fortes tremores que provocaram rachaduras em construções e danos à infraestrutura local. Esse fenômeno é conhecido como:",
-
-    alternativas: [
-        "Intemperismo.",
-        "Erosão.",
-        "Tsunami.",
-        "Terremoto.",
-        "Assoreamento."
-    ],
-
-    correta: 3,
-
-    explicacao:
-    "Os terremotos são abalos sísmicos provocados pela liberação repentina de energia acumulada nas rochas, geralmente associados ao movimento das placas tectônicas.",
-
-    feedbackAcerto:
-    "Excelente! Você identificou corretamente um terremoto, fenômeno relacionado à dinâmica das placas tectônicas.",
-
-    feedbackErro:
-    "Terremotos são tremores causados pela liberação de energia no interior da Terra, normalmente em regiões onde ocorre movimentação das placas tectônicas.",
-
-    dicaBanca:
-    "Se o enunciado mencionar tremores do solo, ondas sísmicas ou falhas geológicas, a resposta geralmente estará relacionada aos terremotos."
-},
-
-{
-    pergunta:
-    "Em determinada região do planeta, uma montanha passou a liberar gases, cinzas e material incandescente proveniente do interior da Terra. Esse fenômeno caracteriza a atividade de um:",
-
-    alternativas: [
-        "Vulcão.",
-        "Gêiser.",
-        "Meteoro.",
-        "Glaciar.",
-        "Tornado."
-    ],
-
-    correta: 0,
-
-    explicacao:
-    "Os vulcões são estruturas geológicas que permitem a saída de magma, gases e outros materiais do interior terrestre para a superfície.",
-
-    feedbackAcerto:
-    "Muito bem! Você reconheceu corretamente as características típicas da atividade vulcânica.",
-
-    feedbackErro:
-    "A emissão de lava, cinzas e gases está associada aos vulcões, que funcionam como canais de comunicação entre o interior da Terra e a superfície.",
-
-    dicaBanca:
-    "Bancas costumam associar vulcões à saída de magma, gases, cinzas vulcânicas e formação de novas rochas."
-},
-
-{
-    pergunta:
-    "Após um forte terremoto ocorrido no fundo do oceano, enormes ondas atingiram áreas costeiras causando destruição em diversas cidades. Esse fenômeno recebe o nome de:",
-
-    alternativas: [
-        "Maré alta.",
-        "Tsunami.",
-        "Ressaca.",
-        "Corrente marítima.",
-        "Monção."
-    ],
-
-    correta: 1,
-
-    explicacao:
-    "Tsunamis são grandes ondas geradas principalmente por terremotos submarinos, podendo percorrer grandes distâncias e causar severos impactos em áreas costeiras.",
-
-    feedbackAcerto:
-    "Excelente! Você identificou corretamente a origem mais comum dos tsunamis.",
-
-    feedbackErro:
-    "Tsunamis geralmente estão associados a terremotos submarinos, e não a marés comuns ou correntes oceânicas.",
-
-    dicaBanca:
-    "A combinação 'terremoto no fundo do mar + grandes ondas' quase sempre indica tsunami."
-},
-
-{
-    pergunta:
-    "Ao longo dos anos, uma rocha exposta ao Sol, à chuva e às variações de temperatura começou a apresentar rachaduras e fragmentação. Esse processo é chamado de:",
-
-    alternativas: [
-        "Sedimentação.",
-        "Assoreamento.",
-        "Intemperismo.",
-        "Compactação.",
-        "Subducção."
-    ],
-
-    correta: 2,
-
-    explicacao:
-    "O intemperismo corresponde ao conjunto de processos físicos, químicos e biológicos que promovem a alteração e a fragmentação das rochas na superfície terrestre.",
-
-    feedbackAcerto:
-    "Perfeito! Você associou corretamente a fragmentação das rochas ao processo de intemperismo.",
-
-    feedbackErro:
-    "O desgaste e a fragmentação das rochas provocados por agentes naturais caracterizam o intemperismo.",
-
-    dicaBanca:
-    "Intemperismo quebra a rocha. Erosão transporta o material resultante dessa quebra."
-},
-
-{
-    pergunta:
-    "Após um período de chuvas intensas, uma encosta perdeu parte de sua cobertura vegetal e sofreu o deslocamento de grandes volumes de solo. Esse processo está relacionado principalmente à:",
-
-    alternativas: [
-        "Fotossíntese.",
-        "Evaporação.",
-        "Condensação.",
-        "Solidificação.",
-        "Erosão."
-    ],
-
-    correta: 4,
-
-    explicacao:
-    "A erosão consiste no desgaste e transporte de partículas do solo e de rochas pela ação da água, do vento ou de outros agentes naturais. A retirada da vegetação aumenta significativamente esse processo.",
-
-    feedbackAcerto:
-    "Excelente! Você reconheceu a erosão como um dos principais processos responsáveis pela perda de solo e pelos deslizamentos.",
-
-    feedbackErro:
-    "A ausência de cobertura vegetal favorece a erosão, tornando o solo mais vulnerável ao transporte e aos deslizamentos.",
-
-    dicaBanca:
-    "Vegetação protege o solo. Quando ela é removida, o risco de erosão e deslizamentos aumenta consideravelmente."
-},
-{
-    pergunta:
-    "A teoria mais aceita para explicar a origem do Sistema Solar afirma que ele se formou a partir de uma grande nuvem de gás e poeira que entrou em colapso gravitacional. Essa teoria é conhecida como:",
-
-    alternativas: [
-        "Teoria Geocêntrica.",
-        "Hipótese Nebular.",
-        "Teoria da Deriva Continental.",
-        "Teoria do Big Crunch.",
-        "Teoria das Marés."
-    ],
-
-    correta: 1,
-
-    explicacao:
-    "A Hipótese Nebular afirma que o Sistema Solar surgiu a partir de uma enorme nuvem de gás e poeira. A ação da gravidade provocou a concentração de matéria, originando o Sol e os demais corpos do sistema.",
-
-    feedbackAcerto:
-    "Excelente! Você identificou corretamente a Hipótese Nebular como a explicação mais aceita para a formação do Sistema Solar.",
-
-    feedbackErro:
-    "A formação do Sistema Solar é explicada pela Hipótese Nebular, segundo a qual uma nuvem de gás e poeira deu origem ao Sol e aos planetas.",
-
-    dicaBanca:
-    "Quando a questão mencionar uma nuvem de gás e poeira originando o Sistema Solar, a resposta geralmente será Hipótese Nebular."
-},
-
-{
-    pergunta:
-    "No Sistema Solar, o corpo celeste responsável por fornecer luz e calor para os planetas é:",
-
-    alternativas: [
-        "O Sol.",
-        "A Lua.",
-        "Júpiter.",
-        "A Via Láctea.",
-        "Marte."
-    ],
-
-    correta: 0,
-
-    explicacao:
-    "O Sol é a estrela localizada no centro do Sistema Solar. Sua energia é fundamental para a manutenção da vida na Terra e para o funcionamento de diversos processos naturais.",
-
-    feedbackAcerto:
-    "Muito bem! O Sol é a estrela central do Sistema Solar e a principal fonte de energia para os planetas.",
-
-    feedbackErro:
-    "O Sol é o único corpo do Sistema Solar que produz luz própria por meio de reações nucleares em seu interior.",
-
-    dicaBanca:
-    "Bancas costumam diferenciar estrela e planeta. O Sol é uma estrela porque produz sua própria luz."
-},
-
-{
-    pergunta:
-    "Mercúrio, Vênus, Terra e Marte apresentam características semelhantes que permitem agrupá-los em uma mesma categoria. Esses planetas são classificados como:",
-
-    alternativas: [
-        "Planetas anões.",
-        "Planetas gasosos.",
-        "Planetas rochosos.",
-        "Planetas exteriores.",
-        "Satélites naturais."
-    ],
-
-    correta: 2,
-
-    explicacao:
-    "Os planetas rochosos possuem superfície sólida e são compostos principalmente por rochas e metais. Mercúrio, Vênus, Terra e Marte fazem parte desse grupo.",
-
-    feedbackAcerto:
-    "Excelente! Você reconheceu corretamente os planetas rochosos do Sistema Solar.",
-
-    feedbackErro:
-    "Mercúrio, Vênus, Terra e Marte possuem superfície sólida, sendo classificados como planetas rochosos ou terrestres.",
-
-    dicaBanca:
-    "Os quatro primeiros planetas do Sistema Solar são rochosos. Memorize essa sequência."
-},
-
-{
-    pergunta:
-    "Júpiter, Saturno, Urano e Netuno diferenciam-se dos planetas rochosos por apresentarem grande quantidade de gases em sua composição. Por isso, são chamados de:",
-
-    alternativas: [
-        "Planetas interiores.",
-        "Planetas anões.",
-        "Corpos menores.",
-        "Planetas gasosos.",
-        "Satélites artificiais."
-    ],
-
-    correta: 3,
-
-    explicacao:
-    "Os planetas gasosos possuem grande massa e são compostos predominantemente por gases. Júpiter e Saturno são os maiores representantes desse grupo.",
-
-    feedbackAcerto:
-    "Perfeito! Você identificou corretamente os planetas gasosos do Sistema Solar.",
-
-    feedbackErro:
-    "Júpiter, Saturno, Urano e Netuno possuem composição predominantemente gasosa e são classificados como gigantes gasosos.",
-
-    dicaBanca:
-    "Os quatro últimos planetas do Sistema Solar são gasosos. Essa divisão é frequentemente cobrada em concursos."
-},
-
-{
-    pergunta:
-    "Um estudante observou uma notícia sobre um fragmento rochoso proveniente do espaço que atravessou a atmosfera terrestre e atingiu o solo. Após chegar à superfície, esse corpo passa a ser chamado de:",
-
-    alternativas: [
-        "Cometa.",
-        "Asteroide.",
-        "Nebulosa.",
-        "Satélite.",
-        "Meteorito."
-    ],
-
-    correta: 4,
-
-    explicacao:
-    "Meteorito é o nome dado ao fragmento que consegue atravessar a atmosfera e atingir a superfície terrestre. Antes disso, durante sua passagem luminosa pela atmosfera, o fenômeno é chamado de meteoro.",
-
-    feedbackAcerto:
-    "Excelente! Você diferenciou corretamente meteorito dos demais corpos celestes.",
-
-    feedbackErro:
-    "Quando o fragmento espacial atinge a superfície terrestre, ele recebe o nome de meteorito.",
-
-    dicaBanca:
-    "Pegadinha clássica: Meteoro é o fenômeno luminoso na atmosfera. Meteorito é o fragmento que chega ao solo."
-},
-{
-    pergunta:
-    "A Terra ocupa uma posição privilegiada no Sistema Solar, permitindo a existência de água em estado líquido e de diversas formas de vida. Em relação à sua posição, a Terra é o:",
-
-    alternativas: [
-        "Primeiro planeta a partir do Sol.",
-        "Segundo planeta a partir do Sol.",
-        "Quarto planeta a partir do Sol.",
-        "Terceiro planeta a partir do Sol.",
-        "Quinto planeta a partir do Sol."
-    ],
-
-    correta: 3,
-
-    explicacao:
-    "A Terra é o terceiro planeta do Sistema Solar em ordem de distância ao Sol. Sua posição contribui para condições adequadas de temperatura que favorecem a existência de água líquida e vida.",
-
-    feedbackAcerto:
-    "Excelente! Você identificou corretamente a posição da Terra no Sistema Solar.",
-
-    feedbackErro:
-    "A Terra ocupa a terceira posição em relação ao Sol, estando entre Vênus e Marte.",
-
-    dicaBanca:
-    "Memorize a sequência inicial: Mercúrio, Vênus, Terra e Marte."
-},
-
-{
-    pergunta:
-    "A alternância entre dias e noites observada em todas as regiões do planeta ocorre devido ao movimento realizado pela Terra em torno:",
-
-    alternativas: [
-        "Do Sol.",
-        "Da Lua.",
-        "Da Via Láctea.",
-        "Do núcleo terrestre.",
-        "Do próprio eixo."
-    ],
-
-    correta: 4,
-
-    explicacao:
-    "A rotação é o movimento que a Terra realiza em torno de seu próprio eixo. Esse movimento dura aproximadamente 24 horas e é responsável pela sucessão dos dias e das noites.",
-
-    feedbackAcerto:
-    "Muito bem! Você associou corretamente a rotação à ocorrência dos dias e das noites.",
-
-    feedbackErro:
-    "Dias e noites são consequência da rotação terrestre. A translação está relacionada a outro fenômeno.",
-
-    dicaBanca:
-    "Rotação → dia e noite. Essa é uma das associações mais cobradas em provas."
-},
-
-{
-    pergunta:
-    "O movimento que a Terra realiza ao redor do Sol recebe o nome de translação. Esse movimento tem duração aproximada de:",
-
-    alternativas: [
-        "365 dias e 6 horas.",
-        "24 horas.",
-        "30 dias.",
-        "180 dias.",
-        "10 anos."
-    ],
-
-    correta: 0,
-
-    explicacao:
-    "A translação é o movimento realizado pela Terra ao redor do Sol. Sua duração é de aproximadamente 365 dias e 6 horas, período que corresponde a um ano.",
-
-    feedbackAcerto:
-    "Excelente! Você identificou corretamente a duração aproximada do movimento de translação.",
-
-    feedbackErro:
-    "A translação corresponde ao movimento da Terra ao redor do Sol e dura cerca de 365 dias e 6 horas.",
-
-    dicaBanca:
-    "Translação → ano. Rotação → dia. Bancas adoram trocar esses conceitos."
-},
-
-{
-    pergunta:
-    "As estações do ano não ocorrem porque a Terra fica mais próxima ou mais distante do Sol, mas principalmente devido:",
-
-    alternativas: [
-        "À influência gravitacional da Lua.",
-        "À rotação da Terra.",
-        "À inclinação do eixo terrestre combinada com o movimento de translação.",
-        "À movimentação das placas tectônicas.",
-        "Ao campo magnético terrestre."
-    ],
-
-    correta: 2,
-
-    explicacao:
-    "As estações do ano resultam da inclinação do eixo da Terra associada ao movimento de translação. Isso faz com que diferentes regiões recebam quantidades distintas de luz solar ao longo do ano.",
-
-    feedbackAcerto:
-    "Perfeito! Você compreendeu corretamente a origem das estações do ano.",
-
-    feedbackErro:
-    "As estações do ano estão relacionadas à inclinação do eixo terrestre e à translação, e não à simples distância entre a Terra e o Sol.",
-
-    dicaBanca:
-    "Questões modernas costumam combater o mito de que as estações são causadas pela distância da Terra ao Sol."
-},
-
-{
-    pergunta:
-    "Quando em um país são 12 horas e em outro são 18 horas, essa diferença ocorre devido à divisão do planeta em:",
-
-    alternativas: [
-        "Paralelos.",
-        "Fusos horários.",
-        "Meridianos.",
-        "Hemisférios.",
-        "Zonas climáticas."
-    ],
-
-    correta: 1,
-
-    explicacao:
-    "Os fusos horários são divisões imaginárias da Terra utilizadas para padronizar os horários nas diferentes regiões do planeta, considerando o movimento de rotação terrestre.",
-
-    feedbackAcerto:
-    "Excelente! Você identificou corretamente a função dos fusos horários.",
-
-    feedbackErro:
-    "As diferenças de horário entre regiões do planeta são explicadas pelos fusos horários, estabelecidos com base na rotação da Terra.",
-
-    dicaBanca:
-    "Se a questão mencionar diferença de horário entre cidades ou países, pense imediatamente em fusos horários."
-},
-{
-    pergunta:
-    "O Sol é uma estrela composta principalmente por hidrogênio e hélio. A energia que ele libera é produzida principalmente por meio de:",
-
-    alternativas: [
-        "Combustão de oxigênio.",
-        "Movimentação das manchas solares.",
-        "Reflexão da luz de outros astros.",
-        "Fusão nuclear.",
-        "Explosões vulcânicas em sua superfície."
-    ],
-
-    correta: 3,
-
-    explicacao:
-    "A energia solar é produzida por reações de fusão nuclear que ocorrem no núcleo do Sol. Nelas, átomos de hidrogênio unem-se formando hélio e liberando enormes quantidades de energia.",
-
-    feedbackAcerto:
-    "Excelente! Você identificou corretamente a fusão nuclear como fonte da energia solar.",
-
-    feedbackErro:
-    "O Sol produz sua própria energia por meio da fusão nuclear, processo que ocorre em seu núcleo e libera grande quantidade de energia.",
-
-    dicaBanca:
-    "Estrelas produzem energia por fusão nuclear. Planetas não possuem esse processo."
-},
-
-{
-    pergunta:
-    "A energia proveniente do Sol é fundamental para a manutenção da vida na Terra porque:",
-
-    alternativas: [
-        "Impede completamente a ocorrência de chuvas.",
-        "Controla diretamente os terremotos.",
-        "Produz oxigênio em seu interior para abastecer a Terra.",
-        "Determina a movimentação das placas tectônicas.",
-        "Fornece luz e calor essenciais aos seres vivos e aos ecossistemas."
-    ],
-
-    correta: 4,
-
-    explicacao:
-    "A energia solar fornece luz e calor, possibilita a fotossíntese, influencia o clima e sustenta diversos processos indispensáveis para a vida na Terra.",
-
-    feedbackAcerto:
-    "Muito bem! Você reconheceu a importância da energia solar para a manutenção da vida no planeta.",
-
-    feedbackErro:
-    "A energia solar é essencial porque fornece luz e calor, além de participar de diversos processos biológicos e ambientais.",
-
-    dicaBanca:
-    "Fotossíntese, clima e manutenção da vida são conceitos frequentemente associados à energia solar."
-},
-
-{
-    pergunta:
-    "A Lua é considerada um satélite natural porque:",
-
-    alternativas: [
-        "Produz luz própria.",
-        "Orbita naturalmente um planeta.",
-        "Gira ao redor do Sol sem influência gravitacional.",
-        "É uma estrela de pequeno porte.",
-        "Possui atmosfera semelhante à da Terra."
-    ],
-
-    correta: 1,
-
-    explicacao:
-    "A Lua é o satélite natural da Terra porque realiza movimentos orbitais ao redor do nosso planeta devido à ação da gravidade.",
-
-    feedbackAcerto:
-    "Excelente! Você compreendeu corretamente o conceito de satélite natural.",
-
-    feedbackErro:
-    "Satélites naturais são corpos celestes que orbitam naturalmente um planeta. A Lua é o principal exemplo desse tipo de astro.",
-
-    dicaBanca:
-    "Lua não produz luz própria. Ela reflete a luz recebida do Sol."
-},
-
-{
-    pergunta:
-    "Durante aproximadamente um mês, a porção iluminada da Lua visível da Terra parece mudar gradualmente. Esse fenômeno recebe o nome de:",
-
-    alternativas: [
-        "Fases da Lua.",
-        "Eclipse lunar.",
-        "Translação lunar.",
-        "Maré astronômica.",
-        "Solstício lunar."
-    ],
-
-    correta: 0,
-
-    explicacao:
-    "As fases da Lua resultam das diferentes posições relativas entre Sol, Terra e Lua, fazendo com que observemos diferentes porções iluminadas do satélite ao longo do mês.",
-
-    feedbackAcerto:
-    "Perfeito! Você identificou corretamente o fenômeno das fases da Lua.",
-
-    feedbackErro:
-    "As mudanças aparentes na forma iluminada da Lua são chamadas de fases lunares e não representam alterações reais em seu formato.",
-
-    dicaBanca:
-    "Fases da Lua dependem da posição relativa entre Sol, Terra e Lua, não da sombra da Terra."
-},
-
-{
-    pergunta:
-    "Um eclipse lunar ocorre quando:",
-
-    alternativas: [
-        "A Lua posiciona-se entre a Terra e o Sol.",
-        "O Sol posiciona-se entre a Terra e a Lua.",
-        "A Terra posiciona-se entre o Sol e a Lua.",
-        "A Lua deixa de refletir a luz solar.",
-        "A Lua entra na atmosfera terrestre."
-    ],
-
-    correta: 2,
-
-    explicacao:
-    "No eclipse lunar, a Terra fica entre o Sol e a Lua, projetando sua sombra sobre o satélite natural. Esse fenômeno só pode ocorrer durante a Lua Cheia.",
-
-    feedbackAcerto:
-    "Excelente! Você compreendeu corretamente a configuração necessária para a ocorrência de um eclipse lunar.",
-
-    feedbackErro:
-    "No eclipse lunar, a sombra da Terra é projetada sobre a Lua. Isso ocorre quando a Terra fica posicionada entre o Sol e a Lua.",
-
-    dicaBanca:
-    "Eclipse Lunar: Terra no meio. Eclipse Solar: Lua no meio. Esse é um dos pares mais cobrados em provas."
-},
-{
-    pergunta:
-    "As marés observadas nos oceanos resultam principalmente da atração gravitacional exercida pela Lua e, em menor intensidade, pelo:",
-
-    alternativas: [
-        "Mercúrio.",
-        "Marte.",
-        "Sol.",
-        "Júpiter.",
-        "Saturno."
-    ],
-
-    correta: 2,
-
-    explicacao:
-    "As marés são causadas principalmente pela atração gravitacional da Lua sobre as massas de água da Terra. O Sol também exerce influência, embora menor devido à sua maior distância.",
-
-    feedbackAcerto:
-    "Excelente! Você identificou corretamente os principais corpos celestes responsáveis pelas marés.",
-
-    feedbackErro:
-    "As marés estão relacionadas à ação gravitacional da Lua e do Sol sobre os oceanos terrestres.",
-
-    dicaBanca:
-    "Lua = principal responsável pelas marés. Sol = influência complementar."
-},
-
-{
-    pergunta:
-    "Qual das alternativas apresenta corretamente a sequência das camadas da Terra da mais externa para a mais interna?",
-
-    alternativas: [
-        "Crosta, manto e núcleo.",
-        "Manto, crosta e núcleo.",
-        "Crosta, núcleo e manto.",
-        "Núcleo, crosta e manto.",
-        "Manto, núcleo e crosta."
-    ],
-
-    correta: 0,
-
-    explicacao:
-    "A estrutura interna da Terra é formada pela crosta (camada mais externa), manto (camada intermediária) e núcleo (camada mais interna).",
-
-    feedbackAcerto:
-    "Muito bem! Você lembrou corretamente a organização das camadas terrestres.",
-
-    feedbackErro:
-    "A sequência correta é crosta, manto e núcleo, da superfície em direção ao centro da Terra.",
-
-    dicaBanca:
-    "Uma das decorebas mais cobradas em Ciências é a ordem: Crosta → Manto → Núcleo."
-},
-
-{
-    pergunta:
-    "Os fenômenos meteorológicos, como chuva, ventos, neblina e tempestades, ocorrem predominantemente em qual camada da atmosfera?",
-
-    alternativas: [
-        "Exosfera.",
-        "Troposfera.",
-        "Mesosfera.",
-        "Termosfera.",
-        "Estratosfera."
-    ],
-
-    correta: 1,
-
-    explicacao:
-    "A troposfera é a camada atmosférica mais próxima da superfície terrestre e concentra praticamente todos os fenômenos meteorológicos.",
-
-    feedbackAcerto:
-    "Excelente! Você associou corretamente os fenômenos meteorológicos à troposfera.",
-
-    feedbackErro:
-    "A troposfera é a camada onde vivemos e onde ocorrem chuvas, ventos, nuvens e demais fenômenos do tempo.",
-
-    dicaBanca:
-    "Troposfera = tempo atmosférico. Estratosfera = camada de ozônio."
-},
-
-{
-    pergunta:
-    "Qual alternativa apresenta apenas planetas classificados como rochosos?",
-
-    alternativas: [
-        "Terra, Marte, Júpiter e Saturno.",
-        "Marte, Júpiter, Saturno e Urano.",
-        "Vênus, Terra, Netuno e Marte.",
-        "Mercúrio, Terra, Urano e Netuno.",
-        "Mercúrio, Vênus, Terra e Marte."
-    ],
-
-    correta: 4,
-
-    explicacao:
-    "Mercúrio, Vênus, Terra e Marte possuem superfície sólida e são classificados como planetas rochosos ou terrestres.",
-
-    feedbackAcerto:
-    "Perfeito! Você identificou corretamente os quatro planetas rochosos do Sistema Solar.",
-
-    feedbackErro:
-    "Os planetas rochosos são Mercúrio, Vênus, Terra e Marte. Os demais são classificados como gigantes gasosos.",
-
-    dicaBanca:
-    "Memorize: os quatro primeiros planetas do Sistema Solar são rochosos."
-},
-
-{
-    pergunta:
-    "Um estudante afirmou que o movimento responsável pelas estações do ano é a rotação terrestre. Essa afirmação está:",
-
-    alternativas: [
-        "Correta, pois a rotação provoca as estações.",
-        "Correta, pois a rotação altera a distância da Terra ao Sol.",
-        "Incorreta, pois as estações dependem apenas da Lua.",
-        "Incorreta, pois as estações resultam da inclinação do eixo terrestre associada à translação.",
-        "Correta, pois a rotação provoca os solstícios e equinócios."
-    ],
-
-    correta: 3,
-
-    explicacao:
-    "As estações do ano são consequência da inclinação do eixo da Terra combinada com o movimento de translação ao redor do Sol.",
-
-    feedbackAcerto:
-    "Excelente! Você diferenciou corretamente os efeitos da rotação e da translação.",
-
-    feedbackErro:
-    "A rotação produz dias e noites. As estações do ano resultam da inclinação do eixo terrestre associada ao movimento de translação.",
-
-    dicaBanca:
-    "Pegadinha clássica: Rotação = dia e noite. Translação + inclinação do eixo = estações do ano."
-},
-{
-    pergunta:
-    "Ao comparar os corpos celestes do Sistema Solar, um estudante afirmou que o Sol, os planetas, os satélites naturais, os asteroides e os cometas fazem parte da mesma estrutura astronômica. Essa estrutura é denominada:",
-
-    alternativas: [
-        "Sistema Solar.",
-        "Via Láctea.",
-        "Universo.",
-        "Constelação.",
-        "Nebulosa."
-    ],
-
-    correta: 0,
-
-    explicacao:
-    "O Sistema Solar é formado pelo Sol e todos os corpos celestes que estão sob sua influência gravitacional, incluindo planetas, satélites naturais, asteroides, cometas e outros objetos menores.",
-
-    feedbackAcerto:
-    "Excelente! Você compreendeu corretamente a composição básica do Sistema Solar.",
-
-    feedbackErro:
-    "A Via Láctea contém bilhões de estrelas, incluindo o Sol. Já o Sistema Solar é formado pelo Sol e pelos corpos que orbitam ao seu redor.",
-
-    dicaBanca:
-    "Sistema Solar ≠ Universo. Sistema Solar ≠ Via Láctea. O Sistema Solar é apenas uma pequena parte da Via Láctea."
-},
-
-{
-    pergunta:
-    "A destruição da camada de ozônio preocupa cientistas porque pode provocar:",
-
-    alternativas: [
-        "A interrupção da rotação terrestre.",
-        "O aumento da incidência de radiação ultravioleta na superfície da Terra.",
-        "A extinção dos oceanos.",
-        "A paralisação das correntes marítimas.",
-        "O desaparecimento das estações do ano."
-    ],
-
-    correta: 1,
-
-    explicacao:
-    "A camada de ozônio absorve grande parte da radiação ultravioleta emitida pelo Sol. Sua redução permite que uma quantidade maior dessa radiação alcance a superfície terrestre.",
-
-    feedbackAcerto:
-    "Muito bem! Você reconheceu a principal consequência da redução da camada de ozônio.",
-
-    feedbackErro:
-    "A principal função da camada de ozônio é filtrar parte da radiação ultravioleta. Sua destruição aumenta a exposição dos seres vivos a essa radiação.",
-
-    dicaBanca:
-    "Ozônio → proteção contra raios UV. Aquecimento global → aumento da temperatura média. Não confunda esses temas."
-},
-
-{
-    pergunta:
-    "Os terremotos e vulcões concentram-se principalmente em determinadas regiões do planeta porque estão associados:",
-
-    alternativas: [
-        "À distribuição dos oceanos.",
-        "À incidência da radiação solar.",
-        "À formação das nuvens.",
-        "Aos limites e movimentações das placas tectônicas.",
-        "À ação exclusiva dos ventos."
-    ],
-
-    correta: 3,
-
-    explicacao:
-    "Grande parte dos terremotos e vulcões ocorre em áreas próximas aos limites das placas tectônicas, onde há intensa movimentação da litosfera.",
-
-    feedbackAcerto:
-    "Excelente! Você relacionou corretamente esses fenômenos à dinâmica das placas tectônicas.",
-
-    feedbackErro:
-    "Terremotos e vulcões estão diretamente ligados à movimentação das placas tectônicas, especialmente em seus limites.",
-
-    dicaBanca:
-    "Se a questão citar terremotos, vulcões ou formação de montanhas, pense em tectônica de placas."
-},
-
-{
-    pergunta:
-    "As fases da Lua, os eclipses e as marés possuem uma característica em comum. Todos esses fenômenos dependem principalmente:",
-
-    alternativas: [
-        "Da composição química da Lua.",
-        "Da atividade vulcânica lunar.",
-        "Da presença da camada de ozônio.",
-        "Da movimentação das placas tectônicas.",
-        "Da interação entre Terra, Lua e Sol."
-    ],
-
-    correta: 4,
-
-    explicacao:
-    "As fases da Lua, os eclipses e as marés são fenômenos que dependem das posições relativas e das interações gravitacionais entre Terra, Lua e Sol.",
-
-    feedbackAcerto:
-    "Perfeito! Você identificou corretamente a relação entre esses fenômenos astronômicos.",
-
-    feedbackErro:
-    "Fases da Lua, eclipses e marés dependem das posições e da interação gravitacional entre Terra, Lua e Sol.",
-
-    dicaBanca:
-    "Quando Terra, Lua e Sol aparecem juntos no enunciado, geralmente a resposta envolve fenômenos astronômicos relacionados às suas posições."
-},
-
-{
-    pergunta:
-    "Ao estudar Terra e Universo, um aluno concluiu que a vida no planeta depende de diversos fatores, como atmosfera, água líquida, energia solar e posição adequada no Sistema Solar. Essa conclusão está:",
-
-    alternativas: [
-        "Incorreta, pois apenas a presença de água é suficiente para garantir vida.",
-        "Incorreta, pois a atmosfera não influencia a vida terrestre.",
-        "Correta, pois a manutenção da vida resulta da combinação de vários fatores ambientais e astronômicos.",
-        "Incorreta, pois somente a energia solar é necessária.",
-        "Correta apenas para os seres humanos."
-    ],
-
-    correta: 2,
-
-    explicacao:
-    "A existência da vida na Terra depende da combinação de diversos fatores, como atmosfera protetora, água líquida, temperatura adequada, energia solar e posição favorável no Sistema Solar.",
-
-    feedbackAcerto:
-    "Excelente! Você compreendeu a integração dos diversos fatores que tornam a Terra habitável.",
-
-    feedbackErro:
-    "A vida terrestre depende da combinação de vários fatores físicos, químicos e astronômicos, e não de apenas um elemento isolado.",
-
-    dicaBanca:
-    "Questões integradoras costumam cobrar a relação entre atmosfera, água, Sol e posição da Terra no Sistema Solar."
-}
-
+    {
+        pergunta: "Uma imagem reúne galáxias distantes, estrelas, planetas, nebulosas e regiões sem matéria visível. Considerando a definição científica, o Universo corresponde:",
+        alternativas: [
+            "apenas aos corpos celestes que podem ser vistos da Terra.",
+            "somente à Via Láctea e aos sistemas planetários nela localizados.",
+            "à região situada fora da atmosfera terrestre.",
+            "exclusivamente ao Sistema Solar e aos seus corpos menores.",
+            "ao conjunto de matéria, energia, espaço e tempo existentes."
+        ],
+        correta: 4,
+        explicacao: "O Universo abrange tudo o que existe fisicamente, incluindo matéria, energia, espaço e tempo.",
+        feedbackAcerto: "Correto. Você não restringiu o Universo ao que é observável a olho nu ou à nossa galáxia.",
+        feedbackErro: "Sistema Solar e Via Láctea são apenas partes do Universo.",
+        dicaBanca: "Universo é a categoria mais abrangente."
+    },
+    {
+        pergunta: "Modelos indicam que partículas de poeira e gás do disco que envolvia o jovem Sol colidiram e se agregaram progressivamente. Esse processo explica a formação inicial da Terra por:",
+        alternativas: [
+            "fragmentação de uma Lua primitiva maior que o planeta.",
+            "acresção de material da nebulosa solar.",
+            "resfriamento direto de gases expulsos pela atmosfera atual.",
+            "união exclusiva de cometas já formados.",
+            "separação de uma parte sólida do Sol."
+        ],
+        correta: 1,
+        explicacao: "A Terra formou-se por acreção: partículas e planetesimais agregaram-se no disco protoplanetário.",
+        feedbackAcerto: "Correto. Você relacionou colisões e agregação ao processo de acreção.",
+        feedbackErro: "A hipótese científica não descreve a Terra como fragmento da Lua ou do Sol.",
+        dicaBanca: "Acreção = crescimento por agregação de matéria."
+    },
+    {
+        pergunta: "Ondas sísmicas mudam de velocidade e trajetória ao atravessar o interior terrestre. Esses dados permitem inferir que a Terra:",
+        alternativas: [
+            "é homogênea desde a superfície até o centro, sem alterar os demais fatores do sistema.",
+            "possui somente crosta e atmosfera.",
+            "tem o núcleo localizado acima do manto.",
+            "é inteiramente líquida abaixo dos oceanos.",
+            "possui camadas internas com propriedades e composições diferentes."
+        ],
+        correta: 4,
+        explicacao: "O comportamento das ondas sísmicas revela descontinuidades e diferentes camadas internas.",
+        feedbackAcerto: "Correto. Você utilizou evidência indireta para compreender o interior terrestre.",
+        feedbackErro: "Não é necessário perfurar até o núcleo; as ondas sísmicas fornecem informações sobre as camadas.",
+        dicaBanca: "Mudanças nas ondas indicam mudanças no meio."
+    },
+    {
+        pergunta: "Uma perfuração atravessa os primeiros quilômetros da superfície continental, onde se encontram solos, rochas e construções humanas. Essa região pertence principalmente à:",
+        alternativas: [
+            "astenosfera profunda.",
+            "núcleo externo.",
+            "núcleo interno.",
+            "mesosfera atmosférica.",
+            "crosta terrestre."
+        ],
+        correta: 4,
+        explicacao: "A crosta é a camada sólida mais externa da Terra.",
+        feedbackAcerto: "Correto. Você identificou a camada superficial onde se desenvolvem continentes e oceanos.",
+        feedbackErro: "Manto e núcleo estão em maiores profundidades.",
+        dicaBanca: "Superfície sólida do planeta = crosta."
+    },
+    {
+        pergunta: "Satélites registram que grandes blocos rígidos da superfície deslocam-se alguns centímetros por ano sobre uma região mais plástica. Esses blocos são:",
+        alternativas: [
+            "massas de ar da troposfera deslocando-se sobre os continentes.",
+            "correntes oceânicas que transportam a crosta terrestre.",
+            "placas litosféricas que se movimentam sobre a astenosfera.",
+            "fragmentos do núcleo externo flutuando no manto.",
+            "camadas da atmosfera movidas pela rotação da Terra."
+        ],
+        correta: 2,
+        explicacao: "A litosfera é fragmentada em placas que se deslocam sobre a astenosfera.",
+        feedbackAcerto: "Correto. Você relacionou rigidez, movimento lento e astenosfera à tectônica de placas.",
+        feedbackErro: "Placas não são blocos de atmosfera ou oceano; são porções rígidas da litosfera.",
+        dicaBanca: "Litosfera rígida; astenosfera mais plástica."
+    },
+    {
+        pergunta: "Ao comparar a Terra com um planeta sem atmosfera significativa, cientistas destacam que a atmosfera terrestre contribui para:",
+        alternativas: [
+            "impedir completamente a entrada de energia solar.",
+            "produzir toda a água do planeta a partir do oxigênio.",
+            "controlar diretamente a movimentação das placas tectônicas.",
+            "regular a temperatura, fornecer gases e reduzir parte da radiação e dos impactos de pequenos corpos.",
+            "eliminar qualquer variação de temperatura entre dia e noite, considerando os dados fornecidos no enunciado."
+        ],
+        correta: 3,
+        explicacao: "A atmosfera exerce funções de proteção, regulação térmica e manutenção de gases essenciais.",
+        feedbackAcerto: "Correto. Você reconheceu várias funções integradas da atmosfera.",
+        feedbackErro: "A atmosfera não bloqueia toda a energia solar nem elimina todas as variações térmicas.",
+        dicaBanca: "Atmosfera protege e ajuda a manter condições de vida."
+    },
+    {
+        pergunta: "Balões meteorológicos registram nuvens, chuvas e ventos na camada mais próxima da superfície. Essa camada é a:",
+        alternativas: [
+            "troposfera.",
+            "estratosfera.",
+            "mesosfera.",
+            "termosfera.",
+            "exosfera."
+        ],
+        correta: 0,
+        explicacao: "A troposfera concentra a maior parte do ar e dos fenômenos meteorológicos.",
+        feedbackAcerto: "Correto. Você associou tempo atmosférico à camada correta.",
+        feedbackErro: "A estratosfera contém a maior concentração de ozônio, mas o tempo ocorre sobretudo na troposfera.",
+        dicaBanca: "Tempo atmosférico = troposfera."
+    },
+    {
+        pergunta: "Uma aeronave busca uma região acima da maior parte das nuvens e turbulências da baixa atmosfera. Essa região pertence à:",
+        alternativas: [
+            "troposfera inferior, onde se concentram tempestades.",
+            "mesosfera, onde orbitam satélites de comunicação.",
+            "exosfera, imediatamente acima da superfície.",
+            "estratosfera.",
+            "litosfera, formada por gases estáveis."
+        ],
+        correta: 3,
+        explicacao: "A estratosfera apresenta maior estabilidade que a troposfera e abriga a camada de ozônio.",
+        feedbackAcerto: "Correto. Você relacionou estabilidade atmosférica e altitude.",
+        feedbackErro: "Fenômenos meteorológicos intensos concentram-se na troposfera.",
+        dicaBanca: "Troposfera = tempo; estratosfera = maior estabilidade e ozônio."
+    },
+    {
+        pergunta: "Medições mostram redução do ozônio estratosférico sobre determinada região. A consequência mais direta é:",
+        alternativas: [
+            "interrupção da rotação terrestre.",
+            "maior chegada de radiação ultravioleta à superfície.",
+            "aumento imediato da atração gravitacional da Lua, de acordo com as evidências apresentadas.",
+            "desaparecimento do oxigênio atmosférico.",
+            "bloqueio total da luz visível."
+        ],
+        correta: 1,
+        explicacao: "O ozônio estratosférico absorve parcela importante da radiação ultravioleta.",
+        feedbackAcerto: "Correto. Você relacionou ozônio e proteção contra UV.",
+        feedbackErro: "A redução do ozônio não controla rotação, gravidade ou luz visível.",
+        dicaBanca: "Camada de ozônio = filtro de UV."
+    },
+    {
+        pergunta: "Sensores mostram que a superfície terrestre absorve energia solar e emite radiação infravermelha. Parte dessa radiação é absorvida e reemitida por gases atmosféricos. Esse mecanismo corresponde:",
+        alternativas: [
+            "ao efeito estufa natural.",
+            "à destruição da camada de ozônio.",
+            "ao bloqueio total da radiação solar.",
+            "à formação exclusiva de nuvens.",
+            "à inversão do campo magnético."
+        ],
+        correta: 0,
+        explicacao: "O efeito estufa natural resulta da interação de gases atmosféricos com radiação infravermelha emitida pela superfície.",
+        feedbackAcerto: "Correto. Você identificou o mecanismo físico, sem tratá-lo como fenômeno exclusivamente negativo.",
+        feedbackErro: "O problema ambiental está na intensificação do efeito estufa, não em sua existência natural.",
+        dicaBanca: "Efeito estufa retém parte do calor irradiado."
+    },
+    {
+        pergunta: "Uma cidade aumenta o uso de combustíveis fósseis e reduz áreas verdes. Mantidas outras condições, espera-se que essas ações:",
+        alternativas: [
+            "diminuam a concentração de CO₂ por causa da combustão.",
+            "aumentem a camada de ozônio de forma automática.",
+            "elevem emissões de gases de efeito estufa e reduzam parte da remoção de CO₂.",
+            "reduzam o aquecimento por liberar energia para o espaço.",
+            "interrompam o ciclo natural do carbono em todo o planeta, considerando os dados fornecidos no enunciado."
+        ],
+        correta: 2,
+        explicacao: "Combustíveis fósseis liberam carbono armazenado, enquanto vegetação remove CO₂ pela fotossíntese.",
+        feedbackAcerto: "Correto. Você analisou emissão e remoção de carbono no mesmo problema.",
+        feedbackErro: "Queimar combustíveis não remove CO₂; em geral, acrescenta carbono à atmosfera.",
+        dicaBanca: "Mais emissão e menos vegetação favorecem aumento de CO₂."
+    },
+    {
+        pergunta: "Um relatório registra aumento da temperatura média, recuo de geleiras e expansão térmica da água oceânica. Esses processos contribuem para:",
+        alternativas: [
+            "elevação do nível médio do mar.",
+            "redução permanente do volume dos oceanos.",
+            "interrupção das marés.",
+            "diminuição da gravidade terrestre.",
+            "desaparecimento da atmosfera."
+        ],
+        correta: 0,
+        explicacao: "Derretimento de gelo continental e expansão térmica da água contribuem para elevar o nível do mar.",
+        feedbackAcerto: "Correto. Você integrou dois mecanismos físicos diferentes.",
+        feedbackErro: "O gelo marinho flutuante e o gelo continental não produzem exatamente o mesmo efeito sobre o nível do mar.",
+        dicaBanca: "Nível do mar: gelo continental + expansão térmica."
+    },
+    {
+        pergunta: "Uma falha geológica acumula tensão durante décadas. Quando as rochas se rompem, energia é liberada e ondas propagam-se pelo terreno. O evento é um:",
+        alternativas: [
+            "intemperismo.",
+            "terremoto.",
+            "assoreamento.",
+            "furacão.",
+            "eclipse."
+        ],
+        correta: 1,
+        explicacao: "Terremotos resultam da liberação súbita de energia nas rochas, frequentemente em falhas tectônicas.",
+        feedbackAcerto: "Correto. Você reconheceu tensão, ruptura e ondas sísmicas.",
+        feedbackErro: "Intemperismo desgasta rochas lentamente; terremotos envolvem liberação repentina de energia.",
+        dicaBanca: "Falha + ruptura + ondas sísmicas = terremoto."
+    },
+    {
+        pergunta: "Em uma região tectonicamente ativa, magma ascende, libera gases e extravasa como lava. O fenômeno indica:",
+        alternativas: [
+            "erosão fluvial.",
+            "sedimentação marinha.",
+            "atividade vulcânica.",
+            "condensação atmosférica.",
+            "impacto meteorítico."
+        ],
+        correta: 2,
+        explicacao: "Vulcanismo envolve ascensão e extravasamento de magma e gases.",
+        feedbackAcerto: "Correto. Você distinguiu processo interno de agentes externos do relevo.",
+        feedbackErro: "Erosão e sedimentação remodelam a superfície, mas não produzem magma.",
+        dicaBanca: "Magma no interior; lava na superfície."
+    },
+    {
+        pergunta: "Um terremoto submarino desloca rapidamente grande volume de água. Em mar aberto, as ondas têm pequena altura, mas perto da costa tornam-se destrutivas. O fenômeno é:",
+        alternativas: [
+            "maré astronômica.",
+            "ressaca provocada apenas pelo vento.",
+            "tsunami.",
+            "corrente oceânica permanente.",
+            "monção costeira."
+        ],
+        correta: 2,
+        explicacao: "Tsunamis geralmente resultam do deslocamento súbito do fundo oceânico e da coluna de água.",
+        feedbackAcerto: "Correto. Você relacionou origem submarina e amplificação costeira.",
+        feedbackErro: "Marés são periódicas e ligadas à gravidade; tsunamis são eventos de ondas longas geradas por deslocamento súbito.",
+        dicaBanca: "Terremoto submarino + ondas costeiras = tsunami."
+    },
+    {
+        pergunta: "Uma rocha exposta alternadamente ao calor e ao frio desenvolve fissuras e se fragmenta sem ser transportada para outro local. O processo é:",
+        alternativas: [
+            "erosão, pois o material foi transportado.",
+            "intemperismo físico.",
+            "sedimentação, pois ocorreu deposição.",
+            "subducção, pois a rocha entrou no manto.",
+            "vulcanismo, pois houve mudança de temperatura."
+        ],
+        correta: 1,
+        explicacao: "Intemperismo altera ou fragmenta a rocha no local; erosão envolve remoção e transporte.",
+        feedbackAcerto: "Correto. Você usou a ausência de transporte como critério.",
+        feedbackErro: "Fragmentar não é o mesmo que transportar.",
+        dicaBanca: "Intemperismo quebra; erosão remove."
+    },
+    {
+        pergunta: "Depois do desmatamento de uma encosta, chuvas intensas carregam partículas de solo para um rio. O processo predominante é:",
+        alternativas: [
+            "intemperismo sem transporte.",
+            "fusão de rochas.",
+            "formação de magma.",
+            "condensação do vapor.",
+            "erosão hídrica."
+        ],
+        correta: 4,
+        explicacao: "A erosão inclui remoção e transporte de partículas por água, vento ou gelo.",
+        feedbackAcerto: "Correto. Você relacionou perda de cobertura vegetal, chuva e transporte de solo.",
+        feedbackErro: "O intemperismo prepara materiais; a erosão os transporta.",
+        dicaBanca: "Transporte de solo pela água = erosão hídrica."
+    },
+    {
+        pergunta: "Um modelo descreve o colapso gravitacional de uma nuvem de gás e poeira, a formação de um disco e a concentração central de matéria que originou o Sol. Esse modelo é a:",
+        alternativas: [
+            "teoria geocêntrica.",
+            "deriva continental.",
+            "hipótese da geração espontânea, sem alterar os demais fatores do sistema.",
+            "hipótese nebular para a formação do Sistema Solar.",
+            "teoria da erosão cósmica."
+        ],
+        correta: 3,
+        explicacao: "A hipótese nebular explica a formação do Sol e dos planetas a partir de uma nuvem em rotação.",
+        feedbackAcerto: "Correto. Você identificou as etapas centrais do modelo.",
+        feedbackErro: "Geocentrismo trata da organização aparente dos astros, não da origem do Sistema Solar.",
+        dicaBanca: "Nuvem de gás e poeira em colapso = hipótese nebular."
+    },
+    {
+        pergunta: "Ao comparar o Sol com os planetas, a diferença fundamental é que o Sol:",
+        alternativas: [
+            "é um planeta rochoso com atmosfera incandescente, de acordo com as evidências apresentadas.",
+            "é uma estrela que produz energia por fusão nuclear em seu interior.",
+            "apenas reflete luz de outras estrelas.",
+            "orbita a Terra e produz as estações.",
+            "é um satélite natural da Via Láctea."
+        ],
+        correta: 1,
+        explicacao: "O Sol é uma estrela; sua energia provém principalmente da fusão de hidrogênio em hélio.",
+        feedbackAcerto: "Correto. Você associou estrela a produção própria de energia.",
+        feedbackErro: "Planetas refletem luz; estrelas produzem energia em seus interiores.",
+        dicaBanca: "Estrela = fusão nuclear."
+    },
+    {
+        pergunta: "Mercúrio, Vênus, Terra e Marte compartilham superfície sólida e composição rica em rochas e metais. Eles são:",
+        alternativas: [
+            "gigantes gasosos.",
+            "planetas anões.",
+            "satélites naturais.",
+            "cometas de órbita curta, durante o intervalo analisado.",
+            "planetas rochosos ou terrestres."
+        ],
+        correta: 4,
+        explicacao: "Os quatro planetas internos são classificados como rochosos.",
+        feedbackAcerto: "Correto. Você usou composição e posição no Sistema Solar.",
+        feedbackErro: "Júpiter, Saturno, Urano e Netuno formam o grupo dos gigantes.",
+        dicaBanca: "Quatro primeiros planetas = rochosos."
+    },
+    {
+        pergunta: "Júpiter e Saturno são ricos em hidrogênio e hélio, enquanto Urano e Netuno possuem maior proporção de substâncias voláteis. Em conjunto, os quatro são:",
+        alternativas: [
+            "planetas rochosos internos.",
+            "satélites naturais de grande massa, considerando os dados fornecidos no enunciado.",
+            "planetas gigantes do Sistema Solar exterior.",
+            "planetas anões além de Marte.",
+            "asteroides com atmosfera."
+        ],
+        correta: 2,
+        explicacao: "Os quatro planetas externos são gigantes; Júpiter e Saturno são gasosos, e Urano e Netuno são frequentemente chamados gigantes de gelo.",
+        feedbackAcerto: "Correto. Você reconheceu o agrupamento sem apagar diferenças internas.",
+        feedbackErro: "Todos são planetas, mas não possuem superfície rochosa como os terrestres.",
+        dicaBanca: "Planetas exteriores: Júpiter, Saturno, Urano e Netuno."
+    },
+    {
+        pergunta: "Um fragmento rochoso viaja pelo espaço, produz um rastro luminoso ao entrar na atmosfera e parte dele alcança o solo. Os nomes corretos são, respectivamente:",
+        alternativas: [
+            "meteorito, meteoroide e meteoro.",
+            "meteoroide, meteoro e meteorito.",
+            "asteroide, cometa e satélite.",
+            "meteoro, meteorito e meteoroide.",
+            "cometa, asteroide e meteorito."
+        ],
+        correta: 1,
+        explicacao: "Meteoroide é o corpo no espaço; meteoro é o fenômeno luminoso; meteorito é o fragmento que chega ao solo.",
+        feedbackAcerto: "Correto. Você diferenciou corpo, fenômeno e fragmento recuperado.",
+        feedbackErro: "A pegadinha costuma trocar meteoro e meteorito.",
+        dicaBanca: "Espaço: meteoroide; atmosfera: meteoro; solo: meteorito."
+    },
+    {
+        pergunta: "Na sequência Mercúrio, Vênus, Terra e Marte, a Terra ocupa:",
+        alternativas: [
+            "a primeira posição, sem alterar os demais fatores do sistema.",
+            "a segunda posição.",
+            "a quarta posição.",
+            "a quinta posição.",
+            "a terceira posição a partir do Sol."
+        ],
+        correta: 4,
+        explicacao: "A Terra é o terceiro planeta em ordem de distância ao Sol.",
+        feedbackAcerto: "Correto. Você localizou a Terra entre Vênus e Marte.",
+        feedbackErro: "A sequência inicial do Sistema Solar não deve ser confundida com o tamanho dos planetas.",
+        dicaBanca: "Mercúrio, Vênus, Terra, Marte."
+    },
+    {
+        pergunta: "Enquanto uma cidade entra na região iluminada do planeta, outra desloca-se para a região escura. Essa alternância ocorre devido:",
+        alternativas: [
+            "à translação da Terra ao redor do Sol, de acordo com as evidências apresentadas.",
+            "à rotação da Terra em torno de seu eixo.",
+            "à órbita da Lua ao redor da Terra.",
+            "ao movimento das placas tectônicas.",
+            "à variação anual da distância ao Sol."
+        ],
+        correta: 1,
+        explicacao: "A rotação terrestre, com duração aproximada de 24 horas, produz a sucessão de dias e noites.",
+        feedbackAcerto: "Correto. Você relacionou iluminação alternada ao movimento diário da Terra.",
+        feedbackErro: "Translação está associada ao ano e, com a inclinação do eixo, às estações.",
+        dicaBanca: "Rotação = dia e noite."
+    },
+    {
+        pergunta: "A Terra completa uma órbita em torno do Sol em aproximadamente 365 dias e 6 horas. Esse movimento é chamado de:",
+        alternativas: [
+            "translação.",
+            "rotação.",
+            "precessão.",
+            "nutação.",
+            "revolução lunar."
+        ],
+        correta: 0,
+        explicacao: "Translação é o movimento orbital da Terra ao redor do Sol.",
+        feedbackAcerto: "Correto. Você associou o período anual ao movimento correto.",
+        feedbackErro: "Rotação dura aproximadamente 24 horas.",
+        dicaBanca: "Translação = ano."
+    },
+    {
+        pergunta: "Em dezembro, o Hemisfério Sul recebe luz solar mais direta e dias mais longos, enquanto o Hemisfério Norte recebe luz mais inclinada. Isso ocorre principalmente por causa:",
+        alternativas: [
+            "da aproximação da Terra ao Sol apenas no Hemisfério Sul, considerando os dados fornecidos no enunciado.",
+            "da rotação mais rápida da Terra durante o verão.",
+            "da inclinação do eixo terrestre combinada com a translação.",
+            "da mudança anual do tamanho do Sol.",
+            "da influência das marés sobre a atmosfera."
+        ],
+        correta: 2,
+        explicacao: "As estações resultam da inclinação do eixo terrestre e da mudança da orientação dos hemisférios ao longo da órbita.",
+        feedbackAcerto: "Correto. Você explicou estações opostas nos hemisférios.",
+        feedbackErro: "A distância Terra-Sol não explica por que os hemisférios apresentam estações contrárias.",
+        dicaBanca: "Estações = inclinação do eixo + translação."
+    },
+    {
+        pergunta: "Duas cidades localizadas em longitudes diferentes registram horários distintos no mesmo instante. A explicação está relacionada:",
+        alternativas: [
+            "à translação e à diferença de estações.",
+            "à inclinação do eixo e às fases da Lua.",
+            "à altitude das cidades e à pressão atmosférica, nas condições descritas para o fenômeno.",
+            "à rotação terrestre e à divisão convencional em fusos horários.",
+            "à movimentação das placas tectônicas."
+        ],
+        correta: 3,
+        explicacao: "Os fusos horários organizam diferenças de tempo associadas à rotação e à longitude.",
+        feedbackAcerto: "Correto. Você relacionou longitude, rotação e hora local.",
+        feedbackErro: "Estações e altitude não determinam a diferença padrão de horários entre longitudes.",
+        dicaBanca: "Diferença de hora entre lugares = fuso horário."
+    },
+    {
+        pergunta: "No núcleo solar, núcleos de hidrogênio formam hélio e parte da massa é convertida em energia. O processo é:",
+        alternativas: [
+            "fissão nuclear.",
+            "combustão química.",
+            "fusão nuclear.",
+            "reflexão luminosa.",
+            "radioatividade atmosférica."
+        ],
+        correta: 2,
+        explicacao: "A energia das estrelas da sequência principal é produzida por fusão nuclear.",
+        feedbackAcerto: "Correto. Você distinguiu reação nuclear de combustão química.",
+        feedbackErro: "O Sol não queima como uma fogueira; sua energia vem da fusão.",
+        dicaBanca: "Estrela produz energia por fusão."
+    },
+    {
+        pergunta: "A redução intensa da energia solar recebida pela Terra afetaria primeiro a fotossíntese, a temperatura e o ciclo da água. Isso mostra que o Sol:",
+        alternativas: [
+            "controla diretamente terremotos e vulcões.",
+            "sustenta processos biológicos e climáticos essenciais.",
+            "fornece oxigênio pronto para a atmosfera.",
+            "é responsável pela formação do núcleo terrestre, de acordo com as evidências apresentadas.",
+            "impede qualquer perda de calor para o espaço."
+        ],
+        correta: 1,
+        explicacao: "A energia solar impulsiona fotossíntese, circulação atmosférica, evaporação e condições térmicas.",
+        feedbackAcerto: "Correto. Você integrou processos vivos e ambientais.",
+        feedbackErro: "O Sol influencia o clima, mas não controla diretamente a tectônica.",
+        dicaBanca: "Sol sustenta fotossíntese, clima e ciclo da água."
+    },
+    {
+        pergunta: "A Lua não produz luz própria, mas é visível porque reflete a luz solar. Ela é classificada como satélite natural porque:",
+        alternativas: [
+            "possui tamanho menor que qualquer planeta.",
+            "gira apenas ao redor do Sol.",
+            "apresenta atmosfera semelhante à terrestre.",
+            "orbita naturalmente a Terra.",
+            "produz energia por fusão nuclear."
+        ],
+        correta: 3,
+        explicacao: "Satélite natural é um corpo que orbita um planeta ou corpo maior sem ter sido construído artificialmente.",
+        feedbackAcerto: "Correto. Você usou o movimento orbital como critério.",
+        feedbackErro: "Tamanho e brilho não definem satélite natural.",
+        dicaBanca: "Lua = satélite natural da Terra."
+    },
+    {
+        pergunta: "Ao longo de cerca de um mês, observamos porções diferentes da metade iluminada da Lua. As fases resultam:",
+        alternativas: [
+            "da sombra da Terra cobrindo a Lua todas as noites, considerando os dados fornecidos no enunciado.",
+            "das posições relativas entre Sol, Terra e Lua durante a órbita lunar.",
+            "da produção variável de luz pela superfície lunar.",
+            "da mudança real do formato da Lua.",
+            "da rotação do Sol em torno da Terra."
+        ],
+        correta: 1,
+        explicacao: "As fases mostram diferentes porções iluminadas visíveis da Terra.",
+        feedbackAcerto: "Correto. Você evitou confundir fases com eclipses.",
+        feedbackErro: "A sombra da Terra participa do eclipse lunar, não das fases comuns.",
+        dicaBanca: "Fases não são causadas pela sombra terrestre."
+    },
+    {
+        pergunta: "Durante um eclipse lunar, a Lua entra na sombra projetada pela Terra. A configuração é:",
+        alternativas: [
+            "Terra — Sol — Lua.",
+            "Sol — Lua — Terra.",
+            "Lua — Sol — Terra.",
+            "Terra — Lua — Sol, com a Lua iluminando o Sol.",
+            "Sol — Terra — Lua."
+        ],
+        correta: 4,
+        explicacao: "No eclipse lunar, a Terra fica entre o Sol e a Lua.",
+        feedbackAcerto: "Correto. Você organizou os três astros na sequência adequada.",
+        feedbackErro: "Sol-Lua-Terra corresponde ao eclipse solar.",
+        dicaBanca: "Eclipse lunar: Terra no meio."
+    },
+    {
+        pergunta: "Em um eclipse solar, observadores de uma faixa da Terra veem o Sol parcial ou totalmente encoberto. A configuração é:",
+        alternativas: [
+            "Sol — Terra — Lua.",
+            "Terra — Sol — Lua.",
+            "Lua — Terra — Sol.",
+            "Sol — Lua — Terra.",
+            "Terra — Lua — Sol, com a sombra da Terra sobre a Lua."
+        ],
+        correta: 3,
+        explicacao: "No eclipse solar, a Lua fica entre o Sol e a Terra e projeta sombra sobre parte do planeta.",
+        feedbackAcerto: "Correto. Você distinguiu eclipse solar de lunar.",
+        feedbackErro: "Se a Terra estivesse no meio, o eclipse seria lunar.",
+        dicaBanca: "Eclipse solar: Lua no meio."
+    },
+    {
+        pergunta: "Quando Sol, Terra e Lua ficam aproximadamente alinhados, a diferença entre maré alta e baixa tende a aumentar. Isso ocorre porque:",
+        alternativas: [
+            "a rotação terrestre é interrompida temporariamente, de acordo com as evidências apresentadas.",
+            "a Lua aumenta sua massa durante o alinhamento.",
+            "os oceanos recebem mais calor e evaporam.",
+            "o campo magnético terrestre empurra a água.",
+            "as influências gravitacionais do Sol e da Lua se combinam."
+        ],
+        correta: 4,
+        explicacao: "Marés de sizígia ocorrem quando as atrações do Sol e da Lua reforçam-se aproximadamente.",
+        feedbackAcerto: "Correto. Você interpretou o efeito do alinhamento.",
+        feedbackErro: "As marés são gravitacionais, não causadas principalmente por aquecimento ou magnetismo.",
+        dicaBanca: "Alinhamento favorece marés mais intensas."
+    },
+    {
+        pergunta: "Da superfície em direção ao centro da Terra, a sequência geral correta é:",
+        alternativas: [
+            "crosta, manto e núcleo.",
+            "manto, crosta e núcleo.",
+            "crosta, núcleo e manto.",
+            "núcleo, manto e crosta.",
+            "atmosfera, núcleo e manto."
+        ],
+        correta: 0,
+        explicacao: "A divisão composicional geral organiza a Terra em crosta, manto e núcleo.",
+        feedbackAcerto: "Correto. Você ordenou as camadas do exterior para o interior.",
+        feedbackErro: "A crosta é externa; o núcleo ocupa a região central.",
+        dicaBanca: "Exterior → interior: crosta, manto, núcleo."
+    },
+    {
+        pergunta: "Uma lista contém Mercúrio, Vênus, Terra, Marte e Netuno. Qual deve ser retirado para que sobrem apenas planetas rochosos?",
+        alternativas: [
+            "Mercúrio.",
+            "Vênus.",
+            "Terra.",
+            "Netuno.",
+            "Marte."
+        ],
+        correta: 3,
+        explicacao: "Netuno é um planeta gigante; os outros quatro são rochosos.",
+        feedbackAcerto: "Correto. Você aplicou a classificação dos planetas.",
+        feedbackErro: "Os quatro primeiros planetas em distância ao Sol são rochosos.",
+        dicaBanca: "Netuno pertence ao grupo dos gigantes."
+    },
+    {
+        pergunta: "O Sol, oito planetas, satélites naturais, asteroides, cometas e outros corpos ligados gravitacionalmente formam:",
+        alternativas: [
+            "a Via Láctea inteira.",
+            "o Sistema Solar.",
+            "uma constelação.",
+            "o Universo observável.",
+            "uma nebulosa planetária."
+        ],
+        correta: 1,
+        explicacao: "O Sistema Solar é o conjunto do Sol e dos corpos sob sua influência gravitacional.",
+        feedbackAcerto: "Correto. Você distinguiu sistema planetário, galáxia e Universo.",
+        feedbackErro: "A Via Láctea contém bilhões de estrelas e muitos sistemas.",
+        dicaBanca: "Sistema Solar é parte da Via Láctea."
+    },
+    {
+        pergunta: "Mapas mostram concentração de terremotos e vulcões em faixas que coincidem com bordas de placas. A melhor explicação é:",
+        alternativas: [
+            "os limites de placas concentram deformações, rupturas e ascensão de magma.",
+            "o Sol aquece mais intensamente essas faixas.",
+            "a atmosfera exerce pressão apenas nas bordas continentais, sem alterar os demais fatores do sistema.",
+            "os oceanos impedem fenômenos no interior das placas.",
+            "as nuvens produzem vibrações no solo."
+        ],
+        correta: 0,
+        explicacao: "Limites convergentes, divergentes e transformantes concentram grande parte da atividade tectônica.",
+        feedbackAcerto: "Correto. Você interpretou a coincidência espacial como evidência da tectônica.",
+        feedbackErro: "A distribuição não é explicada por clima ou incidência solar.",
+        dicaBanca: "Terremotos e vulcões costumam acompanhar limites de placas."
+    },
+    {
+        pergunta: "A presença de água líquida, atmosfera, fonte de energia e temperatura compatível não garante sozinha vida, mas indica:",
+        alternativas: [
+            "prova definitiva de organismos vivos.",
+            "ausência completa de radiação.",
+            "que o planeta possui continentes iguais aos da Terra.",
+            "que existe oxigênio em grande quantidade.",
+            "condições potencialmente favoráveis à habitabilidade."
+        ],
+        correta: 4,
+        explicacao: "Habitabilidade refere-se a condições que podem permitir vida, não à confirmação de sua existência.",
+        feedbackAcerto: "Correto. Você distinguiu possibilidade de evidência direta.",
+        feedbackErro: "Condições favoráveis não são prova de vida.",
+        dicaBanca: "Habitável não significa habitado."
+    },
+    {
+        pergunta: "O Sistema Solar encontra-se em uma grande estrutura com bilhões de estrelas, gás e poeira, mantida pela gravidade. Essa estrutura é:",
+        alternativas: [
+            "a constelação do Cruzeiro do Sul.",
+            "a nebulosa solar original ainda intacta.",
+            "a galáxia Via Láctea.",
+            "o Universo inteiro.",
+            "um aglomerado formado apenas por planetas."
+        ],
+        correta: 2,
+        explicacao: "A Via Láctea é a galáxia que contém o Sistema Solar.",
+        feedbackAcerto: "Correto. Você distinguiu galáxia de constelação e Universo.",
+        feedbackErro: "Constelações são padrões aparentes no céu; galáxias são sistemas físicos de estrelas.",
+        dicaBanca: "Sistema Solar está na Via Láctea."
+    },
+    {
+        pergunta: "Observações de que galáxias distantes se afastam e da radiação cósmica de fundo sustentam o modelo segundo o qual o Universo:",
+        alternativas: [
+            "surgiu de uma explosão comum ocorrida em um ponto do espaço já existente.",
+            "permanece estático e sem mudanças em grande escala.",
+            "foi formado apenas quando surgiu o Sistema Solar.",
+            "evoluiu a partir de um estado inicial muito quente e denso.",
+            "é constituído somente pela matéria visível."
+        ],
+        correta: 3,
+        explicacao: "O modelo do Big Bang descreve a expansão e evolução do próprio espaço a partir de um estado quente e denso.",
+        feedbackAcerto: "Correto. Você utilizou evidências cosmológicas sem reduzir o modelo a uma explosão comum.",
+        feedbackErro: "O Big Bang não foi uma explosão dentro do espaço; envolve a expansão do próprio Universo.",
+        dicaBanca: "Expansão das galáxias e radiação de fundo são evidências importantes."
+    },
+    {
+        pergunta: "Uma estrela está a 10 anos-luz da Terra. Isso significa que:",
+        alternativas: [
+            "a estrela existe há apenas 10 anos.",
+            "ela completa uma órbita em 10 anos.",
+            "sua luz viaja a 10 quilômetros por ano.",
+            "a distância é medida em unidade de tempo, não de comprimento, nas condições descritas para o fenômeno.",
+            "a luz emitida por ela leva cerca de 10 anos para chegar até nós."
+        ],
+        correta: 4,
+        explicacao: "Ano-luz é uma unidade de distância: o percurso da luz no vácuo durante um ano.",
+        feedbackAcerto: "Correto. Você interpretou corretamente uma unidade astronômica de comprimento.",
+        feedbackErro: "O nome contém 'ano', mas a grandeza medida é distância.",
+        dicaBanca: "Ano-luz mede distância."
+    },
+    {
+        pergunta: "No início do verão de um hemisfério, ocorre o dia com maior duração de iluminação anual. Esse evento é um:",
+        alternativas: [
+            "equinócio.",
+            "eclipse.",
+            "solstício.",
+            "periélio.",
+            "equinócio lunar."
+        ],
+        correta: 2,
+        explicacao: "Solstícios marcam máximos sazonais de duração do dia ou da noite em cada hemisfério.",
+        feedbackAcerto: "Correto. Você associou extremo de iluminação ao solstício.",
+        feedbackErro: "Equinócios apresentam dia e noite com durações aproximadamente iguais.",
+        dicaBanca: "Solstício = máximo contraste entre dia e noite."
+    },
+    {
+        pergunta: "Em determinado momento do ano, a duração do dia e da noite fica aproximadamente igual em grande parte do planeta. O evento é:",
+        alternativas: [
+            "equinócio.",
+            "solstício de verão.",
+            "eclipse solar.",
+            "maré de sizígia.",
+            "precessão."
+        ],
+        correta: 0,
+        explicacao: "Equinócios marcam o início astronômico da primavera e do outono.",
+        feedbackAcerto: "Correto. Você identificou a condição de iluminação equilibrada.",
+        feedbackErro: "Solstícios correspondem aos maiores contrastes de duração do dia.",
+        dicaBanca: "Equinócio lembra equilíbrio entre dia e noite."
+    },
+    {
+        pergunta: "Fósseis semelhantes em continentes hoje separados, encaixe de margens e continuidade de estruturas geológicas foram usados como evidências de que:",
+        alternativas: [
+            "os oceanos foram escavados por meteoritos recentes.",
+            "as placas permanecem imóveis desde a formação da Terra.",
+            "os continentes já estiveram unidos e se deslocaram ao longo do tempo.",
+            "fósseis iguais surgiram independentemente em todos os continentes, durante o intervalo analisado.",
+            "a atmosfera empurra continentes durante tempestades."
+        ],
+        correta: 2,
+        explicacao: "Essas evidências sustentaram a deriva continental e depois foram integradas à tectônica de placas.",
+        feedbackAcerto: "Correto. Você relacionou padrões geológicos e paleontológicos à mobilidade continental.",
+        feedbackErro: "A distribuição dos fósseis é melhor explicada pela antiga conexão entre terras.",
+        dicaBanca: "Encaixe + fósseis + rochas semelhantes = deriva continental."
+    },
+    {
+        pergunta: "Uma rocha sedimentar é submetida a altas pressões e temperaturas sem derreter. Ela pode transformar-se em:",
+        alternativas: [
+            "rocha metamórfica.",
+            "magma imediatamente.",
+            "rocha ígnea sem fusão.",
+            "sedimento não consolidado.",
+            "mineral atmosférico."
+        ],
+        correta: 0,
+        explicacao: "Metamorfismo altera rochas no estado sólido sob pressão e temperatura.",
+        feedbackAcerto: "Correto. Você distinguiu metamorfismo de fusão e solidificação.",
+        feedbackErro: "Rochas ígneas se formam pela solidificação do magma.",
+        dicaBanca: "Calor e pressão sem fusão = metamorfismo."
+    },
+    {
+        pergunta: "Partículas carregadas do vento solar são desviadas em parte ao se aproximarem da Terra. A proteção está associada:",
+        alternativas: [
+            "à camada de ozônio, que desvia todas as partículas.",
+            "às placas tectônicas.",
+            "à gravidade da Lua.",
+            "ao campo magnético terrestre.",
+            "às correntes oceânicas."
+        ],
+        correta: 3,
+        explicacao: "A magnetosfera interage com partículas carregadas do vento solar.",
+        feedbackAcerto: "Correto. Você distinguiu proteção magnética de proteção contra UV.",
+        feedbackErro: "A camada de ozônio absorve radiação ultravioleta, mas não é o principal escudo contra partículas carregadas.",
+        dicaBanca: "Partículas do vento solar → magnetosfera."
+    },
+    {
+        pergunta: "Uma previsão anuncia chuva para amanhã, enquanto um estudo descreve verões historicamente quentes e úmidos em uma região. Os dois enunciados tratam, respectivamente, de:",
+        alternativas: [
+            "tempo atmosférico e clima.",
+            "clima e tempo atmosférico.",
+            "duas descrições de clima.",
+            "duas descrições de tempo.",
+            "estações do ano e fuso horário."
+        ],
+        correta: 0,
+        explicacao: "Tempo refere-se a condições de curto prazo; clima descreve padrões de longo prazo.",
+        feedbackAcerto: "Correto. Você utilizou a escala temporal como critério.",
+        feedbackErro: "Uma previsão diária não define o clima da região.",
+        dicaBanca: "Tempo é momentâneo; clima é padrão duradouro."
+    },
+    {
+        pergunta: "Quando é verão no Hemisfério Sul, tende a ser inverno no Hemisfério Norte porque:",
+        alternativas: [
+            "a inclinação do eixo faz os hemisférios receberem iluminação diferente ao mesmo tempo.",
+            "um hemisfério fica mais perto do Sol que o outro por milhões de quilômetros, de acordo com as evidências apresentadas.",
+            "a Terra gira em sentidos opostos nos dois hemisférios.",
+            "o Sol aquece apenas um lado da Terra durante seis meses.",
+            "a Lua bloqueia a luz de um dos hemisférios."
+        ],
+        correta: 0,
+        explicacao: "Os hemisférios ficam alternadamente inclinados em direção ao Sol ao longo da translação.",
+        feedbackAcerto: "Correto. Você explicou a oposição sazonal pela geometria da iluminação.",
+        feedbackErro: "A diferença não é causada por grande diferença de distância ao Sol.",
+        dicaBanca: "Hemisférios recebem estações opostas."
+    },
+    {
+        pergunta: "Um planeta possui órbita estável, água líquida em parte da superfície, atmosfera moderada e fonte contínua de energia. A conclusão cientificamente adequada é:",
+        alternativas: [
+            "a vida está confirmada porque existe água líquida.",
+            "o planeta é idêntico à Terra em composição, história geológica, atmosfera, evolução biológica e condições ambientais.",
+            "qualquer atmosfera impede a chegada de radiação.",
+            "essas condições justificam investigar sua habitabilidade, mas não comprovam a existência de vida.",
+            "a órbita estável garante organismos complexos."
+        ],
+        correta: 3,
+        explicacao: "A busca por vida utiliza indicadores de habitabilidade, mas exige evidências adicionais para confirmar organismos.",
+        feedbackAcerto: "Correto. Você formulou uma conclusão proporcional aos dados.",
+        feedbackErro: "Condições favoráveis geram hipótese de habitabilidade, não prova de vida.",
+        dicaBanca: "Na ciência, possibilidade não equivale a confirmação."
+    }
 ];
