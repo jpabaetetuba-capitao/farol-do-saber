@@ -38,7 +38,7 @@ const aspectosEconomicosFormasTrabalhoBrasilColonialImperial = [
         "alternativas": [
             "Práticas de troca coexistiram e depois se articularam a guerras, aldeamentos, escravização e outras formas de coerção, variando conforme região, interesses coloniais e resistência indígena.",
             "O crescimento do tráfico africano reduziu progressivamente a coerção sobre trabalhadores indígenas nas regiões economicamente centrais, mantendo-a sobretudo em áreas de fronteira, onde a legislação régia reconhecia maior autonomia aos colonos na obtenção de mão de obra.",
-            "A legislação régia definiu um modelo estável de trabalho indígena aplicado de maneira semelhante em muitas as capitanias.",
+            "A legislação régia definiu um modelo estável de trabalho indígena aplicado de maneira semelhante em muitas capitanias.",
             "A ampliação dos aldeamentos reduziu os conflitos por trabalho indígena porque missionários e colonos passaram a compartilhar os mesmos objetivos.",
             "O escambo foi substituído por escravização de maneira uniforme tão logo a produção açucareira se consolidou no litoral."
         ],
@@ -331,7 +331,7 @@ const aspectosEconomicosFormasTrabalhoBrasilColonialImperial = [
         "pergunta": "A abolição da escravidão no Brasil deve ser interpretada historicamente como:",
         "alternativas": [
             "Resultado de pressões convergentes, incluindo resistência de escravizados, ações judiciais, fugas, abolicionismo, mudanças econômicas e disputas políticas que enfraqueceram a instituição.",
-            "Desfecho de transformação econômica que tornou a escravidão improdutiva em muitas as regiões antes que o movimento abolicionista ganhasse força.",
+            "Desfecho de transformação econômica que tornou a escravidão improdutiva em muitas regiões antes que o movimento abolicionista ganhasse força.",
             "Consequência direta da imigração europeia, que supriu a demanda por trabalho e tornou desnecessárias outras pressões contra a escravidão.",
             "Concessão política da monarquia para preservar apoio das elites rurais, com participação limitada de mobilizações urbanas e redes abolicionistas.",
             "A abolição resultou de pressões sociais e políticas diversas, porém a resistência dos escravizados teve peso principalmente simbólico, já que a transformação econômica e a ação parlamentar foram os fatores que efetivamente desorganizaram a instituição."
@@ -572,7 +572,7 @@ const aspectosEconomicosFormasTrabalhoBrasilColonialImperial = [
             "Uma economia de livre contratação mercantil limitada principalmente pela distância geográfica, e não por normas e privilégios metropolitanos.",
             "Um sistema no qual o exclusivo comercial eliminava o mercado interno e obrigava produtores coloniais a negociar toda a produção com a metrópole.",
             "Uma ordem marcada por interesses metropolitanos, tributação, privilégios comerciais e controles que coexistiam com contrabando, negociação local e circuitos internos.",
-            "Um regime de monopólio plenamente eficaz em que autoridades metropolitanas conseguiam controlar de forma uniforme produção, comércio e circulação em muitas as regiões."
+            "Um regime de monopólio plenamente eficaz em que autoridades metropolitanas conseguiam controlar de forma uniforme produção, comércio e circulação em muitas regiões."
         ],
         "correta": 3,
         "feedbackAcerto": "✅ O sistema colonial envolvia controle, mas sua aplicação concreta era negociada e imperfeita.",
@@ -638,7 +638,7 @@ const aspectosEconomicosFormasTrabalhoBrasilColonialImperial = [
     {
         "pergunta": "O conceito tradicional de 'colônia de exploração' é útil quando:",
         "alternativas": [
-            "É utilizado como modelo completo capaz de explicar sozinho a organização econômica e social de muitas as regiões da América portuguesa.",
+            "É utilizado como modelo completo capaz de explicar sozinho a organização econômica e social de muitas regiões da América portuguesa.",
             "É oposto rigidamente a 'colônia de povoamento', supondo que principalmente um dos modelos possuía mercado interno e população permanente.",
             "É empregado como síntese da orientação exportadora e dos interesses metropolitanos, sem apagar mercados internos, diversidade regional e agência dos grupos coloniais.",
             "É aplicado para demonstrar que atividades não exportadoras tinham função residual e pouca relação com os setores de maior dinamismo.",
@@ -711,7 +711,7 @@ const aspectosEconomicosFormasTrabalhoBrasilColonialImperial = [
             "Diferenciar o trabalho rural do urbano, já que a coerção era característica principalmente das atividades agrícolas exportadoras.",
             "A coerção pode assumir formas jurídicas e institucionais diversas; por isso é necessário distinguir trabalho compulsório de simples pobreza ou dependência econômica.",
             "Designar principalmente a escravidão africana, pois outras formas de coerção indígena pertenciam à administração missionária e não ao trabalho.",
-            "Reunir num mesmo conceito muitas as relações de dependência econômica, inclusive parceria, colonato e trabalho de agregados livres.",
+            "Reunir num mesmo conceito muitas relações de dependência econômica, inclusive parceria, colonato e trabalho de agregados livres.",
             "Identificar relações de trabalho impostas por coerção jurídica, militar, senhorial ou institucional, com destaque para diferentes formas de escravização."
         ],
         "correta": 4,
@@ -738,7 +738,7 @@ const aspectosEconomicosFormasTrabalhoBrasilColonialImperial = [
         "alternativas": [
             "Escravidão e comércio atlântico podiam coexistir, mas a relação escravista permanecia externa à acumulação capitalista porque produção mercantil e crédito só se tornam capitalistas quando a força de trabalho é juridicamente livre e vendida por salário.",
             "O escravismo colonial podia integrar produção mercantil, crédito, comércio de longa distância e acumulação, embora a relação de trabalho fosse coercitiva e não salarial.",
-            "A escravidão era externa ao capitalismo comercial porque relações capitalistas exigem trabalho assalariado em muitas as etapas da produção e circulação.",
+            "A escravidão era externa ao capitalismo comercial porque relações capitalistas exigem trabalho assalariado em muitas etapas da produção e circulação.",
             "O tráfico e a plantation pertenciam a uma economia pré-mercantil, enquanto bancos e comerciantes europeus atuavam em circuitos econômicos separados.",
             "A presença de comércio de longa distância aproxima o escravismo do capitalismo industrial, tornando secundária a diferença entre coerção e salário."
         ],
@@ -960,7 +960,7 @@ const aspectosEconomicosFormasTrabalhoBrasilColonialImperial = [
     {
         "pergunta": "Qual limite importante das leis graduais de emancipação do século XIX deve ser reconhecido?",
         "alternativas": [
-            "Elas extinguiram progressivamente a propriedade escrava em muitas as regiões no mesmo ritmo, reduzindo as diferenças entre províncias.",
+            "Elas extinguiram progressivamente a propriedade escrava em muitas regiões no mesmo ritmo, reduzindo as diferenças entre províncias.",
             "Elas asseguravam integração econômica dos beneficiados ao prever acesso à terra e proteção contratual depois da libertação.",
             "Elas criavam novas situações jurídicas de liberdade, mas preservavam por longos períodos poderes senhoriais, condições de tutela ou exigências que restringiam autonomia efetiva.",
             "Elas não alteraram a condição jurídica de nenhum grupo antes de 1888 e tiveram função principalmente simbólica no debate político.",

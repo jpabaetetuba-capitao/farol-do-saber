@@ -282,7 +282,7 @@ const novasRelacoesEconomicasBrasilGlobalizacaoMercosul = [
             "Os custos sociais demonstram que a abertura bloqueou modernização tecnológica e impediu aumentos de produtividade nas empresas sobreviventes.",
             "Os efeitos ficaram concentrados no comércio exterior e tiveram influência pequena sobre preços, estratégias empresariais e relações de trabalho; essa leitura ainda generaliza para toda a indústria um efeito que depende de setor, tecnologia e capacidade de adaptação.",
             "A experiência brasileira reproduziu resultados semelhantes em as principais regiões, porque as mesmas tarifas se aplicavam nacionalmente.",
-            "Os ganhos de produtividade foram suficientemente amplos para compensar perdas de emprego e fechamento de empresas em os principais setores."
+            "Os ganhos de produtividade foram suficientemente amplos para compensar perdas de emprego e fechamento de empresas nos principais setores."
         ],
         "correta": 0,
         "feedbackAcerto": "✅ Políticas econômicas podem produzir ganhos e perdas simultaneamente e de forma desigual.",
@@ -1229,7 +1229,7 @@ const novasRelacoesEconomicasBrasilGlobalizacaoMercosul = [
         "pergunta": "Qual síntese é metodologicamente mais forte?",
         "alternativas": [
             "Tratar as duas como equivalentes e concluir que não é possível avaliar o período.",
-            "Somar os argumentos e afirmar que modernização e destruição ocorreram com igual intensidade em os principais setores; essa leitura ainda generaliza para toda a indústria um efeito que depende de setor, tecnologia e capacidade de adaptação.",
+            "Somar os argumentos e afirmar que modernização e destruição ocorreram com igual intensidade nos principais setores; essa leitura ainda generaliza para toda a indústria um efeito que depende de setor, tecnologia e capacidade de adaptação.",
             "Examinar mudanças por setor e período, reconhecendo perdas industriais em alguns segmentos e adaptação ou modernização em outros.",
             "Escolher a segunda porque empresas sobreviventes representam melhor a trajetória nacional.",
             "Escolher a primeira interpretação porque fechamento de empresas pesa mais que esse tipo de ganho de produtividade."
@@ -1421,7 +1421,7 @@ const novasRelacoesEconomicasBrasilGlobalizacaoMercosul = [
             "A frase significa que o Estado deveria abandonar planejamento, fiscalização e financiamento públicos.",
             "A proposta redefine instrumentos de intervenção estatal e não implica ausência de política econômica ou social.",
             "A proposta transforma agências reguladoras em empresas produtivas responsáveis por competir com concessionárias.",
-            "Regular mais significa substituir mercados por tabelamento direto de preços em os principais setores privatizados.",
+            "Regular mais significa substituir mercados por tabelamento direto de preços nos principais setores privatizados.",
             "Produzir menos equivale a gastar menos em esse tipo de função, inclusive saúde, educação e justiça."
         ],
         "correta": 1,

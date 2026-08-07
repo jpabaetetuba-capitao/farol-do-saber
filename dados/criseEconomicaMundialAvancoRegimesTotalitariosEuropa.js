@@ -33,7 +33,7 @@ const criseEconomicaMundialAvancoRegimesTotalitariosEuropa = [
             "reuniu recuperações temporárias e novas rupturas.",
             "eliminou tensões depois da criação da Liga das Nações.",
             "foi definido por uma crise única e sem fases distintas.",
-            "manteve prosperidade contínua em os principais países.",
+            "manteve prosperidade contínua nos principais países.",
             "formou um período econômico uniforme desde 1919."
         ],
         "correta": 0,
@@ -1383,7 +1383,7 @@ const criseEconomicaMundialAvancoRegimesTotalitariosEuropa = [
             "A existência de líder forte, suficiente para diferenciar totalitarismo de outras ditaduras.",
             "A simples inexistência de eleições competitivas, característica exclusiva de regimes totalitários.",
             "A tentativa de mobilizar e reorganizar amplas dimensões da sociedade em torno de uma ideologia oficial.",
-            "O controle econômico direto de as principais empresas privadas, requisito de esse tipo de regime totalitário."
+            "O controle econômico direto das principais empresas privadas, requisito desse tipo de regime totalitário."
         ],
         "correta": 3,
         "feedbackAcerto": "✅ Totalitarismo envolve ambição de mobilização e transformação social ampla.",

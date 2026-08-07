@@ -125,10 +125,10 @@ const segundaGuerraMundialGuerraFria = [
         "texto": "Em 1940, a França foi derrotada e parte de seu território ficou sob o regime de Vichy.",
         "pergunta": "A situação francesa caracterizou-se pela:",
         "alternativas": [
-            "resistência unificada de as principais autoridades ao ocupante.",
+            "resistência unificada das principais autoridades ao ocupante.",
             "ausência de colaboração em áreas administradas por franceses.",
             "transferência de Vichy para o comando da França Livre.",
-            "neutralidade completa de de Gaulle durante o conflito.",
+            "neutralidade completa de Gaulle durante o conflito.",
             "coexistência de colaboração, ocupação e resistência."
         ],
         "correta": 4,
@@ -300,7 +300,7 @@ const segundaGuerraMundialGuerraFria = [
             "reuniram correntes diversas contra ocupação e perseguição.",
             "foram organizadas principalmente por governos que colaboravam.",
             "evitaram esse tipo de participação de civis e mulheres.",
-            "possuíam programa político idêntico em os principais países."
+            "possuíam programa político idêntico nos principais países."
         ],
         "correta": 1,
         "feedbackAcerto": "✅ Resistências foram plurais e incluíram civis.",
