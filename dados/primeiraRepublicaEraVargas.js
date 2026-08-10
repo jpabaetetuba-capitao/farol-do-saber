@@ -1,16 +1,15 @@
-// FAROL DO SABER — Tópico 18 de História (VERSÃO REVISADA)
-// Alternativas reescritas e auditadas para eliminar pistas visuais pelo tamanho.
-// Distribuição do gabarito preservada: 10 respostas em cada posição A, B, C, D e E.
+// FAROL DO SABER — Primeira República e Era Vargas
+// Banco revisado: 70 questões difíceis, contextualizadas e auditadas.
 
 const primeiraRepublicaEraVargas = [
     {
-        "pergunta": "Ao dividir o período republicano brasileiro entre 1889 e 1945, uma professora explicou que 'Primeira República' e 'Era Vargas' correspondem a experiências políticas distintas. A síntese mais adequada é:",
+        "pergunta": "Entre 1889 e 1945, a organização política brasileira passou por mudanças importantes, sem que desigualdades sociais e limites de cidadania desaparecessem. A síntese mais adequada para comparar Primeira República e Era Vargas é:",
         "alternativas": [
-            "a Primeira República ampliou o voto popular, enquanto Vargas restaurou o Poder Moderador e o parlamentarismo imperial.",
-            "os dois períodos conservaram o mesmo federalismo, as mesmas regras eleitorais e igual relação entre Estado e sindicatos.",
+            "a Primeira República combinou ampla autonomia estadual com participação política extensa, e Vargas conservou esse arranjo ao criar políticas sociais urbanas.",
+            "os dois períodos ampliaram gradualmente a cidadania, mas se distinguiram sobretudo pela intensidade da intervenção econômica do governo federal.",
             "a Primeira República teve federalismo oligárquico e participação limitada; Vargas centralizou o Estado e ampliou direitos sociais.",
-            "Vargas implantou sufrágio universal e extinguiu conflitos sociais, enquanto a Primeira República suprimiu toda autonomia estadual.",
-            "a distinção foi apenas econômica: antes não havia café exportador e, depois de 1930, a indústria deixou de receber investimentos públicos."
+            "Vargas centralizou a administração federal, porém manteve a legislação social praticamente no mesmo nível institucional existente antes de 1930.",
+            "a Primeira República concentrou decisões políticas no Executivo federal, e Vargas devolveu aos estados a autonomia predominante do início republicano."
         ],
         "correta": 2,
         "feedbackAcerto": "✅ A comparação identifica mudanças reais na organização do Estado sem apagar continuidades de desigualdade e exclusão política.",
@@ -18,13 +17,13 @@ const primeiraRepublicaEraVargas = [
         "dicaBanca": "💡 Em questões comparativas, procure uma alternativa que reconheça diferenças institucionais e também permanências sociais."
     },
     {
-        "pergunta": "Um candidato afirma que a expressão 'República Oligárquica' significa que todos os estados exerciam poder igual sobre o governo federal. A correção histórica é:",
+        "pergunta": "Na Primeira República, a expressão 'República Oligárquica' não significa equilíbrio político entre os estados. Historicamente, ela se refere:",
         "alternativas": [
-            "a expressão indica que as elites agrárias foram afastadas e que sindicatos urbanos assumiram diretamente o governo federal.",
-            "o conceito descreve um regime de sufrágio feminino e analfabeto, com igualdade política entre os estados desde 1891.",
-            "a República Oligárquica aboliu a autonomia estadual e concentrou todas as decisões políticas na Presidência da República.",
-            "o termo designa somente a presença militar nos governos de Deodoro e Floriano, encerrada com a eleição de Prudente de Morais.",
-            "a expressão indica domínio de grupos proprietários e chefias regionais, embora os estados tivessem pesos políticos desiguais."
+            "à predominância de elites agrárias estaduais em um sistema no qual sindicatos urbanos passaram a definir a composição do governo federal.",
+            "a um federalismo que distribuiu influência semelhante entre as unidades da federação e reduziu o peso das chefias políticas regionais.",
+            "à concentração das decisões na Presidência, com governadores subordinados administrativamente ao Executivo federal desde 1891.",
+            "ao predomínio político dos governos militares iniciais, sem continuidade relevante das elites civis depois da eleição de Prudente de Morais.",
+            "ao domínio de grupos proprietários e chefias regionais, articulados ao Estado, embora os estados tivessem pesos políticos desiguais."
         ],
         "correta": 4,
         "feedbackAcerto": "✅ Oligarquia designa poder concentrado em minorias, não igualdade automática entre estados ou ausência de disputas regionais.",
@@ -34,11 +33,11 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "A Constituição de 1891 representou uma ruptura institucional em relação ao Império porque estabeleceu:",
         "alternativas": [
-            "monarquia parlamentar, religião católica oficial e conservação do Poder Moderador como árbitro das instituições nacionais.",
+            "república presidencial com autonomia estadual reduzida por mecanismos de intervenção federal ordinária e religião católica mantida como referência oficial.",
             "federalismo, presidencialismo, separação entre Igreja e Estado, autonomia estadual e extinção do Poder Moderador imperial.",
-            "voto universal, secreto e obrigatório, incluindo mulheres, analfabetos e integrantes das forças armadas de baixa patente.",
-            "centralização administrativa, governadores vitalícios nomeados pela Presidência e redução da autonomia das antigas províncias.",
-            "socialização das terras cafeeiras, nacionalização das exportações e liberdade sindical sem qualquer controle governamental."
+            "república federativa com sufrágio masculino ampliado aos analfabetos e organização da Justiça Eleitoral para fiscalizar a votação nacional.",
+            "presidencialismo republicano com governadores escolhidos pelo governo central e limites mais estreitos à autonomia das antigas províncias.",
+            "federalismo republicano com autonomia sindical garantida constitucionalmente e participação eleitoral feminina reconhecida em âmbito nacional."
         ],
         "correta": 1,
         "feedbackAcerto": "✅ Esses elementos definiram a nova arquitetura constitucional republicana, embora a cidadania eleitoral continuasse limitada.",
@@ -62,11 +61,11 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "Durante o governo de Deodoro da Fonseca, o fechamento do Congresso em 1891 agravou a crise política. A consequência imediata foi:",
         "alternativas": [
-            "a restauração da monarquia sob Pedro II, apoiada pelo Congresso e por unidades militares contrárias ao presidencialismo.",
-            "a convocação de eleições diretas que conduziram Getúlio Vargas ao governo e encerraram a República da Espada.",
-            "a revogação da Constituição de 1891 e sua substituição imediata por uma carta inspirada no corporativismo de 1934.",
+            "a negociação com o Congresso restabeleceu o equilíbrio institucional e permitiu que Deodoro concluísse o mandato sob fiscalização parlamentar reforçada.",
+            "a crise levou à convocação de nova eleição presidencial, mantendo Deodoro provisoriamente no cargo até a escolha do sucessor pelo Congresso.",
+            "a Marinha apoiou o fechamento do Legislativo, fortalecendo o presidente e reduzindo a resistência dos grupos civis à condução do governo.",
             "a reação civil e militar, seguida da renúncia de Deodoro, da posse de Floriano Peixoto e da reorganização do Executivo.",
-            "a vitória da Revolta da Vacina, que depôs o presidente e entregou o governo a organizações de trabalhadores urbanos."
+            "a oposição aceitou a dissolução do Congresso em troca de maior autonomia estadual, diminuindo a tensão entre Executivo federal e governos regionais."
         ],
         "correta": 3,
         "feedbackAcerto": "✅ O gesto autoritário isolou Deodoro e desencadeou resistência que tornou sua permanência insustentável.",
@@ -76,11 +75,11 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "A permanência de Floriano Peixoto na presidência foi contestada porque a Constituição previa nova eleição quando a vacância ocorresse antes da metade do mandato. A resposta de Floriano caracterizou-se por:",
         "alternativas": [
-            "renunciar ao cargo, convocar nova eleição presidencial e entregar provisoriamente o poder aos antigos monarquistas.",
+            "convocar novo pleito presidencial e permanecer como chefe interino até que o Congresso definisse regras eleitorais complementares à Constituição.",
             "permanecer no governo, reprimir opositores e enfrentar a Revolta da Armada e a Revolução Federalista.",
-            "transferir a capital para Salvador e reconhecer os líderes de Canudos como representantes legítimos da República.",
-            "dissolver as Forças Armadas, implantar parlamentarismo sindical e submeter o Executivo aos governos estaduais.",
-            "suspender a repressão, anistiar todos os revoltosos e conceder autonomia política aos comandantes da Marinha."
+            "negociar com a Marinha a redução dos poderes presidenciais e reconhecer maior autonomia às forças estaduais envolvidas na crise política.",
+            "transferir ao Congresso a condução das operações militares, preservando-se no cargo com funções políticas reduzidas até o fim do mandato.",
+            "formar um gabinete de conciliação com federalistas e revoltosos da Armada, encerrando os conflitos sem ampliar os mecanismos de repressão."
         ],
         "correta": 1,
         "feedbackAcerto": "✅ Floriano sustentou-se politicamente e reprimiu movimentos armados, consolidando a ordem republicana por meios autoritários.",
@@ -105,10 +104,10 @@ const primeiraRepublicaEraVargas = [
         "pergunta": "Em uma charge, um grande proprietário observa eleitores depositando cédulas enquanto capangas vigiam a seção. A situação representa principalmente:",
         "alternativas": [
             "voto aberto, coerção sobre eleitores e controle político local, práticas associadas ao chamado voto de cabresto.",
-            "voto secreto fiscalizado pela Justiça Eleitoral e proteção legal do eleitor contra pressões de proprietários rurais.",
-            "participação livre de mulheres e analfabetos, grupos incluídos nas eleições presidenciais pela Constituição de 1891.",
-            "eleição sindical corporativa estabelecida pela Constituição de 1937 para escolher representantes profissionais.",
-            "plebiscito nacional organizado pelos estados para aprovar a intervenção pública na valorização do café."
+            "voto aberto acompanhado de fiscalização partidária formal, mecanismo criado para impedir interferência dos chefes locais na decisão do eleitor.",
+            "sufrágio masculino com proteção institucional do sigilo, embora proprietários rurais conservassem influência econômica sobre as comunidades locais.",
+            "eleição controlada por comissões estaduais independentes das oligarquias, mas ainda marcada por pressões econômicas fora das seções eleitorais.",
+            "participação eleitoral ampliada nas áreas rurais, com predomínio de acordos partidários entre eleitores e proprietários em condições de autonomia política."
         ],
         "correta": 0,
         "feedbackAcerto": "✅ A ausência de sigilo facilitava pressões, fraudes e vigilância por chefes políticos locais.",
@@ -118,10 +117,10 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "A Política dos Governadores, associada ao governo Campos Sales, funcionava por meio:",
         "alternativas": [
-            "da nomeação vitalícia de governadores pelo Exército e do fechamento do Congresso durante todos os mandatos presidenciais.",
-            "da alternância constitucional obrigatória entre presidentes paulistas e mineiros, sem participação de outras oligarquias.",
-            "da escolha direta de interventores por sindicatos reconhecidos, com fiscalização permanente do Ministério do Trabalho.",
-            "da autonomia municipal plena, que tornou prefeitos independentes dos governos estaduais e da Presidência da República.",
+            "da intervenção frequente da Presidência nos estados para substituir governadores oposicionistas e enfraquecer as bancadas estaduais no Congresso.",
+            "de um acordo fixo de sucessão presidencial entre São Paulo e Minas Gerais, aplicado como regra nacional independentemente das disputas regionais.",
+            "da autonomia das câmaras municipais diante dos governos estaduais, que permitia às chefias locais negociar diretamente com o Executivo federal.",
+            "da formação de coalizões parlamentares nacionais pouco dependentes das máquinas eleitorais estaduais e das alianças construídas pelos governadores.",
             "do apoio recíproco entre Presidência e oligarquias estaduais, com controle das bancadas e dos resultados eleitorais oficiais."
         ],
         "correta": 4,
@@ -132,11 +131,11 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "A expressão 'política do café com leite' deve ser utilizada com cautela porque:",
         "alternativas": [
-            "designava um acordo comercial que proibia exportar café e leite para proteger a indústria e ampliar o consumo interno.",
-            "significava que todos os presidentes da Primeira República eram naturais de São Paulo ou de Minas Gerais.",
+            "descreve um pacto institucional formalizado entre São Paulo e Minas para repartir ministérios e impedir candidaturas oriundas de outros estados.",
+            "indica que a força política paulista e mineira resultava de alternância presidencial estável, sem rupturas provocadas por disputas sucessórias.",
             "resume a força de São Paulo e Minas, mas pode ocultar disputas e uma alternância presidencial que não foi perfeita.",
-            "era o nome oficial dado pela Constituição de 1891 ao mecanismo político conhecido como Política dos Governadores.",
-            "referia-se ao programa alimentar criado por Vargas para fornecer café e leite aos trabalhadores das novas indústrias."
+            "explica a política federal do período pela associação entre cafeicultura paulista e pecuária mineira, deixando em segundo plano as coalizões estaduais.",
+            "designa a mesma estrutura da Política dos Governadores, embora esta se referisse à sucessão entre presidentes paulistas e mineiros como mecanismo político predominante."
         ],
         "correta": 2,
         "feedbackAcerto": "✅ O conceito é útil como síntese, mas não pode transformar uma correlação de forças em regra automática e sem conflitos.",
@@ -174,11 +173,11 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "Em cidades como São Paulo e Rio de Janeiro, o movimento operário da Primeira República foi marcado por:",
         "alternativas": [
-            "controle integral do Estado, imposto sindical obrigatório e unicidade sindical já regulamentados pela Constituição de 1891.",
-            "ausência de greves, porque jornada de oito horas, descanso semanal e férias já abrangiam todos os trabalhadores urbanos.",
+            "forte institucionalização sindical sob tutela federal, com mediação estatal regular dos conflitos entre patrões e trabalhadores já consolidada antes de 1930.",
+            "predomínio de sindicatos legalmente reconhecidos pelo governo, que combinavam negociação coletiva estável com proteção social ampla nas principais cidades.",
             "associações, imprensa, sindicatos e greves, com circulação de ideias anarquistas, socialistas e outras correntes políticas.",
-            "participação exclusiva de estrangeiros, sem presença de brasileiros, mulheres, negros ou trabalhadores do setor de serviços.",
-            "apoio uniforme dos industriais, que financiavam sindicatos independentes e aceitavam as reivindicações dos empregados."
+            "organização operária centrada em trabalhadores estrangeiros qualificados, com participação nacional restrita aos setores de serviços e transporte.",
+            "mobilização urbana marcada pela negociação com associações patronais, que reconheciam sindicatos independentes como interlocutores regulares dos conflitos."
         ],
         "correta": 2,
         "feedbackAcerto": "✅ O movimento operário foi plural e enfrentou repressão, precariedade e ausência de proteção trabalhista abrangente.",
@@ -202,11 +201,11 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "Canudos foi destruído em 1897 após sucessivas expedições militares. Uma leitura historiográfica atual destaca que o movimento:",
         "alternativas": [
-            "foi uma invasão estrangeira apoiada pela monarquia portuguesa, que pretendia restaurar Pedro II no governo brasileiro.",
-            "organizou-se como partido urbano e disputou eleições em Salvador, rejeitando qualquer forma de liderança religiosa.",
-            "pretendia implantar um regime comunista inspirado na Revolução Russa, duas décadas antes da formação soviética.",
+            "expressou reação monarquista organizada por proprietários rurais do sertão, apoiada por redes políticas que buscavam restaurar a ordem imperial.",
+            "foi uma comunidade sertaneja cuja liderança religiosa se articulou a um programa eleitoral voltado à disputa institucional do poder na Bahia.",
+            "resultou principalmente de conflito fundiário entre pequenos agricultores e empresas ferroviárias, com forte presença de monges e posseiros da fronteira sul.",
             "reuniu sertanejos em comunidade religiosa e social própria, tratada pelo Estado como ameaça à ordem republicana.",
-            "recebeu armas e proteção do governo federal para enfrentar grandes proprietários e reorganizar a distribuição de terras."
+            "constituiu experiência comunitária protegida inicialmente pelas autoridades baianas, que depois recorreram ao Exército diante de disputas tributárias locais."
         ],
         "correta": 3,
         "feedbackAcerto": "✅ Canudos deve ser compreendido no contexto do sertão, da pobreza, da religiosidade e da violência da construção republicana.",
@@ -231,7 +230,7 @@ const primeiraRepublicaEraVargas = [
         "pergunta": "A Revolta da Vacina, em 1904, não pode ser explicada apenas como rejeição irracional à ciência, pois também envolveu:",
         "alternativas": [
             "uma campanha médica contra o saneamento urbano e contra a redução das epidemias que atingiam a capital federal.",
-            "a oposição das camadas populares à abertura de escolas e à modernização dos serviços de água e esgoto da cidade.",
+            "a oposição das camadas populares à abertura de escolas e à modernização dos serviços de água e esgoto, vistos como imposições centrais das reformas urbanas em curso.",
             "reformas urbanas autoritárias, remoções, invasão de domicílios, desconfiança e conflitos com a vacinação obrigatória.",
             "a defesa de uma vacinação voluntária já garantida por consultas populares e por ampla participação dos moradores.",
             "um levante rural contra ferrovias e empresas estrangeiras na fronteira disputada entre Paraná e Santa Catarina."
@@ -244,10 +243,10 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "Na Revolta da Chibata, em 1910, marinheiros liderados por João Cândido reivindicavam principalmente:",
         "alternativas": [
-            "a restauração de Pedro II, a volta do tráfico atlântico e a retirada dos oficiais republicanos do comando naval.",
-            "a implantação do voto feminino e da Justiça Eleitoral como condição para o retorno imediato aos serviços de bordo.",
-            "a nacionalização das ferrovias estrangeiras e a transferência dos investimentos públicos para a Marinha de Guerra.",
-            "a defesa do Convênio de Taubaté e da valorização do café para ampliar a arrecadação destinada aos marinheiros.",
+            "redução do tempo de serviço e ampliação de promoções, mantendo-se os castigos físicos como mecanismo disciplinar previsto nos regulamentos navais.",
+            "reorganização das carreiras da Marinha e equiparação salarial com o Exército, sem questionamento central das práticas disciplinares aplicadas a bordo.",
+            "substituição dos oficiais superiores por quadros escolhidos pelos marinheiros, com autonomia política das tripulações na administração dos navios.",
+            "melhoria das condições de trabalho e revisão das punições disciplinares, mas com manutenção da chibata para faltas consideradas graves pelo comando.",
             "o fim dos castigos corporais e a melhoria das condições de tratamento dos marinheiros nas embarcações da Armada."
         ],
         "correta": 4,
@@ -259,7 +258,7 @@ const primeiraRepublicaEraVargas = [
         "pergunta": "O tenentismo da década de 1920 expressou principalmente:",
         "alternativas": [
             "a defesa da Política dos Governadores, do voto aberto e da manutenção das oligarquias estaduais no comando nacional.",
-            "um movimento de cafeicultores contrários à centralização e favoráveis à ampliação da autonomia das antigas oligarquias.",
+            "um movimento de cafeicultores contrários à centralização e favoráveis à ampliação da autonomia das antigas oligarquias, articulado por pactos estaduais de oposição.",
             "uma revolução camponesa socialista organizada pelo Partido Comunista para coletivizar terras e derrubar a República.",
             "a insatisfação de jovens oficiais com fraudes e poder oligárquico, embora o movimento não tivesse projeto social único.",
             "a reação de oficiais monarquistas que pretendiam restaurar o Império e coroar um descendente direto de Pedro II."
@@ -272,11 +271,11 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "A Revolta dos 18 do Forte de Copacabana, em 1922, tornou-se símbolo do tenentismo porque:",
         "alternativas": [
-            "obteve vitória militar, depôs Epitácio Pessoa e governou o país por meio de uma junta tenentista até o ano de 1930.",
+            "a rebelião articulou parte do oficialato jovem a setores civis e obrigou o governo federal a negociar mudanças eleitorais antes do encerramento do episódio.",
             "um pequeno grupo de oficiais e civis marchou contra forças governistas após rebelar-se contra a ordem política vigente.",
-            "foi liderada por Getúlio Vargas para impedir a posse de Washington Luís e antecipar a ruptura política de 1930.",
-            "resultou na aprovação imediata do voto secreto e feminino e na criação da Justiça Eleitoral pelo Congresso Nacional.",
-            "defendeu a permanência de Epitácio Pessoa e a continuidade do domínio das oligarquias estaduais sobre o governo federal."
+            "o movimento reuniu unidades militares de vários estados e estabeleceu administração rebelde temporária em áreas sob seu controle territorial.",
+            "a revolta fracassou militarmente, mas alcançou concessões imediatas sobre voto secreto e fiscalização eleitoral ainda durante o governo Epitácio Pessoa.",
+            "o episódio expressou dissidência militar localizada que, após negociação, foi incorporada à estrutura política oligárquica sem continuidade em outros levantes."
         ],
         "correta": 1,
         "feedbackAcerto": "✅ Embora derrotado, o episódio ganhou força simbólica como contestação militar à ordem oligárquica.",
@@ -300,11 +299,11 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "A crise de 1929 afetou profundamente o Brasil porque:",
         "alternativas": [
-            "valorizou automaticamente o café e eliminou os estoques excedentes, dispensando qualquer intervenção dos governos estaduais.",
+            "a queda internacional dos preços foi compensada pelo aumento das exportações brasileiras, preservando as receitas cafeeiras e a estabilidade das alianças políticas.",
             "reduziu a demanda e os preços do café, agravando a crise econômica e política da ordem oligárquica brasileira.",
-            "provocou o retorno imediato da monarquia, a dissolução dos estados e a convocação de uma Assembleia Imperial.",
-            "encerrou a industrialização brasileira, proibiu a circulação da moeda nacional e fechou os principais bancos do país.",
-            "garantiu a vitória eleitoral da Aliança Liberal e a posse pacífica de Vargas, reconhecida por Washington Luís."
+            "a contração do crédito externo afetou setores urbanos, mas teve impacto reduzido sobre o café porque os estoques públicos sustentaram preços e receitas de exportação.",
+            "a crise fortaleceu o pacto sucessório entre São Paulo e Minas, pois os principais grupos exportadores convergiram em torno de uma candidatura de conciliação.",
+            "o choque internacional atingiu a economia exportadora, mas a crise política de 1930 decorreu de fatores sucessórios sem relação relevante com a conjuntura econômica."
         ],
         "correta": 1,
         "feedbackAcerto": "✅ A dependência cafeeira tornou o país vulnerável ao colapso internacional e ampliou tensões políticas em 1930.",
@@ -315,7 +314,7 @@ const primeiraRepublicaEraVargas = [
         "pergunta": "A formação da Aliança Liberal, em 1929, decorreu principalmente:",
         "alternativas": [
             "da ruptura entre oligarquias e da oposição a Júlio Prestes, reunindo Vargas, João Pessoa e grupos políticos dissidentes.",
-            "da união entre São Paulo e Minas para conservar a sucessão tradicional e fortalecer a candidatura de Júlio Prestes.",
+            "da união entre São Paulo e Minas para conservar a sucessão tradicional e fortalecer a candidatura de Júlio Prestes por meio de acordo entre as principais oligarquias regionais.",
             "de um acordo nacional entre monarquistas e comunistas para restaurar o Império e dissolver os governos estaduais.",
             "da mobilização exclusiva de operários urbanos sob direção do Ministério do Trabalho, criado ainda na década de 1920.",
             "da imposição militar para cancelar as eleições e prolongar o mandato de Washington Luís sem consulta ao Congresso."
@@ -331,7 +330,7 @@ const primeiraRepublicaEraVargas = [
             "a vitória eleitoral de Vargas, reconhecida pelo governo federal e confirmada pela Justiça Eleitoral logo após a apuração.",
             "a renúncia voluntária de Júlio Prestes antes da divulgação dos resultados e a convocação de novas eleições presidenciais.",
             "a derrota da Aliança Liberal, o assassinato de João Pessoa, a mobilização armada e a deposição de Washington Luís em 1930.",
-            "um plebiscito nacional organizado pela Justiça Eleitoral para decidir entre continuidade oligárquica e governo provisório.",
+            "um plebiscito nacional organizado pela Justiça Eleitoral para decidir entre continuidade oligárquica e governo provisório, sob fiscalização dos governos estaduais.",
             "uma intervenção estrangeira que ocupou o Rio de Janeiro e entregou a chefia do Executivo a uma junta liderada por Vargas."
         ],
         "correta": 2,
@@ -342,10 +341,10 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "Uma interpretação historiográfica cuidadosa sobre 1930 evita chamá-la simplesmente de revolução popular porque:",
         "alternativas": [
-            "não houve participação civil, mobilização regional ou conflito armado, pois a mudança ocorreu apenas nos quartéis da capital.",
-            "seu objetivo declarado era implantar uma república socialista e entregar imediatamente o governo ao Partido Comunista.",
-            "o movimento foi conduzido apenas por cafeicultores paulistas interessados em garantir a posse de Júlio Prestes.",
-            "a ruptura preservou todos os governadores e mecanismos eleitorais que sustentavam a ordem política da Primeira República.",
+            "a mudança de governo nasceu de mobilização militar restrita, com participação civil limitada e pequena presença de dissidências regionais na articulação nacional.",
+            "a ruptura expressou programa social definido pelos tenentes, aceito pelas oligarquias dissidentes e aplicado de modo coerente depois da deposição de Washington Luís.",
+            "o movimento foi dirigido por cafeicultores paulistas dissidentes, que romperam com Júlio Prestes e conduziram Vargas à Presidência para preservar a autonomia estadual.",
+            "a vitória de 1930 manteve a estrutura política estadual anterior, embora substituísse a Presidência e reorganizasse parte das alianças entre grupos oligárquicos.",
             "reuniu dissidências oligárquicas, tenentes e setores urbanos, com direção política predominante de elites e militares."
         ],
         "correta": 4,
@@ -384,11 +383,11 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "O Código Eleitoral de 1932 introduziu mudanças importantes, entre elas:",
         "alternativas": [
-            "voto aberto restrito aos proprietários rurais, proibição dos partidos e controle das eleições pelos governos estaduais.",
-            "sufrágio de analfabetos e jovens de dezesseis anos, com voto obrigatório em todos os níveis eleitorais.",
-            "eleição indireta permanente para os cargos executivos e extinção da representação proporcional no Legislativo.",
+            "manutenção do voto aberto, criação de juntas eleitorais estaduais e reconhecimento gradual da participação feminina nas eleições legislativas.",
+            "ampliação do corpo eleitoral aos analfabetos adultos e criação da Justiça Eleitoral, mantendo a votação pública nas disputas municipais.",
+            "voto secreto e representação proporcional, mas com fiscalização eleitoral concentrada nos governos estaduais responsáveis pela apuração dos resultados.",
             "voto secreto, Justiça Eleitoral e reconhecimento do voto feminino, ainda com limitações na participação efetiva.",
-            "retorno do voto censitário, da religião oficial e da nomeação presidencial dos governadores estaduais."
+            "Justiça Eleitoral e voto feminino, acompanhados da escolha indireta permanente dos chefes do Executivo pelos representantes eleitos."
         ],
         "correta": 3,
         "feedbackAcerto": "✅ A reforma buscou reduzir fraudes e ampliar a participação, sendo marco da cidadania política feminina.",
@@ -412,10 +411,10 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "A Constituição de 1934 diferenciou-se da de 1891 ao incorporar:",
         "alternativas": [
-            "restauração do Poder Moderador, reconhecimento da religião católica oficial e retorno do parlamentarismo monárquico.",
-            "proibição do voto feminino, fechamento dos sindicatos e exclusão dos direitos sociais do novo texto constitucional.",
-            "ditadura presidencial sem Congresso, sem eleições e com partidos subordinados diretamente ao chefe do Executivo.",
-            "autonomia absoluta dos estados, que passaram a emitir moeda, manter exércitos próprios e controlar o comércio externo.",
+            "manutenção da estrutura política de 1891, com pequenas alterações eleitorais e ausência de novos dispositivos sociais no texto constitucional.",
+            "centralização executiva acentuada, eliminação da autonomia sindical e suspensão das eleições legislativas durante o período constitucional.",
+            "ampliação da autonomia estadual e redução da presença federal na economia, acompanhadas da retirada dos direitos sociais do texto constitucional.",
+            "presidencialismo com representação classista, mas sem incorporar as reformas eleitorais introduzidas pelo Código Eleitoral de 1932.",
             "direitos sociais, voto secreto, Justiça Eleitoral e maior intervenção estatal nas questões econômicas e trabalhistas."
         ],
         "correta": 4,
@@ -440,10 +439,10 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "Na década de 1930, a Ação Integralista Brasileira e a Aliança Nacional Libertadora representavam:",
         "alternativas": [
-            "dois partidos oligárquicos equivalentes, ambos favoráveis ao retorno da Política dos Governadores e do voto aberto.",
-            "movimentos apenas culturais, sem atuação pública, estrutura nacional, milícias, imprensa ou disputa pelo poder político.",
-            "alianças militares estrangeiras que ocuparam o território brasileiro antes do início da Segunda Guerra Mundial.",
-            "grupos criados pelo Estado Novo depois de 1937 para organizar eleições e apoiar um sistema multipartidário controlado.",
+            "movimentos nacionais que criticavam o liberalismo oligárquico, convergindo na defesa de um Estado corporativo autoritário com base social semelhante.",
+            "organizações de massa com diferenças ideológicas, embora ambas rejeitassem participação eleitoral e mobilização pública como formas de ação política.",
+            "frentes políticas surgidas depois de 1937, estruturadas pelo governo para canalizar disputas sociais dentro das instituições do Estado Novo.",
+            "movimentos com presença urbana e nacionalista que divergiam sobretudo sobre política externa, mas compartilhavam orientação econômica e social próxima.",
             "projetos de massa antagônicos: um de inspiração fascista e outro antifascista e de esquerda, em ambiente polarizado."
         ],
         "correta": 4,
@@ -469,10 +468,10 @@ const primeiraRepublicaEraVargas = [
         "pergunta": "O Plano Cohen teve papel decisivo em 1937 porque:",
         "alternativas": [
             "um documento falso sobre suposta insurreição comunista foi usado para espalhar medo e justificar o golpe do Estado Novo.",
-            "era o programa econômico da Aliança Nacional Libertadora para ampliar a indústria pesada e nacionalizar empresas estrangeiras.",
-            "foi um tratado que obrigou o Brasil a entrar na Segunda Guerra Mundial e a enviar tropas para a campanha da Itália.",
-            "organizou a campanha presidencial vitoriosa de Vargas em eleição direta realizada no segundo semestre de 1937.",
-            "estabeleceu autonomia sindical, liberdade de imprensa e fim da censura como condições para a nova Constituição."
+            "um relatório militar sobre os levantes de 1935 foi divulgado como prova judicial e serviu para reabrir a ANL sob vigilância do governo federal.",
+            "um programa de segurança nacional propôs ampliar os poderes presidenciais dentro da Constituição de 1934, preservando eleições e funcionamento partidário.",
+            "um plano atribuído à oposição integralista foi apresentado como ameaça ao governo e utilizado para justificar a perseguição específica à AIB antes das eleições.",
+            "um documento de inteligência sobre movimentos comunistas levou o Congresso a aprovar nova Constituição por via regular, reforçando temporariamente o Executivo."
         ],
         "correta": 0,
         "feedbackAcerto": "✅ O falso plano foi instrumentalizado na construção de uma emergência política favorável ao fechamento do regime.",
@@ -496,10 +495,10 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "Durante o Estado Novo, o Departamento de Imprensa e Propaganda (DIP) atuava:",
         "alternativas": [
-            "na organização autônoma de sindicatos, no financiamento de greves e na proteção jurídica de jornais oposicionistas.",
-            "na fiscalização exclusiva das exportações de café e no controle dos estoques mantidos pelos governos estaduais.",
-            "na realização de eleições livres, no registro de partidos e na divulgação dos programas dos candidatos presidenciais.",
-            "na distribuição de terras a trabalhadores rurais e na organização de cooperativas agrícolas independentes do governo.",
+            "na coordenação da imprensa governamental e na divulgação de campanhas oficiais, preservando espaços regulares de crítica partidária ao presidente.",
+            "na produção cultural e no rádio estatal, com foco na promoção do nacionalismo sem responsabilidade direta pela censura de conteúdos oposicionistas.",
+            "no controle da propaganda política, enquanto a fiscalização de jornais e manifestações artísticas permaneceu sob órgãos estaduais autônomos.",
+            "na organização de campanhas cívicas e trabalhistas, atuando como órgão de comunicação sem interferir na circulação de notícias contrárias ao regime.",
             "na censura, na propaganda oficial e na construção de uma imagem favorável de Vargas e do regime autoritário varguista."
         ],
         "correta": 4,
@@ -538,11 +537,11 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "A Consolidação das Leis do Trabalho, promulgada em 1943, deve ser entendida como:",
         "alternativas": [
-            "criação do trabalho assalariado no Brasil, modalidade inexistente antes da chegada de Vargas ao governo em 1930.",
-            "extensão imediata e igual de todos os direitos aos trabalhadores rurais, domésticos, autônomos e servidores públicos.",
-            "concessão espontânea de direitos pelo Estado, sem relação com lutas, greves ou legislação produzida anteriormente.",
+            "criação de um sistema trabalhista nacional que substituiu normas anteriores e uniformizou a proteção entre trabalhadores urbanos, rurais e domésticos.",
+            "reunião de leis sociais anteriores com novas normas, acompanhada de autonomia sindical crescente diante do Ministério do Trabalho durante o Estado Novo.",
+            "consolidação de direitos urbanos e reconhecimento sindical, com redução da intervenção estatal nas relações coletivas entre capital e trabalho.",
             "sistematização de normas trabalhistas e novas regras, junto ao controle estatal dos sindicatos e das relações de trabalho.",
-            "adoção de liberdade sindical plena, pluralidade de sindicatos e direito irrestrito de greve contra o governo e as empresas."
+            "organização de direitos trabalhistas em código nacional que ampliou a proteção social e estabeleceu pluralidade sindical por categoria profissional."
         ],
         "correta": 3,
         "feedbackAcerto": "✅ A CLT ampliou proteção urbana formal, mas integrou trabalhadores a uma estrutura corporativa controlada pelo Estado e deixou grupos à margem.",
@@ -553,10 +552,10 @@ const primeiraRepublicaEraVargas = [
         "pergunta": "O sindicalismo corporativo do período Vargas baseava-se em:",
         "alternativas": [
             "reconhecimento oficial, unicidade sindical, enquadramento por categorias e supervisão do Ministério do Trabalho.",
-            "pluralidade sindical irrestrita, ausência de registro público e liberdade para criar várias entidades na mesma categoria.",
-            "organização exclusiva de sindicatos rurais autônomos, sem participação de trabalhadores dos setores urbano e industrial.",
-            "proibição de qualquer negociação entre trabalhadores e empregadores, mesmo sob mediação dos órgãos estatais.",
-            "eleição direta do presidente da República pelos sindicatos registrados e reconhecidos pelo Ministério do Trabalho."
+            "registro sindical facultativo e coexistência de entidades concorrentes da mesma categoria, com negociação coletiva fora da estrutura ministerial.",
+            "representação profissional vinculada ao Estado, mas com liberdade para sindicatos recusarem enquadramento legal e manterem reconhecimento equivalente.",
+            "mediação pública dos conflitos trabalhistas, preservando autonomia organizativa para que cada categoria definisse livremente a quantidade de sindicatos reconhecidos.",
+            "organização corporativa centrada na negociação patronal, com sindicatos de trabalhadores atuando sem registro ou reconhecimento do Ministério do Trabalho."
         ],
         "correta": 0,
         "feedbackAcerto": "✅ O sistema incorporava sindicatos à estrutura estatal e combinava direitos com mecanismos de tutela e controle.",
@@ -567,10 +566,10 @@ const primeiraRepublicaEraVargas = [
         "pergunta": "A imagem de Vargas como 'pai dos pobres' foi construída por meio:",
         "alternativas": [
             "da combinação entre legislação social, cerimônias trabalhistas, comunicação política e propaganda governamental.",
-            "da liberdade de imprensa e da ausência de censura durante todo o Estado Novo, permitindo oposição pública ao presidente.",
-            "da distribuição universal de terras e renda aos trabalhadores rurais, assegurada pela Constituição autoritária de 1937.",
-            "da recusa de Vargas em utilizar rádio, discursos públicos, comemorações cívicas ou símbolos vinculados ao trabalho.",
-            "da autonomia sindical contra interferências governamentais e da liberdade para organizar greves políticas nacionais."
+            "da abertura controlada da imprensa e da tolerância a críticas públicas, fatores que fortaleceram a identificação popular com Vargas durante o Estado Novo.",
+            "da associação entre direitos trabalhistas e distribuição de terras, que ampliou de modo semelhante a base social urbana e rural do governo.",
+            "da redução do uso político do rádio e das comemorações oficiais, substituídos por relações diretas entre sindicatos autônomos e a Presidência.",
+            "da separação entre políticas sociais e comunicação oficial, estratégia que buscava apresentar os direitos como resultado independente da ação presidencial."
         ],
         "correta": 0,
         "feedbackAcerto": "✅ O trabalhismo varguista articulou políticas reais e produção simbólica, formando vínculo político entre Estado e trabalhadores urbanos.",
@@ -664,11 +663,11 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "Ao comparar coronelismo e trabalhismo, a alternativa mais adequada é:",
         "alternativas": [
-            "ambos eram sistemas de voto secreto e liberdade sindical destinados a garantir autonomia política aos grupos populares.",
-            "o coronelismo surgiu com a CLT, enquanto o trabalhismo organizou a Política dos Governadores e as eleições estaduais.",
-            "o trabalhismo eliminou relações de dependência política e garantiu plena autonomia aos sindicatos diante do governo.",
+            "o coronelismo e o trabalhismo organizaram vínculos políticos semelhantes, diferenciando-se sobretudo pelo espaço rural ou urbano em que predominavam.",
+            "o coronelismo dependia de autonomia sindical e mediação federal, enquanto o trabalhismo se estruturava no controle eleitoral exercido por chefias locais.",
+            "o trabalhismo substituiu as relações de dependência política por representação social autônoma, enquanto o coronelismo manteve vínculos pessoais no meio rural.",
             "o coronelismo articulava dependência local e voto; o trabalhismo vinculava direitos, Estado e trabalhadores urbanos.",
-            "o coronelismo era exclusivamente militar, enquanto o trabalhismo se restringia às relações rurais e aos cafeicultores."
+            "o coronelismo se baseava em poder local e alianças estaduais, enquanto o trabalhismo permaneceu restrito à política econômica industrial do governo federal."
         ],
         "correta": 3,
         "feedbackAcerto": "✅ A comparação distingue mecanismos, bases sociais e instituições, sem ignorar relações de tutela presentes em ambos.",
@@ -678,10 +677,10 @@ const primeiraRepublicaEraVargas = [
     {
         "pergunta": "Uma síntese historiográfica da Era Vargas deve evitar a ideia de que os trabalhadores foram apenas manipulados porque:",
         "alternativas": [
-            "o Estado não utilizava propaganda, não interferia nos sindicatos e mantinha liberdade política plena no Estado Novo.",
-            "todos os trabalhadores apoiavam Vargas, recusavam greves e aceitavam de modo uniforme as decisões do governo.",
-            "a CLT foi redigida diretamente por assembleias operárias independentes, sem participação de juristas ou órgãos públicos.",
-            "os direitos trabalhistas alcançaram imediatamente trabalhadores rurais, domésticos e autônomos em condições idênticas.",
+            "o controle sindical estatal foi pouco relevante na experiência trabalhista, pois as organizações de trabalhadores definiram de modo autônomo a política social do período.",
+            "o apoio dos trabalhadores ao governo foi socialmente uniforme, resultado da expansão dos direitos e da identificação política produzida pelas instituições trabalhistas.",
+            "a legislação social foi elaborada sobretudo por organizações operárias independentes, cabendo ao governo sua formalização jurídica e aplicação administrativa.",
+            "a ampliação dos direitos alcançou grupos urbanos e rurais em ritmo semelhante, permitindo que diferentes categorias usassem as instituições em condições equivalentes.",
             "trabalhadores também formularam demandas, usaram direitos, negociaram com instituições e deram sentidos ao trabalhismo."
         ],
         "correta": 4,
@@ -693,14 +692,294 @@ const primeiraRepublicaEraVargas = [
         "pergunta": "Ao trabalhar Primeira República e Era Vargas em sala, a melhor proposta de análise histórica seria:",
         "alternativas": [
             "comparar constituições, jornais, imagens, discursos e dados eleitorais, examinando autoria, contexto e interesses.",
-            "apresentar somente uma cronologia de presidentes e solicitar memorização de datas, sem interpretação de fontes históricas.",
-            "usar propaganda oficial como descrição neutra e completa da sociedade, sem confrontá-la com outros documentos do período.",
-            "eliminar conflitos sociais e regionais para construir uma narrativa homogênea sobre a formação da República brasileira.",
-            "substituir evidências produzidas no período por opiniões atuais, dispensando contextualização e crítica documental."
+            "organizar uma cronologia de presidentes e acontecimentos como eixo central, utilizando as fontes históricas sobretudo para confirmar a sequência política estudada.",
+            "analisar propaganda oficial como expressão do projeto estatal, tomando seus conteúdos como representação suficiente das relações entre governo e sociedade.",
+            "priorizar os conflitos políticos nacionais, deixando movimentos sociais e disputas regionais como exemplos complementares da transformação institucional.",
+            "trabalhar documentos produzidos no período a partir de seus conteúdos explícitos, com menor ênfase nas condições de produção e nos interesses dos autores."
         ],
         "correta": 0,
         "feedbackAcerto": "✅ A proposta desenvolve pensamento histórico ao confrontar fontes, perspectivas e escalas diferentes.",
         "feedbackErro": "❌ Ensino de História não se reduz a memorização nem aceita documentos como espelhos neutros do passado.",
         "dicaBanca": "💡 Em questões pedagógicas, procure contextualização, crítica de fontes, diversidade de sujeitos e argumentação."
+    },
+    {
+        "pergunta": "Coronelismo, voto de cabresto e Política dos Governadores formavam mecanismos distintos, mas articulados. A relação mais precisa entre eles é:",
+        "alternativas": [
+            "chefias locais influenciavam eleitores e resultados, governos estaduais organizavam bancadas e a Presidência sustentava alianças com essas máquinas políticas.",
+            "chefias locais controlavam eleições municipais, enquanto governos estaduais e Presidência operavam de forma independente das redes eleitorais do interior.",
+            "o voto de cabresto resultava da legislação eleitoral federal, e a Política dos Governadores foi criada para reduzir a influência dos coronéis nas bancadas estaduais.",
+            "o coronelismo dependia da centralização administrativa federal, e os governadores atuavam sobretudo como executores das decisões presidenciais nos estados.",
+            "as três práticas constituíam um mesmo dispositivo jurídico previsto na Constituição de 1891 para organizar a representação política entre município, estado e União."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "✅ A articulação entre poder local, máquinas estaduais e Executivo federal ajuda a explicar a estabilidade oligárquica sem tratá-la como estrutura formal única.",
+        "feedbackErro": "❌ Os mecanismos se relacionavam, mas não eram uma mesma instituição jurídica nem funcionavam de modo independente entre as escalas de poder.",
+        "dicaBanca": "💡 Relacione escalas: município, estado e União."
+    },
+    {
+        "pergunta": "A relação entre economia cafeeira e industrialização na Primeira República é melhor explicada quando se considera que:",
+        "alternativas": [
+            "a expansão industrial ocorreu em oposição ao setor cafeeiro, porque ferrovias, bancos e mercados associados ao café limitaram a formação de atividades fabris urbanas e restringiram a integração do mercado consumidor nacional.",
+            "capitais, infraestrutura, imigração e mercado vinculados ao café puderam favorecer a indústria, sem transformar a economia agroexportadora em economia industrial dominante.",
+            "o café financiou diretamente uma política federal de indústria pesada, tornando o Estado o principal empresário do setor antes da década de 1920.",
+            "a indústria cresceu por fatores externos à economia cafeeira, pois comércio, transportes e crédito agrícola permaneceram separados das atividades urbanas emergentes.",
+            "o avanço industrial reduziu rapidamente a centralidade exportadora do café e deslocou o eixo econômico nacional para os bens de capital ainda no começo do século XX."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "✅ A relação foi de articulação e tensão: o café permaneceu central, mas parte de sua infraestrutura, capitais e mercados contribuiu para o crescimento fabril.",
+        "feedbackErro": "❌ Café e indústria não devem ser tratados como blocos isolados nem como etapas em que uma substituiu rapidamente a outra.",
+        "dicaBanca": "💡 Procure relações entre capital, transporte, imigração e mercado interno."
+    },
+    {
+        "pergunta": "Canudos e Contestado podem ser comparados sem serem confundidos. A formulação mais adequada é:",
+        "alternativas": [
+            "ambos foram movimentos urbanos organizados por associações operárias, diferenciando-se pela presença militar mais intensa no Contestado.",
+            "os dois surgiram de rebeliões de oficiais contra a ordem oligárquica, mas Canudos adquiriu caráter religioso depois da repressão federal.",
+            "ambos reuniram populações pobres, religiosidade e conflito com o poder público, embora apresentassem contextos fundiários e regionais próprios.",
+            "Canudos e Contestado resultaram de projetos separatistas regionais, com apoio de elites locais interessadas em ampliar autonomia diante do governo federal.",
+            "os dois movimentos foram respostas organizadas à política de valorização do café, que ampliou conflitos de terra no sertão baiano e na fronteira sul."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "✅ A comparação reconhece elementos comuns e preserva as particularidades regionais e fundiárias de cada movimento.",
+        "feedbackErro": "❌ A semelhança entre religiosidade, pobreza e repressão não transforma Canudos e Contestado em movimentos idênticos.",
+        "dicaBanca": "💡 Compare sem apagar contexto, região e causa específica."
+    },
+    {
+        "pergunta": "Revolta da Vacina e Revolta da Chibata revelam limites distintos da cidadania na Primeira República. A comparação correta é:",
+        "alternativas": [
+            "a primeira ocorreu por conflito trabalhista fabril e a segunda por oposição rural às reformas sanitárias conduzidas pelo governo federal.",
+            "as duas foram mobilizações eleitorais contra o voto aberto e tiveram como objetivo central instituir a Justiça Eleitoral no país.",
+            "ambas expressaram rejeição à modernização republicana, pois seus participantes se opunham à expansão de serviços públicos e às reformas das Forças Armadas.",
+            "a Vacina envolveu intervenção urbana e sanitária autoritária; a Chibata denunciou disciplina corporal e hierarquias violentas na Marinha.",
+            "os dois movimentos foram conduzidos por grupos militares e terminaram com mudanças institucionais duradouras que incorporaram o conjunto das reivindicações apresentadas."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "✅ Os conflitos nasceram de experiências distintas de coerção estatal: intervenção sobre corpos e moradias na cidade e disciplina violenta na Marinha.",
+        "feedbackErro": "❌ A aproximação entre os movimentos deve partir dos limites da cidadania e da coerção estatal, sem apagar seus atores e reivindicações específicas.",
+        "dicaBanca": "💡 Compare quem protestou, contra qual forma de poder e em que espaço."
+    },
+    {
+        "pergunta": "Os 18 do Forte e a Coluna Prestes pertencem ao ciclo tenentista, mas apresentam diferenças relevantes. A síntese correta é:",
+        "alternativas": [
+            "o primeiro movimento estruturou uma marcha prolongada pelo interior, enquanto a Coluna concentrou-se em uma rebelião localizada no Rio de Janeiro.",
+            "os dois episódios tiveram como objetivo imediato assumir a Presidência e obtiveram controle territorial duradouro sobre capitais estaduais importantes.",
+            "a Coluna surgiu antes do levante de 1922 e forneceu o núcleo militar que organizou a revolta do Forte de Copacabana.",
+            "os dois movimentos alcançaram reformas eleitorais negociadas com o governo federal, embora a Coluna tenha mantido operações militares depois dos acordos.",
+            "o Forte teve caráter localizado e forte valor simbólico; a Coluna adotou mobilidade prolongada e difundiu críticas à ordem oligárquica."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "✅ A comparação distingue escala e estratégia sem perder a continuidade das críticas tenentistas à ordem política.",
+        "feedbackErro": "❌ O ciclo tenentista teve formas de ação diferentes; não houve tomada duradoura do poder nem sequência cronológica invertida entre esses episódios.",
+        "dicaBanca": "💡 Diferencie impacto simbólico, mobilidade e alcance territorial."
+    },
+    {
+        "pergunta": "A crise de 1929, a formação da Aliança Liberal e a ruptura de 1930 se conectam historicamente porque:",
+        "alternativas": [
+            "a queda do café agravou tensões econômicas, a sucessão presidencial dividiu antigas alianças e uma coalizão heterogênea passou da disputa eleitoral à mobilização armada.",
+            "a crise internacional fortaleceu as receitas cafeeiras, mas a Aliança Liberal rompeu com o governo devido à centralização administrativa iniciada por Washington Luís e à defesa de maior autonomia dos estados exportadores.",
+            "o colapso externo teve efeito econômico restrito, e a mudança de 1930 resultou principalmente de um consenso militar sobre a necessidade de reformar a Constituição.",
+            "a Aliança Liberal nasceu depois da deposição de Washington Luís e reuniu os grupos que organizaram o Governo Provisório para responder à crise do café.",
+            "a sucessão de 1930 foi resolvida eleitoralmente, mas a crise econômica levou Vargas a substituir Júlio Prestes depois de sua posse e iniciar reformas centralizadoras."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "✅ A explicação combina conjuntura econômica, ruptura de alianças e mudança da estratégia política, evitando monocausalidade.",
+        "feedbackErro": "❌ Nem a crise de 1929 nem a disputa sucessória explicam 1930 isoladamente; o processo resultou da combinação de fatores.",
+        "dicaBanca": "💡 Monte a cadeia: crise econômica → ruptura política → coalizão → conflito armado."
+    },
+    {
+        "pergunta": "A nomeação de interventores depois de 1930 alterou a relação entre União e estados porque:",
+        "alternativas": [
+            "preservou as máquinas estaduais anteriores, substituindo prioritariamente os governadores que haviam apoiado Júlio Prestes na eleição presidencial.",
+            "reduziu a autonomia das antigas oligarquias e ampliou a capacidade do governo central de reorganizar a política estadual.",
+            "estabeleceu mandato eletivo temporário para chefes estaduais escolhidos por voto secreto sob fiscalização da nova Justiça Eleitoral.",
+            "descentralizou a administração, permitindo que cada interventor definisse política econômica e legislação trabalhista sem coordenação federal.",
+            "restabeleceu o desenho federalista de 1891, mas com maior participação dos tenentes nas câmaras municipais e nos congressos estaduais."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "✅ Os interventores simbolizam a centralização posterior a 1930 e a tentativa de desmontar parte das máquinas oligárquicas estaduais.",
+        "feedbackErro": "❌ A medida não restaurou o federalismo anterior nem resultou de eleição estadual; ela fortaleceu o poder central.",
+        "dicaBanca": "💡 Interventor = centralização e reordenação das elites estaduais."
+    },
+    {
+        "pergunta": "Código Eleitoral de 1932, Revolução Constitucionalista e Constituição de 1934 pertencem ao mesmo processo de reorganização institucional. A sequência mais coerente é:",
+        "alternativas": [
+            "a revolta paulista criou a Justiça Eleitoral, que depois organizou o Código de 1932 e convocou a Constituinte responsável pela Constituição de 1934.",
+            "o Código encerrou o Governo Provisório, e a revolta de São Paulo ocorreu contra a Constituição já promulgada e contra a eleição indireta de Vargas.",
+            "reforma eleitoral antecedeu a pressão constitucionalista; depois houve Constituinte, nova Constituição e eleição indireta de Vargas pela Assembleia.",
+            "a Constituição de 1934 precedeu o Código Eleitoral, mas sua aplicação foi suspensa pela Revolução de 1932 até a reorganização das eleições nacionais.",
+            "o conflito paulista adiou a constitucionalização e levou Vargas a manter o Governo Provisório sem Assembleia Constituinte até o início do Estado Novo."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "✅ A sequência distingue reforma eleitoral, conflito constitucionalista, Constituinte e eleição indireta do presidente.",
+        "feedbackErro": "❌ Os acontecimentos estão próximos no tempo, mas a ordem e a função institucional de cada um são diferentes.",
+        "dicaBanca": "💡 Organize 1932–1934 por cronologia e função política."
+    },
+    {
+        "pergunta": "AIB, ANL, levantes de 1935 e Plano Cohen ajudam a compreender a escalada autoritária da década de 1930 porque:",
+        "alternativas": [
+            "a polarização ideológica diminuiu depois de 1935, levando o governo a reduzir a repressão e restabelecer progressivamente a competição partidária.",
+            "AIB e ANL convergiram na defesa do governo constitucional, mas os levantes de 1935 romperam essa frente e abriram espaço para o retorno das oligarquias estaduais.",
+            "o governo tratou os conflitos como problemas regionais, mantendo intactas as garantias políticas até que o Congresso aprovasse o Estado Novo em 1937.",
+            "polarização, medo do comunismo e repressão foram usados para ampliar poderes, e o falso Plano Cohen reforçou a justificativa do golpe de 1937.",
+            "o Plano Cohen foi resposta aos integralistas depois de uma tentativa de golpe da AIB, e sua divulgação encerrou a perseguição aos grupos de esquerda."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "✅ A escalada autoritária combinou conflito político real, anticomunismo e instrumentalização do medo para ampliar a repressão.",
+        "feedbackErro": "❌ O Estado Novo não resultou de normalização institucional; a repressão cresceu e o Plano Cohen foi uma fraude utilizada politicamente.",
+        "dicaBanca": "💡 Separe ameaça real, propaganda do medo e decisão autoritária."
+    },
+    {
+        "pergunta": "Ao comparar as Constituições de 1934 e 1937, a diferença central é que:",
+        "alternativas": [
+            "a Carta de 1934 concentrou poderes presidenciais e suprimiu partidos, enquanto a de 1937 retomou garantias liberais e competição eleitoral.",
+            "as duas mantiveram estrutura política semelhante, diferenciando-se principalmente pelo alcance dos direitos trabalhistas incluídos no texto de 1937 e pela permanência de instituições representativas equivalentes nos dois regimes.",
+            "a Constituição de 1937 ampliou a autonomia estadual e a independência sindical, em reação à centralização observada desde o Governo Provisório.",
+            "a Carta de 1934 retirou direitos sociais e a de 1937 os introduziu pela primeira vez, preservando eleições e funcionamento regular do Congresso.",
+            "a de 1934 combinou instituições representativas e direitos sociais; a de 1937 forneceu base autoritária para concentração do Executivo e restrição política."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "✅ A passagem de 1934 para 1937 marca ruptura autoritária, apesar da continuidade de políticas sociais e intervenção estatal em outras áreas.",
+        "feedbackErro": "❌ As duas constituições pertencem a contextos políticos muito diferentes; não houve democratização em 1937.",
+        "dicaBanca": "💡 Compare representação política, direitos e concentração de poder."
+    },
+    {
+        "pergunta": "DIP e DASP mostram dimensões diferentes da construção do Estado durante o Estado Novo. A relação correta é:",
+        "alternativas": [
+            "o DIP atuava em censura e propaganda, enquanto o DASP buscava racionalização administrativa e fortalecimento técnico da burocracia federal.",
+            "o DIP profissionalizava o funcionalismo e o DASP coordenava rádio, cinema e imprensa para ampliar a propaganda política do regime.",
+            "os dois órgãos tinham finalidade eleitoral: o DIP registrava partidos e o DASP organizava concursos para escolher representantes do Legislativo.",
+            "o DIP era voltado à administração econômica e o DASP supervisionava sindicatos e negociações trabalhistas reconhecidas pelo Ministério do Trabalho.",
+            "as duas instituições foram criadas para descentralizar o Estado, transferindo comunicação pública e administração federal aos governos estaduais."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "✅ Propaganda e burocracia pertenciam a dimensões distintas, mas complementares, da centralização estatal varguista.",
+        "feedbackErro": "❌ DIP e DASP não exerciam a mesma função: um atuava sobre informação e imagem política; o outro sobre organização administrativa.",
+        "dicaBanca": "💡 DIP = comunicação/controle; DASP = administração/burocracia."
+    },
+    {
+        "pergunta": "A expansão da indústria de base no Estado Novo deve ser compreendida no contexto de:",
+        "alternativas": [
+            "redução da intervenção pública e prioridade ao investimento privado estrangeiro, com o governo afastando-se de siderurgia e infraestrutura.",
+            "maior presença estatal em setores estratégicos, nacionalismo econômico e oportunidades abertas pela conjuntura internacional da Segunda Guerra.",
+            "abandono do planejamento industrial e retorno da economia a uma estrutura agroexportadora mais concentrada no café e em produtos primários.",
+            "descentralização econômica para os estados, que passaram a financiar diretamente siderurgia e mineração sem coordenação do governo federal.",
+            "industrialização baseada em bens de consumo leves, enquanto siderurgia, energia e transportes permaneceram fora das prioridades públicas do período."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "✅ O Estado Novo ampliou a capacidade de intervenção e criou bases para setores estratégicos em conjuntura internacional favorável a novas negociações.",
+        "feedbackErro": "❌ A industrialização do período não decorreu de retração do Estado nem se limitou a bens leves.",
+        "dicaBanca": "💡 Relacione intervenção estatal, indústria de base e guerra."
+    },
+    {
+        "pergunta": "CLT e sindicalismo corporativo devem ser analisados em conjunto porque:",
+        "alternativas": [
+            "a consolidação das leis ampliou a proteção social e, ao mesmo tempo, eliminou a necessidade de reconhecimento estatal das entidades sindicais.",
+            "o corporativismo limitou a aplicação da legislação trabalhista, que permaneceu fora das relações entre sindicatos, empresas e órgãos públicos.",
+            "direitos trabalhistas foram sistematizados dentro de uma estrutura em que sindicatos reconhecidos permaneciam submetidos a enquadramento e supervisão estatal.",
+            "a CLT criou pluralidade sindical e ampliou a autonomia das categorias como forma de reduzir a intervenção do Ministério do Trabalho nas negociações.",
+            "a proteção legal e o controle sindical pertenciam a fases distintas: direitos no Governo Provisório e tutela corporativa concentrada na fase final do Estado Novo, sob formas institucionais separadas e sem sobreposição entre os dois processos."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "✅ A política trabalhista combinou proteção jurídica e mecanismos de controle corporativo, sem que uma dimensão anule a outra.",
+        "feedbackErro": "❌ Direitos e tutela sindical coexistiram no mesmo processo de institucionalização das relações de trabalho.",
+        "dicaBanca": "💡 Evite escolher entre 'conquista' e 'controle': analise os dois."
+    },
+    {
+        "pergunta": "A construção da imagem de Vargas como 'pai dos pobres' não pode ser explicada nem por propaganda isolada nem por concessão espontânea de direitos. A interpretação mais adequada é:",
+        "alternativas": [
+            "a imagem foi criada pelo DIP e recebida passivamente pelos trabalhadores, pois a legislação social teve importância reduzida na formação do vínculo político.",
+            "o prestígio decorreu das leis trabalhistas, enquanto rádio, cerimônias e propaganda tiveram função secundária diante dos benefícios materiais recebidos.",
+            "a identificação resultou de direitos criados pelo governo e independentes das lutas sociais anteriores, o que reduziu a necessidade de negociação com instituições estatais.",
+            "políticas sociais, propaganda e apropriações dos próprios trabalhadores interagiram, produzindo vínculos políticos que incluíam apoio, negociação e conflitos.",
+            "a imagem se consolidou porque o Estado garantiu autonomia sindical e participação política ampla, permitindo que trabalhadores controlassem a implementação das políticas sociais."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "✅ A relação entre Vargas e trabalhadores envolveu políticas reais, comunicação política e agência social dos próprios sujeitos.",
+        "feedbackErro": "❌ Reduzir o fenômeno a manipulação ou generosidade estatal apaga lutas, usos dos direitos e conflitos sociais.",
+        "dicaBanca": "💡 Procure interação entre Estado, propaganda e experiência trabalhadora."
+    },
+    {
+        "pergunta": "Frente Negra Brasileira e movimento sufragista liderado por Bertha Lutz revelam um aspecto comum das décadas de 1920 e 1930:",
+        "alternativas": [
+            "ambos foram incorporados ao governo como órgãos oficiais encarregados de organizar eleições e políticas raciais depois da Revolução de 1930.",
+            "as duas mobilizações se limitaram à vida cultural e educacional, mantendo distância de reivindicações de cidadania e participação política.",
+            "os movimentos alcançaram seus objetivos de forma completa antes de 1930, razão pela qual perderam importância durante o período Vargas.",
+            "as duas organizações atuaram contra o sistema eleitoral, defendendo que direitos sociais fossem ampliados antes da inclusão de novos grupos na cidadania política.",
+            "grupos sociais excluídos construíram organizações próprias para disputar cidadania, educação, trabalho e participação política em uma ordem ainda desigual."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "✅ A comparação destaca mobilização social e disputa por cidadania sem apagar diferenças entre racismo e desigualdade de gênero.",
+        "feedbackErro": "❌ Esses movimentos tiveram conteúdo político e social concreto; não foram simples extensões administrativas do Estado.",
+        "dicaBanca": "💡 Compare a agência dos grupos e os direitos reivindicados."
+    },
+    {
+        "pergunta": "A participação brasileira na Segunda Guerra contribuiu para a crise do Estado Novo porque:",
+        "alternativas": [
+            "o combate ao fascismo ao lado dos Aliados tornou mais visível a contradição entre o discurso democrático externo e a ditadura mantida internamente.",
+            "a guerra fortaleceu a censura interna ao demonstrar que regimes autoritários eram politicamente mais eficientes na mobilização econômica e militar.",
+            "o envio da FEB eliminou a oposição militar a Vargas, pois os oficiais que retornaram da Itália defenderam a continuidade indefinida do Estado Novo.",
+            "a vitória aliada reduziu a pressão por eleições, já que o governo apresentou a participação militar brasileira como prova de legitimidade democrática suficiente.",
+            "o conflito levou o Brasil a abandonar relações com os Estados Unidos e aproximar-se das potências derrotadas, aprofundando o isolamento político do governo."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "✅ A contradição entre guerra antifascista e ditadura doméstica alimentou argumentos democratizantes e o desgaste do regime.",
+        "feedbackErro": "❌ A participação na guerra não encerrou as pressões internas; ela contribuiu para tornar o autoritarismo mais difícil de justificar.",
+        "dicaBanca": "💡 Relacione política externa, legitimidade interna e retorno da FEB."
+    },
+    {
+        "pergunta": "O queremismo e a deposição de Vargas em 1945 mostram que o fim do Estado Novo foi politicamente complexo porque:",
+        "alternativas": [
+            "o apoio popular a Vargas desapareceu com a abertura política, permitindo às Forças Armadas afastá-lo sem mobilização social significativa.",
+            "havia pressão por democratização e, simultaneamente, setores populares defendiam a presença de Vargas na transição, enquanto militares temiam continuísmo.",
+            "o queremismo defendia a manutenção do Estado Novo sem reorganização partidária, posição que coincidia com o projeto das chefias militares responsáveis pela deposição.",
+            "o movimento popular exigia retorno à Constituição de 1891, aproximando trabalhadores urbanos das antigas oligarquias estaduais contra o governo federal.",
+            "a deposição resultou de derrota eleitoral de Vargas e abriu caminho para que o queremismo contestasse o resultado das urnas nas principais cidades."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "✅ Democratização, apoio popular e temor de continuísmo coexistiram, impedindo uma leitura linear do fim do regime.",
+        "feedbackErro": "❌ O apoio a Vargas não desapareceu em 1945, e o queremismo não se confundia com defesa simples da continuidade ditatorial.",
+        "dicaBanca": "💡 Abertura política pode produzir alianças e conflitos contraditórios."
+    },
+    {
+        "pergunta": "Ao comparar a ordem política da Primeira República com a Era Vargas, uma permanência e uma ruptura podem ser identificadas, respectivamente, em:",
+        "alternativas": [
+            "manutenção do mesmo federalismo oligárquico e criação de sindicatos independentes do Estado depois de 1930.",
+            "continuidade das regras eleitorais de 1891 e redução da intervenção federal nos estados durante o Governo Provisório.",
+            "persistência de desigualdades e relações assimétricas de poder, acompanhada por maior centralização estatal e institucionalização de direitos sociais.",
+            "preservação das máquinas políticas estaduais e substituição da agroexportação por indústria pesada como base dominante da economia nacional, com reorganização produtiva conduzida sem participação decisiva do Estado federal.",
+            "continuidade da exclusão feminina do voto e criação de representação política dos analfabetos por meio do Código Eleitoral de 1932."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "✅ A comparação reconhece que 1930 alterou instituições e relações entre Estado e sociedade sem eliminar desigualdades históricas.",
+        "feedbackErro": "❌ Ruptura política não significa substituição completa das estruturas sociais nem continuidade intacta do federalismo anterior.",
+        "dicaBanca": "💡 Diferencie permanência social de mudança institucional."
+    },
+    {
+        "pergunta": "A sequência Constituição de 1891 → Constituição de 1934 → Constituição de 1937 evidencia:",
+        "alternativas": [
+            "trajetória contínua de ampliação das liberdades políticas, acompanhada por autonomia estadual crescente e menor intervenção do Executivo federal.",
+            "passagem de um Estado centralizado para federalismo mais amplo, seguida de democratização que consolidou eleições competitivas durante o Estado Novo.",
+            "substituição gradual do presidencialismo pelo parlamentarismo, mantendo direitos sociais e eleitorais semelhantes nos três textos constitucionais.",
+            "mudanças na relação entre federalismo, direitos e poder Executivo, culminando em 1937 com forte concentração autoritária e restrição da competição política.",
+            "permanência da mesma estrutura eleitoral, pois as diferenças entre os textos se concentraram em economia, legislação trabalhista e organização administrativa."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "✅ As três constituições expressam contextos políticos distintos e mudanças profundas na distribuição de poder e nos direitos.",
+        "feedbackErro": "❌ A trajetória não foi linearmente democrática nem manteve estáveis as regras eleitorais e a relação entre União e estados.",
+        "dicaBanca": "💡 Leia constituições como respostas a conjunturas políticas específicas."
+    },
+    {
+        "pergunta": "Uma análise conjunta de jornais operários da Primeira República, propaganda do DIP e discursos trabalhistas do período Vargas deve considerar que:",
+        "alternativas": [
+            "fontes produzidas por grupos distintos podem ser comparadas diretamente, pois diferenças de autoria pouco interferem na interpretação de conflitos sociais semelhantes.",
+            "a propaganda oficial possui maior valor histórico por registrar políticas efetivamente executadas, enquanto jornais militantes expressam posições parciais e menos úteis.",
+            "jornais operários são fontes da experiência dos trabalhadores, mas propaganda estatal deve ser usada sobretudo para reconstruir decisões administrativas do governo.",
+            "o contraste entre documentos deve privilegiar fatos comuns aos textos, evitando analisar linguagem política, público pretendido e interesses dos produtores.",
+            "autoria, contexto, público e finalidade precisam ser examinados para comparar projetos políticos, conflitos e formas diferentes de representar trabalhadores e Estado."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "✅ A crítica documental permite comparar vozes sociais diferentes sem tratar qualquer fonte como espelho neutro do passado.",
+        "feedbackErro": "❌ Fontes oficiais e militantes exigem análise de autoria e finalidade; nenhuma delas deve ser tomada como registro transparente e suficiente.",
+        "dicaBanca": "💡 Pergunte sempre: quem produziu, para quem, em qual contexto e com qual objetivo? "
     }
 ];
