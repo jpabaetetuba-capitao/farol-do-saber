@@ -1,986 +1,982 @@
-// FAROL DO SABER — História
-// Movimentos Anticoloniais no Brasil
-// 70 questões — nível difícil de concurso
-
 const movimentosAnticoloniaisBrasil = [
     {
-        "pergunta": "Ao analisar os movimentos anticoloniais na América portuguesa, qual formulação é historicamente mais adequada?",
+        "pergunta": "Em uma análise comparativa dos movimentos de contestação ocorridos na América portuguesa, qual interpretação evita transformar experiências distintas em um único projeto político?",
         "alternativas": [
-            "Resultaram principalmente da difusão de ideias iluministas, ficando em segundo plano conflitos fiscais e disputas locais.",
-            "Foram contestações de natureza diversa, com diferentes bases sociais, objetivos e graus de enfrentamento ao domínio português.",
-            "Formaram etapas de um mesmo projeto nacional de independência, articulado desde o século XVII por elites de várias capitanias.",
-            "Representaram movimentos regionais sem relação relevante com fiscalidade, monopólios, mineração ou transformações políticas atlânticas.",
-            "Expressaram oposição uniforme ao sistema colonial e compartilharam programa republicano e social semelhante entre si."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "✅ O conceito amplo de anticolonialismo exige reconhecer variedade de conflitos e projetos.",
-        "feedbackErro": "❌ O erro está em transformar movimentos distintos em uma sequência nacional, uniforme ou explicada por uma causa única.",
-        "dicaBanca": "💡 Compare sempre contexto, base social, objetivo e grau de ruptura."
-    },
-    {
-        "pergunta": "A distinção entre revoltas nativistas e movimentos separatistas é mais útil quando entendida como:",
-        "alternativas": [
-            "Uma diferença de grau e objetivo: algumas contestações buscavam corrigir problemas do sistema colonial, enquanto outras chegaram a projetar ruptura política com Portugal.",
-            "Uma oposição entre movimentos populares e elitizados, já que os primeiros eram nativistas e os segundos separatistas.",
-            "A distinção é principalmente política: nativistas buscavam reformas dentro do império, enquanto separatistas formulavam independência; diferenças sociais e regionais tiveram papel secundário na classificação.",
-            "Uma separação cronológica rígida, pois o nativismo pertenceria ao século XVII e o separatismo surgiria predominantemente depois de 1808.",
-            "Uma diferença fundada na escravidão, porque movimentos separatistas defendiam abolição e nativistas preservavam o cativeiro."
+            "Os conflitos variaram quanto às causas, aos grupos participantes e ao grau de ruptura pretendido, de modo que a oposição ao domínio colonial assumiu sentidos diferentes.",
+            "Os conflitos expressaram um programa comum de independência nacional, embora as lideranças regionais divergissem quanto à forma de executar esse projeto.",
+            "As revoltas locais e os movimentos separatistas diferiram principalmente na região em que ocorreram, pois suas bases sociais e seus objetivos políticos permaneceram equivalentes.",
+            "A diversidade entre os movimentos decorreu sobretudo das respostas da Coroa, enquanto os projetos formulados pelos participantes apresentaram orientação política semelhante.",
+            "Os movimentos podem ser reunidos sob uma mesma identidade nacional porque a crítica a impostos e monopólios já implicava defesa de um Estado brasileiro unificado."
         ],
         "correta": 0,
-        "feedbackAcerto": "✅ A classificação ajuda a perceber graus diferentes de contestação, mas não substitui a análise de cada movimento.",
-        "feedbackErro": "❌ O erro é transformar a distinção em regra rígida de classe, cronologia, escravidão ou região.",
-        "dicaBanca": "💡 Use nativismo/separatismo como ferramenta comparativa, não como etiqueta absoluta."
+        "feedbackAcerto": "🎉 Excelente!\n\nA oposição à ordem colonial não teve um significado único: algumas contestações permaneceram ligadas a problemas locais, enquanto outras formularam projetos de ruptura política mais claros.",
+        "feedbackErro": "❌ Atenção!\n\nA oposição à ordem colonial não teve um significado único: algumas contestações permaneceram ligadas a problemas locais, enquanto outras formularam projetos de ruptura política mais claros. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Compare sempre causa imediata, composição social e alcance político antes de classificar movimentos diferentes como equivalentes."
     },
     {
-        "pergunta": "No Maranhão, a Revolta de Beckman deve ser relacionada principalmente a:",
+        "pergunta": "A distinção didática entre revoltas chamadas nativistas e movimentos separatistas é mais útil quando utilizada para:",
         "alternativas": [
-            "Disputas entre proprietários açucareiros de Olinda e comerciantes do Recife pela autonomia político-administrativa do porto.",
-            "Mobilização de grupos urbanos influenciados por igualdade política e republicanismo contra a ordem colonial baiana.",
-            "Tensões entre mineradores e Coroa decorrentes da criação das Casas de Fundição e da reorganização da cobrança do ouro.",
-            "Conflitos envolvendo o monopólio da Companhia de Comércio, problemas de abastecimento e disputas sobre a utilização da mão de obra indígena e a atuação jesuítica.",
-            "O conflito maranhense pode ser explicado como reação de proprietários ao controle econômico da Coroa, mas a questão da mão de obra indígena teria peso menor que a disputa estritamente comercial."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "✅ Beckman articula monopólio comercial, abastecimento e disputa pela mão de obra indígena no Maranhão.",
-        "feedbackErro": "❌ O erro é deslocar para o Maranhão conflitos próprios de Pernambuco, Minas ou Bahia.",
-        "dicaBanca": "💡 Associe Beckman a Maranhão, Companhia de Comércio, jesuítas e mão de obra indígena."
-    },
-    {
-        "pergunta": "Por que a Revolta de Beckman não deve ser interpretada como revolução social igualitária?",
-        "alternativas": [
-            "Porque seu programa pretendia romper com Portugal, mas preservava um governo monárquico local controlado por setores populares.",
-            "Porque seus líderes defendiam autonomia política do Maranhão dentro do império e participação ampliada dos trabalhadores nas decisões locais.",
-            "A revolta contestava monopólio e abastecimento e, por mobilizar colonos contra uma companhia privilegiada, teria desenvolvido projeto de autonomia política mais amplo do que suas propostas sociais permitem demonstrar.",
-            "Porque seus protagonistas buscavam enfrentar problemas de monopólio, abastecimento e trabalho sem formular um programa amplo de igualdade política e social.",
-            "Porque a revolta possuía base predominantemente popular e propunha redistribuição de terras, mas evitava temas religiosos e comerciais."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "✅ A revolta atacava problemas concretos do sistema colonial, sem assumir programa social abrangente.",
-        "feedbackErro": "❌ O erro é atribuir ao movimento republicanismo social, abolicionismo ou democratização que não correspondem ao seu núcleo.",
-        "dicaBanca": "💡 Contestação colonial não significa, por si, transformação social radical."
-    },
-    {
-        "pergunta": "Na Guerra dos Emboabas, o centro do conflito esteve na:",
-        "alternativas": [
-            "Disputa entre paulistas e recém-chegados pelo acesso às minas, aos circuitos de abastecimento e às posições de poder na região mineradora.",
-            "Rivalidade entre proprietários de Olinda e comerciantes do Recife pelo reconhecimento político do núcleo mercantil recifense.",
-            "Mobilização de grupos urbanos da Bahia que associavam república e igualdade a críticas ao domínio metropolitano.",
-            "Confronto entre colonos maranhenses e jesuítas pela administração da mão de obra indígena e pelo funcionamento de uma companhia de comércio.",
-            "Disputa entre mineradores e autoridades pela adoção das Casas de Fundição e pela substituição do quinto por tributação municipal."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "✅ A Guerra dos Emboabas foi uma disputa pelo controle econômico e político da zona mineradora.",
-        "feedbackErro": "❌ O erro é confundir Emboabas com outras revoltas coloniais que também envolveram comércio, fiscalidade ou poder local.",
-        "dicaBanca": "💡 Emboabas: paulistas × forasteiros no espaço das minas."
-    },
-    {
-        "pergunta": "Qual consequência política da Guerra dos Emboabas merece maior destaque?",
-        "alternativas": [
-            "O reconhecimento de exclusividade paulista na exploração mineral, compensado por maior cobrança fiscal sobre os novos descobertos.",
-            "A redução da presença administrativa portuguesa nas minas, já que o conflito demonstrou a capacidade de autorregulação dos colonos.",
-            "O fortalecimento da intervenção da Coroa na região mineradora, reduzindo a autonomia dos grupos locais envolvidos na disputa.",
-            "A criação de uma república mineradora submetida a tributos régios, com preservação dos privilégios paulistas sobre as jazidas.",
-            "A transferência do controle das minas para as câmaras locais, como forma de diminuir conflitos entre paulistas e forasteiros."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "✅ A Coroa aproveitou a instabilidade para ampliar seu controle sobre uma área estratégica.",
-        "feedbackErro": "❌ O erro é imaginar que o conflito resultou em maior autonomia local ou privilégio duradouro para um dos grupos.",
-        "dicaBanca": "💡 Pergunte quem ganhou capacidade de intervenção depois do conflito."
-    },
-    {
-        "pergunta": "A Guerra dos Mascates expressa melhor qual tipo de tensão colonial?",
-        "alternativas": [
-            "A disputa entre colonos e jesuítas pelo controle da mão de obra indígena e pelo abastecimento de uma capitania periférica.",
-            "A rivalidade entre Olinda e Recife tinha componente econômico e político, mas pode ser interpretada como oposição direta entre interesses portugueses e brasileiros já definidos no começo do século XVIII.",
-            "A mobilização de artesãos e soldados por república e igualdade jurídica no contexto das revoluções atlânticas.",
-            "O conflito entre autoridades régias e mineradores diante das Casas de Fundição e de mecanismos de fiscalização aurífera.",
-            "A rivalidade entre a elite senhorial de Olinda e comerciantes do Recife, ligada a endividamento, poder econômico e autonomia política local."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "✅ Mascates envolve Olinda, Recife, crédito, comércio e poder municipal.",
-        "feedbackErro": "❌ O erro é reduzir todo conflito colonial a metrópole contra colônia; aqui há forte disputa entre grupos locais.",
-        "dicaBanca": "💡 Olinda × Recife é também conflito de poder entre elites coloniais diferentes."
-    },
-    {
-        "pergunta": "Por que a Guerra dos Mascates não deve ser descrita como movimento separatista?",
-        "alternativas": [
-            "A ausência de projeto separatista distingue Mascates, embora a defesa da autonomia do Recife possa ser entendida como etapa inicial de um programa regional de independência posteriormente retomado em 1817.",
-            "Porque a revolta se limitava a questões econômicas e não possuía dimensão política relacionada à autonomia municipal do Recife.",
-            "Porque o movimento defendia independência de Pernambuco, mas pretendia manter o rei português como chefe de uma federação colonial.",
-            "Porque o conflito se concentrou em disputas de poder e interesses entre grupos de Pernambuco, sem projeto consistente de ruptura política com Portugal.",
-            "Porque a separação de Portugal era objetivo compartilhado, embora a disputa entre Olinda e Recife impedisse acordo sobre a forma de governo."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "✅ A disputa foi intensa, mas não corresponde a um projeto de independência colonial.",
-        "feedbackErro": "❌ O erro é confundir conflito local e autonomia municipal com separatismo organizado.",
-        "dicaBanca": "💡 Diferencie contestação local de ruptura com a metrópole."
-    },
-    {
-        "pergunta": "A Revolta de Vila Rica, em 1720, relaciona-se diretamente a:",
-        "alternativas": [
-            "Disputa entre comerciantes urbanos e senhores de engenho pelo estatuto político de um centro mercantil em expansão.",
-            "Resistências ao aumento do controle régio sobre a mineração, especialmente às Casas de Fundição e à fiscalização da circulação do ouro.",
-            "Movimento popular urbano que vinculou república, igualdade social e participação de negros e pardos à crítica colonial.",
-            "A oposição às Casas de Fundição tinha forte conteúdo fiscal, mas já apresentava projeto republicano elaborado, diferenciando-se da Inconfidência principalmente pela base social e pela intensidade da repressão.",
-            "Conflito entre paulistas e forasteiros pela apropriação das primeiras áreas de mineração e de suas rotas de abastecimento."
+            "separar movimentos dirigidos por grupos coloniais daqueles que contaram com participação relevante de agentes ligados à administração portuguesa.",
+            "diferenciar contestações concentradas em problemas locais do sistema colonial de projetos que avançaram para uma ruptura política mais explícita com Portugal.",
+            "identificar quais revoltas possuíam apoio popular, já que as chamadas nativistas teriam base elitista e as separatistas seriam socialmente amplas.",
+            "ordenar cronologicamente os conflitos, colocando primeiro os de caráter econômico e depois os de caráter político, sem considerar sobreposições entre essas dimensões.",
+            "determinar se uma revolta foi bem-sucedida, pois a categoria separatista se aplicaria aos movimentos que chegaram a constituir governos próprios."
         ],
         "correta": 1,
-        "feedbackAcerto": "✅ Vila Rica deve ser lida no contexto da fiscalização régia da mineração.",
-        "feedbackErro": "❌ O erro é confundi-la com a Inconfidência de 1789, Emboabas, Mascates ou Bahia de 1798.",
-        "dicaBanca": "💡 1720: Casas de Fundição e fiscalismo, não república iluminista."
+        "feedbackAcerto": "🎉 Excelente!\n\nA classificação é uma ferramenta de comparação, não uma identidade automática dos participantes. O ponto central é o grau de crítica ao domínio metropolitano.",
+        "feedbackErro": "❌ Atenção!\n\nA classificação é uma ferramenta de comparação, não uma identidade automática dos participantes. O ponto central é o grau de crítica ao domínio metropolitano. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Use essas categorias como síntese analítica; depois verifique se o caso concreto realmente corresponde a elas."
     },
     {
-        "pergunta": "A melhor diferença entre Revolta de Vila Rica e Inconfidência Mineira é:",
+        "pergunta": "Um movimento colonial pode contestar monopólios, impostos ou autoridades locais sem formular um projeto de independência. Qual conclusão decorre dessa constatação?",
         "alternativas": [
-            "Vila Rica e Inconfidência expressaram oposição fiscal e propostas de ruptura semelhantes, com diferenças concentradas no instrumento tributário e no momento da mineração em que cada mobilização ocorreu.",
-            "A Inconfidência foi reação imediata às Casas de Fundição, enquanto Vila Rica ocorreu diante da ameaça posterior de cobrança da derrama.",
-            "Vila Rica teve base predominantemente popular e igualitária, enquanto a Inconfidência foi movimento administrativo apoiado pela Coroa.",
-            "Vila Rica apresentou projeto republicano mais definido, enquanto a Inconfidência buscava sobretudo reduzir tributos sem romper com Portugal.",
-            "Vila Rica reagiu ao controle fiscal das minas sem projeto separatista amadurecido; a Inconfidência articulou crise fiscal e projeto de ruptura política influenciado por repertórios ilustrados."
+            "A contestação econômica indica uma ruptura política em formação, ainda que os participantes não tenham formulado medidas institucionais para se separar da metrópole.",
+            "A crítica a autoridades locais deve ser interpretada como oposição à monarquia portuguesa, pois os poderes locais funcionavam como extensão direta da soberania régia.",
+            "A existência de conflito com mecanismos da colonização não permite deduzir, por si só, a defesa de separação política ou de igualdade social.",
+            "Quando colonos questionavam tributos, o conflito deixava de ser local e passava a representar um projeto nacional, mesmo que não houvesse linguagem política de independência.",
+            "A ausência de um programa separatista significa que não existia tensão colonial relevante, já que conflitos verdadeiramente anticoloniais dependiam de proposta republicana."
         ],
-        "correta": 4,
-        "feedbackAcerto": "✅ As duas têm fiscalismo no contexto, mas diferem no grau de ruptura política.",
-        "feedbackErro": "❌ O erro é inverter cronologia, objetivos ou transformar os movimentos em equivalentes.",
-        "dicaBanca": "💡 Compare 1720 e 1789 pelo grau de politização da ruptura."
+        "correta": 2,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica distingue reclamações locais de projetos separatistas. Por isso, crítica econômica e ruptura política precisam ser demonstradas, e não presumidas.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica distingue reclamações locais de projetos separatistas. Por isso, crítica econômica e ruptura política precisam ser demonstradas, e não presumidas. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Não transforme toda resistência a um mecanismo colonial em independência: procure o projeto político efetivamente defendido."
     },
     {
-        "pergunta": "As Casas de Fundição foram criadas no contexto minerador para:",
+        "pergunta": "Ao comparar a composição social de um movimento com seu objetivo político, qual afirmação é historicamente mais consistente?",
         "alternativas": [
-            "Reconhecer autonomia dos proprietários sobre a circulação do ouro, desde que parte da produção fosse destinada ao abastecimento local.",
-            "Organizar a exploração das jazidas entre paulistas e forasteiros, solucionando a disputa iniciada na Guerra dos Emboabas.",
-            "Substituir o quinto por contribuições voluntárias dos mineradores, evitando contrabando e tensões com a administração.",
-            "Transferir a arrecadação do ouro para as câmaras locais, reduzindo a presença de funcionários régios na região mineradora.",
-            "Reforçar o controle da circulação do ouro e facilitar a cobrança fiscal pela Coroa."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "✅ As Casas de Fundição pertencem ao esforço metropolitano de controlar e tributar a mineração.",
-        "feedbackErro": "❌ O erro é atribuir-lhes descentralização, tributação voluntária ou função de arbitragem entre grupos locais.",
-        "dicaBanca": "💡 Casas de Fundição = controle fiscal do ouro."
-    },
-    {
-        "pergunta": "O fiscalismo metropolitano aparece como elemento comum a diferentes tensões coloniais porque:",
-        "alternativas": [
-            "O fiscalismo gerava tensões recorrentes e, por atingir diferentes regiões, produzia tendência comum de transformar contestações econômicas em projetos separatistas com repertório político semelhante.",
-            "Os tributos funcionavam como causa suficiente dos movimentos, tornando secundários conflitos de poder, circulação de ideias e composição social.",
-            "A oposição fiscal levou os movimentos coloniais a defenderem programa semelhante de independência e república em diferentes capitanias.",
-            "A cobrança de tributos e o controle de atividades lucrativas colocavam interesses locais em choque com as exigências da Coroa, embora os resultados políticos variassem.",
-            "O fiscalismo atingia de forma equivalente mineração, comércio e agricultura, produzindo reações sociais de composição semelhante."
+            "Movimentos com lideranças proprietárias tendem a rejeitar rupturas políticas mais amplas, porque a posição econômica determinaria de maneira direta a fidelidade à metrópole.",
+            "Projetos republicanos coloniais pressupunham igualdade social ampla entre livres, libertos e escravizados, ainda que os documentos não apresentassem consenso sobre essas mudanças.",
+            "A presença de grupos populares transforma a pauta do movimento em programa social igualitário, mesmo quando os participantes defendem reivindicações diferentes entre si.",
+            "Um movimento pode defender ruptura com a metrópole e, ao mesmo tempo, preservar hierarquias sociais ou limitar a extensão das mudanças pretendidas.",
+            "A composição social permite identificar o resultado político do movimento, pois grupos semelhantes produzem projetos equivalentes em regiões e conjunturas distintas."
         ],
         "correta": 3,
-        "feedbackAcerto": "✅ O fiscalismo é importante, mas seus efeitos dependem do contexto e dos sujeitos envolvidos.",
-        "feedbackErro": "❌ O erro é tratar tributo como causa total ou imaginar respostas políticas uniformes.",
-        "dicaBanca": "💡 Mesmo fator pode produzir conflitos diferentes em contextos diferentes."
+        "feedbackAcerto": "🎉 Excelente!\n\nO próprio contraste entre Inconfidência Mineira e Conjuração Baiana mostra que composição social e projeto político se relacionam, mas não são a mesma coisa.",
+        "feedbackErro": "❌ Atenção!\n\nO próprio contraste entre Inconfidência Mineira e Conjuração Baiana mostra que composição social e projeto político se relacionam, mas não são a mesma coisa. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Pergunte duas coisas separadamente: quem participou e que mudanças cada grupo efetivamente defendia."
     },
     {
-        "pergunta": "A Inconfidência Mineira deve ser situada em qual contexto?",
+        "pergunta": "A ideia de uma América portuguesa marcada por 'harmonia colonial' é inadequada para interpretar os movimentos estudados porque:",
         "alternativas": [
-            "Tensão entre colonos e missionários pela mão de obra indígena, agravada pela atuação de uma companhia monopolista de comércio.",
-            "Crise da mineração, endividamento de setores da elite, pressão fiscal e ameaça da derrama, combinadas à circulação de repertórios ilustrados e republicanos.",
-            "A crise da mineração e a ameaça da derrama foram importantes, mas a composição social do movimento teria sido predominantemente popular, com elites letradas atuando sobretudo como formuladoras jurídicas.",
-            "Mobilização de artesãos, soldados e libertos em torno de igualdade racial e republicana no espaço urbano mineiro.",
-            "Conflito entre comerciantes urbanos e senhores de terra pela autonomia política de vilas ligadas ao abastecimento das minas."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "✅ A Inconfidência articula crise econômica, fiscalismo e repertórios políticos de ruptura.",
-        "feedbackErro": "❌ O erro é inverter a conjuntura mineira ou transferir elementos de Beckman, Mascates e Bahia.",
-        "dicaBanca": "💡 Minas 1789: crise + fiscalismo + elite letrada + república."
-    },
-    {
-        "pergunta": "Sobre a composição social da Inconfidência Mineira, qual interpretação é mais precisa?",
-        "alternativas": [
-            "Os conspiradores provinham principalmente da burocracia enviada por Lisboa e defendiam reformas dentro da monarquia portuguesa.",
-            "A composição foi formada por mineradores pobres e trabalhadores escravizados, que organizaram uma mobilização aberta contra a derrama.",
-            "Predominaram membros de setores letrados, proprietários e vinculados às elites locais, embora o movimento não fosse socialmente homogêneo.",
-            "A presença de proprietários e letrados foi marcante, embora a conspiração dependesse de mobilização ampla de trabalhadores das minas, responsável por dar ao movimento seu caráter político principal.",
-            "A base social reuniu grandes comerciantes recifenses e proprietários de Olinda interessados em reorganizar o poder municipal."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "✅ A Inconfidência teve perfil predominantemente elitizado, embora existissem diferenças internas.",
-        "feedbackErro": "❌ O erro é popularizar o movimento, apresentá-lo como mobilização aberta ou deslocar grupos de outras regiões.",
-        "dicaBanca": "💡 Composição social ajuda a entender os limites do projeto."
-    },
-    {
-        "pergunta": "Qual limite social da Inconfidência Mineira deve ser considerado?",
-        "alternativas": [
-            "A defesa de ruptura política não significava consenso entre os participantes sobre abolição da escravidão ou igualdade social abrangente.",
-            "O movimento rejeitava a república por considerar incompatível a liberdade política com a propriedade escravista dos conspiradores.",
-            "A defesa de república e ruptura com Portugal indicaria compromisso amplo com igualdade jurídica entre os homens livres, deixando a escravidão como divergência pontual sem grande efeito sobre o projeto político.",
-            "A elite mineira apoiava igualdade jurídica ampla, mas evitava ruptura com Portugal por receio de conflitos sociais nas minas.",
-            "A ausência de propostas igualitárias reduziria de forma decisiva o conteúdo anticolonial do movimento e sua relação com ideias ilustradas."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "✅ Ruptura com a metrópole e transformação das hierarquias sociais não eram a mesma coisa.",
-        "feedbackErro": "❌ O erro é exigir coerência social total para reconhecer anticolonialismo ou inventar consenso abolicionista.",
-        "dicaBanca": "💡 Pergunte o que o movimento queria mudar e o que poderia preservar."
-    },
-    {
-        "pergunta": "A figura de Tiradentes deve ser analisada historicamente como:",
-        "alternativas": [
-            "Líder consensual da Inconfidência em 1789, reconhecido pelos conspiradores como principal formulador do futuro governo republicano.",
-            "Representante direto da aristocracia mineradora, cuja execução expressou punição equivalente à aplicada aos demais integrantes da elite.",
-            "Participante da conspiração cuja imagem foi posteriormente reelaborada em processos de construção da memória política e nacional.",
-            "Símbolo popular já consolidado durante a conspiração, responsável por organizar uma mobilização de massa nas vilas mineradoras.",
-            "Personagem secundário cuja presença no movimento foi criada posteriormente pela República para construir um herói nacional."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "✅ A análise deve distinguir a atuação histórica de Tiradentes da construção posterior do herói.",
-        "feedbackErro": "❌ O erro é transformar memória posterior em posição já consensual em 1789 ou negar sua participação real.",
-        "dicaBanca": "💡 História e memória não são a mesma coisa."
-    },
-    {
-        "pergunta": "A influência das revoluções atlânticas sobre a Inconfidência Mineira deve ser entendida como:",
-        "alternativas": [
-            "As revoluções atlânticas influenciaram a Inconfidência de maneira decisiva, oferecendo modelo republicano suficientemente completo para tornar a crise fiscal um fator secundário na formulação do projeto separatista.",
-            "Política estimulada pela Coroa para canalizar descontentamentos das elites e evitar oposição aberta à derrama.",
-            "Influência restrita à linguagem econômica, sem relação com formas de governo, soberania ou crítica ao domínio português.",
-            "Causa direta do movimento, que reproduziu sem alterações o modelo institucional norte-americano e o programa social francês.",
-            "Parte de um repertório de ideias sobre república, direitos e ruptura colonial, apropriado em meio a conflitos fiscais e sociais específicos de Minas."
+            "reduz as tensões à ação de grupos externos à colônia, embora os principais conflitos tenham sido produzidos por decisões tomadas fora do espaço americano e conduzidos sem disputas relevantes entre grupos locais.",
+            "confunde conflitos políticos com rivalidades econômicas, apesar de essas dimensões terem permanecido separadas nas revoltas ligadas à mineração e ao comércio.",
+            "atribui à Coroa uma capacidade limitada de intervenção, quando a documentação dos movimentos demonstraria controle administrativo uniforme em diferentes regiões.",
+            "supervaloriza a participação dos colonos, pois as contestações descritas no período foram respostas organizadas prioritariamente por agentes metropolitanos.",
+            "desconsidera fiscalismo, monopólios, disputas entre grupos coloniais, repressão e projetos políticos divergentes que revelam conflitos dentro da ordem colonial."
         ],
         "correta": 4,
-        "feedbackAcerto": "✅ As ideias atlânticas importam quando combinadas às condições locais.",
-        "feedbackErro": "❌ O erro é substituir o contexto mineiro por influência externa automática ou negar a dimensão política dos repertórios.",
-        "dicaBanca": "💡 Influência não é cópia nem causa isolada."
+        "feedbackAcerto": "🎉 Excelente!\n\nO conjunto dos movimentos mostra uma sociedade atravessada por disputas econômicas, políticas e sociais; a noção de harmonia apaga justamente essas tensões.",
+        "feedbackErro": "❌ Atenção!\n\nO conjunto dos movimentos mostra uma sociedade atravessada por disputas econômicas, políticas e sociais; a noção de harmonia apaga justamente essas tensões. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Desconfie de interpretações que transformem colonização em obediência passiva ou ausência de conflito."
     },
     {
-        "pergunta": "A Conjuração Baiana de 1798 distingue-se especialmente por:",
+        "pergunta": "Nos movimentos de contestação colonial, a repressão metropolitana pode ser interpretada principalmente como instrumento para:",
         "alternativas": [
-            "Atuação de mineradores contrários às Casas de Fundição, sem articulação de projetos republicanos ou igualitários.",
-            "Maior presença de artesãos, soldados, negros, pardos e libertos e por uma linguagem de igualdade social mais ampla.",
-            "Predomínio de grandes proprietários ligados à mineração, preocupados com derrama e endividamento junto à Coroa.",
-            "Concentração da liderança em comerciantes do Recife e proprietários de Olinda em disputa pelo controle político local.",
-            "Participação de colonos maranhenses contrários a monopólio comercial e interessados no controle da mão de obra indígena."
+            "reafirmar a autoridade da Coroa, punir articulações consideradas ameaçadoras e desestimular novas formas de contestação à ordem vigente.",
+            "negociar a autonomia política das regiões rebeladas em troca da manutenção dos tributos e dos monopólios comerciais metropolitanos.",
+            "uniformizar as punições entre participantes de diferentes posições sociais, de modo a demonstrar neutralidade jurídica diante das revoltas.",
+            "converter reivindicações locais em reformas administrativas, reconhecendo que a contestação revelava legitimidade política equivalente à do poder régio.",
+            "estimular a circulação pública de projetos republicanos para distinguir críticas econômicas aceitáveis de propostas separatistas consideradas ilegais."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "🎉 Excelente!\n\nA repressão aparece na análise histórica como mecanismo de preservação da ordem colonial e, no caso baiano, também revela hierarquias sociais na aplicação da justiça.",
+        "feedbackErro": "❌ Atenção!\n\nA repressão aparece na análise histórica como mecanismo de preservação da ordem colonial e, no caso baiano, também revela hierarquias sociais na aplicação da justiça. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Observe não só por que houve repressão, mas também quem foi punido e o que isso revela sobre a ordem social."
+    },
+    {
+        "pergunta": "O uso amplo da expressão 'movimentos anticoloniais' exige uma precaução metodológica. Qual?",
+        "alternativas": [
+            "reservar o termo aos episódios em que houve proposta republicana, pois conflitos contra monopólios e tributos não integram a história da contestação colonial.",
+            "Reconhecer que os movimentos apresentaram diferentes graus de crítica ao domínio português, sem presumir um programa nacional comum entre eles.",
+            "aplicar a mesma categoria política aos movimentos ocorridos na mineração e no comércio, em razão de questionarem mecanismos de arrecadação metropolitana de modo equivalente.",
+            "considerar como anticoloniais conflitos entre grupos locais mesmo quando a disputa não envolvesse instituições ou práticas ligadas à ordem portuguesa.",
+            "tratar a expressão como equivalente a separatismo, deixando as revoltas de alcance local em uma categoria sem relação com a crise do sistema colonial."
         ],
         "correta": 1,
-        "feedbackAcerto": "✅ A base social e a linguagem igualitária tornam a Bahia de 1798 particularmente importante.",
-        "feedbackErro": "❌ O erro é deslocar para Salvador os protagonistas e conflitos de Minas, Pernambuco ou Maranhão.",
-        "dicaBanca": "💡 Bahia 1798: participação popular urbana + liberdade + igualdade + república."
+        "feedbackAcerto": "🎉 Excelente!\n\nO próprio arquivo admite o uso amplo do termo, desde que não se apaguem as diferenças de objetivos e de grau de ruptura.",
+        "feedbackErro": "❌ Atenção!\n\nO próprio arquivo admite o uso amplo do termo, desde que não se apaguem as diferenças de objetivos e de grau de ruptura. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Categoria ampla não significa identidade: explicite o que cada movimento efetivamente contestava."
     },
     {
-        "pergunta": "Em que sentido a Conjuração Baiana apresenta maior radicalidade social que a Inconfidência Mineira?",
+        "pergunta": "A presença de projetos republicanos antes de 1822 é relevante para a história política da América portuguesa porque indica:",
         "alternativas": [
-            "A linguagem de igualdade e a participação de grupos subalternizados ampliavam o alcance social da contestação para além da ruptura política com Portugal.",
-            "A radicalidade decorria de um programa de centralização monárquica que pretendia ampliar direitos dentro do império português.",
-            "A linguagem igualitária ampliava a crítica, embora a radicalidade da Conjuração possa ser explicada principalmente por sua defesa republicana, mais importante que a composição social de Salvador.",
-            "A participação de artesãos e soldados reduziu a dimensão política do movimento, que se concentrou em problemas de abastecimento e salários.",
-            "A Bahia defendia forma republicana semelhante à de Minas, mas apresentava composição social mais elitizada e menor presença popular."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "✅ A radicalidade deve ser medida também pelo alcance social da igualdade e pela composição dos participantes.",
-        "feedbackErro": "❌ O erro é reduzir a Conjuração a liberalismo comercial ou inverter sua base social.",
-        "dicaBanca": "💡 Compare não só forma de governo, mas também quem seria incluído na mudança."
-    },
-    {
-        "pergunta": "A circulação de panfletos na Conjuração Baiana é historicamente importante porque:",
-        "alternativas": [
-            "Demonstra que o programa político baiano foi copiado de documentos franceses sem adaptações às relações sociais de Salvador.",
-            "Os panfletos demonstram circulação pública de ideias e permitem concluir que os grupos urbanos envolvidos compartilhavam compreensão relativamente uniforme sobre igualdade, república e transformação social.",
-            "Mostra a difusão pública de linguagem política de liberdade, igualdade e crítica à ordem colonial em um espaço urbano socialmente diverso.",
-            "Indica que as autoridades coloniais estimularam o debate público como forma de controlar tensões entre trabalhadores urbanos.",
-            "Revela que a contestação se restringia ao comércio e à tributação, pois a linguagem igualitária tinha função retórica secundária."
+            "que a monarquia portuguesa já havia perdido a soberania jurídica sobre a colônia, embora ainda mantivesse mecanismos fiscais e administrativos.",
+            "que a Independência de 1822 serviu para formalizar uma república que já funcionaria nas principais regiões desde as conjurações do século XVIII.",
+            "a existência de alternativas à monarquia e de experiências de contestação que formularam arranjos políticos distintos antes da Independência.",
+            "que republicanismo e abolicionismo formavam um programa integrado entre os movimentos, apesar das diferenças de composição social entre Minas, Bahia e Pernambuco.",
+            "que a circulação de ideias políticas criou instituições nacionais estáveis antes de 1822, ainda que os movimentos tenham sido reprimidos."
         ],
         "correta": 2,
-        "feedbackAcerto": "✅ Os panfletos ajudam a compreender circulação política e alcance social da contestação.",
-        "feedbackErro": "❌ O erro é elitizar a circulação, oficializá-la ou reduzir a igualdade a ornamento retórico.",
-        "dicaBanca": "💡 Fonte política também informa público, linguagem e circulação."
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica destaca que projetos republicanos existiam antes da Independência, mas isso não significa que houvesse um Estado brasileiro republicano já constituído.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica destaca que projetos republicanos existiam antes da Independência, mas isso não significa que houvesse um Estado brasileiro republicano já constituído. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Diferencie existência de alternativas políticas de existência de instituições nacionais consolidadas."
     },
     {
-        "pergunta": "A repressão à Conjuração Baiana permite observar:",
+        "pergunta": "Qual relação entre circulação de ideias atlânticas e conflitos locais aparece de modo mais consistente nos movimentos do fim do século XVIII?",
         "alternativas": [
-            "Que a justiça colonial podia atingir de modo particularmente severo participantes populares, revelando hierarquias sociais na repressão.",
-            "Que as autoridades buscaram incorporar as lideranças populares à administração local para reduzir a influência de ideias republicanas.",
-            "Que os participantes receberam punições semelhantes independentemente de posição social, porque a Coroa priorizou o crime político sobre a hierarquia colonial.",
-            "Que a repressão concentrou-se nos grandes proprietários, considerados mais perigosos que artesãos, soldados e libertos envolvidos no movimento.",
-            "Que a monarquia reconheceu legitimidade parcial das reivindicações de igualdade e limitou a punição aos responsáveis pela circulação de panfletos."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "✅ A repressão também é fonte para estudar desigualdade social e exercício da justiça.",
-        "feedbackErro": "❌ O erro é imaginar neutralidade social das punições ou negociação institucional ampla com o movimento.",
-        "dicaBanca": "💡 Compare crime político e posição social dos acusados."
-    },
-    {
-        "pergunta": "Qual semelhança entre Inconfidência Mineira e Conjuração Baiana é historicamente defensável?",
-        "alternativas": [
-            "Ambas possuíam base social predominantemente popular e defendiam igualdade racial e abolição como eixos consensuais.",
-            "Ambas tiveram como causa imediata a ameaça da derrama e a crise da produção mineradora nas capitanias.",
-            "Ambas chegaram a instituir governos republicanos locais antes da repressão portuguesa.",
-            "Ambas criticaram aspectos da ordem colonial portuguesa e dialogaram com repertórios políticos do mundo atlântico.",
-            "Ambas defendiam autonomia econômica sem questionar a soberania política da monarquia sobre a América."
+            "As ideias externas substituíram as causas econômicas e sociais locais, tornando a crise colonial essencialmente uma consequência intelectual das revoluções europeias.",
+            "A circulação atlântica teve importância porque forneceu programas políticos completos, reproduzidos nas capitanias com poucas alterações de acordo com cada grupo social.",
+            "Os movimentos locais já possuíam projetos definidos e recorreram às ideias atlânticas depois das revoltas, sobretudo para construir a memória de seus líderes.",
+            "Repertórios de liberdade, igualdade e crítica ao Antigo Regime foram apropriados em conjunturas locais marcadas por fiscalismo, hierarquias e disputas coloniais.",
+            "As referências ao Iluminismo e à Revolução Francesa produziram resultados semelhantes em Minas e na Bahia, apesar das diferenças de base social entre os movimentos."
         ],
         "correta": 3,
-        "feedbackAcerto": "✅ A semelhança está na crítica colonial e na circulação de repertórios, não na identidade de projetos e bases sociais.",
-        "feedbackErro": "❌ O erro é igualar composição, causa imediata ou resultado político.",
-        "dicaBanca": "💡 Compare pontos de aproximação sem apagar diferenças."
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica relaciona Iluminismo, Independência dos EUA e Revolução Francesa à radicalização de algumas contestações, mas também insiste nas condições locais.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica relaciona Iluminismo, Independência dos EUA e Revolução Francesa à radicalização de algumas contestações, mas também insiste nas condições locais. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Não escolha entre 'ideias' e 'interesses': as melhores interpretações mostram como ambos se combinaram."
     },
     {
-        "pergunta": "Qual diferença entre Inconfidência Mineira e Conjuração Baiana é mais relevante?",
+        "pergunta": "A comparação entre 1789, 1798 e 1817 permite perceber uma sequência de contestações com diferenças importantes. Qual síntese é a mais adequada?",
         "alternativas": [
-            "A Bahia evitava propostas republicanas, enquanto Minas se diferenciava por formular ruptura política explícita e forma republicana.",
-            "A diferença entre Minas e Bahia pode ser explicada principalmente pela conjuntura econômica de cada região, enquanto composição social e linguagem igualitária teriam importância interpretativa menor.",
-            "A Bahia teve como núcleo grandes proprietários mineradores e a questão da derrama, enquanto Minas reuniu artesãos e soldados urbanos.",
-            "A Inconfidência teve perfil mais elitizado e forte componente fiscal, enquanto a Conjuração teve participação popular urbana mais marcada e linguagem igualitária mais ampla.",
-            "A Inconfidência defendia igualdade social ampla e a Bahia restringia suas propostas à liberdade comercial dos grandes comerciantes."
+            "Os três episódios repetiram o mesmo programa republicano e social, variando basicamente na intensidade da repressão empregada pela Coroa portuguesa.",
+            "Os movimentos de 1789 e 1798 foram locais e econômicos, enquanto 1817 introduziu pela primeira vez ideias de ruptura política na América portuguesa.",
+            "A principal diferença entre os três casos está na presença ou ausência de fiscalismo, pois a composição social e as propostas políticas foram comparáveis.",
+            "Os episódios demonstram uma evolução linear do elitismo para a participação popular, culminando em 1817 com um programa social mais radical que o da Bahia e com a superação das diferenças regionais anteriores.",
+            "Os três episódios ampliaram a crítica ao domínio colonial ou monárquico em contextos regionais distintos, com bases sociais e formas de organização política diferentes."
         ],
-        "correta": 3,
-        "feedbackAcerto": "✅ Base social, fiscalismo e alcance da igualdade são chaves de comparação.",
-        "feedbackErro": "❌ O erro é inverter cronologia, participantes ou grau de radicalidade social.",
-        "dicaBanca": "💡 Minas 1789 e Bahia 1798 não são versões do mesmo movimento."
+        "correta": 4,
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo usa 1789, 1798 e 1817 para mostrar avanço e diversidade das críticas, não uma repetição idêntica nem uma evolução linear obrigatória.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo usa 1789, 1798 e 1817 para mostrar avanço e diversidade das críticas, não uma repetição idêntica nem uma evolução linear obrigatória. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Em comparações cronológicas, evite imaginar uma 'escada' inevitável de progresso político; observe cada contexto."
     },
     {
-        "pergunta": "Por que composição social e objetivo político devem ser analisados separadamente?",
+        "pergunta": "No caso da Revolta de Beckman, qual combinação de fatores explica melhor a contestação?",
         "alternativas": [
-            "Porque projetos republicanos implicam igualdade social ampla independentemente de quem participa do movimento.",
-            "Porque um movimento pode defender ruptura política com a metrópole e, ao mesmo tempo, preservar hierarquias sociais importantes.",
-            "Porque a base social determina de forma direta o programa político, fazendo movimentos elitizados rejeitarem toda forma de ruptura colonial.",
-            "Porque movimentos populares se concentram em reivindicações sociais e evitam questões ligadas a soberania e independência.",
-            "Porque movimentos anticoloniais são definidos pela composição social, enquanto seus objetivos políticos têm valor secundário para a classificação."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "✅ Ruptura política e transformação social são dimensões diferentes.",
-        "feedbackErro": "❌ O erro é deduzir programa automaticamente da classe social ou da forma republicana.",
-        "dicaBanca": "💡 Quem participa ajuda a explicar o programa, mas não o determina mecanicamente."
-    },
-    {
-        "pergunta": "A expressão “movimentos anticoloniais” deve ser usada com cuidado porque:",
-        "alternativas": [
-            "É adequada sobretudo aos movimentos que defenderam república, excluindo conflitos econômicos e fiscais sem projeto separatista.",
-            "Indica que as revoltas formavam sequência cronológica coerente de avanço rumo à Independência de 1822.",
-            "Reúne contestações com graus muito diferentes de crítica ao domínio português, desde disputas locais até projetos de ruptura.",
-            "Elimina a necessidade de distinguir disputas entre grupos coloniais de conflitos diretamente voltados contra a autoridade metropolitana.",
-            "Pressupõe que cada revolta colonial pretendia formar um Estado brasileiro independente e politicamente unificado."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "✅ O conceito é útil se não apagar as diferenças internas entre as contestações.",
-        "feedbackErro": "❌ O erro é tratar anticolonialismo como nacionalismo pronto ou exigir republicanismo para reconhecer conflito colonial.",
-        "dicaBanca": "💡 Categoria ampla exige comparação cuidadosa."
-    },
-    {
-        "pergunta": "Por que projetar nacionalismo brasileiro moderno sobre revoltas coloniais é anacrônico?",
-        "alternativas": [
-            "Porque o sentimento nacional português organizava de forma homogênea elites e grupos populares em toda a América portuguesa.",
-            "Porque a ideia de independência política era inexistente antes de 1822 e não aparece em projetos do fim do século XVIII.",
-            "Porque identidades regionais limitavam fortemente a circulação de ideias comuns entre capitanias e experiências atlânticas.",
-            "Porque os participantes atuavam em identidades, interesses e contextos regionais anteriores à consolidação de um Estado nacional brasileiro.",
-            "Projetar nacionalismo moderno é inadequado, embora propostas de independência anteriores a 1822 indiquem que já existia identidade política brasileira suficientemente definida entre os movimentos separatistas."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "✅ Anticolonialismo não deve ser confundido com nacionalismo brasileiro já formado.",
-        "feedbackErro": "❌ O erro é negar projetos de ruptura ou, no extremo oposto, tratá-los como nacionalismo maduro.",
-        "dicaBanca": "💡 Evite ler o século XVIII com categorias políticas consolidadas no século XIX."
-    },
-    {
-        "pergunta": "A noção de “harmonia colonial” é inadequada para interpretar a América portuguesa porque:",
-        "alternativas": [
-            "Subestima a integração econômica do império, que reduzia tensões políticas ao garantir participação dos principais grupos coloniais nas decisões régias.",
-            "Desconsidera que as revoltas ocorreram principalmente por influência externa, sem ligação importante com problemas internos do sistema colonial.",
-            "Exagera o papel da metrópole e reduz a importância de acordos políticos estáveis que impediram conflitos relevantes entre os colonos.",
-            "Oculta fiscalismo, monopólios, disputas por trabalho e comércio, rivalidades entre grupos locais, repressão e projetos políticos divergentes.",
-            "Ignora que a Coroa permitia ampla autonomia fiscal às capitanias, circunstância que deslocava os conflitos para relações entre grupos locais."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "✅ A ordem colonial foi marcada por negociação e conflito, não por ausência de tensões.",
-        "feedbackErro": "❌ O erro está em romantizar o sistema ou explicar as revoltas sem seus problemas estruturais e locais.",
-        "dicaBanca": "💡 Colonização envolve poder, negociação e conflito simultaneamente."
-    },
-    {
-        "pergunta": "A historiografia atual sobre os movimentos coloniais tende a privilegiar:",
-        "alternativas": [
-            "Análise de contexto, sujeitos, interesses, limites dos projetos, fontes e processos posteriores de construção da memória.",
-            "Separação entre economia e política, para evitar que conflitos fiscais sejam confundidos com debates de soberania ou poder.",
-            "Classificação dos movimentos pelo êxito militar, tratando revoltas derrotadas como menos relevantes para compreender a sociedade colonial.",
-            "Uso prioritário de documentos oficiais, considerados mais confiáveis que panfletos, cartas, processos e outras fontes produzidas em conflito.",
-            "Biografia dos líderes como eixo principal, pois os demais participantes reproduziam os projetos definidos pelas figuras centrais."
+            "Insatisfação de colonos com o monopólio comercial, problemas de abastecimento e disputas envolvendo o controle da mão de obra indígena e a atuação jesuítica.",
+            "Conflito entre mineradores e autoridades fiscais pela circulação do ouro, acompanhado de um projeto de separação política inspirado pelo Iluminismo e de oposição às Casas de Fundição.",
+            "Rivalidade entre proprietários rurais e comerciantes urbanos pelo controle político de uma região cuja economia passava por transformação comercial.",
+            "Crítica à concentração de privilégios no Rio de Janeiro, com defesa de um governo republicano regional durante o período de presença da Corte.",
+            "Mobilização popular urbana que articulava igualdade social, republicanismo e crítica racial à ordem existente em uma capital colonial."
         ],
         "correta": 0,
-        "feedbackAcerto": "✅ A abordagem atual evita heroização e explicações monocausais.",
-        "feedbackErro": "❌ O erro é reduzir relevância ao sucesso, centralizar líderes ou hierarquizar fontes de forma rígida.",
-        "dicaBanca": "💡 Movimentos são processos sociais, não apenas episódios de grandes personagens."
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica associa Beckman a Maranhão, Companhia de Comércio, jesuítas, abastecimento e mão de obra indígena.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica associa Beckman a Maranhão, Companhia de Comércio, jesuítas, abastecimento e mão de obra indígena. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Para reconhecer Beckman em uma questão difícil, procure a articulação entre monopólio comercial e disputa pela mão de obra."
     },
     {
-        "pergunta": "A repressão metropolitana aos movimentos coloniais cumpria também a função de:",
+        "pergunta": "Por que a Revolta de Beckman não deve ser descrita como uma revolução democrática de ampla transformação social?",
         "alternativas": [
-            "Transformar reivindicações locais em canais regulares de negociação política dentro das capitanias.",
-            "Distinguir conflitos econômicos de crimes políticos, evitando punições exemplares em movimentos sem ruptura declarada.",
-            "Reafirmar a autoridade da Coroa e produzir efeito exemplar para desestimular novas articulações de contestação.",
-            "Reconhecer autonomia dos grupos que aceitassem manter arrecadação e comércio sob supervisão portuguesa.",
-            "Incorporar lideranças contestatórias à administração colonial, utilizando sua influência para ampliar legitimidade metropolitana."
+            "Porque a oposição dos colonos à Companhia de Comércio foi conduzida dentro de um projeto republicano que restringia a participação política aos proprietários locais e previa autonomia institucional para o Maranhão.",
+            "Porque a contestação se concentrou em interesses de colonos ligados ao abastecimento, ao monopólio e à mão de obra, sem apresentar um programa igualitário abrangente.",
+            "Porque a disputa com os jesuítas ocorreu em torno da representação municipal, sem relação relevante com as formas de trabalho disponíveis na região.",
+            "Porque os participantes recusaram alterações relevantes nas práticas comerciais, concentrando a revolta em questões religiosas e na autoridade eclesiástica.",
+            "Porque a crítica ao poder metropolitano já pressupunha separação política, mas não incluía medidas econômicas capazes de alterar as relações comerciais."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "🎉 Excelente!\n\nO núcleo de Beckman no arquivo é uma contestação local vinculada a interesses coloniais concretos, não um projeto de igualdade social.",
+        "feedbackErro": "❌ Atenção!\n\nO núcleo de Beckman no arquivo é uma contestação local vinculada a interesses coloniais concretos, não um projeto de igualdade social. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Avalie o alcance das reivindicações, não apenas o fato de existir conflito com agentes da ordem colonial."
+    },
+    {
+        "pergunta": "Uma interpretação que classifica a Revolta de Beckman como antecedente direto de um Estado nacional brasileiro seria problemática porque:",
+        "alternativas": [
+            "ignora que os colonos já possuíam instituições republicanas estáveis e que a revolta tentou preservar essas estruturas contra a intervenção da Companhia de Comércio.",
+            "subestima a influência do fiscalismo minerador, que aproximava as reivindicações maranhenses das formuladas posteriormente em Vila Rica e na Inconfidência.",
+            "projeta sobre uma contestação local, ligada a comércio e mão de obra, um nacionalismo e um programa de independência que não é sustentado pelos objetivos atribuídos ao movimento.",
+            "desconsidera que a principal divergência com os jesuítas envolvia a forma de governo regional, e não a utilização da mão de obra indígena.",
+            "confunde a oposição ao monopólio com a defesa de livre comércio irrestrito, convertendo uma reivindicação local em programa comum de diferentes movimentos anticoloniais e em etapa organizada de separação política diante de Portugal."
         ],
         "correta": 2,
-        "feedbackAcerto": "✅ A punição tinha dimensão política e exemplar, além de reprimir participantes específicos.",
-        "feedbackErro": "❌ O erro é interpretar repressão como institucionalização da contestação ou reconhecimento de autonomia.",
-        "dicaBanca": "💡 Repressão comunica poder para além dos réus imediatos."
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo recomenda evitar nacionalismo moderno projetado sobre revoltas coloniais. Beckman é exemplo claro de contestação local sem projeto nacional de independência.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo recomenda evitar nacionalismo moderno projetado sobre revoltas coloniais. Beckman é exemplo claro de contestação local sem projeto nacional de independência. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Anacronismo não é só erro de data: também pode ser atribuir a atores coloniais identidades políticas formadas depois."
     },
     {
-        "pergunta": "No contexto minerador, a ampliação do controle da Coroa pode ser percebida em:",
+        "pergunta": "Na Revolta de Beckman, a disputa envolvendo jesuítas e mão de obra indígena mostra que:",
         "alternativas": [
-            "Redução dos controles após a Guerra dos Emboabas, pois a Coroa passou a confiar na capacidade dos colonos de regular a exploração.",
-            "Fiscalização da circulação do ouro, criação de mecanismos de fundição e cobrança e maior presença administrativa numa região estratégica.",
-            "Reconhecimento de privilégios paulistas permanentes em troca do compromisso de abastecer a região e garantir a ordem local.",
-            "Transferência da cobrança para associações de mineradores, com menor participação de funcionários metropolitanos e maior autonomia local.",
-            "Substituição do quinto por tributos definidos pelas câmaras, medida adotada para diminuir contrabando e conflitos nas minas."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "✅ A riqueza mineral levou a Coroa a intensificar instrumentos fiscais e administrativos.",
-        "feedbackErro": "❌ O erro é supor descentralização ou redução de controle justamente numa área de alto interesse fiscal.",
-        "dicaBanca": "💡 Mineração = riqueza estratégica + fiscalização crescente."
-    },
-    {
-        "pergunta": "A Revolução Pernambucana de 1817 pode ser caracterizada como:",
-        "alternativas": [
-            "Conspiração elitista que não ultrapassou reuniões secretas e foi reprimida antes de produzir instituições políticas.",
-            "Conflito entre olindenses e recifenses em torno do estatuto político do Recife e das dívidas da aristocracia açucareira.",
-            "Movimento fiscal minerador que associou a ameaça da derrama a um projeto de separação regional.",
-            "Revolta local entre comerciantes e proprietários sem questionamento da monarquia ou projeto de poder alternativo.",
-            "Movimento republicano que contestou a monarquia portuguesa e chegou a organizar uma experiência de governo próprio."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "✅ 1817 alcançou grau de ruptura e institucionalização maior que várias conspirações anteriores.",
-        "feedbackErro": "❌ O erro é reduzir o movimento a disputa local ou confundi-lo com Minas e Mascates.",
-        "dicaBanca": "💡 1817: república + governo próprio + contestação direta da monarquia."
-    },
-    {
-        "pergunta": "A presença da Corte portuguesa no Rio de Janeiro ajuda a explicar tensões que desembocaram em 1817 porque:",
-        "alternativas": [
-            "A centralização política e os encargos ligados à nova estrutura de poder alimentavam descontentamentos regionais em Pernambuco.",
-            "A nova administração eliminou tensões comerciais com Portugal, deslocando a oposição pernambucana para temas ligados principalmente à escravidão.",
-            "A transferência da Corte concedeu autonomia política a Pernambuco, gerando disputa sobre os limites dessa autonomia com o governo do Rio.",
-            "A presença régia transformou Recife na sede econômica do império, deslocando poder político de Olinda e provocando reação senhorial semelhante à Guerra dos Mascates.",
-            "A Corte extinguiu tributos coloniais e provocou reação de grupos interessados em preservar antigas formas de arrecadação regional."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "✅ A reorganização do império no Rio redistribuiu custos e poderes, criando tensões regionais.",
-        "feedbackErro": "❌ O erro é imaginar que a Corte significou autonomia pernambucana ou redução geral dos encargos.",
-        "dicaBanca": "💡 1817 deve ser ligado à centralização da monarquia no Rio e ao descontentamento regional."
-    },
-    {
-        "pergunta": "O fato de a Revolução Pernambucana ter organizado governo republicano indica:",
-        "alternativas": [
-            "Que 1817 foi continuidade institucional da Guerra dos Mascates, com mudança principalmente na forma de governo defendida pelo Recife.",
-            "Um grau de ruptura política mais avançado, pois a contestação chegou a produzir instituições alternativas ao poder monárquico.",
-            "Que o republicanismo implicou programa social igualitário e abolição consensual da escravidão entre os participantes.",
-            "Que a república estabelecida tinha reconhecimento português e funcionava como experiência de autonomia dentro do império.",
-            "Que o movimento já possuía apoio de toda a população regional e superara as diferenças entre elites, livres pobres e escravizados."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "✅ A experiência de governo distingue 1817 de conspirações que não chegaram a exercer poder.",
-        "feedbackErro": "❌ O erro é deduzir do republicanismo apoio social total, igualdade ampla ou reconhecimento metropolitano.",
-        "dicaBanca": "💡 Forma de governo e alcance social devem ser analisados separadamente."
-    },
-    {
-        "pergunta": "Qual limite social deve ser considerado ao analisar a Revolução Pernambucana de 1817?",
-        "alternativas": [
-            "A organização de governo próprio demonstrava que igualdade jurídica e abolição já eram consensos entre os grupos revolucionários.",
-            "A experiência republicana excluía conflitos entre setores sociais porque o objetivo comum de separação anulava divergências internas.",
-            "A participação de elites regionais teria limitado a defesa republicana e restringido o movimento a reivindicações tributárias.",
-            "A oposição à monarquia era secundária, pois o movimento se concentrava na distribuição de terras e na transformação das relações de trabalho.",
-            "A ruptura republicana não eliminava automaticamente hierarquias sociais nem produzia consenso sobre mudanças profundas na ordem escravista."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "✅ Republicanismo não deve ser confundido com revolução social completa.",
-        "feedbackErro": "❌ O erro é negar a ruptura política ou transformá-la em igualdade social automática.",
-        "dicaBanca": "💡 Pergunte sempre: república para quem e com quais continuidades sociais?"
-    },
-    {
-        "pergunta": "Ao comparar 1789, 1798 e 1817, qual tendência pode ser percebida sem transformar os episódios em etapas inevitáveis?",
-        "alternativas": [
-            "A presença crescente de projetos de contestação política em diferentes regiões, com bases sociais e graus de ruptura distintos.",
-            "A comparação entre 1789, 1798 e 1817 revela avanço político relativamente linear, pois cada experiência incorporou as propostas da anterior e ampliou sua base social até produzir governo próprio em Pernambuco.",
-            "A repetição de uma mesma causa fiscal e de um mesmo modelo republicano em três regiões economicamente semelhantes.",
-            "Uma substituição progressiva das elites por grupos populares na direção dos movimentos até a formação de governo em 1817.",
-            "Uma ampliação linear da igualdade social, passando de programa elitizado em Minas a abolição consensual em Pernambuco."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "✅ É possível comparar mudanças de grau sem narrar uma marcha inevitável para a independência.",
-        "feedbackErro": "❌ O erro é impor coordenação nacional, linearidade social ou causas idênticas.",
-        "dicaBanca": "💡 Comparação histórica não é teleologia."
-    },
-    {
-        "pergunta": "Qual comparação entre Vila Rica, Inconfidência Mineira e Revolução Pernambucana é mais adequada?",
-        "alternativas": [
-            "Vila Rica e Inconfidência organizaram governos locais, enquanto 1817 permaneceu conspiração sem exercício efetivo de poder.",
-            "Vila Rica reagiu ao controle fiscal; a Inconfidência formulou projeto conspiratório de ruptura; 1817 chegou a estabelecer governo republicano.",
-            "Os três movimentos expressam graus diferentes de ruptura, mas a passagem de Vila Rica para Inconfidência e depois 1817 pode ser tratada como evolução coerente do mesmo programa de autonomia colonial.",
-            "Os três movimentos tiveram origem imediata na derrama e diferiram principalmente na composição social de seus participantes.",
-            "Os três representam fases de um mesmo movimento mineiro que se expandiu para Pernambuco no início do século XIX."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "✅ A comparação evidencia diferentes graus de ruptura e institucionalização.",
-        "feedbackErro": "❌ O erro é igualar causas, resultados ou transformar os episódios em um único processo organizado.",
-        "dicaBanca": "💡 Ordene: contestação fiscal, conspiração separatista, experiência republicana."
-    },
-    {
-        "pergunta": "Qual comparação entre Beckman e Guerra dos Mascates é mais consistente?",
-        "alternativas": [
-            "Ambas resultaram diretamente da circulação do Iluminismo e das revoluções atlânticas no fim do século XVIII.",
-            "Ambas mobilizaram grupos populares em torno de igualdade social, mas Beckman teve maior presença de proprietários.",
-            "Ambas expressaram conflitos coloniais ligados a interesses locais, mas Beckman envolveu monopólio e mão de obra no Maranhão, enquanto Mascates envolveu poder entre Olinda e Recife.",
-            "Beckman e Mascates foram conflitos locais, mas a oposição a monopólio e poder metropolitano teria dado aos dois projetos separatistas semelhantes, ainda que sem república formalmente estabelecida.",
-            "Ambas nasceram da mineração e da pressão fiscal, diferenciando-se pelo apoio paulista em uma e recifense na outra."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "✅ A comparação funciona quando preserva os conflitos específicos de cada região.",
-        "feedbackErro": "❌ O erro é classificá-las como separatistas, mineradoras ou iluministas de fim de século.",
-        "dicaBanca": "💡 Nem toda revolta colonial é contra Portugal da mesma maneira."
-    },
-    {
-        "pergunta": "Qual comparação entre Guerra dos Emboabas e Revolta de Vila Rica é mais adequada?",
-        "alternativas": [
-            "Emboabas foi conflito fiscal contra as Casas de Fundição, enquanto Vila Rica opôs paulistas e forasteiros pela posse das minas.",
-            "Emboabas e Vila Rica pertencem à mineração e podem ser aproximados como revoltas fiscais, diferenciadas pelo grupo social que dirigiu a oposição às exigências portuguesas.",
-            "Ambos possuíam base social popular e programa republicano, mas Vila Rica apresentava maior influência das ideias francesas.",
-            "Os dois movimentos defendiam separação política de Minas, diferenciando-se principalmente pelo momento da produção aurífera.",
-            "Emboabas envolveu disputa entre grupos pelo controle da região mineradora; Vila Rica dirigiu-se contra mecanismos régios de fiscalização e tributação do ouro."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "✅ Os dois pertencem ao mundo minerador, mas suas causas políticas imediatas são diferentes.",
-        "feedbackErro": "❌ O erro é trocar os conflitos ou atribuir separatismo e republicanismo a episódios anteriores.",
-        "dicaBanca": "💡 Mesmo espaço econômico pode gerar tensões de natureza distinta."
-    },
-    {
-        "pergunta": "A reação da Coroa depois da Guerra dos Emboabas e diante da Revolta de Vila Rica revela:",
-        "alternativas": [
-            "Substituição gradual do controle fiscal por participação das câmaras, considerada mais eficiente para combater o contrabando.",
-            "A resposta régia aos conflitos mineradores ampliou controle, mas a necessidade de estabilidade teria levado a Coroa a transferir parte relevante da gestão fiscal às elites locais depois das revoltas.",
-            "Reconhecimento de autonomia política mineira em troca de cumprimento das metas de produção e pagamento do quinto.",
-            "Tendência a ampliar a capacidade administrativa e fiscal sobre uma região cujo valor econômico era estratégico para a monarquia.",
-            "Abandono das Casas de Fundição e retorno à circulação livre do ouro como forma de estabilizar a região após os conflitos."
+            "a oposição aos jesuítas era principalmente uma controvérsia doutrinária, enquanto as questões de trabalho eram tratadas em negociações separadas com a Companhia de Comércio.",
+            "a defesa dos colonos contra o monopólio comercial dependia da preservação da autonomia indígena, eixo que unificava proprietários e missionários.",
+            "o problema do abastecimento explicava a revolta por inteiro, tornando secundárias as disputas a respeito do acesso e do controle da mão de obra.",
+            "conflitos econômicos e relações de trabalho estavam entrelaçados à atuação de instituições religiosas e aos interesses de grupos coloniais.",
+            "a presença missionária reduziu o conflito com os colonos ao campo jurídico, pois a utilização da mão de obra não fazia parte das tensões econômicas locais."
         ],
         "correta": 3,
-        "feedbackAcerto": "✅ A mineração estimulou maior presença do Estado colonial, não retração.",
-        "feedbackErro": "❌ O erro é interpretar conflitos como causa de descentralização quando a resposta régia foi reforçar controle.",
-        "dicaBanca": "💡 Observe a relação entre riqueza mineral e capacidade estatal."
+        "feedbackAcerto": "🎉 Excelente!\n\nO próprio enunciado-base do arquivo conecta Companhia de Comércio, jesuítas e disputa por mão de obra indígena.",
+        "feedbackErro": "❌ Atenção!\n\nO próprio enunciado-base do arquivo conecta Companhia de Comércio, jesuítas e disputa por mão de obra indígena. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Quando vários elementos aparecem juntos, procure a relação entre eles em vez de escolher uma causa isolada."
     },
     {
-        "pergunta": "A ameaça da derrama na Inconfidência Mineira deve ser interpretada como:",
+        "pergunta": "Qual comparação entre a Revolta de Beckman e a Guerra dos Mascates é mais adequada?",
         "alternativas": [
-            "Um mecanismo criado pelos próprios inconfidentes para financiar a futura república e organizar a arrecadação regional.",
-            "Uma política de redução tributária adotada pela Coroa diante da queda da mineração e rejeitada pelas elites locais.",
-            "Um catalisador de tensões fiscais já existentes, e não como explicação única para todo o movimento.",
-            "A causa suficiente da conspiração, pois os fatores intelectuais e sociais surgiram depois da decisão de executar a cobrança.",
-            "Um instrumento administrativo semelhante às Casas de Fundição, utilizado desde o início da mineração para controlar fisicamente o ouro."
+            "Ambas foram movimentos separatistas que formularam repúblicas regionais, diferenciando-se pela maior presença de comerciantes na revolta maranhense e pela defesa, em Pernambuco, de um poder municipal autônomo articulado contra a administração metropolitana.",
+            "Beckman questionou sobretudo o fiscalismo minerador, ao passo que Mascates se concentrou no controle da mão de obra indígena por instituições religiosas.",
+            "Os dois movimentos tiveram origem na circulação de ideias iluministas, e Mascates teria reunido grupos populares em torno de igualdade política.",
+            "A principal semelhança foi a oposição às Casas de Fundição, enquanto a diferença decorreu do tipo de atividade econômica predominante em cada região.",
+            "Ambas expressaram tensões dentro da sociedade colonial, mas Beckman se ligou a monopólio, abastecimento e mão de obra, enquanto Mascates envolveu poder econômico e político entre grupos de Olinda e Recife."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica apresenta os dois como conflitos de alcance local, porém com eixos diferentes: comércio/mão de obra em Beckman e rivalidade Olinda/Recife em Mascates.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica apresenta os dois como conflitos de alcance local, porém com eixos diferentes: comércio/mão de obra em Beckman e rivalidade Olinda/Recife em Mascates. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Comparar bem exige apontar uma semelhança real e uma diferença específica, não apenas dizer que 'ambos foram revoltas'."
+    },
+    {
+        "pergunta": "Se um item afirma que a Revolta de Beckman comprova que toda oposição a um monopólio colonial era separatista, qual é o melhor contraponto?",
+        "alternativas": [
+            "A crítica ao monopólio podia permanecer vinculada a interesses locais dos colonos e não implicava, automaticamente, um projeto de ruptura com Portugal.",
+            "A presença de monopólio comercial impediria formulações políticas mais amplas, por isso revoltas desse tipo deveriam ser classificadas como conflitos econômicos sem dimensão de poder.",
+            "Os movimentos separatistas do período evitavam discutir questões comerciais, concentrando suas propostas em soberania e organização republicana.",
+            "A oposição ao monopólio só se tornou politicamente relevante no século XIX, quando 1817 associou comércio, fiscalidade e governo regional.",
+            "Beckman demonstra que projetos de independência podiam existir sem linguagem republicana, pois a separação se expressava por meio de reclamações econômicas."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica diferencia reclamação local de projeto separatista. Beckman é um bom exemplo de por que uma dimensão não deve ser deduzida da outra.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica diferencia reclamação local de projeto separatista. Beckman é um bom exemplo de por que uma dimensão não deve ser deduzida da outra. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Evite conclusões automáticas do tipo 'criticou monopólio, logo queria independência'."
+    },
+    {
+        "pergunta": "Em uma leitura social da Revolta de Beckman, a referência aos 'interesses dos colonos' deve ser usada com cuidado porque:",
+        "alternativas": [
+            "significa que o movimento representava principalmente pequenos produtores, já que grandes proprietários seriam beneficiários diretos do monopólio da Companhia.",
+            "indica que a contestação partia de grupos com interesses específicos e não autoriza tratar toda a população colonial como portadora do mesmo projeto.",
+            "mostra que a categoria 'colonos' correspondia a um grupo politicamente uniforme, ainda que existissem divergências sobre mão de obra e comércio.",
+            "permite concluir que o movimento teve base popular ampla, pois conflitos com a Companhia de Comércio afetariam de modo equivalente diferentes grupos de habitantes.",
+            "revela que a oposição aos jesuítas unificava as posições sociais locais, tornando secundárias as diferenças econômicas entre os participantes."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica insiste em composição social e interesses. 'Colonos' não deve ser transformado em sinônimo de sociedade inteira.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica insiste em composição social e interesses. 'Colonos' não deve ser transformado em sinônimo de sociedade inteira. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Quando um enunciado usa um grupo amplo, pergunte quais interesses concretos estão sendo atribuídos a ele."
+    },
+    {
+        "pergunta": "Qual uso da categoria 'nativista' seria mais prudente ao tratar da Revolta de Beckman?",
+        "alternativas": [
+            "Usá-la como sinônimo de movimento popular, pois o conceito identifica revoltas que ultrapassavam os interesses das elites locais.",
+            "Empregá-la para indicar oposição à presença portuguesa, já que a crítica à Companhia de Comércio significava rejeição aos agentes metropolitanos em geral.",
+            "Empregá-la para destacar a contestação local a mecanismos da colonização, sem converter o termo em prova de nacionalismo ou de separatismo.",
+            "Reservá-la às revoltas que defendiam maior autonomia econômica e, por isso, tenderiam a caminhar para a independência política.",
+            "Evitar o termo por completo, pois classificações comparativas impediriam perceber relações entre comércio, poder e trabalho no mundo colonial."
         ],
         "correta": 2,
-        "feedbackAcerto": "✅ A derrama importa dentro de uma conjuntura mais ampla de crise e politização.",
-        "feedbackErro": "❌ O erro é transformá-la em causa isolada ou confundi-la com mecanismos de fundição e controle físico do ouro.",
-        "dicaBanca": "💡 Gatilho não é o mesmo que causa total."
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo faz uma distinção didática entre nativismo e separatismo, mas a categoria precisa ser usada como síntese, não como identidade nacional dos atores.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo faz uma distinção didática entre nativismo e separatismo, mas a categoria precisa ser usada como síntese, não como identidade nacional dos atores. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Categoria histórica útil é aquela que ajuda a comparar sem apagar as particularidades do caso."
     },
     {
-        "pergunta": "Por que a categoria “revolta fiscal” é insuficiente para explicar a Inconfidência Mineira?",
+        "pergunta": "Na Guerra dos Emboabas, qual elemento permite compreender o conflito para além de uma simples rivalidade regional?",
         "alternativas": [
-            "Porque a Inconfidência se concentrou em igualdade social e abolição, deixando em segundo plano a relação política com a metrópole.",
-            "Porque a questão fiscal teve importância pequena e não aparece entre os fatores associados ao movimento mineiro.",
-            "Porque a derrama já havia sido abolida e o movimento surgiu principalmente de conflitos entre paulistas e forasteiros.",
-            "Porque o programa se limitava a maior participação das câmaras na arrecadação, sem questionamento da soberania portuguesa.",
-            "Porque a contestação tributária se combinou a debates sobre soberania, república e ruptura política com Portugal."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "✅ Fiscalismo é central, mas o movimento avançou para um projeto político de ruptura.",
-        "feedbackErro": "❌ O erro é apagar a dimensão fiscal ou reduzir a conspiração a simples reforma tributária.",
-        "dicaBanca": "💡 Pergunte quando um conflito econômico ganha linguagem de soberania."
-    },
-    {
-        "pergunta": "Por que a categoria “revolta popular” também é insuficiente para explicar a Conjuração Baiana?",
-        "alternativas": [
-            "Porque o termo popular implica ausência de participação de grupos letrados, o que não corresponde a movimentos do período colonial.",
-            "Porque a presença de artesãos, soldados e libertos teve papel secundário e a direção permaneceu concentrada em grandes proprietários.",
-            "A participação popular é importante, mas a Conjuração deve ser entendida sobretudo como difusão de ideias francesas, pois os conflitos sociais de Salvador tiveram influência limitada na formulação do programa.",
-            "Porque a Conjuração foi essencialmente reação econômica ao comércio, e a linguagem de igualdade não alterou o sentido do movimento.",
-            "Porque a participação popular foi importante, mas o movimento deve ser analisado também por seus repertórios políticos, redes de circulação e conflitos coloniais específicos."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "✅ Base social é decisiva, mas não esgota a análise do programa e da circulação de ideias.",
-        "feedbackErro": "❌ O erro é minimizar a participação popular ou tratá-la como incompatível com projeto político elaborado.",
-        "dicaBanca": "💡 História Social não dispensa História Política nem História Intelectual."
-    },
-    {
-        "pergunta": "A presença de propostas republicanas antes de 1822 demonstra que:",
-        "alternativas": [
-            "Projetos republicanos implicavam rejeição da escravidão e defesa de cidadania ampla entre os diferentes movimentos.",
-            "A existência de projetos republicanos antes de 1822 mostra pluralidade, mas também indica que a república já era a alternativa política dominante entre os grupos que contestavam a ordem colonial portuguesa.",
-            "Os movimentos republicanos constituíam fases de uma organização política comum com atuação em Minas, Bahia e Pernambuco.",
-            "A monarquia não era a única forma de organização política imaginada no mundo luso-brasileiro, embora esses projetos fossem diversos e localizados.",
-            "A república era defendida principalmente pela Coroa como alternativa de descentralização administrativa do império português."
+            "A oposição entre paulistas e recém-chegados se explicava por projetos constitucionais distintos, um monárquico e outro republicano, que disputavam a forma de governo e o reconhecimento político da região mineradora.",
+            "O conflito nasceu da resistência às Casas de Fundição, que reunia paulistas e forasteiros contra a política fiscal da Coroa.",
+            "A rivalidade se concentrou na utilização da mão de obra indígena, repetindo o eixo de tensão que aparecera na Revolta de Beckman.",
+            "A disputa pelo acesso aos benefícios da mineração envolvia recursos, poder local e definição de quem controlaria uma região econômica estratégica.",
+            "A disputa ganhou caráter separatista quando os recém-chegados defenderam autonomia política da região mineradora diante de Portugal."
         ],
         "correta": 3,
-        "feedbackAcerto": "✅ A pluralidade de projetos políticos antecede a independência sem formar um programa nacional único.",
-        "feedbackErro": "❌ O erro é transformar republicanismo em consenso, organização comum ou programa social uniforme.",
-        "dicaBanca": "💡 Antes de 1822 já havia alternativas à monarquia, mas não uma única alternativa."
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica define Emboabas como disputa entre paulistas e recém-chegados pelo controle da região mineradora e de seus benefícios.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica define Emboabas como disputa entre paulistas e recém-chegados pelo controle da região mineradora e de seus benefícios. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Em questões difíceis, traduza 'controle das minas' em recursos, autoridade e vantagens políticas."
     },
     {
-        "pergunta": "O contexto atlântico do fim do século XVIII ajuda a compreender Minas e Bahia porque:",
+        "pergunta": "Por que a ampliação do controle da Coroa após a Guerra dos Emboabas é uma consequência historicamente importante?",
         "alternativas": [
-            "As novas ideias foram difundidas oficialmente pela monarquia portuguesa como parte de uma política de modernização das capitanias.",
-            "A circulação internacional substituiu fatores locais, tornando fiscalismo, hierarquias e composição social elementos secundários.",
-            "Iluminismo, independências e revoluções ampliaram repertórios de soberania, direitos e república que foram apropriados de formas distintas nos conflitos coloniais.",
-            "As revoluções atlânticas ampliaram repertórios e foram apropriadas localmente, embora a semelhança dos conceitos de liberdade e soberania tenha produzido programas relativamente convergentes em Minas e Bahia.",
-            "As revoluções atlânticas forneceram programas prontos que foram aplicados com poucas mudanças em Minas e Salvador."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "✅ Conexões atlânticas importam, mas os repertórios foram apropriados conforme conflitos locais.",
-        "feedbackErro": "❌ O erro é transformar influência em cópia ou negar a agência de grupos populares.",
-        "dicaBanca": "💡 Mundo atlântico conecta sem uniformizar."
-    },
-    {
-        "pergunta": "A memória posterior da Inconfidência Mineira pode modificar a percepção do movimento porque:",
-        "alternativas": [
-            "A valorização de Tiradentes demonstra que o movimento já possuía base popular extensa, embora os documentos oficiais tenham ocultado essa característica.",
-            "A memória substitui a necessidade de analisar processos judiciais e outras fontes, pois os símbolos posteriores condensam o sentido político essencial.",
-            "A construção de heróis e símbolos nacionais tende a simplificar divergências internas, limites sociais e a própria condição conspiratória do episódio.",
-            "A construção memorial tornou a Inconfidência menos importante historicamente, já que símbolos nacionais não podem ser usados como objetos de investigação.",
-            "A memória republicana recuperou de forma neutra a hierarquia de liderança existente entre os conspiradores em 1789."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "✅ Memória é objeto histórico e pode reorganizar o significado público do passado.",
-        "feedbackErro": "❌ O erro é tratar memória como reprodução neutra ou como obstáculo que invalida a análise histórica.",
-        "dicaBanca": "💡 Pergunte quando e por que um personagem se torna símbolo."
-    },
-    {
-        "pergunta": "Processos judiciais e documentos de repressão devem ser usados com cautela porque:",
-        "alternativas": [
-            "Devem ser descartados quando houve condenação, porque a finalidade repressiva comprometeria sua utilização historiográfica de forma decisiva.",
-            "Registram informações importantes sobre participantes e projetos, mas foram produzidos em relações de poder e precisam ser lidos criticamente.",
-            "Reproduzem de modo fiel o pensamento dos acusados, já que interrogatórios obrigavam a registrar as próprias palavras com pouca mediação.",
-            "São fontes superiores a panfletos e cartas, pois a linguagem jurídica elimina interesses políticos e distorções dos envolvidos.",
-            "Processos judiciais precisam ser criticados, mas interrogatórios formais oferecem acesso privilegiado às intenções dos acusados porque o procedimento jurídico buscava registrar de modo fiel suas posições políticas."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "✅ Fontes repressivas são valiosas, mas não transparentes.",
-        "feedbackErro": "❌ O erro é tratá-las como neutras, inúteis ou como transcrição direta do pensamento dos acusados.",
-        "dicaBanca": "💡 Toda fonte tem contexto de produção e relações de poder."
-    },
-    {
-        "pergunta": "Qual interpretação evita confundir conflito entre colonos com conflito entre colônia e metrópole?",
-        "alternativas": [
-            "Classificar conflitos entre colonos como separatistas porque a violência local revela rejeição ao domínio metropolitano.",
-            "Interpretar grupos coloniais como bloco político único diante de Portugal, deixando diferenças internas em segundo plano.",
-            "Mascates e Emboabas mostram disputas entre colonos, mas a intervenção régia posterior permite classificá-los como conflitos diretamente organizados contra a soberania portuguesa.",
-            "Considerar que disputas locais diminuíam o poder da Coroa, pois impediam a monarquia de intervir nas capitanias.",
-            "Reconhecer que algumas revoltas, como Mascates e Emboabas, envolveram disputas fortes entre grupos locais e ao mesmo tempo abriram espaço para intervenção régia."
+            "Porque a Coroa reconheceu a autonomia dos grupos locais e reduziu sua intervenção para impedir novas disputas entre paulistas e recém-chegados.",
+            "Porque o resultado transformou Minas em unidade política separada, cuja relação com Portugal passou a ocorrer por tratados comerciais.",
+            "Porque o governo português aboliu mecanismos de cobrança sobre o ouro, priorizando a pacificação econômica em lugar da arrecadação.",
+            "Porque o conflito levou à criação de um governo republicano regional, posteriormente incorporado à monarquia portuguesa por negociação.",
+            "Porque o conflito mostrou o valor estratégico da mineração e favoreceu maior presença administrativa e fiscal metropolitana na região."
         ],
         "correta": 4,
-        "feedbackAcerto": "✅ A sociedade colonial tinha conflitos internos que não se reduzem a uma oposição binária Portugal × Brasil.",
-        "feedbackErro": "❌ O erro é isolar disputas locais ou convertê-las automaticamente em separatismo.",
-        "dicaBanca": "💡 Pergunte quem está em conflito e qual papel a Coroa assume."
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica aponta como consequência a ampliação do controle régio e depois relaciona mineração a maior fiscalização e administração.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica aponta como consequência a ampliação do controle régio e depois relaciona mineração a maior fiscalização e administração. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Quando a Coroa aparece após um conflito regional, pergunte como ela converte a crise em fortalecimento de sua presença."
     },
     {
-        "pergunta": "A intervenção da Coroa em conflitos como Emboabas mostra que:",
+        "pergunta": "A Guerra dos Emboabas mostra que conflitos entre grupos coloniais podiam favorecer a metrópole quando:",
         "alternativas": [
-            "Disputas entre colonos podiam oferecer oportunidade para ampliar regulação administrativa e afirmar soberania metropolitana sobre áreas estratégicas.",
-            "A monarquia procurava manter neutralidade e evitava usar conflitos locais para modificar estruturas administrativas ou fiscais.",
-            "A Coroa tendia a transferir poderes aos vencedores locais como forma de diminuir custos de administração nas áreas de fronteira econômica.",
-            "O governo português reconhecia autonomia política regional em troca de estabilidade, estratégia predominante nas zonas de mineração.",
-            "A intervenção da Coroa em conflitos locais reforçava soberania, mas essa atuação teria caráter predominantemente militar e pouca relação com reorganização administrativa ou fiscal das regiões envolvidas."
+            "a Coroa utilizava a instabilidade local para ampliar mecanismos de autoridade sobre uma área de grande interesse econômico.",
+            "os grupos rivais transferiam espontaneamente à Coroa suas reivindicações de autonomia, permitindo que Portugal atuasse como árbitro sem ampliar o controle.",
+            "a disputa econômica reduzia a arrecadação e obrigava a metrópole a retirar seus agentes fiscais da região para preservar a atividade mineradora.",
+            "os participantes abandonavam interesses locais e passavam a defender um programa comum de fidelidade política, eliminando a necessidade de intervenção régia.",
+            "a rivalidade produzia instituições autônomas que administravam a mineração, enquanto a Coroa preservava funções diplomáticas e militares sem ampliar a administração regional."
         ],
         "correta": 0,
-        "feedbackAcerto": "✅ A Coroa não era mera espectadora dos conflitos coloniais.",
-        "feedbackErro": "❌ O erro é presumir neutralidade, descentralização ou atuação apenas diante de separatismo.",
-        "dicaBanca": "💡 Conflito local pode fortalecer o Estado colonial."
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica conecta Emboabas à expansão do controle régio. Isso revela que um conflito interno à colônia também podia reconfigurar o poder metropolitano.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica conecta Emboabas à expansão do controle régio. Isso revela que um conflito interno à colônia também podia reconfigurar o poder metropolitano. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Nem toda revolta enfraquece a metrópole; às vezes o desfecho cria condições para maior centralização."
     },
     {
-        "pergunta": "Qual síntese melhor relaciona economia e política nos movimentos anticoloniais?",
+        "pergunta": "Qual interpretação evita confundir a Guerra dos Emboabas com um movimento separatista?",
         "alternativas": [
-            "Os conflitos políticos surgiam principalmente de ideias externas, enquanto problemas econômicos serviam como pretexto para mobilização.",
-            "Monopólios, crédito, mineração, tributos e comércio podiam gerar conflitos que se tornavam políticos quando envolviam poder, autoridade e soberania.",
-            "A economia explica as revoltas nativistas, enquanto a política explica os movimentos separatistas, sem sobreposição entre as duas dimensões.",
-            "Movimentos com origem econômica não podem ser classificados como anticoloniais se não formularem independência explícita.",
-            "Economia e política se articulavam, embora movimentos originados em monopólios e tributos devessem ser tratados como econômicos até o momento em que formulassem independência de modo explícito."
+            "Entender que o conflito teve objetivos políticos limitados porque os participantes aceitavam as Casas de Fundição e a cobrança do quinto.",
+            "Reconhecer que a disputa se concentrou no controle da região mineradora e de seus benefícios, sem evidência de um projeto de independência.",
+            "Considerar que a ausência de referências iluministas impediria movimentos do início do século XVIII de possuir dimensão política.",
+            "Definir o episódio como conflito econômico puro, pois rivalidades por recursos não interferem em relações de autoridade ou poder local.",
+            "Concluir que os grupos buscavam reconhecimento jurídico de seus direitos de exploração, sem consequências relevantes para a ação administrativa da Coroa."
         ],
         "correta": 1,
-        "feedbackAcerto": "✅ Economia e política se articulam de modos diferentes conforme o movimento.",
-        "feedbackErro": "❌ O erro é separar rigidamente causas econômicas e linguagem política.",
-        "dicaBanca": "💡 Tributo, monopólio e poder costumam aparecer juntos."
+        "feedbackAcerto": "🎉 Excelente!\n\nO núcleo do episódio é disputa de controle e benefícios da mineração; o separatismo não pode ser acrescentado sem evidência.",
+        "feedbackErro": "❌ Atenção!\n\nO núcleo do episódio é disputa de controle e benefícios da mineração; o separatismo não pode ser acrescentado sem evidência. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Projeto separatista precisa aparecer em objetivos políticos, não ser inferido do simples confronto armado ou da disputa por recursos."
     },
     {
-        "pergunta": "Qual movimento expressa de forma mais direta oposição às Casas de Fundição?",
+        "pergunta": "Em uma comparação entre Guerra dos Emboabas e Revolta de Vila Rica, qual diferença é central?",
         "alternativas": [
-            "A Conjuração Baiana, que incorporou a defesa do livre comércio do ouro ao programa republicano de 1798.",
-            "A Revolta de Vila Rica, em 1720.",
-            "A Revolução Pernambucana, que rejeitou a fiscalização aurífera como símbolo da centralização da Corte no Rio.",
-            "A Guerra dos Emboabas, iniciada quando a Coroa determinou que paulistas entregassem ouro às Casas de Fundição.",
-            "A Inconfidência Mineira, cuja causa imediata foi a criação das Casas de Fundição e a reação de mineradores em 1789."
+            "Emboabas foi um movimento republicano, enquanto Vila Rica permaneceu uma disputa econômica sem relação com a política metropolitana.",
+            "Emboabas ocorreu em torno do comércio urbano, enquanto Vila Rica nasceu de conflito entre paulistas e recém-chegados pela exploração das minas e pela definição de direitos regionais sobre o território.",
+            "Emboabas opôs grupos coloniais pelo controle da região mineradora, enquanto Vila Rica se vinculou diretamente ao fiscalismo e às Casas de Fundição.",
+            "Os dois movimentos tiveram a mesma causa fiscal, mas Vila Rica apresentou participação popular maior e linguagem política de igualdade.",
+            "Emboabas contestou o controle português sobre o ouro, enquanto Vila Rica buscou ampliar a presença da Coroa para regular a mineração."
         ],
-        "correta": 1,
-        "feedbackAcerto": "✅ Vila Rica é o movimento diretamente ligado à resistência às Casas de Fundição.",
-        "feedbackErro": "❌ O erro é confundir fiscalismo mineiro de momentos diferentes ou transferi-lo para outras regiões.",
-        "dicaBanca": "💡 1720 e Casas de Fundição formam uma associação cronológica importante."
+        "correta": 2,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica trata os dois no contexto minerador, mas por eixos distintos: disputa entre colonos em Emboabas e oposição a medidas fiscais em Vila Rica.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica trata os dois no contexto minerador, mas por eixos distintos: disputa entre colonos em Emboabas e oposição a medidas fiscais em Vila Rica. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Quando dois movimentos compartilham a mesma região econômica, procure o agente contra quem se dirige o conflito."
     },
     {
-        "pergunta": "Qual movimento chegou efetivamente a organizar governo republicano antes da Independência?",
+        "pergunta": "Qual relação entre mineração e centralização metropolitana é sugerida pelo conjunto Guerra dos Emboabas–Casas de Fundição–Vila Rica?",
         "alternativas": [
-            "A Revolta de Beckman, que estabeleceu república maranhense até a retomada portuguesa da capitania.",
-            "A Inconfidência Mineira, que instalou governo provisório em Vila Rica antes da prisão dos principais conspiradores.",
-            "A Conjuração Baiana, que controlou Salvador por curto período e divulgou decretos de igualdade antes da repressão.",
-            "A Revolução Pernambucana de 1817.",
-            "A Guerra dos Mascates, em que Recife formou governo republicano autônomo durante a disputa com Olinda."
+            "A mineração reduziu a necessidade de controle direto, pois a arrecadação podia ser garantida por acordos entre grupos locais sem participação régia.",
+            "A Coroa adotou política de autonomia regional para estimular a produção, e as revoltas resultaram da resistência de colonos a essa descentralização.",
+            "Os conflitos mineradores demonstraram que o problema principal era a falta de representação política, enquanto impostos e fiscalização tiveram papel secundário.",
+            "A importância do ouro levou a Coroa a ampliar instrumentos administrativos e fiscais, gerando novas tensões com grupos atuantes na região.",
+            "A expansão da mineração enfraqueceu os mecanismos fiscais portugueses, levando a Coroa a substituir tributos sobre o ouro por monopólios comerciais."
         ],
         "correta": 3,
-        "feedbackAcerto": "✅ 1817 distingue-se por ter transformado ruptura em experiência efetiva de governo.",
-        "feedbackErro": "❌ O erro é atribuir exercício de poder a conspirações ou revoltas que não instituíram repúblicas.",
-        "dicaBanca": "💡 Conspiração e governo estabelecido são graus diferentes de ruptura."
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo une maior controle após Emboabas, Casas de Fundição e fiscalismo em Vila Rica; o eixo é a tentativa régia de controlar uma área estratégica.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo une maior controle após Emboabas, Casas de Fundição e fiscalismo em Vila Rica; o eixo é a tentativa régia de controlar uma área estratégica. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Procure processos: um movimento isolado pode ser melhor entendido quando inserido na expansão do controle sobre a mineração."
     },
     {
-        "pergunta": "Por que a Conjuração Baiana é importante para discutir raça e política na sociedade colonial?",
+        "pergunta": "A disputa entre paulistas e recém-chegados na Guerra dos Emboabas deve ser interpretada com cautela para não:",
         "alternativas": [
-            "A participação negra e parda é central na Bahia, embora a linguagem de igualdade deva ser interpretada principalmente como defesa de direitos políticos dos homens livres, sem alcance sobre hierarquias raciais.",
-            "Porque o movimento defendia igualdade econômica entre grandes proprietários, mantendo as distinções de cor fora da esfera política.",
-            "Porque a participação de negros, pardos e libertos e a linguagem igualitária colocavam hierarquias sociais e raciais no centro da contestação.",
-            "Porque a composição popular teve caráter secundário, e a repressão concentrou-se nos membros mais ricos envolvidos na conspiração.",
-            "Porque as questões raciais apareceriam sobretudo na memória posterior do movimento, com relação reduzida com seus participantes e documentos políticos."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "✅ A Bahia de 1798 permite relacionar anticolonialismo, participação popular e hierarquias raciais.",
-        "feedbackErro": "❌ O erro é retirar raça e posição social do conflito ou tratá-las como construção memorial sem base histórica.",
-        "dicaBanca": "💡 Observe quem participa e quais desigualdades o vocabulário político pode ameaçar."
-    },
-    {
-        "pergunta": "Por que a Inconfidência Mineira é importante para discutir os limites do republicanismo colonial?",
-        "alternativas": [
-            "A república mineira projetada tinha limites sociais, mas a defesa da soberania popular teria criado incompatibilidade prática entre o projeto e a manutenção da escravidão entre seus defensores.",
-            "Porque o republicanismo mineiro rejeitava a propriedade privada e por isso afastou os principais proprietários da conspiração.",
-            "Porque a república era defendida como forma de preservar a autoridade portuguesa nas minas diante da crise de arrecadação.",
-            "Porque o movimento rejeitou ideias de soberania e direitos, restringindo republicanismo a uma mudança administrativa na cobrança fiscal.",
-            "Porque a defesa republicana podia coexistir com propriedade escravista e com projetos sociais pouco igualitários entre setores conspiradores."
+            "atribuir à Coroa papel decisivo no desfecho, pois a disputa teria sido resolvida entre os grupos coloniais sem repercussões administrativas.",
+            "relacionar economia e política, já que o controle das minas não influenciava a organização do poder na região.",
+            "considerar que a chegada de novos grupos alterava a competição pelos benefícios da mineração, elemento pouco relevante para o conflito.",
+            "comparar o episódio com outras tensões mineradoras, pois cada revolta colonial precisa ser estudada sem relações com processos mais amplos.",
+            "transformar identidades regionais em blocos homogêneos e esquecer que o conflito envolvia interesses pelo acesso a recursos e poder."
         ],
         "correta": 4,
-        "feedbackAcerto": "✅ Republicanismo não é sinônimo automático de igualdade social ou abolição.",
-        "feedbackErro": "❌ O erro é impor ao século XVIII conteúdos democráticos que não eram consensuais entre os conspiradores.",
-        "dicaBanca": "💡 Forma de governo e estrutura social precisam ser analisadas separadamente."
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica define o conflito por disputa de controle e benefícios. A dimensão regional é importante, mas não substitui a análise dos interesses concretos.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica define o conflito por disputa de controle e benefícios. A dimensão regional é importante, mas não substitui a análise dos interesses concretos. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Rótulos de grupo ajudam a localizar atores; explique sempre o que eles estavam disputando."
     },
     {
-        "pergunta": "Por que a Revolução Pernambucana de 1817 é importante para discutir regionalismo e crise da monarquia?",
+        "pergunta": "Na Guerra dos Mascates, por que a rivalidade entre Olinda e Recife deve ser analisada como disputa econômica e política ao mesmo tempo?",
         "alternativas": [
-            "Porque o movimento combinou descontentamentos regionais com crítica à centralização e chegou a propor alternativa republicana ao poder monárquico.",
-            "Porque Pernambuco pretendia ampliar sua autonomia administrativa sem questionar a monarquia nem organizar instituições próprias.",
-            "1817 combina regionalismo e republicanismo, embora a centralização no Rio tenha sido fator secundário diante da rivalidade entre Recife e Olinda, que continuava sendo o conflito político dominante em Pernambuco.",
-            "Porque a revolução buscou restaurar estruturas coloniais anteriores à chegada da Corte e rejeitou repertórios republicanos.",
-            "Porque o governo do Rio apoiou a experiência pernambucana como forma de testar descentralização política dentro do império."
+            "Porque a ascensão de comerciantes e os interesses de proprietários se relacionavam à distribuição de prestígio e poder local entre os dois grupos.",
+            "Porque os comerciantes do Recife pretendiam romper com Portugal, enquanto os proprietários de Olinda defendiam a continuidade da administração colonial.",
+            "Porque a disputa econômica se concentrou no acesso às minas, mas sua expressão política ocorreu por meio das Casas de Fundição de Pernambuco.",
+            "Porque os dois grupos defendiam modelos diferentes de trabalho, um baseado na escravidão e outro na utilização predominante de mão de obra livre.",
+            "Porque a rivalidade local se transformou em movimento popular contra privilégios, reunindo comerciantes e proprietários em torno de igualdade política."
         ],
         "correta": 0,
-        "feedbackAcerto": "✅ 1817 liga regionalismo, centralização monárquica e republicanismo.",
-        "feedbackErro": "❌ O erro é reduzir o movimento à Guerra dos Mascates ou a uma autonomia sem ruptura.",
-        "dicaBanca": "💡 Depois de 1808, observe como a nova centralização afeta regiões fora do Rio."
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo define Mascates como conflito entre senhores de Olinda e comerciantes do Recife envolvendo poder econômico e político local.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo define Mascates como conflito entre senhores de Olinda e comerciantes do Recife envolvendo poder econômico e político local. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Em conflitos entre elites, não separe artificialmente riqueza, prestígio e poder institucional."
     },
     {
-        "pergunta": "O que a sequência Emboabas → maior intervenção régia nas minas sugere sobre o Estado colonial?",
+        "pergunta": "Uma interpretação afirma que a Guerra dos Mascates foi uma revolução social popular. Qual aspecto histórico contradiz essa leitura?",
         "alternativas": [
-            "Que a Coroa dependia dos grupos coloniais vencedores e por isso tendia a reconhecer autonomias regionais duradouras.",
-            "Que a monarquia atuava de maneira reativa e evitava transformar conflitos econômicos em reformas administrativas.",
-            "Que a administração portuguesa distinguia economia e política, mantendo a mineração fora das estratégias de fortalecimento estatal.",
-            "Que conflitos locais podiam ser utilizados para justificar reorganização administrativa e reforço da soberania portuguesa.",
-            "Que disputas entre colonos enfraqueciam a capacidade de intervenção metropolitana e transferiam poder político às câmaras."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "✅ A intervenção mostra capacidade de transformar conflito em oportunidade de centralização.",
-        "feedbackErro": "❌ O erro é imaginar um Estado passivo ou forçado a descentralizar diante das disputas locais.",
-        "dicaBanca": "💡 Conflitos também podem fortalecer instituições de controle."
-    },
-    {
-        "pergunta": "O que a sequência Vila Rica → Inconfidência Mineira revela sobre as tensões da mineração?",
-        "alternativas": [
-            "Que o fiscalismo permaneceu fonte de conflito, mas as formas de contestação mudaram e puderam adquirir conteúdo político de ruptura mais amplo.",
-            "Vila Rica e Inconfidência mostram permanência do fiscalismo, mas a similaridade dos conflitos permite tratar 1789 como retomada direta do programa político formulado em 1720.",
-            "Que a Inconfidência retomou o programa de Filipe dos Santos sem incorporar repertórios políticos novos ou mudanças na conjuntura econômica.",
-            "Que a mineração perdeu importância para a política colonial depois de 1720, tornando a Inconfidência principalmente um conflito cultural.",
-            "Que a oposição fiscal diminuiu ao longo do século e foi substituída por conflitos sociais sem relação com a Coroa."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "✅ O tema mostra permanência do fiscalismo e mudança no grau de politização.",
-        "feedbackErro": "❌ O erro é fundir dois episódios separados por décadas ou negar mudanças de conjuntura e repertório.",
-        "dicaBanca": "💡 Compare continuidades e transformações dentro do mesmo espaço minerador."
-    },
-    {
-        "pergunta": "O que a comparação Mascates → Revolução Pernambucana de 1817 permite perceber?",
-        "alternativas": [
-            "Que os dois movimentos possuíam o mesmo programa separatista, diferenciando-se pela presença da Corte portuguesa no segundo.",
-            "Que Pernambuco viveu conflitos de natureza distinta: primeiro disputa entre grupos locais por poder; depois movimento republicano contra a monarquia.",
-            "Que 1817 retomou diretamente a pauta municipal da Guerra dos Mascates e teve como objetivo principal redefinir a autonomia do Recife diante de Olinda.",
-            "Que a Guerra dos Mascates já defendia republicanismo regional, posteriormente institucionalizado pela Revolução de 1817.",
-            "Que ambos foram conflitos entre senhores de engenho e comerciantes sem participação de debates sobre soberania política."
+            "O movimento contou com comerciantes urbanos, e a presença de atores ligados ao comércio impede classificá-lo como conflito entre setores dominantes.",
+            "O conflito é apresentado como disputa entre grupos coloniais de poder, ligada às transformações econômicas de Pernambuco e à rivalidade Olinda–Recife.",
+            "A existência de rivalidade regional demonstra que a questão social era central, pois identidades locais funcionavam como representação dos grupos populares.",
+            "O confronto afetou o poder político local, o que permite considerá-lo revolucionário mesmo sem proposta explícita de transformação das hierarquias sociais.",
+            "A crítica aos privilégios de um grupo econômico equivalia a um programa de igualdade civil para o conjunto da população colonial pernambucana."
         ],
         "correta": 1,
-        "feedbackAcerto": "✅ A história pernambucana não deve ser reduzida a repetição de um mesmo conflito.",
-        "feedbackErro": "❌ O erro é projetar republicanismo de 1817 sobre Mascates ou limitar 1817 à rivalidade municipal.",
-        "dicaBanca": "💡 Mesmo região pode produzir movimentos de natureza política diferente."
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica marca como incorreta a caracterização de Mascates como revolução social popular e abolicionista.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica marca como incorreta a caracterização de Mascates como revolução social popular e abolicionista. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Diferencie disputa entre elites de transformação social ampla; conflito intenso não é sinônimo de revolução social."
     },
     {
-        "pergunta": "Como interpretar a circulação de ideias externas nos movimentos anticoloniais?",
+        "pergunta": "Qual comparação entre Guerra dos Mascates e Revolta de Beckman é mais precisa?",
         "alternativas": [
-            "Como repertório apropriado pelos agentes locais, combinado a conflitos próprios de cada capitania e a interesses sociais específicos.",
-            "Como causa externa capaz de explicar por si a passagem de revoltas locais para projetos republicanos e separatistas.",
-            "As ideias externas eram apropriadas localmente, mas sua difusão entre grupos coloniais teria sido suficiente para explicar as diferenças de radicalidade entre Minas, Bahia e Pernambuco.",
-            "Como fenômeno cultural separado de fiscalidade, comércio e relações de poder, para evitar misturar ideias e causas materiais.",
-            "Como transmissão de modelos políticos completos, cuja adoção dependia principalmente do acesso a livros e notícias estrangeiras."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "✅ Ideias circulam, mas são reinterpretadas e ganham força em conflitos locais.",
-        "feedbackErro": "❌ O erro é escolher entre “ideias” e “interesses” ou tratar influência como cópia.",
-        "dicaBanca": "💡 Conecte repertório intelectual e conjuntura social."
-    },
-    {
-        "pergunta": "Qual leitura melhor evita uma explicação monocausal dos movimentos anticoloniais?",
-        "alternativas": [
-            "Escolher o fator econômico como explicação principal e usar os demais elementos para descrever principalmente diferenças regionais.",
-            "Explicar as contestações pela opressão portuguesa em geral, reduzindo diferenças entre grupos coloniais e projetos locais.",
-            "Articular fatores econômicos, disputas políticas, composição social, circulação de ideias e respostas repressivas conforme cada caso.",
-            "Priorizar a influência iluminista nos movimentos separatistas e reservar causas econômicas para as revoltas classificadas como nativistas.",
-            "Organizar os movimentos pela proximidade cronológica com 1822, tratando os mais recentes como politicamente mais avançados por definição."
+            "Os dois movimentos surgiram de medidas fiscais sobre a mineração, embora a Guerra dos Mascates tenha incluído uma disputa comercial mais evidente e Beckman tenha acrescentado reivindicações de autonomia política para os grupos coloniais envolvidos.",
+            "Beckman e Mascates formularam projetos de ruptura política semelhantes, diferenciando-se pela região e pelos grupos que lideraram a separação.",
+            "Os dois episódios revelam tensões locais dentro do sistema colonial, mas Mascates gira em torno da rivalidade Olinda–Recife, enquanto Beckman envolve monopólio, abastecimento e mão de obra.",
+            "Ambos colocaram grupos populares contra elites proprietárias, e Beckman teria incorporado de modo particular questões ligadas ao trabalho indígena.",
+            "A semelhança principal foi a oposição à centralização do período joanino, enquanto a diferença ocorreu na forma de governo defendida por cada região."
         ],
         "correta": 2,
-        "feedbackAcerto": "✅ Uma explicação sólida combina dimensões sem usar o mesmo esquema para todos os episódios.",
-        "feedbackErro": "❌ O erro é escolher uma causa universal ou medir complexidade pela proximidade com a independência.",
-        "dicaBanca": "💡 Questão difícil pede causalidade combinada e específica."
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica permite aproximar os dois como conflitos locais, mas seus eixos econômicos e sociais são diferentes.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica permite aproximar os dois como conflitos locais, mas seus eixos econômicos e sociais são diferentes. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Uma boa comparação preserva diferenças de causa e de atores, mesmo quando os movimentos ocupam a mesma categoria didática."
     },
     {
-        "pergunta": "Por que derrotas políticas também são relevantes para a História dos movimentos anticoloniais?",
+        "pergunta": "Por que a Guerra dos Mascates não deve ser reduzida a uma oposição simples entre 'cidade' e 'campo'?",
         "alternativas": [
-            "Porque revelam conflitos, alternativas políticas, limites do poder colonial, redes de sociabilidade e formas de repressão, mesmo sem vitória dos revoltosos.",
-            "Porque a derrota comprova ausência de apoio social e permite separar movimentos relevantes de conspirações marginais.",
-            "Porque episódios fracassados são importantes sobretudo quando antecipam instituições que apareceram depois da Independência.",
-            "Movimentos derrotados revelam possibilidades históricas, mas sua relevância principal decorre do fato de anteciparem instituições e ideias posteriormente realizadas com a Independência.",
-            "Porque a repressão elimina ambiguidades das fontes e permite reconstruir com segurança os objetivos consensuais dos participantes."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "✅ Importância histórica não depende de vitória.",
-        "feedbackErro": "❌ O erro é medir relevância por sucesso, apoio supostamente comprovado ou antecipação do futuro.",
-        "dicaBanca": "💡 Movimentos derrotados mostram possibilidades históricas que não se realizaram."
-    },
-    {
-        "pergunta": "Qual interpretação da repressão diferencia melhor Minas de 1789 e Bahia de 1798?",
-        "alternativas": [
-            "A Coroa aplicou padrão semelhante de punição em ambos os casos, pois crimes contra a soberania anulavam diferenças sociais entre os acusados.",
-            "A repressão mineira foi mais severa por envolver setores populares, enquanto na Bahia a predominância de elites favoreceu penas menos exemplares.",
-            "A diferença principal decorreu da existência de governo republicano em Minas, ausente na Bahia, o que elevou a gravidade jurídica da conspiração.",
-            "As autoridades consideraram a linguagem igualitária baiana politicamente secundária e concentraram a repressão nos proprietários que financiaram o movimento.",
-            "As punições e a construção dos processos devem ser lidas em relação à composição social de cada movimento e às hierarquias da sociedade colonial."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "✅ A repressão deve ser analisada também como expressão de hierarquias sociais.",
-        "feedbackErro": "❌ O erro é presumir neutralidade social das penas ou inverter os perfis de Minas e Bahia.",
-        "dicaBanca": "💡 Justiça colonial também reproduz posições sociais."
-    },
-    {
-        "pergunta": "Qual alternativa expressa melhor o papel das ideias de igualdade na Conjuração Baiana?",
-        "alternativas": [
-            "Funcionavam como linguagem retórica importada da França, com baixa relação com a composição social dos participantes em Salvador.",
-            "Eram dirigidas principalmente à igualdade entre grandes comerciantes e proprietários diante da administração portuguesa.",
-            "Substituíam a pauta republicana, pois o movimento privilegiava transformação social sem discutir ruptura política com a metrópole.",
-            "Elas ampliavam a crítica política ao tocar hierarquias sociais e raciais de uma cidade com forte presença de grupos subalternizados.",
-            "Tinham aplicação restrita a homens brancos livres e por isso aproximavam o programa baiano do perfil social da Inconfidência Mineira."
+            "Porque os dois espaços possuíam estruturas econômicas idênticas, de modo que a localização não tinha relação com os interesses dos participantes.",
+            "Porque a rivalidade era principalmente religiosa, e as diferenças entre proprietários e comerciantes teriam aparecido depois do conflito.",
+            "Porque a disputa local havia sido superada por um programa separatista comum, que deslocou o eixo do conflito para a relação com Portugal.",
+            "Porque o conflito envolvia grupos com posições econômicas e políticas específicas, e a referência territorial a Olinda e Recife expressava relações de poder mais complexas.",
+            "Porque os comerciantes do Recife eram proprietários rurais e os senhores de Olinda atuavam no comércio, tornando difícil distinguir interesses sociais e fazendo da rivalidade territorial o eixo principal do conflito."
         ],
         "correta": 3,
-        "feedbackAcerto": "✅ A igualdade tinha significado político porque dialogava com uma sociedade marcada por cor, condição e desigualdade.",
-        "feedbackErro": "❌ O erro é separar linguagem igualitária da base social ou reduzi-la a elite proprietária.",
-        "dicaBanca": "💡 Conceito político ganha radicalidade conforme o contexto social em que circula."
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica fala em senhores de Olinda e comerciantes do Recife, isto é, posições econômicas e redes de poder, não apenas dois lugares no mapa.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica fala em senhores de Olinda e comerciantes do Recife, isto é, posições econômicas e redes de poder, não apenas dois lugares no mapa. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Quando regiões aparecem no enunciado, traduza-as em grupos, interesses e instituições."
     },
     {
-        "pergunta": "Qual alternativa expressa melhor o papel do fiscalismo na Inconfidência Mineira?",
+        "pergunta": "Qual interpretação é compatível com a ideia de que a Guerra dos Mascates se relacionou a transformações econômicas em Pernambuco?",
         "alternativas": [
-            "Ele contribuiu para transformar tensões econômicas em crítica política, especialmente quando articulado à crise mineradora e a repertórios de autonomia e república.",
-            "Ele perdeu importância com a queda do ouro, de modo que a conspiração foi motivada principalmente por igualdade política e social.",
-            "O fiscalismo mineiro articulou-se a repertórios políticos, mas a presença da derrama autorizaria tratar o movimento como reação tributária cuja dimensão republicana teria sido ampliada sobretudo pela memória posterior.",
-            "Ele funcionava como conflito interno entre câmaras e mineradores, com participação limitada da administração metropolitana portuguesa.",
-            "Ele foi causa administrativa isolada, suficiente para explicar o movimento sem recorrer a composição social ou circulação de ideias."
+            "As transformações econômicas eliminaram as diferenças entre proprietários e comerciantes, e a revolta expressou a resistência dos dois grupos contra a Coroa.",
+            "O crescimento do comércio conduziu os participantes a um programa de independência, pois maior riqueza urbana implicava autonomia política frente à metrópole.",
+            "A alteração econômica reduziu o conflito local e deslocou a disputa para temas fiscais, aproximando Mascates da Revolta de Vila Rica.",
+            "As mudanças de riqueza explicariam por si só o episódio, tornando desnecessário considerar rivalidades de poder e posição institucional.",
+            "Mudanças na posição relativa de grupos econômicos podiam gerar disputas por reconhecimento e poder político dentro da própria sociedade colonial."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo associa Mascates a transformações econômicas e disputa de poder local; um processo ajuda a explicar o outro.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo associa Mascates a transformações econômicas e disputa de poder local; um processo ajuda a explicar o outro. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Em História Social, mudança econômica pode alterar hierarquias e gerar conflito político sem produzir automaticamente separatismo."
+    },
+    {
+        "pergunta": "Se a categoria 'nativista' for aplicada à Guerra dos Mascates, qual interpretação evita uma generalização indevida?",
+        "alternativas": [
+            "Ela pode indicar uma contestação inserida em problemas locais da colônia, mas não prova que os participantes formavam um bloco nacional contrário a Portugal.",
+            "Ela demonstra que comerciantes e proprietários possuíam identidade política comum, embora disputassem o controle econômico entre Olinda e Recife.",
+            "Ela permite classificar o movimento como etapa inicial da Independência, já que reivindicações locais já conteriam um projeto nacional em formação.",
+            "Ela identifica participação de grupos nascidos na colônia e exclui agentes portugueses, critério suficiente para compreender os objetivos políticos da revolta.",
+            "Ela deve ser usada como sinônimo de revolução social, pois os movimentos nativistas questionavam privilégios e hierarquias dentro do espaço colonial."
         ],
         "correta": 0,
-        "feedbackAcerto": "✅ Fiscalismo é central quando relacionado à conjuntura e à politização da ruptura.",
-        "feedbackErro": "❌ O erro é isolá-lo, negá-lo ou transformar dois momentos históricos em continuidade sem mudanças.",
-        "dicaBanca": "💡 Causa econômica ganha sentido político dentro de uma conjuntura."
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo recomenda cuidado com anacronismos e com a transformação de categorias didáticas em identidades nacionais prontas.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo recomenda cuidado com anacronismos e com a transformação de categorias didáticas em identidades nacionais prontas. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Use 'nativista' para organizar o estudo, não para presumir nacionalismo, composição social ou resultado político."
     },
     {
-        "pergunta": "Qual alternativa expressa melhor o papel do comércio na Guerra dos Mascates?",
+        "pergunta": "A Guerra dos Mascates ajuda a demonstrar que a sociedade colonial era conflitiva porque:",
         "alternativas": [
-            "A expansão do Recife reduziu seu poder político, pois os comerciantes dependiam das câmaras controladas por autoridades portuguesas.",
-            "A rivalidade resultou de monopólio metropolitano semelhante ao do Maranhão, com a mesma disputa por mão de obra indígena.",
-            "O fortalecimento comercial do Recife alterou o poder local, mas a Guerra dos Mascates pode ser entendida principalmente como conflito social entre comerciantes portugueses e proprietários brasileiros já identificados nacionalmente.",
-            "O fortalecimento dos comerciantes do Recife alterou relações de poder com a elite de Olinda e deu dimensão política a uma transformação econômica regional.",
-            "O conflito comercial era separado da política municipal, razão pela qual a autonomia do Recife teve papel secundário na revolta."
+            "a rivalidade entre Olinda e Recife dividiu a sociedade entre defensores e opositores do domínio português, criando dois projetos nacionais concorrentes.",
+            "grupos inseridos na própria ordem colonial podiam disputar recursos, prestígio e poder entre si, sem que o conflito precisasse assumir forma separatista.",
+            "o confronto colocou a Coroa fora da disputa e mostrou que tensões internas eram independentes da estrutura política e econômica colonial.",
+            "os grupos locais buscavam eliminar as hierarquias entre proprietários e comerciantes, o que aproximou Mascates dos movimentos igualitários do fim do século XVIII.",
+            "a disputa demonstrou que interesses econômicos permaneciam subordinados a identidades regionais, sem influência sobre as relações de poder."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "🎉 Excelente!\n\nO conjunto dos movimentos mostra que a ordem colonial continha conflitos internos entre grupos dominantes, além de tensões diretamente voltadas contra a metrópole.",
+        "feedbackErro": "❌ Atenção!\n\nO conjunto dos movimentos mostra que a ordem colonial continha conflitos internos entre grupos dominantes, além de tensões diretamente voltadas contra a metrópole. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Anticolonial não precisa significar 'colonos unidos contra Portugal'; muitas tensões ocorreram dentro da própria sociedade colonial."
+    },
+    {
+        "pergunta": "Na Revolta de Vila Rica, a oposição às Casas de Fundição deve ser entendida no contexto de:",
+        "alternativas": [
+            "disputa entre paulistas e recém-chegados pela exploração das minas, sem participação relevante de mecanismos tributários metropolitanos.",
+            "conflito entre proprietários de Olinda e comerciantes do Recife, cujo eixo fiscal se deslocou posteriormente para a região mineradora.",
+            "tentativas da Coroa de controlar a circulação do ouro e fortalecer a arrecadação, produzindo resistência de interesses atingidos pela fiscalização.",
+            "projeto republicano inspirado pelo Iluminismo, no qual a oposição ao fiscalismo já estava ligada a uma proposta madura de separação política e de reorganização institucional da região mineradora.",
+            "reação à centralização do período joanino, especialmente aos privilégios concentrados no Rio de Janeiro e aos novos encargos regionais."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo liga Vila Rica diretamente às Casas de Fundição e ao fiscalismo sobre o ouro.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo liga Vila Rica diretamente às Casas de Fundição e ao fiscalismo sobre o ouro. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Em vez de decorar 'Vila Rica = Casas de Fundição', explique que a medida fazia parte do esforço de controle fiscal da mineração."
+    },
+    {
+        "pergunta": "Qual diferença torna inadequado tratar Revolta de Vila Rica e Inconfidência Mineira como manifestações equivalentes do mesmo projeto?",
+        "alternativas": [
+            "Vila Rica teve caráter popular e igualitário, enquanto a Inconfidência teria permanecido restrita a um conflito administrativo sobre tributos.",
+            "Vila Rica se voltou contra a derrama, enquanto a Inconfidência reagiu às Casas de Fundição, invertendo os mecanismos fiscais associados a cada episódio e preservando, nos dois casos, um projeto separatista semelhante.",
+            "Os dois movimentos defenderam a separação política, ao passo que a Inconfidência teria formulado críticas mais amplas ao sistema de arrecadação sobre o ouro.",
+            "Vila Rica se concentrou na resistência ao fiscalismo minerador, enquanto a Inconfidência articulou crise fiscal e econômica a um projeto de ruptura política influenciado por ideias do período.",
+            "A diferença central está na atuação da Coroa: em Vila Rica o poder régio apoiou os revoltosos, enquanto em 1789 reprimiu os inconfidentes."
         ],
         "correta": 3,
-        "feedbackAcerto": "✅ Mudança econômica pode alterar equilíbrio político entre grupos locais.",
-        "feedbackErro": "❌ O erro é transformar Mascates em separatismo, copiar Beckman ou separar economia de poder municipal.",
-        "dicaBanca": "💡 Recife cresce economicamente e busca peso político correspondente."
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica apresenta explicitamente essa distinção: fiscalismo sem projeto separatista maduro em Vila Rica e ruptura política mais clara em 1789.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica apresenta explicitamente essa distinção: fiscalismo sem projeto separatista maduro em Vila Rica e ruptura política mais clara em 1789. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Compare o tipo de reivindicação e o alcance do projeto, não apenas o fato de ambos ocorrerem em Minas."
     },
     {
-        "pergunta": "Qual alternativa expressa melhor o papel da mão de obra indígena na Revolta de Beckman?",
+        "pergunta": "Qual função das Casas de Fundição é mais relevante para compreender a Revolta de Vila Rica?",
         "alternativas": [
-            "A questão indígena era secundária porque o conflito se concentrava no acesso às minas e no abastecimento da região aurífera.",
-            "A mão de obra indígena integrou o conflito maranhense, mas a atuação jesuítica teria garantido acesso estável dos colonos aos trabalhadores e reduzido tensões em torno dessa questão.",
-            "A disputa sobre acesso e controle da mão de obra indígena se articulava a tensões entre colonos, jesuítas e estruturas de comércio no Maranhão.",
-            "O tema surgiu depois da revolta, quando a Coroa vinculou o abastecimento do Maranhão à proibição de formas de trabalho compulsório.",
-            "Os colonos defendiam a autonomia indígena como condição para romper o monopólio comercial e ampliar a economia maranhense."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "✅ Trabalho, missão e comércio estavam interligados no conflito maranhense.",
-        "feedbackErro": "❌ O erro é deslocar o tema para Minas ou romantizar os interesses coloniais sobre o trabalho indígena.",
-        "dicaBanca": "💡 Beckman exige conectar economia e relações de trabalho."
-    },
-    {
-        "pergunta": "Qual interpretação explica melhor por que movimentos locais podem ter significado anticolonial?",
-        "alternativas": [
-            "Porque conflitos envolvendo autoridades portuguesas deveriam ser classificados, em regra, como projetos de independência política.",
-            "Porque a dimensão regional desaparecia quando os participantes contestavam algum tributo ou medida metropolitana.",
-            "Porque disputas inicialmente regionais podiam questionar mecanismos centrais do domínio português, como monopólios, fiscalidade e autoridade régia.",
-            "Movimentos locais podem ter significado anticolonial, mas a contestação a monopólios ou tributos implica rejeição política da metrópole e permite classificá-los como separatistas em sentido amplo.",
-            "Porque demandas locais revelavam identidade nacional brasileira compartilhada entre as capitanias desde o século XVII."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "✅ Anticolonialismo pode existir em graus e não exige projeto nacional pronto.",
-        "feedbackErro": "❌ O erro é equiparar conflito a independência ou usar republicanismo como único critério.",
-        "dicaBanca": "💡 Observe qual mecanismo do domínio colonial está sendo contestado."
-    },
-    {
-        "pergunta": "Qual interpretação explica melhor por que nem todo movimento anticolonial foi “popular”?",
-        "alternativas": [
-            "Porque projetos separatistas eram necessariamente elitizados, enquanto movimentos nativistas possuíam base popular mais ampla.",
-            "Porque a Coroa autorizaria elites a apresentar demandas políticas, mas reprimiria de forma sistemática contestações formuladas por grupos sem propriedade.",
-            "Movimentos anticoloniais não eram necessariamente populares, mas a presença de elites proprietárias limita sua capacidade de questionar politicamente o domínio português e tende a mantê-los dentro do nativismo.",
-            "Porque os movimentos coloniais ocorreram em sociedades rurais e ofereceram poucas possibilidades de ação a artesãos, soldados e libertos.",
-            "Porque algumas contestações foram conduzidas principalmente por proprietários, comerciantes ou letrados, ainda que enfrentassem estruturas do domínio colonial."
+            "Organizavam o acesso dos diferentes grupos à exploração das minas, funcionando como instâncias de arbitragem entre paulistas e recém-chegados.",
+            "Concediam autonomia comercial aos mineradores em troca de apoio político à administração portuguesa, reduzindo a incidência de tributos diretos e transferindo a fiscalização do ouro para autoridades escolhidas pelos grupos locais.",
+            "Centralizavam a elaboração de projetos republicanos, reunindo letrados e proprietários que posteriormente participariam da Inconfidência.",
+            "Regulavam a mão de obra utilizada na mineração, com atribuições semelhantes às disputas envolvendo missionários e colonos no Maranhão.",
+            "Serviam ao controle da circulação do ouro e à fiscalização da arrecadação, tornando-se símbolo da presença metropolitana sobre a economia mineradora."
         ],
         "correta": 4,
-        "feedbackAcerto": "✅ Anticolonialismo descreve relação com o domínio, não a classe social dos participantes.",
-        "feedbackErro": "❌ O erro é estabelecer regra rígida entre tipo de movimento e composição social.",
-        "dicaBanca": "💡 Pergunte sempre quem participa e quais interesses estão em jogo."
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo define as Casas como mecanismos de controle do ouro e de facilitação da cobrança fiscal.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo define as Casas como mecanismos de controle do ouro e de facilitação da cobrança fiscal. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Quando uma instituição fiscal aparece, pergunte qual recurso ela controlava e por que isso gerava resistência."
     },
     {
-        "pergunta": "Qual interpretação explica melhor por que nem todo movimento popular foi socialmente revolucionário?",
+        "pergunta": "Uma questão afirma que a oposição ao fiscalismo em Vila Rica prova a existência de um projeto de independência. Qual é o problema da conclusão?",
         "alternativas": [
-            "Porque a participação popular tende a moderar movimentos políticos para ampliar alianças com elites locais e autoridades coloniais.",
-            "Porque participação de grupos populares não garante que o programa rompa com todas as hierarquias econômicas, raciais e jurídicas da sociedade.",
-            "Porque grupos populares atuavam principalmente em reivindicações imediatas e teriam participação reduzida em projetos de soberania, república ou igualdade.",
-            "A síntese deve preservar diferenças, embora a sucessão de conflitos coloniais possa ser entendida como amadurecimento progressivo de um programa nacional de independência já presente desde o século XVII.",
-            "Porque movimentos populares eram definidos pela ausência de propostas escritas, o que impede analisar alcance social de seus projetos."
+            "Ela confunde resistência a uma política tributária com um programa de ruptura política que precisa ser distinguido da Inconfidência Mineira.",
+            "Ela subestima o peso das ideias iluministas em 1720, que já haviam transformado a resistência fiscal em programa republicano organizado e em proposta de separação da região mineradora.",
+            "Ela ignora que as Casas de Fundição eram instituições locais, sem relação direta com a Coroa portuguesa ou com a cobrança do ouro.",
+            "Ela trata fiscalismo e política como dimensões relacionadas, quando o estudo de Vila Rica exige separá-las para compreender o movimento.",
+            "Ela considera a mineração relevante, embora o conflito de Vila Rica estivesse ligado sobretudo ao comércio entre Olinda e Recife."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo usa Vila Rica justamente para mostrar que contestação fiscal e separatismo não são sinônimos.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo usa Vila Rica justamente para mostrar que contestação fiscal e separatismo não são sinônimos. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Antes de falar em independência, procure evidência de um projeto de poder alternativo."
+    },
+    {
+        "pergunta": "Por que o fiscalismo aparece como eixo comum entre Vila Rica e Inconfidência Mineira sem tornar os dois movimentos idênticos?",
+        "alternativas": [
+            "Porque ambos reagiram à mesma medida específica, a derrama, embora Vila Rica tenha ocorrido antes da crise da mineração.",
+            "Porque medidas de arrecadação e controle podiam gerar tensões em momentos distintos, mas os participantes formulavam respostas políticas de alcance diferente.",
+            "Porque o problema fiscal explica de forma suficiente os dois episódios, deixando em segundo plano as diferenças de ideias políticas e composição social e tornando comparáveis seus projetos de ruptura.",
+            "Porque a Coroa adotou a mesma estratégia de repressão nos dois casos, produzindo projetos de ruptura equivalentes entre os revoltosos.",
+            "Porque as elites mineradoras mantiveram objetivos constantes ao longo do século XVIII e modificaram sobretudo a linguagem usada para apresentá-los."
         ],
         "correta": 1,
-        "feedbackAcerto": "✅ Base social e radicalidade programática não são equivalentes automáticos.",
-        "feedbackErro": "❌ O erro é subestimar ação popular ou deduzir o programa diretamente da composição.",
-        "dicaBanca": "💡 Composição social importa, mas precisa ser cruzada com propostas e práticas."
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica aproxima os movimentos pelo fiscalismo, mas separa Vila Rica da ruptura política iluminista associada a 1789.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica aproxima os movimentos pelo fiscalismo, mas separa Vila Rica da ruptura política iluminista associada a 1789. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Uma causa parecida não produz necessariamente o mesmo movimento: observe a conjuntura e o projeto formulado."
     },
     {
-        "pergunta": "Qual leitura melhor relaciona repressão e memória histórica?",
+        "pergunta": "A criação de mecanismos como as Casas de Fundição ajuda a compreender a mineração colonial como:",
         "alternativas": [
-            "Documentos judiciais são úteis para estudar repressão, mas não podem informar processos posteriores de memória e heroização.",
-            "A repressão produz documentos e símbolos que podem ser reinterpretados depois, como ocorreu na construção da memória de Tiradentes.",
-            "A memória política deve ser separada dos processos repressivos, pois símbolos nacionais se formam sem relação com punições e martírios.",
-            "A construção memorial ocorre quando movimentos vencem, enquanto derrotas produzem esquecimento e raramente geram heróis políticos.",
-            "A repressão fixa o significado dos movimentos, impedindo que gerações posteriores alterem a imagem pública de líderes e participantes."
+            "setor que funcionava com ampla autonomia porque a metrópole dependia dos próprios mineradores para organizar e executar a arrecadação.",
+            "espaço em que a Coroa priorizava a estabilidade social e, por isso, evitava intervir em disputas por recursos ou cobrar tributos diretamente.",
+            "atividade econômica estratégica submetida a crescente vigilância administrativa e fiscal da Coroa, o que alimentava conflitos com interesses locais.",
+            "economia cuja importância política diminuiu à medida que cresceu, permitindo que conflitos locais se resolvessem sem alterações na administração e sem expansão dos mecanismos fiscais metropolitanos.",
+            "atividade em que os mecanismos de controle se limitavam à propriedade da terra, sem interferência na circulação do ouro ou na fiscalização."
         ],
-        "correta": 1,
-        "feedbackAcerto": "✅ Repressão e memória podem se conectar, mas seus significados mudam com o tempo.",
-        "feedbackErro": "❌ O erro é tratar memória como fixa, desligada da repressão ou dependente de vitória.",
-        "dicaBanca": "💡 Um condenado pode virar símbolo muito depois do evento."
+        "correta": 2,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica conecta mineração, maior controle da Coroa, Casas de Fundição e fiscalismo.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica conecta mineração, maior controle da Coroa, Casas de Fundição e fiscalismo. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Veja instituições fiscais como parte de uma política mais ampla de governo, não como detalhes administrativos isolados."
     },
     {
-        "pergunta": "Qual síntese final caracteriza melhor os movimentos anticoloniais estudados?",
+        "pergunta": "Qual comparação entre Guerra dos Emboabas e Revolta de Vila Rica evidencia duas formas distintas de tensão na região mineradora?",
         "alternativas": [
-            "Os movimentos formaram uma trajetória de amadurecimento político relativamente contínua, na qual conflitos econômicos e regionais foram progressivamente convertidos em um programa comum de independência, república e representação nacional antes de 1822.",
-            "Eles demonstram que as elites coloniais eram o único grupo capaz de formular projetos políticos e que a participação popular foi excepcional.",
-            "Eles tiveram origem principal em ideias estrangeiras, e as diferenças regionais explicariam sobretudo variações na forma de mobilização.",
-            "Eles formaram um ciclo nacional de lutas que avançou de conflitos locais para república e independência por meio de um programa comum.",
-            "Eles revelam uma sociedade colonial atravessada por conflitos econômicos, disputas de poder, desigualdades e projetos políticos diversos, com diferentes graus de oposição a Portugal."
+            "Emboabas foi uma revolta contra o quinto, enquanto Vila Rica foi uma disputa entre paulistas e forasteiros pelo direito de explorar as minas.",
+            "Os dois movimentos tiveram como objetivo central impedir a presença administrativa da Coroa, mas divergiram quanto à forma de governo regional defendida e ao grupo que controlaria a exploração do ouro.",
+            "Emboabas se relacionou ao Iluminismo e Vila Rica ao comércio monopolista, mostrando que ideias e economia atuavam separadamente na mineração.",
+            "Emboabas opôs grupos coloniais pelo acesso a recursos e poder; Vila Rica colocou interesses locais em confronto mais direto com mecanismos fiscais da Coroa.",
+            "Os dois episódios foram separatistas, embora Vila Rica tenha apresentado um programa social mais restrito que o defendido pelos emboabas."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo permite comparar os dois porque ambos se relacionam à mineração, mas seus agentes e alvos imediatos não são os mesmos.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo permite comparar os dois porque ambos se relacionam à mineração, mas seus agentes e alvos imediatos não são os mesmos. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Em comparação temática, identifique quem disputa com quem e qual instituição ou recurso está no centro do conflito."
+    },
+    {
+        "pergunta": "Em uma leitura de longa duração, a repetição de tensões na mineração ao longo do século XVIII sugere que:",
+        "alternativas": [
+            "as revoltas mineradoras faziam parte de um movimento contínuo de independência, organizado por lideranças que teriam mantido o mesmo programa político.",
+            "a política fiscal permaneceu inalterada e gerou respostas sociais equivalentes, de modo que diferenças entre Emboabas, Vila Rica e Inconfidência são secundárias.",
+            "o controle da Coroa diminuiu ao longo do período, pois cada conflito transferiu novas competências administrativas para grupos locais.",
+            "os interesses mineradores formavam uma elite homogênea, capaz de coordenar as principais contestações ocorridas na região contra o poder português.",
+            "o esforço metropolitano de controlar uma riqueza estratégica produzia conflitos recorrentes, embora cada episódio tivesse causas e projetos próprios."
         ],
         "correta": 4,
-        "feedbackAcerto": "✅ A melhor síntese combina diversidade, conflito, composição social e graus de ruptura.",
-        "feedbackErro": "❌ O erro é construir sequência nacional, causa externa única, elitismo absoluto ou classificação rígida.",
-        "dicaBanca": "💡 Síntese boa preserva as diferenças entre os movimentos."
+        "feedbackAcerto": "🎉 Excelente!\n\nO conjunto Emboabas–Vila Rica–Inconfidência mostra recorrência de tensões, mas não um único movimento ou uma elite com projeto constante.",
+        "feedbackErro": "❌ Atenção!\n\nO conjunto Emboabas–Vila Rica–Inconfidência mostra recorrência de tensões, mas não um único movimento ou uma elite com projeto constante. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Longa duração ajuda a ver processos recorrentes; não apaga as diferenças entre conjunturas."
+    },
+    {
+        "pergunta": "Qual interpretação articula de forma mais completa o contexto da Inconfidência Mineira?",
+        "alternativas": [
+            "A crise da mineração, o endividamento de setores da elite e a ameaça da derrama se combinaram com ideias políticas que permitiam formular críticas mais amplas ao domínio português.",
+            "A derrama foi causa suficiente do movimento, enquanto a crise econômica e a circulação de ideias tiveram papel posterior na memória da conspiração.",
+            "A influência iluminista explica o projeto político, mas a situação da mineração teve pouca relevância porque os principais envolvidos não estavam ligados a interesses econômicos locais.",
+            "O endividamento aproximou elites e grupos populares em um programa igualitário, tornando a questão da escravidão parte consensual das propostas dos inconfidentes.",
+            "A crise do ouro levou a Coroa a reduzir a fiscalização, e a conspiração surgiu como reação ao risco de perda de privilégios administrativos regionais."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica relaciona explicitamente crise da mineração, endividamento, derrama e influência iluminista.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica relaciona explicitamente crise da mineração, endividamento, derrama e influência iluminista. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Questões fortes combinam condições materiais e repertórios políticos; evite escolher uma causa única."
+    },
+    {
+        "pergunta": "Sobre a composição social da Inconfidência Mineira, qual leitura é historicamente mais consistente?",
+        "alternativas": [
+            "A presença de Tiradentes demonstra que a conspiração foi socialmente liderada por grupos populares, ainda que proprietários também participassem de sua articulação.",
+            "Houve predominância de setores letrados e proprietários, e a posterior centralidade de Tiradentes na memória pública não transforma o movimento em levante popular.",
+            "A composição elitizada teria impedido a defesa de ruptura política relevante, pois proprietários coloniais estariam vinculados de forma necessária à continuidade da monarquia.",
+            "O perfil letrado indica que a mobilização ocorreu principalmente fora de Minas, entre estudantes e agentes metropolitanos sem interesses na economia local.",
+            "A participação de proprietários deve ser interpretada como apoio à derrama, já que os setores endividados dependiam da arrecadação régia para preservar seus negócios."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo afirma predominância de elite letrada e proprietária e destaca a construção posterior de Tiradentes como símbolo popular.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo afirma predominância de elite letrada e proprietária e destaca a construção posterior de Tiradentes como símbolo popular. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Não use a memória de um personagem para reconstruir automaticamente a composição social do movimento."
+    },
+    {
+        "pergunta": "A ausência de consenso abolicionista na Inconfidência Mineira é importante para compreender:",
+        "alternativas": [
+            "a falta de influência iluminista, pois movimentos inspirados em liberdade deveriam apresentar programa imediato de abolição.",
+            "a impossibilidade de falar em republicanismo, já que a manutenção da escravidão tornaria incompatíveis propostas de mudança institucional.",
+            "os limites sociais de um projeto que podia defender ruptura política sem formular igualdade ampla para a sociedade escravista.",
+            "a inexistência de conflitos entre os próprios participantes, pois o tema da escravidão teria ficado fora dos debates relacionados ao movimento.",
+            "o caráter predominantemente econômico da conspiração, uma vez que a ausência de abolição eliminaria a dimensão política de suas propostas."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica usa a relação entre Inconfidência e escravidão para mostrar que liberdade política podia coexistir com exclusões sociais.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica usa a relação entre Inconfidência e escravidão para mostrar que liberdade política podia coexistir com exclusões sociais. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Pergunte sempre se a liberdade defendida era política, econômica, social — e para quais grupos."
+    },
+    {
+        "pergunta": "Como interpretar a influência de ideias iluministas na Inconfidência sem reduzir o movimento a uma cópia de modelos externos?",
+        "alternativas": [
+            "Considerando que o Iluminismo forneceu um programa completo que foi aplicado em Minas com pequenas alterações de linguagem para se adaptar à censura.",
+            "Separando ideias e economia: o pensamento político explicaria o projeto de ruptura, enquanto a crise da mineração explicaria a adesão popular sem influenciar as propostas formuladas pelos grupos letrados.",
+            "Tratando a influência externa como elemento simbólico, pois as causas reais do movimento eram fiscais e não mantinham relação com projetos políticos.",
+            "Entendendo que essas ideias ofereceram linguagem política para problemas locais, como fiscalismo e crise da mineração, sendo apropriadas por sujeitos com interesses próprios.",
+            "Assumindo que a circulação de ideias produzia resultados semelhantes, de modo que Minas e Bahia poderiam ser explicadas por um mesmo modelo revolucionário."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica relaciona ideias externas e crise local; influência não significa reprodução mecânica.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica relaciona ideias externas e crise local; influência não significa reprodução mecânica. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Em circulação de ideias, procure sempre a apropriação local: quem usa a ideia, para qual problema e com qual limite."
+    },
+    {
+        "pergunta": "A transformação de Tiradentes em herói nacional deve ser estudada como:",
+        "alternativas": [
+            "prova documental de que Tiradentes exerceu liderança absoluta sobre os demais inconfidentes e formulou sozinho o programa político do movimento.",
+            "resultado imediato da repressão portuguesa, que já teria transformado o personagem em símbolo nacional entre amplos setores da sociedade colonial.",
+            "evidência de que a Inconfidência possuía base popular ampla, pois a memória republicana teria preservado a imagem predominante entre os participantes.",
+            "consequência da vitória política dos inconfidentes, que permitiu institucionalizar sua memória antes da Independência e transmiti-la ao período republicano.",
+            "processo posterior de construção de memória política, que seleciona símbolos e não corresponde automaticamente à posição do personagem no movimento de 1789."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo afirma que a memória de Tiradentes é construção política posterior e recomenda não heroizar os movimentos.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo afirma que a memória de Tiradentes é construção política posterior e recomenda não heroizar os movimentos. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Memória histórica é objeto de estudo: pergunte quem construiu o símbolo, em que contexto e com qual significado."
+    },
+    {
+        "pergunta": "Qual conclusão sobre republicanismo e igualdade social na Inconfidência Mineira é mais adequada?",
+        "alternativas": [
+            "A defesa de ruptura ou de formas republicanas de governo não implicava, por si só, um programa de transformação das hierarquias sociais e da escravidão.",
+            "O republicanismo colonial tinha como conteúdo necessário o fim da escravidão, mas os inconfidentes evitaram registrar a proposta por causa da repressão.",
+            "A manutenção de hierarquias sociais demonstra que o movimento não possuía dimensão republicana, já que república e igualdade eram conceitos inseparáveis.",
+            "O projeto político dos inconfidentes era socialmente limitado porque se restringia à redução de impostos, sem formulações sobre ruptura com Portugal.",
+            "A presença de proprietários torna o republicanismo irrelevante para interpretar o movimento, pois seus interesses econômicos determinavam fidelidade à monarquia."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica insiste na distinção entre ruptura política e igualdade social ampla.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica insiste na distinção entre ruptura política e igualdade social ampla. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Não transforme o nome da forma de governo em descrição completa da sociedade que seus defensores pretendiam construir."
+    },
+    {
+        "pergunta": "No contexto da Inconfidência, a derrama é melhor compreendida como:",
+        "alternativas": [
+            "instituição permanente de controle da circulação do ouro, criada para fundir e marcar o metal antes de sua comercialização.",
+            "mecanismo de cobrança compulsória associado à arrecadação do quinto e capaz de intensificar tensões entre interesses locais e a administração portuguesa.",
+            "imposto cobrado pelos comerciantes do Recife sobre proprietários de Olinda, cuja contestação se difundiu depois para a região mineradora.",
+            "medida adotada durante o período joanino para financiar despesas da Corte e que posteriormente foi associada à memória de 1789.",
+            "política de distribuição de dívidas entre mineradores, destinada a reduzir a pressão fiscal sobre proprietários em períodos de queda na produção e a estabilizar a arrecadação metropolitana."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica define derrama como cobrança compulsória para completar a arrecadação do quinto e a vincula às tensões de 1789.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica define derrama como cobrança compulsória para completar a arrecadação do quinto e a vincula às tensões de 1789. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Não confunda instituição fiscal permanente com medida extraordinária de cobrança."
+    },
+    {
+        "pergunta": "Por que é inadequado explicar a Inconfidência Mineira como resultado exclusivo de ideias iluministas?",
+        "alternativas": [
+            "Porque o Iluminismo ainda não circulava no mundo luso-brasileiro em 1789, e as referências políticas foram incorporadas à memória do movimento no período republicano.",
+            "Porque as ideias iluministas teriam aparecido na Conjuração Baiana, enquanto Minas se organizaria em torno de reivindicações econômicas e administrativas sem influência externa relevante sobre seu projeto político.",
+            "Porque o movimento também estava ligado à crise da mineração, ao endividamento e à pressão fiscal, que deram sentido local às linguagens políticas apropriadas pelos participantes.",
+            "Porque movimentos liderados por proprietários não podiam receber influências políticas externas, já que seus interesses estavam restritos à economia regional.",
+            "Porque a derrama produziu uma revolta espontânea de massas, tornando secundária a participação de letrados e os projetos de ruptura discutidos."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo liga explicitamente elementos econômicos, fiscais e intelectuais; explicação monocausal perde a interação entre eles.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo liga explicitamente elementos econômicos, fiscais e intelectuais; explicação monocausal perde a interação entre eles. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Quando uma questão oferece 'uma única causa' para um movimento complexo, teste se ela apaga condições locais importantes."
+    },
+    {
+        "pergunta": "Em uma análise da participação das elites na Inconfidência, qual raciocínio evita simplificações?",
+        "alternativas": [
+            "A participação de proprietários comprova que a conspiração não era anticolonial, pois elites econômicas dependiam do Estado português para manter suas posições.",
+            "O conflito entre elite e metrópole indicaria que a ruptura política produziria igualdade social, já que a oposição ao fiscalismo exigiria rever a estrutura de privilégios e ampliar a cidadania entre os grupos coloniais.",
+            "A presença de letrados demonstra que interesses econômicos eram secundários, pois grupos com formação intelectual atuavam principalmente por motivações ideológicas.",
+            "Setores proprietários podiam entrar em conflito com a metrópole quando seus interesses eram afetados e, ao mesmo tempo, preservar limites sociais em seus projetos de mudança.",
+            "As elites envolvidas formavam um bloco homogêneo e suas posições sobre escravidão, república e impostos podem ser deduzidas a partir de sua condição econômica."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica mostra elite letrada, endividamento, fiscalismo e limites sociais: elite não significa fidelidade automática nem programa homogêneo.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica mostra elite letrada, endividamento, fiscalismo e limites sociais: elite não significa fidelidade automática nem programa homogêneo. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Evite raciocínios do tipo 'era elite, logo...' — interesses e projetos precisam ser demonstrados no contexto."
+    },
+    {
+        "pergunta": "Qual comparação entre Revolta de Vila Rica e Inconfidência Mineira melhor evidencia uma mudança no repertório político da contestação em Minas?",
+        "alternativas": [
+            "Vila Rica apresentou linguagem republicana mais radical, mas a Inconfidência recuou para reivindicações econômicas devido ao declínio da mineração.",
+            "Os dois movimentos tiveram objetivos políticos equivalentes, e a principal mudança foi a composição social mais popular da Inconfidência.",
+            "Em 1720 a Coroa não exercia controle sobre o ouro, enquanto em 1789 as Casas de Fundição introduziram pela primeira vez a fiscalização metropolitana e reorganizaram a administração da região mineradora.",
+            "A diferença está na atitude diante da escravidão: Vila Rica possuía programa abolicionista, enquanto a Inconfidência rejeitou mudanças sociais.",
+            "Em 1720 predominou a resistência a mecanismos fiscais, enquanto em 1789 a crítica ao fiscalismo se articulou a referências iluministas e a propostas de ruptura política."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica explicita a diferença entre fiscalismo sem projeto separatista maduro em Vila Rica e ruptura iluminista em 1789.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica explicita a diferença entre fiscalismo sem projeto separatista maduro em Vila Rica e ruptura iluminista em 1789. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Em comparação temporal, observe não só o problema enfrentado, mas também a linguagem e o horizonte político disponíveis."
+    },
+    {
+        "pergunta": "Qual característica da Conjuração Baiana ajuda a explicar sua maior radicalidade social em comparação com a Inconfidência Mineira?",
+        "alternativas": [
+            "A presença mais expressiva de grupos populares urbanos, negros, pardos, libertos, soldados e artesãos, associada a uma linguagem de igualdade mais ampla.",
+            "A concentração do movimento entre grandes proprietários ligados à economia regional, que defendiam ruptura política sem alterar relações sociais.",
+            "A ausência de influências políticas atlânticas, que teria levado os participantes a formular reivindicações centradas nas condições urbanas de Salvador e desvinculadas de debates mais amplos sobre liberdade e igualdade.",
+            "O predomínio de conflitos fiscais semelhantes aos de Minas, que uniu grupos sociais diferentes em torno da oposição à derrama.",
+            "A participação oficial de autoridades coloniais, que permitiu ao movimento transformar propostas de igualdade em medidas administrativas concretas."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica diferencia Bahia de Minas pela maior participação popular e por uma linguagem mais radical de igualdade.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica diferencia Bahia de Minas pela maior participação popular e por uma linguagem mais radical de igualdade. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Composição social importa porque pode alterar quais problemas entram no projeto político — mas não presuma unanimidade entre os participantes."
+    },
+    {
+        "pergunta": "Quando a Conjuração Baiana articula liberdade e igualdade a tensões urbanas e raciais, o que isso mostra sobre a circulação de ideias revolucionárias?",
+        "alternativas": [
+            "As ideias europeias foram reproduzidas literalmente, e a presença de grupos populares teria ampliado o número de participantes sem alterar o conteúdo político.",
+            "As ideias foram reinterpretadas em um contexto local específico, adquirindo sentidos ligados à posição social dos grupos mobilizados em Salvador.",
+            "A linguagem de igualdade teria surgido de problemas de origem local, sem relação com referências políticas mais amplas do mundo atlântico.",
+            "A circulação de ideias teria reduzido a importância das hierarquias locais, pois diferentes grupos passariam a defender o mesmo sentido de liberdade e cidadania.",
+            "O conteúdo revolucionário dependia menos da composição social do que da repressão portuguesa, que transformou reivindicações moderadas em propostas radicais."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica associa a Conjuração à Revolução Francesa, à linguagem de liberdade e igualdade e à base social de Salvador.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica associa a Conjuração à Revolução Francesa, à linguagem de liberdade e igualdade e à base social de Salvador. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Influência não é cópia: observe como a mesma linguagem pode ganhar sentidos distintos em grupos e contextos diferentes."
+    },
+    {
+        "pergunta": "A influência da Revolução Francesa na Conjuração Baiana é melhor reconhecida quando a questão menciona:",
+        "alternativas": [
+            "defesa da autoridade absoluta do monarca como forma de conter conflitos entre grupos populares e proprietários na cidade.",
+            "oposição às Casas de Fundição e à cobrança do ouro, traduzida em projeto republicano para a região mineradora.",
+            "linguagem de liberdade e igualdade articulada à crítica da ordem colonial e às tensões sociais presentes em Salvador.",
+            "reivindicação de autonomia comercial por grandes proprietários e comerciantes, sem participação de grupos socialmente subalternizados.",
+            "proposta de ampliar os privilégios da administração colonial para garantir estabilidade diante de revoltas urbanas."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "🎉 Excelente!\n\nO próprio arquivo vincula a influência francesa à linguagem de liberdade, igualdade e crítica à ordem colonial.",
+        "feedbackErro": "❌ Atenção!\n\nO próprio arquivo vincula a influência francesa à linguagem de liberdade, igualdade e crítica à ordem colonial. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Em vez de procurar o nome 'Revolução Francesa', identifique o vocabulário político e o uso que ele recebe no contexto local."
+    },
+    {
+        "pergunta": "A repressão à Conjuração Baiana é especialmente importante para uma análise social porque:",
+        "alternativas": [
+            "a punição uniforme dos envolvidos demonstra que a Coroa tratava da mesma maneira proprietários, soldados, artesãos e libertos quando havia crime político.",
+            "a repressão se dirigiu sobretudo a grandes mineradores, reproduzindo o padrão de punição observado na Inconfidência Mineira.",
+            "as autoridades evitaram punir grupos populares para impedir que a contestação se ampliasse, concentrando-se nos formuladores letrados do movimento.",
+            "o peso das punições sobre participantes populares pode revelar como hierarquias sociais atravessavam também a justiça colonial.",
+            "o tratamento dado aos participantes comprova que as propostas sociais eram secundárias, pois as punições responderiam prioritariamente ao republicanismo."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica afirma que a repressão atingiu fortemente participantes populares e que isso revela hierarquias da justiça colonial.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica afirma que a repressão atingiu fortemente participantes populares e que isso revela hierarquias da justiça colonial. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Em questões sobre repressão, observe se a punição também informa sobre a estrutura social, e não só sobre o poder do Estado."
+    },
+    {
+        "pergunta": "Qual comparação entre Inconfidência Mineira e Conjuração Baiana preserva simultaneamente semelhanças e diferenças?",
+        "alternativas": [
+            "Ambas apresentaram a mesma base social e o mesmo projeto republicano, diferenciando-se principalmente pelo grau de repressão aplicado pelas autoridades e pela intensidade das medidas fiscais em cada região.",
+            "Minas foi essencialmente fiscal e Bahia essencialmente ideológica, de modo que não há causas econômicas no primeiro caso nem tensões sociais no segundo.",
+            "Os dois movimentos possuíam programas abolicionistas consensuais, e a Bahia teria incorporado reivindicações mais explícitas ligadas à igualdade racial.",
+            "A semelhança entre eles está na oposição às Casas de Fundição, enquanto a diferença decorre da influência francesa mais forte em Minas.",
+            "Ambas dialogaram com ideias de contestação ao Antigo Regime e ao domínio colonial, mas diferiram na composição social e na amplitude da linguagem igualitária."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica aproxima os movimentos pela crítica colonial e circulação de ideias, e os separa pela base social e radicalidade.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica aproxima os movimentos pela crítica colonial e circulação de ideias, e os separa pela base social e radicalidade. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Uma comparação forte precisa conter ao menos um elemento comum e uma diferença real — ambos sustentados pelo contexto."
+    },
+    {
+        "pergunta": "Por que a presença de alfaiates, soldados, negros, pardos e libertos não deve ser usada apenas como 'pista de identificação' da Conjuração Baiana?",
+        "alternativas": [
+            "Porque essa composição social ajuda a explicar por que questões de igualdade e hierarquia ganharam peso específico no projeto e na repressão ao movimento.",
+            "Porque esses grupos tinham o mesmo programa político dos setores proprietários, tornando a composição social irrelevante para compreender as propostas.",
+            "Porque a participação popular teria substituído a influência de ideias atlânticas, fazendo do movimento uma reação de natureza social às condições de Salvador.",
+            "Porque a presença de grupos subalternizados demonstra que a Conjuração possuía liderança social homogênea e um programa plenamente consensual.",
+            "Porque a composição social explica o movimento por inteiro, permitindo deixar em segundo plano o contexto colonial e a circulação de ideias políticas."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica usa esses grupos para caracterizar a base popular e a radicalidade social da Conjuração, não só para nomeá-la.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica usa esses grupos para caracterizar a base popular e a radicalidade social da Conjuração, não só para nomeá-la. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Não decore listas de participantes: pergunte o que a composição social ajuda a explicar no projeto político."
+    },
+    {
+        "pergunta": "A circulação de panfletos e de ideias de igualdade no fim do século XVIII é relevante para a Conjuração Baiana porque:",
+        "alternativas": [
+            "prova que a mobilização dependia de uma imprensa livre autorizada pela administração portuguesa para divulgar debates sobre igualdade.",
+            "mostra que a contestação também se fazia por linguagens políticas compartilhadas e por formas de comunicação capazes de alcançar o espaço urbano.",
+            "indica que a participação popular foi consequência direta da alfabetização ampla dos grupos urbanos, que liam os mesmos textos revolucionários e compartilhavam interpretações políticas semelhantes.",
+            "demonstra que os panfletos substituíram conflitos econômicos e raciais, transformando o movimento em episódio principalmente intelectual.",
+            "revela que a Coroa permitia a circulação das propostas desde que não incluíssem críticas aos mecanismos comerciais metropolitanos."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica associa panfletos e ideias de igualdade à Conjuração; isso permite pensar circulação política para além de lideranças individuais.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica associa panfletos e ideias de igualdade à Conjuração; isso permite pensar circulação política para além de lideranças individuais. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Quando fontes de circulação aparecem, pergunte como elas conectam ideias, espaços e grupos sociais."
+    },
+    {
+        "pergunta": "Qual interpretação sobre a relação entre base social e projeto político na Conjuração Baiana é mais cuidadosa?",
+        "alternativas": [
+            "A base popular determina um programa igualitário completo, pois grupos subalternizados compartilham interesses políticos equivalentes em contextos de dominação e transformam diversidade social em unidade de projeto.",
+            "A diversidade social enfraquece a explicação pela igualdade, já que propostas radicais tenderiam a surgir quando há liderança de um grupo homogêneo.",
+            "A participação de grupos populares ajuda a compreender a linguagem igualitária do movimento, mas não autoriza pressupor que todos os participantes defendiam exatamente as mesmas mudanças.",
+            "A linguagem igualitária deve ser separada da composição social, pois ideias revolucionárias circulam independentemente da posição dos atores que as apropriam.",
+            "A presença de negros, pardos e libertos faria da Conjuração um movimento abolicionista consensual entre suas diferentes correntes."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica relaciona maior presença popular e linguagem igualitária, mas sua orientação geral recomenda evitar generalizações sobre grupos e projetos.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica relaciona maior presença popular e linguagem igualitária, mas sua orientação geral recomenda evitar generalizações sobre grupos e projetos. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Conectar composição e pauta é diferente de afirmar que todos os participantes pensavam igual."
+    },
+    {
+        "pergunta": "Em que sentido republicanismo e igualdade aparecem de forma mais articulada na Conjuração Baiana do que na Inconfidência Mineira?",
+        "alternativas": [
+            "Na Bahia, republicanismo significaria mudança institucional limitada, enquanto em Minas já existiria um programa social amplo contra hierarquias e escravidão.",
+            "A diferença resultaria da ausência de elites em Salvador, pois a Conjuração teria sido conduzida majoritariamente por grupos populares sem participação relevante de outros setores.",
+            "Minas teria rejeitado influências de ideias republicanas, ao passo que a Bahia seria o primeiro movimento colonial a formular crítica política a Portugal.",
+            "No caso baiano, a crítica política à ordem colonial aparece associada a uma base popular mais ampla e a uma linguagem de igualdade social mais radical.",
+            "Na Bahia, igualdade e republicanismo surgiram por decisão das autoridades coloniais, que tentavam reduzir tensões raciais mediante reformas institucionais."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica apresenta a Conjuração como mais radical socialmente que a Inconfidência, sem apagar que ambas dialogavam com ideias de contestação.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica apresenta a Conjuração como mais radical socialmente que a Inconfidência, sem apagar que ambas dialogavam com ideias de contestação. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Compare não só a forma de governo defendida, mas quem participava e que extensão de mudança social aparecia."
+    },
+    {
+        "pergunta": "Por que a Conjuração Baiana não deve ser explicada como mera reprodução da Revolução Francesa?",
+        "alternativas": [
+            "Porque a Revolução Francesa não exerceu influência no mundo colonial, e as semelhanças de linguagem resultaram de problemas locais sem circulação atlântica.",
+            "Porque movimentos populares não utilizavam repertórios externos, já que suas reivindicações se formavam fora das redes de ideias letradas.",
+            "Porque a presença de liberdade e igualdade nos dois contextos demonstra origem comum, mas os objetivos baianos permaneceram definidos pela política francesa.",
+            "Porque a diferença entre França e Bahia se limita à composição social, enquanto os problemas políticos e econômicos enfrentados eram equivalentes.",
+            "Porque referências revolucionárias foram apropriadas em Salvador dentro de conflitos coloniais, urbanos, sociais e raciais específicos."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica relaciona a Conjuração à Revolução Francesa e, ao mesmo tempo, insiste em contexto local e sujeitos sociais.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica relaciona a Conjuração à Revolução Francesa e, ao mesmo tempo, insiste em contexto local e sujeitos sociais. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Apropriação histórica = ideia que circula + problema local + grupo que a usa."
+    },
+    {
+        "pergunta": "A Revolução Pernambucana de 1817 deve ser situada no período joanino porque suas críticas se relacionavam:",
+        "alternativas": [
+            "à centralização política, aos encargos e aos privilégios concentrados no Rio de Janeiro, dentro de um projeto republicano e separatista.",
+            "à cobrança da derrama sobre a mineração pernambucana, que aproximou o movimento das reivindicações formuladas em Minas em 1789.",
+            "ao monopólio de uma Companhia de Comércio e à disputa pela mão de obra indígena, problemas que haviam se agravado com a presença da Corte.",
+            "à rivalidade entre proprietários de Olinda e comerciantes do Recife, retomada em 1817 sob a forma de conflito municipal.",
+            "à tentativa da Coroa de criar Casas de Fundição em Pernambuco, medida que transformou uma disputa fiscal em governo republicano."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica liga 1817 à centralização, aos impostos/encargos e aos privilégios do Rio durante a presença da Corte.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica liga 1817 à centralização, aos impostos/encargos e aos privilégios do Rio durante a presença da Corte. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Para distinguir 1817 de outras revoltas, procure a combinação período joanino + crítica à centralização + projeto republicano."
+    },
+    {
+        "pergunta": "Qual relação entre a presença da Corte no Rio de Janeiro e a contestação pernambucana é historicamente mais consistente?",
+        "alternativas": [
+            "A presença da Corte eliminou os impostos em Pernambuco, e a revolta surgiu entre grupos prejudicados pela perda de mecanismos locais de arrecadação.",
+            "A concentração de privilégios e despesas no centro da monarquia podia ser percebida regionalmente como desigualdade política e fiscal.",
+            "O Rio teria passado a controlar diretamente as câmaras municipais pernambucanas, substituindo as elites locais e produzindo oposição republicana.",
+            "A abertura dos portos encerrou as tensões econômicas, e a insatisfação de 1817 teria se concentrado na forma monárquica de governo sem dimensão fiscal.",
+            "A transferência da Corte criou autonomia provincial ampla, mas os revolucionários buscavam reverter a descentralização em favor de um governo central."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo destaca privilégios no Rio, impostos e centralização como motivos da crítica de 1817.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo destaca privilégios no Rio, impostos e centralização como motivos da crítica de 1817. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Em questões sobre período joanino, observe como decisões centrais foram sentidas de maneira desigual pelas regiões."
+    },
+    {
+        "pergunta": "Por que a organização de um governo republicano em 1817 diferencia a Revolução Pernambucana de várias revoltas coloniais anteriores?",
+        "alternativas": [
+            "Porque teria sido a primeira contestação da América portuguesa a mencionar formas republicanas, inexistentes nas conjurações do século XVIII.",
+            "Porque o governo republicano tinha apoio da monarquia portuguesa, que o reconheceu temporariamente para negociar a redução de impostos.",
+            "Porque o movimento ultrapassou a contestação de medidas específicas e chegou a instituir uma alternativa concreta de poder político.",
+            "Porque a experiência teria transformado a revolta em movimento social igualitário, superando os limites presentes nos projetos anteriores.",
+            "Porque a criação de governo próprio eliminou o caráter regional do movimento e instituiu imediatamente um Estado nacional brasileiro."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica afirma que 1817 chegou a organizar governo republicano e contestar diretamente a monarquia.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica afirma que 1817 chegou a organizar governo republicano e contestar diretamente a monarquia. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Uma coisa é projetar outra ordem; outra é chegar a organizar um governo alternativo, ainda que por tempo limitado."
+    },
+    {
+        "pergunta": "Na comparação entre 1789, 1798 e 1817, qual aspecto de 1817 representa uma mudança de escala política?",
+        "alternativas": [
+            "A incorporação das primeiras ideias de liberdade no mundo luso-brasileiro, ausentes em Minas e na Bahia do fim do século XVIII.",
+            "A entrada de grupos populares na política colonial, fenômeno que não aparecera na Conjuração Baiana de 1798.",
+            "A introdução do fiscalismo como causa de revolta, já que os movimentos setecentistas teriam se concentrado em temas de natureza social e não teriam relacionado tributos a projetos de poder.",
+            "A passagem da conspiração ou articulação contestatória para uma experiência que efetivamente organizou governo republicano em oposição à monarquia.",
+            "A substituição do separatismo por reivindicações locais, pois o governo de 1817 buscava maior autonomia sem romper com a monarquia."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "🎉 Excelente!\n\nO arquivo diferencia 1817 por ter organizado governo republicano; essa é uma mudança importante na concretização do projeto político.",
+        "feedbackErro": "❌ Atenção!\n\nO arquivo diferencia 1817 por ter organizado governo republicano; essa é uma mudança importante na concretização do projeto político. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Em comparações, procure não apenas ideias semelhantes, mas o que os participantes conseguiram organizar institucionalmente."
+    },
+    {
+        "pergunta": "Qual interpretação sobre a Revolução Pernambucana evita reduzi-la a uma reação fiscal?",
+        "alternativas": [
+            "A questão fiscal foi secundária porque movimentos republicanos se orientam por ideias políticas e não por interesses econômicos ou regionais.",
+            "A centralização explica o movimento por inteiro, enquanto a existência de governo republicano foi consequência improvisada da repressão portuguesa e não expressão de um projeto político anterior.",
+            "Os problemas econômicos e políticos devem ser separados, pois os participantes podiam questionar impostos sem relacioná-los à forma de governo.",
+            "O republicanismo demonstra que a revolta havia superado interesses regionais, tornando irrelevantes os privilégios concentrados no Rio de Janeiro.",
+            "Os encargos e privilégios regionais se combinaram a uma crítica à centralização e a um projeto republicano de poder, dando ao movimento dimensão política mais ampla."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica liga 1817 simultaneamente a encargos, centralização, privilégios no Rio e republicanismo.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica liga 1817 simultaneamente a encargos, centralização, privilégios no Rio e republicanismo. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Questões difíceis costumam pedir como interesses regionais se transformam em crítica institucional e projeto de poder."
+    },
+    {
+        "pergunta": "Por que o caráter republicano de 1817 não autoriza tratá-lo como etapa inevitável da Independência de 1822?",
+        "alternativas": [
+            "Porque a existência de um projeto alternativo mostra pluralidade política, mas não significa que a história avançasse linearmente para um único desfecho nacional.",
+            "Porque a república de 1817 não questionava a monarquia portuguesa e funcionava como forma administrativa regional reconhecida pela Corte.",
+            "Porque os movimentos anteriores não possuiriam relações relevantes com ruptura política, tornando 1817 um episódio isolado sem continuidade temática ou diálogo com experiências de contestação anteriores.",
+            "Porque projetos republicanos eram incompatíveis com a crise colonial e, por isso, não influenciaram debates posteriores sobre soberania.",
+            "Porque 1817 ocorreu depois da Independência e deve ser estudado como reação ao governo já constituído no Brasil."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica usa projetos republicanos anteriores a 1822 para mostrar alternativas políticas, não uma linha reta para a Independência.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica usa projetos republicanos anteriores a 1822 para mostrar alternativas políticas, não uma linha reta para a Independência. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Evite teleologia: conhecer o que aconteceu depois não permite tratar cada revolta anterior como 'passo obrigatório'."
+    },
+    {
+        "pergunta": "Qual comparação entre Conjuração Baiana e Revolução Pernambucana é mais cuidadosa?",
+        "alternativas": [
+            "Ambas possuíam a mesma composição social popular e a mesma linguagem igualitária, diferenciando-se principalmente pelo êxito institucional de 1817.",
+            "Ambas formularam críticas de ruptura e repertórios republicanos, mas se inseriram em conjunturas regionais distintas e 1817 chegou a organizar um governo próprio.",
+            "A Bahia foi movimento social sem projeto político, enquanto Pernambuco foi movimento político sem tensões econômicas ou regionais.",
+            "Os dois casos resultaram diretamente da Revolução Francesa, cuja influência explica tanto a composição social quanto as formas de governo defendidas e reduz a importância das diferenças regionais entre Bahia e Pernambuco.",
+            "A principal diferença está no fiscalismo: a Conjuração reagiu à derrama e 1817 às Casas de Fundição, mantendo programas republicanos equivalentes."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica permite aproximar os dois pela ruptura e republicanismo, mas reserva à Bahia maior radicalidade social e a 1817 a experiência de governo.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica permite aproximar os dois pela ruptura e republicanismo, mas reserva à Bahia maior radicalidade social e a 1817 a experiência de governo. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Compare por vários eixos: base social, contexto regional, linguagem política e grau de institucionalização."
+    },
+    {
+        "pergunta": "Uma abordagem historiográfica crítica dos movimentos anticoloniais deve combinar:",
+        "alternativas": [
+            "identificação dos líderes mais conhecidos e reconstrução dos movimentos a partir de suas biografias, usando o contexto como elemento complementar.",
+            "classificação dos episódios em nativistas ou separatistas e aplicação dessa categoria como explicação suficiente para causas e consequências.",
+            "análise de contexto, sujeitos, interesses, projetos, limites e formas posteriores de construção da memória sobre os acontecimentos.",
+            "comparação dos resultados militares para determinar quais movimentos foram politicamente mais avançados e quais permaneceram locais.",
+            "distinção entre causas econômicas e políticas, evitando misturá-las para preservar a especificidade de cada tipo de explicação histórica."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica recomenda contexto, sujeitos, projetos, limites e construção posterior da memória, recusando heroizações simplificadoras.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica recomenda contexto, sujeitos, projetos, limites e construção posterior da memória, recusando heroizações simplificadoras. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Uma boa resposta histórica explica relações; não se limita a rótulos, personagens ou resultados."
+    },
+    {
+        "pergunta": "Qual frase exemplifica melhor um anacronismo ao estudar as revoltas coloniais?",
+        "alternativas": [
+            "Os conflitos coloniais podem ser comparados quanto às causas, aos grupos participantes e ao grau de ruptura pretendido em cada conjuntura.",
+            "A crítica a impostos e monopólios podia adquirir sentidos diferentes conforme a região, a composição social e o horizonte político do movimento.",
+            "A circulação de ideias atlânticas interagiu com problemas locais, e por isso Minas, Bahia e Pernambuco não devem ser tratados como cópias entre si.",
+            "Os participantes dessas revoltas já atuavam como membros de uma nação brasileira unificada e possuíam um projeto nacional comum de independência.",
+            "A memória posterior de personagens e movimentos pode alterar a forma como eles são representados em períodos políticos diferentes."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica alerta explicitamente contra projetar nacionalismo brasileiro moderno sobre revoltas coloniais de contextos distintos.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica alerta explicitamente contra projetar nacionalismo brasileiro moderno sobre revoltas coloniais de contextos distintos. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Anacronismo pode aparecer em conceitos e identidades, não só em datas erradas."
+    },
+    {
+        "pergunta": "Qual síntese final expressa melhor o conjunto dos movimentos anticoloniais estudados?",
+        "alternativas": [
+            "As revoltas formaram um processo contínuo de independência nacional, conduzido por grupos sociais progressivamente mais populares até a criação de um governo republicano em 1817, etapa que teria reunido e superado os projetos políticos das contestações anteriores.",
+            "Os conflitos foram essencialmente respostas a impostos e monopólios, enquanto ideias políticas, composição social e formas de governo tiveram importância secundária.",
+            "As diferenças regionais explicariam a maior parte das revoltas, mas seus projetos políticos poderiam ser tratados como equivalentes por enfrentarem o domínio português.",
+            "A principal divisão ocorreu entre movimentos econômicos e movimentos políticos, categorias que permitem separar com clareza interesses materiais e ideias de liberdade.",
+            "A sociedade colonial e luso-brasileira foi marcada por disputas locais, fiscais, econômicas e políticas que, em alguns contextos, evoluíram para projetos de ruptura e experiências republicanas de alcance diverso."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "🎉 Excelente!\n\nA análise histórica mostra uma variedade de conflitos e uma ampliação, em certos casos, do horizonte de ruptura, sem transformar tudo em um único movimento nacional.",
+        "feedbackErro": "❌ Atenção!\n\nA análise histórica mostra uma variedade de conflitos e uma ampliação, em certos casos, do horizonte de ruptura, sem transformar tudo em um único movimento nacional. Revise a relação entre causa, sujeitos e alcance político antes de comparar este item com outros movimentos.",
+        "dicaBanca": "🎯 Dica da banca: Na síntese, preserve diversidade de causas e projetos, mas também mostre os processos que conectam economia, poder e contestação."
     }
 ];
