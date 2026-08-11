@@ -2,1350 +2,1352 @@ const pontuacao = [
 
 {
     pergunta:
-    `Assinale a alternativa em que a pontuação está adequada à norma-padrão.`,
+    `Em “Colegas, o prazo para recurso termina amanhã”, a vírgula foi empregada para:`,
 
     alternativas: [
-        `Após a reunião, os servidores encaminharam o relatório à coordenação.`,
-        `Após a reunião os servidores, encaminharam o relatório à coordenação.`,
-        `Após, a reunião os servidores encaminharam o relatório à coordenação.`,
-        `Após a reunião os servidores encaminharam, o relatório à coordenação.`,
-        `Após a reunião, os servidores, encaminharam o relatório à coordenação.`,
+        `isolar o vocativo, termo usado para chamar diretamente os interlocutores.`,
+        `marcar a elipse do verbo principal, recuperável pelo contexto da oração.`,
+        `separar o sujeito simples do predicado que apresenta a informação central.`,
+        `destacar um aposto restritivo, necessário para identificar os interlocutores.`,
+        `indicar a antecipação de uma oração subordinada adverbial de valor temporal.`,
     ],
 
     correta: 0,
 
     explicacao:
-    `A vírgula marca o deslocamento do adjunto adverbial 'Após a reunião' no início do período.`,
+    `A vírgula isola o vocativo “Colegas”, termo independente usado para chamar o interlocutor.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. A vírgula isola o vocativo “Colegas”, termo independente usado para chamar o interlocutor.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “isolar o vocativo, termo usado para chamar diretamente os interlocutores.”. A vírgula isola o vocativo “Colegas”, termo independente usado para chamar o interlocutor.`,
 
     dicaBanca:
-    `Adjunto adverbial deslocado no início do período costuma ser separado por vírgula.`
+    `Diferencie vocativo, que chama, de sujeito, que se relaciona ao verbo.`
 },
 
 {
     pergunta:
-    `A vírgula foi corretamente empregada em:`,
+    `Assinale a frase em que as vírgulas isolam corretamente um aposto explicativo.`,
 
     alternativas: [
-        `João entregue, os documentos à secretaria ainda hoje.`,
-        `João, entregue os documentos à secretaria ainda hoje.`,
-        `João entregue os documentos, à secretaria ainda hoje.`,
-        `João entregue os documentos à secretaria, ainda hoje.`,
-        `João, entregue, os documentos à secretaria ainda hoje.`
+        `A diretora do setor, apresentou o novo calendário à equipe docente durante a reunião pedagógica.`,
+        `A diretora, coordenadora do projeto, apresentou o calendário.`,
+        `A diretora coordenadora, do projeto apresentou o calendário.`,
+        `A diretora coordenadora do projeto apresentou, o calendário.`,
+        `A diretora coordenadora do, projeto apresentou o calendário.`,
     ],
 
     correta: 1,
 
     explicacao:
-    `A vírgula isola o vocativo 'João'.`,
+    `“Coordenadora do projeto” é um sintagma nominal que renomeia e explica “a diretora”; por isso, funciona como aposto explicativo e fica entre vírgulas.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. “Coordenadora do projeto” é um sintagma nominal que renomeia e explica “a diretora”; por isso, funciona como aposto explicativo e fica entre vírgulas.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “A diretora, coordenadora do projeto, apresentou o calendário.”. “Coordenadora do projeto” é um sintagma nominal que renomeia e explica “a diretora”; por isso, funciona como aposto explicativo e fica entre vírgulas.`,
 
     dicaBanca:
-    `Vocativo deve ser isolado por vírgula.`
+    `Verifique se o segmento nominal renomeia um referente já identificado e acrescenta uma explicação acessória.`
 },
 
 {
     pergunta:
-    `Assinale a frase em que a pontuação preserva corretamente a explicação do aposto.`,
+    `Na frase “Durante a reunião extraordinária da comissão, os membros revisaram todos os recursos”, a vírgula se justifica porque:`,
 
     alternativas: [
-        `A coordenadora responsável, pelo setor assinou o parecer final.`,
-        `A coordenadora responsável pelo setor, assinou o parecer final.`,
-        `A coordenadora, responsável pelo setor, assinou o parecer final.`,
-        `A coordenadora, responsável pelo setor assinou, o parecer final.`,
-        `A coordenadora responsável pelo setor assinou, o parecer final.`
+        `separa o sujeito “os membros” do verbo “revisaram” após uma expressão longa.`,
+        `destaca um complemento verbal deslocado que exerce função de objeto direto.`,
+        `isola um adjunto adverbial longo deslocado para o início do período.`,
+        `marca uma enumeração formada por dois núcleos com a mesma função sintática.`,
+        `introduz uma oração subordinada substantiva completiva ligada ao verbo principal.`,
     ],
 
     correta: 2,
 
     explicacao:
-    `O aposto explicativo 'responsável pelo setor' deve ficar isolado por vírgulas.`,
+    `“Durante a reunião extraordinária da comissão” é um adjunto adverbial longo anteposto à oração principal.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. “Durante a reunião extraordinária da comissão” é um adjunto adverbial longo anteposto à oração principal.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “isola um adjunto adverbial longo deslocado para o início do período.”. “Durante a reunião extraordinária da comissão” é um adjunto adverbial longo anteposto à oração principal.`,
 
     dicaBanca:
-    `Aposto explicativo fica entre vírgulas quando aparece no meio da frase.`
+    `Localize o núcleo da oração e verifique se o termo inicial exprime circunstância.`
 },
 
 {
     pergunta:
-    `Em qual alternativa a vírgula separa corretamente orações coordenadas com sujeitos diferentes?`,
+    `Assinale a alternativa em que a vírgula é inadequada por separar diretamente sujeito e predicado.`,
 
     alternativas: [
-        `O diretor revisou, o documento e a equipe encaminhou a versão final.`,
-        `O diretor revisou o documento e, a equipe encaminhou a versão final.`,
-        `O diretor, revisou o documento e a equipe encaminhou a versão final.`,
-        `O diretor revisou o documento, e a equipe encaminhou a versão final.`,
-        `O diretor revisou o documento e a equipe, encaminhou a versão final.`
+        `No fim da tarde, a comissão divulgou o resultado definitivo.`,
+        `A comissão, após nova conferência, divulgou o resultado definitivo.`,
+        `A comissão divulgou, após nova conferência, o resultado definitivo.`,
+        `Os documentos encaminhados pela secretaria, foram conferidos pela comissão.`,
+        `Após nova conferência dos dados, a comissão divulgou o resultado definitivo.`,
     ],
 
     correta: 3,
 
     explicacao:
-    `A vírgula antes de 'e' pode ocorrer quando as orações coordenadas têm sujeitos diferentes.`,
+    `Em “Os documentos encaminhados pela secretaria, foram...”, a vírgula separa indevidamente o sujeito longo de seu predicado.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Em “Os documentos encaminhados pela secretaria, foram...”, a vírgula separa indevidamente o sujeito longo de seu predicado.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “Os documentos encaminhados pela secretaria, foram conferidos pela comissão.”. Em “Os documentos encaminhados pela secretaria, foram...”, a vírgula separa indevidamente o sujeito longo de seu predicado.`,
 
     dicaBanca:
-    `Antes de 'e', observe se há mudança de sujeito ou efeito de contraste.`
+    `O tamanho do sujeito não autoriza sua separação do verbo por vírgula.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que os dois-pontos foram empregados adequadamente.`,
+    `Em qual frase a vírgula separa corretamente uma oração coordenada adversativa?`,
 
     alternativas: [
-        `A comissão: solicitou três documentos, ofício, relatório e comprovante.`,
-        `A comissão solicitou: três documentos ofício, relatório e comprovante.`,
-        `A comissão solicitou três: documentos ofício, relatório e comprovante.`,
-        `A comissão solicitou três documentos ofício: relatório e comprovante.`,
-        `A comissão solicitou três documentos: ofício, relatório e comprovante.`
+        `A equipe revisou mas, os documentos permaneceram sem conferência antes do envio definitivo.`,
+        `A equipe, revisou os documentos mas encaminhou a versão final.`,
+        `A equipe revisou os documentos mas, encaminhou a versão final.`,
+        `A equipe revisou, os documentos, mas encaminhou a versão final.`,
+        `A equipe revisou os documentos, mas ainda encontrou inconsistências.`,
     ],
 
     correta: 4,
 
     explicacao:
-    `Os dois-pontos introduzem enumeração anunciada anteriormente.`,
+    `Conjunções adversativas como “mas” são normalmente precedidas de vírgula quando ligam orações coordenadas.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Conjunções adversativas como “mas” são normalmente precedidas de vírgula quando ligam orações coordenadas.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “A equipe revisou os documentos, mas ainda encontrou inconsistências.”. Conjunções adversativas como “mas” são normalmente precedidas de vírgula quando ligam orações coordenadas.`,
 
     dicaBanca:
-    `Dois-pontos introduzem enumeração, explicação ou citação.`
+    `Localize as duas orações e o valor adversativo do conectivo.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula foi usada corretamente.`,
+    `Na norma-padrão, a pontuação adequada para uma expressão retificativa aparece em:`,
 
     alternativas: [
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
-        `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
+        `O prazo termina na sexta-feira, ou melhor, na quinta-feira, conforme a retificação publicada.`,
+        `O prazo termina, na sexta-feira ou melhor na quinta-feira conforme a retificação publicada pela comissão responsável.`,
+        `O prazo termina na sexta-feira ou, melhor na quinta-feira, conforme a retificação publicada.`,
+        `O prazo termina na sexta-feira ou melhor, na quinta-feira conforme, a retificação publicada.`,
+        `O prazo, termina na sexta-feira ou melhor na quinta-feira, conforme a retificação publicada.`,
     ],
 
     correta: 0,
 
     explicacao:
-    `A oração adverbial deslocada no início deve ser separada por vírgula.`,
+    `A expressão “ou melhor” funciona como elemento retificativo intercalado e deve ser isolada por vírgulas.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. A expressão “ou melhor” funciona como elemento retificativo intercalado e deve ser isolada por vírgulas.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “O prazo termina na sexta-feira, ou melhor, na quinta-feira, conforme a retificação publicada.”. A expressão “ou melhor” funciona como elemento retificativo intercalado e deve ser isolada por vírgulas.`,
 
     dicaBanca:
-    `Oração adverbial anteposta pede vírgula.`
+    `Expressões como “isto é”, “ou seja” e “ou melhor” costumam aparecer isoladas quando intercaladas.`
 },
 
 {
     pergunta:
-    `A pontuação está correta em:`,
+    `Assinale a frase em que a vírgula marca corretamente a omissão de um verbo já expresso.`,
 
     alternativas: [
-        `Os documentos que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem serão publicados hoje.`,
-        `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`
+        `Os professores corrigiram, as provas pela manhã e os coordenadores os relatórios à tarde.`,
+        `Os professores corrigiram as provas pela manhã; os coordenadores, os relatórios à tarde.`,
+        `Os professores, corrigiram as provas pela manhã e os coordenadores os relatórios à tarde.`,
+        `Os professores corrigiram as provas, pela manhã e os coordenadores, os relatórios à tarde.`,
+        `Os professores corrigiram as provas pela manhã e, os coordenadores os relatórios à tarde.`,
     ],
 
     correta: 1,
 
     explicacao:
-    `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
+    `Em “os coordenadores, os relatórios”, a vírgula assinala a elipse de “corrigiram”, evitando repetição.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Em “os coordenadores, os relatórios”, a vírgula assinala a elipse de “corrigiram”, evitando repetição.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “Os professores corrigiram as provas pela manhã; os coordenadores, os relatórios à tarde.”. Em “os coordenadores, os relatórios”, a vírgula assinala a elipse de “corrigiram”, evitando repetição.`,
 
     dicaBanca:
-    `Oração explicativa acrescenta informação acessória e vem isolada.`
+    `Procure um verbo recuperável pela estrutura paralela da oração anterior.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula está inadequada.`,
+    `Considere: “A proposta, entretanto, ainda depende de parecer jurídico.” As vírgulas têm a função de:`,
 
     alternativas: [
-        `Os servidores entregaram os formulários no protocolo central.`,
-        `No protocolo central, os servidores entregaram os formulários.`,
-        `Os servidores, entregaram os formulários no protocolo central.`,
-        `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`
+        `isolar o sujeito simples antes de um verbo transitivo indireto.`,
+        `destacar um aposto que renomeia o substantivo “proposta”.`,
+        `isolar o conectivo adversativo intercalado no interior da oração.`,
+        `separar uma oração adjetiva explicativa reduzida de particípio.`,
+        `marcar a supressão de um verbo de ligação recuperável pelo contexto.`,
     ],
 
     correta: 2,
 
     explicacao:
-    `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
+    `“Entretanto” é um conectivo adversativo deslocado/intercalado e aparece isolado por vírgulas.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. “Entretanto” é um conectivo adversativo deslocado/intercalado e aparece isolado por vírgulas.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “isolar o conectivo adversativo intercalado no interior da oração.”. “Entretanto” é um conectivo adversativo deslocado/intercalado e aparece isolado por vírgulas.`,
 
     dicaBanca:
-    `Nunca separe sujeito e verbo por vírgula simples.`
+    `Conectivos deslocados podem ser pontuados como elementos intercalados.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
+    `Assinale a alternativa em que a vírgula antes de “e” é possível por haver mudança de sujeito entre as orações.`,
 
     alternativas: [
-        `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
+        `A comissão examinou os recursos, e publicou o resultado no mesmo dia.`,
+        `Os candidatos chegaram cedo, e aguardaram a abertura dos portões.`,
+        `A diretora apresentou o plano, e explicou cada etapa aos docentes.`,
+        `A comissão encerrou a análise, e a secretaria publicou o resultado.`,
+        `O professor abriu o arquivo, e revisou as questões antes da aula.`,
     ],
 
     correta: 3,
 
     explicacao:
-    `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
+    `Em “A comissão encerrou a análise, e a secretaria publicou...”, as orações coordenadas têm sujeitos diferentes, o que admite a vírgula antes de “e”.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Em “A comissão encerrou a análise, e a secretaria publicou...”, as orações coordenadas têm sujeitos diferentes, o que admite a vírgula antes de “e”.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “A comissão encerrou a análise, e a secretaria publicou o resultado.”. Em “A comissão encerrou a análise, e a secretaria publicou...”, as orações coordenadas têm sujeitos diferentes, o que admite a vírgula antes de “e”.`,
 
     dicaBanca:
-    `Ponto e vírgula separa unidades coordenadas mais independentes.`
+    `Antes de “e”, compare os sujeitos e a organização sintática das duas orações.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula foi usada corretamente.`,
+    `Na frase “Se a documentação estiver completa, o pedido será analisado hoje”, a vírgula separa:`,
 
     alternativas: [
-        `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
-        `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`
+        `uma oração substantiva subjetiva posposta à oração principal.`,
+        `uma oração adjetiva restritiva que delimita o sentido de “documentação”.`,
+        `um aposto oracional que explica o conteúdo do pedido administrativo.`,
+        `uma oração coordenada conclusiva introduzida por conjunção condicional.`,
+        `uma oração subordinada adverbial condicional anteposta à principal.`,
     ],
 
     correta: 4,
 
     explicacao:
-    `A oração adverbial deslocada no início deve ser separada por vírgula.`,
+    `A oração iniciada por “Se” expressa condição e está anteposta à oração principal, devendo ser separada por vírgula.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. A oração iniciada por “Se” expressa condição e está anteposta à oração principal, devendo ser separada por vírgula.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “uma oração subordinada adverbial condicional anteposta à principal.”. A oração iniciada por “Se” expressa condição e está anteposta à oração principal, devendo ser separada por vírgula.`,
 
     dicaBanca:
-    `Oração adverbial anteposta pede vírgula.`
+    `Identifique a relação semântica da oração inicial antes de analisar a vírgula.`
 },
 
 {
     pergunta:
-    `A pontuação está correta em:`,
+    `Compare: I. “Os alunos que concluíram o projeto receberam certificado.” II. “Os alunos, que concluíram o projeto, receberam certificado.” A diferença de sentido decorre de que:`,
 
     alternativas: [
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem serão publicados hoje.`,
-        `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`,
+        `em I, a oração restringe o grupo de alunos; em II, a oração é apresentada como explicação sobre o conjunto referido.`,
+        `em I, a oração explica todos os alunos; em II, ela seleciona os que concluíram o projeto.`,
+        `em ambas, as vírgulas têm valor estilístico e não alteram a extensão do referente nem a relação entre a oração adjetiva e o antecedente.`,
+        `em I, “que” introduz oração substantiva; em II, introduz oração adverbial de causa.`,
+        `em II, as vírgulas transformam “alunos” em vocativo e retiram sua função sintática de sujeito.`,
     ],
 
     correta: 0,
 
     explicacao:
-    `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
+    `Sem vírgulas, a oração adjetiva é restritiva; entre vírgulas, é explicativa e altera a extensão do referente.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Sem vírgulas, a oração adjetiva é restritiva; entre vírgulas, é explicativa e altera a extensão do referente.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “em I, a oração restringe o grupo de alunos; em II, a oração é apresentada como explicação sobre o conjunto referido.”. Sem vírgulas, a oração adjetiva é restritiva; entre vírgulas, é explicativa e altera a extensão do referente.`,
 
     dicaBanca:
-    `Oração explicativa acrescenta informação acessória e vem isolada.`
+    `Em orações adjetivas, pontuação e sentido caminham juntos.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula está inadequada.`,
+    `Assinale a frase em que a oração adjetiva explicativa está corretamente isolada.`,
 
     alternativas: [
-        `Os servidores entregaram os formulários no protocolo central.`,
-        `Os servidores, entregaram os formulários no protocolo central.`,
-        `No protocolo central, os servidores entregaram os formulários.`,
-        `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`
+        `Brasília que é a capital federal, recebe autoridades de todo o país.`,
+        `Brasília, que é a capital federal, recebe autoridades de todo o país.`,
+        `Brasília que, é a capital federal recebe autoridades de todo o país.`,
+        `Brasília, que é a capital federal recebe, autoridades de todo o país.`,
+        `Brasília que é, a capital federal, recebe autoridades de todo o país.`,
     ],
 
     correta: 1,
 
     explicacao:
-    `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
+    `A informação “que é a capital federal” é explicativa e deve ficar isolada por vírgulas.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. A informação “que é a capital federal” é explicativa e deve ficar isolada por vírgulas.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “Brasília, que é a capital federal, recebe autoridades de todo o país.”. A informação “que é a capital federal” é explicativa e deve ficar isolada por vírgulas.`,
 
     dicaBanca:
-    `Nunca separe sujeito e verbo por vírgula simples.`
+    `Quando a oração acrescenta dado acessório sobre um referente já identificado, tende a ser explicativa.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
+    `Na frase “Embora o relatório estivesse completo, a comissão pediu nova conferência”, a vírgula:`,
 
     alternativas: [
-        `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
+        `separa uma oração substantiva objetiva direta antecipada ao verbo principal.`,
+        `marca a elipse de um verbo repetido nas duas partes do período composto.`,
+        `isola uma oração subordinada adverbial concessiva anteposta à oração principal.`,
+        `destaca uma oração adjetiva restritiva ligada diretamente ao substantivo “relatório” e indispensável à sua identificação.`,
+        `separa duas orações coordenadas assindéticas sem relação de subordinação.`,
     ],
 
     correta: 2,
 
     explicacao:
-    `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
+    `“Embora o relatório estivesse completo” é uma oração adverbial concessiva anteposta à principal.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. “Embora o relatório estivesse completo” é uma oração adverbial concessiva anteposta à principal.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “isola uma oração subordinada adverbial concessiva anteposta à oração principal.”. “Embora o relatório estivesse completo” é uma oração adverbial concessiva anteposta à principal.`,
 
     dicaBanca:
-    `Ponto e vírgula separa unidades coordenadas mais independentes.`
+    `Observe o valor de concessão introduzido por “embora”.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula foi usada corretamente.`,
+    `Em qual alternativa a vírgula foi empregada indevidamente entre o verbo e seu complemento?`,
 
     alternativas: [
-        `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
-        `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`
+        `A coordenação informou, com antecedência, a mudança aos professores.`,
+        `A coordenação, segundo o comunicado, informou a mudança aos professores.`,
+        `Com antecedência, a coordenação informou a mudança aos professores.`,
+        `A coordenação informou, a mudança aos professores antes da reunião.`,
+        `A coordenação informou a mudança aos professores, antes da reunião.`,
     ],
 
     correta: 3,
 
     explicacao:
-    `A oração adverbial deslocada no início deve ser separada por vírgula.`,
+    `Em “informou, a mudança”, a vírgula rompe indevidamente a relação direta entre o verbo e seu objeto.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Em “informou, a mudança”, a vírgula rompe indevidamente a relação direta entre o verbo e seu objeto.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “A coordenação informou, a mudança aos professores antes da reunião.”. Em “informou, a mudança”, a vírgula rompe indevidamente a relação direta entre o verbo e seu objeto.`,
 
     dicaBanca:
-    `Oração adverbial anteposta pede vírgula.`
+    `Não separe verbo e complemento por vírgula sem elemento intercalado que justifique o sinal.`
 },
 
 {
     pergunta:
-    `A pontuação está correta em:`,
+    `Assinale a frase em que a pontuação mantém corretamente uma oração subordinada substantiva ligada ao verbo principal.`,
 
     alternativas: [
-        `Os documentos que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem serão publicados hoje.`,
-        `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`
+        `A comissão decidiu, que o prazo seria prorrogado até sexta-feira.`,
+        `A comissão, decidiu que o prazo seria prorrogado até sexta-feira.`,
+        `A comissão decidiu que, o prazo seria prorrogado até sexta-feira.`,
+        `A comissão decidiu que o prazo, seria prorrogado até sexta-feira.`,
+        `A comissão decidiu que o prazo seria prorrogado até sexta-feira.`,
     ],
 
     correta: 4,
 
     explicacao:
-    `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
+    `A oração “que o prazo seria prorrogado...” funciona como complemento do verbo “decidiu” e não deve ser separada dele por vírgula.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. A oração “que o prazo seria prorrogado...” funciona como complemento do verbo “decidiu” e não deve ser separada dele por vírgula.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “A comissão decidiu que o prazo seria prorrogado até sexta-feira.”. A oração “que o prazo seria prorrogado...” funciona como complemento do verbo “decidiu” e não deve ser separada dele por vírgula.`,
 
     dicaBanca:
-    `Oração explicativa acrescenta informação acessória e vem isolada.`
+    `Evite vírgula entre verbo e oração que completa diretamente seu sentido.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula está inadequada.`,
+    `Na frase “Os pareceres, segundo informou a secretaria, serão publicados amanhã”, as vírgulas isolam:`,
 
     alternativas: [
-        `Os servidores, entregaram os formulários no protocolo central.`,
-        `Os servidores entregaram os formulários no protocolo central.`,
-        `No protocolo central, os servidores entregaram os formulários.`,
-        `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`,
+        `uma oração intercalada que interrompe momentaneamente a estrutura principal.`,
+        `um vocativo composto empregado para chamar o setor responsável.`,
+        `um predicativo deslocado que atribui característica aos pareceres.`,
+        `uma oração adjetiva restritiva indispensável para definir quais pareceres serão publicados.`,
+        `um complemento nominal anteposto ao substantivo “pareceres”.`,
     ],
 
     correta: 0,
 
     explicacao:
-    `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
+    `“Segundo informou a secretaria” é uma oração intercalada e fica isolada por vírgulas.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. “Segundo informou a secretaria” é uma oração intercalada e fica isolada por vírgulas.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “uma oração intercalada que interrompe momentaneamente a estrutura principal.”. “Segundo informou a secretaria” é uma oração intercalada e fica isolada por vírgulas.`,
 
     dicaBanca:
-    `Nunca separe sujeito e verbo por vírgula simples.`
+    `Retire mentalmente o trecho entre vírgulas e verifique se a estrutura principal permanece íntegra.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
+    `Considere “A diretora afirmou que, após a reunião, divulgará a decisão.” A pontuação é adequada porque:`,
 
     alternativas: [
-        `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
+        `a vírgula depois de “que” separa a conjunção de uma oração substantiva e por isso é exigida em qualquer caso.`,
+        `“após a reunião” é um adjunto adverbial intercalado entre a conjunção e o restante da oração subordinada.`,
+        `o verbo “afirmou” exige uma pausa obrigatória antes do complemento introduzido por “que”.`,
+        `a expressão “após a reunião” funciona como sujeito da forma verbal “divulgará”.`,
+        `as vírgulas transformam a oração iniciada por “que” em oração adjetiva explicativa.`,
     ],
 
     correta: 1,
 
     explicacao:
-    `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
+    `As vírgulas isolam o adjunto adverbial intercalado “após a reunião”; não se trata de separar “que” da oração por si só.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. As vírgulas isolam o adjunto adverbial intercalado “após a reunião”; não se trata de separar “que” da oração por si só.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é ““após a reunião” é um adjunto adverbial intercalado entre a conjunção e o restante da oração subordinada.”. As vírgulas isolam o adjunto adverbial intercalado “após a reunião”; não se trata de separar “que” da oração por si só.`,
 
     dicaBanca:
-    `Ponto e vírgula separa unidades coordenadas mais independentes.`
+    `Em sequências “que, ...,”, procure um termo realmente intercalado.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula foi usada corretamente.`,
+    `Assinale a frase em que a vírgula altera a interpretação do termo destacado ao convertê-lo em vocativo.`,
 
     alternativas: [
-        `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
-        `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`
+        `Os professores atentos ouviram a orientação final da coordenação.`,
+        `Professores atentos ouviram a orientação final da coordenação.`,
+        `Professores, ouçam atentamente a orientação final da coordenação.`,
+        `Os professores ouviram atentamente, a orientação final da coordenação.`,
+        `Os professores, atentos ouviram a orientação final da coordenação.`,
     ],
 
     correta: 2,
 
     explicacao:
-    `A oração adverbial deslocada no início deve ser separada por vírgula.`,
+    `Em “Professores, ouçam...”, “Professores” é vocativo; a vírgula marca o chamamento direto.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Em “Professores, ouçam...”, “Professores” é vocativo; a vírgula marca o chamamento direto.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “Professores, ouçam atentamente a orientação final da coordenação.”. Em “Professores, ouçam...”, “Professores” é vocativo; a vírgula marca o chamamento direto.`,
 
     dicaBanca:
-    `Oração adverbial anteposta pede vírgula.`
+    `Observe a flexão verbal e pergunte se o nome participa da oração ou chama o interlocutor.`
 },
 
 {
     pergunta:
-    `A pontuação está correta em:`,
+    `Na frase “O resultado, portanto, será divulgado após a conferência final”, as vírgulas são usadas para:`,
 
     alternativas: [
-        `Os documentos que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem serão publicados hoje.`,
-        `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`
+        `isolar o sujeito “o resultado” da forma verbal “será divulgado”.`,
+        `separar uma oração subordinada causal reduzida de infinitivo.`,
+        `marcar a elipse do verbo “ser” na segunda parte do período.`,
+        `isolar um conectivo conclusivo intercalado no interior da oração.`,
+        `destacar um aposto enumerativo ligado ao substantivo “resultado”.`,
     ],
 
     correta: 3,
 
     explicacao:
-    `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
+    `“Portanto” atua como conectivo conclusivo intercalado e fica isolado por vírgulas.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. “Portanto” atua como conectivo conclusivo intercalado e fica isolado por vírgulas.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “isolar um conectivo conclusivo intercalado no interior da oração.”. “Portanto” atua como conectivo conclusivo intercalado e fica isolado por vírgulas.`,
 
     dicaBanca:
-    `Oração explicativa acrescenta informação acessória e vem isolada.`
+    `Conectivos como “portanto”, quando deslocados, costumam ser isolados.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula está inadequada.`,
+    `Assinale a alternativa que preserva a correção ao deslocar a oração adverbial para o início do período.`,
 
     alternativas: [
-        `Os servidores entregaram os formulários no protocolo central.`,
-        `No protocolo central, os servidores entregaram os formulários.`,
-        `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`,
-        `Os servidores, entregaram os formulários no protocolo central.`
+        `A equipe encaminhará o processo quando a revisão terminar.`,
+        `Quando a revisão terminar a equipe encaminhará, o processo.`,
+        `Quando, a revisão terminar a equipe encaminhará o processo.`,
+        `Quando a revisão, terminar, a equipe encaminhará o processo.`,
+        `Quando a revisão terminar, a equipe encaminhará o processo.`,
     ],
 
     correta: 4,
 
     explicacao:
-    `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
+    `Com a oração adverbial temporal anteposta, a vírgula marca a fronteira com a oração principal.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Com a oração adverbial temporal anteposta, a vírgula marca a fronteira com a oração principal.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “Quando a revisão terminar, a equipe encaminhará o processo.”. Com a oração adverbial temporal anteposta, a vírgula marca a fronteira com a oração principal.`,
 
     dicaBanca:
-    `Nunca separe sujeito e verbo por vírgula simples.`
+    `Compare a ordem direta com a ordem em que a circunstância aparece antecipada.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
+    `Assinale a alternativa em que os dois-pontos introduzem adequadamente uma enumeração anunciada pelo termo anterior.`,
 
     alternativas: [
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
-        `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`,
+        `A comissão analisará três aspectos: legalidade, prazo e documentação.`,
+        `A comissão: analisará três aspectos, legalidade, prazo e documentação.`,
+        `A comissão analisará: três aspectos legalidade, prazo e documentação.`,
+        `A comissão analisará três: aspectos legalidade, prazo e documentação.`,
+        `A comissão analisará três aspectos legalidade: prazo e documentação.`,
     ],
 
     correta: 0,
 
     explicacao:
-    `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
+    `Os dois-pontos podem introduzir uma enumeração que desenvolve uma ideia previamente anunciada.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Os dois-pontos podem introduzir uma enumeração que desenvolve uma ideia previamente anunciada.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “A comissão analisará três aspectos: legalidade, prazo e documentação.”. Os dois-pontos podem introduzir uma enumeração que desenvolve uma ideia previamente anunciada.`,
 
     dicaBanca:
-    `Ponto e vírgula separa unidades coordenadas mais independentes.`
+    `Antes dos dois-pontos, procure uma estrutura completa que anuncie o desenvolvimento seguinte.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula foi usada corretamente.`,
+    `Em “A decisão foi unânime: o recurso seria indeferido”, os dois-pontos estabelecem principalmente uma relação de:`,
 
     alternativas: [
-        `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
-        `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`
+        `oposição entre duas orações coordenadas de sentidos incompatíveis.`,
+        `explicação ou especificação do conteúdo anunciado na primeira oração.`,
+        `condição necessária para que a primeira oração possa ser compreendida.`,
+        `comparação entre duas decisões administrativas tomadas em momentos distintos.`,
+        `concessão, pois a segunda oração contraria a expectativa criada pela primeira.`,
     ],
 
     correta: 1,
 
     explicacao:
-    `A oração adverbial deslocada no início deve ser separada por vírgula.`,
+    `A segunda oração explicita qual foi o conteúdo da decisão considerada unânime.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. A segunda oração explicita qual foi o conteúdo da decisão considerada unânime.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “explicação ou especificação do conteúdo anunciado na primeira oração.”. A segunda oração explicita qual foi o conteúdo da decisão considerada unânime.`,
 
     dicaBanca:
-    `Oração adverbial anteposta pede vírgula.`
+    `Os dois-pontos frequentemente anunciam explicação, esclarecimento, citação ou enumeração.`
 },
 
 {
     pergunta:
-    `A pontuação está correta em:`,
+    `Assinale a frase em que os dois-pontos foram empregados de modo inadequado por separar o verbo de seu objeto direto.`,
 
     alternativas: [
-        `Os documentos que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`
+        `A equipe tinha uma certeza: seria necessário revisar todo o banco de questões.`,
+        `O edital apresentou três etapas: inscrição, prova objetiva e análise de títulos.`,
+        `A comissão analisou: os recursos protocolados dentro do prazo regulamentar.`,
+        `O professor fez um pedido: que os alunos justificassem cada resposta.`,
+        `O parecer registrou uma conclusão: não havia irregularidade no procedimento.`,
     ],
 
     correta: 2,
 
     explicacao:
-    `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
+    `Em “analisou: os recursos”, os dois-pontos rompem sem justificativa a ligação entre o verbo transitivo e seu objeto direto.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Em “analisou: os recursos”, os dois-pontos rompem sem justificativa a ligação entre o verbo transitivo e seu objeto direto.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “A comissão analisou: os recursos protocolados dentro do prazo regulamentar.”. Em “analisou: os recursos”, os dois-pontos rompem sem justificativa a ligação entre o verbo transitivo e seu objeto direto.`,
 
     dicaBanca:
-    `Oração explicativa acrescenta informação acessória e vem isolada.`
+    `Assim como a vírgula, os dois-pontos não devem interromper uma relação sintática básica sem função discursiva real.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula está inadequada.`,
+    `Em qual alternativa o ponto e vírgula organiza adequadamente itens internos que já contêm vírgulas?`,
 
     alternativas: [
-        `Os servidores entregaram os formulários no protocolo central.`,
-        `No protocolo central, os servidores entregaram os formulários.`,
-        `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, entregaram os formulários no protocolo central.`,
-        `Os servidores, após a orientação, entregaram os formulários.`
+        `Participaram da reunião Ana; diretora pedagógica, Bruno; coordenador e Carla; secretária.`,
+        `Participaram; Ana, diretora pedagógica, Bruno, coordenador, Carla, secretária.`,
+        `Participaram da reunião Ana, diretora pedagógica Bruno, coordenador Carla, secretária.`,
+        `Participaram da reunião Ana, diretora pedagógica; Bruno, coordenador; Carla, secretária.`,
+        `Participaram da reunião; Ana, diretora pedagógica; Bruno, coordenador; Carla, secretária.`,
     ],
 
     correta: 3,
 
     explicacao:
-    `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
+    `O ponto e vírgula pode separar itens de uma enumeração complexa quando cada item já contém vírgula interna.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. O ponto e vírgula pode separar itens de uma enumeração complexa quando cada item já contém vírgula interna.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “Participaram da reunião Ana, diretora pedagógica; Bruno, coordenador; Carla, secretária.”. O ponto e vírgula pode separar itens de uma enumeração complexa quando cada item já contém vírgula interna.`,
 
     dicaBanca:
-    `Nunca separe sujeito e verbo por vírgula simples.`
+    `Quando a vírgula já está ocupada dentro de cada item, o ponto e vírgula ajuda a marcar fronteiras maiores.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
+    `Assinale a alternativa em que o ponto e vírgula separa adequadamente duas orações coordenadas de estrutura relativamente extensa.`,
 
     alternativas: [
-        `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`
+        `Os candidatos; apresentaram os documentos exigidos, e a comissão iniciou a conferência antes da decisão administrativa final.`,
+        `Os candidatos apresentaram; os documentos exigidos, e a comissão iniciou a conferência.`,
+        `Os candidatos apresentaram os documentos exigidos, e; a comissão iniciou a conferência.`,
+        `Os candidatos apresentaram os documentos; exigidos, e a comissão iniciou a conferência.`,
+        `Os candidatos apresentaram os documentos exigidos; a comissão, depois de nova conferência, iniciou a análise.`,
     ],
 
     correta: 4,
 
     explicacao:
-    `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
+    `O ponto e vírgula pode separar orações coordenadas relativamente extensas, especialmente quando uma delas já contém vírgula interna.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. O ponto e vírgula pode separar orações coordenadas relativamente extensas, especialmente quando uma delas já contém vírgula interna.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “Os candidatos apresentaram os documentos exigidos; a comissão, depois de nova conferência, iniciou a análise.”. O ponto e vírgula pode separar orações coordenadas relativamente extensas, especialmente quando uma delas já contém vírgula interna.`,
 
     dicaBanca:
-    `Ponto e vírgula separa unidades coordenadas mais independentes.`
+    `Observe unidades sintáticas maiores e a presença de pontuação interna em uma delas.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula foi usada corretamente.`,
+    `Na frase “A revisão tinha um objetivo — eliminar ambiguidades antes da publicação — e exigiu várias horas”, os travessões:`,
 
     alternativas: [
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
-        `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
+        `isolam uma inserção explicativa que poderia, em outro projeto de pontuação, ser marcada por parênteses ou vírgulas.`,
+        `indicam o início e o fim de uma fala direta atribuída ao sujeito da oração principal, acompanhada de verbo de elocução na sequência.`,
+        `separam o verbo “tinha” de seu complemento para destacar uma enumeração posterior.`,
+        `marcam duas orações coordenadas adversativas sem a presença de conjunção.`,
+        `substituem o ponto final e encerram definitivamente a primeira oração do período.`,
     ],
 
     correta: 0,
 
     explicacao:
-    `A oração adverbial deslocada no início deve ser separada por vírgula.`,
+    `Os travessões isolam uma inserção explicativa/parentética no interior da estrutura principal.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Os travessões isolam uma inserção explicativa/parentética no interior da estrutura principal.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “isolam uma inserção explicativa que poderia, em outro projeto de pontuação, ser marcada por parênteses ou vírgulas.”. Os travessões isolam uma inserção explicativa/parentética no interior da estrutura principal.`,
 
     dicaBanca:
-    `Oração adverbial anteposta pede vírgula.`
+    `Compare o trecho entre travessões com um comentário intercalado.`
 },
 
 {
     pergunta:
-    `A pontuação está correta em:`,
+    `Assinale a alternativa em que o travessão introduz adequadamente uma fala em diálogo narrativo.`,
 
     alternativas: [
-        `Os documentos que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem serão publicados hoje.`,
-        `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`
+        `O professor explicou — a resposta depende do contexto e prosseguiu a aula.`,
+        `— A resposta depende do contexto — explicou o professor.`,
+        `O professor — explicou a resposta depende do contexto durante a aula.`,
+        `A resposta — depende do contexto explicou — o professor aos alunos.`,
+        `O professor explicou a resposta — depende do contexto — aos alunos.`,
     ],
 
     correta: 1,
 
     explicacao:
-    `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
+    `O travessão pode marcar a fala de personagem e também separar a intervenção do narrador em diálogo.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. O travessão pode marcar a fala de personagem e também separar a intervenção do narrador em diálogo.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “— A resposta depende do contexto — explicou o professor.”. O travessão pode marcar a fala de personagem e também separar a intervenção do narrador em diálogo.`,
 
     dicaBanca:
-    `Oração explicativa acrescenta informação acessória e vem isolada.`
+    `Em discurso direto dialogado, observe a fronteira entre fala e verbo de elocução.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula está inadequada.`,
+    `Considere “O regulamento — publicado após meses de debate — entrou em vigor hoje.” O efeito dos travessões é:`,
 
     alternativas: [
-        `Os servidores entregaram os formulários no protocolo central.`,
-        `No protocolo central, os servidores entregaram os formulários.`,
-        `Os servidores, entregaram os formulários no protocolo central.`,
-        `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`
+        `transformar “regulamento” em vocativo dirigido ao leitor do documento.`,
+        `indicar que o segmento interno funciona como condição necessária para a oração principal e integra seu desenvolvimento sintático.`,
+        `destacar uma informação intercalada com maior relevo gráfico do que a simples vírgula.`,
+        `marcar a omissão do verbo principal na oração situada entre os sinais.`,
+        `introduzir uma enumeração cujos itens são “publicado”, “meses” e “debate”.`,
     ],
 
     correta: 2,
 
     explicacao:
-    `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
+    `Os travessões destacam uma informação explicativa intercalada, produzindo relevo maior que o de uma intercalação neutra por vírgulas.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Os travessões destacam uma informação explicativa intercalada, produzindo relevo maior que o de uma intercalação neutra por vírgulas.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “destacar uma informação intercalada com maior relevo gráfico do que a simples vírgula.”. Os travessões destacam uma informação explicativa intercalada, produzindo relevo maior que o de uma intercalação neutra por vírgulas.`,
 
     dicaBanca:
-    `Nunca separe sujeito e verbo por vírgula simples.`
+    `Além da correção sintática, alguns sinais também modulam o grau de destaque discursivo.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
+    `Na frase “O resultado (ainda provisório) foi divulgado no portal”, os parênteses servem para:`,
 
     alternativas: [
-        `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
+        `indicar que “ainda provisório” constitui o sujeito sintático da oração principal e determina a concordância da forma verbal.`,
+        `abrir uma citação literal retirada de documento oficial anteriormente mencionado.`,
+        `marcar a supressão de uma palavra necessária à concordância do período.`,
+        `inserir uma observação acessória com relativo afastamento do fluxo principal da frase.`,
+        `separar duas orações coordenadas que poderiam ser unidas pela conjunção “mas”.`,
     ],
 
     correta: 3,
 
     explicacao:
-    `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
+    `Os parênteses introduzem uma informação acessória ou comentário que fica relativamente destacado do fluxo principal.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Os parênteses introduzem uma informação acessória ou comentário que fica relativamente destacado do fluxo principal.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “inserir uma observação acessória com relativo afastamento do fluxo principal da frase.”. Os parênteses introduzem uma informação acessória ou comentário que fica relativamente destacado do fluxo principal.`,
 
     dicaBanca:
-    `Ponto e vírgula separa unidades coordenadas mais independentes.`
+    `Pense no grau de integração do comentário ao enunciado principal.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula foi usada corretamente.`,
+    `Assinale a frase em que os parênteses foram empregados de modo coerente para inserir uma informação secundária.`,
 
     alternativas: [
-        `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
-        `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`
+        `A comissão analisou (os recursos e publicou) o resultado no portal antes da divulgação oficial.`,
+        `A comissão (analisou os recursos) e publicou o resultado no portal.`,
+        `A comissão analisou os (recursos) e publicou o resultado no portal.`,
+        `A comissão analisou os recursos e (publicou) o resultado no portal.`,
+        `A comissão analisou os recursos (vinte e três ao todo) antes da decisão final.`,
     ],
 
     correta: 4,
 
     explicacao:
-    `A oração adverbial deslocada no início deve ser separada por vírgula.`,
+    `“Vinte e três ao todo” é comentário acessório que pode ser retirado sem desmontar a estrutura sintática básica.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. “Vinte e três ao todo” é comentário acessório que pode ser retirado sem desmontar a estrutura sintática básica.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “A comissão analisou os recursos (vinte e três ao todo) antes da decisão final.”. “Vinte e três ao todo” é comentário acessório que pode ser retirado sem desmontar a estrutura sintática básica.`,
 
     dicaBanca:
-    `Oração adverbial anteposta pede vírgula.`
+    `Um bom teste é retirar o trecho entre parênteses e verificar se a oração-base continua íntegra.`
 },
 
 {
     pergunta:
-    `A pontuação está correta em:`,
+    `Em “A palavra ‘adequação’ não significa abandono da norma-padrão”, as aspas em “adequação” podem sinalizar:`,
 
     alternativas: [
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem serão publicados hoje.`,
-        `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`,
+        `uso metalinguístico, pois o enunciado toma a própria palavra como objeto de comentário.`,
+        `ironia, indicando que o autor considera inadequado o termo citado diante da avaliação negativa construída pelo contexto.`,
+        `fala direta de personagem, mesmo sem verbo de elocução no período.`,
+        `omissão de conteúdo recuperável em uma citação anteriormente apresentada.`,
+        `uma enumeração de conceitos que deveria ser completada com dois-pontos.`,
     ],
 
     correta: 0,
 
     explicacao:
-    `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
+    `As aspas podem indicar uso metalinguístico quando uma palavra ou expressão é mencionada como objeto de análise.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. As aspas podem indicar uso metalinguístico quando uma palavra ou expressão é mencionada como objeto de análise.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “uso metalinguístico, pois o enunciado toma a própria palavra como objeto de comentário.”. As aspas podem indicar uso metalinguístico quando uma palavra ou expressão é mencionada como objeto de análise.`,
 
     dicaBanca:
-    `Oração explicativa acrescenta informação acessória e vem isolada.`
+    `Pergunte se o texto está usando a palavra ou falando sobre a palavra.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula está inadequada.`,
+    `Assinale a alternativa em que as aspas são usadas para marcar uma citação direta curta no interior do período.`,
 
     alternativas: [
-        `Os servidores entregaram os formulários no protocolo central.`,
-        `Os servidores, entregaram os formulários no protocolo central.`,
-        `No protocolo central, os servidores entregaram os formulários.`,
-        `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`
+        `O diretor afirmou que “o prazo seria revisto sem apresentar palavras literais do comunicado”.`,
+        `O diretor declarou: “O prazo será revisto após a reunião da comissão.”`,
+        `O diretor “declarou que o prazo seria revisto” após a reunião da comissão.`,
+        `“O diretor declarou” que o prazo seria revisto após a reunião da comissão.`,
+        `O diretor declarou que o “prazo seria revisto após a reunião” sem reproduzir fala alheia.`,
     ],
 
     correta: 1,
 
     explicacao:
-    `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
+    `Após verbo de elocução e dois-pontos, as aspas delimitam a reprodução literal da fala do diretor.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Após verbo de elocução e dois-pontos, as aspas delimitam a reprodução literal da fala do diretor.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “O diretor declarou: “O prazo será revisto após a reunião da comissão.””. Após verbo de elocução e dois-pontos, as aspas delimitam a reprodução literal da fala do diretor.`,
 
     dicaBanca:
-    `Nunca separe sujeito e verbo por vírgula simples.`
+    `Citação direta reproduz palavras; discurso indireto reconstrói o conteúdo.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
+    `No enunciado “Que ótimo resultado!”, dito após a equipe obter nota muito baixa, as aspas poderiam ser usadas em “ótimo” para sugerir:`,
 
     alternativas: [
-        `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
+        `uma enumeração de propriedades objetivas do resultado apresentado.`,
+        `a presença de uma oração subordinada adjetiva explicativa reduzida.`,
+        `um distanciamento irônico em relação ao sentido literal da palavra.`,
+        `a supressão de uma fala anterior necessária para completar o período.`,
+        `a mudança de interlocutor em um diálogo formal sem verbo de elocução.`,
     ],
 
     correta: 2,
 
     explicacao:
-    `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
+    `As aspas podem marcar ironia ou distanciamento quando o contexto contraria o valor literal da expressão.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. As aspas podem marcar ironia ou distanciamento quando o contexto contraria o valor literal da expressão.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “um distanciamento irônico em relação ao sentido literal da palavra.”. As aspas podem marcar ironia ou distanciamento quando o contexto contraria o valor literal da expressão.`,
 
     dicaBanca:
-    `Ponto e vírgula separa unidades coordenadas mais independentes.`
+    `Em questões de efeito de sentido, compare o valor literal da palavra com a situação descrita.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula foi usada corretamente.`,
+    `Na frase “O candidato abriu o resultado, leu a primeira linha e... permaneceu em silêncio”, as reticências sugerem principalmente:`,
 
     alternativas: [
-        `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
-        `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`
+        `uma enumeração completa e fechada das ações realizadas pelo candidato.`,
+        `uma explicação objetiva do motivo pelo qual o candidato ficou em silêncio, explicitada pelo narrador na sequência do período.`,
+        `uma oposição lógica equivalente à conjunção adversativa “mas”.`,
+        `uma suspensão do fluxo enunciativo, criando expectativa ou efeito de continuidade interrompida.`,
+        `uma citação indireta livre atribuída ao candidato sem marcação de narrador.`,
     ],
 
     correta: 3,
 
     explicacao:
-    `A oração adverbial deslocada no início deve ser separada por vírgula.`,
+    `As reticências podem indicar suspensão, hesitação, expectativa ou continuidade não explicitada, conforme o contexto.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. As reticências podem indicar suspensão, hesitação, expectativa ou continuidade não explicitada, conforme o contexto.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “uma suspensão do fluxo enunciativo, criando expectativa ou efeito de continuidade interrompida.”. As reticências podem indicar suspensão, hesitação, expectativa ou continuidade não explicitada, conforme o contexto.`,
 
     dicaBanca:
-    `Oração adverbial anteposta pede vírgula.`
+    `Observe o que o texto deixa em aberto em vez de apenas nomear o sinal.`
 },
 
 {
     pergunta:
-    `A pontuação está correta em:`,
+    `Assinale o enunciado em que o ponto de interrogação produz uma pergunta direta, e não uma afirmação disfarçada por outra pontuação.`,
 
     alternativas: [
-        `Os documentos que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem serão publicados hoje.`,
-        `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`
+        `Gostaria de saber, quando será divulgado o resultado?`,
+        `Gostaria de saber: quando será divulgado o resultado.`,
+        `Gostaria de saber quando, será divulgado o resultado?`,
+        `Gostaria de saber quando será divulgado o resultado?.`,
+        `Quando será divulgado o resultado?`,
     ],
 
     correta: 4,
 
     explicacao:
-    `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
+    `“Quando será divulgado o resultado?” é uma interrogativa direta completa; a pergunta indireta “Gostaria de saber quando...” não exige ponto de interrogação por sua forma sintática.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. “Quando será divulgado o resultado?” é uma interrogativa direta completa; a pergunta indireta “Gostaria de saber quando...” não exige ponto de interrogação por sua forma sintática.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “Quando será divulgado o resultado?”. “Quando será divulgado o resultado?” é uma interrogativa direta completa; a pergunta indireta “Gostaria de saber quando...” não exige ponto de interrogação por sua forma sintática.`,
 
     dicaBanca:
-    `Oração explicativa acrescenta informação acessória e vem isolada.`
+    `Diferencie interrogativa direta de oração interrogativa indireta subordinada.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula está inadequada.`,
+    `Compare: I. “Você entregou o relatório.” II. “Você entregou o relatório?” A mudança de ponto final para ponto de interrogação:`,
 
     alternativas: [
-        `Os servidores, entregaram os formulários no protocolo central.`,
-        `Os servidores entregaram os formulários no protocolo central.`,
-        `No protocolo central, os servidores entregaram os formulários.`,
-        `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`,
+        `altera a força enunciativa: I apresenta a informação como declaração; II a apresenta como pergunta direta.`,
+        `modifica a função sintática de “relatório”, que deixa de ser objeto e passa a ser sujeito dentro da organização do período.`,
+        `faz o verbo “entregou” mudar de transitividade e passar a exigir preposição.`,
+        `transforma o pronome “você” em vocativo, retirando-o da estrutura da oração.`,
+        `converte uma oração simples em período composto por subordinação substantiva.`,
     ],
 
     correta: 0,
 
     explicacao:
-    `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
+    `A pontuação final participa da modalidade do enunciado: declarativa em I e interrogativa direta em II.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. A pontuação final participa da modalidade do enunciado: declarativa em I e interrogativa direta em II.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “altera a força enunciativa: I apresenta a informação como declaração; II a apresenta como pergunta direta.”. A pontuação final participa da modalidade do enunciado: declarativa em I e interrogativa direta em II.`,
 
     dicaBanca:
-    `Nunca separe sujeito e verbo por vírgula simples.`
+    `Sinais finais também produzem efeitos de modalidade, não apenas pausas.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
+    `Na frase “Silêncio!”, o ponto de exclamação contribui para:`,
 
     alternativas: [
-        `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
+        `indicar que “silêncio” funciona como sujeito de um verbo elíptico no futuro dentro da estrutura principal da oração.`,
+        `intensificar o valor expressivo e injuntivo do enunciado no contexto de ordem.`,
+        `marcar uma enumeração interrompida antes de seu último elemento.`,
+        `introduzir um comentário parentético que poderia ser isolado por travessões.`,
+        `transformar o substantivo “silêncio” em oração subordinada objetiva direta.`,
     ],
 
     correta: 1,
 
     explicacao:
-    `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
+    `O ponto de exclamação reforça a expressividade e pode intensificar ordem, emoção, surpresa ou chamamento conforme o contexto.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. O ponto de exclamação reforça a expressividade e pode intensificar ordem, emoção, surpresa ou chamamento conforme o contexto.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “intensificar o valor expressivo e injuntivo do enunciado no contexto de ordem.”. O ponto de exclamação reforça a expressividade e pode intensificar ordem, emoção, surpresa ou chamamento conforme o contexto.`,
 
     dicaBanca:
-    `Ponto e vírgula separa unidades coordenadas mais independentes.`
+    `Associe o sinal à atitude comunicativa construída pelo enunciado.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula foi usada corretamente.`,
+    `Assinale a alternativa em que o ponto final foi usado para criar efeito de ritmo fragmentado sem gerar erro sintático no trecho apresentado.`,
 
     alternativas: [
-        `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
-        `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`
+        `A comissão analisou. Os recursos porque havia prazo curto.`,
+        `A comissão. Analisou os recursos antes da publicação.`,
+        `Abriu o envelope. Conferiu o nome. Respirou fundo. Começou a prova.`,
+        `Os candidatos entregaram. Os documentos exigidos pela comissão.`,
+        `O professor explicou a regra. E porque precisava revisar o conteúdo.`,
     ],
 
     correta: 2,
 
     explicacao:
-    `A oração adverbial deslocada no início deve ser separada por vírgula.`,
+    `A sequência de orações completas e curtas produz ritmo fragmentado e acelera a progressão narrativa sem deixar fragmentos sintaticamente dependentes.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. A sequência de orações completas e curtas produz ritmo fragmentado e acelera a progressão narrativa sem deixar fragmentos sintaticamente dependentes.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “Abriu o envelope. Conferiu o nome. Respirou fundo. Começou a prova.”. A sequência de orações completas e curtas produz ritmo fragmentado e acelera a progressão narrativa sem deixar fragmentos sintaticamente dependentes.`,
 
     dicaBanca:
-    `Oração adverbial anteposta pede vírgula.`
+    `Ponto final pode ser recurso estilístico, desde que cada unidade resulte em enunciado autônomo no contexto.`
 },
 
 {
     pergunta:
-    `A pontuação está correta em:`,
+    `Em “O problema era um só: tempo”, o uso dos dois-pontos antes de “tempo” tem o efeito de:`,
 
     alternativas: [
-        `Os documentos que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem serão publicados hoje.`,
-        `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`
+        `separar o verbo de ligação de um predicativo que deveria ficar sem pontuação.`,
+        `introduzir uma oração concessiva que relativiza a afirmação anterior.`,
+        `marcar a fala de uma personagem omitida pelo narrador do período.`,
+        `destacar a especificação do elemento anunciado pela expressão “um só”.`,
+        `indicar a elipse de um conectivo adversativo entre as duas partes do enunciado.`,
     ],
 
     correta: 3,
 
     explicacao:
-    `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
+    `Os dois-pontos introduzem a especificação do conteúdo anunciado por “um só”.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Os dois-pontos introduzem a especificação do conteúdo anunciado por “um só”.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “destacar a especificação do elemento anunciado pela expressão “um só”.”. Os dois-pontos introduzem a especificação do conteúdo anunciado por “um só”.`,
 
     dicaBanca:
-    `Oração explicativa acrescenta informação acessória e vem isolada.`
+    `Observe se a segunda parte responde ou desenvolve algo anunciado na primeira.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula está inadequada.`,
+    `Assinale a alternativa que representa adequadamente uma fala direta seguida de intervenção do narrador.`,
 
     alternativas: [
-        `Os servidores entregaram os formulários no protocolo central.`,
-        `No protocolo central, os servidores entregaram os formulários.`,
-        `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`,
-        `Os servidores, entregaram os formulários no protocolo central.`
+        `“A prova começará às oito”, o fiscal anunciou aos candidatos.`,
+        `“A prova começará às oito.” — o fiscal, anunciou aos candidatos.`,
+        `— A prova começará às oito, o fiscal anunciou — aos candidatos.`,
+        `— A prova começará — às oito anunciou o fiscal aos candidatos.`,
+        `— A prova começará às oito — anunciou o fiscal aos candidatos.`,
     ],
 
     correta: 4,
 
     explicacao:
-    `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
+    `No diálogo, o travessão pode separar a fala direta da oração de elocução do narrador.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. No diálogo, o travessão pode separar a fala direta da oração de elocução do narrador.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “— A prova começará às oito — anunciou o fiscal aos candidatos.”. No diálogo, o travessão pode separar a fala direta da oração de elocução do narrador.`,
 
     dicaBanca:
-    `Nunca separe sujeito e verbo por vírgula simples.`
+    `Identifique a fala reproduzida e o segmento que informa quem falou.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
+    `Considere: I. “Não, espere.” II. “Não espere.” A vírgula em I produz a diferença de que:`,
 
     alternativas: [
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
-        `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`,
+        `em I, “não” funciona como resposta negativa autônoma seguida de uma ordem; em II, nega diretamente o verbo “espere”.`,
+        `em I, “espere” é substantivo; em II, é verbo transitivo indireto com sujeito expresso.`,
+        `em I, a vírgula transforma “não” em vocativo e, em II, o termo passa a atuar como predicativo dentro da estrutura principal.`,
+        `em I, há oração subordinada causal; em II, há uma oração adjetiva restritiva reduzida.`,
+        `em I, o verbo está no indicativo; em II, a pontuação modifica sua flexão para o subjuntivo.`,
     ],
 
     correta: 0,
 
     explicacao:
-    `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
+    `A vírgula pode alterar a segmentação e o sentido: “Não, espere” equivale a negar algo e depois pedir que se espere; “Não espere” proíbe esperar.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. A vírgula pode alterar a segmentação e o sentido: “Não, espere” equivale a negar algo e depois pedir que se espere; “Não espere” proíbe esperar.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “em I, “não” funciona como resposta negativa autônoma seguida de uma ordem; em II, nega diretamente o verbo “espere”.”. A vírgula pode alterar a segmentação e o sentido: “Não, espere” equivale a negar algo e depois pedir que se espere; “Não espere” proíbe esperar.`,
 
     dicaBanca:
-    `Ponto e vírgula separa unidades coordenadas mais independentes.`
+    `Leia os dois enunciados em voz interna e identifique qual palavra a negação atinge.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula foi usada corretamente.`,
+    `Compare: I. “Vamos comer, crianças.” II. “Vamos comer crianças.” A vírgula em I é decisiva porque:`,
 
     alternativas: [
-        `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
-        `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`
+        `marca uma oração adverbial temporal que modifica a locução verbal “vamos comer”.`,
+        `isola “crianças” como vocativo; sem a vírgula, o termo passa a integrar o complemento do verbo.`,
+        `indica que o sujeito oculto de “vamos” é diferente nas duas versões e muda a referência nas construções apresentadas.`,
+        `faz “crianças” funcionar como aposto explicativo do sujeito elíptico “nós”.`,
+        `altera o tempo verbal de “vamos” e desloca a ação para um momento posterior.`,
     ],
 
     correta: 1,
 
     explicacao:
-    `A oração adverbial deslocada no início deve ser separada por vírgula.`,
+    `Com vírgula, “crianças” é chamamento; sem vírgula, a leitura sintática o integra como objeto de “comer”, mudando radicalmente o sentido.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Com vírgula, “crianças” é chamamento; sem vírgula, a leitura sintática o integra como objeto de “comer”, mudando radicalmente o sentido.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “isola “crianças” como vocativo; sem a vírgula, o termo passa a integrar o complemento do verbo.”. Com vírgula, “crianças” é chamamento; sem vírgula, a leitura sintática o integra como objeto de “comer”, mudando radicalmente o sentido.`,
 
     dicaBanca:
-    `Oração adverbial anteposta pede vírgula.`
+    `Pontuação pode decidir a função sintática de um termo e, com ela, o sentido do enunciado.`
 },
 
 {
     pergunta:
-    `A pontuação está correta em:`,
+    `Assinale a alternativa em que a retirada das vírgulas mudaria uma oração adjetiva de explicativa para restritiva.`,
 
     alternativas: [
-        `Os documentos que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`
+        `Os candidatos, após a prova, aguardaram o gabarito preliminar.`,
+        `A diretora, entretanto, manteve a reunião marcada para a tarde, preservando o conectivo como elemento intercalado.`,
+        `Os servidores, que trabalham no atendimento, receberão nova orientação.`,
+        `Professores, entreguem os planos até o fim do expediente.`,
+        `O relatório, segundo a comissão, será publicado ainda hoje.`,
     ],
 
     correta: 2,
 
     explicacao:
-    `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
+    `Em “Os servidores, que trabalham no atendimento,...”, as vírgulas tornam a oração adjetiva explicativa; sem elas, a oração passa a restringir o grupo de servidores.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Em “Os servidores, que trabalham no atendimento,...”, as vírgulas tornam a oração adjetiva explicativa; sem elas, a oração passa a restringir o grupo de servidores.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “Os servidores, que trabalham no atendimento, receberão nova orientação.”. Em “Os servidores, que trabalham no atendimento,...”, as vírgulas tornam a oração adjetiva explicativa; sem elas, a oração passa a restringir o grupo de servidores.`,
 
     dicaBanca:
-    `Oração explicativa acrescenta informação acessória e vem isolada.`
+    `Procure uma oração introduzida por pronome relativo e observe o papel das vírgulas.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula está inadequada.`,
+    `Na frase “Os candidatos, cansados, deixaram o prédio em silêncio”, a retirada das vírgulas tenderia a:`,
 
     alternativas: [
-        `Os servidores entregaram os formulários no protocolo central.`,
-        `No protocolo central, os servidores entregaram os formulários.`,
-        `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, entregaram os formulários no protocolo central.`,
-        `Os servidores, após a orientação, entregaram os formulários.`
+        `separar o sujeito do verbo e tornar a frase incompatível com a norma-padrão.`,
+        `converter o adjetivo “cansados” em advérbio de modo, atribuindo-lhe função circunstancial diretamente ligada ao verbo “deixaram”.`,
+        `criar uma oração subordinada adverbial causal reduzida de infinitivo.`,
+        `favorecer leitura restritiva de “cansados”, como se o enunciado selecionasse quais candidatos deixaram o prédio.`,
+        `alterar a concordância do verbo “deixaram”, que passaria ao singular por atração.`,
     ],
 
     correta: 3,
 
     explicacao:
-    `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
+    `Entre vírgulas, “cansados” assume valor explicativo/predicativo incidente sobre o conjunto; sem elas, pode ganhar leitura restritiva ligada ao nome.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Entre vírgulas, “cansados” assume valor explicativo/predicativo incidente sobre o conjunto; sem elas, pode ganhar leitura restritiva ligada ao nome.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “favorecer leitura restritiva de “cansados”, como se o enunciado selecionasse quais candidatos deixaram o prédio.”. Entre vírgulas, “cansados” assume valor explicativo/predicativo incidente sobre o conjunto; sem elas, pode ganhar leitura restritiva ligada ao nome.`,
 
     dicaBanca:
-    `Nunca separe sujeito e verbo por vírgula simples.`
+    `Compare informação acessória sobre o conjunto com característica usada para selecionar parte dele.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
+    `Assinale a alternativa em que a pontuação evita ambiguidade ao separar um adjunto adverbial intercalado.`,
 
     alternativas: [
-        `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`
+        `O professor informou aos alunos na reunião que a prova mudaria de data.`,
+        `O professor informou, aos alunos na reunião que a prova, mudaria de data.`,
+        `O professor, informou aos alunos, na reunião que a prova mudaria de data.`,
+        `O professor informou aos alunos na, reunião, que a prova mudaria de data.`,
+        `O professor informou aos alunos, na reunião, que a prova mudaria de data.`,
     ],
 
     correta: 4,
 
     explicacao:
-    `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
+    `As vírgulas isolam “na reunião” como circunstância intercalada, deixando mais nítida a ligação entre “informou aos alunos” e a oração que expressa o conteúdo informado.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. As vírgulas isolam “na reunião” como circunstância intercalada, deixando mais nítida a ligação entre “informou aos alunos” e a oração que expressa o conteúdo informado.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “O professor informou aos alunos, na reunião, que a prova mudaria de data.”. As vírgulas isolam “na reunião” como circunstância intercalada, deixando mais nítida a ligação entre “informou aos alunos” e a oração que expressa o conteúdo informado.`,
 
     dicaBanca:
-    `Ponto e vírgula separa unidades coordenadas mais independentes.`
+    `Quando um adjunto se encaixa entre termos fortemente relacionados, o isolamento pode favorecer clareza.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula foi usada corretamente.`,
+    `Em “O projeto foi aprovado; a execução, porém, dependerá de recursos adicionais”, o ponto e vírgula e as vírgulas cumprem, respectivamente, as funções de:`,
 
     alternativas: [
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
-        `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
+        `separar duas orações coordenadas relativamente independentes e isolar um conectivo adversativo intercalado.`,
+        `isolar um vocativo extenso e marcar a elipse do verbo principal da segunda oração.`,
+        `introduzir uma explicação e separar o sujeito “execução” do verbo “dependerá”.`,
+        `marcar discurso direto e indicar uma oração adjetiva restritiva no interior do período, como parte de um discurso relatado.`,
+        `separar verbo e complemento e destacar um aposto enumerativo ligado a “execução”.`,
     ],
 
     correta: 0,
 
     explicacao:
-    `A oração adverbial deslocada no início deve ser separada por vírgula.`,
+    `O ponto e vírgula separa duas unidades coordenadas com autonomia relativa; “porém” está intercalado e fica isolado por vírgulas.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. O ponto e vírgula separa duas unidades coordenadas com autonomia relativa; “porém” está intercalado e fica isolado por vírgulas.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “separar duas orações coordenadas relativamente independentes e isolar um conectivo adversativo intercalado.”. O ponto e vírgula separa duas unidades coordenadas com autonomia relativa; “porém” está intercalado e fica isolado por vírgulas.`,
 
     dicaBanca:
-    `Oração adverbial anteposta pede vírgula.`
+    `Analise cada sinal separadamente e depois relacione suas funções na estrutura global.`
 },
 
 {
     pergunta:
-    `A pontuação está correta em:`,
+    `Assinale a alternativa cuja pontuação mantém corretamente a estrutura “não só... mas também...” sem inserir vírgula entre termos coordenados simples.`,
 
     alternativas: [
-        `Os documentos que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem, serão publicados hoje.`,
-        `Os documentos, que foram revisados ontem serão publicados hoje.`,
-        `Os documentos que foram revisados, ontem serão publicados hoje.`,
-        `Os documentos que, foram revisados ontem, serão publicados hoje.`
+        `O curso desenvolve não só leitura, mas também, escrita acadêmica.`,
+        `O curso desenvolve não só leitura mas também escrita acadêmica.`,
+        `O curso desenvolve, não só leitura mas também escrita acadêmica.`,
+        `O curso, desenvolve não só leitura mas também escrita acadêmica.`,
+        `O curso desenvolve não só, leitura mas também escrita acadêmica.`,
     ],
 
     correta: 1,
 
     explicacao:
-    `A oração adjetiva explicativa deve ser isolada por vírgulas.`,
+    `Quando “não só... mas também...” coordena termos simples dentro da mesma oração, a estrutura pode ser construída sem vírgula entre os elementos correlativos.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Quando “não só... mas também...” coordena termos simples dentro da mesma oração, a estrutura pode ser construída sem vírgula entre os elementos correlativos.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “O curso desenvolve não só leitura mas também escrita acadêmica.”. Quando “não só... mas também...” coordena termos simples dentro da mesma oração, a estrutura pode ser construída sem vírgula entre os elementos correlativos.`,
 
     dicaBanca:
-    `Oração explicativa acrescenta informação acessória e vem isolada.`
+    `Primeiro identifique se há coordenação de orações completas ou de termos da mesma função.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula está inadequada.`,
+    `Considere “O professor corrigiu as provas; a coordenadora, os relatórios; a secretária, as atas.” A análise correta é:`,
 
     alternativas: [
-        `Os servidores entregaram os formulários no protocolo central.`,
-        `No protocolo central, os servidores entregaram os formulários.`,
-        `Os servidores, entregaram os formulários no protocolo central.`,
-        `Os servidores entregaram, no protocolo central, os formulários.`,
-        `Os servidores, após a orientação, entregaram os formulários.`
+        `os pontos e vírgulas separam orações subordinadas, e as vírgulas introduzem vocativos.`,
+        `as vírgulas separam sujeito e verbo, e os pontos e vírgulas compensam esse desvio sintático.`,
+        `os pontos e vírgulas separam estruturas paralelas, e as vírgulas marcam a elipse de “corrigiu”.`,
+        `os pontos e vírgulas introduzem citações, e as vírgulas isolam orações adjetivas explicativas.`,
+        `as vírgulas indicam enumeração de objetos, e os pontos e vírgulas substituem dois-pontos obrigatórios.`,
     ],
 
     correta: 2,
 
     explicacao:
-    `Não se separa sujeito e predicado por vírgula sem motivo estrutural.`,
+    `As três estruturas são paralelas; nas duas últimas, a vírgula marca a elipse do verbo “corrigiu”, e o ponto e vírgula separa as unidades maiores.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. As três estruturas são paralelas; nas duas últimas, a vírgula marca a elipse do verbo “corrigiu”, e o ponto e vírgula separa as unidades maiores.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “os pontos e vírgulas separam estruturas paralelas, e as vírgulas marcam a elipse de “corrigiu”.”. As três estruturas são paralelas; nas duas últimas, a vírgula marca a elipse do verbo “corrigiu”, e o ponto e vírgula separa as unidades maiores.`,
 
     dicaBanca:
-    `Nunca separe sujeito e verbo por vírgula simples.`
+    `Em estruturas paralelas, verifique se um verbo expresso na primeira parte foi omitido nas seguintes.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que o ponto e vírgula está bem empregado.`,
+    `Na frase “Se os dados estiverem corretos — e tudo indica que estão —, o relatório será publicado hoje”, os travessões e a vírgula:`,
 
     alternativas: [
-        `Alguns servidores; revisaram os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram; os anexos outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos outros; conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os anexos; outros conferiram os dados cadastrais.`,
-        `Alguns servidores revisaram os; anexos outros conferiram os dados cadastrais.`
+        `criam uma enumeração de duas condições independentes para a publicação do relatório e indicam que ambas antecedem a oração principal.`,
+        `marcam uma fala direta inserida no interior de outra fala sem mudança de interlocutor.`,
+        `isolam o sujeito da oração principal e substituem a preposição exigida por “publicado”.`,
+        `destacam um comentário intercalado dentro da oração condicional, enquanto a vírgula encerra a oração adverbial anteposta.`,
+        `separam duas orações substantivas coordenadas que funcionam como objeto do verbo “indica”.`,
     ],
 
     correta: 3,
 
     explicacao:
-    `O ponto e vírgula separa orações coordenadas extensas ou com contraste organizado.`,
+    `Os travessões isolam o comentário “e tudo indica que estão”; a vírgula após o segundo travessão marca o fim da oração condicional anteposta.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. Os travessões isolam o comentário “e tudo indica que estão”; a vírgula após o segundo travessão marca o fim da oração condicional anteposta.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “destacam um comentário intercalado dentro da oração condicional, enquanto a vírgula encerra a oração adverbial anteposta.”. Os travessões isolam o comentário “e tudo indica que estão”; a vírgula após o segundo travessão marca o fim da oração condicional anteposta.`,
 
     dicaBanca:
-    `Ponto e vírgula separa unidades coordenadas mais independentes.`
+    `Em períodos com sinais combinados, identifique primeiro a estrutura que existiria sem o comentário intercalado.`
 },
 
 {
     pergunta:
-    `Assinale a alternativa em que a vírgula foi usada corretamente.`,
+    `Assinale a alternativa cuja pontuação organiza corretamente o período e preserva as relações de sentido indicadas.`,
 
     alternativas: [
-        `Quando o prazo, terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe, encerrou o recebimento dos recursos.`,
-        `Quando, o prazo terminou a equipe encerrou o recebimento dos recursos.`,
-        `Quando o prazo terminou a equipe encerrou, o recebimento dos recursos.`,
-        `Quando o prazo terminou, a equipe encerrou o recebimento dos recursos.`
+        `Embora o prazo fosse curto a comissão, revisou os recursos; e publicou o resultado.`,
+        `Embora o prazo, fosse curto, a comissão revisou os recursos e publicou, o resultado.`,
+        `Embora o prazo fosse curto; a comissão revisou, os recursos e publicou o resultado.`,
+        `Embora o prazo fosse curto a comissão revisou os recursos, e publicou o resultado.`,
+        `Embora o prazo fosse curto, a comissão revisou os recursos e publicou o resultado.`,
     ],
 
     correta: 4,
 
     explicacao:
-    `A oração adverbial deslocada no início deve ser separada por vírgula.`,
+    `A oração concessiva anteposta deve ser separada por vírgula; na oração principal, não há motivo para separar sujeito, verbo, complementos ou verbos coordenados pelo mesmo sujeito.`,
 
     feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
+    `Correto. A oração concessiva anteposta deve ser separada por vírgula; na oração principal, não há motivo para separar sujeito, verbo, complementos ou verbos coordenados pelo mesmo sujeito.`,
 
     feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura do texto e a relação de sentido apresentada no enunciado.`,
+    `A alternativa correta é “Embora o prazo fosse curto, a comissão revisou os recursos e publicou o resultado.”. A oração concessiva anteposta deve ser separada por vírgula; na oração principal, não há motivo para separar sujeito, verbo, complementos ou verbos coordenados pelo mesmo sujeito.`,
 
     dicaBanca:
-    `Oração adverbial anteposta pede vírgula.`
-}];
+    `Combine a regra da oração adverbial anteposta com a proibição de vírgulas entre termos sintaticamente ligados.`
+}
+
+];

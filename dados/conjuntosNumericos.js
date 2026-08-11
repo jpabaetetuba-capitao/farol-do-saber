@@ -1,1147 +1,100 @@
+// FAROL DO SABER - CONJUNTOS NUMÉRICOS E OPERAÇÕES COM CONJUNTOS
+// Banco revisado: 70 questões de nível concurso, com gabarito balanceado.
+
 const conjuntosNumericos = [
     {
         "subtopico": "Noção de conjunto",
-        "pergunta": "Em uma questão de concurso sobre conjuntos, a alternativa mais adequada para Noção de conjunto é:",
+        "pergunta": "Considere A = {2, 4, 6, 8}. Qual afirmação descreve corretamente esse conjunto?",
         "alternativas": [
-            "Identificar conjunto como coleção bem definida de elementos, em que se pode decidir a pertença de cada item.",
-            "Aceitar qualquer agrupamento subjetivo como conjunto, mesmo quando a característica de inclusão é vaga ou ambígua.",
-            "Restringir a noção de conjunto apenas a coleções numéricas, excluindo letras, objetos e pessoas do conceito matemático.",
-            "Considerar conjunto somente quando todos os elementos estiverem listados explicitamente entre chaves.",
-            "Definir conjunto como uma sequência ordenada em que a repetição de elementos altera sua natureza."
+            "A possui quatro elementos distintos e a ordem em que foram escritos não altera o conjunto.",
+            "A possui oito elementos porque o maior valor listado é 8.",
+            "A muda de natureza se seus elementos forem escritos na ordem inversa.",
+            "A admite repetição de um elemento como forma de aumentar a cardinalidade do conjunto representado.",
+            "A representa uma sequência ordenada, e não uma coleção de elementos."
         ],
         "correta": 0,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Noção de conjunto com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Noção de conjunto, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Noção de conjunto misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Noção de conjunto",
-        "pergunta": "Ao analisar um problema contextualizado de conjuntos e conjuntos numéricos, é correto afirmar, no tema Noção de conjunto, que:",
-        "alternativas": [
-            "Aceitar qualquer agrupamento subjetivo como conjunto, mesmo quando a característica de inclusão é vaga ou ambígua.",
-            "Identificar conjunto como coleção bem definida de elementos, em que se pode decidir a pertença de cada item.",
-            "Restringir a noção de conjunto apenas a coleções numéricas, excluindo letras, objetos e pessoas do conceito matemático.",
-            "Considerar conjunto somente quando todos os elementos estiverem listados explicitamente entre chaves.",
-            "Definir conjunto como uma sequência ordenada em que a repetição de elementos altera sua natureza."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Noção de conjunto com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Noção de conjunto, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Noção de conjunto misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Noção de conjunto",
-        "pergunta": "Uma situação de sala de aula exige interpretar símbolos e operações entre conjuntos. À luz de Noção de conjunto, assinale a alternativa correta:",
-        "alternativas": [
-            "Aceitar qualquer agrupamento subjetivo como conjunto, mesmo quando a característica de inclusão é vaga ou ambígua.",
-            "Restringir a noção de conjunto apenas a coleções numéricas, excluindo letras, objetos e pessoas do conceito matemático.",
-            "Identificar conjunto como coleção bem definida de elementos, em que se pode decidir a pertença de cada item.",
-            "Considerar conjunto somente quando todos os elementos estiverem listados explicitamente entre chaves.",
-            "Definir conjunto como uma sequência ordenada em que a repetição de elementos altera sua natureza."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Noção de conjunto com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Noção de conjunto, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Noção de conjunto misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Noção de conjunto",
-        "pergunta": "Durante a resolução de um item de Matemática, o candidato deve lembrar que, em Noção de conjunto, é correto:",
-        "alternativas": [
-            "Aceitar qualquer agrupamento subjetivo como conjunto, mesmo quando a característica de inclusão é vaga ou ambígua.",
-            "Restringir a noção de conjunto apenas a coleções numéricas, excluindo letras, objetos e pessoas do conceito matemático.",
-            "Considerar conjunto somente quando todos os elementos estiverem listados explicitamente entre chaves.",
-            "Identificar conjunto como coleção bem definida de elementos, em que se pode decidir a pertença de cada item.",
-            "Definir conjunto como uma sequência ordenada em que a repetição de elementos altera sua natureza."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Noção de conjunto com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Noção de conjunto, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Noção de conjunto misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Noção de conjunto",
-        "pergunta": "Para evitar armadilhas de prova, no conteúdo Noção de conjunto deve-se considerar que:",
-        "alternativas": [
-            "Aceitar qualquer agrupamento subjetivo como conjunto, mesmo quando a característica de inclusão é vaga ou ambígua.",
-            "Restringir a noção de conjunto apenas a coleções numéricas, excluindo letras, objetos e pessoas do conceito matemático.",
-            "Considerar conjunto somente quando todos os elementos estiverem listados explicitamente entre chaves.",
-            "Definir conjunto como uma sequência ordenada em que a repetição de elementos altera sua natureza.",
-            "Identificar conjunto como coleção bem definida de elementos, em que se pode decidir a pertença de cada item."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Noção de conjunto com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Noção de conjunto, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Noção de conjunto misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
+        "feedbackAcerto": "\n🎉 Excelente! Em conjuntos, a cardinalidade conta elementos distintos; a ordem de apresentação não importa.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: A possui quatro elementos distintos e a ordem em que foram escritos não altera o conjunto.\n\nEm conjuntos, a cardinalidade conta elementos distintos; a ordem de apresentação não importa.\n",
+        "dicaBanca": "\nNão confunda conjunto com sequência: ordem e repetição não alteram um conjunto.\n"
     },
     {
         "subtopico": "Representação por extensão e compreensão",
-        "pergunta": "Em uma questão de concurso sobre conjuntos, a alternativa mais adequada para Representação por extensão e compreensão é:",
+        "pergunta": "O conjunto A = {x ∈ Z | -2 ≤ x < 3} pode ser escrito por extensão como:",
         "alternativas": [
-            "Afirmar que a representação por compreensão é válida apenas para conjuntos infinitos e a por extensão apenas para finitos.",
-            "Reconhecer que um mesmo conjunto pode ser descrito pela listagem de elementos ou por uma propriedade característica.",
-            "Entender que a mudança de representação altera os elementos do conjunto e, portanto, seu significado matemático.",
-            "Substituir a propriedade característica por exemplos isolados, sem garantir que todos os elementos do conjunto sejam descritos.",
-            "Considerar incorreta a representação por compreensão quando a regra estiver escrita com símbolos matemáticos."
+            "{-2, -1, 0, 1, 2, 3}",
+            "{-2, -1, 0, 1, 2}",
+            "{-1, 0, 1, 2}",
+            "{-2, -1, 1, 2}",
+            "{-3, -2, -1, 0, 1, 2}"
         ],
         "correta": 1,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Representação por extensão e compreensão com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Representação por extensão e compreensão, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Representação por extensão e compreensão misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Representação por extensão e compreensão",
-        "pergunta": "Ao analisar um problema contextualizado de conjuntos e conjuntos numéricos, é correto afirmar, no tema Representação por extensão e compreensão, que:",
-        "alternativas": [
-            "Afirmar que a representação por compreensão é válida apenas para conjuntos infinitos e a por extensão apenas para finitos.",
-            "Entender que a mudança de representação altera os elementos do conjunto e, portanto, seu significado matemático.",
-            "Reconhecer que um mesmo conjunto pode ser descrito pela listagem de elementos ou por uma propriedade característica.",
-            "Substituir a propriedade característica por exemplos isolados, sem garantir que todos os elementos do conjunto sejam descritos.",
-            "Considerar incorreta a representação por compreensão quando a regra estiver escrita com símbolos matemáticos."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Representação por extensão e compreensão com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Representação por extensão e compreensão, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Representação por extensão e compreensão misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Representação por extensão e compreensão",
-        "pergunta": "Uma situação de sala de aula exige interpretar símbolos e operações entre conjuntos. À luz de Representação por extensão e compreensão, assinale a alternativa correta:",
-        "alternativas": [
-            "Afirmar que a representação por compreensão é válida apenas para conjuntos infinitos e a por extensão apenas para finitos.",
-            "Entender que a mudança de representação altera os elementos do conjunto e, portanto, seu significado matemático.",
-            "Substituir a propriedade característica por exemplos isolados, sem garantir que todos os elementos do conjunto sejam descritos.",
-            "Reconhecer que um mesmo conjunto pode ser descrito pela listagem de elementos ou por uma propriedade característica.",
-            "Considerar incorreta a representação por compreensão quando a regra estiver escrita com símbolos matemáticos."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Representação por extensão e compreensão com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Representação por extensão e compreensão, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Representação por extensão e compreensão misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Representação por extensão e compreensão",
-        "pergunta": "Durante a resolução de um item de Matemática, o candidato deve lembrar que, em Representação por extensão e compreensão, é correto:",
-        "alternativas": [
-            "Afirmar que a representação por compreensão é válida apenas para conjuntos infinitos e a por extensão apenas para finitos.",
-            "Entender que a mudança de representação altera os elementos do conjunto e, portanto, seu significado matemático.",
-            "Substituir a propriedade característica por exemplos isolados, sem garantir que todos os elementos do conjunto sejam descritos.",
-            "Considerar incorreta a representação por compreensão quando a regra estiver escrita com símbolos matemáticos.",
-            "Reconhecer que um mesmo conjunto pode ser descrito pela listagem de elementos ou por uma propriedade característica."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Representação por extensão e compreensão com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Representação por extensão e compreensão, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Representação por extensão e compreensão misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Representação por extensão e compreensão",
-        "pergunta": "Para evitar armadilhas de prova, no conteúdo Representação por extensão e compreensão deve-se considerar que:",
-        "alternativas": [
-            "Reconhecer que um mesmo conjunto pode ser descrito pela listagem de elementos ou por uma propriedade característica.",
-            "Afirmar que a representação por compreensão é válida apenas para conjuntos infinitos e a por extensão apenas para finitos.",
-            "Entender que a mudança de representação altera os elementos do conjunto e, portanto, seu significado matemático.",
-            "Substituir a propriedade característica por exemplos isolados, sem garantir que todos os elementos do conjunto sejam descritos.",
-            "Considerar incorreta a representação por compreensão quando a regra estiver escrita com símbolos matemáticos."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Representação por extensão e compreensão com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Representação por extensão e compreensão, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Representação por extensão e compreensão misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
+        "feedbackAcerto": "\n🎉 Excelente! Como x é inteiro, entram todos os valores de -2 até 2; o 3 fica excluído pela desigualdade estrita.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {-2, -1, 0, 1, 2}\n\nComo x é inteiro, entram todos os valores de -2 até 2; o 3 fica excluído pela desigualdade estrita.\n",
+        "dicaBanca": "\nObserve com atenção os símbolos ≤ e < antes de listar os elementos.\n"
     },
     {
         "subtopico": "Pertinência e inclusão",
-        "pergunta": "Em uma questão de concurso sobre conjuntos, a alternativa mais adequada para Pertinência e inclusão é:",
+        "pergunta": "Se A = {1, 2, {3}} e B = {1, 2, 3}, assinale a relação verdadeira.",
         "alternativas": [
-            "Usar o símbolo de inclusão para indicar que um número pertence a um conjunto, por serem relações equivalentes.",
-            "Afirmar que um elemento e um subconjunto são indistinguíveis, desde que envolvam o mesmo número escrito entre chaves.",
-            "Distinguir a relação entre elemento e conjunto da relação entre conjunto e conjunto.",
-            "Tratar 2 ∈ {2} e {2} ⊂ {2} como enunciados idênticos em significado e uso.",
-            "Considerar que um conjunto só pode estar contido em outro se os dois tiverem exatamente o mesmo número de elementos."
+            "3 ∈ A",
+            "{3} ⊂ B e {3} ∈ B",
+            "{3} ∈ A",
+            "A ⊂ B",
+            "B ⊂ A"
         ],
         "correta": 2,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Pertinência e inclusão com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Pertinência e inclusão, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Pertinência e inclusão misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
+        "feedbackAcerto": "\n🎉 Excelente! Em A, o objeto {3} aparece como elemento. Já o número 3, isoladamente, não aparece como elemento de A.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {3} ∈ A\n\nEm A, o objeto {3} aparece como elemento. Já o número 3, isoladamente, não aparece como elemento de A.\n",
+        "dicaBanca": "\nPertinência compara elemento e conjunto; inclusão compara dois conjuntos.\n"
     },
     {
         "subtopico": "Pertinência e inclusão",
-        "pergunta": "Ao analisar um problema contextualizado de conjuntos e conjuntos numéricos, é correto afirmar, no tema Pertinência e inclusão, que:",
+        "pergunta": "Considere A = {1, 2, 3} e B = {1, 2, 3, 4}. Qual alternativa é correta?",
         "alternativas": [
-            "Usar o símbolo de inclusão para indicar que um número pertence a um conjunto, por serem relações equivalentes.",
-            "Afirmar que um elemento e um subconjunto são indistinguíveis, desde que envolvam o mesmo número escrito entre chaves.",
-            "Tratar 2 ∈ {2} e {2} ⊂ {2} como enunciados idênticos em significado e uso.",
-            "Distinguir a relação entre elemento e conjunto da relação entre conjunto e conjunto.",
-            "Considerar que um conjunto só pode estar contido em outro se os dois tiverem exatamente o mesmo número de elementos."
+            "A ∈ B e 3 ⊂ A",
+            "B ⊂ A e 4 ∈ A",
+            "A = B e 4 ∉ B",
+            "A ⊂ B e 3 ∈ A",
+            "3 ⊂ B e A ∈ B"
         ],
         "correta": 3,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Pertinência e inclusão com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Pertinência e inclusão, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Pertinência e inclusão misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Pertinência e inclusão",
-        "pergunta": "Uma situação de sala de aula exige interpretar símbolos e operações entre conjuntos. À luz de Pertinência e inclusão, assinale a alternativa correta:",
-        "alternativas": [
-            "Usar o símbolo de inclusão para indicar que um número pertence a um conjunto, por serem relações equivalentes.",
-            "Afirmar que um elemento e um subconjunto são indistinguíveis, desde que envolvam o mesmo número escrito entre chaves.",
-            "Tratar 2 ∈ {2} e {2} ⊂ {2} como enunciados idênticos em significado e uso.",
-            "Considerar que um conjunto só pode estar contido em outro se os dois tiverem exatamente o mesmo número de elementos.",
-            "Distinguir a relação entre elemento e conjunto da relação entre conjunto e conjunto."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Pertinência e inclusão com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Pertinência e inclusão, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Pertinência e inclusão misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Pertinência e inclusão",
-        "pergunta": "Durante a resolução de um item de Matemática, o candidato deve lembrar que, em Pertinência e inclusão, é correto:",
-        "alternativas": [
-            "Distinguir a relação entre elemento e conjunto da relação entre conjunto e conjunto.",
-            "Usar o símbolo de inclusão para indicar que um número pertence a um conjunto, por serem relações equivalentes.",
-            "Afirmar que um elemento e um subconjunto são indistinguíveis, desde que envolvam o mesmo número escrito entre chaves.",
-            "Tratar 2 ∈ {2} e {2} ⊂ {2} como enunciados idênticos em significado e uso.",
-            "Considerar que um conjunto só pode estar contido em outro se os dois tiverem exatamente o mesmo número de elementos."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Pertinência e inclusão com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Pertinência e inclusão, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Pertinência e inclusão misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Pertinência e inclusão",
-        "pergunta": "Para evitar armadilhas de prova, no conteúdo Pertinência e inclusão deve-se considerar que:",
-        "alternativas": [
-            "Usar o símbolo de inclusão para indicar que um número pertence a um conjunto, por serem relações equivalentes.",
-            "Distinguir a relação entre elemento e conjunto da relação entre conjunto e conjunto.",
-            "Afirmar que um elemento e um subconjunto são indistinguíveis, desde que envolvam o mesmo número escrito entre chaves.",
-            "Tratar 2 ∈ {2} e {2} ⊂ {2} como enunciados idênticos em significado e uso.",
-            "Considerar que um conjunto só pode estar contido em outro se os dois tiverem exatamente o mesmo número de elementos."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Pertinência e inclusão com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Pertinência e inclusão, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Pertinência e inclusão misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
+        "feedbackAcerto": "\n🎉 Excelente! Todos os elementos de A pertencem a B, logo A é subconjunto de B; além disso, 3 é elemento de A.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: A ⊂ B e 3 ∈ A\n\nTodos os elementos de A pertencem a B, logo A é subconjunto de B; além disso, 3 é elemento de A.\n",
+        "dicaBanca": "\nLeia ∈ como “é elemento de” e ⊂ como “é subconjunto de”.\n"
     },
     {
         "subtopico": "Subconjuntos e conjunto das partes",
-        "pergunta": "Em uma questão de concurso sobre conjuntos, a alternativa mais adequada para Subconjuntos e conjunto das partes é:",
+        "pergunta": "Se A = {a, b, c}, quantos subconjuntos distintos possui A?",
         "alternativas": [
-            "Desconsiderar o conjunto vazio e o conjunto total na contagem, por não representarem subconjuntos próprios úteis.",
-            "Aplicar a fórmula n² para contar subconjuntos, pois cada elemento geraria combinações com todos os demais.",
-            "Afirmar que conjuntos com elementos repetidos produzem mais subconjuntos, já que cada repetição amplia as possibilidades.",
-            "Calcular subconjuntos considerando que um conjunto com n elementos possui 2^n subconjuntos, incluindo o vazio e o próprio conjunto.",
-            "Restringir o conjunto das partes aos subconjuntos unitários, pois os demais seriam combinações e não subconjuntos."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Subconjuntos e conjunto das partes com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Subconjuntos e conjunto das partes, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Subconjuntos e conjunto das partes misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Subconjuntos e conjunto das partes",
-        "pergunta": "Ao analisar um problema contextualizado de conjuntos e conjuntos numéricos, é correto afirmar, no tema Subconjuntos e conjunto das partes, que:",
-        "alternativas": [
-            "Desconsiderar o conjunto vazio e o conjunto total na contagem, por não representarem subconjuntos próprios úteis.",
-            "Aplicar a fórmula n² para contar subconjuntos, pois cada elemento geraria combinações com todos os demais.",
-            "Afirmar que conjuntos com elementos repetidos produzem mais subconjuntos, já que cada repetição amplia as possibilidades.",
-            "Restringir o conjunto das partes aos subconjuntos unitários, pois os demais seriam combinações e não subconjuntos.",
-            "Calcular subconjuntos considerando que um conjunto com n elementos possui 2^n subconjuntos, incluindo o vazio e o próprio conjunto."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Subconjuntos e conjunto das partes com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Subconjuntos e conjunto das partes, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Subconjuntos e conjunto das partes misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Subconjuntos e conjunto das partes",
-        "pergunta": "Uma situação de sala de aula exige interpretar símbolos e operações entre conjuntos. À luz de Subconjuntos e conjunto das partes, assinale a alternativa correta:",
-        "alternativas": [
-            "Calcular subconjuntos considerando que um conjunto com n elementos possui 2^n subconjuntos, incluindo o vazio e o próprio conjunto.",
-            "Desconsiderar o conjunto vazio e o conjunto total na contagem, por não representarem subconjuntos próprios úteis.",
-            "Aplicar a fórmula n² para contar subconjuntos, pois cada elemento geraria combinações com todos os demais.",
-            "Afirmar que conjuntos com elementos repetidos produzem mais subconjuntos, já que cada repetição amplia as possibilidades.",
-            "Restringir o conjunto das partes aos subconjuntos unitários, pois os demais seriam combinações e não subconjuntos."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Subconjuntos e conjunto das partes com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Subconjuntos e conjunto das partes, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Subconjuntos e conjunto das partes misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Subconjuntos e conjunto das partes",
-        "pergunta": "Durante a resolução de um item de Matemática, o candidato deve lembrar que, em Subconjuntos e conjunto das partes, é correto:",
-        "alternativas": [
-            "Desconsiderar o conjunto vazio e o conjunto total na contagem, por não representarem subconjuntos próprios úteis.",
-            "Calcular subconjuntos considerando que um conjunto com n elementos possui 2^n subconjuntos, incluindo o vazio e o próprio conjunto.",
-            "Aplicar a fórmula n² para contar subconjuntos, pois cada elemento geraria combinações com todos os demais.",
-            "Afirmar que conjuntos com elementos repetidos produzem mais subconjuntos, já que cada repetição amplia as possibilidades.",
-            "Restringir o conjunto das partes aos subconjuntos unitários, pois os demais seriam combinações e não subconjuntos."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Subconjuntos e conjunto das partes com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Subconjuntos e conjunto das partes, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Subconjuntos e conjunto das partes misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Subconjuntos e conjunto das partes",
-        "pergunta": "Para evitar armadilhas de prova, no conteúdo Subconjuntos e conjunto das partes deve-se considerar que:",
-        "alternativas": [
-            "Desconsiderar o conjunto vazio e o conjunto total na contagem, por não representarem subconjuntos próprios úteis.",
-            "Aplicar a fórmula n² para contar subconjuntos, pois cada elemento geraria combinações com todos os demais.",
-            "Calcular subconjuntos considerando que um conjunto com n elementos possui 2^n subconjuntos, incluindo o vazio e o próprio conjunto.",
-            "Afirmar que conjuntos com elementos repetidos produzem mais subconjuntos, já que cada repetição amplia as possibilidades.",
-            "Restringir o conjunto das partes aos subconjuntos unitários, pois os demais seriam combinações e não subconjuntos."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Subconjuntos e conjunto das partes com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Subconjuntos e conjunto das partes, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Subconjuntos e conjunto das partes misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "União",
-        "pergunta": "Em uma questão de concurso sobre conjuntos, a alternativa mais adequada para União é:",
-        "alternativas": [
-            "Somar diretamente as quantidades de dois conjuntos, independentemente de haver elementos comuns entre eles.",
-            "Listar em A ∪ B apenas os elementos que aparecem nos dois conjuntos, por entender união como coincidência.",
-            "Repetir elementos comuns na união, já que eles aparecem em ambos os conjuntos originais.",
-            "Interpretar a união como operação válida apenas para conjuntos disjuntos.",
-            "Reunir em um único conjunto todos os elementos que pertencem a pelo menos um dos conjuntos considerados, sem repetição."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta União com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em União, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em União misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "União",
-        "pergunta": "Ao analisar um problema contextualizado de conjuntos e conjuntos numéricos, é correto afirmar, no tema União, que:",
-        "alternativas": [
-            "Reunir em um único conjunto todos os elementos que pertencem a pelo menos um dos conjuntos considerados, sem repetição.",
-            "Somar diretamente as quantidades de dois conjuntos, independentemente de haver elementos comuns entre eles.",
-            "Listar em A ∪ B apenas os elementos que aparecem nos dois conjuntos, por entender união como coincidência.",
-            "Repetir elementos comuns na união, já que eles aparecem em ambos os conjuntos originais.",
-            "Interpretar a união como operação válida apenas para conjuntos disjuntos."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta União com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em União, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em União misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "União",
-        "pergunta": "Uma situação de sala de aula exige interpretar símbolos e operações entre conjuntos. À luz de União, assinale a alternativa correta:",
-        "alternativas": [
-            "Somar diretamente as quantidades de dois conjuntos, independentemente de haver elementos comuns entre eles.",
-            "Reunir em um único conjunto todos os elementos que pertencem a pelo menos um dos conjuntos considerados, sem repetição.",
-            "Listar em A ∪ B apenas os elementos que aparecem nos dois conjuntos, por entender união como coincidência.",
-            "Repetir elementos comuns na união, já que eles aparecem em ambos os conjuntos originais.",
-            "Interpretar a união como operação válida apenas para conjuntos disjuntos."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta União com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em União, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em União misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "União",
-        "pergunta": "Durante a resolução de um item de Matemática, o candidato deve lembrar que, em União, é correto:",
-        "alternativas": [
-            "Somar diretamente as quantidades de dois conjuntos, independentemente de haver elementos comuns entre eles.",
-            "Listar em A ∪ B apenas os elementos que aparecem nos dois conjuntos, por entender união como coincidência.",
-            "Reunir em um único conjunto todos os elementos que pertencem a pelo menos um dos conjuntos considerados, sem repetição.",
-            "Repetir elementos comuns na união, já que eles aparecem em ambos os conjuntos originais.",
-            "Interpretar a união como operação válida apenas para conjuntos disjuntos."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta União com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em União, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em União misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "União",
-        "pergunta": "Para evitar armadilhas de prova, no conteúdo União deve-se considerar que:",
-        "alternativas": [
-            "Somar diretamente as quantidades de dois conjuntos, independentemente de haver elementos comuns entre eles.",
-            "Listar em A ∪ B apenas os elementos que aparecem nos dois conjuntos, por entender união como coincidência.",
-            "Repetir elementos comuns na união, já que eles aparecem em ambos os conjuntos originais.",
-            "Reunir em um único conjunto todos os elementos que pertencem a pelo menos um dos conjuntos considerados, sem repetição.",
-            "Interpretar a união como operação válida apenas para conjuntos disjuntos."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta União com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em União, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em União misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Interseção",
-        "pergunta": "Em uma questão de concurso sobre conjuntos, a alternativa mais adequada para Interseção é:",
-        "alternativas": [
-            "Identificar a interseção como o conjunto dos elementos comuns aos conjuntos envolvidos.",
-            "Tomar a interseção como reunião total dos elementos dos dois conjuntos, desde que sejam do mesmo tipo.",
-            "Considerar que a interseção sempre é vazia quando os conjuntos têm quantidades diferentes de elementos.",
-            "Afirmar que a interseção contém os elementos exclusivos de cada conjunto, e não os compartilhados.",
-            "Usar a interseção como sinônimo de diferença, por ambas selecionarem subconjuntos específicos."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Interseção com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Interseção, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Interseção misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Interseção",
-        "pergunta": "Ao analisar um problema contextualizado de conjuntos e conjuntos numéricos, é correto afirmar, no tema Interseção, que:",
-        "alternativas": [
-            "Tomar a interseção como reunião total dos elementos dos dois conjuntos, desde que sejam do mesmo tipo.",
-            "Identificar a interseção como o conjunto dos elementos comuns aos conjuntos envolvidos.",
-            "Considerar que a interseção sempre é vazia quando os conjuntos têm quantidades diferentes de elementos.",
-            "Afirmar que a interseção contém os elementos exclusivos de cada conjunto, e não os compartilhados.",
-            "Usar a interseção como sinônimo de diferença, por ambas selecionarem subconjuntos específicos."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Interseção com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Interseção, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Interseção misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Interseção",
-        "pergunta": "Uma situação de sala de aula exige interpretar símbolos e operações entre conjuntos. À luz de Interseção, assinale a alternativa correta:",
-        "alternativas": [
-            "Tomar a interseção como reunião total dos elementos dos dois conjuntos, desde que sejam do mesmo tipo.",
-            "Considerar que a interseção sempre é vazia quando os conjuntos têm quantidades diferentes de elementos.",
-            "Identificar a interseção como o conjunto dos elementos comuns aos conjuntos envolvidos.",
-            "Afirmar que a interseção contém os elementos exclusivos de cada conjunto, e não os compartilhados.",
-            "Usar a interseção como sinônimo de diferença, por ambas selecionarem subconjuntos específicos."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Interseção com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Interseção, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Interseção misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Interseção",
-        "pergunta": "Durante a resolução de um item de Matemática, o candidato deve lembrar que, em Interseção, é correto:",
-        "alternativas": [
-            "Tomar a interseção como reunião total dos elementos dos dois conjuntos, desde que sejam do mesmo tipo.",
-            "Considerar que a interseção sempre é vazia quando os conjuntos têm quantidades diferentes de elementos.",
-            "Afirmar que a interseção contém os elementos exclusivos de cada conjunto, e não os compartilhados.",
-            "Identificar a interseção como o conjunto dos elementos comuns aos conjuntos envolvidos.",
-            "Usar a interseção como sinônimo de diferença, por ambas selecionarem subconjuntos específicos."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Interseção com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Interseção, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Interseção misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Interseção",
-        "pergunta": "Para evitar armadilhas de prova, no conteúdo Interseção deve-se considerar que:",
-        "alternativas": [
-            "Tomar a interseção como reunião total dos elementos dos dois conjuntos, desde que sejam do mesmo tipo.",
-            "Considerar que a interseção sempre é vazia quando os conjuntos têm quantidades diferentes de elementos.",
-            "Afirmar que a interseção contém os elementos exclusivos de cada conjunto, e não os compartilhados.",
-            "Usar a interseção como sinônimo de diferença, por ambas selecionarem subconjuntos específicos.",
-            "Identificar a interseção como o conjunto dos elementos comuns aos conjuntos envolvidos."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Interseção com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Interseção, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Interseção misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Diferença e complemento",
-        "pergunta": "Em uma questão de concurso sobre conjuntos, a alternativa mais adequada para Diferença e complemento é:",
-        "alternativas": [
-            "Afirmar que A − B e B − A produzem sempre o mesmo resultado, pois ambas retiram elementos em comum.",
-            "Reconhecer que a diferença seleciona elementos de um conjunto que não pertencem ao outro, e que o complemento depende do universo.",
-            "Definir complemento sem referência ao conjunto universo, por considerar suficiente conhecer o conjunto dado.",
-            "Tratar diferença como operação comutativa, já que os elementos excluídos seriam os mesmos nos dois sentidos.",
-            "Confundir complemento com interseção, pois ambos exigiriam observar o que falta ou sobra entre conjuntos."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Diferença e complemento com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Diferença e complemento, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Diferença e complemento misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Diferença e complemento",
-        "pergunta": "Ao analisar um problema contextualizado de conjuntos e conjuntos numéricos, é correto afirmar, no tema Diferença e complemento, que:",
-        "alternativas": [
-            "Afirmar que A − B e B − A produzem sempre o mesmo resultado, pois ambas retiram elementos em comum.",
-            "Definir complemento sem referência ao conjunto universo, por considerar suficiente conhecer o conjunto dado.",
-            "Reconhecer que a diferença seleciona elementos de um conjunto que não pertencem ao outro, e que o complemento depende do universo.",
-            "Tratar diferença como operação comutativa, já que os elementos excluídos seriam os mesmos nos dois sentidos.",
-            "Confundir complemento com interseção, pois ambos exigiriam observar o que falta ou sobra entre conjuntos."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Diferença e complemento com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Diferença e complemento, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Diferença e complemento misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Diferença e complemento",
-        "pergunta": "Uma situação de sala de aula exige interpretar símbolos e operações entre conjuntos. À luz de Diferença e complemento, assinale a alternativa correta:",
-        "alternativas": [
-            "Afirmar que A − B e B − A produzem sempre o mesmo resultado, pois ambas retiram elementos em comum.",
-            "Definir complemento sem referência ao conjunto universo, por considerar suficiente conhecer o conjunto dado.",
-            "Tratar diferença como operação comutativa, já que os elementos excluídos seriam os mesmos nos dois sentidos.",
-            "Reconhecer que a diferença seleciona elementos de um conjunto que não pertencem ao outro, e que o complemento depende do universo.",
-            "Confundir complemento com interseção, pois ambos exigiriam observar o que falta ou sobra entre conjuntos."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Diferença e complemento com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Diferença e complemento, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Diferença e complemento misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Diferença e complemento",
-        "pergunta": "Durante a resolução de um item de Matemática, o candidato deve lembrar que, em Diferença e complemento, é correto:",
-        "alternativas": [
-            "Afirmar que A − B e B − A produzem sempre o mesmo resultado, pois ambas retiram elementos em comum.",
-            "Definir complemento sem referência ao conjunto universo, por considerar suficiente conhecer o conjunto dado.",
-            "Tratar diferença como operação comutativa, já que os elementos excluídos seriam os mesmos nos dois sentidos.",
-            "Confundir complemento com interseção, pois ambos exigiriam observar o que falta ou sobra entre conjuntos.",
-            "Reconhecer que a diferença seleciona elementos de um conjunto que não pertencem ao outro, e que o complemento depende do universo."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Diferença e complemento com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Diferença e complemento, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Diferença e complemento misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Diferença e complemento",
-        "pergunta": "Para evitar armadilhas de prova, no conteúdo Diferença e complemento deve-se considerar que:",
-        "alternativas": [
-            "Reconhecer que a diferença seleciona elementos de um conjunto que não pertencem ao outro, e que o complemento depende do universo.",
-            "Afirmar que A − B e B − A produzem sempre o mesmo resultado, pois ambas retiram elementos em comum.",
-            "Definir complemento sem referência ao conjunto universo, por considerar suficiente conhecer o conjunto dado.",
-            "Tratar diferença como operação comutativa, já que os elementos excluídos seriam os mesmos nos dois sentidos.",
-            "Confundir complemento com interseção, pois ambos exigiriam observar o que falta ou sobra entre conjuntos."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Diferença e complemento com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Diferença e complemento, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Diferença e complemento misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Cardinalidade",
-        "pergunta": "Em uma questão de concurso sobre conjuntos, a alternativa mais adequada para Cardinalidade é:",
-        "alternativas": [
-            "Somar as cardinalidades de dois conjuntos e, em seguida, acrescentar a interseção para reforçar os elementos comuns.",
-            "Subtrair a interseção duas vezes ao calcular a união, pois ela aparece em ambos os conjuntos.",
-            "Calcular corretamente o número de elementos dos conjuntos e usar a fórmula da união evitando dupla contagem da interseção.",
-            "Desconsiderar a cardinalidade do conjunto vazio como zero, supondo que conjuntos sem elementos não entram em contagem.",
-            "Tomar cardinalidade como soma dos valores dos elementos, e não como quantidade de elementos."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Cardinalidade com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Cardinalidade, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Cardinalidade misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Cardinalidade",
-        "pergunta": "Ao analisar um problema contextualizado de conjuntos e conjuntos numéricos, é correto afirmar, no tema Cardinalidade, que:",
-        "alternativas": [
-            "Somar as cardinalidades de dois conjuntos e, em seguida, acrescentar a interseção para reforçar os elementos comuns.",
-            "Subtrair a interseção duas vezes ao calcular a união, pois ela aparece em ambos os conjuntos.",
-            "Desconsiderar a cardinalidade do conjunto vazio como zero, supondo que conjuntos sem elementos não entram em contagem.",
-            "Calcular corretamente o número de elementos dos conjuntos e usar a fórmula da união evitando dupla contagem da interseção.",
-            "Tomar cardinalidade como soma dos valores dos elementos, e não como quantidade de elementos."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Cardinalidade com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Cardinalidade, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Cardinalidade misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Cardinalidade",
-        "pergunta": "Uma situação de sala de aula exige interpretar símbolos e operações entre conjuntos. À luz de Cardinalidade, assinale a alternativa correta:",
-        "alternativas": [
-            "Somar as cardinalidades de dois conjuntos e, em seguida, acrescentar a interseção para reforçar os elementos comuns.",
-            "Subtrair a interseção duas vezes ao calcular a união, pois ela aparece em ambos os conjuntos.",
-            "Desconsiderar a cardinalidade do conjunto vazio como zero, supondo que conjuntos sem elementos não entram em contagem.",
-            "Tomar cardinalidade como soma dos valores dos elementos, e não como quantidade de elementos.",
-            "Calcular corretamente o número de elementos dos conjuntos e usar a fórmula da união evitando dupla contagem da interseção."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Cardinalidade com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Cardinalidade, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Cardinalidade misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Cardinalidade",
-        "pergunta": "Durante a resolução de um item de Matemática, o candidato deve lembrar que, em Cardinalidade, é correto:",
-        "alternativas": [
-            "Calcular corretamente o número de elementos dos conjuntos e usar a fórmula da união evitando dupla contagem da interseção.",
-            "Somar as cardinalidades de dois conjuntos e, em seguida, acrescentar a interseção para reforçar os elementos comuns.",
-            "Subtrair a interseção duas vezes ao calcular a união, pois ela aparece em ambos os conjuntos.",
-            "Desconsiderar a cardinalidade do conjunto vazio como zero, supondo que conjuntos sem elementos não entram em contagem.",
-            "Tomar cardinalidade como soma dos valores dos elementos, e não como quantidade de elementos."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Cardinalidade com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Cardinalidade, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Cardinalidade misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Cardinalidade",
-        "pergunta": "Para evitar armadilhas de prova, no conteúdo Cardinalidade deve-se considerar que:",
-        "alternativas": [
-            "Somar as cardinalidades de dois conjuntos e, em seguida, acrescentar a interseção para reforçar os elementos comuns.",
-            "Calcular corretamente o número de elementos dos conjuntos e usar a fórmula da união evitando dupla contagem da interseção.",
-            "Subtrair a interseção duas vezes ao calcular a união, pois ela aparece em ambos os conjuntos.",
-            "Desconsiderar a cardinalidade do conjunto vazio como zero, supondo que conjuntos sem elementos não entram em contagem.",
-            "Tomar cardinalidade como soma dos valores dos elementos, e não como quantidade de elementos."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Cardinalidade com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Cardinalidade, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Cardinalidade misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Naturais e inteiros",
-        "pergunta": "Em uma questão de concurso sobre conjuntos, a alternativa mais adequada para Naturais e inteiros é:",
-        "alternativas": [
-            "Afirmar que números negativos pertencem aos naturais quando aparecem em situações concretas como temperaturas ou andares.",
-            "Considerar que inteiros e naturais são conjuntos equivalentes, diferindo apenas na forma de representação.",
-            "Excluir o zero dos inteiros, por ele não ser positivo nem negativo.",
-            "Reconhecer que os naturais se relacionam à contagem e que os inteiros ampliam esse conjunto com números negativos.",
-            "Entender que o conjunto dos inteiros contém apenas números negativos e positivos, deixando o zero em conjunto à parte."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Naturais e inteiros com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Naturais e inteiros, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Naturais e inteiros misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Naturais e inteiros",
-        "pergunta": "Ao analisar um problema contextualizado de conjuntos e conjuntos numéricos, é correto afirmar, no tema Naturais e inteiros, que:",
-        "alternativas": [
-            "Afirmar que números negativos pertencem aos naturais quando aparecem em situações concretas como temperaturas ou andares.",
-            "Considerar que inteiros e naturais são conjuntos equivalentes, diferindo apenas na forma de representação.",
-            "Excluir o zero dos inteiros, por ele não ser positivo nem negativo.",
-            "Entender que o conjunto dos inteiros contém apenas números negativos e positivos, deixando o zero em conjunto à parte.",
-            "Reconhecer que os naturais se relacionam à contagem e que os inteiros ampliam esse conjunto com números negativos."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Naturais e inteiros com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Naturais e inteiros, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Naturais e inteiros misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Naturais e inteiros",
-        "pergunta": "Uma situação de sala de aula exige interpretar símbolos e operações entre conjuntos. À luz de Naturais e inteiros, assinale a alternativa correta:",
-        "alternativas": [
-            "Reconhecer que os naturais se relacionam à contagem e que os inteiros ampliam esse conjunto com números negativos.",
-            "Afirmar que números negativos pertencem aos naturais quando aparecem em situações concretas como temperaturas ou andares.",
-            "Considerar que inteiros e naturais são conjuntos equivalentes, diferindo apenas na forma de representação.",
-            "Excluir o zero dos inteiros, por ele não ser positivo nem negativo.",
-            "Entender que o conjunto dos inteiros contém apenas números negativos e positivos, deixando o zero em conjunto à parte."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Naturais e inteiros com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Naturais e inteiros, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Naturais e inteiros misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Naturais e inteiros",
-        "pergunta": "Durante a resolução de um item de Matemática, o candidato deve lembrar que, em Naturais e inteiros, é correto:",
-        "alternativas": [
-            "Afirmar que números negativos pertencem aos naturais quando aparecem em situações concretas como temperaturas ou andares.",
-            "Reconhecer que os naturais se relacionam à contagem e que os inteiros ampliam esse conjunto com números negativos.",
-            "Considerar que inteiros e naturais são conjuntos equivalentes, diferindo apenas na forma de representação.",
-            "Excluir o zero dos inteiros, por ele não ser positivo nem negativo.",
-            "Entender que o conjunto dos inteiros contém apenas números negativos e positivos, deixando o zero em conjunto à parte."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Naturais e inteiros com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Naturais e inteiros, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Naturais e inteiros misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Naturais e inteiros",
-        "pergunta": "Para evitar armadilhas de prova, no conteúdo Naturais e inteiros deve-se considerar que:",
-        "alternativas": [
-            "Afirmar que números negativos pertencem aos naturais quando aparecem em situações concretas como temperaturas ou andares.",
-            "Considerar que inteiros e naturais são conjuntos equivalentes, diferindo apenas na forma de representação.",
-            "Reconhecer que os naturais se relacionam à contagem e que os inteiros ampliam esse conjunto com números negativos.",
-            "Excluir o zero dos inteiros, por ele não ser positivo nem negativo.",
-            "Entender que o conjunto dos inteiros contém apenas números negativos e positivos, deixando o zero em conjunto à parte."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Naturais e inteiros com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Naturais e inteiros, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Naturais e inteiros misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Racionais e irracionais",
-        "pergunta": "Em uma questão de concurso sobre conjuntos, a alternativa mais adequada para Racionais e irracionais é:",
-        "alternativas": [
-            "Classificar toda dízima periódica como irracional, porque sua representação decimal é infinita.",
-            "Afirmar que toda raiz quadrada é irracional, independentemente do número dentro do radical.",
-            "Considerar racionais apenas os números inteiros e as frações explícitas, excluindo decimais finitos.",
-            "Tomar números irracionais como aqueles que ainda não foram simplificados a uma fração equivalente.",
-            "Distinguir números que podem ser escritos como razão de inteiros daqueles que têm decimal infinito não periódico."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Racionais e irracionais com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Racionais e irracionais, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Racionais e irracionais misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Racionais e irracionais",
-        "pergunta": "Ao analisar um problema contextualizado de conjuntos e conjuntos numéricos, é correto afirmar, no tema Racionais e irracionais, que:",
-        "alternativas": [
-            "Distinguir números que podem ser escritos como razão de inteiros daqueles que têm decimal infinito não periódico.",
-            "Classificar toda dízima periódica como irracional, porque sua representação decimal é infinita.",
-            "Afirmar que toda raiz quadrada é irracional, independentemente do número dentro do radical.",
-            "Considerar racionais apenas os números inteiros e as frações explícitas, excluindo decimais finitos.",
-            "Tomar números irracionais como aqueles que ainda não foram simplificados a uma fração equivalente."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Racionais e irracionais com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Racionais e irracionais, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Racionais e irracionais misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Racionais e irracionais",
-        "pergunta": "Uma situação de sala de aula exige interpretar símbolos e operações entre conjuntos. À luz de Racionais e irracionais, assinale a alternativa correta:",
-        "alternativas": [
-            "Classificar toda dízima periódica como irracional, porque sua representação decimal é infinita.",
-            "Distinguir números que podem ser escritos como razão de inteiros daqueles que têm decimal infinito não periódico.",
-            "Afirmar que toda raiz quadrada é irracional, independentemente do número dentro do radical.",
-            "Considerar racionais apenas os números inteiros e as frações explícitas, excluindo decimais finitos.",
-            "Tomar números irracionais como aqueles que ainda não foram simplificados a uma fração equivalente."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Racionais e irracionais com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Racionais e irracionais, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Racionais e irracionais misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Racionais e irracionais",
-        "pergunta": "Durante a resolução de um item de Matemática, o candidato deve lembrar que, em Racionais e irracionais, é correto:",
-        "alternativas": [
-            "Classificar toda dízima periódica como irracional, porque sua representação decimal é infinita.",
-            "Afirmar que toda raiz quadrada é irracional, independentemente do número dentro do radical.",
-            "Distinguir números que podem ser escritos como razão de inteiros daqueles que têm decimal infinito não periódico.",
-            "Considerar racionais apenas os números inteiros e as frações explícitas, excluindo decimais finitos.",
-            "Tomar números irracionais como aqueles que ainda não foram simplificados a uma fração equivalente."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Racionais e irracionais com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Racionais e irracionais, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Racionais e irracionais misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Racionais e irracionais",
-        "pergunta": "Para evitar armadilhas de prova, no conteúdo Racionais e irracionais deve-se considerar que:",
-        "alternativas": [
-            "Classificar toda dízima periódica como irracional, porque sua representação decimal é infinita.",
-            "Afirmar que toda raiz quadrada é irracional, independentemente do número dentro do radical.",
-            "Considerar racionais apenas os números inteiros e as frações explícitas, excluindo decimais finitos.",
-            "Distinguir números que podem ser escritos como razão de inteiros daqueles que têm decimal infinito não periódico.",
-            "Tomar números irracionais como aqueles que ainda não foram simplificados a uma fração equivalente."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Racionais e irracionais com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Racionais e irracionais, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Racionais e irracionais misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Reais",
-        "pergunta": "Em uma questão de concurso sobre conjuntos, a alternativa mais adequada para Reais é:",
-        "alternativas": [
-            "Identificar os reais como reunião dos racionais e irracionais e reconhecê-los na reta numérica.",
-            "Limitar os reais aos números racionais, já que os irracionais não podem ser escritos exatamente em forma decimal finita.",
-            "Afirmar que os irracionais formam conjunto separado da reta numérica, pois sua localização seria impossível.",
-            "Considerar que a reta numérica representa apenas inteiros e frações, deixando radicais e pi fora do conjunto real.",
-            "Inverter a relação de inclusão e concluir que R está contido em Q por este ser mais específico."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Reais com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Reais, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Reais misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Reais",
-        "pergunta": "Ao analisar um problema contextualizado de conjuntos e conjuntos numéricos, é correto afirmar, no tema Reais, que:",
-        "alternativas": [
-            "Limitar os reais aos números racionais, já que os irracionais não podem ser escritos exatamente em forma decimal finita.",
-            "Identificar os reais como reunião dos racionais e irracionais e reconhecê-los na reta numérica.",
-            "Afirmar que os irracionais formam conjunto separado da reta numérica, pois sua localização seria impossível.",
-            "Considerar que a reta numérica representa apenas inteiros e frações, deixando radicais e pi fora do conjunto real.",
-            "Inverter a relação de inclusão e concluir que R está contido em Q por este ser mais específico."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Reais com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Reais, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Reais misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Reais",
-        "pergunta": "Uma situação de sala de aula exige interpretar símbolos e operações entre conjuntos. À luz de Reais, assinale a alternativa correta:",
-        "alternativas": [
-            "Limitar os reais aos números racionais, já que os irracionais não podem ser escritos exatamente em forma decimal finita.",
-            "Afirmar que os irracionais formam conjunto separado da reta numérica, pois sua localização seria impossível.",
-            "Identificar os reais como reunião dos racionais e irracionais e reconhecê-los na reta numérica.",
-            "Considerar que a reta numérica representa apenas inteiros e frações, deixando radicais e pi fora do conjunto real.",
-            "Inverter a relação de inclusão e concluir que R está contido em Q por este ser mais específico."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Reais com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Reais, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Reais misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Reais",
-        "pergunta": "Durante a resolução de um item de Matemática, o candidato deve lembrar que, em Reais, é correto:",
-        "alternativas": [
-            "Limitar os reais aos números racionais, já que os irracionais não podem ser escritos exatamente em forma decimal finita.",
-            "Afirmar que os irracionais formam conjunto separado da reta numérica, pois sua localização seria impossível.",
-            "Considerar que a reta numérica representa apenas inteiros e frações, deixando radicais e pi fora do conjunto real.",
-            "Identificar os reais como reunião dos racionais e irracionais e reconhecê-los na reta numérica.",
-            "Inverter a relação de inclusão e concluir que R está contido em Q por este ser mais específico."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Reais com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Reais, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Reais misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Reais",
-        "pergunta": "Para evitar armadilhas de prova, no conteúdo Reais deve-se considerar que:",
-        "alternativas": [
-            "Limitar os reais aos números racionais, já que os irracionais não podem ser escritos exatamente em forma decimal finita.",
-            "Afirmar que os irracionais formam conjunto separado da reta numérica, pois sua localização seria impossível.",
-            "Considerar que a reta numérica representa apenas inteiros e frações, deixando radicais e pi fora do conjunto real.",
-            "Inverter a relação de inclusão e concluir que R está contido em Q por este ser mais específico.",
-            "Identificar os reais como reunião dos racionais e irracionais e reconhecê-los na reta numérica."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Reais com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Reais, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Reais misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Situações-problema com conjuntos",
-        "pergunta": "Em uma questão de concurso sobre conjuntos, a alternativa mais adequada para Situações-problema com conjuntos é:",
-        "alternativas": [
-            "Resolver problemas de pesquisa apenas pela soma das quantidades fornecidas, sem analisar sobreposições entre grupos.",
-            "Traduzir corretamente o enunciado para a linguagem de união, interseção, diferença e cardinalidade.",
-            "Ignorar o significado prático dos conjuntos e usar fórmulas fixas, mesmo quando o contexto pede outra operação.",
-            "Tomar expressões como “apenas”, “somente” e “ambos” como irrelevantes para a escolha da operação entre conjuntos.",
-            "Considerar diagramas meros recursos ilustrativos, dispensando leitura quantitativa e lógica de suas regiões."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Situações-problema com conjuntos com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Situações-problema com conjuntos, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Situações-problema com conjuntos misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Situações-problema com conjuntos",
-        "pergunta": "Ao analisar um problema contextualizado de conjuntos e conjuntos numéricos, é correto afirmar, no tema Situações-problema com conjuntos, que:",
-        "alternativas": [
-            "Resolver problemas de pesquisa apenas pela soma das quantidades fornecidas, sem analisar sobreposições entre grupos.",
-            "Ignorar o significado prático dos conjuntos e usar fórmulas fixas, mesmo quando o contexto pede outra operação.",
-            "Traduzir corretamente o enunciado para a linguagem de união, interseção, diferença e cardinalidade.",
-            "Tomar expressões como “apenas”, “somente” e “ambos” como irrelevantes para a escolha da operação entre conjuntos.",
-            "Considerar diagramas meros recursos ilustrativos, dispensando leitura quantitativa e lógica de suas regiões."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Situações-problema com conjuntos com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Situações-problema com conjuntos, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Situações-problema com conjuntos misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Situações-problema com conjuntos",
-        "pergunta": "Uma situação de sala de aula exige interpretar símbolos e operações entre conjuntos. À luz de Situações-problema com conjuntos, assinale a alternativa correta:",
-        "alternativas": [
-            "Resolver problemas de pesquisa apenas pela soma das quantidades fornecidas, sem analisar sobreposições entre grupos.",
-            "Ignorar o significado prático dos conjuntos e usar fórmulas fixas, mesmo quando o contexto pede outra operação.",
-            "Tomar expressões como “apenas”, “somente” e “ambos” como irrelevantes para a escolha da operação entre conjuntos.",
-            "Traduzir corretamente o enunciado para a linguagem de união, interseção, diferença e cardinalidade.",
-            "Considerar diagramas meros recursos ilustrativos, dispensando leitura quantitativa e lógica de suas regiões."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Situações-problema com conjuntos com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Situações-problema com conjuntos, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Situações-problema com conjuntos misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Situações-problema com conjuntos",
-        "pergunta": "Durante a resolução de um item de Matemática, o candidato deve lembrar que, em Situações-problema com conjuntos, é correto:",
-        "alternativas": [
-            "Resolver problemas de pesquisa apenas pela soma das quantidades fornecidas, sem analisar sobreposições entre grupos.",
-            "Ignorar o significado prático dos conjuntos e usar fórmulas fixas, mesmo quando o contexto pede outra operação.",
-            "Tomar expressões como “apenas”, “somente” e “ambos” como irrelevantes para a escolha da operação entre conjuntos.",
-            "Considerar diagramas meros recursos ilustrativos, dispensando leitura quantitativa e lógica de suas regiões.",
-            "Traduzir corretamente o enunciado para a linguagem de união, interseção, diferença e cardinalidade."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Situações-problema com conjuntos com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Situações-problema com conjuntos, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Situações-problema com conjuntos misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Situações-problema com conjuntos",
-        "pergunta": "Para evitar armadilhas de prova, no conteúdo Situações-problema com conjuntos deve-se considerar que:",
-        "alternativas": [
-            "Traduzir corretamente o enunciado para a linguagem de união, interseção, diferença e cardinalidade.",
-            "Resolver problemas de pesquisa apenas pela soma das quantidades fornecidas, sem analisar sobreposições entre grupos.",
-            "Ignorar o significado prático dos conjuntos e usar fórmulas fixas, mesmo quando o contexto pede outra operação.",
-            "Tomar expressões como “apenas”, “somente” e “ambos” como irrelevantes para a escolha da operação entre conjuntos.",
-            "Considerar diagramas meros recursos ilustrativos, dispensando leitura quantitativa e lógica de suas regiões."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Muito bem! A alternativa correta interpreta Situações-problema com conjuntos com precisão conceitual e atenção aos símbolos e relações entre conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Em Situações-problema com conjuntos, os erros mais comuns envolvem leitura apressada de símbolos, confusão entre operações e classificação inadequada dos números.\n",
-        "dicaBanca": "\nA banca costuma construir distratores fortes em Situações-problema com conjuntos misturando pertinência, inclusão, dupla contagem e classificação numérica. Leia cada símbolo com calma.\n"
-    },
-    {
-        "subtopico": "Cardinalidade em contexto",
-        "pergunta": "Um congresso acadêmico contou com 160 pesquisadores. No primeiro dia, participaram 120 pesquisadores e, no segundo dia, 100 pesquisadores. Considerando que todos os 160 pesquisadores participaram de pelo menos um dos dois dias, quantos participaram dos dois dias?",
-        "alternativas": [
-            "20 pesquisadores",
-            "40 pesquisadores",
-            "60 pesquisadores",
-            "80 pesquisadores",
-            "100 pesquisadores"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! Use n(A ∪ B) = n(A) + n(B) − n(A ∩ B). Como 160 = 120 + 100 − x, então x = 60. O valor encontrado representa quem participou simultaneamente dos dois dias.\n",
-        "feedbackErro": "\n❌ Atenção! Use n(A ∪ B) = n(A) + n(B) − n(A ∩ B). Como 160 = 120 + 100 − x, então x = 60. O valor encontrado representa quem participou simultaneamente dos dois dias.\n",
-        "dicaBanca": "\nQuando o enunciado informa o total que participou de pelo menos um grupo, esse total é a união.\n"
-    },
-    {
-        "subtopico": "União e interseção em contexto",
-        "pergunta": "Em um cursinho existem 600 alunos. Desses, 300 cursam Matemática, 200 cursam Português e 150 não cursam nenhuma dessas duas disciplinas. Considerando M o conjunto dos alunos de Matemática e P o conjunto dos alunos de Português, determine, respectivamente, n(M ∪ P) e n(M ∩ P).",
-        "alternativas": [
-            "450 e 50",
-            "450 e 100",
-            "500 e 100",
-            "500 e 50",
-            "350 e 150"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! Como 150 não cursam nenhuma das duas disciplinas, n(M ∪ P) = 600 − 150 = 450. Depois, 450 = 300 + 200 − n(M ∩ P), logo n(M ∩ P) = 50. Atenção: a união vem antes da interseção.\n",
-        "feedbackErro": "\n❌ Atenção! Como 150 não cursam nenhuma das duas disciplinas, n(M ∪ P) = 600 − 150 = 450. Depois, 450 = 300 + 200 − n(M ∩ P), logo n(M ∩ P) = 50. Atenção: a união vem antes da interseção.\n",
-        "dicaBanca": "\nPrimeiro retire do total quem está fora dos conjuntos; depois aplique a fórmula da união.\n"
-    },
-    {
-        "subtopico": "Complemento e cardinalidade",
-        "pergunta": "Considere W = {6, 10, 16, 18, 20, 24, 30, 36}. Se A ∪ B = {6, 10, 16, 18, 20, 24} e B ∩ CWA = {20, 24}, em que CWA é o complementar de A em relação a W, qual é o número máximo de elementos de B?",
-        "alternativas": [
-            "2",
-            "4",
+            "3",
             "6",
-            "7",
+            "9",
+            "12",
             "8"
         ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! B deve estar dentro de A ∪ B, portanto só pode conter elementos de {6, 10, 16, 18, 20, 24}. Para maximizar B, colocamos todos esses 6 elementos em B. A condição B ∩ CWA = {20, 24} apenas obriga 20 e 24 a estarem fora de A e dentro de B; não impede que os outros quatro também estejam em B.\n",
-        "feedbackErro": "\n❌ Atenção! B deve estar dentro de A ∪ B, portanto só pode conter elementos de {6, 10, 16, 18, 20, 24}. Para maximizar B, colocamos todos esses 6 elementos em B. A condição B ∩ CWA = {20, 24} apenas obriga 20 e 24 a estarem fora de A e dentro de B; não impede que os outros quatro também estejam em B.\n",
-        "dicaBanca": "\nQuando pedir número máximo, verifique quais elementos podem estar em B sem contrariar as condições dadas.\n"
+        "correta": 4,
+        "feedbackAcerto": "\n🎉 Excelente! Um conjunto com n elementos possui 2^n subconjuntos. Para n = 3, temos 2³ = 8.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 8\n\nUm conjunto com n elementos possui 2^n subconjuntos. Para n = 3, temos 2³ = 8.\n",
+        "dicaBanca": "\nInclua o conjunto vazio e o próprio conjunto na contagem dos subconjuntos.\n"
     },
     {
-        "subtopico": "Três conjuntos em situação-problema",
-        "pergunta": "Em uma escola, 80 alunos participam de projetos de Matemática, 65 de Ciências e 50 de Robótica. Sabe-se que 25 participam de Matemática e Ciências, 20 de Matemática e Robótica, 15 de Ciências e Robótica, e 10 participam dos três projetos. Quantos alunos participam de pelo menos um desses projetos?",
+        "subtopico": "Subconjuntos e conjunto das partes",
+        "pergunta": "Para A = {1, 2}, qual é o conjunto das partes P(A)?",
         "alternativas": [
-            "125 alunos",
-            "135 alunos",
-            "145 alunos",
-            "155 alunos",
-            "165 alunos"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! Use inclusão-exclusão para três conjuntos: n(M ∪ C ∪ R) = 80 + 65 + 50 − 25 − 20 − 15 + 10 = 145. O trio é somado no final porque foi retirado mais vezes do que deveria.\n",
-        "feedbackErro": "\n❌ Atenção! Use inclusão-exclusão para três conjuntos: n(M ∪ C ∪ R) = 80 + 65 + 50 − 25 − 20 − 15 + 10 = 145. O trio é somado no final porque foi retirado mais vezes do que deveria.\n",
-        "dicaBanca": "\nEm três conjuntos, some os individuais, subtraia as interseções duplas e some a interseção tripla.\n"
-    },
-    {
-        "subtopico": "Três conjuntos e regiões do diagrama",
-        "pergunta": "Em uma turma, 40 alunos gostam de Álgebra, 35 de Geometria e 30 de Estatística. Gostam de Álgebra e Geometria 12 alunos, de Álgebra e Estatística 10, de Geometria e Estatística 8, e dos três conteúdos 5. Quantos gostam de exatamente um desses conteúdos?",
-        "alternativas": [
-            "50 alunos",
-            "55 alunos",
-            "60 alunos",
-            "65 alunos",
-            "70 alunos"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! Primeiro calcule somente cada região: apenas Álgebra = 40 − 12 − 10 + 5 = 23; apenas Geometria = 35 − 12 − 8 + 5 = 20; apenas Estatística = 30 − 10 − 8 + 5 = 17. Total exatamente um = 23 + 20 + 17 = 60.\n",
-        "feedbackErro": "\n❌ Atenção! Primeiro calcule somente cada região: apenas Álgebra = 40 − 12 − 10 + 5 = 23; apenas Geometria = 35 − 12 − 8 + 5 = 20; apenas Estatística = 30 − 10 − 8 + 5 = 17. Total exatamente um = 23 + 20 + 17 = 60.\n",
-        "dicaBanca": "\nPara exatamente um, retire as interseções duplas, mas devolva a interseção tripla uma vez em cada conjunto.\n"
-    },
-    {
-        "subtopico": "Diferença entre união e interseção",
-        "pergunta": "Em um preparatório, 420 estudantes estão matriculados. Destes, 210 estudam Matemática, 180 estudam Português e 90 estudam as duas disciplinas. Quantos estudam somente uma dessas disciplinas?",
-        "alternativas": [
-            "210 estudantes",
-            "240 estudantes",
-            "270 estudantes",
-            "300 estudantes",
-            "330 estudantes"
+            "{∅, {1}, {2}, {1, 2}}",
+            "{{1}, {2}}",
+            "{∅, {1}, {2}, 1, 2, {1, 2}}",
+            "{{1, 2}, ∅}",
+            "{1, 2, {1}, {2}}"
         ],
         "correta": 0,
-        "feedbackAcerto": "\n🎉 Excelente! Somente Matemática = 210 − 90 = 120. Somente Português = 180 − 90 = 90. Assim, somente uma das disciplinas = 120 + 90 = 210. Não confunda com a união, que seria 210 + 180 − 90 = 300.\n",
-        "feedbackErro": "\n❌ Atenção! Somente Matemática = 210 − 90 = 120. Somente Português = 180 − 90 = 90. Assim, somente uma das disciplinas = 120 + 90 = 210. Não confunda com a união, que seria 210 + 180 − 90 = 300.\n",
-        "dicaBanca": "\nExpressões como “somente uma” pedem as regiões exclusivas, não a união inteira.\n"
+        "feedbackAcerto": "\n🎉 Excelente! P(A) é formado por todos os subconjuntos de A: vazio, unitários e o próprio A.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {∅, {1}, {2}, {1, 2}}\n\nP(A) é formado por todos os subconjuntos de A: vazio, unitários e o próprio A.\n",
+        "dicaBanca": "\nOs elementos de P(A) são conjuntos, não números isolados.\n"
     },
     {
-        "subtopico": "Complemento da união",
-        "pergunta": "Em uma pesquisa com 500 candidatos, 260 estudam Raciocínio Lógico, 220 estudam Matemática e 140 estudam as duas disciplinas. Quantos candidatos não estudam nenhuma dessas duas disciplinas?",
-        "alternativas": [
-            "120 candidatos",
-            "140 candidatos",
-            "160 candidatos",
-            "180 candidatos",
-            "200 candidatos"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! A união é 260 + 220 − 140 = 340. Quem não estuda nenhuma é o complemento da união em relação ao total: 500 − 340 = 160.\n",
-        "feedbackErro": "\n❌ Atenção! A união é 260 + 220 − 140 = 340. Quem não estuda nenhuma é o complemento da união em relação ao total: 500 − 340 = 160.\n",
-        "dicaBanca": "\n“Nenhuma” normalmente indica o complemento da união.\n"
-    },
-    {
-        "subtopico": "Interseção a partir do complemento",
-        "pergunta": "Em uma escola com 900 alunos, 480 participam de aulas de reforço de Matemática, 360 de Português e 180 não participam de nenhuma dessas aulas. Quantos alunos participam das duas aulas de reforço?",
-        "alternativas": [
-            "60 alunos",
-            "80 alunos",
-            "100 alunos",
-            "120 alunos",
-            "140 alunos"
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Excelente! Se 180 não participam de nenhuma, então n(M ∪ P) = 900 − 180 = 720. Pela fórmula, 720 = 480 + 360 − x, logo x = 120.\n",
-        "feedbackErro": "\n❌ Atenção! Se 180 não participam de nenhuma, então n(M ∪ P) = 900 − 180 = 720. Pela fórmula, 720 = 480 + 360 − x, logo x = 120.\n",
-        "dicaBanca": "\nQuando o problema informa o total fora dos conjuntos, primeiro descubra a união.\n"
-    },
-    {
-        "subtopico": "Regiões em três conjuntos",
-        "pergunta": "Em um evento, 70 participantes visitaram o estande A, 60 o estande B e 50 o estande C. As interseções foram: A∩B = 30, A∩C = 25, B∩C = 20, e A∩B∩C = 10. Quantos participantes visitaram exatamente dois estandes?",
-        "alternativas": [
-            "35 participantes",
-            "45 participantes",
-            "55 participantes",
-            "65 participantes",
-            "75 participantes"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! Exatamente dois = (A∩B − três) + (A∩C − três) + (B∩C − três) = (30−10) + (25−10) + (20−10) = 45. A alternativa correta é 45 participantes.\n",
-        "feedbackErro": "\n❌ Atenção! Exatamente dois = (A∩B − três) + (A∩C − três) + (B∩C − três) = (30−10) + (25−10) + (20−10) = 45. A alternativa correta é 45 participantes.\n",
-        "dicaBanca": "\nInterseções duplas geralmente incluem quem está nos três; para exatamente dois, retire a interseção tripla de cada par.\n"
-    },
-    {
-        "subtopico": "Operações com conjuntos numéricos",
-        "pergunta": "Se A = {2, 4, 6, 8, 10, 12} e B = {6, 9, 12, 15}, então os conjuntos A ∩ B e A − B são, respectivamente:",
-        "alternativas": [
-            "{6, 12} e {2, 4, 8, 10}",
-            "{2, 4, 8, 10} e {6, 12}",
-            "{6, 9, 12, 15} e {2, 4, 8, 10}",
-            "{2, 4, 6, 8, 10, 12, 15} e {9, 15}",
-            "{6, 12, 15} e {2, 4, 8}"
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Excelente! A interseção A ∩ B contém os elementos comuns: {6, 12}. A diferença A − B contém os elementos de A que não estão em B: {2, 4, 8, 10}.\n",
-        "feedbackErro": "\n❌ Atenção! A interseção A ∩ B contém os elementos comuns: {6, 12}. A diferença A − B contém os elementos de A que não estão em B: {2, 4, 8, 10}.\n",
-        "dicaBanca": "\nInterseção é o que há em comum; diferença A − B é o que sobra de A.\n"
-    },
-    {
-        "subtopico": "Complemento em conjunto universo",
-        "pergunta": "Considere U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, A = {2, 4, 6, 8, 10} e B = {1, 2, 3, 5, 8}. O conjunto complementar de A ∩ B em relação a U é:",
-        "alternativas": [
-            "{2, 8}",
-            "{1, 3, 4, 5, 6, 7, 9, 10}",
-            "{1, 3, 5}",
-            "{4, 6, 7, 9, 10}",
-            "{1, 2, 3, 5, 8}"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! Primeiro, A ∩ B = {2, 8}. O complementar de {2, 8} em relação a U é formado pelos elementos de U que não estão nessa interseção: {1, 3, 4, 5, 6, 7, 9, 10}.\n",
-        "feedbackErro": "\n❌ Atenção! Primeiro, A ∩ B = {2, 8}. O complementar de {2, 8} em relação a U é formado pelos elementos de U que não estão nessa interseção: {1, 3, 4, 5, 6, 7, 9, 10}.\n",
-        "dicaBanca": "\nEm complemento, primeiro calcule o conjunto interno; depois retire seus elementos do universo.\n"
-    },
-    {
-        "subtopico": "Expressões com operações entre conjuntos",
-        "pergunta": "Dados A = {1, 2, 3, 4, 5}, B = {4, 5, 6, 7} e C = {2, 4, 6, 8}, o conjunto (A ∩ C) ∪ (B − C) é:",
-        "alternativas": [
-            "{2, 4, 5, 7}",
-            "{2, 4, 6, 7}",
-            "{1, 2, 3, 4, 5, 7}",
-            "{4, 5, 6, 7}",
-            "{2, 5, 7, 8}"
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Excelente! Calcule por partes: A ∩ C = {2, 4}. Depois, B − C = {5, 7}. A união desses resultados é {2, 4, 5, 7}.\n",
-        "feedbackErro": "\n❌ Atenção! Calcule por partes: A ∩ C = {2, 4}. Depois, B − C = {5, 7}. A união desses resultados é {2, 4, 5, 7}.\n",
-        "dicaBanca": "\nEm expressões com conjuntos, resolva primeiro parênteses e operações internas.\n"
-    },
-    {
-        "subtopico": "Cardinalidade da união",
-        "pergunta": "Em uma academia, 180 alunos fazem musculação, 120 fazem natação e 70 fazem as duas atividades. Quantos alunos fazem pelo menos uma dessas atividades?",
-        "alternativas": [
-            "230 alunos",
-            "250 alunos",
-            "270 alunos",
-            "300 alunos",
-            "370 alunos"
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Excelente! “Pelo menos uma” significa união. Assim, n(M ∪ N) = 180 + 120 − 70 = 230. A interseção é subtraída para evitar dupla contagem.\n",
-        "feedbackErro": "\n❌ Atenção! “Pelo menos uma” significa união. Assim, n(M ∪ N) = 180 + 120 − 70 = 230. A interseção é subtraída para evitar dupla contagem.\n",
-        "dicaBanca": "\nPelo menos uma = união.\n"
-    },
-    {
-        "subtopico": "Regiões exclusivas e complemento",
-        "pergunta": "Em uma turma de 50 alunos, 28 gostam de xadrez, 24 gostam de dama e 10 gostam dos dois jogos. Quantos alunos gostam de no máximo um desses jogos?",
-        "alternativas": [
-            "8 alunos",
-            "18 alunos",
-            "32 alunos",
-            "40 alunos",
-            "42 alunos"
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Excelente! No máximo um significa gostar de nenhum ou de apenas um. Primeiro, união = 28 + 24 − 10 = 42. Nenhum = 50 − 42 = 8. Apenas um = (28−10) + (24−10) = 32. Total no máximo um = 8 + 32 = 40.\n",
-        "feedbackErro": "\n❌ Atenção! No máximo um significa gostar de nenhum ou de apenas um. Primeiro, união = 28 + 24 − 10 = 42. Nenhum = 50 − 42 = 8. Apenas um = (28−10) + (24−10) = 32. Total no máximo um = 8 + 32 = 40.\n",
-        "dicaBanca": "\n“No máximo um” inclui quem não pertence a nenhum dos dois conjuntos.\n"
-    },
-    {
-        "subtopico": "Conjuntos definidos por propriedade",
-        "pergunta": "Considere U = {1, 2, 3, ..., 30}, A o conjunto dos múltiplos de 3 em U e B o conjunto dos múltiplos de 5 em U. Quantos elementos possui A ∪ B?",
-        "alternativas": [
-            "12 elementos",
-            "13 elementos",
-            "14 elementos",
-            "15 elementos",
-            "16 elementos"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! Em U, há 10 múltiplos de 3 e 6 múltiplos de 5. Os múltiplos comuns são os múltiplos de 15: 15 e 30, total 2. Portanto, n(A ∪ B) = 10 + 6 − 2 = 14.\n",
-        "feedbackErro": "\n❌ Atenção! Em U, há 10 múltiplos de 3 e 6 múltiplos de 5. Os múltiplos comuns são os múltiplos de 15: 15 e 30, total 2. Portanto, n(A ∪ B) = 10 + 6 − 2 = 14.\n",
-        "dicaBanca": "\nPara múltiplos, a interseção costuma ser formada pelos múltiplos do MMC.\n"
-    },
-    {
-        "subtopico": "Complemento em conjuntos numéricos",
-        "pergunta": "No conjunto U = {1, 2, 3, ..., 40}, seja A o conjunto dos múltiplos de 4 e B o conjunto dos múltiplos de 6. Quantos elementos de U não pertencem a A ∪ B?",
-        "alternativas": [
-            "24 elementos",
-            "25 elementos",
-            "26 elementos",
-            "27 elementos",
-            "28 elementos"
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Excelente! Há 10 múltiplos de 4 e 6 múltiplos de 6 em U. A interseção é formada pelos múltiplos de 12: 12, 24 e 36, total 3. União = 10 + 6 − 3 = 13. Complemento = 40 − 13 = 27. A alternativa correta é 27 elementos.\n",
-        "feedbackErro": "\n❌ Atenção! Há 10 múltiplos de 4 e 6 múltiplos de 6 em U. A interseção é formada pelos múltiplos de 12: 12, 24 e 36, total 3. União = 10 + 6 − 3 = 13. Complemento = 40 − 13 = 27. A alternativa correta é 27 elementos.\n",
-        "dicaBanca": "\nPara “não pertencem à união”, calcule a união e subtraia do universo.\n"
-    },
-    {
-        "subtopico": "Subconjuntos em contexto",
-        "pergunta": "Uma comissão será formada escolhendo subconjuntos de exatamente 2 representantes entre os elementos do conjunto A = {Ana, Bruno, Carla, Diego}. Quantos subconjuntos com exatamente 2 elementos podem ser formados?",
+        "subtopico": "Subconjuntos e conjunto das partes",
+        "pergunta": "Um conjunto possui 32 subconjuntos. Quantos elementos ele possui?",
         "alternativas": [
             "4",
             "5",
@@ -1149,474 +102,954 @@ const conjuntosNumericos = [
             "8",
             "16"
         ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! Subconjuntos com exatamente 2 elementos correspondem às combinações de 4 elementos tomados 2 a 2: C(4,2) = 6. O valor 16 seria o total de todos os subconjuntos, pois 2⁴ = 16.\n",
-        "feedbackErro": "\n❌ Atenção! Subconjuntos com exatamente 2 elementos correspondem às combinações de 4 elementos tomados 2 a 2: C(4,2) = 6. O valor 16 seria o total de todos os subconjuntos, pois 2⁴ = 16.\n",
-        "dicaBanca": "\nQuando pedir exatamente k elementos, não use diretamente 2^n; use combinação.\n"
+        "correta": 1,
+        "feedbackAcerto": "\n🎉 Excelente! Se um conjunto tem n elementos, então possui 2^n subconjuntos. Como 32 = 2^5, n = 5.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 5\n\nSe um conjunto tem n elementos, então possui 2^n subconjuntos. Como 32 = 2^5, n = 5.\n",
+        "dicaBanca": "\nQuando a questão fornece o número de subconjuntos, procure uma potência de 2.\n"
     },
     {
-        "subtopico": "Conjunto das partes",
-        "pergunta": "Uma professora cadastrou 5 temas para um projeto e deseja saber quantos grupos de temas podem ser escolhidos, inclusive a possibilidade de não escolher nenhum tema. Quantos subconjuntos são possíveis?",
+        "subtopico": "Representação por extensão e compreensão",
+        "pergunta": "Qual conjunto corresponde a {x ∈ N | x é múltiplo de 4 e 0 < x ≤ 20}?",
         "alternativas": [
-            "10",
-            "16",
-            "25",
-            "32",
-            "120"
+            "{0, 4, 8, 12, 16, 20}",
+            "{4, 8, 12, 16}",
+            "{4, 8, 12, 16, 20}",
+            "{2, 4, 8, 12, 16, 20}",
+            "{4, 6, 8, 12, 16, 20}"
+        ],
+        "correta": 2,
+        "feedbackAcerto": "\n🎉 Excelente! Os múltiplos positivos de 4 até 20 são 4, 8, 12, 16 e 20.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {4, 8, 12, 16, 20}\n\nOs múltiplos positivos de 4 até 20 são 4, 8, 12, 16 e 20.\n",
+        "dicaBanca": "\nConverta a propriedade em uma lista antes de comparar as alternativas.\n"
+    },
+    {
+        "subtopico": "Noção de conjunto",
+        "pergunta": "Considere A = {1, 1, 2, 2, 3, 3}. Qual é a cardinalidade de A?",
+        "alternativas": [
+            "2",
+            "4",
+            "5",
+            "3",
+            "6"
         ],
         "correta": 3,
-        "feedbackAcerto": "\n🎉 Excelente! Um conjunto com 5 elementos possui 2⁵ = 32 subconjuntos. A possibilidade de não escolher nenhum tema corresponde ao conjunto vazio, que entra na contagem.\n",
-        "feedbackErro": "\n❌ Atenção! Um conjunto com 5 elementos possui 2⁵ = 32 subconjuntos. A possibilidade de não escolher nenhum tema corresponde ao conjunto vazio, que entra na contagem.\n",
-        "dicaBanca": "\nSe todos os subconjuntos são permitidos, use 2^n.\n"
+        "feedbackAcerto": "\n🎉 Excelente! Repetições não criam novos elementos em um conjunto. Assim, A = {1, 2, 3} e n(A) = 3.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 3\n\nRepetições não criam novos elementos em um conjunto. Assim, A = {1, 2, 3} e n(A) = 3.\n",
+        "dicaBanca": "\nCardinalidade conta elementos distintos, não ocorrências na escrita.\n"
+    },
+    {
+        "subtopico": "Pertinência e inclusão",
+        "pergunta": "Se A = {0, 2, 4, 6} e B = {2, 4}, qual relação é verdadeira?",
+        "alternativas": [
+            "A ⊂ B e 6 ∈ B",
+            "B ∈ A e 4 ⊂ A",
+            "A ∈ B e 0 ∈ B",
+            "B = A e 2 ∉ A",
+            "B ⊂ A e 6 ∉ B"
+        ],
+        "correta": 4,
+        "feedbackAcerto": "\n🎉 Excelente! B é formado por elementos que pertencem a A, portanto B é subconjunto de A; 6 não pertence a B.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: B ⊂ A e 6 ∉ B\n\nB é formado por elementos que pertencem a A, portanto B é subconjunto de A; 6 não pertence a B.\n",
+        "dicaBanca": "\nNão troque o símbolo de pertinência pelo de inclusão.\n"
+    },
+    {
+        "subtopico": "União",
+        "pergunta": "Dados A = {1, 2, 3, 5} e B = {2, 4, 5, 6}, determine A ∪ B.",
+        "alternativas": [
+            "{1, 2, 3, 4, 5, 6}",
+            "{2, 5}",
+            "{1, 3, 4, 6}, formado pelos elementos que não são comuns aos dois conjuntos",
+            "{1, 2, 3, 5}",
+            "{2, 4, 5, 6}"
+        ],
+        "correta": 0,
+        "feedbackAcerto": "\n🎉 Excelente! A união reúne os elementos que pertencem a pelo menos um dos conjuntos, sem repetição.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {1, 2, 3, 4, 5, 6}\n\nA união reúne os elementos que pertencem a pelo menos um dos conjuntos, sem repetição.\n",
+        "dicaBanca": "\nNa união, reúna os dois conjuntos e elimine duplicidades.\n"
+    },
+    {
+        "subtopico": "Interseção",
+        "pergunta": "Dados A = {1, 2, 3, 5} e B = {2, 4, 5, 6}, determine A ∩ B.",
+        "alternativas": [
+            "{1, 2, 3, 4, 5, 6}",
+            "{2, 5}",
+            "{1, 3, 4, 6}",
+            "{1, 2, 5}",
+            "{2, 4, 5, 6}"
+        ],
+        "correta": 1,
+        "feedbackAcerto": "\n🎉 Excelente! A interseção contém os elementos comuns aos dois conjuntos: 2 e 5.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {2, 5}\n\nA interseção contém os elementos comuns aos dois conjuntos: 2 e 5.\n",
+        "dicaBanca": "\nInterseção significa “pertence aos dois ao mesmo tempo”.\n"
+    },
+    {
+        "subtopico": "Diferença e complemento",
+        "pergunta": "Se A = {1, 2, 3, 4, 5} e B = {2, 4, 6}, então A − B é:",
+        "alternativas": [
+            "{2, 4}",
+            "{1, 3, 5, 6}",
+            "{1, 3, 5}",
+            "{1, 2, 3, 4, 5, 6}",
+            "{6}"
+        ],
+        "correta": 2,
+        "feedbackAcerto": "\n🎉 Excelente! A − B mantém os elementos de A que não pertencem a B: 1, 3 e 5.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {1, 3, 5}\n\nA − B mantém os elementos de A que não pertencem a B: 1, 3 e 5.\n",
+        "dicaBanca": "\nNa diferença, a ordem importa: A − B geralmente difere de B − A.\n"
+    },
+    {
+        "subtopico": "Diferença e complemento",
+        "pergunta": "No universo U = {1, 2, 3, 4, 5, 6, 7, 8}, seja A = {2, 4, 6, 8}. O complemento de A em U é:",
+        "alternativas": [
+            "{2, 4, 6, 8}",
+            "{1, 2, 3, 4}",
+            "{5, 6, 7, 8}",
+            "{1, 3, 5, 7}",
+            "{1, 3, 5, 7, 8}"
+        ],
+        "correta": 3,
+        "feedbackAcerto": "\n🎉 Excelente! O complemento reúne os elementos do universo que não pertencem a A.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {1, 3, 5, 7}\n\nO complemento reúne os elementos do universo que não pertencem a A.\n",
+        "dicaBanca": "\nComplemento depende do conjunto universo informado na questão.\n"
+    },
+    {
+        "subtopico": "Expressões com operações entre conjuntos",
+        "pergunta": "Considere A = {1, 2, 3, 4}, B = {3, 4, 5} e C = {2, 4, 6}. O conjunto (A ∩ B) ∪ C é:",
+        "alternativas": [
+            "{3, 4}",
+            "{2, 4}",
+            "{1, 2, 3, 4, 5, 6}",
+            "{2, 3, 4, 5, 6}",
+            "{2, 3, 4, 6}"
+        ],
+        "correta": 4,
+        "feedbackAcerto": "\n🎉 Excelente! Primeiro, A ∩ B = {3, 4}; unindo com C = {2, 4, 6}, obtemos {2, 3, 4, 6}.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {2, 3, 4, 6}\n\nPrimeiro, A ∩ B = {3, 4}; unindo com C = {2, 4, 6}, obtemos {2, 3, 4, 6}.\n",
+        "dicaBanca": "\nRespeite os parênteses: resolva a operação interna antes da união.\n"
+    },
+    {
+        "subtopico": "Expressões com operações entre conjuntos",
+        "pergunta": "Se A = {1, 3, 5, 7}, B = {3, 4, 5, 6} e C = {1, 5, 6}, então (A ∪ B) − C é:",
+        "alternativas": [
+            "{3, 4, 7}",
+            "{1, 3, 4, 5, 6, 7}",
+            "{1, 5, 6}",
+            "{3, 4, 6, 7}",
+            "{1, 3, 4, 7}"
+        ],
+        "correta": 0,
+        "feedbackAcerto": "\n🎉 Excelente! A ∪ B = {1, 3, 4, 5, 6, 7}; retirando os elementos de C, restam 3, 4 e 7.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {3, 4, 7}\n\nA ∪ B = {1, 3, 4, 5, 6, 7}; retirando os elementos de C, restam 3, 4 e 7.\n",
+        "dicaBanca": "\nFaça a união completa antes de aplicar a diferença.\n"
+    },
+    {
+        "subtopico": "Expressões com operações entre conjuntos",
+        "pergunta": "Considere A = {0, 1, 2, 3, 4}, B = {2, 3, 5} e C = {1, 3, 5}. O conjunto A ∩ (B ∪ C) é:",
+        "alternativas": [
+            "{2, 3, 5}",
+            "{1, 2, 3}",
+            "{1, 3, 5}",
+            "{0, 1, 2, 3, 4, 5}",
+            "{3}"
+        ],
+        "correta": 1,
+        "feedbackAcerto": "\n🎉 Excelente! B ∪ C = {1, 2, 3, 5}; intersectando com A, ficam 1, 2 e 3.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {1, 2, 3}\n\nB ∪ C = {1, 2, 3, 5}; intersectando com A, ficam 1, 2 e 3.\n",
+        "dicaBanca": "\nEm expressões compostas, resolva primeiro o que está entre parênteses.\n"
+    },
+    {
+        "subtopico": "Diferença e complemento",
+        "pergunta": "Para A = {a, b, c, d} e B = {c, d, e}, qual é B − A?",
+        "alternativas": [
+            "{a, b}",
+            "{c, d}",
+            "{e}",
+            "{a, b, e}",
+            "{c, d, e}"
+        ],
+        "correta": 2,
+        "feedbackAcerto": "\n🎉 Excelente! B − A contém os elementos de B que não pertencem a A. Apenas e satisfaz essa condição.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {e}\n\nB − A contém os elementos de B que não pertencem a A. Apenas e satisfaz essa condição.\n",
+        "dicaBanca": "\nTrocar A − B por B − A muda o conjunto de partida.\n"
+    },
+    {
+        "subtopico": "União",
+        "pergunta": "Sabendo que A ⊂ B, qual igualdade envolvendo a união deve ser satisfeita?",
+        "alternativas": [
+            "A ∪ B = A",
+            "A ∩ B = ∅",
+            "A − B = A",
+            "A ∪ B = B",
+            "B − A = ∅"
+        ],
+        "correta": 3,
+        "feedbackAcerto": "\n🎉 Excelente! Quando A está contido em B, todos os elementos de A já estão em B; por isso a união é B.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: A ∪ B = B\n\nQuando A está contido em B, todos os elementos de A já estão em B; por isso a união é B.\n",
+        "dicaBanca": "\nUse a relação de inclusão para simplificar operações.\n"
+    },
+    {
+        "subtopico": "Interseção",
+        "pergunta": "Se A ⊂ B, então qual igualdade é necessariamente verdadeira?",
+        "alternativas": [
+            "A ∩ B = B",
+            "A ∪ B = A",
+            "B − A = B",
+            "A − B = B",
+            "A ∩ B = A"
+        ],
+        "correta": 4,
+        "feedbackAcerto": "\n🎉 Excelente! Se todo elemento de A pertence a B, a parte comum entre A e B é o próprio A.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: A ∩ B = A\n\nSe todo elemento de A pertence a B, a parte comum entre A e B é o próprio A.\n",
+        "dicaBanca": "\nConjunto contido no outro reaparece integralmente na interseção.\n"
+    },
+    {
+        "subtopico": "Diferença e complemento",
+        "pergunta": "Se A ∩ B = ∅, com A e B não vazios, é correto afirmar que:",
+        "alternativas": [
+            "A e B são disjuntos.",
+            "A está contido em B.",
+            "B está contido em A.",
+            "A e B possuem a mesma cardinalidade.",
+            "A ∪ B é o conjunto vazio."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "\n🎉 Excelente! Conjuntos sem elementos em comum são chamados disjuntos.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: A e B são disjuntos.\n\nConjuntos sem elementos em comum são chamados disjuntos.\n",
+        "dicaBanca": "\nInterseção vazia caracteriza conjuntos disjuntos.\n"
+    },
+    {
+        "subtopico": "Expressões com operações entre conjuntos",
+        "pergunta": "No universo U = {1, 2, 3, 4, 5, 6}, sejam A = {1, 2, 3, 4} e B = {3, 4, 5}. Quantos elementos possui o complemento de A ∩ B em U?",
+        "alternativas": [
+            "1",
+            "4",
+            "2",
+            "3",
+            "6"
+        ],
+        "correta": 1,
+        "feedbackAcerto": "\n🎉 Excelente! A ∩ B = {3, 4}; seu complemento em U é {1, 2, 5, 6}, com quatro elementos.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 4\n\nA ∩ B = {3, 4}; seu complemento em U é {1, 2, 5, 6}, com quatro elementos.\n",
+        "dicaBanca": "\nAche primeiro a interseção e só depois aplique o complemento.\n"
+    },
+    {
+        "subtopico": "Cardinalidade",
+        "pergunta": "Se n(A) = 28, n(B) = 35 e n(A ∩ B) = 12, qual é n(A ∪ B)?",
+        "alternativas": [
+            "39",
+            "47",
+            "51",
+            "63",
+            "75"
+        ],
+        "correta": 2,
+        "feedbackAcerto": "\n🎉 Excelente! Pela fórmula n(A ∪ B) = n(A) + n(B) − n(A ∩ B), temos 28 + 35 − 12 = 51.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 51\n\nPela fórmula n(A ∪ B) = n(A) + n(B) − n(A ∩ B), temos 28 + 35 − 12 = 51.\n",
+        "dicaBanca": "\nSubtraia a interseção uma vez para evitar dupla contagem.\n"
+    },
+    {
+        "subtopico": "Problemas contextualizados com dois conjuntos",
+        "pergunta": "Em uma turma de 48 alunos, 30 estudam inglês, 22 estudam espanhol e 12 estudam os dois idiomas. Quantos estudam pelo menos um dos dois?",
+        "alternativas": [
+            "36",
+            "42",
+            "44",
+            "40",
+            "52"
+        ],
+        "correta": 3,
+        "feedbackAcerto": "\n🎉 Excelente! A união vale 30 + 22 − 12 = 40 alunos.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 40\n\nA união vale 30 + 22 − 12 = 40 alunos.\n",
+        "dicaBanca": "\n“Pelo menos um” corresponde à união dos conjuntos.\n"
+    },
+    {
+        "subtopico": "Complemento da união em contexto",
+        "pergunta": "Em uma turma de 48 alunos, 30 estudam inglês, 22 estudam espanhol e 12 estudam os dois idiomas. Quantos não estudam nenhum dos dois?",
+        "alternativas": [
+            "4",
+            "6",
+            "10",
+            "18",
+            "8"
+        ],
+        "correta": 4,
+        "feedbackAcerto": "\n🎉 Excelente! A união tem 40 alunos; como a turma possui 48, restam 8 fora dos dois conjuntos.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 8\n\nA união tem 40 alunos; como a turma possui 48, restam 8 fora dos dois conjuntos.\n",
+        "dicaBanca": "\nCalcule a união e subtraia do total do universo.\n"
+    },
+    {
+        "subtopico": "Problemas contextualizados com dois conjuntos",
+        "pergunta": "Em uma pesquisa com 200 pessoas, 120 usam o serviço A, 95 usam o serviço B e 55 usam ambos. Quantas usam somente o serviço A?",
+        "alternativas": [
+            "65",
+            "40",
+            "55",
+            "80",
+            "105"
+        ],
+        "correta": 0,
+        "feedbackAcerto": "\n🎉 Excelente! Quem usa somente A é contado em A, mas não na interseção: 120 − 55 = 65.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 65\n\nQuem usa somente A é contado em A, mas não na interseção: 120 − 55 = 65.\n",
+        "dicaBanca": "\nPara “A, mas não B”, subtraia a interseção de A.\n"
+    },
+    {
+        "subtopico": "Problemas contextualizados com dois conjuntos",
+        "pergunta": "Em uma escola, 84 alunos participam de xadrez, 70 de robótica e 46 das duas atividades. Quantos participam de exatamente uma dessas atividades?",
+        "alternativas": [
+            "46",
+            "62",
+            "54",
+            "108",
+            "154"
+        ],
+        "correta": 1,
+        "feedbackAcerto": "\n🎉 Excelente! Somente xadrez: 84 − 46 = 38; somente robótica: 70 − 46 = 24; total = 62.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 62\n\nSomente xadrez: 84 − 46 = 38; somente robótica: 70 − 46 = 24; total = 62.\n",
+        "dicaBanca": "\n“Exatamente uma” exclui a região comum aos dois conjuntos.\n"
+    },
+    {
+        "subtopico": "Cardinalidade em contexto",
+        "pergunta": "Em um grupo, 76 pessoas gostam de café, 58 gostam de chá e 26 gostam de ambos. Quantas gostam de café ou chá?",
+        "alternativas": [
+            "82",
+            "102",
+            "108",
+            "134",
+            "160"
+        ],
+        "correta": 2,
+        "feedbackAcerto": "\n🎉 Excelente! A união é 76 + 58 − 26 = 108.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 108\n\nA união é 76 + 58 − 26 = 108.\n",
+        "dicaBanca": "\nNa linguagem de conjuntos, “ou” inclusivo indica união.\n"
+    },
+    {
+        "subtopico": "Complemento da união em contexto",
+        "pergunta": "Uma pesquisa com 150 pessoas mostrou que 92 assistem ao canal A, 68 ao canal B e 35 aos dois. Quantas não assistem a nenhum desses canais?",
+        "alternativas": [
+            "15",
+            "33",
+            "57",
+            "25",
+            "125"
+        ],
+        "correta": 3,
+        "feedbackAcerto": "\n🎉 Excelente! A união é 92 + 68 − 35 = 125; fora da união ficam 150 − 125 = 25 pessoas.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 25\n\nA união é 92 + 68 − 35 = 125; fora da união ficam 150 − 125 = 25 pessoas.\n",
+        "dicaBanca": "\n“Nenhum” é o complemento da união no universo da pesquisa.\n"
+    },
+    {
+        "subtopico": "Cardinalidade",
+        "pergunta": "Se n(A ∪ B) = 73, n(A) = 45 e n(B) = 38, então n(A ∩ B) é:",
+        "alternativas": [
+            "6",
+            "8",
+            "28",
+            "83",
+            "10"
+        ],
+        "correta": 4,
+        "feedbackAcerto": "\n🎉 Excelente! Da fórmula da união, 73 = 45 + 38 − n(A ∩ B); logo a interseção vale 10.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 10\n\nDa fórmula da união, 73 = 45 + 38 − n(A ∩ B); logo a interseção vale 10.\n",
+        "dicaBanca": "\nIsole a interseção na fórmula da cardinalidade da união.\n"
+    },
+    {
+        "subtopico": "Problemas contextualizados com dois conjuntos",
+        "pergunta": "Em uma seleção, 64 candidatos acertaram Matemática, 52 acertaram Português e 30 acertaram ambas. Quantos acertaram Matemática e erraram Português?",
+        "alternativas": [
+            "34",
+            "22",
+            "30",
+            "46",
+            "86"
+        ],
+        "correta": 0,
+        "feedbackAcerto": "\n🎉 Excelente! Dos 64 que acertaram Matemática, 30 também acertaram Português; portanto 64 − 30 = 34.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 34\n\nDos 64 que acertaram Matemática, 30 também acertaram Português; portanto 64 − 30 = 34.\n",
+        "dicaBanca": "\nA expressão “A e não B” corresponde à diferença A − B.\n"
+    },
+    {
+        "subtopico": "Problemas contextualizados com dois conjuntos",
+        "pergunta": "Em uma comunidade de 300 pessoas, 180 utilizam transporte coletivo, 150 usam bicicleta e 90 usam ambos. Quantas usam exatamente um desses meios?",
+        "alternativas": [
+            "90",
+            "150",
+            "120",
+            "240",
+            "330"
+        ],
+        "correta": 1,
+        "feedbackAcerto": "\n🎉 Excelente! Somente coletivo = 90 e somente bicicleta = 60; portanto exatamente um = 150.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 150\n\nSomente coletivo = 90 e somente bicicleta = 60; portanto exatamente um = 150.\n",
+        "dicaBanca": "\nRetire a interseção de cada conjunto antes de somar as regiões exclusivas.\n"
+    },
+    {
+        "subtopico": "Complemento da união em contexto",
+        "pergunta": "Em uma pesquisa com 260 estudantes, 150 preferem aulas presenciais, 130 preferem atividades online e 70 preferem ambas. Quantos não escolheram nenhuma dessas opções?",
+        "alternativas": [
+            "20",
+            "30",
+            "50",
+            "110",
+            "210"
+        ],
+        "correta": 2,
+        "feedbackAcerto": "\n🎉 Excelente! A união é 150 + 130 − 70 = 210; fora dela ficam 260 − 210 = 50.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 50\n\nA união é 150 + 130 − 70 = 210; fora dela ficam 260 − 210 = 50.\n",
+        "dicaBanca": "\nDepois de achar a união, compare com o total pesquisado.\n"
+    },
+    {
+        "subtopico": "Cardinalidade",
+        "pergunta": "Dois conjuntos finitos A e B são disjuntos, com n(A) = 17 e n(B) = 23. Qual é n(A ∪ B)?",
+        "alternativas": [
+            "6",
+            "17",
+            "23",
+            "40",
+            "391"
+        ],
+        "correta": 3,
+        "feedbackAcerto": "\n🎉 Excelente! Como A ∩ B = ∅, nenhuma correção por dupla contagem é necessária: 17 + 23 = 40.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 40\n\nComo A ∩ B = ∅, nenhuma correção por dupla contagem é necessária: 17 + 23 = 40.\n",
+        "dicaBanca": "\nSe os conjuntos são disjuntos, a cardinalidade da união é a soma direta.\n"
+    },
+    {
+        "subtopico": "Problemas contextualizados com dois conjuntos",
+        "pergunta": "Em um concurso, 240 candidatos fizeram a prova A, 180 fizeram a prova B e 150 fizeram ambas. Quantos fizeram somente uma das provas?",
+        "alternativas": [
+            "60",
+            "90",
+            "270",
+            "420",
+            "120"
+        ],
+        "correta": 4,
+        "feedbackAcerto": "\n🎉 Excelente! Somente A = 90 e somente B = 30; somando as regiões exclusivas, obtemos 120.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 120\n\nSomente A = 90 e somente B = 30; somando as regiões exclusivas, obtemos 120.\n",
+        "dicaBanca": "\nPara exatamente uma prova, não conte quem pertence à interseção.\n"
+    },
+    {
+        "subtopico": "Complemento e cardinalidade",
+        "pergunta": "Em um universo U com 90 elementos, A possui 52 elementos. Quantos elementos possui o complemento de A em U?",
+        "alternativas": [
+            "38",
+            "42",
+            "52",
+            "90",
+            "142"
+        ],
+        "correta": 0,
+        "feedbackAcerto": "\n🎉 Excelente! O complemento tem n(U) − n(A) = 90 − 52 = 38 elementos.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 38\n\nO complemento tem n(U) − n(A) = 90 − 52 = 38 elementos.\n",
+        "dicaBanca": "\nComplemento e conjunto original particionam o universo.\n"
+    },
+    {
+        "subtopico": "Três conjuntos em situação-problema",
+        "pergunta": "Em uma turma, 30 alunos estudam Inglês (I), 28 Espanhol (E) e 20 Francês (F). Sabe-se que 12 estudam I e E, 8 estudam I e F, 7 estudam E e F, e 4 estudam os três. Quantos estudam pelo menos um idioma?",
+        "alternativas": [
+            "47",
+            "55",
+            "51",
+            "59",
+            "69"
+        ],
+        "correta": 1,
+        "feedbackAcerto": "\n🎉 Excelente! Pela inclusão-exclusão: 30 + 28 + 20 − 12 − 8 − 7 + 4 = 55.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 55\n\nPela inclusão-exclusão: 30 + 28 + 20 − 12 − 8 − 7 + 4 = 55.\n",
+        "dicaBanca": "\nEm três conjuntos, some os individuais, subtraia as interseções duplas e recoloque a tripla.\n"
+    },
+    {
+        "subtopico": "Exatamente dois conjuntos",
+        "pergunta": "No cenário em que n(I∩E)=12, n(I∩F)=8, n(E∩F)=7 e n(I∩E∩F)=4, quantos alunos estudam exatamente dois dos três idiomas?",
+        "alternativas": [
+            "11",
+            "19",
+            "15",
+            "23",
+            "27"
+        ],
+        "correta": 2,
+        "feedbackAcerto": "\n🎉 Excelente! As regiões exatamente duplas são 12−4, 8−4 e 7−4; somando, 8 + 4 + 3 = 15.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 15\n\nAs regiões exatamente duplas são 12−4, 8−4 e 7−4; somando, 8 + 4 + 3 = 15.\n",
+        "dicaBanca": "\nCada interseção de dois inclui quem está nos três; retire a tripla de cada uma.\n"
+    },
+    {
+        "subtopico": "Exatamente um conjunto",
+        "pergunta": "Com n(I)=30, n(E)=28, n(F)=20, n(I∩E)=12, n(I∩F)=8, n(E∩F)=7 e n(I∩E∩F)=4, quantos estudam exatamente um idioma?",
+        "alternativas": [
+            "28",
+            "32",
+            "40",
+            "36",
+            "55"
+        ],
+        "correta": 3,
+        "feedbackAcerto": "\n🎉 Excelente! Somente I = 14, somente E = 13 e somente F = 9; totalizando 36.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 36\n\nSomente I = 14, somente E = 13 e somente F = 9; totalizando 36.\n",
+        "dicaBanca": "\nCalcule as regiões exclusivas, lembrando de corrigir a tripla interseção.\n"
+    },
+    {
+        "subtopico": "Três conjuntos contextualizados",
+        "pergunta": "Em um evento, 70 pessoas visitaram o estande A, 65 o B e 50 o C. As interseções A∩B, A∩C e B∩C têm 30, 22 e 18 pessoas, respectivamente, e 10 visitaram os três. Quantas visitaram ao menos um estande?",
+        "alternativas": [
+            "105",
+            "115",
+            "135",
+            "155",
+            "125"
+        ],
+        "correta": 4,
+        "feedbackAcerto": "\n🎉 Excelente! Aplicando inclusão-exclusão: 70 + 65 + 50 − 30 − 22 − 18 + 10 = 125.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 125\n\nAplicando inclusão-exclusão: 70 + 65 + 50 − 30 − 22 − 18 + 10 = 125.\n",
+        "dicaBanca": "\nEm três conjuntos, a interseção tripla deve ser somada de volta uma vez.\n"
+    },
+    {
+        "subtopico": "Três conjuntos contextualizados",
+        "pergunta": "Em uma escola com 180 alunos, 90 participam de esporte, 75 de música e 60 de teatro. Há 35 em esporte e música, 28 em esporte e teatro, 25 em música e teatro e 15 nas três. Quantos não participam de nenhuma dessas atividades?",
+        "alternativas": [
+            "28",
+            "13",
+            "23",
+            "43",
+            "152"
+        ],
+        "correta": 0,
+        "feedbackAcerto": "\n🎉 Excelente! A união é 90 + 75 + 60 − 35 − 28 − 25 + 15 = 152; então 180 − 152 = 28.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 28\n\nA união é 90 + 75 + 60 − 35 − 28 − 25 + 15 = 152; então 180 − 152 = 28.\n",
+        "dicaBanca": "\nAche primeiro a união dos três conjuntos e depois o complemento.\n"
+    },
+    {
+        "subtopico": "Exatamente dois conjuntos",
+        "pergunta": "No cenário da escola, com interseções duplas 35, 28 e 25 e interseção tripla 15, quantos alunos participam de exatamente duas atividades?",
+        "alternativas": [
+            "28",
+            "43",
+            "38",
+            "58",
+            "88"
+        ],
+        "correta": 1,
+        "feedbackAcerto": "\n🎉 Excelente! Exatamente duas = (35−15) + (28−15) + (25−15) = 20 + 13 + 10 = 43.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 43\n\nExatamente duas = (35−15) + (28−15) + (25−15) = 20 + 13 + 10 = 43.\n",
+        "dicaBanca": "\nNão some as interseções duplas sem descontar quem participa das três.\n"
+    },
+    {
+        "subtopico": "Exatamente um conjunto",
+        "pergunta": "No mesmo cenário, com 90 em esporte, 75 em música, 60 em teatro, interseções 35, 28 e 25 e tripla 15, quantos participam de exatamente uma atividade?",
+        "alternativas": [
+            "79",
+            "89",
+            "94",
+            "109",
+            "137"
+        ],
+        "correta": 2,
+        "feedbackAcerto": "\n🎉 Excelente! Somente esporte = 42, somente música = 30 e somente teatro = 22; total = 94.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 94\n\nSomente esporte = 42, somente música = 30 e somente teatro = 22; total = 94.\n",
+        "dicaBanca": "\nPara achar a região exclusiva, retire as duas interseções e recoloque a tripla uma vez.\n"
+    },
+    {
+        "subtopico": "Regiões em três conjuntos",
+        "pergunta": "Em três conjuntos A, B e C, a região formada por elementos que pertencem a A e B, mas não a C, é representada por:",
+        "alternativas": [
+            "A ∩ B ∩ C",
+            "A − (B ∪ C)",
+            "(A ∪ B) − C",
+            "(A ∩ B) − C",
+            "C − (A ∩ B)"
+        ],
+        "correta": 3,
+        "feedbackAcerto": "\n🎉 Excelente! Primeiro exigimos pertencer simultaneamente a A e B; depois retiramos os elementos que também pertencem a C.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: (A ∩ B) − C\n\nPrimeiro exigimos pertencer simultaneamente a A e B; depois retiramos os elementos que também pertencem a C.\n",
+        "dicaBanca": "\nTraduza “A e B, mas não C” em duas etapas: interseção e diferença.\n"
+    },
+    {
+        "subtopico": "Regiões em três conjuntos",
+        "pergunta": "A expressão A − (B ∪ C) representa os elementos que:",
+        "alternativas": [
+            "pertencem simultaneamente a A, B e C.",
+            "pertencem a B ou C, mas não a A.",
+            "pertencem a A e a pelo menos um entre B e C, incluindo regiões de interseção.",
+            "pertencem a exatamente dois entre A, B e C.",
+            "pertencem a A e não pertencem nem a B nem a C."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "\n🎉 Excelente! A diferença remove de A todos os elementos presentes na união B ∪ C.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: pertencem a A e não pertencem nem a B nem a C.\n\nA diferença remove de A todos os elementos presentes na união B ∪ C.\n",
+        "dicaBanca": "\nLeia primeiro o conjunto retirado: B ∪ C contém quem está em B ou em C.\n"
+    },
+    {
+        "subtopico": "Três conjuntos e regiões do diagrama",
+        "pergunta": "Se n(A∩B)=18 e n(A∩B∩C)=7, quantos elementos estão em A e B, mas fora de C?",
+        "alternativas": [
+            "11",
+            "7",
+            "18",
+            "25",
+            "126"
+        ],
+        "correta": 0,
+        "feedbackAcerto": "\n🎉 Excelente! A interseção A∩B inclui os que também estão em C; retirando a tripla, 18 − 7 = 11.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 11\n\nA interseção A∩B inclui os que também estão em C; retirando a tripla, 18 − 7 = 11.\n",
+        "dicaBanca": "\nInterseção dupla informada costuma incluir a região central dos três conjuntos.\n"
+    },
+    {
+        "subtopico": "Naturais e inteiros",
+        "pergunta": "Qual dos números abaixo pertence a Z, mas não pertence a N?",
+        "alternativas": [
+            "0",
+            "-4",
+            "3",
+            "12",
+            "25"
+        ],
+        "correta": 1,
+        "feedbackAcerto": "\n🎉 Excelente! O número −4 é inteiro e não é natural. Os demais valores listados são naturais na convenção que inclui o zero.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: -4\n\nO número −4 é inteiro e não é natural. Os demais valores listados são naturais na convenção que inclui o zero.\n",
+        "dicaBanca": "\nInteiros incluem negativos; naturais não incluem números negativos.\n"
+    },
+    {
+        "subtopico": "Racionais e irracionais",
+        "pergunta": "Qual número é racional?",
+        "alternativas": [
+            "√3",
+            "π",
+            "0,272727...",
+            "√7",
+            "0,1010010001..."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "\n🎉 Excelente! Toda dízima periódica é racional, pois pode ser escrita como razão de dois inteiros.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 0,272727...\n\nToda dízima periódica é racional, pois pode ser escrita como razão de dois inteiros.\n",
+        "dicaBanca": "\nDecimal infinito periódico é racional; infinito não periódico pode ser irracional.\n"
+    },
+    {
+        "subtopico": "Racionais e irracionais",
+        "pergunta": "Qual número é irracional?",
+        "alternativas": [
+            "-7",
+            "0,125",
+            "5/9",
+            "√18",
+            "√49"
+        ],
+        "correta": 3,
+        "feedbackAcerto": "\n🎉 Excelente! √18 = 3√2 e não pode ser escrito como razão de inteiros; os demais são racionais.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: √18\n\n√18 = 3√2 e não pode ser escrito como razão de inteiros; os demais são racionais.\n",
+        "dicaBanca": "\nRaiz quadrada de inteiro que não é quadrado perfeito tende a produzir irracional.\n"
     },
     {
         "subtopico": "Classificação de números",
-        "pergunta": "Considere os números: -7, 0, 1/3, √16, √2 e π. Quantos desses números pertencem ao conjunto dos racionais?",
-        "alternativas": [
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! -7, 0, 1/3 e √16 = 4 são racionais. Já √2 e π são irracionais. Portanto, há 4 números racionais.\n",
-        "feedbackErro": "\n❌ Atenção! -7, 0, 1/3 e √16 = 4 são racionais. Já √2 e π são irracionais. Portanto, há 4 números racionais.\n",
-        "dicaBanca": "\nNem toda raiz é irracional; raízes exatas de quadrados perfeitos podem ser racionais.\n"
-    },
-    {
-        "subtopico": "Conjuntos numéricos e inclusão",
-        "pergunta": "Dos números -3, 2, 0,75, 0,333..., √5 e π, quantos pertencem ao conjunto dos reais, mas não pertencem ao conjunto dos racionais?",
+        "pergunta": "Considere os números -5, 0, 3/4, √16, √2 e π. Quantos são racionais?",
         "alternativas": [
             "1",
             "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! Os reais que não são racionais são os irracionais. Na lista, √5 e π são irracionais. Os demais são racionais. Portanto, há 2.\n",
-        "feedbackErro": "\n❌ Atenção! Os reais que não são racionais são os irracionais. Na lista, √5 e π são irracionais. Os demais são racionais. Portanto, há 2.\n",
-        "dicaBanca": "\nR − Q corresponde aos irracionais.\n"
-    },
-    {
-        "subtopico": "Problemas contextualizados com dois conjuntos",
-        "pergunta": "Em um levantamento realizado em um(a) biblioteca, foram consultadas 320 pessoas. Destas, 170 leem livros de aventura, 140 leem livros de mistério e 70 fazem as duas coisas. Quantas pessoas fazem pelo menos uma dessas duas atividades?",
-        "alternativas": [
-            "220 pessoas",
-            "240 pessoas",
-            "310 pessoas",
-            "310 pessoas",
-            "80 pessoas"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! “Pelo menos uma” indica união. Então n(A ∪ B) = 170 + 140 − 70 = 240. A interseção deve ser subtraída para evitar dupla contagem.\n",
-        "feedbackErro": "\n❌ Atenção! “Pelo menos uma” indica união. Então n(A ∪ B) = 170 + 140 − 70 = 240. A interseção deve ser subtraída para evitar dupla contagem.\n",
-        "dicaBanca": "\nEm problemas com “pelo menos uma”, calcule a união.\n"
-    },
-    {
-        "subtopico": "Complemento da união em contexto",
-        "pergunta": "Em um levantamento realizado em uma biblioteca, foram consultadas 320 pessoas. Dessas, 170 leem livros de aventura, 140 leem livros de mistério e 70 leem os dois gêneros. Quantas pessoas não leem nenhum desses dois gêneros?",
-        "alternativas": [
-            "80 pessoas",
-            "90 pessoas",
-            "100 pessoas",
-            "110 pessoas",
-            "120 pessoas"
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Excelente! A união é 170 + 140 − 70 = 240. Quem não lê nenhum dos dois gêneros é o complemento da união: 320 − 240 = 80 pessoas.\n",
-        "feedbackErro": "\n❌ Atenção! Primeiro calcule quem lê pelo menos um dos gêneros: 170 + 140 − 70 = 240. Depois retire do total: 320 − 240 = 80 pessoas.\n",
-        "dicaBanca": "\nQuando a questão perguntar “nenhum”, calcule primeiro a união e depois subtraia do total pesquisado.\n"
-    },
-    {
-        "subtopico": "Problemas contextualizados com dois conjuntos",
-        "pergunta": "Em um levantamento realizado em um(a) escola, foram consultadas 500 pessoas. Destas, 260 participam da olimpíada de Matemática, 210 participam da feira de Ciências e 90 fazem as duas coisas. Quantas pessoas fazem pelo menos uma dessas duas atividades?",
-        "alternativas": [
-            "360 pessoas",
-            "380 pessoas",
-            "470 pessoas",
-            "470 pessoas",
-            "120 pessoas"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! “Pelo menos uma” indica união. Então n(A ∪ B) = 260 + 210 − 90 = 380. A interseção deve ser subtraída para evitar dupla contagem.\n",
-        "feedbackErro": "\n❌ Atenção! “Pelo menos uma” indica união. Então n(A ∪ B) = 260 + 210 − 90 = 380. A interseção deve ser subtraída para evitar dupla contagem.\n",
-        "dicaBanca": "\nEm problemas com “pelo menos uma”, calcule a união.\n"
-    },
-    {
-        "subtopico": "Complemento da união em contexto",
-        "pergunta": "Em um levantamento realizado em uma escola, foram consultadas 500 pessoas. Dessas, 260 participam da olimpíada de Matemática, 210 participam da feira de Ciências e 90 participam das duas atividades. Quantas pessoas não participam de nenhuma dessas duas atividades?",
-        "alternativas": [
-            "90 pessoas",
-            "100 pessoas",
-            "110 pessoas",
-            "120 pessoas",
-            "130 pessoas"
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\n🎉 Excelente! A união é 260 + 210 − 90 = 380. Quem não participa de nenhuma das duas atividades é 500 − 380 = 120 pessoas.\n",
-        "feedbackErro": "\n❌ Atenção! A união representa quem participa de pelo menos uma atividade: 260 + 210 − 90 = 380. O complemento em relação ao total é 500 − 380 = 120.\n",
-        "dicaBanca": "\n“Nenhuma” indica o complemento da união em relação ao conjunto universo.\n"
-    },
-    {
-        "subtopico": "Problemas contextualizados com dois conjuntos",
-        "pergunta": "Em um levantamento realizado em um(a) bairro, foram consultadas 240 pessoas. Destas, 130 usam bicicleta para ir ao trabalho, 110 usam ônibus para ir ao trabalho e 50 fazem as duas coisas. Quantas pessoas fazem pelo menos uma dessas duas atividades?",
-        "alternativas": [
-            "170 pessoas",
-            "190 pessoas",
-            "240 pessoas",
-            "240 pessoas",
-            "50 pessoas"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! “Pelo menos uma” indica união. Então n(A ∪ B) = 130 + 110 − 50 = 190. A interseção deve ser subtraída para evitar dupla contagem.\n",
-        "feedbackErro": "\n❌ Atenção! “Pelo menos uma” indica união. Então n(A ∪ B) = 130 + 110 − 50 = 190. A interseção deve ser subtraída para evitar dupla contagem.\n",
-        "dicaBanca": "\nEm problemas com “pelo menos uma”, calcule a união.\n"
-    },
-    {
-        "subtopico": "Complemento da união em contexto",
-        "pergunta": "Em um levantamento realizado em um bairro, foram consultadas 240 pessoas. Dessas, 130 usam bicicleta para ir ao trabalho, 110 usam ônibus para ir ao trabalho e 50 usam os dois meios em dias diferentes. Quantas pessoas não usam nenhum desses dois meios?",
-        "alternativas": [
-            "40 pessoas",
-            "45 pessoas",
-            "50 pessoas",
-            "55 pessoas",
-            "60 pessoas"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! A união é 130 + 110 − 50 = 190. Quem não usa nenhum dos dois meios é 240 − 190 = 50 pessoas.\n",
-        "feedbackErro": "\n❌ Atenção! Primeiro calcule a união: 130 + 110 − 50 = 190. Depois faça o complemento: 240 − 190 = 50.\n",
-        "dicaBanca": "\nEm problemas com transporte, clubes, cursos ou pesquisas, “nenhum” sempre exige olhar para o total.\n"
-    },
-    {
-        "subtopico": "Problemas contextualizados com dois conjuntos",
-        "pergunta": "Em um levantamento realizado em um(a) universidade, foram consultadas 750 pessoas. Destas, 420 fazem pesquisa em Educação, 300 fazem pesquisa em Tecnologia e 180 fazem as duas coisas. Quantas pessoas fazem pelo menos uma dessas duas atividades?",
-        "alternativas": [
-            "520 pessoas",
-            "540 pessoas",
-            "720 pessoas",
-            "720 pessoas",
-            "210 pessoas"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! “Pelo menos uma” indica união. Então n(A ∪ B) = 420 + 300 − 180 = 540. A interseção deve ser subtraída para evitar dupla contagem.\n",
-        "feedbackErro": "\n❌ Atenção! “Pelo menos uma” indica união. Então n(A ∪ B) = 420 + 300 − 180 = 540. A interseção deve ser subtraída para evitar dupla contagem.\n",
-        "dicaBanca": "\nEm problemas com “pelo menos uma”, calcule a união.\n"
-    },
-    {
-        "subtopico": "Complemento da união em contexto",
-        "pergunta": "Em um levantamento realizado em uma universidade, foram consultadas 750 pessoas. Dessas, 420 fazem pesquisa em Educação, 300 fazem pesquisa em Tecnologia e 180 pesquisam as duas áreas. Quantas pessoas não pesquisam nenhuma dessas duas áreas?",
-        "alternativas": [
-            "190 pessoas",
-            "200 pessoas",
-            "210 pessoas",
-            "220 pessoas",
-            "230 pessoas"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! A união é 420 + 300 − 180 = 540. Quem está fora das duas áreas é 750 − 540 = 210 pessoas.\n",
-        "feedbackErro": "\n❌ Atenção! Calcule a união: 420 + 300 − 180 = 540. Depois subtraia do universo: 750 − 540 = 210.\n",
-        "dicaBanca": "\nNão some os grupos sem descontar a interseção. E, para “nenhuma”, subtraia a união do total.\n"
-    },
-    {
-        "subtopico": "Problemas contextualizados com dois conjuntos",
-        "pergunta": "Em um levantamento realizado em um(a) clube, foram consultadas 150 pessoas. Destas, 90 praticam vôlei, 75 praticam basquete e 40 fazem as duas coisas. Quantas pessoas fazem pelo menos uma dessas duas atividades?",
-        "alternativas": [
-            "105 pessoas",
-            "125 pessoas",
-            "165 pessoas",
-            "165 pessoas",
-            "25 pessoas"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! “Pelo menos uma” indica união. Então n(A ∪ B) = 90 + 75 − 40 = 125. A interseção deve ser subtraída para evitar dupla contagem.\n",
-        "feedbackErro": "\n❌ Atenção! “Pelo menos uma” indica união. Então n(A ∪ B) = 90 + 75 − 40 = 125. A interseção deve ser subtraída para evitar dupla contagem.\n",
-        "dicaBanca": "\nEm problemas com “pelo menos uma”, calcule a união.\n"
-    },
-    {
-        "subtopico": "Complemento da união em contexto",
-        "pergunta": "Em um levantamento realizado em um clube, foram consultadas 150 pessoas. Dessas, 90 praticam vôlei, 75 praticam basquete e 40 praticam os dois esportes. Quantas pessoas não praticam nenhum desses dois esportes?",
-        "alternativas": [
-            "20 pessoas",
-            "25 pessoas",
-            "30 pessoas",
-            "35 pessoas",
-            "40 pessoas"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! A união é 90 + 75 − 40 = 125. O complemento é 150 − 125 = 25 pessoas.\n",
-        "feedbackErro": "\n❌ Atenção! Quem pratica pelo menos um esporte é 90 + 75 − 40 = 125. Quem não pratica nenhum é 150 − 125 = 25.\n",
-        "dicaBanca": "\n“Pelo menos um” é união; “nenhum” é complemento da união.\n"
-    },
-    {
-        "subtopico": "Problemas contextualizados com dois conjuntos",
-        "pergunta": "Em um levantamento realizado em um(a) curso, foram consultadas 600 pessoas. Destas, 350 frequentam monitoria de Álgebra, 280 frequentam monitoria de Geometria e 170 fazem as duas coisas. Quantas pessoas fazem pelo menos uma dessas duas atividades?",
-        "alternativas": [
-            "440 pessoas",
-            "460 pessoas",
-            "630 pessoas",
-            "630 pessoas",
-            "140 pessoas"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! “Pelo menos uma” indica união. Então n(A ∪ B) = 350 + 280 − 170 = 460. A interseção deve ser subtraída para evitar dupla contagem.\n",
-        "feedbackErro": "\n❌ Atenção! “Pelo menos uma” indica união. Então n(A ∪ B) = 350 + 280 − 170 = 460. A interseção deve ser subtraída para evitar dupla contagem.\n",
-        "dicaBanca": "\nEm problemas com “pelo menos uma”, calcule a união.\n"
-    },
-    {
-        "subtopico": "Complemento da união em contexto",
-        "pergunta": "Em um curso, foram consultados 600 alunos. Desses, 350 frequentam monitoria de Álgebra, 280 frequentam monitoria de Geometria e 170 frequentam as duas monitorias. Quantos alunos não frequentam nenhuma dessas duas monitorias?",
-        "alternativas": [
-            "130 alunos",
-            "140 alunos",
-            "150 alunos",
-            "160 alunos",
-            "170 alunos"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! A união é 350 + 280 − 170 = 460. Quem não frequenta nenhuma monitoria é 600 − 460 = 140 alunos.\n",
-        "feedbackErro": "\n❌ Atenção! A união é 350 + 280 − 170 = 460. O complemento em relação ao total é 600 − 460 = 140.\n",
-        "dicaBanca": "\nQuando há total e pergunta por quem ficou fora dos conjuntos, use complemento.\n"
-    },
-    {
-        "subtopico": "Expressões com operações entre conjuntos",
-        "pergunta": "Considere A = {1, 3, 5, 7, 9}, B = {2, 3, 5, 8, 9} e C = {3, 4, 5, 6}. O resultado de (A ∪ C) − B é:",
-        "alternativas": [
-            "{1, 4, 6, 7}",
-            "{1, 3, 4, 5, 6, 7, 9}",
-            "{2, 8}",
-            "{3, 5}",
-            "{1, 7}"
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Excelente! A ∪ C = {1, 3, 4, 5, 6, 7, 9}. Retirando os elementos de B, que são 2, 3, 5, 8 e 9, sobram {1, 4, 6, 7}.\n",
-        "feedbackErro": "\n❌ Atenção! A ∪ C = {1, 3, 4, 5, 6, 7, 9}. Retirando os elementos de B, que são 2, 3, 5, 8 e 9, sobram {1, 4, 6, 7}.\n",
-        "dicaBanca": "\nResolva primeiro a operação dentro dos parênteses e depois aplique a operação externa.\n"
-    },
-    {
-        "subtopico": "Expressões com operações entre conjuntos",
-        "pergunta": "Considere A = {0, 2, 4, 6, 8}, B = {1, 2, 3, 4, 5} e C = {2, 4, 6}. O resultado de A ∩ (B ∪ C) é:",
-        "alternativas": [
-            "{2, 4, 6}",
-            "{0, 2, 4, 6, 8}",
-            "{2, 4}",
-            "{1, 2, 3, 4, 5, 6}",
-            "{6, 8}"
-        ],
-        "correta": 0,
-        "feedbackAcerto": "\n🎉 Excelente! B ∪ C = {1, 2, 3, 4, 5, 6}. Intersectando com A = {0, 2, 4, 6, 8}, obtemos {2, 4, 6}.\n",
-        "feedbackErro": "\n❌ Atenção! B ∪ C = {1, 2, 3, 4, 5, 6}. Intersectando com A = {0, 2, 4, 6, 8}, obtemos {2, 4, 6}.\n",
-        "dicaBanca": "\nResolva primeiro a operação dentro dos parênteses e depois aplique a operação externa.\n"
-    },
-    {
-        "subtopico": "Expressões com operações entre conjuntos",
-        "pergunta": "Considere A = {a, b, c, d}, B = {b, d, e, f} e C = {a, d, f}. O resultado de (A − C) ∪ (B ∩ C) é:",
-        "alternativas": [
-            "{b, d, f}",
-            "{a, b, d, f}",
-            "{b, c, d, f}",
-            "{c, d, f}",
-            "{a, c, e}"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! A − C = {b, c}; B ∩ C = {d, f}. A união é {b, c, d, f}. A alternativa correta é {b, c, d, f}.\n",
-        "feedbackErro": "\n❌ Atenção! A − C = {b, c}; B ∩ C = {d, f}. A união é {b, c, d, f}. A alternativa correta é {b, c, d, f}.\n",
-        "dicaBanca": "\nResolva primeiro a operação dentro dos parênteses e depois aplique a operação externa.\n"
-    },
-    {
-        "subtopico": "Três conjuntos contextualizados",
-        "pergunta": "Em um(a) feira de profissões, 95 participantes escolheram Medicina, 80 escolheram Engenharia e 70 escolheram Direito. Além disso, 35 escolheram Medicina e Engenharia, 30 escolheram Medicina e Direito, 25 escolheram Engenharia e Direito, e 15 escolheram os três. Quantos participantes escolheram pelo menos uma das opções?",
-        "alternativas": [
-            "150 participantes",
-            "170 participantes",
-            "190 participantes",
-            "245 participantes",
-            "45 participantes"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! Use inclusão-exclusão: 95+80+70−35−30−25+15 = 170. O valor representa a união dos três conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Use inclusão-exclusão: 95+80+70−35−30−25+15 = 170. O valor representa a união dos três conjuntos.\n",
-        "dicaBanca": "\nPara três conjuntos, não esqueça de somar novamente a interseção tripla.\n"
-    },
-    {
-        "subtopico": "Exatamente dois conjuntos",
-        "pergunta": "Em uma feira de profissões, 95 participantes escolheram Medicina, 80 escolheram Engenharia e 70 escolheram Direito. Além disso, 35 escolheram Medicina e Engenharia, 30 escolheram Medicina e Direito, 25 escolheram Engenharia e Direito, e 15 escolheram as três opções. Quantos participantes escolheram exatamente duas das três opções?",
-        "alternativas": [
-            "30 participantes",
-            "45 participantes",
-            "55 participantes",
-            "65 participantes",
-            "80 participantes"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! Exatamente duas = (35−15) + (30−15) + (25−15) = 20 + 15 + 10 = 45 participantes.\n",
-        "feedbackErro": "\n❌ Atenção! As interseções duplas incluem quem está nas três. Para exatamente duas, subtraia a interseção tripla de cada par: (35−15)+(30−15)+(25−15)=45.\n",
-        "dicaBanca": "\nEm três conjuntos, “exatamente duas” não inclui a região central dos três conjuntos.\n"
-    },
-    {
-        "subtopico": "Exatamente um conjunto",
-        "pergunta": "Em uma feira de profissões, 95 participantes escolheram Medicina, 80 escolheram Engenharia e 70 escolheram Direito. Além disso, 35 escolheram Medicina e Engenharia, 30 escolheram Medicina e Direito, 25 escolheram Engenharia e Direito, e 15 escolheram as três opções. Quantos participantes escolheram exatamente uma das três opções?",
-        "alternativas": [
-            "90 participantes",
-            "100 participantes",
-            "110 participantes",
-            "120 participantes",
-            "130 participantes"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! Apenas Medicina = 95−35−30+15=45; apenas Engenharia = 80−35−25+15=35; apenas Direito = 70−30−25+15=30. Total = 45+35+30 = 110.\n",
-        "feedbackErro": "\n❌ Atenção! Calcule as regiões exclusivas: Medicina = 45, Engenharia = 35, Direito = 30. Somando: 45 + 35 + 30 = 110 participantes.\n",
-        "dicaBanca": "\nPara exatamente uma opção, calcule as regiões exclusivas de cada conjunto.\n"
-    },
-    {
-        "subtopico": "Três conjuntos contextualizados",
-        "pergunta": "Em um(a) evento cultural, 120 participantes escolheram teatro, 100 escolheram música e 90 escolheram dança. Além disso, 45 escolheram teatro e música, 40 escolheram teatro e dança, 35 escolheram música e dança, e 20 escolheram os três. Quantos participantes escolheram pelo menos uma das opções?",
-        "alternativas": [
-            "190 participantes",
-            "210 participantes",
-            "230 participantes",
-            "310 participantes",
-            "60 participantes"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! Use inclusão-exclusão: 120+100+90−45−40−35+20 = 210. O valor representa a união dos três conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Use inclusão-exclusão: 120+100+90−45−40−35+20 = 210. O valor representa a união dos três conjuntos.\n",
-        "dicaBanca": "\nPara três conjuntos, não esqueça de somar novamente a interseção tripla.\n"
-    },
-    {
-        "subtopico": "Exatamente dois conjuntos",
-        "pergunta": "Em um evento cultural, 120 participantes escolheram teatro, 100 escolheram música e 90 escolheram dança. Além disso, 45 escolheram teatro e música, 40 escolheram teatro e dança, 35 escolheram música e dança, e 20 escolheram as três opções. Quantos participantes escolheram exatamente duas das três opções?",
-        "alternativas": [
-            "40 participantes",
-            "50 participantes",
-            "60 participantes",
-            "70 participantes",
-            "80 participantes"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! Exatamente duas = (45−20) + (40−20) + (35−20) = 25 + 20 + 15 = 60 participantes.\n",
-        "feedbackErro": "\n❌ Atenção! Retire a interseção tripla de cada interseção dupla: (45−20)+(40−20)+(35−20)=60.\n",
-        "dicaBanca": "\nA interseção dupla informada normalmente inclui quem pertence aos três conjuntos.\n"
-    },
-    {
-        "subtopico": "Exatamente um conjunto",
-        "pergunta": "Em um evento cultural, 120 participantes escolheram teatro, 100 escolheram música e 90 escolheram dança. Além disso, 45 escolheram teatro e música, 40 escolheram teatro e dança, 35 escolheram música e dança, e 20 escolheram as três opções. Quantos participantes escolheram exatamente uma das três opções?",
-        "alternativas": [
-            "110 participantes",
-            "120 participantes",
-            "130 participantes",
-            "140 participantes",
-            "150 participantes"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! Apenas teatro = 120−45−40+20=55; apenas música = 100−45−35+20=40; apenas dança = 90−40−35+20=35. Total = 55+40+35 = 130.\n",
-        "feedbackErro": "\n❌ Atenção! As regiões exclusivas são: teatro 55, música 40 e dança 35. Somando, 55+40+35=130 participantes.\n",
-        "dicaBanca": "\nExatamente uma opção exige calcular somente as regiões exclusivas.\n"
-    },
-    {
-        "subtopico": "Três conjuntos contextualizados",
-        "pergunta": "Em um(a) semana acadêmica, 150 participantes escolheram minicurso A, 130 escolheram minicurso B e 110 escolheram minicurso C. Além disso, 60 escolheram minicurso A e minicurso B, 55 escolheram minicurso A e minicurso C, 45 escolheram minicurso B e minicurso C, e 25 escolheram os três. Quantos participantes escolheram pelo menos uma das opções?",
-        "alternativas": [
-            "235 participantes",
-            "255 participantes",
-            "275 participantes",
-            "390 participantes",
-            "85 participantes"
-        ],
-        "correta": 1,
-        "feedbackAcerto": "\n🎉 Excelente! Use inclusão-exclusão: 150+130+110−60−55−45+25 = 255. O valor representa a união dos três conjuntos.\n",
-        "feedbackErro": "\n❌ Atenção! Use inclusão-exclusão: 150+130+110−60−55−45+25 = 255. O valor representa a união dos três conjuntos.\n",
-        "dicaBanca": "\nPara três conjuntos, não esqueça de somar novamente a interseção tripla.\n"
-    },
-    {
-        "subtopico": "Exatamente dois conjuntos",
-        "pergunta": "Em uma semana acadêmica, 150 participantes escolheram o minicurso A, 130 escolheram o minicurso B e 110 escolheram o minicurso C. Além disso, 60 escolheram A e B, 55 escolheram A e C, 45 escolheram B e C, e 25 escolheram os três minicursos. Quantos participantes escolheram exatamente dois minicursos?",
-        "alternativas": [
-            "75 participantes",
-            "80 participantes",
-            "85 participantes",
-            "90 participantes",
-            "95 participantes"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! Exatamente dois = (60−25) + (55−25) + (45−25) = 35 + 30 + 20 = 85.\n",
-        "feedbackErro": "\n❌ Atenção! As interseções duplas incluem quem está nos três. Então: (60−25)+(55−25)+(45−25)=85.\n",
-        "dicaBanca": "\nPara exatamente dois, subtraia a região dos três de cada interseção dupla.\n"
-    },
-    {
-        "subtopico": "Exatamente um conjunto",
-        "pergunta": "Em uma semana acadêmica, 150 participantes escolheram o minicurso A, 130 escolheram o minicurso B e 110 escolheram o minicurso C. Além disso, 60 escolheram A e B, 55 escolheram A e C, 45 escolheram B e C, e 25 escolheram os três minicursos. Quantos participantes escolheram exatamente um minicurso?",
-        "alternativas": [
-            "135 participantes",
-            "140 participantes",
-            "145 participantes",
-            "150 participantes",
-            "155 participantes"
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! Apenas A = 150−60−55+25=60; apenas B = 130−60−45+25=50; apenas C = 110−55−45+25=35. Total = 60+50+35 = 145.\n",
-        "feedbackErro": "\n❌ Atenção! Calcule as regiões exclusivas: A = 60, B = 50, C = 35. Total exatamente um = 145 participantes.\n",
-        "dicaBanca": "\nEm exatamente um, não conte as regiões de interseção.\n"
-    },
-    {
-        "subtopico": "Conjuntos numéricos em contexto",
-        "pergunta": "Um professor listou os números 0, -12, 5/4, 0,2, 0,121212..., √25, √7 e π. Quantos pertencem ao conjunto dos racionais?",
-        "alternativas": [
-            "4",
             "5",
             "6",
-            "7",
-            "8"
+            "4"
         ],
-        "correta": 2,
-        "feedbackAcerto": "\n🎉 Excelente! São racionais: 0, -12, 5/4, 0,2, 0,121212... e √25 = 5. Já √7 e π são irracionais. Portanto, há 6 racionais.\n",
-        "feedbackErro": "\n❌ Atenção! São racionais: 0, -12, 5/4, 0,2, 0,121212... e √25 = 5. Já √7 e π são irracionais. Portanto, há 6 racionais.\n",
-        "dicaBanca": "\nDecimais finitos e dízimas periódicas são racionais; raízes exatas também podem ser racionais.\n"
+        "correta": 4,
+        "feedbackAcerto": "\n🎉 Excelente! São racionais -5, 0, 3/4 e √16 = 4. Já √2 e π são irracionais.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 4\n\nSão racionais -5, 0, 3/4 e √16 = 4. Já √2 e π são irracionais.\n",
+        "dicaBanca": "\nSimplifique raízes e classifique cada número antes de contar.\n"
     },
     {
-        "subtopico": "Conjuntos numéricos e operações",
-        "pergunta": "Considere A = {x ∈ Z | -3 ≤ x ≤ 4} e B = {x ∈ Z | x é par}. No universo U = {-3, -2, -1, 0, 1, 2, 3, 4}, o conjunto A ∩ B é:",
+        "subtopico": "Conjuntos numéricos e inclusão",
+        "pergunta": "Qual cadeia de inclusões está correta?",
         "alternativas": [
-            "{-2, 0, 2, 4}",
-            "{-3, -2, -1, 0, 1, 2, 3, 4}",
-            "{0, 2, 4}",
-            "{-2, 2, 4}",
-            "{-3, -1, 1, 3}"
+            "N ⊂ Z ⊂ Q ⊂ R",
+            "Z ⊂ N ⊂ Q ⊂ R",
+            "N ⊂ Q ⊂ Z ⊂ R",
+            "Q ⊂ Z ⊂ N ⊂ R",
+            "R ⊂ Q ⊂ Z ⊂ N"
         ],
         "correta": 0,
-        "feedbackAcerto": "\n🎉 Excelente! A contém todos os inteiros de -3 a 4. B, dentro desse universo, contém os pares. Assim, A ∩ B = {-2, 0, 2, 4}.\n",
-        "feedbackErro": "\n❌ Atenção! A contém todos os inteiros de -3 a 4. B, dentro desse universo, contém os pares. Assim, A ∩ B = {-2, 0, 2, 4}.\n",
-        "dicaBanca": "\nQuando o conjunto é definido por propriedade, liste os elementos antes de operar.\n"
+        "feedbackAcerto": "\n🎉 Excelente! Naturais estão contidos nos inteiros, que estão contidos nos racionais, todos pertencentes aos reais.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: N ⊂ Z ⊂ Q ⊂ R\n\nNaturais estão contidos nos inteiros, que estão contidos nos racionais, todos pertencentes aos reais.\n",
+        "dicaBanca": "\nMemorize a expansão dos conjuntos: N, Z, Q e R.\n"
+    },
+    {
+        "subtopico": "Reais",
+        "pergunta": "O conjunto R − Q corresponde ao conjunto dos:",
+        "alternativas": [
+            "naturais.",
+            "irracionais.",
+            "inteiros.",
+            "racionais positivos.",
+            "números reais negativos."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "\n🎉 Excelente! Retirar os racionais do conjunto dos reais deixa exatamente os números irracionais.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: irracionais.\n\nRetirar os racionais do conjunto dos reais deixa exatamente os números irracionais.\n",
+        "dicaBanca": "\nOs reais são formados pela união disjunta de racionais e irracionais.\n"
+    },
+    {
+        "subtopico": "Classificação de números",
+        "pergunta": "O número √81 pertence ao menor dos conjuntos abaixo indicado por:",
+        "alternativas": [
+            "Z − N",
+            "Q − Z",
+            "N",
+            "R − Q",
+            "R − Z"
+        ],
+        "correta": 2,
+        "feedbackAcerto": "\n🎉 Excelente! Como √81 = 9, trata-se de um número natural; portanto também é inteiro, racional e real.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: N\n\nComo √81 = 9, trata-se de um número natural; portanto também é inteiro, racional e real.\n",
+        "dicaBanca": "\nQuando pedirem o menor conjunto, simplifique o número antes de classificar.\n"
+    },
+    {
+        "subtopico": "Racionais e irracionais",
+        "pergunta": "A soma de um número racional com um número irracional é necessariamente:",
+        "alternativas": [
+            "um número natural.",
+            "um número inteiro.",
+            "um número racional.",
+            "irracional.",
+            "um número positivo."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "\n🎉 Excelente! Se r + i fosse racional, então i seria diferença de dois racionais, contradição; logo a soma é irracional.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: irracional.\n\nSe r + i fosse racional, então i seria diferença de dois racionais, contradição; logo a soma é irracional.\n",
+        "dicaBanca": "\nRacional ± irracional permanece irracional.\n"
+    },
+    {
+        "subtopico": "Racionais e irracionais",
+        "pergunta": "O produto de dois números irracionais:",
+        "alternativas": [
+            "é irracional para toda escolha possível de dois fatores irracionais.",
+            "é racional para quaisquer fatores escolhidos.",
+            "é inteiro em qualquer escolha de fatores.",
+            "é positivo para quaisquer fatores escolhidos.",
+            "pode ser racional ou irracional, conforme os fatores."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "\n🎉 Excelente! Por exemplo, √2·√2 = 2 é racional, enquanto √2·√3 = √6 é irracional.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: pode ser racional ou irracional, conforme os fatores.\n\nPor exemplo, √2·√2 = 2 é racional, enquanto √2·√3 = √6 é irracional.\n",
+        "dicaBanca": "\nEvite generalizar operações com irracionais sem testar exemplos.\n"
+    },
+    {
+        "subtopico": "Intervalos reais",
+        "pergunta": "O intervalo [-2, 3) representa os números reais x que satisfazem:",
+        "alternativas": [
+            "-2 ≤ x < 3",
+            "-2 < x ≤ 3",
+            "-2 < x < 3",
+            "-2 ≤ x ≤ 3",
+            "x < -2 ou x ≥ 3"
+        ],
+        "correta": 0,
+        "feedbackAcerto": "\n🎉 Excelente! Colchete inclui o extremo -2; parêntese exclui o extremo 3.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: -2 ≤ x < 3\n\nColchete inclui o extremo -2; parêntese exclui o extremo 3.\n",
+        "dicaBanca": "\nAssocie colchete a inclusão do extremo e parêntese a exclusão.\n"
+    },
+    {
+        "subtopico": "Intervalos reais",
+        "pergunta": "A interseção dos intervalos [0, 5] e (3, 8) é:",
+        "alternativas": [
+            "[0, 8)",
+            "(3, 5]",
+            "[3, 5]",
+            "(0, 8)",
+            "[5, 8)"
+        ],
+        "correta": 1,
+        "feedbackAcerto": "\n🎉 Excelente! Os valores comuns são maiores que 3 e menores ou iguais a 5.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: (3, 5]\n\nOs valores comuns são maiores que 3 e menores ou iguais a 5.\n",
+        "dicaBanca": "\nInterseção de intervalos é a faixa comum às duas condições.\n"
+    },
+    {
+        "subtopico": "Intervalos reais",
+        "pergunta": "A união dos intervalos (-∞, 2] e [2, 7) é:",
+        "alternativas": [
+            "(-∞, 2]",
+            "[2, 7)",
+            "(-∞, 7)",
+            "(-∞, 7]",
+            "(-∞, 2) ∪ (2, 7)"
+        ],
+        "correta": 2,
+        "feedbackAcerto": "\n🎉 Excelente! Os intervalos se encontram em 2 e, juntos, cobrem todos os reais menores que 7.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: (-∞, 7)\n\nOs intervalos se encontram em 2 e, juntos, cobrem todos os reais menores que 7.\n",
+        "dicaBanca": "\nSe os intervalos se tocam em um ponto incluído, a união pode formar um único intervalo.\n"
+    },
+    {
+        "subtopico": "Conjuntos definidos por propriedade",
+        "pergunta": "No universo U = {1, 2, ..., 30}, seja A o conjunto dos múltiplos de 3 e B o dos múltiplos de 5. Quantos elementos possui A ∩ B?",
+        "alternativas": [
+            "1",
+            "3",
+            "5",
+            "2",
+            "8"
+        ],
+        "correta": 3,
+        "feedbackAcerto": "\n🎉 Excelente! A ∩ B contém os múltiplos de 15 dentro de U: 15 e 30.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 2\n\nA ∩ B contém os múltiplos de 15 dentro de U: 15 e 30.\n",
+        "dicaBanca": "\nNa interseção de múltiplos, procure múltiplos do mínimo múltiplo comum.\n"
+    },
+    {
+        "subtopico": "Conjuntos definidos por propriedade",
+        "pergunta": "No universo U = {1, 2, ..., 40}, seja A o conjunto dos múltiplos de 4 e B o dos múltiplos de 6. Quantos elementos possui A ∪ B?",
+        "alternativas": [
+            "10",
+            "11",
+            "16",
+            "17",
+            "13"
+        ],
+        "correta": 4,
+        "feedbackAcerto": "\n🎉 Excelente! Há 10 múltiplos de 4, 6 múltiplos de 6 e 3 múltiplos de 12. Assim, 10 + 6 − 3 = 13.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 13\n\nHá 10 múltiplos de 4, 6 múltiplos de 6 e 3 múltiplos de 12. Assim, 10 + 6 − 3 = 13.\n",
+        "dicaBanca": "\nConte cada conjunto e use inclusão-exclusão para os múltiplos comuns.\n"
     },
     {
         "subtopico": "Diferença em conjuntos numéricos",
-        "pergunta": "Se A é o conjunto dos divisores positivos de 24 e B é o conjunto dos divisores positivos de 36, então A − B é:",
+        "pergunta": "Se A é o conjunto dos divisores positivos de 24 e B o conjunto dos divisores positivos de 36, então A − B é:",
         "alternativas": [
             "{8, 24}",
             "{1, 2, 3, 4, 6, 12}",
             "{9, 18, 36}",
-            "{8, 12, 24}",
-            "{1, 2, 4, 8, 24}"
+            "{8, 9, 18, 24, 36}",
+            "{1, 2, 3, 4, 6, 8, 12, 24}"
         ],
         "correta": 0,
-        "feedbackAcerto": "\n🎉 Excelente! Divisores de 24: {1, 2, 3, 4, 6, 8, 12, 24}. Divisores de 36: {1, 2, 3, 4, 6, 9, 12, 18, 36}. A − B = {8, 24}.\n",
-        "feedbackErro": "\n❌ Atenção! Divisores de 24: {1, 2, 3, 4, 6, 8, 12, 24}. Divisores de 36: {1, 2, 3, 4, 6, 9, 12, 18, 36}. A − B = {8, 24}.\n",
-        "dicaBanca": "\nDiferença A − B mantém somente os elementos de A que não aparecem em B.\n"
+        "feedbackAcerto": "\n🎉 Excelente! Divisores de 24 são {1,2,3,4,6,8,12,24}; retirando os que também dividem 36, ficam 8 e 24.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {8, 24}\n\nDivisores de 24 são {1,2,3,4,6,8,12,24}; retirando os que também dividem 36, ficam 8 e 24.\n",
+        "dicaBanca": "\nListe os divisores de cada número antes de fazer a diferença.\n"
     },
     {
         "subtopico": "União em conjuntos numéricos",
-        "pergunta": "A = {x ∈ N | x é divisor de 18} e B = {x ∈ N | x é divisor de 30}. O número de elementos de A ∪ B é:",
+        "pergunta": "A = {x ∈ N | x divide 18} e B = {x ∈ N | x divide 30}. Quantos elementos possui A ∪ B?",
         "alternativas": [
+            "11",
+            "10",
+            "12",
+            "13",
+            "14"
+        ],
+        "correta": 1,
+        "feedbackAcerto": "\n🎉 Excelente! A = {1,2,3,6,9,18} e B = {1,2,3,5,6,10,15,30}; a união tem 10 elementos distintos.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 10\n\nA = {1,2,3,6,9,18} e B = {1,2,3,5,6,10,15,30}; a união tem 10 elementos distintos.\n",
+        "dicaBanca": "\nAo unir conjuntos de divisores, elimine os elementos repetidos.\n"
+    },
+    {
+        "subtopico": "Operações com conjuntos numéricos",
+        "pergunta": "Considere A = {x ∈ Z | -4 ≤ x ≤ 5} e B = {x ∈ Z | x é par}. Quantos elementos possui A ∩ B?",
+        "alternativas": [
+            "4",
             "6",
+            "5",
+            "7",
+            "10"
+        ],
+        "correta": 2,
+        "feedbackAcerto": "\n🎉 Excelente! Os inteiros pares no intervalo são -4, -2, 0, 2 e 4, totalizando cinco elementos.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 5\n\nOs inteiros pares no intervalo são -4, -2, 0, 2 e 4, totalizando cinco elementos.\n",
+        "dicaBanca": "\nTransforme a condição em uma lista curta antes de contar.\n"
+    },
+    {
+        "subtopico": "Complemento em conjunto universo",
+        "pergunta": "No universo U = {-5, -4, ..., 5}, seja A = {x ∈ U | x² ≤ 9}. Quantos elementos possui o complemento de A?",
+        "alternativas": [
+            "3",
+            "5",
+            "7",
+            "4",
+            "11"
+        ],
+        "correta": 3,
+        "feedbackAcerto": "\n🎉 Excelente! A = {-3,-2,-1,0,1,2,3}, com 7 elementos; U tem 11, logo o complemento tem 4.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 4\n\nA = {-3,-2,-1,0,1,2,3}, com 7 elementos; U tem 11, logo o complemento tem 4.\n",
+        "dicaBanca": "\nResolva a desigualdade e compare com o universo informado.\n"
+    },
+    {
+        "subtopico": "Conjuntos numéricos em contexto",
+        "pergunta": "Um professor listou 0, -12, 5/4, 0,2, 0,121212..., √25, √7 e π. Quantos desses números são racionais?",
+        "alternativas": [
+            "4",
+            "5",
             "7",
             "8",
+            "6"
+        ],
+        "correta": 4,
+        "feedbackAcerto": "\n🎉 Excelente! São racionais 0, -12, 5/4, 0,2, a dízima periódica e √25 = 5; √7 e π são irracionais.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 6\n\nSão racionais 0, -12, 5/4, 0,2, a dízima periódica e √25 = 5; √7 e π são irracionais.\n",
+        "dicaBanca": "\nDecimais finitos e dízimas periódicas são racionais.\n"
+    },
+    {
+        "subtopico": "Conjuntos numéricos e operações",
+        "pergunta": "Considere A = {-3, -2, -1, 0, 1, 2, 3, 4} e B o conjunto dos pares de A. Qual é A − B?",
+        "alternativas": [
+            "{-3, -1, 1, 3}",
+            "{-2, 0, 2, 4}",
+            "{-3, -2, -1, 1, 2, 3}",
+            "{-3, -1, 0, 1, 3}",
+            "{-2, -1, 1, 2}"
+        ],
+        "correta": 0,
+        "feedbackAcerto": "\n🎉 Excelente! Retirando de A os elementos pares, restam os inteiros ímpares -3, -1, 1 e 3.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: {-3, -1, 1, 3}\n\nRetirando de A os elementos pares, restam os inteiros ímpares -3, -1, 1 e 3.\n",
+        "dicaBanca": "\nDiferença A − B mantém elementos de A que não pertencem a B.\n"
+    },
+    {
+        "subtopico": "Cardinalidade da união",
+        "pergunta": "Se A é o conjunto dos múltiplos positivos de 2 menores que 20 e B o conjunto dos múltiplos positivos de 3 menores que 20, quantos elementos possui A ∪ B?",
+        "alternativas": [
             "9",
+            "12",
+            "10",
+            "13",
+            "15"
+        ],
+        "correta": 1,
+        "feedbackAcerto": "\n🎉 Excelente! A tem 9 elementos, B tem 6 e a interseção, formada pelos múltiplos de 6, tem 3; então 9 + 6 − 3 = 12.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 12\n\nA tem 9 elementos, B tem 6 e a interseção, formada pelos múltiplos de 6, tem 3; então 9 + 6 − 3 = 12.\n",
+        "dicaBanca": "\nEm múltiplos de dois números, a interseção usa o MMC.\n"
+    },
+    {
+        "subtopico": "Situações-problema com conjuntos",
+        "pergunta": "Em uma pesquisa, 52 pessoas gostam de Matemática, 41 de Ciências e 17 de ambas. Se 80 pessoas foram consultadas, quantas gostam de exatamente uma das disciplinas?",
+        "alternativas": [
+            "35",
+            "42",
+            "59",
+            "63",
+            "76"
+        ],
+        "correta": 2,
+        "feedbackAcerto": "\n🎉 Excelente! Somente Matemática = 35 e somente Ciências = 24; exatamente uma = 59.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 59\n\nSomente Matemática = 35 e somente Ciências = 24; exatamente uma = 59.\n",
+        "dicaBanca": "\nNão confunda “pelo menos uma” com “exatamente uma”.\n"
+    },
+    {
+        "subtopico": "Situações-problema com conjuntos",
+        "pergunta": "Em uma turma de 60 alunos, 38 resolveram a questão A, 32 resolveram a questão B e 20 resolveram ambas. Quantos não resolveram nenhuma?",
+        "alternativas": [
+            "6",
+            "8",
+            "20",
+            "10",
+            "50"
+        ],
+        "correta": 3,
+        "feedbackAcerto": "\n🎉 Excelente! A união é 38 + 32 − 20 = 50; assim, 60 − 50 = 10 não resolveram nenhuma.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 10\n\nA união é 38 + 32 − 20 = 50; assim, 60 − 50 = 10 não resolveram nenhuma.\n",
+        "dicaBanca": "\n“Nenhuma” pede o complemento da união em relação ao total.\n"
+    },
+    {
+        "subtopico": "Situações-problema com conjuntos",
+        "pergunta": "Uma comissão deve escolher exatamente 3 representantes entre 5 pessoas distintas. Quantos subconjuntos de três elementos podem ser formados?",
+        "alternativas": [
+            "5",
+            "8",
+            "15",
+            "25",
             "10"
         ],
         "correta": 4,
-        "feedbackAcerto": "\n🎉 Excelente! A = {1, 2, 3, 6, 9, 18}; B = {1, 2, 3, 5, 6, 10, 15, 30}. A ∪ B = {1, 2, 3, 5, 6, 9, 10, 15, 18, 30}, com 10 elementos. A alternativa correta é 10.\n",
-        "feedbackErro": "\n❌ Atenção! A = {1, 2, 3, 6, 9, 18}; B = {1, 2, 3, 5, 6, 10, 15, 30}. A ∪ B = {1, 2, 3, 5, 6, 9, 10, 15, 18, 30}, com 10 elementos. A alternativa correta é 10.\n",
-        "dicaBanca": "\nListe os divisores e una sem repetir elementos.\n"
+        "feedbackAcerto": "\n🎉 Excelente! O número de subconjuntos de 3 elementos em um conjunto de 5 é C(5,3) = 10.\n",
+        "feedbackErro": "\n❌ Atenção! A resposta correta é: 10\n\nO número de subconjuntos de 3 elementos em um conjunto de 5 é C(5,3) = 10.\n",
+        "dicaBanca": "\nQuando a ordem dos escolhidos não importa, use combinação, não arranjo.\n"
     }
 ];

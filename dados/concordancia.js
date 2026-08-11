@@ -1,1351 +1,904 @@
+// FAROL DO SABER - CONCORDÂNCIA VERBAL E NOMINAL
+// 50 questões originais, nível concurso para professor.
 const concordancia = [
-
-{
-    pergunta:
-    `Assinale a alternativa em que a concordância verbal está adequada à norma-padrão.`,
-
+  {
+    id: "concordancia_001",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — verbos impessoais",
+    pergunta: "Assinale a alternativa redigida de acordo com a norma-padrão quanto à concordância verbal.",
     alternativas: [
-        `Havia muitos documentos pendentes na secretaria, apesar do prazo já encerrado.`,
-        `Haviam muitos documentos pendentes na secretaria, apesar do prazo já encerrado.`,
-        `Existia muitos documentos pendentes na secretaria, apesar do prazo já encerrado.`,
-        `Faziam três meses que os documentos aguardavam conferência da equipe.`,
-        `Devem haver muitos documentos pendentes na secretaria desde ontem.`,
+      "Deve haver alternativas mais adequadas para a organização do calendário escolar.",
+      "Existia alternativas mais adequadas para a organização do calendário escolar.",
+      "Podem haver alternativa mais adequada para a organização do calendário escolar.",
+      "Devem haver alternativas mais adequadas para a organização do calendário escolar.",
+      "Haviam alternativas mais adequadas para a organização do calendário escolar.",
     ],
-
     correta: 0,
-
-    explicacao:
-    `O verbo haver, com sentido de existir, é impessoal e permanece no singular. O mesmo ocorre na locução: deve haver.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Cuidado com haver existencial: ele não concorda com o termo seguinte.`
-},
-
-{
-    pergunta:
-    `Considerando a norma-padrão, assinale a frase correta quanto à concordância verbal.`,
-
+    explicacao: "Com sentido de existir, 'haver' é impessoal e permanece no singular, inclusive em locução verbal: 'deve haver'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com sentido de existir, 'haver' é impessoal e permanece no singular, inclusive em locução verbal: 'deve haver'.",
+    feedbackErro: "A resposta correta é: Deve haver alternativas mais adequadas para a organização do calendário escolar. Com sentido de existir, 'haver' é impessoal e permanece no singular, inclusive em locução verbal: 'deve haver'.",
+    dicaBanca: "Em locuções com 'haver' existencial, a impessoalidade alcança o verbo auxiliar.",
+  },
+  {
+    id: "concordancia_002",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — indicação de tempo",
+    pergunta: "Em qual alternativa o verbo está flexionado corretamente segundo a norma-padrão?",
     alternativas: [
-        `Mais de um candidato apresentaram recurso contra o resultado preliminar.`,
-        `Mais de um candidato apresentou recurso contra o resultado preliminar.`,
-        `Mais de um candidato se cumprimentaram após o resultado preliminar.`,
-        `Mais de um candidato foram convocados para entregar recurso preliminar.`,
-        `Mais de um candidato tinham apresentado recurso contra o resultado preliminar.`
+      "Fazem três anos que a escola implantou o projeto de leitura.",
+      "Faz três anos que a escola implantou o projeto de leitura.",
+      "Fizeram três anos que a escola implantou o projeto de leitura.",
+      "Devem fazer três anos que a escola implantou o projeto de leitura.",
+      "Faziam três anos que a escola implantara o projeto de leitura, com valor de tempo decorrido.",
     ],
-
     correta: 1,
-
-    explicacao:
-    `A expressão 'mais de um' normalmente leva o verbo ao singular, salvo ideia de reciprocidade.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `'Mais de um' pede singular, exceto quando houver reciprocidade clara.`
-},
-
-{
-    pergunta:
-    `A concordância nominal está correta em:`,
-
+    explicacao: "Quando indica tempo decorrido, o verbo 'fazer' é impessoal e fica na terceira pessoa do singular.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Quando indica tempo decorrido, o verbo 'fazer' é impessoal e fica na terceira pessoa do singular.",
+    feedbackErro: "A resposta correta é: Faz três anos que a escola implantou o projeto de leitura. Quando indica tempo decorrido, o verbo 'fazer' é impessoal e fica na terceira pessoa do singular.",
+    dicaBanca: "Se 'fazer' equivale a tempo transcorrido, não procure um sujeito para o verbo.",
+  },
+  {
+    id: "concordancia_003",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — frações",
+    pergunta: "Assinale a alternativa em que a concordância verbal está correta.",
     alternativas: [
-        `Segue anexos ao relatório os documentos solicitados pela coordenação.`,
-        `Seguem anexo ao relatório os documentos solicitados pela coordenação.`,
-        `Seguem anexos ao relatório os documentos solicitados pela coordenação.`,
-        `Segue anexo ao relatório os documentos solicitados pela coordenação.`,
-        `Seguem anexas ao relatório os documentos solicitados pela coordenação.`
+      "Dois terços da turma concluiu a atividade, sendo essa a única forma admitida.",
+      "Um terço da turma concluíram a atividade no tempo previsto.",
+      "Dois terços da turma concluíram a atividade no tempo previsto.",
+      "Dois terços da turma concluiu a atividade no tempo previsto.",
+      "Um terço dos estudantes concluíram a atividade no tempo previsto.",
     ],
-
     correta: 2,
-
-    explicacao:
-    `'Anexos' concorda com 'documentos'; o verbo 'seguem' concorda com o sujeito plural.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Anexo, incluso e obrigado variam quando funcionam como adjetivos.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa em que a concordância está adequada.`,
-
+    explicacao: "Em expressões fracionárias, o verbo concorda normalmente com o numerador: 'dois terços ... concluíram'; com 'um terço', usa-se singular.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Em expressões fracionárias, o verbo concorda normalmente com o numerador: 'dois terços ... concluíram'; com 'um terço', usa-se singular.",
+    feedbackErro: "A resposta correta é: Dois terços da turma concluíram a atividade no tempo previsto. Em expressões fracionárias, o verbo concorda normalmente com o numerador: 'dois terços ... concluíram'; com 'um terço', usa-se singular.",
+    dicaBanca: "Em frações, olhe para o numerador antes de decidir a flexão verbal.",
+  },
+  {
+    id: "concordancia_004",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — mais de um",
+    pergunta: "Considerando a regra de concordância com a expressão “mais de um”, assinale a alternativa correta.",
     alternativas: [
-        `É necessário a revisão das atas antes do encaminhamento oficial.`,
-        `É necessário revisão das atas específicas antes do encaminhamento oficial.`,
-        `São necessária a revisão das atas antes do encaminhamento oficial.`,
-        `É necessária a revisão das atas antes do encaminhamento oficial.`,
-        `São necessário as revisões das atas antes do encaminhamento oficial.`
+      "Mais de um candidato apresentaram recurso contra o resultado preliminar.",
+      "Mais de um candidato foram convocados para apresentar recurso no prazo previsto.",
+      "Mais de um professor registraram a mesma ocorrência em ata.",
+      "Mais de um candidato apresentou recurso contra o resultado preliminar.",
+      "Mais de um servidor solicitaram revisão do documento encaminhado.",
     ],
-
     correta: 3,
-
-    explicacao:
-    `Com artigo determinando o substantivo, o adjetivo concorda: 'a revisão' → 'necessária'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Com determinante, 'necessário' concorda com o nome.`
-},
-
-{
-    pergunta:
-    `Em relação à concordância com o verbo ser, assinale a opção correta.`,
-
+    explicacao: "A expressão 'mais de um' leva, em regra, o verbo ao singular: 'mais de um candidato apresentou'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. A expressão 'mais de um' leva, em regra, o verbo ao singular: 'mais de um candidato apresentou'.",
+    feedbackErro: "A resposta correta é: Mais de um candidato apresentou recurso contra o resultado preliminar. A expressão 'mais de um' leva, em regra, o verbo ao singular: 'mais de um candidato apresentou'.",
+    dicaBanca: "A forma plural pode surgir em contextos específicos, como reciprocidade; se ela não existe, prefira o singular.",
+  },
+  {
+    id: "concordancia_005",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — expressões aproximativas",
+    pergunta: "Assinale a frase adequada à norma-padrão, considerando especificamente expressões aproximativas.",
     alternativas: [
-        `Hoje é duas horas, e a reunião permanece marcada para o mesmo local.`,
-        `Hoje são uma hora, e a reunião permanece marcada para o mesmo local.`,
-        `Hoje é duas hora, e a reunião permanece marcada para o mesmo local.`,
-        `Hoje foram duas hora, e a reunião permanece marcada para o mesmo local.`,
-        `Hoje são duas horas, e a reunião permanece marcada para o mesmo local.`
+      "Mais de dois professor participou da reunião pedagógica.",
+      "Cerca de um estudante participaram de cada grupo de trabalho.",
+      "Cerca de vinte estudantes participou da oficina de produção textual.",
+      "Perto de trinta candidato compareceu à etapa de títulos realizada no turno da manhã.",
+      "Cerca de vinte estudantes participaram da oficina de produção textual.",
     ],
-
     correta: 4,
-
-    explicacao:
-    `Na indicação de horas, o verbo ser concorda com o numeral: são duas horas.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Com horas, o verbo ser acompanha o numeral.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância verbal.`,
-
+    explicacao: "Com expressões como 'cerca de', 'perto de' e 'mais de', o verbo concorda com o numeral ou nome plural que as acompanha.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com expressões como 'cerca de', 'perto de' e 'mais de', o verbo concorda com o numeral ou nome plural que as acompanha.",
+    feedbackErro: "A resposta correta é: Cerca de vinte estudantes participaram da oficina de produção textual. Com expressões como 'cerca de', 'perto de' e 'mais de', o verbo concorda com o numeral ou nome plural que as acompanha.",
+    dicaBanca: "Expressões aproximativas não anulam o número gramatical do termo que vem depois.",
+  },
+  {
+    id: "concordancia_006",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — sujeito composto",
+    pergunta: "Em qual período a concordância do verbo com o sujeito composto está correta?",
     alternativas: [
-        `Faz cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco ano que a comissão acompanha os indicadores educacionais.`,
-        `Faz cinco anos que acompanham-se os indicador educacional.`,
-        `Fazem cinco anos que acompanha a comissão os indicadores educacionais.`,
+      "A leitura atenta e a revisão sistemática favorecem o desempenho do candidato.",
+      "A leitura atenta e a revisão sistemática favorece o desempenho do candidato.",
+      "Favorece o desempenho do candidato a leitura atenta e a revisão sistemática, como única forma normativa.",
+      "A leitura atenta, junto com a revisão sistemática, favorecem necessariamente o desempenho do candidato.",
+      "Nem a leitura atenta nem a revisão sistemática favorece o desempenho do candidato.",
     ],
-
     correta: 0,
-
-    explicacao:
-    `O verbo fazer, indicando tempo decorrido, é impessoal e fica no singular.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Fazer temporal não vai ao plural.`
-},
-
-{
-    pergunta:
-    `A concordância verbal está adequada em:`,
-
+    explicacao: "Com sujeito composto anteposto ao verbo, a concordância regular é feita no plural: 'a leitura ... e a revisão ... favorecem'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com sujeito composto anteposto ao verbo, a concordância regular é feita no plural: 'a leitura ... e a revisão ... favorecem'.",
+    feedbackErro: "A resposta correta é: A leitura atenta e a revisão sistemática favorecem o desempenho do candidato. Com sujeito composto anteposto ao verbo, a concordância regular é feita no plural: 'a leitura ... e a revisão ... favorecem'.",
+    dicaBanca: "Sujeito composto antes do verbo: o plural é a referência mais segura na norma-padrão.",
+  },
+  {
+    id: "concordancia_007",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — pronome relativo que",
+    pergunta: "No período “Fui eu que organizei os documentos da comissão”, a flexão verbal se explica porque:",
     alternativas: [
-        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
-        `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidor participaram da reunião extraordinária.`,
-        `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`
+      "o verbo deveria ficar na terceira pessoa do singular por estar antecedido de “que”.",
+      "o verbo da oração relativa concorda com o antecedente do pronome “que”, representado por “eu”.",
+      "o verbo concorda com “comissão”, núcleo semântico da informação apresentada.",
+      "o verbo permanece invariável porque o pronome relativo “que” não admite antecedente pessoal.",
+      "o verbo concorda com “documentos”, termo mais próximo da oração relativa e núcleo do complemento apresentado.",
     ],
-
     correta: 1,
-
-    explicacao:
-    `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Com 'a maioria de', observe o núcleo e o termo especificador.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância nominal.`,
-
+    explicacao: "Com o pronome relativo 'que' na função de sujeito, o verbo concorda com o antecedente: 'fui eu que organizei'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com o pronome relativo 'que' na função de sujeito, o verbo concorda com o antecedente: 'fui eu que organizei'.",
+    feedbackErro: "A resposta correta é: o verbo da oração relativa concorda com o antecedente do pronome “que”, representado por “eu”. Com o pronome relativo 'que' na função de sujeito, o verbo concorda com o antecedente: 'fui eu que organizei'.",
+    dicaBanca: "Localize o antecedente de 'que'; ele determina a pessoa e o número do verbo.",
+  },
+  {
+    id: "concordancia_008",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — pronome relativo quem",
+    pergunta: "Assinale a alternativa cuja concordância com o pronome relativo “quem” está de acordo com a norma-padrão.",
     alternativas: [
-        `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
+      "Fui eu quem apresentamos a proposta final à comissão.",
+      "Fomos nós quem apresentoumos a proposta final à comissão.",
+      "Fui eu quem apresentou a proposta final à comissão.",
+      "Fui eu quem apresentaste a proposta final à comissão.",
+      "Foram eles quem apresentastes a proposta final à comissão.",
     ],
-
     correta: 2,
-
-    explicacao:
-    `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Adjetivo composto costuma flexionar o último elemento.`
-},
-
-{
-    pergunta:
-    `A frase adequada à norma-padrão é:`,
-
+    explicacao: "Com 'quem' como sujeito da oração relativa, a concordância na terceira pessoa do singular é a construção tradicional e inequívoca: 'quem apresentou'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com 'quem' como sujeito da oração relativa, a concordância na terceira pessoa do singular é a construção tradicional e inequívoca: 'quem apresentou'.",
+    feedbackErro: "A resposta correta é: Fui eu quem apresentou a proposta final à comissão. Com 'quem' como sujeito da oração relativa, a concordância na terceira pessoa do singular é a construção tradicional e inequívoca: 'quem apresentou'.",
+    dicaBanca: "Com 'quem', a terceira pessoa do singular é a forma mais segura em prova objetiva.",
+  },
+  {
+    id: "concordancia_009",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — pronomes de tratamento",
+    pergunta: "Em um documento dirigido a uma autoridade, assinale a frase correta quanto à concordância.",
     alternativas: [
-        `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
-        `Estava bastante preocupados os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`
+      "Vossa Excelência deverão encaminhar seu parecer até o fim do expediente.",
+      "Vossa Excelência deverás encaminhar teu parecer até o fim do expediente.",
+      "Vossa Excelência deverás encaminhar vosso parecer até o fim do expediente.",
+      "Vossa Excelência deverá encaminhar seu parecer até o fim do expediente.",
+      "Vossa Excelência devereis encaminhar seu parecer até o fim do expediente.",
     ],
-
     correta: 3,
-
-    explicacao:
-    `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Bastante = muito é invariável.`
-},
-
-{
-    pergunta:
-    `A concordância está correta em:`,
-
+    explicacao: "Pronomes de tratamento exigem verbo e pronomes possessivos de terceira pessoa: 'Vossa Excelência deverá ... seu parecer'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Pronomes de tratamento exigem verbo e pronomes possessivos de terceira pessoa: 'Vossa Excelência deverá ... seu parecer'.",
+    feedbackErro: "A resposta correta é: Vossa Excelência deverá encaminhar seu parecer até o fim do expediente. Pronomes de tratamento exigem verbo e pronomes possessivos de terceira pessoa: 'Vossa Excelência deverá ... seu parecer'.",
+    dicaBanca: "O interlocutor pode ser a segunda pessoa do discurso, mas a concordância gramatical é de terceira pessoa.",
+  },
+  {
+    id: "concordancia_010",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — voz passiva sintética",
+    pergunta: "Assinale a alternativa em que o pronome “se” funciona como partícula apassivadora e a concordância está correta.",
     alternativas: [
-        `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parece suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
-        `O dados apresentados pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
+      "Publicou-se os resultados da seleção no portal oficial.",
+      "Precisa-se de professores com experiência em alfabetização.",
+      "Necessitam-se de professores com experiência em alfabetização.",
+      "Tratam-se de resultados divulgados após a análise dos recursos.",
+      "Publicaram-se os resultados da seleção no portal oficial.",
     ],
-
     correta: 4,
-
-    explicacao:
-    `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Localize o núcleo do sujeito antes de concordar.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância verbal.`,
-
+    explicacao: "Em 'publicaram-se os resultados', o verbo transitivo direto forma passiva sintética; 'os resultados' é sujeito paciente e exige o plural.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Em 'publicaram-se os resultados', o verbo transitivo direto forma passiva sintética; 'os resultados' é sujeito paciente e exige o plural.",
+    feedbackErro: "A resposta correta é: Publicaram-se os resultados da seleção no portal oficial. Em 'publicaram-se os resultados', o verbo transitivo direto forma passiva sintética; 'os resultados' é sujeito paciente e exige o plural.",
+    dicaBanca: "Antes de concordar com o termo plural, verifique se o 'se' realmente forma voz passiva.",
+  },
+  {
+    id: "concordancia_011",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — índice de indeterminação",
+    pergunta: "Em qual alternativa a forma verbal está correta porque o “se” indetermina o sujeito?",
     alternativas: [
-        `Faz cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco ano que a comissão acompanha os indicadores educacionais.`,
-        `Faz cinco anos que acompanham-se os indicador educacional.`,
-        `Fazem cinco anos que acompanha a comissão os indicadores educacionais.`,
+      "Precisa-se de profissionais qualificados para o atendimento educacional.",
+      "Tratam-se de propostas apresentadas pela comissão pedagógica.",
+      "Discordam-se das medidas adotadas pela direção da escola.",
+      "Precisam-se de profissionais qualificados para o atendimento educacional.",
+      "Necessitam-se de profissionais qualificados para o atendimento educacional.",
     ],
-
     correta: 0,
-
-    explicacao:
-    `O verbo fazer, indicando tempo decorrido, é impessoal e fica no singular.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Fazer temporal não vai ao plural.`
-},
-
-{
-    pergunta:
-    `A concordância verbal está adequada em:`,
-
+    explicacao: "Com verbo transitivo indireto, o 'se' é índice de indeterminação do sujeito e o verbo permanece na terceira pessoa do singular: 'precisa-se de'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com verbo transitivo indireto, o 'se' é índice de indeterminação do sujeito e o verbo permanece na terceira pessoa do singular: 'precisa-se de'.",
+    feedbackErro: "A resposta correta é: Precisa-se de profissionais qualificados para o atendimento educacional. Com verbo transitivo indireto, o 'se' é índice de indeterminação do sujeito e o verbo permanece na terceira pessoa do singular: 'precisa-se de'.",
+    dicaBanca: "Se o verbo exige preposição e o 'se' indetermina o sujeito, não faça o verbo concordar com o complemento.",
+  },
+  {
+    id: "concordancia_012",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — verbo existir",
+    pergunta: "Assinale a frase correta quanto à concordância do verbo “existir”.",
     alternativas: [
-        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
-        `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidor participaram da reunião extraordinária.`,
-        `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`
+      "Existe razões suficientes para rever o planejamento da atividade.",
+      "Existem razões suficientes para rever o planejamento da atividade.",
+      "Deve existir razões suficientes para rever o planejamento da atividade.",
+      "Pode existir razões suficientes para rever o planejamento da atividade.",
+      "Hão de existir razão suficiente para rever o planejamento da atividade.",
     ],
-
     correta: 1,
-
-    explicacao:
-    `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Com 'a maioria de', observe o núcleo e o termo especificador.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância nominal.`,
-
+    explicacao: "Diferentemente de 'haver' com sentido de existir, o verbo 'existir' é pessoal e concorda com o sujeito: 'existem razões'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Diferentemente de 'haver' com sentido de existir, o verbo 'existir' é pessoal e concorda com o sujeito: 'existem razões'.",
+    feedbackErro: "A resposta correta é: Existem razões suficientes para rever o planejamento da atividade. Diferentemente de 'haver' com sentido de existir, o verbo 'existir' é pessoal e concorda com o sujeito: 'existem razões'.",
+    dicaBanca: "Não transfira para 'existir' a impessoalidade do verbo 'haver'.",
+  },
+  {
+    id: "concordancia_013",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — faltar e restar",
+    pergunta: "A concordância está adequada à norma-padrão em:",
     alternativas: [
-        `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
+      "Falta serem analisados dois recursos apresentados pelos candidatos.",
+      "Restou pendentes duas assinaturas no documento encaminhado.",
+      "Faltam duas etapas para a conclusão do processo seletivo.",
+      "Falta duas etapas para a conclusão do processo seletivo.",
+      "Resta dois documentos para a conclusão do processo seletivo.",
     ],
-
     correta: 2,
-
-    explicacao:
-    `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Adjetivo composto costuma flexionar o último elemento.`
-},
-
-{
-    pergunta:
-    `A frase adequada à norma-padrão é:`,
-
+    explicacao: "Os verbos 'faltar' e 'restar' são pessoais e concordam com seus sujeitos: 'faltam duas etapas'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Os verbos 'faltar' e 'restar' são pessoais e concordam com seus sujeitos: 'faltam duas etapas'.",
+    feedbackErro: "A resposta correta é: Faltam duas etapas para a conclusão do processo seletivo. Os verbos 'faltar' e 'restar' são pessoais e concordam com seus sujeitos: 'faltam duas etapas'.",
+    dicaBanca: "Pergunte o que falta ou o que resta; esse termo costuma ser o sujeito do verbo.",
+  },
+  {
+    id: "concordancia_014",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — nenhum de",
+    pergunta: "Assinale a alternativa correta, considerando especificamente nenhum de.",
     alternativas: [
-        `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
-        `Estava bastante preocupados os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`
+      "Nenhum dos candidatos apresentaram a documentação fora do prazo.",
+      "Nenhum dos candidatos apresentastes a documentação fora do prazo.",
+      "Nenhum dos candidatos apresentaram-se a documentação fora do prazo.",
+      "Nenhum dos candidatos apresentou a documentação fora do prazo.",
+      "Nenhum dos candidatos haveriam apresentado a documentação fora do prazo.",
     ],
-
     correta: 3,
-
-    explicacao:
-    `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Bastante = muito é invariável.`
-},
-
-{
-    pergunta:
-    `A concordância está correta em:`,
-
+    explicacao: "Com 'nenhum de + plural', o núcleo do sujeito é 'nenhum', e o verbo fica no singular: 'nenhum ... apresentou'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com 'nenhum de + plural', o núcleo do sujeito é 'nenhum', e o verbo fica no singular: 'nenhum ... apresentou'.",
+    feedbackErro: "A resposta correta é: Nenhum dos candidatos apresentou a documentação fora do prazo. Com 'nenhum de + plural', o núcleo do sujeito é 'nenhum', e o verbo fica no singular: 'nenhum ... apresentou'.",
+    dicaBanca: "Em estruturas com 'nenhum de', não deixe o plural do complemento atrair indevidamente o verbo.",
+  },
+  {
+    id: "concordancia_015",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — cada um de",
+    pergunta: "Em qual frase a concordância está correta?",
     alternativas: [
-        `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parece suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
-        `O dados apresentados pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
+      "Cada um dos professores foram elaborar uma proposta de intervenção pedagógica.",
+      "Cada um dos professores houveram elaborado uma proposta de intervenção pedagógica.",
+      "Cada um dos professores elaboraram uma proposta de intervenção pedagógica.",
+      "Cada um dos professores elaborastes uma proposta de intervenção pedagógica.",
+      "Cada um dos professores elaborou uma proposta de intervenção pedagógica.",
     ],
-
     correta: 4,
-
-    explicacao:
-    `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Localize o núcleo do sujeito antes de concordar.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância verbal.`,
-
+    explicacao: "O núcleo 'cada um' é singular; por isso, o verbo deve ficar no singular: 'cada um ... elaborou'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. O núcleo 'cada um' é singular; por isso, o verbo deve ficar no singular: 'cada um ... elaborou'.",
+    feedbackErro: "A resposta correta é: Cada um dos professores elaborou uma proposta de intervenção pedagógica. O núcleo 'cada um' é singular; por isso, o verbo deve ficar no singular: 'cada um ... elaborou'.",
+    dicaBanca: "O termo plural depois de 'de' não é o núcleo do sujeito.",
+  },
+  {
+    id: "concordancia_016",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — um ou outro",
+    pergunta: "A norma-padrão recomenda o singular em:",
     alternativas: [
-        `Faz cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco ano que a comissão acompanha os indicadores educacionais.`,
-        `Faz cinco anos que acompanham-se os indicador educacional.`,
-        `Fazem cinco anos que acompanha a comissão os indicadores educacionais.`,
+      "Um ou outro estudante faltou à apresentação do seminário.",
+      "Um ou outro estudante faltaram à apresentação do seminário.",
+      "Um ou outro estudantes faltou à apresentação do seminário.",
+      "Um ou outro estudante faltastes à apresentação do seminário.",
+      "Um ou outro estudante houveram faltado à apresentação do seminário.",
     ],
-
     correta: 0,
-
-    explicacao:
-    `O verbo fazer, indicando tempo decorrido, é impessoal e fica no singular.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Fazer temporal não vai ao plural.`
-},
-
-{
-    pergunta:
-    `A concordância verbal está adequada em:`,
-
+    explicacao: "Com a expressão 'um ou outro', a concordância regular é feita no singular: 'um ou outro estudante faltou'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com a expressão 'um ou outro', a concordância regular é feita no singular: 'um ou outro estudante faltou'.",
+    feedbackErro: "A resposta correta é: Um ou outro estudante faltou à apresentação do seminário. Com a expressão 'um ou outro', a concordância regular é feita no singular: 'um ou outro estudante faltou'.",
+    dicaBanca: "Não confunda 'um ou outro' com um sujeito composto comum ligado por 'ou'.",
+  },
+  {
+    id: "concordancia_017",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — correlação aditiva",
+    pergunta: "Assinale a alternativa correta quanto à concordância verbal.",
     alternativas: [
-        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
-        `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidor participaram da reunião extraordinária.`,
-        `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`
+      "Não só a coordenadora, mas também os professores havia participado da reunião.",
+      "Não só a coordenadora, mas também os professores participaram da reunião.",
+      "Não só a coordenadora, mas também os professores participara da reunião.",
+      "Não só a coordenadora, mas também os professores participou da reunião.",
+      "Não só a coordenadora, mas também os professores participastes da reunião.",
     ],
-
     correta: 1,
-
-    explicacao:
-    `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Com 'a maioria de', observe o núcleo e o termo especificador.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância nominal.`,
-
+    explicacao: "Na correlação 'não só... mas também', os núcleos se somam e o verbo vai ao plural: 'participaram'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Na correlação 'não só... mas também', os núcleos se somam e o verbo vai ao plural: 'participaram'.",
+    feedbackErro: "A resposta correta é: Não só a coordenadora, mas também os professores participaram da reunião. Na correlação 'não só... mas também', os núcleos se somam e o verbo vai ao plural: 'participaram'.",
+    dicaBanca: "Quando a correlação adiciona núcleos do sujeito, pense em valor aditivo e plural.",
+  },
+  {
+    id: "concordancia_018",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — oração como sujeito",
+    pergunta: "Assinale a alternativa em que a concordância está correta.",
     alternativas: [
-        `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
+      "São necessários que os candidatos leiam atentamente todas as instruções.",
+      "É necessários que os candidatos leiam atentamente todas as instruções.",
+      "É necessário que os candidatos leiam atentamente todas as instruções.",
+      "São necessário que os candidatos leiam atentamente todas as instruções.",
+      "Foram necessário que os candidatos lessem atentamente todas as instruções.",
     ],
-
     correta: 2,
-
-    explicacao:
-    `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Adjetivo composto costuma flexionar o último elemento.`
-},
-
-{
-    pergunta:
-    `A frase adequada à norma-padrão é:`,
-
+    explicacao: "Quando uma oração inteira exerce função de sujeito, o predicado da oração principal fica no singular: 'é necessário que...'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Quando uma oração inteira exerce função de sujeito, o predicado da oração principal fica no singular: 'é necessário que...'.",
+    feedbackErro: "A resposta correta é: É necessário que os candidatos leiam atentamente todas as instruções. Quando uma oração inteira exerce função de sujeito, o predicado da oração principal fica no singular: 'é necessário que...'.",
+    dicaBanca: "Uma oração subordinada substantiva subjetiva funciona como um sujeito de valor singular.",
+  },
+  {
+    id: "concordancia_019",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — verbo ser e horas",
+    pergunta: "Assinale a alternativa adequada à norma-padrão, considerando especificamente verbo ser e horas.",
     alternativas: [
-        `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
-        `Estava bastante preocupados os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`
+      "Quando a reunião começou, havia sido duas horas da tarde.",
+      "Quando a reunião começou, fazia duas horas da tarde.",
+      "Quando a reunião começou, era duas horas da tarde.",
+      "Quando a reunião começou, eram duas horas da tarde.",
+      "Quando a reunião começou, foi duas horas da tarde.",
     ],
-
     correta: 3,
-
-    explicacao:
-    `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Bastante = muito é invariável.`
-},
-
-{
-    pergunta:
-    `A concordância está correta em:`,
-
+    explicacao: "Na indicação de horas, o verbo 'ser' concorda com o numeral: 'era uma hora', 'eram duas horas'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Na indicação de horas, o verbo 'ser' concorda com o numeral: 'era uma hora', 'eram duas horas'.",
+    feedbackErro: "A resposta correta é: Quando a reunião começou, eram duas horas da tarde. Na indicação de horas, o verbo 'ser' concorda com o numeral: 'era uma hora', 'eram duas horas'.",
+    dicaBanca: "Com horas, faça o verbo 'ser' acompanhar o número indicado.",
+  },
+  {
+    id: "concordancia_020",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — concordância ideológica",
+    pergunta: "A frase que exemplifica concordância ideológica de pessoa, e não simples concordância formal, é:",
     alternativas: [
-        `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parece suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
-        `O dados apresentados pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
+      "Os brasileiros precisam valorizar a educação pública de qualidade.",
+      "A comunidade escolar precisa valorizar a educação pública de qualidade.",
+      "Professores e estudantes precisam valorizar a educação pública de qualidade.",
+      "Cada brasileiro precisa valorizar a educação pública de qualidade.",
+      "Os brasileiros precisamos valorizar a educação pública de qualidade.",
     ],
-
     correta: 4,
-
-    explicacao:
-    `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Localize o núcleo do sujeito antes de concordar.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância verbal.`,
-
+    explicacao: "Em 'Os brasileiros precisamos', o verbo está na primeira pessoa do plural porque o falante se inclui no grupo designado pelo sujeito de terceira pessoa. É concordância ideológica (silepse de pessoa).",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Em 'Os brasileiros precisamos', o verbo está na primeira pessoa do plural porque o falante se inclui no grupo designado pelo sujeito de terceira pessoa. É concordância ideológica (silepse de pessoa).",
+    feedbackErro: "A resposta correta é: Os brasileiros precisamos valorizar a educação pública de qualidade. Em 'Os brasileiros precisamos', o verbo está na primeira pessoa do plural porque o falante se inclui no grupo designado pelo sujeito de terceira pessoa. É concordância ideológica (silepse de pessoa).",
+    dicaBanca: "Na silepse, a concordância segue uma ideia presente no contexto, e não apenas a forma gramatical do sujeito.",
+  },
+  {
+    id: "concordancia_021",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — revisão em contexto",
+    pergunta: "Leia o trecho e assinale a reescrita que corrige o desvio de concordância sem alterar o sentido essencial.",
     alternativas: [
-        `Faz cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco ano que a comissão acompanha os indicadores educacionais.`,
-        `Faz cinco anos que acompanham-se os indicador educacional.`,
-        `Fazem cinco anos que acompanha a comissão os indicadores educacionais.`,
+      "“No relatório da escola, constatou-se que haviam dificuldades de leitura em diferentes turmas, mas também existia estratégias eficazes já utilizadas pelos professores.”",
+      "No relatório da escola, constataram-se que havia dificuldades de leitura em diferentes turmas, mas também existia estratégias eficazes já utilizadas pelos professores.",
+      "No relatório da escola, constatou-se que haviam dificuldades de leitura em diferentes turmas, mas também existia estratégias eficazes já utilizadas pelos professores.",
+      "No relatório da escola, constatou-se que havia dificuldades de leitura em diferentes turmas, mas também existiam estratégias eficazes já utilizadas pelos professores.",
+      "No relatório da escola, constatou-se que haviam dificuldades de leitura em diferentes turmas, mas também existiam estratégias eficazes já utilizadas pelos professores naquele período.",
     ],
-
     correta: 0,
-
-    explicacao:
-    `O verbo fazer, indicando tempo decorrido, é impessoal e fica no singular.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Fazer temporal não vai ao plural.`
-},
-
-{
-    pergunta:
-    `A concordância verbal está adequada em:`,
-
+    explicacao: "'Haver' com sentido de existir é impessoal: 'havia dificuldades'. Já 'existir' é pessoal e concorda com 'estratégias': 'existiam estratégias'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. 'Haver' com sentido de existir é impessoal: 'havia dificuldades'. Já 'existir' é pessoal e concorda com 'estratégias': 'existiam estratégias'.",
+    feedbackErro: "A resposta correta é: “No relatório da escola, constatou-se que haviam dificuldades de leitura em diferentes turmas, mas também existia estratégias eficazes já utilizadas pelos professores.” 'Haver' com sentido de existir é impessoal: 'havia dificuldades'. Já 'existir' é pessoal e concorda com 'estratégias': 'existiam estratégias'.",
+    dicaBanca: "Questões de revisão costumam combinar duas regras diferentes na mesma frase; analise cada verbo separadamente.",
+  },
+  {
+    id: "concordancia_022",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — anexo",
+    pergunta: "Assinale a alternativa adequada à norma-padrão, considerando especificamente anexo.",
     alternativas: [
-        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
-        `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidor participaram da reunião extraordinária.`,
-        `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`
+      "Segue anexos ao e-mail os documentos solicitados pela comissão.",
+      "Seguem anexos ao e-mail os documentos solicitados pela comissão.",
+      "Seguem anexo ao e-mail os documentos solicitados pela comissão.",
+      "Segue anexo ao e-mail os documentos solicitados pela comissão.",
+      "Seguem anexas ao e-mail os documentos solicitados pela comissão.",
     ],
-
     correta: 1,
-
-    explicacao:
-    `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Com 'a maioria de', observe o núcleo e o termo especificador.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância nominal.`,
-
+    explicacao: "Como adjetivo, 'anexo' concorda com o substantivo a que se refere: 'documentos anexos'. O verbo 'seguem' também concorda com 'documentos'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Como adjetivo, 'anexo' concorda com o substantivo a que se refere: 'documentos anexos'. O verbo 'seguem' também concorda com 'documentos'.",
+    feedbackErro: "A resposta correta é: Seguem anexos ao e-mail os documentos solicitados pela comissão. Como adjetivo, 'anexo' concorda com o substantivo a que se refere: 'documentos anexos'. O verbo 'seguem' também concorda com 'documentos'.",
+    dicaBanca: "Diferencie 'anexo' adjetivo de expressões preposicionais como 'em anexo'.",
+  },
+  {
+    id: "concordancia_023",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — incluso",
+    pergunta: "Em qual frase a concordância nominal está correta?",
     alternativas: [
-        `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
+      "Estão inclusos no material as orientações para a prova didática.",
+      "Está inclusas no material as orientações para a prova didática.",
+      "Estão inclusas no material as orientações para a prova didática.",
+      "Está incluso no material as orientações para a prova didática.",
+      "Estão incluso no material as orientações para a prova didática.",
     ],
-
     correta: 2,
-
-    explicacao:
-    `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Adjetivo composto costuma flexionar o último elemento.`
-},
-
-{
-    pergunta:
-    `A frase adequada à norma-padrão é:`,
-
+    explicacao: "O adjetivo 'incluso' concorda com 'orientações': feminino plural, 'inclusas'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. O adjetivo 'incluso' concorda com 'orientações': feminino plural, 'inclusas'.",
+    feedbackErro: "A resposta correta é: Estão inclusas no material as orientações para a prova didática. O adjetivo 'incluso' concorda com 'orientações': feminino plural, 'inclusas'.",
+    dicaBanca: "Palavras como 'anexo', 'incluso' e 'obrigado' variam quando funcionam como adjetivos.",
+  },
+  {
+    id: "concordancia_024",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — bastante",
+    pergunta: "Assinale a alternativa correta quanto ao emprego de “bastante”.",
     alternativas: [
-        `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
-        `Estava bastante preocupados os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`
+      "Havia bastante argumentos no parecer, mas alguns eram bastantes frágeis.",
+      "Havia bastantes argumentos no parecer, mas alguns eram bastantes frágeis.",
+      "Havia bastante argumentos no parecer, mas alguns eram bastante frágeis.",
+      "Havia bastantes argumentos no parecer, mas alguns eram bastante frágeis.",
+      "Haviam bastantes argumentos no parecer, mas alguns eram bastante frágeis.",
     ],
-
     correta: 3,
-
-    explicacao:
-    `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Bastante = muito é invariável.`
-},
-
-{
-    pergunta:
-    `A concordância está correta em:`,
-
+    explicacao: "Antes de substantivo, 'bastante' pode equivaler a 'muitos' e varia: 'bastantes argumentos'. Como advérbio de intensidade diante de adjetivo, é invariável: 'bastante frágeis'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Antes de substantivo, 'bastante' pode equivaler a 'muitos' e varia: 'bastantes argumentos'. Como advérbio de intensidade diante de adjetivo, é invariável: 'bastante frágeis'.",
+    feedbackErro: "A resposta correta é: Havia bastantes argumentos no parecer, mas alguns eram bastante frágeis. Antes de substantivo, 'bastante' pode equivaler a 'muitos' e varia: 'bastantes argumentos'. Como advérbio de intensidade diante de adjetivo, é invariável: 'bastante frágeis'.",
+    dicaBanca: "Troque 'bastante' por 'muito': se virar 'muitos', tende a variar; se virar 'muito' advérbio, fica invariável.",
+  },
+  {
+    id: "concordancia_025",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — meio",
+    pergunta: "Assinale a frase correta segundo a norma-padrão, considerando especificamente meio.",
     alternativas: [
-        `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parece suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
-        `O dados apresentados pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
+      "As candidatas ficaram meia apreensivas antes da divulgação do resultado.",
+      "As candidatas ficaram meio apreensiva antes da divulgação do resultado.",
+      "As candidatas ficaram meias apreensivas antes da divulgação do resultado.",
+      "As candidatas ficaram meios apreensivas antes da divulgação do resultado.",
+      "As candidatas ficaram meio apreensivas antes da divulgação do resultado.",
     ],
-
     correta: 4,
-
-    explicacao:
-    `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Localize o núcleo do sujeito antes de concordar.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância verbal.`,
-
+    explicacao: "Com valor de advérbio equivalente a 'um pouco', 'meio' é invariável: 'meio apreensivas'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com valor de advérbio equivalente a 'um pouco', 'meio' é invariável: 'meio apreensivas'.",
+    feedbackErro: "A resposta correta é: As candidatas ficaram meio apreensivas antes da divulgação do resultado. Com valor de advérbio equivalente a 'um pouco', 'meio' é invariável: 'meio apreensivas'.",
+    dicaBanca: "Se 'meio' puder ser substituído por 'um pouco', não flexione.",
+  },
+  {
+    id: "concordancia_026",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — meia",
+    pergunta: "Em qual alternativa “meio/meia” está empregado corretamente como numeral?",
     alternativas: [
-        `Faz cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco ano que a comissão acompanha os indicadores educacionais.`,
-        `Faz cinco anos que acompanham-se os indicador educacional.`,
-        `Fazem cinco anos que acompanha a comissão os indicadores educacionais.`,
+      "A professora utilizou meia folha para registrar cada observação.",
+      "A professora utilizou meio folha para registrar cada observação.",
+      "A professora utilizou meia folhas para registrar cada observação.",
+      "A professora utilizou meio folhas para registrar cada observação.",
+      "A professora utilizou meias folha para registrar cada observação.",
     ],
-
     correta: 0,
-
-    explicacao:
-    `O verbo fazer, indicando tempo decorrido, é impessoal e fica no singular.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Fazer temporal não vai ao plural.`
-},
-
-{
-    pergunta:
-    `A concordância verbal está adequada em:`,
-
+    explicacao: "Como numeral fracionário, 'meio' varia para concordar com o substantivo: 'meia folha'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Como numeral fracionário, 'meio' varia para concordar com o substantivo: 'meia folha'.",
+    feedbackErro: "A resposta correta é: A professora utilizou meia folha para registrar cada observação. Como numeral fracionário, 'meio' varia para concordar com o substantivo: 'meia folha'.",
+    dicaBanca: "Compare: 'meia folha' (numeral) e 'meio cansada' (advérbio).",
+  },
+  {
+    id: "concordancia_027",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — menos",
+    pergunta: "Assinale a alternativa correta, considerando especificamente menos.",
     alternativas: [
-        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
-        `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidor participaram da reunião extraordinária.`,
-        `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`
+      "Havia menas questão de concordância nominal do que de concordância verbal.",
+      "Havia menos questões de concordância nominal do que de concordância verbal.",
+      "Haviam menas questões de concordância nominal do que de concordância verbal.",
+      "Havia menas questões de concordância nominal do que de concordância verbal.",
+      "Haviam menos questões de concordância nominal do que de concordância verbal.",
     ],
-
     correta: 1,
-
-    explicacao:
-    `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Com 'a maioria de', observe o núcleo e o termo especificador.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância nominal.`,
-
+    explicacao: "'Menos' é invariável. Além disso, 'haver' com sentido de existir permanece no singular: 'havia menos questões'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. 'Menos' é invariável. Além disso, 'haver' com sentido de existir permanece no singular: 'havia menos questões'.",
+    feedbackErro: "A resposta correta é: Havia menos questões de concordância nominal do que de concordância verbal. 'Menos' é invariável. Além disso, 'haver' com sentido de existir permanece no singular: 'havia menos questões'.",
+    dicaBanca: "'Menas' não pertence à norma-padrão; aproveite a questão para conferir também a concordância verbal.",
+  },
+  {
+    id: "concordancia_028",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — quite",
+    pergunta: "Assinale a frase adequada à norma-padrão, considerando especificamente quite.",
     alternativas: [
-        `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
+      "Os dois servidores declararam-se quite com suas obrigações administrativas.",
+      "Os dois servidores declarou-se quites com suas obrigações administrativas.",
+      "Os dois servidores declararam-se quites com suas obrigações administrativas.",
+      "Os dois servidores declararam-se quito com suas obrigações administrativas.",
+      "Os dois servidores declararam-se quitas com suas obrigações administrativas.",
     ],
-
     correta: 2,
-
-    explicacao:
-    `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Adjetivo composto costuma flexionar o último elemento.`
-},
-
-{
-    pergunta:
-    `A frase adequada à norma-padrão é:`,
-
+    explicacao: "O adjetivo 'quite' varia em número: 'servidor quite', 'servidores quites'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. O adjetivo 'quite' varia em número: 'servidor quite', 'servidores quites'.",
+    feedbackErro: "A resposta correta é: Os dois servidores declararam-se quites com suas obrigações administrativas. O adjetivo 'quite' varia em número: 'servidor quite', 'servidores quites'.",
+    dicaBanca: "'Quite' é adjetivo; faça-o concordar com o termo a que se refere.",
+  },
+  {
+    id: "concordancia_029",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — obrigado",
+    pergunta: "Uma professora, ao agradecer a ajuda de duas colegas, deve dizer, segundo a norma-padrão:",
     alternativas: [
-        `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
-        `Estava bastante preocupados os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`
+      "Muito obrigadas pela colaboração de vocês, se apenas uma professora fala.",
+      "Muitos obrigada pela colaboração de vocês.",
+      "Muito obrigado pela colaboração de vocês.",
+      "Muito obrigada pela colaboração de vocês.",
+      "Muitas obrigada pela colaboração de vocês.",
     ],
-
     correta: 3,
-
-    explicacao:
-    `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Bastante = muito é invariável.`
-},
-
-{
-    pergunta:
-    `A concordância está correta em:`,
-
+    explicacao: "Na fórmula de agradecimento, 'obrigado/obrigada' concorda com quem agradece. Se a falante é uma mulher, usa-se 'obrigada'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Na fórmula de agradecimento, 'obrigado/obrigada' concorda com quem agradece. Se a falante é uma mulher, usa-se 'obrigada'.",
+    feedbackErro: "A resposta correta é: Muito obrigada pela colaboração de vocês. Na fórmula de agradecimento, 'obrigado/obrigada' concorda com quem agradece. Se a falante é uma mulher, usa-se 'obrigada'.",
+    dicaBanca: "Pergunte quem está agradecendo, não a quem o agradecimento é dirigido.",
+  },
+  {
+    id: "concordancia_030",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — é proibido",
+    pergunta: "Assinale a alternativa em conformidade com a norma-padrão.",
     alternativas: [
-        `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parece suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
-        `O dados apresentados pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
+      "É proibido a entrada de pessoas não autorizadas na sala de aplicação.",
+      "É proibidas a entrada de pessoas não autorizadas na sala de aplicação.",
+      "São proibida a entrada de pessoas não autorizadas na sala de aplicação.",
+      "É proibida entrada de pessoas não autorizadas, sem artigo e como única possibilidade normativa.",
+      "É proibida a entrada de pessoas não autorizadas na sala de aplicação.",
     ],
-
     correta: 4,
-
-    explicacao:
-    `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Localize o núcleo do sujeito antes de concordar.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância verbal.`,
-
+    explicacao: "Com artigo definido ('a entrada'), o predicativo deve concordar: 'é proibida a entrada'. Sem determinante, a construção 'é proibido entrada' é tradicionalmente aceita.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com artigo definido ('a entrada'), o predicativo deve concordar: 'é proibida a entrada'. Sem determinante, a construção 'é proibido entrada' é tradicionalmente aceita.",
+    feedbackErro: "A resposta correta é: É proibida a entrada de pessoas não autorizadas na sala de aplicação. Com artigo definido ('a entrada'), o predicativo deve concordar: 'é proibida a entrada'. Sem determinante, a construção 'é proibido entrada' é tradicionalmente aceita.",
+    dicaBanca: "Em expressões como 'é proibido/permitido/necessário', verifique se o substantivo está determinado por artigo.",
+  },
+  {
+    id: "concordancia_031",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — é necessário",
+    pergunta: "Em qual alternativa a concordância nominal está correta?",
     alternativas: [
-        `Faz cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco ano que a comissão acompanha os indicadores educacionais.`,
-        `Faz cinco anos que acompanham-se os indicador educacional.`,
-        `Fazem cinco anos que acompanha a comissão os indicadores educacionais.`,
+      "É necessária muita atenção durante a leitura das alternativas.",
+      "É necessários muita atenção durante a leitura das alternativas.",
+      "São necessárias muita atenção durante a leitura das alternativas.",
+      "É necessário muita atenção durante a leitura das alternativas.",
+      "São necessária muita atenção durante a leitura das alternativas.",
     ],
-
     correta: 0,
-
-    explicacao:
-    `O verbo fazer, indicando tempo decorrido, é impessoal e fica no singular.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Fazer temporal não vai ao plural.`
-},
-
-{
-    pergunta:
-    `A concordância verbal está adequada em:`,
-
+    explicacao: "O substantivo 'atenção' está determinado por 'muita'; por isso, o predicativo concorda no feminino singular: 'é necessária muita atenção'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. O substantivo 'atenção' está determinado por 'muita'; por isso, o predicativo concorda no feminino singular: 'é necessária muita atenção'.",
+    feedbackErro: "A resposta correta é: É necessária muita atenção durante a leitura das alternativas. O substantivo 'atenção' está determinado por 'muita'; por isso, o predicativo concorda no feminino singular: 'é necessária muita atenção'.",
+    dicaBanca: "A presença de determinante favorece a concordância do predicativo com o substantivo.",
+  },
+  {
+    id: "concordancia_032",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — mesmo",
+    pergunta: "Assinale a frase correta quanto ao emprego de “mesmo”.",
     alternativas: [
-        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
-        `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidor participaram da reunião extraordinária.`,
-        `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`
+      "As próprio candidatas revisaram os recursos e elas mesmo os protocolaram.",
+      "As próprias candidatas revisaram os recursos e elas mesmas os protocolaram.",
+      "As próprias candidatas revisaram os recursos e elas mesmo os protocolaram.",
+      "As própria candidatas revisaram os recursos e elas mesmas os protocolaram.",
+      "As próprios candidatas revisaram os recursos e elas mesmas os protocolaram.",
     ],
-
     correta: 1,
-
-    explicacao:
-    `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Com 'a maioria de', observe o núcleo e o termo especificador.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância nominal.`,
-
+    explicacao: "Com valor de reforço pronominal/adjetivo, 'próprio' e 'mesmo' concordam com o termo a que se referem: 'as próprias candidatas', 'elas mesmas'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com valor de reforço pronominal/adjetivo, 'próprio' e 'mesmo' concordam com o termo a que se referem: 'as próprias candidatas', 'elas mesmas'.",
+    feedbackErro: "A resposta correta é: As próprias candidatas revisaram os recursos e elas mesmas os protocolaram. Com valor de reforço pronominal/adjetivo, 'próprio' e 'mesmo' concordam com o termo a que se referem: 'as próprias candidatas', 'elas mesmas'.",
+    dicaBanca: "Quando 'mesmo' equivale a 'próprio', há flexão de gênero e número.",
+  },
+  {
+    id: "concordancia_033",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — só",
+    pergunta: "Assinale a alternativa correta quanto ao emprego de “só”.",
     alternativas: [
-        `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
+      "Depois da reunião, as duas professoras ficaram sós na sala dos docente.",
+      "Depois da reunião, as duas professoras ficaram sós, mas o adjetivo deveria permanecer invariável.",
+      "Depois da reunião, as duas professoras ficaram sós na sala dos docentes.",
+      "Depois da reunião, as duas professoras ficaram só na sala dos docentes, com sentido de desacompanhadas.",
+      "Depois da reunião, as duas professoras ficou sós na sala dos docentes.",
     ],
-
     correta: 2,
-
-    explicacao:
-    `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Adjetivo composto costuma flexionar o último elemento.`
-},
-
-{
-    pergunta:
-    `A frase adequada à norma-padrão é:`,
-
+    explicacao: "Com sentido de 'sozinhas', 'só' é adjetivo e varia: 'as professoras ficaram sós'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com sentido de 'sozinhas', 'só' é adjetivo e varia: 'as professoras ficaram sós'.",
+    feedbackErro: "A resposta correta é: Depois da reunião, as duas professoras ficaram sós na sala dos docentes. Com sentido de 'sozinhas', 'só' é adjetivo e varia: 'as professoras ficaram sós'.",
+    dicaBanca: "Compare 'ficaram sós' (sozinhas) com 'só estudaram' (apenas estudaram, valor adverbial).",
+  },
+  {
+    id: "concordancia_034",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — caro",
+    pergunta: "Assinale a frase correta segundo a norma-padrão, considerando especificamente caro.",
     alternativas: [
-        `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
-        `Estava bastante preocupados os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`
+      "Os materiais didáticos custaram caros, embora fossem de boa qualidade.",
+      "Os materiais didáticos custou caro, embora fossem de boa qualidade.",
+      "Os materiais didáticos custaram cara, embora fossem de boa qualidade.",
+      "Os materiais didáticos custaram caro, embora fossem de boa qualidade.",
+      "Os materiais didáticos custaram caras, embora fossem de boa qualidade.",
     ],
-
     correta: 3,
-
-    explicacao:
-    `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Bastante = muito é invariável.`
-},
-
-{
-    pergunta:
-    `A concordância está correta em:`,
-
+    explicacao: "Na expressão 'custar caro', 'caro' tem valor adverbial e permanece invariável.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Na expressão 'custar caro', 'caro' tem valor adverbial e permanece invariável.",
+    feedbackErro: "A resposta correta é: Os materiais didáticos custaram caro, embora fossem de boa qualidade. Na expressão 'custar caro', 'caro' tem valor adverbial e permanece invariável.",
+    dicaBanca: "Se 'caro' modifica o verbo 'custar', funciona como advérbio; se qualifica um substantivo, varia.",
+  },
+  {
+    id: "concordancia_035",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — possível",
+    pergunta: "Assinale a alternativa adequada à norma-padrão, considerando especificamente possível.",
     alternativas: [
-        `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parece suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
-        `O dados apresentados pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
+      "A comissão apresentou soluções tão claro quanto possível para o problema identificado.",
+      "A comissão apresentaram soluções tão claras quanto possível para o problema identificado.",
+      "A comissão apresentou soluções tão claras quanto possíveis para o problema identificado.",
+      "A comissão apresentou solução tão claras quanto possível para o problema identificado.",
+      "A comissão apresentou soluções tão claras quanto possível para o problema identificado.",
     ],
-
     correta: 4,
-
-    explicacao:
-    `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Localize o núcleo do sujeito antes de concordar.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância verbal.`,
-
+    explicacao: "Na construção 'tão... quanto possível', 'possível' permanece no singular: 'tão claras quanto possível'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Na construção 'tão... quanto possível', 'possível' permanece no singular: 'tão claras quanto possível'.",
+    feedbackErro: "A resposta correta é: A comissão apresentou soluções tão claras quanto possível para o problema identificado. Na construção 'tão... quanto possível', 'possível' permanece no singular: 'tão claras quanto possível'.",
+    dicaBanca: "Não generalize a flexão de 'possível'; observe a estrutura comparativa em que a palavra aparece.",
+  },
+  {
+    id: "concordancia_036",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — adjetivo posposto",
+    pergunta: "Assinale a frase em que o adjetivo posposto concorda corretamente com substantivos de gêneros diferentes.",
     alternativas: [
-        `Faz cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco ano que a comissão acompanha os indicadores educacionais.`,
-        `Faz cinco anos que acompanham-se os indicador educacional.`,
-        `Fazem cinco anos que acompanha a comissão os indicadores educacionais.`,
+      "Foram analisados o relatório e a planilha completos antes da reunião.",
+      "Foram analisados o relatório e a planilha completa antes da reunião.",
+      "Foi analisados o relatório e a planilha completos antes da reunião.",
+      "Foram analisado o relatório e a planilha completos antes da reunião.",
+      "Foram analisadas o relatório e a planilha completas antes da reunião.",
     ],
-
     correta: 0,
-
-    explicacao:
-    `O verbo fazer, indicando tempo decorrido, é impessoal e fica no singular.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Fazer temporal não vai ao plural.`
-},
-
-{
-    pergunta:
-    `A concordância verbal está adequada em:`,
-
+    explicacao: "Quando um adjetivo posposto se refere a dois substantivos de gêneros diferentes, a concordância regular vai para o masculino plural: 'relatório e planilha completos'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Quando um adjetivo posposto se refere a dois substantivos de gêneros diferentes, a concordância regular vai para o masculino plural: 'relatório e planilha completos'.",
+    feedbackErro: "A resposta correta é: Foram analisados o relatório e a planilha completos antes da reunião. Quando um adjetivo posposto se refere a dois substantivos de gêneros diferentes, a concordância regular vai para o masculino plural: 'relatório e planilha completos'.",
+    dicaBanca: "Adjetivo depois de dois nomes de gêneros diferentes: o masculino plural é a forma geral.",
+  },
+  {
+    id: "concordancia_037",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — predicativo",
+    pergunta: "Assinale a alternativa correta quanto à concordância do predicativo.",
     alternativas: [
-        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
-        `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidor participaram da reunião extraordinária.`,
-        `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`
+      "A porta e a janela permaneceram aberta durante o intervalo.",
+      "A porta e a janela permaneceram abertas durante o intervalo.",
+      "A porta e a janela permaneceu aberta durante o intervalo.",
+      "A porta e a janela permaneceu abertas durante o intervalo.",
+      "A porta e a janela permaneceram aberto durante todo o intervalo destinado às atividades da turma.",
     ],
-
     correta: 1,
-
-    explicacao:
-    `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Com 'a maioria de', observe o núcleo e o termo especificador.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância nominal.`,
-
+    explicacao: "O sujeito composto feminino plural ('a porta e a janela') exige verbo no plural e predicativo no feminino plural: 'permaneceram abertas'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. O sujeito composto feminino plural ('a porta e a janela') exige verbo no plural e predicativo no feminino plural: 'permaneceram abertas'.",
+    feedbackErro: "A resposta correta é: A porta e a janela permaneceram abertas durante o intervalo. O sujeito composto feminino plural ('a porta e a janela') exige verbo no plural e predicativo no feminino plural: 'permaneceram abertas'.",
+    dicaBanca: "Quando o predicativo se refere a todos os núcleos do sujeito, deve acompanhar gênero e número do conjunto.",
+  },
+  {
+    id: "concordancia_038",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — particípio",
+    pergunta: "Em qual alternativa o particípio está corretamente empregado como adjetivo?",
     alternativas: [
-        `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
+      "Concluído as entrevistas, a comissão iniciou a análise dos títulos.",
+      "Concluídos as entrevistas, a comissão iniciou a análise dos títulos.",
+      "Concluídas as entrevistas, a comissão iniciou a análise dos títulos.",
+      "Concluída as entrevistas, a comissão iniciou a análise dos títulos.",
+      "Concluídas os entrevistas, a comissão iniciou a análise dos títulos.",
     ],
-
     correta: 2,
-
-    explicacao:
-    `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Adjetivo composto costuma flexionar o último elemento.`
-},
-
-{
-    pergunta:
-    `A frase adequada à norma-padrão é:`,
-
+    explicacao: "Em construção reduzida, o particípio concorda com o substantivo a que se refere: 'concluídas as entrevistas'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Em construção reduzida, o particípio concorda com o substantivo a que se refere: 'concluídas as entrevistas'.",
+    feedbackErro: "A resposta correta é: Concluídas as entrevistas, a comissão iniciou a análise dos títulos. Em construção reduzida, o particípio concorda com o substantivo a que se refere: 'concluídas as entrevistas'.",
+    dicaBanca: "Particípio com valor adjetivo deve concordar com o nome associado.",
+  },
+  {
+    id: "concordancia_039",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — ambos",
+    pergunta: "Assinale a frase de acordo com a norma-padrão.",
     alternativas: [
-        `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
-        `Estava bastante preocupados os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`
+      "Ambas as propostas foram considerado adequadas pela equipe pedagógica.",
+      "Ambas propostas foram considerados adequada pela equipe pedagógica.",
+      "Ambos as propostas foram consideradas adequadas pela equipe pedagógica.",
+      "Ambas as propostas foram consideradas adequadas pela equipe pedagógica.",
+      "Ambas as propostas foi considerada adequada pela equipe pedagógica.",
     ],
-
     correta: 3,
-
-    explicacao:
-    `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Bastante = muito é invariável.`
-},
-
-{
-    pergunta:
-    `A concordância está correta em:`,
-
+    explicacao: "'Ambos/ambas' concorda em gênero com o substantivo; o verbo e o predicativo também acompanham o sujeito plural: 'ambas as propostas foram consideradas adequadas'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. 'Ambos/ambas' concorda em gênero com o substantivo; o verbo e o predicativo também acompanham o sujeito plural: 'ambas as propostas foram consideradas adequadas'.",
+    feedbackErro: "A resposta correta é: Ambas as propostas foram consideradas adequadas pela equipe pedagógica. 'Ambos/ambas' concorda em gênero com o substantivo; o verbo e o predicativo também acompanham o sujeito plural: 'ambas as propostas foram consideradas adequadas'.",
+    dicaBanca: "Em frases com várias palavras flexionáveis, confira cada relação de concordância separadamente.",
+  },
+  {
+    id: "concordancia_040",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — todo",
+    pergunta: "Assinale a alternativa em que a concordância e o emprego do determinante estão adequados.",
     alternativas: [
-        `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parece suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
-        `O dados apresentados pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
+      "Todo as orientações necessárias foram entregues aos candidatos antes da prova.",
+      "Todas as orientações necessário foram entregues aos candidatos antes da prova realizada no período da manhã.",
+      "Todas as orientações necessárias foi entregue aos candidatos antes da prova.",
+      "Todas a orientação necessárias foram entregue aos candidatos antes da prova.",
+      "Todas as orientações necessárias foram entregues aos candidatos antes da prova.",
     ],
-
     correta: 4,
-
-    explicacao:
-    `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Localize o núcleo do sujeito antes de concordar.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância verbal.`,
-
+    explicacao: "'Todas', 'necessárias' e 'foram entregues' concordam com o núcleo plural feminino 'orientações'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. 'Todas', 'necessárias' e 'foram entregues' concordam com o núcleo plural feminino 'orientações'.",
+    feedbackErro: "A resposta correta é: Todas as orientações necessárias foram entregues aos candidatos antes da prova. 'Todas', 'necessárias' e 'foram entregues' concordam com o núcleo plural feminino 'orientações'.",
+    dicaBanca: "Questões de concordância podem distribuir o erro por determinante, adjetivo, verbo e particípio.",
+  },
+  {
+    id: "concordancia_041",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — adjetivos compostos",
+    pergunta: "Assinale a alternativa em que o adjetivo composto está flexionado de acordo com a norma-padrão.",
     alternativas: [
-        `Faz cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco ano que a comissão acompanha os indicadores educacionais.`,
-        `Faz cinco anos que acompanham-se os indicador educacional.`,
-        `Fazem cinco anos que acompanha a comissão os indicadores educacionais.`,
+      "A escola promoveu atividades político-pedagógicas ao longo do semestre.",
+      "A escola promoveu atividade político-pedagógicas ao longo do semestre.",
+      "A escola promoveram atividades político-pedagógicas ao longo do semestre.",
+      "A escola promoveu atividades políticas-pedagógicas ao longo do semestre.",
+      "A escola promoveu atividades político-pedagógico ao longo do semestre.",
     ],
-
     correta: 0,
-
-    explicacao:
-    `O verbo fazer, indicando tempo decorrido, é impessoal e fica no singular.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Fazer temporal não vai ao plural.`
-},
-
-{
-    pergunta:
-    `A concordância verbal está adequada em:`,
-
+    explicacao: "Nos adjetivos compostos, em regra, apenas o último elemento varia: 'atividades político-pedagógicas'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Nos adjetivos compostos, em regra, apenas o último elemento varia: 'atividades político-pedagógicas'.",
+    feedbackErro: "A resposta correta é: A escola promoveu atividades político-pedagógicas ao longo do semestre. Nos adjetivos compostos, em regra, apenas o último elemento varia: 'atividades político-pedagógicas'.",
+    dicaBanca: "Em adjetivos compostos, verifique se a flexão recai apenas sobre o último elemento.",
+  },
+  {
+    id: "concordancia_042",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — cores compostas",
+    pergunta: "Assinale a alternativa correta quanto à concordância nominal, considerando especificamente cores compostas.",
     alternativas: [
-        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
-        `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidor participaram da reunião extraordinária.`,
-        `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`
+      "Os alunos utilizaram camisetas azuis-claras durante a apresentação.",
+      "Os alunos utilizaram camisetas azul-claras durante a apresentação.",
+      "Os alunos utilizaram camisetas azul-claro durante a apresentação.",
+      "Os alunos utilizaram camiseta azul-claras durante a apresentação.",
+      "Os alunos utilizou camisetas azul-claras durante a apresentação.",
     ],
-
     correta: 1,
-
-    explicacao:
-    `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Com 'a maioria de', observe o núcleo e o termo especificador.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância nominal.`,
-
+    explicacao: "Em adjetivo composto de cor formado por dois adjetivos, apenas o último elemento varia: 'camisetas azul-claras'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Em adjetivo composto de cor formado por dois adjetivos, apenas o último elemento varia: 'camisetas azul-claras'.",
+    feedbackErro: "A resposta correta é: Os alunos utilizaram camisetas azul-claras durante a apresentação. Em adjetivo composto de cor formado por dois adjetivos, apenas o último elemento varia: 'camisetas azul-claras'.",
+    dicaBanca: "Cores compostas exigem atenção à classe dos elementos que formam a expressão.",
+  },
+  {
+    id: "concordancia_043",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — muito e pouco",
+    pergunta: "Assinale a alternativa correta quanto à concordância nominal, considerando especificamente muito e pouco.",
     alternativas: [
-        `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
+      "Poucas candidatas estava muito confiantes antes da entrevista.",
+      "Poucas candidatas estavam muito confiante antes da entrevista.",
+      "Poucas candidatas estavam muito confiantes antes da entrevista.",
+      "Pouco candidatas estavam muito confiantes antes da entrevista.",
+      "Poucas candidatas estavam muitas confiantes antes da entrevista.",
     ],
-
     correta: 2,
-
-    explicacao:
-    `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Adjetivo composto costuma flexionar o último elemento.`
-},
-
-{
-    pergunta:
-    `A frase adequada à norma-padrão é:`,
-
+    explicacao: "'Poucas' determina o substantivo 'candidatas' e varia; 'muito' intensifica o adjetivo 'confiantes' e permanece invariável.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. 'Poucas' determina o substantivo 'candidatas' e varia; 'muito' intensifica o adjetivo 'confiantes' e permanece invariável.",
+    feedbackErro: "A resposta correta é: Poucas candidatas estavam muito confiantes antes da entrevista. 'Poucas' determina o substantivo 'candidatas' e varia; 'muito' intensifica o adjetivo 'confiantes' e permanece invariável.",
+    dicaBanca: "A mesma palavra pode variar como pronome/adjetivo e ficar invariável como advérbio.",
+  },
+  {
+    id: "concordancia_044",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — revisão de trecho",
+    pergunta: "Leia o trecho e assinale a reescrita inteiramente adequada à norma-padrão.",
     alternativas: [
-        `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
-        `Estava bastante preocupados os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`
+      "As professoras estavam meio preocupadas, mas disseram que tinham bastantes razões para permanecerem alerta.",
+      "As professoras estavam meias preocupadas, mas disseram que tinham bastante razões para permanecerem alerta durante toda a aplicação.",
+      "As professoras estavam meio preocupadas, mas disseram que tinham bastante razões para permanecerem alertas.",
+      "“As professoras estavam meia preocupadas, mas disseram que tinham bastantes razões para permanecerem alertas.”",
+      "As professoras estavam meio preocupada, mas disseram que tinham bastantes razões para permanecerem alerta.",
     ],
-
     correta: 3,
-
-    explicacao:
-    `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Bastante = muito é invariável.`
-},
-
-{
-    pergunta:
-    `A concordância está correta em:`,
-
+    explicacao: "Como advérbio, 'meio' é invariável: 'meio preocupadas'. Antes de substantivo plural, 'bastantes' varia. Na expressão normativa tradicional, 'permanecer alerta' mantém 'alerta' invariável.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Como advérbio, 'meio' é invariável: 'meio preocupadas'. Antes de substantivo plural, 'bastantes' varia. Na expressão normativa tradicional, 'permanecer alerta' mantém 'alerta' invariável.",
+    feedbackErro: "A resposta correta é: “As professoras estavam meia preocupadas, mas disseram que tinham bastantes razões para permanecerem alertas.” Como advérbio, 'meio' é invariável: 'meio preocupadas'. Antes de substantivo plural, 'bastantes' varia. Na expressão normativa tradicional, 'permanecer alerta' mantém 'alerta' invariável.",
+    dicaBanca: "Em revisão de texto, classifique cada palavra antes de decidir se ela deve variar.",
+  },
+  {
+    id: "concordancia_045",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — adjetivo e dois núcleos",
+    pergunta: "Assinale a alternativa correta, considerando especificamente adjetivo e dois núcleos.",
     alternativas: [
-        `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parece suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
-        `O dados apresentados pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
+      "O professor apresentou argumento e justificativa consistente, sendo o plural vedado após substantivos de gêneros distintos.",
+      "O professor apresentaram argumento e justificativa consistentes para a mudança proposta.",
+      "O professor apresentou argumento e justificativa consistente, referindo-se igualmente aos dois termos.",
+      "O professor apresentou argumento e justificativa consistentes, mas o adjetivo deveria ficar no feminino plural.",
+      "O professor apresentou argumento e justificativa consistentes para a mudança proposta.",
     ],
-
     correta: 4,
-
-    explicacao:
-    `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Localize o núcleo do sujeito antes de concordar.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância verbal.`,
-
+    explicacao: "Referindo-se a dois substantivos de gêneros diferentes, o adjetivo posposto vai normalmente ao masculino plural: 'argumento e justificativa consistentes'. Como 'consistente' tem a mesma forma nos gêneros, o plural marca a concordância com ambos.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Referindo-se a dois substantivos de gêneros diferentes, o adjetivo posposto vai normalmente ao masculino plural: 'argumento e justificativa consistentes'. Como 'consistente' tem a mesma forma nos gêneros, o plural marca a concordância com ambos.",
+    feedbackErro: "A resposta correta é: O professor apresentou argumento e justificativa consistentes para a mudança proposta. Referindo-se a dois substantivos de gêneros diferentes, o adjetivo posposto vai normalmente ao masculino plural: 'argumento e justificativa consistentes'. Como 'consistente' tem a mesma forma nos gêneros, o plural marca a concordância com ambos.",
+    dicaBanca: "Quando o adjetivo se refere aos dois núcleos, não o deixe no singular por atração do termo mais próximo.",
+  },
+  {
+    id: "concordancia_046",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal e nominal — integração",
+    pergunta: "Assinale a alternativa inteiramente correta quanto às concordâncias verbal e nominal.",
     alternativas: [
-        `Faz cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco anos que a comissão acompanha os indicadores educacionais.`,
-        `Fazem cinco ano que a comissão acompanha os indicadores educacionais.`,
-        `Faz cinco anos que acompanham-se os indicador educacional.`,
-        `Fazem cinco anos que acompanha a comissão os indicadores educacionais.`,
+      "Foram consideradas pertinentes as duas observações apresentadas pela banca examinadora.",
+      "Foi consideradas pertinentes as duas observações apresentadas pela banca examinadora durante a análise dos recursos.",
+      "Foram considerado pertinentes as duas observações apresentadas pela banca examinadora.",
+      "Foram consideradas pertinente as duas observações apresentadas pela banca examinadora.",
+      "Foi considerada pertinentes as duas observações apresentadas pela banca examinadora.",
     ],
-
     correta: 0,
-
-    explicacao:
-    `O verbo fazer, indicando tempo decorrido, é impessoal e fica no singular.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Fazer temporal não vai ao plural.`
-},
-
-{
-    pergunta:
-    `A concordância verbal está adequada em:`,
-
+    explicacao: "Na voz passiva, o verbo auxiliar, o particípio e o predicativo concordam com o sujeito plural feminino 'as duas observações': 'foram consideradas pertinentes'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Na voz passiva, o verbo auxiliar, o particípio e o predicativo concordam com o sujeito plural feminino 'as duas observações': 'foram consideradas pertinentes'.",
+    feedbackErro: "A resposta correta é: Foram consideradas pertinentes as duas observações apresentadas pela banca examinadora. Na voz passiva, o verbo auxiliar, o particípio e o predicativo concordam com o sujeito plural feminino 'as duas observações': 'foram consideradas pertinentes'.",
+    dicaBanca: "Em estruturas passivas, confira a cadeia completa de concordância, não apenas o verbo auxiliar.",
+  },
+  {
+    id: "concordancia_047",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — verbo ser com predicativo",
+    pergunta: "Assinale a alternativa de acordo com a norma-padrão.",
     alternativas: [
-        `A maioria dos servidores participaram em regra da reunião extraordinária.`,
-        `A maioria dos servidores participou da reunião extraordinária.`,
-        `A maioria dos servidor participaram da reunião extraordinária.`,
-        `A maioria dos servidores participam obrigatória da reunião extraordinária.`,
-        `A maioria dos servidores foram participado da reunião extraordinária.`
+      "O problema foram as sucessivas mudanças no cronograma da seleção, embora a frase esteja no presente.",
+      "O problema eram as sucessivas mudanças no cronograma da seleção.",
+      "O problema é as sucessivas mudanças no cronograma da seleção.",
+      "O problema era as sucessivas mudanças no cronograma da seleção, como única forma possível.",
+      "O problema eram a sucessiva mudança no cronograma da seleção.",
     ],
-
     correta: 1,
-
-    explicacao:
-    `Com expressão partitiva, a concordância pode ocorrer com o núcleo singular; aqui a forma está adequada.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Com 'a maioria de', observe o núcleo e o termo especificador.`
-},
-
-{
-    pergunta:
-    `Assinale a alternativa correta quanto à concordância nominal.`,
-
+    explicacao: "Com o verbo 'ser', quando um dos termos é plural e o outro singular, a concordância costuma favorecer o plural: 'o problema eram as mudanças'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com o verbo 'ser', quando um dos termos é plural e o outro singular, a concordância costuma favorecer o plural: 'o problema eram as mudanças'.",
+    feedbackErro: "A resposta correta é: O problema eram as sucessivas mudanças no cronograma da seleção. Com o verbo 'ser', quando um dos termos é plural e o outro singular, a concordância costuma favorecer o plural: 'o problema eram as mudanças'.",
+    dicaBanca: "O verbo 'ser' possui regras próprias; não aplique automaticamente a concordância comum com o termo singular anterior.",
+  },
+  {
+    id: "concordancia_048",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — nomes próprios plurais",
+    pergunta: "Assinale a frase correta segundo a norma-padrão, considerando especificamente nomes próprios plurais.",
     alternativas: [
-        `Os relatório técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativo foram revisados pela equipe responsável.`,
-        `Os relatórios técnico-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnica-administrativos foram revisados pela equipe responsável.`,
-        `Os relatórios técnicos-administrativo foram revisados pela equipe responsável.`
+      "Os Estados Unidos mantém amplo sistema de universidades públicas e privadas.",
+      "Estados Unidos mantém amplo sistema de universidades públicas e privadas, independentemente do artigo.",
+      "Os Estados Unidos mantêm amplo sistema de universidades públicas e privadas.",
+      "Os Estados Unidos mantem amplo sistema de universidades públicas e privadas.",
+      "Os Estados Unidos manter amplo sistema de universidades públicas e privadas.",
     ],
-
     correta: 2,
-
-    explicacao:
-    `Em adjetivo composto, geralmente varia apenas o último elemento quando ambos qualificam o substantivo.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Adjetivo composto costuma flexionar o último elemento.`
-},
-
-{
-    pergunta:
-    `A frase adequada à norma-padrão é:`,
-
+    explicacao: "Com nome próprio plural acompanhado de artigo plural, o verbo vai ao plural: 'Os Estados Unidos mantêm'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Com nome próprio plural acompanhado de artigo plural, o verbo vai ao plural: 'Os Estados Unidos mantêm'.",
+    feedbackErro: "A resposta correta é: Os Estados Unidos mantêm amplo sistema de universidades públicas e privadas. Com nome próprio plural acompanhado de artigo plural, o verbo vai ao plural: 'Os Estados Unidos mantêm'.",
+    dicaBanca: "Observe se o nome próprio plural vem ou não acompanhado de artigo; isso pode alterar a concordância.",
+  },
+  {
+    id: "concordancia_049",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância verbal — núcleo coletivo",
+    pergunta: "Assinale a alternativa que apresenta concordância formal inequívoca com um substantivo coletivo.",
     alternativas: [
-        `Estavam bastantes preocupados os responsáveis pela organização do evento.`,
-        `Estava bastante preocupados os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupado os responsáveis pela organização do evento.`,
-        `Estavam bastante preocupados os responsáveis pela organização do evento.`,
-        `Estava bastantes preocupados os responsáveis pela organização do evento.`
+      "A equipe de professores foram apresentar o plano de ação à direção, como única concordância possível.",
+      "A equipe de professores houveram apresentado o plano de ação à direção.",
+      "A equipe de professores apresentaram o plano de ação à direção, sendo essa a única forma formal.",
+      "A equipe de professores apresentou o plano de ação à direção.",
+      "A equipe de professores apresentastes o plano de ação à direção.",
     ],
-
     correta: 3,
-
-    explicacao:
-    `'Bastante', como advérbio, é invariável; o verbo concorda com 'responsáveis'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Bastante = muito é invariável.`
-},
-
-{
-    pergunta:
-    `A concordância está correta em:`,
-
+    explicacao: "Na concordância formal, o verbo concorda com o núcleo singular do sujeito, 'equipe': 'a equipe apresentou'.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Na concordância formal, o verbo concorda com o núcleo singular do sujeito, 'equipe': 'a equipe apresentou'.",
+    feedbackErro: "A resposta correta é: A equipe de professores apresentou o plano de ação à direção. Na concordância formal, o verbo concorda com o núcleo singular do sujeito, 'equipe': 'a equipe apresentou'.",
+    dicaBanca: "Não deixe o complemento plural 'de professores' substituir o núcleo do sujeito.",
+  },
+  {
+    id: "concordancia_050",
+    assunto: "Concordância verbal e nominal",
+    subtopico: "Concordância nominal — numerais ordinais",
+    pergunta: "Assinale a alternativa correta quanto à concordância nominal, considerando especificamente numerais ordinais.",
     alternativas: [
-        `Os dados apresentado pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parece suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficiente para a decisão.`,
-        `O dados apresentados pela equipe parecem suficientes para a decisão.`,
-        `Os dados apresentados pela equipe parecem suficientes para a decisão.`
+      "Os estudantes do primeira e do segundo anos participaram do mesmo projeto interdisciplinar.",
+      "Os estudantes do primeiro e do segunda anos participaram do mesmo projeto interdisciplinar.",
+      "Os estudantes do primeiro e do segundo ano participaram, referindo-se aos dois anos como grupos distintos.",
+      "Os estudante do primeiro e do segundo anos participaram do mesmo projeto interdisciplinar.",
+      "Os estudantes do primeiro e do segundo anos participaram do mesmo projeto interdisciplinar.",
     ],
-
     correta: 4,
-
-    explicacao:
-    `Verbo e adjetivo concordam com o núcleo plural 'dados'.`,
-
-    feedbackAcerto:
-    `Excelente! Você identificou a alternativa correta e superou distratores plausíveis.`,
-
-    feedbackErro:
-    `Revise o ponto central do conteúdo. A alternativa correta respeita a norma-padrão, a estrutura sintática e a relação de sentido do enunciado.`,
-
-    dicaBanca:
-    `Localize o núcleo do sujeito antes de concordar.`
-}];
+    explicacao: "Os ordinais 'primeiro' e 'segundo' concordam com o substantivo masculino 'anos'; como se trata de dois anos distintos, o plural é adequado.",
+    feedbackAcerto: "Excelente! Você identificou corretamente a relação de concordância exigida pela norma-padrão. Os ordinais 'primeiro' e 'segundo' concordam com o substantivo masculino 'anos'; como se trata de dois anos distintos, o plural é adequado.",
+    feedbackErro: "A resposta correta é: Os estudantes do primeiro e do segundo anos participaram do mesmo projeto interdisciplinar. Os ordinais 'primeiro' e 'segundo' concordam com o substantivo masculino 'anos'; como se trata de dois anos distintos, o plural é adequado.",
+    dicaBanca: "Em enumeração de séries, etapas ou anos, observe a concordância dos ordinais e o número do substantivo.",
+  }
+];
