@@ -1735,15 +1735,19 @@ function renderizarQuestaoRespondidaFarol(configuracao){
                     <button
                         type="button"
                         class="${ehSimulado ? "btn-voltar-simulado-v48" : "btn-voltar-feedback-v47"}"
-                        onclick="${ehSimulado ? "voltarAoFeedbackSimuladoFarol()" : "voltarAoFeedbackQuestaoFarol()"}">
-                        ← Voltar ao feedback
+                        onclick="${ehSimulado ? "voltarDaQuestaoSimuladoFarol()" : "voltarParaAssuntos()"}">
+                        ${ehSimulado ? "← Sair do simulado" : "← Sair para os tópicos"}
                     </button>
 
                     <button
                         type="button"
                         class="btn-proxima-feedback"
-                        onclick="${ehSimulado ? "voltarDaQuestaoSimuladoFarol()" : "voltarParaAssuntos()"}">
-                        ${ehSimulado ? "Sair do simulado" : "Sair para os tópicos"}
+                        onclick="${ehSimulado ? "proximaQuestaoSimulado()" : "proximaQuestao()"}">
+                        ${
+                            numero >= total
+                            ? (ehSimulado ? "Ver resultado final ➜" : "Ver resultado ➜")
+                            : "Próxima questão ➜"
+                        }
                     </button>
                 </div>
 
@@ -3460,9 +3464,21 @@ ${q.afirmacoes.map(item => `
 
         <br>
 
-        <button onclick="corrigirQuestao()">
-            Responder
-        </button>
+        <div class="acoes-simulado-v48">
+            <button
+                type="button"
+                class="btn-voltar-simulado-v48"
+                onclick="voltarParaAssuntos()">
+                ← Sair para os tópicos
+            </button>
+
+            <button
+                type="button"
+                class="btn-responder-simulado-v48"
+                onclick="corrigirQuestao()">
+                Responder
+            </button>
+        </div>
 
         <div id="feedback"></div>
 
