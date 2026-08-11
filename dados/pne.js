@@ -1,1187 +1,755 @@
+// Banco atualizado conforme a Lei nº 15.388/2026 — Plano Nacional de Educação vigente.
+// Questões autorais inspiradas em padrões de concursos, sem reprodução literal de itens de prova.
+
 const pne = [
-
-{
-    pergunta:
-        "Durante a elaboração do Plano Municipal de Educação, uma equipe técnica discutia qual documento deveria servir de referência para a definição das metas locais. Conforme a Lei nº 13.005/2014, o Plano Nacional de Educação caracteriza-se como:",
-
-    alternativas: [
-        "Instrumento destinado predominantemente à expansão da Educação Superior, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Documento voltado em geral à universalização da Educação Básica, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Plano decenal que estabelece diretrizes, metas e estratégias para a política educacional brasileira.",
-        "Norma que regulamenta predominantemente o financiamento educacional, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Plano destinado em geral à formação dos profissionais da educação, considerando o acompanhamento das metas e a articulação entre os entes federativos."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. O PNE é um plano decenal que estabelece diretrizes, metas e estratégias para orientar a educação nacional.",
-
-    feedbackErro:
-        "O PNE possui abrangência ampla, contemplando todos os níveis, etapas e modalidades da educação.",
-
-    dicaBanca:
-        "Guarde a definição clássica: diretrizes + metas + estratégias."
-},
-{
-    pergunta:
-        "Durante uma capacitação para gestores escolares, foi informado que o atual Plano Nacional de Educação possui prazo determinado de vigência. De acordo com a Lei nº 13.005/2014, essa vigência corresponde a:",
-
-    alternativas: [
-        "Dez anos, constituindo um plano decenal.",
-        "Cinco anos, com revisão obrigatória ao final do período.",
-        "Oito anos, com avaliação intermediária.",
-        "Doze anos, alinhados ao ciclo federativo.",
-        "Vinte anos, com atualização quinquenal."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto:
-        "Correto. O Plano Nacional de Educação possui vigência de dez anos.",
-
-    feedbackErro:
-        "A característica decenal é uma das principais marcas dos Planos Nacionais de Educação.",
-
-    dicaBanca:
-        "PNE = plano decenal."
-},
-{
-    pergunta:
-        "Uma Secretaria Municipal de Educação implementou ações voltadas à redução das desigualdades educacionais, ao combate à exclusão escolar e à ampliação das oportunidades de aprendizagem. Essas ações estão alinhadas principalmente à diretriz do PNE relacionada à:",
-
-    alternativas: [
-        "Universalização da pré-escola para crianças de 4 e 5 anos.",
-        "Elevação das taxas de matrícula na Educação Superior.",
-        "Formação em pós-graduação para professores da Educação Básica.",
-        "Erradicação do analfabetismo.",
-        "Oferta de educação em tempo integral."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto:
-        "Correto. A erradicação do analfabetismo é uma das diretrizes expressamente previstas no PNE.",
-
-    feedbackErro:
-        "As demais alternativas referem-se a metas específicas do plano, e não às suas diretrizes.",
-
-    dicaBanca:
-        "A banca costuma misturar diretrizes e metas para induzir o erro."
-},
-{
-    pergunta:
-        "Após a aprovação do Plano Nacional de Educação, os entes federativos precisaram elaborar ou adequar seus respectivos planos de educação. Segundo a Lei nº 13.005/2014, esse processo deveria ocorrer em até:",
-
-    alternativas: [
-
-        "Seis meses.",
-
-        "Um ano.",
-
-        "Dois anos.",
-
-        "Quatro anos.",
-
-        "Cinco anos."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. Estados, Distrito Federal e Municípios tiveram o prazo de um ano para adequar ou elaborar seus planos de educação.",
-
-    feedbackErro:
-        "Trata-se de uma cobrança clássica de literalidade da Lei nº 13.005/2014.",
-
-    dicaBanca:
-        "Prazo para adequação dos planos = 1 ano."
-},
-{
-    pergunta:
-        "Durante uma audiência pública sobre políticas educacionais, discutiu-se quais instituições possuem atribuições relacionadas ao monitoramento e à avaliação das metas do PNE. Segundo a legislação, esse acompanhamento envolve:",
-
-    alternativas: [
-        "Normalmente o Ministério da Educação, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Predominantemente o Conselho Nacional de Educação, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Em geral o INEP e os Conselhos Estaduais de Educação, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Normalmente os Tribunais de Contas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "MEC, Congresso Nacional, Conselho Nacional de Educação e Fórum Nacional de Educação."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto:
-        "Correto. O acompanhamento do PNE é compartilhado entre MEC, Congresso Nacional, CNE e Fórum Nacional de Educação.",
-
-    feedbackErro:
-        "A legislação distribui essa responsabilidade entre diferentes instituições para garantir maior controle e participação social.",
-
-    dicaBanca:
-        "MEC + Congresso + CNE + FNE."
-},
-{
-    pergunta:
-        "Durante uma reunião entre representantes da União, dos Estados e dos Municípios, discutiu-se a necessidade de atuação conjunta para o cumprimento das metas do Plano Nacional de Educação. Esse princípio está diretamente relacionado ao:",
-
-    alternativas: [
-        "Processo de universalização da pré-escola para crianças de 4 e 5 anos.",
-        "Plano de carreira dos profissionais da educação básica.",
-        "Aumento das matrículas na pós-graduação stricto sensu.",
-        "Oferta de educação em tempo integral.",
-        "Regime de colaboração entre os entes federativos."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto:
-        "Correto. O regime de colaboração é um dos pilares para a implementação das metas do PNE, exigindo atuação articulada entre os entes federativos.",
-
-    feedbackErro:
-        "As demais alternativas correspondem a metas específicas do PNE e não ao princípio que orienta a cooperação entre os entes federativos.",
-
-    dicaBanca:
-        "União + Estados + Municípios trabalhando juntos = regime de colaboração."
-},
-{
-    pergunta:
-        "Ao analisar a estrutura do Plano Nacional de Educação, uma supervisora observou que cada meta é acompanhada por ações destinadas a orientar sua implementação. Essas ações são denominadas:",
-
-    alternativas: [
-        "Estratégias.",
-        "Diretrizes.",
-        "Competências.",
-        "Indicadores educacionais.",
-        "Planos setoriais."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto:
-        "Correto. As estratégias detalham os meios necessários para alcançar as metas previstas no PNE.",
-
-    feedbackErro:
-        "As diretrizes orientam o plano; as metas estabelecem objetivos; as estratégias indicam como alcançá-los.",
-
-    dicaBanca:
-        "Meta = o que alcançar. Estratégia = como alcançar."
-},
-{
-    pergunta:
-        "Uma equipe de pesquisadores avaliava o cumprimento das metas do PNE e destacou que o acompanhamento deve ocorrer durante toda a vigência do plano. De acordo com a Lei nº 13.005/2014, o monitoramento das metas é realizado:",
-
-    alternativas: [
-        "Normalmente ao final da vigência do plano.",
-        "A cada cinco anos.",
-        "Predominantemente por auditorias externas.",
-        "De forma contínua, com avaliações periódicas.",
-        "Em geral quando solicitado pelo Congresso Nacional."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto:
-        "Correto. O acompanhamento do PNE ocorre continuamente, permitindo verificar o progresso das metas e estratégias.",
-
-    feedbackErro:
-        "A legislação prevê monitoramento contínuo e avaliações periódicas ao longo da vigência do plano.",
-
-    dicaBanca:
-        "Monitoramento do PNE = contínuo."
-},
-{
-    pergunta:
-        "Durante a construção de um Plano Municipal de Educação, foi destacado que as metas locais deveriam estar alinhadas ao PNE, respeitando as necessidades regionais. Essa orientação demonstra que o PNE possui função:",
-
-    alternativas: [
-        "Predominantemente financeira, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Orientadora e articuladora das políticas educacionais.",
-        "Restrita à Educação Superior, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Limitada à formação docente, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Predominantemente avaliativa, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. O PNE orienta e articula as políticas educacionais em âmbito nacional, servindo de referência para os demais planos.",
-
-    feedbackErro:
-        "O PNE não se limita a uma área específica da educação; ele organiza o planejamento educacional do país.",
-
-    dicaBanca:
-        "PNE = referência nacional para estados e municípios."
-},
-{
-    pergunta:
-        "Em uma conferência educacional, discutiu-se que a sociedade civil deve participar da formulação, acompanhamento e avaliação das políticas públicas educacionais. Essa concepção está associada, no âmbito do PNE, ao fortalecimento da:",
-
-    alternativas: [
-        "Expansão da Educação Superior.",
-        "Educação Profissional Técnica de nível médio.",
-        "Gestão democrática da educação.",
-        "Universalização do Ensino Médio.",
-        "Alfabetização na idade certa."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A participação social e a gestão democrática são princípios importantes para o acompanhamento e execução das metas do PNE.",
-
-    feedbackErro:
-        "As demais alternativas referem-se a metas específicas do plano, não ao princípio da participação social.",
-
-    dicaBanca:
-        "Participação da comunidade escolar = gestão democrática."
-},
-{
-    pergunta:
-        "Durante a elaboração do Plano Municipal de Educação, verificou-se que todas as crianças de 4 e 5 anos do município estavam matriculadas na escola. Segundo o PNE, essa situação demonstra o cumprimento de um dos principais objetivos da Meta 1, que consiste em:",
-
-    alternativas: [
-        "Universalizar o atendimento escolar da população de 15 a 17 anos.",
-        "Garantir alfabetização até o final do 3º ano do Ensino Fundamental.",
-        "Ofertar educação em tempo integral em parte das escolas públicas.",
-        "Elevar a taxa bruta de matrícula na Educação Superior.",
-        "Universalizar a pré-escola para as crianças de 4 e 5 anos."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto:
-        "Correto. A universalização da pré-escola para crianças de 4 e 5 anos é um dos principais objetivos da Meta 1.",
-
-    feedbackErro:
-        "As demais alternativas correspondem às Metas 3, 5, 6 e 12 do PNE.",
-
-    dicaBanca:
-        "Pré-escola (4 e 5 anos) = Meta 1."
-},
-{
-    pergunta:
-        "Uma prefeitura anunciou a construção de novas unidades educacionais destinadas ao atendimento de crianças de até 3 anos. Essa ação está diretamente relacionada à Meta 1 do PNE porque busca:",
-
-    alternativas: [
-        "Ampliar a oferta de vagas em creches.",
-        "Expandir a Educação Profissional Técnica de nível médio.",
-        "Universalizar o Ensino Médio.",
-        "Elevar a escolaridade média da população de 18 a 29 anos.",
-        "Erradicar o analfabetismo absoluto."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto:
-        "Correto. A ampliação da oferta de creches constitui um dos objetivos centrais da Meta 1.",
-
-    feedbackErro:
-        "As demais alternativas pertencem a outras metas do Plano Nacional de Educação.",
-
-    dicaBanca:
-        "Creche = crianças de 0 a 3 anos."
-},
-{
-    pergunta:
-        "Durante uma auditoria educacional, constatou-se que um município universalizou a pré-escola, mas ainda não alcançou a meta de atendimento às crianças de até 3 anos. Nessa situação, é correto afirmar que:",
-
-    alternativas: [
-        "A Meta 1 foi integralmente cumprida.",
-        "O município já cumpriu a Meta 3.",
-        "O município alcançou a Meta 6.",
-        "A Meta 1 foi parcialmente alcançada.",
-        "A Meta 1 trata predominantemente da pré-escola."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto:
-        "Correto. A Meta 1 envolve tanto a universalização da pré-escola quanto a ampliação do atendimento em creches.",
-
-    feedbackErro:
-        "O cumprimento de apenas uma das dimensões da Meta 1 não significa seu atendimento integral.",
-
-    dicaBanca:
-        "Meta 1 = pré-escola + creches."
-},
-{
-    pergunta:
-        "Uma secretaria municipal apresentou como prioridade a ampliação do acesso à Educação Infantil, garantindo melhores oportunidades de desenvolvimento na primeira infância. Essa política está alinhada principalmente à meta que prevê:",
-
-    alternativas: [
-        "Elevação da qualidade da educação básica, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Universalização da Educação Infantil na pré-escola e ampliação das creches.",
-        "Formação em pós-graduação para professores da educação básica, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Triplicação das matrículas da Educação Profissional Técnica, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Universalização do Ensino Fundamental, considerando os princípios legais de acesso, permanência e organização da educação básica."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A Meta 1 é a principal meta relacionada à Educação Infantil.",
-
-    feedbackErro:
-        "As demais alternativas referem-se às Metas 2, 7, 11 e 16 do PNE.",
-
-    dicaBanca:
-        "Educação Infantil = Meta 1."
-},
-{
-    pergunta:
-        "Ao comparar as metas do PNE, um estudante observou que apenas uma delas trata diretamente da ampliação de vagas em creches e da universalização da pré-escola. Trata-se da:",
-
-    alternativas: [
-        "Meta 2.",
-        "Meta 3.",
-        "Meta 1.",
-        "Meta 5.",
-        "Meta 6."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Perfeito. A Meta 1 é dedicada à Educação Infantil, abrangendo creches e pré-escola.",
-
-    feedbackErro:
-        "As demais metas tratam do Ensino Fundamental, Ensino Médio, alfabetização e educação integral.",
-
-    dicaBanca:
-        "Quando a questão citar creche ou pré-escola, pense imediatamente na Meta 1."
-},
-{
-    pergunta:
-        "Durante o acompanhamento das metas educacionais de um município, verificou-se que praticamente todas as crianças de 6 a 14 anos estavam matriculadas na escola. Essa situação está diretamente relacionada ao cumprimento da Meta 2 do PNE, que busca:",
-
-    alternativas: [
-
-        "Universalizar o Ensino Fundamental de 9 anos para a população de 6 a 14 anos.",
-
-        "Universalizar o atendimento escolar da população de 15 a 17 anos.",
-
-        "Universalizar a pré-escola para crianças de 4 e 5 anos.",
-
-        "Garantir alfabetização até o final do 3º ano do Ensino Fundamental.",
-
-        "Oferecer educação em tempo integral em, no mínimo, 50% das escolas públicas."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto:
-        "Correto. A Meta 2 trata da universalização do Ensino Fundamental de nove anos para a população de 6 a 14 anos.",
-
-    feedbackErro:
-        "As demais alternativas referem-se às Metas 1, 3, 5 e 6 do PNE.",
-
-    dicaBanca:
-        "Meta 2 = Ensino Fundamental (6 a 14 anos)."
-},
-{
-    pergunta:
-        "Uma rede de ensino identificou elevado índice de abandono escolar entre estudantes do Ensino Fundamental. Para atender plenamente à Meta 2 do PNE, não basta garantir matrícula; é necessário também:",
-
-    alternativas: [
-        "Elevar as matrículas na Educação Superior, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Ampliar a pós-graduação stricto sensu, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Assegurar a conclusão do Ensino Fundamental na idade recomendada.",
-        "Expandir a Educação Profissional Técnica, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Universalizar a pré-escola, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A Meta 2 também busca garantir que os estudantes concluam o Ensino Fundamental na idade adequada.",
-
-    feedbackErro:
-        "A Meta 2 envolve acesso, permanência e conclusão do Ensino Fundamental.",
-
-    dicaBanca:
-        "Não basta entrar na escola; é preciso concluir na idade certa."
-},
-{
-    pergunta:
-        "Ao analisar os indicadores educacionais, uma equipe técnica observou que todos os estudantes estavam matriculados, mas muitos apresentavam atraso escolar. Essa situação indica que:",
-
-    alternativas: [
-        "A Meta 2 foi integralmente alcançada, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "A Meta 1 ainda não foi cumprida, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "O município já cumpriu a Meta 12, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "A Meta 6 foi atingida, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Ainda existem desafios relacionados ao fluxo escolar previsto na Meta 2."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto:
-        "Correto. O fluxo escolar adequado é fundamental para que os alunos concluam seus estudos na idade recomendada.",
-
-    feedbackErro:
-        "Matrícula universal não garante, por si só, o cumprimento integral da Meta 2.",
-
-    dicaBanca:
-        "Fluxo escolar adequado = progressão sem distorção idade-série."
-},
-{
-    pergunta:
-        "Durante uma formação para gestores escolares, foi apresentado que a Meta 2 está vinculada a qual etapa da Educação Básica?",
-
-    alternativas: [
-        "Educação Infantil.",
-        "Ensino Médio.",
-        "Educação Profissional.",
-        "Ensino Fundamental.",
-        "Educação Superior."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto:
-        "Correto. A Meta 2 trata especificamente da universalização e conclusão do Ensino Fundamental.",
-
-    feedbackErro:
-        "A banca frequentemente cobra a associação correta entre metas e etapas da educação.",
-
-    dicaBanca:
-        "Meta 1 = Educação Infantil; Meta 2 = Ensino Fundamental; Meta 3 = Ensino Médio."
-},
-{
-    pergunta:
-        "Uma prefeitura implementou programas de reforço escolar, combate à evasão e acompanhamento pedagógico com o objetivo de garantir que os estudantes concluam o Ensino Fundamental no tempo adequado. Essa iniciativa contribui principalmente para o cumprimento da:",
-
-    alternativas: [
-        "Meta 3 — Universalização do Ensino Médio, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 2 — Universalização e conclusão do Ensino Fundamental.",
-        "Meta 5 — Alfabetização até o 3º ano, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 6 — Educação Integral, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 12 — Expansão da Educação Superior, considerando o acompanhamento das metas e a articulação entre os entes federativos."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A Meta 2 envolve não apenas o acesso ao Ensino Fundamental, mas também sua conclusão na idade recomendada.",
-
-    feedbackErro:
-        "As demais alternativas correspondem a metas diferentes do PNE.",
-
-    dicaBanca:
-        "Meta 2 = acesso + permanência + conclusão do Ensino Fundamental."
-},
-{
-    pergunta:
-        "Durante a elaboração do Plano Estadual de Educação, verificou-se que parte significativa dos jovens de 15 a 17 anos estava fora da escola. Segundo o PNE, a meta diretamente relacionada à superação desse problema é a que busca:",
-
-    alternativas: [
-        "Universalizar a pré-escola para crianças de 4 e 5 anos.",
-        "Universalizar o atendimento escolar para a população de 15 a 17 anos.",
-        "Universalizar o Ensino Fundamental para a população de 6 a 14 anos.",
-        "Garantir alfabetização até o final do 3º ano do Ensino Fundamental.",
-        "Oferecer educação em tempo integral em parte das escolas públicas."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A Meta 3 prevê a universalização do atendimento escolar para a população de 15 a 17 anos e a elevação da taxa líquida de matrículas no Ensino Médio.",
-
-    feedbackErro:
-        "As demais alternativas correspondem às Metas 1, 2, 5 e 6 do PNE.",
-
-    dicaBanca:
-        "15 a 17 anos = Meta 3."
-},
-{
-    pergunta:
-        "Uma Secretaria de Educação desenvolveu ações para reduzir a evasão escolar no Ensino Médio e ampliar o acesso dos jovens a essa etapa de ensino. Essas medidas estão alinhadas principalmente à:",
-
-    alternativas: [
-        "Meta 5 do PNE.",
-        "Meta 9 do PNE.",
-        "Meta 12 do PNE.",
-        "Meta 17 do PNE.",
-        "Meta 3 do PNE."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto:
-        "Correto. A Meta 3 está diretamente relacionada à universalização do atendimento escolar da população de 15 a 17 anos.",
-
-    feedbackErro:
-        "As demais metas tratam de alfabetização, analfabetismo, Educação Superior e valorização docente.",
-
-    dicaBanca:
-        "Ensino Médio = Meta 3."
-},
-{
-    pergunta:
-        "Uma estudante com deficiência matriculada em escola regular recebe apoio especializado no contraturno para complementar sua formação. Essa situação exemplifica uma das estratégias relacionadas à:",
-
-    alternativas: [
-        "Meta 4 — Educação Especial na perspectiva inclusiva.",
-        "Meta 2 — Ensino Fundamental, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 6 — Educação Integral, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 11 — Educação Profissional Técnica, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 15 — Formação de Professores, considerando o acompanhamento das metas e a articulação entre os entes federativos."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto:
-        "Correto. A Meta 4 prevê a universalização do acesso à educação e ao Atendimento Educacional Especializado (AEE) para estudantes público-alvo da Educação Especial.",
-
-    feedbackErro:
-        "O Atendimento Educacional Especializado é um dos temas centrais da Meta 4.",
-
-    dicaBanca:
-        "AEE + inclusão escolar = Meta 4."
-},
-{
-    pergunta:
-        "Ao discutir políticas inclusivas, uma coordenadora pedagógica afirmou que estudantes com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação devem ter acesso à educação em sistema educacional inclusivo. Essa afirmação está de acordo com:",
-
-    alternativas: [
-
-        "Meta 1 do PNE.",
-
-        "Meta 3 do PNE.",
-
-        "Meta 4 do PNE.",
-
-        "Meta 8 do PNE.",
-
-        "Meta 20 do PNE."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A Meta 4 trata da universalização do acesso à educação para o público-alvo da Educação Especial, preferencialmente na rede regular de ensino.",
-
-    feedbackErro:
-        "A inclusão escolar é um dos principais focos da Meta 4.",
-
-    dicaBanca:
-        "Deficiência, TEA e altas habilidades aparecem frequentemente em questões da Meta 4."
-},
-{
-    pergunta:
-        "Durante uma capacitação, foi solicitado aos participantes que identificassem a meta do PNE relacionada à universalização do acesso à educação básica e ao Atendimento Educacional Especializado para estudantes com deficiência, transtornos globais do desenvolvimento e altas habilidades/superdotação. A resposta correta é:",
-
-    alternativas: [
-        "Meta 2.",
-        "Meta 3.",
-        "Meta 5.",
-        "Meta 4.",
-        "Meta 6."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto:
-        "Perfeito. A Meta 4 é a meta específica voltada à Educação Especial na perspectiva inclusiva.",
-
-    feedbackErro:
-        "As demais metas tratam do Ensino Fundamental, Ensino Médio, alfabetização e educação integral.",
-
-    dicaBanca:
-        "Meta 4 = Educação Especial inclusiva."
-},
-{
-    pergunta:
-        "Durante uma reunião pedagógica, professores analisavam os resultados de alfabetização dos estudantes dos anos iniciais. Segundo a Meta 5 do PNE, todas as crianças devem estar alfabetizadas, no máximo, até o final:",
-
-    alternativas: [
-        "Da pré-escola.",
-        "Do 3º ano do Ensino Fundamental.",
-        "Do 2º ano do Ensino Fundamental.",
-        "Do 5º ano do Ensino Fundamental.",
-        "Do Ensino Fundamental."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A Meta 5 estabelece a alfabetização de todas as crianças, no máximo, até o final do 3º ano do Ensino Fundamental.",
-
-    feedbackErro:
-        "A banca costuma trocar o 2º pelo 3º ano para induzir o erro.",
-
-    dicaBanca:
-        "Meta 5 = alfabetização até o final do 3º ano."
-},
-{
-    pergunta:
-        "Uma rede de ensino implementou programas de leitura, escrita e acompanhamento pedagógico para garantir que todos os estudantes desenvolvam as competências básicas de alfabetização na idade adequada. Essa ação está alinhada principalmente à:",
-
-    alternativas: [
-        "Meta 5 — Alfabetização das crianças.",
-        "Meta 3 — Universalização do Ensino Médio.",
-        "Meta 6 — Educação Integral.",
-        "Meta 9 — Redução do analfabetismo.",
-        "Meta 12 — Educação Superior."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto:
-        "Correto. A Meta 5 trata especificamente da alfabetização das crianças nos anos iniciais do Ensino Fundamental.",
-
-    feedbackErro:
-        "A Meta 9 trata da alfabetização de jovens e adultos, enquanto a Meta 5 é voltada às crianças.",
-
-    dicaBanca:
-        "Meta 5 = criança; Meta 9 = jovem e adulto."
-},
-{
-    pergunta:
-        "Ao analisar as metas do PNE, uma pedagoga observou que determinada política busca ampliar o tempo de permanência do estudante na escola, favorecendo seu desenvolvimento integral. Essa política está relacionada à:",
-
-    alternativas: [
-        "Meta 1 — Educação Infantil.",
-        "Meta 5 — Alfabetização.",
-        "Meta 8 — Escolaridade média.",
-        "Meta 6 — Educação Integral.",
-        "Meta 17 — Valorização docente."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto:
-        "Correto. A Meta 6 prevê a oferta de educação em tempo integral em parte significativa das escolas públicas.",
-
-    feedbackErro:
-        "A ampliação da jornada escolar é característica central da Meta 6.",
-
-    dicaBanca:
-        "Tempo integral = Meta 6."
-},
-{
-    pergunta:
-        "Uma escola ampliou sua jornada diária, passando a oferecer atividades culturais, esportivas, científicas e de reforço pedagógico no contraturno. Essa iniciativa contribui diretamente para o cumprimento da:",
-
-    alternativas: [
-        "Meta 2 — Ensino Fundamental.",
-        "Meta 4 — Educação Especial.",
-        "Meta 6 — Educação Integral.",
-        "Meta 5 — Alfabetização.",
-        "Meta 11 — Educação Profissional."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A Meta 6 busca ampliar a oferta de educação em tempo integral, favorecendo o desenvolvimento integral do estudante.",
-
-    feedbackErro:
-        "O foco da questão está na ampliação da jornada escolar e não em alfabetização, inclusão ou educação profissional.",
-
-    dicaBanca:
-        "Contraturno e ampliação da jornada indicam Meta 6."
-},
-{
-    pergunta:
-        "Durante um curso de formação, um professor afirmou que alfabetização e educação integral são conceitos equivalentes. À luz do PNE, essa afirmação é incorreta porque:",
-
-    alternativas: [
-        "Ambos os conceitos pertencem à Meta 1, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Alfabetização é tratada pela Meta 9 e educação integral pela Meta 12, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Educação integral corresponde à Meta 5 e alfabetização à Meta 6, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Os dois conceitos pertencem predominantemente à BNCC, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
-        "Alfabetização refere-se à Meta 5, enquanto educação integral está associada à Meta 6."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto:
-        "Correto. A Meta 5 trata da alfabetização das crianças, enquanto a Meta 6 aborda a educação integral em tempo integral.",
-
-    feedbackErro:
-        "Trata-se de uma pegadinha comum em concursos: alfabetização e educação integral pertencem a metas diferentes.",
-
-    dicaBanca:
-        "Meta 5 = alfabetização; Meta 6 = tempo integral."
-},
-{
-    pergunta:
-        "Durante a análise dos resultados educacionais de um estado, verificou-se a necessidade de melhorar os indicadores de aprendizagem dos estudantes e elevar o desempenho da Educação Básica. Essa preocupação está diretamente relacionada à:",
-
-    alternativas: [
-
-        "Meta 5 — Alfabetização até o 3º ano.",
-
-        "Meta 7 — Qualidade da Educação Básica.",
-
-        "Meta 8 — Escolaridade média da população.",
-
-        "Meta 10 — EJA integrada à Educação Profissional.",
-
-        "Meta 12 — Expansão da Educação Superior."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A Meta 7 busca fomentar a qualidade da Educação Básica em todas as etapas e modalidades, com melhoria do fluxo escolar e da aprendizagem.",
-
-    feedbackErro:
-        "A questão aborda qualidade da educação e indicadores de desempenho, temas centrais da Meta 7.",
-
-    dicaBanca:
-        "Qualidade da Educação Básica = Meta 7."
-},
-{
-    pergunta:
-        "Uma Secretaria de Educação investiu na melhoria da infraestrutura escolar, na formação docente e no fortalecimento dos sistemas de avaliação para elevar os resultados educacionais. Essas medidas estão mais diretamente associadas à:",
-
-    alternativas: [
-
-        "Meta 3 — Ensino Médio.",
-
-        "Meta 6 — Educação Integral.",
-
-        "Meta 7 — Qualidade da Educação Básica.",
-
-        "Meta 9 — Erradicação do analfabetismo.",
-
-        "Meta 15 — Formação inicial dos professores."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A Meta 7 envolve diversas estratégias voltadas à melhoria da qualidade da Educação Básica.",
-
-    feedbackErro:
-        "Embora a formação docente seja importante, o foco principal da questão é a melhoria global da qualidade educacional.",
-
-    dicaBanca:
-        "Fluxo escolar + aprendizagem + avaliação = Meta 7."
-},
-{
-    pergunta:
-        "Ao estudar as metas do PNE, um candidato observou que uma delas busca elevar a escolaridade média da população de 18 a 29 anos, especialmente entre grupos historicamente vulneráveis. Trata-se da:",
-
-    alternativas: [
-        "Meta 8.",
-        "Meta 4.",
-        "Meta 6.",
-        "Meta 11.",
-        "Meta 17."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto:
-        "Correto. A Meta 8 visa elevar a escolaridade média da população de 18 a 29 anos e reduzir desigualdades educacionais.",
-
-    feedbackErro:
-        "A Meta 8 é frequentemente cobrada pela faixa etária específica que contempla.",
-
-    dicaBanca:
-        "18 a 29 anos = Meta 8."
-},
-{
-    pergunta:
-        "Em determinado município foi implementado um programa voltado à alfabetização de jovens, adultos e idosos que não tiveram acesso à educação na idade apropriada. Essa iniciativa contribui principalmente para o cumprimento da:",
-
-    alternativas: [
-        "Meta 5 — Alfabetização das crianças, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 7 — Qualidade da Educação Básica, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 10 — Educação Profissional integrada à EJA, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 9 — Erradicação do analfabetismo absoluto e redução do analfabetismo funcional.",
-        "Meta 12 — Educação Superior, considerando o acompanhamento das metas e a articulação entre os entes federativos."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto:
-        "Correto. A Meta 9 trata especificamente da erradicação do analfabetismo absoluto e da redução do analfabetismo funcional.",
-
-    feedbackErro:
-        "A Meta 5 refere-se às crianças; a Meta 9 volta-se principalmente à população jovem, adulta e idosa.",
-
-    dicaBanca:
-        "Meta 9 = analfabetismo."
-},
-{
-    pergunta:
-        "Uma rede pública passou a oferecer cursos técnicos integrados aos programas de Educação de Jovens e Adultos (EJA), ampliando as oportunidades de qualificação profissional dos estudantes. Essa medida está alinhada à:",
-
-    alternativas: [
-        "Meta 6 — Educação Integral.",
-        "Meta 8 — Escolaridade média.",
-        "Meta 9 — Erradicação do analfabetismo.",
-        "Meta 11 — Educação Profissional Técnica de nível médio.",
-        "Meta 10 — EJA integrada à Educação Profissional."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto:
-        "Correto. A Meta 10 estabelece que parte das matrículas da EJA seja integrada à Educação Profissional.",
-
-    feedbackErro:
-        "A presença da EJA integrada à formação profissional é a principal característica da Meta 10.",
-
-    dicaBanca:
-        "EJA + Educação Profissional = Meta 10."
-},
-{
-    pergunta:
-        "Durante a elaboração de políticas públicas voltadas à qualificação profissional dos jovens, uma Secretaria Estadual de Educação definiu como prioridade a ampliação das matrículas na Educação Profissional Técnica de nível médio. Essa iniciativa está diretamente relacionada à:",
-
-    alternativas: [
-        "Meta 10 — EJA integrada à Educação Profissional, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 11 — Educação Profissional Técnica de nível médio.",
-        "Meta 12 — Educação Superior, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 14 — Pós-graduação stricto sensu, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 15 — Formação inicial dos professores, considerando o acompanhamento das metas e a articulação entre os entes federativos."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A Meta 11 prevê a triplicação das matrículas da Educação Profissional Técnica de nível médio, assegurando a qualidade da oferta.",
-
-    feedbackErro:
-        "A Meta 10 também envolve Educação Profissional, mas especificamente integrada à EJA.",
-
-    dicaBanca:
-        "Meta 11 = Educação Profissional Técnica de nível médio."
-},
-{
-    pergunta:
-        "Uma universidade pública ampliou significativamente o número de vagas de graduação com o objetivo de democratizar o acesso ao ensino superior. Essa ação está alinhada principalmente à:",
-
-    alternativas: [
-        "Meta 11 — Educação Profissional.",
-        "Meta 13 — Qualidade da Educação Superior.",
-        "Meta 12 — Expansão da Educação Superior.",
-        "Meta 14 — Pós-graduação stricto sensu.",
-        "Meta 17 — Valorização docente."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A Meta 12 busca elevar as taxas de matrícula na Educação Superior.",
-
-    feedbackErro:
-        "A Meta 13 trata da qualidade do ensino superior; a Meta 12 refere-se ao acesso e expansão das matrículas.",
-
-    dicaBanca:
-        "Meta 12 = acesso à Educação Superior."
-},
-{
-    pergunta:
-        "Ao avaliar os indicadores de uma instituição de ensino superior, observou-se a necessidade de aumentar a proporção de mestres e doutores no corpo docente. Essa preocupação está relacionada principalmente à:",
-
-    alternativas: [
-        "Meta 11 — Educação Profissional.",
-        "Meta 12 — Expansão da Educação Superior.",
-        "Meta 14 — Pós-graduação stricto sensu.",
-        "Meta 13 — Qualidade da Educação Superior.",
-        "Meta 18 — Plano de carreira."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto:
-        "Correto. A Meta 13 busca elevar a qualidade da Educação Superior por meio da ampliação da proporção de mestres e doutores no corpo docente.",
-
-    feedbackErro:
-        "A questão aborda qualidade do ensino superior, característica central da Meta 13.",
-
-    dicaBanca:
-        "Meta 13 = qualidade da Educação Superior."
-},
-{
-    pergunta:
-        "Uma política nacional pretende ampliar a formação de pesquisadores e fortalecer a produção científica do país por meio da expansão dos cursos de mestrado e doutorado. Essa medida está associada à:",
-
-    alternativas: [
-        "Meta 14 — Pós-graduação stricto sensu.",
-        "Meta 11 — Educação Profissional.",
-        "Meta 12 — Educação Superior.",
-        "Meta 13 — Qualidade da Educação Superior.",
-        "Meta 15 — Formação inicial docente."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto:
-        "Correto. A Meta 14 trata da expansão das matrículas em programas de mestrado e doutorado.",
-
-    feedbackErro:
-        "Mestrado e doutorado são cursos de pós-graduação stricto sensu, foco da Meta 14.",
-
-    dicaBanca:
-        "Meta 14 = Mestrado + Doutorado."
-},
-{
-    pergunta:
-        "Um candidato a concurso elaborou o seguinte resumo: 'Meta 11 trata da Educação Profissional Técnica; Meta 12 da expansão da Educação Superior; Meta 13 da qualidade da Educação Superior; e Meta 14 da pós-graduação stricto sensu'. O resumo está:",
-
-    alternativas: [
-        "Incorreto em relação à Meta 11.",
-        "Incorreto em relação à Meta 12.",
-        "Incorreto em relação à Meta 13.",
-        "Incorreto em relação à Meta 14.",
-        "Totalmente correto."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto:
-        "Perfeito. O resumo apresenta corretamente os temas centrais das Metas 11, 12, 13 e 14 do PNE.",
-
-    feedbackErro:
-        "Essas quatro metas costumam ser cobradas em conjunto nas provas de legislação educacional.",
-
-    dicaBanca:
-        "11 = Profissional; 12 = Superior; 13 = Qualidade; 14 = Pós-graduação."
-},
-{
-    pergunta:
-        "Durante uma auditoria educacional, verificou-se que parte dos professores da Educação Básica atuava em áreas diferentes de sua formação acadêmica. Para enfrentar esse problema, o PNE estabelece uma meta voltada à garantia de formação específica de nível superior para os docentes. Trata-se da:",
-
-    alternativas: [
-        "Meta 12 — Expansão da Educação Superior, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 14 — Pós-graduação stricto sensu, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 16 — Formação continuada dos professores, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 17 — Valorização do magistério, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 15 — Formação inicial dos profissionais da educação."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto:
-        "Correto. A Meta 15 busca assegurar que todos os professores da Educação Básica possuam formação específica de nível superior na área em que atuam.",
-
-    feedbackErro:
-        "A Meta 15 está relacionada à formação inicial adequada dos profissionais da educação.",
-
-    dicaBanca:
-        "Meta 15 = formação inicial adequada."
-},
-{
-    pergunta:
-        "Uma Secretaria de Educação passou a oferecer incentivos para que os professores cursassem especialização, mestrado e outras formações após a graduação. Essa iniciativa está diretamente alinhada à:",
-
-    alternativas: [
-        "Meta 13 — Qualidade da Educação Superior, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 15 — Formação inicial docente, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 16 — Formação continuada e pós-graduação para professores.",
-        "Meta 17 — Equiparação salarial do magistério, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 18 — Plano de carreira, considerando o acompanhamento das metas e a articulação entre os entes federativos."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A Meta 16 prevê a formação em nível de pós-graduação para parcela significativa dos professores da Educação Básica e a garantia de formação continuada.",
-
-    feedbackErro:
-        "A questão trata de aperfeiçoamento profissional após a formação inicial, característica da Meta 16.",
-
-    dicaBanca:
-        "Meta 16 = pós-graduação + formação continuada."
-},
-{
-    pergunta:
-        "Ao analisar a valorização dos profissionais da educação, uma comissão observou que o PNE prevê a equiparação do rendimento médio dos professores ao de outros profissionais com escolaridade equivalente. Essa determinação corresponde à:",
-
-    alternativas: [
-        "Meta 15 — Formação inicial.",
-        "Meta 16 — Formação continuada.",
-        "Meta 18 — Plano de carreira.",
-        "Meta 17 — Valorização salarial do magistério.",
-        "Meta 20 — Financiamento da educação."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto:
-        "Correto. A Meta 17 busca valorizar os profissionais do magistério por meio da equiparação de seus rendimentos aos de outros profissionais com escolaridade equivalente.",
-
-    feedbackErro:
-        "A Meta 17 é a principal meta relacionada à valorização salarial docente.",
-
-    dicaBanca:
-        "Meta 17 = valorização salarial."
-},
-{
-    pergunta:
-        "Um município aprovou um novo plano de carreira para os profissionais da Educação Básica pública, tomando como referência o piso salarial profissional nacional. Essa medida está alinhada à:",
-
-    alternativas: [
-        "Meta 15 — Formação inicial, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 18 — Plano de carreira dos profissionais da educação.",
-        "Meta 16 — Formação continuada, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 17 — Equiparação salarial, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "Meta 19 — Gestão democrática, considerando o acompanhamento das metas e a articulação entre os entes federativos."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A Meta 18 prevê a existência de planos de carreira para os profissionais da educação básica pública, tomando como referência o piso salarial nacional.",
-
-    feedbackErro:
-        "A Meta 18 está relacionada à estruturação e valorização da carreira profissional.",
-
-    dicaBanca:
-        "Meta 18 = carreira + piso salarial."
-},
-{
-    pergunta:
-        "Uma banca de concurso apresentou as seguintes associações: Meta 15 – formação inicial; Meta 16 – formação continuada; Meta 17 – valorização salarial; Meta 18 – plano de carreira. Assinale a alternativa correta.",
-
-    alternativas: [
-        "Todas as associações estão corretas.",
-        "Em geral as Metas 15 e 16 estão corretas.",
-        "Em geral as Metas 17 e 18 estão corretas.",
-        "Em geral as Metas 15, 16 e 17 estão corretas.",
-        "Nenhuma associação está correta."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto:
-        "Perfeito. As quatro associações correspondem exatamente ao conteúdo das Metas 15 a 18 do PNE.",
-
-    feedbackErro:
-        "Essas metas costumam aparecer agrupadas em provas sobre valorização e formação dos profissionais da educação.",
-
-    dicaBanca:
-        "15 = formação inicial; 16 = continuada; 17 = salário; 18 = carreira."
-},
-{
-    pergunta:
-        "Durante a revisão do Plano Municipal de Educação, foi debatida a necessidade de ampliar a participação da comunidade escolar nos processos decisórios da rede de ensino. Essa discussão está diretamente relacionada à:",
-
-    alternativas: [
-
-        "Meta 17 — Valorização salarial do magistério.",
-
-        "Meta 18 — Plano de carreira dos profissionais da educação.",
-
-        "Meta 19 — Gestão democrática da educação.",
-
-        "Meta 20 — Financiamento da educação.",
-
-        "Meta 7 — Qualidade da Educação Básica."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto:
-        "Correto. A Meta 19 trata da efetivação da gestão democrática da educação, associada à participação da comunidade escolar e critérios de mérito e desempenho.",
-
-    feedbackErro:
-        "A gestão democrática é o tema central da Meta 19.",
-
-    dicaBanca:
-        "Participação da comunidade escolar = Meta 19."
-},
-{
-    pergunta:
-        "Uma rede de ensino implantou mecanismos de consulta à comunidade para escolha de diretores escolares e fortalecimento dos conselhos escolares. Essa iniciativa está mais diretamente associada à:",
-
-    alternativas: [
-        "Meta 15 — Formação inicial.",
-        "Meta 16 — Formação continuada.",
-        "Meta 17 — Valorização salarial.",
-        "Meta 20 — Investimento público.",
-        "Meta 19 — Gestão democrática."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto:
-        "Correto. A Meta 19 busca assegurar condições para a efetivação da gestão democrática da educação.",
-
-    feedbackErro:
-        "Conselhos escolares e participação da comunidade são elementos clássicos da gestão democrática.",
-
-    dicaBanca:
-        "Conselho Escolar costuma indicar Meta 19."
-},
-{
-    pergunta:
-        "Ao analisar o financiamento da educação, um candidato identificou a meta do PNE que prevê a ampliação do investimento público em educação pública até atingir percentual expressivo do Produto Interno Bruto (PIB). Trata-se da:",
-
-    alternativas: [
-        "Meta 12 — Educação Superior.",
-        "Meta 20 — Financiamento da educação.",
-        "Meta 17 — Valorização do magistério.",
-        "Meta 18 — Plano de carreira.",
-        "Meta 19 — Gestão democrática."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto:
-        "Correto. A Meta 20 trata da ampliação do investimento público em educação pública.",
-
-    feedbackErro:
-        "O financiamento educacional é o tema central da Meta 20.",
-
-    dicaBanca:
-        "Meta 20 = dinheiro para a educação."
-},
-{
-    pergunta:
-        "Segundo o Plano Nacional de Educação, o investimento público em educação pública deve atingir, ao final da vigência do plano, o equivalente a:",
-
-    alternativas: [
-
-        "5% do PIB.",
-
-        "7% do PIB.",
-
-        "8% do PIB.",
-
-        "10% do PIB.",
-
-        "12% do PIB."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto:
-        "Correto. A Meta 20 prevê investimento público em educação pública correspondente a 10% do PIB ao final da vigência do plano.",
-
-    feedbackErro:
-        "O percentual de 10% do PIB é uma das cobranças mais frequentes sobre o PNE.",
-
-    dicaBanca:
-        "Meta 20 = 10% do PIB."
-},
-{
-    pergunta:
-        "Um estudante elaborou o seguinte resumo das últimas metas do PNE: 'Meta 19: gestão democrática da educação. Meta 20: ampliação do investimento público em educação pública'. Considerando a Lei nº 13.005/2014, esse resumo está:",
-
-    alternativas: [
-        "Correto em ambas as metas.",
-        "Correto em geral quanto à Meta 19.",
-        "Correto em geral quanto à Meta 20.",
-        "Incorreto em ambas as metas.",
-        "Correto em geral parcialmente, pois a Meta 20 trata de formação docente."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto:
-        "Perfeito. As associações apresentadas correspondem exatamente aos conteúdos das Metas 19 e 20 do PNE.",
-
-    feedbackErro:
-        "Meta 19 refere-se à gestão democrática e Meta 20 ao financiamento da educação.",
-
-    dicaBanca:
-        "19 = gestão democrática; 20 = financiamento."
-}];
+    {
+        "pergunta": "Em 2026, qual norma aprovou o Plano Nacional de Educação atualmente vigente?",
+        "alternativas": [
+            "A Lei nº 15.388, de 14 de abril de 2026, que aprovou um PNE com duração de dez anos contados de sua publicação.",
+            "A Lei nº 13.005, de 25 de junho de 2014, cuja vigência foi renovada automaticamente por mais dez anos a partir de 2026.",
+            "A Lei nº 14.934, de 25 de julho de 2024, que instituiu um novo plano decenal com início imediato em janeiro de 2025.",
+            "A Lei Complementar nº 220, de 31 de outubro de 2025, que substituiu os planos educacionais dos entes federativos pelo SNE.",
+            "A Lei nº 15.468, de 13 de julho de 2026, que reorganizou integralmente objetivos, metas e estratégias do planejamento educacional."
+        ],
+        "correta": 0,
+        "explicacao": "O PNE vigente foi aprovado pela Lei nº 15.388/2026 e tem duração de dez anos contados da publicação da lei.",
+        "feedbackAcerto": "Correto. O PNE vigente foi aprovado pela Lei nº 15.388/2026 e tem duração de dez anos contados da publicação da lei.",
+        "feedbackErro": "A alternativa correta é: “A Lei nº 15.388, de 14 de abril de 2026, que aprovou um PNE com duração de dez anos contados de sua publicação.” O PNE vigente foi aprovado pela Lei nº 15.388/2026 e tem duração de dez anos contados da publicação da lei.",
+        "dicaBanca": "Não confunda a lei do novo PNE com a lei que prorrogou o plano anterior nem com alterações recentes da LDB."
+    },
+    {
+        "pergunta": "Considerando a transição entre os dois últimos Planos Nacionais de Educação, assinale a afirmação correta.",
+        "alternativas": [
+            "O PNE da Lei nº 13.005/2014 permaneceu vigente até abril de 2026, quando foi automaticamente convertido no novo plano sem mudança de estrutura.",
+            "O PNE da Lei nº 13.005/2014 teve sua vigência prorrogada até 31 de dezembro de 2025, e o novo PNE foi aprovado em abril de 2026.",
+            "O PNE anterior encerrou-se em junho de 2024, e o período posterior foi regido diretamente pelas metas da Constituição até a nova lei.",
+            "A Lei nº 14.934/2024 revogou o PNE anterior e aprovou, desde julho de 2024, os objetivos atualmente vigentes para o decênio seguinte.",
+            "O novo PNE entrou em vigor em janeiro de 2026 por força da prorrogação legal, sendo a lei de abril ato de consolidação sem efeitos próprios."
+        ],
+        "correta": 1,
+        "explicacao": "A Lei nº 14.934/2024 prorrogou o PNE de 2014 até 31/12/2025. A Lei nº 15.388/2026 aprovou o novo plano em 14/04/2026.",
+        "feedbackAcerto": "Correto. A Lei nº 14.934/2024 prorrogou o PNE de 2014 até 31/12/2025. A Lei nº 15.388/2026 aprovou o novo plano em 14/04/2026.",
+        "feedbackErro": "A alternativa correta é: “O PNE da Lei nº 13.005/2014 teve sua vigência prorrogada até 31 de dezembro de 2025, e o novo PNE foi aprovado em abril de 2026.” A Lei nº 14.934/2024 prorrogou o PNE de 2014 até 31/12/2025. A Lei nº 15.388/2026 aprovou o novo plano em 14/04/2026.",
+        "dicaBanca": "Questões atuais podem explorar a sucessão legislativa: Lei 13.005/2014 → prorrogação até 2025 → Lei 15.388/2026."
+    },
+    {
+        "pergunta": "Na Lei nº 15.388/2026, o conceito de diretriz corresponde a:",
+        "alternativas": [
+            "resultado quantitativo obrigatório que mede o desempenho anual de cada rede e substitui os indicadores produzidos pelo Inep.",
+            "ação administrativa vinculante destinada a executar uma meta específica, com cronograma uniforme para todos os entes federativos.",
+            "orientação geral que fundamenta a formulação dos objetivos, das metas e das estratégias do PNE e deve ser considerada pelas diferentes esferas federativas.",
+            "mudança esperada em relação a um problema educacional identificado, resultante da implementação de políticas públicas pelos governos.",
+            "referência qualitativa ou quantitativa que permite verificar o alcance das mudanças previstas nos objetivos dentro de determinado período com efeitos sobre o monitoramento e a organização das ações educacionais do ente."
+        ],
+        "correta": 2,
+        "explicacao": "A lei distingue diretrizes, objetivos, metas e estratégias. Diretriz é a orientação geral que fundamenta os demais elementos do plano.",
+        "feedbackAcerto": "Correto. A lei distingue diretrizes, objetivos, metas e estratégias. Diretriz é a orientação geral que fundamenta os demais elementos do plano.",
+        "feedbackErro": "A alternativa correta é: “orientação geral que fundamenta a formulação dos objetivos, das metas e das estratégias do PNE e deve ser considerada pelas diferentes esferas federativas.” A lei distingue diretrizes, objetivos, metas e estratégias. Diretriz é a orientação geral que fundamenta os demais elementos do plano.",
+        "dicaBanca": "FGV e IVIN tendem a trocar as definições entre diretriz, objetivo, meta e estratégia; compare a função de cada termo."
+    },
+    {
+        "pergunta": "Uma equipe técnica descreveu certo elemento do PNE como a mudança esperada em relação a um problema educacional identificado, decorrente da implementação de políticas públicas. Esse elemento é:",
+        "alternativas": [
+            "a diretriz.",
+            "a meta.",
+            "a estratégia.",
+            "o objetivo.",
+            "o indicador de monitoramento."
+        ],
+        "correta": 3,
+        "explicacao": "Para a Lei nº 15.388/2026, objetivo é a mudança esperada diante de problemas identificados, resultante da implementação de políticas educacionais.",
+        "feedbackAcerto": "Correto. Para a Lei nº 15.388/2026, objetivo é a mudança esperada diante de problemas identificados, resultante da implementação de políticas educacionais.",
+        "feedbackErro": "A alternativa correta é: “o objetivo.” Para a Lei nº 15.388/2026, objetivo é a mudança esperada diante de problemas identificados, resultante da implementação de políticas educacionais.",
+        "dicaBanca": "Objetivo expressa a transformação desejada; meta mede ou referencia seu alcance; estratégia descreve ações."
+    },
+    {
+        "pergunta": "Assinale a alternativa que define corretamente as metas no PNE vigente.",
+        "alternativas": [
+            "São orientações gerais que fundamentam a formulação de todo o plano e substituem a necessidade de objetivos específicos.",
+            "São ações administrativas sugeridas aos governos para atingir os objetivos, sem função de aferição dos resultados alcançados preservando a relação entre planejamento, execução e avaliação das políticas educacionais.",
+            "São princípios constitucionais permanentes que organizam o sistema de ensino, independentemente da duração do plano decenal.",
+            "São projeções elaboradas pelos Estados para converter indicadores locais em objetivos nacionais de cumprimento automático.",
+            "São referências qualitativas e quantitativas que permitem verificar o alcance das mudanças expressas nos objetivos dentro de intervalo de tempo determinado."
+        ],
+        "correta": 4,
+        "explicacao": "Meta é referência qualitativa ou quantitativa utilizada para verificar o alcance das mudanças expressas nos objetivos, em determinado intervalo de tempo.",
+        "feedbackAcerto": "Correto. Meta é referência qualitativa ou quantitativa utilizada para verificar o alcance das mudanças expressas nos objetivos, em determinado intervalo de tempo.",
+        "feedbackErro": "A alternativa correta é: “São referências qualitativas e quantitativas que permitem verificar o alcance das mudanças expressas nos objetivos dentro de intervalo de tempo determinado.” Meta é referência qualitativa ou quantitativa utilizada para verificar o alcance das mudanças expressas nos objetivos, em determinado intervalo de tempo.",
+        "dicaBanca": "Se a alternativa fala em aferir alcance com referência qualitativa ou quantitativa, está descrevendo meta."
+    },
+    {
+        "pergunta": "No vocabulário próprio da Lei nº 15.388/2026, as estratégias são:",
+        "alternativas": [
+            "ações propostas aos governos das diferentes esferas federativas para atingir os objetivos e as metas.",
+            "parâmetros numéricos definidos pelo Inep para substituir as metas cuja mensuração ainda não tenha sido regulamentada.",
+            "mudanças sociais esperadas após o cumprimento do plano, expressas de modo qualitativo e desvinculadas de ações governamentais.",
+            "orientações gerais de caráter permanente que fundamentam todas as políticas educacionais e independem dos objetivos do plano.",
+            "instrumentos de controle externo elaborados pelo Congresso para aferir a execução orçamentária dos sistemas de ensino."
+        ],
+        "correta": 0,
+        "explicacao": "Estratégias são as ações propostas aos governos para que os objetivos e as metas possam ser alcançados.",
+        "feedbackAcerto": "Correto. Estratégias são as ações propostas aos governos para que os objetivos e as metas possam ser alcançados.",
+        "feedbackErro": "A alternativa correta é: “ações propostas aos governos das diferentes esferas federativas para atingir os objetivos e as metas.” Estratégias são as ações propostas aos governos para que os objetivos e as metas possam ser alcançados.",
+        "dicaBanca": "Estratégia responde à pergunta 'como agir?'; objetivo indica mudança esperada e meta permite verificar o alcance."
+    },
+    {
+        "pergunta": "Os planos de educação dos Estados, do Distrito Federal e dos Municípios, segundo o PNE vigente, devem ser:",
+        "alternativas": [
+            "editados por decreto do chefe do Executivo, ter duração quinquenal e reproduzir integralmente todas as metas nacionais.",
+            "aprovados por lei específica, ter duração decenal e guardar consonância com o Plano Nacional de Educação.",
+            "aprovados pelos conselhos de educação, ter duração variável e limitar-se às metas cuja execução dependa de recursos locais.",
+            "elaborados pelo Poder Legislativo, ter duração de quatro anos e coincidir com a vigência do plano plurianual do ente.",
+            "instituídos por resolução administrativa, ter vigência anual e ser revistos em razão de alterações ordinárias do orçamento educacional."
+        ],
+        "correta": 1,
+        "explicacao": "A Lei nº 15.388/2026 exige lei específica e duração decenal para os planos subnacionais, em consonância com o PNE.",
+        "feedbackAcerto": "Correto. A Lei nº 15.388/2026 exige lei específica e duração decenal para os planos subnacionais, em consonância com o PNE.",
+        "feedbackErro": "A alternativa correta é: “aprovados por lei específica, ter duração decenal e guardar consonância com o Plano Nacional de Educação.” A Lei nº 15.388/2026 exige lei específica e duração decenal para os planos subnacionais, em consonância com o PNE.",
+        "dicaBanca": "A banca pode trocar 'lei específica' por decreto, resolução ou ato do conselho."
+    },
+    {
+        "pergunta": "Na elaboração dos planos decenais de Estados, Distrito Federal e Municípios, a Lei nº 15.388/2026 prevê:",
+        "alternativas": [
+            "participação restrita a dirigentes dos sistemas de ensino, com consulta pública facultativa depois da aprovação do plano pelo Legislativo com efeitos sobre o monitoramento e a organização das ações educacionais do ente.",
+            "consulta aos conselhos de educação sem participação direta da sociedade civil, para preservar o caráter técnico do planejamento decenal.",
+            "participação de representantes da comunidade educacional e da sociedade civil, inclusive por modalidade virtual, considerados os resultados das conferências de educação.",
+            "participação social concentrada nas conferências nacionais, vedada a utilização de mecanismos virtuais nas etapas estaduais e municipais.",
+            "elaboração técnica pelas secretarias de educação, seguida de homologação do plano pelo Ministério da Educação antes da votação local."
+        ],
+        "correta": 2,
+        "explicacao": "A elaboração dos planos subnacionais deve contar com representantes da comunidade educacional e da sociedade civil, inclusive por modalidade virtual, considerando as conferências.",
+        "feedbackAcerto": "Correto. A elaboração dos planos subnacionais deve contar com representantes da comunidade educacional e da sociedade civil, inclusive por modalidade virtual, considerando as conferências.",
+        "feedbackErro": "A alternativa correta é: “participação de representantes da comunidade educacional e da sociedade civil, inclusive por modalidade virtual, considerados os resultados das conferências de educação.” A elaboração dos planos subnacionais deve contar com representantes da comunidade educacional e da sociedade civil, inclusive por modalidade virtual, considerando as conferências.",
+        "dicaBanca": "Participação social não é etapa acessória; integra a elaboração dos planos decenais."
+    },
+    {
+        "pergunta": "Sobre a governança federativa do PNE, assinale a alternativa correta.",
+        "alternativas": [
+            "A governança é centralizada no MEC, sem instâncias permanentes de pactuação entre União, Estados, Distrito Federal e Municípios.",
+            "A instância tripartite funciona no Congresso Nacional e reúne representantes do MEC, do CNE e do Fórum Nacional de Educação.",
+            "As instâncias bipartites reúnem União e Estados, enquanto os Municípios participam da pactuação por meio das conferências de educação conforme a repartição de responsabilidades prevista para os sistemas de ensino.",
+            "Há instância tripartite permanente no âmbito do MEC e instâncias bipartites permanentes no âmbito de cada Estado, vinculadas à lógica do Sistema Nacional de Educação.",
+            "A Lei nº 15.388/2026 substituiu o regime de colaboração por competências exclusivas e independentes para cada ente federativo."
+        ],
+        "correta": 3,
+        "explicacao": "A governança prevê instância tripartite permanente no MEC e instâncias bipartites nos Estados, articuladas às comissões intergestores do SNE.",
+        "feedbackAcerto": "Correto. A governança prevê instância tripartite permanente no MEC e instâncias bipartites nos Estados, articuladas às comissões intergestores do SNE.",
+        "feedbackErro": "A alternativa correta é: “Há instância tripartite permanente no âmbito do MEC e instâncias bipartites permanentes no âmbito de cada Estado, vinculadas à lógica do Sistema Nacional de Educação.” A governança prevê instância tripartite permanente no MEC e instâncias bipartites nos Estados, articuladas às comissões intergestores do SNE.",
+        "dicaBanca": "Tripartite = União/Estados-DF/Municípios; bipartite = Estado e seus Municípios."
+    },
+    {
+        "pergunta": "As atividades de monitoramento e avaliação do PNE contam, no plano federal, com a participação de:",
+        "alternativas": [
+            "MEC, Inep, Tribunal de Contas da União, Conselho Nacional de Justiça e Fórum Nacional de Educação.",
+            "MEC, secretarias estaduais de educação, conselhos municipais, Capes e Comissão de Educação do Senado preservando a relação entre planejamento, execução e avaliação das políticas educacionais.",
+            "CNE, Inep, IBGE, Congresso Nacional em sessão conjunta e conselhos estaduais de educação.",
+            "MEC, Ministério da Fazenda, Casa Civil, conselhos escolares e organizações sindicais da educação.",
+            "MEC, CNE, Comissão de Educação da Câmara, Comissão de Educação e Cultura do Senado e Fórum Nacional de Educação."
+        ],
+        "correta": 4,
+        "explicacao": "O art. 8º lista MEC, CNE, Comissão de Educação da Câmara, Comissão de Educação e Cultura do Senado e FNE.",
+        "feedbackAcerto": "Correto. O art. 8º lista MEC, CNE, Comissão de Educação da Câmara, Comissão de Educação e Cultura do Senado e FNE.",
+        "feedbackErro": "A alternativa correta é: “MEC, CNE, Comissão de Educação da Câmara, Comissão de Educação e Cultura do Senado e Fórum Nacional de Educação.” O art. 8º lista MEC, CNE, Comissão de Educação da Câmara, Comissão de Educação e Cultura do Senado e FNE.",
+        "dicaBanca": "Atenção à composição legal: o Inep monitora metas, mas não aparece nessa lista específica do §1º do art. 8º."
+    },
+    {
+        "pergunta": "Quanto às conferências nacionais de educação durante a vigência do PNE, a lei determina que a União realize:",
+        "alternativas": [
+            "no mínimo duas conferências nacionais, precedidas das conferências subnacionais, com intervalo de até quatro anos entre as nacionais.",
+            "uma conferência nacional a cada dois anos, independentemente da realização de etapas estaduais, distritais ou municipais.",
+            "uma conferência nacional no quinto ano e outra no último ano, vedada convocação extraordinária durante a vigência do plano.",
+            "quatro conferências nacionais, uma para cada ciclo de monitoramento bienal produzido pelo Instituto Nacional de Estudos Educacionais.",
+            "duas conferências nacionais no mesmo exercício, destinadas à revisão de metas e à elaboração do plano decenal subsequente."
+        ],
+        "correta": 0,
+        "explicacao": "O PNE prevê no mínimo duas conferências nacionais, precedidas das subnacionais, com intervalo de até quatro anos, admitida convocação extraordinária.",
+        "feedbackAcerto": "Correto. O PNE prevê no mínimo duas conferências nacionais, precedidas das subnacionais, com intervalo de até quatro anos, admitida convocação extraordinária.",
+        "feedbackErro": "A alternativa correta é: “no mínimo duas conferências nacionais, precedidas das conferências subnacionais, com intervalo de até quatro anos entre as nacionais.” O PNE prevê no mínimo duas conferências nacionais, precedidas das subnacionais, com intervalo de até quatro anos, admitida convocação extraordinária.",
+        "dicaBanca": "Não confunda a periodicidade das conferências com a publicação bienal de monitoramento do Inep."
+    },
+    {
+        "pergunta": "No PNE vigente, o Fórum Nacional de Educação é caracterizado como:",
+        "alternativas": [
+            "órgão executivo do MEC encarregado de distribuir recursos entre os entes federativos conforme o alcance de cada meta nacional.",
+            "instância consultiva permanente de participação social, responsável também por acompanhar o plano e coordenar as conferências nacionais de educação.",
+            "instância normativa integrante do CNE, competente para editar as diretrizes curriculares necessárias à execução das estratégias do PNE considerando a articulação federativa prevista para execução das políticas públicas.",
+            "comissão temporária do Congresso Nacional criada para avaliar o plano no quinto ano e propor sua revisão legislativa obrigatória.",
+            "unidade técnica do Inep responsável por construir indicadores de aprendizagem e consolidar os resultados do monitoramento bienal."
+        ],
+        "correta": 1,
+        "explicacao": "O FNE é instância consultiva permanente de participação social e tem competências de acompanhamento do PNE e coordenação das conferências nacionais.",
+        "feedbackAcerto": "Correto. O FNE é instância consultiva permanente de participação social e tem competências de acompanhamento do PNE e coordenação das conferências nacionais.",
+        "feedbackErro": "A alternativa correta é: “instância consultiva permanente de participação social, responsável também por acompanhar o plano e coordenar as conferências nacionais de educação.” O FNE é instância consultiva permanente de participação social e tem competências de acompanhamento do PNE e coordenação das conferências nacionais.",
+        "dicaBanca": "FNE = participação social + acompanhamento + coordenação das conferências."
+    },
+    {
+        "pergunta": "Segundo a Lei nº 15.388/2026, o Inep deve publicar os índices de alcance das metas do PNE:",
+        "alternativas": [
+            "anualmente, até 31 de dezembro, referentes ao próprio exercício e organizados por Município, sem consolidação nacional obrigatória.",
+            "a cada quatro anos, antes das conferências nacionais de educação, com dados restritos às metas da educação básica pública.",
+            "a cada dois anos, até 31 de março, referentes aos dois exercícios anteriores, organizados por unidade da Federação e consolidados nacionalmente.",
+            "a cada cinco anos, juntamente com a revisão das metas, considerando indicadores produzidos pelos sistemas nacionais de avaliação e seus efeitos sobre o monitoramento.",
+            "ao final do decênio, em relatório único que servirá de base para a elaboração do Plano Nacional de Educação subsequente."
+        ],
+        "correta": 2,
+        "explicacao": "O monitoramento do Inep é bienal e a publicação deve ocorrer até 31 de março, com dados dos dois exercícios anteriores.",
+        "feedbackAcerto": "Correto. O monitoramento do Inep é bienal e a publicação deve ocorrer até 31 de março, com dados dos dois exercícios anteriores.",
+        "feedbackErro": "A alternativa correta é: “a cada dois anos, até 31 de março, referentes aos dois exercícios anteriores, organizados por unidade da Federação e consolidados nacionalmente.” O monitoramento do Inep é bienal e a publicação deve ocorrer até 31 de março, com dados dos dois exercícios anteriores.",
+        "dicaBanca": "Decore o núcleo temporal: bienal + até 31 de março + dois exercícios anteriores."
+    },
+    {
+        "pergunta": "Os planos de ações educacionais previstos no PNE devem ser elaborados pelos Poderes Executivos dos entes federativos:",
+        "alternativas": [
+            "anualmente, durante a elaboração da lei orçamentária, para execução no mesmo exercício financeiro.",
+            "a cada quatro anos, em conjunto com o plano plurianual, abrangendo todo o mandato do chefe do Poder Executivo.",
+            "no início e no final do decênio, correspondendo respectivamente à implementação inicial e à avaliação conclusiva do PNE.",
+            "a cada dois anos, com ampla divulgação, para os dois exercícios seguintes.",
+            "quando o Inep identificar descumprimento relevante de uma meta, com duração limitada ao período necessário para sua recomposição."
+        ],
+        "correta": 3,
+        "explicacao": "A lei prevê plano de ações educacionais a cada dois anos, referente aos dois exercícios seguintes.",
+        "feedbackAcerto": "Correto. A lei prevê plano de ações educacionais a cada dois anos, referente aos dois exercícios seguintes.",
+        "feedbackErro": "A alternativa correta é: “a cada dois anos, com ampla divulgação, para os dois exercícios seguintes.” A lei prevê plano de ações educacionais a cada dois anos, referente aos dois exercícios seguintes.",
+        "dicaBanca": "Plano decenal é o horizonte; plano de ações é bienal e operacionaliza prioridades e recursos."
+    },
+    {
+        "pergunta": "Os planos plurianuais, as diretrizes orçamentárias e os orçamentos anuais dos entes federativos devem:",
+        "alternativas": [
+            "manter autonomia integral em relação ao PNE, porque planejamento educacional e planejamento orçamentário possuem objetos juridicamente distintos.",
+            "incorporar as metas dependentes de complementação da União, ficando as demais sujeitas ao planejamento administrativo de cada rede.",
+            "reproduzir os percentuais nacionais de investimento, ainda que as necessidades locais indiquem trajetória diferente pactuada no regime de colaboração.",
+            "priorizar as metas de infraestrutura e formação docente, pois as demais possuem natureza programática sem repercussão sobre a elaboração orçamentária.",
+            "ser elaborados em consonância com as diretrizes, os objetivos, as metas e as estratégias do PNE e dos respectivos planos de educação."
+        ],
+        "correta": 4,
+        "explicacao": "O art. 19 determina consonância dos instrumentos orçamentários com o PNE e os respectivos planos subnacionais.",
+        "feedbackAcerto": "Correto. O art. 19 determina consonância dos instrumentos orçamentários com o PNE e os respectivos planos subnacionais.",
+        "feedbackErro": "A alternativa correta é: “ser elaborados em consonância com as diretrizes, os objetivos, as metas e as estratégias do PNE e dos respectivos planos de educação.” O art. 19 determina consonância dos instrumentos orçamentários com o PNE e os respectivos planos subnacionais.",
+        "dicaBanca": "Planejamento educacional e orçamento precisam conversar: PPA, LDO e LOA devem refletir o plano."
+    },
+    {
+        "pergunta": "O Programa Nacional de Infraestrutura Escolar criado pela Lei nº 15.388/2026 tem como finalidade central:",
+        "alternativas": [
+            "apoiar, em regime de colaboração, a expansão, a adequação e a modernização da infraestrutura física e tecnológica das instituições públicas de ensino.",
+            "financiar a compra de materiais didáticos e o pagamento de bolsas de permanência estudantil nas redes públicas de educação básica.",
+            "substituir os programas de manutenção escolar existentes por transferências automáticas destinadas ao custeio ordinário de todas as escolas públicas dentro da arquitetura de planejamento definida pela legislação educacional.",
+            "concentrar recursos federais na construção de universidades e institutos federais em regiões que não possuem oferta pública de educação superior.",
+            "garantir recursos para remuneração de profissionais da educação vinculados a escolas localizadas em áreas com infraestrutura considerada crítica."
+        ],
+        "correta": 0,
+        "explicacao": "O programa foi criado para apoiar expansão, adequação e modernização da infraestrutura física e tecnológica das instituições públicas de ensino.",
+        "feedbackAcerto": "Correto. O programa foi criado para apoiar expansão, adequação e modernização da infraestrutura física e tecnológica das instituições públicas de ensino.",
+        "feedbackErro": "A alternativa correta é: “apoiar, em regime de colaboração, a expansão, a adequação e a modernização da infraestrutura física e tecnológica das instituições públicas de ensino.” O programa foi criado para apoiar expansão, adequação e modernização da infraestrutura física e tecnológica das instituições públicas de ensino.",
+        "dicaBanca": "Infraestrutura Escolar = expansão + adequação + modernização física e tecnológica, em regime de colaboração."
+    },
+    {
+        "pergunta": "Sobre a destinação dos recursos do Programa Nacional de Infraestrutura Escolar, a lei estabelece que:",
+        "alternativas": [
+            "no mínimo 60% devem financiar a educação infantil e os anos iniciais do ensino fundamental.",
+            "no mínimo 85% dos recursos devem financiar iniciativas voltadas à educação básica.",
+            "exatamente 75% devem ser destinados à educação básica e 25% à educação superior pública.",
+            "no mínimo 50% devem ser reservados à construção de novas unidades escolares em áreas rurais.",
+            "a totalidade deve ser aplicada na educação básica até a superação das situações críticas de salubridade."
+        ],
+        "correta": 1,
+        "explicacao": "A lei reserva no mínimo 85% dos recursos do Programa Nacional de Infraestrutura Escolar a iniciativas da educação básica.",
+        "feedbackAcerto": "Correto. A lei reserva no mínimo 85% dos recursos do Programa Nacional de Infraestrutura Escolar a iniciativas da educação básica.",
+        "feedbackErro": "A alternativa correta é: “no mínimo 85% dos recursos devem financiar iniciativas voltadas à educação básica.” A lei reserva no mínimo 85% dos recursos do Programa Nacional de Infraestrutura Escolar a iniciativas da educação básica.",
+        "dicaBanca": "Percentual literal de alta chance em banca: infraestrutura escolar → mínimo de 85% para educação básica."
+    },
+    {
+        "pergunta": "Após a publicação da Lei nº 15.388/2026, os prazos máximos para publicação dos novos planos de educação são:",
+        "alternativas": [
+            "6 meses para Estados e Distrito Federal e 12 meses para os Municípios.",
+            "12 meses para todos os entes federativos, sem diferenciação entre Estados e Municípios.",
+            "12 meses para Estados e Distrito Federal e 15 meses para os Municípios.",
+            "15 meses para Estados e Distrito Federal e 18 meses para os Municípios.",
+            "18 meses para Estados e Distrito Federal e 24 meses para os Municípios."
+        ],
+        "correta": 2,
+        "explicacao": "O art. 34 fixa 12 meses para Estados e DF e 15 meses para Municípios.",
+        "feedbackAcerto": "Correto. O art. 34 fixa 12 meses para Estados e DF e 15 meses para Municípios.",
+        "feedbackErro": "A alternativa correta é: “12 meses para Estados e Distrito Federal e 15 meses para os Municípios.” O art. 34 fixa 12 meses para Estados e DF e 15 meses para Municípios.",
+        "dicaBanca": "Essa é uma mudança importante em relação ao plano anterior; memorize 12 meses × 15 meses."
+    },
+    {
+        "pergunta": "O primeiro plano de ações educacionais de cada ente federativo deverá ser formalizado:",
+        "alternativas": [
+            "em até três meses da publicação do PNE nacional, independentemente da data em que o plano do respectivo ente seja aprovado.",
+            "em até doze meses da publicação do plano local, abrangendo quatro exercícios completos para coincidir com o plano plurianual vigente conforme a repartição de responsabilidades prevista para os sistemas de ensino.",
+            "no primeiro monitoramento bienal do Inep, quando serão conhecidos os indicadores necessários à elaboração das ações locais.",
+            "em até seis meses contados da publicação do respectivo plano de educação, abrangendo o restante do ano e os dois exercícios subsequentes completos, quando cabível.",
+            "até o final do exercício em que o plano local for aprovado, sem previsão de alcance temporal mínimo para as ações subsequentes."
+        ],
+        "correta": 3,
+        "explicacao": "O primeiro plano de ações deve ser formalizado em até seis meses da publicação do respectivo plano de educação.",
+        "feedbackAcerto": "Correto. O primeiro plano de ações deve ser formalizado em até seis meses da publicação do respectivo plano de educação.",
+        "feedbackErro": "A alternativa correta é: “em até seis meses contados da publicação do respectivo plano de educação, abrangendo o restante do ano e os dois exercícios subsequentes completos, quando cabível.” O primeiro plano de ações deve ser formalizado em até seis meses da publicação do respectivo plano de educação.",
+        "dicaBanca": "O prazo começa com o plano do próprio ente, não com a publicação do PNE nacional."
+    },
+    {
+        "pergunta": "Após a publicação do novo PNE, cabe ao Inep estabelecer os indicadores das metas e as projeções por ente federativo no prazo de:",
+        "alternativas": [
+            "90 dias.",
+            "120 dias.",
+            "1 ano.",
+            "2 anos.",
+            "180 dias."
+        ],
+        "correta": 4,
+        "explicacao": "O art. 28 atribui ao Inep prazo de 180 dias para estabelecer indicadores e projeções relativos às metas.",
+        "feedbackAcerto": "Correto. O art. 28 atribui ao Inep prazo de 180 dias para estabelecer indicadores e projeções relativos às metas.",
+        "feedbackErro": "A alternativa correta é: “180 dias.” O art. 28 atribui ao Inep prazo de 180 dias para estabelecer indicadores e projeções relativos às metas.",
+        "dicaBanca": "Não confunda 180 dias do Inep com 120 dias das instâncias de governança e 12/15 meses dos planos subnacionais."
+    },
+    {
+        "pergunta": "As metas previstas no PNE poderão ser revistas, quando couber:",
+        "alternativas": [
+            "no prazo de cinco anos da publicação da lei, à luz dos indicadores, valores de referência e decisões da instância tripartite, na forma de regulamento.",
+            "anualmente, por ato unilateral do Ministério da Educação, quando a execução orçamentária indicar insuficiência de recursos.",
+            "a cada dois anos, automaticamente após a divulgação dos índices de monitoramento bienal pelo Inep.",
+            "no terceiro ano, por resolução do Conselho Nacional de Educação, sem necessidade de considerar a pactuação federativa.",
+            "ao final do decênio, juntamente com a aprovação do plano seguinte, porque as metas permanecem juridicamente imutáveis durante a vigência dentro da arquitetura de planejamento definida pela legislação educacional."
+        ],
+        "correta": 0,
+        "explicacao": "A Lei nº 15.388/2026 admite revisão das metas, no que couber, no prazo de cinco anos, conforme indicadores e pactuação previstos na lei.",
+        "feedbackAcerto": "Correto. A Lei nº 15.388/2026 admite revisão das metas, no que couber, no prazo de cinco anos, conforme indicadores e pactuação previstos na lei.",
+        "feedbackErro": "A alternativa correta é: “no prazo de cinco anos da publicação da lei, à luz dos indicadores, valores de referência e decisões da instância tripartite, na forma de regulamento.” A Lei nº 15.388/2026 admite revisão das metas, no que couber, no prazo de cinco anos, conforme indicadores e pactuação previstos na lei.",
+        "dicaBanca": "Monitoramento bienal não significa revisão bienal; a lei prevê janela de cinco anos para revisão das metas."
+    },
+    {
+        "pergunta": "No Objetivo 1 do PNE, a meta nacional relativa às crianças de até 3 anos prevê, ao final do decênio:",
+        "alternativas": [
+            "universalizar a matrícula de todas as crianças de até 3 anos, independentemente da manifestação de demanda pelas famílias.",
+            "atender 100% da demanda manifesta por creche e alcançar, nacionalmente, pelo menos 60% das crianças de até 3 anos.",
+            "alcançar 50% das crianças de até 3 anos, mantendo esse percentual como limite nacional para a expansão da oferta de creches.",
+            "atender 80% da demanda manifesta por creche e alcançar 70% das crianças de até 3 anos no conjunto do território nacional.",
+            "garantir 100% de atendimento nas redes urbanas e alcançar 60% de cobertura nas áreas rurais e comunidades tradicionais."
+        ],
+        "correta": 1,
+        "explicacao": "A Meta 1.a combina dois parâmetros: 100% da demanda manifesta por creche e, nacionalmente, mínimo de 60% das crianças de até 3 anos.",
+        "feedbackAcerto": "Correto. A Meta 1.a combina dois parâmetros: 100% da demanda manifesta por creche e, nacionalmente, mínimo de 60% das crianças de até 3 anos.",
+        "feedbackErro": "A alternativa correta é: “atender 100% da demanda manifesta por creche e alcançar, nacionalmente, pelo menos 60% das crianças de até 3 anos.” A Meta 1.a combina dois parâmetros: 100% da demanda manifesta por creche e, nacionalmente, mínimo de 60% das crianças de até 3 anos.",
+        "dicaBanca": "A banca pode trocar demanda manifesta por universalização absoluta; são formulações diferentes."
+    },
+    {
+        "pergunta": "A universalização do acesso à pré-escola para crianças de 4 e 5 anos, no PNE de 2026, deve ocorrer:",
+        "alternativas": [
+            "até o terceiro ano de vigência do plano.",
+            "até o quinto ano de vigência do plano.",
+            "até o segundo ano de vigência do plano.",
+            "até o sétimo ano de vigência do plano.",
+            "até o final do decênio, sem prazo intermediário."
+        ],
+        "correta": 2,
+        "explicacao": "A Meta 1.c determina universalização da pré-escola para 4 e 5 anos até o segundo ano de vigência.",
+        "feedbackAcerto": "Correto. A Meta 1.c determina universalização da pré-escola para 4 e 5 anos até o segundo ano de vigência.",
+        "feedbackErro": "A alternativa correta é: “até o segundo ano de vigência do plano.” A Meta 1.c determina universalização da pré-escola para 4 e 5 anos até o segundo ano de vigência.",
+        "dicaBanca": "Pré-escola tem prazo curto: universalização até o 2º ano."
+    },
+    {
+        "pergunta": "Qual alternativa expressa corretamente o Objetivo 2 do novo PNE?",
+        "alternativas": [
+            "Universalizar o ensino fundamental e reduzir a distorção idade-série por meio de padrões nacionais de fluxo e aprendizagem.",
+            "Expandir a educação infantil em tempo integral até alcançar metade das matrículas de creche e pré-escola em todas as redes públicas.",
+            "Unificar os currículos de creches e pré-escolas em torno de conteúdos mínimos nacionais e instrumentos padronizados de avaliação infantil.",
+            "Garantir a qualidade da oferta de educação infantil, considerando padrões nacionais que abrangem infraestrutura, profissionais, gestão, recursos, acessibilidade e práticas pedagógicas.",
+            "Transferir aos Municípios a responsabilidade integral pelos padrões de qualidade da educação infantil e pelo financiamento de sua expansão conforme a repartição de responsabilidades prevista para os sistemas de ensino."
+        ],
+        "correta": 3,
+        "explicacao": "O Objetivo 2 é dedicado à qualidade da Educação Infantil e suas metas abrangem padrões nacionais de qualidade para creche e pré-escola.",
+        "feedbackAcerto": "Correto. O Objetivo 2 é dedicado à qualidade da Educação Infantil e suas metas abrangem padrões nacionais de qualidade para creche e pré-escola.",
+        "feedbackErro": "A alternativa correta é: “Garantir a qualidade da oferta de educação infantil, considerando padrões nacionais que abrangem infraestrutura, profissionais, gestão, recursos, acessibilidade e práticas pedagógicas.” O Objetivo 2 é dedicado à qualidade da Educação Infantil e suas metas abrangem padrões nacionais de qualidade para creche e pré-escola.",
+        "dicaBanca": "No novo plano, acesso à Educação Infantil é Objetivo 1; qualidade da oferta é Objetivo 2."
+    },
+    {
+        "pergunta": "Sobre a alfabetização no Objetivo 3, assinale a alternativa correta.",
+        "alternativas": [
+            "O plano mantém como referência nacional a alfabetização de todas as crianças até o final do 3º ano do ensino fundamental durante todo o decênio preservando a relação entre planejamento, execução e avaliação das políticas educacionais.",
+            "A meta fixa 90% das crianças alfabetizadas ao final do 1º ano até o quinto ano e universalização ao final do 2º ano no sétimo ano do plano.",
+            "O plano trata alfabetização e aprendizagem matemática em objetivos separados, com prazos diferentes para cada componente nos anos iniciais.",
+            "A meta de alfabetização é de natureza qualitativa, cabendo ao Inep definir futuramente os percentuais e o ano escolar de referência.",
+            "O plano busca pelo menos 80% das crianças alfabetizadas ao final do 2º ano até o quinto ano de vigência e todas as crianças alfabetizadas nessa etapa até o final do decênio."
+        ],
+        "correta": 4,
+        "explicacao": "A Meta 3.a fixa 80% até o quinto ano e universalização até o fim do decênio, sempre ao final do segundo ano do ensino fundamental.",
+        "feedbackAcerto": "Correto. A Meta 3.a fixa 80% até o quinto ano e universalização até o fim do decênio, sempre ao final do segundo ano do ensino fundamental.",
+        "feedbackErro": "A alternativa correta é: “O plano busca pelo menos 80% das crianças alfabetizadas ao final do 2º ano até o quinto ano de vigência e todas as crianças alfabetizadas nessa etapa até o final do decênio.” A Meta 3.a fixa 80% até o quinto ano e universalização até o fim do decênio, sempre ao final do segundo ano do ensino fundamental.",
+        "dicaBanca": "Atenção à mudança histórica: no novo PNE, a referência é o final do 2º ano."
+    },
+    {
+        "pergunta": "O Objetivo 3 também estabelece meta para a aprendizagem em Matemática ao final do segundo ano. Qual é o desenho correto?",
+        "alternativas": [
+            "Pelo menos 80% das crianças no nível adequado até o quinto ano de vigência e todas as crianças no nível adequado até o final do decênio.",
+            "Pelo menos 60% no nível adequado até o quinto ano e 90% no nível adequado até o final do decênio.",
+            "Pelo menos 70% no nível adequado até o terceiro ano e universalização até o quinto ano de vigência do plano.",
+            "Todos os estudantes no nível básico até o quinto ano, sem meta específica de nível adequado para o final do decênio dentro da arquitetura de planejamento definida pela legislação educacional.",
+            "Pelo menos 80% no nível adequado ao final do quinto ano do ensino fundamental, sem referência ao segundo ano."
+        ],
+        "correta": 0,
+        "explicacao": "A Meta 3.b espelha a lógica da alfabetização: 80% em nível adequado no 2º ano até o quinto ano e universalização até o final do decênio.",
+        "feedbackAcerto": "Correto. A Meta 3.b espelha a lógica da alfabetização: 80% em nível adequado no 2º ano até o quinto ano e universalização até o final do decênio.",
+        "feedbackErro": "A alternativa correta é: “Pelo menos 80% das crianças no nível adequado até o quinto ano de vigência e todas as crianças no nível adequado até o final do decênio.” A Meta 3.b espelha a lógica da alfabetização: 80% em nível adequado no 2º ano até o quinto ano e universalização até o final do decênio.",
+        "dicaBanca": "O novo PNE trata alfabetização e aprendizagem matemática lado a lado no Objetivo 3."
+    },
+    {
+        "pergunta": "No Objetivo 4, a universalização do acesso à escola para a população de 6 a 17 anos deve ser alcançada:",
+        "alternativas": [
+            "até o segundo ano de vigência do PNE.",
+            "até o terceiro ano de vigência do PNE.",
+            "até o quinto ano de vigência do PNE.",
+            "até o sétimo ano de vigência do PNE.",
+            "até o final do decênio, sem meta intermediária."
+        ],
+        "correta": 1,
+        "explicacao": "A Meta 4.a determina universalização do acesso à escola para toda a população de 6 a 17 anos até o terceiro ano.",
+        "feedbackAcerto": "Correto. A Meta 4.a determina universalização do acesso à escola para toda a população de 6 a 17 anos até o terceiro ano.",
+        "feedbackErro": "A alternativa correta é: “até o terceiro ano de vigência do PNE.” A Meta 4.a determina universalização do acesso à escola para toda a população de 6 a 17 anos até o terceiro ano.",
+        "dicaBanca": "6 a 17 anos → universalização do acesso até o 3º ano."
+    },
+    {
+        "pergunta": "Ao final do decênio, o Objetivo 4 estabelece, quanto à conclusão na idade regular, que:",
+        "alternativas": [
+            "pelo menos 95% concluam o 5º ano, 90% concluam o 9º ano e 80% concluam o ensino médio na idade regular.",
+            "todos concluam o 5º e o 9º anos, e pelo menos 95% concluam o ensino médio na idade regular em todas as modalidades.",
+            "todos concluam o 5º ano, pelo menos 95% concluam o 9º ano e pelo menos 90% concluam o ensino médio na idade regular.",
+            "pelo menos 90% concluam o 5º ano, 85% o 9º ano e 80% o ensino médio, com redução progressiva das desigualdades.",
+            "todos concluam o ensino fundamental, enquanto a conclusão do ensino médio depende dos valores de referência a serem definidos pelo Inep."
+        ],
+        "correta": 2,
+        "explicacao": "As Metas 4.b, 4.c e 4.d estabelecem respectivamente: 100% no 5º ano, 95% no 9º e 90% no ensino médio, na idade regular.",
+        "feedbackAcerto": "Correto. As Metas 4.b, 4.c e 4.d estabelecem respectivamente: 100% no 5º ano, 95% no 9º e 90% no ensino médio, na idade regular.",
+        "feedbackErro": "A alternativa correta é: “todos concluam o 5º ano, pelo menos 95% concluam o 9º ano e pelo menos 90% concluam o ensino médio na idade regular.” As Metas 4.b, 4.c e 4.d estabelecem respectivamente: 100% no 5º ano, 95% no 9º e 90% no ensino médio, na idade regular.",
+        "dicaBanca": "Uma questão típica de IVIN pode misturar os três percentuais no mesmo item."
+    },
+    {
+        "pergunta": "No Objetivo 5, qual sequência representa os percentuais de estudantes em nível adequado de aprendizagem ao final do decênio, respectivamente nos anos iniciais, anos finais e ensino médio?",
+        "alternativas": [
+            "80%, 75% e 70%.",
+            "95%, 90% e 85%.",
+            "90%, 80% e 70%.",
+            "90%, 85% e 80%.",
+            "100%, 95% e 90%."
+        ],
+        "correta": 3,
+        "explicacao": "Ao final do decênio, as Metas 5.a, 5.b e 5.d fixam 90% nos anos iniciais, 85% nos anos finais e 80% no ensino médio em nível adequado.",
+        "feedbackAcerto": "Correto. Ao final do decênio, as Metas 5.a, 5.b e 5.d fixam 90% nos anos iniciais, 85% nos anos finais e 80% no ensino médio em nível adequado.",
+        "feedbackErro": "A alternativa correta é: “90%, 85% e 80%.” Ao final do decênio, as Metas 5.a, 5.b e 5.d fixam 90% nos anos iniciais, 85% nos anos finais e 80% no ensino médio em nível adequado.",
+        "dicaBanca": "Perceba a progressão 90 → 85 → 80 para os três marcos de aprendizagem."
+    },
+    {
+        "pergunta": "Para o PNE de 2026, considera-se a jornada mínima de educação integral em tempo integral aquela com:",
+        "alternativas": [
+            "seis horas diárias ou trinta horas semanais, com atividades complementares obrigatórias no contraturno.",
+            "oito horas diárias ou quarenta horas semanais, independentemente da organização pedagógica da jornada escolar.",
+            "sete horas diárias e quarenta horas semanais, sendo necessária a presença do estudante em dois turnos distintos.",
+            "trinta horas semanais distribuídas livremente pela escola, desde que metade da carga seja destinada às áreas da BNCC.",
+            "sete horas diárias ou trinta e cinco horas semanais, preferencialmente em turno único."
+        ],
+        "correta": 4,
+        "explicacao": "A Meta 6.a e as estratégias do Objetivo 6 utilizam a referência mínima de 7 horas diárias ou 35 horas semanais, preferencialmente em turno único.",
+        "feedbackAcerto": "Correto. A Meta 6.a e as estratégias do Objetivo 6 utilizam a referência mínima de 7 horas diárias ou 35 horas semanais, preferencialmente em turno único.",
+        "feedbackErro": "A alternativa correta é: “sete horas diárias ou trinta e cinco horas semanais, preferencialmente em turno único.” A Meta 6.a e as estratégias do Objetivo 6 utilizam a referência mínima de 7 horas diárias ou 35 horas semanais, preferencialmente em turno único.",
+        "dicaBanca": "Tempo integral no novo PNE: 7h/dia ou 35h/semana."
+    },
+    {
+        "pergunta": "Ao final da vigência do PNE, a Meta 6.a pretende garantir educação integral em tempo integral em, no mínimo:",
+        "alternativas": [
+            "65% das escolas públicas, atendendo pelo menos 50% dos estudantes da educação básica.",
+            "50% das escolas públicas, atendendo pelo menos 35% dos estudantes da educação básica.",
+            "70% das escolas públicas, atendendo pelo menos 60% dos estudantes da educação básica.",
+            "60% das escolas públicas, atendendo pelo menos 45% dos estudantes da educação básica.",
+            "75% das escolas públicas, atendendo pelo menos 50% dos estudantes da educação básica."
+        ],
+        "correta": 0,
+        "explicacao": "A Meta 6.a fixa, ao final do decênio, mínimo de 65% das escolas públicas e 50% dos estudantes; os patamares de 50%/35% valem para o quinto ano.",
+        "feedbackAcerto": "Correto. A Meta 6.a fixa, ao final do decênio, mínimo de 65% das escolas públicas e 50% dos estudantes; os patamares de 50%/35% valem para o quinto ano.",
+        "feedbackErro": "A alternativa correta é: “65% das escolas públicas, atendendo pelo menos 50% dos estudantes da educação básica.” A Meta 6.a fixa, ao final do decênio, mínimo de 65% das escolas públicas e 50% dos estudantes; os patamares de 50%/35% valem para o quinto ano.",
+        "dicaBanca": "Diferencie marco intermediário (50% escolas/35% alunos) do final (65%/50%)."
+    },
+    {
+        "pergunta": "A Meta 7.a sobre conectividade nas escolas públicas estabelece a trajetória:",
+        "alternativas": [
+            "60% das escolas até o segundo ano, 80% até o quinto ano e 95% ao final, priorizando redes urbanas com maior número de matrículas.",
+            "50% das escolas até o segundo ano, 75% até o quinto ano e todas as escolas até o final do decênio, com internet de alta velocidade adequada ao uso pedagógico e redes internas wi-fi.",
+            "50% das escolas até o terceiro ano, 80% até o sétimo ano e universalização ao final, sem exigência de redes internas wi-fi.",
+            "75% das escolas até o segundo ano e universalização até o quinto ano, ficando o restante do decênio destinado à atualização dos equipamentos considerando a articulação federativa prevista para execução das políticas públicas.",
+            "universalização da conectividade desde o primeiro ano, cabendo aos prazos seguintes a expansão da educação digital nos currículos."
+        ],
+        "correta": 1,
+        "explicacao": "A Meta 7.a fixa 50% no 2º ano, 75% no 5º e 100% ao final, com conectividade adequada ao uso pedagógico e redes internas wi-fi.",
+        "feedbackAcerto": "Correto. A Meta 7.a fixa 50% no 2º ano, 75% no 5º e 100% ao final, com conectividade adequada ao uso pedagógico e redes internas wi-fi.",
+        "feedbackErro": "A alternativa correta é: “50% das escolas até o segundo ano, 75% até o quinto ano e todas as escolas até o final do decênio, com internet de alta velocidade adequada ao uso pedagógico e redes internas wi-fi.” A Meta 7.a fixa 50% no 2º ano, 75% no 5º e 100% ao final, com conectividade adequada ao uso pedagógico e redes internas wi-fi.",
+        "dicaBanca": "Conectividade tem três marcos fáceis de trocar: 50 → 75 → 100."
+    },
+    {
+        "pergunta": "No Objetivo 7, as três dimensões de educação digital estabelecidas na BNCC e destacadas pelo PNE são:",
+        "alternativas": [
+            "programação, robótica educacional e inteligência artificial.",
+            "letramento midiático, cidadania digital e segurança cibernética.",
+            "pensamento computacional, mundo digital e cultura digital.",
+            "algoritmos, redes de computadores e produção audiovisual.",
+            "comunicação digital, pensamento lógico e ética informacional."
+        ],
+        "correta": 2,
+        "explicacao": "O PNE cita expressamente as três dimensões da BNCC: pensamento computacional, mundo digital e cultura digital.",
+        "feedbackAcerto": "Correto. O PNE cita expressamente as três dimensões da BNCC: pensamento computacional, mundo digital e cultura digital.",
+        "feedbackErro": "A alternativa correta é: “pensamento computacional, mundo digital e cultura digital.” O PNE cita expressamente as três dimensões da BNCC: pensamento computacional, mundo digital e cultura digital.",
+        "dicaBanca": "Não confunda temas relevantes da educação digital com as três dimensões nomeadas no documento."
+    },
+    {
+        "pergunta": "A respeito do uso de plataformas educacionais digitais e inteligência artificial, o PNE determina que:",
+        "alternativas": [
+            "o Inep regulamente, em até um ano, o uso de inteligência artificial nas escolas e autorize previamente cada plataforma educacional.",
+            "o MEC proíba plataformas privadas até que seja concluída avaliação nacional de impacto sobre aprendizagem e saúde mental dos estudantes.",
+            "cada sistema de ensino edite suas próprias regras sem diretrizes nacionais, em razão da autonomia curricular prevista na legislação educacional.",
+            "o CNE crie, em até dois anos, diretrizes nacionais que assegurem fins pedagógicos, transparência e proteção de dados.",
+            "as redes públicas adotem ferramentas de inteligência artificial no ensino médio, preservando os anos iniciais de recursos automatizados."
+        ],
+        "correta": 3,
+        "explicacao": "A Estratégia 7.18 atribui ao CNE, em prazo de dois anos, diretrizes nacionais sobre plataformas e IA com fins pedagógicos, transparência e proteção de dados.",
+        "feedbackAcerto": "Correto. A Estratégia 7.18 atribui ao CNE, em prazo de dois anos, diretrizes nacionais sobre plataformas e IA com fins pedagógicos, transparência e proteção de dados.",
+        "feedbackErro": "A alternativa correta é: “o CNE crie, em até dois anos, diretrizes nacionais que assegurem fins pedagógicos, transparência e proteção de dados.” A Estratégia 7.18 atribui ao CNE, em prazo de dois anos, diretrizes nacionais sobre plataformas e IA com fins pedagógicos, transparência e proteção de dados.",
+        "dicaBanca": "IA aparece expressamente no novo PNE; é assunto novo e altamente provável em prova atualizada."
+    },
+    {
+        "pergunta": "No Objetivo 8, referente à sustentabilidade socioambiental, a Meta 8.a prevê que planos de prevenção, mitigação e adaptação às mudanças do clima sejam desenvolvidos:",
+        "alternativas": [
+            "por metade das escolas públicas até o terceiro ano e por 80% das escolas públicas até o final do decênio.",
+            "por todas as redes de ensino até o quinto ano, sem meta intermediária relacionada à adaptação climática dos estabelecimentos.",
+            "pelas redes estaduais e distrital até o segundo ano, ficando a adesão dos Municípios condicionada à assistência técnica da União.",
+            "por 70% das redes no quinto ano e 90% ao final, mantendo percentual residual para sistemas com limitações territoriais específicas.",
+            "por pelo menos 60% das redes de ensino até o quinto ano e pela totalidade das redes até o final do decênio."
+        ],
+        "correta": 4,
+        "explicacao": "A Meta 8.a fixa 60% das redes até o quinto ano e totalidade até o final do decênio.",
+        "feedbackAcerto": "Correto. A Meta 8.a fixa 60% das redes até o quinto ano e totalidade até o final do decênio.",
+        "feedbackErro": "A alternativa correta é: “por pelo menos 60% das redes de ensino até o quinto ano e pela totalidade das redes até o final do decênio.” A Meta 8.a fixa 60% das redes até o quinto ano e totalidade até o final do decênio.",
+        "dicaBanca": "O novo PNE incorporou mudança climática como eixo próprio; observe rede de ensino, não apenas escola isolada."
+    },
+    {
+        "pergunta": "Qual alternativa descreve corretamente o Objetivo 9 do PNE vigente?",
+        "alternativas": [
+            "Garantir acesso, oferta e permanência na educação escolar indígena, na educação do campo e na educação escolar quilombola, com padrões nacionais de qualidade e redução de desigualdades regionais.",
+            "Uniformizar currículos de escolas indígenas, do campo e quilombolas para assegurar equivalência nacional de conteúdos e avaliações externas.",
+            "Concentrar as políticas das três modalidades na educação básica rural, vinculando sua oferta à localização geográfica das comunidades atendidas.",
+            "Ampliar prioritariamente a educação profissional para povos indígenas, quilombolas e populações do campo, com foco na inserção produtiva regional.",
+            "Substituir políticas específicas das três modalidades por metas gerais de equidade, evitando diferenciações de currículo, gestão e materiais pedagógicos dentro da arquitetura de planejamento definida pela legislação educacional."
+        ],
+        "correta": 0,
+        "explicacao": "O Objetivo 9 reúne Educação Escolar Indígena, Educação do Campo e Educação Escolar Quilombola, preservando especificidades e buscando qualidade e equidade.",
+        "feedbackAcerto": "Correto. O Objetivo 9 reúne Educação Escolar Indígena, Educação do Campo e Educação Escolar Quilombola, preservando especificidades e buscando qualidade e equidade.",
+        "feedbackErro": "A alternativa correta é: “Garantir acesso, oferta e permanência na educação escolar indígena, na educação do campo e na educação escolar quilombola, com padrões nacionais de qualidade e redução de desigualdades regionais.” O Objetivo 9 reúne Educação Escolar Indígena, Educação do Campo e Educação Escolar Quilombola, preservando especificidades e buscando qualidade e equidade.",
+        "dicaBanca": "O novo PNE dá tratamento conjunto a três modalidades, sem apagá-las nem uniformizá-las."
+    },
+    {
+        "pergunta": "No Objetivo 10, a oferta de Atendimento Educacional Especializado deve alcançar:",
+        "alternativas": [
+            "no mínimo 60% do público até o terceiro ano e 90% até o final do decênio.",
+            "no mínimo 80% do público do AEE até o quinto ano e universalização até o final do decênio.",
+            "no mínimo 70% do público até o quinto ano e universalização até o sétimo ano de vigência.",
+            "todo o público até o quinto ano, permanecendo o restante do período destinado à avaliação da qualidade do atendimento.",
+            "80% do público durante todo o decênio, porque a universalização depende de regulamentação posterior pelos sistemas de ensino."
+        ],
+        "correta": 1,
+        "explicacao": "A Meta 10.b fixa 80% até o quinto ano e universalização da oferta de AEE até o final do decênio.",
+        "feedbackAcerto": "Correto. A Meta 10.b fixa 80% até o quinto ano e universalização da oferta de AEE até o final do decênio.",
+        "feedbackErro": "A alternativa correta é: “no mínimo 80% do público do AEE até o quinto ano e universalização até o final do decênio.” A Meta 10.b fixa 80% até o quinto ano e universalização da oferta de AEE até o final do decênio.",
+        "dicaBanca": "AEE: 80% no 5º ano → 100% no final."
+    },
+    {
+        "pergunta": "Para o público da educação bilíngue de surdos, a Meta 10.d prevê alfabetização:",
+        "alternativas": [
+            "em português oral como primeira língua até o 1º ano e em Libras como segunda língua até o final do 3º ano do ensino fundamental.",
+            "simultaneamente em Libras e português escrito até o final da educação infantil, sem diferenciação entre primeira e segunda línguas.",
+            "em Libras como primeira língua desde a educação infantil até o 1º ano do ensino fundamental e em português escrito como segunda língua até o final do 2º ano.",
+            "em Libras como primeira língua até o 2º ano e em português escrito como segunda língua até o final do 5º ano do ensino fundamental.",
+            "em português escrito como primeira língua nos anos iniciais, ficando a Libras como língua complementar de instrução conforme decisão da família com efeitos sobre o monitoramento e a organização das ações educacionais do ente."
+        ],
+        "correta": 2,
+        "explicacao": "A Meta 10.d define Libras como L1, com alfabetização até o 1º ano, e português escrito como L2, até o final do 2º ano.",
+        "feedbackAcerto": "Correto. A Meta 10.d define Libras como L1, com alfabetização até o 1º ano, e português escrito como L2, até o final do 2º ano.",
+        "feedbackErro": "A alternativa correta é: “em Libras como primeira língua desde a educação infantil até o 1º ano do ensino fundamental e em português escrito como segunda língua até o final do 2º ano.” A Meta 10.d define Libras como L1, com alfabetização até o 1º ano, e português escrito como L2, até o final do 2º ano.",
+        "dicaBanca": "Questão de alta literalidade: Libras = primeira língua; português escrito = segunda língua."
+    },
+    {
+        "pergunta": "No Objetivo 11, a taxa de alfabetização da população com 15 anos ou mais deverá atingir:",
+        "alternativas": [
+            "95% até o terceiro ano de vigência, com superação do analfabetismo até o quinto ano.",
+            "98% até o quinto ano, mantendo o percentual como referência final para todo o decênio.",
+            "100% até o quinto ano, sem meta específica de superação do analfabetismo no restante da vigência.",
+            "97% até o quinto ano de vigência, com superação do analfabetismo até o final do decênio.",
+            "90% até o quinto ano e 97% ao final do decênio, sem previsão de superação integral do analfabetismo."
+        ],
+        "correta": 3,
+        "explicacao": "A Meta 11.a fixa 97% de alfabetização da população de 15 anos ou mais até o quinto ano e superação do analfabetismo até o final.",
+        "feedbackAcerto": "Correto. A Meta 11.a fixa 97% de alfabetização da população de 15 anos ou mais até o quinto ano e superação do analfabetismo até o final.",
+        "feedbackErro": "A alternativa correta é: “97% até o quinto ano de vigência, com superação do analfabetismo até o final do decênio.” A Meta 11.a fixa 97% de alfabetização da população de 15 anos ou mais até o quinto ano e superação do analfabetismo até o final.",
+        "dicaBanca": "EJA no novo PNE envolve jovens, adultos e idosos; memorize 97% no marco de cinco anos."
+    },
+    {
+        "pergunta": "A Meta 12.a da Educação Profissional e Tecnológica pretende que a educação profissional técnica de nível médio, integrada ou concomitante, alcance:",
+        "alternativas": [
+            "40% dos estudantes do ensino médio, com pelo menos 60% da expansão concentrada na rede federal até o final do decênio.",
+            "60% dos estudantes do ensino médio, com metade das novas vagas ofertadas na forma subsequente pelas redes públicas.",
+            "50% dos concluintes do ensino médio, independentemente de matrícula simultânea na educação profissional durante essa etapa escolar.",
+            "70% dos estudantes do ensino médio, assegurando que toda a expansão ocorra no segmento público e na forma integrada.",
+            "50% dos estudantes matriculados no ensino médio, com pelo menos 50% da expansão no segmento público até o final do PNE."
+        ],
+        "correta": 4,
+        "explicacao": "A Meta 12.a busca 50% dos estudantes do ensino médio em EPT integrada ou concomitante e determina pelo menos 50% da expansão no segmento público.",
+        "feedbackAcerto": "Correto. A Meta 12.a busca 50% dos estudantes do ensino médio em EPT integrada ou concomitante e determina pelo menos 50% da expansão no segmento público.",
+        "feedbackErro": "A alternativa correta é: “50% dos estudantes matriculados no ensino médio, com pelo menos 50% da expansão no segmento público até o final do PNE.” A Meta 12.a busca 50% dos estudantes do ensino médio em EPT integrada ou concomitante e determina pelo menos 50% da expansão no segmento público.",
+        "dicaBanca": "A banca pode trocar percentual de estudantes, percentual de expansão pública e forma de oferta."
+    },
+    {
+        "pergunta": "No Objetivo 13, a implementação do sistema nacional de avaliação da Educação Profissional e Tecnológica deve ocorrer:",
+        "alternativas": [
+            "em regime de colaboração, no prazo de até dois anos, com caráter contínuo e baseado em referenciais nacionais de qualidade.",
+            "por ato do Inep, no prazo de cinco anos, com aplicação restrita aos cursos técnicos ofertados pelas redes públicas.",
+            "em até três anos, com avaliação bienal das instituições e divulgação de resultados restrita aos órgãos gestores dos sistemas de ensino.",
+            "ao final do decênio, após consolidação do censo nacional da educação profissional e definição dos padrões de empregabilidade dos egressos.",
+            "em até um ano, sob coordenação das instituições formadoras e do setor produtivo, sem participação dos sistemas de ensino."
+        ],
+        "correta": 0,
+        "explicacao": "A Estratégia 13.3 prevê implementação em regime de colaboração, em até dois anos, de sistema nacional de avaliação da EPT com caráter contínuo.",
+        "feedbackAcerto": "Correto. A Estratégia 13.3 prevê implementação em regime de colaboração, em até dois anos, de sistema nacional de avaliação da EPT com caráter contínuo.",
+        "feedbackErro": "A alternativa correta é: “em regime de colaboração, no prazo de até dois anos, com caráter contínuo e baseado em referenciais nacionais de qualidade.” A Estratégia 13.3 prevê implementação em regime de colaboração, em até dois anos, de sistema nacional de avaliação da EPT com caráter contínuo.",
+        "dicaBanca": "Qualidade da EPT no novo PNE vem acompanhada de sistema nacional de avaliação próprio."
+    },
+    {
+        "pergunta": "No Objetivo 14, as metas de acesso e conclusão da graduação estabelecem, respectivamente:",
+        "alternativas": [
+            "50% da população de 18 a 24 anos com acesso à graduação e 40% da população de 25 a 34 anos com educação superior completa.",
+            "40% da população de 18 a 24 anos com acesso à graduação e 40% da população de 25 a 34 anos com educação superior completa.",
+            "40% da população de 18 a 24 anos com graduação concluída e 50% da população de 25 a 34 anos com acesso ao ensino superior.",
+            "35% da população de 18 a 24 anos com acesso e 45% da população de 25 a 34 anos com educação superior completa.",
+            "60% da população de 18 a 24 anos com acesso e 40% da população de 25 a 34 anos com matrícula ativa em cursos de graduação."
+        ],
+        "correta": 1,
+        "explicacao": "As Metas 14.a e 14.b fixam 40% para acesso de 18-24 anos e 40% para conclusão da educação superior entre 25-34 anos.",
+        "feedbackAcerto": "Correto. As Metas 14.a e 14.b fixam 40% para acesso de 18-24 anos e 40% para conclusão da educação superior entre 25-34 anos.",
+        "feedbackErro": "A alternativa correta é: “40% da população de 18 a 24 anos com acesso à graduação e 40% da população de 25 a 34 anos com educação superior completa.” As Metas 14.a e 14.b fixam 40% para acesso de 18-24 anos e 40% para conclusão da educação superior entre 25-34 anos.",
+        "dicaBanca": "Mesma porcentagem, mas populações e indicadores diferentes: acesso 18-24 × conclusão 25-34."
+    },
+    {
+        "pergunta": "Em relação à qualidade da graduação, a Meta 15.c pretende ampliar a proporção de mestres ou doutores no corpo docente da educação superior para:",
+        "alternativas": [
+            "90%, sendo pelo menos 60% de doutores no conjunto das instituições de ensino superior.",
+            "95%, sendo pelo menos 50% de doutores em todas as instituições, sem diferenciação por organização acadêmica.",
+            "95%, sendo pelo menos 70% de doutores no conjunto das instituições de ensino superior.",
+            "100%, sendo pelo menos 70% de doutores nas universidades e 40% nos centros universitários.",
+            "85%, sendo pelo menos 55% de doutores no conjunto das instituições e 70% nas universidades públicas."
+        ],
+        "correta": 2,
+        "explicacao": "A Meta 15.c fixa 95% de mestres ou doutores e pelo menos 70% de doutores no conjunto das IES, com percentuais específicos por tipo de instituição.",
+        "feedbackAcerto": "Correto. A Meta 15.c fixa 95% de mestres ou doutores e pelo menos 70% de doutores no conjunto das IES, com percentuais específicos por tipo de instituição.",
+        "feedbackErro": "A alternativa correta é: “95%, sendo pelo menos 70% de doutores no conjunto das instituições de ensino superior.” A Meta 15.c fixa 95% de mestres ou doutores e pelo menos 70% de doutores no conjunto das IES, com percentuais específicos por tipo de instituição.",
+        "dicaBanca": "Questão numérica difícil: 95% mestres/doutores; 70% doutores no conjunto."
+    },
+    {
+        "pergunta": "A Meta 16.a da pós-graduação stricto sensu estabelece, ao final do PNE, a titulação anual de:",
+        "alternativas": [
+            "50 mestres e 20 doutores por 100 mil habitantes.",
+            "60 mestres e 30 doutores por 100 mil habitantes.",
+            "70 mestres e 20 doutores por 100 mil habitantes.",
+            "60 mestres e 20 doutores por 100 mil habitantes.",
+            "60 mestres e 20 doutores por 10 mil habitantes."
+        ],
+        "correta": 3,
+        "explicacao": "A Meta 16.a usa indicador populacional: 60 mestres e 20 doutores por 100 mil habitantes por ano.",
+        "feedbackAcerto": "Correto. A Meta 16.a usa indicador populacional: 60 mestres e 20 doutores por 100 mil habitantes por ano.",
+        "feedbackErro": "A alternativa correta é: “60 mestres e 20 doutores por 100 mil habitantes.” A Meta 16.a usa indicador populacional: 60 mestres e 20 doutores por 100 mil habitantes por ano.",
+        "dicaBanca": "Não troque o denominador: são 100 mil habitantes."
+    },
+    {
+        "pergunta": "A Meta 17.a estabelece que todos os docentes da educação básica possuam formação específica em nível superior:",
+        "alternativas": [
+            "até o terceiro ano de vigência, admitida qualquer graduação superior desde que acompanhada de experiência profissional na rede de ensino.",
+            "até o final do decênio, sem prazo intermediário, ficando a área de formação definida pelos planos de carreira de cada ente federativo.",
+            "até o segundo ano de vigência, por cursos presenciais oferecidos por instituições públicas de educação superior.",
+            "até o sétimo ano de vigência, com exigência de pós-graduação para os docentes que atuem nos anos finais e no ensino médio.",
+            "até o quinto ano de vigência do PNE, em curso adequado à etapa, área, componente ou modalidade em que atuam."
+        ],
+        "correta": 4,
+        "explicacao": "A Meta 17.a fixa até o quinto ano para que todos os docentes tenham formação específica superior adequada à atuação.",
+        "feedbackAcerto": "Correto. A Meta 17.a fixa até o quinto ano para que todos os docentes tenham formação específica superior adequada à atuação.",
+        "feedbackErro": "A alternativa correta é: “até o quinto ano de vigência do PNE, em curso adequado à etapa, área, componente ou modalidade em que atuam.” A Meta 17.a fixa até o quinto ano para que todos os docentes tenham formação específica superior adequada à atuação.",
+        "dicaBanca": "Formação docente tem prazo expresso: 5º ano do novo PNE."
+    },
+    {
+        "pergunta": "Analise as afirmações sobre o Objetivo 17 do PNE.\nI. Busca equiparar o rendimento médio do magistério público ao de ocupações com escolaridade equivalente.\nII. Prevê planos de carreira para todos os profissionais da educação básica pública.\nIII. Pretende reduzir profissionais do magistério sem cargo efetivo a, no máximo, 30% em cada rede pública até o quinto ano.\nAssinale a alternativa correta.",
+        "alternativas": [
+            "I, II e III estão corretas.",
+            "I está correta, e II e III estão incorretas, porque carreira e vínculos efetivos não integrariam metas nacionais do novo PNE.",
+            "I e II estão corretas, e III está incorreta, pois a lei não fixaria percentual nacional para profissionais sem cargo efetivo.",
+            "II e III estão corretas, e I está incorreta, porque a equiparação de rendimento teria sido remetida às negociações locais.",
+            "III está correta, e I e II estão incorretas, pois remuneração e carreira seriam matérias reservadas aos planos subnacionais."
+        ],
+        "correta": 0,
+        "explicacao": "As Metas 17.b, 17.c e 17.d tratam, respectivamente, de equiparação de rendimento, planos de carreira e limite de 30% de não efetivos até o quinto ano.",
+        "feedbackAcerto": "Correto. As Metas 17.b, 17.c e 17.d tratam, respectivamente, de equiparação de rendimento, planos de carreira e limite de 30% de não efetivos até o quinto ano.",
+        "feedbackErro": "A alternativa correta é: “I, II e III estão corretas.” As Metas 17.b, 17.c e 17.d tratam, respectivamente, de equiparação de rendimento, planos de carreira e limite de 30% de não efetivos até o quinto ano.",
+        "dicaBanca": "IVIN gosta de combinar várias metas do mesmo objetivo em itens I, II e III."
+    },
+    {
+        "pergunta": "No Objetivo 18, a seleção de diretores das escolas públicas deve envolver:",
+        "alternativas": [
+            "eleição direta e obrigatória pela comunidade escolar, sem utilização de critérios técnicos prévios definidos pelo sistema de ensino.",
+            "processo seletivo fundamentado em critérios técnicos de mérito e desempenho, seguido de escuta da comunidade escolar.",
+            "indicação do chefe do Poder Executivo, condicionada à aprovação posterior do nome pelo conselho escolar da unidade educacional.",
+            "concurso público nacional organizado pelo MEC, seguido de escolha do candidato mais votado entre os aprovados em cada rede de ensino.",
+            "processo seletivo conduzido pelos conselhos de educação, com participação da comunidade restrita à avaliação final da gestão."
+        ],
+        "correta": 1,
+        "explicacao": "A Meta 18.a combina critérios técnicos de mérito e desempenho com posterior escuta da comunidade escolar.",
+        "feedbackAcerto": "Correto. A Meta 18.a combina critérios técnicos de mérito e desempenho com posterior escuta da comunidade escolar.",
+        "feedbackErro": "A alternativa correta é: “processo seletivo fundamentado em critérios técnicos de mérito e desempenho, seguido de escuta da comunidade escolar.” A Meta 18.a combina critérios técnicos de mérito e desempenho com posterior escuta da comunidade escolar.",
+        "dicaBanca": "Não reduza gestão democrática a eleição direta: observe a fórmula específica da Meta 18.a."
+    },
+    {
+        "pergunta": "Ainda no Objetivo 18, o PNE estabelece que:",
+        "alternativas": [
+            "os conselhos escolares sejam exigidos nas escolas com mais de mil estudantes e os fóruns de educação funcionem durante as conferências.",
+            "os conselhos escolares sejam substituídos pelos conselhos municipais de educação onde estes existirem, evitando duplicidade de instâncias colegiadas.",
+            "todas as escolas públicas de educação básica tenham conselhos escolares instituídos e em funcionamento, e todos os entes tenham fóruns de educação permanentes instituídos por lei.",
+            "os fóruns de educação sejam órgãos temporários criados a cada quatro anos para organizar conferências e avaliar as metas do plano decenal.",
+            "os conselhos escolares tenham caráter consultivo sem participação de diferentes segmentos, enquanto os fóruns integrem a estrutura administrativa das secretarias com efeitos sobre o monitoramento e a organização das ações educacionais do ente."
+        ],
+        "correta": 2,
+        "explicacao": "As Metas 18.b e 18.c tratam da universalização dos conselhos escolares e da existência de fóruns de educação permanentes em todos os entes.",
+        "feedbackAcerto": "Correto. As Metas 18.b e 18.c tratam da universalização dos conselhos escolares e da existência de fóruns de educação permanentes em todos os entes.",
+        "feedbackErro": "A alternativa correta é: “todas as escolas públicas de educação básica tenham conselhos escolares instituídos e em funcionamento, e todos os entes tenham fóruns de educação permanentes instituídos por lei.” As Metas 18.b e 18.c tratam da universalização dos conselhos escolares e da existência de fóruns de educação permanentes em todos os entes.",
+        "dicaBanca": "Objetivo 18 combina gestão democrática, participação e controle social em estruturas permanentes."
+    },
+    {
+        "pergunta": "A Meta 19.a estabelece que o investimento público em educação alcance:",
+        "alternativas": [
+            "7% do PIB até o quinto ano e 10% do PIB até o final do decênio.",
+            "7,5% do PIB até o quinto ano e 9% do PIB até o final do decênio.",
+            "8% do PIB até o sétimo ano e 10% do PIB até o último biênio do plano.",
+            "7,5% do PIB até o sétimo ano de vigência e 10% do PIB até o final do decênio.",
+            "10% do PIB desde o quinto ano de vigência, mantendo esse percentual até o encerramento do decênio."
+        ],
+        "correta": 3,
+        "explicacao": "O novo PNE manteve 10% do PIB como referência final, mas introduziu marco de 7,5% até o sétimo ano.",
+        "feedbackAcerto": "Correto. O novo PNE manteve 10% do PIB como referência final, mas introduziu marco de 7,5% até o sétimo ano.",
+        "feedbackErro": "A alternativa correta é: “7,5% do PIB até o sétimo ano de vigência e 10% do PIB até o final do decênio.” O novo PNE manteve 10% do PIB como referência final, mas introduziu marco de 7,5% até o sétimo ano.",
+        "dicaBanca": "Questão atualizada: 7,5% no 7º ano → 10% no final."
+    },
+    {
+        "pergunta": "No Objetivo 19, as condições mínimas de infraestrutura de funcionamento e salubridade de todas as escolas da educação básica devem ser garantidas:",
+        "alternativas": [
+            "até o final do segundo ano de vigência do PNE.",
+            "até o final do quinto ano de vigência do PNE.",
+            "até o final do sétimo ano de vigência do PNE.",
+            "até o final do decênio, sem prazo intermediário.",
+            "até o final do terceiro ano de vigência do PNE."
+        ],
+        "correta": 4,
+        "explicacao": "A Meta 19.c fixa o final do terceiro ano como prazo para condições mínimas de infraestrutura e salubridade de todas as escolas da educação básica.",
+        "feedbackAcerto": "Correto. A Meta 19.c fixa o final do terceiro ano como prazo para condições mínimas de infraestrutura e salubridade de todas as escolas da educação básica.",
+        "feedbackErro": "A alternativa correta é: “até o final do terceiro ano de vigência do PNE.” A Meta 19.c fixa o final do terceiro ano como prazo para condições mínimas de infraestrutura e salubridade de todas as escolas da educação básica.",
+        "dicaBanca": "Infraestrutura mínima e salubridade têm prazo curto: 3º ano."
+    }
+];
