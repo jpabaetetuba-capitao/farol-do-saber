@@ -1,2263 +1,1198 @@
 // ==========================
 // FAROL DO SABER - SOFTWARE
-// Banco com 150 questões balanceadas por subtopico.
-// Uso: o app.js sorteia 40 questões distribuídas entre os subtopicos.
+// Banco revisado para concursos - 70 questoes de nivel medio/dificil.
+// Gabarito balanceado: 14 respostas em cada alternativa (A-E).
 // ==========================
 
 const software = [
     {
-        "pergunta": "Em informática, o termo software refere-se:",
+        "pergunta": "Em um laboratório escolar, um computador possui Windows, navegador, editor de textos e drivers de impressora. Considerando a classificação de software, assinale a alternativa correta.",
+        "subtopico": "fundamentos_e_classificacao",
         "alternativas": [
-            "Ao conjunto de componentes físicos responsáveis pelo processamento e armazenamento de dados.",
-            "Exclusivamente ao sistema operacional instalado no equipamento.",
-            "Ao conjunto de programas, instruções e dados que orientam o funcionamento do computador.",
-            "Apenas aos dispositivos de entrada e saída conectados ao computador.",
-            "À memória RAM e aos dispositivos de armazenamento."
+            "O Windows atua como software de sistema, enquanto navegador e editor de textos são softwares aplicativos.",
+            "O navegador atua como software de sistema, enquanto o Windows funciona como aplicativo de produtividade.",
+            "Os drivers são aplicativos de escritório, pois executam tarefas diretamente solicitadas pelo usuário final.",
+            "O editor de textos integra o firmware do computador, pois permanece associado ao funcionamento do equipamento.",
+            "Windows, navegador, editor e drivers pertencem à mesma categoria, pois todos são programas instalados."
         ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! Software corresponde à parte lógica do computador, formada por programas, instruções e dados.",
-        "feedbackErro": "A resposta correta é:\n\nAo conjunto de programas, instruções e dados que orientam o funcionamento do computador.\n\nComentário:\nSoftware corresponde à parte lógica do computador, formada por programas, instruções e dados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Software = programas e instruções.",
-        "subtopico": "fundamentos_e_classificacao"
+        "correta": 0,
+        "id": "software_001",
+        "assunto": "software",
+        "feedbackAcerto": "Sistema operacional é software de sistema; navegador e editor de textos são aplicativos; drivers fazem a interface entre sistema e hardware.",
+        "feedbackErro": "A resposta correta é:\n\nO Windows atua como software de sistema, enquanto navegador e editor de textos são softwares aplicativos.\n\nComentário:\nSistema operacional é software de sistema; navegador e editor de textos são aplicativos; drivers fazem a interface entre sistema e hardware.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "A banca costuma misturar software de sistema, aplicativo, utilitário e driver na mesma situação."
     },
     {
-        "pergunta": "Assinale a alternativa que apresenta apenas exemplos de software.",
+        "pergunta": "Um candidato afirma que software corresponde à parte lógica do sistema computacional. A interpretação tecnicamente adequada dessa afirmação é:",
+        "subtopico": "fundamentos_e_classificacao",
         "alternativas": [
-            "SSD, Windows e Mouse.",
-            "Processador, Linux e RAM.",
-            "Monitor, Impressora e Windows.",
-            "Teclado, LibreOffice e Scanner.",
-            "Windows, Linux e LibreOffice."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! A resposta escolhida está de acordo com o conteúdo cobrado pela questão.",
-        "feedbackErro": "A resposta correta é:\n\nWindows, Linux e LibreOffice.\n\nComentário:\nA resposta escolhida está de acordo com o conteúdo cobrado pela questão.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Leia atentamente cada item da alternativa.",
-        "subtopico": "fundamentos_e_classificacao"
-    },
-    {
-        "pergunta": "O sistema operacional é classificado como:",
-        "alternativas": [
-            "Software de armazenamento.",
-            "Hardware de controle.",
-            "Periférico de entrada.",
-            "Memória permanente.",
-            "Software básico."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! O sistema operacional é um software básico essencial para o funcionamento do computador.",
-        "feedbackErro": "A resposta correta é:\n\nSoftware básico.\n\nComentário:\nO sistema operacional é um software básico essencial para o funcionamento do computador.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Sistema Operacional = Software Básico.",
-        "subtopico": "fundamentos_e_classificacao"
-    },
-    {
-        "pergunta": "Assinale a alternativa que apresenta apenas softwares aplicativos.",
-        "alternativas": [
-            "Windows e Linux.",
-            "Word, Excel e LibreOffice Writer.",
-            "RAM, SSD e Word.",
-            "Windows, Word e CPU.",
-            "Linux, Processador e Excel."
+            "Software corresponde aos componentes eletrônicos responsáveis por processar e armazenar informações no equipamento.",
+            "Software abrange programas, instruções e dados necessários à execução de tarefas e ao funcionamento do sistema.",
+            "Software designa os periféricos conectados ao computador e os meios físicos usados na entrada e saída de dados.",
+            "Software identifica a memória principal e as unidades de armazenamento onde programas e arquivos ficam registrados.",
+            "Software corresponde à infraestrutura física que permite instalar programas e conectar dispositivos ao computador."
         ],
         "correta": 1,
-        "feedbackAcerto": "Correto! Word, Excel e LibreOffice Writer são softwares aplicativos.",
-        "feedbackErro": "A resposta correta é:\n\nWord, Excel e LibreOffice Writer.\n\nComentário:\nWord, Excel e LibreOffice Writer são softwares aplicativos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Aplicativo = realiza tarefas para o usuário.",
-        "subtopico": "fundamentos_e_classificacao"
+        "id": "software_002",
+        "assunto": "software",
+        "feedbackAcerto": "Software é a parte lógica: programas, instruções e dados. Hardware é a parte física.",
+        "feedbackErro": "A resposta correta é:\n\nSoftware abrange programas, instruções e dados necessários à execução de tarefas e ao funcionamento do sistema.\n\nComentário:\nSoftware é a parte lógica: programas, instruções e dados. Hardware é a parte física.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Questões conceituais ficam mais difíceis quando hardware e software aparecem misturados na mesma alternativa."
     },
     {
-        "pergunta": "A principal função de um sistema operacional é:",
+        "pergunta": "Ao instalar um editor de planilhas em um computador já configurado, o usuário acrescenta ao sistema um software cuja finalidade principal é:",
+        "subtopico": "fundamentos_e_classificacao",
         "alternativas": [
-            "Substituir os aplicativos instalados.",
-            "Realizar exclusivamente acesso à internet.",
-            "Armazenar permanentemente os arquivos do usuário.",
-            "Substituir o processador durante a execução dos programas.",
-            "Controlar os recursos do computador e permitir a execução dos programas."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Excelente! O sistema operacional gerencia os recursos do computador e permite a execução dos programas.",
-        "feedbackErro": "A resposta correta é:\n\nControlar os recursos do computador e permitir a execução dos programas.\n\nComentário:\nO sistema operacional gerencia os recursos do computador e permite a execução dos programas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "SO = gerencia recursos do sistema.",
-        "subtopico": "fundamentos_e_classificacao"
-    },
-    {
-        "pergunta": "O Microsoft Windows é classificado como:",
-        "alternativas": [
-            "Sistema operacional desenvolvido para gerenciar os recursos do computador.",
-            "Software aplicativo utilizado para edição de textos.",
-            "Dispositivo de armazenamento de dados.",
-            "Software utilizado exclusivamente para acesso à internet.",
-            "Linguagem de programação."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! O Windows é um sistema operacional responsável pelo gerenciamento dos recursos do computador.",
-        "feedbackErro": "A resposta correta é:\n\nSistema operacional desenvolvido para gerenciar os recursos do computador.\n\nComentário:\nO Windows é um sistema operacional responsável pelo gerenciamento dos recursos do computador.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Windows = Sistema Operacional.",
-        "subtopico": "fundamentos_e_classificacao"
-    },
-    {
-        "pergunta": "Sobre o sistema operacional Linux, assinale a alternativa correta.",
-        "alternativas": [
-            "É um software proprietário desenvolvido pela Microsoft.",
-            "É um aplicativo utilizado para edição de planilhas.",
-            "É um sistema operacional livre e de código aberto.",
-            "Funciona exclusivamente em servidores.",
-            "Não possui interface gráfica."
+            "Gerenciar diretamente memória, processador e dispositivos para permitir a inicialização dos demais programas instalados.",
+            "Intermediar a comunicação de baixo nível entre o sistema operacional e cada componente físico conectado ao equipamento.",
+            "Executar tarefas específicas de produtividade solicitadas pelo usuário, como cálculos, tabelas e análise de dados.",
+            "Manter instruções permanentes de inicialização gravadas no dispositivo para preparar o hardware antes do sistema operacional.",
+            "Controlar o carregamento do núcleo do sistema e distribuir tempo de processamento entre os programas em execução."
         ],
         "correta": 2,
-        "feedbackAcerto": "Perfeito! O Linux é conhecido por ser um sistema operacional livre e de código aberto.",
-        "feedbackErro": "A resposta correta é:\n\nÉ um sistema operacional livre e de código aberto.\n\nComentário:\nO Linux é conhecido por ser um sistema operacional livre e de código aberto.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Linux = livre e open source.",
-        "subtopico": "fundamentos_e_classificacao"
+        "id": "software_003",
+        "assunto": "software",
+        "feedbackAcerto": "Planilhas são softwares aplicativos porque atendem tarefas específicas do usuário.",
+        "feedbackErro": "A resposta correta é:\n\nExecutar tarefas específicas de produtividade solicitadas pelo usuário, como cálculos, tabelas e análise de dados.\n\nComentário:\nPlanilhas são softwares aplicativos porque atendem tarefas específicas do usuário.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Aplicativo resolve uma necessidade do usuário; sistema operacional gerencia os recursos da máquina."
     },
     {
-        "pergunta": "O Android é classificado como:",
+        "pergunta": "Uma suíte de escritório é melhor caracterizada como:",
+        "subtopico": "fundamentos_e_classificacao",
         "alternativas": [
-            "Editor de textos.",
-            "Antivírus.",
-            "Hardware de comunicação.",
-            "Sistema operacional para dispositivos móveis.",
-            "Programa de compactação."
+            "Um conjunto de drivers destinado a reconhecer impressoras, scanners e outros periféricos conectados ao computador.",
+            "Um pacote de rotinas do sistema operacional voltado ao gerenciamento de memória, processos e dispositivos internos.",
+            "Um grupo de firmwares usados para inicializar componentes e manter configurações básicas do hardware instalado.",
+            "Um conjunto integrado de aplicativos de produtividade, normalmente incluindo texto, planilha e apresentação.",
+            "Um ambiente de segurança voltado à detecção de ameaças, controle de conexões e atualização de assinaturas."
         ],
         "correta": 3,
-        "feedbackAcerto": "Correto! O Android é um sistema operacional utilizado principalmente em smartphones e tablets.",
-        "feedbackErro": "A resposta correta é:\n\nSistema operacional para dispositivos móveis.\n\nComentário:\nO Android é um sistema operacional utilizado principalmente em smartphones e tablets.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Android = sistema operacional móvel.",
-        "subtopico": "fundamentos_e_classificacao"
+        "id": "software_004",
+        "assunto": "software",
+        "feedbackAcerto": "Microsoft Office e LibreOffice são suítes com vários aplicativos de produtividade.",
+        "feedbackErro": "A resposta correta é:\n\nUm conjunto integrado de aplicativos de produtividade, normalmente incluindo texto, planilha e apresentação.\n\nComentário:\nMicrosoft Office e LibreOffice são suítes com vários aplicativos de produtividade.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Não confunda suíte de aplicativos com pacote de drivers ou utilitários de manutenção."
     },
     {
-        "pergunta": "Os drivers de dispositivos possuem como principal finalidade:",
+        "pergunta": "Em relação ao Linux, a afirmação mais precisa em uma prova de informática básica é:",
+        "subtopico": "fundamentos_e_classificacao",
         "alternativas": [
-            "Armazenar arquivos do usuário.",
-            "Permitir a comunicação entre o sistema operacional e os dispositivos de hardware.",
-            "Substituir a memória RAM.",
-            "Executar planilhas eletrônicas.",
-            "Proteger o computador contra vírus."
+            "É um aplicativo de escritório voltado à edição de documentos, planilhas e apresentações em formato aberto.",
+            "É um firmware usado na inicialização de computadores pessoais e na configuração básica dos componentes físicos.",
+            "É um driver genérico responsável por permitir que periféricos de fabricantes distintos sejam reconhecidos pelo Windows.",
+            "É um compactador de arquivos distribuído com interface gráfica para criar pacotes ZIP e outros formatos.",
+            "É uma família de sistemas operacionais baseada em kernel Linux, distribuída em diferentes versões e projetos."
+        ],
+        "correta": 4,
+        "id": "software_005",
+        "assunto": "software",
+        "feedbackAcerto": "Linux designa uma família de sistemas operacionais/distribuições baseadas no kernel Linux.",
+        "feedbackErro": "A resposta correta é:\n\nÉ uma família de sistemas operacionais baseada em kernel Linux, distribuída em diferentes versões e projetos.\n\nComentário:\nLinux designa uma família de sistemas operacionais/distribuições baseadas no kernel Linux.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Evite reduzir Linux a uma única distribuição ou a um aplicativo específico."
+    },
+    {
+        "pergunta": "O Android, quando considerado no contexto de classificação de software, é:",
+        "subtopico": "fundamentos_e_classificacao",
+        "alternativas": [
+            "Um sistema operacional voltado principalmente a dispositivos móveis e baseado em um conjunto próprio de serviços e aplicações.",
+            "Um software utilitário usado para compactar arquivos e reduzir o espaço ocupado no armazenamento do dispositivo.",
+            "Um aplicativo de navegação cuja função central é interpretar páginas Web e executar recursos de sites acessados pelo usuário.",
+            "Um firmware de inicialização responsável por testar componentes físicos e preparar o equipamento antes do carregamento do sistema.",
+            "Um pacote de produtividade destinado à criação de textos, planilhas e apresentações em dispositivos móveis."
+        ],
+        "correta": 0,
+        "id": "software_006",
+        "assunto": "software",
+        "feedbackAcerto": "Android é sistema operacional móvel.",
+        "feedbackErro": "A resposta correta é:\n\nUm sistema operacional voltado principalmente a dispositivos móveis e baseado em um conjunto próprio de serviços e aplicações.\n\nComentário:\nAndroid é sistema operacional móvel.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "A banca pode misturar sistema operacional, navegador, utilitário e suíte de produtividade."
+    },
+    {
+        "pergunta": "Em uma estação de trabalho, o antivírus, o compactador de arquivos e a ferramenta de limpeza são normalmente classificados como:",
+        "subtopico": "fundamentos_e_classificacao",
+        "alternativas": [
+            "Softwares de sistema essenciais, pois substituem o sistema operacional no controle direto de memória e processador.",
+            "Softwares utilitários, pois auxiliam na proteção, organização, manutenção ou gerenciamento do sistema.",
+            "Firmwares de suporte, pois ficam gravados nos dispositivos e executam antes da inicialização do sistema operacional.",
+            "Drivers de uso geral, pois traduzem comandos dos aplicativos para todos os componentes físicos do computador.",
+            "Aplicativos de produtividade, pois têm como função central produzir documentos, planilhas e apresentações."
         ],
         "correta": 1,
-        "feedbackAcerto": "Correto! Os drivers permitem que o sistema operacional reconheça e utilize os dispositivos de hardware.",
-        "feedbackErro": "A resposta correta é:\n\nPermitir a comunicação entre o sistema operacional e os dispositivos de hardware.\n\nComentário:\nOs drivers permitem que o sistema operacional reconheça e utilize os dispositivos de hardware.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Driver = comunicação entre software e hardware.",
-        "subtopico": "drivers_firmware_e_dispositivos"
+        "id": "software_007",
+        "assunto": "software",
+        "feedbackAcerto": "Utilitários apoiam manutenção, proteção, compactação e gerenciamento.",
+        "feedbackErro": "A resposta correta é:\n\nSoftwares utilitários, pois auxiliam na proteção, organização, manutenção ou gerenciamento do sistema.\n\nComentário:\nUtilitários apoiam manutenção, proteção, compactação e gerenciamento.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Nem todo programa instalado é aplicativo de produtividade."
     },
     {
-        "pergunta": "Uma das principais finalidades das atualizações de software é:",
+        "pergunta": "Em relação à diferença entre programa e processo, é correto afirmar que:",
+        "subtopico": "fundamentos_e_classificacao",
         "alternativas": [
-            "Reduzir a segurança do sistema.",
-            "Eliminar a necessidade de antivírus.",
-            "Transformar aplicativos em hardware.",
-            "Substituir permanentemente o sistema operacional.",
-            "Corrigir falhas, melhorar o desempenho e aumentar a segurança."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Excelente! Atualizações ajudam a corrigir falhas e melhorar a segurança dos sistemas.",
-        "feedbackErro": "A resposta correta é:\n\nCorrigir falhas, melhorar o desempenho e aumentar a segurança.\n\nComentário:\nAtualizações ajudam a corrigir falhas e melhorar a segurança dos sistemas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Atualização = correção + desempenho + segurança.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "Os softwares utilitários têm como principal objetivo:",
-        "alternativas": [
-            "Substituir o sistema operacional.",
-            "Executar exclusivamente planilhas eletrônicas.",
-            "Auxiliar na manutenção, proteção e otimização do sistema.",
-            "Controlar diretamente o processador.",
-            "Substituir os dispositivos de hardware."
+            "Programa é a atividade em execução na memória; processo é o arquivo permanente que contém as instruções do aplicativo.",
+            "Programa e processo são termos equivalentes, usados para indicar qualquer arquivo executável instalado no sistema.",
+            "Programa é um conjunto de instruções armazenado; processo é uma instância desse programa em execução.",
+            "Processo designa o dispositivo físico que executa instruções; programa designa a memória usada pelo processador.",
+            "Processo corresponde ao sistema operacional completo; programa corresponde aos recursos de hardware gerenciados por ele."
         ],
         "correta": 2,
-        "feedbackAcerto": "Correto! Os utilitários auxiliam na manutenção e no funcionamento adequado do sistema.",
-        "feedbackErro": "A resposta correta é:\n\nAuxiliar na manutenção, proteção e otimização do sistema.\n\nComentário:\nOs utilitários auxiliam na manutenção e no funcionamento adequado do sistema.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Utilitário = manutenção e suporte.",
-        "subtopico": "fundamentos_e_classificacao"
+        "id": "software_008",
+        "assunto": "software",
+        "feedbackAcerto": "O programa está armazenado; quando executado, origina um processo com recursos associados.",
+        "feedbackErro": "A resposta correta é:\n\nPrograma é um conjunto de instruções armazenado; processo é uma instância desse programa em execução.\n\nComentário:\nO programa está armazenado; quando executado, origina um processo com recursos associados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "A banca pode cobrar a diferença entre arquivo executável, programa instalado e processo em execução."
     },
     {
-        "pergunta": "A principal função de um software antivírus é:",
+        "pergunta": "Um recurso como leitor de tela, ampliação de interface e alto contraste está relacionado principalmente à:",
+        "subtopico": "fundamentos_e_classificacao",
         "alternativas": [
-            "Realizar edição de documentos.",
-            "Detectar, prevenir e remover softwares maliciosos.",
-            "Gerenciar o hardware do computador.",
-            "Compactar arquivos.",
-            "Controlar a memória RAM."
+            "Virtualização do sistema, pois cria ambientes separados para executar aplicações em configurações independentes.",
+            "Compactação de dados, pois reduz o tamanho de arquivos usados por aplicativos com muitos elementos visuais.",
+            "Licenciamento do programa, pois controla quais usuários podem instalar recursos adicionais em cada equipamento.",
+            "Acessibilidade digital, pois busca ampliar as condições de uso do software por pessoas com diferentes necessidades.",
+            "Atualização de firmware, pois altera diretamente o comportamento dos componentes físicos responsáveis pela exibição."
+        ],
+        "correta": 3,
+        "id": "software_009",
+        "assunto": "software",
+        "feedbackAcerto": "Recursos de acessibilidade permitem que interfaces e conteúdos sejam utilizados por públicos diversos.",
+        "feedbackErro": "A resposta correta é:\n\nAcessibilidade digital, pois busca ampliar as condições de uso do software por pessoas com diferentes necessidades.\n\nComentário:\nRecursos de acessibilidade permitem que interfaces e conteúdos sejam utilizados por públicos diversos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Leitor de tela e alto contraste são recursos de acessibilidade, não de desempenho ou licenciamento."
+    },
+    {
+        "pergunta": "Um aplicativo instalado em um computador pode depender de bibliotecas ou componentes adicionais. Nesse contexto, dependência de software é:",
+        "subtopico": "fundamentos_e_classificacao",
+        "alternativas": [
+            "Uma cópia temporária criada pelo sistema para permitir que o usuário retorne ao arquivo original após uma edição malsucedida.",
+            "Uma licença adicional exigida para que o usuário possa abrir arquivos produzidos por versões anteriores do mesmo programa.",
+            "Um driver de rede usado para permitir que programas acessem serviços externos sem configurar protocolos manualmente.",
+            "Um arquivo de preferências criado pelo aplicativo para registrar aparência, idioma e opções escolhidas pelo usuário.",
+            "Um componente necessário para que outro programa consiga instalar, iniciar ou executar determinadas funções corretamente."
+        ],
+        "correta": 4,
+        "id": "software_010",
+        "assunto": "software",
+        "feedbackAcerto": "Dependências são bibliotecas, runtimes ou componentes dos quais outro software necessita.",
+        "feedbackErro": "A resposta correta é:\n\nUm componente necessário para que outro programa consiga instalar, iniciar ou executar determinadas funções corretamente.\n\nComentário:\nDependências são bibliotecas, runtimes ou componentes dos quais outro software necessita.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Falhas de dependência podem impedir instalação ou execução mesmo quando o programa principal está íntegro."
+    },
+    {
+        "pergunta": "Após reinstalar o sistema operacional, a impressora aparece conectada, mas não imprime corretamente. A causa mais compatível é:",
+        "subtopico": "drivers_firmware_e_dispositivos",
+        "alternativas": [
+            "Ausência, incompatibilidade ou falha no driver responsável pela comunicação entre o sistema e a impressora.",
+            "Falta de um editor de textos, já que a impressão depende de um aplicativo de produtividade instalado no computador.",
+            "Ausência de um compactador de arquivos, pois o sistema precisa reduzir o tamanho do documento antes de enviá-lo ao equipamento.",
+            "Falha no navegador padrão, pois o sistema utiliza o mecanismo de páginas Web para gerar todos os trabalhos de impressão.",
+            "Problema na licença do sistema, já que dispositivos externos deixam de receber comandos quando a ativação não está concluída."
+        ],
+        "correta": 0,
+        "id": "software_011",
+        "assunto": "software",
+        "feedbackAcerto": "Drivers permitem que o sistema operacional se comunique corretamente com o hardware.",
+        "feedbackErro": "A resposta correta é:\n\nAusência, incompatibilidade ou falha no driver responsável pela comunicação entre o sistema e a impressora.\n\nComentário:\nDrivers permitem que o sistema operacional se comunique corretamente com o hardware.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Se o dispositivo é detectado mas funciona mal após reinstalação, pense primeiro em driver."
+    },
+    {
+        "pergunta": "Firmware e driver não são sinônimos. A diferença adequada é:",
+        "subtopico": "drivers_firmware_e_dispositivos",
+        "alternativas": [
+            "Firmware é um aplicativo instalado pelo usuário; driver é a parte física responsável por executar os comandos do programa.",
+            "Firmware fica associado ao próprio dispositivo; driver permite que o sistema operacional se comunique com esse dispositivo.",
+            "Firmware administra documentos e configurações pessoais; driver gerencia contas e permissões no sistema operacional.",
+            "Firmware é usado para editar arquivos do dispositivo; driver é empregado para compactar dados antes da gravação no hardware.",
+            "Firmware controla licenças de uso; driver verifica a autenticidade dos programas instalados pelo usuário no equipamento."
         ],
         "correta": 1,
-        "feedbackAcerto": "Perfeito! O antivírus atua na proteção do sistema contra ameaças digitais.",
-        "feedbackErro": "A resposta correta é:\n\nDetectar, prevenir e remover softwares maliciosos.\n\nComentário:\nO antivírus atua na proteção do sistema contra ameaças digitais.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Antivírus = proteção contra malware.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
+        "id": "software_012",
+        "assunto": "software",
+        "feedbackAcerto": "Firmware é software embarcado; driver é software de interface entre sistema e hardware.",
+        "feedbackErro": "A resposta correta é:\n\nFirmware fica associado ao próprio dispositivo; driver permite que o sistema operacional se comunique com esse dispositivo.\n\nComentário:\nFirmware é software embarcado; driver é software de interface entre sistema e hardware.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "A banca gosta de inverter as funções de firmware e driver."
     },
     {
-        "pergunta": "Programas como WinRAR e 7-Zip são exemplos de:",
+        "pergunta": "BIOS e UEFI são exemplos de:",
+        "subtopico": "drivers_firmware_e_dispositivos",
         "alternativas": [
-            "Compactadores de arquivos.",
-            "Sistemas operacionais.",
-            "Editores de texto.",
-            "Drivers de dispositivos.",
-            "Antivírus."
+            "Aplicativos de manutenção usados para remover programas, limpar arquivos temporários e liberar espaço em disco.",
+            "Drivers universais destinados a permitir que qualquer sistema operacional reconheça dispositivos sem software adicional.",
+            "Firmware utilizado na inicialização do computador e na configuração básica do hardware antes do sistema operacional.",
+            "Sistemas de arquivos responsáveis por organizar pastas, permissões e metadados nas unidades de armazenamento.",
+            "Suítes de segurança que verificam ameaças durante o carregamento do sistema e atualizam assinaturas pela Internet."
         ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! WinRAR e 7-Zip são programas utilizados para compactação e descompactação de arquivos.",
-        "feedbackErro": "A resposta correta é:\n\nCompactadores de arquivos.\n\nComentário:\nWinRAR e 7-Zip são programas utilizados para compactação e descompactação de arquivos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "WinRAR = compactação.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
+        "correta": 2,
+        "id": "software_013",
+        "assunto": "software",
+        "feedbackAcerto": "BIOS/UEFI são firmwares de inicialização e configuração básica.",
+        "feedbackErro": "A resposta correta é:\n\nFirmware utilizado na inicialização do computador e na configuração básica do hardware antes do sistema operacional.\n\nComentário:\nBIOS/UEFI são firmwares de inicialização e configuração básica.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Inicialização antes do sistema operacional aponta para firmware."
     },
     {
-        "pergunta": "Assinale a alternativa que apresenta apenas navegadores de internet.",
+        "pergunta": "O recurso Plug and Play contribui para que o sistema operacional:",
+        "subtopico": "drivers_firmware_e_dispositivos",
         "alternativas": [
-            "Google Chrome, Mozilla Firefox e Microsoft Edge.",
-            "Windows, Linux e Android.",
-            "Word, Excel e PowerPoint.",
-            "WinRAR, Avast e Chrome.",
-            "LibreOffice Writer, Chrome e Firefox."
+            "Converta aplicativos de 32 bits em 64 bits para aproveitar melhor o processador instalado no computador.",
+            "Crie automaticamente cópias de segurança de todos os arquivos armazenados em dispositivos conectados por USB.",
+            "Atualize o firmware de qualquer periférico conectado sem verificar modelo, versão ou compatibilidade do fabricante.",
+            "Detecte dispositivos conectados e tente configurá-los usando drivers e informações disponíveis no sistema.",
+            "Substitua permissões de usuário por configurações de hardware em qualquer cenário que um novo dispositivo for reconhecido."
         ],
-        "correta": 0,
-        "feedbackAcerto": "Excelente! Chrome, Firefox e Edge são navegadores web.",
-        "feedbackErro": "A resposta correta é:\n\nGoogle Chrome, Mozilla Firefox e Microsoft Edge.\n\nComentário:\nChrome, Firefox e Edge são navegadores web.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Browser = navegador.",
-        "subtopico": "fundamentos_e_classificacao"
+        "correta": 3,
+        "id": "software_014",
+        "assunto": "software",
+        "feedbackAcerto": "Plug and Play automatiza detecção e configuração de dispositivos, quando há suporte adequado.",
+        "feedbackErro": "A resposta correta é:\n\nDetecte dispositivos conectados e tente configurá-los usando drivers e informações disponíveis no sistema.\n\nComentário:\nPlug and Play automatiza detecção e configuração de dispositivos, quando há suporte adequado.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Detecção automática não significa que todo dispositivo funcionará sem driver compatível."
     },
     {
-        "pergunta": "Sobre as suítes de escritório Microsoft Office e LibreOffice, assinale a alternativa correta.",
+        "pergunta": "Uma atualização de firmware deve ser feita com cuidado porque:",
+        "subtopico": "drivers_firmware_e_dispositivos",
         "alternativas": [
-            "São sistemas operacionais.",
-            "São softwares utilizados exclusivamente para acesso à internet.",
-            "Substituem o sistema operacional.",
-            "São dispositivos de hardware.",
-            "São conjuntos de aplicativos destinados à produtividade e ao trabalho com documentos."
+            "A atualização altera arquivos pessoais do usuário e pode converter documentos para formatos incompatíveis com o sistema instalado.",
+            "O processo modifica as licenças dos aplicativos e pode impedir que programas de produtividade sejam ativados depois da reinicialização.",
+            "A atualização substitui o sistema de arquivos da unidade e pode reorganizar pastas sem preservar permissões anteriores.",
+            "O procedimento remove os drivers do sistema e obriga a reinstalação de todos os programas associados ao dispositivo atualizado.",
+            "Uma interrupção ou arquivo incompatível pode comprometer o funcionamento do dispositivo e exigir procedimento de recuperação."
         ],
         "correta": 4,
-        "feedbackAcerto": "Correto! Ambas são suítes de aplicativos voltadas à criação e edição de documentos.",
-        "feedbackErro": "A resposta correta é:\n\nSão conjuntos de aplicativos destinados à produtividade e ao trabalho com documentos.\n\nComentário:\nAmbas são suítes de aplicativos voltadas à criação e edição de documentos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Office e LibreOffice = suítes de escritório.",
-        "subtopico": "fundamentos_e_classificacao"
+        "id": "software_015",
+        "assunto": "software",
+        "feedbackAcerto": "Falhas em atualização de firmware podem afetar diretamente o dispositivo.",
+        "feedbackErro": "A resposta correta é:\n\nUma interrupção ou arquivo incompatível pode comprometer o funcionamento do dispositivo e exigir procedimento de recuperação.\n\nComentário:\nFalhas em atualização de firmware podem afetar diretamente o dispositivo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Firmware não deve ser atualizado como se fosse um aplicativo comum."
     },
     {
-        "pergunta": "Um software disponibilizado gratuitamente por tempo limitado ou com funcionalidades restritas para avaliação é denominado:",
+        "pergunta": "A assinatura digital de um driver ajuda principalmente a:",
+        "subtopico": "drivers_firmware_e_dispositivos",
         "alternativas": [
-            "Firmware.",
-            "Shareware.",
-            "Sistema Operacional.",
-            "Open Source.",
-            "Driver."
+            "Verificar a origem e a integridade do software antes de sua instalação ou carregamento pelo sistema.",
+            "Garantir que o dispositivo terá desempenho máximo independentemente da versão do sistema operacional utilizada pelo usuário.",
+            "Transformar um driver antigo em versão compatível com qualquer equipamento do mesmo fabricante sem atualização adicional.",
+            "Substituir a necessidade de antivírus, pois um driver assinado fica protegido contra qualquer alteração posterior no computador.",
+            "Permitir que o sistema instale o driver mesmo quando o arquivo não corresponde ao modelo de hardware conectado à máquina."
+        ],
+        "correta": 0,
+        "id": "software_016",
+        "assunto": "software",
+        "feedbackAcerto": "Assinatura auxilia na verificação de origem e integridade, mas não garante compatibilidade ou ausência absoluta de falhas.",
+        "feedbackErro": "A resposta correta é:\n\nVerificar a origem e a integridade do software antes de sua instalação ou carregamento pelo sistema.\n\nComentário:\nAssinatura auxilia na verificação de origem e integridade, mas não garante compatibilidade ou ausência absoluta de falhas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Assinatura digital não é sinônimo de desempenho ou compatibilidade universal."
+    },
+    {
+        "pergunta": "O spooler de impressão é o componente que:",
+        "subtopico": "drivers_firmware_e_dispositivos",
+        "alternativas": [
+            "Converte qualquer documento para PDF antes de encaminhar os dados ao dispositivo de impressão selecionado pelo usuário.",
+            "Organiza a fila de trabalhos e controla o envio das tarefas de impressão para a impressora.",
+            "Atualiza o firmware da impressora em qualquer cenário que um novo trabalho é enviado pelo computador conectado à rede.",
+            "Substitui o driver da impressora e interpreta diretamente todos os comandos produzidos pelos aplicativos instalados.",
+            "Gerencia permissões de acesso aos arquivos que serão impressos e impede alterações enquanto o trabalho estiver na fila."
         ],
         "correta": 1,
-        "feedbackAcerto": "Perfeito! Shareware é um software distribuído para teste ou avaliação.",
-        "feedbackErro": "A resposta correta é:\n\nShareware.\n\nComentário:\nShareware é um software distribuído para teste ou avaliação.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Shareware = avaliação.",
-        "subtopico": "licenciamento_e_distribuicao"
+        "id": "software_017",
+        "assunto": "software",
+        "feedbackAcerto": "O spooler mantém e gerencia a fila de impressão.",
+        "feedbackErro": "A resposta correta é:\n\nOrganiza a fila de trabalhos e controla o envio das tarefas de impressão para a impressora.\n\nComentário:\nO spooler mantém e gerencia a fila de impressão.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Fila de impressão e envio de trabalhos são palavras-chave para spooler."
     },
     {
-        "pergunta": "Assinale a alternativa que caracteriza corretamente um software Open Source.",
+        "pergunta": "Depois de uma atualização do sistema operacional, um periférico antigo deixa de funcionar. A explicação mais adequada é:",
+        "subtopico": "drivers_firmware_e_dispositivos",
         "alternativas": [
-            "É obrigatoriamente pago.",
-            "Não permite modificações pelos usuários.",
-            "Possui código-fonte aberto para estudo e modificação conforme a licença adotada.",
-            "Funciona apenas em servidores.",
-            "É um tipo de hardware."
+            "O firmware do computador é removido em cada atualização do sistema, exigindo gravação completa antes de usar qualquer periférico.",
+            "A atualização converte programas instalados em aplicativos Web e impede que dispositivos locais sejam acessados por software desktop.",
+            "O driver existente pode ter perdido compatibilidade com a nova versão do sistema e exigir atualização ou substituição.",
+            "O sistema altera fisicamente a interface do periférico, tornando incompatíveis os cabos e conectores usados antes da atualização.",
+            "A nova versão desativa o armazenamento local e passa a exigir que drivers sejam executados diretamente a partir de serviços em nuvem."
         ],
         "correta": 2,
-        "feedbackAcerto": "Correto! Open Source significa código aberto.",
-        "feedbackErro": "A resposta correta é:\n\nPossui código-fonte aberto para estudo e modificação conforme a licença adotada.\n\nComentário:\nOpen Source significa código aberto.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Open Source = código aberto.",
-        "subtopico": "licenciamento_e_distribuicao"
+        "id": "software_018",
+        "assunto": "software",
+        "feedbackAcerto": "Mudanças no sistema podem exigir drivers compatíveis com a nova versão.",
+        "feedbackErro": "A resposta correta é:\n\nO driver existente pode ter perdido compatibilidade com a nova versão do sistema e exigir atualização ou substituição.\n\nComentário:\nMudanças no sistema podem exigir drivers compatíveis com a nova versão.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Problema surgido logo após atualização de sistema pode estar ligado à compatibilidade de driver."
     },
     {
-        "pergunta": "Um software cujo código-fonte não é disponibilizado ao público e cujo uso depende das regras estabelecidas pelo fabricante é denominado:",
+        "pergunta": "Uma instituição adia por meses as atualizações de um programa amplamente utilizado. O principal risco dessa prática é:",
+        "subtopico": "atualizacoes_manutencao_e_riscos",
         "alternativas": [
-            "Open Source.",
-            "Shareware.",
-            "Freeware.",
-            "Software Proprietário.",
-            "Firmware."
+            "Reduzir a capacidade do processador, pois aplicativos desatualizados passam a limitar fisicamente a frequência de operação do hardware.",
+            "Converter documentos recentes para formatos antigos, já que programas sem atualização modificam automaticamente os arquivos abertos.",
+            "Impedir o uso de armazenamento externo, pois versões antigas deixam de reconhecer unidades conectadas ao sistema operacional.",
+            "Manter vulnerabilidades e falhas conhecidas sem correção, aumentando a exposição a problemas de segurança e compatibilidade.",
+            "Desativar contas de usuário, uma vez que atualizações pendentes bloqueiam permissões locais e redefinem perfis após determinado período."
         ],
         "correta": 3,
-        "feedbackAcerto": "Correto! Softwares proprietários possuem restrições definidas pelo desenvolvedor.",
-        "feedbackErro": "A resposta correta é:\n\nSoftware Proprietário.\n\nComentário:\nSoftwares proprietários possuem restrições definidas pelo desenvolvedor.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Proprietário = código fechado.",
-        "subtopico": "licenciamento_e_distribuicao"
+        "id": "software_019",
+        "assunto": "software",
+        "feedbackAcerto": "Atualizações corrigem vulnerabilidades, defeitos e problemas de compatibilidade.",
+        "feedbackErro": "A resposta correta é:\n\nManter vulnerabilidades e falhas conhecidas sem correção, aumentando a exposição a problemas de segurança e compatibilidade.\n\nComentário:\nAtualizações corrigem vulnerabilidades, defeitos e problemas de compatibilidade.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Em prova, atraso de atualização costuma ser associado a risco de segurança e suporte."
     },
     {
-        "pergunta": "\nAnalise as afirmativas abaixo:\n\nI. Softwares Freeware são necessariamente Open Source.\n\nII. Softwares Shareware normalmente permitem utilização para avaliação.\n\nIII. Softwares Open Source possuem código-fonte disponível conforme a licença adotada.\n\nAssinale a alternativa correta.\n",
+        "pergunta": "Um patch de software é normalmente empregado para:",
+        "subtopico": "atualizacoes_manutencao_e_riscos",
         "alternativas": [
-            "Apenas II e III estão corretas.",
-            "Apenas I está correta.",
-            "Apenas II está correta.",
-            "I, II e III estão corretas.",
-            "Apenas I e III estão corretas."
+            "Substituir o sistema operacional completo por outra plataforma e migrar automaticamente os aplicativos instalados no equipamento.",
+            "Reformatar a unidade de armazenamento para aplicar uma estrutura de arquivos mais adequada à versão atual do programa.",
+            "Converter um programa proprietário em software livre mediante inclusão de novos termos de licença no instalador.",
+            "Criar uma máquina virtual com a versão anterior do aplicativo antes de executar qualquer alteração no ambiente de produção.",
+            "Corrigir falhas pontuais, vulnerabilidades ou pequenos defeitos sem representar, por si, uma nova versão principal."
+        ],
+        "correta": 4,
+        "id": "software_020",
+        "assunto": "software",
+        "feedbackAcerto": "Patch é correção pontual, muitas vezes de segurança ou estabilidade.",
+        "feedbackErro": "A resposta correta é:\n\nCorrigir falhas pontuais, vulnerabilidades ou pequenos defeitos sem representar, por si, uma nova versão principal.\n\nComentário:\nPatch é correção pontual, muitas vezes de segurança ou estabilidade.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Patch não é sinônimo de atualização principal ou troca de plataforma."
+    },
+    {
+        "pergunta": "Após uma atualização causar incompatibilidade em um sistema institucional, a equipe decide voltar à versão anterior. Esse procedimento é chamado de:",
+        "subtopico": "atualizacoes_manutencao_e_riscos",
+        "alternativas": [
+            "Rollback, pois restaura uma versão ou estado anterior para recuperar a operação do software.",
+            "Patch, pois aplica uma correção incremental mantendo necessariamente a versão que apresentou a incompatibilidade.",
+            "Cache, pois recupera arquivos temporários para substituir os componentes instalados pela atualização mais recente.",
+            "Spool, pois recoloca em fila os arquivos usados antes da atualização e reexecuta o instalador em ordem inversa.",
+            "Sandbox, pois isola a versão nova e remove automaticamente todas as alterações feitas no sistema operacional."
         ],
         "correta": 0,
-        "feedbackAcerto": "Excelente! Apenas as afirmativas II e III estão corretas.",
-        "feedbackErro": "A resposta correta é:\n\nApenas II e III estão corretas.\n\nComentário:\nApenas as afirmativas II e III estão corretas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Freeware ≠ Open Source.",
-        "subtopico": "licenciamento_e_distribuicao"
+        "id": "software_021",
+        "assunto": "software",
+        "feedbackAcerto": "Rollback é o retorno a versão ou estado anterior.",
+        "feedbackErro": "A resposta correta é:\n\nRollback, pois restaura uma versão ou estado anterior para recuperar a operação do software.\n\nComentário:\nRollback é o retorno a versão ou estado anterior.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Se a questão fala em reverter atualização, procure rollback."
     },
     {
-        "pergunta": "A ausência do driver adequado para um dispositivo pode resultar em:",
+        "pergunta": "Antes de instalar uma atualização crítica em vários computadores de uma escola, a prática mais prudente é:",
+        "subtopico": "atualizacoes_manutencao_e_riscos",
         "alternativas": [
-            "Melhoria automática do desempenho.",
-            "Funcionamento parcial ou total impossibilidade de utilização do dispositivo.",
-            "Aumento da capacidade da memória RAM.",
-            "Substituição automática do hardware.",
-            "Conversão do dispositivo em software."
+            "Aplicar a atualização simultaneamente em todos os equipamentos para evitar diferenças temporárias entre as versões instaladas.",
+            "Testar a atualização, manter possibilidade de restauração ou backup e planejar sua aplicação de forma controlada.",
+            "Desativar os mecanismos de proteção durante o processo para impedir que verificações de segurança atrasem a instalação dos arquivos.",
+            "Remover os programas existentes antes da atualização para evitar que bibliotecas antigas sejam reutilizadas pelo sistema operacional.",
+            "Excluir pontos de restauração anteriores para liberar espaço e assegurar que o sistema mantenha em especial os componentes mais recentes."
         ],
         "correta": 1,
-        "feedbackAcerto": "Perfeito! Sem o driver correto, o sistema operacional pode não reconhecer adequadamente o dispositivo.",
-        "feedbackErro": "A resposta correta é:\n\nFuncionamento parcial ou total impossibilidade de utilização do dispositivo.\n\nComentário:\nSem o driver correto, o sistema operacional pode não reconhecer adequadamente o dispositivo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Sem driver = sem comunicação adequada.",
-        "subtopico": "drivers_firmware_e_dispositivos"
+        "id": "software_022",
+        "assunto": "software",
+        "feedbackAcerto": "Atualizações críticas devem ser planejadas, testadas e acompanhadas de estratégia de recuperação.",
+        "feedbackErro": "A resposta correta é:\n\nTestar a atualização, manter possibilidade de restauração ou backup e planejar sua aplicação de forma controlada.\n\nComentário:\nAtualizações críticas devem ser planejadas, testadas e acompanhadas de estratégia de recuperação.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Em ambientes institucionais, atualização sem teste pode ampliar o impacto de uma falha."
     },
     {
-        "pergunta": "Uma vantagem das atualizações automáticas de software é:",
+        "pergunta": "Um falso positivo em um software de segurança ocorre quando:",
+        "subtopico": "atualizacoes_manutencao_e_riscos",
         "alternativas": [
-            "Corrigir vulnerabilidades e manter o sistema mais seguro.",
-            "Eliminar a necessidade de backups.",
-            "Aumentar permanentemente a memória RAM.",
-            "Substituir o sistema operacional.",
-            "Dispensar o uso de antivírus."
+            "Uma ameaça conhecida é detectada corretamente e colocada em quarentena pelo mecanismo de proteção instalado.",
+            "Um arquivo malicioso é bloqueado antes de ser executado e o usuário recebe aviso sobre o risco identificado.",
+            "Um arquivo ou comportamento legítimo é classificado incorretamente como ameaça.",
+            "Uma atualização corrige a assinatura usada para reconhecer um código malicioso que circulava em versões anteriores.",
+            "Um programa suspeito é executado em ambiente isolado para observar seu comportamento antes de permitir acesso ao sistema."
+        ],
+        "correta": 2,
+        "id": "software_023",
+        "assunto": "software",
+        "feedbackAcerto": "Falso positivo é detecção indevida de algo legítimo.",
+        "feedbackErro": "A resposta correta é:\n\nUm arquivo ou comportamento legítimo é classificado incorretamente como ameaça.\n\nComentário:\nFalso positivo é detecção indevida de algo legítimo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Positivo não significa necessariamente que a detecção esteja correta."
+    },
+    {
+        "pergunta": "Bases de assinaturas de antivírus são utilizadas para:",
+        "subtopico": "atualizacoes_manutencao_e_riscos",
+        "alternativas": [
+            "Registrar licenças de programas instalados e impedir que aplicativos sem ativação sejam executados pelo sistema operacional.",
+            "Armazenar cópias dos arquivos pessoais para restaurá-los quando um programa deixa de funcionar após uma atualização.",
+            "Manter lista de drivers compatíveis com os dispositivos conectados e instalar automaticamente a versão indicada pelo fabricante.",
+            "Auxiliar no reconhecimento de padrões associados a ameaças conhecidas e apoiar mecanismos de detecção.",
+            "Controlar permissões de leitura e gravação em pastas, substituindo as regras definidas pelas contas de usuário no sistema."
+        ],
+        "correta": 3,
+        "id": "software_024",
+        "assunto": "software",
+        "feedbackAcerto": "Assinaturas ajudam a reconhecer ameaças conhecidas; soluções atuais também usam outras técnicas.",
+        "feedbackErro": "A resposta correta é:\n\nAuxiliar no reconhecimento de padrões associados a ameaças conhecidas e apoiar mecanismos de detecção.\n\nComentário:\nAssinaturas ajudam a reconhecer ameaças conhecidas; soluções atuais também usam outras técnicas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Não trate assinatura como único mecanismo possível de detecção."
+    },
+    {
+        "pergunta": "Uma extensão de navegador solicita acesso a todas as páginas visitadas. Antes de instalá-la, o usuário deve considerar que:",
+        "subtopico": "atualizacoes_manutencao_e_riscos",
+        "alternativas": [
+            "Extensões são executadas fora do navegador e não conseguem interagir com páginas ou informações abertas pelo usuário.",
+            "Permissões de extensão servem para definir o tamanho ocupado em disco e não interferem no acesso a conteúdo ou dados de navegação.",
+            "A instalação por loja oficial elimina a possibilidade de abuso de permissões e dispensa a análise do que será autorizado.",
+            "O navegador converte extensões em componentes do sistema operacional, de modo que permissões passam a ser controladas pelo firmware.",
+            "As permissões concedidas podem permitir acesso a dados de navegação, por isso origem, necessidade e reputação devem ser avaliadas."
+        ],
+        "correta": 4,
+        "id": "software_025",
+        "assunto": "software",
+        "feedbackAcerto": "Extensões podem receber permissões amplas e acessar dados conforme o que foi autorizado.",
+        "feedbackErro": "A resposta correta é:\n\nAs permissões concedidas podem permitir acesso a dados de navegação, por isso origem, necessidade e reputação devem ser avaliadas.\n\nComentário:\nExtensões podem receber permissões amplas e acessar dados conforme o que foi autorizado.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Loja oficial reduz riscos, mas não substitui a análise de permissões."
+    },
+    {
+        "pergunta": "Em um celular, a permissão solicitada por um aplicativo para usar câmera, microfone ou localização tem a finalidade de:",
+        "subtopico": "atualizacoes_manutencao_e_riscos",
+        "alternativas": [
+            "Controlar o acesso do aplicativo a recursos e dados sensíveis do dispositivo.",
+            "Definir a quantidade de memória RAM que será reservada ao aplicativo enquanto ele permanecer instalado no aparelho.",
+            "Indicar o formato de arquivo que o aplicativo poderá abrir e impedir a associação com outros programas do sistema.",
+            "Determinar se o aplicativo poderá receber atualizações automáticas pela loja usada para sua instalação no dispositivo.",
+            "Selecionar o tipo de licença do programa e limitar o número de usuários autorizados a executar suas funções."
         ],
         "correta": 0,
-        "feedbackAcerto": "Correto! Atualizações ajudam a corrigir falhas e vulnerabilidades conhecidas.",
-        "feedbackErro": "A resposta correta é:\n\nCorrigir vulnerabilidades e manter o sistema mais seguro.\n\nComentário:\nAtualizações ajudam a corrigir falhas e vulnerabilidades conhecidas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Atualização = segurança.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
+        "id": "software_026",
+        "assunto": "software",
+        "feedbackAcerto": "Permissões controlam acesso a recursos como câmera, localização, contatos e armazenamento.",
+        "feedbackErro": "A resposta correta é:\n\nControlar o acesso do aplicativo a recursos e dados sensíveis do dispositivo.\n\nComentário:\nPermissões controlam acesso a recursos como câmera, localização, contatos e armazenamento.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Permissão de aplicativo é controle de acesso a recurso, não licença nem reserva de memória."
     },
     {
-        "pergunta": "Assinale a alternativa que associa corretamente o conceito ao seu significado.",
+        "pergunta": "A verificação de hash divulgada pelo fornecedor de um instalador permite ao usuário:",
+        "subtopico": "atualizacoes_manutencao_e_riscos",
         "alternativas": [
-            "Firmware → software embarcado em dispositivos eletrônicos.",
-            "Driver → software para compactação de arquivos.",
-            "Freeware → software obrigatoriamente de código aberto.",
-            "Shareware → software distribuído exclusivamente mediante pagamento prévio.",
-            "Sistema Operacional → periférico de controle."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Excelente! Firmware é um software embarcado utilizado no controle básico de equipamentos.",
-        "feedbackErro": "A resposta correta é:\n\nFirmware → software embarcado em dispositivos eletrônicos.\n\nComentário:\nFirmware é um software embarcado utilizado no controle básico de equipamentos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Memorize os conceitos fundamentais.",
-        "subtopico": "fundamentos_e_classificacao"
-    },
-    {
-        "pergunta": "\nAnalise as afirmativas abaixo:\n\nI. O Windows é um sistema operacional.\n\nII. O Linux é um software de código aberto.\n\nIII. Drivers permitem a comunicação entre hardware e sistema operacional.\n\nAssinale a alternativa correta.\n",
-        "alternativas": [
-            "Apenas I está correta.",
-            "I, II e III estão corretas.",
-            "Apenas I e II estão corretas.",
-            "Apenas II e III estão corretas.",
-            "Apenas III está correta."
+            "Comprovar que o programa funcionará em qualquer versão do sistema operacional e com qualquer configuração de hardware disponível.",
+            "Comparar a integridade do arquivo baixado com um valor de referência fornecido pela fonte confiável.",
+            "Confirmar que o software não possui falhas de programação ou vulnerabilidades que possam surgir durante sua execução normal.",
+            "Descobrir automaticamente a chave de licença necessária para ativar o programa após a conclusão da instalação no computador.",
+            "Transformar o instalador em arquivo assinado digitalmente quando o fornecedor não incluiu certificado no pacote distribuído."
         ],
         "correta": 1,
-        "feedbackAcerto": "Perfeito! Todas as afirmativas estão corretas.",
-        "feedbackErro": "A resposta correta é:\n\nI, II e III estão corretas.\n\nComentário:\nTodas as afirmativas estão corretas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Julgue cada afirmativa individualmente.",
-        "subtopico": "fundamentos_e_classificacao"
+        "id": "software_027",
+        "assunto": "software",
+        "feedbackAcerto": "Hash ajuda a verificar integridade; se o valor diverge, o arquivo foi alterado ou corrompido.",
+        "feedbackErro": "A resposta correta é:\n\nComparar a integridade do arquivo baixado com um valor de referência fornecido pela fonte confiável.\n\nComentário:\nHash ajuda a verificar integridade; se o valor diverge, o arquivo foi alterado ou corrompido.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Hash não comprova compatibilidade, qualidade ou ausência de vulnerabilidades."
     },
     {
-        "pergunta": "Observe a imagem sobre driver no Gerenciador de Dispositivos e assinale a alternativa correta.",
-        "imagem": "imagens/questoes/software01.png",
+        "pergunta": "Um software legado em uma organização é, em geral:",
+        "subtopico": "atualizacoes_manutencao_e_riscos",
         "alternativas": [
-            "O dispositivo está funcionando normalmente e não apresenta falhas.",
-            "O símbolo indica que o dispositivo está protegido por antivírus.",
-            "O símbolo indica que uma atualização foi concluída com sucesso.",
-            "O símbolo exibido normalmente indica problema de driver ou falha de reconhecimento do dispositivo pelo sistema operacional.",
-            "O símbolo indica que o dispositivo foi removido permanentemente do sistema."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "\nCorreto!\n\nO triângulo amarelo exibido no Gerenciador de Dispositivos normalmente indica que existe algum problema relacionado ao dispositivo.\n\nNa maioria dos casos, o problema está relacionado à ausência, incompatibilidade ou falha do driver utilizado pelo hardware.\n",
-        "feedbackErro": "A resposta correta é:\n\nO símbolo exibido normalmente indica problema de driver ou falha de reconhecimento do dispositivo pelo sistema operacional.\n\nComentário:\nO triângulo amarelo exibido no Gerenciador de Dispositivos normalmente indica que existe algum problema relacionado ao dispositivo.\n\nNa maioria dos casos, o problema está relacionado à ausência, incompatibilidade ou falha do driver utilizado pelo hardware.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Triângulo amarelo no Gerenciador de Dispositivos geralmente indica problema de driver.",
-        "subtopico": "drivers_firmware_e_dispositivos"
-    },
-    {
-        "pergunta": "Observe a imagem sobre arquivo compactado e assinale a alternativa correta.",
-        "imagem": "imagens/questoes/software02.png",
-        "alternativas": [
-            "O arquivo apresentado é um software antivírus.",
-            "Arquivos .zip não podem conter documentos ou pastas.",
-            "A extensão .zip indica que o arquivo foi compactado para reduzir espaço ou facilitar o armazenamento e o envio.",
-            "A extensão .zip identifica exclusivamente arquivos executáveis do Windows.",
-            "Arquivos compactados não podem ser descompactados posteriormente."
+            "Um programa recém-adotado que ainda está em período de testes antes de substituir o sistema atualmente utilizado pela instituição.",
+            "Um aplicativo distribuído gratuitamente e mantido por comunidade, independentemente de sua idade ou situação de suporte.",
+            "Um sistema antigo que continua em uso apesar de limitações de suporte, manutenção, integração ou tecnologia.",
+            "Um programa armazenado em nuvem que não exige instalação local e recebe atualização centralizada pelo fornecedor do serviço.",
+            "Um utilitário portátil que pode ser executado a partir de mídia externa sem registrar componentes permanentes no sistema."
         ],
         "correta": 2,
-        "feedbackAcerto": "\nCorreto!\n\nA extensão .zip indica que o arquivo foi compactado.\n\nA compactação é utilizada para reduzir o tamanho dos arquivos e facilitar o armazenamento, a transferência e o compartilhamento de informações.\n",
-        "feedbackErro": "A resposta correta é:\n\nA extensão .zip indica que o arquivo foi compactado para reduzir espaço ou facilitar o armazenamento e o envio.\n\nComentário:\nA extensão .zip indica que o arquivo foi compactado.\n\nA compactação é utilizada para reduzir o tamanho dos arquivos e facilitar o armazenamento, a transferência e o compartilhamento de informações.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "ZIP = arquivo compactado.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
+        "id": "software_028",
+        "assunto": "software",
+        "feedbackAcerto": "Legado é software antigo ainda necessário, frequentemente com suporte ou integração difíceis.",
+        "feedbackErro": "A resposta correta é:\n\nUm sistema antigo que continua em uso apesar de limitações de suporte, manutenção, integração ou tecnologia.\n\nComentário:\nLegado é software antigo ainda necessário, frequentemente com suporte ou integração difíceis.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Software antigo não é sinônimo de inútil; o ponto é continuidade de uso com limitações."
     },
     {
-        "pergunta": "Observe a imagem sobre o Explorador de Arquivos e assinale a alternativa correta.",
-        "imagem": "imagens/questoes/software03.png",
+        "pergunta": "Um programa distribuído gratuitamente para uso, mas sem disponibilização do código-fonte, pode ser classificado como:",
+        "subtopico": "licenciamento_e_distribuicao",
         "alternativas": [
-            "O item destacado permite acesso apenas aos arquivos armazenados na internet.",
-            "O item destacado é utilizado exclusivamente para acessar dispositivos USB.",
-            "O item destacado permite apenas visualizar a Lixeira do sistema.",
-            "O item destacado representa uma área do Explorador de Arquivos que reúne unidades de armazenamento, pastas do usuário e dispositivos conectados ao computador.",
-            "O item destacado é utilizado exclusivamente para acessar programas instalados."
+            "Open Source, pois a ausência de cobrança implica direito de estudar e modificar o código-fonte do programa.",
+            "Domínio público, pois programas gratuitos deixam de estar sujeitos a direitos autorais e restrições de redistribuição.",
+            "Shareware, pois todo programa gratuito possui período de avaliação antes de exigir pagamento ou registro definitivo.",
+            "Freeware, dependendo dos termos de licença definidos pelo autor ou fabricante.",
+            "Copyleft, pois a gratuidade determina que versões derivadas mantenham as mesmas liberdades de uso e modificação."
         ],
         "correta": 3,
-        "feedbackAcerto": "\nCorreto!\n\nO item \"Este Computador\" é um dos principais elementos do Explorador de Arquivos do Windows.\n\nEle permite acessar unidades de armazenamento, dispositivos conectados e diversas pastas do usuário.\n",
-        "feedbackErro": "A resposta correta é:\n\nO item destacado representa uma área do Explorador de Arquivos que reúne unidades de armazenamento, pastas do usuário e dispositivos conectados ao computador.\n\nComentário:\nO item &quot;Este Computador&quot; é um dos principais elementos do Explorador de Arquivos do Windows.\n\nEle permite acessar unidades de armazenamento, dispositivos conectados e diversas pastas do usuário.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Este Computador = acesso às unidades, pastas e dispositivos do sistema.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
+        "id": "software_029",
+        "assunto": "software",
+        "feedbackAcerto": "Freeware pode ser gratuito sem ser código aberto.",
+        "feedbackErro": "A resposta correta é:\n\nFreeware, dependendo dos termos de licença definidos pelo autor ou fabricante.\n\nComentário:\nFreeware pode ser gratuito sem ser código aberto.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Gratuito, livre, aberto e domínio público são conceitos diferentes."
     },
     {
-        "pergunta": "Observe a imagem sobre ferramenta do Windows e assinale a alternativa correta.",
-        "imagem": "imagens/questoes/software04.png",
+        "pergunta": "Shareware é um modelo de distribuição em que o software costuma:",
+        "subtopico": "licenciamento_e_distribuicao",
         "alternativas": [
-            "A imagem apresenta o Gerenciador de Dispositivos do Windows.",
-            "A imagem apresenta um navegador de internet utilizado para acesso a páginas web.",
-            "A imagem apresenta um software antivírus utilizado para proteção do sistema.",
-            "A imagem apresenta o Microsoft Word, um software aplicativo utilizado para criação e edição de documentos de texto.",
-            "A imagem apresenta o Explorador de Arquivos do Windows."
+            "Ter código-fonte aberto para estudo e alteração, com redistribuição definida pelas condições da licença adotada.",
+            "Ser colocado em domínio público, permitindo uso sem aplicação de direitos autorais por parte do desenvolvedor original.",
+            "Ser fornecido como componente do sistema operacional e receber suporte vinculado à licença do próprio equipamento.",
+            "Ser executado a partir do navegador, sem instalação local e com cobrança vinculada ao uso de infraestrutura em nuvem.",
+            "Ser oferecido para avaliação por período, recursos ou condições limitadas, com possibilidade de aquisição posterior."
         ],
-        "correta": 3,
-        "feedbackAcerto": "\nCorreto!\n\nA imagem mostra o Microsoft Word, um dos programas mais utilizados para criação, edição e formatação de documentos de texto.\n\nO Word faz parte da suíte Microsoft Office e é amplamente cobrado em concursos públicos.\n",
-        "feedbackErro": "A resposta correta é:\n\nA imagem apresenta o Microsoft Word, um software aplicativo utilizado para criação e edição de documentos de texto.\n\nComentário:\nA imagem mostra o Microsoft Word, um dos programas mais utilizados para criação, edição e formatação de documentos de texto.\n\nO Word faz parte da suíte Microsoft Office e é amplamente cobrado em concursos públicos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Word = editor de textos da suíte Microsoft Office.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
+        "correta": 4,
+        "id": "software_030",
+        "assunto": "software",
+        "feedbackAcerto": "Shareware costuma ter avaliação limitada e posterior compra ou registro.",
+        "feedbackErro": "A resposta correta é:\n\nSer oferecido para avaliação por período, recursos ou condições limitadas, com possibilidade de aquisição posterior.\n\nComentário:\nShareware costuma ter avaliação limitada e posterior compra ou registro.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Não confunda shareware com freeware nem com software livre."
     },
     {
-        "pergunta": "Observe a imagem sobre planilha eletrônica e assinale a alternativa correta.",
-        "imagem": "imagens/questoes/software05.png",
+        "pergunta": "Software Open Source é caracterizado por:",
+        "subtopico": "licenciamento_e_distribuicao",
         "alternativas": [
-            "A função SOMA(C2:D2) realiza a multiplicação dos valores das células C2 e D2.",
-            "A fórmula apresentada calcula a média dos valores das células C2 e D2.",
-            "A fórmula exibida na barra de fórmulas calcula a soma dos valores contidos nas células C2 e D2.",
-            "A função SOMA(C2:D2) é utilizada exclusivamente para criar gráficos.",
-            "A fórmula apresentada serve para compactar arquivos armazenados na planilha."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "\nCorreto!\n\nA função SOMA é uma das funções mais utilizadas do Microsoft Excel.\n\nA expressão:\n\n=SOMA(C2:D2)\n\nrealiza a soma dos valores contidos no intervalo de células C2 até D2.\n",
-        "feedbackErro": "A resposta correta é:\n\nA fórmula exibida na barra de fórmulas calcula a soma dos valores contidos nas células C2 e D2.\n\nComentário:\nA função SOMA é uma das funções mais utilizadas do Microsoft Excel.\n\nA expressão:\n\n=SOMA(C2:D2)\n\nrealiza a soma dos valores contidos no intervalo de células C2 até D2.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "SOMA() adiciona valores de células ou intervalos.",
-        "subtopico": "fundamentos_e_classificacao"
-    },
-    {
-        "pergunta": "Em sistemas operacionais, o kernel é responsável principalmente por:",
-        "alternativas": [
-            "Gerenciar recursos essenciais do sistema, como processos, memória e dispositivos.",
-            "Editar documentos de texto.",
-            "Criar apresentações com slides.",
-            "Compactar imagens com perda.",
-            "Substituir a fonte de alimentação."
+            "Disponibilizar o código-fonte sob licença que define condições de uso, estudo, modificação e redistribuição.",
+            "Ser necessariamente gratuito em qualquer forma de distribuição, sem possibilidade de cobrança por suporte ou serviços associados.",
+            "Estar fora da proteção de direitos autorais, permitindo que qualquer pessoa elimine os termos de licença do projeto original.",
+            "Ser distribuído sem código-fonte, mas com autorização para uso pessoal em número ilimitado de computadores do usuário.",
+            "Pertencer ao fabricante do sistema operacional e poder ser modificado em especial mediante autorização individual do titular."
         ],
         "correta": 0,
-        "feedbackAcerto": "O kernel é o núcleo do sistema operacional, fazendo a mediação entre hardware e software.",
-        "feedbackErro": "A resposta correta é:\n\nGerenciar recursos essenciais do sistema, como processos, memória e dispositivos.\n\nComentário:\nO kernel é o núcleo do sistema operacional, fazendo a mediação entre hardware e software.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Kernel não é aplicativo de escritório nem periférico.",
-        "subtopico": "sistemas_operacionais_nucleo"
+        "id": "software_031",
+        "assunto": "software",
+        "feedbackAcerto": "Código aberto continua sujeito a licença; abertura do código não equivale a domínio público.",
+        "feedbackErro": "A resposta correta é:\n\nDisponibilizar o código-fonte sob licença que define condições de uso, estudo, modificação e redistribuição.\n\nComentário:\nCódigo aberto continua sujeito a licença; abertura do código não equivale a domínio público.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Leia a licença: ela define direitos e obrigações do software aberto."
     },
     {
-        "pergunta": "A shell, em um sistema operacional, pode ser entendida como:",
+        "pergunta": "A característica central de um software proprietário é:",
+        "subtopico": "licenciamento_e_distribuicao",
         "alternativas": [
-            "Um tipo de memória física não volátil.",
-            "Uma interface que permite ao usuário interagir com o sistema, por comandos ou ambiente gráfico.",
-            "Um conector de rede Ethernet.",
-            "Uma extensão de arquivo compactado.",
-            "Um vírus que se propaga por e-mail."
+            "O código-fonte ser necessariamente publicado para que usuários possam criar e redistribuir versões modificadas do programa.",
+            "Seu uso, modificação e distribuição ficarem submetidos às condições definidas pelo titular da licença.",
+            "A licença transferir automaticamente a titularidade do programa ao usuário que realiza a compra ou assinatura do produto.",
+            "O programa ser fornecido sem qualquer restrição de cópia, modificação ou redistribuição após a primeira instalação realizada.",
+            "A gratuidade ser requisito para uso doméstico, enquanto empresas precisam necessariamente adotar uma licença aberta equivalente."
         ],
         "correta": 1,
-        "feedbackAcerto": "Shell é a camada de interação com o usuário, como terminal de comandos ou interface gráfica.",
-        "feedbackErro": "A resposta correta é:\n\nUma interface que permite ao usuário interagir com o sistema, por comandos ou ambiente gráfico.\n\nComentário:\nShell é a camada de interação com o usuário, como terminal de comandos ou interface gráfica.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Não confunda kernel com shell: núcleo gerencia; shell interage.",
-        "subtopico": "sistemas_operacionais_nucleo"
+        "id": "software_032",
+        "assunto": "software",
+        "feedbackAcerto": "Software proprietário tem uso condicionado aos direitos e restrições definidos pelo titular.",
+        "feedbackErro": "A resposta correta é:\n\nSeu uso, modificação e distribuição ficarem submetidos às condições definidas pelo titular da licença.\n\nComentário:\nSoftware proprietário tem uso condicionado aos direitos e restrições definidos pelo titular.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Comprar licença não significa adquirir a propriedade intelectual do software."
     },
     {
-        "pergunta": "Um processo em execução diferencia-se de um programa armazenado porque:",
+        "pergunta": "O modelo freemium é melhor descrito como:",
+        "subtopico": "licenciamento_e_distribuicao",
         "alternativas": [
-            "O processo é sempre hardware físico.",
-            "O programa só existe na memória cache.",
-            "O processo é uma instância ativa do programa em execução, com recursos associados.",
-            "O processo não usa memória RAM.",
-            "Todo programa armazenado está necessariamente em execução."
+            "Distribuição temporária do programa completo para avaliação, com bloqueio integral do funcionamento ao fim do prazo definido.",
+            "Liberação do código-fonte para modificação pública, exigindo que toda versão derivada permaneça sob a mesma licença de origem.",
+            "Oferta de uma versão gratuita com recursos básicos e cobrança por funcionalidades, capacidade ou serviços adicionais.",
+            "Venda de uma licença única que permite instalar o programa em qualquer quantidade de dispositivos ligados à mesma conta.",
+            "Fornecimento do programa em domínio público, com cobrança restrita à mídia física usada para entregar os arquivos ao usuário."
         ],
         "correta": 2,
-        "feedbackAcerto": "Programa é arquivo/conjunto de instruções; processo é a execução ativa desse programa.",
-        "feedbackErro": "A resposta correta é:\n\nO processo é uma instância ativa do programa em execução, com recursos associados.\n\nComentário:\nPrograma é arquivo/conjunto de instruções; processo é a execução ativa desse programa.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "A banca pode trocar programa, processo e serviço.",
-        "subtopico": "sistemas_operacionais_nucleo"
+        "id": "software_033",
+        "assunto": "software",
+        "feedbackAcerto": "Freemium combina acesso gratuito básico com recursos pagos.",
+        "feedbackErro": "A resposta correta é:\n\nOferta de uma versão gratuita com recursos básicos e cobrança por funcionalidades, capacidade ou serviços adicionais.\n\nComentário:\nFreemium combina acesso gratuito básico com recursos pagos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Freemium não é o mesmo que avaliação temporária do shareware."
     },
     {
-        "pergunta": "Threads são úteis porque:",
+        "pergunta": "Quando um software atinge o fim de suporte do fabricante, uma consequência importante é:",
+        "subtopico": "licenciamento_e_distribuicao",
         "alternativas": [
-            "Transformam software em hardware.",
-            "Substituem o sistema operacional.",
-            "Eliminam a necessidade de CPU.",
-            "Permitem dividir a execução de um processo em fluxos menores de processamento.",
-            "Servem apenas para armazenar arquivos."
+            "A licença do programa ser convertida automaticamente em código aberto, permitindo modificação e redistribuição sem restrições.",
+            "O aplicativo deixar de executar imediatamente, pois o sistema operacional bloqueia todo software sem suporte oficial ativo.",
+            "Os arquivos produzidos pelo programa serem apagados pelo sistema para evitar abertura em versões que já não recebem atualização.",
+            "A possibilidade de deixar de receber correções de segurança, compatibilidade e assistência oficial para novos problemas.",
+            "O instalador passar a funcionar como versão portátil, dispensando componentes registrados e dependências usadas anteriormente."
         ],
         "correta": 3,
-        "feedbackAcerto": "Threads são unidades de execução dentro de um processo, permitindo paralelismo ou concorrência.",
-        "feedbackErro": "A resposta correta é:\n\nPermitem dividir a execução de um processo em fluxos menores de processamento.\n\nComentário:\nThreads são unidades de execução dentro de um processo, permitindo paralelismo ou concorrência.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Processo pode conter uma ou mais threads.",
-        "subtopico": "sistemas_operacionais_nucleo"
+        "id": "software_034",
+        "assunto": "software",
+        "feedbackAcerto": "Fim de suporte significa perda de atualizações e assistência, não necessariamente interrupção imediata do funcionamento.",
+        "feedbackErro": "A resposta correta é:\n\nA possibilidade de deixar de receber correções de segurança, compatibilidade e assistência oficial para novos problemas.\n\nComentário:\nFim de suporte significa perda de atualizações e assistência, não necessariamente interrupção imediata do funcionamento.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Software sem suporte pode continuar funcionando, mas tende a aumentar risco e dificuldade de manutenção."
     },
     {
-        "pergunta": "Serviços ou daemons em sistemas operacionais caracterizam-se por:",
+        "pergunta": "Código aberto não deve ser confundido com domínio público porque:",
+        "subtopico": "licenciamento_e_distribuicao",
         "alternativas": [
-            "Serem apenas documentos do Word.",
-            "Funcionarem exclusivamente como dispositivos de entrada.",
-            "Exigirem sempre interação visual direta do usuário.",
-            "Substituírem o firmware da placa-mãe.",
-            "Executarem em segundo plano para fornecer funcionalidades ao sistema ou à rede."
+            "Projetos em domínio público exigem pagamento de licença, enquanto código aberto pode ser usado gratuitamente em qualquer situação.",
+            "Código aberto permite visualizar o código, mas impede alterações e redistribuição quando o programa é usado em ambiente comercial.",
+            "Domínio público é uma modalidade de software proprietário na qual o fabricante mantém controle sobre cópias e versões derivadas.",
+            "Código aberto é definido pelo preço de aquisição, enquanto domínio público é definido pela plataforma operacional utilizada.",
+            "Projetos de código aberto continuam sujeitos a licença e direitos autorais, ainda que permitam amplas formas de uso e modificação."
         ],
         "correta": 4,
-        "feedbackAcerto": "Serviços/daemons rodam em segundo plano, como impressão, rede, atualização ou banco de dados.",
-        "feedbackErro": "A resposta correta é:\n\nExecutarem em segundo plano para fornecer funcionalidades ao sistema ou à rede.\n\nComentário:\nServiços/daemons rodam em segundo plano, como impressão, rede, atualização ou banco de dados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Nem todo software em execução aparece como janela para o usuário.",
-        "subtopico": "sistemas_operacionais_nucleo"
+        "id": "software_035",
+        "assunto": "software",
+        "feedbackAcerto": "Open Source envolve licença; domínio público trata da ausência ou expiração de determinados direitos exclusivos.",
+        "feedbackErro": "A resposta correta é:\n\nProjetos de código aberto continuam sujeitos a licença e direitos autorais, ainda que permitam amplas formas de uso e modificação.\n\nComentário:\nOpen Source envolve licença; domínio público trata da ausência ou expiração de determinados direitos exclusivos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Preço não define se um software é aberto, livre ou de domínio público."
     },
     {
-        "pergunta": "Gerenciadores de pacotes em sistemas como Linux têm como finalidade:",
+        "pergunta": "Uma licença de software deve ser entendida como:",
+        "subtopico": "licenciamento_e_distribuicao",
         "alternativas": [
-            "Instalar, atualizar e remover softwares gerenciando dependências.",
-            "Aumentar a capacidade física do processador.",
-            "Editar slides com animações.",
-            "Medir a voltagem da fonte.",
-            "Enviar mensagens por CCO."
+            "O conjunto de condições que estabelece como o programa pode ser instalado, usado, copiado, modificado ou redistribuído.",
+            "Um certificado técnico que comprova que o programa não possui falhas e funcionará corretamente em qualquer computador compatível.",
+            "Um arquivo de atualização criado pelo sistema operacional para corrigir vulnerabilidades identificadas após a instalação do programa.",
+            "Um componente obrigatório de hardware usado para armazenar chaves, permissões e arquivos de configuração dos aplicativos instalados.",
+            "Um mecanismo de compactação utilizado pelo fabricante para reduzir o tamanho do instalador distribuído aos usuários finais."
         ],
         "correta": 0,
-        "feedbackAcerto": "Gerenciadores de pacotes automatizam instalação e manutenção de softwares e bibliotecas.",
-        "feedbackErro": "A resposta correta é:\n\nInstalar, atualizar e remover softwares gerenciando dependências.\n\nComentário:\nGerenciadores de pacotes automatizam instalação e manutenção de softwares e bibliotecas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Pacote de software não é arquivo compactado qualquer; inclui metadados e dependências.",
-        "subtopico": "administracao_do_sistema"
+        "id": "software_036",
+        "assunto": "software",
+        "feedbackAcerto": "Licença define direitos e condições de uso do software.",
+        "feedbackErro": "A resposta correta é:\n\nO conjunto de condições que estabelece como o programa pode ser instalado, usado, copiado, modificado ou redistribuído.\n\nComentário:\nLicença define direitos e condições de uso do software.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Licença é regra jurídica de uso; não é garantia técnica de funcionamento."
     },
     {
-        "pergunta": "Virtualização diferencia-se de emulação porque, em geral:",
+        "pergunta": "WinRAR e 7-Zip são exemplos de programas cuja função típica é:",
+        "subtopico": "aplicativos_utilitarios_e_formatos",
         "alternativas": [
-            "Emulação sempre é mais rápida que execução nativa.",
-            "Virtualização executa ambientes convidados sobre hardware compatível, enquanto emulação simula arquitetura diferente.",
-            "Virtualização só funciona sem sistema operacional.",
-            "Ambas são sinônimos perfeitos.",
-            "Virtualização serve apenas para compactar arquivos."
+            "Gerenciar processos e serviços do sistema operacional, alterando prioridade e consumo de memória dos programas em execução.",
+            "Compactar e descompactar arquivos, agrupando conteúdos e podendo reduzir o espaço necessário para armazenamento ou envio.",
+            "Editar documentos de texto com estilos, revisão, referências e recursos de impressão usados em atividades de escritório.",
+            "Criar cópias completas do sistema operacional, incluindo partições, drivers e configurações de inicialização do computador.",
+            "Controlar a comunicação entre o sistema e dispositivos físicos por meio de drivers específicos fornecidos pelo fabricante."
         ],
         "correta": 1,
-        "feedbackAcerto": "Virtualização aproveita suporte do hardware; emulação reproduz comportamento de outra plataforma.",
-        "feedbackErro": "A resposta correta é:\n\nVirtualização executa ambientes convidados sobre hardware compatível, enquanto emulação simula arquitetura diferente.\n\nComentário:\nVirtualização aproveita suporte do hardware; emulação reproduz comportamento de outra plataforma.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "A diferença aparece em questões sobre máquinas virtuais e compatibilidade.",
-        "subtopico": "virtualizacao_nuvem_e_webapps"
+        "id": "software_037",
+        "assunto": "software",
+        "feedbackAcerto": "Compactadores agrupam arquivos e podem reduzir seu tamanho.",
+        "feedbackErro": "A resposta correta é:\n\nCompactar e descompactar arquivos, agrupando conteúdos e podendo reduzir o espaço necessário para armazenamento ou envio.\n\nComentário:\nCompactadores agrupam arquivos e podem reduzir seu tamanho.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Compactação não é o mesmo que backup nem gerenciamento de processos."
     },
     {
-        "pergunta": "Um contêiner de aplicação, comparado a uma máquina virtual tradicional, normalmente:",
+        "pergunta": "Compactação sem perdas significa que:",
+        "subtopico": "aplicativos_utilitarios_e_formatos",
         "alternativas": [
-            "Inclui obrigatoriamente um sistema operacional completo separado para cada aplicação.",
-            "Substitui a necessidade de qualquer sistema operacional.",
-            "Compartilha o kernel do sistema hospedeiro e isola processos e dependências da aplicação.",
-            "Só pode executar aplicativos de escritório.",
-            "É um tipo de memória RAM."
+            "Parte das informações é descartada de forma controlada para obter redução maior de tamanho em imagens, áudio ou vídeo.",
+            "O arquivo é criptografado antes da gravação e só pode ser aberto com a mesma conta usada na criação do pacote compactado.",
+            "Os dados originais podem ser reconstruídos integralmente após a descompactação do arquivo.",
+            "O conteúdo é convertido para um formato proprietário e deixa de poder ser recuperado por outros programas de compactação.",
+            "Os arquivos são enviados para armazenamento em nuvem e substituídos localmente por atalhos para reduzir o espaço ocupado."
         ],
         "correta": 2,
-        "feedbackAcerto": "Contêineres isolam aplicações usando recursos do sistema hospedeiro, geralmente com menor sobrecarga que VMs completas.",
-        "feedbackErro": "A resposta correta é:\n\nCompartilha o kernel do sistema hospedeiro e isola processos e dependências da aplicação.\n\nComentário:\nContêineres isolam aplicações usando recursos do sistema hospedeiro, geralmente com menor sobrecarga que VMs completas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Contêiner não é o mesmo que máquina virtual completa.",
-        "subtopico": "virtualizacao_nuvem_e_webapps"
+        "id": "software_038",
+        "assunto": "software",
+        "feedbackAcerto": "Sem perdas preserva integralmente a informação original.",
+        "feedbackErro": "A resposta correta é:\n\nOs dados originais podem ser reconstruídos integralmente após a descompactação do arquivo.\n\nComentário:\nSem perdas preserva integralmente a informação original.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "ZIP e formatos semelhantes são cobrados em contraste com compressão com perdas de mídia."
     },
     {
-        "pergunta": "Atualizar firmware exige cuidado porque:",
+        "pergunta": "O reconhecimento óptico de caracteres (OCR) é adequado para:",
+        "subtopico": "aplicativos_utilitarios_e_formatos",
         "alternativas": [
-            "Firmware é sempre um documento editável no Word.",
-            "A atualização remove fisicamente o processador.",
-            "Firmware só existe em navegadores web.",
-            "Falhas durante o processo podem comprometer o funcionamento do dispositivo.",
-            "Atualizar firmware impede qualquer backup."
+            "Comprimir imagens digitalizadas eliminando informações visuais repetidas antes de armazená-las em arquivos PDF ou JPEG.",
+            "Traduzir automaticamente documentos para outro idioma preservando a diagramação e o significado de cada trecho identificado.",
+            "Assinar digitalmente arquivos escaneados para comprovar autoria e impedir qualquer alteração posterior no conteúdo do documento.",
+            "Converter texto presente em imagem ou documento digitalizado em caracteres pesquisáveis ou editáveis.",
+            "Criar cópias de segurança de documentos digitalizados mantendo versões anteriores em uma unidade externa ou serviço de nuvem."
         ],
         "correta": 3,
-        "feedbackAcerto": "Firmware controla funções básicas do dispositivo; atualização incorreta pode causar falhas sérias.",
-        "feedbackErro": "A resposta correta é:\n\nFalhas durante o processo podem comprometer o funcionamento do dispositivo.\n\nComentário:\nFirmware controla funções básicas do dispositivo; atualização incorreta pode causar falhas sérias.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Firmware é software embarcado em hardware.",
-        "subtopico": "drivers_firmware_e_dispositivos"
+        "id": "software_039",
+        "assunto": "software",
+        "feedbackAcerto": "OCR reconhece caracteres em imagens e os transforma em texto processável.",
+        "feedbackErro": "A resposta correta é:\n\nConverter texto presente em imagem ou documento digitalizado em caracteres pesquisáveis ou editáveis.\n\nComentário:\nOCR reconhece caracteres em imagens e os transforma em texto processável.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Digitalizar cria imagem; OCR tenta extrair texto dessa imagem."
     },
     {
-        "pergunta": "Software Open Source não deve ser confundido com domínio público porque:",
+        "pergunta": "Em uma suíte de escritório, o LibreOffice Calc corresponde funcionalmente ao:",
+        "subtopico": "aplicativos_utilitarios_e_formatos",
         "alternativas": [
-            "Open Source significa ausência total de autoria.",
-            "Domínio público exige código fechado.",
-            "Ambos são obrigatoriamente pagos.",
-            "Open Source não permite modificação.",
-            "Código aberto continua regido por uma licença, com direitos e obrigações definidos."
+            "Editor de apresentações, equivalente em finalidade ao Microsoft PowerPoint para criação e exibição de slides.",
+            "Editor de textos, equivalente em finalidade ao Microsoft Word para produção e formatação de documentos.",
+            "Gerenciador de bancos de dados, equivalente em finalidade a ferramentas voltadas à organização de registros estruturados.",
+            "Editor de desenhos vetoriais, usado para criar diagramas e objetos gráficos integrados a outros documentos.",
+            "Aplicativo de planilhas eletrônicas, equivalente em finalidade ao Microsoft Excel."
         ],
         "correta": 4,
-        "feedbackAcerto": "Open Source disponibiliza código conforme uma licença; não significa ausência de regras.",
-        "feedbackErro": "A resposta correta é:\n\nCódigo aberto continua regido por uma licença, com direitos e obrigações definidos.\n\nComentário:\nOpen Source disponibiliza código conforme uma licença; não significa ausência de regras.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Código aberto não é automaticamente domínio público.",
-        "subtopico": "licenciamento_e_distribuicao"
-    },
-    {
-        "pergunta": "O modelo freemium caracteriza-se por:",
-        "alternativas": [
-            "Oferecer versão gratuita com recursos limitados e recursos adicionais pagos.",
-            "Exigir pagamento antes de qualquer teste.",
-            "Disponibilizar sempre o código-fonte completo.",
-            "Funcionar apenas como driver de impressora.",
-            "Ser um tipo de sistema operacional embarcado."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Freemium combina uso gratuito básico com funcionalidades premium pagas.",
-        "feedbackErro": "A resposta correta é:\n\nOferecer versão gratuita com recursos limitados e recursos adicionais pagos.\n\nComentário:\nFreemium combina uso gratuito básico com funcionalidades premium pagas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Não confunda freeware, shareware, freemium e open source.",
-        "subtopico": "licenciamento_e_distribuicao"
-    },
-    {
-        "pergunta": "No modelo SaaS, o usuário normalmente:",
-        "alternativas": [
-            "Compra obrigatoriamente servidores físicos próprios.",
-            "Acessa um software como serviço pela Internet, sem administrar diretamente a infraestrutura subjacente.",
-            "Recebe apenas componentes de hardware.",
-            "Instala manualmente o kernel do provedor.",
-            "Usa exclusivamente software sem rede."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "SaaS entrega aplicação pronta ao usuário, como serviços de e-mail, CRM ou edição online.",
-        "feedbackErro": "A resposta correta é:\n\nAcessa um software como serviço pela Internet, sem administrar diretamente a infraestrutura subjacente.\n\nComentário:\nSaaS entrega aplicação pronta ao usuário, como serviços de e-mail, CRM ou edição online.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "SaaS = software como serviço; IaaS = infraestrutura; PaaS = plataforma.",
-        "subtopico": "virtualizacao_nuvem_e_webapps"
-    },
-    {
-        "pergunta": "Uma API é melhor definida como:",
-        "alternativas": [
-            "Um tipo de monitor sensível ao toque.",
-            "Um antivírus obrigatório do Windows.",
-            "Um conjunto de regras e interfaces que permite comunicação entre sistemas ou aplicações.",
-            "Uma extensão de arquivo de imagem.",
-            "Um cabo usado apenas para áudio analógico."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "APIs permitem que programas interajam com funcionalidades de outros sistemas de forma padronizada.",
-        "feedbackErro": "A resposta correta é:\n\nUm conjunto de regras e interfaces que permite comunicação entre sistemas ou aplicações.\n\nComentário:\nAPIs permitem que programas interajam com funcionalidades de outros sistemas de forma padronizada.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "API não é interface visual para usuário comum; é interface entre softwares.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
-    },
-    {
-        "pergunta": "Uma interface de linha de comando (CLI) diferencia-se de uma interface gráfica (GUI) porque:",
-        "alternativas": [
-            "A CLI é sempre um hardware interno.",
-            "A GUI não permite interação do usuário.",
-            "A CLI funciona apenas em planilhas.",
-            "A CLI recebe comandos textuais; a GUI utiliza elementos visuais como janelas, ícones e botões.",
-            "A GUI substitui todos os drivers."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "CLI e GUI são formas diferentes de interação com o sistema ou programa.",
-        "feedbackErro": "A resposta correta é:\n\nA CLI recebe comandos textuais; a GUI utiliza elementos visuais como janelas, ícones e botões.\n\nComentário:\nCLI e GUI são formas diferentes de interação com o sistema ou programa.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Ambas podem executar tarefas administrativas, mas com interfaces diferentes.",
-        "subtopico": "sistemas_operacionais_nucleo"
-    },
-    {
-        "pergunta": "Assinatura de driver em sistemas operacionais modernos tem como finalidade:",
-        "alternativas": [
-            "Transformar driver em arquivo de imagem.",
-            "Aumentar o tamanho da memória RAM.",
-            "Remover a necessidade de hardware.",
-            "Converter o driver em planilha.",
-            "Ajudar a verificar a origem e integridade do driver antes da instalação ou execução."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Drivers assinados reduzem o risco de instalação de código adulterado ou não confiável.",
-        "feedbackErro": "A resposta correta é:\n\nAjudar a verificar a origem e integridade do driver antes da instalação ou execução.\n\nComentário:\nDrivers assinados reduzem o risco de instalação de código adulterado ou não confiável.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Assinatura digital está ligada a autenticidade e integridade.",
-        "subtopico": "drivers_firmware_e_dispositivos"
-    },
-    {
-        "pergunta": "Modo de compatibilidade em um sistema operacional é usado para:",
-        "alternativas": [
-            "Aumentar fisicamente o clock da CPU.",
-            "Criar backup diferencial.",
-            "Tentar executar programas antigos simulando condições de versões anteriores.",
-            "Converter arquivos para PDF.",
-            "Substituir senhas por biometria."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Modo de compatibilidade ajuda softwares antigos a funcionarem em sistemas mais novos.",
-        "feedbackErro": "A resposta correta é:\n\nTentar executar programas antigos simulando condições de versões anteriores.\n\nComentário:\nModo de compatibilidade ajuda softwares antigos a funcionarem em sistemas mais novos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Compatibilidade não garante funcionamento perfeito, mas ajusta o ambiente de execução.",
-        "subtopico": "sistemas_operacionais_nucleo"
-    },
-    {
-        "pergunta": "Um sistema operacional de 64 bits, em relação a um de 32 bits, geralmente permite:",
-        "alternativas": [
-            "Uso obrigatório de monitores 4K.",
-            "Eliminação da memória RAM.",
-            "Proibição de redes Wi-Fi.",
-            "Endereçamento de maior quantidade de memória e execução de aplicações 64 bits.",
-            "Transformação automática de documentos em executáveis."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Arquiteturas 64 bits suportam maior espaço de endereçamento de memória.",
-        "feedbackErro": "A resposta correta é:\n\nEndereçamento de maior quantidade de memória e execução de aplicações 64 bits.\n\nComentário:\nArquiteturas 64 bits suportam maior espaço de endereçamento de memória.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "A compatibilidade depende também do processador, sistema e aplicativo.",
-        "subtopico": "sistemas_operacionais_nucleo"
-    },
-    {
-        "pergunta": "Um patch diferencia-se de uma atualização de versão maior porque normalmente:",
-        "alternativas": [
-            "Remove o sistema operacional do computador.",
-            "É sempre um hardware substituído.",
-            "Só serve para criar apresentações.",
-            "Impede o uso de backup.",
-            "Corrige falhas pontuais ou vulnerabilidades sem mudar necessariamente a versão principal do software."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Patch costuma corrigir problemas específicos; upgrade maior pode trazer mudanças amplas de versão e recursos.",
-        "feedbackErro": "A resposta correta é:\n\nCorrige falhas pontuais ou vulnerabilidades sem mudar necessariamente a versão principal do software.\n\nComentário:\nPatch costuma corrigir problemas específicos; upgrade maior pode trazer mudanças amplas de versão e recursos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Em segurança, patches são fundamentais para corrigir vulnerabilidades.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "Leitores de tela e alto contraste são exemplos de recursos de software voltados a:",
-        "alternativas": [
-            "Compactação de dados.",
-            "Aumento de clock da CPU.",
-            "Criação de cabos virtuais.",
-            "Formatação de disco rígido.",
-            "Acessibilidade digital."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Recursos de acessibilidade ajudam pessoas com diferentes necessidades a utilizar sistemas e aplicações.",
-        "feedbackErro": "A resposta correta é:\n\nAcessibilidade digital.\n\nComentário:\nRecursos de acessibilidade ajudam pessoas com diferentes necessidades a utilizar sistemas e aplicações.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Acessibilidade é qualidade de uso, não desempenho de hardware.",
-        "subtopico": "fundamentos_e_classificacao"
-    },
-    {
-        "pergunta": "Logs de sistema são importantes porque:",
-        "alternativas": [
-            "Impedem fisicamente que o computador seja desligado.",
-            "Substituem a memória RAM.",
-            "Transformam texto em imagem.",
-            "São sempre mensagens de spam.",
-            "Registram eventos que auxiliam diagnóstico, auditoria e investigação de falhas ou incidentes."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Logs registram atividades e eventos, apoiando suporte, segurança e rastreabilidade.",
-        "feedbackErro": "A resposta correta é:\n\nRegistram eventos que auxiliam diagnóstico, auditoria e investigação de falhas ou incidentes.\n\nComentário:\nLogs registram atividades e eventos, apoiando suporte, segurança e rastreabilidade.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Em segurança, logs são essenciais para auditoria e resposta a incidentes.",
-        "subtopico": "administracao_do_sistema"
-    },
-    {
-        "pergunta": "Em um sistema operacional, o kernel é mais corretamente entendido como:",
-        "alternativas": [
-            "Núcleo responsável por controlar recursos essenciais e intermediar hardware e software.",
-            "Aplicativo de edição usado para manipular documentos e planilhas.",
-            "Conjunto de ícones exibidos na área de trabalho do usuário.",
-            "Driver específico instalado apenas para controlar impressoras locais.",
-            "Recurso gráfico utilizado para alterar temas e papéis de parede."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! O kernel é a parte central do sistema operacional, responsável por gerenciamento de processos, memória, dispositivos e chamadas ao sistema.",
-        "feedbackErro": "A resposta correta é:\n\nNúcleo responsável por controlar recursos essenciais e intermediar hardware e software.\n\nComentário:\nO kernel é a parte central do sistema operacional, responsável por gerenciamento de processos, memória, dispositivos e chamadas ao sistema.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Kernel = núcleo do sistema operacional, não é aplicativo comum.",
-        "subtopico": "sistemas_operacionais_nucleo"
-    },
-    {
-        "pergunta": "No gerenciamento de processos, a diferença adequada entre processo e thread é:",
-        "alternativas": [
-            "Thread possui sistema de arquivos próprio; processo apenas exibe interface gráfica.",
-            "Processo possui contexto próprio; thread é fluxo de execução dentro de um processo.",
-            "Processo é sempre temporário; thread é sempre gravada permanentemente em disco.",
-            "Thread substitui o kernel; processo substitui os drivers de dispositivos.",
-            "Processo existe apenas em servidores; thread existe apenas em smartphones."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! Um processo é uma instância de programa em execução. Threads compartilham recursos do processo, mas representam fluxos de execução.",
-        "feedbackErro": "A resposta correta é:\n\nProcesso possui contexto próprio; thread é fluxo de execução dentro de um processo.\n\nComentário:\nUm processo é uma instância de programa em execução. Threads compartilham recursos do processo, mas representam fluxos de execução.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Bancas gostam de associar processo a programa em execução e thread a execução interna.",
-        "subtopico": "sistemas_operacionais_nucleo"
-    },
-    {
-        "pergunta": "Em sistemas operacionais com multitarefa preemptiva, é correto afirmar que:",
-        "alternativas": [
-            "Cada programa decide sozinho quando entregará definitivamente o processador.",
-            "A CPU executa apenas uma aplicação durante toda a sessão do usuário.",
-            "O sistema pode interromper uma tarefa para conceder tempo de CPU a outra.",
-            "O disco rígido assume a execução dos processos no lugar do processador.",
-            "Somente programas de escritório podem ser executados simultaneamente."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! Na multitarefa preemptiva, o sistema operacional controla o escalonamento e pode alternar a execução entre processos.",
-        "feedbackErro": "A resposta correta é:\n\nO sistema pode interromper uma tarefa para conceder tempo de CPU a outra.\n\nComentário:\nNa multitarefa preemptiva, o sistema operacional controla o escalonamento e pode alternar a execução entre processos.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Preemptiva = o sistema pode tomar o controle da CPU.",
-        "subtopico": "sistemas_operacionais_nucleo"
-    },
-    {
-        "pergunta": "A memória virtual, em sistemas operacionais modernos, tem como finalidade principal:",
-        "alternativas": [
-            "Substituir fisicamente os módulos de RAM por memórias ROM permanentes.",
-            "Transformar arquivos de texto em programas executáveis do sistema.",
-            "Eliminar a necessidade de gerenciamento de processos pelo kernel.",
-            "Permitir uso combinado de RAM e armazenamento para ampliar o espaço endereçável.",
-            "Aumentar automaticamente a frequência elétrica do processador."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! A memória virtual usa técnicas como paginação para oferecer aos processos um espaço de memória maior e mais organizado.",
-        "feedbackErro": "A resposta correta é:\n\nPermitir uso combinado de RAM e armazenamento para ampliar o espaço endereçável.\n\nComentário:\nA memória virtual usa técnicas como paginação para oferecer aos processos um espaço de memória maior e mais organizado.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Memória virtual não é memória física nova; é técnica de gerenciamento.",
-        "subtopico": "sistemas_operacionais_nucleo"
-    },
-    {
-        "pergunta": "No contexto da paginação de memória, uma página corresponde a:",
-        "alternativas": [
-            "Arquivo de configuração usado exclusivamente por navegadores web.",
-            "Setor físico de disco que armazena somente imagens compactadas.",
-            "Janela gráfica que permite abrir aplicativos no ambiente desktop.",
-            "Código malicioso que altera permissões do usuário administrador.",
-            "Bloco de tamanho fixo usado para organizar partes da memória virtual."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! A paginação divide o espaço de memória em blocos, permitindo mapear páginas virtuais para quadros de memória física.",
-        "feedbackErro": "A resposta correta é:\n\nBloco de tamanho fixo usado para organizar partes da memória virtual.\n\nComentário:\nA paginação divide o espaço de memória em blocos, permitindo mapear páginas virtuais para quadros de memória física.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Paginação é tema de gerenciamento de memória, não de páginas da Web.",
-        "subtopico": "sistemas_operacionais_nucleo"
-    },
-    {
-        "pergunta": "O escalonador de processos de um sistema operacional atua principalmente para:",
-        "alternativas": [
-            "Definir a ordem e o tempo de uso da CPU pelos processos prontos.",
-            "Converter documentos em arquivos compactados para envio por e-mail.",
-            "Gerenciar exclusivamente as cores da interface gráfica do usuário.",
-            "Substituir o antivírus na remoção de códigos maliciosos.",
-            "Controlar apenas a velocidade física das portas USB conectadas."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! O escalonador decide quais processos utilizarão o processador, considerando políticas de prioridade, tempo e estado dos processos.",
-        "feedbackErro": "A resposta correta é:\n\nDefinir a ordem e o tempo de uso da CPU pelos processos prontos.\n\nComentário:\nO escalonador decide quais processos utilizarão o processador, considerando políticas de prioridade, tempo e estado dos processos.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Escalonamento = organização do uso da CPU.",
-        "subtopico": "sistemas_operacionais_nucleo"
-    },
-    {
-        "pergunta": "A separação entre modo usuário e modo kernel existe principalmente para:",
-        "alternativas": [
-            "Impedir que aplicativos utilizem qualquer memória durante sua execução.",
-            "Proteger recursos críticos, restringindo operações sensíveis ao núcleo do sistema.",
-            "Garantir que todos os programas sejam necessariamente de código aberto.",
-            "Fazer com que arquivos compactados sejam descompactados automaticamente.",
-            "Transformar usuários comuns em administradores sem autenticação prévia."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! Operações privilegiadas devem ocorrer em modo kernel para evitar que aplicações comuns comprometam a estabilidade e a segurança.",
-        "feedbackErro": "A resposta correta é:\n\nProteger recursos críticos, restringindo operações sensíveis ao núcleo do sistema.\n\nComentário:\nOperações privilegiadas devem ocorrer em modo kernel para evitar que aplicações comuns comprometam a estabilidade e a segurança.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Modo kernel possui privilégios maiores que o modo usuário.",
-        "subtopico": "sistemas_operacionais_nucleo"
-    },
-    {
-        "pergunta": "Um sistema de arquivos, como NTFS, ext4 ou APFS, é responsável por:",
-        "alternativas": [
-            "Executar cálculos aritméticos no lugar da unidade central de processamento.",
-            "Substituir protocolos de rede usados para comunicação entre computadores.",
-            "Organizar a forma como dados e metadados são gravados e recuperados.",
-            "Criar automaticamente contas de e-mail para todos os usuários locais.",
-            "Eliminar a necessidade de permissões, logs e controle de acesso."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! Sistemas de arquivos estruturam diretórios, arquivos, permissões, metadados e métodos de acesso ao armazenamento.",
-        "feedbackErro": "A resposta correta é:\n\nOrganizar a forma como dados e metadados são gravados e recuperados.\n\nComentário:\nSistemas de arquivos estruturam diretórios, arquivos, permissões, metadados e métodos de acesso ao armazenamento.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Sistema de arquivos não é o disco; é a organização lógica dos dados.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
-    },
-    {
-        "pergunta": "Em sistemas Unix/Linux, permissões como leitura, escrita e execução indicam:",
-        "alternativas": [
-            "Quantidade máxima de memória RAM suportada pela placa-mãe.",
-            "Velocidade física da conexão de rede cabeada ou sem fio.",
-            "Tipo de compactação aplicada automaticamente aos documentos.",
-            "Controle sobre quem pode abrir, alterar ou executar arquivos e diretórios.",
-            "Nível de brilho configurado para o monitor do usuário."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! As permissões rwx permitem definir direitos de acesso para proprietário, grupo e outros usuários.",
-        "feedbackErro": "A resposta correta é:\n\nControle sobre quem pode abrir, alterar ou executar arquivos e diretórios.\n\nComentário:\nAs permissões rwx permitem definir direitos de acesso para proprietário, grupo e outros usuários.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "rwx = read, write, execute.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
-    },
-    {
-        "pergunta": "O recurso de journaling em sistemas de arquivos tem como objetivo:",
-        "alternativas": [
-            "Criar automaticamente gráficos financeiros a partir de planilhas.",
-            "Executar aplicativos móveis em qualquer sistema operacional desktop.",
-            "Substituir a autenticação por senha em contas administrativas.",
-            "Impedir que arquivos sejam copiados para unidades externas.",
-            "Registrar operações pendentes para reduzir inconsistências após falhas."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! O journaling mantém registros de operações de escrita, auxiliando a recuperação da consistência após desligamentos inesperados.",
-        "feedbackErro": "A resposta correta é:\n\nRegistrar operações pendentes para reduzir inconsistências após falhas.\n\nComentário:\nO journaling mantém registros de operações de escrita, auxiliando a recuperação da consistência após desligamentos inesperados.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Journaling está ligado à confiabilidade do sistema de arquivos.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
-    },
-    {
-        "pergunta": "A interface de linha de comando difere da interface gráfica porque:",
-        "alternativas": [
-            "Exige comandos textuais para executar tarefas e administrar recursos.",
-            "Funciona apenas em computadores sem sistema operacional instalado.",
-            "Impede totalmente a execução de scripts e tarefas automatizadas.",
-            "Serve exclusivamente para visualizar imagens e apresentações.",
-            "É incompatível com sistemas Linux, Windows e macOS atuais."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! CLI permite interação por comandos, sendo comum em administração de sistemas, automação e suporte técnico.",
-        "feedbackErro": "A resposta correta é:\n\nExige comandos textuais para executar tarefas e administrar recursos.\n\nComentário:\nCLI permite interação por comandos, sendo comum em administração de sistemas, automação e suporte técnico.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "CLI = comandos; GUI = elementos gráficos.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
-    },
-    {
-        "pergunta": "Uma vantagem típica do uso de linha de comando em administração de sistemas é:",
-        "alternativas": [
-            "Eliminar a necessidade de permissões para modificar arquivos protegidos.",
-            "Automatizar tarefas repetitivas por meio de scripts e comandos encadeados.",
-            "Converter todo programa proprietário em software de código aberto.",
-            "Substituir fisicamente cabos, roteadores e placas de rede.",
-            "Garantir que qualquer comando digitado seja sempre reversível."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! A linha de comando facilita automação, administração remota, execução em lote e diagnóstico de sistemas.",
-        "feedbackErro": "A resposta correta é:\n\nAutomatizar tarefas repetitivas por meio de scripts e comandos encadeados.\n\nComentário:\nA linha de comando facilita automação, administração remota, execução em lote e diagnóstico de sistemas.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Bancas associam terminal a automação e administração técnica.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
-    },
-    {
-        "pergunta": "Software de código aberto caracteriza-se principalmente por:",
-        "alternativas": [
-            "Ser sempre gratuito, sem qualquer condição de licença ou responsabilidade.",
-            "Impedir que empresas utilizem o programa em ambientes profissionais.",
-            "Disponibilizar o código-fonte para estudo, modificação e distribuição conforme licença.",
-            "Funcionar apenas em sistemas Linux sem interface gráfica instalada.",
-            "Ser obrigatoriamente desenvolvido por órgãos públicos ou universidades."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! Open source envolve acesso ao código-fonte e permissões reguladas por licença, não sendo sinônimo automático de gratuidade irrestrita.",
-        "feedbackErro": "A resposta correta é:\n\nDisponibilizar o código-fonte para estudo, modificação e distribuição conforme licença.\n\nComentário:\nOpen source envolve acesso ao código-fonte e permissões reguladas por licença, não sendo sinônimo automático de gratuidade irrestrita.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Código aberto não significa ausência de licença.",
-        "subtopico": "licenciamento_e_distribuicao"
-    },
-    {
-        "pergunta": "Em licenças de software, o conceito de copyleft busca:",
-        "alternativas": [
-            "Bloquear qualquer acesso ao código-fonte por usuários finais.",
-            "Transformar todo freeware em programa obrigatoriamente comercial.",
-            "Criar restrição técnica para impedir execução em servidores.",
-            "Permitir redistribuição, preservando liberdades nas versões derivadas.",
-            "Substituir contratos de uso por atualizações automáticas do sistema."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! Copyleft permite uso e modificação, mas exige que versões derivadas mantenham liberdades semelhantes, conforme a licença.",
-        "feedbackErro": "A resposta correta é:\n\nPermitir redistribuição, preservando liberdades nas versões derivadas.\n\nComentário:\nCopyleft permite uso e modificação, mas exige que versões derivadas mantenham liberdades semelhantes, conforme a licença.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Copyleft aparece muito em questões sobre software livre.",
-        "subtopico": "licenciamento_e_distribuicao"
-    },
-    {
-        "pergunta": "Um software proprietário distingue-se de um software livre principalmente porque:",
-        "alternativas": [
-            "É sempre menos seguro que qualquer programa gratuito disponível na Internet.",
-            "Possui obrigatoriamente código-fonte aberto para auditoria pública.",
-            "Pode ser executado apenas quando não houver sistema operacional instalado.",
-            "É necessariamente um driver utilizado por impressoras e placas de vídeo.",
-            "Seu uso, modificação e distribuição ficam sujeitos às restrições do titular."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! Software proprietário é controlado por seu titular, que define regras de licenciamento, cópia, modificação e distribuição.",
-        "feedbackErro": "A resposta correta é:\n\nSeu uso, modificação e distribuição ficam sujeitos às restrições do titular.\n\nComentário:\nSoftware proprietário é controlado por seu titular, que define regras de licenciamento, cópia, modificação e distribuição.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Proprietário = uso regulado pelo dono/licenciante.",
-        "subtopico": "licenciamento_e_distribuicao"
-    },
-    {
-        "pergunta": "A diferença adequada entre freeware e shareware é:",
-        "alternativas": [
-            "Freeware é gratuito; shareware costuma ser avaliação limitada ou temporária.",
-            "Freeware sempre tem código aberto; shareware sempre é sistema operacional.",
-            "Shareware é hardware físico; freeware é protocolo de comunicação.",
-            "Freeware exige pagamento por uso inicial; shareware nunca possui restrições.",
-            "Ambos são obrigatoriamente malwares distribuídos por mensagens falsas."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! Freeware pode ser usado gratuitamente, enquanto shareware geralmente é oferecido para teste, com limitações ou prazo de avaliação.",
-        "feedbackErro": "A resposta correta é:\n\nFreeware é gratuito; shareware costuma ser avaliação limitada ou temporária.\n\nComentário:\nFreeware pode ser usado gratuitamente, enquanto shareware geralmente é oferecido para teste, com limitações ou prazo de avaliação.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Freeware ≠ open source; shareware = avaliação.",
-        "subtopico": "licenciamento_e_distribuicao"
-    },
-    {
-        "pergunta": "No modelo SaaS, como ocorre em muitos serviços de e-mail e edição online:",
-        "alternativas": [
-            "O cliente recebe apenas cabos, roteadores e equipamentos de rede.",
-            "O usuário acessa o software pela Internet, sem administrar a infraestrutura base.",
-            "O provedor entrega somente processadores físicos para instalação local.",
-            "O usuário obrigatoriamente compila o sistema operacional antes de usar.",
-            "O serviço funciona apenas quando desconectado de qualquer rede pública."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! SaaS oferece aplicações prontas via Internet, reduzindo a necessidade de instalação e manutenção local pelo usuário.",
-        "feedbackErro": "A resposta correta é:\n\nO usuário acessa o software pela Internet, sem administrar a infraestrutura base.\n\nComentário:\nSaaS oferece aplicações prontas via Internet, reduzindo a necessidade de instalação e manutenção local pelo usuário.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "SaaS = software como serviço.",
-        "subtopico": "virtualizacao_nuvem_e_webapps"
-    },
-    {
-        "pergunta": "Plataforma como Serviço (PaaS) é mais bem representada por:",
-        "alternativas": [
-            "Pacote de ícones usado apenas para personalizar a área de trabalho.",
-            "Licença que proíbe qualquer uso de software em ambiente comercial.",
-            "Ambiente pronto para desenvolver, testar e implantar aplicações.",
-            "Programa cuja única função é apagar arquivos temporários locais.",
-            "Driver físico gravado permanentemente na memória RAM do computador."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! PaaS fornece ambiente de desenvolvimento e implantação sem que o usuário gerencie diretamente toda a infraestrutura.",
-        "feedbackErro": "A resposta correta é:\n\nAmbiente pronto para desenvolver, testar e implantar aplicações.\n\nComentário:\nPaaS fornece ambiente de desenvolvimento e implantação sem que o usuário gerencie diretamente toda a infraestrutura.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "PaaS fica entre infraestrutura e aplicação pronta.",
-        "subtopico": "virtualizacao_nuvem_e_webapps"
-    },
-    {
-        "pergunta": "No modelo IaaS, o cliente normalmente recebe:",
-        "alternativas": [
-            "Um editor de texto pronto, sem possibilidade de configurar servidores.",
-            "Somente licença de uso para antivírus instalado em computador doméstico.",
-            "Pacote de extensões de navegador para bloquear anúncios publicitários.",
-            "Recursos computacionais virtualizados, como servidores, redes e armazenamento.",
-            "Um arquivo compactado que substitui o sistema operacional local."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! IaaS fornece infraestrutura virtual sob demanda, permitindo que o cliente configure sistemas, aplicações e serviços.",
-        "feedbackErro": "A resposta correta é:\n\nRecursos computacionais virtualizados, como servidores, redes e armazenamento.\n\nComentário:\nIaaS fornece infraestrutura virtual sob demanda, permitindo que o cliente configure sistemas, aplicações e serviços.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "IaaS = infraestrutura como serviço.",
-        "subtopico": "virtualizacao_nuvem_e_webapps"
-    },
-    {
-        "pergunta": "Um aplicativo web diferencia-se de um aplicativo desktop tradicional porque:",
-        "alternativas": [
-            "Depende exclusivamente de disquetes para instalação em cada computador.",
-            "Não pode utilizar banco de dados, autenticação ou armazenamento de sessão.",
-            "É obrigatoriamente mais inseguro que qualquer aplicativo instalado localmente.",
-            "Funciona apenas quando todo o código-fonte está aberto ao usuário final.",
-            "É acessado por navegador e executa parte de suas funções em servidores remotos."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! Aplicações web são acessadas via navegador e geralmente combinam processamento no cliente e no servidor.",
-        "feedbackErro": "A resposta correta é:\n\nÉ acessado por navegador e executa parte de suas funções em servidores remotos.\n\nComentário:\nAplicações web são acessadas via navegador e geralmente combinam processamento no cliente e no servidor.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Aplicativo web não é sinônimo de site estático simples.",
-        "subtopico": "virtualizacao_nuvem_e_webapps"
-    },
-    {
-        "pergunta": "Uma aplicação web progressiva (PWA) busca combinar:",
-        "alternativas": [
-            "Recursos de páginas web com comportamentos semelhantes aos de aplicativos instaláveis.",
-            "Somente drivers de vídeo com cabos analógicos de transmissão.",
-            "Licenças proprietárias com impedimento absoluto de atualização.",
-            "Formatos de imagem com protocolos físicos de placa-mãe.",
-            "BIOS tradicional com memória RAM removível de notebook."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! PWAs podem oferecer instalação, cache, notificações e funcionamento parcial offline, dependendo da implementação.",
-        "feedbackErro": "A resposta correta é:\n\nRecursos de páginas web com comportamentos semelhantes aos de aplicativos instaláveis.\n\nComentário:\nPWAs podem oferecer instalação, cache, notificações e funcionamento parcial offline, dependendo da implementação.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "PWA costuma misturar experiência de app com tecnologias web.",
-        "subtopico": "virtualizacao_nuvem_e_webapps"
-    },
-    {
-        "pergunta": "Atualizações de firmware devem ser realizadas com atenção porque:",
-        "alternativas": [
-            "Firmware é sempre arquivo de texto sem relação com equipamentos físicos.",
-            "Falhas durante o processo podem comprometer o funcionamento do dispositivo.",
-            "Toda atualização de firmware remove automaticamente o sistema operacional.",
-            "Firmware só existe em navegadores usados para acessar páginas web.",
-            "O procedimento dispensa energia estável e instruções do fabricante."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! Firmware controla funções básicas de dispositivos; uma atualização interrompida ou inadequada pode causar falhas sérias.",
-        "feedbackErro": "A resposta correta é:\n\nFalhas durante o processo podem comprometer o funcionamento do dispositivo.\n\nComentário:\nFirmware controla funções básicas de dispositivos; uma atualização interrompida ou inadequada pode causar falhas sérias.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Firmware fica embarcado no dispositivo.",
-        "subtopico": "drivers_firmware_e_dispositivos"
-    },
-    {
-        "pergunta": "A assinatura digital de drivers em sistemas operacionais tem como objetivo:",
-        "alternativas": [
-            "Aumentar fisicamente a capacidade de armazenamento de HDs e SSDs.",
-            "Converter automaticamente drivers em aplicativos de escritório.",
-            "Ajudar a verificar origem e integridade do software de controle do dispositivo.",
-            "Impedir que qualquer periférico utilize energia elétrica do computador.",
-            "Substituir permanentemente a necessidade de atualizações de segurança."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! Drivers assinados oferecem maior confiança quanto à procedência e à integridade, reduzindo riscos de instalação indevida.",
-        "feedbackErro": "A resposta correta é:\n\nAjudar a verificar origem e integridade do software de controle do dispositivo.\n\nComentário:\nDrivers assinados oferecem maior confiança quanto à procedência e à integridade, reduzindo riscos de instalação indevida.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Assinatura digital está ligada a autenticidade e integridade.",
-        "subtopico": "drivers_firmware_e_dispositivos"
-    },
-    {
-        "pergunta": "O recurso Plug and Play permite que o sistema:",
-        "alternativas": [
-            "Transforme automaticamente hardware defeituoso em software aplicativo.",
-            "Dispense qualquer driver em todos os equipamentos existentes.",
-            "Bloqueie permanentemente o uso de periféricos USB e Bluetooth.",
-            "Detecte dispositivos conectados e tente configurá-los com menor intervenção do usuário.",
-            "Execute apenas programas instalados por linha de comando."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! Plug and Play facilita a detecção e configuração de dispositivos, mas pode ainda exigir drivers adequados.",
-        "feedbackErro": "A resposta correta é:\n\nDetecte dispositivos conectados e tente configurá-los com menor intervenção do usuário.\n\nComentário:\nPlug and Play facilita a detecção e configuração de dispositivos, mas pode ainda exigir drivers adequados.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Plug and Play não significa ausência absoluta de driver.",
-        "subtopico": "drivers_firmware_e_dispositivos"
-    },
-    {
-        "pergunta": "Uma camada de compatibilidade, em software, é utilizada para:",
-        "alternativas": [
-            "Substituir módulos de memória volátil por discos ópticos graváveis.",
-            "Eliminar todos os controles de licença de programas proprietários.",
-            "Impedir que qualquer arquivo antigo seja aberto por versões recentes.",
-            "Converter senhas fracas em chaves criptográficas automaticamente.",
-            "Permitir que aplicações projetadas para um ambiente funcionem em outro com adaptações."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! Camadas de compatibilidade traduzem chamadas ou comportamentos esperados por uma aplicação para outro ambiente operacional.",
-        "feedbackErro": "A resposta correta é:\n\nPermitir que aplicações projetadas para um ambiente funcionem em outro com adaptações.\n\nComentário:\nCamadas de compatibilidade traduzem chamadas ou comportamentos esperados por uma aplicação para outro ambiente operacional.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Compatibilidade não é pirataria; é adaptação técnica de execução.",
-        "subtopico": "administracao_do_sistema"
-    },
-    {
-        "pergunta": "Uma máquina virtual diferencia-se de uma instalação nativa porque:",
-        "alternativas": [
-            "Executa um sistema convidado sobre recursos abstraídos pelo virtualizador.",
-            "Dispensa completamente processador, memória, disco e sistema operacional hospedeiro.",
-            "Só pode ser usada para abrir arquivos de imagem em editores gráficos.",
-            "É sempre mais rápida que qualquer sistema instalado diretamente no hardware.",
-            "Remove a necessidade de licenciamento de todos os softwares executados."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! A máquina virtual executa um sistema operacional convidado em ambiente isolado criado por software de virtualização.",
-        "feedbackErro": "A resposta correta é:\n\nExecuta um sistema convidado sobre recursos abstraídos pelo virtualizador.\n\nComentário:\nA máquina virtual executa um sistema operacional convidado em ambiente isolado criado por software de virtualização.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "VM = sistema convidado sobre virtualização.",
-        "subtopico": "virtualizacao_nuvem_e_webapps"
-    },
-    {
-        "pergunta": "Um hipervisor do tipo 1 é caracterizado por:",
-        "alternativas": [
-            "Rodar apenas como extensão de navegador em páginas web.",
-            "Executar diretamente sobre o hardware, sem depender de sistema operacional hospedeiro comum.",
-            "Funcionar exclusivamente como planilha para controle de ativos.",
-            "Ser instalado dentro de um editor de textos para criar documentos.",
-            "Substituir cabos de rede por conexões de áudio analógico."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! Hipervisores tipo 1, chamados bare-metal, operam diretamente sobre o hardware e são comuns em servidores.",
-        "feedbackErro": "A resposta correta é:\n\nExecutar diretamente sobre o hardware, sem depender de sistema operacional hospedeiro comum.\n\nComentário:\nHipervisores tipo 1, chamados bare-metal, operam diretamente sobre o hardware e são comuns em servidores.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Tipo 1 = direto no hardware; tipo 2 = sobre sistema hospedeiro.",
-        "subtopico": "virtualizacao_nuvem_e_webapps"
-    },
-    {
-        "pergunta": "Contêineres diferem de máquinas virtuais porque, em regra:",
-        "alternativas": [
-            "Sempre incluem um sistema operacional completo para cada aplicação executada.",
-            "Exigem obrigatoriamente instalação em mídia óptica não regravável.",
-            "Compartilham o kernel do sistema hospedeiro e isolam aplicações em nível de sistema.",
-            "São usados apenas para compactar fotos em formatos sem perda.",
-            "Eliminam qualquer necessidade de controle de acesso entre processos."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! Contêineres isolam aplicações e dependências, geralmente com menor sobrecarga que máquinas virtuais completas.",
-        "feedbackErro": "A resposta correta é:\n\nCompartilham o kernel do sistema hospedeiro e isolam aplicações em nível de sistema.\n\nComentário:\nContêineres isolam aplicações e dependências, geralmente com menor sobrecarga que máquinas virtuais completas.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Contêiner = isolamento leve, não uma VM completa.",
-        "subtopico": "virtualizacao_nuvem_e_webapps"
-    },
-    {
-        "pergunta": "Gerenciadores de pacotes, comuns em sistemas Linux, servem para:",
-        "alternativas": [
-            "Medir exclusivamente a temperatura do processador durante jogos.",
-            "Converter automaticamente imagens digitais em cabos de rede.",
-            "Substituir a memória cache por armazenamento em nuvem pública.",
-            "Instalar, atualizar e remover softwares com controle de dependências.",
-            "Bloquear o acesso a todos os repositórios oficiais do sistema."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! Gerenciadores como APT, DNF e Pacman facilitam instalação, atualização, remoção e dependências de pacotes.",
-        "feedbackErro": "A resposta correta é:\n\nInstalar, atualizar e remover softwares com controle de dependências.\n\nComentário:\nGerenciadores como APT, DNF e Pacman facilitam instalação, atualização, remoção e dependências de pacotes.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Pacote = software distribuído com metadados e dependências.",
-        "subtopico": "administracao_do_sistema"
-    },
-    {
-        "pergunta": "Repositórios oficiais de software são importantes porque:",
-        "alternativas": [
-            "Garantem que nenhum programa precisará de atualização futura.",
-            "Transformam aplicativos instalados em arquivos somente de leitura.",
-            "Substituem fisicamente placas de vídeo e unidades de armazenamento.",
-            "Impedem que o sistema registre logs de instalação e remoção.",
-            "Centralizam pacotes mantidos ou validados para instalação mais confiável."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! Repositórios oficiais reduzem riscos de origem duvidosa e simplificam atualizações e compatibilidade entre pacotes.",
-        "feedbackErro": "A resposta correta é:\n\nCentralizam pacotes mantidos ou validados para instalação mais confiável.\n\nComentário:\nRepositórios oficiais reduzem riscos de origem duvidosa e simplificam atualizações e compatibilidade entre pacotes.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Bancas associam repositório a distribuição confiável de software.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "No contexto de instalação de programas, dependência é:",
-        "alternativas": [
-            "Componente ou biblioteca exigida para que outro software funcione corretamente.",
-            "Dispositivo físico usado apenas para ampliar sinal de rede sem fio.",
-            "Senha temporária gerada exclusivamente para autenticação biométrica.",
-            "Arquivo de imagem que substitui o processador durante a execução.",
-            "Atalho criado automaticamente para remover aplicativos do sistema."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! Um programa pode depender de bibliotecas, frameworks ou runtimes para executar corretamente.",
-        "feedbackErro": "A resposta correta é:\n\nComponente ou biblioteca exigida para que outro software funcione corretamente.\n\nComentário:\nUm programa pode depender de bibliotecas, frameworks ou runtimes para executar corretamente.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Erro de dependência costuma impedir instalação ou execução.",
-        "subtopico": "administracao_do_sistema"
-    },
-    {
-        "pergunta": "No versionamento semântico, uma alteração de versão principal geralmente indica:",
-        "alternativas": [
-            "Correção simples de ortografia sem alteração funcional relevante.",
-            "Mudanças incompatíveis com versões anteriores ou quebra de compatibilidade.",
-            "Mudança automática do fabricante do hardware utilizado pelo usuário.",
-            "Conversão do programa em malware por definição técnica.",
-            "Instalação de tema visual sem afetar APIs ou funcionalidades."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! No padrão major.minor.patch, alterações major costumam indicar mudanças que podem quebrar compatibilidade.",
-        "feedbackErro": "A resposta correta é:\n\nMudanças incompatíveis com versões anteriores ou quebra de compatibilidade.\n\nComentário:\nNo padrão major.minor.patch, alterações major costumam indicar mudanças que podem quebrar compatibilidade.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Major = grande mudança; patch = correção pontual.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
-    },
-    {
-        "pergunta": "Uma atualização do tipo patch costuma representar:",
-        "alternativas": [
-            "Troca física obrigatória de placa-mãe e processador.",
-            "Criação de uma rede metropolitana entre filiais distantes.",
-            "Correção pontual de falhas, vulnerabilidades ou pequenos erros.",
-            "Remoção definitiva de todos os dados do usuário por padrão.",
-            "Instalação de um sistema operacional totalmente diferente."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! Patches geralmente corrigem bugs ou vulnerabilidades sem representar uma nova versão principal do software.",
-        "feedbackErro": "A resposta correta é:\n\nCorreção pontual de falhas, vulnerabilidades ou pequenos erros.\n\nComentário:\nPatches geralmente corrigem bugs ou vulnerabilidades sem representar uma nova versão principal do software.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Patch é uma das palavras mais cobradas em atualização e segurança.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "Quando um software atinge o fim do suporte oficial, o principal risco é:",
-        "alternativas": [
-            "Passar a funcionar automaticamente como memória RAM adicional.",
-            "Converter todos os arquivos do usuário em formatos abertos.",
-            "Ganhar proteção permanente contra qualquer código malicioso.",
-            "Deixar de receber correções de segurança e compatibilidade do fornecedor.",
-            "Tornar-se obrigatoriamente software livre e gratuito."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! Softwares sem suporte tendem a acumular vulnerabilidades não corrigidas, aumentando riscos operacionais e de segurança.",
-        "feedbackErro": "A resposta correta é:\n\nDeixar de receber correções de segurança e compatibilidade do fornecedor.\n\nComentário:\nSoftwares sem suporte tendem a acumular vulnerabilidades não corrigidas, aumentando riscos operacionais e de segurança.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Fim de suporte é forte indicativo de risco em ambientes corporativos.",
-        "subtopico": "licenciamento_e_distribuicao"
-    },
-    {
-        "pergunta": "Rollback de software significa, em contexto de atualização:",
-        "alternativas": [
-            "Compactar todos os documentos para reduzir consumo de rede.",
-            "Criar credenciais novas para todos os usuários administradores.",
-            "Substituir cabos de rede por conexões Bluetooth de curto alcance.",
-            "Converter planilhas em apresentações sem intervenção do usuário.",
-            "Retornar a uma versão anterior após falha ou incompatibilidade."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! Rollback é a reversão para um estado ou versão anterior quando uma atualização causa problemas.",
-        "feedbackErro": "A resposta correta é:\n\nRetornar a uma versão anterior após falha ou incompatibilidade.\n\nComentário:\nRollback é a reversão para um estado ou versão anterior quando uma atualização causa problemas.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Rollback = voltar atrás.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "Antes de uma atualização crítica em ambiente corporativo, recomenda-se:",
-        "alternativas": [
-            "Planejar testes, ponto de restauração ou backup e janela de manutenção.",
-            "Desativar logs, permissões e autenticação para acelerar a instalação.",
-            "Aplicar a mudança diretamente em todos os sistemas sem validação.",
-            "Excluir versões anteriores sem registrar procedimento de retorno.",
-            "Ignorar requisitos do fornecedor e mensagens de incompatibilidade."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! Atualizações críticas devem ser planejadas para reduzir indisponibilidade e permitir reversão em caso de falha.",
-        "feedbackErro": "A resposta correta é:\n\nPlanejar testes, ponto de restauração ou backup e janela de manutenção.\n\nComentário:\nAtualizações críticas devem ser planejadas para reduzir indisponibilidade e permitir reversão em caso de falha.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Bancas valorizam planejamento, teste e recuperação.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "Assinaturas de antivírus ou bases de detecção são utilizadas para:",
-        "alternativas": [
-            "Aumentar a capacidade física do disco rígido instalado.",
-            "Reconhecer padrões conhecidos de ameaças e apoiar a detecção.",
-            "Transformar documentos de texto em programas executáveis.",
-            "Substituir o sistema operacional por navegador web.",
-            "Eliminar completamente o risco de erro humano na rede."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! Bases de assinatura ajudam a identificar ameaças conhecidas, embora antivírus modernos também usem heurística e comportamento.",
-        "feedbackErro": "A resposta correta é:\n\nReconhecer padrões conhecidos de ameaças e apoiar a detecção.\n\nComentário:\nBases de assinatura ajudam a identificar ameaças conhecidas, embora antivírus modernos também usem heurística e comportamento.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Assinatura ajuda na detecção, mas não garante proteção absoluta.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "Um falso positivo em software de segurança ocorre quando:",
-        "alternativas": [
-            "Um malware real é liberado corretamente pelo antivírus.",
-            "Um backup válido é restaurado sem alteração de integridade.",
-            "Um item legítimo é classificado incorretamente como ameaça.",
-            "Uma senha fraca é substituída por autenticação multifator.",
-            "Um driver assinado é instalado a partir do site oficial."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! Falso positivo é a detecção indevida de algo legítimo como malicioso ou suspeito.",
-        "feedbackErro": "A resposta correta é:\n\nUm item legítimo é classificado incorretamente como ameaça.\n\nComentário:\nFalso positivo é a detecção indevida de algo legítimo como malicioso ou suspeito.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Falso positivo = alerta indevido; falso negativo = ameaça não detectada.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "Compactação sem perdas é aquela em que:",
-        "alternativas": [
-            "Parte do conteúdo é descartada para reduzir tamanho permanentemente.",
-            "O arquivo deixa de poder ser enviado por correio eletrônico.",
-            "O formato passa a funcionar apenas em sistemas operacionais móveis.",
-            "Os dados originais podem ser reconstruídos integralmente após descompactação.",
-            "A extensão é trocada e o conteúdo se converte automaticamente."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! Na compactação sem perdas, a descompactação permite recuperar exatamente os dados originais.",
-        "feedbackErro": "A resposta correta é:\n\nOs dados originais podem ser reconstruídos integralmente após descompactação.\n\nComentário:\nNa compactação sem perdas, a descompactação permite recuperar exatamente os dados originais.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Sem perdas = recuperação integral.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "Compactação com perdas, comum em mídias digitais, significa que:",
-        "alternativas": [
-            "Todos os dados originais são preservados bit a bit após a descompactação.",
-            "O arquivo compactado torna-se obrigatoriamente executável no Windows.",
-            "O processo serve apenas para criptografar senhas armazenadas.",
-            "A técnica é exclusiva de planilhas eletrônicas e bancos de dados.",
-            "Informações consideradas menos perceptíveis podem ser descartadas para reduzir tamanho."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! Formatos com perdas reduzem tamanho descartando parte da informação, o que pode afetar qualidade.",
-        "feedbackErro": "A resposta correta é:\n\nInformações consideradas menos perceptíveis podem ser descartadas para reduzir tamanho.\n\nComentário:\nFormatos com perdas reduzem tamanho descartando parte da informação, o que pode afetar qualidade.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Com perdas é comum em áudio, imagem e vídeo.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "O reconhecimento óptico de caracteres (OCR) é utilizado para:",
-        "alternativas": [
-            "Converter imagens de texto em caracteres pesquisáveis ou editáveis.",
-            "Aumentar a velocidade do processador durante jogos gráficos.",
-            "Trocar automaticamente o sistema de arquivos de um disco.",
-            "Criar redes privadas virtuais entre servidores remotos.",
-            "Substituir certificados digitais em transações eletrônicas."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! OCR identifica caracteres em imagens ou documentos digitalizados, permitindo busca, cópia e edição do texto.",
-        "feedbackErro": "A resposta correta é:\n\nConverter imagens de texto em caracteres pesquisáveis ou editáveis.\n\nComentário:\nOCR identifica caracteres em imagens ou documentos digitalizados, permitindo busca, cópia e edição do texto.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "OCR aparece muito ligado a scanner e digitalização.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "Softwares CAD são empregados principalmente para:",
-        "alternativas": [
-            "Gerenciamento exclusivo de mensagens indesejadas de e-mail.",
-            "Criação de desenhos técnicos, projetos e modelagens assistidas por computador.",
-            "Instalação automática de drivers de som em sistemas móveis.",
-            "Compactação de arquivos sem qualquer finalidade de projeto.",
-            "Autenticação biométrica usada apenas em redes sem fio."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! CAD significa projeto assistido por computador, muito usado em engenharia, arquitetura e desenho técnico.",
-        "feedbackErro": "A resposta correta é:\n\nCriação de desenhos técnicos, projetos e modelagens assistidas por computador.\n\nComentário:\nCAD significa projeto assistido por computador, muito usado em engenharia, arquitetura e desenho técnico.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "CAD = desenho/projeto técnico.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "Um sistema ERP tem como característica típica:",
-        "alternativas": [
-            "Servir apenas para reproduzir áudio em computadores pessoais.",
-            "Substituir todos os dispositivos físicos de uma rede local.",
-            "Integrar processos empresariais, como compras, estoque, finanças e produção.",
-            "Executar exclusivamente jogos 3D com aceleração gráfica.",
-            "Eliminar a necessidade de cadastro e controle de usuários."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! ERP integra áreas e dados da organização, reduzindo duplicidade e facilitando gestão empresarial.",
-        "feedbackErro": "A resposta correta é:\n\nIntegrar processos empresariais, como compras, estoque, finanças e produção.\n\nComentário:\nERP integra áreas e dados da organização, reduzindo duplicidade e facilitando gestão empresarial.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "ERP = gestão integrada da empresa.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "Um sistema CRM é voltado principalmente para:",
-        "alternativas": [
-            "Controlar exclusivamente a temperatura interna do processador.",
-            "Formatar discos rígidos e criar partições de inicialização.",
-            "Substituir protocolos TCP/IP em redes corporativas.",
-            "Gerenciar relacionamento com clientes, histórico de contatos e oportunidades.",
-            "Criar imagens vetoriais sem relação com atendimento ou vendas."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! CRM concentra informações sobre clientes, interações, vendas, suporte e relacionamento comercial.",
-        "feedbackErro": "A resposta correta é:\n\nGerenciar relacionamento com clientes, histórico de contatos e oportunidades.\n\nComentário:\nCRM concentra informações sobre clientes, interações, vendas, suporte e relacionamento comercial.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "CRM = cliente/relacionamento.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "Ferramentas de BI são usadas para:",
-        "alternativas": [
-            "Substituir memórias voláteis por dispositivos de armazenamento permanente.",
-            "Criar cabos de fibra óptica usando sinais analógicos.",
-            "Realizar apenas edição de imagens sem dados estruturados.",
-            "Bloquear atualizações de segurança em servidores corporativos.",
-            "Analisar dados e apoiar decisões por meio de relatórios e indicadores."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! Business Intelligence usa dados, painéis e relatórios para apoiar análise e tomada de decisão.",
-        "feedbackErro": "A resposta correta é:\n\nAnalisar dados e apoiar decisões por meio de relatórios e indicadores.\n\nComentário:\nBusiness Intelligence usa dados, painéis e relatórios para apoiar análise e tomada de decisão.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "BI = análise de dados para decisão.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "Um SGBD, como PostgreSQL, MySQL ou SQL Server, é responsável por:",
-        "alternativas": [
-            "Criar, consultar, organizar e controlar acesso a bancos de dados.",
-            "Gerar energia elétrica estabilizada para computadores de mesa.",
-            "Substituir o processador em operações de vídeo e renderização.",
-            "Converter redes LAN em conexões Bluetooth de curto alcance.",
-            "Executar apenas apresentações em tela cheia para o público."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! Sistemas gerenciadores de bancos de dados controlam armazenamento, consulta, transações, segurança e integridade dos dados.",
-        "feedbackErro": "A resposta correta é:\n\nCriar, consultar, organizar e controlar acesso a bancos de dados.\n\nComentário:\nSistemas gerenciadores de bancos de dados controlam armazenamento, consulta, transações, segurança e integridade dos dados.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "SGBD = gerenciamento de banco de dados.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
-    },
-    {
-        "pergunta": "Uma API pode ser definida como:",
-        "alternativas": [
-            "Dispositivo físico usado para armazenar dados em memória flash.",
-            "Interface que permite comunicação padronizada entre sistemas ou aplicações.",
-            "Tipo de cabo usado exclusivamente em redes ópticas metropolitanas.",
-            "Programa criado apenas para excluir logs de auditoria do sistema.",
-            "Formato de imagem que sempre reduz qualidade de fotografias."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! APIs expõem funções e dados de forma padronizada, permitindo integração entre softwares.",
-        "feedbackErro": "A resposta correta é:\n\nInterface que permite comunicação padronizada entre sistemas ou aplicações.\n\nComentário:\nAPIs expõem funções e dados de forma padronizada, permitindo integração entre softwares.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "API = integração entre sistemas.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
-    },
-    {
-        "pergunta": "Um SDK é mais bem descrito como:",
-        "alternativas": [
-            "Arquivo compactado que contém apenas imagens sem metadados.",
-            "Dispositivo de entrada usado para capturar movimentos do usuário.",
-            "Conjunto de ferramentas e bibliotecas para desenvolvimento em determinada plataforma.",
-            "Protocolo de e-mail destinado ao recebimento de mensagens.",
-            "Licença que torna todo programa obrigatoriamente pago."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! SDKs fornecem bibliotecas, documentação, exemplos e ferramentas para criar aplicações em uma plataforma.",
-        "feedbackErro": "A resposta correta é:\n\nConjunto de ferramentas e bibliotecas para desenvolvimento em determinada plataforma.\n\nComentário:\nSDKs fornecem bibliotecas, documentação, exemplos e ferramentas para criar aplicações em uma plataforma.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "SDK = kit de desenvolvimento.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
-    },
-    {
-        "pergunta": "Uma IDE, no desenvolvimento de software, normalmente reúne:",
-        "alternativas": [
-            "Somente cabos, roteadores e pontos de acesso sem fio.",
-            "Apenas arquivos de áudio usados para apresentação multimídia.",
-            "Unicamente antivírus, firewall e filtro de pacotes de rede.",
-            "Editor, depurador, recursos de compilação e ferramentas de apoio ao programador.",
-            "Exclusivamente planilhas para controle de estoque físico."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! Ambientes integrados de desenvolvimento facilitam codificação, execução, teste e depuração de programas.",
-        "feedbackErro": "A resposta correta é:\n\nEditor, depurador, recursos de compilação e ferramentas de apoio ao programador.\n\nComentário:\nAmbientes integrados de desenvolvimento facilitam codificação, execução, teste e depuração de programas.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "IDE = ambiente integrado para programar.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
-    },
-    {
-        "pergunta": "Compilador é o software que:",
-        "alternativas": [
-            "Registra teclas digitadas para capturar senhas de usuários.",
-            "Distribui endereços IP automaticamente em redes locais.",
-            "Compacta fotografias usando apenas algoritmos com perdas.",
-            "Exibe páginas web armazenadas em servidores remotos.",
-            "Traduz código-fonte para código executável ou intermediário antes da execução."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! Compiladores traduzem programas escritos em linguagem de alto nível para uma forma executável ou intermediária.",
-        "feedbackErro": "A resposta correta é:\n\nTraduz código-fonte para código executável ou intermediário antes da execução.\n\nComentário:\nCompiladores traduzem programas escritos em linguagem de alto nível para uma forma executável ou intermediária.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Compilar = traduzir antes da execução.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
-    },
-    {
-        "pergunta": "Interpretador difere do compilador porque geralmente:",
-        "alternativas": [
-            "Executa instruções analisando o código durante a execução do programa.",
-            "Substitui fisicamente o processador por um dispositivo externo.",
-            "Impede qualquer erro lógico durante a criação do algoritmo.",
-            "Funciona apenas com arquivos de imagem digital compactados.",
-            "Serve exclusivamente para instalar drivers de impressoras."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! Interpretadores leem e executam o código em tempo de execução, diferentemente da compilação prévia completa.",
-        "feedbackErro": "A resposta correta é:\n\nExecuta instruções analisando o código durante a execução do programa.\n\nComentário:\nInterpretadores leem e executam o código em tempo de execução, diferentemente da compilação prévia completa.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Interpretação ocorre durante a execução.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
-    },
-    {
-        "pergunta": "Ambiente de execução, como uma máquina virtual de linguagem, serve para:",
-        "alternativas": [
-            "Conectar cabos de rede em portas físicas do roteador.",
-            "Fornecer suporte necessário para rodar programas daquela plataforma.",
-            "Bloquear permanentemente o acesso a qualquer programa instalado.",
-            "Transformar arquivos de texto em componentes eletrônicos.",
-            "Eliminar a necessidade de sistema operacional e processador."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! Runtimes fornecem bibliotecas e serviços necessários para executar programas desenvolvidos para uma plataforma.",
-        "feedbackErro": "A resposta correta é:\n\nFornecer suporte necessário para rodar programas daquela plataforma.\n\nComentário:\nRuntimes fornecem bibliotecas e serviços necessários para executar programas desenvolvidos para uma plataforma.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Runtime = ambiente necessário para executar.",
-        "subtopico": "virtualizacao_nuvem_e_webapps"
-    },
-    {
-        "pergunta": "O bytecode, em linguagens como Java, é:",
-        "alternativas": [
-            "Arquivo de imagem usado exclusivamente em apresentações.",
-            "Número físico gravado no conector de rede Ethernet.",
-            "Código intermediário executado por uma máquina virtual compatível.",
-            "Tipo de memória volátil instalada apenas em notebooks.",
-            "Protocolo de envio de mensagens entre servidores de e-mail."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! Bytecode permite que o programa seja executado em diferentes plataformas com máquina virtual adequada.",
-        "feedbackErro": "A resposta correta é:\n\nCódigo intermediário executado por uma máquina virtual compatível.\n\nComentário:\nBytecode permite que o programa seja executado em diferentes plataformas com máquina virtual adequada.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Bytecode está entre código-fonte e execução pela VM.",
-        "subtopico": "virtualizacao_nuvem_e_webapps"
-    },
-    {
-        "pergunta": "Scripts são frequentemente usados em administração de sistemas para:",
-        "alternativas": [
-            "Trocar automaticamente cabos de rede danificados.",
-            "Substituir a placa-mãe em computadores sem intervenção técnica.",
-            "Garantir licenciamento gratuito para qualquer software proprietário.",
-            "Automatizar sequências de comandos e rotinas repetitivas.",
-            "Impedir que logs sejam gerados por sistemas operacionais."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! Scripts permitem automatizar tarefas, configurar ambientes, processar arquivos e executar rotinas administrativas.",
-        "feedbackErro": "A resposta correta é:\n\nAutomatizar sequências de comandos e rotinas repetitivas.\n\nComentário:\nScripts permitem automatizar tarefas, configurar ambientes, processar arquivos e executar rotinas administrativas.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Script = automação por comandos.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
-    },
-    {
-        "pergunta": "Macros em aplicativos de escritório são recursos que:",
-        "alternativas": [
-            "Aumentam fisicamente a memória RAM instalada no computador.",
-            "Substituem protocolos de rede usados para acessar a Internet.",
-            "Criam automaticamente certificados digitais emitidos por autoridade.",
-            "Impedem qualquer risco de segurança em documentos recebidos.",
-            "Automatizam ações dentro do aplicativo, podendo conter comandos ou código."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! Macros automatizam tarefas, mas podem representar risco se documentos maliciosos executarem código indevido.",
-        "feedbackErro": "A resposta correta é:\n\nAutomatizam ações dentro do aplicativo, podendo conter comandos ou código.\n\nComentário:\nMacros automatizam tarefas, mas podem representar risco se documentos maliciosos executarem código indevido.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Macro = automação; cuidado com macros de origem desconhecida.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "Plug-ins e complementos de software são usados para:",
-        "alternativas": [
-            "Adicionar funcionalidades a um programa já existente.",
-            "Substituir o sistema operacional por hardware dedicado.",
-            "Eliminar toda necessidade de atualização do aplicativo principal.",
-            "Converter programas aplicativos em dispositivos de armazenamento.",
-            "Impedir que navegadores acessem páginas da Internet."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! Complementos estendem funções do programa, mas podem exigir compatibilidade e cuidados de segurança.",
-        "feedbackErro": "A resposta correta é:\n\nAdicionar funcionalidades a um programa já existente.\n\nComentário:\nComplementos estendem funções do programa, mas podem exigir compatibilidade e cuidados de segurança.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Extensão adiciona recurso, não substitui o programa principal.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "Extensões de navegador devem ser instaladas com cautela porque:",
-        "alternativas": [
-            "Sempre transformam o navegador em sistema operacional completo.",
-            "Podem acessar dados de navegação conforme permissões concedidas.",
-            "São obrigatoriamente desenvolvidas pelo fabricante do computador.",
-            "Eliminam a necessidade de conexão com a Internet.",
-            "Impedem que cookies e cache sejam armazenados localmente."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! Extensões podem ter permissões amplas; por isso é importante avaliar origem, permissões e reputação.",
-        "feedbackErro": "A resposta correta é:\n\nPodem acessar dados de navegação conforme permissões concedidas.\n\nComentário:\nExtensões podem ter permissões amplas; por isso é importante avaliar origem, permissões e reputação.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Permissão excessiva em extensão pode gerar risco.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "O cache de aplicativos e navegadores serve principalmente para:",
-        "alternativas": [
-            "Salvar permanentemente todas as senhas sem criptografia por padrão.",
-            "Impedir que qualquer página web seja atualizada pelo servidor.",
-            "Armazenar dados temporários que aceleram acessos futuros.",
-            "Substituir o armazenamento físico do computador por memória ROM.",
-            "Criar automaticamente cópias de segurança completas do sistema."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! Cache guarda dados temporários para melhorar desempenho, mas pode precisar ser limpo em casos de erro ou conteúdo desatualizado.",
-        "feedbackErro": "A resposta correta é:\n\nArmazenar dados temporários que aceleram acessos futuros.\n\nComentário:\nCache guarda dados temporários para melhorar desempenho, mas pode precisar ser limpo em casos de erro ou conteúdo desatualizado.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Cache = desempenho e reutilização temporária.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "Cookies, no contexto de software de navegação, são:",
-        "alternativas": [
-            "Programas executáveis obrigatoriamente maliciosos em qualquer situação.",
-            "Dispositivos físicos usados para ampliar a cobertura Wi-Fi.",
-            "Drivers responsáveis por controlar monitores e placas de vídeo.",
-            "Pequenos dados armazenados pelo navegador para sessões, preferências ou rastreamento.",
-            "Formatos de compactação usados apenas em imagens sem perdas."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! Cookies podem manter sessão e preferências, mas também podem ser usados para rastreamento conforme o contexto.",
-        "feedbackErro": "A resposta correta é:\n\nPequenos dados armazenados pelo navegador para sessões, preferências ou rastreamento.\n\nComentário:\nCookies podem manter sessão e preferências, mas também podem ser usados para rastreamento conforme o contexto.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Cookie não é vírus por definição.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "Uma suíte de escritório diferencia-se de um aplicativo isolado porque:",
-        "alternativas": [
-            "É composta apenas por drivers de vídeo e áudio do sistema.",
-            "Funciona exclusivamente em servidores sem interface de usuário.",
-            "Substitui completamente o sistema operacional do computador.",
-            "É sempre um software malicioso distribuído por e-mail.",
-            "Reúne vários programas integrados para produtividade, como texto, planilha e apresentação."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! Suítes como Microsoft Office e LibreOffice agrupam aplicativos relacionados à produtividade.",
-        "feedbackErro": "A resposta correta é:\n\nReúne vários programas integrados para produtividade, como texto, planilha e apresentação.\n\nComentário:\nSuítes como Microsoft Office e LibreOffice agrupam aplicativos relacionados à produtividade.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Suíte = conjunto de programas.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "No LibreOffice, o aplicativo equivalente ao Microsoft Excel é:",
-        "alternativas": [
-            "Calc, utilizado para criação e edição de planilhas eletrônicas.",
-            "Writer, voltado principalmente à edição de textos.",
-            "Impress, usado principalmente para apresentações de slides.",
-            "Base, voltado ao gerenciamento de bancos de dados.",
-            "Draw, destinado a desenhos e elementos gráficos vetoriais."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! Calc é o componente de planilhas do LibreOffice, equivalente funcional ao Excel em muitos contextos.",
-        "feedbackErro": "A resposta correta é:\n\nCalc, utilizado para criação e edição de planilhas eletrônicas.\n\nComentário:\nCalc é o componente de planilhas do LibreOffice, equivalente funcional ao Excel em muitos contextos.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Word/Writer, Excel/Calc, PowerPoint/Impress.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
+        "id": "software_040",
+        "assunto": "software",
+        "feedbackAcerto": "Calc = planilhas; Writer = texto; Impress = apresentações; Base = bancos de dados; Draw = desenho.",
+        "feedbackErro": "A resposta correta é:\n\nAplicativo de planilhas eletrônicas, equivalente em finalidade ao Microsoft Excel.\n\nComentário:\nCalc = planilhas; Writer = texto; Impress = apresentações; Base = bancos de dados; Draw = desenho.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Equivalências entre Microsoft Office e LibreOffice são frequentes em concursos."
     },
     {
         "pergunta": "O formato ODF está associado principalmente a:",
+        "subtopico": "aplicativos_utilitarios_e_formatos",
         "alternativas": [
-            "Protocolo de envio de e-mails entre servidores SMTP.",
-            "Padrão aberto de documentos usado por suítes como LibreOffice.",
-            "Método de compactação exclusivo para arquivos executáveis.",
-            "Tipo de endereço físico gravado em placas de rede.",
-            "Sistema de arquivos usado apenas por discos ópticos antigos."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! ODF é um padrão aberto para documentos de texto, planilhas e apresentações.",
-        "feedbackErro": "A resposta correta é:\n\nPadrão aberto de documentos usado por suítes como LibreOffice.\n\nComentário:\nODF é um padrão aberto para documentos de texto, planilhas e apresentações.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "ODF aparece em questões sobre formatos abertos.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "Um leitor de PDF, por padrão, tem como finalidade principal:",
-        "alternativas": [
-            "Compilar código-fonte em linguagem de baixo nível.",
-            "Gerenciar endereços IP atribuídos por DHCP.",
-            "Abrir e visualizar documentos PDF, podendo ter recursos extras conforme o programa.",
-            "Controlar fisicamente a rotação de discos magnéticos.",
-            "Substituir todos os editores de texto do sistema operacional."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! Leitores de PDF visualizam documentos; edição avançada depende de recursos específicos ou softwares próprios.",
-        "feedbackErro": "A resposta correta é:\n\nAbrir e visualizar documentos PDF, podendo ter recursos extras conforme o programa.\n\nComentário:\nLeitores de PDF visualizam documentos; edição avançada depende de recursos específicos ou softwares próprios.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Visualizar PDF não é necessariamente editar PDF.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "O Controle de Conta de Usuário (UAC), no Windows, busca:",
-        "alternativas": [
-            "Aumentar a velocidade da conexão Wi-Fi em redes domésticas.",
-            "Formatar automaticamente mídias removíveis ao serem conectadas.",
-            "Substituir antivírus, firewall e backup por um único recurso.",
-            "Reduzir alterações não autorizadas solicitando confirmação para ações elevadas.",
-            "Transformar todos os usuários comuns em administradores permanentes."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! O UAC solicita confirmação ou credenciais para operações que exigem privilégios administrativos.",
-        "feedbackErro": "A resposta correta é:\n\nReduzir alterações não autorizadas solicitando confirmação para ações elevadas.\n\nComentário:\nO UAC solicita confirmação ou credenciais para operações que exigem privilégios administrativos.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "UAC = controle de elevação de privilégios.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
-    },
-    {
-        "pergunta": "Serviços do sistema operacional são programas que normalmente:",
-        "alternativas": [
-            "Funcionam apenas quando o usuário abre uma apresentação de slides.",
-            "São arquivos de imagem usados exclusivamente para papéis de parede.",
-            "Representam cabos físicos conectados entre roteador e modem.",
-            "Impedem que processos sejam iniciados após o carregamento do sistema.",
-            "Executam em segundo plano para fornecer funções ao sistema ou a aplicações."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! Serviços executam tarefas de suporte, rede, impressão, atualização, segurança e outros recursos em segundo plano.",
-        "feedbackErro": "A resposta correta é:\n\nExecutam em segundo plano para fornecer funções ao sistema ou a aplicações.\n\nComentário:\nServiços executam tarefas de suporte, rede, impressão, atualização, segurança e outros recursos em segundo plano.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Serviço = execução em segundo plano.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
-    },
-    {
-        "pergunta": "O Gerenciador de Tarefas é utilizado, entre outras funções, para:",
-        "alternativas": [
-            "Visualizar processos, consumo de recursos e aplicativos em execução.",
-            "Alterar fisicamente o tipo de memória instalada na placa-mãe.",
-            "Substituir o sistema de arquivos por um protocolo de rede.",
-            "Converter automaticamente documentos em imagens vetoriais.",
-            "Criar licenças de software para programas proprietários."
+            "Um padrão aberto de documentos usado por suítes como LibreOffice em textos, planilhas e apresentações.",
+            "Um padrão proprietário de executáveis usado pelo Windows para instalar programas e registrar componentes no sistema operacional.",
+            "Um formato de compactação voltado ao agrupamento de arquivos e à redução de espaço durante armazenamento ou transferência.",
+            "Um conjunto de drivers usado para garantir compatibilidade entre aplicativos de escritório e impressoras instaladas no computador.",
+            "Um protocolo de sincronização utilizado por aplicações Web para manter versões locais e remotas de documentos atualizadas."
         ],
         "correta": 0,
-        "feedbackAcerto": "Correto! O Gerenciador de Tarefas permite acompanhar processos, desempenho, inicialização e uso de CPU, memória, disco e rede.",
-        "feedbackErro": "A resposta correta é:\n\nVisualizar processos, consumo de recursos e aplicativos em execução.\n\nComentário:\nO Gerenciador de Tarefas permite acompanhar processos, desempenho, inicialização e uso de CPU, memória, disco e rede.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Gerenciador de Tarefas = processos e desempenho.",
-        "subtopico": "administracao_do_sistema"
+        "id": "software_041",
+        "assunto": "software",
+        "feedbackAcerto": "ODF é o OpenDocument Format, um padrão aberto para documentos de escritório.",
+        "feedbackErro": "A resposta correta é:\n\nUm padrão aberto de documentos usado por suítes como LibreOffice em textos, planilhas e apresentações.\n\nComentário:\nODF é o OpenDocument Format, um padrão aberto para documentos de escritório.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "ODT, ODS e ODP pertencem à família ODF."
     },
     {
-        "pergunta": "O Agendador de Tarefas em sistemas operacionais permite:",
+        "pergunta": "Um leitor de PDF, em sua função básica, é destinado a:",
+        "subtopico": "aplicativos_utilitarios_e_formatos",
         "alternativas": [
-            "Criar fisicamente novas portas USB no computador.",
-            "Executar ações automaticamente em horários ou eventos definidos.",
-            "Impedir que qualquer atualização de segurança seja instalada.",
-            "Transformar programas de texto em sistemas operacionais.",
-            "Substituir senhas por cabos de rede Ethernet."
+            "Editar qualquer elemento interno de um PDF com os mesmos recursos disponíveis no arquivo-fonte que originou o documento.",
+            "Abrir e visualizar documentos PDF, podendo oferecer recursos adicionais conforme o programa utilizado.",
+            "Converter arquivos PDF em executáveis para permitir que sejam abertos em computadores sem aplicativo compatível instalado.",
+            "Gerenciar permissões do sistema operacional e definir quais contas podem acessar as pastas que contêm documentos em PDF.",
+            "Compactar arquivos PDF de forma automática em qualquer cenário que são abertos, substituindo o original por uma versão com tamanho menor."
         ],
         "correta": 1,
-        "feedbackAcerto": "Correto! Agendadores permitem automatizar scripts, rotinas de manutenção e execução de programas em condições específicas.",
-        "feedbackErro": "A resposta correta é:\n\nExecutar ações automaticamente em horários ou eventos definidos.\n\nComentário:\nAgendadores permitem automatizar scripts, rotinas de manutenção e execução de programas em condições específicas.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Agendar = executar automaticamente conforme regra.",
-        "subtopico": "administracao_do_sistema"
+        "id": "software_042",
+        "assunto": "software",
+        "feedbackAcerto": "Leitura de PDF não implica edição completa; recursos variam conforme o software.",
+        "feedbackErro": "A resposta correta é:\n\nAbrir e visualizar documentos PDF, podendo oferecer recursos adicionais conforme o programa utilizado.\n\nComentário:\nLeitura de PDF não implica edição completa; recursos variam conforme o software.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "A banca pode usar a palavra 'leitor' para diferenciar visualização de edição avançada."
     },
     {
-        "pergunta": "A diferença mais adequada entre serviço e aplicativo interativo é:",
+        "pergunta": "Um aplicativo portátil é caracterizado, em geral, por:",
+        "subtopico": "aplicativos_utilitarios_e_formatos",
         "alternativas": [
-            "Serviço é hardware; aplicativo é sempre cabo de rede.",
-            "Serviço só existe em celulares; aplicativo só existe em servidores.",
-            "Serviço pode operar em segundo plano; aplicativo interativo depende mais da interface do usuário.",
-            "Aplicativo não usa memória; serviço não usa processador.",
-            "Ambos são obrigatoriamente arquivos compactados em formato ZIP."
+            "Ser executado em qualquer sistema operacional sem considerar arquitetura, bibliotecas, permissões ou compatibilidade da plataforma.",
+            "Ficar instalado no firmware do computador e iniciar antes do sistema operacional para fornecer ferramentas de manutenção do hardware.",
+            "Poder ser executado com pouca ou nenhuma instalação convencional, mantendo seus arquivos de funcionamento de forma mais autocontida.",
+            "Ser acessado por navegador e ter todos os componentes executados em servidor remoto, sem arquivos locais associados ao aplicativo.",
+            "Receber licença temporária vinculada ao dispositivo USB usado para transportar o programa entre diferentes computadores."
         ],
         "correta": 2,
-        "feedbackAcerto": "Correto! Serviços geralmente executam funções contínuas ou automáticas, enquanto aplicativos interativos são usados diretamente pelo usuário.",
-        "feedbackErro": "A resposta correta é:\n\nServiço pode operar em segundo plano; aplicativo interativo depende mais da interface do usuário.\n\nComentário:\nServiços geralmente executam funções contínuas ou automáticas, enquanto aplicativos interativos são usados diretamente pelo usuário.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Serviço em segundo plano é pegadinha comum.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
+        "id": "software_043",
+        "assunto": "software",
+        "feedbackAcerto": "Portátil reduz ou dispensa instalação tradicional, mas continua sujeito à compatibilidade do sistema.",
+        "feedbackErro": "A resposta correta é:\n\nPoder ser executado com pouca ou nenhuma instalação convencional, mantendo seus arquivos de funcionamento de forma mais autocontida.\n\nComentário:\nPortátil reduz ou dispensa instalação tradicional, mas continua sujeito à compatibilidade do sistema.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Portátil não significa universal nem necessariamente executado da nuvem."
     },
     {
-        "pergunta": "Logs do sistema são importantes porque:",
+        "pergunta": "A função de um desinstalador é:",
+        "subtopico": "aplicativos_utilitarios_e_formatos",
         "alternativas": [
-            "Substituem a memória RAM durante a execução de aplicativos.",
-            "Aumentam fisicamente a capacidade da bateria de notebooks.",
-            "Transformam arquivos temporários em programas executáveis.",
-            "Registram eventos úteis para diagnóstico, auditoria e investigação de falhas.",
-            "Impedem automaticamente qualquer erro humano ou invasão."
+            "Apagar todos os documentos criados pelo usuário com o programa para evitar que arquivos fiquem associados a um aplicativo inexistente.",
+            "Reverter o sistema operacional para o estado anterior à primeira instalação de qualquer software realizada naquele computador.",
+            "Converter o aplicativo em versão portátil, reunindo os arquivos necessários em uma pasta para execução sem instalação posterior.",
+            "Remover componentes do programa instalado e, quando previsto, registros e configurações associados à instalação.",
+            "Bloquear a licença do programa junto ao fabricante e impedir que a mesma conta volte a instalar o produto em outro dispositivo."
         ],
         "correta": 3,
-        "feedbackAcerto": "Correto! Logs registram eventos, erros, acessos e mudanças, auxiliando suporte técnico e análise de incidentes.",
-        "feedbackErro": "A resposta correta é:\n\nRegistram eventos úteis para diagnóstico, auditoria e investigação de falhas.\n\nComentário:\nLogs registram eventos, erros, acessos e mudanças, auxiliando suporte técnico e análise de incidentes.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Log = registro de evento.",
-        "subtopico": "administracao_do_sistema"
+        "id": "software_044",
+        "assunto": "software",
+        "feedbackAcerto": "Desinstalação remove o software e seus componentes previstos; documentos do usuário não são necessariamente apagados.",
+        "feedbackErro": "A resposta correta é:\n\nRemover componentes do programa instalado e, quando previsto, registros e configurações associados à instalação.\n\nComentário:\nDesinstalação remove o software e seus componentes previstos; documentos do usuário não são necessariamente apagados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Excluir a pasta do programa não equivale necessariamente a uma desinstalação adequada."
     },
     {
-        "pergunta": "O Visualizador de Eventos do Windows é associado principalmente a:",
+        "pergunta": "Plug-ins e complementos são usados para:",
+        "subtopico": "aplicativos_utilitarios_e_formatos",
         "alternativas": [
-            "Edição de planilhas e criação de apresentações profissionais.",
-            "Instalação física de módulos de memória em notebooks.",
-            "Gerenciamento exclusivo de cabos e conectores HDMI.",
-            "Conversão de endereços de domínio em endereços IP públicos.",
-            "Consulta de registros de sistema, segurança, aplicações e falhas."
+            "Gerenciar a inicialização do sistema operacional e carregar drivers antes da execução de qualquer aplicativo instalado pelo usuário.",
+            "Organizar arquivos em partições e controlar permissões de leitura e gravação nas unidades de armazenamento do computador.",
+            "Substituir a licença do programa principal por uma licença própria que passa a reger todo o conjunto instalado no equipamento.",
+            "Criar uma cópia completa do aplicativo em máquina virtual para executar cada recurso adicional de forma isolada do sistema.",
+            "Adicionar ou ampliar funcionalidades de um programa já existente sem substituir necessariamente a aplicação principal."
         ],
         "correta": 4,
-        "feedbackAcerto": "Correto! O Visualizador de Eventos permite examinar logs de aplicativos, segurança e sistema no Windows.",
-        "feedbackErro": "A resposta correta é:\n\nConsulta de registros de sistema, segurança, aplicações e falhas.\n\nComentário:\nO Visualizador de Eventos permite examinar logs de aplicativos, segurança e sistema no Windows.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Eventos do Windows = logs para diagnóstico.",
-        "subtopico": "administracao_do_sistema"
+        "id": "software_045",
+        "assunto": "software",
+        "feedbackAcerto": "Complementos ampliam recursos de um software hospedeiro.",
+        "feedbackErro": "A resposta correta é:\n\nAdicionar ou ampliar funcionalidades de um programa já existente sem substituir necessariamente a aplicação principal.\n\nComentário:\nComplementos ampliam recursos de um software hospedeiro.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Extensão, add-on e plug-in normalmente dependem de um programa principal."
     },
     {
-        "pergunta": "O Registro do Windows é:",
+        "pergunta": "Uma macro em um aplicativo de escritório é um recurso usado para:",
+        "subtopico": "aplicativos_utilitarios_e_formatos",
         "alternativas": [
-            "Banco hierárquico de configurações do sistema, usuários e aplicativos.",
-            "Arquivo de imagem usado apenas para papel de parede.",
-            "Protocolo de transferência segura de páginas web.",
-            "Cabo usado para conexão de redes Ethernet cabeadas.",
-            "Aplicativo de apresentação equivalente ao Impress."
+            "Automatizar sequências de ações ou comandos dentro do aplicativo, reduzindo tarefas repetitivas.",
+            "Criar uma cópia de segurança completa do sistema antes de cada alteração realizada em um documento aberto pelo usuário.",
+            "Aumentar a memória disponível ao programa por meio da transferência automática de dados para armazenamento secundário.",
+            "Atualizar drivers associados a impressoras e scanners usados para inserir ou produzir conteúdo nos documentos do aplicativo.",
+            "Converter o documento para um formato aberto e remover recursos que dependam de licenças proprietárias do programa original."
         ],
         "correta": 0,
-        "feedbackAcerto": "Correto! O Registro armazena configurações importantes do Windows e de programas, exigindo cuidado ao ser alterado.",
-        "feedbackErro": "A resposta correta é:\n\nBanco hierárquico de configurações do sistema, usuários e aplicativos.\n\nComentário:\nO Registro armazena configurações importantes do Windows e de programas, exigindo cuidado ao ser alterado.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Registro não é pasta comum de documentos.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
+        "id": "software_046",
+        "assunto": "software",
+        "feedbackAcerto": "Macros automatizam ações; por poderem conter código, exigem cuidado com origem e segurança.",
+        "feedbackErro": "A resposta correta é:\n\nAutomatizar sequências de ações ou comandos dentro do aplicativo, reduzindo tarefas repetitivas.\n\nComentário:\nMacros automatizam ações; por poderem conter código, exigem cuidado com origem e segurança.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Macro é automação dentro do aplicativo, não backup nem atualização de hardware."
     },
     {
-        "pergunta": "Variáveis de ambiente são utilizadas para:",
+        "pergunta": "A principal função de um sistema operacional é:",
+        "subtopico": "sistemas_operacionais_nucleo",
         "alternativas": [
-            "Medir a temperatura externa do local onde está o computador.",
-            "Armazenar valores de configuração acessíveis por processos e pelo sistema.",
-            "Substituir fisicamente discos SSD por memórias ROM.",
-            "Criar contas bancárias para usuários de aplicativos online.",
-            "Bloquear completamente a execução de qualquer script autorizado."
+            "Substituir todos os aplicativos de produtividade, oferecendo nativamente recursos completos de texto, planilha e apresentação.",
+            "Gerenciar recursos do computador e fornecer ambiente para execução de aplicativos e interação com dispositivos.",
+            "Armazenar permanentemente os arquivos do usuário na memória RAM para que permaneçam disponíveis depois do desligamento.",
+            "Executar a função dos drivers diretamente no hardware, eliminando a necessidade de software específico para cada dispositivo.",
+            "Converter qualquer programa instalado para a arquitetura do processador, garantindo compatibilidade entre versões diferentes."
         ],
         "correta": 1,
-        "feedbackAcerto": "Correto! Variáveis de ambiente guardam caminhos, opções e valores consultados por programas e pelo sistema operacional.",
-        "feedbackErro": "A resposta correta é:\n\nArmazenar valores de configuração acessíveis por processos e pelo sistema.\n\nComentário:\nVariáveis de ambiente guardam caminhos, opções e valores consultados por programas e pelo sistema operacional.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "PATH é a variável mais lembrada em concursos técnicos.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
+        "id": "software_047",
+        "assunto": "software",
+        "feedbackAcerto": "O sistema operacional gerencia hardware, processos, memória, arquivos e serviços para permitir a execução de programas.",
+        "feedbackErro": "A resposta correta é:\n\nGerenciar recursos do computador e fornecer ambiente para execução de aplicativos e interação com dispositivos.\n\nComentário:\nO sistema operacional gerencia hardware, processos, memória, arquivos e serviços para permitir a execução de programas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "SO é intermediário entre aplicações, usuário e recursos da máquina."
     },
     {
-        "pergunta": "A variável PATH é relevante porque:",
+        "pergunta": "A interface de linha de comando (CLI) diferencia-se da interface gráfica (GUI) porque:",
+        "subtopico": "sistemas_operacionais_nucleo",
         "alternativas": [
-            "Define a velocidade máxima da rede Wi-Fi doméstica.",
-            "Controla a quantidade física de núcleos do processador.",
-            "Indica diretórios onde o sistema procura comandos e executáveis.",
-            "Criptografa automaticamente todos os arquivos do usuário.",
-            "Substitui os drivers de vídeo instalados no sistema."
+            "Na CLI, o sistema não executa aplicativos; na GUI, todos os programas são necessariamente carregados em janelas separadas.",
+            "Na CLI, não existem permissões de usuário; na GUI, cada comando depende de confirmação administrativa antes da execução.",
+            "Na CLI, a interação ocorre principalmente por comandos textuais; na GUI, predominam elementos visuais e apontamento.",
+            "Na CLI, arquivos são armazenados em formato textual; na GUI, o sistema converte os mesmos arquivos para formatos gráficos.",
+            "Na CLI, em especial programas do sistema podem ser executados; na GUI, aplicativos de terceiros passam a ter acesso ao hardware."
         ],
         "correta": 2,
-        "feedbackAcerto": "Correto! PATH permite executar comandos sem informar o caminho completo do arquivo executável.",
-        "feedbackErro": "A resposta correta é:\n\nIndica diretórios onde o sistema procura comandos e executáveis.\n\nComentário:\nPATH permite executar comandos sem informar o caminho completo do arquivo executável.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "PATH está ligada à localização de executáveis.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
+        "id": "software_048",
+        "assunto": "software",
+        "feedbackAcerto": "CLI e GUI são formas de interação; ambas podem executar diversas tarefas conforme permissões e ferramentas disponíveis.",
+        "feedbackErro": "A resposta correta é:\n\nNa CLI, a interação ocorre principalmente por comandos textuais; na GUI, predominam elementos visuais e apontamento.\n\nComentário:\nCLI e GUI são formas de interação; ambas podem executar diversas tarefas conforme permissões e ferramentas disponíveis.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Não associe CLI a ausência de interface ou a limitação absoluta de funcionalidades."
     },
     {
-        "pergunta": "PowerShell e Prompt de Comando são ferramentas relacionadas a:",
+        "pergunta": "O modo de compatibilidade do sistema operacional pode ser útil quando:",
+        "subtopico": "sistemas_operacionais_nucleo",
         "alternativas": [
-            "Edição avançada de fotografias sem qualquer comando textual.",
-            "Transmissão física de áudio e vídeo por cabo HDMI.",
-            "Substituição de protocolos de roteamento em redes externas.",
-            "Execução de comandos e administração do sistema por interface textual.",
-            "Criação de certificados digitais por autoridade certificadora pública."
+            "Um aplicativo precisa ser convertido de licença proprietária para licença aberta antes de receber novas atualizações do fabricante.",
+            "O usuário deseja aumentar a resolução de tela e precisa que o sistema altere o firmware do adaptador gráfico instalado.",
+            "Um arquivo compactado foi criado em outro computador e deve ser descompactado sem alterar sua extensão ou permissões originais.",
+            "Um programa antigo precisa ser executado com ajustes que simulam condições esperadas de versões anteriores do sistema.",
+            "O computador precisa executar vários programas ao mesmo tempo e o sistema deve reservar um processador físico para cada aplicativo."
         ],
         "correta": 3,
-        "feedbackAcerto": "Correto! Ambas são interfaces de linha de comando, com PowerShell oferecendo recursos avançados de automação e administração.",
-        "feedbackErro": "A resposta correta é:\n\nExecução de comandos e administração do sistema por interface textual.\n\nComentário:\nAmbas são interfaces de linha de comando, com PowerShell oferecendo recursos avançados de automação e administração.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "PowerShell costuma ser mais poderoso que o CMD tradicional.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
+        "id": "software_049",
+        "assunto": "software",
+        "feedbackAcerto": "Compatibilidade tenta contornar diferenças entre versões antigas e atuais do ambiente.",
+        "feedbackErro": "A resposta correta é:\n\nUm programa antigo precisa ser executado com ajustes que simulam condições esperadas de versões anteriores do sistema.\n\nComentário:\nCompatibilidade tenta contornar diferenças entre versões antigas e atuais do ambiente.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Programa antigo que falha em sistema novo pode levar a questões sobre modo de compatibilidade."
     },
     {
-        "pergunta": "O modo de segurança de um sistema operacional é utilizado para:",
+        "pergunta": "Em termos gerais, um sistema operacional de 64 bits oferece, em comparação a um de 32 bits:",
+        "subtopico": "sistemas_operacionais_nucleo",
         "alternativas": [
-            "Aumentar permanentemente a velocidade do processador.",
-            "Executar apenas jogos e aplicativos gráficos de alto desempenho.",
-            "Instalar automaticamente todos os drivers de qualquer fabricante.",
-            "Apagar logs de eventos para ocultar falhas do sistema.",
-            "Inicializar com recursos mínimos para diagnóstico e correção de problemas."
+            "Garantia de que qualquer programa antigo funcionará sem ajustes, pois aplicações de 32 bits são convertidas automaticamente pelo sistema.",
+            "Dobramento direto da velocidade de processamento, independentemente do processador, da memória e do tipo de tarefa executada.",
+            "Eliminação da necessidade de memória virtual, já que sistemas de 64 bits mantêm todos os programas predominantemente na memória física.",
+            "Compatibilidade integral com todos os drivers existentes, pois a arquitetura de 64 bits aceita drivers de 32 bits sem restrição.",
+            "Maior espaço de endereçamento e possibilidade de executar aplicações de 64 bits em hardware compatível."
         ],
         "correta": 4,
-        "feedbackAcerto": "Correto! O modo de segurança carrega componentes essenciais, ajudando a diagnosticar drivers, serviços ou softwares problemáticos.",
-        "feedbackErro": "A resposta correta é:\n\nInicializar com recursos mínimos para diagnóstico e correção de problemas.\n\nComentário:\nO modo de segurança carrega componentes essenciais, ajudando a diagnosticar drivers, serviços ou softwares problemáticos.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Modo de segurança = inicialização mínima para suporte.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
+        "id": "software_050",
+        "assunto": "software",
+        "feedbackAcerto": "64 bits amplia capacidade de endereçamento, mas não garante desempenho dobrado nem compatibilidade universal.",
+        "feedbackErro": "A resposta correta é:\n\nMaior espaço de endereçamento e possibilidade de executar aplicações de 64 bits em hardware compatível.\n\nComentário:\n64 bits amplia capacidade de endereçamento, mas não garante desempenho dobrado nem compatibilidade universal.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "A diferença clássica cobrada em prova envolve memória endereçável e compatibilidade de aplicações/drivers."
     },
     {
-        "pergunta": "Ponto de restauração, em sistemas como Windows, serve para:",
+        "pergunta": "O Gerenciador de Tarefas do Windows pode ser usado para:",
+        "subtopico": "administracao_do_sistema",
         "alternativas": [
-            "Retornar configurações do sistema a um estado anterior registrado.",
-            "Copiar integralmente todos os arquivos pessoais para a nuvem.",
-            "Substituir backups completos de dados corporativos por padrão.",
-            "Aumentar fisicamente o espaço de armazenamento disponível.",
-            "Converter partições do disco em memória cache do processador."
+            "Visualizar processos e aplicativos em execução, além de acompanhar consumo de recursos do sistema.",
+            "Editar o firmware do computador e modificar parâmetros de inicialização gravados na placa-mãe antes do carregamento do Windows.",
+            "Alterar permissões de todos os arquivos de uma unidade e definir quais usuários podem ler, gravar ou executar cada item armazenado.",
+            "Reinstalar drivers ausentes buscando pacotes diretamente em servidores dos fabricantes sem usar outros componentes do sistema.",
+            "Gerenciar licenças de aplicativos e transferir ativações entre contas ou dispositivos associados ao mesmo usuário."
         ],
         "correta": 0,
-        "feedbackAcerto": "Correto! Pontos de restauração ajudam a desfazer alterações do sistema, mas não substituem uma política de backup de arquivos.",
-        "feedbackErro": "A resposta correta é:\n\nRetornar configurações do sistema a um estado anterior registrado.\n\nComentário:\nPontos de restauração ajudam a desfazer alterações do sistema, mas não substituem uma política de backup de arquivos.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Restauração do sistema não é backup completo.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
+        "id": "software_051",
+        "assunto": "software",
+        "feedbackAcerto": "O Gerenciador de Tarefas monitora processos, aplicativos, desempenho e outros dados operacionais.",
+        "feedbackErro": "A resposta correta é:\n\nVisualizar processos e aplicativos em execução, além de acompanhar consumo de recursos do sistema.\n\nComentário:\nO Gerenciador de Tarefas monitora processos, aplicativos, desempenho e outros dados operacionais.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Processo travado, uso de CPU e memória são contextos típicos de Gerenciador de Tarefas."
     },
     {
-        "pergunta": "Uma imagem do sistema é diferente de um simples backup de arquivos porque:",
+        "pergunta": "O Agendador de Tarefas do Windows permite:",
+        "subtopico": "administracao_do_sistema",
         "alternativas": [
-            "Armazena apenas atalhos da área de trabalho sem conteúdo real.",
-            "Pode conter estado completo de partições, sistema e configurações.",
-            "Funciona exclusivamente para compactar arquivos de áudio.",
-            "É sempre menor que qualquer documento de texto simples.",
-            "Dispensa qualquer mídia ou local de armazenamento externo."
+            "Criar partições no armazenamento e determinar automaticamente o sistema de arquivos mais adequado a cada unidade configurada.",
+            "Programar a execução de ações com base em horários, eventos ou condições definidas no sistema.",
+            "Controlar a fila de impressão e reorganizar trabalhos conforme prioridade, impressora escolhida e disponibilidade do dispositivo.",
+            "Gerenciar extensões de navegador e bloquear complementos que solicitem permissões consideradas excessivas pelo usuário.",
+            "Alterar o tipo de licença de um aplicativo depois da instalação e renovar automaticamente assinaturas próximas do vencimento."
         ],
         "correta": 1,
-        "feedbackAcerto": "Correto! Imagem de sistema pode permitir restauração mais ampla, incluindo sistema operacional, aplicações e configuração.",
-        "feedbackErro": "A resposta correta é:\n\nPode conter estado completo de partições, sistema e configurações.\n\nComentário:\nImagem de sistema pode permitir restauração mais ampla, incluindo sistema operacional, aplicações e configuração.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Imagem do sistema é mais abrangente que cópia isolada de arquivos.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
+        "id": "software_052",
+        "assunto": "software",
+        "feedbackAcerto": "Agendador automatiza ações em horários ou eventos.",
+        "feedbackErro": "A resposta correta é:\n\nProgramar a execução de ações com base em horários, eventos ou condições definidas no sistema.\n\nComentário:\nAgendador automatiza ações em horários ou eventos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Execução automática baseada em gatilho é indicação de tarefa agendada."
     },
     {
-        "pergunta": "Arquivos MSI no Windows estão normalmente associados a:",
+        "pergunta": "O Visualizador de Eventos do Windows é especialmente útil para:",
+        "subtopico": "administracao_do_sistema",
         "alternativas": [
-            "Formatos de imagem vetorial usados em editores gráficos.",
-            "Protocolos de roteamento entre redes autônomas.",
-            "Pacotes de instalação gerenciados pelo Windows Installer.",
-            "Bases de dados usadas somente por navegadores web.",
-            "Cabos físicos para transmissão de áudio digital."
+            "Editar documentos protegidos que não podem ser abertos por aplicativos comuns devido a restrições definidas no arquivo original.",
+            "Converter arquivos de log em cópias de segurança completas do sistema, incluindo programas, drivers e dados pessoais do usuário.",
+            "Consultar registros de sistema, aplicações e segurança que auxiliam na investigação de erros e incidentes.",
+            "Instalar atualizações de firmware em dispositivos conectados e acompanhar o progresso da gravação diretamente no hardware.",
+            "Gerenciar contas de serviços em nuvem e sincronizar senhas entre diferentes navegadores instalados no computador."
         ],
         "correta": 2,
-        "feedbackAcerto": "Correto! MSI é um formato de pacote de instalação usado pelo Windows Installer para instalar, reparar ou remover programas.",
-        "feedbackErro": "A resposta correta é:\n\nPacotes de instalação gerenciados pelo Windows Installer.\n\nComentário:\nMSI é um formato de pacote de instalação usado pelo Windows Installer para instalar, reparar ou remover programas.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "MSI costuma aparecer em questões de instalação de software.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
+        "id": "software_053",
+        "assunto": "software",
+        "feedbackAcerto": "Logs registram eventos e ajudam em diagnóstico, auditoria e segurança.",
+        "feedbackErro": "A resposta correta é:\n\nConsultar registros de sistema, aplicações e segurança que auxiliam na investigação de erros e incidentes.\n\nComentário:\nLogs registram eventos e ajudam em diagnóstico, auditoria e segurança.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Se a questão fala em investigar erro ocorrido em determinado horário, pense em logs/Event Viewer."
     },
     {
-        "pergunta": "Um aplicativo portátil é aquele que, em geral:",
+        "pergunta": "O modo de segurança de um sistema operacional é empregado principalmente para:",
+        "subtopico": "administracao_do_sistema",
         "alternativas": [
-            "Funciona apenas se gravado permanentemente na BIOS.",
-            "É obrigatório em servidores de banco de dados corporativos.",
-            "Substitui toda autenticação por reconhecimento facial.",
-            "Pode ser executado com pouca ou nenhuma instalação no sistema.",
-            "Elimina qualquer risco de segurança por definição."
+            "Executar todos os programas com privilégios administrativos para impedir que permissões bloqueiem ferramentas de manutenção do sistema.",
+            "Criptografar arquivos pessoais durante a inicialização e liberar o acesso em especial depois de autenticação adicional do usuário.",
+            "Criar uma cópia virtual completa do sistema para testar atualizações sem modificar a instalação existente no computador.",
+            "Inicializar o ambiente com conjunto reduzido de recursos e drivers, facilitando diagnóstico e correção de problemas.",
+            "Desativar a rede permanentemente e remover configurações de Internet que possam estar causando lentidão nos aplicativos instalados."
         ],
         "correta": 3,
-        "feedbackAcerto": "Correto! Aplicativos portáteis podem rodar a partir de pastas ou mídias removíveis, deixando menos dependências instaladas.",
-        "feedbackErro": "A resposta correta é:\n\nPode ser executado com pouca ou nenhuma instalação no sistema.\n\nComentário:\nAplicativos portáteis podem rodar a partir de pastas ou mídias removíveis, deixando menos dependências instaladas.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Portátil não significa necessariamente seguro.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
+        "id": "software_054",
+        "assunto": "software",
+        "feedbackAcerto": "Modo de segurança carrega recursos mínimos para diagnóstico.",
+        "feedbackErro": "A resposta correta é:\n\nInicializar o ambiente com conjunto reduzido de recursos e drivers, facilitando diagnóstico e correção de problemas.\n\nComentário:\nModo de segurança carrega recursos mínimos para diagnóstico.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Falha de inicialização ou driver problemático são cenários clássicos para Safe Mode."
     },
     {
-        "pergunta": "O desinstalador de um programa é usado para:",
+        "pergunta": "Um ponto de restauração do Windows é destinado a:",
+        "subtopico": "administracao_do_sistema",
         "alternativas": [
-            "Aumentar a capacidade física da placa de vídeo.",
-            "Transformar arquivos PDF em processadores de texto.",
-            "Criar automaticamente rotas de rede entre países.",
-            "Bloquear todas as atualizações do sistema operacional.",
-            "Remover componentes instalados e registros associados ao aplicativo."
+            "Criar cópia integral de todos os documentos do usuário em mídia externa para recuperação mesmo após perda física do disco principal.",
+            "Reinstalar o sistema operacional desde o início, apagando aplicativos, contas e configurações criadas depois da compra do computador, conforme a configuração adotada no ambiente.",
+            "Armazenar uma cópia de cada arquivo alterado pelo usuário para permitir recuperação de versões anteriores de qualquer documento.",
+            "Duplicar a instalação atual em uma máquina virtual e manter a cópia em execução para assumir automaticamente em caso de falha.",
+            "Retornar configurações e componentes do sistema a um estado registrado anteriormente, sem equivaler a backup completo de arquivos pessoais."
         ],
         "correta": 4,
-        "feedbackAcerto": "Correto! Desinstaladores removem arquivos, serviços, atalhos e configurações relacionados, embora resíduos possam permanecer.",
-        "feedbackErro": "A resposta correta é:\n\nRemover componentes instalados e registros associados ao aplicativo.\n\nComentário:\nDesinstaladores removem arquivos, serviços, atalhos e configurações relacionados, embora resíduos possam permanecer.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Excluir o ícone não equivale a desinstalar corretamente.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "Em sistemas móveis, permissões de aplicativos servem para:",
-        "alternativas": [
-            "Controlar acesso a recursos como câmera, localização, contatos e armazenamento.",
-            "Aumentar a potência física da bateria em qualquer aparelho.",
-            "Converter automaticamente aplicativos em sistemas operacionais.",
-            "Desativar permanentemente a necessidade de atualização de segurança.",
-            "Substituir cabos de carregamento por protocolos de e-mail."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! Permissões limitam quais recursos o aplicativo pode usar, sendo essenciais para privacidade e segurança.",
-        "feedbackErro": "A resposta correta é:\n\nControlar acesso a recursos como câmera, localização, contatos e armazenamento.\n\nComentário:\nPermissões limitam quais recursos o aplicativo pode usar, sendo essenciais para privacidade e segurança.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Permissão deve ser compatível com a função do app.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "Sandbox, em contexto de software, é uma técnica que busca:",
-        "alternativas": [
-            "Substituir discos SSD por memórias ópticas de leitura única.",
-            "Isolar a execução de código para reduzir impacto sobre o restante do sistema.",
-            "Impedir que qualquer programa utilize recursos de processamento.",
-            "Converter planilhas em arquivos de áudio automaticamente.",
-            "Eliminar a necessidade de controle de acesso em redes públicas."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! Sandbox restringe o ambiente de execução, limitando acesso a arquivos, recursos e partes sensíveis do sistema.",
-        "feedbackErro": "A resposta correta é:\n\nIsolar a execução de código para reduzir impacto sobre o restante do sistema.\n\nComentário:\nSandbox restringe o ambiente de execução, limitando acesso a arquivos, recursos e partes sensíveis do sistema.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Sandbox = isolamento controlado.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "Acessibilidade digital em software significa:",
-        "alternativas": [
-            "Criar programas que funcionem apenas em computadores de alto custo.",
-            "Impedir ajustes de contraste, fonte, navegação e leitores de tela.",
-            "Projetar recursos para uso por pessoas com diferentes necessidades e limitações.",
-            "Substituir todo conteúdo textual por imagens sem descrição.",
-            "Bloquear a navegação por teclado em formulários e menus."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! Acessibilidade envolve leitores de tela, contraste, navegação por teclado, legendas, textos alternativos e desenho inclusivo.",
-        "feedbackErro": "A resposta correta é:\n\nProjetar recursos para uso por pessoas com diferentes necessidades e limitações.\n\nComentário:\nAcessibilidade envolve leitores de tela, contraste, navegação por teclado, legendas, textos alternativos e desenho inclusivo.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Acessibilidade é inclusão no uso do software.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "Internacionalização de software refere-se a:",
-        "alternativas": [
-            "Instalar o programa obrigatoriamente em servidores fora do país.",
-            "Converter todo aplicativo em protocolo de comunicação internacional.",
-            "Bloquear moedas, datas e acentos usados em outros idiomas.",
-            "Preparar o sistema para adaptação a idiomas, formatos e regiões diferentes.",
-            "Remover traduções para impedir uso por usuários estrangeiros."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! Internacionalização prepara o software para localização, considerando idioma, moeda, data, fuso e convenções regionais.",
-        "feedbackErro": "A resposta correta é:\n\nPreparar o sistema para adaptação a idiomas, formatos e regiões diferentes.\n\nComentário:\nInternacionalização prepara o software para localização, considerando idioma, moeda, data, fuso e convenções regionais.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "i18n prepara; localização adapta para uma região.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
-    },
-    {
-        "pergunta": "Assinatura digital de um instalador ajuda o usuário a verificar:",
-        "alternativas": [
-            "Quantidade física de memória RAM disponível no computador.",
-            "Velocidade máxima do cabo HDMI conectado ao monitor.",
-            "Garantia absoluta de que o programa nunca terá vulnerabilidades.",
-            "Conversão automática de licença proprietária em código aberto.",
-            "Autoria e integridade do arquivo antes da instalação."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! A assinatura digital indica quem assinou o instalador e se o arquivo foi alterado após a assinatura.",
-        "feedbackErro": "A resposta correta é:\n\nAutoria e integridade do arquivo antes da instalação.\n\nComentário:\nA assinatura digital indica quem assinou o instalador e se o arquivo foi alterado após a assinatura.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Assinatura digital não garante perfeição, mas aumenta confiança.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "A verificação por checksum ou hash de um arquivo baixado serve para:",
-        "alternativas": [
-            "Comparar a integridade do arquivo recebido com o valor divulgado.",
-            "Aumentar a velocidade da Internet por compressão automática.",
-            "Transformar o arquivo em software livre sem restrição de licença.",
-            "Instalar drivers ausentes sem intervenção do sistema operacional.",
-            "Substituir autenticação de usuários por impressão digital."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! Hashes como SHA-256 permitem conferir se o arquivo foi corrompido ou alterado em relação ao valor esperado.",
-        "feedbackErro": "A resposta correta é:\n\nComparar a integridade do arquivo recebido com o valor divulgado.\n\nComentário:\nHashes como SHA-256 permitem conferir se o arquivo foi corrompido ou alterado em relação ao valor esperado.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Hash confere integridade, não descriptografa conteúdo.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
-    },
-    {
-        "pergunta": "Uma aplicação de 64 bits, em comparação com uma de 32 bits, pode:",
-        "alternativas": [
-            "Funcionar obrigatoriamente em qualquer processador de 8 bits antigo.",
-            "Endereçar mais memória, desde que sistema e hardware sejam compatíveis.",
-            "Eliminar a necessidade de sistema operacional instalado.",
-            "Impedir por definição todos os ataques de malware existentes.",
-            "Transformar arquivos compactados em memória física adicional."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! Arquitetura de 64 bits permite maior espaço de endereçamento, mas requer compatibilidade de processador e sistema.",
-        "feedbackErro": "A resposta correta é:\n\nEndereçar mais memória, desde que sistema e hardware sejam compatíveis.\n\nComentário:\nArquitetura de 64 bits permite maior espaço de endereçamento, mas requer compatibilidade de processador e sistema.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "64 bits está muito ligado a capacidade de endereçamento de memória.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "Em sistemas compatíveis, aplicações de 32 bits em sistema de 64 bits:",
-        "alternativas": [
-            "Sempre exigem troca física da placa-mãe a cada execução.",
-            "São automaticamente convertidas em aplicativos móveis nativos.",
-            "Podem funcionar por subsistemas de compatibilidade, com limitações próprias.",
-            "Nunca podem ser executadas em qualquer circunstância técnica.",
-            "Dispensam drivers, bibliotecas e permissões do sistema."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! Muitos sistemas de 64 bits conseguem executar aplicações de 32 bits por compatibilidade, mas há limites e dependências.",
-        "feedbackErro": "A resposta correta é:\n\nPodem funcionar por subsistemas de compatibilidade, com limitações próprias.\n\nComentário:\nMuitos sistemas de 64 bits conseguem executar aplicações de 32 bits por compatibilidade, mas há limites e dependências.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Compatibilidade não significa desempenho ou suporte ilimitado.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "A limitação clássica de sistemas de 32 bits está relacionada principalmente a:",
-        "alternativas": [
-            "Impossibilidade de executar qualquer editor de texto simples.",
-            "Obrigação de usar apenas monitores monocromáticos antigos.",
-            "Ausência completa de suporte a redes locais cabeadas.",
-            "Menor espaço de endereçamento de memória em relação a 64 bits.",
-            "Proibição de criar contas de usuário no sistema operacional."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! Sistemas de 32 bits têm espaço de endereçamento mais limitado, o que afeta o uso de grandes quantidades de memória.",
-        "feedbackErro": "A resposta correta é:\n\nMenor espaço de endereçamento de memória em relação a 64 bits.\n\nComentário:\nSistemas de 32 bits têm espaço de endereçamento mais limitado, o que afeta o uso de grandes quantidades de memória.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "32 bits x 64 bits cai muito associado à memória.",
-        "subtopico": "aplicativos_utilitarios_e_formatos"
-    },
-    {
-        "pergunta": "Atualizações de sistema operacional podem afetar drivers porque:",
-        "alternativas": [
-            "Drivers são arquivos de imagem sem relação com hardware.",
-            "Todo driver é sempre independente do sistema operacional instalado.",
-            "Atualizações convertem automaticamente drivers em documentos PDF.",
-            "Drivers funcionam apenas quando não há dispositivo conectado.",
-            "Mudanças no sistema podem exigir versões compatíveis do software de controle."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! Drivers dependem de compatibilidade com o sistema; atualizações podem corrigir ou causar problemas de funcionamento.",
-        "feedbackErro": "A resposta correta é:\n\nMudanças no sistema podem exigir versões compatíveis do software de controle.\n\nComentário:\nDrivers dependem de compatibilidade com o sistema; atualizações podem corrigir ou causar problemas de funcionamento.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Driver incompatível é causa comum de falha após atualização.",
-        "subtopico": "drivers_firmware_e_dispositivos"
-    },
-    {
-        "pergunta": "A diferença entre firmware e driver é que:",
-        "alternativas": [
-            "Firmware fica embarcado no dispositivo; driver permite comunicação com o sistema.",
-            "Firmware é aplicativo de planilha; driver é sempre arquivo de áudio.",
-            "Driver fica gravado apenas em ROM; firmware roda somente no navegador.",
-            "Ambos são nomes diferentes para a mesma tecla do teclado.",
-            "Firmware não controla dispositivo algum; driver não usa software."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto! Firmware é software interno do equipamento; driver é software instalado no sistema para controlar ou acessar o dispositivo.",
-        "feedbackErro": "A resposta correta é:\n\nFirmware fica embarcado no dispositivo; driver permite comunicação com o sistema.\n\nComentário:\nFirmware é software interno do equipamento; driver é software instalado no sistema para controlar ou acessar o dispositivo.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Firmware no dispositivo; driver no sistema.",
-        "subtopico": "drivers_firmware_e_dispositivos"
-    },
-    {
-        "pergunta": "BIOS e UEFI são exemplos de software do tipo:",
-        "alternativas": [
-            "Editor de texto usado para criar documentos acadêmicos.",
-            "Firmware responsável por inicialização e configuração básica do hardware.",
-            "Banco de dados empresarial voltado a relacionamento com clientes.",
-            "Extensão de navegador usada para bloquear anúncios.",
-            "Planilha eletrônica integrada a suíte de escritório."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto! BIOS e UEFI inicializam o hardware e iniciam o carregamento do sistema operacional.",
-        "feedbackErro": "A resposta correta é:\n\nFirmware responsável por inicialização e configuração básica do hardware.\n\nComentário:\nBIOS e UEFI inicializam o hardware e iniciam o carregamento do sistema operacional.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "BIOS/UEFI aparecem entre hardware e software.",
-        "subtopico": "drivers_firmware_e_dispositivos"
-    },
-    {
-        "pergunta": "O spooler de impressão tem como função:",
-        "alternativas": [
-            "Compactar imagens em formato vetorial sem perda.",
-            "Controlar exclusivamente o brilho do monitor.",
-            "Gerenciar fila e envio de trabalhos para a impressora.",
-            "Distribuir endereços IP em redes locais por DHCP.",
-            "Substituir o driver de vídeo por uma extensão web."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto! O spooler organiza trabalhos de impressão, permitindo fila, pausa, cancelamento e envio ao dispositivo.",
-        "feedbackErro": "A resposta correta é:\n\nGerenciar fila e envio de trabalhos para a impressora.\n\nComentário:\nO spooler organiza trabalhos de impressão, permitindo fila, pausa, cancelamento e envio ao dispositivo.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Spooler = fila de impressão.",
-        "subtopico": "drivers_firmware_e_dispositivos"
-    },
-    {
-        "pergunta": "Driver de impressora é necessário porque:",
-        "alternativas": [
-            "Aumenta fisicamente a quantidade de papel dentro da bandeja.",
-            "Transforma a impressora em roteador de longa distância.",
-            "Substitui qualquer necessidade de conexão elétrica.",
-            "Traduz comandos do sistema ou aplicativo para linguagem compreendida pelo equipamento.",
-            "Permite editar textos sem software aplicativo instalado."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto! O driver permite que o sistema operacional envie instruções corretas ao modelo de impressora.",
-        "feedbackErro": "A resposta correta é:\n\nTraduz comandos do sistema ou aplicativo para linguagem compreendida pelo equipamento.\n\nComentário:\nO driver permite que o sistema operacional envie instruções corretas ao modelo de impressora.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Driver é tradutor entre sistema e dispositivo.",
-        "subtopico": "drivers_firmware_e_dispositivos"
-    },
-    {
-        "pergunta": "Associação de arquivos em sistemas operacionais indica:",
-        "alternativas": [
-            "Quantidade máxima de energia consumida pelo processador.",
-            "Endereço físico gravado na placa de rede do computador.",
-            "Senha criptografada usada apenas por servidores de e-mail.",
-            "Velocidade de transmissão de uma porta HDMI conectada.",
-            "Qual aplicativo padrão será usado para abrir determinado tipo de arquivo."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto! A associação relaciona extensões ou tipos de arquivo a programas padrão, como abrir PDF em um leitor específico.",
-        "feedbackErro": "A resposta correta é:\n\nQual aplicativo padrão será usado para abrir determinado tipo de arquivo.\n\nComentário:\nA associação relaciona extensões ou tipos de arquivo a programas padrão, como abrir PDF em um leitor específico.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Extensão ajuda o sistema a escolher o programa padrão.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
+        "id": "software_055",
+        "assunto": "software",
+        "feedbackAcerto": "Restauração do sistema volta configurações e componentes; não substitui backup de dados pessoais.",
+        "feedbackErro": "A resposta correta é:\n\nRetornar configurações e componentes do sistema a um estado registrado anteriormente, sem equivaler a backup completo de arquivos pessoais.\n\nComentário:\nRestauração do sistema volta configurações e componentes; não substitui backup de dados pessoais.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Ponto de restauração e backup são recursos diferentes."
     },
     {
         "pergunta": "Perfis de usuário em sistemas operacionais servem para:",
+        "subtopico": "administracao_do_sistema",
         "alternativas": [
-            "Separar configurações, dados e preferências de diferentes contas.",
-            "Aumentar automaticamente o clock de todos os processadores.",
-            "Converter protocolos de Internet em arquivos executáveis.",
-            "Substituir discos rígidos por armazenamento volátil.",
-            "Criar cabos físicos para cada aplicativo instalado."
+            "Separar configurações, preferências e dados associados a diferentes contas que utilizam o mesmo sistema.",
+            "Duplicar o sistema operacional para que cada usuário execute um kernel próprio e independente no mesmo equipamento físico.",
+            "Definir o firmware usado na inicialização conforme a conta que efetuará login depois do carregamento do sistema operacional.",
+            "Converter aplicativos instalados em versões portáteis para impedir compartilhamento de configurações entre usuários do computador.",
+            "Substituir permissões de arquivos por cópias individuais, mantendo uma versão física separada de cada documento para cada conta."
         ],
         "correta": 0,
-        "feedbackAcerto": "Correto! Perfis permitem que usuários diferentes tenham áreas, configurações e permissões próprias no mesmo sistema.",
-        "feedbackErro": "A resposta correta é:\n\nSeparar configurações, dados e preferências de diferentes contas.\n\nComentário:\nPerfis permitem que usuários diferentes tenham áreas, configurações e permissões próprias no mesmo sistema.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Perfil de usuário não é apenas nome de login.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
+        "id": "software_056",
+        "assunto": "software",
+        "feedbackAcerto": "Perfis organizam ambiente e dados de contas distintas.",
+        "feedbackErro": "A resposta correta é:\n\nSeparar configurações, preferências e dados associados a diferentes contas que utilizam o mesmo sistema.\n\nComentário:\nPerfis organizam ambiente e dados de contas distintas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Conta diferente não significa sistema operacional diferente."
     },
     {
-        "pergunta": "Em um sistema multiusuário, permissões são necessárias para:",
+        "pergunta": "No modelo SaaS, o usuário normalmente:",
+        "subtopico": "virtualizacao_nuvem_e_webapps",
         "alternativas": [
-            "Eliminar a necessidade de memória e processador.",
-            "Controlar o acesso de cada conta a arquivos, programas e recursos.",
-            "Transformar todo arquivo em cópia de segurança automática.",
-            "Impedir o uso de qualquer software aplicativo no sistema.",
-            "Conectar computadores sem placas ou interfaces de rede."
+            "Recebe em especial hardware virtualizado e fica responsável por instalar sistema operacional, aplicativo e atualizações da solução utilizada.",
+            "Acessa um software como serviço pela Internet, enquanto a infraestrutura e a aplicação são administradas pelo provedor.",
+            "Executa o programa diretamente do firmware do dispositivo, sem depender de rede, armazenamento local ou servidor externo.",
+            "Adquire o código-fonte do aplicativo e passa a controlar as atualizações e a infraestrutura usada por todos os demais clientes.",
+            "Instala uma cópia completa do serviço em cada computador e utiliza a Internet unicamente para validar a licença de uso."
         ],
         "correta": 1,
-        "feedbackAcerto": "Correto! Permissões protegem recursos e dados, definindo o que cada usuário ou grupo pode acessar e modificar.",
-        "feedbackErro": "A resposta correta é:\n\nControlar o acesso de cada conta a arquivos, programas e recursos.\n\nComentário:\nPermissões protegem recursos e dados, definindo o que cada usuário ou grupo pode acessar e modificar.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Multiusuário exige controle de acesso.",
-        "subtopico": "sistemas_de_arquivos_e_permissoes"
+        "id": "software_057",
+        "assunto": "software",
+        "feedbackAcerto": "SaaS entrega software pronto como serviço, geralmente acessado pela Internet.",
+        "feedbackErro": "A resposta correta é:\n\nAcessa um software como serviço pela Internet, enquanto a infraestrutura e a aplicação são administradas pelo provedor.\n\nComentário:\nSaaS entrega software pronto como serviço, geralmente acessado pela Internet.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "SaaS = aplicação pronta; o usuário não administra a infraestrutura subjacente."
     },
     {
-        "pergunta": "Alterar a prioridade de um processo pode:",
+        "pergunta": "Um aplicativo Web diferencia-se de um aplicativo desktop tradicional porque, em geral:",
+        "subtopico": "virtualizacao_nuvem_e_webapps",
         "alternativas": [
-            "Aumentar fisicamente o número de núcleos do processador.",
-            "Converter automaticamente o programa em serviço de rede.",
-            "Influenciar a atenção dada pelo escalonador, sem garantir desempenho absoluto.",
-            "Eliminar todos os gargalos de disco, memória e conexão.",
-            "Transformar um aplicativo comum em sistema operacional."
+            "Não utiliza armazenamento nem dados locais em nenhuma circunstância, pois todos os arquivos permanecem necessariamente no servidor remoto.",
+            "Funciona sem sistema operacional, já que o navegador substitui integralmente os serviços necessários à execução do aplicativo.",
+            "É acessado por navegador e pode executar parte relevante de suas funções em servidores remotos.",
+            "Possui acesso direto ao hardware do computador com as mesmas permissões concedidas a drivers e componentes do sistema operacional.",
+            "Dispensa autenticação e atualização, porque toda aplicação acessada pelo navegador é pública e gerenciada automaticamente."
         ],
         "correta": 2,
-        "feedbackAcerto": "Correto! Prioridade pode afetar o escalonamento, mas desempenho depende de vários recursos e limitações do sistema.",
-        "feedbackErro": "A resposta correta é:\n\nInfluenciar a atenção dada pelo escalonador, sem garantir desempenho absoluto.\n\nComentário:\nPrioridade pode afetar o escalonamento, mas desempenho depende de vários recursos e limitações do sistema.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Prioridade não cria recurso físico novo.",
-        "subtopico": "administracao_do_sistema"
+        "id": "software_058",
+        "assunto": "software",
+        "feedbackAcerto": "Aplicações Web são acessadas via navegador e combinam processamento local e remoto conforme a arquitetura.",
+        "feedbackErro": "A resposta correta é:\n\nÉ acessado por navegador e pode executar parte relevante de suas funções em servidores remotos.\n\nComentário:\nAplicações Web são acessadas via navegador e combinam processamento local e remoto conforme a arquitetura.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Webapp não significa ausência total de dados locais nem acesso irrestrito ao hardware."
     },
     {
-        "pergunta": "Um processo em segundo plano caracteriza-se por:",
+        "pergunta": "Uma PWA busca combinar características da Web com recursos típicos de aplicativos instaláveis, como:",
+        "subtopico": "virtualizacao_nuvem_e_webapps",
         "alternativas": [
-            "Ser obrigatoriamente malware e sempre prejudicar o computador.",
-            "Existir apenas quando não há sistema operacional instalado.",
-            "Aparecer somente como arquivo compactado dentro da Lixeira.",
-            "Executar sem interação direta constante com o usuário.",
-            "Substituir fisicamente periféricos de entrada e saída."
+            "Execução direta no firmware do equipamento e acesso irrestrito aos dispositivos físicos sem mediação do sistema operacional.",
+            "Conversão automática de qualquer site em programa nativo compilado especificamente para o processador usado no computador.",
+            "Substituição do navegador por um sistema operacional próprio que executa a aplicação em ambiente independente do dispositivo, conforme a configuração adotada no ambiente.",
+            "Possibilidade de instalação, experiência adaptada ao dispositivo e alguns recursos offline ou de notificação quando suportados.",
+            "Armazenamento permanente de todos os dados em memória RAM para permitir funcionamento sem conexão e sem uso de disco."
         ],
         "correta": 3,
-        "feedbackAcerto": "Correto! Processos em segundo plano podem ser legítimos, como serviços de atualização, sincronização, impressão ou segurança.",
-        "feedbackErro": "A resposta correta é:\n\nExecutar sem interação direta constante com o usuário.\n\nComentário:\nProcessos em segundo plano podem ser legítimos, como serviços de atualização, sincronização, impressão ou segurança.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Segundo plano não significa automaticamente ameaça.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
+        "id": "software_059",
+        "assunto": "software",
+        "feedbackAcerto": "PWA aproxima experiência Web da experiência de aplicativo, usando recursos suportados pelo navegador e sistema.",
+        "feedbackErro": "A resposta correta é:\n\nPossibilidade de instalação, experiência adaptada ao dispositivo e alguns recursos offline ou de notificação quando suportados.\n\nComentário:\nPWA aproxima experiência Web da experiência de aplicativo, usando recursos suportados pelo navegador e sistema.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "PWA continua baseada em tecnologias Web; não vira firmware nem sistema operacional."
     },
     {
-        "pergunta": "A telemetria de uso em um software corporativo, quando autorizada, pode auxiliar a:",
+        "pergunta": "O cache de aplicativos e navegadores tem como função típica:",
+        "subtopico": "virtualizacao_nuvem_e_webapps",
         "alternativas": [
-            "Coletar métricas de funcionamento para melhoria, suporte e tomada de decisão.",
-            "Substituir todos os mecanismos de autenticação por acesso anônimo.",
-            "Converter automaticamente licenças proprietárias em domínio público.",
-            "Aumentar fisicamente a quantidade de portas USB disponíveis.",
-            "Eliminar a necessidade de consentimento ou política de privacidade."
+            "Manter cópia de segurança definitiva dos documentos do usuário, protegida contra exclusão ou alteração no aplicativo principal.",
+            "Guardar chaves de licença dos programas instalados e impedir sua execução quando o computador não estiver conectado à Internet.",
+            "Controlar as permissões de cada conta e definir quais usuários podem acessar arquivos, aplicativos e dispositivos conectados.",
+            "Substituir a memória RAM por armazenamento permanente em qualquer cenário que vários programas estiverem em execução ao mesmo tempo.",
+            "Armazenar dados temporários para acelerar acessos posteriores e reduzir transferências ou processamento repetido."
+        ],
+        "correta": 4,
+        "id": "software_060",
+        "assunto": "software",
+        "feedbackAcerto": "Cache é armazenamento temporário para desempenho; pode ficar desatualizado e ser limpo quando necessário.",
+        "feedbackErro": "A resposta correta é:\n\nArmazenar dados temporários para acelerar acessos posteriores e reduzir transferências ou processamento repetido.\n\nComentário:\nCache é armazenamento temporário para desempenho; pode ficar desatualizado e ser limpo quando necessário.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Cache não é backup nem mecanismo de licenciamento."
+    },
+    {
+        "pergunta": "Uma máquina virtual é melhor descrita como:",
+        "subtopico": "virtualizacao_nuvem_e_webapps",
+        "alternativas": [
+            "Um ambiente computacional virtualizado que executa um sistema convidado sobre recursos abstraídos do equipamento físico.",
+            "Um aplicativo portátil que reúne seus arquivos em uma pasta e pode ser executado sem instalação convencional no sistema hospedeiro.",
+            "Um perfil de usuário isolado que mantém preferências e documentos separados, mas utiliza a mesma instância do sistema operacional.",
+            "Um serviço de nuvem que sincroniza arquivos entre dispositivos e mantém versões remotas de documentos modificados pelo usuário.",
+            "Um modo de compatibilidade que altera temporariamente as configurações de um programa antigo para executá-lo em sistema recente."
         ],
         "correta": 0,
-        "feedbackAcerto": "Correto! Telemetria coleta dados de uso e desempenho, devendo respeitar regras de privacidade e configuração adotadas.",
-        "feedbackErro": "A resposta correta é:\n\nColetar métricas de funcionamento para melhoria, suporte e tomada de decisão.\n\nComentário:\nTelemetria coleta dados de uso e desempenho, devendo respeitar regras de privacidade e configuração adotadas.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Telemetria é coleta de métricas, não permissão para coletar qualquer dado.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
+        "id": "software_061",
+        "assunto": "software",
+        "feedbackAcerto": "Máquina virtual executa sistema convidado sobre camada de virtualização.",
+        "feedbackErro": "A resposta correta é:\n\nUm ambiente computacional virtualizado que executa um sistema convidado sobre recursos abstraídos do equipamento físico.\n\nComentário:\nMáquina virtual executa sistema convidado sobre camada de virtualização.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Não confunda VM com perfil de usuário, aplicativo portátil ou modo de compatibilidade."
     },
     {
-        "pergunta": "Em aplicações corporativas, controle de versão de documentos ou códigos permite:",
+        "pergunta": "A principal diferença entre virtualização e emulação é que, de forma geral:",
+        "subtopico": "virtualizacao_nuvem_e_webapps",
         "alternativas": [
-            "Impedir que qualquer usuário autorizado acesse arquivos compartilhados.",
-            "Registrar alterações, identificar autores e recuperar estados anteriores.",
-            "Aumentar automaticamente o tamanho físico do monitor utilizado.",
-            "Converter protocolos de e-mail em sistemas operacionais móveis.",
-            "Substituir backups, logs e permissões em todos os cenários."
+            "Virtualização exige que o programa seja executado na nuvem, enquanto emulação funciona em especial quando todos os arquivos ficam armazenados localmente.",
+            "Virtualização aproveita hardware compatível para criar ambientes isolados; emulação reproduz o comportamento de outra arquitetura ou plataforma.",
+            "Virtualização converte aplicativos em versões portáteis, enquanto emulação transforma programas proprietários em software de código aberto.",
+            "Virtualização altera o firmware do computador, enquanto emulação substitui o sistema operacional por um conjunto de drivers genéricos.",
+            "Virtualização é usada para compactar dados, enquanto emulação restaura arquivos a partir de cópias de segurança criadas anteriormente."
         ],
         "correta": 1,
-        "feedbackAcerto": "Correto! Controle de versão ajuda a rastrear mudanças, comparar versões e recuperar estados anteriores de arquivos ou código.",
-        "feedbackErro": "A resposta correta é:\n\nRegistrar alterações, identificar autores e recuperar estados anteriores.\n\nComentário:\nControle de versão ajuda a rastrear mudanças, comparar versões e recuperar estados anteriores de arquivos ou código.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Versão = rastreabilidade de alterações.",
-        "subtopico": "desenvolvimento_apis_e_automacao"
+        "id": "software_062",
+        "assunto": "software",
+        "feedbackAcerto": "Emulação imita arquitetura/plataforma; virtualização abstrai recursos sobre hardware compatível.",
+        "feedbackErro": "A resposta correta é:\n\nVirtualização aproveita hardware compatível para criar ambientes isolados; emulação reproduz o comportamento de outra arquitetura ou plataforma.\n\nComentário:\nEmulação imita arquitetura/plataforma; virtualização abstrai recursos sobre hardware compatível.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "A diferença costuma aparecer em questões sobre executar sistemas ou programas destinados a outro ambiente."
     },
     {
-        "pergunta": "Um software legado, em ambiente institucional, é aquele que:",
+        "pergunta": "Serviços de sincronização em nuvem podem manter arquivos semelhantes em diferentes dispositivos. Isso não deve ser confundido com backup porque:",
+        "subtopico": "virtualizacao_nuvem_e_webapps",
         "alternativas": [
-            "Foi instalado ontem e possui suporte completo do fabricante.",
-            "É obrigatoriamente um programa livre sem qualquer dependência.",
-            "Funciona apenas como extensão moderna de navegador móvel.",
-            "Continua em uso apesar de tecnologia antiga, suporte restrito ou difícil manutenção.",
-            "Dispensa integração, documentação e análise de risco operacional."
+            "Sincronização trabalha em especial com arquivos de sistema, enquanto backup é utilizado predominantemente para documentos produzidos pelo usuário.",
+            "Backup depende de conexão contínua com a Internet, enquanto sincronização funciona principalmente quando os dispositivos estão totalmente offline.",
+            "Uma alteração ou exclusão pode ser sincronizada entre dispositivos, enquanto backup busca manter cópias recuperáveis independentes.",
+            "Sincronização cria uma imagem completa do sistema operacional, enquanto backup copia unicamente as pastas escolhidas pelo aplicativo de nuvem.",
+            "Backup substitui o sistema de arquivos local por armazenamento remoto, enquanto sincronização preserva todos os dados em especial na memória RAM."
+        ],
+        "correta": 2,
+        "id": "software_063",
+        "assunto": "software",
+        "feedbackAcerto": "Sincronização replica mudanças; backup preserva cópias para recuperação.",
+        "feedbackErro": "A resposta correta é:\n\nUma alteração ou exclusão pode ser sincronizada entre dispositivos, enquanto backup busca manter cópias recuperáveis independentes.\n\nComentário:\nSincronização replica mudanças; backup preserva cópias para recuperação.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Excluir arquivo sincronizado pode apagar a cópia de outros dispositivos, dependendo do serviço."
+    },
+    {
+        "pergunta": "Um serviço de software acessado por navegador e atualizado centralmente pelo fornecedor oferece como característica:",
+        "subtopico": "virtualizacao_nuvem_e_webapps",
+        "alternativas": [
+            "Garantia de funcionamento sem Internet em qualquer situação, pois aplicações Web mantêm cópia integral dos servidores no computador local.",
+            "Controle total da infraestrutura pelo usuário final, incluindo sistema operacional, armazenamento, rede e servidores usados pelo serviço.",
+            "Eliminação de riscos de segurança, já que aplicações atualizadas pelo fornecedor não dependem de autenticação ou permissões de acesso.",
+            "Redução da necessidade de instalar e atualizar manualmente a aplicação em cada computador do usuário.",
+            "Conversão automática dos arquivos criados para um único formato, impedindo incompatibilidade entre versões diferentes do aplicativo."
         ],
         "correta": 3,
-        "feedbackAcerto": "Correto! Sistemas legados podem ser críticos para a organização, mas tendem a exigir atenção quanto a suporte, segurança e integração.",
-        "feedbackErro": "A resposta correta é:\n\nContinua em uso apesar de tecnologia antiga, suporte restrito ou difícil manutenção.\n\nComentário:\nSistemas legados podem ser críticos para a organização, mas tendem a exigir atenção quanto a suporte, segurança e integração.\n\nRevise a dica da banca para fixar o conteúdo.",
-        "dicaBanca": "Legado não significa inútil; significa antigo ou difícil de manter.",
-        "subtopico": "atualizacoes_manutencao_e_riscos"
+        "id": "software_064",
+        "assunto": "software",
+        "feedbackAcerto": "Atualização centralizada é uma vantagem comum de aplicações oferecidas como serviço.",
+        "feedbackErro": "A resposta correta é:\n\nRedução da necessidade de instalar e atualizar manualmente a aplicação em cada computador do usuário.\n\nComentário:\nAtualização centralizada é uma vantagem comum de aplicações oferecidas como serviço.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Centralização reduz manutenção local, mas não elimina dependência de rede ou riscos de segurança."
+    },
+    {
+        "pergunta": "A associação de arquivos em um sistema operacional determina:",
+        "subtopico": "sistemas_de_arquivos_e_permissoes",
+        "alternativas": [
+            "Qual conta de usuário possui o arquivo e quais permissões de leitura e gravação serão aplicadas ao conteúdo armazenado.",
+            "Qual sistema de arquivos será usado na unidade em que o documento foi salvo e como seus blocos serão organizados no disco.",
+            "Qual programa poderá criar cópia de segurança do documento e em qual mídia o arquivo será preservado em caso de falha.",
+            "Qual driver será carregado quando o arquivo for aberto e quais dispositivos físicos poderão receber os dados processados.",
+            "Qual aplicativo padrão será usado para abrir determinado tipo ou extensão de arquivo."
+        ],
+        "correta": 4,
+        "id": "software_065",
+        "assunto": "software",
+        "feedbackAcerto": "Associação liga tipo/extensão de arquivo ao aplicativo usado para abri-lo por padrão.",
+        "feedbackErro": "A resposta correta é:\n\nQual aplicativo padrão será usado para abrir determinado tipo ou extensão de arquivo.\n\nComentário:\nAssociação liga tipo/extensão de arquivo ao aplicativo usado para abri-lo por padrão.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Extensão e aplicativo padrão são elementos centrais em questões sobre associação de arquivos."
+    },
+    {
+        "pergunta": "Em um sistema multiusuário, permissões de arquivos e pastas servem para:",
+        "subtopico": "sistemas_de_arquivos_e_permissoes",
+        "alternativas": [
+            "Controlar quais contas podem ler, modificar, executar ou acessar determinados recursos conforme as regras definidas.",
+            "Determinar qual aplicativo padrão abrirá cada extensão e impedir que programas alternativos acessem o mesmo tipo de documento.",
+            "Escolher qual driver será usado por dispositivos conectados e limitar a instalação de periféricos às contas proprietárias dos arquivos.",
+            "Definir quais atualizações serão instaladas no sistema e quais versões anteriores poderão ser restauradas depois de uma falha.",
+            "Separar fisicamente os dados de cada usuário em unidades de armazenamento distintas para impedir compartilhamento de arquivos."
+        ],
+        "correta": 0,
+        "id": "software_066",
+        "assunto": "software",
+        "feedbackAcerto": "Permissões controlam acesso a recursos; diferentes sistemas usam modelos específicos.",
+        "feedbackErro": "A resposta correta é:\n\nControlar quais contas podem ler, modificar, executar ou acessar determinados recursos conforme as regras definidas.\n\nComentário:\nPermissões controlam acesso a recursos; diferentes sistemas usam modelos específicos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Leia, gravar e executar são permissões clássicas."
+    },
+    {
+        "pergunta": "O Controle de Conta de Usuário (UAC) do Windows busca:",
+        "subtopico": "sistemas_de_arquivos_e_permissoes",
+        "alternativas": [
+            "Gerenciar a fila de impressão e exigir confirmação antes de enviar documentos para impressoras compartilhadas na rede local.",
+            "Reduzir alterações não autorizadas solicitando elevação ou confirmação para ações que exigem privilégios administrativos.",
+            "Controlar associações de arquivos e solicitar autorização em qualquer cenário que um programa diferente tentar abrir determinada extensão.",
+            "Criar automaticamente pontos de restauração antes de cada aplicativo iniciar e impedir alterações em arquivos pessoais do usuário.",
+            "Verificar a licença dos programas executados e bloquear aplicativos que não estejam registrados na conta Microsoft usada no sistema."
+        ],
+        "correta": 1,
+        "id": "software_067",
+        "assunto": "software",
+        "feedbackAcerto": "UAC atua na elevação de privilégios e confirmação de ações administrativas.",
+        "feedbackErro": "A resposta correta é:\n\nReduzir alterações não autorizadas solicitando elevação ou confirmação para ações que exigem privilégios administrativos.\n\nComentário:\nUAC atua na elevação de privilégios e confirmação de ações administrativas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "UAC não é antivírus nem mecanismo de licença."
+    },
+    {
+        "pergunta": "Uma imagem do sistema diferencia-se de uma cópia simples de documentos porque pode:",
+        "subtopico": "sistemas_de_arquivos_e_permissoes",
+        "alternativas": [
+            "Guardar em especial os arquivos alterados desde a última edição e sincronizá-los entre contas do mesmo computador para economizar espaço.",
+            "Substituir os pontos de restauração e manter principalmente configurações do Registro do Windows, sem incluir sistema ou programas instalados.",
+            "Registrar uma representação ampla de partições, sistema, configurações e outros componentes necessários à restauração do ambiente.",
+            "Converter programas instalados em versões portáteis para que possam ser recuperados sem reinstalação em outro computador diferente.",
+            "Criar uma máquina virtual em execução contínua que assume automaticamente o processamento quando o sistema principal apresenta erro."
+        ],
+        "correta": 2,
+        "id": "software_068",
+        "assunto": "software",
+        "feedbackAcerto": "Imagem do sistema pode incluir estrutura ampla do ambiente, enquanto backup simples pode focar apenas arquivos selecionados.",
+        "feedbackErro": "A resposta correta é:\n\nRegistrar uma representação ampla de partições, sistema, configurações e outros componentes necessários à restauração do ambiente.\n\nComentário:\nImagem do sistema pode incluir estrutura ampla do ambiente, enquanto backup simples pode focar apenas arquivos selecionados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Imagem do sistema e backup de documentos têm escopos diferentes."
+    },
+    {
+        "pergunta": "Serviços do sistema operacional são programas que normalmente:",
+        "subtopico": "sistemas_de_arquivos_e_permissoes",
+        "alternativas": [
+            "Ficam gravados no firmware e executam antes da inicialização para testar componentes e configurar o hardware do computador.",
+            "São abertos pelo usuário em janelas e dependem de interação contínua para manter processos essenciais do sistema em funcionamento.",
+            "Correspondem aos arquivos pessoais de configuração de cada conta e deixam de existir quando o usuário encerra a sessão atual.",
+            "Executam em segundo plano para fornecer funções ao sistema ou a outros aplicativos, muitas vezes sem interface direta constante.",
+            "São cópias temporárias de aplicativos usadas para restaurar versões anteriores quando uma atualização apresenta incompatibilidade."
+        ],
+        "correta": 3,
+        "id": "software_069",
+        "assunto": "software",
+        "feedbackAcerto": "Serviços rodam em segundo plano e fornecem funcionalidades ao sistema e aplicações.",
+        "feedbackErro": "A resposta correta é:\n\nExecutam em segundo plano para fornecer funções ao sistema ou a outros aplicativos, muitas vezes sem interface direta constante.\n\nComentário:\nServiços rodam em segundo plano e fornecem funcionalidades ao sistema e aplicações.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Segundo plano e ausência de interação direta são pistas importantes para serviço."
+    },
+    {
+        "pergunta": "Em relação a contas de usuário e privilégios, a prática mais segura em atividades rotineiras é:",
+        "subtopico": "sistemas_de_arquivos_e_permissoes",
+        "alternativas": [
+            "Usar conta administrativa em todas as atividades para evitar interrupções causadas por pedidos de confirmação do sistema operacional.",
+            "Compartilhar uma conta administrativa entre os usuários do computador para concentrar configurações e simplificar a manutenção do equipamento.",
+            "Desativar solicitações de elevação para que aplicativos instalados possam modificar configurações sem intervenção durante a execução.",
+            "Conceder permissão total às pastas do sistema para impedir que atualizações e programas apresentem erros de acesso durante a instalação.",
+            "Usar privilégios compatíveis com a tarefa e elevar para administrador principalmente quando a operação realmente exigir."
+        ],
+        "correta": 4,
+        "id": "software_070",
+        "assunto": "software",
+        "feedbackAcerto": "Princípio do menor privilégio reduz impacto de erros e ações indevidas.",
+        "feedbackErro": "A resposta correta é:\n\nUsar privilégios compatíveis com a tarefa e elevar para administrador apenas quando a operação realmente exigir.\n\nComentário:\nPrincípio do menor privilégio reduz impacto de erros e ações indevidas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Mais privilégio não significa mais segurança ou melhor funcionamento."
     }
 ];

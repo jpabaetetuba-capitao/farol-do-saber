@@ -1,2552 +1,1196 @@
+// FAROL DO SABER - REDES DE COMPUTADORES
+// Banco revisado para concursos de professor - 70 questões de nível médio/difícil.
+// Gabarito balanceado: 14 respostas em cada posição (A-E).
+
 const redes = [
     {
         "id": "redes_001",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: gateway padrão.",
+        "pergunta": "Uma escola possui computadores administrativos, impressoras e um servidor interligados dentro do mesmo prédio. Quanto à abrangência geográfica, essa estrutura é melhor classificada como:",
         "alternativas": [
-            "Encaminhar pacotes destinados a redes externas à rede local.",
-            "Resolver nomes de domínio em endereços IP.",
-            "Atribuir endereços IP automaticamente aos clientes.",
-            "Identificar fisicamente interfaces de rede.",
-            "Armazenar mensagens recebidas de correio eletrônico."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. O gateway padrão é o próximo salto usado para alcançar redes fora da sub-rede local.",
-        "feedbackErro": "Resposta correta: Encaminhar pacotes destinados a redes externas à rede local. O gateway padrão é o próximo salto usado para alcançar redes fora da sub-rede local.",
-        "dicaBanca": "Dica da banca: Gateway é a porta de saída lógica da rede local.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_002",
-        "pergunta": "Considere a seguinte situação: o computador acessa a LAN, mas precisa de um equipamento para sair para a Internet. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "servidor DNS.",
-            "gateway padrão.",
-            "servidor DHCP.",
-            "endereço MAC.",
-            "servidor POP3."
+            "WAN, pois qualquer rede com servidor é considerada de longa distância nesse cenário de rede.",
+            "LAN, pois conecta dispositivos em uma área local relativamente limitada.",
+            "MAN, pois toda rede institucional precisa abranger diferentes bairros.",
+            "PAN, pois os equipamentos pertencem à mesma organização usuária.",
+            "VPN, pois a rede interna utiliza endereços privados para comunicação."
         ],
         "correta": 1,
-        "feedbackAcerto": "Correto. O gateway padrão é o próximo salto usado para alcançar redes fora da sub-rede local.",
-        "feedbackErro": "Resposta correta: gateway padrão. O gateway padrão é o próximo salto usado para alcançar redes fora da sub-rede local.",
-        "dicaBanca": "Dica da banca: Gateway é a porta de saída lógica da rede local.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_003",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: DHCP.",
-        "alternativas": [
-            "Resolver nomes canônicos em endereços IPv6.",
-            "Encaminhar pacotes entre sistemas autônomos.",
-            "Fornecer automaticamente configurações de rede aos dispositivos clientes.",
-            "Filtrar tráfego por política de segurança.",
-            "Sincronizar relógios de computadores na rede."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. O DHCP automatiza a entrega de parâmetros de rede, reduzindo configuração manual e conflitos.",
-        "feedbackErro": "Resposta correta: Fornecer automaticamente configurações de rede aos dispositivos clientes. O DHCP automatiza a entrega de parâmetros de rede, reduzindo configuração manual e conflitos.",
-        "dicaBanca": "Dica da banca: DHCP entrega configuração IP; DNS resolve nomes.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_004",
-        "pergunta": "Considere a seguinte situação: um notebook entra na rede e recebe IP, máscara, gateway e DNS sem configuração manual. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "DNS.",
-            "BGP.",
-            "Firewall.",
-            "DHCP.",
-            "NTP."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. O DHCP automatiza a entrega de parâmetros de rede, reduzindo configuração manual e conflitos.",
-        "feedbackErro": "Resposta correta: DHCP. O DHCP automatiza a entrega de parâmetros de rede, reduzindo configuração manual e conflitos.",
-        "dicaBanca": "Dica da banca: DHCP entrega configuração IP; DNS resolve nomes.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_005",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: ARP.",
-        "alternativas": [
-            "Descobrir o servidor de e-mail de um domínio.",
-            "Atribuir endereço IPv6 global ao roteador.",
-            "Criptografar consultas feitas ao navegador.",
-            "Estabelecer conexão confiável fim a fim.",
-            "Descobrir o endereço MAC correspondente a um endereço IPv4 na rede local."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. O ARP mapeia IP para MAC no mesmo enlace, permitindo a entrega do quadro na LAN.",
-        "feedbackErro": "Resposta correta: Descobrir o endereço MAC correspondente a um endereço IPv4 na rede local. O ARP mapeia IP para MAC no mesmo enlace, permitindo a entrega do quadro na LAN.",
-        "dicaBanca": "Dica da banca: ARP relaciona IP e MAC; DNS relaciona nome e IP.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_006",
-        "pergunta": "Considere a seguinte situação: um host sabe o IP local de destino, mas precisa descobrir o endereço físico para montar o quadro Ethernet. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "ARP.",
-            "registro MX.",
-            "SLAAC.",
-            "HTTPS.",
-            "TCP."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. O ARP mapeia IP para MAC no mesmo enlace, permitindo a entrega do quadro na LAN.",
-        "feedbackErro": "Resposta correta: ARP. O ARP mapeia IP para MAC no mesmo enlace, permitindo a entrega do quadro na LAN.",
-        "dicaBanca": "Dica da banca: ARP relaciona IP e MAC; DNS relaciona nome e IP.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_007",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: endereço IPv4 privado.",
-        "alternativas": [
-            "Endereçamento exclusivo para multicast global.",
-            "Endereçamento usado em redes internas, sem roteamento direto na Internet pública.",
-            "Endereçamento usado somente para loopback local.",
-            "Endereçamento obrigatório para servidores DNS raiz.",
-            "Endereçamento que identifica fabricantes de placas de rede."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. Faixas como 10/8, 172.16/12 e 192.168/16 são privadas e normalmente usam NAT para acesso externo.",
-        "feedbackErro": "Resposta correta: Endereçamento usado em redes internas, sem roteamento direto na Internet pública. Faixas como 10/8, 172.16/12 e 192.168/16 são privadas e normalmente usam NAT para acesso externo.",
-        "dicaBanca": "Dica da banca: Memorize as três faixas privadas do IPv4.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_008",
-        "pergunta": "Considere a seguinte situação: um computador usa 192.168.1.20 dentro de uma residência e sai para a Internet por NAT. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "multicast IPv4.",
-            "loopback IPv4.",
-            "endereço IPv4 privado.",
-            "registro raiz DNS.",
-            "OUI."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. Faixas como 10/8, 172.16/12 e 192.168/16 são privadas e normalmente usam NAT para acesso externo.",
-        "feedbackErro": "Resposta correta: endereço IPv4 privado. Faixas como 10/8, 172.16/12 e 192.168/16 são privadas e normalmente usam NAT para acesso externo.",
-        "dicaBanca": "Dica da banca: Memorize as três faixas privadas do IPv4.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_009",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: APIPA.",
-        "alternativas": [
-            "Faixa pública entregue por provedores de Internet.",
-            "Registro DNS usado para servidores de e-mail.",
-            "Método de autenticação de redes sem fio.",
-            "Autoconfiguração IPv4 usada quando o cliente não obtém endereço via DHCP.",
-            "Padrão de marcação de VLAN em switches."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. Endereços 169.254.x.x indicam autoconfiguração local, comum quando o DHCP falha.",
-        "feedbackErro": "Resposta correta: Autoconfiguração IPv4 usada quando o cliente não obtém endereço via DHCP. Endereços 169.254.x.x indicam autoconfiguração local, comum quando o DHCP falha.",
-        "dicaBanca": "Dica da banca: 169.254.x.x é forte indício de problema com DHCP.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_010",
-        "pergunta": "Considere a seguinte situação: uma estação recebe automaticamente o endereço 169.254.18.7 após falhar a comunicação com o DHCP. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "IP público.",
-            "registro MX.",
-            "WPA2-Enterprise.",
-            "802.1Q.",
-            "APIPA."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. Endereços 169.254.x.x indicam autoconfiguração local, comum quando o DHCP falha.",
-        "feedbackErro": "Resposta correta: APIPA. Endereços 169.254.x.x indicam autoconfiguração local, comum quando o DHCP falha.",
-        "dicaBanca": "Dica da banca: 169.254.x.x é forte indício de problema com DHCP.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_011",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: SLAAC.",
-        "alternativas": [
-            "Autoconfiguração de endereços IPv6 a partir de anúncios de roteador.",
-            "Tradução de endereço privado para público.",
-            "Consulta de nome de domínio para IPv4.",
-            "Monitoramento de dispositivos por MIB.",
-            "Transferência de arquivo por conexão segura."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. SLAAC permite autoconfiguração IPv6 sem o mesmo modelo clássico do DHCPv4.",
-        "feedbackErro": "Resposta correta: Autoconfiguração de endereços IPv6 a partir de anúncios de roteador. SLAAC permite autoconfiguração IPv6 sem o mesmo modelo clássico do DHCPv4.",
-        "dicaBanca": "Dica da banca: SLAAC é tema típico de transição IPv6.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_012",
-        "pergunta": "Considere a seguinte situação: um host IPv6 monta seu endereço usando informações anunciadas pelo roteador, sem DHCPv4. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "NAT.",
-            "SLAAC.",
-            "DNS A.",
-            "SNMP.",
-            "SFTP."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. SLAAC permite autoconfiguração IPv6 sem o mesmo modelo clássico do DHCPv4.",
-        "feedbackErro": "Resposta correta: SLAAC. SLAAC permite autoconfiguração IPv6 sem o mesmo modelo clássico do DHCPv4.",
-        "dicaBanca": "Dica da banca: SLAAC é tema típico de transição IPv6.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_013",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: PAT.",
-        "alternativas": [
-            "Bloquear loops físicos em switches redundantes.",
-            "Validar registros DNS por assinatura digital.",
-            "Permitir que vários hosts compartilhem um IP público diferenciando conexões por portas.",
-            "Transferir arquivos por porta 21 sem criptografia.",
-            "Sincronizar relógios por servidores de tempo."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. PAT, também chamado NAT overload, usa portas para multiplexar conexões de vários hosts.",
-        "feedbackErro": "Resposta correta: Permitir que vários hosts compartilhem um IP público diferenciando conexões por portas. PAT, também chamado NAT overload, usa portas para multiplexar conexões de vários hosts.",
-        "dicaBanca": "Dica da banca: PAT é a forma doméstica mais comum de NAT.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_014",
-        "pergunta": "Considere a seguinte situação: o roteador mantém uma tabela com portas para identificar conexões de vários clientes internos. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "STP.",
-            "DNSSEC.",
-            "FTP.",
-            "PAT.",
-            "NTP."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. PAT, também chamado NAT overload, usa portas para multiplexar conexões de vários hosts.",
-        "feedbackErro": "Resposta correta: PAT. PAT, também chamado NAT overload, usa portas para multiplexar conexões de vários hosts.",
-        "dicaBanca": "Dica da banca: PAT é a forma doméstica mais comum de NAT.",
+        "feedbackAcerto": "Correto. LAN caracteriza redes locais, como as existentes em uma residência, laboratório, escola ou escritório.",
+        "feedbackErro": "Resposta correta: LAN, pois conecta dispositivos em uma área local relativamente limitada.\n\nComentário: LAN caracteriza redes locais, como as existentes em uma residência, laboratório, escola ou escritório.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: A banca pode misturar finalidade e abrangência: LAN, MAN e WAN classificam principalmente a extensão da rede.",
         "assunto": "redes",
         "subtopico": "tipos-topologias-redes"
     },
     {
-        "id": "redes_015",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: port forwarding.",
+        "id": "redes_002",
+        "pergunta": "Uma secretaria municipal interliga unidades localizadas em cidades diferentes por enlaces de uma operadora. Considerando apenas a abrangência dessa rede, trata-se tipicamente de uma:",
         "alternativas": [
-            "Aumentar automaticamente o alcance do Wi-Fi.",
-            "Atribuir IP automático aos clientes locais.",
-            "Resolver nome de domínio em endereço IP.",
-            "Bloquear loops de camada 2 por redundância.",
-            "Redirecionar conexão recebida em uma porta externa para um host interno específico."
+            "LAN, porque todos os equipamentos pertencem à mesma instituição pública.",
+            "PAN, porque cada servidor atende um conjunto pessoal de dispositivos clientes.",
+            "WLAN, porque enlaces de operadora dispensam infraestrutura física entre cidades.",
+            "WAN, porque conecta redes ou unidades separadas por grandes distâncias geográficas.",
+            "VLAN, porque a separação entre cidades é feita por identificação lógica de portas nesse cenário de rede."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "Correto. WAN cobre áreas extensas e pode interligar diferentes LANs por infraestrutura de telecomunicações.",
+        "feedbackErro": "Resposta correta: WAN, porque conecta redes ou unidades separadas por grandes distâncias geográficas.\n\nComentário: WAN cobre áreas extensas e pode interligar diferentes LANs por infraestrutura de telecomunicações.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Pertencer à mesma organização não transforma uma rede geograficamente ampla em LAN.",
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
+    },
+    {
+        "id": "redes_003",
+        "pergunta": "Em um laboratório, cada computador possui um cabo próprio até um switch central. Se um cabo de uma estação for rompido, apenas aquela estação perde a conectividade. A topologia descrita é:",
+        "alternativas": [
+            "barramento, pois todos os computadores compartilham o mesmo meio de transmissão principal.",
+            "anel, pois cada estação encaminha os quadros para a próxima estação do circuito.",
+            "malha completa, pois cada computador possui ligação direta com todos os demais equipamentos.",
+            "ponto a ponto, pois não existe equipamento intermediário no caminho entre as estações.",
+            "estrela, pois os dispositivos mantêm enlaces individuais com um ponto central."
         ],
         "correta": 4,
-        "feedbackAcerto": "Correto. O redirecionamento de portas publica serviço interno por meio do IP/porta do equipamento de borda.",
-        "feedbackErro": "Resposta correta: Redirecionar conexão recebida em uma porta externa para um host interno específico. O redirecionamento de portas publica serviço interno por meio do IP/porta do equipamento de borda.",
-        "dicaBanca": "Dica da banca: Port forwarding exige cautela de segurança.",
+        "feedbackAcerto": "Correto. Na topologia estrela, um ponto central — geralmente um switch — concentra as conexões individuais.",
+        "feedbackErro": "Resposta correta: estrela, pois os dispositivos mantêm enlaces individuais com um ponto central.\n\nComentário: Na topologia estrela, um ponto central — geralmente um switch — concentra as conexões individuais.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Estrela é muito comum em Ethernet moderna; queda de uma estação não implica queda das demais.",
         "assunto": "redes",
-        "subtopico": "enderecamento-ip"
+        "subtopico": "tipos-topologias-redes"
+    },
+    {
+        "id": "redes_004",
+        "pergunta": "Sobre Internet, intranet e extranet, assinale a alternativa que apresenta a relação mais adequada entre esses conceitos.",
+        "alternativas": [
+            "Uma intranet depende de acesso público pela Internet para que seus serviços internos funcionem.",
+            "Uma extranet pode disponibilizar parte de recursos internos a parceiros externos devidamente autorizados.",
+            "Uma extranet corresponde à Internet inteira quando acessada por usuários de uma organização.",
+            "Uma intranet utiliza protocolos incompatíveis com os empregados normalmente na Internet.",
+            "Uma extranet elimina controles de autenticação para facilitar o acesso de fornecedores externos nesse cenário de rede."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "Correto. Extranet estende acesso controlado a determinados recursos de uma organização para usuários externos autorizados.",
+        "feedbackErro": "Resposta correta: Uma extranet pode disponibilizar parte de recursos internos a parceiros externos devidamente autorizados.\n\nComentário: Extranet estende acesso controlado a determinados recursos de uma organização para usuários externos autorizados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: A tecnologia pode ser a mesma da Internet; o que muda é o público autorizado e o controle de acesso.",
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
+    },
+    {
+        "id": "redes_005",
+        "pergunta": "Dois notebooks trocam arquivos diretamente por Bluetooth a poucos metros de distância, sem utilizar o roteador da residência. Quanto ao alcance e à finalidade, essa conexão se aproxima de uma:",
+        "alternativas": [
+            "MAN, por usar comunicação sem fio dentro de uma área urbana delimitada.",
+            "WAN, por permitir transferência de dados sem depender da rede local cabeada.",
+            "VLAN, por separar logicamente os notebooks de outros dispositivos da residência.",
+            "Extranet, por permitir a comunicação entre dispositivos sem autenticação no roteador.",
+            "PAN, por conectar dispositivos pessoais em uma área de alcance bastante reduzida."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "Correto. PAN é uma rede de alcance pessoal, frequentemente associada a Bluetooth e dispositivos próximos.",
+        "feedbackErro": "Resposta correta: PAN, por conectar dispositivos pessoais em uma área de alcance bastante reduzida.\n\nComentário: PAN é uma rede de alcance pessoal, frequentemente associada a Bluetooth e dispositivos próximos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Não confunda tecnologia sem fio com WLAN: Bluetooth pessoal costuma aparecer como exemplo de PAN.",
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
+    },
+    {
+        "id": "redes_006",
+        "pergunta": "Uma empresa divide logicamente a mesma infraestrutura de switches para separar o setor financeiro do laboratório, embora os computadores estejam no mesmo prédio. O recurso associado a essa separação é:",
+        "alternativas": [
+            "VPN, que substitui os switches locais por túneis criptografados entre cada computador do prédio.",
+            "WAN, que transforma segmentos internos em redes de longa distância independentes da localização.",
+            "VLAN, que cria domínios lógicos distintos sobre uma infraestrutura física compartilhada.",
+            "PAN, que restringe cada setor a conexões pessoais de curto alcance entre seus equipamentos.",
+            "DNS, que separa fisicamente as portas da rede conforme os nomes atribuídos aos computadores."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "Correto. VLAN permite segmentação lógica em switches, separando grupos mesmo quando compartilham a mesma infraestrutura física.",
+        "feedbackErro": "Resposta correta: VLAN, que cria domínios lógicos distintos sobre uma infraestrutura física compartilhada.\n\nComentário: VLAN permite segmentação lógica em switches, separando grupos mesmo quando compartilham a mesma infraestrutura física.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: VLAN é segmentação lógica; VPN é túnel seguro sobre uma rede existente.",
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
+    },
+    {
+        "id": "redes_007",
+        "pergunta": "Em uma rede cliente-servidor, qual situação caracteriza melhor esse modelo de organização?",
+        "alternativas": [
+            "Cada computador troca recursos diretamente com o equipamento conectado ao mesmo cabo físico local.",
+            "Todos os computadores possuem necessariamente a mesma função, sem qualquer serviço centralizado.",
+            "O acesso aos recursos depende de comunicação Bluetooth direta entre pares previamente associados.",
+            "Um servidor central oferece serviços ou recursos que são solicitados pelos computadores clientes.",
+            "A rede funciona sem protocolos de comunicação porque o servidor controla diretamente cada cliente."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "Correto. No modelo cliente-servidor, clientes solicitam serviços que são disponibilizados por servidores.",
+        "feedbackErro": "Resposta correta: Um servidor central oferece serviços ou recursos que são solicitados pelos computadores clientes.\n\nComentário: No modelo cliente-servidor, clientes solicitam serviços que são disponibilizados por servidores.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: O modelo descreve papéis na comunicação, não o tamanho físico da rede nem o tipo de cabeamento.",
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
+    },
+    {
+        "id": "redes_008",
+        "pergunta": "Em uma rede ponto a ponto (peer-to-peer) simples, é correto afirmar que:",
+        "alternativas": [
+            "os próprios computadores podem compartilhar recursos diretamente, sem depender de um servidor dedicado para cada serviço.",
+            "cada estação precisa encaminhar todo o tráfego por um servidor central antes de alcançar outra estação.",
+            "o compartilhamento direto impede que os computadores utilizem sistemas operacionais ou autenticação local.",
+            "os computadores precisam estar em cidades diferentes para que a comunicação seja considerada entre pares.",
+            "a rede exige um controlador de domínio para distribuir endereços IP e registrar todos os compartilhamentos nesse cenário de rede."
+        ],
+        "correta": 0,
+        "feedbackAcerto": "Correto. Em redes peer-to-peer, os participantes podem atuar diretamente como fornecedores e consumidores de recursos.",
+        "feedbackErro": "Resposta correta: os próprios computadores podem compartilhar recursos diretamente, sem depender de um servidor dedicado para cada serviço.\n\nComentário: Em redes peer-to-peer, os participantes podem atuar diretamente como fornecedores e consumidores de recursos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Peer-to-peer não significa ausência de segurança ou de endereçamento; significa menor centralização dos serviços.",
+        "assunto": "redes",
+        "subtopico": "tipos-topologias-redes"
+    },
+    {
+        "id": "redes_009",
+        "pergunta": "Em uma LAN Ethernet, um equipamento recebe um quadro e o encaminha preferencialmente apenas pela porta associada ao endereço MAC de destino. Esse comportamento é típico de um:",
+        "alternativas": [
+            "hub, que consulta uma tabela de roteamento IP antes de encaminhar cada quadro recebido.",
+            "roteador, que encaminha quadros locais com base prioritária no endereço MAC de destino final.",
+            "modem, que mantém uma tabela de endereços MAC para separar os computadores de uma mesma LAN.",
+            "access point, que substitui o cabeamento Ethernet e executa a tradução de nomes DNS da rede.",
+            "switch, que aprende endereços MAC e os associa às suas portas."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "Correto. Switches Ethernet aprendem endereços MAC e encaminham quadros entre portas da mesma rede local.",
+        "feedbackErro": "Resposta correta: switch, que aprende endereços MAC e os associa às suas portas.\n\nComentário: Switches Ethernet aprendem endereços MAC e encaminham quadros entre portas da mesma rede local.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Em prova, endereço MAC e comutação de quadros apontam para switch; endereço IP e redes distintas apontam para roteador.",
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
+    },
+    {
+        "id": "redes_010",
+        "pergunta": "Um computador alcança outros dispositivos da mesma sub-rede, mas precisa enviar tráfego destinado a uma rede diferente. O equipamento que normalmente encaminha esses pacotes entre redes é o:",
+        "alternativas": [
+            "switch, responsável por resolver nomes de domínio e localizar servidores fora da rede local.",
+            "roteador, responsável por escolher caminhos entre redes IP distintas.",
+            "hub, responsável por selecionar a melhor rota IP conforme a tabela de encaminhamento configurada.",
+            "repetidor, responsável por traduzir endereços privados em nomes públicos durante a navegação.",
+            "patch panel, responsável por decidir para qual rede externa cada pacote deverá ser encaminhado."
+        ],
+        "correta": 1,
+        "feedbackAcerto": "Correto. Roteadores interligam redes IP diferentes e tomam decisões de encaminhamento com base em endereços e rotas.",
+        "feedbackErro": "Resposta correta: roteador, responsável por escolher caminhos entre redes IP distintas.\n\nComentário: Roteadores interligam redes IP diferentes e tomam decisões de encaminhamento com base em endereços e rotas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Quando a questão fala em “sair da sub-rede” ou “interligar redes”, procure a função de roteamento.",
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
+    },
+    {
+        "id": "redes_011",
+        "pergunta": "Em uma rede sem fio institucional, qual é a função mais diretamente associada a um access point (AP)?",
+        "alternativas": [
+            "atribuir endereços públicos a todos os dispositivos que se conectam por rádio, como função própria do ponto de acesso.",
+            "substituir o serviço DNS por resolução local dos nomes dos computadores conectados ao Wi-Fi.",
+            "fornecer acesso à rede para dispositivos Wi-Fi e integrá-los à infraestrutura de rede existente.",
+            "converter qualquer conexão sem fio em ligação Bluetooth de curto alcance entre dois dispositivos.",
+            "realizar a modulação do sinal da operadora e dispensar a presença de switches ou roteadores na rede."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "Correto. O access point oferece conectividade 802.11 e normalmente conecta clientes sem fio à rede local.",
+        "feedbackErro": "Resposta correta: fornecer acesso à rede para dispositivos Wi-Fi e integrá-los à infraestrutura de rede existente.\n\nComentário: O access point oferece conectividade 802.11 e normalmente conecta clientes sem fio à rede local.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: AP fornece acesso sem fio; DHCP, DNS, roteamento e modem são funções distintas, embora um roteador doméstico possa integrá-las.",
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
+    },
+    {
+        "id": "redes_012",
+        "pergunta": "Em uma residência com acesso por fibra, o equipamento da operadora converte o sinal óptico para uma interface de rede usada pelo roteador. Em termos funcionais, esse equipamento cumpre papel semelhante ao de um:",
+        "alternativas": [
+            "switch de acesso, escolhendo rotas externas com base no domínio de cada site solicitado pelo usuário.",
+            "servidor DHCP, convertendo sinais ópticos diretamente em endereços IP privados para cada aplicação.",
+            "modem/terminal de acesso, fazendo a interface entre a tecnologia da operadora e a rede do assinante.",
+            "firewall de aplicação, filtrando automaticamente qualquer conteúdo recebido antes de chegar ao roteador.",
+            "repetidor Wi-Fi, ampliando por rádio o alcance do enlace óptico que chega ao imóvel do assinante."
+        ],
+        "correta": 2,
+        "feedbackAcerto": "Correto. Modems e terminais de acesso fazem a interface entre a tecnologia do provedor e a rede do assinante.",
+        "feedbackErro": "Resposta correta: modem/terminal de acesso, fazendo a interface entre a tecnologia da operadora e a rede do assinante.\n\nComentário: Modems e terminais de acesso fazem a interface entre a tecnologia do provedor e a rede do assinante.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: A banca pode usar “modem” de forma funcional mesmo quando a tecnologia atual emprega ONT em fibra.",
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
+    },
+    {
+        "id": "redes_013",
+        "pergunta": "Comparando hub e switch Ethernet, qual afirmativa é mais adequada?",
+        "alternativas": [
+            "O hub aprende endereços MAC de origem, enquanto o switch transmite os quadros indistintamente em todas as portas.",
+            "O switch trabalha com nomes DNS, enquanto o hub decide o encaminhamento com base nos endereços IPv4 dos hosts.",
+            "O hub cria sub-redes IP independentes, enquanto o switch impede que equipamentos da mesma LAN se comuniquem.",
+            "O switch pode encaminhar quadros de forma seletiva entre portas, enquanto o hub replica sinais para as demais portas.",
+            "O switch depende de conexão com a Internet para aprender portas, enquanto o hub funcionaria restrito a redes locais isoladas."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "Correto. Hub repete sinais; switch aprende MACs e consegue encaminhar quadros de modo mais seletivo.",
+        "feedbackErro": "Resposta correta: O switch pode encaminhar quadros de forma seletiva entre portas, enquanto o hub replica sinais para as demais portas.\n\nComentário: Hub repete sinais; switch aprende MACs e consegue encaminhar quadros de modo mais seletivo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Switch e hub podem aparecer juntos em questões sobre domínio de colisão e eficiência da LAN.",
+        "assunto": "redes",
+        "subtopico": "equipamentos-de-rede"
+    },
+    {
+        "id": "redes_014",
+        "pergunta": "Uma escola pretende instalar rede cabeada Ethernet comum em salas próximas, utilizando cabos de pares trançados e conectores usuais de rede. O meio descrito corresponde tipicamente a:",
+        "alternativas": [
+            "cabo coaxial com conector BNC, utilizado como padrão principal das redes Ethernet atuais em escritórios.",
+            "fibra monomodo com conector USB, empregada diretamente entre computadores e switches de mesa.",
+            "cabo HDMI com conector 8P8C, usado para transportar simultaneamente quadros Ethernet e vídeo digital.",
+            "cabo UTP com conector modular 8P8C, conhecido no uso corrente como RJ-45.",
+            "par telefônico com conector RJ-11, usado como substituto direto do cabeamento Ethernet de quatro pares."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "Correto. UTP é o cabo de par trançado sem blindagem muito usado em Ethernet, normalmente terminado em conector 8P8C.",
+        "feedbackErro": "Resposta correta: cabo UTP com conector modular 8P8C, conhecido no uso corrente como RJ-45.\n\nComentário: UTP é o cabo de par trançado sem blindagem muito usado em Ethernet, normalmente terminado em conector 8P8C.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Em concursos, “RJ-45” é o nome corrente esperado para o conector Ethernet de par trançado.",
+        "assunto": "redes",
+        "subtopico": "meios-fisicos-cabeamento"
+    },
+    {
+        "id": "redes_015",
+        "pergunta": "Em relação à fibra óptica e ao cabo metálico, assinale a alternativa correta.",
+        "alternativas": [
+            "A fibra transmite dados por corrente elétrica e por isso sofre mais interferência que o par trançado metálico.",
+            "O par trançado utiliza pulsos luminosos e precisa de conversores ópticos em cada tomada de rede convencional.",
+            "A fibra depende de aterramento do condutor central para evitar colisões entre sinais de computadores diferentes.",
+            "O cabo metálico e a fibra utilizam o mesmo princípio físico de transmissão e se diferenciariam basicamente pelo conector.",
+            "A fibra transmite dados por sinais luminosos e é imune à interferência eletromagnética no meio de transmissão."
+        ],
+        "correta": 4,
+        "feedbackAcerto": "Correto. Fibra óptica conduz luz e não sofre interferência eletromagnética como meios metálicos.",
+        "feedbackErro": "Resposta correta: A fibra transmite dados por sinais luminosos e é imune à interferência eletromagnética no meio de transmissão.\n\nComentário: Fibra óptica conduz luz e não sofre interferência eletromagnética como meios metálicos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Fibra costuma ser associada a maior alcance, alta capacidade e imunidade a interferências eletromagnéticas.",
+        "assunto": "redes",
+        "subtopico": "meios-fisicos-cabeamento"
     },
     {
         "id": "redes_016",
-        "pergunta": "Considere a seguinte situação: um serviço interno de câmera IP precisa ser acessado pela Internet usando uma porta do roteador. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Ao organizar um rack de rede, um patch panel é utilizado principalmente para:",
         "alternativas": [
-            "port forwarding.",
-            "roaming Wi-Fi.",
-            "DHCP.",
-            "DNS.",
-            "STP."
+            "organizar e terminar o cabeamento estruturado, facilitando a conexão das tomadas às portas dos equipamentos.",
+            "atribuir endereços IP automaticamente aos computadores ligados às tomadas de rede do edifício.",
+            "filtrar pacotes de entrada e saída com base em regras definidas pela equipe de segurança da organização nesse cenário de rede.",
+            "amplificar sinais Wi-Fi para aumentar a cobertura sem fio nos ambientes mais afastados do roteador.",
+            "converter nomes de domínio em endereços IP antes de encaminhar as requisições para a Internet."
         ],
         "correta": 0,
-        "feedbackAcerto": "Correto. O redirecionamento de portas publica serviço interno por meio do IP/porta do equipamento de borda.",
-        "feedbackErro": "Resposta correta: port forwarding. O redirecionamento de portas publica serviço interno por meio do IP/porta do equipamento de borda.",
-        "dicaBanca": "Dica da banca: Port forwarding exige cautela de segurança.",
+        "feedbackAcerto": "Correto. Patch panel é elemento passivo de organização e terminação do cabeamento estruturado.",
+        "feedbackErro": "Resposta correta: organizar e terminar o cabeamento estruturado, facilitando a conexão das tomadas às portas dos equipamentos.\n\nComentário: Patch panel é elemento passivo de organização e terminação do cabeamento estruturado.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Não confunda componentes passivos do rack com equipamentos ativos, como switch e roteador.",
+        "assunto": "redes",
+        "subtopico": "meios-fisicos-cabeamento"
+    },
+    {
+        "id": "redes_017",
+        "pergunta": "Um repetidor de sinal é empregado em uma rede principalmente para:",
+        "alternativas": [
+            "selecionar a rota IP mais adequada entre redes pertencentes a provedores de Internet diferentes.",
+            "criar contas de usuário e autenticar dispositivos antes de permitir acesso aos recursos compartilhados.",
+            "resolver nomes de domínio e manter uma base autoritativa com os endereços dos servidores da organização nesse cenário de rede.",
+            "regenerar ou retransmitir o sinal, ampliando o alcance físico dentro das limitações da tecnologia utilizada.",
+            "substituir a criptografia Wi-Fi por autenticação baseada no endereço físico da placa de rede como mecanismo central."
+        ],
+        "correta": 3,
+        "feedbackAcerto": "Correto. Repetidores atuam sobre o sinal para estender o alcance; não executam roteamento, DNS ou autenticação de usuários.",
+        "feedbackErro": "Resposta correta: regenerar ou retransmitir o sinal, ampliando o alcance físico dentro das limitações da tecnologia utilizada.\n\nComentário: Repetidores atuam sobre o sinal para estender o alcance; não executam roteamento, DNS ou autenticação de usuários.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: A palavra-chave é alcance físico do sinal, não escolha de caminho entre redes.",
         "assunto": "redes",
         "subtopico": "equipamentos-de-rede"
     },
     {
-        "id": "redes_017",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: hub.",
+        "id": "redes_018",
+        "pergunta": "Um computador conectado à rede recebe automaticamente endereço IP, máscara, gateway e servidor DNS. O serviço mais diretamente responsável por fornecer esses parâmetros é:",
         "alternativas": [
-            "Selecionar a porta exata por tabela MAC.",
-            "Repetir sinais recebidos para todas as portas conectadas.",
-            "Rotear pacotes usando prefixos IP.",
-            "Filtrar tráfego por regras stateful.",
-            "Separar VLANs com 802.1Q."
+            "DNS, que distribui endereços aos clientes ao converter nomes de máquinas em parâmetros de rede.",
+            "ARP, que fornece máscara e gateway depois de associar o endereço IP ao endereço físico do cliente.",
+            "HTTP, que entrega a configuração de rede junto com a primeira página acessada pelo navegador.",
+            "DHCP, que entrega configurações de rede aos clientes por concessão automática.",
+            "ICMP, que define automaticamente os parâmetros do host ao testar a conectividade com o roteador."
         ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. Hub é equipamento simples de camada física, associado a colisões e tráfego desnecessário.",
-        "feedbackErro": "Resposta correta: Repetir sinais recebidos para todas as portas conectadas. Hub é equipamento simples de camada física, associado a colisões e tráfego desnecessário.",
-        "dicaBanca": "Dica da banca: Hub é menos inteligente que switch.",
+        "correta": 3,
+        "feedbackAcerto": "Correto. DHCP automatiza a configuração de parâmetros IP dos clientes, reduzindo configuração manual.",
+        "feedbackErro": "Resposta correta: DHCP, que entrega configurações de rede aos clientes por concessão automática.\n\nComentário: DHCP automatiza a configuração de parâmetros IP dos clientes, reduzindo configuração manual.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: DHCP entrega configuração; DNS resolve nomes. Essa distinção é recorrente em concursos.",
         "assunto": "redes",
         "subtopico": "enderecamento-ip"
     },
     {
-        "id": "redes_018",
-        "pergunta": "Considere a seguinte situação: um equipamento legado envia o mesmo sinal recebido para todos os dispositivos do segmento. O conceito ou recurso mais diretamente relacionado é:",
+        "id": "redes_019",
+        "pergunta": "Em uma estação Windows configurada para obter IPv4 automaticamente, surge o endereço 169.254.36.18 e o acesso à rede falha. A interpretação mais provável é que:",
         "alternativas": [
-            "switch.",
-            "roteador.",
-            "hub.",
-            "firewall.",
-            "trunk 802.1Q."
+            "o DNS atribuiu um endereço público temporário para que a estação possa navegar sem o roteador.",
+            "o gateway converteu o endereço privado em um endereço externo para corrigir uma falha de roteamento.",
+            "a estação não obteve resposta do DHCP e adotou um endereço de autoconfiguração local.",
+            "o computador recebeu uma faixa reservada para servidores Web e precisaria renovar o certificado HTTPS para voltar à rede.",
+            "o switch bloqueou o endereço MAC e transferiu o equipamento automaticamente para uma rede sem fio isolada."
         ],
         "correta": 2,
-        "feedbackAcerto": "Correto. Hub é equipamento simples de camada física, associado a colisões e tráfego desnecessário.",
-        "feedbackErro": "Resposta correta: hub. Hub é equipamento simples de camada física, associado a colisões e tráfego desnecessário.",
-        "dicaBanca": "Dica da banca: Hub é menos inteligente que switch.",
-        "assunto": "redes",
-        "subtopico": "equipamentos-de-rede"
-    },
-    {
-        "id": "redes_019",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: access point.",
-        "alternativas": [
-            "Traduzir endereços privados em públicos.",
-            "Resolver nomes de domínio recursivamente.",
-            "Monitorar portas TCP em servidores.",
-            "Fornecer acesso sem fio a uma rede local.",
-            "Armazenar logs de correio eletrônico."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. O Access Point cria ou amplia a cobertura WLAN, conectando clientes sem fio à rede.",
-        "feedbackErro": "Resposta correta: Fornecer acesso sem fio a uma rede local. O Access Point cria ou amplia a cobertura WLAN, conectando clientes sem fio à rede.",
-        "dicaBanca": "Dica da banca: AP não é necessariamente roteador; é ponto de acesso sem fio.",
+        "feedbackAcerto": "Correto. Na prática, 169.254.x.x é forte indício de APIPA após falha na obtenção de configuração por DHCP.",
+        "feedbackErro": "Resposta correta: a estação não obteve resposta do DHCP e adotou um endereço de autoconfiguração local.\n\nComentário: Na prática, 169.254.x.x é forte indício de APIPA após falha na obtenção de configuração por DHCP.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Se aparecer 169.254.x.x em uma questão de diagnóstico, verifique primeiro DHCP e conectividade local.",
         "assunto": "redes",
         "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_020",
-        "pergunta": "Considere a seguinte situação: usuários conectam notebooks e celulares à LAN por meio de sinal Wi-Fi corporativo. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Um notebook usa o endereço 192.168.10.25 na rede da escola. Sobre esse endereço, é correto afirmar que ele pertence a uma faixa:",
         "alternativas": [
-            "NAT.",
-            "DNS recursivo.",
-            "netstat.",
-            "servidor SMTP.",
-            "access point."
+            "pública, reservada para equipamentos que precisam ser encontrados diretamente em qualquer ponto da Internet.",
+            "multicast, destinada a enviar o mesmo pacote simultaneamente a vários grupos de servidores externos.",
+            "loopback, utilizada para que o próprio computador teste internamente sua pilha de protocolos de rede.",
+            "link-local IPv4, utilizada quando o computador não recebe configuração automática do serviço DHCP.",
+            "privada, destinada ao uso interno e sem roteamento direto como endereço público na Internet."
         ],
         "correta": 4,
-        "feedbackAcerto": "Correto. O Access Point cria ou amplia a cobertura WLAN, conectando clientes sem fio à rede.",
-        "feedbackErro": "Resposta correta: access point. O Access Point cria ou amplia a cobertura WLAN, conectando clientes sem fio à rede.",
-        "dicaBanca": "Dica da banca: AP não é necessariamente roteador; é ponto de acesso sem fio.",
+        "feedbackAcerto": "Correto. 192.168.0.0/16 é uma das faixas privadas definidas para redes internas.",
+        "feedbackErro": "Resposta correta: privada, destinada ao uso interno e sem roteamento direto como endereço público na Internet.\n\nComentário: 192.168.0.0/16 é uma das faixas privadas definidas para redes internas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: As três faixas privadas clássicas são 10/8, 172.16/12 e 192.168/16.",
         "assunto": "redes",
-        "subtopico": "redes-sem-fio"
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_021",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: modem.",
+        "pergunta": "Vários computadores de uma residência usam endereços privados, mas aparecem na Internet compartilhando o mesmo endereço público do roteador. O mecanismo associado a esse cenário é:",
         "alternativas": [
-            "Adaptar o sinal da rede do provedor para o acesso do usuário.",
-            "Segmentar redes lógicas por VLAN.",
-            "Enviar quadros Ethernet somente ao MAC correto.",
-            "Bloquear loops de camada 2.",
-            "Criar políticas de grupo do domínio."
+            "NAT/PAT, que traduz endereços internos e diferencia conexões ao permitir o compartilhamento do endereço público.",
+            "DNS, que substitui os endereços privados pelo nome de domínio do provedor antes de cada conexão externa.",
+            "DHCP, que converte cada endereço interno em endereço público durante o tempo de concessão do cliente.",
+            "ARP, que troca endereços IP internos por endereços MAC públicos antes que os quadros saiam para a Internet.",
+            "ICMP, que encapsula conexões privadas em mensagens de controle para que o provedor reconheça cada computador nesse cenário de rede."
         ],
         "correta": 0,
-        "feedbackAcerto": "Correto. O modem está ligado ao acesso ao provedor; roteadores domésticos podem integrar modem e roteador no mesmo aparelho.",
-        "feedbackErro": "Resposta correta: Adaptar o sinal da rede do provedor para o acesso do usuário. O modem está ligado ao acesso ao provedor; roteadores domésticos podem integrar modem e roteador no mesmo aparelho.",
-        "dicaBanca": "Dica da banca: Identifique a função do equipamento, não apenas o nome comercial.",
+        "feedbackAcerto": "Correto. Em redes domésticas, NAT com tradução de portas permite que vários hosts internos compartilhem um endereço público.",
+        "feedbackErro": "Resposta correta: NAT/PAT, que traduz endereços internos e diferencia conexões ao permitir o compartilhamento do endereço público.\n\nComentário: Em redes domésticas, NAT com tradução de portas permite que vários hosts internos compartilhem um endereço público.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: NAT trata tradução de endereços; DHCP trata concessão; DNS trata nomes.",
         "assunto": "redes",
         "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_022",
-        "pergunta": "Considere a seguinte situação: o equipamento faz a interface entre a tecnologia da operadora e a rede do assinante. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Um computador comunica-se normalmente com outros equipamentos da mesma rede local, mas não alcança nenhuma rede externa. Entre os parâmetros de configuração, o mais diretamente associado à saída da sub-rede é o:",
         "alternativas": [
-            "switch gerenciável.",
-            "modem.",
-            "switch L2.",
-            "STP.",
-            "GPO."
+            "gateway padrão, usado como próximo salto para destinos fora da rede local.",
+            "servidor DNS, usado como caminho obrigatório por todos os pacotes destinados a redes externas.",
+            "endereço MAC, usado para indicar ao provedor qual rota global deve ser adotada para cada destino.",
+            "nome do host, usado pelo roteador para descobrir em qual rede externa o computador pretende entrar.",
+            "sufixo de pesquisa DNS, usado para substituir a máscara de sub-rede durante conexões pela Internet."
         ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. O modem está ligado ao acesso ao provedor; roteadores domésticos podem integrar modem e roteador no mesmo aparelho.",
-        "feedbackErro": "Resposta correta: modem. O modem está ligado ao acesso ao provedor; roteadores domésticos podem integrar modem e roteador no mesmo aparelho.",
-        "dicaBanca": "Dica da banca: Identifique a função do equipamento, não apenas o nome comercial.",
+        "correta": 0,
+        "feedbackAcerto": "Correto. O gateway padrão é o roteador utilizado quando o destino não está na mesma sub-rede do host.",
+        "feedbackErro": "Resposta correta: gateway padrão, usado como próximo salto para destinos fora da rede local.\n\nComentário: O gateway padrão é o roteador utilizado quando o destino não está na mesma sub-rede do host.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Se a LAN funciona mas redes externas não, gateway é um dos primeiros parâmetros a verificar.",
         "assunto": "redes",
-        "subtopico": "equipamentos-de-rede"
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_023",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: firewall stateful.",
+        "pergunta": "Dois computadores possuem endereços 192.168.1.20/24 e 192.168.1.80/24. Considerando apenas esses dados, eles pertencem:",
         "alternativas": [
-            "Analisar somente o comprimento do cabo.",
-            "Resolver domínios em servidores raiz.",
-            "Avaliar o tráfego considerando o estado das conexões.",
-            "Trocar IP por MAC no enlace local.",
-            "Distribuir SSIDs em pontos de acesso."
+            "a sub-redes diferentes, porque os dois últimos números do endereço IP precisam ser iguais em uma rede /24.",
+            "à mesma rede pública, porque qualquer endereço iniciado por 192 é roteável diretamente pela Internet.",
+            "a redes diferentes, porque cada computador de uma LAN precisa utilizar uma máscara exclusiva para evitar conflitos.",
+            "a uma rede de loopback, porque o prefixo /24 indica que a comunicação permanece dentro do próprio computador.",
+            "à mesma sub-rede 192.168.1.0/24 e podem tentar comunicação local sem recorrer ao gateway para esse destino."
         ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. Um firewall stateful acompanha sessões/conexões para tomar decisões mais contextuais.",
-        "feedbackErro": "Resposta correta: Avaliar o tráfego considerando o estado das conexões. Um firewall stateful acompanha sessões/conexões para tomar decisões mais contextuais.",
-        "dicaBanca": "Dica da banca: Stateful acompanha conexão; stateless examina pacotes de forma mais isolada.",
+        "correta": 4,
+        "feedbackAcerto": "Correto. Com máscara /24, os primeiros 24 bits definem a rede; ambos estão no bloco 192.168.1.0/24.",
+        "feedbackErro": "Resposta correta: à mesma sub-rede 192.168.1.0/24 e podem tentar comunicação local sem recorrer ao gateway para esse destino.\n\nComentário: Com máscara /24, os primeiros 24 bits definem a rede; ambos estão no bloco 192.168.1.0/24.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: A máscara determina qual parte do IP identifica rede e qual parte identifica host.",
         "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_024",
-        "pergunta": "Considere a seguinte situação: a regra permite respostas de conexões já iniciadas internamente sem liberar qualquer tráfego novo de entrada. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Ao configurar manualmente dois computadores na mesma rede, ambos recebem exatamente o endereço 192.168.0.50. O problema mais provável será:",
         "alternativas": [
-            "testador de cabos.",
-            "DNS raiz.",
-            "ARP.",
-            "firewall stateful.",
-            "controlador Wi-Fi."
+            "falha de DNS, pois cada nome de computador precisa estar associado a dois endereços IP diferentes na rede local.",
+            "erro de gateway, pois o roteador exige que todos os computadores tenham o mesmo endereço IP para sair da rede.",
+            "conflito de endereço IP, pois dois hosts não devem utilizar simultaneamente o mesmo endereço na mesma rede.",
+            "falha de máscara, pois endereços iguais indicam automaticamente que os computadores pertencem a sub-redes diferentes.",
+            "erro de Wi-Fi, pois endereços IPv4 idênticos impedem o ponto de acesso de transmitir sinais de rádio aos clientes."
         ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. Um firewall stateful acompanha sessões/conexões para tomar decisões mais contextuais.",
-        "feedbackErro": "Resposta correta: firewall stateful. Um firewall stateful acompanha sessões/conexões para tomar decisões mais contextuais.",
-        "dicaBanca": "Dica da banca: Stateful acompanha conexão; stateless examina pacotes de forma mais isolada.",
+        "correta": 2,
+        "feedbackAcerto": "Correto. Endereços IP precisam ser únicos dentro do mesmo domínio de endereçamento para evitar conflitos.",
+        "feedbackErro": "Resposta correta: conflito de endereço IP, pois dois hosts não devem utilizar simultaneamente o mesmo endereço na mesma rede.\n\nComentário: Endereços IP precisam ser únicos dentro do mesmo domínio de endereçamento para evitar conflitos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: DHCP ajuda a reduzir conflitos justamente porque administra concessões de endereços.",
         "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_025",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: VPN.",
+        "pergunta": "Em IPv4, o endereço 127.0.0.1 é tradicionalmente utilizado para:",
         "alternativas": [
-            "Aumentar fisicamente a categoria do cabo UTP.",
-            "Atribuir endereços IP por broadcast local.",
-            "Resolver nomes usando registros MX.",
-            "Comutar quadros por tabela CAM.",
-            "Criar túnel seguro sobre rede pública ou não confiável."
+            "broadcast da rede local, permitindo alcançar todos os dispositivos conectados ao mesmo switch.",
+            "loopback, permitindo testar a comunicação da pilha de rede do próprio computador.",
+            "gateway padrão, permitindo que o host alcance qualquer destino localizado fora da sub-rede.",
+            "DNS local, permitindo resolver automaticamente qualquer domínio sem consultar servidores externos.",
+            "endereço privado do roteador, permitindo compartilhar a conexão pública por meio de tradução NAT."
         ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. VPN protege a comunicação e permite acesso remoto ou interligação entre redes.",
-        "feedbackErro": "Resposta correta: Criar túnel seguro sobre rede pública ou não confiável. VPN protege a comunicação e permite acesso remoto ou interligação entre redes.",
-        "dicaBanca": "Dica da banca: VPN não significa anonimato absoluto; significa túnel seguro conforme configuração.",
+        "correta": 1,
+        "feedbackAcerto": "Correto. 127.0.0.1 é o endereço de loopback mais conhecido e representa o próprio host.",
+        "feedbackErro": "Resposta correta: loopback, permitindo testar a comunicação da pilha de rede do próprio computador.\n\nComentário: 127.0.0.1 é o endereço de loopback mais conhecido e representa o próprio host.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Loopback testa o próprio computador; não exige que a interface física esteja alcançando a rede externa.",
         "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_026",
-        "pergunta": "Considere a seguinte situação: um servidor interno é acessado por funcionário remoto através de um túnel criptografado. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Quando um equipamento precisa descobrir o endereço MAC correspondente ao IPv4 de outro host na mesma LAN, entra em ação principalmente o protocolo:",
         "alternativas": [
-            "VPN.",
-            "cabeamento Cat6.",
-            "DHCP.",
-            "DNS MX.",
-            "switching L2."
+            "DNS, responsável por associar cada endereço IPv4 a uma porta física específica do switch da rede local.",
+            "DHCP, responsável por consultar o fabricante da placa de rede antes de entregar uma concessão de endereço.",
+            "HTTP, responsável por obter o endereço físico do servidor antes de transferir recursos de uma página Web.",
+            "SMTP, responsável por descobrir o endereço de hardware do destinatário antes de enviar uma mensagem eletrônica.",
+            "ARP, responsável por relacionar um endereço IPv4 local ao endereço físico usado no enlace."
         ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. VPN protege a comunicação e permite acesso remoto ou interligação entre redes.",
-        "feedbackErro": "Resposta correta: VPN. VPN protege a comunicação e permite acesso remoto ou interligação entre redes.",
-        "dicaBanca": "Dica da banca: VPN não significa anonimato absoluto; significa túnel seguro conforme configuração.",
+        "correta": 4,
+        "feedbackAcerto": "Correto. ARP resolve IPv4 para MAC dentro do enlace local para permitir a entrega dos quadros Ethernet.",
+        "feedbackErro": "Resposta correta: ARP, responsável por relacionar um endereço IPv4 local ao endereço físico usado no enlace.\n\nComentário: ARP resolve IPv4 para MAC dentro do enlace local para permitir a entrega dos quadros Ethernet.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: ARP relaciona IP e MAC; DNS relaciona nomes e endereços IP.",
         "assunto": "redes",
-        "subtopico": "roteamento-disponibilidade"
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_027",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: trunk 802.1Q.",
+        "pergunta": "Ao digitar um nome como portal.escola.gov.br, o computador precisa descobrir o endereço IP correspondente antes de estabelecer a conexão. O serviço responsável por essa resolução é:",
         "alternativas": [
-            "Conectar um único computador final a uma VLAN sem marcação.",
-            "Transportar tráfego de múltiplas VLANs em um mesmo enlace.",
-            "Atribuir IP automaticamente a clientes sem fio.",
-            "Validar certificados de sites HTTPS.",
-            "Sincronizar hora em servidores."
+            "DNS, que traduz nomes de domínio em endereços IP e também mantém outros tipos de registros.",
+            "DHCP, que converte o nome do site em um endereço temporário e o entrega ao navegador por concessão.",
+            "ARP, que consulta servidores globais para descobrir o endereço IP associado a qualquer nome de domínio.",
+            "NAT, que registra os nomes de domínio visitados e os converte em endereços privados da rede interna.",
+            "FTP, que localiza o endereço IP do servidor antes de iniciar qualquer transferência de arquivo pela Web."
         ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. O trunk usa marcação, geralmente 802.1Q, para carregar várias VLANs.",
-        "feedbackErro": "Resposta correta: Transportar tráfego de múltiplas VLANs em um mesmo enlace. O trunk usa marcação, geralmente 802.1Q, para carregar várias VLANs.",
-        "dicaBanca": "Dica da banca: Access carrega uma VLAN para host final; trunk carrega várias VLANs.",
+        "correta": 0,
+        "feedbackAcerto": "Correto. DNS é o sistema hierárquico de nomes que associa domínios a endereços e outros registros.",
+        "feedbackErro": "Resposta correta: DNS, que traduz nomes de domínio em endereços IP e também mantém outros tipos de registros.\n\nComentário: DNS é o sistema hierárquico de nomes que associa domínios a endereços e outros registros.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Se a questão fala em nome de domínio virando IP, a resposta central é DNS.",
         "assunto": "redes",
-        "subtopico": "vlan-comutacao-stp"
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_028",
-        "pergunta": "Considere a seguinte situação: dois switches precisam transportar as VLANs 10, 20 e 30 pelo mesmo cabo de uplink. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Um usuário consegue abrir um site digitando diretamente o endereço IP do servidor, mas recebe erro ao tentar acessar o mesmo serviço pelo nome do domínio. Qual serviço deve ser investigado primeiro?",
         "alternativas": [
-            "porta access.",
-            "DHCP.",
-            "trunk 802.1Q.",
-            "TLS.",
-            "NTP."
+            "DHCP, porque o computador perderia o endereço IP ao utilizar um nome de domínio em vez do endereço numérico.",
+            "NAT, porque a tradução de endereços privados deixa de funcionar quando o usuário não informa o IP manualmente.",
+            "DNS, porque a conectividade IP existe, mas a resolução do nome parece estar falhando.",
+            "ARP, porque o protocolo precisa conhecer o endereço MAC de todos os servidores da Internet para resolver nomes.",
+            "HTTP, porque o protocolo de páginas Web é responsável por registrar e distribuir todos os nomes de domínio."
         ],
         "correta": 2,
-        "feedbackAcerto": "Correto. O trunk usa marcação, geralmente 802.1Q, para carregar várias VLANs.",
-        "feedbackErro": "Resposta correta: trunk 802.1Q. O trunk usa marcação, geralmente 802.1Q, para carregar várias VLANs.",
-        "dicaBanca": "Dica da banca: Access carrega uma VLAN para host final; trunk carrega várias VLANs.",
+        "feedbackAcerto": "Correto. Se o acesso por IP funciona e por nome não, a hipótese de falha de resolução DNS ganha força.",
+        "feedbackErro": "Resposta correta: DNS, porque a conectividade IP existe, mas a resolução do nome parece estar falhando.\n\nComentário: Se o acesso por IP funciona e por nome não, a hipótese de falha de resolução DNS ganha força.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Questões de diagnóstico costumam separar conectividade IP de resolução de nomes.",
         "assunto": "redes",
-        "subtopico": "vlan-comutacao-stp"
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_029",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: STP.",
+        "pergunta": "O endereço MAC de uma interface de rede é utilizado principalmente como identificador:",
         "alternativas": [
-            "Entregar IP e gateway aos clientes.",
-            "Criptografar comunicação web por TLS.",
-            "Resolver nomes de domínios em IP.",
-            "Evitar loops de camada 2 em redes com caminhos redundantes.",
-            "Medir tempo de resposta com ICMP."
+            "de aplicação, empregado para indicar qual programa deverá receber os dados em qualquer rede da Internet.",
+            "de enlace, empregado na entrega de quadros dentro da rede local Ethernet ou tecnologia equivalente.",
+            "de domínio, empregado para associar sites e servidores aos nomes digitados pelos usuários no navegador.",
+            "de roteamento global, empregado pelos roteadores da Internet para escolher caminhos entre sistemas autônomos.",
+            "de usuário, empregado pelos servidores para substituir senhas durante processos de autenticação remota."
         ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. O Spanning Tree Protocol previne loops em topologias Ethernet redundantes.",
-        "feedbackErro": "Resposta correta: Evitar loops de camada 2 em redes com caminhos redundantes. O Spanning Tree Protocol previne loops em topologias Ethernet redundantes.",
-        "dicaBanca": "Dica da banca: Loops em camada 2 podem gerar tempestade de broadcast.",
+        "correta": 1,
+        "feedbackAcerto": "Correto. MAC atua no enlace local; IP é o endereço lógico usado no roteamento entre redes.",
+        "feedbackErro": "Resposta correta: de enlace, empregado na entrega de quadros dentro da rede local Ethernet ou tecnologia equivalente.\n\nComentário: MAC atua no enlace local; IP é o endereço lógico usado no roteamento entre redes.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Não trate MAC como endereço roteável globalmente pela Internet.",
         "assunto": "redes",
-        "subtopico": "vlan-comutacao-stp"
+        "subtopico": "enderecamento-ip"
     },
     {
         "id": "redes_030",
-        "pergunta": "Considere a seguinte situação: dois switches possuem links redundantes e um protocolo bloqueia um caminho para evitar tempestade de broadcast. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Ao acessar uma página por HTTPS, qual característica diferencia esse acesso do HTTP sem proteção criptográfica?",
         "alternativas": [
-            "DHCP.",
-            "HTTPS.",
-            "DNS.",
-            "ping.",
-            "STP."
+            "O HTTPS dispensa o protocolo IP e envia as páginas diretamente pelo endereço MAC do servidor remoto.",
+            "O HTTPS garante que o conteúdo do site seja verdadeiro e impede que um domínio malicioso obtenha certificado.",
+            "O HTTPS utiliza TLS para proteger a comunicação, oferecendo criptografia e verificação do certificado do servidor.",
+            "O HTTPS substitui o DNS, porque o certificado digital conteria o endereço IP de todos os sites acessados nesse cenário.",
+            "O HTTPS elimina a necessidade de autenticação, já que a criptografia identifica automaticamente cada usuário."
         ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. O Spanning Tree Protocol previne loops em topologias Ethernet redundantes.",
-        "feedbackErro": "Resposta correta: STP. O Spanning Tree Protocol previne loops em topologias Ethernet redundantes.",
-        "dicaBanca": "Dica da banca: Loops em camada 2 podem gerar tempestade de broadcast.",
+        "correta": 2,
+        "feedbackAcerto": "Correto. HTTPS é HTTP protegido por TLS, que ajuda a preservar confidencialidade e integridade dos dados em trânsito.",
+        "feedbackErro": "Resposta correta: O HTTPS utiliza TLS para proteger a comunicação, oferecendo criptografia e verificação do certificado do servidor.\n\nComentário: HTTPS é HTTP protegido por TLS, que ajuda a preservar confidencialidade e integridade dos dados em trânsito.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Cadeado indica canal protegido; não é garantia de que o site ou o conteúdo sejam legítimos.",
         "assunto": "redes",
-        "subtopico": "equipamentos-de-rede"
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_031",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: domínio de broadcast.",
+        "pergunta": "Em correio eletrônico, qual associação entre protocolo e função está correta?",
         "alternativas": [
-            "Conjunto de dispositivos que recebe broadcasts da mesma rede/VLAN.",
-            "Grupo de portas TCP abertas em um servidor.",
-            "Área de cobertura de uma antena Bluetooth.",
-            "Tempo máximo de cache DNS.",
-            "Lista de endereços MAC de fabricantes."
+            "IMAP é usado para enviar mensagens entre servidores, enquanto SMTP teria a função de exibir a caixa postal no navegador.",
+            "SMTP resolve nomes de servidores de e-mail, enquanto DNS transfere as mensagens para a caixa de entrada.",
+            "SMTP é usado no envio/encaminhamento de mensagens, enquanto IMAP pode manter e sincronizar mensagens no servidor.",
+            "POP3 criptografa mensagens no navegador, enquanto SMTP substitui a autenticação do usuário no provedor.",
+            "HTTP recebe mensagens de qualquer cliente de e-mail, enquanto IMAP distribui endereços IP para as caixas postais."
         ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. Roteadores e VLANs separam domínios de broadcast; switches simples não separam por padrão.",
-        "feedbackErro": "Resposta correta: Conjunto de dispositivos que recebe broadcasts da mesma rede/VLAN. Roteadores e VLANs separam domínios de broadcast; switches simples não separam por padrão.",
-        "dicaBanca": "Dica da banca: Broadcast é limitado por roteamento/VLAN.",
+        "correta": 2,
+        "feedbackAcerto": "Correto. SMTP está ligado ao envio; IMAP está ligado ao acesso e sincronização de mensagens mantidas no servidor.",
+        "feedbackErro": "Resposta correta: SMTP é usado no envio/encaminhamento de mensagens, enquanto IMAP pode manter e sincronizar mensagens no servidor.\n\nComentário: SMTP está ligado ao envio; IMAP está ligado ao acesso e sincronização de mensagens mantidas no servidor.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Em prova, lembre: SMTP envia; IMAP sincroniza; POP3 é associado ao recebimento por download.",
         "assunto": "redes",
-        "subtopico": "vlan-comutacao-stp"
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_032",
-        "pergunta": "Considere a seguinte situação: sem VLANs, os hosts do mesmo switch recebem determinados quadros enviados para todos. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Um servidor precisa permitir administração remota por terminal com proteção criptográfica das credenciais e da sessão. O protocolo mais adequado é:",
         "alternativas": [
-            "portas em escuta.",
-            "domínio de broadcast.",
-            "PAN Bluetooth.",
-            "TTL DNS.",
-            "OUI."
+            "Telnet, porque transmite a sessão em texto simples e por isso oferece maior compatibilidade com redes seguras.",
+            "SSH, projetado para acesso remoto seguro por terminal e outras operações protegidas.",
+            "FTP, porque utiliza autenticação de arquivos para substituir o terminal remoto durante a administração do servidor.",
+            "SMTP, porque encapsula comandos administrativos em mensagens autenticadas entre o cliente e o servidor remoto.",
+            "SNMP, porque fornece uma sessão de terminal interativa para executar comandos administrativos no sistema operacional."
         ],
         "correta": 1,
-        "feedbackAcerto": "Correto. Roteadores e VLANs separam domínios de broadcast; switches simples não separam por padrão.",
-        "feedbackErro": "Resposta correta: domínio de broadcast. Roteadores e VLANs separam domínios de broadcast; switches simples não separam por padrão.",
-        "dicaBanca": "Dica da banca: Broadcast é limitado por roteamento/VLAN.",
+        "feedbackAcerto": "Correto. SSH é o protocolo clássico para terminal remoto seguro e substitui Telnet em cenários que exigem proteção.",
+        "feedbackErro": "Resposta correta: SSH, projetado para acesso remoto seguro por terminal e outras operações protegidas.\n\nComentário: SSH é o protocolo clássico para terminal remoto seguro e substitui Telnet em cenários que exigem proteção.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Telnet é histórico e inseguro por não proteger a sessão como o SSH.",
         "assunto": "redes",
-        "subtopico": "vlan-comutacao-stp"
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_033",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: topologia estrela.",
+        "pergunta": "Sobre FTP e SFTP, assinale a alternativa correta.",
         "alternativas": [
-            "Usar um único cabo compartilhado por todos os nós.",
-            "Ligar cada nó ao próximo em um circuito fechado.",
-            "Conectar dispositivos a um ponto central, como switch.",
-            "Interligar todos os nós com múltiplos caminhos redundantes.",
-            "Substituir todos os enlaces por Bluetooth pessoal."
+            "SFTP opera sobre SSH e não deve ser confundido com o FTP tradicional nem com o FTPS.",
+            "SFTP seria outro nome do FTP tradicional quando o servidor utiliza senha para autenticar o usuário.",
+            "FTP e SFTP utilizam necessariamente a mesma porta e o mesmo mecanismo de proteção da sessão de dados.",
+            "SFTP corresponde ao FTP executado dentro do navegador por HTTPS e depende do certificado digital do site.",
+            "FTP tradicional utiliza criptografia do SSH por padrão, enquanto SFTP transmite comandos e arquivos em texto claro."
         ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. A estrela é comum em redes locais modernas com switches centrais.",
-        "feedbackErro": "Resposta correta: Conectar dispositivos a um ponto central, como switch. A estrela é comum em redes locais modernas com switches centrais.",
-        "dicaBanca": "Dica da banca: Estrela = ponto central.",
+        "correta": 0,
+        "feedbackAcerto": "Correto. SFTP é um protocolo de transferência de arquivos associado ao SSH e é distinto do FTP/FTPS.",
+        "feedbackErro": "Resposta correta: SFTP opera sobre SSH e não deve ser confundido com o FTP tradicional nem com o FTPS.\n\nComentário: SFTP é um protocolo de transferência de arquivos associado ao SSH e é distinto do FTP/FTPS.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: A semelhança do nome costuma ser usada como pegadinha: SFTP não é “FTP com S”.",
         "assunto": "redes",
-        "subtopico": "tipos-topologias-redes"
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_034",
-        "pergunta": "Considere a seguinte situação: computadores de um laboratório chegam a um switch central por cabos individuais. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Quando um navegador solicita uma página a um servidor Web e recebe código HTTP 404, isso indica que:",
         "alternativas": [
-            "topologia barramento.",
-            "topologia anel.",
-            "topologia malha.",
-            "topologia estrela.",
-            "rede PAN."
+            "o servidor confirmou o processamento bem-sucedido e está aguardando o navegador salvar o recurso em cache.",
+            "a conexão foi redirecionada permanentemente e o navegador precisa consultar o DHCP para obter outra URL.",
+            "o DNS não encontrou qualquer endereço IP para o domínio e por isso o servidor Web devolveu o código de erro.",
+            "o servidor foi alcançado, mas o recurso solicitado não foi encontrado naquele endereço.",
+            "o certificado TLS expirou e o servidor encerrou a conexão antes de receber a requisição HTTP, como comportamento padrão do código 404."
         ],
         "correta": 3,
-        "feedbackAcerto": "Correto. A estrela é comum em redes locais modernas com switches centrais.",
-        "feedbackErro": "Resposta correta: topologia estrela. A estrela é comum em redes locais modernas com switches centrais.",
-        "dicaBanca": "Dica da banca: Estrela = ponto central.",
+        "feedbackAcerto": "Correto. 404 é um código HTTP de recurso não encontrado; o servidor Web foi alcançado para produzir essa resposta.",
+        "feedbackErro": "Resposta correta: o servidor foi alcançado, mas o recurso solicitado não foi encontrado naquele endereço.\n\nComentário: 404 é um código HTTP de recurso não encontrado; o servidor Web foi alcançado para produzir essa resposta.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Não confunda 404 com falta de Internet ou falha de DNS.",
         "assunto": "redes",
-        "subtopico": "equipamentos-de-rede"
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_035",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: LAN.",
+        "pergunta": "Em uma URL como https://portal.exemplo.org/documentos/prova.pdf, o trecho “https” identifica:",
         "alternativas": [
-            "Rede pessoal de curtíssimo alcance.",
-            "Rede metropolitana entre bairros.",
-            "Rede de longa distância entre países.",
-            "Túnel criptografado sobre rede pública.",
-            "Rede local de área limitada, como residência, escola ou escritório."
+            "o domínio principal do servidor responsável por armazenar o arquivo prova.pdf na Internet.",
+            "o esquema/protocolo usado para acessar o recurso, indicando HTTP protegido por TLS.",
+            "o caminho interno do arquivo dentro do sistema de diretórios físico do computador do usuário.",
+            "o serviço DNS encarregado de traduzir o domínio portal.exemplo.org em um endereço de enlace.",
+            "a extensão do documento que informa ao navegador qual aplicativo deverá abrir o arquivo baixado."
         ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. LAN é Local Area Network, usada em ambientes geograficamente limitados.",
-        "feedbackErro": "Resposta correta: Rede local de área limitada, como residência, escola ou escritório. LAN é Local Area Network, usada em ambientes geograficamente limitados.",
-        "dicaBanca": "Dica da banca: LAN = local.",
+        "correta": 1,
+        "feedbackAcerto": "Correto. O início da URL informa o esquema de acesso; em https://, trata-se de HTTP com proteção TLS.",
+        "feedbackErro": "Resposta correta: o esquema/protocolo usado para acessar o recurso, indicando HTTP protegido por TLS.\n\nComentário: O início da URL informa o esquema de acesso; em https://, trata-se de HTTP com proteção TLS.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Questões sobre URL podem separar esquema, domínio, caminho e nome do recurso.",
         "assunto": "redes",
-        "subtopico": "tipos-topologias-redes"
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_036",
-        "pergunta": "Considere a seguinte situação: computadores de uma sala são ligados ao mesmo switch e compartilham impressora local. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "O protocolo TCP é geralmente escolhido por aplicações que necessitam de:",
         "alternativas": [
-            "LAN.",
-            "PAN.",
-            "MAN.",
-            "WAN.",
-            "VPN."
+            "transmissão sem controle de entrega, priorizando a menor sobrecarga mesmo quando a aplicação exige confiabilidade.",
+            "resolução de nomes de domínio, mantendo uma base hierárquica de endereços IP de servidores na Internet.",
+            "atribuição automática de endereços aos clientes, além de máscara e gateway durante a entrada na rede.",
+            "descoberta do endereço MAC de um host local, dispensando o uso de endereçamento IP entre redes distintas.",
+            "entrega confiável e ordenada dos dados, com controle de conexão e retransmissão quando necessário."
         ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. LAN é Local Area Network, usada em ambientes geograficamente limitados.",
-        "feedbackErro": "Resposta correta: LAN. LAN é Local Area Network, usada em ambientes geograficamente limitados.",
-        "dicaBanca": "Dica da banca: LAN = local.",
+        "correta": 4,
+        "feedbackAcerto": "Correto. TCP oferece comunicação orientada à conexão, com mecanismos de confiabilidade e ordenação.",
+        "feedbackErro": "Resposta correta: entrega confiável e ordenada dos dados, com controle de conexão e retransmissão quando necessário.\n\nComentário: TCP oferece comunicação orientada à conexão, com mecanismos de confiabilidade e ordenação.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Compare com UDP: menor sobrecarga e ausência dos mesmos mecanismos de confirmação e ordenação.",
         "assunto": "redes",
-        "subtopico": "equipamentos-de-rede"
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_037",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: PAN.",
+        "pergunta": "Em uma videoconferência em tempo real, pequenas perdas podem ser preferíveis a esperar retransmissões que aumentariam o atraso. Esse raciocínio ajuda a explicar o uso frequente de:",
         "alternativas": [
-            "Rede local cabeada de um escritório.",
-            "Rede pessoal de curtíssimo alcance entre dispositivos do usuário.",
-            "Rede metropolitana de uma prefeitura.",
-            "Rede mundial formada por várias redes.",
-            "Rede virtual privada entre filiais."
+            "TCP em qualquer fluxo de áudio, porque descarta automaticamente pacotes atrasados antes que cheguem ao aplicativo.",
+            "DNS para transportar áudio, porque o serviço prioriza respostas rápidas e não exige confirmação do destinatário.",
+            "DHCP para transmitir vídeo, porque as concessões temporárias eliminam atrasos provocados por pacotes perdidos.",
+            "UDP em fluxos de tempo real, por reduzir a sobrecarga e não impor a mesma lógica de retransmissão do TCP.",
+            "ARP para videoconferência externa, porque o protocolo encontra o endereço físico de cada participante na Internet."
         ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. PAN geralmente é associada a dispositivos pessoais e Bluetooth.",
-        "feedbackErro": "Resposta correta: Rede pessoal de curtíssimo alcance entre dispositivos do usuário. PAN geralmente é associada a dispositivos pessoais e Bluetooth.",
-        "dicaBanca": "Dica da banca: PAN = Personal Area Network.",
+        "correta": 3,
+        "feedbackAcerto": "Correto. UDP é comum em aplicações sensíveis a latência, nas quais a aplicação pode tolerar alguma perda.",
+        "feedbackErro": "Resposta correta: UDP em fluxos de tempo real, por reduzir a sobrecarga e não impor a mesma lógica de retransmissão do TCP.\n\nComentário: UDP é comum em aplicações sensíveis a latência, nas quais a aplicação pode tolerar alguma perda.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: UDP não é “melhor” em geral; a escolha depende das necessidades de confiabilidade e atraso da aplicação.",
         "assunto": "redes",
-        "subtopico": "tipos-topologias-redes"
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_038",
-        "pergunta": "Considere a seguinte situação: um celular troca dados com fone sem fio e relógio inteligente próximos. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "O comando ou protocolo “ping” utiliza mensagens associadas ao ICMP principalmente para:",
         "alternativas": [
-            "LAN.",
-            "MAN.",
-            "PAN.",
-            "Internet/WAN.",
-            "VPN site-to-site."
+            "listar todos os arquivos compartilhados pelo destino e confirmar as permissões de cada usuário da rede.",
+            "descobrir automaticamente a senha do roteador e verificar se a autenticação remota está funcionando.",
+            "resolver nomes de domínio consultando diretamente os servidores DNS raiz a cada pacote transmitido.",
+            "testar alcance e obter uma indicação básica de tempo de resposta entre origem e destino.",
+            "mostrar a sequência completa de roteadores intermediários percorridos por cada conexão TCP do navegador."
         ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. PAN geralmente é associada a dispositivos pessoais e Bluetooth.",
-        "feedbackErro": "Resposta correta: PAN. PAN geralmente é associada a dispositivos pessoais e Bluetooth.",
-        "dicaBanca": "Dica da banca: PAN = Personal Area Network.",
+        "correta": 3,
+        "feedbackAcerto": "Correto. Ping é um teste simples de alcance e latência aproximada com ICMP Echo.",
+        "feedbackErro": "Resposta correta: testar alcance e obter uma indicação básica de tempo de resposta entre origem e destino.\n\nComentário: Ping é um teste simples de alcance e latência aproximada com ICMP Echo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Ping não prova que todos os serviços do destino estão disponíveis; firewalls também podem bloquear ICMP.",
         "assunto": "redes",
-        "subtopico": "tipos-topologias-redes"
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_039",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: WAN.",
+        "pergunta": "Ao executar tracert/traceroute para um servidor externo, o objetivo principal é:",
         "alternativas": [
-            "Rede pessoal de fones Bluetooth.",
-            "Rede local de uma sala de aula.",
-            "Sub-rede criada por VLAN local.",
-            "Rede de grande abrangência geográfica que interliga redes distantes.",
-            "Nome lógico de uma rede Wi-Fi."
+            "identificar os saltos intermediários percorridos até o destino e observar onde podem surgir atrasos ou interrupções.",
+            "medir a velocidade contratada da Internet transferindo um arquivo de tamanho fixo por cada roteador intermediário.",
+            "listar os endereços MAC de todos os roteadores existentes na Internet entre o computador e o servidor consultado.",
+            "renovar a concessão DHCP em cada rede atravessada para garantir que o pacote mantenha o mesmo endereço de origem.",
+            "consultar o conteúdo do cache DNS de cada equipamento intermediário antes de estabelecer uma conexão com o destino nesse cenário de rede."
         ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. WAN conecta localidades distantes e a Internet é exemplo clássico.",
-        "feedbackErro": "Resposta correta: Rede de grande abrangência geográfica que interliga redes distantes. WAN conecta localidades distantes e a Internet é exemplo clássico.",
-        "dicaBanca": "Dica da banca: WAN = longa distância.",
+        "correta": 0,
+        "feedbackAcerto": "Correto. Traceroute/tracert revela os saltos do caminho usando o comportamento do TTL/hop limit.",
+        "feedbackErro": "Resposta correta: identificar os saltos intermediários percorridos até o destino e observar onde podem surgir atrasos ou interrupções.\n\nComentário: Traceroute/tracert revela os saltos do caminho usando o comportamento do TTL/hop limit.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Ping testa alcance; traceroute ajuda a visualizar o caminho.",
         "assunto": "redes",
-        "subtopico": "tipos-topologias-redes"
+        "subtopico": "protocolos-servicos-portas"
     },
     {
         "id": "redes_040",
-        "pergunta": "Considere a seguinte situação: filiais em estados diferentes comunicam-se por links de operadora. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Em uma rede Wi-Fi doméstica, o nome que identifica logicamente a rede sem fio e aparece na lista de redes disponíveis é chamado de:",
         "alternativas": [
-            "PAN.",
-            "LAN.",
-            "VLAN.",
-            "SSID.",
-            "WAN."
+            "BSSID, nome textual escolhido pelo usuário e usado como senha de acesso em qualquer roteador doméstico.",
+            "DNS, identificação pública do ponto de acesso usada para localizar a rede sem fio pela Internet.",
+            "DHCP, nome atribuído à rede durante a concessão automática de um endereço IP ao primeiro cliente.",
+            "SSID, identificador usado para distinguir a rede Wi-Fi de outras redes próximas.",
+            "WPA, rótulo de transmissão que substitui o endereço MAC do access point durante a associação do cliente."
         ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. WAN conecta localidades distantes e a Internet é exemplo clássico.",
-        "feedbackErro": "Resposta correta: WAN. WAN conecta localidades distantes e a Internet é exemplo clássico.",
-        "dicaBanca": "Dica da banca: WAN = longa distância.",
+        "correta": 3,
+        "feedbackAcerto": "Correto. SSID é o nome lógico da WLAN que os usuários costumam selecionar para conexão.",
+        "feedbackErro": "Resposta correta: SSID, identificador usado para distinguir a rede Wi-Fi de outras redes próximas.\n\nComentário: SSID é o nome lógico da WLAN que os usuários costumam selecionar para conexão.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: SSID identifica a rede; WPA2/WPA3 tratam proteção; DHCP trata configuração IP.",
         "assunto": "redes",
-        "subtopico": "tipos-topologias-redes"
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_041",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: WLAN.",
+        "pergunta": "Comparando, de forma geral, Wi-Fi em 2,4 GHz e 5 GHz no mesmo ambiente, qual afirmação é mais adequada?",
         "alternativas": [
-            "Rede local sem fio baseada em tecnologias como Wi-Fi.",
-            "Rede local exclusivamente cabeada.",
-            "Rede de longa distância por operadora.",
-            "Rede pessoal somente por USB.",
-            "Serviço de resolução DNS."
+            "2,4 GHz oferece maior velocidade e menor alcance por usar frequência mais baixa, independentemente das condições do ambiente.",
+            "5 GHz tende a oferecer maior capacidade e menos interferência em muitos cenários, mas costuma ter menor alcance através de obstáculos.",
+            "5 GHz atravessa paredes com maior facilidade e por isso costuma alcançar distâncias maiores que 2,4 GHz.",
+            "2,4 GHz impede o uso de criptografia WPA2, enquanto 5 GHz é a faixa reservada para redes Wi-Fi protegidas nesse cenário de rede, considerando ainda a configuração descrita no enunciado.",
+            "5 GHz indica conexão de quinta geração móvel e depende de cobertura celular da operadora para funcionar."
         ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. WLAN é uma LAN sem fio.",
-        "feedbackErro": "Resposta correta: Rede local sem fio baseada em tecnologias como Wi-Fi. WLAN é uma LAN sem fio.",
-        "dicaBanca": "Dica da banca: Wireless = sem fio.",
+        "correta": 1,
+        "feedbackAcerto": "Correto. Em termos gerais, 2,4 GHz tende a alcançar mais; 5 GHz pode oferecer maior desempenho e menor congestionamento.",
+        "feedbackErro": "Resposta correta: 5 GHz tende a oferecer maior capacidade e menos interferência em muitos cenários, mas costuma ter menor alcance através de obstáculos.\n\nComentário: Em termos gerais, 2,4 GHz tende a alcançar mais; 5 GHz pode oferecer maior desempenho e menor congestionamento.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Não confunda frequência do Wi-Fi com tecnologia celular 5G.",
         "assunto": "redes",
-        "subtopico": "tipos-topologias-redes"
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_042",
-        "pergunta": "Considere a seguinte situação: usuários acessam a rede do escritório por SSID e senha WPA2. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Uma rede Wi-Fi escolar apresenta boa intensidade de sinal, mas muitos usuários simultâneos percebem lentidão no mesmo canal. Uma explicação plausível é:",
         "alternativas": [
-            "LAN cabeada.",
-            "WLAN.",
-            "WAN.",
-            "USB local.",
-            "DNS."
+            "falha obrigatória do DNS, porque muitos clientes no mesmo canal impedem a tradução de nomes de domínio em endereços IP.",
+            "erro de máscara, porque cada novo usuário reduz automaticamente a quantidade de bits disponíveis para a sub-rede.",
+            "defeito do cabo do provedor, já que sinal Wi-Fi forte elimina qualquer possibilidade de congestionamento no meio sem fio.",
+            "ausência de NAT, porque clientes conectados ao mesmo canal precisam possuir endereços públicos diferentes para transmitir.",
+            "contenção do meio e interferência, pois os clientes compartilham o canal de rádio e disputam oportunidades de transmissão."
         ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. WLAN é uma LAN sem fio.",
-        "feedbackErro": "Resposta correta: WLAN. WLAN é uma LAN sem fio.",
-        "dicaBanca": "Dica da banca: Wireless = sem fio.",
+        "correta": 4,
+        "feedbackAcerto": "Correto. Wi-Fi é meio compartilhado; muitos clientes e redes vizinhas podem aumentar contenção e interferência mesmo com sinal forte.",
+        "feedbackErro": "Resposta correta: contenção do meio e interferência, pois os clientes compartilham o canal de rádio e disputam oportunidades de transmissão.\n\nComentário: Wi-Fi é meio compartilhado; muitos clientes e redes vizinhas podem aumentar contenção e interferência mesmo com sinal forte.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Barras de sinal não medem sozinhas a qualidade total da conexão.",
         "assunto": "redes",
-        "subtopico": "tipos-topologias-redes"
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_043",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: BSSID.",
+        "pergunta": "Sobre WPA2 e WPA3 em redes Wi-Fi, assinale a alternativa correta.",
         "alternativas": [
-            "Nome amigável da rede sem fio.",
-            "Senha digitada para entrar no Wi-Fi.",
-            "Identificador geralmente baseado no MAC de um ponto de acesso Wi-Fi.",
-            "Registro DNS que aponta IPv6.",
-            "Porta usada por área remota Windows."
+            "São padrões de cabeamento Ethernet usados para diferenciar cabos de categoria 5e e 6 em redes locais.",
+            "São protocolos de roteamento usados para escolher o melhor caminho entre access points de redes diferentes nesse cenário de rede.",
+            "São serviços de resolução de nomes criados para impedir que usuários descubram o endereço IP do roteador.",
+            "São mecanismos de proteção da rede sem fio, sendo o WPA3 uma evolução com melhorias de segurança em relação ao WPA2.",
+            "São frequências de rádio que correspondem, respectivamente, às faixas de 2,4 GHz e 5 GHz do Wi-Fi."
         ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. BSSID identifica a célula/AP específico, mesmo que o SSID seja o mesmo.",
-        "feedbackErro": "Resposta correta: Identificador geralmente baseado no MAC de um ponto de acesso Wi-Fi. BSSID identifica a célula/AP específico, mesmo que o SSID seja o mesmo.",
-        "dicaBanca": "Dica da banca: Mesmo SSID pode ter vários BSSIDs.",
+        "correta": 3,
+        "feedbackAcerto": "Correto. WPA2 e WPA3 tratam segurança de redes Wi-Fi; WPA3 é a geração posterior.",
+        "feedbackErro": "Resposta correta: São mecanismos de proteção da rede sem fio, sendo o WPA3 uma evolução com melhorias de segurança em relação ao WPA2.\n\nComentário: WPA2 e WPA3 tratam segurança de redes Wi-Fi; WPA3 é a geração posterior.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Não confunda padrão de segurança com frequência ou padrão 802.11.",
         "assunto": "redes",
         "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_044",
-        "pergunta": "Considere a seguinte situação: duas antenas anunciam o mesmo nome de rede, mas cada uma possui identificador próprio de rádio. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Um usuário conecta o notebook a uma rede Wi-Fi pública aberta e precisa acessar informações sensíveis. Qual conduta reduz melhor a exposição?",
         "alternativas": [
-            "SSID.",
-            "PSK.",
-            "AAAA.",
-            "BSSID.",
-            "RDP 3389."
+            "priorizar conexões HTTPS e, quando aplicável, usar uma VPN confiável, evitando serviços sensíveis sem proteção adequada.",
+            "desativar o firewall do notebook para que a rede pública consiga reconhecer corretamente todos os serviços do sistema.",
+            "compartilhar arquivos da pasta pessoal para testar se os outros clientes da rede conseguem alcançar o computador.",
+            "substituir HTTPS por HTTP para reduzir o tempo de conexão e impedir que o ponto de acesso registre o endereço visitado.",
+            "usar a mesma senha do Wi-Fi como senha das contas acessadas, facilitando a recuperação caso a conexão seja interrompida."
         ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. BSSID identifica a célula/AP específico, mesmo que o SSID seja o mesmo.",
-        "feedbackErro": "Resposta correta: BSSID. BSSID identifica a célula/AP específico, mesmo que o SSID seja o mesmo.",
-        "dicaBanca": "Dica da banca: Mesmo SSID pode ter vários BSSIDs.",
+        "correta": 0,
+        "feedbackAcerto": "Correto. Redes públicas exigem cautela; HTTPS e VPN podem proteger dados em trânsito contra observação local indevida.",
+        "feedbackErro": "Resposta correta: priorizar conexões HTTPS e, quando aplicável, usar uma VPN confiável, evitando serviços sensíveis sem proteção adequada.\n\nComentário: Redes públicas exigem cautela; HTTPS e VPN podem proteger dados em trânsito contra observação local indevida.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Rede aberta não significa que todo tráfego esteja exposto da mesma forma, mas aumenta a necessidade de boas práticas.",
         "assunto": "redes",
         "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_045",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: WEP.",
+        "pergunta": "Um repetidor Wi-Fi é instalado em um ponto onde já chega sinal muito fraco do roteador principal. O resultado pode continuar ruim porque:",
         "alternativas": [
-            "Padrão moderno equivalente ao WPA3.",
-            "Protocolo de roteamento dinâmico interno.",
-            "Conector usado em fibra óptica.",
-            "Serviço seguro de shell remoto.",
-            "Padrão antigo de segurança Wi-Fi com fragilidades conhecidas."
+            "o repetidor precisa estar conectado diretamente ao servidor DNS para descobrir em qual frequência deve retransmitir.",
+            "o repetidor depende de receber um enlace de qualidade suficiente para retransmiti-lo de forma útil.",
+            "o repetidor transforma automaticamente a rede em 5 GHz, reduzindo a compatibilidade com qualquer dispositivo 2,4 GHz.",
+            "o roteador principal deixa de fornecer endereços IP assim que detecta outro equipamento transmitindo o mesmo SSID.",
+            "a retransmissão Wi-Fi elimina o uso de quadros e passa a depender de pacotes IP públicos entregues pela operadora."
         ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. WEP é considerado inseguro e não recomendado em redes atuais.",
-        "feedbackErro": "Resposta correta: Padrão antigo de segurança Wi-Fi com fragilidades conhecidas. WEP é considerado inseguro e não recomendado em redes atuais.",
-        "dicaBanca": "Dica da banca: Quando aparecer WEP, pense em inseguro/obsoleto.",
+        "correta": 1,
+        "feedbackAcerto": "Correto. Repetidores não “criam” qualidade: eles precisam receber um sinal razoável para estendê-lo com utilidade.",
+        "feedbackErro": "Resposta correta: o repetidor depende de receber um enlace de qualidade suficiente para retransmiti-lo de forma útil.\n\nComentário: Repetidores não “criam” qualidade: eles precisam receber um sinal razoável para estendê-lo com utilidade.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Posicionamento é essencial em extensão de cobertura sem fio.",
         "assunto": "redes",
         "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_046",
-        "pergunta": "Considere a seguinte situação: uma prova afirma que determinado padrão sem fio legado não é recomendado por vulnerabilidades criptográficas. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Ocultar a divulgação do SSID de uma rede Wi-Fi deve ser entendido como:",
         "alternativas": [
-            "WEP.",
-            "WPA3.",
-            "OSPF.",
-            "LC.",
-            "SSH."
+            "um mecanismo equivalente ao WPA3, porque impede que clientes não autorizados detectem qualquer transmissão da rede.",
+            "uma forma de criptografia do tráfego, pois o nome oculto é usado como chave para cifrar os quadros transmitidos.",
+            "uma proteção que elimina a necessidade de senha quando o endereço MAC do cliente estiver previamente cadastrado no roteador.",
+            "um recurso que impede fisicamente a propagação do sinal para fora do ambiente em que o access point está instalado.",
+            "uma medida de baixa eficácia isoladamente, que não substitui criptografia forte e autenticação adequada."
         ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. WEP é considerado inseguro e não recomendado em redes atuais.",
-        "feedbackErro": "Resposta correta: WEP. WEP é considerado inseguro e não recomendado em redes atuais.",
-        "dicaBanca": "Dica da banca: Quando aparecer WEP, pense em inseguro/obsoleto.",
+        "correta": 4,
+        "feedbackAcerto": "Correto. Ocultar SSID não oferece proteção robusta; a rede continua transmitindo informações que podem revelar sua presença.",
+        "feedbackErro": "Resposta correta: uma medida de baixa eficácia isoladamente, que não substitui criptografia forte e autenticação adequada.\n\nComentário: Ocultar SSID não oferece proteção robusta; a rede continua transmitindo informações que podem revelar sua presença.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Segurança Wi-Fi deve se apoiar em criptografia e autenticação, não em esconder apenas o nome da rede.",
         "assunto": "redes",
-        "subtopico": "roteamento-disponibilidade"
+        "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_047",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: 2,4 GHz no Wi-Fi.",
+        "pergunta": "Um access point oferece duas redes: uma para funcionários e outra para visitantes, com acesso restrito apenas à Internet. Essa configuração exemplifica principalmente:",
         "alternativas": [
-            "Menor alcance relativo e mais canais não sobrepostos.",
-            "Maior alcance relativo e maior tendência a interferências.",
-            "Uso obrigatório de cabo Ethernet.",
-            "Frequência exclusiva do Bluetooth sem coexistência.",
-            "Impossibilidade de usar criptografia."
+            "amplificação do sinal, porque cada SSID duplica automaticamente a potência de transmissão do access point.",
+            "resolução DNS redundante, porque redes com nomes diferentes precisam consultar servidores de domínio independentes.",
+            "troca de frequência, porque funcionários usariam 5 GHz e visitantes ficariam limitados a 2,4 GHz por definição.",
+            "segmentação de acesso, reduzindo a exposição da rede interna aos dispositivos de visitantes.",
+            "conversão NAT estática, porque cada visitante precisa receber um endereço público fixo diferente do usado pelos funcionários."
         ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. A faixa de 2,4 GHz atravessa melhor obstáculos, mas é mais congestionada.",
-        "feedbackErro": "Resposta correta: Maior alcance relativo e maior tendência a interferências. A faixa de 2,4 GHz atravessa melhor obstáculos, mas é mais congestionada.",
-        "dicaBanca": "Dica da banca: 2,4 GHz = alcance; 5 GHz = menos interferência e mais canais.",
+        "correta": 3,
+        "feedbackAcerto": "Correto. Rede de convidados é uma forma comum de separar dispositivos não confiáveis da rede interna.",
+        "feedbackErro": "Resposta correta: segmentação de acesso, reduzindo a exposição da rede interna aos dispositivos de visitantes.\n\nComentário: Rede de convidados é uma forma comum de separar dispositivos não confiáveis da rede interna.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Segmentar visitantes é uma prática de segurança e organização, não apenas uma escolha de nome de Wi-Fi.",
         "assunto": "redes",
         "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_048",
-        "pergunta": "Considere a seguinte situação: em uma casa, o sinal chega mais longe, mas sofre com muitas redes vizinhas e dispositivos no mesmo espectro. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Em redes Wi-Fi, a intensidade do sinal indicada pelo dispositivo e a velocidade efetiva da Internet:",
         "alternativas": [
-            "5 GHz no Wi-Fi.",
-            "Ethernet cabeada.",
-            "2,4 GHz no Wi-Fi.",
-            "Bluetooth isolado.",
-            "WEP obrigatório."
+            "são equivalentes, pois quatro barras de Wi-Fi garantem que a velocidade contratada esteja integralmente disponível ao usuário.",
+            "dependem do DNS, pois a resolução de nomes determinaria simultaneamente o nível do sinal de rádio e a taxa de download.",
+            "só diferem quando o computador utiliza endereço IP público, pois redes privadas apresentam velocidade igual à intensidade do sinal.",
+            "tornam-se idênticas quando o roteador e o notebook utilizam a mesma versão do sistema operacional e do navegador.",
+            "são medidas diferentes; um sinal forte pode coexistir com Internet lenta por congestionamento, provedor ou outros fatores."
         ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. A faixa de 2,4 GHz atravessa melhor obstáculos, mas é mais congestionada.",
-        "feedbackErro": "Resposta correta: 2,4 GHz no Wi-Fi. A faixa de 2,4 GHz atravessa melhor obstáculos, mas é mais congestionada.",
-        "dicaBanca": "Dica da banca: 2,4 GHz = alcance; 5 GHz = menos interferência e mais canais.",
+        "correta": 4,
+        "feedbackAcerto": "Correto. Sinal Wi-Fi mede a qualidade do enlace local; desempenho da Internet depende também de capacidade, interferência, servidor e provedor.",
+        "feedbackErro": "Resposta correta: são medidas diferentes; um sinal forte pode coexistir com Internet lenta por congestionamento, provedor ou outros fatores.\n\nComentário: Sinal Wi-Fi mede a qualidade do enlace local; desempenho da Internet depende também de capacidade, interferência, servidor e provedor.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Boa cobertura não garante boa velocidade fim a fim.",
         "assunto": "redes",
         "subtopico": "redes-sem-fio"
     },
     {
         "id": "redes_049",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: CSMA/CA.",
+        "pergunta": "Um firewall instalado entre a rede interna e a Internet tem como função central:",
         "alternativas": [
-            "Método clássico de detecção de colisões em hubs Ethernet.",
-            "Protocolo de roteamento externo da Internet.",
-            "Serviço de atribuição automática de IP.",
-            "Método usado no Wi-Fi para reduzir colisões no meio sem fio.",
-            "Registro DNS de consulta reversa."
+            "resolver nomes de domínio e direcionar cada usuário ao servidor Web correspondente ao endereço solicitado.",
+            "distribuir endereços IP aos clientes internos e renovar automaticamente as concessões quando elas expirarem.",
+            "aumentar a potência do sinal Wi-Fi e selecionar o canal menos congestionado para cada dispositivo conectado.",
+            "substituir o antivírus ao analisar o conteúdo de todos os arquivos existentes nos discos dos computadores da rede nesse cenário de rede.",
+            "controlar o tráfego conforme regras de segurança, permitindo ou bloqueando comunicações de acordo com a política definida."
         ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. CSMA/CA busca evitar colisões em redes sem fio.",
-        "feedbackErro": "Resposta correta: Método usado no Wi-Fi para reduzir colisões no meio sem fio. CSMA/CA busca evitar colisões em redes sem fio.",
-        "dicaBanca": "Dica da banca: CA = collision avoidance; CD = collision detection.",
+        "correta": 4,
+        "feedbackAcerto": "Correto. Firewall aplica regras ao tráfego de rede e ajuda a reduzir acessos não autorizados.",
+        "feedbackErro": "Resposta correta: controlar o tráfego conforme regras de segurança, permitindo ou bloqueando comunicações de acordo com a política definida.\n\nComentário: Firewall aplica regras ao tráfego de rede e ajuda a reduzir acessos não autorizados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Firewall não substitui antivírus, atualizações ou autenticação; é uma camada de defesa.",
         "assunto": "redes",
-        "subtopico": "redes-sem-fio"
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_050",
-        "pergunta": "Considere a seguinte situação: como o rádio não detecta colisões como o cabo antigo, o padrão tenta evitá-las antes da transmissão. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Uma VPN é utilizada por um servidor público para que funcionários remotos acessem sistemas internos pela Internet. Nesse cenário, a VPN cria:",
         "alternativas": [
-            "CSMA/CD.",
-            "BGP.",
-            "DHCP.",
-            "PTR.",
-            "CSMA/CA."
+            "uma nova conexão física dedicada entre a residência do funcionário e cada servidor da instituição pública.",
+            "um túnel lógico protegido sobre a rede pública, permitindo acesso remoto conforme as políticas da organização.",
+            "um serviço DNS particular que substitui todos os mecanismos de autenticação e criptografia do acesso remoto.",
+            "uma rede Wi-Fi de maior alcance que elimina a participação do provedor de Internet na comunicação do usuário.",
+            "um endereço MAC público permanente que identifica o funcionário em qualquer rede utilizada durante o trabalho remoto."
         ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. CSMA/CA busca evitar colisões em redes sem fio.",
-        "feedbackErro": "Resposta correta: CSMA/CA. CSMA/CA busca evitar colisões em redes sem fio.",
-        "dicaBanca": "Dica da banca: CA = collision avoidance; CD = collision detection.",
+        "correta": 1,
+        "feedbackAcerto": "Correto. VPN cria túnel lógico sobre uma rede existente e pode proteger o tráfego entre os pontos configurados.",
+        "feedbackErro": "Resposta correta: um túnel lógico protegido sobre a rede pública, permitindo acesso remoto conforme as políticas da organização.\n\nComentário: VPN cria túnel lógico sobre uma rede existente e pode proteger o tráfego entre os pontos configurados.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: VPN não significa anonimato total nem elimina a necessidade de autenticação e boas práticas.",
         "assunto": "redes",
-        "subtopico": "redes-sem-fio"
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_051",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: Wi-Fi IEEE 802.11.",
+        "pergunta": "O acesso à VPN de uma organização exige senha e confirmação por aplicativo autenticador. Essa política aplica:",
         "alternativas": [
-            "Família de padrões de redes locais sem fio.",
-            "Família de padrões Ethernet cabeados.",
-            "Protocolo usado para envio de e-mail.",
-            "Porta TCP para acesso remoto seguro.",
-            "Sistema de nomes hierárquico da Internet."
+            "criptografia simétrica de dois níveis, na qual a senha do usuário é usada duas vezes para cifrar cada pacote transmitido.",
+            "dupla concessão DHCP, que fornece dois endereços IP ao mesmo usuário para aumentar a disponibilidade da conexão remota.",
+            "autenticação multifator, combinando fatores distintos para reduzir o risco de uso indevido de uma senha comprometida.",
+            "roteamento redundante, que envia cópias idênticas dos pacotes por dois caminhos até que um deles seja confirmado pelo servidor.",
+            "filtragem por endereço MAC, que substitui a identidade do usuário pelo código físico da interface utilizada no acesso remoto."
         ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. IEEE 802.11 define tecnologias Wi-Fi.",
-        "feedbackErro": "Resposta correta: Família de padrões de redes locais sem fio. IEEE 802.11 define tecnologias Wi-Fi.",
-        "dicaBanca": "Dica da banca: 802.11 = Wi-Fi.",
+        "correta": 2,
+        "feedbackAcerto": "Correto. MFA usa mais de um fator de autenticação, como senha e confirmação em dispositivo/aplicativo.",
+        "feedbackErro": "Resposta correta: autenticação multifator, combinando fatores distintos para reduzir o risco de uso indevido de uma senha comprometida.\n\nComentário: MFA usa mais de um fator de autenticação, como senha e confirmação em dispositivo/aplicativo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Dois passos só são multifator quando representam fatores independentes, não apenas duas perguntas do mesmo tipo.",
         "assunto": "redes",
-        "subtopico": "redes-sem-fio"
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_052",
-        "pergunta": "Considere a seguinte situação: a prova cita WLAN, access points e padrões como 802.11n/ac/ax. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Uma organização separa câmeras, visitantes e computadores administrativos em segmentos distintos e controla a comunicação entre eles. O principal benefício de segurança é:",
         "alternativas": [
-            "IEEE 802.3.",
-            "Wi-Fi IEEE 802.11.",
-            "SMTP.",
-            "SSH.",
-            "DNS."
+            "reduzir a superfície de exposição e limitar o movimento lateral caso um dispositivo ou segmento seja comprometido.",
+            "aumentar automaticamente a velocidade contratada com o provedor, porque cada segmento recebe uma conexão externa independente.",
+            "eliminar a necessidade de firewall, pois segmentos separados não conseguem trocar qualquer tráfego em nenhuma circunstância.",
+            "dispensar autenticação dos usuários, já que a posição lógica do equipamento passa a comprovar a identidade de quem o utiliza.",
+            "substituir backups, pois uma falha em um segmento não consegue afetar arquivos armazenados em computadores de outros setores."
         ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. IEEE 802.11 define tecnologias Wi-Fi.",
-        "feedbackErro": "Resposta correta: Wi-Fi IEEE 802.11. IEEE 802.11 define tecnologias Wi-Fi.",
-        "dicaBanca": "Dica da banca: 802.11 = Wi-Fi.",
+        "correta": 0,
+        "feedbackAcerto": "Correto. Segmentação ajuda a controlar fluxos e a conter incidentes, reduzindo comunicações desnecessárias entre grupos.",
+        "feedbackErro": "Resposta correta: reduzir a superfície de exposição e limitar o movimento lateral caso um dispositivo ou segmento seja comprometido.\n\nComentário: Segmentação ajuda a controlar fluxos e a conter incidentes, reduzindo comunicações desnecessárias entre grupos.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Segregar rede é defesa em profundidade; não substitui controles de acesso, firewall e backup.",
         "assunto": "redes",
-        "subtopico": "redes-sem-fio"
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_053",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: cabo UTP.",
+        "pergunta": "Um administrador recebe um e-mail pedindo “urgência” para clicar em um link e informar a senha da rede corporativa. O risco principal é:",
         "alternativas": [
-            "Fibra que transmite dados por luz em núcleo de vidro.",
-            "Cabo com condutor central e blindagem concêntrica.",
-            "Par trançado não blindado usado em muitas redes Ethernet.",
-            "Protocolo para transferência segura de arquivos.",
-            "Conector telefônico usado em linhas analógicas."
+            "phishing, uma tentativa de induzir o usuário a entregar credenciais ou outras informações por meio de engenharia social.",
+            "sniffing, que depende de capturar diretamente os pacotes da rede e não envolve interação enganosa com o usuário.",
+            "roteamento dinâmico, que alteraria o caminho dos pacotes em resposta ao recebimento de uma mensagem suspeita.",
+            "fragmentação IP, que divide mensagens de e-mail grandes em pacotes menores para contornar os filtros do provedor.",
+            "broadcast, que encaminha o mesmo e-mail a todos os computadores da LAN sem depender de um servidor de correio eletrônico."
         ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. UTP é Unshielded Twisted Pair, o par trançado sem blindagem comum em LANs.",
-        "feedbackErro": "Resposta correta: Par trançado não blindado usado em muitas redes Ethernet. UTP é Unshielded Twisted Pair, o par trançado sem blindagem comum em LANs.",
-        "dicaBanca": "Dica da banca: UTP é o cabo mais lembrado em redes locais.",
+        "correta": 0,
+        "feedbackAcerto": "Correto. Phishing usa fraude e engenharia social para obter credenciais ou induzir ações perigosas.",
+        "feedbackErro": "Resposta correta: phishing, uma tentativa de induzir o usuário a entregar credenciais ou outras informações por meio de engenharia social.\n\nComentário: Phishing usa fraude e engenharia social para obter credenciais ou induzir ações perigosas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Urgência, links inesperados e solicitação de senha são sinais clássicos de engenharia social.",
         "assunto": "redes",
-        "subtopico": "meios-fisicos-cabeamento"
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_054",
-        "pergunta": "Considere a seguinte situação: o cabeamento de uma LAN usa pares de cobre trançados sem blindagem e conector RJ-45. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Ao configurar o roteador Wi-Fi de uma escola, manter a senha administrativa padrão de fábrica aumenta o risco porque:",
         "alternativas": [
-            "fibra óptica.",
-            "coaxial.",
-            "SFTP.",
-            "cabo UTP.",
-            "RJ-11."
+            "o roteador deixa de conseguir distribuir endereços privados e passa automaticamente a fornecer IPs públicos aos computadores nesse cenário de rede.",
+            "a senha padrão reduz fisicamente o alcance das antenas e obriga os usuários a se aproximarem do equipamento para navegar.",
+            "o DNS deixa de responder a consultas externas e passa a aceitar nomes cadastrados manualmente pelo administrador.",
+            "credenciais padrão podem ser conhecidas ou facilmente descobertas, permitindo alteração indevida da configuração do equipamento.",
+            "a rede perde a capacidade de usar protocolos HTTPS, pois certificados digitais dependem da senha administrativa do roteador."
         ],
         "correta": 3,
-        "feedbackAcerto": "Correto. UTP é Unshielded Twisted Pair, o par trançado sem blindagem comum em LANs.",
-        "feedbackErro": "Resposta correta: cabo UTP. UTP é Unshielded Twisted Pair, o par trançado sem blindagem comum em LANs.",
-        "dicaBanca": "Dica da banca: UTP é o cabo mais lembrado em redes locais.",
+        "feedbackAcerto": "Correto. Credenciais padrão são uma fraqueza comum e devem ser substituídas por senhas administrativas fortes e únicas.",
+        "feedbackErro": "Resposta correta: credenciais padrão podem ser conhecidas ou facilmente descobertas, permitindo alteração indevida da configuração do equipamento.\n\nComentário: Credenciais padrão são uma fraqueza comum e devem ser substituídas por senhas administrativas fortes e únicas.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Senha do painel administrativo e senha do Wi-Fi são controles diferentes.",
         "assunto": "redes",
-        "subtopico": "meios-fisicos-cabeamento"
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_055",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: fibra óptica.",
+        "pergunta": "Um computador conectado à rede possui sistema e aplicativos sem atualizações de segurança há muito tempo. Mesmo com firewall ativo, existe risco relevante porque:",
         "alternativas": [
-            "Meio metálico baseado em pares de cobre trançados.",
-            "Conector telefônico usado em linhas analógicas.",
-            "Protocolo de consulta de nomes de domínio.",
-            "Padrão de segurança antigo do Wi-Fi.",
-            "Meio que transmite dados por pulsos de luz e sofre pouca interferência eletromagnética."
+            "vulnerabilidades conhecidas podem permanecer exploráveis; firewall constitui uma das camadas de proteção.",
+            "o firewall depende das atualizações do navegador para conseguir atribuir endereços IP aos programas que acessam a Internet.",
+            "sistemas desatualizados deixam de possuir endereço MAC válido e por isso não podem ser identificados corretamente pelo switch.",
+            "a falta de atualização transforma automaticamente conexões HTTPS em HTTP, mesmo quando o servidor oferece certificado válido.",
+            "o DHCP recusa concessões a computadores com versões antigas do sistema operacional para preservar a segurança da rede local."
         ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. A fibra óptica usa luz e é indicada para alto desempenho e distâncias maiores.",
-        "feedbackErro": "Resposta correta: Meio que transmite dados por pulsos de luz e sofre pouca interferência eletromagnética. A fibra óptica usa luz e é indicada para alto desempenho e distâncias maiores.",
-        "dicaBanca": "Dica da banca: Fibra = luz e baixa interferência.",
+        "correta": 0,
+        "feedbackAcerto": "Correto. Atualizações corrigem falhas conhecidas; firewall não elimina vulnerabilidades do sistema ou das aplicações.",
+        "feedbackErro": "Resposta correta: vulnerabilidades conhecidas podem permanecer exploráveis; firewall é apenas uma das camadas de proteção.\n\nComentário: Atualizações corrigem falhas conhecidas; firewall não elimina vulnerabilidades do sistema ou das aplicações.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Segurança eficaz é em camadas: atualização, autenticação, firewall, antimalware, backup e comportamento do usuário.",
         "assunto": "redes",
-        "subtopico": "meios-fisicos-cabeamento"
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_056",
-        "pergunta": "Considere a seguinte situação: um enlace precisa de alta velocidade, grande distância e imunidade a ruído elétrico. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Em uma rede pública, um atacante captura pacotes que trafegam pelo meio para observar comunicações. A prática é conhecida como:",
         "alternativas": [
-            "fibra óptica.",
-            "cabo UTP.",
-            "RJ-11.",
-            "DNS.",
-            "WEP."
+            "spoofing, que consistiria em aumentar artificialmente a intensidade do sinal para atrair clientes a um access point falso.",
+            "sniffing, isto é, captura e análise de tráfego de rede, legítima em diagnóstico ou indevida quando feita sem autorização.",
+            "phishing, que depende de alterar o endereço MAC do roteador antes de pedir credenciais diretamente ao usuário da rede.",
+            "patching, que atualiza os pacotes capturados para corrigir vulnerabilidades antes que alcancem o computador de destino.",
+            "routing, que registra o conteúdo das aplicações para decidir automaticamente por qual cabo cada quadro deverá ser enviado."
         ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. A fibra óptica usa luz e é indicada para alto desempenho e distâncias maiores.",
-        "feedbackErro": "Resposta correta: fibra óptica. A fibra óptica usa luz e é indicada para alto desempenho e distâncias maiores.",
-        "dicaBanca": "Dica da banca: Fibra = luz e baixa interferência.",
+        "correta": 1,
+        "feedbackAcerto": "Correto. Sniffing é captura/análise de pacotes; pode ser ferramenta legítima de diagnóstico ou técnica de espionagem.",
+        "feedbackErro": "Resposta correta: sniffing, isto é, captura e análise de tráfego de rede, legítima em diagnóstico ou indevida quando feita sem autorização.\n\nComentário: Sniffing é captura/análise de pacotes; pode ser ferramenta legítima de diagnóstico ou técnica de espionagem.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Criptografia reduz o valor do conteúdo capturado por terceiros.",
         "assunto": "redes",
-        "subtopico": "meios-fisicos-cabeamento"
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_057",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: fibra monomodo.",
+        "pergunta": "Um servidor interno precisa ser acessado da Internet por uma porta específica do roteador, que encaminhará as conexões ao endereço privado do servidor. O recurso descrito é:",
         "alternativas": [
-            "Fibra comum em distâncias menores dentro de prédios.",
-            "Fibra indicada para distâncias maiores e enlaces de alta capacidade.",
-            "Cabo de cobre de baixo custo para LAN.",
-            "Conector Ethernet de par trançado.",
-            "Técnica de autenticação sem fio fraca."
+            "DNS reverso, que publica automaticamente o endereço privado do servidor para que qualquer usuário da Internet possa acessá-lo.",
+            "DHCP relay, que encaminha pedidos de configuração IP da Internet diretamente ao servidor interno em outra sub-rede.",
+            "redirecionamento de porta (port forwarding), que mapeia uma porta externa para um destino interno definido.",
+            "ARP proxy, que transforma a porta TCP pública em um endereço MAC usado por todos os computadores fora da rede local.",
+            "SSID broadcast, que anuncia pela rede sem fio a porta do serviço interno para que clientes externos localizem o servidor."
         ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. Monomodo usa núcleo menor e é comum em enlaces longos.",
-        "feedbackErro": "Resposta correta: Fibra indicada para distâncias maiores e enlaces de alta capacidade. Monomodo usa núcleo menor e é comum em enlaces longos.",
-        "dicaBanca": "Dica da banca: Monomodo = maior distância; multimodo = menor distância.",
+        "correta": 2,
+        "feedbackAcerto": "Correto. Port forwarding publica de forma controlada um serviço interno por meio de uma porta no equipamento de borda.",
+        "feedbackErro": "Resposta correta: redirecionamento de porta (port forwarding), que mapeia uma porta externa para um destino interno definido.\n\nComentário: Port forwarding publica de forma controlada um serviço interno por meio de uma porta no equipamento de borda.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Abrir porta aumenta a superfície exposta; deve ser feito apenas quando necessário e com o serviço protegido.",
         "assunto": "redes",
-        "subtopico": "meios-fisicos-cabeamento"
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_058",
-        "pergunta": "Considere a seguinte situação: a operadora precisa interligar pontos distantes com baixa atenuação. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Uma rede de visitantes deve acessar a Internet, mas não as pastas e sistemas da rede administrativa. Qual medida é mais coerente?",
         "alternativas": [
-            "fibra multimodo.",
-            "UTP Cat5e.",
-            "fibra monomodo.",
-            "RJ-45.",
-            "WEP."
+            "usar o mesmo segmento e a mesma senha dos funcionários, confiando no antivírus dos visitantes para impedir acessos inadequados.",
+            "desativar o DHCP da rede de visitantes e entregar a cada pessoa o endereço IP de um computador administrativo já cadastrado.",
+            "ocultar o SSID da rede administrativa, mantendo os dois grupos no mesmo domínio de acesso e sem regras adicionais de filtragem.",
+            "configurar o DNS para não resolver nomes internos, pois isso impede por si só qualquer acesso por endereço IP aos sistemas administrativos nesse cenário de rede.",
+            "isolar a rede de convidados e aplicar regras que bloqueiem o acesso aos segmentos internos, liberando o necessário para a saída externa."
         ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. Monomodo usa núcleo menor e é comum em enlaces longos.",
-        "feedbackErro": "Resposta correta: fibra monomodo. Monomodo usa núcleo menor e é comum em enlaces longos.",
-        "dicaBanca": "Dica da banca: Monomodo = maior distância; multimodo = menor distância.",
+        "correta": 4,
+        "feedbackAcerto": "Correto. Rede de convidados deve ser segmentada e filtrada para impedir acesso desnecessário à infraestrutura interna.",
+        "feedbackErro": "Resposta correta: isolar a rede de convidados e aplicar regras que bloqueiem o acesso aos segmentos internos, liberando apenas o necessário para saída externa.\n\nComentário: Rede de convidados deve ser segmentada e filtrada para impedir acesso desnecessário à infraestrutura interna.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Bloquear apenas resolução DNS não é controle de acesso; endereços IP ainda podem ser usados diretamente.",
         "assunto": "redes",
-        "subtopico": "meios-fisicos-cabeamento"
+        "subtopico": "seguranca-em-redes"
     },
     {
         "id": "redes_059",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: PoE.",
+        "pergunta": "Um usuário informa “a Internet caiu”. O computador, porém, consegue pingar o gateway local, mas não um endereço IP público conhecido. Qual interpretação inicial é mais coerente?",
         "alternativas": [
-            "Resolver nomes e cachear respostas DNS.",
-            "Transportar múltiplas VLANs por trunk.",
-            "Detectar loops de camada 2 em switches.",
-            "Transmitir energia elétrica e dados pelo mesmo cabo Ethernet compatível.",
-            "Controlar envio de e-mails entre servidores."
+            "o cabo entre o computador e o switch está necessariamente rompido, embora o gateway responda normalmente ao ping local.",
+            "o problema é DNS, porque falhas de resolução de nomes também impediriam o acesso direto a endereços IP públicos.",
+            "a conectividade local até o gateway existe, e a investigação deve avançar para o roteador, enlace do provedor ou rota externa.",
+            "o endereço MAC do computador está duplicado, e essa duplicidade bloquearia os pacotes destinados às redes externas.",
+            "o navegador precisa limpar o histórico, já que o ping depende dos mesmos arquivos de cache usados para abrir páginas Web, considerando ainda a configuração descrita no enunciado."
         ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. Power over Ethernet alimenta dispositivos como APs, câmeras IP e telefones VoIP.",
-        "feedbackErro": "Resposta correta: Transmitir energia elétrica e dados pelo mesmo cabo Ethernet compatível. Power over Ethernet alimenta dispositivos como APs, câmeras IP e telefones VoIP.",
-        "dicaBanca": "Dica da banca: PoE aparece muito com câmeras IP e access points.",
+        "correta": 2,
+        "feedbackAcerto": "Correto. Se o gateway responde, parte da LAN funciona; falha para IP externo desloca a investigação para o caminho após o gateway.",
+        "feedbackErro": "Resposta correta: a conectividade local até o gateway existe, e a investigação deve avançar para o roteador, enlace do provedor ou rota externa.\n\nComentário: Se o gateway responde, parte da LAN funciona; falha para IP externo desloca a investigação para o caminho após o gateway.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Diagnóstico eficiente testa por camadas: enlace local, IP, gateway, destino externo e depois DNS/aplicação.",
         "assunto": "redes",
-        "subtopico": "meios-fisicos-cabeamento"
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_060",
-        "pergunta": "Considere a seguinte situação: um access point no teto recebe alimentação pelo próprio cabo de rede ligado ao switch. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Um computador consegue pingar 8.8.8.8, mas não abre sites quando são informados seus nomes. Qual causa é mais compatível com o sintoma?",
         "alternativas": [
-            "DNS cache.",
-            "802.1Q.",
-            "STP.",
-            "SMTP.",
-            "PoE."
+            "falha física do cabo, porque a resolução de nomes exige pares trançados diferentes dos utilizados pelo protocolo ICMP.",
+            "ausência de endereço IP, porque o computador não consegue enviar ping para um destino externo sem estar configurado na rede.",
+            "defeito do switch, porque quadros destinados a DNS usam uma tabela de encaminhamento diferente daquela utilizada pelo ping.",
+            "erro de gateway, porque um gateway incorreto permite alcançar endereços IP, mas bloqueia especificamente consultas por nome.",
+            "falha ou configuração incorreta de DNS, porque a conectividade IP externa está presente."
         ],
         "correta": 4,
-        "feedbackAcerto": "Correto. Power over Ethernet alimenta dispositivos como APs, câmeras IP e telefones VoIP.",
-        "feedbackErro": "Resposta correta: PoE. Power over Ethernet alimenta dispositivos como APs, câmeras IP e telefones VoIP.",
-        "dicaBanca": "Dica da banca: PoE aparece muito com câmeras IP e access points.",
+        "feedbackAcerto": "Correto. Acesso por IP com falha por nome é um forte indício de problema de resolução DNS.",
+        "feedbackErro": "Resposta correta: falha ou configuração incorreta de DNS, porque a conectividade IP externa está presente.\n\nComentário: Acesso por IP com falha por nome é um forte indício de problema de resolução DNS.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Antes de culpar o navegador, teste resolução com nslookup ou equivalente.",
         "assunto": "redes",
-        "subtopico": "equipamentos-de-rede"
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_061",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: jitter.",
+        "pergunta": "Ao executar ipconfig no Windows, um técnico pretende verificar principalmente:",
         "alternativas": [
-            "Variação da latência entre pacotes sucessivos.",
-            "Atraso fixo total entre origem e destino.",
-            "Capacidade teórica de um enlace.",
-            "Quantidade de hosts em uma sub-rede.",
-            "Nome do gateway padrão."
+            "parâmetros de configuração IP das interfaces, como endereço, máscara e gateway, conforme as opções utilizadas.",
+            "o conteúdo de todos os pacotes que atravessam a placa de rede, incluindo senhas enviadas por aplicações sem criptografia.",
+            "a rota completa até um servidor externo, mostrando cada roteador intermediário e o tempo gasto em cada salto.",
+            "a lista de arquivos abertos por usuários remotos em compartilhamentos SMB disponíveis no computador local.",
+            "o nível de sinal de todas as redes Wi-Fi próximas e o canal utilizado por cada access point detectado pelo adaptador."
         ],
         "correta": 0,
-        "feedbackAcerto": "Correto. Jitter alto prejudica voz e vídeo em tempo real.",
-        "feedbackErro": "Resposta correta: Variação da latência entre pacotes sucessivos. Jitter alto prejudica voz e vídeo em tempo real.",
-        "dicaBanca": "Dica da banca: Jitter = variação do atraso.",
+        "feedbackAcerto": "Correto. ipconfig é uma ferramenta de consulta e gestão de configuração IP no Windows.",
+        "feedbackErro": "Resposta correta: parâmetros de configuração IP das interfaces, como endereço, máscara e gateway, conforme as opções utilizadas.\n\nComentário: ipconfig é uma ferramenta de consulta e gestão de configuração IP no Windows.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: ipconfig mostra configuração; ping testa alcance; tracert mostra caminho; nslookup consulta DNS.",
         "assunto": "redes",
         "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_062",
-        "pergunta": "Considere a seguinte situação: a chamada de voz tem cortes porque os pacotes chegam em intervalos irregulares. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "O comando nslookup é particularmente útil quando se deseja:",
         "alternativas": [
-            "latência.",
-            "jitter.",
-            "largura de banda.",
-            "tamanho da sub-rede.",
-            "gateway."
+            "medir a perda de pacotes em todos os saltos intermediários usando mensagens de eco repetidas para cada roteador.",
+            "consultar informações de DNS e verificar como um nome está sendo resolvido para um endereço.",
+            "renovar diretamente o endereço MAC da placa de rede para eliminar conflitos de identificação no switch local.",
+            "listar as portas físicas do switch e descobrir qual cabo está conectado a cada computador da rede institucional.",
+            "alterar as regras do firewall local sem conhecer o nome do perfil de rede aplicado pelo sistema operacional."
         ],
         "correta": 1,
-        "feedbackAcerto": "Correto. Jitter alto prejudica voz e vídeo em tempo real.",
-        "feedbackErro": "Resposta correta: jitter. Jitter alto prejudica voz e vídeo em tempo real.",
-        "dicaBanca": "Dica da banca: Jitter = variação do atraso.",
+        "feedbackAcerto": "Correto. nslookup consulta DNS e ajuda a diagnosticar problemas de resolução de nomes.",
+        "feedbackErro": "Resposta correta: consultar informações de DNS e verificar como um nome está sendo resolvido para um endereço.\n\nComentário: nslookup consulta DNS e ajuda a diagnosticar problemas de resolução de nomes.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Se o sintoma envolve domínio, endereço e resolução, nslookup é uma ferramenta provável.",
         "assunto": "redes",
         "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_063",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: throughput.",
+        "pergunta": "Em uma videoconferência, o áudio chega em intervalos irregulares e com cortes, embora a largura de banda média pareça suficiente. O fenômeno relacionado à variação do atraso entre pacotes é chamado de:",
         "alternativas": [
-            "Capacidade nominal do meio físico.",
-            "Tempo de atraso de ida e volta.",
-            "Taxa efetiva de dados transmitidos com sucesso.",
-            "Variação de atraso entre pacotes.",
-            "Endereço físico de placa de rede."
+            "throughput, que representaria a variação entre o endereço IP público e o endereço privado do mesmo usuário.",
+            "broadcast, que mede a diferença de frequência entre as redes Wi-Fi de 2,4 GHz e 5 GHz próximas ao computador.",
+            "jitter, variação do tempo de chegada dos pacotes que afeta aplicações em tempo real.",
+            "DNS latency, que corresponde ao atraso variável entre cada quadro Ethernet recebido na porta do switch local.",
+            "duplex, que representa a diferença de velocidade entre download e upload durante uma comunicação de voz."
         ],
         "correta": 2,
-        "feedbackAcerto": "Correto. Throughput é o desempenho real observado, que pode ser menor que a banda nominal.",
-        "feedbackErro": "Resposta correta: Taxa efetiva de dados transmitidos com sucesso. Throughput é o desempenho real observado, que pode ser menor que a banda nominal.",
-        "dicaBanca": "Dica da banca: Banda é capacidade; throughput é vazão real.",
+        "feedbackAcerto": "Correto. Jitter é a variação do atraso e pode prejudicar voz e vídeo em tempo real.",
+        "feedbackErro": "Resposta correta: jitter, variação do tempo de chegada dos pacotes que afeta aplicações em tempo real.\n\nComentário: Jitter é a variação do atraso e pode prejudicar voz e vídeo em tempo real.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Latência é atraso; jitter é variação do atraso; perda é ausência de pacotes.",
         "assunto": "redes",
         "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_064",
-        "pergunta": "Considere a seguinte situação: apesar do link contratado ser alto, a vazão real medida na transferência é menor. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Em uma conexão anunciada como 500 Mb/s, o termo Mb/s representa:",
         "alternativas": [
-            "largura de banda.",
-            "latência.",
-            "jitter.",
-            "throughput.",
-            "MAC."
+            "megabits por segundo, unidade de taxa de transmissão, distinta de megabytes por segundo.",
+            "megabytes por segundo, exatamente a mesma unidade usada para indicar o tamanho de arquivos armazenados em disco.",
+            "milhões de bytes por minuto, unidade usada por provedores para converter automaticamente downloads em espaço de armazenamento.",
+            "megabits por pacote, quantidade fixa de dados presente em cada quadro Ethernet transmitido pela interface do roteador.",
+            "megabytes binários por segundo, unidade equivalente a MiB/s e independente da forma como o provedor anuncia a conexão."
         ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. Throughput é o desempenho real observado, que pode ser menor que a banda nominal.",
-        "feedbackErro": "Resposta correta: throughput. Throughput é o desempenho real observado, que pode ser menor que a banda nominal.",
-        "dicaBanca": "Dica da banca: Banda é capacidade; throughput é vazão real.",
+        "correta": 0,
+        "feedbackAcerto": "Correto. Provedores normalmente anunciam velocidade em bits por segundo; arquivos são comumente mostrados em bytes.",
+        "feedbackErro": "Resposta correta: megabits por segundo, unidade de taxa de transmissão, distinta de megabytes por segundo.\n\nComentário: Provedores normalmente anunciam velocidade em bits por segundo; arquivos são comumente mostrados em bytes.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Como 1 byte = 8 bits, não compare diretamente “500 Mb/s” com “500 MB/s”.",
         "assunto": "redes",
         "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_065",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: VoIP.",
+        "pergunta": "Uma cópia de arquivo pela rede local ocorre a 90 MB/s, enquanto a conexão com a Internet é contratada em 300 Mb/s. Esses valores não são contraditórios porque:",
         "alternativas": [
-            "Criar redes pessoais por Bluetooth.",
-            "Distribuir endereços por concessão.",
-            "Bloquear tráfego com base em regras.",
-            "Traduzir IP privado para público.",
-            "Transmitir voz por redes IP."
+            "a velocidade da LAN precisa ser menor que a Internet, e o Windows multiplicaria por oito todo valor de cópia exibido na tela.",
+            "a Internet utiliza bytes e a LAN utiliza bits, de modo que os números devem ser comparados sem conversão entre as duas unidades.",
+            "a LAN e a Internet são caminhos distintos, e as unidades MB/s e Mb/s também representam grandezas expressas de forma diferente.",
+            "o switch adiciona largura de banda contratada à conexão do provedor quando detecta transferência entre computadores da mesma rede.",
+            "o roteador ignora os limites físicos da interface durante cópias locais e utiliza a memória RAM como substituta do enlace de rede."
         ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. VoIP transporta voz sobre IP e é sensível a latência, jitter e perda.",
-        "feedbackErro": "Resposta correta: Transmitir voz por redes IP. VoIP transporta voz sobre IP e é sensível a latência, jitter e perda.",
-        "dicaBanca": "Dica da banca: VoIP exige atenção a QoS.",
+        "correta": 2,
+        "feedbackAcerto": "Correto. Transferências locais não precisam atravessar o enlace de Internet, e bytes/segundo não são a mesma unidade de bits/segundo.",
+        "feedbackErro": "Resposta correta: a LAN e a Internet são caminhos distintos, e as unidades MB/s e Mb/s também representam grandezas expressas de forma diferente.\n\nComentário: Transferências locais não precisam atravessar o enlace de Internet, e bytes/segundo não são a mesma unidade de bits/segundo.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Separe desempenho da LAN do desempenho do acesso ao provedor.",
         "assunto": "redes",
         "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_066",
-        "pergunta": "Considere a seguinte situação: telefones corporativos usam a rede de dados para chamadas de voz. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Um computador conectado por Wi-Fi exibe endereço IP correto e acessa o roteador, mas a navegação fica lenta apenas em determinado cômodo. A melhor hipótese inicial é:",
         "alternativas": [
-            "VoIP.",
-            "PAN.",
-            "DHCP.",
-            "firewall.",
-            "NAT."
+            "falha de DNS específica do cômodo, pois o serviço de nomes utiliza frequências diferentes conforme a posição física do usuário.",
+            "conflito de endereço IP provocado pela parede, que alteraria o último octeto quando o sinal atravessa um obstáculo sólido.",
+            "degradação do enlace sem fio por distância, obstáculos ou interferência naquele local.",
+            "erro de gateway dependente da distância, porque o roteador modifica automaticamente sua rota padrão quando o sinal fica mais fraco.",
+            "falha de NAT no notebook, já que a tradução de endereços ocorre na placa Wi-Fi e perde eficiência conforme aumenta a distância."
         ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. VoIP transporta voz sobre IP e é sensível a latência, jitter e perda.",
-        "feedbackErro": "Resposta correta: VoIP. VoIP transporta voz sobre IP e é sensível a latência, jitter e perda.",
-        "dicaBanca": "Dica da banca: VoIP exige atenção a QoS.",
+        "correta": 2,
+        "feedbackAcerto": "Correto. Se o problema muda conforme a localização física, sinal, interferência e obstáculos são hipóteses importantes.",
+        "feedbackErro": "Resposta correta: degradação do enlace sem fio por distância, obstáculos ou interferência naquele local.\n\nComentário: Se o problema muda conforme a localização física, sinal, interferência e obstáculos são hipóteses importantes.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Diagnóstico deve correlacionar o sintoma com o que mudou: local, horário, dispositivo ou serviço.",
         "assunto": "redes",
         "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_067",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: traceroute/tracert.",
+        "pergunta": "Durante uma transferência, o usuário observa alta latência, perda de pacotes e baixa taxa efetiva. Qual afirmação é adequada?",
         "alternativas": [
-            "Resolver registros DNS autoritativos.",
-            "Identificar os saltos do caminho até um destino.",
-            "Exibir tabela ARP do host.",
-            "Configurar endereço IP manual.",
-            "Abrir sessão remota criptografada."
+            "latência interfere no DNS e deixaria de afetar aplicações depois que o endereço IP do servidor fosse descoberto.",
+            "perda e latência podem reduzir o desempenho percebido, especialmente em protocolos que retransmitem dados ou esperam confirmações.",
+            "perda de pacotes aumenta a velocidade porque reduz a quantidade de dados que precisam chegar corretamente ao destino.",
+            "taxa efetiva depende da velocidade nominal do link e não sofreria influência relevante de congestionamento ou retransmissões.",
+            "protocolos confiáveis ignoram perda de pacotes, pois a confirmação do receptor substitui fisicamente os dados que não chegaram nesse cenário de rede."
         ],
         "correta": 1,
-        "feedbackAcerto": "Correto. Traceroute usa o comportamento do TTL para revelar roteadores intermediários.",
-        "feedbackErro": "Resposta correta: Identificar os saltos do caminho até um destino. Traceroute usa o comportamento do TTL para revelar roteadores intermediários.",
-        "dicaBanca": "Dica da banca: Rota até o destino = traceroute/tracert.",
+        "feedbackAcerto": "Correto. Latência, perda, congestionamento e retransmissões podem reduzir throughput e qualidade percebida.",
+        "feedbackErro": "Resposta correta: perda e latência podem reduzir o desempenho percebido, especialmente em protocolos que retransmitem dados ou esperam confirmações.\n\nComentário: Latência, perda, congestionamento e retransmissões podem reduzir throughput e qualidade percebida.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Velocidade nominal é apenas um dos fatores do desempenho fim a fim.",
         "assunto": "redes",
         "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_068",
-        "pergunta": "Considere a seguinte situação: a equipe precisa descobrir por quais roteadores o pacote passa até o servidor externo. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Em uma LAN, somente um computador não consegue acessar a rede; os demais funcionam normalmente. Qual abordagem é mais lógica no início do diagnóstico?",
         "alternativas": [
-            "nslookup.",
-            "arp -a.",
-            "traceroute/tracert.",
-            "configuração IP.",
-            "SSH."
+            "reiniciar o serviço DNS mundial, pois uma falha isolada em um computador indica problema na infraestrutura de nomes da Internet.",
+            "substituir o roteador principal, porque o funcionamento dos demais dispositivos confirma que o defeito está no equipamento central.",
+            "alterar o endereço IP de todos os computadores, pois um único cliente desconectado significa que a sub-rede inteira está incorreta.",
+            "verificar primeiro o próprio computador, sua interface, cabo ou Wi-Fi e configuração IP antes de atribuir a falha ao provedor.",
+            "solicitar troca do link da operadora, supondo que problemas do provedor normalmente atinjam um único host da rede local."
         ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. Traceroute usa o comportamento do TTL para revelar roteadores intermediários.",
-        "feedbackErro": "Resposta correta: traceroute/tracert. Traceroute usa o comportamento do TTL para revelar roteadores intermediários.",
-        "dicaBanca": "Dica da banca: Rota até o destino = traceroute/tracert.",
+        "correta": 3,
+        "feedbackAcerto": "Correto. Quando apenas um host falha, comece pelos componentes e parâmetros específicos daquele host.",
+        "feedbackErro": "Resposta correta: verificar primeiro o próprio computador, sua interface, cabo ou Wi-Fi e configuração IP antes de atribuir a falha ao provedor.\n\nComentário: Quando apenas um host falha, comece pelos componentes e parâmetros específicos daquele host.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Diagnóstico eficiente vai do mais local e provável para o mais amplo.",
         "assunto": "redes",
-        "subtopico": "equipamentos-de-rede"
+        "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_069",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: nslookup.",
+        "pergunta": "Dois computadores da mesma rede conseguem acessar a Internet, mas não conseguem compartilhar arquivos entre si. Isso demonstra que:",
         "alternativas": [
-            "Testar latência por mensagens ICMP.",
-            "Listar portas e conexões locais.",
-            "Descobrir MACs aprendidos pelo switch.",
-            "Consultar informações e respostas DNS.",
-            "Sincronizar relógios de rede."
+            "o roteador está necessariamente sem conexão com o provedor, porque compartilhamento de arquivos depende da mesma rota usada para acessar sites nesse cenário de rede.",
+            "acesso à Internet funcionando não comprova, por si só, que compartilhamento local, descoberta de rede ou firewall estejam configurados corretamente.",
+            "o DNS público está indisponível, pois qualquer compartilhamento local exige resolução por servidores externos antes de abrir uma pasta remota.",
+            "os computadores precisam receber endereços IP públicos diferentes, pois endereços privados não permitem comunicação direta dentro da mesma LAN.",
+            "o switch deixou de encaminhar quadros locais, situação incompatível com a possibilidade de qualquer computador alcançar o gateway e a Internet."
         ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. nslookup é usado para diagnóstico de DNS.",
-        "feedbackErro": "Resposta correta: Consultar informações e respostas DNS. nslookup é usado para diagnóstico de DNS.",
-        "dicaBanca": "Dica da banca: Problema de resolução de nomes combina com nslookup.",
+        "correta": 1,
+        "feedbackAcerto": "Correto. Serviços locais podem falhar por firewall, permissões ou descoberta mesmo quando a conectividade externa está normal.",
+        "feedbackErro": "Resposta correta: acesso à Internet funcionando não comprova, por si só, que compartilhamento local, descoberta de rede ou firewall estejam configurados corretamente.\n\nComentário: Serviços locais podem falhar por firewall, permissões ou descoberta mesmo quando a conectividade externa está normal.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Não trate “Internet funciona” como prova de que todos os serviços da rede local também funcionam.",
         "assunto": "redes",
         "subtopico": "diagnostico-desempenho"
     },
     {
         "id": "redes_070",
-        "pergunta": "Considere a seguinte situação: o aluno quer verificar qual IP está sendo retornado para determinado domínio. O conceito ou recurso mais diretamente relacionado é:",
+        "pergunta": "Um usuário percebe que downloads ficam rápidos pela madrugada e lentos no início da noite, sem mudança no computador. Uma hipótese plausível é:",
         "alternativas": [
-            "ping.",
-            "netstat.",
-            "tabela CAM.",
-            "NTP.",
-            "nslookup."
+            "congestionamento em horários de maior uso, reduzindo a capacidade efetivamente disponível ao usuário.",
+            "mudança automática do endereço MAC durante o dia, obrigando o roteador a reaprender a interface a cada horário de pico.",
+            "expiração diária do DNS, que reduz a velocidade de todos os pacotes transferidos mesmo depois de o servidor já ter sido localizado.",
+            "alteração periódica da máscara de sub-rede, que diminui o número de bits transportados em cada pacote no período noturno.",
+            "troca automática de TCP por ARP no horário comercial, reduzindo o desempenho para priorizar computadores de empresas próximas."
         ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. nslookup é usado para diagnóstico de DNS.",
-        "feedbackErro": "Resposta correta: nslookup. nslookup é usado para diagnóstico de DNS.",
-        "dicaBanca": "Dica da banca: Problema de resolução de nomes combina com nslookup.",
+        "correta": 0,
+        "feedbackAcerto": "Correto. Variação por horário pode indicar congestionamento ou compartilhamento de capacidade na rede local, provedor ou servidor remoto.",
+        "feedbackErro": "Resposta correta: congestionamento em horários de maior uso, reduzindo a capacidade efetivamente disponível ao usuário.\n\nComentário: Variação por horário pode indicar congestionamento ou compartilhamento de capacidade na rede local, provedor ou servidor remoto.\n\nRevise a explicação e a dica da banca para fixar o conteúdo.",
+        "dicaBanca": "Dica da banca: Observe padrões de tempo: eles ajudam a separar problema permanente de saturação em determinados períodos.",
         "assunto": "redes",
         "subtopico": "diagnostico-desempenho"
-    },
-    {
-        "id": "redes_071",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: ipconfig /all.",
-        "alternativas": [
-            "Mostrar detalhes da configuração de rede no Windows.",
-            "Transferir arquivos com criptografia via SSH.",
-            "Bloquear tráfego por política de firewall.",
-            "Criar registro DNS MX.",
-            "Descobrir todos os saltos até o destino."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. ipconfig /all exibe detalhes das interfaces de rede no Windows.",
-        "feedbackErro": "Resposta correta: Mostrar detalhes da configuração de rede no Windows. ipconfig /all exibe detalhes das interfaces de rede no Windows.",
-        "dicaBanca": "Dica da banca: Configuração IP local no Windows: ipconfig.",
-        "assunto": "redes",
-        "subtopico": "diagnostico-desempenho"
-    },
-    {
-        "id": "redes_072",
-        "pergunta": "Considere a seguinte situação: o suporte solicita IP, máscara, gateway, DNS e MAC configurados na estação. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "SFTP.",
-            "ipconfig /all.",
-            "ACL.",
-            "registro MX.",
-            "tracert."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. ipconfig /all exibe detalhes das interfaces de rede no Windows.",
-        "feedbackErro": "Resposta correta: ipconfig /all. ipconfig /all exibe detalhes das interfaces de rede no Windows.",
-        "dicaBanca": "Dica da banca: Configuração IP local no Windows: ipconfig.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_073",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: MTU.",
-        "alternativas": [
-            "Tempo de vida de uma resposta DNS em cache.",
-            "Nome lógico da rede Wi-Fi.",
-            "Tamanho máximo da unidade de transmissão em um enlace.",
-            "Porta usada por acesso remoto Windows.",
-            "Grupo de usuários do domínio."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. MTU define o maior tamanho transportável sem fragmentação no enlace.",
-        "feedbackErro": "Resposta correta: Tamanho máximo da unidade de transmissão em um enlace. MTU define o maior tamanho transportável sem fragmentação no enlace.",
-        "dicaBanca": "Dica da banca: MTU padrão comum em Ethernet é 1500 bytes.",
-        "assunto": "redes",
-        "subtopico": "diagnostico-desempenho"
-    },
-    {
-        "id": "redes_074",
-        "pergunta": "Considere a seguinte situação: pacotes grandes sofrem fragmentação ou falham em determinado caminho da rede. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "TTL DNS.",
-            "SSID.",
-            "RDP 3389.",
-            "MTU.",
-            "grupo de domínio."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. MTU define o maior tamanho transportável sem fragmentação no enlace.",
-        "feedbackErro": "Resposta correta: MTU. MTU define o maior tamanho transportável sem fragmentação no enlace.",
-        "dicaBanca": "Dica da banca: MTU padrão comum em Ethernet é 1500 bytes.",
-        "assunto": "redes",
-        "subtopico": "diagnostico-desempenho"
-    },
-    {
-        "id": "redes_075",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: DNS TTL.",
-        "alternativas": [
-            "Limitar a quantidade de saltos de um pacote IP.",
-            "Definir o número de portas do switch.",
-            "Identificar a frequência do Wi-Fi.",
-            "Controlar colisões no Ethernet antigo.",
-            "Definir por quanto tempo uma resposta DNS pode ficar em cache."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. O TTL de DNS controla a validade de respostas armazenadas em cache.",
-        "feedbackErro": "Resposta correta: Definir por quanto tempo uma resposta DNS pode ficar em cache. O TTL de DNS controla a validade de respostas armazenadas em cache.",
-        "dicaBanca": "Dica da banca: TTL DNS = tempo de cache da resposta.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_076",
-        "pergunta": "Considere a seguinte situação: um domínio alterado demora a atualizar em alguns clientes devido ao cache ainda válido. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "DNS TTL.",
-            "TTL IP.",
-            "densidade de portas.",
-            "canal Wi-Fi.",
-            "CSMA/CD."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. O TTL de DNS controla a validade de respostas armazenadas em cache.",
-        "feedbackErro": "Resposta correta: DNS TTL. O TTL de DNS controla a validade de respostas armazenadas em cache.",
-        "dicaBanca": "Dica da banca: TTL DNS = tempo de cache da resposta.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_077",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: registro AAAA.",
-        "alternativas": [
-            "Associar nome a endereço IPv4.",
-            "Associar nome de domínio a endereço IPv6.",
-            "Indicar servidor de e-mail.",
-            "Definir alias de nome canônico.",
-            "Mapear IP de volta para nome."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. O registro AAAA retorna endereço IPv6 associado ao nome consultado.",
-        "feedbackErro": "Resposta correta: Associar nome de domínio a endereço IPv6. O registro AAAA retorna endereço IPv6 associado ao nome consultado.",
-        "dicaBanca": "Dica da banca: AAAA tem relação com IPv6.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_078",
-        "pergunta": "Considere a seguinte situação: o domínio precisa apontar para 2001:db8::10. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "A.",
-            "MX.",
-            "registro AAAA.",
-            "CNAME.",
-            "PTR."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. O registro AAAA retorna endereço IPv6 associado ao nome consultado.",
-        "feedbackErro": "Resposta correta: registro AAAA. O registro AAAA retorna endereço IPv6 associado ao nome consultado.",
-        "dicaBanca": "Dica da banca: AAAA tem relação com IPv6.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_079",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: registro MX.",
-        "alternativas": [
-            "Apontar nome para IPv4.",
-            "Apontar nome para IPv6.",
-            "Criar alias de outro nome.",
-            "Indicar servidores responsáveis por e-mail de um domínio.",
-            "Mapear endereço IP para nome."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. MX é o registro usado no roteamento de e-mails de um domínio.",
-        "feedbackErro": "Resposta correta: Indicar servidores responsáveis por e-mail de um domínio. MX é o registro usado no roteamento de e-mails de um domínio.",
-        "dicaBanca": "Dica da banca: MX = mail exchange.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_080",
-        "pergunta": "Considere a seguinte situação: a configuração do domínio precisa informar para onde devem ser entregues as mensagens de e-mail. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "A.",
-            "AAAA.",
-            "CNAME.",
-            "PTR.",
-            "registro MX."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. MX é o registro usado no roteamento de e-mails de um domínio.",
-        "feedbackErro": "Resposta correta: registro MX. MX é o registro usado no roteamento de e-mails de um domínio.",
-        "dicaBanca": "Dica da banca: MX = mail exchange.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_081",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: registro PTR.",
-        "alternativas": [
-            "Permitir consulta reversa de IP para nome.",
-            "Apontar domínio para IPv4.",
-            "Apontar domínio para IPv6.",
-            "Indicar servidor de e-mail.",
-            "Criar alias de nome canônico."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. PTR é usado em DNS reverso.",
-        "feedbackErro": "Resposta correta: Permitir consulta reversa de IP para nome. PTR é usado em DNS reverso.",
-        "dicaBanca": "Dica da banca: PTR = reverse DNS.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_082",
-        "pergunta": "Considere a seguinte situação: o administrador precisa verificar o nome associado a determinado endereço IP. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "A.",
-            "registro PTR.",
-            "AAAA.",
-            "MX.",
-            "CNAME."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. PTR é usado em DNS reverso.",
-        "feedbackErro": "Resposta correta: registro PTR. PTR é usado em DNS reverso.",
-        "dicaBanca": "Dica da banca: PTR = reverse DNS.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_083",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: SMTP.",
-        "alternativas": [
-            "Receber e sincronizar mensagens no servidor.",
-            "Baixar mensagens para cliente local.",
-            "Enviar e encaminhar mensagens de correio eletrônico.",
-            "Resolver nomes de domínio em IP.",
-            "Transferir arquivos por sessão interativa."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. SMTP é o protocolo clássico de envio de e-mail.",
-        "feedbackErro": "Resposta correta: Enviar e encaminhar mensagens de correio eletrônico. SMTP é o protocolo clássico de envio de e-mail.",
-        "dicaBanca": "Dica da banca: SMTP envia; POP3/IMAP recebem.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_084",
-        "pergunta": "Considere a seguinte situação: um servidor de e-mail precisa encaminhar uma mensagem para outro servidor. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "IMAP.",
-            "POP3.",
-            "DNS.",
-            "SMTP.",
-            "FTP."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. SMTP é o protocolo clássico de envio de e-mail.",
-        "feedbackErro": "Resposta correta: SMTP. SMTP é o protocolo clássico de envio de e-mail.",
-        "dicaBanca": "Dica da banca: SMTP envia; POP3/IMAP recebem.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_085",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: POP3.",
-        "alternativas": [
-            "Enviar mensagens entre servidores.",
-            "Sincronizar pastas complexas no servidor.",
-            "Resolver nomes de domínio.",
-            "Transportar páginas web seguras.",
-            "Receber mensagens com foco no download para o cliente."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. POP3 é protocolo de recebimento, tradicionalmente ligado ao download de mensagens.",
-        "feedbackErro": "Resposta correta: Receber mensagens com foco no download para o cliente. POP3 é protocolo de recebimento, tradicionalmente ligado ao download de mensagens.",
-        "dicaBanca": "Dica da banca: POP3 recebe; SMTP envia.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_086",
-        "pergunta": "Considere a seguinte situação: um cliente de e-mail baixa mensagens de uma caixa postal para leitura local. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "POP3.",
-            "SMTP.",
-            "IMAP.",
-            "DNS.",
-            "HTTPS."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. POP3 é protocolo de recebimento, tradicionalmente ligado ao download de mensagens.",
-        "feedbackErro": "Resposta correta: POP3. POP3 é protocolo de recebimento, tradicionalmente ligado ao download de mensagens.",
-        "dicaBanca": "Dica da banca: POP3 recebe; SMTP envia.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_087",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: HTTPS.",
-        "alternativas": [
-            "Enviar e-mails por servidores SMTP.",
-            "Proteger comunicação web usando HTTP sobre TLS.",
-            "Entregar IP a clientes da LAN.",
-            "Mapear IP para MAC local.",
-            "Monitorar roteadores via MIB."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. HTTPS protege o canal com TLS, aumentando confidencialidade e integridade.",
-        "feedbackErro": "Resposta correta: Proteger comunicação web usando HTTP sobre TLS. HTTPS protege o canal com TLS, aumentando confidencialidade e integridade.",
-        "dicaBanca": "Dica da banca: HTTPS não garante que o site seja honesto; protege a conexão.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_088",
-        "pergunta": "Considere a seguinte situação: o navegador mostra cadeado e usa a porta 443 para acessar o servidor. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "SMTP.",
-            "DHCP.",
-            "HTTPS.",
-            "ARP.",
-            "SNMP."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. HTTPS protege o canal com TLS, aumentando confidencialidade e integridade.",
-        "feedbackErro": "Resposta correta: HTTPS. HTTPS protege o canal com TLS, aumentando confidencialidade e integridade.",
-        "dicaBanca": "Dica da banca: HTTPS não garante que o site seja honesto; protege a conexão.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_089",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: SSH.",
-        "alternativas": [
-            "Fornecer acesso remoto em texto claro legado.",
-            "Transferir páginas web por porta 80.",
-            "Resolver nomes em servidores recursivos.",
-            "Fornecer acesso remoto seguro e criptografado.",
-            "Entregar IP automático aos clientes."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. SSH substitui Telnet quando há necessidade de acesso remoto seguro.",
-        "feedbackErro": "Resposta correta: Fornecer acesso remoto seguro e criptografado. SSH substitui Telnet quando há necessidade de acesso remoto seguro.",
-        "dicaBanca": "Dica da banca: SSH porta 22; Telnet porta 23.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_090",
-        "pergunta": "Considere a seguinte situação: o administrador acessa um servidor Linux remotamente pela porta 22. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "Telnet.",
-            "HTTP.",
-            "DNS.",
-            "DHCP.",
-            "SSH."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. SSH substitui Telnet quando há necessidade de acesso remoto seguro.",
-        "feedbackErro": "Resposta correta: SSH. SSH substitui Telnet quando há necessidade de acesso remoto seguro.",
-        "dicaBanca": "Dica da banca: SSH porta 22; Telnet porta 23.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_091",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: FTP.",
-        "alternativas": [
-            "Transferir arquivos usando protocolo tradicional, geralmente sem criptografia nativa.",
-            "Transferir arquivos sobre SSH.",
-            "Acessar páginas web com TLS.",
-            "Enviar mensagens de e-mail.",
-            "Monitorar dispositivos de rede."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. FTP tradicional usa porta 21 para controle e não é seguro por padrão.",
-        "feedbackErro": "Resposta correta: Transferir arquivos usando protocolo tradicional, geralmente sem criptografia nativa. FTP tradicional usa porta 21 para controle e não é seguro por padrão.",
-        "dicaBanca": "Dica da banca: FTP, FTPS e SFTP são diferentes.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_092",
-        "pergunta": "Considere a seguinte situação: um servidor usa porta 21 para controle de transferência de arquivos. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "SFTP.",
-            "FTP.",
-            "HTTPS.",
-            "SMTP.",
-            "SNMP."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. FTP tradicional usa porta 21 para controle e não é seguro por padrão.",
-        "feedbackErro": "Resposta correta: FTP. FTP tradicional usa porta 21 para controle e não é seguro por padrão.",
-        "dicaBanca": "Dica da banca: FTP, FTPS e SFTP são diferentes.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_093",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: NTP.",
-        "alternativas": [
-            "Resolver nome de domínio em IP.",
-            "Atribuir IP a clientes automaticamente.",
-            "Sincronizar relógios de dispositivos na rede.",
-            "Acessar terminal remoto seguro.",
-            "Enviar e-mails entre servidores."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. NTP mantém horário sincronizado, essencial para logs, autenticação e auditoria.",
-        "feedbackErro": "Resposta correta: Sincronizar relógios de dispositivos na rede. NTP mantém horário sincronizado, essencial para logs, autenticação e auditoria.",
-        "dicaBanca": "Dica da banca: NTP = Network Time Protocol.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_094",
-        "pergunta": "Considere a seguinte situação: servidores precisam manter logs com horários coerentes para auditoria. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "DNS.",
-            "DHCP.",
-            "SSH.",
-            "NTP.",
-            "SMTP."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. NTP mantém horário sincronizado, essencial para logs, autenticação e auditoria.",
-        "feedbackErro": "Resposta correta: NTP. NTP mantém horário sincronizado, essencial para logs, autenticação e auditoria.",
-        "dicaBanca": "Dica da banca: NTP = Network Time Protocol.",
-        "assunto": "redes",
-        "subtopico": "tipos-topologias-redes"
-    },
-    {
-        "id": "redes_095",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: SNMP.",
-        "alternativas": [
-            "Transferir páginas HTML por navegador.",
-            "Entregar configuração IP aos clientes.",
-            "Proteger Wi-Fi com criptografia.",
-            "Enviar correio eletrônico entre domínios.",
-            "Monitorar e gerenciar dispositivos de rede."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. SNMP é usado em monitoramento e gerenciamento de ativos de rede.",
-        "feedbackErro": "Resposta correta: Monitorar e gerenciar dispositivos de rede. SNMP é usado em monitoramento e gerenciamento de ativos de rede.",
-        "dicaBanca": "Dica da banca: SNMP aparece com MIB, traps e gerência de rede.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_096",
-        "pergunta": "Considere a seguinte situação: um sistema coleta uso de interface, memória e alertas de switches e roteadores. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "SNMP.",
-            "HTTP.",
-            "DHCP.",
-            "WPA2.",
-            "SMTP."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. SNMP é usado em monitoramento e gerenciamento de ativos de rede.",
-        "feedbackErro": "Resposta correta: SNMP. SNMP é usado em monitoramento e gerenciamento de ativos de rede.",
-        "dicaBanca": "Dica da banca: SNMP aparece com MIB, traps e gerência de rede.",
-        "assunto": "redes",
-        "subtopico": "equipamentos-de-rede"
-    },
-    {
-        "id": "redes_097",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: porta 443.",
-        "alternativas": [
-            "Porta tradicional do HTTP.",
-            "Porta tradicional do HTTPS.",
-            "Porta tradicional do Telnet.",
-            "Porta tradicional do SMTP.",
-            "Porta tradicional do POP3."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. HTTPS usa tradicionalmente TCP 443.",
-        "feedbackErro": "Resposta correta: Porta tradicional do HTTPS. HTTPS usa tradicionalmente TCP 443.",
-        "dicaBanca": "Dica da banca: HTTPS = 443.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_098",
-        "pergunta": "Considere a seguinte situação: o firewall libera acesso seguro ao servidor web pela porta padrão. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "porta 80.",
-            "porta 23.",
-            "porta 443.",
-            "porta 25.",
-            "porta 110."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. HTTPS usa tradicionalmente TCP 443.",
-        "feedbackErro": "Resposta correta: porta 443. HTTPS usa tradicionalmente TCP 443.",
-        "dicaBanca": "Dica da banca: HTTPS = 443.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_099",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: porta 53.",
-        "alternativas": [
-            "Porta tradicional do SSH.",
-            "Porta tradicional do IMAP.",
-            "Porta tradicional do NTP.",
-            "Porta tradicional do DNS.",
-            "Porta tradicional do RDP."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. DNS usa a porta 53, em UDP e também TCP em situações específicas.",
-        "feedbackErro": "Resposta correta: Porta tradicional do DNS. DNS usa a porta 53, em UDP e também TCP em situações específicas.",
-        "dicaBanca": "Dica da banca: DNS = 53.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_100",
-        "pergunta": "Considere a seguinte situação: o firewall precisa permitir consultas de resolução de nomes. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "porta 22.",
-            "porta 143.",
-            "porta 123.",
-            "porta 3389.",
-            "porta 53."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. DNS usa a porta 53, em UDP e também TCP em situações específicas.",
-        "feedbackErro": "Resposta correta: porta 53. DNS usa a porta 53, em UDP e também TCP em situações específicas.",
-        "dicaBanca": "Dica da banca: DNS = 53.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_101",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: porta 3389.",
-        "alternativas": [
-            "Porta tradicional do RDP.",
-            "Porta tradicional do HTTPS.",
-            "Porta tradicional do DNS.",
-            "Porta tradicional do POP3.",
-            "Porta tradicional do SMTP."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. RDP usa tradicionalmente TCP 3389.",
-        "feedbackErro": "Resposta correta: Porta tradicional do RDP. RDP usa tradicionalmente TCP 3389.",
-        "dicaBanca": "Dica da banca: RDP = área de trabalho remota.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_102",
-        "pergunta": "Considere a seguinte situação: o acesso remoto gráfico a uma máquina Windows usa a porta padrão do serviço. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "porta 443.",
-            "porta 3389.",
-            "porta 53.",
-            "porta 110.",
-            "porta 25."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. RDP usa tradicionalmente TCP 3389.",
-        "feedbackErro": "Resposta correta: porta 3389. RDP usa tradicionalmente TCP 3389.",
-        "dicaBanca": "Dica da banca: RDP = área de trabalho remota.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_103",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: IDS.",
-        "alternativas": [
-            "Bloquear automaticamente todo tráfego detectado.",
-            "Entregar endereços IP por DHCP.",
-            "Detectar eventos suspeitos e gerar alertas.",
-            "Resolver nomes DNS reversos.",
-            "Transmitir energia via Ethernet."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. IDS é focado em detecção e alerta; o IPS pode bloquear/prevenir.",
-        "feedbackErro": "Resposta correta: Detectar eventos suspeitos e gerar alertas. IDS é focado em detecção e alerta; o IPS pode bloquear/prevenir.",
-        "dicaBanca": "Dica da banca: IDS detecta; IPS pode bloquear.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_104",
-        "pergunta": "Considere a seguinte situação: a solução monitora tráfego e avisa a equipe sobre comportamento anormal. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "IPS.",
-            "DHCP.",
-            "PTR.",
-            "IDS.",
-            "PoE."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. IDS é focado em detecção e alerta; o IPS pode bloquear/prevenir.",
-        "feedbackErro": "Resposta correta: IDS. IDS é focado em detecção e alerta; o IPS pode bloquear/prevenir.",
-        "dicaBanca": "Dica da banca: IDS detecta; IPS pode bloquear.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_105",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: IPS.",
-        "alternativas": [
-            "Apenas registrar eventos sem intervenção.",
-            "Resolver nomes de domínio em IPv6.",
-            "Sincronizar horário dos servidores.",
-            "Marcar quadros com VLAN.",
-            "Detectar e bloquear/prevenir tráfego malicioso conforme política."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. IPS atua de forma preventiva, podendo bloquear tráfego suspeito.",
-        "feedbackErro": "Resposta correta: Detectar e bloquear/prevenir tráfego malicioso conforme política. IPS atua de forma preventiva, podendo bloquear tráfego suspeito.",
-        "dicaBanca": "Dica da banca: IPS = prevenção.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_106",
-        "pergunta": "Considere a seguinte situação: a solução impede automaticamente uma tentativa de exploração identificada no tráfego. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "IPS.",
-            "IDS.",
-            "AAAA.",
-            "NTP.",
-            "802.1Q."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. IPS atua de forma preventiva, podendo bloquear tráfego suspeito.",
-        "feedbackErro": "Resposta correta: IPS. IPS atua de forma preventiva, podendo bloquear tráfego suspeito.",
-        "dicaBanca": "Dica da banca: IPS = prevenção.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_107",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: proxy.",
-        "alternativas": [
-            "Identificar fisicamente interfaces Ethernet.",
-            "Intermediar requisições entre cliente e serviço de destino.",
-            "Enviar pacotes entre redes por rotas.",
-            "Atribuir IP e máscara automaticamente.",
-            "Prevenir loops de camada 2."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. Proxy pode aplicar filtros, cache, autenticação e registro de acessos.",
-        "feedbackErro": "Resposta correta: Intermediar requisições entre cliente e serviço de destino. Proxy pode aplicar filtros, cache, autenticação e registro de acessos.",
-        "dicaBanca": "Dica da banca: Proxy = intermediário.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_108",
-        "pergunta": "Considere a seguinte situação: a empresa filtra e registra acessos web por um servidor intermediário. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "MAC.",
-            "roteador.",
-            "proxy.",
-            "DHCP.",
-            "STP."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. Proxy pode aplicar filtros, cache, autenticação e registro de acessos.",
-        "feedbackErro": "Resposta correta: proxy. Proxy pode aplicar filtros, cache, autenticação e registro de acessos.",
-        "dicaBanca": "Dica da banca: Proxy = intermediário.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_109",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: MFA.",
-        "alternativas": [
-            "Liberar acesso por senha única compartilhada.",
-            "Substituir criptografia de rede por cabo.",
-            "Desativar logs de acesso remoto.",
-            "Exigir múltiplos fatores para autenticação.",
-            "Distribuir IPs sem servidor DHCP."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. MFA reduz o risco de acesso indevido quando uma senha é comprometida.",
-        "feedbackErro": "Resposta correta: Exigir múltiplos fatores para autenticação. MFA reduz o risco de acesso indevido quando uma senha é comprometida.",
-        "dicaBanca": "Dica da banca: MFA fortalece acesso remoto.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_110",
-        "pergunta": "Considere a seguinte situação: o acesso VPN exige senha e confirmação em aplicativo autenticador. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "senha compartilhada.",
-            "cabeamento.",
-            "sem logs.",
-            "APIPA.",
-            "MFA."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. MFA reduz o risco de acesso indevido quando uma senha é comprometida.",
-        "feedbackErro": "Resposta correta: MFA. MFA reduz o risco de acesso indevido quando uma senha é comprometida.",
-        "dicaBanca": "Dica da banca: MFA fortalece acesso remoto.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_111",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: 802.1X.",
-        "alternativas": [
-            "Controlar acesso à rede por autenticação de porta ou conexão.",
-            "Marcar VLANs em links trunk.",
-            "Definir padrões de fibra monomodo.",
-            "Resolver nomes por DNS reverso.",
-            "Sincronizar horário dos roteadores."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. 802.1X é usado em controle de acesso a redes cabeadas e sem fio.",
-        "feedbackErro": "Resposta correta: Controlar acesso à rede por autenticação de porta ou conexão. 802.1X é usado em controle de acesso a redes cabeadas e sem fio.",
-        "dicaBanca": "Dica da banca: 802.1X é comum com RADIUS.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_112",
-        "pergunta": "Considere a seguinte situação: antes de liberar a porta do switch, o usuário ou dispositivo precisa se autenticar. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "802.1Q.",
-            "802.1X.",
-            "fibra óptica.",
-            "PTR.",
-            "NTP."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. 802.1X é usado em controle de acesso a redes cabeadas e sem fio.",
-        "feedbackErro": "Resposta correta: 802.1X. 802.1X é usado em controle de acesso a redes cabeadas e sem fio.",
-        "dicaBanca": "Dica da banca: 802.1X é comum com RADIUS.",
-        "assunto": "redes",
-        "subtopico": "equipamentos-de-rede"
-    },
-    {
-        "id": "redes_113",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: NAC.",
-        "alternativas": [
-            "Converter sinais do provedor em rede doméstica.",
-            "Resolver nomes de domínio externos.",
-            "Controlar acesso de dispositivos à rede conforme identidade e conformidade.",
-            "Aumentar alcance do Bluetooth.",
-            "Transportar mensagens POP3."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. NAC avalia dispositivos e aplica políticas antes ou durante o acesso à rede.",
-        "feedbackErro": "Resposta correta: Controlar acesso de dispositivos à rede conforme identidade e conformidade. NAC avalia dispositivos e aplica políticas antes ou durante o acesso à rede.",
-        "dicaBanca": "Dica da banca: NAC = Network Access Control.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_114",
-        "pergunta": "Considere a seguinte situação: um notebook sem antivírus atualizado é colocado em rede restrita antes de acessar sistemas internos. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "modem.",
-            "DNS.",
-            "PAN.",
-            "NAC.",
-            "POP3."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. NAC avalia dispositivos e aplica políticas antes ou durante o acesso à rede.",
-        "feedbackErro": "Resposta correta: NAC. NAC avalia dispositivos e aplica políticas antes ou durante o acesso à rede.",
-        "dicaBanca": "Dica da banca: NAC = Network Access Control.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_115",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: segmentação de rede.",
-        "alternativas": [
-            "Unificar todos os hosts no mesmo broadcast.",
-            "Desativar autenticação por facilidade.",
-            "Expor servidores internos sem filtro.",
-            "Usar senhas padrão em roteadores.",
-            "Separar ambientes para reduzir riscos e controlar tráfego."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. Segmentação melhora segurança, organização e controle de comunicação.",
-        "feedbackErro": "Resposta correta: Separar ambientes para reduzir riscos e controlar tráfego. Segmentação melhora segurança, organização e controle de comunicação.",
-        "dicaBanca": "Dica da banca: Segmentar reduz movimento lateral.",
-        "assunto": "redes",
-        "subtopico": "vlan-comutacao-stp"
-    },
-    {
-        "id": "redes_116",
-        "pergunta": "Considere a seguinte situação: visitantes, câmeras e setor financeiro ficam em redes lógicas separadas. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "segmentação de rede.",
-            "rede plana.",
-            "acesso sem senha.",
-            "exposição direta.",
-            "credencial padrão."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. Segmentação melhora segurança, organização e controle de comunicação.",
-        "feedbackErro": "Resposta correta: segmentação de rede. Segmentação melhora segurança, organização e controle de comunicação.",
-        "dicaBanca": "Dica da banca: Segmentar reduz movimento lateral.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_117",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: Zero Trust.",
-        "alternativas": [
-            "Liberar a rede interna sem validação.",
-            "Não confiar automaticamente por estar dentro da rede.",
-            "Dispensar MFA em acessos remotos.",
-            "Permitir tráfego total entre setores.",
-            "Usar senha padrão por conveniência."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. Zero Trust exige verificação contínua e acesso mínimo necessário.",
-        "feedbackErro": "Resposta correta: Não confiar automaticamente por estar dentro da rede. Zero Trust exige verificação contínua e acesso mínimo necessário.",
-        "dicaBanca": "Dica da banca: Ideia central: nunca confiar automaticamente, sempre verificar.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_118",
-        "pergunta": "Considere a seguinte situação: mesmo na rede corporativa, o acesso é verificado continuamente e limitado por contexto. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "confiança interna total.",
-            "senha única.",
-            "Zero Trust.",
-            "rede plana.",
-            "credencial padrão."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. Zero Trust exige verificação contínua e acesso mínimo necessário.",
-        "feedbackErro": "Resposta correta: Zero Trust. Zero Trust exige verificação contínua e acesso mínimo necessário.",
-        "dicaBanca": "Dica da banca: Ideia central: nunca confiar automaticamente, sempre verificar.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_119",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: sniffing.",
-        "alternativas": [
-            "Entregar endereço IP por concessão.",
-            "Consultar nome de domínio.",
-            "Criar rotas estáticas.",
-            "Capturar ou analisar tráfego de rede.",
-            "Crimpar cabo RJ-45."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. Sniffing pode ser legítimo em diagnóstico ou indevido em espionagem.",
-        "feedbackErro": "Resposta correta: Capturar ou analisar tráfego de rede. Sniffing pode ser legítimo em diagnóstico ou indevido em espionagem.",
-        "dicaBanca": "Dica da banca: Sniffing = captura/análise de pacotes.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_120",
-        "pergunta": "Considere a seguinte situação: uma ferramenta é usada para observar pacotes que passam pela interface de rede. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "DHCP.",
-            "DNS.",
-            "roteamento estático.",
-            "cabeamento.",
-            "sniffing."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. Sniffing pode ser legítimo em diagnóstico ou indevido em espionagem.",
-        "feedbackErro": "Resposta correta: sniffing. Sniffing pode ser legítimo em diagnóstico ou indevido em espionagem.",
-        "dicaBanca": "Dica da banca: Sniffing = captura/análise de pacotes.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_121",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: spoofing.",
-        "alternativas": [
-            "Falsificar identidade ou origem em uma comunicação.",
-            "Sincronizar relógios por servidores externos.",
-            "Calcular máscara de sub-rede.",
-            "Transmitir energia por Ethernet.",
-            "Gerenciar filas de impressão."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. Spoofing envolve falsificação de origem, identidade ou informação.",
-        "feedbackErro": "Resposta correta: Falsificar identidade ou origem em uma comunicação. Spoofing envolve falsificação de origem, identidade ou informação.",
-        "dicaBanca": "Dica da banca: Spoofing = falsificação.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_122",
-        "pergunta": "Considere a seguinte situação: um atacante se passa por outro endereço ou serviço para enganar a vítima. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "NTP.",
-            "spoofing.",
-            "CIDR.",
-            "PoE.",
-            "servidor de impressão."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. Spoofing envolve falsificação de origem, identidade ou informação.",
-        "feedbackErro": "Resposta correta: spoofing. Spoofing envolve falsificação de origem, identidade ou informação.",
-        "dicaBanca": "Dica da banca: Spoofing = falsificação.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_123",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: DNS spoofing.",
-        "alternativas": [
-            "Falsificar tabela MAC do switch por porta.",
-            "Aumentar jitter para voz sobre IP.",
-            "Fornecer resposta DNS falsa para redirecionar o usuário.",
-            "Atribuir IP automático com DHCP.",
-            "Estabelecer sessão TCP confiável."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. DNS spoofing manipula resolução de nomes e pode redirecionar acessos.",
-        "feedbackErro": "Resposta correta: Fornecer resposta DNS falsa para redirecionar o usuário. DNS spoofing manipula resolução de nomes e pode redirecionar acessos.",
-        "dicaBanca": "Dica da banca: DNS falso pode levar a site falso.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_124",
-        "pergunta": "Considere a seguinte situação: o usuário digita um domínio correto, mas é levado a endereço controlado pelo atacante. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "CAM spoofing.",
-            "jitter.",
-            "DHCP.",
-            "DNS spoofing.",
-            "TCP handshake."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. DNS spoofing manipula resolução de nomes e pode redirecionar acessos.",
-        "feedbackErro": "Resposta correta: DNS spoofing. DNS spoofing manipula resolução de nomes e pode redirecionar acessos.",
-        "dicaBanca": "Dica da banca: DNS falso pode levar a site falso.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_125",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: DNSSEC.",
-        "alternativas": [
-            "Criptografar todo tráfego web automaticamente.",
-            "Atribuir IP a clientes sem servidor.",
-            "Marcar VLANs em quadros Ethernet.",
-            "Evitar colisões em redes Wi-Fi.",
-            "Validar autenticidade e integridade de respostas DNS."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. DNSSEC adiciona assinaturas ao DNS, mas não garante sigilo da consulta.",
-        "feedbackErro": "Resposta correta: Validar autenticidade e integridade de respostas DNS. DNSSEC adiciona assinaturas ao DNS, mas não garante sigilo da consulta.",
-        "dicaBanca": "Dica da banca: DNSSEC protege autenticidade/integridade, não confidencialidade.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_126",
-        "pergunta": "Considere a seguinte situação: o domínio usa assinaturas para reduzir risco de resposta DNS falsificada. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "DNSSEC.",
-            "HTTPS.",
-            "SLAAC.",
-            "802.1Q.",
-            "CSMA/CA."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. DNSSEC adiciona assinaturas ao DNS, mas não garante sigilo da consulta.",
-        "feedbackErro": "Resposta correta: DNSSEC. DNSSEC adiciona assinaturas ao DNS, mas não garante sigilo da consulta.",
-        "dicaBanca": "Dica da banca: DNSSEC protege autenticidade/integridade, não confidencialidade.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_127",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: DoH.",
-        "alternativas": [
-            "Transportar VLANs por tags Ethernet.",
-            "Transportar consultas DNS por HTTPS.",
-            "Acessar terminal remoto pela porta 22.",
-            "Sincronizar relógios por UDP 123.",
-            "Monitorar dispositivos por SNMP."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. DNS over HTTPS encapsula consultas DNS em HTTPS.",
-        "feedbackErro": "Resposta correta: Transportar consultas DNS por HTTPS. DNS over HTTPS encapsula consultas DNS em HTTPS.",
-        "dicaBanca": "Dica da banca: DoH está associado à privacidade das consultas DNS.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_128",
-        "pergunta": "Considere a seguinte situação: o navegador envia resolução de nomes encapsulada em conexão HTTPS. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "802.1Q.",
-            "SSH.",
-            "DoH.",
-            "NTP.",
-            "SNMP."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. DNS over HTTPS encapsula consultas DNS em HTTPS.",
-        "feedbackErro": "Resposta correta: DoH. DNS over HTTPS encapsula consultas DNS em HTTPS.",
-        "dicaBanca": "Dica da banca: DoH está associado à privacidade das consultas DNS.",
-        "assunto": "redes",
-        "subtopico": "protocolos-servicos-portas"
-    },
-    {
-        "id": "redes_129",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: logs de rede.",
-        "alternativas": [
-            "Substituir a necessidade de autenticação.",
-            "Aumentar alcance físico de cabos.",
-            "Eliminar qualquer falha de configuração.",
-            "Registrar eventos para auditoria, diagnóstico e investigação.",
-            "Criar endereços IPv4 ilimitados."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. Logs ajudam a identificar falhas, acessos e eventos suspeitos.",
-        "feedbackErro": "Resposta correta: Registrar eventos para auditoria, diagnóstico e investigação. Logs ajudam a identificar falhas, acessos e eventos suspeitos.",
-        "dicaBanca": "Dica da banca: Sem log, investigação fica fraca.",
-        "assunto": "redes",
-        "subtopico": "diagnostico-desempenho"
-    },
-    {
-        "id": "redes_130",
-        "pergunta": "Considere a seguinte situação: após incidente, a equipe verifica horários, origens e ações registradas pelos equipamentos. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "sem autenticação.",
-            "repetidor.",
-            "automação total.",
-            "IPv6.",
-            "logs de rede."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. Logs ajudam a identificar falhas, acessos e eventos suspeitos.",
-        "feedbackErro": "Resposta correta: logs de rede. Logs ajudam a identificar falhas, acessos e eventos suspeitos.",
-        "dicaBanca": "Dica da banca: Sem log, investigação fica fraca.",
-        "assunto": "redes",
-        "subtopico": "diagnostico-desempenho"
-    },
-    {
-        "id": "redes_131",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: SIEM.",
-        "alternativas": [
-            "Coletar e correlacionar eventos e logs de segurança.",
-            "Fornecer IP automaticamente em rede local.",
-            "Enviar e-mails por servidores SMTP.",
-            "Definir cabos de fibra monomodo.",
-            "Comutar quadros por endereço MAC."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. SIEM centraliza e correlaciona eventos para apoiar detecção e resposta.",
-        "feedbackErro": "Resposta correta: Coletar e correlacionar eventos e logs de segurança. SIEM centraliza e correlaciona eventos para apoiar detecção e resposta.",
-        "dicaBanca": "Dica da banca: SIEM = gestão/correlação de eventos de segurança.",
-        "assunto": "redes",
-        "subtopico": "diagnostico-desempenho"
-    },
-    {
-        "id": "redes_132",
-        "pergunta": "Considere a seguinte situação: alertas de firewall, servidor, VPN e endpoint são reunidos em uma plataforma de correlação. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "DHCP.",
-            "SIEM.",
-            "SMTP.",
-            "fibra monomodo.",
-            "switch."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. SIEM centraliza e correlaciona eventos para apoiar detecção e resposta.",
-        "feedbackErro": "Resposta correta: SIEM. SIEM centraliza e correlaciona eventos para apoiar detecção e resposta.",
-        "dicaBanca": "Dica da banca: SIEM = gestão/correlação de eventos de segurança.",
-        "assunto": "redes",
-        "subtopico": "seguranca-em-redes"
-    },
-    {
-        "id": "redes_133",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: backup de configuração.",
-        "alternativas": [
-            "Aumentar automaticamente largura de banda.",
-            "Substituir documentação de endereçamento.",
-            "Permitir restauração rápida de parâmetros de equipamentos de rede.",
-            "Impedir qualquer queda de energia.",
-            "Dispensar controle de mudanças."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. Backups de configuração reduzem tempo de recuperação após falhas.",
-        "feedbackErro": "Resposta correta: Permitir restauração rápida de parâmetros de equipamentos de rede. Backups de configuração reduzem tempo de recuperação após falhas.",
-        "dicaBanca": "Dica da banca: Equipamentos de rede também precisam de backup.",
-        "assunto": "redes",
-        "subtopico": "diagnostico-desempenho"
-    },
-    {
-        "id": "redes_134",
-        "pergunta": "Considere a seguinte situação: um switch falha e a equipe restaura VLANs, trunks e ACLs em equipamento substituto. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "QoS.",
-            "endereçamento sem mapa.",
-            "nobreak ausente.",
-            "backup de configuração.",
-            "mudança informal."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. Backups de configuração reduzem tempo de recuperação após falhas.",
-        "feedbackErro": "Resposta correta: backup de configuração. Backups de configuração reduzem tempo de recuperação após falhas.",
-        "dicaBanca": "Dica da banca: Equipamentos de rede também precisam de backup.",
-        "assunto": "redes",
-        "subtopico": "vlan-comutacao-stp"
-    },
-    {
-        "id": "redes_135",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: failover.",
-        "alternativas": [
-            "Distribuir carga entre vários servidores ativos.",
-            "Medir variação da latência.",
-            "Entregar IP por tempo de concessão.",
-            "Criar alias DNS para outro nome.",
-            "Transferir operação para recurso secundário quando o principal falha."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. Failover reduz indisponibilidade ao acionar alternativa previamente preparada.",
-        "feedbackErro": "Resposta correta: Transferir operação para recurso secundário quando o principal falha. Failover reduz indisponibilidade ao acionar alternativa previamente preparada.",
-        "dicaBanca": "Dica da banca: Failover = assumir após falha.",
-        "assunto": "redes",
-        "subtopico": "roteamento-disponibilidade"
-    },
-    {
-        "id": "redes_136",
-        "pergunta": "Considere a seguinte situação: o link reserva assume automaticamente quando o link principal fica indisponível. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "failover.",
-            "balanceamento.",
-            "jitter.",
-            "DHCP lease.",
-            "CNAME."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. Failover reduz indisponibilidade ao acionar alternativa previamente preparada.",
-        "feedbackErro": "Resposta correta: failover. Failover reduz indisponibilidade ao acionar alternativa previamente preparada.",
-        "dicaBanca": "Dica da banca: Failover = assumir após falha.",
-        "assunto": "redes",
-        "subtopico": "roteamento-disponibilidade"
-    },
-    {
-        "id": "redes_137",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: balanceamento de carga.",
-        "alternativas": [
-            "Acionar recurso reserva apenas após falha.",
-            "Distribuir requisições entre múltiplos recursos disponíveis.",
-            "Bloquear loops em camada 2.",
-            "Resolver nome de domínio para IPv6.",
-            "Filtrar tráfego por endereço MAC."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. Load balancing reparte carga para evitar sobrecarga e melhorar continuidade.",
-        "feedbackErro": "Resposta correta: Distribuir requisições entre múltiplos recursos disponíveis. Load balancing reparte carga para evitar sobrecarga e melhorar continuidade.",
-        "dicaBanca": "Dica da banca: Balanceamento não é igual a backup.",
-        "assunto": "redes",
-        "subtopico": "roteamento-disponibilidade"
-    },
-    {
-        "id": "redes_138",
-        "pergunta": "Considere a seguinte situação: requisições web são divididas entre três servidores para melhorar desempenho e disponibilidade. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "failover passivo.",
-            "STP.",
-            "balanceamento de carga.",
-            "AAAA.",
-            "port security."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. Load balancing reparte carga para evitar sobrecarga e melhorar continuidade.",
-        "feedbackErro": "Resposta correta: balanceamento de carga. Load balancing reparte carga para evitar sobrecarga e melhorar continuidade.",
-        "dicaBanca": "Dica da banca: Balanceamento não é igual a backup.",
-        "assunto": "redes",
-        "subtopico": "roteamento-disponibilidade"
-    },
-    {
-        "id": "redes_139",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: roteamento dinâmico.",
-        "alternativas": [
-            "Exigir configuração manual de cada rota.",
-            "Resolver nomes de domínio por cache.",
-            "Converter endereço privado por porta.",
-            "Aprender e atualizar rotas por protocolos de roteamento.",
-            "Bloquear tráfego por regra local."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. Protocolos dinâmicos ajustam rotas automaticamente conforme a topologia.",
-        "feedbackErro": "Resposta correta: Aprender e atualizar rotas por protocolos de roteamento. Protocolos dinâmicos ajustam rotas automaticamente conforme a topologia.",
-        "dicaBanca": "Dica da banca: Dinâmico = protocolo troca rotas.",
-        "assunto": "redes",
-        "subtopico": "roteamento-disponibilidade"
-    },
-    {
-        "id": "redes_140",
-        "pergunta": "Considere a seguinte situação: roteadores trocam informações e recalculam caminho após queda de enlace. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "rota estática.",
-            "DNS cache.",
-            "PAT.",
-            "ACL.",
-            "roteamento dinâmico."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. Protocolos dinâmicos ajustam rotas automaticamente conforme a topologia.",
-        "feedbackErro": "Resposta correta: roteamento dinâmico. Protocolos dinâmicos ajustam rotas automaticamente conforme a topologia.",
-        "dicaBanca": "Dica da banca: Dinâmico = protocolo troca rotas.",
-        "assunto": "redes",
-        "subtopico": "equipamentos-de-rede"
-    },
-    {
-        "id": "redes_141",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: RIP.",
-        "alternativas": [
-            "Protocolo de roteamento dinâmico baseado em vetor de distância.",
-            "Protocolo de estado de enlace com áreas hierárquicas.",
-            "Protocolo de roteamento entre sistemas autônomos.",
-            "Protocolo de segurança para Wi-Fi moderno.",
-            "Protocolo de acesso remoto seguro."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. RIP usa vetor de distância e métrica por saltos, sendo mais simples e limitado.",
-        "feedbackErro": "Resposta correta: Protocolo de roteamento dinâmico baseado em vetor de distância. RIP usa vetor de distância e métrica por saltos, sendo mais simples e limitado.",
-        "dicaBanca": "Dica da banca: RIP = hops/saltos.",
-        "assunto": "redes",
-        "subtopico": "roteamento-disponibilidade"
-    },
-    {
-        "id": "redes_142",
-        "pergunta": "Considere a seguinte situação: a métrica principal é contagem de saltos, com limitações de escala. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "OSPF.",
-            "RIP.",
-            "BGP.",
-            "WPA3.",
-            "SSH."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. RIP usa vetor de distância e métrica por saltos, sendo mais simples e limitado.",
-        "feedbackErro": "Resposta correta: RIP. RIP usa vetor de distância e métrica por saltos, sendo mais simples e limitado.",
-        "dicaBanca": "Dica da banca: RIP = hops/saltos.",
-        "assunto": "redes",
-        "subtopico": "roteamento-disponibilidade"
-    },
-    {
-        "id": "redes_143",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: BGP.",
-        "alternativas": [
-            "Protocolo interno baseado em vetor de distância simples.",
-            "Serviço de resolução de nomes local.",
-            "Protocolo de roteamento entre sistemas autônomos na Internet.",
-            "Protocolo de transferência de arquivos seguro.",
-            "Padrão de criptografia para Wi-Fi."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. BGP é o protocolo central de roteamento interdomínios na Internet.",
-        "feedbackErro": "Resposta correta: Protocolo de roteamento entre sistemas autônomos na Internet. BGP é o protocolo central de roteamento interdomínios na Internet.",
-        "dicaBanca": "Dica da banca: BGP aparece em contexto de Internet e operadoras.",
-        "assunto": "redes",
-        "subtopico": "roteamento-disponibilidade"
-    },
-    {
-        "id": "redes_144",
-        "pergunta": "Considere a seguinte situação: operadoras trocam rotas globais entre seus sistemas autônomos. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "RIP.",
-            "DNS.",
-            "SFTP.",
-            "BGP.",
-            "WPA2."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. BGP é o protocolo central de roteamento interdomínios na Internet.",
-        "feedbackErro": "Resposta correta: BGP. BGP é o protocolo central de roteamento interdomínios na Internet.",
-        "dicaBanca": "Dica da banca: BGP aparece em contexto de Internet e operadoras.",
-        "assunto": "redes",
-        "subtopico": "roteamento-disponibilidade"
-    },
-    {
-        "id": "redes_145",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: rota padrão.",
-        "alternativas": [
-            "Rota exclusiva para loopback local.",
-            "Rota usada apenas para multicast.",
-            "Registro DNS de e-mail.",
-            "Tabela de MACs do switch.",
-            "Caminho usado quando não há rota mais específica para o destino."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. A rota padrão IPv4 é representada por 0.0.0.0/0.",
-        "feedbackErro": "Resposta correta: Caminho usado quando não há rota mais específica para o destino. A rota padrão IPv4 é representada por 0.0.0.0/0.",
-        "dicaBanca": "Dica da banca: Rota padrão = caminho para o restante.",
-        "assunto": "redes",
-        "subtopico": "roteamento-disponibilidade"
-    },
-    {
-        "id": "redes_146",
-        "pergunta": "Considere a seguinte situação: qualquer destino desconhecido é encaminhado para 0.0.0.0/0 via gateway. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "rota padrão.",
-            "127.0.0.0/8.",
-            "224.0.0.0/4.",
-            "MX.",
-            "CAM."
-        ],
-        "correta": 0,
-        "feedbackAcerto": "Correto. A rota padrão IPv4 é representada por 0.0.0.0/0.",
-        "feedbackErro": "Resposta correta: rota padrão. A rota padrão IPv4 é representada por 0.0.0.0/0.",
-        "dicaBanca": "Dica da banca: Rota padrão = caminho para o restante.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_147",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: máscara de sub-rede.",
-        "alternativas": [
-            "Identificar fabricante de placa Ethernet.",
-            "Separar porção de rede e porção de host em um endereço IP.",
-            "Definir porta de aplicação web.",
-            "Criptografar tráfego Wi-Fi.",
-            "Sincronizar horário do servidor."
-        ],
-        "correta": 1,
-        "feedbackAcerto": "Correto. A máscara define o bloco de rede ao qual o host pertence.",
-        "feedbackErro": "Resposta correta: Separar porção de rede e porção de host em um endereço IP. A máscara define o bloco de rede ao qual o host pertence.",
-        "dicaBanca": "Dica da banca: Máscara responde se destinos estão na mesma rede.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_148",
-        "pergunta": "Considere a seguinte situação: dois IPs são comparados com /24 para saber se estão na mesma rede local. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "OUI.",
-            "porta TCP.",
-            "máscara de sub-rede.",
-            "WPA2.",
-            "NTP."
-        ],
-        "correta": 2,
-        "feedbackAcerto": "Correto. A máscara define o bloco de rede ao qual o host pertence.",
-        "feedbackErro": "Resposta correta: máscara de sub-rede. A máscara define o bloco de rede ao qual o host pertence.",
-        "dicaBanca": "Dica da banca: Máscara responde se destinos estão na mesma rede.",
-        "assunto": "redes",
-        "subtopico": "tipos-topologias-redes"
-    },
-    {
-        "id": "redes_149",
-        "pergunta": "Em redes de computadores, assinale a alternativa que descreve corretamente: VLSM.",
-        "alternativas": [
-            "Usar uma única máscara fixa em todas as sub-redes.",
-            "Usar apenas endereços públicos na LAN.",
-            "Substituir DNS por ARP.",
-            "Usar máscaras de tamanhos variáveis para aproveitar melhor endereços.",
-            "Aumentar potência do sinal Wi-Fi."
-        ],
-        "correta": 3,
-        "feedbackAcerto": "Correto. VLSM permite sub-redes dimensionadas conforme necessidade.",
-        "feedbackErro": "Resposta correta: Usar máscaras de tamanhos variáveis para aproveitar melhor endereços. VLSM permite sub-redes dimensionadas conforme necessidade.",
-        "dicaBanca": "Dica da banca: VLSM = máscara variável.",
-        "assunto": "redes",
-        "subtopico": "enderecamento-ip"
-    },
-    {
-        "id": "redes_150",
-        "pergunta": "Considere a seguinte situação: redes com 100, 30 e 6 hosts recebem blocos diferentes em vez de todos terem o mesmo tamanho. O conceito ou recurso mais diretamente relacionado é:",
-        "alternativas": [
-            "FLSM.",
-            "IP público obrigatório.",
-            "ARP.",
-            "potência RF.",
-            "VLSM."
-        ],
-        "correta": 4,
-        "feedbackAcerto": "Correto. VLSM permite sub-redes dimensionadas conforme necessidade.",
-        "feedbackErro": "Resposta correta: VLSM. VLSM permite sub-redes dimensionadas conforme necessidade.",
-        "dicaBanca": "Dica da banca: VLSM = máscara variável.",
-        "assunto": "redes",
-        "subtopico": "tipos-topologias-redes"
     }
 ];
