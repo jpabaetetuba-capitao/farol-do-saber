@@ -1,686 +1,802 @@
 const coesao = [
-
 {
-    texto: `Nos últimos anos, diversos municípios ampliaram os investimentos em tecnologia educacional. Em algumas redes de ensino, foram adquiridos equipamentos digitais e implementadas plataformas de aprendizagem. Em outras, priorizou-se a capacitação docente para o uso pedagógico desses recursos. Embora as estratégias adotadas tenham sido diferentes, especialistas afirmam que os melhores resultados foram observados onde houve integração entre infraestrutura e formação profissional. Essa combinação permitiu que os investimentos produzissem impactos mais consistentes sobre a aprendizagem.`,
-
-    pergunta: "No trecho final, a expressão 'Essa combinação' retoma predominantemente:",
-
-    alternativas: [
-        "A integração entre infraestrutura tecnológica e formação profissional dos docentes.",
-        "Os investimentos realizados pelos municípios ao longo dos últimos anos.",
-        "A aquisição de equipamentos digitais destinados às escolas da rede pública.",
-        "As diferentes estratégias adotadas pelas redes de ensino analisadas pelos especialistas.",
-        "Os impactos observados sobre a aprendizagem dos estudantes participantes."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A expressão resume e retoma a ideia imediatamente anterior de integração entre infraestrutura e formação profissional.",
-
-    feedbackErro: "Nem toda retomada refere-se ao elemento mais distante ou mais citado. É necessário observar qual ideia é sintetizada pela expressão empregada.",
-
-    dicaBanca: "FGV gosta de expressões resumitivas como 'essa situação', 'esse processo', 'tal medida' e 'essa combinação'."
-
+  texto: `Nos últimos anos, diversos municípios ampliaram os investimentos em tecnologia educacional. Em algumas redes de ensino, foram adquiridos equipamentos digitais e implementadas plataformas de aprendizagem. Em outras, priorizou-se a capacitação docente para o uso pedagógico desses recursos. Embora as estratégias adotadas tenham sido diferentes, especialistas afirmam que os melhores resultados foram observados onde houve integração entre infraestrutura e formação profissional. Essa combinação permitiu que os investimentos produzissem impactos mais consistentes sobre a aprendizagem.`,
+  pergunta: "No trecho final, a expressão 'Essa combinação' retoma predominantemente:",
+  alternativas: [
+    "A integração entre infraestrutura tecnológica e formação profissional dos docentes.",
+    "Os investimentos realizados pelos municípios ao longo dos últimos anos.",
+    "A aquisição de equipamentos digitais destinados às escolas da rede pública.",
+    "As diferentes estratégias adotadas pelas redes de ensino analisadas pelos especialistas.",
+    "Os impactos observados sobre a aprendizagem dos estudantes participantes.",
+  ],
+  correta: 0,
+  explicacao: "'Essa combinação' encapsula a integração entre infraestrutura tecnológica e formação profissional apresentada no período anterior.",
+  feedbackAcerto: "Correto. 'Essa combinação' encapsula a integração entre infraestrutura tecnológica e formação profissional apresentada no período anterior.",
+  feedbackErro: "A resposta correta é: A integração entre infraestrutura tecnológica e formação profissional dos docentes. 'Essa combinação' encapsula a integração entre infraestrutura tecnológica e formação profissional apresentada no período anterior.",
+  dicaBanca: "Expressões como 'essa combinação' podem condensar duas ou mais informações anteriores em um único referente.",
 },
 {
-    texto: `A evasão escolar constitui um desafio persistente em diferentes sistemas educacionais. Fatores econômicos, dificuldades de aprendizagem e questões familiares costumam contribuir para esse fenômeno. Para enfrentá-lo, algumas redes de ensino desenvolveram programas de acompanhamento individualizado dos estudantes. Outras investiram em políticas de assistência e permanência escolar. Tais iniciativas, entretanto, dependem de planejamento contínuo para produzir resultados duradouros.`,
-
-    pergunta: "A expressão 'Tais iniciativas' estabelece relação de coesão ao retomar:",
-
-    alternativas: [
-        "Os fatores econômicos associados ao abandono escolar, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "Os programas de acompanhamento e as políticas de permanência mencionados anteriormente.",
-        "As dificuldades de aprendizagem identificadas pelos sistemas educacionais, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "Os resultados duradouros esperados pelas redes de ensino, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "O fenômeno da evasão escolar discutido no início do texto, quando analisada sem a articulação completa entre as ideias apresentadas no texto."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. A expressão retoma conjuntamente as medidas apresentadas no período anterior.",
-
-    feedbackErro: "Muitas questões exigem identificar retomadas que abrangem um conjunto de ideias, e não apenas um termo isolado.",
-
-    dicaBanca: "Pronomes demonstrativos e expressões resumitivas frequentemente retomam blocos inteiros de informação."
-
+  texto: `A evasão escolar constitui um desafio persistente em diferentes sistemas educacionais. Fatores econômicos, dificuldades de aprendizagem e questões familiares costumam contribuir para esse fenômeno. Para enfrentá-lo, algumas redes de ensino desenvolveram programas de acompanhamento individualizado dos estudantes. Outras investiram em políticas de assistência e permanência escolar. Tais iniciativas, entretanto, dependem de planejamento contínuo para produzir resultados duradouros.`,
+  pergunta: "A expressão 'Tais iniciativas' estabelece relação de coesão ao retomar:",
+  alternativas: [
+    "Os fatores econômicos associados ao abandono escolar.",
+    "Os programas de acompanhamento e as políticas de permanência mencionados anteriormente.",
+    "As dificuldades de aprendizagem identificadas pelos sistemas educacionais e seus efeitos sobre a permanência dos estudantes.",
+    "Os resultados duradouros esperados pelas redes de ensino.",
+    "O fenômeno da evasão escolar discutido no início do texto.",
+  ],
+  correta: 1,
+  explicacao: "'Tais iniciativas' retoma conjuntamente os programas de acompanhamento e as políticas de assistência e permanência escolar.",
+  feedbackAcerto: "Correto. 'Tais iniciativas' retoma conjuntamente os programas de acompanhamento e as políticas de assistência e permanência escolar.",
+  feedbackErro: "A resposta correta é: Os programas de acompanhamento e as políticas de permanência mencionados anteriormente. 'Tais iniciativas' retoma conjuntamente os programas de acompanhamento e as políticas de assistência e permanência escolar.",
+  dicaBanca: "Verifique se a expressão retoma um termo isolado ou um conjunto de medidas apresentado antes.",
 },
 {
-    texto: `A implementação de bibliotecas digitais ampliou o acesso a materiais de estudo em diversas instituições. Os estudantes passaram a consultar conteúdos de forma mais rápida e flexível. Apesar disso, alguns pesquisadores observam que a simples disponibilização de recursos tecnológicos não garante melhorias significativas na aprendizagem. Para que isso ocorra, é necessário desenvolver estratégias pedagógicas capazes de integrar tais ferramentas ao processo educativo.`,
-
-    pergunta: "O pronome demonstrativo 'isso', no último período, retoma principalmente:",
-
-    alternativas: [
-        "A consulta rápida e flexível aos conteúdos digitais pelos estudantes.",
-        "A ampliação do acesso aos materiais de estudo promovida pelas bibliotecas digitais.",
-        "A ocorrência de melhorias significativas na aprendizagem dos estudantes.",
-        "A disponibilização de recursos tecnológicos nas instituições de ensino.",
-        "O desenvolvimento de estratégias pedagógicas voltadas ao uso das tecnologias."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. O pronome retoma a ideia expressa imediatamente antes: a obtenção de melhorias significativas na aprendizagem.",
-
-    feedbackErro: "Em textos argumentativos, demonstrativos como 'isso' frequentemente retomam uma ideia inteira e não apenas um substantivo específico.",
-
-    dicaBanca: "Leia o período anterior e pergunte-se: o que exatamente precisa ocorrer?"
-
+  texto: `A implementação de bibliotecas digitais ampliou o acesso a materiais de estudo em diversas instituições. Os estudantes passaram a consultar conteúdos de forma mais rápida e flexível. Apesar disso, alguns pesquisadores observam que a simples disponibilização de recursos tecnológicos não garante melhorias significativas na aprendizagem. Para que isso ocorra, é necessário desenvolver estratégias pedagógicas capazes de integrar tais ferramentas ao processo educativo.`,
+  pergunta: "O pronome demonstrativo 'isso', no último período, retoma principalmente:",
+  alternativas: [
+    "A consulta rápida e flexível aos conteúdos digitais pelos estudantes.",
+    "A ampliação do acesso aos materiais de estudo promovida pelas bibliotecas digitais.",
+    "A ocorrência de melhorias significativas na aprendizagem dos estudantes.",
+    "A disponibilização de recursos tecnológicos nas instituições de ensino.",
+    "O desenvolvimento de estratégias pedagógicas voltadas ao uso das tecnologias.",
+  ],
+  correta: 2,
+  explicacao: "O demonstrativo 'isso' retoma a ideia de ocorrerem melhorias significativas na aprendizagem, expressa no período anterior.",
+  feedbackAcerto: "Correto. O demonstrativo 'isso' retoma a ideia de ocorrerem melhorias significativas na aprendizagem, expressa no período anterior.",
+  feedbackErro: "A resposta correta é: A ocorrência de melhorias significativas na aprendizagem dos estudantes. O demonstrativo 'isso' retoma a ideia de ocorrerem melhorias significativas na aprendizagem, expressa no período anterior.",
+  dicaBanca: "Substitua mentalmente o demonstrativo pela ideia anterior e confira se o período mantém o sentido.",
 },
 {
-    texto: `A produção científica desempenha papel fundamental no desenvolvimento social. Ela contribui para a criação de novas tecnologias, favorece a formulação de políticas públicas e amplia a compreensão de diferentes fenômenos. Além disso, fortalece a capacidade de inovação das sociedades. Por essa razão, o investimento em pesquisa costuma ser apontado como elemento estratégico para o crescimento sustentável.`,
-
-    pergunta: "A expressão 'Por essa razão' estabelece, em relação ao trecho anterior, uma relação de:",
-
-    alternativas: [
-        "Contraste entre duas perspectivas relacionadas ao papel da pesquisa científica.",
-        "Explicação destinada a justificar uma afirmação já conhecida pelo leitor.",
-        "Retificação de uma informação considerada insuficiente pelo autor.",
-        "Conclusão construída a partir dos argumentos apresentados anteriormente.",
-        "Alternância entre benefícios e limitações da produção científica."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. O autor apresenta uma conclusão derivada dos argumentos desenvolvidos nos períodos anteriores.",
-
-    feedbackErro: "A expressão conecta uma consequência lógica aos argumentos previamente apresentados.",
-
-    dicaBanca: "FGV costuma cobrar o valor semântico dos conectores dentro do contexto, e não apenas sua classificação gramatical."
-
+  texto: `A produção científica desempenha papel fundamental no desenvolvimento social. Ela contribui para a criação de novas tecnologias, favorece a formulação de políticas públicas e amplia a compreensão de diferentes fenômenos. Além disso, fortalece a capacidade de inovação das sociedades. Por essa razão, o investimento em pesquisa costuma ser apontado como elemento estratégico para o crescimento sustentável.`,
+  pergunta: "A expressão 'Por essa razão' estabelece, em relação ao trecho anterior, uma relação de:",
+  alternativas: [
+    "Contraste entre duas perspectivas relacionadas ao papel da pesquisa científica.",
+    "Explicação destinada a justificar uma afirmação já conhecida pelo leitor.",
+    "Retificação de uma informação considerada insuficiente pelo autor.",
+    "Conclusão construída a partir dos argumentos apresentados anteriormente.",
+    "Alternância entre benefícios e limitações da produção científica.",
+  ],
+  correta: 3,
+  explicacao: "'Por essa razão' introduz uma conclusão decorrente dos benefícios da produção científica apresentados antes.",
+  feedbackAcerto: "Correto. 'Por essa razão' introduz uma conclusão decorrente dos benefícios da produção científica apresentados antes.",
+  feedbackErro: "A resposta correta é: Conclusão construída a partir dos argumentos apresentados anteriormente. 'Por essa razão' introduz uma conclusão decorrente dos benefícios da produção científica apresentados antes.",
+  dicaBanca: "Pergunte se o segmento posterior decorre logicamente das razões apresentadas antes.",
 },
 {
-    texto: `A formação continuada de professores tem sido apontada como um dos fatores relevantes para a melhoria da qualidade do ensino. Contudo, programas de capacitação isolados nem sempre produzem os resultados esperados. Em muitos casos, é necessário que essas ações estejam articuladas a políticas institucionais mais amplas. Sem essa articulação, os avanços obtidos tendem a ser limitados e pouco duradouros.`,
-
-    pergunta: "A expressão 'essa articulação' retoma principalmente:",
-
-    alternativas: [
-        "A melhoria da qualidade do ensino promovida pela formação continuada.",
-        "Os resultados esperados pelos programas de capacitação docente.",
-        "Os avanços limitados observados nos sistemas educacionais.",
-        "Os programas de capacitação isolados mencionados pelo autor.",
-        "A relação entre ações de formação e políticas institucionais mais amplas."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. A expressão resume a integração entre formação continuada e políticas institucionais mais amplas.",
-
-    feedbackErro: "Expressões resumitivas geralmente condensam uma ideia complexa apresentada anteriormente.",
-
-    dicaBanca: "Em textos acadêmicos, a coesão frequentemente ocorre por encapsulamento, isto é, quando uma expressão resume uma informação mais extensa."
+  texto: `A formação continuada de professores tem sido apontada como um dos fatores relevantes para a melhoria da qualidade do ensino. Contudo, programas de capacitação isolados nem sempre produzem os resultados esperados. Em muitos casos, é necessário que essas ações estejam articuladas a políticas institucionais mais amplas. Sem essa articulação, os avanços obtidos tendem a ser limitados e pouco duradouros.`,
+  pergunta: "A expressão 'essa articulação' retoma principalmente:",
+  alternativas: [
+    "A melhoria da qualidade do ensino promovida pela formação continuada em diferentes contextos institucionais.",
+    "Os resultados esperados pelos programas de capacitação docente.",
+    "Os avanços limitados observados nos sistemas educacionais.",
+    "Os programas de capacitação isolados mencionados pelo autor.",
+    "A relação entre ações de formação e políticas institucionais mais amplas.",
+  ],
+  correta: 4,
+  explicacao: "'Essa articulação' resume a relação entre ações de formação continuada e políticas institucionais mais amplas.",
+  feedbackAcerto: "Correto. 'Essa articulação' resume a relação entre ações de formação continuada e políticas institucionais mais amplas.",
+  feedbackErro: "A resposta correta é: A relação entre ações de formação e políticas institucionais mais amplas. 'Essa articulação' resume a relação entre ações de formação continuada e políticas institucionais mais amplas.",
+  dicaBanca: "Expressões resumitivas frequentemente nomeiam uma relação construída no período anterior.",
 },
 {
-    texto: `A expansão do ensino remoto durante os últimos anos provocou mudanças significativas nas práticas educacionais. Algumas instituições investiram em plataformas digitais; outras priorizaram a formação tecnológica de seus profissionais. Em muitos casos, entretanto, verificou-se que a simples adoção dessas medidas não era suficiente para garantir a qualidade do processo educativo. Tal constatação levou gestores e pesquisadores a defender abordagens mais integradas para enfrentar os desafios identificados.`,
-
-    pergunta: "A expressão 'Tal constatação' retoma predominantemente:",
-
-    alternativas: [
-        "A insuficiência das medidas adotadas para garantir, isoladamente, a qualidade do ensino.",
-        "A expansão do ensino remoto observada nas instituições educacionais.",
-        "Os investimentos realizados em plataformas digitais e formação tecnológica.",
-        "Os desafios educacionais surgidos em decorrência das transformações tecnológicas.",
-        "As diferentes estratégias implementadas pelas instituições de ensino analisadas."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A expressão resume a ideia de que as medidas adotadas, isoladamente, não garantiam a qualidade educacional.",
-
-    feedbackErro: "Expressões como 'tal constatação' geralmente retomam uma conclusão ou avaliação construída no período anterior.",
-
-    dicaBanca: "Nem sempre o referente é um substantivo. Muitas vezes, o elemento retomado é uma ideia completa."
-
+  texto: `A expansão do ensino remoto durante os últimos anos provocou mudanças significativas nas práticas educacionais. Algumas instituições investiram em plataformas digitais; outras priorizaram a formação tecnológica de seus profissionais. Em muitos casos, entretanto, verificou-se que a simples adoção dessas medidas não era suficiente para garantir a qualidade do processo educativo. Tal constatação levou gestores e pesquisadores a defender abordagens mais integradas para enfrentar os desafios identificados.`,
+  pergunta: "A expressão 'Tal constatação' retoma predominantemente:",
+  alternativas: [
+    "A insuficiência das medidas adotadas para garantir, isoladamente, a qualidade do ensino.",
+    "A expansão do ensino remoto observada nas instituições educacionais.",
+    "Os investimentos realizados em plataformas digitais e formação tecnológica.",
+    "Os desafios educacionais surgidos em decorrência das transformações tecnológicas e das novas formas de organização do ensino.",
+    "As diferentes estratégias implementadas pelas instituições de ensino analisadas.",
+  ],
+  correta: 0,
+  explicacao: "'Tal constatação' encapsula a conclusão anterior de que medidas isoladas não bastam para assegurar a qualidade do ensino.",
+  feedbackAcerto: "Correto. 'Tal constatação' encapsula a conclusão anterior de que medidas isoladas não bastam para assegurar a qualidade do ensino.",
+  feedbackErro: "A resposta correta é: A insuficiência das medidas adotadas para garantir, isoladamente, a qualidade do ensino. 'Tal constatação' encapsula a conclusão anterior de que medidas isoladas não bastam para assegurar a qualidade do ensino.",
+  dicaBanca: "'Tal + substantivo' costuma encapsular uma avaliação, conclusão ou situação já construída no texto.",
 },
 {
-    texto: `Diversos estudos apontam que a leitura frequente favorece o desenvolvimento da capacidade argumentativa. Outros trabalhos destacam seus efeitos positivos sobre o vocabulário e a compreensão textual. Essas evidências têm sido utilizadas para fundamentar políticas de incentivo à leitura em diferentes sistemas educacionais.`,
-
-    pergunta: "A expressão 'Essas evidências' estabelece coesão ao retomar:",
-
-    alternativas: [
-
-        "As políticas públicas de incentivo à leitura implementadas pelos sistemas educacionais.",
-
-        "Os efeitos positivos da leitura mencionados nos estudos apresentados anteriormente.",
-
-        "A capacidade argumentativa desenvolvida pelos leitores mais frequentes.",
-
-        "Os diferentes sistemas educacionais responsáveis pela formulação das políticas.",
-
-        "A compreensão textual observada em estudantes participantes das pesquisas."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. A expressão retoma o conjunto de resultados apresentados pelos estudos mencionados.",
-
-    feedbackErro: "O referente não é apenas um dos benefícios citados, mas o conjunto das evidências produzidas pelas pesquisas.",
-
-    dicaBanca: "Expressões resumitivas frequentemente condensam várias informações anteriores em um único elemento coesivo."
-
+  texto: `Diversos estudos apontam que a leitura frequente favorece o desenvolvimento da capacidade argumentativa. Outros trabalhos destacam seus efeitos positivos sobre o vocabulário e a compreensão textual. Essas evidências têm sido utilizadas para fundamentar políticas de incentivo à leitura em diferentes sistemas educacionais.`,
+  pergunta: "A expressão 'Essas evidências' estabelece coesão ao retomar:",
+  alternativas: [
+    "As políticas públicas de incentivo à leitura implementadas pelos sistemas educacionais.",
+    "Os efeitos positivos da leitura mencionados nos estudos apresentados anteriormente.",
+    "A capacidade argumentativa desenvolvida pelos leitores mais frequentes.",
+    "Os diferentes sistemas educacionais responsáveis pela formulação das políticas.",
+    "A compreensão textual observada em estudantes participantes das pesquisas.",
+  ],
+  correta: 1,
+  explicacao: "'Essas evidências' retoma o conjunto de resultados favoráveis à leitura mencionados nos estudos anteriores.",
+  feedbackAcerto: "Correto. 'Essas evidências' retoma o conjunto de resultados favoráveis à leitura mencionados nos estudos anteriores.",
+  feedbackErro: "A resposta correta é: Os efeitos positivos da leitura mencionados nos estudos apresentados anteriormente. 'Essas evidências' retoma o conjunto de resultados favoráveis à leitura mencionados nos estudos anteriores.",
+  dicaBanca: "Quando o demonstrativo está no plural, verifique se ele recupera uma enumeração ou um conjunto de informações.",
 },
 {
-    texto: `A utilização de energias renováveis tem crescido de forma significativa em diferentes regiões do mundo. Esse movimento decorre tanto da preocupação com questões ambientais quanto da busca por fontes energéticas economicamente sustentáveis. Consequentemente, governos e empresas passaram a ampliar investimentos nesse setor.`,
-
-    pergunta: "O conectivo 'Consequentemente' estabelece, entre os segmentos do texto, uma relação de:",
-
-    alternativas: [
-        "Explicação destinada a justificar um posicionamento previamente apresentado.",
-        "Adição de uma nova informação sem dependência lógica da anterior.",
-        "Resultado decorrente das causas apresentadas anteriormente.",
-        "Contraste entre perspectivas distintas acerca da matriz energética.",
-        "Retificação de uma informação considerada incompleta pelo autor."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. O investimento ampliado surge como consequência das razões apresentadas anteriormente.",
-
-    feedbackErro: "A relação lógica entre os trechos é fundamental para identificar corretamente o valor semântico do conectivo.",
-
-    dicaBanca: "FGV costuma substituir conectivos conhecidos por equivalentes menos frequentes para testar a compreensão contextual."
-
+  texto: `A utilização de energias renováveis tem crescido de forma significativa em diferentes regiões do mundo. Esse movimento decorre tanto da preocupação com questões ambientais quanto da busca por fontes energéticas economicamente sustentáveis. Consequentemente, governos e empresas passaram a ampliar investimentos nesse setor.`,
+  pergunta: "O conectivo 'Consequentemente' estabelece, entre os segmentos do texto, uma relação de:",
+  alternativas: [
+    "Explicação destinada a justificar um posicionamento previamente apresentado.",
+    "Adição de uma nova informação sem dependência lógica da anterior.",
+    "Resultado decorrente das causas apresentadas anteriormente.",
+    "Contraste entre perspectivas distintas acerca da matriz energética.",
+    "Retificação de uma informação considerada incompleta pelo autor.",
+  ],
+  correta: 2,
+  explicacao: "'Consequentemente' introduz um resultado derivado das causas apresentadas: preocupação ambiental e busca por sustentabilidade econômica.",
+  feedbackAcerto: "Correto. 'Consequentemente' introduz um resultado derivado das causas apresentadas: preocupação ambiental e busca por sustentabilidade econômica.",
+  feedbackErro: "A resposta correta é: Resultado decorrente das causas apresentadas anteriormente. 'Consequentemente' introduz um resultado derivado das causas apresentadas: preocupação ambiental e busca por sustentabilidade econômica.",
+  dicaBanca: "Identifique se a informação posterior é causa, consequência, oposição ou simples acréscimo.",
 },
 {
-    texto: `A educação inclusiva exige ações coordenadas envolvendo diferentes agentes sociais. Escolas, famílias, gestores e profissionais especializados desempenham funções complementares nesse processo. Quando um desses elementos deixa de cumprir adequadamente seu papel, os resultados tendem a ser comprometidos. Esse cenário demonstra a importância da atuação articulada entre todos os envolvidos.`,
-
-    pergunta: "No último período, a expressão 'Esse cenário' retoma principalmente:",
-
-    alternativas: [
-        "A educação inclusiva enquanto política pública de acesso e permanência escolar.",
-        "A atuação complementar desempenhada por escolas, famílias e profissionais especializados.",
-        "Os resultados obtidos pelas políticas voltadas à inclusão educacional.",
-        "A situação em que a ausência de articulação compromete os resultados esperados.",
-        "O papel desempenhado pelos gestores no desenvolvimento das ações inclusivas."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A expressão resume a situação descrita imediatamente antes: o comprometimento dos resultados quando falta articulação.",
-
-    feedbackErro: "Nem sempre a retomada refere-se ao tema principal do texto; muitas vezes, refere-se ao conteúdo do período anterior.",
-
-    dicaBanca: "Expressões como 'esse cenário', 'essa situação' e 'esse quadro' costumam encapsular ideias completas."
-
+  texto: `A educação inclusiva exige ações coordenadas envolvendo diferentes agentes sociais. Escolas, famílias, gestores e profissionais especializados desempenham funções complementares nesse processo. Quando um desses elementos deixa de cumprir adequadamente seu papel, os resultados tendem a ser comprometidos. Esse cenário demonstra a importância da atuação articulada entre todos os envolvidos.`,
+  pergunta: "No último período, a expressão 'Esse cenário' retoma principalmente:",
+  alternativas: [
+    "A educação inclusiva enquanto política pública de acesso e permanência escolar.",
+    "A atuação complementar desempenhada por escolas, famílias e profissionais especializados.",
+    "Os resultados obtidos pelas políticas voltadas à inclusão educacional.",
+    "A situação em que a ausência de articulação compromete os resultados esperados.",
+    "O papel desempenhado pelos gestores no desenvolvimento das ações inclusivas.",
+  ],
+  correta: 3,
+  explicacao: "'Esse cenário' retoma a situação em que a falta de articulação entre os agentes compromete os resultados da educação inclusiva.",
+  feedbackAcerto: "Correto. 'Esse cenário' retoma a situação em que a falta de articulação entre os agentes compromete os resultados da educação inclusiva.",
+  feedbackErro: "A resposta correta é: A situação em que a ausência de articulação compromete os resultados esperados. 'Esse cenário' retoma a situação em que a falta de articulação entre os agentes compromete os resultados da educação inclusiva.",
+  dicaBanca: "O referente de uma expressão resumitiva pode ser uma situação inteira, não o tema geral do texto.",
 },
 {
-    texto: `A produção científica depende de investimentos contínuos e de planejamento de longo prazo. Sem esses elementos, muitos projetos encontram dificuldades para atingir seus objetivos. Ainda assim, diversas instituições conseguem produzir resultados relevantes mesmo diante de restrições orçamentárias.`,
-
-    pergunta: "O conectivo 'Ainda assim' estabelece, em relação ao período anterior, uma relação de:",
-
-    alternativas: [
-        "Conclusão construída a partir dos argumentos anteriormente apresentados.",
-        "Explicação que detalha as razões das dificuldades enfrentadas pelos projetos.",
-        "Adição de uma informação complementar ao argumento principal do texto.",
-        "Comparação entre diferentes modelos de financiamento da pesquisa científica.",
-        "Contraste entre uma expectativa lógica e o fato efetivamente observado."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. O conectivo introduz uma ideia que contrasta com a expectativa criada pelo período anterior.",
-
-    feedbackErro: "A banca frequentemente utiliza conectivos concessivos para avaliar a compreensão das relações lógicas do texto.",
-
-    dicaBanca: "Expressões como 'ainda assim', 'mesmo assim', 'apesar disso' e 'não obstante' costumam indicar concessão ou contraste."
+  texto: `A produção científica depende de investimentos contínuos e de planejamento de longo prazo. Sem esses elementos, muitos projetos encontram dificuldades para atingir seus objetivos. Ainda assim, diversas instituições conseguem produzir resultados relevantes mesmo diante de restrições orçamentárias.`,
+  pergunta: "O conectivo 'Ainda assim' estabelece, em relação ao período anterior, uma relação de:",
+  alternativas: [
+    "Conclusão construída a partir dos argumentos anteriormente apresentados.",
+    "Explicação que detalha as razões das dificuldades enfrentadas pelos projetos.",
+    "Adição de uma informação complementar ao argumento principal do texto.",
+    "Comparação entre diferentes modelos de financiamento da pesquisa científica.",
+    "Contraste entre uma expectativa lógica e o fato efetivamente observado.",
+  ],
+  correta: 4,
+  explicacao: "'Ainda assim' introduz uma informação que contraria a expectativa criada pelas dificuldades decorrentes da falta de investimentos e planejamento.",
+  feedbackAcerto: "Correto. 'Ainda assim' introduz uma informação que contraria a expectativa criada pelas dificuldades decorrentes da falta de investimentos e planejamento.",
+  feedbackErro: "A resposta correta é: Contraste entre uma expectativa lógica e o fato efetivamente observado. 'Ainda assim' introduz uma informação que contraria a expectativa criada pelas dificuldades decorrentes da falta de investimentos e planejamento.",
+  dicaBanca: "Conectores concessivos marcam quebra de expectativa entre duas informações compatíveis com o contexto.",
 },
 {
-    texto: `A implementação de políticas públicas voltadas à primeira infância tem recebido crescente atenção de pesquisadores e gestores. Estudos indicam que investimentos realizados nos primeiros anos de vida produzem impactos duradouros sobre o desenvolvimento cognitivo, social e emocional. Com base nessas evidências, diversos países ampliaram programas direcionados a esse público. Tal iniciativa tem sido apontada como estratégica para a redução de desigualdades ao longo da vida.`,
-
-    pergunta: "A expressão 'Tal iniciativa' retoma predominantemente:",
-
-    alternativas: [
-        "A ampliação de programas voltados à primeira infância fundamentada em evidências científicas.",
-        "Os impactos duradouros observados no desenvolvimento infantil ao longo dos anos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "A atenção crescente dedicada por pesquisadores ao tema da infância, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "A redução das desigualdades sociais observada em diferentes países, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "Os investimentos realizados nos primeiros anos de vida das crianças, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A expressão retoma especificamente a ampliação dos programas direcionados à primeira infância.",
-
-    feedbackErro: "Nem sempre o referente corresponde ao tema central do texto; muitas vezes, refere-se à ação imediatamente anterior.",
-
-    dicaBanca: "Expressões encapsuladoras costumam resumir acontecimentos ou medidas apresentadas no período anterior."
-
+  texto: `A implementação de políticas públicas voltadas à primeira infância tem recebido crescente atenção de pesquisadores e gestores. Estudos indicam que investimentos realizados nos primeiros anos de vida produzem impactos duradouros sobre o desenvolvimento cognitivo, social e emocional. Com base nessas evidências, diversos países ampliaram programas direcionados a esse público. Tal iniciativa tem sido apontada como estratégica para a redução de desigualdades ao longo da vida.`,
+  pergunta: "A expressão 'Tal iniciativa' retoma predominantemente:",
+  alternativas: [
+    "A ampliação de programas voltados à primeira infância fundamentada em evidências científicas.",
+    "Os impactos duradouros observados no desenvolvimento infantil ao longo dos anos e sua relação com diferentes condições sociais.",
+    "A atenção crescente dedicada por pesquisadores ao tema da primeira infância.",
+    "A redução das desigualdades sociais observada em diferentes países.",
+    "Os investimentos realizados nos primeiros anos de vida das crianças.",
+  ],
+  correta: 0,
+  explicacao: "'Tal iniciativa' retoma a ampliação de programas voltados à primeira infância, apresentada no período imediatamente anterior.",
+  feedbackAcerto: "Correto. 'Tal iniciativa' retoma a ampliação de programas voltados à primeira infância, apresentada no período imediatamente anterior.",
+  feedbackErro: "A resposta correta é: A ampliação de programas voltados à primeira infância fundamentada em evidências científicas. 'Tal iniciativa' retoma a ampliação de programas voltados à primeira infância, apresentada no período imediatamente anterior.",
+  dicaBanca: "Procure a ação imediatamente anterior que pode ser nomeada por 'iniciativa'.",
 },
 {
-    texto: `A formação de leitores envolve múltiplos fatores. O acesso a livros é importante, mas não suficiente. A mediação realizada por professores e familiares também desempenha papel relevante nesse processo. Além disso, ambientes que valorizam práticas de leitura tendem a estimular maior interesse dos estudantes.`,
-
-    pergunta: "O conectivo 'Além disso' estabelece uma relação de:",
-
-    alternativas: [
-        "Retificação de uma ideia considerada insuficiente pelo autor.",
-        "Acrescentamento de um novo argumento ao raciocínio desenvolvido.",
-        "Conclusão derivada dos argumentos apresentados anteriormente.",
-        "Contraste entre diferentes perspectivas sobre a formação de leitores.",
-        "Explicação destinada a justificar a relevância da mediação familiar."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. O conectivo introduz mais um argumento favorável à formação de leitores.",
-
-    feedbackErro: "Em textos argumentativos, conectivos aditivos costumam ampliar o conjunto de razões apresentadas pelo autor.",
-
-    dicaBanca: "A banca pode substituir conectivos simples por estruturas mais complexas, mas a relação semântica permanece a mesma."
-
+  texto: `A formação de leitores envolve múltiplos fatores. O acesso a livros é importante, mas não suficiente. A mediação realizada por professores e familiares também desempenha papel relevante nesse processo. Além disso, ambientes que valorizam práticas de leitura tendem a estimular maior interesse dos estudantes.`,
+  pergunta: "O conectivo 'Além disso' estabelece uma relação de:",
+  alternativas: [
+    "Retificação de uma ideia considerada insuficiente pelo autor.",
+    "Acrescentamento de um novo argumento ao raciocínio desenvolvido.",
+    "Conclusão derivada dos argumentos apresentados anteriormente.",
+    "Contraste entre diferentes perspectivas sobre a formação de leitores.",
+    "Explicação destinada a justificar a relevância da mediação familiar.",
+  ],
+  correta: 1,
+  explicacao: "'Além disso' acrescenta um novo argumento ao conjunto de fatores que favorecem a formação de leitores.",
+  feedbackAcerto: "Correto. 'Além disso' acrescenta um novo argumento ao conjunto de fatores que favorecem a formação de leitores.",
+  feedbackErro: "A resposta correta é: Acrescentamento de um novo argumento ao raciocínio desenvolvido. 'Além disso' acrescenta um novo argumento ao conjunto de fatores que favorecem a formação de leitores.",
+  dicaBanca: "Conectores aditivos ampliam o raciocínio sem mudar a orientação argumentativa.",
 },
 {
-    texto: `O acesso à informação foi ampliado significativamente pelas tecnologias digitais. Entretanto, pesquisadores alertam que a disponibilidade de conteúdo não garante, por si só, a construção de conhecimento. Para que isso ocorra, é necessário desenvolver habilidades relacionadas à análise crítica e à seleção de fontes confiáveis.`,
-
-    pergunta: "O pronome demonstrativo 'isso', no último período, retoma:",
-
-    alternativas: [
-
-        "A ampliação do acesso à informação proporcionada pelas tecnologias digitais.",
-
-        "A disponibilidade de conteúdos em ambientes digitais.",
-
-        "A construção efetiva de conhecimento pelos indivíduos.",
-
-        "A análise crítica das informações disponíveis na internet.",
-
-        "A seleção de fontes consideradas confiáveis pelos pesquisadores."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. O pronome retoma a ideia de construção de conhecimento mencionada imediatamente antes.",
-
-    feedbackErro: "Demonstrativos como 'isso' frequentemente retomam processos ou situações inteiras, e não apenas substantivos isolados.",
-
-    dicaBanca: "Leia a frase seguinte substituindo 'isso' pelas alternativas. A que mantiver o sentido lógico costuma ser a correta."
-
+  texto: `O acesso à informação foi ampliado significativamente pelas tecnologias digitais. Entretanto, pesquisadores alertam que a disponibilidade de conteúdo não garante, por si só, a construção de conhecimento. Para que isso ocorra, é necessário desenvolver habilidades relacionadas à análise crítica e à seleção de fontes confiáveis.`,
+  pergunta: "O pronome demonstrativo 'isso', no último período, retoma:",
+  alternativas: [
+    "A ampliação do acesso à informação proporcionada pelas tecnologias digitais.",
+    "A disponibilidade de conteúdos em ambientes digitais.",
+    "A construção efetiva de conhecimento pelos indivíduos.",
+    "A análise crítica das informações disponíveis na internet.",
+    "A seleção de fontes consideradas confiáveis pelos pesquisadores.",
+  ],
+  correta: 2,
+  explicacao: "O demonstrativo 'isso' retoma a construção efetiva de conhecimento, processo que depende de análise crítica e seleção de fontes confiáveis.",
+  feedbackAcerto: "Correto. O demonstrativo 'isso' retoma a construção efetiva de conhecimento, processo que depende de análise crítica e seleção de fontes confiáveis.",
+  feedbackErro: "A resposta correta é: A construção efetiva de conhecimento pelos indivíduos. O demonstrativo 'isso' retoma a construção efetiva de conhecimento, processo que depende de análise crítica e seleção de fontes confiáveis.",
+  dicaBanca: "Demonstrativos neutros como 'isso' frequentemente retomam processos, fatos ou proposições inteiras.",
 },
 {
-    texto: `Diversos municípios investiram na revitalização de áreas verdes urbanas. Essas intervenções contribuíram para melhorar a qualidade ambiental e ampliar espaços de convivência. Apesar dos resultados positivos observados, especialistas destacam a necessidade de manutenção permanente dessas áreas. Caso contrário, parte dos benefícios obtidos poderá ser perdida ao longo do tempo.`,
-
-    pergunta: "A expressão 'Caso contrário' estabelece uma relação semântica de:",
-
-    alternativas: [
-        "Conclusão construída a partir dos benefícios observados.",
-        "Explicação destinada a justificar os investimentos realizados.",
-        "Comparação entre diferentes modelos de gestão ambiental.",
-        "Condição associada à ocorrência de uma consequência futura.",
-        "Adição de uma nova informação relacionada às áreas verdes."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. O conectivo introduz uma condição cuja não observância pode gerar determinada consequência.",
-
-    feedbackErro: "A compreensão do valor semântico dos conectores depende da relação lógica estabelecida entre os segmentos.",
-
-    dicaBanca: "Conectivos condicionais nem sempre aparecem apenas como 'se'. Expressões equivalentes também são bastante cobradas."
-
+  texto: `Diversos municípios investiram na revitalização de áreas verdes urbanas. Essas intervenções contribuíram para melhorar a qualidade ambiental e ampliar espaços de convivência. Apesar dos resultados positivos observados, especialistas destacam a necessidade de manutenção permanente dessas áreas. Caso contrário, parte dos benefícios obtidos poderá ser perdida ao longo do tempo.`,
+  pergunta: "A expressão 'Caso contrário' estabelece uma relação semântica de:",
+  alternativas: [
+    "Conclusão construída a partir dos benefícios observados.",
+    "Explicação destinada a justificar os investimentos realizados.",
+    "Comparação entre diferentes modelos de gestão ambiental.",
+    "Condição associada à ocorrência de uma consequência futura.",
+    "Adição de uma nova informação relacionada às áreas verdes.",
+  ],
+  correta: 3,
+  explicacao: "'Caso contrário' introduz a condição negativa: se não houver manutenção permanente, parte dos benefícios poderá ser perdida.",
+  feedbackAcerto: "Correto. 'Caso contrário' introduz a condição negativa: se não houver manutenção permanente, parte dos benefícios poderá ser perdida.",
+  feedbackErro: "A resposta correta é: Condição associada à ocorrência de uma consequência futura. 'Caso contrário' introduz a condição negativa: se não houver manutenção permanente, parte dos benefícios poderá ser perdida.",
+  dicaBanca: "Expressões condicionais podem aparecer sem a conjunção 'se'; observe a relação entre hipótese e resultado.",
 },
 {
-    texto: `A pesquisa científica exige tempo, recursos e planejamento. Muitos resultados relevantes são alcançados apenas após anos de investigação sistemática. Essa característica frequentemente entra em conflito com expectativas que demandam soluções imediatas para problemas complexos. Ainda assim, especialistas defendem a importância de manter investimentos contínuos na produção do conhecimento.`,
-
-    pergunta: "A expressão 'Essa característica' retoma predominantemente:",
-
-    alternativas: [
-        "A necessidade de recursos financeiros para o desenvolvimento de pesquisas.",
-        "A produção de resultados considerados relevantes pela comunidade científica.",
-        "As expectativas sociais relacionadas à solução de problemas complexos.",
-        "A importância dos investimentos destinados à produção do conhecimento.",
-        "O fato de muitas investigações exigirem longos períodos para gerar resultados."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. A expressão resume a ideia apresentada no período anterior: o longo tempo necessário para obtenção de resultados.",
-
-    feedbackErro: "A coesão referencial frequentemente ocorre por meio de expressões que sintetizam informações previamente desenvolvidas.",
-
-    dicaBanca: "Ao encontrar expressões como 'essa característica', procure identificar qual aspecto específico foi descrito imediatamente antes."
+  texto: `A pesquisa científica exige tempo, recursos e planejamento. Muitos resultados relevantes são alcançados apenas após anos de investigação sistemática. Essa característica frequentemente entra em conflito com expectativas que demandam soluções imediatas para problemas complexos. Ainda assim, especialistas defendem a importância de manter investimentos contínuos na produção do conhecimento.`,
+  pergunta: "A expressão 'Essa característica' retoma predominantemente:",
+  alternativas: [
+    "A necessidade de recursos financeiros para o desenvolvimento de pesquisas.",
+    "A produção de resultados considerados relevantes pela comunidade científica em diferentes áreas de investigação.",
+    "As expectativas sociais relacionadas à solução de problemas complexos.",
+    "A importância dos investimentos destinados à produção do conhecimento.",
+    "O fato de muitas investigações exigirem longos períodos para gerar resultados.",
+  ],
+  correta: 4,
+  explicacao: "'Essa característica' encapsula o fato de muitas pesquisas exigirem longo tempo até produzir resultados relevantes.",
+  feedbackAcerto: "Correto. 'Essa característica' encapsula o fato de muitas pesquisas exigirem longo tempo até produzir resultados relevantes.",
+  feedbackErro: "A resposta correta é: O fato de muitas investigações exigirem longos períodos para gerar resultados. 'Essa característica' encapsula o fato de muitas pesquisas exigirem longo tempo até produzir resultados relevantes.",
+  dicaBanca: "Ao encontrar 'essa característica', identifique qual propriedade foi descrita no período anterior.",
 },
 {
-    texto: `A democratização do acesso à internet ampliou significativamente as possibilidades de obtenção de informações. Contudo, especialistas alertam que a abundância de conteúdos disponíveis exige dos usuários competências relacionadas à avaliação crítica das fontes consultadas. Sem essas competências, cresce o risco de disseminação de informações incorretas. Esse problema tem sido apontado como um dos principais desafios da sociedade contemporânea.`,
-
-    pergunta: "A expressão 'Esse problema' retoma predominantemente:",
-
-    alternativas: [
-        "O risco de propagação de informações incorretas decorrente da ausência de avaliação crítica.",
-        "A ampliação do acesso à internet observada nas últimas décadas, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "A existência de múltiplas fontes de informação disponíveis aos usuários, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "A dificuldade de obtenção de conteúdos em ambientes digitais, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "As transformações sociais provocadas pelo avanço das tecnologias de comunicação, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A expressão sintetiza a ideia imediatamente anterior relacionada à disseminação de informações incorretas.",
-
-    feedbackErro: "Nem sempre o referente corresponde ao tema geral do texto; frequentemente ele está concentrado no período anterior.",
-
-    dicaBanca: "Expressões resumitivas costumam encapsular uma consequência ou situação recém-apresentada."
-
+  texto: `A diretora apresentou o novo projeto à comunidade escolar. Ela destacou que a proposta seria avaliada ao final do semestre.`,
+  pergunta: "O pronome 'Ela' contribui para a coesão porque:",
+  alternativas: [
+    "retoma anaforicamente 'a diretora', evitando a repetição do referente.",
+    "antecipa cataforicamente a expressão 'a proposta', apresentada depois.",
+    "substitui o referente por um termo de sentido mais geral e avaliativo.",
+    "elimina um verbo recuperável no contexto e produz um caso de zeugma.",
+    "estabelece uma relação de conclusão entre os dois períodos do texto.",
+  ],
+  correta: 0,
+  explicacao: "'Ela' retoma um referente já apresentado, 'a diretora'; por isso, realiza coesão referencial anafórica.",
+  feedbackAcerto: "Correto. 'Ela' retoma um referente já apresentado, 'a diretora'; por isso, realiza coesão referencial anafórica.",
+  feedbackErro: "A resposta correta é: retoma anaforicamente 'a diretora', evitando a repetição do referente. 'Ela' retoma um referente já apresentado, 'a diretora'; por isso, realiza coesão referencial anafórica.",
+  dicaBanca: "Anáfora olha para trás: localize o termo anterior compatível com o pronome.",
 },
 {
-    texto: `A preservação do patrimônio histórico depende de diferentes estratégias de proteção. Algumas delas envolvem investimentos públicos; outras, ações de conscientização voltadas à população. Embora apresentem características distintas, ambas contribuem para a valorização da memória coletiva. Dessa forma, sua implementação conjunta tende a produzir resultados mais abrangentes.`,
-
-    pergunta: "O pronome possessivo 'sua', no último período, refere-se principalmente a:",
-
-    alternativas: [
-        "Valorização da memória coletiva.",
-        "Implementação conjunta das estratégias de proteção mencionadas.",
-        "População envolvida nas ações de conscientização.",
-        "Características distintas das medidas adotadas.",
-        "Preservação do patrimônio histórico realizada pelos órgãos públicos."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. O pronome retoma a implementação conjunta das estratégias apresentadas anteriormente.",
-
-    feedbackErro: "A interpretação correta depende da identificação do referente mais compatível semanticamente com o contexto.",
-
-    dicaBanca: "Pronomes possessivos podem retomar ideias completas, e não apenas substantivos isolados."
-
+  texto: `Isto preocupava a equipe: a possibilidade de interrupção do atendimento durante a reforma.`,
+  pergunta: "No trecho, o demonstrativo 'Isto' exerce função coesiva de:",
+  alternativas: [
+    "anáfora, porque recupera uma expressão já mencionada no período anterior.",
+    "catáfora, porque antecipa a informação explicitada depois dos dois-pontos.",
+    "elipse, porque omite uma informação verbal facilmente recuperável.",
+    "substituição lexical, porque troca um nome por outro de sentido equivalente.",
+    "coesão sequencial, porque introduz uma relação de causa entre orações.",
+  ],
+  correta: 1,
+  explicacao: "'Isto' aparece antes do conteúdo que especifica seu referente; trata-se de referenciação catafórica.",
+  feedbackAcerto: "Correto. 'Isto' aparece antes do conteúdo que especifica seu referente; trata-se de referenciação catafórica.",
+  feedbackErro: "A resposta correta é: catáfora, porque antecipa a informação explicitada depois dos dois-pontos. 'Isto' aparece antes do conteúdo que especifica seu referente; trata-se de referenciação catafórica.",
+  dicaBanca: "Catáfora aponta para a frente: o referente aparece depois do elemento que o anuncia.",
 },
 {
-    texto: `Pesquisadores analisaram os impactos da urbanização sobre os recursos hídricos de determinada região. Os resultados indicaram aumento da impermeabilização do solo e redução da capacidade de infiltração da água. Consequentemente, observou-se maior ocorrência de enchentes em períodos de chuva intensa.`,
-
-    pergunta: "A relação estabelecida pelo conectivo 'Consequentemente' pode ser classificada como:",
-
-    alternativas: [
-        "Explicação de uma informação apresentada anteriormente.",
-        "Adição de um argumento complementar à análise realizada.",
-        "Conclusão lógica derivada dos fatores descritos no texto.",
-        "Contraposição entre causas naturais e ações humanas.",
-        "Retificação de resultados obtidos durante a pesquisa."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. O aumento das enchentes é apresentado como resultado dos fatores anteriormente mencionados.",
-
-    feedbackErro: "Observe se a informação posterior decorre logicamente da anterior ou apenas a complementa.",
-
-    dicaBanca: "Questões difíceis costumam cobrar o valor semântico do conectivo dentro do contexto e não isoladamente."
-
+  texto: `Na reunião, alguns professores defenderam a ampliação do projeto; outros, sua reformulação completa.`,
+  pergunta: "A coesão do segundo segmento depende da recuperação do verbo:",
+  alternativas: [
+    "ampliaram, subentendido por concordância com 'outros'.",
+    "reformularam, inferido pelo substantivo 'reformulação' empregado no mesmo segmento.",
+    "defenderam, omitido porque pode ser recuperado no contexto.",
+    "participaram, pressuposto pela realização da reunião.",
+    "avaliaram, sugerido pela oposição entre os dois grupos.",
+  ],
+  correta: 2,
+  explicacao: "No segundo segmento, omite-se 'defenderam': 'outros [defenderam] sua reformulação completa'. A omissão é recuperável pelo contexto.",
+  feedbackAcerto: "Correto. No segundo segmento, omite-se 'defenderam': 'outros [defenderam] sua reformulação completa'. A omissão é recuperável pelo contexto.",
+  feedbackErro: "A resposta correta é: defenderam, omitido porque pode ser recuperado no contexto. No segundo segmento, omite-se 'defenderam': 'outros [defenderam] sua reformulação completa'. A omissão é recuperável pelo contexto.",
+  dicaBanca: "Em elipse, procure o termo ausente que precisa ser mentalmente recuperado para completar a estrutura.",
 },
 {
-    texto: `O desenvolvimento sustentável pressupõe equilíbrio entre crescimento econômico, preservação ambiental e inclusão social. Quando uma dessas dimensões é negligenciada, surgem dificuldades para alcançar os objetivos propostos. Tal desequilíbrio pode comprometer resultados que, em princípio, seriam benéficos para toda a sociedade.`,
-
-    pergunta: "A expressão 'Tal desequilíbrio' retoma:",
-
-    alternativas: [
-
-        "O desenvolvimento sustentável enquanto modelo de organização social.",
-
-        "A inclusão social defendida pelos estudiosos do tema.",
-
-        "A dificuldade de alcançar objetivos considerados benéficos à sociedade.",
-
-        "A negligência de uma das dimensões necessárias ao desenvolvimento sustentável.",
-
-        "O crescimento econômico associado às políticas de preservação ambiental."
-
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A expressão resume a situação descrita no período anterior: a negligência de uma das dimensões fundamentais.",
-
-    feedbackErro: "Expressões como 'tal desequilíbrio' geralmente retomam um estado ou situação recém-apresentado no texto.",
-
-    dicaBanca: "Leia a expressão resumitiva e pergunte-se: qual situação específica ela está nomeando?"
-
+  texto: `Os estudantes preferiram o debate; os professores, a exposição inicial.`,
+  pergunta: "A omissão do verbo no segundo segmento é classificada mais especificamente como:",
+  alternativas: [
+    "catáfora, pois o verbo omitido será apresentado posteriormente.",
+    "anáfora pronominal, pois um pronome retoma a primeira oração.",
+    "substituição nominal, pois um substantivo ocupa o lugar do verbo.",
+    "zeugma, pois se omite um termo já expresso anteriormente.",
+    "coesão lexical por hiperonímia, pois um termo geral engloba outro.",
+  ],
+  correta: 3,
+  explicacao: "O verbo 'preferiram', já expresso na primeira oração, é omitido na segunda; essa elipse de termo anteriormente mencionado é zeugma.",
+  feedbackAcerto: "Correto. O verbo 'preferiram', já expresso na primeira oração, é omitido na segunda; essa elipse de termo anteriormente mencionado é zeugma.",
+  feedbackErro: "A resposta correta é: zeugma, pois se omite um termo já expresso anteriormente. O verbo 'preferiram', já expresso na primeira oração, é omitido na segunda; essa elipse de termo anteriormente mencionado é zeugma.",
+  dicaBanca: "Todo zeugma é uma elipse, mas no zeugma o termo omitido já apareceu no texto.",
 },
 {
-    texto: `A leitura de textos científicos exige atenção a conceitos especializados, relações lógicas e evidências apresentadas pelos autores. Além disso, requer a capacidade de avaliar criticamente argumentos e metodologias. Por essa razão, muitos estudantes encontram dificuldades iniciais ao ingressar em cursos que demandam intensa atividade acadêmica.`,
-
-    pergunta: "A expressão 'Por essa razão' estabelece relação de:",
-
-    alternativas: [
-        "Adição de uma nova informação relacionada ao tema principal.",
-        "Explicação destinada a justificar uma afirmação secundária do texto.",
-        "Contraste entre diferentes formas de leitura acadêmica.",
-        "Comparação entre estudantes experientes e iniciantes.",
-        "Conclusão construída a partir dos argumentos anteriormente desenvolvidos."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. O último período apresenta uma conclusão derivada das exigências descritas anteriormente.",
-
-    feedbackErro: "Conectivos conclusivos costumam introduzir efeitos ou deduções resultantes das ideias previamente apresentadas.",
-
-    dicaBanca: "Em textos argumentativos, identifique se o autor está acrescentando, explicando, contrastando ou concluindo uma ideia."
+  texto: `A prefeitura inaugurou uma biblioteca de bairro. O equipamento funcionará também aos fins de semana.`,
+  pergunta: "A expressão 'O equipamento' estabelece coesão lexical porque:",
+  alternativas: [
+    "repete literalmente o substantivo 'biblioteca', reforçando sua forma gráfica e mantendo idêntica a expressão de referência.",
+    "introduz um referente novo sem relação com o anterior.",
+    "antecipa uma informação que será identificada no período seguinte.",
+    "substitui 'biblioteca' por um termo de sentido mais específico e restrito.",
+    "retoma 'biblioteca' por meio de um termo mais geral, funcionando como hiperônimo contextual.",
+  ],
+  correta: 4,
+  explicacao: "'Equipamento' é empregado como termo mais geral para retomar 'biblioteca' no contexto, evitando repetição e mantendo a cadeia referencial.",
+  feedbackAcerto: "Correto. 'Equipamento' é empregado como termo mais geral para retomar 'biblioteca' no contexto, evitando repetição e mantendo a cadeia referencial.",
+  feedbackErro: "A resposta correta é: retoma 'biblioteca' por meio de um termo mais geral, funcionando como hiperônimo contextual. 'Equipamento' é empregado como termo mais geral para retomar 'biblioteca' no contexto, evitando repetição e mantendo a cadeia referencial.",
+  dicaBanca: "Na coesão lexical, verifique se a retomada usa repetição, sinônimo, hiperônimo ou expressão descritiva.",
 },
 {
-    texto: `Diversos estudos têm demonstrado a importância da educação financeira desde os primeiros anos de escolarização. Segundo os pesquisadores, o desenvolvimento de conhecimentos relacionados ao planejamento, ao consumo consciente e à tomada de decisões econômicas favorece a formação de cidadãos mais preparados para lidar com desafios cotidianos. Essa perspectiva tem motivado a inclusão gradual do tema em diferentes propostas curriculares.`,
-
-    pergunta: "A expressão 'Essa perspectiva' retoma predominantemente:",
-
-    alternativas: [
-        "A importância atribuída à educação financeira na formação dos estudantes.",
-        "A formação de cidadãos capazes de enfrentar desafios econômicos cotidianos.",
-        "A inclusão gradual da educação financeira nos currículos escolares.",
-        "Os desafios enfrentados pelas propostas curriculares contemporâneas.",
-        "O desenvolvimento de competências relacionadas ao consumo consciente."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A expressão resume a visão apresentada anteriormente acerca da relevância da educação financeira.",
-
-    feedbackErro: "A retomada não se refere apenas a um elemento isolado, mas a uma ideia mais ampla construída ao longo do texto.",
-
-    dicaBanca: "Expressões como 'essa perspectiva', 'essa visão' e 'esse entendimento' costumam sintetizar posicionamentos desenvolvidos anteriormente."
-
+  texto: `Foram adquiridos notebooks, projetores e impressoras para as escolas. Os equipamentos serão distribuídos conforme a demanda de cada unidade.`,
+  pergunta: "A expressão 'Os equipamentos' contribui para a coesão por meio de:",
+  alternativas: [
+    "hiperonímia, pois reúne em uma categoria mais ampla os itens enumerados antes.",
+    "hiponímia, pois apresenta exemplos mais específicos de um termo geral posterior.",
+    "antonímia, pois estabelece oposição entre os objetos citados e sua categoria.",
+    "catáfora, pois antecipa os itens que serão apresentados em seguida.",
+    "elipse, pois omite os nomes dos objetos sem criar um novo termo de retomada.",
+  ],
+  correta: 0,
+  explicacao: "'Equipamentos' é hiperônimo de notebooks, projetores e impressoras e retoma o conjunto de modo coesivo.",
+  feedbackAcerto: "Correto. 'Equipamentos' é hiperônimo de notebooks, projetores e impressoras e retoma o conjunto de modo coesivo.",
+  feedbackErro: "A resposta correta é: hiperonímia, pois reúne em uma categoria mais ampla os itens enumerados antes. 'Equipamentos' é hiperônimo de notebooks, projetores e impressoras e retoma o conjunto de modo coesivo.",
+  dicaBanca: "Hiperônimo é o termo de sentido mais abrangente que pode englobar itens específicos.",
 },
 {
-    texto: `A utilização de metodologias ativas tem se expandido em diferentes níveis de ensino. Tais metodologias procuram ampliar a participação dos estudantes no processo de aprendizagem e estimular o desenvolvimento da autonomia intelectual. Apesar dos benefícios apontados por pesquisadores, sua implementação exige planejamento cuidadoso e formação adequada dos docentes.`,
-
-    pergunta: "O pronome possessivo 'sua', no último período, refere-se principalmente a:",
-
-    alternativas: [
-        "Participação dos estudantes no processo educativo.",
-        "Implementação das metodologias ativas nas instituições educacionais.",
-        "Autonomia intelectual desenvolvida pelos alunos.",
-        "Expansão das metodologias ativas em diferentes níveis de ensino.",
-        "Formação adequada dos docentes responsáveis pelas atividades."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. O pronome refere-se à implementação das metodologias ativas mencionadas anteriormente.",
-
-    feedbackErro: "A interpretação exige identificar qual elemento pode, semanticamente, ser implementado.",
-
-    dicaBanca: "Verifique se o termo retomado mantém compatibilidade lógica com o verbo utilizado."
-
+  texto: `O projeto foi aprovado após longa discussão. O projeto receberá recursos no próximo mês. O projeto será acompanhado por uma comissão independente.`,
+  pergunta: "Para reduzir a repetição sem prejudicar a referenciação, a melhor reescrita do segundo e do terceiro períodos é:",
+  alternativas: [
+    "Ele receberá recursos no próximo mês. Aquela comissão acompanhará uma iniciativa diferente.",
+    "A iniciativa receberá recursos no próximo mês e será acompanhada por uma comissão independente.",
+    "Esse assunto receberá recursos no próximo mês, enquanto o debate será acompanhado pela comissão.",
+    "O documento receberá recursos no próximo mês, e a discussão será acompanhada por uma comissão.",
+    "A aprovação receberá recursos no próximo mês e acompanhará uma comissão independente.",
+  ],
+  correta: 1,
+  explicacao: "'A iniciativa' mantém o referente de 'o projeto' e permite continuidade referencial sem repetição excessiva nem troca indevida de sentido.",
+  feedbackAcerto: "Correto. 'A iniciativa' mantém o referente de 'o projeto' e permite continuidade referencial sem repetição excessiva nem troca indevida de sentido.",
+  feedbackErro: "A resposta correta é: A iniciativa receberá recursos no próximo mês e será acompanhada por uma comissão independente. 'A iniciativa' mantém o referente de 'o projeto' e permite continuidade referencial sem repetição excessiva nem troca indevida de sentido.",
+  dicaBanca: "Uma substituição coesiva precisa preservar o referente e permanecer semanticamente compatível com o contexto.",
 },
 {
-    texto: `O avanço das tecnologias de comunicação permitiu ampliar o acesso à informação em escala global. Entretanto, especialistas observam que a velocidade com que conteúdos circulam nas redes digitais também favorece a propagação de informações imprecisas. Ainda assim, muitos pesquisadores defendem que os benefícios proporcionados por essas tecnologias superam seus riscos, desde que os usuários desenvolvam competências críticas para avaliar as fontes consultadas.`,
-
-    pergunta: "A expressão 'Ainda assim' estabelece uma relação de:",
-
-    alternativas: [
-
-        "Adição de uma nova informação compatível com a ideia anterior.",
-
-        "Conclusão derivada dos argumentos apresentados anteriormente.",
-
-        "Contraste entre uma expectativa criada e a posição assumida em seguida.",
-
-        "Explicação destinada a justificar a circulação de conteúdos digitais.",
-
-        "Comparação entre benefícios e prejuízos decorrentes da tecnologia."
-
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. O conectivo introduz uma ideia que contrasta com a expectativa gerada pelo período anterior.",
-
-    feedbackErro: "O texto reconhece um problema, mas logo apresenta uma avaliação que relativiza esse aspecto.",
-
-    dicaBanca: "Expressões concessivas costumam introduzir ideias que rompem parcialmente uma expectativa construída antes."
-
+  texto: `A escola implantou um laboratório de ciências. No primeiro mês, os estudantes conheceram os equipamentos. Depois, realizaram experimentos orientados. Ao final do semestre, apresentaram os resultados à comunidade.`,
+  pergunta: "A progressão textual do trecho ocorre principalmente porque:",
+  alternativas: [
+    "cada período repete a mesma informação com palavras diferentes, sem acrescentar conteúdo novo ao tema discutido.",
+    "o texto abandona o tema inicial e passa a tratar de assuntos independentes entre si.",
+    "as informações avançam em sequência temporal, acrescentando novas etapas ligadas ao mesmo tema.",
+    "os conectores eliminam a necessidade de manter um referente comum entre os períodos.",
+    "a organização depende de oposição constante entre fatos anteriores e posteriores.",
+  ],
+  correta: 2,
+  explicacao: "O texto mantém o laboratório como eixo temático e acrescenta etapas sucessivas, marcadas temporalmente, o que produz continuidade e avanço informacional.",
+  feedbackAcerto: "Correto. O texto mantém o laboratório como eixo temático e acrescenta etapas sucessivas, marcadas temporalmente, o que produz continuidade e avanço informacional.",
+  feedbackErro: "A resposta correta é: as informações avançam em sequência temporal, acrescentando novas etapas ligadas ao mesmo tema. O texto mantém o laboratório como eixo temático e acrescenta etapas sucessivas, marcadas temporalmente, o que produz continuidade e avanço informacional.",
+  dicaBanca: "Progressão temática combina continuidade do assunto com entrada de informação nova.",
 },
 {
-    texto: `A preservação da biodiversidade depende da adoção de diferentes medidas ambientais. Entre elas, destacam-se a proteção de ecossistemas naturais, o combate ao desmatamento ilegal e o incentivo a práticas produtivas sustentáveis. Essas ações contribuem para a manutenção do equilíbrio ecológico e para a conservação de espécies ameaçadas.`,
-
-    pergunta: "A expressão 'Essas ações' retoma:",
-
-    alternativas: [
-
-        "A preservação da biodiversidade em escala global.",
-
-        "A manutenção do equilíbrio ecológico observada em diferentes regiões.",
-
-        "As espécies ameaçadas de extinção mencionadas no texto.",
-
-        "O conjunto de medidas ambientais apresentadas no período anterior.",
-
-        "As práticas produtivas sustentáveis desenvolvidas pelos setores econômicos."
-
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A expressão retoma o conjunto de medidas ambientais enumeradas anteriormente.",
-
-    feedbackErro: "Nem toda retomada refere-se ao tema principal; muitas vezes ela resume uma enumeração específica.",
-
-    dicaBanca: "Expressões demonstrativas frequentemente encapsulam listas ou conjuntos de elementos apresentados anteriormente."
-
+  texto: `O diretor comunicou ao coordenador que seu relatório precisava de ajustes.`,
+  pergunta: "O principal problema de coesão referencial desse enunciado é:",
+  alternativas: [
+    "o uso de um verbo dicendi sem complemento explícito.",
+    "a repetição desnecessária de dois cargos administrativos próximos.",
+    "a ausência de um conectivo conclusivo entre as duas orações.",
+    "a ambiguidade do possessivo 'seu', que pode remeter ao diretor ou ao coordenador.",
+    "a presença de um pronome possessivo que antecipa necessariamente um referente posterior.",
+  ],
+  correta: 3,
+  explicacao: "'Seu' pode referir-se tanto ao diretor quanto ao coordenador; sem informação adicional, a cadeia referencial fica ambígua.",
+  feedbackAcerto: "Correto. 'Seu' pode referir-se tanto ao diretor quanto ao coordenador; sem informação adicional, a cadeia referencial fica ambígua.",
+  feedbackErro: "A resposta correta é: a ambiguidade do possessivo 'seu', que pode remeter ao diretor ou ao coordenador. 'Seu' pode referir-se tanto ao diretor quanto ao coordenador; sem informação adicional, a cadeia referencial fica ambígua.",
+  dicaBanca: "Possessivos de terceira pessoa merecem atenção quando há mais de um antecedente compatível.",
 },
 {
-    texto: `A leitura crítica de informações tornou-se uma habilidade cada vez mais valorizada em sociedades marcadas pela intensa circulação de conteúdos digitais. Isso ocorre porque a disponibilidade de dados não garante, por si só, a qualidade das interpretações construídas pelos indivíduos. Desse modo, programas educacionais voltados ao desenvolvimento do pensamento crítico têm recebido crescente atenção de pesquisadores e gestores.`,
-
-    pergunta: "A expressão 'Desse modo' estabelece uma relação de:",
-
-    alternativas: [
-        "Explicação destinada a esclarecer uma afirmação já realizada.",
-        "Contraste entre duas perspectivas relacionadas à educação.",
-        "Adição de uma nova evidência ao raciocínio desenvolvido.",
-        "Retificação de uma informação considerada insuficiente.",
-        "Conclusão fundamentada nas informações apresentadas anteriormente."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. O conectivo introduz uma conclusão construída a partir dos argumentos previamente apresentados.",
-
-    feedbackErro: "Observe se a informação posterior decorre logicamente das razões expostas anteriormente.",
-
-    dicaBanca: "Conectivos como 'desse modo', 'assim', 'portanto' e 'logo' costumam indicar conclusão ou consequência lógica."
+  texto: `O professor informou ao aluno que seu trabalho seria apresentado na feira.`,
+  pergunta: "A reescrita que elimina a ambiguidade e deixa claro que o trabalho pertence ao aluno é:",
+  alternativas: [
+    "O professor informou ao aluno que o seu trabalho seria apresentado na feira.",
+    "O professor informou que ao aluno seu trabalho seria apresentado na feira.",
+    "O professor informou ao aluno: seu trabalho seria apresentado na feira.",
+    "O professor, cujo trabalho seria apresentado na feira da escola, informou ao aluno sobre a programação prevista.",
+    "O professor informou ao aluno que o trabalho do estudante seria apresentado na feira.",
+  ],
+  correta: 4,
+  explicacao: "A expressão 'o trabalho do estudante' explicita o possuidor e elimina a dupla possibilidade de referência criada por 'seu'.",
+  feedbackAcerto: "Correto. A expressão 'o trabalho do estudante' explicita o possuidor e elimina a dupla possibilidade de referência criada por 'seu'.",
+  feedbackErro: "A resposta correta é: O professor informou ao aluno que o trabalho do estudante seria apresentado na feira. A expressão 'o trabalho do estudante' explicita o possuidor e elimina a dupla possibilidade de referência criada por 'seu'.",
+  dicaBanca: "Quando a ambiguidade vem de possessivo, explicite o possuidor na reescrita.",
 },
 {
-    texto: `A alfabetização científica tem sido apontada como um elemento essencial para a formação cidadã. Segundo especialistas, ela contribui para que os indivíduos compreendam fenômenos naturais, avaliem informações divulgadas pela mídia e participem de debates públicos de maneira mais qualificada. Essa competência torna-se ainda mais relevante em contextos marcados pela ampla circulação de informações e pela necessidade de tomada de decisões fundamentadas.`,
-
-    pergunta: "A expressão 'Essa competência' retoma predominantemente:",
-
-    alternativas: [
-        "A alfabetização científica apresentada como elemento essencial da formação cidadã.",
-        "A capacidade de participação em debates públicos relacionados a temas científicos.",
-        "A ampla circulação de informações observada nas sociedades contemporâneas.",
-        "A necessidade de tomada de decisões fundamentadas em diferentes contextos sociais.",
-        "A compreensão de fenômenos naturais associada ao desenvolvimento educacional."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A expressão resume a ideia central de alfabetização científica apresentada anteriormente.",
-
-    feedbackErro: "A banca costuma utilizar expressões resumitivas para retomar conceitos amplos desenvolvidos em períodos anteriores.",
-
-    dicaBanca: "Ao encontrar expressões como 'essa competência', identifique qual conceito central está sendo desenvolvido no texto."
-
+  texto: `A reunião ocorreu em 12 de agosto. No dia seguinte, os representantes enviaram a versão revisada do documento.`,
+  pergunta: "A expressão 'No dia seguinte' estabelece coesão temporal ao indicar:",
+  alternativas: [
+    "13 de agosto, data calculada a partir do marco temporal apresentado antes.",
+    "12 de agosto, por retomar exatamente a data da reunião mencionada no texto.",
+    "uma data indeterminada anterior à reunião, recuperável pelo contexto externo.",
+    "o último dia do mês de agosto, conforme convenção de textos administrativos.",
+    "a data de aprovação do documento, ainda não informada no trecho.",
+  ],
+  correta: 0,
+  explicacao: "'No dia seguinte' é uma expressão temporal relativa: seu valor é calculado a partir da data anterior, 12 de agosto, resultando em 13 de agosto.",
+  feedbackAcerto: "Correto. 'No dia seguinte' é uma expressão temporal relativa: seu valor é calculado a partir da data anterior, 12 de agosto, resultando em 13 de agosto.",
+  feedbackErro: "A resposta correta é: 13 de agosto, data calculada a partir do marco temporal apresentado antes. 'No dia seguinte' é uma expressão temporal relativa: seu valor é calculado a partir da data anterior, 12 de agosto, resultando em 13 de agosto.",
+  dicaBanca: "Referências temporais relativas dependem de um ponto de ancoragem fornecido pelo texto.",
 },
 {
-    texto: `O crescimento das cidades exige investimentos contínuos em mobilidade urbana. Entre as medidas frequentemente adotadas estão a ampliação do transporte coletivo, a criação de ciclovias e a melhoria da infraestrutura viária. Tais iniciativas, contudo, produzem resultados mais significativos quando integradas a políticas de planejamento urbano de longo prazo.`,
-
-    pergunta: "O conectivo 'contudo' estabelece, no contexto, uma relação de:",
-
-    alternativas: [
-        "Adição de uma informação complementar ao raciocínio anteriormente desenvolvido, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "Contraste entre a adoção das medidas e a condição necessária para sua maior eficácia.",
-        "Conclusão derivada das medidas apresentadas ao longo do texto, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
-        "Explicação destinada a justificar os investimentos realizados pelas cidades, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "Comparação entre diferentes estratégias de mobilidade urbana, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. O conectivo introduz uma ressalva em relação à eficácia das medidas mencionadas.",
-
-    feedbackErro: "Conectivos adversativos nem sempre expressam oposição absoluta; muitas vezes introduzem restrições ou ressalvas.",
-
-    dicaBanca: "FGV costuma explorar adversativas em contextos mais sofisticados do que simples ideias opostas."
-
+  texto: `Os servidores permaneceram no prédio porque a vistoria ainda não havia terminado.`,
+  pergunta: "A substituição de 'porque' que preserva a relação de causa é:",
+  alternativas: [
+    "embora a vistoria ainda não houvesse terminado.",
+    "já que a vistoria ainda não havia terminado.",
+    "portanto a vistoria ainda não havia terminado.",
+    "caso a vistoria ainda não houvesse terminado.",
+    "a fim de que a vistoria ainda não houvesse terminado.",
+  ],
+  correta: 1,
+  explicacao: "'Já que' introduz causa, assim como 'porque' no contexto; as demais opções alteram a relação lógico-semântica.",
+  feedbackAcerto: "Correto. 'Já que' introduz causa, assim como 'porque' no contexto; as demais opções alteram a relação lógico-semântica.",
+  feedbackErro: "A resposta correta é: já que a vistoria ainda não havia terminado. 'Já que' introduz causa, assim como 'porque' no contexto; as demais opções alteram a relação lógico-semântica.",
+  dicaBanca: "Ao trocar conectores, preserve a relação de sentido, não apenas a correção gramatical.",
 },
 {
-    texto: `Pesquisas recentes demonstram que ambientes colaborativos favorecem o desenvolvimento de habilidades socioemocionais. Nesses espaços, os participantes aprendem a negociar ideias, resolver conflitos e construir soluções coletivamente. Esse processo contribui para o fortalecimento de competências valorizadas em diferentes contextos profissionais.`,
-
-    pergunta: "A expressão 'Esse processo' retoma principalmente:",
-
-    alternativas: [
-        "O desenvolvimento de habilidades socioemocionais em ambientes colaborativos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "A valorização das competências socioemocionais pelo mercado de trabalho, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "A negociação de ideias, a resolução de conflitos e a construção coletiva de soluções.",
-        "A existência de diferentes contextos profissionais contemporâneos, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
-        "A colaboração entre participantes durante atividades educacionais, a partir de uma análise sintática parcial, que não contempla toda a estrutura da oração."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. A expressão resume o conjunto de ações descritas imediatamente antes.",
-
-    feedbackErro: "Expressões resumitivas frequentemente retomam sequências de ações e não apenas um substantivo específico.",
-
-    dicaBanca: "Observe se o referente corresponde a uma ideia isolada ou a um processo descrito anteriormente."
-
+  texto: `A equipe reorganizou o cronograma para que todas as etapas fossem concluídas antes da inspeção.`,
+  pergunta: "A locução 'para que' estabelece relação de:",
+  alternativas: [
+    "causa, pois apresenta o motivo que já produziu a reorganização.",
+    "consequência, pois indica um efeito inevitável da mudança realizada.",
+    "finalidade, pois explicita o objetivo pretendido com a reorganização.",
+    "concessão, pois apresenta um obstáculo que não impediu a ação.",
+    "condição, pois formula uma hipótese necessária à validade do cronograma.",
+  ],
+  correta: 2,
+  explicacao: "'Para que' introduz a finalidade da reorganização: concluir as etapas antes da inspeção.",
+  feedbackAcerto: "Correto. 'Para que' introduz a finalidade da reorganização: concluir as etapas antes da inspeção.",
+  feedbackErro: "A resposta correta é: finalidade, pois explicita o objetivo pretendido com a reorganização. 'Para que' introduz a finalidade da reorganização: concluir as etapas antes da inspeção.",
+  dicaBanca: "Finalidade responde à pergunta 'com que objetivo?' ou 'para quê?'.",
 },
 {
-    texto: `A utilização de fontes renováveis de energia apresenta benefícios ambientais importantes. Além de reduzir a emissão de gases poluentes, contribui para diversificar a matriz energética e diminuir a dependência de recursos não renováveis. Por conseguinte, diversos países têm ampliado investimentos nesse setor.`,
-
-    pergunta: "A expressão 'Por conseguinte' estabelece uma relação de:",
-
-    alternativas: [
-        "Explicação destinada a detalhar os benefícios das fontes renováveis, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "Adição de uma nova vantagem relacionada à matriz energética, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "Contraste entre diferentes modelos de produção de energia, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "Conclusão ou consequência decorrente dos argumentos apresentados anteriormente.",
-        "Retificação de uma informação previamente apresentada pelo autor, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. O conectivo introduz uma consequência lógica derivada dos benefícios mencionados.",
-
-    feedbackErro: "Identifique se a informação posterior decorre naturalmente das razões apresentadas anteriormente.",
-
-    dicaBanca: "Conectivos menos frequentes, como 'por conseguinte', aparecem com frequência em provas de nível mais elevado."
-
+  texto: `Embora o número de inscrições tenha aumentado, a taxa de comparecimento permaneceu estável.`,
+  pergunta: "O conectivo 'Embora' organiza as ideias ao introduzir:",
+  alternativas: [
+    "uma causa direta para a estabilidade da taxa de comparecimento, apresentada como justificativa do resultado observado.",
+    "uma conclusão que resume os resultados apresentados no período.",
+    "uma explicação do motivo pelo qual as inscrições aumentaram.",
+    "uma concessão: o aumento das inscrições não produziu a mudança que poderia ser esperada.",
+    "uma finalidade relacionada ao controle do número de participantes.",
+  ],
+  correta: 3,
+  explicacao: "'Embora' introduz uma informação que poderia criar expectativa de mudança, mas o fato principal ocorre apesar dela; trata-se de concessão.",
+  feedbackAcerto: "Correto. 'Embora' introduz uma informação que poderia criar expectativa de mudança, mas o fato principal ocorre apesar dela; trata-se de concessão.",
+  feedbackErro: "A resposta correta é: uma concessão: o aumento das inscrições não produziu a mudança que poderia ser esperada. 'Embora' introduz uma informação que poderia criar expectativa de mudança, mas o fato principal ocorre apesar dela; trata-se de concessão.",
+  dicaBanca: "Concessão apresenta um obstáculo ou expectativa que não impede a ocorrência da informação principal.",
 },
 {
-    texto: `A formação continuada de professores envolve atualização de conhecimentos, reflexão sobre práticas pedagógicas e desenvolvimento profissional permanente. Embora cursos e capacitações desempenhem papel relevante nesse processo, especialistas defendem que a aprendizagem docente também ocorre por meio da troca de experiências e da colaboração entre colegas. Essa visão tem influenciado a formulação de programas voltados ao aperfeiçoamento profissional.`,
-
-    pergunta: "A expressão 'Essa visão' retoma predominantemente:",
-
-    alternativas: [
-        "A importância dos cursos de capacitação para a atualização dos conhecimentos docentes, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "A formação continuada entendida como processo permanente de desenvolvimento profissional, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "A formulação de programas destinados ao aperfeiçoamento profissional dos professores, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "O papel desempenhado pelos especialistas na elaboração de políticas educacionais, a partir de uma análise sintática parcial, que não contempla toda a estrutura da oração.",
-        "A ideia de que a aprendizagem docente ocorre também por meio da colaboração e da troca de experiências."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. A expressão resume o entendimento apresentado no período anterior sobre aprendizagem colaborativa.",
-
-    feedbackErro: "Nem sempre a retomada recai sobre o tema geral; muitas vezes ela recupera uma tese específica defendida no texto.",
-
-    dicaBanca: "Expressões como 'essa visão', 'esse entendimento' e 'essa concepção' costumam retomar posicionamentos ou teses."
-}];
+  texto: `O evento será realizado no pátio, desde que não haja previsão de chuva intensa.`,
+  pergunta: "A expressão 'desde que' estabelece, no contexto, relação de:",
+  alternativas: [
+    "oposição entre o local previsto e as condições meteorológicas.",
+    "causa que explica por que o pátio foi escolhido para o evento.",
+    "conclusão derivada da previsão climática apresentada no período.",
+    "finalidade destinada a evitar mudanças posteriores no planejamento.",
+    "condição necessária para que o evento seja realizado no pátio.",
+  ],
+  correta: 4,
+  explicacao: "'Desde que' introduz a condição sob a qual a realização no pátio permanece válida.",
+  feedbackAcerto: "Correto. 'Desde que' introduz a condição sob a qual a realização no pátio permanece válida.",
+  feedbackErro: "A resposta correta é: condição necessária para que o evento seja realizado no pátio. 'Desde que' introduz a condição sob a qual a realização no pátio permanece válida.",
+  dicaBanca: "Conectores condicionais apresentam a circunstância necessária ou hipotética para a realização de outro fato.",
+},
+{
+  texto: `Feche a janela, pois o ruído da rua está atrapalhando a gravação.`,
+  pergunta: "Nesse contexto, 'pois' introduz:",
+  alternativas: [
+    "uma explicação que justifica a ordem expressa na oração anterior.",
+    "uma conclusão obtida a partir da ordem dada pelo falante.",
+    "uma oposição entre a janela e o ruído produzido na rua.",
+    "uma condição para que a gravação possa começar em outro momento e em condições mais adequadas.",
+    "uma finalidade correspondente ao resultado futuro da ação.",
+  ],
+  correta: 0,
+  explicacao: "Após uma ordem, 'pois' explica a razão que a justifica: o ruído está atrapalhando a gravação.",
+  feedbackAcerto: "Correto. Após uma ordem, 'pois' explica a razão que a justifica: o ruído está atrapalhando a gravação.",
+  feedbackErro: "A resposta correta é: uma explicação que justifica a ordem expressa na oração anterior. Após uma ordem, 'pois' explica a razão que a justifica: o ruído está atrapalhando a gravação.",
+  dicaBanca: "O valor de 'pois' depende da posição e da relação entre as orações; observe o contexto completo.",
+},
+{
+  texto: `A equipe revisou os dados, comparou as fontes e refez os cálculos; portanto, o relatório final apresenta maior segurança metodológica.`,
+  pergunta: "O conectivo 'portanto' introduz:",
+  alternativas: [
+    "uma ressalva que limita a validade das ações descritas antes.",
+    "uma conclusão baseada no conjunto de procedimentos apresentados anteriormente.",
+    "um exemplo destinado a esclarecer o significado de segurança metodológica e a forma de obtê-la no relatório.",
+    "uma condição necessária para que os cálculos possam ser refeitos.",
+    "uma causa anterior às ações de revisão, comparação e recálculo.",
+  ],
+  correta: 1,
+  explicacao: "'Portanto' marca uma conclusão inferida das ações anteriores: o conjunto de verificações sustenta maior segurança metodológica.",
+  feedbackAcerto: "Correto. 'Portanto' marca uma conclusão inferida das ações anteriores: o conjunto de verificações sustenta maior segurança metodológica.",
+  feedbackErro: "A resposta correta é: uma conclusão baseada no conjunto de procedimentos apresentados anteriormente. 'Portanto' marca uma conclusão inferida das ações anteriores: o conjunto de verificações sustenta maior segurança metodológica.",
+  dicaBanca: "Conectores conclusivos apresentam uma dedução ou resultado argumentativo derivado do que veio antes.",
+},
+{
+  texto: `O programa ampliou o número de vagas; contudo, ainda não conseguiu reduzir a fila de espera.`,
+  pergunta: "O valor de 'contudo' é melhor descrito como:",
+  alternativas: [
+    "adição de um segundo resultado na mesma direção argumentativa do primeiro e sem qualquer mudança de orientação.",
+    "explicação do motivo pelo qual o número de vagas foi ampliado.",
+    "ressalva adversativa que contrapõe a ampliação das vagas à persistência da fila.",
+    "conclusão segundo a qual a fila desaparecerá com novas ampliações.",
+    "condição para que a ampliação de vagas seja mantida no futuro.",
+  ],
+  correta: 2,
+  explicacao: "'Contudo' introduz uma ressalva: embora haja ampliação de vagas, permanece um problema que limita o resultado positivo.",
+  feedbackAcerto: "Correto. 'Contudo' introduz uma ressalva: embora haja ampliação de vagas, permanece um problema que limita o resultado positivo.",
+  feedbackErro: "A resposta correta é: ressalva adversativa que contrapõe a ampliação das vagas à persistência da fila. 'Contudo' introduz uma ressalva: embora haja ampliação de vagas, permanece um problema que limita o resultado positivo.",
+  dicaBanca: "Adversativas podem expressar contraste, restrição ou ressalva, e não apenas oposição absoluta.",
+},
+{
+  texto: `A formação ofereceu não só oficinas práticas, mas também momentos de discussão sobre os resultados das atividades.`,
+  pergunta: "A estrutura 'não só... mas também' estabelece coesão sequencial por meio de:",
+  alternativas: [
+    "alternância entre duas ações que não podem ocorrer simultaneamente dentro da mesma etapa da formação.",
+    "oposição entre atividades práticas e reflexão sobre resultados.",
+    "explicação de por que as oficinas foram incluídas na formação.",
+    "adição correlativa de dois componentes apresentados como relevantes.",
+    "condição necessária para que a formação seja considerada válida.",
+  ],
+  correta: 3,
+  explicacao: "A correlação 'não só... mas também' adiciona dois elementos e reforça a inclusão do segundo no mesmo eixo argumentativo.",
+  feedbackAcerto: "Correto. A correlação 'não só... mas também' adiciona dois elementos e reforça a inclusão do segundo no mesmo eixo argumentativo.",
+  feedbackErro: "A resposta correta é: adição correlativa de dois componentes apresentados como relevantes. A correlação 'não só... mas também' adiciona dois elementos e reforça a inclusão do segundo no mesmo eixo argumentativo.",
+  dicaBanca: "Estruturas correlativas podem realizar relações de adição, comparação ou alternância; observe a direção do sentido.",
+},
+{
+  texto: `Alguns recursos de acessibilidade foram incorporados à plataforma, por exemplo, ampliação de fonte, contraste ajustável e leitura de tela.`,
+  pergunta: "A expressão 'por exemplo' introduz:",
+  alternativas: [
+    "uma conclusão a respeito da eficácia dos recursos mencionados.",
+    "uma retificação das informações apresentadas no início do período.",
+    "uma causa para a incorporação de ferramentas de acessibilidade.",
+    "uma oposição entre diferentes formas de uso da plataforma.",
+    "uma exemplificação do conjunto de recursos de acessibilidade.",
+  ],
+  correta: 4,
+  explicacao: "'Por exemplo' apresenta casos particulares que concretizam a categoria geral 'recursos de acessibilidade'.",
+  feedbackAcerto: "Correto. 'Por exemplo' apresenta casos particulares que concretizam a categoria geral 'recursos de acessibilidade'.",
+  feedbackErro: "A resposta correta é: uma exemplificação do conjunto de recursos de acessibilidade. 'Por exemplo' apresenta casos particulares que concretizam a categoria geral 'recursos de acessibilidade'.",
+  dicaBanca: "Marcadores de exemplificação ligam uma categoria geral a casos específicos que a ilustram.",
+},
+{
+  texto: `A participação aumentou, isto é, um número maior de famílias passou a comparecer às reuniões escolares.`,
+  pergunta: "A expressão 'isto é' atua como mecanismo coesivo de:",
+  alternativas: [
+    "reformulação explicativa, pois reapresenta a ideia anterior de modo mais explícito.",
+    "contraste, pois substitui a primeira informação por uma conclusão oposta.",
+    "condição, pois estabelece uma hipótese para o aumento da participação.",
+    "consequência, pois apresenta um efeito posterior e independente da primeira oração.",
+    "concessão, pois introduz uma informação que contraria a expectativa do leitor.",
+  ],
+  correta: 0,
+  explicacao: "'Isto é' reformula a informação anterior, esclarecendo em que consistiu o aumento da participação.",
+  feedbackAcerto: "Correto. 'Isto é' reformula a informação anterior, esclarecendo em que consistiu o aumento da participação.",
+  feedbackErro: "A resposta correta é: reformulação explicativa, pois reapresenta a ideia anterior de modo mais explícito. 'Isto é' reformula a informação anterior, esclarecendo em que consistiu o aumento da participação.",
+  dicaBanca: "Marcadores como 'isto é', 'ou seja' e 'em outras palavras' costumam reformular ou explicar uma ideia.",
+},
+{
+  texto: `O setor recebeu vinte pedidos no período. Na verdade, após a conferência dos registros, verificou-se que eram vinte e três.`,
+  pergunta: "A expressão 'Na verdade' contribui para a progressão ao introduzir:",
+  alternativas: [
+    "uma exemplificação dos vinte pedidos mencionados anteriormente.",
+    "uma retificação da informação numérica apresentada no primeiro período.",
+    "uma conclusão que confirma integralmente a contagem inicial.",
+    "uma condição para que a conferência dos registros seja realizada e a contagem final possa ser validada.",
+    "uma comparação entre dois setores responsáveis pelo atendimento.",
+  ],
+  correta: 1,
+  explicacao: "'Na verdade' corrige a informação anterior: a contagem inicial de vinte é substituída pela conferência que aponta vinte e três.",
+  feedbackAcerto: "Correto. 'Na verdade' corrige a informação anterior: a contagem inicial de vinte é substituída pela conferência que aponta vinte e três.",
+  feedbackErro: "A resposta correta é: uma retificação da informação numérica apresentada no primeiro período. 'Na verdade' corrige a informação anterior: a contagem inicial de vinte é substituída pela conferência que aponta vinte e três.",
+  dicaBanca: "Marcadores de retificação ajustam ou corrigem uma informação já apresentada.",
+},
+{
+  texto: `As salas apresentavam infiltrações, parte da instalação elétrica precisava de reparos e havia mobiliário danificado. Esse quadro exigia intervenção antes do início das aulas.`,
+  pergunta: "A expressão 'Esse quadro' realiza:",
+  alternativas: [
+    "catáfora, pois antecipa os problemas que serão apresentados depois.",
+    "substituição verbal, pois ocupa o lugar de uma ação omitida no período anterior.",
+    "encapsulamento anafórico, pois resume o conjunto de problemas descritos antes.",
+    "coesão por antonímia, pois contrapõe a intervenção aos danos existentes.",
+    "coesão temporal, pois localiza os reparos em relação ao início das aulas.",
+  ],
+  correta: 2,
+  explicacao: "'Esse quadro' encapsula anaforicamente a enumeração de problemas e permite que o texto avance sem repeti-los.",
+  feedbackAcerto: "Correto. 'Esse quadro' encapsula anaforicamente a enumeração de problemas e permite que o texto avance sem repeti-los.",
+  feedbackErro: "A resposta correta é: encapsulamento anafórico, pois resume o conjunto de problemas descritos antes. 'Esse quadro' encapsula anaforicamente a enumeração de problemas e permite que o texto avance sem repeti-los.",
+  dicaBanca: "Expressões como 'esse quadro', 'essa situação' e 'esse cenário' podem condensar sequências inteiras de informação.",
+},
+{
+  texto: `A comissão decidiu adiar a votação. O adiamento permitiu que novos documentos fossem analisados.`,
+  pergunta: "A relação entre 'adiar' e 'O adiamento' exemplifica coesão por:",
+  alternativas: [
+    "antonímia lexical, pois o nome apresenta sentido contrário ao verbo anterior e rompe a continuidade temática.",
+    "catáfora, pois o substantivo anuncia uma ação ainda não mencionada.",
+    "hiperonímia, pois o substantivo possui sentido mais amplo que o verbo.",
+    "nominalização, pois a ação verbal é retomada por um substantivo da mesma família lexical.",
+    "elipse, pois o verbo do primeiro período deixa de aparecer no segundo.",
+  ],
+  correta: 3,
+  explicacao: "'O adiamento' nominaliza e retoma a ação expressa por 'adiar', mantendo a cadeia temática e permitindo acrescentar nova informação.",
+  feedbackAcerto: "Correto. 'O adiamento' nominaliza e retoma a ação expressa por 'adiar', mantendo a cadeia temática e permitindo acrescentar nova informação.",
+  feedbackErro: "A resposta correta é: nominalização, pois a ação verbal é retomada por um substantivo da mesma família lexical. 'O adiamento' nominaliza e retoma a ação expressa por 'adiar', mantendo a cadeia temática e permitindo acrescentar nova informação.",
+  dicaBanca: "Nominalizações frequentemente transformam ações anteriores em referentes sobre os quais o texto continua falando.",
+},
+{
+  texto: `A escola apresentou um plano de recuperação. O documento foi discutido com as famílias. Depois dessa etapa, ele foi encaminhado ao conselho escolar.`,
+  pergunta: "No terceiro período, o pronome 'ele' retoma:",
+  alternativas: [
+    "o conselho escolar, mencionado no fim do mesmo período.",
+    "as famílias que participaram da discussão do plano.",
+    "a etapa de discussão realizada no período anterior.",
+    "a escola responsável pela apresentação inicial da proposta e pela discussão posterior com as famílias.",
+    "o plano de recuperação, retomado antes pela expressão 'O documento'.",
+  ],
+  correta: 4,
+  explicacao: "A cadeia referencial é 'um plano de recuperação' → 'O documento' → 'ele'; todos apontam para o mesmo referente.",
+  feedbackAcerto: "Correto. A cadeia referencial é 'um plano de recuperação' → 'O documento' → 'ele'; todos apontam para o mesmo referente.",
+  feedbackErro: "A resposta correta é: o plano de recuperação, retomado antes pela expressão 'O documento'. A cadeia referencial é 'um plano de recuperação' → 'O documento' → 'ele'; todos apontam para o mesmo referente.",
+  dicaBanca: "Para seguir uma cadeia referencial, acompanhe todas as formas usadas para nomear o mesmo objeto ao longo do texto.",
+},
+{
+  texto: `Biblioteca, leitura, leitores, obras e empréstimos aparecem repetidamente no relatório sobre o projeto escolar.`,
+  pergunta: "A continuidade temática produzida por essas palavras decorre principalmente de:",
+  alternativas: [
+    "coesão lexical por pertencimento a um mesmo campo semântico relacionado à leitura e à biblioteca.",
+    "coesão referencial por pronomes pessoais que retomam um único antecedente explícito e mantêm a cadeia de referência ao longo do relatório.",
+    "coesão sequencial por conectores que estabelecem relações de causa e consequência.",
+    "catáfora, porque os termos anunciam informações que aparecerão em outro texto.",
+    "zeugma, porque todos os verbos associados a essas palavras foram omitidos.",
+  ],
+  correta: 0,
+  explicacao: "Os termos pertencem ao mesmo campo semântico e ajudam a manter a continuidade temática do texto por coesão lexical.",
+  feedbackAcerto: "Correto. Os termos pertencem ao mesmo campo semântico e ajudam a manter a continuidade temática do texto por coesão lexical.",
+  feedbackErro: "A resposta correta é: coesão lexical por pertencimento a um mesmo campo semântico relacionado à leitura e à biblioteca. Os termos pertencem ao mesmo campo semântico e ajudam a manter a continuidade temática do texto por coesão lexical.",
+  dicaBanca: "Campo semântico reúne palavras relacionadas a uma mesma área de experiência ou tema.",
+},
+{
+  texto: `A gestão anunciou uma mudança no atendimento. No comunicado seguinte, a medida foi chamada de 'avanço administrativo'.`,
+  pergunta: "A substituição de 'mudança' por 'avanço administrativo' mantém o referente, mas também:",
+  alternativas: [
+    "elimina qualquer possibilidade de avaliação do fato mencionado.",
+    "acrescenta uma avaliação positiva ao modo de nomear a mesma mudança.",
+    "transforma o referente em outro fato independente do primeiro.",
+    "introduz uma relação de tempo entre a mudança e o comunicado.",
+    "cria uma oposição lexical entre dois termos de sentido incompatível.",
+  ],
+  correta: 1,
+  explicacao: "A expressão 'avanço administrativo' retoma a mudança, mas não é neutra: acrescenta uma avaliação favorável ao referente.",
+  feedbackAcerto: "Correto. A expressão 'avanço administrativo' retoma a mudança, mas não é neutra: acrescenta uma avaliação favorável ao referente.",
+  feedbackErro: "A resposta correta é: acrescenta uma avaliação positiva ao modo de nomear a mesma mudança. A expressão 'avanço administrativo' retoma a mudança, mas não é neutra: acrescenta uma avaliação favorável ao referente.",
+  dicaBanca: "Uma expressão de retomada pode manter o referente e, ao mesmo tempo, acrescentar avaliação argumentativa.",
+},
+{
+  texto: `A proposta que foi apresentada ontem será analisada na próxima reunião.`,
+  pergunta: "O pronome relativo 'que' contribui para a coesão interna do período porque:",
+  alternativas: [
+    "antecipa o substantivo 'reunião', que aparece no final do período.",
+    "substitui o verbo 'apresentar' e evita sua repetição na oração principal.",
+    "retoma 'A proposta' e liga a oração relativa ao antecedente.",
+    "resume toda a oração principal em uma expressão demonstrativa.",
+    "introduz uma relação conclusiva entre a apresentação e a análise.",
+  ],
+  correta: 2,
+  explicacao: "O relativo 'que' retoma o antecedente 'A proposta' e simultaneamente conecta a oração subordinada ao nome que ela caracteriza.",
+  feedbackAcerto: "Correto. O relativo 'que' retoma o antecedente 'A proposta' e simultaneamente conecta a oração subordinada ao nome que ela caracteriza.",
+  feedbackErro: "A resposta correta é: retoma 'A proposta' e liga a oração relativa ao antecedente. O relativo 'que' retoma o antecedente 'A proposta' e simultaneamente conecta a oração subordinada ao nome que ela caracteriza.",
+  dicaBanca: "Pronomes relativos exercem papel sintático na oração subordinada e mantêm ligação com um antecedente.",
+},
+{
+  texto: `Foram avaliados dois projetos: o de alfabetização e o de tecnologia. Este previa formação docente; aquele, aquisição de novos livros.`,
+  pergunta: "No segundo período, 'Este' e 'aquele' retomam, respectivamente:",
+  alternativas: [
+    "o projeto de alfabetização e o projeto de tecnologia.",
+    "a formação docente e a aquisição de novos livros.",
+    "os dois projetos em conjunto e o processo de avaliação.",
+    "o projeto de tecnologia e o projeto de alfabetização.",
+    "a avaliação dos projetos e a etapa de aquisição de materiais.",
+  ],
+  correta: 3,
+  explicacao: "Na oposição tradicional 'este/aquele' com dois referentes anteriores, 'este' retoma o mais próximo (tecnologia) e 'aquele', o mais distante (alfabetização).",
+  feedbackAcerto: "Correto. Na oposição tradicional 'este/aquele' com dois referentes anteriores, 'este' retoma o mais próximo (tecnologia) e 'aquele', o mais distante (alfabetização).",
+  feedbackErro: "A resposta correta é: o projeto de tecnologia e o projeto de alfabetização. Na oposição tradicional 'este/aquele' com dois referentes anteriores, 'este' retoma o mais próximo (tecnologia) e 'aquele', o mais distante (alfabetização).",
+  dicaBanca: "Com dois referentes anteriores, observe a proximidade textual para interpretar 'este' e 'aquele'.",
+},
+{
+  texto: `A equipe técnica elaborou o diagnóstico; a direção, o plano de ação; os professores, as propostas de acompanhamento.`,
+  pergunta: "A compreensão das duas últimas partes depende da recuperação de:",
+  alternativas: [
+    "um sujeito oculto comum às três orações.",
+    "um pronome relativo subentendido antes de cada expressão nominal.",
+    "um conectivo adversativo omitido entre as três ações.",
+    "um termo catafórico que será explicado ao final do período.",
+    "o verbo 'elaborou', omitido nos segmentos posteriores por zeugma.",
+  ],
+  correta: 4,
+  explicacao: "O verbo 'elaborou' aparece no primeiro segmento e é recuperado nos dois seguintes; a omissão de termo já mencionado caracteriza zeugma.",
+  feedbackAcerto: "Correto. O verbo 'elaborou' aparece no primeiro segmento e é recuperado nos dois seguintes; a omissão de termo já mencionado caracteriza zeugma.",
+  feedbackErro: "A resposta correta é: o verbo 'elaborou', omitido nos segmentos posteriores por zeugma. O verbo 'elaborou' aparece no primeiro segmento e é recuperado nos dois seguintes; a omissão de termo já mencionado caracteriza zeugma.",
+  dicaBanca: "Em estruturas paralelas com vírgula, verifique se um verbo anterior está sendo recuperado nos segmentos seguintes.",
+},
+{
+  texto: `O número de atendimentos aumentou; por isso, o setor ampliou o horário de funcionamento.`,
+  pergunta: "A substituição que preserva a relação entre as duas informações é:",
+  alternativas: [
+    "O número de atendimentos aumentou; por conseguinte, o setor ampliou o horário de funcionamento.",
+    "O número de atendimentos aumentou; apesar disso, o setor ampliou o horário de funcionamento.",
+    "O número de atendimentos aumentou; ainda que o setor ampliasse o horário de funcionamento.",
+    "O número de atendimentos aumentou; em contrapartida, o setor ampliou o horário de funcionamento.",
+    "O número de atendimentos aumentou; ao passo que o setor ampliou o horário de funcionamento.",
+  ],
+  correta: 0,
+  explicacao: "'Por conseguinte' preserva o valor de consequência expresso por 'por isso': a ampliação do horário decorre do aumento de atendimentos.",
+  feedbackAcerto: "Correto. 'Por conseguinte' preserva o valor de consequência expresso por 'por isso': a ampliação do horário decorre do aumento de atendimentos.",
+  feedbackErro: "A resposta correta é: O número de atendimentos aumentou; por conseguinte, o setor ampliou o horário de funcionamento. 'Por conseguinte' preserva o valor de consequência expresso por 'por isso': a ampliação do horário decorre do aumento de atendimentos.",
+  dicaBanca: "Na reescrita com conectores, compare a relação lógica original antes de avaliar a equivalência.",
+},
+{
+  texto: `A equipe concluiu a primeira etapa, mas ainda precisa revisar os anexos.`,
+  pergunta: "Se 'mas' for substituído por 'portanto', a relação de sentido passará de:",
+  alternativas: [
+    "causa explicativa para condição hipotética no desenvolvimento do argumento.",
+    "contraste/ressalva para conclusão.",
+    "finalidade para explicação.",
+    "adição para exemplificação.",
+    "concessão para comparação.",
+  ],
+  correta: 1,
+  explicacao: "'Mas' introduz contraste ou ressalva; 'portanto' introduziria conclusão. A troca altera a articulação lógica entre as informações.",
+  feedbackAcerto: "Correto. 'Mas' introduz contraste ou ressalva; 'portanto' introduziria conclusão. A troca altera a articulação lógica entre as informações.",
+  feedbackErro: "A resposta correta é: contraste/ressalva para conclusão. 'Mas' introduz contraste ou ressalva; 'portanto' introduziria conclusão. A troca altera a articulação lógica entre as informações.",
+  dicaBanca: "Nem todo conectivo gramaticalmente possível preserva o sentido original do texto.",
+},
+{
+  texto: `Primeiro, os dados foram coletados. Em seguida, passaram por conferência. Por fim, os resultados foram divulgados.`,
+  pergunta: "Os marcadores destacados contribuem para a coesão ao:",
+  alternativas: [
+    "estabelecer oposição entre três procedimentos incompatíveis.",
+    "retomar o mesmo referente por meio de sinônimos sucessivos.",
+    "ordenar sequencialmente as etapas do processo descrito.",
+    "introduzir causas diferentes para a divulgação dos resultados.",
+    "substituir verbos que seriam repetidos em cada período.",
+  ],
+  correta: 2,
+  explicacao: "'Primeiro', 'Em seguida' e 'Por fim' funcionam como organizadores sequenciais e orientam o leitor quanto à ordem das etapas.",
+  feedbackAcerto: "Correto. 'Primeiro', 'Em seguida' e 'Por fim' funcionam como organizadores sequenciais e orientam o leitor quanto à ordem das etapas.",
+  feedbackErro: "A resposta correta é: ordenar sequencialmente as etapas do processo descrito. 'Primeiro', 'Em seguida' e 'Por fim' funcionam como organizadores sequenciais e orientam o leitor quanto à ordem das etapas.",
+  dicaBanca: "Marcadores de ordenação ajudam a construir sequência e progressão, especialmente em textos expositivos e procedimentais.",
+},
+{
+  texto: `O relatório afirma: 'Como estabelece o regulamento interno, toda alteração do cronograma deve ser formalmente registrada.'`,
+  pergunta: "A referência ao regulamento contribui para a organização textual principalmente porque:",
+  alternativas: [
+    "substitui o referente 'cronograma' por um termo de sentido equivalente.",
+    "cria uma catáfora que será resolvida fora do texto.",
+    "elimina a necessidade de conectores entre a afirmação e sua justificativa e torna dispensável a relação com outros textos.",
+    "insere uma referência a outro texto que serve de base para a afirmação apresentada.",
+    "produz zeugma ao omitir o verbo empregado no regulamento citado.",
+  ],
+  correta: 3,
+  explicacao: "A menção ao regulamento estabelece relação intertextual: outro texto é convocado como referência normativa para sustentar a afirmação.",
+  feedbackAcerto: "Correto. A menção ao regulamento estabelece relação intertextual: outro texto é convocado como referência normativa para sustentar a afirmação.",
+  feedbackErro: "A resposta correta é: insere uma referência a outro texto que serve de base para a afirmação apresentada. A menção ao regulamento estabelece relação intertextual: outro texto é convocado como referência normativa para sustentar a afirmação.",
+  dicaBanca: "Intertextualidade também pode funcionar como recurso de articulação quando um texto cita, alude ou remete a outro.",
+},
+{
+  texto: `A escola ampliou o acervo da biblioteca. A medida favoreceu o acesso a obras recentes; além disso, permitiu reorganizar os espaços de leitura. Esses resultados, contudo, dependerão de uso contínuo do acervo pelos estudantes.`,
+  pergunta: "Considerando o trecho inteiro, a análise correta dos mecanismos de coesão é:",
+  alternativas: [
+    "'A medida' antecipa cataforicamente 'o acervo', e 'além disso' introduz oposição.",
+    "'Esses resultados' retoma 'obras recentes', e 'contudo' introduz conclusão.",
+    "'A medida' substitui lexicalmente 'a biblioteca', e 'contudo' expressa causa.",
+    "'Além disso' retifica a informação anterior; 'Esses resultados' introduz um referente novo e 'contudo' conclui o texto de forma definitiva.",
+    "'A medida' retoma a ampliação; 'além disso' soma um efeito; 'Esses resultados' resume os benefícios; e 'contudo' introduz ressalva.",
+  ],
+  correta: 4,
+  explicacao: "O trecho combina referenciação e coesão sequencial: 'A medida' retoma a ampliação, 'além disso' adiciona um efeito, 'Esses resultados' resume os benefícios e 'contudo' introduz ressalva.",
+  feedbackAcerto: "Correto. O trecho combina referenciação e coesão sequencial: 'A medida' retoma a ampliação, 'além disso' adiciona um efeito, 'Esses resultados' resume os benefícios e 'contudo' introduz ressalva.",
+  feedbackErro: "A resposta correta é: 'A medida' retoma a ampliação; 'além disso' soma um efeito; 'Esses resultados' resume os benefícios; e 'contudo' introduz ressalva. O trecho combina referenciação e coesão sequencial: 'A medida' retoma a ampliação, 'além disso' adiciona um efeito, 'Esses resultados' resume os benefícios e 'contudo' introduz ressalva.",
+  dicaBanca: "Em questões integradas, acompanhe simultaneamente a cadeia de referentes e os valores semânticos dos conectores.",
+},
+];
