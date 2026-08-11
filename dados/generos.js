@@ -1,903 +1,802 @@
 const generos = [
-
-{
-    texto: `À medida que o sol desaparecia atrás das montanhas, o céu assumia tons alaranjados e avermelhados. A brisa suave movimentava lentamente as folhas das árvores, enquanto o silêncio tomava conta da paisagem.`,
-
-    pergunta: "Considerando a organização textual e os recursos linguísticos empregados, é correto afirmar que o trecho apresenta predominância:",
-
-    alternativas: [
-        "descritiva, pois o foco recai sobre a caracterização sensorial dos elementos que compõem a paisagem apresentada.",
-        "narrativa, pois os acontecimentos são organizados em sequência temporal envolvendo mudanças progressivas no cenário.",
-        "argumentativa, pois o autor procura valorizar subjetivamente os aspectos observados no ambiente natural.",
-        "injuntiva, pois conduz o leitor à observação detalhada dos componentes da cena retratada.",
-        "expositiva, pois apresenta informações objetivas acerca de fenômenos naturais observáveis."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. O trecho concentra-se na caracterização do ambiente por meio de imagens visuais e sensoriais, característica típica da descrição.",
-
-    feedbackErro: "Embora existam verbos indicando movimento ou transformação, o foco principal não está na sucessão de acontecimentos, mas na construção detalhada da paisagem.",
-
-    dicaBanca: "Em questões sobre tipologia textual, observe qual elemento recebe maior destaque: ações (narração), características (descrição), ideias defendidas (argumentação) ou orientações (injunção)."
-
-},
-{
-    texto: `O consumo excessivo de plástico tem provocado impactos ambientais significativos. Estudos apontam que milhões de toneladas desse material chegam aos oceanos todos os anos, afetando ecossistemas marinhos e diversas espécies animais.`,
-
-    pergunta: "A finalidade predominante do trecho permite classificá-lo como um texto:",
-
-    alternativas: [
-        "argumentativo, por defender explicitamente medidas de combate à poluição causada por resíduos plásticos.",
-        "expositivo, por apresentar informações e dados com finalidade prioritariamente informativa.",
-        "injuntivo, por orientar o leitor quanto às formas adequadas de descarte de materiais recicláveis.",
-        "descritivo, por caracterizar detalhadamente os danos ambientais produzidos pelo plástico.",
-        "narrativo, por relatar acontecimentos relacionados ao descarte de resíduos em diferentes contextos."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. O texto apresenta informações e dados sobre determinado tema sem buscar convencer diretamente o leitor ou orientá-lo quanto a procedimentos específicos.",
-
-    feedbackErro: "A presença de informações sobre um problema ambiental não torna o texto automaticamente argumentativo. É necessário identificar a finalidade predominante da comunicação.",
-
-    dicaBanca: "Nem todo texto que trata de um problema social é argumentativo. Verifique se há defesa explícita de uma tese ou apenas apresentação de informações."
-
-},
-{
-    texto: `A ampliação do acesso à internet contribuiu significativamente para a democratização da informação. Entretanto, é necessário que os usuários desenvolvam senso crítico para avaliar a confiabilidade das fontes consultadas, evitando a disseminação de notícias falsas.`,
-
-    pergunta: "A predominância argumentativa do texto decorre principalmente do fato de que:",
-
-    alternativas: [
-        "o texto descreve os principais comportamentos observados entre usuários de ambientes digitais, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
-        "a organização textual concentra-se na caracterização das notícias falsas e de seus impactos sociais, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "o autor apresenta informações sobre a internet e utiliza essas informações para sustentar uma conclusão defendida ao final do texto.",
-        "o autor relata acontecimentos históricos relacionados à evolução da comunicação digital, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "a exposição de conceitos técnicos substitui a necessidade de manifestação de posicionamento, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. O autor apresenta uma ideia inicial e a utiliza para sustentar a necessidade do desenvolvimento do senso crítico.",
-
-    feedbackErro: "A característica central da argumentação é a defesa de uma ideia ou posicionamento sustentado por justificativas.",
-
-    dicaBanca: "Sempre procure identificar se o autor pretende apenas informar ou se busca conduzir o leitor a determinada conclusão."
-
-},
-{
-    texto: `Para realizar a atualização do sistema, acesse o menu Configurações, selecione a opção 'Atualizações' e clique em 'Verificar agora'. Aguarde a conclusão do processo antes de reiniciar o equipamento.`,
-
-    pergunta: "O texto apresentado exemplifica predominantemente a tipologia:",
-
-    alternativas: [
-        "argumentativa, por demonstrar as vantagens de manter sistemas atualizados.",
-        "expositiva, por explicar o funcionamento interno do software utilizado.",
-        "descritiva, por caracterizar os recursos disponíveis no equipamento.",
-        "injuntiva, por apresentar orientações organizadas para a execução de uma tarefa.",
-        "narrativa, por relatar as etapas normalmente observadas durante atualizações de sistema."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. O texto orienta o leitor quanto aos procedimentos necessários para realizar determinada ação.",
-
-    feedbackErro: "A presença de verbos no imperativo e de instruções sequenciais constitui forte indício da tipologia injuntiva.",
-
-    dicaBanca: "Receitas, manuais, tutoriais e instruções geralmente apresentam predominância injuntiva."
-
-},
-{
-    texto: `Pedro saiu de casa ainda cedo. As ruas estreitas estavam silenciosas, e as fachadas antigas exibiam marcas do tempo. Enquanto caminhava em direção ao trabalho, observava as janelas coloridas que contrastavam com o céu cinzento daquela manhã.`,
-
-    pergunta: "Embora apresente elementos descritivos, o texto é predominantemente narrativo porque:",
-
-    alternativas: [
-        "os aspectos visuais do ambiente recebem destaque superior às ações realizadas pelo personagem, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "a caracterização do cenário constitui a finalidade principal da construção textual, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "os elementos descritivos impedem a classificação do texto como predominantemente descritivo, quando analisada sem a articulação completa entre as ideias apresentadas no texto.",
-        "a ambientação apresentada substitui a necessidade de desenvolvimento de acontecimentos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "a sequência textual organiza-se em torno das ações praticadas por um personagem em determinado contexto temporal."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. Apesar da presença de descrições, a progressão do texto ocorre por meio das ações realizadas pelo personagem.",
-
-    feedbackErro: "Em textos mistos, a predominância é definida pelo elemento que conduz o desenvolvimento da sequência textual.",
-
-    dicaBanca: "FGV e CEBRASPE gostam de misturar narração e descrição. Identifique qual delas conduz a progressão do texto."
-
-},
-
-{
-    texto: `— Você já concluiu o relatório solicitado pela coordenação?
-
-— Ainda não. Pretendo finalizá-lo até o final da tarde.
-
-— Ótimo. Precisamos enviá-lo amanhã pela manhã.`,
-
-    pergunta: "Considerando a estrutura e a finalidade comunicativa do trecho, é correto afirmar que há predominância da tipologia:",
-
-    alternativas: [
-
-        "dialogal, pois a construção do sentido ocorre por meio da interação entre interlocutores.",
-
-        "argumentativa, pois os participantes procuram convencer um ao outro acerca da importância do relatório.",
-
-        "descritiva, pois o texto caracteriza detalhadamente o ambiente de trabalho em que ocorre a conversa.",
-
-        "injuntiva, pois apresenta instruções relacionadas à elaboração de documentos institucionais.",
-
-        "narrativa, pois relata acontecimentos organizados em sequência temporal completa."
-
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. O texto estrutura-se a partir da troca de falas entre interlocutores, característica típica da tipologia dialogal.",
-
-    feedbackErro: "Embora haja informações sobre uma tarefa profissional, o elemento predominante é a interação verbal entre os participantes.",
-
-    dicaBanca: "Ao analisar diálogos, observe se a construção do texto depende essencialmente da alternância de falas entre interlocutores."
-
-},
-{
-    texto: `Nos últimos anos, o uso de bicicletas como meio de transporte aumentou significativamente nas grandes cidades. Além de contribuir para a redução dos congestionamentos, essa prática favorece a diminuição da emissão de poluentes. Por isso, é fundamental que o poder público amplie os investimentos em ciclovias e infraestrutura adequada.`,
-
-    pergunta: "A tipologia predominante do texto pode ser identificada porque o autor:",
-
-    alternativas: [
-        "relata mudanças observadas na mobilidade urbana sem defender determinado posicionamento sobre o tema.",
-        "utiliza informações sobre os benefícios da bicicleta para sustentar uma proposta apresentada ao final.",
-        "descreve detalhadamente os impactos ambientais produzidos pelos meios de transporte urbanos.",
-        "instrui os leitores quanto aos procedimentos necessários para utilizar bicicletas com segurança.",
-        "expõe dados estatísticos cuja finalidade concentra-se à divulgação de informações públicas."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. Os argumentos apresentados servem de fundamento para a defesa de investimentos em infraestrutura cicloviária.",
-
-    feedbackErro: "A argumentação ocorre quando informações ou fatos são utilizados para sustentar uma conclusão ou posicionamento.",
-
-    dicaBanca: "Identifique sempre se existe uma tese sendo defendida pelo autor e quais argumentos sustentam essa tese."
-
-},
-{
-    texto: `Antes de utilizar o equipamento, verifique se o cabo de alimentação está corretamente conectado. Essa medida reduz o risco de falhas durante o funcionamento e contribui para a segurança do operador. Em seguida, pressione o botão de inicialização e aguarde o carregamento completo do sistema.`,
-
-    pergunta: "Mesmo contendo uma explicação complementar, o texto permanece predominantemente injuntivo porque:",
-
-    alternativas: [
-        "a justificativa apresentada possui caráter argumentativo superior às orientações fornecidas.",
-        "a descrição do equipamento recebe maior destaque que os procedimentos recomendados.",
-        "as informações explicativas possuem função secundária em relação às instruções dirigidas ao leitor.",
-        "o objetivo principal consiste em convencer o leitor sobre a qualidade do equipamento.",
-        "a sequência de ações mencionadas possui finalidade predominantemente informativa."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. As explicações apenas reforçam as orientações, que continuam sendo o foco principal do texto.",
-
-    feedbackErro: "A presença de justificativas não altera a tipologia predominante quando a finalidade principal continua sendo orientar procedimentos.",
-
-    dicaBanca: "Muitos textos apresentam tipologias secundárias. O importante é identificar qual delas conduz a finalidade principal."
-
-},
-{
-    texto: `Quando Ana chegou à antiga biblioteca, percebeu imediatamente o aroma característico dos livros envelhecidos. As estantes de madeira escura ocupavam quase toda a extensão das paredes, enquanto luminárias amareladas projetavam uma luz suave sobre as mesas de leitura. Após alguns instantes de observação, ela dirigiu-se ao setor de pesquisas.`,
-
-    pergunta: "A predominância descritiva do trecho decorre principalmente do fato de que:",
-
-    alternativas: [
-        "a sequência de ações realizadas pela personagem constitui o eixo central da construção textual.",
-        "a movimentação da personagem organiza integralmente a progressão dos fatos apresentados.",
-        "a presença de verbos de ação impede a classificação do texto como predominantemente descritivo.",
-        "os elementos sensoriais e visuais do ambiente recebem maior destaque que os acontecimentos narrados.",
-        "a caracterização do cenário desempenha papel secundário em relação ao deslocamento da personagem."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. O foco principal está na caracterização do ambiente por meio de impressões visuais e sensoriais.",
-
-    feedbackErro: "A personagem realiza ações, mas elas servem principalmente como suporte para a descrição do espaço apresentado.",
-
-    dicaBanca: "Em textos mistos, observe qual elemento ocupa maior espaço e recebe maior detalhamento."
-
-},
-{
-    texto: `A expansão das tecnologias digitais transformou profundamente as formas de comunicação na sociedade contemporânea. Atualmente, pessoas de diferentes regiões podem interagir em tempo real por meio de diversas plataformas. Diante desse cenário, torna-se indispensável investir em educação digital para que os cidadãos utilizem essas ferramentas de maneira crítica e responsável.`,
-
-    pergunta: "A tese defendida pelo autor pode ser sintetizada adequadamente pela seguinte afirmação:",
-
-    alternativas: [
-        "As tecnologias digitais eliminaram a necessidade de formação educacional voltada para a comunicação.",
-        "O acesso às plataformas digitais garante automaticamente a formação de cidadãos críticos.",
-        "Os meios digitais apresentam vantagens limitadas quando comparados às formas tradicionais de comunicação.",
-        "A educação digital possui importância secundária diante do avanço das tecnologias de informação.",
-        "A ampliação das interações digitais exige ações educativas que favoreçam o uso consciente dessas ferramentas."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. O texto reconhece os benefícios das tecnologias digitais, mas enfatiza a necessidade de educação para seu uso responsável.",
-
-    feedbackErro: "A conclusão defendida pelo autor relaciona o avanço tecnológico à formação crítica dos usuários.",
-
-    dicaBanca: "Ao buscar a tese de um texto argumentativo, identifique a ideia que o autor pretende que o leitor aceite ao final da leitura."
-
-},
-{
-    texto: `Um jornal publicou um texto sem assinatura no qual analisava os impactos de uma nova política pública para a educação. Ao longo do texto, eram apresentados argumentos favoráveis e críticas à implementação das medidas anunciadas, refletindo o posicionamento institucional do veículo de comunicação.`,
-
-    pergunta: "Considerando as características dos gêneros textuais, o texto descrito aproxima-se principalmente do gênero:",
-
-    alternativas: [
-        "editorial, por expressar o posicionamento institucional do veículo acerca de tema de interesse público.",
-        "artigo de opinião, por apresentar análise argumentativa elaborada por colaborador especializado.",
-        "reportagem, por aprofundar o assunto mediante a apresentação de múltiplas perspectivas.",
-        "notícia, por relatar fatos recentes de forma objetiva e impessoal.",
-        "resenha crítica, por avaliar uma política pública com base em critérios técnicos previamente definidos."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. O editorial expressa a posição institucional do veículo de comunicação e normalmente não é assinado.",
-
-    feedbackErro: "A principal característica do editorial é representar o posicionamento do próprio jornal, e não a opinião individual de um autor.",
-
-    dicaBanca: "FGV, CEBRASPE e Ágata costumam diferenciar editorial e artigo de opinião. Observe sempre quem fala no texto: o veículo ou um autor específico."
-
-},
-{
-    texto: `Uma revista publicou um texto assinado por um especialista em educação. No material, o autor apresentou argumentos, exemplos e interpretações para defender mudanças na formação de professores da educação básica.`,
-
-    pergunta: "A situação comunicativa descrita corresponde predominantemente ao gênero:",
-
-    alternativas: [
-        "editorial, por representar oficialmente a posição institucional da revista sobre o tema discutido.",
-        "artigo de opinião, por apresentar posicionamento pessoal sustentado por argumentos e exemplos.",
-        "notícia, por informar acontecimentos recentes relacionados à educação nacional.",
-        "reportagem, por reunir diferentes fontes e perspectivas sobre determinado assunto.",
-        "crônica, por abordar tema cotidiano mediante linguagem predominantemente literária."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. O artigo de opinião caracteriza-se pela defesa de uma tese ou posicionamento pessoal sustentado por argumentos.",
-
-    feedbackErro: "A assinatura do autor e a defesa explícita de uma opinião são elementos fundamentais para identificar o artigo de opinião.",
-
-    dicaBanca: "Em provas de gêneros textuais, a autoria costuma ser um elemento decisivo para diferenciar editorial e artigo de opinião."
-
-},
-{
-    texto: `Uma publicação apresenta informações sobre a inauguração de uma escola, respondendo objetivamente a perguntas como: o que aconteceu, onde ocorreu, quando ocorreu e quem participou do evento. O texto não apresenta análises aprofundadas nem opiniões do autor.`,
-
-    pergunta: "A organização das informações permite classificar o texto como:",
-
-    alternativas: [
-        "reportagem, pois desenvolve o tema de forma aprofundada com múltiplas fontes e contextualização ampla.",
-        "artigo de opinião, pois apresenta interpretação crítica acerca do fato relatado.",
-        "notícia, pois prioriza a divulgação objetiva de um acontecimento recente de interesse público.",
-        "editorial, pois manifesta o posicionamento institucional do veículo responsável pela publicação.",
-        "resenha, pois avalia criticamente os resultados produzidos pelo evento mencionado."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. A notícia tem como principal finalidade informar fatos recentes de forma objetiva e direta.",
-
-    feedbackErro: "A ausência de análises aprofundadas, opiniões e avaliações indica predominância informativa típica da notícia.",
-
-    dicaBanca: "A notícia costuma responder às perguntas básicas do fato: o quê, quem, quando, onde e, em alguns casos, por quê."
-
-},
-{
-    texto: `Um portal de comunicação publica um texto extenso sobre evasão escolar. Além de apresentar dados estatísticos, o material reúne entrevistas com especialistas, relatos de estudantes e análises sobre as possíveis causas do problema.`,
-
-    pergunta: "A descrição apresentada corresponde mais adequadamente ao gênero:",
-
-    alternativas: [
-        "notícia, por limitar-se à divulgação objetiva de um acontecimento recente.",
-        "editorial, por representar o posicionamento institucional do veículo de comunicação.",
-        "artigo de opinião, por defender predominantemente a visão pessoal do autor sobre o problema.",
-        "reportagem, por aprofundar o tema mediante diferentes fontes, análises e contextualizações.",
-        "resenha crítica, por avaliar formalmente estudos relacionados ao tema abordado."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A reportagem caracteriza-se pelo aprofundamento das informações e pela utilização de múltiplas fontes.",
-
-    feedbackErro: "Ao contrário da notícia, a reportagem busca contextualizar, investigar e ampliar a compreensão do tema tratado.",
-
-    dicaBanca: "Uma das diferenças mais cobradas entre notícia e reportagem é o grau de aprofundamento das informações."
-
-},
-{
-    texto: `Uma empresa divulga uma peça textual com linguagem persuasiva, destacando qualidades de determinado produto e incentivando o público a adquiri-lo. O texto utiliza slogans, imagens atrativas e argumentos voltados ao convencimento do consumidor.`,
-
-    pergunta: "A finalidade comunicativa predominante permite identificar o gênero como:",
-
-    alternativas: [
-        "notícia comercial, por divulgar objetivamente informações relacionadas ao mercado consumidor.",
-        "editorial institucional, por expressar o posicionamento oficial da empresa acerca de seus produtos.",
-        "artigo promocional, por apresentar análise crítica sobre a qualidade dos itens anunciados.",
-        "reportagem mercadológica, por investigar as características do produto sob diferentes perspectivas.",
-        "propaganda publicitária, por buscar influenciar comportamentos e estimular o consumo de determinado produto."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. A propaganda tem como principal objetivo persuadir o público a adotar determinado comportamento ou consumir um produto.",
-
-    feedbackErro: "A presença de estratégias de convencimento e valorização do produto indica claramente a função persuasiva típica da propaganda.",
-
-    dicaBanca: "Sempre observe a finalidade do texto. Quando o objetivo é convencer ou influenciar o comportamento do leitor, geralmente há predominância da função persuasiva."
-
-},
-{
-    texto: `Um estudante envia uma mensagem eletrônica ao professor solicitando esclarecimentos sobre o prazo de entrega de um trabalho acadêmico. O texto apresenta saudação inicial, desenvolvimento objetivo da solicitação e despedida ao final.`,
-
-    pergunta: "Considerando a situação comunicativa descrita, o gênero textual predominante é:",
-
-    alternativas: [
-        "e-mail, por possibilitar comunicação escrita estruturada entre remetente e destinatário em ambiente digital.",
-        "memorando, por destinar-se predominantemente à circulação de informações em instituições formais, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "ofício, por exigir linguagem oficial e seguir protocolos administrativos específicos, considerando uma característica secundária, mas não a finalidade predominante da construção.",
-        "artigo de opinião, por apresentar manifestação pessoal sobre tema de interesse acadêmico, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "relatório, por registrar formalmente informações relacionadas a determinada atividade, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A estrutura apresentada corresponde às características mais comuns do gênero e-mail em contextos acadêmicos e profissionais.",
-
-    feedbackErro: "A presença de remetente, destinatário, saudação, desenvolvimento e despedida indica comunicação eletrônica típica do gênero e-mail.",
-
-    dicaBanca: "Em questões sobre gêneros, analise sempre a finalidade comunicativa, o suporte utilizado e a relação entre os interlocutores."
-
-},
-{
-    texto: `Uma publicação apresenta a avaliação de uma obra literária recém-lançada. O autor resume aspectos da narrativa, comenta características da escrita e emite julgamentos sobre a qualidade da obra, indicando pontos positivos e limitações.`,
-
-    pergunta: "A descrição apresentada permite identificar predominantemente o gênero:",
-
-    alternativas: [
-        "artigo científico, por apresentar resultados de investigação sobre aspectos literários específicos.",
-        "resenha crítica, por combinar síntese de informações e apreciação avaliativa da obra analisada.",
-        "editorial, por expressar o posicionamento institucional do veículo responsável pela publicação.",
-        "reportagem cultural, por reunir diferentes opiniões acerca do lançamento de determinada obra.",
-        "notícia, por informar objetivamente fatos relacionados ao mercado editorial."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. A resenha crítica reúne descrição, síntese e avaliação de uma obra ou produto cultural.",
-
-    feedbackErro: "A característica central da resenha crítica é apresentar apreciação fundamentada sobre o objeto analisado.",
-
-    dicaBanca: "Muitas bancas diferenciam resumo e resenha. A presença de avaliação é um forte indicativo de resenha crítica."
-
-},
-{
-    texto: `Uma tira apresenta três quadrinhos. Nos dois primeiros, um personagem reclama constantemente do excesso de tarefas. No último, surge uma situação inesperada que produz efeito humorístico relacionado às falas anteriores.`,
-
-    pergunta: "A construção do sentido do texto depende principalmente:",
-
-    alternativas: [
-        "da exposição objetiva de fatos cotidianos sem determinado intenção de provocar interpretação subjetiva.",
-        "da defesa explícita de uma tese relacionada à organização do trabalho contemporâneo.",
-        "da combinação entre linguagem verbal e visual, culminando em um desfecho que produz humor.",
-        "da apresentação detalhada de informações necessárias à compreensão de determinado problema social.",
-        "da reprodução fiel de acontecimentos reais com finalidade predominantemente documental."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. As tiras normalmente combinam elementos verbais e visuais para construir humor ou reflexão em poucos quadrinhos.",
-
-    feedbackErro: "O efeito de sentido da tira decorre da interação entre imagens, falas e desfecho apresentado ao leitor.",
-
-    dicaBanca: "Tiras costumam explorar humor, ironia ou crítica social por meio da articulação entre texto e imagem."
-
-},
-{
-    texto: `Em uma publicação, o autor utiliza linguagem subjetiva para relatar uma situação cotidiana aparentemente simples. Ao longo do texto, fatos comuns recebem tratamento reflexivo e bem-humorado, permitindo múltiplas interpretações.`,
-
-    pergunta: "As características descritas aproximam o texto do gênero:",
-
-    alternativas: [
-        "notícia, por relatar fatos recentes de interesse coletivo com objetividade informativa.",
-        "editorial, por expressar posicionamento institucional sobre tema relevante para a sociedade.",
-        "reportagem, por aprofundar determinado assunto mediante entrevistas e contextualização.",
-        "crônica, por abordar acontecimentos do cotidiano mediante olhar subjetivo e frequentemente reflexivo.",
-        "relatório, por registrar formalmente observações relacionadas a uma situação específica."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A crônica costuma partir de situações cotidianas para construir reflexões, humor ou críticas sociais.",
-
-    feedbackErro: "A subjetividade e o tratamento literário de fatos comuns constituem marcas importantes da crônica.",
-
-    dicaBanca: "Ao identificar uma crônica, observe a presença de temas cotidianos associados a linguagem mais pessoal e interpretativa."
-
-},
-{
-    texto: `Uma instituição pública encaminha documento oficial a outro órgão da administração para solicitar informações necessárias ao desenvolvimento de determinado procedimento administrativo. O texto segue padrão formal e linguagem impessoal.`,
-
-    pergunta: "A situação descrita corresponde mais adequadamente ao gênero:",
-
-    alternativas: [
-        "e-mail pessoal, por permitir troca rápida de informações entre diferentes destinatários.",
-        "artigo de opinião, por apresentar posicionamento fundamentado acerca de tema administrativo.",
-        "relatório técnico, por registrar detalhadamente resultados de atividades já executadas.",
-        "memorando informal, por priorizar comunicação espontânea sem exigência de formalidades.",
-        "ofício, por constituir instrumento formal de comunicação entre instituições ou autoridades."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. O ofício é amplamente utilizado na comunicação formal entre órgãos e autoridades da administração pública.",
-
-    feedbackErro: "A formalidade, a finalidade institucional e a comunicação entre órgãos públicos são características típicas do ofício.",
-
-    dicaBanca: "Bancas de concursos para professor costumam cobrar a distinção entre gêneros administrativos e gêneros de circulação cotidiana."
-
-},
-{
-    texto: `Uma charge publicada em jornal apresenta um personagem político tentando esconder documentos atrás de uma cortina enquanto afirma publicamente defender a transparência. A construção visual e verbal produz efeito crítico relacionado ao comportamento retratado.`,
-
-    pergunta: "A principal característica do gênero apresentado consiste em:",
-
-    alternativas: [
-
-        "utilizar recursos verbais e visuais para promover crítica relacionada a fatos ou situações socialmente relevantes.",
-
-        "relatar acontecimentos recentes de forma objetiva, priorizando a transmissão de informações verificáveis.",
-
-        "apresentar descrição detalhada de personagens públicos sem manifestação de posicionamento crítico.",
-
-        "defender explicitamente uma tese por meio de argumentação desenvolvida em linguagem formal.",
-
-        "registrar acontecimentos cotidianos com finalidade predominantemente documental e informativa."
-
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A charge caracteriza-se pelo uso de humor, ironia e crítica social ou política associados a situações contextualizadas.",
-
-    feedbackErro: "A presença de crítica construída por meio da combinação entre imagem e linguagem verbal é uma marca típica da charge.",
-
-    dicaBanca: "Charge e cartum costumam ser cobrados juntos. A charge geralmente dialoga com acontecimentos ou contextos específicos."
-
-},
-{
-    texto: `Uma publicação humorística apresenta um personagem fictício reclamando da dificuldade de acordar cedo. A situação retratada não está relacionada a fatos ou acontecimentos específicos, podendo ser compreendida em diferentes épocas e contextos.`,
-
-    pergunta: "As características descritas aproximam o texto do gênero:",
-
-    alternativas: [
-
-        "charge, por estabelecer crítica direta a acontecimentos políticos ou sociais recentes.",
-
-        "cartum, por explorar situação humorística de caráter amplo e atemporal.",
-
-        "notícia, por relatar fato de interesse coletivo mediante linguagem acessível.",
-
-        "editorial, por expressar posicionamento institucional acerca de comportamento social.",
-
-        "crônica, por desenvolver reflexão subjetiva sobre experiência cotidiana."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. O cartum geralmente aborda situações universais e atemporais, sem depender de contexto específico para sua compreensão.",
-
-    feedbackErro: "Diferentemente da charge, o cartum não costuma estar vinculado a acontecimentos ou personagens contextualizados.",
-
-    dicaBanca: "Se a compreensão do texto depende de um fato atual, tende a ser charge. Se funciona em qualquer época, aproxima-se do cartum."
-
-},
-{
-    texto: `Uma instituição educacional divulga material contendo datas, horários, local de realização e orientações básicas para participação em determinado evento acadêmico destinado à comunidade escolar.`,
-
-    pergunta: "A finalidade comunicativa predominante permite classificar o texto como:",
-
-    alternativas: [
-        "relatório, por registrar formalmente informações produzidas durante atividade institucional.",
-        "artigo de opinião, por apresentar posicionamento acerca da relevância do evento promovido.",
-        "convite, por buscar informar e estimular a participação dos destinatários em determinado evento.",
-        "reportagem, por contextualizar fatos relacionados à organização de atividades acadêmicas.",
-        "editorial, por expressar a posição oficial da instituição sobre temas educacionais."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. O convite tem como objetivo principal divulgar um evento e incentivar a participação do público-alvo.",
-
-    feedbackErro: "A divulgação de informações práticas associadas ao estímulo à participação caracteriza o gênero convite.",
-
-    dicaBanca: "Observe sempre a finalidade comunicativa do texto. Em muitos casos, ela é o principal elemento para identificar o gênero."
-
-},
-{
-    texto: `Uma revista científica publica texto que apresenta objetivos, metodologia, resultados e conclusões de uma pesquisa realizada por pesquisadores vinculados a uma universidade pública.`,
-
-    pergunta: "A organização textual descrita corresponde predominantemente ao gênero:",
-
-    alternativas: [
-        "resenha crítica, por avaliar a qualidade metodológica de investigações acadêmicas recentes.",
-        "reportagem especializada, por contextualizar descobertas científicas para o público geral.",
-        "editorial acadêmico, por expressar posicionamento institucional sobre temas científicos.",
-        "artigo científico, por divulgar procedimentos, resultados e conclusões de pesquisa.",
-        "ensaio argumentativo, por desenvolver reflexão pessoal acerca de determinado problema."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. O artigo científico possui estrutura voltada à divulgação formal de pesquisas e resultados acadêmicos.",
-
-    feedbackErro: "Objetivos, metodologia, resultados e conclusões são elementos característicos dos artigos científicos.",
-
-    dicaBanca: "Questões sobre gêneros acadêmicos costumam explorar sua finalidade e organização estrutural."
-
-},
-{
-    texto: `Em um ambiente corporativo, um gestor encaminha comunicação breve aos funcionários de determinado setor para informar alteração de procedimentos internos. O texto circula apenas dentro da própria organização e possui finalidade administrativa.`,
-
-    pergunta: "Considerando a situação comunicativa apresentada, o gênero mais adequado é:",
-
-    alternativas: [
-        "ofício, por destinar-se prioritariamente à comunicação formal entre instituições distintas.",
-        "carta aberta, por permitir ampla divulgação de informações de interesse coletivo.",
-        "relatório técnico, por registrar detalhadamente atividades e resultados alcançados.",
-        "e-mail pessoal, por privilegiar comunicação informal entre indivíduos específicos.",
-        "memorando, por viabilizar comunicação interna relacionada a assuntos administrativos."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. O memorando é tradicionalmente utilizado para comunicação interna em instituições e organizações.",
-
-    feedbackErro: "A principal pista da questão é a circulação restrita ao ambiente interno da organização.",
-
-    dicaBanca: "Memorando e ofício são frequentemente cobrados juntos. Memorando = comunicação interna; Ofício = comunicação externa ou institucional."
-
-},
-{
-    texto: `Uma organização não governamental publica um texto destinado à população em geral, apresentando orientações para a prevenção de doenças transmitidas por mosquitos. O material utiliza linguagem acessível, verbos no imperativo e recomendações práticas para o cotidiano.`,
-
-    pergunta: "A finalidade comunicativa predominante permite identificar o texto como pertencente ao gênero:",
-
-    alternativas: [
-        "campanha educativa, por orientar comportamentos e promover práticas consideradas socialmente benéficas.",
-        "manual de instruções, por apresentar procedimentos relacionados ao funcionamento de equipamentos específicos.",
-        "artigo científico, por divulgar conhecimentos produzidos por meio de investigação sistemática.",
-        "editorial, por expressar posicionamento institucional sobre questões de saúde pública.",
-        "reportagem, por contextualizar informações relacionadas a problemas sanitários."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. O objetivo principal é orientar a população e incentivar comportamentos preventivos, característica comum de campanhas educativas.",
-
-    feedbackErro: "A presença de orientações práticas voltadas ao público em geral indica finalidade educativa e de conscientização.",
-
-    dicaBanca: "Analise sempre quem é o público-alvo e qual comportamento o texto pretende estimular."
-
-},
-{
-    texto: `Um cidadão publica texto em jornal de grande circulação manifestando sua opinião sobre problemas de mobilidade urbana em sua cidade. O texto é assinado, apresenta argumentos e busca convencer os leitores acerca de possíveis soluções.`,
-
-    pergunta: "A situação descrita aproxima-se mais adequadamente do gênero:",
-
-    alternativas: [
-        "editorial, por representar o posicionamento institucional do veículo de comunicação, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "carta do leitor, por permitir manifestação de opinião do público sobre temas de interesse coletivo.",
-        "notícia, por informar objetivamente acontecimentos relacionados ao trânsito urbano, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "reportagem, por reunir diferentes perspectivas acerca do tema discutido, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "resenha crítica, por avaliar formalmente políticas públicas de mobilidade, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. A carta do leitor possibilita que cidadãos expressem opiniões, críticas ou sugestões sobre assuntos de interesse público.",
-
-    feedbackErro: "O texto é assinado por um cidadão e representa sua opinião pessoal, não a posição institucional do jornal.",
-
-    dicaBanca: "Observe quem produz o texto e qual espaço de circulação ele ocupa dentro do veículo de comunicação."
-
-},
-{
-    texto: `Uma empresa apresenta documento contendo registro detalhado das atividades realizadas durante determinado período, incluindo metas alcançadas, dificuldades encontradas e resultados obtidos.`,
-
-    pergunta: "As características descritas correspondem predominantemente ao gênero:",
-
-    alternativas: [
-        "memorando, por comunicar rapidamente informações internas entre setores da organização, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "ofício, por estabelecer comunicação formal entre instituições ou autoridades, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "relatório, por sistematizar informações relacionadas à execução e aos resultados de atividades realizadas.",
-        "ata, por registrar discussões e decisões ocorridas em reuniões específicas, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "artigo de opinião, por apresentar avaliação crítica acerca do desempenho institucional, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. O relatório tem como finalidade registrar, organizar e apresentar informações sobre atividades executadas e seus resultados.",
-
-    feedbackErro: "A descrição enfatiza acompanhamento de atividades e apresentação de resultados, características típicas do relatório.",
-
-    dicaBanca: "Relatório costuma envolver prestação de contas, descrição de ações realizadas e análise de resultados."
-
-},
-{
-    texto: `Durante uma reunião escolar, um servidor registra participantes presentes, assuntos discutidos, encaminhamentos realizados e decisões aprovadas pelos membros presentes.`,
-
-    pergunta: "O registro produzido ao final da reunião corresponde ao gênero:",
-
-    alternativas: [
-        "memorando, por transmitir informações administrativas entre setores de uma instituição.",
-        "ofício, por formalizar comunicação externa entre órgãos ou autoridades.",
-        "relatório, por apresentar análise detalhada de resultados alcançados ao longo de determinado período.",
-        "ata, por documentar oficialmente acontecimentos e deliberações ocorridas em reunião.",
-        "convite, por divulgar informações relacionadas à realização de eventos institucionais."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A ata registra formalmente os fatos, debates e decisões ocorridos durante uma reunião.",
-
-    feedbackErro: "A principal finalidade da ata é documentar acontecimentos e deliberações para consulta futura.",
-
-    dicaBanca: "Sempre associe a ata ao contexto de reuniões, assembleias ou encontros deliberativos."
-
-},
-{
-    texto: `Uma instituição pública divulga texto dirigido à população para informar alterações no funcionamento de determinados serviços. O material apresenta linguagem objetiva, foco informativo e preocupação com a transmissão clara dos fatos.`,
-
-    pergunta: "A finalidade predominante do texto aproxima-o mais do gênero:",
-
-    alternativas: [
-        "artigo de opinião, por defender posicionamento relacionado à prestação de serviços públicos.",
-        "editorial, por expressar oficialmente a visão institucional sobre questões administrativas.",
-        "resenha, por avaliar criticamente as mudanças implementadas pela instituição.",
-        "crônica, por abordar situação cotidiana mediante linguagem subjetiva e reflexiva.",
-        "comunicado, por transmitir informações relevantes de maneira objetiva aos destinatários."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. O comunicado tem como objetivo principal informar o público sobre fatos, mudanças ou orientações de interesse comum.",
-
-    feedbackErro: "A objetividade e a transmissão direta de informações são características centrais do gênero comunicado.",
-
-    dicaBanca: "Quando o foco está apenas em informar algo ao público, sem argumentação ou avaliação, considere a possibilidade de comunicado."
-},
-{
-    texto: `Uma instituição de ensino divulga documento contendo normas para inscrição em um processo seletivo. O texto apresenta requisitos, documentação necessária, prazos, critérios de classificação e orientações aos candidatos.`,
-
-    pergunta: "Considerando a finalidade e a organização das informações, o gênero textual descrito corresponde a:",
-
-    alternativas: [
-        "edital, por estabelecer regras, condições e procedimentos relacionados a determinado processo público ou institucional.",
-        "memorando, por viabilizar a circulação interna de informações administrativas entre setores específicos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "ata, por registrar formalmente decisões e deliberações ocorridas em reuniões institucionais, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "artigo de opinião, por apresentar posicionamentos acerca dos critérios adotados pela instituição, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "reportagem, por contextualizar informações relacionadas ao processo seletivo mencionado, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. O edital tem como finalidade divulgar regras, requisitos, prazos e condições de participação em processos seletivos, concursos e outras atividades institucionais.",
-
-    feedbackErro: "A descrição enfatiza normas e condições de participação, características típicas do gênero edital.",
-
-    dicaBanca: "Quando o texto estabelece regras, prazos, critérios e exigências formais, considere a possibilidade de ser um edital."
-
-},
-{
-    texto: `Uma publicação acadêmica apresenta reflexão aprofundada sobre os impactos da inteligência artificial na educação. O autor desenvolve argumentos, dialoga com diferentes referências teóricas e explora possibilidades interpretativas sem necessariamente seguir a estrutura de uma pesquisa científica.`,
-
-    pergunta: "As características descritas aproximam o texto do gênero:",
-
-    alternativas: [
-        "artigo científico, por apresentar em regra metodologia, resultados e conclusões de pesquisa.",
-        "ensaio, por desenvolver reflexão analítica e interpretativa acerca de determinado tema.",
-        "editorial, por expressar posicionamento institucional da publicação acadêmica.",
-        "relatório técnico, por registrar dados produzidos durante investigação formal.",
-        "resenha crítica, por avaliar especificamente uma obra ou produção intelectual."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. O ensaio caracteriza-se pela reflexão crítica e pela exploração interpretativa de um tema.",
-
-    feedbackErro: "O texto descrito não apresenta a estrutura típica de pesquisa científica, mas sim uma reflexão argumentativa e analítica.",
-
-    dicaBanca: "O ensaio costuma valorizar a reflexão intelectual e a liberdade argumentativa do autor."
-
-},
-{
-    texto: `Um portal especializado em cultura publica texto que apresenta informações sobre um filme recém-lançado, descreve aspectos da narrativa e avalia elementos como roteiro, direção e atuação dos personagens.`,
-
-    pergunta: "A finalidade comunicativa predominante permite classificar o texto como:",
-
-    alternativas: [
-        "notícia cultural, por informar objetivamente a estreia de determinada produção cinematográfica.",
-        "editorial, por expressar o posicionamento institucional do veículo sobre produções artísticas.",
-        "resenha crítica, por combinar apresentação da obra com apreciação avaliativa de seus elementos.",
-        "reportagem investigativa, por aprofundar questões relacionadas à indústria cinematográfica.",
-        "ensaio acadêmico, por desenvolver reflexão teórica acerca da linguagem audiovisual."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. A resenha crítica apresenta informações sobre a obra e realiza avaliação fundamentada de seus aspectos.",
-
-    feedbackErro: "A presença de comentários avaliativos diferencia a resenha de gêneros meramente informativos.",
-
-    dicaBanca: "Resumo informa. Resenha informa e avalia. Essa distinção é muito cobrada em concursos."
-
-},
-{
-    texto: `Durante uma assembleia de moradores, diferentes participantes apresentaram sugestões para melhorar a segurança do bairro. Ao final do encontro, as propostas aprovadas foram registradas oficialmente para futura execução.`,
-
-    pergunta: "O documento utilizado para registrar formalmente as deliberações da assembleia pertence ao gênero:",
-
-    alternativas: [
-        "relatório, por apresentar resultados alcançados após a implementação das decisões tomadas.",
-        "memorando, por comunicar informações internas entre setores de uma organização.",
-        "ofício, por formalizar comunicação entre entidades distintas.",
-        "ata, por documentar acontecimentos, debates e decisões ocorridos durante a reunião.",
-        "comunicado, por divulgar informações de interesse coletivo ao público em geral."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A ata registra oficialmente os fatos e decisões ocorridos durante reuniões e assembleias.",
-
-    feedbackErro: "O foco da questão está no registro formal das deliberações, característica típica da ata.",
-
-    dicaBanca: "Sempre associe a ata ao contexto de reuniões, assembleias, conselhos ou encontros deliberativos."
-
-},
-{
-    texto: `Uma empresa divulga documento destinado aos colaboradores informando alterações em procedimentos internos. O texto apresenta linguagem objetiva, circulação restrita ao ambiente organizacional e finalidade exclusivamente informativa.`,
-
-    pergunta: "A situação comunicativa descrita aproxima-se mais adequadamente do gênero:",
-
-    alternativas: [
-        "ofício, por estabelecer comunicação formal entre diferentes órgãos ou entidades, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "editorial corporativo, por expressar posicionamento institucional sobre temas estratégicos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "artigo de opinião, por apresentar análise crítica acerca das mudanças implementadas, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "relatório gerencial, por registrar resultados produzidos após a adoção dos novos procedimentos, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "memorando, por viabilizar a comunicação interna de informações administrativas entre membros da instituição."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. O memorando é utilizado principalmente para comunicações internas de caráter administrativo.",
-
-    feedbackErro: "A circulação interna e a finalidade informativa são elementos centrais para identificar o memorando.",
-
-    dicaBanca: "Uma regra prática: memorando = comunicação interna; ofício = comunicação externa ou institucional."
-
-},
-{
-    texto: `Uma organização internacional divulga documento no qual apresenta princípios, objetivos e compromissos assumidos por diferentes países em relação à preservação ambiental. O texto possui caráter normativo e busca orientar ações futuras dos participantes.`,
-
-    pergunta: "Considerando sua finalidade comunicativa, o documento descrito aproxima-se mais adequadamente do gênero:",
-
-    alternativas: [
-        "manifesto, por tornar pública uma posição coletiva e defender princípios relacionados a determinada causa.",
-        "relatório técnico, por apresentar resultados produzidos após a implementação de políticas ambientais.",
-        "editorial, por expressar o posicionamento institucional de um veículo de comunicação, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "notícia, por informar acontecimentos recentes de interesse público, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "ata, por registrar formalmente debates ocorridos em reuniões internacionais, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. O manifesto caracteriza-se pela apresentação pública de ideias, princípios e posicionamentos coletivos relacionados a determinada causa.",
-
-    feedbackErro: "O texto não se limita a informar ou registrar acontecimentos; ele busca afirmar compromissos e orientar posicionamentos.",
-
-    dicaBanca: "Manifestos costumam defender valores, princípios e propostas de ação voltados para grupos ou para a sociedade."
-
-},
-{
-    texto: `Um pesquisador apresenta oralmente os resultados de seu estudo durante um congresso acadêmico. Sua exposição é acompanhada por slides contendo gráficos, tabelas e sínteses das principais conclusões obtidas.`,
-
-    pergunta: "A situação comunicativa descrita corresponde predominantemente ao gênero:",
-
-    alternativas: [
-        "artigo científico, por divulgar formalmente resultados de pesquisa em publicação especializada.",
-        "seminário, por envolver apresentação oral estruturada de conhecimentos a um público específico.",
-        "resenha crítica, por avaliar contribuições produzidas por outros pesquisadores.",
-        "editorial acadêmico, por expressar posicionamento institucional acerca de determinado tema.",
-        "ata de congresso, por registrar oficialmente as atividades desenvolvidas durante o evento."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. O seminário caracteriza-se pela exposição oral organizada de conhecimentos, frequentemente apoiada por recursos visuais.",
-
-    feedbackErro: "Embora os resultados de pesquisa possam originar artigos científicos, a situação descrita enfatiza a apresentação oral.",
-
-    dicaBanca: "Observe se a questão trata de produção escrita ou de exposição oral. Essa diferença costuma ser decisiva."
-
-},
-{
-    texto: `Em uma rede social, uma instituição pública divulga publicação curta alertando a população sobre a necessidade de vacinação. O texto utiliza linguagem objetiva, elementos visuais e informações resumidas para alcançar grande número de pessoas.`,
-
-    pergunta: "A estratégia comunicativa apresentada aproxima o texto principalmente do gênero:",
-
-    alternativas: [
-        "editorial digital, por expressar posicionamento institucional detalhado sobre políticas públicas.",
-        "artigo de opinião, por desenvolver argumentação aprofundada acerca do tema tratado.",
-        "campanha de conscientização, por buscar informar e influenciar comportamentos socialmente desejáveis.",
-        "reportagem multimodal, por investigar diferentes aspectos relacionados à vacinação.",
-        "relatório informativo, por registrar dados produzidos por órgãos de saúde."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. O objetivo principal é conscientizar a população e estimular determinado comportamento.",
-
-    feedbackErro: "A brevidade do texto e a tentativa de mobilizar atitudes aproximam-no das campanhas de conscientização.",
-
-    dicaBanca: "Em gêneros digitais, observe não apenas o suporte, mas também a finalidade comunicativa predominante."
-
-},
-{
-    texto: `Uma publicação reúne perguntas frequentes de usuários sobre determinado serviço público, apresentando respostas objetivas para cada uma delas com o objetivo de esclarecer dúvidas recorrentes.`,
-
-    pergunta: "A organização textual descrita corresponde predominantemente ao gênero:",
-
-    alternativas: [
-        "artigo científico, por desenvolver explicações fundamentadas em pesquisa especializada, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "editorial institucional, por expressar posicionamento oficial acerca do serviço oferecido, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "reportagem explicativa, por aprofundar diferentes aspectos relacionados ao tema abordado, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "guia de perguntas frequentes (FAQ), por estruturar informações a partir de dúvidas e respostas organizadas.",
-        "resenha informativa, por sintetizar e avaliar características do serviço mencionado, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A estrutura de perguntas e respostas é característica dos textos organizados como FAQ.",
-
-    feedbackErro: "O foco está no esclarecimento rápido de dúvidas recorrentes e não na argumentação ou avaliação do tema.",
-
-    dicaBanca: "Nem sempre a identificação do gênero depende do suporte; muitas vezes ela decorre da forma de organização do texto."
-
-},
-{
-    texto: `Uma associação de moradores torna público um documento no qual reivindica melhorias para o transporte público da região. O texto apresenta argumentos, solicita providências das autoridades e busca mobilizar apoio da comunidade.`,
-
-    pergunta: "Considerando os objetivos comunicativos apresentados, o texto aproxima-se mais adequadamente do gênero:",
-
-    alternativas: [
-        "ata, por registrar formalmente decisões tomadas pelos membros da associação, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "memorando, por comunicar informações internas entre setores de uma instituição, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "notícia, por relatar objetivamente fatos relacionados ao transporte público local, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "relatório, por apresentar resultados decorrentes de ações previamente executadas, quando considerada isoladamente, sem observar todos os elementos exigidos pelo enunciado.",
-        "carta aberta, por dirigir-se publicamente à sociedade ou às autoridades para defender determinada reivindicação."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. A carta aberta tem caráter público e busca sensibilizar leitores ou autoridades em torno de determinada causa.",
-
-    feedbackErro: "O texto não registra fatos nem comunica informações internas; ele procura mobilizar apoio para uma reivindicação coletiva.",
-
-    dicaBanca: "Cartas abertas costumam combinar argumentação, reivindicação e ampla divulgação ao público."
-}];
+    {
+        "texto": "Ao entardecer, a praça ficou coberta por uma luz dourada. As fachadas antigas ganharam tons quentes, e o cheiro das árvores molhadas se espalhou pelo caminho de pedras.",
+        "pergunta": "A sequência textual predominante é descritiva porque:",
+        "alternativas": [
+            "o foco recai na caracterização sensorial do espaço, com destaque para cores, formas e impressões do ambiente.",
+            "o trecho organiza uma cadeia de acontecimentos protagonizados por personagens em conflito ao longo do tempo.",
+            "o autor apresenta razões destinadas a defender uma tese sobre a preservação de espaços urbanos históricos.",
+            "a composição orienta o leitor a executar ações sucessivas para observar corretamente os elementos da praça.",
+            "a finalidade central consiste em explicar conceitos relativos à arquitetura e ao planejamento dos espaços públicos."
+        ],
+        "correta": 0,
+        "explicacao": "A descrição organiza o texto em torno de características e percepções do cenário; eventuais mudanças do ambiente não constituem uma trama narrativa.",
+        "feedbackAcerto": "Correto. A descrição organiza o texto em torno de características e percepções do cenário; eventuais mudanças do ambiente não constituem uma trama narrativa.",
+        "feedbackErro": "A resposta correta é: \"o foco recai na caracterização sensorial do espaço, com destaque para cores, formas e impressões do ambiente.\". A descrição organiza o texto em torno de características e percepções do cenário; eventuais mudanças do ambiente não constituem uma trama narrativa.",
+        "dicaBanca": "Em textos mistos, observe qual elemento conduz a progressão: ações, características, explicações, argumentos ou instruções."
+    },
+    {
+        "texto": "Pesquisas sobre leitura mostram que o contato frequente com diferentes gêneros amplia o repertório vocabular e favorece estratégias de compreensão. Esses efeitos podem variar conforme a idade, a escolarização e as práticas culturais dos leitores.",
+        "pergunta": "Quanto à tipologia predominante, o trecho é expositivo porque:",
+        "alternativas": [
+            "procura levar o leitor a adotar uma rotina de leitura por meio de apelos diretos e verbos no imperativo.",
+            "apresenta informações e relações explicativas sobre um tema, sem organizar a passagem em torno da defesa explícita de uma tese.",
+            "constrói uma cena por meio de detalhes sensoriais que permitem visualizar leitores em diferentes situações de aprendizagem.",
+            "narra episódios sucessivos da formação de leitores, estabelecendo conflito, clímax e desfecho para os acontecimentos. para construir uma experiência temporal completa.",
+            "prescreve procedimentos para selecionar gêneros adequados a cada faixa etária e situação de ensino."
+        ],
+        "correta": 1,
+        "explicacao": "A exposição prioriza apresentação e explicação de informações. O fato de um tema admitir discussão não torna o trecho argumentativo se não há tese sendo defendida.",
+        "feedbackAcerto": "Correto. A exposição prioriza apresentação e explicação de informações. O fato de um tema admitir discussão não torna o trecho argumentativo se não há tese sendo defendida.",
+        "feedbackErro": "A resposta correta é: \"apresenta informações e relações explicativas sobre um tema, sem organizar a passagem em torno da defesa explícita de uma tese.\". A exposição prioriza apresentação e explicação de informações. O fato de um tema admitir discussão não torna o trecho argumentativo se não há tese sendo defendida.",
+        "dicaBanca": "Diferencie informação sobre um tema de defesa de um posicionamento sobre esse tema."
+    },
+    {
+        "texto": "A escola ampliou o acesso a plataformas digitais, mas o uso pedagógico desses recursos continua desigual. Por isso, oferecer equipamentos sem formação docente contínua tende a produzir resultados limitados.",
+        "pergunta": "A predominância argumentativa decorre do fato de que o texto:",
+        "alternativas": [
+            "caracteriza detalhadamente os equipamentos usados em sala de aula e suas propriedades técnicas mais relevantes.",
+            "relata cronologicamente as etapas pelas quais a escola passou até implantar as plataformas digitais disponíveis.",
+            "articula uma constatação e uma conclusão avaliativa para sustentar a necessidade implícita de formação docente.",
+            "instrui diretamente gestores e professores sobre os passos necessários para configurar cada plataforma educacional.",
+            "expõe conceitos de tecnologia educacional sem estabelecer relação entre eles e qualquer posicionamento do autor."
+        ],
+        "correta": 2,
+        "explicacao": "O texto não se limita a informar: usa a situação apresentada como base para uma avaliação segundo a qual equipamentos sem formação produzem efeito limitado.",
+        "feedbackAcerto": "Correto. O texto não se limita a informar: usa a situação apresentada como base para uma avaliação segundo a qual equipamentos sem formação produzem efeito limitado.",
+        "feedbackErro": "A resposta correta é: \"articula uma constatação e uma conclusão avaliativa para sustentar a necessidade implícita de formação docente.\". O texto não se limita a informar: usa a situação apresentada como base para uma avaliação segundo a qual equipamentos sem formação produzem efeito limitado.",
+        "dicaBanca": "Procure a tese ou conclusão que o autor quer tornar aceitável e identifique os dados usados como suporte."
+    },
+    {
+        "texto": "Para enviar o formulário, preencha os campos obrigatórios, revise os dados informados, anexe o comprovante solicitado e selecione a opção 'Concluir inscrição'.",
+        "pergunta": "A sequência textual predominante é injuntiva porque:",
+        "alternativas": [
+            "descreve o formulário e seus componentes visuais para permitir ao leitor reconhecer cada parte da página.",
+            "explica a origem histórica dos procedimentos de inscrição adotados por instituições públicas e privadas.",
+            "defende a superioridade do formulário eletrônico em comparação com métodos tradicionais de atendimento presencial.",
+            "orienta o destinatário a realizar uma série de ações necessárias para alcançar uma finalidade prática.",
+            "narra a experiência de um candidato que percorre as etapas de inscrição e obtém um resultado ao final."
+        ],
+        "correta": 3,
+        "explicacao": "A injunção organiza o texto para orientar uma ação. A sequência de verbos dirigida ao destinatário estabelece procedimentos a executar.",
+        "feedbackAcerto": "Correto. A injunção organiza o texto para orientar uma ação. A sequência de verbos dirigida ao destinatário estabelece procedimentos a executar.",
+        "feedbackErro": "A resposta correta é: \"orienta o destinatário a realizar uma série de ações necessárias para alcançar uma finalidade prática.\". A injunção organiza o texto para orientar uma ação. A sequência de verbos dirigida ao destinatário estabelece procedimentos a executar.",
+        "dicaBanca": "Imperativos são pistas úteis, mas a finalidade de orientar procedimentos é o critério decisivo."
+    },
+    {
+        "texto": "Marina chegou cedo à escola, deixou os livros na sala dos professores e seguiu para o auditório. Quando abriu a porta, percebeu que os estudantes já aguardavam o início da atividade.",
+        "pergunta": "O trecho é predominantemente narrativo porque:",
+        "alternativas": [
+            "apresenta uma caracterização estática do auditório e dos objetos presentes no ambiente escolar. sem depender de uma sequência de acontecimentos.",
+            "expõe conceitos sobre organização de eventos pedagógicos e funcionamento dos espaços da instituição.",
+            "defende a importância da pontualidade por meio de argumentos relacionados ao comportamento dos estudantes.",
+            "orienta profissionais a preparar previamente os materiais necessários para iniciar uma atividade coletiva.",
+            "organiza ações sucessivas de uma personagem em determinado espaço e intervalo temporal, fazendo a situação avançar."
+        ],
+        "correta": 4,
+        "explicacao": "A narração se estrutura pela sucessão de ações de Marina. O cenário existe, mas serve de suporte para a progressão temporal dos acontecimentos.",
+        "feedbackAcerto": "Correto. A narração se estrutura pela sucessão de ações de Marina. O cenário existe, mas serve de suporte para a progressão temporal dos acontecimentos.",
+        "feedbackErro": "A resposta correta é: \"organiza ações sucessivas de uma personagem em determinado espaço e intervalo temporal, fazendo a situação avançar.\". A narração se estrutura pela sucessão de ações de Marina. O cenário existe, mas serve de suporte para a progressão temporal dos acontecimentos.",
+        "dicaBanca": "Em narração, verifique se o texto avança porque algo acontece, e não porque características são acumuladas."
+    },
+    {
+        "texto": "— Você conseguiu acessar o arquivo?\n— Consegui, mas a última página não abriu.\n— Vou reenviar o documento em outro formato.\n— Ótimo, assim consigo concluir a revisão.",
+        "pergunta": "A organização do trecho evidencia predominância dialogal porque:",
+        "alternativas": [
+            "o sentido é construído pela alternância de turnos entre interlocutores que respondem e ajustam suas falas reciprocamente.",
+            "a passagem apresenta uma tese central sustentada por argumentos de interlocutores que defendem posições incompatíveis.",
+            "o trecho descreve detalhadamente o arquivo e as falhas técnicas que impediram a abertura de uma de suas páginas.",
+            "as falas constituem instruções sequenciais que ensinam como converter documentos entre diferentes formatos digitais.",
+            "o texto reconstrói um acontecimento passado por meio de narrador externo que relata as ações dos participantes. em terceira pessoa por uma voz narrativa externa."
+        ],
+        "correta": 0,
+        "explicacao": "Na sequência dialogal, a progressão depende da interação entre falas, perguntas, respostas e ajustes feitos pelos interlocutores.",
+        "feedbackAcerto": "Correto. Na sequência dialogal, a progressão depende da interação entre falas, perguntas, respostas e ajustes feitos pelos interlocutores.",
+        "feedbackErro": "A resposta correta é: \"o sentido é construído pela alternância de turnos entre interlocutores que respondem e ajustam suas falas reciprocamente.\". Na sequência dialogal, a progressão depende da interação entre falas, perguntas, respostas e ajustes feitos pelos interlocutores.",
+        "dicaBanca": "Diálogo não é sinônimo de narração: examine se o desenvolvimento depende da troca de turnos de fala."
+    },
+    {
+        "texto": "Lucas atravessou o corredor devagar. À direita, janelas altas deixavam entrar uma luz azulada; à esquerda, cartazes antigos cobriam a parede. Ele parou diante da última porta e bateu duas vezes.",
+        "pergunta": "A classificação mais adequada para a passagem é:",
+        "alternativas": [
+            "predominantemente descritiva, pois a enumeração das características do corredor impede qualquer progressão temporal relevante.",
+            "predominantemente narrativa, com trechos descritivos que ambientam as ações do personagem sem assumir o eixo principal da progressão.",
+            "predominantemente expositiva, já que a descrição do espaço fornece conhecimento objetivo sobre a organização do prédio. segundo finalidade didática de transmissão de conhecimento.",
+            "predominantemente argumentativa, pois a seleção das imagens conduz o leitor a avaliar negativamente o estado do ambiente.",
+            "predominantemente injuntiva, pois a sequência de movimentos do personagem funciona como orientação a ser seguida pelo leitor."
+        ],
+        "correta": 1,
+        "explicacao": "As ações de atravessar, parar e bater fazem a situação avançar. A descrição do corredor atua como ambientação dentro da sequência narrativa.",
+        "feedbackAcerto": "Correto. As ações de atravessar, parar e bater fazem a situação avançar. A descrição do corredor atua como ambientação dentro da sequência narrativa.",
+        "feedbackErro": "A resposta correta é: \"predominantemente narrativa, com trechos descritivos que ambientam as ações do personagem sem assumir o eixo principal da progressão.\". As ações de atravessar, parar e bater fazem a situação avançar. A descrição do corredor atua como ambientação dentro da sequência narrativa.",
+        "dicaBanca": "Em textos mistos, identifique qual sequência organiza o avanço global e quais funcionam como apoio."
+    },
+    {
+        "texto": "Antes de ligar o projetor, verifique se os cabos estão firmemente conectados. Essa checagem reduz falhas de sinal durante a apresentação. Em seguida, pressione o botão de energia e aguarde a inicialização.",
+        "pergunta": "Nesse trecho, a explicação sobre a redução de falhas:",
+        "alternativas": [
+            "transforma o texto em argumentativo, porque qualquer justificativa implica defesa de uma tese pelo autor.",
+            "faz com que a sequência seja expositiva, pois o trecho passa a explicar o funcionamento eletrônico do equipamento. em linguagem predominantemente conceitual.",
+            "funciona como segmento secundário de caráter explicativo dentro de um texto cuja finalidade global continua sendo orientar ações.",
+            "elimina a injunção, pois instruções não podem coexistir com informações explicativas em uma mesma unidade textual.",
+            "introduz uma sequência narrativa que relata consequências normalmente observadas após o uso incorreto do equipamento."
+        ],
+        "correta": 2,
+        "explicacao": "Um texto pode combinar sequências diferentes. A justificativa explica uma orientação, mas a finalidade dominante continua sendo conduzir o leitor na execução de procedimentos.",
+        "feedbackAcerto": "Correto. Um texto pode combinar sequências diferentes. A justificativa explica uma orientação, mas a finalidade dominante continua sendo conduzir o leitor na execução de procedimentos.",
+        "feedbackErro": "A resposta correta é: \"funciona como segmento secundário de caráter explicativo dentro de um texto cuja finalidade global continua sendo orientar ações.\". Um texto pode combinar sequências diferentes. A justificativa explica uma orientação, mas a finalidade dominante continua sendo conduzir o leitor na execução de procedimentos.",
+        "dicaBanca": "Tipologias podem coexistir; predominância não significa presença exclusiva de uma única sequência."
+    },
+    {
+        "texto": "Um editorial de jornal apresenta dados sobre transporte público, resume argumentos de diferentes grupos e, ao final, defende a ampliação de corredores exclusivos de ônibus.",
+        "pergunta": "Assinale a afirmação correta sobre gênero e tipologia nesse caso.",
+        "alternativas": [
+            "Editorial e argumentação são duas denominações equivalentes para a mesma categoria de classificação textual.",
+            "Como apresenta dados, o texto deixa de pertencer ao gênero editorial e passa a constituir uma exposição científica. em qualquer contexto de circulação jornalística.",
+            "A presença de diferentes sequências impede que se identifique uma tipologia predominante no interior de um gênero textual.",
+            "Editorial é o gênero; a argumentação pode constituir sua sequência predominante, ao lado de segmentos expositivos usados como apoio.",
+            "A tipologia é definida pelo suporte jornalístico, enquanto o gênero dependeria dos verbos empregados no texto."
+        ],
+        "correta": 3,
+        "explicacao": "Gênero textual e tipologia são níveis distintos. Editorial é uma forma socialmente reconhecida de texto; argumentação descreve um modo de organização linguístico-discursiva que pode predominar nele.",
+        "feedbackAcerto": "Correto. Gênero textual e tipologia são níveis distintos. Editorial é uma forma socialmente reconhecida de texto; argumentação descreve um modo de organização linguístico-discursiva que pode predominar nele.",
+        "feedbackErro": "A resposta correta é: \"Editorial é o gênero; a argumentação pode constituir sua sequência predominante, ao lado de segmentos expositivos usados como apoio.\". Gênero textual e tipologia são níveis distintos. Editorial é uma forma socialmente reconhecida de texto; argumentação descreve um modo de organização linguístico-discursiva que pode predominar nele.",
+        "dicaBanca": "Não confunda gênero socialmente situado com sequência ou tipo textual."
+    },
+    {
+        "texto": "Uma campanha de vacinação apresenta o título 'Receita para um inverno mais seguro' e organiza as orientações como se fossem ingredientes e modo de preparo: '1 dose de informação, 1 ida à unidade de saúde, cuidado em dia'.",
+        "pergunta": "A estratégia empregada ilustra:",
+        "alternativas": [
+            "uma mudança de suporte que elimina a finalidade original da campanha e a transforma em receita culinária convencional.",
+            "uma ocorrência de intertextualidade que impede a classificação do material como campanha por misturar estruturas incompatíveis. mesmo quando conserva finalidade institucional própria.",
+            "uma sequência narrativa em que os ingredientes desempenham o papel de personagens de uma história curta.",
+            "uma forma de metalinguagem destinada a explicar tecnicamente como se produzem receitas e campanhas institucionais.",
+            "uma hibridização de gêneros, na qual a campanha incorpora a forma de uma receita para cumprir finalidade persuasiva e educativa."
+        ],
+        "correta": 4,
+        "explicacao": "A campanha mantém sua finalidade social, mas apropria-se da composição de outro gênero como recurso expressivo. Essa combinação caracteriza hibridização ou intergenericidade.",
+        "feedbackAcerto": "Correto. A campanha mantém sua finalidade social, mas apropria-se da composição de outro gênero como recurso expressivo. Essa combinação caracteriza hibridização ou intergenericidade.",
+        "feedbackErro": "A resposta correta é: \"uma hibridização de gêneros, na qual a campanha incorpora a forma de uma receita para cumprir finalidade persuasiva e educativa.\". A campanha mantém sua finalidade social, mas apropria-se da composição de outro gênero como recurso expressivo. Essa combinação caracteriza hibridização ou intergenericidade.",
+        "dicaBanca": "Pergunte qual finalidade permanece dominante mesmo quando um texto imita a forma de outro gênero."
+    },
+    {
+        "texto": "Um jornal publica, sem assinatura individual, texto que analisa a política de mobilidade da cidade e afirma que o município deve priorizar o transporte coletivo. A posição apresentada corresponde à linha institucional do veículo.",
+        "pergunta": "Nessa situação jornalística, o gênero descrito é:",
+        "alternativas": [
+            "editorial, porque expressa a posição institucional do veículo acerca de questão de interesse público.",
+            "artigo de opinião, porque toda argumentação publicada em jornal representa necessariamente a opinião pessoal de um articulista.",
+            "reportagem, porque a análise de política pública exige reunir diferentes fontes e evitar qualquer posicionamento editorial.",
+            "notícia, porque a circulação jornalística transforma avaliações institucionais em relato objetivo de acontecimentos recentes.",
+            "resenha crítica, porque o texto aprecia a qualidade de uma política pública como se ela fosse uma obra cultural."
+        ],
+        "correta": 0,
+        "explicacao": "O editorial manifesta o posicionamento institucional do veículo, em geral sem assumir a forma de uma opinião individual assinada.",
+        "feedbackAcerto": "Correto. O editorial manifesta o posicionamento institucional do veículo, em geral sem assumir a forma de uma opinião individual assinada.",
+        "feedbackErro": "A resposta correta é: \"editorial, porque expressa a posição institucional do veículo acerca de questão de interesse público.\". O editorial manifesta o posicionamento institucional do veículo, em geral sem assumir a forma de uma opinião individual assinada.",
+        "dicaBanca": "Para diferenciar editorial de artigo de opinião, observe quem assume a voz: o veículo ou um autor identificado."
+    },
+    {
+        "texto": "Uma professora publica texto assinado em revista educacional. Nele, defende que avaliações formativas devem ocupar espaço maior no planejamento escolar e sustenta sua posição com exemplos e argumentos.",
+        "pergunta": "O gênero mais compatível com essa situação é:",
+        "alternativas": [
+            "editorial, porque a revista assume institucionalmente toda opinião publicada em suas páginas.",
+            "artigo de opinião, porque há autoria identificada e defesa argumentada de um ponto de vista sobre tema de interesse coletivo.",
+            "notícia, porque a presença de exemplos concretos converte a argumentação em relato objetivo de acontecimentos escolares.",
+            "reportagem, porque qualquer texto de revista que trate de educação precisa apresentar múltiplas fontes e neutralidade do autor.",
+            "ata, porque a autora registra um posicionamento que poderia ter sido discutido em reunião pedagógica da instituição."
+        ],
+        "correta": 1,
+        "explicacao": "A autoria identificada e a defesa explícita de um ponto de vista sustentado por argumentos caracterizam o artigo de opinião.",
+        "feedbackAcerto": "Correto. A autoria identificada e a defesa explícita de um ponto de vista sustentado por argumentos caracterizam o artigo de opinião.",
+        "feedbackErro": "A resposta correta é: \"artigo de opinião, porque há autoria identificada e defesa argumentada de um ponto de vista sobre tema de interesse coletivo.\". A autoria identificada e a defesa explícita de um ponto de vista sustentado por argumentos caracterizam o artigo de opinião.",
+        "dicaBanca": "Autoria, finalidade e modo de circulação são pistas mais fortes que o tema do texto."
+    },
+    {
+        "texto": "Um portal informa que uma nova escola foi inaugurada na manhã de terça-feira. O texto apresenta local, horário, autoridades presentes e número inicial de matrículas, sem desenvolver análise extensa do tema.",
+        "pergunta": "A configuração descrita aproxima-se do gênero:",
+        "alternativas": [
+            "editorial, porque a informação sobre política educacional representa necessariamente a posição oficial do portal.",
+            "reportagem, porque toda publicação com dados numéricos pressupõe investigação prolongada e múltiplas perspectivas.",
+            "notícia, porque prioriza a divulgação direta de um acontecimento recente e de informações essenciais sobre o fato.",
+            "artigo científico, porque os números apresentados funcionam como dados empíricos submetidos à análise metodológica.",
+            "crônica, porque a inauguração de uma escola constitui acontecimento cotidiano que pode receber tratamento jornalístico."
+        ],
+        "correta": 2,
+        "explicacao": "A notícia privilegia a informação imediata sobre um fato recente, apresentando os elementos essenciais sem o aprofundamento característico de uma reportagem.",
+        "feedbackAcerto": "Correto. A notícia privilegia a informação imediata sobre um fato recente, apresentando os elementos essenciais sem o aprofundamento característico de uma reportagem.",
+        "feedbackErro": "A resposta correta é: \"notícia, porque prioriza a divulgação direta de um acontecimento recente e de informações essenciais sobre o fato.\". A notícia privilegia a informação imediata sobre um fato recente, apresentando os elementos essenciais sem o aprofundamento característico de uma reportagem.",
+        "dicaBanca": "Compare notícia e reportagem pelo grau de aprofundamento, pelas fontes e pela contextualização."
+    },
+    {
+        "texto": "Um portal produz série extensa sobre evasão escolar. O material reúne dados de dez anos, entrevistas com estudantes, gestores e pesquisadores, além de contextualização histórica e análise de políticas públicas.",
+        "pergunta": "O gênero descrito é melhor identificado como:",
+        "alternativas": [
+            "notícia, pois todo texto jornalístico sobre um tema atual tem como finalidade informar acontecimentos recentes ao leitor.",
+            "editorial, pois a seleção de fontes equivale à defesa institucional de uma posição pelo veículo responsável pela publicação.",
+            "artigo de opinião, pois a presença de análise elimina a possibilidade de investigação jornalística baseada em múltiplas fontes.",
+            "reportagem, pois o texto aprofunda o tema, articula diferentes fontes e amplia a contextualização das informações apresentadas.",
+            "resenha, pois o conjunto de dados e entrevistas é avaliado como um objeto cultural cuja qualidade deve ser julgada."
+        ],
+        "correta": 3,
+        "explicacao": "A reportagem se distingue pelo aprofundamento, pela contextualização e pelo uso articulado de diferentes fontes e perspectivas.",
+        "feedbackAcerto": "Correto. A reportagem se distingue pelo aprofundamento, pela contextualização e pelo uso articulado de diferentes fontes e perspectivas.",
+        "feedbackErro": "A resposta correta é: \"reportagem, pois o texto aprofunda o tema, articula diferentes fontes e amplia a contextualização das informações apresentadas.\". A reportagem se distingue pelo aprofundamento, pela contextualização e pelo uso articulado de diferentes fontes e perspectivas.",
+        "dicaBanca": "Se o texto investiga e desenvolve um tema além do fato imediato, considere a reportagem."
+    },
+    {
+        "texto": "Em coluna de jornal, o autor conta que perdeu o ônibus numa manhã chuvosa e, a partir desse episódio banal, reflete com humor sobre a pressa cotidiana nas grandes cidades.",
+        "pergunta": "As características descritas são típicas da:",
+        "alternativas": [
+            "notícia, porque o episódio ocorrido em espaço público deve ser tratado como fato de interesse jornalístico imediato.",
+            "reportagem, porque a reflexão sobre mobilidade urbana pressupõe pesquisa de campo e escuta de diferentes personagens.",
+            "resenha, porque o autor avalia a experiência da cidade como se analisasse uma produção artística ou cultural.",
+            "editorial, porque o tema urbano representa uma questão coletiva sobre a qual o jornal assume posição institucional.",
+            "crônica, porque um acontecimento cotidiano recebe tratamento subjetivo, reflexivo e frequentemente humorístico."
+        ],
+        "correta": 4,
+        "explicacao": "A crônica costuma partir de fatos cotidianos para construir reflexão, humor, memória ou observação subjetiva, sem assumir a estrutura informativa da notícia.",
+        "feedbackAcerto": "Correto. A crônica costuma partir de fatos cotidianos para construir reflexão, humor, memória ou observação subjetiva, sem assumir a estrutura informativa da notícia.",
+        "feedbackErro": "A resposta correta é: \"crônica, porque um acontecimento cotidiano recebe tratamento subjetivo, reflexivo e frequentemente humorístico.\". A crônica costuma partir de fatos cotidianos para construir reflexão, humor, memória ou observação subjetiva, sem assumir a estrutura informativa da notícia.",
+        "dicaBanca": "Tema cotidiano não basta: observe o olhar subjetivo e a elaboração literária."
+    },
+    {
+        "texto": "Uma revista literária publica texto que apresenta brevemente o enredo de um romance recém-lançado e, em seguida, avalia a construção das personagens, o ritmo narrativo e a linguagem utilizada pelo autor.",
+        "pergunta": "No campo da crítica literária, o gênero predominante é:",
+        "alternativas": [
+            "resenha crítica, porque combina apresentação do objeto com apreciação avaliativa fundamentada de seus aspectos.",
+            "resumo, porque qualquer síntese do enredo exclui a possibilidade de julgamento sobre a qualidade da obra.",
+            "notícia cultural, porque a referência a um lançamento editorial impede a presença de avaliação como eixo do texto.",
+            "editorial, porque a revista literária manifestaria sua opinião institucional ao comentar uma obra recém-publicada.",
+            "artigo científico, porque analisar personagens e linguagem exige metodologia de pesquisa e apresentação formal de resultados."
+        ],
+        "correta": 0,
+        "explicacao": "A resenha crítica não se limita a resumir: apresenta o objeto e formula apreciação ou julgamento fundamentado sobre ele.",
+        "feedbackAcerto": "Correto. A resenha crítica não se limita a resumir: apresenta o objeto e formula apreciação ou julgamento fundamentado sobre ele.",
+        "feedbackErro": "A resposta correta é: \"resenha crítica, porque combina apresentação do objeto com apreciação avaliativa fundamentada de seus aspectos.\". A resenha crítica não se limita a resumir: apresenta o objeto e formula apreciação ou julgamento fundamentado sobre ele.",
+        "dicaBanca": "Resumo sintetiza; resenha crítica sintetiza e avalia."
+    },
+    {
+        "texto": "Em jornal, uma ilustração mostra um político segurando um guarda-chuva dentro de uma sala alagada enquanto afirma que 'o problema das enchentes está sob controle'. A compreensão depende do contexto recente de chuvas na cidade.",
+        "pergunta": "Considerando a dependência do contexto noticioso, o gênero é:",
+        "alternativas": [
+            "cartum, porque utiliza humor visual independente de acontecimentos ou personagens reconhecíveis no contexto social. sem depender do reconhecimento de circunstância recente.",
+            "charge, porque articula linguagem visual e verbal para produzir crítica vinculada a um acontecimento ou contexto reconhecível.",
+            "tira, porque a presença de personagem e fala exige sequência de quadrinhos para que o gênero seja identificado corretamente.",
+            "infográfico, porque a imagem organiza informação sobre enchentes por meio de combinação entre texto e representação visual.",
+            "anúncio institucional, porque a fala da personagem busca convencer a população de que a situação está controlada."
+        ],
+        "correta": 1,
+        "explicacao": "A charge geralmente depende de um contexto social, político ou noticioso identificável e usa humor, ironia ou exagero para produzir crítica.",
+        "feedbackAcerto": "Correto. A charge geralmente depende de um contexto social, político ou noticioso identificável e usa humor, ironia ou exagero para produzir crítica.",
+        "feedbackErro": "A resposta correta é: \"charge, porque articula linguagem visual e verbal para produzir crítica vinculada a um acontecimento ou contexto reconhecível.\". A charge geralmente depende de um contexto social, político ou noticioso identificável e usa humor, ironia ou exagero para produzir crítica.",
+        "dicaBanca": "Para diferenciar charge e cartum, verifique quanto a compreensão depende de um fato ou contexto específico."
+    },
+    {
+        "texto": "Uma ilustração humorística mostra duas pessoas diante de uma enorme pilha de notificações no celular. Uma delas diz: 'Finalmente encontrei uma maneira de descansar: desliguei as notificações'. A situação não depende de fato político ou notícia específica.",
+        "pergunta": "A caracterização aproxima o texto do gênero:",
+        "alternativas": [
+            "charge, porque toda crítica social produzida por imagem humorística depende de acontecimento político determinado.",
+            "tira, porque a presença de uma fala transforma qualquer imagem humorística em sequência narrativa de quadrinhos.",
+            "cartum, porque explora situação ampla e relativamente atemporal sem depender de referência direta a um evento específico.",
+            "editorial visual, porque a imagem representa a posição institucional do veículo de comunicação sobre o uso de celulares.",
+            "notícia ilustrada, porque o tema das notificações digitais corresponde a comportamento contemporâneo verificável socialmente."
+        ],
+        "correta": 2,
+        "explicacao": "O cartum trabalha humor e crítica de caráter mais geral, compreensíveis sem referência necessária a um acontecimento noticioso preciso.",
+        "feedbackAcerto": "Correto. O cartum trabalha humor e crítica de caráter mais geral, compreensíveis sem referência necessária a um acontecimento noticioso preciso.",
+        "feedbackErro": "A resposta correta é: \"cartum, porque explora situação ampla e relativamente atemporal sem depender de referência direta a um evento específico.\". O cartum trabalha humor e crítica de caráter mais geral, compreensíveis sem referência necessária a um acontecimento noticioso preciso.",
+        "dicaBanca": "Contextualidade específica favorece charge; situação ampla e atemporal favorece cartum."
+    },
+    {
+        "texto": "Uma sequência de quatro quadrinhos apresenta o mesmo personagem tentando estudar. Nos três primeiros, ele procura afastar distrações; no último, o celular toca e a reação do personagem produz o efeito humorístico.",
+        "pergunta": "A construção descrita é típica de uma tira porque:",
+        "alternativas": [
+            "o texto precisa defender uma tese social explícita por meio de argumentos distribuídos entre os quadrinhos. desenvolvidos de modo encadeado ao longo da sequência.",
+            "cada quadro funciona de modo independente, sem relação temporal ou semântica com os demais elementos da sequência.",
+            "o suporte em quadrinhos determina que o texto pertença ao gênero charge, mesmo sem relação com fato atual.",
+            "a sequência articula linguagem verbal e visual em poucos quadros, com progressão que prepara um desfecho humorístico ou reflexivo.",
+            "a finalidade consiste em registrar objetivamente um fato recente por meio de imagens organizadas em ordem cronológica."
+        ],
+        "correta": 3,
+        "explicacao": "A tira costuma organizar poucos quadrinhos em sequência, articulando elementos verbais e visuais para construir humor, crítica ou reflexão.",
+        "feedbackAcerto": "Correto. A tira costuma organizar poucos quadrinhos em sequência, articulando elementos verbais e visuais para construir humor, crítica ou reflexão.",
+        "feedbackErro": "A resposta correta é: \"a sequência articula linguagem verbal e visual em poucos quadros, com progressão que prepara um desfecho humorístico ou reflexivo.\". A tira costuma organizar poucos quadrinhos em sequência, articulando elementos verbais e visuais para construir humor, crítica ou reflexão.",
+        "dicaBanca": "Observe se o efeito depende da progressão entre os quadros e do desfecho final."
+    },
+    {
+        "texto": "Uma empresa divulga peça com fotografia de um tênis, slogan, preço promocional e a frase 'Corra para aproveitar'. O material destaca benefícios do produto e direciona o leitor para a página de compra.",
+        "pergunta": "O gênero mais adequado é:",
+        "alternativas": [
+            "notícia comercial, porque apresenta informações verificáveis sobre preço e características de um produto disponível ao público.",
+            "reportagem de consumo, porque a descrição de benefícios pressupõe investigação jornalística sobre desempenho e qualidade do item.",
+            "comunicado institucional, porque toda mensagem emitida por uma empresa possui finalidade informativa dirigida aos seus clientes.",
+            "resenha publicitária, porque a peça resume características do produto e formula uma avaliação positiva de sua qualidade.",
+            "anúncio publicitário, porque combina recursos verbais e visuais com finalidade persuasiva voltada à promoção e ao consumo."
+        ],
+        "correta": 4,
+        "explicacao": "O anúncio publicitário busca promover produto, serviço, marca ou comportamento, usando recursos verbais e visuais para persuadir o público-alvo.",
+        "feedbackAcerto": "Correto. O anúncio publicitário busca promover produto, serviço, marca ou comportamento, usando recursos verbais e visuais para persuadir o público-alvo.",
+        "feedbackErro": "A resposta correta é: \"anúncio publicitário, porque combina recursos verbais e visuais com finalidade persuasiva voltada à promoção e ao consumo.\". O anúncio publicitário busca promover produto, serviço, marca ou comportamento, usando recursos verbais e visuais para persuadir o público-alvo.",
+        "dicaBanca": "Não confunda presença de informação com finalidade: em publicidade, dados costumam servir à persuasão."
+    },
+    {
+        "texto": "A escola envia cartão digital às famílias com data, horário e local da mostra cultural, além da frase 'Esperamos vocês para celebrar conosco as produções dos estudantes'.",
+        "pergunta": "A finalidade e a composição permitem identificar o gênero:",
+        "alternativas": [
+            "convite, porque informa os dados de um evento e procura estimular a presença dos destinatários.",
+            "comunicado, porque qualquer texto institucional com data e horário tem função estritamente informativa e não mobilizadora.",
+            "edital, porque a indicação de data, horário e local estabelece normas formais de participação em processo institucional.",
+            "relatório, porque o evento escolar é apresentado como resultado das atividades pedagógicas desenvolvidas ao longo do período.",
+            "ofício, porque a escola se dirige formalmente às famílias para transmitir informação ligada à rotina administrativa."
+        ],
+        "correta": 0,
+        "explicacao": "O convite combina informações práticas sobre o evento com uma finalidade de convocar ou estimular a participação dos destinatários.",
+        "feedbackAcerto": "Correto. O convite combina informações práticas sobre o evento com uma finalidade de convocar ou estimular a participação dos destinatários.",
+        "feedbackErro": "A resposta correta é: \"convite, porque informa os dados de um evento e procura estimular a presença dos destinatários.\". O convite combina informações práticas sobre o evento com uma finalidade de convocar ou estimular a participação dos destinatários.",
+        "dicaBanca": "Considere finalidade, destinatário e composição, e não apenas a presença de data e horário."
+    },
+    {
+        "texto": "Uma estudante envia ao orientador mensagem com assunto 'Versão revisada do projeto', saudação, breve explicação sobre as alterações realizadas, arquivo anexado e despedida com identificação da remetente.",
+        "pergunta": "O gênero textual descrito é:",
+        "alternativas": [
+            "ofício, pois toda comunicação escrita com assunto, destinatário e despedida pertence ao padrão de correspondência oficial. com finalidade administrativa formalmente institucionalizada.",
+            "e-mail, pois a comunicação ocorre em meio eletrônico e apresenta elementos adaptáveis às relações e finalidades entre remetente e destinatário.",
+            "memorando, pois a troca de arquivo entre integrantes de uma instituição caracteriza por si mesma comunicação administrativa interna.",
+            "relatório, pois a menção às alterações realizadas constitui registro detalhado dos resultados de um trabalho acadêmico concluído.",
+            "ata, pois a mensagem documenta decisões tomadas entre estudante e orientador durante o acompanhamento do projeto."
+        ],
+        "correta": 1,
+        "explicacao": "O e-mail é um gênero de comunicação eletrônica cuja forma varia conforme a situação, podendo assumir maior ou menor formalidade.",
+        "feedbackAcerto": "Correto. O e-mail é um gênero de comunicação eletrônica cuja forma varia conforme a situação, podendo assumir maior ou menor formalidade.",
+        "feedbackErro": "A resposta correta é: \"e-mail, pois a comunicação ocorre em meio eletrônico e apresenta elementos adaptáveis às relações e finalidades entre remetente e destinatário.\". O e-mail é um gênero de comunicação eletrônica cuja forma varia conforme a situação, podendo assumir maior ou menor formalidade.",
+        "dicaBanca": "Suporte eletrônico ajuda a identificar o gênero, mas observe também interlocutores, finalidade e composição."
+    },
+    {
+        "texto": "Ao final do semestre, a coordenação produz documento que organiza atividades realizadas, metas alcançadas, dificuldades encontradas, dados de participação e encaminhamentos para o período seguinte.",
+        "pergunta": "Para esse registro institucional de atividades, o gênero mais compatível é:",
+        "alternativas": [
+            "ata, porque qualquer registro institucional de atividades precisa reproduzir as falas e decisões tomadas em reunião específica.",
+            "edital, porque o documento apresenta metas e encaminhamentos que funcionarão como regras para o período seguinte.",
+            "relatório, porque sistematiza ações, resultados, dificuldades e informações relacionadas a um período ou atividade realizada.",
+            "convite, porque a indicação de encaminhamentos procura mobilizar os participantes para as ações previstas no novo semestre.",
+            "carta aberta, porque o documento institucional comunica publicamente dificuldades e solicita colaboração para enfrentá-las."
+        ],
+        "correta": 2,
+        "explicacao": "O relatório organiza e sistematiza informações sobre atividades, processos ou resultados, podendo incluir análise, dificuldades e encaminhamentos.",
+        "feedbackAcerto": "Correto. O relatório organiza e sistematiza informações sobre atividades, processos ou resultados, podendo incluir análise, dificuldades e encaminhamentos.",
+        "feedbackErro": "A resposta correta é: \"relatório, porque sistematiza ações, resultados, dificuldades e informações relacionadas a um período ou atividade realizada.\". O relatório organiza e sistematiza informações sobre atividades, processos ou resultados, podendo incluir análise, dificuldades e encaminhamentos.",
+        "dicaBanca": "Associe relatório a registro sistematizado de ações e resultados, não ao simples registro de uma reunião."
+    },
+    {
+        "texto": "Durante reunião do conselho escolar, a secretária registra data, participantes, assuntos discutidos, propostas apresentadas e deliberações aprovadas. O documento será arquivado para consulta posterior.",
+        "pergunta": "O documento produzido corresponde ao gênero:",
+        "alternativas": [
+            "relatório, porque todo registro institucional precisa analisar resultados e avaliar o desempenho dos participantes da reunião.",
+            "ofício, porque a formalidade do documento indica comunicação administrativa destinada a uma autoridade ou órgão específico.",
+            "comunicado, porque o objetivo principal é divulgar ao público externo as decisões do conselho escolar após o encontro.",
+            "ata, porque registra formalmente acontecimentos, discussões e deliberações de uma reunião ou assembleia.",
+            "edital, porque o conjunto de decisões aprovadas passa a funcionar como regras gerais para futuros encontros do conselho."
+        ],
+        "correta": 3,
+        "explicacao": "A ata tem a finalidade de documentar formalmente fatos, discussões e decisões ocorridos em reunião, assembleia ou encontro deliberativo.",
+        "feedbackAcerto": "Correto. A ata tem a finalidade de documentar formalmente fatos, discussões e decisões ocorridos em reunião, assembleia ou encontro deliberativo.",
+        "feedbackErro": "A resposta correta é: \"ata, porque registra formalmente acontecimentos, discussões e deliberações de uma reunião ou assembleia.\". A ata tem a finalidade de documentar formalmente fatos, discussões e decisões ocorridos em reunião, assembleia ou encontro deliberativo.",
+        "dicaBanca": "Ata registra um encontro; relatório sistematiza atividades ou resultados mais amplos."
+    },
+    {
+        "texto": "Uma universidade publica documento com número de vagas, requisitos de inscrição, documentos exigidos, cronograma, critérios de seleção, etapas de recurso e regras de convocação.",
+        "pergunta": "A organização e a finalidade caracterizam o gênero:",
+        "alternativas": [
+            "comunicado, porque o texto transmite informações de interesse do público sobre uma atividade promovida pela universidade.",
+            "convite, porque a instituição apresenta dados que estimulam candidatos a participar voluntariamente de uma seleção acadêmica.",
+            "relatório, porque o documento sistematiza os critérios utilizados pela instituição para avaliar os participantes do processo.",
+            "ofício, porque a publicação formaliza uma comunicação administrativa entre a universidade e todos os possíveis candidatos. em correspondência dirigida a destinatário institucional determinado.",
+            "edital, porque estabelece publicamente regras, condições, etapas, prazos e critérios de participação em um processo institucional."
+        ],
+        "correta": 4,
+        "explicacao": "Editais publicizam regras e condições de processos institucionais, concursos, seleções ou outras situações que exigem critérios e procedimentos formalizados.",
+        "feedbackAcerto": "Correto. Editais publicizam regras e condições de processos institucionais, concursos, seleções ou outras situações que exigem critérios e procedimentos formalizados.",
+        "feedbackErro": "A resposta correta é: \"edital, porque estabelece publicamente regras, condições, etapas, prazos e critérios de participação em um processo institucional.\". Editais publicizam regras e condições de processos institucionais, concursos, seleções ou outras situações que exigem critérios e procedimentos formalizados.",
+        "dicaBanca": "Regras, requisitos, prazos, critérios e recursos são pistas fortes de edital."
+    },
+    {
+        "texto": "A prefeitura publica aviso aos moradores informando que, devido à manutenção da rede, o atendimento presencial de determinado setor ocorrerá em horário reduzido durante dois dias.",
+        "pergunta": "O gênero mais adequado para a situação é:",
+        "alternativas": [
+            "comunicado, porque transmite ao público uma informação objetiva e relevante sobre alteração temporária de funcionamento.",
+            "editorial, porque a prefeitura precisa justificar institucionalmente sua posição sobre a redução do horário de atendimento.",
+            "ata, porque a mudança no funcionamento provavelmente foi decidida em reunião administrativa e deve ser registrada publicamente.",
+            "relatório, porque a manutenção da rede constitui atividade técnica cujos resultados precisam ser apresentados aos usuários.",
+            "artigo de opinião, porque a alteração do serviço público pode ser debatida e avaliada por diferentes grupos da população."
+        ],
+        "correta": 0,
+        "explicacao": "O comunicado serve para divulgar informação direta sobre fatos, mudanças, orientações ou procedimentos de interesse dos destinatários.",
+        "feedbackAcerto": "Correto. O comunicado serve para divulgar informação direta sobre fatos, mudanças, orientações ou procedimentos de interesse dos destinatários.",
+        "feedbackErro": "A resposta correta é: \"comunicado, porque transmite ao público uma informação objetiva e relevante sobre alteração temporária de funcionamento.\". O comunicado serve para divulgar informação direta sobre fatos, mudanças, orientações ou procedimentos de interesse dos destinatários.",
+        "dicaBanca": "Quando o objetivo é informar uma mudança concreta ao público, sem desenvolver argumentação, considere comunicado."
+    },
+    {
+        "texto": "Após ler reportagem sobre ciclovias, um leitor envia texto assinado ao jornal. Ele comenta a matéria, relata um problema semelhante em seu bairro e apresenta uma sugestão aos gestores municipais.",
+        "pergunta": "A manifestação enviada pelo leitor corresponde ao gênero:",
+        "alternativas": [
+            "editorial, porque o texto responde a assunto publicado pelo jornal e, por isso, passa a representar a posição institucional do veículo.",
+            "carta do leitor, porque oferece ao público espaço de manifestação, comentário, crítica ou sugestão em relação a temas divulgados pelo veículo.",
+            "artigo científico, porque o relato de experiência local funciona como dado empírico usado para fundamentar uma proposta de intervenção.",
+            "reportagem, porque o leitor acrescenta nova fonte e nova informação ao tema originalmente investigado pelo jornal.",
+            "resenha, porque o autor avalia criticamente a qualidade da reportagem e formula uma recomendação com base nessa apreciação. do texto jornalístico tomado como objeto principal de apreciação."
+        ],
+        "correta": 1,
+        "explicacao": "A carta do leitor é uma manifestação do público em veículo de comunicação, frequentemente relacionada a matéria publicada ou tema de interesse coletivo.",
+        "feedbackAcerto": "Correto. A carta do leitor é uma manifestação do público em veículo de comunicação, frequentemente relacionada a matéria publicada ou tema de interesse coletivo.",
+        "feedbackErro": "A resposta correta é: \"carta do leitor, porque oferece ao público espaço de manifestação, comentário, crítica ou sugestão em relação a temas divulgados pelo veículo.\". A carta do leitor é uma manifestação do público em veículo de comunicação, frequentemente relacionada a matéria publicada ou tema de interesse coletivo.",
+        "dicaBanca": "Observe quem escreve e em qual espaço do veículo essa voz circula."
+    },
+    {
+        "texto": "Moradores de vários bairros publicam texto dirigido ao prefeito e à população. O documento denuncia a redução de linhas de ônibus, apresenta argumentos sobre os impactos da medida e solicita publicamente a revisão da decisão.",
+        "pergunta": "Para a reivindicação pública descrita, o gênero mais compatível é:",
+        "alternativas": [
+            "ata, porque o texto deve registrar as deliberações internas tomadas pelos moradores antes da divulgação pública da reivindicação.",
+            "comunicado, porque a função central é informar a população sobre as mudanças ocorridas no serviço de transporte coletivo. sem dirigir reivindicação pública a autoridade ou sociedade.",
+            "carta aberta, porque se dirige publicamente a um destinatário identificado e à sociedade para defender uma reivindicação coletiva.",
+            "relatório, porque os impactos do transporte são apresentados como resultados de observação realizada pelos moradores dos bairros.",
+            "edital, porque o pedido de revisão da decisão estabelece condições que a administração pública deverá cumprir futuramente."
+        ],
+        "correta": 2,
+        "explicacao": "A carta aberta combina endereçamento público, argumentação e intenção de mobilizar ou sensibilizar destinatários e sociedade em torno de uma questão.",
+        "feedbackAcerto": "Correto. A carta aberta combina endereçamento público, argumentação e intenção de mobilizar ou sensibilizar destinatários e sociedade em torno de uma questão.",
+        "feedbackErro": "A resposta correta é: \"carta aberta, porque se dirige publicamente a um destinatário identificado e à sociedade para defender uma reivindicação coletiva.\". A carta aberta combina endereçamento público, argumentação e intenção de mobilizar ou sensibilizar destinatários e sociedade em torno de uma questão.",
+        "dicaBanca": "A publicidade do destinatário e a defesa de uma causa são marcas fortes da carta aberta."
+    },
+    {
+        "texto": "Uma revista acadêmica publica estudo com problema de pesquisa, fundamentação teórica, descrição metodológica, análise de dados, discussão dos resultados e referências bibliográficas.",
+        "pergunta": "A estrutura acadêmica apresentada corresponde ao gênero:",
+        "alternativas": [
+            "ensaio, porque toda reflexão acadêmica pode dispensar procedimentos metodológicos e organizar-se livremente em torno de interpretações pessoais.",
+            "resenha crítica, porque a presença de referências bibliográficas indica avaliação fundamentada de outras obras e pesquisas da área.",
+            "reportagem científica, porque a divulgação de resultados de pesquisa a leitores especializados pertence ao domínio jornalístico de ciência.",
+            "artigo científico, porque comunica pesquisa segundo organização acadêmica que explicita procedimentos, análise e resultados.",
+            "editorial acadêmico, porque a revista assume institucionalmente as conclusões dos estudos que seleciona para publicação."
+        ],
+        "correta": 3,
+        "explicacao": "O artigo científico é um gênero acadêmico destinado à comunicação de pesquisa e costuma explicitar problema, fundamentos, métodos, resultados e referências, conforme as convenções da área.",
+        "feedbackAcerto": "Correto. O artigo científico é um gênero acadêmico destinado à comunicação de pesquisa e costuma explicitar problema, fundamentos, métodos, resultados e referências, conforme as convenções da área.",
+        "feedbackErro": "A resposta correta é: \"artigo científico, porque comunica pesquisa segundo organização acadêmica que explicita procedimentos, análise e resultados.\". O artigo científico é um gênero acadêmico destinado à comunicação de pesquisa e costuma explicitar problema, fundamentos, métodos, resultados e referências, conforme as convenções da área.",
+        "dicaBanca": "A presença de método e resultados ajuda a diferenciar artigo científico de ensaio e resenha."
+    },
+    {
+        "texto": "Um pesquisador escreve texto acadêmico em que discute criticamente as relações entre tecnologia e formação docente, dialoga com autores diversos e desenvolve uma interpretação própria, sem apresentar coleta de dados nem seção metodológica de pesquisa empírica.",
+        "pergunta": "A descrição aproxima o texto do gênero:",
+        "alternativas": [
+            "artigo científico experimental, porque toda produção acadêmica precisa relatar procedimentos de coleta e análise de dados observáveis.",
+            "relatório técnico, porque o diálogo com autores serve para registrar resultados produzidos por um projeto institucional de pesquisa. com foco na prestação de contas de atividade institucional executada.",
+            "resenha, porque citar diferentes autores implica que o objetivo principal do texto é avaliar cada obra mencionada separadamente.",
+            "notícia científica, porque a ausência de metodologia indica adaptação jornalística de resultados acadêmicos para um público amplo.",
+            "ensaio, porque desenvolve reflexão analítica e interpretativa com liberdade argumentativa maior que a estrutura típica de uma pesquisa empírica."
+        ],
+        "correta": 4,
+        "explicacao": "O ensaio acadêmico pode desenvolver reflexão crítica e interpretação autoral apoiada em referências, sem reproduzir necessariamente a estrutura metodológica de um artigo de pesquisa empírica.",
+        "feedbackAcerto": "Correto. O ensaio acadêmico pode desenvolver reflexão crítica e interpretação autoral apoiada em referências, sem reproduzir necessariamente a estrutura metodológica de um artigo de pesquisa empírica.",
+        "feedbackErro": "A resposta correta é: \"ensaio, porque desenvolve reflexão analítica e interpretativa com liberdade argumentativa maior que a estrutura típica de uma pesquisa empírica.\". O ensaio acadêmico pode desenvolver reflexão crítica e interpretação autoral apoiada em referências, sem reproduzir necessariamente a estrutura metodológica de um artigo de pesquisa empírica.",
+        "dicaBanca": "Diferencie pesquisa comunicada formalmente de reflexão acadêmica interpretativa."
+    },
+    {
+        "texto": "Em congresso, uma pesquisadora dispõe de quinze minutos para apresentar oralmente objetivo, método, resultados e conclusão de seu estudo. Em seguida, responde a perguntas do público.",
+        "pergunta": "A situação corresponde mais precisamente ao gênero acadêmico oral:",
+        "alternativas": [
+            "comunicação oral de pesquisa, porque apresenta sinteticamente um trabalho a um público especializado em evento acadêmico.",
+            "seminário escolar, porque toda exposição oral acompanhada de discussão recebe a mesma denominação, independentemente do contexto de circulação.",
+            "aula expositiva, porque a pesquisadora assume necessariamente função docente diante das pessoas que acompanham a apresentação.",
+            "defesa de dissertação, porque qualquer apresentação acadêmica com perguntas do público implica avaliação formal para obtenção de título.",
+            "mesa-redonda, porque uma fala individual de quinze minutos constitui debate coletivo entre especialistas com posições previamente contrastadas."
+        ],
+        "correta": 0,
+        "explicacao": "Em congressos, a apresentação sintética de um trabalho de pesquisa por seu autor é adequadamente descrita como comunicação oral ou apresentação de trabalho.",
+        "feedbackAcerto": "Correto. Em congressos, a apresentação sintética de um trabalho de pesquisa por seu autor é adequadamente descrita como comunicação oral ou apresentação de trabalho.",
+        "feedbackErro": "A resposta correta é: \"comunicação oral de pesquisa, porque apresenta sinteticamente um trabalho a um público especializado em evento acadêmico.\". Em congressos, a apresentação sintética de um trabalho de pesquisa por seu autor é adequadamente descrita como comunicação oral ou apresentação de trabalho.",
+        "dicaBanca": "Considere o evento, a finalidade e a organização da interação; não chame toda exposição de seminário."
+    },
+    {
+        "texto": "Na página de um serviço público há uma seção organizada por pares como 'Como alterar meu endereço?' / 'Acesse seu cadastro e selecione Atualizar dados' e 'Qual o prazo de resposta?' / 'Até cinco dias úteis'.",
+        "pergunta": "Essa organização corresponde ao gênero:",
+        "alternativas": [
+            "manual técnico, porque toda orientação operacional precisa ser apresentada em capítulos extensos e sequência única de procedimentos.",
+            "FAQ ou perguntas frequentes, porque estrutura informações a partir de dúvidas recorrentes acompanhadas de respostas diretas.",
+            "entrevista, porque perguntas e respostas indicam necessariamente interação entre entrevistador e entrevistado identificados no texto.",
+            "fórum, porque a presença de perguntas pressupõe participação aberta de vários usuários em debate público e colaborativo.",
+            "edital, porque os prazos mencionados funcionam como regras formais que vinculam os usuários ao serviço oferecido."
+        ],
+        "correta": 1,
+        "explicacao": "FAQ organiza informações em perguntas recorrentes e respostas objetivas, permitindo ao usuário localizar rapidamente a dúvida relevante.",
+        "feedbackAcerto": "Correto. FAQ organiza informações em perguntas recorrentes e respostas objetivas, permitindo ao usuário localizar rapidamente a dúvida relevante.",
+        "feedbackErro": "A resposta correta é: \"FAQ ou perguntas frequentes, porque estrutura informações a partir de dúvidas recorrentes acompanhadas de respostas diretas.\". FAQ organiza informações em perguntas recorrentes e respostas objetivas, permitindo ao usuário localizar rapidamente a dúvida relevante.",
+        "dicaBanca": "Nem toda estrutura de pergunta e resposta é entrevista; observe quem pergunta e qual é a finalidade do conjunto."
+    },
+    {
+        "texto": "Uma página intitulada 'Como criar uma pasta compartilhada' apresenta capturas de tela numeradas e instruções curtas: abrir o menu, selecionar a opção correta, escolher permissões e confirmar o compartilhamento.",
+        "pergunta": "O gênero digital predominante é:",
+        "alternativas": [
+            "reportagem explicativa, porque reúne imagens e informações destinadas a ampliar a compreensão sobre ferramentas digitais.",
+            "infográfico, porque qualquer texto que associe imagem e informação sequenciada pertence ao gênero gráfico informativo.",
+            "tutorial, porque orienta o usuário na execução de uma tarefa por etapas e pode combinar texto, imagens e demonstrações.",
+            "FAQ, porque o título em forma de pergunta implícita transforma as instruções em resposta a uma dúvida frequente.",
+            "resenha técnica, porque as etapas descritas avaliam a usabilidade e a eficiência do recurso de compartilhamento."
+        ],
+        "correta": 2,
+        "explicacao": "O tutorial tem finalidade prática e organiza instruções para que o destinatário realize uma tarefa, frequentemente em etapas multimodais.",
+        "feedbackAcerto": "Correto. O tutorial tem finalidade prática e organiza instruções para que o destinatário realize uma tarefa, frequentemente em etapas multimodais.",
+        "feedbackErro": "A resposta correta é: \"tutorial, porque orienta o usuário na execução de uma tarefa por etapas e pode combinar texto, imagens e demonstrações.\". O tutorial tem finalidade prática e organiza instruções para que o destinatário realize uma tarefa, frequentemente em etapas multimodais.",
+        "dicaBanca": "Pergunte se o leitor deve sair do texto sabendo executar uma ação específica."
+    },
+    {
+        "texto": "Um texto apresenta lista de ingredientes, quantidades e uma sequência de operações culinárias com verbos como misture, acrescente, leve ao forno e aguarde.",
+        "pergunta": "Sobre gênero e tipologia, é correto afirmar que:",
+        "alternativas": [
+            "o gênero é injuntivo e a tipologia é receita, porque gênero e tipo são classificações intercambiáveis nesse contexto. ao tratar gênero e organização sequencial como a mesma categoria.",
+            "o texto deixa de ser receita se acrescentar uma breve explicação sobre a função de determinado ingrediente no preparo.",
+            "a lista de ingredientes transforma o gênero em texto expositivo, ainda que o restante oriente uma sequência de procedimentos.",
+            "o gênero é receita culinária e a sequência injuntiva tende a predominar nas instruções de preparo, podendo coexistir com outras sequências.",
+            "a tipologia narrativa predomina porque as ações culinárias aparecem organizadas numa ordem temporal definida pelo autor."
+        ],
+        "correta": 3,
+        "explicacao": "Receita é gênero textual; injunção é uma forma de organização que tende a predominar no modo de preparo. Um mesmo gênero pode combinar diferentes sequências.",
+        "feedbackAcerto": "Correto. Receita é gênero textual; injunção é uma forma de organização que tende a predominar no modo de preparo. Um mesmo gênero pode combinar diferentes sequências.",
+        "feedbackErro": "A resposta correta é: \"o gênero é receita culinária e a sequência injuntiva tende a predominar nas instruções de preparo, podendo coexistir com outras sequências.\". Receita é gênero textual; injunção é uma forma de organização que tende a predominar no modo de preparo. Um mesmo gênero pode combinar diferentes sequências.",
+        "dicaBanca": "Gênero e tipologia não ocupam o mesmo nível de classificação."
+    },
+    {
+        "texto": "Uma secretaria de saúde publica em rede social card com a frase 'Proteja-se neste período de chuvas', três orientações de prevenção e um link para informações adicionais.",
+        "pergunta": "Assinale a análise correta.",
+        "alternativas": [
+            "Rede social é o gênero do texto, pois o suporte digital determina por si mesmo sua finalidade e sua organização discursiva.",
+            "O material é uma notícia, porque todo conteúdo institucional publicado na internet tem finalidade de informar acontecimentos atuais. sobre acontecimentos verificados e contextualizados pelo órgão público.",
+            "O card constitui um edital reduzido, porque recomenda comportamentos e apresenta informação oficial a um grande público.",
+            "A presença de um link externo impede classificar o material como texto autônomo, já que sua compreensão depende de outra página.",
+            "A rede social funciona como ambiente de circulação; o texto pode ser entendido como postagem de campanha de conscientização, definida por sua finalidade e composição."
+        ],
+        "correta": 4,
+        "explicacao": "Suporte ou ambiente de circulação não se confunde com gênero. Uma rede social pode abrigar anúncios, campanhas, notícias, comentários, convites e outros gêneros.",
+        "feedbackAcerto": "Correto. Suporte ou ambiente de circulação não se confunde com gênero. Uma rede social pode abrigar anúncios, campanhas, notícias, comentários, convites e outros gêneros.",
+        "feedbackErro": "A resposta correta é: \"A rede social funciona como ambiente de circulação; o texto pode ser entendido como postagem de campanha de conscientização, definida por sua finalidade e composição.\". Suporte ou ambiente de circulação não se confunde com gênero. Uma rede social pode abrigar anúncios, campanhas, notícias, comentários, convites e outros gêneros.",
+        "dicaBanca": "Pergunte se o termo nomeia o lugar onde o texto circula ou uma forma textual reconhecida socialmente."
+    },
+    {
+        "texto": "Um material reúne um mapa, ícones, pequenos blocos de texto e gráficos para explicar como se distribui o consumo de água em uma cidade. A leitura depende da integração entre dados verbais e elementos visuais.",
+        "pergunta": "O gênero que melhor corresponde à descrição é:",
+        "alternativas": [
+            "infográfico, porque organiza informações por integração planejada de recursos verbais, numéricos e visuais.",
+            "editorial, porque a seleção gráfica dos dados expressa necessariamente uma opinião institucional sobre o consumo de água.",
+            "reportagem, porque a presença de dados e mapas exige investigação jornalística extensa e apresentação de múltiplas fontes.",
+            "cartum, porque os ícones e imagens simplificadas substituem a linguagem verbal para produzir interpretação humorística do tema.",
+            "manual, porque a disposição visual das informações orienta o leitor a executar procedimentos para reduzir o consumo."
+        ],
+        "correta": 0,
+        "explicacao": "O infográfico integra diferentes modos semióticos para sintetizar e relacionar informações de maneira visualmente organizada.",
+        "feedbackAcerto": "Correto. O infográfico integra diferentes modos semióticos para sintetizar e relacionar informações de maneira visualmente organizada.",
+        "feedbackErro": "A resposta correta é: \"infográfico, porque organiza informações por integração planejada de recursos verbais, numéricos e visuais.\". O infográfico integra diferentes modos semióticos para sintetizar e relacionar informações de maneira visualmente organizada.",
+        "dicaBanca": "Multimodalidade não é apenas presença de imagem; os modos precisam cooperar na construção do sentido."
+    },
+    {
+        "texto": "Uma jornalista conversa com uma pesquisadora sobre alfabetização. As perguntas são identificadas pelo nome do veículo e as respostas, pelo nome da especialista; o foco recai na obtenção e divulgação das declarações da entrevistada.",
+        "pergunta": "A interação organizada entre jornalista e pesquisadora caracteriza o gênero:",
+        "alternativas": [
+            "FAQ, porque a estrutura de perguntas e respostas permite ao leitor localizar informações pontuais sobre um tema recorrente.",
+            "entrevista, porque a organização registra a interação orientada por perguntas de um interlocutor e respostas de outro identificado.",
+            "artigo de opinião, porque as respostas apresentam posições pessoais da pesquisadora acerca de questões relacionadas à alfabetização.",
+            "reportagem, porque qualquer fala de especialista publicada por um veículo precisa integrar um texto investigativo de autoria jornalística.",
+            "debate, porque pergunta e resposta pressupõem confronto entre participantes que defendem posições contrárias diante do público."
+        ],
+        "correta": 1,
+        "explicacao": "A entrevista se organiza pela interação entre entrevistador e entrevistado, com perguntas destinadas a obter informações, opiniões ou relatos do participante.",
+        "feedbackAcerto": "Correto. A entrevista se organiza pela interação entre entrevistador e entrevistado, com perguntas destinadas a obter informações, opiniões ou relatos do participante.",
+        "feedbackErro": "A resposta correta é: \"entrevista, porque a organização registra a interação orientada por perguntas de um interlocutor e respostas de outro identificado.\". A entrevista se organiza pela interação entre entrevistador e entrevistado, com perguntas destinadas a obter informações, opiniões ou relatos do participante.",
+        "dicaBanca": "Perguntas e respostas podem aparecer em muitos gêneros; identifique a relação entre os interlocutores."
+    },
+    {
+        "texto": "Em um podcast educacional, dois apresentadores entrevistam uma historiadora, inserem vinheta de abertura e encerram indicando fontes para aprofundamento. O episódio é disponibilizado em plataforma de áudio.",
+        "pergunta": "A análise mais adequada é:",
+        "alternativas": [
+            "podcast seria mero suporte tecnológico, por isso não poderia constituir forma reconhecida de produção discursiva em ambiente digital. e organização discursiva reconhecível em práticas contemporâneas de áudio.",
+            "a presença de entrevista faz com que o episódio deixe de ser podcast e pertença integralmente ao gênero entrevista tradicional escrita.",
+            "trata-se de um episódio de podcast que incorpora uma entrevista como parte de sua composição, mostrando que gêneros podem combinar formatos e sequências.",
+            "o material deve ser classificado como aula expositiva, pois qualquer conteúdo educacional em áudio possui finalidade docente e estrutura didática.",
+            "a vinheta determina predominância publicitária, já que recursos sonoros de abertura são característicos de anúncios e campanhas comerciais."
+        ],
+        "correta": 2,
+        "explicacao": "Um episódio de podcast pode incorporar entrevista, exposição, narrativa e outros formatos. A combinação não elimina o gênero de circulação do episódio.",
+        "feedbackAcerto": "Correto. Um episódio de podcast pode incorporar entrevista, exposição, narrativa e outros formatos. A combinação não elimina o gênero de circulação do episódio.",
+        "feedbackErro": "A resposta correta é: \"trata-se de um episódio de podcast que incorpora uma entrevista como parte de sua composição, mostrando que gêneros podem combinar formatos e sequências.\". Um episódio de podcast pode incorporar entrevista, exposição, narrativa e outros formatos. A combinação não elimina o gênero de circulação do episódio.",
+        "dicaBanca": "Gêneros digitais frequentemente são multimodais ou híbridos e incorporam outros formatos discursivos."
+    },
+    {
+        "texto": "O mesmo fato — a abertura de uma nova biblioteca — aparece em três textos: uma notícia no portal da prefeitura, um convite enviado às famílias e um relatório anual da secretaria de educação.",
+        "pergunta": "A comparação demonstra que:",
+        "alternativas": [
+            "o assunto determina o gênero; por isso os três textos devem receber a mesma classificação por tratar do mesmo acontecimento.",
+            "a diferença entre os textos decorre principalmente do tamanho, pois gêneros mais longos possuem função informativa mais complexa.",
+            "o gênero depende do nível de formalidade, de modo que textos oficiais pertencem necessariamente a uma única categoria institucional.",
+            "um mesmo referente pode ser textualizado em gêneros distintos conforme finalidade, interlocutores, composição e situação de circulação.",
+            "o suporte substitui a finalidade comunicativa como critério de classificação quando todos os textos pertencem à esfera pública. dentro de uma mesma esfera institucional de circulação."
+        ],
+        "correta": 3,
+        "explicacao": "O mesmo tema ou acontecimento pode assumir gêneros diferentes porque gênero envolve propósito comunicativo, interlocutores, composição e esfera de circulação.",
+        "feedbackAcerto": "Correto. O mesmo tema ou acontecimento pode assumir gêneros diferentes porque gênero envolve propósito comunicativo, interlocutores, composição e esfera de circulação.",
+        "feedbackErro": "A resposta correta é: \"um mesmo referente pode ser textualizado em gêneros distintos conforme finalidade, interlocutores, composição e situação de circulação.\". O mesmo tema ou acontecimento pode assumir gêneros diferentes porque gênero envolve propósito comunicativo, interlocutores, composição e esfera de circulação.",
+        "dicaBanca": "Tema não define gênero. Pergunte o que o texto faz socialmente naquela situação."
+    },
+    {
+        "texto": "Uma notícia publicada originalmente em portal jornalístico é adaptada para rede social: o texto fica mais curto, recebe título chamativo, imagem e link para a matéria completa, mas continua informando o mesmo acontecimento.",
+        "pergunta": "Esse processo evidencia que:",
+        "alternativas": [
+            "a redução do texto elimina seu caráter informativo e o transforma automaticamente em anúncio publicitário.",
+            "a mudança de suporte impede qualquer relação entre a postagem e a notícia original, pois gêneros não podem ser retextualizados. ao passar de um ambiente discursivo para outro.",
+            "a presença de imagem substitui o conteúdo verbal e transforma a publicação em infográfico, mesmo sem organização gráfica de dados.",
+            "o fato permanece idêntico, portanto composição, linguagem e relação com o leitor não podem sofrer alterações na nova publicação.",
+            "a retextualização pode adaptar composição, extensão e recursos multimodais à nova situação de circulação sem manter intacta a forma do texto de origem."
+        ],
+        "correta": 4,
+        "explicacao": "Retextualizar implica transformar um texto para nova situação, suporte ou gênero, ajustando organização e recursos sem exigir simples cópia da forma original.",
+        "feedbackAcerto": "Correto. Retextualizar implica transformar um texto para nova situação, suporte ou gênero, ajustando organização e recursos sem exigir simples cópia da forma original.",
+        "feedbackErro": "A resposta correta é: \"a retextualização pode adaptar composição, extensão e recursos multimodais à nova situação de circulação sem manter intacta a forma do texto de origem.\". Retextualizar implica transformar um texto para nova situação, suporte ou gênero, ajustando organização e recursos sem exigir simples cópia da forma original.",
+        "dicaBanca": "Compare o que permanece — tema ou informação — com o que muda — forma, público, finalidade e recursos."
+    },
+    {
+        "texto": "Um professor apresenta aos alunos um anúncio, uma notícia e uma carta do leitor retirados do mesmo jornal impresso.",
+        "pergunta": "Qual afirmação interpreta corretamente a relação entre suporte e gênero?",
+        "alternativas": [
+            "O jornal é um suporte que pode reunir gêneros diferentes, cada um com finalidade, composição e interlocução próprias.",
+            "Como circulam no mesmo jornal, anúncio, notícia e carta do leitor constituem variações de um único gênero jornalístico.",
+            "O suporte determina a tipologia, por isso os três textos apresentam necessariamente sequência expositiva predominante.",
+            "A presença física na mesma página elimina diferenças de esfera discursiva e de propósito comunicativo entre os textos apresentados.",
+            "O gênero corresponde ao material físico de circulação, enquanto a finalidade identificaria a função da linguagem de cada texto."
+        ],
+        "correta": 0,
+        "explicacao": "Suporte é o meio material ou ambiente de circulação; ele pode abrigar diversos gêneros com finalidades e organizações distintas.",
+        "feedbackAcerto": "Correto. Suporte é o meio material ou ambiente de circulação; ele pode abrigar diversos gêneros com finalidades e organizações distintas.",
+        "feedbackErro": "A resposta correta é: \"O jornal é um suporte que pode reunir gêneros diferentes, cada um com finalidade, composição e interlocução próprias.\". Suporte é o meio material ou ambiente de circulação; ele pode abrigar diversos gêneros com finalidades e organizações distintas.",
+        "dicaBanca": "Não confunda onde o texto aparece com que gênero ele realiza."
+    },
+    {
+        "texto": "Considere os seguintes textos sobre vacinação: um artigo científico, uma campanha de conscientização, uma notícia e um cartaz de posto de saúde com instruções ao público.",
+        "pergunta": "A noção de esfera ou domínio discursivo ajuda a explicar que:",
+        "alternativas": [
+            "o assunto vacinação pertence a uma única esfera, de modo que todos os textos compartilham estrutura e finalidade equivalentes.",
+            "gêneros se relacionam a práticas sociais e esferas de atividade, como científica, jornalística e institucional, que influenciam expectativas de produção e leitura.",
+            "a esfera discursiva é determinada pelo tamanho do texto e pelo grau de complexidade lexical empregado em cada publicação. e não pelas práticas sociais em que os textos efetivamente circulam.",
+            "a classificação por esfera substitui gênero e tipologia, tornando desnecessário examinar finalidade, interlocutores ou organização textual.",
+            "qualquer texto sobre saúde pública pertence ao domínio científico, ainda que circule em campanhas, notícias ou orientações administrativas."
+        ],
+        "correta": 1,
+        "explicacao": "As esferas de atividade social favorecem determinados gêneros e convenções, mas um mesmo tema pode circular em diferentes domínios com propósitos distintos.",
+        "feedbackAcerto": "Correto. As esferas de atividade social favorecem determinados gêneros e convenções, mas um mesmo tema pode circular em diferentes domínios com propósitos distintos.",
+        "feedbackErro": "A resposta correta é: \"gêneros se relacionam a práticas sociais e esferas de atividade, como científica, jornalística e institucional, que influenciam expectativas de produção e leitura.\". As esferas de atividade social favorecem determinados gêneros e convenções, mas um mesmo tema pode circular em diferentes domínios com propósitos distintos.",
+        "dicaBanca": "Associe esfera às práticas sociais em que o gênero funciona, não ao assunto isolado."
+    },
+    {
+        "texto": "Uma universidade prepara duas versões sobre a mesma pesquisa: uma para periódico especializado e outra para estudantes do ensino médio em página de divulgação científica.",
+        "pergunta": "A diferença esperada entre as versões decorre principalmente:",
+        "alternativas": [
+            "da necessidade de alterar os resultados científicos para torná-los mais interessantes ao público não especializado. mantendo intacto o conteúdo científico validado pela pesquisa.",
+            "da obrigação de eliminar dados e conceitos na divulgação, pois textos destinados a estudantes não podem apresentar informação científica.",
+            "da adequação ao público, à finalidade e à situação de circulação, que pode modificar escolhas lexicais, nível de explicação e composição do gênero.",
+            "do suporte digital, que determina uso informal da língua e impede qualquer referência a métodos ou resultados de pesquisa.",
+            "da tipologia narrativa, que deve substituir toda exposição quando o destinatário não pertence à comunidade acadêmica especializada."
+        ],
+        "correta": 2,
+        "explicacao": "A adequação genérica envolve interlocutores e finalidade. O conteúdo pode ser recontextualizado com nível de explicação e escolhas linguísticas diferentes sem alterar os resultados da pesquisa.",
+        "feedbackAcerto": "Correto. A adequação genérica envolve interlocutores e finalidade. O conteúdo pode ser recontextualizado com nível de explicação e escolhas linguísticas diferentes sem alterar os resultados da pesquisa.",
+        "feedbackErro": "A resposta correta é: \"da adequação ao público, à finalidade e à situação de circulação, que pode modificar escolhas lexicais, nível de explicação e composição do gênero.\". A adequação genérica envolve interlocutores e finalidade. O conteúdo pode ser recontextualizado com nível de explicação e escolhas linguísticas diferentes sem alterar os resultados da pesquisa.",
+        "dicaBanca": "Em questões de adequação, observe para quem se escreve, com que objetivo e em qual situação."
+    },
+    {
+        "texto": "Uma campanha de preservação ambiental utiliza uma pequena narrativa sobre uma tartaruga encontrada presa em resíduos plásticos e termina com o apelo 'Reduza o uso de descartáveis'.",
+        "pergunta": "A presença da narrativa no interior da campanha mostra que:",
+        "alternativas": [
+            "a campanha deixa de existir como gênero e passa a ser conto, pois qualquer sequência narrativa redefine integralmente a finalidade do texto.",
+            "a tipologia narrativa impede finalidade persuasiva, já que narrar e argumentar pertencem a formas incompatíveis de organização textual.",
+            "o trecho narrativo tem função autônoma e não pode ser interpretado como estratégia discursiva ligada ao apelo final da campanha.",
+            "um gênero pode incorporar sequência narrativa como estratégia para sensibilizar o público e sustentar sua finalidade persuasiva ou educativa.",
+            "a presença de personagem animal converte o texto em fábula, independentemente de existir moral, alegoria ou estrutura narrativa desenvolvida."
+        ],
+        "correta": 3,
+        "explicacao": "Gêneros podem combinar sequências. Na campanha, a narrativa pode produzir envolvimento emocional e fortalecer o apelo final sem alterar a finalidade global do gênero.",
+        "feedbackAcerto": "Correto. Gêneros podem combinar sequências. Na campanha, a narrativa pode produzir envolvimento emocional e fortalecer o apelo final sem alterar a finalidade global do gênero.",
+        "feedbackErro": "A resposta correta é: \"um gênero pode incorporar sequência narrativa como estratégia para sensibilizar o público e sustentar sua finalidade persuasiva ou educativa.\". Gêneros podem combinar sequências. Na campanha, a narrativa pode produzir envolvimento emocional e fortalecer o apelo final sem alterar a finalidade global do gênero.",
+        "dicaBanca": "Predominância não significa pureza: observe a função que cada sequência desempenha no conjunto."
+    },
+    {
+        "texto": "Um infográfico sobre desmatamento contém mapa, números, legenda, linha do tempo e um parágrafo final que explica a tendência observada.",
+        "pergunta": "A análise correta da multimodalidade é:",
+        "alternativas": [
+            "a presença de diferentes modos de representação impede definir gênero, pois textos multimodais pertencem a uma categoria separada dos gêneros textuais.",
+            "o texto verbal concentra todo o sentido principal, enquanto mapas e gráficos funcionam como decoração sem papel interpretativo.",
+            "o mapa determina função narrativa e a linha do tempo determina função descritiva, de modo que o material não pode ser lido como unidade.",
+            "a multimodalidade ocorreria quando existe vídeo ou áudio, não quando informação verbal se combina com gráficos e elementos visuais estáticos.",
+            "o sentido resulta da articulação entre recursos verbais, numéricos e visuais, cuja integração faz parte da composição do infográfico."
+        ],
+        "correta": 4,
+        "explicacao": "Em gêneros multimodais, diferentes modos semióticos cooperam. O leitor precisa relacionar texto, imagens, gráficos, símbolos e disposição espacial.",
+        "feedbackAcerto": "Correto. Em gêneros multimodais, diferentes modos semióticos cooperam. O leitor precisa relacionar texto, imagens, gráficos, símbolos e disposição espacial.",
+        "feedbackErro": "A resposta correta é: \"o sentido resulta da articulação entre recursos verbais, numéricos e visuais, cuja integração faz parte da composição do infográfico.\". Em gêneros multimodais, diferentes modos semióticos cooperam. O leitor precisa relacionar texto, imagens, gráficos, símbolos e disposição espacial.",
+        "dicaBanca": "Pergunte se cada modo acrescenta informação necessária à compreensão do conjunto."
+    },
+    {
+        "texto": "Uma professora solicita aos alunos que transformem um relatório sobre consumo de água da escola em um comunicado curto dirigido às famílias.",
+        "pergunta": "Para realizar adequadamente essa transformação, os alunos devem:",
+        "alternativas": [
+            "selecionar as informações relevantes e reorganizá-las segundo a finalidade, o público e a composição esperada do novo gênero.",
+            "copiar integralmente o relatório e alterar o título, pois mudanças de gênero não podem modificar a extensão nem a organização do conteúdo.",
+            "eliminar todos os dados numéricos, uma vez que comunicados não admitem informações quantitativas produzidas em outros gêneros.",
+            "manter a estrutura de análise e resultados do relatório, substituindo a linguagem formal por marcas de oralidade dirigidas às famílias.",
+            "converter o texto em narrativa cronológica das etapas da pesquisa, pois comunicados precisam apresentar os acontecimentos na ordem em que ocorreram."
+        ],
+        "correta": 0,
+        "explicacao": "A mudança de gênero exige retextualização: seleção, reorganização e adequação às novas finalidades, interlocutores e condições de circulação.",
+        "feedbackAcerto": "Correto. A mudança de gênero exige retextualização: seleção, reorganização e adequação às novas finalidades, interlocutores e condições de circulação.",
+        "feedbackErro": "A resposta correta é: \"selecionar as informações relevantes e reorganizá-las segundo a finalidade, o público e a composição esperada do novo gênero.\". A mudança de gênero exige retextualização: seleção, reorganização e adequação às novas finalidades, interlocutores e condições de circulação.",
+        "dicaBanca": "Retextualizar não é copiar nem resumir mecanicamente; é reconstruir o texto para outra situação comunicativa."
+    },
+    {
+        "texto": "Um texto publicado na seção 'Opinião' de um jornal é assinado por um pesquisador convidado, que defende mudanças na política ambiental. Na página ao lado, o editorial do jornal assume posição parcialmente diferente.",
+        "pergunta": "A coexistência dos dois textos confirma que:",
+        "alternativas": [
+            "a seção de publicação determina que ambos representam a posição oficial do jornal, ainda que possuam autores e teses diferentes. mesmo quando a autoria e a responsabilidade enunciativa são distintas.",
+            "artigo de opinião e editorial podem circular no mesmo veículo, mas a responsabilidade enunciativa e a autoria institucional de cada gênero são distintas.",
+            "um veículo não pode publicar posições divergentes, pois a coerência editorial obriga todos os autores convidados a repetir a mesma tese institucional.",
+            "a assinatura transforma o artigo em reportagem, já que opiniões individuais não constituem gênero reconhecido na esfera jornalística.",
+            "o editorial deixa de ser gênero argumentativo quando aparece ao lado de texto assinado que desenvolve outro ponto de vista sobre o assunto."
+        ],
+        "correta": 1,
+        "explicacao": "O artigo de opinião assume autoria individual identificada; o editorial representa a posição institucional do veículo. Ambos podem coexistir e divergir.",
+        "feedbackAcerto": "Correto. O artigo de opinião assume autoria individual identificada; o editorial representa a posição institucional do veículo. Ambos podem coexistir e divergir.",
+        "feedbackErro": "A resposta correta é: \"artigo de opinião e editorial podem circular no mesmo veículo, mas a responsabilidade enunciativa e a autoria institucional de cada gênero são distintas.\". O artigo de opinião assume autoria individual identificada; o editorial representa a posição institucional do veículo. Ambos podem coexistir e divergir.",
+        "dicaBanca": "Responsabilidade enunciativa é decisiva na comparação entre gêneros opinativos."
+    },
+    {
+        "texto": "Um estudante encontra dois textos acadêmicos: o primeiro relata uma pesquisa com método e resultados; o segundo apresenta e avalia criticamente um livro recente da área.",
+        "pergunta": "A correspondência correta entre descrição e gênero é:",
+        "alternativas": [
+            "primeiro: ensaio; segundo: relatório, pois ambos pertencem à esfera acadêmica e dispensam estrutura fixa de comunicação científica.",
+            "primeiro: resenha; segundo: artigo científico, porque avaliar uma obra exige método e citar resultados de pesquisa indica síntese bibliográfica.",
+            "primeiro: artigo científico; segundo: resenha crítica, pois um comunica pesquisa e o outro combina apresentação e avaliação de uma obra.",
+            "primeiro: notícia científica; segundo: editorial, porque pesquisas e avaliações são necessariamente divulgadas por veículos institucionais especializados.",
+            "primeiro: relatório; segundo: artigo de opinião, porque a esfera acadêmica não distingue gêneros segundo o objeto e a finalidade comunicativa."
+        ],
+        "correta": 2,
+        "explicacao": "O artigo científico comunica pesquisa e explicita procedimentos e resultados; a resenha crítica toma uma obra como objeto de apresentação e avaliação.",
+        "feedbackAcerto": "Correto. O artigo científico comunica pesquisa e explicita procedimentos e resultados; a resenha crítica toma uma obra como objeto de apresentação e avaliação.",
+        "feedbackErro": "A resposta correta é: \"primeiro: artigo científico; segundo: resenha crítica, pois um comunica pesquisa e o outro combina apresentação e avaliação de uma obra.\". O artigo científico comunica pesquisa e explicita procedimentos e resultados; a resenha crítica toma uma obra como objeto de apresentação e avaliação.",
+        "dicaBanca": "Observe o objeto do texto: pesquisa realizada ou obra avaliada."
+    },
+    {
+        "texto": "Uma página da escola reúne regulamento da biblioteca, calendário de empréstimos, formulário para solicitação de livros e um FAQ sobre multas e renovações.",
+        "pergunta": "A situação demonstra que:",
+        "alternativas": [
+            "uma página digital constitui um único gênero e, por isso, todos os componentes perdem suas características próprias ao serem reunidos no mesmo ambiente.",
+            "a existência de hiperlinks elimina fronteiras entre gêneros e impede reconhecer diferentes finalidades em uma mesma página institucional.",
+            "todo conteúdo da página pertence ao gênero regulamento, porque as regras da biblioteca constituem o assunto geral do ambiente digital.",
+            "um mesmo ambiente digital pode reunir gêneros distintos, articulados por uma finalidade institucional mais ampla de orientar e atender usuários.",
+            "FAQ, formulário e calendário são tipologias textuais, enquanto regulamento é o único gênero efetivamente reconhecível na página."
+        ],
+        "correta": 3,
+        "explicacao": "Ambientes digitais frequentemente agregam vários gêneros. Cada componente pode manter finalidade e composição próprias, mesmo integrado a uma página ou sistema maior.",
+        "feedbackAcerto": "Correto. Ambientes digitais frequentemente agregam vários gêneros. Cada componente pode manter finalidade e composição próprias, mesmo integrado a uma página ou sistema maior.",
+        "feedbackErro": "A resposta correta é: \"um mesmo ambiente digital pode reunir gêneros distintos, articulados por uma finalidade institucional mais ampla de orientar e atender usuários.\". Ambientes digitais frequentemente agregam vários gêneros. Cada componente pode manter finalidade e composição próprias, mesmo integrado a uma página ou sistema maior.",
+        "dicaBanca": "Em interfaces digitais, diferencie o ambiente que organiza conteúdos dos gêneros que nele circulam."
+    },
+    {
+        "texto": "Em uma atividade, o professor apresenta os termos 'jornalístico', 'acadêmico', 'publicitário', 'jurídico-administrativo' e 'cotidiano' e pede que os alunos os relacionem a diferentes práticas de linguagem.",
+        "pergunta": "Esses termos designam principalmente:",
+        "alternativas": [
+            "tipologias textuais, pois cada um corresponde a uma forma linguística de narrar, descrever, argumentar ou instruir o leitor.",
+            "suportes materiais, pois indicam os meios físicos ou digitais pelos quais os textos chegam aos destinatários finais.",
+            "funções da linguagem, pois identificam o elemento da comunicação que recebe maior destaque em cada produção textual.",
+            "gêneros específicos, pois cada termo nomeia uma forma textual única, com composição estável e finalidade comunicativa invariável. associada a uma prática social única e rigidamente delimitada.",
+            "esferas ou domínios discursivos, pois agrupam práticas sociais em que circulam diferentes gêneros relacionados a atividades e finalidades próprias."
+        ],
+        "correta": 4,
+        "explicacao": "Jornalístico, acadêmico e publicitário nomeiam esferas ou domínios de atividade discursiva, dentro dos quais circulam diferentes gêneros.",
+        "feedbackAcerto": "Correto. Jornalístico, acadêmico e publicitário nomeiam esferas ou domínios de atividade discursiva, dentro dos quais circulam diferentes gêneros.",
+        "feedbackErro": "A resposta correta é: \"esferas ou domínios discursivos, pois agrupam práticas sociais em que circulam diferentes gêneros relacionados a atividades e finalidades próprias.\". Jornalístico, acadêmico e publicitário nomeiam esferas ou domínios de atividade discursiva, dentro dos quais circulam diferentes gêneros.",
+        "dicaBanca": "Esfera reúne práticas e gêneros; gênero é uma forma textual socialmente reconhecida dentro dessas práticas."
+    }
+];
