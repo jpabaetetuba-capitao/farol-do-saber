@@ -1,668 +1,802 @@
 const semantica = [
-
-{
-    texto: `Ao apresentar o balanço anual da instituição, o diretor afirmou que os resultados obtidos representavam apenas a superfície de um processo de transformação muito mais amplo, desenvolvido silenciosamente ao longo dos últimos anos.`,
-
-    pergunta: "A expressão 'apenas a superfície' produz, no contexto, o efeito de sentido de que:",
-
-    alternativas: [
-        "os resultados divulgados correspondem à parcela mais visível de mudanças mais profundas e abrangentes.",
-        "as transformações ocorridas foram limitadas e insuficientes para alcançar os objetivos pretendidos.",
-        "o processo desenvolvido pela instituição ainda não produziu impactos concretos e mensuráveis.",
-        "os dados apresentados ocultam deliberadamente informações relevantes para a compreensão dos fatos.",
-        "as mudanças implementadas concentram-se predominantemente nos aspectos externos da organização."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A expressão sugere que os resultados observados representam apenas a parte visível de um processo mais amplo.",
-
-    feedbackErro: "A interpretação depende da compreensão metafórica da palavra 'superfície', utilizada em oposição a elementos mais profundos.",
-
-    dicaBanca: "FGV costuma explorar metáforas conceituais em que elementos físicos representam processos abstratos."
-
-},
-{
-    texto: `Após a divulgação do relatório, alguns gestores comemoraram os números apresentados. Outros, porém, observaram que eles contavam uma história menos otimista do que aquela destacada nas apresentações institucionais.`,
-
-    pergunta: "No contexto, a expressão 'contavam uma história' significa que os números:",
-
-    alternativas: [
-
-        "foram organizados de forma narrativa para facilitar a compreensão dos leitores.",
-
-        "permitiam interpretações que revelavam aspectos não evidenciados pelo discurso oficial.",
-
-        "haviam sido obtidos por meio de relatos fornecidos pelos participantes da pesquisa.",
-
-        "substituíam integralmente a necessidade de análises qualitativas dos resultados.",
-
-        "possuíam caráter subjetivo incompatível com procedimentos estatísticos."
-
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. Os números são apresentados como capazes de revelar uma realidade diferente daquela enfatizada oficialmente.",
-
-    feedbackErro: "O verbo 'contar' foi empregado em sentido figurado para indicar capacidade de evidenciar ou revelar informações.",
-
-    dicaBanca: "Questões avançadas de semântica frequentemente exploram verbos usados metaforicamente em contextos argumentativos."
-
-},
-{
-    texto: `Ao comentar a proposta, um pesquisador afirmou que ela possuía potencial para 'abrir portas' em áreas que historicamente enfrentavam dificuldades de acesso a recursos e oportunidades.`,
-
-    pergunta: "A expressão 'abrir portas' foi utilizada para indicar principalmente:",
-
-    alternativas: [
-        "a necessidade de remover barreiras físicas que dificultavam o funcionamento das instituições.",
-        "a implementação de mecanismos destinados ao controle do acesso a determinados espaços.",
-        "a criação de condições favoráveis ao surgimento de novas possibilidades e oportunidades.",
-        "a ampliação da circulação de pessoas entre setores anteriormente isolados.",
-        "a eliminação completa dos obstáculos existentes nas áreas mencionadas pelo pesquisador."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. A expressão é empregada figuradamente para indicar ampliação de oportunidades e possibilidades.",
-
-    feedbackErro: "A interpretação literal da expressão conduz a conclusões incompatíveis com o contexto apresentado.",
-
-    dicaBanca: "Expressões idiomáticas sofisticadas costumam aparecer associadas a contextos institucionais e acadêmicos."
-
-},
-{
-    texto: `Durante o debate, o representante da empresa afirmou que os atrasos observados eram apenas ajustes naturais de um cronograma particularmente ambicioso. Entretanto, documentos divulgados posteriormente revelaram que diversos problemas já haviam sido identificados meses antes.`,
-
-    pergunta: "Considerando o contexto global do texto, a expressão 'ajustes naturais' produz efeito de sentido associado a:",
-
-    alternativas: [
-        "descrição objetiva de situações previsíveis em projetos de grande complexidade operacional.",
-        "reconhecimento explícito da responsabilidade da empresa pelos atrasos acumulados.",
-        "comparação entre diferentes estratégias de planejamento utilizadas pela organização.",
-        "eufemização de problemas cuja gravidade parece maior do que a apresentada pelo representante.",
-        "explicação técnica destinada a detalhar os procedimentos adotados pela equipe."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A expressão suaviza a percepção dos problemas, funcionando como eufemismo.",
-
-    feedbackErro: "Nem sempre o significado decorre apenas da expressão isolada; o contexto pode revelar tentativas de atenuação discursiva.",
-
-    dicaBanca: "FGV gosta de explorar eufemismos em textos argumentativos e institucionais."
-
-},
-{
-    texto: `Ao avaliar os resultados do programa, a pesquisadora observou que os avanços alcançados eram relevantes, mas acrescentou que ainda havia um longo caminho a percorrer até que os objetivos inicialmente estabelecidos fossem plenamente atingidos.`,
-
-    pergunta: "A expressão 'um longo caminho a percorrer' sugere que:",
-
-    alternativas: [
-        "as metas propostas exigem deslocamentos frequentes entre diferentes regiões de atuação.",
-        "o programa se encontra em estágio inicial e ainda não produziu resultados concretos.",
-        "a execução do projeto depende predominantemente da ampliação de recursos financeiros disponíveis.",
-        "os resultados obtidos até o momento devem ser considerados insuficientes e irrelevantes.",
-        "existem desafios e etapas futuras a serem enfrentados antes da concretização completa dos objetivos."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. A expressão é metafórica e indica que ainda existem etapas e desafios para alcançar plenamente os objetivos.",
-
-    feedbackErro: "A metáfora do caminho é frequentemente utilizada para representar processos, trajetórias e metas futuras.",
-
-    dicaBanca: "Em semântica avançada, muitas metáforas não representam objetos, mas processos de desenvolvimento e transformação."
-},
-{
-    texto: `Após a implementação de uma série de reformas administrativas, o presidente da instituição afirmou que era necessário "virar a página" e concentrar esforços nos desafios futuros. Alguns analistas, contudo, observaram que determinadas questões ainda permaneciam sem solução definitiva.`,
-
+  {
+    texto: "Após a implementação de uma série de reformas administrativas, o presidente da instituição afirmou que era necessário \"virar a página\" e concentrar esforços nos desafios futuros. Alguns analistas, contudo, observaram que determinadas questões ainda permaneciam sem solução definitiva.",
     pergunta: "No contexto apresentado, a expressão 'virar a página' produz principalmente o sentido de:",
-
     alternativas: [
-        "encerrar simbolicamente um ciclo anterior e direcionar a atenção para novas etapas.",
-        "reformular integralmente os documentos utilizados pela administração da instituição.",
-        "substituir os responsáveis pelas decisões tomadas em períodos anteriores.",
-        "abandonar amplamente os registros históricos relacionados às reformas realizadas.",
-        "transferir para outros setores a responsabilidade pelas questões ainda pendentes."
+      "encerrar simbolicamente um ciclo anterior e direcionar a atenção para novas etapas.",
+      "reformular integralmente os documentos utilizados pela administração da instituição.",
+      "substituir os responsáveis pelas decisões tomadas em períodos anteriores.",
+      "abandonar amplamente os registros históricos relacionados às reformas realizadas.",
+      "transferir para outros setores a responsabilidade pelas questões ainda pendentes.",
     ],
-
     correta: 0,
-
-    feedbackAcerto: "Correto. A expressão é empregada metaforicamente para indicar encerramento de uma etapa e início de outra.",
-
-    feedbackErro: "A interpretação literal da expressão não é compatível com o contexto institucional apresentado.",
-
-    dicaBanca: "Expressões metafóricas ligadas à leitura e à escrita costumam representar mudanças de fase ou de perspectiva."
-
-},
-{
-    texto: `Durante a apresentação dos resultados, um dos pesquisadores afirmou que os dados obtidos funcionavam como um retrato das condições observadas naquele momento específico, não devendo ser interpretados como representação definitiva da realidade.`,
-
+    explicacao: "'Virar a página' encerra simbolicamente uma etapa anterior e orienta a atenção para uma nova fase, sem implicar apagamento literal dos fatos passados.",
+    feedbackAcerto: "Correto. 'Virar a página' encerra simbolicamente uma etapa anterior e orienta a atenção para uma nova fase, sem implicar apagamento literal dos fatos passados.",
+    feedbackErro: "A resposta correta é: encerrar simbolicamente um ciclo anterior e direcionar a atenção para novas etapas. 'Virar a página' encerra simbolicamente uma etapa anterior e orienta a atenção para uma nova fase, sem implicar apagamento literal dos fatos passados.",
+    dicaBanca: "Observe se a expressão marca passagem de uma etapa para outra sem exigir leitura literal.",
+  },
+  {
+    texto: "Durante a apresentação dos resultados, um dos pesquisadores afirmou que os dados obtidos funcionavam como um retrato das condições observadas naquele momento específico, não devendo ser interpretados como representação definitiva da realidade.",
     pergunta: "A palavra 'retrato' foi empregada, nesse contexto, com o sentido de:",
-
     alternativas: [
-
-        "registro visual produzido por equipamentos destinados à documentação científica.",
-
-        "descrição sintética capaz de representar determinada situação em um dado momento.",
-
-        "instrumento utilizado para comparar diferentes períodos de observação estatística.",
-
-        "modelo gráfico elaborado para ilustrar os resultados obtidos na pesquisa.",
-
-        "reprodução exata e permanente das características analisadas pelos pesquisadores."
-
+      "registro visual produzido por equipamentos destinados à documentação científica.",
+      "descrição sintética capaz de representar determinada situação em um dado momento.",
+      "instrumento utilizado para comparar diferentes períodos de observação estatística.",
+      "modelo gráfico elaborado para ilustrar os resultados obtidos na pesquisa.",
+      "reprodução exata e permanente das características analisadas pelos pesquisadores.",
     ],
-
     correta: 1,
-
-    feedbackAcerto: "Correto. A palavra é utilizada figuradamente para indicar representação ou descrição de uma realidade específica.",
-
-    feedbackErro: "O contexto sugere um sentido metafórico relacionado à representação de uma situação observada.",
-
-    dicaBanca: "Palavras concretas frequentemente assumem sentidos abstratos em textos acadêmicos e jornalísticos."
-
-},
-{
-    texto: `Ao comentar a repercussão do projeto, um especialista afirmou que a iniciativa havia lançado sementes cujos efeitos provavelmente seriam percebidos apenas nos anos seguintes.`,
-
+    explicacao: "No trecho, 'retrato' equivale a uma representação sintética e situada no tempo, não a uma reprodução visual nem definitiva da realidade.",
+    feedbackAcerto: "Correto. No trecho, 'retrato' equivale a uma representação sintética e situada no tempo, não a uma reprodução visual nem definitiva da realidade.",
+    feedbackErro: "A resposta correta é: descrição sintética capaz de representar determinada situação em um dado momento. No trecho, 'retrato' equivale a uma representação sintética e situada no tempo, não a uma reprodução visual nem definitiva da realidade.",
+    dicaBanca: "Pergunte se o substantivo concreto passou a representar uma descrição ou recorte abstrato da realidade.",
+  },
+  {
+    texto: "Ao comentar a repercussão do projeto, um especialista afirmou que a iniciativa havia lançado sementes cujos efeitos provavelmente seriam percebidos apenas nos anos seguintes.",
     pergunta: "A metáfora presente na expressão 'lançado sementes' sugere que a iniciativa:",
-
     alternativas: [
-        "priorizou atividades relacionadas à produção agrícola em comunidades locais.",
-        "produziu efeitos imediatos que já podem ser observados em sua totalidade.",
-        "promoveu ações iniciais capazes de gerar resultados futuros ainda não plenamente visíveis.",
-        "dependia predominantemente de condições externas para alcançar determinado resultado relevante.",
-        "foi desenvolvida sem planejamento adequado para garantir sua continuidade."
+      "priorizou atividades relacionadas à produção agrícola em comunidades locais.",
+      "produziu efeitos imediatos que já podem ser observados em sua totalidade.",
+      "promoveu ações iniciais capazes de gerar resultados futuros ainda não plenamente visíveis.",
+      "dependia predominantemente de condições externas para alcançar determinado resultado relevante.",
+      "foi desenvolvida sem planejamento adequado para garantir sua continuidade.",
     ],
-
     correta: 2,
-
-    feedbackAcerto: "Correto. A metáfora associa sementes a ações iniciais que podem produzir efeitos ao longo do tempo.",
-
-    feedbackErro: "O foco da metáfora não está na agricultura, mas na ideia de potencial desenvolvimento futuro.",
-
-    dicaBanca: "Metáforas relacionadas a plantio, cultivo e colheita costumam representar processos de longo prazo."
-
-},
-{
-    texto: `Após analisar os indicadores divulgados, a jornalista escreveu que os números desmontavam a narrativa construída ao longo dos últimos meses por diferentes representantes da organização.`,
-
+    explicacao: "A metáfora das sementes associa uma ação inicial a efeitos que podem amadurecer e tornar-se perceptíveis no futuro.",
+    feedbackAcerto: "Correto. A metáfora das sementes associa uma ação inicial a efeitos que podem amadurecer e tornar-se perceptíveis no futuro.",
+    feedbackErro: "A resposta correta é: promoveu ações iniciais capazes de gerar resultados futuros ainda não plenamente visíveis. A metáfora das sementes associa uma ação inicial a efeitos que podem amadurecer e tornar-se perceptíveis no futuro.",
+    dicaBanca: "Metáforas de plantio costumam relacionar ações presentes a efeitos futuros.",
+  },
+  {
+    texto: "Após analisar os indicadores divulgados, a jornalista escreveu que os números desmontavam a narrativa construída ao longo dos últimos meses por diferentes representantes da organização.",
     pergunta: "A expressão 'desmontavam a narrativa' indica que os números:",
-
     alternativas: [
-        "apresentavam inconsistências que comprometiam a elaboração dos relatórios estatísticos.",
-        "impediam a divulgação pública das informações produzidas pela organização.",
-        "substituíam amplamente a necessidade de interpretação dos acontecimentos analisados.",
-        "forneciam elementos que enfraqueciam ou contrariavam a interpretação anteriormente defendida.",
-        "demonstravam a impossibilidade de construção de explicações sobre os fatos observados."
+      "apresentavam inconsistências que comprometiam a elaboração dos relatórios estatísticos e reduziam sua confiabilidade.",
+      "impediam a divulgação pública das informações produzidas pela organização.",
+      "substituíam amplamente a necessidade de interpretação dos acontecimentos analisados.",
+      "forneciam elementos que enfraqueciam ou contrariavam a interpretação anteriormente defendida.",
+      "demonstravam a impossibilidade de construção de explicações sobre os fatos observados.",
     ],
-
     correta: 3,
-
-    feedbackAcerto: "Correto. Os dados são apresentados como evidências capazes de contestar determinada interpretação dos fatos.",
-
-    feedbackErro: "O verbo 'desmontar' é empregado figuradamente para indicar enfraquecimento ou refutação de uma ideia.",
-
-    dicaBanca: "Questões avançadas de semântica frequentemente exploram relações entre linguagem figurada e argumentação."
-
-},
-{
-    texto: `Ao final da conferência, um dos participantes comentou que a discussão havia iluminado aspectos do problema que permaneciam pouco compreendidos pelos pesquisadores.`,
-
+    explicacao: "'Desmontar a narrativa' significa fornecer evidências que enfraquecem ou contradizem a interpretação antes sustentada.",
+    feedbackAcerto: "Correto. 'Desmontar a narrativa' significa fornecer evidências que enfraquecem ou contradizem a interpretação antes sustentada.",
+    feedbackErro: "A resposta correta é: forneciam elementos que enfraqueciam ou contrariavam a interpretação anteriormente defendida. 'Desmontar a narrativa' significa fornecer evidências que enfraquecem ou contradizem a interpretação antes sustentada.",
+    dicaBanca: "Verifique se o verbo indica destruição física ou contestação de uma interpretação.",
+  },
+  {
+    texto: "Ao final da conferência, um dos participantes comentou que a discussão havia iluminado aspectos do problema que permaneciam pouco compreendidos pelos pesquisadores.",
     pergunta: "No contexto, o verbo 'iluminado' foi empregado para expressar a ideia de:",
-
     alternativas: [
-        "proporcionar condições materiais para observação detalhada dos dados coletados.",
-        "direcionar a atenção dos pesquisadores para aspectos predominantemente visuais do problema.",
-        "demonstrar a superioridade metodológica das abordagens utilizadas no estudo.",
-        "substituir interpretações antigas por explicações consideradas definitivas.",
-        "ampliar a compreensão sobre elementos anteriormente pouco esclarecidos."
+      "proporcionar condições materiais para observação detalhada dos dados coletados.",
+      "direcionar a atenção dos pesquisadores para aspectos predominantemente visuais do problema.",
+      "demonstrar a superioridade metodológica das abordagens utilizadas no estudo.",
+      "substituir interpretações antigas por explicações consideradas definitivas.",
+      "ampliar a compreensão sobre elementos anteriormente pouco esclarecidos.",
     ],
-
     correta: 4,
-
-    feedbackAcerto: "Correto. O verbo é utilizado metaforicamente para indicar esclarecimento ou ampliação da compreensão.",
-
-    feedbackErro: "A interpretação adequada depende da compreensão do valor figurado da palavra no contexto apresentado.",
-
-    dicaBanca: "Metáforas ligadas à luz costumam estar associadas a conhecimento, compreensão e esclarecimento."
-},
-{
-    texto: `Ao analisar os resultados do programa, um pesquisador observou que os números exigiam cautela. Segundo ele, embora os indicadores apontassem avanços relevantes, ainda seria prematuro afirmar que o problema estivesse definitivamente resolvido.`,
-
-    pergunta: "A palavra 'prematuro', no contexto, contribui para a construção do sentido de que:",
-
-    alternativas: [
-        "a conclusão mencionada estaria sendo formulada antes da existência de evidências plenamente consolidadas.",
-        "os resultados obtidos são insuficientes para determinado tipo de avaliação técnica, quando analisada de forma isolada, sem observar todos os elementos exigidos pelo enunciado.",
-        "os indicadores utilizados não possuem validade científica para fundamentar decisões, quando analisada de forma isolada, sem observar todos os elementos exigidos pelo enunciado.",
-        "o programa foi implementado em período inadequado para a coleta de informações, quando analisada de forma isolada, sem observar todos os elementos exigidos pelo enunciado.",
-        "a pesquisa precisará ser integralmente refeita para garantir sua credibilidade, quando analisada de forma isolada, sem observar todos os elementos exigidos pelo enunciado."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. O termo sugere antecipação indevida de uma conclusão ainda não suficientemente sustentada pelos dados.",
-
-    feedbackErro: "A palavra não indica necessariamente erro, mas inadequação temporal em relação às evidências disponíveis.",
-
-    dicaBanca: "FGV costuma explorar nuances semânticas de palavras aparentemente simples dentro do contexto argumentativo."
-
-},
-{
-    texto: `Durante a audiência pública, um representante afirmou que a proposta poderia funcionar como uma ponte entre interesses que, historicamente, haviam sido tratados como incompatíveis.`,
-
-    pergunta: "A metáfora da 'ponte' produz o efeito de sentido de:",
-
-    alternativas: [
-        "superação definitiva de todos os conflitos existentes entre os grupos envolvidos.",
-        "criação de mecanismo capaz de aproximar ou conectar posições anteriormente distantes.",
-        "necessidade de investimentos em infraestrutura para viabilizar o diálogo institucional.",
-        "existência de obstáculos físicos que dificultam a comunicação entre diferentes setores.",
-        "substituição das divergências por uma estrutura única de tomada de decisões."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. A ponte representa simbolicamente a aproximação entre posições ou interesses distintos.",
-
-    feedbackErro: "A metáfora não implica eliminação completa das diferenças, mas possibilidade de conexão entre elas.",
-
-    dicaBanca: "Elementos físicos frequentemente são utilizados metaforicamente para representar relações sociais ou institucionais."
-
-},
-{
-    texto: `Após a divulgação dos dados, alguns analistas classificaram o resultado como modesto. Outros, porém, argumentaram que o desempenho deveria ser interpretado à luz das circunstâncias excepcionais enfrentadas durante o período avaliado.`,
-
-    pergunta: "A expressão 'à luz das circunstâncias' significa que o resultado deve ser analisado:",
-
-    alternativas: [
-        "a partir de critérios predominantemente quantitativos definidos pelos pesquisadores.",
-        "com base em parâmetros utilizados em períodos de normalidade administrativa.",
-        "sob a perspectiva ou considerando o contexto específico em que ocorreu.",
-        "segundo interpretações formuladas pelos responsáveis pela divulgação dos dados.",
-        "de forma independente das condições que influenciaram sua obtenção."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. A expressão indica análise contextualizada dos fatos ou resultados observados.",
-
-    feedbackErro: "A interpretação adequada depende da compreensão da expressão figurada e de sua relação com o contexto.",
-
-    dicaBanca: "Expressões como 'à luz de' costumam indicar perspectiva, referência ou critério de análise."
-
-},
-{
-    texto: `Ao comentar o impacto das mudanças implementadas, uma especialista afirmou que algumas resistências ainda permaneciam enraizadas na cultura organizacional da instituição.`,
-
-    pergunta: "O emprego da palavra 'enraizadas' sugere que as resistências:",
-
-    alternativas: [
-        "foram formalmente incorporadas aos regulamentos internos da instituição.",
-        "resultam predominantemente de fatores históricos relacionados à fundação da organização.",
-        "estão limitadas aos setores responsáveis pela administração dos recursos humanos.",
-        "apresentam caráter profundo e difícil de ser transformado ou removido.",
-        "dependem diretamente da estrutura física existente nos ambientes de trabalho."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A metáfora das raízes sugere profundidade, permanência e dificuldade de mudança.",
-
-    feedbackErro: "O contexto não trata de raízes literais, mas de características culturais profundamente estabelecidas.",
-
-    dicaBanca: "Metáforas relacionadas a raízes, bases e fundamentos costumam indicar profundidade ou permanência."
-
-},
-{
-    texto: `Um articulista escreveu que determinadas decisões políticas produziam mais fumaça do que resultados concretos. Segundo ele, grande parte da energia empregada estava voltada à produção de impacto simbólico e não à resolução efetiva dos problemas.`,
-
-    pergunta: "A expressão 'mais fumaça do que resultados concretos' sugere que as decisões mencionadas:",
-
-    alternativas: [
-        "geram efeitos negativos relacionados a problemas ambientais e urbanos.",
-        "apresentam resultados relevantes que não são adequadamente divulgados ao público.",
-        "dependem de estratégias de comunicação para que seus benefícios sejam percebidos.",
-        "estão associadas a processos decisórios marcados por falta de transparência.",
-        "produzem repercussão aparente superior aos resultados efetivamente alcançados."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. A metáfora sugere excesso de aparência ou repercussão em comparação aos resultados concretos.",
-
-    feedbackErro: "A fumaça funciona como representação simbólica de visibilidade, espetáculo ou aparência.",
-
-    dicaBanca: "Questões sofisticadas de semântica frequentemente exploram metáforas relacionadas à oposição entre aparência e realidade."
-},
-{
-    texto: `Ao avaliar os resultados de uma política pública, um pesquisador afirmou que os indicadores divulgados representavam apenas o eco de transformações mais profundas que ainda estavam em curso na sociedade.`,
-
+    explicacao: "'Iluminar' desloca-se do sentido físico para o cognitivo: a discussão torna aspectos antes obscuros mais compreensíveis.",
+    feedbackAcerto: "Correto. 'Iluminar' desloca-se do sentido físico para o cognitivo: a discussão torna aspectos antes obscuros mais compreensíveis.",
+    feedbackErro: "A resposta correta é: ampliar a compreensão sobre elementos anteriormente pouco esclarecidos. 'Iluminar' desloca-se do sentido físico para o cognitivo: a discussão torna aspectos antes obscuros mais compreensíveis.",
+    dicaBanca: "Em usos figurados ligados à luz, procure relações com compreensão e esclarecimento.",
+  },
+  {
+    texto: "Ao avaliar os resultados de uma política pública, um pesquisador afirmou que os indicadores divulgados representavam apenas o eco de transformações mais profundas que ainda estavam em curso na sociedade.",
     pergunta: "No contexto, a palavra 'eco' foi empregada para sugerir que os indicadores:",
-
     alternativas: [
-        "reproduzem de forma indireta efeitos produzidos por mudanças mais amplas e complexas.",
-        "apresentam distorções decorrentes da repetição inadequada dos dados coletados.",
-        "foram elaborados com base em informações secundárias de confiabilidade reduzida.",
-        "correspondem a resultados idênticos observados em pesquisas realizadas anteriormente.",
-        "refletem predominantemente a percepção dos grupos diretamente beneficiados pela política."
+      "reproduzem de forma indireta efeitos produzidos por mudanças mais amplas e complexas.",
+      "apresentam distorções decorrentes da repetição inadequada dos dados coletados.",
+      "foram elaborados com base em informações secundárias de confiabilidade reduzida.",
+      "correspondem a resultados idênticos observados em pesquisas realizadas anteriormente.",
+      "refletem predominantemente a percepção dos grupos diretamente beneficiados pela política.",
     ],
-
     correta: 0,
-
-    feedbackAcerto: "Correto. O termo 'eco' sugere manifestação indireta ou reflexo de fenômenos mais profundos.",
-
-    feedbackErro: "A palavra não deve ser interpretada literalmente. O contexto associa os indicadores a sinais de mudanças mais amplas.",
-
-    dicaBanca: "FGV aprecia metáforas que envolvem fenômenos físicos para representar processos sociais e institucionais."
-
-},
-{
-    texto: `Ao comentar os desafios enfrentados pela organização, o diretor afirmou que algumas decisões tomadas no passado ainda projetavam sombras sobre as iniciativas desenvolvidas no presente.`,
-
+    explicacao: "O 'eco' representa uma manifestação indireta de transformações mais profundas, perceptível nos indicadores divulgados.",
+    feedbackAcerto: "Correto. O 'eco' representa uma manifestação indireta de transformações mais profundas, perceptível nos indicadores divulgados.",
+    feedbackErro: "A resposta correta é: reproduzem de forma indireta efeitos produzidos por mudanças mais amplas e complexas. O 'eco' representa uma manifestação indireta de transformações mais profundas, perceptível nos indicadores divulgados.",
+    dicaBanca: "Fenômenos de repetição sonora podem representar reflexos indiretos de causas mais profundas.",
+  },
+  {
+    texto: "Ao comentar os desafios enfrentados pela organização, o diretor afirmou que algumas decisões tomadas no passado ainda projetavam sombras sobre as iniciativas desenvolvidas no presente.",
     pergunta: "A expressão 'projetavam sombras' produz o efeito de sentido de que tais decisões:",
-
     alternativas: [
-        "foram registradas de maneira incompleta nos documentos institucionais.",
-        "continuavam exercendo influência negativa ou limitadora sobre ações atuais.",
-        "impediam a correta visualização dos resultados alcançados pela organização.",
-        "permaneciam desconhecidas pela maior parte dos integrantes da instituição.",
-        "estavam associadas predominantemente a problemas de natureza financeira."
+      "foram registradas de maneira incompleta nos documentos institucionais.",
+      "continuavam exercendo influência negativa ou limitadora sobre ações atuais.",
+      "impediam a correta visualização dos resultados alcançados pela organização.",
+      "permaneciam desconhecidas pela maior parte dos integrantes da instituição.",
+      "estavam associadas predominantemente a problemas de natureza financeira.",
     ],
-
     correta: 1,
-
-    feedbackAcerto: "Correto. A metáfora da sombra sugere influência persistente, geralmente associada a dificuldades ou limitações.",
-
-    feedbackErro: "A interpretação depende da compreensão simbólica da palavra 'sombra' no contexto apresentado.",
-
-    dicaBanca: "Metáforas ligadas à escuridão frequentemente representam obstáculos, incertezas ou efeitos negativos."
-
-},
-{
-    texto: `Após a divulgação do estudo, especialistas destacaram que os resultados não deveriam ser interpretados como um ponto final na discussão, mas como um convite à formulação de novas perguntas.`,
-
+    explicacao: "'Projetar sombras' sugere que decisões passadas continuam produzindo efeitos negativos ou limitadores sobre iniciativas atuais.",
+    feedbackAcerto: "Correto. 'Projetar sombras' sugere que decisões passadas continuam produzindo efeitos negativos ou limitadores sobre iniciativas atuais.",
+    feedbackErro: "A resposta correta é: continuavam exercendo influência negativa ou limitadora sobre ações atuais. 'Projetar sombras' sugere que decisões passadas continuam produzindo efeitos negativos ou limitadores sobre iniciativas atuais.",
+    dicaBanca: "Sombras, no plano abstrato, podem sinalizar influência persistente, limitação ou efeito negativo.",
+  },
+  {
+    texto: "Após a divulgação do estudo, especialistas destacaram que os resultados não deveriam ser interpretados como um ponto final na discussão, mas como um convite à formulação de novas perguntas.",
     pergunta: "A oposição entre 'ponto final' e 'convite à formulação de novas perguntas' evidencia a ideia de que:",
-
     alternativas: [
-        "o estudo apresenta conclusões definitivas que reduzem a necessidade de investigações complementares.",
-        "os resultados obtidos possuem valor limitado para a produção de conhecimento científico.",
-        "a pesquisa contribui para ampliar o debate, em vez de encerrar as reflexões sobre o tema.",
-        "as perguntas formuladas anteriormente foram inadequadas para os objetivos do estudo.",
-        "o conhecimento científico depende predominantemente da substituição constante de teorias."
+      "o estudo apresenta conclusões definitivas que reduzem a necessidade de investigações complementares.",
+      "os resultados obtidos possuem valor limitado para a produção de conhecimento científico.",
+      "a pesquisa contribui para ampliar o debate, em vez de encerrar as reflexões sobre o tema.",
+      "as perguntas formuladas anteriormente foram inadequadas para os objetivos do estudo.",
+      "o conhecimento científico depende predominantemente da substituição constante de teorias.",
     ],
-
     correta: 2,
-
-    feedbackAcerto: "Correto. O texto sugere que a pesquisa gera novas possibilidades de investigação e reflexão.",
-
-    feedbackErro: "A expressão 'ponto final' foi utilizada figuradamente para representar encerramento de uma discussão.",
-
-    dicaBanca: "Questões de semântica avançada frequentemente exploram oposições metafóricas dentro do texto."
-
-},
-{
-    texto: `Um articulista escreveu que determinadas propostas permaneciam orbitando em torno dos mesmos problemas sem efetivamente alcançar soluções capazes de transformá-los.`,
-
+    explicacao: "A oposição entre 'ponto final' e novas perguntas indica que o estudo amplia a investigação, em vez de encerrar o debate.",
+    feedbackAcerto: "Correto. A oposição entre 'ponto final' e novas perguntas indica que o estudo amplia a investigação, em vez de encerrar o debate.",
+    feedbackErro: "A resposta correta é: a pesquisa contribui para ampliar o debate, em vez de encerrar as reflexões sobre o tema. A oposição entre 'ponto final' e novas perguntas indica que o estudo amplia a investigação, em vez de encerrar o debate.",
+    dicaBanca: "Compare o valor simbólico de encerramento com o de continuidade da investigação.",
+  },
+  {
+    texto: "Um articulista escreveu que determinadas propostas permaneciam orbitando em torno dos mesmos problemas sem efetivamente alcançar soluções capazes de transformá-los.",
     pergunta: "O emprego do verbo 'orbitando' sugere que as propostas:",
-
     alternativas: [
-        "foram elaboradas por especialistas ligados às áreas de pesquisa espacial e tecnológica.",
-        "dependiam de fatores externos para serem incorporadas às políticas públicas existentes.",
-        "apresentavam elevado grau de complexidade técnica para sua implementação.",
-        "mantinham proximidade com os problemas, mas sem produzir intervenções efetivas sobre eles.",
-        "encontravam-se em estágio avançado de desenvolvimento institucional."
+      "foram elaboradas por especialistas ligados às áreas de pesquisa espacial e tecnológica.",
+      "dependiam de fatores externos para serem incorporadas às políticas públicas existentes, sem alterar a formulação original.",
+      "apresentavam elevado grau de complexidade técnica para sua implementação.",
+      "mantinham proximidade com os problemas, mas sem produzir intervenções efetivas sobre eles.",
+      "encontravam-se em estágio avançado de desenvolvimento institucional.",
     ],
-
     correta: 3,
-
-    feedbackAcerto: "Correto. A metáfora sugere movimento constante ao redor do problema, sem enfrentamento efetivo.",
-
-    feedbackErro: "O verbo não deve ser interpretado literalmente; ele representa uma relação indireta com a questão discutida.",
-
-    dicaBanca: "Verbos associados a movimento são frequentemente utilizados metaforicamente em textos argumentativos."
-
-},
-{
-    texto: `Ao analisar a repercussão do projeto, um pesquisador afirmou que as críticas recebidas funcionavam como termômetros capazes de indicar aspectos que precisavam ser aperfeiçoados.`,
-
+    explicacao: "'Orbitar' sugere permanecer em torno de um problema sem atingi-lo de modo suficiente para transformá-lo.",
+    feedbackAcerto: "Correto. 'Orbitar' sugere permanecer em torno de um problema sem atingi-lo de modo suficiente para transformá-lo.",
+    feedbackErro: "A resposta correta é: mantinham proximidade com os problemas, mas sem produzir intervenções efetivas sobre eles. 'Orbitar' sugere permanecer em torno de um problema sem atingi-lo de modo suficiente para transformá-lo.",
+    dicaBanca: "Verbos de movimento podem descrever relações abstratas; identifique o tipo de aproximação sugerido.",
+  },
+  {
+    texto: "Ao analisar a repercussão do projeto, um pesquisador afirmou que as críticas recebidas funcionavam como termômetros capazes de indicar aspectos que precisavam ser aperfeiçoados.",
     pergunta: "A palavra 'termômetros' foi empregada, nesse contexto, para indicar que as críticas:",
-
     alternativas: [
-        "foram formuladas predominantemente por especialistas responsáveis pela avaliação técnica.",
-        "apresentavam elevado grau de precisão na identificação dos problemas existentes.",
-        "substituíam integralmente os mecanismos formais de acompanhamento dos resultados.",
-        "demonstravam a impossibilidade de alcançar consenso entre os participantes.",
-        "mediam ou revelavam indícios relevantes sobre a qualidade e os limites do projeto."
+      "foram formuladas predominantemente por especialistas responsáveis pela avaliação técnica.",
+      "apresentavam elevado grau de precisão na identificação dos problemas existentes.",
+      "substituíam integralmente os mecanismos formais de acompanhamento dos resultados.",
+      "demonstravam a impossibilidade de alcançar consenso entre os participantes.",
+      "mediam ou revelavam indícios relevantes sobre a qualidade e os limites do projeto.",
     ],
-
     correta: 4,
-
-    feedbackAcerto: "Correto. O termo é utilizado metaforicamente para indicar instrumento de avaliação ou indicador de situação.",
-
-    feedbackErro: "O foco da metáfora está na função de medir ou sinalizar determinadas condições.",
-
-    dicaBanca: "Objetos utilizados para medição costumam aparecer metaforicamente como indicadores de tendências ou problemas."
-},
-{
-    texto: `Ao comentar os resultados obtidos pela instituição, uma pesquisadora afirmou que os indicadores positivos não surgiram do nada, mas representavam a colheita de decisões tomadas anos antes.`,
-
+    explicacao: "'Termômetros' representa instrumentos de sinalização: as críticas oferecem indícios sobre a qualidade e os limites do projeto.",
+    feedbackAcerto: "Correto. 'Termômetros' representa instrumentos de sinalização: as críticas oferecem indícios sobre a qualidade e os limites do projeto.",
+    feedbackErro: "A resposta correta é: mediam ou revelavam indícios relevantes sobre a qualidade e os limites do projeto. 'Termômetros' representa instrumentos de sinalização: as críticas oferecem indícios sobre a qualidade e os limites do projeto.",
+    dicaBanca: "Considere a função do objeto concreto mencionado: medir, sinalizar ou indicar uma condição.",
+  },
+  {
+    texto: "Ao comentar os resultados obtidos pela instituição, uma pesquisadora afirmou que os indicadores positivos não surgiram do nada, mas representavam a colheita de decisões tomadas anos antes.",
     pergunta: "A metáfora presente na palavra 'colheita' sugere que os resultados:",
-
     alternativas: [
-        "decorrem de ações e investimentos realizados anteriormente ao período analisado.",
-        "foram produzidos espontaneamente em razão de fatores externos à instituição.",
-        "dependem predominantemente das condições econômicas verificadas no momento atual.",
-        "resultam da substituição de estratégias adotadas por administrações passadas.",
-        "foram alcançados independentemente do planejamento realizado pela organização."
+      "decorrem de ações e investimentos realizados anteriormente ao período analisado.",
+      "foram produzidos espontaneamente em razão de fatores externos à instituição.",
+      "dependem predominantemente das condições econômicas verificadas no momento atual.",
+      "resultam da substituição de estratégias adotadas por administrações passadas.",
+      "foram alcançados independentemente do planejamento realizado pela organização.",
     ],
-
     correta: 0,
-
-    feedbackAcerto: "Correto. A metáfora associa resultados atuais a ações realizadas anteriormente, assim como a colheita decorre do plantio.",
-
-    feedbackErro: "A expressão indica relação entre decisões passadas e efeitos observados posteriormente.",
-
-    dicaBanca: "Metáforas ligadas a plantio e colheita costumam representar relações de causa e consequência ao longo do tempo."
-
-},
-{
-    texto: `Após a divulgação do relatório, um analista afirmou que determinadas conclusões precisavam ser recebidas com cautela, pois os números ainda estavam falando muito baixo para sustentar afirmações definitivas.`,
-
+    explicacao: "A 'colheita' relaciona resultados atuais a ações e decisões anteriores, estabelecendo uma relação temporal de causa e consequência.",
+    feedbackAcerto: "Correto. A 'colheita' relaciona resultados atuais a ações e decisões anteriores, estabelecendo uma relação temporal de causa e consequência.",
+    feedbackErro: "A resposta correta é: decorrem de ações e investimentos realizados anteriormente ao período analisado. A 'colheita' relaciona resultados atuais a ações e decisões anteriores, estabelecendo uma relação temporal de causa e consequência.",
+    dicaBanca: "Relacione colheita a algo produzido depois de ações anteriores.",
+  },
+  {
+    texto: "Após a divulgação do relatório, um analista afirmou que determinadas conclusões precisavam ser recebidas com cautela, pois os números ainda estavam falando muito baixo para sustentar afirmações definitivas.",
     pergunta: "A expressão 'falando muito baixo' produz o efeito de sentido de que os números:",
-
     alternativas: [
-        "foram obtidos por meio de instrumentos com baixa precisão estatística.",
-        "apresentam indícios insuficientemente robustos para fundamentar conclusões categóricas.",
-        "não podem ser divulgados ao público por razões relacionadas ao sigilo institucional.",
-        "dependem de interpretação predominantemente qualitativa para produzir conhecimento relevante.",
-        "foram coletados em quantidade inferior à prevista pelos pesquisadores."
+      "foram obtidos por meio de instrumentos com baixa precisão estatística.",
+      "apresentam indícios insuficientemente robustos para fundamentar conclusões categóricas.",
+      "não podem ser divulgados ao público por razões relacionadas ao sigilo institucional.",
+      "dependem de interpretação predominantemente qualitativa para produzir conhecimento relevante.",
+      "foram coletados em quantidade inferior à prevista pelos pesquisadores.",
     ],
-
     correta: 1,
-
-    feedbackAcerto: "Correto. A metáfora sugere fragilidade ou insuficiência das evidências disponíveis.",
-
-    feedbackErro: "O verbo 'falar' é utilizado figuradamente para indicar a capacidade dos dados de sustentar interpretações.",
-
-    dicaBanca: "Em textos argumentativos, dados frequentemente aparecem personificados para representar força ou fragilidade de evidências."
-
-},
-{
-    texto: `Durante um debate sobre políticas públicas, um especialista afirmou que determinadas propostas funcionavam como atalhos sedutores, mas raramente conduziam às soluções duradouras que prometiam.`,
-
+    explicacao: "'Falar muito baixo' personifica os números para indicar que as evidências ainda têm pouca força para sustentar conclusões categóricas.",
+    feedbackAcerto: "Correto. 'Falar muito baixo' personifica os números para indicar que as evidências ainda têm pouca força para sustentar conclusões categóricas.",
+    feedbackErro: "A resposta correta é: apresentam indícios insuficientemente robustos para fundamentar conclusões categóricas. 'Falar muito baixo' personifica os números para indicar que as evidências ainda têm pouca força para sustentar conclusões categóricas.",
+    dicaBanca: "A intensidade atribuída à 'voz' dos dados representa a força das evidências.",
+  },
+  {
+    texto: "Durante um debate sobre políticas públicas, um especialista afirmou que determinadas propostas funcionavam como atalhos sedutores, mas raramente conduziam às soluções duradouras que prometiam.",
     pergunta: "A expressão 'atalhos sedutores' sugere que as propostas:",
-
     alternativas: [
-        "reduzem custos administrativos sem comprometer a qualidade das ações executadas.",
-        "foram elaboradas para simplificar procedimentos considerados excessivamente burocráticos.",
-        "apresentam caminhos aparentemente fáceis ou rápidos, mas de eficácia questionável.",
-        "dependem de forte apoio popular para que possam ser implementadas adequadamente.",
-        "possuem características inovadoras que as distinguem das estratégias tradicionais."
+      "reduzem custos administrativos sem comprometer a qualidade das ações executadas.",
+      "foram elaboradas para simplificar procedimentos considerados excessivamente burocráticos.",
+      "apresentam caminhos aparentemente fáceis ou rápidos, mas de eficácia questionável.",
+      "dependem de forte apoio popular para que possam ser implementadas adequadamente.",
+      "possuem características inovadoras que as distinguem das estratégias tradicionais.",
     ],
-
     correta: 2,
-
-    feedbackAcerto: "Correto. O texto sugere que a facilidade prometida pelas propostas pode não resultar em soluções efetivas.",
-
-    feedbackErro: "A palavra 'sedutores' indica atratividade, mas o contexto revela desconfiança quanto à eficácia dessas soluções.",
-
-    dicaBanca: "Observe quando o autor utiliza termos positivos para introduzir avaliações posteriormente relativizadas."
-
-},
-{
-    texto: `Ao avaliar o comportamento do mercado, um economista afirmou que alguns indicadores atuavam como bússolas, ajudando investidores a interpretar tendências ainda pouco perceptíveis.`,
-
+    explicacao: "'Atalhos sedutores' caracteriza soluções atraentes por parecerem rápidas ou fáceis, mas cuja eficácia duradoura é colocada em dúvida.",
+    feedbackAcerto: "Correto. 'Atalhos sedutores' caracteriza soluções atraentes por parecerem rápidas ou fáceis, mas cuja eficácia duradoura é colocada em dúvida.",
+    feedbackErro: "A resposta correta é: apresentam caminhos aparentemente fáceis ou rápidos, mas de eficácia questionável. 'Atalhos sedutores' caracteriza soluções atraentes por parecerem rápidas ou fáceis, mas cuja eficácia duradoura é colocada em dúvida.",
+    dicaBanca: "O adjetivo pode parecer positivo, mas o contexto posterior pode limitar ou inverter essa avaliação.",
+  },
+  {
+    texto: "Ao avaliar o comportamento do mercado, um economista afirmou que alguns indicadores atuavam como bússolas, ajudando investidores a interpretar tendências ainda pouco perceptíveis.",
     pergunta: "No contexto apresentado, a palavra 'bússolas' foi utilizada para indicar:",
-
     alternativas: [
-        "instrumentos responsáveis pela coleta direta dos dados econômicos analisados.",
-        "ferramentas tecnológicas utilizadas para monitorar oscilações financeiras em tempo real.",
-        "estratégias destinadas a corrigir distorções observadas nos indicadores econômicos.",
-        "mecanismos de orientação capazes de auxiliar a interpretação de cenários futuros.",
-        "modelos matemáticos empregados na construção de previsões estatísticas complexas."
+      "instrumentos responsáveis pela coleta direta dos dados econômicos analisados.",
+      "ferramentas tecnológicas utilizadas para monitorar oscilações financeiras em tempo real.",
+      "estratégias destinadas a corrigir distorções observadas nos indicadores econômicos.",
+      "mecanismos de orientação capazes de auxiliar a interpretação de cenários futuros.",
+      "modelos matemáticos empregados na construção de previsões estatísticas complexas.",
     ],
-
     correta: 3,
-
-    feedbackAcerto: "Correto. A bússola representa simbolicamente algo que orienta ou auxilia na tomada de decisões.",
-
-    feedbackErro: "A interpretação adequada depende da compreensão da função simbólica atribuída ao objeto mencionado.",
-
-    dicaBanca: "Objetos ligados à orientação espacial frequentemente aparecem metaforicamente associados à tomada de decisões."
-
-},
-{
-    texto: `Um articulista escreveu que determinados discursos prosperavam justamente nas rachaduras deixadas pela falta de confiança nas instituições públicas.`,
-
+    explicacao: "A 'bússola' simboliza orientação: certos indicadores ajudam a interpretar tendências e a decidir diante de cenários incertos.",
+    feedbackAcerto: "Correto. A 'bússola' simboliza orientação: certos indicadores ajudam a interpretar tendências e a decidir diante de cenários incertos.",
+    feedbackErro: "A resposta correta é: mecanismos de orientação capazes de auxiliar a interpretação de cenários futuros. A 'bússola' simboliza orientação: certos indicadores ajudam a interpretar tendências e a decidir diante de cenários incertos.",
+    dicaBanca: "Objetos de orientação espacial costumam representar critérios para interpretar ou decidir.",
+  },
+  {
+    texto: "Um articulista escreveu que determinados discursos prosperavam justamente nas rachaduras deixadas pela falta de confiança nas instituições públicas.",
     pergunta: "A palavra 'rachaduras', empregada figuradamente, refere-se a:",
-
     alternativas: [
-        "problemas estruturais existentes nos edifícios utilizados pelos órgãos públicos.",
-        "divergências técnicas observadas entre diferentes setores da administração pública.",
-        "falhas temporárias provocadas por mudanças recentes na legislação vigente.",
-        "obstáculos burocráticos que dificultam o acesso aos serviços oferecidos pelo Estado.",
-        "fragilidades ou vulnerabilidades presentes na relação entre sociedade e instituições."
+      "problemas estruturais existentes nos edifícios utilizados pelos órgãos públicos.",
+      "divergências técnicas observadas entre diferentes setores da administração pública.",
+      "falhas temporárias provocadas por mudanças recentes na legislação vigente.",
+      "obstáculos burocráticos que dificultam o acesso aos serviços oferecidos pelo Estado em situações de atendimento cotidiano.",
+      "fragilidades ou vulnerabilidades presentes na relação entre sociedade e instituições.",
     ],
-
     correta: 4,
-
-    feedbackAcerto: "Correto. A metáfora associa rachaduras a fragilidades que permitem o surgimento de determinados fenômenos sociais.",
-
-    feedbackErro: "O contexto não trata de estruturas físicas, mas de vulnerabilidades institucionais e sociais.",
-
-    dicaBanca: "FGV costuma utilizar metáforas arquitetônicas para representar estabilidade, fragilidade ou sustentação de ideias e instituições."
-},
-{
-    texto: `Ao avaliar os efeitos de uma política educacional implementada há mais de uma década, um pesquisador afirmou que muitos dos resultados observados atualmente eram heranças silenciosas de decisões tomadas muito antes de seus impactos se tornarem visíveis.`,
-
-    pergunta: "A expressão 'heranças silenciosas' sugere que os resultados mencionados:",
-
+    explicacao: "'Rachaduras' representa fragilidades na confiança institucional que criam condições para a circulação de determinados discursos.",
+    feedbackAcerto: "Correto. 'Rachaduras' representa fragilidades na confiança institucional que criam condições para a circulação de determinados discursos.",
+    feedbackErro: "A resposta correta é: fragilidades ou vulnerabilidades presentes na relação entre sociedade e instituições. 'Rachaduras' representa fragilidades na confiança institucional que criam condições para a circulação de determinados discursos.",
+    dicaBanca: "Em metáforas estruturais, rachaduras costumam representar pontos de fragilidade ou vulnerabilidade.",
+  },
+  {
+    texto: "Em um parecer, lê-se: 'A medida teve peso decisivo na escolha da comissão, embora seu custo financeiro tenha sido pequeno.'",
+    pergunta: "No trecho, a palavra 'peso' assume o sentido de:",
     alternativas: [
-        "decorrem de decisões passadas cujos efeitos se manifestaram gradualmente ao longo do tempo.",
-        "foram produzidos por fatores desconhecidos e impossíveis de serem identificados pelos pesquisadores.",
-        "resultam predominantemente da permanência de práticas administrativas tradicionais nas instituições.",
-        "dependem da transmissão formal de conhecimentos entre diferentes gerações de gestores.",
-        "correspondem a consequências inesperadas que não possuem relação com políticas anteriores."
+      "importância ou influência relevante no processo de decisão.",
+      "massa física que pode ser mensurada por instrumento apropriado.",
+      "encargo financeiro diretamente associado ao custo da medida.",
+      "dificuldade operacional decorrente da execução da proposta.",
+      "volume documental produzido durante a análise da comissão.",
     ],
-
     correta: 0,
-
-    feedbackAcerto: "Correto. A expressão associa os resultados atuais a efeitos duradouros produzidos por decisões tomadas anteriormente.",
-
-    feedbackErro: "A metáfora enfatiza a permanência e a influência de ações passadas sobre situações presentes.",
-
-    dicaBanca: "Questões avançadas de semântica exploram relações temporais implícitas em metáforas conceituais."
-
-},
-{
-    texto: `Durante um seminário, um especialista afirmou que determinadas estatísticas funcionavam como fotografias instantâneas de fenômenos extremamente dinâmicos, razão pela qual deveriam ser interpretadas com cautela.`,
-
-    pergunta: "A metáfora das 'fotografias instantâneas' sugere que as estatísticas:",
-
+    explicacao: "'Peso' é polissêmico e, nesse contexto, significa importância ou influência, não massa física.",
+    feedbackAcerto: "Correto. 'Peso' é polissêmico e, nesse contexto, significa importância ou influência, não massa física.",
+    feedbackErro: "A resposta correta é: importância ou influência relevante no processo de decisão. 'Peso' é polissêmico e, nesse contexto, significa importância ou influência, não massa física.",
+    dicaBanca: "Em polissemia, escolha o sentido ativado pelas palavras que cercam o termo.",
+  },
+  {
+    texto: "A pesquisadora classificou como contundentes as evidências reunidas no relatório, pois elas enfraqueciam de modo claro a hipótese inicialmente defendida.",
+    pergunta: "Sem alteração relevante do sentido contextual, 'contundentes' poderia ser substituído por:",
     alternativas: [
-        "fornecem representações completas e definitivas dos fenômenos analisados.",
-        "captam apenas um recorte temporal de realidades sujeitas a mudanças constantes.",
-        "dependem de recursos tecnológicos específicos para garantir sua validade científica.",
-        "apresentam elevado grau de detalhamento em comparação com outras fontes de informação.",
-        "substituem a necessidade de estudos realizados em períodos mais extensos."
+      "extensas, porque ocupavam grande parte do relatório final.",
+      "incisivas, porque apresentavam força argumentativa contra a hipótese.",
+      "severas, porque atribuíam culpa aos responsáveis pelo estudo.",
+      "complexas, porque exigiam conhecimentos especializados para leitura em razão da linguagem técnica empregada.",
+      "inéditas, porque não haviam aparecido em pesquisas anteriores.",
     ],
-
     correta: 1,
-
-    feedbackAcerto: "Correto. A fotografia representa um registro momentâneo de uma realidade que continua em transformação.",
-
-    feedbackErro: "O texto destaca justamente a limitação temporal das estatísticas quando analisadas isoladamente.",
-
-    dicaBanca: "Fotografias, retratos e instantâneos costumam simbolizar recortes parciais da realidade."
-
-},
-{
-    texto: `Ao comentar o cenário econômico, um articulista escreveu que algumas medidas anunciadas produziam muito barulho político, mas pouca capacidade de alterar efetivamente os problemas que pretendiam enfrentar.`,
-
-    pergunta: "A expressão 'barulho político' foi empregada para indicar principalmente:",
-
+    explicacao: "No contexto argumentativo, 'contundentes' significa fortes, convincentes ou incisivas em seu poder de sustentar uma conclusão.",
+    feedbackAcerto: "Correto. No contexto argumentativo, 'contundentes' significa fortes, convincentes ou incisivas em seu poder de sustentar uma conclusão.",
+    feedbackErro: "A resposta correta é: incisivas, porque apresentavam força argumentativa contra a hipótese. No contexto argumentativo, 'contundentes' significa fortes, convincentes ou incisivas em seu poder de sustentar uma conclusão.",
+    dicaBanca: "Sinonímia é contextual: procure a palavra que mantém a mesma relação semântica no trecho.",
+  },
+  {
+    texto: "O relatório afirma que as novas medidas conseguiram mitigar os efeitos da evasão escolar, mas não eliminaram o problema.",
+    pergunta: "A alternativa em que o verbo destacado estabelece oposição semântica adequada a 'mitigar', nesse contexto, é:",
     alternativas: [
-        "a ocorrência de manifestações públicas contrárias às medidas anunciadas, quando analisada de forma isolada, sem observar todos os elementos exigidos pelo enunciado.",
-        "a existência de conflitos institucionais que dificultavam a implementação das propostas, quando analisada de forma isolada, sem observar todos os elementos exigidos pelo enunciado.",
-        "a intensa repercussão ou visibilidade gerada pelas ações, independentemente de seus resultados concretos.",
-        "o aumento do interesse popular por temas relacionados à administração pública, quando analisada de forma isolada, sem observar todos os elementos exigidos pelo enunciado.",
-        "a utilização excessiva dos meios de comunicação pelos representantes políticos, quando analisada de forma isolada, sem observar todos os elementos exigidos pelo enunciado."
+      "acompanhar os efeitos da evasão com indicadores atualizados.",
+      "mensurar os efeitos da evasão ao final de cada semestre.",
+      "agravar os efeitos da evasão por meio de decisões inadequadas.",
+      "registrar os efeitos da evasão nos documentos institucionais oficiais produzidos pela escola.",
+      "explicar os efeitos da evasão às famílias e aos estudantes.",
     ],
-
     correta: 2,
-
-    feedbackAcerto: "Correto. A expressão sugere repercussão, exposição ou impacto simbólico superior aos resultados efetivos.",
-
-    feedbackErro: "O contexto contrapõe visibilidade e eficácia, elemento frequentemente explorado em textos argumentativos.",
-
-    dicaBanca: "Metáforas relacionadas a som e ruído costumam representar repercussão, atenção ou visibilidade pública."
-
-},
-{
-    texto: `Um pesquisador afirmou que determinadas propostas permaneciam engessadas por concepções elaboradas décadas atrás, o que dificultava sua adaptação às demandas contemporâneas.`,
-
-    pergunta: "No contexto apresentado, a palavra 'engessadas' sugere que as propostas:",
-
+    explicacao: "'Mitigar' significa reduzir, atenuar. No contexto, 'agravar' estabelece a oposição semântica pertinente.",
+    feedbackAcerto: "Correto. 'Mitigar' significa reduzir, atenuar. No contexto, 'agravar' estabelece a oposição semântica pertinente.",
+    feedbackErro: "A resposta correta é: agravar os efeitos da evasão por meio de decisões inadequadas. 'Mitigar' significa reduzir, atenuar. No contexto, 'agravar' estabelece a oposição semântica pertinente.",
+    dicaBanca: "Para identificar antonímia contextual, substitua mentalmente o termo e observe a direção do efeito produzido.",
+  },
+  {
+    texto: "No inventário do laboratório foram registrados microscópios, lupas, telescópios e binóculos.",
+    pergunta: "A relação lexical entre 'instrumentos ópticos' e os itens enumerados é corretamente descrita em:",
     alternativas: [
-        "foram elaboradas com base em métodos excessivamente técnicos e especializados.",
-        "dependem de procedimentos burocráticos para sua implementação prática.",
-        "encontram resistência por parte dos grupos responsáveis por sua execução.",
-        "apresentam rigidez excessiva, dificultando mudanças ou adaptações necessárias.",
-        "foram desenvolvidas para atender contextos específicos e temporários."
+      "Os itens são sinônimos contextuais de 'instrumentos ópticos'.",
+      "A expressão geral é hipônima de cada um dos itens mencionados.",
+      "Os itens formam antônimos graduais dentro do mesmo campo lexical.",
+      "'Instrumentos ópticos' funciona como hiperônimo dos termos enumerados.",
+      "A expressão geral mantém relação de homonímia com os nomes dos objetos.",
     ],
-
     correta: 3,
-
-    feedbackAcerto: "Correto. A metáfora associa o gesso à rigidez e à limitação de movimentos ou adaptações.",
-
-    feedbackErro: "O termo não se refere a aspectos materiais, mas à dificuldade de mudança das propostas mencionadas.",
-
-    dicaBanca: "Palavras associadas a rigidez física frequentemente são utilizadas para representar inflexibilidade institucional ou conceitual."
-
-},
-{
-    texto: `Ao encerrar a análise, a pesquisadora observou que os dados disponíveis não fechavam todas as portas para interpretações alternativas, embora apontassem com razoável consistência para determinada conclusão.`,
-
-    pergunta: "A expressão 'não fechavam todas as portas' permite inferir que os dados:",
-
+    explicacao: "Hiperônimo é o termo de sentido mais geral; microscópio, lupa, telescópio e binóculo são hipônimos de 'instrumentos ópticos'.",
+    feedbackAcerto: "Correto. Hiperônimo é o termo de sentido mais geral; microscópio, lupa, telescópio e binóculo são hipônimos de 'instrumentos ópticos'.",
+    feedbackErro: "A resposta correta é: 'Instrumentos ópticos' funciona como hiperônimo dos termos enumerados. Hiperônimo é o termo de sentido mais geral; microscópio, lupa, telescópio e binóculo são hipônimos de 'instrumentos ópticos'.",
+    dicaBanca: "Pergunte qual termo engloba semanticamente os demais sem ser sinônimo deles.",
+  },
+  {
+    texto: "O diretor afirmou que o risco de interrupção do serviço era iminente, embora um servidor de atuação eminente tivesse sido chamado para auxiliar a equipe.",
+    pergunta: "No contexto, a distinção de sentido entre 'iminente' e 'eminente' está corretamente apresentada em:",
     alternativas: [
-        "impediam determinado forma de divergência entre os especialistas envolvidos na pesquisa.",
-        "eram insuficientes para sustentar determinado hipótese relacionada ao fenômeno estudado.",
-        "dependiam de novos instrumentos metodológicos para serem considerados válidos.",
-        "indicavam conclusões contraditórias e mutuamente excludentes.",
-        "apresentavam limitações que mantinham aberta a possibilidade de outras interpretações."
+      "Iminente significa ilustre; eminente significa próximo de ocorrer.",
+      "Iminente indica algo duvidoso; eminente indica algo já concluído.",
+      "Iminente caracteriza algo antigo e consolidado; eminente caracteriza algo recente e ainda em desenvolvimento.",
+      "Iminente indica intensidade; eminente indica duração prolongada.",
+      "Iminente significa prestes a ocorrer; eminente qualifica alguém de destaque.",
     ],
-
     correta: 4,
-
-    feedbackAcerto: "Correto. A expressão sugere que ainda existem possibilidades interpretativas alternativas, apesar da tendência observada.",
-
-    feedbackErro: "A metáfora das portas abertas indica permanência de possibilidades ou caminhos interpretativos.",
-
-    dicaBanca: "FGV aprecia questões em que a metáfora não elimina completamente uma possibilidade, mas apenas reduz sua probabilidade."
-}];
+    explicacao: "Os parônimos têm forma semelhante, mas sentidos distintos: iminente = próximo de acontecer; eminente = elevado, ilustre, destacado.",
+    feedbackAcerto: "Correto. Os parônimos têm forma semelhante, mas sentidos distintos: iminente = próximo de acontecer; eminente = elevado, ilustre, destacado.",
+    feedbackErro: "A resposta correta é: Iminente significa prestes a ocorrer; eminente qualifica alguém de destaque. Os parônimos têm forma semelhante, mas sentidos distintos: iminente = próximo de acontecer; eminente = elevado, ilustre, destacado.",
+    dicaBanca: "Em parônimos, não decida pela semelhança gráfica; teste o significado exigido por cada contexto.",
+  },
+  {
+    texto: "O pesquisador observou o estudante com o telescópio durante a atividade de campo.",
+    pergunta: "A ambiguidade da frase decorre principalmente do fato de que:",
+    alternativas: [
+      "o segmento 'com o telescópio' pode indicar o instrumento do pesquisador ou caracterizar o estudante observado.",
+      "o verbo 'observar' admite simultaneamente sentido afirmativo e sentido negativo.",
+      "o substantivo 'estudante' pode designar tanto pessoa quanto instituição de ensino.",
+      "o termo 'pesquisador' pode funcionar como agente ou paciente da mesma ação verbal.",
+      "a expressão 'durante a atividade' impede identificar o tempo em que ocorreu a observação e, por isso, torna incerta a duração exata do evento descrito.",
+    ],
+    correta: 0,
+    explicacao: "O sintagma 'com o telescópio' pode ligar-se ao verbo ('observou com o telescópio') ou ao nome ('o estudante com o telescópio'), produzindo ambiguidade estrutural.",
+    feedbackAcerto: "Correto. O sintagma 'com o telescópio' pode ligar-se ao verbo ('observou com o telescópio') ou ao nome ('o estudante com o telescópio'), produzindo ambiguidade estrutural.",
+    feedbackErro: "A resposta correta é: o segmento 'com o telescópio' pode indicar o instrumento do pesquisador ou caracterizar o estudante observado. O sintagma 'com o telescópio' pode ligar-se ao verbo ('observou com o telescópio') ou ao nome ('o estudante com o telescópio'), produzindo ambiguidade estrutural.",
+    dicaBanca: "Em ambiguidades, identifique quais termos podem se ligar a mais de um constituinte da frase.",
+  },
+  {
+    texto: "A coordenadora conversou com a professora quando ela deixou a sala.",
+    pergunta: "Sem contexto adicional, o pronome 'ela' torna o enunciado ambíguo porque pode retomar:",
+    alternativas: [
+      "a sala ou a conversa, que são os referentes mais próximos do pronome.",
+      "a coordenadora ou a professora, ambas compatíveis com o pronome feminino.",
+      "a coordenadora ou a sala, por apresentarem o mesmo gênero gramatical.",
+      "a professora ou a conversa, por ocuparem posições equivalentes na oração.",
+      "qualquer pessoa presente, independentemente de menção anterior no período.",
+    ],
+    correta: 1,
+    explicacao: "O pronome feminino singular pode ter como antecedente tanto 'a coordenadora' quanto 'a professora', criando ambiguidade referencial.",
+    feedbackAcerto: "Correto. O pronome feminino singular pode ter como antecedente tanto 'a coordenadora' quanto 'a professora', criando ambiguidade referencial.",
+    feedbackErro: "A resposta correta é: a coordenadora ou a professora, ambas compatíveis com o pronome feminino. O pronome feminino singular pode ter como antecedente tanto 'a coordenadora' quanto 'a professora', criando ambiguidade referencial.",
+    dicaBanca: "Ao analisar referência pronominal, liste os antecedentes compatíveis em gênero, número e sentido.",
+  },
+  {
+    texto: "Em uma ata, registrou-se: 'Nem todos os candidatos entregaram a documentação no prazo.'",
+    pergunta: "A interpretação semanticamente compatível com essa afirmação é:",
+    alternativas: [
+      "Nenhum candidato entregou a documentação dentro do prazo estabelecido.",
+      "Todos os candidatos entregaram a documentação, embora em horários diferentes.",
+      "Pelo menos um candidato não entregou a documentação dentro do prazo.",
+      "A maioria dos candidatos deixou de apresentar qualquer documento exigido.",
+      "Exatamente metade dos candidatos entregou a documentação no prazo.",
+    ],
+    correta: 2,
+    explicacao: "'Nem todos P' equivale logicamente a negar que o predicado se aplique ao conjunto inteiro; portanto, há pelo menos um elemento para o qual P não vale.",
+    feedbackAcerto: "Correto. 'Nem todos P' equivale logicamente a negar que o predicado se aplique ao conjunto inteiro; portanto, há pelo menos um elemento para o qual P não vale.",
+    feedbackErro: "A resposta correta é: Pelo menos um candidato não entregou a documentação dentro do prazo. 'Nem todos P' equivale logicamente a negar que o predicado se aplique ao conjunto inteiro; portanto, há pelo menos um elemento para o qual P não vale.",
+    dicaBanca: "Cuidado com o alcance da negação: 'nem todos' não significa 'nenhum'.",
+  },
+  {
+    texto: "A escola voltou a oferecer aulas de reforço aos sábados neste semestre.",
+    pergunta: "O verbo 'voltou', nessa construção, aciona o pressuposto de que:",
+    alternativas: [
+      "as aulas de reforço são obrigatórias para todos os estudantes matriculados.",
+      "o reforço oferecido aos sábados produzirá melhora imediata no desempenho.",
+      "a escola pretende substituir as aulas regulares pelo atendimento de reforço.",
+      "a escola já ofereceu aulas de reforço aos sábados em período anterior.",
+      "as aulas de reforço haviam sido solicitadas formalmente pelas famílias.",
+    ],
+    correta: 3,
+    explicacao: "O verbo 'voltar a' pressupõe ocorrência anterior da atividade: se a escola voltou a oferecer, ela já oferecera antes.",
+    feedbackAcerto: "Correto. O verbo 'voltar a' pressupõe ocorrência anterior da atividade: se a escola voltou a oferecer, ela já oferecera antes.",
+    feedbackErro: "A resposta correta é: a escola já ofereceu aulas de reforço aos sábados em período anterior. O verbo 'voltar a' pressupõe ocorrência anterior da atividade: se a escola voltou a oferecer, ela já oferecera antes.",
+    dicaBanca: "Verbos aspectuais como 'voltar a', 'continuar' e 'deixar de' costumam introduzir pressupostos.",
+  },
+  {
+    texto: "Depois das novas evidências, o diretor deixou de contestar a metodologia utilizada pela equipe.",
+    pergunta: "A construção 'deixou de contestar' pressupõe que, anteriormente, o diretor:",
+    alternativas: [
+      "desconhecia integralmente a metodologia adotada na pesquisa.",
+      "aprovava a metodologia sem apresentar qualquer ressalva técnica.",
+      "pretendia substituir a equipe responsável pela investigação.",
+      "havia elaborado pessoalmente a metodologia empregada no trabalho.",
+      "contestava a metodologia utilizada pela equipe.",
+    ],
+    correta: 4,
+    explicacao: "'Deixar de fazer X' pressupõe que X ocorria antes e cessou; logo, o diretor contestava a metodologia anteriormente.",
+    feedbackAcerto: "Correto. 'Deixar de fazer X' pressupõe que X ocorria antes e cessou; logo, o diretor contestava a metodologia anteriormente.",
+    feedbackErro: "A resposta correta é: contestava a metodologia utilizada pela equipe. 'Deixar de fazer X' pressupõe que X ocorria antes e cessou; logo, o diretor contestava a metodologia anteriormente.",
+    dicaBanca: "Observe o estado anterior implicado por verbos que indicam interrupção de uma ação.",
+  },
+  {
+    texto: "Ao comentar as entregas, a supervisora disse: 'Até Marina enviou o relatório antes do prazo.'",
+    pergunta: "O emprego de 'até' produz, nesse contexto, a inferência de que:",
+    alternativas: [
+      "a entrega antecipada de Marina contrariava ou superava uma expectativa prévia sobre ela.",
+      "Marina foi a primeira pessoa a enviar o relatório entre todos os participantes e recebeu prioridade na conferência final.",
+      "o relatório de Marina apresentava qualidade superior à dos demais documentos.",
+      "Marina recebeu autorização especial para entregar o relatório antecipadamente.",
+      "os demais participantes enviaram seus relatórios depois do prazo estabelecido.",
+    ],
+    correta: 0,
+    explicacao: "O focalizador 'até' costuma marcar um elemento como menos esperado numa escala contextual; a surpresa recai sobre Marina ter realizado a ação.",
+    feedbackAcerto: "Correto. O focalizador 'até' costuma marcar um elemento como menos esperado numa escala contextual; a surpresa recai sobre Marina ter realizado a ação.",
+    feedbackErro: "A resposta correta é: a entrega antecipada de Marina contrariava ou superava uma expectativa prévia sobre ela. O focalizador 'até' costuma marcar um elemento como menos esperado numa escala contextual; a surpresa recai sobre Marina ter realizado a ação.",
+    dicaBanca: "Palavras como 'até', 'também' e 'ainda' podem ativar expectativas não ditas explicitamente.",
+  },
+  {
+    texto: "Em uma reunião, o coordenador afirmou: 'Alguns professores já concluíram o preenchimento dos diários.'",
+    pergunta: "Sem informação adicional, a leitura conversacional mais provável de 'alguns' é:",
+    alternativas: [
+      "nenhum dos professores concluiu integralmente os diários solicitados.",
+      "uma parte dos professores concluiu, e o enunciado sugere que não se afirma o mesmo de todos.",
+      "todos os professores concluíram naquele momento, embora o coordenador tenha preferido não divulgar formalmente essa informação.",
+      "exatamente dois professores concluíram o preenchimento dos diários.",
+      "a maioria absoluta dos professores concluiu a tarefa antes da reunião.",
+    ],
+    correta: 1,
+    explicacao: "Em muitos contextos, 'alguns' gera a implicatura escalar 'não todos', embora semanticamente não fixe uma quantidade exata.",
+    feedbackAcerto: "Correto. Em muitos contextos, 'alguns' gera a implicatura escalar 'não todos', embora semanticamente não fixe uma quantidade exata.",
+    feedbackErro: "A resposta correta é: uma parte dos professores concluiu, e o enunciado sugere que não se afirma o mesmo de todos. Em muitos contextos, 'alguns' gera a implicatura escalar 'não todos', embora semanticamente não fixe uma quantidade exata.",
+    dicaBanca: "Diferencie conteúdo literal de implicatura: o falante pode sugerir mais do que as palavras codificam.",
+  },
+  {
+    texto: "Após três horas de discussão improdutiva, um servidor comentou: 'Excelente ideia: marcar outra reunião para decidir quando faremos a próxima reunião.'",
+    pergunta: "O efeito de sentido predominante decorre de:",
+    alternativas: [
+      "elogio literal à eficiência do planejamento adotado pela equipe.",
+      "eufemização de uma decisão considerada tecnicamente necessária.",
+      "ironia, pois a formulação positiva expressa crítica à improdutividade do processo.",
+      "ambiguidade lexical provocada pelos diferentes sentidos do verbo 'marcar'.",
+      "pressuposição de que a reunião seguinte resolverá definitivamente o problema e encerrará o impasse administrativo registrado.",
+    ],
+    correta: 2,
+    explicacao: "O elogio aparente entra em choque com o contexto de improdutividade e funciona ironicamente como crítica.",
+    feedbackAcerto: "Correto. O elogio aparente entra em choque com o contexto de improdutividade e funciona ironicamente como crítica.",
+    feedbackErro: "A resposta correta é: ironia, pois a formulação positiva expressa crítica à improdutividade do processo. O elogio aparente entra em choque com o contexto de improdutividade e funciona ironicamente como crítica.",
+    dicaBanca: "Na ironia, compare o valor literal da expressão com a avaliação sugerida pelo contexto.",
+  },
+  {
+    texto: "Em comunicado interno, a empresa informou que haverá 'desligamento de parte do quadro' após a reorganização.",
+    pergunta: "No contexto, a escolha de 'desligamento' em lugar de 'demissão' pode ser interpretada como:",
+    alternativas: [
+      "metáfora espacial destinada a indicar transferência dos empregados para outro prédio.",
+      "hipérbole usada para ampliar a gravidade das consequências da reorganização.",
+      "antonímia contextual que opõe permanência e afastamento temporário dos funcionários.",
+      "eufemismo que suaviza lexicalmente uma medida potencialmente negativa.",
+      "polissemia sem efeito discursivo, pois os dois termos têm exatamente o mesmo valor em todo contexto.",
+    ],
+    correta: 3,
+    explicacao: "'Desligamento' pode atenuar a carga negativa associada a 'demissão', funcionando como escolha eufemística.",
+    feedbackAcerto: "Correto. 'Desligamento' pode atenuar a carga negativa associada a 'demissão', funcionando como escolha eufemística.",
+    feedbackErro: "A resposta correta é: eufemismo que suaviza lexicalmente uma medida potencialmente negativa. 'Desligamento' pode atenuar a carga negativa associada a 'demissão', funcionando como escolha eufemística.",
+    dicaBanca: "Observe se a troca lexical reduz a intensidade emocional ou social de um conteúdo desagradável.",
+  },
+  {
+    texto: "Compare: I. 'A temperatura da sala caiu rapidamente.' II. 'Depois da crítica, o clima da reunião esfriou.'",
+    pergunta: "Quanto ao sentido de 'cair/esfriar', é correto afirmar que:",
+    alternativas: [
+      "nos dois enunciados, os verbos mantêm sentido físico mensurável.",
+      "em I há sentido figurado, enquanto em II há descrição meteorológica literal e mensurável por critérios objetivos de temperatura.",
+      "os dois usos são figurados, pois nenhum deles descreve alteração concreta.",
+      "em I e II há homonímia entre verbos diferentes com grafia idêntica.",
+      "I apresenta uso denotativo; II emprega 'esfriou' conotativamente para indicar mudança relacional.",
+    ],
+    correta: 4,
+    explicacao: "No primeiro caso, a alteração de temperatura é literal; no segundo, 'esfriar' descreve metaforicamente uma mudança no ambiente social da reunião.",
+    feedbackAcerto: "Correto. No primeiro caso, a alteração de temperatura é literal; no segundo, 'esfriar' descreve metaforicamente uma mudança no ambiente social da reunião.",
+    feedbackErro: "A resposta correta é: I apresenta uso denotativo; II emprega 'esfriou' conotativamente para indicar mudança relacional. No primeiro caso, a alteração de temperatura é literal; no segundo, 'esfriar' descreve metaforicamente uma mudança no ambiente social da reunião.",
+    dicaBanca: "Compare se o termo nomeia diretamente um fenômeno físico ou transfere esse traço para uma situação abstrata.",
+  },
+  {
+    texto: "O relatório descreveu como precária a infraestrutura de acesso à escola: a estrada apresentava trechos danificados e ficava intransitável em períodos de chuva.",
+    pergunta: "No contexto, 'precária' equivale mais adequadamente a:",
+    alternativas: [
+      "deficiente ou em condições insatisfatórias de funcionamento.",
+      "provisória por ter sido planejada para curta duração administrativa.",
+      "antiga por ter sido construída antes das demais vias da região.",
+      "estreita por possuir dimensões inferiores às recomendadas tecnicamente.",
+      "irregular por não constar formalmente no cadastro municipal de vias.",
+    ],
+    correta: 0,
+    explicacao: "O contexto explicita problemas de conservação e funcionamento; por isso, 'precária' significa deficiente, insuficiente ou insatisfatória.",
+    feedbackAcerto: "Correto. O contexto explicita problemas de conservação e funcionamento; por isso, 'precária' significa deficiente, insuficiente ou insatisfatória.",
+    feedbackErro: "A resposta correta é: deficiente ou em condições insatisfatórias de funcionamento. O contexto explicita problemas de conservação e funcionamento; por isso, 'precária' significa deficiente, insuficiente ou insatisfatória.",
+    dicaBanca: "A melhor paráfrase é a que preserva os traços semânticos ativados pelos exemplos do próprio texto.",
+  },
+  {
+    texto: "Considere os pares 'quente/frio' e 'vivo/morto'.",
+    pergunta: "A distinção semântica entre esses pares é corretamente apresentada em:",
+    alternativas: [
+      "Ambos são antônimos complementares, sem estados intermediários possíveis.",
+      "'Quente/frio' admite gradação; 'vivo/morto' tende a formar oposição complementar.",
+      "'Quente/frio' forma relação de hiperonímia; 'vivo/morto' forma sinonímia parcial.",
+      "Ambos são antônimos conversos, pois cada termo pressupõe participantes distintos.",
+      "'Quente/frio' é oposição complementar; 'vivo/morto' admite gradação contínua.",
+    ],
+    correta: 1,
+    explicacao: "Antônimos graduais admitem posições intermediárias; quente/frio pode ter morno. Vivo/morto, em uso comum, apresenta oposição complementar.",
+    feedbackAcerto: "Correto. Antônimos graduais admitem posições intermediárias; quente/frio pode ter morno. Vivo/morto, em uso comum, apresenta oposição complementar.",
+    feedbackErro: "A resposta correta é: 'Quente/frio' admite gradação; 'vivo/morto' tende a formar oposição complementar. Antônimos graduais admitem posições intermediárias; quente/frio pode ter morno. Vivo/morto, em uso comum, apresenta oposição complementar.",
+    dicaBanca: "Nem toda antonímia funciona do mesmo modo: procure possibilidade de graus ou estados intermediários.",
+  },
+  {
+    texto: "O candidato apresentou recurso, documento que será analisado pela comissão.",
+    pergunta: "No trecho, a expressão 'documento' estabelece com 'recurso' uma relação de:",
+    alternativas: [
+      "antonímia, porque os termos se opõem na linguagem administrativa.",
+      "homonímia, porque os dois termos podem possuir mais de um significado.",
+      "hiperonímia, pois 'documento' designa uma classe mais ampla que inclui 'recurso'.",
+      "paronímia, em razão da proximidade sonora entre as duas palavras.",
+      "sinonímia plena, pois os termos podem substituir-se em qualquer contexto administrativo de natureza equivalente.",
+    ],
+    correta: 2,
+    explicacao: "'Documento' é semanticamente mais geral; 'recurso', no contexto, é um tipo de documento, portanto um hipônimo.",
+    feedbackAcerto: "Correto. 'Documento' é semanticamente mais geral; 'recurso', no contexto, é um tipo de documento, portanto um hipônimo.",
+    feedbackErro: "A resposta correta é: hiperonímia, pois 'documento' designa uma classe mais ampla que inclui 'recurso'. 'Documento' é semanticamente mais geral; 'recurso', no contexto, é um tipo de documento, portanto um hipônimo.",
+    dicaBanca: "Observe se um termo nomeia a categoria geral à qual o outro pertence.",
+  },
+  {
+    texto: "O texto afirma: 'A medida foi eficiente, mas não foi suficiente para resolver o problema.'",
+    pergunta: "A relação de sentido entre 'eficiente' e 'suficiente' mostra que:",
+    alternativas: [
+      "os dois adjetivos são sinônimos e o contraste decorre da conjunção 'mas', sem diferença lexical relevante entre eles.",
+      "'eficiente' significa completo, enquanto 'suficiente' significa rápido.",
+      "os termos são antônimos complementares aplicados ao mesmo referente.",
+      "a medida pode produzir bons resultados sem, por isso, bastar para alcançar o objetivo total.",
+      "a presença de 'não' transforma 'suficiente' em sinônimo contextual de 'eficiente' e preserva integralmente a avaliação positiva da medida.",
+    ],
+    correta: 3,
+    explicacao: "Eficiência diz respeito à capacidade de produzir resultado de modo adequado; suficiência refere-se ao bastante para atingir determinado objetivo. Os conceitos podem coexistir sem equivaler.",
+    feedbackAcerto: "Correto. Eficiência diz respeito à capacidade de produzir resultado de modo adequado; suficiência refere-se ao bastante para atingir determinado objetivo. Os conceitos podem coexistir sem equivaler.",
+    feedbackErro: "A resposta correta é: a medida pode produzir bons resultados sem, por isso, bastar para alcançar o objetivo total. Eficiência diz respeito à capacidade de produzir resultado de modo adequado; suficiência refere-se ao bastante para atingir determinado objetivo. Os conceitos podem coexistir sem equivaler.",
+    dicaBanca: "Palavras próximas no mesmo campo semântico não são necessariamente sinônimas.",
+  },
+  {
+    texto: "Em uma notícia, lê-se: 'A decisão abriu precedente para novos pedidos semelhantes.'",
+    pergunta: "A paráfrase que preserva melhor o sentido de 'abriu precedente' é:",
+    alternativas: [
+      "A decisão encerrou a possibilidade de pedidos semelhantes no futuro.",
+      "A decisão tornou obrigatória a aprovação de qualquer pedido posterior.",
+      "A decisão eliminou a necessidade de análise dos casos que surgirem depois.",
+      "A decisão substituiu as normas aplicáveis aos pedidos anteriormente analisados e aos pedidos futuros de natureza semelhante.",
+      "A decisão criou uma referência que poderá ser invocada em situações semelhantes.",
+    ],
+    correta: 4,
+    explicacao: "'Abrir precedente' significa criar um caso de referência capaz de influenciar avaliações futuras, não garantir automaticamente o mesmo resultado.",
+    feedbackAcerto: "Correto. 'Abrir precedente' significa criar um caso de referência capaz de influenciar avaliações futuras, não garantir automaticamente o mesmo resultado.",
+    feedbackErro: "A resposta correta é: A decisão criou uma referência que poderá ser invocada em situações semelhantes. 'Abrir precedente' significa criar um caso de referência capaz de influenciar avaliações futuras, não garantir automaticamente o mesmo resultado.",
+    dicaBanca: "Uma boa paráfrase preserva o núcleo de sentido sem acrescentar certeza ou obrigação inexistente.",
+  },
+  {
+    texto: "O edital informa: 'Todos os professores convocados deverão apresentar diploma. Ana é professora convocada.'",
+    pergunta: "A conclusão semanticamente implicada pelas duas afirmações é:",
+    alternativas: [
+      "Ana deverá apresentar diploma.",
+      "Ana já apresentou o diploma antes da convocação.",
+      "Ana é a única professora convocada pelo edital.",
+      "Ana possui mais de um diploma de nível superior.",
+      "Ana será dispensada das demais exigências documentais.",
+    ],
+    correta: 0,
+    explicacao: "Se todos os integrantes de uma classe têm determinada obrigação e Ana pertence a essa classe, a obrigação aplica-se a Ana.",
+    feedbackAcerto: "Correto. Se todos os integrantes de uma classe têm determinada obrigação e Ana pertence a essa classe, a obrigação aplica-se a Ana.",
+    feedbackErro: "A resposta correta é: Ana deverá apresentar diploma. Se todos os integrantes de uma classe têm determinada obrigação e Ana pertence a essa classe, a obrigação aplica-se a Ana.",
+    dicaBanca: "Em relações de acarretamento, verifique o que necessariamente decorre das premissas, sem acrescentar informação.",
+  },
+  {
+    texto: "A coordenadora afirmou: 'Alguns estudantes faltaram à avaliação.'",
+    pergunta: "Qual informação NÃO é necessariamente acarretada pelo enunciado?",
+    alternativas: [
+      "Há pelo menos um estudante que faltou à avaliação.",
+      "A maioria dos estudantes faltou à avaliação.",
+      "O conjunto referido contém estudantes que participaram ou poderiam participar da avaliação.",
+      "A afirmação é compatível com a existência de estudantes que compareceram.",
+      "O enunciado não determina um número exato de faltosos.",
+    ],
+    correta: 1,
+    explicacao: "'Alguns' garante existência de pelo menos um elemento, mas não informa que a maioria faltou; essa conclusão excede o conteúdo dado.",
+    feedbackAcerto: "Correto. 'Alguns' garante existência de pelo menos um elemento, mas não informa que a maioria faltou; essa conclusão excede o conteúdo dado.",
+    feedbackErro: "A resposta correta é: A maioria dos estudantes faltou à avaliação. 'Alguns' garante existência de pelo menos um elemento, mas não informa que a maioria faltou; essa conclusão excede o conteúdo dado.",
+    dicaBanca: "Não transforme quantificadores vagos em percentuais ou maiorias que o texto não fornece.",
+  },
+  {
+    texto: "Considere: I. 'Nenhum candidato faltou.' II. 'Algum candidato faltou.'",
+    pergunta: "A relação lógica-semântica entre I e II é de:",
+    alternativas: [
+      "equivalência, porque os dois enunciados tratam do mesmo conjunto de candidatos e não apresentam oposição quanto à existência de faltas.",
+      "acarretamento de II por I, pois ausência de faltas confirma alguma falta.",
+      "contradição, pois não podem ser verdadeiros simultaneamente sobre o mesmo conjunto e situação.",
+      "sinonímia parcial, porque diferem pelo quantificador empregado, mas manteriam o mesmo valor lógico no contexto.",
+      "ambiguidade, porque 'algum' pode significar 'nenhum' em contexto negativo.",
+    ],
+    correta: 2,
+    explicacao: "'Nenhum P' e 'algum P' atribuem valores incompatíveis ao mesmo conjunto; se um for verdadeiro, o outro é falso na mesma situação.",
+    feedbackAcerto: "Correto. 'Nenhum P' e 'algum P' atribuem valores incompatíveis ao mesmo conjunto; se um for verdadeiro, o outro é falso na mesma situação.",
+    feedbackErro: "A resposta correta é: contradição, pois não podem ser verdadeiros simultaneamente sobre o mesmo conjunto e situação. 'Nenhum P' e 'algum P' atribuem valores incompatíveis ao mesmo conjunto; se um for verdadeiro, o outro é falso na mesma situação.",
+    dicaBanca: "Compare o alcance dos quantificadores e pergunte se os dois enunciados podem ser verdadeiros ao mesmo tempo.",
+  },
+  {
+    texto: "Frase original: 'Embora o prazo fosse curto, a equipe concluiu o relatório.'",
+    pergunta: "A reescrita que preserva a relação semântica principal é:",
+    alternativas: [
+      "Como o prazo era curto, a equipe concluiu o relatório.",
+      "Se o prazo fosse curto, a equipe concluiria o relatório.",
+      "Para que o prazo fosse curto, a equipe concluiu o relatório.",
+      "Apesar de o prazo ser curto, a equipe concluiu o relatório.",
+      "Logo que o prazo ficou curto, a equipe concluiu o relatório.",
+    ],
+    correta: 3,
+    explicacao: "'Embora' e 'apesar de' podem introduzir concessão: reconhece-se um fato que poderia dificultar o resultado, mas ele não impede sua ocorrência.",
+    feedbackAcerto: "Correto. 'Embora' e 'apesar de' podem introduzir concessão: reconhece-se um fato que poderia dificultar o resultado, mas ele não impede sua ocorrência.",
+    feedbackErro: "A resposta correta é: Apesar de o prazo ser curto, a equipe concluiu o relatório. 'Embora' e 'apesar de' podem introduzir concessão: reconhece-se um fato que poderia dificultar o resultado, mas ele não impede sua ocorrência.",
+    dicaBanca: "Na paráfrase, preserve a relação lógica entre as partes, não apenas palavras semelhantes.",
+  },
+  {
+    texto: "O parecer conclui: 'A alteração provavelmente reduzirá o tempo médio de atendimento.'",
+    pergunta: "O advérbio 'provavelmente' atua semanticamente para:",
+    alternativas: [
+      "transformar a previsão em ordem dirigida aos responsáveis pelo atendimento.",
+      "indicar que a redução já foi confirmada por dados definitivos.",
+      "marcar oposição entre a alteração proposta e seus possíveis efeitos.",
+      "atribuir a responsabilidade da previsão a uma fonte não identificada.",
+      "reduzir o grau de comprometimento do enunciador com a certeza da previsão.",
+    ],
+    correta: 4,
+    explicacao: "'Provavelmente' é um modalizador epistêmico: apresenta o conteúdo como plausível, não como fato certo.",
+    feedbackAcerto: "Correto. 'Provavelmente' é um modalizador epistêmico: apresenta o conteúdo como plausível, não como fato certo.",
+    feedbackErro: "A resposta correta é: reduzir o grau de comprometimento do enunciador com a certeza da previsão. 'Provavelmente' é um modalizador epistêmico: apresenta o conteúdo como plausível, não como fato certo.",
+    dicaBanca: "Palavras como 'talvez', 'provavelmente' e 'certamente' graduam o compromisso com a verdade do enunciado.",
+  },
+  {
+    texto: "Compare: I. 'O candidato deve apresentar o documento até sexta-feira.' II. 'O candidato deve estar a caminho, pois saiu há uma hora.'",
+    pergunta: "A diferença de sentido de 'deve' está corretamente descrita em:",
+    alternativas: [
+      "Em I, expressa obrigação; em II, exprime inferência ou probabilidade.",
+      "Em I, expressa hipótese; em II, exprime proibição administrativa.",
+      "Em I, exprime conselho; em II, exprime ordem dirigida ao candidato.",
+      "Nos dois casos, expressa exatamente o mesmo grau de obrigação normativa.",
+      "Nos dois casos, indica certeza factual já comprovada pelo falante.",
+    ],
+    correta: 0,
+    explicacao: "O verbo modal 'dever' pode assumir valor deôntico (obrigação) ou epistêmico (inferência/probabilidade), conforme o contexto.",
+    feedbackAcerto: "Correto. O verbo modal 'dever' pode assumir valor deôntico (obrigação) ou epistêmico (inferência/probabilidade), conforme o contexto.",
+    feedbackErro: "A resposta correta é: Em I, expressa obrigação; em II, exprime inferência ou probabilidade. O verbo modal 'dever' pode assumir valor deôntico (obrigação) ou epistêmico (inferência/probabilidade), conforme o contexto.",
+    dicaBanca: "Verbos modais mudam de valor conforme expressem regra, permissão, possibilidade ou avaliação de certeza.",
+  },
+  {
+    texto: "Compare: I. 'Os servidores podem usar a sala após as 14h.' II. 'A estrada pode ficar alagada se chover.'",
+    pergunta: "No primeiro e no segundo enunciados, respectivamente, 'podem/pode' expressam:",
+    alternativas: [
+      "probabilidade e obrigação.",
+      "permissão e possibilidade.",
+      "capacidade física e proibição.",
+      "obrigação e certeza.",
+      "concessão adversativa e dúvida.",
+    ],
+    correta: 1,
+    explicacao: "Em I, 'podem' autoriza uma ação; em II, 'pode' apresenta um evento como possível sob determinada condição.",
+    feedbackAcerto: "Correto. Em I, 'podem' autoriza uma ação; em II, 'pode' apresenta um evento como possível sob determinada condição.",
+    feedbackErro: "A resposta correta é: permissão e possibilidade. Em I, 'podem' autoriza uma ação; em II, 'pode' apresenta um evento como possível sob determinada condição.",
+    dicaBanca: "O modal 'poder' pode indicar permissão, capacidade ou possibilidade; o contexto decide.",
+  },
+  {
+    texto: "Um aviso diz: 'Entregue o formulário aqui amanhã.'",
+    pergunta: "Sem conhecer a situação de enunciação, as palavras 'aqui' e 'amanhã' têm referência incompleta porque são:",
+    alternativas: [
+      "sinônimos de lugar e tempo definidos de modo permanente no léxico.",
+      "antônimos contextuais cuja interpretação depende da frase seguinte e da localização física mencionada no próprio aviso.",
+      "expressões dêiticas, interpretadas a partir do lugar e do momento da enunciação.",
+      "hipônimos de circunstância, com significado independente do falante.",
+      "marcadores de pressuposição que indicam eventos ocorridos no passado.",
+    ],
+    correta: 2,
+    explicacao: "Dêiticos como 'aqui', 'agora', 'amanhã', 'eu' e 'você' dependem do contexto enunciativo para determinar seu referente.",
+    feedbackAcerto: "Correto. Dêiticos como 'aqui', 'agora', 'amanhã', 'eu' e 'você' dependem do contexto enunciativo para determinar seu referente.",
+    feedbackErro: "A resposta correta é: expressões dêiticas, interpretadas a partir do lugar e do momento da enunciação. Dêiticos como 'aqui', 'agora', 'amanhã', 'eu' e 'você' dependem do contexto enunciativo para determinar seu referente.",
+    dicaBanca: "Pergunte quais coordenadas da situação de fala são necessárias para interpretar a expressão.",
+  },
+  {
+    texto: "A frase 'João quebrou a janela com uma pedra' permite identificar diferentes papéis semânticos.",
+    pergunta: "Na interpretação mais natural, 'uma pedra' desempenha o papel de:",
+    alternativas: [
+      "agente, por iniciar voluntariamente a ação expressa pelo verbo.",
+      "paciente, por sofrer mudança de estado causada pela ação.",
+      "experienciador, por perceber o evento descrito no enunciado.",
+      "instrumento, por ser o meio empregado para produzir o evento.",
+      "beneficiário, por receber vantagem decorrente da ação realizada.",
+    ],
+    correta: 3,
+    explicacao: "A pedra é o meio utilizado pelo agente para quebrar a janela; semanticamente, exerce papel de instrumento.",
+    feedbackAcerto: "Correto. A pedra é o meio utilizado pelo agente para quebrar a janela; semanticamente, exerce papel de instrumento.",
+    feedbackErro: "A resposta correta é: instrumento, por ser o meio empregado para produzir o evento. A pedra é o meio utilizado pelo agente para quebrar a janela; semanticamente, exerce papel de instrumento.",
+    dicaBanca: "Papéis semânticos descrevem a participação das entidades no evento: quem age, quem sofre, qual meio é usado etc.",
+  },
+  {
+    texto: "O relatório afirma que a proposta é 'economicamente viável', mas não diz que seja 'socialmente desejável'.",
+    pergunta: "A interpretação mais adequada dessa escolha lexical é:",
+    alternativas: [
+      "'Viável' e 'desejável' são sinônimos perfeitos, de modo que a distinção é estilística.",
+      "A viabilidade econômica implica necessariamente aprovação social da proposta.",
+      "A desejabilidade social é requisito semântico para que algo seja economicamente possível e condição suficiente para sua aprovação institucional.",
+      "Os dois adjetivos formam antônimos e não podem aplicar-se ao mesmo objeto.",
+      "A proposta pode ser possível do ponto de vista econômico sem ser avaliada positivamente no plano social.",
+    ],
+    correta: 4,
+    explicacao: "'Viável' indica possibilidade de execução em certo domínio; 'desejável' introduz avaliação positiva. Um traço não acarreta o outro.",
+    feedbackAcerto: "Correto. 'Viável' indica possibilidade de execução em certo domínio; 'desejável' introduz avaliação positiva. Um traço não acarreta o outro.",
+    feedbackErro: "A resposta correta é: A proposta pode ser possível do ponto de vista econômico sem ser avaliada positivamente no plano social. 'Viável' indica possibilidade de execução em certo domínio; 'desejável' introduz avaliação positiva. Um traço não acarreta o outro.",
+    dicaBanca: "Diferencie possibilidade de realização de julgamento de valor sobre o que seria conveniente.",
+  },
+  {
+    texto: "Em uma avaliação, lê-se: 'O texto é claro, porém simplifica excessivamente um problema complexo.'",
+    pergunta: "O adjetivo 'claro' recebe, no contexto, uma avaliação que:",
+    alternativas: [
+      "é positiva quanto à compreensão, mas não impede uma crítica posterior à simplificação.",
+      "é negativa porque 'claro' significa superficial em textos acadêmicos.",
+      "anula a crítica introduzida por 'porém', tornando o período contraditório.",
+      "indica certeza factual, sem qualquer julgamento sobre a qualidade do texto ou sobre sua adequação ao objetivo proposto.",
+      "funciona como antônimo de 'complexo', razão pela qual os termos se excluem.",
+    ],
+    correta: 0,
+    explicacao: "O texto pode ser compreensível e, ao mesmo tempo, excessivamente simplificador. A conjunção organiza duas avaliações compatíveis, uma favorável e outra crítica.",
+    feedbackAcerto: "Correto. O texto pode ser compreensível e, ao mesmo tempo, excessivamente simplificador. A conjunção organiza duas avaliações compatíveis, uma favorável e outra crítica.",
+    feedbackErro: "A resposta correta é: é positiva quanto à compreensão, mas não impede uma crítica posterior à simplificação. O texto pode ser compreensível e, ao mesmo tempo, excessivamente simplificador. A conjunção organiza duas avaliações compatíveis, uma favorável e outra crítica.",
+    dicaBanca: "Não trate palavras avaliativas como rótulos absolutos; observe qual propriedade cada uma qualifica.",
+  },
+  {
+    texto: "Compare: 'A gestão transparente publicou os critérios' e 'A água transparente permitia ver o fundo do recipiente.'",
+    pergunta: "O adjetivo 'transparente' apresenta:",
+    alternativas: [
+      "homonímia, pois seriam palavras diferentes que coincidem na forma gráfica, mas teriam origens lexicais distintas.",
+      "polissemia: no primeiro caso, indica abertura/clareza institucional; no segundo, propriedade física.",
+      "antonímia interna, porque o mesmo adjetivo assume valores opostos nas duas frases e produz sentidos contraditórios em cada contexto apresentado.",
+      "sinonímia contextual com 'opaco' nos dois enunciados apresentados.",
+      "valor figurado tanto na gestão quanto na água mencionada, sem diferença de plano semântico entre os dois usos.",
+    ],
+    correta: 1,
+    explicacao: "O mesmo item lexical desenvolve sentidos relacionados: uma propriedade física de deixar ver e, por extensão, clareza/abertura institucional.",
+    feedbackAcerto: "Correto. O mesmo item lexical desenvolve sentidos relacionados: uma propriedade física de deixar ver e, por extensão, clareza/abertura institucional.",
+    feedbackErro: "A resposta correta é: polissemia: no primeiro caso, indica abertura/clareza institucional; no segundo, propriedade física. O mesmo item lexical desenvolve sentidos relacionados: uma propriedade física de deixar ver e, por extensão, clareza/abertura institucional.",
+    dicaBanca: "Na polissemia, os sentidos pertencem à mesma palavra e mantêm algum vínculo semântico entre si.",
+  },
+  {
+    texto: "A frase 'Pedro disse a Marcos que seu projeto havia sido aprovado' pode gerar dúvida sobre o proprietário do projeto.",
+    pergunta: "A reescrita que elimina a ambiguidade e atribui o projeto a Marcos é:",
+    alternativas: [
+      "Pedro disse a Marcos que seu próprio projeto havia sido aprovado.",
+      "Pedro, falando com Marcos, disse que o projeto havia sido aprovado.",
+      "Pedro disse a Marcos que o projeto de Marcos havia sido aprovado.",
+      "Pedro disse que Marcos havia aprovado seu projeto anteriormente.",
+      "A Marcos, Pedro disse que seu projeto aprovado já estava pronto.",
+    ],
+    correta: 2,
+    explicacao: "Nomear explicitamente 'o projeto de Marcos' elimina a competição entre dois possíveis antecedentes do possessivo 'seu'.",
+    feedbackAcerto: "Correto. Nomear explicitamente 'o projeto de Marcos' elimina a competição entre dois possíveis antecedentes do possessivo 'seu'.",
+    feedbackErro: "A resposta correta é: Pedro disse a Marcos que o projeto de Marcos havia sido aprovado. Nomear explicitamente 'o projeto de Marcos' elimina a competição entre dois possíveis antecedentes do possessivo 'seu'.",
+    dicaBanca: "Para desfazer ambiguidade referencial, substitua pronomes por expressões nominais inequívocas.",
+  },
+  {
+    texto: "O regulamento informa: 'O candidato ainda não apresentou o certificado.'",
+    pergunta: "O advérbio 'ainda' favorece a interpretação de que:",
+    alternativas: [
+      "o candidato está dispensado de apresentar o certificado em qualquer momento futuro, porque o prazo documental já teria sido encerrado definitivamente.",
+      "a apresentação do certificado foi considerada irrelevante para o processo.",
+      "o certificado já havia sido apresentado e depois retirado do processo.",
+      "há expectativa de que a apresentação possa ocorrer posteriormente, embora não tenha ocorrido até agora.",
+      "o candidato apresentou documento equivalente, tornando o certificado desnecessário.",
+    ],
+    correta: 3,
+    explicacao: "Em contexto negativo, 'ainda não' marca não ocorrência até o momento de referência e costuma manter aberta a expectativa de ocorrência futura.",
+    feedbackAcerto: "Correto. Em contexto negativo, 'ainda não' marca não ocorrência até o momento de referência e costuma manter aberta a expectativa de ocorrência futura.",
+    feedbackErro: "A resposta correta é: há expectativa de que a apresentação possa ocorrer posteriormente, embora não tenha ocorrido até agora. Em contexto negativo, 'ainda não' marca não ocorrência até o momento de referência e costuma manter aberta a expectativa de ocorrência futura.",
+    dicaBanca: "Observe como advérbios temporais podem introduzir expectativas sobre continuidade ou mudança de estado.",
+  },
+  {
+    texto: "Um parecer conclui: 'A proposta não é inviável, mas exige ajustes antes de ser aprovada.'",
+    pergunta: "A expressão 'não é inviável' deve ser interpretada, no contexto, como:",
+    alternativas: [
+      "afirmação de que a proposta está integralmente pronta para aprovação imediata e de que nenhum ajuste adicional interfere na decisão final.",
+      "negação de qualquer possibilidade de execução da proposta analisada.",
+      "equivalente exato a 'é excelente', sem diferença de intensidade avaliativa.",
+      "indicação de que os ajustes são dispensáveis para a continuidade da análise.",
+      "negação da inviabilidade, sem afirmar de modo pleno que a proposta já seja adequada ou suficiente.",
+    ],
+    correta: 4,
+    explicacao: "Negar 'inviável' afasta a impossibilidade, mas não equivale necessariamente a afirmar plena viabilidade ou aprovação; o restante do período reforça essa nuance.",
+    feedbackAcerto: "Correto. Negar 'inviável' afasta a impossibilidade, mas não equivale necessariamente a afirmar plena viabilidade ou aprovação; o restante do período reforça essa nuance.",
+    feedbackErro: "A resposta correta é: negação da inviabilidade, sem afirmar de modo pleno que a proposta já seja adequada ou suficiente. Negar 'inviável' afasta a impossibilidade, mas não equivale necessariamente a afirmar plena viabilidade ou aprovação; o restante do período reforça essa nuance.",
+    dicaBanca: "A dupla orientação negativa pode produzir um sentido mais fraco do que a afirmação direta do termo positivo.",
+  }
+];
