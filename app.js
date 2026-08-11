@@ -1582,6 +1582,243 @@ let respostasSimulado = [];
 
 let telaOrigemSimuladoFarol = "simulados";
 
+// ==========================
+// REVISÃO DA ÚLTIMA QUESTÃO RESPONDIDA
+// ==========================
+// Guarda apenas o estado visual da questão que acabou de ser respondida.
+// Não altera pontuação, progresso ou resposta já registrada.
+let revisaoQuestaoRespondidaFarol = null;
+let revisaoSimuladoRespondidoFarol = null;
+
+function montarAlternativasRevisaoFarol(questao, respostaMarcada){
+
+    if(!questao || !Array.isArray(questao.alternativas)){
+        return "";
+    }
+
+    return questao.alternativas.map((alternativa, indice) => {
+
+        const foiMarcada = indice === Number(respostaMarcada);
+        const ehCorreta = indice === Number(questao.correta);
+
+        let estilo = [
+            "display:block",
+            "cursor:default",
+            "opacity:1",
+            "margin-bottom:10px",
+            "border:2px solid transparent",
+            "border-radius:12px",
+            "padding:12px 14px"
+        ];
+
+        let status = "";
+
+        if(ehCorreta){
+            estilo.push("border-color:#2f9e62");
+            estilo.push("background:#e9f8ef");
+        }
+
+        if(foiMarcada && !ehCorreta){
+            estilo.push("border-color:#d94a4a");
+            estilo.push("background:#fff0f0");
+        }
+
+        if(foiMarcada && ehCorreta){
+            status = "✅ Sua resposta — correta";
+        }
+        else if(foiMarcada){
+            status = "❌ Sua resposta";
+        }
+        else if(ehCorreta){
+            status = "✅ Resposta correta";
+        }
+
+        return `
+            <label class="alternativa" style="${estilo.join(';')}">
+                <input
+                    type="radio"
+                    name="respostaRevisaoFarol"
+                    value="${indice}"
+                    ${foiMarcada ? "checked" : ""}
+                    disabled>
+
+                <span>${alternativa}</span>
+
+                ${status ? `
+                    <small style="display:block;margin-top:7px;font-weight:700;">
+                        ${status}
+                    </small>
+                ` : ""}
+            </label>
+        `;
+    }).join("");
+}
+
+function renderizarQuestaoRespondidaFarol(configuracao){
+
+    const config = configuracao || {};
+    const questao = config.questao;
+    const area = document.getElementById("areaQuestao");
+
+    if(!area || !questao){
+        mostrarToast("Não foi possível abrir a revisão desta questão.");
+        return;
+    }
+
+    const numero = Number(config.numero) || 1;
+    const total = Number(config.total) || numero;
+    const percentual = total > 0
+        ? Math.round((numero / total) * 100)
+        : 0;
+    const ehSimulado = config.simulado === true;
+
+    area.innerHTML = `
+        <div class="card card-questao-foco-v29">
+
+            <div class="cabecalho-questao-foco-v29">
+                <span>
+                    ${ehSimulado ? "Simulado • " : ""}Revisão da questão ${numero} de ${total}
+                </span>
+                <strong>Respondida</strong>
+            </div>
+
+            <progress
+                class="progresso-questao-foco-v29"
+                value="${numero}"
+                max="${total}">
+            </progress>
+
+            <div id="inicioQuestaoFarol" class="inicio-questao-farol-v29">
+
+                <div style="margin-bottom:16px;padding:11px 14px;border-radius:12px;background:#f3f6f8;">
+                    <strong>🔒 Modo de revisão</strong>
+                    <div style="margin-top:4px;">
+                        Esta questão já foi respondida. Você pode conferir sua marcação e a resposta correta, mas não pode responder novamente.
+                    </div>
+                </div>
+
+                ${questao.texto ? `
+                    <div class="card texto-base">
+                        <h3>📄 Texto de Apoio</h3>
+                        <br>
+                        <p>${questao.texto}</p>
+                    </div>
+                    <br>
+                ` : ""}
+
+                ${questao.imagem ? `
+                    <img
+                        src="${questao.imagem}"
+                        class="imagem-questao"
+                        alt="Imagem da questão">
+                    <br><br>
+                ` : ""}
+
+                ${questao.afirmacoes ? `
+                    <div class="card texto-base">
+                        ${questao.afirmacoes.map(item => `<p>${item}</p>`).join("")}
+                    </div>
+                    <br>
+                ` : ""}
+
+                <p class="pergunta">${questao.pergunta}</p>
+                <br>
+
+                ${montarAlternativasRevisaoFarol(
+                    questao,
+                    config.respostaMarcada
+                )}
+
+                <br>
+
+                <div class="${ehSimulado ? "acoes-simulado-v48" : "acoes-feedback-questao-v47"}">
+                    <button
+                        type="button"
+                        class="${ehSimulado ? "btn-voltar-simulado-v48" : "btn-voltar-feedback-v47"}"
+                        onclick="${ehSimulado ? "voltarAoFeedbackSimuladoFarol()" : "voltarAoFeedbackQuestaoFarol()"}">
+                        ← Voltar ao feedback
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn-proxima-feedback"
+                        onclick="${ehSimulado ? "voltarDaQuestaoSimuladoFarol()" : "voltarParaAssuntos()"}">
+                        ${ehSimulado ? "Sair do simulado" : "Sair para os tópicos"}
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    `;
+
+    requestAnimationFrame(() => {
+        const inicio = document.querySelector(
+            "#areaQuestao .card-questao-foco-v29"
+        );
+
+        if(inicio){
+            inicio.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    });
+}
+
+function reverQuestaoFarol(){
+
+    if(!revisaoQuestaoRespondidaFarol){
+        mostrarToast("A questão respondida não está disponível para revisão.");
+        return;
+    }
+
+    renderizarQuestaoRespondidaFarol({
+        ...revisaoQuestaoRespondidaFarol,
+        simulado: false
+    });
+}
+
+function voltarAoFeedbackQuestaoFarol(){
+
+    const estado = revisaoQuestaoRespondidaFarol;
+    const area = document.getElementById("areaQuestao");
+
+    if(!estado || !area || !estado.feedbackHTML){
+        mostrarToast("O feedback desta questão não está mais disponível.");
+        return;
+    }
+
+    area.innerHTML = estado.feedbackHTML;
+    window.scrollTo({top: 0, left: 0, behavior: "smooth"});
+}
+
+function reverQuestaoSimuladoFarol(){
+
+    if(!revisaoSimuladoRespondidoFarol){
+        mostrarToast("A questão respondida não está disponível para revisão.");
+        return;
+    }
+
+    renderizarQuestaoRespondidaFarol({
+        ...revisaoSimuladoRespondidoFarol,
+        simulado: true
+    });
+}
+
+function voltarAoFeedbackSimuladoFarol(){
+
+    const estado = revisaoSimuladoRespondidoFarol;
+    const area = document.getElementById("areaQuestao");
+
+    if(!estado || !area || !estado.feedbackHTML){
+        mostrarToast("O feedback desta questão não está mais disponível.");
+        return;
+    }
+
+    area.innerHTML = estado.feedbackHTML;
+    window.scrollTo({top: 0, left: 0, behavior: "smooth"});
+}
+
 
 // ==========================
 // MEDALHAS POR ASSUNTO
@@ -3125,6 +3362,8 @@ function abrirMapaMental(){
 
 function mostrarQuestao() {
 
+    revisaoQuestaoRespondidaFarol = null;
+
     const area = document.getElementById("areaQuestao");
 
     const questoes =
@@ -3265,6 +3504,19 @@ atualizarAtividade();
     }
 
 const q = questaoExibida;
+    const respostaMarcadaFarol = Number(resposta.value);
+    const totalQuestoesRevisaoFarol =
+        questoesEmbaralhadas.length > 0
+        ? questoesEmbaralhadas.length
+        : ((bancoQuestoes[disciplinaAtual] || []).length);
+
+    revisaoQuestaoRespondidaFarol = {
+        questao: q,
+        respostaMarcada: respostaMarcadaFarol,
+        numero: questaoAtual + 1,
+        total: totalQuestoesRevisaoFarol,
+        feedbackHTML: ""
+    };
 
     const feedback =
         document.getElementById("feedback");
@@ -3287,7 +3539,7 @@ document
 
     });
 
-if (Number(resposta.value) === q.correta) {
+if (respostaMarcadaFarol === q.correta) {
 
     acertos++;
     acertosAssunto++;
@@ -3302,6 +3554,16 @@ if (Number(resposta.value) === q.correta) {
 
         document.getElementById("areaQuestao").innerHTML = `
         <div class="card tela-feedback-questao feedback-questao-acerto">
+
+            <div style="display:flex;justify-content:flex-end;margin-bottom:4px;">
+                <button
+                    type="button"
+                    class="btn-voltar-feedback-v47"
+                    style="width:auto;padding:8px 12px;font-size:0.9rem;"
+                    onclick="voltarParaAssuntos()">
+                    ✕ Sair
+                </button>
+            </div>
 
             <div class="icone-feedback-questao">✅</div>
 
@@ -3330,8 +3592,8 @@ if (Number(resposta.value) === q.correta) {
                 <button
                     type="button"
                     class="btn-voltar-feedback-v47"
-                    onclick="voltarParaAssuntos()">
-                    ← Voltar
+                    onclick="reverQuestaoFarol()">
+                    🔎 Rever questão
                 </button>
 
                 <button
@@ -3640,6 +3902,16 @@ const nomeDisciplina =
         document.getElementById("areaQuestao").innerHTML = `
         <div class="card tela-feedback-questao feedback-questao-erro">
 
+            <div style="display:flex;justify-content:flex-end;margin-bottom:4px;">
+                <button
+                    type="button"
+                    class="btn-voltar-feedback-v47"
+                    style="width:auto;padding:8px 12px;font-size:0.9rem;"
+                    onclick="voltarParaAssuntos()">
+                    ✕ Sair
+                </button>
+            </div>
+
             <div class="icone-feedback-questao">❌</div>
 
             <span class="rotulo-feedback-questao">
@@ -3667,8 +3939,8 @@ const nomeDisciplina =
                 <button
                     type="button"
                     class="btn-voltar-feedback-v47"
-                    onclick="voltarParaAssuntos()">
-                    ← Voltar
+                    onclick="reverQuestaoFarol()">
+                    🔎 Rever questão
                 </button>
 
                 <button
@@ -3685,6 +3957,11 @@ const nomeDisciplina =
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
 
+if(revisaoQuestaoRespondidaFarol){
+    revisaoQuestaoRespondidaFarol.feedbackHTML =
+        document.getElementById("areaQuestao")?.innerHTML || "";
+}
+
 atualizarEstatisticas();
 atualizarDashboard();
 atualizarPainelEstudos();
@@ -3698,6 +3975,8 @@ salvarDados();
 // ==========================
 
 function proximaQuestao() {
+
+    revisaoQuestaoRespondidaFarol = null;
 
     questaoAtual++;
 
@@ -4854,6 +5133,8 @@ function resetarProgresso() {
 
 function iniciarSimulado(qtd) {
 
+revisaoSimuladoRespondidoFarol = null;
+
 tipoSimuladoAtual = "geral";
 
 const todasQuestoes = Object.values(
@@ -4895,6 +5176,8 @@ function voltarDaQuestaoSimuladoFarol(){
         return;
     }
 
+    revisaoSimuladoRespondidoFarol = null;
+
     modoSimulado = false;
     questoesSimulado = [];
     indiceSimulado = 0;
@@ -4917,6 +5200,8 @@ function voltarDaQuestaoSimuladoFarol(){
 // ==========================
 
 function mostrarQuestaoSimulado() {
+
+    revisaoSimuladoRespondidoFarol = null;
 
     if(
         indiceSimulado === 0 &&
@@ -5088,6 +5373,14 @@ function corrigirSimulado() {
     const respostaMarcada = Number(resposta.value);
     const acertou = respostaMarcada === q.correta;
 
+    revisaoSimuladoRespondidoFarol = {
+        questao: q,
+        respostaMarcada: respostaMarcada,
+        numero: indiceSimulado + 1,
+        total: questoesSimulado.length,
+        feedbackHTML: ""
+    };
+
     const respostaAluno =
         q.alternativas[respostaMarcada] ||
         "Resposta não registrada";
@@ -5132,6 +5425,16 @@ function corrigirSimulado() {
             : "feedback-questao-erro"
         }">
 
+            <div style="display:flex;justify-content:flex-end;margin-bottom:4px;">
+                <button
+                    type="button"
+                    class="btn-voltar-simulado-v48"
+                    style="width:auto;padding:8px 12px;font-size:0.9rem;"
+                    onclick="voltarDaQuestaoSimuladoFarol()">
+                    ✕ Sair
+                </button>
+            </div>
+
             <div class="icone-feedback-questao">
                 ${acertou ? "✅" : "❌"}
             </div>
@@ -5173,8 +5476,8 @@ function corrigirSimulado() {
                 <button
                     type="button"
                     class="btn-voltar-simulado-v48"
-                    onclick="voltarDaQuestaoSimuladoFarol()">
-                    ← Voltar
+                    onclick="reverQuestaoSimuladoFarol()">
+                    🔎 Rever questão
                 </button>
 
                 <button
@@ -5192,6 +5495,11 @@ function corrigirSimulado() {
         </div>
     `;
 
+    if(revisaoSimuladoRespondidoFarol){
+        revisaoSimuladoRespondidoFarol.feedbackHTML =
+            document.getElementById("areaQuestao")?.innerHTML || "";
+    }
+
     window.scrollTo({
         top: 0,
         left: 0,
@@ -5204,6 +5512,8 @@ function corrigirSimulado() {
 // ==========================
 
 function proximaQuestaoSimulado() {
+
+    revisaoSimuladoRespondidoFarol = null;
 
     indiceSimulado++;
 
@@ -9819,6 +10129,8 @@ const assuntosApoioEscolar = [
     ];
 
 function voltarParaAssuntos(){
+
+    revisaoQuestaoRespondidaFarol = null;
 
     // Retorno contextual da rota Professor de História de Abaetetuba.
     // Os conteúdos pedagógicos também pertencem à disciplina geral de Didática,
