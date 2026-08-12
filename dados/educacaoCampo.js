@@ -1,992 +1,756 @@
+// Banco de questões — Educação do Campo (2026)
+// Base principal: LDB art. 28; Decreto nº 7.352/2010; Diretrizes CNE e PRONERA.
+// Questões autorais em nível de concurso para professor.
+
 const educacaoCampo = [
-
-{
-    pergunta: "Durante uma audiência pública, um gestor afirmou que a Educação do Campo representa apenas uma atualização terminológica da antiga Educação Rural, sem alterações significativas em seus fundamentos pedagógicos. Considerando as diretrizes atuais da modalidade, assinale a alternativa correta:",
-
+  {
+    pergunta: "Uma escola está situada no perímetro urbano da sede municipal, mas aproximadamente 85% de seus estudantes pertencem a comunidades ribeirinhas, extrativistas e de agricultura familiar. À luz do Decreto nº 7.352/2010, essa instituição:",
     alternativas: [
-        "A afirmação está correta, pois Educação Rural e Educação do Campo possuem os mesmos fundamentos, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A Educação do Campo diferencia-se por reconhecer os sujeitos do campo como protagonistas da construção de seus processos educativos.",
-        "A Educação do Campo concentra-se à formação profissional agrícola, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A Educação Rural foi incorporada integralmente à Educação do Campo sem alterações conceituais, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
-        "A principal diferença entre ambas consiste em geral na localização geográfica das escolas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
+      "não pode ser considerada escola do campo, pois a classificação dependeria da localização definida pelo IBGE e do endereço da sede administrativa.",
+      "pode ser considerada escola do campo, porque a definição também alcança escola urbana que atenda predominantemente populações do campo.",
+      "pode receber ações de Educação do Campo, mas juridicamente permanece fora do conceito de escola do campo por estar em área urbana e, nessa leitura, a composição socioterritorial dos estudantes teria valor pedagógico restrito, sem efeito na classificação da escola.",
+      "só será escola do campo se transferir sua sede administrativa para área rural e mantiver as turmas anexas na zona urbana.",
+      "depende de reconhecimento individual do MEC, pois o Decreto não utiliza a composição do público atendido como critério."
     ],
-
     correta: 1,
-
-    feedbackAcerto: "Correto. A Educação do Campo constitui uma concepção político-pedagógica construída a partir das lutas, identidades e necessidades dos povos do campo.",
-
-    feedbackErro: "Uma das pegadinhas mais frequentes é tratar Educação Rural e Educação do Campo como sinônimos.",
-
-    dicaBanca: "Campo ≠ Rural. O foco está nos sujeitos e em seus direitos."
-},
-
-{
-    pergunta: "Uma secretaria de educação decidiu implantar em todas as escolas do campo o mesmo currículo utilizado nas escolas urbanas, sem adaptações relacionadas à realidade local. A justificativa apresentada foi a necessidade de garantir igualdade educacional. À luz das diretrizes da modalidade, assinale a alternativa correta:",
-
+    explicacao: "O Decreto nº 7.352/2010 considera escola do campo tanto a situada em área rural quanto a situada em área urbana que atenda predominantemente populações do campo.",
+    feedbackAcerto: "Você identificou uma das pegadinhas mais importantes do Decreto: a localização física não é o único critério jurídico para caracterizar escola do campo.",
+    feedbackErro: "A correta admite escola urbana que atenda predominantemente populações do campo. As demais reduzem a definição à localização ou criam procedimentos que o Decreto não exige.",
+    dicaBanca: "Escola do campo pode estar em área urbana se o público atendido for predominantemente do campo."
+  },
+  {
+    pergunta: "Para os efeitos do Decreto nº 7.352/2010, qual grupo integra expressamente a noção de populações do campo?",
     alternativas: [
-        "A medida está correta, pois igualdade exige currículos idênticos, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A contextualização curricular pode comprometer a qualidade do ensino, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A legislação proíbe adequações curriculares relacionadas ao contexto local, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
-        "A contextualização aplica-se em geral às disciplinas técnicas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O currículo da Educação do Campo deve dialogar com os saberes, culturas e realidades dos estudantes."
+      "estudantes urbanos matriculados em cursos técnicos de agropecuária, independentemente de vínculo com o meio rural.",
+      "empresários do setor agroindustrial cuja atividade econômica tenha sede fora do perímetro urbano.",
+      "qualquer morador de Município com território rural, ainda que sua existência material não guarde relação com o trabalho no campo.",
+      "servidores públicos lotados em escolas rurais, ainda que residam e produzam suas condições materiais de existência em área urbana e essa leitura usaria vínculo funcional com a escola como critério de pertencimento às populações do campo e para caracterizar sua inserção socioterritorial perante a política educacional.",
+      "agricultores familiares, extrativistas, pescadores artesanais, ribeirinhos, assentados, acampados, trabalhadores assalariados rurais, quilombolas, caiçaras, povos da floresta, caboclos e outros sujeitos definidos pelo vínculo material com o meio rural."
     ],
-
     correta: 4,
-
-    feedbackAcerto: "Correto. A Educação do Campo valoriza a contextualização curricular e a relação entre conhecimento escolar e realidade social dos estudantes.",
-
-    feedbackErro: "A banca frequentemente confunde igualdade com padronização absoluta.",
-
-    dicaBanca: "Contextualizar não é reduzir conteúdo; é atribuir significado."
-},
-
-{
-    pergunta: "Durante uma formação docente, um professor afirmou que a Educação do Campo possui como principal finalidade preparar os estudantes para abandonar o meio rural e buscar melhores oportunidades nos centros urbanos. Considerando os fundamentos da modalidade, assinale a alternativa correta:",
-
+    explicacao: "O art. 1º, § 1º, I, apresenta uma definição ampla e plural das populações do campo, ligada às formas de vida e produção material no meio rural.",
+    feedbackAcerto: "Você reconheceu que o Decreto não reduz os povos do campo a agricultores familiares. Ele enumera diversos grupos e ainda mantém cláusula aberta para outros sujeitos com vínculo material com o meio rural.",
+    feedbackErro: "A correta reúne os grupos previstos no Decreto. Os demais itens utilizam localização administrativa, emprego ou setor econômico como substitutos indevidos da definição.",
+    dicaBanca: "Populações do campo = diversidade social + produção das condições materiais no meio rural."
+  },
+  {
+    pergunta: "Uma rede de ensino trata agricultores familiares, quilombolas, ribeirinhos, pescadores artesanais e povos da floresta como um grupo cultural homogêneo para utilizar um único modelo pedagógico. Essa opção contraria diretamente o princípio de:",
     alternativas: [
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A modalidade possui como objetivo central reduzir a população rural, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A legislação estabelece a urbanização como meta educacional, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
-        "A Educação do Campo busca fortalecer identidades, ampliar direitos e garantir liberdade de escolha aos sujeitos do campo.",
-        "A Educação do Campo existe em geral para suprir mão de obra urbana, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
+      "prioridade da formação profissional agrícola sobre os demais componentes da educação básica e, por essa lógica, diferenças culturais seriam tratadas em projetos locais sem repercussão sobre a organização curricular.",
+      "centralização curricular como mecanismo de garantia de igualdade entre regiões.",
+      "respeito à diversidade do campo em seus aspectos sociais, culturais, ambientais, políticos, econômicos, de gênero, geração, raça e etnia.",
+      "separação entre políticas de identidade e organização pedagógica, evitando interferência comunitária no currículo.",
+      "padronização de metodologias como condição para controle nacional da qualidade do ensino rural."
     ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A modalidade valoriza os modos de vida do campo e reconhece o direito dos sujeitos de permanecerem ou não em seus territórios.",
-
-    feedbackErro: "A Educação do Campo não tem como finalidade promover êxodo rural.",
-
-    dicaBanca: "Valorizar o campo não significa impedir escolhas individuais."
-},
-
-{
-    pergunta: "Ao analisar os princípios da Educação do Campo, uma candidata concluiu que a modalidade estabelece relação entre educação, cultura, trabalho, território e participação comunitária. Essa conclusão está:",
-
-    alternativas: [
-        "Incorreta, pois a modalidade concentra-se aos conteúdos curriculares.",
-        "Incorreta, pois trabalho e território não integram seus fundamentos.",
-        "Correta.",
-        "Incorreta, pois participação comunitária não possui relevância pedagógica.",
-        "Incorreta, pois a Educação do Campo concentra-se à dimensão produtiva."
-    ],
-
     correta: 2,
-
-    feedbackAcerto: "Correto. A Educação do Campo articula diferentes dimensões da vida social e cultural dos povos do campo.",
-
-    feedbackErro: "A modalidade possui caráter amplo e interdisciplinar.",
-
-    dicaBanca: "Educação do Campo = território + cultura + trabalho + participação."
-},
-
-{
-    pergunta: "Uma escola localizada em área rural possui currículo urbano descontextualizado, baixa participação comunitária e ausência de diálogo com a realidade local. A direção afirma que a instituição já atende plenamente aos princípios da Educação do Campo por estar situada fora do perímetro urbano. Considerando as diretrizes da modalidade, assinale a alternativa correta:",
-
+    explicacao: "O art. 2º, I, do Decreto nº 7.352/2010 estabelece o respeito à diversidade do campo em múltiplas dimensões.",
+    feedbackAcerto: "Você identificou que reconhecer Educação do Campo não significa produzir uma identidade rural única. A própria norma exige respeito à diversidade interna dos povos do campo.",
+    feedbackErro: "A correta é o princípio de respeito à diversidade. As demais defendem homogeneização que não aparece no Decreto.",
+    dicaBanca: "Educação do Campo reconhece diversidade; não fabrica um sujeito rural único."
+  },
+  {
+    pergunta: "Uma escola do campo propõe um PPP que relaciona pesquisa escolar, desenvolvimento social, sustentabilidade ambiental e mundo do trabalho. Essa proposta corresponde ao Decreto nº 7.352/2010 porque ele incentiva:",
     alternativas: [
-        "A Educação do Campo exige identidade pedagógica vinculada às necessidades, culturas e realidades dos povos do campo.",
-        "A localização geográfica é suficiente para caracterizar uma escola de Educação do Campo, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
-        "Toda escola situada em área rural integra automaticamente a Educação do Campo, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
-        "A modalidade não estabelece critérios pedagógicos específicos, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A participação comunitária é condicionada ao planejamento institucional na organização escolar, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
+      "projetos político-pedagógicos específicos que façam da escola espaço público de investigação e articulação de experiências voltadas ao desenvolvimento social justo e ambientalmente sustentável.",
+      "currículos profissionalizantes centrados em produtividade agrícola e desvinculados da formação geral da educação básica.",
+      "projetos de desenvolvimento local conduzidos pela escola em substituição às políticas econômicas e sociais do poder público.",
+      "planos escolares definidos por empresas rurais da região para aproximar diretamente formação e demanda do mercado de trabalho.",
+      "PPP uniforme para as escolas do campo de cada Estado, permitindo adequações de calendário conforme as condições climáticas locais e o desenvolvimento territorial seria tratado como tema transversal, sem interferir na estrutura geral do projeto pedagógico."
     ],
-
     correta: 0,
-
-    feedbackAcerto: "Correto. A identidade da Educação do Campo depende de princípios pedagógicos, participação social e contextualização curricular.",
-
-    feedbackErro: "A principal pegadinha é confundir localização geográfica com identidade pedagógica.",
-
-    dicaBanca: "Escola no campo ≠ Educação do Campo."
-},
-{
-    pergunta: "Durante uma reunião pedagógica, um gestor afirmou que as Diretrizes Operacionais para a Educação Básica nas Escolas do Campo autorizam a utilização dos mesmos modelos organizacionais adotados em escolas urbanas, independentemente das características locais. Considerando a Resolução CNE/CEB nº 1/2002, assinale a alternativa correta:",
-
+    explicacao: "O art. 2º, II, valoriza PPPs específicos e a escola como espaço público de investigação, articulada ao desenvolvimento social economicamente justo, ambientalmente sustentável e ao mundo do trabalho.",
+    feedbackAcerto: "Você identificou que o vínculo com trabalho e desenvolvimento não significa reduzir a escola a treinamento produtivo.",
+    feedbackErro: "A correta preserva investigação, justiça social, sustentabilidade e mundo do trabalho. As demais subordinam a escola ao mercado ou eliminam sua autonomia pedagógica contextualizada.",
+    dicaBanca: "PPP do campo: investigação + justiça social + sustentabilidade + mundo do trabalho."
+  },
+  {
+    pergunta: "Em determinada rede, todos os professores das escolas do campo recebem a mesma formação continuada oferecida às escolas urbanas, sem qualquer abordagem sobre condições concretas de vida e trabalho das comunidades atendidas. O Decreto nº 7.352/2010 orienta:",
     alternativas: [
-        "A afirmação está correta, pois a legislação determina padronização nacional absoluta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "As Diretrizes reconhecem a necessidade de organização escolar adequada às características dos povos do campo.",
-        "As especificidades territoriais possuem relevância em geral administrativa, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "As adaptações são permitidas em geral para o calendário escolar, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A legislação proíbe adequações relacionadas ao contexto sociocultural, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional."
+      "manutenção do modelo comum, porque formação específica para o campo produziria tratamento desigual entre docentes da mesma rede e as especificidades territoriais seriam trabalhadas posteriormente pelos próprios docentes em ações de adaptação local.",
+      "substituição da formação pedagógica por cursos técnicos de produção rural para aproximar professor e comunidade.",
+      "formação específica restrita aos gestores, mantendo professores vinculados ao programa geral da rede.",
+      "desenvolvimento de políticas de formação dos profissionais da educação que considerem as condições concretas de produção e reprodução social da vida no campo.",
+      "formação profissional definida por associações comunitárias, sem necessidade de articulação com políticas públicas de formação docente."
     ],
-
+    correta: 3,
+    explicacao: "O art. 2º, III, estabelece formação de profissionais da educação voltada às especificidades das escolas do campo e às condições concretas da vida no campo.",
+    feedbackAcerto: "Você percebeu que igualdade não significa formação indiferente ao contexto. A própria política exige preparação profissional conectada às especificidades territoriais.",
+    feedbackErro: "A correta é a formação contextualizada. As demais confundem formação específica com formação agrícola, restrição a gestores ou transferência da responsabilidade estatal.",
+    dicaBanca: "Formação para o campo considera as condições concretas de vida e trabalho das comunidades."
+  },
+  {
+    pergunta: "Uma escola ajusta conteúdos, metodologias, organização escolar e calendário aos ciclos produtivos e às condições climáticas da região. No Decreto nº 7.352/2010, essa prática se relaciona principalmente ao princípio de:",
+    alternativas: [
+      "substituição da base comum por conhecimentos comunitários.",
+      "gestão financeira descentralizada das unidades do campo.",
+      "valorização da identidade da escola do campo por meio de PPP, currículo, metodologias e flexibilidade organizacional adequados às necessidades dos estudantes.",
+      "autonomia plena da unidade para reduzir carga horária quando a produção agrícola exige participação familiar dos estudantes e essa flexibilidade permitiria reorganizar a oferta segundo o calendário produtivo definido pela comunidade.",
+      "educação profissional obrigatória como eixo estruturador da educação básica do campo."
+    ],
+    correta: 2,
+    explicacao: "O art. 2º, IV, associa identidade da escola do campo a projeto pedagógico, conteúdos, metodologias e flexibilidade organizacional, incluindo calendário adequado às fases do ciclo agrícola e condições climáticas.",
+    feedbackAcerto: "Você relacionou corretamente contextualização e identidade institucional, sem confundir flexibilidade com redução das exigências legais.",
+    feedbackErro: "A correta descreve o princípio do art. 2º, IV. As demais substituem currículo, reduzem carga horária ou profissionalizam a modalidade sem base normativa.",
+    dicaBanca: "Flexibilidade do campo adapta a organização; não elimina o direito ao currículo e à carga legal."
+  },
+  {
+    pergunta: "Uma Secretaria afirma que qualidade educacional deve ser controlada por indicadores técnicos, sem participação de comunidades ou movimentos sociais do campo. O Decreto nº 7.352/2010 adota posição diferente ao prever:",
+    alternativas: [
+      "controle social da qualidade da educação escolar mediante efetiva participação da comunidade e dos movimentos sociais do campo.",
+      "controle comunitário exclusivo sobre currículo, contratação de professores e aplicação dos recursos da escola.",
+      "avaliação realizada pelas organizações sociais em substituição aos sistemas oficiais de ensino e aos órgãos normativos e o sistema oficial passaria a cumprir função de registro e homologação dos resultados produzidos pelas organizações participantes.",
+      "consulta facultativa aos movimentos sociais, limitada a temas culturais e eventos comunitários da escola.",
+      "participação popular restrita à eleição da direção, deixando planejamento e acompanhamento fora do controle social."
+    ],
+    correta: 0,
+    explicacao: "O art. 2º, V, reconhece explicitamente o controle social da qualidade por meio da efetiva participação da comunidade e dos movimentos sociais do campo.",
+    feedbackAcerto: "Você identificou participação como princípio de controle social, mas sem transferir às organizações comunitárias todas as competências do sistema de ensino.",
+    feedbackErro: "A correta reproduz o princípio. As demais ou eliminam a participação ou ampliam suas competências para além do texto normativo.",
+    dicaBanca: "Controle social é participação efetiva, não mera consulta simbólica."
+  },
+  {
+    pergunta: "Qual conjunto apresenta corretamente os cinco eixos de princípios do art. 2º do Decreto nº 7.352/2010?",
+    alternativas: [
+      "universalização curricular; formação técnica; gestão empresarial; produtividade; avaliação externa.",
+      "território; profissionalização agrícola; centralização pedagógica; ensino remoto; financiamento rural e os demais elementos ligados à identidade escolar apareceriam como estratégias complementares de implementação da política.",
+      "acesso; transporte; merenda; infraestrutura; avaliação de desempenho.",
+      "currículo nacional; calendário único; formação geral; controle administrativo; integração produtiva.",
+      "diversidade; PPP específico e desenvolvimento sustentável; formação profissional contextualizada; identidade/flexibilidade da escola; controle social com participação comunitária."
+    ],
+    correta: 4,
+    explicacao: "Os cinco incisos do art. 2º articulam diversidade, PPP contextualizado, formação dos profissionais, identidade/flexibilidade e controle social.",
+    feedbackAcerto: "Você reconheceu a estrutura normativa completa, em vez de reunir políticas importantes que pertencem a outros artigos do Decreto.",
+    feedbackErro: "A correta sintetiza os cinco incisos do art. 2º. As demais listas misturam ações administrativas, infraestrutura e conceitos que não compõem esse conjunto de princípios.",
+    dicaBanca: "Art. 2º: diversidade + PPP + formação + identidade/flexibilidade + controle social."
+  },
+  {
+    pergunta: "O art. 28 da LDB, na redação vigente, determina que os sistemas de ensino promovam adaptações na educação básica para a população rural. Entre elas está:",
+    alternativas: [
+      "redução da base curricular comum quando os saberes comunitários forem considerados suficientes para a formação local e o contexto territorial seria considerado em projetos complementares desenvolvidos fora dos componentes curriculares centrais.",
+      "conteúdos e metodologias apropriados às reais necessidades e interesses dos alunos das escolas do campo, com possibilidade de uso da Pedagogia da Alternância.",
+      "substituição do calendário de 200 dias por calendário produtivo local definido pelas associações de agricultores.",
+      "oferta obrigatória de formação técnica agrícola no ensino fundamental e no ensino médio das escolas do campo.",
+      "organização idêntica à escola urbana, alterando-se os horários de entrada e saída em épocas de colheita e de maior dificuldade de deslocamento."
+    ],
     correta: 1,
-
-    feedbackAcerto: "Correto. As Diretrizes Operacionais reconhecem a diversidade dos sujeitos do campo e a necessidade de organização educacional compatível com suas realidades.",
-
-    feedbackErro: "Uma das pegadinhas mais comuns é associar igualdade à padronização absoluta.",
-
-    dicaBanca: "Diretrizes do Campo valorizam diversidade e contextualização."
-},
-
-{
-    pergunta: "Uma escola do campo adequou seu calendário letivo para compatibilizá-lo com períodos de colheita, chuvas intensas e condições locais de deslocamento dos estudantes. À luz das Diretrizes Operacionais, essa medida é:",
-
+    explicacao: "A Lei nº 14.767/2023 atualizou o art. 28, I, da LDB e incluiu expressamente a possibilidade de uso da Pedagogia da Alternância.",
+    feedbackAcerto: "Você identificou a atualização legislativa de 2023 e preservou a ideia de adequação curricular sem reduzir o direito aos conhecimentos escolares.",
+    feedbackErro: "A correta corresponde ao inciso I. As demais transformam adequação em redução curricular, profissionalização compulsória ou calendário sem limites legais.",
+    dicaBanca: "Desde 2023, a Pedagogia da Alternância aparece expressamente no art. 28 da LDB."
+  },
+  {
+    pergunta: "Além de conteúdos e metodologias adequados, o art. 28 da LDB prevê:",
     alternativas: [
-        "Admissível, desde que preservadas as exigências legais relativas à carga horária e aos dias letivos.",
-        "Incompatível com a legislação educacional, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
-        "Permitida em geral mediante autorização judicial, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Vedada para escolas públicas, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Restrita às instituições de educação profissional, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
+      "currículo definido por organizações produtivas locais e certificação profissional obrigatória ao final do ensino médio e a articulação com as práticas locais ficaria concentrada na parte diversificada definida pelo sistema de ensino.",
+      "financiamento diferenciado por aluno e contratação prioritária de docentes residentes no território.",
+      "substituição da avaliação escolar por acompanhamento comunitário e projetos de desenvolvimento territorial.",
+      "organização escolar própria, inclusive calendário adequado às fases do ciclo agrícola e às condições climáticas, e adequação à natureza do trabalho na zona rural.",
+      "dispensa de frequência em períodos produtivos, compensada por atividades familiares reconhecidas como tempo escolar."
     ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. As Diretrizes admitem adequações organizacionais compatíveis com as realidades do campo, respeitando os requisitos legais.",
-
-    feedbackErro: "As bancas costumam cobrar a diferença entre flexibilização organizacional e descumprimento da legislação.",
-
-    dicaBanca: "Flexibilidade não significa redução de carga horária."
-},
-
-{
-    pergunta: "Ao analisar uma proposta pedagógica, uma candidata observou que a escola desenvolvia suas atividades sem qualquer consulta às famílias, associações comunitárias ou organizações locais. Considerando os princípios das Diretrizes Operacionais para a Educação do Campo, assinale a alternativa correta:",
-
-    alternativas: [
-        "A participação comunitária é condicionada ao planejamento institucional e sem relevância pedagógica, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A gestão da escola deve ocorrer predominantemente por especialistas da educação, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A participação dos sujeitos do campo constitui elemento importante na construção da identidade da escola.",
-        "A comunidade pode participar em geral de eventos comemorativos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A legislação restringe a participação social aos conselhos municipais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. A Educação do Campo valoriza a participação dos sujeitos envolvidos no processo educativo.",
-
-    feedbackErro: "A construção coletiva é um dos fundamentos da modalidade.",
-
-    dicaBanca: "Participação social aparece frequentemente nas questões sobre Educação do Campo."
-},
-
-{
-    pergunta: "Durante uma auditoria educacional, verificou-se que determinada escola localizada em área rural utilizava materiais didáticos e projetos pedagógicos completamente desvinculados da realidade local, ignorando aspectos culturais, econômicos e ambientais da comunidade. Considerando as Diretrizes Operacionais, assinale a alternativa correta:",
-
-    alternativas: [
-        "A prática está adequada, pois o currículo deve ignorar particularidades locais, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A contextualização curricular pode comprometer a universalidade do ensino, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "O contexto local possui relevância em geral para atividades extracurriculares, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A legislação impede a utilização de conteúdos relacionados ao território, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
-        "As Diretrizes incentivam a articulação entre currículo escolar e realidade dos estudantes do campo."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. O currículo deve dialogar com os saberes, experiências e contextos vividos pelos estudantes.",
-
-    feedbackErro: "Educação do Campo exige contextualização sem perda da qualidade acadêmica.",
-
-    dicaBanca: "Contextualizar é conectar conhecimento e realidade."
-},
-
-{
-    pergunta: "Ao estudar a Resolução CNE/CEB nº 1/2002, um candidato concluiu que suas diretrizes procuram assegurar o direito à educação de qualidade aos povos do campo, respeitando suas identidades, culturas, modos de vida e formas de organização social. Essa conclusão está:",
-
-    alternativas: [
-        "Incorreta, pois as diretrizes possuem caráter predominantemente administrativo.",
-        "Incorreta, pois identidade cultural não integra seus objetivos.",
-        "Incorreta, pois a modalidade concentra-se à preparação para o trabalho agrícola.",
-        "Correta.",
-        "Incorreta, pois as diretrizes não fazem referência às especificidades dos povos do campo."
-    ],
-
     correta: 3,
-
-    feedbackAcerto: "Correto. Essa síntese expressa adequadamente os princípios centrais das Diretrizes Operacionais para a Educação do Campo.",
-
-    feedbackErro: "As Diretrizes reconhecem a diversidade dos povos do campo e o direito a uma educação contextualizada e de qualidade.",
-
-    dicaBanca: "Qualidade + identidade + território = núcleo das Diretrizes."
-},
-{
-    pergunta: "Durante uma capacitação para gestores escolares, foi afirmado que o Decreto nº 7.352/2010 limita-se à regulamentação administrativa das escolas rurais, sem estabelecer diretrizes para políticas educacionais voltadas aos povos do campo. Considerando o referido decreto, assinale a alternativa correta:",
-
+    explicacao: "Os incisos II e III do art. 28 tratam da organização escolar própria, calendário adequado e adequação à natureza do trabalho na zona rural.",
+    feedbackAcerto: "Você distinguiu adaptação organizacional legítima de dispensa de frequência ou substituição das responsabilidades escolares.",
+    feedbackErro: "A correta reúne os incisos II e III. As demais criam mecanismos que o art. 28 não prevê.",
+    dicaBanca: "Art. 28: currículo/metodologia + organização/calendário + natureza do trabalho rural."
+  },
+  {
+    pergunta: "Uma escola pretende utilizar Pedagogia da Alternância e a direção afirma que essa metodologia deixou de ter base normativa nacional após a reforma do ensino médio. Essa afirmação está:",
     alternativas: [
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "O decreto possui caráter predominantemente financeiro, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O decreto dispõe sobre a Política de Educação do Campo e sobre o PRONERA.",
-        "O decreto trata em geral da educação profissional agrícola, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O decreto concentra-se à organização do transporte escolar, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
+      "correta, porque a Alternância passou a depender de autorização excepcional do Conselho Estadual de Educação.",
+      "correta para a educação básica, permanecendo válida nos cursos superiores de formação de professores por norma específica.",
+      "correta para escolas públicas, embora instituições comunitárias ainda possam utilizá-la em programas próprios.",
+      "incorreta nas EFAs e CFRs, porque a legislação limitaria a Alternância aos modelos dos Centros Familiares de Formação permanecendo as demais escolas do campo vinculadas à organização convencional prevista em seus regimentos e calendários.",
+      "incorreta, pois a LDB passou a mencionar expressamente a Pedagogia da Alternância em 2023 e o CNE mantém Diretrizes Curriculares específicas para a metodologia."
     ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. O Decreto nº 7.352/2010 estabelece a Política de Educação do Campo e regulamenta ações relacionadas ao PRONERA.",
-
-    feedbackErro: "Uma das pegadinhas mais comuns é reduzir o decreto a aspectos administrativos.",
-
-    dicaBanca: "Decreto 7.352/2010 = Política de Educação do Campo + PRONERA."
-},
-
-{
-    pergunta: "Durante uma discussão sobre políticas públicas educacionais, um candidato afirmou que o PRONERA foi criado para atender exclusivamente estudantes do ensino superior residentes em áreas urbanas. Considerando o Decreto nº 7.352/2010, assinale a alternativa correta:",
-
-    alternativas: [
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "O PRONERA destina-se em geral à formação universitária urbana, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O PRONERA atende predominantemente trabalhadores do agronegócio, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O PRONERA busca ampliar o acesso à educação para beneficiários da reforma agrária em diferentes níveis e modalidades de ensino.",
-        "O programa concentra-se à alfabetização de adultos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. O PRONERA possui abrangência ampla e busca garantir acesso à educação aos beneficiários da reforma agrária.",
-
-    feedbackErro: "As bancas costumam cobrar a finalidade social e educacional do PRONERA.",
-
-    dicaBanca: "PRONERA está diretamente ligado à reforma agrária."
-},
-
-{
-    pergunta: "Ao analisar o Decreto nº 7.352/2010, uma professora concluiu que os povos do campo devem ser reconhecidos em sua diversidade social, cultural, econômica e territorial. Essa conclusão está:",
-
-    alternativas: [
-        "Correta.",
-        "Incorreta, pois o decreto considera os povos do campo como grupo homogêneo.",
-        "Incorreta, pois a diversidade cultural não integra a política educacional.",
-        "Incorreta, pois em geral agricultores familiares são contemplados.",
-        "Incorreta, pois a política concentra-se às escolas públicas urbanas."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. O decreto reconhece a diversidade dos sujeitos do campo e suas diferentes formas de organização social e cultural.",
-
-    feedbackErro: "A diversidade dos povos do campo constitui fundamento importante da política pública.",
-
-    dicaBanca: "Povos do campo = diversidade, não homogeneidade."
-},
-
-{
-    pergunta: "Uma rede de ensino decidiu encerrar programas educacionais voltados às populações do campo alegando que a localização geográfica dos estudantes não deveria influenciar a formulação de políticas públicas. Considerando o Decreto nº 7.352/2010, assinale a alternativa correta:",
-
-    alternativas: [
-        "A decisão está alinhada ao decreto, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A legislação proíbe diferenciação de políticas conforme contextos territoriais, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
-        "A Educação do Campo possui caráter predominantemente complementar, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O decreto concentra-se ao ensino técnico agrícola, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O decreto reconhece a necessidade de políticas educacionais específicas para os povos do campo."
-    ],
-
     correta: 4,
-
-    feedbackAcerto: "Correto. O decreto reconhece especificidades territoriais e sociais que justificam políticas educacionais próprias para os povos do campo.",
-
-    feedbackErro: "A Educação do Campo foi construída justamente para responder a necessidades específicas desses sujeitos.",
-
-    dicaBanca: "Especificidade não é privilégio; é garantia de direito."
-},
-
-{
-    pergunta: "Ao estudar o Decreto nº 7.352/2010, um candidato concluiu que suas disposições buscam ampliar o acesso, a permanência e a qualidade da educação para os povos do campo, respeitando suas identidades, territórios e modos de vida. Essa conclusão está:",
-
+    explicacao: "A Lei nº 14.767/2023 incorporou a Alternância ao art. 28 da LDB, e a Resolução CNE/CP nº 1/2023 estabelece Diretrizes Curriculares da Pedagogia da Alternância.",
+    feedbackAcerto: "Você identificou que a metodologia ganhou reforço normativo recente, e não perdeu validade.",
+    feedbackErro: "A correta combina LDB e norma do CNE. As demais limitam territorial ou institucionalmente a Alternância sem fundamento.",
+    dicaBanca: "Alternância tem base na LDB e diretriz nacional específica de 2023."
+  },
+  {
+    pergunta: "Em uma experiência de Alternância, o Tempo Comunidade é tratado como período sem intencionalidade formativa, destinado apenas à permanência do estudante em casa. Essa compreensão:",
     alternativas: [
-        "Incorreta, pois o decreto trata em geral do acesso à escola.",
-        "Correta.",
-        "Incorreta, pois qualidade educacional não integra seus objetivos.",
-        "Incorreta, pois identidade cultural não possui relevância para a política.",
-        "Incorreta, pois o decreto concentra-se ao financiamento educacional."
+      "é adequada quando a escola registra as atividades como estudo domiciliar e mantém avaliações no Tempo Escola.",
+      "é compatível com a Alternância se a família acompanhar o estudante e assinar relatórios de participação.",
+      "reduz a proposta, porque os diferentes tempos e espaços formativos devem articular experiência, investigação, comunidade e conhecimentos sistematizados.",
+      "é recomendável nos anos iniciais, pois a investigação territorial deve ser reservada às etapas posteriores da educação básica.",
+      "corresponde à LDB, que menciona Alternância como forma de calendário, mas não como metodologia de articulação formativa e as atividades comunitárias seriam tratadas como tarefas complementares sem contabilização formativa equivalente ao tempo escolar."
     ],
-
+    correta: 2,
+    explicacao: "A Pedagogia da Alternância articula tempos e espaços distintos como partes do processo formativo, não como simples divisão administrativa do calendário.",
+    feedbackAcerto: "Você identificou que Tempo Comunidade precisa ter intencionalidade educativa e relação com o Tempo Escola.",
+    feedbackErro: "A correta reconhece a articulação formativa. As demais reduzem a Alternância a presença física, assinatura familiar ou divisão temporal.",
+    dicaBanca: "Alternância não é férias intercaladas; os dois tempos são formativos."
+  },
+  {
+    pergunta: "Uma escola do campo deseja trabalhar práticas produtivas tradicionais da comunidade em Ciências. Qual abordagem melhor atende ao art. 6º do Decreto nº 7.352/2010?",
+    alternativas: [
+      "promover diálogo entre saberes próprios da comunidade e saberes acadêmicos, construindo proposta contextualizada sem substituir um pelo outro.",
+      "usar os conhecimentos comunitários como motivação inicial e descartá-los quando começar o conteúdo científico formal porque a função dos saberes locais seria aproximar inicialmente o estudante do tema antes da sistematização acadêmica.",
+      "substituir os saberes acadêmicos pelos conhecimentos tradicionais, pois a Educação do Campo prioriza a experiência local.",
+      "separar as duas formas de conhecimento em componentes distintos para impedir interferência entre ciência e cultura.",
+      "utilizar materiais produzidos na comunidade como referência principal, evitando livros didáticos de circulação nacional."
+    ],
+    correta: 0,
+    explicacao: "O art. 6º exige materiais e conteúdos relacionados aos conhecimentos das populações do campo, considerando saberes próprios em diálogo com os saberes acadêmicos.",
+    feedbackAcerto: "Você evitou dois extremos: negar o saber local ou substituir o conhecimento sistematizado por ele.",
+    feedbackErro: "A correta é o diálogo entre saberes. As demais hierarquizam, isolam ou eliminam uma das dimensões previstas na norma.",
+    dicaBanca: "Contextualizar = colocar saber local e conhecimento acadêmico em diálogo."
+  },
+  {
+    pergunta: "Sobre os recursos didáticos destinados à Educação do Campo, o Decreto nº 7.352/2010 determina que:",
+    alternativas: [
+      "sejam produzidos por universidades públicas para garantir validação científica e uniformidade técnica dos conteúdos.",
+      "tenham conteúdo nacional uniforme e sejam complementados oralmente pelo professor com referências locais.",
+      "sejam restritos a materiais impressos, preservando as tecnologias digitais para programas específicos de inclusão digital e as tecnologias digitais seriam usadas como suporte de acesso, não como parte dos recursos contextualizados da política.",
+      "atendam às especificidades formativas das populações do campo e incluam conhecimentos das comunidades em diálogo com saberes acadêmicos.",
+      "sejam aprovados por organizações sociais do campo antes de qualquer avaliação pelo sistema de ensino."
+    ],
+    correta: 3,
+    explicacao: "O art. 6º abrange recursos didáticos, pedagógicos, tecnológicos, culturais e literários e exige contextualização com os saberes das comunidades e acadêmicos.",
+    feedbackAcerto: "Você reconheceu que a norma não reduz contextualização a um suplemento oral do professor nem limita o tipo de recurso.",
+    feedbackErro: "A correta reproduz a lógica do art. 6º. As demais impõem exclusividade institucional, tecnológica ou procedimental inexistente.",
+    dicaBanca: "Material do campo precisa dialogar com a realidade sem abandonar o conhecimento acadêmico."
+  },
+  {
+    pergunta: "Na formação de professores para a Educação do Campo, o Decreto nº 7.352/2010 admite:",
+    alternativas: [
+      "metodologias de educação a distância e formação concomitante à atuação profissional, inclusive com Pedagogia da Alternância e atividades de ensino, pesquisa e extensão.",
+      "formação a distância voltada aos gestores, mantendo professores em percursos presenciais de formação continuada.",
+      "formação concomitante à atuação em caráter emergencial e sem integração com pesquisa ou extensão.",
+      "Pedagogia da Alternância voltada aos estudantes da educação básica, sem aplicação na formação dos profissionais.",
+      "formação técnica rural como substituta da licenciatura quando o professor pertence à própria comunidade."
+    ],
     correta: 1,
-
-    feedbackAcerto: "Correto. O decreto articula acesso, permanência, qualidade e respeito às especificidades dos povos do campo.",
-
-    feedbackErro: "A política de Educação do Campo possui caráter amplo e envolve múltiplas dimensões do direito à educação.",
-
-    dicaBanca: "Acesso + permanência + qualidade = tríade recorrente em provas."
-},
-{
-    pergunta: "Durante uma formação continuada, um professor afirmou que a Educação do Campo destina-se exclusivamente aos agricultores familiares, não abrangendo outros grupos sociais que vivem e trabalham em territórios rurais. Considerando a legislação e as políticas da modalidade, assinale a alternativa correta:",
-
+    explicacao: "O art. 5º permite EaD, formação concomitante à atuação e metodologias adequadas, inclusive Alternância, ensino, pesquisa e extensão.",
+    feedbackAcerto: "Você identificou que o Decreto flexibiliza estratégias formativas sem reduzir exigências profissionais ou substituir formação docente por experiência rural.",
+    feedbackErro: "A correta corresponde ao art. 5º. As demais restringem instrumentos ou criam substituições de formação não previstas.",
+    dicaBanca: "Formação docente do campo pode combinar atuação, Alternância, ensino, pesquisa e extensão."
+  },
+  {
+    pergunta: "Quanto aos cursos de licenciatura das instituições públicas de ensino superior, o Decreto nº 7.352/2010 determina que seus projetos político-pedagógicos incorporem:",
     alternativas: [
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A Educação do Campo atende em geral agricultores familiares e produtores rurais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A Educação do Campo destina-se em geral a trabalhadores vinculados à produção agrícola, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Os demais grupos são atendidos predominantemente por modalidades especiais de ensino, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A modalidade contempla diversos sujeitos do campo, incluindo assentados, quilombolas, ribeirinhos, extrativistas, pescadores artesanais e outros grupos."
+      "processos de interação entre campo e cidade e organização própria dos espaços e tempos da formação, em consonância com as diretrizes nacionais.",
+      "habilitação agrícola obrigatória para todo licenciando que possa trabalhar em Município com população rural.",
+      "estágio curricular integralmente realizado em escola do campo, qualquer que seja a área de formação do curso.",
+      "currículo específico de Educação do Campo separado das demais licenciaturas e sem componentes comuns de formação docente e essa organização seria planejada pelo sistema sem necessidade de relação direta com o território ou a trajetória dos licenciandos.",
+      "disciplinas sobre produção rural como requisito único para caracterizar formação adequada às escolas do campo."
     ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. A Educação do Campo reconhece a diversidade dos sujeitos que vivem, trabalham e produzem seus modos de vida nos territórios rurais.",
-
-    feedbackErro: "Uma das pegadinhas mais frequentes é reduzir os sujeitos do campo apenas aos agricultores familiares.",
-
-    dicaBanca: "Sujeitos do campo = diversidade de povos e comunidades."
-},
-
-{
-    pergunta: "Ao analisar a Política de Educação do Campo, uma candidata observou que ela contempla comunidades quilombolas, ribeirinhas, extrativistas, pescadores artesanais e assentados da reforma agrária. Essa inclusão decorre principalmente do reconhecimento de que:",
-
-    alternativas: [
-        "Todos esses grupos exercem exatamente as mesmas atividades econômicas, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A legislação equipara todas as culturas rurais em uma única identidade social, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
-        "Esses grupos compartilham identidades, territórios e formas de vida que devem ser considerados pelas políticas educacionais.",
-        "As diferenças culturais possuem pouca relevância pedagógica, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "A Educação do Campo destina-se em geral a comunidades tradicionais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. A política reconhece a diversidade sociocultural dos povos do campo e a necessidade de respeitar suas especificidades.",
-
-    feedbackErro: "A inclusão desses grupos não decorre da homogeneidade, mas justamente do reconhecimento de suas diferenças.",
-
-    dicaBanca: "Diversidade é palavra-chave na Educação do Campo."
-},
-
-{
-    pergunta: "Durante uma discussão pedagógica, um gestor afirmou que os assentados da reforma agrária não constituem público específico da Educação do Campo porque seu vínculo principal é fundiário e não educacional. Considerando o Decreto nº 7.352/2010, assinale a alternativa correta:",
-
-    alternativas: [
-        "Os assentados são contemplados pelas políticas de Educação do Campo e por programas como o PRONERA.",
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "Os assentados são atendidos predominantemente pela educação de jovens e adultos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A legislação não faz referência aos assentamentos da reforma agrária, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
-        "A Educação do Campo concentra-se às escolas municipais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
-    ],
-
     correta: 0,
-
-    feedbackAcerto: "Correto. Os assentados da reforma agrária constituem público reconhecido pelas políticas de Educação do Campo.",
-
-    feedbackErro: "PRONERA e outras políticas foram estruturados justamente para atender esse público.",
-
-    dicaBanca: "Assentamento e PRONERA costumam aparecer juntos nas provas."
-},
-
-{
-    pergunta: "Uma escola localizada em região ribeirinha organizou seu calendário, projetos pedagógicos e atividades educativas considerando os ciclos das águas, as formas de deslocamento e as características socioculturais da comunidade. Essa prática está alinhada principalmente ao princípio de:",
-
+    explicacao: "O art. 5º, § 3º, fala expressamente em processos de interação campo-cidade e organização dos espaços e tempos formativos nos PPPs das licenciaturas públicas.",
+    feedbackAcerto: "Você identificou uma obrigação de formação docente mais sofisticada que a simples inclusão de disciplina sobre meio rural.",
+    feedbackErro: "A correta reproduz a diretriz. As demais transformam contextualização em habilitação agrícola ou estágio obrigatório universal.",
+    dicaBanca: "Licenciatura pública: interação campo-cidade + organização dos tempos e espaços formativos."
+  },
+  {
+    pergunta: "Uma rede mantém turma dos anos iniciais com estudantes de idades e graus de conhecimento diferentes e conclui que sua existência é, por definição, irregular. Segundo o Decreto nº 7.352/2010:",
     alternativas: [
-        "Padronização curricular nacional, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Contextualização da educação aos modos de vida dos sujeitos do campo.",
-        "Neutralidade territorial, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Segmentação pedagógica, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Urbanização curricular, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
+      "a turma deve ser extinta, porque a heterogeneidade etária seria compatível com a EJA, e não com turmas regulares dos anos iniciais.",
+      "a turma é permitida em escolas privadas comunitárias organizadas por Alternância e com autorização específica do sistema.",
+      "a organização pode ser assegurada quando necessária ao cumprimento do direito à educação, especialmente nos anos iniciais do ensino fundamental.",
+      "a turma exige transformação automática em classe de EJA para compatibilizar idades e percursos escolares.",
+      "a organização é tolerada por um ano, devendo o ente encaminhar os estudantes à escola nucleada mais próxima."
     ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. A Educação do Campo busca dialogar com os territórios, culturas e modos de vida das comunidades atendidas.",
-
-    feedbackErro: "A legislação valoriza a contextualização e não a simples reprodução de modelos urbanos.",
-
-    dicaBanca: "Território e educação caminham juntos na Educação do Campo."
-},
-
-{
-    pergunta: "Ao estudar os sujeitos da Educação do Campo, um candidato concluiu que agricultores familiares, assentados, acampados, quilombolas, ribeirinhos, extrativistas, pescadores artesanais e outros grupos podem ser contemplados por essa modalidade educacional. Essa conclusão está:",
-
-    alternativas: [
-        "Incorreta, pois em geral agricultores familiares integram a modalidade.",
-        "Incorreta, pois comunidades tradicionais pertencem predominantemente à Educação Escolar Indígena.",
-        "Incorreta, pois a Educação do Campo concentra-se aos trabalhadores agrícolas formais.",
-        "Correta.",
-        "Incorreta, pois pescadores artesanais e ribeirinhos não são reconhecidos pelas políticas educacionais."
-    ],
-
     correta: 3,
-
-    feedbackAcerto: "Correto. A Educação do Campo reconhece a pluralidade dos sujeitos que vivem e trabalham em diferentes territórios rurais.",
-
-    feedbackErro: "A modalidade foi construída justamente para atender essa diversidade de povos e comunidades.",
-
-    dicaBanca: "Não decore apenas agricultores; memorize a diversidade dos sujeitos do campo."
-},
-{
-    pergunta: "Durante uma reunião pedagógica, um professor afirmou que a Pedagogia da Alternância consiste apenas em dividir o calendário escolar entre períodos letivos e férias. Considerando os fundamentos dessa proposta educacional, assinale a alternativa correta:",
-
+    explicacao: "O art. 7º, I, prevê organização de turmas com alunos de diferentes idades e graus de conhecimento de uma mesma etapa, especialmente nos anos iniciais, quando necessária para garantir o direito à educação.",
+    feedbackAcerto: "Você reconheceu que multietariedade/multisseriação não é irregularidade automática; precisa ser analisada no contexto de garantia do direito.",
+    feedbackErro: "A correta corresponde ao art. 7º. As demais impõem fechamento, EJA ou prazo inexistente.",
+    dicaBanca: "Turma heterogênea pode ser estratégia legítima para garantir o direito à educação."
+  },
+  {
+    pergunta: "Um Município decide ofertar EJA para trabalhadores rurais apenas na sede urbana, em horário incompatível com suas jornadas de trabalho. O Decreto nº 7.352/2010 orienta, para redução do analfabetismo:",
     alternativas: [
-        "A Pedagogia da Alternância articula tempos e espaços formativos distintos, integrando escola, família, comunidade e território.",
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A Pedagogia da Alternância concentra-se à organização administrativa do calendário, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A proposta destina-se predominantemente à educação profissional agrícola, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A Alternância substitui o currículo escolar regular, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes."
+      "priorizar cursos remotos padronizados para evitar diferenciação de horário entre públicos da mesma rede.",
+      "ofertar políticas de EJA nas localidades onde as pessoas vivem e trabalham, respeitando suas especificidades de horários e calendário.",
+      "concentrar a EJA em escolas maiores, porque a oferta descentralizada é reservada ao ensino fundamental regular.",
+      "substituir EJA por qualificação profissional de curta duração quando houver baixa escolarização de adultos.",
+      "ofertar alfabetização no campo e transferir a continuidade dos estudos para a sede municipal após essa etapa e a continuidade poderia ocorrer por transporte à sede municipal depois da etapa inicial de escolarização."
     ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A Pedagogia da Alternância busca integrar os conhecimentos construídos na escola com as experiências vividas na comunidade.",
-
-    feedbackErro: "Uma das pegadinhas mais frequentes é reduzir a Alternância a uma simples divisão de calendário.",
-
-    dicaBanca: "Alternância = integração entre formação escolar e realidade social."
-},
-
-{
-    pergunta: "Uma Escola Família Agrícola organiza suas atividades em dois momentos formativos complementares: um período em que o estudante permanece na instituição e outro em que desenvolve atividades orientadas em sua comunidade. Esses momentos são conhecidos, respectivamente, como:",
-
+    correta: 1,
+    explicacao: "O art. 3º, I, vincula redução do analfabetismo à oferta de EJA onde as pessoas vivem e trabalham, respeitando horários e calendário.",
+    feedbackAcerto: "Você identificou que acesso formal a uma vaga distante e incompatível com a vida laboral não satisfaz a diretriz específica do Decreto.",
+    feedbackErro: "A correta reproduz a orientação do art. 3º. As demais centralizam ou fragmentam o direito.",
+    dicaBanca: "EJA do campo deve dialogar com lugar, trabalho, horários e calendário."
+  },
+  {
+    pergunta: "Entre os objetivos destinados a superar defasagens históricas na Educação do Campo, o Decreto nº 7.352/2010 prevê:",
     alternativas: [
-        "Tempo Aula e Tempo Pesquisa.",
-        "Tempo Curricular e Tempo Extracurricular.",
-        "Tempo Teórico e Tempo Prático.",
-        "Tempo Regular e Tempo Especial.",
-        "Tempo Escola e Tempo Comunidade."
+      "redução do currículo comum para ampliar a permanência dos estudantes no território.",
+      "priorização do ensino técnico em substituição à EJA nas áreas com maior índice de analfabetismo.",
+      "concentração de investimentos digitais em escolas urbanas que atendam estudantes provenientes do campo e as escolas do campo utilizariam as estruturas urbanas da rede como polos de acesso comunitário às tecnologias disponíveis.",
+      "transferência da responsabilidade por infraestrutura para associações e cooperativas rurais.",
+      "fornecimento de energia elétrica, água potável e saneamento, além de inclusão digital com acesso a computadores, internet e outras tecnologias."
     ],
-
     correta: 4,
-
-    feedbackAcerto: "Correto. Tempo Escola e Tempo Comunidade constituem elementos centrais da Pedagogia da Alternância.",
-
-    feedbackErro: "As bancas costumam cobrar exatamente essa terminologia.",
-
-    dicaBanca: "Decore: Tempo Escola ↔ Tempo Comunidade."
-},
-
-{
-    pergunta: "Durante o Tempo Comunidade, um estudante realizou entrevistas com agricultores locais, analisou práticas produtivas da região e registrou aspectos ambientais de seu território. Posteriormente, esses dados foram discutidos e sistematizados em sala de aula. Essa prática evidencia principalmente:",
-
+    explicacao: "O art. 3º inclui condições estruturais básicas e inclusão digital entre os mecanismos de superação das defasagens históricas.",
+    feedbackAcerto: "Você identificou que a Política de Educação do Campo envolve também infraestrutura e acesso tecnológico, não só currículo.",
+    feedbackErro: "A correta reúne dois incisos do art. 3º. As demais reduzem direitos ou deslocam responsabilidade pública.",
+    dicaBanca: "Educação do Campo também cobra energia, água, saneamento e inclusão digital."
+  },
+  {
+    pergunta: "Sobre a Educação de Jovens e Adultos na Política de Educação do Campo, assinale a alternativa correta.",
     alternativas: [
-        "Substituição do ensino escolar pela experiência prática, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
-        "Fragmentação entre teoria e prática, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Redução da importância do currículo formal, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Integração entre conhecimentos escolares e realidade vivida pelos estudantes.",
-        "Ensino baseado predominantemente na experiência empírica, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
+      "deve ser ofertada de forma independente da formação profissional para preservar o caráter escolar da EJA.",
+      "destina-se à alfabetização e ao ensino fundamental, enquanto a formação profissional seria desenvolvida em programa próprio.",
+      "o Decreto prevê fomento da EJA com integração da qualificação social e profissional ao ensino fundamental e articulação com desenvolvimento sustentável do campo.",
+      "a qualificação profissional substitui os componentes da escolarização quando os estudantes já possuem experiência laboral rural.",
+      "a integração com trabalho ocorre no PRONERA e não integra as ações gerais da Política de Educação do Campo e os vínculos entre escolarização e qualificação ficariam restritos aos projetos ligados diretamente à reforma agrária."
     ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A Alternância busca articular teoria e prática em um processo educativo integrado.",
-
-    feedbackErro: "A proposta não substitui a escola, mas promove diálogo entre diferentes formas de conhecimento.",
-
-    dicaBanca: "Alternância = teoria e prática em permanente interação."
-},
-
-{
-    pergunta: "Ao analisar uma proposta de Pedagogia da Alternância, uma candidata observou que os estudantes participavam ativamente da investigação de problemas locais e da construção de projetos relacionados ao desenvolvimento da comunidade. Essa característica está alinhada principalmente ao princípio de:",
-
-    alternativas: [
-        "Padronização curricular, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Centralização pedagógica, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Participação ativa dos sujeitos no processo educativo.",
-        "Separação entre escola e território, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "Neutralidade social da educação, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
-    ],
-
     correta: 2,
-
-    feedbackAcerto: "Correto. A Pedagogia da Alternância valoriza o protagonismo dos estudantes e sua relação com o território.",
-
-    feedbackErro: "O estudante não é mero receptor de conteúdos, mas participante ativo da construção do conhecimento.",
-
-    dicaBanca: "Protagonismo estudantil é marca da Alternância."
-},
-
-{
-    pergunta: "Ao estudar a Pedagogia da Alternância, um candidato concluiu que ela busca articular formação escolar, realidade comunitária, participação familiar, trabalho, cultura e desenvolvimento local, valorizando os conhecimentos produzidos nos territórios do campo. Essa conclusão está:",
-
+    explicacao: "Os arts. 3º e 4º articulam EJA com qualificação social e profissional e desenvolvimento sustentável do campo.",
+    feedbackAcerto: "Você reconheceu integração entre escolarização e qualificação sem transformar formação profissional em substituta da educação básica.",
+    feedbackErro: "A correta corresponde ao Decreto. As demais separam artificialmente EJA e qualificação ou reduzem a escolarização.",
+    dicaBanca: "EJA do campo pode integrar qualificação social e profissional."
+  },
+  {
+    pergunta: "Uma escola serve alimentação escolar totalmente desvinculada dos hábitos alimentares locais, mesmo existindo condições de considerar a cultura alimentar da comunidade. O Decreto nº 7.352/2010 estabelece que:",
     alternativas: [
-        "Incorreta, pois a Alternância concentra-se à educação técnica.",
-        "Correta.",
-        "Incorreta, pois família e comunidade não participam do processo formativo.",
-        "Incorreta, pois os conhecimentos locais não possuem relevância pedagógica.",
-        "Incorreta, pois a proposta concentra-se à organização do calendário escolar."
+      "o cardápio deve seguir padrão único nacional para garantir igualdade nutricional entre estudantes.",
+      "a cultura alimentar local pode aparecer em projetos pedagógicos, mas não interfere na alimentação escolar.",
+      "o ente pode utilizar hábitos locais quando os produtos forem produzidos pela agricultura familiar da própria comunidade e os cardápios de outras comunidades permaneceriam organizados a partir do padrão geral definido pela rede de ensino.",
+      "a alimentação deve considerar os hábitos do contexto socioeconômico-cultural-tradicional predominante em que a escola está inserida.",
+      "essa adequação é recomendação administrativa do PRONERA, não regra da Política de Educação do Campo."
     ],
-
+    correta: 3,
+    explicacao: "O art. 8º determina alimentação escolar de acordo com hábitos alimentares do contexto socioeconômico-cultural-tradicional predominante.",
+    feedbackAcerto: "Você identificou que a contextualização também alcança alimentação escolar, e não apenas currículo e calendário.",
+    feedbackErro: "A correta reproduz o art. 8º. As demais tratam cultura alimentar como elemento meramente pedagógico ou opcional.",
+    dicaBanca: "Educação do Campo contextualiza até a alimentação escolar."
+  },
+  {
+    pergunta: "Entre as ações que podem receber apoio técnico e financeiro da União no âmbito da Política de Educação do Campo está:",
+    alternativas: [
+      "educação superior com prioridade para formação de professores do campo, além de construção/adequação de escolas, formação de profissionais, recursos didáticos e transporte adequado às especificidades.",
+      "transporte e infraestrutura seriam as ações financiáveis, enquanto currículo, materiais e formação permaneceriam a cargo dos sistemas locais.",
+      "a política de apoio alcançaria a educação básica, ficando a educação superior fora do Decreto nº 7.352/2010.",
+      "formação profissional agrícola compulsória em todas as escolas que recebam complementação financeira da União.",
+      "criação de rede federal própria para substituir a oferta estadual e municipal em territórios rurais."
+    ],
     correta: 1,
-
-    feedbackAcerto: "Correto. Essa síntese contempla os principais fundamentos da Pedagogia da Alternância.",
-
-    feedbackErro: "A Alternância envolve formação integral, território, participação social e articulação entre diferentes saberes.",
-
-    dicaBanca: "Alternância = escola + comunidade + território + protagonismo."
-},
-{
-    pergunta: "Durante uma formação docente, um professor afirmou que o princípio educativo do trabalho, na Educação do Campo, significa preparar os estudantes exclusivamente para executar atividades produtivas agrícolas. Considerando os fundamentos da modalidade, assinale a alternativa correta:",
-
+    explicacao: "O art. 4º apresenta um conjunto amplo de ações apoiáveis, da educação infantil à superior, incluindo infraestrutura, formação, materiais e transporte.",
+    feedbackAcerto: "Você reconheceu a abrangência vertical e material das ações previstas no Decreto.",
+    feedbackErro: "A correta reúne ações expressas. As demais limitam a política ou inventam federalização e profissionalização compulsória.",
+    dicaBanca: "Apoio da União no campo vai muito além de transporte."
+  },
+  {
+    pergunta: "Quanto ao transporte escolar na Educação do Campo, o Decreto nº 7.352/2010 determina que sua oferta:",
     alternativas: [
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "O trabalho é compreendido em geral como preparação para o mercado de trabalho, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O princípio educativo do trabalho aplica-se normalmente à educação profissional, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O trabalho possui função predominantemente econômica no processo educativo, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O trabalho é entendido como dimensão constitutiva da vida humana, da produção do conhecimento e da transformação da realidade."
+      "seja padronizada nacionalmente, assegurando o mesmo tempo máximo de deslocamento para todos os territórios.",
+      "priorize o deslocamento para escolas urbanas, por oferecerem maior variedade de serviços educacionais.",
+      "seja considerada medida suficiente para justificar fechamento e nucleação de escolas pequenas.",
+      "o financiamento do transporte alcançaria matrículas dos anos finais do ensino fundamental e do ensino médio.",
+      "respeite especificidades geográficas, culturais e sociais, bem como limites de idade e etapas escolares."
     ],
-
     correta: 4,
-
-    feedbackAcerto: "Correto. Na Educação do Campo, o trabalho é compreendido como prática social, histórica e cultural relacionada à formação humana integral.",
-
-    feedbackErro: "Uma das pegadinhas mais frequentes é reduzir o trabalho à formação profissional ou ao emprego.",
-
-    dicaBanca: "Trabalho como princípio educativo ≠ treinamento para o mercado."
-},
-
-{
-    pergunta: "Uma escola do campo desenvolveu um projeto em que os estudantes investigaram práticas agrícolas sustentáveis da comunidade, relacionando conhecimentos científicos, ambientais e culturais. Considerando o trabalho como princípio educativo, essa iniciativa evidencia principalmente:",
-
+    explicacao: "O art. 4º, IX, vincula transporte escolar às especificidades geográficas, culturais e sociais e aos limites de idade e etapa.",
+    feedbackAcerto: "Você identificou que transporte não é uma solução neutra aplicável da mesma forma a qualquer território e faixa etária.",
+    feedbackErro: "A correta corresponde ao Decreto. As demais transformam transporte em justificativa universal de centralização.",
+    dicaBanca: "Transporte escolar deve ser analisado segundo território, idade e etapa."
+  },
+  {
+    pergunta: "Uma Secretaria deseja fechar uma escola do campo por baixa matrícula. Já possui justificativa financeira e realizou reunião com famílias. Antes do fechamento, a LDB exige ainda, entre os elementos do procedimento:",
     alternativas: [
-        "Substituição do currículo escolar por atividades produtivas.",
-        "Redução da formação científica dos estudantes, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Preparação exclusiva para atividades agrícolas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Integração entre conhecimento escolar, trabalho e realidade social.",
-        "Fragmentação entre teoria e prática, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
+      "homologação pelo Ministério da Educação e parecer do Conselho Tutelar da localidade.",
+      "aprovação por maioria absoluta da Câmara Municipal e consulta ao Ministério Público.",
+      "manifestação do órgão normativo do respectivo sistema de ensino, que considerará a justificativa, o diagnóstico do impacto e a manifestação da comunidade escolar.",
+      "autorização do INCRA, quando houver estudantes ligados à agricultura familiar ou a assentamentos.",
+      "comprovação de transporte escolar gratuito para todos os estudantes, requisito que substitui a análise de impacto e, uma vez garantido o deslocamento, os demais efeitos sociais e pedagógicos seriam tratados durante a implementação da medida."
     ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. O trabalho como princípio educativo promove a articulação entre conhecimento, experiência e realidade social.",
-
-    feedbackErro: "O objetivo não é substituir conteúdos escolares, mas integrá-los à compreensão da realidade.",
-
-    dicaBanca: "Integração teoria-prática é uma palavra-chave."
-},
-
-{
-    pergunta: "Durante um debate, uma candidata afirmou que o trabalho, na perspectiva da Educação do Campo, deve ser analisado apenas como atividade econômica geradora de renda. Considerando os fundamentos pedagógicos da modalidade, assinale a alternativa correta:",
-
-    alternativas: [
-        "A afirmação está correta.",
-        "O trabalho possui predominantemente dimensão produtiva.",
-        "O trabalho envolve dimensões sociais, culturais, históricas e educativas.",
-        "Questões culturais não possuem relação com o trabalho.",
-        "O conceito de trabalho aplica-se em geral aos adultos economicamente ativos."
-    ],
-
     correta: 2,
-
-    feedbackAcerto: "Correto. A Educação do Campo adota uma compreensão ampliada do trabalho como atividade humana produtora de cultura, conhecimento e vida social.",
-
-    feedbackErro: "As bancas costumam explorar a diferença entre visão econômica e visão formativa do trabalho.",
-
-    dicaBanca: "Trabalho é categoria formativa, não apenas econômica."
-},
-
-{
-    pergunta: "Uma escola desenvolveu atividades que permitiam aos estudantes compreender as relações entre produção agrícola, preservação ambiental, organização comunitária e desenvolvimento local. Essa proposta está mais alinhada à concepção de:",
-
+    explicacao: "O parágrafo único do art. 28 da LDB, incluído pela Lei nº 12.960/2014, estabelece manifestação do órgão normativo, justificativa da Secretaria, diagnóstico de impacto e manifestação da comunidade.",
+    feedbackAcerto: "Você identificou o procedimento jurídico completo e percebeu que consulta à comunidade, sozinha, não basta.",
+    feedbackErro: "A correta apresenta os elementos legais. As demais criam autoridades ou requisitos substitutivos não previstos.",
+    dicaBanca: "Fechamento: órgão normativo + justificativa + diagnóstico de impacto + comunidade."
+  },
+  {
+    pergunta: "Uma prefeitura afirma que oferecer transporte para uma escola urbana elimina a necessidade de avaliar impactos do fechamento da escola local. Essa interpretação é:",
     alternativas: [
-        "Treinamento ocupacional especializado, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Trabalho como princípio educativo articulado ao desenvolvimento sustentável.",
-        "Formação limitada ao setor produtivo, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Educação predominantemente técnica, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Neutralidade entre educação e território, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes."
+      "incorreta, porque acesso físico é uma dimensão do direito; a LDB exige diagnóstico de impacto e manifestação comunitária antes do fechamento.",
+      "correta se o tempo de deslocamento estiver abaixo do limite fixado pelo sistema de ensino.",
+      "correta nos anos finais e no ensino médio, pois a proteção contra fechamento seria voltada à educação infantil e aos anos iniciais ficando a reorganização das etapas posteriores condicionada predominantemente à existência de transporte adequado e vaga disponível.",
+      "incorreta se houver comunidade quilombola ou indígena, porque escolas do campo comuns seguiriam procedimento administrativo geral.",
+      "correta quando a escola urbana oferecer biblioteca, laboratório e professores habilitados em todas as áreas."
     ],
-
+    correta: 0,
+    explicacao: "Transporte pode contribuir para acesso, mas não substitui o procedimento jurídico específico de fechamento nem elimina impactos territoriais, sociais e pedagógicos.",
+    feedbackAcerto: "Você evitou a falsa equivalência entre vaga transportada e preservação integral do direito à educação contextualizada.",
+    feedbackErro: "A correta preserva o diagnóstico e a manifestação comunitária. As demais criam exceções que não existem no parágrafo único do art. 28.",
+    dicaBanca: "Transporte não apaga o dever de avaliar o impacto do fechamento."
+  },
+  {
+    pergunta: "Na análise de um processo de nucleação escolar no campo, qual postura é mais compatível com as diretrizes nacionais?",
+    alternativas: [
+      "considerar matrícula, custo por aluno, idade, etapa, distância, tempo de deslocamento, impactos territoriais e condições pedagógicas antes da decisão.",
+      "priorizar o menor custo administrativo, porque a oferta de transporte compensa diferenças territoriais.",
+      "concentrar automaticamente todas as turmas multisseriadas em escolas maiores para elevar a padronização curricular.",
+      "usar a nucleação como regra para Educação Infantil e anos iniciais, deixando oferta comunitária para localidades sem estrada.",
+      "avaliar a segurança do transporte como critério decisivo, deixando currículo e pertencimento comunitário para a etapa de implementação."
+    ],
     correta: 1,
-
-    feedbackAcerto: "Correto. A Educação do Campo relaciona trabalho, sustentabilidade, território e formação cidadã.",
-
-    feedbackErro: "O trabalho como princípio educativo não se restringe à qualificação profissional.",
-
-    dicaBanca: "Educação do Campo associa trabalho, território e sustentabilidade."
-},
-
-{
-    pergunta: "Ao estudar os fundamentos da Educação do Campo, um candidato concluiu que o trabalho como princípio educativo contribui para compreender a realidade social, fortalecer a formação humana integral e relacionar conhecimentos escolares às experiências vividas pelos sujeitos do campo. Essa conclusão está:",
-
+    explicacao: "As normas de Educação do Campo orientam que reorganizações territoriais considerem direito à educação, etapa, deslocamento, comunidade e condições pedagógicas, e não apenas eficiência administrativa.",
+    feedbackAcerto: "Você escolheu uma análise multidimensional, coerente com a proteção territorial da Educação do Campo.",
+    feedbackErro: "A correta não absolutiza custo nem transporte. As demais reduzem a decisão a uma variável administrativa.",
+    dicaBanca: "Nucleação não é sinônimo de eficiência; precisa ser analisada como política educacional territorial."
+  },
+  {
+    pergunta: "Segundo as Diretrizes Complementares da Educação Básica do Campo, a oferta de Educação Infantil e dos anos iniciais do Ensino Fundamental deve privilegiar:",
     alternativas: [
-        "Correta.",
-        "Incorreta, pois o trabalho possui em geral finalidade econômica.",
-        "Incorreta, pois a formação humana independe das experiências sociais.",
-        "Incorreta, pois o princípio aplica-se predominantemente à educação profissional.",
-        "Incorreta, pois a Educação do Campo separa conhecimento escolar e realidade social."
+      "escolas nucleadas urbanas, desde que disponham de transporte adaptado e alimentação escolar.",
+      "o atendimento nas próprias comunidades rurais, evitando deslocamentos desnecessários e avaliando com cautela processos de nucleação.",
+      "escolas de maior porte, independentemente da distância, para garantir equipes docentes mais amplas.",
+      "alternância obrigatória entre escola comunitária e unidade central do Município.",
+      "oferta domiciliar orientada quando a comunidade tiver número reduzido de crianças."
     ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. Essa síntese expressa adequadamente os fundamentos do trabalho como princípio educativo na Educação do Campo.",
-
-    feedbackErro: "O trabalho é compreendido como elemento central da formação humana e da compreensão da realidade.",
-
-    dicaBanca: "Formação humana integral é expressão recorrente nas provas."
-},
-{
-    pergunta: "Durante um seminário educacional, um participante afirmou que a Educação do Campo surgiu como iniciativa exclusiva do Estado, sem participação de organizações sociais ou comunidades rurais. Considerando o processo histórico de construção dessa modalidade, assinale a alternativa correta:",
-
-    alternativas: [
-        "A Educação do Campo foi construída em diálogo com movimentos sociais, comunidades e organizações ligadas aos povos do campo.",
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "Os movimentos sociais participaram em geral da implementação das políticas, sem influência em sua formulação.",
-        "A modalidade surgiu predominantemente em universidades, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "As comunidades rurais não participaram dos debates educacionais que originaram a modalidade, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A Educação do Campo resulta de lutas históricas dos povos do campo e de movimentos sociais que reivindicaram o direito a uma educação vinculada às suas realidades.",
-
-    feedbackErro: "Uma das pegadinhas mais frequentes é apagar o protagonismo dos sujeitos do campo na construção da modalidade.",
-
-    dicaBanca: "Educação do Campo nasceu das lutas sociais por direitos."
-},
-
-{
-    pergunta: "Ao estudar a trajetória histórica da Educação do Campo, uma candidata observou que ela representa uma mudança em relação à antiga concepção de Educação Rural. Essa mudança ocorreu principalmente porque:",
-
-    alternativas: [
-        "A Educação do Campo passou a priorizar predominantemente a produção agrícola, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A Educação Rural e a Educação do Campo possuem fundamentos idênticos, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
-        "A Educação do Campo reconhece os sujeitos do campo como protagonistas de seus processos educativos e sociais.",
-        "A nova modalidade eliminou qualquer relação entre escola e território, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "A Educação do Campo foi criada em geral para ampliar matrículas escolares, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. O reconhecimento dos sujeitos do campo como protagonistas constitui uma das principais diferenças entre as duas concepções.",
-
-    feedbackErro: "A mudança não foi apenas terminológica, mas político-pedagógica.",
-
-    dicaBanca: "Campo = protagonismo dos sujeitos."
-},
-
-{
-    pergunta: "Durante uma discussão acadêmica, um professor afirmou que os movimentos sociais do campo atuam apenas em reivindicações econômicas, sem relação com a formulação de políticas educacionais. Considerando a construção histórica da Educação do Campo, assinale a alternativa correta:",
-
-    alternativas: [
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "As políticas educacionais do campo foram formuladas sem participação popular, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
-        "Os movimentos sociais atuaram em geral na educação profissional, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A participação dos movimentos limitou-se às questões de transporte escolar, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Os movimentos sociais contribuíram para o debate sobre acesso, permanência, currículo e direito à educação dos povos do campo."
-    ],
-
     correta: 4,
-
-    feedbackAcerto: "Correto. Os movimentos sociais tiveram papel importante na defesa do direito à educação e na construção das políticas da modalidade.",
-
-    feedbackErro: "As bancas costumam associar Educação do Campo e participação social organizada.",
-
-    dicaBanca: "Movimentos sociais = construção histórica da modalidade."
-},
-
-{
-    pergunta: "Uma rede de ensino elaborou seu currículo sem consultar comunidades locais, organizações do campo ou representantes dos estudantes, alegando que as decisões educacionais deveriam ser exclusivamente técnicas. Considerando os fundamentos históricos da Educação do Campo, assinale a alternativa correta:",
-
+    explicacao: "As diretrizes nacionais valorizam a oferta próxima às comunidades, especialmente para crianças e estudantes dos anos iniciais, e tratam nucleação/deslocamento com cautela.",
+    feedbackAcerto: "Você identificou que idade e etapa importam na decisão territorial. Quanto menores os estudantes, maior a relevância da proximidade comunitária.",
+    feedbackErro: "A correta prioriza atendimento nas comunidades. As demais transformam centralização em regra.",
+    dicaBanca: "Educação Infantil e anos iniciais pedem forte proteção à oferta nas próprias comunidades."
+  },
+  {
+    pergunta: "Uma escola urbana possui turmas anexas que funcionam em comunidades rurais e atendem populações do campo. Segundo o Decreto nº 7.352/2010:",
     alternativas: [
-        "A decisão está alinhada aos princípios da modalidade.",
-        "A participação social é incompatível com a gestão educacional.",
-        "A consulta à comunidade possui em geral função simbólica.",
-        "A Educação do Campo valoriza processos participativos e o diálogo com os sujeitos envolvidos.",
-        "A legislação proíbe participação de organizações sociais na construção de propostas educacionais."
+      "as turmas anexas podem ser consideradas do campo nas condições previstas na definição legal, ainda que a sede da escola esteja em área urbana.",
+      "as turmas seriam urbanas por derivação, pois a classificação acompanharia a localização da sede administrativa.",
+      "as turmas só podem ser consideradas do campo se possuírem código escolar independente da escola-sede.",
+      "a vinculação urbana impede acesso a qualquer política de Educação do Campo, mesmo que o público seja predominantemente rural e o acesso às ações da política dependeria da criação de unidade administrativa própria para cada turma situada em área rural.",
+      "a classificação depende da modalidade de ensino ofertada e não da população atendida."
     ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A participação dos sujeitos do campo constitui elemento central da identidade da modalidade.",
-
-    feedbackErro: "A Educação do Campo foi construída justamente com forte participação social.",
-
-    dicaBanca: "Participação social é princípio, não detalhe."
-},
-
-{
-    pergunta: "Ao analisar a construção histórica da Educação do Campo, um candidato concluiu que ela está relacionada à luta pelo reconhecimento dos povos do campo, pela valorização de seus territórios, culturas e modos de vida e pela garantia do direito à educação de qualidade. Essa conclusão está:",
-
-    alternativas: [
-        "Incorreta, pois a modalidade possui finalidade predominantemente produtiva.",
-        "Correta.",
-        "Incorreta, pois território e cultura não integram seus fundamentos.",
-        "Incorreta, pois a Educação do Campo concentra-se à expansão de vagas escolares.",
-        "Incorreta, pois a luta por direitos não influenciou sua construção histórica."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. Essa síntese contempla os principais elementos históricos e políticos que deram origem à Educação do Campo.",
-
-    feedbackErro: "A modalidade está profundamente vinculada às lutas sociais por direitos e reconhecimento.",
-
-    dicaBanca: "Direitos + território + cultura + participação = essência histórica da Educação do Campo."
-},
-{
-    pergunta: "Durante uma formação continuada, um professor afirmou que as Escolas Famílias Agrícolas (EFAs) são instituições organizadas segundo os mesmos princípios pedagógicos das escolas tradicionais, sem qualquer característica própria. Considerando os fundamentos dessas escolas, assinale a alternativa correta:",
-
-    alternativas: [
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "As EFAs destinam-se predominantemente à formação profissional agrícola de nível técnico, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "As EFAs não possuem relação com os territórios onde estão inseridas, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "As EFAs caracterizam-se pela utilização da Pedagogia da Alternância e pela forte participação das famílias e comunidades.",
-        "As EFAs utilizam currículo padronizado desvinculado das realidades locais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. As Escolas Famílias Agrícolas são reconhecidas pela Pedagogia da Alternância e pela participação ativa das famílias e comunidades no processo educativo.",
-
-    feedbackErro: "Uma das pegadinhas mais frequentes é tratar as EFAs como escolas convencionais sem identidade própria.",
-
-    dicaBanca: "EFA = Alternância + família + comunidade."
-},
-
-{
-    pergunta: "Uma estudante frequenta uma Escola Família Agrícola e participa regularmente de atividades desenvolvidas tanto na escola quanto em sua comunidade. Os conhecimentos produzidos em cada espaço são posteriormente articulados em projetos e estudos orientados. Essa prática evidencia principalmente:",
-
-    alternativas: [
-        "Integração entre formação escolar e realidade comunitária.",
-        "Fragmentação curricular, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Separação entre teoria e prática, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Substituição do currículo formal, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
-        "Especialização produtiva precoce, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
-    ],
-
     correta: 0,
-
-    feedbackAcerto: "Correto. A Alternância busca integrar os conhecimentos construídos em diferentes espaços educativos.",
-
-    feedbackErro: "A proposta não separa teoria e prática; procura articulá-las continuamente.",
-
-    dicaBanca: "Alternância = integração, não fragmentação."
-},
-
-{
-    pergunta: "Ao analisar as Casas Familiares Rurais (CFRs), uma candidata concluiu que elas compartilham com as EFAs a utilização da Pedagogia da Alternância e a valorização da participação comunitária. Essa conclusão está:",
-
+    explicacao: "O § 2º do art. 1º admite como do campo turmas anexas vinculadas a escolas de sede urbana que funcionem nas condições da definição do § 1º.",
+    feedbackAcerto: "Você reconheceu que o Decreto protege a realidade do atendimento, não apenas o endereço administrativo da escola-sede.",
+    feedbackErro: "A correta corresponde ao § 2º. As demais criam exigência de código próprio ou classificação automática pela sede.",
+    dicaBanca: "Turma anexa pode ser do campo mesmo com escola-sede urbana."
+  },
+  {
+    pergunta: "Uma escola do campo usa o mesmo calendário urbano, embora parte dos estudantes fique impossibilitada de deslocar-se durante a cheia anual. Qual solução está mais de acordo com a legislação?",
     alternativas: [
-        "Incorreta, pois as CFRs não utilizam Alternância.",
-        "Incorreta, pois as CFRs funcionam predominantemente em áreas urbanas.",
-        "Incorreta, pois participação comunitária não integra sua proposta pedagógica.",
-        "Incorreta, pois as CFRs possuem finalidade predominantemente assistencial.",
-        "Correta."
+      "manter o calendário porque uniformidade da rede prevalece sobre condições territoriais.",
+      "cancelar os dias de cheia e compensar a frequência sem reposição de tempo escolar.",
+      "transformar as atividades do período em férias, reduzindo o ano letivo para evitar reprovação por falta porque a reorganização do período letivo seria entendida como compensação suficiente diante das condições climáticas da região.",
+      "adequar a organização e o calendário às condições climáticas e produtivas locais, preservando as exigências legais de tempo escolar.",
+      "transferir temporariamente todos os estudantes para uma escola urbana enquanto durar a cheia."
     ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. As Casas Familiares Rurais compartilham princípios semelhantes aos das EFAs, especialmente no uso da Pedagogia da Alternância.",
-
-    feedbackErro: "As bancas frequentemente associam EFA e CFR ao mesmo fundamento pedagógico: a Alternância.",
-
-    dicaBanca: "EFA e CFR costumam aparecer juntas nas provas."
-},
-
-{
-    pergunta: "Durante uma avaliação institucional, verificou-se que determinada EFA desenvolvia suas atividades sem participação das famílias, sem diálogo com a comunidade e sem integração com o território local. Considerando os fundamentos dessa proposta educacional, assinale a alternativa correta:",
-
-    alternativas: [
-        "A situação está plenamente adequada, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A ausência desses elementos não interfere na identidade da EFA, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "A proposta afasta-se dos princípios que fundamentam as Escolas Famílias Agrícolas.",
-        "A participação comunitária possui em geral caráter administrativo, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O território não possui relevância pedagógica na Educação do Campo, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. A identidade das EFAs está diretamente relacionada à participação familiar, ao território e à comunidade.",
-
-    feedbackErro: "Esses elementos não são acessórios; constituem parte central da proposta pedagógica.",
-
-    dicaBanca: "Sem comunidade e família, perde-se a essência da EFA."
-},
-
-{
-    pergunta: "Ao estudar as Escolas Famílias Agrícolas (EFAs) e as Casas Familiares Rurais (CFRs), um candidato concluiu que ambas procuram promover formação integral, articulação entre escola e comunidade, valorização do território e protagonismo dos estudantes. Essa conclusão está:",
-
-    alternativas: [
-        "Incorreta, pois ambas possuem foco predominantemente produtivo.",
-        "Correta.",
-        "Incorreta, pois a formação integral não integra seus objetivos.",
-        "Incorreta, pois o território não possui papel pedagógico.",
-        "Incorreta, pois a participação estudantil é secundária nessas instituições."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. EFAs e CFRs compartilham princípios voltados à formação integral e à valorização dos sujeitos e territórios do campo.",
-
-    feedbackErro: "A proposta vai muito além da qualificação produtiva, envolvendo dimensões sociais, culturais e educativas.",
-
-    dicaBanca: "Formação integral é expressão-chave quando o tema é EFA e CFR."
-},
-{
-    pergunta: "Uma secretaria de educação decidiu fechar uma escola do campo alegando baixa matrícula e transferir todos os estudantes para uma unidade urbana distante da comunidade. A decisão foi tomada sem consulta às famílias e sem análise dos impactos sociais e educacionais. Considerando a legislação e as políticas da Educação do Campo, assinale a alternativa correta:",
-
-    alternativas: [
-        "A decisão está correta, pois o número de matrículas é o único critério relevante, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "As escolas do campo podem ser fechadas livremente pela administração pública, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
-        "A participação da comunidade não possui relevância nesse processo, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "A localização da escola não interfere no direito à educação, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "O fechamento de escolas do campo deve considerar os impactos sobre as comunidades e observar os procedimentos previstos na legislação."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. A legislação exige análise criteriosa dos impactos e considera a participação da comunidade nos processos que envolvem fechamento de escolas do campo.",
-
-    feedbackErro: "Uma das maiores pegadinhas é tratar o fechamento de escolas como simples medida administrativa.",
-
-    dicaBanca: "Fechamento de escola do campo exige justificativa e análise de impactos."
-},
-
-{
-    pergunta: "Durante um estudo sobre políticas educacionais, uma candidata observou que estudantes do campo percorriam longas distâncias diariamente para frequentar a escola, enfrentando dificuldades de acesso e permanência. Nesse contexto, o transporte escolar rural relaciona-se principalmente à garantia do:",
-
-    alternativas: [
-        "Direito de escolha profissional.",
-        "Direito ao lazer comunitário.",
-        "Direito à educação predominantemente urbana.",
-        "Direito de acesso e permanência na educação.",
-        "Direito à mobilidade turística."
-    ],
-
     correta: 3,
-
-    feedbackAcerto: "Correto. O transporte escolar rural é instrumento importante para garantir acesso e permanência dos estudantes na escola.",
-
-    feedbackErro: "O tema costuma ser cobrado como política de garantia do direito à educação.",
-
-    dicaBanca: "Transporte escolar rural = acesso + permanência."
-},
-
-{
-    pergunta: "Uma rede de ensino decidiu concentrar estudantes de diversas comunidades rurais em uma única escola, encerrando unidades menores e reorganizando a oferta educacional. Esse processo é conhecido como:",
-
+    explicacao: "Tanto a LDB quanto o Decreto nº 7.352/2010 admitem calendário adequado às fases produtivas e condições climáticas, sem converter flexibilidade em redução ilegal do tempo escolar.",
+    feedbackAcerto: "Você aplicou a contextualização organizacional a um problema territorial concreto.",
+    feedbackErro: "A correta ajusta calendário com preservação das exigências legais. As demais mantêm barreira ou reduzem o direito.",
+    dicaBanca: "Calendário do campo pode ser diferente; carga legal continua sendo direito."
+  },
+  {
+    pergunta: "Sobre o PRONERA, assinale a alternativa correta.",
     alternativas: [
-        "Nucleação escolar.",
-        "Contextualização curricular.",
-        "Pedagogia da Alternância.",
-        "Territorialização pedagógica.",
-        "Educação intercultural."
+      "é programa voltado à alfabetização de adultos nos assentamentos, com continuidade dos estudos assumida pelas redes regulares.",
+      "integra a Política de Educação do Campo e busca oferecer educação formal a jovens e adultos do público da reforma agrária em todos os níveis de ensino, além de melhorar acesso e desenvolvimento dos assentamentos.",
+      "é programa do MEC destinado ao financiamento de licenciaturas em Educação do Campo nas universidades federais.",
+      "atende todas as populações do campo exatamente com os mesmos critérios utilizados pelo Decreto para definir o conceito amplo de povos do campo.",
+      "substitui as redes regulares de ensino nos territórios de reforma agrária por projetos educacionais vinculados ao INCRA."
     ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. Nucleação escolar consiste na concentração de estudantes em unidades centrais, geralmente acompanhada de reorganização da rede.",
-
-    feedbackErro: "As bancas costumam cobrar diretamente o conceito de nucleação escolar.",
-
-    dicaBanca: "Nucleação = concentração de escolas ou matrículas."
-},
-
-{
-    pergunta: "Ao analisar um processo de nucleação escolar, uma professora concluiu que a medida deve ser avaliada não apenas sob critérios administrativos, mas também considerando aspectos pedagógicos, sociais, culturais e territoriais das comunidades envolvidas. Essa conclusão está:",
-
-    alternativas: [
-        "Incorreta, pois em geral critérios financeiros devem ser considerados.",
-        "Correta.",
-        "Incorreta, pois aspectos culturais não possuem relevância educacional.",
-        "Incorreta, pois a nucleação é tema predominantemente administrativo.",
-        "Incorreta, pois a legislação não considera impactos comunitários."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. A Educação do Campo exige análise ampla dos impactos provocados por processos de nucleação.",
-
-    feedbackErro: "As políticas educacionais contemporâneas valorizam a relação entre escola, território e comunidade.",
-
-    dicaBanca: "Território e comunidade devem ser considerados nas decisões."
-},
-
-{
-    pergunta: "Ao estudar o fechamento de escolas do campo, o transporte escolar rural e a nucleação, um candidato concluiu que essas questões devem ser analisadas à luz do direito à educação, da permanência dos estudantes, da participação comunitária e das especificidades dos territórios do campo. Essa conclusão está:",
-
-    alternativas: [
-        "Incorreta, pois se tratam de questões predominantemente administrativas.",
-        "Incorreta, pois participação comunitária não possui relação com o tema.",
-        "Correta.",
-        "Incorreta, pois as especificidades territoriais não devem influenciar decisões educacionais.",
-        "Incorreta, pois o direito à educação concentra-se à oferta de vagas."
-    ],
-
     correta: 2,
-
-    feedbackAcerto: "Correto. Essas políticas devem ser analisadas de forma integrada, considerando acesso, permanência, qualidade e vínculo com o território.",
-
-    feedbackErro: "A Educação do Campo ultrapassa a lógica administrativa e considera os direitos dos sujeitos envolvidos.",
-
-    dicaBanca: "Acesso + permanência + território + participação = síntese do tema."
-},
-{
-    pergunta: "Durante a revisão do Projeto Político-Pedagógico, uma escola do campo concluiu que bastava estar localizada em área rural para ser considerada uma instituição alinhada aos princípios da Educação do Campo. Entretanto, seu currículo era totalmente descontextualizado, não havia participação comunitária e os saberes locais eram ignorados. Considerando os fundamentos da modalidade, assinale a alternativa correta:",
-
+    explicacao: "O Decreto nº 7.352/2010 integra o PRONERA à Política de Educação do Campo e define objetivos ligados à educação formal em todos os níveis, acesso e desenvolvimento dos assentamentos.",
+    feedbackAcerto: "Você identificou o alcance do programa sem confundi-lo com a definição geral das populações do campo.",
+    feedbackErro: "A correta sintetiza os arts. 11 e 12. As demais restringem, universalizam indevidamente o público ou substituem as redes regulares.",
+    dicaBanca: "PRONERA = reforma agrária + educação formal em vários níveis + desenvolvimento dos assentamentos."
+  },
+  {
+    pergunta: "Qual alternativa melhor diferencia populações do campo e público do PRONERA?",
     alternativas: [
-        "A identidade da Educação do Campo depende da articulação entre território, currículo, participação social e valorização dos sujeitos do campo.",
-        "A localização geográfica é suficiente para caracterizar uma escola do campo, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
-        "A participação comunitária possui em geral caráter consultivo e não pedagógico, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A contextualização curricular é incompatível com a educação de qualidade, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Os saberes locais não possuem relevância para a organização pedagógica, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
+      "as expressões são juridicamente equivalentes e abrangem os mesmos grupos em qualquer ação pública.",
+      "populações do campo abrangeriam grupos tradicionais, enquanto o PRONERA atenderia trabalhadores assalariados rurais em geral.",
+      "PRONERA é mais amplo que Educação do Campo, pois inclui estudantes urbanos sem vínculo com áreas de reforma agrária.",
+      "a definição de populações do campo é territorialmente ampla; o PRONERA possui público próprio relacionado à reforma agrária, assentamentos e demais categorias previstas em suas regras.",
+      "populações do campo seria conceito pedagógico, enquanto o PRONERA teria definição normativa própria e operacional."
     ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A Educação do Campo exige identidade pedagógica própria, vinculada aos sujeitos, territórios e culturas do campo.",
-
-    feedbackErro: "Uma das maiores pegadinhas é confundir localização geográfica com identidade educacional.",
-
-    dicaBanca: "Escola no campo ≠ Educação do Campo."
-},
-
-{
-    pergunta: "Uma Escola Família Agrícola desenvolve atividades baseadas na Pedagogia da Alternância, articulando Tempo Escola e Tempo Comunidade. Durante uma avaliação, um gestor sugeriu eliminar o Tempo Comunidade para ampliar a carga horária em sala de aula. Considerando os fundamentos da Alternância, assinale a alternativa correta:",
-
-    alternativas: [
-        "A proposta é adequada, pois o Tempo Comunidade possui função secundária, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "O Tempo Comunidade pode ser substituído sem prejuízo à identidade da Alternância, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "O Tempo Comunidade possui em geral finalidade administrativa, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A Pedagogia da Alternância concentra-se ao ambiente escolar, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A Alternância fundamenta-se justamente na integração entre os diferentes espaços e tempos formativos."
-    ],
-
     correta: 4,
-
-    feedbackAcerto: "Correto. A essência da Alternância está na integração entre escola, comunidade, território e formação humana.",
-
-    feedbackErro: "Eliminar o Tempo Comunidade descaracteriza um dos principais fundamentos da proposta.",
-
-    dicaBanca: "Alternância = Tempo Escola + Tempo Comunidade."
-},
-
-{
-    pergunta: "Ao analisar políticas públicas voltadas aos povos do campo, uma candidata observou que o Decreto nº 7.352/2010, o PRONERA e as Diretrizes Operacionais compartilham objetivos relacionados à garantia do direito à educação. Assinale a alternativa que melhor sintetiza esses objetivos:",
-
+    explicacao: "O Decreto usa uma definição ampla para populações do campo e, em artigos próprios, define beneficiários do PRONERA vinculados à política de reforma agrária.",
+    feedbackAcerto: "Você percebeu que dois conceitos relacionados não são sinônimos. Essa distinção evita ampliar automaticamente o PRONERA a todo sujeito do campo.",
+    feedbackErro: "A correta separa a política ampla do programa específico. As demais igualam ou invertem os conceitos.",
+    dicaBanca: "Todo público do PRONERA dialoga com o campo, mas nem toda população do campo é público automático do PRONERA."
+  },
+  {
+    pergunta: "Entre os projetos que o PRONERA pode apoiar está:",
     alternativas: [
-        "Padronização curricular nacional para todas as escolas, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Ampliação do acesso, permanência, qualidade da educação e respeito às especificidades dos povos do campo.",
-        "Substituição dos saberes locais pelos conhecimentos acadêmicos, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
-        "Formação predominantemente voltada ao setor produtivo agrícola, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Redução da participação das comunidades na gestão escolar, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes."
+      "alfabetização e escolarização de jovens e adultos, formação profissional articulada ao nível médio, cursos técnicos, graduação, pós-graduação, formação de educadores, materiais e estudos/pesquisas.",
+      "alfabetização e EJA do ensino fundamental formariam o núcleo do programa, enquanto cursos técnicos e superiores seriam financiados em outras ações.",
+      "licenciaturas e pós-graduação para professores de assentamentos constituiriam o eixo de formação superior do programa.",
+      "formação profissional de nível médio e superior, excluídos projetos de escolarização básica e produção de materiais didáticos e os cursos voltados à educação básica seriam considerados ações preparatórias fora do núcleo financiável do programa.",
+      "qualquer curso privado escolhido pelo beneficiário, mediante repasse individual de bolsa integral pelo INCRA."
     ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. As principais políticas da modalidade articulam acesso, permanência, qualidade e respeito à diversidade dos sujeitos do campo.",
-
-    feedbackErro: "As políticas da Educação do Campo possuem caráter amplo e não se restringem à formação produtiva.",
-
-    dicaBanca: "Acesso + permanência + qualidade = núcleo das políticas públicas."
-},
-
-{
-    pergunta: "Uma rede de ensino decidiu fechar pequenas escolas rurais e transferir os estudantes para unidades distantes, sem considerar aspectos territoriais, culturais ou sociais. Paralelamente, ampliou a oferta de transporte escolar. Considerando os princípios da Educação do Campo, assinale a alternativa correta:",
-
+    correta: 0,
+    explicacao: "O art. 14 do Decreto apresenta um leque amplo de projetos, da alfabetização à pós-graduação, além de formação de educadores, materiais e pesquisa.",
+    feedbackAcerto: "Você identificou que o PRONERA é muito mais abrangente do que um programa de alfabetização.",
+    feedbackErro: "A correta reúne áreas previstas no art. 14. As demais restringem ou transformam o programa em financiamento individual irrestrito.",
+    dicaBanca: "PRONERA vai da alfabetização à pós-graduação."
+  },
+  {
+    pergunta: "Atualmente, a execução do PRONERA ocorre por meio de parcerias. Segundo as informações oficiais do INCRA, essas parcerias podem envolver:",
     alternativas: [
-        "A oferta de transporte elimina automaticamente todos os impactos do fechamento das escolas, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Aspectos territoriais e comunitários são irrelevantes para a análise da medida, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A análise deve considerar não apenas o acesso físico à escola, mas também os impactos pedagógicos, sociais e culturais da decisão.",
-        "O transporte escolar substitui integralmente o vínculo entre escola e comunidade, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
-        "A legislação trata em geral dos custos administrativos envolvidos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
+      "instituições de ensino públicas e privadas sem fins lucrativos, além de governos estaduais e municipais.",
+      "instituições privadas com fins lucrativos escolhidas diretamente pelos estudantes beneficiários.",
+      "universidades federais e institutos federais seriam os executores do programa por se tratar de política nacional.",
+      "Estados e Municípios com assentamentos anteriores ao Decreto seriam os entes aptos a participar das parcerias.",
+      "organizações da sociedade civil ligadas a movimentos de reforma agrária seriam as entidades executoras prioritárias."
     ],
-
     correta: 2,
-
-    feedbackAcerto: "Correto. A Educação do Campo exige avaliação ampla das consequências de processos de fechamento e nucleação escolar.",
-
-    feedbackErro: "Acesso físico é importante, mas não é o único elemento a ser considerado.",
-
-    dicaBanca: "Território e pertencimento aparecem muito em questões sobre nucleação."
-},
-
-{
-    pergunta: "Ao concluir seus estudos sobre Educação do Campo, um candidato afirmou que a modalidade busca garantir educação de qualidade socialmente referenciada, respeitando os sujeitos do campo, seus territórios, culturas, formas de trabalho, modos de vida e processos históricos de luta por direitos. Essa afirmação está:",
-
+    explicacao: "O INCRA informa que o PRONERA é executado por parcerias com instituições de ensino públicas e privadas sem fins lucrativos, governos estaduais e municipais.",
+    feedbackAcerto: "Você identificou a natureza cooperativa do programa sem restringi-lo a universidades federais ou movimentos sociais.",
+    feedbackErro: "A correta corresponde à execução institucional atual. As demais limitam ou privatizam indevidamente o programa.",
+    dicaBanca: "PRONERA trabalha por parcerias institucionais, não por escolha individual irrestrita de cursos."
+  },
+  {
+    pergunta: "Uma proposta do PRONERA prevê curso superior para beneficiários de assentamentos e formação continuada de educadores. Isso é:",
     alternativas: [
-        "Incorreta, pois a Educação do Campo possui finalidade predominantemente econômica.",
-        "Incorreta, pois trabalho, cultura e território não integram seus fundamentos.",
-        "Incorreta, pois a modalidade concentra-se ao atendimento de populações agrícolas.",
-        "Correta.",
-        "Incorreta, pois os movimentos sociais não influenciaram sua construção histórica."
+      "incompatível, porque o programa encerra sua atuação no ensino médio.",
+      "compatível se o curso superior for licenciatura em área ligada às necessidades educacionais e produtivas dos assentamentos.",
+      "compatível, pois o programa apoia formação em diferentes níveis e áreas, incluindo superior e pós-graduação, conforme suas regras.",
+      "incompatível para educadores, porque formação docente é atribuição exclusiva do MEC.",
+      "compatível mediante incorporação do projeto à política regular de uma universidade pública participante do programa."
     ],
-
+    correta: 1,
+    explicacao: "O PRONERA apoia formação superior, pós-graduação e formação de educadores/professores vinculados ao seu público e objetivos.",
+    feedbackAcerto: "Você reconheceu a amplitude formativa do programa e não o reduziu ao ensino básico.",
+    feedbackErro: "A correta é a compatibilidade. As demais criam restrições de nível, área ou instituição não previstas.",
+    dicaBanca: "Não reduza PRONERA à alfabetização ou ao técnico."
+  },
+  {
+    pergunta: "Em 2025, o INCRA publicou versão revisada do Manual de Operações do PRONERA. Para uma questão de concurso, a consequência mais adequada dessa informação é:",
+    alternativas: [
+      "o Manual revogou o Decreto nº 7.352/2010 e passou a ser a única base normativa do programa.",
+      "as regras operacionais atuais devem ser lidas em conjunto com o marco legal do programa, sem substituir o Decreto que institui seus objetivos e estrutura.",
+      "o PRONERA deixou de integrar a Política de Educação do Campo e passou a ser programa autônomo do INCRA.",
+      "as categorias do Decreto teriam sido substituídas por critérios definidos em cada edital anual e no manual operacional vigente.",
+      "a atualização operacional tornou o programa temporário e condicionado à vigência de cada projeto aprovado."
+    ],
     correta: 3,
-
-    feedbackAcerto: "Correto. Essa síntese reúne os principais fundamentos políticos, pedagógicos e sociais da Educação do Campo.",
-
-    feedbackErro: "A modalidade foi construída a partir da valorização dos sujeitos do campo e da defesa do direito à educação de qualidade.",
-
-    dicaBanca: "Território + cultura + trabalho + direitos = síntese da Educação do Campo."
-}];
+    explicacao: "O Manual atualizado orienta a operação do programa, mas não substitui o Decreto nº 7.352/2010 como marco normativo estruturante.",
+    feedbackAcerto: "Você distinguiu regulamentação operacional de base legal, habilidade importante em questões de políticas públicas.",
+    feedbackErro: "A correta articula normas em níveis distintos. As demais atribuem ao Manual efeitos revogatórios ou estruturais que ele não possui.",
+    dicaBanca: "Manual orienta operação; Decreto estrutura política e objetivos."
+  },
+  {
+    pergunta: "Uma escola do campo desenvolve projeto de agricultura sustentável em que estudantes analisam solo, água, práticas produtivas, história local e organização comunitária. A proposta se aproxima do trabalho como princípio educativo porque:",
+    alternativas: [
+      "substitui conteúdos escolares por atividades produtivas que preparam diretamente para o mercado rural e passaria a avaliar o êxito do projeto pela capacidade de inserção dos estudantes nas cadeias produtivas locais.",
+      "articula trabalho, conhecimento, cultura e transformação da realidade como dimensões da formação humana.",
+      "transforma a escola em unidade produtiva e mede aprendizagem pelo resultado econômico do projeto.",
+      "prioriza saberes empíricos e reduz a necessidade de conhecimentos científicos sistematizados.",
+      "direciona os estudantes à permanência no campo como resultado esperado da formação vinculada ao território e ao trabalho rural."
+    ],
+    correta: 2,
+    explicacao: "Na Educação do Campo, o trabalho pode ser compreendido como dimensão histórica, social e formativa, articulada à produção da vida e do conhecimento.",
+    feedbackAcerto: "Você reconheceu uma concepção educativa de trabalho, e não mero treinamento ocupacional.",
+    feedbackErro: "A correta articula formação humana e realidade. As demais reduzem trabalho a mercado, produção ou permanência compulsória no campo.",
+    dicaBanca: "Trabalho como princípio educativo não é treinamento para emprego."
+  },
+  {
+    pergunta: "Qual prática reduz indevidamente o trabalho como princípio educativo a uma visão economicista?",
+    alternativas: [
+      "estudar relações entre produção, tecnologia, ambiente e organização social da comunidade.",
+      "investigar como mudanças técnicas afetam trabalho, território e sustentabilidade local.",
+      "organizar o currículo para treinar a execução de tarefas produtivas demandadas por empregadores rurais e medir desempenho por produtividade.",
+      "relacionar conhecimentos científicos às práticas produtivas e às transformações históricas do território.",
+      "analisar conflitos e cooperações envolvidos na produção e distribuição dos bens na região."
+    ],
+    correta: 3,
+    explicacao: "Reduzir trabalho a treinamento imediato para tarefas produtivas elimina sua dimensão cultural, histórica, social e formativa.",
+    feedbackAcerto: "Você identificou a alternativa que transforma educação em adestramento ocupacional.",
+    feedbackErro: "A correta é o treinamento exclusivo para demandas empresariais. As demais utilizam trabalho como objeto amplo de conhecimento e formação.",
+    dicaBanca: "Se trabalho aparece só como emprego imediato, desconfie da redução conceitual."
+  },
+  {
+    pergunta: "Na construção histórica da Educação do Campo, os movimentos sociais e os próprios sujeitos do campo:",
+    alternativas: [
+      "participaram da execução posterior das políticas definidas pelo Estado e pelas universidades, sem interferir nos fundamentos pedagógicos.",
+      "tiveram papel relevante na reivindicação do direito à educação, na crítica à antiga lógica de Educação Rural e na formulação de novas referências político-pedagógicas.",
+      "atuaram de forma concentrada na educação profissional, sem influência sobre currículo ou organização escolar.",
+      "foram substituídos por instâncias técnicas depois das Diretrizes de 2002, que encerraram a participação social na formulação de políticas.",
+      "contribuíram para expansão física das escolas, enquanto os fundamentos pedagógicos permaneceriam sob responsabilidade dos sistemas e a participação política dos movimentos seria reconhecida sem repercussão sobre currículo, gestão ou concepção de educação."
+    ],
+    correta: 1,
+    explicacao: "A Educação do Campo está historicamente ligada às lutas sociais por direito à educação, território, reconhecimento cultural e participação na formulação pedagógica.",
+    feedbackAcerto: "Você reconheceu protagonismo político e pedagógico, sem transformar movimentos sociais em gestores exclusivos do sistema.",
+    feedbackErro: "A correta destaca sua participação histórica ampla. As demais reduzem a atuação a execução ou infraestrutura.",
+    dicaBanca: "Educação do Campo nasce também de mobilização social e disputa por direitos."
+  },
+  {
+    pergunta: "A mudança da antiga noção de Educação Rural para Educação do Campo pode ser sintetizada, pedagogicamente, pela passagem de:",
+    alternativas: [
+      "uma abordagem centrada no rural como espaço a ser adaptado ao modelo urbano para outra que reconhece sujeitos, territórios, culturas e participação na construção do direito à educação.",
+      "uma escola de currículo científico para outra que substitui ciência por saberes tradicionais e experiências comunitárias.",
+      "uma educação básica geral para outra destinada prioritariamente à formação técnica agrícola.",
+      "uma política pública estatal para outra administrada por movimentos sociais e organizações comunitárias e as organizações comunitárias assumiriam a definição curricular e administrativa das escolas vinculadas aos seus territórios.",
+      "uma escola regular para outra que funciona sem calendário, séries, avaliação ou normas comuns de ensino."
+    ],
+    correta: 0,
+    explicacao: "A Educação do Campo desloca a visão do rural como espaço periférico e reconhece protagonismo, território, cultura, trabalho e direitos, sem abandonar o conhecimento escolar.",
+    feedbackAcerto: "Você identificou uma mudança político-pedagógica, não apenas terminológica.",
+    feedbackErro: "A correta apresenta a mudança de concepção. As demais criam substituição de ciência, tecnificação ou ausência de normas.",
+    dicaBanca: "Campo ≠ simples novo nome para rural; muda a perspectiva sobre sujeitos e direitos."
+  },
+  {
+    pergunta: "Uma Escola Família Agrícola organiza Tempo Escola e Tempo Comunidade, envolve famílias e relaciona investigação territorial aos componentes curriculares. Essa organização:",
+    alternativas: [
+      "é incompatível com o currículo comum, porque a Alternância exige currículo independente das diretrizes nacionais e os conhecimentos produzidos na comunidade precisariam ser convertidos em conteúdo escolar antes de integrar a carga formativa.",
+      "é própria de programa de educação informal e não pode integrar a educação básica regular.",
+      "pode ser reconhecida em cursos técnicos, sem aplicação às demais etapas da educação básica regular.",
+      "depende de transformação da EFA em escola pública para ter validade educacional.",
+      "é coerente com a Pedagogia da Alternância, que articula diferentes tempos, espaços, sujeitos e saberes em um processo formativo."
+    ],
+    correta: 4,
+    explicacao: "EFAs são historicamente vinculadas à Alternância, articulando escola, família, comunidade, território e intencionalidade pedagógica.",
+    feedbackAcerto: "Você identificou a essência formativa sem confundir Alternância com currículo paralelo ou educação informal.",
+    feedbackErro: "A correta reconhece a articulação. As demais restringem etapas, natureza institucional ou validade curricular.",
+    dicaBanca: "EFA é um exemplo clássico de Alternância, mas a metodologia não se limita a ela."
+  },
+  {
+    pergunta: "Sobre EFAs, CFRs e Pedagogia da Alternância, assinale a alternativa correta.",
+    alternativas: [
+      "EFAs e CFRs são referências históricas importantes da Alternância, mas a metodologia possui diretrizes próprias e não está juridicamente restrita a esses modelos institucionais.",
+      "a Alternância só pode ser usada por EFAs e CFRs porque a LDB não a autoriza em outras escolas do campo.",
+      "o uso da Alternância exige que a instituição seja privada comunitária e tenha participação formal de famílias em sua administração e outras escolas poderiam utilizar experiências inspiradas no modelo, mas não a metodologia com reconhecimento normativo equivalente.",
+      "CFRs podem utilizar Alternância, enquanto EFAs seguiriam organização seriada convencional definida pelo sistema.",
+      "a Resolução CNE/CP nº 1/2023 retirou a Alternância da educação básica e a concentrou na formação superior."
+    ],
+    correta: 0,
+    explicacao: "As EFAs e CFRs são referências históricas, mas a LDB e as Diretrizes de 2023 tratam a Alternância de maneira mais ampla.",
+    feedbackAcerto: "Você evitou confundir origem e presença histórica da metodologia com exclusividade jurídica.",
+    feedbackErro: "A correta distingue referência institucional de alcance normativo. As demais restringem a metodologia sem base atual.",
+    dicaBanca: "Alternância é maior que EFA/CFR."
+  },
+  {
+    pergunta: "Uma escola decide adotar Alternância apenas alternando duas semanas na escola e duas em casa, sem atividades orientadas, pesquisa ou articulação curricular no período comunitário. A proposta:",
+    alternativas: [
+      "atende à metodologia porque a duração dos dois tempos é o único elemento obrigatório da Alternância.",
+      "é adequada se o estudante entregar declaração familiar comprovando presença na comunidade.",
+      "é adequada quando as avaliações ocorrerem no Tempo Escola e os conteúdos forem ministrados integralmente presencialmente.",
+      "descaracteriza a dimensão formativa da Alternância, pois alternar calendário sem integração pedagógica entre tempos e espaços não basta.",
+      "corresponde ao modelo recomendado para evitar contabilização do Tempo Comunidade como atividade letiva."
+    ],
+    correta: 4,
+    explicacao: "A Alternância exige intencionalidade e integração pedagógica entre tempos e espaços; a mera troca de local não constitui metodologia completa.",
+    feedbackAcerto: "Você identificou que estrutura temporal e proposta pedagógica precisam caminhar juntas.",
+    feedbackErro: "A correta rejeita a alternância meramente logística. As demais reduzem a metodologia a presença, declaração ou calendário.",
+    dicaBanca: "O nome é Alternância, mas o núcleo é articulação formativa."
+  },
+  {
+    pergunta: "Na denominação de uma instituição pública de ensino do campo, uma lei federal de 2025 passou a assegurar participação comunitária por meio de:",
+    alternativas: [
+      "referendo obrigatório de toda a população do Município antes da escolha do nome.",
+      "aprovação do Conselho Nacional de Educação para nomes relacionados à memória local.",
+      "elaboração, pela comunidade do campo, de lista tríplice de nomes a ser considerada pelo Poder Executivo responsável pela rede.",
+      "escolha direta do nome pela associação comunitária, sem participação do poder público mantenedor.",
+      "consulta facultativa realizada após a publicação do ato de denominação da escola."
+    ],
+    correta: 3,
+    explicacao: "A Lei nº 15.215/2025 estabeleceu procedimento de participação das comunidades indígenas, quilombolas e do campo, com sugestão em lista tríplice de nomes.",
+    feedbackAcerto: "Você identificou uma atualização recente que reforça participação comunitária até na denominação das instituições públicas.",
+    feedbackErro: "A correta apresenta a lista tríplice. As demais criam referendo, competência nacional ou decisão unilateral.",
+    dicaBanca: "Atualização 2025: comunidade participa da denominação com lista tríplice."
+  },
+  {
+    pergunta: "Uma política estadual de Educação do Campo pretende receber apoio técnico e financeiro suplementar da União. Entre as condições previstas no art. 9º do Decreto nº 7.352/2010 está:",
+    alternativas: [
+      "ter currículo estadual único para todas as escolas rurais e urbanas, garantindo equivalência acadêmica.",
+      "transferir a gestão das escolas do campo para consórcios intermunicipais em regiões de baixa densidade.",
+      "substituir planos locais de educação por plano federal específico para os territórios rurais.",
+      "prever no respectivo plano de educação diretrizes e metas para manutenção e desenvolvimento da Educação do Campo, além de estruturas técnico-pedagógicas e colegiadas nas hipóteses previstas.",
+      "comprovar que todas as escolas do campo funcionam em prédio próprio e possuem matrícula mínima definida pelo MEC."
+    ],
+    correta: 2,
+    explicacao: "O art. 9º vincula o apoio suplementar a diretrizes/metas nos planos e prevê equipes técnico-pedagógicas e instâncias colegiadas para Estados e DF.",
+    feedbackAcerto: "Você reconheceu que planejamento institucional e participação integram as condições da política.",
+    feedbackErro: "A correta corresponde ao art. 9º. As demais inventam currículo único, consórcios ou exigências físicas.",
+    dicaBanca: "Plano de educação e estruturas de gestão/participação aparecem no art. 9º."
+  },
+  {
+    pergunta: "Qual alternativa apresenta uma decisão pedagógica coerente com a Educação do Campo sem cair em relativismo curricular?",
+    alternativas: [
+      "ensinar conteúdos nacionais sem qualquer referência territorial, pois contextualização interfere na objetividade do conhecimento mantendo a contextualização reservada a projetos extracurriculares para não interferir nos objetivos curriculares comuns.",
+      "articular conhecimentos acadêmicos, objetivos curriculares e problemas reais do território, preservando rigor conceitual e ampliando capacidade de compreender e transformar a realidade.",
+      "trocar conteúdos acadêmicos por saberes locais em disciplinas que tratem de ambiente, trabalho ou cultura.",
+      "manter conhecimentos locais restritos a feiras culturais, evitando sua presença em atividades avaliativas e projetos de investigação.",
+      "definir o currículo pela utilidade econômica imediata dos conteúdos para as atividades produtivas predominantes na região."
+    ],
+    correta: 1,
+    explicacao: "A Educação do Campo exige diálogo entre conhecimento sistematizado e realidade local, sem defender empobrecimento ou substituição curricular.",
+    feedbackAcerto: "Você escolheu contextualização com rigor acadêmico, exatamente o equilíbrio necessário para uma questão difícil.",
+    feedbackErro: "A correta integra currículo e território. As demais descontextualizam, substituem ciência ou subordinam currículo à utilidade econômica.",
+    dicaBanca: "Contextualizar não é simplificar; é dar sentido sem reduzir rigor."
+  },
+  {
+    pergunta: "Uma rede implementa internet de alta velocidade nas escolas do campo e permite que a comunidade próxima utilize ações de inclusão digital. Essa iniciativa:",
+    alternativas: [
+      "está alinhada ao Decreto nº 7.352/2010, que prevê contribuição para inclusão digital da comunidade escolar e população próxima às escolas.",
+      "ultrapassa a política, porque os recursos digitais deveriam beneficiar os estudantes matriculados e as equipes das escolas.",
+      "é compatível com escolas que ofereçam educação profissional e tecnológica, por sua vinculação direta com o mundo do trabalho.",
+      "depende de vinculação ao PRONERA, pois inclusão digital não integra a política geral de Educação do Campo.",
+      "é ação de assistência social sem relação normativa com as medidas educacionais do Decreto."
+    ],
+    correta: 3,
+    explicacao: "O art. 3º, IV, prevê acesso a computadores, internet e outras tecnologias digitais, beneficiando comunidade escolar e população próxima.",
+    feedbackAcerto: "Você identificou que inclusão digital possui alcance comunitário expresso no Decreto.",
+    feedbackErro: "A correta corresponde ao art. 3º. As demais restringem o público ou deslocam a ação para outro programa.",
+    dicaBanca: "Inclusão digital na Educação do Campo pode alcançar a comunidade próxima."
+  },
+  {
+    pergunta: "Em uma escola ribeirinha, a cheia anual altera rotas, horários, alimentação disponível e atividades produtivas das famílias. Qual solução melhor integra diferentes normas da Educação do Campo?",
+    alternativas: [
+      "transferir a escola para a sede urbana porque alterações ambientais tornam inviável qualquer organização estável no território.",
+      "adaptar calendário, transporte, alimentação e projetos pedagógicos às condições territoriais, preservando o direito ao currículo, ao tempo escolar e à participação da comunidade.",
+      "reduzir o calendário durante o período da cheia e compensar a carga por atividades domésticas sem planejamento docente.",
+      "manter organização urbana idêntica, porque tratamento igual significa aplicar o mesmo modelo em toda a rede.",
+      "substituir ensino regular por Alternância em todos os anos, pois a presença de ciclos naturais torna essa metodologia obrigatória."
+    ],
+    correta: 2,
+    explicacao: "O conjunto normativo permite adaptar calendário, transporte, alimentação e planejamento às especificidades, mas preserva direitos educacionais e não torna a Alternância compulsória.",
+    feedbackAcerto: "Você integrou território, organização escolar e direito à aprendizagem sem usar contextualização como justificativa para redução de oferta.",
+    feedbackErro: "A correta equilibra adaptação e garantia de direitos. As demais centralizam, reduzem tempo escolar ou tornam uma metodologia obrigatória.",
+    dicaBanca: "Boa questão de Campo costuma exigir integrar várias dimensões, não escolher uma palavra-chave."
+  },
+  {
+    pergunta: "Um Estado oferece excelente transporte para uma escola central, mas fecha três escolas locais sem diagnóstico de impacto e sem manifestação do órgão normativo. A política apresenta problema porque:",
+    alternativas: [
+      "o transporte deveria ser interestadual para justificar a centralização da oferta.",
+      "o fechamento é vedado em qualquer circunstância, mesmo com procedimento legal e análise de impacto.",
+      "o processo desrespeita exigências específicas da LDB para fechamento, e a qualidade do transporte não substitui o procedimento nem a análise territorial.",
+      "a consulta à comunidade é dispensável quando a escola central possui melhor infraestrutura e professores especializados.",
+      "a LDB exigiria diagnóstico de impacto, enquanto a manifestação do órgão normativo ficaria reservada às escolas indígenas."
+    ],
+    correta: 0,
+    explicacao: "O fechamento não é absolutamente proibido, mas está condicionado a procedimento específico. Transporte adequado não supre diagnóstico, manifestação comunitária e órgão normativo.",
+    feedbackAcerto: "Você evitou dois extremos: fechamento livre e proibição absoluta.",
+    feedbackErro: "A correta identifica a falha procedimental. As demais eliminam requisitos ou tratam o fechamento como juridicamente impossível.",
+    dicaBanca: "Fechamento pode ocorrer, mas não como simples ato administrativo."
+  },
+  {
+    pergunta: "Analise as afirmações: I. Escola situada em área urbana pode ser considerada escola do campo se atender predominantemente populações do campo. II. O art. 28 da LDB admite Pedagogia da Alternância. III. O PRONERA atende automaticamente todo sujeito enquadrado na definição ampla de população do campo. IV. O Decreto admite turmas com diferentes idades e graus de conhecimento dentro de uma mesma etapa quando necessário ao direito à educação. Está correto o que se afirma em:",
+    alternativas: [
+      "I, II e III.",
+      "I, II e IV.",
+      "II, III e IV.",
+      "I e III.",
+      "I, III e IV."
+    ],
+    correta: 1,
+    explicacao: "I, II e IV estão corretas. A III erra porque o PRONERA possui público próprio relacionado às políticas de reforma agrária e às regras específicas do programa.",
+    feedbackAcerto: "Você integrou definição de escola do campo, LDB, multisseriação e PRONERA sem confundir política ampla com público específico de programa.",
+    feedbackErro: "A correta é I, II e IV. A III é a única falsa por ampliar automaticamente o PRONERA a toda população do campo.",
+    dicaBanca: "Não trate 'populações do campo' e 'beneficiários do PRONERA' como sinônimos."
+  },
+  {
+    pergunta: "Uma política municipal pretende ser coerente com a Educação do Campo. Qual conjunto de medidas é o mais adequado?",
+    alternativas: [
+      "currículo urbano comum, transporte centralizado e formação geral idêntica, adicionando eventos culturais rurais ao calendário e a contextualização territorial ficaria concentrada em eventos e projetos específicos sem alterar a organização geral da rede.",
+      "fechamento de pequenas escolas com base em custo, seguido de oferta de transporte e consulta comunitária posterior.",
+      "currículo definido pelas atividades econômicas locais, redução da formação geral e prioridade a qualificação profissional.",
+      "autonomia irrestrita das comunidades para substituir normas dos sistemas por formas educativas próprias.",
+      "PPP contextualizado; diálogo entre saberes locais e acadêmicos; participação comunitária; formação específica; calendário e transporte adequados ao território; preservação dos procedimentos legais de reorganização da rede."
+    ],
+    correta: 4,
+    explicacao: "A síntese normativa combina contextualização curricular, participação, formação, flexibilidade organizacional, território e garantia jurídica do direito à educação.",
+    feedbackAcerto: "Você escolheu uma política integrada, e não uma medida isolada ou um modelo que substitua direitos escolares por particularismos.",
+    feedbackErro: "A correta reúne os principais eixos da legislação. As demais confundem contextualização com padronização, redução curricular, fechamento administrativo ou autonomia sem limites.",
+    dicaBanca: "Educação do Campo é uma política integrada de direito, território, qualidade e participação."
+  }
+];

@@ -1,1400 +1,756 @@
+// Banco de Didática — 50 questões autorais em nível de concurso para professor.
+// Estrutura revisada: fundamentos, autores, tendências pedagógicas, mediação,
+// planejamento, métodos, interdisciplinaridade, avaliação e prática docente.
+
 const didatica = [
-
-{
-    pergunta: `
-Uma professora do Ensino Fundamental organiza suas aulas de modo que os estudantes relacionem os conteúdos escolares às situações vivenciadas em seu cotidiano. Durante as atividades, ela promove debates, problematizações e reflexões coletivas sobre os temas estudados. À luz da Didática contemporânea, essa prática evidencia:
-    `,
-
-    alternativas: [
-        "A substituição do ensino sistematizado por experiências espontâneas dos estudantes, dispensando a mediação docente.",
-        "A adoção de uma perspectiva tecnicista centrada predominantemente na eficiência operacional do processo de ensino.",
-        "A priorização do desenvolvimento afetivo em detrimento da aprendizagem dos conteúdos curriculares.",
-        "A valorização exclusiva dos interesses imediatos dos estudantes, independentemente dos objetivos educacionais.",
-        "A compreensão do ensino como processo de mediação entre os conhecimentos sistematizados e a realidade sociocultural dos educandos."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. A Didática contemporânea compreende o ensino como um processo de mediação realizado pelo professor, articulando os conhecimentos científicos aos contextos sociais e culturais dos estudantes.
-    `,
-
-    feedbackErro: `
-A Didática atual não elimina a mediação docente nem abandona os conteúdos escolares. O professor atua como mediador entre o conhecimento sistematizado e a realidade dos educandos.
-    `,
-
-    dicaBanca: `
-Quando aparecer a ideia de mediação entre conhecimento científico e realidade social, desconfie que a alternativa correta esteja relacionada à Didática crítica ou contemporânea.
-    `
-},
-
-{
-    pergunta: `
-Durante uma reunião pedagógica, os professores discutem o papel da Didática no trabalho docente. Um dos participantes afirma que a Didática deve orientar o planejamento, a execução e a avaliação do ensino. Essa compreensão está correta porque a Didática:
-    `,
-
-    alternativas: [
-        "Concentra-se à elaboração de técnicas de ensino desvinculadas dos objetivos educacionais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Tem como objeto de estudo predominantemente os métodos de avaliação da aprendizagem, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Dedica-se prioritariamente à organização administrativa da escola e dos sistemas de ensino, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
-        "Investiga e orienta o processo de ensino em suas múltiplas dimensões, incluindo objetivos, conteúdos, métodos e avaliação.",
-        "Substitui os conhecimentos específicos das disciplinas escolares por metodologias gerais, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. A Didática estuda o processo de ensino de forma ampla, envolvendo planejamento, objetivos, conteúdos, métodos, recursos e avaliação.
-    `,
-
-    feedbackErro: `
-A Didática não se limita a técnicas ou avaliações. Seu campo de estudo abrange a organização e a condução do processo de ensino-aprendizagem.
-    `,
-
-    dicaBanca: `
-Questões sobre objeto da Didática costumam cobrar a visão ampla do processo de ensino.
-    `
-},
-
-{
-    pergunta: `
-Ao elaborar seu plano de aula, um professor seleciona conteúdos, define objetivos de aprendizagem, escolhe estratégias metodológicas e estabelece critérios de avaliação. Essa ação demonstra que:
-    `,
-
-    alternativas: [
-        "O ensino pode ocorrer independentemente de planejamento, desde que haja domínio do conteúdo.",
-        "O planejamento constitui uma atividade burocrática sem relação direta com a aprendizagem dos estudantes.",
-        "Os elementos do processo didático são interdependentes e devem ser articulados de forma coerente.",
-        "Os critérios de avaliação devem ser definidos em geral após a execução das aulas.",
-        "A escolha dos métodos de ensino independe dos objetivos educacionais estabelecidos."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. Os elementos didáticos precisam estar articulados entre si para garantir coerência entre objetivos, conteúdos, metodologias e avaliação.
-    `,
-
-    feedbackErro: `
-Na Didática, planejamento, objetivos, conteúdos, métodos e avaliação formam um sistema integrado e interdependente.
-    `,
-
-    dicaBanca: `
-Uma pegadinha comum é separar planejamento, metodologia e avaliação. Na Didática, esses elementos são articulados.
-    `
-},
-
-{
-    pergunta: `
-Uma escola adota práticas pedagógicas que valorizam a participação ativa dos estudantes, a construção coletiva do conhecimento e a reflexão crítica sobre a realidade social. Essa perspectiva aproxima-se de uma concepção de Didática que:
-    `,
-
-    alternativas: [
-        "Compreende o aluno como receptor passivo das informações transmitidas pelo professor.",
-        "Reconhece o ensino como prática social comprometida com a formação crítica dos sujeitos.",
-        "Defende a centralização absoluta do processo educativo na figura docente, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
-        "Valoriza a aprendizagem mecânica baseada na repetição de conteúdos, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Prioriza predominantemente o domínio técnico dos conteúdos escolares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. A Didática crítica compreende o ensino como prática social e educativa voltada à formação de sujeitos reflexivos e participativos.
-    `,
-
-    feedbackErro: `
-A Didática crítica supera modelos transmissivos e busca promover participação, reflexão e compreensão da realidade.
-    `,
-
-    dicaBanca: `
-Expressões como prática social, reflexão crítica e participação costumam indicar abordagens críticas da Didática.
-    `
-},
-
-{
-    pergunta: `
-Ao discutir os fundamentos da Didática, um grupo de professores conclui que ensinar não significa apenas transmitir informações, mas criar condições para que os estudantes construam conhecimentos significativos. Essa compreensão é compatível com a ideia de que:
-    `,
-
-    alternativas: [
-        "O ensino é um processo intencional que envolve mediação, interação e construção de conhecimentos.",
-        "A aprendizagem ocorre predominantemente pela exposição oral do professor, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A função docente concentra-se à reprodução dos conteúdos presentes nos livros didáticos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A aprendizagem depende em geral das capacidades individuais dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Os recursos didáticos possuem maior relevância que os objetivos educacionais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. O ensino é um processo intencional que envolve interação entre professor, estudante e conhecimento, favorecendo a construção da aprendizagem.
-    `,
-
-    feedbackErro: `
-A Didática contemporânea entende o ensino como um processo mediado e intencional, não como mera transmissão de informações.
-    `,
-
-    dicaBanca: `
-Quando a banca contrasta transmissão e construção do conhecimento, geralmente a resposta correta está associada à mediação pedagógica.
-    `
-},
-
-{
-    pergunta: `
-Durante uma formação continuada, um grupo de professores discutia o campo de estudo da Didática. Um dos participantes afirmou que a Didática investiga as relações entre ensino, aprendizagem, objetivos educacionais, conteúdos, métodos e avaliação. Essa afirmação está correta porque a Didática:
-    `,
-
-    alternativas: [
-        "Estuda o processo de ensino em sua totalidade, considerando suas finalidades, condições e formas de realização.",
-        "Concentra-se ao estudo das técnicas utilizadas pelo professor em sala de aula, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Tem como foco exclusivo os processos psicológicos envolvidos na aprendizagem dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Dedica-se em geral à elaboração de materiais pedagógicos e recursos tecnológicos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Concentra-se à organização administrativa das instituições escolares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. A Didática tem como objeto de estudo o processo de ensino em suas múltiplas dimensões, articulando objetivos, conteúdos, métodos, avaliação e contexto educacional.
-    `,
-
-    feedbackErro: `
-A Didática não se limita a técnicas ou recursos. Seu foco principal é compreender e orientar o processo de ensino de forma integrada.
-    `,
-
-    dicaBanca: `
-Quando a banca perguntar o objeto da Didática, procure alternativas relacionadas ao processo de ensino e suas articulações.
-    `
-},
-
-{
-    pergunta: `
-Uma professora afirma que dominar profundamente o conteúdo da disciplina é suficiente para garantir um ensino de qualidade. Sob a perspectiva da Didática, essa afirmação é inadequada porque:
-    `,
-
-    alternativas: [
-        "O conteúdo possui importância secundária no processo educativo, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "O ensino depende predominantemente das características individuais dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "O conhecimento do conteúdo precisa ser articulado a objetivos, métodos, avaliação e estratégias de ensino.",
-        "O professor não deve planejar suas aulas quando domina o conteúdo, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
-        "A aprendizagem ocorre independentemente das ações pedagógicas, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. O domínio do conteúdo é importante, mas a Didática exige também conhecimento sobre como ensinar, planejar, avaliar e promover a aprendizagem.
-    `,
-
-    feedbackErro: `
-A Didática estuda justamente as condições que permitem transformar o conhecimento científico em conhecimento ensinável e aprendível.
-    `,
-
-    dicaBanca: `
-Conhecimento do conteúdo não substitui conhecimento didático. As bancas gostam dessa distinção.
-    `
-},
-
-{
-    pergunta: `
-Ao analisar uma situação de sala de aula, um pesquisador investiga como os conteúdos são selecionados, organizados e ensinados, bem como os efeitos dessas escolhas na aprendizagem dos estudantes. Esse estudo insere-se no campo da:
-    `,
-
-    alternativas: [
-        "Administração Escolar.",
-        "Legislação Educacional.",
-        "Gestão Financeira da Educação.",
-        "Didática.",
-        "Supervisão Administrativa."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. A Didática investiga as relações entre ensino e aprendizagem, incluindo a seleção de conteúdos, os métodos utilizados e os resultados obtidos.
-    `,
-
-    feedbackErro: `
-Questões relacionadas à organização do ensino, métodos, conteúdos e aprendizagem pertencem ao campo da Didática.
-    `,
-
-    dicaBanca: `
-Conteúdo + método + aprendizagem = forte indício de questão sobre Didática.
-    `
-},
-
-{
-    pergunta: `
-Segundo a Didática, a escolha dos métodos de ensino deve ocorrer:
-    `,
-
-    alternativas: [
-        "De forma independente dos objetivos educacionais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Com base predominantemente na preferência pessoal do professor, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Após a aplicação das avaliações, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Sem considerar as especificidades da turma, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Em articulação com os objetivos, conteúdos, características dos estudantes e contexto de ensino."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. Os métodos de ensino devem ser escolhidos de forma coerente com os objetivos propostos, os conteúdos trabalhados e as características dos estudantes.
-    `,
-
-    feedbackErro: `
-A Didática compreende o método como parte de um conjunto articulado de elementos que compõem o processo de ensino.
-    `,
-
-    dicaBanca: `
-Método nunca aparece isolado na Didática; ele sempre está ligado aos objetivos e conteúdos.
-    `
-},
-
-{
-    pergunta: `
-Ao estudar o objeto da Didática, um candidato conclui que ela busca responder questões como: "O que ensinar?", "Para que ensinar?", "Como ensinar?" e "Como avaliar?". Essa conclusão é:
-    `,
-
-    alternativas: [
-        "Parcialmente correta, pois a Didática preocupa-se em geral com o método de ensino, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Correta, pois essas perguntas sintetizam aspectos centrais do processo de ensino estudado pela Didática.",
-        "Incorreta, pois essas questões pertencem predominantemente ao currículo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Incorreta, pois a Didática concentra-se ao planejamento escolar, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Correta em geral para a educação infantil, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. As questões relacionadas aos objetivos, conteúdos, métodos e avaliação constituem elementos centrais do objeto de estudo da Didática.
-    `,
-
-    feedbackErro: `
-A Didática investiga justamente as decisões pedagógicas envolvidas na organização e condução do ensino.
-    `,
-
-    dicaBanca: `
-Uma das formas clássicas de cobrar Didática é por meio das perguntas: o que, para que, como ensinar e como avaliar.
-    `
-},
-{
-    pergunta: `
-Durante uma aula de Ciências, uma professora percebe que os estudantes apresentam concepções equivocadas sobre determinados fenômenos naturais. Em vez de simplesmente corrigir as respostas, ela propõe experimentos, debates e situações-problema para que os próprios alunos confrontem suas ideias iniciais. Sob a perspectiva da Didática contemporânea, essa prática evidencia:
-    `,
-
-    alternativas: [
-        "A substituição dos conteúdos científicos pelas opiniões dos estudantes, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "A redução da função docente à simples observação das atividades realizadas pelos alunos.",
-        "A valorização exclusiva da experiência cotidiana em detrimento do conhecimento sistematizado.",
-        "A eliminação da necessidade de planejamento pedagógico, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A compreensão da aprendizagem como processo ativo de construção e reconstrução do conhecimento."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. A aprendizagem é compreendida como um processo ativo em que os estudantes confrontam ideias, elaboram hipóteses e constroem novos conhecimentos mediante a mediação pedagógica.
-    `,
-
-    feedbackErro: `
-A Didática contemporânea entende que aprender não significa apenas receber informações, mas reorganizar conhecimentos por meio da interação, reflexão e mediação docente.
-    `,
-
-    dicaBanca: `
-Questões que envolvem problematização, investigação e reconstrução de conceitos geralmente apontam para aprendizagem ativa.
-    `
-},
-
-{
-    pergunta: `
-Ao planejar uma sequência didática, um professor considera os conhecimentos prévios dos estudantes antes de introduzir novos conteúdos. Essa decisão fundamenta-se na compreensão de que:
-    `,
-
-    alternativas: [
-        "Os conhecimentos prévios constituem referência importante para a construção de novas aprendizagens.",
-        "Os conhecimentos prévios devem ser ignorados para evitar interferências na aprendizagem.",
-        "A aprendizagem depende predominantemente da exposição organizada dos conteúdos.",
-        "O ensino deve começar sempre pelos conteúdos mais complexos, independentemente da turma.",
-        "O papel do professor concentra-se à transmissão das informações previstas no currículo."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. Os conhecimentos prévios funcionam como ponto de partida para novas aprendizagens e auxiliam o professor na organização das intervenções pedagógicas.
-    `,
-
-    feedbackErro: `
-A Didática reconhece que os estudantes não chegam à escola sem conhecimentos; eles trazem experiências e saberes que influenciam a aprendizagem.
-    `,
-
-    dicaBanca: `
-Conhecimentos prévios, aprendizagem significativa e construção do conhecimento costumam aparecer associados.
-    `
-},
-
-{
-    pergunta: `
-Durante uma atividade em grupo, os estudantes discutem diferentes estratégias para resolver um problema matemático. O professor acompanha as discussões, faz intervenções pontuais e incentiva a argumentação dos participantes. Nessa situação, o papel docente caracteriza-se principalmente como:
-    `,
-
-    alternativas: [
-        "Fiscalizador do comportamento dos estudantes.",
-        "Mediador do processo de aprendizagem.",
-        "Transmissor exclusivo das respostas corretas.",
-        "Observador neutro sem participação pedagógica.",
-        "Executor de procedimentos previamente definidos."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. O professor atua como mediador, promovendo condições para que os estudantes avancem em seus processos de aprendizagem.
-    `,
-
-    feedbackErro: `
-A mediação pedagógica é um dos conceitos centrais da Didática contemporânea, envolvendo acompanhamento, orientação e intervenção intencional.
-    `,
-
-    dicaBanca: `
-Quando a questão destacar orientação, intervenção e acompanhamento, a resposta costuma envolver mediação pedagógica.
-    `
-},
-
-{
-    pergunta: `
-Em uma discussão sobre ensino e aprendizagem, um professor afirma que o sucesso da aprendizagem depende exclusivamente do esforço individual do estudante. Sob a perspectiva didática, essa afirmação é inadequada porque:
-    `,
-
-    alternativas: [
-        "A aprendizagem ocorre de forma automática quando existe interesse do aluno, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "Os resultados educacionais dependem em geral da metodologia utilizada, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "O papel do professor é irrelevante para o desenvolvimento dos estudantes, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
-        "A aprendizagem resulta da interação entre fatores individuais, sociais, pedagógicos e institucionais.",
-        "As condições de ensino possuem influência mínima sobre a aprendizagem, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. A aprendizagem é um fenômeno complexo influenciado por diversos fatores, incluindo as condições de ensino, a mediação docente e o contexto sociocultural.
-    `,
-
-    feedbackErro: `
-As bancas frequentemente cobram a ideia de que ensino e aprendizagem são processos interdependentes e influenciados por múltiplas variáveis.
-    `,
-
-    dicaBanca: `
-Desconfie de alternativas que expliquem a aprendizagem por uma única causa.
-    `
-},
-
-{
-    pergunta: `
-Ao analisar os resultados de uma turma, uma professora percebe dificuldades recorrentes em determinado conteúdo. Em vez de atribuir o problema exclusivamente aos estudantes, ela revisa suas estratégias metodológicas, os recursos utilizados e as atividades propostas. Essa postura demonstra a compreensão de que:
-    `,
-
-    alternativas: [
-        "As dificuldades de aprendizagem decorrem predominantemente da falta de interesse dos alunos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Os métodos de ensino possuem pouca influência nos resultados obtidos, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
-        "O ensino e a aprendizagem constituem processos articulados que devem ser constantemente avaliados e ajustados.",
-        "A avaliação serve em geral para classificar os estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A responsabilidade pela aprendizagem pertence predominantemente ao estudante, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. A Didática entende que ensino e aprendizagem estão articulados, exigindo reflexão contínua sobre as práticas pedagógicas adotadas.
-    `,
-
-    feedbackErro: `
-O professor deve analisar criticamente sua prática, utilizando os resultados da aprendizagem para aperfeiçoar o processo de ensino.
-    `,
-
-    dicaBanca: `
-Questões sobre prática reflexiva normalmente apontam para revisão de métodos, estratégias e intervenções pedagógicas.
-    `
-},
-{
-    pergunta: `
-Em uma turma do Ensino Fundamental, um professor estimula os estudantes a exporem suas dúvidas, argumentarem sobre diferentes pontos de vista e participarem das decisões relacionadas às atividades de aprendizagem. Sob a perspectiva da Didática contemporânea, essa postura docente evidencia:
-    `,
-
-    alternativas: [
-        "A valorização de uma relação pedagógica dialógica, na qual a participação dos estudantes contribui para a construção da aprendizagem.",
-        "A transferência da responsabilidade do ensino para os estudantes, reduzindo a função pedagógica do professor, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
-        "A compreensão de que a autoridade docente deve ser substituída integralmente pela autonomia discente, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
-        "A adoção de uma postura permissiva incompatível com a organização do processo educativo, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A substituição dos objetivos curriculares pelos interesses imediatos dos alunos, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. A Didática contemporânea valoriza relações dialógicas entre professor e estudante, reconhecendo a importância da participação ativa dos educandos sem eliminar a mediação docente.
-    `,
-
-    feedbackErro: `
-A participação dos estudantes não elimina a autoridade pedagógica do professor. O docente continua responsável por orientar, organizar e mediar o processo de ensino-aprendizagem.
-    `,
-
-    dicaBanca: `
-A banca costuma diferenciar autoridade pedagógica de autoritarismo. Relações dialógicas não significam ausência de direção docente.
-    `
-},
-
-{
-    pergunta: `
-Ao analisar a relação professor-aluno, um candidato afirma que o respeito mútuo favorece a aprendizagem porque fortalece a confiança, a comunicação e o engajamento dos estudantes nas atividades escolares. Essa afirmação é:
-    `,
-
-    alternativas: [
-        "Incorreta, pois o desempenho escolar depende predominantemente dos métodos de ensino utilizados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Parcialmente correta, já que fatores afetivos possuem pouca influência no processo educativo, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "Incorreta, porque a relação professor-aluno não interfere nos resultados educacionais, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "Correta, pois a qualidade das interações pedagógicas influencia significativamente o processo de aprendizagem.",
-        "Correta em geral na Educação Infantil, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. Estudos na área educacional demonstram que relações pedagógicas baseadas em respeito, diálogo e confiança favorecem a aprendizagem e a participação dos estudantes.
-    `,
-
-    feedbackErro: `
-A relação professor-aluno constitui elemento relevante do processo educativo e influencia aspectos cognitivos, sociais e emocionais da aprendizagem.
-    `,
-
-    dicaBanca: `
-As bancas costumam associar aprendizagem significativa a interações pedagógicas positivas.
-    `
-},
-
-{
-    pergunta: `
-Durante uma aula, um estudante apresenta uma resposta incorreta. Em vez de ridicularizá-lo ou simplesmente indicar o erro, a professora utiliza a resposta como ponto de partida para discussão coletiva e reconstrução do conhecimento. Essa atitude demonstra:
-    `,
-
-    alternativas: [
-        "Ausência de critérios para avaliar a aprendizagem, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Valorização do erro como elemento potencialmente formativo do processo educativo.",
-        "Desconsideração dos objetivos de aprendizagem estabelecidos, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Relativização dos conhecimentos científicos trabalhados na escola, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Substituição da avaliação pelo debate informal, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. A Didática contemporânea reconhece que os erros podem fornecer informações importantes sobre o processo de aprendizagem e orientar intervenções pedagógicas.
-    `,
-
-    feedbackErro: `
-O erro não deve ser visto apenas como falha, mas também como oportunidade de análise, reflexão e avanço na aprendizagem.
-    `,
-
-    dicaBanca: `
-Questões sobre avaliação formativa frequentemente associam o erro a oportunidades de aprendizagem.
-    `
-},
-
-{
-    pergunta: `
-Um professor acredita que manter disciplina em sala de aula exige o uso constante de ameaças, punições e imposições. Sob a perspectiva de uma relação pedagógica democrática, essa concepção é criticada porque:
-    `,
-
-    alternativas: [
-        "A autoridade docente deve ser amplamente eliminada para favorecer a autonomia discente, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
-        "O comportamento dos estudantes não possui relação com a aprendizagem, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "A disciplina escolar deve ser construída por meio do diálogo, da participação e da compreensão compartilhada das normas.",
-        "A organização da sala de aula depende predominantemente dos interesses dos alunos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "As normas escolares não devem ser discutidas em ambientes educacionais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. A gestão democrática da sala de aula busca construir relações baseadas em diálogo, respeito e corresponsabilidade, sem recorrer ao autoritarismo.
-    `,
-
-    feedbackErro: `
-Autoridade pedagógica não é sinônimo de autoritarismo. O professor pode exercer liderança educativa sem recorrer a práticas coercitivas excessivas.
-    `,
-
-    dicaBanca: `
-Muitas bancas cobram a distinção entre autoridade pedagógica legítima e práticas autoritárias.
-    `
-},
-
-{
-    pergunta: `
-Ao refletir sobre a relação professor-aluno, uma professora conclui que sua atuação deve favorecer a autonomia intelectual dos estudantes. Essa compreensão implica:
-    `,
-
-    alternativas: [
-        "Transferir integralmente aos estudantes a responsabilidade pela aprendizagem, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "Reduzir a intervenção pedagógica para estimular a independência absoluta dos alunos, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "Substituir os conteúdos curriculares por atividades livres sem orientação pedagógica, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "Priorizar predominantemente o desenvolvimento socioemocional em detrimento dos conhecimentos escolares.",
-        "Promover situações em que os estudantes desenvolvam capacidade crítica, reflexão e tomada de decisões fundamentadas."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. Favorecer a autonomia significa criar condições para que os estudantes desenvolvam pensamento crítico, responsabilidade e capacidade de aprender de forma cada vez mais independente.
-    `,
-
-    feedbackErro: `
-Autonomia não significa ausência de orientação. O professor continua exercendo papel fundamental na mediação do processo educativo.
-    `,
-
-    dicaBanca: `
-Autonomia discente é construída com mediação pedagógica, e não pela retirada do professor do processo de ensino.
-    `
-},
-{
-    pergunta: `
-Uma professora de Ciências organiza uma sequência didática na qual os estudantes formulam hipóteses, realizam experimentos, analisam resultados e apresentam conclusões para a turma. Considerando os fundamentos da Didática, a metodologia utilizada caracteriza-se principalmente por:
-    `,
-
-    alternativas: [
-        "Priorizar a memorização de conceitos previamente definidos, reduzindo a necessidade de investigação pelos estudantes.",
-        "Valorizar a aprendizagem baseada na transmissão direta de informações pelo professor, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
-        "Substituir os conteúdos curriculares por atividades práticas desvinculadas dos objetivos de aprendizagem, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "Transferir integralmente aos estudantes a responsabilidade pela condução do processo educativo, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "Promover a participação ativa dos estudantes na construção do conhecimento por meio da investigação e da resolução de problemas."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. Metodologias investigativas favorecem a participação ativa dos estudantes, estimulando análise, reflexão e construção do conhecimento.
-    `,
-
-    feedbackErro: `
-A proposta descrita envolve investigação, formulação de hipóteses e resolução de problemas, características de metodologias ativas de aprendizagem.
-    `,
-
-    dicaBanca: `
-Quando aparecer investigação, hipóteses, experimentação e protagonismo discente, geralmente a questão aponta para metodologias ativas.
-    `
-},
-
-{
-    pergunta: `
-Ao selecionar um método de ensino, o professor deve considerar:
-    `,
-
-    alternativas: [
-        "A articulação entre objetivos, conteúdos, características dos estudantes e contexto de aprendizagem.",
-        "Predominantemente suas preferências pessoais e experiências profissionais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A facilidade de aplicação da técnica escolhida, independentemente dos objetivos educacionais.",
-        "A utilização da mesma metodologia para todas as turmas e disciplinas, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A substituição dos objetivos curriculares pelas demandas imediatas dos estudantes, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. A escolha metodológica deve estar alinhada aos objetivos educacionais, aos conteúdos e às características dos estudantes.
-    `,
-
-    feedbackErro: `
-Na Didática, métodos e técnicas não são escolhidos isoladamente, mas em função dos objetivos e das necessidades do processo educativo.
-    `,
-
-    dicaBanca: `
-Método de ensino sempre deve ser analisado em conjunto com objetivos, conteúdos e perfil da turma.
-    `
-},
-
-{
-    pergunta: `
-Durante uma aula, o professor utiliza estudo de caso para discutir uma situação real relacionada ao conteúdo trabalhado. Essa técnica contribui principalmente para:
-    `,
-
-    alternativas: [
-        "A reprodução mecânica de conceitos previamente memorizados, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A eliminação da necessidade de fundamentação teórica, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A análise crítica de situações concretas e a aplicação de conhecimentos em contextos reais.",
-        "A substituição integral das demais estratégias pedagógicas, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "A redução da participação dos estudantes no processo de aprendizagem, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. O estudo de caso favorece análise, interpretação e aplicação de conhecimentos em situações contextualizadas.
-    `,
-
-    feedbackErro: `
-Essa técnica aproxima teoria e prática, estimulando a reflexão crítica e a tomada de decisões fundamentadas.
-    `,
-
-    dicaBanca: `
-Estudo de caso costuma aparecer associado à contextualização e à aplicação prática dos conhecimentos.
-    `
-},
-
-{
-    pergunta: `
-Uma professora utiliza aula expositiva dialogada para introduzir determinado conteúdo. Em relação a essa estratégia, é correto afirmar que:
-    `,
-
-    alternativas: [
-        "Trata-se de metodologia incompatível com a participação dos estudantes, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "Pode favorecer a aprendizagem quando articulada à participação, questionamentos e interação entre professor e estudantes.",
-        "Sua utilização elimina a necessidade de outras estratégias pedagógicas, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "É necessariamente vinculada a práticas pedagógicas autoritárias, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Tem como principal objetivo a memorização mecânica dos conteúdos, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. A aula expositiva dialogada pode ser uma estratégia eficaz quando promove interação, reflexão e participação dos estudantes.
-    `,
-
-    feedbackErro: `
-A eficácia de uma técnica depende de sua intencionalidade pedagógica e da forma como é conduzida pelo professor.
-    `,
-
-    dicaBanca: `
-A banca costuma evitar extremos. Nem toda aula expositiva é tradicionalista ou ineficaz.
-    `
-},
-
-{
-    pergunta: `
-Ao analisar diferentes métodos de ensino, um professor conclui que não existe metodologia universalmente superior às demais. Sob a perspectiva didática, essa conclusão é adequada porque:
-    `,
-
-    alternativas: [
-        "A qualidade da aprendizagem depende predominantemente da motivação dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Os métodos possuem a mesma eficácia em qualquer contexto educacional, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "As técnicas de ensino são irrelevantes para o processo educativo, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
-        "A escolha metodológica deve considerar objetivos, conteúdos, contexto e características da turma.",
-        "O professor deve utilizar sempre a metodologia mais recente disponível, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. Não existe método universal. A adequação metodológica depende dos objetivos educacionais, dos conteúdos e do contexto de aprendizagem.
-    `,
-
-    feedbackErro: `
-A Didática defende a seleção consciente e contextualizada dos métodos de ensino, evitando generalizações simplistas.
-    `,
-
-    dicaBanca: `
-Desconfie de alternativas que apresentem métodos como soluções universais para qualquer situação pedagógica.
-    `
-},
-{
-    pergunta: `
-Durante a elaboração de seu planejamento anual, uma professora definiu objetivos de aprendizagem, selecionou conteúdos, organizou metodologias e estabeleceu critérios de avaliação. Ao apresentar o documento, afirmou que o planejamento não deve ser entendido como uma previsão rígida e imutável. Sob a perspectiva da Didática, essa afirmação é correta porque:
-    `,
-
-    alternativas: [
-        "O planejamento deve ser abandonado sempre que surgirem dificuldades na execução das aulas, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "O planejamento possui caráter flexível, permitindo ajustes em função das necessidades da aprendizagem e das situações concretas do processo educativo.",
-        "O planejamento tem função meramente burocrática e pode ser alterado sem qualquer critério pedagógico, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Os objetivos educacionais devem ser redefinidos diariamente para acompanhar os interesses imediatos dos estudantes, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "A flexibilidade do planejamento reduz a necessidade da definição prévia de conteúdos, métodos e formas de avaliação, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. O planejamento é um instrumento orientador da ação pedagógica. Embora deva possuir intencionalidade e organização, precisa também apresentar flexibilidade para responder às necessidades concretas do processo de ensino-aprendizagem.
-    `,
-
-    feedbackErro: `
-A flexibilidade não significa improvisação. O planejamento continua sendo uma ação intencional, sistemática e fundamentada pedagogicamente.
-    `,
-
-    dicaBanca: `
-Planejamento é uma previsão da ação pedagógica. A banca costuma cobrar que ele seja intencional, sistemático e flexível.
-    `
-},
-
-{
-    pergunta: `
-Ao analisar o planejamento de um professor, a coordenação pedagógica verificou que os objetivos estabelecidos não possuíam relação direta com os conteúdos selecionados nem com os instrumentos de avaliação previstos. Nessa situação, o principal problema identificado é:
-    `,
-
-    alternativas: [
-        "A utilização excessiva de recursos didáticos, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A ausência de interdisciplinaridade no currículo, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "O excesso de participação dos estudantes na construção do plano, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "A valorização inadequada dos conhecimentos prévios dos alunos, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "A falta de coerência entre os elementos constitutivos do planejamento."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. Objetivos, conteúdos, metodologias e avaliação devem estar articulados. A ausência dessa coerência compromete a efetividade do processo educativo.
-    `,
-
-    feedbackErro: `
-Uma das funções centrais do planejamento é garantir a articulação lógica entre os diferentes elementos do processo didático.
-    `,
-
-    dicaBanca: `
-Quando a banca fala em objetivos, conteúdos, métodos e avaliação, geralmente está cobrando o princípio da coerência interna do planejamento.
-    `
-},
-
-{
-    pergunta: `
-Em uma reunião pedagógica, discutiu-se a função do planejamento escolar. Um professor afirmou que planejar significa apenas preencher formulários exigidos pela gestão da escola. À luz da Didática, essa concepção é inadequada porque:
-    `,
-
-    alternativas: [
-        "O planejamento deve ser realizado predominantemente pela equipe gestora, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A principal finalidade do planejamento é atender às exigências administrativas dos sistemas de ensino.",
-        "O planejamento constitui um processo de reflexão, tomada de decisões e organização intencional da prática pedagógica.",
-        "O planejamento é desnecessário quando o professor possui experiência profissional, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
-        "As ações pedagógicas devem ocorrer de forma espontânea, sem previsões prévias, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. O planejamento não é mera formalidade burocrática. Trata-se de um processo de análise, reflexão e organização das ações educativas.
-    `,
-
-    feedbackErro: `
-As bancas frequentemente criticam a visão burocrática do planejamento e valorizam sua função pedagógica e reflexiva.
-    `,
-
-    dicaBanca: `
-Planejamento não é papelada. É instrumento de organização e reflexão sobre a prática educativa.
-    `
-},
-
-{
-    pergunta: `
-Uma professora utiliza os resultados das avaliações anteriores para redefinir estratégias metodológicas e reorganizar parte dos conteúdos previstos para o próximo bimestre. Essa prática demonstra que o planejamento:
-    `,
-
-    alternativas: [
-        "Deve ser elaborado em geral no início do ano letivo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Perde sua validade quando ocorrem dificuldades de aprendizagem, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Possui função predominantemente administrativa, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "É um processo contínuo que envolve acompanhamento, análise e replanejamento das ações pedagógicas.",
-        "Deve permanecer inalterado após sua elaboração, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. O planejamento é um processo dinâmico que exige acompanhamento permanente e readequações sempre que necessário.
-    `,
-
-    feedbackErro: `
-Planejar, executar, avaliar e replanejar constituem etapas articuladas do trabalho docente.
-    `,
-
-    dicaBanca: `
-Uma expressão muito cobrada é: planejamento como processo contínuo e dinâmico.
-    `
-},
-
-{
-    pergunta: `
-Ao elaborar um plano de ensino, um professor procura alinhar os objetivos de aprendizagem às competências previstas na BNCC, selecionar conteúdos adequados, definir estratégias metodológicas e prever instrumentos de avaliação compatíveis. Essa postura evidencia:
-    `,
-
-    alternativas: [
-        "A compreensão do planejamento como articulação intencional dos elementos do processo didático.",
-        "A centralidade exclusiva dos conteúdos conceituais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A substituição da avaliação pelos objetivos educacionais, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "A priorização da metodologia em detrimento dos objetivos, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A independência entre planejamento e aprendizagem, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. O planejamento envolve a integração coerente dos diversos elementos do processo educativo, visando favorecer a aprendizagem dos estudantes.
-    `,
-
-    feedbackErro: `
-Os componentes do planejamento não atuam isoladamente. Eles precisam ser organizados de forma articulada e intencional.
-    `,
-
-    dicaBanca: `
-A palavra-chave do planejamento é articulação entre objetivos, conteúdos, métodos e avaliação.
-    `
-},
-{
-    pergunta: `
-Durante uma reunião pedagógica, uma professora afirmou que utiliza a avaliação não apenas para atribuir notas, mas também para identificar dificuldades, revisar estratégias de ensino e acompanhar o desenvolvimento dos estudantes ao longo do processo educativo. Essa concepção de avaliação corresponde principalmente à avaliação:
-    `,
-
-    alternativas: [
-        "Classificatória, pois tem como finalidade ordenar os estudantes segundo seu desempenho.",
-        "Somativa, porque ocorre ao final de cada etapa letiva para registro de resultados.",
-        "Diagnóstica, por ser realizada predominantemente antes do início do processo de ensino.",
-        "Formativa, por utilizar informações da aprendizagem para orientar intervenções pedagógicas.",
-        "Normativa, por comparar os resultados individuais com padrões previamente estabelecidos."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. A avaliação formativa acompanha continuamente o processo de aprendizagem e fornece informações para aperfeiçoar tanto o ensino quanto a aprendizagem.
-    `,
-
-    feedbackErro: `
-A principal característica da avaliação formativa é seu caráter processual, permitindo intervenções pedagógicas ao longo do percurso de aprendizagem.
-    `,
-
-    dicaBanca: `
-Quando a avaliação serve para ajustar o ensino e acompanhar o desenvolvimento do aluno, a resposta geralmente é avaliação formativa.
-    `
-},
-
-{
-    pergunta: `
-Ao iniciar um novo conteúdo, um professor aplica uma atividade para identificar conhecimentos prévios, dificuldades e experiências dos estudantes relacionadas ao tema. Essa prática caracteriza:
-    `,
-
-    alternativas: [
-        "Avaliação classificatória.",
-        "Avaliação diagnóstica.",
-        "Avaliação somativa.",
-        "Avaliação certificadora.",
-        "Avaliação normativa."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. A avaliação diagnóstica busca levantar informações sobre os conhecimentos e necessidades dos estudantes antes ou no início do processo de ensino.
-    `,
-
-    feedbackErro: `
-A avaliação diagnóstica permite ao professor conhecer o ponto de partida da turma e planejar intervenções mais adequadas.
-    `,
-
-    dicaBanca: `
-Diagnóstica = identificar conhecimentos prévios e necessidades de aprendizagem.
-    `
-},
-
-{
-    pergunta: `
-Em determinada escola, a avaliação é utilizada exclusivamente para atribuir notas e decidir a aprovação ou reprovação dos estudantes ao final do período letivo. Sob a perspectiva da Didática contemporânea, essa prática é criticada porque:
-    `,
-
-    alternativas: [
-        "A avaliação deve eliminar amplamente qualquer forma de registro do desempenho dos estudantes, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "A atribuição de notas é incompatível com qualquer proposta pedagógica democrática, como finalidade central e suficiente para orientar todo o trabalho pedagógico da escola.",
-        "Os professores não devem utilizar instrumentos formais de avaliação, como eixo principal da organização didática, independentemente dos objetivos de aprendizagem.",
-        "Os resultados da aprendizagem não devem ser considerados no planejamento escolar, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A avaliação reduz-se a uma função classificatória, deixando de contribuir para a melhoria do processo de ensino e aprendizagem."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. A crítica central refere-se ao uso exclusivamente classificatório da avaliação, que limita seu potencial pedagógico e formativo.
-    `,
-
-    feedbackErro: `
-A Didática contemporânea defende que a avaliação produza informações úteis para orientar decisões pedagógicas e favorecer a aprendizagem.
-    `,
-
-    dicaBanca: `
-A banca costuma contrapor avaliação classificatória e avaliação formativa.
-    `
-},
-
-{
-    pergunta: `
-Durante a correção de uma atividade, uma professora analisa os erros cometidos pelos estudantes para compreender seus raciocínios e planejar intervenções pedagógicas futuras. Essa postura demonstra que:
-    `,
-
-    alternativas: [
-        "Os erros devem ser utilizados em geral para justificar a atribuição de notas baixas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "O erro representa em geral falta de estudo por parte do estudante, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A avaliação possui função investigativa e pode fornecer informações relevantes sobre o processo de aprendizagem.",
-        "A correção deve limitar-se à indicação das respostas corretas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A avaliação deve ocorrer normalmente ao final dos conteúdos, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. Os erros podem revelar hipóteses, dificuldades e formas de pensamento dos estudantes, auxiliando o professor na tomada de decisões pedagógicas.
-    `,
-
-    feedbackErro: `
-A avaliação formativa considera o erro como fonte de informação importante para compreender o processo de aprendizagem.
-    `,
-
-    dicaBanca: `
-Erro como oportunidade de aprendizagem é uma ideia muito cobrada em concursos.
-    `
-},
-
-{
-    pergunta: `
-Um professor pretende elaborar instrumentos avaliativos coerentes com os objetivos de aprendizagem previamente definidos. De acordo com os princípios da Didática, essa decisão é importante porque:
-    `,
-
-    alternativas: [
-        "A coerência entre objetivos, ensino e avaliação contribui para a qualidade do processo educativo.",
-        "A avaliação deve ser independente dos objetivos para garantir imparcialidade, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Os instrumentos avaliativos devem ser escolhidos em geral pela facilidade de aplicação, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Os objetivos educacionais possuem pouca relevância para a definição dos critérios avaliativos.",
-        "A avaliação deve priorizar predominantemente conteúdos memorizados, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. A avaliação precisa estar articulada aos objetivos de aprendizagem e às experiências de ensino desenvolvidas ao longo do processo educativo.
-    `,
-
-    feedbackErro: `
-A coerência entre objetivos, conteúdos, metodologias e avaliação é um dos princípios fundamentais do planejamento didático.
-    `,
-
-    dicaBanca: `
-Objetivos, conteúdos, metodologia e avaliação devem sempre aparecer articulados.
-    `
-},
-{
-    pergunta: `
-Durante uma aula, o professor realiza longas exposições orais, utiliza o livro didático como principal fonte de conhecimento e exige dos estudantes a reprodução fiel dos conteúdos apresentados. Essa prática aproxima-se principalmente da tendência pedagógica:
-    `,
-
-    alternativas: [
-        "Libertadora, por promover o diálogo crítico sobre a realidade social, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Crítico-Social dos Conteúdos, por priorizar a mediação entre conteúdos e prática social.",
-        "Tradicional, por centralizar o processo educativo na transmissão do conhecimento pelo professor.",
-        "Renovada Progressivista, por enfatizar os interesses e experiências dos estudantes, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "Libertária, por favorecer a autogestão da aprendizagem, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. A tendência tradicional caracteriza-se pela centralidade do professor, pela transmissão dos conteúdos e pela valorização da memorização.
-    `,
-
-    feedbackErro: `
-A pedagogia tradicional entende o ensino como transmissão de conhecimentos já consolidados, cabendo ao aluno assimilá-los.
-    `,
-
-    dicaBanca: `
-Professor no centro + exposição oral + memorização = Tendência Tradicional.
-    `
-},
-
-{
-    pergunta: `
-Uma escola organiza suas práticas pedagógicas em torno de projetos investigativos, experiências concretas e resolução de problemas relacionados ao cotidiano dos estudantes. Essa proposta aproxima-se da tendência:
-    `,
-
-    alternativas: [
-        "Tradicional, por enfatizar a transmissão sistemática dos conteúdos, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Renovada Progressivista, por valorizar a experiência, a atividade e os interesses dos estudantes.",
-        "Tecnicista, por priorizar eficiência operacional e treinamento de habilidades, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Crítico-Social dos Conteúdos, por defender a centralidade dos conteúdos sistematizados.",
-        "Tradicional Renovada, por enfatizar disciplina e repetição, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. A tendência Renovada Progressivista valoriza a atividade do aluno, a experiência e a aprendizagem pela descoberta.
-    `,
-
-    feedbackErro: `
-A Escola Nova e a Renovada Progressivista defendem o protagonismo discente e a aprendizagem ativa.
-    `,
-
-    dicaBanca: `
-Experiência, projetos, descoberta e participação ativa costumam indicar tendência renovada.
-    `
-},
-
-{
-    pergunta: `
-Em determinada rede de ensino, o planejamento pedagógico enfatiza objetivos operacionais, treinamento de habilidades específicas, controle dos resultados e eficiência do processo educativo. Essa perspectiva aproxima-se da tendência:
-    `,
-
-    alternativas: [
-        "Libertadora.",
-        "Crítico-Social dos Conteúdos.",
-        "Renovada Não Diretiva.",
-        "Libertária.",
-        "Tecnicista."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. A pedagogia tecnicista enfatiza eficiência, racionalização, objetivos comportamentais e controle dos resultados educacionais.
-    `,
-
-    feedbackErro: `
-A tendência tecnicista foi fortemente influenciada pelos modelos de administração científica e pela racionalização dos processos educativos.
-    `,
-
-    dicaBanca: `
-Eficiência, produtividade, treinamento e objetivos operacionais são palavras-chave do tecnicismo.
-    `
-},
-
-{
-    pergunta: `
-Um professor organiza suas aulas a partir da problematização da realidade vivida pelos estudantes, estimulando a reflexão crítica sobre questões sociais e buscando desenvolver a consciência transformadora dos educandos. Essa prática aproxima-se da tendência:
-    `,
-
-    alternativas: [
-
-        "Tradicional.",
-
-        "Tecnicista.",
-
-        "Renovada Progressivista.",
-
-        "Libertadora.",
-
-        "Tradicional Humanista."
-
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. A tendência Libertadora, associada a Paulo Freire, enfatiza diálogo, problematização da realidade e consciência crítica.
-    `,
-
-    feedbackErro: `
-A pedagogia libertadora busca superar a educação bancária e promover reflexão crítica sobre a realidade social.
-    `,
-
-    dicaBanca: `
-Paulo Freire, diálogo, conscientização e problematização = Pedagogia Libertadora.
-    `
-},
-
-{
-    pergunta: `
-Ao analisar diferentes tendências pedagógicas, um candidato conclui que a Pedagogia Crítico-Social dos Conteúdos defende a transmissão dos conhecimentos historicamente produzidos, mas articulados à compreensão crítica da realidade social. Essa conclusão é:
-    `,
-
-    alternativas: [
-        "Correta, pois busca relacionar conteúdos sistematizados à prática social dos educandos.",
-        "Incorreta, pois essa tendência rejeita amplamente os conteúdos escolares, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "Incorreta, pois prioriza predominantemente os interesses imediatos dos estudantes.",
-        "Correta em geral quando aplicada ao ensino superior, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Incorreta, pois se aproxima integralmente do tecnicismo, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. A Pedagogia Crítico-Social dos Conteúdos defende a apropriação dos conhecimentos sistematizados como instrumento para compreender e transformar a realidade.
-    `,
-
-    feedbackErro: `
-Essa tendência não abandona os conteúdos escolares; ao contrário, considera-os essenciais para a formação crítica dos estudantes.
-    `,
-
-    dicaBanca: `
-Libâneo costuma aparecer associado à Pedagogia Crítico-Social dos Conteúdos.
-    `
-},
-{
-    pergunta: `
-Ao planejar suas aulas, uma professora organiza situações de aprendizagem que favorecem a mobilização de conhecimentos, habilidades, atitudes e valores para resolver problemas da vida cotidiana. Essa prática está alinhada à concepção de competência adotada pela BNCC, segundo a qual:
-    `,
-
-    alternativas: [
-        "A aprendizagem deve priorizar predominantemente a memorização dos conteúdos conceituais previstos no currículo, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "O desenvolvimento de competências envolve a articulação de conhecimentos, habilidades, atitudes e valores em diferentes contextos.",
-        "As competências substituem amplamente os conteúdos escolares tradicionais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "O ensino deve concentrar-se em geral no desenvolvimento socioemocional dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A avaliação das competências deve ocorrer predominantemente por meio de provas objetivas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. A BNCC define competência como a mobilização de conhecimentos, habilidades, atitudes e valores para enfrentar situações da vida pessoal, social e profissional.
-    `,
-
-    feedbackErro: `
-A proposta da BNCC não elimina os conteúdos, mas os integra ao desenvolvimento de competências e habilidades.
-    `,
-
-    dicaBanca: `
-Competência na BNCC = mobilizar conhecimentos + habilidades + atitudes + valores.
-    `
-},
-
-{
-    pergunta: `
-Durante uma formação continuada, um professor afirmou que a BNCC exige a utilização de metodologias que favoreçam a participação ativa dos estudantes no processo de aprendizagem. Essa afirmação é considerada adequada porque a BNCC:
-    `,
-
-    alternativas: [
-        "Defende predominantemente métodos expositivos centrados no professor, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Determina a utilização obrigatória de uma única metodologia para todas as disciplinas, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Valoriza estratégias pedagógicas que promovam protagonismo, investigação, colaboração e resolução de problemas.",
-        "Substitui o planejamento docente pela autonomia dos estudantes, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "Restringe a aprendizagem ao desenvolvimento de habilidades técnicas, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. A BNCC incentiva práticas pedagógicas que favoreçam participação ativa, protagonismo e construção significativa da aprendizagem.
-    `,
-
-    feedbackErro: `
-A BNCC valoriza metodologias diversificadas e estratégias que promovam participação efetiva dos estudantes.
-    `,
-
-    dicaBanca: `
-Protagonismo estudantil e metodologias ativas aparecem frequentemente associados à BNCC.
-    `
-},
-
-{
-    pergunta: `
-Ao elaborar instrumentos de avaliação, uma professora procura verificar não apenas a memorização de informações, mas também a capacidade dos estudantes de aplicar conhecimentos em diferentes situações. Essa prática está alinhada à BNCC porque:
-    `,
-
-    alternativas: [
-        "A avaliação deve concentrar-se predominantemente nos conteúdos conceituais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A BNCC prioriza em geral aspectos comportamentais da aprendizagem, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "As habilidades previstas na BNCC reduzem a necessidade de conteúdos curriculares, como se os demais elementos pedagógicos não fossem necessários para a qualidade da aprendizagem.",
-        "O desenvolvimento de competências exige avaliar a mobilização dos conhecimentos em contextos diversos.",
-        "A aplicação prática dos conhecimentos não integra os objetivos da educação básica, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. A BNCC propõe que os estudantes sejam capazes de utilizar conhecimentos e habilidades em diferentes contextos e situações.
-    `,
-
-    feedbackErro: `
-Avaliar competências exige observar como os estudantes utilizam os conhecimentos para interpretar, analisar e resolver problemas.
-    `,
-
-    dicaBanca: `
-BNCC não cobra apenas saber; cobra saber fazer com o conhecimento.
-    `
-},
-
-{
-    pergunta: `
-Uma escola desenvolve projetos interdisciplinares envolvendo diferentes áreas do conhecimento para solucionar problemas relacionados à comunidade local. Essa proposta aproxima-se da perspectiva da BNCC porque:
-    `,
-
-    alternativas: [
-        "A BNCC recomenda o isolamento das disciplinas para garantir maior profundidade conceitual, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A interdisciplinaridade dificulta o desenvolvimento das competências gerais, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Projetos interdisciplinares são incompatíveis com os objetivos da educação básica, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A BNCC prioriza predominantemente conteúdos específicos de cada componente curricular, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "A integração de diferentes áreas favorece a construção de aprendizagens significativas e contextualizadas."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. A BNCC incentiva abordagens integradas que favoreçam contextualização, interdisciplinaridade e desenvolvimento de competências.
-    `,
-
-    feedbackErro: `
-A integração entre áreas do conhecimento contribui para aprendizagens mais significativas e próximas da realidade dos estudantes.
-    `,
-
-    dicaBanca: `
-Interdisciplinaridade, contextualização e competências costumam aparecer juntas nas questões da BNCC.
-    `
-},
-
-{
-    pergunta: `
-Ao analisar a relação entre Didática e BNCC, um candidato conclui que o trabalho docente deve articular objetivos de aprendizagem, competências, habilidades, metodologias e avaliação. Essa conclusão é:
-    `,
-
-    alternativas: [
-        "Correta, pois a prática pedagógica deve integrar os diferentes elementos do processo educativo.",
-        "Incorreta, pois a BNCC trata em geral de conteúdos curriculares, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Incorreta, pois competências e habilidades substituem os objetivos educacionais, pois atenderia integralmente às exigências pedagógicas e legais descritas na situação apresentada.",
-        "Correta em geral para os anos iniciais do ensino fundamental, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Incorreta, pois avaliação e metodologia são independentes das competências previstas."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. A BNCC exige coerência entre competências, habilidades, objetivos, metodologias e avaliação, fortalecendo a intencionalidade pedagógica.
-    `,
-
-    feedbackErro: `
-A prática didática deve articular todos os elementos do processo educativo para favorecer o desenvolvimento integral dos estudantes.
-    `,
-
-    dicaBanca: `
-Uma palavra-chave da BNCC é coerência entre o que se ensina, como se ensina e como se avalia.
-    `
-},
-{
-    pergunta: `
-Durante o conselho de classe, uma professora apresentou os resultados de aprendizagem da turma e afirmou que pretendia revisar parte de seu planejamento, modificar algumas estratégias metodológicas e reorganizar atividades avaliativas. Sua decisão fundamenta-se na compreensão de que:
-    `,
-
-    alternativas: [
-        "Planejamento, ensino, aprendizagem e avaliação constituem elementos articulados e passíveis de readequação contínua.",
-        "A avaliação deve servir predominantemente para verificar o rendimento dos estudantes ao final do processo.",
-        "As dificuldades de aprendizagem decorrem predominantemente da falta de dedicação dos estudantes, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "O planejamento perde sua função após o início da execução das aulas, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "A avaliação deve ocorrer de forma independente dos objetivos de aprendizagem, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. A Didática compreende planejamento, ensino, aprendizagem e avaliação como elementos interdependentes que exigem acompanhamento e ajustes permanentes.
-    `,
-
-    feedbackErro: `
-A prática pedagógica envolve reflexão contínua sobre os resultados obtidos para aperfeiçoar as ações educativas.
-    `,
-
-    dicaBanca: `
-As bancas costumam cobrar a articulação entre planejamento, metodologia, aprendizagem e avaliação.
-    `
-},
-
-{
-    pergunta: `
-Ao analisar duas propostas pedagógicas, um candidato observou que uma delas enfatizava a transmissão sistemática dos conteúdos pelo professor, enquanto a outra priorizava a problematização da realidade social e o diálogo com os estudantes. Essas propostas aproximam-se, respectivamente, das tendências:
-    `,
-
-    alternativas: [
-        "Renovada Progressivista e Tecnicista.",
-        "Libertária e Tradicional.",
-        "Crítico-Social dos Conteúdos e Renovada Não Diretiva.",
-        "Tradicional e Libertadora.",
-        "Tecnicista e Tradicional."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. A primeira descrição caracteriza a tendência Tradicional, enquanto a segunda aproxima-se da Pedagogia Libertadora, associada a Paulo Freire.
-    `,
-
-    feedbackErro: `
-É importante diferenciar tendências pedagógicas pelas características centrais de suas concepções de ensino e aprendizagem.
-    `,
-
-    dicaBanca: `
-Transmissão → Tradicional. Problematização e diálogo → Libertadora.
-    `
-},
-
-{
-    pergunta: `
-Em uma sequência didática alinhada à BNCC, os estudantes foram desafiados a utilizar conhecimentos de diferentes áreas para propor soluções para problemas ambientais da comunidade. Nessa situação, a principal intenção pedagógica é:
-    `,
-
-    alternativas: [
-        "Substituir os conteúdos curriculares pelo desenvolvimento de atitudes socioemocionais.",
-        "Promover a memorização interdisciplinar dos conteúdos previstos no currículo, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Favorecer a mobilização de conhecimentos, habilidades e atitudes em situações contextualizadas.",
-        "Reduzir a importância dos componentes curriculares específicos, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Avaliar predominantemente competências comportamentais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. A BNCC propõe que os estudantes mobilizem conhecimentos, habilidades, atitudes e valores para enfrentar situações reais e significativas.
-    `,
-
-    feedbackErro: `
-A noção de competência envolve aplicação dos conhecimentos em contextos diversos e não apenas sua memorização.
-    `,
-
-    dicaBanca: `
-Competência na BNCC significa mobilizar saberes para agir em situações concretas.
-    `
-},
-
-{
-    pergunta: `
-Durante uma atividade avaliativa, uma professora percebeu que vários estudantes apresentaram o mesmo equívoco conceitual. Em vez de apenas registrar os erros, ela utilizou essas informações para reorganizar suas intervenções pedagógicas. Essa prática evidencia uma concepção de avaliação:
-    `,
-
-    alternativas: [
-        "Classificatória, centrada na hierarquização do desempenho dos estudantes.",
-        "Somativa, voltada predominantemente à atribuição de notas finais, sem considerar a complexidade do processo educativo e a diversidade das situações escolares.",
-        "Normativa, baseada na comparação entre estudantes, sem considerar suas necessidades, formas de participação e condições reais de aprendizagem.",
-        "Certificadora, destinada à promoção escolar, como orientação geral aplicável a todas as situações, independentemente do contexto apresentado.",
-        "Formativa, utilizada para orientar decisões pedagógicas e favorecer a aprendizagem."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. A avaliação formativa utiliza informações obtidas durante o processo para orientar intervenções e promover avanços na aprendizagem.
-    `,
-
-    feedbackErro: `
-A avaliação formativa não se limita ao registro de resultados; ela orienta ações pedagógicas futuras.
-    `,
-
-    dicaBanca: `
-Se a avaliação gera mudanças no ensino, geralmente trata-se de avaliação formativa.
-    `
-},
-
-{
-    pergunta: `
-Ao refletir sobre os fundamentos da Didática, um professor concluiu que ensinar envolve selecionar conteúdos, planejar estratégias, organizar situações de aprendizagem, avaliar continuamente e promover a formação crítica dos estudantes. Essa conclusão é compatível com a compreensão de que:
-    `,
-
-    alternativas: [
-        "A Didática concentra-se à escolha das técnicas utilizadas pelo professor.",
-        "O ensino constitui uma prática intencional, sistemática e socialmente situada.",
-        "O processo educativo depende prioritariamente das características individuais dos estudantes.",
-        "Os conteúdos escolares possuem importância secundária em relação às metodologias.",
-        "A aprendizagem ocorre independentemente da mediação pedagógica."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. A Didática compreende o ensino como uma prática intencional, organizada e comprometida com a formação humana e social dos estudantes.
-    `,
-
-    feedbackErro: `
-A Didática não se limita a métodos ou técnicas; ela envolve a compreensão ampla do processo educativo e de suas finalidades.
-    `,
-
-    dicaBanca: `
-Uma visão ampla da Didática integra objetivos, conteúdos, metodologia, avaliação e formação humana.
-    `
-}];
-
+    {
+        "pergunta": "Ao discutir o objeto da Didática, uma equipe pedagógica concluiu que ela não se reduz à escolha de técnicas de aula. À luz da formulação clássica de José Carlos Libâneo, a compreensão mais adequada é que a Didática:",
+        "alternativas": [
+            "investiga os fundamentos, as condições e os modos de realização do ensino, articulando objetivos, conteúdos, métodos e organização do trabalho docente.",
+            "estuda prioritariamente os processos administrativos da escola, vinculando o ensino às rotinas de gestão, aos mecanismos de controle institucional e ao funcionamento pedagógico.",
+            "analisa os processos psicológicos individuais de aprendizagem, deixando as decisões sobre objetivos e conteúdos para outras áreas da Pedagogia.",
+            "concentra-se na elaboração de recursos e técnicas de exposição, tratando a seleção dos conteúdos como tarefa externa ao trabalho didático.",
+            "organiza procedimentos de avaliação e registro do rendimento, enquanto o planejamento do ensino pertence ao campo específico do currículo."
+        ],
+        "correta": 0,
+        "explicacao": "Para Libâneo, a Didática é um campo da Pedagogia voltado ao processo de ensino, abrangendo seus fundamentos, condições e formas de realização. Ela articula finalidades, objetivos, conteúdos, métodos, organização e avaliação.",
+        "feedbackAcerto": "Correto. Para Libâneo, a Didática é um campo da Pedagogia voltado ao processo de ensino, abrangendo seus fundamentos, condições e formas de realização. Ela articula finalidades, objetivos, conteúdos, métodos, organização e avaliação.",
+        "feedbackErro": "Resposta correta: A. investiga os fundamentos, as condições e os modos de realização do ensino, articulando objetivos, conteúdos, métodos e organização do trabalho docente. Para Libâneo, a Didática é um campo da Pedagogia voltado ao processo de ensino, abrangendo seus fundamentos, condições e formas de realização. Ela articula finalidades, objetivos, conteúdos, métodos, organização e avaliação.",
+        "dicaBanca": "Quando a banca citar Libâneo e perguntar pelo objeto da Didática, procure uma visão ampla do processo de ensino, e não uma técnica isolada."
+    },
+    {
+        "pergunta": "Em uma formação docente, discutiu-se a distinção entre educação, instrução e ensino. Considerando uma abordagem didática de inspiração libaneana, assinale a alternativa mais adequada.",
+        "alternativas": [
+            "A educação corresponde ao trabalho escolar formal; a instrução diz respeito à socialização familiar; e o ensino se limita à transmissão de conteúdos pelo professor e por rotinas escolares.",
+            "A educação é processo social amplo; a instrução refere-se à formação intelectual e à assimilação de conhecimentos; o ensino organiza condições para que essa apropriação ocorra.",
+            "A instrução abrange todas as influências sociais sobre o indivíduo; a educação se restringe ao desenvolvimento cognitivo; e o ensino corresponde ao treino de habilidades escolares.",
+            "O ensino designa qualquer processo de socialização; a educação corresponde à aquisição de informações; e a instrução se identifica com a avaliação da aprendizagem.",
+            "A educação e a instrução são expressões equivalentes no campo pedagógico, enquanto o ensino se distingue delas por tratar da organização administrativa da escola."
+        ],
+        "correta": 1,
+        "explicacao": "A distinção ajuda a compreender que educação é fenômeno social amplo, instrução relaciona-se à formação intelectual e ao domínio de conhecimentos e capacidades, e ensino é a organização intencional das condições de aprendizagem.",
+        "feedbackAcerto": "Correto. A distinção ajuda a compreender que educação é fenômeno social amplo, instrução relaciona-se à formação intelectual e ao domínio de conhecimentos e capacidades, e ensino é a organização intencional das condições de aprendizagem.",
+        "feedbackErro": "Resposta correta: B. A educação é processo social amplo; a instrução refere-se à formação intelectual e à assimilação de conhecimentos; o ensino organiza condições para que essa apropriação ocorra. A distinção ajuda a compreender que educação é fenômeno social amplo, instrução relaciona-se à formação intelectual e ao domínio de conhecimentos e capacidades, e ensino é a organização intencional das condições de aprendizagem.",
+        "dicaBanca": "A banca pode trocar os três conceitos. Educação é mais ampla; instrução liga-se à formação intelectual; ensino é atividade intencionalmente organizada."
+    },
+    {
+        "pergunta": "Uma professora afirma que a boa aula depende de técnica eficiente, mas também da relação humana estabelecida com os estudantes e das finalidades sociais implicadas no conhecimento trabalhado. Essa compreensão aproxima-se da concepção de Didática defendida por Vera Maria Candau porque:",
+        "alternativas": [
+            "subordina a dimensão pedagógica às relações interpessoais, entendendo que a qualidade do vínculo afetivo resolve as questões metodológicas e curriculares.",
+            "privilegia a dimensão política do ensino, tratando métodos, recursos e organização da aula como elementos secundários diante das finalidades sociais.",
+            "integra as dimensões técnica, humana e político-social do processo de ensino-aprendizagem, evitando reduzir a Didática a um procedimento instrumental.",
+            "separa as dimensões técnica, humana e social para que cada uma seja analisada por um campo distinto e aplicada em momentos diferentes do planejamento.",
+            "identifica a Didática com um repertório de técnicas neutras, cuja eficácia pode ser medida independentemente do contexto histórico e das relações sociais."
+        ],
+        "correta": 2,
+        "explicacao": "Candau critica a redução da Didática a uma perspectiva instrumental e propõe uma compreensão multidimensional, articulando dimensões técnica, humana e político-social.",
+        "feedbackAcerto": "Correto. Candau critica a redução da Didática a uma perspectiva instrumental e propõe uma compreensão multidimensional, articulando dimensões técnica, humana e político-social.",
+        "feedbackErro": "Resposta correta: C. integra as dimensões técnica, humana e político-social do processo de ensino-aprendizagem, evitando reduzir a Didática a um procedimento instrumental. Candau critica a redução da Didática a uma perspectiva instrumental e propõe uma compreensão multidimensional, articulando dimensões técnica, humana e político-social.",
+        "dicaBanca": "Candau costuma aparecer em provas associada à multidimensionalidade da Didática e à crítica da neutralidade técnica."
+    },
+    {
+        "pergunta": "Uma rede de ensino pretende aproximar teoria e prática. Em vez de tratar a teoria como um conjunto de prescrições prontas, propõe que os professores analisem situações concretas, recorram a conhecimentos teóricos e reelaborem suas ações. Nessa perspectiva, a relação teoria-prática é entendida como:",
+        "alternativas": [
+            "uma relação de aplicação direta, em que princípios teóricos previamente definidos orientam a prática sem necessidade de reinterpretação do contexto escolar.",
+            "uma relação hierárquica, na qual a prática docente deve confirmar os modelos acadêmicos para preservar a coerência científica do trabalho pedagógico.",
+            "uma relação de independência, pois a prática decorre da experiência profissional enquanto a teoria se ocupa de explicações gerais sobre a educação.",
+            "uma relação dialética, na qual a prática suscita problemas e a teoria oferece instrumentos de compreensão, produzindo novas formas de intervenção.",
+            "uma relação sequencial, em que a prática ocorre depois da formação teórica e passa a ter função de demonstrar conceitos já consolidados."
+        ],
+        "correta": 3,
+        "explicacao": "Numa concepção dialética de práxis, teoria e prática se relacionam de forma recíproca: a realidade problematiza a teoria, e a teoria possibilita interpretar e transformar a realidade.",
+        "feedbackAcerto": "Correto. Numa concepção dialética de práxis, teoria e prática se relacionam de forma recíproca: a realidade problematiza a teoria, e a teoria possibilita interpretar e transformar a realidade.",
+        "feedbackErro": "Resposta correta: D. uma relação dialética, na qual a prática suscita problemas e a teoria oferece instrumentos de compreensão, produzindo novas formas de intervenção. Numa concepção dialética de práxis, teoria e prática se relacionam de forma recíproca: a realidade problematiza a teoria, e a teoria possibilita interpretar e transformar a realidade.",
+        "dicaBanca": "Se a questão apresentar teoria e prática como polos que se transformam mutuamente, pense em relação dialética ou práxis."
+    },
+    {
+        "pergunta": "Ao estudar a história da Didática, um candidato encontra a expressão “ensinar tudo a todos” associada a uma obra que buscava sistematizar princípios gerais para o ensino. O autor e a obra correspondentes são:",
+        "alternativas": [
+            "John Dewey e Democracia e Educação, obra voltada à experiência e à reconstrução do conhecimento escolar.",
+            "Paulo Freire e Pedagogia do Oprimido, obra centrada no diálogo e na crítica à educação bancária.",
+            "Dermeval Saviani e Escola e Democracia, obra dedicada à análise crítica das teorias educacionais.",
+            "José Carlos Libâneo e Didática, obra que sistematiza fundamentos do processo de ensino na pedagogia brasileira contemporânea.",
+            "Jan Amos Comenius e Didactica Magna."
+        ],
+        "correta": 4,
+        "explicacao": "Comenius é referência histórica central da Didática moderna. Em Didactica Magna, buscou formular uma arte universal de ensinar, frequentemente sintetizada pela expressão “ensinar tudo a todos”.",
+        "feedbackAcerto": "Correto. Comenius é referência histórica central da Didática moderna. Em Didactica Magna, buscou formular uma arte universal de ensinar, frequentemente sintetizada pela expressão “ensinar tudo a todos”.",
+        "feedbackErro": "Resposta correta: E. Jan Amos Comenius e Didactica Magna. Comenius é referência histórica central da Didática moderna. Em Didactica Magna, buscou formular uma arte universal de ensinar, frequentemente sintetizada pela expressão “ensinar tudo a todos”.",
+        "dicaBanca": "Comenius é um nome clássico de história da Didática. A associação mais cobrada é Didactica Magna."
+    },
+    {
+        "pergunta": "Durante a resolução de um problema, o professor evita fornecer a resposta pronta, formula perguntas, reorganiza pistas e propõe novas representações para que os estudantes avancem. Sob a perspectiva didática, essa atuação exemplifica:",
+        "alternativas": [
+            "mediação pedagógica, pois a intervenção docente organiza condições intelectuais e sociais para o avanço da aprendizagem.",
+            "neutralidade pedagógica, porque o professor se mantém distante do raciocínio dos estudantes e preserva a autonomia do grupo na busca de respostas.",
+            "não diretividade, porque a intervenção se limita a acolher as escolhas dos estudantes sem introduzir elementos que orientem a aprendizagem.",
+            "transmissão indireta, porque o professor comunica o conteúdo de forma fragmentada para que a turma reconstrua uma resposta previamente definida.",
+            "avaliação classificatória, porque as perguntas formuladas servem para distinguir estudantes que já dominam o conteúdo daqueles que ainda apresentam dúvidas."
+        ],
+        "correta": 0,
+        "explicacao": "Mediação não significa fornecer respostas, mas intervir intencionalmente para criar condições de apropriação do conhecimento, por meio de perguntas, pistas, explicações, recursos e reorganização das tarefas.",
+        "feedbackAcerto": "Correto. Mediação não significa fornecer respostas, mas intervir intencionalmente para criar condições de apropriação do conhecimento, por meio de perguntas, pistas, explicações, recursos e reorganização das tarefas.",
+        "feedbackErro": "Resposta correta: A. mediação pedagógica, pois a intervenção docente organiza condições intelectuais e sociais para o avanço da aprendizagem. Mediação não significa fornecer respostas, mas intervir intencionalmente para criar condições de apropriação do conhecimento, por meio de perguntas, pistas, explicações, recursos e reorganização das tarefas.",
+        "dicaBanca": "A presença de intervenção intencional que ajuda o aluno a avançar costuma indicar mediação pedagógica."
+    },
+    {
+        "pergunta": "Um professor selecionou um conteúdo conceitualmente complexo e decidiu ensiná-lo por meio de uma sequência de situações-problema, exemplos contrastantes e sínteses progressivas. A decisão evidencia que, em Didática:",
+        "alternativas": [
+            "o método define o valor formativo do conteúdo, de modo que uma estratégia participativa torna adequada qualquer seleção de conhecimentos escolares.",
+            "conteúdo e método se relacionam, pois a forma de ensinar deve favorecer a apropriação das características e relações próprias do objeto de conhecimento.",
+            "o conteúdo determina por si mesmo a metodologia, cabendo ao professor reproduzir a lógica interna da ciência na mesma sequência utilizada pelos especialistas.",
+            "a metodologia pode ser escolhida antes dos objetivos e dos conteúdos, desde que seja motivadora e adequada à faixa etária dos estudantes.",
+            "o conteúdo corresponde ao que se ensina e o método ao que se avalia, razão pela qual ambos podem ser planejados de forma relativamente independente."
+        ],
+        "correta": 1,
+        "explicacao": "Objetivos, conteúdos e métodos constituem elementos interdependentes. A metodologia precisa ser coerente com o que se pretende ensinar, com as características do conteúdo e com as condições de aprendizagem.",
+        "feedbackAcerto": "Correto. Objetivos, conteúdos e métodos constituem elementos interdependentes. A metodologia precisa ser coerente com o que se pretende ensinar, com as características do conteúdo e com as condições de aprendizagem.",
+        "feedbackErro": "Resposta correta: B. conteúdo e método se relacionam, pois a forma de ensinar deve favorecer a apropriação das características e relações próprias do objeto de conhecimento. Objetivos, conteúdos e métodos constituem elementos interdependentes. A metodologia precisa ser coerente com o que se pretende ensinar, com as características do conteúdo e com as condições de aprendizagem.",
+        "dicaBanca": "Desconfie de respostas que tratem conteúdo e método como elementos autônomos."
+    },
+    {
+        "pergunta": "Antes de iniciar o estudo de frações, uma professora solicita que os alunos expliquem como repartem alimentos e interpretam descontos no cotidiano. Ela utiliza essas respostas para planejar as atividades seguintes. Didaticamente, os conhecimentos prévios foram utilizados como:",
+        "alternativas": [
+            "substitutos dos conhecimentos sistematizados, pois a experiência cotidiana deve orientar os conteúdos que serão mantidos ou retirados do currículo.",
+            "indicadores de rendimento, permitindo classificar previamente os estudantes segundo o domínio que demonstram antes da intervenção docente.",
+            "ponto de partida para diagnosticar modos de pensar dos estudantes e estabelecer relações com os novos conhecimentos escolares.",
+            "referências motivacionais, sem função cognitiva relevante, já que conceitos cotidianos precisam ser abandonados quando começa o ensino formal.",
+            "critérios para individualizar integralmente o currículo, fazendo com que cada estudante estude conteúdos diferentes conforme suas experiências anteriores."
+        ],
+        "correta": 2,
+        "explicacao": "Conhecimentos prévios funcionam como referência diagnóstica e cognitiva. Eles ajudam o professor a compreender como os estudantes pensam e a planejar mediações que favoreçam novas aprendizagens.",
+        "feedbackAcerto": "Correto. Conhecimentos prévios funcionam como referência diagnóstica e cognitiva. Eles ajudam o professor a compreender como os estudantes pensam e a planejar mediações que favoreçam novas aprendizagens.",
+        "feedbackErro": "Resposta correta: C. ponto de partida para diagnosticar modos de pensar dos estudantes e estabelecer relações com os novos conhecimentos escolares. Conhecimentos prévios funcionam como referência diagnóstica e cognitiva. Eles ajudam o professor a compreender como os estudantes pensam e a planejar mediações que favoreçam novas aprendizagens.",
+        "dicaBanca": "Conhecimento prévio não substitui conhecimento escolar; ele ajuda a construir pontes para o novo conteúdo."
+    },
+    {
+        "pergunta": "Em uma turma, o professor estabelece regras claras, explica seus fundamentos, escuta os estudantes e intervém quando os combinados são descumpridos. Essa postura ilustra melhor:",
+        "alternativas": [
+            "autoritarismo pedagógico, pois a existência de regras e intervenção docente implica concentração das decisões na figura do professor.",
+            "permissividade educativa, porque a escuta dos estudantes transfere ao grupo o controle sobre normas, conteúdos e critérios de aprendizagem.",
+            "não diretividade pedagógica, pois o professor organiza o ambiente sem interferir no comportamento ou na construção dos conhecimentos.",
+            "autoridade pedagógica democrática, que combina direção do processo educativo, diálogo, critérios claros e respeito aos estudantes.",
+            "gestão tecnicista da sala, uma vez que regras explícitas e critérios de acompanhamento transformam relações educativas em procedimentos de controle."
+        ],
+        "correta": 3,
+        "explicacao": "Autoridade pedagógica não se confunde com autoritarismo. O professor mantém responsabilidade pela direção do ensino, mas pode exercê-la com diálogo, respeito, justificativa das normas e participação.",
+        "feedbackAcerto": "Correto. Autoridade pedagógica não se confunde com autoritarismo. O professor mantém responsabilidade pela direção do ensino, mas pode exercê-la com diálogo, respeito, justificativa das normas e participação.",
+        "feedbackErro": "Resposta correta: D. autoridade pedagógica democrática, que combina direção do processo educativo, diálogo, critérios claros e respeito aos estudantes. Autoridade pedagógica não se confunde com autoritarismo. O professor mantém responsabilidade pela direção do ensino, mas pode exercê-la com diálogo, respeito, justificativa das normas e participação.",
+        "dicaBanca": "Bancas gostam de opor autoridade legítima a autoritarismo. Direção docente não significa coerção."
+    },
+    {
+        "pergunta": "Ao corrigir uma atividade, a professora identifica que muitos estudantes usam o mesmo raciocínio inadequado. Em vez de registrar a falha e seguir adiante, organiza uma nova situação para confrontar esse modo de pensar. Nesse caso, o erro é tratado como:",
+        "alternativas": [
+            "evidência de falta de estudo que deve orientar a intensificação de exercícios do mesmo tipo até que a resposta esperada seja reproduzida.",
+            "indicador de baixa capacidade individual, útil para formar grupos homogêneos e ajustar expectativas de aprendizagem entre os estudantes.",
+            "resultado da ausência de pré-requisitos, razão pela qual o conteúdo seguinte deve ser suspenso até que toda a turma alcance desempenho idêntico.",
+            "falha de mensuração do instrumento, já que respostas recorrentes entre vários estudantes indicam problema de validade da atividade aplicada.",
+            "fonte de informação sobre o processo de aprendizagem e referência para a intervenção pedagógica."
+        ],
+        "correta": 4,
+        "explicacao": "Em uma perspectiva formativa, o erro pode revelar hipóteses, estratégias e dificuldades. Sua análise ajuda o professor a decidir que mediações e situações de aprendizagem propor.",
+        "feedbackAcerto": "Correto. Em uma perspectiva formativa, o erro pode revelar hipóteses, estratégias e dificuldades. Sua análise ajuda o professor a decidir que mediações e situações de aprendizagem propor.",
+        "feedbackErro": "Resposta correta: E. fonte de informação sobre o processo de aprendizagem e referência para a intervenção pedagógica. Em uma perspectiva formativa, o erro pode revelar hipóteses, estratégias e dificuldades. Sua análise ajuda o professor a decidir que mediações e situações de aprendizagem propor.",
+        "dicaBanca": "Se o erro gera nova intervenção, ele está sendo usado como informação pedagógica."
+    },
+    {
+        "pergunta": "Uma aula organiza-se pela exposição verbal do professor, uso de exercícios de fixação, valorização da disciplina e reprodução dos conhecimentos ensinados. Na classificação das tendências pedagógicas difundida por Libâneo, essa prática aproxima-se da tendência:",
+        "alternativas": [
+            "liberal tradicional.",
+            "liberal renovada progressivista, que valoriza experiência, atividade e resolução de problemas organizados a partir do interesse discente.",
+            "liberal renovada não diretiva, que enfatiza relações interpessoais, autodesenvolvimento e facilitação da aprendizagem.",
+            "progressista libertadora, que toma a realidade social como objeto de problematização em uma relação pedagógica dialógica.",
+            "progressista crítico-social dos conteúdos, que articula conteúdos sistematizados e prática social por meio da mediação docente."
+        ],
+        "correta": 0,
+        "explicacao": "A tendência liberal tradicional enfatiza transmissão do conhecimento, centralidade docente, disciplina, exercícios e assimilação dos conteúdos sistematizados.",
+        "feedbackAcerto": "Correto. A tendência liberal tradicional enfatiza transmissão do conhecimento, centralidade docente, disciplina, exercícios e assimilação dos conteúdos sistematizados.",
+        "feedbackErro": "Resposta correta: A. liberal tradicional. A tendência liberal tradicional enfatiza transmissão do conhecimento, centralidade docente, disciplina, exercícios e assimilação dos conteúdos sistematizados.",
+        "dicaBanca": "Professor no centro, exposição, disciplina e fixação são marcas clássicas da tendência tradicional."
+    },
+    {
+        "pergunta": "Uma escola organiza projetos a partir de problemas vividos pelos estudantes, valoriza experiências concretas e entende que aprender envolve reconstruir a experiência por meio da ação e da reflexão. Essa concepção aproxima-se especialmente de:",
+        "alternativas": [
+            "Comenius e da pedagogia moderna clássica, que sistematiza procedimentos gerais de ensino graduado e organização da instrução escolar.",
+            "John Dewey e da tradição escolanovista, que associa aprendizagem, experiência, investigação e democracia.",
+            "Skinner e do tecnicismo educacional, que enfatiza objetivos comportamentais, controle de contingências e eficiência dos procedimentos instrucionais.",
+            "Paulo Freire e da pedagogia libertadora, cuja categoria central é a problematização política da realidade em uma relação dialógica.",
+            "Saviani e da pedagogia histórico-crítica, que destaca a apropriação do saber sistematizado como mediação para compreender a prática social."
+        ],
+        "correta": 1,
+        "explicacao": "Dewey é uma referência da Escola Nova. Sua concepção valoriza experiência, atividade, investigação, resolução de problemas e educação democrática.",
+        "feedbackAcerto": "Correto. Dewey é uma referência da Escola Nova. Sua concepção valoriza experiência, atividade, investigação, resolução de problemas e educação democrática.",
+        "feedbackErro": "Resposta correta: B. John Dewey e da tradição escolanovista, que associa aprendizagem, experiência, investigação e democracia. Dewey é uma referência da Escola Nova. Sua concepção valoriza experiência, atividade, investigação, resolução de problemas e educação democrática.",
+        "dicaBanca": "Experiência, aprender fazendo, problema e democracia são pistas fortes para Dewey."
+    },
+    {
+        "pergunta": "Em determinada prática escolar, o professor procura criar um clima de aceitação, empatia e autenticidade, oferecendo condições para que o estudante conduza seu processo de desenvolvimento pessoal. Na classificação de Libâneo, essa orientação aproxima-se da tendência:",
+        "alternativas": [
+            "liberal renovada progressivista, cuja ênfase recai sobre atividade, experiência e resolução de problemas vinculados ao meio social.",
+            "progressista libertária, que valoriza autogestão coletiva, crítica às formas autoritárias de poder e organização grupal.",
+            "liberal renovada não diretiva, influenciada pela psicologia humanista e associada à facilitação da aprendizagem.",
+            "progressista libertadora, que articula diálogo, temas geradores e problematização das condições concretas de existência.",
+            "liberal tecnicista, que organiza o ensino por objetivos operacionais, procedimentos sequenciados e controle dos resultados."
+        ],
+        "correta": 2,
+        "explicacao": "A tendência renovada não diretiva é associada à psicologia humanista, especialmente Carl Rogers, e enfatiza facilitação da aprendizagem, relações interpessoais e desenvolvimento pessoal.",
+        "feedbackAcerto": "Correto. A tendência renovada não diretiva é associada à psicologia humanista, especialmente Carl Rogers, e enfatiza facilitação da aprendizagem, relações interpessoais e desenvolvimento pessoal.",
+        "feedbackErro": "Resposta correta: C. liberal renovada não diretiva, influenciada pela psicologia humanista e associada à facilitação da aprendizagem. A tendência renovada não diretiva é associada à psicologia humanista, especialmente Carl Rogers, e enfatiza facilitação da aprendizagem, relações interpessoais e desenvolvimento pessoal.",
+        "dicaBanca": "Empatia, autenticidade, facilitação e desenvolvimento pessoal apontam para a renovada não diretiva."
+    },
+    {
+        "pergunta": "Um sistema de ensino descreve objetivos em comportamentos observáveis, padroniza procedimentos, utiliza materiais instrucionais sequenciados e acompanha resultados por indicadores de desempenho. Na classificação das tendências pedagógicas, predomina a orientação:",
+        "alternativas": [
+            "liberal tradicional, centrada na autoridade intelectual do professor, na exposição dos conteúdos e na disciplina como condição da aprendizagem.",
+            "progressista crítico-social dos conteúdos, voltada à apropriação do saber sistematizado em articulação com a experiência social dos estudantes.",
+            "liberal renovada progressivista, que organiza o ensino em torno da atividade do aluno, da experiência e da resolução de problemas.",
+            "liberal tecnicista, marcada pela racionalização do ensino, eficiência, controle dos meios e definição operacional de objetivos.",
+            "progressista libertadora, que estrutura a relação pedagógica pela problematização da realidade, pelo diálogo e pela conscientização."
+        ],
+        "correta": 3,
+        "explicacao": "O tecnicismo enfatiza racionalização, eficiência, objetivos operacionais, controle de resultados e organização dos meios instrucionais.",
+        "feedbackAcerto": "Correto. O tecnicismo enfatiza racionalização, eficiência, objetivos operacionais, controle de resultados e organização dos meios instrucionais.",
+        "feedbackErro": "Resposta correta: D. liberal tecnicista, marcada pela racionalização do ensino, eficiência, controle dos meios e definição operacional de objetivos. O tecnicismo enfatiza racionalização, eficiência, objetivos operacionais, controle de resultados e organização dos meios instrucionais.",
+        "dicaBanca": "Objetivos operacionais, eficiência, padronização e controle são termos fortemente ligados ao tecnicismo."
+    },
+    {
+        "pergunta": "Em uma turma de jovens e adultos, o educador parte de temas relacionados ao trabalho e à moradia, problematiza as condições vividas pelo grupo e promove diálogo para construir uma leitura crítica da realidade. Essa prática aproxima-se da pedagogia:",
+        "alternativas": [
+            "liberal tradicional, porque os temas sociais funcionam como recursos para transmitir conteúdos previamente organizados pelo professor.",
+            "liberal tecnicista, porque a análise das condições concretas permite definir comportamentos observáveis e controlar o percurso de aprendizagem.",
+            "progressista libertária, porque o diálogo freireano tem como finalidade principal instituir autogestão escolar e abolir formas de direção pedagógica.",
+            "crítico-social dos conteúdos, porque temas geradores constituem a forma característica de seleção dos conteúdos escolares nessa tendência.",
+            "progressista libertadora, associada a Paulo Freire e à educação problematizadora."
+        ],
+        "correta": 4,
+        "explicacao": "A pedagogia libertadora de Paulo Freire articula diálogo, problematização da realidade, temas geradores, conscientização e superação da educação bancária.",
+        "feedbackAcerto": "Correto. A pedagogia libertadora de Paulo Freire articula diálogo, problematização da realidade, temas geradores, conscientização e superação da educação bancária.",
+        "feedbackErro": "Resposta correta: E. progressista libertadora, associada a Paulo Freire e à educação problematizadora. A pedagogia libertadora de Paulo Freire articula diálogo, problematização da realidade, temas geradores, conscientização e superação da educação bancária.",
+        "dicaBanca": "Temas geradores, diálogo, conscientização e problematização remetem diretamente a Paulo Freire."
+    },
+    {
+        "pergunta": "Uma experiência educativa organiza-se por assembleias, decisões coletivas, grupos autogeridos e crítica às relações hierárquicas de poder. O professor participa como membro do grupo, sem assumir posição central de comando. Essa descrição aproxima-se da tendência:",
+        "alternativas": [
+            "progressista libertária, que atribui grande importância à autogestão e à experiência grupal.",
+            "progressista libertadora, cuja característica distintiva é a investigação temática e a problematização da realidade por meio do diálogo.",
+            "liberal renovada não diretiva, que enfatiza desenvolvimento pessoal, relações interpessoais e facilitação individual da aprendizagem.",
+            "progressista crítico-social dos conteúdos, que confere ao professor papel ativo na mediação dos conhecimentos sistematizados.",
+            "liberal tecnicista, que organiza os comportamentos esperados por meio de objetivos operacionais e procedimentos racionalizados."
+        ],
+        "correta": 0,
+        "explicacao": "A tendência libertária enfatiza autogestão, participação grupal, crítica ao autoritarismo e formas não hierárquicas de organização educativa.",
+        "feedbackAcerto": "Correto. A tendência libertária enfatiza autogestão, participação grupal, crítica ao autoritarismo e formas não hierárquicas de organização educativa.",
+        "feedbackErro": "Resposta correta: A. progressista libertária, que atribui grande importância à autogestão e à experiência grupal. A tendência libertária enfatiza autogestão, participação grupal, crítica ao autoritarismo e formas não hierárquicas de organização educativa.",
+        "dicaBanca": "Autogestão é uma palavra-chave muito forte da pedagogia libertária."
+    },
+    {
+        "pergunta": "Uma professora parte das experiências sociais da turma, identifica o conhecimento sistematizado necessário para ampliar a compreensão da realidade e conduz atividades que possibilitam a apropriação crítica desses conteúdos. Na classificação de Libâneo, essa prática aproxima-se da tendência:",
+        "alternativas": [
+            "progressista libertadora, em que os conteúdos sistematizados são organizados prioritariamente a partir de temas geradores definidos no diálogo com o grupo.",
+            "progressista crítico-social dos conteúdos, que articula conhecimento escolar, mediação docente e prática social.",
+            "liberal renovada progressivista, que enfatiza a atividade do aluno e a aprendizagem por experiências organizadas em torno de problemas.",
+            "liberal tradicional, que trata o saber escolar como patrimônio cultural a ser transmitido segundo uma sequência definida pelo professor.",
+            "progressista libertária, que privilegia autogestão, participação grupal e crítica das estruturas de autoridade no interior da instituição."
+        ],
+        "correta": 1,
+        "explicacao": "Na pedagogia crítico-social dos conteúdos, associada a Libâneo, o acesso ao conhecimento sistematizado é central, mas deve ser articulado à prática social dos estudantes por meio da mediação docente.",
+        "feedbackAcerto": "Correto. Na pedagogia crítico-social dos conteúdos, associada a Libâneo, o acesso ao conhecimento sistematizado é central, mas deve ser articulado à prática social dos estudantes por meio da mediação docente.",
+        "feedbackErro": "Resposta correta: B. progressista crítico-social dos conteúdos, que articula conhecimento escolar, mediação docente e prática social. Na pedagogia crítico-social dos conteúdos, associada a Libâneo, o acesso ao conhecimento sistematizado é central, mas deve ser articulado à prática social dos estudantes por meio da mediação docente.",
+        "dicaBanca": "Libâneo + conteúdo sistematizado + prática social + mediação = crítico-social dos conteúdos."
+    },
+    {
+        "pergunta": "Ao analisar a Pedagogia Histórico-Crítica, uma equipe conclui que a escola possui função relevante na socialização do conhecimento elaborado historicamente, permitindo que os estudantes ultrapassem formas imediatas de compreensão da realidade. Essa formulação associa-se principalmente a:",
+        "alternativas": [
+            "Carl Rogers, que destaca a aprendizagem significativa produzida em ambiente de aceitação, congruência e liberdade de escolha do estudante.",
+            "John Dewey, que relaciona educação à reconstrução da experiência e à resolução de problemas em uma sociedade democrática.",
+            "Dermeval Saviani, para quem a apropriação do saber sistematizado integra a mediação necessária à compreensão e transformação da prática social.",
+            "Paulo Freire, que organiza a prática educativa pela investigação temática, pelo diálogo e pela problematização crítica das situações existenciais dos educandos.",
+            "Comenius, que propõe uma organização gradual e metódica da instrução para ampliar o acesso ao ensino em bases sistemáticas."
+        ],
+        "correta": 2,
+        "explicacao": "A Pedagogia Histórico-Crítica, formulada por Saviani, atribui centralidade à socialização do saber sistematizado como mediação para a compreensão crítica e transformação da prática social.",
+        "feedbackAcerto": "Correto. A Pedagogia Histórico-Crítica, formulada por Saviani, atribui centralidade à socialização do saber sistematizado como mediação para a compreensão crítica e transformação da prática social.",
+        "feedbackErro": "Resposta correta: C. Dermeval Saviani, para quem a apropriação do saber sistematizado integra a mediação necessária à compreensão e transformação da prática social. A Pedagogia Histórico-Crítica, formulada por Saviani, atribui centralidade à socialização do saber sistematizado como mediação para a compreensão crítica e transformação da prática social.",
+        "dicaBanca": "Saviani é a referência central da Pedagogia Histórico-Crítica."
+    },
+    {
+        "pergunta": "Em uma sequência inspirada na Pedagogia Histórico-Crítica, o professor parte de uma prática social comum, identifica questões que exigem explicação, oferece instrumentos conceituais para compreendê-las e favorece uma síntese mais elaborada antes de retornar à prática social. Essa organização corresponde, respectivamente, a:",
+        "alternativas": [
+            "experiência, investigação, descoberta, generalização e aplicação, sequência associada à tradição renovada progressivista de orientação escolanovista.",
+            "diagnóstico, exposição, exercício, verificação e recuperação, sequência típica de um modelo de ensino centrado em transmissão e fixação.",
+            "tema gerador, codificação, diálogo, conscientização e ação cultural, organização vinculada à pedagogia libertadora de Paulo Freire.",
+            "prática social, problematização, instrumentalização, catarse e prática social em novo nível de compreensão.",
+            "objetivo, estímulo, resposta, reforço e mensuração, organização coerente com modelos de instrução de orientação comportamental e tecnicista."
+        ],
+        "correta": 3,
+        "explicacao": "Os momentos mais conhecidos da Pedagogia Histórico-Crítica são prática social, problematização, instrumentalização, catarse e prática social. Eles expressam um movimento pedagógico e não uma receita mecânica.",
+        "feedbackAcerto": "Correto. Os momentos mais conhecidos da Pedagogia Histórico-Crítica são prática social, problematização, instrumentalização, catarse e prática social. Eles expressam um movimento pedagógico e não uma receita mecânica.",
+        "feedbackErro": "Resposta correta: D. prática social, problematização, instrumentalização, catarse e prática social em novo nível de compreensão. Os momentos mais conhecidos da Pedagogia Histórico-Crítica são prática social, problematização, instrumentalização, catarse e prática social. Eles expressam um movimento pedagógico e não uma receita mecânica.",
+        "dicaBanca": "Memorize os cinco momentos, mas lembre que Saviani não os trata como etapas rígidas e independentes."
+    },
+    {
+        "pergunta": "Uma banca apresenta duas afirmações: I. Libâneo associa a Pedagogia Crítico-Social dos Conteúdos à apropriação dos conhecimentos sistematizados em relação com a prática social. II. Saviani formula a Pedagogia Histórico-Crítica, enfatizando a mediação do saber elaborado na transformação da prática social. A análise correta é:",
+        "alternativas": [
+            "a primeira está correta e a segunda está incorreta, porque Saviani defende uma pedagogia centrada na experiência espontânea e nos interesses do aluno.",
+            "a primeira está incorreta e a segunda está correta, porque a crítico-social dos conteúdos rejeita o conhecimento sistematizado como forma de reprodução cultural.",
+            "as duas estão incorretas, pois Libâneo e Saviani pertencem às tendências liberais e defendem formas distintas de racionalização técnica do ensino.",
+            "as duas estão corretas porque os dois autores utilizam a mesma denominação pedagógica, os mesmos conceitos e a mesma sequência metodológica.",
+            "as duas afirmações estão corretas e distinguem duas formulações progressistas que valorizam o conhecimento escolar sem reduzi-lo à transmissão mecânica."
+        ],
+        "correta": 4,
+        "explicacao": "Libâneo é associado à Pedagogia Crítico-Social dos Conteúdos; Saviani, à Pedagogia Histórico-Crítica. Ambas valorizam o conhecimento sistematizado e a relação com a prática social, embora constituam formulações distintas.",
+        "feedbackAcerto": "Correto. Libâneo é associado à Pedagogia Crítico-Social dos Conteúdos; Saviani, à Pedagogia Histórico-Crítica. Ambas valorizam o conhecimento sistematizado e a relação com a prática social, embora constituam formulações distintas.",
+        "feedbackErro": "Resposta correta: E. as duas afirmações estão corretas e distinguem duas formulações progressistas que valorizam o conhecimento escolar sem reduzi-lo à transmissão mecânica. Libâneo é associado à Pedagogia Crítico-Social dos Conteúdos; Saviani, à Pedagogia Histórico-Crítica. Ambas valorizam o conhecimento sistematizado e a relação com a prática social, embora constituam formulações distintas.",
+        "dicaBanca": "Pegadinha clássica: Crítico-Social dos Conteúdos = Libâneo; Histórico-Crítica = Saviani."
+    },
+    {
+        "pergunta": "Ao criticar uma prática em que o professor deposita informações e o estudante assume posição receptiva, sem diálogo sobre a realidade, Paulo Freire utiliza a expressão:",
+        "alternativas": [
+            "educação bancária, contraposta à educação problematizadora e dialógica.",
+            "educação tecnicista, contraposta ao currículo integrado e à aprendizagem baseada em competências sociais.",
+            "educação tradicional, contraposta ao método intuitivo e à aprendizagem pela atividade defendida pela Escola Nova.",
+            "educação instrucional, contraposta ao ensino por investigação e à organização de projetos interdisciplinares.",
+            "educação conteudista, contraposta à pedagogia histórico-crítica e ao acesso crítico aos conhecimentos sistematizados."
+        ],
+        "correta": 0,
+        "explicacao": "Freire denomina educação bancária a relação em que o educador deposita conteúdos no educando. Sua alternativa é uma educação problematizadora, dialógica e crítica.",
+        "feedbackAcerto": "Correto. Freire denomina educação bancária a relação em que o educador deposita conteúdos no educando. Sua alternativa é uma educação problematizadora, dialógica e crítica.",
+        "feedbackErro": "Resposta correta: A. educação bancária, contraposta à educação problematizadora e dialógica. Freire denomina educação bancária a relação em que o educador deposita conteúdos no educando. Sua alternativa é uma educação problematizadora, dialógica e crítica.",
+        "dicaBanca": "“Depósito” de conhecimentos é a metáfora central para reconhecer educação bancária."
+    },
+    {
+        "pergunta": "Uma professora afirma que diálogo, em Paulo Freire, significa permitir que todos falem livremente, mesmo sem intencionalidade pedagógica ou problematização do conhecimento. A avaliação mais adequada dessa afirmação é:",
+        "alternativas": [
+            "a afirmação é adequada, porque o diálogo freireano pressupõe suspensão da direção pedagógica para que o grupo determine livremente os conteúdos e objetivos.",
+            "a afirmação é inadequada, pois o diálogo freireano envolve encontro entre sujeitos mediados pelo mundo, problematização e construção crítica do conhecimento.",
+            "a afirmação é adequada, porque a pedagogia libertadora substitui o conhecimento escolar pela troca de experiências e pela expressão espontânea dos educandos.",
+            "a afirmação é inadequada, porque Freire entende diálogo como técnica de comunicação usada depois da exposição para verificar a compreensão dos conteúdos.",
+            "a afirmação é inadequada, porque o diálogo tem função motivacional e afetiva, enquanto a aprendizagem conceitual decorre de métodos sistemáticos não dialógicos."
+        ],
+        "correta": 1,
+        "explicacao": "Em Freire, diálogo não é conversa espontânea nem ausência de intencionalidade. É uma relação epistemológica e política entre sujeitos que problematizam o mundo e produzem conhecimento.",
+        "feedbackAcerto": "Correto. Em Freire, diálogo não é conversa espontânea nem ausência de intencionalidade. É uma relação epistemológica e política entre sujeitos que problematizam o mundo e produzem conhecimento.",
+        "feedbackErro": "Resposta correta: B. a afirmação é inadequada, pois o diálogo freireano envolve encontro entre sujeitos mediados pelo mundo, problematização e construção crítica do conhecimento. Em Freire, diálogo não é conversa espontânea nem ausência de intencionalidade. É uma relação epistemológica e política entre sujeitos que problematizam o mundo e produzem conhecimento.",
+        "dicaBanca": "Freire não confunde diálogo com permissividade ou conversa sem objeto."
+    },
+    {
+        "pergunta": "Vera Maria Candau critica uma Didática entendida como conjunto de técnicas neutras e universalmente aplicáveis. Em contraposição, defende uma Didática fundamental que:",
+        "alternativas": [
+            "substitui conhecimentos técnicos por análise política, pois métodos e procedimentos possuem relevância reduzida diante das desigualdades sociais.",
+            "concentra-se na subjetividade dos estudantes, entendendo que relações interpessoais positivas são o principal critério para selecionar métodos e conteúdos.",
+            "articula dimensões técnica, humana e político-social, analisando o ensino em sua concretude histórica e institucional.",
+            "separa os componentes do ensino em dimensões autônomas, permitindo avaliar individualmente técnica, afetividade e contexto social.",
+            "retoma uma abordagem instrumental aperfeiçoada, utilizando técnicas flexíveis e participativas para preservar a neutralidade do processo educativo."
+        ],
+        "correta": 2,
+        "explicacao": "Candau propõe superar a Didática instrumental por meio de uma Didática fundamental e multidimensional, que articula técnica, dimensão humana e dimensão político-social.",
+        "feedbackAcerto": "Correto. Candau propõe superar a Didática instrumental por meio de uma Didática fundamental e multidimensional, que articula técnica, dimensão humana e dimensão político-social.",
+        "feedbackErro": "Resposta correta: C. articula dimensões técnica, humana e político-social, analisando o ensino em sua concretude histórica e institucional. Candau propõe superar a Didática instrumental por meio de uma Didática fundamental e multidimensional, que articula técnica, dimensão humana e dimensão político-social.",
+        "dicaBanca": "Didática fundamental e multidimensionalidade são expressões fortemente associadas a Candau."
+    },
+    {
+        "pergunta": "Analise as situações: I. definição de procedimentos para ensinar determinado conteúdo; II. construção de relações de respeito e escuta; III. análise de como desigualdades sociais atravessam as oportunidades de aprendizagem. Na perspectiva multidimensional de Candau, essas situações correspondem, respectivamente, às dimensões:",
+        "alternativas": [
+            "humana, técnica e institucional, porque a organização dos procedimentos deriva das relações interpessoais estabelecidas na aula.",
+            "político-social, humana e técnica, pois toda decisão metodológica constitui primeiro uma opção política e depois uma escolha operacional.",
+            "técnica, político-social e humana, já que a escuta pedagógica se define pela distribuição de poder e a desigualdade se expressa no plano relacional.",
+            "técnica, humana e político-social.",
+            "institucional, afetiva e curricular, classificação utilizada para separar gestão da aula, vínculos e seleção dos conhecimentos escolares."
+        ],
+        "correta": 3,
+        "explicacao": "Na formulação multidimensional, a dimensão técnica envolve organização intencional dos meios; a humana, relações e sujeitos; e a político-social, condicionantes e finalidades sociais da educação.",
+        "feedbackAcerto": "Correto. Na formulação multidimensional, a dimensão técnica envolve organização intencional dos meios; a humana, relações e sujeitos; e a político-social, condicionantes e finalidades sociais da educação.",
+        "feedbackErro": "Resposta correta: D. técnica, humana e político-social. Na formulação multidimensional, a dimensão técnica envolve organização intencional dos meios; a humana, relações e sujeitos; e a político-social, condicionantes e finalidades sociais da educação.",
+        "dicaBanca": "Técnica = como organizar; humana = relações; político-social = contexto, poder e finalidades."
+    },
+    {
+        "pergunta": "Ao elaborar um plano de ensino, um professor formula: “Compreender os principais processos de urbanização brasileira e analisar seus impactos socioambientais”. Em comparação com um objetivo como “identificar dois fatores de crescimento urbano em um mapa temático”, o primeiro é:",
+        "alternativas": [
+            "menos adequado por utilizar um verbo cognitivo amplo, enquanto objetivos de ensino devem ser formulados por comportamentos mensuráveis e uniformes.",
+            "equivalente ao segundo em nível de abrangência, pois ambos descrevem resultados esperados e podem ser avaliados pelos mesmos instrumentos.",
+            "mais específico por combinar dois verbos, enquanto o segundo funciona como objetivo geral devido à presença de um recurso cartográfico.",
+            "um conteúdo e não um objetivo, pois objetivos válidos precisam indicar a metodologia, o recurso didático e o critério quantitativo de sucesso.",
+            "mais amplo e orientador, enquanto o segundo expressa desempenho mais delimitado e observável dentro do percurso de aprendizagem."
+        ],
+        "correta": 4,
+        "explicacao": "Objetivos gerais expressam direções formativas mais amplas; objetivos específicos detalham aprendizagens ou desempenhos que contribuem para essas finalidades.",
+        "feedbackAcerto": "Correto. Objetivos gerais expressam direções formativas mais amplas; objetivos específicos detalham aprendizagens ou desempenhos que contribuem para essas finalidades.",
+        "feedbackErro": "Resposta correta: E. mais amplo e orientador, enquanto o segundo expressa desempenho mais delimitado e observável dentro do percurso de aprendizagem. Objetivos gerais expressam direções formativas mais amplas; objetivos específicos detalham aprendizagens ou desempenhos que contribuem para essas finalidades.",
+        "dicaBanca": "A banca pode diferenciar objetivos gerais e específicos pela abrangência, não pela quantidade de verbos."
+    },
+    {
+        "pergunta": "Antes de definir conteúdos e estratégias para o semestre, uma equipe analisa resultados anteriores, perfil da turma, recursos disponíveis, condições de acessibilidade e dificuldades recorrentes. Essa etapa do planejamento corresponde principalmente:",
+        "alternativas": [
+            "ao diagnóstico da realidade, que oferece dados para decisões coerentes sobre objetivos, conteúdos, métodos e avaliação.",
+            "à execução do planejamento, porque o levantamento de condições já constitui uma intervenção pedagógica e deve ocorrer durante as aulas.",
+            "à avaliação somativa, pois utiliza resultados anteriores para estabelecer níveis de rendimento que orientarão a organização das turmas.",
+            "à seleção metodológica, porque o principal propósito do levantamento é identificar quais técnicas podem ser aplicadas com os recursos disponíveis.",
+            "à definição curricular, pois o diagnóstico autoriza a equipe a retirar conhecimentos previstos quando a turma apresenta dificuldades de aprendizagem."
+        ],
+        "correta": 0,
+        "explicacao": "Planejamento parte da análise concreta da realidade. Diagnóstico não é mero levantamento burocrático: ele subsidia decisões sobre prioridades, objetivos, conteúdos, estratégias e formas de acompanhamento.",
+        "feedbackAcerto": "Correto. Planejamento parte da análise concreta da realidade. Diagnóstico não é mero levantamento burocrático: ele subsidia decisões sobre prioridades, objetivos, conteúdos, estratégias e formas de acompanhamento.",
+        "feedbackErro": "Resposta correta: A. ao diagnóstico da realidade, que oferece dados para decisões coerentes sobre objetivos, conteúdos, métodos e avaliação. Planejamento parte da análise concreta da realidade. Diagnóstico não é mero levantamento burocrático: ele subsidia decisões sobre prioridades, objetivos, conteúdos, estratégias e formas de acompanhamento.",
+        "dicaBanca": "Perfil da turma, condições, recursos e dificuldades antes das decisões didáticas = diagnóstico."
+    },
+    {
+        "pergunta": "Um professor possui um documento semestral com objetivos, conteúdos, unidades, estratégias e critérios gerais de avaliação. Para a aula do dia, detalha uma situação-problema, tempo, intervenções e forma de fechamento. Esses documentos correspondem, respectivamente, a:",
+        "alternativas": [
+            "projeto político-pedagógico e plano curricular, pois o primeiro organiza a disciplina e o segundo descreve procedimentos de execução.",
+            "plano de ensino e plano de aula.",
+            "plano curricular e plano de ensino, porque a previsão semestral pertence ao currículo e a aula concreta representa o ensino propriamente dito.",
+            "plano de aula e plano de unidade, pois o documento mais amplo reúne várias aulas e o segundo detalha uma atividade delimitada.",
+            "projeto didático e plano educacional, já que ambos organizam ações em escalas distintas sem vínculo direto com a disciplina."
+        ],
+        "correta": 1,
+        "explicacao": "O plano de ensino organiza o trabalho de uma disciplina ou período mais amplo; o plano de aula detalha objetivos, conteúdos, estratégias, recursos, tempo e avaliação de uma situação específica.",
+        "feedbackAcerto": "Correto. O plano de ensino organiza o trabalho de uma disciplina ou período mais amplo; o plano de aula detalha objetivos, conteúdos, estratégias, recursos, tempo e avaliação de uma situação específica.",
+        "feedbackErro": "Resposta correta: B. plano de ensino e plano de aula. O plano de ensino organiza o trabalho de uma disciplina ou período mais amplo; o plano de aula detalha objetivos, conteúdos, estratégias, recursos, tempo e avaliação de uma situação específica.",
+        "dicaBanca": "Semestre/disciplina = plano de ensino; encontro específico = plano de aula."
+    },
+    {
+        "pergunta": "Uma professora pretende avaliar a capacidade de argumentar com evidências, mas organiza suas aulas pela cópia de definições e aplica uma prova que cobra reprodução literal. O principal problema didático é:",
+        "alternativas": [
+            "a escolha de prova escrita, porque argumentação deve ser avaliada por atividades orais e não pode ser examinada em produção textual estruturada.",
+            "a utilização de conteúdos conceituais, porque objetivos de argumentação exigem retirar conhecimentos disciplinares e priorizar habilidades gerais.",
+            "a ausência de coerência entre o objetivo proposto, as experiências de aprendizagem e o instrumento de avaliação.",
+            "o uso de definições, porque atividades de memorização não podem participar de sequências voltadas ao desenvolvimento de capacidades complexas.",
+            "a formulação do objetivo, porque argumentação com evidências pertence ao currículo e não deve orientar decisões metodológicas do professor."
+        ],
+        "correta": 2,
+        "explicacao": "A qualidade do planejamento depende da coerência entre objetivos, conteúdos, métodos, atividades e avaliação. Se o objetivo exige argumentação, o ensino e a avaliação precisam proporcionar oportunidades de construir e demonstrar essa capacidade.",
+        "feedbackAcerto": "Correto. A qualidade do planejamento depende da coerência entre objetivos, conteúdos, métodos, atividades e avaliação. Se o objetivo exige argumentação, o ensino e a avaliação precisam proporcionar oportunidades de construir e demonstrar essa capacidade.",
+        "feedbackErro": "Resposta correta: C. a ausência de coerência entre o objetivo proposto, as experiências de aprendizagem e o instrumento de avaliação. A qualidade do planejamento depende da coerência entre objetivos, conteúdos, métodos, atividades e avaliação. Se o objetivo exige argumentação, o ensino e a avaliação precisam proporcionar oportunidades de construir e demonstrar essa capacidade.",
+        "dicaBanca": "Quando objetivo, método e avaliação apontam para aprendizagens diferentes, procure a ideia de coerência didática."
+    },
+    {
+        "pergunta": "Durante o bimestre, os resultados mostram que parte da turma não compreendeu um conceito-chave. A professora mantém os objetivos, modifica a sequência de exemplos, introduz uma atividade prática e prevê nova coleta de evidências. Essa decisão caracteriza:",
+        "alternativas": [
+            "improvisação pedagógica, porque alterar atividades depois do início do período demonstra que o planejamento inicial perdeu sua função orientadora.",
+            "redução curricular, já que modificar a sequência de ensino implica diminuir a complexidade dos objetivos para adequá-los ao desempenho da turma.",
+            "avaliação normativa, pois os resultados coletados são utilizados para comparar o rendimento do grupo com padrões definidos no planejamento.",
+            "replanejamento fundamentado em informações da aprendizagem, preservando a intencionalidade e ajustando os meios de ensino.",
+            "flexibilização sem critérios, porque o planejamento deve manter procedimentos previstos para garantir igualdade de tratamento entre os estudantes."
+        ],
+        "correta": 3,
+        "explicacao": "Planejamento é intencional e flexível. Replanejar significa analisar evidências e ajustar estratégias, recursos, tempos ou atividades sem perder de vista as finalidades formativas.",
+        "feedbackAcerto": "Correto. Planejamento é intencional e flexível. Replanejar significa analisar evidências e ajustar estratégias, recursos, tempos ou atividades sem perder de vista as finalidades formativas.",
+        "feedbackErro": "Resposta correta: D. replanejamento fundamentado em informações da aprendizagem, preservando a intencionalidade e ajustando os meios de ensino. Planejamento é intencional e flexível. Replanejar significa analisar evidências e ajustar estratégias, recursos, tempos ou atividades sem perder de vista as finalidades formativas.",
+        "dicaBanca": "Flexibilidade não é improvisação: ajuste baseado em diagnóstico e evidências = replanejamento."
+    },
+    {
+        "pergunta": "Na elaboração do planejamento curricular de uma rede, professores discutem quais conhecimentos são socialmente relevantes, como serão distribuídos ao longo dos anos e que articulações existirão entre componentes. Esse processo difere do plano de aula porque:",
+        "alternativas": [
+            "pertence à gestão administrativa, enquanto o plano de aula constitui a única forma de planejamento com finalidade propriamente pedagógica.",
+            "define objetivos nacionais obrigatórios, enquanto o plano de aula trata dos conteúdos locais escolhidos pelo professor sem relação com o currículo.",
+            "organiza critérios de avaliação institucional, enquanto o plano de aula se ocupa da metodologia e não participa de decisões sobre avaliação.",
+            "é elaborado por especialistas externos à escola, enquanto o plano de aula depende da autonomia individual do professor e não exige articulação coletiva.",
+            "atua em escala mais ampla de seleção e organização dos conhecimentos, enquanto o plano de aula concretiza decisões para situações específicas de ensino."
+        ],
+        "correta": 4,
+        "explicacao": "Há diferentes níveis de planejamento. O curricular organiza conhecimentos e orientações em escala mais ampla; o plano de aula concretiza essas referências em situações específicas.",
+        "feedbackAcerto": "Correto. Há diferentes níveis de planejamento. O curricular organiza conhecimentos e orientações em escala mais ampla; o plano de aula concretiza essas referências em situações específicas.",
+        "feedbackErro": "Resposta correta: E. atua em escala mais ampla de seleção e organização dos conhecimentos, enquanto o plano de aula concretiza decisões para situações específicas de ensino. Há diferentes níveis de planejamento. O curricular organiza conhecimentos e orientações em escala mais ampla; o plano de aula concretiza essas referências em situações específicas.",
+        "dicaBanca": "A principal diferença está na escala e no grau de concretização das decisões."
+    },
+    {
+        "pergunta": "Ao escolher entre debate, exposição dialogada, estudo de caso e atividade experimental, o professor analisa o objetivo, a natureza do conteúdo, o tempo disponível e as características da turma. Essa decisão expressa o princípio de que:",
+        "alternativas": [
+            "métodos e técnicas devem ser selecionados em função de finalidades, conteúdos e condições concretas do processo de ensino.",
+            "metodologias participativas apresentam eficácia pedagógica superior e devem ser escolhidas quando houver tempo suficiente para sua execução.",
+            "o método mais adequado é aquele que aumenta o engajamento dos estudantes, mesmo quando sua relação com o objetivo de aprendizagem é indireta.",
+            "cada conteúdo possui uma técnica correspondente, cabendo ao professor identificar o procedimento que reproduz melhor a lógica da disciplina.",
+            "a diversidade metodológica constitui um objetivo em si, razão pela qual o professor deve variar estratégias mesmo quando uma delas se mostra adequada."
+        ],
+        "correta": 0,
+        "explicacao": "Não existe método universalmente superior. A seleção metodológica depende dos objetivos, dos conteúdos, dos estudantes, dos recursos e das condições concretas.",
+        "feedbackAcerto": "Correto. Não existe método universalmente superior. A seleção metodológica depende dos objetivos, dos conteúdos, dos estudantes, dos recursos e das condições concretas.",
+        "feedbackErro": "Resposta correta: A. métodos e técnicas devem ser selecionados em função de finalidades, conteúdos e condições concretas do processo de ensino. Não existe método universalmente superior. A seleção metodológica depende dos objetivos, dos conteúdos, dos estudantes, dos recursos e das condições concretas.",
+        "dicaBanca": "Questões de método costumam ser resolvidas pela ideia de adequação e intencionalidade, não por preferência por uma técnica."
+    },
+    {
+        "pergunta": "Uma professora utiliza exposição dialogada para introduzir um conceito difícil. Durante a apresentação, formula perguntas, recupera conhecimentos prévios, solicita justificativas e reorganiza explicações conforme as respostas da turma. Essa estratégia:",
+        "alternativas": [
+            "permanece uma prática tradicional por definição, pois o uso da fala docente impede participação efetiva e construção de conhecimentos pelos estudantes.",
+            "pode favorecer aprendizagem ativa quando a exposição é mediada por diálogo, problematização e participação cognitiva dos estudantes.",
+            "constitui metodologia não diretiva, porque o professor abre espaço para respostas dos alunos e deixa que o percurso conceitual seja definido pelo grupo.",
+            "substitui atividades investigativas, já que perguntas durante a exposição cumprem a mesma função de experimentos, projetos e resolução de problemas.",
+            "é adequada para conteúdos conceituais, mas inadequada para desenvolver capacidades de argumentação, análise e tomada de decisão."
+        ],
+        "correta": 1,
+        "explicacao": "A aula expositiva não é necessariamente passiva. Sua qualidade depende da intencionalidade e da forma de condução. Uma exposição dialogada pode promover elaboração, questionamento e participação.",
+        "feedbackAcerto": "Correto. A aula expositiva não é necessariamente passiva. Sua qualidade depende da intencionalidade e da forma de condução. Uma exposição dialogada pode promover elaboração, questionamento e participação.",
+        "feedbackErro": "Resposta correta: B. pode favorecer aprendizagem ativa quando a exposição é mediada por diálogo, problematização e participação cognitiva dos estudantes. A aula expositiva não é necessariamente passiva. Sua qualidade depende da intencionalidade e da forma de condução. Uma exposição dialogada pode promover elaboração, questionamento e participação.",
+        "dicaBanca": "A banca pode usar a pegadinha “exposição = tradicional”. Analise como a estratégia é conduzida."
+    },
+    {
+        "pergunta": "Em um curso de formação, os professores analisam um caso de evasão escolar com informações sobre território, relações familiares, práticas pedagógicas e dados de frequência. Precisam formular hipóteses e justificar intervenções. O estudo de caso é adequado porque:",
+        "alternativas": [
+            "permite substituir referenciais teóricos por experiências concretas, reduzindo a distância entre conhecimento acadêmico e realidade profissional.",
+            "oferece uma situação com resposta previamente definida, facilitando a aplicação uniforme de procedimentos aprendidos na formação.",
+            "favorece análise contextualizada, articulação entre conceitos e evidências e tomada de decisão diante de uma situação complexa.",
+            "concentra a aprendizagem no relato de experiências pessoais, tornando secundária a análise de dados e de fundamentos conceituais.",
+            "é indicado quando o objetivo é memorizar classificações, pois apresenta conteúdos em contexto e diminui a necessidade de abstração."
+        ],
+        "correta": 2,
+        "explicacao": "Estudos de caso exigem interpretar informações, mobilizar conceitos, considerar contexto, comparar alternativas e justificar decisões, sendo úteis para aprendizagens complexas.",
+        "feedbackAcerto": "Correto. Estudos de caso exigem interpretar informações, mobilizar conceitos, considerar contexto, comparar alternativas e justificar decisões, sendo úteis para aprendizagens complexas.",
+        "feedbackErro": "Resposta correta: C. favorece análise contextualizada, articulação entre conceitos e evidências e tomada de decisão diante de uma situação complexa. Estudos de caso exigem interpretar informações, mobilizar conceitos, considerar contexto, comparar alternativas e justificar decisões, sendo úteis para aprendizagens complexas.",
+        "dicaBanca": "Caso + evidências + decisão fundamentada = aplicação contextualizada do conhecimento."
+    },
+    {
+        "pergunta": "Uma professora inicia o tema “mobilidade urbana” apresentando dados contraditórios sobre transporte público e perguntando por que bairros da mesma cidade possuem tempos de deslocamento tão diferentes. Antes de oferecer explicações, organiza hipóteses da turma. A estratégia central é:",
+        "alternativas": [
+            "contextualização ilustrativa, porque os dados da cidade funcionam como exemplo inicial e não interferem na estrutura conceitual da sequência de ensino.",
+            "exposição indutiva, porque o professor apresenta casos particulares para que os estudantes deduzam uma definição geral antes do estudo conceitual.",
+            "avaliação diagnóstica, porque toda pergunta inicial tem por finalidade principal medir conhecimentos prévios e produzir um nível de desempenho.",
+            "problematização, pois transforma uma situação significativa em questão de investigação que orienta a busca e a organização do conhecimento.",
+            "aprendizagem não diretiva, porque o problema é formulado antes dos conteúdos e transfere aos estudantes a responsabilidade por definir o percurso."
+        ],
+        "correta": 3,
+        "explicacao": "Problematizar significa formular questões que gerem necessidade intelectual de compreender determinado fenômeno. O problema organiza investigação, estudo e elaboração conceitual.",
+        "feedbackAcerto": "Correto. Problematizar significa formular questões que gerem necessidade intelectual de compreender determinado fenômeno. O problema organiza investigação, estudo e elaboração conceitual.",
+        "feedbackErro": "Resposta correta: D. problematização, pois transforma uma situação significativa em questão de investigação que orienta a busca e a organização do conhecimento. Problematizar significa formular questões que gerem necessidade intelectual de compreender determinado fenômeno. O problema organiza investigação, estudo e elaboração conceitual.",
+        "dicaBanca": "Problematização não é pôr um exemplo no início; é criar uma questão que organiza o percurso de aprendizagem."
+    },
+    {
+        "pergunta": "Uma turma desenvolve durante seis semanas um projeto sobre desperdício de água, integrando medições, pesquisa de hábitos, análise de dados, produção de propostas e apresentação à comunidade. Didaticamente, a força do trabalho por projetos está em:",
+        "alternativas": [
+            "organizar conteúdos de modo espontâneo conforme interesses surgem, reduzindo a necessidade de objetivos prévios e critérios de acompanhamento.",
+            "substituir a estrutura curricular por temas do cotidiano, permitindo que a aprendizagem se concentre na experiência vivida pelos estudantes.",
+            "diminuir a intervenção docente durante o processo, pois a autonomia do grupo depende de decisões tomadas sem mediação pedagógica contínua.",
+            "garantir interdisciplinaridade por reunir diferentes atividades, mesmo quando não há articulação conceitual entre os componentes envolvidos.",
+            "articular conhecimentos e procedimentos em torno de uma finalidade significativa, exigindo investigação, planejamento, produção e comunicação."
+        ],
+        "correta": 4,
+        "explicacao": "Projetos podem favorecer integração de saberes, investigação, planejamento, colaboração e produção com sentido social. Isso exige intencionalidade docente e objetivos claros.",
+        "feedbackAcerto": "Correto. Projetos podem favorecer integração de saberes, investigação, planejamento, colaboração e produção com sentido social. Isso exige intencionalidade docente e objetivos claros.",
+        "feedbackErro": "Resposta correta: E. articular conhecimentos e procedimentos em torno de uma finalidade significativa, exigindo investigação, planejamento, produção e comunicação. Projetos podem favorecer integração de saberes, investigação, planejamento, colaboração e produção com sentido social. Isso exige intencionalidade docente e objetivos claros.",
+        "dicaBanca": "Projeto não significa espontaneísmo. Procure finalidade, investigação, produto e articulação de conhecimentos."
+    },
+    {
+        "pergunta": "Considere três propostas: I. cada disciplina aborda o tema água de forma paralela, sem planejamento conjunto; II. professores articulam conceitos de Ciências, Geografia e Matemática para analisar um problema comum; III. o problema orienta um percurso que ultrapassa fronteiras disciplinares e reorganiza conhecimentos em função da questão estudada. As propostas correspondem, respectivamente, a:",
+        "alternativas": [
+            "multidisciplinaridade, interdisciplinaridade e transdisciplinaridade.",
+            "interdisciplinaridade, multidisciplinaridade e transdisciplinaridade, pois o planejamento conjunto define o primeiro nível de integração.",
+            "multidisciplinaridade, transdisciplinaridade e interdisciplinaridade, porque a articulação de conceitos produz superação imediata das disciplinas.",
+            "transdisciplinaridade, interdisciplinaridade e multidisciplinaridade, já que a abordagem paralela mantém diferentes campos em um mesmo tema.",
+            "pluridisciplinaridade, disciplinaridade e interdisciplinaridade, classificação que distingue soma de conteúdos, integração e superação curricular."
+        ],
+        "correta": 0,
+        "explicacao": "Na multidisciplinaridade, disciplinas tratam um tema lado a lado; na interdisciplinaridade, há articulação e diálogo entre campos; na transdisciplinaridade, o problema pode ultrapassar fronteiras disciplinares e reorganizar o percurso de conhecimento.",
+        "feedbackAcerto": "Correto. Na multidisciplinaridade, disciplinas tratam um tema lado a lado; na interdisciplinaridade, há articulação e diálogo entre campos; na transdisciplinaridade, o problema pode ultrapassar fronteiras disciplinares e reorganizar o percurso de conhecimento.",
+        "feedbackErro": "Resposta correta: A. multidisciplinaridade, interdisciplinaridade e transdisciplinaridade. Na multidisciplinaridade, disciplinas tratam um tema lado a lado; na interdisciplinaridade, há articulação e diálogo entre campos; na transdisciplinaridade, o problema pode ultrapassar fronteiras disciplinares e reorganizar o percurso de conhecimento.",
+        "dicaBanca": "Paralelo = multi; articulação = inter; ultrapassar fronteiras = trans."
+    },
+    {
+        "pergunta": "Uma escola anuncia um projeto interdisciplinar porque três professores trabalharão o mesmo tema na mesma semana. Cada um, porém, planeja e avalia sua disciplina sem troca de conceitos, problemas ou procedimentos. A análise mais adequada é:",
+        "alternativas": [
+            "o projeto é interdisciplinar porque a coincidência temática produz unidade curricular, mesmo que objetivos e métodos permaneçam independentes.",
+            "há aproximação temática, mas falta articulação efetiva entre os campos de conhecimento para caracterizar um trabalho interdisciplinar consistente.",
+            "a proposta é transdisciplinar porque um mesmo tema circula por diferentes disciplinas e ultrapassa o conteúdo de um componente isolado.",
+            "a proposta não possui valor pedagógico, pois atividades interdisciplinares exigem planejamento integrado e avaliação coletiva de todos os resultados.",
+            "o trabalho é multidisciplinar e interdisciplinar ao mesmo tempo, já que ambas as expressões designam qualquer abordagem com mais de uma disciplina."
+        ],
+        "correta": 1,
+        "explicacao": "Interdisciplinaridade exige diálogo e articulação entre conhecimentos, problemas, conceitos ou procedimentos. Trabalhar o mesmo tema em paralelo não garante integração.",
+        "feedbackAcerto": "Correto. Interdisciplinaridade exige diálogo e articulação entre conhecimentos, problemas, conceitos ou procedimentos. Trabalhar o mesmo tema em paralelo não garante integração.",
+        "feedbackErro": "Resposta correta: B. há aproximação temática, mas falta articulação efetiva entre os campos de conhecimento para caracterizar um trabalho interdisciplinar consistente. Interdisciplinaridade exige diálogo e articulação entre conhecimentos, problemas, conceitos ou procedimentos. Trabalhar o mesmo tema em paralelo não garante integração.",
+        "dicaBanca": "Tema comum não basta. Procure relações efetivas entre os conhecimentos."
+    },
+    {
+        "pergunta": "Uma escola adquire tablets e aplicativos educacionais, mas os professores passam a utilizá-los para reproduzir as mesmas fichas de exercícios antes impressas. Do ponto de vista didático, a análise mais pertinente é:",
+        "alternativas": [
+            "a digitalização já representa inovação porque amplia o acesso aos recursos e moderniza o ambiente escolar, ainda que a atividade cognitiva e avaliativa permaneça semelhante.",
+            "o problema decorre da escolha dos aplicativos, pois tecnologias educacionais adequadas devem substituir exercícios repetitivos por atividades colaborativas.",
+            "a presença da tecnologia não garante inovação; seu valor depende da intencionalidade, do objetivo de aprendizagem e das formas de interação que possibilita.",
+            "recursos digitais favorecem aprendizagem quando assumem centralidade metodológica, cabendo ao professor organizar conteúdos em função das ferramentas disponíveis.",
+            "a utilização de tecnologia é didaticamente neutra, já que os efeitos sobre a aprendizagem dependem das características individuais de cada estudante."
+        ],
+        "correta": 2,
+        "explicacao": "Recursos não possuem valor pedagógico por si mesmos. A tecnologia precisa estar articulada a objetivos, conteúdos, metodologias e formas de participação.",
+        "feedbackAcerto": "Correto. Recursos não possuem valor pedagógico por si mesmos. A tecnologia precisa estar articulada a objetivos, conteúdos, metodologias e formas de participação.",
+        "feedbackErro": "Resposta correta: C. a presença da tecnologia não garante inovação; seu valor depende da intencionalidade, do objetivo de aprendizagem e das formas de interação que possibilita. Recursos não possuem valor pedagógico por si mesmos. A tecnologia precisa estar articulada a objetivos, conteúdos, metodologias e formas de participação.",
+        "dicaBanca": "Tecnologia + Didática = intencionalidade. Trocar papel por tela não altera necessariamente a aprendizagem."
+    },
+    {
+        "pergunta": "Durante um conflito em sala, a professora escuta as versões dos estudantes, retoma regras construídas coletivamente e conduz o grupo à definição de reparações coerentes. Em termos de gestão pedagógica da aula, essa prática:",
+        "alternativas": [
+            "reduz a autoridade da professora, porque regras discutidas pelo grupo deixam de possuir força pedagógica e passam a depender de consenso dos estudantes.",
+            "corresponde à não diretividade, pois a professora evita decidir sobre o conflito e transfere ao grupo a responsabilidade pela solução.",
+            "transforma disciplina em conteúdo socioemocional, desviando o tempo pedagógico de objetivos curriculares e de aprendizagens acadêmicas.",
+            "combina autoridade docente e participação, tratando disciplina como condição construída para o trabalho coletivo e a aprendizagem.",
+            "substitui procedimentos institucionais de convivência por acordos locais, o que torna as regras da turma independentes das normas da escola."
+        ],
+        "correta": 3,
+        "explicacao": "Gestão democrática da sala de aula não elimina a autoridade pedagógica. Regras claras, participação, diálogo, responsabilização e intervenção docente podem coexistir.",
+        "feedbackAcerto": "Correto. Gestão democrática da sala de aula não elimina a autoridade pedagógica. Regras claras, participação, diálogo, responsabilização e intervenção docente podem coexistir.",
+        "feedbackErro": "Resposta correta: D. combina autoridade docente e participação, tratando disciplina como condição construída para o trabalho coletivo e a aprendizagem. Gestão democrática da sala de aula não elimina a autoridade pedagógica. Regras claras, participação, diálogo, responsabilização e intervenção docente podem coexistir.",
+        "dicaBanca": "Participação e autoridade não são opostos quando a direção docente é democrática."
+    },
+    {
+        "pergunta": "Um estudante com baixa visão recebe o mesmo objetivo de aprendizagem da turma, mas utiliza material ampliado, contraste adequado e mais tempo para leitura. Essa decisão didática exemplifica:",
+        "alternativas": [
+            "redução curricular, pois alterar recursos e tempo modifica por si só o nível de complexidade do conhecimento exigido do estudante.",
+            "individualização integral do ensino, porque qualquer adaptação deve resultar em objetivos e critérios próprios para o estudante atendido.",
+            "avaliação diferenciada, mesmo antes da atividade avaliativa, já que recursos acessíveis constituem critérios alternativos de desempenho.",
+            "flexibilização do conteúdo, porque materiais ampliados transformam a forma de representação e, por isso, alteram o conhecimento selecionado.",
+            "remoção de barreiras e adequação dos meios de acesso, preservando a finalidade pedagógica do que se pretende aprender."
+        ],
+        "correta": 4,
+        "explicacao": "Inclusão didática pode exigir mudanças em recursos, tempo, comunicação e formas de participação sem reduzir automaticamente os objetivos de aprendizagem.",
+        "feedbackAcerto": "Correto. Inclusão didática pode exigir mudanças em recursos, tempo, comunicação e formas de participação sem reduzir automaticamente os objetivos de aprendizagem.",
+        "feedbackErro": "Resposta correta: E. remoção de barreiras e adequação dos meios de acesso, preservando a finalidade pedagógica do que se pretende aprender. Inclusão didática pode exigir mudanças em recursos, tempo, comunicação e formas de participação sem reduzir automaticamente os objetivos de aprendizagem.",
+        "dicaBanca": "Adaptar acesso não é o mesmo que reduzir o que o aluno deve aprender."
+    },
+    {
+        "pergunta": "No início de uma unidade, o professor solicita uma produção curta para identificar o que a turma já compreende sobre o tema. Ele usa os resultados para escolher exemplos e formar grupos de apoio. A função predominante da avaliação é:",
+        "alternativas": [
+            "diagnóstica, porque levanta informações sobre o ponto de partida e subsidia decisões de planejamento.",
+            "formativa, porque toda informação usada durante o ensino recebe essa denominação independentemente do momento e do propósito da coleta.",
+            "somativa, porque a atividade produz um resultado que sintetiza o desempenho do estudante antes do desenvolvimento da unidade.",
+            "classificatória, porque a formação de grupos utiliza diferenças de desempenho para organizar intervenções destinadas a públicos distintos.",
+            "certificadora, porque o professor registra evidências iniciais que poderão compor a comprovação final das aprendizagens alcançadas."
+        ],
+        "correta": 0,
+        "explicacao": "A avaliação diagnóstica identifica conhecimentos, dificuldades e condições iniciais para orientar o planejamento. Ela pode ocorrer no começo de um percurso ou quando surge necessidade de diagnóstico.",
+        "feedbackAcerto": "Correto. A avaliação diagnóstica identifica conhecimentos, dificuldades e condições iniciais para orientar o planejamento. Ela pode ocorrer no começo de um percurso ou quando surge necessidade de diagnóstico.",
+        "feedbackErro": "Resposta correta: A. diagnóstica, porque levanta informações sobre o ponto de partida e subsidia decisões de planejamento. A avaliação diagnóstica identifica conhecimentos, dificuldades e condições iniciais para orientar o planejamento. Ela pode ocorrer no começo de um percurso ou quando surge necessidade de diagnóstico.",
+        "dicaBanca": "Ponto de partida + decisão de planejamento = função diagnóstica."
+    },
+    {
+        "pergunta": "Durante uma sequência, a professora coleta versões preliminares de um texto, oferece devolutivas, permite revisão e compara as produções para decidir novas intervenções. A avaliação assume função:",
+        "alternativas": [
+            "somativa, porque a comparação entre versões permite sintetizar o desempenho e atribuir um resultado ao final de cada etapa da produção.",
+            "formativa, porque produz evidências durante o processo para orientar o estudante e reajustar o ensino.",
+            "diagnóstica, porque as versões preliminares revelam conhecimentos prévios e devem ser utilizadas antes da intervenção pedagógica principal.",
+            "normativa, porque a professora acompanha a evolução individual em relação ao padrão de escrita esperado para o ano escolar.",
+            "classificatória, porque toda devolutiva pressupõe critérios de desempenho que distinguem produções mais e menos adequadas."
+        ],
+        "correta": 1,
+        "explicacao": "Avaliação formativa ocorre durante o processo e tem função reguladora: fornece feedback, orienta revisões e subsidia ajustes no ensino.",
+        "feedbackAcerto": "Correto. Avaliação formativa ocorre durante o processo e tem função reguladora: fornece feedback, orienta revisões e subsidia ajustes no ensino.",
+        "feedbackErro": "Resposta correta: B. formativa, porque produz evidências durante o processo para orientar o estudante e reajustar o ensino. Avaliação formativa ocorre durante o processo e tem função reguladora: fornece feedback, orienta revisões e subsidia ajustes no ensino.",
+        "dicaBanca": "Evidência durante o percurso + feedback + intervenção = formativa."
+    },
+    {
+        "pergunta": "Ao final do trimestre, uma escola utiliza uma prova e um projeto para sintetizar o nível de aprendizagem alcançado e registrar resultados. Sobre a função somativa, é correto afirmar que:",
+        "alternativas": [
+            "é incompatível com uma perspectiva formativa, porque registrar resultados finais impede que outras evidências sejam usadas durante o processo de ensino.",
+            "deve ser substituída por avaliações diagnósticas, pois qualquer síntese final transforma a avaliação em mecanismo de seleção e exclusão escolar.",
+            "pode integrar um sistema avaliativo mais amplo, desde que seus resultados não sejam tratados como única fonte para compreender a aprendizagem.",
+            "possui finalidade pedagógica quando utilizada para intervir durante a aprendizagem, razão pela qual sua principal característica é o feedback imediato.",
+            "corresponde à mesma função da avaliação classificatória, pois ambas se definem pelo uso de notas e pela decisão sobre promoção dos estudantes."
+        ],
+        "correta": 2,
+        "explicacao": "Funções diagnóstica, formativa e somativa podem coexistir. O problema não é sintetizar resultados, mas reduzir a avaliação a uma medida final sem outras evidências ou usos pedagógicos.",
+        "feedbackAcerto": "Correto. Funções diagnóstica, formativa e somativa podem coexistir. O problema não é sintetizar resultados, mas reduzir a avaliação a uma medida final sem outras evidências ou usos pedagógicos.",
+        "feedbackErro": "Resposta correta: C. pode integrar um sistema avaliativo mais amplo, desde que seus resultados não sejam tratados como única fonte para compreender a aprendizagem. Funções diagnóstica, formativa e somativa podem coexistir. O problema não é sintetizar resultados, mas reduzir a avaliação a uma medida final sem outras evidências ou usos pedagógicos.",
+        "dicaBanca": "Não trate somativa como sinônimo automático de avaliação ruim; observe a função e o uso dos resultados."
+    },
+    {
+        "pergunta": "Uma professora pretende avaliar a habilidade de comparar interpretações históricas utilizando evidências. Qual decisão apresenta maior coerência entre objetivo, critério e instrumento?",
+        "alternativas": [
+            "aplicar questões de definição sobre conceitos históricos e considerar como critério principal a quantidade de termos memorizados corretamente.",
+            "solicitar um resumo do capítulo e avaliar organização visual, extensão do texto e cumprimento das normas formais de apresentação.",
+            "realizar prova de verdadeiro ou falso sobre datas e personagens e utilizar o percentual de acertos como indicador da capacidade de comparar interpretações.",
+            "propor análise de fontes com duas interpretações e avaliar a qualidade das evidências mobilizadas, a comparação realizada e a justificativa construída.",
+            "pedir uma apresentação livre sobre o tema e avaliar criatividade, fluência oral e participação, sem critérios relacionados ao uso das fontes históricas."
+        ],
+        "correta": 3,
+        "explicacao": "O instrumento e os critérios precisam permitir que o estudante demonstre a aprendizagem indicada no objetivo. Comparar interpretações com evidências exige tarefas e critérios compatíveis com essa capacidade.",
+        "feedbackAcerto": "Correto. O instrumento e os critérios precisam permitir que o estudante demonstre a aprendizagem indicada no objetivo. Comparar interpretações com evidências exige tarefas e critérios compatíveis com essa capacidade.",
+        "feedbackErro": "Resposta correta: D. propor análise de fontes com duas interpretações e avaliar a qualidade das evidências mobilizadas, a comparação realizada e a justificativa construída. O instrumento e os critérios precisam permitir que o estudante demonstre a aprendizagem indicada no objetivo. Comparar interpretações com evidências exige tarefas e critérios compatíveis com essa capacidade.",
+        "dicaBanca": "A pergunta-chave é: o instrumento realmente permite observar o que o objetivo declara?"
+    },
+    {
+        "pergunta": "Depois de uma questão de Ciências, vários alunos afirmam que plantas “se alimentam do solo”. O professor registra as justificativas, propõe análise de massa em um experimento histórico e retoma a ideia depois da discussão. Essa condução mostra que:",
+        "alternativas": [
+            "o erro deve ser corrigido por demonstração empírica direta, pois evidências experimentais substituem explicações conceituais equivocadas.",
+            "as concepções dos alunos precisam ser preservadas como formas válidas de conhecimento, sem comparação com modelos científicos escolares.",
+            "a recorrência do erro indica falha do instrumento, já que respostas semelhantes entre vários estudantes impedem inferências sobre aprendizagem individual.",
+            "a reconstrução conceitual depende da apresentação do experimento correto, tornando desnecessária a mediação docente depois da observação dos resultados.",
+            "o erro pode revelar modelos explicativos dos estudantes e orientar situações que promovam reconstrução conceitual."
+        ],
+        "correta": 4,
+        "explicacao": "Erros e concepções alternativas podem revelar como o estudante organiza suas explicações. O professor pode utilizá-los para planejar conflitos cognitivos, análise de evidências e novas mediações.",
+        "feedbackAcerto": "Correto. Erros e concepções alternativas podem revelar como o estudante organiza suas explicações. O professor pode utilizá-los para planejar conflitos cognitivos, análise de evidências e novas mediações.",
+        "feedbackErro": "Resposta correta: E. o erro pode revelar modelos explicativos dos estudantes e orientar situações que promovam reconstrução conceitual. Erros e concepções alternativas podem revelar como o estudante organiza suas explicações. O professor pode utilizá-los para planejar conflitos cognitivos, análise de evidências e novas mediações.",
+        "dicaBanca": "Erro recorrente pode ser uma janela para o raciocínio da turma, não um dado a ser descartado."
+    },
+    {
+        "pergunta": "Uma escola afirma que suas aulas estão alinhadas à BNCC porque substituiu conteúdos por “competências”. Do ponto de vista didático, a afirmação é problemática porque:",
+        "alternativas": [
+            "competências envolvem mobilização de conhecimentos, habilidades, atitudes e valores; portanto, não eliminam a necessidade de selecionar e ensinar conhecimentos.",
+            "a BNCC organiza a educação por conteúdos e objetivos de ensino, enquanto a noção de competência é utilizada no planejamento sem função curricular normativa.",
+            "competências pertencem ao campo da avaliação, cabendo ao currículo definir conhecimentos e ao professor escolher habilidades durante a execução das aulas.",
+            "o desenvolvimento de competências ocorre por metodologias ativas, razão pela qual conteúdos conceituais possuem função de apoio e não precisam ser ensinados diretamente.",
+            "a seleção de conhecimentos deve ser feita depois das competências, pois conteúdos funcionam como exemplos intercambiáveis para desenvolver capacidades gerais."
+        ],
+        "correta": 0,
+        "explicacao": "A BNCC define competência como mobilização de conhecimentos, habilidades, atitudes e valores. Desenvolver competências não significa esvaziar conteúdos, mas organizar situações em que os conhecimentos sejam apropriados e mobilizados.",
+        "feedbackAcerto": "Correto. A BNCC define competência como mobilização de conhecimentos, habilidades, atitudes e valores. Desenvolver competências não significa esvaziar conteúdos, mas organizar situações em que os conhecimentos sejam apropriados e mobilizados.",
+        "feedbackErro": "Resposta correta: A. competências envolvem mobilização de conhecimentos, habilidades, atitudes e valores; portanto, não eliminam a necessidade de selecionar e ensinar conhecimentos. A BNCC define competência como mobilização de conhecimentos, habilidades, atitudes e valores. Desenvolver competências não significa esvaziar conteúdos, mas organizar situações em que os conhecimentos sejam apropriados e mobilizados.",
+        "dicaBanca": "Competência não é o oposto de conteúdo. A pegadinha costuma apresentar uma falsa substituição."
+    },
+    {
+        "pergunta": "Após uma aula que não produziu os resultados esperados, o professor reconstrói o que ocorreu, confronta suas decisões com referenciais teóricos e planeja nova intervenção. Essa postura aproxima-se da ideia de profissional reflexivo porque:",
+        "alternativas": [
+            "substitui conhecimentos teóricos pela experiência acumulada, permitindo que o professor desenvolva soluções próprias adequadas ao seu contexto.",
+            "transforma a experiência em objeto de análise e utiliza reflexão fundamentada para revisar decisões de prática.",
+            "valoriza a reflexão espontânea depois da aula, sem necessidade de registros, evidências ou conceitos externos ao saber construído na prática.",
+            "reconhece que a prática profissional possui problemas singulares e, por isso, não pode ser analisada por conhecimentos sistematizados da educação.",
+            "considera a revisão da aula uma forma de avaliação docente, cuja função principal é identificar erros de execução e aperfeiçoar técnicas."
+        ],
+        "correta": 1,
+        "explicacao": "Prática reflexiva implica analisar a ação, interpretar evidências, dialogar com conhecimentos teóricos e reconstruir decisões. Não se trata de opor teoria e experiência.",
+        "feedbackAcerto": "Correto. Prática reflexiva implica analisar a ação, interpretar evidências, dialogar com conhecimentos teóricos e reconstruir decisões. Não se trata de opor teoria e experiência.",
+        "feedbackErro": "Resposta correta: B. transforma a experiência em objeto de análise e utiliza reflexão fundamentada para revisar decisões de prática. Prática reflexiva implica analisar a ação, interpretar evidências, dialogar com conhecimentos teóricos e reconstruir decisões. Não se trata de opor teoria e experiência.",
+        "dicaBanca": "Reflexão profissional exige análise da ação, não mera lembrança do que ocorreu."
+    },
+    {
+        "pergunta": "Um conteúdo produzido no campo científico é selecionado, reorganizado e representado de modo a tornar-se ensinável em determinada etapa escolar, sem ser uma cópia simplificada do conhecimento acadêmico. Esse processo é associado ao conceito de:",
+        "alternativas": [
+            "mediação pedagógica, que descreve intervenções do professor destinadas a apoiar a apropriação do conhecimento pelo estudante durante a aula.",
+            "contextualização curricular, que relaciona conhecimentos escolares a situações sociais, culturais e territoriais significativas para os estudantes.",
+            "transposição didática, que analisa transformações entre saber de referência, saber a ensinar e saber efetivamente ensinado.",
+            "interdisciplinaridade, que articula conceitos e procedimentos de diferentes campos para compreender problemas que exigem mais de uma perspectiva.",
+            "sequência didática, que organiza atividades progressivas em torno de objetivos de aprendizagem e de um conteúdo delimitado."
+        ],
+        "correta": 2,
+        "explicacao": "O conceito de transposição didática, associado a Yves Chevallard, ajuda a compreender as transformações pelas quais um saber passa ao ser selecionado e organizado para o ensino.",
+        "feedbackAcerto": "Correto. O conceito de transposição didática, associado a Yves Chevallard, ajuda a compreender as transformações pelas quais um saber passa ao ser selecionado e organizado para o ensino.",
+        "feedbackErro": "Resposta correta: C. transposição didática, que analisa transformações entre saber de referência, saber a ensinar e saber efetivamente ensinado. O conceito de transposição didática, associado a Yves Chevallard, ajuda a compreender as transformações pelas quais um saber passa ao ser selecionado e organizado para o ensino.",
+        "dicaBanca": "Saber científico → saber a ensinar → saber ensinado é a pista clássica de transposição didática."
+    },
+    {
+        "pergunta": "Em uma reunião, dois professores discordam. O primeiro afirma que “na prática, a teoria é outra”; o segundo sustenta que a teoria serve para interpretar a prática, enquanto a prática também coloca problemas que exigem revisão dos referenciais. Didaticamente, a segunda posição expressa:",
+        "alternativas": [
+            "uma concepção aplicacionista, segundo a qual a prática alcança qualidade pedagógica quando executa com fidelidade os princípios previamente definidos pela teoria educacional.",
+            "uma concepção empirista, porque reconhece a prática como fonte inicial dos problemas e utiliza a teoria para registrar regularidades observadas.",
+            "uma concepção tecnicista, pois transforma problemas do cotidiano em decisões baseadas em modelos e procedimentos sistemáticos de intervenção.",
+            "uma concepção de práxis, em que ação e reflexão se relacionam de forma recíproca na produção e transformação do trabalho pedagógico.",
+            "uma concepção espontaneísta, já que a revisão dos referenciais teóricos depende das experiências concretas produzidas pelos professores."
+        ],
+        "correta": 3,
+        "explicacao": "Práxis expressa unidade dinâmica entre reflexão e ação. Teoria orienta a compreensão e intervenção, enquanto a prática desafia, confirma, nega e reelabora explicações.",
+        "feedbackAcerto": "Correto. Práxis expressa unidade dinâmica entre reflexão e ação. Teoria orienta a compreensão e intervenção, enquanto a prática desafia, confirma, nega e reelabora explicações.",
+        "feedbackErro": "Resposta correta: D. uma concepção de práxis, em que ação e reflexão se relacionam de forma recíproca na produção e transformação do trabalho pedagógico. Práxis expressa unidade dinâmica entre reflexão e ação. Teoria orienta a compreensão e intervenção, enquanto a prática desafia, confirma, nega e reelabora explicações.",
+        "dicaBanca": "Se teoria e prática se modificam mutuamente, procure práxis ou relação dialética."
+    },
+    {
+        "pergunta": "Uma coordenadora observa quatro situações: uso de conteúdos sistematizados para ampliar a leitura crítica da realidade; escolha de métodos coerentes com objetivos; consideração das relações humanas; análise das desigualdades que atravessam a aprendizagem. A interpretação mais adequada é que uma Didática consistente:",
+        "alternativas": [
+            "deve priorizar a dimensão metodológica, porque os demais elementos influenciam a aula, mas não pertencem propriamente ao objeto da Didática.",
+            "precisa separar aspectos pedagógicos e sociais, pois a escola responde pelo ensino e outras instituições lidam com desigualdades e relações de poder.",
+            "deve concentrar-se nos conteúdos sistematizados, já que a função social da escola se cumpre quando o professor garante sua transmissão integral.",
+            "deve privilegiar relações humanas e participação, porque conhecimentos e métodos são meios secundários diante da formação integral dos estudantes.",
+            "articula conhecimentos, métodos, relações e condições sociais como dimensões de um processo de ensino intencional e historicamente situado."
+        ],
+        "correta": 4,
+        "explicacao": "A Didática contemporânea não se reduz a técnica, conteúdo ou relações. Ela compreende o ensino como processo intencional, multidimensional e socialmente situado.",
+        "feedbackAcerto": "Correto. A Didática contemporânea não se reduz a técnica, conteúdo ou relações. Ela compreende o ensino como processo intencional, multidimensional e socialmente situado.",
+        "feedbackErro": "Resposta correta: E. articula conhecimentos, métodos, relações e condições sociais como dimensões de um processo de ensino intencional e historicamente situado. A Didática contemporânea não se reduz a técnica, conteúdo ou relações. Ela compreende o ensino como processo intencional, multidimensional e socialmente situado.",
+        "dicaBanca": "Em questões integradoras, evite respostas que absolutizem uma dimensão isolada do ensino."
+    }
+];

@@ -1,992 +1,1003 @@
 const etnicoRacial = [
 
 {
-    pergunta: "Durante a revisão curricular de uma rede de ensino, um grupo de professores defendeu que os conteúdos relacionados à História e Cultura Afro-Brasileira, Africana e Indígena deveriam permanecer concentrados exclusivamente na disciplina de História. Outro grupo argumentou que a legislação estabelece orientação distinta. À luz das Leis nº 10.639/2003 e nº 11.645/2008, assinale a alternativa correta:",
+    pergunta: "Ao revisar o currículo de uma rede municipal, uma equipe afirmou que o art. 26-A da LDB obriga o estudo da história e cultura afro-brasileira e indígena em toda a Educação Básica, inclusive na Educação Infantil. Considerando a literalidade atualmente vigente do dispositivo, assinale a alternativa correta.",
 
     alternativas: [
-        "A abordagem desses conteúdos deve ocorrer predominantemente na disciplina de História, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Os conteúdos podem ser concentrados em projetos eventuais sem integração curricular, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A obrigatoriedade concentra-se ao Ensino Médio, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A legislação determina a inserção desses conteúdos no currículo escolar de forma ampla e articulada.",
-        "A implementação depende da adesão voluntária de cada instituição de ensino, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. As Leis nº 10.639/2003 e nº 11.645/2008 determinam a inclusão desses conteúdos no currículo escolar, de forma articulada e permanente.",
-
-    feedbackErro: "Uma das pegadinhas mais frequentes é restringir a temática a uma única disciplina.",
-
-    dicaBanca: "Não é assunto de uma disciplina; é responsabilidade curricular da escola."
-},
-
-{
-    pergunta: "Durante uma capacitação docente, um professor afirmou que a Lei nº 11.645/2008 substituiu integralmente a Lei nº 10.639/2003. Considerando a legislação educacional brasileira, assinale a alternativa correta:",
-
-    alternativas: [
-        "A Lei nº 11.645/2008 revogou amplamente a Lei nº 10.639/2003, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
-        "A Lei nº 11.645/2008 trata predominantemente da educação escolar indígena, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A Lei nº 11.645/2008 manteve a obrigatoriedade relativa à temática afro-brasileira e acrescentou a temática indígena.",
-        "A Lei nº 11.645/2008 tornou condicionado ao planejamento institucional o ensino da História da África, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
-        "As duas leis possuem objetos amplamente distintos e sem relação entre si, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional."
+        "O art. 26-A alcança expressamente apenas o Ensino Médio, embora outras políticas educacionais possam tratar do tema nas demais etapas.",
+        "O art. 26-A alcança expressamente a Educação Infantil, o Ensino Fundamental e o Ensino Médio, tanto na rede pública quanto na privada.",
+        "O art. 26-A alcança o Ensino Fundamental e o Ensino Médio, públicos e privados.",
+        "O art. 26-A alcança apenas os estabelecimentos públicos de Ensino Fundamental e Médio, cabendo às instituições privadas adesão facultativa.",
+        "O art. 26-A alcança toda a Educação Básica, mas apenas nos componentes de História, Arte e Literatura Brasileira."
     ],
 
     correta: 2,
 
-    feedbackAcerto: "Correto. A Lei nº 11.645/2008 ampliou o alcance da Lei nº 10.639/2003 ao incluir a História e Cultura Indígena.",
+    feedbackAcerto: "Correto. A literalidade do art. 26-A menciona estabelecimentos de Ensino Fundamental e de Ensino Médio, públicos e privados.",
 
-    feedbackErro: "A Lei nº 11.645/2008 soma-se à Lei nº 10.639/2003; não a substitui.",
+    feedbackErro: "A pegadinha está em confundir o alcance literal do art. 26-A com o alcance mais amplo das políticas de educação das relações étnico-raciais.",
 
-    dicaBanca: "10.639 + temática indígena = 11.645."
+    dicaBanca: "Art. 26-A: EF + EM, públicos e privados."
 },
 
 {
-    pergunta: "Uma escola desenvolve atividades sobre História e Cultura Afro-Brasileira apenas durante o mês de novembro, sem qualquer continuidade ao longo do restante do ano letivo. À luz da legislação vigente, assinale a alternativa correta:",
+    pergunta: "Em uma formação docente, discutiu-se a relação entre as Leis nº 10.639/2003 e nº 11.645/2008. Um participante afirmou que a segunda simplesmente revogou a primeira e criou um regime jurídico inteiramente novo. A interpretação mais precisa é:",
 
     alternativas: [
-        "A prática atende plenamente à legislação porque novembro possui relevância simbólica, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A abordagem exclusiva em datas comemorativas é insuficiente para atender aos objetivos legais.",
-        "A legislação exige em geral atividades comemorativas relacionadas ao tema, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A escola possui liberdade para definir se trabalhará o tema durante o ano, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A obrigatoriedade aplica-se normalmente quando houver estudantes negros matriculados, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
+        "A Lei nº 11.645/2008 revogou integralmente a Lei nº 10.639/2003, inclusive as alterações que esta havia introduzido fora do art. 26-A da LDB.",
+        "A Lei nº 11.645/2008 deu nova redação ao art. 26-A e preservou alterações anteriores ainda vigentes.",
+        "A Lei nº 11.645/2008 passou a tratar exclusivamente da educação escolar indígena e retirou do art. 26-A o ensino de história e cultura afro-brasileira.",
+        "As duas leis têm objetos independentes: a Lei nº 10.639/2003 aplica-se às escolas públicas e a Lei nº 11.645/2008 às escolas privadas.",
+        "A Lei nº 11.645/2008 apenas recomendou a inclusão da temática indígena, sem alterar a redação da LDB."
     ],
 
     correta: 1,
 
-    feedbackAcerto: "Correto. A legislação exige abordagem contínua e integrada ao currículo, e não apenas ações pontuais.",
+    feedbackAcerto: "Correto. A Lei nº 11.645/2008 alterou novamente o art. 26-A, reunindo as temáticas afro-brasileira e indígena; o art. 79-B, introduzido em 2003, continua na LDB.",
 
-    feedbackErro: "Datas comemorativas podem complementar o trabalho pedagógico, mas não substituí-lo.",
+    feedbackErro: "Dizer apenas que uma lei 'substituiu' a outra apaga a trajetória normativa e pode levar a erro sobre dispositivos ainda vigentes.",
 
-    dicaBanca: "Tema permanente, não evento isolado."
+    dicaBanca: "11.645/2008 = nova redação do art. 26-A; 79-B permanece."
 },
 
 {
-    pergunta: "Ao analisar a abrangência das Leis nº 10.639/2003 e nº 11.645/2008, uma candidata concluiu que sua aplicação alcança instituições públicas e privadas da Educação Básica. Essa conclusão está:",
+    pergunta: "Uma escola decidiu cumprir o art. 26-A criando uma disciplina autônoma obrigatória intitulada 'Cultura Afro-Indígena' e retirando o tema dos demais componentes. À luz do § 2º do art. 26-A da LDB, essa decisão:",
 
     alternativas: [
-        "Incorreta, pois as leis aplicam-se em geral às escolas públicas.",
-        "Incorreta, pois as leis aplicam-se em geral às redes estaduais.",
-        "Incorreta, pois a obrigatoriedade concentra-se ao Ensino Fundamental.",
-        "Incorreta, pois instituições privadas possuem autonomia para não adotar esses conteúdos.",
-        "Correta."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. As leis alcançam toda a Educação Básica, independentemente da natureza pública ou privada da instituição.",
-
-    feedbackErro: "A banca frequentemente tenta restringir indevidamente o alcance da legislação.",
-
-    dicaBanca: "Pública ou privada: ambas estão obrigadas."
-},
-
-{
-    pergunta: "Ao estudar os objetivos das Leis nº 10.639/2003 e nº 11.645/2008, um candidato concluiu que elas buscam promover o reconhecimento das contribuições africanas, afro-brasileiras e indígenas para a formação da sociedade brasileira, além de fortalecer o respeito à diversidade e combater preconceitos. Essa conclusão está:",
-
-    alternativas: [
-        "Correta.",
-        "Incorreta, pois as leis possuem finalidade predominantemente histórica.",
-        "Incorreta, pois tratam em geral de manifestações culturais.",
-        "Incorreta, pois não possuem relação com combate ao preconceito.",
-        "Incorreta, pois destinam-se predominantemente a estudantes negros e indígenas."
+        "Os conteúdos devem integrar todo o currículo escolar, com destaque para áreas expressamente indicadas pela LDB.",
+        "Atende integralmente à LDB, porque a criação de componente específico substitui a necessidade de abordagem nos demais componentes curriculares.",
+        "Atende parcialmente, desde que a nova disciplina seja ministrada por professor licenciado em História e tenha carga horária anual mínima definida pelo sistema de ensino.",
+        "Somente seria irregular na rede pública, pois as escolas privadas podem concentrar o conteúdo em componente curricular próprio.",
+        "É obrigatória sempre que a rede não dispuser de professores especialistas em história e cultura afro-brasileira e indígena."
     ],
 
     correta: 0,
 
-    feedbackAcerto: "Correto. Essa síntese expressa adequadamente os objetivos centrais das duas leis.",
+    feedbackAcerto: "Correto. A LDB determina abordagem no âmbito de todo o currículo, com especial destaque a determinadas áreas, sem restringir o tema a elas.",
 
-    feedbackErro: "As leis possuem caráter histórico, cultural, pedagógico e social.",
+    feedbackErro: "A expressão 'em especial' não transforma três áreas em responsáveis exclusivas nem autoriza retirar a temática do restante do currículo.",
 
-    dicaBanca: "Valorização da diversidade e combate ao preconceito são objetivos centrais."
-},
-{
-    pergunta: "Durante uma formação continuada, um professor afirmou que as Diretrizes Curriculares Nacionais para a Educação das Relações Étnico-Raciais (DCNERER) possuem caráter apenas orientativo e não devem influenciar a organização curricular das escolas. Considerando os fundamentos dessas diretrizes, assinale a alternativa correta:",
-
-    alternativas: [
-        "As DCNERER orientam a construção de práticas pedagógicas comprometidas com a valorização da diversidade e o combate ao racismo.",
-        "As DCNERER possuem caráter meramente sugestivo e sem impacto pedagógico, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "As DCNERER aplicam-se predominantemente às escolas públicas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "As DCNERER concentram-se ao ensino da História da África, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "As DCNERER destinam-se em geral à formação inicial de professores, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. As DCNERER orientam currículos, práticas pedagógicas e processos formativos voltados à promoção da equidade racial.",
-
-    feedbackErro: "As diretrizes possuem relevância concreta para a organização curricular e para a prática educativa.",
-
-    dicaBanca: "DCNERER = currículo + práticas pedagógicas + combate ao racismo."
+    dicaBanca: "Todo o currículo; destaque não significa exclusividade."
 },
 
 {
-    pergunta: "Ao analisar um Projeto Político-Pedagógico, verificou-se que a escola abordava a diversidade cultural apenas sob perspectiva folclórica, sem discutir desigualdades, discriminações ou relações de poder presentes na sociedade. Considerando as DCNERER, assinale a alternativa correta:",
+    pergunta: "Ao elaborar uma questão de concurso sobre o § 1º do art. 26-A da LDB, a banca pretende selecionar o conjunto que melhor corresponde aos conteúdos expressamente mencionados no dispositivo. Assinale-o.",
 
     alternativas: [
-        "A proposta atende integralmente às diretrizes, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
-        "A valorização cultural reduz a necessidade de discussões sobre desigualdades raciais, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
-        "Questões relacionadas ao racismo não pertencem ao ambiente escolar, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "As DCNERER defendem abordagem crítica das relações étnico-raciais, incluindo o enfrentamento das desigualdades.",
-        "O estudo cultural deve ocorrer sem qualquer reflexão social, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes."
+        "História das religiões africanas; legislação antidiscriminatória; demografia indígena; relações internacionais do continente africano.",
+        "Formação dos quilombos contemporâneos; educação escolar indígena bilíngue; movimentos migratórios africanos; legislação de cotas.",
+        "Cultura popular brasileira; patrimônio imaterial; história da escravidão atlântica; movimentos sociais do século XXI.",
+        "História da África; lutas negras e indígenas; culturas e contribuições à formação nacional.",
+        "História colonial portuguesa; catequese; formação territorial; relações étnicas no período republicano e legislação indigenista."
     ],
 
     correta: 3,
 
-    feedbackAcerto: "Correto. As diretrizes propõem uma abordagem crítica que ultrapassa a mera valorização cultural e enfrenta desigualdades e discriminações.",
+    feedbackAcerto: "Correto. Esse conjunto acompanha a estrutura do § 1º do art. 26-A.",
 
-    feedbackErro: "Uma pegadinha frequente é reduzir as relações étnico-raciais a festividades ou manifestações culturais.",
+    feedbackErro: "Vários temas dos demais itens podem ser pedagogicamente relevantes, mas não reproduzem o núcleo expressamente indicado no § 1º.",
 
-    dicaBanca: "Valorização cultural + reflexão crítica."
+    dicaBanca: "Em literalidade legal, procure África + lutas + culturas + formação nacional + contribuições."
 },
 
 {
-    pergunta: "Durante uma reunião pedagógica, uma professora afirmou que a educação para as relações étnico-raciais deve ser desenvolvida apenas quando ocorrerem episódios de preconceito entre estudantes. Considerando as DCNERER, assinale a alternativa correta:",
+    pergunta: "Uma diretora afirmou que o art. 79-B da LDB apenas recomenda atividades sobre Consciência Negra quando a escola considerar pedagogicamente conveniente. A afirmação é inadequada porque o dispositivo estabelece que:",
 
     alternativas: [
-        "O tema deve ser trabalhado em geral após conflitos raciais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A abordagem depende da existência de denúncias formais de discriminação.",
-        "O tema deve ser tratado predominantemente pela equipe gestora, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A legislação prevê atuação em geral corretiva, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A educação para as relações étnico-raciais possui caráter preventivo e permanente."
+        "As escolas públicas devem suspender obrigatoriamente as aulas em 20 de novembro, enquanto as privadas podem manter calendário regular.",
+        "O dia 20 de novembro integra o calendário apenas se o município tiver instituído feriado local.",
+        "A data deve ser trabalhada exclusivamente no componente curricular de História Brasileira.",
+        "A inclusão da data depende de regulamentação anual dos sistemas de ensino.",
+        "O calendário escolar incluirá 20 de novembro como Dia Nacional da Consciência Negra."
     ],
 
     correta: 4,
 
-    feedbackAcerto: "Correto. As diretrizes defendem ações permanentes voltadas à construção de relações respeitosas e democráticas.",
+    feedbackAcerto: "Correto. O art. 79-B determina a inclusão de 20 de novembro no calendário escolar como Dia Nacional da Consciência Negra.",
 
-    feedbackErro: "A educação antirracista não se limita à resolução de conflitos já instalados.",
+    feedbackErro: "A regra da LDB não é facultativa nem se limita à existência de feriado municipal.",
 
-    dicaBanca: "Prevenir é tão importante quanto corrigir."
+    dicaBanca: "79-B = 20 de novembro no calendário escolar."
 },
 
 {
-    pergunta: "Uma candidata afirmou que as DCNERER possuem como um de seus objetivos contribuir para a construção de identidades positivas entre estudantes historicamente invisibilizados ou estigmatizados. Considerando as diretrizes, assinale a alternativa correta:",
+    pergunta: "Ao comparar o art. 79-B da LDB com a Lei nº 14.759/2023, uma professora elaborou cinco conclusões. Qual está correta?",
 
     alternativas: [
-        "A afirmação está incorreta, pois identidade não integra os objetivos das diretrizes.",
-        "As diretrizes priorizam predominantemente conteúdos históricos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "As diretrizes buscam fortalecer identidades, pertencimento e reconhecimento da diversidade.",
-        "As diretrizes tratam em geral da formação docente, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Questões identitárias não possuem relevância pedagógica, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
+        "O art. 79-B criou o feriado nacional de 20 de novembro e a Lei nº 14.759/2023 apenas alterou sua denominação.",
+        "A Lei nº 14.759/2023 revogou o art. 79-B, substituindo a referência escolar pela regra geral de feriado nacional.",
+        "A LDB inclui a data no calendário escolar; a Lei nº 14.759/2023 a declarou feriado nacional.",
+        "A existência do feriado nacional tornou facultativa a abordagem pedagógica da data nos currículos escolares.",
+        "A Lei nº 14.759/2023 restringiu o feriado às unidades federativas que já reconheciam a data anteriormente."
     ],
 
     correta: 2,
 
-    feedbackAcerto: "Correto. O fortalecimento da identidade e do pertencimento integra os objetivos das políticas educacionais voltadas às relações étnico-raciais.",
+    feedbackAcerto: "Correto. Há uma norma educacional sobre calendário escolar e outra que declara o feriado nacional.",
 
-    feedbackErro: "As DCNERER não se limitam ao ensino de conteúdos; elas também possuem dimensão formativa e cidadã.",
+    feedbackErro: "Não confunda a função do art. 79-B da LDB com a Lei nº 14.759/2023.",
 
-    dicaBanca: "Identidade e pertencimento são conceitos muito cobrados."
+    dicaBanca: "Calendário escolar e feriado nacional são comandos distintos."
 },
 
 {
-    pergunta: "Ao estudar as Diretrizes Curriculares Nacionais para a Educação das Relações Étnico-Raciais, um professor concluiu que elas buscam promover uma educação comprometida com a equidade, o reconhecimento da diversidade, a valorização das contribuições africanas, afro-brasileiras e indígenas e o combate ao racismo. Essa conclusão está:",
+    pergunta: "A LDB inclui, entre os princípios do ensino, a consideração com a diversidade étnico-racial. Em uma análise normativa, essa previsão deve ser compreendida como:",
 
     alternativas: [
-        "Incorreta, pois as diretrizes concentram-se ao ensino da História da África.",
-        "Correta.",
-        "Incorreta, pois tratam em geral de conteúdos culturais.",
-        "Incorreta, pois não possuem relação com equidade.",
-        "Incorreta, pois o combate ao racismo não integra seus objetivos."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. Essa síntese contempla os principais fundamentos das DCNERER.",
-
-    feedbackErro: "As diretrizes possuem caráter amplo, articulando currículo, cidadania, diversidade e justiça social.",
-
-    dicaBanca: "Equidade + diversidade + combate ao racismo = núcleo das DCNERER."
-},
-{
-    pergunta: "Durante a elaboração do currículo escolar, uma equipe pedagógica decidiu concentrar todos os conteúdos relacionados às relações étnico-raciais exclusivamente na disciplina de História. Os demais componentes curriculares permaneceram sem qualquer abordagem da temática. Considerando as DCNERER e a legislação educacional vigente, assinale a alternativa correta:",
-
-    alternativas: [
-        "A decisão está correta, pois a temática possui natureza essencialmente histórica, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A abordagem das relações étnico-raciais deve ocorrer em geral nas Ciências Humanas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A legislação permite que cada escola escolha uma única disciplina responsável pelo tema.",
-        "A interdisciplinaridade aplica-se em geral ao Ensino Médio, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A educação das relações étnico-raciais deve ser desenvolvida de forma transversal e interdisciplinar."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. A legislação e as diretrizes orientam que a temática seja trabalhada de forma transversal, envolvendo diferentes áreas do conhecimento.",
-
-    feedbackErro: "Uma das pegadinhas mais frequentes é restringir a temática a uma única disciplina.",
-
-    dicaBanca: "Relações étnico-raciais = responsabilidade de todo o currículo."
-},
-
-{
-    pergunta: "Ao analisar uma escola, observou-se que os materiais didáticos, exemplos utilizados em aula e referências acadêmicas apresentavam quase exclusivamente personagens, autores e cientistas europeus, mesmo sem existir regra formal determinando essa escolha. Considerando os estudos curriculares, essa situação relaciona-se mais diretamente ao conceito de:",
-
-    alternativas: [
-        "Currículo flexível.",
-        "Avaliação diagnóstica.",
-        "Planejamento participativo.",
-        "Currículo oculto.",
-        "Interdisciplinaridade."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. O currículo oculto compreende valores, mensagens e representações transmitidas implicitamente pela escola.",
-
-    feedbackErro: "As bancas frequentemente cobram situações em que a escola ensina valores sem que eles estejam formalmente previstos nos documentos oficiais.",
-
-    dicaBanca: "Currículo oculto = aquilo que se aprende sem estar escrito."
-},
-
-{
-    pergunta: "Uma escola decidiu ampliar seu acervo literário, incorporando obras de autores negros, indígenas e de diferentes grupos culturais historicamente sub-representados. Considerando os princípios da educação para as relações étnico-raciais, essa medida busca principalmente:",
-
-    alternativas: [
-        "Substituir autores clássicos por autores contemporâneos, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
-        "Promover representatividade e ampliar as referências culturais disponíveis aos estudantes.",
-        "Reduzir a autonomia dos professores na escolha de materiais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Restringir o acesso dos estudantes à literatura europeia, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Atender predominantemente a exigências administrativas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. A ampliação das referências culturais fortalece a representatividade e contribui para uma formação mais plural e inclusiva.",
-
-    feedbackErro: "Representatividade não significa exclusão de outros grupos, mas ampliação das perspectivas presentes no currículo.",
-
-    dicaBanca: "Representatividade = ampliar referências, não substituir culturas."
-},
-
-{
-    pergunta: "Durante um projeto interdisciplinar, professores de História, Geografia, Artes, Literatura e Ciências desenvolveram atividades relacionadas às contribuições africanas, afro-brasileiras e indígenas para a formação da sociedade brasileira. Essa prática está alinhada principalmente ao princípio de:",
-
-    alternativas: [
-        "Segmentação curricular.",
-        "Especialização temática.",
-        "Interdisciplinaridade.",
-        "Hierarquização curricular.",
-        "Avaliação classificatória."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. A interdisciplinaridade permite integrar diferentes áreas do conhecimento na compreensão de temas complexos.",
-
-    feedbackErro: "A legislação incentiva que a temática étnico-racial seja trabalhada por diferentes componentes curriculares.",
-
-    dicaBanca: "Interdisciplinaridade é uma palavra-chave das provas sobre currículo."
-},
-
-{
-    pergunta: "Ao revisar o currículo escolar, uma equipe concluiu que a valorização da diversidade étnico-racial exige não apenas inclusão de conteúdos específicos, mas também análise crítica das representações, exemplos, linguagens e práticas presentes no cotidiano escolar. Essa conclusão está:",
-
-    alternativas: [
-        "Correta.",
-        "Incorreta, pois o currículo concentra-se aos conteúdos formais das disciplinas.",
-        "Incorreta, pois questões relacionadas à diversidade devem ocorrer em projetos extracurriculares.",
-        "Incorreta, pois representações e práticas escolares não possuem impacto pedagógico.",
-        "Incorreta, pois a legislação trata predominantemente de conteúdos históricos."
+        "É princípio geral do ensino e articula-se a normas específicas sobre diversidade e equidade.",
+        "Regra aplicável somente aos currículos de História e Geografia, por tratar de conteúdo cultural.",
+        "Diretriz restrita às escolas situadas em territórios quilombolas e indígenas.",
+        "Objetivo facultativo das redes de ensino, condicionado à composição racial de seu corpo discente.",
+        "Comando destinado exclusivamente à elaboração de materiais didáticos federais."
     ],
 
     correta: 0,
 
-    feedbackAcerto: "Correto. A educação para as relações étnico-raciais envolve currículo formal, currículo oculto, representações e práticas institucionais.",
+    feedbackAcerto: "Correto. A consideração com a diversidade étnico-racial figura como princípio geral do ensino na LDB.",
 
-    feedbackErro: "As políticas educacionais contemporâneas reconhecem que a aprendizagem ocorre também por meio das experiências e relações vividas na escola.",
+    feedbackErro: "Por ser princípio geral, não se restringe a determinado componente, território ou grupo de estudantes.",
 
-    dicaBanca: "Currículo não é apenas conteúdo; também envolve práticas, valores e representações."
-},
-{
-    pergunta: "Durante uma atividade escolar, um estudante afirmou que não gostaria de participar de um trabalho em grupo com determinado colega porque pessoas de sua origem étnico-racial seriam 'naturalmente menos capazes'. A professora decidiu utilizar a situação como oportunidade pedagógica. À luz da educação para as relações étnico-raciais, a afirmação do estudante expressa principalmente:",
-
-    alternativas: [
-        "Preconceito baseado em generalizações negativas sobre um grupo.",
-        "Diversidade cultural, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "Diferença de opinião sem implicações sociais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Pluralidade de perspectivas educacionais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Valorização das identidades culturais, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. O preconceito envolve julgamentos prévios e generalizações negativas atribuídas a indivíduos em razão de sua pertença a determinado grupo.",
-
-    feedbackErro: "A questão descreve uma generalização negativa baseada na origem étnico-racial, característica típica do preconceito.",
-
-    dicaBanca: "Preconceito nasce do julgamento prévio e dos estereótipos."
+    dicaBanca: "Art. 3º: diversidade étnico-racial é princípio do ensino."
 },
 
 {
-    pergunta: "Durante uma seleção para participação em um projeto escolar, estudantes com desempenho semelhante receberam tratamentos distintos. Alguns foram excluídos exclusivamente em razão de sua origem étnico-racial. Considerando os conceitos trabalhados na educação para as relações étnico-raciais, essa situação caracteriza principalmente:",
+    pergunta: "Uma equipe pedagógica pergunta qual ato normativo instituiu as Diretrizes Curriculares Nacionais para a Educação das Relações Étnico-Raciais e para o Ensino de História e Cultura Afro-Brasileira e Africana. A resposta correta é:",
 
     alternativas: [
-        "Pluralismo cultural.",
-        "Discriminação racial.",
-        "Diferença pedagógica legítima.",
-        "Diversidade institucional.",
-        "Interdisciplinaridade."
+        "Resolução CNE/CEB nº 7/2010, fundamentada no Parecer CNE/CEB nº 11/2010.",
+        "Resolução CNE/CP nº 1/2004, fundamentada no Parecer CNE/CP nº 3/2004.",
+        "Resolução CNE/CP nº 2/2012, vinculada às Diretrizes Nacionais para a Educação em Direitos Humanos.",
+        "Portaria MEC nº 470/2024, que substituiu integralmente as diretrizes aprovadas em 2004.",
+        "Lei nº 11.645/2008, que por si só instituiu as Diretrizes Curriculares Nacionais específicas."
     ],
 
     correta: 1,
 
-    feedbackAcerto: "Correto. A discriminação ocorre quando o preconceito se transforma em ação concreta que produz exclusão, restrição ou tratamento desigual.",
+    feedbackAcerto: "Correto. A Resolução CNE/CP nº 1/2004 institui as DCNERER, com fundamento no Parecer CNE/CP nº 3/2004.",
 
-    feedbackErro: "A questão não descreve apenas uma opinião preconceituosa, mas uma prática que gera exclusão efetiva.",
+    feedbackErro: "Lei, parecer, resolução e portaria cumprem funções diferentes; a banca costuma misturar esses atos.",
 
-    dicaBanca: "Preconceito é pensamento; discriminação é ação."
+    dicaBanca: "DCNERER: Parecer 3/2004 + Resolução CNE/CP 1/2004."
 },
 
 {
-    pergunta: "Ao analisar materiais didáticos, uma comissão observou que determinados grupos étnico-raciais eram constantemente retratados por meio de características simplificadas e repetitivas, sem considerar sua diversidade interna. Essa situação está mais relacionada ao conceito de:",
+    pergunta: "Durante estudo das DCNERER, uma candidata confundiu o papel do Parecer CNE/CP nº 3/2004 com o da Resolução CNE/CP nº 1/2004. Assinale a formulação mais adequada.",
 
     alternativas: [
-        "Currículo flexível.",
-        "Representatividade positiva.",
-        "Interculturalidade.",
-        "Gestão democrática.",
-        "Estereótipo."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. Estereótipos são representações simplificadas e generalizantes atribuídas a grupos sociais.",
-
-    feedbackErro: "As bancas frequentemente cobram a diferença entre diversidade real e representações estereotipadas.",
-
-    dicaBanca: "Estereótipo simplifica excessivamente a realidade."
-},
-
-{
-    pergunta: "Durante uma formação docente, um professor afirmou que o racismo manifesta-se apenas quando há ofensas explícitas ou declarações abertamente discriminatórias. Considerando os estudos contemporâneos sobre relações étnico-raciais, assinale a alternativa correta:",
-
-    alternativas: [
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "O racismo existe em geral quando há intenção declarada de discriminar, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O racismo concentra-se às relações interpessoais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O racismo pode manifestar-se de formas explícitas e também por práticas, representações e mecanismos mais sutis de exclusão.",
-        "A legislação educacional trata em geral do racismo explícito, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
+        "O Parecer revogou o art. 26-A da LDB, e a Resolução restabeleceu sua redação posteriormente.",
+        "A Resolução tem caráter apenas consultivo, enquanto o Parecer possui força de lei federal.",
+        "O Parecer se aplica exclusivamente à Educação Superior e a Resolução exclusivamente à Educação Básica.",
+        "O Parecer fundamenta as Diretrizes; a Resolução as institui normativamente.",
+        "Ambos são atos idênticos quanto à função e ao conteúdo, diferenciando-se apenas pela data de publicação."
     ],
 
     correta: 3,
 
-    feedbackAcerto: "Correto. O racismo pode ocorrer de maneira aberta ou por mecanismos indiretos, institucionais e culturalmente naturalizados.",
+    feedbackAcerto: "Correto. O Parecer desenvolve a fundamentação e a Resolução institui as Diretrizes.",
 
-    feedbackErro: "Uma das pegadinhas mais comuns é restringir o racismo apenas às manifestações explícitas.",
+    feedbackErro: "A distinção entre parecer e resolução é recorrente em provas de legislação educacional.",
 
-    dicaBanca: "Nem todo racismo aparece de forma evidente."
+    dicaBanca: "Parecer fundamenta; Resolução institui."
 },
 
 {
-    pergunta: "Ao estudar a educação para as relações étnico-raciais, uma candidata concluiu que combater preconceitos, discriminações e estereótipos constitui parte essencial da formação cidadã e da construção de ambientes escolares democráticos. Essa conclusão está:",
+    pergunta: "As DCNERER apresentam princípios que orientam a educação das relações étnico-raciais. Qual alternativa reúne os três eixos clássicos destacados no Parecer CNE/CP nº 3/2004?",
 
     alternativas: [
-        "Incorreta, pois a escola deve limitar-se à transmissão de conteúdos acadêmicos.",
-        "Incorreta, pois questões relacionadas ao preconceito pertencem predominantemente ao ambiente familiar.",
-        "Correta.",
-        "Incorreta, pois o combate à discriminação não integra os objetivos educacionais.",
-        "Incorreta, pois a legislação trata em geral de conteúdos históricos."
+        "Pluralismo pedagógico; gestão democrática; valorização dos profissionais da educação.",
+        "Universalização do acesso; avaliação institucional; autonomia curricular.",
+        "Interdisciplinaridade; contextualização; flexibilidade curricular.",
+        "Memória social; patrimônio cultural; educação intercultural bilíngue.",
+        "Consciência histórica; identidades e direitos; combate ao racismo."
+    ],
+
+    correta: 4,
+
+    feedbackAcerto: "Correto. Esses três princípios estruturam a orientação pedagógica das DCNERER.",
+
+    feedbackErro: "Não basta reconhecer conceitos genericamente associados à educação; a questão pede a arquitetura específica das Diretrizes.",
+
+    dicaBanca: "Memorize o trio: consciência histórica + identidades/direitos + combate ao racismo."
+},
+
+{
+    pergunta: "Em uma escola, o estudo da diversidade limita-se a listar festas, comidas e manifestações culturais de diferentes grupos, sem abordar conflitos, hierarquias, desigualdades ou processos históricos. À luz do princípio da consciência política e histórica da diversidade, a principal insuficiência dessa abordagem é:",
+
+    alternativas: [
+        "Trabalhar elementos culturais antes de concluir o estudo cronológico da História do Brasil.",
+        "Utilizar exemplos cotidianos em vez de conceitos exclusivamente acadêmicos.",
+        "Reconhecer diferenças sem analisar relações históricas que produzem desigualdades e discriminações.",
+        "Integrar cultura e história em mais de um componente curricular.",
+        "Priorizar manifestações contemporâneas em lugar de conteúdos exclusivamente coloniais."
     ],
 
     correta: 2,
 
-    feedbackAcerto: "Correto. A educação para as relações étnico-raciais possui compromisso com a formação cidadã, a equidade e o combate às discriminações.",
+    feedbackAcerto: "Correto. A consciência política e histórica da diversidade exige leitura crítica das relações sociais, e não apenas celebração superficial de diferenças.",
 
-    feedbackErro: "As políticas educacionais contemporâneas articulam conhecimento, cidadania e respeito à diversidade.",
+    feedbackErro: "Folclorizar a diversidade pode ocultar desigualdades e relações de poder.",
 
-    dicaBanca: "Educação antirracista é também educação para a cidadania."
-},
-{
-    pergunta: "Durante a avaliação de uma rede de ensino, verificou-se que não existiam regras explícitas de discriminação racial. Entretanto, estudantes negros apresentavam sistematicamente menores oportunidades de participação em projetos acadêmicos, menor representatividade em materiais institucionais e menor acesso a programas de destaque escolar. Considerando os estudos sobre relações étnico-raciais, essa situação exemplifica principalmente:",
-
-    alternativas: [
-        "Diversidade cultural.",
-        "Pluralismo pedagógico.",
-        "Racismo estrutural.",
-        "Interdisciplinaridade curricular.",
-        "Gestão democrática."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. O racismo estrutural refere-se à produção e reprodução de desigualdades raciais por mecanismos incorporados às estruturas sociais e institucionais.",
-
-    feedbackErro: "A questão descreve desigualdades persistentes produzidas por estruturas sociais, mesmo sem discriminação explícita.",
-
-    dicaBanca: "Racismo estrutural não depende de ofensas diretas."
+    dicaBanca: "Diversidade nas DCNERER é também história, poder e desigualdade."
 },
 
 {
-    pergunta: "Uma escola possuía regulamentos aparentemente neutros. Contudo, determinados procedimentos administrativos produziam impactos desproporcionais sobre estudantes pertencentes a grupos historicamente discriminados. À luz dos estudos sobre racismo institucional, assinale a alternativa correta:",
+    pergunta: "Uma estudante negra relata que raramente encontra autores, cientistas e personagens negros apresentados como produtores de conhecimento nos materiais da escola. A equipe decide rever referências, imagens e conteúdos. Essa medida dialoga diretamente com o princípio de:",
 
     alternativas: [
-        "O racismo institucional pode ocorrer quando práticas organizacionais geram desigualdades, mesmo sem intenção explícita de discriminar.",
-        "A situação caracteriza em geral conflitos individuais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A neutralidade formal das regras elimina qualquer possibilidade de discriminação, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "O racismo institucional depende predominantemente de manifestações verbais ofensivas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A situação descreve em geral diferenças de desempenho escolar, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
+        "Fortalecimento de identidades e direitos, com reconhecimento, pertencimento e visibilidade.",
+        "Neutralidade curricular, ao retirar das aulas qualquer referência à identidade dos estudantes.",
+        "Padronização pedagógica, ao garantir que todas as escolas usem os mesmos exemplos e autores.",
+        "Especialização disciplinar, ao concentrar a representatividade apenas em História e Literatura.",
+        "Compensação avaliativa, ao substituir critérios acadêmicos por critérios de identidade."
     ],
 
     correta: 0,
 
-    feedbackAcerto: "Correto. O racismo institucional pode manifestar-se por procedimentos e práticas que produzem desigualdades raciais de forma sistemática.",
+    feedbackAcerto: "Correto. O fortalecimento de identidades e direitos envolve reconhecimento, valorização e superação de estigmas.",
 
-    feedbackErro: "As bancas frequentemente exploram situações em que a discriminação ocorre por meio de rotinas institucionais aparentemente neutras.",
+    feedbackErro: "Representatividade não equivale a diminuir critérios acadêmicos nem a restringir identidades a componentes específicos.",
 
-    dicaBanca: "Institucional = práticas e regras que geram desigualdades."
+    dicaBanca: "Identidade e direito aparecem juntos nas DCNERER."
 },
 
 {
-    pergunta: "Durante uma formação docente, um professor afirmou que o racismo somente existe quando há intenção consciente de discriminar outra pessoa. Considerando os conceitos contemporâneos de educação para as relações étnico-raciais, assinale a alternativa correta:",
+    pergunta: "Após um episódio de injúria racial entre estudantes, a direção propôs somente uma palestra anual. A coordenação defendeu outra resposta. Qual alternativa melhor se alinha às ações educativas de combate ao racismo e às discriminações?",
 
     alternativas: [
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "O racismo depende necessariamente de intenção declarada, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "O racismo concentra-se a comportamentos individuais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Práticas e estruturas sociais podem produzir efeitos racistas independentemente da intenção individual dos envolvidos.",
-        "Normalmente atos tipificados criminalmente podem ser considerados racistas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
+        "Tratar o episódio como conflito interpessoal, evitando relacioná-lo a práticas institucionais para não ampliar a tensão.",
+        "Aplicar apenas a sanção disciplinar prevista no regimento, pois ações curriculares poderiam interferir na apuração do caso.",
+        "Substituir o debate sobre racismo por ações genéricas de convivência, evitando referências a raça/cor para preservar a neutralidade escolar.",
+        "Registrar e proteger, responsabilizar quando cabível e desenvolver ações pedagógicas contínuas.",
+        "Concentrar a intervenção no estudante ofendido, fortalecendo sua resiliência para lidar com situações semelhantes."
     ],
 
     correta: 3,
 
-    feedbackAcerto: "Correto. O racismo pode ser reproduzido por estruturas, instituições e práticas sociais, mesmo sem intenção consciente.",
+    feedbackAcerto: "Correto. A resposta institucional deve articular proteção, responsabilização e educação antirracista contínua.",
 
-    feedbackErro: "Uma das pegadinhas mais frequentes é associar racismo exclusivamente à intenção individual.",
+    feedbackErro: "Uma atividade isolada ou uma resposta apenas disciplinar não esgota a responsabilidade pedagógica e institucional.",
 
-    dicaBanca: "Efeito discriminatório pode existir sem intenção discriminatória."
+    dicaBanca: "Combate ao racismo = resposta ao caso + prevenção + currículo."
 },
 
 {
-    pergunta: "Ao analisar indicadores educacionais, uma pesquisadora verificou que determinados grupos raciais apresentavam, de forma persistente, menores oportunidades educacionais ao longo de diferentes gerações. Segundo os estudos sobre racismo estrutural, essa situação indica principalmente:",
+    pergunta: "No Parecer CNE/CP nº 3/2004, a ideia de políticas de reparações não deve ser interpretada como simples indenização individual no espaço escolar. Em sentido educacional, ela se relaciona principalmente a:",
 
     alternativas: [
-        "Diferenças naturais entre grupos sociais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Resultados produzidos por estruturas históricas e sociais que perpetuam desigualdades.",
-        "Problemas predominantemente pedagógicos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Consequências inevitáveis da diversidade cultural, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "Ausência de políticas educacionais, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
+        "Compensações financeiras obrigatórias pagas pelas escolas a estudantes que se autodeclarem negros.",
+        "Reconhecimento, valorização, igualdade de direitos e enfrentamento de desvantagens historicamente produzidas.",
+        "Substituição da igualdade jurídica por privilégios curriculares permanentes a determinados grupos.",
+        "Dispensa de avaliação acadêmica para estudantes pertencentes a grupos historicamente discriminados.",
+        "Criação de currículos distintos e incomunicáveis para estudantes negros e não negros."
     ],
 
     correta: 1,
 
-    feedbackAcerto: "Correto. O conceito de racismo estrutural busca explicar como desigualdades históricas são reproduzidas pelas estruturas sociais.",
+    feedbackAcerto: "Correto. Reparação, no contexto das Diretrizes, articula reconhecimento, valorização e enfrentamento das desigualdades historicamente construídas.",
 
-    feedbackErro: "A questão exige compreender que desigualdades persistentes não podem ser explicadas apenas por fatores individuais.",
+    feedbackErro: "A banca pode tentar reduzir 'reparação' a pagamento individual ou apresentar caricaturas de políticas de equidade.",
 
-    dicaBanca: "Estrutural = histórico, social e persistente."
+    dicaBanca: "Reparações educacionais ≠ indenização individual automática."
 },
 
 {
-    pergunta: "Ao estudar educação para as relações étnico-raciais, uma candidata concluiu que o enfrentamento do racismo estrutural e institucional exige ações educativas permanentes, revisão de práticas escolares, análise crítica das desigualdades e promoção da equidade. Essa conclusão está:",
+    pergunta: "Uma escola afirma tratar todos os estudantes de forma idêntica e, por isso, recusa-se a examinar indicadores que revelam desigualdades raciais persistentes em reprovação e abandono. À luz das DCNERER, essa postura é problemática porque:",
 
     alternativas: [
-        "Incorreta, pois o racismo é fenômeno predominantemente individual.",
-        "Incorreta, pois a escola não possui responsabilidade nesse processo.",
-        "Incorreta, pois a equidade não possui relação com relações étnico-raciais.",
-        "Incorreta, pois as desigualdades raciais não constituem tema educacional.",
-        "Correta."
+        "O princípio da igualdade impede a produção de dados por raça/cor no campo educacional.",
+        "Os indicadores raciais são relevantes apenas para pesquisas acadêmicas, não para planejamento escolar.",
+        "A escola deve substituir todos os indicadores de desempenho por critérios exclusivamente raciais.",
+        "A análise de desigualdades só cabe aos órgãos federais, não às redes e instituições de ensino.",
+        "Tratamento formal idêntico pode ocultar desigualdades que exigem diagnóstico e equidade."
     ],
 
     correta: 4,
 
-    feedbackAcerto: "Correto. A educação para as relações étnico-raciais possui papel fundamental na compreensão e enfrentamento das desigualdades raciais.",
+    feedbackAcerto: "Correto. Igualdade formal não elimina desigualdades reais; políticas de equidade exigem diagnóstico e enfrentamento de barreiras.",
 
-    feedbackErro: "A escola é um espaço estratégico para construção de práticas antirracistas e promoção da equidade.",
+    feedbackErro: "A neutralidade aparente pode produzir omissão diante de desigualdades documentadas.",
 
-    dicaBanca: "Equidade é uma das respostas educacionais ao racismo estrutural."
+    dicaBanca: "Equidade observa resultados e barreiras, não apenas tratamento formal."
 },
+
 {
-    pergunta: "Durante uma atividade escolar, um estudante afirmou que todos os povos indígenas possuem a mesma cultura, falam a mesma língua e mantêm os mesmos costumes. Considerando os princípios da educação para as relações étnico-raciais e a legislação educacional brasileira, assinale a alternativa correta:",
+    pergunta: "Uma instituição de Educação Superior sustenta que as DCNERER dizem respeito apenas às escolas de Educação Básica e, por isso, não precisam repercutir na formação de professores. A afirmação é inadequada porque:",
 
     alternativas: [
-        "Os povos indígenas apresentam ampla diversidade cultural, linguística, histórica e social.",
-        "A afirmação está correta, pois os povos indígenas formam um grupo cultural homogêneo.",
-        "As diferenças entre povos indígenas são pouco relevantes para a educação.",
-        "A diversidade indígena surgiu em geral após o período colonial.",
-        "As características culturais indígenas são idênticas em todo o território nacional."
+        "As DCNERER também repercutem na Educação Superior e na formação de profissionais da educação.",
+        "As Diretrizes são exclusivas das licenciaturas de História, Letras e Artes, não alcançando outras formações.",
+        "A Educação Superior está dispensada porque a Lei nº 11.645/2008 menciona apenas o Ensino Fundamental e o Médio.",
+        "As instituições superiores só precisam tratar do tema em projetos de extensão, não em seus currículos.",
+        "A temática é obrigatória apenas em universidades públicas federais."
     ],
 
     correta: 0,
 
-    feedbackAcerto: "Correto. O Brasil abriga uma grande diversidade de povos indígenas, com diferentes línguas, tradições, formas de organização social e visões de mundo.",
+    feedbackAcerto: "Correto. A Resolução CNE/CP nº 1/2004 repercute também na Educação Superior e na formação de profissionais da educação.",
 
-    feedbackErro: "Uma das maiores pegadinhas é tratar os povos indígenas como um grupo único e homogêneo.",
+    feedbackErro: "Não confunda o alcance literal do art. 26-A da LDB com o alcance das Diretrizes de formação e Educação Superior.",
 
-    dicaBanca: "Povos indígenas = diversidade, não uniformidade."
+    dicaBanca: "Art. 26-A e DCNERER têm alcances normativos que não são idênticos."
 },
 
 {
-    pergunta: "Ao analisar materiais didáticos, uma professora observou que os povos indígenas eram retratados apenas como personagens do passado, sem qualquer referência à sua presença na sociedade contemporânea. Considerando as diretrizes educacionais, assinale a alternativa correta:",
+    pergunta: "Em um curso de licenciatura, a temática étnico-racial aparece em uma única aula optativa, sem articulação com estágio, didática, currículo ou práticas de ensino. Considerando a formação docente comprometida com as DCNERER, a solução mais consistente seria:",
 
     alternativas: [
-        "A abordagem está adequada porque os povos indígenas pertencem principalmente ao passado histórico brasileiro.",
-        "Os conteúdos indígenas devem restringir-se ao período anterior à colonização, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A contemporaneidade indígena não possui relevância curricular, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
-        "A legislação prioriza predominantemente aspectos históricos dos povos indígenas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A representação é incompleta, pois invisibiliza a presença e o protagonismo indígena na sociedade contemporânea."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: "Correto. A educação para as relações étnico-raciais deve reconhecer os povos indígenas como sujeitos históricos contemporâneos.",
-
-    feedbackErro: "Outro erro comum em concursos é associar os povos indígenas apenas ao passado.",
-
-    dicaBanca: "Indígenas vivem no presente e continuam produzindo cultura e conhecimento."
-},
-
-{
-    pergunta: "Durante uma discussão em sala de aula, um professor afirmou que a principal contribuição dos povos indígenas para a sociedade brasileira ocorreu apenas no período inicial da formação do país. À luz da legislação e das diretrizes curriculares, assinale a alternativa correta:",
-
-    alternativas: [
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "As contribuições indígenas concentram-se à formação histórica inicial do Brasil, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "As contribuições indígenas perderam relevância após a colonização, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
-        "Os povos indígenas continuam contribuindo para a diversidade cultural, social, ambiental e política do país.",
-        "A legislação não trata das contribuições contemporâneas dos povos indígenas, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. Os povos indígenas participam ativamente da construção da sociedade brasileira contemporânea.",
-
-    feedbackErro: "A legislação busca superar visões que limitam os povos indígenas ao passado.",
-
-    dicaBanca: "Contribuições indígenas são históricas e contemporâneas."
-},
-
-{
-    pergunta: "Uma escola desenvolveu um projeto sobre culturas indígenas utilizando exclusivamente imagens estereotipadas, apresentando todos os indígenas com as mesmas vestimentas, costumes e formas de organização social. Considerando os princípios da educação para as relações étnico-raciais, assinale a alternativa correta:",
-
-    alternativas: [
-        "A estratégia facilita a compreensão dos estudantes e está pedagogicamente correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A prática reforça visões simplificadas e inadequadas sobre a diversidade dos povos indígenas.",
-        "A utilização de estereótipos contribui para valorização da diversidade indígena, sem considerar a participação comunitária e os processos próprios de aprendizagem desses grupos.",
-        "A abordagem é adequada quando utilizada em turmas dos anos iniciais, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A legislação recomenda representações padronizadas para facilitar o ensino, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. A educação para as relações étnico-raciais busca combater estereótipos e promover representações mais plurais e realistas.",
-
-    feedbackErro: "Representações simplificadas dificultam a compreensão da diversidade existente entre os povos indígenas.",
-
-    dicaBanca: "Estereótipos reduzem a complexidade cultural dos povos."
-},
-
-{
-    pergunta: "Ao estudar a temática indígena prevista na Lei nº 11.645/2008, uma candidata concluiu que seu ensino deve promover o reconhecimento da diversidade dos povos indígenas, valorizar suas contribuições históricas e contemporâneas e combater visões preconceituosas e estereotipadas. Essa conclusão está:",
-
-    alternativas: [
-        "Incorreta, pois a legislação trata em geral de aspectos históricos.",
-        "Incorreta, pois a diversidade indígena não constitui objetivo educacional.",
-        "Correta.",
-        "Incorreta, pois o combate aos estereótipos não integra a proposta curricular.",
-        "Incorreta, pois a temática indígena deve limitar-se às disciplinas de História e Geografia."
+        "Manter a aula optativa, pois a autonomia universitária impede qualquer integração curricular transversal.",
+        "Transferir o conteúdo exclusivamente para o estágio, já que o tema se aprende apenas no contato com a escola.",
+        "Integrar sistematicamente a temática ao projeto pedagógico e às práticas formativas da licenciatura.",
+        "Restringir o tema aos cursos de licenciatura destinados a municípios com maioria de população negra.",
+        "Substituir a formação teórica por campanhas de conscientização sem relação com os conhecimentos específicos do curso."
     ],
 
     correta: 2,
 
-    feedbackAcerto: "Correto. Essa síntese contempla os principais objetivos da abordagem da História e Cultura Indígena na educação brasileira.",
+    feedbackAcerto: "Correto. A formação docente precisa integrar conhecimento, prática pedagógica e responsabilidade institucional.",
 
-    feedbackErro: "A legislação busca promover conhecimento, valorização da diversidade e combate a preconceitos.",
+    feedbackErro: "Uma atividade optativa e isolada é insuficiente para formar professores capazes de implementar as Diretrizes.",
 
-    dicaBanca: "Diversidade + protagonismo + combate a estereótipos = núcleo da temática indígena."
+    dicaBanca: "Formação antirracista precisa chegar ao PPC e à prática docente."
 },
+
 {
-    pergunta: "Durante uma aula sobre a formação da sociedade brasileira, um professor apresentou a História da África apenas a partir do período da escravização, sem abordar civilizações, conhecimentos, organizações políticas e produções culturais africanas anteriores. Considerando a Lei nº 10.639/2003, assinale a alternativa correta:",
+    pergunta: "Uma secretaria de educação pretende avaliar a implementação das DCNERER verificando apenas se as escolas realizaram algum evento em novembro. Qual indicador seria mais consistente?",
 
     alternativas: [
-        "A abordagem está adequada, pois a História da África inicia-se com a escravização, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A abordagem é insuficiente, pois invisibiliza a diversidade histórica e cultural dos povos africanos.",
-        "A legislação prioriza predominantemente o estudo do tráfico negreiro, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "O estudo das civilizações africanas anteriores à colonização possui caráter opcional, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A História da África deve restringir-se às relações com o Brasil, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
+        "Quantidade de cartazes produzidos para datas comemorativas, independentemente de sua integração ao currículo.",
+        "Ações contínuas no currículo, formação, materiais, gestão, protocolos e monitoramento de desigualdades.",
+        "Número de estudantes negros matriculados, pois a obrigação varia conforme a composição racial da escola.",
+        "Presença de um professor especialista em cultura africana, ainda que os demais docentes não abordem a temática.",
+        "Realização anual de uma feira cultural com participação das famílias."
     ],
 
     correta: 1,
 
-    feedbackAcerto: "Correto. A legislação busca superar visões reducionistas da África, valorizando sua diversidade histórica, cultural, científica e política.",
+    feedbackAcerto: "Correto. Implementação é institucional e contínua; não se mede apenas por eventos pontuais.",
 
-    feedbackErro: "Uma das maiores pegadinhas é associar a História da África exclusivamente à escravização.",
+    feedbackErro: "A execução das Diretrizes envolve currículo, formação, materiais, gestão e monitoramento.",
 
-    dicaBanca: "África não começa na escravidão."
+    dicaBanca: "Evento é evidência fraca; política institucional é evidência forte."
 },
 
 {
-    pergunta: "Ao analisar materiais didáticos, uma professora observou que o continente africano era frequentemente retratado como um espaço homogêneo, marcado apenas por pobreza, conflitos e atraso tecnológico. Considerando os princípios da educação para as relações étnico-raciais, assinale a alternativa correta:",
+    pergunta: "Ao revisar o Projeto Político-Pedagógico, uma escola quer inserir a educação das relações étnico-raciais. Qual formulação revela maior aderência às DCNERER?",
 
     alternativas: [
-        "A representação está adequada por sintetizar características comuns do continente.",
-        "A simplificação facilita o ensino e deve ser incentivada, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A legislação recomenda abordagens unificadas sobre a África, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional.",
-        "O continente africano possui características culturais praticamente idênticas, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "A abordagem reforça estereótipos e ignora a diversidade dos países e culturas africanas."
+        "Inserir o tema apenas no calendário de projetos, preservando os componentes curriculares sem alterações.",
+        "Delegar o tema aos docentes negros, por possuírem maior legitimidade para tratar de experiências de discriminação.",
+        "Criar uma semana temática e considerar a exigência cumprida desde que todos os estudantes participem.",
+        "Evitar registrar o tema no PPP para que cada professor tenha liberdade individual de decidir quando abordá-lo.",
+        "Prever objetivos, responsabilidades, formação, revisão curricular, resposta ao racismo e monitoramento."
     ],
 
     correta: 4,
 
-    feedbackAcerto: "Correto. O continente africano apresenta enorme diversidade cultural, linguística, histórica, econômica e social.",
+    feedbackAcerto: "Correto. O PPP deve traduzir a política em responsabilidades, currículo, formação, prevenção e acompanhamento.",
 
-    feedbackErro: "Questões de concurso costumam combater visões homogêneas e estereotipadas sobre a África.",
+    feedbackErro: "A implementação não pode depender da iniciativa individual de determinados professores nem de uma semana temática.",
 
-    dicaBanca: "África = diversidade, não uniformidade."
+    dicaBanca: "PPP transforma princípio em responsabilidade institucional."
 },
 
 {
-    pergunta: "Durante um projeto escolar, estudantes pesquisaram contribuições africanas e afro-brasileiras para a formação da sociedade brasileira nas áreas da culinária, língua, música, religiosidade, agricultura e organização social. Essa atividade está alinhada principalmente ao objetivo de:",
+    pergunta: "Uma equipe de material didático apresenta a África como realidade cultural homogênea e praticamente limitada à escravidão. Qual revisão seria pedagogicamente mais adequada?",
 
     alternativas: [
-        "Substituir a história europeia pela história africana, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
-        "Restringir o estudo cultural às manifestações folclóricas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Demonstrar a superioridade de determinadas tradições culturais, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "Valorizar as contribuições dos povos africanos e afro-brasileiros para a construção da sociedade brasileira.",
-        "Limitar o ensino das relações étnico-raciais ao campo artístico, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
+        "Manter o recorte, pois a relação da África com a história brasileira decorre essencialmente do tráfico atlântico.",
+        "Substituir a história da escravidão por conteúdos exclusivamente positivos para evitar imagens negativas do continente.",
+        "Tratar o continente apenas a partir dos países africanos atuais, evitando períodos anteriores à colonização europeia.",
+        "Ampliar para sociedades, temporalidades, conhecimentos e experiências africanas, sem reduzir o continente à escravidão.",
+        "Concentrar-se em elementos folclóricos e artísticos, pois política e economia poderiam tornar o tema excessivamente complexo."
     ],
 
     correta: 3,
 
-    feedbackAcerto: "Correto. A legislação busca reconhecer e valorizar as contribuições africanas e afro-brasileiras para a formação do Brasil.",
+    feedbackAcerto: "Correto. A abordagem deve reconhecer a pluralidade histórica e cultural africana sem reduzir o continente à escravidão.",
 
-    feedbackErro: "O objetivo não é substituir culturas, mas reconhecer contribuições historicamente invisibilizadas.",
+    feedbackErro: "Evitar reducionismos não significa apagar a escravidão; significa inseri-la em uma história mais ampla e complexa.",
 
-    dicaBanca: "Valorização não significa substituição."
+    dicaBanca: "África no plural: sociedades, tempos e conhecimentos diversos."
 },
 
 {
-    pergunta: "Durante uma discussão em sala de aula, um estudante afirmou que a cultura afro-brasileira se resume à música e à dança. Considerando os fundamentos da educação para as relações étnico-raciais, assinale a alternativa correta:",
+    pergunta: "Em uma aula de História, a presença negra no Brasil aparece apenas como mão de obra escravizada, enquanto resistência, produção intelectual, organização comunitária e participação social ficam ausentes. O principal problema dessa abordagem é:",
 
     alternativas: [
-        "A cultura afro-brasileira abrange dimensões históricas, sociais, religiosas, linguísticas, científicas e culturais.",
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A cultura afro-brasileira concentra-se às manifestações artísticas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A legislação trata em geral das manifestações culturais mais populares, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Os aspectos religiosos e sociais não integram a cultura afro-brasileira, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional."
+        "Usar categorias históricas antes de apresentar a legislação contemporânea.",
+        "Invisibiliza agência, resistência e conhecimentos produzidos por sujeitos negros.",
+        "Dar destaque excessivo à história econômica em detrimento da história política.",
+        "Abordar o período escravista sem tratar previamente da geografia africana.",
+        "Utilizar fontes históricas produzidas no período colonial."
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. Uma abordagem antirracista reconhece violência e opressão sem apagar agência, resistência e protagonismo histórico.",
+
+    feedbackErro: "Substituir uma narrativa de silenciamento por outra igualmente simplificadora não resolve o problema.",
+
+    dicaBanca: "Opressão e agência precisam aparecer juntas."
+},
+
+{
+    pergunta: "Uma escola quer trabalhar contribuições afro-brasileiras à formação nacional. Qual proposta evita melhor a lógica de 'contribuições decorativas'?",
+
+    alternativas: [
+        "Apresentar curiosidades culturais em uma feira anual, sem conexão com os conteúdos regulares.",
+        "Destacar apenas música, dança e culinária, por serem manifestações mais acessíveis aos estudantes.",
+        "Integrar contribuições sociais, políticas, econômicas e intelectuais à constituição histórica da sociedade brasileira.",
+        "Trabalhar personalidades negras isoladamente, evitando relacioná-las a processos históricos coletivos.",
+        "Concentrar a temática no passado, porque a legislação se refere à formação histórica da população brasileira."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. As contribuições devem aparecer como parte constitutiva da história e da sociedade, e não como apêndice folclórico.",
+
+    feedbackErro: "A lógica de 'curiosidade cultural' mantém o conteúdo periférico e desarticulado do currículo.",
+
+    dicaBanca: "Contribuição não é enfeite: é parte da formação nacional."
+},
+
+{
+    pergunta: "Durante uma aula, um professor afirma que a valorização da cultura afro-brasileira exige apresentar apenas referências positivas e evitar qualquer debate sobre racismo, escravidão ou desigualdade. À luz das DCNERER, essa posição é:",
+
+    alternativas: [
+        "Valorização não apaga conflitos; exige abordagem histórica crítica e comprometida com direitos.",
+        "Adequada, porque conteúdos negativos podem reforçar estereótipos e devem ser excluídos do currículo.",
+        "Adequada apenas nos anos iniciais, quando temas de conflito social devem ser adiados.",
+        "Inadequada somente se a escola possuir estudantes que tenham relatado discriminação.",
+        "Adequada se a escola desenvolver paralelamente um projeto de cultura de paz."
     ],
 
     correta: 0,
 
-    feedbackAcerto: "Correto. A cultura afro-brasileira possui múltiplas dimensões e não pode ser reduzida a manifestações artísticas específicas.",
+    feedbackAcerto: "Correto. Educação antirracista articula valorização, memória, crítica histórica e enfrentamento das desigualdades.",
 
-    feedbackErro: "Uma pegadinha frequente é limitar a cultura afro-brasileira a poucos elementos culturais conhecidos.",
+    feedbackErro: "Uma narrativa apenas celebratória pode ser tão incompleta quanto uma narrativa apenas marcada pela opressão.",
 
-    dicaBanca: "Cultura afro-brasileira é ampla e multifacetada."
+    dicaBanca: "Valorização não significa apagar conflito histórico."
 },
 
 {
-    pergunta: "Ao estudar a Lei nº 10.639/2003, uma candidata concluiu que o ensino da História da África e da Cultura Afro-Brasileira busca ampliar a compreensão da formação histórica do Brasil, combater estereótipos e promover o reconhecimento das contribuições dos povos africanos e afrodescendentes. Essa conclusão está:",
+    pergunta: "Uma atividade apresenta religiões de matriz africana exclusivamente como 'folclore', enquanto tradições religiosas europeias são tratadas como sistemas complexos de pensamento. A crítica mais adequada é que essa diferença de tratamento:",
 
     alternativas: [
-        "Incorreta, pois a lei possui finalidade predominantemente histórica.",
-        "Incorreta, pois o combate aos estereótipos não integra seus objetivos.",
-        "Correta.",
-        "Incorreta, pois a legislação trata em geral da escravidão.",
-        "Incorreta, pois a temática afro-brasileira concentra-se às artes."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. Essa síntese contempla os principais objetivos educacionais da Lei nº 10.639/2003.",
-
-    feedbackErro: "A lei articula história, cultura, cidadania, reconhecimento e combate ao preconceito.",
-
-    dicaBanca: "Reconhecimento histórico + combate a estereótipos = essência da Lei nº 10.639/2003."
-},
-{
-    pergunta: "Durante uma reunião pedagógica, um professor afirmou que a educação antirracista deve ser desenvolvida apenas quando ocorrerem episódios explícitos de racismo na escola. Considerando os fundamentos da educação antirracista, assinale a alternativa correta:",
-
-    alternativas: [
-        "A educação antirracista possui caráter predominantemente corretivo, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A educação antirracista constitui prática permanente voltada à promoção da equidade e ao enfrentamento das desigualdades.",
-        "A educação antirracista deve ocorrer em geral após denúncias formais de discriminação, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A educação antirracista concentra-se às disciplinas de Ciências Humanas, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A educação antirracista é responsabilidade exclusiva da equipe gestora, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. A educação antirracista possui caráter contínuo e preventivo, promovendo respeito à diversidade e enfrentamento das desigualdades raciais.",
-
-    feedbackErro: "Uma das pegadinhas mais comuns é tratar a educação antirracista apenas como resposta a conflitos já ocorridos.",
-
-    dicaBanca: "Educação antirracista é permanente, não emergencial."
-},
-
-{
-    pergunta: "Uma escola passou a revisar seus materiais didáticos, exemplos utilizados em sala de aula, critérios de participação em projetos e representações presentes nos espaços escolares. O objetivo era identificar práticas que pudessem reproduzir desigualdades raciais de forma involuntária. Essa iniciativa está alinhada principalmente ao princípio de:",
-
-    alternativas: [
-        "Análise crítica das práticas institucionais e promoção da equidade.",
-        "Neutralidade curricular, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Avaliação classificatória, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Padronização pedagógica, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Segmentação curricular, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A educação antirracista envolve reflexão crítica sobre práticas institucionais que podem reproduzir desigualdades.",
-
-    feedbackErro: "O combate ao racismo exige analisar não apenas atitudes individuais, mas também práticas e estruturas escolares.",
-
-    dicaBanca: "Educação antirracista começa pela revisão das práticas da própria instituição."
-},
-
-{
-    pergunta: "Durante uma formação continuada, uma professora afirmou que tratar todos os estudantes exatamente da mesma forma é suficiente para garantir justiça racial no ambiente escolar. Considerando os princípios da educação antirracista, assinale a alternativa correta:",
-
-    alternativas: [
-        "A afirmação está correta, pois igualdade formal sempre produz justiça social, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "Qualquer ação voltada à equidade configura privilégio indevido, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A educação antirracista rejeita o princípio da igualdade, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A equidade aplica-se em geral à educação especial, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A promoção da equidade pode exigir estratégias diferenciadas para enfrentar desigualdades historicamente construídas."
+        "É inevitável, porque apenas religiões majoritárias podem receber tratamento acadêmico no currículo.",
+        "É adequada desde que a escola declare respeito à diversidade religiosa em seu regimento.",
+        "Só constituiria problema se algum estudante praticante dessas religiões estivesse matriculado na turma.",
+        "Pode ser corrigida retirando todas as referências religiosas do currículo, independentemente do contexto histórico e cultural.",
+        "A diferença pode hierarquizar culturas e reforçar estereótipos, exigindo revisão crítica."
     ],
 
     correta: 4,
 
-    feedbackAcerto: "Correto. A educação antirracista reconhece que desigualdades históricas podem exigir medidas voltadas à promoção da equidade.",
+    feedbackAcerto: "Correto. Tratar uma tradição como 'folclore' e outra como conhecimento complexo pode reproduzir hierarquias e estigmas.",
 
-    feedbackErro: "Questões de concurso frequentemente exploram a diferença entre igualdade formal e equidade.",
+    feedbackErro: "A solução não é apagar o tema, mas abordá-lo com rigor, respeito e contextualização.",
 
-    dicaBanca: "Igualdade trata todos igualmente; equidade considera desigualdades existentes."
+    dicaBanca: "Observe hierarquias implícitas na linguagem curricular."
 },
 
 {
-    pergunta: "Uma escola decidiu desenvolver projetos pedagógicos que valorizassem diferentes identidades culturais, ampliassem a representatividade nos materiais didáticos e promovessem o diálogo sobre preconceito e discriminação. Considerando os fundamentos da educação antirracista, essa proposta busca principalmente:",
+    pergunta: "Ao tratar dos povos indígenas no currículo comum, uma coleção didática usa quase sempre imagens de pessoas no período colonial e fala em 'o índio brasileiro' como se houvesse uma única cultura. Qual correção é mais adequada?",
 
     alternativas: [
-        "Substituir uma cultura por outra, como se os demais elementos curriculares, culturais e pedagógicos não fossem relevantes.",
-        "Hierarquizar diferentes grupos culturais, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "Eliminar conteúdos históricos controversos, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Promover reconhecimento, respeito à diversidade e construção de relações mais democráticas.",
-        "Restringir debates sobre desigualdades sociais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
+        "Manter a categoria genérica, pois a legislação usa a expressão povos indígenas de modo coletivo.",
+        "Retirar referências contemporâneas, porque o art. 26-A se limita à contribuição indígena para a formação histórica nacional.",
+        "Substituir imagens de indígenas aldeados por imagens exclusivamente urbanas, para demonstrar contemporaneidade.",
+        "Distinguir povos, línguas, territórios, histórias e experiências indígenas contemporâneas.",
+        "Tratar apenas de povos indígenas localizados na região da escola, pois os demais não integram a contextualização curricular."
     ],
 
     correta: 3,
 
-    feedbackAcerto: "Correto. A educação antirracista busca fortalecer o respeito à diversidade e construir relações mais justas e democráticas.",
+    feedbackAcerto: "Correto. A pluralidade dos povos e sua contemporaneidade precisam estar presentes no currículo.",
 
-    feedbackErro: "O objetivo não é substituir culturas, mas ampliar reconhecimento e inclusão.",
+    feedbackErro: "A diversidade indígena não se resume à oposição entre aldeia e cidade nem a uma identidade genérica.",
 
-    dicaBanca: "Educação antirracista valoriza diversidade e democracia."
+    dicaBanca: "Povos indígenas: pluralidade + contemporaneidade."
 },
 
 {
-    pergunta: "Ao estudar os fundamentos da educação antirracista, uma candidata concluiu que ela envolve revisão crítica do currículo, valorização das contribuições de diferentes grupos étnico-raciais, combate a estereótipos, promoção da equidade e construção de ambientes escolares inclusivos. Essa conclusão está:",
+    pergunta: "Um estudante afirma que uma pessoa indígena que vive em cidade, frequenta universidade e utiliza tecnologias digitais 'deixou de ser indígena'. A intervenção pedagógica mais adequada seria:",
 
     alternativas: [
-        "Incorreta, pois a educação antirracista concentra-se ao estudo da legislação.",
-        "Incorreta, pois currículo e equidade não integram seus objetivos.",
-        "Correta.",
-        "Incorreta, pois a temática concentra-se ao ensino da História da África.",
-        "Incorreta, pois ambientes inclusivos não possuem relação com educação antirracista."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: "Correto. Essa síntese contempla os principais fundamentos e objetivos da educação antirracista contemporânea.",
-
-    feedbackErro: "A educação antirracista possui caráter amplo, envolvendo currículo, práticas pedagógicas e relações sociais.",
-
-    dicaBanca: "Educação antirracista = currículo + equidade + inclusão + combate aos estereótipos."
-},
-{
-    pergunta: "Durante a elaboração do currículo escolar, uma equipe pedagógica concluiu que os temas relacionados à diversidade cultural, ao respeito às diferenças e aos direitos humanos deveriam aparecer apenas em projetos eventuais, sem integração com as competências gerais da BNCC. Considerando a Base Nacional Comum Curricular, assinale a alternativa correta:",
-
-    alternativas: [
-        "A conclusão está correta, pois a BNCC concentra-se aos conteúdos disciplinares, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A BNCC trata diversidade e direitos humanos em geral como temas opcionais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A BNCC limita o debate sobre diversidade ao Ensino Médio, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A valorização da diversidade e o respeito aos direitos humanos integram princípios presentes nas competências gerais da BNCC.",
-        "A abordagem desses temas depende predominantemente da iniciativa dos professores, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: "Correto. A BNCC valoriza a diversidade, os direitos humanos, a cidadania e o respeito às diferenças como elementos formativos essenciais.",
-
-    feedbackErro: "Uma das pegadinhas mais comuns é reduzir a BNCC a uma simples lista de conteúdos.",
-
-    dicaBanca: "BNCC também trabalha valores, cidadania e convivência democrática."
-},
-
-{
-    pergunta: "Durante uma formação continuada, um professor afirmou que o respeito à diversidade cultural possui relevância social, mas não apresenta relação direta com a formação cidadã prevista nos documentos educacionais brasileiros. Considerando a BNCC e os princípios dos direitos humanos, assinale a alternativa correta:",
-
-    alternativas: [
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "A valorização da diversidade contribui para a formação cidadã e para a convivência democrática.",
-        "Diversidade cultural e cidadania são conceitos independentes, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "Os direitos humanos tratam em geral de aspectos jurídicos, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A BNCC não relaciona cidadania e respeito às diferenças, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
+        "Confirmar parcialmente a afirmação, pois a identidade indígena depende da manutenção integral de costumes tradicionais.",
+        "Tecnologia, escolarização ou vida urbana não apagam automaticamente pertencimento e identidade indígena.",
+        "Evitar responder, porque identidade é tema privado que não deve integrar o currículo escolar.",
+        "Substituir a discussão por definição biológica de ancestralidade para estabelecer critérios objetivos.",
+        "Informar que apenas a residência em terra oficialmente demarcada permite reconhecer uma pessoa como indígena."
     ],
 
     correta: 1,
 
-    feedbackAcerto: "Correto. A formação cidadã envolve reconhecimento da diversidade, respeito às diferenças e participação democrática.",
+    feedbackAcerto: "Correto. Identidades e culturas são históricas e dinâmicas; tecnologia e vida urbana não anulam automaticamente identidades indígenas.",
 
-    feedbackErro: "Os documentos educacionais contemporâneos articulam diversidade, cidadania e direitos humanos.",
+    feedbackErro: "A banca costuma explorar estereótipos de autenticidade cultural e imagens congeladas no passado.",
 
-    dicaBanca: "Diversidade e cidadania aparecem frequentemente associadas na BNCC."
+    dicaBanca: "Cultura muda; identidade não depende de 'parar no tempo'."
 },
 
 {
-    pergunta: "Uma escola desenvolveu atividades que incentivavam os estudantes a compreender diferentes perspectivas culturais, dialogar com respeito, combater preconceitos e resolver conflitos de forma democrática. Essa proposta está mais alinhada ao desenvolvimento de:",
+    pergunta: "Em uma atividade escolar, diferentes povos indígenas são apresentados apenas por pinturas corporais, danças e artesanato, sem referência a direitos, conflitos territoriais, produção de conhecimentos ou atuação política. A principal limitação é:",
 
     alternativas: [
-        "Competências relacionadas à convivência democrática e à cultura de direitos humanos.",
-        "Práticas voltadas predominantemente ao rendimento acadêmico, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "Estratégias de segmentação cultural, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "Modelos de ensino baseados na homogeneização dos estudantes, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Competências restritas às Ciências Humanas, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A BNCC incentiva o desenvolvimento de competências relacionadas ao diálogo, empatia, respeito e convivência democrática.",
-
-    feedbackErro: "A formação integral envolve aspectos cognitivos, sociais, éticos e culturais.",
-
-    dicaBanca: "Empatia, diálogo e respeito costumam indicar competências gerais da BNCC."
-},
-
-{
-    pergunta: "Ao analisar um projeto pedagógico, uma candidata observou que a escola valorizava apenas referências culturais dominantes, sem espaço para manifestações de grupos historicamente marginalizados. Considerando os princípios da diversidade cultural e dos direitos humanos, assinale a alternativa correta:",
-
-    alternativas: [
-        "A prática favorece a pluralidade cultural, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "A valorização de uma única referência cultural fortalece a diversidade, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "A escola deve promover reconhecimento e valorização de diferentes identidades e manifestações culturais.",
-        "A diversidade cultural não possui relevância educacional, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "A legislação educacional prioriza a homogeneização cultural, de modo uniforme, sem observar as especificidades previstas no ordenamento educacional."
+        "A presença de manifestações culturais em um conteúdo que deveria ser exclusivamente político.",
+        "A ausência de uma classificação racial baseada em características físicas.",
+        "Reduz povos indígenas a elementos folclorizados e oculta direitos, contemporaneidade e organização social.",
+        "O uso de exemplos visuais, que não devem integrar a educação das relações étnico-raciais.",
+        "A falta de comparação direta entre culturas indígenas e padrões culturais europeus."
     ],
 
     correta: 2,
 
-    feedbackAcerto: "Correto. A educação democrática reconhece e valoriza diferentes identidades culturais presentes na sociedade.",
+    feedbackAcerto: "Correto. A abordagem deve superar exotização e folclorização, reconhecendo povos indígenas como sujeitos históricos e contemporâneos.",
 
-    feedbackErro: "Uma escola comprometida com os direitos humanos amplia espaços de representação e reconhecimento.",
+    feedbackErro: "Elementos culturais são legítimos, mas tornam-se problemáticos quando representam toda a complexidade de povos diversos.",
 
-    dicaBanca: "Pluralidade cultural é incompatível com a valorização de apenas um grupo."
+    dicaBanca: "Cuidado com o indígena como 'personagem folclórico'."
 },
 
 {
-    pergunta: "Ao estudar a BNCC, os direitos humanos e a educação para as relações étnico-raciais, uma candidata concluiu que esses documentos convergem para a promoção da dignidade humana, da cidadania, do respeito à diversidade, da equidade e da convivência democrática. Essa conclusão está:",
+    pergunta: "Ao trabalhar história indígena, um professor utiliza apenas relatos produzidos por colonizadores e nunca apresenta vozes, memórias, produções e perspectivas indígenas. Uma revisão coerente com educação intercultural e antirracista seria:",
 
     alternativas: [
-        "Incorreta, pois a BNCC concentra-se ao ensino de conteúdos curriculares.",
-        "Incorreta, pois os direitos humanos não possuem relação com diversidade cultural.",
-        "Incorreta, pois a equidade não integra os objetivos educacionais contemporâneos.",
-        "Incorreta, pois convivência democrática e cidadania não constituem finalidades da educação.",
-        "Correta."
+        "Articular fontes diversas, incluindo vozes indígenas e análise crítica dos silêncios.",
+        "Eliminar documentos coloniais, pois fontes de grupos dominantes não possuem valor histórico.",
+        "Manter apenas as fontes coloniais, mas acrescentar um glossário de termos indígenas.",
+        "Substituir fontes históricas por depoimentos contemporâneos, evitando anacronismos.",
+        "Utilizar somente documentos oficiais para preservar objetividade e neutralidade."
     ],
 
-    correta: 4,
+    correta: 0,
 
-    feedbackAcerto: "Correto. Esses documentos compartilham princípios voltados à formação integral, à cidadania e ao respeito à diversidade.",
+    feedbackAcerto: "Correto. O rigor histórico cresce quando se confrontam perspectivas, contextos e silêncios das fontes.",
 
-    feedbackErro: "BNCC, direitos humanos e educação das relações étnico-raciais possuem objetivos convergentes em diversos aspectos.",
+    feedbackErro: "Educação antirracista não exige abandonar fontes tradicionais, mas problematizá-las e ampliar as vozes consideradas.",
 
-    dicaBanca: "Dignidade, cidadania, diversidade e equidade formam um núcleo conceitual recorrente nas provas."
+    dicaBanca: "Fonte histórica também tem posição e silêncio."
 },
+
 {
-    pergunta: "Durante a elaboração do currículo escolar, uma equipe pedagógica concluiu que a implementação das Leis nº 10.639/2003 e nº 11.645/2008 estaria plenamente atendida com a realização de eventos comemorativos anuais sobre culturas africanas e indígenas. Considerando a legislação e as DCNERER, assinale a alternativa correta:",
+    pergunta: "Em uma escola não indígena, a interculturalidade é tratada como simples justaposição de 'curiosidades' sobre diferentes culturas. Uma compreensão mais exigente do conceito pressupõe:",
 
     alternativas: [
-        "A conclusão está correta, pois a legislação prioriza atividades comemorativas, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "Eventos anuais substituem a necessidade de integração curricular, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "A obrigatoriedade concentra-se às datas comemorativas previstas no calendário escolar, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A implementação exige inserção contínua, crítica e transversal dos temas no currículo escolar.",
-        "As leis tratam predominantemente de atividades culturais extracurriculares, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos."
+        "Fusão progressiva das culturas em um padrão comum para evitar conflitos identitários.",
+        "Separação rígida dos conhecimentos por origem cultural, impedindo comparações entre diferentes matrizes.",
+        "Subordinação dos saberes tradicionais ao conhecimento científico para garantir rigor acadêmico.",
+        "Diálogo crítico entre conhecimentos e perspectivas, sem homogeneização nem hierarquização automática.",
+        "Neutralidade diante de desigualdades históricas, para que nenhuma cultura seja privilegiada."
     ],
 
     correta: 3,
 
-    feedbackAcerto: "Correto. A legislação exige tratamento permanente, interdisciplinar e integrado ao currículo.",
+    feedbackAcerto: "Correto. Interculturalidade envolve diálogo crítico entre perspectivas sem assimilação ou hierarquização automática.",
 
-    feedbackErro: "Uma das pegadinhas mais frequentes é confundir ações pontuais com implementação curricular efetiva.",
+    feedbackErro: "Somar curiosidades sem interação crítica não produz necessariamente uma prática intercultural.",
 
-    dicaBanca: "Tema permanente, não evento isolado."
+    dicaBanca: "Interculturalidade = diálogo, não fusão nem hierarquia."
 },
 
 {
-    pergunta: "Ao analisar uma escola, uma pesquisadora observou que não existiam manifestações explícitas de preconceito racial. Entretanto, materiais didáticos, exemplos utilizados em aula e referências acadêmicas apresentavam baixa representatividade de grupos negros e indígenas, contribuindo para sua invisibilização. Essa situação relaciona-se principalmente a:",
+    pergunta: "Um professor faz comentário racial ofensivo contra um estudante em sala. Em outro caso, a escola mantém critérios aparentemente neutros que, na prática, excluem sistematicamente determinados grupos raciais de oportunidades. Os dois casos exemplificam, respectivamente:",
 
     alternativas: [
-        "Interdisciplinaridade curricular, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Currículo oculto e reprodução de desigualdades.",
-        "Pluralidade cultural consolidada, sem estabelecer diálogo suficiente com a realidade histórica, social e cultural dos estudantes.",
-        "Valorização da diversidade étnico-racial, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Gestão democrática, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: "Correto. O currículo oculto pode reproduzir desigualdades por meio de representações, referências e práticas aparentemente neutras.",
-
-    feedbackErro: "Nem toda desigualdade ocorre de forma explícita; muitas vezes ela é reproduzida por mecanismos sutis.",
-
-    dicaBanca: "Currículo oculto costuma aparecer associado à invisibilização."
-},
-
-{
-    pergunta: "Durante uma formação continuada, um professor afirmou que o combate ao racismo deve concentrar-se apenas em atitudes individuais preconceituosas, pois desigualdades estruturais não pertencem ao campo educacional. Considerando os estudos contemporâneos sobre relações étnico-raciais, assinale a alternativa correta:",
-
-    alternativas: [
-        "A afirmação está correta, pois atenderia integralmente às normas e aos princípios pedagógicos descritos no enunciado.",
-        "O racismo concentra-se às relações interpessoais, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A escola não possui papel no enfrentamento do racismo estrutural, como orientação geral, independentemente do contexto social, pedagógico e legal apresentado.",
-        "Questões estruturais pertencem predominantemente ao campo jurídico, sem considerar a amplitude dos direitos educacionais e a diversidade dos sujeitos envolvidos.",
-        "A educação antirracista também envolve análise crítica de estruturas e práticas que reproduzem desigualdades."
+        "Racismo estrutural e preconceito individual.",
+        "Racismo institucional e injúria exclusivamente privada.",
+        "Preconceito sem discriminação e desigualdade meramente socioeconômica.",
+        "Racismo recreativo e ação afirmativa.",
+        "Discriminação direta e possível racismo institucional."
     ],
 
     correta: 4,
 
-    feedbackAcerto: "Correto. A educação antirracista busca compreender tanto manifestações individuais quanto mecanismos estruturais de desigualdade.",
+    feedbackAcerto: "Correto. O primeiro caso é uma conduta discriminatória direta; o segundo exige examinar regras e resultados institucionais.",
 
-    feedbackErro: "As políticas contemporâneas ampliam a análise para além dos comportamentos individuais.",
+    feedbackErro: "Racismo institucional pode operar por procedimentos aparentemente neutros quando produzem exclusões persistentes.",
 
-    dicaBanca: "Racismo estrutural é tema cada vez mais cobrado."
+    dicaBanca: "Olhe para quem pratica e para o mecanismo que produz o efeito."
 },
 
 {
-    pergunta: "Uma candidata concluiu que a valorização das histórias e culturas africanas, afro-brasileiras e indígenas contribui para fortalecer identidades, ampliar o sentimento de pertencimento, combater estereótipos e promover a convivência democrática. Essa conclusão está:",
+    pergunta: "Uma rede identifica que estudantes negros apresentam taxas de reprovação significativamente maiores, mesmo após controlar algumas variáveis socioeconômicas. Qual atitude é mais compatível com uma gestão orientada pela equidade?",
 
     alternativas: [
-        "Correta.",
-        "Incorreta, pois a legislação possui finalidade predominantemente histórica.",
-        "Incorreta, pois pertencimento não integra os objetivos educacionais.",
-        "Incorreta, pois combate a estereótipos não possui relação com currículo.",
-        "Incorreta, pois convivência democrática não constitui finalidade da educação."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: "Correto. A educação das relações étnico-raciais possui dimensão histórica, cultural, cidadã e formativa.",
-
-    feedbackErro: "Os documentos educacionais articulam conhecimento, identidade, pertencimento e cidadania.",
-
-    dicaBanca: "Pertencimento e representatividade são conceitos recorrentes."
-},
-
-{
-    pergunta: "Ao estudar conjuntamente as Leis nº 10.639/2003 e nº 11.645/2008, as DCNERER, a BNCC e os princípios da educação antirracista, uma candidata concluiu que a escola deve promover equidade, respeito à diversidade, reconhecimento das contribuições de diferentes povos, combate às discriminações e formação cidadã comprometida com os direitos humanos. Essa conclusão está:",
-
-    alternativas: [
-        "Incorreta, pois a função da escola concentra-se à transmissão de conteúdos acadêmicos.",
-        "Incorreta, pois equidade e diversidade não integram as finalidades educacionais.",
-        "Correta.",
-        "Incorreta, pois o combate às discriminações não constitui responsabilidade da educação.",
-        "Incorreta, pois direitos humanos não possuem relação com o currículo escolar."
+        "Ignorar a variável raça/cor, pois considerá-la poderia produzir discriminação inversa.",
+        "Concluir imediatamente que todos os professores da rede praticam racismo intencional.",
+        "Investigar mecanismos, expectativas, oportunidades e barreiras institucionais com base em evidências.",
+        "Substituir critérios de avaliação por aprovação automática para o grupo com maior reprovação.",
+        "Divulgar apenas os resultados gerais da rede, evitando recortes que possam gerar conflito."
     ],
 
     correta: 2,
 
-    feedbackAcerto: "Correto. Essa síntese reúne os principais objetivos presentes nos documentos que fundamentam a Educação das Relações Étnico-Raciais no Brasil.",
+    feedbackAcerto: "Correto. Desigualdades raciais exigem diagnóstico de mecanismos e barreiras, não negação nem conclusões automáticas sobre intenção individual.",
 
-    feedbackErro: "A educação contemporânea articula conhecimento, cidadania, direitos humanos, diversidade e equidade.",
+    feedbackErro: "Racismo estrutural e institucional não se demonstram apenas pela intenção; é preciso analisar processos e resultados.",
 
-    dicaBanca: "Equidade + diversidade + cidadania + direitos humanos = síntese do tema."
-}];
+    dicaBanca: "Indicador desigual pede investigação, não negação nem culpa automática."
+},
+
+{
+    pergunta: "Uma candidata afirma: 'preconceito e discriminação são sinônimos perfeitos'. Em uma questão conceitual sobre relações étnico-raciais, a melhor correção seria:",
+
+    alternativas: [
+        "Preconceito é juízo; discriminação é prática que produz desvantagem.",
+        "Preconceito é sempre crime, enquanto discriminação é apenas opinião individual.",
+        "Discriminação só existe quando há intenção declarada de prejudicar alguém.",
+        "Preconceito é fenômeno institucional e discriminação é exclusivamente interpessoal.",
+        "Não há diferença relevante entre os termos no campo educacional."
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. Conceitualmente, preconceito e discriminação se relacionam, mas não são equivalentes.",
+
+    feedbackErro: "Questões difíceis costumam trocar atitude, prática, estrutura e intenção.",
+
+    dicaBanca: "Preconceito = juízo/atitude; discriminação = prática/tratamento."
+},
+
+{
+    pergunta: "Uma política escolar oferece exatamente o mesmo apoio a todos, embora alguns estudantes enfrentem barreiras historicamente desiguais de acesso a recursos e oportunidades. A distinção entre igualdade e equidade permite afirmar que:",
+
+    alternativas: [
+        "Equidade autoriza abandonar regras comuns e avaliar cada estudante sem critérios definidos.",
+        "Equidade considera barreiras e necessidades diferenciadas para efetivar igualdade de direitos e oportunidades.",
+        "Igualdade e equidade são conceitos incompatíveis, devendo a escola escolher apenas um deles.",
+        "Igualdade exige resultados idênticos, enquanto equidade exige tratamento idêntico.",
+        "Equidade se limita a políticas de transferência de renda e não se aplica ao currículo ou à gestão escolar."
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. Equidade considera desigualdades concretas para tornar efetiva a igualdade de direitos e oportunidades.",
+
+    feedbackErro: "A pegadinha é apresentar equidade como privilégio ou ausência de critérios.",
+
+    dicaBanca: "Equidade não nega igualdade; busca torná-la efetiva."
+},
+
+{
+    pergunta: "Uma escola adota a frase 'aqui não vemos cor, tratamos todos apenas como alunos' para justificar a ausência de qualquer discussão sobre racismo. Qual crítica é mais consistente?",
+
+    alternativas: [
+        "A afirmação é suficiente, pois a neutralidade racial impede a reprodução de desigualdades.",
+        "A escola deveria classificar publicamente todos os estudantes por raça/cor em cada atividade pedagógica.",
+        "Discussões sobre raça só são pertinentes após ocorrência de conflito explícito.",
+        "O problema da frase é exclusivamente semântico e não possui repercussão pedagógica.",
+        "Ignorar raça/cor pode invisibilizar desigualdades e impedir ações de prevenção e correção."
+    ],
+
+    correta: 4,
+
+    feedbackAcerto: "Correto. Uma abordagem 'colorblind' pode invisibilizar desigualdades raciais existentes.",
+
+    feedbackErro: "Não se trata de reduzir estudantes à raça, mas de não apagar uma dimensão social relevante quando ela produz desigualdades.",
+
+    dicaBanca: "Não ver a desigualdade não faz a desigualdade desaparecer."
+},
+
+{
+    pergunta: "Ao analisar dados educacionais por raça/cor, uma equipe teme que a desagregação de indicadores seja, por si só, discriminatória. A melhor resposta é:",
+
+    alternativas: [
+        "Indicadores raciais devem ser proibidos nas escolas porque toda classificação gera racismo.",
+        "Somente o censo nacional pode utilizar raça/cor; escolas e redes não podem examinar seus próprios resultados.",
+        "A análise só é válida se revelar diferenças estatisticamente iguais entre todos os grupos.",
+        "Dados desagregados podem diagnosticar desigualdades e orientar planejamento, com proteção adequada.",
+        "Os dados devem substituir observações pedagógicas e se tornar o único critério de decisão institucional."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. Dados desagregados ajudam a identificar desigualdades que médias gerais podem esconder.",
+
+    feedbackErro: "Usar dados para diagnóstico é diferente de usar classificações para estigmatizar estudantes.",
+
+    dicaBanca: "Sem diagnóstico, a desigualdade pode ficar invisível."
+},
+
+{
+    pergunta: "Um mural de 'grandes pensadores' apresenta apenas autores europeus, embora o currículo trabalhe temas em que intelectuais negros, africanos, afro-brasileiros e indígenas seriam pertinentes. O problema não está simplesmente na origem dos autores, mas no fato de que:",
+
+    alternativas: [
+        "Toda seleção curricular deveria obedecer a cotas numéricas fixas de autores por grupo racial.",
+        "Autores europeus não podem integrar uma educação antirracista.",
+        "Um repertório restrito pode reforçar invisibilizações sobre quem é reconhecido como produtor de conhecimento.",
+        "Representatividade é importante apenas em imagens, não na seleção de conhecimentos e referências.",
+        "O currículo oculto existe somente em regras disciplinares, não em escolhas de autores e exemplos."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. Escolhas aparentemente neutras podem transmitir mensagens implícitas sobre pertencimento, valor e legitimidade intelectual.",
+
+    feedbackErro: "Currículo antirracista não significa excluir tradições europeias, mas ampliar criticamente referências e perspectivas.",
+
+    dicaBanca: "Currículo oculto também aparece no que é sistematicamente invisibilizado."
+},
+
+{
+    pergunta: "Em uma atividade, personagens negros aparecem majoritariamente em posições de subordinação, enquanto personagens brancos ocupam posições de liderança e produção científica. Mesmo sem texto explicitamente racista, esse padrão pode:",
+
+    alternativas: [
+        "Pode naturalizar hierarquias raciais em papéis sociais, mesmo sem texto ofensivo.",
+        "Ser irrelevante, pois imagens não possuem função curricular.",
+        "Ser considerado adequado desde que as imagens representem situações estatisticamente frequentes.",
+        "Ser corrigido apenas retirando todas as imagens humanas dos materiais didáticos.",
+        "Ser analisado somente se estudantes apresentarem reclamação formal."
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. Representações repetidas podem reforçar estereótipos e expectativas mesmo sem afirmações explícitas.",
+
+    feedbackErro: "A ausência de linguagem ofensiva não elimina efeitos pedagógicos de padrões visuais e simbólicos.",
+
+    dicaBanca: "Analise também imagens, papéis e ausências."
+},
+
+{
+    pergunta: "Uma escola revisa seus livros e encontra uma narrativa em que pessoas negras aparecem apenas como escravizadas e povos indígenas apenas como obstáculos à colonização. Qual critério de revisão é mais adequado?",
+
+    alternativas: [
+        "Eliminar totalmente esses períodos históricos para evitar imagens negativas.",
+        "Manter a narrativa e acrescentar uma nota final sobre diversidade.",
+        "Substituir personagens coletivos por biografias individuais sem alterar a estrutura interpretativa do material.",
+        "Reformular a narrativa para incluir agência, resistência, conhecimentos e perspectivas sem ocultar conflitos.",
+        "Retirar qualquer menção a raça e etnia, adotando uma narrativa universalista."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. A revisão deve enfrentar a estrutura da narrativa, não apenas adicionar uma nota ou apagar conteúdos difíceis.",
+
+    feedbackErro: "O objetivo é ampliar perspectivas e complexidade histórica sem substituir um apagamento por outro.",
+
+    dicaBanca: "Revisão antirracista muda a narrativa, não só o rodapé."
+},
+
+{
+    pergunta: "Após denúncia de racismo, a gestão decide proteger a vítima, preservar registros, ouvir os envolvidos com cuidado, acionar procedimentos institucionais e desenvolver medidas pedagógicas. Essa resposta é superior à simples mediação informal porque:",
+
+    alternativas: [
+        "Impede qualquer possibilidade de diálogo pedagógico posterior.",
+        "Reconhece possível violação de direitos e exige resposta institucional, não simples conflito simétrico.",
+        "Transfere toda a responsabilidade da escola para órgãos externos.",
+        "Dispensa a análise do contexto e das evidências, pois a denúncia basta para definir automaticamente todas as consequências.",
+        "Substitui a necessidade de políticas preventivas por uma atuação apenas reativa."
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. Situações de racismo não devem ser tratadas como conflitos neutros quando há possível violação de direitos e assimetria entre as partes.",
+
+    feedbackErro: "A resposta precisa ser cuidadosa, protetiva, baseada em procedimentos e articulada a ações pedagógicas.",
+
+    dicaBanca: "Racismo não é automaticamente 'briga entre iguais'."
+},
+
+{
+    pergunta: "A PNEERQ, instituída pelo MEC em 2024, deve ser compreendida como política voltada principalmente a:",
+
+    alternativas: [
+        "Criar um currículo nacional separado para estudantes negros e quilombolas.",
+        "Substituir as DCNERER por protocolos administrativos sem conteúdo curricular.",
+        "Restringir a política de equidade racial às universidades federais.",
+        "Centralizar no MEC a apuração disciplinar de todos os casos de racismo ocorridos nas escolas.",
+        "Superar desigualdades étnico-raciais e o racismo, fortalecendo ERER e Educação Escolar Quilombola."
+    ],
+
+    correta: 4,
+
+    feedbackAcerto: "Correto. A PNEERQ articula equidade, ERER, enfrentamento do racismo e Educação Escolar Quilombola.",
+
+    feedbackErro: "Ela não substitui a legislação e as Diretrizes nem cria um currículo racialmente segregado.",
+
+    dicaBanca: "PNEERQ = equidade + ERER + quilombola + enfrentamento do racismo."
+},
+
+{
+    pergunta: "Uma questão pede o ato que instituiu a Política Nacional de Equidade, Educação para as Relações Étnico-Raciais e Educação Escolar Quilombola. A alternativa correta é:",
+
+    alternativas: [
+        "Portaria MEC nº 470, de 14 de maio de 2024, que instituiu a PNEERQ.",
+        "Resolução CNE/CP nº 1/2004, que instituiu as Diretrizes Curriculares Nacionais para a ERER.",
+        "Lei nº 15.388/2026, que aprovou o atual Plano Nacional de Educação e suas estratégias.",
+        "Lei nº 11.645/2008, que deu nova redação ao art. 26-A da LDB.",
+        "Parecer CNE/CP nº 3/2004, que fundamentou as Diretrizes Curriculares Nacionais para a ERER."
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. A PNEERQ foi instituída pela Portaria MEC nº 470/2024.",
+
+    feedbackErro: "A banca pode misturar os marcos normativos do tema; associe cada ato à sua função.",
+
+    dicaBanca: "Portaria 470/2024 = PNEERQ."
+},
+
+{
+    pergunta: "Uma instituição utiliza o Protocolo de Identificação e Resposta ao Racismo da PNEERQ e conclui que, por isso, pode deixar de aplicar seus próprios procedimentos e a legislação vigente. Essa conclusão é:",
+
+    alternativas: [
+        "Correta, porque o protocolo federal possui hierarquia superior aos regimentos e às demais normas institucionais.",
+        "Correta apenas na Educação Superior, onde o protocolo nacional substitui procedimentos próprios.",
+        "Os protocolos orientam prevenção e resposta, mas não substituem procedimentos próprios nem a legislação vigente.",
+        "Incorreta apenas se o caso envolver estudante menor de idade.",
+        "Correta quando houver concordância da vítima e de sua família."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. Os protocolos são instrumentos de orientação e não substituem a legislação nem os procedimentos institucionais cabíveis.",
+
+    feedbackErro: "Documento orientador não apaga deveres legais ou responsabilidades já existentes.",
+
+    dicaBanca: "Protocolo orienta; não substitui lei nem procedimento próprio."
+},
+
+{
+    pergunta: "Em 2026, uma rede participa do Diagnóstico Equidade ligado à PNEERQ. A utilização mais coerente desse diagnóstico é:",
+
+    alternativas: [
+        "Classificar escolas em ranking racial e aplicar sanções automáticas às últimas colocadas.",
+        "Produzir evidências para orientar planejamento, monitoramento e melhoria da política de equidade.",
+        "Substituir o censo escolar por questionário específico sobre racismo.",
+        "Verificar apenas a ocorrência de eventos no mês de novembro.",
+        "Medir exclusivamente o conhecimento dos estudantes sobre a Lei nº 10.639/2003."
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. O Diagnóstico Equidade serve à compreensão institucional e ao aprimoramento de políticas e práticas.",
+
+    feedbackErro: "Um diagnóstico de política pública não se reduz a eventos, provas de conteúdo ou ranking punitivo.",
+
+    dicaBanca: "Diagnóstico bom gera planejamento e monitoramento."
+},
+
+{
+    pergunta: "A Lei nº 15.388/2026, que aprovou o novo Plano Nacional de Educação, prevê na Estratégia 5.3 a implementação das diretrizes curriculares de Educação para as Relações Étnico-Raciais. Segundo essa estratégia, tal implementação aparece articulada:",
+
+    alternativas: [
+        "Exclusivamente à formação inicial de professores de História.",
+        "Somente à Educação Escolar Quilombola e à Educação Escolar Indígena.",
+        "A uma revisão que transforma a ERER em componente curricular autônomo nacional.",
+        "Leis nº 10.639/2003 e nº 11.645/2008, Direitos Humanos, Educação Ambiental e BNCC.",
+        "À substituição das DCNERER por metas de desempenho no Saeb."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. A Estratégia 5.3 do PNE 2026 articula ERER, os marcos legais específicos, Direitos Humanos, Educação Ambiental e temas transversais da BNCC.",
+
+    feedbackErro: "A estratégia não cria disciplina autônoma nem restringe a ERER à formação de professores de História.",
+
+    dicaBanca: "PNE 2026, Estratégia 5.3: ERER + DH + EA + BNCC."
+},
+
+{
+    pergunta: "No novo PNE de 2026, a Estratégia 9.2 retoma a obrigatoriedade do estudo da História e Cultura Afro-Brasileira, Africana e Indígena. Seu sentido é:",
+
+    alternativas: [
+        "Limitar a temática às escolas situadas em territórios tradicionais.",
+        "Substituir a obrigatoriedade curricular por projetos extracurriculares anuais.",
+        "Aplicar a temática apenas às modalidades indígena, quilombola e do campo.",
+        "Transferir a responsabilidade curricular para instituições de Educação Superior.",
+        "Cumprir as Leis nº 10.639/2003 e 11.645/2008, valorizando a diversidade nacional."
+    ],
+
+    correta: 4,
+
+    feedbackAcerto: "Correto. O novo PNE reforça a implementação das leis e a valorização da diversidade na compreensão da história e cultura nacionais.",
+
+    feedbackErro: "A Estratégia 9.2 não restringe o art. 26-A a modalidades específicas.",
+
+    dicaBanca: "PNE reforça implementação, não reduz o alcance da LDB."
+},
+
+{
+    pergunta: "Uma escola afirma cumprir a legislação porque realiza uma grande feira cultural afro-brasileira e indígena uma vez por ano, mas o currículo regular permanece inalterado. A avaliação mais adequada é:",
+
+    alternativas: [
+        "A feira é suficiente se tiver participação de todas as turmas e registro no calendário escolar.",
+        "A feira complementa, mas não substitui integração curricular e institucional contínua.",
+        "A feira é suficiente apenas no Ensino Fundamental; no Ensino Médio exige-se disciplina própria.",
+        "A legislação exige prioritariamente atividades comemorativas, e a integração curricular é recomendação facultativa.",
+        "A feira somente seria insuficiente em escolas com histórico comprovado de racismo institucional."
+    ],
+
+    correta: 1,
+
+    feedbackAcerto: "Correto. Projetos pontuais podem complementar, mas não substituir, uma política curricular e institucional contínua.",
+
+    feedbackErro: "A presença de um evento visível pode mascarar a ausência do tema na rotina pedagógica.",
+
+    dicaBanca: "Evento complementa; currículo permanente implementa."
+},
+
+{
+    pergunta: "Uma rede pretende adotar currículo antirracista, mas entende que isso significa retirar autores europeus e substituir integralmente referências tradicionais por autores negros, indígenas e africanos. Qual análise é mais adequada?",
+
+    alternativas: [
+        "Revisar hierarquias, silêncios e perspectivas, ampliando repertórios sem apenas inverter exclusões.",
+        "A proposta é correta, porque educação antirracista exige exclusão de toda produção vinculada à Europa.",
+        "A proposta é obrigatória apenas em Língua Portuguesa e História.",
+        "A proposta é incompatível com pluralismo de ideias, portanto a ERER deve permanecer fora do currículo.",
+        "A proposta deve ser adotada somente em escolas com maioria de estudantes negros."
+    ],
+
+    correta: 0,
+
+    feedbackAcerto: "Correto. Educação antirracista não é simples troca de um cânone exclusivo por outro; envolve pluralidade, crítica e revisão de invisibilizações.",
+
+    feedbackErro: "A banca pode construir uma falsa oposição entre pluralismo e combate ao racismo.",
+
+    dicaBanca: "Antirracismo amplia e problematiza; não apenas troca uma exclusão por outra."
+},
+
+{
+    pergunta: "Em um conselho de classe, um professor atribui reiteradamente baixo desempenho de estudantes negros à 'falta de esforço cultural', sem examinar práticas de ensino, expectativas, oportunidades e condições concretas. O raciocínio é problemático porque:",
+
+    alternativas: [
+        "Todo baixo desempenho decorre necessariamente de racismo institucional.",
+        "Diferenças de desempenho nunca podem ser discutidas por professores em conselho de classe.",
+        "Naturaliza desigualdades ao atribuir resultados complexos a características supostamente culturais do grupo.",
+        "A cultura familiar não possui qualquer relação possível com experiências educacionais.",
+        "Somente fatores econômicos podem explicar desigualdades escolares."
+    ],
+
+    correta: 2,
+
+    feedbackAcerto: "Correto. Explicações culturalistas e generalizantes podem transformar desigualdades históricas e institucionais em supostos defeitos do grupo.",
+
+    feedbackErro: "Evite tanto culpabilização cultural quanto explicações únicas e automáticas.",
+
+    dicaBanca: "Cuidado com explicações que transformam desigualdade em 'característica do grupo'."
+},
+
+{
+    pergunta: "Uma escola decide que casos de racismo devem ser resolvidos obrigatoriamente por 'reconciliação' entre vítima e autor, sem avaliar gravidade, proteção ou vontade da pessoa atingida. Qual é o principal problema?",
+
+    alternativas: [
+        "A mediação é sempre proibida em ambiente escolar.",
+        "Somente a família pode tomar qualquer medida relacionada ao episódio.",
+        "A escola deveria aplicar expulsão automática em todo relato de racismo.",
+        "A única resposta válida é encaminhar todos os casos diretamente ao Ministério da Educação.",
+        "A reconciliação obrigatória pode minimizar violação de direitos e desconsiderar proteção e responsabilização."
+    ],
+
+    correta: 4,
+
+    feedbackAcerto: "Correto. Estratégias restaurativas podem existir, mas não devem apagar assimetrias, proteção, responsabilização e procedimentos legais ou institucionais.",
+
+    feedbackErro: "A resposta adequada depende do caso e não pode ser reduzida a reconciliação obrigatória.",
+
+    dicaBanca: "Mediação não pode substituir proteção e responsabilização."
+},
+
+{
+    pergunta: "Uma rede escolar articula a LDB, as DCNERER, a PNEERQ e o PNE de 2026 em seu plano de ação. Qual desenho apresenta maior coerência entre esses marcos?",
+
+    alternativas: [
+        "Concentrar a temática no mês de novembro, usar os protocolos apenas após incidentes e avaliar a política pelo número de eventos realizados.",
+        "Criar uma disciplina única nacional de ERER e retirar o tema dos demais componentes para evitar sobreposição.",
+        "Trabalhar ERER somente nas escolas com maioria de estudantes negros, indígenas ou quilombolas.",
+        "Integrar currículo, formação, materiais, monitoramento, prevenção e resposta ao racismo em planejamento institucional contínuo.",
+        "Priorizar campanhas de convivência e deixar conteúdos históricos para ações optativas."
+    ],
+
+    correta: 3,
+
+    feedbackAcerto: "Correto. Os diferentes marcos convergem para institucionalização curricular, formação, equidade, monitoramento e enfrentamento contínuo do racismo.",
+
+    feedbackErro: "A questão integra normas diferentes sem confundir suas funções: lei, diretrizes, política e plano nacional.",
+
+    dicaBanca: "Síntese forte: currículo + formação + equidade + resposta institucional + monitoramento."
+}
+
+];
