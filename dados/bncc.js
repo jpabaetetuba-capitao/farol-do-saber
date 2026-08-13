@@ -1,992 +1,702 @@
 const bncc = [
-{
-pergunta: "Durante a revisão curricular de uma rede municipal de ensino, a equipe pedagógica discutia o papel da Base Nacional Comum Curricular na organização das aprendizagens escolares. Um dos participantes afirmou que a BNCC deve ser compreendida como referência para a elaboração dos currículos, sem eliminar a necessidade de contextualização pelas redes e escolas. Considerando essa situação, assinale a alternativa correta.",
-
-alternativas: [
-        "A BNCC apresenta referenciais curriculares facultativos, cuja adoção depende da decisão de cada sistema de ensino, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
-        "A BNCC organiza conteúdos mínimos nacionais e determina metodologias pedagógicas obrigatórias para todas as escolas, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
-        "A BNCC substitui os currículos estaduais e municipais ao estabelecer parâmetros comuns para a Educação Básica, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
-        "A BNCC define aprendizagens essenciais e critérios nacionais de avaliação que devem ser adotados uniformemente pelas redes de ensino, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
-        "A BNCC estabelece as aprendizagens essenciais que devem orientar os currículos, preservando a possibilidade de adequações às características locais e regionais."
-],
-
-correta: 4,
-
-feedbackAcerto: "Correto. A BNCC possui caráter normativo e estabelece aprendizagens essenciais que devem orientar os currículos, os quais podem ser contextualizados conforme as características locais, regionais e culturais.",
-
-feedbackErro: "A principal característica da BNCC é servir como referência nacional para a construção curricular, sem eliminar a autonomia dos sistemas e das instituições na contextualização das aprendizagens.",
-
-dicaBanca: "BNCC = referência nacional obrigatória; currículo = contextualização local."
-},
-
-{
-pergunta: "Durante uma formação continuada, um grupo de professores discutia a concepção de competência adotada pela BNCC. Uma docente afirmou que o desenvolvimento das competências exige mais do que a simples aquisição de informações, envolvendo a mobilização de diferentes recursos para enfrentar situações concretas. A afirmação da professora está alinhada ao entendimento de que competência corresponde à:",
-
-alternativas: [
-        "Capacidade de reproduzir conhecimentos sistematizados em situações previamente estruturadas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Mobilização integrada de conhecimentos, habilidades, atitudes e valores para responder a demandas da vida cotidiana e do exercício da cidadania.",
-        "Aquisição progressiva de conteúdos conceituais organizados de acordo com a complexidade das disciplinas escolares, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Utilização prioritária de habilidades cognitivas voltadas ao desempenho em avaliações internas e externas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Aplicação de conhecimentos científicos em atividades escolares previamente definidas pelos currículos, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede."
-],
-
-correta: 1,
-
-feedbackAcerto: "Correto. A BNCC define competência como a mobilização de conhecimentos, habilidades, atitudes e valores para resolver demandas complexas da vida, da cidadania e do trabalho.",
-
-feedbackErro: "A BNCC não restringe competência à memorização ou ao domínio de conteúdos. O conceito envolve mobilização integrada de diferentes dimensões da aprendizagem.",
-
-dicaBanca: "Competência = mobilizar conhecimentos, habilidades, atitudes e valores."
-},
-
-{
-pergunta: "Ao elaborar seu currículo, uma rede de ensino decidiu incorporar conteúdos relacionados à cultura regional, às tradições locais e às especificidades socioculturais dos estudantes, sem deixar de observar as aprendizagens essenciais previstas nacionalmente. Essa decisão está em conformidade com o entendimento de que:",
-
-alternativas: [
-        "A contextualização curricular pode ocorrer desde que não interfira nos conteúdos previstos pelos currículos nacionais obrigatórios.",
-        "A autonomia curricular das redes permite substituir as aprendizagens essenciais por conteúdos considerados mais relevantes localmente.",
-        "A valorização da cultura local deve ocorrer em componentes curriculares específicos definidos pelos sistemas de ensino.",
-        "A BNCC estabelece aprendizagens essenciais que devem dialogar com as características locais, regionais e culturais dos estudantes.",
-        "A incorporação de elementos culturais regionais constitui estratégia complementar que não integra a construção curricular."
-],
-
-correta: 3,
-
-feedbackAcerto: "Correto. A BNCC prevê a articulação entre aprendizagens essenciais e as características locais, regionais e culturais.",
-
-feedbackErro: "A BNCC não separa o currículo da realidade dos estudantes. A contextualização é parte fundamental do processo curricular.",
-
-dicaBanca: "BNCC + realidade local = currículo contextualizado."
-},
-
-{
-pergunta: "Durante uma reunião pedagógica, discutiu-se a finalidade das dez Competências Gerais da BNCC. Após o debate, concluiu-se corretamente que essas competências:",
-
-alternativas: [
-        "Orientam o desenvolvimento integral dos estudantes e devem perpassar todas as áreas do conhecimento e etapas de ensino.",
-        "Constituem conteúdos específicos que devem ser trabalhados em disciplinas próprias ao longo da Educação Básica.",
-        "Correspondem a objetivos avaliativos destinados à mensuração do desempenho acadêmico dos estudantes.",
-        "Representam referenciais destinados prioritariamente à organização administrativa das instituições escolares.",
-        "Estabelecem parâmetros para a elaboração de avaliações externas em âmbito nacional."
-],
-
-correta: 0,
-
-feedbackAcerto: "Correto. As Competências Gerais possuem caráter transversal e orientam a formação integral dos estudantes.",
-
-feedbackErro: "As Competências Gerais não constituem disciplinas nem instrumentos de avaliação. Elas orientam todo o processo educativo.",
-
-dicaBanca: "Competências Gerais = transversalidade e formação integral."
-},
-
-{
-pergunta: "Uma professora afirmou que a ampliação da jornada escolar, por si só, não garante uma educação integral. Segundo a perspectiva adotada pela BNCC, essa afirmação está correta porque a Educação Integral refere-se principalmente:",
-
-alternativas: [
-        "À ampliação do tempo de permanência dos estudantes na escola associada à diversificação curricular, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "À oferta de atividades complementares voltadas ao reforço das aprendizagens acadêmicas essenciais, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Ao desenvolvimento das diferentes dimensões humanas, incluindo aspectos cognitivos, sociais, culturais, físicos e emocionais.",
-        "À implementação de programas educacionais destinados à melhoria dos indicadores de desempenho escolar, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "À organização de experiências formativas voltadas prioritariamente à preparação para o mundo do trabalho, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
-],
-
-correta: 2,
-
-feedbackAcerto: "Correto. Educação Integral está relacionada ao desenvolvimento pleno do estudante em suas múltiplas dimensões.",
-
-feedbackErro: "A BNCC não reduz Educação Integral ao aumento da carga horária ou ao desempenho acadêmico.",
-
-dicaBanca: "Educação Integral ≠ apenas mais tempo na escola."
-},
-
-{
-pergunta: "Durante a construção do Projeto Político-Pedagógico, uma equipe escolar discutiu a diferença entre currículo e BNCC. Ao final da reunião, a conclusão correta foi que:",
-
-alternativas: [
-        "A BNCC e o currículo possuem a mesma função normativa, diferindo em geral quanto ao nível de detalhamento dos conteúdos.",
-        "A elaboração curricular consiste na reprodução integral das competências e habilidades previstas pela BNCC.",
-        "O currículo corresponde à tradução contextualizada das aprendizagens essenciais previstas na BNCC para determinada realidade educacional.",
-        "O currículo deve priorizar as demandas locais, mesmo quando estas contrariam as aprendizagens essenciais previstas nacionalmente.",
-        "A BNCC constitui documento complementar aos currículos, podendo ser adotada ou não pelos sistemas de ensino."
-],
-
-correta: 2,
-
-feedbackAcerto: "Correto. O currículo contextualiza e concretiza as aprendizagens essenciais previstas na BNCC.",
-
-feedbackErro: "A BNCC orienta a construção curricular, mas não substitui o currículo nem elimina sua contextualização.",
-
-dicaBanca: "BNCC = referência; currículo = concretização da referência."
-},
-{
-pergunta: "Durante uma atividade de planejamento, uma equipe docente analisava a Competência Geral relacionada ao pensamento científico, crítico e criativo. Os professores concluíram que seu desenvolvimento exige que os estudantes sejam capazes de:",
-
-alternativas: [
-        "Aplicar procedimentos previamente definidos para resolver problemas rotineiros presentes nos materiais didáticos.",
-        "Utilizar conhecimentos científicos predominantemente em atividades experimentais conduzidas pelo professor.",
-        "Priorizar a aquisição de conceitos teóricos independentemente de sua aplicação em contextos concretos.",
-        "Investigar fenômenos, formular hipóteses, analisar evidências e construir soluções fundamentadas para diferentes situações.",
-        "Empregar técnicas de pesquisa voltadas principalmente à obtenção de resultados em avaliações externas."
-],
-
-correta: 3,
-
-feedbackAcerto: "Correto. A BNCC associa o pensamento científico, crítico e criativo à investigação, análise, reflexão e resolução de problemas.",
-
-feedbackErro: "A competência vai além da reprodução de procedimentos ou conteúdos, envolvendo investigação e construção de soluções fundamentadas.",
-
-dicaBanca: "Pensamento científico = investigar, analisar e propor soluções."
-},
-
-{
-pergunta: "Ao discutir a Competência Geral relacionada à cultura digital, uma professora afirmou que o simples domínio operacional de ferramentas tecnológicas não é suficiente para atender às orientações da BNCC. Essa afirmação está correta porque o documento defende que o estudante deve:",
-
-alternativas: [
-        "Utilizar recursos tecnológicos prioritariamente para ampliar o acesso a conteúdos escolares previamente selecionados.",
-        "Dominar diferentes plataformas digitais com foco na adaptação às exigências do mercado de trabalho contemporâneo.",
-        "Empregar tecnologias digitais predominantemente em atividades pedagógicas orientadas por profissionais especializados.",
-        "Desenvolver competências técnicas que permitam a utilização eficiente de recursos digitais em contextos acadêmicos.",
-        "Compreender, utilizar e criar tecnologias digitais de forma crítica, significativa, reflexiva, ética e responsável."
-],
-
-correta: 4,
-
-feedbackAcerto: "Correto. A BNCC enfatiza o uso crítico, ético, reflexivo e criativo das tecnologias digitais.",
-
-feedbackErro: "A cultura digital não se limita ao domínio técnico das ferramentas tecnológicas.",
-
-dicaBanca: "Tecnologia na BNCC = uso crítico, ético e autoral."
-},
-
-{
-pergunta: "Durante a elaboração de um projeto interdisciplinar, os professores buscaram desenvolver a competência relacionada à argumentação. Nessa perspectiva, espera-se que os estudantes sejam capazes de:",
-
-alternativas: [
-"Defender posicionamentos fundamentados em dados, fatos e informações confiáveis, respeitando princípios éticos e democráticos.",
-"Construir argumentos baseados predominantemente em experiências pessoais e interpretações subjetivas da realidade.",
-"Selecionar informações que confirmem suas opiniões, independentemente da consistência das evidências disponíveis.",
-"Adotar posicionamentos socialmente aceitos como forma de evitar conflitos e divergências de interpretação.",
-"Empregar estratégias persuasivas destinadas prioritariamente à defesa de interesses individuais."
-],
-
-correta: 0,
-
-feedbackAcerto: "Correto. A argumentação pressupõe o uso de evidências confiáveis e o respeito aos princípios éticos e democráticos.",
-
-feedbackErro: "A BNCC valoriza a construção de argumentos fundamentados em fatos, dados e informações consistentes.",
-
-dicaBanca: "Argumentar = sustentar ideias com evidências."
-},
-
-{
-pergunta: "Em uma reunião com estudantes do Ensino Fundamental, a equipe pedagógica discutia metas pessoais, escolhas acadêmicas e perspectivas futuras. Essa iniciativa relaciona-se principalmente à Competência Geral que busca desenvolver:",
-
-alternativas: [
-"A compreensão dos processos históricos e culturais que influenciam a construção das identidades coletivas.",
-"A capacidade de elaborar projetos individuais e coletivos com autonomia, responsabilidade e consciência crítica.",
-"A utilização de conhecimentos científicos para interpretar fenômenos sociais contemporâneos.",
-"A construção de competências profissionais voltadas ao ingresso imediato no mercado de trabalho.",
-"A adoção de estratégias de aprendizagem destinadas ao aprimoramento do desempenho acadêmico."
-],
-
-correta: 1,
-
-feedbackAcerto: "Correto. Projeto de Vida envolve planejamento, autonomia, responsabilidade e reflexão sobre escolhas futuras.",
-
-feedbackErro: "A BNCC não reduz Projeto de Vida à escolha profissional ou ao desempenho escolar.",
-
-dicaBanca: "Projeto de Vida = planejamento + autonomia + responsabilidade."
-},
-
-{
-pergunta: "Ao analisar a Competência Geral relacionada à responsabilidade e cidadania, um professor afirmou que sua finalidade é promover a participação ativa dos estudantes na sociedade. Essa afirmação está alinhada à BNCC porque essa competência pressupõe:",
-
-alternativas: [
-        "A adoção de comportamentos socialmente adequados definidos pelos sistemas educacionais e órgãos governamentais.",
-        "A participação em ações comunitárias voltadas prioritariamente à preservação da ordem social estabelecida.",
-        "O exercício da cidadania fundamentado em princípios éticos, democráticos, inclusivos, sustentáveis e solidários.",
-        "O desenvolvimento de atitudes individuais que favoreçam a adaptação dos estudantes às normas institucionais vigentes.",
-        "A compreensão das responsabilidades civis associadas ao cumprimento das obrigações legais previstas na legislação."
-],
-
-correta: 2,
-
-feedbackAcerto: "Correto. A BNCC associa responsabilidade e cidadania à atuação ética, democrática, inclusiva e sustentável.",
-
-feedbackErro: "A cidadania defendida pela BNCC envolve participação crítica e compromisso com o bem comum.",
-
-dicaBanca: "Responsabilidade e Cidadania = ética + democracia + inclusão + sustentabilidade."
-},
-{
-pergunta: "Durante uma formação pedagógica, discutiu-se a Competência Geral relacionada ao repertório cultural. Os participantes concluíram corretamente que o desenvolvimento dessa competência pressupõe que os estudantes:",
-
-alternativas: [
-        "Conheçam prioritariamente as manifestações culturais reconhecidas pelos currículos oficiais e pelos materiais didáticos adotados, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
-        "Utilizem referências culturais predominantemente para ampliar o desempenho acadêmico em componentes curriculares específicos, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Estabeleçam contato com manifestações culturais previamente selecionadas pelos sistemas de ensino como representativas da identidade nacional, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Compreendam a cultura como patrimônio histórico cuja preservação depende da reprodução de práticas tradicionalmente consolidadas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Valorizem e participem de manifestações artístico-culturais diversas, reconhecendo a pluralidade das produções humanas ao longo do tempo e em diferentes contextos."
-],
-
-correta: 4,
-
-feedbackAcerto: "Correto. A BNCC valoriza a diversidade das manifestações culturais e o acesso dos estudantes a diferentes formas de expressão artística e cultural.",
-
-feedbackErro: "A competência relacionada ao repertório cultural não se limita à preservação de tradições ou ao estudo de conteúdos curriculares específicos.",
-
-dicaBanca: "Repertório cultural = diversidade de experiências culturais."
-},
-
-{
-pergunta: "Ao planejar atividades voltadas à Competência Geral da comunicação, uma professora buscou criar situações em que os estudantes pudessem expressar ideias, sentimentos e conhecimentos em diferentes contextos. Essa proposta está alinhada à BNCC porque a comunicação envolve:",
-
-alternativas: [
-        "A utilização predominante da linguagem verbal escrita para transmissão de conhecimentos escolares, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "O domínio das normas linguísticas necessárias à participação em situações formais de aprendizagem, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "A aplicação de estratégias comunicativas voltadas prioritariamente à construção de conhecimentos acadêmicos, considerando o acompanhamento das metas e a articulação entre os entes federativos.",
-        "C) A utilização de diferentes linguagens para expressar, compartilhar informações, produzir sentidos e participar da vida social.",
-        "E) O desenvolvimento da linguagem como instrumento de acesso aos conteúdos curriculares obrigatórios, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
-],
-
-correta: 3,
-
-feedbackAcerto: "Correto. A BNCC compreende a comunicação como utilização de múltiplas linguagens para expressão, interação e participação social.",
-
-feedbackErro: "A comunicação não se restringe à linguagem verbal nem apenas ao contexto escolar.",
-
-dicaBanca: "Comunicação = múltiplas linguagens."
-},
-
-{
-pergunta: "Durante uma reunião pedagógica, discutia-se a Competência Geral relacionada ao autoconhecimento e autocuidado. Uma professora afirmou que seu desenvolvimento contribui para que os estudantes:",
-
-alternativas: [
-        "Desenvolvam estratégias de aprendizagem destinadas à superação de dificuldades acadêmicas identificadas em avaliações periódicas.",
-        "Reconheçam suas emoções, compreendam suas potencialidades e limitações e adotem práticas voltadas ao cuidado consigo mesmos.",
-        "Construam hábitos de estudo compatíveis com as exigências curriculares das diferentes etapas da Educação Básica.",
-        "Identifiquem características individuais que favoreçam a escolha de trajetórias profissionais adequadas às suas aptidões.",
-        "Aprendam a controlar comportamentos inadequados por meio da observação das normas de convivência estabelecidas pela escola."
-],
-
-correta: 1,
-
-feedbackAcerto: "Correto. O autoconhecimento e o autocuidado envolvem reconhecimento de emoções, cuidado com a saúde física e emocional e valorização do bem-estar.",
-
-feedbackErro: "A competência vai além de hábitos de estudo ou escolhas profissionais, abrangendo o desenvolvimento integral do estudante.",
-
-dicaBanca: "Autoconhecimento = reconhecer-se e cuidar-se."
-},
-
-{
-pergunta: "Ao desenvolver atividades colaborativas em sala de aula, uma equipe docente buscava fortalecer a Competência Geral relacionada à empatia e cooperação. Nessa perspectiva, espera-se que os estudantes sejam capazes de:",
-
-alternativas: [
-        "Reconhecer diferentes perspectivas, valorizar a diversidade humana e atuar de forma cooperativa na resolução de desafios comuns.",
-        "Participar de atividades coletivas respeitando orientações previamente estabelecidas pelos professores responsáveis.",
-        "Desenvolver habilidades de liderança voltadas à coordenação de grupos em situações de aprendizagem compartilhada.",
-        "Construir relações interpessoais fundamentadas na observância das regras institucionais e dos acordos de convivência.",
-        "Adotar comportamentos colaborativos que favoreçam a realização eficiente das atividades propostas pelo currículo."
-],
-
-correta: 0,
-
-feedbackAcerto: "Correto. A BNCC relaciona empatia e cooperação ao respeito às diferenças, ao diálogo e à construção de relações solidárias.",
-
-feedbackErro: "A competência não se limita ao trabalho em grupo, mas envolve reconhecimento da diversidade e atuação colaborativa.",
-
-dicaBanca: "Empatia = compreender o outro; cooperação = agir com o outro."
-},
-
-{
-pergunta: "Uma rede de ensino decidiu reorganizar suas práticas pedagógicas para assegurar maior coerência entre as aprendizagens previstas na BNCC e as experiências desenvolvidas nas escolas. Nessa situação, a implementação da BNCC deve ser compreendida como:",
-
-alternativas: [
-        "Procedimento administrativo destinado à uniformização das práticas pedagógicas em todas as unidades escolares da rede.",
-        "Reestruturação curricular baseada na substituição dos conteúdos locais pelas aprendizagens previstas nacionalmente.",
-        "Processo de alinhamento institucional voltado prioritariamente à melhoria dos resultados em avaliações externas.",
-        "Processo de adequação curricular que articula aprendizagens essenciais, contexto local e projeto pedagógico das instituições.",
-        "Conjunto de medidas destinadas à padronização dos materiais didáticos utilizados pelas escolas."
-],
-
-correta: 3,
-
-feedbackAcerto: "Correto. A implementação da BNCC envolve articulação entre aprendizagens essenciais, currículo e contexto local.",
-
-feedbackErro: "A BNCC não busca padronização absoluta nem substituição das identidades curriculares locais.",
-
-dicaBanca: "Implementar a BNCC = integrar, contextualizar e alinhar."
-},
-{
-pergunta: "Durante um projeto interdisciplinar, os estudantes foram incentivados a analisar problemas ambientais da comunidade, propor soluções e avaliar os impactos sociais de suas decisões. Essa prática está mais diretamente relacionada ao desenvolvimento da Competência Geral do conhecimento porque:",
-
-alternativas: [
-        "Os conteúdos curriculares possuem como principal finalidade preparar os estudantes para avaliações de larga escala aplicadas pelos sistemas educacionais.",
-        "O desenvolvimento do conhecimento depende prioritariamente da aquisição progressiva de informações organizadas pelas áreas do currículo.",
-        "O conhecimento deve ser utilizado para compreender a realidade, colaborar na construção da cidadania e atuar de forma consciente em diferentes contextos.",
-        "Os saberes escolares devem ser mobilizados principalmente para garantir o domínio dos conteúdos previstos nos documentos curriculares.",
-        "O conhecimento constitui instrumento voltado à ampliação do desempenho acadêmico e ao atendimento das exigências institucionais."
-],
-
-correta: 2,
-
-feedbackAcerto: "Correto. A BNCC compreende o conhecimento como instrumento para entender a realidade, participar da sociedade e atuar com responsabilidade.",
-
-feedbackErro: "O conhecimento não se limita à acumulação de informações ou ao desempenho escolar, mas envolve sua aplicação em diferentes contextos da vida.",
-
-dicaBanca: "Conhecimento = compreender e transformar a realidade."
-},
-
-{
-pergunta: "Ao analisar as Competências Gerais da BNCC, um professor observou que elas não devem ser trabalhadas isoladamente. Essa interpretação está correta porque:",
-
-alternativas: [
-        "As competências gerais apresentam caráter complementar e podem ser desenvolvidas de forma articulada nas diferentes experiências educativas.",
-        "As competências gerais foram organizadas em sequência hierárquica, exigindo o domínio de uma para o desenvolvimento das demais.",
-        "As competências gerais correspondem a objetivos específicos que devem ser distribuídos entre os componentes curriculares obrigatórios.",
-        "As competências gerais possuem autonomia conceitual e devem ser desenvolvidas separadamente para garantir maior efetividade pedagógica.",
-        "As competências gerais representam conteúdos transversais que devem ser abordados predominantemente em projetos interdisciplinares."
-],
-
-correta: 0,
-
-feedbackAcerto: "Correto. As Competências Gerais se articulam e se complementam ao longo de toda a Educação Básica.",
-
-feedbackErro: "A BNCC não estabelece hierarquia nem desenvolvimento isolado entre as competências.",
-
-dicaBanca: "Competências Gerais = integração e complementaridade."
-},
-
-{
-pergunta: "Em uma escola, os professores desenvolveram atividades que incentivavam os estudantes a refletir sobre situações de discriminação, desigualdade e exclusão social. Essa iniciativa está alinhada às orientações da BNCC porque contribui para:",
-
-alternativas: [
-"O fortalecimento de práticas voltadas à adaptação dos estudantes às normas de convivência social predominantes.",
-"O desenvolvimento de competências relacionadas à empatia, respeito à diversidade e construção de uma sociedade inclusiva.",
-"A ampliação do repertório cultural por meio da análise crítica dos processos históricos que estruturam as relações sociais.",
-"O aprofundamento de conhecimentos relativos aos direitos e deveres previstos na legislação educacional vigente.",
-"A formação de atitudes necessárias à manutenção de ambientes escolares organizados e socialmente harmoniosos."
-],
-
-correta: 1,
-
-feedbackAcerto: "Correto. A BNCC valoriza o respeito à diversidade, a inclusão e o reconhecimento das diferenças como princípios formativos.",
-
-feedbackErro: "Embora outras alternativas apresentem elementos relevantes, a questão destaca especificamente empatia, respeito e inclusão.",
-
-dicaBanca: "Diversidade e inclusão aparecem em várias Competências Gerais."
-},
-
-{
-pergunta: "Ao planejar situações de aprendizagem alinhadas à BNCC, uma equipe pedagógica concluiu que o desenvolvimento das Competências Gerais exige:",
-
-alternativas: [
-        "A reorganização dos currículos com foco prioritário na preparação para avaliações externas e indicadores educacionais.",
-        "A adoção de metodologias específicas previamente definidas pelos sistemas de ensino responsáveis pela implementação curricular.",
-        "O fortalecimento das áreas do conhecimento consideradas estratégicas para o desenvolvimento econômico e tecnológico.",
-        "A ampliação da carga horária escolar destinada ao aprofundamento dos conteúdos essenciais previstos nacionalmente.",
-        "A articulação entre conhecimentos, habilidades, atitudes e valores em experiências significativas de aprendizagem."
-],
-
-correta: 4,
-
-feedbackAcerto: "Correto. O desenvolvimento das Competências Gerais depende da integração entre diferentes dimensões da aprendizagem.",
-
-feedbackErro: "A BNCC não vincula competências a metodologias obrigatórias nem à ampliação da carga horária.",
-
-dicaBanca: "Competências = integração de saberes, atitudes e valores."
-},
-
-{
-pergunta: "Durante a elaboração do planejamento anual da Educação Infantil, uma equipe pedagógica discutia a finalidade dos direitos de aprendizagem e desenvolvimento previstos na BNCC. Ao final da reunião, concluiu corretamente que esses direitos têm como propósito:",
-
-alternativas: [
-        "Estabelecer metas de aprendizagem voltadas à preparação gradual para as exigências acadêmicas do Ensino Fundamental.",
-        "Organizar conteúdos essenciais que devem ser trabalhados de forma uniforme em todas as instituições educacionais.",
-        "Orientar a construção de práticas pedagógicas destinadas prioritariamente ao desenvolvimento cognitivo infantil.",
-        "Assegurar experiências que favoreçam o desenvolvimento integral da criança em diferentes dimensões de sua formação.",
-        "Definir competências específicas relacionadas ao processo de alfabetização e letramento das crianças."
-],
-
-correta: 3,
-
-feedbackAcerto: "Correto. Os direitos de aprendizagem buscam garantir condições para o desenvolvimento integral das crianças por meio de experiências significativas.",
-
-feedbackErro: "A BNCC não reduz os direitos de aprendizagem à alfabetização ou à preparação para etapas posteriores da escolarização.",
-
-dicaBanca: "Direitos de aprendizagem = desenvolvimento integral."
-},
-
-{
-pergunta: "Ao observar a rotina de uma turma da Educação Infantil, verificou-se que as crianças participavam ativamente das decisões relacionadas às brincadeiras, à organização dos espaços e às atividades propostas. Essa prática está mais diretamente relacionada ao direito de aprendizagem denominado:",
-
-alternativas: [
-        "Participar, por garantir o envolvimento das crianças nas decisões e experiências vivenciadas na instituição.",
-        "Explorar, por permitir a investigação de objetos, ambientes e fenômenos presentes no cotidiano.",
-        "Conviver, por favorecer a construção de vínculos e relações sociais entre os diferentes sujeitos.",
-        "Expressar, por possibilitar a manifestação de sentimentos, ideias e formas de comunicação.",
-        "Conhecer-se, por contribuir para a construção da identidade pessoal e coletiva."
-],
-
-correta: 0,
-
-feedbackAcerto: "Correto. Participar significa envolver-se ativamente das decisões, atividades e experiências promovidas pela instituição.",
-
-feedbackErro: "Embora outros direitos possam estar presentes na situação descrita, o foco principal está na participação ativa das crianças.",
-
-dicaBanca: "Participar = fazer parte das decisões e experiências."
-},
-
-{
-pergunta: "Em uma instituição de Educação Infantil, as crianças têm acesso frequente a diferentes materiais, ambientes, sons, texturas e elementos da natureza, sendo incentivadas a investigar e descobrir novas possibilidades de interação. Essa prática está alinhada principalmente ao direito de:",
-
-alternativas: [
-"Brincar, por favorecer a utilização de diferentes recursos em situações lúdicas e imaginativas.",
-"Participar, por envolver as crianças na organização das experiências educativas.",
-"Explorar, por estimular a observação, manipulação e investigação do ambiente e de seus elementos.",
-"Conviver, por ampliar as oportunidades de interação entre crianças de diferentes grupos.",
-"Expressar, por favorecer múltiplas formas de comunicação e representação."
-],
-
-correta: 2,
-
-feedbackAcerto: "Correto. Explorar refere-se à investigação do ambiente, dos objetos, dos materiais e dos fenômenos presentes no cotidiano infantil.",
-
-feedbackErro: "A situação enfatiza a descoberta e a investigação, características centrais do direito de explorar.",
-
-dicaBanca: "Explorar = investigar e descobrir."
-},
-
-{
-pergunta: "Durante uma atividade coletiva, as crianças foram incentivadas a compartilhar sentimentos, opiniões, hipóteses e interpretações por meio da fala, do desenho, da música e de outras linguagens. Essa experiência relaciona-se principalmente ao direito de:",
-
-alternativas: [
-        "Conhecer-se, por favorecer a construção da identidade e da autonomia pessoal, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Participar, por garantir o envolvimento ativo nas atividades propostas pelo professor, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Conviver, por promover interações e trocas entre crianças e adultos, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
-        "Explorar, por estimular a utilização de recursos e materiais diversificados, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Expressar, por possibilitar diferentes formas de manifestação de ideias, emoções e experiências."
-],
-
-correta: 4,
-
-feedbackAcerto: "Correto. Expressar envolve comunicar sentimentos, ideias, necessidades e experiências por diferentes linguagens.",
-
-feedbackErro: "A principal característica da situação é a manifestação de ideias e emoções por múltiplas formas de expressão.",
-
-dicaBanca: "Expressar = comunicar-se de diferentes maneiras."
-},
-
-{
-pergunta: "Uma professora organizou atividades que favoreciam o reconhecimento das características pessoais das crianças, a valorização de suas histórias, preferências, emoções e pertencimentos culturais. Essa prática contribui diretamente para o desenvolvimento do direito de:",
-
-alternativas: [
-        "Conviver, por fortalecer a construção de relações interpessoais respeitosas e colaborativas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Conhecer-se, por favorecer a construção da identidade, da autoestima e do reconhecimento de si mesmo.",
-        "Participar, por ampliar o envolvimento das crianças nas experiências da instituição, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
-        "Explorar, por estimular a investigação das diferentes realidades sociais e culturais, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Expressar, por desenvolver formas variadas de comunicação e representação, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
-],
-
-correta: 1,
-
-feedbackAcerto: "Correto. Conhecer-se envolve a construção da identidade, da autoestima e da percepção de si em relação aos outros.",
-
-feedbackErro: "Embora outros direitos possam estar presentes, a situação enfatiza o reconhecimento de si mesmo e da própria identidade.",
-
-dicaBanca: "Conhecer-se = identidade, autoestima e pertencimento."
-},
-{
-pergunta: "Durante a rotina escolar, uma professora promoveu atividades que incentivavam as crianças a interagir com colegas e adultos, compartilhando experiências, respeitando diferenças e construindo relações de cooperação. Essa prática relaciona-se diretamente ao direito de aprendizagem denominado:",
-
-alternativas: [
-        "Participar, por envolver as crianças em decisões relacionadas à organização das experiências educativas, em articulação com a proteção integral e com as responsabilidades da família, da sociedade e do Estado.",
-        "Expressar, por possibilitar a manifestação de ideias, sentimentos e opiniões em diferentes situações, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Conviver, por favorecer a construção de relações sociais baseadas no respeito, na colaboração e na valorização das diferenças.",
-        "Conhecer-se, por contribuir para o reconhecimento das características individuais e coletivas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Explorar, por ampliar as oportunidades de investigação dos espaços e objetos presentes no ambiente escolar, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
-],
-
-correta: 2,
-
-feedbackAcerto: "Correto. Conviver envolve interagir com outras crianças e adultos, construindo relações respeitosas e valorizando a diversidade.",
-
-feedbackErro: "A situação apresentada enfatiza as relações interpessoais e a convivência social, características centrais do direito de conviver.",
-
-dicaBanca: "Conviver = interação, respeito e diversidade."
-},
-
-{
-pergunta: "Em uma turma da Educação Infantil, a brincadeira ocupa lugar central na rotina, sendo utilizada como oportunidade para criação, imaginação, exploração e construção de significados. Essa prática está alinhada à BNCC porque o brincar:",
-
-alternativas: [
-        "Configura experiência fundamental para o desenvolvimento integral das crianças e para a construção de aprendizagens significativas.",
-        "Constitui estratégia complementar destinada a reforçar aprendizagens previamente trabalhadas em atividades dirigidas.",
-        "Representa recurso metodológico que auxilia a transição da Educação Infantil para o Ensino Fundamental.",
-        "Favorece principalmente o desenvolvimento motor, sendo utilizado como suporte às demais atividades pedagógicas.",
-        "Possibilita a aquisição de conteúdos escolares por meio de atividades lúdicas estruturadas pelo professor."
-],
-
-correta: 0,
-
-feedbackAcerto: "Correto. A BNCC reconhece o brincar como experiência essencial ao desenvolvimento e à aprendizagem das crianças.",
-
-feedbackErro: "O brincar não possui caráter apenas complementar ou instrumental; ele constitui eixo fundamental da Educação Infantil.",
-
-dicaBanca: "Brincar = aprendizagem e desenvolvimento."
-},
-
-{
-pergunta: "Ao analisar os fundamentos pedagógicos da Educação Infantil, uma equipe docente concluiu que interações e brincadeiras ocupam posição central na organização das práticas educativas. Essa conclusão está correta porque:",
-
-alternativas: [
-        "As interações e brincadeiras constituem estratégias metodológicas que devem ser priorizadas antes do processo de alfabetização formal.",
-        "As interações e brincadeiras configuram eixos estruturantes que orientam as experiências de aprendizagem e desenvolvimento na Educação Infantil.",
-        "Interações e brincadeiras representam recursos pedagógicos destinados ao desenvolvimento das habilidades socioemocionais das crianças.",
-        "Interações e brincadeiras são atividades permanentes que complementam os objetivos previstos nos Campos de Experiência.",
-        "Interações e brincadeiras favorecem a aprendizagem espontânea das crianças, reduzindo a necessidade de mediação pedagógica."
-],
-
-correta: 1,
-
-feedbackAcerto: "Correto. A BNCC define interações e brincadeiras como eixos estruturantes da Educação Infantil.",
-
-feedbackErro: "A principal característica das interações e brincadeiras é seu papel estruturante na organização das experiências infantis.",
-
-dicaBanca: "Interações + Brincadeiras = eixos estruturantes."
-},
-
-{
-pergunta: "Durante uma formação continuada, os professores discutiam a função dos Campos de Experiência na Educação Infantil. Ao final do encontro, concluíram corretamente que esses campos:",
-
-alternativas: [
-        "Correspondem a áreas curriculares que organizam conteúdos específicos a serem trabalhados progressivamente ao longo da infância.",
-        "Constituem referenciais destinados à sistematização dos componentes curriculares que antecedem o Ensino Fundamental.",
-        "Representam instrumentos de planejamento utilizados para acompanhar o desenvolvimento das competências previstas pela BNCC.",
-        "Organizam as experiências das crianças de modo integrado, considerando as formas pelas quais elas aprendem e se relacionam com o mundo.",
-        "Definem objetivos de aprendizagem estruturados segundo critérios de complexidade cognitiva e desempenho escolar."
-],
-
-correta: 3,
-
-feedbackAcerto: "Correto. Os Campos de Experiência organizam as vivências das crianças considerando suas formas próprias de aprender e interagir.",
-
-feedbackErro: "Os Campos de Experiência não equivalem a disciplinas ou áreas curriculares tradicionais.",
-
-dicaBanca: "Campo de Experiência ≠ disciplina."
-},
-
-{
-pergunta: "Uma instituição de Educação Infantil reorganizou suas práticas pedagógicas de modo a garantir experiências que integrassem brincadeiras, interações, participação ativa das crianças, valorização da diversidade e desenvolvimento da autonomia. Considerando as orientações da BNCC, essa decisão demonstra que:",
-
-alternativas: [
-        "As práticas pedagógicas devem ser estruturadas de forma a preparar progressivamente as crianças para as exigências acadêmicas do Ensino Fundamental.",
-        "A autonomia infantil constitui objetivo prioritário da Educação Infantil, devendo orientar a seleção dos conteúdos curriculares.",
-        "As experiências educativas devem favorecer a construção de competências necessárias ao desenvolvimento das habilidades previstas nacionalmente.",
-        "A valorização da diversidade e da participação infantil deve ocorrer de maneira complementar às atividades curriculares obrigatórias.",
-        "A organização curricular da Educação Infantil deve priorizar experiências integradas capazes de promover o desenvolvimento integral das crianças."
-],
-
-correta: 4,
-
-feedbackAcerto: "Correto. A BNCC compreende a Educação Infantil como etapa voltada ao desenvolvimento integral por meio de experiências significativas e integradas.",
-
-feedbackErro: "A Educação Infantil não deve ser reduzida à preparação para etapas posteriores da escolarização.",
-
-dicaBanca: "Educação Infantil = experiências integradas e desenvolvimento integral."
-},
-{
-pergunta: "Durante a revisão curricular de uma rede municipal, os professores discutiam as finalidades do Ensino Fundamental previstas na BNCC. Ao final do debate, concluíram corretamente que essa etapa da Educação Básica deve:",
-
-alternativas: [
-        "Concentrar-se prioritariamente na consolidação das competências relacionadas à alfabetização e ao raciocínio lógico-matemático.",
-        "Promover a ampliação progressiva das aprendizagens iniciadas na Educação Infantil, assegurando o desenvolvimento integral dos estudantes.",
-        "Organizar experiências educativas voltadas principalmente à preparação dos estudantes para o Ensino Médio, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Priorizar a aquisição sistemática de conhecimentos acadêmicos necessários ao desempenho em avaliações externas, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Desenvolver competências específicas associadas às áreas do conhecimento de forma independente e progressiva, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede."
-],
-
-correta: 1,
-
-feedbackAcerto: "Correto. O Ensino Fundamental amplia e aprofunda aprendizagens, promovendo o desenvolvimento integral dos estudantes.",
-
-feedbackErro: "A BNCC não reduz o Ensino Fundamental à alfabetização, à preparação para etapas futuras ou às avaliações externas.",
-
-dicaBanca: "Ensino Fundamental = continuidade, ampliação e desenvolvimento integral."
-},
-
-{
-pergunta: "Ao analisar a organização curricular do Ensino Fundamental, uma equipe pedagógica observou que a BNCC estrutura essa etapa em áreas do conhecimento. Essa organização tem como finalidade principal:",
-
-alternativas: [
-        "Favorecer a articulação entre conhecimentos e competências relacionados a campos específicos da experiência humana.",
-        "Distribuir os componentes curriculares de forma equilibrada entre os diferentes anos escolares, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Estabelecer critérios comuns para a avaliação do desempenho dos estudantes em âmbito nacional, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Organizar conteúdos escolares segundo níveis crescentes de complexidade cognitiva, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Promover a integração dos currículos locais aos referenciais definidos pelos sistemas de ensino, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede."
-],
-
-correta: 0,
-
-feedbackAcerto: "Correto. As áreas do conhecimento agrupam componentes curriculares com características e finalidades formativas relacionadas.",
-
-feedbackErro: "A organização em áreas busca favorecer a articulação entre saberes e competências, não apenas distribuir conteúdos.",
-
-dicaBanca: "Área do conhecimento = integração de saberes."
-},
-
-{
-pergunta: "Durante uma formação continuada, os professores discutiam o papel da área de Linguagens na BNCC. Concluiu-se corretamente que essa área busca:",
-
-alternativas: [
-        "Promover prioritariamente o domínio das normas linguísticas formais necessárias ao sucesso acadêmico dos estudantes, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Organizar aprendizagens destinadas à interpretação crítica dos fenômenos históricos e sociais contemporâneos, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Desenvolver competências relacionadas à compreensão, produção e utilização de diferentes formas de linguagem em diversos contextos.",
-        "Fortalecer habilidades relacionadas ao raciocínio lógico e à resolução de problemas matemáticos, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Consolidar competências voltadas ao uso técnico das tecnologias digitais nos ambientes escolares, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede."
-],
-
-correta: 2,
-
-feedbackAcerto: "Correto. A área de Linguagens envolve múltiplas formas de expressão e comunicação.",
-
-feedbackErro: "A BNCC não restringe Linguagens à norma culta ou ao ensino da Língua Portuguesa.",
-
-dicaBanca: "Linguagens = múltiplas formas de expressão e comunicação."
-},
-
-{
-pergunta: "Ao planejar atividades para a área de Matemática, uma professora buscou desenvolver nos estudantes a capacidade de analisar situações, formular estratégias e justificar procedimentos adotados. Essa proposta está alinhada à BNCC porque a Matemática deve:",
-
-alternativas: [
-        "Favorecer a memorização progressiva de conceitos e procedimentos fundamentais para etapas posteriores da escolarização.",
-        "Priorizar o domínio de algoritmos operatórios necessários à realização de cálculos de maior complexidade.",
-        "Organizar aprendizagens voltadas à interpretação quantitativa de fenômenos científicos e tecnológicos.",
-        "Desenvolver competências relacionadas ao uso eficiente de técnicas matemáticas aplicadas ao cotidiano.",
-        "Promover o desenvolvimento do raciocínio, da argumentação e da resolução de problemas em diferentes contextos."
-],
-
-correta: 4,
-
-feedbackAcerto: "Correto. A BNCC destaca a resolução de problemas, a argumentação e o raciocínio matemático.",
-
-feedbackErro: "A Matemática não se limita à execução de cálculos ou memorização de procedimentos.",
-
-dicaBanca: "Matemática = raciocinar, argumentar e resolver problemas."
-},
-
-{
-pergunta: "Durante uma reunião pedagógica, discutia-se o papel da área de Ciências da Natureza no Ensino Fundamental. Um professor afirmou que sua principal finalidade consiste em:",
-
-alternativas: [
-        "Desenvolver conhecimentos científicos necessários à formação técnica e profissional dos estudantes, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Consolidar conteúdos conceituais relacionados aos processos físicos, químicos e biológicos presentes na natureza, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Favorecer a aquisição de procedimentos experimentais utilizados na produção do conhecimento científico, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Promover a compreensão dos fenômenos naturais por meio da investigação, da análise crítica e da construção de explicações fundamentadas.",
-        "Preparar os estudantes para interpretar fenômenos naturais utilizando modelos explicativos validados pela ciência, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado."
-],
-
-correta: 3,
-
-feedbackAcerto: "Correto. A BNCC enfatiza investigação, compreensão dos fenômenos e construção do pensamento científico.",
-
-feedbackErro: "Embora outras alternativas apresentem elementos verdadeiros, a finalidade principal está na compreensão investigativa da realidade natural.",
-
-dicaBanca: "Ciências da Natureza = investigar e compreender fenômenos."
-},
-{
-pergunta: "Durante a elaboração de um projeto interdisciplinar, professores da área de Ciências Humanas discutiam formas de ampliar a compreensão dos estudantes sobre a sociedade, o tempo histórico e o espaço geográfico. Essa proposta está alinhada à BNCC porque a área de Ciências Humanas busca:",
-
-alternativas: [
-        "Desenvolver conhecimentos voltados à interpretação dos fenômenos políticos e econômicos que estruturam as instituições contemporâneas.",
-        "Favorecer a análise dos processos históricos responsáveis pela formação das identidades individuais e coletivas.",
-        "Consolidar aprendizagens relacionadas à compreensão das transformações sociais observadas ao longo do tempo histórico.",
-        "Promover a compreensão crítica das relações sociais, históricas, culturais e espaciais que influenciam a vida em sociedade.",
-        "Estimular a reflexão sobre diferentes formas de organização social e cultural presentes em distintas sociedades."
-],
-
-correta: 3,
-
-feedbackAcerto: "Correto. A BNCC atribui às Ciências Humanas a compreensão crítica das relações entre sujeitos, sociedades, culturas, tempos e espaços.",
-
-feedbackErro: "As demais alternativas apresentam aspectos relevantes da área, mas não contemplam sua abrangência de forma completa.",
-
-dicaBanca: "Ciências Humanas = sujeitos, sociedade, tempo, espaço e cultura."
-},
-
-{
-pergunta: "Durante uma reunião pedagógica, discutia-se a presença do Ensino Religioso no Ensino Fundamental. Um professor afirmou que sua finalidade não consiste na promoção de crenças específicas, mas no estudo do fenômeno religioso. Essa interpretação está de acordo com a BNCC porque o Ensino Religioso deve:",
-
-alternativas: [
-        "Estimular o conhecimento das principais tradições religiosas presentes na formação histórica da sociedade brasileira.",
-        "Promover reflexões sobre valores éticos e princípios de convivência associados às diferentes manifestações religiosas.",
-        "Favorecer a compreensão das tradições religiosas e filosofias de vida, promovendo o respeito à diversidade de crenças e convicções.",
-        "Contribuir para o reconhecimento da diversidade cultural por meio do estudo das experiências religiosas humanas.",
-        "Desenvolver conhecimentos relacionados às manifestações religiosas e suas influências nos processos sociais e culturais."
-],
-
-correta: 2,
-
-feedbackAcerto: "Correto. O Ensino Religioso tem caráter não confessional e busca promover o respeito à diversidade religiosa e de convicções.",
-
-feedbackErro: "A BNCC não atribui ao Ensino Religioso a função de promover ou privilegiar crenças específicas.",
-
-dicaBanca: "Ensino Religioso = respeito à diversidade e estudo do fenômeno religioso."
-},
-
-{
-pergunta: "Ao analisar as orientações da BNCC para os Anos Iniciais do Ensino Fundamental, uma equipe docente concluiu que essa etapa possui características próprias. Entre elas destaca-se:",
-
-alternativas: [
-        "A consolidação gradual das aprendizagens fundamentais, associada ao desenvolvimento da autonomia e da ampliação das experiências escolares.",
-        "O fortalecimento das competências relacionadas à alfabetização, ao letramento e à construção dos conhecimentos básicos necessários à continuidade dos estudos.",
-        "A ampliação progressiva dos conhecimentos específicos das áreas do conhecimento, preservando a integração das experiências educativas.",
-        "A organização de experiências que favoreçam a transição entre a Educação Infantil e as exigências acadêmicas do Ensino Fundamental.",
-        "A sistematização das aprendizagens essenciais previstas para as áreas do conhecimento em consonância com o desenvolvimento infantil."
-],
-
-correta: 1,
-
-feedbackAcerto: "Correto. Nos Anos Iniciais, a BNCC enfatiza alfabetização, letramento e consolidação das aprendizagens fundamentais.",
-
-feedbackErro: "As demais alternativas apresentam elementos verdadeiros, mas a característica mais marcante dos Anos Iniciais está na consolidação das aprendizagens básicas.",
-
-dicaBanca: "Anos Iniciais = alfabetização e aprendizagens fundamentais."
-},
-
-{
-pergunta: "Durante um encontro de formação continuada, os professores discutiam as especificidades dos Anos Finais do Ensino Fundamental. Segundo a BNCC, essa etapa caracteriza-se principalmente por:",
-
-alternativas: [
-        "A consolidação das competências relacionadas à alfabetização e ao domínio dos conhecimentos básicos das áreas curriculares.",
-        "O aprofundamento das experiências lúdicas e investigativas iniciadas na Educação Infantil e nos Anos Iniciais.",
-        "A preparação gradual dos estudantes para os processos seletivos e desafios acadêmicos do Ensino Médio.",
-        "O desenvolvimento de competências voltadas à inserção social e profissional dos adolescentes em formação.",
-        "A ampliação da complexidade dos conhecimentos escolares e o fortalecimento progressivo da autonomia intelectual dos estudantes."
-],
-
-correta: 4,
-
-feedbackAcerto: "Correto. Os Anos Finais ampliam a complexidade dos conhecimentos e favorecem maior autonomia intelectual.",
-
-feedbackErro: "A BNCC não reduz os Anos Finais à preparação para o Ensino Médio ou ao mercado de trabalho.",
-
-dicaBanca: "Anos Finais = aprofundamento e autonomia."
-},
-
-{
-pergunta: "Durante a construção do currículo escolar, uma equipe pedagógica analisava a progressão das aprendizagens prevista na BNCC. Nesse contexto, é correto afirmar que a progressão das aprendizagens corresponde:",
-
-alternativas: [
-"A organização gradual e articulada das aprendizagens, respeitando o desenvolvimento dos estudantes ao longo da Educação Básica.",
-"À distribuição sequencial dos conteúdos curriculares segundo níveis crescentes de complexidade previamente estabelecidos.",
-"À definição de objetivos de aprendizagem estruturados conforme critérios nacionais de desempenho escolar.",
-"À ampliação progressiva das competências específicas associadas às diferentes áreas do conhecimento.",
-"À sistematização das habilidades previstas para cada etapa de ensino de acordo com parâmetros curriculares comuns."
-],
-
-correta: 0,
-
-feedbackAcerto: "Correto. A progressão das aprendizagens envolve continuidade, aprofundamento e articulação ao longo da trajetória escolar.",
-
-feedbackErro: "A BNCC não trata a progressão apenas como sequência de conteúdos, mas como desenvolvimento articulado das aprendizagens.",
-
-dicaBanca: "Progressão = continuidade e aprofundamento."
-},
-{
-pergunta: "Durante a revisão do Projeto Político-Pedagógico, uma escola decidiu ampliar estratégias destinadas à inclusão de estudantes com diferentes características, necessidades e trajetórias socioculturais. Essa decisão está alinhada à BNCC porque o documento defende:",
-
-alternativas: [
-"A garantia de oportunidades de aprendizagem que reconheçam as diferenças e promovam a participação de todos os estudantes.",
-"A organização de práticas pedagógicas específicas para grupos distintos, respeitando as particularidades identificadas pela escola.",
-"A adaptação curricular voltada prioritariamente ao atendimento dos estudantes que apresentem dificuldades de aprendizagem.",
-"A diversificação das estratégias de ensino como mecanismo destinado à melhoria dos indicadores de desempenho escolar.",
-"A implementação de ações inclusivas associadas aos programas educacionais definidos pelos sistemas de ensino."
-],
-
-correta: 0,
-
-feedbackAcerto: "Correto. A BNCC defende uma educação comprometida com a equidade, a inclusão e o reconhecimento das diferenças.",
-
-feedbackErro: "A inclusão proposta pela BNCC não se restringe a grupos específicos, mas envolve a garantia de participação e aprendizagem para todos.",
-
-dicaBanca: "Inclusão = participação, aprendizagem e valorização das diferenças."
-},
-
-{
-pergunta: "Ao discutir o princípio da equidade presente na BNCC, uma equipe pedagógica concluiu corretamente que sua finalidade consiste em:",
-
-alternativas: [
-        "Oferecer as mesmas experiências educativas a todos os estudantes independentemente de suas características individuais.",
-        "Estabelecer parâmetros curriculares comuns capazes de assegurar igualdade de resultados entre os estudantes.",
-        "Garantir condições para que diferentes estudantes tenham acesso às oportunidades necessárias ao desenvolvimento de suas aprendizagens.",
-        "Promover a uniformização das práticas pedagógicas como estratégia de redução das desigualdades educacionais.",
-        "Ampliar o acesso às aprendizagens essenciais por meio da padronização dos recursos didáticos utilizados pelas escolas."
-],
-
-correta: 2,
-
-feedbackAcerto: "Correto. Equidade envolve reconhecer diferenças e garantir condições adequadas para que todos possam aprender.",
-
-feedbackErro: "Equidade não significa tratar todos exatamente da mesma forma, mas oferecer oportunidades adequadas às diferentes necessidades.",
-
-dicaBanca: "Igualdade ≠ Equidade."
-},
-
-{
-pergunta: "Durante uma atividade interdisciplinar, os estudantes analisaram problemas ambientais, impactos sociais e possíveis estratégias de intervenção na comunidade local. Essa proposta aproxima-se da perspectiva da BNCC porque favorece:",
-
-alternativas: [
-        "A aplicação prática dos conteúdos curriculares relacionados às áreas do conhecimento envolvidas na atividade.",
-        "A utilização de metodologias investigativas voltadas à resolução de problemas presentes no cotidiano social.",
-        "O desenvolvimento de competências relacionadas à cidadania e à responsabilidade socioambiental.",
-        "A integração de conhecimentos escolares à compreensão e transformação da realidade vivenciada pelos estudantes.",
-        "A articulação entre diferentes componentes curriculares em torno de temas relevantes para a formação dos estudantes."
-],
-
-correta: 3,
-
-feedbackAcerto: "Correto. A BNCC valoriza aprendizagens significativas conectadas aos desafios e situações concretas da realidade.",
-
-feedbackErro: "As demais alternativas apresentam elementos presentes na situação, mas a essência está na articulação entre conhecimento e realidade.",
-
-dicaBanca: "Conhecimento deve dialogar com a realidade."
-},
-
-{
-pergunta: "Ao analisar a implementação da BNCC, uma rede de ensino concluiu que a simples adequação dos documentos curriculares não seria suficiente para alcançar os objetivos propostos. Essa conclusão está correta porque:",
-
-alternativas: [
-        "A efetivação da BNCC depende da revisão dos currículos e da adoção de materiais didáticos compatíveis com as aprendizagens previstas.",
-        "A implementação da BNCC exige articulação entre currículo, práticas pedagógicas, avaliação e formação dos profissionais da educação.",
-        "A implementação curricular requer processos permanentes de acompanhamento capazes de assegurar a coerência das ações educativas.",
-        "A concretização da BNCC pressupõe adequações institucionais destinadas à melhoria da qualidade das experiências de aprendizagem.",
-        "A aplicação das orientações curriculares depende do alinhamento entre planejamento escolar, gestão pedagógica e desenvolvimento docente."
-],
-
-correta: 1,
-
-feedbackAcerto: "Correto. Implementar a BNCC envolve mudanças curriculares, pedagógicas, avaliativas e formativas.",
-
-feedbackErro: "A implementação não se resume à alteração de documentos ou materiais didáticos.",
-
-dicaBanca: "Implementação = currículo + prática + avaliação + formação."
-},
-
-{
-pergunta: "Durante um seminário educacional, discutia-se a relação entre competências, habilidades e aprendizagem na BNCC. Após o debate, concluiu-se corretamente que:",
-
-alternativas: [
-        "As competências constituem agrupamentos de habilidades organizados segundo os componentes curriculares da Educação Básica.",
-        "As habilidades correspondem a objetivos de aprendizagem estruturados para garantir o desenvolvimento progressivo das competências.",
-        "As competências dependem do domínio das habilidades previstas para cada etapa da escolarização obrigatória.",
-        "As habilidades organizam os conhecimentos escolares necessários ao desenvolvimento das competências gerais e específicas.",
-        "As habilidades representam formas pelas quais as competências podem ser desenvolvidas e evidenciadas em situações de aprendizagem."
-],
-
-correta: 4,
-
-feedbackAcerto: "Correto. As habilidades expressam aprendizagens que contribuem para o desenvolvimento das competências.",
-
-feedbackErro: "Competências e habilidades possuem relação complementar, mas não são conceitos equivalentes.",
-
-dicaBanca: "Habilidade = manifestação da competência."
-},
-{
-pergunta: "Uma escola reorganizou seu currículo de forma a integrar competências gerais, competências específicas, habilidades, projetos interdisciplinares e temas contemporâneos. Durante a avaliação da proposta, concluiu-se que essa organização está alinhada à BNCC porque:",
-
-alternativas: [
-        "A estrutura curricular precisa garantir a integração entre conhecimentos acadêmicos e situações concretas da vida social.",
-        "A organização das experiências educativas deve favorecer o desenvolvimento integral dos estudantes.",
-        "A construção curricular deve considerar simultaneamente competências, habilidades e práticas pedagógicas contextualizadas.",
-        "A aprendizagem deve ocorrer por meio da articulação entre diferentes saberes, experiências e contextos formativos.",
-        "A efetivação das aprendizagens depende da articulação entre currículo, formação humana e participação social."
-],
-
-correta: 3,
-
-feedbackAcerto: "Correto. A BNCC propõe uma formação integrada, articulando conhecimentos, competências e contextos reais de aprendizagem.",
-
-feedbackErro: "Todas as alternativas apresentam elementos relacionados à BNCC, mas a primeira expressa de forma mais abrangente a lógica integradora do documento.",
-
-dicaBanca: "Integração é uma das palavras-chave da BNCC."
-},
-
-{
-pergunta: "Durante a elaboração de estratégias de avaliação, uma equipe pedagógica discutia formas de verificar o desenvolvimento das competências previstas na BNCC. Nesse contexto, é correto afirmar que a avaliação deve:",
-
-alternativas: [
-        "Mensurar o domínio das habilidades previstas para cada etapa de ensino de acordo com critérios previamente estabelecidos.",
-        "Produzir evidências sobre a consolidação das aprendizagens essenciais definidas pelos currículos escolares.",
-        "Acompanhar o processo de aprendizagem, produzindo informações que contribuam para o desenvolvimento progressivo das competências.",
-        "Identificar o nível de desenvolvimento dos estudantes em relação às competências e habilidades previstas para sua etapa escolar.",
-        "Oferecer subsídios para a tomada de decisões pedagógicas relacionadas ao ensino e à aprendizagem."
-],
-
-correta: 2,
-
-feedbackAcerto: "Correto. A avaliação, na perspectiva da BNCC, deve acompanhar e apoiar o desenvolvimento das aprendizagens.",
-
-feedbackErro: "As demais alternativas apresentam aspectos válidos, mas não expressam de forma completa a função formativa da avaliação.",
-
-dicaBanca: "Avaliação = acompanhamento e intervenção pedagógica."
-},
-
-{
-pergunta: "Ao analisar a relação entre as Competências Gerais e as áreas do conhecimento, um grupo de professores concluiu corretamente que:",
-
-alternativas: [
-        "As Competências Gerais constituem referência transversal que orienta a organização das aprendizagens em toda a Educação Básica.",
-        "As Competências Gerais contribuem para a articulação entre formação acadêmica, cidadania e desenvolvimento pessoal.",
-        "As Competências Gerais favorecem a construção de experiências educativas voltadas à formação integral dos estudantes.",
-        "As Competências Gerais representam princípios orientadores que atravessam as diferentes etapas e modalidades da educação.",
-        "As Competências Gerais devem ser desenvolvidas de forma integrada às áreas do conhecimento e aos componentes curriculares."
-],
-
-correta: 4,
-
-feedbackAcerto: "Correto. As Competências Gerais não são disciplinas isoladas; elas devem ser desenvolvidas em todas as áreas e componentes curriculares.",
-
-feedbackErro: "As demais alternativas são compatíveis com a BNCC, porém a primeira expressa diretamente a relação entre competências e currículo.",
-
-dicaBanca: "Competências Gerais = transversalidade."
-},
-
-{
-pergunta: "Uma rede de ensino decidiu revisar seus currículos, promover formação continuada para professores, reorganizar processos avaliativos e fortalecer práticas inclusivas. Considerando a BNCC, essa decisão demonstra compreensão de que:",
-
-alternativas: [
-"A implementação curricular envolve ações articuladas que ultrapassam a simples adequação dos documentos oficiais.",
-"B) A efetivação das aprendizagens essenciais depende da coerência entre currículo, prática pedagógica e gestão educacional.",
-"C) A construção de experiências significativas requer alinhamento entre planejamento, ensino e avaliação.",
-"D) O desenvolvimento das competências previstas demanda revisão permanente das estratégias educacionais adotadas pelas escolas.",
-"E) A qualidade da implementação curricular depende da integração entre diferentes dimensões do trabalho pedagógico."
-],
-
-correta: 0,
-
-feedbackAcerto: "Correto. A implementação da BNCC exige mudanças sistêmicas e articuladas em diferentes dimensões da educação.",
-
-feedbackErro: "A implementação da BNCC não se resume à alteração curricular; envolve toda a dinâmica pedagógica da instituição.",
-
-dicaBanca: "Implementar BNCC = transformar práticas, não apenas documentos."
-},
-
-{
-pergunta: "Durante uma análise sobre a finalidade da BNCC, uma professora afirmou que o documento busca garantir aprendizagens essenciais comuns sem desconsiderar a diversidade presente nas diferentes realidades educacionais brasileiras. Essa afirmação sintetiza adequadamente a BNCC porque ela procura:",
-
-alternativas: [
-        "Estabelecer parâmetros curriculares capazes de assegurar unidade educacional sem comprometer a autonomia das redes de ensino, considerando os princípios legais de acesso, permanência e organização da educação básica.",
-        "Conciliar a definição de referenciais nacionais comuns com o respeito às características locais, regionais, culturais e sociais dos estudantes.",
-        "Promover equidade educacional por meio da garantia de oportunidades de aprendizagem para diferentes grupos e contextos, quando analisada de forma articulada ao contexto legal e pedagógico apresentado no enunciado.",
-        "Articular formação integral, cidadania e desenvolvimento de competências necessárias à vida em sociedade, em diálogo com as aprendizagens essenciais e com a contextualização curricular da rede.",
-        "Orientar a construção curricular preservando a diversidade e a pluralidade que caracterizam a educação brasileira, considerando os princípios legais de acesso, permanência e organização da educação básica."
-],
-
-correta: 1,
-
-feedbackAcerto: "Correto. A BNCC busca equilibrar unidade nacional e respeito à diversidade, garantindo aprendizagens essenciais para todos os estudantes.",
-
-feedbackErro: "As demais alternativas apresentam elementos corretos da BNCC, mas a primeira sintetiza de forma mais abrangente sua finalidade geral.",
-
-dicaBanca: "BNCC = unidade nacional + diversidade local."
-}];
+  {
+    "pergunta": "Ao revisar o documento curricular de uma rede, uma equipe afirmou que a BNCC é uma orientação facultativa e que cada sistema pode decidir se a adota. Considerando a natureza jurídica da Base, assinale a alternativa correta.",
+    "alternativas": [
+      "A BNCC funciona como referência indicativa, podendo ser substituída por documentos locais quando a rede possuir currículo próprio e mediante decisão formal do respectivo sistema de ensino.",
+      "A BNCC estabelece conteúdos mínimos nacionais, mas sua adoção depende de homologação específica de cada sistema de ensino.",
+      "A BNCC organiza parâmetros pedagógicos recomendados, cuja obrigatoriedade se limita às avaliações nacionais da Educação Básica.",
+      "A BNCC define orientações gerais para redes públicas, preservando às instituições privadas liberdade para adotar referenciais distintos.",
+      "A BNCC é documento normativo que define aprendizagens essenciais e deve ser respeitada na organização curricular da Educação Básica."
+    ],
+    "correta": 4,
+    "feedbackAcerto": "Correto. A BNCC tem caráter normativo e define aprendizagens essenciais que orientam obrigatoriamente a construção dos currículos da Educação Básica.",
+    "feedbackErro": "A Base não é facultativa nem se restringe às avaliações. Sua função normativa alcança a organização curricular da Educação Básica.",
+    "dicaBanca": "Em prova, desconfie de alternativas que tratem a BNCC como simples recomendação ou documento opcional."
+  },
+  {
+    "pergunta": "Em uma formação docente, discutiu-se o conceito de competência utilizado pela BNCC. Qual alternativa traduz esse conceito com maior precisão?",
+    "alternativas": [
+      "Acumulação progressiva de conteúdos conceituais e procedimentais previstos para cada componente curricular, organizada em níveis sucessivos de domínio escolar e acadêmico.",
+      "Mobilização de conhecimentos, habilidades, atitudes e valores para enfrentar demandas complexas da vida, da cidadania e do trabalho.",
+      "Domínio de objetivos cognitivos organizados em níveis de complexidade e aferidos por instrumentos padronizados.",
+      "Integração entre conteúdos escolares e experiências pessoais, desde que vinculada ao desempenho acadêmico esperado.",
+      "Aplicação de habilidades previamente treinadas em situações escolares semelhantes às previstas nos materiais didáticos."
+    ],
+    "correta": 1,
+    "feedbackAcerto": "Correto. Na BNCC, competência envolve mobilizar conhecimentos, habilidades, atitudes e valores diante de demandas complexas.",
+    "feedbackErro": "Competência não corresponde a memorizar conteúdos nem a repetir procedimentos; pressupõe mobilização integrada em diferentes situações.",
+    "dicaBanca": "Competência, na BNCC, é verbo de ação: mobilizar recursos para responder a situações complexas."
+  },
+  {
+    "pergunta": "Uma secretaria municipal pretende copiar integralmente o texto da BNCC e denominá-lo currículo municipal, sem incluir características sociais, culturais ou territoriais da rede. À luz da relação entre BNCC e currículo, essa decisão é:",
+    "alternativas": [
+      "Adequada, porque a função do currículo é reproduzir literalmente as aprendizagens essenciais definidas nacionalmente.",
+      "Adequada, desde que o documento municipal acrescente apenas orientações de avaliação e calendário escolar.",
+      "Inadequada, porque a BNCC deve ser utilizada somente como referência para componentes da parte diversificada.",
+      "Inadequada, porque o currículo deve assegurar as aprendizagens essenciais e, ao mesmo tempo, contextualizá-las à realidade da rede e dos estudantes.",
+      "Inadequada, porque cada rede pode substituir as aprendizagens essenciais por objetivos próprios definidos em seu projeto educacional, ainda que produza trajetórias formativas distintas entre sistemas."
+    ],
+    "correta": 3,
+    "feedbackAcerto": "Correto. A BNCC não elimina a construção curricular local: as aprendizagens essenciais devem ser concretizadas e contextualizadas pelas redes e escolas.",
+    "feedbackErro": "Currículo não é mera cópia da Base, mas também não pode substituir livremente as aprendizagens essenciais definidas nacionalmente.",
+    "dicaBanca": "BNCC e currículo não são sinônimos: a Base define o comum; o currículo concretiza e contextualiza."
+  },
+  {
+    "pergunta": "A Resolução CNE/CP nº 2/2017 ocupa lugar central na implementação da BNCC. Assinale a alternativa que identifica corretamente seu objeto.",
+    "alternativas": [
+      "Institui e orienta a implantação da BNCC referente à Educação Infantil e ao Ensino Fundamental, a ser respeitada pelos sistemas e instituições de ensino.",
+      "Institui exclusivamente a BNCC do Ensino Médio e define a organização das quatro áreas do conhecimento dessa etapa.",
+      "Regulamenta a formação inicial de professores e transforma as competências gerais em diretrizes obrigatórias das licenciaturas.",
+      "Define as normas nacionais de avaliação da Educação Básica, vincula os currículos às matrizes do Saeb e estabelece instrumentos comuns de aferição das aprendizagens essenciais.",
+      "Cria o complemento de Computação à BNCC e estabelece habilidades digitais obrigatórias para todas as etapas escolares."
+    ],
+    "correta": 0,
+    "feedbackAcerto": "Correto. A Resolução CNE/CP nº 2/2017 instituiu e orientou a implantação da BNCC da Educação Infantil e do Ensino Fundamental.",
+    "feedbackErro": "A BNCC do Ensino Médio foi instituída por ato posterior; a Resolução nº 2/2017 está ligada à Educação Infantil e ao Ensino Fundamental.",
+    "dicaBanca": "Associe: CNE/CP 2/2017 = Educação Infantil + Ensino Fundamental."
+  },
+  {
+    "pergunta": "Em relação à normatização da BNCC do Ensino Médio, assinale a alternativa correta.",
+    "alternativas": [
+      "Foi instituída pela mesma Resolução CNE/CP nº 2/2017 que regulamentou integralmente todas as etapas da Educação Básica.",
+      "Foi incorporada à BNCC por resolução da Câmara de Educação Básica voltada apenas à avaliação e à formação de professores.",
+      "Foi instituída pela Resolução CNE/CP nº 4/2018, que trata da BNCC na etapa final da Educação Básica.",
+      "Foi criada pela Resolução CNE/CEB nº 1/2022 juntamente com as normas nacionais de Computação na Educação Básica.",
+      "Foi regulamentada exclusivamente por lei federal, sem ato específico do Conselho Nacional de Educação para sua instituição."
+    ],
+    "correta": 2,
+    "feedbackAcerto": "Correto. A Resolução CNE/CP nº 4/2018 instituiu a BNCC do Ensino Médio como etapa final da Educação Básica.",
+    "feedbackErro": "A etapa do Ensino Médio possui ato normativo específico: a Resolução CNE/CP nº 4/2018.",
+    "dicaBanca": "Memorize o par: 2/2017 para EI/EF; 4/2018 para Ensino Médio."
+  },
+  {
+    "pergunta": "Uma escola afirma que, por possuir autonomia pedagógica, pode retirar determinadas aprendizagens previstas na BNCC e substituí-las por outras consideradas mais adequadas ao seu projeto. Essa interpretação é:",
+    "alternativas": [
+      "Correta, porque a autonomia escolar permite definir livremente quais aprendizagens nacionais serão incorporadas ao currículo e quais poderão ser substituídas pelo projeto pedagógico local.",
+      "Incorreta, porque a autonomia permite escolher formas de organização e progressão, mas deve preservar os direitos e objetivos de aprendizagem previstos na BNCC.",
+      "Correta, desde que a substituição seja aprovada pelo conselho escolar e registrada no Projeto Político-Pedagógico.",
+      "Incorreta, porque a autonomia escolar se limita à gestão administrativa, sem alcançar decisões curriculares ou pedagógicas.",
+      "Correta, quando as aprendizagens substituídas forem consideradas pouco relevantes para o contexto sociocultural da comunidade."
+    ],
+    "correta": 1,
+    "feedbackAcerto": "Correto. A autonomia de redes e escolas existe, mas deve ser exercida sem suprimir os direitos e objetivos de aprendizagem assegurados pela BNCC.",
+    "feedbackErro": "Autonomia curricular não significa liberdade para eliminar aprendizagens essenciais; ela opera dentro dos direitos garantidos nacionalmente.",
+    "dicaBanca": "Autonomia não revoga a Base: flexibiliza organização e contextualização, não o direito à aprendizagem."
+  },
+  {
+    "pergunta": "Sobre as dez Competências Gerais da BNCC, analise as afirmativas: I. Devem atravessar as diferentes etapas da Educação Básica. II. Não constituem disciplinas autônomas. III. Articulam dimensões cognitivas, sociais, culturais e éticas da formação. Está correto o que se afirma em:",
+    "alternativas": [
+      "I, apenas.",
+      "II, apenas.",
+      "I e II, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
+    ],
+    "correta": 4,
+    "feedbackAcerto": "Correto. As Competências Gerais são transversais, não formam disciplinas próprias e orientam uma formação ampla e integrada.",
+    "feedbackErro": "As três afirmações são compatíveis com a lógica da BNCC: transversalidade, integração e formação integral.",
+    "dicaBanca": "Competência Geral não é componente curricular; ela atravessa a Educação Básica."
+  },
+  {
+    "pergunta": "Um estudante utiliza conhecimentos históricos e científicos para explicar fenômenos sociais, compreender a realidade e continuar aprendendo. A situação se aproxima mais diretamente de qual Competência Geral?",
+    "alternativas": [
+      "Argumentação, pois o foco está na defesa de posicionamentos com base em dados e informações confiáveis.",
+      "Comunicação, porque a finalidade principal é compartilhar ideias por diferentes linguagens e produzir entendimento mútuo.",
+      "Conhecimento, por envolver valorização e uso de saberes historicamente construídos para compreender e explicar a realidade.",
+      "Responsabilidade e cidadania, pois o estudante atua coletivamente com autonomia, resiliência e decisão ética.",
+      "Trabalho e projeto de vida, já que o uso de conhecimentos estaria orientado à compreensão das relações do mundo profissional e à definição antecipada de escolhas ocupacionais."
+    ],
+    "correta": 2,
+    "feedbackAcerto": "Correto. A Competência Geral 1 valoriza o uso dos conhecimentos historicamente construídos para compreender a realidade e continuar aprendendo.",
+    "feedbackErro": "O enunciado destaca o emprego de conhecimentos para entender e explicar o mundo, núcleo da Competência Geral 1.",
+    "dicaBanca": "Competência 1 = conhecimento para compreender a realidade, aprender e colaborar."
+  },
+  {
+    "pergunta": "Em uma sequência didática, os alunos formulam hipóteses, investigam causas, analisam evidências e propõem soluções para um problema ambiental. A prática mobiliza principalmente a Competência Geral relacionada ao:",
+    "alternativas": [
+      "Pensamento científico, crítico e criativo, pela investigação, análise, formulação de hipóteses e construção de soluções.",
+      "Repertório cultural, pela valorização das manifestações artísticas e dos modos de expressão presentes no território.",
+      "Autoconhecimento e autocuidado, pelo reconhecimento das próprias emoções e das condições de saúde coletiva.",
+      "Trabalho e projeto de vida, pela definição de escolhas pessoais relacionadas à formação acadêmica e profissional.",
+      "Conhecimento, exclusivamente por exigir domínio de conceitos científicos antes da resolução do problema apresentado e sua aplicação em situações previamente estruturadas pelo professor."
+    ],
+    "correta": 0,
+    "feedbackAcerto": "Correto. Investigar, levantar hipóteses, analisar criticamente e criar soluções são marcas da Competência Geral 2.",
+    "feedbackErro": "Embora conhecimentos sejam mobilizados, o centro da situação é a investigação e a criação de soluções fundamentadas.",
+    "dicaBanca": "Competência 2 = curiosidade + investigação + análise crítica + criatividade."
+  },
+  {
+    "pergunta": "Uma escola organiza visitas a museus, apresentações musicais, produção de obras e análise de manifestações culturais locais e de outros povos. Qual Competência Geral é mais diretamente desenvolvida?",
+    "alternativas": [
+      "Comunicação, porque toda experiência artística tem por finalidade principal transmitir mensagens e informações.",
+      "Empatia e cooperação, porque atividades culturais necessariamente exigem negociação entre diferentes grupos sociais.",
+      "Conhecimento, porque o contato com manifestações culturais ocorre como forma de ampliar repertórios conceituais escolares.",
+      "Repertório cultural, por reconhecer, valorizar, fruir e participar de práticas diversificadas da produção artístico-cultural.",
+      "Responsabilidade e cidadania, pois a participação cultural pressupõe tomada de decisões coletivas, compromisso comunitário e adesão a práticas socialmente reconhecidas como relevantes."
+    ],
+    "correta": 3,
+    "feedbackAcerto": "Correto. A Competência Geral 3 está relacionada ao reconhecimento, à valorização, à fruição e à participação em manifestações artísticas e culturais.",
+    "feedbackErro": "O foco do caso é a experiência estética e cultural, não apenas comunicação, cooperação ou domínio de conteúdos.",
+    "dicaBanca": "Competência 3 = repertório cultural: reconhecer, fruir, valorizar e produzir cultura."
+  },
+  {
+    "pergunta": "Em um projeto, estudantes apresentam resultados por texto escrito, infográfico, vídeo, expressão corporal e linguagem matemática. A situação se relaciona prioritariamente à Competência Geral de:",
+    "alternativas": [
+      "Cultura digital, porque a presença de vídeo e infográfico torna a tecnologia o eixo central da aprendizagem.",
+      "Comunicação, por utilizar diferentes linguagens para expressar, partilhar informações, experiências, ideias e sentimentos.",
+      "Argumentação, pois qualquer apresentação de resultados exige defender uma tese mediante evidências verificáveis.",
+      "Repertório cultural, porque diferentes linguagens constituem manifestações artísticas que devem ser valorizadas pela escola.",
+      "Conhecimento, já que toda comunicação escolar pressupõe domínio prévio dos conteúdos conceituais estudados."
+    ],
+    "correta": 1,
+    "feedbackAcerto": "Correto. A Competência Geral 4 envolve utilizar diferentes linguagens para expressar e compartilhar sentidos em diferentes contextos.",
+    "feedbackErro": "O uso de múltiplas linguagens é o elemento decisivo da situação; tecnologia é apenas um dos meios possíveis.",
+    "dicaBanca": "Competência 4 = comunicar-se por linguagens verbal, corporal, visual, sonora, digital, matemática e científica."
+  },
+  {
+    "pergunta": "Uma turma compara fontes digitais, discute privacidade, produz conteúdo autoral e utiliza tecnologias para resolver problemas. À luz da BNCC, essa prática expressa melhor a ideia de:",
+    "alternativas": [
+      "Domínio instrumental de aplicativos, suficiente para caracterizar o desenvolvimento da competência digital prevista nacionalmente.",
+      "Alfabetização midiática restrita à identificação de informações falsas e à proteção de dados pessoais dos estudantes.",
+      "Uso pedagógico das tecnologias como recurso complementar para melhorar o desempenho em componentes curriculares tradicionais.",
+      "Apropriação técnica de plataformas digitais associada à preparação dos estudantes para as exigências do mundo do trabalho.",
+      "Cultura digital, com compreensão, uso e criação de tecnologias de modo crítico, significativo, reflexivo, ético e autoral."
+    ],
+    "correta": 4,
+    "feedbackAcerto": "Correto. A Competência Geral 5 supera o uso operacional: envolve compreender, utilizar e criar tecnologias de forma crítica, ética e significativa.",
+    "feedbackErro": "A BNCC não reduz cultura digital a saber operar ferramentas; inclui autoria, criticidade, ética, comunicação e resolução de problemas.",
+    "dicaBanca": "Competência 5 não é 'saber mexer': é usar e criar tecnologia com criticidade, ética e protagonismo."
+  },
+  {
+    "pergunta": "Durante a orientação dos estudantes, a escola promove reflexão sobre interesses, possibilidades de formação, mundo do trabalho e escolhas responsáveis para o futuro. A ação se vincula principalmente à competência de:",
+    "alternativas": [
+      "Autoconhecimento e autocuidado, porque escolhas profissionais dependeriam prioritariamente da compreensão das emoções pessoais e da definição antecipada de uma carreira ao longo da escolarização.",
+      "Responsabilidade e cidadania, pois a definição de trajetórias futuras exige compromisso coletivo e sustentabilidade social.",
+      "Trabalho e projeto de vida, pela valorização de saberes e experiências que apoiam escolhas alinhadas à cidadania e aos projetos pessoais.",
+      "Conhecimento, já que a construção de projetos futuros depende do domínio dos conteúdos historicamente acumulados pela escola.",
+      "Argumentação, porque decidir sobre o futuro exige formular opiniões e defendê-las com base em informações confiáveis."
+    ],
+    "correta": 2,
+    "feedbackAcerto": "Correto. A Competência Geral 6 relaciona diversidade de saberes e vivências, mundo do trabalho, escolhas e construção do projeto de vida.",
+    "feedbackErro": "O núcleo do enunciado é a construção de escolhas e projetos pessoais articulados ao mundo do trabalho e à cidadania.",
+    "dicaBanca": "Competência 6 = trabalho + escolhas + projeto de vida com autonomia e responsabilidade."
+  },
+  {
+    "pergunta": "Em um debate sobre vacinação, os estudantes precisam defender posições utilizando dados confiáveis, avaliar argumentos contrários e formular conclusões responsáveis. A Competência Geral central é:",
+    "alternativas": [
+      "Argumentação, pelo uso de fatos, dados e informações confiáveis na formulação e defesa de ideias e decisões.",
+      "Comunicação, porque o elemento decisivo é utilizar linguagem oral para apresentar opiniões diante dos colegas.",
+      "Pensamento científico, porque qualquer questão de saúde deve ser tratada exclusivamente por procedimentos de investigação científica.",
+      "Empatia e cooperação, pois a divergência entre opiniões exige acolhimento, diálogo e resolução de conflitos entre os estudantes.",
+      "Responsabilidade e cidadania, porque decisões em saúde são necessariamente escolhas coletivas de natureza ética e política."
+    ],
+    "correta": 0,
+    "feedbackAcerto": "Correto. A Competência Geral 7 enfatiza argumentar com base em fatos, dados e informações confiáveis, respeitando direitos humanos e responsabilidade socioambiental.",
+    "feedbackErro": "O debate envolve outras competências, mas a exigência de defender posições com evidências identifica diretamente a argumentação.",
+    "dicaBanca": "Competência 7 = argumentar com evidências, responsabilidade e respeito aos direitos humanos."
+  },
+  {
+    "pergunta": "Uma proposta escolar trabalha reconhecimento das próprias emoções, cuidado com a saúde física e emocional e compreensão de limites pessoais. Essa proposta se relaciona mais diretamente à competência de:",
+    "alternativas": [
+      "Empatia e cooperação, por enfatizar o respeito às emoções e necessidades das demais pessoas no convívio escolar.",
+      "Trabalho e projeto de vida, porque o cuidado pessoal deve orientar escolhas acadêmicas e profissionais ao longo da escolarização.",
+      "Responsabilidade e cidadania, pois hábitos saudáveis constituem dever individual associado ao bem-estar coletivo.",
+      "Autoconhecimento e autocuidado, por compreender a si mesmo, reconhecer emoções e cuidar da saúde física e emocional.",
+      "Conhecimento, porque o cuidado com a saúde depende do domínio de informações científicas sobre o corpo e o comportamento."
+    ],
+    "correta": 3,
+    "feedbackAcerto": "Correto. A Competência Geral 8 envolve conhecer-se, compreender-se e cuidar da saúde física e emocional, reconhecendo emoções próprias e alheias.",
+    "feedbackErro": "O foco está no conhecimento de si e no autocuidado, e não apenas na convivência, no projeto profissional ou na cidadania.",
+    "dicaBanca": "Competência 8 = conhecer-se + compreender emoções + cuidar da saúde física e emocional."
+  },
+  {
+    "pergunta": "Em uma atividade colaborativa, os alunos exercitam diálogo, respeito às diferenças, resolução de conflitos e cooperação para construir uma solução comum. Predomina a competência de:",
+    "alternativas": [
+      "Responsabilidade e cidadania, porque toda decisão coletiva envolve princípios democráticos e compromisso com o bem comum.",
+      "Empatia e cooperação, por incentivar diálogo, respeito à diversidade, acolhimento e resolução de conflitos.",
+      "Argumentação, porque a construção de solução comum depende da defesa racional de posições com base em evidências.",
+      "Comunicação, já que o trabalho coletivo se desenvolve por diferentes linguagens utilizadas para partilhar informações.",
+      "Autoconhecimento e autocuidado, porque a cooperação exige reconhecer emoções pessoais antes de interagir com o grupo."
+    ],
+    "correta": 1,
+    "feedbackAcerto": "Correto. A Competência Geral 9 reúne empatia, diálogo, cooperação, respeito ao outro e valorização da diversidade.",
+    "feedbackErro": "Embora haja comunicação e tomada de decisões, o enunciado enfatiza relações interpessoais, diálogo e cooperação.",
+    "dicaBanca": "Competência 9 = empatia, diálogo, cooperação e respeito à diversidade."
+  },
+  {
+    "pergunta": "Uma escola propõe que estudantes tomem decisões com autonomia, responsabilidade, flexibilidade e determinação, considerando princípios éticos, democráticos, inclusivos e sustentáveis. Trata-se da Competência Geral de:",
+    "alternativas": [
+      "Argumentação, pela necessidade de justificar decisões e posições com fatos e informações socialmente relevantes.",
+      "Trabalho e projeto de vida, porque autonomia e determinação são elementos vinculados às escolhas pessoais e profissionais.",
+      "Empatia e cooperação, já que decisões responsáveis pressupõem escuta, acolhimento e convivência com diferenças.",
+      "Autoconhecimento e autocuidado, pois agir com autonomia requer reconhecer emoções, potencialidades e fragilidades pessoais.",
+      "Responsabilidade e cidadania, por envolver ação pessoal e coletiva com autonomia, ética, resiliência e compromisso social."
+    ],
+    "correta": 4,
+    "feedbackAcerto": "Correto. A Competência Geral 10 está ligada à ação autônoma e responsável orientada por princípios éticos, democráticos, inclusivos e sustentáveis.",
+    "feedbackErro": "O ponto decisivo é agir e decidir com responsabilidade e cidadania, e não apenas planejar a vida, cooperar ou argumentar.",
+    "dicaBanca": "Competência 10 = agir com autonomia, responsabilidade, ética, flexibilidade e compromisso coletivo."
+  },
+  {
+    "pergunta": "Uma escola amplia a jornada diária, mas mantém práticas fragmentadas e centradas apenas na transmissão de conteúdos. À luz da concepção de Educação Integral presente na BNCC, é correto afirmar que:",
+    "alternativas": [
+      "A ampliação do tempo não basta; Educação Integral envolve desenvolvimento do estudante em múltiplas dimensões e experiências formativas articuladas.",
+      "A jornada ampliada caracteriza Educação Integral sempre que houver aumento do número de componentes e atividades acadêmicas ofertadas.",
+      "A Educação Integral depende principalmente do tempo integral, pois o aumento da permanência escolar amplia automaticamente as oportunidades educativas.",
+      "A formação integral se realiza quando a escola acrescenta atividades culturais e esportivas ao turno regular, ainda que o currículo permaneça fragmentado.",
+      "A BNCC associa Educação Integral à diversificação de conteúdos, independentemente da integração entre dimensões cognitivas, sociais e culturais."
+    ],
+    "correta": 0,
+    "feedbackAcerto": "Correto. Na BNCC, Educação Integral se refere à formação e ao desenvolvimento humano global, não apenas à ampliação da carga horária.",
+    "feedbackErro": "Tempo integral e Educação Integral não são equivalentes; a segunda exige articulação das diferentes dimensões da formação humana.",
+    "dicaBanca": "Pegadinha clássica: Educação Integral não significa simplesmente mais horas na escola."
+  },
+  {
+    "pergunta": "Uma rede oferece exatamente as mesmas estratégias, recursos e tempos de aprendizagem a todos os estudantes, mesmo diante de necessidades e condições muito diferentes. Em relação à equidade, essa política é:",
+    "alternativas": [
+      "Adequada, porque equidade exige tratamento pedagógico idêntico para impedir diferenciações entre grupos e estudantes.",
+      "Adequada, desde que todos tenham acesso ao mesmo currículo e sejam avaliados pelos mesmos instrumentos e critérios.",
+      "Inadequada, porque equidade pressupõe reconhecer desigualdades e diferenças para garantir oportunidades efetivas de aprendizagem.",
+      "Inadequada, porque a BNCC determina currículos distintos para cada grupo social conforme suas necessidades educacionais específicas.",
+      "Adequada, pois qualquer diferenciação pedagógica compromete o princípio de igualdade estabelecido para a Educação Básica."
+    ],
+    "correta": 2,
+    "feedbackAcerto": "Correto. A equidade requer reconhecer diferenças e desigualdades para assegurar condições reais de acesso, participação e aprendizagem.",
+    "feedbackErro": "Tratar todos de maneira idêntica pode perpetuar desigualdades; equidade envolve respostas adequadas às necessidades educacionais.",
+    "dicaBanca": "Igualdade formal pode ser insuficiente; equidade busca garantir oportunidades reais de aprender."
+  },
+  {
+    "pergunta": "Ao incorporar ao currículo conhecimentos ligados à cultura amazônica, às comunidades locais e às características do território, sem retirar as aprendizagens essenciais, a rede está:",
+    "alternativas": [
+      "Criando uma parte paralela ao currículo, sem relação necessária com as aprendizagens previstas na Base Nacional.",
+      "Substituindo o núcleo comum por conhecimentos regionais, possibilidade autorizada quando houver justificativa sociocultural e aprovação do respectivo sistema de ensino para reorganizar as aprendizagens essenciais.",
+      "Contrariando a BNCC, porque as aprendizagens essenciais devem ser desenvolvidas de forma uniforme em todo o país.",
+      "Contextualizando o currículo, articulando o comum nacional às características locais, regionais, sociais e culturais dos estudantes.",
+      "Aplicando apenas a parte diversificada da LDB, que pode ser organizada independentemente das aprendizagens essenciais da BNCC."
+    ],
+    "correta": 3,
+    "feedbackAcerto": "Correto. A BNCC admite e exige contextualização curricular, articulando aprendizagens essenciais às realidades locais e regionais.",
+    "feedbackErro": "A valorização do território não substitui a Base nem constitui currículo paralelo; integra a concretização curricular das aprendizagens.",
+    "dicaBanca": "Contextualizar não é trocar a BNCC pelo local; é fazer o comum dialogar com a realidade do estudante."
+  },
+  {
+    "pergunta": "Na Educação Infantil, uma instituição organiza sua rotina em torno de experiências de convivência, exploração e brincadeira, evitando transformar a etapa em antecipação formal do Ensino Fundamental. A decisão está alinhada à BNCC porque:",
+    "alternativas": [
+      "A Educação Infantil deve priorizar atividades livres, com mínima intervenção docente, para preservar a espontaneidade da criança.",
+      "Interações e brincadeiras constituem eixos estruturantes das práticas pedagógicas e das experiências de aprendizagem nessa etapa.",
+      "Os direitos de aprendizagem substituem a necessidade de intencionalidade pedagógica e de planejamento das experiências infantis.",
+      "A preparação para alfabetização formal deve ocorrer apenas no último ano da Educação Infantil, depois das atividades de brincadeira.",
+      "Os Campos de Experiência são componentes curriculares equivalentes às disciplinas do Ensino Fundamental, porém organizados ludicamente."
+    ],
+    "correta": 1,
+    "feedbackAcerto": "Correto. Na Educação Infantil, interações e brincadeiras são eixos estruturantes que orientam experiências intencionalmente planejadas.",
+    "feedbackErro": "A BNCC não defende espontaneísmo nem antecipação de disciplinas; a etapa se organiza por direitos, interações, brincadeiras e Campos de Experiência.",
+    "dicaBanca": "Educação Infantil: interações + brincadeiras são eixos estruturantes, não atividades periféricas."
+  },
+  {
+    "pergunta": "Assinale a alternativa que apresenta corretamente os seis direitos de aprendizagem e desenvolvimento da Educação Infantil na BNCC.",
+    "alternativas": [
+      "Conviver, brincar, pesquisar, expressar, conhecer-se e comunicar.",
+      "Participar, explorar, aprender, conviver, comunicar e cuidar-se.",
+      "Brincar, interagir, participar, investigar, expressar e desenvolver-se.",
+      "Conviver, participar, pesquisar, imaginar, expressar e conhecer-se.",
+      "Conviver, brincar, participar, explorar, expressar e conhecer-se."
+    ],
+    "correta": 4,
+    "feedbackAcerto": "Correto. Os seis direitos são conviver, brincar, participar, explorar, expressar e conhecer-se.",
+    "feedbackErro": "A banca costuma trocar um dos seis direitos por verbos próximos, como aprender, pesquisar, comunicar ou interagir.",
+    "dicaBanca": "Decore o sexteto da EI: conviver, brincar, participar, explorar, expressar e conhecer-se."
+  },
+  {
+    "pergunta": "Durante o planejamento da rotina, a professora permite que as crianças escolham materiais, opinem sobre atividades e contribuam para decisões que afetam o grupo. O direito de aprendizagem mais diretamente envolvido é:",
+    "alternativas": [
+      "Participar, com envolvimento ativo nas escolhas, no planejamento e nas decisões das experiências cotidianas.",
+      "Explorar, porque qualquer escolha de materiais implica investigar propriedades, relações e possibilidades de uso dos objetos.",
+      "Conviver, já que toda decisão coletiva decorre principalmente da interação social e do respeito aos demais integrantes do grupo.",
+      "Expressar, pois manifestar preferências e opiniões constitui essencialmente uma forma de comunicação da criança com o ambiente.",
+      "Conhecer-se, porque a tomada de decisões permite à criança identificar interesses, gostos e características de sua identidade pessoal."
+    ],
+    "correta": 0,
+    "feedbackAcerto": "Correto. O direito de participar envolve a criança nas decisões sobre atividades, materiais, ambientes e aspectos da vida cotidiana.",
+    "feedbackErro": "Outros direitos podem estar presentes, mas o protagonismo nas escolhas e decisões caracteriza diretamente o direito de participar.",
+    "dicaBanca": "Participar = ter voz e presença real nas decisões da experiência educativa."
+  },
+  {
+    "pergunta": "Uma turma manipula diferentes materiais, investiga sons, texturas, movimentos, elementos da natureza e possibilidades de transformação. Qual direito de aprendizagem aparece com maior evidência?",
+    "alternativas": [
+      "Brincar, porque a manipulação de materiais somente adquire valor pedagógico quando ocorre em contexto lúdico e imaginativo.",
+      "Conhecer-se, pois o contato sensorial com objetos e ambientes tem como principal finalidade reconhecer características do próprio corpo.",
+      "Explorar, por envolver movimentos, gestos, sons, formas, texturas, elementos da natureza e diferentes possibilidades de ação.",
+      "Participar, já que a investigação dos materiais pressupõe escolhas compartilhadas e organização coletiva da atividade pelas crianças.",
+      "Conviver, porque explorar o ambiente depende fundamentalmente da interação com outras crianças e adultos do contexto escolar."
+    ],
+    "correta": 2,
+    "feedbackAcerto": "Correto. Explorar envolve investigar movimentos, gestos, sons, formas, texturas, objetos e elementos da natureza em experiências diversas.",
+    "feedbackErro": "A descrição destaca investigação e experimentação com o mundo físico e sensorial, núcleo do direito de explorar.",
+    "dicaBanca": "Explorar = investigar o mundo com corpo, sentidos, objetos, sons, formas e natureza."
+  },
+  {
+    "pergunta": "Após uma experiência, as crianças comunicam ideias por desenho, fala, dança, música e dramatização. Segundo a BNCC, predomina o direito de:",
+    "alternativas": [
+      "Conviver, porque diferentes formas de manifestação surgem principalmente das relações estabelecidas entre crianças e adultos e devem priorizar a interação coletiva durante as experiências educativas.",
+      "Participar, porque a produção artística resulta da inserção ativa da criança nas propostas e decisões da rotina pedagógica.",
+      "Brincar, pois dança, dramatização e música são formas lúdicas que caracterizam o brincar na Educação Infantil.",
+      "Expressar, ao manifestar necessidades, emoções, sentimentos, dúvidas, hipóteses, descobertas, opiniões e criações por múltiplas linguagens.",
+      "Conhecer-se, já que toda forma de expressão permite reconhecer a identidade pessoal e construir imagem positiva de si mesmo."
+    ],
+    "correta": 3,
+    "feedbackAcerto": "Correto. O direito de expressar abrange múltiplas linguagens e formas de comunicar emoções, ideias, hipóteses, descobertas e criações.",
+    "feedbackErro": "A presença de diferentes linguagens é decisiva: o foco não é apenas brincar ou participar, mas tornar visível o que a criança pensa e sente.",
+    "dicaBanca": "Expressar = comunicar pensamentos, sentimentos e criações por muitas linguagens."
+  },
+  {
+    "pergunta": "Em atividades com espelhos, relatos sobre a família, reconhecimento de características pessoais e valorização de diferentes identidades, o direito mais diretamente mobilizado é:",
+    "alternativas": [
+      "Explorar, pois as crianças investigam características físicas e culturais de si mesmas e do ambiente em que vivem, tomando a exploração sensorial como eixo principal da construção da identidade.",
+      "Conhecer-se, ao construir identidade pessoal, social e cultural e formar uma imagem positiva de si e de seus grupos de pertencimento.",
+      "Conviver, porque a identidade individual só pode ser desenvolvida a partir das relações sociais com outras crianças e adultos.",
+      "Participar, já que narrar experiências familiares insere a criança nas decisões e práticas cotidianas da instituição educacional.",
+      "Expressar, pois reconhecer características pessoais depende principalmente de comunicar sentimentos e opiniões sobre a própria história."
+    ],
+    "correta": 1,
+    "feedbackAcerto": "Correto. Conhecer-se envolve construir identidade pessoal, social e cultural e uma imagem positiva de si e de seus grupos de pertencimento.",
+    "feedbackErro": "A situação envolve identidade, pertencimento e reconhecimento de si, elementos centrais do direito de conhecer-se.",
+    "dicaBanca": "Conhecer-se = identidade, pertencimento, imagem positiva de si e reconhecimento de diferenças."
+  },
+  {
+    "pergunta": "Assinale a alternativa que reúne corretamente os cinco Campos de Experiência da Educação Infantil previstos na BNCC.",
+    "alternativas": [
+      "O eu, o outro e o nós; Corpo, gestos e movimentos; Traços, sons, cores e formas; Escuta, fala, linguagem e imaginação; Espaços, tempos, quantidades, relações e transformações atuais.",
+      "Identidade e autonomia; Movimento; Música e artes visuais; Linguagem oral e escrita; Matemática e natureza.",
+      "O eu, o outro e o nós; Corpo e saúde; Traços e sons; Escuta e escrita; Espaços e quantidades.",
+      "Conviver e participar; Brincar e explorar; Expressar e conhecer-se; Corpo e movimento; Mundo físico e social.",
+      "O eu, o outro e o nós; Corpo, gestos e movimentos; Traços, sons, cores e formas; Escuta, fala, pensamento e imaginação; Espaços, tempos, quantidades, relações e transformações."
+    ],
+    "correta": 4,
+    "feedbackAcerto": "Correto. A alternativa apresenta os cinco Campos de Experiência com a nomenclatura adotada pela BNCC.",
+    "feedbackErro": "As alternativas incorretas misturam nomenclaturas de documentos anteriores, direitos de aprendizagem e nomes incompletos dos campos.",
+    "dicaBanca": "Campos de Experiência não são disciplinas; atenção à nomenclatura completa dos cinco campos."
+  },
+  {
+    "pergunta": "Em uma turma, crianças negociam regras, reconhecem diferenças, constroem vínculos e aprendem a considerar perspectivas de outras pessoas. Qual Campo de Experiência é mais diretamente relacionado à situação?",
+    "alternativas": [
+      "O eu, o outro e o nós, por tratar da construção de identidades, relações, pertencimentos, respeito e convivência com diferenças.",
+      "Corpo, gestos e movimentos, porque a convivência é mediada principalmente por ações corporais, gestos e deslocamentos no espaço.",
+      "Escuta, fala, pensamento e imaginação, pois a negociação de regras decorreria principalmente do desenvolvimento da oralidade, da argumentação infantil e da capacidade narrativa construída nas interações.",
+      "Espaços, tempos, quantidades, relações e transformações, já que regras sociais organizam relações e mudanças vivenciadas pelas crianças.",
+      "Traços, sons, cores e formas, porque vínculos e identidades são expressos por produções artísticas e manifestações culturais diversas."
+    ],
+    "correta": 0,
+    "feedbackAcerto": "Correto. 'O eu, o outro e o nós' concentra experiências de identidade, alteridade, convivência, pertencimento e respeito às diferenças.",
+    "feedbackErro": "Embora linguagem e corpo estejam presentes, o centro do caso são relações sociais, identidade e reconhecimento do outro.",
+    "dicaBanca": "O eu, o outro e o nós = identidade + alteridade + convivência + pertencimento."
+  },
+  {
+    "pergunta": "Uma professora planeja circuitos, danças, dramatizações, jogos motores e experiências em que as crianças usam o corpo para comunicar ideias e emoções. O Campo de Experiência predominante é:",
+    "alternativas": [
+      "Traços, sons, cores e formas, porque dança e dramatização pertencem prioritariamente às experiências artísticas e estéticas.",
+      "Escuta, fala, pensamento e imaginação, pois comunicar emoções depende de linguagem simbólica e desenvolvimento da imaginação infantil.",
+      "Corpo, gestos e movimentos, por valorizar experiências corporais, expressivas, motoras e comunicativas das crianças.",
+      "O eu, o outro e o nós, já que jogos e dramatizações exigem interação social, negociação de regras e convivência em grupo.",
+      "Espaços, tempos, quantidades, relações e transformações, porque circuitos exigem percepção espacial, sequências e relações entre objetos."
+    ],
+    "correta": 2,
+    "feedbackAcerto": "Correto. O campo 'Corpo, gestos e movimentos' reúne experiências em que a criança conhece, comunica e se expressa corporalmente.",
+    "feedbackErro": "Outros campos podem ser articulados, mas o foco em movimento, gesto, expressão corporal e ação motora caracteriza este campo.",
+    "dicaBanca": "Corpo, gestos e movimentos = expressão corporal, ação motora e comunicação pelo corpo."
+  },
+  {
+    "pergunta": "Na passagem da Educação Infantil para o Ensino Fundamental, uma escola decide substituir gradualmente brincadeiras por fichas de treino e atividades formais para 'adiantar' os conteúdos do 1º ano. À luz da BNCC, essa decisão é:",
+    "alternativas": [
+      "Adequada, porque a transição exige antecipar práticas de alfabetização formal para reduzir rupturas entre as duas etapas.",
+      "Adequada, desde que a mudança ocorra no último semestre e seja acompanhada por avaliações diagnósticas das crianças.",
+      "Inadequada apenas se houver supressão completa dos Campos de Experiência, que devem permanecer até a conclusão do 1º ano.",
+      "Inadequada, porque a transição deve assegurar continuidade das experiências e respeitar as especificidades da infância, sem antecipação indevida de práticas escolares.",
+      "Adequada, pois a BNCC determinaria que o último ano da Educação Infantil funcione como preparação sistemática para a alfabetização, com treino gradual de práticas formais para uniformizar a entrada no Ensino Fundamental."
+    ],
+    "correta": 3,
+    "feedbackAcerto": "Correto. A transição deve preservar continuidade, acolhimento e respeito às especificidades das crianças, evitando antecipação inadequada do Ensino Fundamental.",
+    "feedbackErro": "A BNCC propõe articulação entre etapas, não escolarização precoce da Educação Infantil nem treino antecipado de conteúdos formais.",
+    "dicaBanca": "Transição EI→EF = continuidade e acolhimento, não antecipação escolarizante."
+  },
+  {
+    "pergunta": "Nos Anos Iniciais do Ensino Fundamental, a BNCC recomenda que a organização pedagógica dialogue com as experiências vividas na Educação Infantil. Essa orientação busca:",
+    "alternativas": [
+      "Preservar os Campos de Experiência como estrutura curricular obrigatória durante os cinco primeiros anos do Ensino Fundamental.",
+      "Articular as situações lúdicas e as experiências anteriores às novas formas de relação com o conhecimento, garantindo continuidade às aprendizagens.",
+      "Adiar a introdução dos componentes curriculares até que os estudantes concluam o processo de alfabetização previsto para os anos iniciais, preservando até então a organização pedagógica própria da Educação Infantil.",
+      "Manter o mesmo modelo pedagógico da Educação Infantil para evitar qualquer ruptura entre as duas primeiras etapas da Educação Básica.",
+      "Substituir a organização por áreas do conhecimento por projetos interdisciplinares baseados exclusivamente nas experiências das crianças."
+    ],
+    "correta": 1,
+    "feedbackAcerto": "Correto. A BNCC orienta continuidade entre as etapas, valorizando experiências anteriores e articulando-as a novas formas de aprender no Ensino Fundamental.",
+    "feedbackErro": "A articulação não significa manter a estrutura curricular da Educação Infantil, mas evitar rupturas desnecessárias no percurso formativo.",
+    "dicaBanca": "Anos Iniciais: continuidade com a EI sem transformar o EF em mera extensão dos Campos de Experiência."
+  },
+  {
+    "pergunta": "Assinale a alternativa que apresenta corretamente as áreas do conhecimento do Ensino Fundamental na estrutura da BNCC.",
+    "alternativas": [
+      "Linguagens; Matemática; Ciências da Natureza; Ciências Humanas; Formação Pessoal e Social.",
+      "Linguagens e Códigos; Matemática; Ciências Naturais; Ciências Sociais; Ensino Religioso.",
+      "Linguagens; Matemática e suas Tecnologias; Ciências da Natureza; Ciências Humanas; Projeto de Vida.",
+      "Língua Portuguesa; Matemática; Ciências; História e Geografia; Ensino Religioso.",
+      "Linguagens; Matemática; Ciências da Natureza; Ciências Humanas; Ensino Religioso."
+    ],
+    "correta": 4,
+    "feedbackAcerto": "Correto. No Ensino Fundamental, a BNCC organiza-se nas áreas de Linguagens, Matemática, Ciências da Natureza, Ciências Humanas e Ensino Religioso.",
+    "feedbackErro": "A banca costuma misturar nomes do Ensino Médio, componentes isolados ou expressões de outros documentos curriculares.",
+    "dicaBanca": "EF: Linguagens + Matemática + Natureza + Humanas + Ensino Religioso."
+  },
+  {
+    "pergunta": "Sobre a área de Linguagens no Ensino Fundamental, assinale a alternativa correta.",
+    "alternativas": [
+      "Reúne Língua Portuguesa, Arte, Educação Física e, nos Anos Finais, Língua Inglesa, preservando especificidades de cada componente.",
+      "Reúne Língua Portuguesa, Arte, Educação Física e Língua Inglesa em todos os anos, com habilidades idênticas organizadas por campo de atuação.",
+      "Integra Língua Portuguesa, Língua Inglesa e Arte, enquanto Educação Física pertence à área de Ciências da Natureza por tratar do corpo humano.",
+      "É formada por Língua Portuguesa, Arte e Educação Física, sendo a Língua Inglesa tratada como parte diversificada definida por cada sistema.",
+      "Constitui área única sem divisão por componentes, pois a BNCC privilegia práticas de linguagem integradas em toda a etapa."
+    ],
+    "correta": 0,
+    "feedbackAcerto": "Correto. A área de Linguagens reúne Língua Portuguesa, Arte, Educação Física e Língua Inglesa, esta última nos Anos Finais do Ensino Fundamental.",
+    "feedbackErro": "A BNCC preserva componentes dentro da área; a Língua Inglesa aparece nos Anos Finais, e Educação Física integra Linguagens.",
+    "dicaBanca": "No EF, Linguagens = LP + Arte + Educação Física + Inglês nos Anos Finais."
+  },
+  {
+    "pergunta": "Na estrutura da BNCC para o Ensino Fundamental, a área de Ciências da Natureza é constituída pelo componente curricular:",
+    "alternativas": [
+      "Biologia, organizado em unidades temáticas que articulam ambiente, corpo humano e tecnologia ao longo da etapa.",
+      "Ciências e Tecnologia, componente único que integra alfabetização científica, computação e educação ambiental.",
+      "Ciências, organizado de forma progressiva em unidades temáticas e habilidades ao longo dos anos do Ensino Fundamental.",
+      "Ciências Naturais, dividido em Biologia, Física e Química a partir dos Anos Finais da etapa obrigatória.",
+      "Ciências da Natureza, sem componente específico, pois a área é desenvolvida de forma interdisciplinar pelos demais componentes."
+    ],
+    "correta": 2,
+    "feedbackAcerto": "Correto. No Ensino Fundamental, Ciências da Natureza tem como componente curricular Ciências, com habilidades organizadas ao longo da etapa.",
+    "feedbackErro": "Biologia, Física e Química não aparecem como componentes separados no Ensino Fundamental da BNCC.",
+    "dicaBanca": "EF: área Ciências da Natureza → componente Ciências."
+  },
+  {
+    "pergunta": "Na BNCC do Ensino Fundamental, a área de Ciências Humanas é composta por:",
+    "alternativas": [
+      "História, Geografia e Ensino Religioso, integrados para interpretar relações sociais, territoriais e culturais.",
+      "História, Geografia, Sociologia e Filosofia, organizados por competências específicas comuns à área.",
+      "Geografia e História, com Ensino Religioso integrado à área apenas nos Anos Finais do Ensino Fundamental.",
+      "Geografia e História, que preservam competências e habilidades próprias dentro da área de Ciências Humanas.",
+      "História e Estudos Sociais, sendo Geografia incorporada às práticas interdisciplinares de território e espaço."
+    ],
+    "correta": 3,
+    "feedbackAcerto": "Correto. Ciências Humanas no Ensino Fundamental reúne Geografia e História, cada qual com organização e habilidades próprias dentro da área.",
+    "feedbackErro": "Ensino Religioso aparece como área própria na estrutura da BNCC do Ensino Fundamental, e não como componente de Ciências Humanas.",
+    "dicaBanca": "EF: Ciências Humanas = Geografia + História."
+  },
+  {
+    "pergunta": "A presença do Ensino Religioso na estrutura da BNCC do Ensino Fundamental significa que ele:",
+    "alternativas": [
+      "É componente obrigatório para todos os estudantes, sem possibilidade de opção quanto à matrícula, por integrar a formação básica comum.",
+      "Integra uma área própria na BNCC do Ensino Fundamental, sem alterar as regras legais específicas sobre sua oferta e matrícula.",
+      "Pertence à área de Ciências Humanas e deve ser trabalhado de forma integrada a História e Geografia em todos os anos.",
+      "Constitui tema transversal, não possuindo competências específicas nem organização curricular própria no documento nacional.",
+      "É desenvolvido apenas nos Anos Finais, quando os estudantes possuem maturidade para discutir diversidade religiosa e direitos humanos."
+    ],
+    "correta": 1,
+    "feedbackAcerto": "Correto. A BNCC apresenta Ensino Religioso como área própria no Ensino Fundamental, mas isso não elimina as regras legais sobre sua oferta e matrícula.",
+    "feedbackErro": "A estrutura curricular da BNCC não transforma matrícula facultativa em obrigatória nem desloca Ensino Religioso para Ciências Humanas.",
+    "dicaBanca": "Cuidado: estar na BNCC como área não muda automaticamente o regime jurídico da matrícula."
+  },
+  {
+    "pergunta": "Quanto à alfabetização nos Anos Iniciais, a BNCC estabelece que a ação pedagógica deve ter foco nesse processo especialmente:",
+    "alternativas": [
+      "Ao longo dos cinco anos iniciais, sem diferenciação de prioridade entre os anos, pois a alfabetização ocorre de forma contínua.",
+      "No 1º ano, devendo o 2º ano concentrar-se na consolidação de práticas de leitura literária e produção autônoma de textos.",
+      "Do 1º ao 3º ano, período definido pela BNCC como ciclo nacional obrigatório de alfabetização e consolidação da escrita.",
+      "Apenas após a Educação Infantil, mas sem indicar período específico, cabendo a cada sistema definir quando ocorrerá a alfabetização formal.",
+      "Nos dois primeiros anos do Ensino Fundamental, com atenção à apropriação do sistema de escrita alfabética e às práticas de letramento."
+    ],
+    "correta": 4,
+    "feedbackAcerto": "Correto. A BNCC indica os dois primeiros anos do Ensino Fundamental como período de foco da ação pedagógica na alfabetização.",
+    "feedbackErro": "A banca pode explorar referências de políticas anteriores; para a BNCC, o foco explícito da alfabetização está nos dois primeiros anos.",
+    "dicaBanca": "BNCC: alfabetização com foco especial no 1º e 2º anos do Ensino Fundamental."
+  },
+  {
+    "pergunta": "Uma rede organiza habilidades de maneira articulada, retomando conhecimentos em níveis crescentes de complexidade ao longo dos anos. Essa organização expressa o princípio de:",
+    "alternativas": [
+      "Progressão das aprendizagens, com continuidade, aprofundamento e articulação entre conhecimentos e habilidades ao longo da trajetória escolar.",
+      "Padronização curricular, pela repetição uniforme de habilidades essenciais em todas as escolas e turmas da mesma etapa.",
+      "Linearidade pedagógica, segundo a qual cada habilidade deve ser esgotada em um único ano antes do início de novos objetos de conhecimento.",
+      "Avaliação por competências, em que o currículo se organiza conforme níveis nacionais de desempenho previamente definidos para os estudantes e utilizados como referência obrigatória para a progressão entre anos.",
+      "Sequenciamento conteudista, necessário para assegurar que os componentes curriculares sigam a mesma ordem em todas as redes de ensino."
+    ],
+    "correta": 0,
+    "feedbackAcerto": "Correto. Progressão envolve continuidade e aprofundamento das aprendizagens ao longo do percurso, sem reduzir o currículo a sequência mecânica de conteúdos.",
+    "feedbackErro": "A BNCC trabalha progressão, mas não exige esgotamento linear de habilidades nem uniformidade absoluta da organização curricular.",
+    "dicaBanca": "Progressão = retomar, articular e aprofundar aprendizagens ao longo do percurso."
+  },
+  {
+    "pergunta": "Uma escola afirma que, para cumprir a BNCC, todos os professores devem utilizar a mesma metodologia ativa definida pela secretaria. A afirmação é:",
+    "alternativas": [
+      "Correta, porque a Base vincula o desenvolvimento de competências ao uso de metodologias ativas e aprendizagem baseada em problemas.",
+      "Correta, desde que a metodologia escolhida esteja alinhada às Competências Gerais e seja utilizada em todas as áreas do conhecimento.",
+      "Incorreta, porque a BNCC define aprendizagens essenciais, competências e habilidades, mas não impõe uma metodologia pedagógica única às escolas.",
+      "Incorreta, porque metodologias devem ser definidas exclusivamente pelo professor, sem participação da escola, da rede ou do planejamento coletivo.",
+      "Correta, quando a padronização metodológica for necessária para comparar os resultados de aprendizagem entre diferentes unidades escolares."
+    ],
+    "correta": 2,
+    "feedbackAcerto": "Correto. A BNCC estabelece o que deve ser assegurado em termos de aprendizagens, mas não prescreve uma metodologia única de ensino.",
+    "feedbackErro": "Alinhamento à BNCC não significa uniformização metodológica; redes e escolas mantêm decisões pedagógicas dentro de suas responsabilidades.",
+    "dicaBanca": "Pegadinha: BNCC não é manual de metodologia obrigatória."
+  },
+  {
+    "pergunta": "Em uma reunião, a equipe decide utilizar resultados de atividades, observações e avaliações para replanejar intervenções e apoiar a progressão dos estudantes. Essa prática está mais alinhada a uma avaliação que:",
+    "alternativas": [
+      "Classifica os estudantes em níveis de domínio para permitir comparação entre turmas e estabelecimento de metas comuns de desempenho.",
+      "Verifica ao final do período se as habilidades previstas foram totalmente dominadas, evitando alterações no planejamento já executado.",
+      "Substitui avaliações externas por instrumentos produzidos pela escola, pois apenas a avaliação interna pode acompanhar competências e habilidades.",
+      "Produz evidências sobre as aprendizagens e orienta decisões pedagógicas, integrando avaliação, ensino e replanejamento.",
+      "Prioriza resultados quantitativos para identificar quais habilidades devem ser retomadas em programas de recuperação paralela."
+    ],
+    "correta": 3,
+    "feedbackAcerto": "Correto. A avaliação ganha função pedagógica quando produz informações para acompanhar aprendizagens, replanejar e orientar intervenções.",
+    "feedbackErro": "A lógica formativa não reduz avaliação à classificação ou ao momento final; ela alimenta continuamente o trabalho pedagógico.",
+    "dicaBanca": "Avaliar para ensinar melhor: evidência de aprendizagem deve gerar decisão pedagógica."
+  },
+  {
+    "pergunta": "Na estrutura da BNCC do Ensino Médio, as aprendizagens se organizam em quatro áreas do conhecimento. Assinale a alternativa correta.",
+    "alternativas": [
+      "Linguagens; Matemática; Ciências da Natureza; Ciências Humanas, mantendo a mesma nomenclatura utilizada no Ensino Fundamental.",
+      "Linguagens e suas Tecnologias; Matemática e suas Tecnologias; Ciências da Natureza e suas Tecnologias; Ciências Humanas e Sociais Aplicadas.",
+      "Linguagens e Códigos; Matemática e Tecnologias; Ciências Naturais e Tecnologias; Ciências Humanas e Formação Social.",
+      "Língua Portuguesa e Linguagens; Matemática; Ciências da Natureza; Ciências Humanas, acrescidas de Projeto de Vida como quinta área obrigatória da organização curricular do Ensino Médio.",
+      "Linguagens e suas Tecnologias; Matemática e suas Tecnologias; Ciências da Natureza; Ciências Humanas, Sociais e Econômicas."
+    ],
+    "correta": 1,
+    "feedbackAcerto": "Correto. A BNCC do Ensino Médio se organiza em quatro áreas: Linguagens e suas Tecnologias, Matemática e suas Tecnologias, Ciências da Natureza e suas Tecnologias e Ciências Humanas e Sociais Aplicadas.",
+    "feedbackErro": "A nomenclatura do Ensino Médio difere daquela usada no Ensino Fundamental e é alvo frequente de trocas em alternativas.",
+    "dicaBanca": "EM: quatro áreas, com 'e suas Tecnologias' em três delas e 'Humanas e Sociais Aplicadas' na quarta."
+  },
+  {
+    "pergunta": "Na BNCC do Ensino Médio, a área de Linguagens e suas Tecnologias busca ampliar práticas de linguagem e participação em diferentes campos da vida social. Sobre sua organização, assinale a alternativa correta.",
+    "alternativas": [
+      "A área elimina a identificação de componentes, pois todas as habilidades passam a ser exclusivamente interdisciplinares e sem referência à Língua Portuguesa.",
+      "A área é formada apenas por Língua Portuguesa e Língua Inglesa, já que Arte e Educação Física são componentes específicos do Ensino Fundamental.",
+      "A área organiza competências próprias, mas transfere toda a definição de habilidades de Língua Portuguesa para os currículos estaduais.",
+      "A área mantém a nomenclatura do Ensino Fundamental e trata tecnologias apenas como tema transversal sem relação com as competências específicas.",
+      "A área articula diferentes práticas de linguagem e a BNCC apresenta também organização específica para Língua Portuguesa no Ensino Médio."
+    ],
+    "correta": 4,
+    "feedbackAcerto": "Correto. A área de Linguagens e suas Tecnologias articula práticas diversas e a BNCC apresenta seção própria de Língua Portuguesa no Ensino Médio.",
+    "feedbackErro": "A organização por área não apaga as especificidades da Língua Portuguesa nem reduz Linguagens apenas a dois componentes.",
+    "dicaBanca": "No EM, organização por área não significa desaparecimento de toda especificidade dos componentes."
+  },
+  {
+    "pergunta": "Uma equipe do Ensino Médio organiza situações em que estudantes modelam fenômenos, interpretam dados, formulam conjecturas e resolvem problemas em diferentes contextos. Essa proposta está diretamente relacionada à área de:",
+    "alternativas": [
+      "Matemática e suas Tecnologias, pela mobilização de raciocínio, representação, modelagem, análise de dados e resolução de problemas.",
+      "Ciências da Natureza e suas Tecnologias, porque modelagem e dados devem ser trabalhados prioritariamente em situações experimentais científicas.",
+      "Ciências Humanas e Sociais Aplicadas, pois problemas contextualizados exigem interpretação de relações econômicas, territoriais e sociais.",
+      "Linguagens e suas Tecnologias, porque tabelas, gráficos e símbolos são linguagens utilizadas para comunicar ideias e resultados.",
+      "Formação Geral Básica, sem vinculação específica a área, já que a resolução de problemas constitui competência comum a todo o Ensino Médio."
+    ],
+    "correta": 0,
+    "feedbackAcerto": "Correto. A área de Matemática e suas Tecnologias enfatiza raciocínio, modelagem, representações, análise e resolução de problemas em contextos diversos.",
+    "feedbackErro": "Interdisciplinaridade é possível, mas o conjunto de ações descrito está diretamente ligado às competências matemáticas do Ensino Médio.",
+    "dicaBanca": "Matemática no EM: modelar, representar, analisar dados, conjecturar e resolver problemas."
+  },
+  {
+    "pergunta": "No Ensino Médio, uma atividade integra análise histórica, leitura territorial, reflexão filosófica e interpretação de fenômenos sociais contemporâneos. Essa proposta se aproxima mais diretamente da área de:",
+    "alternativas": [
+      "Linguagens e suas Tecnologias, porque a análise social depende da leitura crítica de discursos, textos e práticas culturais.",
+      "Ciências da Natureza e suas Tecnologias, pois fenômenos sociais contemporâneos também envolveriam relações entre ciência, ambiente e sociedade e deveriam ser tratados prioritariamente nessa área.",
+      "Ciências Humanas e Sociais Aplicadas, que articula conhecimentos de História, Geografia, Filosofia e Sociologia na compreensão da vida social.",
+      "Matemática e suas Tecnologias, desde que a interpretação dos fenômenos utilize dados estatísticos e representações quantitativas.",
+      "Projeto de Vida, porque a análise da sociedade deve orientar escolhas pessoais e profissionais dos jovens durante a etapa final."
+    ],
+    "correta": 2,
+    "feedbackAcerto": "Correto. Ciências Humanas e Sociais Aplicadas articula conhecimentos históricos, geográficos, filosóficos e sociológicos para compreender processos sociais.",
+    "feedbackErro": "A situação pode dialogar com outras áreas, mas a integração descrita corresponde diretamente à área de Ciências Humanas e Sociais Aplicadas.",
+    "dicaBanca": "CHSA no EM: História + Geografia + Filosofia + Sociologia em perspectiva articulada."
+  },
+  {
+    "pergunta": "Uma atividade do Ensino Médio envolve investigação sobre transformações de energia, estrutura da matéria, funcionamento dos organismos e impactos ambientais. A área mais diretamente mobilizada é:",
+    "alternativas": [
+      "Matemática e suas Tecnologias, por exigir modelagem de grandezas, análise quantitativa e representação de relações entre variáveis.",
+      "Ciências Humanas e Sociais Aplicadas, porque impactos ambientais deveriam ser analisados principalmente a partir de suas consequências sociais, territoriais, políticas e econômicas.",
+      "Linguagens e suas Tecnologias, já que comunicar resultados científicos e interpretar textos técnicos são dimensões essenciais da atividade.",
+      "Ciências da Natureza e suas Tecnologias, que articula conhecimentos associados à Física, Química e Biologia para analisar fenômenos e processos.",
+      "Formação Geral Básica, sem vinculação a uma área específica, pois os objetos descritos pertencem a diferentes componentes curriculares."
+    ],
+    "correta": 3,
+    "feedbackAcerto": "Correto. Ciências da Natureza e suas Tecnologias articula conhecimentos associados à Física, Química e Biologia em torno de fenômenos e problemas complexos.",
+    "feedbackErro": "A interdisciplinaridade não impede reconhecer a área central: energia, matéria, organismos e ambiente são objetos típicos de Ciências da Natureza.",
+    "dicaBanca": "CN no EM = integração de Física, Química e Biologia em competências de área."
+  },
+  {
+    "pergunta": "A Resolução CNE/CP nº 4/2018 deve ser corretamente associada a qual afirmação?",
+    "alternativas": [
+      "Instituiu a BNCC da Educação Infantil e do Ensino Fundamental, definindo seis direitos de aprendizagem e cinco Campos de Experiência.",
+      "Instituiu a BNCC na etapa do Ensino Médio, completando a normatização da Base para a Educação Básica.",
+      "Instituiu as Diretrizes Curriculares Nacionais para formação de professores alinhadas às competências gerais da Educação Básica.",
+      "Instituiu o complemento de Computação à BNCC e tornou obrigatório um componente curricular de programação em todas as redes.",
+      "Instituiu as diretrizes de avaliação da BNCC e vinculou obrigatoriamente currículos, Saeb e Enem à mesma matriz de habilidades."
+    ],
+    "correta": 1,
+    "feedbackAcerto": "Correto. A Resolução CNE/CP nº 4/2018 instituiu a BNCC do Ensino Médio e completou a normatização da Base para as etapas da Educação Básica.",
+    "feedbackErro": "A Resolução nº 4/2018 está diretamente ligada à etapa do Ensino Médio, não à formação docente, Computação ou avaliação nacional.",
+    "dicaBanca": "4/2018 = BNCC-EM. Essa associação é objetiva e muito cobrável."
+  },
+  {
+    "pergunta": "Na implementação da BNCC, União, Estados, Distrito Federal e Municípios possuem responsabilidades articuladas. Essa lógica é mais bem expressa por:",
+    "alternativas": [
+      "Centralização normativa, em que a União define currículo, metodologia e avaliação, cabendo aos demais entes apenas executar as decisões nacionais.",
+      "Autonomia plena dos sistemas, que podem definir aprendizagens essenciais distintas desde que respeitem a legislação educacional geral.",
+      "Descentralização curricular independente, na qual cada ente elabora sua própria base e decide se adota ou não as competências nacionais.",
+      "Delegação administrativa, pela qual Estados e Municípios implementam orientações federais sem necessidade de pactuação ou construção conjunta.",
+      "Regime de colaboração e pacto interfederativo, com articulação entre entes na construção curricular e nas ações necessárias à implementação."
+    ],
+    "correta": 4,
+    "feedbackAcerto": "Correto. A implementação da BNCC se insere no regime de colaboração, exigindo articulação entre os diferentes entes federativos.",
+    "feedbackErro": "A Base combina referência nacional comum com responsabilidades compartilhadas; não implica centralização absoluta nem autonomia para ignorá-la.",
+    "dicaBanca": "BNCC + federação = colaboração, pactuação e responsabilidades articuladas."
+  },
+  {
+    "pergunta": "Uma rede revisa currículo, materiais didáticos, formação docente, planejamento e processos avaliativos após a implementação da BNCC. Essa atuação demonstra que:",
+    "alternativas": [
+      "Implementar a BNCC exige ações sistêmicas e coerentes entre currículo, formação, materiais, ensino e avaliação, não mera troca de documento.",
+      "A implementação se completa quando o currículo é reescrito, sendo formação e avaliação medidas facultativas definidas por cada escola.",
+      "O alinhamento de materiais e formação é suficiente, pois as práticas de avaliação podem permanecer desvinculadas das aprendizagens essenciais.",
+      "A principal responsabilidade da rede é atualizar livros e plataformas, já que planejamento e avaliação pertencem exclusivamente à autonomia docente.",
+      "A implementação deve priorizar avaliações externas, pois são elas que determinam quais habilidades da BNCC precisam orientar os currículos."
+    ],
+    "correta": 0,
+    "feedbackAcerto": "Correto. A implementação curricular é sistêmica: envolve documentos, formação, materiais, planejamento, prática pedagógica e avaliação de modo articulado.",
+    "feedbackErro": "Trocar apenas o texto curricular não garante implementação; é necessária coerência entre diferentes dimensões do trabalho educacional.",
+    "dicaBanca": "Implementar Base é mudar o sistema de trabalho pedagógico, não apenas editar o currículo."
+  },
+  {
+    "pergunta": "Sobre as Normas sobre Computação na Educação Básica – Complemento à BNCC, assinale a alternativa correta.",
+    "alternativas": [
+      "Foram instituídas para substituir a Competência Geral de Cultura Digital, que deixaria de integrar a BNCC após a regulamentação específica da Computação como referência curricular nacional.",
+      "Criaram obrigatoriamente a disciplina autônoma de Programação em todas as etapas e modalidades da Educação Básica.",
+      "Foram estabelecidas pela Resolução CNE/CEB nº 1/2022 como complemento à BNCC, ampliando referenciais de aprendizagem relacionados à Computação.",
+      "Aplicam-se apenas ao Ensino Fundamental e ao Ensino Médio, pois a Educação Infantil não integra as normas nacionais de Computação.",
+      "Constituem documento facultativo destinado somente às redes que dispõem de laboratório de informática e conectividade adequada."
+    ],
+    "correta": 2,
+    "feedbackAcerto": "Correto. A Resolução CNE/CEB nº 1/2022 estabeleceu normas de Computação como complemento à BNCC, sem eliminar a Competência Geral de Cultura Digital.",
+    "feedbackErro": "O complemento de Computação não equivale a impor uma disciplina única nem substitui a competência de cultura digital já presente na Base.",
+    "dicaBanca": "Computação na Educação Básica: complemento à BNCC, não substituição da Cultura Digital."
+  },
+  {
+    "pergunta": "Considere as afirmativas: I. A BNCC define aprendizagens essenciais comuns. II. Os currículos devem contextualizar essas aprendizagens. III. A Base determina uma metodologia única para garantir uniformidade nacional. IV. Competências envolvem mobilização integrada de conhecimentos, habilidades, atitudes e valores. Está correto o que se afirma em:",
+    "alternativas": [
+      "I e II, apenas.",
+      "III e IV, apenas.",
+      "I, II e III, apenas.",
+      "I, II e IV, apenas.",
+      "II, III e IV, apenas."
+    ],
+    "correta": 3,
+    "feedbackAcerto": "Correto. I, II e IV estão corretas; a BNCC não impõe metodologia única, embora estabeleça aprendizagens essenciais e competências a serem desenvolvidas.",
+    "feedbackErro": "A afirmativa III é a única incorreta: unidade nacional de aprendizagens não significa uniformidade obrigatória de métodos pedagógicos.",
+    "dicaBanca": "Questão integradora: comum nacional + contextualização local + competência integrada, sem método único."
+  }
+];

@@ -1,1419 +1,702 @@
 const planejamento = [
-
 {
-    pergunta: `
-Durante uma reunião pedagógica, um professor afirmou que o planejamento é desnecessário porque a experiência adquirida ao longo dos anos permite conduzir as aulas de forma improvisada. À luz dos fundamentos do Planejamento Educacional, essa afirmação é inadequada porque:
-    `,
-
+    pergunta: "Uma equipe pedagógica entende o planejamento como processo que antecede a ação, acompanha sua execução e pode ser revisto à luz dos resultados obtidos. Essa compreensão caracteriza o planejamento como:",
     alternativas: [
-        "O planejamento tem como principal finalidade atender às exigências burocráticas dos sistemas de ensino.",
-        "A experiência profissional substitui a necessidade de definir objetivos, metodologias e formas de avaliação.",
-        "A improvisação favorece a adaptação do ensino às necessidades dos estudantes de forma mais eficiente que o planejamento.",
-        "O planejamento deve ocorrer em geral no início do ano letivo e não interfere diretamente na aprendizagem.",
-        "O planejamento constitui um processo intencional de reflexão, organização e tomada de decisões sobre a ação educativa."
+        "Processo intencional, contínuo e articulado à avaliação da prática educativa.",
+        "Registro administrativo destinado a antecipar todas as ocorrências do período letivo.",
+        "Roteiro técnico cuja principal finalidade é reduzir mudanças durante a execução das ações.",
+        "Documento de controle que organiza prazos, tarefas e responsabilidades previamente definidas.",
+        "Previsão de atividades cuja validade depende da manutenção integral das condições iniciais.",
     ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. O planejamento é uma ação intencional e reflexiva que orienta o trabalho pedagógico, permitindo maior coerência entre objetivos, conteúdos, metodologias e avaliação.
-    `,
-
-    feedbackErro: `
-O planejamento não é mera burocracia. Trata-se de um instrumento fundamental para organizar e direcionar as ações educativas.
-    `,
-
-    dicaBanca: `
-As bancas costumam associar planejamento às ideias de intencionalidade, organização, previsão e reflexão da prática pedagógica.
-    `
-},
-
-{
-    pergunta: `
-Ao discutir o conceito de planejamento educacional, uma coordenadora pedagógica destacou que planejar envolve analisar a realidade, definir objetivos e estabelecer ações para alcançá-los. Essa concepção evidencia que o planejamento:
-    `,
-
-    alternativas: [
-        "Consiste na elaboração de documentos formais sem relação com a prática pedagógica.",
-        "Tem caráter predominantemente administrativo e financeiro.",
-        "Concentra-se à escolha dos conteúdos curriculares que serão ensinados.",
-        "É um processo de intervenção consciente sobre a realidade educacional.",
-        "Concentra-se à organização das avaliações escolares."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. Planejar significa analisar uma realidade, definir metas e organizar ações capazes de transformar ou aperfeiçoar essa realidade.
-    `,
-
-    feedbackErro: `
-O planejamento vai além da elaboração de documentos. Ele orienta decisões e ações voltadas à consecução de objetivos educacionais.
-    `,
-
-    dicaBanca: `
-Planejamento é frequentemente definido como processo de análise da realidade + definição de objetivos + ação transformadora.
-    `
-},
-
-{
-    pergunta: `
-Segundo uma perspectiva crítica do Planejamento Educacional, o ato de planejar deve:
-    `,
-
-    alternativas: [
-        "Ser neutro e desvinculado das condições sociais e históricas em que ocorre.",
-        "Limitar-se ao cumprimento das determinações legais impostas aos sistemas de ensino.",
-        "Considerar o contexto social, político e cultural em que se desenvolvem as práticas educativas.",
-        "Priorizar predominantemente aspectos técnicos relacionados à execução das atividades escolares.",
-        "Ser elaborado em geral pela equipe gestora da instituição."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. O planejamento educacional não ocorre em um vazio social; ele está relacionado às condições históricas, políticas, culturais e econômicas da realidade educacional.
-    `,
-
-    feedbackErro: `
-As abordagens críticas do planejamento defendem a análise do contexto e das condições concretas que influenciam a educação.
-    `,
-
-    dicaBanca: `
-Questões críticas de planejamento costumam rejeitar ideias de neutralidade e enfatizar contexto social e transformação da realidade.
-    `
-},
-
-{
-    pergunta: `
-Uma escola identificou elevados índices de evasão e baixo rendimento escolar. Antes de definir ações de intervenção, a equipe realizou levantamento de dados, análise das causas e consultas à comunidade escolar. Essa etapa corresponde:
-    `,
-
-    alternativas: [
-        "À execução das ações planejadas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Ao diagnóstico da realidade educacional, fundamental para o planejamento.",
-        "Ao controle disciplinar dos estudantes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "À avaliação final dos resultados obtidos, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "À elaboração exclusiva dos instrumentos de avaliação, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. O diagnóstico constitui etapa essencial do planejamento, pois permite compreender a realidade antes da definição de objetivos e estratégias.
-    `,
-
-    feedbackErro: `
-Planejar adequadamente exige conhecer a situação existente para que as ações propostas sejam coerentes e eficazes.
-    `,
-
-    dicaBanca: `
-Diagnóstico é uma das palavras mais cobradas em Planejamento Educacional.
-    `
-},
-
-{
-    pergunta: `
-Ao refletir sobre os fundamentos do planejamento, um professor concluiu que planejar envolve prever ações futuras, mas sem ignorar a possibilidade de ajustes durante a execução. Essa conclusão está correta porque:
-    `,
-
-    alternativas: [
-        "O planejamento possui caráter dinâmico e pode ser readequado diante das necessidades identificadas.",
-        "O planejamento deve permanecer inalterado independentemente das situações encontradas na prática.",
-        "A flexibilidade compromete a eficiência do planejamento pedagógico, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "A revisão do planejamento demonstra falha na elaboração inicial do documento, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Alterações no planejamento só podem ocorrer mediante autorização da gestão escolar, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
-    ],
-
     correta: 0,
-
-    feedbackAcerto: `
-Correto. O planejamento é um processo dinâmico e flexível, que pode ser ajustado para responder às demandas e desafios surgidos durante sua execução.
-    `,
-
-    feedbackErro: `
-Flexibilidade não significa improvisação. Significa capacidade de adaptação sem perder os objetivos educacionais definidos.
-    `,
-
-    dicaBanca: `
-Uma das características clássicas do planejamento é ser contínuo, dinâmico e flexível.
-    `
+    feedbackAcerto: "Correto. Planejar envolve intencionalidade, acompanhamento, avaliação e revisão das decisões pedagógicas.",
+    feedbackErro: "Planejamento não se reduz a um documento fixo nem a uma tentativa de prever rigidamente tudo o que ocorrerá.",
+    dicaBanca: "Planejamento é processo: prever, agir, acompanhar, avaliar e reorientar."
 },
-
 {
-    pergunta: `
-Durante uma formação pedagógica, discutiu-se que o planejamento não deve ser compreendido apenas como preenchimento de formulários ou elaboração de cronogramas. Segundo uma concepção crítica, a principal finalidade do planejamento educacional é:
-    `,
-
+    pergunta: "Em uma formação docente, discutiu-se a diferença entre planejamento e plano. Assinale a alternativa que expressa corretamente essa distinção.",
     alternativas: [
-        "Orientar ações educativas intencionais voltadas à melhoria da aprendizagem e à transformação da realidade educacional.",
-        "Garantir o cumprimento automático das determinações administrativas dos sistemas de ensino, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "Organizar tecnicamente as atividades escolares sem considerar as necessidades da comunidade, em articulação com as práticas sociais, culturais e comunitárias presentes no território.",
-        "Produzir registros burocráticos que permitam fiscalização das atividades docentes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Padronizar as práticas pedagógicas independentemente das características dos estudantes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
+        "Planejamento e plano são sinônimos, pois ambos designam o documento entregue à coordenação e não o processo de decisão pedagógica que o precede.",
+        "Planejamento é o processo de reflexão e decisão; plano é uma de suas formas de registro e organização.",
+        "Planejamento corresponde à execução das atividades; plano corresponde exclusivamente à avaliação posterior.",
+        "Planejamento é elaborado pela gestão; plano é elaborado apenas pelo professor em sala de aula.",
+        "Planejamento define finalidades gerais; plano registra somente conteúdos e recursos didáticos.",
     ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. O planejamento possui finalidade pedagógica e social, orientando ações intencionais voltadas à melhoria da aprendizagem e à transformação da realidade educacional.
-    `,
-
-    feedbackErro: `
-A visão crítica do planejamento ultrapassa aspectos burocráticos e enfatiza seu papel na organização consciente da ação educativa.
-    `,
-
-    dicaBanca: `
-Quando aparecer planejamento crítico, procure alternativas relacionadas à transformação da realidade e à intencionalidade pedagógica.
-    `
-},
-
-{
-    pergunta: `
-Um coordenador pedagógico afirmou que toda ação educativa pressupõe algum tipo de planejamento, mesmo quando este não está formalmente registrado. Essa afirmação fundamenta-se na ideia de que:
-    `,
-
-    alternativas: [
-        "Planejar significa em geral produzir documentos escritos.",
-        "O planejamento só existe quando aprovado pela gestão escolar.",
-        "O planejamento é inerente à ação humana intencional.",
-        "As ações educativas podem ocorrer sem definição prévia de objetivos.",
-        "A formalização documental é mais importante que a reflexão pedagógica."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. Planejar é uma atividade inerente às ações humanas intencionais, envolvendo previsão, organização e tomada de decisões.
-    `,
-
-    feedbackErro: `
-A elaboração de documentos é apenas uma das formas de registrar o planejamento; sua essência está na reflexão e na organização da ação.
-    `,
-
-    dicaBanca: `
-Muitas bancas diferenciam planejamento (processo) de plano (documento).
-    `
-},
-
-{
-    pergunta: `
-Ao comparar diferentes concepções de planejamento, uma professora observou que determinadas abordagens valorizam excessivamente aspectos técnicos e operacionais, enquanto outras enfatizam participação, reflexão e compromisso social. Essa análise demonstra que:
-    `,
-
-    alternativas: [
-        "Todas as concepções de planejamento possuem os mesmos fundamentos teóricos, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "O planejamento é um processo neutro e desprovido de concepções educacionais, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "A dimensão técnica é incompatível com qualquer forma de planejamento educacional, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "As concepções de planejamento refletem diferentes visões de educação, sociedade e formação humana.",
-        "A participação coletiva elimina a necessidade de organização técnica, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. Diferentes concepções de planejamento estão associadas a distintas visões de educação, sociedade, conhecimento e formação humana.
-    `,
-
-    feedbackErro: `
-O planejamento não é neutro; ele expressa valores, finalidades e concepções educacionais.
-    `,
-
-    dicaBanca: `
-Questões mais avançadas costumam cobrar a dimensão política e ideológica do planejamento.
-    `
-},
-
-{
-    pergunta: `
-Uma escola decidiu elaborar seu planejamento anual envolvendo professores, estudantes, famílias e equipe gestora. Essa iniciativa está fundamentada na compreensão de que:
-    `,
-
-    alternativas: [
-        "O planejamento deve ser construído predominantemente pelos especialistas da área educacional.",
-        "A gestão democrática reduz a eficiência dos processos de planejamento.",
-        "As decisões pedagógicas devem permanecer restritas aos professores.",
-        "A participação da comunidade limita a autonomia da escola.",
-        "A participação coletiva favorece maior compromisso com os objetivos e ações definidos."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. A construção coletiva fortalece o compromisso dos participantes e amplia a legitimidade das decisões tomadas.
-    `,
-
-    feedbackErro: `
-O planejamento participativo valoriza o diálogo e a corresponsabilidade entre os diferentes segmentos da comunidade escolar.
-    `,
-
-    dicaBanca: `
-Planejamento participativo costuma aparecer associado à gestão democrática.
-    `
-},
-
-{
-    pergunta: `
-Segundo autores como Libâneo e Vasconcellos, uma das finalidades centrais do planejamento é:
-    `,
-
-    alternativas: [
-        "Controlar rigidamente todas as ações dos professores durante o ano letivo, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Orientar a prática pedagógica de forma consciente, articulada e coerente com os objetivos educacionais.",
-        "Eliminar a necessidade de avaliação do processo educativo, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Substituir a autonomia docente por decisões administrativas centralizadas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Garantir predominantemente o cumprimento do calendário escolar, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
-    ],
-
     correta: 1,
-
-    feedbackAcerto: `
-Correto. Para esses autores, o planejamento organiza a ação educativa, favorecendo coerência entre objetivos, conteúdos, metodologias e avaliação.
-    `,
-
-    feedbackErro: `
-O planejamento deve servir como instrumento de reflexão e orientação da prática pedagógica, e não apenas como mecanismo de controle.
-    `,
-
-    dicaBanca: `
-Libâneo e Vasconcellos aparecem frequentemente associados à ideia de planejamento como prática reflexiva e transformadora.
-    `
+    feedbackAcerto: "Correto. O planejamento é um processo mais amplo; o plano materializa e organiza decisões desse processo.",
+    feedbackErro: "Confundir planejamento com plano reduz uma atividade reflexiva e decisória ao simples preenchimento de um documento.",
+    dicaBanca: "Processo = planejamento; registro organizado das decisões = plano."
 },
-
 {
-    pergunta: `
-Durante uma formação pedagógica, um professor afirmou que Planejamento Educacional, Planejamento Escolar e Planejamento de Ensino são expressões equivalentes e podem ser utilizadas como sinônimos. À luz da literatura educacional, essa afirmação é inadequada porque:
-    `,
-
+    pergunta: "Antes de definir metas de aprendizagem, uma escola analisa indicadores de frequência, resultados avaliativos, características do território e condições de trabalho. Essa etapa cumpre principalmente a função de:",
     alternativas: [
-        "O Planejamento Educacional refere-se às ações do professor em sala de aula, enquanto os demais dizem respeito em geral à administração escolar.",
-        "O Planejamento Escolar possui abrangência nacional, enquanto o Planejamento Educacional concentra-se à escola.",
-        "O Planejamento de Ensino é elaborado pelos sistemas de ensino e o Planejamento Educacional pelos professores.",
-        "As diferenças entre essas modalidades são predominantemente terminológicas.",
-        "As três modalidades possuem níveis distintos de abrangência, objetivos e responsáveis por sua elaboração."
+        "Substituir a definição de objetivos por dados quantitativos produzidos pela própria escola.",
+        "Determinar previamente as metodologias que deverão ser adotadas por todos os professores.",
+        "Construir um diagnóstico que fundamente prioridades e decisões coerentes com a realidade.",
+        "Estabelecer critérios classificatórios para comparar turmas e professores ao longo do ano.",
+        "Selecionar os conteúdos que apresentam maior frequência nas avaliações externas da rede.",
     ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. O Planejamento Educacional possui abrangência mais ampla, envolvendo políticas e sistemas de ensino; o Planejamento Escolar refere-se à instituição; e o Planejamento de Ensino relaciona-se à prática pedagógica do professor.
-    `,
-
-    feedbackErro: `
-As bancas frequentemente cobram as diferenças entre os níveis de planejamento, especialmente quanto à abrangência e aos responsáveis.
-    `,
-
-    dicaBanca: `
-Educacional = sistema; Escolar = escola; Ensino = sala de aula.
-    `
-},
-
-{
-    pergunta: `
-Uma Secretaria Estadual de Educação estabelece metas para ampliação do acesso à educação, redução da evasão escolar e melhoria dos indicadores de aprendizagem em toda a rede pública. Essa ação caracteriza principalmente:
-    `,
-
-    alternativas: [
-        "Planejamento Educacional.",
-        "Planejamento de Aula.",
-        "Planejamento de Ensino.",
-        "Planejamento Escolar.",
-        "Planejamento Curricular."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. O Planejamento Educacional ocorre em nível macro e envolve políticas, diretrizes e metas para sistemas e redes de ensino.
-    `,
-
-    feedbackErro: `
-Questões sobre sistemas educacionais, políticas públicas e metas para redes de ensino normalmente remetem ao Planejamento Educacional.
-    `,
-
-    dicaBanca: `
-Quanto maior a abrangência, maior a probabilidade de ser Planejamento Educacional.
-    `
-},
-
-{
-    pergunta: `
-Ao elaborar o Projeto Político-Pedagógico (PPP), uma escola analisa sua realidade, define metas institucionais e estabelece diretrizes para orientar suas ações. Essa atividade está relacionada principalmente ao:
-    `,
-
-    alternativas: [
-        "Planejamento de Aula.",
-        "Planejamento Escolar.",
-        "Planejamento de Ensino.",
-        "Planejamento Educacional Nacional.",
-        "Planejamento Disciplinar."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. O Planejamento Escolar está relacionado à organização global da instituição, incluindo o PPP, metas, objetivos e ações coletivas.
-    `,
-
-    feedbackErro: `
-O PPP é um dos principais instrumentos do Planejamento Escolar e expressa a identidade e os objetivos da instituição.
-    `,
-
-    dicaBanca: `
-PPP quase sempre indica Planejamento Escolar.
-    `
-},
-
-{
-    pergunta: `
-Uma professora organiza objetivos de aprendizagem, conteúdos, metodologias, recursos didáticos e instrumentos de avaliação para uma turma específica. Essa ação corresponde ao:
-    `,
-
-    alternativas: [
-        "Planejamento Educacional.",
-        "Planejamento Institucional.",
-        "Planejamento Estratégico da Rede.",
-        "Planejamento de Ensino.",
-        "Planejamento Administrativo."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. O Planejamento de Ensino refere-se diretamente ao trabalho pedagógico do professor e à organização do processo de ensino-aprendizagem.
-    `,
-
-    feedbackErro: `
-Objetivos, conteúdos, metodologias e avaliação constituem elementos centrais do Planejamento de Ensino.
-    `,
-
-    dicaBanca: `
-Professor organizando sua prática pedagógica = Planejamento de Ensino.
-    `
-},
-
-{
-    pergunta: `
-Ao analisar os diferentes níveis de planejamento, um candidato concluiu que eles devem funcionar de forma articulada, garantindo coerência entre políticas educacionais, objetivos institucionais e práticas pedagógicas. Essa conclusão é:
-    `,
-
-    alternativas: [
-        "Incorreta, pois cada modalidade de planejamento opera de forma independente, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Correta em geral para escolas privadas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Correta, pois os diferentes níveis de planejamento devem manter relação de complementaridade e coerência.",
-        "Incorreta, pois o Planejamento de Ensino não depende das diretrizes institucionais, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "Incorreta, porque o Planejamento Escolar substitui os demais, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
-    ],
-
     correta: 2,
-
-    feedbackAcerto: `
-Correto. Os diferentes níveis de planejamento precisam estar articulados para garantir unidade e coerência nas ações educacionais.
-    `,
-
-    feedbackErro: `
-Planejamento Educacional, Escolar e de Ensino possuem funções distintas, mas devem atuar de forma integrada.
-    `,
-
-    dicaBanca: `
-As bancas gostam da ideia de articulação entre sistema, escola e sala de aula.
-    `
+    feedbackAcerto: "Correto. O diagnóstico produz uma leitura fundamentada da realidade e orienta prioridades, objetivos e estratégias.",
+    feedbackErro: "Dados não substituem objetivos nem determinam automaticamente métodos; eles subsidiam decisões de planejamento.",
+    dicaBanca: "Diagnóstico responde: onde estamos e quais problemas ou potencialidades precisam orientar a ação?"
 },
 {
-    pergunta: `
-Durante a elaboração do Projeto Político-Pedagógico, a direção de uma escola decidiu envolver professores, estudantes, famílias, funcionários e representantes da comunidade local na discussão dos objetivos institucionais. Essa decisão fundamenta-se no princípio de que:
-    `,
-
+    pergunta: "No meio do semestre, o professor percebe que uma estratégia prevista no plano não favoreceu a aprendizagem e decide reorganizar as atividades sem abandonar os objetivos estabelecidos. Essa decisão evidencia:",
     alternativas: [
-        "A participação coletiva fortalece o compromisso dos diferentes segmentos com as decisões e metas definidas.",
-        "O planejamento escolar deve ser elaborado predominantemente pela equipe gestora para garantir eficiência administrativa.",
-        "A gestão democrática limita a autonomia da equipe pedagógica.",
-        "As decisões educacionais tornam-se menos eficazes quando compartilhadas com a comunidade.",
-        "O planejamento participativo deve restringir-se às questões administrativas da escola."
+        "Improvisação, pois qualquer alteração posterior invalida o planejamento elaborado inicialmente.",
+        "Ausência de objetivos, já que estratégias diferentes deveriam produzir finalidades também diferentes.",
+        "Fragilidade do plano, porque uma previsão adequada elimina a necessidade de revisão durante a execução das ações na escola.",
+        "Flexibilidade, entendida como capacidade de ajustar meios e ações preservando a intencionalidade pedagógica.",
+        "Descontinuidade, pois o planejamento deve manter métodos e recursos definidos no início do período letivo.",
     ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. O planejamento participativo busca envolver os diferentes segmentos da comunidade escolar, fortalecendo a corresponsabilidade e o compromisso com os objetivos institucionais.
-    `,
-
-    feedbackErro: `
-A participação coletiva é um dos fundamentos do planejamento participativo e da gestão democrática da educação.
-    `,
-
-    dicaBanca: `
-Planejamento participativo quase sempre aparece associado à gestão democrática e à construção coletiva.
-    `
-},
-
-{
-    pergunta: `
-Uma coordenadora pedagógica afirmou que o planejamento participativo não consiste apenas em consultar pessoas, mas em possibilitar sua efetiva participação na análise dos problemas, definição de prioridades e tomada de decisões. Essa afirmação é:
-    `,
-
-    alternativas: [
-        "Incorreta, pois a participação da comunidade deve ocorrer em geral na execução das ações planejadas.",
-        "Incorreta, porque a tomada de decisões compete predominantemente aos especialistas em educação.",
-        "Correta em geral para escolas privadas.",
-        "Correta, pois o planejamento participativo pressupõe envolvimento real nos processos decisórios.",
-        "Incorreta, pois participação e planejamento são processos independentes."
-    ],
-
     correta: 3,
-
-    feedbackAcerto: `
-Correto. Participação efetiva significa contribuir para análise, definição de objetivos, tomada de decisões, execução e avaliação das ações.
-    `,
-
-    feedbackErro: `
-O planejamento participativo ultrapassa consultas formais e busca envolvimento real dos diferentes sujeitos educacionais.
-    `,
-
-    dicaBanca: `
-Cuidado com alternativas que confundem consulta com participação efetiva.
-    `
+    feedbackAcerto: "Correto. Flexibilidade permite readequar estratégias diante de evidências da prática sem perder as finalidades educacionais.",
+    feedbackErro: "Replanejar não é improvisar. A revisão fundamentada é parte do caráter dinâmico e contínuo do planejamento.",
+    dicaBanca: "Flexibilidade altera caminhos quando necessário; improvisação atua sem fundamento ou direção."
 },
-
 {
-    pergunta: `
-Ao discutir os fundamentos do planejamento participativo, um professor afirmou que ele contribui para a democratização da escola porque:
-    `,
-
+    pergunta: "Uma coordenadora afirma que o planejamento é neutro, pois apenas organiza tecnicamente atividades, prazos e recursos. À luz de uma concepção crítica de planejamento, essa afirmação é inadequada porque:",
     alternativas: [
-        "Reduz a necessidade de diálogo entre os diferentes segmentos da comunidade escolar.",
-        "Favorece a construção coletiva de objetivos, ações e responsabilidades.",
-        "Centraliza as decisões na figura do gestor escolar.",
-        "Substitui o Projeto Político-Pedagógico por decisões informais.",
-        "Elimina conflitos e divergências de opinião no ambiente escolar."
+        "O planejamento deve prescindir de procedimentos técnicos para privilegiar decisões espontâneas da comunidade em diferentes etapas do trabalho escolar.",
+        "Toda organização técnica impede a participação dos sujeitos e reduz a autonomia pedagógica da escola.",
+        "A dimensão política aparece somente no PPP, enquanto planos de ensino são estritamente operacionais.",
+        "O planejamento se torna político apenas quando envolve decisões da secretaria ou do sistema de ensino.",
+        "Toda escolha de finalidades, conteúdos e prioridades expressa concepções de educação, sociedade e formação humana.",
     ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. O planejamento participativo fortalece a democracia escolar ao promover diálogo, negociação e construção coletiva das decisões.
-    `,
-
-    feedbackErro: `
-A democratização da escola envolve participação, corresponsabilidade e compartilhamento das decisões.
-    `,
-
-    dicaBanca: `
-Participação, diálogo e construção coletiva costumam aparecer juntos nas alternativas corretas.
-    `
-},
-
-{
-    pergunta: `
-Uma escola realizou reuniões, grupos de trabalho e consultas à comunidade para identificar prioridades educacionais antes de elaborar seu plano de ação. Essa prática evidencia que o planejamento participativo:
-    `,
-
-    alternativas: [
-        "Deve ser construído predominantemente a partir das determinações legais dos sistemas de ensino.",
-        "Reduz a necessidade de o diagnóstico da realidade escolar.",
-        "Valoriza a análise coletiva da realidade como etapa fundamental do processo de planejamento.",
-        "Substitui a necessidade de definição de objetivos educacionais.",
-        "Concentra-se à organização de atividades extracurriculares."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. O diagnóstico participativo permite compreender problemas, necessidades e potencialidades da escola a partir de diferentes perspectivas.
-    `,
-
-    feedbackErro: `
-A análise coletiva da realidade constitui uma etapa central do planejamento participativo.
-    `,
-
-    dicaBanca: `
-Diagnóstico + participação da comunidade = forte indicativo de planejamento participativo.
-    `
-},
-
-{
-    pergunta: `
-Segundo autores que defendem o planejamento participativo, a construção coletiva das decisões escolares é importante porque:
-    `,
-
-    alternativas: [
-        "Reduz a necessidade de a necessidade de liderança e coordenação das ações educativas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Garante automaticamente a ausência de conflitos entre os participantes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Substitui os objetivos pedagógicos pelos interesses individuais dos participantes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Torna desnecessária a avaliação das ações desenvolvidas, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Favorece maior legitimidade, compromisso e corresponsabilidade na execução das ações planejadas."
-    ],
-
     correta: 4,
-
-    feedbackAcerto: `
-Correto. Quando os sujeitos participam das decisões, tendem a assumir maior compromisso com sua implementação e avaliação.
-    `,
-
-    feedbackErro: `
-O planejamento participativo busca fortalecer a corresponsabilidade e a legitimidade das ações educacionais.
-    `,
-
-    dicaBanca: `
-Legitimidade, compromisso e corresponsabilidade são palavras-chave do planejamento participativo.
-    `
+    feedbackAcerto: "Correto. O planejamento envolve escolhas intencionais e, por isso, carrega finalidades, valores e concepções educacionais.",
+    feedbackErro: "A dimensão técnica é necessária, mas não torna o planejamento neutro; ela se articula a opções pedagógicas e sociais.",
+    dicaBanca: "Pergunte sempre: para quê, para quem e com qual concepção de formação se planeja?"
 },
-
 {
-    pergunta: `
-Durante uma formação pedagógica, um professor afirmou que o Plano de Ensino e o Plano de Aula possuem a mesma finalidade e diferem apenas no nome. À luz da Didática e do Planejamento Educacional, essa afirmação é inadequada porque:
-    `,
-
+    pergunta: "Uma secretaria municipal define prioridades para a rede, uma escola reorganiza seu PPP, um professor elabora o plano anual da turma e depois detalha uma aula. Essa sequência exemplifica:",
     alternativas: [
-        "O Plano de Aula possui abrangência anual, enquanto o Plano de Ensino é elaborado para uma única aula, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "O Plano de Ensino é elaborado pela gestão escolar e o Plano de Aula pelos sistemas de ensino, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "O Plano de Aula substitui amplamente o Plano de Ensino durante o ano letivo, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "As diferenças entre ambos são predominantemente burocráticas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "O Plano de Ensino organiza o trabalho pedagógico para um período mais amplo, enquanto o Plano de Aula detalha uma situação específica de ensino."
+        "Níveis distintos de planejamento que precisam manter coerência entre políticas, escola e prática docente.",
+        "Etapas sucessivas de um único plano cuja autoria final pertence exclusivamente ao professor da turma.",
+        "Documentos independentes, pois cada esfera possui autonomia para definir finalidades sem articulação entre si.",
+        "Formas equivalentes de planejamento diferenciadas apenas pelo número de participantes envolvidos no processo.",
+        "Procedimentos administrativos que não interferem diretamente nas decisões didáticas desenvolvidas em sala de aula.",
     ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. O Plano de Ensino possui abrangência maior, organizando objetivos, conteúdos, metodologias e avaliações para determinado período. Já o Plano de Aula detalha ações específicas de uma aula ou sequência de aulas.
-    `,
-
-    feedbackErro: `
-As bancas costumam cobrar a diferença de abrangência entre Plano de Ensino e Plano de Aula.
-    `,
-
-    dicaBanca: `
-Plano de Ensino = visão mais ampla. Plano de Aula = operacionalização cotidiana.
-    `
-},
-
-{
-    pergunta: `
-Ao elaborar um Plano de Ensino, uma professora definiu objetivos de aprendizagem, conteúdos, metodologias, recursos didáticos e critérios de avaliação. Essa organização é importante porque:
-    `,
-
-    alternativas: [
-        "Garante coerência entre os elementos do processo de ensino-aprendizagem.",
-        "Permite substituir o planejamento das aulas individuais.",
-        "Elimina a necessidade de adaptações durante o período letivo.",
-        "Prioriza a avaliação em detrimento dos demais elementos didáticos.",
-        "Reduz a necessidade de a consideração das características dos estudantes."
-    ],
-
     correta: 0,
-
-    feedbackAcerto: `
-Correto. O Plano de Ensino busca articular objetivos, conteúdos, metodologias e avaliação de forma coerente e intencional.
-    `,
-
-    feedbackErro: `
-A coerência entre os elementos didáticos é uma das principais funções do Plano de Ensino.
-    `,
-
-    dicaBanca: `
-Objetivos, conteúdos, metodologia e avaliação devem aparecer articulados.
-    `
+    feedbackAcerto: "Correto. Planejamento educacional, escolar, de ensino e de aula têm abrangências diferentes, mas precisam estar articulados.",
+    feedbackErro: "Os níveis não são documentos isolados: decisões sistêmicas, institucionais e didáticas devem manter coerência entre si.",
+    dicaBanca: "Sistema/rede → escola → ensino → aula: níveis diferentes, relação de complementaridade."
 },
-
 {
-    pergunta: `
-Uma professora preparou uma aula prevendo objetivos específicos, estratégias metodológicas, recursos tecnológicos, atividades dos estudantes e formas de verificação da aprendizagem. Esse documento corresponde:
-    `,
-
+    pergunta: "Quando um plano estabelece diretrizes, metas e estratégias para orientar uma rede ou sistema de ensino em determinado período, trata-se predominantemente de:",
     alternativas: [
-
-        "Ao Projeto Político-Pedagógico da escola.",
-
-        "Ao Planejamento Educacional.",
-
-        "Ao Plano de Aula.",
-
-        "Ao Planejamento Curricular Nacional.",
-
-        "Ao Plano de Desenvolvimento Institucional."
-
+        "Planejamento de aula, porque organiza ações concretas que chegarão ao estudante.",
+        "Planejamento educacional, por envolver decisões de maior abrangência sobre políticas e prioridades.",
+        "Planejamento de ensino, por articular objetivos, conteúdos, métodos e avaliação de componentes curriculares.",
+        "Planejamento institucional, pois toda decisão educacional é produzida diretamente pelas unidades escolares.",
+        "Planejamento didático, uma vez que metas sistêmicas determinam procedimentos específicos de sala de aula.",
     ],
-
+    correta: 1,
+    feedbackAcerto: "Correto. O planejamento educacional opera em nível amplo, articulando políticas, diretrizes e prioridades de sistemas ou redes.",
+    feedbackErro: "Planejamento educacional não se confunde com o detalhamento do trabalho de uma turma, disciplina ou aula específica.",
+    dicaBanca: "Quanto maior a abrangência político-sistêmica, mais próximo do planejamento educacional."
+},
+{
+    pergunta: "Ao elaborar coletivamente o PPP, definir prioridades institucionais e organizar ações para enfrentar problemas identificados na escola, a comunidade está realizando principalmente:",
+    alternativas: [
+        "Planejamento educacional, pois o PPP substitui as diretrizes produzidas pelos sistemas de ensino.",
+        "Planejamento de ensino, pois todo objetivo institucional precisa ser convertido imediatamente em aula.",
+        "Planejamento escolar, por organizar intencionalmente a ação da unidade a partir de sua realidade.",
+        "Planejamento curricular nacional, porque o PPP estabelece as aprendizagens comuns obrigatórias do país.",
+        "Planejamento administrativo, pois o PPP se limita à distribuição de recursos, tarefas e responsabilidades.",
+    ],
     correta: 2,
-
-    feedbackAcerto: `
-Correto. O Plano de Aula organiza detalhadamente uma situação específica de ensino, orientando a ação docente em determinado momento.
-    `,
-
-    feedbackErro: `
-Quando a questão mencionar uma aula específica, normalmente estará se referindo ao Plano de Aula.
-    `,
-
-    dicaBanca: `
-Plano de Aula = documento mais detalhado e imediato da prática docente.
-    `
+    feedbackAcerto: "Correto. O PPP é um instrumento central do planejamento escolar e articula identidade, diagnóstico, objetivos e ação institucional.",
+    feedbackErro: "O PPP não substitui políticas educacionais nem se limita ao plano de ensino ou à dimensão administrativa da escola.",
+    dicaBanca: "PPP e prioridades da unidade escolar apontam para planejamento escolar."
 },
-
 {
-    pergunta: `
-Ao revisar seu Plano de Aula após identificar dificuldades recorrentes dos estudantes, um professor decidiu modificar as atividades inicialmente previstas. Essa decisão demonstra que:
-    `,
-
+    pergunta: "Sobre Plano de Ensino e Plano de Aula, assinale a alternativa correta.",
     alternativas: [
-
-        "O Plano de Aula deve permanecer inalterado para preservar a coerência pedagógica.",
-
-        "A flexibilidade é característica importante do planejamento docente.",
-
-        "As dificuldades dos estudantes não devem interferir no planejamento previamente elaborado.",
-
-        "A alteração do plano evidencia erro na elaboração inicial.",
-
-        "O planejamento deve ser abandonado sempre que surgirem dificuldades."
-
+        "O Plano de Aula possui maior abrangência e define objetivos para todo o ano ou semestre letivo.",
+        "O Plano de Ensino detalha exclusivamente procedimentos de uma aula e deve ser refeito a cada encontro.",
+        "Os dois possuem a mesma abrangência; diferem apenas pelo nível de detalhamento solicitado pela coordenação.",
+        "O Plano de Ensino organiza um período mais amplo, enquanto o Plano de Aula operacionaliza situações mais específicas.",
+        "O Plano de Aula substitui o Plano de Ensino quando a escola adota metodologias ativas ou projetos interdisciplinares.",
     ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. O planejamento deve ser flexível e capaz de responder às necessidades identificadas durante o processo educativo.
-    `,
-
-    feedbackErro: `
-Flexibilidade não significa improvisação, mas adaptação consciente às demandas da aprendizagem.
-    `,
-
-    dicaBanca: `
-Planejamento eficiente é organizado, mas também flexível.
-    `
-},
-
-{
-    pergunta: `
-Um candidato analisou duas afirmações:
-
-I. O Plano de Ensino orienta o trabalho pedagógico em um período mais amplo.
-II. O Plano de Aula detalha ações específicas relacionadas à execução do ensino.
-
-Com base nos fundamentos do planejamento educacional, assinale a alternativa correta.
-    `,
-
-    alternativas: [
-        "Em geral a afirmativa I está correta.",
-        "Em geral a afirmativa II está correta.",
-        "As afirmativas I e II estão corretas, mas não possuem relação entre si.",
-        "As afirmativas I e II estão corretas, e a II complementa a I.",
-        "Ambas as afirmativas estão incorretas."
-    ],
-
     correta: 3,
-
-    feedbackAcerto: `
-Correto. O Plano de Ensino possui abrangência mais ampla, enquanto o Plano de Aula operacionaliza as ações previstas para situações específicas de ensino.
-    `,
-
-    feedbackErro: `
-Plano de Ensino e Plano de Aula são complementares e atuam em diferentes níveis do planejamento pedagógico.
-    `,
-
-    dicaBanca: `
-A banca costuma explorar a relação hierárquica entre Plano de Ensino e Plano de Aula.
-    `
+    feedbackAcerto: "Correto. O Plano de Ensino tem horizonte mais amplo; o Plano de Aula detalha a execução em situações específicas.",
+    feedbackErro: "Plano de Ensino e Plano de Aula se complementam, mas não são equivalentes em abrangência e função.",
+    dicaBanca: "Mais amplo = Plano de Ensino; mais específico = Plano de Aula."
 },
 {
-    pergunta: `
-Durante a elaboração de seu plano de ensino, uma professora definiu objetivos de aprendizagem antes de selecionar conteúdos, metodologias e instrumentos avaliativos. Essa decisão é pedagogicamente adequada porque:
-    `,
-
+    pergunta: "Uma rede define objetivos educacionais, a escola estabelece prioridades no PPP e o professor seleciona estratégias para sua turma. Para que haja coerência entre esses níveis, é necessário que:",
     alternativas: [
-        "Os objetivos possuem função secundária no planejamento e servem em geral para registro documental.",
-        "A definição dos objetivos orienta a seleção dos demais elementos do processo de ensino-aprendizagem.",
-        "Os objetivos devem ser estabelecidos normalmente após a escolha dos instrumentos de avaliação.",
-        "A metodologia utilizada determina integralmente os objetivos educacionais.",
-        "Os objetivos são independentes dos conteúdos e das competências previstas no currículo."
+        "A escola reproduza integralmente as decisões da rede, evitando adaptações ligadas ao território ou aos estudantes.",
+        "O professor tenha liberdade para ignorar finalidades institucionais sempre que considerar outra estratégia mais eficiente.",
+        "O PPP substitua os planos docentes, pois as prioridades da escola já definem conteúdos, atividades e avaliações.",
+        "As decisões do sistema sejam convertidas em métodos obrigatórios para garantir uniformidade entre todas as turmas.",
+        "Cada nível preserve sua especificidade e, ao mesmo tempo, dialogue com as finalidades e referências dos demais.",
     ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. Os objetivos orientam todo o planejamento pedagógico, servindo de referência para a escolha dos conteúdos, metodologias e formas de avaliação.
-    `,
-
-    feedbackErro: `
-Os objetivos representam os resultados de aprendizagem pretendidos e organizam os demais elementos do planejamento.
-    `,
-
-    dicaBanca: `
-Objetivos costumam ser cobrados como ponto de partida do planejamento pedagógico.
-    `
-},
-
-{
-    pergunta: `
-Ao analisar um plano de ensino, a coordenação pedagógica observou que vários objetivos estavam formulados de maneira excessivamente vaga, utilizando expressões como "compreender melhor" e "aprender mais". O principal problema identificado foi:
-    `,
-
-    alternativas: [
-        "O excesso de conteúdos conceituais previstos para a disciplina, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "A ausência de alinhamento entre currículo e avaliação, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "A utilização inadequada de metodologias participativas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "O uso excessivo de recursos tecnológicos, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
-        "A falta de clareza e precisão na formulação dos objetivos de aprendizagem."
-    ],
-
     correta: 4,
-
-    feedbackAcerto: `
-Correto. Objetivos devem ser formulados de maneira clara, precisa e observável, permitindo orientar o ensino e a avaliação.
-    `,
-
-    feedbackErro: `
-Objetivos vagos dificultam a seleção de estratégias pedagógicas e a verificação da aprendizagem.
-    `,
-
-    dicaBanca: `
-As bancas costumam valorizar objetivos claros, observáveis e coerentes com a avaliação.
-    `
+    feedbackAcerto: "Correto. Coerência não significa uniformidade: cada nível tem função própria, mas precisa articular-se aos demais.",
+    feedbackErro: "Autonomia de escola e professor não significa independência absoluta das diretrizes e finalidades que orientam o trabalho educativo.",
+    dicaBanca: "Articulação exige coerência sem apagar a especificidade de cada nível."
 },
-
 {
-    pergunta: `
-Uma professora formulou o seguinte objetivo: "Analisar criticamente diferentes fontes de informação para argumentar sobre problemas socioambientais contemporâneos". Esse objetivo evidencia:
-    `,
-
+    pergunta: "Segundo a LDB, uma escola pública decide deixar a elaboração de sua proposta pedagógica exclusivamente a cargo da secretaria de educação. Essa decisão conflita diretamente com a incumbência da escola de:",
     alternativas: [
-        "Ênfase exclusiva na memorização de conteúdos, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Ausência de relação com competências previstas na BNCC, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Desenvolvimento de habilidades cognitivas complexas relacionadas à análise e argumentação.",
-        "Priorização exclusiva de conteúdos atitudinais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Formulação incompatível com processos avaliativos, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
+        "Elaborar e executar sua própria proposta pedagógica, respeitadas as normas comuns e as do sistema de ensino.",
+        "Definir autonomamente as diretrizes curriculares nacionais que orientarão todas as unidades da rede pública.",
+        "Estabelecer a política educacional do município e coordenar a elaboração dos planos das demais escolas da rede.",
+        "Autorizar seus professores a substituir a proposta institucional por planos individuais elaborados para cada turma.",
+        "Criar normas gerais de gestão democrática válidas para todas as escolas pertencentes ao respectivo sistema.",
     ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. O objetivo envolve análise crítica, interpretação e argumentação, habilidades cognitivas de maior complexidade.
-    `,
-
-    feedbackErro: `
-Objetivos que utilizam verbos como analisar, argumentar, interpretar e avaliar costumam indicar níveis mais elevados de aprendizagem.
-    `,
-
-    dicaBanca: `
-Observe os verbos utilizados nos objetivos. Eles costumam indicar o nível cognitivo esperado.
-    `
-},
-
-{
-    pergunta: `
-Ao planejar uma sequência didática, um professor verificou que os objetivos propostos não possuíam relação direta com os instrumentos de avaliação escolhidos. Nessa situação:
-    `,
-
-    alternativas: [
-        "Não existe problema, pois objetivos e avaliação são elementos independentes, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "A avaliação deve prevalecer sobre os objetivos previamente definidos, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Os objetivos devem ser substituídos pelos conteúdos curriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Há incoerência no planejamento, pois a avaliação deve verificar o alcance dos objetivos estabelecidos.",
-        "A metodologia utilizada elimina a necessidade de alinhamento entre objetivos e avaliação."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. A avaliação deve produzir evidências relacionadas aos objetivos de aprendizagem previstos no planejamento.
-    `,
-
-    feedbackErro: `
-Um dos princípios fundamentais do planejamento é a coerência entre objetivos, conteúdos, metodologias e avaliação.
-    `,
-
-    dicaBanca: `
-Quando a questão mencionar coerência do planejamento, pense na articulação entre seus elementos.
-    `
-},
-
-{
-    pergunta: `
-Na perspectiva da BNCC e do planejamento por competências, os objetivos de aprendizagem devem:
-    `,
-
-    alternativas: [
-        "Expressar aprendizagens que envolvam conhecimentos, habilidades, atitudes e valores mobilizados em diferentes contextos.",
-        "Limitar-se à transmissão de conteúdos conceituais, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Priorizar predominantemente a memorização de informações, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Ser formulados sem relação com as competências e habilidades previstas para a etapa de ensino, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "Substituir amplamente os conteúdos curriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
-    ],
-
     correta: 0,
-
-    feedbackAcerto: `
-Correto. A BNCC orienta a elaboração de objetivos que promovam o desenvolvimento de competências e habilidades articuladas a conhecimentos e valores.
-    `,
-
-    feedbackErro: `
-A perspectiva por competências não elimina conteúdos, mas busca mobilizá-los em situações significativas de aprendizagem.
-    `,
-
-    dicaBanca: `
-BNCC + objetivos de aprendizagem = competências, habilidades, conhecimentos e aplicação em contextos reais.
-    `
+    feedbackAcerto: "Correto. O art. 12 da LDB atribui ao estabelecimento de ensino a incumbência de elaborar e executar sua proposta pedagógica.",
+    feedbackErro: "A escola deve respeitar normas do sistema, mas não pode transferir integralmente a terceiros a responsabilidade por sua proposta pedagógica.",
+    dicaBanca: "LDB, art. 12: escola elabora e executa a proposta pedagógica."
 },
 {
-    pergunta: `
-Durante a elaboração de uma sequência didática, uma professora selecionou conteúdos relevantes para os objetivos de aprendizagem previstos e, posteriormente, escolheu metodologias e recursos capazes de favorecer sua apropriação pelos estudantes. Essa decisão é coerente com os princípios do planejamento porque:
-    `,
-
+    pergunta: "Um professor afirma que seu plano de trabalho pode ser elaborado sem considerar o PPP, porque a autonomia docente lhe permite definir objetivos e prioridades independentemente da escola. À luz do art. 13 da LDB, a afirmação está:",
     alternativas: [
-        "Os recursos didáticos devem ser escolhidos independentemente dos conteúdos trabalhados.",
-        "As metodologias possuem maior importância que os objetivos e conteúdos do ensino.",
-        "A seleção dos conteúdos depende predominantemente da disponibilidade de recursos tecnológicos.",
-        "Conteúdos, metodologias e recursos devem estar articulados para favorecer a aprendizagem.",
-        "Os conteúdos escolares podem ser definidos após a escolha das estratégias metodológicas."
+        "Correta, pois o plano de trabalho docente é autônomo e prevalece sobre a proposta pedagógica institucional em qualquer situação pedagógica da escola.",
+        "Incorreta, porque o docente deve elaborar e cumprir seu plano de trabalho segundo a proposta pedagógica da escola.",
+        "Correta, desde que o professor preserve as aprendizagens essenciais previstas no currículo da rede de ensino.",
+        "Incorreta apenas quando a escola pública possui Conselho Escolar formalmente instituído e em funcionamento.",
+        "Correta nos componentes curriculares em que o professor detém formação específica e responsabilidade exclusiva.",
     ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. Um dos princípios do planejamento é a coerência entre conteúdos, metodologias, recursos e objetivos de aprendizagem.
-    `,
-
-    feedbackErro: `
-Os diferentes elementos do planejamento precisam atuar de forma integrada para favorecer o processo educativo.
-    `,
-
-    dicaBanca: `
-As bancas costumam cobrar a articulação entre objetivos, conteúdos, metodologias e avaliação.
-    `
-},
-
-{
-    pergunta: `
-Ao analisar um plano de ensino, a coordenação pedagógica verificou que os conteúdos selecionados não contribuíam para o alcance dos objetivos propostos. Nessa situação, o principal problema identificado foi:
-    `,
-
-    alternativas: [
-
-        "Ausência de recursos didáticos diversificados.",
-
-        "Falta de coerência entre objetivos e conteúdos.",
-
-        "Excesso de participação dos estudantes.",
-
-        "Utilização inadequada de metodologias ativas.",
-
-        "Presença insuficiente de atividades avaliativas."
-
-    ],
-
     correta: 1,
-
-    feedbackAcerto: `
-Correto. Os conteúdos devem ser escolhidos em função dos objetivos de aprendizagem que se pretende alcançar.
-    `,
-
-    feedbackErro: `
-Objetivos e conteúdos precisam apresentar relação lógica e coerente dentro do planejamento.
-    `,
-
-    dicaBanca: `
-Se os conteúdos não ajudam a atingir os objetivos, existe incoerência pedagógica.
-    `
+    feedbackAcerto: "Correto. A LDB vincula expressamente o plano de trabalho do docente à proposta pedagógica do estabelecimento de ensino.",
+    feedbackErro: "Autonomia docente existe dentro de referências curriculares e institucionais; ela não autoriza romper com a proposta pedagógica da escola.",
+    dicaBanca: "LDB, art. 13, II: plano de trabalho docente segundo a proposta pedagógica."
 },
-
 {
-    pergunta: `
-Uma professora optou por utilizar estudos de caso, resolução de problemas e projetos investigativos em vez de restringir suas aulas à exposição oral. Essa escolha fundamenta-se na compreensão de que:
-    `,
-
+    pergunta: "Uma rede reserva períodos do calendário para planejamento, avaliação e desenvolvimento profissional, mas parte dos docentes alega que a participação é facultativa por não se tratar de aula com estudantes. Segundo a LDB, esses docentes:",
     alternativas: [
-        "Os conteúdos curriculares tornam-se dispensáveis quando se utilizam metodologias ativas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "A exposição oral é incompatível com qualquer proposta pedagógica contemporânea, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Os recursos didáticos substituem o papel do professor no processo educativo, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
-        "Metodologias participativas eliminam a necessidade de avaliação, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "As metodologias devem favorecer a participação dos estudantes e a construção significativa da aprendizagem."
+        "Têm razão, pois períodos sem interação com estudantes não integram as incumbências funcionais do professor.",
+        "Têm razão somente quando já tiverem entregue previamente seus planos e registros avaliativos à coordenação.",
+        "Não têm razão, pois devem participar integralmente dos períodos dedicados a planejamento, avaliação e desenvolvimento profissional.",
+        "Não têm razão apenas nas escolas que adotam jornada de tempo integral ou regime de dedicação exclusiva previsto formalmente pela rede de ensino.",
+        "Têm razão quando o planejamento ocorrer fora do horário reservado à regência previsto no calendário escolar.",
     ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. A escolha metodológica deve favorecer a aprendizagem, a participação dos estudantes e o alcance dos objetivos educacionais.
-    `,
-
-    feedbackErro: `
-Metodologias ativas não eliminam conteúdos, avaliação ou mediação docente; elas reorganizam a participação dos estudantes no processo.
-    `,
-
-    dicaBanca: `
-Desconfie de alternativas extremas que afirmem substituição total de conteúdos ou do papel do professor.
-    `
-},
-
-{
-    pergunta: `
-Durante uma aula, um professor utiliza vídeos, simuladores digitais, textos, experimentos e debates para trabalhar um mesmo conteúdo. Essa prática é pedagogicamente adequada porque:
-    `,
-
-    alternativas: [
-        "O uso simultâneo de diferentes recursos elimina a necessidade de planejamento, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
-        "Os recursos tecnológicos devem substituir os materiais didáticos tradicionais, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
-        "A diversidade de recursos pode ampliar as possibilidades de aprendizagem e atender diferentes necessidades dos estudantes.",
-        "A aprendizagem depende predominantemente dos recursos utilizados, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "A variedade de recursos torna desnecessária a definição de objetivos de aprendizagem, considerando sua relação com os objetivos educacionais e com as condições reais da escola."
-    ],
-
     correta: 2,
-
-    feedbackAcerto: `
-Correto. A utilização diversificada de recursos pode enriquecer o processo educativo e favorecer diferentes formas de aprendizagem.
-    `,
-
-    feedbackErro: `
-Os recursos são instrumentos que apoiam o ensino, mas precisam estar articulados aos objetivos e metodologias.
-    `,
-
-    dicaBanca: `
-Recursos didáticos são meios, não fins. Eles devem servir aos objetivos educacionais.
-    `
-},
-
-{
-    pergunta: `
-Ao refletir sobre a seleção dos conteúdos escolares, um professor concluiu que eles devem ser escolhidos considerando sua relevância social, cultural e formativa. Essa conclusão é compatível com a ideia de que:
-    `,
-
-    alternativas: [
-        "Os conteúdos representam conhecimentos socialmente produzidos e relevantes para a formação dos estudantes.",
-        "Os conteúdos possuem valor em geral quando exigidos em avaliações externas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "A escolha dos conteúdos deve ocorrer de forma aleatória para estimular a criatividade docente, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "A metodologia utilizada determina integralmente quais conteúdos devem ser ensinados, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Os conteúdos conceituais devem ser excluídos em favor de habilidades práticas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. Os conteúdos escolares correspondem a conhecimentos historicamente produzidos e selecionados em função de sua relevância educativa.
-    `,
-
-    feedbackErro: `
-A seleção de conteúdos deve considerar critérios pedagógicos, sociais e culturais relacionados à formação dos estudantes.
-    `,
-
-    dicaBanca: `
-Libâneo e a Pedagogia Crítico-Social dos Conteúdos costumam associar conteúdos à formação crítica dos estudantes.
-    `
+    feedbackAcerto: "Correto. O art. 13 da LDB inclui expressamente a participação integral nesses períodos entre as incumbências docentes.",
+    feedbackErro: "Planejamento, avaliação e desenvolvimento profissional não são atividades opcionais dissociadas do trabalho docente.",
+    dicaBanca: "A LDB trata esses períodos como parte das incumbências do professor."
 },
 {
-    pergunta: `
-Durante o conselho de classe, uma professora analisou os resultados das avaliações realizadas ao longo do bimestre e decidiu reorganizar parte dos conteúdos, modificar estratégias metodológicas e propor novas atividades de recuperação. Essa postura demonstra a compreensão de que:
-    `,
-
+    pergunta: "Considerando a redação atual do art. 14 da LDB, a gestão democrática do ensino público na educação básica deve observar, entre outros princípios:",
     alternativas: [
-        "A avaliação deve ocorrer em geral ao final do processo de ensino para atribuição de notas, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "Planejamento e avaliação são processos independentes que não devem interferir um no outro, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Os resultados avaliativos podem fornecer informações importantes para o replanejamento das ações pedagógicas.",
-        "As dificuldades de aprendizagem decorrem predominantemente do esforço insuficiente dos estudantes, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "O planejamento perde sua função após o início das atividades letivas, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
+        "Eleição direta obrigatória para todos os cargos de gestão e autonomia financeira plena das unidades escolares.",
+        "Participação exclusiva dos profissionais da educação nas decisões pedagógicas e administrativas da instituição.",
+        "Subordinação dos Conselhos Escolares à direção, que detém poder final sobre suas deliberações e representações.",
+        "Participação dos profissionais no projeto pedagógico e das comunidades escolar e local em colegiados previstos em lei.",
+        "Transferência das decisões curriculares do sistema para cada escola, sem necessidade de observar normas gerais da rede.",
     ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. A avaliação produz informações que permitem revisar, ajustar e aperfeiçoar o planejamento pedagógico.
-    `,
-
-    feedbackErro: `
-Planejamento e avaliação são processos articulados. Os resultados avaliativos devem orientar decisões pedagógicas futuras.
-    `,
-
-    dicaBanca: `
-A banca costuma associar avaliação à tomada de decisões e ao replanejamento.
-    `
-},
-
-{
-    pergunta: `
-Ao elaborar um plano de ensino, um professor definiu objetivos de aprendizagem, mas escolheu instrumentos avaliativos incapazes de verificar as competências que pretendia desenvolver. Nessa situação:
-    `,
-
-    alternativas: [
-        "Não existe problema, pois a avaliação possui função independente dos objetivos, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Há incoerência entre planejamento e avaliação, comprometendo a verificação das aprendizagens pretendidas.",
-        "Os instrumentos avaliativos são mais importantes que os objetivos de aprendizagem, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "A metodologia utilizada corrige automaticamente qualquer inadequação avaliativa, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Os objetivos podem ser ignorados durante o processo avaliativo, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
-    ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. A avaliação deve estar alinhada aos objetivos de aprendizagem para produzir evidências coerentes sobre seu alcance.
-    `,
-
-    feedbackErro: `
-Um dos princípios centrais do planejamento é a coerência entre objetivos, conteúdos, metodologias e avaliação.
-    `,
-
-    dicaBanca: `
-Objetivos e avaliação devem estar diretamente relacionados.
-    `
-},
-
-{
-    pergunta: `
-Uma escola utiliza exclusivamente provas finais para avaliar seus estudantes, sem considerar atividades desenvolvidas ao longo do período letivo. Sob a perspectiva do planejamento educacional contemporâneo, essa prática é criticada porque:
-    `,
-
-    alternativas: [
-        "As provas são instrumentos incompatíveis com qualquer proposta pedagógica, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Os resultados finais não possuem relevância para o processo educativo, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "A avaliação deve ser substituída por observações informais, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Os instrumentos escritos não podem ser utilizados na educação básica, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "A avaliação deve assumir caráter processual e fornecer informações contínuas para acompanhamento da aprendizagem."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. A avaliação contemporânea valoriza o acompanhamento contínuo da aprendizagem e a utilização de diferentes evidências para orientar o ensino.
-    `,
-
-    feedbackErro: `
-A crítica não é à prova em si, mas ao uso exclusivo de instrumentos finais sem acompanhamento processual.
-    `,
-
-    dicaBanca: `
-A banca costuma diferenciar avaliação processual de avaliação meramente classificatória.
-    `
-},
-
-{
-    pergunta: `
-Ao analisar os resultados de uma atividade diagnóstica, um professor identificou lacunas importantes nos conhecimentos prévios dos estudantes. A utilização dessas informações no planejamento pedagógico permite:
-    `,
-
-    alternativas: [
-        "Eliminar a necessidade de avaliação futura, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Substituir o currículo oficial da escola, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Dispensar o acompanhamento contínuo da aprendizagem, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "Adequar objetivos, metodologias e conteúdos às necessidades identificadas.",
-        "Reduzir a importância do planejamento docente, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
-    ],
-
     correta: 3,
-
-    feedbackAcerto: `
-Correto. A avaliação diagnóstica fornece informações relevantes para adequar o planejamento às necessidades reais dos estudantes.
-    `,
-
-    feedbackErro: `
-O diagnóstico é uma etapa importante para orientar decisões pedagógicas e tornar o ensino mais significativo.
-    `,
-
-    dicaBanca: `
-Avaliação diagnóstica costuma aparecer associada à adequação do planejamento.
-    `
-},
-
-{
-    pergunta: `
-Um candidato afirmou que a principal relação entre planejamento e avaliação consiste no fato de ambos contribuírem para a organização e melhoria do processo de ensino-aprendizagem. Essa afirmação é:
-    `,
-
-    alternativas: [
-        "Correta, pois planejamento e avaliação são processos articulados que orientam decisões pedagógicas.",
-        "Incorreta, pois a avaliação possui em geral função classificatória, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Incorreta, porque o planejamento ocorre antes da avaliação e não mantém relação com ela.",
-        "Correta em geral na educação infantil, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "Incorreta, pois avaliação e planejamento possuem objetivos incompatíveis, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
-    ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. Planejamento e avaliação constituem processos complementares e interdependentes, fundamentais para a qualidade da prática educativa.
-    `,
-
-    feedbackErro: `
-A avaliação fornece informações para o planejamento, e o planejamento orienta a avaliação, formando um ciclo contínuo.
-    `,
-
-    dicaBanca: `
-Planejamento → execução → avaliação → replanejamento é uma sequência clássica cobrada em concursos.
-    `
+    feedbackAcerto: "Correto. A LDB associa gestão democrática à participação dos profissionais no projeto pedagógico e à participação comunitária em Conselhos e Fóruns.",
+    feedbackErro: "Gestão democrática não exige uma forma única de escolha de dirigentes nem elimina as normas do sistema de ensino.",
+    dicaBanca: "Art. 14: projeto pedagógico com profissionais + colegiados com comunidades escolar e local."
 },
 {
-    pergunta: `
-Ao elaborar seu planejamento anual, uma professora organizou objetivos, metodologias e avaliações tomando como referência as competências e habilidades previstas na BNCC. Essa postura é adequada porque:
-    `,
-
+    pergunta: "Uma escola interpreta a autonomia prevista na LDB como autorização para ignorar normas do sistema de ensino e organizar livremente todos os aspectos pedagógicos e financeiros. Essa interpretação é incorreta porque a autonomia escolar:",
     alternativas: [
-        "A BNCC substitui integralmente o currículo e o planejamento escolar, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "As competências da BNCC servem como referência para a organização das experiências de aprendizagem.",
-        "A BNCC determina metodologias únicas para todas as escolas brasileiras, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
-        "O planejamento docente deve ignorar o contexto local para garantir alinhamento à BNCC, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "As habilidades previstas na BNCC possuem caráter predominantemente avaliativo, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
+        "É restrita às escolas privadas, pois unidades públicas permanecem integralmente subordinadas aos órgãos gestores da rede.",
+        "Abrange apenas decisões pedagógicas e não alcança dimensões administrativas ou de gestão financeira da unidade pública.",
+        "Depende de aprovação anual do Conselho de Educação para cada alteração realizada no projeto pedagógico da escola.",
+        "É plena sempre que houver Conselho Escolar, cabendo à comunidade afastar normas que não atendam à realidade local.",
+        "É assegurada em graus progressivos e deve ser exercida dentro das normas legais e das competências do sistema.",
     ],
-
-    correta: 1,
-
-    feedbackAcerto: `
-Correto. A BNCC orienta a elaboração do planejamento ao definir competências e habilidades que devem ser desenvolvidas ao longo da educação básica.
-    `,
-
-    feedbackErro: `
-A BNCC não substitui o currículo nem elimina a autonomia docente; ela funciona como referência para a organização do ensino.
-    `,
-
-    dicaBanca: `
-A BNCC é normativa e orientadora, mas não elimina a autonomia pedagógica das escolas.
-    `
-},
-
-{
-    pergunta: `
-Uma escola decidiu revisar seus planos de ensino para garantir maior alinhamento entre as atividades propostas e as competências gerais da BNCC. Essa decisão fundamenta-se na compreensão de que:
-    `,
-
-    alternativas: [
-        "As competências gerais devem permanecer desvinculadas dos componentes curriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "As competências gerais substituem os conteúdos escolares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "O desenvolvimento das competências exige planejamento intencional e articulação entre diferentes experiências de aprendizagem.",
-        "O planejamento baseado em competências reduz a necessidade de processos avaliativos, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "A BNCC concentra-se ao desenvolvimento de habilidades técnicas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. O desenvolvimento de competências requer planejamento intencional, integração curricular e experiências de aprendizagem significativas.
-    `,
-
-    feedbackErro: `
-As competências não surgem espontaneamente; elas precisam ser desenvolvidas por meio de ações pedagógicas planejadas.
-    `,
-
-    dicaBanca: `
-Competências exigem planejamento, não acontecem automaticamente.
-    `
-},
-
-{
-    pergunta: `
-Ao planejar uma sequência didática, um professor propõe situações-problema nas quais os estudantes precisam mobilizar conhecimentos de diferentes áreas para analisar e resolver questões do cotidiano. Essa proposta está alinhada à BNCC porque:
-    `,
-
-    alternativas: [
-        "Prioriza predominantemente a memorização dos conteúdos curriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Substitui os conteúdos conceituais por atividades práticas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Restringe a aprendizagem ao desenvolvimento de competências socioemocionais, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "Favorece a mobilização de conhecimentos, habilidades, atitudes e valores em contextos significativos.",
-        "Reduz a necessidade de a necessidade de avaliação das aprendizagens, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. A BNCC compreende competência como a mobilização integrada de conhecimentos, habilidades, atitudes e valores para enfrentar situações complexas.
-    `,
-
-    feedbackErro: `
-A proposta da BNCC envolve aplicação e integração dos conhecimentos em contextos reais.
-    `,
-
-    dicaBanca: `
-Situações-problema são frequentemente associadas ao desenvolvimento de competências.
-    `
-},
-
-{
-    pergunta: `
-Durante a elaboração de um plano de aula, uma professora verificou se as atividades propostas estavam coerentes com as habilidades previstas para determinado ano escolar na BNCC. Essa atitude demonstra:
-    `,
-
-    alternativas: [
-        "Preocupação exclusiva com o cumprimento burocrático da legislação, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Substituição da autonomia docente pelas prescrições curriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Valorização dos conteúdos em detrimento das competências, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Desconsideração das características dos estudantes, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Articulação entre planejamento pedagógico e expectativas de aprendizagem previstas na BNCC."
-    ],
-
     correta: 4,
-
-    feedbackAcerto: `
-Correto. O planejamento deve dialogar com as habilidades previstas na BNCC, garantindo coerência entre as experiências de aprendizagem e os objetivos educacionais.
-    `,
-
-    feedbackErro: `
-As habilidades da BNCC funcionam como referência para orientar o planejamento e a prática pedagógica.
-    `,
-
-    dicaBanca: `
-Habilidades da BNCC e planejamento devem caminhar juntos.
-    `
+    feedbackAcerto: "Correto. A autonomia prevista no art. 15 é progressiva e não significa independência jurídica ou afastamento das normas do sistema.",
+    feedbackErro: "Autonomia amplia capacidade de decisão, mas permanece vinculada ao ordenamento educacional e às responsabilidades institucionais.",
+    dicaBanca: "Autonomia escolar ≠ soberania da escola."
 },
-
 {
-    pergunta: `
-Ao refletir sobre o planejamento na perspectiva da BNCC, um candidato concluiu que a avaliação também deve estar alinhada às competências e habilidades desenvolvidas. Essa conclusão é:
-    `,
-
+    pergunta: "Ao afirmar que o PPP é 'político', uma equipe pedagógica não está dizendo que ele deva servir a partidos ou campanhas. Nesse contexto, a dimensão política refere-se principalmente:",
     alternativas: [
-        "Correta, pois a avaliação deve produzir evidências sobre o desenvolvimento das aprendizagens previstas.",
-        "Incorreta, pois a avaliação deve concentrar-se em geral nos conteúdos conceituais, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Correta em geral para os anos iniciais do ensino fundamental, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "Incorreta, porque competências não podem ser avaliadas, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Incorreta, pois a BNCC não estabelece relação entre planejamento e avaliação, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
+        "Às escolhas coletivas sobre finalidades, valores e formação que a escola pretende promover na sociedade.",
+        "À necessidade de a direção negociar recursos diretamente com representantes dos poderes Executivo e Legislativo.",
+        "Ao dever de o PPP reproduzir as prioridades definidas pelo governo vigente para evitar conflitos institucionais.",
+        "À participação obrigatória de partidos, sindicatos e associações em todas as decisões pedagógicas da escola.",
+        "À definição de regras administrativas para o funcionamento dos colegiados e para a prestação de contas da unidade.",
     ],
-
     correta: 0,
-
-    feedbackAcerto: `
-Correto. Planejamento, ensino e avaliação devem estar articulados às competências e habilidades previstas na BNCC.
-    `,
-
-    feedbackErro: `
-A avaliação é parte do processo pedagógico e deve verificar evidências do desenvolvimento das aprendizagens esperadas.
-    `,
-
-    dicaBanca: `
-BNCC = competências + habilidades + planejamento + avaliação articulados.
-    `
+    feedbackAcerto: "Correto. A dimensão política do PPP diz respeito ao projeto de sociedade, cidadania e formação humana assumido pela escola.",
+    feedbackErro: "Político, nesse contexto, não significa partidário; significa escolha de finalidades, valores e compromissos coletivos.",
+    dicaBanca: "PPP é político porque expressa que formação e que escola se deseja construir."
 },
 {
-    pergunta: `
-Durante a elaboração do Projeto Político-Pedagógico, uma escola realizou diagnóstico institucional, definiu objetivos estratégicos, estabeleceu metas e promoveu a participação de diferentes segmentos da comunidade escolar. Essa prática evidencia:
-    `,
-
+    pergunta: "A dimensão 'pedagógica' do PPP manifesta-se quando o documento:",
     alternativas: [
-        "A compreensão do planejamento como processo coletivo, participativo e orientado para a transformação da realidade escolar.",
-        "A substituição do Planejamento Escolar pelo Planejamento de Ensino, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "A centralização das decisões pedagógicas predominantemente na equipe gestora, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "A redução do planejamento à elaboração de documentos administrativos, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "A eliminação da necessidade de avaliação institucional, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
+        "Define exclusivamente regras administrativas, horários de funcionamento e atribuições dos diferentes setores da escola.",
+        "Orienta concepções de ensino, aprendizagem, currículo, avaliação e organização do trabalho educativo da instituição.",
+        "Substitui os planos de ensino dos docentes ao indicar detalhadamente atividades e instrumentos para cada aula.",
+        "Concentra-se na aplicação de indicadores externos para comparar o desempenho da escola com as demais unidades da rede.",
+        "Restringe a participação da comunidade aos temas de convivência, preservando decisões pedagógicas para especialistas.",
     ],
-
-    correta: 0,
-
-    feedbackAcerto: `
-Correto. O planejamento escolar contemporâneo valoriza diagnóstico, participação, definição de metas e compromisso coletivo com a melhoria da educação.
-    `,
-
-    feedbackErro: `
-O PPP é um instrumento de planejamento construído coletivamente e voltado à organização da ação educativa da escola.
-    `,
-
-    dicaBanca: `
-PPP + participação + diagnóstico + metas = Planejamento Escolar democrático.
-    `
-},
-
-{
-    pergunta: `
-Ao revisar um plano de ensino, uma coordenadora observou que os objetivos de aprendizagem estavam adequados, mas os conteúdos, metodologias e avaliações não contribuíam para seu alcance. O principal problema identificado foi:
-    `,
-
-    alternativas: [
-        "Ausência de recursos tecnológicos suficientes, conforme uma interpretação administrativa ampla das responsabilidades do poder público.",
-        "Excesso de autonomia docente, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Presença insuficiente de conteúdos curriculares, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Falta de coerência interna entre os elementos do planejamento.",
-        "Valorização excessiva das competências da BNCC, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa."
-    ],
-
-    correta: 3,
-
-    feedbackAcerto: `
-Correto. Um dos princípios centrais do planejamento é a coerência entre objetivos, conteúdos, metodologias e avaliação.
-    `,
-
-    feedbackErro: `
-Os elementos do planejamento precisam atuar de forma articulada para favorecer a aprendizagem.
-    `,
-
-    dicaBanca: `
-Coerência interna é uma das expressões mais cobradas em Planejamento Educacional.
-    `
-},
-
-{
-    pergunta: `
-Uma professora utilizou os resultados de avaliações diagnósticas para redefinir conteúdos prioritários, reorganizar estratégias metodológicas e adequar o ritmo de desenvolvimento das atividades. Essa decisão demonstra:
-    `,
-
-    alternativas: [
-        "Confusão entre avaliação e planejamento, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Inadequação do planejamento inicial, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Compreensão da avaliação como instrumento para orientar o planejamento e o replanejamento pedagógico.",
-        "Substituição dos objetivos educacionais pelos resultados das avaliações, quando analisada em conjunto com o contexto apresentado e com os objetivos da ação educativa.",
-        "Utilização indevida da avaliação diagnóstica, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
-    ],
-
-    correta: 2,
-
-    feedbackAcerto: `
-Correto. A avaliação fornece informações importantes para ajustar e aperfeiçoar o planejamento ao longo do processo educativo.
-    `,
-
-    feedbackErro: `
-Planejamento e avaliação mantêm relação de complementaridade e retroalimentação.
-    `,
-
-    dicaBanca: `
-Avaliação → tomada de decisão → replanejamento.
-    `
-},
-
-{
-    pergunta: `
-Ao planejar uma sequência didática alinhada à BNCC, um professor organizou atividades que exigiam dos estudantes a mobilização de conhecimentos, habilidades, atitudes e valores para resolver situações-problema contextualizadas. Essa proposta está fundamentada:
-    `,
-
-    alternativas: [
-        "Na concepção de ensino baseada predominantemente na transmissão de conteúdos.",
-        "Na substituição dos conteúdos curriculares pelas competências socioemocionais.",
-        "Na eliminação da necessidade de avaliação das aprendizagens.",
-        "Na compreensão de que as habilidades da BNCC possuem caráter predominantemente teórico.",
-        "Na ideia de competência como mobilização integrada de diferentes aprendizagens."
-    ],
-
-    correta: 4,
-
-    feedbackAcerto: `
-Correto. A BNCC entende competência como mobilização integrada de conhecimentos, habilidades, atitudes e valores em situações diversas.
-    `,
-
-    feedbackErro: `
-A perspectiva por competências não elimina conteúdos, mas promove sua utilização em contextos significativos.
-    `,
-
-    dicaBanca: `
-Competência = mobilizar conhecimentos para agir diante de situações reais.
-    `
-},
-
-{
-    pergunta: `
-Ao refletir sobre Planejamento Educacional, um candidato concluiu que planejar significa analisar a realidade, definir objetivos, organizar ações, acompanhar sua execução e avaliar resultados para promover melhorias contínuas. Essa conclusão é:
-    `,
-
-    alternativas: [
-        "Incorreta, pois planejamento e avaliação constituem processos independentes, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Correta, pois o planejamento é um processo contínuo, dinâmico, intencional e reflexivo.",
-        "Correta em geral no Planejamento de Ensino, considerando sua relação com os objetivos educacionais e com as condições reais da escola.",
-        "Incorreta, porque o planejamento concentra-se à definição prévia de atividades, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica.",
-        "Incorreta, já que a análise da realidade não integra o planejamento, quando articulada ao diagnóstico da realidade e às decisões coletivas da equipe pedagógica."
-    ],
-
     correta: 1,
-
-    feedbackAcerto: `
-Correto. O planejamento é compreendido como um processo contínuo que envolve diagnóstico, definição de objetivos, execução, acompanhamento, avaliação e replanejamento.
-    `,
-
-    feedbackErro: `
-A visão contemporânea do planejamento supera a ideia de documento estático e enfatiza seu caráter processual e reflexivo.
-    `,
-
-    dicaBanca: `
-Planejamento = diagnóstico → objetivos → ação → avaliação → replanejamento.
-    `
-}];
-
+    feedbackAcerto: "Correto. A dimensão pedagógica articula concepções e decisões sobre currículo, ensino, aprendizagem e avaliação.",
+    feedbackErro: "PPP não é um manual de aula nem apenas um documento administrativo; ele orienta o trabalho educativo institucional.",
+    dicaBanca: "Pedagógico = concepções e organização do processo educativo."
+},
+{
+    pergunta: "Uma escola elaborou um PPP amplo, arquivou o documento e passou três anos sem revisá-lo, mesmo diante de mudanças importantes em matrícula, aprendizagem e comunidade. O principal problema é compreender o PPP como:",
+    alternativas: [
+        "Instrumento democrático, pois a revisão frequente pode comprometer a estabilidade das decisões coletivamente assumidas.",
+        "Referência normativa suficiente, já que documentos aprovados deixam de depender de monitoramento durante sua vigência.",
+        "Documento estático, quando deveria funcionar como processo de orientação, acompanhamento e avaliação da ação escolar.",
+        "Plano de ensino institucional, cuja alteração depende da conclusão de todos os ciclos de aprendizagem previstos no currículo.",
+        "Registro histórico, pois sua finalidade principal é documentar decisões tomadas pela comunidade no momento de elaboração.",
+    ],
+    correta: 2,
+    feedbackAcerto: "Correto. O PPP precisa orientar a ação e ser acompanhado, avaliado e revisto quando a realidade e os resultados exigirem.",
+    feedbackErro: "Arquivar o PPP sem utilizá-lo transforma um instrumento de gestão pedagógica em mero documento burocrático.",
+    dicaBanca: "PPP vivo: orientar, acompanhar, avaliar e revisar."
+},
+{
+    pergunta: "Uma escola identifica baixa participação estudantil, define como objetivo ampliar protagonismo, cria ações com representação de turma e estabelece indicadores de acompanhamento. A sequência adotada articula corretamente:",
+    alternativas: [
+        "Avaliação final, execução, diagnóstico e seleção de conteúdos, nessa ordem, para garantir objetividade ao processo.",
+        "Metodologia, definição curricular, avaliação classificatória e prestação de contas como etapas independentes do PPP.",
+        "Objetivos, diagnóstico, recursos e calendário, pois a ordem dos elementos não interfere na coerência do planejamento.",
+        "Diagnóstico, definição de objetivos, programação de ações e acompanhamento dos resultados obtidos.",
+        "Participação, improvisação, controle e revisão, entendidos como componentes equivalentes da gestão democrática escolar.",
+    ],
+    correta: 3,
+    feedbackAcerto: "Correto. A situação parte da leitura da realidade, define finalidade, programa ações e prevê monitoramento de resultados.",
+    feedbackErro: "Planejamento coerente conecta diagnóstico, objetivos, ações e avaliação em vez de tratar esses elementos isoladamente.",
+    dicaBanca: "Realidade → objetivo → ação → acompanhamento."
+},
+{
+    pergunta: "Sobre a relação entre PPP e plano de trabalho docente, assinale a alternativa correta.",
+    alternativas: [
+        "O PPP substitui o plano docente porque reúne as decisões pedagógicas necessárias para todas as turmas da escola.",
+        "O plano docente prevalece sobre o PPP quando o professor possui formação específica no componente curricular.",
+        "Os dois são independentes, pois o PPP trata da instituição e o plano do professor se restringe à sala de aula e ao currículo comum.",
+        "O plano docente deve reproduzir literalmente as ações do PPP para garantir uniformidade entre turmas e componentes.",
+        "O PPP oferece referências institucionais, e o plano docente concretiza essas referências considerando currículo e turma.",
+    ],
+    correta: 4,
+    feedbackAcerto: "Correto. O PPP orienta a instituição; o plano docente traduz suas referências para o trabalho pedagógico concreto.",
+    feedbackErro: "A relação não é de substituição nem de cópia literal, mas de coerência entre projeto institucional e ação docente.",
+    dicaBanca: "PPP orienta; plano docente concretiza em contexto específico."
+},
+{
+    pergunta: "Uma direção envia formulário à comunidade para escolher entre duas opções já definidas pela gestão e considera isso suficiente para caracterizar planejamento participativo. A análise mais adequada é:",
+    alternativas: [
+        "A consulta pode integrar o processo, mas participação efetiva exige possibilidade real de analisar problemas e influir nas decisões.",
+        "A prática é plenamente participativa, pois qualquer manifestação formal da comunidade legitima decisões previamente estruturadas.",
+        "A prática é inadequada apenas porque estudantes não devem participar de decisões relacionadas ao planejamento institucional.",
+        "A consulta é superior à participação deliberativa, pois reduz conflitos e assegura maior eficiência na execução das ações.",
+        "Planejamento participativo exige unanimidade entre os segmentos, condição que não pode ser garantida por formulários de consulta e reuniões deliberativas presenciais.",
+    ],
+    correta: 0,
+    feedbackAcerto: "Correto. Participação efetiva não se resume a ser ouvido; envolve capacidade concreta de contribuir para análise e decisão.",
+    feedbackErro: "Consulta é uma possibilidade de participação, mas pode ser meramente formal quando as decisões centrais já estão fechadas.",
+    dicaBanca: "Participar é influir no processo, não apenas responder a uma pergunta já delimitada."
+},
+{
+    pergunta: "Durante a construção coletiva do plano escolar surgem divergências entre professores, estudantes e famílias. Em uma perspectiva democrática, o conflito deve ser compreendido como:",
+    alternativas: [
+        "Prova de que o planejamento participativo falhou e deve ser substituído por decisão técnica da equipe gestora.",
+        "Elemento possível do processo coletivo, a ser tratado por diálogo, negociação e explicitação dos critérios de decisão.",
+        "Situação incompatível com o PPP, pois decisões colegiadas somente são legítimas quando alcançam consenso integral.",
+        "Problema administrativo que deve ser separado das discussões pedagógicas para não comprometer os objetivos da escola.",
+        "Indício de ausência de liderança, já que processos bem coordenados evitam discordâncias entre os diferentes segmentos.",
+    ],
+    correta: 1,
+    feedbackAcerto: "Correto. Participação democrática não elimina divergências; cria procedimentos para debatê-las e construir decisões legitimadas.",
+    feedbackErro: "Conflito não é sinônimo de fracasso do planejamento. A questão central é como ele é tratado no processo decisório.",
+    dicaBanca: "Democracia escolar não significa ausência de conflito; significa tratamento público e negociado das diferenças."
+},
+{
+    pergunta: "Quando diferentes segmentos participam da definição de prioridades e também acompanham a execução das ações, tende a ocorrer maior:",
+    alternativas: [
+        "Centralização, porque a responsabilidade final precisa ser transferida ao segmento com maior conhecimento técnico.",
+        "Padronização, pois a participação coletiva reduz diferenças de perspectivas e produz decisões uniformes na escola.",
+        "Corresponsabilidade, pois os sujeitos compartilham decisões, compromissos e acompanhamento do que foi planejado.",
+        "Espontaneidade, porque a participação diminui a necessidade de metas, cronogramas e critérios de monitoramento.",
+        "Neutralidade, já que decisões coletivas deixam de refletir valores, interesses e concepções presentes na comunidade.",
+    ],
+    correta: 2,
+    feedbackAcerto: "Correto. O planejamento participativo fortalece compromisso e corresponsabilidade ao envolver os sujeitos em decisão e acompanhamento.",
+    feedbackErro: "Participação não elimina técnica, metas ou diferenças; ela amplia legitimidade e compartilhamento de responsabilidades.",
+    dicaBanca: "Decidir junto + acompanhar junto = corresponsabilidade."
+},
+{
+    pergunta: "O PNE aprovado em 2026 reforça a relação entre gestão democrática e planejamento escolar. Entre suas estratégias está a garantia de condições para que Conselhos Escolares participem da elaboração, implementação e avaliação:",
+    alternativas: [
+        "Somente do calendário letivo e das normas de convivência estabelecidas para cada unidade escolar.",
+        "Apenas dos programas financiados com recursos diretamente transferidos para manutenção da escola pública.",
+        "Exclusivamente do material didático, pois decisões sobre o projeto pedagógico permanecem sob responsabilidade técnica da gestão.",
+        "Do projeto pedagógico e de outros instrumentos formais de planejamento, com representatividade dos segmentos da comunidade.",
+        "Dos planos individuais de cada professor, substituindo a autonomia docente por deliberações do colegiado escolar.",
+    ],
+    correta: 3,
+    feedbackAcerto: "Correto. O PNE 2026 associa Conselhos Escolares à elaboração, implementação e avaliação do projeto pedagógico e de instrumentos de planejamento.",
+    feedbackErro: "A participação dos Conselhos não se restringe a finanças ou convivência e também não transforma o colegiado em gestor do plano individual docente.",
+    dicaBanca: "PNE 2026: gestão democrática também alcança os instrumentos formais de planejamento da escola."
+},
+{
+    pergunta: "Uma secretaria adota indicadores de aprendizagem para orientar prioridades, mas permite que escolas e comunidades interpretem os dados à luz de seus contextos e participem das decisões. Essa prática mostra que:",
+    alternativas: [
+        "Uso de evidências e participação são incompatíveis, pois dados objetivos devem substituir percepções produzidas localmente.",
+        "Planejamento participativo dispensa indicadores, porque a experiência dos sujeitos é suficiente para definir as prioridades escolares.",
+        "Os indicadores devem determinar automaticamente as ações, cabendo à comunidade apenas acompanhar sua execução posterior.",
+        "A participação é adequada somente para definir valores institucionais, enquanto decisões pedagógicas exigem critérios estritamente técnicos.",
+        "Evidências podem subsidiar decisões democráticas sem eliminar análise contextual, diálogo e responsabilidade coletiva.",
+    ],
+    correta: 4,
+    feedbackAcerto: "Correto. Dados qualificam o diagnóstico, mas não retiram dos sujeitos a responsabilidade de interpretar a realidade e decidir sobre ações.",
+    feedbackErro: "Planejamento democrático não rejeita evidências; ele evita transformar indicadores em decisões automáticas e descontextualizadas.",
+    dicaBanca: "Dados informam; sujeitos interpretam, deliberam e assumem responsabilidades."
+},
+{
+    pergunta: "Em uma perspectiva associada a Libâneo, o planejamento de ensino é adequadamente compreendido como:",
+    alternativas: [
+        "Atividade consciente de previsão e organização do trabalho docente, articulada a objetivos e às condições reais do ensino.",
+        "Técnica de controle destinada a padronizar procedimentos para que diferentes professores executem previamente o mesmo roteiro de aula.",
+        "Registro formal dos conteúdos previstos no currículo, elaborado principalmente para comprovar o cumprimento das normas escolares.",
+        "Previsão integral das situações didáticas capaz de evitar mudanças durante o desenvolvimento do processo de ensino.",
+        "Instrumento administrativo cuja função central é distribuir tarefas, recursos e prazos entre os profissionais da instituição.",
+    ],
+    correta: 0,
+    feedbackAcerto: "Correto. Nessa perspectiva, o planejamento é atividade intencional e consciente vinculada a objetivos e condições concretas do ensino.",
+    feedbackErro: "Reduzir o planejamento a controle ou registro burocrático elimina sua função de orientar criticamente a prática docente.",
+    dicaBanca: "Libâneo: intencionalidade, objetivos, organização e realidade concreta do ensino."
+},
+{
+    pergunta: "Em uma leitura inspirada em Vasconcellos, planejar ganha sentido quando o professor:",
+    alternativas: [
+        "Segue com fidelidade um roteiro previamente aprovado, evitando mudanças que prejudiquem a unidade do trabalho escolar.",
+        "Articula reflexão e ação para intervir na realidade, avaliando o percurso e reelaborando decisões quando necessário.",
+        "Prioriza técnicas de formulação de objetivos mensuráveis, pois a qualidade do planejamento depende sobretudo de sua precisão formal.",
+        "Separa diagnóstico e execução, evitando que dificuldades encontradas no percurso modifiquem as escolhas pedagógicas iniciais.",
+        "Transforma o PPP em um conjunto de regras estáveis capaz de orientar a prática sem necessidade de mediação docente.",
+    ],
+    correta: 1,
+    feedbackAcerto: "Correto. O planejamento aparece como mediação entre intenção e ação, voltado à intervenção consciente na realidade.",
+    feedbackErro: "A perspectiva de Vasconcellos critica o planejamento burocrático e valoriza reflexão, intervenção e reavaliação da prática.",
+    dicaBanca: "Vasconcellos: planejar para intervir na realidade, não apenas preencher documentos."
+},
+{
+    pergunta: "No planejamento participativo associado a Danilo Gandin, a articulação entre marco referencial, diagnóstico e programação permite, respectivamente:",
+    alternativas: [
+        "Definir atividades, medir resultados e registrar procedimentos administrativos da instituição.",
+        "Estabelecer metas quantitativas, distribuir responsabilidades e controlar a execução financeira do plano.",
+        "Explicitar o ideal desejado, confrontá-lo com a realidade e organizar ações para aproximar realidade e projeto.",
+        "Selecionar conteúdos, escolher metodologias e definir instrumentos avaliativos para cada componente curricular, organizando também a progressão das aprendizagens durante o período letivo.",
+        "Identificar problemas disciplinares, estabelecer normas e prever sanções compatíveis com o regimento escolar.",
+    ],
+    correta: 2,
+    feedbackAcerto: "Correto. O marco explicita o horizonte desejado; o diagnóstico confronta realidade e referência; a programação organiza a intervenção.",
+    feedbackErro: "Essa tríade não é simples sequência administrativa: ela articula ideal, leitura crítica da realidade e ação transformadora.",
+    dicaBanca: "Gandin: marco referencial → diagnóstico → programação."
+},
+{
+    pergunta: "Ao comparar uma concepção tecnicista de planejamento com uma perspectiva crítico-participativa, é correto afirmar que esta última tende a:",
+    alternativas: [
+        "Rejeitar procedimentos técnicos e substituir objetivos por decisões espontâneas construídas em assembleias escolares.",
+        "Eliminar a necessidade de coordenação, pois decisões coletivas devem ocorrer sem definição prévia de papéis e responsabilidades.",
+        "Restringir o planejamento às questões sociais e políticas, deixando métodos e avaliação sob responsabilidade individual dos docentes.",
+        "Integrar dimensão técnica e dimensão política, relacionando organização da ação a finalidades, participação e análise da realidade.",
+        "Priorizar a autonomia local sobre toda norma curricular ou legal, pois planejamento democrático pressupõe soberania da comunidade.",
+    ],
+    correta: 3,
+    feedbackAcerto: "Correto. Uma perspectiva crítico-participativa não abandona a técnica; ela a subordina a finalidades, realidade e participação dos sujeitos.",
+    feedbackErro: "O contraste não é técnica versus ausência de técnica, mas técnica neutra e instrumental versus técnica articulada a escolhas educativas.",
+    dicaBanca: "Planejamento crítico integra meios, finalidades, sujeitos e realidade."
+},
+{
+    pergunta: "Em uma questão de concurso, um candidato associa corretamente os autores às ideias sobre planejamento quando afirma que:",
+    alternativas: [
+        "Libâneo defende planejamento sem relação com condições concretas; Vasconcellos privilegia controle; Gandin reduz participação a consulta.",
+        "Libâneo restringe-se ao plano de aula; Vasconcellos trata apenas do PPP; Gandin trabalha exclusivamente com planejamento de sistemas.",
+        "Libâneo e Vasconcellos rejeitam objetivos previamente definidos; Gandin considera o diagnóstico dispensável quando há marco referencial.",
+        "Os três autores compreendem planejamento sobretudo como técnica neutra, diferenciando-se apenas quanto ao nível de detalhamento dos planos e dos documentos produzidos.",
+        "Libâneo enfatiza organização consciente da ação; Vasconcellos, intervenção refletida; Gandin, estrutura participativa entre ideal, realidade e ação.",
+    ],
+    correta: 4,
+    feedbackAcerto: "Correto. A alternativa sintetiza diferenças de ênfase sem reduzir os autores a concepções burocráticas ou tecnicistas.",
+    feedbackErro: "As obras desses autores tratam planejamento como atividade intencional e vinculada à realidade, embora com ênfases distintas.",
+    dicaBanca: "Compare ênfases: Libâneo—organização consciente; Vasconcellos—intervenção; Gandin—participação e tríade estruturante."
+},
+{
+    pergunta: "Um plano apresenta o objetivo 'comparar diferentes explicações para um fenômeno', mas a avaliação solicita apenas a reprodução de definições memorizadas. O problema central é:",
+    alternativas: [
+        "Falta de alinhamento entre o objetivo cognitivo proposto e a evidência de aprendizagem exigida pela avaliação.",
+        "Excesso de precisão do objetivo, que deveria ser formulado de modo mais amplo para permitir diferentes formas de resposta.",
+        "Uso de avaliação escrita, pois objetivos de comparação somente podem ser verificados por atividades práticas em grupo.",
+        "Ausência de conteúdo, porque objetivos de ordem superior dispensam conceitos e conhecimentos previamente trabalhados.",
+        "Escolha inadequada da metodologia, já que toda avaliação deve reproduzir exatamente o procedimento usado durante a aula.",
+    ],
+    correta: 0,
+    feedbackAcerto: "Correto. Se o objetivo exige comparar, a avaliação precisa produzir evidências dessa capacidade, não apenas de memorização.",
+    feedbackErro: "Coerência didática exige relação entre o que se pretende desenvolver e aquilo que a avaliação efetivamente verifica.",
+    dicaBanca: "Verifique o verbo do objetivo e o tipo de desempenho exigido pela avaliação."
+},
+{
+    pergunta: "Na seleção de conteúdos para um plano de ensino, uma decisão pedagogicamente consistente considera:",
+    alternativas: [
+        "A quantidade máxima de tópicos possível, pois maior cobertura de conteúdo amplia necessariamente a aprendizagem da turma.",
+        "Relevância para os objetivos, estrutura do conhecimento, contexto dos estudantes e possibilidades reais de aprofundamento.",
+        "A ordem apresentada no livro didático, pois ela representa a sequência curricular oficial adotada por todas as escolas.",
+        "A preferência do professor por temas de maior domínio, garantindo segurança conceitual e melhor gestão do tempo disponível.",
+        "O desempenho das questões em avaliações externas, que deve definir a prioridade dos conteúdos em qualquer contexto escolar.",
+    ],
+    correta: 1,
+    feedbackAcerto: "Correto. Selecionar conteúdo envolve pertinência aos objetivos, lógica do conhecimento, contexto e condições de trabalho pedagógico.",
+    feedbackErro: "Quantidade, livro didático ou avaliações externas podem informar decisões, mas não constituem critérios únicos ou automáticos.",
+    dicaBanca: "Conteúdo deve ser relevante, articulado aos objetivos e adequado ao contexto e à progressão da aprendizagem."
+},
+{
+    pergunta: "Uma escola determina que todos os professores usem a mesma metodologia em qualquer turma para assegurar 'coerência pedagógica'. Essa decisão é problemática porque:",
+    alternativas: [
+        "Metodologias não integram o planejamento e devem surgir espontaneamente durante a interação com os estudantes.",
+        "A coerência exige que cada professor utilize uma metodologia diferente, evitando padronização entre componentes curriculares.",
+        "A escolha metodológica deve relacionar objetivos, conteúdos, estudantes e condições concretas, não decorrer de uniformização automática.",
+        "Somente a BNCC pode definir metodologias obrigatórias, cabendo às escolas seguir os procedimentos oficialmente prescritos.",
+        "Metodologias são escolhas individuais do professor e não precisam dialogar com o PPP, currículo ou objetivos da instituição em cada etapa escolar.",
+    ],
+    correta: 2,
+    feedbackAcerto: "Correto. Metodologia é meio intencional e precisa ser adequada ao objetivo, ao conteúdo, aos estudantes e às condições do contexto.",
+    feedbackErro: "Coerência institucional não significa impor um único método, assim como autonomia docente não significa agir sem referências comuns.",
+    dicaBanca: "Método é escolha contextualizada, não receita universal."
+},
+{
+    pergunta: "Em um plano de aula, tablets, laboratório, textos e materiais manipuláveis são adequadamente compreendidos como:",
+    alternativas: [
+        "Objetivos intermediários que definem quais aprendizagens deverão ser alcançadas durante o desenvolvimento da aula.",
+        "Metodologias completas, pois a escolha do recurso determina automaticamente a forma de interação e participação dos estudantes em diferentes situações de aprendizagem.",
+        "Conteúdos procedimentais, uma vez que seu uso exige ações e habilidades que serão desenvolvidas pelos estudantes.",
+        "Recursos didáticos que apoiam estratégias de ensino, mas só ganham sentido em relação aos objetivos e às atividades planejadas.",
+        "Instrumentos de avaliação, pois todo recurso utilizado em uma aula permite verificar diretamente o desempenho dos estudantes.",
+    ],
+    correta: 3,
+    feedbackAcerto: "Correto. Recursos são meios que apoiam a ação didática e precisam ser escolhidos em função do que se pretende ensinar e aprender.",
+    feedbackErro: "Tecnologia ou material, por si só, não define objetivo, método ou avaliação; sua função depende do desenho pedagógico.",
+    dicaBanca: "Recurso é meio, não finalidade."
+},
+{
+    pergunta: "Uma sequência didática é bem planejada quando as atividades:",
+    alternativas: [
+        "Mantêm o mesmo nível de dificuldade para garantir igualdade de condições entre os estudantes durante todo o percurso.",
+        "São independentes entre si, permitindo substituir qualquer etapa sem afetar a construção das aprendizagens previstas.",
+        "Priorizam variedade de recursos, mesmo quando as tarefas não se relacionam diretamente aos objetivos estabelecidos.",
+        "Concentram a sistematização conceitual apenas no final, evitando intervenções do professor durante as etapas de exploração.",
+        "Apresentam encadeamento intencional, com progressão e retomadas coerentes com objetivos e conhecimentos prévios.",
+    ],
+    correta: 4,
+    feedbackAcerto: "Correto. Sequência didática implica articulação entre atividades, progressão, retomadas e objetivos ao longo de um percurso de aprendizagem.",
+    feedbackErro: "Uma coleção de atividades variadas não constitui, por si só, uma sequência; é necessário haver relação e progressão entre elas.",
+    dicaBanca: "Sequência didática = encadeamento com propósito e progressão."
+},
+{
+    pergunta: "Após uma avaliação diagnóstica, o professor percebe que metade da turma ainda não domina conhecimentos prévios indispensáveis ao conteúdo seguinte. A decisão mais coerente com o planejamento é:",
+    alternativas: [
+        "Reorganizar o percurso, prevendo intervenções que retomem conhecimentos necessários sem perder de vista os objetivos do período.",
+        "Manter o cronograma original, pois alterar o plano comprometeria a igualdade de oportunidades entre diferentes turmas da escola.",
+        "Registrar a dificuldade e aguardar a avaliação somativa, que fornecerá evidências mais confiáveis para qualquer mudança pedagógica.",
+        "Reduzir os objetivos de aprendizagem para a turma, substituindo expectativas curriculares por metas compatíveis com o resultado inicial.",
+        "Transferir a responsabilidade da recuperação para atividades extraclasse, preservando o tempo destinado ao conteúdo planejado.",
+    ],
+    correta: 0,
+    feedbackAcerto: "Correto. O diagnóstico deve orientar intervenções e replanejamento, e não funcionar apenas como registro da situação inicial.",
+    feedbackErro: "Planejamento responsivo utiliza evidências para ajustar o ensino sem abandonar as finalidades formativas estabelecidas.",
+    dicaBanca: "Diagnóstico útil produz decisão pedagógica."
+},
+{
+    pergunta: "Uma professora utiliza produções dos estudantes ao longo do bimestre, devolutivas e registros de observação para ajustar as próximas aulas. Nessa situação, a avaliação exerce função:",
+    alternativas: [
+        "Classificatória, pois organiza evidências que permitirão atribuir notas ao final do período letivo.",
+        "Formativa, porque produz informações durante o processo e subsidia intervenções e replanejamento.",
+        "Somativa, já que reúne diferentes instrumentos antes de produzir uma síntese do desempenho alcançado.",
+        "Diagnóstica apenas, pois qualquer análise de dificuldade anterior ao fechamento de notas possui essa natureza.",
+        "Normativa, porque compara desempenhos e orienta a adequação da turma aos padrões definidos pela rede de ensino.",
+    ],
+    correta: 1,
+    feedbackAcerto: "Correto. Avaliação formativa acompanha o processo e alimenta decisões pedagógicas antes que o percurso esteja concluído.",
+    feedbackErro: "A presença de diferentes instrumentos não define, sozinha, a função da avaliação; importa como a informação é usada.",
+    dicaBanca: "Formativa = evidência durante o percurso para orientar ação seguinte."
+},
+{
+    pergunta: "Sobre avaliação somativa e planejamento, assinale a alternativa correta.",
+    alternativas: [
+        "A avaliação somativa é incompatível com uma concepção formativa e deve ser abolida sempre que a escola acompanha o processo.",
+        "A avaliação somativa é suficiente para orientar o ensino, pois sintetiza resultados com maior objetividade que registros processuais.",
+        "A síntese final pode ter função legítima, desde que não substitua o acompanhamento processual e seja interpretada no conjunto das evidências.",
+        "A avaliação somativa deve ocorrer antes da diagnóstica, porque seus resultados definem os conhecimentos prévios a serem retomados.",
+        "A avaliação somativa não integra o planejamento, uma vez que ocorre somente após o encerramento das decisões pedagógicas do professor e da turma.",
+    ],
+    correta: 2,
+    feedbackAcerto: "Correto. Sínteses finais podem coexistir com avaliação diagnóstica e formativa; o problema é reduzir todo o processo a elas.",
+    feedbackErro: "Uma concepção processual não elimina necessariamente avaliações somativas, mas evita que sejam a única fonte de decisão.",
+    dicaBanca: "Somativa pode sintetizar; formativa acompanha e orienta o percurso."
+},
+{
+    pergunta: "Resultados mostram que um grupo não atingiu determinado objetivo. O professor propõe novas estratégias, acompanha o progresso e oferece oportunidades adicionais de aprendizagem. Essa conduta expressa:",
+    alternativas: [
+        "Rebaixamento curricular, pois objetivos não alcançados devem ser substituídos por expectativas mais simples para o grupo.",
+        "Avaliação classificatória, já que estudantes com resultados semelhantes são reunidos temporariamente para novas atividades.",
+        "Planejamento corretivo, entendido como repetição da mesma metodologia até que os resultados esperados sejam alcançados.",
+        "Recuperação articulada ao replanejamento, baseada nas evidências sobre dificuldades e no direito de aprender.",
+        "Ajuste administrativo, pois a principal finalidade é evitar que os resultados da turma comprometam os indicadores institucionais.",
+    ],
+    correta: 3,
+    feedbackAcerto: "Correto. Recuperar aprendizagem exige interpretar evidências, variar intervenções e acompanhar se o objetivo passa a ser alcançado.",
+    feedbackErro: "Recuperação não é simples repetição nem redução automática de expectativas; ela integra o ciclo de avaliação e replanejamento.",
+    dicaBanca: "Dificuldade identificada → intervenção diferente → novo acompanhamento."
+},
+{
+    pergunta: "No Conselho de Classe, professores analisam evidências de aprendizagem, identificam padrões de dificuldade e decidem ações conjuntas para o próximo período. Nessa perspectiva, o Conselho de Classe funciona como:",
+    alternativas: [
+        "Instância destinada principalmente a validar notas e resolver casos individuais antes do fechamento do período letivo.",
+        "Reunião administrativa cuja função é padronizar critérios e impedir diferenças de julgamento entre componentes curriculares.",
+        "Substituto do planejamento docente, pois as decisões coletivas devem prevalecer sobre adaptações realizadas em cada turma.",
+        "Mecanismo de responsabilização dos estudantes, já que o baixo desempenho deve orientar ações sobre comportamento e frequência.",
+        "Espaço de análise coletiva que pode produzir decisões de replanejamento e acompanhamento das aprendizagens.",
+    ],
+    correta: 4,
+    feedbackAcerto: "Correto. Quando orientado pedagogicamente, o Conselho de Classe articula análise de evidências, reflexão coletiva e tomada de decisão.",
+    feedbackErro: "Reduzi-lo ao fechamento de notas perde seu potencial de compreender processos e reorganizar o trabalho pedagógico.",
+    dicaBanca: "Conselho de Classe pedagógico: analisar para decidir e replanejar."
+},
+{
+    pergunta: "Ao planejar uma situação alinhada à BNCC, o professor propõe problema no qual os estudantes precisam mobilizar conhecimentos, habilidades, atitudes e valores. A proposta está relacionada ao conceito de:",
+    alternativas: [
+        "Competência, entendida como mobilização integrada de aprendizagens para enfrentar demandas complexas.",
+        "Conteúdo mínimo, entendido como conjunto de informações obrigatórias que devem ser reproduzidas em qualquer contexto.",
+        "Objetivo operacional, definido como comportamento observável que deve ocorrer da mesma forma em todos os estudantes.",
+        "Metodologia ativa, que a BNCC determina como procedimento obrigatório para o desenvolvimento das aprendizagens essenciais.",
+        "Avaliação por desempenho, que substitui conteúdos conceituais por tarefas práticas em todas as etapas da Educação Básica.",
+    ],
+    correta: 0,
+    feedbackAcerto: "Correto. A BNCC define competência em termos de mobilização de conhecimentos, habilidades, atitudes e valores diante de demandas complexas.",
+    feedbackErro: "Competências não eliminam conteúdos nem correspondem a uma metodologia obrigatória prescrita pelo documento.",
+    dicaBanca: "Competência = mobilizar diferentes aprendizagens para agir em situações."
+},
+{
+    pergunta: "Uma coordenadora determina que, por estar alinhada à BNCC, toda aula deve seguir uma metodologia específica escolhida pela rede. Essa exigência não decorre da BNCC porque ela:",
+    alternativas: [
+        "Define apenas objetivos gerais e deixa currículos, conteúdos e aprendizagens inteiramente livres para cada escola.",
+        "Estabelece aprendizagens essenciais e competências, mas não prescreve uma única metodologia obrigatória para todas as situações.",
+        "Se aplica somente às avaliações externas, não interferindo na construção curricular ou no planejamento pedagógico das escolas da rede.",
+        "Orienta exclusivamente a Educação Infantil e o Ensino Fundamental, deixando o Ensino Médio sem referência curricular nacional.",
+        "Determina métodos diferentes para cada área, cabendo às redes apenas adaptar recursos e tempos às condições locais.",
+    ],
+    correta: 1,
+    feedbackAcerto: "Correto. A BNCC orienta aprendizagens essenciais, mas não transforma uma metodologia específica em regra universal de ensino.",
+    feedbackErro: "Alinhamento curricular não significa uniformização metodológica; o planejamento precisa considerar contexto, objetivos e estudantes.",
+    dicaBanca: "BNCC orienta o que deve ser desenvolvido, não impõe um único como ensinar."
+},
+{
+    pergunta: "Uma habilidade curricular é comum à rede, mas o professor seleciona problemas ligados ao território local para desenvolvê-la. Essa decisão é adequada quando:",
+    alternativas: [
+        "Substitui a habilidade por um objetivo criado pelo professor, pois o contexto local possui prioridade sobre referências comuns da rede.",
+        "Mantém apenas o conteúdo regional, uma vez que contextualização e aprendizagem essencial não precisam aparecer simultaneamente.",
+        "Preserva a aprendizagem prevista e contextualiza situações, exemplos e estratégias às características dos estudantes e da comunidade.",
+        "Altera o nível de complexidade da habilidade para qualquer turma, independentemente da progressão curricular estabelecida pela rede.",
+        "Evita conhecimentos nacionais e científicos para impedir que o currículo se sobreponha às experiências culturais do território.",
+    ],
+    correta: 2,
+    feedbackAcerto: "Correto. Contextualizar significa concretizar aprendizagens comuns em situações significativas sem abandonar a referência curricular.",
+    feedbackErro: "Contexto local e aprendizagem essencial não são alternativas excludentes; o planejamento deve articulá-los.",
+    dicaBanca: "Currículo comum + realidade local = contextualização, não substituição."
+},
+{
+    pergunta: "Um professor pretende desenvolver argumentação baseada em evidências, mas planeja apenas exposição oral e prova de reprodução conceitual. O problema mais preciso é:",
+    alternativas: [
+        "Ausência de recursos digitais, indispensáveis para desenvolver habilidades de argumentação em situações contemporâneas.",
+        "Excesso de conteúdo conceitual, pois competências argumentativas devem ser trabalhadas sem conhecimentos disciplinares prévios.",
+        "Uso de prova escrita, modalidade incompatível com a verificação de competências relacionadas à análise e argumentação.",
+        "Incoerência entre a aprendizagem pretendida, as experiências propostas e as evidências que serão solicitadas na avaliação.",
+        "Falta de interdisciplinaridade, já que a argumentação somente pode ser desenvolvida por projetos envolvendo diversas áreas.",
+    ],
+    correta: 3,
+    feedbackAcerto: "Correto. Objetivo, experiências de aprendizagem e avaliação precisam exigir desempenhos compatíveis entre si.",
+    feedbackErro: "Nem exposição nem prova escrita são inadequadas por natureza; o problema é o desenho não oferecer oportunidade para argumentar com evidências.",
+    dicaBanca: "Questão difícil de planejamento: procure o elo quebrado entre objetivo, atividade e avaliação."
+},
+{
+    pergunta: "O PPP prevê avaliação formativa e participação estudantil, mas um professor mantém exclusivamente provas finais e decisões unilaterais porque considera seu plano 'autônomo'. A análise mais adequada é:",
+    alternativas: [
+        "A autonomia docente torna a prática legítima, pois o PPP não pode interferir em avaliação ou organização do trabalho de cada componente.",
+        "O professor somente precisa seguir o PPP em projetos coletivos, mantendo independência nas decisões relacionadas à própria disciplina.",
+        "A divergência é aceitável se os resultados da turma forem satisfatórios, pois desempenho prevalece sobre princípios institucionais.",
+        "O PPP deve ser alterado para incorporar qualquer prática individual consolidada, evitando conflitos entre autonomia e gestão democrática.",
+        "A autonomia docente deve ser exercida com responsabilidade e coerência em relação à proposta pedagógica e às referências curriculares.",
+    ],
+    correta: 4,
+    feedbackAcerto: "Correto. Autonomia profissional não equivale a ruptura com o projeto pedagógico institucional construído pela escola.",
+    feedbackErro: "O plano docente possui espaço de decisão, mas a LDB o vincula à proposta pedagógica do estabelecimento de ensino.",
+    dicaBanca: "Autonomia = margem de decisão responsável dentro de referências comuns."
+},
+{
+    pergunta: "Analise as assertivas sobre planejamento escolar e LDB:\n\nI. Cabe ao estabelecimento de ensino elaborar e executar sua proposta pedagógica.\nII. Cabe ao docente participar da elaboração dessa proposta e elaborar seu plano de trabalho segundo ela.\nIII. A gestão democrática exclui participação comunitária nas decisões pedagógicas, reservadas aos profissionais da educação.\n\nEstá correto o que se afirma em:",
+    alternativas: [
+        "I e II, apenas.",
+        "I e III, apenas.",
+        "II e III, apenas.",
+        "I, II e III.",
+        "III, apenas.",
+    ],
+    correta: 0,
+    feedbackAcerto: "Correto. As assertivas I e II reproduzem incumbências previstas nos arts. 12 e 13; a III contraria o princípio participativo da gestão democrática.",
+    feedbackErro: "A LDB não restringe gestão democrática aos profissionais da educação: também prevê participação das comunidades escolar e local.",
+    dicaBanca: "Cruze arts. 12, 13 e 14: escola, docentes e comunidade possuem papéis diferentes e articulados."
+},
+{
+    pergunta: "Julgue as afirmações: \n\nI. Flexibilidade significa poder mudar estratégias sem perder de vista os objetivos.\nII. Diagnóstico possui sentido apenas no início do ano, pois depois dele a avaliação assume integralmente sua função.\nIII. Replanejamento pode decorrer de evidências produzidas durante a execução.\n\nAssinale a alternativa correta.",
+    alternativas: [
+        "Apenas I está correta.",
+        "I e III estão corretas.",
+        "II e III estão corretas.",
+        "I e II estão corretas.",
+        "I, II e III estão corretas.",
+    ],
+    correta: 1,
+    feedbackAcerto: "Correto. Flexibilidade e replanejamento são coerentes com um processo contínuo; diagnóstico pode ocorrer em diferentes momentos.",
+    feedbackErro: "Diagnóstico não é evento único do início do ano. Novas evidências podem exigir nova leitura da situação durante o percurso.",
+    dicaBanca: "Planejamento contínuo permite diagnosticar, agir, avaliar e diagnosticar novamente."
+},
+{
+    pergunta: "Uma escola declara em seu PPP que pretende formar sujeitos críticos e autônomos, mas organiza o ensino apenas por reprodução de respostas prontas e impede participação discente nas decisões possíveis. A principal contradição está entre:",
+    alternativas: [
+        "Recursos materiais e objetivos quantitativos, pois autonomia depende de infraestrutura específica para ser desenvolvida.",
+        "Currículo nacional e contexto local, já que formação crítica só pode ocorrer por conteúdos escolhidos pela comunidade.",
+        "Finalidades declaradas e práticas efetivamente organizadas, indicando ausência de coerência entre projeto e ação pedagógica.",
+        "Diagnóstico e avaliação externa, porque indicadores objetivos são incompatíveis com finalidades formativas relacionadas à autonomia.",
+        "Gestão administrativa e planejamento de aula, dimensões que deveriam permanecer separadas para preservar a autonomia docente.",
+    ],
+    correta: 2,
+    feedbackAcerto: "Correto. Um projeto pedagógico só ganha sentido quando suas finalidades orientam práticas, relações e decisões concretas da escola.",
+    feedbackErro: "O problema não é falta de recurso ou avaliação externa, mas a distância entre o que a escola afirma desejar e o que efetivamente faz.",
+    dicaBanca: "Questões integradoras costumam cobrar coerência entre discurso do PPP e prática institucional."
+},
+{
+    pergunta: "O PNE de 2026 incorpora monitoramento e avaliação contínuos aos processos de planejamento das políticas educacionais. Em termos de gestão, isso significa que:",
+    alternativas: [
+        "O planejamento deve ser concluído antes da implementação, cabendo à avaliação apenas verificar resultados ao final do decênio.",
+        "O monitoramento substitui a participação social, pois decisões baseadas em evidências exigem critérios técnicos independentes de consulta pública.",
+        "A avaliação deve concentrar-se no cumprimento formal de metas, sem produzir alterações nas estratégias previamente pactuadas pelos entes.",
+        "Planejamento, implementação, monitoramento e avaliação formam um ciclo em que evidências podem orientar revisão de ações e prioridades.",
+        "A revisão dos planos deve ocorrer somente quando a meta for oficialmente descumprida, preservando estabilidade durante a execução.",
+    ],
+    correta: 3,
+    feedbackAcerto: "Correto. O PNE 2026 trata monitoramento e avaliação como componentes integrados ao planejamento e à implementação das políticas educacionais.",
+    feedbackErro: "Avaliar não é apenas constatar no fim; as evidências produzidas durante a implementação podem subsidiar revisão e aperfeiçoamento das ações.",
+    dicaBanca: "PNE 2026 reforça ciclo contínuo: planejar → implementar → monitorar → avaliar → aperfeiçoar."
+},
+{
+    pergunta: "Uma escola identifica baixa aprendizagem em leitura. O PPP define a melhoria desse campo como prioridade; professores elaboram planos alinhados ao objetivo; avaliações formativas produzem evidências; o Conselho Escolar acompanha as ações e, ao final do bimestre, estratégias são revistas. A situação exemplifica:",
+    alternativas: [
+        "Centralização pedagógica, porque um problema institucional exige que todos os docentes adotem os mesmos métodos e instrumentos de avaliação.",
+        "Planejamento burocrático, pois a existência de PPP, planos docentes e registros avaliativos indica excesso de documentação institucional.",
+        "Autonomia individual, uma vez que cada professor pode redefinir os objetivos da escola segundo resultados observados em sua própria turma.",
+        "Gestão por resultados, porque indicadores de aprendizagem substituem participação comunitária e critérios pedagógicos na tomada de decisão.",
+        "Planejamento articulado, participativo e avaliativo, conectando diagnóstico, projeto institucional, ação docente e replanejamento.",
+    ],
+    correta: 4,
+    feedbackAcerto: "Correto. O caso integra diferentes níveis, participação, avaliação e revisão das ações a partir de uma prioridade institucional comum.",
+    feedbackErro: "A presença de metas e evidências não transforma o processo em controle burocrático quando elas orientam reflexão, participação e intervenção pedagógica.",
+    dicaBanca: "Questão integradora: procure a conexão entre realidade, PPP, plano docente, avaliação, participação e replanejamento."
+}
+];
