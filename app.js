@@ -21513,7 +21513,16 @@ async function criarDuelo(){
 
     const concursoDuelo = localStorage.getItem("farol_duelo_concurso_atual") || "barcarena2026";
     if(
+        concursoDuelo === "transpetro2026" &&
+        typeof window.temAcessoCargoFarol === "function" &&
+        !window.temAcessoCargoFarol("transpetro2026", "taifeiro")
+    ){
+        mostrarToast("Você não tem acesso a Taifeiro — Transpetro MAR.");
+        return false;
+    }
+    if(
         concursoDuelo !== "barcarena2026" &&
+        concursoDuelo !== "transpetro2026" &&
         typeof window.temAlgumAcessoConcursoFarol === "function" &&
         !window.temAlgumAcessoConcursoFarol(concursoDuelo)
     ){
@@ -21637,7 +21646,17 @@ async function entrarDuelo(codigo){
     const concursoDuelo = dados.concurso || "barcarena2026";
 
     if(
+        concursoDuelo === "transpetro2026" &&
+        typeof window.temAcessoCargoFarol === "function" &&
+        !window.temAcessoCargoFarol("transpetro2026", "taifeiro")
+    ){
+        mostrarToast("Você não tem acesso a Taifeiro — Transpetro MAR.");
+        return false;
+    }
+
+    if(
         concursoDuelo !== "barcarena2026" &&
+        concursoDuelo !== "transpetro2026" &&
         typeof window.temAlgumAcessoConcursoFarol === "function" &&
         !window.temAlgumAcessoConcursoFarol(concursoDuelo)
     ){
@@ -21674,7 +21693,14 @@ async function entrarDuelo(codigo){
         ...dados
     };
 
-    dueloQuestoes = (dados.indices || []).map(i => bancoQuestoes[dados.assunto][i]).filter(Boolean);
+    if(concursoDuelo === "transpetro2026" && typeof window.prepararBancoCompeticaoTranspetroFarolV77 === "function"){
+        window.prepararBancoCompeticaoTranspetroFarolV77();
+    }
+
+    const bancoDueloEntrada = Array.isArray(bancoQuestoes[dados.assunto])
+        ? bancoQuestoes[dados.assunto]
+        : [];
+    dueloQuestoes = (dados.indices || []).map(i => bancoDueloEntrada[i]).filter(Boolean);
     dueloIndiceAtual = 0;
     dueloAcertos = 0;
     dueloErros = 0;
@@ -27003,6 +27029,98 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
     window.mostrarBloqueioDueloAbaetetubaV26 =
         mostrarBloqueioDueloAbaetetubaV26;
 
+
+
+    // ======================================================
+    // FAROL V77 — TRANSPETRO MAR NOS DUELOS
+    // Usa os tópicos já aprovados do Banco 2026 do Taifeiro.
+    // ======================================================
+    const gruposDueloTranspetroV77 = [
+        {
+            disciplina: "transpetroArquiteturaNaval",
+            nome: "⚓ Arquitetura Naval",
+            assuntos: [
+                { chave: "taa2026_arq_1_1", topicoEdital: "1.1 Identificação de corpos e partes da embarcação", nome: "1.1 Identificação de corpos e partes da embarcação" },
+                { chave: "taa2026_arq_1_2", topicoEdital: "1.2 Dimensões lineares", nome: "1.2 Dimensões lineares" },
+                { chave: "taa2026_arq_1_3", topicoEdital: "1.3 Estrutura básica da embarcação", nome: "1.3 Estrutura básica da embarcação" },
+                { chave: "taa2026_arq_1_4", topicoEdital: "1.4 Principais compartimentos da embarcação", nome: "1.4 Principais compartimentos da embarcação" },
+                { chave: "taa2026_arq_1_5", topicoEdital: "1.5 Aberturas e acessórios", nome: "1.5 Aberturas e acessórios" }
+            ]
+        },
+        {
+            disciplina: "transpetroLegislacaoMaritima",
+            nome: "⚖️ Legislação Marítima e Ambiental",
+            assuntos: [
+                { chave: "taa2026_leg_1_1", topicoEdital: "1.1 Autoridade Marítima", nome: "1.1 Autoridade Marítima" },
+                { chave: "taa2026_leg_1_2", topicoEdital: "1.2 Águas Jurisdicionais Brasileiras", nome: "1.2 Águas Jurisdicionais Brasileiras" }
+            ]
+        }
+    ];
+
+    function adaptarQuestaoTaifeiroCompeticaoV77(questao){
+        if(!questao) return null;
+        return {
+            ...questao,
+            pergunta: questao.pergunta || questao.enunciado || "",
+            texto: questao.texto || questao.textoBase || "",
+            feedbackAcerto: questao.feedbackAcerto || questao.explicacaoCorreta || questao.comentario || "",
+            feedbackErro: questao.feedbackErro || questao.explicacaoCorreta || questao.comentario || ""
+        };
+    }
+
+    function prepararBancosDueloTranspetroV77(){
+        if(typeof bancoQuestoes === "undefined") return;
+        const todas = Array.isArray(window.questoesTaifeiroBanco2026)
+            ? window.questoesTaifeiroBanco2026
+            : [];
+
+        gruposDueloTranspetroV77.forEach(grupo => {
+            grupo.assuntos.forEach(item => {
+                bancoQuestoes[item.chave] = todas
+                    .filter(q => q && q.topicoEdital === item.topicoEdital)
+                    .map(adaptarQuestaoTaifeiroCompeticaoV77)
+                    .filter(Boolean);
+            });
+        });
+    }
+
+    function grupoTranspetroDueloV77(disciplina){
+        return gruposDueloTranspetroV77.find(grupo => grupo.disciplina === disciplina) || null;
+    }
+
+    function assuntoTranspetroDueloV77(chave){
+        for(const grupo of gruposDueloTranspetroV77){
+            const item = grupo.assuntos.find(assunto => assunto.chave === chave);
+            if(item){
+                return {
+                    ...item,
+                    disciplina: grupo.disciplina,
+                    nomeDisciplina: grupo.nome
+                };
+            }
+        }
+        return null;
+    }
+
+    function temAcessoTaifeiroDueloV77(){
+        if(typeof window.temAcessoCargoFarol === "function"){
+            return window.temAcessoCargoFarol("transpetro2026", "taifeiro");
+        }
+        return false;
+    }
+
+    window.prepararBancoCompeticaoTranspetroFarolV77 = prepararBancosDueloTranspetroV77;
+
+    window.gruposTranspetroCompeticaoFarolV77 = function(){
+        prepararBancosDueloTranspetroV77();
+        return gruposDueloTranspetroV77.map(grupo => ({
+            nome: grupo.nome,
+            topicos: grupo.assuntos
+                .filter(item => Array.isArray(bancoQuestoes[item.chave]) && bancoQuestoes[item.chave].length > 0)
+                .map(item => [item.chave, item.nome])
+        })).filter(grupo => grupo.topicos.length > 0);
+    };
+
     function renderizarSeletorConcursoDueloV26(){
         const area = document.getElementById("dueloConcursosFarolV26");
 
@@ -27026,6 +27144,14 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 <strong>Abaetetuba 2026</strong>
                 <small>Comuns e História</small>
             </button>
+
+            <button
+                class="duelo-concurso-v26 ${concursoDueloAtualV26 === "transpetro2026" ? "selecionado" : ""}"
+                onclick="selecionarConcursoDueloFarol('transpetro2026')">
+                <span>⚓</span>
+                <strong>Transpetro MAR 2026</strong>
+                <small>Taifeiro — Banco 2026</small>
+            </button>
         `;
     }
 
@@ -27037,7 +27163,44 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         const buscaBloco = document.getElementById("dueloBuscaTopicoBlocoV26");
         const estado = document.getElementById("estadoAcessoDueloAbaetetubaV26");
 
-        if(concursoDueloAtualV26 === "abaetetuba2026"){
+        if(concursoDueloAtualV26 === "transpetro2026"){
+            prepararBancosDueloTranspetroV77();
+
+            if(titulo){
+                titulo.textContent = "⚔️ Duelos — Transpetro MAR 2026";
+            }
+
+            if(descricao){
+                descricao.textContent =
+                    "Taifeiro — escolha Arquitetura Naval ou Legislação Marítima e depois o tópico do Banco de Questões 2026.";
+            }
+
+            if(quantidade){
+                const valorAtual = Number(quantidade.value);
+                quantidade.innerHTML = `
+                    <option value="5">5 questões</option>
+                    <option value="10">10 questões</option>
+                    <option value="15">15 questões</option>
+                    <option value="20">20 questões</option>
+                `;
+                quantidade.value = [5, 10, 15, 20].includes(valorAtual)
+                    ? String(valorAtual)
+                    : "10";
+                quantidade.disabled = false;
+            }
+
+            if(buscaBloco){
+                buscaBloco.style.display = "block";
+            }
+
+            if(estado){
+                estado.style.display = "block";
+                estado.innerHTML = temAcessoTaifeiroDueloV77()
+                    ? "<strong>Seu acesso nesta área:</strong><span>✅ Taifeiro — Transpetro MAR</span>"
+                    : "<strong>Seu acesso nesta área:</strong><span>🔒 Taifeiro — acesso necessário</span>";
+            }
+        }
+        else if(concursoDueloAtualV26 === "abaetetuba2026"){
             if(titulo){
                 titulo.textContent = "⚔️ Duelos — Abaetetuba 2026";
             }
@@ -27122,17 +27285,25 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
     }
 
     window.selecionarConcursoDueloFarol = function(concurso){
-        const destino = concurso === "abaetetuba2026"
-            ? "abaetetuba2026"
+        const destino = ["barcarena2026", "abaetetuba2026", "transpetro2026"].includes(concurso)
+            ? concurso
             : "barcarena2026";
 
-        if(
-            destino !== "barcarena2026" &&
+        if(destino === "abaetetuba2026" &&
             typeof window.temAlgumAcessoConcursoFarol === "function" &&
             !window.temAlgumAcessoConcursoFarol(destino)
         ){
             mostrarToast("Você não tem acesso a Abaetetuba. Os Duelos de Barcarena continuam disponíveis.");
             return false;
+        }
+
+        if(destino === "transpetro2026" && !temAcessoTaifeiroDueloV77()){
+            mostrarToast("Você não tem acesso a Taifeiro — Transpetro MAR.");
+            return false;
+        }
+
+        if(destino === "transpetro2026"){
+            prepararBancosDueloTranspetroV77();
         }
 
         concursoDueloAtualV26 = destino;
@@ -27163,38 +27334,62 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
     const obterGrupoDueloAntesV26 = obterGrupoDuelo;
     obterGrupoDuelo = function(disciplina){
+        if(concursoDueloAtualV26 === "transpetro2026"){
+            return grupoTranspetroDueloV77(disciplina);
+        }
         if(concursoDueloAtualV26 === "abaetetuba2026"){
             return grupoAbaetetubaDueloV26(disciplina);
         }
-
         return obterGrupoDueloAntesV26.apply(this, arguments);
     };
 
     const obterAssuntoDueloAntesV26 = obterAssuntoDuelo;
     obterAssuntoDuelo = function(chave){
+        if(concursoDueloAtualV26 === "transpetro2026"){
+            const assuntoTranspetro = assuntoTranspetroDueloV77(chave);
+            if(assuntoTranspetro) return assuntoTranspetro;
+        }
         const assuntoAbaetetuba = assuntoAbaetetubaDueloV26(chave);
-
         if(assuntoAbaetetuba){
             return assuntoAbaetetuba;
         }
-
         return obterAssuntoDueloAntesV26.apply(this, arguments);
     };
 
     const assuntosDisponiveisDueloAntesV26 = assuntosDisponiveisDuelo;
     assuntosDisponiveisDuelo = function(grupo){
         if(
+            concursoDueloAtualV26 === "transpetro2026" &&
+            grupoTranspetroDueloV77(grupo && grupo.disciplina)
+        ){
+            prepararBancosDueloTranspetroV77();
+            return (grupo.assuntos || []).filter(item =>
+                Array.isArray(bancoQuestoes[item.chave]) && bancoQuestoes[item.chave].length > 0
+            );
+        }
+        if(
             concursoDueloAtualV26 === "abaetetuba2026" &&
             grupoAbaetetubaDueloV26(grupo && grupo.disciplina)
         ){
             return grupo.assuntos || [];
         }
-
         return assuntosDisponiveisDueloAntesV26.apply(this, arguments);
     };
 
     const renderizarDisciplinasDueloAntesV26 = renderizarDisciplinasDuelo;
     renderizarDisciplinasDuelo = function(){
+        if(concursoDueloAtualV26 === "transpetro2026"){
+            prepararBancosDueloTranspetroV77();
+            const area = document.getElementById("dueloDisciplinas");
+            if(!area) return;
+            area.innerHTML = gruposDueloTranspetroV77.map(grupo => `
+                <button class="duelo-opcao-disciplina ${grupo.disciplina === dueloDisciplinaSelecionada ? "selecionado" : ""}"
+                    onclick="selecionarDisciplinaDuelo('${grupo.disciplina}')">
+                    <span>${grupo.nome}</span><small>Banco 2026 • acesso Taifeiro</small>
+                </button>
+            `).join("");
+            return;
+        }
         if(concursoDueloAtualV26 !== "abaetetuba2026"){
             return renderizarDisciplinasDueloAntesV26.apply(this, arguments);
         }
@@ -27224,6 +27419,35 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
     const renderizarTopicosDueloAntesV26 = renderizarTopicosDuelo;
     renderizarTopicosDuelo = function(){
+        if(concursoDueloAtualV26 === "transpetro2026"){
+            prepararBancosDueloTranspetroV77();
+            const area = document.getElementById("dueloTopicos");
+            const textoDisciplina = document.getElementById("dueloDisciplinaSelecionadaTexto");
+            if(!area) return;
+            const grupo = grupoTranspetroDueloV77(dueloDisciplinaSelecionada);
+            if(!grupo){
+                area.innerHTML = "Escolha Arquitetura Naval ou Legislação Marítima.";
+                if(textoDisciplina) textoDisciplina.innerHTML = "Nenhuma disciplina selecionada.";
+                return;
+            }
+            if(textoDisciplina) textoDisciplina.innerHTML = `Disciplina selecionada: <strong>${grupo.nome}</strong>`;
+            const termo = ((document.getElementById("buscaTopicoDuelo") || {}).value || "")
+                .toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            const assuntos = grupo.assuntos.filter(item => {
+                const banco = bancoQuestoes[item.chave] || [];
+                if(!banco.length) return false;
+                if(!termo) return true;
+                const nome = item.nome.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                return nome.includes(termo);
+            });
+            area.innerHTML = assuntos.map(item => `
+                <button class="duelo-opcao-topico ${item.chave === dueloAssuntoSelecionado ? "selecionado" : ""}"
+                    onclick="selecionarAssuntoDuelo('${item.chave}')">
+                    <span>${item.nome}</span><small>${(bancoQuestoes[item.chave] || []).length} questões disponíveis</small>
+                </button>
+            `).join("") || "Nenhum tópico disponível.";
+            return;
+        }
         if(concursoDueloAtualV26 !== "abaetetuba2026"){
             return renderizarTopicosDueloAntesV26.apply(this, arguments);
         }
@@ -27274,6 +27498,23 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
     const atualizarResumoDueloAntesV26 = atualizarResumoDuelo;
     atualizarResumoDuelo = function(){
+        if(concursoDueloAtualV26 === "transpetro2026"){
+            prepararBancosDueloTranspetroV77();
+            const area = document.getElementById("dueloResumoCriacao");
+            if(!area) return;
+            if(!dueloAssuntoSelecionado){
+                area.innerHTML = "Escolha a disciplina, o tópico e a quantidade de questões.";
+                return;
+            }
+            const assunto = assuntoTranspetroDueloV77(dueloAssuntoSelecionado);
+            const quantidade = Number((document.getElementById("dueloQuantidade") || {}).value) || 10;
+            const total = (bancoQuestoes[dueloAssuntoSelecionado] || []).length;
+            area.innerHTML = assunto ? `
+                <strong>Duelo selecionado:</strong><br>${assunto.nomeDisciplina}<br>${assunto.nome}<br>
+                <b>${Math.min(quantidade, total)} questões</b>
+            ` : "Tópico não encontrado.";
+            return;
+        }
         if(concursoDueloAtualV26 !== "abaetetuba2026"){
             return atualizarResumoDueloAntesV26.apply(this, arguments);
         }
@@ -27312,6 +27553,19 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
     prepararSelectDuelo = function(){
         renderizarSeletorConcursoDueloV26();
         atualizarCabecalhoDueloV26();
+
+        if(concursoDueloAtualV26 === "transpetro2026"){
+            prepararBancosDueloTranspetroV77();
+            renderizarDisciplinasDuelo();
+            if(!grupoTranspetroDueloV77(dueloDisciplinaSelecionada)){
+                dueloDisciplinaSelecionada = gruposDueloTranspetroV77[0].disciplina;
+                dueloAssuntoSelecionado = "";
+                renderizarDisciplinasDuelo();
+            }
+            renderizarTopicosDuelo();
+            atualizarResumoDuelo();
+            return;
+        }
 
         if(concursoDueloAtualV26 !== "abaetetuba2026"){
             return prepararSelectDueloAntesV26.apply(this, arguments);
@@ -28982,6 +29236,13 @@ function gruposArenaVisualFarol(){
         (document.getElementById("arenaConcursoFarol") || {}).value
         || "barcarena2026";
 
+    if(concurso === "transpetro2026"){
+        if(typeof window.gruposTranspetroCompeticaoFarolV77 === "function"){
+            return window.gruposTranspetroCompeticaoFarolV77();
+        }
+        return [];
+    }
+
     if(concurso === "abaetetuba2026"){
         return [
             {
@@ -29397,7 +29658,17 @@ async function criarArenaVisualFarol(){
     const config = obterConfiguracaoArenaVisualFarol();
 
     if(
+        config.concurso === "transpetro2026" &&
+        typeof window.temAcessoCargoFarol === "function" &&
+        !window.temAcessoCargoFarol("transpetro2026", "taifeiro")
+    ){
+        mostrarToast("Você não tem acesso a Taifeiro — Transpetro MAR.");
+        return false;
+    }
+
+    if(
         config.concurso !== "barcarena2026" &&
+        config.concurso !== "transpetro2026" &&
         typeof window.temAlgumAcessoConcursoFarol === "function" &&
         !window.temAlgumAcessoConcursoFarol(config.concurso)
     ){
@@ -29552,10 +29823,20 @@ async function entrarArenaVisualFarol(){
 
             const dados = snapshot.data() || {};
 
+            const concursoArenaEntrada = dados.concurso || "barcarena2026";
             if(
-                (dados.concurso || "barcarena2026") !== "barcarena2026" &&
+                concursoArenaEntrada === "transpetro2026" &&
+                typeof window.temAcessoCargoFarol === "function" &&
+                !window.temAcessoCargoFarol("transpetro2026", "taifeiro")
+            ){
+                throw new Error("Você não tem acesso a Taifeiro — Transpetro MAR.");
+            }
+
+            if(
+                concursoArenaEntrada !== "barcarena2026" &&
+                concursoArenaEntrada !== "transpetro2026" &&
                 typeof window.temAlgumAcessoConcursoFarol === "function" &&
-                !window.temAlgumAcessoConcursoFarol(dados.concurso || "barcarena2026")
+                !window.temAlgumAcessoConcursoFarol(concursoArenaEntrada)
             ){
                 throw new Error("Você não tem acesso ao concurso desta Arena.");
             }
@@ -30649,6 +30930,10 @@ function obterBancoArenaFarol(sala){
 
     if(!sala){
         return [];
+    }
+
+    if(sala.concurso === "transpetro2026" && typeof window.prepararBancoCompeticaoTranspetroFarolV77 === "function"){
+        window.prepararBancoCompeticaoTranspetroFarolV77();
     }
 
     const chave = sala.topicoChave;
@@ -33273,10 +33558,18 @@ function renderizarSalaArenaAoVivoFarol(){
                 <b>›</b>
             </button>
             <button type="button" onclick="selecionarConcursoArenaV40('abaetetuba2026')">
-                <span>⚓</span>
+                <span>🧭</span>
                 <span>
                     <strong>Abaetetuba</strong>
                     <small>Concurso Abaetetuba 2026</small>
+                </span>
+                <b>›</b>
+            </button>
+            <button type="button" onclick="selecionarConcursoArenaV40('transpetro2026')">
+                <span>⚓</span>
+                <span>
+                    <strong>Transpetro MAR</strong>
+                    <small>Taifeiro — Banco 2026</small>
                 </span>
                 <b>›</b>
             </button>
@@ -37124,17 +37417,26 @@ function renderizarSalaArenaAoVivoFarol(){
 // ==========================================================
 
 window.selecionarConcursoArenaV40 = function(concurso){
-    const destino = concurso === "abaetetuba2026"
-        ? "abaetetuba2026"
+    const destino = ["barcarena2026", "abaetetuba2026", "transpetro2026"].includes(concurso)
+        ? concurso
         : "barcarena2026";
 
-    if(
-        destino !== "barcarena2026" &&
+    if(destino === "abaetetuba2026" &&
         typeof window.temAlgumAcessoConcursoFarol === "function" &&
         !window.temAlgumAcessoConcursoFarol(destino)
     ){
         if(typeof mostrarToast === "function"){
             mostrarToast("Você não tem acesso a Abaetetuba. A Arena de Barcarena continua disponível.");
+        }
+        return false;
+    }
+
+    if(destino === "transpetro2026" &&
+        typeof window.temAcessoCargoFarol === "function" &&
+        !window.temAcessoCargoFarol("transpetro2026", "taifeiro")
+    ){
+        if(typeof mostrarToast === "function"){
+            mostrarToast("Você não tem acesso a Taifeiro — Transpetro MAR.");
         }
         return false;
     }
@@ -41044,5 +41346,63 @@ limparArenaLocalFarol = function(){
                 renderizarTrilhaEstudo("transpetroTaifeiro");
             }
         }, 0);
+    };
+})();
+
+
+// ==========================================================
+// FAROL V78 — SIMULADOS TRANSPETRO / TAIFEIRO
+// Conecta o Banco 2026 já aprovado aos treinos de Específicas.
+// ==========================================================
+(function(){
+    function adaptarQuestaoTaifeiroSimuladoV78(q){
+        if(!q) return null;
+        return {
+            ...q,
+            pergunta: q.pergunta || q.enunciado || "",
+            texto: q.texto || q.textoBase || "",
+            feedbackAcerto: q.feedbackAcerto || q.explicacaoCorreta || q.comentario || "",
+            feedbackErro: q.feedbackErro || q.explicacaoCorreta || q.comentario || "",
+            explicacao: q.explicacao || q.explicacaoCorreta || q.comentario || "",
+            dicaBanca: q.dicaBanca || q.dicaMacete || "",
+            subtopico: q.subtopico || q.topicoEdital || q.assunto || "Taifeiro"
+        };
+    }
+
+    function bancoEspecificasTaifeiroV78(){
+        return (Array.isArray(window.questoesTaifeiroBanco2026)
+            ? window.questoesTaifeiroBanco2026
+            : []
+        ).map(adaptarQuestaoTaifeiroSimuladoV78).filter(Boolean);
+    }
+
+    window.iniciarSimuladoEspecificosTaifeiroFarol = function(quantidade = 30){
+        if(typeof window.temAcessoCargoFarol === "function" &&
+            !window.temAcessoCargoFarol("transpetro2026", "taifeiro")
+        ){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Você não tem acesso a Taifeiro — Transpetro MAR.");
+            }
+            return false;
+        }
+
+        const banco = bancoEspecificasTaifeiroV78();
+        if(!banco.length){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("O Banco 2026 de Taifeiro ainda não foi carregado.");
+            }
+            return false;
+        }
+
+        localStorage.setItem("farol_concurso_simulados", "transpetro2026");
+        localStorage.setItem("farol_concurso_atual", "transpetro2026");
+        localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+
+        iniciarSimuladoPersonalizado(
+            banco,
+            Math.min(Number(quantidade) || 30, banco.length),
+            "transpetro:taifeiro:especificas"
+        );
+        return true;
     };
 })();

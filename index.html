@@ -2921,7 +2921,7 @@ Li e revisei o mapa mental.
                         <strong>Transpetro MAR — 2026</strong>
                         <small>Fundação Cesgranrio • Taifeiro — TAA</small>
                     </span>
-                    <span class="estado-concurso-simulado-farol">Estrutura em teste</span>
+                    <span class="estado-concurso-simulado-farol">Acesso por cargo</span>
                 </button>
             </div>
         </div>
@@ -3093,23 +3093,23 @@ Li e revisei o mapa mental.
                     <div>
                         <span class="selo-simulado-transpetro-farol">⚓ Transpetro MAR • Cesgranrio • 2026</span>
                         <h3>Taifeiro — TAA</h3>
-                        <p>Estrutura preparada para os simulados do cargo. Os bancos serão conectados nas próximas etapas aprovadas.</p>
+                        <p>Conhecimentos Específicos já estão conectados ao Banco 2026. Português e o simulado completo serão liberados conforme os próximos tópicos forem concluídos.</p>
                     </div>
-                    <span class="status-simulado-transpetro-farol">🧪 Etapa 1</span>
+                    <span class="status-simulado-transpetro-farol">✅ Específicas ativas</span>
                 </div>
 
                 <div class="grid-opcoes-transpetro-farol">
-                    <button type="button" onclick="mostrarToast('Português será ativado na etapa de bancos de questões.')">
-                        <span>📘</span><strong>Português</strong><small>20 questões no modelo completo</small>
+                    <button type="button" onclick="mostrarToast('Português permanece em preparação e será liberado quando o banco da disciplina estiver concluído.')">
+                        <span>📘</span><strong>Português</strong><small>Em preparação</small>
                     </button>
-                    <button type="button" onclick="mostrarToast('Conhecimentos Específicos serão ativados na etapa de bancos de questões.')">
-                        <span>⚓</span><strong>Conhecimentos Específicos</strong><small>30 questões no modelo completo</small>
+                    <button type="button" onclick="iniciarSimuladoEspecificosTaifeiroFarol(30)">
+                        <span>⚓</span><strong>Conhecimentos Específicos</strong><small>30 questões do Banco 2026</small>
                     </button>
-                    <button type="button" onclick="mostrarToast('Treino rápido será ativado depois da conexão dos bancos.')">
-                        <span>⚡</span><strong>Treino rápido</strong><small>10 ou 20 questões</small>
+                    <button type="button" onclick="iniciarSimuladoEspecificosTaifeiroFarol(10)">
+                        <span>⚡</span><strong>Treino rápido</strong><small>10 questões de Específicas</small>
                     </button>
-                    <button type="button" onclick="mostrarToast('O simulado completo será ativado na etapa específica de simulados.')">
-                        <span>🎯</span><strong>Simulado completo 2026</strong><small>20 Português + 30 Específicas</small>
+                    <button type="button" onclick="mostrarToast('O simulado completo de 50 questões será liberado quando Português estiver concluído.')">
+                        <span>🎯</span><strong>Simulado completo 2026</strong><small>20 Português + 30 Específicas • em preparação</small>
                     </button>
                 </div>
 
@@ -4073,7 +4073,7 @@ Li e revisei o mapa mental.
         <div class="seletor-concurso-duelo-v26">
             <strong>Escolha o concurso do duelo</strong>
             <p class="duelo-ajuda">
-                Os bancos e as permissões ficam separados entre Barcarena e Abaetetuba.
+                Os bancos e as permissões ficam separados entre Barcarena, Abaetetuba e Transpetro MAR.
             </p>
             <div id="dueloConcursosFarolV26" class="duelo-grid-concursos-v26">
                 Carregando concursos...
@@ -4188,6 +4188,7 @@ Li e revisei o mapa mental.
                     <select id="arenaConcursoFarol" onchange="prepararArenaVisualFarol()">
                         <option value="barcarena2026">Barcarena 2026</option>
                         <option value="abaetetuba2026">Abaetetuba 2026</option>
+                        <option value="transpetro2026">Transpetro MAR 2026 — Taifeiro</option>
                     </select>
 
                     <label class="arena-label-farol" for="arenaDisciplinaFarol">2. Disciplina</label>
@@ -5415,7 +5416,7 @@ Li e revisei o mapa mental.
                     <input
                         type="search"
                         id="filtroListaAcessosFarol"
-                        placeholder="Nome, e-mail, cargo, Taifeiro, Cozinheiro..."
+                        placeholder="Nome, e-mail, História, Ciências..."
                         oninput="filtrarListaAcessosFarol()">
                 </div>
 
@@ -5767,7 +5768,7 @@ Li e revisei o mapa mental.
 <script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_1_1.js?v=taa2026-leg-1-1-v1"></script>
 <script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_1_2.js?v=taa2026-leg-1-2-v1"></script>
 
-<script src="app.js?v=117-acessos-multiconcurso"></script>
+<script src="app.js?v=119-transpetro-competicoes-simulados"></script>
 <script src="admin.js?v=76-transpetro-todos-cargos"></script>
 
 
