@@ -24328,7 +24328,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
             <div class="aviso-taifeiro-etapa1 aviso-taifeiro-banco2026">
                 <strong>🎯 Banco de Questões 2026 em construção por edital</strong>
-                <span>Arquitetura Naval: 150 questões aprovadas • Legislação Marítima e Ambiental — Aspectos Gerais: 80 questões aprovadas.</span>
+                <span>Arquitetura Naval: 150 questões aprovadas • Legislação Marítima e Ambiental: 115 questões aprovadas (80 de Aspectos Gerais + 35 de Carreira dos Aquaviários).</span>
             </div>
 
             <div class="grid-menu-taifeiro-farol">
@@ -27052,7 +27052,8 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             nome: "⚖️ Legislação Marítima e Ambiental",
             assuntos: [
                 { chave: "taa2026_leg_1_1", topicoEdital: "1.1 Autoridade Marítima", nome: "1.1 Autoridade Marítima" },
-                { chave: "taa2026_leg_1_2", topicoEdital: "1.2 Águas Jurisdicionais Brasileiras", nome: "1.2 Águas Jurisdicionais Brasileiras" }
+                { chave: "taa2026_leg_1_2", topicoEdital: "1.2 Águas Jurisdicionais Brasileiras", nome: "1.2 Águas Jurisdicionais Brasileiras" },
+                { chave: "taa2026_leg_2_1", topicoEdital: "2.1 Fluxo de carreira", nome: "2.1 Fluxo de carreira" }
             ]
         }
     ];
@@ -40714,6 +40715,7 @@ limparArenaLocalFarol = function(){
         origem: "banco2026",
         modo: "menu",
         topico: "",
+        eixoMenu: "arquitetura",
         indice: 0,
         questoes: [],
         respostas: []
@@ -40760,7 +40762,7 @@ limparArenaLocalFarol = function(){
     function codigoTopicoAtualBancoTAA(){
         const titulo = tituloTopicoAtualBancoTAA();
         const primeiro = titulo.trim().split(/\s+/)[0] || "";
-        return /^1\.\d+$/.test(primeiro) ? primeiro : "";
+        return /^\d+\.\d+$/.test(primeiro) ? primeiro : "";
     }
 
     function eixoTopicoAtualBancoTAA(){
@@ -40768,7 +40770,7 @@ limparArenaLocalFarol = function(){
         if(primeiraQuestao && primeiraQuestao.eixo){
             return String(primeiraQuestao.eixo);
         }
-        if(tituloTopicoAtualBancoTAA().includes("Autoridade Marítima")){
+        if(/Autoridade Marítima|Águas Jurisdicionais Brasileiras|Fluxo de carreira/i.test(tituloTopicoAtualBancoTAA())){
             return "Legislação Marítima e Ambiental";
         }
         return "Arquitetura Naval";
@@ -40834,9 +40836,156 @@ limparArenaLocalFarol = function(){
         `;
     }
 
+    function garantirEstiloSeletorEixosBancoTAA(){
+        if(document.getElementById("estiloSeletorEixosBancoTAA")) return;
+        const style = document.createElement("style");
+        style.id = "estiloSeletorEixosBancoTAA";
+        style.textContent = `
+            .seletor-eixos-banco-taifeiro{
+                display:grid;
+                grid-template-columns:repeat(2,minmax(0,1fr));
+                gap:14px;
+                margin:2px 0 18px;
+            }
+            .btn-eixo-banco-taifeiro{
+                width:100%;
+                border:1px solid rgba(30,136,229,.22);
+                border-radius:18px;
+                background:rgba(255,255,255,.92);
+                padding:17px 18px;
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+                gap:14px;
+                text-align:left;
+                cursor:pointer;
+                box-shadow:0 5px 18px rgba(20,48,75,.07);
+                transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+                color:#333;
+            }
+            .btn-eixo-banco-taifeiro:hover{
+                transform:translateY(-2px);
+                box-shadow:0 8px 22px rgba(20,48,75,.12);
+                border-color:rgba(67,160,71,.5);
+            }
+            .btn-eixo-banco-taifeiro.ativo{
+                border:2px solid #43a047;
+                background:linear-gradient(135deg,rgba(232,245,233,.98),rgba(255,255,255,.98));
+                box-shadow:0 7px 22px rgba(67,160,71,.17);
+            }
+            .btn-eixo-banco-taifeiro .eixo-info{
+                display:flex;
+                align-items:center;
+                gap:12px;
+                min-width:0;
+            }
+            .btn-eixo-banco-taifeiro .eixo-icone{
+                font-size:30px;
+                line-height:1;
+                flex:0 0 auto;
+            }
+            .btn-eixo-banco-taifeiro .eixo-textos{
+                display:flex;
+                flex-direction:column;
+                gap:3px;
+                min-width:0;
+            }
+            .btn-eixo-banco-taifeiro .eixo-textos strong{
+                font-size:17px;
+                line-height:1.2;
+            }
+            .btn-eixo-banco-taifeiro .eixo-textos small{
+                font-size:13px;
+                color:#667;
+            }
+            .btn-eixo-banco-taifeiro .eixo-total{
+                display:flex;
+                flex-direction:column;
+                align-items:flex-end;
+                flex:0 0 auto;
+            }
+            .btn-eixo-banco-taifeiro .eixo-total strong{
+                font-size:25px;
+                line-height:1;
+            }
+            .btn-eixo-banco-taifeiro .eixo-total small{
+                margin-top:4px;
+                color:#667;
+                font-size:12px;
+                white-space:nowrap;
+            }
+            .cabecalho-eixo-selecionado-banco-taifeiro{
+                display:flex;
+                justify-content:space-between;
+                align-items:flex-end;
+                gap:14px;
+                margin:8px 2px 14px;
+            }
+            .cabecalho-eixo-selecionado-banco-taifeiro h3{
+                margin:0;
+                font-size:22px;
+                color:#343434;
+            }
+            .cabecalho-eixo-selecionado-banco-taifeiro p{
+                margin:4px 0 0;
+                color:#666;
+                font-size:14px;
+            }
+            .cabecalho-eixo-selecionado-banco-taifeiro .selo-eixo-selecionado{
+                padding:7px 12px;
+                border-radius:999px;
+                background:rgba(67,160,71,.1);
+                color:#2e7d32;
+                font-weight:700;
+                white-space:nowrap;
+                font-size:13px;
+            }
+            .aviso-metodo-banco-taifeiro.compacto{
+                margin-top:0;
+                margin-bottom:18px;
+                padding:12px 15px;
+            }
+            .aviso-metodo-banco-taifeiro.compacto span{
+                font-size:13px;
+                line-height:1.35;
+            }
+            @media (max-width:720px){
+                .seletor-eixos-banco-taifeiro{grid-template-columns:1fr;gap:10px;}
+                .btn-eixo-banco-taifeiro{padding:14px 15px;border-radius:15px;}
+                .btn-eixo-banco-taifeiro .eixo-icone{font-size:26px;}
+                .btn-eixo-banco-taifeiro .eixo-textos strong{font-size:15px;}
+                .btn-eixo-banco-taifeiro .eixo-total strong{font-size:21px;}
+                .cabecalho-eixo-selecionado-banco-taifeiro{align-items:flex-start;flex-direction:column;gap:8px;}
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    function totalArquiteturaBancoTAA(){
+        return [
+            "1.1 Identificação de corpos e partes da embarcação",
+            "1.2 Dimensões lineares",
+            "1.3 Estrutura básica da embarcação",
+            "1.4 Principais compartimentos da embarcação",
+            "1.5 Aberturas e acessórios"
+        ].reduce((soma, topico) => soma + questoesTopicoTAA(topico).length, 0);
+    }
+
+    function totalLegislacaoBancoTAA(){
+        return [
+            "1.1 Autoridade Marítima",
+            "1.2 Águas Jurisdicionais Brasileiras",
+            "2.1 Fluxo de carreira"
+        ].reduce((soma, topico) => soma + questoesTopicoTAA(topico).length, 0);
+    }
+
     function renderizarMenuBancoTAA(){
         estadoBancoTAA2026.modo = "menu";
         estadoBancoTAA2026.topico = "";
+        if(!["arquitetura", "legislacao"].includes(estadoBancoTAA2026.eixoMenu)){
+            estadoBancoTAA2026.eixoMenu = "arquitetura";
+        }
+        garantirEstiloSeletorEixosBancoTAA();
         limparNavegacaoBancoTAA();
         atualizarProgressoBancoTAA();
 
@@ -40848,27 +40997,59 @@ limparArenaLocalFarol = function(){
             : "Banco de Questões 2026";
 
         const subtitulo = estadoBancoTAA2026.origem === "especificas"
-            ? "Escolha um tópico do edital para treinar as questões marítimas disponíveis."
-            : "Questões aproveitadas de provas compatíveis e questões novas, organizadas pelo edital de Taifeiro.";
+            ? "Escolha um eixo e depois o tópico do edital que deseja treinar."
+            : "Escolha um eixo para visualizar somente os tópicos correspondentes.";
 
         atualizarCabecalhoBancoTAA(titulo, subtitulo);
 
-        area.innerHTML = `
-            <div class="resumo-banco-taifeiro">
-                <div>
-                    <span>⚓</span>
-                    <strong>Arquitetura Naval</strong>
-                    <small>Eixo concluído</small>
-                </div>
-                <div>
-                    <strong>${questoesTopicoTAA("1.1 Identificação de corpos e partes da embarcação").length + questoesTopicoTAA("1.2 Dimensões lineares").length + questoesTopicoTAA("1.3 Estrutura básica da embarcação").length + questoesTopicoTAA("1.4 Principais compartimentos da embarcação").length + questoesTopicoTAA("1.5 Aberturas e acessórios").length}</strong>
-                    <small>questões liberadas</small>
-                </div>
+        const arquiteturaAtiva = estadoBancoTAA2026.eixoMenu === "arquitetura";
+        const totalArquitetura = totalArquiteturaBancoTAA();
+        const totalLegislacao = totalLegislacaoBancoTAA();
+
+        const seletor = `
+            <div class="seletor-eixos-banco-taifeiro" role="tablist" aria-label="Eixos do Banco de Questões 2026">
+                <button type="button"
+                    class="btn-eixo-banco-taifeiro ${arquiteturaAtiva ? "ativo" : ""}"
+                    onclick="selecionarEixoBancoTaifeiroFarol('arquitetura')"
+                    aria-pressed="${arquiteturaAtiva ? "true" : "false"}">
+                    <span class="eixo-info">
+                        <span class="eixo-icone">⚓</span>
+                        <span class="eixo-textos">
+                            <strong>Arquitetura Naval</strong>
+                            <small>5 tópicos concluídos</small>
+                        </span>
+                    </span>
+                    <span class="eixo-total"><strong>${totalArquitetura}</strong><small>questões</small></span>
+                </button>
+
+                <button type="button"
+                    class="btn-eixo-banco-taifeiro ${!arquiteturaAtiva ? "ativo" : ""}"
+                    onclick="selecionarEixoBancoTaifeiroFarol('legislacao')"
+                    aria-pressed="${!arquiteturaAtiva ? "true" : "false"}">
+                    <span class="eixo-info">
+                        <span class="eixo-icone">⚖️</span>
+                        <span class="eixo-textos">
+                            <strong>Legislação Marítima e Ambiental</strong>
+                            <small>3 tópicos liberados</small>
+                        </span>
+                    </span>
+                    <span class="eixo-total"><strong>${totalLegislacao}</strong><small>questões</small></span>
+                </button>
             </div>
 
-            <div class="aviso-metodo-banco-taifeiro">
+            <div class="aviso-metodo-banco-taifeiro compacto">
                 <strong>🎯 Como este banco está sendo construído</strong>
-                <span>Exploramos cada tópico até cobrir as principais formas possíveis de cobrança. Aproveitamos questões compatíveis de outros cargos Transpetro quando existirem, sem repetir as provas de Taifeiro 2018/2023, e completamos as lacunas com questões inéditas Farol.</span>
+                <span>Exploramos cada tópico até cobrir as principais formas de cobrança, aproveitando questões compatíveis de outros cargos Transpetro e completando as lacunas com questões inéditas Farol.</span>
+            </div>
+        `;
+
+        const arquitetura = `
+            <div class="cabecalho-eixo-selecionado-banco-taifeiro">
+                <div>
+                    <h3>⚓ Arquitetura Naval</h3>
+                    <p>5 tópicos • ${totalArquitetura} questões disponíveis</p>
+                </div>
+                <span class="selo-eixo-selecionado">Eixo concluído</span>
             </div>
 
             <div class="grade-topicos-banco-taifeiro">
@@ -40902,24 +41083,22 @@ limparArenaLocalFarol = function(){
                     "Escotilhas, escotilhões, vigias, portalós, embornais, portas estanques e acessórios."
                 )}
             </div>
+        `;
 
-            <div class="resumo-banco-taifeiro">
+        const legislacao = `
+            <div class="cabecalho-eixo-selecionado-banco-taifeiro">
                 <div>
-                    <span>⚖️</span>
-                    <strong>Legislação Marítima e Ambiental</strong>
-                    <small>1. Aspectos Gerais</small>
+                    <h3>⚖️ Legislação Marítima e Ambiental</h3>
+                    <p>3 tópicos liberados • ${totalLegislacao} questões disponíveis</p>
                 </div>
-                <div>
-                    <strong>${questoesTopicoTAA("1.1 Autoridade Marítima").length + questoesTopicoTAA("1.2 Águas Jurisdicionais Brasileiras").length}</strong>
-                    <small>questões liberadas</small>
-                </div>
+                <span class="selo-eixo-selecionado">Em expansão</span>
             </div>
 
             <div class="grade-topicos-banco-taifeiro">
                 ${cardTopicoBancoTAA(
                     "1.1 Autoridade Marítima",
                     "1.1 Autoridade Marítima",
-                    "LESTA, RELESTA, estrutura da Autoridade Marítima, representantes, agentes, competências, inspeção naval, vistorias, segurança e situações práticas."
+                    "LESTA, RLESTA, estrutura da Autoridade Marítima, representantes, agentes, competências, inspeção naval, vistorias, segurança e situações práticas."
                 )}
 
                 ${cardTopicoBancoTAA(
@@ -40927,9 +41106,16 @@ limparArenaLocalFarol = function(){
                     "1.2 Águas Jurisdicionais Brasileiras",
                     "Mar territorial, zona contígua, ZEE, plataforma continental e demais limites e regimes jurídicos."
                 )}
+
+                ${cardTopicoBancoTAA(
+                    "2.1 Fluxo de carreira",
+                    "2.1 Fluxo de carreira dos Aquaviários",
+                    "Ingresso, grupos, seções, categorias, ascensão, transferência de categoria, equivalência e Licença de Categoria/Capacidade Superior, conforme a NORMAM-101/DPC vigente."
+                )}
             </div>
         `;
 
+        area.innerHTML = seletor + (arquiteturaAtiva ? arquitetura : legislacao);
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
 
@@ -41225,6 +41411,13 @@ limparArenaLocalFarol = function(){
         localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
 
         if(typeof mostrarTela === "function") mostrarTela("bancoQuestoesTaifeiro");
+        renderizarMenuBancoTAA();
+    };
+
+    window.selecionarEixoBancoTaifeiroFarol = function(eixo){
+        const novoEixo = String(eixo || "");
+        if(!["arquitetura", "legislacao"].includes(novoEixo)) return;
+        estadoBancoTAA2026.eixoMenu = novoEixo;
         renderizarMenuBancoTAA();
     };
 
