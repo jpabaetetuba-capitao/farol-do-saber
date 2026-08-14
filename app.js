@@ -24328,7 +24328,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
             <div class="aviso-taifeiro-etapa1 aviso-taifeiro-banco2026">
                 <strong>🎯 Banco de Questões 2026 em construção por edital</strong>
-                <span>Arquitetura Naval: 150 questões aprovadas • Legislação Marítima e Ambiental: 115 questões aprovadas (80 de Aspectos Gerais + 35 de Carreira dos Aquaviários).</span>
+                <span>Arquitetura Naval: 150 questões aprovadas • Legislação Marítima e Ambiental: 145 questões aprovadas (80 de Aspectos Gerais + 65 de Carreira dos Aquaviários).</span>
             </div>
 
             <div class="grid-menu-taifeiro-farol">
@@ -27053,7 +27053,8 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             assuntos: [
                 { chave: "taa2026_leg_1_1", topicoEdital: "1.1 Autoridade Marítima", nome: "1.1 Autoridade Marítima" },
                 { chave: "taa2026_leg_1_2", topicoEdital: "1.2 Águas Jurisdicionais Brasileiras", nome: "1.2 Águas Jurisdicionais Brasileiras" },
-                { chave: "taa2026_leg_2_1", topicoEdital: "2.1 Fluxo de carreira", nome: "2.1 Fluxo de carreira" }
+                { chave: "taa2026_leg_2_1", topicoEdital: "2.1 Fluxo de carreira", nome: "2.1 Fluxo de carreira" },
+                { chave: "taa2026_leg_2_2", topicoEdital: "2.2 Caderneta de Inscrição e Registro – CIR", nome: "2.2 Caderneta de Inscrição e Registro – CIR" }
             ]
         }
     ];
@@ -40770,7 +40771,7 @@ limparArenaLocalFarol = function(){
         if(primeiraQuestao && primeiraQuestao.eixo){
             return String(primeiraQuestao.eixo);
         }
-        if(/Autoridade Marítima|Águas Jurisdicionais Brasileiras|Fluxo de carreira/i.test(tituloTopicoAtualBancoTAA())){
+        if(/Autoridade Marítima|Águas Jurisdicionais Brasileiras|Fluxo de carreira|Caderneta de Inscrição e Registro/i.test(tituloTopicoAtualBancoTAA())){
             return "Legislação Marítima e Ambiental";
         }
         return "Arquitetura Naval";
@@ -40991,7 +40992,8 @@ limparArenaLocalFarol = function(){
         return [
             "1.1 Autoridade Marítima",
             "1.2 Águas Jurisdicionais Brasileiras",
-            "2.1 Fluxo de carreira"
+            "2.1 Fluxo de carreira",
+            "2.2 Caderneta de Inscrição e Registro – CIR"
         ].reduce((soma, topico) => soma + questoesTopicoTAA(topico).length, 0);
     }
 
@@ -41042,7 +41044,7 @@ limparArenaLocalFarol = function(){
                             <span class="eixo-icone">⚖️</span>
                             <span class="eixo-textos">
                                 <strong>Legislação Marítima e Ambiental</strong>
-                                <small>3 tópicos liberados</small>
+                                <small>4 tópicos liberados</small>
                             </span>
                         </span>
                         <span class="eixo-total">
@@ -41064,7 +41066,7 @@ limparArenaLocalFarol = function(){
             arquiteturaAtiva ? "Arquitetura Naval" : "Legislação Marítima e Ambiental",
             arquiteturaAtiva
                 ? `5 tópicos • ${totalArquitetura} questões disponíveis`
-                : `3 tópicos liberados • ${totalLegislacao} questões disponíveis`
+                : `4 tópicos liberados • ${totalLegislacao} questões disponíveis`
         );
 
         const arquitetura = `
@@ -41132,11 +41134,108 @@ limparArenaLocalFarol = function(){
                     "2.1 Fluxo de carreira dos Aquaviários",
                     "Ingresso, grupos, seções, categorias, ascensão, transferência de categoria, equivalência e Licença de Categoria/Capacidade Superior, conforme a NORMAM-101/DPC vigente."
                 )}
+
+                ${cardTopicoBancoTAA(
+                    "2.2 Caderneta de Inscrição e Registro – CIR",
+                    "2.2 Caderneta de Inscrição e Registro — CIR",
+                    "Finalidade da CIR, inscrição inicial, emissão, Etiqueta de Dados Pessoais, registros profissionais, revalidação, segunda via e término de espaço, conforme a NORMAM-101/DPC vigente."
+                )}
             </div>
         `;
 
         area.innerHTML = arquiteturaAtiva ? arquitetura : legislacao;
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+
+    // ======================================================
+    // GAMIFICAÇÃO DO BANCO TRANSPETRO / TAIFEIRO
+    // Integra Pontos de Luz, missões, conquistas, ranking e medalhas.
+    // ======================================================
+    function idQuestaoGamificacaoBancoTAA(questao){
+        if(questao && questao.id){
+            return String(questao.id);
+        }
+
+        return String((questao && (questao.enunciado || questao.pergunta)) || "questao")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-+|-+$/g, "")
+            .slice(0, 140);
+    }
+
+    function chavePontosQuestaoBancoTAA(questao){
+        return `questao-banco-transpetro-taifeiro:${idQuestaoGamificacaoBancoTAA(questao)}`;
+    }
+
+    function registrarErroGlobalUnicoBancoTAA(questao){
+        const chave = `farol_banco_taa_erro_global_v82_${idQuestaoGamificacaoBancoTAA(questao)}`;
+        if(localStorage.getItem(chave) === "true"){
+            return false;
+        }
+        localStorage.setItem(chave, "true");
+        if(typeof erros !== "undefined") erros++;
+        return true;
+    }
+
+    function registrarConclusaoDiariaUnicaBancoTAA(){
+        const hoje = typeof dataHojeFarol === "function"
+            ? dataHojeFarol()
+            : new Date().toISOString().slice(0, 10);
+        const chave = `farol_banco_taa_topico_diario_v82_${hoje}_${chaveTopicoGamificacaoBancoTAA()}`;
+
+        if(localStorage.getItem(chave) === "true"){
+            return false;
+        }
+
+        localStorage.setItem(chave, "true");
+        if(typeof registrarAtividadeDiaria === "function"){
+            registrarAtividadeDiaria("topicos", 1);
+        }
+        return true;
+    }
+
+    function chaveTopicoGamificacaoBancoTAA(sufixo = ""){
+        const topico = String(estadoBancoTAA2026.topico || "topico")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-+|-+$/g, "");
+
+        return `banco-transpetro-taifeiro:${topico}${sufixo ? ":" + sufixo : ""}`;
+    }
+
+    function registrarResultadoTopicoBancoTAA(percentual){
+        const chaveMedalha = `transpetroTaifeiro:${estadoBancoTAA2026.topico}`;
+        const registroMedalha = typeof registrarMedalhaAssuntoFarol === "function"
+            ? registrarMedalhaAssuntoFarol(chaveMedalha, percentual)
+            : { texto: "" };
+
+        let resultadosAssuntos = {};
+        try{
+            resultadosAssuntos = JSON.parse(localStorage.getItem("farol_resultados") || "{}") || {};
+        }catch(erro){
+            resultadosAssuntos = {};
+        }
+
+        resultadosAssuntos[chaveMedalha] = {
+            percentual,
+            medalha: registroMedalha.texto || "",
+            classificacao: percentual >= 95
+                ? "🏆 EXCELENTE"
+                : percentual >= 75
+                    ? "🥈 MUITO BOM"
+                    : percentual >= 60
+                        ? "🥉 BOM"
+                        : percentual >= 40
+                            ? "📚 REGULAR"
+                            : "⚠️ REVISÃO NECESSÁRIA"
+        };
+
+        localStorage.setItem("farol_resultados", JSON.stringify(resultadosAssuntos));
+        return registroMedalha;
     }
 
     function salvarErroBancoTAA(questao){
@@ -41321,6 +41420,15 @@ limparArenaLocalFarol = function(){
                     </div>
                 </div>
 
+                ${acertou ? `
+                    <div class="pontos-luz-box">
+                        ${resposta.ganhouPontosLuz
+                            ? "⭐ +10 Pontos de Luz"
+                            : "⭐ Os pontos desta questão já foram registrados."
+                        }
+                    </div>
+                ` : ""}
+
                 <div class="resumo-enunciado-correcao-banco-taifeiro">
                     <span>Questão ${estadoBancoTAA2026.indice + 1}</span>
                     <p>${escaparBancoTAA(questao.enunciado)}</p>
@@ -41388,26 +41496,77 @@ limparArenaLocalFarol = function(){
         if(!area || !nav) return;
 
         const total = estadoBancoTAA2026.questoes.length;
-        const acertos = estadoBancoTAA2026.respostas.reduce((soma, r, i) => {
+        const acertosTopico = estadoBancoTAA2026.respostas.reduce((soma, r, i) => {
             const q = estadoBancoTAA2026.questoes[i];
             return soma + (r && r.confirmada && q && r.selecionada === q.correta ? 1 : 0);
         }, 0);
-        const percentual = total ? Math.round((acertos / total) * 100) : 0;
+        const percentual = total ? Math.round((acertosTopico / total) * 100) : 0;
+
+        // Medalha: usa a mesma regra geral do Farol e preserva apenas a melhor do tópico.
+        const registroMedalha = registrarResultadoTopicoBancoTAA(percentual);
+        const medalha = registroMedalha && registroMedalha.texto
+            ? registroMedalha.texto
+            : (percentual >= 95 ? "🥇 OURO" : percentual >= 75 ? "🥈 PRATA" : percentual >= 60 ? "🥉 BRONZE" : "📚 SEM MEDALHA");
+
+        let pontosTopicoHTML = "";
+
+        if(typeof adicionarPontosLuz === "function" && adicionarPontosLuz(
+            50,
+            "Conclusão de tópico — Banco Transpetro",
+            chaveTopicoGamificacaoBancoTAA("conclusao")
+        )){
+            pontosTopicoHTML += "⭐ +50 Pontos de Luz por concluir o tópico<br>";
+        }
+
+        if(percentual >= 90){
+            if(typeof adicionarPontosLuz === "function" && adicionarPontosLuz(
+                120,
+                "Desempenho acima de 90% — Banco Transpetro",
+                chaveTopicoGamificacaoBancoTAA("desempenho90")
+            )){
+                pontosTopicoHTML += "🏆 +120 Pontos de Luz por desempenho acima de 90%<br>";
+            }
+        }
+        else if(percentual >= 80){
+            if(typeof adicionarPontosLuz === "function" && adicionarPontosLuz(
+                80,
+                "Desempenho acima de 80% — Banco Transpetro",
+                chaveTopicoGamificacaoBancoTAA("desempenho80")
+            )){
+                pontosTopicoHTML += "🥇 +80 Pontos de Luz por desempenho acima de 80%<br>";
+            }
+        }
+
+        // Conta cada tópico apenas uma vez por dia nas Missões Diárias.
+        registrarConclusaoDiariaUnicaBancoTAA();
+
+        if(typeof salvarDados === "function") salvarDados();
+        if(typeof atualizarDashboard === "function") atualizarDashboard();
+        if(typeof atualizarPainelEstudos === "function") atualizarPainelEstudos();
+        if(typeof salvarRankingFirebase === "function") salvarRankingFirebase();
+        if(typeof window.verificarConquistasFarol === "function") window.verificarConquistasFarol();
 
         estadoBancoTAA2026.modo = "resultado";
         const codigoTopico = codigoTopicoAtualBancoTAA();
         atualizarCabecalhoBancoTAA(`Resultado — ${eixoTopicoAtualBancoTAA()}${codigoTopico ? " " + codigoTopico : ""}`, "O resultado mostra somente este tópico do Banco de Questões 2026.");
-        if(progresso) progresso.innerHTML = `<strong>Tópico concluído</strong><span>${acertos}/${total} acertos • ${percentual}%</span>`;
+        if(progresso) progresso.innerHTML = `<strong>Tópico concluído</strong><span>${acertosTopico}/${total} acertos • ${percentual}%</span>`;
 
         area.innerHTML = `
             <div class="resultado-banco-taifeiro">
                 <span class="icone-resultado-banco-taifeiro">⚓</span>
                 <h3>${escaparBancoTAA(tituloTopicoAtualBancoTAA())}</h3>
                 <div class="placar-resultado-banco-taifeiro">
-                    <div><strong>${acertos}</strong><small>acertos</small></div>
-                    <div><strong>${total - acertos}</strong><small>erros</small></div>
+                    <div><strong>${acertosTopico}</strong><small>acertos</small></div>
+                    <div><strong>${total - acertosTopico}</strong><small>erros</small></div>
                     <div><strong>${percentual}%</strong><small>aproveitamento</small></div>
                 </div>
+                <p><strong>🏅 Medalha:</strong> ${escaparBancoTAA(medalha)}</p>
+                ${pontosTopicoHTML ? `
+                    <div class="pontos-luz-box">
+                        <strong>⭐ Recompensas do tópico:</strong><br><br>
+                        ${pontosTopicoHTML}
+                    </div>
+                ` : ""}
                 <p>As questões erradas foram registradas no <strong>Caderno de Erros</strong> para revisão posterior.</p>
             </div>
         `;
@@ -41494,9 +41653,39 @@ limparArenaLocalFarol = function(){
         }
 
         resposta.confirmada = true;
-        if(resposta.selecionada !== questao.correta){
+        const acertou = resposta.selecionada === questao.correta;
+
+        if(acertou){
+            const ganhou = typeof adicionarPontosLuz === "function"
+                ? adicionarPontosLuz(
+                    10,
+                    "Questão correta — Banco Transpetro / Taifeiro",
+                    chavePontosQuestaoBancoTAA(questao)
+                )
+                : false;
+
+            resposta.ganhouPontosLuz = !!ganhou;
+
+            // Acerto global, missões e conquistas só avançam no primeiro acerto válido da questão.
+            if(ganhou){
+                if(typeof acertos !== "undefined") acertos++;
+                if(typeof registrarAtividadeDiaria === "function"){
+                    registrarAtividadeDiaria("acertos", 1);
+                }
+            }
+        }else{
+            // Evita inflar estatísticas/conquistas errando repetidamente a mesma questão.
+            registrarErroGlobalUnicoBancoTAA(questao);
+            resposta.ganhouPontosLuz = false;
             salvarErroBancoTAA(questao);
         }
+
+        if(typeof salvarDados === "function") salvarDados();
+        if(typeof atualizarDashboard === "function") atualizarDashboard();
+        if(typeof atualizarPainelEstudos === "function") atualizarPainelEstudos();
+        if(typeof salvarRankingFirebase === "function") salvarRankingFirebase();
+        if(typeof window.verificarConquistasFarol === "function") window.verificarConquistasFarol();
+
         renderizarCorrecaoBancoTAA();
     };
 

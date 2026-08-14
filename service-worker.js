@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v80-2026-08-14-disciplinas-subtopicos";
+const CACHE_VERSION = "farol-v82-2026-08-14-gamificacao-transpetro";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
