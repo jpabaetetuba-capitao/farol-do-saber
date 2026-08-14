@@ -40715,7 +40715,7 @@ limparArenaLocalFarol = function(){
         origem: "banco2026",
         modo: "menu",
         topico: "",
-        eixoMenu: "arquitetura",
+        eixoMenu: "",
         indice: 0,
         questoes: [],
         respostas: []
@@ -40914,6 +40914,22 @@ limparArenaLocalFarol = function(){
                 font-size:12px;
                 white-space:nowrap;
             }
+            .btn-voltar-eixos-banco-taifeiro{
+                border:0;
+                border-radius:12px;
+                background:#eef5f8;
+                color:#31424d;
+                font-weight:700;
+                padding:10px 14px;
+                margin:0 0 14px;
+                cursor:pointer;
+                display:inline-flex;
+                align-items:center;
+                gap:7px;
+            }
+            .btn-voltar-eixos-banco-taifeiro:hover{
+                background:#e2edf2;
+            }
             .cabecalho-eixo-selecionado-banco-taifeiro{
                 display:flex;
                 justify-content:space-between;
@@ -40982,9 +40998,6 @@ limparArenaLocalFarol = function(){
     function renderizarMenuBancoTAA(){
         estadoBancoTAA2026.modo = "menu";
         estadoBancoTAA2026.topico = "";
-        if(!["arquitetura", "legislacao"].includes(estadoBancoTAA2026.eixoMenu)){
-            estadoBancoTAA2026.eixoMenu = "arquitetura";
-        }
         garantirEstiloSeletorEixosBancoTAA();
         limparNavegacaoBancoTAA();
         atualizarProgressoBancoTAA();
@@ -40992,65 +41005,74 @@ limparArenaLocalFarol = function(){
         const area = elBancoTAA("conteudoBancoQuestoesTaifeiro");
         if(!area) return;
 
-        const titulo = estadoBancoTAA2026.origem === "especificas"
-            ? "Conhecimentos Específicos — Taifeiro 2026"
-            : "Banco de Questões 2026";
-
-        const subtitulo = estadoBancoTAA2026.origem === "especificas"
-            ? "Escolha um eixo e depois o tópico do edital que deseja treinar."
-            : "Escolha um eixo para visualizar somente os tópicos correspondentes.";
-
-        atualizarCabecalhoBancoTAA(titulo, subtitulo);
-
-        const arquiteturaAtiva = estadoBancoTAA2026.eixoMenu === "arquitetura";
         const totalArquitetura = totalArquiteturaBancoTAA();
         const totalLegislacao = totalLegislacaoBancoTAA();
 
-        const seletor = `
-            <div class="seletor-eixos-banco-taifeiro" role="tablist" aria-label="Eixos do Banco de Questões 2026">
-                <button type="button"
-                    class="btn-eixo-banco-taifeiro ${arquiteturaAtiva ? "ativo" : ""}"
-                    onclick="selecionarEixoBancoTaifeiroFarol('arquitetura')"
-                    aria-pressed="${arquiteturaAtiva ? "true" : "false"}">
-                    <span class="eixo-info">
-                        <span class="eixo-icone">⚓</span>
-                        <span class="eixo-textos">
-                            <strong>Arquitetura Naval</strong>
-                            <small>5 tópicos concluídos</small>
-                        </span>
-                    </span>
-                    <span class="eixo-total"><strong>${totalArquitetura}</strong><small>questões</small></span>
-                </button>
+        // NÍVEL 1 — mostra somente as disciplinas/eixos.
+        if(!["arquitetura", "legislacao"].includes(estadoBancoTAA2026.eixoMenu)){
+            atualizarCabecalhoBancoTAA(
+                estadoBancoTAA2026.origem === "especificas"
+                    ? "Conhecimentos Específicos — Taifeiro 2026"
+                    : "Banco de Questões 2026",
+                "Escolha uma disciplina para visualizar seus tópicos."
+            );
 
-                <button type="button"
-                    class="btn-eixo-banco-taifeiro ${!arquiteturaAtiva ? "ativo" : ""}"
-                    onclick="selecionarEixoBancoTaifeiroFarol('legislacao')"
-                    aria-pressed="${!arquiteturaAtiva ? "true" : "false"}">
-                    <span class="eixo-info">
-                        <span class="eixo-icone">⚖️</span>
-                        <span class="eixo-textos">
-                            <strong>Legislação Marítima e Ambiental</strong>
-                            <small>3 tópicos liberados</small>
+            area.innerHTML = `
+                <div class="seletor-eixos-banco-taifeiro" aria-label="Disciplinas do Banco de Questões 2026">
+                    <button type="button"
+                        class="btn-eixo-banco-taifeiro"
+                        onclick="selecionarEixoBancoTaifeiroFarol('arquitetura')">
+                        <span class="eixo-info">
+                            <span class="eixo-icone">⚓</span>
+                            <span class="eixo-textos">
+                                <strong>Arquitetura Naval</strong>
+                                <small>5 tópicos concluídos</small>
+                            </span>
                         </span>
-                    </span>
-                    <span class="eixo-total"><strong>${totalLegislacao}</strong><small>questões</small></span>
-                </button>
-            </div>
+                        <span class="eixo-total">
+                            <strong>${totalArquitetura}</strong>
+                            <small>questões</small>
+                        </span>
+                    </button>
 
-            <div class="aviso-metodo-banco-taifeiro compacto">
-                <strong>🎯 Como este banco está sendo construído</strong>
-                <span>Exploramos cada tópico até cobrir as principais formas de cobrança, aproveitando questões compatíveis de outros cargos Transpetro e completando as lacunas com questões inéditas Farol.</span>
-            </div>
-        `;
+                    <button type="button"
+                        class="btn-eixo-banco-taifeiro"
+                        onclick="selecionarEixoBancoTaifeiroFarol('legislacao')">
+                        <span class="eixo-info">
+                            <span class="eixo-icone">⚖️</span>
+                            <span class="eixo-textos">
+                                <strong>Legislação Marítima e Ambiental</strong>
+                                <small>3 tópicos liberados</small>
+                            </span>
+                        </span>
+                        <span class="eixo-total">
+                            <strong>${totalLegislacao}</strong>
+                            <small>questões</small>
+                        </span>
+                    </button>
+                </div>
+            `;
+
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            return;
+        }
+
+        // NÍVEL 2 — depois do clique, mostra somente os subtópicos da disciplina escolhida.
+        const arquiteturaAtiva = estadoBancoTAA2026.eixoMenu === "arquitetura";
+
+        atualizarCabecalhoBancoTAA(
+            arquiteturaAtiva ? "Arquitetura Naval" : "Legislação Marítima e Ambiental",
+            arquiteturaAtiva
+                ? `5 tópicos • ${totalArquitetura} questões disponíveis`
+                : `3 tópicos liberados • ${totalLegislacao} questões disponíveis`
+        );
 
         const arquitetura = `
-            <div class="cabecalho-eixo-selecionado-banco-taifeiro">
-                <div>
-                    <h3>⚓ Arquitetura Naval</h3>
-                    <p>5 tópicos • ${totalArquitetura} questões disponíveis</p>
-                </div>
-                <span class="selo-eixo-selecionado">Eixo concluído</span>
-            </div>
+            <button type="button"
+                class="btn-voltar-eixos-banco-taifeiro"
+                onclick="voltarEixosBancoTaifeiroFarol()">
+                ← Voltar às disciplinas
+            </button>
 
             <div class="grade-topicos-banco-taifeiro">
                 ${cardTopicoBancoTAA(
@@ -41086,13 +41108,11 @@ limparArenaLocalFarol = function(){
         `;
 
         const legislacao = `
-            <div class="cabecalho-eixo-selecionado-banco-taifeiro">
-                <div>
-                    <h3>⚖️ Legislação Marítima e Ambiental</h3>
-                    <p>3 tópicos liberados • ${totalLegislacao} questões disponíveis</p>
-                </div>
-                <span class="selo-eixo-selecionado">Em expansão</span>
-            </div>
+            <button type="button"
+                class="btn-voltar-eixos-banco-taifeiro"
+                onclick="voltarEixosBancoTaifeiroFarol()">
+                ← Voltar às disciplinas
+            </button>
 
             <div class="grade-topicos-banco-taifeiro">
                 ${cardTopicoBancoTAA(
@@ -41115,7 +41135,7 @@ limparArenaLocalFarol = function(){
             </div>
         `;
 
-        area.innerHTML = seletor + (arquiteturaAtiva ? arquitetura : legislacao);
+        area.innerHTML = arquiteturaAtiva ? arquitetura : legislacao;
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
 
@@ -41407,6 +41427,7 @@ limparArenaLocalFarol = function(){
         }
 
         estadoBancoTAA2026.origem = origem === "especificas" ? "especificas" : "banco2026";
+        estadoBancoTAA2026.eixoMenu = "";
         localStorage.setItem("farol_concurso_atual", "transpetro2026");
         localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
 
@@ -41418,6 +41439,11 @@ limparArenaLocalFarol = function(){
         const novoEixo = String(eixo || "");
         if(!["arquitetura", "legislacao"].includes(novoEixo)) return;
         estadoBancoTAA2026.eixoMenu = novoEixo;
+        renderizarMenuBancoTAA();
+    };
+
+    window.voltarEixosBancoTaifeiroFarol = function(){
+        estadoBancoTAA2026.eixoMenu = "";
         renderizarMenuBancoTAA();
     };
 
@@ -41527,6 +41553,12 @@ limparArenaLocalFarol = function(){
 
     window.voltarBancoQuestoesTaifeiroFarol = function(){
         if(["questao", "feedback", "resultado"].includes(estadoBancoTAA2026.modo)){
+            renderizarMenuBancoTAA();
+            return;
+        }
+
+        if(["arquitetura", "legislacao"].includes(estadoBancoTAA2026.eixoMenu)){
+            estadoBancoTAA2026.eixoMenu = "";
             renderizarMenuBancoTAA();
             return;
         }
