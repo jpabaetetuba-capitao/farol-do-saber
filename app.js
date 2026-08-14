@@ -21511,6 +21511,16 @@ async function criarDuelo(){
         return;
     }
 
+    const concursoDuelo = localStorage.getItem("farol_duelo_concurso_atual") || "barcarena2026";
+    if(
+        concursoDuelo !== "barcarena2026" &&
+        typeof window.temAlgumAcessoConcursoFarol === "function" &&
+        !window.temAlgumAcessoConcursoFarol(concursoDuelo)
+    ){
+        mostrarToast("Você não tem acesso ao conteúdo deste concurso. Use Barcarena ou adquira uma liberação.");
+        return false;
+    }
+
     const assunto = dueloAssuntoSelecionado || ((document.getElementById("dueloAssunto") || {}).value || "");
     const quantidade = Number(document.getElementById("dueloQuantidade").value) || 5;
     const banco = bancoQuestoes[assunto] || [];
@@ -21537,6 +21547,7 @@ async function criarDuelo(){
         .doc(codigo)
         .set({
             codigo: codigo,
+            concurso: concursoDuelo,
             disciplina: assuntoDuelo.disciplina,
             nomeDisciplina: assuntoDuelo.nomeDisciplina,
             assunto: assunto,
@@ -21623,6 +21634,16 @@ async function entrarDuelo(codigo){
     }
 
     const dados = doc.data();
+    const concursoDuelo = dados.concurso || "barcarena2026";
+
+    if(
+        concursoDuelo !== "barcarena2026" &&
+        typeof window.temAlgumAcessoConcursoFarol === "function" &&
+        !window.temAlgumAcessoConcursoFarol(concursoDuelo)
+    ){
+        mostrarToast("Você não tem acesso ao concurso deste duelo.");
+        return false;
+    }
 
     if(dados.cancelado){
         mostrarToast("Este duelo foi cancelado pelo criador.");
@@ -22716,6 +22737,10 @@ function obterConfigProvasFarol(){
         apoioEscolar: {
             grupo: "grupoProvasApoioEscolar",
             card: "cardProvasApoioEscolar"
+        },
+        taifeiro: {
+            grupo: "grupoProvasTaifeiro",
+            card: "cardProvasTaifeiro"
         }
     };
 }
@@ -23374,7 +23399,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
 /* ==========================================================
    FAROL DO SABER — MULTICONCURSO V11
-   Barcarena + Abaetetuba | acesso individual por cargo
+   Barcarena + Abaetetuba + Transpetro MAR | acesso por concurso e cargo
 ========================================================== */
 
 (function(){
@@ -23412,6 +23437,29 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 "abaetetubaProfessorHistoria",
                 "abaetetubaProfessorCiencias",
                 "abaetetubaProfessorGeografia"
+            ]
+        },
+        transpetro2026: {
+            nome: "Transpetro MAR",
+            titulo: "Processo Seletivo Público MAR 2026",
+            banca: "Fundação Cesgranrio",
+            edital: "TRANSPETRO/PSP/MAR 2026",
+            icone: "⚓",
+            classe: "transpetro",
+            acessoLivre: false,
+            estruturaEmTeste: true,
+            descricao: "Preparação marítima focada em questões, provas anteriores, gabaritos comentados e simulados.",
+            rotas: [
+                "transpetroAuxiliarSaude",
+                "transpetroCondutorBombeador",
+                "transpetroCondutorMecanico",
+                "transpetroCozinheiro",
+                "transpetroEletricista",
+                "transpetroMocoConves",
+                "transpetroMocoMaquinas",
+                "transpetroTaifeiro",
+                "transpetroSegundoOficialNautica",
+                "transpetroSegundoOficialMaquinas"
             ]
         }
     };
@@ -23468,6 +23516,145 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         publicado: false,
         descricao: "Português, Informática e conhecimentos específicos de formação pedagógica e Geografia.",
         disciplinas: ["portugues", "informatica", "didatica", "geografia"]
+    };
+
+    trilhasPreparacaoFarol.transpetroAuxiliarSaude = {
+        nome: "Auxiliar de Saúde — ASA",
+        nivel: "Aquaviários / Guarnição",
+        icone: "🩺",
+        cor: "oceano",
+        concurso: "transpetro2026",
+        cargoAcesso: "auxiliarSaude",
+        publicado: false,
+        bloqueado: true,
+        emConstrucao: true,
+        descricao: "Preparação para Auxiliar de Saúde — Transpetro MAR.",
+        disciplinas: []
+    };
+
+    trilhasPreparacaoFarol.transpetroCondutorBombeador = {
+        nome: "Condutor Bombeador — CDM/BBD",
+        nivel: "Aquaviários / Guarnição",
+        icone: "🛢️",
+        cor: "oceano",
+        concurso: "transpetro2026",
+        cargoAcesso: "condutorBombeador",
+        publicado: false,
+        bloqueado: true,
+        emConstrucao: true,
+        descricao: "Preparação para Condutor Bombeador — Transpetro MAR.",
+        disciplinas: []
+    };
+
+    trilhasPreparacaoFarol.transpetroCondutorMecanico = {
+        nome: "Condutor Mecânico — CDM/MEC",
+        nivel: "Aquaviários / Guarnição",
+        icone: "🔧",
+        cor: "oceano",
+        concurso: "transpetro2026",
+        cargoAcesso: "condutorMecanico",
+        publicado: false,
+        bloqueado: true,
+        emConstrucao: true,
+        descricao: "Preparação para Condutor Mecânico — Transpetro MAR.",
+        disciplinas: []
+    };
+
+    trilhasPreparacaoFarol.transpetroCozinheiro = {
+        nome: "Cozinheiro — CZA",
+        nivel: "Aquaviários / Guarnição",
+        icone: "👨‍🍳",
+        cor: "oceano",
+        concurso: "transpetro2026",
+        cargoAcesso: "cozinheiro",
+        publicado: false,
+        bloqueado: true,
+        emConstrucao: true,
+        descricao: "Preparação para Cozinheiro — Transpetro MAR.",
+        disciplinas: []
+    };
+
+    trilhasPreparacaoFarol.transpetroEletricista = {
+        nome: "Eletricista — ELT",
+        nivel: "Aquaviários / Guarnição",
+        icone: "⚡",
+        cor: "oceano",
+        concurso: "transpetro2026",
+        cargoAcesso: "eletricista",
+        publicado: false,
+        bloqueado: true,
+        emConstrucao: true,
+        descricao: "Preparação para Eletricista — Transpetro MAR.",
+        disciplinas: []
+    };
+
+    trilhasPreparacaoFarol.transpetroMocoConves = {
+        nome: "Moço de Convés — MOC",
+        nivel: "Aquaviários / Guarnição",
+        icone: "⚓",
+        cor: "oceano",
+        concurso: "transpetro2026",
+        cargoAcesso: "mocoConves",
+        publicado: false,
+        bloqueado: true,
+        emConstrucao: true,
+        descricao: "Preparação para Moço de Convés — Transpetro MAR.",
+        disciplinas: []
+    };
+
+    trilhasPreparacaoFarol.transpetroMocoMaquinas = {
+        nome: "Moço de Máquinas — MOM",
+        nivel: "Aquaviários / Guarnição",
+        icone: "⚙️",
+        cor: "oceano",
+        concurso: "transpetro2026",
+        cargoAcesso: "mocoMaquinas",
+        publicado: false,
+        bloqueado: true,
+        emConstrucao: true,
+        descricao: "Preparação para Moço de Máquinas — Transpetro MAR.",
+        disciplinas: []
+    };
+
+    trilhasPreparacaoFarol.transpetroTaifeiro = {
+        nome: "Taifeiro — TAA",
+        nivel: "Aquaviários / Guarnição",
+        icone: "⚓",
+        cor: "oceano",
+        concurso: "transpetro2026",
+        cargoAcesso: "taifeiro",
+        publicado: true,
+        menuDireto: true,
+        descricao: "Treinamento direto por questões para o Processo Seletivo Público MAR 2026.",
+        disciplinas: []
+    };
+
+    trilhasPreparacaoFarol.transpetroSegundoOficialNautica = {
+        nome: "Segundo Oficial de Náutica — 2ON",
+        nivel: "Oficiais",
+        icone: "🧭",
+        cor: "oceano",
+        concurso: "transpetro2026",
+        cargoAcesso: "segundoOficialNautica",
+        publicado: false,
+        bloqueado: true,
+        emConstrucao: true,
+        descricao: "Preparação para Segundo Oficial de Náutica — Transpetro MAR.",
+        disciplinas: []
+    };
+
+    trilhasPreparacaoFarol.transpetroSegundoOficialMaquinas = {
+        nome: "Segundo Oficial de Máquinas — 2OM",
+        nivel: "Oficiais",
+        icone: "⚙️",
+        cor: "oceano",
+        concurso: "transpetro2026",
+        cargoAcesso: "segundoOficialMaquinas",
+        publicado: false,
+        bloqueado: true,
+        emConstrucao: true,
+        descricao: "Preparação para Segundo Oficial de Máquinas — Transpetro MAR.",
+        disciplinas: []
     };
 
     window.concursosFarol = CONCURSOS_FAROL;
@@ -23553,6 +23740,21 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
     }
 
     window.temAcessoCargoFarol = temAcessoCargoFarol;
+
+    function temAlgumAcessoConcursoFarol(concurso){
+        if(concurso === "barcarena2026"){
+            return true;
+        }
+
+        if(ehAdministradorAcessosFarol()){
+            return true;
+        }
+
+        const dadosConcurso = acessosConcursosUsuarioFarol[concurso] || {};
+        return Object.values(dadosConcurso).some(acessoLiberadoFarol);
+    }
+
+    window.temAlgumAcessoConcursoFarol = temAlgumAcessoConcursoFarol;
 
     function aplicarDocumentoAcessosFarol(doc){
         const dados = doc && doc.exists ? (doc.data() || {}) : {};
@@ -23699,7 +23901,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 <div class="metadados-concurso-farol">
                     <span>🏷️ ${escaparHTML(concurso.banca)}</span>
                     <span>📄 ${escaparHTML(concurso.edital)}</span>
-                    <span>${concurso.acessoLivre ? "✅ Acesso atual" : "🔐 Liberação por cargo"}</span>
+                    <span>${concurso.estruturaEmTeste ? "🧪 Estrutura em teste" : (concurso.acessoLivre ? "✅ Acesso atual" : "🔐 Liberação por cargo")}</span>
                 </div>
 
                 <span class="acao-concurso-farol">Ver cargos →</span>
@@ -23724,7 +23926,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
         painelPreparacoes.innerHTML = `
             <p class="texto-preparacao">
-                Selecione primeiro a prefeitura. Depois o Farol mostrará somente os cargos e as rotas daquele concurso.
+                Selecione primeiro o concurso. Depois o Farol mostrará somente os cargos e as rotas daquela preparação.
             </p>
 
             <div class="grid-concursos-farol">
@@ -23737,8 +23939,32 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
     function estadoCardCargoFarol(trilha){
         const ehAdmin = ehAdministradorAcessosFarol();
+        const concursoDaTrilha = CONCURSOS_FAROL[trilha.concurso];
+        const exigeAcesso = concursoDaTrilha && concursoDaTrilha.acessoLivre === false;
 
-        // O administrador pode testar rotas ainda não publicadas.
+        // Para aluno, a compra/liberação é verificada antes do estado de construção.
+        // Assim um cargo futuro nunca parece disponível para quem não o adquiriu.
+        if(
+            exigeAcesso &&
+            !ehAdmin &&
+            !temAcessoCargoFarol(trilha.concurso, trilha.cargoAcesso)
+        ){
+            return {
+                classe: "acesso-negado",
+                texto: "🔒 Você não tem acesso",
+                permitido: false
+            };
+        }
+
+        if(trilha.bloqueado || trilha.emConstrucao === true){
+            return {
+                classe: "em-preparacao",
+                texto: "🚧 Conteúdo em preparação",
+                permitido: false
+            };
+        }
+
+        // O administrador pode testar rotas ainda não publicadas quando existe estrutura.
         if(ehAdmin && trilha.publicado === false){
             return {
                 classe: "teste-admin",
@@ -23747,18 +23973,6 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             };
         }
 
-        // Para alunos, primeiro informa se o cargo foi ou não liberado.
-        // Assim, uma conta sem compra não recebe a mensagem enganosa
-        // de que já possui o cargo, apenas porque ele ainda está em revisão.
-        if(!temAcessoCargoFarol(trilha.concurso, trilha.cargoAcesso)){
-            return {
-                classe: "acesso-negado",
-                texto: "🔒 Acesso não liberado",
-                permitido: false
-            };
-        }
-
-        // O aluno pode ter o cargo registrado, mas a rota ainda não estar publicada.
         if(trilha.publicado === false){
             return {
                 classe: "em-preparacao",
@@ -23785,7 +23999,8 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             permitido: !trilha.bloqueado
         };
 
-        if(trilha.concurso === "abaetetuba2026"){
+        const concursoDaTrilha = CONCURSOS_FAROL[trilha.concurso];
+        if(concursoDaTrilha && concursoDaTrilha.acessoLivre === false){
             estado = estadoCardCargoFarol(trilha);
         }
 
@@ -23827,7 +24042,42 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             .map(chave => montarCardCargoConcursoFarol(chave, trilhasPreparacaoFarol[chave]))
             .join("");
 
-        const avisoAbaetetuba = chaveConcurso === "abaetetuba2026"
+        let blocoCards = `
+            <div class="grid-preparacoes">
+                ${cards}
+            </div>
+        `;
+
+        if(chaveConcurso === "transpetro2026"){
+            const chavesOficiais = new Set([
+                "transpetroSegundoOficialNautica",
+                "transpetroSegundoOficialMaquinas"
+            ]);
+
+            const cardsAquaviarios = concurso.rotas
+                .filter(chave => !chavesOficiais.has(chave))
+                .map(chave => montarCardCargoConcursoFarol(chave, trilhasPreparacaoFarol[chave]))
+                .join("");
+
+            const cardsOficiais = concurso.rotas
+                .filter(chave => chavesOficiais.has(chave))
+                .map(chave => montarCardCargoConcursoFarol(chave, trilhasPreparacaoFarol[chave]))
+                .join("");
+
+            blocoCards = `
+                <h3 class="titulo-grupo-preparacao">⚓ Aquaviários / Guarnição</h3>
+                <div class="grid-preparacoes">
+                    ${cardsAquaviarios}
+                </div>
+
+                <h3 class="titulo-grupo-preparacao">🧭 Oficiais</h3>
+                <div class="grid-preparacoes">
+                    ${cardsOficiais}
+                </div>
+            `;
+        }
+
+        const avisoAcesso = chaveConcurso === "abaetetuba2026"
             ? `
                 <div class="nota-seguranca-acesso">
                     <strong>🔐 Acesso por pacote e cargo:</strong>
@@ -23851,11 +24101,9 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 </button>
             </div>
 
-            ${avisoAbaetetuba}
+            ${avisoAcesso}
 
-            <div class="grid-preparacoes">
-                ${cards}
-            </div>
+            ${blocoCards}
         `;
     }
 
@@ -23868,7 +24116,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         localStorage.setItem("farol_concurso_atual", chave);
         localStorage.removeItem("farol_trilha_atual");
 
-        if(chave === "abaetetuba2026"){
+        if(CONCURSOS_FAROL[chave].acessoLivre === false){
             await carregarAcessosConcursosFarol({ renderizar: false });
         }
 
@@ -23886,37 +24134,39 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
         if(!trilha){
             mostrarToast("Rota não encontrada.");
-            return;
+            return false;
         }
 
         const concurso = inferirConcursoDaRotaFarol(chaveTrilha);
         localStorage.setItem("farol_concurso_atual", concurso);
 
-        if(trilha.bloqueado){
-            mostrarToast("Esta rota ainda está em desenvolvimento.");
-            return;
-        }
-
-        if(trilha.concurso === "abaetetuba2026"){
-            // Confere novamente no servidor no momento do clique.
-            // Assim, uma liberação feita pelo administrador passa a valer imediatamente.
+        const concursoDaTrilha = CONCURSOS_FAROL[trilha.concurso];
+        if(concursoDaTrilha && concursoDaTrilha.acessoLivre === false){
+            // Confere no servidor para refletir imediatamente uma compra/liberação.
             await carregarAcessosConcursosFarol({ renderizar: false });
 
-            // Verifica primeiro a compra/liberação do cargo.
             if(!temAcessoCargoFarol(trilha.concurso, trilha.cargoAcesso)){
-                mostrarToast("Seu acesso ainda não inclui este cargo de Abaetetuba.");
-                return;
+                localStorage.removeItem("farol_trilha_atual");
+                mostrarToast("Você não tem acesso a este cargo.");
+                return false;
             }
+        }
 
-            // Depois verifica se o conteúdo já foi publicado para alunos.
-            if(trilha.publicado === false && !ehAdministradorAcessosFarol()){
-                mostrarToast("Este cargo ainda está em preparação para o edital de Abaetetuba.");
-                return;
-            }
+        if(trilha.bloqueado || trilha.emConstrucao === true){
+            localStorage.removeItem("farol_trilha_atual");
+            mostrarToast("Conteúdo em preparação.");
+            return false;
+        }
+
+        if(trilha.publicado === false && !ehAdministradorAcessosFarol()){
+            localStorage.removeItem("farol_trilha_atual");
+            mostrarToast("Conteúdo em preparação.");
+            return false;
         }
 
         localStorage.setItem("farol_trilha_atual", chaveTrilha);
         renderizarTrilhaEstudo(chaveTrilha);
+        return true;
     };
 
     // Impede que uma rota bloqueada seja restaurada apenas alterando o localStorage.
@@ -23928,7 +24178,12 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         }
 
         const trilha = trilhasPreparacaoFarol[chave];
-        if(!trilha || trilha.concurso !== "abaetetuba2026"){
+        if(!trilha){
+            return "";
+        }
+
+        const concursoDaTrilha = CONCURSOS_FAROL[trilha.concurso];
+        if(!concursoDaTrilha || concursoDaTrilha.acessoLivre !== false){
             return chave;
         }
 
@@ -23974,6 +24229,105 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         }
     };
 
+    window.abrirAreaTaifeiroFarol = function(area){
+        const destino = String(area || "");
+
+        if(destino === "simulados"){
+            localStorage.setItem("farol_concurso_simulados", "transpetro2026");
+            mostrarTela("simulados");
+            setTimeout(() => {
+                if(typeof window.selecionarConcursoSimuladosFarol === "function"){
+                    window.selecionarConcursoSimuladosFarol("transpetro2026");
+                }
+            }, 80);
+            return;
+        }
+
+        if(destino === "provas"){
+            mostrarTela("provasAnteriores");
+            setTimeout(() => {
+                if(typeof window.selecionarCargoProvasFarol === "function"){
+                    window.selecionarCargoProvasFarol("taifeiro");
+                }
+            }, 80);
+            return;
+        }
+
+        if(destino === "erros"){
+            mostrarTela("erros");
+            return;
+        }
+
+        if(["especificas", "banco2026", "ineditas"].includes(destino)){
+            if(typeof window.abrirBancoQuestoesTaifeiroFarol === "function"){
+                window.abrirBancoQuestoesTaifeiroFarol(
+                    destino === "especificas" ? "especificas" : "banco2026"
+                );
+            }else if(typeof mostrarToast === "function"){
+                mostrarToast("O Banco de Questões 2026 ainda está carregando. Tente novamente.");
+            }
+            return;
+        }
+
+        const mensagens = {
+            portugues: "O banco de Português de Taifeiro será conectado quando iniciarmos os tópicos de Língua Portuguesa."
+        };
+
+        mostrarToast(mensagens[destino] || "Este recurso será ativado nas próximas etapas do Transpetro MAR.");
+    };
+
+    function renderizarMenuTaifeiroFarol(trilha, concurso, painelTrilha){
+        atualizarTituloSelecaoFarol("⚓ Taifeiro — TAA");
+
+        painelTrilha.innerHTML = `
+            <div class="cabecalho-trilha cabecalho-taifeiro-farol">
+                <div>
+                    <span class="selo-nivel-trilha">${escaparHTML(trilha.nivel || "Aquaviários / Guarnição")}</span>
+                    <span class="selo-concurso-rota selo-transpetro-farol">⚓ ${escaparHTML(concurso ? concurso.nome : "Transpetro MAR")}</span>
+                    <h3>⚓ Taifeiro — TAA</h3>
+                    <p>
+                        Prepare-se para o <strong>Processo Seletivo Público MAR 2026</strong> com foco direto em questões, provas e simulados.
+                    </p>
+                </div>
+
+                <div class="acoes-rota-concurso">
+                    <button class="btn-alterar-preparacao" onclick="alterarPreparacaoFarol()">
+                        ⚓ Alterar cargo
+                    </button>
+                    <button class="btn-trocar-concurso-farol" onclick="trocarConcursoFarol()">
+                        🏛️ Trocar concurso
+                    </button>
+                </div>
+            </div>
+
+            <div class="aviso-taifeiro-etapa1 aviso-taifeiro-banco2026">
+                <strong>🎯 Banco de Questões 2026 em construção por edital</strong>
+                <span>Arquitetura Naval: 150 questões aprovadas • Legislação Marítima e Ambiental — Aspectos Gerais: 80 questões aprovadas.</span>
+            </div>
+
+            <div class="grid-menu-taifeiro-farol">
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('portugues')">
+                    <span>📘</span><strong>Língua Portuguesa</strong><small>Treinar questões</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('especificas')">
+                    <span>⚓</span><strong>Conhecimentos Específicos</strong><small>Treinar questões marítimas</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('banco2026')">
+                    <span>🎯</span><strong>Banco de Questões 2026</strong><small>Questões organizadas pelo edital</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('simulados')">
+                    <span>📝</span><strong>Simulados</strong><small>Treinos e prova completa</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('provas')">
+                    <span>📄</span><strong>Provas Comentadas</strong><small>Taifeiro 2018 e 2023</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('erros')">
+                    <span>❌</span><strong>Caderno de Erros</strong><small>Revise o que errou</small><b>›</b>
+                </button>
+            </div>
+        `;
+    }
+
     renderizarTrilhaEstudo = function(chave){
         const trilha = trilhasPreparacaoFarol[chave];
         const painelPreparacoes = document.getElementById("painelPreparacoes");
@@ -23990,6 +24344,11 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         painelTrilha.style.display = "block";
         atualizarTituloSelecaoFarol("🧭 Sua Rota de Estudos");
         atualizarAtalhoTodasDisciplinasFarol(chaveConcurso === "barcarena2026");
+
+        if(chaveConcurso === "transpetro2026" && chave === "transpetroTaifeiro"){
+            renderizarMenuTaifeiroFarol(trilha, concurso, painelTrilha);
+            return;
+        }
 
         const cardsDisciplinas = trilha.disciplinas.map((disciplina, indice) => {
             const base = disciplinasTrilhaFarol[disciplina] || {
@@ -25210,7 +25569,8 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
     const CHAVE_CONCURSO_SIMULADOS_FAROL = "farol_concurso_simulados";
     const CONCURSOS_VALIDOS_SIMULADOS_FAROL = [
         "barcarena2026",
-        "abaetetuba2026"
+        "abaetetuba2026",
+        "transpetro2026"
     ];
 
     function obterConcursoSimuladosInicialFarol(){
@@ -25278,6 +25638,25 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 acesso.liberado === true
             );
         });
+    }
+
+    function temAcessoTaifeiroTranspetroFarol(){
+        if(typeof window.temAcessoCargoFarol === "function"){
+            return window.temAcessoCargoFarol(
+                "transpetro2026",
+                "taifeiro"
+            );
+        }
+
+        const acessos = window.acessosConcursosUsuarioFarol || {};
+        const cargo = acessos.transpetro2026 &&
+            acessos.transpetro2026.taifeiro;
+
+        return cargo === true || !!(
+            cargo &&
+            typeof cargo === "object" &&
+            cargo.liberado === true
+        );
     }
 
     function definirBotaoConcursoSimuladosFarol(id, ativo){
@@ -25398,8 +25777,13 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         const painelAbaetetuba = document.getElementById(
             "painelSimuladosConcursoAbaetetubaFarol"
         );
+        const painelTranspetro = document.getElementById(
+            "painelSimuladosConcursoTranspetroFarol"
+        );
         const status = document.getElementById("statusConcursoSimuladosFarol");
         const barcarenaAtiva = selecionado === "barcarena2026";
+        const abaetetubaAtiva = selecionado === "abaetetuba2026";
+        const transpetroAtivo = selecionado === "transpetro2026";
 
         localStorage.setItem(CHAVE_CONCURSO_SIMULADOS_FAROL, selecionado);
 
@@ -25408,7 +25792,11 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         }
 
         if(painelAbaetetuba){
-            painelAbaetetuba.style.display = barcarenaAtiva ? "none" : "block";
+            painelAbaetetuba.style.display = abaetetubaAtiva ? "block" : "none";
+        }
+
+        if(painelTranspetro){
+            painelTranspetro.style.display = transpetroAtivo ? "block" : "none";
         }
 
         definirBotaoConcursoSimuladosFarol(
@@ -25417,29 +25805,47 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         );
         definirBotaoConcursoSimuladosFarol(
             "btnSimuladosAbaetetubaFarol",
-            !barcarenaAtiva
+            abaetetubaAtiva
+        );
+        definirBotaoConcursoSimuladosFarol(
+            "btnSimuladosTranspetroFarol",
+            transpetroAtivo
         );
 
         if(status){
             status.textContent = barcarenaAtiva
                 ? "Exibindo: Barcarena 2026"
-                : "Exibindo: Abaetetuba 2026";
+                : (abaetetubaAtiva
+                    ? "Exibindo: Abaetetuba 2026"
+                    : "Exibindo: Transpetro MAR 2026");
         }
 
         if(barcarenaAtiva){
             atualizarBlocoMinhaRotaBarcarenaFarol();
-        }else{
+        }else if(abaetetubaAtiva){
             atualizarEstadoAbaetetubaSimuladosFarol();
         }
     }
 
-    window.selecionarConcursoSimuladosFarol = function(concurso){
+    window.selecionarConcursoSimuladosFarol = async function(concurso){
         if(!CONCURSOS_VALIDOS_SIMULADOS_FAROL.includes(concurso)){
             mostrarToast("Concurso de simulados não encontrado.");
-            return;
+            return false;
+        }
+
+        if(concurso === "transpetro2026"){
+            if(typeof window.carregarAcessosConcursosFarol === "function"){
+                await window.carregarAcessosConcursosFarol({ renderizar: false });
+            }
+
+            if(!temAcessoTaifeiroTranspetroFarol()){
+                mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+                return false;
+            }
         }
 
         atualizarInterfaceSimuladosPorConcursoFarol(concurso);
+        return true;
     };
 
     window.abrirRotasBarcarenaSimuladosFarol = async function(){
@@ -25455,6 +25861,19 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
         if(typeof window.selecionarConcursoFarol === "function"){
             await window.selecionarConcursoFarol("abaetetuba2026");
+        }
+    };
+
+    window.abrirRotasTranspetroSimuladosFarol = async function(){
+        mostrarTela("questoes");
+
+        if(typeof window.selecionarConcursoFarol === "function"){
+            await window.selecionarConcursoFarol("transpetro2026");
+            setTimeout(() => {
+                if(typeof window.abrirCargoConcursoFarol === "function"){
+                    window.abrirCargoConcursoFarol("transpetroTaifeiro");
+                }
+            }, 30);
         }
     };
 
@@ -26703,9 +27122,20 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
     }
 
     window.selecionarConcursoDueloFarol = function(concurso){
-        concursoDueloAtualV26 = concurso === "abaetetuba2026"
+        const destino = concurso === "abaetetuba2026"
             ? "abaetetuba2026"
             : "barcarena2026";
+
+        if(
+            destino !== "barcarena2026" &&
+            typeof window.temAlgumAcessoConcursoFarol === "function" &&
+            !window.temAlgumAcessoConcursoFarol(destino)
+        ){
+            mostrarToast("Você não tem acesso a Abaetetuba. Os Duelos de Barcarena continuam disponíveis.");
+            return false;
+        }
+
+        concursoDueloAtualV26 = destino;
 
         localStorage.setItem(
             CHAVE_CONCURSO_DUELO_V26,
@@ -26728,6 +27158,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         renderizarSeletorConcursoDueloV26();
         atualizarCabecalhoDueloV26();
         prepararSelectDuelo();
+        return true;
     };
 
     const obterGrupoDueloAntesV26 = obterGrupoDuelo;
@@ -27617,6 +28048,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             estatisticas: "Estatísticas",
             perfilAluno: "Perfil do Aluno",
             provasAnteriores: "Provas Anteriores",
+            provaComentadaTaifeiro: "Prova Comentada — Taifeiro",
             chatGlobal: "Chat Geral",
             forum: "Fórum"
         };
@@ -27627,7 +28059,8 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
     function nomeConcursoPresencaFarol(chave){
         const nomes = {
             abaetetuba2026: "Abaetetuba",
-            barcarena2026: "Barcarena"
+            barcarena2026: "Barcarena",
+            transpetro2026: "Transpetro MAR"
         };
         return nomes[chave] || chave || "Não selecionado";
     }
@@ -28963,6 +29396,15 @@ async function criarArenaVisualFarol(){
 
     const config = obterConfiguracaoArenaVisualFarol();
 
+    if(
+        config.concurso !== "barcarena2026" &&
+        typeof window.temAlgumAcessoConcursoFarol === "function" &&
+        !window.temAlgumAcessoConcursoFarol(config.concurso)
+    ){
+        mostrarToast("Você não tem acesso ao conteúdo deste concurso. A Arena de Barcarena continua disponível.");
+        return false;
+    }
+
     if(!config.disciplina){
         mostrarToast("Escolha a disciplina da Arena.");
         return;
@@ -29109,6 +29551,15 @@ async function entrarArenaVisualFarol(){
             }
 
             const dados = snapshot.data() || {};
+
+            if(
+                (dados.concurso || "barcarena2026") !== "barcarena2026" &&
+                typeof window.temAlgumAcessoConcursoFarol === "function" &&
+                !window.temAlgumAcessoConcursoFarol(dados.concurso || "barcarena2026")
+            ){
+                throw new Error("Você não tem acesso ao concurso desta Arena.");
+            }
+
             const uids = Array.isArray(dados.uids)
                 ? [...dados.uids]
                 : [];
@@ -33222,6 +33673,9 @@ function renderizarSalaArenaAoVivoFarol(){
         if(typeof selecionarConcursoOriginal === "function"){
             window.selecionarConcursoDueloFarol = function(){
                 const resultado = selecionarConcursoOriginal.apply(this, arguments);
+                if(resultado === false){
+                    return false;
+                }
                 setTimeout(() =>
                     abrirFluxoCompeticaoFarolV21("dueloDisciplina"), 0
                 );
@@ -33607,6 +34061,8 @@ function renderizarSalaArenaAoVivoFarol(){
         concurso: ["📝 Simulados", "Escolha o concurso.", "Etapa 1 de 3"],
         modoBarcarena: ["Simulados de Barcarena", "Escolha o tipo de treino.", "Etapa 2 de 3"],
         modoAbaetetuba: ["Simulados de Abaetetuba", "Escolha sua preparação.", "Etapa 2 de 3"],
+        modoTranspetro: ["Simulados do Transpetro MAR", "Escolha o cargo.", "Etapa 2 de 3"],
+        transpetroTaifeiro: ["Taifeiro — TAA", "Estrutura de simulados do cargo.", "Etapa 3 de 3"],
         rotaBarcarena: ["Minha rota", "Escolha um simulado.", "Etapa 3 de 3"],
         disciplinaBarcarena: ["Por disciplina", "Selecione a matéria.", "Etapa 3 de 3"],
         cargoBarcarena: ["Por cargo", "Selecione a preparação.", "Etapa 3 de 3"],
@@ -33665,6 +34121,21 @@ function renderizarSalaArenaAoVivoFarol(){
         menuAbaetetuba.id = "menuModosAbaetetubaV24";
         menuAbaetetuba.className = "menu-fluxo-simulados-v24";
         card.insertBefore(menuAbaetetuba, menuBarcarena.nextSibling);
+
+        const menuTranspetro = document.createElement("div");
+        menuTranspetro.id = "menuModosTranspetroV24";
+        menuTranspetro.className = "menu-fluxo-simulados-v24 menu-transpetro-v24";
+        menuTranspetro.innerHTML = `
+            <button type="button" onclick="abrirEtapaSimuladosV24('transpetroTaifeiro')">
+                <span>⚓</span>
+                <div>
+                    <strong>Taifeiro — TAA</strong>
+                    <small>Preparação Transpetro MAR 2026.</small>
+                </div>
+                <b>›</b>
+            </button>
+        `;
+        card.insertBefore(menuTranspetro, menuAbaetetuba.nextSibling);
     }
 
     function prepararBlocosBarcarenaV24(){
@@ -33765,8 +34236,10 @@ function renderizarSalaArenaAoVivoFarol(){
         const ids = [
             "menuModosBarcarenaV24",
             "menuModosAbaetetubaV24",
+            "menuModosTranspetroV24",
             "painelSimuladosConcursoBarcarenaFarol",
-            "painelSimuladosConcursoAbaetetubaFarol"
+            "painelSimuladosConcursoAbaetetubaFarol",
+            "painelSimuladosConcursoTranspetroFarol"
         ];
 
         ids.forEach(id => {
@@ -33787,7 +34260,8 @@ function renderizarSalaArenaAoVivoFarol(){
             "simuladosAbaetetubaComunsSuperiorFarol",
             "simuladosAbaetetubaHistoriaFarol",
             "simuladosAbaetetubaComunsMedioFarol",
-            "simuladosAbaetetubaSemAcessoFarol"
+            "simuladosAbaetetubaSemAcessoFarol",
+            "simuladosTranspetroTaifeiroFarol"
         ].forEach(id => {
             const bloco = elSimV24(id);
             if(bloco) bloco.style.display = "none";
@@ -33824,6 +34298,15 @@ function renderizarSalaArenaAoVivoFarol(){
     }
 
     window.abrirEtapaSimuladosV24 = function(etapa, opcoes = {}){
+        if(
+            ["modoTranspetro", "transpetroTaifeiro"].includes(etapa) &&
+            typeof window.temAcessoCargoFarol === "function" &&
+            !window.temAcessoCargoFarol("transpetro2026", "taifeiro")
+        ){
+            mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+            etapa = "concurso";
+        }
+
         garantirMenusSimuladosV24();
         prepararBlocosBarcarenaV24();
         esconderTelasSimuladosV24();
@@ -33838,6 +34321,8 @@ function renderizarSalaArenaAoVivoFarol(){
             elSimV24("painelSimuladosConcursoBarcarenaFarol");
         const painelAbaetetuba =
             elSimV24("painelSimuladosConcursoAbaetetubaFarol");
+        const painelTranspetro =
+            elSimV24("painelSimuladosConcursoTranspetroFarol");
 
         if(etapa === "concurso"){
             if(seletor) seletor.style.display = "block";
@@ -33858,6 +34343,20 @@ function renderizarSalaArenaAoVivoFarol(){
                 const menu = elSimV24("menuModosAbaetetubaV24");
                 if(menu) menu.style.display = "grid";
             }, 20);
+        }
+
+        if(etapa === "modoTranspetro"){
+            if(typeof window.atualizarInterfaceSimuladosPorConcursoFarol === "function"){
+                window.atualizarInterfaceSimuladosPorConcursoFarol("transpetro2026");
+            }
+            const menu = elSimV24("menuModosTranspetroV24");
+            if(menu) menu.style.display = "grid";
+        }
+
+        if(etapa === "transpetroTaifeiro"){
+            if(painelTranspetro) painelTranspetro.style.display = "block";
+            const bloco = elSimV24("simuladosTranspetroTaifeiroFarol");
+            if(bloco) bloco.style.display = "block";
         }
 
         if([
@@ -33899,6 +34398,8 @@ function renderizarSalaArenaAoVivoFarol(){
         const mapa = {
             modoBarcarena: "concurso",
             modoAbaetetuba: "concurso",
+            modoTranspetro: "concurso",
+            transpetroTaifeiro: "modoTranspetro",
             rotaBarcarena: "modoBarcarena",
             disciplinaBarcarena: "modoBarcarena",
             cargoBarcarena: "modoBarcarena",
@@ -33923,19 +34424,27 @@ function renderizarSalaArenaAoVivoFarol(){
             window.selecionarConcursoSimuladosFarol;
 
         if(typeof selecionarOriginal === "function"){
-            window.selecionarConcursoSimuladosFarol = function(concurso){
+            window.selecionarConcursoSimuladosFarol = async function(concurso){
+                const permitido = await Promise.resolve(
+                    selecionarOriginal.apply(this, arguments)
+                );
+
+                if(permitido === false){
+                    estadoSimuladosV24.concurso = "";
+                    abrirEtapaSimuladosV24("concurso");
+                    return false;
+                }
+
                 estadoSimuladosV24.concurso = concurso;
-                const retorno = selecionarOriginal.apply(this, arguments);
+                abrirEtapaSimuladosV24(
+                    concurso === "barcarena2026"
+                        ? "modoBarcarena"
+                        : (concurso === "transpetro2026"
+                            ? "modoTranspetro"
+                            : "modoAbaetetuba")
+                );
 
-                setTimeout(() => {
-                    abrirEtapaSimuladosV24(
-                        concurso === "barcarena2026"
-                            ? "modoBarcarena"
-                            : "modoAbaetetuba"
-                    );
-                }, 30);
-
-                return retorno;
+                return true;
             };
         }
     }
@@ -34257,7 +34766,8 @@ function renderizarSalaArenaAoVivoFarol(){
         historia: "Professor de História",
         ciencias: "Professor de Ciências",
         geografia: "Professor de Geografia",
-        apoioEscolar: "Profissional de Apoio Escolar"
+        apoioEscolar: "Profissional de Apoio Escolar",
+        taifeiro: "Taifeiro — Transpetro MAR"
     };
 
     function elProvasV30(id){
@@ -34403,6 +34913,16 @@ function renderizarSalaArenaAoVivoFarol(){
     };
 
     function abrirListaCargoProvasV30(cargo, opcoes = {}){
+        if(
+            cargo === "taifeiro" &&
+            typeof window.temAcessoCargoFarol === "function" &&
+            !window.temAcessoCargoFarol("transpetro2026", "taifeiro")
+        ){
+            mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+            abrirCargosProvasV30({ semHistorico: true });
+            return false;
+        }
+
         const config = obterConfigProvasFarol();
         const item = config[cargo];
 
@@ -34473,6 +34993,7 @@ function renderizarSalaArenaAoVivoFarol(){
             "grupoProvasCiencias",
             "grupoProvasGeografia",
             "grupoProvasApoioEscolar",
+            "grupoProvasTaifeiro",
             "detalheProvaAnteriorV30",
             "mensagemEscolhaProvas"
         ].forEach(id => {
@@ -34518,8 +35039,24 @@ function renderizarSalaArenaAoVivoFarol(){
     };
 
     const selecionarCargoAntesV30 = window.selecionarCargoProvasFarol;
-    window.selecionarCargoProvasFarol = function(cargo){
+    window.selecionarCargoProvasFarol = async function(cargo){
+        if(cargo === "taifeiro"){
+            if(typeof window.carregarAcessosConcursosFarol === "function"){
+                await window.carregarAcessosConcursosFarol({ renderizar: false });
+            }
+
+            if(
+                typeof window.temAcessoCargoFarol === "function" &&
+                !window.temAcessoCargoFarol("transpetro2026", "taifeiro")
+            ){
+                mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+                abrirCargosProvasV30();
+                return false;
+            }
+        }
+
         abrirListaCargoProvasV30(cargo);
+        return true;
     };
 
     window.voltarCargosProvasFarol = function(){
@@ -36587,16 +37124,31 @@ function renderizarSalaArenaAoVivoFarol(){
 // ==========================================================
 
 window.selecionarConcursoArenaV40 = function(concurso){
-    const select = document.getElementById("arenaConcursoFarol");
-    if(!select) return;
+    const destino = concurso === "abaetetuba2026"
+        ? "abaetetuba2026"
+        : "barcarena2026";
 
-    select.value = concurso;
+    if(
+        destino !== "barcarena2026" &&
+        typeof window.temAlgumAcessoConcursoFarol === "function" &&
+        !window.temAlgumAcessoConcursoFarol(destino)
+    ){
+        if(typeof mostrarToast === "function"){
+            mostrarToast("Você não tem acesso a Abaetetuba. A Arena de Barcarena continua disponível.");
+        }
+        return false;
+    }
+
+    const select = document.getElementById("arenaConcursoFarol");
+    if(!select) return false;
+
+    select.value = destino;
 
     document
         .querySelectorAll("#botoesConcursoArenaV40 button")
         .forEach(botao => {
             const alvo = botao.getAttribute("onclick") || "";
-            botao.classList.toggle("selecionado", alvo.includes(concurso));
+            botao.classList.toggle("selecionado", alvo.includes(destino));
         });
 
     if(typeof prepararArenaVisualFarol === "function"){
@@ -36616,6 +37168,8 @@ window.selecionarConcursoArenaV40 = function(concurso){
             abrirFluxoCompeticaoFarolV21("arenaDisciplina");
         }
     }, 30);
+
+    return true;
 };
 
 
@@ -39086,4 +39640,1409 @@ limparArenaLocalFarol = function(){
             }
         });
     }
+})();
+
+/* ==========================================================
+   FAROL DO SABER — TRANSPETRO / TAIFEIRO — ETAPA 3
+   Motor genérico de Prova Comentada Interativa
+   2018 e 2023 permanecem separadas.
+   Nesta etapa, os bancos abaixo são SOMENTE demonstração técnica.
+========================================================== */
+(function(){
+    "use strict";
+
+    const BANCOS_DEMO_PROVA_COMENTADA_TAA = {
+        2018: [
+            {
+                id: "TAA-DEMO-2018-001",
+                numero: 1,
+                disciplina: "Língua Portuguesa",
+                assunto: "Interpretação de texto",
+                enunciado: "DEMONSTRAÇÃO TÉCNICA — Em uma instrução de segurança, a frase ‘Antes de iniciar a tarefa, confirme as condições do local’ tem como finalidade principal orientar uma ação preventiva. Considerando apenas essa frase, a ideia central é:",
+                alternativas: [
+                    "iniciar a tarefa antes da verificação do ambiente.",
+                    "verificar as condições do local antes de começar a atividade.",
+                    "substituir a avaliação do local por uma comunicação verbal.",
+                    "realizar a tarefa apenas quando houver supervisão externa.",
+                    "dispensar a análise do ambiente quando a atividade for rotineira."
+                ],
+                correta: 1,
+                comentario: "A frase estabelece uma ordem lógica: primeiro confirmar as condições do local e, somente depois, iniciar a tarefa. A finalidade é preventiva.",
+                revisaoAssunto: "Em questões de interpretação, a resposta correta deve nascer do que está efetivamente escrito. Expressões como ‘antes de’, ‘depois de’, ‘se’, ‘quando’ e ‘porque’ ajudam a localizar relações de tempo, condição e causa. Aqui, ‘antes de iniciar’ determina que a verificação do local é uma etapa anterior à execução da tarefa. A banca pode criar alternativas plausíveis acrescentando supervisão, exceções ou procedimentos que não aparecem no texto; esses acréscimos devem ser rejeitados.",
+                dicaMacete: "Leia a alternativa e pergunte: ‘isso está no texto ou eu estou completando com conhecimento de fora?’. Em interpretação, prefira a opção que reproduz a ideia do texto sem inventar condições.",
+                pegadinha: "Alternativas que parecem mais técnicas podem estar erradas se acrescentarem uma exigência que o enunciado não trouxe.",
+                analiseAlternativas: [
+                    "Contraria diretamente a ordem apresentada no enunciado.",
+                    "Correta. Reproduz a relação temporal e preventiva expressa na frase.",
+                    "A frase não autoriza substituir a verificação por comunicação.",
+                    "Não há referência à necessidade de supervisão externa.",
+                    "O texto não cria exceção para tarefas rotineiras."
+                ],
+                memorizar2026: "Em interpretação, priorize o que o texto efetivamente afirma. Evite acrescentar condições que não aparecem no enunciado.",
+                fonte: "Demonstração técnica Farol — questão não oficial",
+                avisoAtualizacao: "Esta questão não pertence à prova oficial de 2018. Serve apenas para validar o funcionamento da Etapa 3."
+            },
+            {
+                id: "TAA-DEMO-2018-002",
+                numero: 2,
+                disciplina: "Conhecimentos Específicos",
+                assunto: "Primeiros Socorros — segurança da cena",
+                enunciado: "DEMONSTRAÇÃO TÉCNICA — Ao se deparar com uma pessoa acidentada em uma área operacional, qual deve ser a primeira preocupação antes do contato direto com a vítima?",
+                alternativas: [
+                    "Oferecer água para avaliar a capacidade de deglutição.",
+                    "Mover a vítima imediatamente para uma posição sentada.",
+                    "Verificar se a cena oferece risco ao socorrista e à vítima.",
+                    "Perguntar aos presentes quem presenciou o acidente.",
+                    "Retirar equipamentos da vítima antes de qualquer avaliação."
+                ],
+                correta: 2,
+                comentario: "A abordagem de primeiros socorros começa pela avaliação da segurança da cena. O socorrista não deve se tornar uma nova vítima.",
+                revisaoAssunto: "A primeira preocupação em primeiros socorros é verificar se o ambiente permite aproximação segura. Antes de tocar na vítima, deve-se observar riscos como energia elétrica, fogo, gases, tráfego, produtos perigosos, estruturas instáveis ou qualquer condição capaz de produzir novas vítimas. Somente depois da segurança da cena é que se inicia a avaliação da pessoa acidentada e o acionamento dos recursos necessários. Essa sequência evita que o socorrista agrave a ocorrência e é um princípio recorrente em questões de atendimento inicial.",
+                dicaMacete: "Pense: CENA antes da PESSOA. Se a cena não é segura, o socorrista não inicia o contato direto.",
+                pegadinha: "A banca pode oferecer uma ação clinicamente útil — como avaliar a vítima — mas colocá-la antes da segurança da cena. Nesse caso, a ordem está errada.",
+                analiseAlternativas: [
+                    "Não se oferece água de forma automática a uma vítima de acidente.",
+                    "Movimentação sem avaliação pode agravar lesões.",
+                    "Correta. A segurança da cena vem antes do contato e da avaliação primária.",
+                    "Obter informações pode ser útil depois, mas não precede a segurança da cena.",
+                    "Não se retira equipamento indiscriminadamente antes da avaliação."
+                ],
+                memorizar2026: "Sequência mental inicial: segurança da cena → aproximação segura → avaliação da vítima → acionamento/continuidade do atendimento.",
+                fonte: "Demonstração técnica Farol — questão não oficial",
+                avisoAtualizacao: "Na etapa de conteúdo definitivo, primeiros socorros será revisado com fontes atuais antes da criação das questões inéditas."
+            }
+        ],
+        2023: [
+            {
+                id: "TAA-DEMO-2023-001",
+                numero: 1,
+                disciplina: "Língua Portuguesa",
+                assunto: "Coesão e conectores",
+                enunciado: "DEMONSTRAÇÃO TÉCNICA — Em ‘A equipe interrompeu a atividade porque identificou uma condição insegura’, a palavra ‘porque’ estabelece uma relação de:",
+                alternativas: [
+                    "causa.",
+                    "oposição.",
+                    "concessão.",
+                    "finalidade.",
+                    "comparação."
+                ],
+                correta: 0,
+                comentario: "O segmento posterior explica a causa da interrupção da atividade: a identificação de uma condição insegura.",
+                revisaoAssunto: "Conjunções e locuções conjuntivas estabelecem relações de sentido entre orações. Em ‘interrompeu a atividade porque identificou uma condição insegura’, a segunda oração apresenta o motivo da interrupção; portanto, há relação de causa. Uma boa estratégia é transformar mentalmente a frase em uma pergunta: ‘por que a equipe interrompeu a atividade?’. A resposta é ‘porque identificou uma condição insegura’. Isso confirma o valor causal do conector.",
+                dicaMacete: "Faça a pergunta ‘por quê?’. Se a oração seguinte responde ao motivo do fato anterior, a relação é causal.",
+                pegadinha: "Não classifique a conjunção apenas por decorar uma lista. O mesmo conector pode ter valor dependente do contexto; primeiro identifique o sentido da frase.",
+                analiseAlternativas: [
+                    "Correta. ‘Porque’ introduz a causa do fato expresso na oração anterior.",
+                    "Não existe contraste entre as duas ideias.",
+                    "Não há ideia de concessão.",
+                    "A segunda oração não apresenta objetivo, e sim motivo.",
+                    "Não ocorre comparação entre elementos."
+                ],
+                memorizar2026: "Ao analisar conectores, identifique a relação lógica entre as orações antes de classificar a conjunção.",
+                fonte: "Demonstração técnica Farol — questão não oficial",
+                avisoAtualizacao: "Esta questão não pertence à prova oficial de 2023. Serve apenas para validar o funcionamento da Etapa 3."
+            },
+            {
+                id: "TAA-DEMO-2023-002",
+                numero: 2,
+                disciplina: "Conhecimentos Específicos",
+                assunto: "Trabalho em equipe",
+                enunciado: "DEMONSTRAÇÃO TÉCNICA — Em uma equipe de bordo, uma conduta que favorece a cooperação durante uma tarefa conjunta é:",
+                alternativas: [
+                    "reter informações para evitar questionamentos durante a execução.",
+                    "concentrar todas as decisões em um integrante, independentemente da função.",
+                    "priorizar objetivos individuais quando houver diferença de opinião.",
+                    "comunicar informações relevantes e coordenar as ações entre os integrantes.",
+                    "evitar confirmar instruções para reduzir o tempo de comunicação."
+                ],
+                correta: 3,
+                comentario: "Cooperação pressupõe comunicação adequada, coordenação e compreensão compartilhada das ações necessárias para alcançar o objetivo da equipe.",
+                revisaoAssunto: "Trabalho em equipe envolve objetivo comum, comunicação clara, coordenação das atividades, respeito às responsabilidades e compartilhamento de informações relevantes. Em ambiente de bordo, reter informação, eliminar confirmações ou concentrar decisões sem considerar as funções pode aumentar a chance de erro. A cooperação não significa ausência de liderança; significa que as pessoas entendem o objetivo, sabem suas responsabilidades e mantêm fluxo de informação suficiente para executar a tarefa com segurança e eficiência.",
+                dicaMacete: "Equipe boa = objetivo comum + comunicação + coordenação + cooperação. Se uma alternativa isola pessoas ou retém informação, desconfie.",
+                pegadinha: "‘Agilizar’ não justifica cortar comunicação essencial. Em prova, rapidez sem coordenação costuma aparecer como distrator.",
+                analiseAlternativas: [
+                    "Reter informação prejudica a consciência situacional da equipe.",
+                    "A coordenação não significa ignorar funções, responsabilidades e competências.",
+                    "Objetivos individuais não devem se sobrepor ao objetivo comum da tarefa.",
+                    "Correta. Comunicação relevante e coordenação fortalecem o trabalho em equipe.",
+                    "A confirmação de informações importantes reduz ambiguidades e falhas de comunicação."
+                ],
+                memorizar2026: "Trabalho em equipe: objetivo comum, comunicação clara, coordenação, cooperação e respeito às funções.",
+                fonte: "Demonstração técnica Farol — questão não oficial",
+                avisoAtualizacao: "Na etapa de conteúdo definitivo, as questões serão organizadas item por item conforme o edital de 2026."
+            }
+        ]
+    };
+
+    const estadosPorAno = {};
+    let anoAtual = null;
+
+    function escaparHTMLProvaComentada(valor){
+        return String(valor == null ? "" : valor)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/\"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    function letrasProvaComentada(indice){
+        return String.fromCharCode(65 + Number(indice || 0));
+    }
+
+    function temAcessoProvaComentadaTaifeiro(){
+        if(typeof window.temAcessoCargoFarol === "function"){
+            return window.temAcessoCargoFarol("transpetro2026", "taifeiro");
+        }
+        return false;
+    }
+
+    function obterBancoProvaComentada(ano){
+        const nomeGlobal = ano === 2018
+            ? "questoesTaifeiro2018"
+            : "questoesTaifeiro2023";
+
+        if(Array.isArray(window[nomeGlobal]) && window[nomeGlobal].length){
+            return {
+                questoes: window[nomeGlobal],
+                demo: false
+            };
+        }
+
+        return {
+            questoes: BANCOS_DEMO_PROVA_COMENTADA_TAA[ano] || [],
+            demo: true
+        };
+    }
+
+    function criarEstadoProvaComentada(ano){
+        const banco = obterBancoProvaComentada(ano);
+        return {
+            ano,
+            indice: 0,
+            tela: "questao",
+            questoes: banco.questoes,
+            demo: banco.demo,
+            respostas: banco.questoes.map(() => ({
+                selecionada: null,
+                confirmada: false
+            }))
+        };
+    }
+
+    function obterEstadoProvaComentada(ano){
+        if(!estadosPorAno[ano]){
+            estadosPorAno[ano] = criarEstadoProvaComentada(ano);
+        }
+        return estadosPorAno[ano];
+    }
+
+    function elementoProvaComentada(id){
+        return document.getElementById(id);
+    }
+
+    function atualizarCabecalhoProvaComentada(estado){
+        const titulo = elementoProvaComentada("tituloProvaComentadaTaifeiro");
+        const subtitulo = elementoProvaComentada("subtituloProvaComentadaTaifeiro");
+        const aviso = elementoProvaComentada("avisoDemoProvaComentadaTaifeiro");
+
+        if(titulo){
+            titulo.textContent = `Prova Comentada Interativa ${estado.ano}`;
+        }
+        if(subtitulo){
+            subtitulo.textContent = estado.tela === "feedback"
+                ? "Correção e revisão da questão. Use Voltar à questão para rever o enunciado ou avance para a próxima."
+                : "Responda primeiro. Após confirmar, a correção abre em uma tela separada.";
+        }
+        if(aviso){
+            aviso.style.display = estado.demo ? "flex" : "none";
+        }
+    }
+
+    function resumoAcertosProvaComentada(estado){
+        let acertos = 0;
+        let respondidas = 0;
+
+        estado.questoes.forEach((questao, indice) => {
+            const resposta = estado.respostas[indice];
+            if(resposta && resposta.confirmada){
+                respondidas += 1;
+                if(resposta.selecionada === questao.correta){
+                    acertos += 1;
+                }
+            }
+        });
+
+        return { acertos, respondidas };
+    }
+
+    function renderizarProgressoProvaComentada(estado){
+        const area = elementoProvaComentada("progressoProvaComentadaTaifeiro");
+        if(!area){
+            return;
+        }
+
+        const resumo = resumoAcertosProvaComentada(estado);
+        area.innerHTML = `
+            <strong>Questão ${estado.indice + 1} de ${estado.questoes.length}</strong>
+            <span>${resumo.respondidas} respondida${resumo.respondidas === 1 ? "" : "s"} • ${resumo.acertos} acerto${resumo.acertos === 1 ? "" : "s"}</span>
+        `;
+    }
+
+    function montarFeedbackProvaComentada(questao, resposta){
+        if(!resposta.confirmada){
+            return "";
+        }
+
+        const acertou = resposta.selecionada === questao.correta;
+        const analises = Array.isArray(questao.analiseAlternativas)
+            ? questao.analiseAlternativas
+            : [];
+        const explicacaoCorreta = questao.explicacaoCorreta || questao.comentario || "Explicação em preparação.";
+        const explicacaoEscolhida = analises[resposta.selecionada] || "Explicação desta alternativa em preparação.";
+        const revisaoAssunto = questao.revisaoAssunto || questao.revisao || "Revisão deste assunto em preparação.";
+        const dicaMacete = questao.dicaMacete || questao.macete || questao.dica || "";
+        const pegadinha = questao.pegadinha || "";
+        const atualizacao2026 = questao.atualizacao2026 || "";
+
+        return `
+            <div class="feedback-prova-comentada-taifeiro">
+                <div class="status-feedback-prova-comentada ${acertou ? "acertou" : "errou"}">
+                    <strong>${acertou ? "✅ VOCÊ ACERTOU!" : "❌ VOCÊ ERROU"}</strong>
+                    <div class="resumo-resposta-prova-comentada">
+                        <span>Sua resposta: <strong>${letrasProvaComentada(resposta.selecionada)}</strong></span>
+                        <span>Gabarito oficial: <strong>${letrasProvaComentada(questao.correta)}</strong></span>
+                    </div>
+                </div>
+
+                ${!acertou ? `
+                    <div class="bloco-feedback-prova-comentada bloco-resposta-errada">
+                        <h4>❌ Por que a alternativa que você marcou está errada?</h4>
+                        <p>${escaparHTMLProvaComentada(explicacaoEscolhida)}</p>
+                    </div>
+                ` : ""}
+
+                <div class="bloco-feedback-prova-comentada bloco-resposta-correta">
+                    <h4>✅ Por que ${letrasProvaComentada(questao.correta)} é a resposta correta?</h4>
+                    <p>${escaparHTMLProvaComentada(explicacaoCorreta)}</p>
+                </div>
+
+                <div class="bloco-feedback-prova-comentada bloco-revisao-assunto">
+                    <h4>📚 Revisão do assunto</h4>
+                    <p>${escaparHTMLProvaComentada(revisaoAssunto)}</p>
+                </div>
+
+                <div class="bloco-feedback-prova-comentada">
+                    <h4>🧠 O que memorizar para a prova</h4>
+                    <p>${escaparHTMLProvaComentada(questao.memorizar2026 || "Resumo em preparação.")}</p>
+                </div>
+
+                ${dicaMacete ? `
+                    <div class="bloco-feedback-prova-comentada bloco-macete-prova">
+                        <h4>🎯 Dica / Macete</h4>
+                        <p>${escaparHTMLProvaComentada(dicaMacete)}</p>
+                    </div>
+                ` : ""}
+
+                ${pegadinha ? `
+                    <div class="bloco-feedback-prova-comentada bloco-pegadinha-prova">
+                        <h4>⚠️ Pegadinha de prova</h4>
+                        <p>${escaparHTMLProvaComentada(pegadinha)}</p>
+                    </div>
+                ` : ""}
+
+                ${atualizacao2026 ? `
+                    <div class="bloco-feedback-prova-comentada bloco-atualizacao-2026">
+                        <h4>📌 Para 2026</h4>
+                        <p>${escaparHTMLProvaComentada(atualizacao2026)}</p>
+                    </div>
+                ` : ""}
+
+                ${questao.avisoAtualizacao ? `
+                    <div class="bloco-feedback-prova-comentada aviso-historico">
+                        <h4>⚠️ Atenção histórica / normativa</h4>
+                        <p>${escaparHTMLProvaComentada(questao.avisoAtualizacao)}</p>
+                    </div>
+                ` : ""}
+
+                <div class="bloco-feedback-prova-comentada bloco-identificacao-prova">
+                    <h4>📚 Identificação</h4>
+                    <p><strong>Assunto:</strong> ${escaparHTMLProvaComentada(questao.assunto || "Não informado")}</p>
+                    <p><strong>Fonte:</strong> ${escaparHTMLProvaComentada(questao.fonte || `Transpetro/Cesgranrio — ${anoAtual || ""}`)}</p>
+                </div>
+            </div>
+        `;
+    }
+
+    function renderizarNavegacaoProvaComentada(estado){
+        const area = elementoProvaComentada("navegacaoProvaComentadaTaifeiro");
+        if(!area){
+            return;
+        }
+
+        const respostaAtual = estado.respostas[estado.indice];
+        const ehPrimeira = estado.indice === 0;
+        const ehUltima = estado.indice === estado.questoes.length - 1;
+
+        if(estado.tela === "feedback"){
+            area.innerHTML = `
+                <button
+                    type="button"
+                    class="btn-voltar-questao-prova-comentada"
+                    onclick="voltarQuestaoDaCorrecaoProvaComentadaTaifeiroFarol()">
+                    ← Voltar à questão
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-proxima-prova-comentada"
+                    onclick="${ehUltima ? "verResultadoProvaComentadaTaifeiroFarol()" : "irProximaQuestaoProvaComentadaTaifeiroFarol()"}">
+                    ${ehUltima ? "Ver resultado →" : "Próxima questão →"}
+                </button>
+            `;
+            return;
+        }
+
+        area.innerHTML = `
+            <button
+                type="button"
+                onclick="irQuestaoAnteriorProvaComentadaTaifeiroFarol()"
+                ${ehPrimeira ? "disabled" : ""}>
+                ← Questão anterior
+            </button>
+
+            ${respostaAtual && respostaAtual.confirmada ? `
+                <button
+                    type="button"
+                    class="btn-proxima-prova-comentada"
+                    onclick="abrirCorrecaoProvaComentadaTaifeiroFarol()">
+                    Ver correção →
+                </button>
+            ` : ""}
+        `;
+    }
+
+    function renderizarTelaFeedbackProvaComentada(estado, questao, resposta, area){
+        const acertou = resposta.selecionada === questao.correta;
+
+        area.innerHTML = `
+            <article class="tela-feedback-prova-comentada-taifeiro">
+                <div class="topo-feedback-prova-comentada-taifeiro">
+                    <span class="etapa-feedback-prova-comentada">Correção da questão ${Number(questao.numero || (estado.indice + 1))}</span>
+                    <strong>${acertou ? "✅ Resposta correta" : "❌ Resposta incorreta"}</strong>
+                    <p>Agora revise o raciocínio e o conteúdo antes de seguir.</p>
+                </div>
+
+                ${montarFeedbackProvaComentada(questao, resposta)}
+            </article>
+        `;
+    }
+
+    function renderizarQuestaoProvaComentada(){
+        const estado = obterEstadoProvaComentada(anoAtual);
+        const area = elementoProvaComentada("conteudoProvaComentadaTaifeiro");
+
+        if(!area || !estado || !estado.questoes.length){
+            if(area){
+                area.innerHTML = "<p>O banco desta prova ainda não foi conectado.</p>";
+            }
+            return;
+        }
+
+        if(!estado.tela){
+            estado.tela = "questao";
+        }
+
+        const questao = estado.questoes[estado.indice];
+        const resposta = estado.respostas[estado.indice];
+
+        const blocoTextoBase = questao.textoBase ? `
+            <details class="texto-base-prova-comentada-taifeiro" open>
+                <summary>📄 ${escaparHTMLProvaComentada(questao.textoBaseTitulo || "Texto-base da questão")}</summary>
+                <div class="conteudo-texto-base-prova-comentada">${escaparHTMLProvaComentada(questao.textoBase)}</div>
+            </details>
+        ` : "";
+
+        const blocoImagemQuestao = questao.imagem ? `
+            <div class="imagem-questao-prova-comentada-taifeiro">
+                <img
+                    src="${escaparHTMLProvaComentada(questao.imagem)}"
+                    alt="${escaparHTMLProvaComentada(questao.imagemAlt || "Imagem da questão")}"
+                    loading="lazy">
+            </div>
+        ` : "";
+
+        atualizarCabecalhoProvaComentada(estado);
+        renderizarProgressoProvaComentada(estado);
+
+        if(estado.tela === "feedback"){
+            if(!resposta || !resposta.confirmada){
+                estado.tela = "questao";
+            }else{
+                renderizarTelaFeedbackProvaComentada(estado, questao, resposta, area);
+                renderizarNavegacaoProvaComentada(estado);
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                return;
+            }
+        }
+
+        area.innerHTML = `
+            <article class="questao-prova-comentada-taifeiro">
+                <div class="meta-questao-prova-comentada">
+                    <span>${escaparHTMLProvaComentada(questao.disciplina || "Questão")}</span>
+                    <span>${escaparHTMLProvaComentada(questao.assunto || "Assunto")}</span>
+                </div>
+
+                ${blocoTextoBase}
+
+                <div class="enunciado-prova-comentada-taifeiro">
+                    <strong>Questão ${Number(questao.numero || (estado.indice + 1))}</strong>
+                    <p>${escaparHTMLProvaComentada(questao.enunciado)}</p>
+                </div>
+
+                ${blocoImagemQuestao}
+
+                <div class="alternativas-prova-comentada-taifeiro">
+                    ${questao.alternativas.map((alternativa, indice) => {
+                        const selecionada = resposta.selecionada === indice;
+                        const correta = resposta.confirmada && questao.correta === indice;
+                        const errada = resposta.confirmada && selecionada && questao.correta !== indice;
+                        const classes = [
+                            "alternativa-prova-comentada-taifeiro",
+                            selecionada ? "selecionada" : "",
+                            correta ? "correta" : "",
+                            errada ? "errada" : ""
+                        ].filter(Boolean).join(" ");
+
+                        return `
+                            <button
+                                type="button"
+                                class="${classes}"
+                                onclick="selecionarAlternativaProvaComentadaTaifeiroFarol(${indice})"
+                                ${resposta.confirmada ? "disabled" : ""}>
+                                <span class="letra-alternativa-prova-comentada">${letrasProvaComentada(indice)}</span>
+                                <span>${escaparHTMLProvaComentada(alternativa)}</span>
+                            </button>
+                        `;
+                    }).join("")}
+                </div>
+
+                ${!resposta.confirmada ? `
+                    <div class="acoes-questao-prova-comentada">
+                        <button
+                            type="button"
+                            class="btn-confirmar-prova-comentada"
+                            onclick="confirmarRespostaProvaComentadaTaifeiroFarol()"
+                            ${resposta.selecionada == null ? "disabled" : ""}>
+                            Confirmar resposta
+                        </button>
+                    </div>
+                ` : `
+                    <div class="aviso-questao-ja-respondida-prova-comentada">
+                        <span>🔒 Resposta já confirmada.</span>
+                        <button type="button" onclick="abrirCorrecaoProvaComentadaTaifeiroFarol()">Ver correção</button>
+                    </div>
+                `}
+            </article>
+        `;
+
+        renderizarNavegacaoProvaComentada(estado);
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+
+    window.iniciarProvaComentadaTaifeiroFarol = function(ano){
+        const anoNumero = Number(ano);
+        if(![2018, 2023].includes(anoNumero)){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Prova comentada não encontrada.");
+            }
+            return;
+        }
+
+        if(!temAcessoProvaComentadaTaifeiro()){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+            }
+            return;
+        }
+
+        anoAtual = anoNumero;
+        const estado = obterEstadoProvaComentada(anoNumero);
+
+        localStorage.setItem("farol_concurso_atual", "transpetro2026");
+        localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+
+        if(typeof mostrarTela === "function"){
+            mostrarTela("provaComentadaTaifeiro");
+        }
+
+        estado.tela = "questao";
+        atualizarCabecalhoProvaComentada(estado);
+        renderizarQuestaoProvaComentada();
+    };
+
+    window.selecionarAlternativaProvaComentadaTaifeiroFarol = function(indice){
+        const estado = obterEstadoProvaComentada(anoAtual);
+        const resposta = estado && estado.respostas[estado.indice];
+        if(!resposta || resposta.confirmada){
+            return;
+        }
+
+        const indiceSelecionado = Number(indice);
+        if(!Number.isInteger(indiceSelecionado) || indiceSelecionado < 0){
+            return;
+        }
+
+        resposta.selecionada = indiceSelecionado;
+
+        // Apenas atualiza a seleção visual. Não renderiza a questão novamente,
+        // evitando que a tela volte ao topo antes de o aluno confirmar.
+        const area = elementoProvaComentada("conteudoProvaComentadaTaifeiro");
+        if(area){
+            const alternativas = area.querySelectorAll(
+                ".alternativa-prova-comentada-taifeiro"
+            );
+
+            alternativas.forEach((botao, indiceBotao) => {
+                botao.classList.toggle(
+                    "selecionada",
+                    indiceBotao === indiceSelecionado
+                );
+                botao.setAttribute(
+                    "aria-pressed",
+                    indiceBotao === indiceSelecionado ? "true" : "false"
+                );
+            });
+
+            const botaoConfirmar = area.querySelector(
+                ".btn-confirmar-prova-comentada"
+            );
+            if(botaoConfirmar){
+                botaoConfirmar.disabled = false;
+            }
+        }
+    };
+
+    window.confirmarRespostaProvaComentadaTaifeiroFarol = function(){
+        const estado = obterEstadoProvaComentada(anoAtual);
+        const resposta = estado && estado.respostas[estado.indice];
+        if(!resposta || resposta.confirmada){
+            return;
+        }
+
+        if(resposta.selecionada == null){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Escolha uma alternativa antes de confirmar.");
+            }
+            return;
+        }
+
+        resposta.confirmada = true;
+        estado.tela = "feedback";
+        renderizarQuestaoProvaComentada();
+    };
+
+    window.irQuestaoAnteriorProvaComentadaTaifeiroFarol = function(){
+        const estado = obterEstadoProvaComentada(anoAtual);
+        if(!estado || estado.indice <= 0){
+            return;
+        }
+        estado.indice -= 1;
+        estado.tela = "questao";
+        renderizarQuestaoProvaComentada();
+    };
+
+    window.irProximaQuestaoProvaComentadaTaifeiroFarol = function(){
+        const estado = obterEstadoProvaComentada(anoAtual);
+        if(!estado){
+            return;
+        }
+
+        const resposta = estado.respostas[estado.indice];
+        if(!resposta || !resposta.confirmada){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Confirme sua resposta antes de avançar.");
+            }
+            return;
+        }
+
+        if(estado.indice < estado.questoes.length - 1){
+            estado.indice += 1;
+            estado.tela = "questao";
+            renderizarQuestaoProvaComentada();
+        }
+    };
+
+    window.voltarQuestaoDaCorrecaoProvaComentadaTaifeiroFarol = function(){
+        const estado = obterEstadoProvaComentada(anoAtual);
+        if(!estado){
+            return;
+        }
+        estado.tela = "questao";
+        renderizarQuestaoProvaComentada();
+    };
+
+    window.abrirCorrecaoProvaComentadaTaifeiroFarol = function(){
+        const estado = obterEstadoProvaComentada(anoAtual);
+        const resposta = estado && estado.respostas[estado.indice];
+        if(!estado || !resposta || !resposta.confirmada){
+            return;
+        }
+        estado.tela = "feedback";
+        renderizarQuestaoProvaComentada();
+    };
+
+    window.verResultadoProvaComentadaTaifeiroFarol = function(){
+        const estado = obterEstadoProvaComentada(anoAtual);
+        const area = elementoProvaComentada("conteudoProvaComentadaTaifeiro");
+        const navegacao = elementoProvaComentada("navegacaoProvaComentadaTaifeiro");
+        const progresso = elementoProvaComentada("progressoProvaComentadaTaifeiro");
+
+        if(!estado || !area){
+            return;
+        }
+
+        const pendentes = estado.respostas.some(item => !item.confirmada);
+        if(pendentes){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Responda todas as questões antes de ver o resultado.");
+            }
+            return;
+        }
+
+        const disciplinas = {};
+        estado.questoes.forEach((questao, indice) => {
+            const nome = questao.disciplina || "Questões";
+            if(!disciplinas[nome]){
+                disciplinas[nome] = { total: 0, acertos: 0 };
+            }
+            disciplinas[nome].total += 1;
+            if(estado.respostas[indice].selecionada === questao.correta){
+                disciplinas[nome].acertos += 1;
+            }
+        });
+
+        const resumo = resumoAcertosProvaComentada(estado);
+        const percentual = estado.questoes.length
+            ? Math.round((resumo.acertos / estado.questoes.length) * 100)
+            : 0;
+
+        area.innerHTML = `
+            <div class="resultado-prova-comentada-taifeiro">
+                <h3>⚓ Resultado — Prova Comentada ${estado.ano}</h3>
+                ${estado.demo ? "<p><strong>🧪 Resultado da demonstração técnica.</strong> Não representa desempenho na prova oficial.</p>" : ""}
+
+                <div class="grade-resultado-prova-comentada">
+                    ${Object.entries(disciplinas).map(([nome, dados]) => `
+                        <div>
+                            <span>${escaparHTMLProvaComentada(nome)}</span>
+                            <strong>${dados.acertos}/${dados.total}</strong>
+                        </div>
+                    `).join("")}
+                    <div>
+                        <span>Total</span>
+                        <strong>${resumo.acertos}/${estado.questoes.length}</strong>
+                    </div>
+                </div>
+
+                <p><strong>Aproveitamento:</strong> ${percentual}%</p>
+
+                <button
+                    type="button"
+                    class="btn-iniciar-prova-comentada-transpetro"
+                    onclick="reiniciarProvaComentadaTaifeiroFarol(${estado.ano})">
+                    🔄 Refazer demonstração
+                </button>
+            </div>
+        `;
+
+        if(progresso){
+            progresso.innerHTML = `<strong>Prova Comentada ${estado.ano}</strong><span>Concluída</span>`;
+        }
+        if(navegacao){
+            navegacao.innerHTML = `
+                <button type="button" onclick="revisarProvaComentadaTaifeiroFarol()">← Revisar respostas</button>
+                <button type="button" class="btn-proxima-prova-comentada" onclick="voltarProvasAnterioresTaifeiroFarol()">Voltar às provas →</button>
+            `;
+        }
+
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    };
+
+    window.revisarProvaComentadaTaifeiroFarol = function(){
+        const estado = obterEstadoProvaComentada(anoAtual);
+        if(!estado){
+            return;
+        }
+        estado.indice = 0;
+        estado.tela = "questao";
+        renderizarQuestaoProvaComentada();
+    };
+
+    window.reiniciarProvaComentadaTaifeiroFarol = function(ano){
+        const anoNumero = Number(ano);
+        estadosPorAno[anoNumero] = criarEstadoProvaComentada(anoNumero);
+        anoAtual = anoNumero;
+        renderizarQuestaoProvaComentada();
+    };
+
+    window.voltarProvasAnterioresTaifeiroFarol = function(){
+        if(typeof mostrarTela === "function"){
+            mostrarTela("provasAnteriores");
+        }
+        setTimeout(() => {
+            if(typeof window.selecionarCargoProvasFarol === "function"){
+                window.selecionarCargoProvasFarol("taifeiro");
+            }else if(typeof selecionarCargoProvasFarol === "function"){
+                selecionarCargoProvasFarol("taifeiro");
+            }
+        }, 0);
+    };
+
+})();
+
+// ==========================================================
+// FAROL — TRANSPETRO / TAIFEIRO — BANCO DE QUESTÕES 2026
+// Arquitetura Naval + Legislação Marítima e Ambiental — Banco por subtópicos do edital
+// ==========================================================
+(() => {
+    "use strict";
+
+    const estadoBancoTAA2026 = {
+        origem: "banco2026",
+        modo: "menu",
+        topico: "",
+        indice: 0,
+        questoes: [],
+        respostas: []
+    };
+
+    function elBancoTAA(id){
+        return document.getElementById(id);
+    }
+
+    function escaparBancoTAA(valor){
+        return String(valor == null ? "" : valor)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/\"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    function letraBancoTAA(indice){
+        return String.fromCharCode(65 + Number(indice || 0));
+    }
+
+    function temAcessoBancoTAA(){
+        if(typeof window.temAcessoCargoFarol === "function"){
+            return window.temAcessoCargoFarol("transpetro2026", "taifeiro");
+        }
+        return false;
+    }
+
+    function bancoCompletoTAA(){
+        return Array.isArray(window.questoesTaifeiroBanco2026)
+            ? window.questoesTaifeiroBanco2026
+            : [];
+    }
+
+    function questoesTopicoTAA(topico){
+        return bancoCompletoTAA().filter(q => q && q.topicoEdital === topico);
+    }
+
+    function tituloTopicoAtualBancoTAA(){
+        return String(estadoBancoTAA2026.topico || "Arquitetura Naval");
+    }
+
+    function codigoTopicoAtualBancoTAA(){
+        const titulo = tituloTopicoAtualBancoTAA();
+        const primeiro = titulo.trim().split(/\s+/)[0] || "";
+        return /^1\.\d+$/.test(primeiro) ? primeiro : "";
+    }
+
+    function eixoTopicoAtualBancoTAA(){
+        const primeiraQuestao = estadoBancoTAA2026.questoes.find(q => q && q.eixo);
+        if(primeiraQuestao && primeiraQuestao.eixo){
+            return String(primeiraQuestao.eixo);
+        }
+        if(tituloTopicoAtualBancoTAA().includes("Autoridade Marítima")){
+            return "Legislação Marítima e Ambiental";
+        }
+        return "Arquitetura Naval";
+    }
+
+    function atualizarCabecalhoBancoTAA(titulo, subtitulo){
+        const elTitulo = elBancoTAA("tituloBancoQuestoesTaifeiro");
+        const elSubtitulo = elBancoTAA("subtituloBancoQuestoesTaifeiro");
+        if(elTitulo) elTitulo.textContent = titulo;
+        if(elSubtitulo) elSubtitulo.textContent = subtitulo;
+    }
+
+    function limparNavegacaoBancoTAA(){
+        const nav = elBancoTAA("navegacaoBancoQuestoesTaifeiro");
+        if(nav) nav.innerHTML = "";
+    }
+
+    function atualizarProgressoBancoTAA(){
+        const progresso = elBancoTAA("progressoBancoQuestoesTaifeiro");
+        if(!progresso) return;
+
+        if(estadoBancoTAA2026.modo === "menu"){
+            const total = bancoCompletoTAA().length;
+            progresso.innerHTML = `
+                <strong>${total} questão${total === 1 ? "" : "ões"} disponível${total === 1 ? "" : "is"}</strong>
+                <span>Banco 2026 • conteúdo liberado por tópicos</span>
+            `;
+            return;
+        }
+
+        const respondidas = estadoBancoTAA2026.respostas.filter(r => r && r.confirmada).length;
+        const acertos = estadoBancoTAA2026.respostas.reduce((soma, r, i) => {
+            if(!r || !r.confirmada) return soma;
+            const q = estadoBancoTAA2026.questoes[i];
+            return soma + (q && r.selecionada === q.correta ? 1 : 0);
+        }, 0);
+
+        progresso.innerHTML = `
+            <strong>Questão ${estadoBancoTAA2026.indice + 1} de ${estadoBancoTAA2026.questoes.length}</strong>
+            <span>${respondidas} respondida${respondidas === 1 ? "" : "s"} • ${acertos} acerto${acertos === 1 ? "" : "s"}</span>
+        `;
+    }
+
+    function cardTopicoBancoTAA(topico, titulo, descricao){
+        const total = questoesTopicoTAA(topico).length;
+        const disponivel = total > 0;
+        return `
+            <article class="card-topico-banco-taifeiro ${disponivel ? "disponivel" : "em-preparacao"}">
+                <div class="topo-card-topico-banco-taifeiro">
+                    <span class="numero-topico-banco-taifeiro">${escaparBancoTAA(topico.split(" ")[0])}</span>
+                    <span class="status-topico-banco-taifeiro">${disponivel ? `✅ ${total} questões` : "🧭 Em preparação"}</span>
+                </div>
+                <h3>${escaparBancoTAA(titulo)}</h3>
+                <p>${escaparBancoTAA(descricao)}</p>
+                ${disponivel ? `
+                    <button type="button" onclick="iniciarTopicoBancoTaifeiroFarol('${escaparBancoTAA(topico)}')">
+                        ▶ Treinar ${total} questões
+                    </button>
+                ` : `
+                    <button type="button" disabled>Em preparação</button>
+                `}
+            </article>
+        `;
+    }
+
+    function renderizarMenuBancoTAA(){
+        estadoBancoTAA2026.modo = "menu";
+        estadoBancoTAA2026.topico = "";
+        limparNavegacaoBancoTAA();
+        atualizarProgressoBancoTAA();
+
+        const area = elBancoTAA("conteudoBancoQuestoesTaifeiro");
+        if(!area) return;
+
+        const titulo = estadoBancoTAA2026.origem === "especificas"
+            ? "Conhecimentos Específicos — Taifeiro 2026"
+            : "Banco de Questões 2026";
+
+        const subtitulo = estadoBancoTAA2026.origem === "especificas"
+            ? "Escolha um tópico do edital para treinar as questões marítimas disponíveis."
+            : "Questões aproveitadas de provas compatíveis e questões novas, organizadas pelo edital de Taifeiro.";
+
+        atualizarCabecalhoBancoTAA(titulo, subtitulo);
+
+        area.innerHTML = `
+            <div class="resumo-banco-taifeiro">
+                <div>
+                    <span>⚓</span>
+                    <strong>Arquitetura Naval</strong>
+                    <small>Eixo concluído</small>
+                </div>
+                <div>
+                    <strong>${questoesTopicoTAA("1.1 Identificação de corpos e partes da embarcação").length + questoesTopicoTAA("1.2 Dimensões lineares").length + questoesTopicoTAA("1.3 Estrutura básica da embarcação").length + questoesTopicoTAA("1.4 Principais compartimentos da embarcação").length + questoesTopicoTAA("1.5 Aberturas e acessórios").length}</strong>
+                    <small>questões liberadas</small>
+                </div>
+            </div>
+
+            <div class="aviso-metodo-banco-taifeiro">
+                <strong>🎯 Como este banco está sendo construído</strong>
+                <span>Exploramos cada tópico até cobrir as principais formas possíveis de cobrança. Aproveitamos questões compatíveis de outros cargos Transpetro quando existirem, sem repetir as provas de Taifeiro 2018/2023, e completamos as lacunas com questões inéditas Farol.</span>
+            </div>
+
+            <div class="grade-topicos-banco-taifeiro">
+                ${cardTopicoBancoTAA(
+                    "1.1 Identificação de corpos e partes da embarcação",
+                    "1.1 Identificação de corpos e partes da embarcação",
+                    "Bombordo, boreste, bochecha, alheta, meia-nau, costado, obras vivas e referências de vante e ré."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "1.2 Dimensões lineares",
+                    "1.2 Dimensões lineares",
+                    "Comprimentos, boca, pontal, calado, borda livre, relações entre dimensões, cálculos e identificação visual."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "1.3 Estrutura básica da embarcação",
+                    "1.3 Estrutura básica da embarcação",
+                    "Quilha, cavernas, vaus, longarinas, sicordas, trincaniz, pés-de-carneiro, chapeamento e anteparas."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "1.4 Principais compartimentos da embarcação",
+                    "1.4 Principais compartimentos da embarcação",
+                    "Passadiço, tijupá, praça de máquinas, porões, tanques, paióis e outros compartimentos."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "1.5 Aberturas e acessórios",
+                    "1.5 Aberturas e acessórios",
+                    "Escotilhas, escotilhões, vigias, portalós, embornais, portas estanques e acessórios."
+                )}
+            </div>
+
+            <div class="resumo-banco-taifeiro">
+                <div>
+                    <span>⚖️</span>
+                    <strong>Legislação Marítima e Ambiental</strong>
+                    <small>1. Aspectos Gerais</small>
+                </div>
+                <div>
+                    <strong>${questoesTopicoTAA("1.1 Autoridade Marítima").length + questoesTopicoTAA("1.2 Águas Jurisdicionais Brasileiras").length}</strong>
+                    <small>questões liberadas</small>
+                </div>
+            </div>
+
+            <div class="grade-topicos-banco-taifeiro">
+                ${cardTopicoBancoTAA(
+                    "1.1 Autoridade Marítima",
+                    "1.1 Autoridade Marítima",
+                    "LESTA, RELESTA, estrutura da Autoridade Marítima, representantes, agentes, competências, inspeção naval, vistorias, segurança e situações práticas."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "1.2 Águas Jurisdicionais Brasileiras",
+                    "1.2 Águas Jurisdicionais Brasileiras",
+                    "Mar territorial, zona contígua, ZEE, plataforma continental e demais limites e regimes jurídicos."
+                )}
+            </div>
+        `;
+
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+
+    function salvarErroBancoTAA(questao){
+        if(!questao || !Array.isArray(questao.alternativas)) return;
+        if(typeof cadernoErros === "undefined" || !Array.isArray(cadernoErros)) return;
+
+        const idErro = `erro-${questao.id}`;
+        const indiceExistente = cadernoErros.findIndex(item =>
+            item && (item.idErro === idErro || item.pergunta === questao.enunciado)
+        );
+
+        const dados = {
+            idErro,
+            assunto: "transpetroTaifeiro",
+            disciplina: "⚓ Taifeiro — Conhecimentos Específicos",
+            pergunta: questao.enunciado,
+            texto: "",
+            imagem: questao.imagem || "",
+            alternativas: questao.alternativas,
+            correta: questao.correta,
+            respostaCorreta: questao.alternativas[questao.correta],
+            explicacao: `${questao.explicacaoCorreta || ""}${questao.revisaoAssunto ? " " + questao.revisaoAssunto : ""}`.trim(),
+            feedbackAcerto: questao.explicacaoCorreta || "",
+            feedbackErro: questao.explicacaoCorreta || "",
+            dicaBanca: questao.dicaMacete || "",
+            data: Date.now(),
+            status: "pendente"
+        };
+
+        if(indiceExistente >= 0){
+            cadernoErros[indiceExistente] = {
+                ...cadernoErros[indiceExistente],
+                ...dados,
+                erros: (cadernoErros[indiceExistente].erros || 0) + 1,
+                dataPrimeiroErro: cadernoErros[indiceExistente].dataPrimeiroErro || cadernoErros[indiceExistente].data || Date.now()
+            };
+        }else{
+            cadernoErros.unshift({
+                ...dados,
+                erros: 1,
+                acertosRevisao: 0,
+                pontosRevisaoGanhos: false,
+                dataPrimeiroErro: Date.now()
+            });
+        }
+
+        if(typeof atualizarCadernoErros === "function") atualizarCadernoErros();
+        if(typeof atualizarDashboard === "function") atualizarDashboard();
+        if(typeof atualizarPainelEstudos === "function") atualizarPainelEstudos();
+        if(typeof salvarDados === "function") salvarDados();
+    }
+
+    function montarImagemBancoTAA(questao){
+        if(!questao.imagem) return "";
+        return `
+            <figure class="figura-questao-banco-taifeiro">
+                <img src="${escaparBancoTAA(questao.imagem)}" alt="${escaparBancoTAA(questao.textoImagem || "Figura da questão")}" loading="lazy">
+            </figure>
+        `;
+    }
+
+    function renderizarNavegacaoQuestaoBancoTAA(){
+        const nav = elBancoTAA("navegacaoBancoQuestoesTaifeiro");
+        if(!nav) return;
+
+        const resposta = estadoBancoTAA2026.respostas[estadoBancoTAA2026.indice];
+        const primeira = estadoBancoTAA2026.indice === 0;
+
+        nav.innerHTML = `
+            <button type="button" onclick="questaoAnteriorBancoTaifeiroFarol()" ${primeira ? "disabled" : ""}>
+                ← Questão anterior
+            </button>
+            ${resposta && resposta.confirmada ? `
+                <button type="button" class="btn-destaque-banco-taifeiro" onclick="abrirCorrecaoBancoTaifeiroFarol()">
+                    Ver correção →
+                </button>
+            ` : ""}
+        `;
+    }
+
+    function renderizarQuestaoBancoTAA(){
+        const area = elBancoTAA("conteudoBancoQuestoesTaifeiro");
+        if(!area) return;
+
+        const questao = estadoBancoTAA2026.questoes[estadoBancoTAA2026.indice];
+        const resposta = estadoBancoTAA2026.respostas[estadoBancoTAA2026.indice];
+        if(!questao || !resposta){
+            renderizarMenuBancoTAA();
+            return;
+        }
+
+        estadoBancoTAA2026.modo = "questao";
+        const codigoTopico = codigoTopicoAtualBancoTAA();
+        atualizarCabecalhoBancoTAA(
+            `${eixoTopicoAtualBancoTAA()}${codigoTopico ? " — " + codigoTopico : ""}`,
+            "Responda a questão. A correção abre em uma tela separada somente após a confirmação."
+        );
+        atualizarProgressoBancoTAA();
+
+        area.innerHTML = `
+            <article class="questao-banco-taifeiro">
+                <div class="meta-questao-banco-taifeiro">
+                    <span>⚓ Conhecimentos Específicos</span>
+                    <span>${escaparBancoTAA(eixoTopicoAtualBancoTAA())}</span>
+                    <span>${escaparBancoTAA(questao.assunto || "")}</span>
+                </div>
+
+                <span class="numero-questao-banco-taifeiro">Questão ${estadoBancoTAA2026.indice + 1}</span>
+
+                ${montarImagemBancoTAA(questao)}
+
+                <h3>${escaparBancoTAA(questao.enunciado)}</h3>
+
+                <div class="alternativas-banco-taifeiro">
+                    ${questao.alternativas.map((alternativa, indice) => {
+                        const selecionada = resposta.selecionada === indice;
+                        const correta = resposta.confirmada && questao.correta === indice;
+                        const errada = resposta.confirmada && selecionada && questao.correta !== indice;
+                        const classes = [
+                            "alternativa-banco-taifeiro",
+                            selecionada ? "selecionada" : "",
+                            correta ? "correta" : "",
+                            errada ? "errada" : ""
+                        ].filter(Boolean).join(" ");
+                        return `
+                            <button type="button" class="${classes}" onclick="selecionarAlternativaBancoTaifeiroFarol(${indice})" ${resposta.confirmada ? "disabled" : ""}>
+                                <span>${letraBancoTAA(indice)}</span>
+                                <b>${escaparBancoTAA(alternativa)}</b>
+                            </button>
+                        `;
+                    }).join("")}
+                </div>
+
+                ${!resposta.confirmada ? `
+                    <div class="acoes-questao-banco-taifeiro">
+                        <button type="button" class="btn-confirmar-banco-taifeiro" onclick="confirmarRespostaBancoTaifeiroFarol()" ${resposta.selecionada == null ? "disabled" : ""}>
+                            Confirmar resposta
+                        </button>
+                    </div>
+                ` : `
+                    <div class="aviso-respondida-banco-taifeiro">
+                        <span>🔒 Resposta já confirmada. Você pode rever o que marcou, mas não alterar.</span>
+                        <button type="button" onclick="abrirCorrecaoBancoTaifeiroFarol()">Ver correção</button>
+                    </div>
+                `}
+            </article>
+        `;
+
+        renderizarNavegacaoQuestaoBancoTAA();
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+
+    function renderizarCorrecaoBancoTAA(){
+        const area = elBancoTAA("conteudoBancoQuestoesTaifeiro");
+        const nav = elBancoTAA("navegacaoBancoQuestoesTaifeiro");
+        if(!area || !nav) return;
+
+        const questao = estadoBancoTAA2026.questoes[estadoBancoTAA2026.indice];
+        const resposta = estadoBancoTAA2026.respostas[estadoBancoTAA2026.indice];
+        if(!questao || !resposta || !resposta.confirmada) return;
+
+        estadoBancoTAA2026.modo = "feedback";
+        const acertou = resposta.selecionada === questao.correta;
+        const analises = Array.isArray(questao.analiseAlternativas) ? questao.analiseAlternativas : [];
+        const analiseEscolhida = analises[resposta.selecionada] || "Esta alternativa não corresponde ao conceito cobrado.";
+        const ultima = estadoBancoTAA2026.indice === estadoBancoTAA2026.questoes.length - 1;
+
+        const codigoTopico = codigoTopicoAtualBancoTAA();
+        atualizarCabecalhoBancoTAA(
+            `Correção — ${eixoTopicoAtualBancoTAA()}${codigoTopico ? " " + codigoTopico : ""}`,
+            "Microaula da questão: entenda a resposta, revise o assunto e memorize o ponto principal."
+        );
+        atualizarProgressoBancoTAA();
+
+        area.innerHTML = `
+            <article class="correcao-banco-taifeiro">
+                <div class="status-correcao-banco-taifeiro ${acertou ? "acertou" : "errou"}">
+                    <span>${acertou ? "✅" : "❌"}</span>
+                    <div>
+                        <strong>${acertou ? "Resposta correta" : "Resposta incorreta"}</strong>
+                        <small>Sua resposta: ${letraBancoTAA(resposta.selecionada)} • Gabarito: ${letraBancoTAA(questao.correta)}</small>
+                    </div>
+                </div>
+
+                <div class="resumo-enunciado-correcao-banco-taifeiro">
+                    <span>Questão ${estadoBancoTAA2026.indice + 1}</span>
+                    <p>${escaparBancoTAA(questao.enunciado)}</p>
+                </div>
+
+                ${!acertou ? `
+                    <section class="bloco-correcao-banco-taifeiro erro-escolhido">
+                        <h4>❌ Por que a alternativa que você marcou está errada?</h4>
+                        <p>${escaparBancoTAA(analiseEscolhida)}</p>
+                    </section>
+                ` : ""}
+
+                <section class="bloco-correcao-banco-taifeiro resposta-correta">
+                    <h4>✅ Por que ${letraBancoTAA(questao.correta)} é a correta?</h4>
+                    <p>${escaparBancoTAA(questao.explicacaoCorreta || "")}</p>
+                </section>
+
+                <section class="bloco-correcao-banco-taifeiro microaula">
+                    <h4>📚 Revisão / Microaula</h4>
+                    <p>${escaparBancoTAA(questao.revisaoAssunto || "")}</p>
+                </section>
+
+                <section class="bloco-correcao-banco-taifeiro memorizar">
+                    <h4>🧠 O que memorizar para 2026</h4>
+                    <p>${escaparBancoTAA(questao.memorizar2026 || "")}</p>
+                </section>
+
+                ${questao.dicaMacete ? `
+                    <section class="bloco-correcao-banco-taifeiro macete">
+                        <h4>🎯 Dica / Macete</h4>
+                        <p>${escaparBancoTAA(questao.dicaMacete)}</p>
+                    </section>
+                ` : ""}
+
+                ${questao.pegadinha ? `
+                    <section class="bloco-correcao-banco-taifeiro pegadinha">
+                        <h4>⚠️ Pegadinha de prova</h4>
+                        <p>${escaparBancoTAA(questao.pegadinha)}</p>
+                    </section>
+                ` : ""}
+
+                <section class="bloco-correcao-banco-taifeiro identificacao">
+                    <h4>⚓ Identificação</h4>
+                    <p><strong>Tópico:</strong> ${escaparBancoTAA(questao.topicoEdital || "")}</p>
+                    <p><strong>Assunto:</strong> ${escaparBancoTAA(questao.assunto || "")}</p>
+                    ${questao.fonte ? `<p><strong>Fonte:</strong> ${escaparBancoTAA(questao.fonte)}</p>` : ""}
+                </section>
+            </article>
+        `;
+
+        nav.innerHTML = `
+            <button type="button" onclick="voltarQuestaoCorrecaoBancoTaifeiroFarol()">← Voltar à questão</button>
+            <button type="button" class="btn-destaque-banco-taifeiro" onclick="${ultima ? "verResultadoBancoTaifeiroFarol()" : "proximaQuestaoBancoTaifeiroFarol()"}">
+                ${ultima ? "Ver resultado →" : "Próxima questão →"}
+            </button>
+        `;
+
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+
+    function renderizarResultadoBancoTAA(){
+        const area = elBancoTAA("conteudoBancoQuestoesTaifeiro");
+        const nav = elBancoTAA("navegacaoBancoQuestoesTaifeiro");
+        const progresso = elBancoTAA("progressoBancoQuestoesTaifeiro");
+        if(!area || !nav) return;
+
+        const total = estadoBancoTAA2026.questoes.length;
+        const acertos = estadoBancoTAA2026.respostas.reduce((soma, r, i) => {
+            const q = estadoBancoTAA2026.questoes[i];
+            return soma + (r && r.confirmada && q && r.selecionada === q.correta ? 1 : 0);
+        }, 0);
+        const percentual = total ? Math.round((acertos / total) * 100) : 0;
+
+        estadoBancoTAA2026.modo = "resultado";
+        const codigoTopico = codigoTopicoAtualBancoTAA();
+        atualizarCabecalhoBancoTAA(`Resultado — ${eixoTopicoAtualBancoTAA()}${codigoTopico ? " " + codigoTopico : ""}`, "O resultado mostra somente este tópico do Banco de Questões 2026.");
+        if(progresso) progresso.innerHTML = `<strong>Tópico concluído</strong><span>${acertos}/${total} acertos • ${percentual}%</span>`;
+
+        area.innerHTML = `
+            <div class="resultado-banco-taifeiro">
+                <span class="icone-resultado-banco-taifeiro">⚓</span>
+                <h3>${escaparBancoTAA(tituloTopicoAtualBancoTAA())}</h3>
+                <div class="placar-resultado-banco-taifeiro">
+                    <div><strong>${acertos}</strong><small>acertos</small></div>
+                    <div><strong>${total - acertos}</strong><small>erros</small></div>
+                    <div><strong>${percentual}%</strong><small>aproveitamento</small></div>
+                </div>
+                <p>As questões erradas foram registradas no <strong>Caderno de Erros</strong> para revisão posterior.</p>
+            </div>
+        `;
+
+        nav.innerHTML = `
+            <button type="button" onclick="revisarBancoTaifeiroFarol()">← Revisar respostas</button>
+            <button type="button" onclick="refazerTopicoBancoTaifeiroFarol()">🔄 Refazer tópico</button>
+            <button type="button" class="btn-destaque-banco-taifeiro" onclick="voltarListaTopicosBancoTaifeiroFarol()">Voltar aos tópicos →</button>
+        `;
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+
+    window.abrirBancoQuestoesTaifeiroFarol = function(origem = "banco2026"){
+        if(!temAcessoBancoTAA()){
+            if(typeof mostrarToast === "function") mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+            return;
+        }
+
+        estadoBancoTAA2026.origem = origem === "especificas" ? "especificas" : "banco2026";
+        localStorage.setItem("farol_concurso_atual", "transpetro2026");
+        localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+
+        if(typeof mostrarTela === "function") mostrarTela("bancoQuestoesTaifeiro");
+        renderizarMenuBancoTAA();
+    };
+
+    window.iniciarTopicoBancoTaifeiroFarol = function(topico){
+        const questoes = questoesTopicoTAA(String(topico || ""));
+        if(!questoes.length){
+            if(typeof mostrarToast === "function") mostrarToast("Este tópico ainda está em preparação.");
+            return;
+        }
+
+        estadoBancoTAA2026.topico = String(topico);
+        estadoBancoTAA2026.indice = 0;
+        estadoBancoTAA2026.questoes = questoes;
+        estadoBancoTAA2026.respostas = questoes.map(() => ({ selecionada: null, confirmada: false }));
+        renderizarQuestaoBancoTAA();
+    };
+
+    window.selecionarAlternativaBancoTaifeiroFarol = function(indice){
+        const resposta = estadoBancoTAA2026.respostas[estadoBancoTAA2026.indice];
+        if(!resposta || resposta.confirmada) return;
+
+        const indiceSelecionado = Number(indice);
+        if(!Number.isInteger(indiceSelecionado) || indiceSelecionado < 0 || indiceSelecionado > 4) return;
+
+        // Apenas marca a alternativa escolhida. Não renderiza novamente a questão
+        // e, portanto, não altera a posição de rolagem da página.
+        resposta.selecionada = indiceSelecionado;
+
+        const area = elBancoTAA("conteudoBancoQuestoesTaifeiro");
+        if(!area) return;
+
+        area.querySelectorAll(".alternativa-banco-taifeiro").forEach((botao, i) => {
+            botao.classList.toggle("selecionada", i === indiceSelecionado);
+        });
+
+        const confirmar = area.querySelector(".btn-confirmar-banco-taifeiro");
+        if(confirmar) confirmar.disabled = false;
+    };
+
+    window.confirmarRespostaBancoTaifeiroFarol = function(){
+        const questao = estadoBancoTAA2026.questoes[estadoBancoTAA2026.indice];
+        const resposta = estadoBancoTAA2026.respostas[estadoBancoTAA2026.indice];
+        if(!questao || !resposta || resposta.confirmada) return;
+
+        if(resposta.selecionada == null){
+            if(typeof mostrarToast === "function") mostrarToast("Escolha uma alternativa antes de confirmar.");
+            return;
+        }
+
+        resposta.confirmada = true;
+        if(resposta.selecionada !== questao.correta){
+            salvarErroBancoTAA(questao);
+        }
+        renderizarCorrecaoBancoTAA();
+    };
+
+    window.abrirCorrecaoBancoTaifeiroFarol = function(){
+        const resposta = estadoBancoTAA2026.respostas[estadoBancoTAA2026.indice];
+        if(!resposta || !resposta.confirmada) return;
+        renderizarCorrecaoBancoTAA();
+    };
+
+    window.voltarQuestaoCorrecaoBancoTaifeiroFarol = function(){
+        renderizarQuestaoBancoTAA();
+    };
+
+    window.questaoAnteriorBancoTaifeiroFarol = function(){
+        if(estadoBancoTAA2026.indice <= 0) return;
+        estadoBancoTAA2026.indice -= 1;
+        renderizarQuestaoBancoTAA();
+    };
+
+    window.proximaQuestaoBancoTaifeiroFarol = function(){
+        const resposta = estadoBancoTAA2026.respostas[estadoBancoTAA2026.indice];
+        if(!resposta || !resposta.confirmada){
+            if(typeof mostrarToast === "function") mostrarToast("Confirme sua resposta antes de avançar.");
+            return;
+        }
+        if(estadoBancoTAA2026.indice < estadoBancoTAA2026.questoes.length - 1){
+            estadoBancoTAA2026.indice += 1;
+            renderizarQuestaoBancoTAA();
+        }
+    };
+
+    window.verResultadoBancoTaifeiroFarol = function(){
+        const pendentes = estadoBancoTAA2026.respostas.some(r => !r.confirmada);
+        if(pendentes){
+            if(typeof mostrarToast === "function") mostrarToast("Responda todas as questões antes de ver o resultado.");
+            return;
+        }
+        renderizarResultadoBancoTAA();
+    };
+
+    window.revisarBancoTaifeiroFarol = function(){
+        estadoBancoTAA2026.indice = 0;
+        renderizarQuestaoBancoTAA();
+    };
+
+    window.refazerTopicoBancoTaifeiroFarol = function(){
+        const topico = estadoBancoTAA2026.topico;
+        window.iniciarTopicoBancoTaifeiroFarol(topico);
+    };
+
+    window.voltarListaTopicosBancoTaifeiroFarol = function(){
+        renderizarMenuBancoTAA();
+    };
+
+    window.voltarBancoQuestoesTaifeiroFarol = function(){
+        if(["questao", "feedback", "resultado"].includes(estadoBancoTAA2026.modo)){
+            renderizarMenuBancoTAA();
+            return;
+        }
+
+        if(typeof mostrarTela === "function") mostrarTela("questoes");
+        setTimeout(() => {
+            if(typeof window.abrirCargoConcursoFarol === "function"){
+                window.abrirCargoConcursoFarol("transpetroTaifeiro");
+            }else if(typeof renderizarTrilhaEstudo === "function"){
+                renderizarTrilhaEstudo("transpetroTaifeiro");
+            }
+        }, 0);
+    };
 })();

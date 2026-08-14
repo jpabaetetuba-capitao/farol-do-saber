@@ -26,7 +26,8 @@
             icone: "📚",
             checkbox: "acessoAbaetetubaComunsSuperior",
             classe: "comuns-superior",
-            tipo: "pacote"
+            tipo: "pacote",
+            concurso: "abaetetuba2026"
         }
     ];
 
@@ -36,27 +37,113 @@
             nome: "Professor de História",
             icone: "📜",
             checkbox: "acessoAbaetetubaHistoria",
-            classe: "historia"
+            classe: "historia",
+            concurso: "abaetetuba2026"
         },
         {
             chave: "professorCiencias",
             nome: "Professor de Ciências",
             icone: "🔬",
             checkbox: "acessoAbaetetubaCiencias",
-            classe: "ciencias"
+            classe: "ciencias",
+            concurso: "abaetetuba2026"
         },
         {
             chave: "professorGeografia",
             nome: "Professor de Geografia",
             icone: "🌍",
             checkbox: "acessoAbaetetubaGeografia",
-            classe: "geografia"
+            classe: "geografia",
+            concurso: "abaetetuba2026"
         }
     ];
 
     const ACESSOS_ABAETETUBA = [
         ...PACOTES_ABAETETUBA,
         ...CARGOS_ABAETETUBA
+    ];
+
+    const CARGOS_TRANSPETRO = [
+        {
+            chave: "auxiliarSaude",
+            nome: "Auxiliar de Saúde — ASA",
+            icone: "🩺",
+            checkbox: "acessoTranspetroAuxiliarSaude",
+            classe: "transpetro",
+            concurso: "transpetro2026"
+        },
+        {
+            chave: "condutorBombeador",
+            nome: "Condutor Bombeador — CDM/BBD",
+            icone: "🛢️",
+            checkbox: "acessoTranspetroCondutorBombeador",
+            classe: "transpetro",
+            concurso: "transpetro2026"
+        },
+        {
+            chave: "condutorMecanico",
+            nome: "Condutor Mecânico — CDM/MEC",
+            icone: "🔧",
+            checkbox: "acessoTranspetroCondutorMecanico",
+            classe: "transpetro",
+            concurso: "transpetro2026"
+        },
+        {
+            chave: "cozinheiro",
+            nome: "Cozinheiro — CZA",
+            icone: "👨‍🍳",
+            checkbox: "acessoTranspetroCozinheiro",
+            classe: "transpetro",
+            concurso: "transpetro2026"
+        },
+        {
+            chave: "eletricista",
+            nome: "Eletricista — ELT",
+            icone: "⚡",
+            checkbox: "acessoTranspetroEletricista",
+            classe: "transpetro",
+            concurso: "transpetro2026"
+        },
+        {
+            chave: "mocoConves",
+            nome: "Moço de Convés — MOC",
+            icone: "⚓",
+            checkbox: "acessoTranspetroMocoConves",
+            classe: "transpetro",
+            concurso: "transpetro2026"
+        },
+        {
+            chave: "mocoMaquinas",
+            nome: "Moço de Máquinas — MOM",
+            icone: "⚙️",
+            checkbox: "acessoTranspetroMocoMaquinas",
+            classe: "transpetro",
+            concurso: "transpetro2026"
+        },
+        {
+            chave: "taifeiro",
+            nome: "Taifeiro — TAA",
+            icone: "⚓",
+            checkbox: "acessoTranspetroTaifeiro",
+            classe: "transpetro",
+            concurso: "transpetro2026"
+        },
+        {
+            chave: "segundoOficialNautica",
+            nome: "Segundo Oficial de Náutica — 2ON",
+            icone: "🧭",
+            checkbox: "acessoTranspetroSegundoOficialNautica",
+            classe: "transpetro",
+            concurso: "transpetro2026"
+        },
+        {
+            chave: "segundoOficialMaquinas",
+            nome: "Segundo Oficial de Máquinas — 2OM",
+            icone: "⚙️",
+            checkbox: "acessoTranspetroSegundoOficialMaquinas",
+            classe: "transpetro",
+            concurso: "transpetro2026"
+        }
     ];
 
     function textoSeguro(valor){
@@ -108,6 +195,16 @@
         return authFarol && authFarol.currentUser
             ? authFarol.currentUser
             : null;
+    }
+
+    // E-mail da conta administrativa atualmente autenticada.
+    // O admin.js já registrava atualizadoPor com emailAtual(),
+    // mas a função não existia, causando ReferenceError antes do Firestore.
+    function emailAtual(){
+        const usuario = usuarioAtual();
+        return usuario && usuario.email
+            ? String(usuario.email).trim().toLowerCase()
+            : "";
     }
 
     function ehAdministrador(){
@@ -181,6 +278,14 @@
         return concursos.abaetetuba2026 || {};
     }
 
+    function obterTranspetro(documento){
+        const concursos = documento && documento.concursos
+            ? documento.concursos
+            : {};
+
+        return concursos.transpetro2026 || {};
+    }
+
     function possuiCargoSuperiorLiberado(documento){
         const abaetetuba = obterAbaetetuba(documento);
         return CARGOS_ABAETETUBA.some(cargo =>
@@ -190,16 +295,26 @@
 
     function obterCargosLiberados(documento){
         const abaetetuba = obterAbaetetuba(documento);
+        const transpetro = obterTranspetro(documento);
         const pacoteComumEfetivo =
             cargoEstaLiberado(abaetetuba.comunsSuperior) ||
             possuiCargoSuperiorLiberado(documento);
 
-        return ACESSOS_ABAETETUBA.filter(item => {
+        const acessosAbaetetuba = ACESSOS_ABAETETUBA.filter(item => {
             if(item.chave === "comunsSuperior"){
                 return pacoteComumEfetivo;
             }
             return cargoEstaLiberado(abaetetuba[item.chave]);
         });
+
+        const acessosTranspetro = CARGOS_TRANSPETRO.filter(item =>
+            cargoEstaLiberado(transpetro[item.chave])
+        );
+
+        return [
+            ...acessosAbaetetuba,
+            ...acessosTranspetro
+        ];
     }
 
     function converterData(valor){
@@ -449,6 +564,17 @@
             });
         });
 
+        const alunosTranspetro = lista.filter(item =>
+            item.cargos.some(cargo => cargo.concurso === "transpetro2026")
+        ).length;
+
+        const cargosTranspetroLiberados = lista.reduce(
+            (total, item) => total + item.cargos.filter(
+                cargo => cargo.concurso === "transpetro2026"
+            ).length,
+            0
+        );
+
         area.innerHTML = `
             <div class="resumo-admin-card total">
                 <span>👥</span>
@@ -469,6 +595,14 @@
             <div class="resumo-admin-card geografia">
                 <span>🌍</span>
                 <div><strong>${contagem.professorGeografia}</strong><small>Geografia</small></div>
+            </div>
+            <div class="resumo-admin-card total">
+                <span>⚓</span>
+                <div><strong>${alunosTranspetro}</strong><small>Alunos Transpetro</small></div>
+            </div>
+            <div class="resumo-admin-card total">
+                <span>🎫</span>
+                <div><strong>${cargosTranspetroLiberados}</strong><small>Cargos Transpetro liberados</small></div>
             </div>
         `;
     }
@@ -530,6 +664,22 @@
                 </span>
             `).join("");
 
+            const possuiAbaetetuba = item.cargos.some(
+                cargo => cargo.concurso === "abaetetuba2026"
+            );
+            const possuiTranspetro = item.cargos.some(
+                cargo => cargo.concurso === "transpetro2026"
+            );
+
+            const botoesRevogacao = [
+                possuiAbaetetuba
+                    ? `<button class="btn-excluir" onclick="revogarAcessosDaListaFarol('${textoSeguro(item.uid)}')">🔒 Retirar Abaetetuba</button>`
+                    : "",
+                possuiTranspetro
+                    ? `<button class="btn-excluir" onclick="revogarAcessosTranspetroDaListaFarol('${textoSeguro(item.uid)}')">🔒 Retirar Transpetro</button>`
+                    : ""
+            ].join("");
+
             return `
                 <article class="card-aluno-liberado-admin">
                     <div class="dados-aluno-liberado-admin">
@@ -547,7 +697,7 @@
 
                     <div class="acoes-aluno-liberado-admin">
                         <button onclick="editarAcessoAlunoFarol('${textoSeguro(item.uid)}')">✏️ Editar acesso</button>
-                        <button class="btn-excluir" onclick="revogarAcessosDaListaFarol('${textoSeguro(item.uid)}')">🔒 Retirar todos</button>
+                        ${botoesRevogacao}
                     </div>
                 </article>
             `;
@@ -720,6 +870,7 @@
             ? dadosAcesso.concursos
             : {};
         const abaetetuba = concursos.abaetetuba2026 || {};
+        const transpetro = concursos.transpetro2026 || {};
 
         usuarioSelecionado = {
             uid: usuario.uid,
@@ -759,6 +910,19 @@
             </label>
         `).join("");
 
+        const itensTranspetro = CARGOS_TRANSPETRO.map(cargo => `
+            <label class="item-cargo-acesso">
+                <input
+                    type="checkbox"
+                    id="${cargo.checkbox}"
+                    ${cargoEstaLiberado(transpetro[cargo.chave]) ? "checked" : ""}>
+                <span>
+                    <strong>${cargo.icone} ${textoSeguro(cargo.nome)}</strong>
+                    <small>Liberação individual para a preparação Transpetro MAR.</small>
+                </span>
+            </label>
+        `).join("");
+
         area.innerHTML = `
             <div class="aluno-acesso-cabecalho">
                 <h3>${textoSeguro(usuarioSelecionado.nome)}</h3>
@@ -784,7 +948,23 @@
 
             <div class="acoes-admin-acesso">
                 <button onclick="salvarAcessosUsuarioFarol()">💾 Salvar acessos</button>
-                <button class="btn-excluir" onclick="limparAcessosUsuarioFarol()">🔒 Retirar todos</button>
+                <button class="btn-excluir" onclick="limparAcessosUsuarioFarol()">🔒 Retirar Abaetetuba</button>
+            </div>
+
+            <h3>⚓ Transpetro MAR 2026 — cargos</h3>
+            <div class="nota-seguranca-acesso">
+                O acesso do Transpetro é independente de Barcarena e Abaetetuba.
+                Marque somente o(s) cargo(s) adquirido(s) pelo aluno. Taifeiro está ativo;
+                os demais cargos podem ser liberados comercialmente, mas permanecem em preparação enquanto não publicados.
+            </div>
+
+            <div class="lista-cargos-acesso">
+                ${itensTranspetro}
+            </div>
+
+            <div class="acoes-admin-acesso">
+                <button onclick="salvarAcessosUsuarioFarol()">💾 Salvar acessos</button>
+                <button class="btn-excluir" onclick="retirarAcessosTranspetroFarol()">🔒 Retirar Transpetro</button>
             </div>
         `;
     }
@@ -887,6 +1067,8 @@
         const momentoAtual = firebase.firestore.FieldValue.serverTimestamp();
         const abaetetubaAnterior = obterAbaetetuba({ concursos: concursosExistentes });
         const abaetetuba = { ...abaetetubaAnterior };
+        const transpetroAnterior = obterTranspetro({ concursos: concursosExistentes });
+        const transpetro = { ...transpetroAnterior };
 
         ACESSOS_ABAETETUBA.forEach(item => {
             const liberado = checkboxMarcado(item.checkbox);
@@ -894,6 +1076,19 @@
             const jaEstavaLiberado = cargoEstaLiberado(anterior);
 
             abaetetuba[item.chave] = {
+                liberado,
+                liberadoEm: liberado && !jaEstavaLiberado
+                    ? momentoAtual
+                    : (anterior && anterior.liberadoEm ? anterior.liberadoEm : null)
+            };
+        });
+
+        CARGOS_TRANSPETRO.forEach(item => {
+            const liberado = checkboxMarcado(item.checkbox);
+            const anterior = transpetroAnterior[item.chave];
+            const jaEstavaLiberado = cargoEstaLiberado(anterior);
+
+            transpetro[item.chave] = {
                 liberado,
                 liberadoEm: liberado && !jaEstavaLiberado
                     ? momentoAtual
@@ -911,7 +1106,8 @@
                     emailNormalizado: String(usuarioSelecionado.email || "").trim().toLowerCase(),
                     concursos: {
                         ...concursosExistentes,
-                        abaetetuba2026: abaetetuba
+                        abaetetuba2026: abaetetuba,
+                        transpetro2026: transpetro
                     },
                     atualizadoPor: emailAtual(),
                     atualizadoEm: momentoAtual
@@ -919,7 +1115,8 @@
 
             usuarioSelecionado.concursos = {
                 ...concursosExistentes,
-                abaetetuba2026: abaetetuba
+                abaetetuba2026: abaetetuba,
+                transpetro2026: transpetro
             };
 
             if(
@@ -939,7 +1136,7 @@
         }
     };
 
-    async function retirarTodosAcessosDoUid(uid, nome, email, concursosExistentes){
+    async function retirarAcessosAbaetetubaDoUid(uid, nome, email, concursosExistentes){
         const concursos = concursosExistentes || {};
         const abaetetubaAnterior = obterAbaetetuba({ concursos });
         const abaetetuba = { ...abaetetubaAnterior };
@@ -977,14 +1174,14 @@
         }
 
         try{
-            await retirarTodosAcessosDoUid(
+            await retirarAcessosAbaetetubaDoUid(
                 usuarioSelecionado.uid,
                 usuarioSelecionado.nome,
                 usuarioSelecionado.email,
                 usuarioSelecionado.concursos
             );
 
-            aviso("Todos os acessos desta conta foram retirados.");
+            aviso("Acessos de Abaetetuba retirados com sucesso.");
             limparResultadoEdicao();
             await window.carregarListaAcessosFarol();
             window.mostrarAbaAcessosFarol("liberados");
@@ -1011,20 +1208,114 @@
         }
 
         try{
-            await retirarTodosAcessosDoUid(
+            await retirarAcessosAbaetetubaDoUid(
                 item.uid,
                 item.nome,
                 item.email,
                 item.concursos
             );
 
-            aviso("Acessos retirados com sucesso.");
+            aviso("Acessos de Abaetetuba retirados com sucesso.");
             await window.carregarListaAcessosFarol();
         }catch(erro){
             console.error("Erro ao retirar acessos pela lista:", erro);
             aviso("Não foi possível retirar os acessos. Verifique as regras do Firestore.");
         }
     };
+
+    async function retirarAcessosTranspetroDoUid(uid, nome, email, concursosExistentes){
+        const concursos = concursosExistentes || {};
+        const transpetroAnterior = obterTranspetro({ concursos });
+        const transpetro = { ...transpetroAnterior };
+
+        CARGOS_TRANSPETRO.forEach(item => {
+            transpetro[item.chave] = {
+                liberado: false,
+                liberadoEm: null
+            };
+        });
+
+        await dbFarol.collection("acessosConcursos")
+            .doc(uid)
+            .set({
+                uid,
+                nome: nome || "Aluno",
+                email: email || "",
+                emailNormalizado: String(email || "").trim().toLowerCase(),
+                concursos: {
+                    ...concursos,
+                    transpetro2026: transpetro
+                },
+                atualizadoPor: emailAtual(),
+                atualizadoEm: firebase.firestore.FieldValue.serverTimestamp()
+            }, { merge: true });
+    }
+
+    window.retirarAcessosTranspetroFarol = async function(){
+        if(!exigirSessaoAdmin("Confirme novamente a senha do administrador para retirar os acessos do Transpetro.")){
+            return;
+        }
+        if(!usuarioSelecionado){
+            aviso("Busque uma conta antes de retirar os acessos.");
+            return;
+        }
+        if(!confirm("Deseja retirar todos os cargos do Transpetro MAR desta conta?")){
+            return;
+        }
+
+        try{
+            await retirarAcessosTranspetroDoUid(
+                usuarioSelecionado.uid,
+                usuarioSelecionado.nome,
+                usuarioSelecionado.email,
+                usuarioSelecionado.concursos
+            );
+
+            aviso("Acessos do Transpetro retirados com sucesso.");
+            limparResultadoEdicao();
+            await window.carregarListaAcessosFarol();
+            window.mostrarAbaAcessosFarol("liberados");
+        }catch(erro){
+            console.error("Erro ao retirar acessos do Transpetro:", erro);
+            aviso("Não foi possível retirar os acessos do Transpetro. Verifique as regras do Firestore.");
+        }
+    };
+
+    window.revogarAcessosTranspetroDaListaFarol = async function(uid){
+        if(!exigirSessaoAdmin("Confirme novamente a senha do administrador para retirar os acessos do Transpetro.")){
+            return;
+        }
+
+        const item = acessosLiberadosCache.find(registro => registro.uid === uid);
+        if(!item){
+            aviso("Aluno não encontrado na lista atual.");
+            return;
+        }
+
+        const nome = item.nome || "este aluno";
+        if(!confirm(`Deseja retirar todos os cargos do Transpetro MAR de ${nome}?`)){
+            return;
+        }
+
+        try{
+            await retirarAcessosTranspetroDoUid(
+                item.uid,
+                item.nome,
+                item.email,
+                item.concursos
+            );
+
+            aviso("Acessos do Transpetro retirados com sucesso.");
+            await window.carregarListaAcessosFarol();
+        }catch(erro){
+            console.error("Erro ao retirar Transpetro pela lista:", erro);
+            aviso("Não foi possível retirar os acessos do Transpetro. Verifique as regras do Firestore.");
+        }
+    };
+
+    // Compatibilidade com botões/atalhos antigos que ainda possam existir em cache.
+    window.retirarAcessoTaifeiroFarol = window.retirarAcessosTranspetroFarol;
+    window.revogarTaifeiroDaListaFarol = window.revogarAcessosTranspetroDaListaFarol;
 
     function atualizarBotoesAdminV75(mostrar){
         [

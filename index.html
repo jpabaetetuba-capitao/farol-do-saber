@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=101-publicacao-novidades-corrigida">
+    <link rel="stylesheet" href="style.css?v=103-transpetro-banco2026-1-1">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -2882,7 +2882,7 @@ Li e revisei o mapa mental.
                 <div>
                     <span class="mini-label-simulados-concurso">🏛️ Simulados por concurso</span>
                     <h3>Escolha qual preparação deseja treinar</h3>
-                    <p>Barcarena e Abaetetuba permanecem separadas, cada uma com a estrutura da sua prova.</p>
+                    <p>Barcarena, Abaetetuba e Transpetro MAR permanecem separados, cada um com a estrutura da sua prova.</p>
                 </div>
                 <span id="statusConcursoSimuladosFarol" class="status-concurso-simulados-farol">Selecione um concurso</span>
             </div>
@@ -2910,6 +2910,18 @@ Li e revisei o mapa mental.
                         <small>IVIN • pacotes comuns e simulados conforme o cargo liberado</small>
                     </span>
                     <span id="estadoAcessoSimuladosAbaetetubaFarol" class="estado-concurso-simulado-farol">Acesso por cargo</span>
+                </button>
+
+                <button
+                    id="btnSimuladosTranspetroFarol"
+                    class="card-concurso-simulado-farol card-concurso-simulado-transpetro"
+                    onclick="selecionarConcursoSimuladosFarol('transpetro2026')">
+                    <span class="icone-concurso-simulado-farol">⚓</span>
+                    <span class="dados-concurso-simulado-farol">
+                        <strong>Transpetro MAR — 2026</strong>
+                        <small>Fundação Cesgranrio • Taifeiro — TAA</small>
+                    </span>
+                    <span class="estado-concurso-simulado-farol">Estrutura em teste</span>
                 </button>
             </div>
         </div>
@@ -3066,6 +3078,44 @@ Li e revisei o mapa mental.
                     <p id="mensagemSemAcessoSimuladosAbaetetubaFarol">Sua conta ainda não possui um cargo de Abaetetuba com simulado publicado.</p>
                     <button onclick="abrirRotasAbaetetubaSimuladosFarol()">🧭 Ver meus cargos de Abaetetuba</button>
                 </div>
+            </div>
+
+        </div>
+
+        <div id="painelSimuladosConcursoTranspetroFarol" class="painel-concurso-simulados-farol painel-simulados-transpetro-farol" style="display:none;">
+
+            <div
+                id="simuladosTranspetroTaifeiroFarol"
+                class="bloco-simulado bloco-simulado-transpetro-farol"
+                style="display:none;">
+
+                <div class="cabecalho-simulado-transpetro-farol">
+                    <div>
+                        <span class="selo-simulado-transpetro-farol">⚓ Transpetro MAR • Cesgranrio • 2026</span>
+                        <h3>Taifeiro — TAA</h3>
+                        <p>Estrutura preparada para os simulados do cargo. Os bancos serão conectados nas próximas etapas aprovadas.</p>
+                    </div>
+                    <span class="status-simulado-transpetro-farol">🧪 Etapa 1</span>
+                </div>
+
+                <div class="grid-opcoes-transpetro-farol">
+                    <button type="button" onclick="mostrarToast('Português será ativado na etapa de bancos de questões.')">
+                        <span>📘</span><strong>Português</strong><small>20 questões no modelo completo</small>
+                    </button>
+                    <button type="button" onclick="mostrarToast('Conhecimentos Específicos serão ativados na etapa de bancos de questões.')">
+                        <span>⚓</span><strong>Conhecimentos Específicos</strong><small>30 questões no modelo completo</small>
+                    </button>
+                    <button type="button" onclick="mostrarToast('Treino rápido será ativado depois da conexão dos bancos.')">
+                        <span>⚡</span><strong>Treino rápido</strong><small>10 ou 20 questões</small>
+                    </button>
+                    <button type="button" onclick="mostrarToast('O simulado completo será ativado na etapa específica de simulados.')">
+                        <span>🎯</span><strong>Simulado completo 2026</strong><small>20 Português + 30 Específicas</small>
+                    </button>
+                </div>
+
+                <button class="btn-voltar-taifeiro-simulados" type="button" onclick="abrirRotasTranspetroSimuladosFarol()">
+                    ⚓ Voltar para a preparação de Taifeiro
+                </button>
             </div>
 
         </div>
@@ -3316,6 +3366,19 @@ Li e revisei o mapa mental.
                 <strong>Profissional de Apoio Escolar</strong>
                 <small>2 provas cadastradas</small>
                 <em>Clique para abrir as provas de Apoio Escolar</em>
+
+            </button>
+
+            <button
+                type="button"
+                id="cardProvasTaifeiro"
+                class="provas-resumo-card ativo botao-cargo-provas provas-resumo-transpetro"
+                onclick="selecionarCargoProvasFarol('taifeiro')">
+
+                <span>⚓</span>
+                <strong>Taifeiro — Transpetro MAR</strong>
+                <small>2 provas históricas previstas</small>
+                <em>2018 e 2023 • Cesgranrio</em>
 
             </button>
         </div>
@@ -3681,7 +3744,130 @@ Li e revisei o mapa mental.
             </div>
         </div>
 
+        <div id="grupoProvasTaifeiro" class="grupo-provas-cargo grupo-provas-oculto grupo-provas-transpetro">
+            <div class="cabecalho-grupo-provas">
+                <div>
+                    <span class="tag-cargo-provas tag-transpetro-provas">⚓ Taifeiro — Transpetro MAR</span>
+                    <h3>Provas anteriores</h3>
+                    <p>Espaço reservado para as provas reais da Cesgranrio e o gabarito comentado interativo.</p>
+                </div>
+                <div class="acoes-cabecalho-provas">
+                    <strong class="contador-provas-cargo">2 provas previstas</strong>
+                    <button
+                        type="button"
+                        class="btn-voltar-cargos-provas"
+                        onclick="voltarCargosProvasFarol()">
+                        ⬅ Cargos
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid-provas-anteriores grid-provas-transpetro-etapa1">
+                <div class="prova-placeholder-transpetro prova-comentada-transpetro-card">
+                    <div class="prova-comentada-transpetro-topo">
+                        <span class="tag-ano-prova">2018</span>
+                        <span class="tag-prova-comentada-interativa">💡 Prova comentada interativa</span>
+                    </div>
+                    <h3>⚓ Transpetro — Taifeiro 2018</h3>
+                    <p>Prova Comentada completa: responda cada questão e, depois da confirmação, estude a correção e a revisão atualizada.</p>
+                    <small>40 questões oficiais • Português + Conhecimentos Específicos • comentários Farol com atualização para 2026 quando necessária.</small>
+                    <button
+                        type="button"
+                        class="btn-iniciar-prova-comentada-transpetro"
+                        onclick="iniciarProvaComentadaTaifeiroFarol(2018)">
+                        ▶ Iniciar Prova Comentada 2018
+                    </button>
+                </div>
+
+                <div class="prova-placeholder-transpetro prova-comentada-transpetro-card">
+                    <div class="prova-comentada-transpetro-topo">
+                        <span class="tag-ano-prova">2023</span>
+                        <span class="tag-prova-comentada-interativa">💡 Prova comentada interativa</span>
+                    </div>
+                    <h3>⚓ Transpetro — Taifeiro 2023</h3>
+                    <p>Uma única experiência: você responde cada questão e só depois vê o gabarito oficial e o comentário.</p>
+                    <small>Versão final: 40 questões. Nesta etapa, o motor abre em modo de demonstração técnica até o banco oficial ser conectado.</small>
+                    <button
+                        type="button"
+                        class="btn-iniciar-prova-comentada-transpetro"
+                        onclick="iniciarProvaComentadaTaifeiroFarol(2023)">
+                        ▶ Iniciar Prova Comentada 2023
+                    </button>
+                </div>
+            </div>
         </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROVA COMENTADA INTERATIVA — TAIFEIRO / TRANSPETRO -->
+<section id="provaComentadaTaifeiro" class="tela">
+
+    <div class="card prova-comentada-taifeiro-shell">
+
+        <div class="cabecalho-prova-comentada-taifeiro">
+            <button
+                type="button"
+                class="btn-voltar-prova-comentada-taifeiro"
+                onclick="voltarProvasAnterioresTaifeiroFarol()"
+                aria-label="Voltar para Provas Anteriores">
+                ←
+            </button>
+
+            <div>
+                <span class="selo-prova-comentada-taifeiro">⚓ Transpetro MAR • Taifeiro — TAA</span>
+                <h2 id="tituloProvaComentadaTaifeiro">Prova Comentada Interativa</h2>
+                <p id="subtituloProvaComentadaTaifeiro">
+                    Responda primeiro. O gabarito e o comentário aparecem somente após a confirmação.
+                </p>
+            </div>
+        </div>
+
+        <div id="avisoDemoProvaComentadaTaifeiro" class="aviso-demo-prova-comentada-taifeiro">
+            <strong>🧪 Demonstração técnica da Etapa 3</strong>
+            <span>
+                As questões abaixo servem apenas para testar o motor. Elas não substituem nem pertencem às provas oficiais de 2018 ou 2023.
+                Os cadernos completos serão conectados na etapa seguinte.
+            </span>
+        </div>
+
+        <div id="progressoProvaComentadaTaifeiro" class="progresso-prova-comentada-taifeiro"></div>
+        <div id="conteudoProvaComentadaTaifeiro" class="conteudo-prova-comentada-taifeiro"></div>
+        <div id="navegacaoProvaComentadaTaifeiro" class="navegacao-prova-comentada-taifeiro"></div>
+
+    </div>
+
+</section>
+
+
+<!-- BANCO DE QUESTÕES 2026 — TAIFEIRO / TRANSPETRO -->
+<section id="bancoQuestoesTaifeiro" class="tela">
+
+    <div class="card banco-taifeiro-shell">
+
+        <div class="cabecalho-banco-taifeiro">
+            <button
+                type="button"
+                class="btn-voltar-banco-taifeiro"
+                onclick="voltarBancoQuestoesTaifeiroFarol()"
+                aria-label="Voltar">
+                ←
+            </button>
+
+            <div>
+                <span class="selo-banco-taifeiro">⚓ Transpetro MAR • Taifeiro — TAA</span>
+                <h2 id="tituloBancoQuestoesTaifeiro">Banco de Questões 2026</h2>
+                <p id="subtituloBancoQuestoesTaifeiro">Treino organizado tópico por tópico conforme o edital.</p>
+            </div>
+        </div>
+
+        <div id="progressoBancoQuestoesTaifeiro" class="progresso-banco-taifeiro"></div>
+        <div id="conteudoBancoQuestoesTaifeiro" class="conteudo-banco-taifeiro"></div>
+        <div id="navegacaoBancoQuestoesTaifeiro" class="navegacao-banco-taifeiro"></div>
 
     </div>
 
@@ -5229,7 +5415,7 @@ Li e revisei o mapa mental.
                     <input
                         type="search"
                         id="filtroListaAcessosFarol"
-                        placeholder="Nome, e-mail, História, Ciências..."
+                        placeholder="Nome, e-mail, cargo, Taifeiro, Cozinheiro..."
                         oninput="filtrarListaAcessosFarol()">
                 </div>
 
@@ -5571,8 +5757,18 @@ Li e revisei o mapa mental.
 <script src="dados/abaetetuba/portugues/discursoDiretoIndiretoAbaetetuba.js?v=46-unificado"></script>
 <script src="dados/abaetetuba/portugues/teorias/discursoDiretoIndiretoAbaetetubaTeoria.js?v=46-unificado"></script>
 
-<script src="app.js?v=106-seguranca-etapa1"></script>
-<script src="admin.js?v=75-seguranca-etapa1"></script>
+<script src="dados/transpetro/taifeiro/taifeiro2018.js?v=2018-comentada-v1"></script>
+<script src="dados/transpetro/taifeiro/taifeiro2023.js?v=2023-comentada-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/arquiteturaNaval_1_1.js?v=taa2026-arq-1-1-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/arquiteturaNaval_1_2.js?v=taa2026-arq-1-2-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/arquiteturaNaval_1_3.js?v=taa2026-arq-1-3-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/arquiteturaNaval_1_4.js?v=taa2026-arq-1-4-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/arquiteturaNaval_1_5.js?v=taa2026-arq-1-5-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_1_1.js?v=taa2026-leg-1-1-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_1_2.js?v=taa2026-leg-1-2-v1"></script>
+
+<script src="app.js?v=117-acessos-multiconcurso"></script>
+<script src="admin.js?v=76-transpetro-todos-cargos"></script>
 
 
 <script src="./pwa.js?v=15-atualizacao-segura"></script>
