@@ -2840,8 +2840,8 @@ Li e revisei o mapa mental.
                 class="btn-voltar-fluxo-simulados-v24"
                 type="button"
                 onclick="voltarFluxoSimuladosV24()"
-                style="display:none;"
-                aria-label="Voltar">
+                style="display:grid;"
+                aria-label="Voltar para o Início">
                 ←
             </button>
 
@@ -3377,8 +3377,8 @@ Li e revisei o mapa mental.
 
                 <span>⚓</span>
                 <strong>Taifeiro — Transpetro MAR</strong>
-                <small>2 provas históricas previstas</small>
-                <em>2018 e 2023 • Cesgranrio</em>
+                <small>2 provas disponíveis</small>
+                <em>2018 e 2023 • caderno original + gabarito</em>
 
             </button>
         </div>
@@ -3748,57 +3748,49 @@ Li e revisei o mapa mental.
             <div class="cabecalho-grupo-provas">
                 <div>
                     <span class="tag-cargo-provas tag-transpetro-provas">⚓ Taifeiro — Transpetro MAR</span>
-                    <h3>Provas Comentadas</h3>
-                    <p>Escolha o ano da prova e, em seguida, selecione Língua Portuguesa ou Conhecimentos Específicos.</p>
+                    <h3>Provas Anteriores</h3>
+                    <p>Veja o caderno original da Cesgranrio como ele foi aplicado e depois consulte o gabarito comentado do Farol.</p>
                 </div>
                 <div class="acoes-cabecalho-provas">
                     <strong class="contador-provas-cargo">2 provas disponíveis</strong>
-                    <button
-                        type="button"
-                        class="btn-voltar-cargos-provas"
-                        onclick="voltarCargosProvasFarol()">
-                        ⬅ Cargos
-                    </button>
+                    <button type="button" class="btn-voltar-cargos-provas" onclick="voltarCargosProvasFarol()">⬅ Cargos</button>
                 </div>
             </div>
 
-            <div id="gridAnosProvasComentadasTaifeiro" class="grid-provas-anteriores grid-provas-transpetro-etapa1">
-                <div class="prova-placeholder-transpetro prova-comentada-transpetro-card">
-                    <div class="prova-comentada-transpetro-topo">
-                        <span class="tag-ano-prova">2018</span>
-                        <span class="tag-prova-comentada-interativa">💡 Prova comentada interativa</span>
+            <div class="grid-provas-anteriores">
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova">
+                            <span class="tag-prova-anterior">Fundação Cesgranrio</span>
+                            <span class="tag-ano-prova">2018</span>
+                        </div>
+                        <h3>⚓ Transpetro — Taifeiro — Prova 8</h3>
+                        <p>40 questões: 10 de Língua Portuguesa e 30 de Conhecimentos Específicos.</p>
+                        <small>Caderno original + gabarito comentado premium do Farol, com observações de atualização para 2026 quando necessárias.</small>
                     </div>
-                    <h3>⚓ Transpetro — Taifeiro 2018</h3>
-                    <p>Prova Comentada completa: escolha Português ou Conhecimentos Específicos e estude uma parte de cada vez.</p>
-                    <small>40 questões oficiais • Português + Conhecimentos Específicos • comentários Farol com atualização para 2026 quando necessária.</small>
-                    <button
-                        type="button"
-                        class="btn-iniciar-prova-comentada-transpetro"
-                        onclick="abrirDisciplinasProvaComentadaTaifeiroFarol(2018)">
-                        ▶ Escolher disciplina
-                    </button>
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/transpetro/taifeiro/taifeiro_2018.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/transpetro/taifeiro/gabarito_comentado_taifeiro_2018.pdf')">✅ Gabarito comentado</button>
+                    </div>
                 </div>
 
-                <div class="prova-placeholder-transpetro prova-comentada-transpetro-card">
-                    <div class="prova-comentada-transpetro-topo">
-                        <span class="tag-ano-prova">2023</span>
-                        <span class="tag-prova-comentada-interativa">💡 Prova comentada interativa</span>
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova">
+                            <span class="tag-prova-anterior">Fundação Cesgranrio</span>
+                            <span class="tag-ano-prova">2023</span>
+                        </div>
+                        <h3>⚓ Transpetro — Taifeiro (TAA) — Prova 10</h3>
+                        <p>40 questões: 10 de Língua Portuguesa e 30 de Conhecimentos Específicos.</p>
+                        <small>Caderno original + gabarito comentado premium do Farol, com revisão dos pontos que precisam de atenção em 2026.</small>
                     </div>
-                    <h3>⚓ Transpetro — Taifeiro 2023</h3>
-                    <p>Prova Comentada completa: escolha Português ou Conhecimentos Específicos e estude uma parte de cada vez.</p>
-                    <small>40 questões oficiais • Português + Conhecimentos Específicos • comentários Farol com atualização para 2026 quando necessária.</small>
-                    <button
-                        type="button"
-                        class="btn-iniciar-prova-comentada-transpetro"
-                        onclick="abrirDisciplinasProvaComentadaTaifeiroFarol(2023)">
-                        ▶ Escolher disciplina
-                    </button>
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/transpetro/taifeiro/taifeiro_2023.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/transpetro/taifeiro/gabarito_comentado_taifeiro_2023.pdf')">✅ Gabarito comentado</button>
+                    </div>
                 </div>
             </div>
-
-            <div id="seletorDisciplinaProvaComentadaTaifeiro" style="display:none;"></div>
         </div>
-
         </div>
 
     </div>
@@ -3806,7 +3798,53 @@ Li e revisei o mapa mental.
 </section>
 
 
-<!-- PROVA COMENTADA INTERATIVA — TAIFEIRO / TRANSPETRO -->
+<!-- QUESTÕES DE PROVAS ANTERIORES — TAIFEIRO / TRANSPETRO -->
+<section id="questoesAnterioresTaifeiro" class="tela">
+    <div class="card simulados-card-principal provas-anteriores-premium">
+        <div class="cabecalho-fluxo-provas-v30">
+            <button
+                class="btn-voltar-fluxo-provas-v30"
+                type="button"
+                onclick="voltarMenuTaifeiroFarol()"
+                style="display:grid;"
+                aria-label="Voltar para Taifeiro">←</button>
+            <div>
+                <span class="etapa-fluxo-provas-v30">Transpetro MAR • Taifeiro — TAA</span>
+                <h2>🧠 Questões de Provas Anteriores</h2>
+                <p>Escolha 2018 ou 2023 e depois selecione Língua Portuguesa ou Conhecimentos Específicos.</p>
+            </div>
+        </div>
+
+        <div id="gridAnosProvasComentadasTaifeiro" class="grid-provas-anteriores grid-provas-transpetro-etapa1">
+            <div class="prova-placeholder-transpetro prova-comentada-transpetro-card">
+                <div class="prova-comentada-transpetro-topo">
+                    <span class="tag-ano-prova">2018</span>
+                    <span class="tag-prova-comentada-interativa">🧠 Questões oficiais</span>
+                </div>
+                <h3>⚓ Taifeiro — 2018</h3>
+                <p>Responda as questões oficiais da prova, separadas por disciplina, e veja a correção depois de confirmar.</p>
+                <small>10 questões de Português • 30 de Conhecimentos Específicos.</small>
+                <button type="button" class="btn-iniciar-prova-comentada-transpetro" onclick="abrirDisciplinasProvaComentadaTaifeiroFarol(2018)">▶ Escolher disciplina</button>
+            </div>
+
+            <div class="prova-placeholder-transpetro prova-comentada-transpetro-card">
+                <div class="prova-comentada-transpetro-topo">
+                    <span class="tag-ano-prova">2023</span>
+                    <span class="tag-prova-comentada-interativa">🧠 Questões oficiais</span>
+                </div>
+                <h3>⚓ Taifeiro — 2023</h3>
+                <p>Responda as questões oficiais da prova, separadas por disciplina, e veja a correção depois de confirmar.</p>
+                <small>10 questões de Português • 30 de Conhecimentos Específicos.</small>
+                <button type="button" class="btn-iniciar-prova-comentada-transpetro" onclick="abrirDisciplinasProvaComentadaTaifeiroFarol(2023)">▶ Escolher disciplina</button>
+            </div>
+        </div>
+
+        <div id="seletorDisciplinaProvaComentadaTaifeiro" style="display:none;"></div>
+    </div>
+</section>
+
+
+<!-- QUESTÕES INTERATIVAS — TAIFEIRO / TRANSPETRO -->
 <section id="provaComentadaTaifeiro" class="tela">
 
     <div class="card prova-comentada-taifeiro-shell">
@@ -3816,13 +3854,13 @@ Li e revisei o mapa mental.
                 type="button"
                 class="btn-voltar-prova-comentada-taifeiro"
                 onclick="voltarProvasAnterioresTaifeiroFarol()"
-                aria-label="Voltar para Provas Anteriores">
+                aria-label="Voltar para Questões de Provas Anteriores">
                 ←
             </button>
 
             <div>
                 <span class="selo-prova-comentada-taifeiro">⚓ Transpetro MAR • Taifeiro — TAA</span>
-                <h2 id="tituloProvaComentadaTaifeiro">Prova Comentada Interativa</h2>
+                <h2 id="tituloProvaComentadaTaifeiro">Questões de Provas Anteriores</h2>
                 <p id="subtituloProvaComentadaTaifeiro">
                     Responda primeiro. O gabarito e o comentário aparecem somente após a confirmação.
                 </p>
@@ -5776,7 +5814,7 @@ Li e revisei o mapa mental.
 <script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_5.js?v=taa2026-leg-2-5-v1"></script>
 <script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_6.js?v=taa2026-leg-2-6-v1"></script>
 
-<script src="app.js?v=128-menu-provas-disciplinas-v87"></script>
+<script src="app.js?v=130-voltar-simulados-v89"></script>
 <script src="admin.js?v=76-transpetro-todos-cargos"></script>
 
 

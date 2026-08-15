@@ -24255,12 +24255,25 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         }
     };
 
+    window.voltarMenuTaifeiroFarol = function(){
+        localStorage.setItem("farol_concurso_atual", "transpetro2026");
+        localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+        if(typeof mostrarTela === "function"){
+            mostrarTela("questoes");
+        }
+        setTimeout(() => {
+            if(typeof renderizarTrilhaEstudo === "function"){
+                renderizarTrilhaEstudo("transpetroTaifeiro");
+            }
+        }, 20);
+    };
+
     window.abrirAreaTaifeiroFarol = function(area){
         const destino = String(area || "");
 
         if(destino === "simulados"){
             localStorage.setItem("farol_concurso_simulados", "transpetro2026");
-            mostrarTela("simulados");
+            mostrarTela("simulados", { origemTaifeiro: true });
             setTimeout(() => {
                 if(typeof window.selecionarConcursoSimuladosFarol === "function"){
                     window.selecionarConcursoSimuladosFarol("transpetro2026");
@@ -24269,14 +24282,23 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             return;
         }
 
+        if(destino === "questoesAnteriores"){
+            localStorage.setItem("farol_concurso_atual", "transpetro2026");
+            localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+            mostrarTela("questoesAnterioresTaifeiro");
+            setTimeout(() => {
+                if(typeof window.voltarAnosProvaComentadaTaifeiroFarol === "function"){
+                    window.voltarAnosProvaComentadaTaifeiroFarol();
+                }
+            }, 20);
+            return;
+        }
+
         if(destino === "provas"){
             mostrarTela("provasAnteriores");
             setTimeout(() => {
                 if(typeof window.selecionarCargoProvasFarol === "function"){
                     window.selecionarCargoProvasFarol("taifeiro");
-                }
-                if(typeof window.voltarAnosProvaComentadaTaifeiroFarol === "function"){
-                    window.voltarAnosProvaComentadaTaifeiroFarol();
                 }
             }, 80);
             return;
@@ -24339,8 +24361,11 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('simulados')">
                     <span>📝</span><strong>Simulados</strong><small>Treinos e prova completa</small><b>›</b>
                 </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('questoesAnteriores')">
+                    <span>🧠</span><strong>Questões de Provas Anteriores</strong><small>2018 e 2023 • responda por disciplina</small><b>›</b>
+                </button>
                 <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('provas')">
-                    <span>📄</span><strong>Provas Comentadas</strong><small>2018 e 2023 • escolha a disciplina</small><b>›</b>
+                    <span>📄</span><strong>Provas Anteriores</strong><small>Caderno original + gabarito comentado</small><b>›</b>
                 </button>
             </div>
         `;
@@ -28300,7 +28325,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             estatisticas: "Estatísticas",
             perfilAluno: "Perfil do Aluno",
             provasAnteriores: "Provas Anteriores",
-            provaComentadaTaifeiro: "Prova Comentada — Taifeiro",
+            provaComentadaTaifeiro: "Questões de Provas Anteriores — Taifeiro",
             chatGlobal: "Chat Geral",
             forum: "Fórum"
         };
@@ -34345,7 +34370,8 @@ function renderizarSalaArenaAoVivoFarol(){
     const estadoSimuladosV24 = {
         etapa: "concurso",
         concurso: "",
-        modo: ""
+        modo: "",
+        origemTaifeiro: false
     };
 
     const titulosSimuladosV24 = {
@@ -34569,7 +34595,20 @@ function renderizarSalaArenaAoVivoFarol(){
         if(titulo) titulo.textContent = dados[0];
         if(descricao) descricao.textContent = dados[1];
         if(indicador) indicador.textContent = dados[2];
-        if(voltar) voltar.style.display = etapa === "concurso" ? "none" : "grid";
+        if(voltar){
+            // V89: o botão de voltar deve estar disponível desde a primeira
+            // etapa dos Simulados. Na entrada geral ele retorna ao Início;
+            // quando veio do Taifeiro, retorna ao menu do cargo.
+            voltar.style.display = "grid";
+            voltar.setAttribute(
+                "aria-label",
+                etapa === "concurso"
+                    ? (estadoSimuladosV24.origemTaifeiro
+                        ? "Voltar para Taifeiro"
+                        : "Voltar para o Início")
+                    : "Voltar"
+            );
+        }
     }
 
     function registrarHistoricoSimuladosV24(etapa, substituir = false){
@@ -34686,6 +34725,21 @@ function renderizarSalaArenaAoVivoFarol(){
     };
 
     window.voltarFluxoSimuladosV24 = function(){
+        if(estadoSimuladosV24.etapa === "concurso"){
+            if(estadoSimuladosV24.origemTaifeiro){
+                estadoSimuladosV24.origemTaifeiro = false;
+                if(typeof window.voltarMenuTaifeiroFarol === "function"){
+                    window.voltarMenuTaifeiroFarol();
+                }else if(typeof mostrarTela === "function"){
+                    mostrarTela("questoes");
+                }
+            }else if(typeof mostrarTela === "function"){
+                // Entrada pelo botão Simulados da página inicial.
+                mostrarTela("inicio");
+            }
+            return;
+        }
+
         const mapa = {
             modoBarcarena: "concurso",
             modoAbaetetuba: "concurso",
@@ -34748,6 +34802,7 @@ function renderizarSalaArenaAoVivoFarol(){
                 mostrarTelaAntesSimuladosV24.apply(this, arguments);
 
             if(id === "simulados"){
+                estadoSimuladosV24.origemTaifeiro = Boolean(opcoes && opcoes.origemTaifeiro);
                 setTimeout(() => {
                     garantirMenusSimuladosV24();
                     prepararBlocosBarcarenaV24();
@@ -40190,7 +40245,7 @@ limparArenaLocalFarol = function(){
             const disciplina = estado.disciplina
                 ? ` — ${rotuloDisciplinaProvaComentada(estado.disciplina)}`
                 : "";
-            titulo.textContent = `Prova Comentada Interativa ${estado.ano}${disciplina}`;
+            titulo.textContent = `Questões de Provas Anteriores ${estado.ano}${disciplina}`;
         }
         if(subtitulo){
             subtitulo.textContent = estado.tela === "feedback"
@@ -40537,7 +40592,7 @@ limparArenaLocalFarol = function(){
                         <span class="tag-prova-comentada-interativa">📘 Língua Portuguesa</span>
                     </div>
                     <h3>📘 Língua Portuguesa</h3>
-                    <p>Resolva apenas a parte de Português da prova comentada de ${anoNumero}.</p>
+                    <p>Resolva apenas as questões de Língua Portuguesa da prova de ${anoNumero}.</p>
                     <small>${portugues.length} questão${portugues.length === 1 ? "" : "ões"} nesta disciplina.</small>
                     <button type="button" class="btn-iniciar-prova-comentada-transpetro" onclick="iniciarProvaComentadaTaifeiroFarol(${anoNumero}, 'portugues')">
                         ▶ Estudar Português
@@ -40550,7 +40605,7 @@ limparArenaLocalFarol = function(){
                         <span class="tag-prova-comentada-interativa">⚓ Conhecimentos Específicos</span>
                     </div>
                     <h3>⚓ Conhecimentos Específicos</h3>
-                    <p>Resolva somente as questões marítimas e profissionais da prova comentada de ${anoNumero}.</p>
+                    <p>Resolva somente as questões de Conhecimentos Específicos da prova de ${anoNumero}.</p>
                     <small>${especificos.length} questão${especificos.length === 1 ? "" : "ões"} nesta disciplina.</small>
                     <button type="button" class="btn-iniciar-prova-comentada-transpetro" onclick="iniciarProvaComentadaTaifeiroFarol(${anoNumero}, 'especificos')">
                         ▶ Estudar Conhecimentos Específicos
@@ -40582,7 +40637,7 @@ limparArenaLocalFarol = function(){
         const chaveDisciplina = String(disciplina || "");
         if(![2018, 2023].includes(anoNumero)){
             if(typeof mostrarToast === "function"){
-                mostrarToast("Prova comentada não encontrada.");
+                mostrarToast("Prova anterior não encontrada.");
             }
             return;
         }
@@ -40803,7 +40858,7 @@ limparArenaLocalFarol = function(){
         if(navegacao){
             navegacao.innerHTML = `
                 <button type="button" onclick="revisarProvaComentadaTaifeiroFarol()">← Revisar respostas</button>
-                <button type="button" class="btn-proxima-prova-comentada" onclick="voltarProvasAnterioresTaifeiroFarol()">Voltar às provas →</button>
+                <button type="button" class="btn-proxima-prova-comentada" onclick="voltarProvasAnterioresTaifeiroFarol()">Voltar às questões anteriores →</button>
             `;
         }
 
@@ -40831,17 +40886,13 @@ limparArenaLocalFarol = function(){
     window.voltarProvasAnterioresTaifeiroFarol = function(){
         const anoRetorno = anoAtual;
         if(typeof mostrarTela === "function"){
-            mostrarTela("provasAnteriores");
+            mostrarTela("questoesAnterioresTaifeiro");
         }
         setTimeout(() => {
-            if(typeof window.selecionarCargoProvasFarol === "function"){
-                window.selecionarCargoProvasFarol("taifeiro");
-            }else if(typeof selecionarCargoProvasFarol === "function"){
-                selecionarCargoProvasFarol("taifeiro");
-            }
-
             if([2018, 2023].includes(Number(anoRetorno)) && typeof window.abrirDisciplinasProvaComentadaTaifeiroFarol === "function"){
                 window.abrirDisciplinasProvaComentadaTaifeiroFarol(Number(anoRetorno));
+            }else if(typeof window.voltarAnosProvaComentadaTaifeiroFarol === "function"){
+                window.voltarAnosProvaComentadaTaifeiroFarol();
             }
         }, 0);
     };
