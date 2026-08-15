@@ -24275,6 +24275,9 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 if(typeof window.selecionarCargoProvasFarol === "function"){
                     window.selecionarCargoProvasFarol("taifeiro");
                 }
+                if(typeof window.voltarAnosProvaComentadaTaifeiroFarol === "function"){
+                    window.voltarAnosProvaComentadaTaifeiroFarol();
+                }
             }, 80);
             return;
         }
@@ -24326,11 +24329,6 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 </div>
             </div>
 
-            <div class="aviso-taifeiro-etapa1 aviso-taifeiro-banco2026">
-                <strong>🎯 Banco de Questões 2026 em construção por edital</strong>
-                <span>Arquitetura Naval: 150 questões aprovadas • Legislação Marítima e Ambiental: 145 questões aprovadas (80 de Aspectos Gerais + 65 de Carreira dos Aquaviários).</span>
-            </div>
-
             <div class="grid-menu-taifeiro-farol">
                 <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('portugues')">
                     <span>📘</span><strong>Língua Portuguesa</strong><small>Treinar questões</small><b>›</b>
@@ -24338,17 +24336,11 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('especificas')">
                     <span>⚓</span><strong>Conhecimentos Específicos</strong><small>Treinar questões marítimas</small><b>›</b>
                 </button>
-                <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('banco2026')">
-                    <span>🎯</span><strong>Banco de Questões 2026</strong><small>Questões organizadas pelo edital</small><b>›</b>
-                </button>
                 <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('simulados')">
                     <span>📝</span><strong>Simulados</strong><small>Treinos e prova completa</small><b>›</b>
                 </button>
                 <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('provas')">
-                    <span>📄</span><strong>Provas Comentadas</strong><small>Taifeiro 2018 e 2023</small><b>›</b>
-                </button>
-                <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('erros')">
-                    <span>❌</span><strong>Caderno de Erros</strong><small>Revise o que errou</small><b>›</b>
+                    <span>📄</span><strong>Provas Comentadas</strong><small>2018 e 2023 • escolha a disciplina</small><b>›</b>
                 </button>
             </div>
         `;
@@ -27054,7 +27046,11 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 { chave: "taa2026_leg_1_1", topicoEdital: "1.1 Autoridade Marítima", nome: "1.1 Autoridade Marítima" },
                 { chave: "taa2026_leg_1_2", topicoEdital: "1.2 Águas Jurisdicionais Brasileiras", nome: "1.2 Águas Jurisdicionais Brasileiras" },
                 { chave: "taa2026_leg_2_1", topicoEdital: "2.1 Fluxo de carreira", nome: "2.1 Fluxo de carreira" },
-                { chave: "taa2026_leg_2_2", topicoEdital: "2.2 Caderneta de Inscrição e Registro – CIR", nome: "2.2 Caderneta de Inscrição e Registro – CIR" }
+                { chave: "taa2026_leg_2_2", topicoEdital: "2.2 Caderneta de Inscrição e Registro – CIR", nome: "2.2 Caderneta de Inscrição e Registro – CIR" },
+                { chave: "taa2026_leg_2_3", topicoEdital: "2.3 Causas de cancelamento e de apreensão da CIR", nome: "2.3 Causas de cancelamento e de apreensão da CIR" },
+                { chave: "taa2026_leg_2_4", topicoEdital: "2.4 Tempo de embarque", nome: "2.4 Tempo de embarque" },
+                { chave: "taa2026_leg_2_5", topicoEdital: "2.5 Rol de equipagem", nome: "2.5 Rol de equipagem" },
+                { chave: "taa2026_leg_2_6", topicoEdital: "2.6 Atribuições do comandante e competência para aplicar penalidades", nome: "2.6 Atribuições do comandante e competência para aplicar penalidades" }
             ]
         }
     ];
@@ -40080,6 +40076,7 @@ limparArenaLocalFarol = function(){
 
     const estadosPorAno = {};
     let anoAtual = null;
+    let disciplinaAtual = null;
 
     function escaparHTMLProvaComentada(valor){
         return String(valor == null ? "" : valor)
@@ -40119,26 +40116,65 @@ limparArenaLocalFarol = function(){
         };
     }
 
-    function criarEstadoProvaComentada(ano){
+    function chaveDisciplinaProvaComentada(valor){
+        const texto = String(valor || "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase();
+
+        if(texto.includes("portugues")){
+            return "portugues";
+        }
+        if(texto.includes("conhecimentos especificos") || texto.includes("especific")){
+            return "especificos";
+        }
+        return "";
+    }
+
+    function rotuloDisciplinaProvaComentada(chave){
+        return chave === "portugues"
+            ? "Língua Portuguesa"
+            : "Conhecimentos Específicos";
+    }
+
+    function filtrarQuestoesProvaComentada(questoes, disciplina){
+        const chave = String(disciplina || "");
+        if(!["portugues", "especificos"].includes(chave)){
+            return Array.isArray(questoes) ? questoes.slice() : [];
+        }
+
+        return (Array.isArray(questoes) ? questoes : []).filter(questao =>
+            chaveDisciplinaProvaComentada(questao && questao.disciplina) === chave
+        );
+    }
+
+    function chaveEstadoProvaComentada(ano, disciplina){
+        return `${Number(ano)}:${String(disciplina || "completa")}`;
+    }
+
+    function criarEstadoProvaComentada(ano, disciplina){
         const banco = obterBancoProvaComentada(ano);
+        const questoes = filtrarQuestoesProvaComentada(banco.questoes, disciplina);
         return {
             ano,
+            disciplina: disciplina || "",
             indice: 0,
             tela: "questao",
-            questoes: banco.questoes,
+            questoes,
             demo: banco.demo,
-            respostas: banco.questoes.map(() => ({
+            respostas: questoes.map(() => ({
                 selecionada: null,
                 confirmada: false
             }))
         };
     }
 
-    function obterEstadoProvaComentada(ano){
-        if(!estadosPorAno[ano]){
-            estadosPorAno[ano] = criarEstadoProvaComentada(ano);
+    function obterEstadoProvaComentada(ano, disciplina = disciplinaAtual){
+        const chave = chaveEstadoProvaComentada(ano, disciplina);
+        if(!estadosPorAno[chave]){
+            estadosPorAno[chave] = criarEstadoProvaComentada(ano, disciplina);
         }
-        return estadosPorAno[ano];
+        return estadosPorAno[chave];
     }
 
     function elementoProvaComentada(id){
@@ -40151,7 +40187,10 @@ limparArenaLocalFarol = function(){
         const aviso = elementoProvaComentada("avisoDemoProvaComentadaTaifeiro");
 
         if(titulo){
-            titulo.textContent = `Prova Comentada Interativa ${estado.ano}`;
+            const disciplina = estado.disciplina
+                ? ` — ${rotuloDisciplinaProvaComentada(estado.disciplina)}`
+                : "";
+            titulo.textContent = `Prova Comentada Interativa ${estado.ano}${disciplina}`;
         }
         if(subtitulo){
             subtitulo.textContent = estado.tela === "feedback"
@@ -40454,8 +40493,93 @@ limparArenaLocalFarol = function(){
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
 
-    window.iniciarProvaComentadaTaifeiroFarol = function(ano){
+    window.abrirDisciplinasProvaComentadaTaifeiroFarol = function(ano){
         const anoNumero = Number(ano);
+        if(![2018, 2023].includes(anoNumero)){
+            return;
+        }
+
+        const gradeAnos = document.getElementById("gridAnosProvasComentadasTaifeiro");
+        const seletor = document.getElementById("seletorDisciplinaProvaComentadaTaifeiro");
+        if(!seletor){
+            return;
+        }
+
+        const banco = obterBancoProvaComentada(anoNumero);
+        const portugues = filtrarQuestoesProvaComentada(banco.questoes, "portugues");
+        const especificos = filtrarQuestoesProvaComentada(banco.questoes, "especificos");
+
+        anoAtual = anoNumero;
+        disciplinaAtual = null;
+
+        if(gradeAnos){
+            gradeAnos.style.display = "none";
+        }
+        seletor.style.display = "block";
+        seletor.innerHTML = `
+            <div class="cabecalho-grupo-provas" style="margin-top:16px;">
+                <div>
+                    <span class="tag-cargo-provas tag-transpetro-provas">📚 Taifeiro ${anoNumero}</span>
+                    <h3>Escolha a disciplina</h3>
+                    <p>Você estudará somente as questões da disciplina escolhida, mantendo o gabarito e os comentários da prova daquele ano.</p>
+                </div>
+                <div class="acoes-cabecalho-provas">
+                    <button type="button" class="btn-voltar-cargos-provas" onclick="voltarAnosProvaComentadaTaifeiroFarol()">
+                        ⬅ Anos
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid-provas-anteriores grid-provas-transpetro-etapa1">
+                <div class="prova-placeholder-transpetro prova-comentada-transpetro-card">
+                    <div class="prova-comentada-transpetro-topo">
+                        <span class="tag-ano-prova">${anoNumero}</span>
+                        <span class="tag-prova-comentada-interativa">📘 Língua Portuguesa</span>
+                    </div>
+                    <h3>📘 Língua Portuguesa</h3>
+                    <p>Resolva apenas a parte de Português da prova comentada de ${anoNumero}.</p>
+                    <small>${portugues.length} questão${portugues.length === 1 ? "" : "ões"} nesta disciplina.</small>
+                    <button type="button" class="btn-iniciar-prova-comentada-transpetro" onclick="iniciarProvaComentadaTaifeiroFarol(${anoNumero}, 'portugues')">
+                        ▶ Estudar Português
+                    </button>
+                </div>
+
+                <div class="prova-placeholder-transpetro prova-comentada-transpetro-card">
+                    <div class="prova-comentada-transpetro-topo">
+                        <span class="tag-ano-prova">${anoNumero}</span>
+                        <span class="tag-prova-comentada-interativa">⚓ Conhecimentos Específicos</span>
+                    </div>
+                    <h3>⚓ Conhecimentos Específicos</h3>
+                    <p>Resolva somente as questões marítimas e profissionais da prova comentada de ${anoNumero}.</p>
+                    <small>${especificos.length} questão${especificos.length === 1 ? "" : "ões"} nesta disciplina.</small>
+                    <button type="button" class="btn-iniciar-prova-comentada-transpetro" onclick="iniciarProvaComentadaTaifeiroFarol(${anoNumero}, 'especificos')">
+                        ▶ Estudar Conhecimentos Específicos
+                    </button>
+                </div>
+            </div>
+        `;
+
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    };
+
+    window.voltarAnosProvaComentadaTaifeiroFarol = function(){
+        const gradeAnos = document.getElementById("gridAnosProvasComentadasTaifeiro");
+        const seletor = document.getElementById("seletorDisciplinaProvaComentadaTaifeiro");
+        if(gradeAnos){
+            gradeAnos.style.display = "grid";
+        }
+        if(seletor){
+            seletor.style.display = "none";
+            seletor.innerHTML = "";
+        }
+        anoAtual = null;
+        disciplinaAtual = null;
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    };
+
+    window.iniciarProvaComentadaTaifeiroFarol = function(ano, disciplina){
+        const anoNumero = Number(ano);
+        const chaveDisciplina = String(disciplina || "");
         if(![2018, 2023].includes(anoNumero)){
             if(typeof mostrarToast === "function"){
                 mostrarToast("Prova comentada não encontrada.");
@@ -40470,8 +40594,21 @@ limparArenaLocalFarol = function(){
             return;
         }
 
+        if(!["portugues", "especificos"].includes(chaveDisciplina)){
+            window.abrirDisciplinasProvaComentadaTaifeiroFarol(anoNumero);
+            return;
+        }
+
         anoAtual = anoNumero;
-        const estado = obterEstadoProvaComentada(anoNumero);
+        disciplinaAtual = chaveDisciplina;
+        const estado = obterEstadoProvaComentada(anoNumero, chaveDisciplina);
+
+        if(!estado.questoes.length){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Não foram encontradas questões dessa disciplina nesta prova.");
+            }
+            return;
+        }
 
         localStorage.setItem("farol_concurso_atual", "transpetro2026");
         localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
@@ -40633,7 +40770,7 @@ limparArenaLocalFarol = function(){
 
         area.innerHTML = `
             <div class="resultado-prova-comentada-taifeiro">
-                <h3>⚓ Resultado — Prova Comentada ${estado.ano}</h3>
+                <h3>⚓ Resultado — ${rotuloDisciplinaProvaComentada(estado.disciplina)} • ${estado.ano}</h3>
                 ${estado.demo ? "<p><strong>🧪 Resultado da demonstração técnica.</strong> Não representa desempenho na prova oficial.</p>" : ""}
 
                 <div class="grade-resultado-prova-comentada">
@@ -40655,13 +40792,13 @@ limparArenaLocalFarol = function(){
                     type="button"
                     class="btn-iniciar-prova-comentada-transpetro"
                     onclick="reiniciarProvaComentadaTaifeiroFarol(${estado.ano})">
-                    🔄 Refazer demonstração
+                    🔄 Refazer esta disciplina
                 </button>
             </div>
         `;
 
         if(progresso){
-            progresso.innerHTML = `<strong>Prova Comentada ${estado.ano}</strong><span>Concluída</span>`;
+            progresso.innerHTML = `<strong>${rotuloDisciplinaProvaComentada(estado.disciplina)} • ${estado.ano}</strong><span>Concluída</span>`;
         }
         if(navegacao){
             navegacao.innerHTML = `
@@ -40685,12 +40822,14 @@ limparArenaLocalFarol = function(){
 
     window.reiniciarProvaComentadaTaifeiroFarol = function(ano){
         const anoNumero = Number(ano);
-        estadosPorAno[anoNumero] = criarEstadoProvaComentada(anoNumero);
+        const chave = chaveEstadoProvaComentada(anoNumero, disciplinaAtual);
+        estadosPorAno[chave] = criarEstadoProvaComentada(anoNumero, disciplinaAtual);
         anoAtual = anoNumero;
         renderizarQuestaoProvaComentada();
     };
 
     window.voltarProvasAnterioresTaifeiroFarol = function(){
+        const anoRetorno = anoAtual;
         if(typeof mostrarTela === "function"){
             mostrarTela("provasAnteriores");
         }
@@ -40699,6 +40838,10 @@ limparArenaLocalFarol = function(){
                 window.selecionarCargoProvasFarol("taifeiro");
             }else if(typeof selecionarCargoProvasFarol === "function"){
                 selecionarCargoProvasFarol("taifeiro");
+            }
+
+            if([2018, 2023].includes(Number(anoRetorno)) && typeof window.abrirDisciplinasProvaComentadaTaifeiroFarol === "function"){
+                window.abrirDisciplinasProvaComentadaTaifeiroFarol(Number(anoRetorno));
             }
         }, 0);
     };
@@ -40771,7 +40914,7 @@ limparArenaLocalFarol = function(){
         if(primeiraQuestao && primeiraQuestao.eixo){
             return String(primeiraQuestao.eixo);
         }
-        if(/Autoridade Marítima|Águas Jurisdicionais Brasileiras|Fluxo de carreira|Caderneta de Inscrição e Registro/i.test(tituloTopicoAtualBancoTAA())){
+        if(/Autoridade Marítima|Águas Jurisdicionais Brasileiras|Fluxo de carreira|Caderneta de Inscrição e Registro|Causas de cancelamento e de apreensão da CIR|Tempo de embarque|Rol de equipagem/i.test(tituloTopicoAtualBancoTAA())){
             return "Legislação Marítima e Ambiental";
         }
         return "Arquitetura Naval";
@@ -40993,7 +41136,11 @@ limparArenaLocalFarol = function(){
             "1.1 Autoridade Marítima",
             "1.2 Águas Jurisdicionais Brasileiras",
             "2.1 Fluxo de carreira",
-            "2.2 Caderneta de Inscrição e Registro – CIR"
+            "2.2 Caderneta de Inscrição e Registro – CIR",
+            "2.3 Causas de cancelamento e de apreensão da CIR",
+            "2.4 Tempo de embarque",
+            "2.5 Rol de equipagem",
+            "2.6 Atribuições do comandante e competência para aplicar penalidades"
         ].reduce((soma, topico) => soma + questoesTopicoTAA(topico).length, 0);
     }
 
@@ -41044,7 +41191,7 @@ limparArenaLocalFarol = function(){
                             <span class="eixo-icone">⚖️</span>
                             <span class="eixo-textos">
                                 <strong>Legislação Marítima e Ambiental</strong>
-                                <small>4 tópicos liberados</small>
+                                <small>8 tópicos liberados</small>
                             </span>
                         </span>
                         <span class="eixo-total">
@@ -41066,7 +41213,7 @@ limparArenaLocalFarol = function(){
             arquiteturaAtiva ? "Arquitetura Naval" : "Legislação Marítima e Ambiental",
             arquiteturaAtiva
                 ? `5 tópicos • ${totalArquitetura} questões disponíveis`
-                : `4 tópicos liberados • ${totalLegislacao} questões disponíveis`
+                : `8 tópicos liberados • ${totalLegislacao} questões disponíveis`
         );
 
         const arquitetura = `
@@ -41139,6 +41286,30 @@ limparArenaLocalFarol = function(){
                     "2.2 Caderneta de Inscrição e Registro – CIR",
                     "2.2 Caderneta de Inscrição e Registro — CIR",
                     "Finalidade da CIR, inscrição inicial, emissão, Etiqueta de Dados Pessoais, registros profissionais, revalidação, segunda via e término de espaço, conforme a NORMAM-101/DPC vigente."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "2.3 Causas de cancelamento e de apreensão da CIR",
+                    "2.3 Causas de cancelamento e de apreensão da CIR",
+                    "Suspensão e cancelamento da inscrição, hipóteses atuais da NORMAM-101/DPC, falsidade documental, apreensão com fundamento legal, sindicância, procedimento administrativo e registro no SISAQUA."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "2.4 Tempo de embarque",
+                    "2.4 Tempo de embarque",
+                    "Cômputo e comprovação do tempo de embarque, Anexo 1-S, conferência com a CIR, análise qualitativa, CTS, embarques em mais de uma empresa, empresa encerrada e navios de bandeira estrangeira."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "2.5 Rol de equipagem",
+                    "2.5 Rol de equipagem",
+                    "Finalidade e modelo DPC-2303, composição da equipagem, embarque e desembarque, responsabilidade do Comandante, guarda, homologação, renovação, extravio e distinção entre Rol de Equipagem, Rol Portuário e CIR."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "2.6 Atribuições do comandante e competência para aplicar penalidades",
+                    "2.6 Atribuições do comandante e competência para aplicar penalidades",
+                    "Deveres legais do Comandante, segurança e disciplina a bordo, poderes previstos na LESTA, penalidades da competência do Comandante, garantias do procedimento disciplinar, registros, comunicações e recurso."
                 )}
             </div>
         `;

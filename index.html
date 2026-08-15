@@ -3748,11 +3748,11 @@ Li e revisei o mapa mental.
             <div class="cabecalho-grupo-provas">
                 <div>
                     <span class="tag-cargo-provas tag-transpetro-provas">⚓ Taifeiro — Transpetro MAR</span>
-                    <h3>Provas anteriores</h3>
-                    <p>Espaço reservado para as provas reais da Cesgranrio e o gabarito comentado interativo.</p>
+                    <h3>Provas Comentadas</h3>
+                    <p>Escolha o ano da prova e, em seguida, selecione Língua Portuguesa ou Conhecimentos Específicos.</p>
                 </div>
                 <div class="acoes-cabecalho-provas">
-                    <strong class="contador-provas-cargo">2 provas previstas</strong>
+                    <strong class="contador-provas-cargo">2 provas disponíveis</strong>
                     <button
                         type="button"
                         class="btn-voltar-cargos-provas"
@@ -3762,20 +3762,20 @@ Li e revisei o mapa mental.
                 </div>
             </div>
 
-            <div class="grid-provas-anteriores grid-provas-transpetro-etapa1">
+            <div id="gridAnosProvasComentadasTaifeiro" class="grid-provas-anteriores grid-provas-transpetro-etapa1">
                 <div class="prova-placeholder-transpetro prova-comentada-transpetro-card">
                     <div class="prova-comentada-transpetro-topo">
                         <span class="tag-ano-prova">2018</span>
                         <span class="tag-prova-comentada-interativa">💡 Prova comentada interativa</span>
                     </div>
                     <h3>⚓ Transpetro — Taifeiro 2018</h3>
-                    <p>Prova Comentada completa: responda cada questão e, depois da confirmação, estude a correção e a revisão atualizada.</p>
+                    <p>Prova Comentada completa: escolha Português ou Conhecimentos Específicos e estude uma parte de cada vez.</p>
                     <small>40 questões oficiais • Português + Conhecimentos Específicos • comentários Farol com atualização para 2026 quando necessária.</small>
                     <button
                         type="button"
                         class="btn-iniciar-prova-comentada-transpetro"
-                        onclick="iniciarProvaComentadaTaifeiroFarol(2018)">
-                        ▶ Iniciar Prova Comentada 2018
+                        onclick="abrirDisciplinasProvaComentadaTaifeiroFarol(2018)">
+                        ▶ Escolher disciplina
                     </button>
                 </div>
 
@@ -3785,16 +3785,18 @@ Li e revisei o mapa mental.
                         <span class="tag-prova-comentada-interativa">💡 Prova comentada interativa</span>
                     </div>
                     <h3>⚓ Transpetro — Taifeiro 2023</h3>
-                    <p>Uma única experiência: você responde cada questão e só depois vê o gabarito oficial e o comentário.</p>
-                    <small>Versão final: 40 questões. Nesta etapa, o motor abre em modo de demonstração técnica até o banco oficial ser conectado.</small>
+                    <p>Prova Comentada completa: escolha Português ou Conhecimentos Específicos e estude uma parte de cada vez.</p>
+                    <small>40 questões oficiais • Português + Conhecimentos Específicos • comentários Farol com atualização para 2026 quando necessária.</small>
                     <button
                         type="button"
                         class="btn-iniciar-prova-comentada-transpetro"
-                        onclick="iniciarProvaComentadaTaifeiroFarol(2023)">
-                        ▶ Iniciar Prova Comentada 2023
+                        onclick="abrirDisciplinasProvaComentadaTaifeiroFarol(2023)">
+                        ▶ Escolher disciplina
                     </button>
                 </div>
             </div>
+
+            <div id="seletorDisciplinaProvaComentadaTaifeiro" style="display:none;"></div>
         </div>
 
         </div>
@@ -5768,8 +5770,13 @@ Li e revisei o mapa mental.
 <script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_1_1.js?v=taa2026-leg-1-1-v1"></script>
 <script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_1_2.js?v=taa2026-leg-1-2-v1"></script>
 <script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_1.js?v=taa2026-leg-2-1-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_2.js?v=taa2026-leg-2-2-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_3.js?v=taa2026-leg-2-3-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_4.js?v=taa2026-leg-2-4-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_5.js?v=taa2026-leg-2-5-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_6.js?v=taa2026-leg-2-6-v1"></script>
 
-<script src="app.js?v=122-disciplinas-subtopicos"></script>
+<script src="app.js?v=128-menu-provas-disciplinas-v87"></script>
 <script src="admin.js?v=76-transpetro-todos-cargos"></script>
 
 
