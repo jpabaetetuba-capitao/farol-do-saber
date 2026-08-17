@@ -1,17 +1,16 @@
 // ==========================================================
 // FAROL DO SABER — TRANSPETRO / TAIFEIRO — BANCO 2026
 // Legislação Marítima e Ambiental — 2.5 Rol de equipagem
-// 30 questões • sem imagens • gabarito A-E equilibrado
+// REVISÃO MÉDIA V110 — 28 questões • sem imagens
 // Base normativa atual: NORMAM-101/DPC, especialmente item 2.7
 // NORMAM-101/DPC vigente: Portaria DPC/DGN/MB nº 205, de 22/07/2026
-// Pesquisa histórica: Taifeiro 2018 Q21 (somente calibração; não reutilizada) +
-// Cozinheiro 2018 Prova 3 Q30 (extravio do Rol), adaptada e atualizada para 2026.
+// Pesquisa histórica: Taifeiro 2018 Q21 (calibração) + Cozinheiro 2018 Prova 3 Q30 (adaptada)
+// Revisão: preservação da cobertura, retirada de 2 redundâncias/overlap e fortalecimento de distratores
 // ==========================================================
 (() => {
     "use strict";
 
-    const loteRolEquipagemTAA2026 =
-[
+    const loteRolEquipagemTAA2026 = [
     {
         "id": "TAA-2026-LMA-2.5-001",
         "disciplina": "Conhecimentos Específicos",
@@ -24,7 +23,7 @@
         "alternativas": [
             "É o documento individual que substitui a CIR do aquaviário durante o período embarcado.",
             "É o certificado que fixa, por si só, a lotação de segurança aprovada para qualquer embarcação da empresa, sem registrar as movimentações da equipagem.",
-            "É o documento utilizado exclusivamente para registrar passageiros transportados em viagens comerciais.",
+            "É a relação destinada ao registro de passageiros transportados em viagens comerciais.",
             "É um cadastro previdenciário destinado a comprovar recolhimentos do marítimo ao RGPS.",
             "É o documento da embarcação que registra a composição da equipagem e as movimentações de embarque e desembarque."
         ],
@@ -36,11 +35,11 @@
         "dicaMacete": "Não confunda documento da embarcação com documento profissional individual.",
         "pegadinha": "CIR e Rol podem registrar aspectos da vida marítima, mas têm naturezas diferentes.",
         "analiseAlternativas": [
-            "Incorreta. O Rol não é documento profissional individual e não substitui a CIR do aquaviário.",
-            "Incorreta. A lotação de segurança decorre do CTS e de regras próprias; o Rol registra a equipagem efetivamente embarcada.",
-            "Incorreta. Relação de passageiros é documento distinto; o Rol trata da equipagem/tripulação.",
-            "Incorreta. O Rol não é cadastro previdenciário nem registra contribuições ao RGPS.",
-            "Correta. O Rol acompanha a embarcação e registra sua equipagem e as movimentações de embarque/desembarque."
+            "Incorreta. A CIR é documento profissional individual do aquaviário.",
+            "Incorreta. O CTS trata da tripulação de segurança e não substitui o registro das movimentações da equipagem.",
+            "Incorreta. Relação de passageiros possui finalidade distinta do Rol de Equipagem.",
+            "Incorreta. O Rol não é cadastro previdenciário nem documento de recolhimento ao RGPS.",
+            "Correta. O Rol acompanha a embarcação/equipagem e registra sua composição e as movimentações de embarque e desembarque."
         ],
         "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
         "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -88,11 +87,11 @@
         "origemInterna": "Inédita Farol 2026 — elaborada com base na NORMAM-101/DPC vigente, serviços oficiais da Marinha em 2026 e padrão de cobrança da Fundação Cesgranrio; sem reprodução de questões de Taifeiro 2018/2023.",
         "enunciado": "Segundo a NORMAM-101/DPC, o Rol de Equipagem é documento hábil e obrigatório para embarcações empregadas",
         "alternativas": [
-            "somente na navegação internacional realizada por navios SOLAS, independentemente da navegação interior.",
+            "na navegação internacional realizada por navios SOLAS, ficando a navegação interior sujeita a documento diverso.",
             "na navegação em mar aberto e interior, observadas as regras aplicáveis.",
-            "apenas na navegação interior que transporte passageiros.",
-            "exclusivamente na navegação de apoio marítimo e portuário.",
-            "somente quando a embarcação possuir mais de dez tripulantes."
+            "na navegação interior quando houver transporte remunerado de passageiros.",
+            "nas navegações de apoio marítimo e apoio portuário, sem aplicação às demais embarcações.",
+            "nas embarcações com mais de dez tripulantes, qualquer que seja a área de navegação."
         ],
         "correta": 1,
         "comentario": "A conceituação do Rol alcança embarcações empregadas na navegação em mar aberto e interior.",
@@ -102,11 +101,11 @@
         "dicaMacete": "Desconfie de restrições inventadas por tonelagem, número de tripulantes ou viagem internacional.",
         "pegadinha": "A banca pode inserir termos marítimos verdadeiros, mas que não limitam a regra geral do Rol.",
         "analiseAlternativas": [
-            "Incorreta. A regra não limita o Rol a viagens internacionais nem a navios SOLAS.",
-            "Correta. A definição alcança embarcações empregadas em mar aberto e na navegação interior.",
-            "Incorreta. Transporte de passageiros não é requisito geral para existência do Rol.",
-            "Incorreta. Apoio marítimo/portuário não esgota o campo de aplicação do documento.",
-            "Incorreta. A obrigatoriedade não nasce de um limite geral de mais de dez tripulantes."
+            "Incorreta. A exigência não se limita a navios SOLAS em navegação internacional.",
+            "Correta. A NORMAM prevê o Rol de Equipagem para embarcações empregadas em navegação em mar aberto e interior, observadas as hipóteses aplicáveis.",
+            "Incorreta. Transporte remunerado de passageiros não é condição geral para a incidência do documento.",
+            "Incorreta. Apoio marítimo e portuário não esgotam o campo de aplicação do Rol.",
+            "Incorreta. A obrigação não nasce de um limite genérico de dez tripulantes."
         ],
         "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
         "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -124,8 +123,8 @@
             "incorreta, pois o Rol de Equipagem se vincula a uma embarcação específica.",
             "correta, desde que as três embarcações tenham o mesmo armador.",
             "correta, se todos os tripulantes tiverem a mesma categoria profissional.",
-            "correta apenas quando as embarcações operarem na mesma área de navegação e pertencerem ao mesmo armador.",
-            "incorreta apenas porque o Rol deve ser substituído por CIR coletiva."
+            "correta quando as embarcações operarem na mesma área de navegação e pertencerem ao mesmo armador.",
+            "incorreta porque o Rol deve ser substituído por uma CIR coletiva para a frota."
         ],
         "correta": 0,
         "comentario": "O Rol de Equipagem é individualizado por embarcação; não funciona como lista genérica de toda a frota.",
@@ -187,10 +186,10 @@
         "origemInterna": "Inédita Farol 2026 — elaborada com base na NORMAM-101/DPC vigente, serviços oficiais da Marinha em 2026 e padrão de cobrança da Fundação Cesgranrio; sem reprodução de questões de Taifeiro 2018/2023.",
         "enunciado": "No Rol de Equipagem, os dados dos tripulantes que compõem a equipagem",
         "alternativas": [
-            "podem ser omitidos se a empresa mantiver cadastro eletrônico próprio.",
-            "são substituídos apenas pelo número total de pessoas a bordo.",
-            "somente são lançados após seis meses de permanência na embarcação.",
-            "são dispensados quando todos pertencem à mesma seção profissional.",
+            "podem ser dispensados quando a empresa mantiver cadastro eletrônico próprio e atualizado.",
+            "são substituídos pelo número total de pessoas a bordo e pelas categorias previstas no CTS.",
+            "são lançados depois de seis meses de permanência contínua na embarcação.",
+            "ficam restritos ao Comandante e aos oficiais, pois as demais categorias constam da CIR.",
             "integram o conteúdo essencial do documento e não são opcionais."
         ],
         "correta": 4,
@@ -201,11 +200,11 @@
         "dicaMacete": "Alternativas com “cadastro interno da empresa substitui o Rol” são armadilhas.",
         "pegadinha": "A prova de Taifeiro 2018 já explorou exatamente a ideia de que os dados da tripulação não são opcionais; aqui o conceito foi refeito sem reproduzir a questão histórica.",
         "analiseAlternativas": [
-            "Incorreta. Cadastro eletrônico interno não autoriza omitir os tripulantes do documento oficial.",
-            "Incorreta. O Rol identifica os integrantes, não apenas a quantidade total de pessoas.",
-            "Incorreta. Não existe carência geral de seis meses para lançar o tripulante.",
-            "Incorreta. Pertencer à mesma seção profissional não dispensa a identificação individual.",
-            "Correta. Os dados dos tripulantes são essenciais à demonstração da composição da equipagem."
+            "Incorreta. Cadastro eletrônico empresarial não elimina os dados exigidos no Rol.",
+            "Incorreta. A equipagem não é registrada por mero total de pessoas ou categorias do CTS.",
+            "Incorreta. Os dados não dependem de seis meses de permanência para serem lançados.",
+            "Incorreta. O Rol alcança a equipagem, não apenas Comandante e oficiais.",
+            "Correta. A identificação dos tripulantes integra o conteúdo essencial do Rol."
         ],
         "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
         "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -220,10 +219,10 @@
         "origemInterna": "Inédita Farol 2026 — elaborada com base na NORMAM-101/DPC vigente, serviços oficiais da Marinha em 2026 e padrão de cobrança da Fundação Cesgranrio; sem reprodução de questões de Taifeiro 2018/2023.",
         "enunciado": "Quando um tripulante passa a integrar a equipagem e posteriormente deixa a embarcação, o Rol de Equipagem deve refletir",
         "alternativas": [
-            "somente a data do primeiro embarque do contrato de trabalho.",
-            "apenas o desembarque, porque o embarque é registrado exclusivamente na CIR.",
-            "apenas a função exercida, sem datas de movimentação.",
-            "somente a escala prevista em contrato, ainda que diferente do serviço efetivamente realizado.",
+            "a data do primeiro embarque do contrato, mantendo as saídas no controle interno da empresa.",
+            "o desembarque no Rol, ficando o embarque registrado na CIR.",
+            "a função exercida e a categoria profissional, sem necessidade das datas de movimentação.",
+            "a escala prevista no contrato, ainda que não corresponda à movimentação efetivamente ocorrida.",
             "os respectivos registros de embarque e desembarque, conforme o procedimento aplicável."
         ],
         "correta": 4,
@@ -234,11 +233,11 @@
         "dicaMacete": "Escala contratual não é sinônimo de embarque efetivamente realizado.",
         "pegadinha": "A CIR também tem registros de embarque, mas isso não elimina os lançamentos no Rol.",
         "analiseAlternativas": [
-            "Incorreta. O Rol não se limita ao primeiro embarque do contrato de trabalho.",
-            "Incorreta. Embarque e desembarque também são movimentações próprias do Rol; não ficam exclusivos da CIR.",
-            "Incorreta. A função é relevante, mas as datas de movimentação também integram o controle.",
-            "Incorreta. Escala prevista não substitui o registro do serviço efetivamente realizado.",
-            "Correta. O Rol deve refletir os registros de embarque e desembarque da equipagem."
+            "Incorreta. O Rol deve refletir as movimentações efetivas da equipagem, não só o primeiro embarque contratual.",
+            "Incorreta. Embarque e desembarque são movimentações registradas no Rol conforme o procedimento aplicável.",
+            "Incorreta. A identificação da função não substitui as datas das movimentações.",
+            "Incorreta. Escala contratual prevista não substitui o registro da movimentação ocorrida.",
+            "Correta. O documento deve refletir embarque e desembarque dos integrantes da equipagem."
         ],
         "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
         "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -286,11 +285,11 @@
         "origemInterna": "Inédita Farol 2026 — elaborada com base na NORMAM-101/DPC vigente, serviços oficiais da Marinha em 2026 e padrão de cobrança da Fundação Cesgranrio; sem reprodução de questões de Taifeiro 2018/2023.",
         "enunciado": "Durante a fiscalização de uma embarcação, a equipe verifica que nenhuma via do Rol de Equipagem se encontra a bordo. À luz da finalidade e guarda do documento, a situação está",
         "alternativas": [
-            "regular, desde que a empresa envie fotografia do Rol por aplicativo de mensagens.",
-            "regular, porque o documento deve permanecer exclusivamente na sede da empresa.",
+            "regular, se uma cópia digital puder ser apresentada imediatamente à equipe de fiscalização.",
+            "regular, porque a via operacional fica na sede da empresa e a bordo permanecem as CIR.",
             "regular se todos os tripulantes apresentarem suas CIR individualmente.",
             "irregular, pois a via destinada à embarcação deve permanecer a bordo.",
-            "irregular apenas se a embarcação estiver em viagem internacional."
+            "irregular nas viagens internacionais, mas admissível na navegação interior."
         ],
         "correta": 3,
         "comentario": "A manutenção da via correspondente do Rol a bordo permite fiscalização da composição efetiva da equipagem.",
@@ -300,11 +299,11 @@
         "dicaMacete": "A CIR individual não substitui o Rol da embarcação.",
         "pegadinha": "Taifeiro 2018 cobrou historicamente a permanência da primeira via a bordo; o Banco 2026 não reproduz essa questão, apenas treina o conceito vigente.",
         "analiseAlternativas": [
-            "Incorreta. Fotografia enviada pela empresa não substitui a obrigação de manter a via regular do Rol a bordo.",
-            "Incorreta. Uma via do Rol acompanha a embarcação; ele não fica exclusivamente em terra.",
-            "Incorreta. CIR individuais não substituem o Rol de Equipagem da embarcação.",
-            "Correta. A ausência da via destinada à embarcação configura situação irregular.",
-            "Incorreta. A guarda a bordo não depende de a viagem ser internacional."
+            "Incorreta. Cópia digital improvisada não substitui a via que deve permanecer a bordo.",
+            "Incorreta. A sistemática do Rol prevê via mantida na embarcação, não apenas na empresa.",
+            "Incorreta. A CIR individual não substitui o porte do Rol quando este é exigido.",
+            "Correta. A ausência da via destinada à embarcação configura irregularidade documental.",
+            "Incorreta. O dever de porte não se reduz às viagens internacionais."
         ],
         "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
         "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -354,9 +353,9 @@
         "alternativas": [
             "qualquer passageiro da embarcação que possua documento de identidade e autorização verbal do Comandante.",
             "Comandante, proprietário, empresa, armador ou preposto, conforme o caso.",
-            "exclusivamente o sindicato da categoria dos aquaviários.",
-            "somente o Comandante, vedada atuação do proprietário ou do armador.",
-            "apenas a autoridade portuária do município onde a embarcação opera."
+            "o sindicato da categoria dos aquaviários, em nome da equipagem.",
+            "o Comandante ou o Imediato, ficando proprietário e armador fora do procedimento.",
+            "a autoridade portuária do município em que a embarcação estiver operando."
         ],
         "correta": 1,
         "comentario": "O procedimento admite requerimento por agentes diretamente vinculados à embarcação/empresa, incluindo preposto.",
@@ -366,11 +365,11 @@
         "dicaMacete": "Evite a armadilha “somente o Comandante”.",
         "pegadinha": "Responsabilidade de preencher e legitimidade para requerer são conceitos relacionados, mas não idênticos.",
         "analiseAlternativas": [
-            "Incorreta. Passageiro sem vínculo de representação não é legitimado apenas por possuir identidade.",
-            "Correta. O procedimento admite Comandante, proprietário, empresa, armador ou preposto, conforme o caso.",
-            "Incorreta. Sindicato não é o requerente exclusivo desse serviço.",
-            "Incorreta. O requerimento não é reservado unicamente ao Comandante.",
-            "Incorreta. Autoridade portuária municipal não substitui os legitimados previstos pela Autoridade Marítima."
+            "Incorreta. Passageiro ou representante de tripulante não figura, por essa condição, entre os legitimados do procedimento.",
+            "Correta. O procedimento admite requerimento por Comandante, proprietário, empresa, armador ou preposto, conforme o caso.",
+            "Incorreta. O sindicato não substitui os legitimados definidos para o serviço.",
+            "Incorreta. A atuação não fica restrita ao Comandante ou Imediato.",
+            "Incorreta. Autoridade portuária municipal não substitui o procedimento perante a Autoridade Marítima."
         ],
         "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
         "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -385,8 +384,8 @@
         "origemInterna": "Inédita Farol 2026 — elaborada com base na NORMAM-101/DPC vigente, serviços oficiais da Marinha em 2026 e padrão de cobrança da Fundação Cesgranrio; sem reprodução de questões de Taifeiro 2018/2023.",
         "enunciado": "Os campos do Rol de Equipagem devem ser preenchidos de modo que favoreça legibilidade e controle documental. Assim, a orientação compatível é",
         "alternativas": [
-            "usar abreviações livres sempre que houver pouco espaço, ainda que gerem ambiguidade, desde que sejam compreendidas pelo Comandante.",
-            "lançar apenas o primeiro nome dos tripulantes, pois a CIR completa a identificação.",
+            "usar abreviações definidas pelo próprio Comandante quando houver pouco espaço, ainda que gerem ambiguidade.",
+            "lançar o primeiro nome e o número da CIR, deixando a identificação completa para consulta em outro documento.",
             "preenchê-los de forma clara e legível, observando o padrão previsto para o documento.",
             "manter campos de datas em branco até o encerramento anual do Rol.",
             "utilizar lápis para facilitar alterações posteriores sem ressalvas."
@@ -399,11 +398,11 @@
         "dicaMacete": "Documentos oficiais não combinam com preenchimento “provisório” apagável.",
         "pegadinha": "A existência da CIR não autoriza reduzir ou omitir dados exigidos no Rol.",
         "analiseAlternativas": [
-            "Incorreta. Abreviações ambíguas prejudicam a identificação e a rastreabilidade do registro.",
-            "Incorreta. A CIR não autoriza reduzir a identificação do tripulante a um primeiro nome.",
-            "Correta. O preenchimento deve ser claro, legível e compatível com o padrão do documento.",
-            "Incorreta. Datas de movimentação não devem ser deixadas para lançamento anual genérico.",
-            "Incorreta. Preenchimento apagável sem ressalvas é incompatível com a integridade documental."
+            "Incorreta. Abreviações ambíguas prejudicam a identificação e o controle documental.",
+            "Incorreta. O preenchimento não deve depender de consulta a outro documento para completar identificação essencial.",
+            "Correta. Clareza, legibilidade e observância do padrão documental são requisitos coerentes com o controle do Rol.",
+            "Incorreta. Datas não devem ser deixadas em branco para preenchimento genérico posterior.",
+            "Incorreta. Lápis compromete a confiabilidade e a permanência do registro."
         ],
         "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
         "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -418,11 +417,11 @@
         "origemInterna": "Inédita Farol 2026 — elaborada com base na NORMAM-101/DPC vigente, serviços oficiais da Marinha em 2026 e padrão de cobrança da Fundação Cesgranrio; sem reprodução de questões de Taifeiro 2018/2023.",
         "enunciado": "Nos registros de movimentação da equipagem, a atuação do Comandante no Rol deve assegurar",
         "alternativas": [
-            "que toda movimentação seja validada exclusivamente por tabelião em terra.",
+            "submeter cada movimentação a reconhecimento de firma em terra antes de considerá-la válida.",
             "que o tripulante possa alterar sozinho a data de desembarque após deixar o navio.",
-            "que apenas a empresa faça os lançamentos, ficando o Comandante impedido de rubricá-los durante todo o período da viagem.",
+            "concentrar os lançamentos na empresa, cabendo ao Comandante conferi-los no encerramento do Rol.",
             "a autenticação dos lançamentos de embarque e desembarque conforme o padrão do documento.",
-            "que as movimentações sejam registradas somente ao término do ano civil."
+            "registrar as movimentações em consolidação anual, sem lançamentos durante a viagem."
         ],
         "correta": 3,
         "comentario": "O controle das movimentações exige lançamentos formalizados pelo responsável de bordo, e não alterações unilaterais pelo tripulante.",
@@ -432,11 +431,11 @@
         "dicaMacete": "Pense em rastreabilidade: quem registra, quando e com que responsabilidade.",
         "pegadinha": "O tripulante não edita unilateralmente documento oficial da embarcação.",
         "analiseAlternativas": [
-            "Incorreta. Tabelião não valida rotineiramente cada movimentação da equipagem.",
-            "Incorreta. O tripulante não pode alterar unilateralmente um registro oficial após o desembarque.",
-            "Incorreta. A empresa participa do controle, mas o Comandante não é impedido de formalizar os lançamentos de bordo.",
-            "Correta. Os registros de embarque/desembarque precisam ser autenticados conforme o padrão do Rol.",
-            "Incorreta. A movimentação deve acompanhar os fatos, não ser acumulada apenas no fim do ano."
+            "Incorreta. O procedimento não exige reconhecimento de firma em cartório para cada movimentação.",
+            "Incorreta. O tripulante não altera unilateralmente os registros depois do desembarque.",
+            "Incorreta. O Comandante possui responsabilidade sobre o correto preenchimento e autenticação dos lançamentos.",
+            "Correta. Os registros de embarque e desembarque devem ser autenticados conforme o padrão do documento.",
+            "Incorreta. As movimentações devem ser registradas quando ocorrem, não concentradas em fechamento anual."
         ],
         "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
         "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -452,9 +451,9 @@
         "enunciado": "A ausência injustificada do Rol de Equipagem que deveria estar mantido a bordo pode",
         "alternativas": [
             "ser suprida definitivamente por uma lista informal assinada pela tripulação.",
-            "ser irrelevante sempre que as CIR estiverem válidas.",
+            "ser sanada pela apresentação das CIR válidas de todos os tripulantes.",
             "caracterizar irregularidade/infração sujeita às medidas cabíveis pela Autoridade Marítima.",
-            "ser tratada apenas como problema interno da empresa, sem repercussão na fiscalização, e resolvida exclusivamente pelo setor de RH.",
+            "ser tratada como falha documental interna da empresa, sem repercussão na fiscalização.",
             "gerar automaticamente cancelamento da CIR de todos os tripulantes."
         ],
         "correta": 2,
@@ -465,11 +464,11 @@
         "dicaMacete": "A banca gosta de transformar infração documental em consequência extrema automática.",
         "pegadinha": "CIR válida de cada tripulante não substitui o documento coletivo exigido para a embarcação.",
         "analiseAlternativas": [
-            "Incorreta. Lista informal não substitui definitivamente o Rol exigido.",
-            "Incorreta. CIR válidas não eliminam a obrigação do documento da equipagem.",
-            "Correta. A falta do Rol obrigatório pode caracterizar infração/irregularidade fiscalizável.",
-            "Incorreta. A documentação de bordo está sujeita à fiscalização da Autoridade Marítima.",
-            "Incorreta. A ausência do Rol não cancela automaticamente as CIR dos tripulantes."
+            "Incorreta. Lista informal não substitui documento obrigatório.",
+            "Incorreta. CIR válidas não afastam a obrigação de portar o Rol quando exigido.",
+            "Correta. A falta do Rol pode configurar infração sujeita às medidas previstas pela Autoridade Marítima.",
+            "Incorreta. A irregularidade pode ser objeto de fiscalização; não é mero assunto interno de RH.",
+            "Incorreta. Não há cancelamento automático da CIR de toda a equipagem pela ausência do Rol."
         ],
         "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
         "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -484,7 +483,7 @@
         "origemInterna": "Inédita Farol 2026 — elaborada com base na NORMAM-101/DPC vigente, serviços oficiais da Marinha em 2026 e padrão de cobrança da Fundação Cesgranrio; sem reprodução de questões de Taifeiro 2018/2023.",
         "enunciado": "Para o serviço de registro/homologação do Rol de Equipagem, a orientação administrativa atual exige requerimento e a documentação/taxa aplicável. Isso significa que",
         "alternativas": [
-            "o Rol passa a produzir todos os efeitos apenas com a assinatura de qualquer tripulante, sem registro formal na Organização Militar.",
+            "a assinatura de um tripulante basta para dar ao Rol todos os efeitos, sem apresentação à Organização Militar.",
             "a empresa pode criar modelo próprio sem submissão à Autoridade Marítima.",
             "a simples compra ou posse física do formulário não dispensa o procedimento perante a OM.",
             "o pagamento isolado da indenização substitui o requerimento e a conferência documental.",
@@ -620,7 +619,7 @@
             "a CIR de todos os tripulantes deve ser reemitida.",
             "o documento se transforma automaticamente em Rol Portuário.",
             "a renovação pode ser dispensada se o novo Comandante aceitar formalmente o Rol existente.",
-            "somente o antigo Comandante pode autorizar a continuidade do Rol."
+            "a continuidade do Rol depende de autorização do antigo Comandante, ainda que o substituto o aceite formalmente."
         ],
         "correta": 3,
         "comentario": "A norma prevê tratamento específico para mudança de comando e evita renovação desnecessária quando o novo Comandante aceita formalmente o documento existente.",
@@ -630,11 +629,11 @@
         "dicaMacete": "A palavra-chave é “aceitação” do Rol pelo novo Comandante.",
         "pegadinha": "Troca de Comandante não é igual a troca de embarcação ou de documento individual.",
         "analiseAlternativas": [
-            "Incorreta. A troca de comando não impõe destruição automática do Rol.",
-            "Incorreta. Mudança de Comandante não exige reemissão das CIR dos demais tripulantes.",
-            "Incorreta. O Rol não se transforma em Rol Portuário pela substituição do Comandante.",
-            "Correta. A renovação pode ser dispensada se o novo Comandante declarar formalmente que aceita o Rol existente.",
-            "Incorreta. A continuidade depende da aceitação do novo Comandante nos termos previstos, não de autorização pessoal do antigo."
+            "Incorreta. A substituição do Comandante não impõe destruição automática do Rol.",
+            "Incorreta. A troca de Comandante não exige reemissão das CIR dos demais tripulantes.",
+            "Incorreta. Não há conversão automática do Rol de Equipagem em Rol Portuário.",
+            "Correta. A renovação pode ser dispensada quando o novo Comandante aceita formalmente o Rol existente.",
+            "Incorreta. A aceitação relevante é a do novo Comandante, nos termos do procedimento."
         ],
         "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
         "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -683,9 +682,9 @@
         "enunciado": "Quando o Rol de Equipagem é renovado e um novo documento passa a concentrar os registros da embarcação, a movimentação documental da tripulação deve",
         "alternativas": [
             "ser formalizada no novo Rol com os registros exigidos de desembarque e novo embarque.",
-            "ser ignorada, pois apenas o número do Rol muda.",
-            "ser feita somente para o Comandante, mantendo os demais tripulantes no documento antigo até o fim do contrato de trabalho.",
-            "ser lançada apenas na folha de pagamento da empresa.",
+            "ser desconsiderada, pois a renovação altera o formulário, mas não exige movimentação documental da equipagem.",
+            "ser formalizada para o Comandante, mantendo os demais tripulantes no Rol anterior até o fim do contrato.",
+            "ser registrada na folha de pagamento da empresa, sem novo lançamento no Rol.",
             "aguardar o próximo porto estrangeiro para produzir efeitos."
         ],
         "correta": 0,
@@ -696,11 +695,11 @@
         "dicaMacete": "Pense na cadeia documental: documento antigo encerra, novo documento assume.",
         "pegadinha": "Não basta trocar a capa/formulário sem registrar a situação dos tripulantes.",
         "analiseAlternativas": [
-            "Correta. A continuidade da equipagem deve ser formalizada no novo Rol com os registros exigidos.",
-            "Incorreta. A troca do Rol exige rastreabilidade das pessoas que permanecem embarcadas.",
-            "Incorreta. A formalização não se restringe ao Comandante quando os demais continuam compondo a equipagem.",
-            "Incorreta. Folha de pagamento não substitui as anotações marítimas do Rol.",
-            "Incorreta. A regularização não depende de escala em porto estrangeiro."
+            "Correta. A renovação exige a formalização das movimentações no novo documento conforme o procedimento.",
+            "Incorreta. A troca do formulário não autoriza ignorar a movimentação documental da equipagem.",
+            "Incorreta. O procedimento não se limita ao Comandante mantendo indefinidamente os demais no Rol anterior.",
+            "Incorreta. Folha de pagamento não substitui os registros marítimos do Rol.",
+            "Incorreta. Não há necessidade de aguardar porto estrangeiro."
         ],
         "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
         "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -785,7 +784,7 @@
             "O Rol acompanha a embarcação/equipagem; a CIR é o documento profissional individual do aquaviário.",
             "A CIR pertence à embarcação, enquanto o Rol pertence individualmente a cada tripulante e conserva essa natureza durante o embarque.",
             "O Rol substitui a CIR enquanto o aquaviário estiver embarcado.",
-            "A CIR registra apenas cursos, e o Rol registra exclusivamente salários e benefícios."
+            "A CIR registra cursos e qualificações, enquanto o Rol é destinado ao controle financeiro da equipagem."
         ],
         "correta": 1,
         "comentario": "Os documentos se complementam em alguns controles, mas não se substituem.",
@@ -795,44 +794,11 @@
         "dicaMacete": "Pergunte “de quem é o documento?”: da embarcação/equipagem ou da pessoa?",
         "pegadinha": "A existência de registros de embarque em ambos não os torna equivalentes.",
         "analiseAlternativas": [
-            "Incorreta. CIR e Rol não são ambos documentos coletivos nem têm a mesma finalidade.",
-            "Correta. O Rol acompanha a embarcação/equipagem; a CIR acompanha individualmente o aquaviário.",
-            "Incorreta. A alternativa inverte a natureza dos dois documentos.",
-            "Incorreta. Embarque não suspende nem substitui a CIR pelo Rol.",
-            "Incorreta. CIR não se limita a cursos e Rol não registra salários/benefícios como finalidade própria."
-        ],
-        "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
-        "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
-    },
-    {
-        "id": "TAA-2026-LMA-2.5-025",
-        "disciplina": "Conhecimentos Específicos",
-        "eixo": "Legislação Marítima e Ambiental",
-        "topicoEdital": "2.5 Rol de equipagem",
-        "assunto": "Rol como prova de tempo de embarque",
-        "tipoOrigem": "inedita_farol",
-        "origemInterna": "Inédita Farol 2026 — elaborada com base na NORMAM-101/DPC vigente, serviços oficiais da Marinha em 2026 e padrão de cobrança da Fundação Cesgranrio; sem reprodução de questões de Taifeiro 2018/2023.",
-        "enunciado": "Em procedimento excepcional de comprovação de tempo de embarque, o Rol de Equipagem pode ser relevante porque",
-        "alternativas": [
-            "substitui automaticamente toda e qualquer documentação exigida pela Autoridade Marítima.",
-            "podem corroborar os períodos em que o aquaviário integrou efetivamente a equipagem.",
-            "prova apenas a propriedade do navio e não contém informação sobre tripulantes.",
-            "dispensa a análise de compatibilidade entre função exercida e finalidade do cômputo.",
-            "transforma qualquer período a bordo em tempo válido para ascensão, independentemente da categoria."
-        ],
-        "correta": 1,
-        "comentario": "O Rol é uma fonte documental importante, mas não elimina os demais requisitos e conferências do cômputo.",
-        "explicacaoCorreta": "O Rol é uma fonte documental importante, mas não elimina os demais requisitos e conferências do cômputo.",
-        "revisaoAssunto": "A NORMAM-101/DPC, item 1.26.2(d)(I), admite períodos constantes de Rol de Equipagem/Rol Portuário como elemento de suporte em situação específica. O próprio Rol é regulado no item 2.7. Fonte: NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
-        "memorizar2026": "Rol pode provar presença/embarque; não transforma automaticamente todo tempo em tempo válido para qualquer finalidade.",
-        "dicaMacete": "Diferencie “documento de prova” de “prova absoluta e suficiente para tudo”.",
-        "pegadinha": "A função/categoria exercida ainda pode ser relevante no cômputo de carreira.",
-        "analiseAlternativas": [
-            "Incorreta. O Rol pode corroborar embarque, mas não substitui automaticamente toda a documentação exigida.",
-            "Correta. Os registros do Rol podem confirmar períodos em que o aquaviário integrou a equipagem.",
-            "Incorreta. O Rol contém dados da tripulação e não se limita à propriedade do navio.",
-            "Incorreta. Para determinados fins, a função/categoria exercida continua relevante na análise do tempo.",
-            "Incorreta. Presença a bordo não transforma todo período em tempo válido para qualquer ascensão."
+            "Incorreta. A CIR é individual; o Rol está vinculado à embarcação/equipagem.",
+            "Correta. O Rol acompanha a embarcação/equipagem e a CIR documenta individualmente o aquaviário.",
+            "Incorreta. A alternativa inverte as naturezas dos documentos.",
+            "Incorreta. Embarque não transforma o Rol em substituto da CIR.",
+            "Incorreta. O Rol não é documento financeiro da equipagem."
         ],
         "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
         "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -880,10 +846,10 @@
         "origemInterna": "Inédita Farol 2026 — elaborada com base na NORMAM-101/DPC vigente, serviços oficiais da Marinha em 2026 e padrão de cobrança da Fundação Cesgranrio; sem reprodução de questões de Taifeiro 2018/2023.",
         "enunciado": "Considere as afirmações: I — o Rol de Equipagem é vinculado à embarcação; II — a via destinada à embarcação deve ser mantida a bordo; III — os dados dos tripulantes podem ser omitidos se todos apresentarem CIR válida. Está correto o que se afirma em",
         "alternativas": [
-            "I, apenas.",
-            "II, apenas.",
-            "II e III, apenas.",
-            "I e II, apenas.",
+            "I.",
+            "II.",
+            "II e III.",
+            "I e II.",
             "I, II e III."
         ],
         "correta": 3,
@@ -913,11 +879,11 @@
         "origemInterna": "Inédita Farol 2026 — elaborada com base na NORMAM-101/DPC vigente, serviços oficiais da Marinha em 2026 e padrão de cobrança da Fundação Cesgranrio; sem reprodução de questões de Taifeiro 2018/2023.",
         "enunciado": "Considere: I — Rol esgotado pode exigir renovação; II — extravio pode exigir declaração circunstancial do ocorrido; III — a troca de Comandante sempre obriga a renovação, mesmo quando o novo Comandante aceita formalmente o Rol existente. Está correto o que se afirma em",
         "alternativas": [
-            "I, apenas.",
-            "II, apenas.",
-            "I e III, apenas.",
+            "I.",
+            "II.",
+            "I e III.",
             "I, II e III.",
-            "I e II, apenas."
+            "I e II."
         ],
         "correta": 4,
         "comentario": "As duas primeiras refletem hipóteses de renovação/regularização. A terceira generaliza indevidamente a troca de comando.",
@@ -948,8 +914,8 @@
         "alternativas": [
             "adequada, pois qualquer documento eletrônico da empresa tem o mesmo valor perante a Autoridade Marítima.",
             "adequada, desde que a planilha contenha nome e CPF de todos os tripulantes.",
-            "adequada somente quando o Comandante assinar a última página da planilha.",
-            "inadequada apenas porque a planilha precisaria ser registrada no sindicato.",
+            "adequada quando o Comandante assinar a última página da planilha e a empresa arquivar as CIR.",
+            "inadequada porque a planilha precisaria ser registrada no sindicato antes da viagem.",
             "inadequada, porque controles internos e CIR não substituem o Rol de Equipagem quando ele é exigido."
         ],
         "correta": 4,
@@ -960,44 +926,11 @@
         "dicaMacete": "Na prova, desconfie de “a empresa pode substituir por documento próprio”.",
         "pegadinha": "Digitalização e gestão eletrônica não dispensam obrigações formais sem previsão normativa.",
         "analiseAlternativas": [
-            "Incorreta. Documento eletrônico interno não adquire automaticamente o mesmo valor do Rol previsto na NORMAM.",
-            "Incorreta. Conter nome e CPF não transforma planilha privada no Rol de Equipagem.",
-            "Incorreta. Assinatura do Comandante em planilha própria não substitui o formulário/procedimento oficial.",
-            "Incorreta. O problema não é falta de registro sindical; é a tentativa de substituir documento marítimo obrigatório.",
-            "Correta. Controles internos e CIR podem complementar a gestão, mas não substituem o Rol quando exigido."
-        ],
-        "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
-        "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
-    },
-    {
-        "id": "TAA-2026-LMA-2.5-030",
-        "disciplina": "Conhecimentos Específicos",
-        "eixo": "Legislação Marítima e Ambiental",
-        "topicoEdital": "2.5 Rol de equipagem",
-        "assunto": "Cobrança Cesgranrio — regra atual",
-        "tipoOrigem": "inedita_farol",
-        "origemInterna": "Inédita Farol 2026 — elaborada com base na NORMAM-101/DPC vigente, serviços oficiais da Marinha em 2026 e padrão de cobrança da Fundação Cesgranrio; sem reprodução de questões de Taifeiro 2018/2023.",
-        "enunciado": "À luz da NORMAM-101/DPC vigente, assinale a alternativa correta sobre o Rol de Equipagem.",
-        "alternativas": [
-            "É documento pessoal do Comandante, válido em qualquer embarcação para a qual ele seja transferido enquanto estiver habilitado.",
-            "É facultativo quando os tripulantes possuem CIR e certificados válidos.",
-            "É documento da embarcação/equipagem que registra a composição e as movimentações da tripulação.",
-            "É destinado exclusivamente a comprovar aptidão médica dos marítimos.",
-            "É documento de propriedade do sindicato e fica em terra durante toda a viagem."
-        ],
-        "correta": 2,
-        "comentario": "A alternativa correta reúne finalidade, vinculação à embarcação e controle pela Autoridade Marítima sem criar funções inexistentes.",
-        "explicacaoCorreta": "A alternativa correta reúne finalidade, vinculação à embarcação e controle pela Autoridade Marítima sem criar funções inexistentes.",
-        "revisaoAssunto": "O item 2.7 da NORMAM-101/DPC é o centro normativo do Rol de Equipagem. A página oficial da DPC indica como vigente a NORMAM-101 aprovada pela Portaria DPC/DGN/MB nº 205, de 22/07/2026. Fonte: NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
-        "memorizar2026": "Rol = documento da embarcação/equipagem, controlado pela Autoridade Marítima.",
-        "dicaMacete": "Alternativas que transformam o Rol em documento pessoal ou facultativo tendem a estar erradas.",
-        "pegadinha": "Validade das CIR não elimina a obrigação do Rol quando exigido.",
-        "analiseAlternativas": [
-            "Incorreta. O Rol não é documento pessoal e transferível com o Comandante para outras embarcações.",
-            "Incorreta. CIR e certificados válidos não tornam facultativo o Rol quando ele é exigido.",
-            "Correta. O Rol é documento da embarcação/equipagem e registra composição e movimentações da tripulação.",
-            "Incorreta. Aptidão médica possui documentação própria e não é a finalidade exclusiva do Rol.",
-            "Incorreta. O Rol não pertence ao sindicato nem deve permanecer apenas em terra durante a viagem."
+            "Incorreta. Controle eletrônico empresarial não recebe automaticamente o mesmo valor do Rol exigido pela Autoridade Marítima.",
+            "Incorreta. Nome e CPF não transformam uma planilha em Rol de Equipagem.",
+            "Incorreta. Assinatura do Comandante não converte planilha particular em documento normativo.",
+            "Incorreta. Registro sindical não é o requisito que define a validade do Rol.",
+            "Correta. CIR e controles internos têm funções próprias e não substituem o Rol quando este é exigido."
         ],
         "fonte": "NORMAM-101/DPC, item 2.7 — Rol de Equipagem; Marinha do Brasil — serviços de Rol Portuário e Rol de Equipagem, 2026.",
         "atualizacao2026": "Referência normativa conferida para 2026: NORMAM-101/DPC vigente na página oficial da DPC, vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."

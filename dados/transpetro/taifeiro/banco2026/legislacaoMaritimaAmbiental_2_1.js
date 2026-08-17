@@ -1,11 +1,11 @@
 // ==========================================================
 // FAROL DO SABER — TRANSPETRO / TAIFEIRO — BANCO 2026
 // Legislação Marítima e Ambiental — 2.1 Fluxo de carreira
-// 35 questões • sem imagens • gabarito A-E equilibrado
-// Base normativa atual: NORMAM-101/DPC + LESTA/RLESTA + PREPOM 2026
-// NORMAM-101/DPC vigente: Portaria DPC/DGN/MB nº 205, de 22/07/2026
-// As microaulas (revisaoAssunto) trazem a referência normativa específica.
-// Não reutiliza questões de Taifeiro 2018/2023.
+// REVISÃO FORTE V104 — 28 questões • sem imagens
+// Gabarito equilibrado e não sequencial; distratores revisados no padrão Cesgranrio.
+// Escopo enxuto: retirados detalhes de cômputo/comprovação de embarque já cobertos no tópico 2.4.
+// Base: NORMAM-101/DPC + LESTA/RLESTA + PREPOM/CAAQ-CTS 2026.
+// Não reutiliza questões das provas Taifeiro 2018/2023.
 // ==========================================================
 (() => {
     "use strict";
@@ -22,13 +22,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Segundo a legislação brasileira de segurança do tráfego aquaviário, considera-se aquaviário",
         "alternativas": [
-            "todo aquele com habilitação certificada pela Autoridade Marítima para operar embarcações em caráter profissional.",
-            "qualquer pessoa que trabalhe em área portuária, ainda que nunca exerça atividade embarcada.",
-            "o proprietário de embarcação mercante que a explore economicamente, mesmo sem habilitação profissional.",
-            "todo tripulante ou passageiro que permaneça embarcado por período superior a vinte e quatro horas.",
-            "somente o profissional pertencente aos grupos de Marítimos e Fluviários e inscrito como oficial."
+            "o trabalhador portuário inscrito no OGMO que exerça atividade habitual junto a embarcações mercantes.",
+            "o profissional habilitado pela Autoridade Marítima para operar embarcações em caráter profissional.",
+            "o proprietário de embarcação comercial que participe diretamente da exploração econômica do navio.",
+            "o profissional inscrito como oficial dos grupos de Marítimos ou Fluviários, ainda que não opere embarcações profissionalmente.",
+            "o tripulante ou passageiro que permaneça embarcado por período superior a vinte e quatro horas."
         ],
-        "correta": 0,
+        "correta": 1,
         "comentario": "A LESTA define aquaviário pela habilitação certificada pela Autoridade Marítima para operar embarcações profissionalmente.",
         "explicacaoCorreta": "A LESTA define aquaviário pela habilitação certificada pela Autoridade Marítima para operar embarcações profissionalmente.",
         "revisaoAssunto": "A definição legal é funcional: o elemento central é a habilitação certificada pela Autoridade Marítima para operar embarcações em caráter profissional. Ela não se confunde com proprietário, passageiro ou trabalhador portuário. Fonte: LESTA — Lei nº 9.537/1997, Capítulo I, art. 2º, II.",
@@ -36,11 +36,11 @@
         "dicaMacete": "Se aparecer “caráter profissional”, lembre da definição legal de aquaviário.",
         "pegadinha": "A banca pode trocar aquaviário por amador, proprietário ou profissional portuário.",
         "analiseAlternativas": [
-            "Correta. Reproduz o núcleo da definição do art. 2º, II, da LESTA.",
             "Incorreta. Trabalhador portuário não se torna aquaviário apenas pelo local onde trabalha.",
+            "Correta. Reproduz o núcleo da definição do art. 2º, II, da LESTA.",
             "Incorreta. Propriedade da embarcação não substitui habilitação profissional.",
-            "Incorreta. Permanência a bordo não define a condição de aquaviário.",
-            "Incorreta. A categoria aquaviário não se limita a oficiais dos grupos Marítimos e Fluviários."
+            "Incorreta. A categoria aquaviário não se limita a oficiais dos grupos Marítimos e Fluviários.",
+            "Incorreta. Permanência a bordo não define a condição de aquaviário."
         ],
         "fonte": "LESTA — Lei nº 9.537/1997, Capítulo I, art. 2º, II.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -55,13 +55,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Um candidato deseja localizar, na NORMAM-101/DPC, as regras gerais sobre ingresso e inscrição de aquaviários. Segundo orientação oficial da DPC, esses assuntos são tratados, respectivamente,",
         "alternativas": [
-            "no Capítulo 2, Seções III e IV.",
             "no Capítulo 1, Seções I e II.",
             "no Capítulo 3, Seções I e II.",
-            "exclusivamente no Anexo 2-D.",
-            "somente no PREPOM, sem previsão na NORMAM-101/DPC."
+            "no PREPOM e nos anexos anuais de cursos e vagas.",
+            "no Capítulo 2, Seções III e IV.",
+            "no Anexo 2-D e em suas notas complementares."
         ],
-        "correta": 1,
+        "correta": 0,
         "comentario": "A DPC informa que o ingresso e a inscrição de aquaviários são disciplinados no Capítulo 1, Seções I e II, respectivamente, da NORMAM-101/DPC.",
         "explicacaoCorreta": "A DPC informa que o ingresso e a inscrição de aquaviários são disciplinados no Capítulo 1, Seções I e II, respectivamente, da NORMAM-101/DPC.",
         "revisaoAssunto": "O fluxo profissional começa pelo ingresso e pela inscrição. A própria DPC orienta que o candidato consulte o Capítulo 1 da NORMAM-101/DPC: Seção I para ingresso e Seção II para inscrição. Fonte: NORMAM-101/DPC, Capítulo 1, Seções I e II; DPC — Perguntas Frequentes, “Como faço para me tornar aquaviário?”.",
@@ -69,11 +69,11 @@
         "dicaMacete": "Memorize a ordem lógica: primeiro ingresso, depois inscrição.",
         "pegadinha": "O Anexo 2-A é importantíssimo para categorias e certificações, mas não substitui as seções gerais de ingresso e inscrição.",
         "analiseAlternativas": [
-            "Incorreta. O Capítulo 2 concentra outros procedimentos de carreira.",
             "Correta. É a localização indicada pela própria DPC.",
             "Incorreta. O Capítulo 3 não é a referência geral indicada para ingresso e inscrição.",
-            "Incorreta. O Anexo 2-D está associado à Licença de Categoria/Capacidade Superior.",
-            "Incorreta. O PREPOM complementa a formação, mas ingresso e inscrição têm disciplina na NORMAM-101."
+            "Incorreta. O PREPOM complementa a formação, mas ingresso e inscrição têm disciplina na NORMAM-101.",
+            "Incorreta. O Capítulo 2 concentra outros procedimentos de carreira.",
+            "Incorreta. O Anexo 2-D está associado à Licença de Categoria/Capacidade Superior."
         ],
         "fonte": "NORMAM-101/DPC, Capítulo 1, Seções I e II; DPC — Perguntas Frequentes, “Como faço para me tornar aquaviário?”.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -88,13 +88,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Nos termos do Regulamento da Lei de Segurança do Tráfego Aquaviário, pertencem ao 1º Grupo — Marítimos os tripulantes que operam embarcações classificadas, entre outras possibilidades, para",
         "alternativas": [
-            "atividades exclusivamente subaquáticas executadas por mergulhadores profissionais.",
-            "serviço de praticagem, como aquaviários não tripulantes.",
-            "navegação em mar aberto, apoio marítimo, apoio portuário e determinadas navegações interiores em áreas marítimas abrigadas.",
-            "somente navegação interior em rios e lagos, sem atuação em áreas marítimas.",
-            "manobras de navios exclusivamente em diques, estaleiros e carreiras."
+            "atividades subaquáticas profissionais executadas por mergulhadores em apoio a embarcações e instalações.",
+            "manobra de navios em diques, estaleiros e carreiras, inclusive nas movimentações internas dessas instalações.",
+            "navegação interior em rios e lagos e apoio portuário de natureza predominantemente fluvial.",
+            "serviço de praticagem e assessoramento aos comandantes em zonas de praticagem regulamentadas.",
+            "navegação em mar aberto, apoio marítimo, apoio portuário e navegação interior em áreas marítimas abrigadas."
         ],
-        "correta": 2,
+        "correta": 4,
         "comentario": "O RLESTA enquadra como Marítimos os tripulantes que operam embarcações de mar aberto, apoio marítimo, apoio portuário e também certas navegações interiores em áreas marítimas abrigadas.",
         "explicacaoCorreta": "O RLESTA enquadra como Marítimos os tripulantes que operam embarcações de mar aberto, apoio marítimo, apoio portuário e também certas navegações interiores em áreas marítimas abrigadas.",
         "revisaoAssunto": "Os grupos não são definidos apenas pelo nome da categoria; o tipo de atividade e de navegação é relevante. O 1º Grupo é o dos Marítimos. Fonte: RLESTA — Decreto nº 2.596/1998, Capítulo I, art. 1º, I.",
@@ -103,10 +103,10 @@
         "pegadinha": "A banca pode usar funções reais de outros grupos como Práticos, Mergulhadores ou Agentes de Manobra.",
         "analiseAlternativas": [
             "Incorreta. Atividades subaquáticas caracterizam o grupo de Mergulhadores.",
-            "Incorreta. Práticos constituem grupo próprio e são aquaviários não tripulantes.",
-            "Correta. É a descrição do 1º Grupo — Marítimos no RLESTA.",
+            "Incorreta. Manobra e docagem em diques, estaleiros e carreiras correspondem ao 6º Grupo.",
             "Incorreta. Essa descrição se aproxima do grupo de Fluviários.",
-            "Incorreta. Manobra e docagem em diques, estaleiros e carreiras correspondem ao 6º Grupo."
+            "Incorreta. Práticos constituem grupo próprio e são aquaviários não tripulantes.",
+            "Correta. É a descrição do 1º Grupo — Marítimos no RLESTA."
         ],
         "fonte": "RLESTA — Decreto nº 2.596/1998, Capítulo I, art. 1º, I.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -122,12 +122,12 @@
         "enunciado": "Um tripulante exerce profissionalmente suas funções em embarcações classificadas para navegação interior em lagos e rios e para apoio portuário fluvial. Pelo RLESTA, ele integra o grupo dos",
         "alternativas": [
             "Pescadores.",
-            "Marítimos.",
-            "Práticos.",
             "Fluviários.",
-            "Agentes de Manobra e Docagem."
+            "Agentes de Manobra e Docagem.",
+            "Marítimos.",
+            "Práticos."
         ],
-        "correta": 3,
+        "correta": 1,
         "comentario": "O 2º Grupo — Fluviários reúne tripulantes que operam embarcações de navegação interior nos lagos e rios e de apoio portuário fluvial.",
         "explicacaoCorreta": "O 2º Grupo — Fluviários reúne tripulantes que operam embarcações de navegação interior nos lagos e rios e de apoio portuário fluvial.",
         "revisaoAssunto": "Na prova, associe Fluviários às hidrovias interiores, especialmente rios e lagos. A natureza da navegação diferencia esse grupo dos Marítimos. Fonte: RLESTA — Decreto nº 2.596/1998, Capítulo I, art. 1º, II.",
@@ -136,10 +136,10 @@
         "pegadinha": "Marítimos também podem atuar em áreas abrigadas; a banca pode explorar essa fronteira.",
         "analiseAlternativas": [
             "Incorreta. Pescadores exercem atividades a bordo de embarcações de pesca.",
-            "Incorreta. O caso descrito é de navegação interior fluvial.",
-            "Incorreta. Prático presta serviço de praticagem e não é o tripulante descrito.",
             "Correta. Corresponde ao 2º Grupo — Fluviários.",
-            "Incorreta. Agentes de Manobra e Docagem têm atividade específica em diques, estaleiros e carreiras."
+            "Incorreta. Agentes de Manobra e Docagem têm atividade específica em diques, estaleiros e carreiras.",
+            "Incorreta. O caso descrito é de navegação interior fluvial.",
+            "Incorreta. Prático presta serviço de praticagem e não é o tripulante descrito."
         ],
         "fonte": "RLESTA — Decreto nº 2.596/1998, Capítulo I, art. 1º, II.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -154,13 +154,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Assinale a associação correta entre grupo de aquaviários e atividade prevista no RLESTA.",
         "alternativas": [
-            "Mergulhadores — prestação exclusiva de serviço de praticagem em zonas de praticagem.",
-            "Pescadores — manobra de navios em diques, estaleiros e carreiras.",
-            "Fluviários — execução de atividades subaquáticas eventuais a bordo.",
-            "Marítimos — exercício exclusivo de pesca profissional.",
-            "Agentes de Manobra e Docagem — manobra de navios em diques, estaleiros e carreiras."
+            "Marítimos — exercício de pesca profissional como atividade característica do grupo.",
+            "Agentes de Manobra e Docagem — manobra de navios em diques, estaleiros e carreiras.",
+            "Fluviários — execução profissional de atividades subaquáticas em apoio a embarcações.",
+            "Mergulhadores — assessoramento ao comandante em manobras de entrada e saída de porto.",
+            "Pescadores — manobra de navios em diques, estaleiros e carreiras de construção."
         ],
-        "correta": 4,
+        "correta": 1,
         "comentario": "O 6º Grupo é constituído pelos Agentes de Manobra e Docagem, aquaviários não tripulantes que manobram navios em diques, estaleiros e carreiras.",
         "explicacaoCorreta": "O 6º Grupo é constituído pelos Agentes de Manobra e Docagem, aquaviários não tripulantes que manobram navios em diques, estaleiros e carreiras.",
         "revisaoAssunto": "O RLESTA organiza os aquaviários em grupos segundo a natureza da atividade. Saber distinguir os grupos ajuda a compreender que os fluxos de carreira não são intercambiáveis automaticamente. Fonte: RLESTA — Decreto nº 2.596/1998, Capítulo I, art. 1º, I a VI.",
@@ -168,11 +168,11 @@
         "dicaMacete": "Diques + estaleiros + carreiras → Agentes de Manobra e Docagem.",
         "pegadinha": "A questão mistura descrições verdadeiras, mas deslocadas para o grupo errado.",
         "analiseAlternativas": [
-            "Incorreta. Praticagem pertence ao grupo dos Práticos.",
-            "Incorreta. Essa atividade é dos Agentes de Manobra e Docagem.",
-            "Incorreta. Atividades subaquáticas caracterizam Mergulhadores.",
             "Incorreta. Pesca profissional caracteriza Pescadores, não Marítimos em geral.",
-            "Correta. É a descrição normativa do 6º Grupo."
+            "Correta. É a descrição normativa do 6º Grupo.",
+            "Incorreta. Atividades subaquáticas caracterizam Mergulhadores.",
+            "Incorreta. Praticagem pertence ao grupo dos Práticos.",
+            "Incorreta. Essa atividade é dos Agentes de Manobra e Docagem."
         ],
         "fonte": "RLESTA — Decreto nº 2.596/1998, Capítulo I, art. 1º, I a VI.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -187,13 +187,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "No fluxo de formação previsto para o CAAQ-CTS, a categoria de Taifeiro (TAA) pertence à",
         "alternativas": [
-            "Seção de Câmara.",
+            "Seção de Praticagem.",
             "Seção de Convés.",
-            "Seção de Máquinas.",
             "Seção de Saúde.",
-            "Seção de Praticagem."
+            "Seção de Máquinas.",
+            "Seção de Câmara."
         ],
-        "correta": 0,
+        "correta": 4,
         "comentario": "O Taifeiro (TAA), assim como o Cozinheiro (CZA), é categoria da Seção de Câmara.",
         "explicacaoCorreta": "O Taifeiro (TAA), assim como o Cozinheiro (CZA), é categoria da Seção de Câmara.",
         "revisaoAssunto": "A identificação da seção é relevante para compreender o enquadramento profissional. No CAAQ-CTS, CZA e TAA pertencem à Câmara; ENF e ASA pertencem à Saúde. Fonte: PREPOM-Aquaviários/2026 — Curso de Adaptação para Aquaviários Cozinheiro, Taifeiro, Enfermeiro e Auxiliar de Saúde (CAAQ-CTS); documentos oficiais de seleção 2026 da Marinha.",
@@ -201,11 +201,11 @@
         "dicaMacete": "Câmara lembra hotelaria, alimentação, arrumação e apoio de habitabilidade a bordo.",
         "pegadinha": "A banca pode trocar Taifeiro por Auxiliar de Saúde, que pertence à Seção de Saúde.",
         "analiseAlternativas": [
-            "Correta. TAA integra a Seção de Câmara.",
+            "Incorreta. Praticagem é atividade de grupo próprio, não seção do TAA.",
             "Incorreta. Convés reúne categorias próprias de navegação e manobra.",
-            "Incorreta. Máquinas reúne categorias ligadas à operação e manutenção dos sistemas de máquinas.",
             "Incorreta. Saúde inclui ENF e ASA no contexto do CAAQ-CTS.",
-            "Incorreta. Praticagem é atividade de grupo próprio, não seção do TAA."
+            "Incorreta. Máquinas reúne categorias ligadas à operação e manutenção dos sistemas de máquinas.",
+            "Correta. TAA integra a Seção de Câmara."
         ],
         "fonte": "PREPOM-Aquaviários/2026 — Curso de Adaptação para Aquaviários Cozinheiro, Taifeiro, Enfermeiro e Auxiliar de Saúde (CAAQ-CTS); documentos oficiais de seleção 2026 da Marinha.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -220,13 +220,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "O Curso de Adaptação para Aquaviários CAAQ-CTS habilita, conforme a opção e os requisitos aplicáveis, profissionais para as categorias de",
         "alternativas": [
-            "Marinheiro de Convés, Marinheiro de Máquinas, Taifeiro e Prático.",
             "Cozinheiro, Taifeiro, Enfermeiro e Auxiliar de Saúde.",
-            "Taifeiro, Eletricista, Condutor de Máquinas e Auxiliar de Saúde.",
+            "Marinheiro de Convés, Marinheiro de Máquinas, Taifeiro e Prático.",
             "Cozinheiro, Moço de Convés, Moço de Máquinas e Enfermeiro.",
-            "Taifeiro, Prático, Mergulhador e Agente de Manobra."
+            "Taifeiro, Prático, Mergulhador e Agente de Manobra.",
+            "Taifeiro, Eletricista, Condutor de Máquinas e Auxiliar de Saúde."
         ],
-        "correta": 1,
+        "correta": 0,
         "comentario": "O CAAQ-CTS é o curso de adaptação destinado às categorias Cozinheiro, Taifeiro, Enfermeiro e Auxiliar de Saúde.",
         "explicacaoCorreta": "O CAAQ-CTS é o curso de adaptação destinado às categorias Cozinheiro, Taifeiro, Enfermeiro e Auxiliar de Saúde.",
         "revisaoAssunto": "O curso agrupa duas categorias da Seção de Câmara (CZA e TAA) e duas da Seção de Saúde (ENF e ASA). A opção efetiva depende do enquadramento e dos requisitos do processo seletivo. Fonte: PREPOM-Aquaviários/2026 — CAAQ-CTS; editais oficiais da Marinha para o CAAQ-CTS em 2026.",
@@ -234,11 +234,11 @@
         "dicaMacete": "Memorize “CTS” como o conjunto tradicional Câmara/Saúde do curso.",
         "pegadinha": "A banca pode incluir cargos Transpetro que existem no edital, mas não pertencem ao CAAQ-CTS.",
         "analiseAlternativas": [
-            "Incorreta. Marinheiro e Prático têm vias formativas próprias.",
             "Correta. É o conjunto de categorias abrangido pelo CAAQ-CTS.",
-            "Incorreta. Eletricista e Condutor de Máquinas não integram esse curso.",
+            "Incorreta. Marinheiro e Prático têm vias formativas próprias.",
             "Incorreta. Moço de Convés e Moço de Máquinas têm cursos específicos.",
-            "Incorreta. Prático, Mergulhador e Agente de Manobra pertencem a outros fluxos profissionais."
+            "Incorreta. Prático, Mergulhador e Agente de Manobra pertencem a outros fluxos profissionais.",
+            "Incorreta. Eletricista e Condutor de Máquinas não integram esse curso."
         ],
         "fonte": "PREPOM-Aquaviários/2026 — CAAQ-CTS; editais oficiais da Marinha para o CAAQ-CTS em 2026.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -253,11 +253,11 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Em edital oficial da Marinha de 2026 para o CAAQ-CTS, ao tratar de Cozinheiro, Taifeiro, Enfermeiro e Auxiliar de Saúde, é informado que esses profissionais",
         "alternativas": [
-            "ascendem automaticamente para categoria superior após dois anos de embarque.",
-            "somente podem exercer suas funções no 2º Grupo — Fluviários.",
-            "não possuem ascensão de categoria, mecanismo previsto para outras seções.",
-            "passam obrigatoriamente à Seção de Convés depois do primeiro embarque.",
-            "dependem de Licença de Categoria Superior permanente para continuar na profissão."
+            "integram o grupo dos Fluviários enquanto permanecerem vinculados ao CAAQ-CTS.",
+            "dependem de LCS renovada periodicamente para permanecer na categoria obtida pelo curso.",
+            "não possuem ascensão de categoria, mecanismo previsto para outras seções da carreira.",
+            "passam à Seção de Convés quando completam o primeiro período de embarque profissional.",
+            "ascendem para categoria superior após o tempo mínimo de embarque indicado pela empresa."
         ],
         "correta": 2,
         "comentario": "Documentos oficiais de seleção do CAAQ-CTS em 2026 registram expressamente que CZA, TAA, ENF e ASA não têm ascensão de categoria, prevista para outras seções.",
@@ -267,11 +267,11 @@
         "dicaMacete": "Não aplique ao Taifeiro automaticamente as escadas de promoção de Convés ou Máquinas.",
         "pegadinha": "A prova pode cobrar a regra geral de ascensão e, em outra questão, a exceção prática de TAA/CZA/ENF/ASA.",
         "analiseAlternativas": [
-            "Incorreta. Não existe ascensão automática por dois anos para essas categorias.",
             "Incorreta. O CAAQ-CTS pode habilitar no 1º Grupo — Marítimos ou 2º Grupo — Fluviários, conforme o caso.",
+            "Incorreta. LCS é temporária e excepcional, não mecanismo permanente de continuidade profissional.",
             "Correta. É a ressalva expressa no edital oficial do CAAQ-CTS em 2026.",
             "Incorreta. Não há migração obrigatória para Convés.",
-            "Incorreta. LCS é temporária e excepcional, não mecanismo permanente de continuidade profissional."
+            "Incorreta. Não existe ascensão automática por dois anos para essas categorias."
         ],
         "fonte": "Edital CAAQ-CTS T02/2026 — Capitania dos Portos de Sergipe, item 1.4; PREPOM-Aquaviários/2026.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -286,13 +286,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Para os aquaviários pertencentes a fluxos que admitem ascensão de categoria, essa ascensão pode decorrer de",
         "alternativas": [
-            "mera antiguidade cadastral, independentemente de qualificação.",
-            "indicação da empresa, sem comprovação de requisito profissional.",
-            "aprovação em exame médico, isoladamente.",
-            "conclusão de estágio, curso e/ou tempo de embarque, conforme os requisitos aplicáveis.",
-            "alteração de endereço para outra jurisdição marítima."
+            "indicação do empregador acompanhada de exame médico e registro atualizado na CIR.",
+            "antiguidade na inscrição combinada com recomendação formal da empresa de navegação.",
+            "curso, estágio e/ou tempo de embarque previstos para a categoria pretendida.",
+            "mudança de jurisdição e atualização cadastral perante a nova Capitania dos Portos.",
+            "aprovação em exame médico e permanência mínima na mesma empresa de navegação."
         ],
-        "correta": 3,
+        "correta": 2,
         "comentario": "A orientação oficial da Marinha estabelece que a ascensão de categoria pode ocorrer por conclusão de estágio, curso e/ou tempo de embarque.",
         "explicacaoCorreta": "A orientação oficial da Marinha estabelece que a ascensão de categoria pode ocorrer por conclusão de estágio, curso e/ou tempo de embarque.",
         "revisaoAssunto": "Não existe um requisito único para todas as categorias. O Quadro Geral de Certificações indica as condições aplicáveis a cada fluxo, e a ascensão pode combinar estágio, curso e tempo de embarque. Fonte: NORMAM-101/DPC — itens 1.26, 1.27 e 1.28 e Anexo 2-A; DPC/CPBA — serviço “Ascensão de Categoria”.",
@@ -300,11 +300,11 @@
         "dicaMacete": "Desconfie de alternativas que transformem um único requisito em regra universal.",
         "pegadinha": "Mudança de jurisdição é procedimento administrativo distinto da ascensão.",
         "analiseAlternativas": [
-            "Incorreta. Antiguidade isolada não substitui requisitos profissionais.",
             "Incorreta. Indicação empresarial não elimina as exigências normativas.",
-            "Incorreta. Aptidão de saúde pode ser requisito documental, mas não define sozinha a ascensão.",
+            "Incorreta. Antiguidade isolada não substitui requisitos profissionais.",
             "Correta. É a fórmula utilizada pela Marinha.",
-            "Incorreta. Alteração de jurisdição não é ascensão."
+            "Incorreta. Alteração de jurisdição não é ascensão.",
+            "Incorreta. Aptidão de saúde pode ser requisito documental, mas não define sozinha a ascensão."
         ],
         "fonte": "NORMAM-101/DPC — itens 1.26, 1.27 e 1.28 e Anexo 2-A; DPC/CPBA — serviço “Ascensão de Categoria”.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -319,13 +319,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Uma ascensão de categoria regularmente deferida exige, segundo a orientação da DPC,",
         "alternativas": [
-            "apenas anotação interna da empresa de navegação.",
-            "somente emissão de novo documento de identidade civil.",
-            "registro apenas no Rol de Equipagem da embarcação em que o aquaviário está servindo.",
-            "substituição automática da CIR por passaporte marítimo estrangeiro.",
-            "registro na CIR, atualização no SISAQUA e, se for o caso, emissão de outra certificação."
+            "substituição da CIR por documento provisório até a emissão de nova certificação profissional.",
+            "emissão de novo documento de identidade profissional sem alteração dos demais registros.",
+            "anotação da mudança no controle interno da empresa e no Rol de Equipagem vigente.",
+            "registro na CIR, atualização no SISAQUA e, quando cabível, emissão de nova certificação.",
+            "registro no Rol de Equipagem e atualização da função exercida na embarcação atual."
         ],
-        "correta": 4,
+        "correta": 3,
         "comentario": "A ascensão repercute nos registros oficiais da carreira: deve constar na CIR, ser atualizada no SISAQUA e pode exigir nova certificação.",
         "explicacaoCorreta": "A ascensão repercute nos registros oficiais da carreira: deve constar na CIR, ser atualizada no SISAQUA e pode exigir nova certificação.",
         "revisaoAssunto": "A carreira do aquaviário é controlada pela Autoridade Marítima. Por isso, a promoção não se resume a um ato da empresa; ela precisa refletir nos registros oficiais. Fonte: NORMAM-101/DPC — disciplina de ascensão; DPC — Documentação e Certificação de Pessoal Aquaviário, pergunta sobre ascensão de categoria.",
@@ -333,11 +333,11 @@
         "dicaMacete": "Procure na alternativa os registros oficiais da Autoridade Marítima.",
         "pegadinha": "O Rol de Equipagem registra o embarque, mas não substitui os atos de carreira.",
         "analiseAlternativas": [
-            "Incorreta. A empresa não efetiva isoladamente a ascensão.",
-            "Incorreta. Documento civil não substitui registro profissional marítimo.",
-            "Incorreta. O Rol não é suficiente para formalizar ascensão.",
             "Incorreta. Não existe substituição por passaporte marítimo estrangeiro.",
-            "Correta. Esses são os registros e providências indicados pela DPC."
+            "Incorreta. Documento civil não substitui registro profissional marítimo.",
+            "Incorreta. A empresa não efetiva isoladamente a ascensão.",
+            "Correta. Esses são os registros e providências indicados pela DPC.",
+            "Incorreta. O Rol não é suficiente para formalizar ascensão."
         ],
         "fonte": "NORMAM-101/DPC — disciplina de ascensão; DPC — Documentação e Certificação de Pessoal Aquaviário, pergunta sobre ascensão de categoria.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -352,13 +352,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Um aquaviário já cumpriu os requisitos exigidos para determinada ascensão de categoria. A iniciativa para requerê-la cabe",
         "alternativas": [
-            "ao próprio aquaviário, perante sua Organização Militar de jurisdição.",
-            "exclusivamente ao comandante da embarcação em que ele estiver embarcado.",
-            "à empresa de navegação, mesmo sem manifestação do interessado.",
-            "ao sindicato profissional da categoria.",
-            "à Agência Nacional de Transportes Aquaviários."
+            "à ANTAQ, que encaminha o requerimento à Autoridade Marítima para decisão final.",
+            "ao comandante da embarcação, que apresenta o pedido em nome do tripulante interessado.",
+            "ao sindicato profissional, após conferência da categoria e da convenção coletiva aplicável.",
+            "ao próprio aquaviário, perante a Organização Militar de sua jurisdição.",
+            "à empresa de navegação, depois de verificar o tempo de embarque e a lotação disponível."
         ],
-        "correta": 0,
+        "correta": 3,
         "comentario": "Cabe ao aquaviário a iniciativa de requerer a ascensão para a qual possua os requisitos, perante sua OM de jurisdição.",
         "explicacaoCorreta": "Cabe ao aquaviário a iniciativa de requerer a ascensão para a qual possua os requisitos, perante sua OM de jurisdição.",
         "revisaoAssunto": "A empresa pode fornecer documentos e, em situações previstas, recomendações, mas o procedimento de ascensão é requerido pelo interessado à sua jurisdição. Fonte: NORMAM-101/DPC — Anexo 2-A e procedimento de ascensão; DPC — Documentação e Certificação de Pessoal Aquaviário.",
@@ -366,11 +366,11 @@
         "dicaMacete": "Requerimento profissional à CP/DL/AG de jurisdição.",
         "pegadinha": "Não confunda ascensão com LCS: na LCS, a solicitação parte da empresa em circunstância excepcional.",
         "analiseAlternativas": [
-            "Correta. A iniciativa é do aquaviário interessado.",
+            "Incorreta. A ANTAQ não administra a carreira e habilitação do aquaviário.",
             "Incorreta. O comandante não substitui o requerente como regra do procedimento.",
-            "Incorreta. A empresa auxilia documentalmente, mas não é a titular do requerimento de ascensão.",
             "Incorreta. Sindicato não processa a ascensão perante a Autoridade Marítima.",
-            "Incorreta. A ANTAQ não administra a carreira e habilitação do aquaviário."
+            "Correta. A iniciativa é do aquaviário interessado.",
+            "Incorreta. A empresa auxilia documentalmente, mas não é a titular do requerimento de ascensão."
         ],
         "fonte": "NORMAM-101/DPC — Anexo 2-A e procedimento de ascensão; DPC — Documentação e Certificação de Pessoal Aquaviário.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -385,13 +385,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Após a análise dos requisitos e o deferimento da ascensão, o ato deve ser respaldado por",
         "alternativas": [
-            "certidão expedida pelo Tribunal Marítimo.",
-            "Ordem de Serviço da CP/DL/AG onde a ascensão foi requerida.",
-            "resolução da ANTAQ.",
-            "ata da empresa de navegação.",
-            "autorização do Ministério do Trabalho."
+            "resolução administrativa da ANTAQ referente à categoria profissional pretendida.",
+            "autorização do órgão trabalhista competente para alteração da categoria profissional.",
+            "Ordem de Serviço da CP/DL/AG em que a ascensão foi requerida e deferida.",
+            "termo de promoção emitido pela empresa e averbado posteriormente pela Capitania.",
+            "certidão de habilitação expedida pelo Tribunal Marítimo após conferência dos requisitos."
         ],
-        "correta": 1,
+        "correta": 2,
         "comentario": "A DPC estabelece que a ascensão de categoria deverá ser respaldada por Ordem de Serviço da CP/DL/AG onde foi requerida.",
         "explicacaoCorreta": "A DPC estabelece que a ascensão de categoria deverá ser respaldada por Ordem de Serviço da CP/DL/AG onde foi requerida.",
         "revisaoAssunto": "A Ordem de Serviço é o suporte administrativo da Autoridade Marítima para formalização da ascensão, depois da conferência dos requisitos. Fonte: NORMAM-101/DPC — procedimento de ascensão; DPC — Documentação e Certificação de Pessoal Aquaviário.",
@@ -399,11 +399,11 @@
         "dicaMacete": "Associe carreira do aquaviário à Autoridade Marítima, não a órgãos econômicos ou trabalhistas.",
         "pegadinha": "A empresa pode emitir comprovantes, mas não substitui o ato administrativo da CP/DL/AG.",
         "analiseAlternativas": [
-            "Incorreta. Tribunal Marítimo não formaliza ascensão profissional.",
-            "Correta. É o ato indicado pela DPC.",
             "Incorreta. A ANTAQ não expede a Ordem de Serviço de ascensão.",
+            "Incorreta. A competência é da Autoridade Marítima.",
+            "Correta. É o ato indicado pela DPC.",
             "Incorreta. Ata empresarial não formaliza a alteração de categoria.",
-            "Incorreta. A competência é da Autoridade Marítima."
+            "Incorreta. Tribunal Marítimo não formaliza ascensão profissional."
         ],
         "fonte": "NORMAM-101/DPC — procedimento de ascensão; DPC — Documentação e Certificação de Pessoal Aquaviário.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -418,13 +418,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Para verificar os requisitos de acesso às diversas categorias, bem como limitações e observações pertinentes à carreira, a principal referência indicada pela DPC é",
         "alternativas": [
-            "o Anexo 1-G da NORMAM-101/DPC.",
-            "o Anexo 1-S da NORMAM-101/DPC.",
-            "o Quadro Geral de Certificações — Anexo 2-A da NORMAM-101/DPC.",
-            "o Anexo 2-D da NORMAM-101/DPC.",
-            "o Rol de Equipagem da última embarcação."
+            "o Anexo 1-G, destinado à comprovação de embarque em situação específica.",
+            "o Anexo 1-S, utilizado na comprovação de períodos de embarque do aquaviário.",
+            "o Rol de Equipagem da última embarcação em que o profissional esteve inscrito.",
+            "o Anexo 2-A, Quadro Geral de Certificações da NORMAM-101/DPC.",
+            "o Anexo 2-D, modelo relacionado à Licença de Categoria/Capacidade Superior."
         ],
-        "correta": 2,
+        "correta": 3,
         "comentario": "O Anexo 2-A reúne o Quadro Geral de Certificações e é a referência para os requisitos de acesso às categorias, limitações e observações.",
         "explicacaoCorreta": "O Anexo 2-A reúne o Quadro Geral de Certificações e é a referência para os requisitos de acesso às categorias, limitações e observações.",
         "revisaoAssunto": "Para estudar fluxo de carreira, o Anexo 2-A é central. Os demais anexos citados têm funções documentais específicas: 1-G para tempo em navio estrangeiro, 1-S para atestado de embarque e 2-D para LCS. Fonte: NORMAM-101/DPC, Anexo 2-A — Quadro Geral de Certificações; DPC — Perguntas Frequentes.",
@@ -434,242 +434,11 @@
         "analiseAlternativas": [
             "Incorreta. O Anexo 1-G é utilizado em comprovação de embarque em navio de bandeira estrangeira.",
             "Incorreta. O Anexo 1-S é o Atestado de Embarque de Aquaviários.",
+            "Incorreta. Rol de Equipagem é documento de embarcação, não substitui o Anexo 2-A.",
             "Correta. É a referência geral de requisitos de categorias e certificações.",
-            "Incorreta. O Anexo 2-D é o modelo ligado à LCS.",
-            "Incorreta. Rol de Equipagem é documento de embarcação, não substitui o Anexo 2-A."
+            "Incorreta. O Anexo 2-D é o modelo ligado à LCS."
         ],
         "fonte": "NORMAM-101/DPC, Anexo 2-A — Quadro Geral de Certificações; DPC — Perguntas Frequentes.",
-        "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
-    },
-    {
-        "id": "TAA-2026-LMA-2.1-014",
-        "disciplina": "Conhecimentos Específicos",
-        "eixo": "Legislação Marítima e Ambiental",
-        "topicoEdital": "2.1 Fluxo de carreira",
-        "assunto": "Cômputo qualitativo do tempo de embarque",
-        "tipoOrigem": "inedita_farol",
-        "origemInterna": "Inédita Farol 2026",
-        "enunciado": "Na análise do tempo de embarque para ascensão, os registros da CIR são examinados qualitativamente para verificar",
-        "alternativas": [
-            "apenas se o aquaviário permaneceu embarcado por mais de 30 dias consecutivos.",
-            "somente o nome comercial da empresa empregadora.",
-            "se a embarcação navegou exclusivamente em águas internacionais.",
-            "a compatibilidade dos registros de embarque da CIR com o CTS da embarcação e com a categoria/função necessária à ascensão pretendida.",
-            "exclusivamente a soma bruta dos dias, sem considerar a função exercida."
-        ],
-        "correta": 3,
-        "comentario": "A Marinha não considera apenas a quantidade de dias. Também verifica se o embarque ocorreu na categoria e função compatíveis com a ascensão pretendida, comparando registros da CIR e CTS.",
-        "explicacaoCorreta": "A Marinha não considera apenas a quantidade de dias. Também verifica se o embarque ocorreu na categoria e função compatíveis com a ascensão pretendida, comparando registros da CIR e CTS.",
-        "revisaoAssunto": "O tempo de embarque é quantitativo e qualitativo. Um período pode existir na CIR e ainda assim não servir para determinada ascensão se a função/categoria exercida não atender ao requisito. Fonte: NORMAM-101/DPC, itens 1.26 a 1.28; CPBA — Ascensão de Categoria, análise qualitativa dos registros da CIR e compatibilidade com o CTS.",
-        "memorizar2026": "Tempo válido para ascensão = dias + categoria/função compatíveis.",
-        "dicaMacete": "Cesgranrio gosta da oposição “somar dias” × “verificar função”.",
-        "pegadinha": "A simples presença a bordo não garante que todo o tempo seja aproveitável para qualquer ascensão.",
-        "analiseAlternativas": [
-            "Incorreta. Não há regra geral de 30 dias consecutivos para validar o período.",
-            "Incorreta. O empregador é dado documental, mas não é o núcleo da análise qualitativa.",
-            "Incorreta. O critério não é navegação internacional exclusiva.",
-            "Correta. É a análise descrita pela Marinha.",
-            "Incorreta. A função exercida é relevante e pode impedir o cômputo do período."
-        ],
-        "fonte": "NORMAM-101/DPC, itens 1.26 a 1.28; CPBA — Ascensão de Categoria, análise qualitativa dos registros da CIR e compatibilidade com o CTS.",
-        "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
-    },
-    {
-        "id": "TAA-2026-LMA-2.1-015",
-        "disciplina": "Conhecimentos Específicos",
-        "eixo": "Legislação Marítima e Ambiental",
-        "topicoEdital": "2.1 Fluxo de carreira",
-        "assunto": "Tempo em função inferior",
-        "tipoOrigem": "inedita_farol",
-        "origemInterna": "Inédita Farol 2026",
-        "enunciado": "Um aquaviário pretende utilizar, para ascensão, período em que esteve embarcado exercendo cargo ou função inferior à categoria ou qualificação exigida para a ascensão pretendida. Segundo a orientação da Marinha, esse período",
-        "alternativas": [
-            "é computado em dobro, por representar experiência adicional.",
-            "é computado se a empresa autorizar expressamente.",
-            "é sempre computado pela simples existência da anotação na CIR.",
-            "é convertido automaticamente em tempo equivalente da categoria superior.",
-            "não deve ser computado para a ascensão quando não comprovar o exercício na categoria e função necessárias."
-        ],
-        "correta": 4,
-        "comentario": "A análise qualitativa busca evitar justamente o cômputo de tempo em cargo ou função inferior à categoria/qualificação necessária para a ascensão.",
-        "explicacaoCorreta": "A análise qualitativa busca evitar justamente o cômputo de tempo em cargo ou função inferior à categoria/qualificação necessária para a ascensão.",
-        "revisaoAssunto": "Para fins de carreira, não basta “ter estado embarcado”. O tempo precisa corresponder ao tipo de experiência previsto para a categoria pretendida. Fonte: NORMAM-101/DPC, itens 1.26 a 1.28; CPBA — Ascensão de Categoria, análise qualitativa do tempo.",
-        "memorizar2026": "Função inferior incompatível ≠ tempo válido para ascensão pretendida.",
-        "dicaMacete": "Pergunte sempre “em qual categoria e função esse embarque ocorreu?”.",
-        "pegadinha": "A CIR é prova relevante, mas seu registro é analisado em conjunto com os requisitos da ascensão.",
-        "analiseAlternativas": [
-            "Incorreta. Não existe cômputo em dobro por função inferior.",
-            "Incorreta. A empresa não pode afastar requisito normativo por autorização própria.",
-            "Incorreta. A anotação é analisada qualitativamente.",
-            "Incorreta. Não há conversão automática para categoria superior.",
-            "Correta. O tempo precisa comprovar a experiência profissional exigida."
-        ],
-        "fonte": "NORMAM-101/DPC, itens 1.26 a 1.28; CPBA — Ascensão de Categoria, análise qualitativa do tempo.",
-        "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
-    },
-    {
-        "id": "TAA-2026-LMA-2.1-016",
-        "disciplina": "Conhecimentos Específicos",
-        "eixo": "Legislação Marítima e Ambiental",
-        "topicoEdital": "2.1 Fluxo de carreira",
-        "assunto": "Atestado de Embarque — Anexo 1-S",
-        "tipoOrigem": "inedita_farol",
-        "origemInterna": "Inédita Farol 2026",
-        "enunciado": "Para comprovar o tempo de embarque em procedimentos como ascensão de categoria, a NORMAM-101/DPC prevê a apresentação do",
-        "alternativas": [
-            "Atestado de Embarque de Aquaviários, conforme modelo do Anexo 1-S.",
-            "modelo de LCS do Anexo 2-D.",
-            "certificado de praticagem previsto para o 5º Grupo.",
-            "Anexo 1-G em todos os casos, inclusive embarques nacionais.",
-            "Certificado de Segurança da Navegação da embarcação como documento único."
-        ],
-        "correta": 0,
-        "comentario": "O Anexo 1-S é o modelo de Atestado de Embarque de Aquaviários utilizado na comprovação do tempo, em conjunto com os registros da CIR.",
-        "explicacaoCorreta": "O Anexo 1-S é o modelo de Atestado de Embarque de Aquaviários utilizado na comprovação do tempo, em conjunto com os registros da CIR.",
-        "revisaoAssunto": "O cômputo para ascensão exige coerência documental. O Anexo 1-S é preenchido pela empresa com base em seus registros e confrontado com as folhas de embarque da CIR. Fonte: NORMAM-101/DPC, item 1.26.1 e Anexo 1-S; CPBA/CIAGA — comprovação e contagem do tempo de embarque.",
-        "memorizar2026": "Anexo 1-S = Atestado de Embarque.",
-        "dicaMacete": "“S” de serviço/sea service ajuda a lembrar o documento de embarque.",
-        "pegadinha": "O Anexo 1-G aparece especificamente quando há tempo em navio de bandeira estrangeira.",
-        "analiseAlternativas": [
-            "Correta. É o documento indicado pela norma para comprovação do tempo de embarque.",
-            "Incorreta. O Anexo 2-D é vinculado à Licença de Categoria/Capacidade Superior.",
-            "Incorreta. Certificação de Prático não substitui o atestado de embarque.",
-            "Incorreta. O Anexo 1-G é utilizado quando aplicável a embarques em navios de bandeira estrangeira.",
-            "Incorreta. CTS/CSN da embarcação não substitui a documentação do tempo individual do aquaviário."
-        ],
-        "fonte": "NORMAM-101/DPC, item 1.26.1 e Anexo 1-S; CPBA/CIAGA — comprovação e contagem do tempo de embarque.",
-        "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
-    },
-    {
-        "id": "TAA-2026-LMA-2.1-017",
-        "disciplina": "Conhecimentos Específicos",
-        "eixo": "Legislação Marítima e Ambiental",
-        "topicoEdital": "2.1 Fluxo de carreira",
-        "assunto": "Preenchimento do Anexo 1-S",
-        "tipoOrigem": "inedita_farol",
-        "origemInterna": "Inédita Farol 2026",
-        "enunciado": "Ao preencher o Anexo 1-S para comprovação do tempo de embarque de um aquaviário, a empresa de navegação deve basear-se",
-        "alternativas": [
-            "na declaração verbal do comandante, independentemente de seus registros.",
-            "exclusivamente em seus registros de tempo de embarque do sistema de controle interno e no rol das embarcações.",
-            "apenas nas anotações manuscritas apresentadas pelo próprio aquaviário.",
-            "em estimativa do período médio trabalhado por empregados da mesma categoria.",
-            "somente nos recolhimentos previdenciários, dispensados os registros marítimos."
-        ],
-        "correta": 1,
-        "comentario": "A NORMAM determina que a empresa preencha o Anexo 1-S com base exclusivamente em seus registros de controle interno e no rol das embarcações.",
-        "explicacaoCorreta": "A NORMAM determina que a empresa preencha o Anexo 1-S com base exclusivamente em seus registros de controle interno e no rol das embarcações.",
-        "revisaoAssunto": "Esse procedimento cria uma trilha documental que será comparada com a CIR pela Autoridade Marítima. A lógica é impedir que o tempo seja comprovado apenas por declarações não verificáveis. Fonte: NORMAM-101/DPC, item 1.26.1, alíneas “a” a “e”; CIAGA — Comprovação e Contagem do Tempo de Embarque.",
-        "memorizar2026": "Empresa: controle interno + rol → Anexo 1-S.",
-        "dicaMacete": "Pense em duas fontes empresariais: sistema interno e rol.",
-        "pegadinha": "Contribuição previdenciária pode ter outras finalidades, mas não substitui a comprovação marítima prevista para ascensão.",
-        "analiseAlternativas": [
-            "Incorreta. A norma exige registros objetivos da empresa.",
-            "Correta. É a base documental expressamente indicada.",
-            "Incorreta. O aquaviário apresenta documentos, mas não substitui os registros empresariais.",
-            "Incorreta. Estimativa não comprova tempo individual.",
-            "Incorreta. Registros previdenciários não são o documento substitutivo previsto no procedimento."
-        ],
-        "fonte": "NORMAM-101/DPC, item 1.26.1, alíneas “a” a “e”; CIAGA — Comprovação e Contagem do Tempo de Embarque.",
-        "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
-    },
-    {
-        "id": "TAA-2026-LMA-2.1-018",
-        "disciplina": "Conhecimentos Específicos",
-        "eixo": "Legislação Marítima e Ambiental",
-        "topicoEdital": "2.1 Fluxo de carreira",
-        "assunto": "Divergência CIR × Anexo 1-S",
-        "tipoOrigem": "inedita_farol",
-        "origemInterna": "Inédita Farol 2026",
-        "enunciado": "Durante a conferência do tempo de embarque, a Autoridade Marítima identifica períodos e categorias que aparecem no Anexo 1-S, mas não coincidem com as folhas de registro de embarque da CIR. Esses períodos",
-        "alternativas": [
-            "devem ser aceitos pela metade.",
-            "são aceitos se superiores a seis meses.",
-            "não são considerados para o cômputo do tempo de embarque.",
-            "são convertidos em tempo de estágio.",
-            "devem ser homologados automaticamente pelo armador."
-        ],
-        "correta": 2,
-        "comentario": "No confronto documental, períodos/categorias não coincidentes entre os registros não são considerados para o cômputo.",
-        "explicacaoCorreta": "No confronto documental, períodos/categorias não coincidentes entre os registros não são considerados para o cômputo.",
-        "revisaoAssunto": "A Cesgranrio pode transformar uma regra documental simples em caso prático. O importante é lembrar que a comprovação exige consistência entre CIR e Anexo 1-S. Fonte: NORMAM-101/DPC, item 1.26.1, alíneas “c” a “e”; CIAGA — Comprovação e Contagem do Tempo de Embarque.",
-        "memorizar2026": "CIR e 1-S precisam coincidir.",
-        "dicaMacete": "Divergiu período/categoria? Desconfie do cômputo.",
-        "pegadinha": "A empresa não tem poder de homologar unilateralmente divergência perante a Autoridade Marítima.",
-        "analiseAlternativas": [
-            "Incorreta. A norma não cria cômputo pela metade.",
-            "Incorreta. A duração não sana divergência documental.",
-            "Correta. Períodos/categorias não coincidentes não são computados.",
-            "Incorreta. Divergência não se converte automaticamente em estágio.",
-            "Incorreta. A análise cabe aos representantes da Autoridade Marítima."
-        ],
-        "fonte": "NORMAM-101/DPC, item 1.26.1, alíneas “c” a “e”; CIAGA — Comprovação e Contagem do Tempo de Embarque.",
-        "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
-    },
-    {
-        "id": "TAA-2026-LMA-2.1-019",
-        "disciplina": "Conhecimentos Específicos",
-        "eixo": "Legislação Marítima e Ambiental",
-        "topicoEdital": "2.1 Fluxo de carreira",
-        "assunto": "Embarques em mais de uma empresa",
-        "tipoOrigem": "inedita_farol",
-        "origemInterna": "Inédita Farol 2026",
-        "enunciado": "Um aquaviário trabalhou, em períodos distintos, para três empresas de navegação e pretende comprovar esses embarques para fins de carreira. No procedimento do Anexo 1-S, ele deverá",
-        "alternativas": [
-            "escolher apenas a empresa do maior período e desprezar as demais.",
-            "pedir que a empresa atual certifique também os embarques realizados nas antigas empregadoras.",
-            "apresentar somente a CIR, pois o Anexo 1-S é dispensado quando há mais de uma empresa.",
-            "solicitar o Anexo 1-S às empresas correspondentes aos períodos de embarque que pretende comprovar, conforme o procedimento aplicável.",
-            "solicitar à ANTAQ um único mapa consolidado de todos os vínculos."
-        ],
-        "correta": 3,
-        "comentario": "O procedimento de cômputo prevê que o aquaviário obtenha o Anexo 1-S das empresas nas quais realizou os períodos que serão comprovados, para confronto com a CIR.",
-        "explicacaoCorreta": "O procedimento de cômputo prevê que o aquaviário obtenha o Anexo 1-S das empresas nas quais realizou os períodos que serão comprovados, para confronto com a CIR.",
-        "revisaoAssunto": "Cada empresa certifica os períodos existentes em seus próprios registros. Uma empresa atual não pode simplesmente declarar, em nome das anteriores, tempos que não constem de seu controle. Fonte: NORMAM-101/DPC, item 1.26.1; CIAGA — Comprovação e Contagem do Tempo de Embarque.",
-        "memorizar2026": "Mais de uma empresa → documentação correspondente a cada vínculo/período.",
-        "dicaMacete": "Quem tem o registro é quem certifica o período.",
-        "pegadinha": "A exceção para empresa encerrada possui tratamento extraordinário próprio; não autoriza a empresa atual a assumir todos os registros.",
-        "analiseAlternativas": [
-            "Incorreta. Períodos válidos de outras empresas podem ser relevantes e não devem ser descartados por essa razão.",
-            "Incorreta. A empresa atual deve basear-se nos próprios registros.",
-            "Incorreta. A existência de várias empresas não dispensa automaticamente o Anexo 1-S.",
-            "Correta. Cada período deve ser documentalmente comprovado conforme a origem dos registros.",
-            "Incorreta. A ANTAQ não emite esse mapa de carreira individual."
-        ],
-        "fonte": "NORMAM-101/DPC, item 1.26.1; CIAGA — Comprovação e Contagem do Tempo de Embarque.",
-        "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
-    },
-    {
-        "id": "TAA-2026-LMA-2.1-020",
-        "disciplina": "Conhecimentos Específicos",
-        "eixo": "Legislação Marítima e Ambiental",
-        "topicoEdital": "2.1 Fluxo de carreira",
-        "assunto": "Embarque em navio de bandeira estrangeira",
-        "tipoOrigem": "inedita_farol",
-        "origemInterna": "Inédita Farol 2026",
-        "enunciado": "Quando aplicável, o documento específico indicado pela NORMAM-101/DPC para comprovação de tempo de embarque em navio de bandeira estrangeira é o",
-        "alternativas": [
-            "Anexo 2-A.",
-            "Anexo 2-D.",
-            "Rol Portuário.",
-            "Certificado de Segurança da Navegação.",
-            "Anexo 1-G."
-        ],
-        "correta": 4,
-        "comentario": "Para tempo de embarque em navios de bandeira estrangeira, a documentação do serviço de ascensão remete ao Anexo 1-G da NORMAM-101/DPC, quando aplicável.",
-        "explicacaoCorreta": "Para tempo de embarque em navios de bandeira estrangeira, a documentação do serviço de ascensão remete ao Anexo 1-G da NORMAM-101/DPC, quando aplicável.",
-        "revisaoAssunto": "Não confunda os anexos: 1-S é o Atestado de Embarque usado no cômputo ordinário; 1-G aparece para tempo em navio estrangeiro; 2-A é o Quadro Geral de Certificações; 2-D é LCS. Fonte: NORMAM-101/DPC, Anexo 1-G; CPBA — Ascensão de Categoria, documentação necessária.",
-        "memorizar2026": "Navio estrangeiro → lembre do Anexo 1-G.",
-        "dicaMacete": "Faça um mapa dos anexos: 1-G estrangeiro; 1-S embarque; 2-A carreira; 2-D LCS.",
-        "pegadinha": "A Cesgranrio pode cobrar o número do anexo dentro de uma situação prática.",
-        "analiseAlternativas": [
-            "Incorreta. Anexo 2-A é o Quadro Geral de Certificações.",
-            "Incorreta. Anexo 2-D é o modelo de LCS.",
-            "Incorreta. Rol Portuário tem outra finalidade.",
-            "Incorreta. CSN não é o documento individual indicado para comprovar esse tempo.",
-            "Correta. É o anexo indicado para embarque em navio de bandeira estrangeira, quando aplicável."
-        ],
-        "fonte": "NORMAM-101/DPC, Anexo 1-G; CPBA — Ascensão de Categoria, documentação necessária.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
     },
     {
@@ -682,11 +451,11 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "A transferência de categoria entre Seções e/ou Grupos diferentes, segundo a NORMAM-101/DPC,",
         "alternativas": [
-            "é excepcional e pode ser concedida pelo Capitão dos Portos, mediante requerimento e análise dos requisitos.",
-            "é automática quando duas categorias possuem o mesmo nível de equivalência.",
-            "é obrigatória sempre que o aquaviário muda de empresa de navegação.",
-            "independe de avaliação de competência profissional.",
-            "é decidida exclusivamente pelo empregador do aquaviário."
+            "é excepcional, depende de requerimento e da análise dos requisitos pela Autoridade Marítima competente.",
+            "é exigida quando o aquaviário muda de empresa e passa a exercer função em outro tipo de embarcação.",
+            "decorre do mesmo nível de equivalência entre categorias, após atualização cadastral na CIR.",
+            "é autorizada pelo empregador e posteriormente comunicada à Capitania para simples registro.",
+            "depende da comprovação documental do interessado, sem avaliação de competência entre os grupos envolvidos."
         ],
         "correta": 0,
         "comentario": "A transferência entre grupos/seções não é uma promoção automática; tem caráter excepcional e depende de avaliação e decisão do Capitão dos Portos.",
@@ -697,10 +466,10 @@
         "pegadinha": "A banca pode chamar transferência de “ascensão lateral”; juridicamente os procedimentos são distintos.",
         "analiseAlternativas": [
             "Correta. Resume o caráter excepcional do procedimento.",
-            "Incorreta. Nível de equivalência não prova competência equivalente entre grupos.",
             "Incorreta. Troca de empresa não produz transferência de categoria.",
-            "Incorreta. A avaliação de competência é elemento central.",
-            "Incorreta. O empregador não substitui a decisão da Autoridade Marítima."
+            "Incorreta. Nível de equivalência não prova competência equivalente entre grupos.",
+            "Incorreta. O empregador não substitui a decisão da Autoridade Marítima.",
+            "Incorreta. A avaliação de competência é elemento central."
         ],
         "fonte": "NORMAM-101/DPC, Capítulo 2, art. 2.4; DPC/CPBA — Transferência de Categoria entre Seções e/ou Grupos Diferentes.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -715,11 +484,11 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Na análise de transferência de categoria entre grupos e/ou seções, a DPC destaca, entre os critérios,",
         "alternativas": [
-            "apenas o tempo total de contribuição previdenciária do interessado.",
-            "os requisitos de habilitação para o grupo pretendido, os requisitos de ingresso na categoria pretendida e a justificativa de necessidade do mercado de trabalho.",
-            "somente a existência de vaga na empresa atual.",
-            "apenas a identidade de nível de equivalência entre as duas categorias.",
-            "exclusivamente o tempo de embarque na última embarcação."
+            "tempo de contribuição, experiência na empresa e existência de vaga na embarcação pretendida.",
+            "habilitação para o grupo, ingresso na categoria pretendida e necessidade do mercado de trabalho.",
+            "equivalência de nível, exame médico atualizado e disponibilidade de vaga no quadro da empresa.",
+            "formação escolar, tempo de inscrição na CIR e existência de vínculo com empresa de navegação.",
+            "tempo de embarque, identidade de nível entre categorias e anuência do comandante da última embarcação."
         ],
         "correta": 1,
         "comentario": "A transferência exige análise mais ampla que a simples comparação de níveis: habilitação para o grupo, ingresso na categoria e necessidade do mercado integram a avaliação.",
@@ -731,9 +500,9 @@
         "analiseAlternativas": [
             "Incorreta. Previdência não é o critério central de transferência de categoria.",
             "Correta. São os três pontos destacados pela DPC.",
-            "Incorreta. Vaga empresarial isolada não basta.",
+            "Incorreta. Tempo de embarque pode integrar a análise, mas não é o único critério indicado.",
             "Incorreta. Equivalência numérica não significa competência equivalente.",
-            "Incorreta. Tempo de embarque pode integrar a análise, mas não é o único critério indicado."
+            "Incorreta. Vaga empresarial isolada não basta."
         ],
         "fonte": "NORMAM-101/DPC, Capítulo 2, art. 2.4; DPC — Documentação e Certificação de Pessoal Aquaviário.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -748,13 +517,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Dois aquaviários de grupos diferentes possuem categorias classificadas no mesmo nível de equivalência. A partir desse dado, é correto concluir que",
         "alternativas": [
-            "eles possuem automaticamente as mesmas regras STCW e capacidades.",
-            "um pode transferir-se para a categoria do outro sem requerimento.",
-            "o mesmo nível, por si só, não basta para estabelecer equivalência de competência entre grupos diferentes.",
-            "a Autoridade Marítima deve conceder transferência automática.",
-            "a diferença de qualificação entre grupos deixa de ter relevância."
+            "o mesmo nível não basta para demonstrar equivalência de competência entre grupos diferentes.",
+            "o nível comum assegura as mesmas capacidades, desde que ambos possuam certificados STCW válidos.",
+            "a equivalência numérica de nível obriga a Autoridade Marítima a reconhecer a transferência de categoria.",
+            "a transferência pode ocorrer sem requerimento, cabendo à Capitania atualizar os registros profissionais.",
+            "as diferenças de formação perdem relevância quando as categorias ocupam o mesmo nível no quadro geral."
         ],
-        "correta": 2,
+        "correta": 0,
         "comentario": "A DPC adverte expressamente que o nível de equivalência não basta para comparar competência entre aquaviários de grupos diferentes.",
         "explicacaoCorreta": "A DPC adverte expressamente que o nível de equivalência não basta para comparar competência entre aquaviários de grupos diferentes.",
         "revisaoAssunto": "O número do nível é uma referência de enquadramento, não uma declaração de identidade profissional. Grupos diferentes podem exigir qualificações, cursos e capacidades significativamente distintos. Fonte: NORMAM-101/DPC, Capítulo 2, art. 2.4; DPC — Perguntas Frequentes sobre transferência de categoria.",
@@ -762,10 +531,10 @@
         "dicaMacete": "Se a questão trocar “equivalência de nível” por “equivalência de competência”, desconfie.",
         "pegadinha": "Esse é um excelente distrator porque a palavra “equivalência” induz a pensar em identidade completa.",
         "analiseAlternativas": [
-            "Incorreta. Regras e capacidades dependem da habilitação específica.",
-            "Incorreta. Transferência exige procedimento e análise.",
             "Correta. É a ressalva expressa da DPC.",
+            "Incorreta. Regras e capacidades dependem da habilitação específica.",
             "Incorreta. Não há automatismo por igualdade de nível.",
+            "Incorreta. Transferência exige procedimento e análise.",
             "Incorreta. Diferenças de qualificação continuam relevantes."
         ],
         "fonte": "NORMAM-101/DPC, Capítulo 2, art. 2.4; DPC — Perguntas Frequentes sobre transferência de categoria.",
@@ -781,11 +550,11 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Na transferência de categoria entre grupos/seções, se a formação anterior não for suficiente para a nova categoria pretendida, a Autoridade Marítima poderá exigir complementação por meio de",
         "alternativas": [
-            "apenas novo exame médico, dispensada formação profissional.",
-            "somente declaração da empresa atestando experiência.",
-            "exclusivamente pagamento de taxa adicional.",
-            "aulas, treinamentos, embarques e/ou provas escritas ou práticas, conforme a necessidade de nivelamento profissional.",
-            "conversão automática do tempo de serviço em certificado de competência."
+            "novo exame médico e comprovação de aptidão física para as tarefas da categoria pretendida.",
+            "avaliação documental do tempo de serviço e comprovação de equivalência do nível profissional.",
+            "declaração de experiência da empresa acompanhada dos registros de embarque constantes da CIR.",
+            "aulas, treinamentos, embarques ou provas, conforme o nivelamento profissional necessário.",
+            "conversão do tempo de serviço em certificado de competência correspondente à nova categoria."
         ],
         "correta": 3,
         "comentario": "A DPC prevê que a formação possa ser complementada com aulas, treinamento, embarque e/ou provas escritas ou práticas para alcançar os requisitos mínimos da categoria pretendida.",
@@ -796,8 +565,8 @@
         "pegadinha": "Experiência empresarial não substitui automaticamente o currículo profissional exigido.",
         "analiseAlternativas": [
             "Incorreta. Exame de saúde não substitui formação profissional.",
-            "Incorreta. Declaração empresarial isolada não supre lacunas curriculares.",
             "Incorreta. Taxa não substitui avaliação de competência.",
+            "Incorreta. Declaração empresarial isolada não supre lacunas curriculares.",
             "Correta. São formas de complementação mencionadas pela Marinha.",
             "Incorreta. Tempo de serviço não se converte automaticamente em certificado."
         ],
@@ -814,13 +583,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Um aquaviário muda sua residência e passa a exercer a atividade em localidade sob responsabilidade de outra Organização Militar, mantendo a mesma categoria profissional. O procedimento correspondente é",
         "alternativas": [
+            "nova inscrição como aquaviário na OM de destino.",
+            "Licença de Categoria/Capacidade Superior.",
             "ascensão de categoria.",
-            "Licença de Categoria Superior.",
-            "transferência de categoria entre seções.",
-            "nova inscrição como aquaviário.",
-            "transferência de jurisdição."
+            "transferência de jurisdição.",
+            "transferência de categoria entre grupos."
         ],
-        "correta": 4,
+        "correta": 3,
         "comentario": "A mudança da OM responsável pelo cadastro em razão do local de residência/atividade é transferência de jurisdição, não alteração de categoria.",
         "explicacaoCorreta": "A mudança da OM responsável pelo cadastro em razão do local de residência/atividade é transferência de jurisdição, não alteração de categoria.",
         "revisaoAssunto": "A transferência de jurisdição muda a OM responsável pelos principais lançamentos da carreira na CIR e no SISAQUA. A categoria profissional pode permanecer exatamente a mesma. Fonte: NORMAM-101/DPC, item/art. 1.30; DPC — Documentação e Certificação de Pessoal Aquaviário.",
@@ -828,11 +597,11 @@
         "dicaMacete": "Pergunte: mudou a categoria ou apenas a jurisdição administrativa?",
         "pegadinha": "“Transferência” aparece em dois procedimentos diferentes; a banca pode explorar essa semelhança de nomes.",
         "analiseAlternativas": [
-            "Incorreta. Não há elevação para categoria superior.",
-            "Incorreta. LCS autoriza temporariamente função superior em embarcação específica.",
-            "Incorreta. A seção profissional foi mantida.",
             "Incorreta. O aquaviário já está inscrito.",
-            "Correta. É a situação típica de transferência de jurisdição."
+            "Incorreta. LCS autoriza temporariamente função superior em embarcação específica.",
+            "Incorreta. Não há elevação para categoria superior.",
+            "Correta. É a situação típica de transferência de jurisdição.",
+            "Incorreta. A seção profissional foi mantida."
         ],
         "fonte": "NORMAM-101/DPC, item/art. 1.30; DPC — Documentação e Certificação de Pessoal Aquaviário.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -847,13 +616,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "A Licença de Categoria/Capacidade Superior (LCS) é",
         "alternativas": [
-            "autorização temporária para o aquaviário exercer, em embarcação específica, funções pertinentes a categoria/capacidade superior à de seu enquadramento.",
-            "promoção definitiva para a categoria imediatamente superior.",
-            "documento que substitui permanentemente a CIR.",
-            "autorização genérica para servir em qualquer embarcação de qualquer arqueação.",
-            "modalidade de transferência de jurisdição entre Capitanias."
+            "promoção para categoria superior, válida após o primeiro embarque realizado na nova função profissional.",
+            "autorização temporária para exercer capacidade superior em embarcação específica, sem alterar definitivamente a categoria.",
+            "modalidade de transferência entre Capitanias aplicável ao aquaviário que muda de área de atuação.",
+            "autorização para exercer capacidade superior em qualquer embarcação da empresa durante sua vigência.",
+            "documento provisório que substitui a CIR enquanto se processa a ascensão definitiva do aquaviário."
         ],
-        "correta": 0,
+        "correta": 1,
         "comentario": "A LCS autoriza temporariamente o exercício de funções superiores em uma embarcação específica; ela não altera definitivamente a categoria do aquaviário.",
         "explicacaoCorreta": "A LCS autoriza temporariamente o exercício de funções superiores em uma embarcação específica; ela não altera definitivamente a categoria do aquaviário.",
         "revisaoAssunto": "A diferença fundamental é temporal e funcional: LCS é excepcional e limitada; ascensão é alteração formal da categoria quando os requisitos são cumpridos. Fonte: NORMAM-101/DPC, Capítulo 2, art. 2.3 e Anexo 2-D; DPC — Perguntas Frequentes sobre LCS.",
@@ -861,11 +630,11 @@
         "dicaMacete": "“Licença” lembra autorização temporária, não ascensão.",
         "pegadinha": "A alternativa pode parecer promoção porque permite exercer função superior, mas o enquadramento real permanece distinto.",
         "analiseAlternativas": [
-            "Correta. Resume a natureza jurídica da LCS.",
             "Incorreta. A licença não promove definitivamente o aquaviário.",
-            "Incorreta. A CIR continua sendo documento profissional.",
+            "Correta. Resume a natureza jurídica da LCS.",
+            "Incorreta. Jurisdição é procedimento administrativo diferente.",
             "Incorreta. A LCS está vinculada a embarcação específica.",
-            "Incorreta. Jurisdição é procedimento administrativo diferente."
+            "Incorreta. A CIR continua sendo documento profissional."
         ],
         "fonte": "NORMAM-101/DPC, Capítulo 2, art. 2.3 e Anexo 2-D; DPC — Perguntas Frequentes sobre LCS.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -880,13 +649,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Quanto à duração e ao alcance da Licença de Categoria/Capacidade Superior, a NORMAM-101/DPC estabelece que ela",
         "alternativas": [
-            "é válida por prazo indeterminado enquanto persistir o vínculo empregatício.",
-            "é concedida para embarcação específica e por período determinado que não pode exceder seis meses.",
-            "é válida por doze meses para qualquer embarcação da mesma empresa.",
-            "pode ser usada em qualquer embarcação nacional durante três anos.",
-            "não possui limite temporal quando autorizada pelo armador."
+            "acompanha o vínculo empregatício e permanece válida enquanto o aquaviário servir à mesma empresa.",
+            "pode ser utilizada em qualquer embarcação nacional durante o prazo de três anos de sua emissão.",
+            "vale para embarcação específica e por período determinado, limitado a seis meses.",
+            "permanece vigente enquanto persistir a necessidade operacional informada pelo armador à Capitania.",
+            "vale por doze meses para as embarcações da empresa que possuam a mesma lotação de segurança."
         ],
-        "correta": 1,
+        "correta": 2,
         "comentario": "A LCS é individualizada para embarcação específica e tem prazo determinado, limitado a seis meses.",
         "explicacaoCorreta": "A LCS é individualizada para embarcação específica e tem prazo determinado, limitado a seis meses.",
         "revisaoAssunto": "O próprio modelo de LCS contém dados como nome e arqueação bruta da embarcação, reforçando que a autorização não é genérica para a frota inteira. Fonte: NORMAM-101/DPC, Capítulo 2, art. 2.3 e Anexo 2-D; DPC — Documentação e Certificação de Pessoal Aquaviário.",
@@ -895,10 +664,10 @@
         "pegadinha": "O caráter temporário diferencia a LCS da ascensão formal.",
         "analiseAlternativas": [
             "Incorreta. Não é licença por prazo indeterminado.",
-            "Correta. Esses são os limites informados pela DPC.",
-            "Incorreta. Não há autorização genérica anual para a frota.",
             "Incorreta. A LCS não é habilitação ampla de três anos.",
-            "Incorreta. O armador não afasta o limite normativo."
+            "Correta. Esses são os limites informados pela DPC.",
+            "Incorreta. O armador não afasta o limite normativo.",
+            "Incorreta. Não há autorização genérica anual para a frota."
         ],
         "fonte": "NORMAM-101/DPC, Capítulo 2, art. 2.3 e Anexo 2-D; DPC — Documentação e Certificação de Pessoal Aquaviário.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -913,13 +682,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Uma empresa pretende obter LCS para um aquaviário. De acordo com a orientação da DPC, a licença deve ser concedida",
         "alternativas": [
-            "sempre que a empresa alegar redução de custos operacionais.",
-            "automaticamente quando o aquaviário possuir mais de cinco anos de CIR.",
-            "em circunstâncias excepcionais, depois de esgotados os recursos para substituição do tripulante, mediante solicitação da empresa.",
-            "apenas após ascensão definitiva do aquaviário.",
-            "pelo sindicato, sem participação da Autoridade Marítima."
+            "em situação excepcional, após esgotadas as alternativas de substituição, mediante solicitação da empresa.",
+            "depois de deferida a ascensão, para permitir o exercício da nova categoria antes da atualização da CIR.",
+            "mediante requerimento sindical e comprovação de falta de profissionais disponíveis no mercado regional.",
+            "quando o aquaviário possuir experiência superior à exigida para a categoria em que está inscrito.",
+            "quando a redução de custos justificar o emprego temporário de profissional de categoria inferior."
         ],
-        "correta": 2,
+        "correta": 0,
         "comentario": "A LCS só deve ser concedida em situação excepcional e após esgotados os recursos para substituir o tripulante, mediante solicitação formal da empresa.",
         "explicacaoCorreta": "A LCS só deve ser concedida em situação excepcional e após esgotados os recursos para substituir o tripulante, mediante solicitação formal da empresa.",
         "revisaoAssunto": "Esse desenho evita que a licença seja usada como atalho permanente para suprir tripulação em categoria superior. Trata-se de solução excepcional, controlada pela Autoridade Marítima. Fonte: NORMAM-101/DPC, Capítulo 2, art. 2.3; DPC — Perguntas Frequentes sobre LCS.",
@@ -927,11 +696,11 @@
         "dicaMacete": "Compare com ascensão: ascensão é requerida pelo aquaviário; LCS nasce de necessidade excepcional da empresa.",
         "pegadinha": "Experiência longa não transforma a licença em direito automático.",
         "analiseAlternativas": [
-            "Incorreta. Economia operacional não é fundamento automático da licença.",
-            "Incorreta. Tempo de CIR não gera LCS automática.",
             "Correta. É a condição de excepcionalidade destacada pela DPC.",
             "Incorreta. Se já houve ascensão definitiva, a lógica da LCS para aquela superioridade muda completamente.",
-            "Incorreta. A licença é concedida pela Autoridade Marítima competente."
+            "Incorreta. A licença é concedida pela Autoridade Marítima competente.",
+            "Incorreta. Tempo de CIR não gera LCS automática.",
+            "Incorreta. Economia operacional não é fundamento automático da licença."
         ],
         "fonte": "NORMAM-101/DPC, Capítulo 2, art. 2.3; DPC — Perguntas Frequentes sobre LCS.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -946,13 +715,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Um aquaviário recebe autorização por quatro meses para exercer capacidade superior à de seu enquadramento em uma embarcação determinada. Ao término, essa autorização, por si só,",
         "alternativas": [
-            "transforma automaticamente o período em ascensão definitiva.",
-            "dispensa qualquer requisito futuro do Anexo 2-A.",
-            "transfere o aquaviário para outro grupo profissional.",
-            "não equivale a ascensão definitiva de categoria, pois caracteriza LCS temporária.",
-            "altera permanentemente a categoria impressa na CIR."
+            "converte o exercício temporário em ascensão após o término do período autorizado.",
+            "produz transferência para o grupo profissional ao qual pertence a capacidade temporariamente exercida.",
+            "não equivale a ascensão definitiva, pois corresponde ao exercício temporário autorizado pela LCS.",
+            "altera a categoria registrada na CIR durante a validade e mantém a alteração após seu vencimento.",
+            "dispensa os requisitos futuros do quadro de certificações relativos à categoria exercida."
         ],
-        "correta": 3,
+        "correta": 2,
         "comentario": "Exercer temporariamente função superior por LCS não é o mesmo que ascender de categoria. A ascensão exige o cumprimento do fluxo e dos requisitos próprios.",
         "explicacaoCorreta": "Exercer temporariamente função superior por LCS não é o mesmo que ascender de categoria. A ascensão exige o cumprimento do fluxo e dos requisitos próprios.",
         "revisaoAssunto": "A banca pode explorar o efeito prático semelhante — “exercer função superior” — para confundir institutos distintos. O ponto decisivo é que a LCS é temporária e vinculada à embarcação. Fonte: NORMAM-101/DPC, Capítulo 2, arts. 2.3 e 2.4; Anexo 2-A e Anexo 2-D; DPC — Perguntas Frequentes.",
@@ -961,10 +730,10 @@
         "pegadinha": "Exercer uma função superior não significa, sozinho, possuir a categoria superior.",
         "analiseAlternativas": [
             "Incorreta. A licença não se converte automaticamente em ascensão.",
-            "Incorreta. Requisitos do Anexo 2-A continuam aplicáveis à ascensão.",
             "Incorreta. LCS não produz transferência automática de grupo.",
             "Correta. A situação descrita é típica de LCS.",
-            "Incorreta. O enquadramento não se torna definitivamente superior pela licença."
+            "Incorreta. O enquadramento não se torna definitivamente superior pela licença.",
+            "Incorreta. Requisitos do Anexo 2-A continuam aplicáveis à ascensão."
         ],
         "fonte": "NORMAM-101/DPC, Capítulo 2, arts. 2.3 e 2.4; Anexo 2-A e Anexo 2-D; DPC — Perguntas Frequentes.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -979,10 +748,10 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "O modelo documental indicado pela DPC para concessão da Licença de Categoria/Capacidade Superior é o",
         "alternativas": [
-            "Anexo 1-G.",
             "Anexo 1-S.",
-            "Anexo 2-A.",
+            "Anexo 1-G.",
             "Anexo 1-L.",
+            "Anexo 2-A.",
             "Anexo 2-D."
         ],
         "correta": 4,
@@ -993,10 +762,10 @@
         "dicaMacete": "Guarde o trio: 1-S embarque; 2-A carreira; 2-D LCS.",
         "pegadinha": "O número do anexo é um detalhe típico para a banca colocar em alternativas parecidas.",
         "analiseAlternativas": [
-            "Incorreta. 1-G está ligado a embarque em navio estrangeiro.",
             "Incorreta. 1-S é o Atestado de Embarque.",
-            "Incorreta. 2-A é o Quadro Geral de Certificações.",
+            "Incorreta. 1-G está ligado a embarque em navio estrangeiro.",
             "Incorreta. 1-L é utilizado em outros procedimentos documentais, não é o modelo da LCS.",
+            "Incorreta. 2-A é o Quadro Geral de Certificações.",
             "Correta. O modelo da LCS é o Anexo 2-D."
         ],
         "fonte": "NORMAM-101/DPC, Capítulo 2, art. 2.3 e Anexo 2-D; DPC — Perguntas Frequentes.",
@@ -1012,13 +781,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Considere as etapas: I — o aquaviário cumpre os requisitos da categoria pretendida; II — apresenta requerimento à OM de jurisdição; III — a Autoridade Marítima confere a documentação e os requisitos; IV — a ascensão é respaldada por Ordem de Serviço e refletida nos registros de carreira. A sequência está",
         "alternativas": [
-            "correta e compatível com o procedimento de ascensão.",
-            "incorreta, porque o pedido deve partir exclusivamente da empresa.",
-            "incorreta, porque a Ordem de Serviço deve preceder o cumprimento dos requisitos.",
-            "incorreta, porque a ascensão não produz atualização em registros oficiais.",
-            "incorreta, porque a análise cabe exclusivamente à ANTAQ."
+            "incorreta, porque a ascensão altera a função, mas não produz atualização nos registros oficiais.",
+            "correta e compatível com o procedimento administrativo da ascensão.",
+            "incorreta, porque a Ordem de Serviço deve ser emitida antes da comprovação dos requisitos.",
+            "incorreta, porque o requerimento deve ser apresentado pela empresa de navegação interessada.",
+            "incorreta, porque a análise dos requisitos profissionais é atribuição administrativa da ANTAQ."
         ],
-        "correta": 0,
+        "correta": 1,
         "comentario": "O fluxo descrito sintetiza corretamente o procedimento: requisitos → requerimento → conferência → formalização e atualização dos registros.",
         "explicacaoCorreta": "O fluxo descrito sintetiza corretamente o procedimento: requisitos → requerimento → conferência → formalização e atualização dos registros.",
         "revisaoAssunto": "Em questões sequenciais, a Cesgranrio pode deslocar uma etapa. O requerimento não cria o direito sem requisitos, e a Ordem de Serviço não vem antes da análise. Fonte: NORMAM-101/DPC — procedimento de ascensão, itens 1.26 a 1.28 e Anexo 2-A; DPC/CPBA — Ascensão de Categoria.",
@@ -1026,10 +795,10 @@
         "dicaMacete": "Organize mentalmente o processo em ordem cronológica.",
         "pegadinha": "Trocar a iniciativa do aquaviário pela empresa é uma armadilha frequente quando a questão também menciona LCS.",
         "analiseAlternativas": [
-            "Correta. A sequência reproduz a lógica do procedimento.",
-            "Incorreta. Na ascensão, a iniciativa é do aquaviário.",
-            "Incorreta. A Ordem de Serviço decorre da análise, não a antecede.",
             "Incorreta. CIR/SISAQUA são atualizados.",
+            "Correta. A sequência reproduz a lógica do procedimento.",
+            "Incorreta. A Ordem de Serviço decorre da análise, não a antecede.",
+            "Incorreta. Na ascensão, a iniciativa é do aquaviário.",
             "Incorreta. A ANTAQ não processa a carreira profissional do aquaviário."
         ],
         "fonte": "NORMAM-101/DPC — procedimento de ascensão, itens 1.26 a 1.28 e Anexo 2-A; DPC/CPBA — Ascensão de Categoria.",
@@ -1045,13 +814,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Um aquaviário concluiu um curso do Ensino Profissional Marítimo relacionado à sua área e afirma que, por esse fato isolado, a Autoridade Marítima é obrigada a promovê-lo imediatamente. Essa afirmação é",
         "alternativas": [
-            "correta, porque todo curso do EPM produz ascensão automática.",
-            "incorreta, porque a ascensão depende dos requisitos específicos da categoria pretendida previstos no Quadro Geral de Certificações, podendo envolver curso, estágio e/ou tempo de embarque.",
-            "correta apenas quando o aquaviário está desempregado.",
-            "correta se houver autorização verbal do comandante.",
-            "incorreta somente porque toda ascensão exige dez anos de embarque."
+            "correta, desde que o curso concluído seja ministrado pelo Ensino Profissional Marítimo.",
+            "correta se o comandante confirmar que o aquaviário já executa tarefas da categoria superior.",
+            "incorreta, pois a ascensão exige os requisitos específicos da categoria previstos no Quadro Geral de Certificações.",
+            "incorreta porque toda ascensão depende de tempo mínimo de embarque, ainda que o quadro não o exija.",
+            "correta quando o aquaviário conclui o curso sem possuir vínculo com empresa de navegação."
         ],
-        "correta": 1,
+        "correta": 2,
         "comentario": "A conclusão de curso pode ser um dos requisitos, mas não transforma toda ascensão em ato automático. É necessário verificar o Anexo 2-A e as exigências da categoria concreta.",
         "explicacaoCorreta": "A conclusão de curso pode ser um dos requisitos, mas não transforma toda ascensão em ato automático. É necessário verificar o Anexo 2-A e as exigências da categoria concreta.",
         "revisaoAssunto": "O erro clássico é converter “curso pode gerar requisito de ascensão” em “qualquer curso gera promoção”. As condições variam conforme a categoria e o fluxo profissional. Fonte: NORMAM-101/DPC, itens 1.26 a 1.28 e Anexo 2-A; DPC — Ascensão de Categoria.",
@@ -1060,10 +829,10 @@
         "pegadinha": "A alternativa errada costuma usar palavras como “automaticamente”, “sempre” ou um tempo fixo inexistente para todas as categorias.",
         "analiseAlternativas": [
             "Incorreta. Cursos não produzem ascensão automática em todos os fluxos.",
-            "Correta. Os requisitos são específicos da categoria pretendida.",
-            "Incorreta. Situação de emprego não cria essa regra.",
             "Incorreta. Comandante não substitui o procedimento administrativo.",
-            "Incorreta. Não existe exigência universal de dez anos."
+            "Correta. Os requisitos são específicos da categoria pretendida.",
+            "Incorreta. Não existe exigência universal de dez anos.",
+            "Incorreta. Situação de emprego não cria essa regra."
         ],
         "fonte": "NORMAM-101/DPC, itens 1.26 a 1.28 e Anexo 2-A; DPC — Ascensão de Categoria.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -1078,13 +847,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Em relação especificamente ao Taifeiro (TAA), assinale a afirmação correta.",
         "alternativas": [
-            "Integra a Seção de Máquinas e pode ascender a Condutor de Máquinas pelo simples tempo de embarque.",
-            "Integra a Seção de Saúde e sua categoria imediatamente superior é Enfermeiro.",
-            "Integra a Seção de Câmara e os documentos oficiais do CAAQ-CTS informam que essa categoria não possui ascensão de categoria, prevista para outras seções.",
-            "Integra a Seção de Convés e ascende automaticamente a Marinheiro de Convés.",
-            "É categoria do grupo dos Práticos e depende de Zona de Praticagem."
+            "Integra a Seção de Máquinas e alcança a categoria de Condutor de Máquinas pelo fluxo de ascensão.",
+            "Integra a Seção de Saúde e possui Enfermeiro como categoria superior no mesmo fluxo profissional.",
+            "Integra o grupo dos Práticos e sua habilitação depende da zona de praticagem em que atuar.",
+            "Integra a Seção de Convés e passa a Marinheiro de Convés após cumprir tempo de embarque.",
+            "Integra a Seção de Câmara e, no CAAQ-CTS, a categoria TAA não possui ascensão de categoria."
         ],
-        "correta": 2,
+        "correta": 4,
         "comentario": "O TAA pertence à Seção de Câmara. No CAAQ-CTS, a Marinha informa que os profissionais CZA/TAA/ENF/ASA não têm ascensão de categoria como ocorre em outros fluxos.",
         "explicacaoCorreta": "O TAA pertence à Seção de Câmara. No CAAQ-CTS, a Marinha informa que os profissionais CZA/TAA/ENF/ASA não têm ascensão de categoria como ocorre em outros fluxos.",
         "revisaoAssunto": "Essa é provavelmente a principal particularidade para o candidato a Taifeiro: estudar o fluxo geral dos aquaviários sem presumir que sua própria categoria tenha uma escada de ascensão. Fonte: PREPOM-Aquaviários/2026 — CAAQ-CTS; Edital CAAQ-CTS T02/2026, item 1.4, Capitania dos Portos de Sergipe.",
@@ -1094,9 +863,9 @@
         "analiseAlternativas": [
             "Incorreta. TAA não pertence à Seção de Máquinas.",
             "Incorreta. TAA é Câmara; ENF é Saúde.",
-            "Correta. É o enquadramento oficial e a ressalva do CAAQ-CTS.",
+            "Incorreta. Práticos constituem outro grupo profissional.",
             "Incorreta. Não há ascensão automática para Marinheiro de Convés.",
-            "Incorreta. Práticos constituem outro grupo profissional."
+            "Correta. É o enquadramento oficial e a ressalva do CAAQ-CTS."
         ],
         "fonte": "PREPOM-Aquaviários/2026 — CAAQ-CTS; Edital CAAQ-CTS T02/2026, item 1.4, Capitania dos Portos de Sergipe.",
         "atualizacao2026": "Referência conferida para o Banco 2026. A NORMAM-101/DPC vigente consta na página oficial da DPC vinculada à Portaria DPC/DGN/MB nº 205, de 22/07/2026."
@@ -1111,13 +880,13 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Ao estudar “fluxo de carreira dos aquaviários” para o cargo de Taifeiro, é juridicamente adequado compreender que",
         "alternativas": [
-            "todas as categorias aquaviárias possuem exatamente a mesma sequência de níveis e promoções.",
-            "o nível de equivalência torna os grupos profissionais intercambiáveis.",
-            "a carreira depende apenas do empregador e não da Autoridade Marítima.",
-            "existem diferentes grupos, seções e categorias, com requisitos próprios; além disso, algumas categorias como TAA não possuem ascensão de categoria no fluxo do CAAQ-CTS.",
-            "a única forma de evolução profissional de qualquer aquaviário é a LCS."
+            "há grupos, seções e categorias com requisitos próprios, e nem todas as categorias possuem ascensão.",
+            "o fluxo profissional é definido pela empresa, cabendo à Autoridade Marítima registrar a evolução informada.",
+            "categorias do mesmo nível de equivalência podem ser tratadas como intercambiáveis entre grupos profissionais.",
+            "todas as categorias seguem a mesma sequência de níveis, diferenciando-se pelo grupo em que estão inscritas.",
+            "a evolução profissional ocorre por LCS, que substitui a ascensão e a transferência entre categorias."
         ],
-        "correta": 3,
+        "correta": 0,
         "comentario": "A estrutura aquaviária é plural: grupos e seções têm requisitos próprios. A ascensão existe em diversos fluxos, mas não deve ser generalizada ao TAA, cuja documentação do CAAQ-CTS afasta a ascensão de categoria.",
         "explicacaoCorreta": "A estrutura aquaviária é plural: grupos e seções têm requisitos próprios. A ascensão existe em diversos fluxos, mas não deve ser generalizada ao TAA, cuja documentação do CAAQ-CTS afasta a ascensão de categoria.",
         "revisaoAssunto": "Esse raciocínio protege contra duas generalizações erradas: tratar todos os aquaviários como uma carreira única e presumir que mesmo nível signifique mesma competência. Fonte: RLESTA — Decreto nº 2.596/1998, Capítulo I, art. 1º; NORMAM-101/DPC, Capítulos 1 e 2, Anexo 2-A; PREPOM-Aquaviários/2026 — CAAQ-CTS.",
@@ -1125,10 +894,10 @@
         "dicaMacete": "Primeiro identifique grupo, seção e categoria; depois aplique o fluxo correspondente.",
         "pegadinha": "A palavra “aquaviário” é ampla e inclui profissionais com formações e trajetórias muito diferentes.",
         "analiseAlternativas": [
-            "Incorreta. Há múltiplos grupos, seções e requisitos.",
-            "Incorreta. Nível de equivalência não iguala competências entre grupos.",
-            "Incorreta. A carreira é regulada pela Autoridade Marítima.",
             "Correta. Resume a estrutura normativa e a particularidade do TAA.",
+            "Incorreta. A carreira é regulada pela Autoridade Marítima.",
+            "Incorreta. Nível de equivalência não iguala competências entre grupos.",
+            "Incorreta. Há múltiplos grupos, seções e requisitos.",
             "Incorreta. LCS é autorização excepcional, não única forma de evolução profissional."
         ],
         "fonte": "RLESTA — Decreto nº 2.596/1998, Capítulo I, art. 1º; NORMAM-101/DPC, Capítulos 1 e 2, Anexo 2-A; PREPOM-Aquaviários/2026 — CAAQ-CTS.",
@@ -1144,11 +913,11 @@
         "origemInterna": "Inédita Farol 2026",
         "enunciado": "Considere três situações: I — um aquaviário de fluxo que admite promoção cumpriu os requisitos do Anexo 2-A e requer categoria superior à sua OM de jurisdição; II — outro pretende mudar de grupo profissional, embora as categorias tenham o mesmo nível de equivalência; III — a empresa necessita excepcionalmente que um aquaviário exerça capacidade superior em uma embarcação específica por quatro meses. As situações I, II e III correspondem, respectivamente, a",
         "alternativas": [
-            "transferência de jurisdição, ascensão automática e nova inscrição.",
-            "LCS, transferência de jurisdição e ascensão.",
-            "ascensão, LCS e transferência de categoria.",
-            "nova inscrição, ascensão e transferência de jurisdição.",
-            "ascensão de categoria, transferência de categoria sujeita a avaliação de competência e Licença de Categoria/Capacidade Superior."
+            "ascensão de categoria; Licença de Categoria/Capacidade Superior; transferência de categoria.",
+            "nova inscrição como aquaviário; ascensão de categoria; transferência de jurisdição.",
+            "Licença de Categoria/Capacidade Superior; transferência de jurisdição; ascensão de categoria.",
+            "transferência de jurisdição; ascensão de categoria; nova inscrição como aquaviário.",
+            "ascensão de categoria; transferência de categoria; Licença de Categoria/Capacidade Superior."
         ],
         "correta": 4,
         "comentario": "A situação I descreve ascensão; a II, transferência entre grupos/seções, que não é automática por equivalência de nível; e a III, LCS temporária e específica.",
@@ -1158,10 +927,10 @@
         "dicaMacete": "Resolva cada situação separadamente e só depois compare as alternativas.",
         "pegadinha": "Todas envolvem “mudança” na vida profissional, mas produzem efeitos jurídicos distintos.",
         "analiseAlternativas": [
-            "Incorreta. As três classificações estão deslocadas.",
-            "Incorreta. I não é LCS e II não é simples jurisdição.",
             "Incorreta. II é transferência; III é LCS.",
             "Incorreta. I não é nova inscrição e III não é jurisdição.",
+            "Incorreta. I não é LCS e II não é simples jurisdição.",
+            "Incorreta. As três classificações estão deslocadas.",
             "Correta. As três situações correspondem aos três institutos descritos."
         ],
         "fonte": "NORMAM-101/DPC, Anexo 2-A; Capítulo 2, arts. 2.3 e 2.4; DPC — Documentação e Certificação de Pessoal Aquaviário.",
