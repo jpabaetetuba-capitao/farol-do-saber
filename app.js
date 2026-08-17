@@ -1,5 +1,6 @@
 // ==========================
 // FAROL DO SABER v0.2
+// Patch V123 (17/08/2026): separação definitiva de Português e Conhecimentos Específicos no Taifeiro.
 // ==========================
 
 // TROCA DE TELAS
@@ -24309,10 +24310,14 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             return;
         }
 
-        if(["especificas", "banco2026", "ineditas"].includes(destino)){
+        if(["especificas", "banco2026", "ineditas", "portugues"].includes(destino)){
             if(typeof window.abrirBancoQuestoesTaifeiroFarol === "function"){
                 window.abrirBancoQuestoesTaifeiroFarol(
-                    destino === "especificas" ? "especificas" : "banco2026"
+                    destino === "especificas"
+                        ? "especificas"
+                        : destino === "portugues"
+                            ? "portugues"
+                            : "banco2026"
                 );
             }else if(typeof mostrarToast === "function"){
                 mostrarToast("O Banco de Questões 2026 ainda está carregando. Tente novamente.");
@@ -24320,11 +24325,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             return;
         }
 
-        const mensagens = {
-            portugues: "O banco de Português de Taifeiro será conectado quando iniciarmos os tópicos de Língua Portuguesa."
-        };
-
-        mostrarToast(mensagens[destino] || "Este recurso será ativado nas próximas etapas do Transpetro MAR.");
+        mostrarToast("Este recurso será ativado nas próximas etapas do Transpetro MAR.");
     };
 
     function renderizarMenuTaifeiroFarol(trilha, concurso, painelTrilha){
@@ -27084,6 +27085,20 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 { chave: "taa2026_leg_3_3", topicoEdital: "3.3 Combate à poluição", nome: "3.3 Combate à poluição" },
                 { chave: "taa2026_leg_3_4", topicoEdital: "3.4 Transporte de óleo, substância nociva ou perigosa", nome: "3.4 Transporte de óleo, substância nociva ou perigosa" }
             ]
+        },
+        {
+            disciplina: "transpetroLinguaPortuguesa",
+            nome: "📘 Língua Portuguesa",
+            assuntos: [
+                { chave: "taa2026_lp_1", topicoEdital: "1. Compreensão de textos de gêneros variados", nome: "1. Compreensão de textos de gêneros variados" },
+                { chave: "taa2026_lp_2", topicoEdital: "2. Ortografia oficial", nome: "2. Ortografia oficial" },
+                { chave: "taa2026_lp_3", topicoEdital: "3. Mecanismos de coesão textual", nome: "3. Mecanismos de coesão textual" },
+                { chave: "taa2026_lp_4", topicoEdital: "4. Emprego das classes de palavras", nome: "4. Emprego das classes de palavras" },
+                { chave: "taa2026_lp_5", topicoEdital: "5. Concordância nominal e verbal", nome: "5. Concordância nominal e verbal" },
+                { chave: "taa2026_lp_6", topicoEdital: "6. Emprego do sinal indicativo de crase", nome: "6. Emprego do sinal indicativo de crase" },
+                { chave: "taa2026_lp_7", topicoEdital: "7. Sinais de pontuação", nome: "7. Sinais de pontuação" },
+                { chave: "taa2026_lp_8", topicoEdital: "8. Significação das palavras", nome: "8. Significação das palavras" }
+            ]
         }
     ];
 
@@ -27202,7 +27217,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
             if(descricao){
                 descricao.textContent =
-                    "Taifeiro — escolha Arquitetura Naval ou Legislação Marítima e depois o tópico do Banco de Questões 2026.";
+                    "Taifeiro — escolha Língua Portuguesa, Arquitetura Naval ou Legislação Marítima e depois o tópico do Banco de Questões 2026.";
             }
 
             if(quantidade){
@@ -40908,7 +40923,7 @@ limparArenaLocalFarol = function(){
 
 // ==========================================================
 // FAROL — TRANSPETRO / TAIFEIRO — BANCO DE QUESTÕES 2026
-// Arquitetura Naval + Legislação Marítima e Ambiental — Banco por subtópicos do edital
+// Língua Portuguesa + Conhecimentos Específicos — Banco por subtópicos do edital
 // ==========================================================
 (() => {
     "use strict";
@@ -40953,8 +40968,38 @@ limparArenaLocalFarol = function(){
             : [];
     }
 
-    function questoesTopicoTAA(topico){
-        return bancoCompletoTAA().filter(q => q && q.topicoEdital === topico);
+    function ehQuestaoPortuguesBancoTAA(questao){
+        if(!questao) return false;
+        return String(questao.disciplina || "").trim() === "Língua Portuguesa"
+            || String(questao.eixo || "").trim() === "Língua Portuguesa";
+    }
+
+    function bancoPortuguesTAA(){
+        return bancoCompletoTAA().filter(ehQuestaoPortuguesBancoTAA);
+    }
+
+    function bancoEspecificosTAA(){
+        return bancoCompletoTAA().filter(q => q && !ehQuestaoPortuguesBancoTAA(q));
+    }
+
+    function bancoVisivelTAA(){
+        if(estadoBancoTAA2026.origem === "portugues") return bancoPortuguesTAA();
+        if(estadoBancoTAA2026.origem === "especificas") return bancoEspecificosTAA();
+        return bancoCompletoTAA();
+    }
+
+    function rotuloDisciplinaQuestaoBancoTAA(questao){
+        return ehQuestaoPortuguesBancoTAA(questao)
+            ? "Língua Portuguesa"
+            : "Conhecimentos Específicos";
+    }
+
+    function iconeDisciplinaQuestaoBancoTAA(questao){
+        return ehQuestaoPortuguesBancoTAA(questao) ? "📘" : "⚓";
+    }
+
+    function questoesTopicoTAA(topico, banco = bancoCompletoTAA()){
+        return (Array.isArray(banco) ? banco : []).filter(q => q && q.topicoEdital === topico);
     }
 
     function tituloTopicoAtualBancoTAA(){
@@ -40964,7 +41009,7 @@ limparArenaLocalFarol = function(){
     function codigoTopicoAtualBancoTAA(){
         const titulo = tituloTopicoAtualBancoTAA();
         const primeiro = titulo.trim().split(/\s+/)[0] || "";
-        return /^\d+\.\d+$/.test(primeiro) ? primeiro : "";
+        return /^\d+(?:\.\d+)?\.?$/.test(primeiro) ? primeiro.replace(/\.$/, "") : "";
     }
 
     function eixoTopicoAtualBancoTAA(){
@@ -40995,7 +41040,7 @@ limparArenaLocalFarol = function(){
         if(!progresso) return;
 
         if(estadoBancoTAA2026.modo === "menu"){
-            const total = bancoCompletoTAA().length;
+            const total = bancoVisivelTAA().length;
             progresso.innerHTML = `
                 <strong>${total} questão${total === 1 ? "" : "ões"} disponível${total === 1 ? "" : "is"}</strong>
                 <span>Banco 2026 • conteúdo liberado por tópicos</span>
@@ -41045,7 +41090,7 @@ limparArenaLocalFarol = function(){
         style.textContent = `
             .seletor-eixos-banco-taifeiro{
                 display:grid;
-                grid-template-columns:repeat(2,minmax(0,1fr));
+                grid-template-columns:repeat(3,minmax(0,1fr));
                 gap:14px;
                 margin:2px 0 18px;
             }
@@ -41209,6 +41254,30 @@ limparArenaLocalFarol = function(){
         ].reduce((soma, topico) => soma + questoesTopicoTAA(topico).length, 0);
     }
 
+    function topicosPortuguesBancoTAA(){
+        return [
+            "1. Compreensão de textos de gêneros variados",
+            "2. Ortografia oficial",
+            "3. Mecanismos de coesão textual",
+            "4. Emprego das classes de palavras",
+            "5. Concordância nominal e verbal",
+            "6. Emprego do sinal indicativo de crase",
+            "7. Sinais de pontuação",
+            "8. Significação das palavras"
+        ];
+    }
+
+    function totalPortuguesBancoTAA(){
+        return topicosPortuguesBancoTAA()
+            .reduce((soma, topico) => soma + questoesTopicoTAA(topico).length, 0);
+    }
+
+    function totalTopicosPortuguesLiberadosTAA(){
+        return topicosPortuguesBancoTAA()
+            .filter(topico => questoesTopicoTAA(topico).length > 0)
+            .length;
+    }
+
     function renderizarMenuBancoTAA(){
         estadoBancoTAA2026.modo = "menu";
         estadoBancoTAA2026.topico = "";
@@ -41221,9 +41290,11 @@ limparArenaLocalFarol = function(){
 
         const totalArquitetura = totalArquiteturaBancoTAA();
         const totalLegislacao = totalLegislacaoBancoTAA();
+        const totalPortugues = totalPortuguesBancoTAA();
+        const topicosPortuguesLiberados = totalTopicosPortuguesLiberadosTAA();
 
         // NÍVEL 1 — mostra somente as disciplinas/eixos.
-        if(!["arquitetura", "legislacao"].includes(estadoBancoTAA2026.eixoMenu)){
+        if(!["arquitetura", "legislacao", "portugues"].includes(estadoBancoTAA2026.eixoMenu)){
             atualizarCabecalhoBancoTAA(
                 estadoBancoTAA2026.origem === "especificas"
                     ? "Conhecimentos Específicos — Taifeiro 2026"
@@ -41264,6 +41335,24 @@ limparArenaLocalFarol = function(){
                             <small>questões</small>
                         </span>
                     </button>
+
+                    ${estadoBancoTAA2026.origem !== "especificas" ? `
+                    <button type="button"
+                        class="btn-eixo-banco-taifeiro"
+                        onclick="selecionarEixoBancoTaifeiroFarol('portugues')">
+                        <span class="eixo-info">
+                            <span class="eixo-icone">📘</span>
+                            <span class="eixo-textos">
+                                <strong>Língua Portuguesa</strong>
+                                <small>${topicosPortuguesLiberados} de 8 tópicos liberados</small>
+                            </span>
+                        </span>
+                        <span class="eixo-total">
+                            <strong>${totalPortugues}</strong>
+                            <small>questões</small>
+                        </span>
+                    </button>
+                    ` : ""}
                 </div>
             `;
 
@@ -41273,12 +41362,20 @@ limparArenaLocalFarol = function(){
 
         // NÍVEL 2 — depois do clique, mostra somente os subtópicos da disciplina escolhida.
         const arquiteturaAtiva = estadoBancoTAA2026.eixoMenu === "arquitetura";
+        const legislacaoAtiva = estadoBancoTAA2026.eixoMenu === "legislacao";
+        const portuguesAtivo = estadoBancoTAA2026.eixoMenu === "portugues";
 
         atualizarCabecalhoBancoTAA(
-            arquiteturaAtiva ? "Arquitetura Naval" : "Legislação Marítima e Ambiental",
+            arquiteturaAtiva
+                ? "Arquitetura Naval"
+                : legislacaoAtiva
+                    ? "Legislação Marítima e Ambiental"
+                    : "Língua Portuguesa",
             arquiteturaAtiva
                 ? `5 tópicos • ${totalArquitetura} questões disponíveis`
-                : `15 tópicos liberados • ${totalLegislacao} questões disponíveis`
+                : legislacaoAtiva
+                    ? `15 tópicos liberados • ${totalLegislacao} questões disponíveis`
+                    : `${topicosPortuguesLiberados} de 8 tópicos liberados • ${totalPortugues} questões disponíveis`
         );
 
         const arquitetura = `
@@ -41421,7 +41518,30 @@ limparArenaLocalFarol = function(){
             </div>
         `;
 
-        area.innerHTML = arquiteturaAtiva ? arquitetura : legislacao;
+        const portugues = `
+            <button type="button"
+                class="btn-voltar-eixos-banco-taifeiro"
+                onclick="${estadoBancoTAA2026.origem === "portugues" ? "voltarMenuTaifeiroFarol()" : "voltarEixosBancoTaifeiroFarol()"}">
+                ${estadoBancoTAA2026.origem === "portugues" ? "← Voltar ao Taifeiro" : "← Voltar às disciplinas"}
+            </button>
+
+            <div class="grade-topicos-banco-taifeiro">
+                ${cardTopicoBancoTAA(
+                    "1. Compreensão de textos de gêneros variados",
+                    "1. Compreensão de textos de gêneros variados",
+                    "Informação explícita, ideia global, organização textual, causa e consequência, inferência, finalidade, função de trechos e leitura de gêneros variados no padrão Cesgranrio."
+                )}
+                ${cardTopicoBancoTAA("2. Ortografia oficial", "2. Ortografia oficial", "Grafia oficial, acentuação, hífen, porquês e distinções ortográficas em contextos de prova, conforme a norma vigente.")}
+                ${cardTopicoBancoTAA("3. Mecanismos de coesão textual", "3. Mecanismos de coesão textual", "Coesão referencial e lexical, anáfora e catáfora, elipse/zeugma, retomadas e conectores de causa, consequência, concessão, oposição, condição, conclusão, finalidade, tempo, adição e reformulação no padrão Cesgranrio.")}
+                ${cardTopicoBancoTAA("4. Emprego das classes de palavras", "4. Emprego das classes de palavras", "Artigo, substantivo, adjetivo, numeral, pronome, verbo, advérbio, preposição, conjunção e interjeição em emprego contextual, mudança de classe, alcance e efeitos de sentido no padrão Cesgranrio.")}
+                ${cardTopicoBancoTAA("5. Concordância nominal e verbal", "5. Concordância nominal e verbal", "Concordância nominal e verbal em construções contextualizadas: núcleos compostos, formas variáveis e invariáveis, verbos impessoais, sujeito distante, se apassivador e casos especiais no padrão Cesgranrio.")}
+                ${cardTopicoBancoTAA("6. Emprego do sinal indicativo de crase", "6. Emprego do sinal indicativo de crase", "Crase em regência, locuções, horas, pronomes, topônimos, casos proibidos e facultativos, com foco no padrão Cesgranrio.")}
+                ${cardTopicoBancoTAA("7. Sinais de pontuação", "7. Sinais de pontuação", "Funções sintáticas e efeitos de sentido dos sinais de pontuação.")}
+                ${cardTopicoBancoTAA("8. Significação das palavras", "8. Significação das palavras", "Sentido contextual, relações semânticas, substituições e efeitos de escolha vocabular.")}
+            </div>
+        `;
+
+        area.innerHTML = arquiteturaAtiva ? arquitetura : (legislacaoAtiva ? legislacao : portugues);
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
 
@@ -41528,9 +41648,11 @@ limparArenaLocalFarol = function(){
         const dados = {
             idErro,
             assunto: "transpetroTaifeiro",
-            disciplina: "⚓ Taifeiro — Conhecimentos Específicos",
+            disciplina: ehQuestaoPortuguesBancoTAA(questao)
+                ? "📘 Taifeiro — Língua Portuguesa"
+                : "⚓ Taifeiro — Conhecimentos Específicos",
             pergunta: questao.enunciado,
-            texto: "",
+            texto: questao.textoBase || questao.texto || "",
             imagem: questao.imagem || "",
             alternativas: questao.alternativas,
             correta: questao.correta,
@@ -41575,6 +41697,16 @@ limparArenaLocalFarol = function(){
         `;
     }
 
+    function montarTextoBaseBancoTAA(questao){
+        if(!questao || !questao.textoBase) return "";
+        return `
+            <section class="texto-base texto-base-banco-taifeiro" style="white-space:pre-line;margin:16px 0 20px;">
+                <strong style="display:block;margin-bottom:10px;color:#0f3d56;">📄 ${escaparBancoTAA(questao.textoBaseTitulo || "Texto-base")}</strong>
+                ${escaparBancoTAA(questao.textoBase)}
+            </section>
+        `;
+    }
+
     function renderizarNavegacaoQuestaoBancoTAA(){
         const nav = elBancoTAA("navegacaoBancoQuestoesTaifeiro");
         if(!nav) return;
@@ -41616,7 +41748,7 @@ limparArenaLocalFarol = function(){
         area.innerHTML = `
             <article class="questao-banco-taifeiro">
                 <div class="meta-questao-banco-taifeiro">
-                    <span>⚓ Conhecimentos Específicos</span>
+                    <span>${iconeDisciplinaQuestaoBancoTAA(questao)} ${escaparBancoTAA(rotuloDisciplinaQuestaoBancoTAA(questao))}</span>
                     <span>${escaparBancoTAA(eixoTopicoAtualBancoTAA())}</span>
                     <span>${escaparBancoTAA(questao.assunto || "")}</span>
                 </div>
@@ -41624,6 +41756,7 @@ limparArenaLocalFarol = function(){
                 <span class="numero-questao-banco-taifeiro">Questão ${estadoBancoTAA2026.indice + 1}</span>
 
                 ${montarImagemBancoTAA(questao)}
+                ${montarTextoBaseBancoTAA(questao)}
 
                 <h3>${escaparBancoTAA(questao.enunciado)}</h3>
 
@@ -41749,7 +41882,8 @@ limparArenaLocalFarol = function(){
                 ` : ""}
 
                 <section class="bloco-correcao-banco-taifeiro identificacao">
-                    <h4>⚓ Identificação</h4>
+                    <h4>${iconeDisciplinaQuestaoBancoTAA(questao)} Identificação</h4>
+                    <p><strong>Disciplina:</strong> ${escaparBancoTAA(rotuloDisciplinaQuestaoBancoTAA(questao))}</p>
                     <p><strong>Tópico:</strong> ${escaparBancoTAA(questao.topicoEdital || "")}</p>
                     <p><strong>Assunto:</strong> ${escaparBancoTAA(questao.assunto || "")}</p>
                     ${questao.fonte ? `<p><strong>Fonte:</strong> ${escaparBancoTAA(questao.fonte)}</p>` : ""}
@@ -41831,7 +41965,7 @@ limparArenaLocalFarol = function(){
 
         area.innerHTML = `
             <div class="resultado-banco-taifeiro">
-                <span class="icone-resultado-banco-taifeiro">⚓</span>
+                <span class="icone-resultado-banco-taifeiro">${iconeDisciplinaQuestaoBancoTAA(estadoBancoTAA2026.questoes[0])}</span>
                 <h3>${escaparBancoTAA(tituloTopicoAtualBancoTAA())}</h3>
                 <div class="placar-resultado-banco-taifeiro">
                     <div><strong>${acertosTopico}</strong><small>acertos</small></div>
@@ -41863,8 +41997,12 @@ limparArenaLocalFarol = function(){
             return;
         }
 
-        estadoBancoTAA2026.origem = origem === "especificas" ? "especificas" : "banco2026";
-        estadoBancoTAA2026.eixoMenu = "";
+        estadoBancoTAA2026.origem = origem === "especificas"
+            ? "especificas"
+            : origem === "portugues"
+                ? "portugues"
+                : "banco2026";
+        estadoBancoTAA2026.eixoMenu = origem === "portugues" ? "portugues" : "";
         localStorage.setItem("farol_concurso_atual", "transpetro2026");
         localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
 
@@ -41874,7 +42012,9 @@ limparArenaLocalFarol = function(){
 
     window.selecionarEixoBancoTaifeiroFarol = function(eixo){
         const novoEixo = String(eixo || "");
-        if(!["arquitetura", "legislacao"].includes(novoEixo)) return;
+        if(!["arquitetura", "legislacao", "portugues"].includes(novoEixo)) return;
+        if(estadoBancoTAA2026.origem === "especificas" && novoEixo === "portugues") return;
+        if(estadoBancoTAA2026.origem === "portugues" && novoEixo !== "portugues") return;
         estadoBancoTAA2026.eixoMenu = novoEixo;
         renderizarMenuBancoTAA();
     };
@@ -41885,7 +42025,7 @@ limparArenaLocalFarol = function(){
     };
 
     window.iniciarTopicoBancoTaifeiroFarol = function(topico){
-        const questoes = questoesTopicoTAA(String(topico || ""));
+        const questoes = questoesTopicoTAA(String(topico || ""), bancoVisivelTAA());
         if(!questoes.length){
             if(typeof mostrarToast === "function") mostrarToast("Este tópico ainda está em preparação.");
             return;
@@ -42024,7 +42164,16 @@ limparArenaLocalFarol = function(){
             return;
         }
 
-        if(["arquitetura", "legislacao"].includes(estadoBancoTAA2026.eixoMenu)){
+        if(estadoBancoTAA2026.origem === "portugues" && estadoBancoTAA2026.eixoMenu === "portugues"){
+            if(typeof window.voltarMenuTaifeiroFarol === "function"){
+                window.voltarMenuTaifeiroFarol();
+            }else if(typeof mostrarTela === "function"){
+                mostrarTela("questoes");
+            }
+            return;
+        }
+
+        if(["arquitetura", "legislacao", "portugues"].includes(estadoBancoTAA2026.eixoMenu)){
             estadoBancoTAA2026.eixoMenu = "";
             renderizarMenuBancoTAA();
             return;
@@ -42065,7 +42214,10 @@ limparArenaLocalFarol = function(){
         return (Array.isArray(window.questoesTaifeiroBanco2026)
             ? window.questoesTaifeiroBanco2026
             : []
-        ).map(adaptarQuestaoTaifeiroSimuladoV78).filter(Boolean);
+        )
+        .filter(q => q && ["Arquitetura Naval", "Legislação Marítima e Ambiental"].includes(String(q.eixo || "")))
+        .map(adaptarQuestaoTaifeiroSimuladoV78)
+        .filter(Boolean);
     }
 
     function prepararContextoSimuladoTaifeiroV113(){
