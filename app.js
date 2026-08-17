@@ -41010,6 +41010,73 @@ limparArenaLocalFarol = function(){
         return (Array.isArray(banco) ? banco : []).filter(q => q && q.topicoEdital === topico);
     }
 
+    function embaralharQuestoesTopicoTAA(topico, questoesOriginais){
+        const base = Array.isArray(questoesOriginais)
+            ? questoesOriginais.filter(Boolean)
+            : [];
+
+        if(base.length <= 1){
+            return [...base];
+        }
+
+        const embaralhadas = typeof embaralharArray === "function"
+            ? embaralharArray(base)
+            : [...base].sort(() => Math.random() - 0.5);
+
+        const chaveUltimaPrimeira =
+            "farol_taa_ultima_primeira_" +
+            String(topico || "")
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, "_")
+                .replace(/^_+|_+$/g, "");
+
+        let ultimaPrimeiraId = "";
+
+        try{
+            ultimaPrimeiraId = localStorage.getItem(chaveUltimaPrimeira) || "";
+        }catch(_erro){
+            ultimaPrimeiraId = "";
+        }
+
+        const primeiraAtualId = String(
+            embaralhadas[0] && (
+                embaralhadas[0].id ||
+                embaralhadas[0].enunciado ||
+                embaralhadas[0].pergunta ||
+                ""
+            )
+        );
+
+        // O sorteio pode, por acaso, repetir a mesma questão em primeiro lugar.
+        // Se isso acontecer, troca por outra posição para garantir variedade.
+        if(ultimaPrimeiraId && primeiraAtualId === ultimaPrimeiraId){
+            const indiceTroca = 1 + Math.floor(Math.random() * (embaralhadas.length - 1));
+            [embaralhadas[0], embaralhadas[indiceTroca]] =
+                [embaralhadas[indiceTroca], embaralhadas[0]];
+        }
+
+        try{
+            const novaPrimeiraId = String(
+                embaralhadas[0] && (
+                    embaralhadas[0].id ||
+                    embaralhadas[0].enunciado ||
+                    embaralhadas[0].pergunta ||
+                    ""
+                )
+            );
+
+            if(novaPrimeiraId){
+                localStorage.setItem(chaveUltimaPrimeira, novaPrimeiraId);
+            }
+        }catch(_erro){
+            // Se o localStorage estiver indisponível, o embaralhamento normal permanece.
+        }
+
+        return embaralhadas;
+    }
+
     function tituloTopicoAtualBancoTAA(){
         return String(estadoBancoTAA2026.topico || "Arquitetura Naval");
     }
@@ -42088,13 +42155,18 @@ limparArenaLocalFarol = function(){
     };
 
     window.iniciarTopicoBancoTaifeiroFarol = function(topico){
-        const questoes = questoesTopicoTAA(String(topico || ""), bancoVisivelTAA());
+        const topicoSelecionado = String(topico || "");
+        const questoes = embaralharQuestoesTopicoTAA(
+            topicoSelecionado,
+            questoesTopicoTAA(topicoSelecionado, bancoVisivelTAA())
+        );
+
         if(!questoes.length){
             if(typeof mostrarToast === "function") mostrarToast("Este tópico ainda está em preparação.");
             return;
         }
 
-        estadoBancoTAA2026.topico = String(topico);
+        estadoBancoTAA2026.topico = topicoSelecionado;
         estadoBancoTAA2026.indice = 0;
         estadoBancoTAA2026.questoes = questoes;
         estadoBancoTAA2026.respostas = questoes.map(() => ({ selecionada: null, confirmada: false }));
