@@ -3093,9 +3093,9 @@ Li e revisei o mapa mental.
                     <div>
                         <span class="selo-simulado-transpetro-farol">⚓ Transpetro MAR • Cesgranrio • 2026</span>
                         <h3>Taifeiro — TAA</h3>
-                        <p>Arquitetura Naval e Legislação Marítima e Ambiental já podem ser treinadas separadamente ou juntas em Conhecimentos Específicos. Português e o simulado completo serão liberados quando o respectivo banco estiver concluído.</p>
+                        <p>Arquitetura Naval, Legislação Marítima e Ambiental, Conscientização sobre proteção de navio e Língua Portuguesa já possuem banco ativo. Você pode treinar cada disciplina, fazer Conhecimentos Específicos ou realizar o simulado completo no formato 20 Português + 30 Específicas.</p>
                     </div>
-                    <span class="status-simulado-transpetro-farol">✅ 2 disciplinas ativas</span>
+                    <span class="status-simulado-transpetro-farol">✅ 4 disciplinas ativas</span>
                 </div>
 
                 <div class="grid-opcoes-transpetro-farol">
@@ -3105,17 +3105,20 @@ Li e revisei o mapa mental.
                     <button type="button" onclick="iniciarSimuladoDisciplinaTaifeiroFarol('legislacao', 30)">
                         <span>⚖️</span><strong>Legislação Marítima e Ambiental</strong><small>30 questões • Banco 2026</small>
                     </button>
+                    <button type="button" onclick="iniciarSimuladoDisciplinaTaifeiroFarol('protecao', 30)">
+                        <span>🛡️</span><strong>Conscientização sobre proteção de navio</strong><small>30 questões • Banco 2026</small>
+                    </button>
+                    <button type="button" onclick="iniciarSimuladoPortuguesTaifeiroFarol(20)">
+                        <span>📘</span><strong>Português</strong><small>20 questões • Banco 2026</small>
+                    </button>
                     <button type="button" onclick="iniciarSimuladoEspecificosTaifeiroFarol(30)">
-                        <span>🧭</span><strong>Conhecimentos Específicos</strong><small>30 questões • Arquitetura + Legislação</small>
+                        <span>🧭</span><strong>Conhecimentos Específicos</strong><small>30 questões • Arquitetura + Legislação + Proteção</small>
                     </button>
                     <button type="button" onclick="iniciarSimuladoEspecificosTaifeiroFarol(10)">
                         <span>⚡</span><strong>Treino rápido</strong><small>10 questões de Específicas</small>
                     </button>
-                    <button type="button" onclick="mostrarToast('Português permanece em preparação e será liberado quando o banco da disciplina estiver concluído.')">
-                        <span>📘</span><strong>Português</strong><small>Em preparação</small>
-                    </button>
-                    <button type="button" onclick="mostrarToast('O simulado completo de 50 questões será liberado quando Português estiver concluído.')">
-                        <span>🎯</span><strong>Simulado completo 2026</strong><small>20 Português + 30 Específicas • em preparação</small>
+                    <button type="button" onclick="iniciarSimuladoCompletoTaifeiroFarol()">
+                        <span>🎯</span><strong>Simulado completo 2026</strong><small>50 questões • 20 Português + 30 Específicas</small>
                     </button>
                 </div>
 
@@ -5826,6 +5829,9 @@ Li e revisei o mapa mental.
 <script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_3_2.js?v=taa2026-leg-3-2-v3"></script>
 <script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_3_3.js?v=taa2026-leg-3-3-v1"></script>
 <script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_3_4.js?v=taa2026-leg-3-4-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/conscientizacaoProtecaoNavio_1_1_ameacasTransportesMaritimos.js?v=taa2026-prot-1-1-v124"></script>
+<script src="dados/transpetro/taifeiro/banco2026/conscientizacaoProtecaoNavio_1_2_operacoesPortuariasPortosNavios.js?v=taa2026-prot-1-2-v125"></script>
+<script src="dados/transpetro/taifeiro/banco2026/conscientizacaoProtecaoNavio_2_1_convencoesCodigosRecomendacoes.js?v=taa2026-prot-2-1-v127"></script>
 <script src="dados/transpetro/taifeiro/banco2026/linguaPortuguesa_1_compreensaoTextos.js?v=taa2026-lp-1-v115"></script>
 <script src="dados/transpetro/taifeiro/banco2026/linguaPortuguesa_2_ortografiaOficial.js?v=taa2026-lp-2-v116"></script>
 <script src="dados/transpetro/taifeiro/banco2026/linguaPortuguesa_3_mecanismosCoesaoTextual.js?v=taa2026-lp-3-v117"></script>
@@ -5835,7 +5841,7 @@ Li e revisei o mapa mental.
 <script src="dados/transpetro/taifeiro/banco2026/linguaPortuguesa_7_sinaisPontuacao.js?v=taa2026-lp-7-v121"></script>
 <script src="dados/transpetro/taifeiro/banco2026/linguaPortuguesa_8_significacaoPalavras.js?v=taa2026-lp-8-v122"></script>
 
-<script src="app.js?v=146-separacao-portugues-especificas-taifeiro-v123"></script>
+<script src="app.js?v=151-remove-pistas-assunto-taifeiro-v128"></script>
 <script src="admin.js?v=76-transpetro-todos-cargos"></script>
 
 

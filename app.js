@@ -27087,6 +27087,15 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             ]
         },
         {
+            disciplina: "transpetroProtecaoNavio",
+            nome: "🛡️ Conscientização sobre proteção de navio",
+            assuntos: [
+                { chave: "taa2026_prot_1_1", topicoEdital: "1.1 Ameaças aos transportes marítimos", nome: "1.1 Ameaças aos transportes marítimos" },
+                { chave: "taa2026_prot_1_2", topicoEdital: "1.2 Operações portuárias Portos/Navios", nome: "1.2 Operações portuárias Portos/Navios" },
+                { chave: "taa2026_prot_2_1", topicoEdital: "2.1 Convenções internacionais, códigos e recomendações", nome: "2.1 Convenções internacionais, códigos e recomendações" }
+            ]
+        },
+        {
             disciplina: "transpetroLinguaPortuguesa",
             nome: "📘 Língua Portuguesa",
             assuntos: [
@@ -40510,7 +40519,6 @@ limparArenaLocalFarol = function(){
             <article class="questao-prova-comentada-taifeiro">
                 <div class="meta-questao-prova-comentada">
                     <span>${escaparHTMLProvaComentada(questao.disciplina || "Questão")}</span>
-                    <span>${escaparHTMLProvaComentada(questao.assunto || "Assunto")}</span>
                 </div>
 
                 ${blocoTextoBase}
@@ -41254,6 +41262,14 @@ limparArenaLocalFarol = function(){
         ].reduce((soma, topico) => soma + questoesTopicoTAA(topico).length, 0);
     }
 
+    function totalProtecaoNavioBancoTAA(){
+        return [
+            "1.1 Ameaças aos transportes marítimos",
+            "1.2 Operações portuárias Portos/Navios",
+            "2.1 Convenções internacionais, códigos e recomendações"
+        ].reduce((soma, topico) => soma + questoesTopicoTAA(topico).length, 0);
+    }
+
     function topicosPortuguesBancoTAA(){
         return [
             "1. Compreensão de textos de gêneros variados",
@@ -41290,11 +41306,12 @@ limparArenaLocalFarol = function(){
 
         const totalArquitetura = totalArquiteturaBancoTAA();
         const totalLegislacao = totalLegislacaoBancoTAA();
+        const totalProtecaoNavio = totalProtecaoNavioBancoTAA();
         const totalPortugues = totalPortuguesBancoTAA();
         const topicosPortuguesLiberados = totalTopicosPortuguesLiberadosTAA();
 
         // NÍVEL 1 — mostra somente as disciplinas/eixos.
-        if(!["arquitetura", "legislacao", "portugues"].includes(estadoBancoTAA2026.eixoMenu)){
+        if(!["arquitetura", "legislacao", "protecao", "portugues"].includes(estadoBancoTAA2026.eixoMenu)){
             atualizarCabecalhoBancoTAA(
                 estadoBancoTAA2026.origem === "especificas"
                     ? "Conhecimentos Específicos — Taifeiro 2026"
@@ -41336,6 +41353,22 @@ limparArenaLocalFarol = function(){
                         </span>
                     </button>
 
+                    <button type="button"
+                        class="btn-eixo-banco-taifeiro"
+                        onclick="selecionarEixoBancoTaifeiroFarol('protecao')">
+                        <span class="eixo-info">
+                            <span class="eixo-icone">🛡️</span>
+                            <span class="eixo-textos">
+                                <strong>Conscientização sobre proteção de navio</strong>
+                                <small>3 tópicos liberados</small>
+                            </span>
+                        </span>
+                        <span class="eixo-total">
+                            <strong>${totalProtecaoNavio}</strong>
+                            <small>questões</small>
+                        </span>
+                    </button>
+
                     ${estadoBancoTAA2026.origem !== "especificas" ? `
                     <button type="button"
                         class="btn-eixo-banco-taifeiro"
@@ -41363,6 +41396,7 @@ limparArenaLocalFarol = function(){
         // NÍVEL 2 — depois do clique, mostra somente os subtópicos da disciplina escolhida.
         const arquiteturaAtiva = estadoBancoTAA2026.eixoMenu === "arquitetura";
         const legislacaoAtiva = estadoBancoTAA2026.eixoMenu === "legislacao";
+        const protecaoAtiva = estadoBancoTAA2026.eixoMenu === "protecao";
         const portuguesAtivo = estadoBancoTAA2026.eixoMenu === "portugues";
 
         atualizarCabecalhoBancoTAA(
@@ -41370,12 +41404,16 @@ limparArenaLocalFarol = function(){
                 ? "Arquitetura Naval"
                 : legislacaoAtiva
                     ? "Legislação Marítima e Ambiental"
-                    : "Língua Portuguesa",
+                    : protecaoAtiva
+                        ? "Conscientização sobre proteção de navio"
+                        : "Língua Portuguesa",
             arquiteturaAtiva
                 ? `5 tópicos • ${totalArquitetura} questões disponíveis`
                 : legislacaoAtiva
                     ? `15 tópicos liberados • ${totalLegislacao} questões disponíveis`
-                    : `${topicosPortuguesLiberados} de 8 tópicos liberados • ${totalPortugues} questões disponíveis`
+                    : protecaoAtiva
+                        ? `3 tópicos liberados • ${totalProtecaoNavio} questões disponíveis`
+                        : `${topicosPortuguesLiberados} de 8 tópicos liberados • ${totalPortugues} questões disponíveis`
         );
 
         const arquitetura = `
@@ -41518,6 +41556,32 @@ limparArenaLocalFarol = function(){
             </div>
         `;
 
+        const protecao = `
+            <button type="button"
+                class="btn-voltar-eixos-banco-taifeiro"
+                onclick="voltarEixosBancoTaifeiroFarol()">
+                ← Voltar às disciplinas
+            </button>
+
+            <div class="grade-topicos-banco-taifeiro">
+                ${cardTopicoBancoTAA(
+                    "1.1 Ameaças aos transportes marítimos",
+                    "1.1 Ameaças aos transportes marítimos",
+                    "Ameaças intencionais à proteção marítima: sabotagem, acesso não autorizado, tomada ilícita do navio, explosivos, terrorismo, pirataria e roubo armado, contrabando, clandestinos, ameaça interna, objetos suspeitos e exploração da cadeia logística."
+                )}
+                ${cardTopicoBancoTAA(
+                    "1.2 Operações portuárias Portos/Navios",
+                    "1.2 Operações portuárias Portos/Navios",
+                    "Interface navio/porto, movimentação de pessoas e mercadorias, serviços portuários, controle de acesso, áreas restritas, monitoramento, carga, provisões, bagagem desacompanhada, embarque de pessoas e comunicações de proteção."
+                )}
+                ${cardTopicoBancoTAA(
+                    "2.1 Convenções internacionais, códigos e recomendações",
+                    "2.1 Convenções internacionais, códigos e recomendações",
+                    "SOLAS capítulo XI-2, ISPS Code, partes obrigatória e recomendatória, gerenciamento de risco, âmbito de aplicação, STCW Regra VI/6 e SUA Convention, no nível de cobrança observado pela Cesgranrio."
+                )}
+            </div>
+        `;
+
         const portugues = `
             <button type="button"
                 class="btn-voltar-eixos-banco-taifeiro"
@@ -41541,7 +41605,7 @@ limparArenaLocalFarol = function(){
             </div>
         `;
 
-        area.innerHTML = arquiteturaAtiva ? arquitetura : (legislacaoAtiva ? legislacao : portugues);
+        area.innerHTML = arquiteturaAtiva ? arquitetura : (legislacaoAtiva ? legislacao : (protecaoAtiva ? protecao : portugues));
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
 
@@ -41750,7 +41814,6 @@ limparArenaLocalFarol = function(){
                 <div class="meta-questao-banco-taifeiro">
                     <span>${iconeDisciplinaQuestaoBancoTAA(questao)} ${escaparBancoTAA(rotuloDisciplinaQuestaoBancoTAA(questao))}</span>
                     <span>${escaparBancoTAA(eixoTopicoAtualBancoTAA())}</span>
-                    <span>${escaparBancoTAA(questao.assunto || "")}</span>
                 </div>
 
                 <span class="numero-questao-banco-taifeiro">Questão ${estadoBancoTAA2026.indice + 1}</span>
@@ -42012,7 +42075,7 @@ limparArenaLocalFarol = function(){
 
     window.selecionarEixoBancoTaifeiroFarol = function(eixo){
         const novoEixo = String(eixo || "");
-        if(!["arquitetura", "legislacao", "portugues"].includes(novoEixo)) return;
+        if(!["arquitetura", "legislacao", "protecao", "portugues"].includes(novoEixo)) return;
         if(estadoBancoTAA2026.origem === "especificas" && novoEixo === "portugues") return;
         if(estadoBancoTAA2026.origem === "portugues" && novoEixo !== "portugues") return;
         estadoBancoTAA2026.eixoMenu = novoEixo;
@@ -42173,7 +42236,7 @@ limparArenaLocalFarol = function(){
             return;
         }
 
-        if(["arquitetura", "legislacao", "portugues"].includes(estadoBancoTAA2026.eixoMenu)){
+        if(["arquitetura", "legislacao", "protecao", "portugues"].includes(estadoBancoTAA2026.eixoMenu)){
             estadoBancoTAA2026.eixoMenu = "";
             renderizarMenuBancoTAA();
             return;
@@ -42215,7 +42278,20 @@ limparArenaLocalFarol = function(){
             ? window.questoesTaifeiroBanco2026
             : []
         )
-        .filter(q => q && ["Arquitetura Naval", "Legislação Marítima e Ambiental"].includes(String(q.eixo || "")))
+        .filter(q => q && ["Arquitetura Naval", "Legislação Marítima e Ambiental", "Conscientização sobre proteção de navio"].includes(String(q.eixo || "")))
+        .map(adaptarQuestaoTaifeiroSimuladoV78)
+        .filter(Boolean);
+    }
+
+    function bancoPortuguesTaifeiroV126(){
+        return (Array.isArray(window.questoesTaifeiroBanco2026)
+            ? window.questoesTaifeiroBanco2026
+            : []
+        )
+        .filter(q => q && (
+            String(q.disciplina || "").trim() === "Língua Portuguesa" ||
+            String(q.eixo || "").trim() === "Língua Portuguesa"
+        ))
         .map(adaptarQuestaoTaifeiroSimuladoV78)
         .filter(Boolean);
     }
@@ -42244,7 +42320,9 @@ limparArenaLocalFarol = function(){
             ? "Arquitetura Naval"
             : chave === "legislacao"
                 ? "Legislação Marítima e Ambiental"
-                : "";
+                : chave === "protecao"
+                    ? "Conscientização sobre proteção de navio"
+                    : "";
 
         if(!eixo) return [];
 
@@ -42262,7 +42340,9 @@ limparArenaLocalFarol = function(){
             ? "Arquitetura Naval"
             : chave === "legislacao"
                 ? "Legislação Marítima e Ambiental"
-                : "disciplina selecionada";
+                : chave === "protecao"
+                    ? "Conscientização sobre proteção de navio"
+                    : "disciplina selecionada";
 
         if(!banco.length){
             if(typeof mostrarToast === "function"){
@@ -42299,6 +42379,74 @@ limparArenaLocalFarol = function(){
             Math.min(Number(quantidade) || 30, banco.length),
             "transpetro:taifeiro:especificas"
         );
+        return true;
+    };
+
+    window.iniciarSimuladoPortuguesTaifeiroFarol = function(quantidade = 20){
+        if(!temAcessoSimuladoTaifeiroV113()) return false;
+
+        const banco = bancoPortuguesTaifeiroV126();
+
+        if(banco.length < 1){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("O banco de Língua Portuguesa ainda não foi carregado.");
+            }
+            return false;
+        }
+
+        prepararContextoSimuladoTaifeiroV113();
+
+        iniciarSimuladoPersonalizado(
+            banco,
+            Math.min(Number(quantidade) || 20, banco.length),
+            "transpetro:taifeiro:portugues"
+        );
+        return true;
+    };
+
+    window.iniciarSimuladoCompletoTaifeiroFarol = function(){
+        if(!temAcessoSimuladoTaifeiroV113()) return false;
+
+        const bancoPortugues = bancoPortuguesTaifeiroV126();
+        const bancoEspecificas = bancoEspecificasTaifeiroV78();
+
+        if(bancoPortugues.length < 20){
+            if(typeof mostrarToast === "function"){
+                mostrarToast(`Português possui ${bancoPortugues.length} questões carregadas. São necessárias pelo menos 20 para o simulado completo.`);
+            }
+            return false;
+        }
+
+        if(bancoEspecificas.length < 30){
+            if(typeof mostrarToast === "function"){
+                mostrarToast(`Conhecimentos Específicos possui ${bancoEspecificas.length} questões carregadas. São necessárias pelo menos 30 para o simulado completo.`);
+            }
+            return false;
+        }
+
+        prepararContextoSimuladoTaifeiroV113();
+
+        const portuguesSelecionadas = selecionarQuestoesBalanceadasPorSubtopico(
+            bancoPortugues,
+            20
+        );
+
+        const especificasSelecionadas = selecionarQuestoesBalanceadasPorSubtopico(
+            bancoEspecificas,
+            30
+        );
+
+        const provaCompleta = embaralharArray([
+            ...portuguesSelecionadas,
+            ...especificasSelecionadas
+        ]);
+
+        iniciarSimuladoPersonalizado(
+            provaCompleta,
+            50,
+            "transpetro:taifeiro:completo2026"
+        );
+
         return true;
     };
 })();
