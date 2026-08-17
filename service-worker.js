@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v89-2026-08-15-voltar-simulados";
+const CACHE_VERSION = "farol-v114-2026-08-17-correcao-visual-simulados-transpetro";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 

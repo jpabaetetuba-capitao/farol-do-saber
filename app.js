@@ -27075,7 +27075,14 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 { chave: "taa2026_leg_2_3", topicoEdital: "2.3 Causas de cancelamento e de apreensão da CIR", nome: "2.3 Causas de cancelamento e de apreensão da CIR" },
                 { chave: "taa2026_leg_2_4", topicoEdital: "2.4 Tempo de embarque", nome: "2.4 Tempo de embarque" },
                 { chave: "taa2026_leg_2_5", topicoEdital: "2.5 Rol de equipagem", nome: "2.5 Rol de equipagem" },
-                { chave: "taa2026_leg_2_6", topicoEdital: "2.6 Atribuições do comandante e competência para aplicar penalidades", nome: "2.6 Atribuições do comandante e competência para aplicar penalidades" }
+                { chave: "taa2026_leg_2_6", topicoEdital: "2.6 Atribuições do comandante e competência para aplicar penalidades", nome: "2.6 Atribuições do comandante e competência para aplicar penalidades" },
+                { chave: "taa2026_leg_2_7", topicoEdital: "2.7 Faltas disciplinares", nome: "2.7 Faltas disciplinares" },
+                { chave: "taa2026_leg_2_8", topicoEdital: "2.8 Atribuições dos marítimos", nome: "2.8 Atribuições dos marítimos" },
+                { chave: "taa2026_leg_2_9", topicoEdital: "2.9 Obrigações de trabalho e previdência social", nome: "2.9 Obrigações de trabalho e previdência social" },
+                { chave: "taa2026_leg_3_1", topicoEdital: "3.1 Cargas perigosas", nome: "3.1 Cargas perigosas" },
+                { chave: "taa2026_leg_3_2", topicoEdital: "3.2 Medidas de segurança no manuseio de cargas perigosas", nome: "3.2 Medidas de segurança no manuseio de cargas perigosas" },
+                { chave: "taa2026_leg_3_3", topicoEdital: "3.3 Combate à poluição", nome: "3.3 Combate à poluição" },
+                { chave: "taa2026_leg_3_4", topicoEdital: "3.4 Transporte de óleo, substância nociva ou perigosa", nome: "3.4 Transporte de óleo, substância nociva ou perigosa" }
             ]
         }
     ];
@@ -41191,7 +41198,14 @@ limparArenaLocalFarol = function(){
             "2.3 Causas de cancelamento e de apreensão da CIR",
             "2.4 Tempo de embarque",
             "2.5 Rol de equipagem",
-            "2.6 Atribuições do comandante e competência para aplicar penalidades"
+            "2.6 Atribuições do comandante e competência para aplicar penalidades",
+            "2.7 Faltas disciplinares",
+            "2.8 Atribuições dos marítimos",
+            "2.9 Obrigações de trabalho e previdência social",
+            "3.1 Cargas perigosas",
+            "3.2 Medidas de segurança no manuseio de cargas perigosas",
+            "3.3 Combate à poluição",
+            "3.4 Transporte de óleo, substância nociva ou perigosa"
         ].reduce((soma, topico) => soma + questoesTopicoTAA(topico).length, 0);
     }
 
@@ -41242,7 +41256,7 @@ limparArenaLocalFarol = function(){
                             <span class="eixo-icone">⚖️</span>
                             <span class="eixo-textos">
                                 <strong>Legislação Marítima e Ambiental</strong>
-                                <small>8 tópicos liberados</small>
+                                <small>15 tópicos liberados</small>
                             </span>
                         </span>
                         <span class="eixo-total">
@@ -41264,7 +41278,7 @@ limparArenaLocalFarol = function(){
             arquiteturaAtiva ? "Arquitetura Naval" : "Legislação Marítima e Ambiental",
             arquiteturaAtiva
                 ? `5 tópicos • ${totalArquitetura} questões disponíveis`
-                : `8 tópicos liberados • ${totalLegislacao} questões disponíveis`
+                : `15 tópicos liberados • ${totalLegislacao} questões disponíveis`
         );
 
         const arquitetura = `
@@ -41361,6 +41375,48 @@ limparArenaLocalFarol = function(){
                     "2.6 Atribuições do comandante e competência para aplicar penalidades",
                     "2.6 Atribuições do comandante e competência para aplicar penalidades",
                     "Deveres legais do Comandante, segurança e disciplina a bordo, poderes previstos na LESTA, penalidades da competência do Comandante, garantias do procedimento disciplinar, registros, comunicações e recurso."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "2.7 Faltas disciplinares",
+                    "2.7 Faltas disciplinares",
+                    "As dez faltas disciplinares do item 4.21 da NORMAM-101/DPC: hierarquia e ordens, recusa de serviço, embriaguez, horário, abandono de posto, licença, negligência, conflitos, moralidade/honestidade/disciplina/limpeza e cumprimento da Lei e das Normas."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "2.8 Atribuições dos marítimos",
+                    "2.8 Atribuições dos marítimos",
+                    "Atribuições do Taifeiro, funções do Taifeiro como Paioleiro e preceitos comuns aos tripulantes, conforme os itens 4.12 e 4.19 da NORMAM-101/DPC vigente."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "2.9 Obrigações de trabalho e previdência social",
+                    "2.9 Obrigações de trabalho e previdência social",
+                    "Trabalho marítimo, jornada e descanso, remuneração, férias e repatriação; acidente do trabalho, CAT, doenças ocupacionais e previdência, com aposentadoria especial atualizada para a legislação e jurisprudência vigentes em 2026."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "3.1 Cargas perigosas",
+                    "3.1 Cargas perigosas",
+                    "IMDG Code, classificação das nove classes e divisões, Número ONU, Proper Shipping Name, riscos subsidiários, grupos de embalagem, identificação, marcação e documentação de mercadorias perigosas."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "3.2 Medidas de segurança no manuseio de cargas perigosas",
+                    "3.2 Medidas de segurança no manuseio de cargas perigosas",
+                    "Ficha de segurança, capacitação, EPI, permissão de trabalho, fontes de ignição, medidas específicas por classe, segregação, armazenamento, ventilação, refrigeração e resposta a emergências."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "3.3 Combate à poluição",
+                    "3.3 Combate à poluição",
+                    "MARPOL, Lei nº 9.966/2000, NORMAM-401/DPC, prevenção e resposta a derramamentos, PEI, Plano de Área, SOPEP/SMPEP, comunicação de incidentes e Plano Nacional de Contingência."
+                )}
+
+                ${cardTopicoBancoTAA(
+                    "3.4 Transporte de óleo, substância nociva ou perigosa",
+                    "3.4 Transporte de óleo, substância nociva ou perigosa",
+                    "Lei nº 9.966/2000, transporte a granel e fracionado, livros e documentos de bordo, MARPOL Anexos I e II, Oil Record Book, IOPP, OWS/ODME, categorias X/Y/Z/OS e IBC/BCH."
                 )}
             </div>
         `;
@@ -42012,7 +42068,13 @@ limparArenaLocalFarol = function(){
         ).map(adaptarQuestaoTaifeiroSimuladoV78).filter(Boolean);
     }
 
-    window.iniciarSimuladoEspecificosTaifeiroFarol = function(quantidade = 30){
+    function prepararContextoSimuladoTaifeiroV113(){
+        localStorage.setItem("farol_concurso_simulados", "transpetro2026");
+        localStorage.setItem("farol_concurso_atual", "transpetro2026");
+        localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+    }
+
+    function temAcessoSimuladoTaifeiroV113(){
         if(typeof window.temAcessoCargoFarol === "function" &&
             !window.temAcessoCargoFarol("transpetro2026", "taifeiro")
         ){
@@ -42021,6 +42083,54 @@ limparArenaLocalFarol = function(){
             }
             return false;
         }
+        return true;
+    }
+
+    function bancoDisciplinaTaifeiroV113(disciplina){
+        const chave = String(disciplina || "").toLowerCase();
+        const eixo = chave === "arquitetura"
+            ? "Arquitetura Naval"
+            : chave === "legislacao"
+                ? "Legislação Marítima e Ambiental"
+                : "";
+
+        if(!eixo) return [];
+
+        return bancoEspecificasTaifeiroV78().filter(q =>
+            String(q && q.eixo || "").trim() === eixo
+        );
+    }
+
+    window.iniciarSimuladoDisciplinaTaifeiroFarol = function(disciplina, quantidade = 30){
+        if(!temAcessoSimuladoTaifeiroV113()) return false;
+
+        const chave = String(disciplina || "").toLowerCase();
+        const banco = bancoDisciplinaTaifeiroV113(chave);
+        const nome = chave === "arquitetura"
+            ? "Arquitetura Naval"
+            : chave === "legislacao"
+                ? "Legislação Marítima e Ambiental"
+                : "disciplina selecionada";
+
+        if(!banco.length){
+            if(typeof mostrarToast === "function"){
+                mostrarToast(`O banco de ${nome} ainda não foi carregado.`);
+            }
+            return false;
+        }
+
+        prepararContextoSimuladoTaifeiroV113();
+
+        iniciarSimuladoPersonalizado(
+            banco,
+            Math.min(Number(quantidade) || 30, banco.length),
+            `transpetro:taifeiro:${chave}`
+        );
+        return true;
+    };
+
+    window.iniciarSimuladoEspecificosTaifeiroFarol = function(quantidade = 30){
+        if(!temAcessoSimuladoTaifeiroV113()) return false;
 
         const banco = bancoEspecificasTaifeiroV78();
         if(!banco.length){
@@ -42030,9 +42140,7 @@ limparArenaLocalFarol = function(){
             return false;
         }
 
-        localStorage.setItem("farol_concurso_simulados", "transpetro2026");
-        localStorage.setItem("farol_concurso_atual", "transpetro2026");
-        localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+        prepararContextoSimuladoTaifeiroV113();
 
         iniciarSimuladoPersonalizado(
             banco,

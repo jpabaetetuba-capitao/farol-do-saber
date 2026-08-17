@@ -16313,6 +16313,26 @@ body.efeito-ondas-v65 #conteudoPerfilAluno .perfil-cabecalho,
 .menu-transpetro-v24 > button{
     border-color:rgba(11,92,138,.22);
     background:linear-gradient(145deg,#ffffff,#edf8fd);
+    color:#17384b !important;
+}
+
+.menu-transpetro-v24 > button:hover{
+    border-color:#0b6e9e;
+    background:linear-gradient(145deg,#ffffff,#e7f5fc);
+    color:#083f62 !important;
+}
+
+.menu-transpetro-v24 > button > span{
+    background:#e4f4fc;
+}
+
+.menu-transpetro-v24 > button small{
+    color:#5c7482;
+    opacity:1;
+}
+
+.menu-transpetro-v24 > button b{
+    color:#0b6e9e;
 }
 
 .painel-simulados-transpetro-farol{

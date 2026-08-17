@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=103-transpetro-banco2026-1-1">
+    <link rel="stylesheet" href="style.css?v=104-correcao-visual-simulados-transpetro-v114">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -3093,20 +3093,26 @@ Li e revisei o mapa mental.
                     <div>
                         <span class="selo-simulado-transpetro-farol">⚓ Transpetro MAR • Cesgranrio • 2026</span>
                         <h3>Taifeiro — TAA</h3>
-                        <p>Conhecimentos Específicos já estão conectados ao Banco 2026. Português e o simulado completo serão liberados conforme os próximos tópicos forem concluídos.</p>
+                        <p>Arquitetura Naval e Legislação Marítima e Ambiental já podem ser treinadas separadamente ou juntas em Conhecimentos Específicos. Português e o simulado completo serão liberados quando o respectivo banco estiver concluído.</p>
                     </div>
-                    <span class="status-simulado-transpetro-farol">✅ Específicas ativas</span>
+                    <span class="status-simulado-transpetro-farol">✅ 2 disciplinas ativas</span>
                 </div>
 
                 <div class="grid-opcoes-transpetro-farol">
-                    <button type="button" onclick="mostrarToast('Português permanece em preparação e será liberado quando o banco da disciplina estiver concluído.')">
-                        <span>📘</span><strong>Português</strong><small>Em preparação</small>
+                    <button type="button" onclick="iniciarSimuladoDisciplinaTaifeiroFarol('arquitetura', 30)">
+                        <span>⚓</span><strong>Arquitetura Naval</strong><small>30 questões • Banco 2026</small>
+                    </button>
+                    <button type="button" onclick="iniciarSimuladoDisciplinaTaifeiroFarol('legislacao', 30)">
+                        <span>⚖️</span><strong>Legislação Marítima e Ambiental</strong><small>30 questões • Banco 2026</small>
                     </button>
                     <button type="button" onclick="iniciarSimuladoEspecificosTaifeiroFarol(30)">
-                        <span>⚓</span><strong>Conhecimentos Específicos</strong><small>30 questões do Banco 2026</small>
+                        <span>🧭</span><strong>Conhecimentos Específicos</strong><small>30 questões • Arquitetura + Legislação</small>
                     </button>
                     <button type="button" onclick="iniciarSimuladoEspecificosTaifeiroFarol(10)">
                         <span>⚡</span><strong>Treino rápido</strong><small>10 questões de Específicas</small>
+                    </button>
+                    <button type="button" onclick="mostrarToast('Português permanece em preparação e será liberado quando o banco da disciplina estiver concluído.')">
+                        <span>📘</span><strong>Português</strong><small>Em preparação</small>
                     </button>
                     <button type="button" onclick="mostrarToast('O simulado completo de 50 questões será liberado quando Português estiver concluído.')">
                         <span>🎯</span><strong>Simulado completo 2026</strong><small>20 Português + 30 Específicas • em preparação</small>
@@ -5805,16 +5811,23 @@ Li e revisei o mapa mental.
 <script src="dados/transpetro/taifeiro/banco2026/arquiteturaNaval_1_3.js?v=taa2026-arq-1-3-v1"></script>
 <script src="dados/transpetro/taifeiro/banco2026/arquiteturaNaval_1_4.js?v=taa2026-arq-1-4-v1"></script>
 <script src="dados/transpetro/taifeiro/banco2026/arquiteturaNaval_1_5.js?v=taa2026-arq-1-5-v1"></script>
-<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_1_1.js?v=taa2026-leg-1-1-v1"></script>
-<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_1_2.js?v=taa2026-leg-1-2-v1"></script>
-<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_1.js?v=taa2026-leg-2-1-v1"></script>
-<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_2.js?v=taa2026-leg-2-2-v1"></script>
-<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_3.js?v=taa2026-leg-2-3-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_1_1.js?v=taa2026-leg-1-1-v2"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_1_2.js?v=taa2026-leg-1-2-v2"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_1.js?v=taa2026-leg-2-1-v2"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_2.js?v=taa2026-leg-2-2-v2"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_3.js?v=taa2026-leg-2-3-v2"></script>
 <script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_4.js?v=taa2026-leg-2-4-v1"></script>
-<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_5.js?v=taa2026-leg-2-5-v1"></script>
-<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_6.js?v=taa2026-leg-2-6-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_5.js?v=taa2026-leg-2-5-v2"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_6.js?v=taa2026-leg-2-6-v2"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_7.js?v=taa2026-leg-2-7-v3"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_8.js?v=taa2026-leg-2-8-v2"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_2_9.js?v=taa2026-leg-2-9-v111"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_3_1.js?v=taa2026-leg-3-1-v112"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_3_2.js?v=taa2026-leg-3-2-v3"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_3_3.js?v=taa2026-leg-3-3-v1"></script>
+<script src="dados/transpetro/taifeiro/banco2026/legislacaoMaritimaAmbiental_3_4.js?v=taa2026-leg-3-4-v1"></script>
 
-<script src="app.js?v=130-voltar-simulados-v89"></script>
+<script src="app.js?v=138-simulados-disciplinas-taifeiro-v113"></script>
 <script src="admin.js?v=76-transpetro-todos-cargos"></script>
 
 
