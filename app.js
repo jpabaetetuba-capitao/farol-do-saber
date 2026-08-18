@@ -27594,7 +27594,8 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 { chave: "taa2026_prot_2_1", topicoEdital: "2.1 Convenções internacionais, códigos e recomendações", nome: "2.1 Convenções internacionais, códigos e recomendações" },
                 { chave: "taa2026_prot_2_2_1", topicoEdital: "2.2.1 Legislação e regulamentos governamentais relevantes para os navios", nome: "2.2.1 Legislação e regulamentos para os navios" },
                 { chave: "taa2026_prot_2_2_2", topicoEdital: "2.2.2 Legislação e regulamentos governamentais relevantes para os portos", nome: "2.2.2 Legislação e regulamentos para os portos" },
-                { chave: "taa2026_prot_2_3", topicoEdital: "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima", nome: "2.3 Definições e siglas" }
+                { chave: "taa2026_prot_2_3", topicoEdital: "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima", nome: "2.3 Definições e siglas" },
+                { chave: "taa2026_prot_2_4", topicoEdital: "2.4 Manuseio de informações sigilosas relacionadas à proteção e comunicações", nome: "2.4 Informações sigilosas e comunicações" }
             ]
         },
         {
@@ -42094,7 +42095,8 @@ limparArenaLocalFarol = function(){
             "2.1 Convenções internacionais, códigos e recomendações",
             "2.2.1 Legislação e regulamentos governamentais relevantes para os navios",
             "2.2.2 Legislação e regulamentos governamentais relevantes para os portos",
-            "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima"
+            "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima",
+            "2.4 Manuseio de informações sigilosas relacionadas à proteção e comunicações"
         ].reduce((soma, topico) => soma + questoesTopicoTAA(topico).length, 0);
     }
 
@@ -42188,7 +42190,7 @@ limparArenaLocalFarol = function(){
                             <span class="eixo-icone">🛡️</span>
                             <span class="eixo-textos">
                                 <strong>Conscientização sobre proteção de navio</strong>
-                                <small>6 tópicos liberados</small>
+                                <small>7 tópicos liberados</small>
                             </span>
                         </span>
                         <span class="eixo-total">
@@ -42240,7 +42242,7 @@ limparArenaLocalFarol = function(){
                 : legislacaoAtiva
                     ? `15 tópicos liberados • ${totalLegislacao} questões disponíveis`
                     : protecaoAtiva
-                        ? `6 tópicos liberados • ${totalProtecaoNavio} questões disponíveis`
+                        ? `7 tópicos liberados • ${totalProtecaoNavio} questões disponíveis`
                         : `${topicosPortuguesLiberados} de 8 tópicos liberados • ${totalPortugues} questões disponíveis`
         );
 
@@ -42421,6 +42423,11 @@ limparArenaLocalFarol = function(){
                     "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima",
                     "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima",
                     "IMO, ISPS, SOLAS, GISIS, SSO/OPN, CSO/CPC, PFSO/SSP, RSO, SSAS, ISSC, CONPORTOS, CESPORTOS, EAR, PSP, DC, ROIP, NAPV, CFTV e definições portuárias fundamentais."
+                )}
+                ${cardTopicoBancoTAA(
+                    "2.4 Manuseio de informações sigilosas relacionadas à proteção e comunicações",
+                    "2.4 Manuseio de informações sigilosas relacionadas à proteção e comunicações",
+                    "Necessidade de conhecimento, proteção de documentos e dados, acesso autorizado, armazenamento, segurança digital, comunicação navio-porto, mudanças de nível e relato de preocupações de proteção."
                 )}
             </div>
         `;
