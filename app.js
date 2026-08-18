@@ -40943,7 +40943,8 @@ limparArenaLocalFarol = function(){
         eixoMenu: "",
         indice: 0,
         questoes: [],
-        respostas: []
+        respostas: [],
+        concluido: false
     };
 
     function elBancoTAA(id){
@@ -41075,6 +41076,253 @@ limparArenaLocalFarol = function(){
         }
 
         return embaralhadas;
+    }
+
+    function idQuestaoProgressoBancoTAA(questao){
+        if(!questao) return "";
+        return String(
+            questao.id ||
+            questao.enunciado ||
+            questao.pergunta ||
+            ""
+        );
+    }
+
+    function slugProgressoBancoTAA(valor){
+        return String(valor || "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "_")
+            .replace(/^_+|_+$/g, "");
+    }
+
+    function chaveProgressoBancoTAA(topico){
+        const eixo = estadoBancoTAA2026.eixoMenu || "geral";
+        return `farol_taa_progresso_v130_${slugProgressoBancoTAA(eixo)}_${slugProgressoBancoTAA(topico)}`;
+    }
+
+    function obterProgressoSalvoBancoTAA(topico){
+        const titulo = String(topico || "");
+        if(!titulo) return null;
+
+        try{
+            const bruto = localStorage.getItem(chaveProgressoBancoTAA(titulo));
+            if(!bruto) return null;
+
+            const dados = JSON.parse(bruto);
+            if(!dados || dados.versao !== 1 || dados.topico !== titulo){
+                return null;
+            }
+
+            if(!Array.isArray(dados.ordemIds) || !dados.ordemIds.length){
+                return null;
+            }
+
+            return dados;
+        }catch(_erro){
+            return null;
+        }
+    }
+
+    function removerProgressoBancoTAA(topico){
+        try{
+            localStorage.removeItem(chaveProgressoBancoTAA(String(topico || "")));
+        }catch(_erro){
+            // Sem impacto no funcionamento da sessão atual.
+        }
+    }
+
+    function salvarProgressoBancoTAA(){
+        if(
+            estadoBancoTAA2026.concluido ||
+            !estadoBancoTAA2026.topico ||
+            !Array.isArray(estadoBancoTAA2026.questoes) ||
+            !estadoBancoTAA2026.questoes.length
+        ){
+            return;
+        }
+
+        const questaoAtual = estadoBancoTAA2026.questoes[estadoBancoTAA2026.indice];
+
+        const dados = {
+            versao: 1,
+            topico: estadoBancoTAA2026.topico,
+            eixoMenu: estadoBancoTAA2026.eixoMenu || "",
+            indice: estadoBancoTAA2026.indice,
+            questaoAtualId: idQuestaoProgressoBancoTAA(questaoAtual),
+            ordemIds: estadoBancoTAA2026.questoes.map(idQuestaoProgressoBancoTAA),
+            respostas: estadoBancoTAA2026.questoes.map((questao, indice) => {
+                const resposta = estadoBancoTAA2026.respostas[indice] || {};
+                return {
+                    id: idQuestaoProgressoBancoTAA(questao),
+                    selecionada: Number.isInteger(resposta.selecionada)
+                        ? resposta.selecionada
+                        : null,
+                    confirmada: !!resposta.confirmada,
+                    ganhouPontosLuz: !!resposta.ganhouPontosLuz
+                };
+            }),
+            salvoEm: Date.now()
+        };
+
+        try{
+            localStorage.setItem(
+                chaveProgressoBancoTAA(estadoBancoTAA2026.topico),
+                JSON.stringify(dados)
+            );
+        }catch(_erro){
+            // A tentativa continua funcionando mesmo sem persistência local.
+        }
+    }
+
+    function reconstruirTentativaSalvaBancoTAA(topico, salvo){
+        const baseAtual = questoesTopicoTAA(String(topico || ""), bancoVisivelTAA());
+        if(!baseAtual.length || !salvo) return null;
+
+        const mapaQuestoes = new Map();
+        baseAtual.forEach(questao => {
+            const id = idQuestaoProgressoBancoTAA(questao);
+            if(id) mapaQuestoes.set(id, questao);
+        });
+
+        const usadas = new Set();
+        const ordenadas = [];
+
+        (Array.isArray(salvo.ordemIds) ? salvo.ordemIds : []).forEach(id => {
+            const questao = mapaQuestoes.get(String(id));
+            if(questao && !usadas.has(String(id))){
+                ordenadas.push(questao);
+                usadas.add(String(id));
+            }
+        });
+
+        // Se o banco recebeu questões novas depois que a tentativa foi salva,
+        // elas entram ao final em ordem aleatória sem apagar o progresso antigo.
+        const novas = baseAtual.filter(questao => {
+            return !usadas.has(idQuestaoProgressoBancoTAA(questao));
+        });
+
+        const novasEmbaralhadas = typeof embaralharArray === "function"
+            ? embaralharArray(novas)
+            : [...novas].sort(() => Math.random() - 0.5);
+
+        ordenadas.push(...novasEmbaralhadas);
+
+        if(!ordenadas.length) return null;
+
+        const respostasSalvas = new Map();
+        (Array.isArray(salvo.respostas) ? salvo.respostas : []).forEach(item => {
+            if(item && item.id){
+                respostasSalvas.set(String(item.id), item);
+            }
+        });
+
+        const respostas = ordenadas.map(questao => {
+            const antiga = respostasSalvas.get(idQuestaoProgressoBancoTAA(questao)) || {};
+            const selecionada = Number.isInteger(antiga.selecionada) &&
+                antiga.selecionada >= 0 &&
+                antiga.selecionada <= 4
+                    ? antiga.selecionada
+                    : null;
+
+            return {
+                selecionada,
+                confirmada: !!antiga.confirmada,
+                ganhouPontosLuz: !!antiga.ganhouPontosLuz
+            };
+        });
+
+        let indice = ordenadas.findIndex(questao =>
+            idQuestaoProgressoBancoTAA(questao) === String(salvo.questaoAtualId || "")
+        );
+
+        if(indice < 0){
+            const indiceSalvo = Number(salvo.indice);
+            indice = Number.isInteger(indiceSalvo)
+                ? Math.min(Math.max(indiceSalvo, 0), ordenadas.length - 1)
+                : 0;
+        }
+
+        return { questoes: ordenadas, respostas, indice };
+    }
+
+    function renderizarOpcaoRetomarBancoTAA(topico, salvo){
+        const area = elBancoTAA("conteudoBancoQuestoesTaifeiro");
+        const nav = elBancoTAA("navegacaoBancoQuestoesTaifeiro");
+        const progresso = elBancoTAA("progressoBancoQuestoesTaifeiro");
+        if(!area) return;
+
+        const total = Array.isArray(salvo.ordemIds) ? salvo.ordemIds.length : 0;
+        const respondidas = Array.isArray(salvo.respostas)
+            ? salvo.respostas.filter(r => r && r.confirmada).length
+            : 0;
+
+        const indiceSalvo = Number.isInteger(Number(salvo.indice))
+            ? Number(salvo.indice)
+            : 0;
+
+        const numeroAtual = total
+            ? Math.min(Math.max(indiceSalvo + 1, 1), total)
+            : 1;
+
+        estadoBancoTAA2026.modo = "retomar";
+        estadoBancoTAA2026.topico = String(topico || "");
+
+        atualizarCabecalhoBancoTAA(
+            tituloTopicoAtualBancoTAA(),
+            "Há uma tentativa em andamento neste tópico."
+        );
+
+        if(progresso){
+            progresso.innerHTML = `
+                <strong>Questão ${numeroAtual} de ${total}</strong>
+                <span>${respondidas} resposta${respondidas === 1 ? "" : "s"} confirmada${respondidas === 1 ? "" : "s"}</span>
+            `;
+        }
+
+        area.innerHTML = `
+            <div class="resultado-banco-taifeiro">
+                <span class="icone-resultado-banco-taifeiro">▶️</span>
+                <h3>Continuar de onde parei?</h3>
+                <p>
+                    Você possui uma tentativa salva neste tópico.
+                    Ao continuar, a plataforma mantém <strong>a mesma ordem embaralhada</strong>,
+                    suas respostas e a posição em que você parou.
+                </p>
+
+                <div class="placar-resultado-banco-taifeiro">
+                    <div><strong>${numeroAtual}</strong><small>questão atual</small></div>
+                    <div><strong>${respondidas}</strong><small>respondidas</small></div>
+                    <div><strong>${total}</strong><small>total</small></div>
+                </div>
+
+                <div class="acoes-questao-banco-taifeiro" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+                    <button
+                        type="button"
+                        class="btn-destaque-banco-taifeiro"
+                        onclick="continuarTopicoBancoTaifeiroFarol('${escaparBancoTAA(String(topico || ""))}')">
+                        ▶ Continuar de onde parei
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="comecarNovoTopicoBancoTaifeiroFarol('${escaparBancoTAA(String(topico || ""))}')">
+                        🔄 Começar novamente
+                    </button>
+                </div>
+            </div>
+        `;
+
+        if(nav){
+            nav.innerHTML = `
+                <button type="button" onclick="voltarListaTopicosBancoTaifeiroFarol()">
+                    ← Voltar aos tópicos
+                </button>
+            `;
+        }
+
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
 
     function tituloTopicoAtualBancoTAA(){
@@ -42156,6 +42404,27 @@ limparArenaLocalFarol = function(){
 
     window.iniciarTopicoBancoTaifeiroFarol = function(topico){
         const topicoSelecionado = String(topico || "");
+        const bancoTopico = questoesTopicoTAA(topicoSelecionado, bancoVisivelTAA());
+
+        if(!bancoTopico.length){
+            if(typeof mostrarToast === "function") mostrarToast("Este tópico ainda está em preparação.");
+            return;
+        }
+
+        const salvo = obterProgressoSalvoBancoTAA(topicoSelecionado);
+
+        if(salvo){
+            renderizarOpcaoRetomarBancoTAA(topicoSelecionado, salvo);
+            return;
+        }
+
+        window.comecarNovoTopicoBancoTaifeiroFarol(topicoSelecionado);
+    };
+
+    window.comecarNovoTopicoBancoTaifeiroFarol = function(topico){
+        const topicoSelecionado = String(topico || "");
+        removerProgressoBancoTAA(topicoSelecionado);
+
         const questoes = embaralharQuestoesTopicoTAA(
             topicoSelecionado,
             questoesTopicoTAA(topicoSelecionado, bancoVisivelTAA())
@@ -42169,7 +42438,40 @@ limparArenaLocalFarol = function(){
         estadoBancoTAA2026.topico = topicoSelecionado;
         estadoBancoTAA2026.indice = 0;
         estadoBancoTAA2026.questoes = questoes;
-        estadoBancoTAA2026.respostas = questoes.map(() => ({ selecionada: null, confirmada: false }));
+        estadoBancoTAA2026.respostas = questoes.map(() => ({
+            selecionada: null,
+            confirmada: false
+        }));
+        estadoBancoTAA2026.concluido = false;
+
+        salvarProgressoBancoTAA();
+        renderizarQuestaoBancoTAA();
+    };
+
+    window.continuarTopicoBancoTaifeiroFarol = function(topico){
+        const topicoSelecionado = String(topico || "");
+        const salvo = obterProgressoSalvoBancoTAA(topicoSelecionado);
+
+        if(!salvo){
+            window.comecarNovoTopicoBancoTaifeiroFarol(topicoSelecionado);
+            return;
+        }
+
+        const restaurada = reconstruirTentativaSalvaBancoTAA(topicoSelecionado, salvo);
+
+        if(!restaurada){
+            removerProgressoBancoTAA(topicoSelecionado);
+            window.comecarNovoTopicoBancoTaifeiroFarol(topicoSelecionado);
+            return;
+        }
+
+        estadoBancoTAA2026.topico = topicoSelecionado;
+        estadoBancoTAA2026.questoes = restaurada.questoes;
+        estadoBancoTAA2026.respostas = restaurada.respostas;
+        estadoBancoTAA2026.indice = restaurada.indice;
+        estadoBancoTAA2026.concluido = false;
+
+        salvarProgressoBancoTAA();
         renderizarQuestaoBancoTAA();
     };
 
@@ -42183,6 +42485,7 @@ limparArenaLocalFarol = function(){
         // Apenas marca a alternativa escolhida. Não renderiza novamente a questão
         // e, portanto, não altera a posição de rolagem da página.
         resposta.selecionada = indiceSelecionado;
+        salvarProgressoBancoTAA();
 
         const area = elBancoTAA("conteudoBancoQuestoesTaifeiro");
         if(!area) return;
@@ -42239,6 +42542,7 @@ limparArenaLocalFarol = function(){
         if(typeof salvarRankingFirebase === "function") salvarRankingFirebase();
         if(typeof window.verificarConquistasFarol === "function") window.verificarConquistasFarol();
 
+        salvarProgressoBancoTAA();
         renderizarCorrecaoBancoTAA();
     };
 
@@ -42255,6 +42559,7 @@ limparArenaLocalFarol = function(){
     window.questaoAnteriorBancoTaifeiroFarol = function(){
         if(estadoBancoTAA2026.indice <= 0) return;
         estadoBancoTAA2026.indice -= 1;
+        salvarProgressoBancoTAA();
         renderizarQuestaoBancoTAA();
     };
 
@@ -42266,6 +42571,7 @@ limparArenaLocalFarol = function(){
         }
         if(estadoBancoTAA2026.indice < estadoBancoTAA2026.questoes.length - 1){
             estadoBancoTAA2026.indice += 1;
+            salvarProgressoBancoTAA();
             renderizarQuestaoBancoTAA();
         }
     };
@@ -42276,6 +42582,8 @@ limparArenaLocalFarol = function(){
             if(typeof mostrarToast === "function") mostrarToast("Responda todas as questões antes de ver o resultado.");
             return;
         }
+        estadoBancoTAA2026.concluido = true;
+        removerProgressoBancoTAA(estadoBancoTAA2026.topico);
         renderizarResultadoBancoTAA();
     };
 
@@ -42286,7 +42594,7 @@ limparArenaLocalFarol = function(){
 
     window.refazerTopicoBancoTaifeiroFarol = function(){
         const topico = estadoBancoTAA2026.topico;
-        window.iniciarTopicoBancoTaifeiroFarol(topico);
+        window.comecarNovoTopicoBancoTaifeiroFarol(topico);
     };
 
     window.voltarListaTopicosBancoTaifeiroFarol = function(){
