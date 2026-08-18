@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v141-2026-08-18-corrige-abertura-provas-cza";
+const CACHE_VERSION = "farol-v143-2026-08-18-corrige-banco-provas-cza";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 

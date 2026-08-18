@@ -24678,19 +24678,70 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
     window.temAcessoTaifeiroFarolV135 = temAcessoTaifeiroIntegracaoV135;
 
     window.voltarMenuTaifeiroFarol = function(){
-        if(!temAcessoTaifeiroIntegracaoV135()){
-            bloquearAreaTaifeiroIntegracaoV135();
+        const trilhaAtual =
+            localStorage.getItem("farol_trilha_atual") || "transpetroTaifeiro";
+
+        const configCargo = {
+            transpetroTaifeiro: {
+                cargoAcesso: "taifeiro",
+                nome: "Taifeiro — TAA"
+            },
+            transpetroCozinheiro: {
+                cargoAcesso: "cozinheiro",
+                nome: "Cozinheiro — CZA"
+            },
+            transpetroAuxiliarSaude: {
+                cargoAcesso: "auxiliarSaude",
+                nome: "Auxiliar de Saúde — ASA"
+            }
+        }[trilhaAtual] || {
+            cargoAcesso: "taifeiro",
+            nome: "Taifeiro — TAA"
+        };
+
+        const acessoLiberado =
+            typeof window.temAcessoCargoFarol === "function"
+                ? window.temAcessoCargoFarol(
+                    "transpetro2026",
+                    configCargo.cargoAcesso
+                )
+                : (
+                    configCargo.cargoAcesso === "taifeiro" &&
+                    temAcessoTaifeiroIntegracaoV135()
+                );
+
+        if(!acessoLiberado){
+            if(typeof mostrarToast === "function"){
+                mostrarToast(
+                    `Seu acesso ainda não inclui ${configCargo.nome} — Transpetro MAR.`
+                );
+            }
+
+            localStorage.setItem("farol_concurso_atual", "transpetro2026");
+            localStorage.removeItem("farol_trilha_atual");
+
+            if(typeof mostrarTela === "function"){
+                mostrarTela("questoes");
+            }
+
+            setTimeout(() => {
+                if(typeof renderizarTelaPreparacoes === "function"){
+                    renderizarTelaPreparacoes();
+                }
+            }, 0);
             return;
         }
 
         localStorage.setItem("farol_concurso_atual", "transpetro2026");
-        localStorage.setItem("farol_trilha_atual", configProvaComentadaTranspetroV140().trilha);
+        localStorage.setItem("farol_trilha_atual", trilhaAtual);
+
         if(typeof mostrarTela === "function"){
             mostrarTela("questoes");
         }
+
         setTimeout(() => {
             if(typeof renderizarTrilhaEstudo === "function"){
-                renderizarTrilhaEstudo("transpetroTaifeiro");
+                renderizarTrilhaEstudo(trilhaAtual);
             }
         }, 20);
     };
@@ -24717,6 +24768,10 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         if(destino === "questoesAnteriores"){
             localStorage.setItem("farol_concurso_atual", "transpetro2026");
             localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+            localStorage.setItem(
+                "farol_contexto_provas_transpetro_v143",
+                "transpetroTaifeiro"
+            );
             mostrarTela("questoesAnterioresTaifeiro");
             setTimeout(() => {
                 if(typeof window.voltarAnosProvaComentadaTaifeiroFarol === "function"){
@@ -40964,11 +41019,37 @@ limparArenaLocalFarol = function(){
     }
 
     function configProvaComentadaTranspetroV140(){
-        const trilha = localStorage.getItem("farol_trilha_atual") || "transpetroTaifeiro";
+        const contextoExplicito =
+            localStorage.getItem("farol_contexto_provas_transpetro_v143");
+
+        const trilhaAtual =
+            localStorage.getItem("farol_trilha_atual") || "transpetroTaifeiro";
+
+        const trilha = contextoExplicito || trilhaAtual;
+
         if(trilha === "transpetroCozinheiro"){
-            return { trilha, cargoAcesso:"cozinheiro", nome:"Cozinheiro", nomeCompleto:"Cozinheiro — CZA", sigla:"CZA", icone:"👨‍🍳", banco2018:"questoesCozinheiro2018", banco2023:"questoesCozinheiro2023" };
+            return {
+                trilha: "transpetroCozinheiro",
+                cargoAcesso:"cozinheiro",
+                nome:"Cozinheiro",
+                nomeCompleto:"Cozinheiro — CZA",
+                sigla:"CZA",
+                icone:"👨‍🍳",
+                banco2018:"questoesCozinheiro2018",
+                banco2023:"questoesCozinheiro2023"
+            };
         }
-        return { trilha:"transpetroTaifeiro", cargoAcesso:"taifeiro", nome:"Taifeiro", nomeCompleto:"Taifeiro — TAA", sigla:"TAA", icone:"⚓", banco2018:"questoesTaifeiro2018", banco2023:"questoesTaifeiro2023" };
+
+        return {
+            trilha:"transpetroTaifeiro",
+            cargoAcesso:"taifeiro",
+            nome:"Taifeiro",
+            nomeCompleto:"Taifeiro — TAA",
+            sigla:"TAA",
+            icone:"⚓",
+            banco2018:"questoesTaifeiro2018",
+            banco2023:"questoesTaifeiro2023"
+        };
     }
 
     function temAcessoProvaComentadaTaifeiro(){
@@ -41468,8 +41549,11 @@ limparArenaLocalFarol = function(){
         }
 
         if(!temAcessoProvaComentadaTaifeiro()){
+            const cfgAcesso = configProvaComentadaTranspetroV140();
             if(typeof mostrarToast === "function"){
-                mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+                mostrarToast(
+                    `Seu acesso ainda não inclui ${cfgAcesso.nomeCompleto} — Transpetro MAR.`
+                );
             }
             return;
         }
@@ -41490,8 +41574,14 @@ limparArenaLocalFarol = function(){
             return;
         }
 
+        const cfgProvaAtual = configProvaComentadaTranspetroV140();
+
         localStorage.setItem("farol_concurso_atual", "transpetro2026");
-        localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+        localStorage.setItem("farol_trilha_atual", cfgProvaAtual.trilha);
+        localStorage.setItem(
+            "farol_contexto_provas_transpetro_v143",
+            cfgProvaAtual.trilha
+        );
 
         if(typeof mostrarTela === "function"){
             mostrarTela("provaComentadaTaifeiro");
@@ -44318,12 +44408,26 @@ limparArenaLocalFarol = function(){
         if(sec){
             const etapa=sec.querySelector(".etapa-fluxo-provas-v30");
             if(etapa) etapa.textContent="Transpetro MAR • Cozinheiro — CZA";
-            sec.querySelectorAll(".prova-comentada-transpetro-card h3").forEach((h,i)=>{
-                h.textContent=`👨‍🍳 Cozinheiro — ${i===0?2018:2023}`;
-            });
-            const botoes=sec.querySelectorAll(".btn-iniciar-prova-comentada-transpetro");
-            if(botoes[0]) botoes[0].setAttribute("onclick","abrirDisciplinasProvaComentadaTaifeiroFarol(2018)");
-            if(botoes[1]) botoes[1].setAttribute("onclick","abrirDisciplinasProvaComentadaTaifeiroFarol(2023)");
+
+            const botaoVoltar = sec.querySelector(".btn-voltar-fluxo-provas-v30");
+            if(botaoVoltar){
+                botaoVoltar.setAttribute("aria-label","Voltar para Cozinheiro");
+            }
+
+            // Altera apenas os dois cards da seleção de ANO.
+            // Não mexe nos cards de Português/Específicas gerados depois.
+            const gradeAnos = sec.querySelector("#gridAnosProvasComentadasTaifeiro");
+            if(gradeAnos){
+                gradeAnos
+                    .querySelectorAll(".prova-comentada-transpetro-card h3")
+                    .forEach((h,i)=>{
+                        h.textContent=`👨‍🍳 Cozinheiro — ${i===0?2018:2023}`;
+                    });
+
+                const botoes=gradeAnos.querySelectorAll(".btn-iniciar-prova-comentada-transpetro");
+                if(botoes[0]) botoes[0].setAttribute("onclick","abrirDisciplinasProvaComentadaTaifeiroFarol(2018)");
+                if(botoes[1]) botoes[1].setAttribute("onclick","abrirDisciplinasProvaComentadaTaifeiroFarol(2023)");
+            }
         }
         const prova=document.getElementById("provaComentadaTaifeiro");
         if(prova){
@@ -44338,6 +44442,10 @@ limparArenaLocalFarol = function(){
         if(!(await validarAcessoCozinheiroV140())) return false;
         localStorage.setItem("farol_concurso_atual","transpetro2026");
         localStorage.setItem("farol_trilha_atual","transpetroCozinheiro");
+        localStorage.setItem(
+            "farol_contexto_provas_transpetro_v143",
+            "transpetroCozinheiro"
+        );
         if(typeof mostrarTela === "function") mostrarTela("questoesAnterioresTaifeiro");
         setTimeout(()=>{
             rotulosCZAProvasV140();
@@ -44365,7 +44473,10 @@ limparArenaLocalFarol = function(){
     if(typeof abrirDiscAntesV140 === "function"){
         window.abrirDisciplinasProvaComentadaTaifeiroFarol=function(){
             const r=abrirDiscAntesV140.apply(this,arguments);
-            if(localStorage.getItem("farol_trilha_atual")==="transpetroCozinheiro"){
+            if(
+                localStorage.getItem("farol_contexto_provas_transpetro_v143") ===
+                "transpetroCozinheiro"
+            ){
                 setTimeout(rotulosCZAProvasV140,0);
             }
             return r;
@@ -44376,7 +44487,10 @@ limparArenaLocalFarol = function(){
     if(typeof iniciarAntesV140 === "function"){
         window.iniciarProvaComentadaTaifeiroFarol=function(){
             const r=iniciarAntesV140.apply(this,arguments);
-            if(localStorage.getItem("farol_trilha_atual")==="transpetroCozinheiro"){
+            if(
+                localStorage.getItem("farol_contexto_provas_transpetro_v143") ===
+                "transpetroCozinheiro"
+            ){
                 setTimeout(rotulosCZAProvasV140,0);
             }
             return r;
