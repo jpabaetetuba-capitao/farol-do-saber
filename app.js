@@ -246,6 +246,7 @@ function atualizarNavegacaoInferiorFarol(idTela){
     const telasDoEstudo = [
         "questoes",
         "historia",
+        "jornadaHistoriaAbaetetuba",
         "ciencias",
         "geografia",
         "portugues",
@@ -2140,6 +2141,11 @@ const disciplinasTrilhaFarol = {
         icone: "🧭",
         descricao: "Eixos de História, Didática e legislação organizados conforme o edital da IVIN."
     },
+    jornadaHistoriaAbaetetuba: {
+        nome: "Jornada pela História",
+        icone: "🕰️",
+        descricao: "Construa sua própria trajetória com escolhas, desafios e questões do conteúdo de História."
+    },
     ciencias: {
         nome: "Professor de Ciências",
         icone: "🔬",
@@ -2595,6 +2601,14 @@ if (nome === "historia") {
 if (nome === "historiaAbaetetuba") {
 
     mostrarTela("historiaAbaetetuba");
+
+    return;
+
+}
+
+if (nome === "jornadaHistoriaAbaetetuba") {
+
+    window.abrirJornadaHistoriaAbaetetuba();
 
     return;
 
@@ -23837,8 +23851,8 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         concurso: "abaetetuba2026",
         cargoAcesso: "professorHistoria",
         publicado: true,
-        descricao: "Português, Informática e conhecimentos específicos de formação pedagógica e História.",
-        disciplinas: ["portugues", "informatica", "historiaAbaetetuba"]
+        descricao: "Português, Informática, conhecimentos específicos e uma jornada interativa pelo conteúdo de História.",
+        disciplinas: ["portugues", "informatica", "historiaAbaetetuba", "jornadaHistoriaAbaetetuba"]
     };
 
     trilhasPreparacaoFarol.abaetetubaProfessorCiencias = {
@@ -25258,14 +25272,17 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 }
             }
 
+            const ehJornadaHistoria = disciplina === "jornadaHistoriaAbaetetuba";
+
             return `
-                <button class="card-disciplina-trilha" onclick="abrirDisciplina('${disciplina}')">
+                <button class="card-disciplina-trilha ${ehJornadaHistoria ? "card-jornada-historia-trilha" : ""}" onclick="abrirDisciplina('${disciplina}')">
                     <span class="numero-trilha">${indice + 1}</span>
                     <span class="icone-disciplina-trilha">${dados.icone || "📚"}</span>
                     <span class="dados-disciplina-trilha">
                         <strong>${escaparHTML(dados.nome)}</strong>
                         <small>${escaparHTML(dados.descricao)}</small>
                     </span>
+                    ${ehJornadaHistoria ? '<span class="selo-novo-jornada-historia">🧪 NOVO</span>' : ''}
                 </button>
             `;
         }).join("");
@@ -44966,3 +44983,1023 @@ limparArenaLocalFarol = function(){
     };
 })();
 
+
+// ==========================================================
+// FAROL V147 — JORNADA PELA HISTÓRIA • ABAETETUBA
+// Protótipo funcional — Capítulo 1 / Eixo 1
+// Mistura escolhas narrativas sem certo/errado com questões
+// técnicas reaproveitadas dos bancos já existentes da rota.
+// ==========================================================
+(function(){
+    "use strict";
+
+    const CHAVE_JORNADA_HISTORIA_V147 =
+        "farol_jornada_historia_abaetetuba_cap1_v147";
+
+    const EIXOS_JORNADA_HISTORIA_V147 = [
+        "Ensino de História, historiografia, fontes e temporalidade",
+        "História do Brasil, identidades e historiografia brasileira",
+        "História regional, local, Amazônia e Pará",
+        "História da América e suas identidades",
+        "Lutas sociais e identidades sociais, culturais e nacionais",
+        "Antiguidade clássica e seus legados culturais",
+        "Europa Medieval: convívios e confrontos culturais",
+        "História africana e relações com Europa e América",
+        "Capitalismo, lutas sociais, cidadania e cultura",
+        "Didática, currículo, BNCC e legislação educacional"
+    ];
+
+    const CENAS_JORNADA_HISTORIA_V147 = [
+        {
+            id: "abertura",
+            tipo: "abertura",
+            titulo: "Capítulo 1 — O que é fazer História?"
+        },
+        {
+            id: "fonte_inicial",
+            tipo: "escolha",
+            etapa: "Escolha de caminho",
+            titulo: "A investigação começa",
+            texto: `
+                Você entra em uma sala preparada para uma investigação histórica. Sobre a mesa há diferentes vestígios do passado.
+                Não existe uma única porta de entrada: sua primeira decisão vai definir como esta jornada começa.
+            `,
+            pergunta: "Qual vestígio você quer examinar primeiro?",
+            opcoes: [
+                {
+                    valor: "documento",
+                    icone: "📜",
+                    titulo: "Um documento escrito",
+                    texto: "Uma correspondência antiga com marcas de uso e anotações.",
+                    consequencia: "Você começa pela palavra escrita e percebe que nenhum documento fala sozinho: autoria, contexto, finalidade e silêncios também precisam ser investigados."
+                },
+                {
+                    valor: "memoria",
+                    icone: "🎙️",
+                    titulo: "Um relato oral",
+                    texto: "A memória de alguém que viveu acontecimentos importantes para sua comunidade.",
+                    consequencia: "Você escolhe ouvir uma memória. O relato traz experiências, seleções, afetos e pontos de vista que precisam ser analisados historicamente."
+                },
+                {
+                    valor: "imagem",
+                    icone: "📷",
+                    titulo: "Uma fotografia",
+                    texto: "Uma imagem antiga sem legenda, data ou identificação das pessoas.",
+                    consequencia: "Você começa por uma imagem e percebe que enquadramento, produção, circulação e ausências também fazem parte da leitura histórica."
+                },
+                {
+                    valor: "objeto",
+                    icone: "🏺",
+                    titulo: "Um objeto",
+                    texto: "Um artefato preservado, mas sem explicação sobre quem o utilizou.",
+                    consequencia: "Você escolhe a cultura material. Forma, uso, técnica, circulação e contexto passam a funcionar como pistas da investigação."
+                },
+                {
+                    valor: "territorio",
+                    icone: "🗺️",
+                    titulo: "Um lugar da cidade",
+                    texto: "Um espaço que mudou muito ao longo do tempo e guarda marcas de diferentes grupos.",
+                    consequencia: "Você transforma o próprio espaço em fonte e começa a observar permanências, mudanças, memórias e disputas inscritas no território."
+                }
+            ]
+        },
+        {
+            id: "desafio_fontes_1",
+            tipo: "questaoBanco",
+            etapa: "Desafio de conhecimento",
+            titulo: "Fontes, documentos e linguagens",
+            banco: "fontesLinguagensHistoriaAbaetetuba",
+            contexto: function(estado){
+                const escolha = obterEscolhaJornadaV147(estado, "fonte_inicial");
+                return `Sua escolha por <strong>${escaparJornadaV147(escolha ? escolha.titulo.toLowerCase() : "um vestígio")}</strong> abriu a investigação. Agora você precisa resolver uma questão do próprio banco do Eixo 1 para seguir.`;
+            }
+        },
+        {
+            id: "pergunta_historiador",
+            tipo: "escolha",
+            etapa: "Escolha de caminho",
+            titulo: "Que pergunta fazer ao passado?",
+            texto: `
+                Depois do primeiro contato com a fonte, você percebe que o vestígio não determina sozinho a explicação histórica.
+                É preciso formular um problema e escolher um foco de investigação.
+            `,
+            pergunta: "Qual direção você quer dar à investigação?",
+            opcoes: [
+                {
+                    valor: "mudancas",
+                    icone: "⏳",
+                    titulo: "Mudanças e permanências",
+                    texto: "Observar o que se transformou e o que permaneceu ao longo do tempo.",
+                    consequencia: "Seu olhar passa a comparar tempos diferentes, evitando tratar o passado como algo imóvel."
+                },
+                {
+                    valor: "sujeitos",
+                    icone: "👥",
+                    titulo: "Sujeitos históricos",
+                    texto: "Investigar quem participou dos processos e quais grupos aparecem ou desaparecem das narrativas.",
+                    consequencia: "Você começa a procurar sujeitos, experiências e diferentes posições sociais dentro do processo histórico."
+                },
+                {
+                    valor: "poder",
+                    icone: "⚖️",
+                    titulo: "Relações de poder",
+                    texto: "Analisar conflitos, interesses, disputas e formas de autoridade.",
+                    consequencia: "Sua investigação se volta para conflitos, negociações e assimetrias presentes nas relações sociais."
+                },
+                {
+                    valor: "cotidiano",
+                    icone: "🏘️",
+                    titulo: "Cotidiano e cultura",
+                    texto: "Observar práticas, valores, hábitos e formas de viver.",
+                    consequencia: "Você escolhe aproximar a História das experiências vividas e das práticas culturais."
+                },
+                {
+                    valor: "memoria_identidade",
+                    icone: "🧠",
+                    titulo: "Memória e identidade",
+                    texto: "Investigar como grupos constroem lembranças e sentidos sobre o passado.",
+                    consequencia: "Você passa a observar como lembranças, esquecimentos e identidades se relacionam com a produção de sentidos sobre o passado."
+                }
+            ]
+        },
+        {
+            id: "desafio_metodo_1",
+            tipo: "questaoBanco",
+            etapa: "Desafio de conhecimento",
+            titulo: "Ciência Histórica e ofício do historiador",
+            banco: "cienciaHistoricaOficioHistoriador",
+            contexto: "Sua investigação ganhou um problema. Agora é hora de testar seus conhecimentos sobre produção do conhecimento histórico, temporalidade e método."
+        },
+        {
+            id: "sala_aula",
+            tipo: "escolha",
+            etapa: "Escolha de caminho",
+            titulo: "Da pesquisa para a sala de aula",
+            texto: `
+                Você agora assume o papel de professor. O desafio é transformar a investigação em uma experiência de aprendizagem sem reduzir a aula à simples memorização de informações.
+            `,
+            pergunta: "Como você prefere iniciar a atividade com a turma?",
+            opcoes: [
+                {
+                    valor: "problema",
+                    icone: "❓",
+                    titulo: "Começar por uma pergunta-problema",
+                    texto: "A turma formula hipóteses antes de receber uma explicação pronta.",
+                    consequencia: "Você escolhe começar pela problematização e transforma os estudantes em participantes da investigação."
+                },
+                {
+                    valor: "fontes",
+                    icone: "🗂️",
+                    titulo: "Comparar diferentes fontes",
+                    texto: "Os alunos observam documentos e linguagens que apresentam perspectivas distintas.",
+                    consequencia: "Você coloca fontes em diálogo e abre espaço para comparação, interpretação e argumentação."
+                },
+                {
+                    valor: "linha_tempo",
+                    icone: "📅",
+                    titulo: "Construir uma linha do tempo comentada",
+                    texto: "A turma organiza acontecimentos e discute relações de simultaneidade, duração e mudança.",
+                    consequencia: "Você usa a organização temporal como ferramenta de compreensão, e não apenas como sequência de datas."
+                },
+                {
+                    valor: "historia_local",
+                    icone: "📍",
+                    titulo: "Partir da história local",
+                    texto: "A turma relaciona experiências próximas com processos históricos mais amplos.",
+                    consequencia: "Você aproxima o conteúdo do espaço vivido e cria pontes entre escalas local, regional e mais amplas."
+                },
+                {
+                    valor: "debate",
+                    icone: "💬",
+                    titulo: "Organizar um debate com evidências",
+                    texto: "Os alunos precisam sustentar interpretações usando argumentos e fontes.",
+                    consequencia: "Você transforma a aula em exercício de argumentação histórica baseado em evidências."
+                }
+            ]
+        },
+        {
+            id: "desafio_ensino_1",
+            tipo: "questaoBanco",
+            etapa: "Desafio de conhecimento",
+            titulo: "Fundamentos do Ensino de História",
+            banco: "fundamentosEnsinoHistoria",
+            contexto: "Sua escolha pedagógica definiu como a turma entrará no problema histórico. Resolva agora uma questão do banco de Fundamentos do Ensino de História."
+        },
+        {
+            id: "desafio_fontes_2",
+            tipo: "questaoBanco",
+            etapa: "Desafio de conhecimento",
+            titulo: "Uma nova fonte aparece",
+            banco: "fontesLinguagensHistoriaAbaetetuba",
+            contexto: "No meio da atividade surge outra evidência. Para continuar, você precisa aplicar novamente seus conhecimentos sobre fontes, documentos e diferentes linguagens."
+        },
+        {
+            id: "decisao_interpretacao",
+            tipo: "escolha",
+            etapa: "Escolha de caminho",
+            titulo: "Duas interpretações entram em conflito",
+            texto: `
+                Dois grupos da turma chegam a interpretações diferentes sobre o mesmo conjunto de evidências. Nenhum deles pode simplesmente declarar que sua leitura é verdadeira sem justificá-la.
+            `,
+            pergunta: "Qual caminho você quer seguir como professor?",
+            opcoes: [
+                {
+                    valor: "evidencias",
+                    icone: "🔎",
+                    titulo: "Pedir que comparem as evidências",
+                    texto: "Cada grupo precisa mostrar quais indícios sustentam sua interpretação.",
+                    consequencia: "A divergência vira oportunidade para discutir evidência, argumento e limites da interpretação histórica."
+                },
+                {
+                    valor: "contexto",
+                    icone: "🌐",
+                    titulo: "Reconstruir o contexto",
+                    texto: "A turma volta ao tempo e às condições de produção das fontes.",
+                    consequencia: "Você conduz os alunos de volta ao contexto e mostra como informações isoladas podem produzir leituras frágeis."
+                },
+                {
+                    valor: "autoria",
+                    icone: "✍️",
+                    titulo: "Investigar autoria e finalidade",
+                    texto: "Os estudantes observam quem produziu cada fonte e com que objetivo.",
+                    consequencia: "Você chama atenção para posição, intenção, circulação e condições de produção das fontes."
+                },
+                {
+                    valor: "outras_fontes",
+                    icone: "➕",
+                    titulo: "Buscar novas fontes",
+                    texto: "A turma amplia o conjunto documental antes de concluir.",
+                    consequencia: "Você mostra que ampliar e cruzar evidências pode modificar ou tornar mais consistente uma interpretação."
+                },
+                {
+                    valor: "argumentacao",
+                    icone: "🗣️",
+                    titulo: "Promover uma defesa argumentada",
+                    texto: "Cada grupo apresenta sua interpretação e responde às objeções dos colegas.",
+                    consequencia: "Você transforma a discordância em exercício de argumentação histórica fundamentada."
+                }
+            ]
+        },
+        {
+            id: "desafio_metodo_2",
+            tipo: "questaoBanco",
+            etapa: "Desafio de conhecimento",
+            titulo: "Método e interpretação histórica",
+            banco: "cienciaHistoricaOficioHistoriador",
+            contexto: "As interpretações foram colocadas à prova. Agora você precisa superar mais um desafio do banco sobre o ofício do historiador."
+        },
+        {
+            id: "desafio_ensino_2",
+            tipo: "questaoBanco",
+            etapa: "Desafio final do capítulo",
+            titulo: "Ensinar História é fazer pensar historicamente",
+            banco: "fundamentosEnsinoHistoria",
+            contexto: "Você chegou à última decisão técnica do capítulo. Acerte para concluir a primeira Jornada pela História."
+        },
+        {
+            id: "conclusao",
+            tipo: "conclusao",
+            titulo: "Capítulo concluído"
+        }
+    ];
+
+    let estadoJornadaHistoriaV147 = null;
+
+    function escaparJornadaV147(valor){
+        if(typeof escaparHTML === "function"){
+            return escaparHTML(String(valor == null ? "" : valor));
+        }
+        return String(valor == null ? "" : valor)
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("'", "&#039;");
+    }
+
+    function novoEstadoJornadaV147(){
+        return {
+            versao: 147,
+            capitulo: 1,
+            cena: 0,
+            iniciado: false,
+            concluido: false,
+            pontos: 0,
+            erros: 0,
+            acertosPrimeira: 0,
+            desafiosConcluidos: 0,
+            escolhas: {},
+            questoes: {},
+            usadosPorBanco: {},
+            iniciadoEm: Date.now(),
+            atualizadoEm: Date.now()
+        };
+    }
+
+    function carregarEstadoJornadaV147(){
+        try{
+            const salvo = JSON.parse(
+                localStorage.getItem(CHAVE_JORNADA_HISTORIA_V147) || "null"
+            );
+            if(salvo && typeof salvo === "object" && salvo.versao === 147){
+                return {
+                    ...novoEstadoJornadaV147(),
+                    ...salvo,
+                    escolhas: salvo.escolhas || {},
+                    questoes: salvo.questoes || {},
+                    usadosPorBanco: salvo.usadosPorBanco || {}
+                };
+            }
+        }catch(erro){
+            console.warn("Jornada pela História: progresso salvo inválido.", erro);
+        }
+        return novoEstadoJornadaV147();
+    }
+
+    function salvarEstadoJornadaV147(){
+        if(!estadoJornadaHistoriaV147){
+            return;
+        }
+        estadoJornadaHistoriaV147.atualizadoEm = Date.now();
+        localStorage.setItem(
+            CHAVE_JORNADA_HISTORIA_V147,
+            JSON.stringify(estadoJornadaHistoriaV147)
+        );
+    }
+
+    function obterEscolhaJornadaV147(estado, cenaId){
+        const registro = estado && estado.escolhas
+            ? estado.escolhas[cenaId]
+            : null;
+        if(!registro){
+            return null;
+        }
+        const cena = CENAS_JORNADA_HISTORIA_V147.find(item => item.id === cenaId);
+        const opcao = cena && Array.isArray(cena.opcoes)
+            ? cena.opcoes.find(item => item.valor === registro.valor)
+            : null;
+        return opcao || registro;
+    }
+
+    function obterAreaJornadaV147(){
+        return document.getElementById("jornadaHistoriaAbaetetubaConteudo");
+    }
+
+    function renderizarTopoJornadaV147(subtitulo){
+        return `
+            <div class="jornada-historia-topo-v147">
+                <button
+                    type="button"
+                    class="btn-voltar jornada-btn-voltar-v147"
+                    onclick="voltarJornadaHistoriaParaRota()">
+                    ⬅ Professor de História
+                </button>
+                <div class="jornada-historia-identidade-v147">
+                    <span class="jornada-historia-icone-v147">🕰️</span>
+                    <div>
+                        <strong>Jornada pela História</strong>
+                        <small>${escaparJornadaV147(subtitulo || "Abaetetuba 2026")}</small>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    function renderizarHubJornadaV147(){
+        estadoJornadaHistoriaV147 = carregarEstadoJornadaV147();
+        const area = obterAreaJornadaV147();
+        if(!area){
+            return;
+        }
+
+        const progressoExiste =
+            estadoJornadaHistoriaV147.iniciado &&
+            !estadoJornadaHistoriaV147.concluido &&
+            estadoJornadaHistoriaV147.cena > 0;
+
+        const concluido = estadoJornadaHistoriaV147.concluido === true;
+        const percentual = concluido
+            ? 100
+            : Math.max(0, Math.min(99,
+                Math.round(
+                    (estadoJornadaHistoriaV147.cena /
+                    Math.max(1, CENAS_JORNADA_HISTORIA_V147.length - 1)) * 100
+                )
+            ));
+
+        const capitulos = EIXOS_JORNADA_HISTORIA_V147.map((nome, indice) => {
+            const numero = indice + 1;
+            if(numero === 1){
+                let acao = "Começar capítulo";
+                if(progressoExiste) acao = `Continuar • ${percentual}%`;
+                if(concluido) acao = "Refazer capítulo";
+
+                return `
+                    <article class="jornada-capitulo-v147 jornada-capitulo-disponivel-v147">
+                        <div class="jornada-capitulo-numero-v147">${numero}</div>
+                        <div class="jornada-capitulo-conteudo-v147">
+                            <span class="jornada-capitulo-status-v147">✅ DISPONÍVEL PARA TESTE</span>
+                            <h3>O que é fazer História?</h3>
+                            <p>${escaparJornadaV147(nome)}</p>
+                            <div class="jornada-capitulo-meta-v147">
+                                <span>🧭 escolhas de caminho</span>
+                                <span>🧠 questões do banco</span>
+                                <span>💾 progresso salvo</span>
+                            </div>
+                            <button
+                                type="button"
+                                class="jornada-btn-principal-v147"
+                                onclick="iniciarCapituloJornadaHistoriaAbaetetuba(${concluido ? "true" : "false"})">
+                                ${acao} ➜
+                            </button>
+                        </div>
+                    </article>
+                `;
+            }
+
+            return `
+                <article class="jornada-capitulo-v147 jornada-capitulo-bloqueado-v147">
+                    <div class="jornada-capitulo-numero-v147">${numero}</div>
+                    <div class="jornada-capitulo-conteudo-v147">
+                        <span class="jornada-capitulo-status-v147">EM BREVE</span>
+                        <h3>Capítulo ${numero}</h3>
+                        <p>${escaparJornadaV147(nome)}</p>
+                    </div>
+                </article>
+            `;
+        }).join("");
+
+        area.innerHTML = `
+            <div class="jornada-historia-pagina-v147">
+                ${renderizarTopoJornadaV147("Professor de História • IVIN • Abaetetuba 2026")}
+
+                <section class="jornada-hero-v147">
+                    <span class="jornada-selo-teste-v147">🧪 NOVO MODO DE ESTUDO</span>
+                    <h1>Construa sua própria Jornada pela História</h1>
+                    <p>
+                        Aqui nem toda escolha tem certo ou errado. Você decide caminhos,
+                        acompanha as consequências e, em momentos-chave, precisa acertar
+                        questões do conteúdo para continuar.
+                    </p>
+                </section>
+
+                <div class="jornada-como-funciona-v147">
+                    <div><span>🧭</span><strong>Escolha</strong><small>Você define parte do caminho.</small></div>
+                    <div><span>🧠</span><strong>Resolva</strong><small>Questões técnicas exigem acerto.</small></div>
+                    <div><span>🌿</span><strong>Construa</strong><small>Suas decisões formam a narrativa.</small></div>
+                </div>
+
+                <section class="jornada-capitulos-lista-v147">
+                    ${capitulos}
+                </section>
+            </div>
+        `;
+
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }
+
+    function selecionarQuestaoBancoJornadaV147(cena){
+        const registroExistente = estadoJornadaHistoriaV147.questoes[cena.id];
+        const banco = bancoQuestoes[cena.banco] || [];
+
+        if(registroExistente){
+            const qExistente = banco[registroExistente.indice];
+            if(qExistente){
+                return { registro: registroExistente, questao: qExistente };
+            }
+        }
+
+        if(!Array.isArray(banco) || banco.length === 0){
+            return { registro: null, questao: null };
+        }
+
+        const usados = Array.isArray(estadoJornadaHistoriaV147.usadosPorBanco[cena.banco])
+            ? estadoJornadaHistoriaV147.usadosPorBanco[cena.banco]
+            : [];
+
+        let candidatos = banco
+            .map((q, indice) => ({ q, indice }))
+            .filter(item =>
+                item.q &&
+                item.q.pergunta &&
+                Array.isArray(item.q.alternativas) &&
+                item.q.alternativas.length >= 2 &&
+                Number.isInteger(Number(item.q.correta)) &&
+                !usados.includes(item.indice)
+            );
+
+        if(candidatos.length === 0){
+            candidatos = banco
+                .map((q, indice) => ({ q, indice }))
+                .filter(item =>
+                    item.q &&
+                    item.q.pergunta &&
+                    Array.isArray(item.q.alternativas) &&
+                    item.q.alternativas.length >= 2 &&
+                    Number.isInteger(Number(item.q.correta))
+                );
+        }
+
+        if(candidatos.length === 0){
+            return { registro: null, questao: null };
+        }
+
+        const escolhido = candidatos[Math.floor(Math.random() * candidatos.length)];
+        const registro = {
+            banco: cena.banco,
+            indice: escolhido.indice,
+            erradas: [],
+            concluida: false,
+            tentativas: 0,
+            pontos: 0
+        };
+
+        estadoJornadaHistoriaV147.questoes[cena.id] = registro;
+        estadoJornadaHistoriaV147.usadosPorBanco[cena.banco] = [
+            ...new Set([...usados, escolhido.indice])
+        ];
+        salvarEstadoJornadaV147();
+
+        return { registro, questao: escolhido.q };
+    }
+
+    function contextoQuestaoJornadaV147(cena){
+        if(typeof cena.contexto === "function"){
+            return cena.contexto(estadoJornadaHistoriaV147);
+        }
+        return cena.contexto || "Resolva o desafio para continuar sua jornada.";
+    }
+
+    function renderizarProgressoJornadaV147(cena){
+        const indice = CENAS_JORNADA_HISTORIA_V147.findIndex(item => item.id === cena.id);
+        const totalJogavel = CENAS_JORNADA_HISTORIA_V147.length - 2;
+        const passo = Math.max(0, Math.min(totalJogavel, indice));
+        const percentual = Math.round((passo / Math.max(1, totalJogavel)) * 100);
+
+        return `
+            <div class="jornada-progresso-v147">
+                <div class="jornada-progresso-info-v147">
+                    <span>Capítulo 1</span>
+                    <strong>${percentual}%</strong>
+                </div>
+                <div class="jornada-progresso-barra-v147">
+                    <span style="width:${percentual}%"></span>
+                </div>
+            </div>
+        `;
+    }
+
+    function renderizarAberturaJornadaV147(cena){
+        const continuar =
+            estadoJornadaHistoriaV147.iniciado &&
+            estadoJornadaHistoriaV147.cena > 0 &&
+            !estadoJornadaHistoriaV147.concluido;
+
+        return `
+            <div class="jornada-historia-pagina-v147">
+                ${renderizarTopoJornadaV147("Capítulo 1 • Eixo 1")}
+                <section class="jornada-cena-v147 jornada-abertura-v147">
+                    <span class="jornada-etapa-v147">EIXO 1 • PROTÓTIPO</span>
+                    <div class="jornada-abertura-icone-v147">🗂️</div>
+                    <h1>${escaparJornadaV147(cena.titulo)}</h1>
+                    <p>
+                        Você vai assumir dois papéis ao longo desta experiência:
+                        <strong>investigador do passado</strong> e <strong>professor de História</strong>.
+                        Algumas decisões apenas mudam o caminho. Outras exigem conhecimento correto para avançar.
+                    </p>
+
+                    <div class="jornada-regras-v147">
+                        <div><span>🌿</span><p><strong>Escolhas narrativas:</strong> não têm resposta errada; elas constroem sua trajetória.</p></div>
+                        <div><span>🧠</span><p><strong>Desafios técnicos:</strong> se errar, a opção fica esmaecida e você tenta outra.</p></div>
+                        <div><span>⭐</span><p><strong>Pontuação:</strong> acertar de primeira vale mais, mas o objetivo principal é aprender.</p></div>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="jornada-btn-principal-v147"
+                        onclick="avancarJornadaHistoriaAbaetetuba()">
+                        ${continuar ? "Continuar jornada" : "Entrar na investigação"} ➜
+                    </button>
+
+                    <button
+                        type="button"
+                        class="jornada-btn-secundario-v147"
+                        onclick="voltarHubJornadaHistoriaAbaetetuba()">
+                        Ver capítulos
+                    </button>
+                </section>
+            </div>
+        `;
+    }
+
+    function renderizarEscolhaJornadaV147(cena){
+        const selecionada = estadoJornadaHistoriaV147.escolhas[cena.id] || null;
+        const opcaoSelecionada = selecionada
+            ? cena.opcoes.find(item => item.valor === selecionada.valor)
+            : null;
+
+        const opcoesHTML = cena.opcoes.map((opcao, indice) => {
+            const ativa = opcaoSelecionada && opcaoSelecionada.valor === opcao.valor;
+            return `
+                <button
+                    type="button"
+                    class="jornada-opcao-narrativa-v147 ${ativa ? "selecionada" : ""}"
+                    onclick="escolherCaminhoJornadaHistoriaAbaetetuba('${cena.id}', '${opcao.valor}')">
+                    <span class="jornada-opcao-letra-v147">${String.fromCharCode(65 + indice)}</span>
+                    <span class="jornada-opcao-icone-v147">${opcao.icone}</span>
+                    <span class="jornada-opcao-texto-v147">
+                        <strong>${escaparJornadaV147(opcao.titulo)}</strong>
+                        <small>${escaparJornadaV147(opcao.texto)}</small>
+                    </span>
+                </button>
+            `;
+        }).join("");
+
+        return `
+            <div class="jornada-historia-pagina-v147">
+                ${renderizarTopoJornadaV147("Capítulo 1 • sua história está sendo construída")}
+                ${renderizarProgressoJornadaV147(cena)}
+
+                <section class="jornada-cena-v147">
+                    <span class="jornada-etapa-v147">${escaparJornadaV147(cena.etapa)}</span>
+                    <h1>${escaparJornadaV147(cena.titulo)}</h1>
+                    <div class="jornada-narrativa-v147">${cena.texto}</div>
+                    <h2 class="jornada-pergunta-v147">${escaparJornadaV147(cena.pergunta)}</h2>
+                    <div class="jornada-opcoes-v147">${opcoesHTML}</div>
+
+                    ${opcaoSelecionada ? `
+                        <div class="jornada-consequencia-v147">
+                            <span>🌿 Sua escolha</span>
+                            <strong>${opcaoSelecionada.icone} ${escaparJornadaV147(opcaoSelecionada.titulo)}</strong>
+                            <p>${escaparJornadaV147(opcaoSelecionada.consequencia)}</p>
+                        </div>
+                        <button
+                            type="button"
+                            class="jornada-btn-principal-v147"
+                            onclick="avancarJornadaHistoriaAbaetetuba()">
+                            Continuar a história ➜
+                        </button>
+                    ` : `
+                        <p class="jornada-aviso-escolha-v147">
+                            Aqui não existe certo ou errado. Escolha o caminho que você quer seguir.
+                        </p>
+                    `}
+                </section>
+            </div>
+        `;
+    }
+
+    function renderizarQuestaoJornadaV147(cena){
+        const dados = selecionarQuestaoBancoJornadaV147(cena);
+        const registro = dados.registro;
+        const q = dados.questao;
+
+        if(!registro || !q){
+            return `
+                <div class="jornada-historia-pagina-v147">
+                    ${renderizarTopoJornadaV147("Capítulo 1 • Eixo 1")}
+                    <section class="jornada-cena-v147">
+                        <span class="jornada-etapa-v147">Conteúdo indisponível</span>
+                        <h1>Não foi possível carregar este desafio.</h1>
+                        <p>
+                            O protótipo depende dos bancos de questões do Eixo 1 já carregados na plataforma.
+                            Verifique se os arquivos de dados de História estão presentes no projeto publicado.
+                        </p>
+                        <button class="jornada-btn-secundario-v147" onclick="voltarHubJornadaHistoriaAbaetetuba()">Voltar aos capítulos</button>
+                    </section>
+                </div>
+            `;
+        }
+
+        const correta = Number(q.correta);
+        const erradas = Array.isArray(registro.erradas) ? registro.erradas : [];
+        const finalizada = registro.concluida === true;
+        const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        const alternativasHTML = q.alternativas.map((alt, indice) => {
+            const foiErrada = erradas.includes(indice);
+            const foiCorreta = finalizada && indice === correta;
+            const classe = foiErrada
+                ? "errada-esmaecida"
+                : (foiCorreta ? "correta" : "");
+
+            return `
+                <button
+                    type="button"
+                    class="jornada-opcao-tecnica-v147 ${classe}"
+                    ${foiErrada || finalizada ? "disabled" : ""}
+                    onclick="responderDesafioJornadaHistoriaAbaetetuba('${cena.id}', ${indice})">
+                    <span class="jornada-opcao-letra-v147">${letras[indice] || (indice + 1)}</span>
+                    <span class="jornada-opcao-tecnica-texto-v147">${alt}</span>
+                </button>
+            `;
+        }).join("");
+
+        const tentativaAtual = erradas.length + (finalizada ? 1 : 0);
+        const ultimaErrada = !finalizada && erradas.length > 0;
+
+        let textoBase = "";
+        if(q.texto){
+            textoBase += `<div class="jornada-texto-base-v147">${q.texto}</div>`;
+        }
+        if(Array.isArray(q.afirmacoes) && q.afirmacoes.length){
+            textoBase += `
+                <div class="jornada-texto-base-v147">
+                    ${q.afirmacoes.map(item => `<p>${item}</p>`).join("")}
+                </div>
+            `;
+        }
+        if(q.imagem){
+            textoBase += `<img src="${q.imagem}" alt="" class="jornada-imagem-questao-v147">`;
+        }
+
+        return `
+            <div class="jornada-historia-pagina-v147">
+                ${renderizarTopoJornadaV147("Capítulo 1 • desafio técnico")}
+                ${renderizarProgressoJornadaV147(cena)}
+
+                <section class="jornada-cena-v147">
+                    <div class="jornada-cabecalho-desafio-v147">
+                        <span class="jornada-etapa-v147">${escaparJornadaV147(cena.etapa)}</span>
+                        <span class="jornada-pontos-v147">⭐ ${estadoJornadaHistoriaV147.pontos} pontos</span>
+                    </div>
+                    <h1>${escaparJornadaV147(cena.titulo)}</h1>
+                    <div class="jornada-contexto-desafio-v147">${contextoQuestaoJornadaV147(cena)}</div>
+                    ${textoBase}
+                    <div class="jornada-pergunta-tecnica-v147">${q.pergunta}</div>
+                    <div class="jornada-opcoes-v147">${alternativasHTML}</div>
+
+                    ${ultimaErrada ? `
+                        <div class="jornada-feedback-erro-v147">
+                            <strong>❌ Resposta errada. Tente outra vez.</strong>
+                            <p>A alternativa escolhida foi eliminada. Restam ${q.alternativas.length - erradas.length} opções.</p>
+                        </div>
+                    ` : ""}
+
+                    ${finalizada ? `
+                        <div class="jornada-feedback-acerto-v147">
+                            <strong>✅ Correto! Você pode continuar.</strong>
+                            <p>
+                                ${registro.tentativas === 1
+                                    ? "Você acertou de primeira e conquistou 10 pontos nesta decisão."
+                                    : `Você encontrou a resposta após ${registro.tentativas} tentativas e conquistou ${registro.pontos} pontos.`
+                                }
+                            </p>
+                            ${q.feedbackAcerto ? `<div class="jornada-explicacao-v147"><strong>📘 Explicação</strong><p>${q.feedbackAcerto}</p></div>` : ""}
+                            ${q.dicaBanca ? `<div class="jornada-dica-v147"><strong>💡 Dica</strong><p>${q.dicaBanca}</p></div>` : ""}
+                        </div>
+                        <button
+                            type="button"
+                            class="jornada-btn-principal-v147"
+                            onclick="avancarJornadaHistoriaAbaetetuba()">
+                            Continuar a história ➜
+                        </button>
+                    ` : `
+                        <p class="jornada-aviso-escolha-v147">
+                            ${tentativaAtual === 0 ? "Escolha uma alternativa. Você só avança depois de encontrar a resposta correta." : "Continue tentando. As alternativas eliminadas permanecem esmaecidas."}
+                        </p>
+                    `}
+                </section>
+            </div>
+        `;
+    }
+
+    function renderizarConclusaoJornadaV147(){
+        const escolhas = Object.entries(estadoJornadaHistoriaV147.escolhas)
+            .map(([cenaId]) => obterEscolhaJornadaV147(estadoJornadaHistoriaV147, cenaId))
+            .filter(Boolean);
+
+        const totalDesafios = CENAS_JORNADA_HISTORIA_V147
+            .filter(cena => cena.tipo === "questaoBanco").length;
+
+        const aproveitamentoPrimeira = totalDesafios > 0
+            ? Math.round((estadoJornadaHistoriaV147.acertosPrimeira / totalDesafios) * 100)
+            : 0;
+
+        const classificacao = aproveitamentoPrimeira >= 80
+            ? "Excelente domínio inicial"
+            : (aproveitamentoPrimeira >= 60
+                ? "Bom domínio inicial"
+                : "Há pontos importantes para revisar");
+
+        return `
+            <div class="jornada-historia-pagina-v147">
+                ${renderizarTopoJornadaV147("Capítulo 1 concluído")}
+
+                <section class="jornada-cena-v147 jornada-conclusao-v147">
+                    <div class="jornada-trofeu-v147">🏁</div>
+                    <span class="jornada-etapa-v147">MISSÃO CONCLUÍDA</span>
+                    <h1>Você concluiu “O que é fazer História?”</h1>
+                    <p>
+                        Sua trajetória combinou investigação, interpretação, ensino e decisões técnicas do Eixo 1.
+                    </p>
+
+                    <div class="jornada-resultado-grid-v147">
+                        <div><strong>${estadoJornadaHistoriaV147.pontos}</strong><span>pontos</span></div>
+                        <div><strong>${estadoJornadaHistoriaV147.acertosPrimeira}/${totalDesafios}</strong><span>de primeira</span></div>
+                        <div><strong>${estadoJornadaHistoriaV147.erros}</strong><span>tentativas erradas</span></div>
+                        <div><strong>${aproveitamentoPrimeira}%</strong><span>domínio imediato</span></div>
+                    </div>
+
+                    <div class="jornada-diagnostico-v147">
+                        <strong>🧭 ${classificacao}</strong>
+                        <p>
+                            Errar aqui não impede a conclusão: a Jornada usa o erro como parte do caminho e obriga você a encontrar a alternativa correta antes de seguir.
+                        </p>
+                    </div>
+
+                    <div class="jornada-trajetoria-v147">
+                        <h2>🌿 A história que você construiu</h2>
+                        ${escolhas.map((opcao, indice) => `
+                            <div class="jornada-trajetoria-item-v147">
+                                <span>${indice + 1}</span>
+                                <div><strong>${opcao.icone} ${escaparJornadaV147(opcao.titulo)}</strong><p>${escaparJornadaV147(opcao.consequencia)}</p></div>
+                            </div>
+                        `).join("")}
+                    </div>
+
+                    <div class="jornada-acoes-finais-v147">
+                        <button
+                            type="button"
+                            class="jornada-btn-principal-v147"
+                            onclick="reiniciarCapituloJornadaHistoriaAbaetetuba()">
+                            🔄 Fazer outra trajetória
+                        </button>
+                        <button
+                            type="button"
+                            class="jornada-btn-secundario-v147"
+                            onclick="voltarHubJornadaHistoriaAbaetetuba()">
+                            🕰️ Voltar aos capítulos
+                        </button>
+                    </div>
+                </section>
+            </div>
+        `;
+    }
+
+    function renderizarCenaJornadaV147(){
+        const area = obterAreaJornadaV147();
+        if(!area){
+            return;
+        }
+
+        const cena = CENAS_JORNADA_HISTORIA_V147[
+            Math.max(0, Math.min(
+                CENAS_JORNADA_HISTORIA_V147.length - 1,
+                Number(estadoJornadaHistoriaV147.cena) || 0
+            ))
+        ];
+
+        let html = "";
+        if(cena.tipo === "abertura"){
+            html = renderizarAberturaJornadaV147(cena);
+        }else if(cena.tipo === "escolha"){
+            html = renderizarEscolhaJornadaV147(cena);
+        }else if(cena.tipo === "questaoBanco"){
+            html = renderizarQuestaoJornadaV147(cena);
+        }else if(cena.tipo === "conclusao"){
+            estadoJornadaHistoriaV147.concluido = true;
+            estadoJornadaHistoriaV147.iniciado = true;
+            salvarEstadoJornadaV147();
+            html = renderizarConclusaoJornadaV147();
+        }
+
+        area.innerHTML = html;
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }
+
+    window.abrirJornadaHistoriaAbaetetuba = function(){
+        localStorage.setItem("farol_concurso_atual", "abaetetuba2026");
+        localStorage.setItem("farol_trilha_atual", "abaetetubaProfessorHistoria");
+        mostrarTela("jornadaHistoriaAbaetetuba");
+        renderizarHubJornadaV147();
+    };
+
+    window.voltarJornadaHistoriaParaRota = function(){
+        localStorage.setItem("farol_concurso_atual", "abaetetuba2026");
+        localStorage.setItem("farol_trilha_atual", "abaetetubaProfessorHistoria");
+        mostrarTela("questoes");
+        if(typeof renderizarTrilhaEstudo === "function"){
+            setTimeout(() => renderizarTrilhaEstudo("abaetetubaProfessorHistoria"), 0);
+        }
+    };
+
+    window.voltarHubJornadaHistoriaAbaetetuba = function(){
+        estadoJornadaHistoriaV147 = carregarEstadoJornadaV147();
+        renderizarHubJornadaV147();
+    };
+
+    window.iniciarCapituloJornadaHistoriaAbaetetuba = function(recomecar){
+        const atual = carregarEstadoJornadaV147();
+
+        if(recomecar === true || atual.concluido === true){
+            estadoJornadaHistoriaV147 = novoEstadoJornadaV147();
+        }else{
+            estadoJornadaHistoriaV147 = atual;
+        }
+
+        estadoJornadaHistoriaV147.iniciado = true;
+        salvarEstadoJornadaV147();
+        renderizarCenaJornadaV147();
+    };
+
+    window.reiniciarCapituloJornadaHistoriaAbaetetuba = function(){
+        estadoJornadaHistoriaV147 = novoEstadoJornadaV147();
+        estadoJornadaHistoriaV147.iniciado = true;
+        salvarEstadoJornadaV147();
+        renderizarCenaJornadaV147();
+    };
+
+    window.escolherCaminhoJornadaHistoriaAbaetetuba = function(cenaId, valor){
+        const cena = CENAS_JORNADA_HISTORIA_V147.find(item => item.id === cenaId);
+        const opcao = cena && Array.isArray(cena.opcoes)
+            ? cena.opcoes.find(item => item.valor === valor)
+            : null;
+
+        if(!cena || !opcao){
+            return;
+        }
+
+        estadoJornadaHistoriaV147.escolhas[cenaId] = {
+            valor: opcao.valor,
+            titulo: opcao.titulo,
+            icone: opcao.icone,
+            consequencia: opcao.consequencia
+        };
+        salvarEstadoJornadaV147();
+        renderizarCenaJornadaV147();
+    };
+
+    window.responderDesafioJornadaHistoriaAbaetetuba = function(cenaId, indice){
+        const cena = CENAS_JORNADA_HISTORIA_V147.find(item => item.id === cenaId);
+        if(!cena || cena.tipo !== "questaoBanco"){
+            return;
+        }
+
+        const dados = selecionarQuestaoBancoJornadaV147(cena);
+        const registro = dados.registro;
+        const q = dados.questao;
+        if(!registro || !q || registro.concluida){
+            return;
+        }
+
+        const escolha = Number(indice);
+        const correta = Number(q.correta);
+        registro.erradas = Array.isArray(registro.erradas) ? registro.erradas : [];
+
+        if(escolha === correta){
+            registro.tentativas = registro.erradas.length + 1;
+            registro.concluida = true;
+            registro.pontos = registro.tentativas === 1
+                ? 10
+                : (registro.tentativas === 2 ? 7 : 5);
+
+            estadoJornadaHistoriaV147.pontos += registro.pontos;
+            estadoJornadaHistoriaV147.desafiosConcluidos += 1;
+            if(registro.tentativas === 1){
+                estadoJornadaHistoriaV147.acertosPrimeira += 1;
+            }
+        }else if(!registro.erradas.includes(escolha)){
+            registro.erradas.push(escolha);
+            estadoJornadaHistoriaV147.erros += 1;
+        }
+
+        salvarEstadoJornadaV147();
+        renderizarCenaJornadaV147();
+    };
+
+    window.avancarJornadaHistoriaAbaetetuba = function(){
+        if(!estadoJornadaHistoriaV147){
+            estadoJornadaHistoriaV147 = carregarEstadoJornadaV147();
+        }
+
+        const cenaAtual = CENAS_JORNADA_HISTORIA_V147[estadoJornadaHistoriaV147.cena];
+
+        if(cenaAtual && cenaAtual.tipo === "escolha"){
+            if(!estadoJornadaHistoriaV147.escolhas[cenaAtual.id]){
+                if(typeof mostrarToast === "function"){
+                    mostrarToast("Escolha um caminho antes de continuar.");
+                }
+                return;
+            }
+        }
+
+        if(cenaAtual && cenaAtual.tipo === "questaoBanco"){
+            const registro = estadoJornadaHistoriaV147.questoes[cenaAtual.id];
+            if(!registro || registro.concluida !== true){
+                if(typeof mostrarToast === "function"){
+                    mostrarToast("Encontre a resposta correta antes de continuar.");
+                }
+                return;
+            }
+        }
+
+        estadoJornadaHistoriaV147.iniciado = true;
+        estadoJornadaHistoriaV147.cena = Math.min(
+            CENAS_JORNADA_HISTORIA_V147.length - 1,
+            estadoJornadaHistoriaV147.cena + 1
+        );
+        salvarEstadoJornadaV147();
+        renderizarCenaJornadaV147();
+    };
+})();

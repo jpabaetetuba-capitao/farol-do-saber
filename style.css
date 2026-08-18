@@ -17484,3 +17484,788 @@ body.efeito-ondas-v65 #conteudoPerfilAluno .perfil-cabecalho,
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================
+   FAROL V147 — JORNADA PELA HISTÓRIA • ABAETETUBA
+   Protótipo do Capítulo 1
+========================================================== */
+.card-jornada-historia-trilha{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#5d3b8c,#315b8f) !important;
+    border:1px solid rgba(255,255,255,.35);
+}
+
+.card-jornada-historia-trilha:hover{
+    background:linear-gradient(135deg,#6a45a0,#3769a4) !important;
+}
+
+.card-jornada-historia-trilha::after{
+    content:"";
+    position:absolute;
+    width:110px;
+    height:110px;
+    right:-35px;
+    bottom:-48px;
+    border-radius:50%;
+    background:rgba(255,255,255,.10);
+}
+
+.selo-novo-jornada-historia{
+    margin-left:auto;
+    align-self:flex-start;
+    padding:6px 9px;
+    border-radius:999px;
+    background:#fff2b2;
+    color:#5d4700;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:.04em;
+    white-space:nowrap;
+}
+
+.tela-jornada-historia-v147{
+    padding:0 !important;
+}
+
+.jornada-historia-pagina-v147{
+    width:min(980px,100%);
+    margin:0 auto;
+    padding:10px 0 50px;
+}
+
+.jornada-historia-topo-v147{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    margin-bottom:14px;
+    padding:12px 14px;
+    border-radius:18px;
+    background:rgba(255,255,255,.94);
+    box-shadow:0 8px 24px rgba(0,0,0,.12);
+}
+
+.jornada-btn-voltar-v147{
+    margin:0 !important;
+    width:auto !important;
+    white-space:nowrap;
+}
+
+.jornada-historia-identidade-v147{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-left:auto;
+    text-align:right;
+}
+
+.jornada-historia-identidade-v147 strong,
+.jornada-historia-identidade-v147 small{
+    display:block;
+}
+
+.jornada-historia-identidade-v147 strong{
+    color:#332251;
+    font-size:16px;
+}
+
+.jornada-historia-identidade-v147 small{
+    margin-top:2px;
+    color:#667085;
+    font-size:12px;
+}
+
+.jornada-historia-icone-v147{
+    font-size:30px;
+}
+
+.jornada-hero-v147{
+    padding:34px 30px;
+    border-radius:26px;
+    color:white;
+    text-align:center;
+    background:
+        radial-gradient(circle at 15% 15%,rgba(255,255,255,.16),transparent 32%),
+        linear-gradient(135deg,#352254,#315f91);
+    box-shadow:0 14px 34px rgba(16,32,64,.25);
+}
+
+.jornada-hero-v147 h1{
+    margin:13px auto 10px;
+    max-width:760px;
+    font-size:clamp(27px,4vw,42px);
+    line-height:1.12;
+}
+
+.jornada-hero-v147 p{
+    max-width:760px;
+    margin:0 auto;
+    color:rgba(255,255,255,.92);
+    font-size:16px;
+    line-height:1.65;
+}
+
+.jornada-selo-teste-v147,
+.jornada-etapa-v147{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:7px 11px;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.05em;
+}
+
+.jornada-selo-teste-v147{
+    background:#fff1a8;
+    color:#594300;
+}
+
+.jornada-etapa-v147{
+    background:#ede8f7;
+    color:#4b3275;
+}
+
+.jornada-como-funciona-v147{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin:14px 0 20px;
+}
+
+.jornada-como-funciona-v147 > div{
+    padding:15px;
+    border-radius:18px;
+    background:rgba(255,255,255,.96);
+    box-shadow:0 6px 18px rgba(0,0,0,.09);
+    text-align:center;
+}
+
+.jornada-como-funciona-v147 span{
+    display:block;
+    font-size:27px;
+}
+
+.jornada-como-funciona-v147 strong{
+    display:block;
+    margin:5px 0 3px;
+    color:#30234b;
+}
+
+.jornada-como-funciona-v147 small{
+    color:#667085;
+    line-height:1.4;
+}
+
+.jornada-capitulos-lista-v147{
+    display:grid;
+    gap:12px;
+}
+
+.jornada-capitulo-v147{
+    display:flex;
+    gap:16px;
+    align-items:stretch;
+    padding:17px;
+    border-radius:20px;
+    background:rgba(255,255,255,.96);
+    box-shadow:0 6px 18px rgba(0,0,0,.09);
+    border:1px solid rgba(68,74,92,.10);
+}
+
+.jornada-capitulo-disponivel-v147{
+    border:2px solid #7558a5;
+}
+
+.jornada-capitulo-bloqueado-v147{
+    opacity:.68;
+}
+
+.jornada-capitulo-numero-v147{
+    width:48px;
+    height:48px;
+    min-width:48px;
+    border-radius:16px;
+    display:grid;
+    place-items:center;
+    background:#40305f;
+    color:white;
+    font-size:20px;
+    font-weight:900;
+}
+
+.jornada-capitulo-bloqueado-v147 .jornada-capitulo-numero-v147{
+    background:#9499a7;
+}
+
+.jornada-capitulo-conteudo-v147{
+    flex:1;
+}
+
+.jornada-capitulo-status-v147{
+    display:inline-block;
+    margin-bottom:4px;
+    color:#6d4ba0;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:.04em;
+}
+
+.jornada-capitulo-bloqueado-v147 .jornada-capitulo-status-v147{
+    color:#777d88;
+}
+
+.jornada-capitulo-conteudo-v147 h3{
+    margin:2px 0 5px;
+    color:#292038;
+    font-size:20px;
+}
+
+.jornada-capitulo-conteudo-v147 p{
+    margin:0;
+    color:#5d6574;
+    line-height:1.48;
+}
+
+.jornada-capitulo-meta-v147{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin:11px 0;
+}
+
+.jornada-capitulo-meta-v147 span{
+    padding:6px 8px;
+    border-radius:9px;
+    background:#f1edf8;
+    color:#594477;
+    font-size:11px;
+    font-weight:700;
+}
+
+.jornada-btn-principal-v147,
+.jornada-btn-secundario-v147{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:46px;
+    padding:12px 19px;
+    border-radius:13px;
+    font-size:14px;
+    font-weight:900;
+}
+
+.jornada-btn-principal-v147{
+    background:linear-gradient(135deg,#67489a,#3369a0);
+    color:white;
+    box-shadow:0 7px 16px rgba(59,67,126,.24);
+}
+
+.jornada-btn-principal-v147:hover{
+    background:linear-gradient(135deg,#7857ad,#3a78b6);
+}
+
+.jornada-btn-secundario-v147{
+    background:#eef1f5;
+    color:#3d4655;
+}
+
+.jornada-btn-secundario-v147:hover{
+    background:#dde3ea;
+}
+
+.jornada-cena-v147{
+    padding:28px;
+    border-radius:24px;
+    background:rgba(255,255,255,.97);
+    box-shadow:0 10px 28px rgba(0,0,0,.14);
+}
+
+.jornada-cena-v147 h1{
+    margin:11px 0 10px;
+    color:#2d2142;
+    font-size:clamp(25px,3.5vw,36px);
+    line-height:1.16;
+}
+
+.jornada-cena-v147 > p,
+.jornada-narrativa-v147,
+.jornada-contexto-desafio-v147{
+    color:#4d5664;
+    font-size:16px;
+    line-height:1.65;
+}
+
+.jornada-abertura-v147{
+    text-align:center;
+}
+
+.jornada-abertura-v147 > p{
+    max-width:760px;
+    margin:0 auto 18px;
+}
+
+.jornada-abertura-icone-v147{
+    margin:13px 0 2px;
+    font-size:64px;
+}
+
+.jornada-regras-v147{
+    display:grid;
+    gap:9px;
+    max-width:760px;
+    margin:20px auto;
+    text-align:left;
+}
+
+.jornada-regras-v147 > div{
+    display:flex;
+    gap:11px;
+    align-items:flex-start;
+    padding:12px 14px;
+    border-radius:13px;
+    background:#f6f4fa;
+}
+
+.jornada-regras-v147 span{
+    font-size:24px;
+}
+
+.jornada-regras-v147 p{
+    margin:0;
+    color:#4e5664;
+    line-height:1.5;
+}
+
+.jornada-progresso-v147{
+    margin:0 0 12px;
+    padding:12px 14px;
+    border-radius:15px;
+    background:rgba(255,255,255,.94);
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.jornada-progresso-info-v147{
+    display:flex;
+    justify-content:space-between;
+    color:#4d5664;
+    font-size:12px;
+}
+
+.jornada-progresso-barra-v147{
+    height:8px;
+    margin-top:7px;
+    overflow:hidden;
+    border-radius:999px;
+    background:#e7e9ee;
+}
+
+.jornada-progresso-barra-v147 span{
+    display:block;
+    height:100%;
+    border-radius:999px;
+    background:linear-gradient(90deg,#6d4b9e,#3376ad);
+    transition:width .25s ease;
+}
+
+.jornada-pergunta-v147{
+    margin:19px 0 12px;
+    color:#2e2440;
+    font-size:20px;
+}
+
+.jornada-opcoes-v147{
+    display:grid;
+    gap:10px;
+    margin:12px 0;
+}
+
+.jornada-opcao-narrativa-v147,
+.jornada-opcao-tecnica-v147{
+    width:100%;
+    margin:0 !important;
+    padding:14px 15px;
+    display:flex;
+    align-items:center;
+    gap:11px;
+    border-radius:15px;
+    border:2px solid #e2e5eb;
+    background:white;
+    color:#2f3743;
+    text-align:left;
+    box-shadow:none;
+    transition:.18s ease;
+}
+
+.jornada-opcao-narrativa-v147:hover,
+.jornada-opcao-tecnica-v147:hover:not(:disabled){
+    transform:translateY(-1px);
+    border-color:#7a61a5;
+    background:#faf8fd;
+}
+
+.jornada-opcao-narrativa-v147.selecionada{
+    border-color:#694a96;
+    background:#f2ecfa;
+}
+
+.jornada-opcao-letra-v147{
+    width:32px;
+    height:32px;
+    min-width:32px;
+    display:grid;
+    place-items:center;
+    border-radius:10px;
+    background:#ece8f4;
+    color:#4e3970;
+    font-weight:900;
+}
+
+.jornada-opcao-icone-v147{
+    font-size:25px;
+}
+
+.jornada-opcao-texto-v147,
+.jornada-opcao-tecnica-texto-v147{
+    flex:1;
+}
+
+.jornada-opcao-texto-v147 strong,
+.jornada-opcao-texto-v147 small{
+    display:block;
+}
+
+.jornada-opcao-texto-v147 strong{
+    color:#30243f;
+    font-size:15px;
+}
+
+.jornada-opcao-texto-v147 small{
+    margin-top:3px;
+    color:#69717f;
+    font-size:12px;
+    line-height:1.4;
+}
+
+.jornada-opcao-tecnica-v147.errada-esmaecida{
+    opacity:.36;
+    filter:grayscale(1);
+    text-decoration:line-through;
+    background:#eceff2;
+    border-color:#d2d6dc;
+    cursor:not-allowed;
+}
+
+.jornada-opcao-tecnica-v147.correta{
+    opacity:1;
+    background:#e8f7ed;
+    border-color:#3d9a5b;
+}
+
+.jornada-consequencia-v147,
+.jornada-feedback-erro-v147,
+.jornada-feedback-acerto-v147,
+.jornada-diagnostico-v147{
+    margin:17px 0;
+    padding:15px 17px;
+    border-radius:16px;
+}
+
+.jornada-consequencia-v147{
+    background:#f1ecf8;
+    border-left:5px solid #6d4b9e;
+}
+
+.jornada-consequencia-v147 > span,
+.jornada-consequencia-v147 > strong{
+    display:block;
+}
+
+.jornada-consequencia-v147 > span{
+    color:#73579b;
+    font-size:11px;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.jornada-consequencia-v147 > strong{
+    margin:4px 0;
+    color:#342449;
+}
+
+.jornada-consequencia-v147 p,
+.jornada-feedback-erro-v147 p,
+.jornada-feedback-acerto-v147 p,
+.jornada-diagnostico-v147 p{
+    margin:5px 0 0;
+    line-height:1.55;
+}
+
+.jornada-aviso-escolha-v147{
+    margin:14px 0 0 !important;
+    padding:11px 13px;
+    border-radius:12px;
+    background:#fff8dc;
+    color:#6d5700 !important;
+    font-size:13px !important;
+}
+
+.jornada-cabecalho-desafio-v147{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.jornada-pontos-v147{
+    padding:7px 10px;
+    border-radius:999px;
+    background:#fff4c7;
+    color:#675000;
+    font-size:12px;
+    font-weight:900;
+}
+
+.jornada-contexto-desafio-v147{
+    margin:10px 0 16px;
+    padding:13px 15px;
+    border-left:5px solid #4e6fa6;
+    border-radius:12px;
+    background:#eef4fb;
+}
+
+.jornada-pergunta-tecnica-v147{
+    margin:15px 0 12px;
+    color:#242b35;
+    font-size:17px;
+    font-weight:700;
+    line-height:1.58;
+}
+
+.jornada-texto-base-v147{
+    margin:14px 0;
+    padding:14px 15px;
+    border-radius:14px;
+    background:#f6f7f9;
+    color:#444d5a;
+    line-height:1.6;
+}
+
+.jornada-imagem-questao-v147{
+    display:block;
+    width:min(100%,650px);
+    max-height:430px;
+    object-fit:contain;
+    margin:15px auto;
+    border-radius:14px;
+}
+
+.jornada-feedback-erro-v147{
+    background:#fff0f0;
+    color:#832e2e;
+    border-left:5px solid #c94b4b;
+}
+
+.jornada-feedback-acerto-v147{
+    background:#eaf8ef;
+    color:#245e38;
+    border-left:5px solid #3a9b5a;
+}
+
+.jornada-explicacao-v147,
+.jornada-dica-v147{
+    margin-top:12px;
+    padding:12px;
+    border-radius:12px;
+    background:rgba(255,255,255,.74);
+    color:#36414c;
+}
+
+.jornada-explicacao-v147 p,
+.jornada-dica-v147 p{
+    margin:4px 0 0;
+    line-height:1.55;
+}
+
+.jornada-conclusao-v147{
+    text-align:center;
+}
+
+.jornada-trofeu-v147{
+    font-size:66px;
+    margin-bottom:4px;
+}
+
+.jornada-resultado-grid-v147{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin:22px 0;
+}
+
+.jornada-resultado-grid-v147 > div{
+    padding:16px 10px;
+    border-radius:16px;
+    background:#f3f0f8;
+}
+
+.jornada-resultado-grid-v147 strong,
+.jornada-resultado-grid-v147 span{
+    display:block;
+}
+
+.jornada-resultado-grid-v147 strong{
+    color:#49346c;
+    font-size:25px;
+}
+
+.jornada-resultado-grid-v147 span{
+    margin-top:3px;
+    color:#6b7280;
+    font-size:11px;
+    font-weight:700;
+}
+
+.jornada-diagnostico-v147{
+    text-align:left;
+    background:#eef4fb;
+    border-left:5px solid #3b78aa;
+}
+
+.jornada-trajetoria-v147{
+    margin-top:22px;
+    text-align:left;
+}
+
+.jornada-trajetoria-v147 h2{
+    color:#35264c;
+    font-size:20px;
+}
+
+.jornada-trajetoria-item-v147{
+    display:flex;
+    gap:12px;
+    padding:12px 0;
+    border-bottom:1px solid #e4e6eb;
+}
+
+.jornada-trajetoria-item-v147 > span{
+    width:30px;
+    height:30px;
+    min-width:30px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:#5d4581;
+    color:white;
+    font-weight:900;
+}
+
+.jornada-trajetoria-item-v147 p{
+    margin:4px 0 0;
+    color:#5d6572;
+    line-height:1.5;
+}
+
+.jornada-acoes-finais-v147{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:22px;
+}
+
+@media(max-width:760px){
+    .selo-novo-jornada-historia{
+        margin-left:0;
+        position:absolute;
+        right:9px;
+        top:8px;
+    }
+
+    .jornada-historia-pagina-v147{
+        padding:5px 0 34px;
+    }
+
+    .jornada-historia-topo-v147{
+        align-items:flex-start;
+        padding:10px;
+    }
+
+    .jornada-historia-identidade-v147{
+        display:none;
+    }
+
+    .jornada-hero-v147,
+    .jornada-cena-v147{
+        padding:20px 15px;
+        border-radius:19px;
+    }
+
+    .jornada-como-funciona-v147{
+        grid-template-columns:1fr;
+        gap:8px;
+    }
+
+    .jornada-como-funciona-v147 > div{
+        display:grid;
+        grid-template-columns:42px 1fr;
+        grid-template-rows:auto auto;
+        text-align:left;
+        column-gap:8px;
+        padding:11px 13px;
+    }
+
+    .jornada-como-funciona-v147 span{
+        grid-row:1/3;
+        align-self:center;
+    }
+
+    .jornada-como-funciona-v147 strong,
+    .jornada-como-funciona-v147 small{
+        margin:0;
+    }
+
+    .jornada-capitulo-v147{
+        padding:13px;
+        gap:10px;
+    }
+
+    .jornada-capitulo-numero-v147{
+        width:38px;
+        min-width:38px;
+        height:38px;
+        border-radius:12px;
+        font-size:16px;
+    }
+
+    .jornada-capitulo-conteudo-v147 h3{
+        font-size:17px;
+    }
+
+    .jornada-cabecalho-desafio-v147{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .jornada-opcao-narrativa-v147,
+    .jornada-opcao-tecnica-v147{
+        padding:12px 10px;
+    }
+
+    .jornada-opcao-icone-v147{
+        display:none;
+    }
+
+    .jornada-resultado-grid-v147{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .jornada-btn-principal-v147,
+    .jornada-btn-secundario-v147{
+        width:100%;
+        margin:6px 0 !important;
+    }
+}
