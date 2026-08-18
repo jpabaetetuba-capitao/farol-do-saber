@@ -23084,6 +23084,10 @@ function obterConfigProvasFarol(){
         cozinheiro: {
             grupo: "grupoProvasCozinheiro",
             card: "cardProvasCozinheiro"
+        },
+        auxiliarSaude: {
+            grupo: "grupoProvasAuxiliarSaude",
+            card: "cardProvasAuxiliarSaude"
         }
     };
 }
@@ -24976,7 +24980,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         atualizarTituloSelecaoFarol(`${cfg.icone} ${cfg.nomeCompleto}`);
 
         const botaoQuestoesAnteriores =
-            cfg.sigla === "CZA"
+            ["CZA", "ASA"].includes(cfg.sigla)
                 ? `
                     <button class="card-menu-taifeiro-farol" onclick="abrirAreaCargoCompartilhadoTranspetroV138('${chave}','questoesAnteriores')">
                         <span>🧠</span>
@@ -25100,6 +25104,17 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
             if(typeof mostrarToast === "function"){
                 mostrarToast("Não foi possível abrir as questões de provas anteriores do Cozinheiro.");
+            }
+            return false;
+        }
+
+        if(destino === "questoesAnteriores" && cfg.sigla === "ASA"){
+            if(typeof window.abrirQuestoesAnterioresAuxiliarSaudeV145 === "function"){
+                return window.abrirQuestoesAnterioresAuxiliarSaudeV145();
+            }
+
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Não foi possível abrir as questões de provas anteriores do Auxiliar de Saúde.");
             }
             return false;
         }
@@ -36314,6 +36329,7 @@ function renderizarSalaArenaAoVivoFarol(){
             "grupoProvasApoioEscolar",
             "grupoProvasTaifeiro",
             "grupoProvasCozinheiro",
+            "grupoProvasAuxiliarSaude",
             "detalheProvaAnteriorV30",
             "mensagemEscolhaProvas"
         ].forEach(id => {
@@ -36360,13 +36376,17 @@ function renderizarSalaArenaAoVivoFarol(){
 
     const selecionarCargoAntesV30 = window.selecionarCargoProvasFarol;
     window.selecionarCargoProvasFarol = async function(cargo){
-        if(["taifeiro", "cozinheiro"].includes(cargo)){
+        if(["taifeiro", "cozinheiro", "auxiliarSaude"].includes(cargo)){
             if(typeof window.carregarAcessosConcursosFarol === "function"){
                 await window.carregarAcessosConcursosFarol({ renderizar: false });
             }
 
-            const cargoAcesso = cargo === "cozinheiro" ? "cozinheiro" : "taifeiro";
-            const nomeCargo = cargo === "cozinheiro" ? "Cozinheiro" : "Taifeiro";
+            const mapaAcessoProvasTranspetroV145 = {
+                taifeiro: ["taifeiro", "Taifeiro"],
+                cozinheiro: ["cozinheiro", "Cozinheiro"],
+                auxiliarSaude: ["auxiliarSaude", "Auxiliar de Saúde"]
+            };
+            const [cargoAcesso, nomeCargo] = mapaAcessoProvasTranspetroV145[cargo];
 
             if(
                 typeof window.temAcessoCargoFarol === "function" &&
@@ -41145,6 +41165,19 @@ limparArenaLocalFarol = function(){
             };
         }
 
+        if(trilha === "transpetroAuxiliarSaude"){
+            return {
+                trilha: "transpetroAuxiliarSaude",
+                cargoAcesso:"auxiliarSaude",
+                nome:"Auxiliar de Saúde",
+                nomeCompleto:"Auxiliar de Saúde — ASA",
+                sigla:"ASA",
+                icone:"🩺",
+                banco2018:"questoesAuxiliarSaude2018",
+                banco2023:"questoesAuxiliarSaude2023"
+            };
+        }
+
         return {
             trilha:"transpetroTaifeiro",
             cargoAcesso:"taifeiro",
@@ -44847,6 +44880,126 @@ limparArenaLocalFarol = function(){
                 "transpetroCozinheiro"
             ){
                 setTimeout(rotulosCZAProvasV140,0);
+            }
+            return r;
+        };
+    }
+})();
+
+
+// ==========================================================
+// FAROL V145 - AUXILIAR DE SAÚDE - PROVAS ANTERIORES 2018/2023
+// ==========================================================
+(function(){
+    "use strict";
+
+    function temAcessoAuxiliarSaudeV145(){
+        return typeof window.temAcessoCargoFarol === "function" &&
+            window.temAcessoCargoFarol("transpetro2026", "auxiliarSaude");
+    }
+
+    async function validarAcessoAuxiliarSaudeV145(){
+        if(typeof window.carregarAcessosConcursosFarol === "function"){
+            await window.carregarAcessosConcursosFarol({renderizar:false});
+        }
+        if(!temAcessoAuxiliarSaudeV145()){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Seu acesso ainda não inclui Auxiliar de Saúde — Transpetro MAR.");
+            }
+            return false;
+        }
+        return true;
+    }
+
+    function rotulosASAProvasV145(){
+        const sec=document.getElementById("questoesAnterioresTaifeiro");
+        if(sec){
+            const etapa=sec.querySelector(".etapa-fluxo-provas-v30");
+            if(etapa) etapa.textContent="Transpetro MAR • Auxiliar de Saúde — ASA";
+
+            const botaoVoltar=sec.querySelector(".btn-voltar-fluxo-provas-v30");
+            if(botaoVoltar){
+                botaoVoltar.setAttribute("aria-label","Voltar para Auxiliar de Saúde");
+            }
+
+            const gradeAnos=sec.querySelector("#gridAnosProvasComentadasTaifeiro");
+            if(gradeAnos){
+                gradeAnos
+                    .querySelectorAll(".prova-comentada-transpetro-card h3")
+                    .forEach((h,i)=>{
+                        h.textContent=`🩺 Auxiliar de Saúde — ${i===0?2018:2023}`;
+                    });
+            }
+        }
+
+        const prova=document.getElementById("provaComentadaTaifeiro");
+        if(prova){
+            const selo=prova.querySelector(".selo-prova-comentada-taifeiro");
+            if(selo) selo.textContent="🩺 Transpetro MAR • Auxiliar de Saúde — ASA";
+            const demo=document.getElementById("avisoDemoProvaComentadaTaifeiro");
+            if(demo) demo.style.display="none";
+        }
+    }
+
+    window.abrirQuestoesAnterioresAuxiliarSaudeV145=async function(){
+        if(!(await validarAcessoAuxiliarSaudeV145())) return false;
+
+        localStorage.setItem("farol_concurso_atual","transpetro2026");
+        localStorage.setItem("farol_trilha_atual","transpetroAuxiliarSaude");
+        localStorage.setItem(
+            "farol_contexto_provas_transpetro_v143",
+            "transpetroAuxiliarSaude"
+        );
+
+        if(typeof mostrarTela === "function"){
+            mostrarTela("questoesAnterioresTaifeiro");
+        }
+
+        setTimeout(()=>{
+            rotulosASAProvasV145();
+            if(typeof window.voltarAnosProvaComentadaTaifeiroFarol === "function"){
+                window.voltarAnosProvaComentadaTaifeiroFarol();
+            }
+        },0);
+        return true;
+    };
+
+    window.abrirProvasAnterioresAuxiliarSaudeV145=async function(){
+        if(!(await validarAcessoAuxiliarSaudeV145())) return false;
+        localStorage.setItem("farol_concurso_atual","transpetro2026");
+        localStorage.setItem("farol_trilha_atual","transpetroAuxiliarSaude");
+        if(typeof mostrarTela === "function") mostrarTela("provasAnteriores",{semHistorico:true});
+        setTimeout(()=>{
+            if(typeof window.selecionarCargoProvasFarol === "function"){
+                window.selecionarCargoProvasFarol("auxiliarSaude");
+            }
+        },25);
+        return true;
+    };
+
+    const abrirDiscAntesV145=window.abrirDisciplinasProvaComentadaTaifeiroFarol;
+    if(typeof abrirDiscAntesV145 === "function"){
+        window.abrirDisciplinasProvaComentadaTaifeiroFarol=function(){
+            const r=abrirDiscAntesV145.apply(this,arguments);
+            if(
+                localStorage.getItem("farol_contexto_provas_transpetro_v143") ===
+                "transpetroAuxiliarSaude"
+            ){
+                setTimeout(rotulosASAProvasV145,0);
+            }
+            return r;
+        };
+    }
+
+    const iniciarAntesV145=window.iniciarProvaComentadaTaifeiroFarol;
+    if(typeof iniciarAntesV145 === "function"){
+        window.iniciarProvaComentadaTaifeiroFarol=function(){
+            const r=iniciarAntesV145.apply(this,arguments);
+            if(
+                localStorage.getItem("farol_contexto_provas_transpetro_v143") ===
+                "transpetroAuxiliarSaude"
+            ){
+                setTimeout(rotulosASAProvasV145,0);
             }
             return r;
         };

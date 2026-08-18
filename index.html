@@ -3365,6 +3365,17 @@ Li e revisei o mapa mental.
                 <small>2 provas disponíveis</small>
                 <em>2018 e 2023 • caderno original + gabarito</em>
             </button>
+
+            <button
+                type="button"
+                id="cardProvasAuxiliarSaude"
+                class="provas-resumo-card ativo botao-cargo-provas provas-resumo-transpetro"
+                onclick="selecionarCargoProvasFarol('auxiliarSaude')">
+                <span>🩺</span>
+                <strong>Auxiliar de Saúde — Transpetro MAR</strong>
+                <small>2 provas disponíveis</small>
+                <em>2018 e 2023 • caderno original + gabarito</em>
+            </button>
         </div>
 
         <div
@@ -3796,6 +3807,46 @@ Li e revisei o mapa mental.
                 <div class="prova-anterior-card prova-card-premium">
                     <div class="prova-anterior-info"><div class="linha-tags-prova"><span class="tag-prova-anterior">Fundação Cesgranrio</span><span class="tag-ano-prova">2023</span></div><h3>👨‍🍳 Transpetro — Cozinheiro (CZA) — Prova 4</h3><p>40 questões: 10 de Língua Portuguesa e 30 de Conhecimentos Específicos.</p><small>Caderno original + gabarito comentado do Farol.</small></div>
                     <div class="prova-anterior-acoes"><button onclick="abrirArquivoProvaAnteriorFarol('provas/transpetro/cozinheiro/cozinheiro_2023.pdf')">📕 Abrir prova</button><button onclick="abrirArquivoProvaAnteriorFarol('provas/transpetro/cozinheiro/gabarito_comentado_cozinheiro_2023.pdf')">✅ Gabarito comentado</button></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="grupoProvasAuxiliarSaude" class="grupo-provas-cargo grupo-provas-oculto grupo-provas-transpetro">
+            <div class="cabecalho-grupo-provas">
+                <div>
+                    <span class="tag-cargo-provas tag-transpetro-provas">🩺 Auxiliar de Saúde — Transpetro MAR</span>
+                    <h3>Provas Anteriores</h3>
+                    <p>Abra o caderno original e depois consulte o gabarito comentado.</p>
+                </div>
+                <div class="acoes-cabecalho-provas">
+                    <strong class="contador-provas-cargo">2 provas disponíveis</strong>
+                    <button type="button" class="btn-voltar-cargos-provas" onclick="voltarCargosProvasFarol()">⬅ Cargos</button>
+                </div>
+            </div>
+            <div class="grid-provas-anteriores">
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova"><span class="tag-prova-anterior">Fundação Cesgranrio</span><span class="tag-ano-prova">2018</span></div>
+                        <h3>🩺 Transpetro — Auxiliar de Saúde — Prova 1</h3>
+                        <p>40 questões: 10 de Língua Portuguesa e 30 de Conhecimentos Específicos.</p>
+                        <small>Caderno original + gabarito comentado do Farol.</small>
+                    </div>
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/transpetro/auxiliar-saude/auxiliar_saude_2018.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/transpetro/auxiliar-saude/gabarito_comentado_auxiliar_saude_2018.pdf')">✅ Gabarito comentado</button>
+                    </div>
+                </div>
+                <div class="prova-anterior-card prova-card-premium">
+                    <div class="prova-anterior-info">
+                        <div class="linha-tags-prova"><span class="tag-prova-anterior">Fundação Cesgranrio</span><span class="tag-ano-prova">2023</span></div>
+                        <h3>🩺 Transpetro — Auxiliar de Saúde (ASA) — Prova 1</h3>
+                        <p>40 questões: 10 de Língua Portuguesa e 30 de Conhecimentos Específicos.</p>
+                        <small>Caderno original + gabarito comentado do Farol.</small>
+                    </div>
+                    <div class="prova-anterior-acoes">
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/transpetro/auxiliar-saude/auxiliar_saude_2023.pdf')">📕 Abrir prova</button>
+                        <button onclick="abrirArquivoProvaAnteriorFarol('provas/transpetro/auxiliar-saude/gabarito_comentado_auxiliar_saude_2023.pdf')">✅ Gabarito comentado</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -5857,8 +5908,10 @@ Li e revisei o mapa mental.
 <script src="dados/transpetro/comuns/bancosCompartilhadosCZA_ASA_2026.js?v=transpetro-cza-asa-v138"></script>
 <script src="dados/transpetro/cozinheiro/cozinheiro2018.js?v=cza-2018-comentada-v140"></script>
 <script src="dados/transpetro/cozinheiro/cozinheiro2023.js?v=cza-2023-comentada-v140"></script>
+<script src="dados/transpetro/auxiliar-saude/auxiliarSaude2018.js?v=asa-2018-comentada-v145"></script>
+<script src="dados/transpetro/auxiliar-saude/auxiliarSaude2023.js?v=asa-2023-comentada-v145"></script>
 
-<script src="app.js?v=166-organizacao-transpetro-v144"></script>
+<script src="app.js?v=167-asa-provas-anteriores-v145"></script>
 <script src="admin.js?v=76-transpetro-todos-cargos"></script>
 
 
