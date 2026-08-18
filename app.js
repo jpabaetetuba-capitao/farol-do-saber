@@ -420,6 +420,7 @@ function nomeDisciplinaForum(chave){
         historia: "História",
         etica: "Ética no Serviço Público",
         apoioEscolar: "Apoio Escolar",
+        transpetroTaifeiro: "Taifeiro — Transpetro MAR",
         administrador: "Administrador"
     };
 
@@ -2612,6 +2613,10 @@ if(assuntoAtual){
         assuntoAtual
     );
 
+    if(typeof registrarUltimoEstudoDashboardFarol === "function"){
+        registrarUltimoEstudoDashboardFarol("geral", { assunto: assuntoAtual });
+    }
+
     if(typeof atualizarContinuarUltimoEstudo === "function"){
         atualizarContinuarUltimoEstudo();
     }
@@ -4009,6 +4014,10 @@ salvarDados();
         disciplinaAtual
     );
 
+    if(typeof registrarUltimoEstudoDashboardFarol === "function"){
+        registrarUltimoEstudoDashboardFarol("geral", { assunto: disciplinaAtual });
+    }
+
     atualizarBotaoContinuarQuestoes();
 
 const total =
@@ -5029,6 +5038,11 @@ function atualizarCadernoErros() {
                 <small>
                     📚 ${item.disciplina || "-"}
                 </small>
+                ${item.assunto ? `
+                    <small style="display:block;margin-top:4px;">
+                        📍 ${item.assunto}
+                    </small>
+                ` : ""}
             </div>
 
             <span class="badge-erros">
@@ -8222,6 +8236,10 @@ function prepararQuestoesDoAssunto(novaOrdem){
         disciplinaAtual
     );
 
+    if(typeof registrarUltimoEstudoDashboardFarol === "function"){
+        registrarUltimoEstudoDashboardFarol("geral", { assunto: disciplinaAtual });
+    }
+
     return true;
 }
 
@@ -10359,6 +10377,10 @@ function continuarQuestoes(){
         assuntoAtual
     );
 
+    if(typeof registrarUltimoEstudoDashboardFarol === "function"){
+        registrarUltimoEstudoDashboardFarol("geral", { assunto: assuntoAtual });
+    }
+
     mostrarTela("resolverQuestao");
 
     mostrarQuestao();
@@ -10411,6 +10433,141 @@ function obterNomeBonitoAssunto(chave){
 
 }
 
+function registrarUltimoEstudoDashboardFarol(tipo, dados = {}){
+    try{
+        localStorage.setItem(
+            "farol_ultimo_estudo_dashboard_v134",
+            JSON.stringify({
+                tipo: String(tipo || ""),
+                ...dados,
+                salvoEm: Number(dados.salvoEm) || Date.now()
+            })
+        );
+    }catch(_erro){
+        // A navegação continua funcionando mesmo sem este marcador auxiliar.
+    }
+}
+
+function obterMarcadorUltimoEstudoDashboardFarol(){
+    try{
+        const bruto = localStorage.getItem("farol_ultimo_estudo_dashboard_v134");
+        if(!bruto) return null;
+        const dados = JSON.parse(bruto);
+        return dados && typeof dados === "object" ? dados : null;
+    }catch(_erro){
+        return null;
+    }
+}
+
+function obterUltimoProgressoTaifeiroInicioV134(){
+    let melhor = null;
+
+    try{
+        for(let i = 0; i < localStorage.length; i++){
+            const chave = localStorage.key(i);
+
+            if(!chave || !chave.startsWith("farol_taa_progresso_v130_")){
+                continue;
+            }
+
+            let dados = null;
+
+            try{
+                dados = JSON.parse(localStorage.getItem(chave) || "null");
+            }catch(_erroInterno){
+                dados = null;
+            }
+
+            if(
+                !dados ||
+                !dados.topico ||
+                !Array.isArray(dados.ordemIds) ||
+                !dados.ordemIds.length
+            ){
+                continue;
+            }
+
+            const candidato = {
+                tipo: "taifeiro",
+                topico: String(dados.topico),
+                eixoMenu: String(dados.eixoMenu || ""),
+                indice: Number.isInteger(Number(dados.indice))
+                    ? Number(dados.indice)
+                    : 0,
+                total: dados.ordemIds.length,
+                salvoEm: Number(dados.salvoEm) || 0,
+                dados
+            };
+
+            if(!melhor || candidato.salvoEm > melhor.salvoEm){
+                melhor = candidato;
+            }
+        }
+    }catch(_erro){
+        return null;
+    }
+
+    return melhor;
+}
+
+function nomeEixoTaifeiroInicioV134(eixoMenu){
+    const nomes = {
+        arquitetura: "Arquitetura Naval",
+        legislacao: "Legislação Marítima e Ambiental",
+        protecao: "Conscientização sobre proteção de navio",
+        portugues: "Língua Portuguesa"
+    };
+
+    return nomes[String(eixoMenu || "")] || "Banco de Questões 2026";
+}
+
+function obterContinuacaoInicioFarolV134(){
+    const taa = obterUltimoProgressoTaifeiroInicioV134();
+    const marcador = obterMarcadorUltimoEstudoDashboardFarol();
+
+    // Se houve uma atividade genérica DEPOIS da última atividade do Taifeiro,
+    // respeita o estudo mais recente.
+    if(
+        marcador &&
+        marcador.tipo === "geral" &&
+        (!taa || Number(marcador.salvoEm || 0) >= Number(taa.salvoEm || 0))
+    ){
+        return {
+            tipo: "geral",
+            assunto: String(
+                marcador.assunto ||
+                localStorage.getItem("farol_ultimoAssunto") ||
+                ""
+            ),
+            salvoEm: Number(marcador.salvoEm) || 0
+        };
+    }
+
+    // Se existe tentativa do Taifeiro em andamento, ela passa a ser reconhecida
+    // pelo cartão "Continuar estudando" da tela inicial SOMENTE se o acesso atual
+    // ao cargo estiver liberado. Isso evita reabrir conteúdo após revogação.
+    const podeRetomarTaifeiro =
+        taa &&
+        typeof window.temAcessoCargoFarol === "function" &&
+        window.temAcessoCargoFarol("transpetro2026", "taifeiro");
+
+    if(podeRetomarTaifeiro){
+        return taa;
+    }
+
+    const ultimoGeral = localStorage.getItem("farol_ultimoAssunto");
+
+    if(ultimoGeral){
+        return {
+            tipo: "geral",
+            assunto: ultimoGeral,
+            salvoEm: Number(marcador && marcador.salvoEm) || 0
+        };
+    }
+
+    return null;
+}
+
 function atualizarContinuarUltimoEstudo(){
 
     const box =
@@ -10426,17 +10583,43 @@ function atualizarContinuarUltimoEstudo(){
         return;
     }
 
-    const ultimo =
-        localStorage.getItem("farol_ultimoAssunto");
+    const continuacao = obterContinuacaoInicioFarolV134();
 
-    if(!ultimo || !bancoQuestoes[ultimo]){
-
+    if(!continuacao){
         box.classList.add("sem-estudo");
         botao.disabled = true;
         texto.textContent =
             "Você ainda não iniciou um estudo. Escolha uma rota de estudos para começar.";
         return;
+    }
 
+    // BANCO TAIFEIRO 2026
+    if(continuacao.tipo === "taifeiro"){
+        const total = Math.max(1, Number(continuacao.total) || 1);
+        const atual = Math.min(
+            total,
+            Math.max(1, (Number(continuacao.indice) || 0) + 1)
+        );
+        const eixo = nomeEixoTaifeiroInicioV134(continuacao.eixoMenu);
+
+        box.classList.remove("sem-estudo");
+        botao.disabled = false;
+        texto.textContent =
+            "Continue em ⚓ Taifeiro — " + eixo + " — " +
+            continuacao.topico + " — questão " +
+            atual + " de " + total + ".";
+        return;
+    }
+
+    // Fluxo tradicional da plataforma.
+    const ultimo = String(continuacao.assunto || "");
+
+    if(!ultimo || !bancoQuestoes[ultimo]){
+        box.classList.add("sem-estudo");
+        botao.disabled = true;
+        texto.textContent =
+            "Você ainda não iniciou um estudo. Escolha uma rota de estudos para começar.";
+        return;
     }
 
     const total =
@@ -10471,8 +10654,26 @@ function atualizarContinuarUltimoEstudo(){
 
 function continuarUltimoEstudo(){
 
-    const ultimo =
-        localStorage.getItem("farol_ultimoAssunto");
+    const continuacao = obterContinuacaoInicioFarolV134();
+
+    if(continuacao && continuacao.tipo === "taifeiro"){
+        if(typeof window.continuarBancoTaifeiroDoInicioFarol === "function"){
+            window.continuarBancoTaifeiroDoInicioFarol(
+                continuacao.topico,
+                continuacao.eixoMenu
+            );
+            return;
+        }
+
+        mostrarToast("Não foi possível abrir o progresso do Taifeiro.");
+        return;
+    }
+
+    const ultimo = String(
+        (continuacao && continuacao.assunto) ||
+        localStorage.getItem("farol_ultimoAssunto") ||
+        ""
+    );
 
     if(!ultimo || !bancoQuestoes[ultimo]){
         mostrarToast("Você ainda não iniciou nenhum estudo.");
@@ -15018,7 +15219,53 @@ if(document.readyState === "loading"){
     ativarObservadorVoltarJogosFarol();
 }
 
+
+function atualizarContextoJogosFarolV136(){
+    const area = document.getElementById("contextoJogosFarolV136");
+    if(!area){
+        return;
+    }
+
+    const concursoAtual =
+        localStorage.getItem("farol_concurso_atual") || "barcarena2026";
+
+    if(
+        concursoAtual === "transpetro2026" &&
+        typeof window.temAcessoCargoFarol === "function" &&
+        window.temAcessoCargoFarol("transpetro2026", "taifeiro")
+    ){
+        area.style.display = "block";
+        area.innerHTML = `
+            <strong>⚓ Banco ativo: Taifeiro — Transpetro MAR 2026</strong>
+            <span>
+                Os jogos usam Língua Portuguesa, Arquitetura Naval,
+                Legislação Marítima e Ambiental e Conscientização sobre proteção de navio.
+            </span>
+        `;
+        return;
+    }
+
+    if(concursoAtual === "abaetetuba2026"){
+        area.style.display = "block";
+        area.innerHTML = `
+            <strong>🧭 Banco ativo: Abaetetuba 2026</strong>
+            <span>Os jogos seguem as disciplinas disponíveis na preparação atual.</span>
+        `;
+        return;
+    }
+
+    area.style.display = "block";
+    area.innerHTML = `
+        <strong>🏛️ Banco ativo: Barcarena 2026</strong>
+        <span>Os jogos seguem as disciplinas atuais do Farol.</span>
+    `;
+}
+
 function abrirTelaJogosFarol(){
+
+    if(typeof atualizarContextoJogosFarolV136 === "function"){
+        atualizarContextoJogosFarolV136();
+    }
 
     const area =
         document.getElementById("areaJogoConstruaFarol");
@@ -15391,8 +15638,23 @@ function registrarErroJogoFarol(q){
     const respostaCorreta =
         q.alternativas[q.correta];
 
+    const ehQuestaoTaifeiroJogo =
+        String(q && q.assuntoJogo || "").startsWith("taa2026_") ||
+        /^TAA-2026-/i.test(String(q && q.id || ""));
+
     const nomeDisciplina =
-        nomeAssuntoJogoFarol(q.assuntoJogo);
+        ehQuestaoTaifeiroJogo
+            ? (
+                String(q.eixo || "") === "Língua Portuguesa"
+                    ? "📘 Taifeiro — Língua Portuguesa"
+                    : "⚓ Taifeiro — Conhecimentos Específicos"
+            )
+            : nomeAssuntoJogoFarol(q.assuntoJogo);
+
+    const assuntoErroJogo =
+        ehQuestaoTaifeiroJogo
+            ? (q.topicoEdital || q.assunto || "Taifeiro — Banco 2026")
+            : q.assuntoJogo;
 
     const indiceExistente =
         cadernoErros.findIndex(
@@ -15403,7 +15665,11 @@ function registrarErroJogoFarol(q){
 
     const dadosErro = {
         idErro: chaveQuestaoPontuacao("erro-jogo", q.assuntoJogo, q),
-        assunto: q.assuntoJogo,
+        assunto: assuntoErroJogo,
+        topicoEdital: ehQuestaoTaifeiroJogo ? (q.topicoEdital || "") : "",
+        eixo: ehQuestaoTaifeiroJogo ? (q.eixo || "") : "",
+        concurso: ehQuestaoTaifeiroJogo ? "transpetro2026" : "",
+        cargo: ehQuestaoTaifeiroJogo ? "taifeiro" : "",
         disciplina: nomeDisciplina,
         pergunta: q.pergunta,
         texto: q.texto || "",
@@ -23474,7 +23740,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             icone: "⚓",
             classe: "transpetro",
             acessoLivre: false,
-            estruturaEmTeste: true,
+            estruturaEmTeste: false,
             descricao: "Preparação marítima focada em questões, provas anteriores, gabaritos comentados e simulados.",
             rotas: [
                 "transpetroAuxiliarSaude",
@@ -23796,6 +24062,10 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             "| concursos:",
             acessosConcursosUsuarioFarol
         );
+
+        if(typeof atualizarContinuarUltimoEstudo === "function"){
+            setTimeout(atualizarContinuarUltimoEstudo, 0);
+        }
     }
 
     function atualizarTelaDepoisDeCarregarAcessosFarol(){
@@ -24048,6 +24318,53 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         `;
     }
 
+    function ordenarRotasPorAcessoFarolV136(chaveConcurso, rotas){
+        const lista = Array.isArray(rotas) ? [...rotas] : [];
+        const concurso = CONCURSOS_FAROL[chaveConcurso];
+
+        // Barcarena é livre e permanece exatamente na ordem atual.
+        if(
+            !concurso ||
+            concurso.acessoLivre !== false ||
+            ehAdministradorAcessosFarol()
+        ){
+            return lista;
+        }
+
+        return lista
+            .map((chave, indice) => {
+                const trilha = trilhasPreparacaoFarol[chave];
+                const liberado =
+                    trilha &&
+                    temAcessoCargoFarol(chaveConcurso, trilha.cargoAcesso);
+
+                return { chave, indice, liberado: Boolean(liberado) };
+            })
+            .sort((a, b) => {
+                if(a.liberado !== b.liberado){
+                    return a.liberado ? -1 : 1;
+                }
+                return a.indice - b.indice;
+            })
+            .map(item => item.chave);
+    }
+
+    function separarRotasLiberadasFarolV136(chaveConcurso, rotas){
+        const liberadas = [];
+        const outras = [];
+
+        (Array.isArray(rotas) ? rotas : []).forEach(chave => {
+            const trilha = trilhasPreparacaoFarol[chave];
+            const liberado =
+                trilha &&
+                temAcessoCargoFarol(chaveConcurso, trilha.cargoAcesso);
+
+            (liberado ? liberadas : outras).push(chave);
+        });
+
+        return { liberadas, outras };
+    }
+
     function renderizarCargosConcursoFarol(chaveConcurso){
         const concurso = CONCURSOS_FAROL[chaveConcurso];
         const painelPreparacoes = document.getElementById("painelPreparacoes");
@@ -24065,7 +24382,10 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         painelTrilha.innerHTML = "";
         painelPreparacoes.style.display = "block";
 
-        const cards = concurso.rotas
+        const rotasOrdenadas =
+            ordenarRotasPorAcessoFarolV136(chaveConcurso, concurso.rotas);
+
+        const cards = rotasOrdenadas
             .map(chave => montarCardCargoConcursoFarol(chave, trilhasPreparacaoFarol[chave]))
             .join("");
 
@@ -24075,7 +24395,49 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             </div>
         `;
 
-        if(chaveConcurso === "transpetro2026"){
+        // Para aluno, concursos com acesso por cargo mostram o que foi liberado primeiro.
+        // O administrador mantém a ordem original de gerenciamento.
+        if(
+            !ehAdministradorAcessosFarol() &&
+            ["transpetro2026", "abaetetuba2026"].includes(chaveConcurso)
+        ){
+            const gruposAcesso = separarRotasLiberadasFarolV136(
+                chaveConcurso,
+                rotasOrdenadas
+            );
+
+            const cardsLiberados = gruposAcesso.liberadas
+                .map(chave => montarCardCargoConcursoFarol(
+                    chave,
+                    trilhasPreparacaoFarol[chave]
+                ))
+                .join("");
+
+            const cardsOutros = gruposAcesso.outras
+                .map(chave => montarCardCargoConcursoFarol(
+                    chave,
+                    trilhasPreparacaoFarol[chave]
+                ))
+                .join("");
+
+            blocoCards = `
+                ${cardsLiberados ? `
+                    <h3 class="titulo-grupo-preparacao">✅ Seus acessos liberados</h3>
+                    <div class="grid-preparacoes">
+                        ${cardsLiberados}
+                    </div>
+                ` : ""}
+
+                ${cardsOutros ? `
+                    <h3 class="titulo-grupo-preparacao">🔒 Outros cargos e preparações</h3>
+                    <div class="grid-preparacoes">
+                        ${cardsOutros}
+                    </div>
+                ` : ""}
+            `;
+        }
+
+        if(chaveConcurso === "transpetro2026" && ehAdministradorAcessosFarol()){
             const chavesOficiais = new Set([
                 "transpetroSegundoOficialNautica",
                 "transpetroSegundoOficialMaquinas"
@@ -24256,7 +24618,39 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         }
     };
 
+    function temAcessoTaifeiroIntegracaoV135(){
+        if(typeof window.temAcessoCargoFarol === "function"){
+            return window.temAcessoCargoFarol("transpetro2026", "taifeiro");
+        }
+        return false;
+    }
+
+    function bloquearAreaTaifeiroIntegracaoV135(){
+        if(typeof mostrarToast === "function"){
+            mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+        }
+        localStorage.setItem("farol_concurso_atual", "transpetro2026");
+        localStorage.removeItem("farol_trilha_atual");
+
+        if(typeof mostrarTela === "function"){
+            mostrarTela("questoes");
+        }
+
+        setTimeout(() => {
+            if(typeof renderizarTelaPreparacoes === "function"){
+                renderizarTelaPreparacoes();
+            }
+        }, 0);
+    }
+
+    window.temAcessoTaifeiroFarolV135 = temAcessoTaifeiroIntegracaoV135;
+
     window.voltarMenuTaifeiroFarol = function(){
+        if(!temAcessoTaifeiroIntegracaoV135()){
+            bloquearAreaTaifeiroIntegracaoV135();
+            return;
+        }
+
         localStorage.setItem("farol_concurso_atual", "transpetro2026");
         localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
         if(typeof mostrarTela === "function"){
@@ -24270,6 +24664,11 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
     };
 
     window.abrirAreaTaifeiroFarol = function(area){
+        if(!temAcessoTaifeiroIntegracaoV135()){
+            bloquearAreaTaifeiroIntegracaoV135();
+            return false;
+        }
+
         const destino = String(area || "");
 
         if(destino === "simulados"){
@@ -24306,7 +24705,37 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         }
 
         if(destino === "erros"){
+            if(typeof window.migrarCadernoTaifeiroV135 === "function"){
+                window.migrarCadernoTaifeiroV135();
+            }
             mostrarTela("erros");
+            if(typeof atualizarCadernoErros === "function"){
+                atualizarCadernoErros();
+            }
+            return;
+        }
+
+        if(destino === "jogos"){
+            if(typeof window.prepararJogosTaifeiroFarolV135 === "function"){
+                window.prepararJogosTaifeiroFarolV135(true);
+            }
+            mostrarTela("jogosFarol");
+            setTimeout(() => {
+                if(typeof window.abrirTelaJogosFarol === "function"){
+                    window.abrirTelaJogosFarol();
+                }else if(typeof abrirTelaJogosFarol === "function"){
+                    abrirTelaJogosFarol();
+                }
+            }, 0);
+            return;
+        }
+
+        if(destino === "forum"){
+            if(typeof abrirForum === "function"){
+                abrirForum("transpetroTaifeiro");
+            }else if(typeof mostrarToast === "function"){
+                mostrarToast("O Fórum ainda está carregando.");
+            }
             return;
         }
 
@@ -24326,6 +24755,67 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         }
 
         mostrarToast("Este recurso será ativado nas próximas etapas do Transpetro MAR.");
+    };
+
+    window.continuarBancoTaifeiroDoInicioFarol = async function(topico, eixoMenu){
+        if(typeof window.carregarAcessosConcursosFarol === "function"){
+            await window.carregarAcessosConcursosFarol({ renderizar: false });
+        }
+
+        if(!temAcessoTaifeiroIntegracaoV135()){
+            try{
+                const marcador = JSON.parse(
+                    localStorage.getItem("farol_ultimo_estudo_dashboard_v134") || "null"
+                );
+                if(marcador && marcador.tipo === "taifeiro"){
+                    localStorage.removeItem("farol_ultimo_estudo_dashboard_v134");
+                }
+            }catch(_erro){
+                localStorage.removeItem("farol_ultimo_estudo_dashboard_v134");
+            }
+
+            if(typeof atualizarContinuarUltimoEstudo === "function"){
+                atualizarContinuarUltimoEstudo();
+            }
+
+            bloquearAreaTaifeiroIntegracaoV135();
+            return false;
+        }
+
+        const topicoSelecionado = String(topico || "");
+        const eixoSelecionado = String(eixoMenu || "");
+
+        localStorage.setItem("farol_concurso_atual", "transpetro2026");
+        localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+
+        if(typeof mostrarTela === "function"){
+            mostrarTela("bancoQuestoesTaifeiro");
+        }
+
+        setTimeout(() => {
+            const estadoOrigem =
+                eixoSelecionado === "portugues"
+                    ? "portugues"
+                    : "especificas";
+
+            // Abre o banco para inicializar o estado interno e, na sequência,
+            // restaura exatamente a tentativa persistida.
+            if(typeof window.abrirBancoQuestoesTaifeiroFarol === "function"){
+                window.abrirBancoQuestoesTaifeiroFarol(estadoOrigem);
+            }
+
+            setTimeout(() => {
+                if(typeof window.selecionarEixoBancoTaifeiroFarol === "function" && eixoSelecionado){
+                    window.selecionarEixoBancoTaifeiroFarol(eixoSelecionado);
+                }
+
+                if(typeof window.continuarTopicoBancoTaifeiroFarol === "function"){
+                    window.continuarTopicoBancoTaifeiroFarol(topicoSelecionado);
+                }
+            }, 0);
+        }, 0);
+
+        return true;
     };
 
     function renderizarMenuTaifeiroFarol(trilha, concurso, painelTrilha){
@@ -24367,6 +24857,15 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 </button>
                 <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('provas')">
                     <span>📄</span><strong>Provas Anteriores</strong><small>Caderno original + gabarito comentado</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('erros')">
+                    <span>🔎</span><strong>Caderno de Erros</strong><small>Revise as questões que você errou</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('jogos')">
+                    <span>🎮</span><strong>Jogos do Farol</strong><small>Treine o conteúdo do Taifeiro jogando</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('forum')">
+                    <span>💬</span><strong>Fórum do Taifeiro</strong><small>Dúvidas e discussões do cargo</small><b>›</b>
                 </button>
             </div>
         `;
@@ -27092,7 +27591,10 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             assuntos: [
                 { chave: "taa2026_prot_1_1", topicoEdital: "1.1 Ameaças aos transportes marítimos", nome: "1.1 Ameaças aos transportes marítimos" },
                 { chave: "taa2026_prot_1_2", topicoEdital: "1.2 Operações portuárias Portos/Navios", nome: "1.2 Operações portuárias Portos/Navios" },
-                { chave: "taa2026_prot_2_1", topicoEdital: "2.1 Convenções internacionais, códigos e recomendações", nome: "2.1 Convenções internacionais, códigos e recomendações" }
+                { chave: "taa2026_prot_2_1", topicoEdital: "2.1 Convenções internacionais, códigos e recomendações", nome: "2.1 Convenções internacionais, códigos e recomendações" },
+                { chave: "taa2026_prot_2_2_1", topicoEdital: "2.2.1 Legislação e regulamentos governamentais relevantes para os navios", nome: "2.2.1 Legislação e regulamentos para os navios" },
+                { chave: "taa2026_prot_2_2_2", topicoEdital: "2.2.2 Legislação e regulamentos governamentais relevantes para os portos", nome: "2.2.2 Legislação e regulamentos para os portos" },
+                { chave: "taa2026_prot_2_3", topicoEdital: "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima", nome: "2.3 Definições e siglas" }
             ]
         },
         {
@@ -27226,7 +27728,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
             if(descricao){
                 descricao.textContent =
-                    "Taifeiro — escolha Língua Portuguesa, Arquitetura Naval ou Legislação Marítima e depois o tópico do Banco de Questões 2026.";
+                    "Taifeiro — escolha Língua Portuguesa, Arquitetura Naval, Legislação Marítima e Ambiental ou Conscientização sobre proteção de navio; depois escolha o tópico do Banco 2026.";
             }
 
             if(quantidade){
@@ -27480,7 +27982,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             if(!area) return;
             const grupo = grupoTranspetroDueloV77(dueloDisciplinaSelecionada);
             if(!grupo){
-                area.innerHTML = "Escolha Arquitetura Naval ou Legislação Marítima.";
+                area.innerHTML = "Escolha uma disciplina do Taifeiro.";
                 if(textoDisciplina) textoDisciplina.innerHTML = "Nenhuma disciplina selecionada.";
                 return;
             }
@@ -41171,6 +41673,14 @@ limparArenaLocalFarol = function(){
                 chaveProgressoBancoTAA(estadoBancoTAA2026.topico),
                 JSON.stringify(dados)
             );
+
+            if(typeof registrarUltimoEstudoDashboardFarol === "function"){
+                registrarUltimoEstudoDashboardFarol("taifeiro", {
+                    topico: estadoBancoTAA2026.topico,
+                    eixoMenu: estadoBancoTAA2026.eixoMenu || "",
+                    salvoEm: dados.salvoEm
+                });
+            }
         }catch(_erro){
             // A tentativa continua funcionando mesmo sem persistência local.
         }
@@ -41581,7 +42091,10 @@ limparArenaLocalFarol = function(){
         return [
             "1.1 Ameaças aos transportes marítimos",
             "1.2 Operações portuárias Portos/Navios",
-            "2.1 Convenções internacionais, códigos e recomendações"
+            "2.1 Convenções internacionais, códigos e recomendações",
+            "2.2.1 Legislação e regulamentos governamentais relevantes para os navios",
+            "2.2.2 Legislação e regulamentos governamentais relevantes para os portos",
+            "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima"
         ].reduce((soma, topico) => soma + questoesTopicoTAA(topico).length, 0);
     }
 
@@ -41675,7 +42188,7 @@ limparArenaLocalFarol = function(){
                             <span class="eixo-icone">🛡️</span>
                             <span class="eixo-textos">
                                 <strong>Conscientização sobre proteção de navio</strong>
-                                <small>3 tópicos liberados</small>
+                                <small>6 tópicos liberados</small>
                             </span>
                         </span>
                         <span class="eixo-total">
@@ -41727,7 +42240,7 @@ limparArenaLocalFarol = function(){
                 : legislacaoAtiva
                     ? `15 tópicos liberados • ${totalLegislacao} questões disponíveis`
                     : protecaoAtiva
-                        ? `3 tópicos liberados • ${totalProtecaoNavio} questões disponíveis`
+                        ? `6 tópicos liberados • ${totalProtecaoNavio} questões disponíveis`
                         : `${topicosPortuguesLiberados} de 8 tópicos liberados • ${totalPortugues} questões disponíveis`
         );
 
@@ -41894,6 +42407,21 @@ limparArenaLocalFarol = function(){
                     "2.1 Convenções internacionais, códigos e recomendações",
                     "SOLAS capítulo XI-2, ISPS Code, partes obrigatória e recomendatória, gerenciamento de risco, âmbito de aplicação, STCW Regra VI/6 e SUA Convention, no nível de cobrança observado pela Cesgranrio."
                 )}
+                ${cardTopicoBancoTAA(
+                    "2.2.1 Legislação e regulamentos governamentais relevantes para os navios",
+                    "2.2.1 Legislação e regulamentos governamentais relevantes para os navios",
+                    "SOLAS XI-2 e ISPS aplicados aos navios, ISSC, SSAS, níveis de proteção, autoridade do Comandante, controle pelo Estado do porto e NORMAM atuais relacionadas à fiscalização e às embarcações."
+                )}
+                ${cardTopicoBancoTAA(
+                    "2.2.2 Legislação e regulamentos governamentais relevantes para os portos",
+                    "2.2.2 Legislação e regulamentos governamentais relevantes para os portos",
+                    "CONPORTOS e CESPORTOS, Resolução nº 53/2020, EAR, PSP, Declaração de Cumprimento, Declaração de Proteção, níveis de proteção e regras atuais de incidência do Código ISPS."
+                )}
+                ${cardTopicoBancoTAA(
+                    "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima",
+                    "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima",
+                    "IMO, ISPS, SOLAS, GISIS, SSO/OPN, CSO/CPC, PFSO/SSP, RSO, SSAS, ISSC, CONPORTOS, CESPORTOS, EAR, PSP, DC, ROIP, NAPV, CFTV e definições portuárias fundamentais."
+                )}
             </div>
         `;
 
@@ -42026,7 +42554,11 @@ limparArenaLocalFarol = function(){
 
         const dados = {
             idErro,
-            assunto: "transpetroTaifeiro",
+            assunto: questao.topicoEdital || questao.assunto || "Taifeiro — Banco 2026",
+            topicoEdital: questao.topicoEdital || "",
+            eixo: questao.eixo || "",
+            concurso: "transpetro2026",
+            cargo: "taifeiro",
             disciplina: ehQuestaoPortuguesBancoTAA(questao)
                 ? "📘 Taifeiro — Língua Portuguesa"
                 : "⚓ Taifeiro — Conhecimentos Específicos",
@@ -42066,6 +42598,68 @@ limparArenaLocalFarol = function(){
         if(typeof atualizarPainelEstudos === "function") atualizarPainelEstudos();
         if(typeof salvarDados === "function") salvarDados();
     }
+
+    function migrarCadernoTaifeiroV135(){
+        if(typeof cadernoErros === "undefined" || !Array.isArray(cadernoErros)){
+            return false;
+        }
+
+        const banco = Array.isArray(window.questoesTaifeiroBanco2026)
+            ? window.questoesTaifeiroBanco2026
+            : [];
+
+        let mudou = false;
+
+        cadernoErros.forEach(item => {
+            if(!item || item.assunto !== "transpetroTaifeiro"){
+                return;
+            }
+
+            const idQuestao = String(item.idErro || "").replace(/^erro-/, "");
+            const questao = banco.find(q =>
+                q && (
+                    String(q.id || "") === idQuestao ||
+                    String(q.enunciado || q.pergunta || "") === String(item.pergunta || "")
+                )
+            );
+
+            if(!questao){
+                return;
+            }
+
+            item.assunto = questao.topicoEdital || questao.assunto || "Taifeiro — Banco 2026";
+            item.topicoEdital = questao.topicoEdital || "";
+            item.eixo = questao.eixo || "";
+            item.concurso = "transpetro2026";
+            item.cargo = "taifeiro";
+            item.disciplina = ehQuestaoPortuguesBancoTAA(questao)
+                ? "📘 Taifeiro — Língua Portuguesa"
+                : "⚓ Taifeiro — Conhecimentos Específicos";
+            mudou = true;
+        });
+
+        if(mudou){
+            try{
+                localStorage.setItem("farol_caderno", JSON.stringify(cadernoErros));
+            }catch(_erro){
+                // salvarDados abaixo continua sendo a fonte principal quando disponível.
+            }
+
+            if(typeof salvarDados === "function"){
+                salvarDados();
+            }
+            if(typeof atualizarCadernoErros === "function"){
+                atualizarCadernoErros();
+            }
+            if(typeof atualizarDashboard === "function"){
+                atualizarDashboard();
+            }
+        }
+
+        return mudou;
+    }
+
+    window.migrarCadernoTaifeiroV135 = migrarCadernoTaifeiroV135;
 
     function montarImagemBancoTAA(questao){
         if(!questao.imagem) return "";
@@ -42403,6 +42997,11 @@ limparArenaLocalFarol = function(){
     };
 
     window.iniciarTopicoBancoTaifeiroFarol = function(topico){
+        if(typeof window.temAcessoTaifeiroFarolV135 === "function" && !window.temAcessoTaifeiroFarolV135()){
+            if(typeof mostrarToast === "function") mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+            return false;
+        }
+
         const topicoSelecionado = String(topico || "");
         const bancoTopico = questoesTopicoTAA(topicoSelecionado, bancoVisivelTAA());
 
@@ -42422,6 +43021,11 @@ limparArenaLocalFarol = function(){
     };
 
     window.comecarNovoTopicoBancoTaifeiroFarol = function(topico){
+        if(typeof window.temAcessoTaifeiroFarolV135 === "function" && !window.temAcessoTaifeiroFarolV135()){
+            if(typeof mostrarToast === "function") mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+            return false;
+        }
+
         const topicoSelecionado = String(topico || "");
         removerProgressoBancoTAA(topicoSelecionado);
 
@@ -42449,6 +43053,11 @@ limparArenaLocalFarol = function(){
     };
 
     window.continuarTopicoBancoTaifeiroFarol = function(topico){
+        if(typeof window.temAcessoTaifeiroFarolV135 === "function" && !window.temAcessoTaifeiroFarolV135()){
+            if(typeof mostrarToast === "function") mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+            return false;
+        }
+
         const topicoSelecionado = String(topico || "");
         const salvo = obterProgressoSalvoBancoTAA(topicoSelecionado);
 
@@ -42829,4 +43438,158 @@ limparArenaLocalFarol = function(){
 
         return true;
     };
+})();
+
+
+// ==========================================================
+// FAROL V135 — INTEGRAÇÃO GERAL TRANSPETRO / TAIFEIRO
+// Jogos ficam sensíveis ao concurso ativo:
+// - Transpetro ativo: exibe somente as categorias do Taifeiro;
+// - outros concursos: restaura exatamente as categorias antigas.
+// ==========================================================
+(function(){
+    "use strict";
+
+    const CHAVES_JOGOS_TAA_V135 = [
+        "taaPortugues",
+        "taaArquitetura",
+        "taaLegislacao",
+        "taaProtecao"
+    ];
+
+    const disciplinasOriginaisJogosV135 = {};
+
+    if(typeof disciplinasJogoFarol !== "undefined"){
+        Object.keys(disciplinasJogoFarol).forEach(chave => {
+            disciplinasOriginaisJogosV135[chave] = disciplinasJogoFarol[chave];
+        });
+    }
+
+    function limparObjetoDisciplinasJogoV135(){
+        if(typeof disciplinasJogoFarol === "undefined"){
+            return;
+        }
+
+        Object.keys(disciplinasJogoFarol).forEach(chave => {
+            delete disciplinasJogoFarol[chave];
+        });
+    }
+
+    function restaurarDisciplinasOriginaisJogosV135(){
+        if(typeof disciplinasJogoFarol === "undefined"){
+            return;
+        }
+
+        limparObjetoDisciplinasJogoV135();
+
+        Object.entries(disciplinasOriginaisJogosV135).forEach(([chave, valor]) => {
+            disciplinasJogoFarol[chave] = valor;
+        });
+    }
+
+    function chaveGrupoJogoTaifeiroV135(nome){
+        const texto = String(nome || "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase();
+
+        if(texto.includes("lingua portuguesa")){
+            return ["taaPortugues", "📘 Língua Portuguesa — Taifeiro"];
+        }
+        if(texto.includes("arquitetura naval")){
+            return ["taaArquitetura", "⚓ Arquitetura Naval — Taifeiro"];
+        }
+        if(texto.includes("legislacao maritima")){
+            return ["taaLegislacao", "⚖️ Legislação Marítima — Taifeiro"];
+        }
+        if(texto.includes("protecao de navio")){
+            return ["taaProtecao", "🛡️ Proteção de Navio — Taifeiro"];
+        }
+
+        return null;
+    }
+
+    window.prepararJogosTaifeiroFarolV135 = function(forcarTranspetro = false){
+        if(typeof disciplinasJogoFarol === "undefined"){
+            return false;
+        }
+
+        const concursoAtual =
+            localStorage.getItem("farol_concurso_atual") || "barcarena2026";
+
+        const usarTaifeiro =
+            (forcarTranspetro || concursoAtual === "transpetro2026") &&
+            typeof window.temAcessoCargoFarol === "function" &&
+            window.temAcessoCargoFarol("transpetro2026", "taifeiro");
+
+        if(!usarTaifeiro){
+            restaurarDisciplinasOriginaisJogosV135();
+            return false;
+        }
+
+        if(typeof window.prepararBancoCompeticaoTranspetroFarolV77 === "function"){
+            window.prepararBancoCompeticaoTranspetroFarolV77();
+        }
+
+        const grupos =
+            typeof window.gruposTranspetroCompeticaoFarolV77 === "function"
+                ? window.gruposTranspetroCompeticaoFarolV77()
+                : [];
+
+        // No modo Transpetro, evita misturar "Todas as disciplinas"
+        // com bancos de Barcarena/Abaetetuba.
+        limparObjetoDisciplinasJogoV135();
+        disciplinasJogoFarol.todas = {
+            nome: "🗺️ Todo o Taifeiro",
+            assuntos: []
+        };
+
+        grupos.forEach(grupo => {
+            const info = chaveGrupoJogoTaifeiroV135(grupo && grupo.nome);
+            if(!info){
+                return;
+            }
+
+            const [chave, nome] = info;
+            const assuntos = (Array.isArray(grupo.topicos) ? grupo.topicos : [])
+                .map(item => Array.isArray(item) ? item[0] : "")
+                .filter(Boolean);
+
+            if(assuntos.length){
+                disciplinasJogoFarol[chave] = {
+                    nome,
+                    assuntos
+                };
+            }
+        });
+
+        return CHAVES_JOGOS_TAA_V135.some(chave =>
+            disciplinasJogoFarol[chave] &&
+            Array.isArray(disciplinasJogoFarol[chave].assuntos) &&
+            disciplinasJogoFarol[chave].assuntos.length > 0
+        );
+    };
+
+    const abrirTelaJogosOriginalV135 =
+        typeof window.abrirTelaJogosFarol === "function"
+            ? window.abrirTelaJogosFarol
+            : (typeof abrirTelaJogosFarol === "function" ? abrirTelaJogosFarol : null);
+
+    if(abrirTelaJogosOriginalV135){
+        window.abrirTelaJogosFarol = function(){
+            window.prepararJogosTaifeiroFarolV135(false);
+            if(typeof atualizarContextoJogosFarolV136 === "function"){
+                atualizarContextoJogosFarolV136();
+            }
+            return abrirTelaJogosOriginalV135.apply(this, arguments);
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+            if(typeof window.migrarCadernoTaifeiroV135 === "function"){
+                window.migrarCadernoTaifeiroV135();
+            }
+        }, 0);
+    });
 })();
