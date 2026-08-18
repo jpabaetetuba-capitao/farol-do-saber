@@ -42454,10 +42454,20 @@ limparArenaLocalFarol = function(){
         if(primeiraQuestao && primeiraQuestao.eixo){
             return String(primeiraQuestao.eixo);
         }
-        if(/Autoridade Marítima|Águas Jurisdicionais Brasileiras|Fluxo de carreira|Caderneta de Inscrição e Registro|Causas de cancelamento e de apreensão da CIR|Tempo de embarque|Rol de equipagem/i.test(tituloTopicoAtualBancoTAA())){
-            return "Legislação Marítima e Ambiental";
+
+        if(estadoBancoTAA2026.eixoMenu === "portugues"){
+            return "Língua Portuguesa";
         }
-        return "Arquitetura Naval";
+
+        const eixoAtual = typeof obterEixoEditalV146 === "function"
+            ? obterEixoEditalV146(estadoBancoTAA2026.eixoMenu)
+            : null;
+
+        if(eixoAtual && eixoAtual.titulo){
+            return String(eixoAtual.titulo);
+        }
+
+        return "Conhecimentos Específicos";
     }
 
     function atualizarCabecalhoBancoTAA(titulo, subtitulo){
@@ -42506,22 +42516,20 @@ limparArenaLocalFarol = function(){
 
     function cardTopicoBancoTAA(topico, titulo, descricao){
         const total = questoesTopicoTAA(topico).length;
-
-        // O aluno vê apenas tópicos que já possuem conteúdo.
-        if(total <= 0 && !ehAdministradorAcessosFarol()){
-            return "";
-        }
+        const descricaoHTML = descricao
+            ? `<p>${escaparBancoTAA(descricao)}</p>`
+            : "";
 
         if(total <= 0){
             return `
                 <article class="card-topico-banco-taifeiro em-preparacao">
                     <div class="topo-card-topico-banco-taifeiro">
                         <span class="numero-topico-banco-taifeiro">${escaparBancoTAA(topico.split(" ")[0])}</span>
-                        <span class="status-topico-banco-taifeiro">🔧 Interno</span>
+                        <span class="status-topico-banco-taifeiro">Em breve</span>
                     </div>
                     <h3>${escaparBancoTAA(titulo)}</h3>
-                    <p>${escaparBancoTAA(descricao)}</p>
-                    <button type="button" disabled>Sem conteúdo publicado</button>
+                    ${descricaoHTML}
+                    <button type="button" disabled>Em breve</button>
                 </article>
             `;
         }
@@ -42533,7 +42541,7 @@ limparArenaLocalFarol = function(){
                     <span class="status-topico-banco-taifeiro">${total} questões</span>
                 </div>
                 <h3>${escaparBancoTAA(titulo)}</h3>
-                <p>${escaparBancoTAA(descricao)}</p>
+                ${descricaoHTML}
                 <button type="button" onclick="iniciarTopicoBancoTaifeiroFarol('${escaparBancoTAA(topico)}')">
                     ▶ Treinar
                 </button>
@@ -42617,6 +42625,18 @@ limparArenaLocalFarol = function(){
                 margin-top:4px;
                 color:#667;
                 font-size:12px;
+                white-space:nowrap;
+            }
+            .btn-eixo-banco-taifeiro.em-breve{
+                border-style:dashed;
+                background:rgba(250,250,250,.94);
+            }
+            .btn-eixo-banco-taifeiro.em-breve .eixo-total strong{
+                font-size:15px;
+                color:#7a6a35;
+                white-space:nowrap;
+            }
+            .status-topico-banco-taifeiro{
                 white-space:nowrap;
             }
             .btn-voltar-eixos-banco-taifeiro{
@@ -42748,6 +42768,88 @@ limparArenaLocalFarol = function(){
             .length;
     }
 
+
+    // ======================================================
+    // V146 — CONTEÚDO PROGRAMÁTICO INTEGRAL — EDITAL MAR 2026.1
+    // Todos os assuntos do edital ficam visíveis. Os que ainda
+    // não possuem questões aparecem como "Em breve".
+    // ======================================================
+    function criarEixoEditalV146(chave, titulo, icone, topicos){
+        return { chave, titulo, icone, topicos };
+    }
+
+    function eixosComunsBaseEditalV146(){
+        return [
+            criarEixoEditalV146("arquitetura", "Arquitetura Naval", "⚓", ["1.1 Identificação de corpos e partes da embarcação", "1.2 Dimensões lineares", "1.3 Estrutura básica da embarcação", "1.4 Principais compartimentos da embarcação", "1.5 Aberturas e acessórios"]),
+            criarEixoEditalV146("legislacao", "Legislação Marítima e Ambiental", "⚖️", ["1.1 Autoridade Marítima", "1.2 Águas Jurisdicionais Brasileiras", "2.1 Fluxo de carreira", "2.2 Caderneta de Inscrição e Registro – CIR", "2.3 Causas de cancelamento e de apreensão da CIR", "2.4 Tempo de embarque", "2.5 Rol de equipagem", "2.6 Atribuições do comandante e competência para aplicar penalidades", "2.7 Faltas disciplinares", "2.8 Atribuições dos marítimos", "2.9 Obrigações de trabalho e previdência social", "3.1 Cargas perigosas", "3.2 Medidas de segurança no manuseio de cargas perigosas", "3.3 Combate à poluição", "3.4 Transporte de óleo, substância nociva ou perigosa"]),
+            criarEixoEditalV146("protecao", "Conscientização sobre proteção de navio", "🛡️", ["1.1 Ameaças aos transportes marítimos", "1.2 Operações portuárias Portos/Navios", "2.1 Convenções internacionais, códigos e recomendações", "2.2.1 Legislação e regulamentos governamentais relevantes para os navios", "2.2.2 Legislação e regulamentos governamentais relevantes para os portos", "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima", "2.4 Manuseio de informações sigilosas relacionadas à proteção e comunicações", "3.1 Os governos contratantes", "3.2 As organizações de proteção reconhecidas (RSO)", "3.3 A Companhia", "3.4 Os navios", "3.5 As instalações portuárias", "3.6 O oficial de proteção do navio (SSO/OPN)", "3.7 O coordenador de proteção da Companhia (CSO/CPC)", "3.8 O funcionário de proteção de instalações portuárias/supervisor de segurança portuária (PFSO/SSP)", "3.9 Os tripulantes com tarefas relacionadas à proteção", "3.10 Pessoal das instalações portuárias com funções específicas de proteção", "4.1.1 Sistema de Alerta de Proteção do Navio (SSAS)", "4.1.2 Equipamentos de comunicação", "4.1.3 Sistema de iluminação", "4.2 Limitações operacionais de equipamentos e sistemas", "4.3 Testes, calibração e manutenção dos equipamentos e sistemas"])
+        ];
+    }
+
+    function estruturaEditalCargoTranspetroV146(){
+        const cfg = configBancoTranspetroV138();
+        const comuns = eixosComunsBaseEditalV146();
+
+        if(cfg.sigla === "ASA"){
+            return [
+                ...comuns,
+                criarEixoEditalV146("primeirosSocorros", "Conhecimentos Elementares de Primeiros Socorros", "🩹", ["1.1 Primeiros socorros", "1.2 Técnicas de primeiros socorros", "1.3 Omissão de socorro", "1.4 Latrogenia", "1.5 Perigos no local do acidente", "1.6 Medidas imediatas a serem tomadas em situação de emergência", "2.1 Sinais vitais em um acidentado", "2.2 Divisão do corpo humano", "2.3 Funções dos sistemas: esquelético, muscular, nervoso, respiratório, circulatório, reprodutor, endócrino, sensorial e tegumentar", "3. Posição do acidentado", "4. Posição do acidentado inconsciente", "5.1 Parada cardiorrespiratória", "5.2 Sintomas de uma parada cardiorrespiratória", "5.3 Procedimentos para desobstrução das vias aéreas", "5.4 Esquema da ressuscitação cardiorrespiratória básica", "6.1 Tipos de hemorragia, sintomas e primeiros socorros", "6.2 Feridas e primeiros socorros", "7. Tratamento dos estados de choque", "8. Queimaduras e acidentes causados por choque elétrico", "9. Resgate e transporte da vítima", "10. Contusões e escoriações, luxação, entorse e fratura, técnicas para imobilização"]),
+                criarEixoEditalV146("saudeDoenca", "Processo Saúde-Doença", "🩺", ["1. Relação saúde-doença", "2. Organização dos Serviços de Saúde", "3. Educação para Saúde: Atenção a grupos de gestantes; mães; escolares; hipertensos", "4.1 Água - abastecimento, tratamento, distribuição", "4.2 Lixo - destino", "4.3 Dejetos - destino", "4.4 Controle de insetos e roedores", "5.1 Doenças transmissíveis não imunizáveis e parasitárias", "5.2 Doenças sexualmente transmissíveis; doenças transmissíveis imunizáveis", "5.3 Imunização: cadeia de frio; indicação e contraindicação das vacinas; técnica de aplicação das vacinas", "5.4 Calendário", "6.1 Conceito", "6.2 Métodos de esterilização", "6.3 Técnica de preparo do material a ser esterilizado", "6.4 Manuseio do material esterilizado"]),
+                criarEixoEditalV146("sobrevivencia", "Técnicas de Sobrevivência Pessoal", "🛟", ["1.1 Fundamentos da sobrevivência no mar", "1.2 Tabela mestra", "2. Equipamentos individuais de salvatagem", "3. Embarcações de sobrevivência e de salvamento", "4. Equipamentos de comunicação e sinalização de emergência", "5. Postos de reunião e de abandono nas embarcações salva-vidas", "6. Evacuação e abandono por helicóptero e por mar"]),
+                criarEixoEditalV146("segurancaTrabalho", "Segurança no Trabalho", "🦺", ["1.1 Segurança do trabalho", "1.2 Conceito", "1.3 Trabalho em compartimentos e espaços confinados", "1.4 Ergonomia, técnicas para levantar peso (NR 17)", "1.5 Segurança e Saúde no Trabalho em Serviços de Saúde – NR 32", "1.6 Acidente do trabalho: conceito técnico e legal; causas e consequências dos acidentes; equiparações de acidente do trabalho; Comunicação de Acidente do Trabalho (CAT)", "1.7 Riscos ambientais e profissionais: riscos físicos, químicos e biológicos", "1.8 Avaliação e Controle das Exposições Ocupacionais a Agentes Físicos, Químicos e Biológicos – NR 9", "1.9 Saúde como fator de segurança", "2.1 Consolidação das Leis do Trabalho (C.L.T): capítulo V – Título II", "2.2 Disposições Gerais e Gerenciamento de Riscos Ocupacionais – NR 1", "2.3 Equipamento de Proteção Individual (EPI) - NR 6", "2.4 Programa de Controle Médico de Saúde Ocupacional – NR 7", "2.5 Segurança e saúde nos trabalhos em espaços confinados (NR 33)", "2.6 Programa de Controle Médico de Saúde Ocupacional – NR 7", "2.7 Comissão Interna de Prevenção de Acidentes e de Assédio (CIPA) - NR 5", "2.8 Segurança e Saúde no trabalho Aquaviário (NR 30)"]),
+                criarEixoEditalV146("poluicaoAquaviaria", "Prevenção e Controle da Poluição do Meio Ambiente Aquaviário", "🌊", ["1.1 Poluição e seus tipos", "1.2 Principais agentes poluidores", "1.3 Precauções a serem observadas na prevenção e atuação dos órgãos responsáveis pela política ambiental", "1.4 Precauções a serem tomadas para prevenir a poluição do meio ambiente marinho"]),
+                criarEixoEditalV146("emergencias", "Procedimentos de Emergências", "🚨", ["1.1 Responsabilidade, organização, administração e a prática da segurança", "1.2 Riscos profissionais", "1.3 Manutenção da higiene a bordo", "2.1 Treinamentos realizados a bordo", "2.2 Exercícios e fainas de emergência", "2.3 Contenção e derrame de óleo"]),
+                criarEixoEditalV146("relacoes", "Relações Interpessoais e Responsabilidades Sociais", "🤝", ["1.1 Características da boa comunicação no ambiente de trabalho", "1.2 Ações preventivas para um bom relacionamento no trabalho", "1.3 Relacionamento humano a bordo do navio", "1.4 Reconhecendo e mitigando preconceitos no ambiente de trabalho", "2.1 Cooperação e competição", "2.2 Competências individuais e desenvolvimento de uma equipe de trabalho", "2.3 Avaliação de desempenho de pessoas e equipes de trabalho", "3.1 Conceito", "3.2 Distinção entre liderança e chefia", "3.3 A importância do líder na motivação de sua equipe", "3.4 Valores e competências do líder", "3.5 Aspectos fundamentais da liderança"]),
+                criarEixoEditalV146("incendio", "Prevenção e Combate a Incêndio", "🔥", ["1.1 Vigilância e proteção", "1.2 Meios de transmissão do fogo", "1.3 Ações a bordo em caso de incêndio", "1.4 Classificação dos incêndios e utilização dos agentes extintores", "2.1 Instalações fixas de combate a incêndio", "2.2 Roupa de bombeiro", "2.3 Proteção pessoal", "2.4 Máscaras e aparelhos de respiração", "2.5 Dispositivos e equipamentos de combate a incêndio: sistema fixo e móvel", "2.6 Métodos de combate a incêndio", "2.7 Agentes de combate a incêndio, brigadas de incêndio", "2.8 Procedimentos para combate a incêndio", "2.9 Aparelhos de respiração autônomos para combate a incêndio e resgates"])
+            ];
+        }
+
+        if(cfg.sigla === "CZA"){
+            return [
+                ...comuns,
+                criarEixoEditalV146("primeirosSocorros", "Conhecimentos Elementares de Primeiros Socorros", "🩹", ["1.1 Primeiros socorros", "1.2 Técnicas de primeiros socorros", "1.3 Omissão de socorro", "1.4 Perigos no local do acidente", "1.5 Medidas imediatas a serem tomadas em situação de emergência", "2.1 Sinais vitais em um acidentado: respiração, pulsação e temperatura", "3.1 Transporte seguro de um acidentado"]),
+                criarEixoEditalV146("sobrevivencia", "Técnicas de Sobrevivência Pessoal", "🛟", ["1.1 Fundamentos da sobrevivência no mar", "1.2 Tabela mestra", "2. Equipamentos individuais de salvatagem", "3. Embarcações de sobrevivência e de salvamento", "4. Equipamentos de comunicação e sinalização de emergência", "5. Postos de reunião e de abandono nas embarcações salva-vidas", "6. Evacuação e abandono por helicóptero e por mar"]),
+                criarEixoEditalV146("boasPraticas", "Boas Práticas para Serviços de Alimentação", "🍽️", ["1. Ações de controle sanitário na área de alimentos; requisitos higiênico-sanitários gerais para serviços de alimentação", "2. Controle de qualidade dos alimentos nas etapas de armazenamento, manipulação e preparação", "3. Higienização de instalações, equipamentos e utensílios", "4. Manejo dos resíduos", "5. Técnicas de pré-preparo e preparo para alimentos de origem animal e vegetal"]),
+                criarEixoEditalV146("segurancaTrabalho", "Segurança no Trabalho", "🦺", ["1.1 Segurança do trabalho", "1.2 Conceito", "1.3 Trabalho em compartimentos e espaços confinados", "1.4 Ergonomia (NR 17)", "1.5 Acidente do trabalho: conceito técnico e legal; causas e consequências dos acidentes; equiparações de acidente do trabalho; Comunicação de Acidente do Trabalho (CAT)", "1.6 Riscos ambientais e profissionais: riscos físicos, químicos e biológicos", "2.1 Equipamento de Proteção Individual (EPI) - NR 6", "2.2 Segurança e saúde nos trabalhos em espaços confinados (NR 33)", "2.3 Comissão Interna de Prevenção de Acidentes e de Assédio (CIPA) - NR 5", "2.4 Segurança e Saúde no trabalho aquaviário - NR 30"]),
+                criarEixoEditalV146("poluicaoAquaviaria", "Prevenção e Controle da Poluição do Meio Ambiente Aquaviário", "🌊", ["1.1 Poluição e seus tipos", "1.2 Principais agentes poluidores", "1.3 Precauções a serem observadas na prevenção e atuação dos órgãos responsáveis pela política ambiental", "1.4 Precauções a serem tomadas para prevenir a poluição do meio ambiente marinho"]),
+                criarEixoEditalV146("emergencias", "Procedimentos de Emergências", "🚨", ["1.1 Responsabilidade, organização, administração e a prática da segurança", "1.2 Riscos profissionais", "1.3 Manutenção da higiene a bordo", "2.1 Treinamentos realizados a bordo", "2.2 Exercícios e fainas de emergência", "2.3 Contenção e derrame de óleo"]),
+                criarEixoEditalV146("relacoes", "Relações Interpessoais e Responsabilidades Sociais", "🤝", ["1.1 Características da boa comunicação no ambiente de trabalho", "1.2 Ações preventivas para um bom relacionamento no trabalho", "1.3 Relacionamento humano a bordo do navio", "1.4 Reconhecendo e mitigando preconceitos no ambiente de trabalho", "2.1 Cooperação e competição", "2.2 Competências individuais e desenvolvimento de uma equipe de trabalho", "2.3 Avaliação de desempenho de pessoas e equipes de trabalho", "3.1 Conceito", "3.2 Distinção entre liderança e chefia", "3.3 A importância do líder na motivação de sua equipe", "3.4 Valores e competências do líder", "3.5 Aspectos fundamentais da liderança"]),
+                criarEixoEditalV146("incendio", "Prevenção e Combate a Incêndio", "🔥", ["1.1 Vigilância e proteção", "1.2 Meios de transmissão do fogo", "1.3 Ações a bordo em caso de incêndio", "1.4 Classificação dos incêndios e utilização dos agentes extintores", "2.1 Instalações fixas de combate a incêndio", "2.2 Roupa de bombeiro", "2.3 Proteção pessoal", "2.4 Máscaras e aparelhos de respiração", "2.5 Dispositivos e equipamentos de combate a incêndio: sistema fixo e móvel", "2.6 Métodos de combate a incêndio", "2.7 Agentes de combate a incêndio, brigadas de incêndio", "2.8 Procedimentos para combate a incêndio", "2.9 Aparelhos de respiração autônomos para combate a incêndio e resgates"])
+            ];
+        }
+
+        return [
+            ...comuns,
+            criarEixoEditalV146("primeirosSocorros", "Conhecimentos Elementares de Primeiros Socorros", "🩹", ["1.1 Primeiros socorros", "1.2 Técnicas de primeiros socorros", "1.3 Omissão de socorro", "1.4 Perigos no local do acidente", "1.5 Medidas imediatas a serem tomadas em situação de emergência", "2.1 Sinais vitais em um acidentado: respiração, pulsação e temperatura", "3.1 Transporte seguro de um acidentado"]),
+            criarEixoEditalV146("sobrevivencia", "Técnicas de Sobrevivência Pessoal", "🛟", ["1.1 Fundamentos da sobrevivência no mar", "1.2 Tabela mestra", "2. Equipamentos individuais de salvatagem", "3. Embarcações de sobrevivência e de salvamento", "4. Equipamentos de comunicação e sinalização de emergência", "5. Postos de reunião e de abandono nas embarcações salva-vidas", "6. Evacuação e abandono por helicóptero e por mar"]),
+            criarEixoEditalV146("segurancaTrabalho", "Segurança no Trabalho", "🦺", ["1.1 Segurança do trabalho", "1.2 Conceito", "1.3 Trabalho em compartimentos e espaços confinados", "1.4 Ergonomia (NR 17)", "1.5 Acidente do trabalho: conceito técnico e legal; causas e consequências dos acidentes; equiparações de acidente do trabalho; Comunicação de Acidente do Trabalho (CAT)", "1.6 Riscos ambientais e profissionais: riscos físicos, químicos e biológicos", "2.1 Equipamento de Proteção Individual (EPI) - NR 6", "2.2 Segurança e saúde nos trabalhos em espaços confinados (NR 33)", "2.3 Comissão Interna de Prevenção de Acidentes e de Assédio (CIPA) - NR 5", "2.4 Segurança e Saúde no trabalho aquaviário - NR 30"]),
+            criarEixoEditalV146("poluicaoAquaviaria", "Prevenção e Controle da Poluição do Meio Ambiente Aquaviário", "🌊", ["1.1 Poluição e seus tipos", "1.2 Principais agentes poluidores", "1.3 Precauções a serem observadas na prevenção e atuação dos órgãos responsáveis pela política ambiental", "1.4 Precauções a serem tomadas para prevenir a poluição do meio ambiente marinho"]),
+            criarEixoEditalV146("emergencias", "Procedimentos de Emergências", "🚨", ["1.1 Responsabilidade, organização, administração e a prática da segurança", "1.2 Riscos profissionais", "1.3 Manutenção da higiene a bordo", "2.1 Treinamentos realizados a bordo", "2.2 Exercícios e fainas de emergência", "2.3 Contenção e derrame de óleo"]),
+            criarEixoEditalV146("relacoes", "Relações Interpessoais e Responsabilidades Sociais", "🤝", ["1.1 Características da boa comunicação no ambiente de trabalho", "1.2 Ações preventivas para um bom relacionamento no trabalho", "1.3 Relacionamento humano a bordo do navio", "1.4 Reconhecendo e mitigando preconceitos no ambiente de trabalho", "2.1 Cooperação e competição", "2.2 Competências individuais e desenvolvimento de uma equipe de trabalho", "2.3 Avaliação de desempenho de pessoas e equipes de trabalho", "3.1 Conceito", "3.2 Distinção entre liderança e chefia", "3.3 A importância do líder na motivação de sua equipe", "3.4 Valores e competências do líder", "3.5 Aspectos fundamentais da liderança"]),
+            criarEixoEditalV146("incendio", "Prevenção e Combate a Incêndio", "🔥", ["1.1 Vigilância e proteção", "1.2 Meios de transmissão do fogo", "1.3 Ações a bordo em caso de incêndio", "1.4 Classificação dos incêndios e utilização dos agentes extintores", "2.1 Instalações fixas de combate a incêndio", "2.2 Roupa de bombeiro", "2.3 Proteção pessoal", "2.4 Máscaras e aparelhos de respiração", "2.5 Dispositivos e equipamentos de combate a incêndio: sistema fixo e móvel", "2.6 Métodos de combate a incêndio", "2.7 Agentes de combate a incêndio, brigadas de incêndio", "2.8 Procedimentos para combate a incêndio", "2.9 Aparelhos de respiração autônomos para combate a incêndio e resgates"])
+        ];
+    }
+
+    function obterEixoEditalV146(chave){
+        return estruturaEditalCargoTranspetroV146()
+            .find(eixo => eixo.chave === String(chave || "")) || null;
+    }
+
+    function quantidadeQuestoesTopicosV146(topicos){
+        return (Array.isArray(topicos) ? topicos : [])
+            .reduce((soma, topico) => soma + questoesTopicoTAA(topico).length, 0);
+    }
+
+    function quantidadeTopicosDisponiveisV146(topicos){
+        return (Array.isArray(topicos) ? topicos : [])
+            .filter(topico => questoesTopicoTAA(topico).length > 0)
+            .length;
+    }
+
+    function descricaoTopicoEditalV146(topico){
+        return `Conteúdo previsto no edital: ${String(topico || "").replace(/^\d+(?:\.\d+)*\.?\s*/, "")}.`;
+    }
+
     function renderizarMenuBancoTAA(){
         estadoBancoTAA2026.modo = "menu";
         estadoBancoTAA2026.topico = "";
@@ -42758,70 +42860,86 @@ limparArenaLocalFarol = function(){
         const area = elBancoTAA("conteudoBancoQuestoesTaifeiro");
         if(!area) return;
 
-        const totalArquitetura = totalArquiteturaBancoTAA();
-        const totalLegislacao = totalLegislacaoBancoTAA();
-        const totalProtecaoNavio = totalProtecaoNavioBancoTAA();
-        const totalPortugues = totalPortuguesBancoTAA();
-        const topicosPortuguesLiberados = totalTopicosPortuguesLiberadosTAA();
+        const cfg = configBancoTranspetroV138();
+        const estrutura = estruturaEditalCargoTranspetroV146();
+        const topicosPortugues = ["1. Compreensão de textos de gêneros variados", "2. Ortografia oficial", "3. Mecanismos de coesão textual", "4. Emprego das classes de palavras", "5. Concordância nominal e verbal", "6. Emprego do sinal indicativo de crase", "7. Sinais de pontuação", "8. Significação das palavras"];
 
-        // NÍVEL 1 — mostra somente as disciplinas/eixos.
-        if(!["arquitetura", "legislacao", "protecao", "portugues"].includes(estadoBancoTAA2026.eixoMenu)){
+        // Português continua com os 8 itens comuns previstos no edital.
+        if(estadoBancoTAA2026.eixoMenu === "portugues"){
+            const totalPortugues = quantidadeQuestoesTopicosV146(topicosPortugues);
+            const disponiveisPortugues = quantidadeTopicosDisponiveisV146(topicosPortugues);
+
             atualizarCabecalhoBancoTAA(
-                estadoBancoTAA2026.origem === "especificas"
-                    ? `Conhecimentos Específicos — ${configBancoTranspetroV138().nome} 2026`
-                    : "Banco de Questões 2026",
-                "Escolha uma disciplina para visualizar seus tópicos."
+                "Língua Portuguesa",
+                `${disponiveisPortugues} de ${topicosPortugues.length} assuntos disponíveis • ${totalPortugues} questões`
             );
 
             area.innerHTML = `
-                <div class="seletor-eixos-banco-taifeiro" aria-label="Disciplinas do Banco de Questões 2026">
-                    <button type="button"
-                        class="btn-eixo-banco-taifeiro"
-                        onclick="selecionarEixoBancoTaifeiroFarol('arquitetura')">
-                        <span class="eixo-info">
-                            <span class="eixo-icone">⚓</span>
-                            <span class="eixo-textos">
-                                <strong>Arquitetura Naval</strong>
-                                <small>5 tópicos</small>
-                            </span>
-                        </span>
-                        <span class="eixo-total">
-                            <strong>${totalArquitetura}</strong>
-                            <small>questões</small>
-                        </span>
-                    </button>
+                <button type="button"
+                    class="btn-voltar-eixos-banco-taifeiro"
+                    onclick="${estadoBancoTAA2026.origem === "portugues" ? "voltarBancoQuestoesTaifeiroFarol()" : "voltarEixosBancoTaifeiroFarol()"}">
+                    ${estadoBancoTAA2026.origem === "portugues" ? "← Voltar ao menu do cargo" : "← Voltar às disciplinas"}
+                </button>
 
-                    <button type="button"
-                        class="btn-eixo-banco-taifeiro"
-                        onclick="selecionarEixoBancoTaifeiroFarol('legislacao')">
-                        <span class="eixo-info">
-                            <span class="eixo-icone">⚖️</span>
-                            <span class="eixo-textos">
-                                <strong>Legislação Marítima e Ambiental</strong>
-                                <small>15 tópicos</small>
-                            </span>
-                        </span>
-                        <span class="eixo-total">
-                            <strong>${totalLegislacao}</strong>
-                            <small>questões</small>
-                        </span>
-                    </button>
+                <div class="grade-topicos-banco-taifeiro">
+                    ${topicosPortugues.map(topico =>
+                        cardTopicoBancoTAA(
+                            topico,
+                            topico,
+                            descricaoTopicoEditalV146(topico)
+                        )
+                    ).join("")}
+                </div>
+            `;
 
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            return;
+        }
+
+        // NÍVEL 1 — todas as disciplinas do conteúdo programático ficam visíveis.
+        const eixoAtual = obterEixoEditalV146(estadoBancoTAA2026.eixoMenu);
+
+        if(!eixoAtual){
+            atualizarCabecalhoBancoTAA(
+                estadoBancoTAA2026.origem === "especificas"
+                    ? `Conhecimentos Específicos — ${cfg.nome} 2026`
+                    : "Banco de Questões 2026",
+                "Conteúdo programático do edital. Assuntos sem questões aparecem como Em breve."
+            );
+
+            const botoesEspecificos = estrutura.map(eixo => {
+                const totalQuestoes = quantidadeQuestoesTopicosV146(eixo.topicos);
+                const disponiveis = quantidadeTopicosDisponiveisV146(eixo.topicos);
+                const classeEmBreve = totalQuestoes <= 0 ? " em-breve" : "";
+
+                return `
                     <button type="button"
-                        class="btn-eixo-banco-taifeiro"
-                        onclick="selecionarEixoBancoTaifeiroFarol('protecao')">
+                        class="btn-eixo-banco-taifeiro${classeEmBreve}"
+                        onclick="selecionarEixoBancoTaifeiroFarol('${escaparBancoTAA(eixo.chave)}')">
                         <span class="eixo-info">
-                            <span class="eixo-icone">🛡️</span>
+                            <span class="eixo-icone">${eixo.icone}</span>
                             <span class="eixo-textos">
-                                <strong>Conscientização sobre proteção de navio</strong>
-                                <small>7 tópicos</small>
+                                <strong>${escaparBancoTAA(eixo.titulo)}</strong>
+                                <small>${eixo.topicos.length} assuntos do edital</small>
                             </span>
                         </span>
                         <span class="eixo-total">
-                            <strong>${totalProtecaoNavio}</strong>
-                            <small>questões</small>
+                            ${
+                                totalQuestoes > 0
+                                    ? `<strong>${totalQuestoes}</strong><small>${disponiveis}/${eixo.topicos.length} assuntos</small>`
+                                    : `<strong>Em breve</strong><small>${eixo.topicos.length} assuntos</small>`
+                            }
                         </span>
                     </button>
+                `;
+            }).join("");
+
+            const totalPortugues = quantidadeQuestoesTopicosV146(topicosPortugues);
+            const disponiveisPortugues = quantidadeTopicosDisponiveisV146(topicosPortugues);
+
+            area.innerHTML = `
+                <div class="seletor-eixos-banco-taifeiro" aria-label="Conteúdo programático do edital 2026">
+                    ${botoesEspecificos}
 
                     ${estadoBancoTAA2026.origem !== "especificas" ? `
                     <button type="button"
@@ -42831,12 +42949,12 @@ limparArenaLocalFarol = function(){
                             <span class="eixo-icone">📘</span>
                             <span class="eixo-textos">
                                 <strong>Língua Portuguesa</strong>
-                                <small>${topicosPortuguesLiberados} tópicos</small>
+                                <small>8 assuntos do edital</small>
                             </span>
                         </span>
                         <span class="eixo-total">
                             <strong>${totalPortugues}</strong>
-                            <small>questões</small>
+                            <small>${disponiveisPortugues}/8 assuntos</small>
                         </span>
                     </button>
                     ` : ""}
@@ -42847,30 +42965,18 @@ limparArenaLocalFarol = function(){
             return;
         }
 
-        // NÍVEL 2 — depois do clique, mostra somente os subtópicos da disciplina escolhida.
-        const arquiteturaAtiva = estadoBancoTAA2026.eixoMenu === "arquitetura";
-        const legislacaoAtiva = estadoBancoTAA2026.eixoMenu === "legislacao";
-        const protecaoAtiva = estadoBancoTAA2026.eixoMenu === "protecao";
-        const portuguesAtivo = estadoBancoTAA2026.eixoMenu === "portugues";
+        // NÍVEL 2 — todos os assuntos do eixo escolhido, inclusive os "Em breve".
+        const totalQuestoesEixo = quantidadeQuestoesTopicosV146(eixoAtual.topicos);
+        const disponiveisEixo = quantidadeTopicosDisponiveisV146(eixoAtual.topicos);
 
         atualizarCabecalhoBancoTAA(
-            arquiteturaAtiva
-                ? "Arquitetura Naval"
-                : legislacaoAtiva
-                    ? "Legislação Marítima e Ambiental"
-                    : protecaoAtiva
-                        ? "Conscientização sobre proteção de navio"
-                        : "Língua Portuguesa",
-            arquiteturaAtiva
-                ? `5 tópicos • ${totalArquitetura} questões`
-                : legislacaoAtiva
-                    ? `15 tópicos • ${totalLegislacao} questões`
-                    : protecaoAtiva
-                        ? `7 tópicos • ${totalProtecaoNavio} questões`
-                        : `${topicosPortuguesLiberados} tópicos • ${totalPortugues} questões`
+            eixoAtual.titulo,
+            totalQuestoesEixo > 0
+                ? `${disponiveisEixo} de ${eixoAtual.topicos.length} assuntos disponíveis • ${totalQuestoesEixo} questões`
+                : `${eixoAtual.topicos.length} assuntos previstos no edital • Em breve`
         );
 
-        const arquitetura = `
+        area.innerHTML = `
             <button type="button"
                 class="btn-voltar-eixos-banco-taifeiro"
                 onclick="voltarEixosBancoTaifeiroFarol()">
@@ -42878,208 +42984,16 @@ limparArenaLocalFarol = function(){
             </button>
 
             <div class="grade-topicos-banco-taifeiro">
-                ${cardTopicoBancoTAA(
-                    "1.1 Identificação de corpos e partes da embarcação",
-                    "1.1 Identificação de corpos e partes da embarcação",
-                    "Bombordo, boreste, bochecha, alheta, meia-nau, costado, obras vivas e referências de vante e ré."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "1.2 Dimensões lineares",
-                    "1.2 Dimensões lineares",
-                    "Comprimentos, boca, pontal, calado, borda livre, relações entre dimensões, cálculos e identificação visual."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "1.3 Estrutura básica da embarcação",
-                    "1.3 Estrutura básica da embarcação",
-                    "Quilha, cavernas, vaus, longarinas, sicordas, trincaniz, pés-de-carneiro, chapeamento e anteparas."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "1.4 Principais compartimentos da embarcação",
-                    "1.4 Principais compartimentos da embarcação",
-                    "Passadiço, tijupá, praça de máquinas, porões, tanques, paióis e outros compartimentos."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "1.5 Aberturas e acessórios",
-                    "1.5 Aberturas e acessórios",
-                    "Escotilhas, escotilhões, vigias, portalós, embornais, portas estanques e acessórios."
-                )}
+                ${eixoAtual.topicos.map(topico =>
+                    cardTopicoBancoTAA(
+                        topico,
+                        topico,
+                        descricaoTopicoEditalV146(topico)
+                    )
+                ).join("")}
             </div>
         `;
 
-        const legislacao = `
-            <button type="button"
-                class="btn-voltar-eixos-banco-taifeiro"
-                onclick="voltarEixosBancoTaifeiroFarol()">
-                ← Voltar às disciplinas
-            </button>
-
-            <div class="grade-topicos-banco-taifeiro">
-                ${cardTopicoBancoTAA(
-                    "1.1 Autoridade Marítima",
-                    "1.1 Autoridade Marítima",
-                    "LESTA, RLESTA, estrutura da Autoridade Marítima, representantes, agentes, competências, inspeção naval, vistorias, segurança e situações práticas."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "1.2 Águas Jurisdicionais Brasileiras",
-                    "1.2 Águas Jurisdicionais Brasileiras",
-                    "Mar territorial, zona contígua, ZEE, plataforma continental e demais limites e regimes jurídicos."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "2.1 Fluxo de carreira",
-                    "2.1 Fluxo de carreira dos Aquaviários",
-                    "Ingresso, grupos, seções, categorias, ascensão, transferência de categoria, equivalência e Licença de Categoria/Capacidade Superior, conforme a NORMAM-101/DPC vigente."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "2.2 Caderneta de Inscrição e Registro – CIR",
-                    "2.2 Caderneta de Inscrição e Registro — CIR",
-                    "Finalidade da CIR, inscrição inicial, emissão, Etiqueta de Dados Pessoais, registros profissionais, revalidação, segunda via e término de espaço, conforme a NORMAM-101/DPC vigente."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "2.3 Causas de cancelamento e de apreensão da CIR",
-                    "2.3 Causas de cancelamento e de apreensão da CIR",
-                    "Suspensão e cancelamento da inscrição, hipóteses atuais da NORMAM-101/DPC, falsidade documental, apreensão com fundamento legal, sindicância, procedimento administrativo e registro no SISAQUA."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "2.4 Tempo de embarque",
-                    "2.4 Tempo de embarque",
-                    "Cômputo e comprovação do tempo de embarque, Anexo 1-S, conferência com a CIR, análise qualitativa, CTS, embarques em mais de uma empresa, empresa encerrada e navios de bandeira estrangeira."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "2.5 Rol de equipagem",
-                    "2.5 Rol de equipagem",
-                    "Finalidade e modelo DPC-2303, composição da equipagem, embarque e desembarque, responsabilidade do Comandante, guarda, homologação, renovação, extravio e distinção entre Rol de Equipagem, Rol Portuário e CIR."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "2.6 Atribuições do comandante e competência para aplicar penalidades",
-                    "2.6 Atribuições do comandante e competência para aplicar penalidades",
-                    "Deveres legais do Comandante, segurança e disciplina a bordo, poderes previstos na LESTA, penalidades da competência do Comandante, garantias do procedimento disciplinar, registros, comunicações e recurso."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "2.7 Faltas disciplinares",
-                    "2.7 Faltas disciplinares",
-                    "As dez faltas disciplinares do item 4.21 da NORMAM-101/DPC: hierarquia e ordens, recusa de serviço, embriaguez, horário, abandono de posto, licença, negligência, conflitos, moralidade/honestidade/disciplina/limpeza e cumprimento da Lei e das Normas."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "2.8 Atribuições dos marítimos",
-                    "2.8 Atribuições dos marítimos",
-                    "Atribuições dos marítimos e preceitos comuns aos tripulantes. Questões diretamente ligadas às funções específicas do cargo são tratadas de forma própria, sem troca automática entre categorias."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "2.9 Obrigações de trabalho e previdência social",
-                    "2.9 Obrigações de trabalho e previdência social",
-                    "Trabalho marítimo, jornada e descanso, remuneração, férias e repatriação; acidente do trabalho, CAT, doenças ocupacionais e previdência, com aposentadoria especial atualizada para a legislação e jurisprudência vigentes em 2026."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "3.1 Cargas perigosas",
-                    "3.1 Cargas perigosas",
-                    "IMDG Code, classificação das nove classes e divisões, Número ONU, Proper Shipping Name, riscos subsidiários, grupos de embalagem, identificação, marcação e documentação de mercadorias perigosas."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "3.2 Medidas de segurança no manuseio de cargas perigosas",
-                    "3.2 Medidas de segurança no manuseio de cargas perigosas",
-                    "Ficha de segurança, capacitação, EPI, permissão de trabalho, fontes de ignição, medidas específicas por classe, segregação, armazenamento, ventilação, refrigeração e resposta a emergências."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "3.3 Combate à poluição",
-                    "3.3 Combate à poluição",
-                    "MARPOL, Lei nº 9.966/2000, NORMAM-401/DPC, prevenção e resposta a derramamentos, PEI, Plano de Área, SOPEP/SMPEP, comunicação de incidentes e Plano Nacional de Contingência."
-                )}
-
-                ${cardTopicoBancoTAA(
-                    "3.4 Transporte de óleo, substância nociva ou perigosa",
-                    "3.4 Transporte de óleo, substância nociva ou perigosa",
-                    "Lei nº 9.966/2000, transporte a granel e fracionado, livros e documentos de bordo, MARPOL Anexos I e II, Oil Record Book, IOPP, OWS/ODME, categorias X/Y/Z/OS e IBC/BCH."
-                )}
-            </div>
-        `;
-
-        const protecao = `
-            <button type="button"
-                class="btn-voltar-eixos-banco-taifeiro"
-                onclick="voltarEixosBancoTaifeiroFarol()">
-                ← Voltar às disciplinas
-            </button>
-
-            <div class="grade-topicos-banco-taifeiro">
-                ${cardTopicoBancoTAA(
-                    "1.1 Ameaças aos transportes marítimos",
-                    "1.1 Ameaças aos transportes marítimos",
-                    "Ameaças intencionais à proteção marítima: sabotagem, acesso não autorizado, tomada ilícita do navio, explosivos, terrorismo, pirataria e roubo armado, contrabando, clandestinos, ameaça interna, objetos suspeitos e exploração da cadeia logística."
-                )}
-                ${cardTopicoBancoTAA(
-                    "1.2 Operações portuárias Portos/Navios",
-                    "1.2 Operações portuárias Portos/Navios",
-                    "Interface navio/porto, movimentação de pessoas e mercadorias, serviços portuários, controle de acesso, áreas restritas, monitoramento, carga, provisões, bagagem desacompanhada, embarque de pessoas e comunicações de proteção."
-                )}
-                ${cardTopicoBancoTAA(
-                    "2.1 Convenções internacionais, códigos e recomendações",
-                    "2.1 Convenções internacionais, códigos e recomendações",
-                    "SOLAS capítulo XI-2, ISPS Code, partes obrigatória e recomendatória, gerenciamento de risco, âmbito de aplicação, STCW Regra VI/6 e SUA Convention, no nível de cobrança observado pela Cesgranrio."
-                )}
-                ${cardTopicoBancoTAA(
-                    "2.2.1 Legislação e regulamentos governamentais relevantes para os navios",
-                    "2.2.1 Legislação e regulamentos governamentais relevantes para os navios",
-                    "SOLAS XI-2 e ISPS aplicados aos navios, ISSC, SSAS, níveis de proteção, autoridade do Comandante, controle pelo Estado do porto e NORMAM atuais relacionadas à fiscalização e às embarcações."
-                )}
-                ${cardTopicoBancoTAA(
-                    "2.2.2 Legislação e regulamentos governamentais relevantes para os portos",
-                    "2.2.2 Legislação e regulamentos governamentais relevantes para os portos",
-                    "CONPORTOS e CESPORTOS, Resolução nº 53/2020, EAR, PSP, Declaração de Cumprimento, Declaração de Proteção, níveis de proteção e regras atuais de incidência do Código ISPS."
-                )}
-                ${cardTopicoBancoTAA(
-                    "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima",
-                    "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima",
-                    "IMO, ISPS, SOLAS, GISIS, SSO/OPN, CSO/CPC, PFSO/SSP, RSO, SSAS, ISSC, CONPORTOS, CESPORTOS, EAR, PSP, DC, ROIP, NAPV, CFTV e definições portuárias fundamentais."
-                )}
-                ${cardTopicoBancoTAA(
-                    "2.4 Manuseio de informações sigilosas relacionadas à proteção e comunicações",
-                    "2.4 Manuseio de informações sigilosas relacionadas à proteção e comunicações",
-                    "Necessidade de conhecimento, proteção de documentos e dados, acesso autorizado, armazenamento, segurança digital, comunicação navio-porto, mudanças de nível e relato de preocupações de proteção."
-                )}
-            </div>
-        `;
-
-        const portugues = `
-            <button type="button"
-                class="btn-voltar-eixos-banco-taifeiro"
-                onclick="${estadoBancoTAA2026.origem === "portugues" ? "voltarBancoQuestoesTaifeiroFarol()" : "voltarEixosBancoTaifeiroFarol()"}">
-                ${estadoBancoTAA2026.origem === "portugues" ? "← Voltar ao menu do cargo" : "← Voltar às disciplinas"}
-            </button>
-
-            <div class="grade-topicos-banco-taifeiro">
-                ${cardTopicoBancoTAA(
-                    "1. Compreensão de textos de gêneros variados",
-                    "1. Compreensão de textos de gêneros variados",
-                    "Informação explícita, ideia global, organização textual, causa e consequência, inferência, finalidade, função de trechos e leitura de gêneros variados no padrão Cesgranrio."
-                )}
-                ${cardTopicoBancoTAA("2. Ortografia oficial", "2. Ortografia oficial", "Grafia oficial, acentuação, hífen, porquês e distinções ortográficas em contextos de prova, conforme a norma vigente.")}
-                ${cardTopicoBancoTAA("3. Mecanismos de coesão textual", "3. Mecanismos de coesão textual", "Coesão referencial e lexical, anáfora e catáfora, elipse/zeugma, retomadas e conectores de causa, consequência, concessão, oposição, condição, conclusão, finalidade, tempo, adição e reformulação no padrão Cesgranrio.")}
-                ${cardTopicoBancoTAA("4. Emprego das classes de palavras", "4. Emprego das classes de palavras", "Artigo, substantivo, adjetivo, numeral, pronome, verbo, advérbio, preposição, conjunção e interjeição em emprego contextual, mudança de classe, alcance e efeitos de sentido no padrão Cesgranrio.")}
-                ${cardTopicoBancoTAA("5. Concordância nominal e verbal", "5. Concordância nominal e verbal", "Concordância nominal e verbal em construções contextualizadas: núcleos compostos, formas variáveis e invariáveis, verbos impessoais, sujeito distante, se apassivador e casos especiais no padrão Cesgranrio.")}
-                ${cardTopicoBancoTAA("6. Emprego do sinal indicativo de crase", "6. Emprego do sinal indicativo de crase", "Crase em regência, locuções, horas, pronomes, topônimos, casos proibidos e facultativos, com foco no padrão Cesgranrio.")}
-                ${cardTopicoBancoTAA("7. Sinais de pontuação", "7. Sinais de pontuação", "Funções sintáticas e efeitos de sentido dos sinais de pontuação.")}
-                ${cardTopicoBancoTAA("8. Significação das palavras", "8. Significação das palavras", "Sentido contextual, relações semânticas, substituições e efeitos de escolha vocabular.")}
-            </div>
-        `;
-
-        area.innerHTML = arquiteturaAtiva ? arquitetura : (legislacaoAtiva ? legislacao : (protecaoAtiva ? protecao : portugues));
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
 
@@ -43633,9 +43547,16 @@ limparArenaLocalFarol = function(){
 
     window.selecionarEixoBancoTaifeiroFarol = function(eixo){
         const novoEixo = String(eixo || "");
-        if(!["arquitetura", "legislacao", "protecao", "portugues"].includes(novoEixo)) return;
+        const chavesValidas = estruturaEditalCargoTranspetroV146()
+            .map(item => item.chave);
+
+        if(novoEixo !== "portugues" && !chavesValidas.includes(novoEixo)){
+            return;
+        }
+
         if(estadoBancoTAA2026.origem === "especificas" && novoEixo === "portugues") return;
         if(estadoBancoTAA2026.origem === "portugues" && novoEixo !== "portugues") return;
+
         estadoBancoTAA2026.eixoMenu = novoEixo;
         renderizarMenuBancoTAA();
     };
