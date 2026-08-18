@@ -421,6 +421,8 @@ function nomeDisciplinaForum(chave){
         etica: "Ética no Serviço Público",
         apoioEscolar: "Apoio Escolar",
         transpetroTaifeiro: "Taifeiro — Transpetro MAR",
+        transpetroCozinheiro: "Cozinheiro — Transpetro MAR",
+        transpetroAuxiliarSaude: "Auxiliar de Saúde — Transpetro MAR",
         administrador: "Administrador"
     };
 
@@ -2190,7 +2192,7 @@ const trilhasPreparacaoFarol = {
         nivel: "Nível Superior",
         icone: "📐",
         cor: "bloqueado",
-        descricao: "Rota em desenvolvimento.",
+        descricao: "Preparação do cargo.",
         bloqueado: true,
         disciplinas: []
     },
@@ -2199,7 +2201,7 @@ const trilhasPreparacaoFarol = {
         nivel: "Nível Superior",
         icone: "🏃",
         cor: "bloqueado",
-        descricao: "Rota em desenvolvimento.",
+        descricao: "Preparação do cargo.",
         bloqueado: true,
         disciplinas: []
     },
@@ -2208,7 +2210,7 @@ const trilhasPreparacaoFarol = {
         nivel: "Nível Superior",
         icone: "👨‍💼",
         cor: "bloqueado",
-        descricao: "Rota em desenvolvimento.",
+        descricao: "Preparação do cargo.",
         bloqueado: true,
         disciplinas: []
     }
@@ -2338,7 +2340,7 @@ function abrirTrilhaEstudo(chave){
     }
 
     if(trilha.bloqueado){
-        mostrarToast("Esta rota ainda está em desenvolvimento.");
+        mostrarToast("Esta opção não está disponível.");
         return;
     }
 
@@ -2501,7 +2503,7 @@ function mostrarTodasDisciplinasFarol(){
                 <span class="selo-nivel-trilha">
                     Visão geral
                 </span>
-                <h3>🗺️ Todas as disciplinas liberadas</h3>
+                <h3>🗺️ Todas as disciplinas</h3>
                 <p>Use esta opção apenas quando quiser navegar por todo o conteúdo da plataforma.</p>
             </div>
             <button class="btn-alterar-preparacao" onclick="alterarPreparacaoFarol()">
@@ -2520,7 +2522,7 @@ function abrirDisciplina(nome) {
 if(nome === "administrador"){
 
     mostrarToast(
-        "Disciplina em desenvolvimento."
+        "Disciplina"
     );
 
     return;
@@ -2599,7 +2601,7 @@ if (nome === "historiaAbaetetuba") {
 }
 
     mostrarToast(
-        "Disciplina em desenvolvimento."
+        "Disciplina"
     );
 
 }
@@ -5964,7 +5966,7 @@ function iniciarSimuladoMinhaRotaFarol(){
         !Array.isArray(trilha.disciplinas) ||
         trilha.disciplinas.length === 0
     ){
-        mostrarToast("Rota sem disciplinas liberadas.");
+        mostrarToast("Esta rota não possui disciplinas disponíveis.");
         return;
     }
 
@@ -10460,40 +10462,49 @@ function obterMarcadorUltimoEstudoDashboardFarol(){
 }
 
 function obterUltimoProgressoTaifeiroInicioV134(){
+    const configs = [
+        { prefixo:"farol_taa_progresso_v130_", cargoAcesso:"taifeiro", trilha:"transpetroTaifeiro", nome:"Taifeiro", sigla:"TAA", icone:"⚓" },
+        { prefixo:"farol_cza_progresso_v138_", cargoAcesso:"cozinheiro", trilha:"transpetroCozinheiro", nome:"Cozinheiro", sigla:"CZA", icone:"👨‍🍳" },
+        { prefixo:"farol_asa_progresso_v138_", cargoAcesso:"auxiliarSaude", trilha:"transpetroAuxiliarSaude", nome:"Auxiliar de Saúde", sigla:"ASA", icone:"🩺" }
+    ];
+
     let melhor = null;
 
     try{
         for(let i = 0; i < localStorage.length; i++){
             const chave = localStorage.key(i);
+            if(!chave) continue;
 
-            if(!chave || !chave.startsWith("farol_taa_progresso_v130_")){
-                continue;
-            }
+            const cfg = configs.find(item => chave.startsWith(item.prefixo));
+            if(!cfg) continue;
 
             let dados = null;
-
             try{
                 dados = JSON.parse(localStorage.getItem(chave) || "null");
             }catch(_erroInterno){
                 dados = null;
             }
 
-            if(
-                !dados ||
-                !dados.topico ||
-                !Array.isArray(dados.ordemIds) ||
-                !dados.ordemIds.length
-            ){
+            if(!dados || !dados.topico || !Array.isArray(dados.ordemIds) || !dados.ordemIds.length){
                 continue;
             }
 
+            const acessoLiberado =
+                typeof window.temAcessoCargoFarol === "function" &&
+                window.temAcessoCargoFarol("transpetro2026", cfg.cargoAcesso);
+
+            if(!acessoLiberado) continue;
+
             const candidato = {
-                tipo: "taifeiro",
+                tipo: "transpetroBanco",
+                cargoAcesso: cfg.cargoAcesso,
+                trilha: cfg.trilha,
+                nomeCargo: cfg.nome,
+                siglaCargo: cfg.sigla,
+                iconeCargo: cfg.icone,
                 topico: String(dados.topico),
                 eixoMenu: String(dados.eixoMenu || ""),
-                indice: Number.isInteger(Number(dados.indice))
-                    ? Number(dados.indice)
-                    : 0,
+                indice: Number.isInteger(Number(dados.indice)) ? Number(dados.indice) : 0,
                 total: dados.ordemIds.length,
                 salvoEm: Number(dados.salvoEm) || 0,
                 dados
@@ -10522,15 +10533,13 @@ function nomeEixoTaifeiroInicioV134(eixoMenu){
 }
 
 function obterContinuacaoInicioFarolV134(){
-    const taa = obterUltimoProgressoTaifeiroInicioV134();
+    const transpetro = obterUltimoProgressoTaifeiroInicioV134();
     const marcador = obterMarcadorUltimoEstudoDashboardFarol();
 
-    // Se houve uma atividade genérica DEPOIS da última atividade do Taifeiro,
-    // respeita o estudo mais recente.
     if(
         marcador &&
         marcador.tipo === "geral" &&
-        (!taa || Number(marcador.salvoEm || 0) >= Number(taa.salvoEm || 0))
+        (!transpetro || Number(marcador.salvoEm || 0) >= Number(transpetro.salvoEm || 0))
     ){
         return {
             tipo: "geral",
@@ -10543,16 +10552,8 @@ function obterContinuacaoInicioFarolV134(){
         };
     }
 
-    // Se existe tentativa do Taifeiro em andamento, ela passa a ser reconhecida
-    // pelo cartão "Continuar estudando" da tela inicial SOMENTE se o acesso atual
-    // ao cargo estiver liberado. Isso evita reabrir conteúdo após revogação.
-    const podeRetomarTaifeiro =
-        taa &&
-        typeof window.temAcessoCargoFarol === "function" &&
-        window.temAcessoCargoFarol("transpetro2026", "taifeiro");
-
-    if(podeRetomarTaifeiro){
-        return taa;
+    if(transpetro){
+        return transpetro;
     }
 
     const ultimoGeral = localStorage.getItem("farol_ultimoAssunto");
@@ -10593,8 +10594,8 @@ function atualizarContinuarUltimoEstudo(){
         return;
     }
 
-    // BANCO TAIFEIRO 2026
-    if(continuacao.tipo === "taifeiro"){
+    // BANCOS TRANSPETRO 2026 — TAA / CZA / ASA
+    if(continuacao.tipo === "transpetroBanco"){
         const total = Math.max(1, Number(continuacao.total) || 1);
         const atual = Math.min(
             total,
@@ -10605,7 +10606,8 @@ function atualizarContinuarUltimoEstudo(){
         box.classList.remove("sem-estudo");
         botao.disabled = false;
         texto.textContent =
-            "Continue em ⚓ Taifeiro — " + eixo + " — " +
+            "Continue em " + (continuacao.iconeCargo || "⚓") + " " +
+            (continuacao.nomeCargo || "Transpetro") + " — " + eixo + " — " +
             continuacao.topico + " — questão " +
             atual + " de " + total + ".";
         return;
@@ -10656,16 +10658,13 @@ function continuarUltimoEstudo(){
 
     const continuacao = obterContinuacaoInicioFarolV134();
 
-    if(continuacao && continuacao.tipo === "taifeiro"){
-        if(typeof window.continuarBancoTaifeiroDoInicioFarol === "function"){
-            window.continuarBancoTaifeiroDoInicioFarol(
-                continuacao.topico,
-                continuacao.eixoMenu
-            );
+    if(continuacao && continuacao.tipo === "transpetroBanco"){
+        if(typeof window.continuarBancoTranspetroDoInicioFarolV138 === "function"){
+            window.continuarBancoTranspetroDoInicioFarolV138(continuacao);
             return;
         }
 
-        mostrarToast("Não foi possível abrir o progresso do Taifeiro.");
+        mostrarToast("Não foi possível abrir o progresso do cargo Transpetro.");
         return;
     }
 
@@ -15229,35 +15228,38 @@ function atualizarContextoJogosFarolV136(){
     const concursoAtual =
         localStorage.getItem("farol_concurso_atual") || "barcarena2026";
 
-    if(
-        concursoAtual === "transpetro2026" &&
-        typeof window.temAcessoCargoFarol === "function" &&
-        window.temAcessoCargoFarol("transpetro2026", "taifeiro")
-    ){
-        area.style.display = "block";
-        area.innerHTML = `
-            <strong>⚓ Banco ativo: Taifeiro — Transpetro MAR 2026</strong>
-            <span>
-                Os jogos usam Língua Portuguesa, Arquitetura Naval,
-                Legislação Marítima e Ambiental e Conscientização sobre proteção de navio.
-            </span>
-        `;
-        return;
+    if(concursoAtual === "transpetro2026"){
+        const trilhaAtual = localStorage.getItem("farol_trilha_atual") || "";
+
+        const contextoTranspetro = {
+            transpetroTaifeiro: ["⚓", "Taifeiro"],
+            transpetroCozinheiro: ["👨‍🍳", "Cozinheiro"],
+            transpetroAuxiliarSaude: ["🩺", "Auxiliar de Saúde"]
+        }[trilhaAtual];
+
+        if(contextoTranspetro){
+            area.style.display = "block";
+            area.innerHTML = `
+                <strong>${contextoTranspetro[0]} ${contextoTranspetro[1]} — Transpetro MAR 2026</strong>
+                <span>Escolha um jogo para revisar o conteúdo do seu cargo.</span>
+            `;
+            return;
+        }
     }
 
     if(concursoAtual === "abaetetuba2026"){
         area.style.display = "block";
         area.innerHTML = `
-            <strong>🧭 Banco ativo: Abaetetuba 2026</strong>
-            <span>Os jogos seguem as disciplinas disponíveis na preparação atual.</span>
+            <strong>🧭 Abaetetuba 2026</strong>
+            <span>Escolha um jogo para revisar o conteúdo da sua preparação.</span>
         `;
         return;
     }
 
     area.style.display = "block";
     area.innerHTML = `
-        <strong>🏛️ Banco ativo: Barcarena 2026</strong>
-        <span>Os jogos seguem as disciplinas atuais do Farol.</span>
+        <strong>🏛️ Barcarena 2026</strong>
+        <span>Escolha um jogo para revisar o conteúdo da sua preparação.</span>
     `;
 }
 
@@ -15642,18 +15644,32 @@ function registrarErroJogoFarol(q){
         String(q && q.assuntoJogo || "").startsWith("taa2026_") ||
         /^TAA-2026-/i.test(String(q && q.id || ""));
 
+    const ehQuestaoCargoCompartilhadoJogo =
+        /^tr2026_(cza|asa)_/i.test(String(q && q.assuntoJogo || "")) ||
+        /^(CZA|ASA)-2026-/i.test(String(q && q.id || ""));
+
+    const ehQuestaoTranspetroJogo =
+        ehQuestaoTaifeiroJogo || ehQuestaoCargoCompartilhadoJogo;
+
+    const cargoJogo =
+        /^CZA-2026-/i.test(String(q && q.id || ""))
+            ? { nome: "Cozinheiro", cargo: "cozinheiro", icone: "👨‍🍳" }
+            : /^ASA-2026-/i.test(String(q && q.id || ""))
+                ? { nome: "Auxiliar de Saúde", cargo: "auxiliarSaude", icone: "🩺" }
+                : { nome: "Taifeiro", cargo: "taifeiro", icone: "⚓" };
+
     const nomeDisciplina =
-        ehQuestaoTaifeiroJogo
+        ehQuestaoTranspetroJogo
             ? (
                 String(q.eixo || "") === "Língua Portuguesa"
-                    ? "📘 Taifeiro — Língua Portuguesa"
-                    : "⚓ Taifeiro — Conhecimentos Específicos"
+                    ? `📘 ${cargoJogo.nome} — Língua Portuguesa`
+                    : `${cargoJogo.icone} ${cargoJogo.nome} — Conhecimentos Específicos`
             )
             : nomeAssuntoJogoFarol(q.assuntoJogo);
 
     const assuntoErroJogo =
-        ehQuestaoTaifeiroJogo
-            ? (q.topicoEdital || q.assunto || "Taifeiro — Banco 2026")
+        ehQuestaoTranspetroJogo
+            ? (q.topicoEdital || q.assunto || `${cargoJogo.nome} — Banco 2026`)
             : q.assuntoJogo;
 
     const indiceExistente =
@@ -15666,10 +15682,10 @@ function registrarErroJogoFarol(q){
     const dadosErro = {
         idErro: chaveQuestaoPontuacao("erro-jogo", q.assuntoJogo, q),
         assunto: assuntoErroJogo,
-        topicoEdital: ehQuestaoTaifeiroJogo ? (q.topicoEdital || "") : "",
-        eixo: ehQuestaoTaifeiroJogo ? (q.eixo || "") : "",
-        concurso: ehQuestaoTaifeiroJogo ? "transpetro2026" : "",
-        cargo: ehQuestaoTaifeiroJogo ? "taifeiro" : "",
+        topicoEdital: ehQuestaoTranspetroJogo ? (q.topicoEdital || "") : "",
+        eixo: ehQuestaoTranspetroJogo ? (q.eixo || "") : "",
+        concurso: ehQuestaoTranspetroJogo ? "transpetro2026" : "",
+        cargo: ehQuestaoTranspetroJogo ? cargoJogo.cargo : "",
         disciplina: nomeDisciplina,
         pergunta: q.pergunta,
         texto: q.texto || "",
@@ -22678,7 +22694,7 @@ async function arquivarDuelo(codigo){
 
     function nomeTopico(lista, chave) {
         const item = lista.find(t => t.chave === chave);
-        return item ? item.nome : "Tópico em desenvolvimento";
+        return item ? item.nome : "Tópico indisponível";
     }
 
     if (typeof bancoQuestoes !== "undefined") {
@@ -22808,7 +22824,7 @@ async function arquivarDuelo(codigo){
             if (existeTopico(topicosEducacaoFisicaFarol, assunto)) {
                 disciplinaAtual = "educacaoFisica";
                 assuntoAtual = assunto;
-                mostrarToast("Tópico em desenvolvimento: " + nomeTopico(topicosEducacaoFisicaFarol, assunto));
+                mostrarToast("Este tópico não está disponível.");
                 mostrarTela("educacaoFisica");
                 return;
             }
@@ -22816,7 +22832,7 @@ async function arquivarDuelo(codigo){
             if (existeTopico(topicosMatematicaFarol, assunto)) {
                 disciplinaAtual = "matematica";
                 assuntoAtual = assunto;
-                mostrarToast("Tópico em desenvolvimento: " + nomeTopico(topicosMatematicaFarol, assunto));
+                mostrarToast("Este tópico não está disponível.");
                 mostrarTela("matematica");
                 return;
             }
@@ -23034,6 +23050,10 @@ function obterConfigProvasFarol(){
         taifeiro: {
             grupo: "grupoProvasTaifeiro",
             card: "cardProvasTaifeiro"
+        },
+        cozinheiro: {
+            grupo: "grupoProvasCozinheiro",
+            card: "cardProvasCozinheiro"
         }
     };
 }
@@ -23291,7 +23311,7 @@ function voltarCargosProvasFarol(){
                 assuntoAtual = assunto;
 
                 if(!item.liberado){
-                    mostrarToast("Tópico em construção: " + item.nome);
+                    mostrarToast("Este tópico não está disponível.");
                     mostrarTela("geografia");
                     return;
                 }
@@ -23492,7 +23512,7 @@ function voltarCargosProvasFarol(){
                 <div class="cabecalho-trilha">
                     <div>
                         <span class="selo-nivel-trilha">Visão geral</span>
-                        <h3>🗺️ Todas as disciplinas liberadas</h3>
+                        <h3>🗺️ Todas as disciplinas</h3>
                         <p>Use esta opção apenas quando quiser navegar por todo o conteúdo da plataforma.</p>
                     </div>
                     <button class="btn-alterar-preparacao" onclick="alterarPreparacaoFarol()">
@@ -23724,7 +23744,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             icone: "🧭",
             classe: "abaetetuba",
             acessoLivre: false,
-            descricao: "Conteúdo separado por cargo e liberado individualmente pelo administrador.",
+            descricao: "Escolha seu cargo e acesse os conteúdos, questões e simulados da sua preparação.",
             rotas: [
                 "abaetetubaComunsSuperior",
                 "abaetetubaProfessorHistoria",
@@ -23818,10 +23838,10 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         cor: "oceano",
         concurso: "transpetro2026",
         cargoAcesso: "auxiliarSaude",
-        publicado: false,
-        bloqueado: true,
-        emConstrucao: true,
-        descricao: "Preparação para Auxiliar de Saúde — Transpetro MAR.",
+        publicado: true,
+        menuDireto: true,
+        bancoCompartilhado2026: true,
+        descricao: "Preparação para Auxiliar de Saúde — Transpetro MAR 2026.",
         disciplinas: []
     };
 
@@ -23860,10 +23880,10 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         cor: "oceano",
         concurso: "transpetro2026",
         cargoAcesso: "cozinheiro",
-        publicado: false,
-        bloqueado: true,
-        emConstrucao: true,
-        descricao: "Preparação para Cozinheiro — Transpetro MAR.",
+        publicado: true,
+        menuDireto: true,
+        bancoCompartilhado2026: true,
+        descricao: "Preparação para Cozinheiro — Transpetro MAR 2026.",
         disciplinas: []
     };
 
@@ -24180,6 +24200,10 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
     }
 
     function montarCardConcursoFarol(chave, concurso){
+        const statusInterno = ehAdministradorAcessosFarol()
+            ? `<span>${concurso.estruturaEmTeste ? "🧪 Estrutura em teste" : (concurso.acessoLivre ? "✅ Acesso livre" : "🔐 Controle por cargo")}</span>`
+            : "";
+
         return `
             <button
                 class="card-concurso-farol ${concurso.classe || ""}"
@@ -24198,7 +24222,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 <div class="metadados-concurso-farol">
                     <span>🏷️ ${escaparHTML(concurso.banca)}</span>
                     <span>📄 ${escaparHTML(concurso.edital)}</span>
-                    <span>${concurso.estruturaEmTeste ? "🧪 Estrutura em teste" : (concurso.acessoLivre ? "✅ Acesso atual" : "🔐 Liberação por cargo")}</span>
+                    ${statusInterno}
                 </div>
 
                 <span class="acao-concurso-farol">Ver cargos →</span>
@@ -24239,8 +24263,6 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         const concursoDaTrilha = CONCURSOS_FAROL[trilha.concurso];
         const exigeAcesso = concursoDaTrilha && concursoDaTrilha.acessoLivre === false;
 
-        // Para aluno, a compra/liberação é verificada antes do estado de construção.
-        // Assim um cargo futuro nunca parece disponível para quem não o adquiriu.
         if(
             exigeAcesso &&
             !ehAdmin &&
@@ -24248,7 +24270,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         ){
             return {
                 classe: "acesso-negado",
-                texto: "🔒 Você não tem acesso",
+                texto: "🔒",
                 permitido: false
             };
         }
@@ -24256,12 +24278,11 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         if(trilha.bloqueado || trilha.emConstrucao === true){
             return {
                 classe: "em-preparacao",
-                texto: "🚧 Conteúdo em preparação",
+                texto: ehAdmin ? "🚧 Conteúdo em preparação" : "🔒",
                 permitido: false
             };
         }
 
-        // O administrador pode testar rotas ainda não publicadas quando existe estrutura.
         if(ehAdmin && trilha.publicado === false){
             return {
                 classe: "teste-admin",
@@ -24273,14 +24294,14 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         if(trilha.publicado === false){
             return {
                 classe: "em-preparacao",
-                texto: "🚧 Conteúdo em preparação",
+                texto: "🔒",
                 permitido: false
             };
         }
 
         return {
             classe: "",
-            texto: "🧭 Iniciar rota",
+            texto: "Abrir",
             permitido: true
         };
     }
@@ -24290,13 +24311,27 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             return "";
         }
 
+        const concursoDaTrilha = CONCURSOS_FAROL[trilha.concurso];
+
+        // Em concurso de acesso livre, o aluno vê somente o que já pode estudar.
+        // Rotas futuras continuam acessíveis ao administrador, mas não aparecem ao aluno.
+        if(
+            concursoDaTrilha &&
+            concursoDaTrilha.acessoLivre === true &&
+            !ehAdministradorAcessosFarol() &&
+            (trilha.bloqueado || trilha.emConstrucao === true || trilha.publicado === false)
+        ){
+            return "";
+        }
+
         let estado = {
             classe: trilha.bloqueado ? "em-preparacao" : "",
-            texto: trilha.bloqueado ? "🚧 Em desenvolvimento" : "🧭 Iniciar rota",
+            texto: trilha.bloqueado
+                ? (ehAdministradorAcessosFarol() ? "🚧 Conteúdo em preparação" : "🔒")
+                : "Abrir",
             permitido: !trilha.bloqueado
         };
 
-        const concursoDaTrilha = CONCURSOS_FAROL[trilha.concurso];
         if(concursoDaTrilha && concursoDaTrilha.acessoLivre === false){
             estado = estadoCardCargoFarol(trilha);
         }
@@ -24422,14 +24457,13 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
             blocoCards = `
                 ${cardsLiberados ? `
-                    <h3 class="titulo-grupo-preparacao">✅ Seus acessos liberados</h3>
                     <div class="grid-preparacoes">
                         ${cardsLiberados}
                     </div>
                 ` : ""}
 
                 ${cardsOutros ? `
-                    <h3 class="titulo-grupo-preparacao">🔒 Outros cargos e preparações</h3>
+                    <h3 class="titulo-grupo-preparacao">Outros cargos</h3>
                     <div class="grid-preparacoes">
                         ${cardsOutros}
                     </div>
@@ -24466,13 +24500,11 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             `;
         }
 
-        const avisoAcesso = chaveConcurso === "abaetetuba2026"
+        const avisoAcesso = chaveConcurso === "abaetetuba2026" && ehAdministradorAcessosFarol()
             ? `
                 <div class="nota-seguranca-acesso">
-                    <strong>🔐 Acesso por pacote e cargo:</strong>
-                    o pacote de Disciplinas Comuns do Nível Superior pode ser vendido separadamente
-                    e também é incluído automaticamente em qualquer cargo superior liberado. História
-                    está concluída; Ciências e Geografia permanecem em preparação.
+                    <strong>🔧 Informação interna:</strong>
+                    gerenciamento de pacotes e cargos de Abaetetuba.
                 </div>
             `
             : "";
@@ -24543,13 +24575,13 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
         if(trilha.bloqueado || trilha.emConstrucao === true){
             localStorage.removeItem("farol_trilha_atual");
-            mostrarToast("Conteúdo em preparação.");
+            mostrarToast("Este cargo não está disponível para sua conta.");
             return false;
         }
 
         if(trilha.publicado === false && !ehAdministradorAcessosFarol()){
             localStorage.removeItem("farol_trilha_atual");
-            mostrarToast("Conteúdo em preparação.");
+            mostrarToast("Este cargo não está disponível para sua conta.");
             return false;
         }
 
@@ -24652,7 +24684,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         }
 
         localStorage.setItem("farol_concurso_atual", "transpetro2026");
-        localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+        localStorage.setItem("farol_trilha_atual", configProvaComentadaTranspetroV140().trilha);
         if(typeof mostrarTela === "function"){
             mostrarTela("questoes");
         }
@@ -24702,6 +24734,20 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 }
             }, 80);
             return;
+        }
+
+        if(destino === "questoesAnteriores" && cfg.sigla === "CZA"){
+            if(typeof window.abrirQuestoesAnterioresCozinheiroV140 === "function"){
+                return window.abrirQuestoesAnterioresCozinheiroV140();
+            }
+            return false;
+        }
+
+        if(destino === "provasAnteriores" && cfg.sigla === "CZA"){
+            if(typeof window.abrirProvasAnterioresCozinheiroV140 === "function"){
+                return window.abrirProvasAnterioresCozinheiroV140();
+            }
+            return false;
         }
 
         if(destino === "erros"){
@@ -24818,6 +24864,216 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         return true;
     };
 
+    const CARGOS_COMPARTILHADOS_TRANSPETRO_V138 = {
+        transpetroCozinheiro: {
+            trilha: "transpetroCozinheiro",
+            cargoAcesso: "cozinheiro",
+            nome: "Cozinheiro",
+            nomeCompleto: "Cozinheiro — CZA",
+            sigla: "CZA",
+            icone: "👨‍🍳",
+            exclusivo: "🍽️ Boas Práticas para Serviços de Alimentação",
+            exclusivoDescricao: "Conteúdo exclusivo do CZA será construído depois do banco comum."
+        },
+        transpetroAuxiliarSaude: {
+            trilha: "transpetroAuxiliarSaude",
+            cargoAcesso: "auxiliarSaude",
+            nome: "Auxiliar de Saúde",
+            nomeCompleto: "Auxiliar de Saúde — ASA",
+            sigla: "ASA",
+            icone: "🩺",
+            exclusivo: "🩺 Saúde, enfermagem e primeiros socorros ampliados",
+            exclusivoDescricao: "Conteúdo exclusivo do ASA será construído depois do banco comum."
+        }
+    };
+
+    function configCargoCompartilhadoTranspetroV138(chave){
+        return CARGOS_COMPARTILHADOS_TRANSPETRO_V138[String(chave || "")] || null;
+    }
+
+    function acessoCargoCompartilhadoTranspetroV138(chave){
+        const cfg = configCargoCompartilhadoTranspetroV138(chave);
+        if(!cfg) return false;
+        return typeof window.temAcessoCargoFarol === "function" &&
+            window.temAcessoCargoFarol("transpetro2026", cfg.cargoAcesso);
+    }
+
+    function renderizarMenuCargoCompartilhadoTranspetroV138(chave, trilha, concurso, painelTrilha){
+        const cfg = configCargoCompartilhadoTranspetroV138(chave);
+        if(!cfg) return;
+
+        const auditoriaGeral =
+            window.auditoriaBancosCompartilhadosTranspetro2026 || {};
+        const auditoria =
+            cfg.sigla === "CZA"
+                ? auditoriaGeral.cozinheiro
+                : auditoriaGeral.auxiliarSaude;
+
+        const retiradasCargo = auditoria
+            ? (
+                Number((auditoria.excluidasAtribuicoesTaifeiro || []).length) +
+                Number((auditoria.excluidasPorSeguranca || []).length)
+            )
+            : 0;
+
+        const avisoInterno = ehAdministradorAcessosFarol()
+            ? `
+                <div class="aviso-rota-revisao" style="margin-bottom:14px;">
+                    <strong>🔧 Informação interna</strong>
+                    <span>
+                        Banco derivado da base comum Transpetro com IDs próprios para ${cfg.sigla}.
+                        ${retiradasCargo ? `${retiradasCargo} questão(ões) aguardam adaptação específica do cargo.` : ""}
+                    </span>
+                </div>
+            `
+            : "";
+
+        atualizarTituloSelecaoFarol(`${cfg.icone} ${cfg.nomeCompleto}`);
+
+        painelTrilha.innerHTML = `
+            <div class="cabecalho-trilha cabecalho-taifeiro-farol">
+                <div>
+                    <span class="selo-nivel-trilha">${escaparHTML(trilha.nivel || "Aquaviários / Guarnição")}</span>
+                    <span class="selo-concurso-rota selo-transpetro-farol">⚓ ${escaparHTML(concurso ? concurso.nome : "Transpetro MAR")}</span>
+                    <h3>${cfg.icone} ${escaparHTML(cfg.nomeCompleto)}</h3>
+                </div>
+
+                <div class="acoes-rota-concurso">
+                    <button class="btn-alterar-preparacao" onclick="alterarPreparacaoFarol()">
+                        ⚓ Alterar cargo
+                    </button>
+                    <button class="btn-trocar-concurso-farol" onclick="trocarConcursoFarol()">
+                        🏛️ Trocar concurso
+                    </button>
+                </div>
+            </div>
+
+            ${avisoInterno}
+
+            <div class="grid-menu-taifeiro-farol">
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaCargoCompartilhadoTranspetroV138('${chave}','portugues')">
+                    <span>📘</span><strong>Língua Portuguesa</strong><small>Questões de Língua Portuguesa</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaCargoCompartilhadoTranspetroV138('${chave}','especificas')">
+                    <span>⚓</span><strong>Conhecimentos Específicos</strong><small>Arquitetura Naval, Legislação Marítima e Ambiental e Proteção de Navio</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaCargoCompartilhadoTranspetroV138('${chave}','simulados')">
+                    <span>📝</span><strong>Simulados</strong><small>Treinos e simulado completo</small><b>›</b>
+                </button>
+                ${cfg.sigla === "CZA" ? `
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaCargoCompartilhadoTranspetroV138('${chave}','questoesAnteriores')">
+                    <span>🧠</span><strong>Questões de Provas Anteriores</strong><small>2018 e 2023 • por disciplina</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaCargoCompartilhadoTranspetroV138('${chave}','provasAnteriores')">
+                    <span>📄</span><strong>Provas Anteriores</strong><small>Cadernos e gabaritos comentados</small><b>›</b>
+                </button>` : ""}
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaCargoCompartilhadoTranspetroV138('${chave}','erros')">
+                    <span>🔎</span><strong>Caderno de Erros</strong><small>Revise as questões que você errou</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaCargoCompartilhadoTranspetroV138('${chave}','jogos')">
+                    <span>🎮</span><strong>Jogos do Farol</strong><small>Treine o conteúdo de forma interativa</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="abrirAreaCargoCompartilhadoTranspetroV138('${chave}','forum')">
+                    <span>💬</span><strong>Fórum do ${escaparHTML(cfg.nome)}</strong><small>Dúvidas e discussões do cargo</small><b>›</b>
+                </button>
+            </div>
+        `;
+    }
+
+    function renderizarSimuladosCargoCompartilhadoV138(chave){
+        const cfg = configCargoCompartilhadoTranspetroV138(chave);
+        const painelTrilha = document.getElementById("painelTrilhaEstudo");
+        if(!cfg || !painelTrilha) return;
+
+        atualizarTituloSelecaoFarol(`📝 Simulados — ${cfg.nomeCompleto}`);
+
+        painelTrilha.innerHTML = `
+            <div class="cabecalho-trilha cabecalho-taifeiro-farol">
+                <div>
+                    <span class="selo-concurso-rota selo-transpetro-farol">⚓ Transpetro MAR 2026</span>
+                    <h3>📝 Simulados — ${escaparHTML(cfg.nomeCompleto)}</h3>
+                    <p>Escolha uma opção e treine no formato da prova do cargo.</p>
+                </div>
+                <div class="acoes-rota-concurso">
+                    <button class="btn-alterar-preparacao" onclick="renderizarTrilhaEstudo('${chave}')">← Voltar ao cargo</button>
+                </div>
+            </div>
+
+            <div class="grid-menu-taifeiro-farol">
+                <button class="card-menu-taifeiro-farol" onclick="iniciarSimuladoCargoCompartilhadoV138('${chave}','portugues')">
+                    <span>📘</span><strong>Português</strong><small>20 questões</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="iniciarSimuladoCargoCompartilhadoV138('${chave}','especificas')">
+                    <span>⚓</span><strong>Conhecimentos Específicos</strong><small>30 questões</small><b>›</b>
+                </button>
+                <button class="card-menu-taifeiro-farol" onclick="iniciarSimuladoCargoCompartilhadoV138('${chave}','completo')">
+                    <span>🧭</span><strong>Simulado Completo</strong><small>20 Português + 30 específicos = 50</small><b>›</b>
+                </button>
+            </div>
+        `;
+    }
+
+    window.abrirAreaCargoCompartilhadoTranspetroV138 = function(chave, area){
+        const cfg = configCargoCompartilhadoTranspetroV138(chave);
+        if(!cfg) return false;
+
+        if(!acessoCargoCompartilhadoTranspetroV138(chave)){
+            if(typeof mostrarToast === "function"){
+                mostrarToast(`Seu acesso ainda não inclui ${cfg.nomeCompleto}.`);
+            }
+            return false;
+        }
+
+        localStorage.setItem("farol_concurso_atual", "transpetro2026");
+        localStorage.setItem("farol_trilha_atual", chave);
+
+        const destino = String(area || "");
+
+        if(destino === "portugues" || destino === "especificas"){
+            if(typeof window.abrirBancoQuestoesTaifeiroFarol === "function"){
+                window.abrirBancoQuestoesTaifeiroFarol(destino);
+            }
+            return true;
+        }
+
+        if(destino === "simulados"){
+            renderizarSimuladosCargoCompartilhadoV138(chave);
+            return true;
+        }
+
+        if(destino === "erros"){
+            mostrarTela("erros");
+            if(typeof atualizarCadernoErros === "function"){
+                atualizarCadernoErros();
+            }
+            return true;
+        }
+
+        if(destino === "jogos"){
+            if(typeof window.prepararJogosCargoCompartilhadoTranspetroV138 === "function"){
+                window.prepararJogosCargoCompartilhadoTranspetroV138(chave);
+            }
+            mostrarTela("jogosFarol");
+            setTimeout(() => {
+                if(typeof window.abrirTelaJogosFarol === "function"){
+                    window.abrirTelaJogosFarol();
+                }else if(typeof abrirTelaJogosFarol === "function"){
+                    abrirTelaJogosFarol();
+                }
+            }, 0);
+            return true;
+        }
+
+        if(destino === "forum"){
+            if(typeof abrirForum === "function"){
+                abrirForum(chave);
+                return true;
+            }
+        }
+
+        return false;
+    };
+
     function renderizarMenuTaifeiroFarol(trilha, concurso, painelTrilha){
         atualizarTituloSelecaoFarol("⚓ Taifeiro — TAA");
 
@@ -24890,6 +25146,19 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
         if(chaveConcurso === "transpetro2026" && chave === "transpetroTaifeiro"){
             renderizarMenuTaifeiroFarol(trilha, concurso, painelTrilha);
+            return;
+        }
+
+        if(
+            chaveConcurso === "transpetro2026" &&
+            ["transpetroCozinheiro", "transpetroAuxiliarSaude"].includes(chave)
+        ){
+            renderizarMenuCargoCompartilhadoTranspetroV138(
+                chave,
+                trilha,
+                concurso,
+                painelTrilha
+            );
             return;
         }
 
@@ -25000,7 +25269,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 const trilha = trilhasPreparacaoFarol[chaveTrilha];
 
                 if(!trilha || !Array.isArray(trilha.disciplinas)){
-                    mostrarToast("Rota sem disciplinas liberadas.");
+                    mostrarToast("Esta rota não possui disciplinas disponíveis.");
                     return;
                 }
 
@@ -25560,7 +25829,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         }
 
         if(!temAcessoSimuladoHistoriaAbaetetubaFarol()){
-            mostrarToast("Seu acesso a Professor de História — Abaetetuba não está liberado.");
+            mostrarToast("Professor de História não faz parte dos acessos desta conta.");
             return false;
         }
 
@@ -26292,14 +26561,14 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
 
         if(estadoCartao){
             estadoCartao.textContent = acessoHistoria
-                ? "História liberada"
-                : (algumCargo ? "Acesso conforme o cargo" : "Acesso por cargo");
+                ? "Professor de História"
+                : "";
         }
 
         if(mensagemSemAcesso){
             mensagemSemAcesso.textContent = algumCargo
-                ? "Sua conta possui acesso a Abaetetuba, mas ainda não possui Professor de História, que é o simulado publicado nesta etapa."
-                : "Sua conta ainda não possui um cargo de Abaetetuba liberado pelo administrador.";
+                ? "Professor de História não faz parte dos acessos desta conta."
+                : "Não há simulados de Abaetetuba disponíveis para esta conta.";
         }
 
         if(
@@ -26382,7 +26651,8 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             }
 
             if(!temAcessoTaifeiroTranspetroFarol()){
-                mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+                const cfg = configProvaComentadaTranspetroV140();
+                mostrarToast(`Seu acesso ainda não inclui ${cfg.nomeCompleto} — Transpetro MAR.`);
                 return false;
             }
         }
@@ -26555,7 +26825,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         }
 
         if(!temAcessoComunsSuperiorV25()){
-            mostrarToast("Seu acesso ao pacote de Disciplinas Comuns — Nível Superior ainda não foi liberado.");
+            mostrarToast("Disciplinas Comuns — Nível Superior não fazem parte dos acessos desta conta.");
             return false;
         }
 
@@ -27968,7 +28238,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                         : `mostrarBloqueioDueloAbaetetubaV26('${grupo.exige}')`
                     }">
                     <span>${grupo.nome}</span>
-                    <small>${liberado ? "Acesso liberado" : "Acesso necessário"}</small>
+                    <small>${liberado ? "Abrir" : "Acesso necessário"}</small>
                 </button>
             `;
         }).join("");
@@ -28566,7 +28836,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             return;
         }
 
-        mostrarToast("Este eixo ainda está em preparação.");
+        mostrarToast("Este conteúdo não está disponível.");
     };
 
     window.voltarParaCienciasAbaetetuba = function(){
@@ -29301,7 +29571,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             return abrirModuloAntesV45.apply(this, arguments);
         }
 
-        mostrarToast("Este eixo ainda está em preparação.");
+        mostrarToast("Este conteúdo não está disponível.");
     };
 
     window.abrirAssuntoHistologiaAbaetetuba = function(){
@@ -35047,14 +35317,14 @@ function renderizarSalaArenaAoVivoFarol(){
                 etapa: "abaetetubaMedio",
                 icone: "🧭",
                 titulo: "Nível médio",
-                texto: "Simulados das disciplinas e cargos liberados."
+                texto: "Simulados das disciplinas do nível médio."
             },
             {
                 id: "simuladosAbaetetubaSemAcessoFarol",
                 etapa: "abaetetubaSemAcesso",
                 icone: "🔒",
-                titulo: "Ver acesso disponível",
-                texto: "Consulte os cargos liberados para sua conta."
+                titulo: "Meus cargos",
+                texto: "Veja os simulados disponíveis para sua conta."
             }
         ];
 
@@ -35077,7 +35347,7 @@ function renderizarSalaArenaAoVivoFarol(){
         if(!visiveis.length){
             menu.innerHTML = `
                 <div class="aviso-fluxo-simulado-v24">
-                    Nenhum simulado está liberado para esta conta.
+                    Não há simulados disponíveis para esta conta.
                 </div>
             `;
         }
@@ -35647,7 +35917,8 @@ function renderizarSalaArenaAoVivoFarol(){
         ciencias: "Professor de Ciências",
         geografia: "Professor de Geografia",
         apoioEscolar: "Profissional de Apoio Escolar",
-        taifeiro: "Taifeiro — Transpetro MAR"
+        taifeiro: "Taifeiro — Transpetro MAR",
+        cozinheiro: "Cozinheiro — Transpetro MAR"
     };
 
     function elProvasV30(id){
@@ -35874,6 +36145,7 @@ function renderizarSalaArenaAoVivoFarol(){
             "grupoProvasGeografia",
             "grupoProvasApoioEscolar",
             "grupoProvasTaifeiro",
+            "grupoProvasCozinheiro",
             "detalheProvaAnteriorV30",
             "mensagemEscolhaProvas"
         ].forEach(id => {
@@ -35920,16 +36192,19 @@ function renderizarSalaArenaAoVivoFarol(){
 
     const selecionarCargoAntesV30 = window.selecionarCargoProvasFarol;
     window.selecionarCargoProvasFarol = async function(cargo){
-        if(cargo === "taifeiro"){
+        if(["taifeiro", "cozinheiro"].includes(cargo)){
             if(typeof window.carregarAcessosConcursosFarol === "function"){
                 await window.carregarAcessosConcursosFarol({ renderizar: false });
             }
 
+            const cargoAcesso = cargo === "cozinheiro" ? "cozinheiro" : "taifeiro";
+            const nomeCargo = cargo === "cozinheiro" ? "Cozinheiro" : "Taifeiro";
+
             if(
                 typeof window.temAcessoCargoFarol === "function" &&
-                !window.temAcessoCargoFarol("transpetro2026", "taifeiro")
+                !window.temAcessoCargoFarol("transpetro2026", cargoAcesso)
             ){
-                mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+                mostrarToast(`Seu acesso ainda não inclui ${nomeCargo} — Transpetro MAR.`);
                 abrirCargosProvasV30();
                 return false;
             }
@@ -40680,17 +40955,25 @@ limparArenaLocalFarol = function(){
         return String.fromCharCode(65 + Number(indice || 0));
     }
 
+    function configProvaComentadaTranspetroV140(){
+        const trilha = localStorage.getItem("farol_trilha_atual") || "transpetroTaifeiro";
+        if(trilha === "transpetroCozinheiro"){
+            return { trilha, cargoAcesso:"cozinheiro", nome:"Cozinheiro", nomeCompleto:"Cozinheiro — CZA", sigla:"CZA", icone:"👨‍🍳", banco2018:"questoesCozinheiro2018", banco2023:"questoesCozinheiro2023" };
+        }
+        return { trilha:"transpetroTaifeiro", cargoAcesso:"taifeiro", nome:"Taifeiro", nomeCompleto:"Taifeiro — TAA", sigla:"TAA", icone:"⚓", banco2018:"questoesTaifeiro2018", banco2023:"questoesTaifeiro2023" };
+    }
+
     function temAcessoProvaComentadaTaifeiro(){
+        const cfg = configProvaComentadaTranspetroV140();
         if(typeof window.temAcessoCargoFarol === "function"){
-            return window.temAcessoCargoFarol("transpetro2026", "taifeiro");
+            return window.temAcessoCargoFarol("transpetro2026", cfg.cargoAcesso);
         }
         return false;
     }
 
     function obterBancoProvaComentada(ano){
-        const nomeGlobal = ano === 2018
-            ? "questoesTaifeiro2018"
-            : "questoesTaifeiro2023";
+        const cfg = configProvaComentadaTranspetroV140();
+        const nomeGlobal = ano === 2018 ? cfg.banco2018 : cfg.banco2023;
 
         if(Array.isArray(window[nomeGlobal]) && window[nomeGlobal].length){
             return {
@@ -40738,7 +41021,8 @@ limparArenaLocalFarol = function(){
     }
 
     function chaveEstadoProvaComentada(ano, disciplina){
-        return `${Number(ano)}:${String(disciplina || "completa")}`;
+        const cfg = configProvaComentadaTranspetroV140();
+        return `${cfg.sigla}:${Number(ano)}:${String(disciplina || "completa")}`;
     }
 
     function criarEstadoProvaComentada(ano, disciplina){
@@ -40830,9 +41114,9 @@ limparArenaLocalFarol = function(){
         const analises = Array.isArray(questao.analiseAlternativas)
             ? questao.analiseAlternativas
             : [];
-        const explicacaoCorreta = questao.explicacaoCorreta || questao.comentario || "Explicação em preparação.";
-        const explicacaoEscolhida = analises[resposta.selecionada] || "Explicação desta alternativa em preparação.";
-        const revisaoAssunto = questao.revisaoAssunto || questao.revisao || "Revisão deste assunto em preparação.";
+        const explicacaoCorreta = questao.explicacaoCorreta || questao.comentario || "Explicação não disponível.";
+        const explicacaoEscolhida = analises[resposta.selecionada] || "Explicação desta alternativa não disponível.";
+        const revisaoAssunto = questao.revisaoAssunto || questao.revisao || "Revisão deste assunto não disponível.";
         const dicaMacete = questao.dicaMacete || questao.macete || questao.dica || "";
         const pegadinha = questao.pegadinha || "";
         const atualizacao2026 = questao.atualizacao2026 || "";
@@ -40866,7 +41150,7 @@ limparArenaLocalFarol = function(){
 
                 <div class="bloco-feedback-prova-comentada">
                     <h4>🧠 O que memorizar para a prova</h4>
-                    <p>${escaparHTMLProvaComentada(questao.memorizar2026 || "Resumo em preparação.")}</p>
+                    <p>${escaparHTMLProvaComentada(questao.memorizar2026 || "Resumo não disponível.")}</p>
                 </div>
 
                 ${dicaMacete ? `
@@ -41107,7 +41391,7 @@ limparArenaLocalFarol = function(){
         seletor.innerHTML = `
             <div class="cabecalho-grupo-provas" style="margin-top:16px;">
                 <div>
-                    <span class="tag-cargo-provas tag-transpetro-provas">📚 Taifeiro ${anoNumero}</span>
+                    <span class="tag-cargo-provas tag-transpetro-provas">📚 ${configProvaComentadaTranspetroV140().nome} ${anoNumero}</span>
                     <h3>Escolha a disciplina</h3>
                     <p>Você estudará somente as questões da disciplina escolhida, mantendo o gabarito e os comentários da prova daquele ano.</p>
                 </div>
@@ -41467,17 +41751,78 @@ limparArenaLocalFarol = function(){
         return String.fromCharCode(65 + Number(indice || 0));
     }
 
+    function configBancoTranspetroV138(){
+        const trilhaAtual =
+            localStorage.getItem("farol_trilha_atual") || "transpetroTaifeiro";
+
+        const configs = {
+            transpetroTaifeiro: {
+                trilha: "transpetroTaifeiro",
+                cargoAcesso: "taifeiro",
+                nome: "Taifeiro",
+                nomeCompleto: "Taifeiro — TAA",
+                sigla: "TAA",
+                icone: "⚓",
+                bancoGlobal: "questoesTaifeiroBanco2026",
+                progressoPrefixo: "farol_taa_progresso_v130_",
+                primeiraPrefixo: "farol_taa_ultima_primeira_",
+                pontosPrefixo: "questao-banco-transpetro-taifeiro",
+                erroPrefixo: "farol_banco_taa_erro_global_v82_",
+                topicoPrefixo: "banco-transpetro-taifeiro",
+                medalhaPrefixo: "transpetroTaifeiro",
+                diarioPrefixo: "farol_banco_taa_topico_diario_v82_"
+            },
+            transpetroCozinheiro: {
+                trilha: "transpetroCozinheiro",
+                cargoAcesso: "cozinheiro",
+                nome: "Cozinheiro",
+                nomeCompleto: "Cozinheiro — CZA",
+                sigla: "CZA",
+                icone: "👨‍🍳",
+                bancoGlobal: "questoesCozinheiroBanco2026",
+                progressoPrefixo: "farol_cza_progresso_v138_",
+                primeiraPrefixo: "farol_cza_ultima_primeira_v138_",
+                pontosPrefixo: "questao-banco-transpetro-cozinheiro",
+                erroPrefixo: "farol_banco_cza_erro_global_v138_",
+                topicoPrefixo: "banco-transpetro-cozinheiro",
+                medalhaPrefixo: "transpetroCozinheiro",
+                diarioPrefixo: "farol_banco_cza_topico_diario_v138_"
+            },
+            transpetroAuxiliarSaude: {
+                trilha: "transpetroAuxiliarSaude",
+                cargoAcesso: "auxiliarSaude",
+                nome: "Auxiliar de Saúde",
+                nomeCompleto: "Auxiliar de Saúde — ASA",
+                sigla: "ASA",
+                icone: "🩺",
+                bancoGlobal: "questoesAuxiliarSaudeBanco2026",
+                progressoPrefixo: "farol_asa_progresso_v138_",
+                primeiraPrefixo: "farol_asa_ultima_primeira_v138_",
+                pontosPrefixo: "questao-banco-transpetro-auxiliar-saude",
+                erroPrefixo: "farol_banco_asa_erro_global_v138_",
+                topicoPrefixo: "banco-transpetro-auxiliar-saude",
+                medalhaPrefixo: "transpetroAuxiliarSaude",
+                diarioPrefixo: "farol_banco_asa_topico_diario_v138_"
+            }
+        };
+
+        return configs[trilhaAtual] || configs.transpetroTaifeiro;
+    }
+
+    window.configBancoTranspetroV138 = configBancoTranspetroV138;
+
     function temAcessoBancoTAA(){
+        const cfg = configBancoTranspetroV138();
         if(typeof window.temAcessoCargoFarol === "function"){
-            return window.temAcessoCargoFarol("transpetro2026", "taifeiro");
+            return window.temAcessoCargoFarol("transpetro2026", cfg.cargoAcesso);
         }
         return false;
     }
 
     function bancoCompletoTAA(){
-        return Array.isArray(window.questoesTaifeiroBanco2026)
-            ? window.questoesTaifeiroBanco2026
-            : [];
+        const cfg = configBancoTranspetroV138();
+        const banco = window[cfg.bancoGlobal];
+        return Array.isArray(banco) ? banco : [];
     }
 
     function ehQuestaoPortuguesBancoTAA(questao){
@@ -41527,8 +41872,9 @@ limparArenaLocalFarol = function(){
             ? embaralharArray(base)
             : [...base].sort(() => Math.random() - 0.5);
 
+        const cfgBanco = configBancoTranspetroV138();
         const chaveUltimaPrimeira =
-            "farol_taa_ultima_primeira_" +
+            cfgBanco.primeiraPrefixo +
             String(topico || "")
                 .normalize("NFD")
                 .replace(/[\u0300-\u036f]/g, "")
@@ -41602,7 +41948,8 @@ limparArenaLocalFarol = function(){
 
     function chaveProgressoBancoTAA(topico){
         const eixo = estadoBancoTAA2026.eixoMenu || "geral";
-        return `farol_taa_progresso_v130_${slugProgressoBancoTAA(eixo)}_${slugProgressoBancoTAA(topico)}`;
+        const cfg = configBancoTranspetroV138();
+        return `${cfg.progressoPrefixo}${slugProgressoBancoTAA(eixo)}_${slugProgressoBancoTAA(topico)}`;
     }
 
     function obterProgressoSalvoBancoTAA(topico){
@@ -41676,7 +42023,13 @@ limparArenaLocalFarol = function(){
             );
 
             if(typeof registrarUltimoEstudoDashboardFarol === "function"){
-                registrarUltimoEstudoDashboardFarol("taifeiro", {
+                const cfg = configBancoTranspetroV138();
+                registrarUltimoEstudoDashboardFarol("transpetroBanco", {
+                    cargoAcesso: cfg.cargoAcesso,
+                    trilha: cfg.trilha,
+                    nomeCargo: cfg.nome,
+                    siglaCargo: cfg.sigla,
+                    iconeCargo: cfg.icone,
                     topico: estadoBancoTAA2026.topico,
                     eixoMenu: estadoBancoTAA2026.eixoMenu || "",
                     salvoEm: dados.salvoEm
@@ -41860,6 +42213,12 @@ limparArenaLocalFarol = function(){
     function atualizarCabecalhoBancoTAA(titulo, subtitulo){
         const elTitulo = elBancoTAA("tituloBancoQuestoesTaifeiro");
         const elSubtitulo = elBancoTAA("subtituloBancoQuestoesTaifeiro");
+        const selo = document.querySelector("#bancoQuestoesTaifeiro .selo-banco-taifeiro");
+        const cfg = configBancoTranspetroV138();
+
+        if(selo){
+            selo.textContent = `${cfg.icone} Transpetro MAR • ${cfg.nomeCompleto}`;
+        }
         if(elTitulo) elTitulo.textContent = titulo;
         if(elSubtitulo) elSubtitulo.textContent = subtitulo;
     }
@@ -41876,8 +42235,8 @@ limparArenaLocalFarol = function(){
         if(estadoBancoTAA2026.modo === "menu"){
             const total = bancoVisivelTAA().length;
             progresso.innerHTML = `
-                <strong>${total} questão${total === 1 ? "" : "ões"} disponível${total === 1 ? "" : "is"}</strong>
-                <span>Banco 2026 • conteúdo liberado por tópicos</span>
+                <strong>${total} questão${total === 1 ? "" : "ões"}</strong>
+                <span>Banco de Questões 2026</span>
             `;
             return;
         }
@@ -41897,22 +42256,37 @@ limparArenaLocalFarol = function(){
 
     function cardTopicoBancoTAA(topico, titulo, descricao){
         const total = questoesTopicoTAA(topico).length;
-        const disponivel = total > 0;
+
+        // O aluno vê apenas tópicos que já possuem conteúdo.
+        if(total <= 0 && !ehAdministradorAcessosFarol()){
+            return "";
+        }
+
+        if(total <= 0){
+            return `
+                <article class="card-topico-banco-taifeiro em-preparacao">
+                    <div class="topo-card-topico-banco-taifeiro">
+                        <span class="numero-topico-banco-taifeiro">${escaparBancoTAA(topico.split(" ")[0])}</span>
+                        <span class="status-topico-banco-taifeiro">🔧 Interno</span>
+                    </div>
+                    <h3>${escaparBancoTAA(titulo)}</h3>
+                    <p>${escaparBancoTAA(descricao)}</p>
+                    <button type="button" disabled>Sem conteúdo publicado</button>
+                </article>
+            `;
+        }
+
         return `
-            <article class="card-topico-banco-taifeiro ${disponivel ? "disponivel" : "em-preparacao"}">
+            <article class="card-topico-banco-taifeiro disponivel">
                 <div class="topo-card-topico-banco-taifeiro">
                     <span class="numero-topico-banco-taifeiro">${escaparBancoTAA(topico.split(" ")[0])}</span>
-                    <span class="status-topico-banco-taifeiro">${disponivel ? `✅ ${total} questões` : "🧭 Em preparação"}</span>
+                    <span class="status-topico-banco-taifeiro">${total} questões</span>
                 </div>
                 <h3>${escaparBancoTAA(titulo)}</h3>
                 <p>${escaparBancoTAA(descricao)}</p>
-                ${disponivel ? `
-                    <button type="button" onclick="iniciarTopicoBancoTaifeiroFarol('${escaparBancoTAA(topico)}')">
-                        ▶ Treinar ${total} questões
-                    </button>
-                ` : `
-                    <button type="button" disabled>Em preparação</button>
-                `}
+                <button type="button" onclick="iniciarTopicoBancoTaifeiroFarol('${escaparBancoTAA(topico)}')">
+                    ▶ Treinar
+                </button>
             </article>
         `;
     }
@@ -42144,7 +42518,7 @@ limparArenaLocalFarol = function(){
         if(!["arquitetura", "legislacao", "protecao", "portugues"].includes(estadoBancoTAA2026.eixoMenu)){
             atualizarCabecalhoBancoTAA(
                 estadoBancoTAA2026.origem === "especificas"
-                    ? "Conhecimentos Específicos — Taifeiro 2026"
+                    ? `Conhecimentos Específicos — ${configBancoTranspetroV138().nome} 2026`
                     : "Banco de Questões 2026",
                 "Escolha uma disciplina para visualizar seus tópicos."
             );
@@ -42158,7 +42532,7 @@ limparArenaLocalFarol = function(){
                             <span class="eixo-icone">⚓</span>
                             <span class="eixo-textos">
                                 <strong>Arquitetura Naval</strong>
-                                <small>5 tópicos concluídos</small>
+                                <small>5 tópicos</small>
                             </span>
                         </span>
                         <span class="eixo-total">
@@ -42174,7 +42548,7 @@ limparArenaLocalFarol = function(){
                             <span class="eixo-icone">⚖️</span>
                             <span class="eixo-textos">
                                 <strong>Legislação Marítima e Ambiental</strong>
-                                <small>15 tópicos liberados</small>
+                                <small>15 tópicos</small>
                             </span>
                         </span>
                         <span class="eixo-total">
@@ -42190,7 +42564,7 @@ limparArenaLocalFarol = function(){
                             <span class="eixo-icone">🛡️</span>
                             <span class="eixo-textos">
                                 <strong>Conscientização sobre proteção de navio</strong>
-                                <small>7 tópicos liberados</small>
+                                <small>7 tópicos</small>
                             </span>
                         </span>
                         <span class="eixo-total">
@@ -42207,7 +42581,7 @@ limparArenaLocalFarol = function(){
                             <span class="eixo-icone">📘</span>
                             <span class="eixo-textos">
                                 <strong>Língua Portuguesa</strong>
-                                <small>${topicosPortuguesLiberados} de 8 tópicos liberados</small>
+                                <small>${topicosPortuguesLiberados} tópicos</small>
                             </span>
                         </span>
                         <span class="eixo-total">
@@ -42238,12 +42612,12 @@ limparArenaLocalFarol = function(){
                         ? "Conscientização sobre proteção de navio"
                         : "Língua Portuguesa",
             arquiteturaAtiva
-                ? `5 tópicos • ${totalArquitetura} questões disponíveis`
+                ? `5 tópicos • ${totalArquitetura} questões`
                 : legislacaoAtiva
-                    ? `15 tópicos liberados • ${totalLegislacao} questões disponíveis`
+                    ? `15 tópicos • ${totalLegislacao} questões`
                     : protecaoAtiva
-                        ? `7 tópicos liberados • ${totalProtecaoNavio} questões disponíveis`
-                        : `${topicosPortuguesLiberados} de 8 tópicos liberados • ${totalPortugues} questões disponíveis`
+                        ? `7 tópicos • ${totalProtecaoNavio} questões`
+                        : `${topicosPortuguesLiberados} tópicos • ${totalPortugues} questões`
         );
 
         const arquitetura = `
@@ -42351,7 +42725,7 @@ limparArenaLocalFarol = function(){
                 ${cardTopicoBancoTAA(
                     "2.8 Atribuições dos marítimos",
                     "2.8 Atribuições dos marítimos",
-                    "Atribuições do Taifeiro, funções do Taifeiro como Paioleiro e preceitos comuns aos tripulantes, conforme os itens 4.12 e 4.19 da NORMAM-101/DPC vigente."
+                    "Atribuições dos marítimos e preceitos comuns aos tripulantes. Questões diretamente ligadas às funções específicas do cargo são tratadas de forma própria, sem troca automática entre categorias."
                 )}
 
                 ${cardTopicoBancoTAA(
@@ -42435,8 +42809,8 @@ limparArenaLocalFarol = function(){
         const portugues = `
             <button type="button"
                 class="btn-voltar-eixos-banco-taifeiro"
-                onclick="${estadoBancoTAA2026.origem === "portugues" ? "voltarMenuTaifeiroFarol()" : "voltarEixosBancoTaifeiroFarol()"}">
-                ${estadoBancoTAA2026.origem === "portugues" ? "← Voltar ao Taifeiro" : "← Voltar às disciplinas"}
+                onclick="${estadoBancoTAA2026.origem === "portugues" ? "voltarBancoQuestoesTaifeiroFarol()" : "voltarEixosBancoTaifeiroFarol()"}">
+                ${estadoBancoTAA2026.origem === "portugues" ? "← Voltar ao menu do cargo" : "← Voltar às disciplinas"}
             </button>
 
             <div class="grade-topicos-banco-taifeiro">
@@ -42478,11 +42852,13 @@ limparArenaLocalFarol = function(){
     }
 
     function chavePontosQuestaoBancoTAA(questao){
-        return `questao-banco-transpetro-taifeiro:${idQuestaoGamificacaoBancoTAA(questao)}`;
+        const cfg = configBancoTranspetroV138();
+        return `${cfg.pontosPrefixo}:${idQuestaoGamificacaoBancoTAA(questao)}`;
     }
 
     function registrarErroGlobalUnicoBancoTAA(questao){
-        const chave = `farol_banco_taa_erro_global_v82_${idQuestaoGamificacaoBancoTAA(questao)}`;
+        const cfg = configBancoTranspetroV138();
+        const chave = `${cfg.erroPrefixo}${idQuestaoGamificacaoBancoTAA(questao)}`;
         if(localStorage.getItem(chave) === "true"){
             return false;
         }
@@ -42495,7 +42871,8 @@ limparArenaLocalFarol = function(){
         const hoje = typeof dataHojeFarol === "function"
             ? dataHojeFarol()
             : new Date().toISOString().slice(0, 10);
-        const chave = `farol_banco_taa_topico_diario_v82_${hoje}_${chaveTopicoGamificacaoBancoTAA()}`;
+        const cfg = configBancoTranspetroV138();
+        const chave = `${cfg.diarioPrefixo}${hoje}_${chaveTopicoGamificacaoBancoTAA()}`;
 
         if(localStorage.getItem(chave) === "true"){
             return false;
@@ -42516,11 +42893,13 @@ limparArenaLocalFarol = function(){
             .replace(/[^a-z0-9]+/g, "-")
             .replace(/^-+|-+$/g, "");
 
-        return `banco-transpetro-taifeiro:${topico}${sufixo ? ":" + sufixo : ""}`;
+        const cfg = configBancoTranspetroV138();
+        return `${cfg.topicoPrefixo}:${topico}${sufixo ? ":" + sufixo : ""}`;
     }
 
     function registrarResultadoTopicoBancoTAA(percentual){
-        const chaveMedalha = `transpetroTaifeiro:${estadoBancoTAA2026.topico}`;
+        const cfg = configBancoTranspetroV138();
+        const chaveMedalha = `${cfg.medalhaPrefixo}:${estadoBancoTAA2026.topico}`;
         const registroMedalha = typeof registrarMedalhaAssuntoFarol === "function"
             ? registrarMedalhaAssuntoFarol(chaveMedalha, percentual)
             : { texto: "" };
@@ -42556,19 +42935,26 @@ limparArenaLocalFarol = function(){
 
         const idErro = `erro-${questao.id}`;
         const indiceExistente = cadernoErros.findIndex(item =>
-            item && (item.idErro === idErro || item.pergunta === questao.enunciado)
+            item && (
+                item.idErro === idErro ||
+                (
+                    !item.cargo &&
+                    item.pergunta === questao.enunciado
+                )
+            )
         );
 
+        const cfg = configBancoTranspetroV138();
         const dados = {
             idErro,
-            assunto: questao.topicoEdital || questao.assunto || "Taifeiro — Banco 2026",
+            assunto: questao.topicoEdital || questao.assunto || `${cfg.nome} — Banco 2026`,
             topicoEdital: questao.topicoEdital || "",
             eixo: questao.eixo || "",
             concurso: "transpetro2026",
-            cargo: "taifeiro",
+            cargo: cfg.cargoAcesso,
             disciplina: ehQuestaoPortuguesBancoTAA(questao)
-                ? "📘 Taifeiro — Língua Portuguesa"
-                : "⚓ Taifeiro — Conhecimentos Específicos",
+                ? `📘 ${cfg.nome} — Língua Portuguesa`
+                : `${cfg.icone} ${cfg.nome} — Conhecimentos Específicos`,
             pergunta: questao.enunciado,
             texto: questao.textoBase || questao.texto || "",
             imagem: questao.imagem || "",
@@ -42971,9 +43357,13 @@ limparArenaLocalFarol = function(){
     }
 
     window.abrirBancoQuestoesTaifeiroFarol = function(origem = "banco2026"){
+        const cfg = configBancoTranspetroV138();
+
         if(!temAcessoBancoTAA()){
-            if(typeof mostrarToast === "function") mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
-            return;
+            if(typeof mostrarToast === "function"){
+                mostrarToast(`Seu acesso ainda não inclui ${cfg.nomeCompleto} — Transpetro MAR.`);
+            }
+            return false;
         }
 
         estadoBancoTAA2026.origem = origem === "especificas"
@@ -42982,11 +43372,13 @@ limparArenaLocalFarol = function(){
                 ? "portugues"
                 : "banco2026";
         estadoBancoTAA2026.eixoMenu = origem === "portugues" ? "portugues" : "";
+
         localStorage.setItem("farol_concurso_atual", "transpetro2026");
-        localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+        localStorage.setItem("farol_trilha_atual", cfg.trilha);
 
         if(typeof mostrarTela === "function") mostrarTela("bancoQuestoesTaifeiro");
         renderizarMenuBancoTAA();
+        return true;
     };
 
     window.selecionarEixoBancoTaifeiroFarol = function(eixo){
@@ -43004,8 +43396,11 @@ limparArenaLocalFarol = function(){
     };
 
     window.iniciarTopicoBancoTaifeiroFarol = function(topico){
-        if(typeof window.temAcessoTaifeiroFarolV135 === "function" && !window.temAcessoTaifeiroFarolV135()){
-            if(typeof mostrarToast === "function") mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+        if(!temAcessoBancoTAA()){
+            const cfg = configBancoTranspetroV138();
+            if(typeof mostrarToast === "function"){
+                mostrarToast(`Seu acesso ainda não inclui ${cfg.nomeCompleto} — Transpetro MAR.`);
+            }
             return false;
         }
 
@@ -43013,7 +43408,7 @@ limparArenaLocalFarol = function(){
         const bancoTopico = questoesTopicoTAA(topicoSelecionado, bancoVisivelTAA());
 
         if(!bancoTopico.length){
-            if(typeof mostrarToast === "function") mostrarToast("Este tópico ainda está em preparação.");
+            if(typeof mostrarToast === "function") mostrarToast("Este tópico não está disponível.");
             return;
         }
 
@@ -43028,8 +43423,11 @@ limparArenaLocalFarol = function(){
     };
 
     window.comecarNovoTopicoBancoTaifeiroFarol = function(topico){
-        if(typeof window.temAcessoTaifeiroFarolV135 === "function" && !window.temAcessoTaifeiroFarolV135()){
-            if(typeof mostrarToast === "function") mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+        if(!temAcessoBancoTAA()){
+            const cfg = configBancoTranspetroV138();
+            if(typeof mostrarToast === "function"){
+                mostrarToast(`Seu acesso ainda não inclui ${cfg.nomeCompleto} — Transpetro MAR.`);
+            }
             return false;
         }
 
@@ -43042,7 +43440,7 @@ limparArenaLocalFarol = function(){
         );
 
         if(!questoes.length){
-            if(typeof mostrarToast === "function") mostrarToast("Este tópico ainda está em preparação.");
+            if(typeof mostrarToast === "function") mostrarToast("Este tópico não está disponível.");
             return;
         }
 
@@ -43060,8 +43458,11 @@ limparArenaLocalFarol = function(){
     };
 
     window.continuarTopicoBancoTaifeiroFarol = function(topico){
-        if(typeof window.temAcessoTaifeiroFarolV135 === "function" && !window.temAcessoTaifeiroFarolV135()){
-            if(typeof mostrarToast === "function") mostrarToast("Seu acesso ainda não inclui Taifeiro — Transpetro MAR.");
+        if(!temAcessoBancoTAA()){
+            const cfg = configBancoTranspetroV138();
+            if(typeof mostrarToast === "function"){
+                mostrarToast(`Seu acesso ainda não inclui ${cfg.nomeCompleto} — Transpetro MAR.`);
+            }
             return false;
         }
 
@@ -43131,7 +43532,7 @@ limparArenaLocalFarol = function(){
             const ganhou = typeof adicionarPontosLuz === "function"
                 ? adicionarPontosLuz(
                     10,
-                    "Questão correta — Banco Transpetro / Taifeiro",
+                    `Questão correta — Banco Transpetro / ${configBancoTranspetroV138().nome}`,
                     chavePontosQuestaoBancoTAA(questao)
                 )
                 : false;
@@ -43224,11 +43625,13 @@ limparArenaLocalFarol = function(){
         }
 
         if(estadoBancoTAA2026.origem === "portugues" && estadoBancoTAA2026.eixoMenu === "portugues"){
-            if(typeof window.voltarMenuTaifeiroFarol === "function"){
-                window.voltarMenuTaifeiroFarol();
-            }else if(typeof mostrarTela === "function"){
-                mostrarTela("questoes");
-            }
+            const cfg = configBancoTranspetroV138();
+            if(typeof mostrarTela === "function") mostrarTela("questoes");
+            setTimeout(() => {
+                if(typeof renderizarTrilhaEstudo === "function"){
+                    renderizarTrilhaEstudo(cfg.trilha);
+                }
+            }, 0);
             return;
         }
 
@@ -43238,12 +43641,11 @@ limparArenaLocalFarol = function(){
             return;
         }
 
+        const cfg = configBancoTranspetroV138();
         if(typeof mostrarTela === "function") mostrarTela("questoes");
         setTimeout(() => {
-            if(typeof window.abrirCargoConcursoFarol === "function"){
-                window.abrirCargoConcursoFarol("transpetroTaifeiro");
-            }else if(typeof renderizarTrilhaEstudo === "function"){
-                renderizarTrilhaEstudo("transpetroTaifeiro");
+            if(typeof renderizarTrilhaEstudo === "function"){
+                renderizarTrilhaEstudo(cfg.trilha);
             }
         }, 0);
     };
@@ -43584,7 +43986,12 @@ limparArenaLocalFarol = function(){
 
     if(abrirTelaJogosOriginalV135){
         window.abrirTelaJogosFarol = function(){
-            window.prepararJogosTaifeiroFarolV135(false);
+            const trilhaAtual = localStorage.getItem("farol_trilha_atual") || "";
+
+            if(!["transpetroCozinheiro", "transpetroAuxiliarSaude"].includes(trilhaAtual)){
+                window.prepararJogosTaifeiroFarolV135(false);
+            }
+
             if(typeof atualizarContextoJogosFarolV136 === "function"){
                 atualizarContextoJogosFarolV136();
             }
@@ -43599,4 +44006,372 @@ limparArenaLocalFarol = function(){
             }
         }, 0);
     });
+})();
+
+
+// ==========================================================
+// FAROL V138 — CZA / ASA — BANCO COMPARTILHADO TRANSPETRO
+// ==========================================================
+(function(){
+    "use strict";
+
+    const CFG_CARGOS_V138 = {
+        transpetroCozinheiro: {
+            cargoAcesso: "cozinheiro",
+            nome: "Cozinheiro",
+            nomeCompleto: "Cozinheiro — CZA",
+            sigla: "CZA",
+            icone: "👨‍🍳",
+            bancoGlobal: "questoesCozinheiroBanco2026",
+            slug: "cozinheiro"
+        },
+        transpetroAuxiliarSaude: {
+            cargoAcesso: "auxiliarSaude",
+            nome: "Auxiliar de Saúde",
+            nomeCompleto: "Auxiliar de Saúde — ASA",
+            sigla: "ASA",
+            icone: "🩺",
+            bancoGlobal: "questoesAuxiliarSaudeBanco2026",
+            slug: "auxiliar-saude"
+        }
+    };
+
+    function cfgV138(chave){
+        return CFG_CARGOS_V138[String(chave || "")] || null;
+    }
+
+    function bancoCargoV138(chave){
+        const cfg = cfgV138(chave);
+        if(!cfg) return [];
+        const banco = window[cfg.bancoGlobal];
+        return Array.isArray(banco) ? banco : [];
+    }
+
+    function adaptarSimuladoV138(q){
+        if(!q) return null;
+        return {
+            ...q,
+            pergunta: q.pergunta || q.enunciado || "",
+            texto: q.texto || q.textoBase || "",
+            feedbackAcerto: q.feedbackAcerto || q.explicacaoCorreta || q.comentario || "",
+            feedbackErro: q.feedbackErro || q.explicacaoCorreta || q.comentario || "",
+            explicacao: q.explicacao || q.explicacaoCorreta || q.comentario || "",
+            dicaBanca: q.dicaBanca || q.dicaMacete || "",
+            subtopico: q.subtopico || q.topicoEdital || q.assunto || "Transpetro"
+        };
+    }
+
+    function acessoV138(chave){
+        const cfg = cfgV138(chave);
+        return !!(
+            cfg &&
+            typeof window.temAcessoCargoFarol === "function" &&
+            window.temAcessoCargoFarol("transpetro2026", cfg.cargoAcesso)
+        );
+    }
+
+    window.iniciarSimuladoCargoCompartilhadoV138 = function(chave, tipo){
+        const cfg = cfgV138(chave);
+        if(!cfg || !acessoV138(chave)){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Você não tem acesso a este cargo.");
+            }
+            return false;
+        }
+
+        const banco = bancoCargoV138(chave);
+        const portugues = banco
+            .filter(q =>
+                String(q && (q.disciplina || q.eixo) || "").trim() === "Língua Portuguesa"
+            )
+            .map(adaptarSimuladoV138)
+            .filter(Boolean);
+
+        const especificas = banco
+            .filter(q =>
+                q &&
+                ["Arquitetura Naval", "Legislação Marítima e Ambiental", "Conscientização sobre proteção de navio"]
+                    .includes(String(q.eixo || "").trim())
+            )
+            .map(adaptarSimuladoV138)
+            .filter(Boolean);
+
+        localStorage.setItem("farol_concurso_simulados", "transpetro2026");
+        localStorage.setItem("farol_concurso_atual", "transpetro2026");
+        localStorage.setItem("farol_trilha_atual", chave);
+
+        const modo = String(tipo || "");
+
+        if(modo === "portugues"){
+            if(portugues.length < 20){
+                mostrarToast(`Português possui apenas ${portugues.length} questões carregadas.`);
+                return false;
+            }
+
+            iniciarSimuladoPersonalizado(
+                portugues,
+                20,
+                `transpetro:${cfg.slug}:portugues`
+            );
+            return true;
+        }
+
+        if(modo === "especificas"){
+            if(especificas.length < 30){
+                mostrarToast(`Específicas possui apenas ${especificas.length} questões carregadas.`);
+                return false;
+            }
+
+            iniciarSimuladoPersonalizado(
+                especificas,
+                30,
+                `transpetro:${cfg.slug}:especificas`
+            );
+            return true;
+        }
+
+        if(modo === "completo"){
+            if(portugues.length < 20 || especificas.length < 30){
+                mostrarToast("Ainda não há questões suficientes para montar o simulado completo.");
+                return false;
+            }
+
+            const pt = selecionarQuestoesBalanceadasPorSubtopico(portugues, 20);
+            const esp = selecionarQuestoesBalanceadasPorSubtopico(especificas, 30);
+            const prova = embaralharArray([...pt, ...esp]);
+
+            iniciarSimuladoPersonalizado(
+                prova,
+                50,
+                `transpetro:${cfg.slug}:completo2026`
+            );
+            return true;
+        }
+
+        return false;
+    };
+
+    window.continuarBancoTranspetroDoInicioFarolV138 = async function(continuacao){
+        const dados = continuacao || {};
+        const trilha = String(dados.trilha || "transpetroTaifeiro");
+
+        if(typeof window.carregarAcessosConcursosFarol === "function"){
+            await window.carregarAcessosConcursosFarol({ renderizar: false });
+        }
+
+        localStorage.setItem("farol_concurso_atual", "transpetro2026");
+        localStorage.setItem("farol_trilha_atual", trilha);
+
+        if(typeof window.abrirBancoQuestoesTaifeiroFarol === "function"){
+            const origem =
+                String(dados.eixoMenu || "") === "portugues"
+                    ? "portugues"
+                    : "especificas";
+
+            const abriu = window.abrirBancoQuestoesTaifeiroFarol(origem);
+            if(abriu === false) return false;
+
+            setTimeout(() => {
+                if(
+                    dados.eixoMenu &&
+                    typeof window.selecionarEixoBancoTaifeiroFarol === "function"
+                ){
+                    window.selecionarEixoBancoTaifeiroFarol(dados.eixoMenu);
+                }
+
+                setTimeout(() => {
+                    if(typeof window.continuarTopicoBancoTaifeiroFarol === "function"){
+                        window.continuarTopicoBancoTaifeiroFarol(dados.topico);
+                    }
+                }, 0);
+            }, 0);
+        }
+
+        return true;
+    };
+
+    function slugJogoV138(valor){
+        return String(valor || "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "_")
+            .replace(/^_+|_+$/g, "");
+    }
+
+    function limparDisciplinasJogoCargoV138(){
+        if(typeof disciplinasJogoFarol === "undefined") return;
+        Object.keys(disciplinasJogoFarol).forEach(chave => {
+            delete disciplinasJogoFarol[chave];
+        });
+    }
+
+    window.prepararJogosCargoCompartilhadoTranspetroV138 = function(chave){
+        const cfg = cfgV138(chave);
+        if(
+            !cfg ||
+            typeof disciplinasJogoFarol === "undefined" ||
+            typeof bancoQuestoes === "undefined"
+        ){
+            return false;
+        }
+
+        const banco = bancoCargoV138(chave);
+        if(!banco.length) return false;
+
+        limparDisciplinasJogoCargoV138();
+
+        const grupos = [
+            ["portugues", "📘 Língua Portuguesa", "Língua Portuguesa"],
+            ["arquitetura", "⚓ Arquitetura Naval", "Arquitetura Naval"],
+            ["legislacao", "⚖️ Legislação Marítima e Ambiental", "Legislação Marítima e Ambiental"],
+            ["protecao", "🛡️ Proteção de Navio", "Conscientização sobre proteção de navio"]
+        ];
+
+        const todosAssuntos = [];
+
+        grupos.forEach(([grupo, nome, eixo]) => {
+            const porTopico = {};
+
+            banco
+                .filter(q => {
+                    if(eixo === "Língua Portuguesa"){
+                        return String(q && (q.disciplina || q.eixo) || "").trim() === "Língua Portuguesa";
+                    }
+                    return String(q && q.eixo || "").trim() === eixo;
+                })
+                .forEach(q => {
+                    const topico = String(q.topicoEdital || q.assunto || "geral");
+                    if(!porTopico[topico]) porTopico[topico] = [];
+                    porTopico[topico].push({
+                        ...q,
+                        pergunta: q.pergunta || q.enunciado || ""
+                    });
+                });
+
+            const chavesAssunto = [];
+
+            Object.entries(porTopico).forEach(([topico, questoes]) => {
+                const assunto =
+                    `tr2026_${cfg.sigla.toLowerCase()}_${grupo}_${slugJogoV138(topico)}`;
+
+                bancoQuestoes[assunto] = questoes;
+                chavesAssunto.push(assunto);
+                todosAssuntos.push(assunto);
+            });
+
+            if(chavesAssunto.length){
+                disciplinasJogoFarol[`${cfg.sigla.toLowerCase()}_${grupo}`] = {
+                    nome: `${nome} — ${cfg.sigla}`,
+                    assuntos: chavesAssunto
+                };
+            }
+        });
+
+        disciplinasJogoFarol.todas = {
+            nome: `🗺️ Todo o ${cfg.nome}`,
+            assuntos: todosAssuntos
+        };
+
+        localStorage.setItem("farol_concurso_atual", "transpetro2026");
+        localStorage.setItem("farol_trilha_atual", chave);
+
+        return todosAssuntos.length > 0;
+    };
+})();
+
+
+// ==========================================================
+// FAROL V140 — COZINHEIRO — PROVAS ANTERIORES 2018/2023
+// ==========================================================
+(function(){
+    "use strict";
+
+    function temAcessoCozinheiroV140(){
+        return typeof window.temAcessoCargoFarol === "function" &&
+            window.temAcessoCargoFarol("transpetro2026", "cozinheiro");
+    }
+
+    async function validarAcessoCozinheiroV140(){
+        if(typeof window.carregarAcessosConcursosFarol === "function"){
+            await window.carregarAcessosConcursosFarol({renderizar:false});
+        }
+        if(!temAcessoCozinheiroV140()){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Seu acesso ainda não inclui Cozinheiro — Transpetro MAR.");
+            }
+            return false;
+        }
+        return true;
+    }
+
+    function rotulosCZAProvasV140(){
+        const sec=document.getElementById("questoesAnterioresTaifeiro");
+        if(sec){
+            const etapa=sec.querySelector(".etapa-fluxo-provas-v30");
+            if(etapa) etapa.textContent="Transpetro MAR • Cozinheiro — CZA";
+            sec.querySelectorAll(".prova-comentada-transpetro-card h3").forEach((h,i)=>{
+                h.textContent=`👨‍🍳 Cozinheiro — ${i===0?2018:2023}`;
+            });
+            const botoes=sec.querySelectorAll(".btn-iniciar-prova-comentada-transpetro");
+            if(botoes[0]) botoes[0].setAttribute("onclick","abrirDisciplinasProvaComentadaTaifeiroFarol(2018)");
+            if(botoes[1]) botoes[1].setAttribute("onclick","abrirDisciplinasProvaComentadaTaifeiroFarol(2023)");
+        }
+        const prova=document.getElementById("provaComentadaTaifeiro");
+        if(prova){
+            const selo=prova.querySelector(".selo-prova-comentada-taifeiro");
+            if(selo) selo.textContent="👨‍🍳 Transpetro MAR • Cozinheiro — CZA";
+            const demo=document.getElementById("avisoDemoProvaComentadaTaifeiro");
+            if(demo) demo.style.display="none";
+        }
+    }
+
+    window.abrirQuestoesAnterioresCozinheiroV140=async function(){
+        if(!(await validarAcessoCozinheiroV140())) return false;
+        localStorage.setItem("farol_concurso_atual","transpetro2026");
+        localStorage.setItem("farol_trilha_atual","transpetroCozinheiro");
+        if(typeof mostrarTela === "function") mostrarTela("questoesAnterioresTaifeiro");
+        setTimeout(()=>{
+            rotulosCZAProvasV140();
+            if(typeof window.voltarAnosProvaComentadaTaifeiroFarol === "function"){
+                window.voltarAnosProvaComentadaTaifeiroFarol();
+            }
+        },0);
+        return true;
+    };
+
+    window.abrirProvasAnterioresCozinheiroV140=async function(){
+        if(!(await validarAcessoCozinheiroV140())) return false;
+        localStorage.setItem("farol_concurso_atual","transpetro2026");
+        localStorage.setItem("farol_trilha_atual","transpetroCozinheiro");
+        if(typeof mostrarTela === "function") mostrarTela("provasAnteriores",{semHistorico:true});
+        setTimeout(()=>{
+            if(typeof window.selecionarCargoProvasFarol === "function"){
+                window.selecionarCargoProvasFarol("cozinheiro");
+            }
+        },25);
+        return true;
+    };
+
+    const abrirDiscAntesV140=window.abrirDisciplinasProvaComentadaTaifeiroFarol;
+    if(typeof abrirDiscAntesV140 === "function"){
+        window.abrirDisciplinasProvaComentadaTaifeiroFarol=function(){
+            const r=abrirDiscAntesV140.apply(this,arguments);
+            if(localStorage.getItem("farol_trilha_atual")==="transpetroCozinheiro"){
+                setTimeout(rotulosCZAProvasV140,0);
+            }
+            return r;
+        };
+    }
+
+    const iniciarAntesV140=window.iniciarProvaComentadaTaifeiroFarol;
+    if(typeof iniciarAntesV140 === "function"){
+        window.iniciarProvaComentadaTaifeiroFarol=function(){
+            const r=iniciarAntesV140.apply(this,arguments);
+            if(localStorage.getItem("farol_trilha_atual")==="transpetroCozinheiro"){
+                setTimeout(rotulosCZAProvasV140,0);
+            }
+            return r;
+        };
+    }
 })();
