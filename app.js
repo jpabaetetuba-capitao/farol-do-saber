@@ -24736,20 +24736,6 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             return;
         }
 
-        if(destino === "questoesAnteriores" && cfg.sigla === "CZA"){
-            if(typeof window.abrirQuestoesAnterioresCozinheiroV140 === "function"){
-                return window.abrirQuestoesAnterioresCozinheiroV140();
-            }
-            return false;
-        }
-
-        if(destino === "provasAnteriores" && cfg.sigla === "CZA"){
-            if(typeof window.abrirProvasAnterioresCozinheiroV140 === "function"){
-                return window.abrirProvasAnterioresCozinheiroV140();
-            }
-            return false;
-        }
-
         if(destino === "erros"){
             if(typeof window.migrarCadernoTaifeiroV135 === "function"){
                 window.migrarCadernoTaifeiroV135();
@@ -25039,6 +25025,28 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
         if(destino === "simulados"){
             renderizarSimuladosCargoCompartilhadoV138(chave);
             return true;
+        }
+
+        if(destino === "questoesAnteriores" && cfg.sigla === "CZA"){
+            if(typeof window.abrirQuestoesAnterioresCozinheiroV140 === "function"){
+                return window.abrirQuestoesAnterioresCozinheiroV140();
+            }
+
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Não foi possível abrir as questões de provas anteriores do Cozinheiro.");
+            }
+            return false;
+        }
+
+        if(destino === "provasAnteriores" && cfg.sigla === "CZA"){
+            if(typeof window.abrirProvasAnterioresCozinheiroV140 === "function"){
+                return window.abrirProvasAnterioresCozinheiroV140();
+            }
+
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Não foi possível abrir as provas anteriores do Cozinheiro.");
+            }
+            return false;
         }
 
         if(destino === "erros"){
