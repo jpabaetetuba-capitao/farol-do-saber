@@ -45837,7 +45837,59 @@ limparArenaLocalFarol = function(){
         `;
     }
 
-    function renderizarCenaJornadaV147(){
+    // V148 — foco inteligente da Jornada.
+    // Evita voltar ao topo ao escolher uma rota ou responder um desafio.
+    function focarElementoJornadaV148(seletor, bloco = "center"){
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                const alvo = document.querySelector(seletor);
+                if(!alvo){
+                    return;
+                }
+
+                alvo.scrollIntoView({
+                    behavior: "smooth",
+                    block: bloco,
+                    inline: "nearest"
+                });
+            });
+        });
+    }
+
+    function aplicarFocoJornadaV148(tipoFoco){
+        if(tipoFoco === "consequencia"){
+            focarElementoJornadaV148(
+                "#jornadaHistoriaAbaetetubaConteudo .jornada-consequencia-v147",
+                "center"
+            );
+            return;
+        }
+
+        if(tipoFoco === "erro"){
+            focarElementoJornadaV148(
+                "#jornadaHistoriaAbaetetubaConteudo .jornada-feedback-erro-v147",
+                "center"
+            );
+            return;
+        }
+
+        if(tipoFoco === "acerto"){
+            focarElementoJornadaV148(
+                "#jornadaHistoriaAbaetetubaConteudo .jornada-feedback-acerto-v147",
+                "center"
+            );
+            return;
+        }
+
+        if(tipoFoco === "novaCena"){
+            focarElementoJornadaV148(
+                "#jornadaHistoriaAbaetetubaConteudo .jornada-cena-v147",
+                "start"
+            );
+        }
+    }
+
+    function renderizarCenaJornadaV147(tipoFoco = ""){
         const area = obterAreaJornadaV147();
         if(!area){
             return;
@@ -45865,7 +45917,7 @@ limparArenaLocalFarol = function(){
         }
 
         area.innerHTML = html;
-        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+        aplicarFocoJornadaV148(tipoFoco);
     }
 
     window.abrirJornadaHistoriaAbaetetuba = function(){
@@ -45900,14 +45952,14 @@ limparArenaLocalFarol = function(){
 
         estadoJornadaHistoriaV147.iniciado = true;
         salvarEstadoJornadaV147();
-        renderizarCenaJornadaV147();
+        renderizarCenaJornadaV147("novaCena");
     };
 
     window.reiniciarCapituloJornadaHistoriaAbaetetuba = function(){
         estadoJornadaHistoriaV147 = novoEstadoJornadaV147();
         estadoJornadaHistoriaV147.iniciado = true;
         salvarEstadoJornadaV147();
-        renderizarCenaJornadaV147();
+        renderizarCenaJornadaV147("novaCena");
     };
 
     window.escolherCaminhoJornadaHistoriaAbaetetuba = function(cenaId, valor){
@@ -45927,7 +45979,7 @@ limparArenaLocalFarol = function(){
             consequencia: opcao.consequencia
         };
         salvarEstadoJornadaV147();
-        renderizarCenaJornadaV147();
+        renderizarCenaJornadaV147("consequencia");
     };
 
     window.responderDesafioJornadaHistoriaAbaetetuba = function(cenaId, indice){
@@ -45965,7 +46017,9 @@ limparArenaLocalFarol = function(){
         }
 
         salvarEstadoJornadaV147();
-        renderizarCenaJornadaV147();
+        renderizarCenaJornadaV147(
+            registro.concluida === true ? "acerto" : "erro"
+        );
     };
 
     window.avancarJornadaHistoriaAbaetetuba = function(){
@@ -46000,6 +46054,6 @@ limparArenaLocalFarol = function(){
             estadoJornadaHistoriaV147.cena + 1
         );
         salvarEstadoJornadaV147();
-        renderizarCenaJornadaV147();
+        renderizarCenaJornadaV147("novaCena");
     };
 })();
