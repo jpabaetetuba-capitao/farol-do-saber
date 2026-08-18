@@ -18269,3 +18269,57 @@ body.efeito-ondas-v65 #conteudoPerfilAluno .perfil-cabecalho,
         margin:6px 0 !important;
     }
 }
+
+
+/* ==========================================================
+   FAROL V148 — SUPORTE PRIVADO ALUNO ↔ ADMIN
+========================================================== */
+.atalho-suporte-farol-v148{position:relative}
+.badge-suporte-aluno-v148,
+.contador-suporte-admin-v148{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-width:20px;height:20px;padding:0 6px;margin-left:6px;
+    border-radius:999px;background:#d32f2f;color:#fff;
+    font-size:11px;font-weight:900;line-height:1;
+}
+.badge-suporte-aluno-v148[hidden],.contador-suporte-admin-v148[hidden]{display:none!important}
+.suporte-aluno-farol-v148{max-width:820px;margin:0 auto;background:rgba(255,255,255,.96)}
+.cabecalho-suporte-aluno-v148{display:flex;gap:16px;align-items:center;margin:10px 0 16px}
+.icone-suporte-aluno-v148{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;background:#e3f2fd;font-size:32px}
+.cabecalho-suporte-aluno-v148 span{font-size:12px;font-weight:900;letter-spacing:.08em;color:#087f5b}
+.cabecalho-suporte-aluno-v148 h2{margin:4px 0;color:#0d4770}
+.cabecalho-suporte-aluno-v148 p{margin:0;color:#60727c;line-height:1.45}
+.privacidade-suporte-v148{padding:12px 14px;margin:12px 0;border-radius:12px;background:#eef8f2;border-left:5px solid #087f5b;color:#315c4b;font-size:14px;line-height:1.45}
+.status-suporte-aluno-v148{min-height:22px;margin:8px 0;font-size:14px;font-weight:700;color:#52636d}
+.status-suporte-aluno-v148.erro{color:#b3261e}.status-suporte-aluno-v148.sucesso{color:#087f5b}
+.lista-mensagens-suporte-v148{height:390px;overflow-y:auto;padding:16px;border-radius:18px;background:#eef3f7;border:1px solid #d2e0e9;display:flex;flex-direction:column;gap:12px}
+.estado-suporte-v148,.estado-suporte-admin-v148{margin:auto;text-align:center;color:#667b87;line-height:1.5;padding:22px}
+.estado-suporte-v148 strong,.estado-suporte-v148 span{display:block;margin:5px 0}
+.mensagem-suporte-v148{max-width:82%;padding:12px 14px;border-radius:16px;box-shadow:0 2px 7px rgba(0,0,0,.07)}
+.mensagem-suporte-v148.aluno{align-self:flex-end;background:#dff5e9;border-bottom-right-radius:5px}
+.mensagem-suporte-v148.admin{align-self:flex-start;background:#fff;border-bottom-left-radius:5px;border-left:4px solid #1e88e5}
+.cabecalho-mensagem-suporte-v148{display:flex;gap:12px;justify-content:space-between;align-items:center;margin-bottom:6px}
+.cabecalho-mensagem-suporte-v148 strong{font-size:13px;color:#0d4770}.cabecalho-mensagem-suporte-v148 small{font-size:11px;color:#72828b}
+.mensagem-suporte-v148 p{margin:0;line-height:1.5;overflow-wrap:anywhere;color:#263238}
+.form-suporte-aluno-v148,.form-resposta-suporte-admin-v148{margin-top:14px}
+.form-suporte-aluno-v148 label,.form-resposta-suporte-admin-v148 label{display:block;font-weight:800;color:#0d4770;margin-bottom:7px}
+.form-suporte-aluno-v148 textarea,.form-resposta-suporte-admin-v148 textarea{width:100%;resize:vertical;min-height:92px;padding:12px;border:1px solid #b8cbd6;border-radius:12px;background:#fff;font:inherit;line-height:1.45}
+.rodape-form-suporte-v148{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:8px}.rodape-form-suporte-v148 small{color:#70838d}
+
+.suporte-admin-farol-v148{margin-top:18px}
+.cabecalho-suporte-admin-v148{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:14px}.cabecalho-suporte-admin-v148 h3{color:#0d4770;margin:0 0 4px}.cabecalho-suporte-admin-v148 p{margin:0;color:#647984}
+.filtro-suporte-admin-v148{display:flex;gap:14px;align-items:center;margin:12px 0 16px;padding:12px;border-radius:12px;background:#f3f7fa}.filtro-suporte-admin-v148 input[type=search]{flex:1;min-width:220px;padding:11px;border:1px solid #c7d6df;border-radius:10px}.filtro-suporte-admin-v148 label{display:flex;gap:8px;align-items:center;font-weight:700;color:#425d6b;white-space:nowrap}
+.layout-suporte-admin-v148{display:grid;grid-template-columns:minmax(260px,36%) minmax(0,1fr);gap:16px;min-height:520px}
+.lista-conversas-suporte-admin-v148{max-height:650px;overflow-y:auto;padding:8px;background:#eef3f7;border-radius:15px;border:1px solid #d4e0e7}
+.card-conversa-suporte-admin-v148{display:block;width:100%;text-align:left;background:#fff;color:#263238;margin:0 0 8px;padding:13px;border-radius:12px;border:1px solid #d3dfe6;box-shadow:none}.card-conversa-suporte-admin-v148:hover{background:#f7fbff}.card-conversa-suporte-admin-v148.ativa{border-color:#1e88e5;box-shadow:0 0 0 2px rgba(30,136,229,.12)}.card-conversa-suporte-admin-v148.nova{border-left:5px solid #d32f2f}
+.topo-card-conversa-suporte-v148{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.topo-card-conversa-suporte-v148 strong{color:#0d4770}.topo-card-conversa-suporte-v148 small{font-size:10px;color:#73848d;white-space:nowrap}.card-conversa-suporte-admin-v148>span{display:block;margin:3px 0;font-size:12px;color:#657985}.card-conversa-suporte-admin-v148 p{margin:7px 0 0;font-size:13px;color:#435b67;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.detalhe-suporte-admin-v148{display:flex;flex-direction:column;padding:14px;background:#fff;border:1px solid #d4e0e7;border-radius:15px;min-width:0}.cabecalho-conversa-suporte-admin-v148{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:12px}.cabecalho-conversa-suporte-admin-v148 h3{margin:0;color:#0d4770}.cabecalho-conversa-suporte-admin-v148 p{margin:3px 0 0;color:#6a7d87;font-size:13px}.detalhe-suporte-admin-v148 .lista-mensagens-suporte-v148{height:360px}
+.form-resposta-suporte-admin-v148 button{float:right;margin-top:8px}
+
+@media(max-width:820px){
+    .layout-suporte-admin-v148{grid-template-columns:1fr}.lista-conversas-suporte-admin-v148{max-height:300px}.detalhe-suporte-admin-v148 .lista-mensagens-suporte-v148{height:330px}
+    .filtro-suporte-admin-v148{align-items:stretch;flex-direction:column}.filtro-suporte-admin-v148 label{white-space:normal}
+}
+@media(max-width:600px){
+    .suporte-aluno-farol-v148{padding:15px}.cabecalho-suporte-aluno-v148{align-items:flex-start}.icone-suporte-aluno-v148{width:52px;height:52px;font-size:26px;flex:0 0 auto}.lista-mensagens-suporte-v148{height:350px;padding:10px}.mensagem-suporte-v148{max-width:92%}.rodape-form-suporte-v148{align-items:stretch;flex-direction:column}.rodape-form-suporte-v148 button{width:100%;margin:0}.cabecalho-suporte-admin-v148{align-items:stretch;flex-direction:column}
+}

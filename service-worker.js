@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v147-2026-08-18-jornada-historia-abaetetuba";
+const CACHE_VERSION = "farol-v148-2026-08-18-suporte-privado";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 

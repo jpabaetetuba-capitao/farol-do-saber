@@ -29245,6 +29245,7 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
             provasAnteriores: "Provas Anteriores",
             provaComentadaTaifeiro: "Questões de Provas Anteriores — Taifeiro",
             chatGlobal: "Chat Geral",
+            suporteFarol: "Fale com o Suporte",
             forum: "Fórum"
         };
 
@@ -46056,4 +46057,318 @@ limparArenaLocalFarol = function(){
         salvarEstadoJornadaV147();
         renderizarCenaJornadaV147("novaCena");
     };
+})();
+
+
+// ==========================================================
+// FAROL V148 — FALE COM O SUPORTE — ÁREA PRIVADA DO ALUNO
+// ==========================================================
+(function(){
+    "use strict";
+
+    let cancelarMensagensSuporteAlunoV148 = null;
+    let cancelarBadgeSuporteAlunoV148 = null;
+
+    function authSuporteAlunoV148(){
+        try{
+            return (window.farolFirebase && window.farolFirebase.auth) ||
+                (typeof auth !== "undefined" ? auth : null);
+        }catch(erro){
+            return null;
+        }
+    }
+
+    function dbSuporteAlunoV148(){
+        try{
+            return (window.farolFirebase && window.farolFirebase.db) ||
+                (typeof db !== "undefined" ? db : null);
+        }catch(erro){
+            return null;
+        }
+    }
+
+    function usuarioSuporteAlunoV148(){
+        const authAtual = authSuporteAlunoV148();
+        return authAtual && authAtual.currentUser ? authAtual.currentUser : null;
+    }
+
+    function escaparSuporteV148(valor){
+        if(typeof window.escaparHTML === "function"){
+            return window.escaparHTML(String(valor || ""));
+        }
+        return String(valor || "")
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("'", "&#039;");
+    }
+
+    function nomeAlunoSuporteV148(usuario){
+        const nomeCompleto = String(
+            localStorage.getItem("usuarioNomeCompleto") ||
+            localStorage.getItem("usuarioForum") ||
+            (usuario && usuario.displayName) ||
+            ""
+        ).trim();
+
+        if(nomeCompleto) return nomeCompleto;
+        return String(usuario && usuario.email || "Aluno").split("@")[0] || "Aluno";
+    }
+
+    function horarioSuporteV148(valor){
+        const numero = Number(valor || 0);
+        if(!numero) return "";
+        try{
+            return new Date(numero).toLocaleString("pt-BR", {
+                day: "2-digit",
+                month: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit"
+            });
+        }catch(erro){
+            return "";
+        }
+    }
+
+    function statusSuporteAlunoV148(texto, tipo){
+        const area = document.getElementById("statusSuporteAlunoFarolV148");
+        if(!area) return;
+        area.textContent = texto || "";
+        area.className = "status-suporte-aluno-v148" + (tipo ? ` ${tipo}` : "");
+    }
+
+    function atualizarBadgeSuporteAlunoV148(temNovaResposta){
+        const badge = document.getElementById("badgeSuporteAlunoFarolV148");
+        if(!badge) return;
+        badge.hidden = !temNovaResposta;
+        badge.textContent = temNovaResposta ? "1" : "";
+    }
+
+    function observarBadgeSuporteAlunoV148(){
+        if(cancelarBadgeSuporteAlunoV148){
+            cancelarBadgeSuporteAlunoV148();
+            cancelarBadgeSuporteAlunoV148 = null;
+        }
+
+        const usuario = usuarioSuporteAlunoV148();
+        const banco = dbSuporteAlunoV148();
+        if(!usuario || !banco){
+            atualizarBadgeSuporteAlunoV148(false);
+            return;
+        }
+
+        cancelarBadgeSuporteAlunoV148 = banco
+            .collection("suporteFarol")
+            .doc(usuario.uid)
+            .onSnapshot(doc => {
+                const dados = doc.exists ? (doc.data() || {}) : {};
+                atualizarBadgeSuporteAlunoV148(dados.temNovaResposta === true);
+            }, erro => {
+                console.warn("Não foi possível acompanhar respostas do suporte:", erro);
+                atualizarBadgeSuporteAlunoV148(false);
+            });
+    }
+
+    function renderizarMensagensSuporteAlunoV148(snapshot){
+        const area = document.getElementById("listaMensagensSuporteAlunoV148");
+        if(!area) return;
+
+        if(!snapshot || snapshot.empty){
+            area.innerHTML = `
+                <div class="estado-suporte-v148">
+                    <strong>👋 Olá! Como podemos ajudar?</strong>
+                    <span>Envie sua primeira mensagem para o suporte do Farol.</span>
+                </div>
+            `;
+            return;
+        }
+
+        let html = "";
+        snapshot.forEach(doc => {
+            const msg = doc.data() || {};
+            const admin = msg.remetente === "admin";
+            html += `
+                <article class="mensagem-suporte-v148 ${admin ? "admin" : "aluno"}">
+                    <div class="cabecalho-mensagem-suporte-v148">
+                        <strong>${admin ? "🗼 Suporte Farol" : "👤 Você"}</strong>
+                        <small>${escaparSuporteV148(horarioSuporteV148(msg.criadoEm))}</small>
+                    </div>
+                    <p>${escaparSuporteV148(msg.texto).replace(/\n/g, "<br>")}</p>
+                </article>
+            `;
+        });
+        area.innerHTML = html;
+        requestAnimationFrame(() => { area.scrollTop = area.scrollHeight; });
+    }
+
+    async function marcarRespostaSuporteComoLidaV148(){
+        const usuario = usuarioSuporteAlunoV148();
+        const banco = dbSuporteAlunoV148();
+        if(!usuario || !banco) return;
+
+        try{
+            const ref = banco.collection("suporteFarol").doc(usuario.uid);
+            const doc = await ref.get();
+            if(doc.exists && doc.data() && doc.data().temNovaResposta === true){
+                await ref.update({ temNovaResposta: false });
+            }
+        }catch(erro){
+            console.warn("Não foi possível marcar a resposta como lida:", erro);
+        }
+    }
+
+    function iniciarConversaSuporteAlunoV148(){
+        if(cancelarMensagensSuporteAlunoV148){
+            cancelarMensagensSuporteAlunoV148();
+            cancelarMensagensSuporteAlunoV148 = null;
+        }
+
+        const usuario = usuarioSuporteAlunoV148();
+        const banco = dbSuporteAlunoV148();
+        const area = document.getElementById("listaMensagensSuporteAlunoV148");
+
+        if(!usuario || !banco){
+            if(area){
+                area.innerHTML = '<div class="estado-suporte-v148">Entre na sua conta para falar com o suporte.</div>';
+            }
+            return;
+        }
+
+        statusSuporteAlunoV148("", "");
+        cancelarMensagensSuporteAlunoV148 = banco
+            .collection("suporteFarol")
+            .doc(usuario.uid)
+            .collection("mensagens")
+            .orderBy("criadoEm", "asc")
+            .onSnapshot(renderizarMensagensSuporteAlunoV148, erro => {
+                console.error("Erro ao abrir conversa de suporte:", erro);
+                if(area){
+                    area.innerHTML = '<div class="estado-suporte-v148 erro">Não foi possível carregar a conversa.</div>';
+                }
+            });
+
+        marcarRespostaSuporteComoLidaV148();
+    }
+
+    window.abrirSuporteAlunoFarol = function(){
+        const usuario = usuarioSuporteAlunoV148();
+        if(!usuario){
+            if(typeof window.mostrarToast === "function"){
+                window.mostrarToast("Entre na sua conta para falar com o suporte.");
+            }
+            if(typeof window.mostrarTela === "function") window.mostrarTela("login");
+            return;
+        }
+
+        if(typeof window.mostrarTela === "function"){
+            window.mostrarTela("suporteFarol");
+        }
+        iniciarConversaSuporteAlunoV148();
+    };
+
+    window.fecharSuporteAlunoFarol = function(){
+        if(cancelarMensagensSuporteAlunoV148){
+            cancelarMensagensSuporteAlunoV148();
+            cancelarMensagensSuporteAlunoV148 = null;
+        }
+        if(typeof window.mostrarTela === "function") window.mostrarTela("inicio");
+    };
+
+    window.enviarMensagemSuporteFarol = async function(){
+        const usuario = usuarioSuporteAlunoV148();
+        const banco = dbSuporteAlunoV148();
+        const campo = document.getElementById("mensagemSuporteAlunoV148");
+        const botao = document.getElementById("btnEnviarSuporteAlunoV148");
+        const texto = String(campo ? campo.value : "").trim();
+
+        if(!usuario || !banco){
+            statusSuporteAlunoV148("Sua sessão não está disponível. Entre novamente.", "erro");
+            return;
+        }
+        if(!texto){
+            statusSuporteAlunoV148("Digite uma mensagem antes de enviar.", "erro");
+            if(campo) campo.focus();
+            return;
+        }
+        if(texto.length > 3000){
+            statusSuporteAlunoV148("A mensagem deve ter no máximo 3.000 caracteres.", "erro");
+            return;
+        }
+
+        if(botao){
+            botao.disabled = true;
+            botao.textContent = "Enviando...";
+        }
+        statusSuporteAlunoV148("", "");
+
+        const conversaRef = banco.collection("suporteFarol").doc(usuario.uid);
+        const mensagemRef = conversaRef.collection("mensagens").doc();
+        const agora = Date.now();
+        const nome = nomeAlunoSuporteV148(usuario);
+        const email = String(usuario.email || "").trim().toLowerCase();
+
+        try{
+            await banco.runTransaction(async transacao => {
+                const conversaDoc = await transacao.get(conversaRef);
+
+                transacao.set(mensagemRef, {
+                    uid: usuario.uid,
+                    remetente: "aluno",
+                    autorNome: nome,
+                    autorEmail: email,
+                    texto,
+                    criadoEm: agora
+                });
+
+                if(conversaDoc.exists){
+                    transacao.update(conversaRef, {
+                        nome,
+                        ultimaMensagem: texto.slice(0, 180),
+                        ultimaMensagemRemetente: "aluno",
+                        atualizadoEm: agora,
+                        temNovaAluno: true
+                    });
+                }else{
+                    transacao.set(conversaRef, {
+                        uid: usuario.uid,
+                        nome,
+                        email,
+                        ultimaMensagem: texto.slice(0, 180),
+                        ultimaMensagemRemetente: "aluno",
+                        criadoEm: agora,
+                        atualizadoEm: agora,
+                        temNovaAluno: true,
+                        temNovaResposta: false
+                    });
+                }
+            });
+
+            if(campo) campo.value = "";
+            statusSuporteAlunoV148("Mensagem enviada ao suporte.", "sucesso");
+        }catch(erro){
+            console.error("Erro ao enviar mensagem ao suporte:", erro);
+            statusSuporteAlunoV148("Não foi possível enviar a mensagem. Tente novamente.", "erro");
+        }finally{
+            if(botao){
+                botao.disabled = false;
+                botao.textContent = "📤 Enviar mensagem";
+            }
+        }
+    };
+
+    const authAtual = authSuporteAlunoV148();
+    if(authAtual && typeof authAtual.onAuthStateChanged === "function"){
+        authAtual.onAuthStateChanged(usuario => {
+            if(usuario){
+                setTimeout(observarBadgeSuporteAlunoV148, 200);
+            }else{
+                if(cancelarBadgeSuporteAlunoV148){
+                    cancelarBadgeSuporteAlunoV148();
+                    cancelarBadgeSuporteAlunoV148 = null;
+                }
+                atualizarBadgeSuporteAlunoV148(false);
+            }
+        });
+    }
 })();

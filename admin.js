@@ -3951,3 +3951,375 @@
         window.carregarNovidadesAdminV68();
     };
 })();
+
+
+// ==========================================================
+// FAROL V148 — SUPORTE PRIVADO — PAINEL DO ADMINISTRADOR
+// ==========================================================
+(function(){
+    "use strict";
+
+    let conversasSuporteAdminV148 = [];
+    let uidSuporteSelecionadoV148 = "";
+    let cancelarListaSuporteAdminV148 = null;
+    let cancelarMensagensSuporteAdminV148 = null;
+    let cancelarBadgeSuporteAdminV148 = null;
+
+    function bancoSuporteAdminV148(){
+        try{
+            return window.dbAdminFarol ||
+                (window.farolFirebase && window.farolFirebase.db) ||
+                (typeof db !== "undefined" ? db : null);
+        }catch(erro){
+            return null;
+        }
+    }
+
+    function authSuporteAdminV148(){
+        try{
+            return (window.farolFirebase && window.farolFirebase.auth) ||
+                (typeof auth !== "undefined" ? auth : null);
+        }catch(erro){
+            return null;
+        }
+    }
+
+    function textoSuporteAdminV148(valor){
+        if(typeof window.textoSeguroAdminFarol === "function"){
+            return window.textoSeguroAdminFarol(String(valor || ""));
+        }
+        return String(valor || "")
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("'", "&#039;");
+    }
+
+    function dataSuporteAdminV148(valor){
+        const numero = Number(valor || 0);
+        if(!numero) return "—";
+        try{
+            return new Date(numero).toLocaleString("pt-BR", {
+                day: "2-digit",
+                month: "2-digit",
+                year: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit"
+            });
+        }catch(erro){
+            return "—";
+        }
+    }
+
+    function atualizarContadorSuporteAdminV148(){
+        const total = conversasSuporteAdminV148.filter(item => item.temNovaAluno === true).length;
+        const badge = document.getElementById("contadorSuporteAdminV148");
+        if(!badge) return;
+        badge.hidden = total <= 0;
+        badge.textContent = String(total);
+    }
+
+    function renderizarListaSuporteAdminV148(){
+        const area = document.getElementById("listaConversasSuporteAdminV148");
+        if(!area) return;
+
+        const busca = String(document.getElementById("filtroSuporteAdminV148")?.value || "")
+            .trim().toLowerCase();
+        const somenteNovas = document.getElementById("somenteNovasSuporteAdminV148")?.checked === true;
+
+        const filtradas = conversasSuporteAdminV148.filter(item => {
+            if(somenteNovas && item.temNovaAluno !== true) return false;
+            if(!busca) return true;
+            const alvo = `${item.nome || ""} ${item.email || ""}`.toLowerCase();
+            return alvo.includes(busca);
+        });
+
+        if(!filtradas.length){
+            area.innerHTML = `
+                <div class="admin-lista-vazia">
+                    <span>💬</span>
+                    <h3>Nenhuma conversa encontrada</h3>
+                    <p>As mensagens enviadas pelos alunos aparecerão aqui.</p>
+                </div>
+            `;
+            return;
+        }
+
+        area.innerHTML = filtradas.map(item => `
+            <button
+                type="button"
+                class="card-conversa-suporte-admin-v148 ${item.uid === uidSuporteSelecionadoV148 ? "ativa" : ""} ${item.temNovaAluno === true ? "nova" : ""}"
+                onclick="abrirConversaSuporteAdminFarolV148('${textoSuporteAdminV148(item.uid)}')">
+                <div class="topo-card-conversa-suporte-v148">
+                    <strong>${item.temNovaAluno === true ? "🔴 " : ""}${textoSuporteAdminV148(item.nome || "Aluno")}</strong>
+                    <small>${textoSuporteAdminV148(dataSuporteAdminV148(item.atualizadoEm))}</small>
+                </div>
+                <span>${textoSuporteAdminV148(item.email || "")}</span>
+                <p>${textoSuporteAdminV148(item.ultimaMensagem || "Sem mensagem")}</p>
+            </button>
+        `).join("");
+    }
+
+    window.filtrarSuporteAdminFarolV148 = renderizarListaSuporteAdminV148;
+
+    function renderizarMensagensSuporteAdminV148(snapshot, aluno){
+        const area = document.getElementById("mensagensConversaSuporteAdminV148");
+        if(!area) return;
+
+        if(!snapshot || snapshot.empty){
+            area.innerHTML = '<div class="estado-suporte-admin-v148">Nenhuma mensagem nesta conversa.</div>';
+            return;
+        }
+
+        let html = "";
+        snapshot.forEach(doc => {
+            const msg = doc.data() || {};
+            const admin = msg.remetente === "admin";
+            html += `
+                <article class="mensagem-suporte-v148 ${admin ? "admin" : "aluno"}">
+                    <div class="cabecalho-mensagem-suporte-v148">
+                        <strong>${admin ? "🗼 Você / Suporte" : `👤 ${textoSuporteAdminV148(aluno.nome || "Aluno")}`}</strong>
+                        <small>${textoSuporteAdminV148(dataSuporteAdminV148(msg.criadoEm))}</small>
+                    </div>
+                    <p>${textoSuporteAdminV148(msg.texto || "").replace(/\n/g, "<br>")}</p>
+                </article>
+            `;
+        });
+        area.innerHTML = html;
+        requestAnimationFrame(() => { area.scrollTop = area.scrollHeight; });
+    }
+
+    window.abrirConversaSuporteAdminFarolV148 = async function(uid){
+        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()) return;
+
+        const aluno = conversasSuporteAdminV148.find(item => String(item.uid) === String(uid));
+        const banco = bancoSuporteAdminV148();
+        const detalhe = document.getElementById("detalheSuporteAdminV148");
+        if(!aluno || !banco || !detalhe) return;
+
+        uidSuporteSelecionadoV148 = String(uid);
+        renderizarListaSuporteAdminV148();
+
+        detalhe.innerHTML = `
+            <div class="cabecalho-conversa-suporte-admin-v148">
+                <div>
+                    <h3>👤 ${textoSuporteAdminV148(aluno.nome || "Aluno")}</h3>
+                    <p>${textoSuporteAdminV148(aluno.email || "")}</p>
+                </div>
+                <button type="button" onclick="fecharConversaSuporteAdminFarolV148()">✖ Fechar</button>
+            </div>
+            <div id="mensagensConversaSuporteAdminV148" class="lista-mensagens-suporte-v148">
+                <div class="estado-suporte-admin-v148">Carregando conversa...</div>
+            </div>
+            <div class="form-resposta-suporte-admin-v148">
+                <label for="respostaSuporteAdminV148">Responder ao aluno</label>
+                <textarea id="respostaSuporteAdminV148" rows="4" maxlength="3000" placeholder="Digite sua resposta..."></textarea>
+                <button id="btnResponderSuporteAdminV148" type="button" onclick="responderSuporteAdminFarolV148()">
+                    📤 Enviar resposta
+                </button>
+            </div>
+        `;
+
+        if(cancelarMensagensSuporteAdminV148){
+            cancelarMensagensSuporteAdminV148();
+            cancelarMensagensSuporteAdminV148 = null;
+        }
+
+        cancelarMensagensSuporteAdminV148 = banco
+            .collection("suporteFarol")
+            .doc(uidSuporteSelecionadoV148)
+            .collection("mensagens")
+            .orderBy("criadoEm", "asc")
+            .onSnapshot(snapshot => renderizarMensagensSuporteAdminV148(snapshot, aluno), erro => {
+                console.error("Erro ao carregar mensagens do suporte:", erro);
+                const area = document.getElementById("mensagensConversaSuporteAdminV148");
+                if(area) area.innerHTML = '<div class="estado-suporte-admin-v148 erro">Não foi possível carregar esta conversa.</div>';
+            });
+
+        try{
+            if(aluno.temNovaAluno === true){
+                await banco.collection("suporteFarol").doc(uidSuporteSelecionadoV148).update({ temNovaAluno: false });
+            }
+        }catch(erro){
+            console.warn("Não foi possível marcar a conversa como vista:", erro);
+        }
+    };
+
+    window.fecharConversaSuporteAdminFarolV148 = function(){
+        uidSuporteSelecionadoV148 = "";
+        if(cancelarMensagensSuporteAdminV148){
+            cancelarMensagensSuporteAdminV148();
+            cancelarMensagensSuporteAdminV148 = null;
+        }
+        const detalhe = document.getElementById("detalheSuporteAdminV148");
+        if(detalhe){
+            detalhe.innerHTML = '<div class="estado-suporte-admin-v148">Selecione um aluno para abrir a conversa.</div>';
+        }
+        renderizarListaSuporteAdminV148();
+    };
+
+    window.responderSuporteAdminFarolV148 = async function(){
+        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()) return;
+        const banco = bancoSuporteAdminV148();
+        const authAtual = authSuporteAdminV148();
+        const usuarioAdmin = authAtual && authAtual.currentUser ? authAtual.currentUser : null;
+        const campo = document.getElementById("respostaSuporteAdminV148");
+        const botao = document.getElementById("btnResponderSuporteAdminV148");
+        const texto = String(campo ? campo.value : "").trim();
+
+        if(!uidSuporteSelecionadoV148 || !banco) return;
+        if(!texto){
+            if(typeof window.mostrarToast === "function") window.mostrarToast("Digite uma resposta.");
+            return;
+        }
+        if(texto.length > 3000){
+            if(typeof window.mostrarToast === "function") window.mostrarToast("A resposta deve ter no máximo 3.000 caracteres.");
+            return;
+        }
+
+        if(botao){ botao.disabled = true; botao.textContent = "Enviando..."; }
+
+        const conversaRef = banco.collection("suporteFarol").doc(uidSuporteSelecionadoV148);
+        const mensagemRef = conversaRef.collection("mensagens").doc();
+        const agora = Date.now();
+
+        try{
+            const lote = banco.batch();
+            lote.set(mensagemRef, {
+                uid: uidSuporteSelecionadoV148,
+                remetente: "admin",
+                autorNome: "Suporte Farol",
+                autorEmail: String(usuarioAdmin && usuarioAdmin.email || "").toLowerCase(),
+                texto,
+                criadoEm: agora
+            });
+            lote.update(conversaRef, {
+                ultimaMensagem: texto.slice(0, 180),
+                ultimaMensagemRemetente: "admin",
+                atualizadoEm: agora,
+                temNovaAluno: false,
+                temNovaResposta: true
+            });
+            await lote.commit();
+
+            if(campo) campo.value = "";
+            if(typeof window.mostrarToast === "function") window.mostrarToast("Resposta enviada ao aluno.");
+        }catch(erro){
+            console.error("Erro ao responder suporte:", erro);
+            if(typeof window.mostrarToast === "function") window.mostrarToast("Não foi possível enviar a resposta.");
+        }finally{
+            if(botao){ botao.disabled = false; botao.textContent = "📤 Enviar resposta"; }
+        }
+    };
+
+    window.carregarSuporteAdminFarolV148 = function(forcar){
+        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()) return;
+        const banco = bancoSuporteAdminV148();
+        const area = document.getElementById("listaConversasSuporteAdminV148");
+
+        if(!banco){
+            if(area) area.innerHTML = '<div class="admin-lista-vazia">Firestore indisponível.</div>';
+            return;
+        }
+
+        if(cancelarListaSuporteAdminV148 && !forcar){
+            renderizarListaSuporteAdminV148();
+            return;
+        }
+        if(cancelarListaSuporteAdminV148){
+            cancelarListaSuporteAdminV148();
+            cancelarListaSuporteAdminV148 = null;
+        }
+
+        cancelarListaSuporteAdminV148 = banco
+            .collection("suporteFarol")
+            .orderBy("atualizadoEm", "desc")
+            .onSnapshot(snapshot => {
+                conversasSuporteAdminV148 = snapshot.docs.map(doc => ({ uid: doc.id, ...(doc.data() || {}) }));
+                atualizarContadorSuporteAdminV148();
+                renderizarListaSuporteAdminV148();
+            }, erro => {
+                console.error("Erro ao carregar suporte:", erro);
+                if(area){
+                    area.innerHTML = '<div class="admin-lista-vazia">Não foi possível carregar as conversas. Verifique as regras do Firestore.</div>';
+                }
+            });
+    };
+
+    function iniciarBadgeSuporteAdminV148(){
+        if(cancelarBadgeSuporteAdminV148){
+            cancelarBadgeSuporteAdminV148();
+            cancelarBadgeSuporteAdminV148 = null;
+        }
+        const banco = bancoSuporteAdminV148();
+        if(!banco || !window.farolTemPermissaoAdmin || !window.farolTemPermissaoAdmin()) return;
+
+        cancelarBadgeSuporteAdminV148 = banco
+            .collection("suporteFarol")
+            .where("temNovaAluno", "==", true)
+            .onSnapshot(snapshot => {
+                const badge = document.getElementById("contadorSuporteAdminV148");
+                if(!badge) return;
+                badge.hidden = snapshot.empty;
+                badge.textContent = String(snapshot.size || 0);
+            }, erro => console.warn("Não foi possível atualizar o contador do suporte:", erro));
+    }
+
+    const mostrarAbaAntesSuporteV148 = window.mostrarAbaAcessosFarol;
+    window.mostrarAbaAcessosFarol = function(aba){
+        const painel = document.getElementById("abaSuporteFarolV148");
+        const botao = document.getElementById("btnAbaSuporteFarolV148");
+
+        if(aba !== "suporteV148"){
+            if(painel) painel.style.display = "none";
+            if(botao) botao.classList.remove("ativa");
+            return typeof mostrarAbaAntesSuporteV148 === "function"
+                ? mostrarAbaAntesSuporteV148.apply(this, arguments)
+                : undefined;
+        }
+
+        if(!window.sessaoAdminFarolConfirmada || !window.sessaoAdminFarolConfirmada()) return;
+
+        [
+            "abaAcessosLiberadosFarol",
+            "abaEditarAcessoFarol",
+            "abaAlunosOnlineFarol",
+            "abaHistoricoArenasFarol",
+            "abaHistoricoDuelosFarol",
+            "abaNovidadesFarolV68"
+        ].forEach(id => {
+            const elemento = document.getElementById(id);
+            if(elemento) elemento.style.display = "none";
+        });
+
+        [
+            "btnAbaLiberadosFarol",
+            "btnAbaEditarFarol",
+            "btnAbaOnlineFarol",
+            "btnAbaHistoricoArenasFarol",
+            "btnAbaHistoricoDuelosFarol",
+            "btnAbaNovidadesFarolV68"
+        ].forEach(id => {
+            const elemento = document.getElementById(id);
+            if(elemento) elemento.classList.remove("ativa");
+        });
+
+        if(painel) painel.style.display = "block";
+        if(botao) botao.classList.add("ativa");
+        window.carregarSuporteAdminFarolV148(false);
+    };
+
+    window.addEventListener("farol:permissao-admin", event => {
+        if(event && event.detail && event.detail.admin === true){
+            setTimeout(iniciarBadgeSuporteAdminV148, 200);
+        }else if(cancelarBadgeSuporteAdminV148){
+            cancelarBadgeSuporteAdminV148();
+            cancelarBadgeSuporteAdminV148 = null;
+        }
+    });
+
+    if(window.farolTemPermissaoAdmin && window.farolTemPermissaoAdmin()){
+        setTimeout(iniciarBadgeSuporteAdminV148, 300);
+    }
+})();

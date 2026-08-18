@@ -86,7 +86,8 @@
     "simulados",
     "duelos",
     "jogosFarol",
-    "erros"
+    "erros",
+    "suporteFarol"
   ]);
 
   let atualizacaoPendente = false;

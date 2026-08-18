@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
-    <link rel="stylesheet" href="style.css?v=147-jornada-historia-abaetetuba">
+    <link rel="stylesheet" href="style.css?v=148-suporte-privado">
 <style>
 /* Recursos editoriais Farol do Saber — teoria premium de Geografia */
 .farol-quadro{
@@ -2613,6 +2613,10 @@ Li e revisei o mapa mental.
 
                 <div class="atalhos-inicio-grid atalhos-inicio-extras">
                     <button onclick="mostrarTela('chatGlobal')">💬 Chat</button>
+                    <button class="atalho-suporte-farol-v148" onclick="abrirSuporteAlunoFarol()">
+                        🛟 Suporte
+                        <span id="badgeSuporteAlunoFarolV148" class="badge-suporte-aluno-v148" hidden>1</span>
+                    </button>
                     <button onclick="abrirAbaInicioFarol('online')">👥 Online</button>
                     <button onclick="mostrarTela('perfilAluno'); atualizarPerfilAluno();">👤 Perfil</button>
                     <button onclick="mostrarTela('sobre')">ℹ️ Sobre</button>
@@ -5384,6 +5388,49 @@ Li e revisei o mapa mental.
 </section>
 
 
+
+<section id="suporteFarol" class="tela">
+    <div class="card suporte-aluno-farol-v148">
+        <button class="btn-voltar" type="button" onclick="fecharSuporteAlunoFarol()">
+            ⬅ Voltar
+        </button>
+
+        <div class="cabecalho-suporte-aluno-v148">
+            <div class="icone-suporte-aluno-v148">🛟</div>
+            <div>
+                <span>ATENDIMENTO PRIVADO</span>
+                <h2>Fale com o Suporte</h2>
+                <p>Dúvidas sobre acesso, plataforma ou conteúdo? Envie sua mensagem.</p>
+            </div>
+        </div>
+
+        <div class="privacidade-suporte-v148">
+            🔒 Esta conversa é privada. Somente você e o administrador do Farol podem visualizá-la.
+        </div>
+
+        <div id="statusSuporteAlunoFarolV148" class="status-suporte-aluno-v148" aria-live="polite"></div>
+
+        <div id="listaMensagensSuporteAlunoV148" class="lista-mensagens-suporte-v148" aria-live="polite">
+            <div class="estado-suporte-v148">Carregando conversa...</div>
+        </div>
+
+        <div class="form-suporte-aluno-v148">
+            <label for="mensagemSuporteAlunoV148">Sua mensagem</label>
+            <textarea
+                id="mensagemSuporteAlunoV148"
+                maxlength="3000"
+                rows="4"
+                placeholder="Digite sua dúvida ou descreva o problema..."></textarea>
+            <div class="rodape-form-suporte-v148">
+                <small>Até 3.000 caracteres</small>
+                <button id="btnEnviarSuporteAlunoV148" type="button" onclick="enviarMensagemSuporteFarol()">
+                    📤 Enviar mensagem
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="notificacoesFarolV68" class="tela">
     <div class="card central-notificacoes-v68">
         <button class="btn-voltar" onclick="voltarCentralNotificacoesV68()">
@@ -5522,6 +5569,13 @@ Li e revisei o mapa mental.
                 onclick="mostrarAbaAcessosFarol('novidadesV68')">
                 📢 Publicar novidades
             </button>
+            <button
+                id="btnAbaSuporteFarolV148"
+                class="aba-painel-admin"
+                onclick="mostrarAbaAcessosFarol('suporteV148')">
+                💬 Suporte
+                <span id="contadorSuporteAdminV148" class="contador-suporte-admin-v148" hidden>0</span>
+            </button>
         </div>
 
         <div id="abaAcessosLiberadosFarol" class="conteudo-aba-admin">
@@ -5623,6 +5677,45 @@ Li e revisei o mapa mental.
                 </div>
             </div>
         </div>
+
+
+        <section
+            id="abaSuporteFarolV148"
+            class="conteudo-aba-admin suporte-admin-farol-v148"
+            style="display:none;">
+
+            <div class="cabecalho-suporte-admin-v148">
+                <div>
+                    <h3>💬 Suporte aos alunos</h3>
+                    <p>Conversas privadas entre cada aluno e o administrador do Farol.</p>
+                </div>
+                <button type="button" onclick="carregarSuporteAdminFarolV148(true)">🔄 Atualizar</button>
+            </div>
+
+            <div class="filtro-suporte-admin-v148">
+                <input
+                    id="filtroSuporteAdminV148"
+                    type="search"
+                    placeholder="Buscar por nome ou e-mail"
+                    oninput="filtrarSuporteAdminFarolV148()">
+                <label>
+                    <input id="somenteNovasSuporteAdminV148" type="checkbox" onchange="filtrarSuporteAdminFarolV148()">
+                    Somente aguardando resposta
+                </label>
+            </div>
+
+            <div class="layout-suporte-admin-v148">
+                <aside id="listaConversasSuporteAdminV148" class="lista-conversas-suporte-admin-v148">
+                    <div class="admin-lista-vazia">Abra esta aba para carregar as conversas.</div>
+                </aside>
+
+                <section id="detalheSuporteAdminV148" class="detalhe-suporte-admin-v148">
+                    <div class="estado-suporte-admin-v148">
+                        Selecione um aluno para abrir a conversa.
+                    </div>
+                </section>
+            </div>
+        </section>
 
         <section
             id="abaHistoricoDuelosFarol"
@@ -5916,11 +6009,11 @@ Li e revisei o mapa mental.
 <script src="dados/transpetro/auxiliar-saude/auxiliarSaude2018.js?v=asa-2018-comentada-v145"></script>
 <script src="dados/transpetro/auxiliar-saude/auxiliarSaude2023.js?v=asa-2023-comentada-v145"></script>
 
-<script src="app.js?v=169-jornada-historia-abaetetuba-v147"></script>
-<script src="admin.js?v=76-transpetro-todos-cargos"></script>
+<script src="app.js?v=170-suporte-privado-v148"></script>
+<script src="admin.js?v=77-suporte-privado-v148"></script>
 
 
-<script src="./pwa.js?v=16-jornada-historia-v147"></script>
+<script src="./pwa.js?v=17-suporte-privado-v148"></script>
 
 </body>
 
