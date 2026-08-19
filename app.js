@@ -47546,7 +47546,7 @@ limparArenaLocalFarol = function(){
 
     function novoEstadoVidaV149(){
         return {
-            versao: 149,
+            versao: 150,
             iniciado: false,
             concluido: false,
             cena: 0,
@@ -47554,6 +47554,7 @@ limparArenaLocalFarol = function(){
             respostas: {},
             bonus: {},
             pontos: 0,
+            pontosLuzGanhos: 0,
             acertosPrimeira: 0,
             erros: 0,
             desafiosConcluidos: 0,
@@ -47599,6 +47600,8 @@ limparArenaLocalFarol = function(){
                 concluida: false,
                 tentativas: 0,
                 pontos: 0,
+                pontosLuz: 0,
+                rankingJaPontuado: false,
                 ordem: embaralharIndicesVidaV149(q.alternativas.length)
             };
             salvarEstadoVidaV149();
@@ -47609,6 +47612,36 @@ limparArenaLocalFarol = function(){
         }
         reg.erradas = Array.isArray(reg.erradas) ? reg.erradas : [];
         return reg;
+    }
+
+    function chaveRankingQuestaoVidaV149(q){
+        return `vida-a-bordo:taifeiro:${String(q && q.id || "questao")}`;
+    }
+
+    function concederPontosRankingVidaV149(q, reg){
+        if(!q || !reg || !reg.concluida || Number(reg.pontos) <= 0){
+            return false;
+        }
+
+        if(typeof adicionarPontosLuz !== "function"){
+            return false;
+        }
+
+        const ganhou = adicionarPontosLuz(
+            Number(reg.pontos),
+            `VIDA A BORDO — ${q.topico || q.titulo || "Taifeiro"}`,
+            chaveRankingQuestaoVidaV149(q)
+        );
+
+        reg.pontosLuz = ganhou ? Number(reg.pontos) : 0;
+        reg.rankingJaPontuado = !ganhou;
+
+        if(ganhou){
+            estadoVidaV149.pontosLuzGanhos =
+                Number(estadoVidaV149.pontosLuzGanhos || 0) + Number(reg.pontos);
+        }
+
+        return ganhou;
     }
 
     function registroBonusVidaV149(cena){
@@ -47837,7 +47870,7 @@ limparArenaLocalFarol = function(){
                     <div class="vida-bordo-alternativas-v149">${opcoes}</div>
                     ${reg.erradas.length && !reg.concluida ? `<div class="vida-bordo-feedback-v149 erro"><strong>❌ Ainda não.</strong><p>Essa alternativa fica eliminada. Releia a situação e tente novamente.</p></div>` : ""}
                     ${reg.concluida ? `
-                        <div class="vida-bordo-feedback-v149 acerto"><strong>✅ Correto • +${reg.pontos} pontos da viagem</strong><p>${escaparVidaV149(q.explicacao)}</p><small>📚 Fonte-base: ${escaparVidaV149(q.fonte)}</small></div>
+                        <div class="vida-bordo-feedback-v149 acerto"><strong>${Number(reg.pontosLuz || 0) > 0 ? `✅ Correto • +${reg.pontosLuz} Pontos de Luz no ranking` : `✅ Correto • desafio já pontuado no ranking`}</strong><p>${escaparVidaV149(q.explicacao)}</p><small>📚 Fonte-base: ${escaparVidaV149(q.fonte)}</small></div>
                         <button class="vida-bordo-btn-principal-v149" type="button" onclick="avancarVidaABordoTaifeiro()">Continuar a história →</button>
                     ` : `<p class="vida-bordo-tentativas-v149">${reg.erradas.length ? "Continue tentando. As opções eliminadas permanecem esmaecidas." : "Acertou de primeira? Você recebe a pontuação máxima desta cena."}</p>`}
                 </section>
@@ -47908,7 +47941,7 @@ limparArenaLocalFarol = function(){
                     <p>Você passou por cozinha, lavanderia, camarotes, paiol, documentos, operação portuária, rancho e uma situação de proteção. O edital deixou de ser uma lista e virou experiência.</p>
                     <div class="vida-bordo-classificacao-v149"><strong>${classificacao}</strong><span>${percentualPrimeira}% de acertos na primeira tentativa</span></div>
                     <div class="vida-bordo-resultado-grid-v149">
-                        <div><strong>${estadoVidaV149.pontos}</strong><span>pontos da viagem</span></div>
+                        <div><strong>${Number(estadoVidaV149.pontosLuzGanhos || 0)}</strong><span>Pontos de Luz novos</span></div>
                         <div><strong>${estadoVidaV149.acertosPrimeira}/${TOTAL_DESAFIOS_V149}</strong><span>de primeira</span></div>
                         <div><strong>${estadoVidaV149.erros}</strong><span>tentativas erradas</span></div>
                         <div><strong>${revisar.length}</strong><span>tópicos para revisar</span></div>
@@ -48014,6 +48047,7 @@ limparArenaLocalFarol = function(){
             estadoVidaV149.pontos += reg.pontos;
             estadoVidaV149.desafiosConcluidos += 1;
             if(reg.erradas.length === 0) estadoVidaV149.acertosPrimeira += 1;
+            concederPontosRankingVidaV149(q, reg);
             salvarEstadoVidaV149();
             renderizarCenaVidaV149("acerto");
             return;
