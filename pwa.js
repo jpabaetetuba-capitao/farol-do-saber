@@ -87,7 +87,8 @@
     "duelos",
     "jogosFarol",
     "erros",
-    "suporteFarol"
+    "suporteFarol",
+    "vidaABordoTaifeiro"
   ]);
 
   let atualizacaoPendente = false;

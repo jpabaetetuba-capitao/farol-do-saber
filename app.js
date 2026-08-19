@@ -247,6 +247,7 @@ function atualizarNavegacaoInferiorFarol(idTela){
         "questoes",
         "historia",
         "jornadaHistoriaAbaetetuba",
+        "vidaABordoTaifeiro",
         "ciencias",
         "geografia",
         "portugues",
@@ -25214,6 +25215,9 @@ function iniciarTreinoModuloDezHistoriaAbaetetuba(){
                 <button class="card-menu-taifeiro-farol" onclick="abrirAreaTaifeiroFarol('questoesAnteriores')">
                     <span>🧠</span><strong>Questões de Provas Anteriores</strong><small>2018 e 2023 • por disciplina</small><b>›</b>
                 </button>
+                <button class="card-menu-taifeiro-farol card-vida-bordo-taifeiro-v149" onclick="abrirVidaABordoTaifeiro()">
+                    <span>⚓</span><strong>VIDA A BORDO</strong><small>História interativa • viva o edital no navio</small><em>🧪 NOVO</em><b>›</b>
+                </button>
             </div>
         `;
     }
@@ -46371,4 +46375,1682 @@ limparArenaLocalFarol = function(){
             }
         });
     }
+})();
+
+
+// ==========================================================
+// FAROL V149 — VIDA A BORDO • TAIFEIRO — TRANSPETRO 2026
+// Viagem 1: Meu primeiro embarque como Taifeiro
+// História interativa baseada na rotina de bordo aprovada pelo usuário,
+// com desafios alinhados aos 42 subtópicos específicos do edital.
+// ==========================================================
+(function(){
+    "use strict";
+
+    const CHAVE_VIDA_BORDO_V149 = "farol_vida_bordo_taifeiro_viagem1_v149";
+    const QUESTOES_VIDA_BORDO_V149 = [
+    {
+        "id": "vida_taa_q01",
+        "eixo": "Arquitetura Naval",
+        "topico": "1.1 Identificação de corpos e partes da embarcação",
+        "momento": "05h26",
+        "titulo": "O primeiro rumo",
+        "contexto": "No corredor, um marinheiro orienta: “Siga para vante e depois para boreste.” Você para por um segundo para se localizar.",
+        "enunciado": "Considerando uma pessoa voltada para a proa da embarcação, os bordos de bombordo e boreste encontram-se, respectivamente,",
+        "alternativas": [
+            "à direita e à esquerda.",
+            "à esquerda e à direita.",
+            "à ré e à vante.",
+            "à vante e à ré.",
+            "abaixo e acima do convés."
+        ],
+        "correta": 1,
+        "explicacao": "Voltado para a proa, bombordo fica à esquerda e boreste à direita. A Cesgranrio costuma transformar essa nomenclatura em situação de orientação espacial.",
+        "fonte": "Nomenclatura naval • padrão de cobrança Cesgranrio"
+    },
+    {
+        "id": "vida_taa_q02",
+        "eixo": "Arquitetura Naval",
+        "topico": "1.2 Dimensões lineares",
+        "momento": "05h34",
+        "titulo": "Uma medida que deixa de ser abstrata",
+        "contexto": "Enquanto você busca uma caixa no paiol, o Cozinheiro comenta as dimensões do navio e pergunta se você sabe interpretar os termos.",
+        "enunciado": "Quando se afirma que uma embarcação possui determinada “boca”, essa medida corresponde essencialmente à",
+        "alternativas": [
+            "altura total da embarcação.",
+            "largura da embarcação.",
+            "parte imersa do casco.",
+            "distância entre a quilha e a linha d’água.",
+            "distância longitudinal entre proa e popa."
+        ],
+        "correta": 1,
+        "explicacao": "Boca é a dimensão transversal associada à largura da embarcação.",
+        "fonte": "Arquitetura Naval • dimensões lineares"
+    },
+    {
+        "id": "vida_taa_q03",
+        "eixo": "Arquitetura Naval",
+        "topico": "1.3 Estrutura básica da embarcação",
+        "momento": "05h42",
+        "titulo": "O que existe abaixo dos seus pés",
+        "contexto": "Na volta do paiol, um tripulante fala sobre a estrutura que sustenta o casco.",
+        "enunciado": "O elemento longitudinal fundamental situado na região inferior do casco de uma embarcação é denominado",
+        "alternativas": [
+            "caverna.",
+            "antepara.",
+            "quilha.",
+            "braçola.",
+            "balaústre."
+        ],
+        "correta": 2,
+        "explicacao": "A quilha é elemento longitudinal fundamental da estrutura do casco, localizado na região inferior da embarcação.",
+        "fonte": "Arquitetura Naval • estrutura básica"
+    },
+    {
+        "id": "vida_taa_q04",
+        "eixo": "Arquitetura Naval",
+        "topico": "1.4 Principais compartimentos da embarcação",
+        "momento": "06h48",
+        "titulo": "Conhecendo os compartimentos",
+        "contexto": "O café está quase pronto. Um oficial comenta que mais tarde você deverá passar pelo local de onde a navegação é conduzida.",
+        "enunciado": "O compartimento diretamente associado à condução da navegação e ao comando operacional da embarcação é o",
+        "alternativas": [
+            "paiol.",
+            "camarote.",
+            "passadiço.",
+            "refeitório.",
+            "rancho."
+        ],
+        "correta": 2,
+        "explicacao": "O passadiço é o local associado ao comando e à condução da navegação.",
+        "fonte": "Arquitetura Naval • principais compartimentos"
+    },
+    {
+        "id": "vida_taa_q05",
+        "eixo": "Arquitetura Naval",
+        "topico": "1.5 Aberturas e acessórios",
+        "momento": "07h18",
+        "titulo": "Uma abertura que você usa todos os dias",
+        "contexto": "Depois do café, você transporta materiais e passa por uma abertura de acesso no costado/borda do navio.",
+        "enunciado": "A abertura destinada ao acesso de pessoas à embarcação, existente no costado ou na borda, é denominada",
+        "alternativas": [
+            "vigia.",
+            "escotilha.",
+            "portaló.",
+            "antepara.",
+            "caverna."
+        ],
+        "correta": 2,
+        "explicacao": "Portaló é a abertura/acesso utilizada para entrada e saída de pessoas na embarcação.",
+        "fonte": "Arquitetura Naval • aberturas e acessórios"
+    },
+    {
+        "id": "vida_taa_q06",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "1.1 Autoridade Marítima",
+        "momento": "09h12",
+        "titulo": "Comandante do navio não é Autoridade Marítima",
+        "contexto": "Ao limpar o camarote do Comandante, você encontra o Imediato no corredor. Ele aproveita para diferenciar a autoridade exercida a bordo da Autoridade Marítima brasileira.",
+        "enunciado": "No Brasil, para os assuntos de segurança do tráfego aquaviário e demais atribuições legais pertinentes, é designado Autoridade Marítima o",
+        "alternativas": [
+            "Presidente da Autoridade Portuária.",
+            "Comandante de qualquer navio mercante.",
+            "Comandante da Marinha.",
+            "Diretor-Presidente da ANTAQ.",
+            "Prático responsável pela manobra."
+        ],
+        "correta": 2,
+        "explicacao": "A Autoridade Marítima brasileira é exercida pelo Comandante da Marinha, com atribuições executadas por sua estrutura competente.",
+        "fonte": "LESTA • Lei Complementar nº 97/1999 • normas da Autoridade Marítima"
+    },
+    {
+        "id": "vida_taa_q07",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "1.2 Águas Jurisdicionais Brasileiras",
+        "momento": "Dias depois • aproximação do porto",
+        "titulo": "O litoral agora é parte da matéria",
+        "contexto": "O navio aproxima-se de outro porto. Observando a costa, Marcos pergunta como se organizam os principais espaços marítimos brasileiros.",
+        "enunciado": "De acordo com a legislação brasileira, a alternativa que apresenta corretamente mar territorial, zona contígua e zona econômica exclusiva é",
+        "alternativas": [
+            "12 milhas; de 12 a 24 milhas; de 12 a 200 milhas.",
+            "24 milhas; de 24 a 50 milhas; de 50 a 200 milhas.",
+            "12 milhas; de 12 a 200 milhas; de 200 a 350 milhas.",
+            "6 milhas; de 6 a 12 milhas; de 12 a 100 milhas.",
+            "200 milhas; de 200 a 350 milhas; além de 350 milhas."
+        ],
+        "correta": 0,
+        "explicacao": "O mar territorial alcança 12 milhas marítimas; a zona contígua vai de 12 a 24; e a ZEE estende-se de 12 a 200 milhas, medidas a partir das linhas de base aplicáveis.",
+        "fonte": "Lei nº 8.617/1993"
+    },
+    {
+        "id": "vida_taa_q08",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "2.1 Fluxo de carreira",
+        "momento": "09h26",
+        "titulo": "E depois de Taifeiro?",
+        "contexto": "Você pergunta ao Imediato como funciona o crescimento profissional do aquaviário.",
+        "enunciado": "A ascensão de categoria do aquaviário pode depender, conforme a categoria e os requisitos aplicáveis, do cumprimento de",
+        "alternativas": [
+            "apenas idade mínima, independentemente de experiência.",
+            "curso, estágio e/ou tempo de embarque previstos para a ascensão.",
+            "somente indicação do Comandante.",
+            "exclusivamente concurso público federal.",
+            "apenas tempo de vínculo com uma empresa."
+        ],
+        "correta": 1,
+        "explicacao": "O fluxo de carreira do aquaviário observa os requisitos previstos para cada categoria, que podem incluir curso, estágio e/ou tempo de embarque.",
+        "fonte": "NORMAM-101/DPC • carreira dos aquaviários"
+    },
+    {
+        "id": "vida_taa_q09",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "2.2 Caderneta de Inscrição e Registro – CIR",
+        "momento": "09h30",
+        "titulo": "O documento da sua vida profissional",
+        "contexto": "O Imediato confere seus documentos e pega sua CIR.",
+        "enunciado": "A sigla CIR, documento oficial de identificação e registro do aquaviário, significa",
+        "alternativas": [
+            "Certificado Internacional de Registro.",
+            "Caderneta de Inscrição e Registro.",
+            "Cadastro Individual de Responsabilidade.",
+            "Certificado de Inspeção e Registro.",
+            "Caderneta Internacional de Registro."
+        ],
+        "correta": 1,
+        "explicacao": "CIR significa Caderneta de Inscrição e Registro e constitui documento oficial ligado à identificação e à carreira do aquaviário.",
+        "fonte": "NORMAM-101/DPC"
+    },
+    {
+        "id": "vida_taa_q10",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "2.3 Causas de cancelamento e de apreensão da CIR",
+        "momento": "09h34",
+        "titulo": "Cancelar não é apreender",
+        "contexto": "O Imediato apresenta situações diferentes e pergunta se você consegue distinguir cancelamento de apreensão da CIR.",
+        "enunciado": "Entre as situações abaixo, aquela que se relaciona à apreensão da CIR, e não a uma hipótese típica de cancelamento, é",
+        "alternativas": [
+            "falecimento do aquaviário.",
+            "requerimento do próprio aquaviário para cancelamento.",
+            "aposentadoria por invalidez que impeça definitivamente o exercício da profissão.",
+            "uso da CIR por pessoa que não seja o seu titular.",
+            "encerramento normal de uma viagem sem qualquer irregularidade."
+        ],
+        "correta": 3,
+        "explicacao": "O uso da CIR por pessoa diversa de seu titular é situação que conduz à apreensão do documento. Cancelamento e apreensão possuem causas e efeitos distintos.",
+        "fonte": "NORMAM-101/DPC • CIR"
+    },
+    {
+        "id": "vida_taa_q11",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "2.4 Tempo de embarque",
+        "momento": "09h39",
+        "titulo": "Cada dia embarcado pode contar",
+        "contexto": "Você quer saber como o tempo de embarque será comprovado no futuro.",
+        "enunciado": "Para fins profissionais em que seja exigida a comprovação do tempo de embarque, a sistemática da NORMAM-101 utiliza registros compatíveis da CIR e documentação comprobatória pertinente, como",
+        "alternativas": [
+            "o Anexo 1-S, quando aplicável.",
+            "o plano de carga exclusivamente.",
+            "o certificado ISPS.",
+            "o manifesto de passageiros.",
+            "o Livro de Registro de Óleo."
+        ],
+        "correta": 0,
+        "explicacao": "A comprovação do tempo de embarque considera os registros pertinentes da CIR e documentação comprobatória prevista, como o Anexo 1-S quando aplicável.",
+        "fonte": "NORMAM-101/DPC • comprovação e contagem do tempo de embarque"
+    },
+    {
+        "id": "vida_taa_q12",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "2.5 Rol de equipagem",
+        "momento": "09h45",
+        "titulo": "Quem está realmente embarcado",
+        "contexto": "Outro documento é conferido antes da continuidade da rotina.",
+        "enunciado": "O documento diretamente relacionado ao registro da composição da tripulação embarcada é o",
+        "alternativas": [
+            "Livro de Registro de Óleo.",
+            "Rol de Equipagem.",
+            "Plano de Proteção do Navio.",
+            "Certificado de Borda Livre.",
+            "Diário de Cozinha."
+        ],
+        "correta": 1,
+        "explicacao": "O Rol de Equipagem registra a composição da tripulação embarcada nas hipóteses e formas previstas pela Autoridade Marítima.",
+        "fonte": "NORMAM-101/DPC"
+    },
+    {
+        "id": "vida_taa_q13",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "2.6 Atribuições do comandante e competência para aplicar penalidades",
+        "momento": "09h52",
+        "titulo": "Autoridade a bordo",
+        "contexto": "Uma discussão entre dois tripulantes exige a intervenção do Comandante.",
+        "enunciado": "Entre as competências legalmente atribuídas ao Comandante da embarcação encontra-se",
+        "alternativas": [
+            "manter a disciplina a bordo e fazer cumprir as normas e procedimentos aplicáveis.",
+            "alterar unilateralmente as leis marítimas.",
+            "substituir a Autoridade Marítima em todo o território nacional.",
+            "dispensar a tripulação do cumprimento de procedimentos de segurança.",
+            "anular as obrigações ambientais da embarcação."
+        ],
+        "correta": 0,
+        "explicacao": "O Comandante exerce autoridade a bordo, devendo manter a disciplina e fazer cumprir normas e procedimentos de segurança e proteção ambiental.",
+        "fonte": "LESTA • atribuições do Comandante"
+    },
+    {
+        "id": "vida_taa_q14",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "2.7 Faltas disciplinares",
+        "momento": "09h57",
+        "titulo": "Uma ordem de serviço ignorada",
+        "contexto": "Um tripulante deliberadamente descumpre uma determinação legítima relacionada ao serviço e à segurança.",
+        "enunciado": "Essa conduta deve ser compreendida como",
+        "alternativas": [
+            "mera preferência pessoal sem consequência a bordo.",
+            "situação passível de tratamento disciplinar conforme a legislação pertinente.",
+            "questão exclusiva da instalação portuária.",
+            "ato que extingue automaticamente a autoridade do Comandante.",
+            "fato que só pode ser tratado depois do desembarque e nunca a bordo."
+        ],
+        "correta": 1,
+        "explicacao": "A disciplina de bordo não é facultativa; condutas previstas na regulamentação podem configurar faltas e ensejar as providências cabíveis.",
+        "fonte": "LESTA • RLESTA • disciplina a bordo"
+    },
+    {
+        "id": "vida_taa_q15",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "2.8 Atribuições dos marítimos",
+        "momento": "10h02",
+        "titulo": "Segurança não é só dos oficiais",
+        "contexto": "Durante a rotina você percebe uma condição anormal em uma área de serviço.",
+        "enunciado": "A conduta profissional mais compatível com as atribuições do marítimo é",
+        "alternativas": [
+            "ignorar a situação porque a segurança é responsabilidade exclusiva dos oficiais.",
+            "comunicar a condição e agir dentro de suas atribuições e dos procedimentos aplicáveis.",
+            "divulgar o fato externamente antes de informar a bordo.",
+            "alterar sozinho qualquer equipamento envolvido, mesmo sem autorização.",
+            "aguardar obrigatoriamente o final da viagem para mencionar o problema."
+        ],
+        "correta": 1,
+        "explicacao": "O tripulante deve cumprir suas atribuições, observar os procedimentos e comunicar condições anormais pela cadeia apropriada.",
+        "fonte": "NORMAM-101/DPC • deveres e atribuições dos aquaviários"
+    },
+    {
+        "id": "vida_taa_q16",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "2.9 Obrigações de trabalho e previdência social",
+        "momento": "10h08",
+        "titulo": "Sua vida profissional também existe em terra",
+        "contexto": "Você observa a conferência de documentos de vínculo e embarque.",
+        "enunciado": "Segundo a LESTA, o embarque e o desembarque do tripulante submetem-se também às regras do seu",
+        "alternativas": [
+            "contrato de trabalho.",
+            "Plano de Proteção do Navio.",
+            "certificado de arqueação.",
+            "plano de carga.",
+            "Livro de Registro de Óleo."
+        ],
+        "correta": 0,
+        "explicacao": "A LESTA ressalva expressamente que o embarque e o desembarque do tripulante se submetem às regras do contrato de trabalho.",
+        "fonte": "LESTA • Lei nº 9.537/1997"
+    },
+    {
+        "id": "vida_taa_q17",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "3.1 Cargas perigosas",
+        "momento": "14h55 • operação portuária",
+        "titulo": "Nem toda caixa é apenas uma caixa",
+        "contexto": "Durante a escala, você passa por volumes identificados como perigosos.",
+        "enunciado": "Uma substância ou material capaz de representar risco relevante à saúde, à segurança ou ao meio ambiente durante o transporte exige",
+        "alternativas": [
+            "tratamento idêntico ao de qualquer material comum.",
+            "identificação e procedimentos compatíveis com os riscos apresentados.",
+            "retirada das etiquetas para evitar alarme desnecessário.",
+            "armazenamento em qualquer local livre.",
+            "manuseio sem consulta a procedimentos se o volume for pequeno."
+        ],
+        "correta": 1,
+        "explicacao": "Cargas perigosas exigem identificação, segregação, manuseio e demais medidas de segurança compatíveis com seus riscos.",
+        "fonte": "Lei nº 9.966/2000 • regras de transporte de substâncias nocivas/perigosas"
+    },
+    {
+        "id": "vida_taa_q18",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "3.2 Medidas de segurança no manuseio de cargas perigosas",
+        "momento": "15h00",
+        "titulo": "“É só uma ajuda rápida”",
+        "contexto": "Um colega pede ajuda para movimentar um volume identificado como perigoso.",
+        "enunciado": "Antes de participar do manuseio, a conduta mais adequada é",
+        "alternativas": [
+            "movimentar o volume imediatamente para ganhar tempo.",
+            "retirar sua identificação para facilitar o transporte.",
+            "verificar os riscos, os procedimentos e as medidas de segurança aplicáveis.",
+            "abrir o recipiente para confirmar o conteúdo.",
+            "transportá-lo para qualquer compartimento disponível."
+        ],
+        "correta": 2,
+        "explicacao": "O manuseio de cargas perigosas exige conhecimento prévio dos riscos e observância das medidas e procedimentos de segurança aplicáveis.",
+        "fonte": "Regras de segurança para cargas perigosas • legislação marítima aplicável"
+    },
+    {
+        "id": "vida_taa_q19",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "3.3 Combate à poluição",
+        "momento": "15h08",
+        "titulo": "Uma mancha junto ao costado",
+        "contexto": "Durante a operação alguém percebe uma pequena mancha oleosa próxima ao navio.",
+        "enunciado": "Diante de uma ocorrência com potencial de poluição, a conduta compatível com a legislação e a prevenção ambiental é",
+        "alternativas": [
+            "lançar água para dispersar o material e fazê-lo desaparecer.",
+            "ocultar a ocorrência para evitar atraso operacional.",
+            "comunicar a situação e adotar as ações previstas para contenção, prevenção e resposta.",
+            "aguardar o próximo porto para decidir o que fazer.",
+            "movimentar o resíduo sem qualquer procedimento."
+        ],
+        "correta": 2,
+        "explicacao": "Ocorrências com potencial de poluição devem ser comunicadas e tratadas segundo os planos e procedimentos de prevenção, contenção e resposta.",
+        "fonte": "Lei nº 9.966/2000 • NORMAM-401/DPC"
+    },
+    {
+        "id": "vida_taa_q20",
+        "eixo": "Legislação Marítima e Ambiental",
+        "topico": "3.4 Transporte de óleo, substância nociva ou perigosa",
+        "momento": "15h13",
+        "titulo": "O registro também protege",
+        "contexto": "A conversa sobre poluição leva ao controle documental das operações com óleo e substâncias nocivas ou perigosas.",
+        "enunciado": "Nas hipóteses legais aplicáveis, um navio que transporte substância nociva ou perigosa a granel deve possuir, para os registros pertinentes, o",
+        "alternativas": [
+            "Livro de Registro de Carga.",
+            "Rol de Equipagem.",
+            "Diário de Cozinha.",
+            "Plano de Viagem do Tripulante.",
+            "certificado coletivo de CIR."
+        ],
+        "correta": 0,
+        "explicacao": "A Lei nº 9.966/2000 prevê Livro de Registro de Carga para navios que transportem substâncias nocivas ou perigosas a granel, sem prejuízo dos registros específicos de óleo nas hipóteses próprias.",
+        "fonte": "Lei nº 9.966/2000"
+    },
+    {
+        "id": "vida_taa_q21",
+        "eixo": "Proteção do Navio",
+        "topico": "1.1 Ameaças aos transportes marítimos",
+        "momento": "15h25",
+        "titulo": "Uma ameaça pode parecer comum",
+        "contexto": "Um desconhecido tenta acompanhar a entrega de provisões e procura entrar sem passar pelo controle previsto.",
+        "enunciado": "No contexto da proteção marítima, uma tentativa deliberada de burlar o acesso ao navio deve ser",
+        "alternativas": [
+            "considerada automaticamente autorizada se a pessoa estiver uniformizada.",
+            "tratada de acordo com os procedimentos de proteção e controle de acesso.",
+            "ignorada se não houver ameaça física imediata.",
+            "tratada como simples questão comercial sem relação com proteção.",
+            "resolvida permitindo a entrada e conferindo os dados somente depois."
+        ],
+        "correta": 1,
+        "explicacao": "Ameaças e vulnerabilidades podem se manifestar por tentativas de acesso não autorizado, sabotagem, terrorismo, contrabando, clandestinos e outras formas; o procedimento de proteção deve ser seguido.",
+        "fonte": "SOLAS XI-2 • ISPS Code"
+    },
+    {
+        "id": "vida_taa_q22",
+        "eixo": "Proteção do Navio",
+        "topico": "1.2 Operações portuárias Portos/Navios",
+        "momento": "15h31",
+        "titulo": "O rancho chega, mas existe um controle",
+        "contexto": "O caminhão de provisões está no terminal. Você e o Cozinheiro aguardam o recebimento do rancho.",
+        "enunciado": "Durante a interface navio/porto, uma medida diretamente ligada à proteção é",
+        "alternativas": [
+            "eliminar as conferências para acelerar a entrega.",
+            "monitorar a entrega das provisões e controlar o acesso de pessoas e materiais.",
+            "permitir circulação irrestrita do fornecedor dentro do navio.",
+            "suspender a identificação de áreas restritas enquanto houver entrega.",
+            "desligar os meios de comunicação para evitar interferências."
+        ],
+        "correta": 1,
+        "explicacao": "O ISPS inclui medidas de controle de acesso, monitoramento de pessoas, materiais, carga e entrega de provisões do navio.",
+        "fonte": "SOLAS XI-2 • ISPS Code • ship’s stores"
+    },
+    {
+        "id": "vida_taa_q23",
+        "eixo": "Proteção do Navio",
+        "topico": "2.1 Convenções internacionais, códigos e recomendações",
+        "momento": "15h38",
+        "titulo": "Por que existem tantos controles?",
+        "contexto": "Durante a familiarização aparecem na tela as expressões SOLAS XI-2 e ISPS Code.",
+        "enunciado": "O Código ISPS integra o regime internacional de medidas especiais de proteção marítima estabelecido no âmbito da",
+        "alternativas": [
+            "SOLAS, Capítulo XI-2.",
+            "COLREG, exclusivamente.",
+            "MARPOL Anexo I, exclusivamente.",
+            "MLC, exclusivamente.",
+            "Convenção de Arqueação, exclusivamente."
+        ],
+        "correta": 0,
+        "explicacao": "O ISPS Code foi incorporado ao regime da SOLAS no Capítulo XI-2, estabelecendo medidas especiais para aumentar a proteção marítima.",
+        "fonte": "SOLAS XI-2 • ISPS Code"
+    },
+    {
+        "id": "vida_taa_q24",
+        "eixo": "Proteção do Navio",
+        "topico": "2.2.1 Legislação e regulamentos governamentais relevantes para os navios",
+        "momento": "15h43",
+        "titulo": "Regras que acompanham o navio",
+        "contexto": "Você percebe que navio e porto têm responsabilidades próprias, embora trabalhem de forma coordenada.",
+        "enunciado": "No sistema ISPS, o navio abrangido pelas regras de proteção deve",
+        "alternativas": [
+            "cumprir as medidas e o Plano de Proteção do Navio aplicáveis ao nível de proteção estabelecido.",
+            "transferir integralmente suas responsabilidades de proteção à instalação portuária.",
+            "aplicar proteção somente quando estiver navegando.",
+            "ignorar alterações de nível de proteção até a próxima viagem.",
+            "substituir o Governo Contratante na definição das regras nacionais."
+        ],
+        "correta": 0,
+        "explicacao": "O navio deve implementar as medidas do seu plano de proteção e cumprir os requisitos correspondentes ao nível de proteção aplicável.",
+        "fonte": "SOLAS XI-2 • ISPS Code • responsabilidades do navio"
+    },
+    {
+        "id": "vida_taa_q25",
+        "eixo": "Proteção do Navio",
+        "topico": "2.2.2 Legislação e regulamentos governamentais relevantes para os portos",
+        "momento": "15h47",
+        "titulo": "O porto também tem um plano",
+        "contexto": "Ao observar o terminal, você nota acessos, áreas restritas, vigilância e pessoal de proteção.",
+        "enunciado": "Uma instalação portuária abrangida pelo ISPS deve possuir medidas próprias de proteção, incluindo as previstas no",
+        "alternativas": [
+            "Plano de Proteção da Instalação Portuária.",
+            "Plano de Carga do navio.",
+            "Rol de Equipagem.",
+            "Livro de Registro de Óleo.",
+            "Certificado de Competência do Taifeiro."
+        ],
+        "correta": 0,
+        "explicacao": "A instalação portuária possui responsabilidades próprias, materializadas em avaliação, planejamento e medidas de proteção aplicáveis à instalação.",
+        "fonte": "ISPS Code • proteção de instalações portuárias"
+    },
+    {
+        "id": "vida_taa_q26",
+        "eixo": "Proteção do Navio",
+        "topico": "2.3 Definições e siglas dos principais termos e expressões empregadas em prática marítima",
+        "momento": "15h52",
+        "titulo": "A sopa de letrinhas",
+        "contexto": "Marcos mostra cartões com SSO, CSO, PFSO, RSO e SSAS.",
+        "enunciado": "A associação correta entre sigla e expressão é",
+        "alternativas": [
+            "SSO — Ship Security Officer.",
+            "CSO — Cargo Safety Operator.",
+            "PFSO — Port Fire System Operator.",
+            "RSO — Radio Safety Officer.",
+            "SSAS — Ship Steering Automatic System."
+        ],
+        "correta": 0,
+        "explicacao": "SSO significa Ship Security Officer, o Oficial de Proteção do Navio. As demais siglas têm significados próprios no sistema ISPS.",
+        "fonte": "ISPS Code • terminologia de proteção"
+    },
+    {
+        "id": "vida_taa_q27",
+        "eixo": "Proteção do Navio",
+        "topico": "2.4 Manuseio de informações sigilosas relacionadas à proteção e comunicações",
+        "momento": "15h57",
+        "titulo": "“Tira uma foto e me manda”",
+        "contexto": "Um colega pede que você fotografe um procedimento de proteção para enviar a um grupo externo.",
+        "enunciado": "Informações sensíveis relacionadas à proteção do navio devem",
+        "alternativas": [
+            "circular livremente entre quaisquer interessados.",
+            "ser tratadas conforme as autorizações, a necessidade de conhecimento e os controles de proteção aplicáveis.",
+            "ser publicadas em redes sociais se o nome do navio for omitido.",
+            "ser sempre afixadas em áreas abertas ao público.",
+            "ser fornecidas a qualquer prestador que as solicite."
+        ],
+        "correta": 1,
+        "explicacao": "Informações de proteção podem ser sensíveis e devem ser protegidas contra divulgação não autorizada, observando os controles estabelecidos.",
+        "fonte": "ISPS Code • informações sensíveis de proteção"
+    },
+    {
+        "id": "vida_taa_q28",
+        "eixo": "Proteção do Navio",
+        "topico": "3.1 Os governos contratantes",
+        "momento": "16h05",
+        "titulo": "Quem define o nível de proteção?",
+        "contexto": "No briefing, o SSO explica que algumas responsabilidades pertencem aos Governos Contratantes e não podem ser transferidas ao navio.",
+        "enunciado": "No regime do ISPS, cabe ao Governo Contratante, entre outras responsabilidades,",
+        "alternativas": [
+            "estabelecer os níveis de proteção aplicáveis e assegurar a implementação das medidas governamentais pertinentes.",
+            "executar pessoalmente todas as rondas de cada navio.",
+            "substituir o Comandante em toda operação comercial.",
+            "emitir a CIR de cada aquaviário estrangeiro independentemente das regras nacionais.",
+            "preparar a lista de rancho da embarcação."
+        ],
+        "correta": 0,
+        "explicacao": "Os Governos Contratantes possuem responsabilidades próprias na implementação do regime de proteção, incluindo a definição dos níveis de proteção.",
+        "fonte": "SOLAS XI-2 • ISPS Code • Contracting Governments"
+    },
+    {
+        "id": "vida_taa_q29",
+        "eixo": "Proteção do Navio",
+        "topico": "3.2 As organizações de proteção reconhecidas (RSO)",
+        "momento": "16h10",
+        "titulo": "Uma organização reconhecida não é o Governo",
+        "contexto": "O SSO menciona que determinadas atividades podem ser realizadas por uma Organização de Proteção Reconhecida.",
+        "enunciado": "Uma RSO — Recognized Security Organization — é uma organização",
+        "alternativas": [
+            "reconhecida para executar determinadas atividades de proteção dentro das competências autorizadas.",
+            "que substitui integralmente todas as responsabilidades do Governo Contratante.",
+            "formada exclusivamente por tripulantes do navio.",
+            "criada para comandar a navegação do porto.",
+            "responsável pela emissão de CIR."
+        ],
+        "correta": 0,
+        "explicacao": "A RSO pode desempenhar atividades de proteção para as quais esteja reconhecida, mas não elimina as responsabilidades que permanecem com o Governo Contratante.",
+        "fonte": "ISPS Code • Recognized Security Organization"
+    },
+    {
+        "id": "vida_taa_q30",
+        "eixo": "Proteção do Navio",
+        "topico": "3.3 A Companhia",
+        "momento": "16h15",
+        "titulo": "A proteção também começa em terra",
+        "contexto": "Você percebe que a empresa responsável pelo navio possui deveres próprios dentro do sistema.",
+        "enunciado": "No âmbito da Companhia, uma providência compatível com o ISPS é",
+        "alternativas": [
+            "designar e apoiar o CSO e assegurar que o navio disponha dos elementos de proteção exigidos.",
+            "transferir toda responsabilidade de proteção ao fornecedor de rancho.",
+            "eliminar o Plano de Proteção do Navio para reduzir burocracia.",
+            "definir sozinha o nível de proteção nacional.",
+            "substituir permanentemente o SSO pelo PFSO."
+        ],
+        "correta": 0,
+        "explicacao": "A Companhia tem responsabilidades próprias, incluindo a designação do CSO e o suporte à implementação da proteção nos navios sob sua responsabilidade.",
+        "fonte": "ISPS Code • Company responsibilities"
+    },
+    {
+        "id": "vida_taa_q31",
+        "eixo": "Proteção do Navio",
+        "topico": "3.4 Os navios",
+        "momento": "16h20",
+        "titulo": "O próprio navio é parte do sistema",
+        "contexto": "O SSO mostra como as medidas previstas no plano mudam conforme o nível de proteção.",
+        "enunciado": "Entre as responsabilidades do navio está",
+        "alternativas": [
+            "cumprir as medidas de proteção estabelecidas para o nível vigente e manter a prontidão prevista no plano.",
+            "definir unilateralmente o nível de proteção do país.",
+            "autorizar qualquer pessoa a entrar quando houver operação comercial.",
+            "substituir a instalação portuária em todas as suas funções.",
+            "dispensar treinamento quando o navio estiver atracado."
+        ],
+        "correta": 0,
+        "explicacao": "O navio deve manter e executar as medidas do plano de proteção conforme o nível aplicável e as determinações pertinentes.",
+        "fonte": "ISPS Code • ship responsibilities"
+    },
+    {
+        "id": "vida_taa_q32",
+        "eixo": "Proteção do Navio",
+        "topico": "3.5 As instalações portuárias",
+        "momento": "16h25",
+        "titulo": "O terminal faz parte da proteção",
+        "contexto": "Você observa o trabalho coordenado entre pessoal do navio e do terminal.",
+        "enunciado": "A instalação portuária participa do sistema de proteção por meio de medidas como",
+        "alternativas": [
+            "controle de acesso, proteção de áreas restritas e implementação do plano de proteção da instalação.",
+            "comando da derrota do navio em mar aberto.",
+            "emissão da CIR dos tripulantes.",
+            "definição da categoria profissional do Taifeiro.",
+            "manutenção da disciplina interna do navio em lugar do Comandante."
+        ],
+        "correta": 0,
+        "explicacao": "As instalações portuárias abrangidas pelo ISPS implementam medidas próprias de proteção, inclusive controle de acesso e áreas restritas.",
+        "fonte": "ISPS Code • port facility responsibilities"
+    },
+    {
+        "id": "vida_taa_q33",
+        "eixo": "Proteção do Navio",
+        "topico": "3.6 O oficial de proteção do navio (SSO/OPN)",
+        "momento": "16h30",
+        "titulo": "Quem cuida da função de proteção a bordo?",
+        "contexto": "Um oficial se apresenta durante o briefing e diz ser o SSO do navio.",
+        "enunciado": "O SSO/OPN é o profissional especificamente designado como",
+        "alternativas": [
+            "Oficial de Proteção do Navio.",
+            "Coordenador de Proteção da Companhia.",
+            "Funcionário de Proteção da Instalação Portuária.",
+            "Organização de Proteção Reconhecida.",
+            "Autoridade Marítima."
+        ],
+        "correta": 0,
+        "explicacao": "SSO/OPN é o Oficial de Proteção do Navio, responsável por funções específicas de implementação, manutenção e supervisão da proteção a bordo.",
+        "fonte": "ISPS Code • Ship Security Officer"
+    },
+    {
+        "id": "vida_taa_q34",
+        "eixo": "Proteção do Navio",
+        "topico": "3.7 O coordenador de proteção da Companhia (CSO/CPC)",
+        "momento": "16h35",
+        "titulo": "Quem coordena pela Companhia?",
+        "contexto": "O SSO explica que existe uma função correspondente em terra, no âmbito da Companhia.",
+        "enunciado": "O profissional responsável pela coordenação da proteção no âmbito da Companhia é o",
+        "alternativas": [
+            "PFSO/SSP.",
+            "CSO/CPC.",
+            "SSO/OPN.",
+            "DPO.",
+            "Prático."
+        ],
+        "correta": 1,
+        "explicacao": "CSO/CPC é o coordenador/oficial de proteção da Companhia, com responsabilidades sobre a proteção dos navios da empresa.",
+        "fonte": "ISPS Code • Company Security Officer"
+    },
+    {
+        "id": "vida_taa_q35",
+        "eixo": "Proteção do Navio",
+        "topico": "3.8 O funcionário de proteção de instalações portuárias/supervisor de segurança portuária (PFSO/SSP)",
+        "momento": "16h40",
+        "titulo": "E no terminal?",
+        "contexto": "Na instalação portuária, outro profissional coordena as medidas do plano local.",
+        "enunciado": "O profissional especificamente associado à proteção da instalação portuária é o",
+        "alternativas": [
+            "SSO/OPN.",
+            "CSO/CPC.",
+            "PFSO/SSP.",
+            "DPO.",
+            "Comandante do navio."
+        ],
+        "correta": 2,
+        "explicacao": "PFSO/SSP é a função ligada à proteção da instalação portuária.",
+        "fonte": "ISPS Code • Port Facility Security Officer"
+    },
+    {
+        "id": "vida_taa_q36",
+        "eixo": "Proteção do Navio",
+        "topico": "3.9 Os tripulantes com tarefas relacionadas à proteção",
+        "momento": "16h45",
+        "titulo": "“Mas eu sou Taifeiro”",
+        "contexto": "Você pergunta por que precisa conhecer proteção se não é o SSO. Ele responde: “Porque uma situação pode chegar até você antes de chegar até mim.”",
+        "enunciado": "O tripulante a quem tenham sido atribuídas tarefas específicas relacionadas à proteção deve",
+        "alternativas": [
+            "ignorar essas tarefas por não ser SSO.",
+            "conhecer e executar as atribuições para as quais foi designado e treinado.",
+            "assumir automaticamente o comando do navio.",
+            "definir sozinho o nível de proteção.",
+            "substituir o PFSO durante toda escala."
+        ],
+        "correta": 1,
+        "explicacao": "Tripulantes com tarefas designadas de proteção devem conhecer suas responsabilidades e possuir a familiarização/treinamento aplicável.",
+        "fonte": "ISPS Code • pessoal com tarefas de proteção"
+    },
+    {
+        "id": "vida_taa_q37",
+        "eixo": "Proteção do Navio",
+        "topico": "3.10 Pessoal das instalações portuárias com funções específicas de proteção",
+        "momento": "16h50",
+        "titulo": "O mesmo vale do lado do porto",
+        "contexto": "O briefing também menciona o pessoal da instalação portuária com funções específicas.",
+        "enunciado": "O pessoal da instalação portuária com funções específicas de proteção deve",
+        "alternativas": [
+            "atuar de acordo com suas responsabilidades e o treinamento aplicável.",
+            "assumir a navegação do navio.",
+            "emitir CIR para os tripulantes.",
+            "substituir o Comandante no controle disciplinar.",
+            "definir a rota comercial da embarcação."
+        ],
+        "correta": 0,
+        "explicacao": "O pessoal portuário com funções específicas de proteção deve conhecer e executar as tarefas relacionadas à sua função, conforme treinamento e procedimentos aplicáveis.",
+        "fonte": "ISPS Code • personnel with security duties"
+    },
+    {
+        "id": "vida_taa_q38",
+        "eixo": "Proteção do Navio",
+        "topico": "4.1.1 Sistema de Alerta de Proteção do Navio (SSAS)",
+        "momento": "02h17 • situação de proteção",
+        "titulo": "O botão que você não aperta por curiosidade",
+        "contexto": "Durante uma situação de proteção, o SSO menciona o SSAS e explica que ele não funciona como um simples alarme geral.",
+        "enunciado": "O SSAS — Ship Security Alert System — é concebido para",
+        "alternativas": [
+            "soar necessariamente o alarme geral e informar todos a bordo.",
+            "transmitir um alerta de proteção navio-terra segundo o sistema previsto, sem operar como um alarme geral convencional a bordo.",
+            "substituir todos os meios GMDSS.",
+            "comandar automaticamente o leme para afastar o navio do porto.",
+            "acionar automaticamente o abandono da embarcação."
+        ],
+        "correta": 1,
+        "explicacao": "O SSAS envia um alerta de proteção para os destinatários em terra previstos, sem se comportar como um alarme geral convencional a bordo.",
+        "fonte": "SOLAS XI-2 • SSAS"
+    },
+    {
+        "id": "vida_taa_q39",
+        "eixo": "Proteção do Navio",
+        "topico": "4.1.2 Equipamentos de comunicação",
+        "momento": "02h21",
+        "titulo": "Sem comunicação, não há coordenação",
+        "contexto": "A equipe precisa manter as comunicações previstas durante a situação.",
+        "enunciado": "Em uma situação de proteção, os meios de comunicação pertinentes devem",
+        "alternativas": [
+            "estar disponíveis e ser utilizados conforme os procedimentos de proteção aplicáveis.",
+            "ser desligados para impedir mensagens externas.",
+            "ser usados apenas para assuntos pessoais.",
+            "substituir o controle de acesso.",
+            "ficar indisponíveis enquanto o navio estiver atracado."
+        ],
+        "correta": 0,
+        "explicacao": "A comunicação adequada é essencial para coordenação, alerta e implementação das medidas de proteção entre navio, Companhia e instalação portuária.",
+        "fonte": "ISPS Code • comunicações de proteção"
+    },
+    {
+        "id": "vida_taa_q40",
+        "eixo": "Proteção do Navio",
+        "topico": "4.1.3 Sistema de iluminação",
+        "momento": "02h25",
+        "titulo": "A luz que não acende",
+        "contexto": "Uma área externa importante apresenta deficiência de iluminação durante a investigação.",
+        "enunciado": "Do ponto de vista da proteção, uma iluminação adequada nas áreas relevantes contribui principalmente para",
+        "alternativas": [
+            "apoiar a observação, a vigilância e o controle das áreas e acessos.",
+            "eliminar a necessidade de qualquer outro controle.",
+            "substituir o pessoal de proteção.",
+            "dificultar o monitoramento dos movimentos.",
+            "dispensar os meios de comunicação."
+        ],
+        "correta": 0,
+        "explicacao": "A iluminação adequada favorece vigilância, detecção, controle de acessos e monitoramento de áreas relevantes à proteção.",
+        "fonte": "ISPS Code • medidas físicas de proteção"
+    },
+    {
+        "id": "vida_taa_q41",
+        "eixo": "Proteção do Navio",
+        "topico": "4.2 Limitações operacionais de equipamentos e sistemas",
+        "momento": "02h29",
+        "titulo": "Nenhum equipamento é infalível",
+        "contexto": "Marcos lembra que câmera, rádio, sensores e iluminação possuem condições e limites de operação.",
+        "enunciado": "Conhecer as limitações operacionais dos equipamentos e sistemas de proteção é importante porque permite",
+        "alternativas": [
+            "reconhecer situações em que o desempenho do equipamento pode ser reduzido ou inadequado e adotar as providências previstas.",
+            "dispensar os procedimentos de proteção.",
+            "eliminar a necessidade de manutenção.",
+            "ignorar falhas conhecidas.",
+            "substituir todo treinamento da tripulação."
+        ],
+        "correta": 0,
+        "explicacao": "Conhecer limitações evita confiança indevida no equipamento e permite aplicar medidas compensatórias ou corretivas previstas.",
+        "fonte": "ISPS Code • equipamentos e sistemas de proteção"
+    },
+    {
+        "id": "vida_taa_q42",
+        "eixo": "Proteção do Navio",
+        "topico": "4.3 Testes, calibração e manutenção dos equipamentos e sistemas",
+        "momento": "02h34",
+        "titulo": "Testar antes de precisar",
+        "contexto": "Uma falha é encontrada durante a verificação. O SSO pergunta quando ela deveria, idealmente, ter sido detectada.",
+        "enunciado": "A finalidade principal dos testes, verificações, calibrações e manutenções aplicáveis aos equipamentos e sistemas de proteção é",
+        "alternativas": [
+            "assegurar sua prontidão e identificar falhas ou desvios antes de uma necessidade real.",
+            "evitar qualquer treinamento da tripulação.",
+            "eliminar todos os procedimentos manuais.",
+            "permitir que falhas permaneçam sem registro.",
+            "substituir o Plano de Proteção do Navio."
+        ],
+        "correta": 0,
+        "explicacao": "Testes, calibrações, inspeções e manutenções preservam a disponibilidade e a confiabilidade dos meios de proteção antes de uma situação real.",
+        "fonte": "ISPS Code • manutenção e prontidão de equipamentos"
+    }
+];
+    const CENAS_VIDA_BORDO_V149 = [
+    {
+        "tipo": "abertura",
+        "id": "abertura"
+    },
+    {
+        "tipo": "escolha",
+        "id": "escolha_inicio",
+        "momento": "05h18",
+        "titulo": "Seu primeiro dia começou",
+        "texto": "Você sai do camarote. O navio ainda está silencioso e o café da manhã precisa estar pronto às 07h00. Antes de chegar à cozinha, escolha como quer começar a se orientar.",
+        "opcoes": [
+            {
+                "valor": "placas",
+                "icone": "🧭",
+                "titulo": "Observar as indicações dos corredores",
+                "consequencia": "Você decide ler cada indicação e montar mentalmente o caminho entre camarote, cozinha e áreas de serviço."
+            },
+            {
+                "valor": "proa",
+                "icone": "⚓",
+                "titulo": "Tentar localizar a proa",
+                "consequencia": "Você procura uma referência de vante para começar a construir sua orientação espacial dentro do navio."
+            },
+            {
+                "valor": "cozinha",
+                "icone": "🍳",
+                "titulo": "Seguir direto para a cozinha",
+                "consequencia": "Você acelera o passo. Hoje o mais importante é não deixar o café atrasar."
+            },
+            {
+                "valor": "estrutura",
+                "icone": "👀",
+                "titulo": "Observar o navio enquanto caminha",
+                "consequencia": "Você presta atenção nos corredores, anteparas, acessos e compartimentos. O navio começa a deixar de parecer um labirinto."
+            }
+        ]
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q01"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q02"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q03"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q04"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q05"
+    },
+    {
+        "tipo": "narrativa",
+        "id": "cafe_pronto",
+        "momento": "07h00",
+        "titulo": "☕ Café da manhã servido",
+        "texto": "O café fica pronto. Comandante, Imediato, Chefe de Máquinas e outros tripulantes começam a passar pelo refeitório. Sua primeira missão do dia foi cumprida. Agora começam lavanderia, roupas de cama e serviço de Câmara."
+    },
+    {
+        "tipo": "escolha",
+        "id": "lavanderia",
+        "momento": "08h05",
+        "titulo": "🧺 Lavanderia e roupas de cama",
+        "texto": "Na lavanderia, você encontra uma peça de roupa de cama danificada. Esta decisão é parte da vida profissional, não uma questão do edital.",
+        "opcoes": [
+            {
+                "valor": "comunicar",
+                "icone": "✅",
+                "titulo": "Separar e comunicar conforme a rotina de bordo",
+                "consequencia": "Você evita devolver uma peça inadequada ao camarote e mantém o controle do material."
+            },
+            {
+                "valor": "guardar",
+                "icone": "📦",
+                "titulo": "Separar para verificar depois",
+                "consequencia": "Você mantém a peça fora de uso e deixa a pendência registrada para não se perder na rotina."
+            },
+            {
+                "valor": "perguntar",
+                "icone": "💬",
+                "titulo": "Perguntar ao Taifeiro mais experiente como proceder",
+                "consequencia": "Você usa a experiência da equipe para aprender a rotina adotada naquele navio."
+            }
+        ]
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q06"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q09"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q08"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q11"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q10"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q12"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q13"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q14"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q15"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q16"
+    },
+    {
+        "tipo": "narrativa",
+        "id": "almoco",
+        "momento": "10h45",
+        "titulo": "🍛 Preparação do almoço",
+        "texto": "Você retorna à cozinha e ajuda o Cozinheiro na preparação do almoço. Depois do serviço, a louça também ficará sob sua rotina. Perto da bancada existe uma fritadeira elétrica."
+    },
+    {
+        "tipo": "bonus",
+        "id": "bonus_fritadeira",
+        "momento": "11h20",
+        "titulo": "🔥 Conhecimento de Bordo — Fritadeira",
+        "contexto": "O Cozinheiro aponta para a fritadeira e para o sistema de proteção instalado.",
+        "enunciado": "Em equipamento de cocção por imersão em óleo quente a bordo, a proteção adequada considera",
+        "alternativas": [
+            "o uso de água diretamente sobre o óleo como primeira medida.",
+            "apenas um extintor portátil, sem qualquer outro recurso.",
+            "sistema de extinção apropriado ao equipamento e recursos previstos de desligamento/acionamento.",
+            "somente a abertura das portas para ventilação.",
+            "a remoção manual do recipiente em chamas."
+        ],
+        "correta": 2,
+        "explicacao": "Incêndio em óleo de fritura não deve ser combatido com água. Equipamentos de cocção profunda podem possuir sistema específico de extinção e intertravamentos previstos pelas regras de proteção contra incêndio.",
+        "fonte": "SOLAS II-2 • conhecimento profissional de bordo"
+    },
+    {
+        "tipo": "narrativa",
+        "id": "pos_almoco",
+        "momento": "12h50",
+        "titulo": "🍽️ Louça, limpeza e retorno ao paiol",
+        "texto": "O almoço termina. Você lava a louça, organiza a área e mais tarde volta ao paiol com o Cozinheiro para conferir os estoques."
+    },
+    {
+        "tipo": "escolha",
+        "id": "validade",
+        "momento": "13h40",
+        "titulo": "🥫 Um produto perto do vencimento",
+        "texto": "Durante a organização do paiol, você encontra produtos cuja validade se aproxima. Esta é uma decisão de bordo, não uma questão do edital.",
+        "opcoes": [
+            {
+                "valor": "separar",
+                "icone": "📋",
+                "titulo": "Separar a informação e comunicar conforme a rotina",
+                "consequencia": "Você registra o que precisa de atenção e leva a informação ao Cozinheiro/Imediato conforme a organização de bordo."
+            },
+            {
+                "valor": "reorganizar",
+                "icone": "📦",
+                "titulo": "Reorganizar o estoque e avisar o Cozinheiro",
+                "consequencia": "Você facilita o consumo dos itens mais antigos e evita que a informação se perca."
+            },
+            {
+                "valor": "conferir",
+                "icone": "🔎",
+                "titulo": "Conferir todo o lote antes de informar",
+                "consequencia": "Você amplia a conferência para verificar se existem outros produtos na mesma situação."
+            }
+        ]
+    },
+    {
+        "tipo": "narrativa",
+        "id": "lista_rancho",
+        "momento": "14h10",
+        "titulo": "📝 Lista do rancho",
+        "texto": "Você ajuda o Cozinheiro a conferir o que está faltando. A lista será encaminhada para o pedido conforme a programação da empresa e o recebimento ocorrerá em porto conveniente."
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q07"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q17"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q18"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q19"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q20"
+    },
+    {
+        "tipo": "narrativa",
+        "id": "rancho_chegou",
+        "momento": "15h20",
+        "titulo": "🚚 O rancho chegou",
+        "texto": "O caminhão chega ao terminal. Você e o Cozinheiro precisam receber e organizar as provisões, mas primeiro pessoas e materiais passam pelos controles de proteção da interface navio/porto."
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q21"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q22"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q23"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q24"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q25"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q26"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q27"
+    },
+    {
+        "tipo": "narrativa",
+        "id": "briefing_protecao",
+        "momento": "16h00",
+        "titulo": "🛡️ Briefing de proteção",
+        "texto": "O SSO aproveita a operação portuária para mostrar como Governo, Companhia, navio e instalação portuária formam um sistema coordenado. Agora as siglas começam a ganhar rostos e funções."
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q28"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q29"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q30"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q31"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q32"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q33"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q34"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q35"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q36"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q37"
+    },
+    {
+        "tipo": "narrativa",
+        "id": "madrugada",
+        "momento": "02h17",
+        "titulo": "🚨 Algo acontece na madrugada",
+        "texto": "Um chamado interno desperta parte da tripulação. Uma pessoa foi percebida em local não autorizado próximo à interface navio/porto, e uma área externa apresenta deficiência de iluminação. Tudo o que você aprendeu começa a aparecer ao mesmo tempo."
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q38"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q39"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q40"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q41"
+    },
+    {
+        "tipo": "questao",
+        "qid": "vida_taa_q42"
+    },
+    {
+        "tipo": "conclusao",
+        "id": "conclusao"
+    }
+];
+    const MAPA_QUESTOES_V149 = Object.fromEntries(
+        QUESTOES_VIDA_BORDO_V149.map(q => [q.id, q])
+    );
+    const TOTAL_DESAFIOS_V149 = QUESTOES_VIDA_BORDO_V149.length;
+
+    function escaparVidaV149(valor){
+        if(typeof escaparHTML === "function") return escaparHTML(valor);
+        return String(valor ?? "")
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("'", "&#039;");
+    }
+
+    function nomeAlunoVidaV149(){
+        const bruto = String(
+            (typeof usuarioForum !== "undefined" && usuarioForum) ||
+            localStorage.getItem("usuarioForum") ||
+            "Aluno"
+        ).trim();
+        return escaparVidaV149(bruto.split(/\s+/)[0] || "Aluno");
+    }
+
+    function novoEstadoVidaV149(){
+        return {
+            versao: 149,
+            iniciado: false,
+            concluido: false,
+            cena: 0,
+            escolhas: {},
+            respostas: {},
+            bonus: {},
+            pontos: 0,
+            acertosPrimeira: 0,
+            erros: 0,
+            desafiosConcluidos: 0,
+            atualizadoEm: Date.now()
+        };
+    }
+
+    function carregarEstadoVidaV149(){
+        try{
+            const salvo = JSON.parse(localStorage.getItem(CHAVE_VIDA_BORDO_V149) || "null");
+            return salvo && typeof salvo === "object"
+                ? { ...novoEstadoVidaV149(), ...salvo }
+                : novoEstadoVidaV149();
+        }catch(_erro){
+            return novoEstadoVidaV149();
+        }
+    }
+
+    let estadoVidaV149 = carregarEstadoVidaV149();
+
+    function salvarEstadoVidaV149(){
+        estadoVidaV149.atualizadoEm = Date.now();
+        localStorage.setItem(CHAVE_VIDA_BORDO_V149, JSON.stringify(estadoVidaV149));
+    }
+
+    function areaVidaV149(){
+        return document.getElementById("vidaABordoTaifeiroConteudo");
+    }
+
+    function embaralharIndicesVidaV149(total){
+        const lista = Array.from({ length: total }, (_, i) => i);
+        for(let i = lista.length - 1; i > 0; i--){
+            const j = Math.floor(Math.random() * (i + 1));
+            [lista[i], lista[j]] = [lista[j], lista[i]];
+        }
+        return lista;
+    }
+
+    function registroQuestaoVidaV149(q){
+        if(!estadoVidaV149.respostas[q.id]){
+            estadoVidaV149.respostas[q.id] = {
+                erradas: [],
+                concluida: false,
+                tentativas: 0,
+                pontos: 0,
+                ordem: embaralharIndicesVidaV149(q.alternativas.length)
+            };
+            salvarEstadoVidaV149();
+        }
+        const reg = estadoVidaV149.respostas[q.id];
+        if(!Array.isArray(reg.ordem) || reg.ordem.length !== q.alternativas.length){
+            reg.ordem = embaralharIndicesVidaV149(q.alternativas.length);
+        }
+        reg.erradas = Array.isArray(reg.erradas) ? reg.erradas : [];
+        return reg;
+    }
+
+    function registroBonusVidaV149(cena){
+        if(!estadoVidaV149.bonus[cena.id]){
+            estadoVidaV149.bonus[cena.id] = {
+                erradas: [],
+                concluida: false,
+                ordem: embaralharIndicesVidaV149(cena.alternativas.length)
+            };
+            salvarEstadoVidaV149();
+        }
+        return estadoVidaV149.bonus[cena.id];
+    }
+
+    function salvarErroNoCadernoVidaV149(q){
+        if(typeof cadernoErros === "undefined" || !Array.isArray(cadernoErros)) return;
+        const idErro = `erro-${q.id}`;
+        const existente = cadernoErros.findIndex(item => item && item.idErro === idErro);
+        const dados = {
+            idErro,
+            assunto: q.topico,
+            topicoEdital: q.topico,
+            eixo: q.eixo,
+            concurso: "transpetro2026",
+            cargo: "taifeiro",
+            disciplina: "⚓ Taifeiro — VIDA A BORDO",
+            pergunta: q.enunciado,
+            texto: q.contexto || "",
+            alternativas: q.alternativas,
+            correta: q.correta,
+            respostaCorreta: q.alternativas[q.correta],
+            explicacao: q.explicacao || "",
+            feedbackAcerto: q.explicacao || "",
+            feedbackErro: q.explicacao || "",
+            dicaBanca: "Na Cesgranrio, procure reconhecer o conceito dentro da situação apresentada.",
+            data: Date.now(),
+            status: "pendente"
+        };
+        if(existente >= 0){
+            cadernoErros[existente] = {
+                ...cadernoErros[existente],
+                ...dados,
+                erros: Number(cadernoErros[existente].erros || 0) + 1,
+                dataPrimeiroErro: cadernoErros[existente].dataPrimeiroErro || Date.now()
+            };
+        }else{
+            cadernoErros.unshift({
+                ...dados,
+                erros: 1,
+                acertosRevisao: 0,
+                pontosRevisaoGanhos: false,
+                dataPrimeiroErro: Date.now()
+            });
+        }
+        if(typeof salvarDados === "function") salvarDados();
+        if(typeof atualizarCadernoErros === "function") atualizarCadernoErros();
+    }
+
+    function totalCenasPercorridasVidaV149(){
+        return Math.max(0, Math.min(CENAS_VIDA_BORDO_V149.length, Number(estadoVidaV149.cena) || 0));
+    }
+
+    function percentualVidaV149(){
+        return Math.min(100, Math.round((estadoVidaV149.desafiosConcluidos / TOTAL_DESAFIOS_V149) * 100));
+    }
+
+    function topoVidaV149(subtitulo){
+        return `
+            <header class="vida-bordo-topo-v149">
+                <button type="button" class="vida-bordo-voltar-v149" onclick="voltarVidaABordoParaTaifeiro()">← Taifeiro</button>
+                <div class="vida-bordo-identidade-v149">
+                    <span class="vida-bordo-icone-v149">⚓</span>
+                    <div><strong>VIDA A BORDO</strong><small>${escaparVidaV149(subtitulo || "Taifeiro • Transpetro 2026")}</small></div>
+                </div>
+                <div class="vida-bordo-progresso-resumo-v149"><strong>${percentualVidaV149()}%</strong><span>${estadoVidaV149.desafiosConcluidos}/${TOTAL_DESAFIOS_V149}</span></div>
+            </header>
+        `;
+    }
+
+    function focarVidaV149(seletor, bloco = "center"){
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+            const alvo = document.querySelector(seletor);
+            if(alvo){
+                alvo.scrollIntoView({ behavior: "smooth", block: bloco, inline: "nearest" });
+            }
+        }));
+    }
+
+    function renderizarHubVidaV149(){
+        const area = areaVidaV149();
+        if(!area) return;
+        const estado = carregarEstadoVidaV149();
+        estadoVidaV149 = estado;
+        const textoBotao = estado.concluido
+            ? "🔄 Refazer a Viagem 1"
+            : (estado.iniciado ? `▶ Continuar • ${percentualVidaV149()}%` : "⚓ Iniciar meu primeiro embarque");
+        area.innerHTML = `
+            <div class="vida-bordo-pagina-v149 vida-bordo-hub-v149">
+                ${topoVidaV149("Taifeiro • experiência interativa")}
+                <section class="vida-bordo-hero-v149">
+                    <span class="vida-bordo-selo-v149">TRANSPETRO MAR • CESGRANRIO • 2026</span>
+                    <h1>Viva o edital dentro do navio.</h1>
+                    <p>Você começa às 05h30 preparando o café, passa pela lavanderia, camarotes, paiol, lista de rancho, operação no porto e termina enfrentando uma situação de proteção na madrugada.</p>
+                    <div class="vida-bordo-como-funciona-v149">
+                        <div><span>⚓</span><strong>Trabalhe</strong><small>A rotina real conduz a história.</small></div>
+                        <div><span>🎯</span><strong>Resolva</strong><small>42 desafios do edital em contexto.</small></div>
+                        <div><span>🧠</span><strong>Aprenda</strong><small>Erros viram revisão no Caderno de Erros.</small></div>
+                    </div>
+                </section>
+                <section class="vida-bordo-viagens-v149">
+                    <article class="vida-bordo-card-viagem-v149 disponivel">
+                        <div class="vida-bordo-card-numero-v149">01</div>
+                        <div>
+                            <span class="vida-bordo-status-v149">DISPONÍVEL</span>
+                            <h2>Meu primeiro embarque como Taifeiro</h2>
+                            <p>Do despertador às 05h18 à situação de proteção às 02h17: Arquitetura Naval, Legislação Marítima/Ambiental e Proteção do Navio.</p>
+                            <div class="vida-bordo-meta-v149"><span>🎯 ${TOTAL_DESAFIOS_V149} tópicos</span><span>⭐ conhecimento de bordo</span><span>📕 revisão automática</span></div>
+                        </div>
+                        <button type="button" onclick="iniciarViagemVidaABordoTaifeiro(${estado.concluido ? "true" : "false"})">${textoBotao}</button>
+                    </article>
+                    <article class="vida-bordo-card-viagem-v149 bloqueada"><div class="vida-bordo-card-numero-v149">02</div><div><span class="vida-bordo-status-v149">EM BREVE</span><h2>Uma nova missão a bordo</h2><p>Novas rotas, decisões e situações serão abertas depois da primeira viagem.</p></div><span class="vida-bordo-cadeado-v149">🔒</span></article>
+                </section>
+            </div>
+        `;
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }
+
+    function cenaAtualVidaV149(){
+        const indice = Math.max(0, Math.min(CENAS_VIDA_BORDO_V149.length - 1, Number(estadoVidaV149.cena) || 0));
+        return CENAS_VIDA_BORDO_V149[indice];
+    }
+
+    function barraProgressoVidaV149(){
+        return `
+            <div class="vida-bordo-barra-wrap-v149" aria-label="Progresso da viagem">
+                <div class="vida-bordo-barra-v149"><span style="width:${percentualVidaV149()}%"></span></div>
+                <small>${estadoVidaV149.desafiosConcluidos} de ${TOTAL_DESAFIOS_V149} desafios do edital concluídos</small>
+            </div>
+        `;
+    }
+
+    function renderizarAberturaVidaV149(){
+        return `
+            <div class="vida-bordo-pagina-v149">
+                ${topoVidaV149("Viagem 1 • Meu primeiro embarque")}
+                ${barraProgressoVidaV149()}
+                <section class="vida-bordo-cena-v149 vida-bordo-abertura-v149">
+                    <span class="vida-bordo-hora-v149">🌙 05h18 — Primeiro dia a bordo</span>
+                    <h1>O despertador toca.</h1>
+                    <p>Por alguns segundos você esquece onde está. Então sente a leve vibração do navio e escuta o ruído constante da ventilação do camarote.</p>
+                    <p>É seu primeiro dia trabalhando como <strong>Taifeiro</strong>. Às 07h00 o café da manhã deve estar pronto e, às 05h30, você já precisa estar na cozinha.</p>
+                    <p>Você veste o uniforme, abre a porta e entra no corredor. Até ontem, palavras como <em>boreste, CIR, Autoridade Marítima, ISPS e SSAS</em> estavam numa apostila. A partir de agora, elas farão parte do seu dia.</p>
+                    <button class="vida-bordo-btn-principal-v149" type="button" onclick="avancarVidaABordoTaifeiro()">⚓ Sair do camarote</button>
+                </section>
+            </div>
+        `;
+    }
+
+    function renderizarNarrativaVidaV149(cena){
+        return `
+            <div class="vida-bordo-pagina-v149">
+                ${topoVidaV149("Viagem 1 • Rotina de bordo")}
+                ${barraProgressoVidaV149()}
+                <section class="vida-bordo-cena-v149 vida-bordo-narrativa-v149">
+                    <span class="vida-bordo-hora-v149">${escaparVidaV149(cena.momento || "A bordo")}</span>
+                    <h1>${escaparVidaV149(cena.titulo)}</h1>
+                    <p>${escaparVidaV149(cena.texto)}</p>
+                    <button class="vida-bordo-btn-principal-v149" type="button" onclick="avancarVidaABordoTaifeiro()">Continuar a rotina →</button>
+                </section>
+            </div>
+        `;
+    }
+
+    function renderizarEscolhaVidaV149(cena){
+        const escolhida = estadoVidaV149.escolhas[cena.id] || null;
+        return `
+            <div class="vida-bordo-pagina-v149">
+                ${topoVidaV149("Viagem 1 • Decisão de bordo")}
+                ${barraProgressoVidaV149()}
+                <section class="vida-bordo-cena-v149 vida-bordo-escolha-v149">
+                    <span class="vida-bordo-hora-v149">${escaparVidaV149(cena.momento || "A bordo")}</span>
+                    <span class="vida-bordo-tipo-v149 decisao">⚓ DECISÃO DE BORDO</span>
+                    <h1>${escaparVidaV149(cena.titulo)}</h1>
+                    <p>${escaparVidaV149(cena.texto)}</p>
+                    <div class="vida-bordo-opcoes-v149">
+                        ${cena.opcoes.map(op => `
+                            <button type="button" class="vida-bordo-opcao-v149 ${escolhida && escolhida.valor === op.valor ? "selecionada" : ""}" onclick="escolherVidaABordoTaifeiro('${escaparVidaV149(cena.id)}','${escaparVidaV149(op.valor)}')" ${escolhida ? "disabled" : ""}>
+                                <span>${op.icone}</span><div><strong>${escaparVidaV149(op.titulo)}</strong><small>Escolha narrativa • não existe certo ou errado</small></div>
+                            </button>
+                        `).join("")}
+                    </div>
+                    ${escolhida ? `
+                        <div class="vida-bordo-consequencia-v149"><strong>${escaparVidaV149(escolhida.icone)} ${escaparVidaV149(escolhida.titulo)}</strong><p>${escaparVidaV149(escolhida.consequencia)}</p></div>
+                        <button class="vida-bordo-btn-principal-v149" type="button" onclick="avancarVidaABordoTaifeiro()">Continuar →</button>
+                    ` : ""}
+                </section>
+            </div>
+        `;
+    }
+
+    function renderizarQuestaoVidaV149(cena){
+        const q = MAPA_QUESTOES_V149[cena.qid];
+        if(!q) return renderizarNarrativaVidaV149({ momento:"A bordo", titulo:"Desafio indisponível", texto:"Este desafio não foi carregado corretamente." });
+        const reg = registroQuestaoVidaV149(q);
+        const letras = ["A","B","C","D","E","F"];
+        const opcoes = reg.ordem.map((orig, pos) => {
+            const errada = reg.erradas.includes(orig);
+            const correta = reg.concluida && orig === q.correta;
+            return `
+                <button type="button" class="vida-bordo-alternativa-v149 ${errada ? "errada" : ""} ${correta ? "correta" : ""}" onclick="responderVidaABordoTaifeiro('${q.id}',${orig})" ${errada || reg.concluida ? "disabled" : ""}>
+                    <span class="vida-bordo-letra-v149">${letras[pos]}</span><span>${escaparVidaV149(q.alternativas[orig])}</span>
+                </button>
+            `;
+        }).join("");
+        return `
+            <div class="vida-bordo-pagina-v149">
+                ${topoVidaV149("Viagem 1 • Desafio Cesgranrio")}
+                ${barraProgressoVidaV149()}
+                <section class="vida-bordo-cena-v149 vida-bordo-questao-v149">
+                    <span class="vida-bordo-hora-v149">${escaparVidaV149(q.momento || "A bordo")}</span>
+                    <div class="vida-bordo-rotulos-v149"><span class="vida-bordo-tipo-v149 prova">🎯 DESAFIO DO EDITAL</span><span>${escaparVidaV149(q.eixo)}</span></div>
+                    <h1>${escaparVidaV149(q.titulo)}</h1>
+                    <div class="vida-bordo-contexto-v149">${escaparVidaV149(q.contexto)}</div>
+                    <div class="vida-bordo-topico-v149"><strong>${escaparVidaV149(q.topico)}</strong></div>
+                    <p class="vida-bordo-enunciado-v149">${escaparVidaV149(q.enunciado)}</p>
+                    <div class="vida-bordo-alternativas-v149">${opcoes}</div>
+                    ${reg.erradas.length && !reg.concluida ? `<div class="vida-bordo-feedback-v149 erro"><strong>❌ Ainda não.</strong><p>Essa alternativa fica eliminada. Releia a situação e tente novamente.</p></div>` : ""}
+                    ${reg.concluida ? `
+                        <div class="vida-bordo-feedback-v149 acerto"><strong>✅ Correto • +${reg.pontos} pontos da viagem</strong><p>${escaparVidaV149(q.explicacao)}</p><small>📚 Fonte-base: ${escaparVidaV149(q.fonte)}</small></div>
+                        <button class="vida-bordo-btn-principal-v149" type="button" onclick="avancarVidaABordoTaifeiro()">Continuar a história →</button>
+                    ` : `<p class="vida-bordo-tentativas-v149">${reg.erradas.length ? "Continue tentando. As opções eliminadas permanecem esmaecidas." : "Acertou de primeira? Você recebe a pontuação máxima desta cena."}</p>`}
+                </section>
+            </div>
+        `;
+    }
+
+    function renderizarBonusVidaV149(cena){
+        const reg = registroBonusVidaV149(cena);
+        const letras = ["A","B","C","D","E"];
+        const opcoes = reg.ordem.map((orig, pos) => {
+            const errada = reg.erradas.includes(orig);
+            const correta = reg.concluida && orig === cena.correta;
+            return `<button type="button" class="vida-bordo-alternativa-v149 ${errada ? "errada" : ""} ${correta ? "correta" : ""}" onclick="responderBonusVidaABordoTaifeiro('${cena.id}',${orig})" ${errada || reg.concluida ? "disabled" : ""}><span class="vida-bordo-letra-v149">${letras[pos]}</span><span>${escaparVidaV149(cena.alternativas[orig])}</span></button>`;
+        }).join("");
+        return `
+            <div class="vida-bordo-pagina-v149">
+                ${topoVidaV149("Viagem 1 • Conhecimento profissional")}
+                ${barraProgressoVidaV149()}
+                <section class="vida-bordo-cena-v149 vida-bordo-questao-v149 bonus">
+                    <span class="vida-bordo-hora-v149">${escaparVidaV149(cena.momento)}</span>
+                    <span class="vida-bordo-tipo-v149 bonus">⭐ CONHECIMENTO DE BORDO • NÃO ENTRA NA NOTA DO EDITAL</span>
+                    <h1>${escaparVidaV149(cena.titulo)}</h1>
+                    <div class="vida-bordo-contexto-v149">${escaparVidaV149(cena.contexto)}</div>
+                    <p class="vida-bordo-enunciado-v149">${escaparVidaV149(cena.enunciado)}</p>
+                    <div class="vida-bordo-alternativas-v149">${opcoes}</div>
+                    ${reg.erradas.length && !reg.concluida ? `<div class="vida-bordo-feedback-v149 erro"><strong>❌ Atenção ao risco.</strong><p>Tente novamente. Este conteúdo é bônus profissional de bordo.</p></div>` : ""}
+                    ${reg.concluida ? `<div class="vida-bordo-feedback-v149 acerto"><strong>⭐ Conhecimento de bordo assimilado</strong><p>${escaparVidaV149(cena.explicacao)}</p><small>📚 ${escaparVidaV149(cena.fonte)}</small></div><button class="vida-bordo-btn-principal-v149" type="button" onclick="avancarVidaABordoTaifeiro()">Voltar à rotina →</button>` : ""}
+                </section>
+            </div>
+        `;
+    }
+
+    function desempenhoPorEixoVidaV149(){
+        const mapa = {};
+        QUESTOES_VIDA_BORDO_V149.forEach(q => {
+            if(!mapa[q.eixo]) mapa[q.eixo] = { total:0, primeira:0, concluidas:0 };
+            mapa[q.eixo].total++;
+            const reg = estadoVidaV149.respostas[q.id];
+            if(reg && reg.concluida){
+                mapa[q.eixo].concluidas++;
+                if((reg.erradas || []).length === 0) mapa[q.eixo].primeira++;
+            }
+        });
+        return mapa;
+    }
+
+    function renderizarConclusaoVidaV149(){
+        estadoVidaV149.concluido = true;
+        estadoVidaV149.iniciado = true;
+        salvarEstadoVidaV149();
+        const eixos = desempenhoPorEixoVidaV149();
+        const percentualPrimeira = Math.round((estadoVidaV149.acertosPrimeira / TOTAL_DESAFIOS_V149) * 100);
+        const revisar = QUESTOES_VIDA_BORDO_V149.filter(q => {
+            const reg = estadoVidaV149.respostas[q.id];
+            return reg && reg.erradas && reg.erradas.length > 0;
+        });
+        const escolhas = Object.values(estadoVidaV149.escolhas || {});
+        const classificacao = percentualPrimeira >= 85 ? "🥇 Pronto para navegar" : (percentualPrimeira >= 60 ? "🥈 Ganhando experiência" : "📚 Todo marítimo começou um dia");
+        return `
+            <div class="vida-bordo-pagina-v149">
+                ${topoVidaV149("Viagem 1 concluída")}
+                <section class="vida-bordo-cena-v149 vida-bordo-conclusao-v149">
+                    <div class="vida-bordo-trofeu-v149">⚓</div>
+                    <span class="vida-bordo-tipo-v149 prova">VIAGEM CONCLUÍDA</span>
+                    <h1>05h20 — Outro dia começa</h1>
+                    <p>O despertador toca novamente. Ontem você precisava pensar para localizar boreste. Hoje atravessa os corredores com outra percepção do navio.</p>
+                    <p>Você passou por cozinha, lavanderia, camarotes, paiol, documentos, operação portuária, rancho e uma situação de proteção. O edital deixou de ser uma lista e virou experiência.</p>
+                    <div class="vida-bordo-classificacao-v149"><strong>${classificacao}</strong><span>${percentualPrimeira}% de acertos na primeira tentativa</span></div>
+                    <div class="vida-bordo-resultado-grid-v149">
+                        <div><strong>${estadoVidaV149.pontos}</strong><span>pontos da viagem</span></div>
+                        <div><strong>${estadoVidaV149.acertosPrimeira}/${TOTAL_DESAFIOS_V149}</strong><span>de primeira</span></div>
+                        <div><strong>${estadoVidaV149.erros}</strong><span>tentativas erradas</span></div>
+                        <div><strong>${revisar.length}</strong><span>tópicos para revisar</span></div>
+                    </div>
+                    <div class="vida-bordo-eixos-v149">
+                        ${Object.entries(eixos).map(([nome, d]) => `<div><strong>${escaparVidaV149(nome)}</strong><span>${Math.round((d.primeira/d.total)*100)}% de primeira • ${d.concluidas}/${d.total} concluídos</span></div>`).join("")}
+                    </div>
+                    ${revisar.length ? `<div class="vida-bordo-revisar-v149"><h2>📕 Pontos enviados ao Caderno de Erros</h2>${revisar.slice(0,8).map(q => `<span>${escaparVidaV149(q.topico)}</span>`).join("")}${revisar.length > 8 ? `<small>+ ${revisar.length-8} outros tópicos</small>` : ""}</div>` : `<div class="vida-bordo-revisar-v149 sucesso"><h2>🏆 Nenhum erro na primeira tentativa</h2><p>Excelente domínio imediato dos 42 tópicos desta viagem.</p></div>`}
+                    ${escolhas.length ? `<div class="vida-bordo-trajetoria-v149"><h2>🌊 Sua trajetória</h2>${escolhas.map((e,i)=>`<div><span>${i+1}</span><p><strong>${escaparVidaV149(e.icone)} ${escaparVidaV149(e.titulo)}</strong><br>${escaparVidaV149(e.consequencia)}</p></div>`).join("")}</div>` : ""}
+                    <div class="vida-bordo-acoes-v149">
+                        <button class="vida-bordo-btn-principal-v149" type="button" onclick="reiniciarVidaABordoTaifeiro()">🔄 Fazer outra viagem</button>
+                        <button class="vida-bordo-btn-secundario-v149" type="button" onclick="voltarHubVidaABordoTaifeiro()">⚓ Voltar às viagens</button>
+                    </div>
+                </section>
+            </div>
+        `;
+    }
+
+    function renderizarCenaVidaV149(foco = "novaCena"){
+        const area = areaVidaV149();
+        if(!area) return;
+        const cena = cenaAtualVidaV149();
+        let html = "";
+        if(cena.tipo === "abertura") html = renderizarAberturaVidaV149();
+        else if(cena.tipo === "narrativa") html = renderizarNarrativaVidaV149(cena);
+        else if(cena.tipo === "escolha") html = renderizarEscolhaVidaV149(cena);
+        else if(cena.tipo === "questao") html = renderizarQuestaoVidaV149(cena);
+        else if(cena.tipo === "bonus") html = renderizarBonusVidaV149(cena);
+        else if(cena.tipo === "conclusao") html = renderizarConclusaoVidaV149();
+        area.innerHTML = html;
+        if(foco === "erro") focarVidaV149("#vidaABordoTaifeiroConteudo .vida-bordo-feedback-v149.erro", "center");
+        else if(foco === "acerto") focarVidaV149("#vidaABordoTaifeiroConteudo .vida-bordo-feedback-v149.acerto", "center");
+        else if(foco === "consequencia") focarVidaV149("#vidaABordoTaifeiroConteudo .vida-bordo-consequencia-v149", "center");
+        else focarVidaV149("#vidaABordoTaifeiroConteudo .vida-bordo-cena-v149", "start");
+    }
+
+    window.abrirVidaABordoTaifeiro = function(){
+        if(typeof window.temAcessoCargoFarol === "function" && !window.temAcessoCargoFarol("transpetro2026", "taifeiro")){
+            if(typeof mostrarToast === "function") mostrarToast("Você não tem acesso a Taifeiro — Transpetro MAR.");
+            return false;
+        }
+        localStorage.setItem("farol_concurso_atual", "transpetro2026");
+        localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+        mostrarTela("vidaABordoTaifeiro");
+        renderizarHubVidaV149();
+        return true;
+    };
+
+    window.voltarVidaABordoParaTaifeiro = function(){
+        localStorage.setItem("farol_concurso_atual", "transpetro2026");
+        localStorage.setItem("farol_trilha_atual", "transpetroTaifeiro");
+        mostrarTela("questoes");
+        if(typeof renderizarTrilhaEstudo === "function") setTimeout(() => renderizarTrilhaEstudo("transpetroTaifeiro"), 0);
+    };
+
+    window.voltarHubVidaABordoTaifeiro = function(){
+        estadoVidaV149 = carregarEstadoVidaV149();
+        renderizarHubVidaV149();
+    };
+
+    window.iniciarViagemVidaABordoTaifeiro = function(recomecar){
+        const atual = carregarEstadoVidaV149();
+        estadoVidaV149 = (recomecar === true || atual.concluido === true) ? novoEstadoVidaV149() : atual;
+        estadoVidaV149.iniciado = true;
+        salvarEstadoVidaV149();
+        renderizarCenaVidaV149("novaCena");
+    };
+
+    window.reiniciarVidaABordoTaifeiro = function(){
+        estadoVidaV149 = novoEstadoVidaV149();
+        estadoVidaV149.iniciado = true;
+        salvarEstadoVidaV149();
+        renderizarCenaVidaV149("novaCena");
+    };
+
+    window.avancarVidaABordoTaifeiro = function(){
+        if(estadoVidaV149.cena < CENAS_VIDA_BORDO_V149.length - 1){
+            estadoVidaV149.cena += 1;
+            salvarEstadoVidaV149();
+            renderizarCenaVidaV149("novaCena");
+        }
+    };
+
+    window.escolherVidaABordoTaifeiro = function(cenaId, valor){
+        const cena = CENAS_VIDA_BORDO_V149.find(c => c.id === cenaId);
+        const opcao = cena && Array.isArray(cena.opcoes) ? cena.opcoes.find(o => o.valor === valor) : null;
+        if(!opcao) return;
+        estadoVidaV149.escolhas[cenaId] = { ...opcao };
+        salvarEstadoVidaV149();
+        renderizarCenaVidaV149("consequencia");
+    };
+
+    window.responderVidaABordoTaifeiro = function(qid, indiceOriginal){
+        const q = MAPA_QUESTOES_V149[qid];
+        if(!q) return;
+        const reg = registroQuestaoVidaV149(q);
+        if(reg.concluida) return;
+        const escolha = Number(indiceOriginal);
+        if(escolha === Number(q.correta)){
+            reg.tentativas = reg.erradas.length + 1;
+            reg.concluida = true;
+            reg.pontos = reg.tentativas === 1 ? 10 : (reg.tentativas === 2 ? 7 : 5);
+            estadoVidaV149.pontos += reg.pontos;
+            estadoVidaV149.desafiosConcluidos += 1;
+            if(reg.erradas.length === 0) estadoVidaV149.acertosPrimeira += 1;
+            salvarEstadoVidaV149();
+            renderizarCenaVidaV149("acerto");
+            return;
+        }
+        if(!reg.erradas.includes(escolha)){
+            reg.erradas.push(escolha);
+            estadoVidaV149.erros += 1;
+            salvarErroNoCadernoVidaV149(q);
+            salvarEstadoVidaV149();
+        }
+        renderizarCenaVidaV149("erro");
+    };
+
+    window.responderBonusVidaABordoTaifeiro = function(cenaId, indiceOriginal){
+        const cena = CENAS_VIDA_BORDO_V149.find(c => c.id === cenaId && c.tipo === "bonus");
+        if(!cena) return;
+        const reg = registroBonusVidaV149(cena);
+        if(reg.concluida) return;
+        const escolha = Number(indiceOriginal);
+        if(escolha === Number(cena.correta)){
+            reg.concluida = true;
+            salvarEstadoVidaV149();
+            renderizarCenaVidaV149("acerto");
+        }else{
+            if(!reg.erradas.includes(escolha)) reg.erradas.push(escolha);
+            salvarEstadoVidaV149();
+            renderizarCenaVidaV149("erro");
+        }
+    };
+
+    // Inspeção administrativa/debug sem expor estado mutável.
+    window.resumoVidaABordoTaifeiroV149 = function(){
+        return {
+            totalDesafios: TOTAL_DESAFIOS_V149,
+            totalCenas: CENAS_VIDA_BORDO_V149.length,
+            progresso: percentualVidaV149(),
+            concluido: Boolean(estadoVidaV149.concluido)
+        };
+    };
 })();
