@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v150-2026-08-19-vida-a-bordo-ranking";
+const CACHE_VERSION = "farol-v157-2026-08-20-protecao-3-7-cso-cpc";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
