@@ -48088,3 +48088,113 @@ limparArenaLocalFarol = function(){
         };
     };
 })();
+
+
+// ============================================================
+// V48 — CIÊNCIAS DE ABAETETUBA — EIXO 3
+// Anatomia e Fisiologia Humana
+// ============================================================
+(function integrarAnatomiaFisiologiaAbaetetubaV48(){
+    "use strict";
+
+    const ASSUNTO_ANATOMIA_ABAETETUBA_V48 = "anatomiaFisiologiaAbaetetuba";
+
+    function bancoAnatomiaDisponivelV48(){
+        return typeof anatomiaFisiologiaAbaetetuba !== "undefined" &&
+               Array.isArray(anatomiaFisiologiaAbaetetuba);
+    }
+
+    function teoriaAnatomiaDisponivelV48(){
+        return typeof anatomiaFisiologiaAbaetetubaTeoria !== "undefined" &&
+               Array.isArray(anatomiaFisiologiaAbaetetubaTeoria);
+    }
+
+    if(typeof bancoQuestoes !== "undefined" && bancoAnatomiaDisponivelV48()){
+        bancoQuestoes[ASSUNTO_ANATOMIA_ABAETETUBA_V48] = anatomiaFisiologiaAbaetetuba;
+    }
+
+    if(typeof mapasMentaisPorAssunto !== "undefined"){
+        mapasMentaisPorAssunto[ASSUNTO_ANATOMIA_ABAETETUBA_V48] = {
+            titulo: "🫀 Anatomia e Fisiologia Humana",
+            imagem: "imagens/mapas/abaetetuba/ciencias/AnatomiaFisiologiaAbaetetuba.png"
+        };
+    }
+
+    const abrirModuloAntesV48 =
+        typeof window.abrirModuloCienciasAbaetetuba === "function"
+            ? window.abrirModuloCienciasAbaetetuba
+            : null;
+
+    window.abrirModuloCienciasAbaetetuba = function(numero){
+        const eixo = Number(numero);
+        if(eixo === 3){
+            mostrarTela("moduloCienciasAbaetetuba3");
+            return;
+        }
+        if(abrirModuloAntesV48){
+            return abrirModuloAntesV48.apply(this, arguments);
+        }
+        mostrarToast("Este conteúdo não está disponível.");
+    };
+
+    window.abrirAssuntoAnatomiaAbaetetuba = function(){
+        if(!teoriaAnatomiaDisponivelV48()){
+            mostrarToast("A teoria de Anatomia e Fisiologia não foi carregada.");
+            return;
+        }
+        localStorage.setItem("farol_contexto_ciencias_abaetetuba","eixo3");
+        abrirAssunto(ASSUNTO_ANATOMIA_ABAETETUBA_V48);
+    };
+
+    window.abrirMapaCienciasAbaetetubaEixo3 = function(){
+        disciplinaAtual = "cienciasAbaetetuba";
+        assuntoAtual = ASSUNTO_ANATOMIA_ABAETETUBA_V48;
+        if(typeof configurarMapaMentalAtual === "function"){ configurarMapaMentalAtual(); }
+        mostrarTela("telaMapaMental");
+    };
+
+    window.iniciarTreinoModuloTresCienciasAbaetetuba = function(){
+        if(!bancoAnatomiaDisponivelV48()){
+            mostrarToast("O banco de Anatomia e Fisiologia não foi carregado.");
+            return;
+        }
+        disciplinaAtual = "cienciasAbaetetuba";
+        assuntoAtual = ASSUNTO_ANATOMIA_ABAETETUBA_V48;
+        iniciarSimuladoPersonalizado(
+            [...anatomiaFisiologiaAbaetetuba],
+            30,
+            "cienciasAbaetetubaEixo3"
+        );
+    };
+
+    const abrirAssuntoAntesV48 = abrirAssunto;
+    abrirAssunto = function(assunto){
+        if(assunto === ASSUNTO_ANATOMIA_ABAETETUBA_V48){
+            assuntoAtual = ASSUNTO_ANATOMIA_ABAETETUBA_V48;
+            disciplinaAtual = "cienciasAbaetetuba";
+            localStorage.setItem("farol_contexto_ciencias_abaetetuba","eixo3");
+            abrirTeoria(anatomiaFisiologiaAbaetetubaTeoria,"🫀 Anatomia e Fisiologia Humana");
+            return;
+        }
+        return abrirAssuntoAntesV48.apply(this, arguments);
+    };
+
+    const abrirTeoriaAntesV48 = abrirTeoriaDoAssunto;
+    abrirTeoriaDoAssunto = function(){
+        if(assuntoAtual === ASSUNTO_ANATOMIA_ABAETETUBA_V48){
+            abrirTeoria(anatomiaFisiologiaAbaetetubaTeoria,"🫀 Anatomia e Fisiologia Humana");
+            return;
+        }
+        return abrirTeoriaAntesV48.apply(this, arguments);
+    };
+
+    const voltarAntesV48 = voltarParaAssuntos;
+    voltarParaAssuntos = function(){
+        if(assuntoAtual === ASSUNTO_ANATOMIA_ABAETETUBA_V48){
+            mostrarTela("moduloCienciasAbaetetuba3");
+            return;
+        }
+        return voltarAntesV48.apply(this, arguments);
+    };
+})();
+
