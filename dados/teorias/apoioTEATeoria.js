@@ -1,227 +1,96 @@
 const apoioTEATeoria = [
-
 {
-    titulo: "🧩 Política Nacional do TEA — Página 1",
-
-    conteudo: `
-
-<h2>🧩 POLÍTICA NACIONAL DO TEA — PÁGINA 1</h2>
-<p>Este conteúdo aborda Lei nº 12.764/2012, direitos da pessoa com TEA, inclusão, atendimento multiprofissional, comunicação e previsibilidade, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
+    titulo: '🧩 TEA — Página 1: Conceito legal e enquadramento',
+    conteudo: `<h2>🧩 TEA — CONCEITO LEGAL E ENQUADRAMENTO JURÍDICO</h2>
+<p>A Lei nº 12.764/2012 institui a Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista. Para fins legais, a pessoa com TEA é considerada <b>pessoa com deficiência para todos os efeitos legais</b>.</p>
+<p>O conceito legal considera deficiência persistente e clinicamente significativa da comunicação e da interação sociais e/ou padrões restritivos e repetitivos de comportamentos, interesses e atividades, observados os critérios da lei.</p>
+<h3>🔎 QUADRO-CHAVE</h3>
+<table><tr><th>Ponto</th><th>Regra</th></tr>
+<tr><td>Enquadramento</td><td>Pessoa com TEA = pessoa com deficiência para todos os efeitos legais.</td></tr>
+<tr><td>Comunicação/interação</td><td>Podem existir déficits marcantes na comunicação verbal e não verbal e na reciprocidade social.</td></tr>
+<tr><td>Padrões restritivos</td><td>Podem envolver comportamentos, interesses e atividades restritos e repetitivos.</td></tr>
 </table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+<p>O diagnóstico não cria os direitos apenas no ambiente escolar: o enquadramento jurídico repercute em educação, saúde, assistência social, trabalho, acessibilidade e demais direitos da pessoa com deficiência.</p>
+<h3>⚠️ PEGADINHA ÁGATA</h3>
+<div class="caixa-destaque">❌ TEA é reconhecido como deficiência apenas para fins educacionais.<br>✅ A Lei nº 12.764/2012 diz: <b>para todos os efeitos legais</b>.</div>`
 },
-
 {
-    titulo: "🧩 Política Nacional do TEA — Página 2",
-
-    conteudo: `
-
-<h2>🧩 POLÍTICA NACIONAL DO TEA — PÁGINA 2</h2>
-<p>Este conteúdo aborda Lei nº 12.764/2012, direitos da pessoa com TEA, inclusão, atendimento multiprofissional, comunicação e previsibilidade, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
+    titulo: '❤️ TEA — Página 2: Direitos e atenção à saúde',
+    conteudo: `<h2>❤️ TEA — DIREITOS E ATENÇÃO INTEGRAL À SAÚDE</h2>
+<p>Entre os direitos previstos pela Lei nº 12.764/2012 estão vida digna, integridade física e moral, livre desenvolvimento da personalidade, segurança e lazer, além de proteção contra qualquer forma de abuso e exploração.</p>
+<h3>🔎 SAÚDE — PONTOS EXPRESSOS NA LEI</h3>
+<table><tr><th>Direito</th><th>Conteúdo</th></tr>
+<tr><td>Diagnóstico precoce</td><td>É assegurado ainda que não definitivo.</td></tr>
+<tr><td>Atendimento multiprofissional</td><td>Integra a atenção às necessidades de saúde da pessoa com TEA.</td></tr>
+<tr><td>Nutrição e terapia nutricional</td><td>Integram o rol legal de atenção à saúde.</td></tr>
+<tr><td>Medicamentos</td><td>Acesso conforme a política de saúde e protocolos aplicáveis.</td></tr>
+<tr><td>Informação</td><td>Informações que auxiliem no diagnóstico e no tratamento.</td></tr>
 </table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+<p>O Decreto nº 8.368/2014 reforça cuidado integral no SUS, atenção básica, especializada e hospitalar, redes de atenção psicossocial e de cuidados à pessoa com deficiência, além de qualificação dos profissionais.</p>
+<p><b>Atualização de 2025:</b> a Lei nº 15.131/2025 detalhou que nutrição adequada e terapia nutricional compreendem ações de promoção e proteção realizadas por profissional de saúde legalmente habilitado, observados protocolos clínicos e diretrizes terapêuticas.</p>
+<h3>⚠️ PARA O APOIO ESCOLAR</h3>
+<div class="caixa-destaque">O profissional de apoio não prescreve dieta, medicamento ou terapia. Ele observa necessidades, segue orientações institucionais e comunica situações relevantes à equipe responsável.</div>`
 },
-
 {
-    titulo: "🧩 Política Nacional do TEA — Página 3",
-
-    conteudo: `
-
-<h2>🧩 POLÍTICA NACIONAL DO TEA — PÁGINA 3</h2>
-<p>Este conteúdo aborda Lei nº 12.764/2012, direitos da pessoa com TEA, inclusão, atendimento multiprofissional, comunicação e previsibilidade, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
+    titulo: '🎓 TEA — Página 3: Educação inclusiva e acompanhante especializado',
+    conteudo: `<h2>🎓 TEA — EDUCAÇÃO INCLUSIVA E ACOMPANHANTE ESPECIALIZADO</h2>
+<p>A política assegura acesso à educação e ao ensino profissionalizante. O Decreto nº 8.368/2014 estabelece o dever do Estado, da família, da comunidade escolar e da sociedade de assegurar educação em <b>sistema educacional inclusivo</b>, com transversalidade da educação especial da educação infantil à educação superior.</p>
+<h3>🔎 ACOMPANHANTE ESPECIALIZADO</h3>
+<table><tr><th>Situação</th><th>Regra</th></tr>
+<tr><td>Necessidade comprovada</td><td>A pessoa com TEA incluída em classe comum de ensino regular tem direito a acompanhante especializado.</td></tr>
+<tr><td>Contexto escolar</td><td>O Decreto relaciona o apoio às atividades de comunicação, interação social, locomoção, alimentação e cuidados pessoais, quando comprovada a necessidade.</td></tr>
+<tr><td>Função docente</td><td>O acompanhante não substitui professor, planejamento pedagógico ou avaliação.</td></tr>
 </table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+<p>O direito ao acompanhante não é automático para toda pessoa com TEA apenas pela existência do diagnóstico. A lei usa a expressão <b>em casos de comprovada necessidade</b>.</p>
+<p>A escola também não pode usar a necessidade de apoio como motivo para impedir participação em atividades, recreio, projetos ou experiências coletivas. O apoio deve ampliar acesso e participação.</p>
+<h3>⚠️ PEGADINHA</h3>
+<div class="caixa-destaque">❌ Todo aluno com TEA tem acompanhante obrigatório independentemente da necessidade.<br>✅ O direito existe <b>em caso de comprovada necessidade</b>.<br><br>❌ Acompanhante = professor particular.<br>✅ Não substitui a docência.</div>`
 },
-
 {
-    titulo: "🧩 Política Nacional do TEA — Página 4",
-
-    conteudo: `
-
-<h2>🧩 POLÍTICA NACIONAL DO TEA — PÁGINA 4</h2>
-<p>Este conteúdo aborda Lei nº 12.764/2012, direitos da pessoa com TEA, inclusão, atendimento multiprofissional, comunicação e previsibilidade, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
+    titulo: '🪪 TEA — Página 4: CIPTEA e prioridade',
+    conteudo: `<h2>🪪 TEA — CIPTEA E PRIORIDADE DE ATENDIMENTO</h2>
+<p>A Lei nº 13.977/2020 criou a Carteira de Identificação da Pessoa com Transtorno do Espectro Autista — <b>CIPTEA</b>.</p>
+<p>Sua finalidade é garantir atenção integral, pronto atendimento e prioridade no atendimento e no acesso aos serviços públicos e privados, especialmente nas áreas de saúde, educação e assistência social.</p>
+<h3>🔎 CIPTEA — O QUE MEMORIZAR</h3>
+<table><tr><th>Ponto</th><th>Regra</th></tr>
+<tr><td>Emissão</td><td>É expedida pelos órgãos responsáveis nos Estados, Distrito Federal e Municípios, mediante requerimento e documentação prevista em lei.</td></tr>
+<tr><td>Validade</td><td>5 anos.</td></tr>
+<tr><td>Atualização</td><td>Dados cadastrais devem ser mantidos atualizados.</td></tr>
+<tr><td>Revalidação</td><td>É mantido o mesmo número, permitindo contagem das pessoas com TEA no território nacional.</td></tr>
 </table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+<p>A CIPTEA facilita identificação e atendimento prioritário, mas não é ela que transforma a pessoa em titular dos direitos previstos na Lei nº 12.764/2012. A condição jurídica decorre da legislação.</p>
+<h3>⚠️ PEGADINHA ÁGATA</h3>
+<div class="caixa-destaque">❌ Sem CIPTEA a pessoa deixa de ser considerada pessoa com deficiência.<br>✅ A CIPTEA é instrumento de identificação e facilitação de direitos; não cria a condição de TEA.</div>`
 },
-
 {
-    titulo: "🧩 Política Nacional do TEA — Página 5",
-
-    conteudo: `
-
-<h2>🧩 POLÍTICA NACIONAL DO TEA — PÁGINA 5</h2>
-<p>Este conteúdo aborda Lei nº 12.764/2012, direitos da pessoa com TEA, inclusão, atendimento multiprofissional, comunicação e previsibilidade, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
+    titulo: '🚫 TEA — Página 5: Matrícula, discriminação e sanções',
+    conteudo: `<h2>🚫 TEA — RECUSA DE MATRÍCULA E DISCRIMINAÇÃO</h2>
+<p>A pessoa com TEA não pode ter acesso à educação restringido por motivo da deficiência. A Lei nº 12.764/2012 prevê sanção específica para gestor escolar ou autoridade competente que recusar matrícula de aluno com TEA ou com outra deficiência.</p>
+<h3>🔎 ART. 7º — SANÇÃO</h3>
+<table><tr><th>Situação</th><th>Consequência</th></tr>
+<tr><td>Recusa de matrícula</td><td>Multa de 3 a 20 salários-mínimos.</td></tr>
+<tr><td>Reincidência</td><td>Após processo administrativo com contraditório e ampla defesa, pode haver perda do cargo.</td></tr>
 </table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+<p>O Decreto nº 8.368/2014 regulamenta o procedimento administrativo e determina que qualquer interessado pode denunciar a recusa de matrícula ao órgão competente.</p>
+<p>No cotidiano escolar, discriminação também pode aparecer de formas menos explícitas: negar participação em atividades por presunção de incapacidade, isolar o estudante preventivamente ou tratá-lo de forma infantilizada sem necessidade real.</p>
+<h3>⚠️ PEGADINHA</h3>
+<div class="caixa-destaque">Decore: <b>multa de 3 a 20 salários-mínimos</b>. Em caso de reincidência, a perda do cargo depende de processo administrativo com contraditório e ampla defesa.</div>`
 },
-
 {
-    titulo: "🧩 Política Nacional do TEA — Página 6",
-
-    conteudo: `
-
-<h2>🧩 POLÍTICA NACIONAL DO TEA — PÁGINA 6</h2>
-<p>Este conteúdo aborda Lei nº 12.764/2012, direitos da pessoa com TEA, inclusão, atendimento multiprofissional, comunicação e previsibilidade, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
+    titulo: '🆕 TEA — Página 6: Atualizações 2025 e revisão Ágata',
+    conteudo: `<h2>🆕 TEA — ATUALIZAÇÕES RECENTES E REVISÃO FINAL</h2>
+<p>A teoria anterior estava defasada em relação às alterações legislativas recentes. Esta página reúne os pontos que precisam constar em uma preparação atualizada.</p>
+<h3>🔎 ATUALIZAÇÕES DE 2025</h3>
+<table><tr><th>Norma</th><th>Atualização</th></tr>
+<tr><td>Lei nº 15.131/2025</td><td>Detalhou nutrição adequada e terapia nutricional e manteve a regra do acompanhante especializado em caso de comprovada necessidade.</td></tr>
+<tr><td>Lei nº 15.256/2025</td><td>Incluiu entre as diretrizes o incentivo à investigação diagnóstica do TEA em pessoas adultas e em pessoas idosas.</td></tr>
 </table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+<p>A investigação diagnóstica não deve ser tratada como tema exclusivamente infantil. A atualização de 2025 tornou expressa a atenção a adultos e idosos.</p>
+<h3>🧠 REVISÃO RÁPIDA</h3>
+<div class="caixa-destaque">✅ TEA = pessoa com deficiência para todos os efeitos legais.<br>✅ Diagnóstico precoce, ainda que não definitivo.<br>✅ Atendimento multiprofissional.<br>✅ Acompanhante especializado: comprovada necessidade.<br>✅ CIPTEA: prioridade e atenção integral; validade de 5 anos.<br>✅ Nutrição/terapia nutricional: profissional de saúde habilitado + protocolos.<br>✅ Investigação diagnóstica: atualização de 2025 inclui adultos e idosos.<br>✅ Recusa de matrícula: multa de 3 a 20 salários-mínimos.</div>
+<h3>🎯 COMO A ÁGATA PODE COBRAR</h3>
+<p>As pegadinhas mais prováveis são transformar acompanhante em direito automático, confundir CIPTEA com diagnóstico, limitar TEA à infância, atribuir procedimentos clínicos ao profissional de apoio ou reduzir a inclusão à matrícula.</p>`
 },
-
-{
-    titulo: "Questões comentadas I",
-
-    conteudo: `
-
-<h2>🧩 POLÍTICA NACIONAL DO TEA — QUESTÕES COMENTADAS 1</h2><p>As questões comentadas apresentam situações práticas do apoio escolar, exigindo análise de inclusão, segurança, autonomia, sigilo e trabalho colaborativo.</p><div class="caixa-exemplo"><strong>Questão comentada 1</strong><br><br>Durante atividade coletiva, o estudante com deficiência precisa de auxílio para deslocamento. A conduta adequada do profissional de apoio é:<br><br>A) retirá-lo da atividade para evitar qualquer risco, ainda que a escola possa organizar apoio adequado.<br>B) favorecer a participação segura do estudante, articulando-se com o professor e evitando isolamento desnecessário.<br>C) assumir a condução pedagógica da atividade, substituindo o professor no planejamento da aula.<br>D) expor aos colegas detalhes do diagnóstico para justificar a presença do apoio escolar.<br>E) decidir sozinho a adaptação curricular, sem diálogo com professor ou equipe pedagógica.<br><br><strong>Resposta:</strong> B.<br><br><strong>Comentário:</strong> A inclusão exige participação com segurança; o apoio reduz barreiras e não substitui o professor. Apoiar é viabilizar participação, não isolar o estudante.</div><br><div class="caixa-exemplo"><strong>Questão comentada 2</strong><br><br>Um familiar pede ao profissional de apoio informações detalhadas sobre outro estudante da turma. A conduta correta é:<br><br>A) preservar o sigilo e orientar que informações pessoais devem ser tratadas por canais institucionais próprios.<br>B) responder informalmente, desde que omita apenas dados de saúde considerados sensíveis.<br>C) fornecer as informações, pois todos os familiares têm direito de conhecer a rotina da turma.<br>D) encaminhar fotos e relatos por aplicativo para demonstrar transparência no atendimento.<br>E) comentar apenas com familiares próximos, pois isso não caracteriza exposição pública.<br><br><strong>Resposta:</strong> A.<br><br><strong>Comentário:</strong> Informações pessoais de estudantes exigem sigilo e comunicação institucional adequada. Sigilo protege estudante, família e escola.</div><br><div class="caixa-exemplo"><strong>Questão comentada 3</strong><br><br>Ao notar que o estudante consegue realizar parte da atividade sozinho, o apoio escolar deve:<br><br>A) registrar que o estudante não precisa de apoio e encerrar qualquer acompanhamento.<br>B) estimular a autonomia possível, oferecendo ajuda apenas quando necessária para participação e segurança.<br>C) realizar a atividade integralmente pelo estudante para garantir resultado mais rápido.<br>D) corrigir o conteúdo pedagógico no lugar do professor, evitando erros durante a tarefa.<br>E) impedir tentativas independentes, pois a proteção sempre deve prevalecer sobre autonomia.<br><br><strong>Resposta:</strong> B.<br><br><strong>Comentário:</strong> O apoio deve favorecer autonomia gradual, sem abandono nem substituição indevida. Autonomia não é ausência de apoio; é apoio na medida necessária.</div><br><div class="caixa-exemplo"><strong>Questão comentada 4</strong><br><br>Em situação de possível acidente escolar, a atitude adequada é:<br><br>A) adotar medidas preventivas, acionar responsáveis internos e comunicar a ocorrência pelos canais corretos.<br>B) minimizar o ocorrido sem comunicar, caso não haja lesão visível imediata.<br>C) realizar procedimento de saúde complexo sem capacitação, para evitar acionar a equipe escolar.<br>D) divulgar o ocorrido em grupo informal antes de registrar a situação na escola.<br>E) retirar o estudante da escola sem autorização, para resolver o caso com rapidez.<br><br><strong>Resposta:</strong> A.<br><br><strong>Comentário:</strong> Segurança exige prevenção, comunicação correta e respeito aos procedimentos institucionais. Em risco ou acidente, comunique e siga protocolo.</div><br><div class="caixa-exemplo"><strong>Questão comentada 5</strong><br><br>O profissional de apoio percebe dificuldade de comunicação do estudante durante a rotina. A conduta adequada é:<br><br>A) interpretar sozinho todo comportamento e impor rotina sem diálogo com professor ou equipe.<br>B) exigir que o estudante se comunique da mesma forma que os demais, para garantir igualdade formal.<br>C) ignorar manifestações não verbais, pois apenas comunicação oral deve orientar o atendimento.<br>D) divulgar as dificuldades do estudante à turma para que todos saibam como controlá-lo.<br>E) utilizar estratégias orientadas pela equipe, observar respostas do estudante e favorecer comunicação acessível.<br><br><strong>Resposta:</strong> E.<br><br><strong>Comentário:</strong> A comunicação acessível deve respeitar formas diversas de expressão e orientação da equipe. Comunicação pode ser verbal, visual, gestual, corporal ou assistiva.</div><br>
-
-`
-},
-
-{
-    titulo: "Questões comentadas II",
-
-    conteudo: `
-
-<h2>🧩 POLÍTICA NACIONAL DO TEA — QUESTÕES COMENTADAS 2</h2><p>As questões comentadas apresentam situações práticas do apoio escolar, exigindo análise de inclusão, segurança, autonomia, sigilo e trabalho colaborativo.</p><div class="caixa-exemplo"><strong>Questão comentada 1</strong><br><br>Durante atividade coletiva, o estudante com deficiência precisa de auxílio para deslocamento. A conduta adequada do profissional de apoio é:<br><br>A) expor aos colegas detalhes do diagnóstico para justificar a presença do apoio escolar.<br>B) decidir sozinho a adaptação curricular, sem diálogo com professor ou equipe pedagógica.<br>C) assumir a condução pedagógica da atividade, substituindo o professor no planejamento da aula.<br>D) favorecer a participação segura do estudante, articulando-se com o professor e evitando isolamento desnecessário.<br>E) retirá-lo da atividade para evitar qualquer risco, ainda que a escola possa organizar apoio adequado.<br><br><strong>Resposta:</strong> D.<br><br><strong>Comentário:</strong> A inclusão exige participação com segurança; o apoio reduz barreiras e não substitui o professor. Apoiar é viabilizar participação, não isolar o estudante.</div><br><div class="caixa-exemplo"><strong>Questão comentada 2</strong><br><br>Um familiar pede ao profissional de apoio informações detalhadas sobre outro estudante da turma. A conduta correta é:<br><br>A) responder informalmente, desde que omita apenas dados de saúde considerados sensíveis.<br>B) comentar apenas com familiares próximos, pois isso não caracteriza exposição pública.<br>C) preservar o sigilo e orientar que informações pessoais devem ser tratadas por canais institucionais próprios.<br>D) encaminhar fotos e relatos por aplicativo para demonstrar transparência no atendimento.<br>E) fornecer as informações, pois todos os familiares têm direito de conhecer a rotina da turma.<br><br><strong>Resposta:</strong> C.<br><br><strong>Comentário:</strong> Informações pessoais de estudantes exigem sigilo e comunicação institucional adequada. Sigilo protege estudante, família e escola.</div><br><div class="caixa-exemplo"><strong>Questão comentada 3</strong><br><br>Ao notar que o estudante consegue realizar parte da atividade sozinho, o apoio escolar deve:<br><br>A) impedir tentativas independentes, pois a proteção sempre deve prevalecer sobre autonomia.<br>B) corrigir o conteúdo pedagógico no lugar do professor, evitando erros durante a tarefa.<br>C) estimular a autonomia possível, oferecendo ajuda apenas quando necessária para participação e segurança.<br>D) realizar a atividade integralmente pelo estudante para garantir resultado mais rápido.<br>E) registrar que o estudante não precisa de apoio e encerrar qualquer acompanhamento.<br><br><strong>Resposta:</strong> C.<br><br><strong>Comentário:</strong> O apoio deve favorecer autonomia gradual, sem abandono nem substituição indevida. Autonomia não é ausência de apoio; é apoio na medida necessária.</div><br><div class="caixa-exemplo"><strong>Questão comentada 4</strong><br><br>Em situação de possível acidente escolar, a atitude adequada é:<br><br>A) divulgar o ocorrido em grupo informal antes de registrar a situação na escola.<br>B) retirar o estudante da escola sem autorização, para resolver o caso com rapidez.<br>C) adotar medidas preventivas, acionar responsáveis internos e comunicar a ocorrência pelos canais corretos.<br>D) realizar procedimento de saúde complexo sem capacitação, para evitar acionar a equipe escolar.<br>E) minimizar o ocorrido sem comunicar, caso não haja lesão visível imediata.<br><br><strong>Resposta:</strong> C.<br><br><strong>Comentário:</strong> Segurança exige prevenção, comunicação correta e respeito aos procedimentos institucionais. Em risco ou acidente, comunique e siga protocolo.</div><br><div class="caixa-exemplo"><strong>Questão comentada 5</strong><br><br>O profissional de apoio percebe dificuldade de comunicação do estudante durante a rotina. A conduta adequada é:<br><br>A) ignorar manifestações não verbais, pois apenas comunicação oral deve orientar o atendimento.<br>B) exigir que o estudante se comunique da mesma forma que os demais, para garantir igualdade formal.<br>C) divulgar as dificuldades do estudante à turma para que todos saibam como controlá-lo.<br>D) utilizar estratégias orientadas pela equipe, observar respostas do estudante e favorecer comunicação acessível.<br>E) interpretar sozinho todo comportamento e impor rotina sem diálogo com professor ou equipe.<br><br><strong>Resposta:</strong> D.<br><br><strong>Comentário:</strong> A comunicação acessível deve respeitar formas diversas de expressão e orientação da equipe. Comunicação pode ser verbal, visual, gestual, corporal ou assistiva.</div><br>
-
-`
-}
-
 ];
+
+if (typeof window !== 'undefined') { window.apoioTEATeoria = apoioTEATeoria; }

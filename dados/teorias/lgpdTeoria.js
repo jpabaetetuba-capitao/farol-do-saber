@@ -1,603 +1,107 @@
 const lgpdTeoria = [
-
 {
-    titulo: "🛡️ Lei Geral de Proteção de Dados — Página 1",
-
-    conteudo: `
-
-<h2>🛡️ 🛡️ LEI GERAL DE PROTEÇÃO DE DADOS — PÁGINA 1</h2>
-
-<p>
-🛡️ Lei Geral de Proteção de Dados deve ser compreendido a partir da finalidade pública e da confiança depositada na administração.
-</p>
-
-<p>
-No serviço público, a ética não se limita à honestidade individual. Ela envolve atuação orientada ao interesse público, observância da lei, respeito ao cidadão, responsabilidade com documentos e informações, transparência compatível com os limites legais e rejeição a qualquer favorecimento indevido.
-</p>
-
-<p>
-A conduta do servidor deve ser avaliada pela finalidade do ato, pelo meio utilizado e pelos efeitos produzidos. Uma decisão rápida pode ser inadequada se viola procedimento obrigatório, expõe dados pessoais, oculta informação pública, favorece conhecido ou prejudica usuário sem fundamento legal.
-</p>
-
+    titulo: '🛡️ LGPD — Página 1: Fundamentos, conceitos e alcance',
+    conteudo: `<h2>🛡️ LGPD — FUNDAMENTOS, CONCEITOS E ALCANCE</h2>
+<p>A Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais (LGPD) — disciplina o tratamento de dados pessoais, inclusive nos meios digitais, por pessoas naturais e por pessoas jurídicas de direito público ou privado. Seu objetivo é proteger os direitos fundamentais de liberdade, privacidade e livre desenvolvimento da personalidade da pessoa natural.</p>
+<p>As normas gerais da LGPD são de interesse nacional e devem ser observadas pela União, Estados, Distrito Federal e Municípios. Portanto, escolas públicas e órgãos municipais também estão sujeitos à lei quando realizam tratamento de dados pessoais.</p>
 <h3>🔎 CONCEITOS ESSENCIAIS</h3>
-
-<table>
-<tr><th>Conceito</th><th>Aplicação no serviço público</th></tr>
-<tr><td>Interesse público</td><td>Direciona atos, decisões, atendimento, gestão de recursos e uso de informações.</td></tr>
-<tr><td>Legalidade</td><td>Exige que a atuação ocorra dentro da lei, das competências e dos procedimentos cabíveis.</td></tr>
-<tr><td>Impessoalidade</td><td>Impede favorecimento, perseguição, preferência pessoal e desvio de finalidade.</td></tr>
-<tr><td>Moralidade</td><td>Exige honestidade, lealdade, boa-fé, finalidade legítima e respeito à confiança pública.</td></tr>
-<tr><td>Publicidade</td><td>Permite controle social, sem afastar hipóteses de sigilo, proteção de dados e restrição legal.</td></tr>
-<tr><td>Eficiência</td><td>Busca atendimento adequado, qualidade, economia, organização e resultado útil à sociedade.</td></tr>
-</table>
-
-<h3>📖 DESENVOLVIMENTO</h3>
-
-<p>
-A atuação ética exige que o servidor compreenda o alcance público de suas tarefas. Receber um documento, registrar uma solicitação, acessar um sistema, responder a um cidadão, orientar sobre prazos ou encaminhar um processo são atos que podem afetar direitos e deveres. Por isso, a função pública exige cuidado maior do que uma relação privada comum.
-</p>
-
-<p>
-A impessoalidade é um dos pontos mais cobrados em situações práticas. O servidor não pode alterar prioridade, dificultar pedido, acelerar processo, negar orientação ou prestar informação conforme simpatia, amizade, parentesco, influência externa ou conveniência pessoal. Critérios de atendimento devem ser objetivos, justificáveis e compatíveis com a lei.
-</p>
-
-<p>
-A moralidade administrativa exige mais do que ausência de crime. Uma conduta pode não envolver vantagem financeira e ainda ser antiética, como omitir informação relevante, usar linguagem humilhante, expor usuário, esconder falha funcional, manipular registro ou consultar dado sem necessidade de serviço. A confiança pública depende de condutas coerentes e verificáveis.
-</p>
-
-<p>
-A publicidade fortalece o controle social. Entretanto, transparência não significa divulgação irrestrita. Informações públicas devem ser fornecidas quando cabível, mas dados pessoais, dados sensíveis, informações classificadas e sigilos legais exigem análise cuidadosa. O desafio é compatibilizar acesso à informação e proteção de direitos.
-</p>
-
-<p>
-A eficiência administrativa não autoriza atalhos ilegais. Ela exige boa organização, presteza, qualidade, uso adequado de recursos e redução de entraves desnecessários. A resposta eficiente é aquela que resolve ou encaminha corretamente a demanda, sem violar normas, prazos, competências, sigilo ou proteção de dados.
-</p>
-
-<h3>✍️ EXEMPLO COMENTADO</h3>
-
-<div class="caixa-exemplo">
-Um usuário solicita cópia de processo administrativo que contém contrato público, parecer técnico e documentos pessoais de terceiros. A resposta ética não é negar tudo nem divulgar tudo. A administração deve analisar o conteúdo, fornecer a parte pública e proteger dados pessoais ou trechos restritos, indicando fundamento quando houver negativa parcial.
-</div>
-
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-
-<div class="caixa-destaque">
-❌ Confundir transparência com exposição total de dados.<br><br>
-✅ Transparência deve ser compatibilizada com proteção de dados e sigilo legal.<br><br>
-❌ Confundir eficiência com pressa sem critério.<br><br>
-✅ Eficiência exige qualidade, legalidade e resultado útil.<br><br>
-❌ Confundir lealdade institucional com acobertamento de irregularidade.<br><br>
-✅ Lealdade é compromisso com a finalidade pública e com os canais institucionais corretos.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ A ética pública orienta a conduta funcional em favor do interesse coletivo.<br><br>
-✔ A atuação do servidor deve respeitar legalidade, impessoalidade, moralidade, publicidade e eficiência.<br><br>
-✔ O atendimento deve ser urbano, claro, objetivo e responsável.<br><br>
-✔ Informações públicas e dados pessoais precisam ser tratados de forma equilibrada.<br><br>
-✔ A responsabilidade funcional pode surgir por ação, omissão, favorecimento, negligência ou uso indevido de informações.
-</div>
-
-`
+<table><tr><th>Conceito</th><th>Definição prática</th></tr>
+<tr><td>Dado pessoal</td><td>Informação relacionada a pessoa natural identificada ou identificável.</td></tr>
+<tr><td>Dado pessoal sensível</td><td>Dado sobre origem racial/étnica, convicção religiosa, opinião política, filiação sindical, saúde, vida sexual, dado genético ou biométrico vinculado a pessoa natural.</td></tr>
+<tr><td>Dado anonimizado</td><td>Dado que, considerando meios técnicos razoáveis e disponíveis, não permite identificar o titular.</td></tr>
+<tr><td>Tratamento</td><td>Qualquer operação com dados: coleta, acesso, uso, armazenamento, transmissão, compartilhamento, eliminação etc.</td></tr>
+<tr><td>Titular</td><td>Pessoa natural a quem os dados se referem.</td></tr></table>
+<p>Consulta em sistema também é tratamento. Não é necessário imprimir, alterar ou compartilhar um dado para que a LGPD se aplique: o simples acesso sem necessidade funcional já pode ser inadequado.</p>
+<h3>⚠️ PEGADINHA ÁGATA</h3>
+<div class="caixa-destaque">❌ LGPD protege dados de empresas.<br>✅ A LGPD protege <b>dados pessoais de pessoas naturais</b>.<br><br>❌ Somente dados digitais são protegidos.<br>✅ A lei alcança tratamento em meios digitais e não digitais.</div>`
 },
-
 {
-    titulo: "🛡️ Lei Geral de Proteção de Dados — Página 2",
-
-    conteudo: `
-
-<h2>🛡️ 🛡️ LEI GERAL DE PROTEÇÃO DE DADOS — PÁGINA 2</h2>
-
-<p>
-🛡️ Lei Geral de Proteção de Dados envolve decisões cotidianas sobre atendimento, documentos, informações, prioridade, sigilo e responsabilidade.
-</p>
-
-<p>
-No serviço público, a ética não se limita à honestidade individual. Ela envolve atuação orientada ao interesse público, observância da lei, respeito ao cidadão, responsabilidade com documentos e informações, transparência compatível com os limites legais e rejeição a qualquer favorecimento indevido.
-</p>
-
-<p>
-A conduta do servidor deve ser avaliada pela finalidade do ato, pelo meio utilizado e pelos efeitos produzidos. Uma decisão rápida pode ser inadequada se viola procedimento obrigatório, expõe dados pessoais, oculta informação pública, favorece conhecido ou prejudica usuário sem fundamento legal.
-</p>
-
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-
-<table>
-<tr><th>Conceito</th><th>Aplicação no serviço público</th></tr>
-<tr><td>Interesse público</td><td>Direciona atos, decisões, atendimento, gestão de recursos e uso de informações.</td></tr>
-<tr><td>Legalidade</td><td>Exige que a atuação ocorra dentro da lei, das competências e dos procedimentos cabíveis.</td></tr>
-<tr><td>Impessoalidade</td><td>Impede favorecimento, perseguição, preferência pessoal e desvio de finalidade.</td></tr>
-<tr><td>Moralidade</td><td>Exige honestidade, lealdade, boa-fé, finalidade legítima e respeito à confiança pública.</td></tr>
-<tr><td>Publicidade</td><td>Permite controle social, sem afastar hipóteses de sigilo, proteção de dados e restrição legal.</td></tr>
-<tr><td>Eficiência</td><td>Busca atendimento adequado, qualidade, economia, organização e resultado útil à sociedade.</td></tr>
-</table>
-
-<h3>📖 DESENVOLVIMENTO</h3>
-
-<p>
-A atuação ética exige que o servidor compreenda o alcance público de suas tarefas. Receber um documento, registrar uma solicitação, acessar um sistema, responder a um cidadão, orientar sobre prazos ou encaminhar um processo são atos que podem afetar direitos e deveres. Por isso, a função pública exige cuidado maior do que uma relação privada comum.
-</p>
-
-<p>
-A impessoalidade é um dos pontos mais cobrados em situações práticas. O servidor não pode alterar prioridade, dificultar pedido, acelerar processo, negar orientação ou prestar informação conforme simpatia, amizade, parentesco, influência externa ou conveniência pessoal. Critérios de atendimento devem ser objetivos, justificáveis e compatíveis com a lei.
-</p>
-
-<p>
-A moralidade administrativa exige mais do que ausência de crime. Uma conduta pode não envolver vantagem financeira e ainda ser antiética, como omitir informação relevante, usar linguagem humilhante, expor usuário, esconder falha funcional, manipular registro ou consultar dado sem necessidade de serviço. A confiança pública depende de condutas coerentes e verificáveis.
-</p>
-
-<p>
-A publicidade fortalece o controle social. Entretanto, transparência não significa divulgação irrestrita. Informações públicas devem ser fornecidas quando cabível, mas dados pessoais, dados sensíveis, informações classificadas e sigilos legais exigem análise cuidadosa. O desafio é compatibilizar acesso à informação e proteção de direitos.
-</p>
-
-<p>
-A eficiência administrativa não autoriza atalhos ilegais. Ela exige boa organização, presteza, qualidade, uso adequado de recursos e redução de entraves desnecessários. A resposta eficiente é aquela que resolve ou encaminha corretamente a demanda, sem violar normas, prazos, competências, sigilo ou proteção de dados.
-</p>
-
-<h3>✍️ EXEMPLO COMENTADO</h3>
-
-<div class="caixa-exemplo">
-Um usuário solicita cópia de processo administrativo que contém contrato público, parecer técnico e documentos pessoais de terceiros. A resposta ética não é negar tudo nem divulgar tudo. A administração deve analisar o conteúdo, fornecer a parte pública e proteger dados pessoais ou trechos restritos, indicando fundamento quando houver negativa parcial.
-</div>
-
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-
-<div class="caixa-destaque">
-❌ Confundir transparência com exposição total de dados.<br><br>
-✅ Transparência deve ser compatibilizada com proteção de dados e sigilo legal.<br><br>
-❌ Confundir eficiência com pressa sem critério.<br><br>
-✅ Eficiência exige qualidade, legalidade e resultado útil.<br><br>
-❌ Confundir lealdade institucional com acobertamento de irregularidade.<br><br>
-✅ Lealdade é compromisso com a finalidade pública e com os canais institucionais corretos.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ A ética pública orienta a conduta funcional em favor do interesse coletivo.<br><br>
-✔ A atuação do servidor deve respeitar legalidade, impessoalidade, moralidade, publicidade e eficiência.<br><br>
-✔ O atendimento deve ser urbano, claro, objetivo e responsável.<br><br>
-✔ Informações públicas e dados pessoais precisam ser tratados de forma equilibrada.<br><br>
-✔ A responsabilidade funcional pode surgir por ação, omissão, favorecimento, negligência ou uso indevido de informações.
-</div>
-
-`
+    titulo: '🎯 LGPD — Página 2: Princípios do tratamento de dados',
+    conteudo: `<h2>🎯 PRINCÍPIOS DA LGPD — ART. 6º</h2>
+<p>As atividades de tratamento devem observar a boa-fé e os princípios do art. 6º. Eles são muito cobrados em prova porque permitem resolver situações práticas mesmo quando a questão não cita diretamente um artigo.</p>
+<h3>🔎 OS 10 PRINCÍPIOS</h3>
+<table><tr><th>Princípio</th><th>Ideia central</th></tr>
+<tr><td>Finalidade</td><td>Propósito legítimo, específico, explícito e informado.</td></tr>
+<tr><td>Adequação</td><td>Compatibilidade do tratamento com a finalidade informada e o contexto.</td></tr>
+<tr><td>Necessidade</td><td>Limitação ao mínimo de dados pertinentes, proporcionais e não excessivos.</td></tr>
+<tr><td>Livre acesso</td><td>Consulta facilitada e gratuita sobre forma e duração do tratamento e integralidade dos dados.</td></tr>
+<tr><td>Qualidade dos dados</td><td>Exatidão, clareza, relevância e atualização conforme a necessidade.</td></tr>
+<tr><td>Transparência</td><td>Informações claras, precisas e acessíveis sobre tratamento e agentes envolvidos.</td></tr>
+<tr><td>Segurança</td><td>Medidas técnicas e administrativas contra acessos não autorizados e situações acidentais ou ilícitas.</td></tr>
+<tr><td>Prevenção</td><td>Adoção de medidas para prevenir danos decorrentes do tratamento.</td></tr>
+<tr><td>Não discriminação</td><td>Vedação a tratamento para fins discriminatórios ilícitos ou abusivos.</td></tr>
+<tr><td>Responsabilização e prestação de contas</td><td>Demonstração de medidas eficazes de conformidade e proteção de dados.</td></tr></table>
+<p>Em ambiente escolar, o princípio da necessidade é especialmente importante. A escola ou servidor não deve coletar “por precaução” qualquer dado imaginável do estudante; devem ser tratados apenas os dados compatíveis com a finalidade educacional e administrativa legítima.</p>
+<h3>⚠️ PEGADINHA</h3>
+<div class="caixa-destaque">❌ Coletar mais dados sempre melhora o serviço.<br>✅ A LGPD exige <b>minimização</b>: apenas dados pertinentes, proporcionais e não excessivos.</div>`
 },
-
 {
-    titulo: "🛡️ Lei Geral de Proteção de Dados — Página 3",
-
-    conteudo: `
-
-<h2>🛡️ 🛡️ LEI GERAL DE PROTEÇÃO DE DADOS — PÁGINA 3</h2>
-
-<p>
-🛡️ Lei Geral de Proteção de Dados exige leitura conjunta de princípios administrativos, dever funcional e respeito aos direitos do cidadão.
-</p>
-
-<p>
-No serviço público, a ética não se limita à honestidade individual. Ela envolve atuação orientada ao interesse público, observância da lei, respeito ao cidadão, responsabilidade com documentos e informações, transparência compatível com os limites legais e rejeição a qualquer favorecimento indevido.
-</p>
-
-<p>
-A conduta do servidor deve ser avaliada pela finalidade do ato, pelo meio utilizado e pelos efeitos produzidos. Uma decisão rápida pode ser inadequada se viola procedimento obrigatório, expõe dados pessoais, oculta informação pública, favorece conhecido ou prejudica usuário sem fundamento legal.
-</p>
-
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-
-<table>
-<tr><th>Conceito</th><th>Aplicação no serviço público</th></tr>
-<tr><td>Interesse público</td><td>Direciona atos, decisões, atendimento, gestão de recursos e uso de informações.</td></tr>
-<tr><td>Legalidade</td><td>Exige que a atuação ocorra dentro da lei, das competências e dos procedimentos cabíveis.</td></tr>
-<tr><td>Impessoalidade</td><td>Impede favorecimento, perseguição, preferência pessoal e desvio de finalidade.</td></tr>
-<tr><td>Moralidade</td><td>Exige honestidade, lealdade, boa-fé, finalidade legítima e respeito à confiança pública.</td></tr>
-<tr><td>Publicidade</td><td>Permite controle social, sem afastar hipóteses de sigilo, proteção de dados e restrição legal.</td></tr>
-<tr><td>Eficiência</td><td>Busca atendimento adequado, qualidade, economia, organização e resultado útil à sociedade.</td></tr>
-</table>
-
-<h3>📖 DESENVOLVIMENTO</h3>
-
-<p>
-A atuação ética exige que o servidor compreenda o alcance público de suas tarefas. Receber um documento, registrar uma solicitação, acessar um sistema, responder a um cidadão, orientar sobre prazos ou encaminhar um processo são atos que podem afetar direitos e deveres. Por isso, a função pública exige cuidado maior do que uma relação privada comum.
-</p>
-
-<p>
-A impessoalidade é um dos pontos mais cobrados em situações práticas. O servidor não pode alterar prioridade, dificultar pedido, acelerar processo, negar orientação ou prestar informação conforme simpatia, amizade, parentesco, influência externa ou conveniência pessoal. Critérios de atendimento devem ser objetivos, justificáveis e compatíveis com a lei.
-</p>
-
-<p>
-A moralidade administrativa exige mais do que ausência de crime. Uma conduta pode não envolver vantagem financeira e ainda ser antiética, como omitir informação relevante, usar linguagem humilhante, expor usuário, esconder falha funcional, manipular registro ou consultar dado sem necessidade de serviço. A confiança pública depende de condutas coerentes e verificáveis.
-</p>
-
-<p>
-A publicidade fortalece o controle social. Entretanto, transparência não significa divulgação irrestrita. Informações públicas devem ser fornecidas quando cabível, mas dados pessoais, dados sensíveis, informações classificadas e sigilos legais exigem análise cuidadosa. O desafio é compatibilizar acesso à informação e proteção de direitos.
-</p>
-
-<p>
-A eficiência administrativa não autoriza atalhos ilegais. Ela exige boa organização, presteza, qualidade, uso adequado de recursos e redução de entraves desnecessários. A resposta eficiente é aquela que resolve ou encaminha corretamente a demanda, sem violar normas, prazos, competências, sigilo ou proteção de dados.
-</p>
-
-<h3>✍️ EXEMPLO COMENTADO</h3>
-
-<div class="caixa-exemplo">
-Um usuário solicita cópia de processo administrativo que contém contrato público, parecer técnico e documentos pessoais de terceiros. A resposta ética não é negar tudo nem divulgar tudo. A administração deve analisar o conteúdo, fornecer a parte pública e proteger dados pessoais ou trechos restritos, indicando fundamento quando houver negativa parcial.
-</div>
-
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-
-<div class="caixa-destaque">
-❌ Confundir transparência com exposição total de dados.<br><br>
-✅ Transparência deve ser compatibilizada com proteção de dados e sigilo legal.<br><br>
-❌ Confundir eficiência com pressa sem critério.<br><br>
-✅ Eficiência exige qualidade, legalidade e resultado útil.<br><br>
-❌ Confundir lealdade institucional com acobertamento de irregularidade.<br><br>
-✅ Lealdade é compromisso com a finalidade pública e com os canais institucionais corretos.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ A ética pública orienta a conduta funcional em favor do interesse coletivo.<br><br>
-✔ A atuação do servidor deve respeitar legalidade, impessoalidade, moralidade, publicidade e eficiência.<br><br>
-✔ O atendimento deve ser urbano, claro, objetivo e responsável.<br><br>
-✔ Informações públicas e dados pessoais precisam ser tratados de forma equilibrada.<br><br>
-✔ A responsabilidade funcional pode surgir por ação, omissão, favorecimento, negligência ou uso indevido de informações.
-</div>
-
-`
+    titulo: '⚙️ LGPD — Página 3: Bases legais e tratamento pelo Poder Público',
+    conteudo: `<h2>⚙️ BASES LEGAIS E PODER PÚBLICO</h2>
+<p>Tratamento de dados pessoais precisa possuir fundamento jurídico. <b>Consentimento não é a única base legal</b> e, no Poder Público, frequentemente o tratamento ocorre para cumprimento de obrigação legal, execução de políticas públicas ou exercício de competências administrativas.</p>
+<h3>🔎 BASES LEGAIS — VISÃO DE PROVA</h3>
+<table><tr><th>Base / hipótese</th><th>Exemplo geral</th></tr>
+<tr><td>Consentimento</td><td>Manifestação livre, informada e inequívoca quando a hipótese legal exigir ou comportar essa base.</td></tr>
+<tr><td>Obrigação legal ou regulatória</td><td>Tratamento necessário ao cumprimento de dever imposto por lei ou regulamento.</td></tr>
+<tr><td>Políticas públicas</td><td>Tratamento pela Administração para execução de políticas públicas previstas em leis, regulamentos ou instrumentos jurídicos.</td></tr>
+<tr><td>Execução de contrato</td><td>Quando necessário para contrato ou procedimentos preliminares a pedido do titular.</td></tr>
+<tr><td>Exercício regular de direitos</td><td>Uso necessário em processos judiciais, administrativos ou arbitrais.</td></tr>
+<tr><td>Proteção da vida</td><td>Tratamento necessário para proteção da vida ou incolumidade física.</td></tr>
+<tr><td>Tutela da saúde</td><td>Hipótese aplicável nas condições previstas em lei e por profissionais/serviços competentes.</td></tr></table>
+<p>No Poder Público, o tratamento deve atender à finalidade pública, perseguir o interesse público e executar competências legais ou atribuições do serviço público. O órgão deve informar de forma clara as hipóteses em que realiza tratamento e, quando cabível, os procedimentos e práticas utilizados.</p>
+<p>Compartilhamento entre órgãos não é automaticamente permitido apenas porque ambos são públicos. Deve existir finalidade compatível, fundamento legal e observância dos princípios da LGPD.</p>
+<h3>⚠️ PEGADINHA ÁGATA</h3>
+<div class="caixa-destaque">❌ Todo tratamento depende de consentimento.<br>✅ A LGPD possui várias bases legais.<br><br>❌ Órgãos públicos podem compartilhar livremente qualquer dado entre si.<br>✅ Compartilhamento também precisa de finalidade, fundamento e necessidade.</div>`
 },
-
 {
-    titulo: "🛡️ Lei Geral de Proteção de Dados — Página 4",
-
-    conteudo: `
-
-<h2>🛡️ 🛡️ LEI GERAL DE PROTEÇÃO DE DADOS — PÁGINA 4</h2>
-
-<p>
-🛡️ Lei Geral de Proteção de Dados aparece em casos de favorecimento, omissão, transparência, proteção de dados e uso dos canais institucionais.
-</p>
-
-<p>
-No serviço público, a ética não se limita à honestidade individual. Ela envolve atuação orientada ao interesse público, observância da lei, respeito ao cidadão, responsabilidade com documentos e informações, transparência compatível com os limites legais e rejeição a qualquer favorecimento indevido.
-</p>
-
-<p>
-A conduta do servidor deve ser avaliada pela finalidade do ato, pelo meio utilizado e pelos efeitos produzidos. Uma decisão rápida pode ser inadequada se viola procedimento obrigatório, expõe dados pessoais, oculta informação pública, favorece conhecido ou prejudica usuário sem fundamento legal.
-</p>
-
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-
-<table>
-<tr><th>Conceito</th><th>Aplicação no serviço público</th></tr>
-<tr><td>Interesse público</td><td>Direciona atos, decisões, atendimento, gestão de recursos e uso de informações.</td></tr>
-<tr><td>Legalidade</td><td>Exige que a atuação ocorra dentro da lei, das competências e dos procedimentos cabíveis.</td></tr>
-<tr><td>Impessoalidade</td><td>Impede favorecimento, perseguição, preferência pessoal e desvio de finalidade.</td></tr>
-<tr><td>Moralidade</td><td>Exige honestidade, lealdade, boa-fé, finalidade legítima e respeito à confiança pública.</td></tr>
-<tr><td>Publicidade</td><td>Permite controle social, sem afastar hipóteses de sigilo, proteção de dados e restrição legal.</td></tr>
-<tr><td>Eficiência</td><td>Busca atendimento adequado, qualidade, economia, organização e resultado útil à sociedade.</td></tr>
-</table>
-
-<h3>📖 DESENVOLVIMENTO</h3>
-
-<p>
-A atuação ética exige que o servidor compreenda o alcance público de suas tarefas. Receber um documento, registrar uma solicitação, acessar um sistema, responder a um cidadão, orientar sobre prazos ou encaminhar um processo são atos que podem afetar direitos e deveres. Por isso, a função pública exige cuidado maior do que uma relação privada comum.
-</p>
-
-<p>
-A impessoalidade é um dos pontos mais cobrados em situações práticas. O servidor não pode alterar prioridade, dificultar pedido, acelerar processo, negar orientação ou prestar informação conforme simpatia, amizade, parentesco, influência externa ou conveniência pessoal. Critérios de atendimento devem ser objetivos, justificáveis e compatíveis com a lei.
-</p>
-
-<p>
-A moralidade administrativa exige mais do que ausência de crime. Uma conduta pode não envolver vantagem financeira e ainda ser antiética, como omitir informação relevante, usar linguagem humilhante, expor usuário, esconder falha funcional, manipular registro ou consultar dado sem necessidade de serviço. A confiança pública depende de condutas coerentes e verificáveis.
-</p>
-
-<p>
-A publicidade fortalece o controle social. Entretanto, transparência não significa divulgação irrestrita. Informações públicas devem ser fornecidas quando cabível, mas dados pessoais, dados sensíveis, informações classificadas e sigilos legais exigem análise cuidadosa. O desafio é compatibilizar acesso à informação e proteção de direitos.
-</p>
-
-<p>
-A eficiência administrativa não autoriza atalhos ilegais. Ela exige boa organização, presteza, qualidade, uso adequado de recursos e redução de entraves desnecessários. A resposta eficiente é aquela que resolve ou encaminha corretamente a demanda, sem violar normas, prazos, competências, sigilo ou proteção de dados.
-</p>
-
-<h3>✍️ EXEMPLO COMENTADO</h3>
-
-<div class="caixa-exemplo">
-Um usuário solicita cópia de processo administrativo que contém contrato público, parecer técnico e documentos pessoais de terceiros. A resposta ética não é negar tudo nem divulgar tudo. A administração deve analisar o conteúdo, fornecer a parte pública e proteger dados pessoais ou trechos restritos, indicando fundamento quando houver negativa parcial.
-</div>
-
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-
-<div class="caixa-destaque">
-❌ Confundir transparência com exposição total de dados.<br><br>
-✅ Transparência deve ser compatibilizada com proteção de dados e sigilo legal.<br><br>
-❌ Confundir eficiência com pressa sem critério.<br><br>
-✅ Eficiência exige qualidade, legalidade e resultado útil.<br><br>
-❌ Confundir lealdade institucional com acobertamento de irregularidade.<br><br>
-✅ Lealdade é compromisso com a finalidade pública e com os canais institucionais corretos.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ A ética pública orienta a conduta funcional em favor do interesse coletivo.<br><br>
-✔ A atuação do servidor deve respeitar legalidade, impessoalidade, moralidade, publicidade e eficiência.<br><br>
-✔ O atendimento deve ser urbano, claro, objetivo e responsável.<br><br>
-✔ Informações públicas e dados pessoais precisam ser tratados de forma equilibrada.<br><br>
-✔ A responsabilidade funcional pode surgir por ação, omissão, favorecimento, negligência ou uso indevido de informações.
-</div>
-
-`
+    titulo: '👥 LGPD — Página 4: Controlador, operador, encarregado e ANPD',
+    conteudo: `<h2>👥 AGENTES DE TRATAMENTO E ENCARREGADO</h2>
+<p>A LGPD distingue funções importantes para governança de dados. Em 2026 houve uma atualização institucional relevante: a antiga Autoridade Nacional foi transformada em <b>Agência Nacional de Proteção de Dados — ANPD</b> pela Lei nº 15.352/2026, mantendo a sigla ANPD.</p>
+<h3>🔎 QUEM É QUEM?</h3>
+<table><tr><th>Figura</th><th>Função</th></tr>
+<tr><td>Controlador</td><td>Pessoa natural ou jurídica a quem competem as decisões referentes ao tratamento.</td></tr>
+<tr><td>Operador</td><td>Realiza o tratamento em nome do controlador.</td></tr>
+<tr><td>Encarregado</td><td>Atua como canal de comunicação entre controlador, titulares e ANPD, nos termos da lei e regulamentação.</td></tr>
+<tr><td>ANPD</td><td>Agência reguladora responsável por zelar, implementar e fiscalizar a legislação de proteção de dados.</td></tr></table>
+<p>Servidores e empregados que atuam internamente sob a autoridade do controlador não são automaticamente operadores apenas porque manuseiam dados. O operador é agente distinto que trata dados em nome do controlador.</p>
+<p>A Resolução CD/ANPD nº 18/2024 regulamenta a atuação do encarregado. Entre suas funções estão receber comunicações dos titulares, prestar esclarecimentos, orientar servidores e contratados e apoiar a cultura de proteção de dados.</p>
+<p><b>Atualização 2026:</b> a Lei nº 15.352/2026 transformou a ANPD em Agência Nacional de Proteção de Dados, e o Decreto nº 12.881/2026 estruturou a nova agência reguladora.</p>
+<h3>⚠️ PEGADINHA</h3>
+<div class="caixa-destaque">❌ Todo servidor que acessa dados é “operador”.<br>✅ O servidor atua sob a estrutura do agente de tratamento; operador é pessoa distinta que trata dados em nome do controlador.<br><br>✅ Em 2026: <b>Agência</b> Nacional de Proteção de Dados.</div>`
 },
-
 {
-    titulo: "🛡️ Lei Geral de Proteção de Dados — Página 5",
-
-    conteudo: `
-
-<h2>🛡️ 🛡️ LEI GERAL DE PROTEÇÃO DE DADOS — PÁGINA 5</h2>
-
-<p>
-🛡️ Lei Geral de Proteção de Dados deve ser aplicado de modo equilibrado, sem transformar eficiência em atalho ilegal ou publicidade em exposição indevida.
-</p>
-
-<p>
-No serviço público, a ética não se limita à honestidade individual. Ela envolve atuação orientada ao interesse público, observância da lei, respeito ao cidadão, responsabilidade com documentos e informações, transparência compatível com os limites legais e rejeição a qualquer favorecimento indevido.
-</p>
-
-<p>
-A conduta do servidor deve ser avaliada pela finalidade do ato, pelo meio utilizado e pelos efeitos produzidos. Uma decisão rápida pode ser inadequada se viola procedimento obrigatório, expõe dados pessoais, oculta informação pública, favorece conhecido ou prejudica usuário sem fundamento legal.
-</p>
-
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-
-<table>
-<tr><th>Conceito</th><th>Aplicação no serviço público</th></tr>
-<tr><td>Interesse público</td><td>Direciona atos, decisões, atendimento, gestão de recursos e uso de informações.</td></tr>
-<tr><td>Legalidade</td><td>Exige que a atuação ocorra dentro da lei, das competências e dos procedimentos cabíveis.</td></tr>
-<tr><td>Impessoalidade</td><td>Impede favorecimento, perseguição, preferência pessoal e desvio de finalidade.</td></tr>
-<tr><td>Moralidade</td><td>Exige honestidade, lealdade, boa-fé, finalidade legítima e respeito à confiança pública.</td></tr>
-<tr><td>Publicidade</td><td>Permite controle social, sem afastar hipóteses de sigilo, proteção de dados e restrição legal.</td></tr>
-<tr><td>Eficiência</td><td>Busca atendimento adequado, qualidade, economia, organização e resultado útil à sociedade.</td></tr>
-</table>
-
-<h3>📖 DESENVOLVIMENTO</h3>
-
-<p>
-A atuação ética exige que o servidor compreenda o alcance público de suas tarefas. Receber um documento, registrar uma solicitação, acessar um sistema, responder a um cidadão, orientar sobre prazos ou encaminhar um processo são atos que podem afetar direitos e deveres. Por isso, a função pública exige cuidado maior do que uma relação privada comum.
-</p>
-
-<p>
-A impessoalidade é um dos pontos mais cobrados em situações práticas. O servidor não pode alterar prioridade, dificultar pedido, acelerar processo, negar orientação ou prestar informação conforme simpatia, amizade, parentesco, influência externa ou conveniência pessoal. Critérios de atendimento devem ser objetivos, justificáveis e compatíveis com a lei.
-</p>
-
-<p>
-A moralidade administrativa exige mais do que ausência de crime. Uma conduta pode não envolver vantagem financeira e ainda ser antiética, como omitir informação relevante, usar linguagem humilhante, expor usuário, esconder falha funcional, manipular registro ou consultar dado sem necessidade de serviço. A confiança pública depende de condutas coerentes e verificáveis.
-</p>
-
-<p>
-A publicidade fortalece o controle social. Entretanto, transparência não significa divulgação irrestrita. Informações públicas devem ser fornecidas quando cabível, mas dados pessoais, dados sensíveis, informações classificadas e sigilos legais exigem análise cuidadosa. O desafio é compatibilizar acesso à informação e proteção de direitos.
-</p>
-
-<p>
-A eficiência administrativa não autoriza atalhos ilegais. Ela exige boa organização, presteza, qualidade, uso adequado de recursos e redução de entraves desnecessários. A resposta eficiente é aquela que resolve ou encaminha corretamente a demanda, sem violar normas, prazos, competências, sigilo ou proteção de dados.
-</p>
-
-<h3>✍️ EXEMPLO COMENTADO</h3>
-
-<div class="caixa-exemplo">
-Um usuário solicita cópia de processo administrativo que contém contrato público, parecer técnico e documentos pessoais de terceiros. A resposta ética não é negar tudo nem divulgar tudo. A administração deve analisar o conteúdo, fornecer a parte pública e proteger dados pessoais ou trechos restritos, indicando fundamento quando houver negativa parcial.
-</div>
-
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-
-<div class="caixa-destaque">
-❌ Confundir transparência com exposição total de dados.<br><br>
-✅ Transparência deve ser compatibilizada com proteção de dados e sigilo legal.<br><br>
-❌ Confundir eficiência com pressa sem critério.<br><br>
-✅ Eficiência exige qualidade, legalidade e resultado útil.<br><br>
-❌ Confundir lealdade institucional com acobertamento de irregularidade.<br><br>
-✅ Lealdade é compromisso com a finalidade pública e com os canais institucionais corretos.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ A ética pública orienta a conduta funcional em favor do interesse coletivo.<br><br>
-✔ A atuação do servidor deve respeitar legalidade, impessoalidade, moralidade, publicidade e eficiência.<br><br>
-✔ O atendimento deve ser urbano, claro, objetivo e responsável.<br><br>
-✔ Informações públicas e dados pessoais precisam ser tratados de forma equilibrada.<br><br>
-✔ A responsabilidade funcional pode surgir por ação, omissão, favorecimento, negligência ou uso indevido de informações.
-</div>
-
-`
+    titulo: '🙋 LGPD — Página 5: Direitos do titular, crianças e ambiente escolar',
+    conteudo: `<h2>🙋 DIREITOS DOS TITULARES E DADOS DE CRIANÇAS E ADOLESCENTES</h2>
+<p>A LGPD assegura ao titular direitos relacionados ao tratamento de seus dados. Entre eles estão confirmação da existência de tratamento, acesso, correção, anonimização/bloqueio/eliminação de dados desnecessários ou tratados em desconformidade, portabilidade nos termos da regulamentação, informação sobre compartilhamentos e revisão de decisões automatizadas nas hipóteses legais.</p>
+<h3>🔎 DIREITOS MAIS COBRADOS</h3>
+<table><tr><th>Direito</th><th>Exemplo</th></tr>
+<tr><td>Confirmação e acesso</td><td>Saber se o órgão trata dados e ter acesso aos dados pessoais.</td></tr>
+<tr><td>Correção</td><td>Atualizar dado incompleto, inexato ou desatualizado.</td></tr>
+<tr><td>Informação</td><td>Saber com quem dados foram compartilhados e conhecer consequências da negativa de consentimento quando aplicável.</td></tr>
+<tr><td>Eliminação/bloqueio</td><td>Aplicável nas hipóteses e condições previstas na LGPD.</td></tr></table>
+<p>O art. 14 estabelece que o tratamento de dados pessoais de crianças e adolescentes deve ocorrer em seu <b>melhor interesse</b>. Para crianças, a lei prevê consentimento específico e em destaque de pelo menos um dos pais ou responsável legal, ressalvadas hipóteses legais específicas.</p>
+<p>No ambiente escolar, dados de saúde, deficiência, biometria e outras informações sensíveis exigem cuidado reforçado. O profissional de apoio só deve acessar aquilo que seja necessário ao desempenho de suas atribuições e não deve divulgar diagnóstico, relatório, medicação ou condição do estudante em grupos informais.</p>
+<p>Em 2026, proteção de crianças e adolescentes no ambiente digital tornou-se um dos temas prioritários de fiscalização da ANPD, ao lado de direitos dos titulares, tratamento de dados pelo Poder Público e inteligência artificial/tecnologias emergentes.</p>
+<h3>⚠️ PEGADINHA ÁGATA</h3>
+<div class="caixa-destaque">❌ A escola pode compartilhar diagnóstico do aluno com toda a equipe por “transparência”.<br>✅ O acesso deve obedecer a <b>finalidade e necessidade</b>.<br><br>✅ Dados de crianças e adolescentes exigem consideração do <b>melhor interesse</b>.</div>`
 },
-
 {
-    titulo: "🛡️ Lei Geral de Proteção de Dados — Página 6",
-
-    conteudo: `
-
-<h2>🛡️ 🛡️ LEI GERAL DE PROTEÇÃO DE DADOS — PÁGINA 6</h2>
-
-<p>
-🛡️ Lei Geral de Proteção de Dados exige que o servidor documente, motive e encaminhe corretamente atos e informações relevantes.
-</p>
-
-<p>
-No serviço público, a ética não se limita à honestidade individual. Ela envolve atuação orientada ao interesse público, observância da lei, respeito ao cidadão, responsabilidade com documentos e informações, transparência compatível com os limites legais e rejeição a qualquer favorecimento indevido.
-</p>
-
-<p>
-A conduta do servidor deve ser avaliada pela finalidade do ato, pelo meio utilizado e pelos efeitos produzidos. Uma decisão rápida pode ser inadequada se viola procedimento obrigatório, expõe dados pessoais, oculta informação pública, favorece conhecido ou prejudica usuário sem fundamento legal.
-</p>
-
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-
-<table>
-<tr><th>Conceito</th><th>Aplicação no serviço público</th></tr>
-<tr><td>Interesse público</td><td>Direciona atos, decisões, atendimento, gestão de recursos e uso de informações.</td></tr>
-<tr><td>Legalidade</td><td>Exige que a atuação ocorra dentro da lei, das competências e dos procedimentos cabíveis.</td></tr>
-<tr><td>Impessoalidade</td><td>Impede favorecimento, perseguição, preferência pessoal e desvio de finalidade.</td></tr>
-<tr><td>Moralidade</td><td>Exige honestidade, lealdade, boa-fé, finalidade legítima e respeito à confiança pública.</td></tr>
-<tr><td>Publicidade</td><td>Permite controle social, sem afastar hipóteses de sigilo, proteção de dados e restrição legal.</td></tr>
-<tr><td>Eficiência</td><td>Busca atendimento adequado, qualidade, economia, organização e resultado útil à sociedade.</td></tr>
-</table>
-
-<h3>📖 DESENVOLVIMENTO</h3>
-
-<p>
-A atuação ética exige que o servidor compreenda o alcance público de suas tarefas. Receber um documento, registrar uma solicitação, acessar um sistema, responder a um cidadão, orientar sobre prazos ou encaminhar um processo são atos que podem afetar direitos e deveres. Por isso, a função pública exige cuidado maior do que uma relação privada comum.
-</p>
-
-<p>
-A impessoalidade é um dos pontos mais cobrados em situações práticas. O servidor não pode alterar prioridade, dificultar pedido, acelerar processo, negar orientação ou prestar informação conforme simpatia, amizade, parentesco, influência externa ou conveniência pessoal. Critérios de atendimento devem ser objetivos, justificáveis e compatíveis com a lei.
-</p>
-
-<p>
-A moralidade administrativa exige mais do que ausência de crime. Uma conduta pode não envolver vantagem financeira e ainda ser antiética, como omitir informação relevante, usar linguagem humilhante, expor usuário, esconder falha funcional, manipular registro ou consultar dado sem necessidade de serviço. A confiança pública depende de condutas coerentes e verificáveis.
-</p>
-
-<p>
-A publicidade fortalece o controle social. Entretanto, transparência não significa divulgação irrestrita. Informações públicas devem ser fornecidas quando cabível, mas dados pessoais, dados sensíveis, informações classificadas e sigilos legais exigem análise cuidadosa. O desafio é compatibilizar acesso à informação e proteção de direitos.
-</p>
-
-<p>
-A eficiência administrativa não autoriza atalhos ilegais. Ela exige boa organização, presteza, qualidade, uso adequado de recursos e redução de entraves desnecessários. A resposta eficiente é aquela que resolve ou encaminha corretamente a demanda, sem violar normas, prazos, competências, sigilo ou proteção de dados.
-</p>
-
-<h3>✍️ EXEMPLO COMENTADO</h3>
-
-<div class="caixa-exemplo">
-Um usuário solicita cópia de processo administrativo que contém contrato público, parecer técnico e documentos pessoais de terceiros. A resposta ética não é negar tudo nem divulgar tudo. A administração deve analisar o conteúdo, fornecer a parte pública e proteger dados pessoais ou trechos restritos, indicando fundamento quando houver negativa parcial.
-</div>
-
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-
-<div class="caixa-destaque">
-❌ Confundir transparência com exposição total de dados.<br><br>
-✅ Transparência deve ser compatibilizada com proteção de dados e sigilo legal.<br><br>
-❌ Confundir eficiência com pressa sem critério.<br><br>
-✅ Eficiência exige qualidade, legalidade e resultado útil.<br><br>
-❌ Confundir lealdade institucional com acobertamento de irregularidade.<br><br>
-✅ Lealdade é compromisso com a finalidade pública e com os canais institucionais corretos.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ A ética pública orienta a conduta funcional em favor do interesse coletivo.<br><br>
-✔ A atuação do servidor deve respeitar legalidade, impessoalidade, moralidade, publicidade e eficiência.<br><br>
-✔ O atendimento deve ser urbano, claro, objetivo e responsável.<br><br>
-✔ Informações públicas e dados pessoais precisam ser tratados de forma equilibrada.<br><br>
-✔ A responsabilidade funcional pode surgir por ação, omissão, favorecimento, negligência ou uso indevido de informações.
-</div>
-
-`
+    titulo: '🚨 LGPD — Página 6: Segurança, incidentes, sanções e revisão Ágata',
+    conteudo: `<h2>🚨 SEGURANÇA DA INFORMAÇÃO E INCIDENTES</h2>
+<p>Agentes de tratamento devem adotar medidas de segurança, técnicas e administrativas aptas a proteger dados de acessos não autorizados e de situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou difusão.</p>
+<h3>🔎 INCIDENTES DE SEGURANÇA</h3>
+<table><tr><th>Situação</th><th>Conduta esperada</th></tr>
+<tr><td>Planilha enviada a destinatário errado</td><td>Tratar como possível incidente, comunicar internamente e seguir o plano de resposta.</td></tr>
+<tr><td>Senha compartilhada</td><td>Corrigir a prática e reforçar controles de acesso individualizado.</td></tr>
+<tr><td>Perda de dispositivo</td><td>Acionar imediatamente os responsáveis institucionais e avaliar o risco aos titulares.</td></tr>
+<tr><td>Acesso indevido</td><td>Conter o incidente, preservar evidências e seguir os procedimentos de resposta.</td></tr></table>
+<p>A Resolução CD/ANPD nº 15/2024 regulamenta a comunicação de incidentes de segurança. Quando o incidente puder acarretar risco ou dano relevante aos titulares, o controlador deve comunicar a ANPD e os titulares conforme os critérios e prazos definidos na regulamentação vigente.</p>
+<p>A LGPD prevê sanções administrativas, aplicadas observando devido processo e critérios legais, que podem incluir advertência, multa, publicização da infração, bloqueio ou eliminação de dados e outras medidas previstas em lei.</p>
+<h3>🧠 REVISÃO FINAL</h3>
+<div class="caixa-destaque">✅ Dado pessoal = pessoa natural identificada/identificável.<br>✅ Dado sensível possui proteção reforçada.<br>✅ Tratamento inclui coleta, consulta, acesso, armazenamento e compartilhamento.<br>✅ 10 princípios do art. 6º.<br>✅ Consentimento não é a única base legal.<br>✅ Poder Público também deve cumprir a LGPD.<br>✅ Titular possui direitos sobre seus dados.<br>✅ Crianças/adolescentes: melhor interesse.<br>✅ Encarregado é canal entre agentes, titulares e ANPD.<br>✅ Atualização 2026: ANPD tornou-se <b>Agência Nacional</b>.<br>✅ Incidentes devem seguir os protocolos e a regulamentação da ANPD.</div>
+<h3>⚠️ COMO A ÁGATA PODE COBRAR</h3>
+<p>As pegadinhas mais prováveis são considerar que consentimento é sempre obrigatório, ignorar que consulta interna é tratamento, confundir controlador com operador, coletar dados excessivos, divulgar dados sensíveis em nome da transparência ou usar a denominação antiga da ANPD em questão que cobre a legislação atualizada de 2026.</p>`
 },
-
-{
-    titulo: "Questões comentadas I",
-
-    conteudo: `
-
-<h2>🛡️ 🛡️ LEI GERAL DE PROTEÇÃO DE DADOS — QUESTÕES COMENTADAS I</h2>
-
-<p>
-As questões comentadas abaixo apresentam situações práticas de serviço público. A resolução exige comparar alternativas próximas, evitando respostas extremas, favorecimentos pessoais, publicidade sem critério, omissão indevida e tratamento inadequado de dados pessoais.
-</p>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 1</strong><br><br>
-Servidor consulta cadastro de usuário sem relação com suas atribuições. À luz da LGPD, a conduta é:<br><br>
-A) permitida quando o dado não envolve informação financeira ou diagnóstico médico.<br>B) inadequada, pois o tratamento de dados exige finalidade, necessidade e vínculo funcional.<br>C) irrelevante, pois consulta interna não se enquadra como tratamento de dados pessoais.<br>D) aceitável, desde que o servidor não imprima ou compartilhe o dado consultado.<br>E) regular, pois sistemas públicos podem ser acessados livremente por qualquer servidor.<br><br>
-<strong>Resposta:</strong> B.<br><br>
-<strong>Comentário:</strong> Consulta também é tratamento de dado pessoal e exige finalidade legítima. Acesso interno sem necessidade também viola proteção de dados.
-</div>
-<br>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 2</strong><br><br>
-Um setor coleta dados além do necessário para prestar determinado serviço. O problema principal é:<br><br>
-A) violação do princípio da necessidade, pois devem ser tratados apenas dados pertinentes à finalidade.<br>B) cumprimento do princípio da publicidade, pois mais dados aumentam controle social.<br>C) ausência de tratamento, pois coleta sem uso imediato não integra a proteção de dados.<br>D) aplicação do princípio da continuidade, pois coleta ampla evita falta futura de informação.<br>E) exercício regular de discricionariedade, pois todo dado pode ser útil em algum momento.<br><br>
-<strong>Resposta:</strong> A.<br><br>
-<strong>Comentário:</strong> A LGPD exige minimização: dados adequados, pertinentes e necessários. Necessidade limita coleta excessiva.
-</div>
-<br>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 3</strong><br><br>
-Planilha com dados pessoais é enviada a destinatário errado por descuido funcional. A análise adequada é:<br><br>
-A) há publicidade legítima, pois dados em planilha pública não possuem expectativa de proteção.<br>B) não há problema se o envio ocorreu por erro e não por intenção de prejudicar o titular.<br>C) há regularidade se o destinatário prometer informalmente apagar a mensagem recebida.<br>D) não há tratamento de dados, pois o arquivo saiu do setor sem decisão administrativa formal.<br>E) há incidente ou falha de segurança que exige providências conforme regras institucionais aplicáveis.<br><br>
-<strong>Resposta:</strong> E.<br><br>
-<strong>Comentário:</strong> Falha de envio pode configurar incidente de segurança e exige providência institucional. Intenção não elimina responsabilidade pelo cuidado.
-</div>
-<br>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 4</strong><br><br>
-Ao divulgar lista de atendimento, o órgão substitui CPF por número de protocolo. A medida:<br><br>
-A) viola eficiência, pois protocolos não podem substituir dados pessoais em nenhuma hipótese.<br>B) torna a lista sigilosa, pois qualquer anonimização elimina publicidade administrativa.<br>C) é dispensável, pois dados pessoais em lista pública não recebem proteção legal.<br>D) reduz exposição de dados e preserva a finalidade de organização do atendimento.<br>E) impede transparência, pois o cidadão só pode acompanhar listas com CPF completo.<br><br>
-<strong>Resposta:</strong> D.<br><br>
-<strong>Comentário:</strong> Usar protocolo pode atender à finalidade sem expor dados pessoais desnecessários. Proteção de dados também envolve reduzir exposição.
-</div>
-<br>
-<p>Em alternativas difíceis, observe se a resposta preserva finalidade pública, motivação, proporcionalidade, impessoalidade, transparência adequada, proteção de dados e uso de canais institucionais. Distratores costumam exagerar a publicidade, negar acesso sem fundamento, dispensar legalidade em nome da eficiência ou transformar preferência pessoal em critério administrativo.</p><p>Em alternativas difíceis, observe se a resposta preserva finalidade pública, motivação, proporcionalidade, impessoalidade, transparência adequada, proteção de dados e uso de canais institucionais. Distratores costumam exagerar a publicidade, negar acesso sem fundamento, dispensar legalidade em nome da eficiência ou transformar preferência pessoal em critério administrativo.</p>
-
-`
-},
-
-{
-    titulo: "Questões comentadas II",
-
-    conteudo: `
-
-<h2>🛡️ 🛡️ LEI GERAL DE PROTEÇÃO DE DADOS — QUESTÕES COMENTADAS II</h2>
-
-<p>
-As questões comentadas abaixo apresentam situações práticas de serviço público. A resolução exige comparar alternativas próximas, evitando respostas extremas, favorecimentos pessoais, publicidade sem critério, omissão indevida e tratamento inadequado de dados pessoais.
-</p>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 1</strong><br><br>
-Servidor consulta cadastro de usuário sem relação com suas atribuições. À luz da LGPD, a conduta é:<br><br>
-A) regular, pois sistemas públicos podem ser acessados livremente por qualquer servidor.<br>B) inadequada, pois o tratamento de dados exige finalidade, necessidade e vínculo funcional.<br>C) permitida quando o dado não envolve informação financeira ou diagnóstico médico.<br>D) irrelevante, pois consulta interna não se enquadra como tratamento de dados pessoais.<br>E) aceitável, desde que o servidor não imprima ou compartilhe o dado consultado.<br><br>
-<strong>Resposta:</strong> B.<br><br>
-<strong>Comentário:</strong> Consulta também é tratamento de dado pessoal e exige finalidade legítima. Acesso interno sem necessidade também viola proteção de dados.
-</div>
-<br>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 2</strong><br><br>
-Um setor coleta dados além do necessário para prestar determinado serviço. O problema principal é:<br><br>
-A) ausência de tratamento, pois coleta sem uso imediato não integra a proteção de dados.<br>B) aplicação do princípio da continuidade, pois coleta ampla evita falta futura de informação.<br>C) violação do princípio da necessidade, pois devem ser tratados apenas dados pertinentes à finalidade.<br>D) exercício regular de discricionariedade, pois todo dado pode ser útil em algum momento.<br>E) cumprimento do princípio da publicidade, pois mais dados aumentam controle social.<br><br>
-<strong>Resposta:</strong> C.<br><br>
-<strong>Comentário:</strong> A LGPD exige minimização: dados adequados, pertinentes e necessários. Necessidade limita coleta excessiva.
-</div>
-<br>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 3</strong><br><br>
-Planilha com dados pessoais é enviada a destinatário errado por descuido funcional. A análise adequada é:<br><br>
-A) há incidente ou falha de segurança que exige providências conforme regras institucionais aplicáveis.<br>B) há publicidade legítima, pois dados em planilha pública não possuem expectativa de proteção.<br>C) não há tratamento de dados, pois o arquivo saiu do setor sem decisão administrativa formal.<br>D) não há problema se o envio ocorreu por erro e não por intenção de prejudicar o titular.<br>E) há regularidade se o destinatário prometer informalmente apagar a mensagem recebida.<br><br>
-<strong>Resposta:</strong> A.<br><br>
-<strong>Comentário:</strong> Falha de envio pode configurar incidente de segurança e exige providência institucional. Intenção não elimina responsabilidade pelo cuidado.
-</div>
-<br>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 4</strong><br><br>
-Ao divulgar lista de atendimento, o órgão substitui CPF por número de protocolo. A medida:<br><br>
-A) é dispensável, pois dados pessoais em lista pública não recebem proteção legal.<br>B) viola eficiência, pois protocolos não podem substituir dados pessoais em nenhuma hipótese.<br>C) reduz exposição de dados e preserva a finalidade de organização do atendimento.<br>D) torna a lista sigilosa, pois qualquer anonimização elimina publicidade administrativa.<br>E) impede transparência, pois o cidadão só pode acompanhar listas com CPF completo.<br><br>
-<strong>Resposta:</strong> C.<br><br>
-<strong>Comentário:</strong> Usar protocolo pode atender à finalidade sem expor dados pessoais desnecessários. Proteção de dados também envolve reduzir exposição.
-</div>
-<br>
-<p>Em alternativas difíceis, observe se a resposta preserva finalidade pública, motivação, proporcionalidade, impessoalidade, transparência adequada, proteção de dados e uso de canais institucionais. Distratores costumam exagerar a publicidade, negar acesso sem fundamento, dispensar legalidade em nome da eficiência ou transformar preferência pessoal em critério administrativo.</p><p>Em alternativas difíceis, observe se a resposta preserva finalidade pública, motivação, proporcionalidade, impessoalidade, transparência adequada, proteção de dados e uso de canais institucionais. Distratores costumam exagerar a publicidade, negar acesso sem fundamento, dispensar legalidade em nome da eficiência ou transformar preferência pessoal em critério administrativo.</p>
-
-`
-}
-
 ];
+
+if (typeof window !== 'undefined') { window.lgpdTeoria = lgpdTeoria; }

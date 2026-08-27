@@ -1,227 +1,100 @@
 const apoioTrabalhoColaborativoTeoria = [
-
 {
-    titulo: "🛡️ Trabalho Colaborativo, Ética e Segurança — Página 1",
-
-    conteudo: `
-
-<h2>🛡️ TRABALHO COLABORATIVO, ÉTICA E SEGURANÇA — PÁGINA 1</h2>
-<p>Este conteúdo aborda trabalho colaborativo com professores, equipe pedagógica e família, ética, sigilo, convivência, Lei Lucas e primeiros socorros, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
-</table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+    titulo: '🤝 Trabalho Colaborativo — Página 1: Equipe, papéis e corresponsabilidade',
+    conteudo: `<h2>🤝 TRABALHO COLABORATIVO NA INCLUSÃO ESCOLAR</h2>
+<p>O trabalho colaborativo ocorre quando professor regente, profissional de apoio, AEE, equipe pedagógica, gestão, família e, quando necessário, outros serviços articulam informações e estratégias para garantir acesso, permanência, participação e aprendizagem do estudante.</p>
+<p>Colaboração <b>não significa que todos exerçam a mesma função</b>. Cada profissional mantém suas atribuições, mas compartilha informações necessárias e atua de forma coordenada.</p>
+<h3>🔎 QUEM FAZ O QUÊ?</h3>
+<table><tr><th>Participante</th><th>Responsabilidade principal</th></tr>
+<tr><td>Professor regente</td><td>Planejamento, ensino, mediação pedagógica e avaliação.</td></tr>
+<tr><td>Professor do AEE</td><td>Organização do atendimento especializado, recursos pedagógicos e de acessibilidade.</td></tr>
+<tr><td>Profissional de apoio</td><td>Apoio nas necessidades identificadas no contexto escolar, sem substituir funções docentes ou clínicas.</td></tr>
+<tr><td>Equipe pedagógica</td><td>Orienta, acompanha e articula o trabalho educacional.</td></tr>
+<tr><td>Família</td><td>Contribui com informações relevantes e participa das instâncias e decisões cabíveis.</td></tr></table>
+<p>A regulamentação da educação especial inclusiva em 2026 reforça que o trabalho do profissional de apoio deve estar subordinado ao planejamento pedagógico e realizado sob orientação da equipe pedagógica, articulado ao PAEE e ao PEI quando existentes.</p>
+<h3>⚠️ PEGADINHA ÁGATA</h3>
+<div class="caixa-destaque">❌ Trabalho colaborativo autoriza o apoio a assumir a função do professor.<br>✅ Colaboração exige <b>articulação com preservação das atribuições de cada profissional</b>.</div>`
 },
-
 {
-    titulo: "🛡️ Trabalho Colaborativo, Ética e Segurança — Página 2",
-
-    conteudo: `
-
-<h2>🛡️ TRABALHO COLABORATIVO, ÉTICA E SEGURANÇA — PÁGINA 2</h2>
-<p>Este conteúdo aborda trabalho colaborativo com professores, equipe pedagógica e família, ética, sigilo, convivência, Lei Lucas e primeiros socorros, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
-</table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+    titulo: '📝 Trabalho Colaborativo — Página 2: Comunicação, registro e família',
+    conteudo: `<h2>📝 COMUNICAÇÃO INSTITUCIONAL E REGISTRO OBJETIVO</h2>
+<p>A colaboração depende de comunicação clara e útil. O profissional de apoio acompanha o estudante em diferentes momentos e pode fornecer à equipe informações importantes sobre participação, comunicação, autonomia, barreiras, alimentação, higiene, locomoção, interação e segurança.</p>
+<h3>🔎 COMO REGISTRAR</h3>
+<table><tr><th>Registro adequado</th><th>Evite</th></tr>
+<tr><td>“O estudante recusou três vezes o acesso ao refeitório após o sinal sonoro.”</td><td>“Ele estava impossível e fez birra.”</td></tr>
+<tr><td>“Necessitou auxílio para abrir a embalagem e realizou o restante sozinho.”</td><td>“Não consegue comer sem ajuda.”</td></tr>
+<tr><td>“Utilizou a prancha de comunicação para escolher a atividade.”</td><td>“Não fala e não entende.”</td></tr>
+<tr><td>“Houve queda no pátio; equipe responsável foi acionada.”</td><td>Relato informal sem registro do fato e das providências.</td></tr></table>
+<p>O registro deve separar <b>fato observado</b> de opinião, hipótese ou diagnóstico. O profissional de apoio não deve registrar conclusões clínicas que não pertencem à sua atribuição.</p>
+<p>A comunicação com a família deve seguir os canais institucionais. O apoio não deve prometer mudanças pedagógicas, informar dados de outros estudantes ou tomar decisões em nome da escola.</p>
+<h3>⚠️ PEGADINHA</h3>
+<div class="caixa-destaque">❌ Quanto mais detalhes pessoais forem compartilhados, melhor a colaboração.<br>✅ Compartilhe apenas informações <b>necessárias, pertinentes e pelos canais adequados</b>.</div>`
 },
-
 {
-    titulo: "🛡️ Trabalho Colaborativo, Ética e Segurança — Página 3",
-
-    conteudo: `
-
-<h2>🛡️ TRABALHO COLABORATIVO, ÉTICA E SEGURANÇA — PÁGINA 3</h2>
-<p>Este conteúdo aborda trabalho colaborativo com professores, equipe pedagógica e família, ética, sigilo, convivência, Lei Lucas e primeiros socorros, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
-</table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+    titulo: '🔒 Trabalho Colaborativo — Página 3: Ética, sigilo e proteção de informações',
+    conteudo: `<h2>🔒 ÉTICA, SIGILO E PROTEÇÃO DO ESTUDANTE</h2>
+<p>O profissional de apoio tem contato frequente com informações sobre deficiência, saúde, comportamento, higiene, medicação, crises, dificuldades de comunicação e rotina familiar. A proximidade com o estudante não autoriza circulação indiscriminada desses dados.</p>
+<h3>🔎 PRINCÍPIOS PRÁTICOS</h3>
+<table><tr><th>Princípio</th><th>Aplicação</th></tr>
+<tr><td>Necessidade</td><td>A informação deve ser compartilhada apenas quando necessária à atuação institucional.</td></tr>
+<tr><td>Finalidade</td><td>O dado deve ser utilizado para a finalidade educacional ou protetiva pertinente.</td></tr>
+<tr><td>Privacidade</td><td>Evitar exposição de diagnóstico, corpo, higiene e situações íntimas.</td></tr>
+<tr><td>Canal institucional</td><td>Preferir registros e comunicações definidos pela escola.</td></tr>
+<tr><td>Respeito</td><td>Evitar rótulos, infantilização, comentários jocosos e julgamentos sobre estudante ou família.</td></tr></table>
+<p>Fotos, vídeos e relatos sobre estudantes não devem ser enviados para grupos pessoais, redes sociais ou terceiros sem base institucional e autorização aplicável. Sigilo não significa esconder ocorrência da equipe responsável: em situação de risco, violência ou necessidade de cuidado, a informação deve chegar a quem precisa atuar.</p>
+<p>A ética também exige reconhecer limites profissionais. O apoio não diagnostica, não prescreve medicamentos, não altera terapia, não decide sozinho adaptação curricular e não substitui profissionais habilitados.</p>
+<h3>⚠️ PEGADINHA ÁGATA</h3>
+<div class="caixa-destaque">❌ Sigilo significa nunca comunicar uma situação delicada.<br>✅ Sigilo significa <b>proteger a informação e compartilhá-la corretamente com quem precisa conhecê-la</b>.</div>`
 },
-
 {
-    titulo: "🛡️ Trabalho Colaborativo, Ética e Segurança — Página 4",
-
-    conteudo: `
-
-<h2>🛡️ TRABALHO COLABORATIVO, ÉTICA E SEGURANÇA — PÁGINA 4</h2>
-<p>Este conteúdo aborda trabalho colaborativo com professores, equipe pedagógica e família, ética, sigilo, convivência, Lei Lucas e primeiros socorros, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
-</table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+    titulo: '🛡️ Trabalho Colaborativo — Página 4: Segurança, prevenção de riscos e emergências',
+    conteudo: `<h2>🛡️ SEGURANÇA E PREVENÇÃO DE RISCOS NO COTIDIANO ESCOLAR</h2>
+<p>Segurança é parte da rotina do profissional de apoio, especialmente quando o estudante apresenta necessidade de auxílio para locomoção, alimentação, comunicação, percepção de riscos ou autorregulação. Prevenir é melhor do que agir apenas depois do acidente.</p>
+<h3>🔎 RISCOS QUE DEVEM SER OBSERVADOS</h3>
+<table><tr><th>Situação</th><th>Conduta preventiva</th></tr>
+<tr><td>Quedas e deslocamentos</td><td>Observar barreiras, piso, escadas, mobiliário e necessidade real de auxílio.</td></tr>
+<tr><td>Alimentação</td><td>Seguir orientações institucionais e observar sinais de dificuldade, sem improvisar condutas clínicas.</td></tr>
+<tr><td>Fuga ou saída não prevista</td><td>Conhecer protocolos e organizar supervisão compatível com a autonomia do estudante.</td></tr>
+<tr><td>Crise sensorial ou comportamental</td><td>Reduzir riscos, preservar dignidade e acionar a equipe conforme planejamento existente.</td></tr>
+<tr><td>Acidente ou mal súbito</td><td>Acionar imediatamente o fluxo de emergência e atuar apenas dentro da capacitação recebida.</td></tr></table>
+<p>Em emergência, o profissional deve manter segurança do local, acionar responsáveis internos e serviços de emergência quando indicado e aplicar somente as medidas para as quais foi capacitado. Procedimentos improvisados podem agravar a situação.</p>
+<p>Em 2026, a Resolução Cofen nº 805 também reforçou, para instituições que disponham de assistência de Enfermagem, a importância de protocolos de resposta a emergências, prevenção de riscos e capacitação da comunidade escolar em noções de primeiros socorros, respeitadas as competências profissionais.</p>
+<h3>⚠️ PONTO DE PROVA</h3>
+<div class="caixa-destaque">❌ O apoio deve executar qualquer procedimento para “ajudar rapidamente”.<br>✅ Deve seguir protocolos e sua capacitação, preservando os limites de profissões regulamentadas.</div>`
 },
-
 {
-    titulo: "🛡️ Trabalho Colaborativo, Ética e Segurança — Página 5",
-
-    conteudo: `
-
-<h2>🛡️ TRABALHO COLABORATIVO, ÉTICA E SEGURANÇA — PÁGINA 5</h2>
-<p>Este conteúdo aborda trabalho colaborativo com professores, equipe pedagógica e família, ética, sigilo, convivência, Lei Lucas e primeiros socorros, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
-</table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+    titulo: '🚑 Trabalho Colaborativo — Página 5: Lei Lucas e primeiros socorros',
+    conteudo: `<h2>🚑 LEI LUCAS — LEI Nº 13.722/2018</h2>
+<p>A Lei Lucas tornou obrigatória a capacitação em <b>noções básicas de primeiros socorros</b> para professores e funcionários de estabelecimentos de ensino de Educação Básica da rede pública e de estabelecimentos de Educação Básica e recreação infantil da rede privada, nos termos da lei.</p>
+<h3>🔎 O QUE A LEI EXIGE</h3>
+<table><tr><th>Ponto</th><th>Regra</th></tr>
+<tr><td>Capacitação</td><td>Professores e funcionários devem receber noções básicas de primeiros socorros.</td></tr>
+<tr><td>Periodicidade</td><td>O curso é ofertado anualmente para capacitação e/ou reciclagem.</td></tr>
+<tr><td>Conteúdo</td><td>Deve ser compatível com a faixa etária atendida e com riscos próprios do ambiente escolar/recreativo.</td></tr>
+<tr><td>Objetivo</td><td>Permitir identificação e atuação inicial diante de situações de emergência até a assistência especializada.</td></tr>
+<tr><td>Integração</td><td>A escola deve estar articulada com a rede de urgência e emergência de sua região.</td></tr></table>
+<p>A Lei Lucas <b>não transforma professor ou profissional de apoio em profissional de saúde</b>. O objetivo é fornecer preparação básica para reconhecer emergências, acionar o atendimento adequado e executar medidas iniciais aprendidas na capacitação.</p>
+<p>Em 2026, redes de ensino continuam realizando capacitações anuais com base nessa lei, incluindo temas como engasgo, parada cardiorrespiratória, convulsões e quedas, conforme o treinamento oferecido pelos serviços especializados.</p>
+<h3>⚠️ PEGADINHA ÁGATA</h3>
+<div class="caixa-destaque">❌ A Lei Lucas exige curso apenas uma vez na contratação.<br>✅ A capacitação/reciclagem é <b>anual</b>.<br><br>❌ A lei autoriza procedimentos profissionais de saúde por qualquer funcionário.<br>✅ Trata de <b>noções básicas de primeiros socorros</b>.</div>`
 },
-
 {
-    titulo: "🛡️ Trabalho Colaborativo, Ética e Segurança — Página 6",
-
-    conteudo: `
-
-<h2>🛡️ TRABALHO COLABORATIVO, ÉTICA E SEGURANÇA — PÁGINA 6</h2>
-<p>Este conteúdo aborda trabalho colaborativo com professores, equipe pedagógica e família, ética, sigilo, convivência, Lei Lucas e primeiros socorros, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
-</table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+    titulo: '🎯 Trabalho Colaborativo — Página 6: Fluxos, situações práticas e revisão final',
+    conteudo: `<h2>🎯 TRABALHO COLABORATIVO, ÉTICA E SEGURANÇA — REVISÃO FINAL</h2>
+<p>As situações de concurso normalmente misturam mais de um eixo: colaboração, limites profissionais, privacidade e segurança. O candidato deve identificar a conduta que protege o estudante sem excluir sua participação e que respeita o fluxo institucional.</p>
+<h3>🔎 SITUAÇÕES PRÁTICAS</h3>
+<table><tr><th>Situação</th><th>Conduta correta</th></tr>
+<tr><td>Professor pede observação sobre participação</td><td>Relatar fatos objetivos e relevantes, sem diagnóstico ou julgamento.</td></tr>
+<tr><td>Familiar pergunta sobre outro aluno</td><td>Preservar sigilo e orientar o uso dos canais institucionais.</td></tr>
+<tr><td>Estudante consegue fazer parte da tarefa</td><td>Estimular autonomia e oferecer apoio apenas na medida necessária.</td></tr>
+<tr><td>Possível acidente</td><td>Prevenir riscos, acionar o protocolo e os responsáveis adequados.</td></tr>
+<tr><td>Emergência</td><td>Aplicar somente condutas compatíveis com a capacitação recebida e acionar atendimento especializado.</td></tr>
+<tr><td>Divergência entre profissionais</td><td>Buscar alinhamento com professor/equipe pedagógica, evitando discussão diante do estudante.</td></tr></table>
+<h3>🧠 REVISÃO ÁGATA</h3>
+<div class="caixa-destaque">✅ Colaboração ≠ substituição de funções.<br>✅ Registro = objetivo, factual e necessário.<br>✅ Sigilo ≠ omissão diante de risco.<br>✅ Apoio promove autonomia, não dependência.<br>✅ Segurança inclui prevenção e protocolos.<br>✅ Lei Lucas = capacitação anual em noções básicas de primeiros socorros.<br>✅ Emergência não autoriza ultrapassar limites profissionais.<br>✅ Comunicação com família deve seguir os canais institucionais.</div>
+<h3>⚠️ COMO A BANCA PODE COBRAR</h3>
+<p>Desconfie de alternativas que defendam exposição de dados “para colaborar”, que autorizem o apoio a decidir sozinho, que confundam proteção com isolamento ou que mandem executar procedimentos sem treinamento. A resposta correta costuma combinar <b>segurança + comunicação + atribuição correta + dignidade</b>.</p>`
 },
-
-{
-    titulo: "Questões comentadas I",
-
-    conteudo: `
-
-<h2>🛡️ TRABALHO COLABORATIVO, ÉTICA E SEGURANÇA — QUESTÕES COMENTADAS 1</h2><p>As questões comentadas apresentam situações práticas do apoio escolar, exigindo análise de inclusão, segurança, autonomia, sigilo e trabalho colaborativo.</p><div class="caixa-exemplo"><strong>Questão comentada 1</strong><br><br>Durante atividade coletiva, o estudante com deficiência precisa de auxílio para deslocamento. A conduta adequada do profissional de apoio é:<br><br>A) retirá-lo da atividade para evitar qualquer risco, ainda que a escola possa organizar apoio adequado.<br>B) favorecer a participação segura do estudante, articulando-se com o professor e evitando isolamento desnecessário.<br>C) assumir a condução pedagógica da atividade, substituindo o professor no planejamento da aula.<br>D) expor aos colegas detalhes do diagnóstico para justificar a presença do apoio escolar.<br>E) decidir sozinho a adaptação curricular, sem diálogo com professor ou equipe pedagógica.<br><br><strong>Resposta:</strong> B.<br><br><strong>Comentário:</strong> A inclusão exige participação com segurança; o apoio reduz barreiras e não substitui o professor. Apoiar é viabilizar participação, não isolar o estudante.</div><br><div class="caixa-exemplo"><strong>Questão comentada 2</strong><br><br>Um familiar pede ao profissional de apoio informações detalhadas sobre outro estudante da turma. A conduta correta é:<br><br>A) preservar o sigilo e orientar que informações pessoais devem ser tratadas por canais institucionais próprios.<br>B) responder informalmente, desde que omita apenas dados de saúde considerados sensíveis.<br>C) fornecer as informações, pois todos os familiares têm direito de conhecer a rotina da turma.<br>D) encaminhar fotos e relatos por aplicativo para demonstrar transparência no atendimento.<br>E) comentar apenas com familiares próximos, pois isso não caracteriza exposição pública.<br><br><strong>Resposta:</strong> A.<br><br><strong>Comentário:</strong> Informações pessoais de estudantes exigem sigilo e comunicação institucional adequada. Sigilo protege estudante, família e escola.</div><br><div class="caixa-exemplo"><strong>Questão comentada 3</strong><br><br>Ao notar que o estudante consegue realizar parte da atividade sozinho, o apoio escolar deve:<br><br>A) registrar que o estudante não precisa de apoio e encerrar qualquer acompanhamento.<br>B) estimular a autonomia possível, oferecendo ajuda apenas quando necessária para participação e segurança.<br>C) realizar a atividade integralmente pelo estudante para garantir resultado mais rápido.<br>D) corrigir o conteúdo pedagógico no lugar do professor, evitando erros durante a tarefa.<br>E) impedir tentativas independentes, pois a proteção sempre deve prevalecer sobre autonomia.<br><br><strong>Resposta:</strong> B.<br><br><strong>Comentário:</strong> O apoio deve favorecer autonomia gradual, sem abandono nem substituição indevida. Autonomia não é ausência de apoio; é apoio na medida necessária.</div><br><div class="caixa-exemplo"><strong>Questão comentada 4</strong><br><br>Em situação de possível acidente escolar, a atitude adequada é:<br><br>A) adotar medidas preventivas, acionar responsáveis internos e comunicar a ocorrência pelos canais corretos.<br>B) minimizar o ocorrido sem comunicar, caso não haja lesão visível imediata.<br>C) realizar procedimento de saúde complexo sem capacitação, para evitar acionar a equipe escolar.<br>D) divulgar o ocorrido em grupo informal antes de registrar a situação na escola.<br>E) retirar o estudante da escola sem autorização, para resolver o caso com rapidez.<br><br><strong>Resposta:</strong> A.<br><br><strong>Comentário:</strong> Segurança exige prevenção, comunicação correta e respeito aos procedimentos institucionais. Em risco ou acidente, comunique e siga protocolo.</div><br><div class="caixa-exemplo"><strong>Questão comentada 5</strong><br><br>O profissional de apoio percebe dificuldade de comunicação do estudante durante a rotina. A conduta adequada é:<br><br>A) interpretar sozinho todo comportamento e impor rotina sem diálogo com professor ou equipe.<br>B) exigir que o estudante se comunique da mesma forma que os demais, para garantir igualdade formal.<br>C) ignorar manifestações não verbais, pois apenas comunicação oral deve orientar o atendimento.<br>D) divulgar as dificuldades do estudante à turma para que todos saibam como controlá-lo.<br>E) utilizar estratégias orientadas pela equipe, observar respostas do estudante e favorecer comunicação acessível.<br><br><strong>Resposta:</strong> E.<br><br><strong>Comentário:</strong> A comunicação acessível deve respeitar formas diversas de expressão e orientação da equipe. Comunicação pode ser verbal, visual, gestual, corporal ou assistiva.</div><br>
-
-`
-},
-
-{
-    titulo: "Questões comentadas II",
-
-    conteudo: `
-
-<h2>🛡️ TRABALHO COLABORATIVO, ÉTICA E SEGURANÇA — QUESTÕES COMENTADAS 2</h2><p>As questões comentadas apresentam situações práticas do apoio escolar, exigindo análise de inclusão, segurança, autonomia, sigilo e trabalho colaborativo.</p><div class="caixa-exemplo"><strong>Questão comentada 1</strong><br><br>Durante atividade coletiva, o estudante com deficiência precisa de auxílio para deslocamento. A conduta adequada do profissional de apoio é:<br><br>A) expor aos colegas detalhes do diagnóstico para justificar a presença do apoio escolar.<br>B) decidir sozinho a adaptação curricular, sem diálogo com professor ou equipe pedagógica.<br>C) assumir a condução pedagógica da atividade, substituindo o professor no planejamento da aula.<br>D) favorecer a participação segura do estudante, articulando-se com o professor e evitando isolamento desnecessário.<br>E) retirá-lo da atividade para evitar qualquer risco, ainda que a escola possa organizar apoio adequado.<br><br><strong>Resposta:</strong> D.<br><br><strong>Comentário:</strong> A inclusão exige participação com segurança; o apoio reduz barreiras e não substitui o professor. Apoiar é viabilizar participação, não isolar o estudante.</div><br><div class="caixa-exemplo"><strong>Questão comentada 2</strong><br><br>Um familiar pede ao profissional de apoio informações detalhadas sobre outro estudante da turma. A conduta correta é:<br><br>A) responder informalmente, desde que omita apenas dados de saúde considerados sensíveis.<br>B) comentar apenas com familiares próximos, pois isso não caracteriza exposição pública.<br>C) preservar o sigilo e orientar que informações pessoais devem ser tratadas por canais institucionais próprios.<br>D) encaminhar fotos e relatos por aplicativo para demonstrar transparência no atendimento.<br>E) fornecer as informações, pois todos os familiares têm direito de conhecer a rotina da turma.<br><br><strong>Resposta:</strong> C.<br><br><strong>Comentário:</strong> Informações pessoais de estudantes exigem sigilo e comunicação institucional adequada. Sigilo protege estudante, família e escola.</div><br><div class="caixa-exemplo"><strong>Questão comentada 3</strong><br><br>Ao notar que o estudante consegue realizar parte da atividade sozinho, o apoio escolar deve:<br><br>A) impedir tentativas independentes, pois a proteção sempre deve prevalecer sobre autonomia.<br>B) corrigir o conteúdo pedagógico no lugar do professor, evitando erros durante a tarefa.<br>C) estimular a autonomia possível, oferecendo ajuda apenas quando necessária para participação e segurança.<br>D) realizar a atividade integralmente pelo estudante para garantir resultado mais rápido.<br>E) registrar que o estudante não precisa de apoio e encerrar qualquer acompanhamento.<br><br><strong>Resposta:</strong> C.<br><br><strong>Comentário:</strong> O apoio deve favorecer autonomia gradual, sem abandono nem substituição indevida. Autonomia não é ausência de apoio; é apoio na medida necessária.</div><br><div class="caixa-exemplo"><strong>Questão comentada 4</strong><br><br>Em situação de possível acidente escolar, a atitude adequada é:<br><br>A) divulgar o ocorrido em grupo informal antes de registrar a situação na escola.<br>B) retirar o estudante da escola sem autorização, para resolver o caso com rapidez.<br>C) adotar medidas preventivas, acionar responsáveis internos e comunicar a ocorrência pelos canais corretos.<br>D) realizar procedimento de saúde complexo sem capacitação, para evitar acionar a equipe escolar.<br>E) minimizar o ocorrido sem comunicar, caso não haja lesão visível imediata.<br><br><strong>Resposta:</strong> C.<br><br><strong>Comentário:</strong> Segurança exige prevenção, comunicação correta e respeito aos procedimentos institucionais. Em risco ou acidente, comunique e siga protocolo.</div><br><div class="caixa-exemplo"><strong>Questão comentada 5</strong><br><br>O profissional de apoio percebe dificuldade de comunicação do estudante durante a rotina. A conduta adequada é:<br><br>A) ignorar manifestações não verbais, pois apenas comunicação oral deve orientar o atendimento.<br>B) exigir que o estudante se comunique da mesma forma que os demais, para garantir igualdade formal.<br>C) divulgar as dificuldades do estudante à turma para que todos saibam como controlá-lo.<br>D) utilizar estratégias orientadas pela equipe, observar respostas do estudante e favorecer comunicação acessível.<br>E) interpretar sozinho todo comportamento e impor rotina sem diálogo com professor ou equipe.<br><br><strong>Resposta:</strong> D.<br><br><strong>Comentário:</strong> A comunicação acessível deve respeitar formas diversas de expressão e orientação da equipe. Comunicação pode ser verbal, visual, gestual, corporal ou assistiva.</div><br>
-
-`
-}
-
 ];
+
+if (typeof window !== 'undefined') { window.apoioTrabalhoColaborativoTeoria = apoioTrabalhoColaborativoTeoria; }

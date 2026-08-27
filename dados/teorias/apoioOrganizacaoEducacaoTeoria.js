@@ -1,227 +1,95 @@
 const apoioOrganizacaoEducacaoTeoria = [
-
 {
-    titulo: "🏫 Organização da Educação Básica — Página 1",
-
-    conteudo: `
-
-<h2>🏫 ORGANIZAÇÃO DA EDUCAÇÃO BÁSICA — PÁGINA 1</h2>
-<p>Este conteúdo aborda organização da Educação Básica, princípios, finalidades, etapas, modalidades, direito à educação e inclusão escolar, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
+    titulo: '🏫 Organização da Educação — Página 1: Estrutura da Educação Nacional',
+    conteudo: `<h2>🏫 ORGANIZAÇÃO DA EDUCAÇÃO NACIONAL</h2>
+<p>A organização da educação brasileira decorre principalmente da Constituição Federal e da LDB. Para prova, é essencial distinguir <b>níveis</b>, <b>etapas</b> e <b>modalidades</b>, porque a banca costuma trocar esses conceitos.</p>
+<h3>🔎 QUADRO — ESTRUTURA GERAL</h3>
+<table><tr><th>Categoria</th><th>Composição</th></tr>
+<tr><td>Níveis</td><td>Educação Básica e Educação Superior.</td></tr>
+<tr><td>Educação Básica</td><td>Educação Infantil, Ensino Fundamental e Ensino Médio.</td></tr>
+<tr><td>Modalidades</td><td>Formas de oferta que atravessam níveis e etapas, conforme a legislação aplicável.</td></tr>
 </table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+<p>A Educação Básica deve assegurar formação comum indispensável ao exercício da cidadania e fornecer meios para o estudante progredir no trabalho e em estudos posteriores. Ela não se reduz à transmissão de conteúdos: envolve desenvolvimento integral, aprendizagem, participação e formação cidadã.</p>
+<p>Em questões de concurso, cuidado para não tratar educação especial, EJA ou educação profissional como “níveis” independentes. A classificação legal precisa ser observada com precisão.</p>
+<h3>⚠️ PEGADINHA ÁGATA</h3>
+<div class="caixa-destaque">❌ Educação Infantil, Ensino Fundamental e Ensino Médio são níveis.<br><br>✅ Eles são <b>etapas da Educação Básica</b>.<br><br>❌ Educação Especial é nível paralelo.<br><br>✅ É modalidade de educação escolar.</div>`
 },
-
 {
-    titulo: "🏫 Organização da Educação Básica — Página 2",
-
-    conteudo: `
-
-<h2>🏫 ORGANIZAÇÃO DA EDUCAÇÃO BÁSICA — PÁGINA 2</h2>
-<p>Este conteúdo aborda organização da Educação Básica, princípios, finalidades, etapas, modalidades, direito à educação e inclusão escolar, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
+    titulo: '🧭 Organização da Educação — Página 2: Competências dos entes',
+    conteudo: `<h2>🧭 COMPETÊNCIAS DE UNIÃO, ESTADOS, DISTRITO FEDERAL E MUNICÍPIOS</h2>
+<p>Os sistemas de ensino são organizados em regime de colaboração. Isso significa repartição de competências com articulação entre os entes, e não atuação isolada.</p>
+<h3>🔎 QUADRO — PRIORIDADES</h3>
+<table><tr><th>Ente</th><th>Prioridade / função principal</th></tr>
+<tr><td>União</td><td>Coordena a política nacional e exerce funções normativa, redistributiva e supletiva, além das demais atribuições legais.</td></tr>
+<tr><td>Estados</td><td>Atuam no Ensino Fundamental e oferecem, com prioridade, o Ensino Médio.</td></tr>
+<tr><td>Municípios</td><td>Oferecem Educação Infantil e, com prioridade, Ensino Fundamental.</td></tr>
+<tr><td>Distrito Federal</td><td>Acumula competências educacionais atribuídas aos Estados e aos Municípios.</td></tr>
 </table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+<p><b>Atualização de 2026:</b> a oferta municipal de Educação Infantil passou a ser explicitada também para as zonas urbanas e rurais, na proporção da distribuição populacional, conforme a redação atual da LDB.</p>
+<p>Os sistemas também exercem funções de autorizar, credenciar, supervisionar e organizar instituições de sua esfera, observando a legislação aplicável.</p>
+<h3>⚠️ COMO A BANCA TROCA</h3>
+<div class="caixa-destaque">Município → infantil + prioridade no fundamental.<br>Estado → fundamental + prioridade no médio.<br>DF → competências de Estado + Município.</div>`
 },
-
 {
-    titulo: "🏫 Organização da Educação Básica — Página 3",
-
-    conteudo: `
-
-<h2>🏫 ORGANIZAÇÃO DA EDUCAÇÃO BÁSICA — PÁGINA 3</h2>
-<p>Este conteúdo aborda organização da Educação Básica, princípios, finalidades, etapas, modalidades, direito à educação e inclusão escolar, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
+    titulo: '📅 Organização da Educação — Página 3: Calendário, carga e classificação',
+    conteudo: `<h2>📅 ORGANIZAÇÃO DO TEMPO ESCOLAR</h2>
+<p>A LDB permite diferentes formas de organização da Educação Básica, inclusive séries anuais, períodos semestrais, ciclos, alternância regular de períodos de estudos, grupos não seriados e outras formas quando o interesse da aprendizagem recomendar.</p>
+<p>O calendário escolar pode ajustar-se às peculiaridades locais, inclusive climáticas e econômicas, mas não pode reduzir os mínimos legais de carga horária e dias letivos aplicáveis.</p>
+<h3>🔎 CLASSIFICAÇÃO E RECLASSIFICAÇÃO</h3>
+<table><tr><th>Situação</th><th>Regra geral</th></tr>
+<tr><td>Promoção</td><td>Prosseguimento de estudante que cursou com aproveitamento a fase anterior.</td></tr>
+<tr><td>Transferência</td><td>Classificação com base em documentação e critérios da escola/sistema.</td></tr>
+<tr><td>Avaliação da escola</td><td>Pode permitir classificação, exceto para a primeira série do Ensino Fundamental, observadas as regras legais.</td></tr>
+<tr><td>Reclassificação</td><td>Pode ocorrer inclusive em transferências entre estabelecimentos no País e no exterior, conforme regulamentação.</td></tr>
 </table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+<p>A avaliação do rendimento escolar deve ser contínua e cumulativa, com prevalência dos aspectos qualitativos e dos resultados obtidos ao longo do período sobre eventuais provas finais.</p>
+<h3>⚠️ PEGADINHA</h3>
+<div class="caixa-destaque">❌ “A escola só pode classificar por promoção.”<br>✅ A LDB admite promoção, transferência e avaliação da escola.<br><br>❌ “Calendário pode reduzir carga horária por causa do clima.”<br>✅ Pode adaptar-se, <b>sem reduzir os mínimos legais</b>.</div>`
 },
-
 {
-    titulo: "🏫 Organização da Educação Básica — Página 4",
-
-    conteudo: `
-
-<h2>🏫 ORGANIZAÇÃO DA EDUCAÇÃO BÁSICA — PÁGINA 4</h2>
-<p>Este conteúdo aborda organização da Educação Básica, princípios, finalidades, etapas, modalidades, direito à educação e inclusão escolar, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
-</table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+    titulo: '🧒 Organização da Educação — Página 4: Etapas da Educação Básica',
+    conteudo: `<h2>🧒 ETAPAS DA EDUCAÇÃO BÁSICA</h2>
+<h3>Educação Infantil</h3>
+<p>Primeira etapa da Educação Básica, destinada às crianças de até 5 anos. Creches atendem crianças de até 3 anos e pré-escolas atendem crianças de 4 e 5 anos. A avaliação ocorre por acompanhamento e registro, sem finalidade de promoção.</p>
+<h3>Ensino Fundamental</h3>
+<p>É obrigatório, possui duração de 9 anos e inicia-se aos 6 anos de idade. Entre seus objetivos está a formação básica do cidadão, incluindo compreensão do ambiente natural e social, sistema político, tecnologia, artes e valores em que se fundamenta a sociedade.</p>
+<h3>Ensino Médio</h3>
+<p>É a etapa final da Educação Básica. Sua organização passou por alterações recentes, inclusive com a Lei nº 14.945/2024, que modificou aspectos da formação geral básica e dos itinerários formativos.</p>
+<h3>🔎 QUADRO RÁPIDO</h3>
+<table><tr><th>Etapa</th><th>Marca principal</th></tr>
+<tr><td>Educação Infantil</td><td>Desenvolvimento integral e avaliação sem promoção.</td></tr>
+<tr><td>Ensino Fundamental</td><td>9 anos, início aos 6.</td></tr>
+<tr><td>Ensino Médio</td><td>Etapa final da Educação Básica.</td></tr></table>`
 },
-
 {
-    titulo: "🏫 Organização da Educação Básica — Página 5",
-
-    conteudo: `
-
-<h2>🏫 ORGANIZAÇÃO DA EDUCAÇÃO BÁSICA — PÁGINA 5</h2>
-<p>Este conteúdo aborda organização da Educação Básica, princípios, finalidades, etapas, modalidades, direito à educação e inclusão escolar, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
-</table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+    titulo: '🌾 Organização da Educação — Página 5: Modalidades e contextos específicos',
+    conteudo: `<h2>🌾 MODALIDADES E FORMAS ESPECÍFICAS DE OFERTA</h2>
+<p>A organização educacional precisa considerar diferentes públicos e contextos. Em concurso para rede municipal, é comum a cobrança de educação do campo, educação especial, educação profissional e tecnológica e educação de jovens e adultos.</p>
+<h3>🔎 EDUCAÇÃO DO CAMPO</h3>
+<p>Os sistemas devem promover adaptações necessárias às peculiaridades da vida rural e de cada região, inclusive conteúdos e metodologias, organização escolar própria e adequação do calendário às fases do ciclo agrícola e às condições climáticas.</p>
+<p>O fechamento de escola do campo, indígena ou quilombola exige procedimento específico, com análise do impacto da ação, manifestação da comunidade escolar e manifestação do órgão normativo do sistema de ensino, observadas as regras da LDB.</p>
+<h3>🔎 EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA</h3>
+<p>Integra-se aos diferentes níveis e modalidades de educação e às dimensões do trabalho, da ciência e da tecnologia. Não deve ser confundida com etapa obrigatória autônoma da Educação Básica.</p>
+<h3>🔎 EDUCAÇÃO ESPECIAL</h3>
+<p>É modalidade de educação escolar oferecida preferencialmente na rede regular de ensino e transversal aos níveis, etapas e modalidades, conforme a legislação educacional atual.</p>
+<h3>⚠️ PEGADINHA</h3>
+<div class="caixa-destaque">A palavra “modalidade” costuma ser trocada por “etapa” ou “nível”. Atenção à classificação jurídica de cada oferta.</div>`
 },
-
 {
-    titulo: "🏫 Organização da Educação Básica — Página 6",
-
-    conteudo: `
-
-<h2>🏫 ORGANIZAÇÃO DA EDUCAÇÃO BÁSICA — PÁGINA 6</h2>
-<p>Este conteúdo aborda organização da Educação Básica, princípios, finalidades, etapas, modalidades, direito à educação e inclusão escolar, sempre relacionado ao trabalho do profissional de apoio escolar no cotidiano da Educação Básica.</p>
-<p>A atuação inclusiva exige compreender que matrícula, presença física e cuidado isolado não bastam. A escola deve assegurar acesso, permanência, participação, aprendizagem, segurança, acessibilidade, respeito às diferenças e comunicação adequada.</p>
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-<table>
-<tr><th>Elemento</th><th>Aplicação prática</th></tr>
-<tr><td>Direito à educação</td><td>Acesso, permanência, participação e aprendizagem em igualdade de condições.</td></tr>
-<tr><td>Inclusão escolar</td><td>Organização da escola para acolher diferenças e remover barreiras.</td></tr>
-<tr><td>Acessibilidade</td><td>Condições físicas, comunicacionais, pedagógicas, tecnológicas e atitudinais.</td></tr>
-<tr><td>Autonomia</td><td>Estímulo à independência possível, sem abandono e sem superproteção.</td></tr>
-<tr><td>Trabalho colaborativo</td><td>Articulação entre professor, apoio escolar, equipe pedagógica, família e serviços.</td></tr>
-<tr><td>Ética e sigilo</td><td>Proteção de informações pessoais e uso de canais institucionais adequados.</td></tr>
-</table>
-<h3>📖 DESENVOLVIMENTO</h3>
-<p>O profissional de apoio escolar deve atuar para reduzir barreiras e favorecer a participação do estudante. Seu papel não é substituir o professor, elaborar sozinho adaptações curriculares, aplicar avaliação em nome do docente ou assumir decisões pedagógicas sem orientação. A função é apoiar necessidades de cuidado, comunicação, locomoção, higiene, alimentação, segurança e interação, conforme o caso.</p>
-<p>A inclusão exige atenção às barreiras arquitetônicas, comunicacionais, pedagógicas e atitudinais. Barreiras arquitetônicas dificultam deslocamentos; barreiras comunicacionais impedem compreensão; barreiras pedagógicas limitam participação nas atividades; barreiras atitudinais aparecem em preconceito, isolamento, infantilização, superproteção ou baixa expectativa sobre o estudante.</p>
-<p>A atuação correta favorece autonomia. Quando o estudante consegue realizar parte da tarefa, o apoio deve permitir tentativa, orientar quando necessário e evitar fazer tudo por ele. A ajuda excessiva pode gerar dependência e reduzir participação. A ausência de apoio, por outro lado, pode comprometer segurança, dignidade e aprendizagem.</p>
-<p>A comunicação com professores, equipe pedagógica e família deve ocorrer por canais institucionais. Informações sobre diagnóstico, comportamento, saúde, higiene, crises, medicação, dificuldades e rotina não devem circular em conversas informais, grupos sem finalidade escolar ou redes sociais. O sigilo protege o estudante e fortalece a confiança da comunidade escolar.</p>
-<p>A segurança também é parte do trabalho. O profissional deve observar riscos de quedas, engasgos, acidentes, fuga, conflitos, crises sensoriais, uso inadequado de materiais e situações de emergência. Em caso de ocorrência, deve comunicar imediatamente a equipe responsável e seguir os protocolos da escola, sem improvisar procedimentos para os quais não esteja capacitado.</p>
-<h3>✍️ EXEMPLO COMENTADO</h3>
-<div class="caixa-exemplo">Durante atividade no pátio, um estudante precisa de auxílio para locomoção. A conduta adequada é apoiar sua participação com segurança, em diálogo com o professor, evitando isolá-lo sob justificativa de proteção. O apoio deve ampliar participação, não restringir experiências escolares.</div>
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-<div class="caixa-destaque">❌ Apoio escolar não substitui o professor.<br><br>✅ O apoio favorece participação, autonomia, segurança e acessibilidade.<br><br>❌ Inclusão não é apenas matrícula.<br><br>✅ Inclusão exige permanência, aprendizagem, convivência e eliminação de barreiras.<br><br>❌ Informações do estudante não devem circular informalmente.<br><br>✅ Sigilo e comunicação institucional são indispensáveis.</div>
-<h3>📚 RESUMO DA PÁGINA</h3>
-<div class="caixa-destaque">✔ O estudante tem direito à educação com participação e aprendizagem.<br><br>✔ O apoio escolar deve promover autonomia e segurança.<br><br>✔ Acessibilidade envolve barreiras físicas, comunicacionais, pedagógicas e atitudinais.<br><br>✔ O trabalho deve ser colaborativo com professor, equipe pedagógica e família.<br><br>✔ Ética, sigilo e prevenção de riscos são fundamentais.</div>
-
-`
+    titulo: '🆕 Organização da Educação — Página 6: Atualizações e revisão final',
+    conteudo: `<h2>🆕 ORGANIZAÇÃO DA EDUCAÇÃO — ATUALIZAÇÕES E REVISÃO</h2>
+<p>Esta página reúne pontos recentes e recorrentes que ajudam a diferenciar uma questão atualizada de outra baseada em redação antiga.</p>
+<h3>🔎 ATUALIZAÇÕES RELEVANTES</h3>
+<table><tr><th>Tema</th><th>Ponto atual</th></tr>
+<tr><td>Municípios</td><td>Oferta de Educação Infantil explicitamente nas zonas urbanas e rurais, proporcionalmente à distribuição populacional.</td></tr>
+<tr><td>Escolas públicas</td><td>A legislação de 2026 passou a tratar de condições mínimas de infraestrutura das escolas públicas de Educação Básica.</td></tr>
+<tr><td>Profissionais da educação</td><td>Aperfeiçoamento profissional continuado passou a ter detalhamento maior na LDB em 2026.</td></tr>
+<tr><td>Currículo</td><td>Educação política e direitos da cidadania foram incorporados à redação da LDB por alteração de 2026.</td></tr></table>
+<h3>🧠 REVISÃO ÁGATA</h3>
+<div class="caixa-destaque">✅ Educação Básica = infantil + fundamental + médio.<br>✅ Município = infantil + prioridade fundamental.<br>✅ Estado = fundamental + prioridade médio.<br>✅ Fundamental = 9 anos, início aos 6.<br>✅ Educação Infantil = avaliação sem promoção.<br>✅ Educação Especial = modalidade.<br>✅ Educação do campo admite calendário adequado às peculiaridades locais.</div>
+<h3>🎯 ESTRATÉGIA DE PROVA</h3>
+<p>Desconfie de alternativas com “somente”, “exclusivamente” e “sempre” quando a LDB admite diferentes formas de organização. A Ágata pode ainda trocar competências entre entes ou transformar modalidade em etapa.</p>`
 },
-
-{
-    titulo: "Questões comentadas I",
-
-    conteudo: `
-
-<h2>🏫 ORGANIZAÇÃO DA EDUCAÇÃO BÁSICA — QUESTÕES COMENTADAS 1</h2><p>As questões comentadas apresentam situações práticas do apoio escolar, exigindo análise de inclusão, segurança, autonomia, sigilo e trabalho colaborativo.</p><div class="caixa-exemplo"><strong>Questão comentada 1</strong><br><br>Durante atividade coletiva, o estudante com deficiência precisa de auxílio para deslocamento. A conduta adequada do profissional de apoio é:<br><br>A) retirá-lo da atividade para evitar qualquer risco, ainda que a escola possa organizar apoio adequado.<br>B) favorecer a participação segura do estudante, articulando-se com o professor e evitando isolamento desnecessário.<br>C) assumir a condução pedagógica da atividade, substituindo o professor no planejamento da aula.<br>D) expor aos colegas detalhes do diagnóstico para justificar a presença do apoio escolar.<br>E) decidir sozinho a adaptação curricular, sem diálogo com professor ou equipe pedagógica.<br><br><strong>Resposta:</strong> B.<br><br><strong>Comentário:</strong> A inclusão exige participação com segurança; o apoio reduz barreiras e não substitui o professor. Apoiar é viabilizar participação, não isolar o estudante.</div><br><div class="caixa-exemplo"><strong>Questão comentada 2</strong><br><br>Um familiar pede ao profissional de apoio informações detalhadas sobre outro estudante da turma. A conduta correta é:<br><br>A) preservar o sigilo e orientar que informações pessoais devem ser tratadas por canais institucionais próprios.<br>B) responder informalmente, desde que omita apenas dados de saúde considerados sensíveis.<br>C) fornecer as informações, pois todos os familiares têm direito de conhecer a rotina da turma.<br>D) encaminhar fotos e relatos por aplicativo para demonstrar transparência no atendimento.<br>E) comentar apenas com familiares próximos, pois isso não caracteriza exposição pública.<br><br><strong>Resposta:</strong> A.<br><br><strong>Comentário:</strong> Informações pessoais de estudantes exigem sigilo e comunicação institucional adequada. Sigilo protege estudante, família e escola.</div><br><div class="caixa-exemplo"><strong>Questão comentada 3</strong><br><br>Ao notar que o estudante consegue realizar parte da atividade sozinho, o apoio escolar deve:<br><br>A) registrar que o estudante não precisa de apoio e encerrar qualquer acompanhamento.<br>B) estimular a autonomia possível, oferecendo ajuda apenas quando necessária para participação e segurança.<br>C) realizar a atividade integralmente pelo estudante para garantir resultado mais rápido.<br>D) corrigir o conteúdo pedagógico no lugar do professor, evitando erros durante a tarefa.<br>E) impedir tentativas independentes, pois a proteção sempre deve prevalecer sobre autonomia.<br><br><strong>Resposta:</strong> B.<br><br><strong>Comentário:</strong> O apoio deve favorecer autonomia gradual, sem abandono nem substituição indevida. Autonomia não é ausência de apoio; é apoio na medida necessária.</div><br><div class="caixa-exemplo"><strong>Questão comentada 4</strong><br><br>Em situação de possível acidente escolar, a atitude adequada é:<br><br>A) adotar medidas preventivas, acionar responsáveis internos e comunicar a ocorrência pelos canais corretos.<br>B) minimizar o ocorrido sem comunicar, caso não haja lesão visível imediata.<br>C) realizar procedimento de saúde complexo sem capacitação, para evitar acionar a equipe escolar.<br>D) divulgar o ocorrido em grupo informal antes de registrar a situação na escola.<br>E) retirar o estudante da escola sem autorização, para resolver o caso com rapidez.<br><br><strong>Resposta:</strong> A.<br><br><strong>Comentário:</strong> Segurança exige prevenção, comunicação correta e respeito aos procedimentos institucionais. Em risco ou acidente, comunique e siga protocolo.</div><br><div class="caixa-exemplo"><strong>Questão comentada 5</strong><br><br>O profissional de apoio percebe dificuldade de comunicação do estudante durante a rotina. A conduta adequada é:<br><br>A) interpretar sozinho todo comportamento e impor rotina sem diálogo com professor ou equipe.<br>B) exigir que o estudante se comunique da mesma forma que os demais, para garantir igualdade formal.<br>C) ignorar manifestações não verbais, pois apenas comunicação oral deve orientar o atendimento.<br>D) divulgar as dificuldades do estudante à turma para que todos saibam como controlá-lo.<br>E) utilizar estratégias orientadas pela equipe, observar respostas do estudante e favorecer comunicação acessível.<br><br><strong>Resposta:</strong> E.<br><br><strong>Comentário:</strong> A comunicação acessível deve respeitar formas diversas de expressão e orientação da equipe. Comunicação pode ser verbal, visual, gestual, corporal ou assistiva.</div><br>
-
-`
-},
-
-{
-    titulo: "Questões comentadas II",
-
-    conteudo: `
-
-<h2>🏫 ORGANIZAÇÃO DA EDUCAÇÃO BÁSICA — QUESTÕES COMENTADAS 2</h2><p>As questões comentadas apresentam situações práticas do apoio escolar, exigindo análise de inclusão, segurança, autonomia, sigilo e trabalho colaborativo.</p><div class="caixa-exemplo"><strong>Questão comentada 1</strong><br><br>Durante atividade coletiva, o estudante com deficiência precisa de auxílio para deslocamento. A conduta adequada do profissional de apoio é:<br><br>A) expor aos colegas detalhes do diagnóstico para justificar a presença do apoio escolar.<br>B) decidir sozinho a adaptação curricular, sem diálogo com professor ou equipe pedagógica.<br>C) assumir a condução pedagógica da atividade, substituindo o professor no planejamento da aula.<br>D) favorecer a participação segura do estudante, articulando-se com o professor e evitando isolamento desnecessário.<br>E) retirá-lo da atividade para evitar qualquer risco, ainda que a escola possa organizar apoio adequado.<br><br><strong>Resposta:</strong> D.<br><br><strong>Comentário:</strong> A inclusão exige participação com segurança; o apoio reduz barreiras e não substitui o professor. Apoiar é viabilizar participação, não isolar o estudante.</div><br><div class="caixa-exemplo"><strong>Questão comentada 2</strong><br><br>Um familiar pede ao profissional de apoio informações detalhadas sobre outro estudante da turma. A conduta correta é:<br><br>A) responder informalmente, desde que omita apenas dados de saúde considerados sensíveis.<br>B) comentar apenas com familiares próximos, pois isso não caracteriza exposição pública.<br>C) preservar o sigilo e orientar que informações pessoais devem ser tratadas por canais institucionais próprios.<br>D) encaminhar fotos e relatos por aplicativo para demonstrar transparência no atendimento.<br>E) fornecer as informações, pois todos os familiares têm direito de conhecer a rotina da turma.<br><br><strong>Resposta:</strong> C.<br><br><strong>Comentário:</strong> Informações pessoais de estudantes exigem sigilo e comunicação institucional adequada. Sigilo protege estudante, família e escola.</div><br><div class="caixa-exemplo"><strong>Questão comentada 3</strong><br><br>Ao notar que o estudante consegue realizar parte da atividade sozinho, o apoio escolar deve:<br><br>A) impedir tentativas independentes, pois a proteção sempre deve prevalecer sobre autonomia.<br>B) corrigir o conteúdo pedagógico no lugar do professor, evitando erros durante a tarefa.<br>C) estimular a autonomia possível, oferecendo ajuda apenas quando necessária para participação e segurança.<br>D) realizar a atividade integralmente pelo estudante para garantir resultado mais rápido.<br>E) registrar que o estudante não precisa de apoio e encerrar qualquer acompanhamento.<br><br><strong>Resposta:</strong> C.<br><br><strong>Comentário:</strong> O apoio deve favorecer autonomia gradual, sem abandono nem substituição indevida. Autonomia não é ausência de apoio; é apoio na medida necessária.</div><br><div class="caixa-exemplo"><strong>Questão comentada 4</strong><br><br>Em situação de possível acidente escolar, a atitude adequada é:<br><br>A) divulgar o ocorrido em grupo informal antes de registrar a situação na escola.<br>B) retirar o estudante da escola sem autorização, para resolver o caso com rapidez.<br>C) adotar medidas preventivas, acionar responsáveis internos e comunicar a ocorrência pelos canais corretos.<br>D) realizar procedimento de saúde complexo sem capacitação, para evitar acionar a equipe escolar.<br>E) minimizar o ocorrido sem comunicar, caso não haja lesão visível imediata.<br><br><strong>Resposta:</strong> C.<br><br><strong>Comentário:</strong> Segurança exige prevenção, comunicação correta e respeito aos procedimentos institucionais. Em risco ou acidente, comunique e siga protocolo.</div><br><div class="caixa-exemplo"><strong>Questão comentada 5</strong><br><br>O profissional de apoio percebe dificuldade de comunicação do estudante durante a rotina. A conduta adequada é:<br><br>A) ignorar manifestações não verbais, pois apenas comunicação oral deve orientar o atendimento.<br>B) exigir que o estudante se comunique da mesma forma que os demais, para garantir igualdade formal.<br>C) divulgar as dificuldades do estudante à turma para que todos saibam como controlá-lo.<br>D) utilizar estratégias orientadas pela equipe, observar respostas do estudante e favorecer comunicação acessível.<br>E) interpretar sozinho todo comportamento e impor rotina sem diálogo com professor ou equipe.<br><br><strong>Resposta:</strong> D.<br><br><strong>Comentário:</strong> A comunicação acessível deve respeitar formas diversas de expressão e orientação da equipe. Comunicação pode ser verbal, visual, gestual, corporal ou assistiva.</div><br>
-
-`
-}
-
 ];
+
+if (typeof window !== 'undefined') { window.apoioOrganizacaoEducacaoTeoria = apoioOrganizacaoEducacaoTeoria; }

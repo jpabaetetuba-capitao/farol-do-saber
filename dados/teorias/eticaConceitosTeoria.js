@@ -1,603 +1,96 @@
 const eticaConceitosTeoria = [
-
 {
-    titulo: "⚖️ Ética no Serviço Público — Página 1",
-
-    conteudo: `
-
-<h2>⚖️ ⚖️ ÉTICA NO SERVIÇO PÚBLICO — PÁGINA 1</h2>
-
-<p>
-⚖️ Ética no Serviço Público deve ser compreendido a partir da finalidade pública e da confiança depositada na administração.
-</p>
-
-<p>
-No serviço público, a ética não se limita à honestidade individual. Ela envolve atuação orientada ao interesse público, observância da lei, respeito ao cidadão, responsabilidade com documentos e informações, transparência compatível com os limites legais e rejeição a qualquer favorecimento indevido.
-</p>
-
-<p>
-A conduta do servidor deve ser avaliada pela finalidade do ato, pelo meio utilizado e pelos efeitos produzidos. Uma decisão rápida pode ser inadequada se viola procedimento obrigatório, expõe dados pessoais, oculta informação pública, favorece conhecido ou prejudica usuário sem fundamento legal.
-</p>
-
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-
-<table>
-<tr><th>Conceito</th><th>Aplicação no serviço público</th></tr>
-<tr><td>Interesse público</td><td>Direciona atos, decisões, atendimento, gestão de recursos e uso de informações.</td></tr>
-<tr><td>Legalidade</td><td>Exige que a atuação ocorra dentro da lei, das competências e dos procedimentos cabíveis.</td></tr>
-<tr><td>Impessoalidade</td><td>Impede favorecimento, perseguição, preferência pessoal e desvio de finalidade.</td></tr>
-<tr><td>Moralidade</td><td>Exige honestidade, lealdade, boa-fé, finalidade legítima e respeito à confiança pública.</td></tr>
-<tr><td>Publicidade</td><td>Permite controle social, sem afastar hipóteses de sigilo, proteção de dados e restrição legal.</td></tr>
-<tr><td>Eficiência</td><td>Busca atendimento adequado, qualidade, economia, organização e resultado útil à sociedade.</td></tr>
-</table>
-
-<h3>📖 DESENVOLVIMENTO</h3>
-
-<p>
-A atuação ética exige que o servidor compreenda o alcance público de suas tarefas. Receber um documento, registrar uma solicitação, acessar um sistema, responder a um cidadão, orientar sobre prazos ou encaminhar um processo são atos que podem afetar direitos e deveres. Por isso, a função pública exige cuidado maior do que uma relação privada comum.
-</p>
-
-<p>
-A impessoalidade é um dos pontos mais cobrados em situações práticas. O servidor não pode alterar prioridade, dificultar pedido, acelerar processo, negar orientação ou prestar informação conforme simpatia, amizade, parentesco, influência externa ou conveniência pessoal. Critérios de atendimento devem ser objetivos, justificáveis e compatíveis com a lei.
-</p>
-
-<p>
-A moralidade administrativa exige mais do que ausência de crime. Uma conduta pode não envolver vantagem financeira e ainda ser antiética, como omitir informação relevante, usar linguagem humilhante, expor usuário, esconder falha funcional, manipular registro ou consultar dado sem necessidade de serviço. A confiança pública depende de condutas coerentes e verificáveis.
-</p>
-
-<p>
-A publicidade fortalece o controle social. Entretanto, transparência não significa divulgação irrestrita. Informações públicas devem ser fornecidas quando cabível, mas dados pessoais, dados sensíveis, informações classificadas e sigilos legais exigem análise cuidadosa. O desafio é compatibilizar acesso à informação e proteção de direitos.
-</p>
-
-<p>
-A eficiência administrativa não autoriza atalhos ilegais. Ela exige boa organização, presteza, qualidade, uso adequado de recursos e redução de entraves desnecessários. A resposta eficiente é aquela que resolve ou encaminha corretamente a demanda, sem violar normas, prazos, competências, sigilo ou proteção de dados.
-</p>
-
-<h3>✍️ EXEMPLO COMENTADO</h3>
-
-<div class="caixa-exemplo">
-Um usuário solicita cópia de processo administrativo que contém contrato público, parecer técnico e documentos pessoais de terceiros. A resposta ética não é negar tudo nem divulgar tudo. A administração deve analisar o conteúdo, fornecer a parte pública e proteger dados pessoais ou trechos restritos, indicando fundamento quando houver negativa parcial.
-</div>
-
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-
-<div class="caixa-destaque">
-❌ Confundir transparência com exposição total de dados.<br><br>
-✅ Transparência deve ser compatibilizada com proteção de dados e sigilo legal.<br><br>
-❌ Confundir eficiência com pressa sem critério.<br><br>
-✅ Eficiência exige qualidade, legalidade e resultado útil.<br><br>
-❌ Confundir lealdade institucional com acobertamento de irregularidade.<br><br>
-✅ Lealdade é compromisso com a finalidade pública e com os canais institucionais corretos.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ A ética pública orienta a conduta funcional em favor do interesse coletivo.<br><br>
-✔ A atuação do servidor deve respeitar legalidade, impessoalidade, moralidade, publicidade e eficiência.<br><br>
-✔ O atendimento deve ser urbano, claro, objetivo e responsável.<br><br>
-✔ Informações públicas e dados pessoais precisam ser tratados de forma equilibrada.<br><br>
-✔ A responsabilidade funcional pode surgir por ação, omissão, favorecimento, negligência ou uso indevido de informações.
-</div>
-
-`
+    titulo: '⚖️ Ética no Serviço Público — Página 1: Conceitos e fundamentos',
+    conteudo: `<h2>⚖️ ÉTICA NO SERVIÇO PÚBLICO — CONCEITOS FUNDAMENTAIS</h2>
+<p>Ética no serviço público é o conjunto de valores, princípios e padrões de conduta que orientam o agente público no exercício de suas funções. Ela não se limita ao cumprimento mecânico da lei: envolve finalidade pública, boa-fé, lealdade institucional, respeito ao cidadão e responsabilidade pelas consequências dos atos.</p>
+<h3>🔎 CONCEITOS BÁSICOS</h3>
+<table><tr><th>Conceito</th><th>Sentido</th></tr>
+<tr><td>Ética</td><td>Reflexão e orientação sobre condutas consideradas corretas, justas e responsáveis.</td></tr>
+<tr><td>Moral</td><td>Conjunto de valores, costumes e normas aceitos por determinado grupo ou sociedade.</td></tr>
+<tr><td>Ética pública</td><td>Aplicação de valores e princípios à atuação de quem exerce função pública.</td></tr>
+<tr><td>Interesse público</td><td>Finalidade que deve orientar decisões e uso dos recursos da Administração.</td></tr>
+<tr><td>Probidade</td><td>Conduta íntegra, honesta e leal no exercício da função.</td></tr></table>
+<p>Em prova, ética e moral podem ser apresentadas como sinônimos, mas tecnicamente a ética possui caráter reflexivo e crítico, enquanto a moral se relaciona aos valores e normas efetivamente adotados em determinado contexto.</p>
+<h3>⚠️ PEGADINHA ÁGATA</h3>
+<div class="caixa-destaque">❌ Ética pública = apenas não cometer crime.<br>✅ A conduta pode ser antiética mesmo sem configurar crime, especialmente quando envolve favorecimento, abuso, humilhação, deslealdade ou uso indevido da função.</div>`
 },
-
 {
-    titulo: "⚖️ Ética no Serviço Público — Página 2",
-
-    conteudo: `
-
-<h2>⚖️ ⚖️ ÉTICA NO SERVIÇO PÚBLICO — PÁGINA 2</h2>
-
-<p>
-⚖️ Ética no Serviço Público envolve decisões cotidianas sobre atendimento, documentos, informações, prioridade, sigilo e responsabilidade.
-</p>
-
-<p>
-No serviço público, a ética não se limita à honestidade individual. Ela envolve atuação orientada ao interesse público, observância da lei, respeito ao cidadão, responsabilidade com documentos e informações, transparência compatível com os limites legais e rejeição a qualquer favorecimento indevido.
-</p>
-
-<p>
-A conduta do servidor deve ser avaliada pela finalidade do ato, pelo meio utilizado e pelos efeitos produzidos. Uma decisão rápida pode ser inadequada se viola procedimento obrigatório, expõe dados pessoais, oculta informação pública, favorece conhecido ou prejudica usuário sem fundamento legal.
-</p>
-
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-
-<table>
-<tr><th>Conceito</th><th>Aplicação no serviço público</th></tr>
-<tr><td>Interesse público</td><td>Direciona atos, decisões, atendimento, gestão de recursos e uso de informações.</td></tr>
-<tr><td>Legalidade</td><td>Exige que a atuação ocorra dentro da lei, das competências e dos procedimentos cabíveis.</td></tr>
-<tr><td>Impessoalidade</td><td>Impede favorecimento, perseguição, preferência pessoal e desvio de finalidade.</td></tr>
-<tr><td>Moralidade</td><td>Exige honestidade, lealdade, boa-fé, finalidade legítima e respeito à confiança pública.</td></tr>
-<tr><td>Publicidade</td><td>Permite controle social, sem afastar hipóteses de sigilo, proteção de dados e restrição legal.</td></tr>
-<tr><td>Eficiência</td><td>Busca atendimento adequado, qualidade, economia, organização e resultado útil à sociedade.</td></tr>
-</table>
-
-<h3>📖 DESENVOLVIMENTO</h3>
-
-<p>
-A atuação ética exige que o servidor compreenda o alcance público de suas tarefas. Receber um documento, registrar uma solicitação, acessar um sistema, responder a um cidadão, orientar sobre prazos ou encaminhar um processo são atos que podem afetar direitos e deveres. Por isso, a função pública exige cuidado maior do que uma relação privada comum.
-</p>
-
-<p>
-A impessoalidade é um dos pontos mais cobrados em situações práticas. O servidor não pode alterar prioridade, dificultar pedido, acelerar processo, negar orientação ou prestar informação conforme simpatia, amizade, parentesco, influência externa ou conveniência pessoal. Critérios de atendimento devem ser objetivos, justificáveis e compatíveis com a lei.
-</p>
-
-<p>
-A moralidade administrativa exige mais do que ausência de crime. Uma conduta pode não envolver vantagem financeira e ainda ser antiética, como omitir informação relevante, usar linguagem humilhante, expor usuário, esconder falha funcional, manipular registro ou consultar dado sem necessidade de serviço. A confiança pública depende de condutas coerentes e verificáveis.
-</p>
-
-<p>
-A publicidade fortalece o controle social. Entretanto, transparência não significa divulgação irrestrita. Informações públicas devem ser fornecidas quando cabível, mas dados pessoais, dados sensíveis, informações classificadas e sigilos legais exigem análise cuidadosa. O desafio é compatibilizar acesso à informação e proteção de direitos.
-</p>
-
-<p>
-A eficiência administrativa não autoriza atalhos ilegais. Ela exige boa organização, presteza, qualidade, uso adequado de recursos e redução de entraves desnecessários. A resposta eficiente é aquela que resolve ou encaminha corretamente a demanda, sem violar normas, prazos, competências, sigilo ou proteção de dados.
-</p>
-
-<h3>✍️ EXEMPLO COMENTADO</h3>
-
-<div class="caixa-exemplo">
-Um usuário solicita cópia de processo administrativo que contém contrato público, parecer técnico e documentos pessoais de terceiros. A resposta ética não é negar tudo nem divulgar tudo. A administração deve analisar o conteúdo, fornecer a parte pública e proteger dados pessoais ou trechos restritos, indicando fundamento quando houver negativa parcial.
-</div>
-
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-
-<div class="caixa-destaque">
-❌ Confundir transparência com exposição total de dados.<br><br>
-✅ Transparência deve ser compatibilizada com proteção de dados e sigilo legal.<br><br>
-❌ Confundir eficiência com pressa sem critério.<br><br>
-✅ Eficiência exige qualidade, legalidade e resultado útil.<br><br>
-❌ Confundir lealdade institucional com acobertamento de irregularidade.<br><br>
-✅ Lealdade é compromisso com a finalidade pública e com os canais institucionais corretos.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ A ética pública orienta a conduta funcional em favor do interesse coletivo.<br><br>
-✔ A atuação do servidor deve respeitar legalidade, impessoalidade, moralidade, publicidade e eficiência.<br><br>
-✔ O atendimento deve ser urbano, claro, objetivo e responsável.<br><br>
-✔ Informações públicas e dados pessoais precisam ser tratados de forma equilibrada.<br><br>
-✔ A responsabilidade funcional pode surgir por ação, omissão, favorecimento, negligência ou uso indevido de informações.
-</div>
-
-`
+    titulo: '🏛️ Ética no Serviço Público — Página 2: Princípios da Administração e ética',
+    conteudo: `<h2>🏛️ PRINCÍPIOS ADMINISTRATIVOS E CONDUTA ÉTICA</h2>
+<p>Os princípios constitucionais da Administração Pública — legalidade, impessoalidade, moralidade, publicidade e eficiência — oferecem uma base objetiva para avaliar a conduta do agente público.</p>
+<h3>🔎 LIMPE NA PRÁTICA</h3>
+<table><tr><th>Princípio</th><th>Exemplo de conduta</th></tr>
+<tr><td>Legalidade</td><td>Agir conforme competência e procedimento previsto.</td></tr>
+<tr><td>Impessoalidade</td><td>Não favorecer amigo, parente ou pessoa influente.</td></tr>
+<tr><td>Moralidade</td><td>Atuar com honestidade, boa-fé, lealdade e finalidade legítima.</td></tr>
+<tr><td>Publicidade</td><td>Dar transparência aos atos, respeitadas as restrições legais.</td></tr>
+<tr><td>Eficiência</td><td>Buscar qualidade, organização e resultado útil sem violar a lei.</td></tr></table>
+<p>Esses princípios não funcionam isoladamente. Uma decisão pode ser rápida, mas antiética se desrespeitar a legalidade; pode ser transparente, mas inadequada se expuser dados pessoais; pode ser formalmente possível, mas imoral se usada para perseguir alguém.</p>
+<h3>⚠️ PEGADINHA</h3>
+<div class="caixa-destaque">❌ Publicidade é absoluta.<br>✅ Transparência convive com sigilo, privacidade e proteção de dados.<br><br>❌ Eficiência permite dispensar procedimento.<br>✅ Eficiência deve respeitar a legalidade.</div>`
 },
-
 {
-    titulo: "⚖️ Ética no Serviço Público — Página 3",
-
-    conteudo: `
-
-<h2>⚖️ ⚖️ ÉTICA NO SERVIÇO PÚBLICO — PÁGINA 3</h2>
-
-<p>
-⚖️ Ética no Serviço Público exige leitura conjunta de princípios administrativos, dever funcional e respeito aos direitos do cidadão.
-</p>
-
-<p>
-No serviço público, a ética não se limita à honestidade individual. Ela envolve atuação orientada ao interesse público, observância da lei, respeito ao cidadão, responsabilidade com documentos e informações, transparência compatível com os limites legais e rejeição a qualquer favorecimento indevido.
-</p>
-
-<p>
-A conduta do servidor deve ser avaliada pela finalidade do ato, pelo meio utilizado e pelos efeitos produzidos. Uma decisão rápida pode ser inadequada se viola procedimento obrigatório, expõe dados pessoais, oculta informação pública, favorece conhecido ou prejudica usuário sem fundamento legal.
-</p>
-
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-
-<table>
-<tr><th>Conceito</th><th>Aplicação no serviço público</th></tr>
-<tr><td>Interesse público</td><td>Direciona atos, decisões, atendimento, gestão de recursos e uso de informações.</td></tr>
-<tr><td>Legalidade</td><td>Exige que a atuação ocorra dentro da lei, das competências e dos procedimentos cabíveis.</td></tr>
-<tr><td>Impessoalidade</td><td>Impede favorecimento, perseguição, preferência pessoal e desvio de finalidade.</td></tr>
-<tr><td>Moralidade</td><td>Exige honestidade, lealdade, boa-fé, finalidade legítima e respeito à confiança pública.</td></tr>
-<tr><td>Publicidade</td><td>Permite controle social, sem afastar hipóteses de sigilo, proteção de dados e restrição legal.</td></tr>
-<tr><td>Eficiência</td><td>Busca atendimento adequado, qualidade, economia, organização e resultado útil à sociedade.</td></tr>
-</table>
-
-<h3>📖 DESENVOLVIMENTO</h3>
-
-<p>
-A atuação ética exige que o servidor compreenda o alcance público de suas tarefas. Receber um documento, registrar uma solicitação, acessar um sistema, responder a um cidadão, orientar sobre prazos ou encaminhar um processo são atos que podem afetar direitos e deveres. Por isso, a função pública exige cuidado maior do que uma relação privada comum.
-</p>
-
-<p>
-A impessoalidade é um dos pontos mais cobrados em situações práticas. O servidor não pode alterar prioridade, dificultar pedido, acelerar processo, negar orientação ou prestar informação conforme simpatia, amizade, parentesco, influência externa ou conveniência pessoal. Critérios de atendimento devem ser objetivos, justificáveis e compatíveis com a lei.
-</p>
-
-<p>
-A moralidade administrativa exige mais do que ausência de crime. Uma conduta pode não envolver vantagem financeira e ainda ser antiética, como omitir informação relevante, usar linguagem humilhante, expor usuário, esconder falha funcional, manipular registro ou consultar dado sem necessidade de serviço. A confiança pública depende de condutas coerentes e verificáveis.
-</p>
-
-<p>
-A publicidade fortalece o controle social. Entretanto, transparência não significa divulgação irrestrita. Informações públicas devem ser fornecidas quando cabível, mas dados pessoais, dados sensíveis, informações classificadas e sigilos legais exigem análise cuidadosa. O desafio é compatibilizar acesso à informação e proteção de direitos.
-</p>
-
-<p>
-A eficiência administrativa não autoriza atalhos ilegais. Ela exige boa organização, presteza, qualidade, uso adequado de recursos e redução de entraves desnecessários. A resposta eficiente é aquela que resolve ou encaminha corretamente a demanda, sem violar normas, prazos, competências, sigilo ou proteção de dados.
-</p>
-
-<h3>✍️ EXEMPLO COMENTADO</h3>
-
-<div class="caixa-exemplo">
-Um usuário solicita cópia de processo administrativo que contém contrato público, parecer técnico e documentos pessoais de terceiros. A resposta ética não é negar tudo nem divulgar tudo. A administração deve analisar o conteúdo, fornecer a parte pública e proteger dados pessoais ou trechos restritos, indicando fundamento quando houver negativa parcial.
-</div>
-
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-
-<div class="caixa-destaque">
-❌ Confundir transparência com exposição total de dados.<br><br>
-✅ Transparência deve ser compatibilizada com proteção de dados e sigilo legal.<br><br>
-❌ Confundir eficiência com pressa sem critério.<br><br>
-✅ Eficiência exige qualidade, legalidade e resultado útil.<br><br>
-❌ Confundir lealdade institucional com acobertamento de irregularidade.<br><br>
-✅ Lealdade é compromisso com a finalidade pública e com os canais institucionais corretos.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ A ética pública orienta a conduta funcional em favor do interesse coletivo.<br><br>
-✔ A atuação do servidor deve respeitar legalidade, impessoalidade, moralidade, publicidade e eficiência.<br><br>
-✔ O atendimento deve ser urbano, claro, objetivo e responsável.<br><br>
-✔ Informações públicas e dados pessoais precisam ser tratados de forma equilibrada.<br><br>
-✔ A responsabilidade funcional pode surgir por ação, omissão, favorecimento, negligência ou uso indevido de informações.
-</div>
-
-`
+    titulo: '🤝 Ética no Serviço Público — Página 3: Honestidade, lealdade, urbanidade e imparcialidade',
+    conteudo: `<h2>🤝 VALORES DA CONDUTA FUNCIONAL</h2>
+<p>A ética pública também se manifesta em valores cotidianos: honestidade, lealdade, urbanidade, respeito, imparcialidade, responsabilidade e compromisso com o interesse coletivo.</p>
+<h3>🔎 VALORES E CONDUTAS</h3>
+<table><tr><th>Valor</th><th>Aplicação</th></tr>
+<tr><td>Honestidade</td><td>Não ocultar, manipular ou falsificar informação para obter vantagem.</td></tr>
+<tr><td>Lealdade</td><td>Agir em defesa da finalidade institucional, e não de interesses particulares.</td></tr>
+<tr><td>Urbanidade</td><td>Tratar cidadãos e colegas com respeito, clareza e cortesia.</td></tr>
+<tr><td>Imparcialidade</td><td>Aplicar critérios objetivos, sem perseguição ou favoritismo.</td></tr>
+<tr><td>Responsabilidade</td><td>Assumir as consequências dos atos e corrigir erros pelos meios adequados.</td></tr></table>
+<p>A urbanidade não exige concordar com todo pedido. É possível negar uma solicitação de forma ética quando a negativa estiver fundamentada e for comunicada com respeito.</p>
+<p>Do mesmo modo, lealdade não significa acobertar erro de colega ou chefia. A lealdade relevante para a ética pública é direcionada à Administração e ao interesse público.</p>
+<h3>⚠️ PEGADINHA ÁGATA</h3>
+<div class="caixa-destaque">❌ Lealdade ao colega = esconder irregularidade.<br>✅ Lealdade institucional exige comunicar e tratar corretamente o problema.</div>`
 },
-
 {
-    titulo: "⚖️ Ética no Serviço Público — Página 4",
-
-    conteudo: `
-
-<h2>⚖️ ⚖️ ÉTICA NO SERVIÇO PÚBLICO — PÁGINA 4</h2>
-
-<p>
-⚖️ Ética no Serviço Público aparece em casos de favorecimento, omissão, transparência, proteção de dados e uso dos canais institucionais.
-</p>
-
-<p>
-No serviço público, a ética não se limita à honestidade individual. Ela envolve atuação orientada ao interesse público, observância da lei, respeito ao cidadão, responsabilidade com documentos e informações, transparência compatível com os limites legais e rejeição a qualquer favorecimento indevido.
-</p>
-
-<p>
-A conduta do servidor deve ser avaliada pela finalidade do ato, pelo meio utilizado e pelos efeitos produzidos. Uma decisão rápida pode ser inadequada se viola procedimento obrigatório, expõe dados pessoais, oculta informação pública, favorece conhecido ou prejudica usuário sem fundamento legal.
-</p>
-
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-
-<table>
-<tr><th>Conceito</th><th>Aplicação no serviço público</th></tr>
-<tr><td>Interesse público</td><td>Direciona atos, decisões, atendimento, gestão de recursos e uso de informações.</td></tr>
-<tr><td>Legalidade</td><td>Exige que a atuação ocorra dentro da lei, das competências e dos procedimentos cabíveis.</td></tr>
-<tr><td>Impessoalidade</td><td>Impede favorecimento, perseguição, preferência pessoal e desvio de finalidade.</td></tr>
-<tr><td>Moralidade</td><td>Exige honestidade, lealdade, boa-fé, finalidade legítima e respeito à confiança pública.</td></tr>
-<tr><td>Publicidade</td><td>Permite controle social, sem afastar hipóteses de sigilo, proteção de dados e restrição legal.</td></tr>
-<tr><td>Eficiência</td><td>Busca atendimento adequado, qualidade, economia, organização e resultado útil à sociedade.</td></tr>
-</table>
-
-<h3>📖 DESENVOLVIMENTO</h3>
-
-<p>
-A atuação ética exige que o servidor compreenda o alcance público de suas tarefas. Receber um documento, registrar uma solicitação, acessar um sistema, responder a um cidadão, orientar sobre prazos ou encaminhar um processo são atos que podem afetar direitos e deveres. Por isso, a função pública exige cuidado maior do que uma relação privada comum.
-</p>
-
-<p>
-A impessoalidade é um dos pontos mais cobrados em situações práticas. O servidor não pode alterar prioridade, dificultar pedido, acelerar processo, negar orientação ou prestar informação conforme simpatia, amizade, parentesco, influência externa ou conveniência pessoal. Critérios de atendimento devem ser objetivos, justificáveis e compatíveis com a lei.
-</p>
-
-<p>
-A moralidade administrativa exige mais do que ausência de crime. Uma conduta pode não envolver vantagem financeira e ainda ser antiética, como omitir informação relevante, usar linguagem humilhante, expor usuário, esconder falha funcional, manipular registro ou consultar dado sem necessidade de serviço. A confiança pública depende de condutas coerentes e verificáveis.
-</p>
-
-<p>
-A publicidade fortalece o controle social. Entretanto, transparência não significa divulgação irrestrita. Informações públicas devem ser fornecidas quando cabível, mas dados pessoais, dados sensíveis, informações classificadas e sigilos legais exigem análise cuidadosa. O desafio é compatibilizar acesso à informação e proteção de direitos.
-</p>
-
-<p>
-A eficiência administrativa não autoriza atalhos ilegais. Ela exige boa organização, presteza, qualidade, uso adequado de recursos e redução de entraves desnecessários. A resposta eficiente é aquela que resolve ou encaminha corretamente a demanda, sem violar normas, prazos, competências, sigilo ou proteção de dados.
-</p>
-
-<h3>✍️ EXEMPLO COMENTADO</h3>
-
-<div class="caixa-exemplo">
-Um usuário solicita cópia de processo administrativo que contém contrato público, parecer técnico e documentos pessoais de terceiros. A resposta ética não é negar tudo nem divulgar tudo. A administração deve analisar o conteúdo, fornecer a parte pública e proteger dados pessoais ou trechos restritos, indicando fundamento quando houver negativa parcial.
-</div>
-
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-
-<div class="caixa-destaque">
-❌ Confundir transparência com exposição total de dados.<br><br>
-✅ Transparência deve ser compatibilizada com proteção de dados e sigilo legal.<br><br>
-❌ Confundir eficiência com pressa sem critério.<br><br>
-✅ Eficiência exige qualidade, legalidade e resultado útil.<br><br>
-❌ Confundir lealdade institucional com acobertamento de irregularidade.<br><br>
-✅ Lealdade é compromisso com a finalidade pública e com os canais institucionais corretos.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ A ética pública orienta a conduta funcional em favor do interesse coletivo.<br><br>
-✔ A atuação do servidor deve respeitar legalidade, impessoalidade, moralidade, publicidade e eficiência.<br><br>
-✔ O atendimento deve ser urbano, claro, objetivo e responsável.<br><br>
-✔ Informações públicas e dados pessoais precisam ser tratados de forma equilibrada.<br><br>
-✔ A responsabilidade funcional pode surgir por ação, omissão, favorecimento, negligência ou uso indevido de informações.
-</div>
-
-`
+    titulo: '🚫 Ética no Serviço Público — Página 4: Favorecimento, conflito de interesses e desvio de finalidade',
+    conteudo: `<h2>🚫 FAVORECIMENTO E USO INDEVIDO DA FUNÇÃO</h2>
+<p>O agente público não deve transformar a função em instrumento de vantagem pessoal, perseguição ou favorecimento. Relações pessoais não podem modificar critérios de atendimento, ordem de processos ou uso de informações.</p>
+<h3>🔎 SITUAÇÕES ANTIÉTICAS</h3>
+<table><tr><th>Situação</th><th>Problema ético</th></tr>
+<tr><td>Acelerar processo de conhecido</td><td>Favorecimento e quebra da impessoalidade.</td></tr>
+<tr><td>Dificultar atendimento por antipatia</td><td>Perseguição e desvio de finalidade.</td></tr>
+<tr><td>Usar informação interna em benefício próprio</td><td>Uso indevido da função e da informação.</td></tr>
+<tr><td>Usar recurso público para finalidade privada</td><td>Desvio de finalidade e falta de zelo.</td></tr>
+<tr><td>Ocultar erro para proteger imagem pessoal</td><td>Falta de transparência, lealdade e responsabilidade.</td></tr></table>
+<p>Conflito de interesses ocorre quando interesse privado pode interferir, ou parecer interferir, no exercício imparcial da função. A conduta ética exige reconhecer e administrar esse conflito conforme as regras aplicáveis.</p>
+<h3>⚠️ PEGADINHA</h3>
+<div class="caixa-destaque">❌ Só existe problema ético se houver dinheiro envolvido.<br>✅ Favoritismo, perseguição e uso indevido de informação podem ser antiéticos sem qualquer vantagem financeira.</div>`
 },
-
 {
-    titulo: "⚖️ Ética no Serviço Público — Página 5",
-
-    conteudo: `
-
-<h2>⚖️ ⚖️ ÉTICA NO SERVIÇO PÚBLICO — PÁGINA 5</h2>
-
-<p>
-⚖️ Ética no Serviço Público deve ser aplicado de modo equilibrado, sem transformar eficiência em atalho ilegal ou publicidade em exposição indevida.
-</p>
-
-<p>
-No serviço público, a ética não se limita à honestidade individual. Ela envolve atuação orientada ao interesse público, observância da lei, respeito ao cidadão, responsabilidade com documentos e informações, transparência compatível com os limites legais e rejeição a qualquer favorecimento indevido.
-</p>
-
-<p>
-A conduta do servidor deve ser avaliada pela finalidade do ato, pelo meio utilizado e pelos efeitos produzidos. Uma decisão rápida pode ser inadequada se viola procedimento obrigatório, expõe dados pessoais, oculta informação pública, favorece conhecido ou prejudica usuário sem fundamento legal.
-</p>
-
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-
-<table>
-<tr><th>Conceito</th><th>Aplicação no serviço público</th></tr>
-<tr><td>Interesse público</td><td>Direciona atos, decisões, atendimento, gestão de recursos e uso de informações.</td></tr>
-<tr><td>Legalidade</td><td>Exige que a atuação ocorra dentro da lei, das competências e dos procedimentos cabíveis.</td></tr>
-<tr><td>Impessoalidade</td><td>Impede favorecimento, perseguição, preferência pessoal e desvio de finalidade.</td></tr>
-<tr><td>Moralidade</td><td>Exige honestidade, lealdade, boa-fé, finalidade legítima e respeito à confiança pública.</td></tr>
-<tr><td>Publicidade</td><td>Permite controle social, sem afastar hipóteses de sigilo, proteção de dados e restrição legal.</td></tr>
-<tr><td>Eficiência</td><td>Busca atendimento adequado, qualidade, economia, organização e resultado útil à sociedade.</td></tr>
-</table>
-
-<h3>📖 DESENVOLVIMENTO</h3>
-
-<p>
-A atuação ética exige que o servidor compreenda o alcance público de suas tarefas. Receber um documento, registrar uma solicitação, acessar um sistema, responder a um cidadão, orientar sobre prazos ou encaminhar um processo são atos que podem afetar direitos e deveres. Por isso, a função pública exige cuidado maior do que uma relação privada comum.
-</p>
-
-<p>
-A impessoalidade é um dos pontos mais cobrados em situações práticas. O servidor não pode alterar prioridade, dificultar pedido, acelerar processo, negar orientação ou prestar informação conforme simpatia, amizade, parentesco, influência externa ou conveniência pessoal. Critérios de atendimento devem ser objetivos, justificáveis e compatíveis com a lei.
-</p>
-
-<p>
-A moralidade administrativa exige mais do que ausência de crime. Uma conduta pode não envolver vantagem financeira e ainda ser antiética, como omitir informação relevante, usar linguagem humilhante, expor usuário, esconder falha funcional, manipular registro ou consultar dado sem necessidade de serviço. A confiança pública depende de condutas coerentes e verificáveis.
-</p>
-
-<p>
-A publicidade fortalece o controle social. Entretanto, transparência não significa divulgação irrestrita. Informações públicas devem ser fornecidas quando cabível, mas dados pessoais, dados sensíveis, informações classificadas e sigilos legais exigem análise cuidadosa. O desafio é compatibilizar acesso à informação e proteção de direitos.
-</p>
-
-<p>
-A eficiência administrativa não autoriza atalhos ilegais. Ela exige boa organização, presteza, qualidade, uso adequado de recursos e redução de entraves desnecessários. A resposta eficiente é aquela que resolve ou encaminha corretamente a demanda, sem violar normas, prazos, competências, sigilo ou proteção de dados.
-</p>
-
-<h3>✍️ EXEMPLO COMENTADO</h3>
-
-<div class="caixa-exemplo">
-Um usuário solicita cópia de processo administrativo que contém contrato público, parecer técnico e documentos pessoais de terceiros. A resposta ética não é negar tudo nem divulgar tudo. A administração deve analisar o conteúdo, fornecer a parte pública e proteger dados pessoais ou trechos restritos, indicando fundamento quando houver negativa parcial.
-</div>
-
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-
-<div class="caixa-destaque">
-❌ Confundir transparência com exposição total de dados.<br><br>
-✅ Transparência deve ser compatibilizada com proteção de dados e sigilo legal.<br><br>
-❌ Confundir eficiência com pressa sem critério.<br><br>
-✅ Eficiência exige qualidade, legalidade e resultado útil.<br><br>
-❌ Confundir lealdade institucional com acobertamento de irregularidade.<br><br>
-✅ Lealdade é compromisso com a finalidade pública e com os canais institucionais corretos.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ A ética pública orienta a conduta funcional em favor do interesse coletivo.<br><br>
-✔ A atuação do servidor deve respeitar legalidade, impessoalidade, moralidade, publicidade e eficiência.<br><br>
-✔ O atendimento deve ser urbano, claro, objetivo e responsável.<br><br>
-✔ Informações públicas e dados pessoais precisam ser tratados de forma equilibrada.<br><br>
-✔ A responsabilidade funcional pode surgir por ação, omissão, favorecimento, negligência ou uso indevido de informações.
-</div>
-
-`
+    titulo: '🔎 Ética no Serviço Público — Página 5: Transparência, sigilo e responsabilidade com informação',
+    conteudo: `<h2>🔎 ÉTICA NO TRATAMENTO DE INFORMAÇÕES</h2>
+<p>O agente público lida com informações que podem ser públicas, pessoais, sensíveis, sigilosas ou restritas por lei. A ética exige equilíbrio entre transparência e proteção de direitos.</p>
+<h3>🔎 REGRAS PRÁTICAS</h3>
+<table><tr><th>Situação</th><th>Conduta ética</th></tr>
+<tr><td>Informação de interesse coletivo</td><td>Favorecer acesso quando legalmente cabível.</td></tr>
+<tr><td>Dado pessoal de terceiro</td><td>Restringir acesso conforme finalidade, base legal e regras de proteção.</td></tr>
+<tr><td>Sistema interno</td><td>Acessar somente quando necessário ao exercício da função.</td></tr>
+<tr><td>Documento com conteúdo misto</td><td>Separar parte pública de trechos protegidos, quando juridicamente possível.</td></tr>
+<tr><td>Informação sigilosa</td><td>Respeitar classificação e restrições legais.</td></tr></table>
+<p>Acesso funcional a um sistema não significa autorização para consultar qualquer cadastro por curiosidade. Da mesma forma, o fato de o servidor conhecer a informação em razão do trabalho não autoriza compartilhamento em grupos pessoais ou redes sociais.</p>
+<h3>⚠️ PEGADINHA ÁGATA</h3>
+<div class="caixa-destaque">❌ O servidor pode consultar qualquer dado porque possui senha do sistema.<br>✅ O acesso deve estar vinculado à <b>necessidade funcional e finalidade legítima</b>.</div>`
 },
-
 {
-    titulo: "⚖️ Ética no Serviço Público — Página 6",
-
-    conteudo: `
-
-<h2>⚖️ ⚖️ ÉTICA NO SERVIÇO PÚBLICO — PÁGINA 6</h2>
-
-<p>
-⚖️ Ética no Serviço Público exige que o servidor documente, motive e encaminhe corretamente atos e informações relevantes.
-</p>
-
-<p>
-No serviço público, a ética não se limita à honestidade individual. Ela envolve atuação orientada ao interesse público, observância da lei, respeito ao cidadão, responsabilidade com documentos e informações, transparência compatível com os limites legais e rejeição a qualquer favorecimento indevido.
-</p>
-
-<p>
-A conduta do servidor deve ser avaliada pela finalidade do ato, pelo meio utilizado e pelos efeitos produzidos. Uma decisão rápida pode ser inadequada se viola procedimento obrigatório, expõe dados pessoais, oculta informação pública, favorece conhecido ou prejudica usuário sem fundamento legal.
-</p>
-
-<h3>🔎 CONCEITOS ESSENCIAIS</h3>
-
-<table>
-<tr><th>Conceito</th><th>Aplicação no serviço público</th></tr>
-<tr><td>Interesse público</td><td>Direciona atos, decisões, atendimento, gestão de recursos e uso de informações.</td></tr>
-<tr><td>Legalidade</td><td>Exige que a atuação ocorra dentro da lei, das competências e dos procedimentos cabíveis.</td></tr>
-<tr><td>Impessoalidade</td><td>Impede favorecimento, perseguição, preferência pessoal e desvio de finalidade.</td></tr>
-<tr><td>Moralidade</td><td>Exige honestidade, lealdade, boa-fé, finalidade legítima e respeito à confiança pública.</td></tr>
-<tr><td>Publicidade</td><td>Permite controle social, sem afastar hipóteses de sigilo, proteção de dados e restrição legal.</td></tr>
-<tr><td>Eficiência</td><td>Busca atendimento adequado, qualidade, economia, organização e resultado útil à sociedade.</td></tr>
-</table>
-
-<h3>📖 DESENVOLVIMENTO</h3>
-
-<p>
-A atuação ética exige que o servidor compreenda o alcance público de suas tarefas. Receber um documento, registrar uma solicitação, acessar um sistema, responder a um cidadão, orientar sobre prazos ou encaminhar um processo são atos que podem afetar direitos e deveres. Por isso, a função pública exige cuidado maior do que uma relação privada comum.
-</p>
-
-<p>
-A impessoalidade é um dos pontos mais cobrados em situações práticas. O servidor não pode alterar prioridade, dificultar pedido, acelerar processo, negar orientação ou prestar informação conforme simpatia, amizade, parentesco, influência externa ou conveniência pessoal. Critérios de atendimento devem ser objetivos, justificáveis e compatíveis com a lei.
-</p>
-
-<p>
-A moralidade administrativa exige mais do que ausência de crime. Uma conduta pode não envolver vantagem financeira e ainda ser antiética, como omitir informação relevante, usar linguagem humilhante, expor usuário, esconder falha funcional, manipular registro ou consultar dado sem necessidade de serviço. A confiança pública depende de condutas coerentes e verificáveis.
-</p>
-
-<p>
-A publicidade fortalece o controle social. Entretanto, transparência não significa divulgação irrestrita. Informações públicas devem ser fornecidas quando cabível, mas dados pessoais, dados sensíveis, informações classificadas e sigilos legais exigem análise cuidadosa. O desafio é compatibilizar acesso à informação e proteção de direitos.
-</p>
-
-<p>
-A eficiência administrativa não autoriza atalhos ilegais. Ela exige boa organização, presteza, qualidade, uso adequado de recursos e redução de entraves desnecessários. A resposta eficiente é aquela que resolve ou encaminha corretamente a demanda, sem violar normas, prazos, competências, sigilo ou proteção de dados.
-</p>
-
-<h3>✍️ EXEMPLO COMENTADO</h3>
-
-<div class="caixa-exemplo">
-Um usuário solicita cópia de processo administrativo que contém contrato público, parecer técnico e documentos pessoais de terceiros. A resposta ética não é negar tudo nem divulgar tudo. A administração deve analisar o conteúdo, fornecer a parte pública e proteger dados pessoais ou trechos restritos, indicando fundamento quando houver negativa parcial.
-</div>
-
-<h3>⚠️ PONTOS DE ATENÇÃO</h3>
-
-<div class="caixa-destaque">
-❌ Confundir transparência com exposição total de dados.<br><br>
-✅ Transparência deve ser compatibilizada com proteção de dados e sigilo legal.<br><br>
-❌ Confundir eficiência com pressa sem critério.<br><br>
-✅ Eficiência exige qualidade, legalidade e resultado útil.<br><br>
-❌ Confundir lealdade institucional com acobertamento de irregularidade.<br><br>
-✅ Lealdade é compromisso com a finalidade pública e com os canais institucionais corretos.
-</div>
-
-<h3>📚 RESUMO DA PÁGINA</h3>
-
-<div class="caixa-destaque">
-✔ A ética pública orienta a conduta funcional em favor do interesse coletivo.<br><br>
-✔ A atuação do servidor deve respeitar legalidade, impessoalidade, moralidade, publicidade e eficiência.<br><br>
-✔ O atendimento deve ser urbano, claro, objetivo e responsável.<br><br>
-✔ Informações públicas e dados pessoais precisam ser tratados de forma equilibrada.<br><br>
-✔ A responsabilidade funcional pode surgir por ação, omissão, favorecimento, negligência ou uso indevido de informações.
-</div>
-
-`
+    titulo: '🎯 Ética no Serviço Público — Página 6: Dilemas éticos e revisão final',
+    conteudo: `<h2>🎯 ÉTICA NO SERVIÇO PÚBLICO — REVISÃO FINAL</h2>
+<p>Questões sobre ética costumam apresentar dilemas em que uma alternativa parece mais rápida ou conveniente, mas viola algum valor ou princípio. O candidato deve perguntar: a conduta é legal? é impessoal? protege o interesse público? respeita o cidadão? preserva informações protegidas?</p>
+<h3>🔎 SITUAÇÕES DE PROVA</h3>
+<table><tr><th>Situação</th><th>Conduta mais adequada</th></tr>
+<tr><td>Amigo pede prioridade</td><td>Manter critérios objetivos de atendimento.</td></tr>
+<tr><td>Chefia pede para ocultar erro</td><td>Não falsificar ou omitir; seguir o procedimento institucional correto.</td></tr>
+<tr><td>Cidadão irritado faz reclamação</td><td>Manter urbanidade e orientar dentro da competência.</td></tr>
+<tr><td>Servidor descobre dado por acaso</td><td>Não usar ou divulgar fora da finalidade funcional.</td></tr>
+<tr><td>Processo exige decisão difícil</td><td>Motivar a decisão com base em normas, fatos e finalidade pública.</td></tr></table>
+<h3>🧠 REVISÃO ÁGATA</h3>
+<div class="caixa-destaque">✅ Ética ≠ apenas legalidade.<br>✅ Moralidade administrativa exige boa-fé e finalidade legítima.<br>✅ Impessoalidade combate favoritismo e perseguição.<br>✅ Urbanidade não significa atender pedido ilegal.<br>✅ Lealdade institucional não é acobertamento.<br>✅ Transparência convive com sigilo e LGPD.<br>✅ Acesso à informação deve estar ligado à finalidade funcional.<br>✅ Ausência de vantagem financeira não elimina problema ético.</div>
+<h3>⚠️ COMO A ÁGATA PODE COBRAR</h3>
+<p>Procure alternativas que conciliem <b>legalidade + interesse público + impessoalidade + respeito + responsabilidade</b>. Desconfie de justificativas baseadas apenas em amizade, pressa, conveniência, hierarquia ou “boa intenção”.</p>`
 },
-
-{
-    titulo: "Questões comentadas I",
-
-    conteudo: `
-
-<h2>⚖️ ⚖️ ÉTICA NO SERVIÇO PÚBLICO — QUESTÕES COMENTADAS I</h2>
-
-<p>
-As questões comentadas abaixo apresentam situações práticas de serviço público. A resolução exige comparar alternativas próximas, evitando respostas extremas, favorecimentos pessoais, publicidade sem critério, omissão indevida e tratamento inadequado de dados pessoais.
-</p>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 1</strong><br><br>
-Um servidor recebe pedido de prioridade feito por pessoa conhecida, sem previsão legal de preferência. A conduta compatível com a ética pública é:<br><br>
-A) registrar prioridade genérica no sistema, sem indicar a relação pessoal existente.<br>B) suspender temporariamente todos os pedidos semelhantes para evitar comparação entre usuários.<br>C) consultar colegas do setor e decidir conforme o menor risco de reclamação imediata.<br>D) antecipar o pedido do conhecido, desde que o resultado final do processo seja juridicamente possível.<br>E) manter a ordem objetiva de atendimento, salvo prioridade prevista em norma ou justificativa formal.<br><br>
-<strong>Resposta:</strong> E.<br><br>
-<strong>Comentário:</strong> A ética pública exige impessoalidade e critérios objetivos; amizade ou proximidade não autorizam prioridade. Favorecimento pessoal é incompatível com finalidade pública.
-</div>
-<br>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 2</strong><br><br>
-Ao perceber falha em registro oficial, o servidor é orientado verbalmente a não comunicar o problema. A atitude adequada é:<br><br>
-A) registrar a inconsistência pelos canais institucionais, preservando legalidade e rastreabilidade.<br>B) expor o fato em rede social, dispensando análise de dados pessoais ou sigilo funcional.<br>C) corrigir o registro sem deixar histórico, evitando desgaste para o setor responsável.<br>D) cumprir a orientação verbal, pois a hierarquia afasta responsabilidade do servidor subordinado.<br>E) aguardar provocação externa, pois falhas internas não integram dever funcional do servidor.<br><br>
-<strong>Resposta:</strong> A.<br><br>
-<strong>Comentário:</strong> Lealdade institucional não significa acobertamento; o correto é usar canais formais e preservar legalidade. Ordem informal não justifica ocultar irregularidade.
-</div>
-<br>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 3</strong><br><br>
-Durante atendimento, o servidor discorda da postura do usuário e passa a dificultar o andamento do pedido. A análise correta é:<br><br>
-A) a conduta é lícita se o usuário conseguir reapresentar a solicitação em outro momento.<br>B) a conduta é aceitável quando o servidor entende que o usuário não demonstra colaboração suficiente.<br>C) a conduta se justifica quando o servidor não obtém vantagem patrimonial com o atraso.<br>D) a conduta preserva eficiência, pois reduz pedidos que podem exigir análise mais demorada.<br>E) a conduta viola urbanidade, impessoalidade e dever de atendimento orientado ao interesse público.<br><br>
-<strong>Resposta:</strong> E.<br><br>
-<strong>Comentário:</strong> A ética exige atendimento objetivo, respeitoso e sem perseguição ou retaliação. Impessoalidade também impede perseguição.
-</div>
-<br>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 4</strong><br><br>
-Um agente público utiliza informação obtida no cargo para orientar interesse privado de terceiro. A conduta é:<br><br>
-A) adequada se a informação não tiver sido classificada formalmente como sigilosa.<br>B) permitida quando a informação circula internamente entre servidores do mesmo órgão.<br>C) aceitável se o servidor não alterar documento nem praticar ato decisório formal.<br>D) incompatível com a ética pública, pois desvia informação funcional para finalidade particular.<br>E) regular quando o terceiro não obtém vantagem financeira imediata e comprovada.<br><br>
-<strong>Resposta:</strong> D.<br><br>
-<strong>Comentário:</strong> Informação funcional deve ser usada para finalidade pública, não para benefício particular. Finalidade e confiança pública são centrais.
-</div>
-<br>
-<p>Em alternativas difíceis, observe se a resposta preserva finalidade pública, motivação, proporcionalidade, impessoalidade, transparência adequada, proteção de dados e uso de canais institucionais. Distratores costumam exagerar a publicidade, negar acesso sem fundamento, dispensar legalidade em nome da eficiência ou transformar preferência pessoal em critério administrativo.</p>
-
-`
-},
-
-{
-    titulo: "Questões comentadas II",
-
-    conteudo: `
-
-<h2>⚖️ ⚖️ ÉTICA NO SERVIÇO PÚBLICO — QUESTÕES COMENTADAS II</h2>
-
-<p>
-As questões comentadas abaixo apresentam situações práticas de serviço público. A resolução exige comparar alternativas próximas, evitando respostas extremas, favorecimentos pessoais, publicidade sem critério, omissão indevida e tratamento inadequado de dados pessoais.
-</p>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 1</strong><br><br>
-Um servidor recebe pedido de prioridade feito por pessoa conhecida, sem previsão legal de preferência. A conduta compatível com a ética pública é:<br><br>
-A) registrar prioridade genérica no sistema, sem indicar a relação pessoal existente.<br>B) antecipar o pedido do conhecido, desde que o resultado final do processo seja juridicamente possível.<br>C) manter a ordem objetiva de atendimento, salvo prioridade prevista em norma ou justificativa formal.<br>D) suspender temporariamente todos os pedidos semelhantes para evitar comparação entre usuários.<br>E) consultar colegas do setor e decidir conforme o menor risco de reclamação imediata.<br><br>
-<strong>Resposta:</strong> C.<br><br>
-<strong>Comentário:</strong> A ética pública exige impessoalidade e critérios objetivos; amizade ou proximidade não autorizam prioridade. Favorecimento pessoal é incompatível com finalidade pública.
-</div>
-<br>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 2</strong><br><br>
-Ao perceber falha em registro oficial, o servidor é orientado verbalmente a não comunicar o problema. A atitude adequada é:<br><br>
-A) aguardar provocação externa, pois falhas internas não integram dever funcional do servidor.<br>B) corrigir o registro sem deixar histórico, evitando desgaste para o setor responsável.<br>C) registrar a inconsistência pelos canais institucionais, preservando legalidade e rastreabilidade.<br>D) cumprir a orientação verbal, pois a hierarquia afasta responsabilidade do servidor subordinado.<br>E) expor o fato em rede social, dispensando análise de dados pessoais ou sigilo funcional.<br><br>
-<strong>Resposta:</strong> C.<br><br>
-<strong>Comentário:</strong> Lealdade institucional não significa acobertamento; o correto é usar canais formais e preservar legalidade. Ordem informal não justifica ocultar irregularidade.
-</div>
-<br>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 3</strong><br><br>
-Durante atendimento, o servidor discorda da postura do usuário e passa a dificultar o andamento do pedido. A análise correta é:<br><br>
-A) a conduta se justifica quando o servidor não obtém vantagem patrimonial com o atraso.<br>B) a conduta é lícita se o usuário conseguir reapresentar a solicitação em outro momento.<br>C) a conduta preserva eficiência, pois reduz pedidos que podem exigir análise mais demorada.<br>D) a conduta é aceitável quando o servidor entende que o usuário não demonstra colaboração suficiente.<br>E) a conduta viola urbanidade, impessoalidade e dever de atendimento orientado ao interesse público.<br><br>
-<strong>Resposta:</strong> E.<br><br>
-<strong>Comentário:</strong> A ética exige atendimento objetivo, respeitoso e sem perseguição ou retaliação. Impessoalidade também impede perseguição.
-</div>
-<br>
-
-<div class="caixa-exemplo">
-<strong>Questão comentada 4</strong><br><br>
-Um agente público utiliza informação obtida no cargo para orientar interesse privado de terceiro. A conduta é:<br><br>
-A) incompatível com a ética pública, pois desvia informação funcional para finalidade particular.<br>B) aceitável se o servidor não alterar documento nem praticar ato decisório formal.<br>C) regular quando o terceiro não obtém vantagem financeira imediata e comprovada.<br>D) adequada se a informação não tiver sido classificada formalmente como sigilosa.<br>E) permitida quando a informação circula internamente entre servidores do mesmo órgão.<br><br>
-<strong>Resposta:</strong> A.<br><br>
-<strong>Comentário:</strong> Informação funcional deve ser usada para finalidade pública, não para benefício particular. Finalidade e confiança pública são centrais.
-</div>
-<br>
-<p>Em alternativas difíceis, observe se a resposta preserva finalidade pública, motivação, proporcionalidade, impessoalidade, transparência adequada, proteção de dados e uso de canais institucionais. Distratores costumam exagerar a publicidade, negar acesso sem fundamento, dispensar legalidade em nome da eficiência ou transformar preferência pessoal em critério administrativo.</p>
-
-`
-}
-
 ];
+
+if (typeof window !== 'undefined') { window.eticaConceitosTeoria = eticaConceitosTeoria; }
