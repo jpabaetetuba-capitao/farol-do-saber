@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v159-2026-08-26-apoio-escolar-distratores-final";
+const CACHE_VERSION = "farol-v160-2026-08-27-apoio-escolar-teorias-revisadas";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
