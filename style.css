@@ -18363,3 +18363,327 @@ body.efeito-ondas-v65 #conteudoPerfilAluno .perfil-cabecalho,
 @media(max-width:720px){
     .vida-bordo-pagina-v149{width:min(100% - 14px,980px);padding-top:7px}.vida-bordo-topo-v149{top:5px;grid-template-columns:auto 1fr}.vida-bordo-progresso-resumo-v149{display:none}.vida-bordo-identidade-v149 strong{font-size:13px}.vida-bordo-hero-v149{padding:24px 19px}.vida-bordo-como-funciona-v149{grid-template-columns:1fr}.vida-bordo-card-viagem-v149{grid-template-columns:52px 1fr;padding:17px;gap:12px}.vida-bordo-card-viagem-v149 button,.vida-bordo-cadeado-v149{grid-column:1/3;width:100%}.vida-bordo-card-numero-v149{font-size:27px}.vida-bordo-cena-v149{padding:22px 16px;border-radius:20px;min-height:0}.vida-bordo-barra-wrap-v149{display:block}.vida-bordo-barra-wrap-v149 small{display:block;margin-top:6px;white-space:normal}.vida-bordo-resultado-grid-v149{grid-template-columns:1fr 1fr}.vida-bordo-eixos-v149 div{display:block}.vida-bordo-eixos-v149 span{display:block;margin-top:4px}.vida-bordo-voltar-v149{padding:9px!important;font-size:12px}.vida-bordo-opcao-v149,.vida-bordo-alternativa-v149{padding:13px 11px!important}.vida-bordo-cena-v149>p{font-size:16px}.vida-bordo-enunciado-v149{font-size:17px!important}
 }
+
+/* ==========================================================
+   FAROL V161 — SEDUC-PA / EDUCAÇÃO ESPECIAL
+========================================================== */
+.seduc-ee-painel-v161{
+    max-width:1050px;
+    margin:0 auto;
+}
+.seduc-ee-cabecalho-v161{
+    margin:10px 0 18px;
+    padding:20px;
+    border-radius:18px;
+    background:linear-gradient(135deg,rgba(9,54,109,.96),rgba(26,91,154,.94));
+    color:#fff;
+}
+.seduc-ee-cabecalho-v161 h2{
+    color:#fff;
+    margin:10px 0 8px;
+}
+.seduc-ee-cabecalho-v161 p{
+    line-height:1.6;
+    color:rgba(255,255,255,.95);
+}
+.seduc-ee-selo-v161{
+    display:inline-flex;
+    padding:7px 11px;
+    border-radius:999px;
+    background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.28);
+    font-size:.82rem;
+    font-weight:900;
+    letter-spacing:.03em;
+}
+.seduc-ee-resumo-v161{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:10px;
+    margin:0 0 18px;
+}
+.seduc-ee-resumo-v161 span{
+    padding:14px;
+    border:1px solid #d7e4f3;
+    border-radius:14px;
+    background:#f7fbff;
+    text-align:center;
+    line-height:1.35;
+}
+.seduc-ee-resumo-v161 strong{
+    display:block;
+    color:#0d4f91;
+    font-size:1.3rem;
+}
+.seduc-ee-topicos-v161{
+    display:grid;
+    gap:12px;
+}
+.seduc-ee-topico-v161{
+    width:100%;
+    margin:0;
+    padding:18px;
+    border-radius:16px;
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    align-items:center;
+    gap:15px;
+    text-align:left;
+    background:#fff;
+    color:#263238;
+    border:1px solid #cbdbea;
+    box-shadow:0 5px 15px rgba(13,79,145,.10);
+}
+.seduc-ee-topico-v161:hover{
+    background:#f6fbff;
+    transform:translateY(-1px);
+}
+.seduc-ee-numero-v161{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:#0d4f91;
+    color:#fff;
+    font-weight:900;
+    font-size:1.1rem;
+}
+.seduc-ee-topico-texto-v161 strong{
+    display:block;
+    color:#0b3d70;
+    font-size:1.08rem;
+    margin-bottom:5px;
+}
+.seduc-ee-topico-texto-v161 small{
+    display:block;
+    color:#526574;
+    line-height:1.45;
+}
+.seduc-ee-status-v161{
+    font-weight:900;
+    color:#087f5b;
+    white-space:nowrap;
+}
+.seduc-ee-aviso-v161{
+    margin-top:18px;
+    padding:16px 18px;
+    border-left:5px solid #f0a000;
+    border-radius:12px;
+    background:#fff8df;
+    line-height:1.55;
+}
+.bloco-feedback-erro-especifico-v161,
+.bloco-feedback-memorizar-v161,
+.bloco-feedback-pegadinha-v161,
+.bloco-feedback-atualizacao-v161{
+    margin-top:14px;
+    padding:14px 16px;
+    border-radius:12px;
+    line-height:1.6;
+}
+.bloco-feedback-erro-especifico-v161{
+    background:#fff1f0;
+    border:1px solid #efb5b1;
+    color:#72211c;
+}
+.bloco-feedback-memorizar-v161{
+    background:#f5efff;
+    border:1px solid #d9c3f5;
+    color:#4d2375;
+}
+.bloco-feedback-pegadinha-v161{
+    background:#fff8e8;
+    border:1px solid #f3d18a;
+    color:#6b4b00;
+}
+.bloco-feedback-atualizacao-v161{
+    background:#eef8ee;
+    border:1px solid #b9dfbd;
+    color:#245c2a;
+}
+.bloco-feedback-erro-especifico-v161 strong,
+.bloco-feedback-memorizar-v161 strong,
+.bloco-feedback-pegadinha-v161 strong,
+.bloco-feedback-atualizacao-v161 strong{
+    display:block;
+    margin-bottom:6px;
+}
+@media(max-width:700px){
+    .seduc-ee-resumo-v161{grid-template-columns:1fr;}
+    .seduc-ee-topico-v161{grid-template-columns:auto 1fr;}
+    .seduc-ee-status-v161{grid-column:2;white-space:normal;}
+}
+
+/* ==========================================================
+   FAROL V161 — SEDUC-PA / EDUCAÇÃO ESPECIAL
+   MAPA 1 + MAPA 1B (ATUALIZAÇÕES 2025/2026)
+========================================================== */
+.seduc-ee-mapa-painel-v161{
+    max-width:1180px;
+    margin:0 auto;
+    padding:22px;
+    border-radius:24px;
+    background:rgba(255,255,255,.96);
+    box-shadow:0 18px 44px rgba(0,0,0,.18);
+}
+
+.seduc-ee-mapa-painel-v161 > h2{
+    margin:0 0 8px;
+    color:#123e68;
+    text-align:center;
+    font-size:clamp(1.45rem,3vw,2rem);
+}
+
+.seduc-ee-instrucao-mapa-v161{
+    margin:0 auto 18px;
+    max-width:900px;
+    text-align:center;
+    color:#425466;
+    line-height:1.6;
+}
+
+.seduc-ee-mapa-imagem-wrap-v161{
+    margin:18px 0 26px;
+    padding:14px;
+    border:1px solid #dce6ef;
+    border-radius:20px;
+    background:#f7fbff;
+    text-align:center;
+}
+
+.seduc-ee-mapa-imagem-wrap-v161 img{
+    display:block;
+    width:100%;
+    height:auto;
+    margin:0 auto;
+    border-radius:14px;
+    box-shadow:0 8px 24px rgba(18,62,104,.12);
+}
+
+.seduc-ee-mapa-imagem-wrap-v161 button{
+    margin-top:14px;
+}
+
+.seduc-ee-mapa-web-v161{
+    margin:26px 0;
+    padding:20px;
+    border:2px solid #d8e7f3;
+    border-radius:22px;
+    background:linear-gradient(180deg,#fbfdff,#f2f8fc);
+}
+
+.seduc-ee-mapa-web-centro-v161{
+    max-width:760px;
+    margin:0 auto 18px;
+    padding:18px 20px;
+    border-radius:20px;
+    text-align:center;
+    color:#fff;
+    background:linear-gradient(135deg,#0b3b6d,#1768a8);
+    box-shadow:0 10px 28px rgba(11,59,109,.22);
+}
+
+.seduc-ee-mapa-web-centro-v161 strong{
+    display:block;
+    font-size:1.25rem;
+    margin-bottom:6px;
+}
+
+.seduc-ee-mapa-web-centro-v161 span{
+    display:block;
+    line-height:1.5;
+    color:rgba(255,255,255,.94);
+}
+
+.seduc-ee-ramos-v161{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+}
+
+.seduc-ee-ramos-v161 article{
+    padding:16px;
+    border-radius:16px;
+    border:1px solid #d6e1eb;
+    background:#fff;
+    line-height:1.55;
+    box-shadow:0 4px 14px rgba(18,62,104,.07);
+}
+
+.seduc-ee-ramos-v161 article h3{
+    margin:0 0 9px;
+    color:#0b5d45;
+    font-size:1.05rem;
+}
+
+.seduc-ee-ramos-v161 article p{
+    margin:0;
+    color:#37474f;
+}
+
+.seduc-ee-ramos-v161 article strong{
+    color:#123e68;
+}
+
+.seduc-ee-confirmacao-v161{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    margin:22px 0 14px;
+    padding:15px 17px;
+    border-radius:14px;
+    background:#fff8e1;
+    border:1px solid #f4c95d;
+    color:#5c4700;
+    font-weight:700;
+    line-height:1.45;
+}
+
+.seduc-ee-confirmacao-v161 input{
+    width:20px;
+    height:20px;
+    flex:0 0 20px;
+    margin-top:1px;
+}
+
+.seduc-ee-btn-iniciar-v161{
+    display:block;
+    width:min(520px,100%);
+    margin:10px auto 0 !important;
+    padding:15px 20px !important;
+    border-radius:14px !important;
+    font-size:1.05rem !important;
+    font-weight:900 !important;
+    background:linear-gradient(135deg,#158a5b,#0f6c47) !important;
+    box-shadow:0 8px 20px rgba(21,138,91,.28);
+}
+
+.seduc-ee-btn-iniciar-v161:hover{
+    background:linear-gradient(135deg,#1aa96f,#138159) !important;
+    transform:translateY(-1px);
+}
+
+@media(max-width:760px){
+    .seduc-ee-mapa-painel-v161{
+        padding:14px;
+        border-radius:18px;
+    }
+    .seduc-ee-ramos-v161{
+        grid-template-columns:1fr;
+    }
+    .seduc-ee-mapa-web-v161{
+        padding:13px;
+    }
+}
+.seduc-ee-ramos-v161 article > strong{
+    display:block;
+    margin-bottom:7px;
+    color:#0b5d45;
+    font-size:1.03rem;
+}
+.seduc-ee-ramos-v161 article > span{
+    display:block;
+    color:#37474f;
+    line-height:1.55;
+}

@@ -146,6 +146,17 @@
         }
     ];
 
+    const CARGOS_SEDUC = [
+        {
+            chave: "professorEducacaoEspecial",
+            nome: "Professor Classe I — Educação Especial",
+            icone: "♿",
+            checkbox: "acessoSeducProfessorEducacaoEspecial",
+            classe: "seduc-educacao-especial",
+            concurso: "seducpa2026"
+        }
+    ];
+
     function textoSeguro(valor){
         if(typeof window.escaparHTML === "function"){
             return window.escaparHTML(valor);
@@ -286,6 +297,14 @@
         return concursos.transpetro2026 || {};
     }
 
+    function obterSeduc(documento){
+        const concursos = documento && documento.concursos
+            ? documento.concursos
+            : {};
+
+        return concursos.seducpa2026 || {};
+    }
+
     function possuiCargoSuperiorLiberado(documento){
         const abaetetuba = obterAbaetetuba(documento);
         return CARGOS_ABAETETUBA.some(cargo =>
@@ -296,6 +315,7 @@
     function obterCargosLiberados(documento){
         const abaetetuba = obterAbaetetuba(documento);
         const transpetro = obterTranspetro(documento);
+        const seduc = obterSeduc(documento);
         const pacoteComumEfetivo =
             cargoEstaLiberado(abaetetuba.comunsSuperior) ||
             possuiCargoSuperiorLiberado(documento);
@@ -311,9 +331,14 @@
             cargoEstaLiberado(transpetro[item.chave])
         );
 
+        const acessosSeduc = CARGOS_SEDUC.filter(item =>
+            cargoEstaLiberado(seduc[item.chave])
+        );
+
         return [
             ...acessosAbaetetuba,
-            ...acessosTranspetro
+            ...acessosTranspetro,
+            ...acessosSeduc
         ];
     }
 
@@ -575,6 +600,10 @@
             0
         );
 
+        const alunosSeduc = lista.filter(item =>
+            item.cargos.some(cargo => cargo.concurso === "seducpa2026")
+        ).length;
+
         area.innerHTML = `
             <div class="resumo-admin-card total">
                 <span>👥</span>
@@ -603,6 +632,10 @@
             <div class="resumo-admin-card total">
                 <span>🎫</span>
                 <div><strong>${cargosTranspetroLiberados}</strong><small>Cargos Transpetro liberados</small></div>
+            </div>
+            <div class="resumo-admin-card total">
+                <span>🎓</span>
+                <div><strong>${alunosSeduc}</strong><small>Alunos SEDUC-PA</small></div>
             </div>
         `;
     }
@@ -871,6 +904,7 @@
             : {};
         const abaetetuba = concursos.abaetetuba2026 || {};
         const transpetro = concursos.transpetro2026 || {};
+        const seduc = concursos.seducpa2026 || {};
 
         usuarioSelecionado = {
             uid: usuario.uid,
@@ -923,6 +957,19 @@
             </label>
         `).join("");
 
+        const itensSeduc = CARGOS_SEDUC.map(cargo => `
+            <label class="item-cargo-acesso">
+                <input
+                    type="checkbox"
+                    id="${cargo.checkbox}"
+                    ${cargoEstaLiberado(seduc[cargo.chave]) ? "checked" : ""}>
+                <span>
+                    <strong>${cargo.icone} ${textoSeguro(cargo.nome)}</strong>
+                    <small>Liberação individual para a preparação SEDUC-PA 2026 / FGV.</small>
+                </span>
+            </label>
+        `).join("");
+
         area.innerHTML = `
             <div class="aluno-acesso-cabecalho">
                 <h3>${textoSeguro(usuarioSelecionado.nome)}</h3>
@@ -965,6 +1012,20 @@
             <div class="acoes-admin-acesso">
                 <button onclick="salvarAcessosUsuarioFarol()">💾 Salvar acessos</button>
                 <button class="btn-excluir" onclick="retirarAcessosTranspetroFarol()">🔒 Retirar Transpetro</button>
+            </div>
+
+            <h3>🎓 SEDUC-PA 2026 — cargos</h3>
+            <div class="nota-seguranca-acesso">
+                A preparação SEDUC-PA é independente dos outros concursos.
+                Marque o cargo adquirido pelo aluno para liberar o conteúdo publicado.
+            </div>
+
+            <div class="lista-cargos-acesso">
+                ${itensSeduc}
+            </div>
+
+            <div class="acoes-admin-acesso">
+                <button onclick="salvarAcessosUsuarioFarol()">💾 Salvar acessos</button>
             </div>
         `;
     }
@@ -1069,6 +1130,8 @@
         const abaetetuba = { ...abaetetubaAnterior };
         const transpetroAnterior = obterTranspetro({ concursos: concursosExistentes });
         const transpetro = { ...transpetroAnterior };
+        const seducAnterior = obterSeduc({ concursos: concursosExistentes });
+        const seduc = { ...seducAnterior };
 
         ACESSOS_ABAETETUBA.forEach(item => {
             const liberado = checkboxMarcado(item.checkbox);
@@ -1096,6 +1159,19 @@
             };
         });
 
+        CARGOS_SEDUC.forEach(item => {
+            const liberado = checkboxMarcado(item.checkbox);
+            const anterior = seducAnterior[item.chave];
+            const jaEstavaLiberado = cargoEstaLiberado(anterior);
+
+            seduc[item.chave] = {
+                liberado,
+                liberadoEm: liberado && !jaEstavaLiberado
+                    ? momentoAtual
+                    : (anterior && anterior.liberadoEm ? anterior.liberadoEm : null)
+            };
+        });
+
         try{
             await dbFarol.collection("acessosConcursos")
                 .doc(usuarioSelecionado.uid)
@@ -1107,7 +1183,8 @@
                     concursos: {
                         ...concursosExistentes,
                         abaetetuba2026: abaetetuba,
-                        transpetro2026: transpetro
+                        transpetro2026: transpetro,
+                        seducpa2026: seduc
                     },
                     atualizadoPor: emailAtual(),
                     atualizadoEm: momentoAtual
@@ -1116,7 +1193,8 @@
             usuarioSelecionado.concursos = {
                 ...concursosExistentes,
                 abaetetuba2026: abaetetuba,
-                transpetro2026: transpetro
+                transpetro2026: transpetro,
+                seducpa2026: seduc
             };
 
             if(

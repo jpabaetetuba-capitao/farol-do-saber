@@ -3566,6 +3566,16 @@ console.log(q.dicaBanca);
     const respostaCorreta =
         q.alternativas[q.correta];
 
+    const analisesAlternativasQuestao =
+        Array.isArray(q.analiseAlternativas)
+        ? q.analiseAlternativas
+        : [];
+
+    const analiseRespostaMarcada =
+        analisesAlternativasQuestao[respostaMarcadaFarol] ||
+        q.feedbackErro ||
+        "Esta alternativa não corresponde ao conceito cobrado.";
+
 // Travar alternativas após responder
 
 document
@@ -3618,12 +3628,33 @@ if (respostaMarcadaFarol === q.correta) {
             }
 
             <div class="bloco-feedback-explicacao">
-                <strong>📘 Explicação</strong>
+                <strong>✅ Por que você acertou?</strong>
                 <p>${(q.feedbackAcerto || "Resposta correta. Continue avançando na sua revisão.").trim()}</p>
             </div>
 
+            ${q.memorizar2026 ? `
+                <div class="bloco-feedback-memorizar-v161">
+                    <strong>🧠 O que memorizar</strong>
+                    <p>${q.memorizar2026}</p>
+                </div>
+            ` : ""}
+
+            ${q.pegadinha ? `
+                <div class="bloco-feedback-pegadinha-v161">
+                    <strong>⚠️ Pegadinha FGV</strong>
+                    <p>${q.pegadinha}</p>
+                </div>
+            ` : ""}
+
+            ${q.atualizacao2026 ? `
+                <div class="bloco-feedback-atualizacao-v161">
+                    <strong>🆕 Atualização 2025/2026</strong>
+                    <p>${q.atualizacao2026}</p>
+                </div>
+            ` : ""}
+
             <div class="bloco-feedback-dica">
-                <strong>💡 Dica da banca</strong>
+                <strong>🎯 Dica da FGV</strong>
                 <p>${q.dicaBanca || "Sem dica cadastrada."}</p>
             </div>
 
@@ -3783,6 +3814,7 @@ errosAssunto++;
     apoioEducacaoInclusiva: "🤝 Educação Especial na Perspectiva Inclusiva",
     apoioPapelProfissional: "👨‍🏫 Papel do Profissional de Apoio Escolar",
     apoioTrabalhoColaborativo: "🛡️ Trabalho Colaborativo, Ética e Segurança",
+    seducEducacaoEspecialFundamentos: "♿ SEDUC-PA — Fundamentos da Educação Especial",
 
 
     hardware: "💻 Hardware",
@@ -3883,6 +3915,11 @@ const nomeDisciplina =
                 feedbackAcerto: q.feedbackAcerto || "",
                 feedbackErro: q.feedbackErro || "",
                 dicaBanca: q.dicaBanca || "",
+                analiseAlternativas: q.analiseAlternativas || null,
+                pegadinha: q.pegadinha || "",
+                memorizar2026: q.memorizar2026 || "",
+                atualizacao2026: q.atualizacao2026 || "",
+                fonte: q.fonte || "",
                 erros: (cadernoErros[indiceExistente].erros || 0) + 1,
                 data: Date.now(),
                 dataPrimeiroErro:
@@ -3923,6 +3960,11 @@ const nomeDisciplina =
     feedbackErro: q.feedbackErro || "",
 
     dicaBanca: q.dicaBanca || "",
+    analiseAlternativas: q.analiseAlternativas || null,
+    pegadinha: q.pegadinha || "",
+    memorizar2026: q.memorizar2026 || "",
+    atualizacao2026: q.atualizacao2026 || "",
+    fonte: q.fonte || "",
 
     erros: 1,
 
@@ -3959,18 +4001,44 @@ const nomeDisciplina =
 
             <h2>Resposta incorreta</h2>
 
+            <div class="bloco-feedback-erro-especifico-v161">
+                <strong>❌ Por que a alternativa que você marcou está errada?</strong>
+                <p>${analiseRespostaMarcada}</p>
+            </div>
+
             <div class="bloco-resposta-correta">
                 <strong>✅ Resposta correta</strong>
                 <p>${respostaCorreta}</p>
             </div>
 
             <div class="bloco-feedback-explicacao">
-                <strong>📘 Explicação</strong>
+                <strong>📘 Por que a resposta correta é essa?</strong>
                 <p>${q.feedbackErro || "Sem explicação cadastrada."}</p>
             </div>
 
+            ${q.memorizar2026 ? `
+                <div class="bloco-feedback-memorizar-v161">
+                    <strong>🧠 O que memorizar</strong>
+                    <p>${q.memorizar2026}</p>
+                </div>
+            ` : ""}
+
+            ${q.pegadinha ? `
+                <div class="bloco-feedback-pegadinha-v161">
+                    <strong>⚠️ Pegadinha FGV</strong>
+                    <p>${q.pegadinha}</p>
+                </div>
+            ` : ""}
+
+            ${q.atualizacao2026 ? `
+                <div class="bloco-feedback-atualizacao-v161">
+                    <strong>🆕 Atualização 2025/2026</strong>
+                    <p>${q.atualizacao2026}</p>
+                </div>
+            ` : ""}
+
             <div class="bloco-feedback-dica">
-                <strong>💡 Dica da banca</strong>
+                <strong>🎯 Dica da FGV</strong>
                 <p>${q.dicaBanca || "Sem dica cadastrada."}</p>
             </div>
 
@@ -48198,3 +48266,258 @@ limparArenaLocalFarol = function(){
     };
 })();
 
+
+
+/* ==========================================================
+   FAROL V161 — SEDUC-PA 2026 / FGV
+   Professor Classe I — Educação Especial
+   Bloco 1: Fundamentos da Educação Especial
+   Fluxo: mapa mental completo -> 30 questões inéditas -> feedback específico.
+========================================================== */
+(function integrarSeducEducacaoEspecialV161(){
+    "use strict";
+
+    const CONCURSO = "seducpa2026";
+    const TRILHA = "seducProfessorEducacaoEspecial";
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialFundamentos";
+
+    const banco = Array.isArray(window.seducEducacaoEspecialFundamentos2026)
+        ? window.seducEducacaoEspecialFundamentos2026
+        : [];
+
+    if(typeof bancoQuestoes !== "undefined"){
+        bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    if(typeof mapasMentaisPorAssunto !== "undefined"){
+        mapasMentaisPorAssunto[ASSUNTO] = {
+            titulo: "🧠 Mapa 1 — Fundamentos da Educação Especial",
+            imagem: "imagens/mapas/seduc/educacao-especial/FundamentosEducacaoEspecial.png"
+        };
+    }
+
+    if(typeof disciplinasTrilhaFarol !== "undefined"){
+        disciplinasTrilhaFarol[DISCIPLINA] = {
+            nome: "Educação Especial — Conhecimentos Específicos",
+            icone: "♿",
+            descricao: "Mapas mentais completos e questões inéditas no padrão FGV, conforme o edital da SEDUC-PA."
+        };
+    }
+
+    if(typeof trilhasPreparacaoFarol !== "undefined"){
+        trilhasPreparacaoFarol[TRILHA] = {
+            nome: "Professor Classe I — Educação Especial",
+            nivel: "Nível Superior — Professor",
+            icone: "♿",
+            cor: "azul",
+            concurso: CONCURSO,
+            cargoAcesso: "professorEducacaoEspecial",
+            publicado: true,
+            descricao: "Preparação SEDUC-PA 2026 com foco no estilo de cobrança da FGV. Primeiro bloco publicado: Fundamentos da Educação Especial.",
+            disciplinas: [DISCIPLINA]
+        };
+    }
+
+    if(window.concursosFarol){
+        window.concursosFarol[CONCURSO] = {
+            nome: "SEDUC-PA",
+            titulo: "Professor Classe I — Educação Especial",
+            banca: "Fundação Getulio Vargas — FGV",
+            edital: "SEDUC-PA 2026",
+            icone: "🎓",
+            classe: "seduc",
+            // Concurso protegido por acesso. O administrador continua podendo testar a rota.
+            acessoLivre: false,
+            descricao: "Preparação para Professor Classe I — Educação Especial, com mapas mentais completos e questões no padrão FGV.",
+            rotas: [TRILHA]
+        };
+    }
+
+    function garantirTelaSeduc(){
+        if(document.getElementById(DISCIPLINA)) return;
+
+        const secao = document.createElement("section");
+        secao.id = DISCIPLINA;
+        secao.className = "tela";
+        secao.innerHTML = `
+            <div class="card seduc-ee-painel-v161">
+                <button type="button" class="btn-voltar" onclick="voltarRotaSeducEducacaoEspecialV161()">
+                    ⬅ Voltar para o cargo
+                </button>
+
+                <div class="seduc-ee-cabecalho-v161">
+                    <span class="seduc-ee-selo-v161">SEDUC-PA 2026 • FGV</span>
+                    <h2>♿ Educação Especial — Conhecimentos Específicos</h2>
+                    <p>
+                        Nesta rota não há teoria longa: cada tópico começa por um <strong>mapa mental completo</strong>
+                        e segue para questões inéditas construídas no padrão de cobrança da FGV.
+                    </p>
+                </div>
+
+                <div class="seduc-ee-resumo-v161">
+                    <span><strong>30</strong> questões neste bloco</span>
+                    <span><strong>5</strong> alternativas com feedback individual</span>
+                    <span><strong>2026</strong> legislação revisada</span>
+                </div>
+
+                <div class="seduc-ee-topicos-v161">
+                    <button type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirFundamentosSeducEducacaoEspecialV161()">
+                        <span class="seduc-ee-numero-v161">1</span>
+                        <span class="seduc-ee-topico-texto-v161">
+                            <strong>Fundamentos da Educação Especial</strong>
+                            <small>Integração × inclusão • modelos de deficiência • equidade • AEE • legislação e atualizações 2025/2026</small>
+                        </span>
+                        <span class="seduc-ee-status-v161">Mapa + 30 questões →</span>
+                    </button>
+                </div>
+
+                <div class="seduc-ee-aviso-v161">
+                    <strong>🎯 Padrão Farol / FGV</strong>
+                    <p>Cada erro explica especificamente a alternativa marcada. O acerto também apresenta o fundamento que deve ser fixado, além de pegadinha, memorização e atualização normativa quando cabível.</p>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(secao);
+
+        if(!document.getElementById("seducMapaFundamentosV161")){
+            const telaMapa = document.createElement("section");
+            telaMapa.id = "seducMapaFundamentosV161";
+            telaMapa.className = "tela";
+            telaMapa.innerHTML = `
+                <div class="card seduc-ee-mapa-painel-v161">
+                    <button type="button" class="btn-voltar" onclick="voltarTopicosSeducEducacaoEspecialV161()">
+                        ⬅ Voltar aos tópicos
+                    </button>
+
+                    <span class="seduc-ee-selo-v161">SEDUC-PA 2026 • FGV • BLOCO 1</span>
+                    <h2>🧠 Fundamentos da Educação Especial</h2>
+                    <p class="seduc-ee-instrucao-mapa-v161">Revise os dois mapas abaixo. Eles reúnem a teoria usada nas 30 questões deste bloco.</p>
+
+                    <div class="seduc-ee-mapa-imagem-wrap-v161">
+                        <img src="imagens/mapas/seduc/educacao-especial/FundamentosEducacaoEspecial.png" alt="Mapa mental — Fundamentos da Educação Especial">
+                        <button type="button" onclick="window.open('imagens/mapas/seduc/educacao-especial/FundamentosEducacaoEspecial.png','_blank')">🔍 Ampliar mapa principal</button>
+                    </div>
+
+                    <div class="seduc-ee-mapa-web-v161">
+                        <div class="seduc-ee-mapa-web-centro-v161">
+                            <strong>🆕 MAPA 1B — ATUALIZAÇÕES 2025/2026</strong>
+                            <small>Detalhes normativos que complementam o mapa principal e entram nas questões 21–30.</small>
+                        </div>
+                        <div class="seduc-ee-ramos-v161">
+                            <article><strong>🔎 Estudo de caso</strong><span>Demandas e barreiras → contexto escolar → potencialidades e apoios → estratégias e recursos de acessibilidade. Estudante e família participam do processo.</span></article>
+                            <article><strong>📋 PAEE + PEI</strong><span>O estudo de caso fundamenta PAEE e PEI. São instrumentos pedagógicos individualizados, de atualização contínua, e orientam sala comum, AEE, colaboração e articulação intersetorial.</span></article>
+                            <article><strong>🩺 Laudo não é condição</strong><span>A avaliação biopsicossocial pode subsidiar o estudo de caso, mas a oferta do AEE e do profissional de apoio não pode ser condicionada a diagnóstico, laudo ou relatório de saúde.</span></article>
+                            <article><strong>♿ AEE</strong><span>Complementar para deficiência e TEA; suplementar para altas habilidades/superdotação. Não substitui classe comum. Excepcionalmente pode ocorrer em Centro de AEE; no ensino superior federal, núcleos de acessibilidade.</span></article>
+                            <article><strong>👨‍🏫 Formação</strong><span>Professor do AEE: formação inicial docente + formação continuada mínima de 360 h. Profissional de apoio: nível médio + formação continuada mínima de 180 h.</span></article>
+                            <article><strong>🤝 Profissional de apoio</strong><span>Atua em locomoção, acesso, participação, higiene, alimentação, interação, comunicação e recursos auxiliares; não substitui o professor e atua em consonância com PAEE e PEI.</span></article>
+                            <article><strong>📱 Tecnologia assistiva</strong><span>Dispositivo digital portátil pode ser utilizado como tecnologia assistiva para aprendizagem, comunicação ou socialização mediante parecer pedagógico da instituição.</span></article>
+                            <article><strong>⚖️ Organização atual</strong><span>Decreto 12.686/2025 + Decreto 12.773/2025; Portaria MEC 421/2026, consolidada com a Portaria 550/2026; Portaria MEC 572/2026 instituiu 27 centros de formação continuada em Educação Especial Inclusiva.</span></article>
+                        </div>
+                    </div>
+
+                    <label class="seduc-ee-confirmacao-v161">
+                        <input type="checkbox" id="confirmacaoMapasSeducFundamentosV161">
+                        Li e revisei o mapa principal e o mapa complementar 2025/2026.
+                    </label>
+
+                    <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesFundamentosSeducV161()">
+                        🚀 Iniciar 30 questões FGV
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(telaMapa);
+        }
+    }
+
+    window.abrirFundamentosSeducEducacaoEspecialV161 = function(){
+        garantirTelaSeduc();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapasSeducFundamentosV161");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function"){
+            mostrarTela("seducMapaFundamentosV161");
+        }
+    };
+
+    window.voltarTopicosSeducEducacaoEspecialV161 = function(){
+        garantirTelaSeduc();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesFundamentosSeducV161 = function(){
+        const check = document.getElementById("confirmacaoMapasSeducFundamentosV161");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise os dois mapas antes de iniciar as questões.");
+            return;
+        }
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    window.voltarRotaSeducEducacaoEspecialV161 = function(){
+        if(typeof mostrarTela === "function") mostrarTela("questoes");
+        localStorage.setItem("farol_concurso_atual", CONCURSO);
+        localStorage.setItem("farol_trilha_atual", TRILHA);
+        setTimeout(() => {
+            if(typeof renderizarTrilhaEstudo === "function"){
+                renderizarTrilhaEstudo(TRILHA);
+            }
+        }, 0);
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const abrirDisciplinaAntesSeducV161 = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            if(nome === DISCIPLINA){
+                garantirTelaSeduc();
+                disciplinaAtual = DISCIPLINA;
+                if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+                return;
+            }
+            return abrirDisciplinaAntesSeducV161.apply(this, arguments);
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const abrirAssuntoAntesSeducV161 = abrirAssunto;
+        abrirAssunto = function(assunto){
+            if(assunto === ASSUNTO){
+                window.abrirFundamentosSeducEducacaoEspecialV161();
+                return;
+            }
+            return abrirAssuntoAntesSeducV161.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const voltarParaAssuntosAntesSeducV161 = voltarParaAssuntos;
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === ASSUNTO || disciplinaAtual === ASSUNTO){
+                garantirTelaSeduc();
+                if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+                return;
+            }
+            return voltarParaAssuntosAntesSeducV161.apply(this, arguments);
+        };
+    }
+
+    if(typeof configurarMapaMentalAtual === "function"){
+        const configurarMapaMentalAntesSeducV161 = configurarMapaMentalAtual;
+        configurarMapaMentalAtual = function(){
+            const retorno = configurarMapaMentalAntesSeducV161.apply(this, arguments);
+            const botaoTeoria = document.querySelector('#telaMapaMental button[onclick="voltarParaTeoria()"]');
+            if(botaoTeoria){
+                botaoTeoria.style.display = assuntoAtual === ASSUNTO ? "none" : "";
+            }
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", garantirTelaSeduc);
+    if(document.readyState !== "loading") garantirTelaSeduc();
+})();
