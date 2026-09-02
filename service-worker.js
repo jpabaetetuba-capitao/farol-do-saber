@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v161-2026-09-01-seduc-educacao-especial-bloco1";
+const CACHE_VERSION = "farol-v162-2026-09-01-seduc-educacao-especial-bloco2";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -13,7 +13,9 @@ const APP_SHELL = [
   "./manifest.json",
   "./offline.html",
   "./dados/seduc/educacao-especial/fundamentosEducacaoEspecial.js",
+  "./dados/seduc/educacao-especial/planejamentoEducacaoEspecial.js",
   "./imagens/mapas/seduc/educacao-especial/FundamentosEducacaoEspecial.png",
+  "./imagens/mapas/seduc/educacao-especial/PlanejamentoEducacaoEspecial.png",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/icon-maskable-512.png"

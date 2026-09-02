@@ -3815,6 +3815,7 @@ errosAssunto++;
     apoioPapelProfissional: "👨‍🏫 Papel do Profissional de Apoio Escolar",
     apoioTrabalhoColaborativo: "🛡️ Trabalho Colaborativo, Ética e Segurança",
     seducEducacaoEspecialFundamentos: "♿ SEDUC-PA — Fundamentos da Educação Especial",
+    seducEducacaoEspecialPlanejamento: "♿ SEDUC-PA — Planejamento da Educação Especial",
 
 
     hardware: "💻 Hardware",
@@ -48521,3 +48522,275 @@ limparArenaLocalFarol = function(){
     document.addEventListener("DOMContentLoaded", garantirTelaSeduc);
     if(document.readyState !== "loading") garantirTelaSeduc();
 })();
+
+
+/* ==========================================================
+   FAROL V162 — SEDUC-PA 2026 / FGV
+   Professor Classe I — Educação Especial
+   Bloco 2: Planejamento da Educação Especial
+   Fluxo: mapa mental -> 25 questões inéditas -> feedback por alternativa.
+========================================================== */
+(function integrarPlanejamentoSeducEducacaoEspecialV162(){
+    "use strict";
+
+    const CONCURSO = "seducpa2026";
+    const TRILHA = "seducProfessorEducacaoEspecial";
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialPlanejamento";
+    const TELA_MAPA = "seducMapaPlanejamentoV162";
+
+    const banco = Array.isArray(window.seducEducacaoEspecialPlanejamento2026)
+        ? window.seducEducacaoEspecialPlanejamento2026
+        : [];
+
+    if(typeof bancoQuestoes !== "undefined"){
+        bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    if(typeof mapasMentaisPorAssunto !== "undefined"){
+        mapasMentaisPorAssunto[ASSUNTO] = {
+            titulo: "🧠 Mapa 2 — Planejamento da Educação Especial",
+            imagem: "imagens/mapas/seduc/educacao-especial/PlanejamentoEducacaoEspecial.png"
+        };
+    }
+
+    if(
+        typeof trilhasPreparacaoFarol !== "undefined" &&
+        trilhasPreparacaoFarol[TRILHA]
+    ){
+        trilhasPreparacaoFarol[TRILHA].descricao =
+            "Preparação SEDUC-PA 2026 com foco no estilo FGV. Blocos publicados: Fundamentos e Planejamento da Educação Especial.";
+    }
+
+    function garantirTelaMapaPlanejamentoV162(){
+        if(document.getElementById(TELA_MAPA)) return;
+
+        const telaMapa = document.createElement("section");
+        telaMapa.id = TELA_MAPA;
+        telaMapa.className = "tela";
+        telaMapa.innerHTML = `
+            <div class="card seduc-ee-mapa-painel-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducEducacaoEspecialV162()">
+                    ⬅ Voltar aos tópicos
+                </button>
+
+                <span class="seduc-ee-selo-v161">SEDUC-PA 2026 • FGV • BLOCO 2</span>
+                <h2>🧠 Planejamento da Educação Especial</h2>
+                <p class="seduc-ee-instrucao-mapa-v161">
+                    O mapa reúne a teoria-base deste bloco: planejamento inclusivo, Estudo de Caso,
+                    PAEE, PEI, articulação com a classe comum, acessibilidade, avaliação, família e PPP.
+                </p>
+
+                <div class="seduc-ee-aviso-v161" style="margin:16px 0;">
+                    <strong>✅ Revisão normativa Farol — referência correta para a prova</strong>
+                    <p>
+                        No quadro do <strong>PEI</strong> da imagem, considere como referência do conteúdo mínimo
+                        a <strong>Portaria MEC nº 421/2026, art. 11</strong>. A revisão anual de PAEE e PEI está no
+                        <strong>art. 7º, § 3º</strong> da mesma Portaria. O <strong>art. 12 do Decreto nº 12.686/2025</strong>,
+                        com redação do Decreto nº 12.773/2025, trata da obrigatoriedade, institucionalização no PPP
+                        e finalidade dos documentos individualizados.
+                    </p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img
+                        src="imagens/mapas/seduc/educacao-especial/PlanejamentoEducacaoEspecial.png"
+                        alt="Mapa mental — Planejamento da Educação Especial">
+                    <button
+                        type="button"
+                        onclick="window.open('imagens/mapas/seduc/educacao-especial/PlanejamentoEducacaoEspecial.png','_blank')">
+                        🔍 Ampliar mapa
+                    </button>
+                </div>
+
+                <div class="seduc-ee-mapa-web-v161">
+                    <div class="seduc-ee-mapa-web-centro-v161">
+                        <strong>🎯 RADAR FGV — PLANEJAMENTO</strong>
+                        <small>Os pontos abaixo foram priorizados nas 25 questões deste bloco.</small>
+                    </div>
+                    <div class="seduc-ee-ramos-v161">
+                        <article>
+                            <strong>🔎 Estudo de Caso</strong>
+                            <span>É etapa pedagógica inicial: identifica demandas, barreiras, contexto, potencialidades, apoios e recursos. Fundamenta PAEE e PEI.</span>
+                        </article>
+                        <article>
+                            <strong>📋 PAEE — Portaria 421, art. 10</strong>
+                            <span>Registra o estudo de caso e organiza materiais/recursos, tecnologia assistiva e CAA, avaliação de apoios e demandas de formação ou rede de proteção.</span>
+                        </article>
+                        <article>
+                            <strong>📝 PEI — Portaria 421, art. 11</strong>
+                            <span>Plano de acessibilização curricular: articulação AEE-classe comum, acessibilidade curricular/didático-pedagógica/avaliativa, monitoramento e devolutivas às famílias.</span>
+                        </article>
+                        <article>
+                            <strong>🔄 Revisão</strong>
+                            <span>PAEE e PEI têm atualização contínua e devem ser revisados anualmente para compatibilização com a avaliação contínua do estudante.</span>
+                        </article>
+                        <article>
+                            <strong>🩺 Laudo</strong>
+                            <span>Pode subsidiar informações, mas não é condição para matrícula, escolarização, AEE ou início do planejamento pedagógico.</span>
+                        </article>
+                        <article>
+                            <strong>🤝 Trabalho colaborativo</strong>
+                            <span>Professor regente, AEE, equipe, estudante e família atuam de forma articulada. AEE não substitui a responsabilidade pedagógica da classe comum.</span>
+                        </article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaPlanejamentoV162">
+                    Li e revisei o Mapa 2 e o quadro de atualização normativa.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesPlanejamentoSeducV162()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>
+        `;
+        document.body.appendChild(telaMapa);
+    }
+
+    function atualizarMenuPlanejamentoV162(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return;
+
+        const cabecalho = tela.querySelector(".seduc-ee-cabecalho-v161 p");
+        if(cabecalho){
+            cabecalho.innerHTML =
+                'Nesta rota não há teoria longa: cada tópico começa por um <strong>mapa mental completo</strong> e segue para questões inéditas no padrão FGV, com atualização normativa.';
+        }
+
+        const resumo = tela.querySelector(".seduc-ee-resumo-v161");
+        if(resumo){
+            resumo.innerHTML = `
+                <span><strong>55</strong> questões em 2 blocos</span>
+                <span><strong>5</strong> alternativas com feedback individual</span>
+                <span><strong>2026</strong> legislação revisada</span>
+            `;
+        }
+
+        const lista = tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoPlanejamentoV162")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button
+                    id="seducEeTopicoPlanejamentoV162"
+                    type="button"
+                    class="seduc-ee-topico-v161 publicado"
+                    onclick="abrirPlanejamentoSeducEducacaoEspecialV162()">
+                    <span class="seduc-ee-numero-v161">2</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Planejamento da Educação Especial</strong>
+                        <small>Estudo de Caso • PAEE • PEI • currículo • acessibilidade • avaliação • família • PPP</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>
+            `);
+        }
+    }
+
+    function instalarPlanejamentoV162(){
+        garantirTelaMapaPlanejamentoV162();
+        atualizarMenuPlanejamentoV162();
+
+        if(typeof bancoQuestoes !== "undefined"){
+            bancoQuestoes[ASSUNTO] = banco;
+        }
+    }
+
+    window.abrirPlanejamentoSeducEducacaoEspecialV162 = function(){
+        instalarPlanejamentoV162();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+
+        const check = document.getElementById("confirmacaoMapaPlanejamentoV162");
+        if(check) check.checked = false;
+
+        if(typeof mostrarTela === "function"){
+            mostrarTela(TELA_MAPA);
+        }
+    };
+
+    window.voltarTopicosSeducEducacaoEspecialV162 = function(){
+        atualizarMenuPlanejamentoV162();
+        if(typeof mostrarTela === "function"){
+            mostrarTela(DISCIPLINA);
+        }
+    };
+
+    window.iniciarQuestoesPlanejamentoSeducV162 = function(){
+        const check = document.getElementById("confirmacaoMapaPlanejamentoV162");
+
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Leia e revise o Mapa 2 antes de iniciar as questões.");
+            }
+            return;
+        }
+
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+
+        if(typeof iniciarQuestoesAssunto === "function"){
+            iniciarQuestoesAssunto();
+        }
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const abrirDisciplinaAntesV162 = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAntesV162.apply(this, arguments);
+            if(nome === DISCIPLINA){
+                setTimeout(atualizarMenuPlanejamentoV162, 0);
+            }
+            return retorno;
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const abrirAssuntoAntesV162 = abrirAssunto;
+        abrirAssunto = function(assunto){
+            if(assunto === ASSUNTO){
+                window.abrirPlanejamentoSeducEducacaoEspecialV162();
+                return;
+            }
+            return abrirAssuntoAntesV162.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const voltarParaAssuntosAntesV162 = voltarParaAssuntos;
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === ASSUNTO || disciplinaAtual === ASSUNTO){
+                atualizarMenuPlanejamentoV162();
+                if(typeof mostrarTela === "function"){
+                    mostrarTela(DISCIPLINA);
+                }
+                return;
+            }
+            return voltarParaAssuntosAntesV162.apply(this, arguments);
+        };
+    }
+
+    if(typeof configurarMapaMentalAtual === "function"){
+        const configurarMapaMentalAntesV162 = configurarMapaMentalAtual;
+        configurarMapaMentalAtual = function(){
+            const retorno = configurarMapaMentalAntesV162.apply(this, arguments);
+            const botaoTeoria = document.querySelector('#telaMapaMental button[onclick="voltarParaTeoria()"]');
+            if(botaoTeoria && assuntoAtual === ASSUNTO){
+                botaoTeoria.style.display = "none";
+            }
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(instalarPlanejamentoV162, 0);
+    });
+
+    if(document.readyState !== "loading"){
+        setTimeout(instalarPlanejamentoV162, 0);
+    }
+})();
+
