@@ -4,7 +4,9 @@
    Bloco 1: Fundamentos da Educação Especial
    30 questões inéditas com feedback específico por alternativa.
    Conteúdo normativo revisado em 01/09/2026.
-========================================================== */
+==========================================================
+   Revisão FGV de distratores e equilíbrio de extensão: 02/09/2026.
+ ========================================================== */
 
 (function(){
     "use strict";
@@ -163,9 +165,9 @@
         "dificuldade": "alta",
         "pergunta": "Uma escola decidiu aplicar exatamente os mesmos recursos, materiais, tempo e estratégias a todos os alunos, argumentando que qualquer diferenciação violaria o princípio da igualdade. À luz da educação inclusiva, essa decisão",
         "alternativas": [
-            "está correta, porque igualdade exige tratamento pedagógico idêntico em todas as circunstâncias.",
+            "está correta, pois igualdade exige os mesmos recursos quando os objetivos curriculares são comuns e as adaptações poderiam alterar os critérios de avaliação.",
             "está correta desde que todos realizem a mesma avaliação final.",
-            "está equivocada, porque a equidade admite apoios e condições diferenciados para assegurar oportunidades reais de participação e aprendizagem.",
+            "está equivocada, pois a equidade admite apoios diferentes para assegurar oportunidades reais de participação e aprendizagem.",
             "está equivocada apenas quando o estudante apresenta deficiência física.",
             "está correta se a uniformidade estiver prevista no projeto político-pedagógico."
         ],
@@ -318,8 +320,8 @@
         "pergunta": "No contexto educacional, o capacitismo manifesta-se quando",
         "alternativas": [
             "a escola oferece tecnologia assistiva ao estudante que dela necessita.",
-            "o planejamento considera diferentes formas de participação e comunicação.",
-            "capacidades e possibilidades de uma pessoa são inferiorizadas ou desconsideradas em razão da deficiência.",
+            "o planejamento reconhece diferentes formas de participação e comunicação e organiza apoios específicos para o estudante.",
+            "a deficiência é usada para inferiorizar capacidades, possibilidades ou expectativas da pessoa.",
             "a escola elimina barreiras arquitetônicas e atitudinais.",
             "o currículo é flexibilizado para assegurar acesso e aprendizagem."
         ],
@@ -346,8 +348,8 @@
         "dificuldade": "alta",
         "pergunta": "Em relação ao Atendimento Educacional Especializado (AEE), assinale a afirmativa correta.",
         "alternativas": [
-            "Substitui a frequência à classe comum quando o estudante apresenta necessidade intensa de apoio.",
-            "É atividade pedagógica de caráter complementar à escolarização de pessoas com deficiência e TEA e suplementar à escolarização de pessoas com altas habilidades ou superdotação.",
+            "pode substituir parte da frequência à classe comum quando o estudo de caso aponta necessidade intensa de apoio educacional especializado.",
+            "é complementar à escolarização de pessoas com deficiência e TEA e suplementar para altas habilidades ou superdotação.",
             "É serviço de natureza prioritariamente clínica e reabilitadora.",
             "Destina-se automaticamente a todo estudante com baixo rendimento escolar.",
             "Sua oferta depende de diagnóstico médico que confirme a condição do estudante."
@@ -375,11 +377,11 @@
         "dificuldade": "alta",
         "pergunta": "Uma família procura a escola para solicitar AEE. A direção informa que o atendimento só poderá começar após a apresentação de laudo médico. Segundo a regulamentação vigente, essa conduta é",
         "alternativas": [
-            "correta, pois o diagnóstico é requisito legal para o AEE.",
-            "correta apenas quando se tratar de estudante com TEA.",
-            "correta se a exigência constar do regimento escolar.",
-            "incorreta, pois a garantia da oferta do AEE não pode ser condicionada a diagnóstico, laudo, relatório ou outro documento emitido por profissional de saúde.",
-            "incorreta apenas para estudantes com altas habilidades ou superdotação."
+            "correta, pois o laudo comprova a elegibilidade do estudante e antecede a organização do atendimento especializado.",
+            "correta para TEA, porque a definição dos apoios educacionais depende de confirmação diagnóstica especializada.",
+            "correta se a exigência estiver prevista no regimento e for aplicada igualmente a todos os estudantes que solicitam AEE, quando a equipe pedagógica registrar a justificativa e acompanhar os efeitos sobre a participação do estudante.",
+            "incorreta, pois a oferta do AEE não pode ser condicionada a diagnóstico, laudo ou outro documento de profissional de saúde.",
+            "incorreta apenas para altas habilidades/superdotação, situação em que a identificação é predominantemente pedagógica."
         ],
         "correta": 3,
         "feedbackAcerto": "Você aplicou uma atualização normativa importante. O estudo de caso é pedagógico e a oferta do AEE não pode ser condicionada à apresentação de diagnóstico ou laudo de profissional de saúde.",
@@ -526,7 +528,7 @@
             "normalização e assistência.",
             "segregação e especialização.",
             "participação, gestão democrática e construção colaborativa dos apoios.",
-            "classificação diagnóstica e seleção escolar."
+            "classificação diagnóstica e seleção de apoios conforme categorias de deficiência definidas previamente pela escola."
         ],
         "correta": 3,
         "feedbackAcerto": "Você reconheceu a participação como componente da gestão democrática e do planejamento inclusivo. A política atual garante envolvimento do estudante e dos familiares no estudo de caso e valoriza decisões construídas a partir das necessidades reais do contexto.",
@@ -551,7 +553,7 @@
         "dificuldade": "media",
         "pergunta": "Na perspectiva inclusiva contemporânea, a diferença humana deve ser compreendida predominantemente como",
         "alternativas": [
-            "característica da diversidade humana a ser reconhecida e valorizada no processo educacional.",
+            "expressão da diversidade humana, a ser reconhecida e valorizada no processo educacional.",
             "problema individual a ser corrigido antes da participação escolar.",
             "fator incompatível com um currículo comum.",
             "obstáculo inevitável à aprendizagem.",
@@ -649,8 +651,8 @@
         "dificuldade": "alta",
         "pergunta": "A professora de AEE iniciou o acompanhamento de uma estudante e propôs que o estudo de caso fosse elaborado exclusivamente a partir do diagnóstico clínico e das limitações nele descritas. Considerando a regulamentação vigente, a proposta é inadequada porque o estudo de caso deve",
         "alternativas": [
-            "limitar-se aos resultados das avaliações escolares e desconsiderar fatores contextuais.",
-            "identificar demandas e barreiras, analisar o contexto escolar, reconhecer potencialidades e demandas de apoio e definir estratégias e recursos de acessibilidade.",
+            "concentrar-se nos resultados escolares, complementando-os com informações do professor regente e da família sobre o desempenho cotidiano.",
+            "identificar demandas, barreiras, potencialidades, apoios e recursos de acessibilidade no contexto escolar.",
             "ser produzido exclusivamente por profissional de saúde para assegurar neutralidade técnica.",
             "ocorrer apenas depois da apresentação de avaliação biopsicossocial completa.",
             "ser substituído pelo PEI sempre que houver diagnóstico médico formal."
@@ -742,11 +744,11 @@
         "dificuldade": "alta",
         "pergunta": "Os responsáveis por um estudante com TEA solicitam profissional de apoio escolar. A direção informa que o pedido só poderá ser analisado após a apresentação de laudo médico que recomende expressamente esse profissional. Segundo a política vigente, a resposta adequada seria afirmar que",
         "alternativas": [
-            "todo estudante com TEA tem direito automático ao profissional de apoio, sem qualquer avaliação pedagógica.",
+            "todo estudante com TEA tem direito ao profissional de apoio quando a família solicita e a escola registra a necessidade no planejamento.",
             "a decisão depende exclusivamente do médico responsável pelo estudante.",
             "o AEE substitui o profissional de apoio escolar sempre que houver sala de recursos.",
             "a escola pode exigir laudo quando o apoio envolver alimentação ou higiene.",
-            "a necessidade do profissional de apoio deve ser avaliada pelo estudo de caso e sua oferta independe de diagnóstico, laudo, relatório ou outro documento emitido por profissional de saúde."
+            "a necessidade do profissional de apoio deve ser definida pelo estudo de caso e não depende de laudo ou diagnóstico de saúde."
         ],
         "correta": 4,
         "feedbackAcerto": "Você acertou a combinação normativa: não há concessão automática para todo estudante com TEA, mas também não se pode exigir laudo médico. A necessidade do apoio é avaliada pedagogicamente no estudo de caso.",
@@ -771,11 +773,11 @@
         "dificuldade": "alta",
         "pergunta": "Um profissional de apoio escolar acompanha um aluno durante as atividades. Em determinado momento, decide substituir o professor e ministrar individualmente conteúdos curriculares que considera mais adequados ao estudante. Considerando as atribuições legais do profissional de apoio escolar, essa conduta é",
         "alternativas": [
-            "adequada, pois o profissional de apoio é responsável pelo ensino individualizado do estudante.",
-            "adequada sempre que houver autorização da família.",
-            "inadequada, pois sua atuação envolve apoio à locomoção, acesso, participação, higiene, alimentação, interação, comunicação e uso de recursos auxiliares, em articulação com a equipe pedagógica, sem substituir a função docente.",
-            "inadequada apenas quando ocorre durante o AEE.",
-            "adequada se o estudante apresentar deficiência intelectual ou TEA."
+            "adequada, pois o profissional de apoio pode assumir atividades de ensino individualizado quando o professor regente mantém o planejamento da turma.",
+            "adequada se houver autorização da família e previsão no PEI para atendimento individual durante parte das aulas.",
+            "inadequada, porque o profissional de apoio favorece acesso, participação e atividades de vida diária, mas não substitui a função docente.",
+            "inadequada apenas quando a substituição ocorre no horário do AEE, já que na classe comum o apoio pode assumir conteúdos adaptados.",
+            "adequada para estudantes com deficiência intelectual ou TEA quando a equipe pedagógica julgar necessário apoio mais intensivo."
         ],
         "correta": 2,
         "feedbackAcerto": "Você distinguiu corretamente apoio escolar de docência. O profissional de apoio favorece participação e autonomia em atividades escolares e atua em consonância com PAEE e PEI, mas não assume o papel de professor particular substituto.",
@@ -863,11 +865,11 @@
         "dificuldade": "alta",
         "pergunta": "A respeito da oferta do Atendimento Educacional Especializado, assinale a afirmativa correta.",
         "alternativas": [
-            "Na Educação Básica, o AEE pode, excepcionalmente, ser realizado em Centro de Atendimento Educacional Especializado da rede pública ou de instituição privada sem fins lucrativos conveniada, observadas as regras do sistema de ensino.",
-            "A matrícula no AEE substitui a frequência na classe comum quando houver deficiência múltipla.",
-            "O AEE ocorre exclusivamente em sala de recursos multifuncionais situada na mesma escola do estudante.",
-            "O AEE é sempre suplementar, independentemente do público atendido.",
-            "Nas instituições federais de Educação Superior, não existe estrutura institucional responsável pela efetivação do AEE."
+            "Na Educação Básica, o AEE pode excepcionalmente ocorrer em Centro de Atendimento Educacional Especializado público ou conveniado, conforme as regras do sistema.",
+            "A matrícula no AEE pode substituir parte significativa da classe comum quando o estudo de caso indicar necessidade de apoio intensivo, desde que a medida seja revista periodicamente e não impeça o acesso formal à escola comum.",
+            "O AEE deve ocorrer prioritariamente na SRM da escola de matrícula, sendo vedada sua oferta em outros centros especializados.",
+            "O AEE é suplementar para todos os estudantes público da Educação Especial, variando apenas os recursos utilizados.",
+            "Nas instituições federais de Educação Superior, o AEE é responsabilidade exclusiva dos docentes, sem estrutura institucional própria."
         ],
         "correta": 0,
         "feedbackAcerto": "Você reconheceu a exceção prevista na norma. O AEE é preferencialmente articulado à escola comum, mas na Educação Básica pode ser realizado excepcionalmente em Centro de Atendimento Educacional Especializado público ou conveniado sem fins lucrativos, conforme os requisitos do sistema.",

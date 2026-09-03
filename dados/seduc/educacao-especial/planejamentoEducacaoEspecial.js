@@ -6,7 +6,9 @@
    Conteúdo normativo revisado em 01/09/2026.
    Bases principais: Decreto 12.686/2025 (redação do 12.773/2025)
    e Portaria MEC 421/2026.
-========================================================== */
+==========================================================
+   Revisão FGV de distratores e equilíbrio de extensão: 02/09/2026.
+ ========================================================== */
 
 (function(){
     "use strict";
@@ -47,8 +49,8 @@
         "dificuldade": "media",
         "pergunta": "Segundo a regulamentação vigente da Educação Especial Inclusiva, o estudo de caso corresponde à etapa que",
         "alternativas": [
-            "produz, sistematiza e registra informações e estratégias, identificando demandas, barreiras, potencialidades, apoios e recursos de acessibilidade.",
-            "substitui a avaliação pedagógica por diagnóstico emitido por profissional da saúde.",
+            "sistematiza informações sobre demandas, barreiras, potencialidades, apoios e recursos de acessibilidade para orientar decisões pedagógicas.",
+            "integra avaliação pedagógica e diagnóstico de saúde, atribuindo ao documento clínico a definição inicial da elegibilidade para o atendimento.",
             "serve apenas para comprovar a deficiência perante o Censo Escolar.",
             "é realizada somente após a elaboração do PAEE e do PEI.",
             "define automaticamente a necessidade de profissional de apoio para todo estudante com TEA."
@@ -77,8 +79,8 @@
         "alternativas": [
             "adequada, pois o estudo de caso deve restringir-se aos impedimentos funcionais.",
             "adequada, desde que posteriormente seja juntado laudo médico.",
-            "adequada apenas se a família concordar formalmente com a limitação do estudo.",
-            "inadequada, porque também devem ser analisados o contexto, as barreiras, as potencialidades, as demandas de apoio e os recursos de acessibilidade.",
+            "adequada se a família concordar com o foco inicial nos impedimentos e a equipe ampliar a análise apenas quando surgirem novas barreiras.",
+            "inadequada, pois o estudo deve analisar também contexto, barreiras, potencialidades, apoios e recursos de acessibilidade.",
             "inadequada apenas porque o professor da classe comum deveria conduzir sozinho o estudo."
         ],
         "correta": 3,
@@ -140,7 +142,7 @@
             "ouvir apenas o estudante, porque sua opinião substitui a participação familiar.",
             "solicitar que a família apenas assine o documento elaborado pela escola.",
             "restringir a participação familiar aos casos em que houver laudo médico.",
-            "garantir o envolvimento do estudante e dos familiares ao longo do estudo de caso e do acompanhamento da implementação dos planos."
+            "envolver estudante e familiares durante o estudo de caso e o acompanhamento da implementação dos planos."
         ],
         "correta": 4,
         "feedbackAcerto": "Você reconheceu que a participação não é mera assinatura final. Família e estudante contribuem para histórico, necessidades atuais, acompanhamento e implementação das estratégias.",
@@ -164,8 +166,8 @@
         "dificuldade": "media",
         "pergunta": "No estudo de caso, a escola identifica que a permanência de um estudante depende também de ações articuladas com assistência social e saúde. Nesse caso, a regulamentação permite",
         "alternativas": [
-            "transferir a responsabilidade pedagógica integralmente à rede de saúde.",
-            "estabelecer diálogo com profissionais da rede de proteção social, preservando a responsabilidade educacional da escola.",
+            "transferir à rede de saúde a condução das ações diretamente relacionadas à condição clínica, mantendo a escola responsável apenas pelo currículo.",
+            "estabelecer diálogo com a rede de proteção social sem transferir a responsabilidade educacional da escola.",
             "suspender o planejamento escolar até a conclusão de avaliação clínica.",
             "substituir o PAEE e o PEI por relatório intersetorial.",
             "condicionar a oferta do AEE ao parecer favorável da equipe de saúde."
@@ -192,11 +194,11 @@
         "dificuldade": "alta",
         "pergunta": "Os responsáveis por um estudante solicitaram AEE, mas a direção informou que o estudo de caso e o planejamento individualizado somente começariam após a apresentação de laudo médico. A orientação da direção é",
         "alternativas": [
-            "correta, porque o laudo é requisito para iniciar qualquer registro pedagógico individualizado.",
-            "correta apenas para deficiência intelectual e TEA.",
-            "correta quando a escola não possui equipe multiprofissional.",
-            "inadequada, pois matrícula, escolarização e oferta do AEE não podem ser condicionadas a diagnóstico ou laudo, e o planejamento deve apoiar-se em critérios pedagógicos.",
-            "inadequada somente se o estudante já estiver matriculado no AEE."
+            "correta, porque o laudo formaliza a elegibilidade para o AEE e deve anteceder qualquer planejamento individualizado.",
+            "correta para deficiência intelectual e TEA, em razão da necessidade de confirmação diagnóstica para definição dos apoios, quando houver justificativa pedagógica registrada e acompanhamento dos resultados pela equipe escolar.",
+            "correta quando a escola não possui equipe multiprofissional e precisa de avaliação externa para iniciar o estudo de caso.",
+            "inadequada, pois matrícula, escolarização e AEE não podem ser condicionados a laudo, e o planejamento deve apoiar-se em critérios pedagógicos.",
+            "inadequada somente se o estudante já estiver matriculado no AEE e tiver plano anterior que possa ser atualizado."
         ],
         "correta": 3,
         "feedbackAcerto": "Você aplicou a atualização central de 2025/2026: o planejamento educacional e o AEE não dependem da apresentação de laudo. O estudo de caso é o instrumento pedagógico que orienta a identificação de barreiras e apoios.",
@@ -221,11 +223,11 @@
         "dificuldade": "media",
         "pergunta": "Nos termos da Portaria MEC nº 421/2026, o PAEE deve registrar o estudo de caso e contemplar, entre outros elementos,",
         "alternativas": [
-            "materiais e recursos para eliminar ou minimizar barreiras, necessidade de tecnologia assistiva/CAA, avaliação de apoios e demandas de formação ou acionamento da rede de proteção.",
-            "somente metas curriculares da classe comum e notas bimestrais.",
-            "apenas diagnóstico, CID e prognóstico clínico do estudante.",
-            "exclusivamente o cronograma de frequência na Sala de Recursos Multifuncionais.",
-            "apenas as adaptações arquitetônicas existentes no prédio escolar."
+            "materiais e recursos para eliminar barreiras, necessidade de tecnologia assistiva/CAA, avaliação de apoios e demandas de formação ou articulação com a rede de proteção.",
+            "metas curriculares, frequência, notas e estratégias de recuperação definidas pelo professor regente para cada bimestre.",
+            "diagnóstico, CID, prognóstico clínico e recomendações terapêuticas relacionadas à participação escolar.",
+            "cronograma de frequência na SRM, registros de presença e lista de atividades realizadas durante o atendimento.",
+            "adaptações arquitetônicas e de mobiliário existentes, sem necessidade de registrar barreiras pedagógicas ou comunicacionais."
         ],
         "correta": 0,
         "feedbackAcerto": "Você identificou os componentes mínimos do PAEE previstos na Portaria 421/2026. O plano registra o estudo de caso e organiza recursos, tecnologia assistiva/CAA, apoios e demandas de formação ou articulação em rede.",
@@ -249,11 +251,11 @@
         "dificuldade": "alta",
         "pergunta": "Uma rede de ensino pretende criar um único documento para reunir as finalidades do PAEE e do PEI. De acordo com a Portaria MEC nº 421/2026, essa decisão",
         "alternativas": [
-            "é proibida, porque os dois documentos devem existir sempre em formulários separados.",
+            "é vedado porque PAEE e PEI possuem finalidades distintas e, por segurança pedagógica, devem permanecer em documentos separados.",
             "é permitida apenas nas instituições federais de ensino superior.",
             "é permitida somente mediante autorização individual do Ministério da Educação.",
             "é permitida apenas quando não houver professor de AEE.",
-            "pode ser adotada pela rede, desde que o documento único contemple as finalidades e os critérios mínimos estabelecidos para PAEE e PEI."
+            "pode ser adotado documento único, desde que contemple as finalidades e os critérios mínimos de PAEE e PEI."
         ],
         "correta": 4,
         "feedbackAcerto": "Você identificou uma regra nova e bastante cobrável: a rede pode adotar documento único, desde que preserve as finalidades e os critérios mínimos dos dois instrumentos.",
@@ -279,8 +281,8 @@
         "pergunta": "Na organização atual, o Plano Educacional Individualizado (PEI) é compreendido, em síntese, como",
         "alternativas": [
             "relatório de saúde que define a elegibilidade do estudante para a Educação Especial.",
-            "plano exclusivo das atividades realizadas na Sala de Recursos Multifuncionais.",
-            "instrumento de planejamento pedagógico e de acessibilização curricular, articulado à classe comum e aos apoios definidos a partir do estudo de caso.",
+            "plano voltado às atividades da Sala de Recursos Multifuncionais, com reflexos na classe comum apenas quando previstos pelo professor do AEE.",
+            "instrumento de planejamento pedagógico e acessibilização curricular articulado à classe comum e aos apoios definidos no estudo de caso.",
             "documento destinado apenas ao registro de frequência no AEE.",
             "substituto do currículo da classe comum."
         ],
@@ -395,11 +397,11 @@
         "dificuldade": "alta",
         "pergunta": "Um professor regente informa à família que não adaptará suas estratégias porque ‘o aluno já tem professor de AEE para cuidar dessas questões’. À luz da perspectiva inclusiva, essa posição é",
         "alternativas": [
-            "adequada, porque o professor do AEE assume a responsabilidade pedagógica integral.",
-            "adequada se o AEE ocorrer no contraturno.",
-            "adequada quando o estudante apresenta deficiência intelectual.",
-            "inadequada, pois o AEE articula e complementa o trabalho pedagógico, enquanto a classe comum mantém responsabilidade pela escolarização e pelo acesso ao currículo.",
-            "inadequada apenas se o PEI estiver vencido."
+            "adequada, porque o professor do AEE assume o planejamento das adaptações e o regente executa apenas o currículo comum, desde que o estudo de caso indique a medida e a família participe do acompanhamento.",
+            "adequada se o AEE ocorrer no contraturno e houver comunicação periódica entre os dois professores.",
+            "adequada para deficiência intelectual quando o PEI atribuir ao AEE objetivos individualizados de aprendizagem.",
+            "inadequada, pois o AEE complementa o trabalho pedagógico e não retira da classe comum a responsabilidade pelo currículo e pela escolarização.",
+            "inadequada apenas quando o PEI não definir claramente a divisão de responsabilidades entre professor regente e AEE."
         ],
         "correta": 3,
         "feedbackAcerto": "Você reconheceu a articulação correta entre classe comum e AEE. O AEE apoia, complementa/suplementa e organiza recursos, mas não substitui o trabalho pedagógico do professor regente.",
@@ -423,11 +425,11 @@
         "dificuldade": "media",
         "pergunta": "Ao elaborar o planejamento de uma estudante com baixa visão, a equipe propõe ampliar fontes, ajustar contraste, disponibilizar arquivo digital acessível e manter os mesmos objetivos curriculares, com outras formas de acesso e resposta. A proposta exemplifica",
         "alternativas": [
-            "segregação curricular.",
-            "substituição do currículo comum pelo AEE.",
-            "acessibilização curricular e adoção de recursos para eliminar barreiras sem empobrecimento automático dos objetivos.",
-            "dispensa de avaliação da estudante.",
-            "redução curricular obrigatória em razão da deficiência."
+            "segregação curricular, porque cria um percurso diferenciado e desvinculado da referência comum.",
+            "substituição do currículo comum pelo AEE, pois os recursos passam a organizar os objetivos de aprendizagem.",
+            "acessibilização curricular, porque ajusta meios de acesso e resposta sem reduzir automaticamente os objetivos.",
+            "dispensa de avaliação, já que formatos acessíveis tornariam desnecessário verificar a aprendizagem.",
+            "redução curricular, pois a baixa visão exigiria diminuição prévia da quantidade e complexidade dos conteúdos."
         ],
         "correta": 2,
         "feedbackAcerto": "Você identificou uma prática de acessibilização: os objetivos podem ser mantidos enquanto os meios de acesso, participação e demonstração da aprendizagem são ajustados.",
@@ -451,11 +453,11 @@
         "dificuldade": "alta",
         "pergunta": "Os recursos de acessibilidade considerados no estudo de caso e no planejamento educacional",
         "alternativas": [
-            "restringem-se a rampas, elevadores e adaptações arquitetônicas.",
-            "dependem sempre de prescrição de profissional de saúde.",
-            "devem ser oferecidos apenas no espaço do AEE.",
-            "limitam-se a tecnologias digitais e softwares especializados.",
-            "podem abranger tecnologias, serviços, estratégias e adaptações destinadas a eliminar barreiras em materiais, ambientes, transporte, mobiliário, comunicação e outras dimensões da vida escolar."
+            "restringem-se às condições arquitetônicas e de mobilidade, pois materiais e comunicação pertencem ao planejamento pedagógico comum.",
+            "dependem de indicação técnica ou clínica quando envolvem tecnologia assistiva, comunicação ou adequações posturais.",
+            "devem ser concentrados no AEE, com empréstimo à classe comum apenas quando o professor especializado considerar necessário.",
+            "correspondem principalmente a tecnologias digitais e softwares especializados, enquanto adaptações físicas são tratadas fora do planejamento educacional.",
+            "podem envolver tecnologias, serviços, estratégias e adaptações voltadas à eliminação de barreiras em diferentes dimensões da vida escolar."
         ],
         "correta": 4,
         "feedbackAcerto": "Você reconheceu o conceito amplo de acessibilidade educacional. O planejamento pode envolver recursos físicos, comunicacionais, tecnológicos, pedagógicos e organizacionais conforme as barreiras identificadas.",
@@ -479,11 +481,11 @@
         "dificuldade": "media",
         "pergunta": "Em uma avaliação de Ciências, um estudante utiliza comunicação aumentativa e alternativa. Para verificar a mesma habilidade prevista para a turma, o professor permite que ele responda por seu sistema de comunicação. Essa medida é compatível com",
         "alternativas": [
-            "dispensa de avaliação.",
-            "redução do conteúdo curricular.",
-            "acessibilidade avaliativa, pois adapta a forma de resposta sem necessariamente alterar a habilidade que se pretende avaliar.",
-            "substituição da avaliação escolar pelo AEE.",
-            "tratamento privilegiado incompatível com a equidade."
+            "dispensa da avaliação formal, porque o sistema alternativo substituiria o instrumento escolar.",
+            "redução curricular, porque a comunicação alternativa indicaria necessidade de objetivos menos complexos.",
+            "acessibilidade avaliativa, pois muda o meio de resposta e preserva a habilidade que se pretende verificar.",
+            "substituição da avaliação da classe comum por avaliação conduzida pelo professor do AEE.",
+            "tratamento privilegiado, porque permite forma de resposta diferente da utilizada pelos demais estudantes."
         ],
         "correta": 2,
         "feedbackAcerto": "Você percebeu a diferença entre objetivo avaliado e modo de resposta. A acessibilidade avaliativa pode modificar o meio pelo qual o estudante demonstra aprendizagem, preservando a habilidade que se pretende verificar.",
@@ -507,8 +509,8 @@
         "dificuldade": "media",
         "pergunta": "Após dois meses, os registros mostram que uma estratégia prevista no PEI não favoreceu a participação do estudante. A conduta mais adequada é",
         "alternativas": [
-            "manter a estratégia até o fim do ano para preservar a estabilidade do documento.",
-            "reavaliar as evidências, ajustar a estratégia e registrar o replanejamento de modo coerente com a avaliação contínua.",
+            "manter a estratégia até a revisão anual do PEI para preservar estabilidade e comparabilidade dos registros de acompanhamento.",
+            "reavaliar evidências, ajustar a estratégia e registrar o replanejamento em coerência com a avaliação contínua.",
             "encerrar o PEI e manter apenas o PAEE.",
             "solicitar novo laudo antes de alterar qualquer medida pedagógica.",
             "retirar o estudante das atividades em que a estratégia não funcionou."
@@ -535,11 +537,11 @@
         "dificuldade": "alta",
         "pergunta": "De acordo com a Portaria MEC nº 421/2026, o PEI deve conter, no mínimo,",
         "alternativas": [
-            "atividades do AEE articuladas ao professor regente e demais profissionais, medidas de acessibilidade curricular/didático-pedagógica/avaliativa, estratégias de acompanhamento e monitoramento e registro de devolutivas às famílias.",
-            "diagnóstico médico, CID, prescrição terapêutica e prognóstico de aprendizagem.",
-            "apenas objetivos anuais, frequência e notas do estudante.",
-            "cronograma do AEE e relação de profissionais de saúde que acompanham o estudante.",
-            "somente adaptações de avaliação, pois o currículo é tratado exclusivamente no PAEE."
+            "medidas de acessibilidade curricular, didático-pedagógica e avaliativa, articulação com o AEE, estratégias de monitoramento e devolutivas às famílias.",
+            "diagnóstico funcional, dados clínicos relevantes, objetivos anuais e registro das intervenções terapêuticas que repercutem na escolarização, quando houver justificativa pedagógica registrada e acompanhamento dos resultados pela equipe escolar.",
+            "objetivos anuais, frequência, resultados de avaliações e adaptações definidas exclusivamente pelo professor regente.",
+            "cronograma do AEE, relação de profissionais que acompanham o estudante e síntese das orientações intersetoriais recebidas pela escola.",
+            "adaptações avaliativas e metas de autonomia, ficando o currículo e as estratégias da classe comum registrados apenas no PAEE."
         ],
         "correta": 0,
         "feedbackAcerto": "Você identificou corretamente os quatro eixos mínimos do PEI previstos no art. 11 da Portaria 421/2026.",
@@ -599,9 +601,9 @@
         "pergunta": "Em determinada escola, o profissional de apoio passou a definir sozinho os objetivos curriculares e as adaptações avaliativas de um estudante, alegando que é quem permanece mais tempo ao seu lado. Segundo a Portaria MEC nº 421/2026, essa atuação",
         "alternativas": [
             "é adequada, porque proximidade cotidiana transfere ao apoio a responsabilidade docente.",
-            "é inadequada, pois seu trabalho se subordina ao planejamento pedagógico e suas atribuições não se confundem com as de caráter docente.",
+            "é inadequada, pois o profissional de apoio atua segundo o planejamento pedagógico e não assume atribuições docentes.",
             "é adequada desde que a família concorde.",
-            "é adequada apenas quando o estudante utiliza tecnologia assistiva.",
+            "é adequada quando o estudante utiliza tecnologia assistiva e o profissional de apoio domina o recurso empregado nas atividades curriculares.",
             "é inadequada somente se não houver registro no PAEE."
         ],
         "correta": 1,
@@ -626,11 +628,11 @@
         "dificuldade": "media",
         "pergunta": "Uma estudante necessita utilizar tablet com aplicativo de comunicação durante as atividades. No planejamento da escola, a utilização do dispositivo como tecnologia assistiva",
         "alternativas": [
-            "pode ser autorizada mediante parecer pedagógico da instituição de ensino, quando destinada à aprendizagem, comunicação ou socialização.",
+            "pode ser autorizada por parecer pedagógico da instituição quando destinada à aprendizagem, comunicação ou socialização.",
             "depende obrigatoriamente de receita médica.",
             "é proibida durante avaliações por ser dispositivo digital portátil.",
             "somente pode ocorrer na Sala de Recursos Multifuncionais.",
-            "depende de decisão judicial quando o equipamento pertence à família."
+            "depende de autorização formal da família e de registro no PEI quando o equipamento for de propriedade particular do estudante."
         ],
         "correta": 0,
         "feedbackAcerto": "Você aplicou corretamente a regra atual: o dispositivo digital portátil pode ser utilizado como tecnologia assistiva mediante parecer pedagógico da instituição.",
@@ -655,8 +657,8 @@
         "pergunta": "Em uma escola, o professor do AEE prepara recursos acessíveis, mas nunca conversa com o professor regente; este, por sua vez, envia ao AEE atividades totalmente diferentes do currículo trabalhado em sala. O principal problema dessa organização é",
         "alternativas": [
             "a ausência de diagnóstico clínico atualizado.",
-            "a inexistência obrigatória de uma sala exclusiva para o AEE.",
-            "a falta de articulação entre o AEE, a classe comum e o planejamento curricular, o que pode fragmentar a escolarização do estudante.",
+            "a inexistência de sala exclusiva para o AEE, quando a escola mantém recursos de acessibilidade distribuídos em outros ambientes.",
+            "a falta de articulação entre AEE, classe comum e planejamento curricular, que fragmenta a escolarização.",
             "a impossibilidade de o professor do AEE produzir recursos pedagógicos.",
             "a participação excessiva do professor regente no processo."
         ],
@@ -716,10 +718,10 @@
         "dificuldade": "alta",
         "pergunta": "Uma escola recebe um estudante público da Educação Especial e organiza as seguintes ações: realiza estudo de caso com participação da família; identifica barreiras e potencialidades; elabora PAEE e PEI articulando AEE e classe comum; define recursos de acessibilidade; registra estratégias de acompanhamento; e decide rever os planos à luz da avaliação contínua. Entretanto, condiciona o início do AEE à entrega de laudo médico. Considerando a regulamentação vigente, a avaliação correta dessa conduta é",
         "alternativas": [
-            "todas as ações estão corretas porque o laudo é requisito de segurança administrativa.",
+            "as ações são válidas se o laudo for usado apenas para segurança administrativa e não para definir sozinho os objetivos pedagógicos.",
             "apenas a participação da família está incorreta, pois o estudo de caso deve ser exclusivamente técnico.",
             "PAEE e PEI estão incorretos porque devem ser elaborados antes do estudo de caso.",
-            "o planejamento está majoritariamente adequado, mas é ilegal condicionar matrícula, escolarização ou oferta do AEE à apresentação de diagnóstico, laudo ou relatório de saúde.",
+            "o planejamento está adequado em grande parte, mas é ilegal condicionar matrícula, escolarização ou AEE a laudo de saúde.",
             "a escola deveria substituir o PAEE e o PEI por um relatório clínico único."
         ],
         "correta": 3,
