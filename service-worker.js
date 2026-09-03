@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v169-2026-09-02-seduc-tela-aluno";
+const CACHE_VERSION = "farol-v170-2026-09-02-mobile-update-fix";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -33,13 +33,18 @@ const APP_SHELL = [
 
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(STATIC_CACHE)
-      .then(cache => cache.addAll(APP_SHELL))
+    caches.open(STATIC_CACHE).then(async cache => {
+      // Um arquivo opcional ausente não deve impedir a instalação
+      // de toda a nova versão do Farol no celular.
+      await Promise.allSettled(
+        APP_SHELL.map(item => cache.add(item))
+      );
+    })
   );
 
   // A nova versão permanece aguardando.
-  // O pwa.js enviará SKIP_WAITING somente quando o aluno
-  // estiver em uma tela segura, evitando interromper atividades.
+  // O pwa.js envia SKIP_WAITING somente quando não há
+  // uma questão/simulado/atividade real em andamento.
 });
 
 self.addEventListener("activate", event => {

@@ -81,13 +81,14 @@
     }
   });
 
+  // Protege apenas telas em que há uma atividade real em andamento.
+  // A tela "questoes" é apenas o menu de estudo e DEVE permitir atualização.
+  // A resolução efetiva acontece em "resolverQuestao".
   const TELAS_PROTEGIDAS_ATUALIZACAO = new Set([
-    "questoes",
+    "resolverQuestao",
     "simulados",
     "duelos",
     "jogosFarol",
-    "erros",
-    "suporteFarol",
     "vidaABordoTaifeiro"
   ]);
 
@@ -108,7 +109,7 @@
       `
         <div>
           <strong>✨ Nova versão disponível</strong>
-          <small>A atualização será aplicada quando você voltar ao Início. Sua atividade não será interrompida.</small>
+          <small>A atualização será aplicada assim que você sair da atividade em andamento. Seu progresso não será interrompido.</small>
         </div>
       `,
       "atualizacao"
@@ -224,9 +225,9 @@
     const tela = event.detail?.tela || telaAtivaFarol();
 
     if(
-      tela === "inicio" &&
       atualizacaoPendente &&
-      registroServiceWorker?.waiting
+      registroServiceWorker?.waiting &&
+      !TELAS_PROTEGIDAS_ATUALIZACAO.has(tela)
     ){
       ativarAtualizacaoQuandoSeguro(registroServiceWorker);
     }
