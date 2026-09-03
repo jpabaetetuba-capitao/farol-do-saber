@@ -3816,6 +3816,7 @@ errosAssunto++;
     apoioTrabalhoColaborativo: "🛡️ Trabalho Colaborativo, Ética e Segurança",
     seducEducacaoEspecialFundamentos: "♿ SEDUC-PA — Fundamentos da Educação Especial",
     seducEducacaoEspecialPlanejamento: "♿ SEDUC-PA — Planejamento da Educação Especial",
+    seducEducacaoEspecialLegislacao: "⚖️ SEDUC-PA — Legislação Específica da Educação Especial",
 
 
     hardware: "💻 Hardware",
@@ -48351,15 +48352,9 @@ limparArenaLocalFarol = function(){
                     <span class="seduc-ee-selo-v161">SEDUC-PA 2026 • FGV</span>
                     <h2>♿ Educação Especial — Conhecimentos Específicos</h2>
                     <p>
-                        Nesta rota não há teoria longa: cada tópico começa por um <strong>mapa mental completo</strong>
-                        e segue para questões inéditas construídas no padrão de cobrança da FGV.
+                        Escolha um tópico abaixo. Primeiro revise o <strong>mapa mental</strong> e depois responda às questões
+                        para fixar o conteúdo e identificar o que ainda precisa revisar.
                     </p>
-                </div>
-
-                <div class="seduc-ee-resumo-v161">
-                    <span><strong>30</strong> questões neste bloco</span>
-                    <span><strong>5</strong> alternativas com feedback individual</span>
-                    <span><strong>2026</strong> legislação revisada</span>
                 </div>
 
                 <div class="seduc-ee-topicos-v161">
@@ -48374,8 +48369,8 @@ limparArenaLocalFarol = function(){
                 </div>
 
                 <div class="seduc-ee-aviso-v161">
-                    <strong>🎯 Padrão Farol / FGV</strong>
-                    <p>Cada erro explica especificamente a alternativa marcada. O acerto também apresenta o fundamento que deve ser fixado, além de pegadinha, memorização e atualização normativa quando cabível.</p>
+                    <strong>📚 Como estudar</strong>
+                    <p>Revise o mapa mental, responda às questões e use o caderno de erros para retomar os pontos em que teve dificuldade.</p>
                 </div>
             </div>
         `;
@@ -48794,3 +48789,1170 @@ limparArenaLocalFarol = function(){
     }
 })();
 
+
+
+/* ==========================================================
+   FAROL V163 — SEDUC-PA 2026 / FGV
+   Professor Classe I — Educação Especial
+   Bloco 3: Legislação Específica da Educação Especial
+   Fluxo: mapa mental -> 30 questões inéditas -> feedback por alternativa.
+========================================================== */
+(function integrarLegislacaoSeducEducacaoEspecialV163(){
+    "use strict";
+
+    const TRILHA = "seducProfessorEducacaoEspecial";
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialLegislacao";
+    const TELA_MAPA = "seducMapaLegislacaoV163";
+
+    const banco = Array.isArray(window.seducEducacaoEspecialLegislacao2026)
+        ? window.seducEducacaoEspecialLegislacao2026
+        : [];
+
+    if(typeof bancoQuestoes !== "undefined"){
+        bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    if(typeof mapasMentaisPorAssunto !== "undefined"){
+        mapasMentaisPorAssunto[ASSUNTO] = {
+            titulo: "⚖️ Mapa 3 — Legislação Específica da Educação Especial",
+            imagem: "imagens/mapas/seduc/educacao-especial/LegislacaoEducacaoEspecial.png"
+        };
+    }
+
+    if(typeof trilhasPreparacaoFarol !== "undefined" && trilhasPreparacaoFarol[TRILHA]){
+        trilhasPreparacaoFarol[TRILHA].descricao =
+            "Preparação SEDUC-PA 2026 no estilo FGV. Blocos publicados: Fundamentos, Planejamento e Legislação Específica da Educação Especial.";
+    }
+
+    function garantirTelaMapaLegislacaoV163(){
+        if(document.getElementById(TELA_MAPA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA_MAPA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-painel-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducEducacaoEspecialV163()">⬅ Voltar aos tópicos</button>
+
+                <span class="seduc-ee-selo-v161">SEDUC-PA 2026 • FGV • BLOCO 3</span>
+                <h2>⚖️ Legislação Específica da Educação Especial</h2>
+                <p class="seduc-ee-instrucao-mapa-v161">
+                    Revise o mapa antes das questões. Este bloco cruza Constituição, Convenção, LDB, LBI,
+                    TEA, Libras, Educação Bilíngue de Surdos, CNE e a legislação federal atualizada de 2025/2026.
+                </p>
+
+                <div class="seduc-ee-aviso-v161" style="margin:16px 0;">
+                    <strong>🆕 Revisão normativa Farol — atenção à atualização 2026</strong>
+                    <p>
+                        No mapa, a <strong>Política Nacional de Educação Especial na Perspectiva da Educação Inclusiva (2008)</strong>
+                        deve ser estudada como <strong>marco histórico e documento orientador</strong>. A política nacional atualmente vigente é a
+                        <strong>PNEEI instituída pelo Decreto nº 12.686/2025</strong>, alterado pelo <strong>Decreto nº 12.773/2025</strong>.
+                        A <strong>Portaria MEC nº 421/2026</strong> regulamenta a implementação e a Rede Nacional; a Portaria nº 550/2026
+                        promoveu alteração administrativa pontual na Portaria 421; e a <strong>Portaria nº 572/2026</strong> instituiu 27 Centros de Formação.
+                    </p>
+                    <p>
+                        <strong>Pegadinha:</strong> a LDB mantém literalmente “transtornos globais do desenvolvimento”, enquanto a PNEEI 2025 usa “TEA”.
+                        Responda sempre conforme a norma indicada no enunciado.
+                    </p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/LegislacaoEducacaoEspecial.png" alt="Mapa mental — Legislação Específica da Educação Especial">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/educacao-especial/LegislacaoEducacaoEspecial.png','_blank')">🔍 Ampliar mapa</button>
+                </div>
+
+                <div class="seduc-ee-mapa-web-v161">
+                    <div class="seduc-ee-mapa-web-centro-v161">
+                        <strong>🎯 RADAR FGV — LEGISLAÇÃO</strong>
+                        <small>O que mais merece atenção neste banco.</small>
+                    </div>
+                    <div class="seduc-ee-ramos-v161">
+                        <article><strong>📜 CF/88 + Convenção</strong><span>AEE preferencialmente na rede regular; sistema inclusivo em todos os níveis; adaptações razoáveis e apoios individualizados.</span></article>
+                        <article><strong>📘 LDB</strong><span>Arts. 58–60; literalidade TGD; apoio especializado; recursos e organização específicos; prioridade da rede pública regular.</span></article>
+                        <article><strong>♿ LBI</strong><span>Educação inclusiva, acessibilidade, tecnologia assistiva, profissional de apoio e vedação de taxa adicional nas escolas privadas.</span></article>
+                        <article><strong>🧩 TEA</strong><span>Lei 12.764/2012: TEA é pessoa com deficiência para todos os efeitos legais; acompanhante especializado em caso de comprovada necessidade.</span></article>
+                        <article><strong>🤟 Libras / Bilíngue</strong><span>Lei 10.436 + Decreto 5.626; Lei 14.191: Libras L1, português escrito L2, início ao zero ano e aprendizagem ao longo da vida.</span></article>
+                        <article><strong>🆕 2025/2026</strong><span>PNEEI 2025; Decreto 12.773; Portarias 421 e 572; CAA de baixa tecnologia incluída na LBI pela Lei 15.249/2025.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaLegislacaoV163">
+                    Li e revisei o Mapa 3 e o quadro de atualização normativa.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesLegislacaoSeducV163()">
+                    🚀 Iniciar 30 questões FGV
+                </button>
+            </div>
+        `;
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuLegislacaoV163(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return;
+
+        const resumo = tela.querySelector(".seduc-ee-resumo-v161");
+        if(resumo){
+            resumo.innerHTML = `
+                <span><strong>85</strong> questões em 3 blocos</span>
+                <span><strong>5</strong> alternativas com feedback individual</span>
+                <span><strong>2026</strong> legislação revisada</span>
+            `;
+        }
+
+        const lista = tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoLegislacaoV163")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoLegislacaoV163" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirLegislacaoSeducEducacaoEspecialV163()">
+                    <span class="seduc-ee-numero-v161">3</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Legislação Específica da Educação Especial</strong>
+                        <small>CF/88 • Convenção • LDB • LBI • TEA • Libras • Educação Bilíngue • CNE • PNEEI 2025/2026</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 30 questões →</span>
+                </button>
+            `);
+        }
+    }
+
+    function instalarV163(){
+        garantirTelaMapaLegislacaoV163();
+        atualizarMenuLegislacaoV163();
+        if(typeof bancoQuestoes !== "undefined") bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    window.abrirLegislacaoSeducEducacaoEspecialV163 = function(){
+        instalarV163();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaLegislacaoV163");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+
+    window.voltarTopicosSeducEducacaoEspecialV163 = function(){
+        atualizarMenuLegislacaoV163();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesLegislacaoSeducV163 = function(){
+        const check = document.getElementById("confirmacaoMapaLegislacaoV163");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 3 antes de iniciar as questões.");
+            return;
+        }
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const antes = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const r = antes.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(atualizarMenuLegislacaoV163, 0);
+            return r;
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const antes = abrirAssunto;
+        abrirAssunto = function(assunto){
+            if(assunto === ASSUNTO){ window.abrirLegislacaoSeducEducacaoEspecialV163(); return; }
+            return antes.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const antes = voltarParaAssuntos;
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === ASSUNTO || disciplinaAtual === ASSUNTO){
+                atualizarMenuLegislacaoV163();
+                if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+                return;
+            }
+            return antes.apply(this, arguments);
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV163);
+    if(document.readyState !== "loading") instalarV163();
+})();
+
+
+/* ==========================================================
+   FAROL V164 — SEDUC-PA 2026 / FGV
+   Professor Classe I — Educação Especial
+   Bloco 4: Diretrizes Nacionais — Educação Infantil,
+   Ensino Fundamental, EJA e Educação Especial
+   Fluxo: mapa mental -> 25 questões inéditas -> feedback por alternativa.
+========================================================== */
+(function integrarDiretrizesNacionaisSeducEducacaoEspecialV164(){
+    "use strict";
+
+    const TRILHA = "seducProfessorEducacaoEspecial";
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialDiretrizesNacionais";
+    const TELA_MAPA = "seducMapaDiretrizesNacionaisV164";
+
+    const banco = Array.isArray(window.seducEducacaoEspecialDiretrizes2026)
+        ? window.seducEducacaoEspecialDiretrizes2026
+        : [];
+
+    if(typeof bancoQuestoes !== "undefined"){
+        bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    if(typeof mapasMentaisPorAssunto !== "undefined"){
+        mapasMentaisPorAssunto[ASSUNTO] = {
+            titulo: "🧭 Mapa 4 — Diretrizes Nacionais: Educação Infantil, Ensino Fundamental, EJA e Educação Especial",
+            imagem: "imagens/mapas/seduc/educacao-especial/DiretrizesNacionaisEducacaoEspecial.png"
+        };
+    }
+
+    if(typeof trilhasPreparacaoFarol !== "undefined" && trilhasPreparacaoFarol[TRILHA]){
+        trilhasPreparacaoFarol[TRILHA].descricao =
+            "Preparação SEDUC-PA 2026 no estilo FGV. Blocos publicados: Fundamentos, Planejamento, Legislação Específica e Diretrizes Nacionais.";
+    }
+
+    function garantirTelaMapaDiretrizesV164(){
+        if(document.getElementById(TELA_MAPA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA_MAPA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-painel-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducEducacaoEspecialV164()">⬅ Voltar aos tópicos</button>
+
+                <span class="seduc-ee-selo-v161">SEDUC-PA 2026 • FGV • BLOCO 4</span>
+                <h2>🧭 Diretrizes Nacionais: Educação Infantil, Ensino Fundamental, EJA e Educação Especial</h2>
+                <p class="seduc-ee-instrucao-mapa-v161">
+                    Este bloco compara as diretrizes de cada etapa/modalidade e treina exatamente as diferenças que a FGV costuma transformar em casos práticos, itens I/II/III e alternativas muito próximas.
+                </p>
+
+                <div class="seduc-ee-aviso-v161" style="margin:16px 0;">
+                    <strong>🆕 Atualizações obrigatórias para a prova de 2026</strong>
+                    <p>
+                        <strong>Educação Infantil:</strong> além da Resolução CNE/CEB nº 5/2009, considere a
+                        <strong>Resolução CNE/CEB nº 1/2024</strong>, que instituiu Diretrizes Operacionais Nacionais de
+                        Qualidade e Equidade para a Educação Infantil e alcança oferta pública e privada, respeitando as modalidades educacionais.
+                    </p>
+                    <p>
+                        <strong>EJA:</strong> a referência operacional atual é a <strong>Resolução CNE/CEB nº 3/2025</strong>,
+                        alterada pela <strong>Resolução CNE/CEB nº 6/2025</strong>. A norma assegura ao público da Educação Especial
+                        acesso, permanência, participação e aprendizagem na EJA e mantém as idades mínimas de 15 anos para o Ensino Fundamental
+                        e 18 anos para o Ensino Médio.
+                    </p>
+                    <p>
+                        <strong>Educação Especial:</strong> Resoluções CNE/CEB nº 2/2001 e nº 4/2009 continuam essenciais para entender
+                        transversalidade, classe comum, PPP e AEE, devendo ser lidas junto da legislação inclusiva atual de 2025/2026.
+                    </p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/DiretrizesNacionaisEducacaoEspecial.png" alt="Mapa mental — Diretrizes Nacionais: Educação Infantil, Ensino Fundamental, EJA e Educação Especial">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/educacao-especial/DiretrizesNacionaisEducacaoEspecial.png','_blank')">🔍 Ampliar mapa</button>
+                </div>
+
+                <div class="seduc-ee-mapa-web-v161">
+                    <div class="seduc-ee-mapa-web-centro-v161">
+                        <strong>🎯 RADAR FGV — COMO DIFERENCIAR AS DIRETRIZES</strong>
+                        <small>O banco foi construído para obrigar o aluno a identificar a norma correta e aplicar seu princípio ao caso concreto.</small>
+                    </div>
+                    <div class="seduc-ee-ramos-v161">
+                        <article><strong>🧸 Educação Infantil</strong><span>Criança sujeito de direitos; interações + brincadeiras; desenvolvimento integral; avaliação por acompanhamento e registros, sem promoção/classificação.</span></article>
+                        <article><strong>📚 Ensino Fundamental</strong><span>9 anos; direito público subjetivo; currículo e diversidade; avaliação processual, formativa, participativa, contínua, cumulativa e diagnóstica.</span></article>
+                        <article><strong>🌱 EJA</strong><span>Identidade própria; organização flexível; diferentes turnos; respeito às trajetórias; inclusão explícita do público da Educação Especial; atualização normativa de 2025.</span></article>
+                        <article><strong>♿ Educação Especial</strong><span>Modalidade transversal; inclusão desde a Educação Infantil; classe comum + AEE; acessibilidade; PPP; atendimento complementar/suplementar, nunca substitutivo.</span></article>
+                        <article><strong>⚠️ Pegadinha</strong><span>Articulação entre etapas não significa antecipação. Educação Infantil não é pré-1º ano; EJA não é simples “ensino regular noturno”; AEE não é reforço nem classe paralela.</span></article>
+                        <article><strong>🧠 Números para fixar</strong><span>5/2009 = Educação Infantil • 4/2009 = AEE • 7/2010 = Ensino Fundamental • 3/2025 = EJA • 1/2024 = Qualidade e Equidade da Educação Infantil.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaDiretrizesV164">
+                    Li e revisei o Mapa 4 e o quadro de atualização normativa.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesDiretrizesSeducV164()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>
+        `;
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuDiretrizesV164(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return;
+
+        const resumo = tela.querySelector(".seduc-ee-resumo-v161");
+        if(resumo){
+            resumo.innerHTML = `
+                <span><strong>110</strong> questões em 4 blocos</span>
+                <span><strong>5</strong> alternativas com feedback individual</span>
+                <span><strong>2026</strong> normas revisadas</span>
+            `;
+        }
+
+        const lista = tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoDiretrizesV164")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoDiretrizesV164" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirDiretrizesSeducEducacaoEspecialV164()">
+                    <span class="seduc-ee-numero-v161">4</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Diretrizes Nacionais — Educação Infantil, Ensino Fundamental, EJA e Educação Especial</strong>
+                        <small>Res. 5/2009 • Res. 1/2024 • Res. 7/2010 • Res. 3/2025 + 6/2025 • Res. 2/2001 • Res. 4/2009</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>
+            `);
+        }
+    }
+
+    function instalarV164(){
+        garantirTelaMapaDiretrizesV164();
+        atualizarMenuDiretrizesV164();
+        if(typeof bancoQuestoes !== "undefined") bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    window.abrirDiretrizesSeducEducacaoEspecialV164 = function(){
+        instalarV164();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaDiretrizesV164");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+
+    window.voltarTopicosSeducEducacaoEspecialV164 = function(){
+        atualizarMenuDiretrizesV164();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesDiretrizesSeducV164 = function(){
+        const check = document.getElementById("confirmacaoMapaDiretrizesV164");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 4 antes de iniciar as questões.");
+            return;
+        }
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const antes = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const r = antes.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(atualizarMenuDiretrizesV164, 0);
+            return r;
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const antes = abrirAssunto;
+        abrirAssunto = function(assunto){
+            if(assunto === ASSUNTO){
+                window.abrirDiretrizesSeducEducacaoEspecialV164();
+                return;
+            }
+            return antes.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const antes = voltarParaAssuntos;
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === ASSUNTO || disciplinaAtual === ASSUNTO){
+                atualizarMenuDiretrizesV164();
+                if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+                return;
+            }
+            return antes.apply(this, arguments);
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV164);
+    if(document.readyState !== "loading") instalarV164();
+})();
+
+
+/* ==========================================================
+   FAROL V165 — SEDUC-PA / EDUCAÇÃO ESPECIAL
+   Ordenação automática dos blocos no menu.
+   Garante sempre: 1 -> 2 -> 3 -> 4 -> 5... independentemente
+   da ordem assíncrona em que os patches inserem os cartões.
+========================================================== */
+(function ordenarMenuSeducEducacaoEspecialV165(){
+    "use strict";
+
+    const DISCIPLINA = "seducEducacaoEspecial";
+    let observadorMenuSeducV165 = null;
+
+    function numeroDoTopicoV165(elemento){
+        const numero = elemento && elemento.querySelector(".seduc-ee-numero-v161");
+        const valor = Number(String(numero ? numero.textContent : "").trim());
+        return Number.isFinite(valor) ? valor : 9999;
+    }
+
+    function ordenarTopicosV165(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return false;
+
+        const lista = tela.querySelector(".seduc-ee-topicos-v161");
+        if(!lista) return false;
+
+        const topicos = Array.from(
+            lista.querySelectorAll(":scope > .seduc-ee-topico-v161")
+        );
+
+        if(topicos.length < 2) return true;
+
+        const ordenados = [...topicos].sort((a, b) => {
+            const diferenca = numeroDoTopicoV165(a) - numeroDoTopicoV165(b);
+            if(diferenca !== 0) return diferenca;
+            return (a.textContent || "").localeCompare(b.textContent || "", "pt-BR");
+        });
+
+        const precisaReordenar = ordenados.some(
+            (item, indice) => item !== topicos[indice]
+        );
+
+        if(precisaReordenar){
+            const fragmento = document.createDocumentFragment();
+            ordenados.forEach(item => fragmento.appendChild(item));
+            lista.appendChild(fragmento);
+        }
+
+        return true;
+    }
+
+    function instalarOrdenacaoV165(){
+        if(!ordenarTopicosV165()) return false;
+
+        const tela = document.getElementById(DISCIPLINA);
+        const lista = tela && tela.querySelector(".seduc-ee-topicos-v161");
+        if(!lista) return false;
+
+        if(lista.dataset.ordenacaoSeducV165 !== "ativa"){
+            lista.dataset.ordenacaoSeducV165 = "ativa";
+
+            observadorMenuSeducV165 = new MutationObserver(() => {
+                ordenarTopicosV165();
+            });
+
+            observadorMenuSeducV165.observe(lista, {
+                childList: true
+            });
+        }
+
+        return true;
+    }
+
+    window.ordenarTopicosSeducEducacaoEspecialV165 = ordenarTopicosV165;
+
+    if(typeof abrirDisciplina === "function"){
+        const abrirDisciplinaAntesV165 = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAntesV165.apply(this, arguments);
+            if(nome === DISCIPLINA){
+                setTimeout(instalarOrdenacaoV165, 20);
+            }
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(instalarOrdenacaoV165, 20);
+        setTimeout(instalarOrdenacaoV165, 100);
+    });
+
+    if(document.readyState !== "loading"){
+        setTimeout(instalarOrdenacaoV165, 20);
+        setTimeout(instalarOrdenacaoV165, 100);
+    }
+})();
+
+
+/* ==========================================================
+   FAROL V166 — SEDUC-PA 2026 / FGV
+   Professor Classe I — Educação Especial
+   Bloco 5: Currículo Adaptado, Aprendizagem e Deficiência
+   Fluxo: mapa mental completo -> 25 questões inéditas -> feedback específico.
+========================================================== */
+(function integrarCurriculoAdaptadoSeducEducacaoEspecialV166(){
+    "use strict";
+
+    const TRILHA = "seducProfessorEducacaoEspecial";
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialCurriculoAdaptado";
+    const TELA_MAPA = "seducMapaCurriculoAdaptadoV166";
+
+    const banco = Array.isArray(window.seducEducacaoEspecialCurriculo2026)
+        ? window.seducEducacaoEspecialCurriculo2026
+        : [];
+
+    if(typeof bancoQuestoes !== "undefined"){
+        bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    if(typeof mapasMentaisPorAssunto !== "undefined"){
+        mapasMentaisPorAssunto[ASSUNTO] = {
+            titulo: "🧠 Mapa 5 — Currículo Adaptado, Aprendizagem e Deficiência",
+            imagem: "imagens/mapas/seduc/educacao-especial/CurriculoAdaptadoAprendizagemDeficiencia.png"
+        };
+    }
+
+    if(typeof trilhasPreparacaoFarol !== "undefined" && trilhasPreparacaoFarol[TRILHA]){
+        trilhasPreparacaoFarol[TRILHA].descricao =
+            "Preparação SEDUC-PA 2026 no estilo FGV. Blocos publicados: Fundamentos, Planejamento, Legislação, Diretrizes Nacionais e Currículo Adaptado, Aprendizagem e Deficiência.";
+    }
+
+    function garantirTelaMapaCurriculoV166(){
+        if(document.getElementById(TELA_MAPA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA_MAPA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-painel-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducEducacaoEspecialV166()">
+                    ⬅ Voltar aos tópicos
+                </button>
+
+                <span class="seduc-ee-selo-v161">SEDUC-PA 2026 • FGV • BLOCO 5</span>
+                <h2>🧠 Currículo Adaptado, Aprendizagem e Deficiência</h2>
+                <p class="seduc-ee-instrucao-mapa-v161">
+                    Revise o mapa completo antes das questões. Este bloco foi construído com foco na cobrança recente da FGV sobre
+                    currículo inclusivo, barreiras, DUA, adaptações, acessibilidade, tecnologia assistiva e avaliação.
+                </p>
+
+                <div class="seduc-ee-aviso-v161" style="margin:16px 0;">
+                    <strong>🆕 Atualização normativa 2025/2026</strong>
+                    <p>
+                        A política nacional vigente reafirma que a <strong>BNCC e as Diretrizes Curriculares Nacionais também se aplicam
+                        aos estudantes público da Educação Especial</strong>. A resposta inclusiva é assegurar adaptações razoáveis,
+                        recursos e serviços de acessibilidade, e não criar automaticamente um currículo paralelo.
+                    </p>
+                    <p>
+                        O Decreto nº 12.686/2025, com a redação vigente após o Decreto nº 12.773/2025, determina que os recursos de
+                        acessibilidade sejam planejados para assegurar <strong>acesso ao currículo, participação nas atividades escolares
+                        e desenvolvimento da aprendizagem</strong>. O estudo de caso deve considerar barreiras, potencialidades e apoios.
+                    </p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/CurriculoAdaptadoAprendizagemDeficiencia.png" alt="Mapa mental — Currículo Adaptado, Aprendizagem e Deficiência">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/educacao-especial/CurriculoAdaptadoAprendizagemDeficiencia.png','_blank')">
+                        🔍 Ampliar mapa
+                    </button>
+                </div>
+
+                <div class="seduc-ee-mapa-web-v161">
+                    <div class="seduc-ee-mapa-web-centro-v161">
+                        <strong>🎯 RADAR FGV — O QUE A BANCA ESTÁ COBRANDO</strong>
+                        <small>Na prova SEDUC-SP 2026, a FGV cobrou diretamente DUA, antecipação de barreiras, diversidade no planejamento e os três princípios: engajamento, representação e ação/expressão.</small>
+                    </div>
+                    <div class="seduc-ee-ramos-v161">
+                        <article><strong>📚 Currículo comum</strong><span>É a referência. O estudante participa dos temas e objetivos da turma com acessibilidade, mediação, recursos e adaptações quando necessárias.</span></article>
+                        <article><strong>🧩 Adaptação</strong><span>Não é sinônimo de reduzir conteúdo. Deve responder à barreira identificada e preservar o objetivo de aprendizagem quando ele permanece pertinente.</span></article>
+                        <article><strong>🌈 DUA</strong><span>Planejar para a diversidade desde o início: múltiplas formas de engajamento, representação e ação/expressão. DUA beneficia a turma toda.</span></article>
+                        <article><strong>⚠️ DUA não elimina apoio individual</strong><span>Um planejamento amplo reduz barreiras gerais, mas recursos específicos, tecnologia assistiva e adaptações individualizadas continuam cabíveis quando necessários.</span></article>
+                        <article><strong>🚧 Barreiras</strong><span>Podem ser pedagógicas, metodológicas, comunicacionais, tecnológicas, atitudinais e arquitetônicas. Primeiro identifique a barreira; depois escolha o apoio.</span></article>
+                        <article><strong>📊 Avaliação inclusiva</strong><span>Objetivos e critérios claros, com instrumentos e formas de resposta acessíveis. Avaliar a aprendizagem, e não transformar a deficiência ou o formato do instrumento em obstáculo.</span></article>
+                        <article><strong>♿ Tecnologia assistiva</strong><span>Recursos e serviços devem ampliar funcionalidade, autonomia, acesso, participação e aprendizagem e podem ser utilizados na classe comum.</span></article>
+                        <article><strong>❌ Currículo paralelo</strong><span>Manter o aluno fisicamente na turma, mas sempre em tarefas simplificadas e desconectadas, pode produzir exclusão pedagógica dentro da classe comum.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaCurriculoV166">
+                    Li e revisei o Mapa 5 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesCurriculoSeducV166()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>
+        `;
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuCurriculoV166(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return;
+
+        const resumo = tela.querySelector(".seduc-ee-resumo-v161");
+        if(resumo){
+            resumo.innerHTML = `
+                <span><strong>135</strong> questões em 5 blocos</span>
+                <span><strong>5</strong> alternativas com feedback individual</span>
+                <span><strong>2026</strong> conteúdo e normas revisados</span>
+            `;
+        }
+
+        const lista = tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoCurriculoV166")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoCurriculoV166" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirCurriculoSeducEducacaoEspecialV166()">
+                    <span class="seduc-ee-numero-v161">5</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Currículo Adaptado, Aprendizagem e Deficiência</strong>
+                        <small>Currículo inclusivo • adaptações • flexibilização • DUA • barreiras • estratégias • avaliação • acessibilidade</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>
+            `);
+        }
+
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function"){
+            window.ordenarTopicosSeducEducacaoEspecialV165();
+        }
+    }
+
+    function instalarV166(){
+        garantirTelaMapaCurriculoV166();
+        atualizarMenuCurriculoV166();
+        if(typeof bancoQuestoes !== "undefined") bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    window.abrirCurriculoSeducEducacaoEspecialV166 = function(){
+        instalarV166();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaCurriculoV166");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+
+    window.voltarTopicosSeducEducacaoEspecialV166 = function(){
+        atualizarMenuCurriculoV166();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesCurriculoSeducV166 = function(){
+        const check = document.getElementById("confirmacaoMapaCurriculoV166");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 5 antes de iniciar as questões.");
+            return;
+        }
+
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const abrirDisciplinaAntesV166 = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAntesV166.apply(this, arguments);
+            if(nome === DISCIPLINA){
+                setTimeout(atualizarMenuCurriculoV166, 0);
+            }
+            return retorno;
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const abrirAssuntoAntesV166 = abrirAssunto;
+        abrirAssunto = function(assunto){
+            if(assunto === ASSUNTO){
+                window.abrirCurriculoSeducEducacaoEspecialV166();
+                return;
+            }
+            return abrirAssuntoAntesV166.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const voltarParaAssuntosAntesV166 = voltarParaAssuntos;
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === ASSUNTO || disciplinaAtual === ASSUNTO){
+                atualizarMenuCurriculoV166();
+                if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+                return;
+            }
+            return voltarParaAssuntosAntesV166.apply(this, arguments);
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV166);
+    if(document.readyState !== "loading") instalarV166();
+})();
+
+/* ==========================================================
+   FAROL V167 — SEDUC-PA 2026 / FGV
+   Professor Classe I — Educação Especial
+   Bloco 6: Processo de Inclusão no Ensino Regular
+   Fluxo: mapa mental completo -> 25 questões inéditas -> feedback específico.
+========================================================== */
+(function integrarInclusaoRegularSeducEducacaoEspecialV167(){
+    "use strict";
+
+    const TRILHA = "seducProfessorEducacaoEspecial";
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialInclusaoRegular";
+    const TELA_MAPA = "seducMapaInclusaoRegularV167";
+
+    const banco = Array.isArray(window.seducEducacaoEspecialInclusaoRegular2026)
+        ? window.seducEducacaoEspecialInclusaoRegular2026
+        : [];
+
+    if(typeof bancoQuestoes !== "undefined"){
+        bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    if(typeof mapasMentaisPorAssunto !== "undefined"){
+        mapasMentaisPorAssunto[ASSUNTO] = {
+            titulo: "🧠 Mapa 6 — Processo de Inclusão no Ensino Regular",
+            imagem: "imagens/mapas/seduc/educacao-especial/ProcessoInclusaoEnsinoRegular.png"
+        };
+    }
+
+    if(typeof trilhasPreparacaoFarol !== "undefined" && trilhasPreparacaoFarol[TRILHA]){
+        trilhasPreparacaoFarol[TRILHA].descricao =
+            "Preparação SEDUC-PA 2026 no estilo FGV. Blocos publicados: Fundamentos, Planejamento, Legislação, Diretrizes Nacionais, Currículo Adaptado e Processo de Inclusão no Ensino Regular.";
+    }
+
+    function garantirTelaMapaInclusaoV167(){
+        if(document.getElementById(TELA_MAPA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA_MAPA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-painel-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducEducacaoEspecialV167()">
+                    ⬅ Voltar aos tópicos
+                </button>
+
+                <span class="seduc-ee-selo-v161">SEDUC-PA 2026 • FGV • BLOCO 6</span>
+                <h2>🧠 Processo de Inclusão no Ensino Regular</h2>
+                <p class="seduc-ee-instrucao-mapa-v161">
+                    Revise o mapa antes de iniciar. Este bloco trabalha o processo inclusivo de forma aplicada:
+                    matrícula não basta; a FGV costuma explorar permanência, participação, aprendizagem, equidade,
+                    barreiras, AEE, profissional de apoio, família e situações de exclusão dentro da própria classe comum.
+                </p>
+
+                <div class="seduc-ee-aviso-v161" style="margin:16px 0;">
+                    <strong>🆕 Atualização normativa 2025/2026</strong>
+                    <p>
+                        A Política Nacional de Educação Especial Inclusiva vigente assegura o direito dos estudantes público da
+                        Educação Especial à inclusão em <strong>classes e escolas comuns, com o apoio necessário à participação,
+                        permanência e aprendizagem</strong>. A modalidade é transversal e a escola deve organizar o sistema geral
+                        para remover barreiras e garantir igualdade de oportunidades.
+                    </p>
+                    <p>
+                        O AEE é complementar à escolarização de pessoas com deficiência e TEA e suplementar à escolarização de
+                        estudantes com altas habilidades ou superdotação. Sua matrícula <strong>não substitui</strong> a matrícula e
+                        a frequência na classe comum. Em 2026, a oferta do AEE e a avaliação da necessidade de profissional de apoio
+                        não podem ser condicionadas à apresentação de laudo ou diagnóstico de saúde.
+                    </p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/ProcessoInclusaoEnsinoRegular.png" alt="Mapa mental — Processo de Inclusão no Ensino Regular">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/educacao-especial/ProcessoInclusaoEnsinoRegular.png','_blank')">
+                        🔍 Ampliar mapa
+                    </button>
+                </div>
+
+                <div class="seduc-ee-mapa-web-v161">
+                    <div class="seduc-ee-mapa-web-centro-v161">
+                        <strong>🎯 RADAR FGV — INCLUSÃO NÃO É SÓ MATRÍCULA</strong>
+                        <small>Nas provas de Educação Especial, a banca costuma colocar alternativas com uma parte verdadeira e um detalhe que transforma apoio em substituição, igualdade em uniformidade ou participação em simples presença física.</small>
+                    </div>
+                    <div class="seduc-ee-ramos-v161">
+                        <article><strong>🚪 Acesso</strong><span>Matrícula sem discriminação é o início. A inclusão precisa continuar com condições de permanência, participação e aprendizagem.</span></article>
+                        <article><strong>🤝 Participação</strong><span>O estudante deve integrar atividades, decisões, projetos e experiências curriculares. Estar na mesma sala não basta se ele permanece isolado.</span></article>
+                        <article><strong>🏫 Classe comum</strong><span>É espaço de escolarização. O currículo comum permanece como referência, com acessibilidade, recursos e adaptações quando necessárias.</span></article>
+                        <article><strong>🧩 AEE</strong><span>Identifica barreiras e organiza recursos e estratégias. Complementa ou suplementa a formação; não substitui matrícula ou frequência na classe comum.</span></article>
+                        <article><strong>⚖️ Equidade</strong><span>Apoios diferentes podem ser necessários para assegurar oportunidades reais. Mesmo diagnóstico não significa mesma necessidade de apoio.</span></article>
+                        <article><strong>🚧 Barreiras</strong><span>Atitudinais, pedagógicas, comunicacionais, arquitetônicas, tecnológicas e metodológicas. A resposta inclusiva atua sobre a barreira e o contexto.</span></article>
+                        <article><strong>👥 Família e estudante</strong><span>Participam da construção e do acompanhamento das estratégias; não são apenas informados ao final nem substituem a responsabilidade pedagógica da escola.</span></article>
+                        <article><strong>⚠️ Pegadinha FGV</strong><span>Desconfie de alternativas que usem laudo obrigatório, AEE substitutivo, redução automática do currículo, apoio como privilégio ou profissional de apoio como professor particular.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaInclusaoV167">
+                    Li e revisei o Mapa 6 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesInclusaoSeducV167()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>
+        `;
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuInclusaoV167(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return;
+
+        const resumo = tela.querySelector(".seduc-ee-resumo-v161");
+        if(resumo){
+            resumo.innerHTML = `
+                <span><strong>160</strong> questões em 6 blocos</span>
+                <span><strong>5</strong> alternativas com feedback individual</span>
+                <span><strong>FGV</strong> distratores revisados</span>
+            `;
+        }
+
+        const lista = tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoInclusaoV167")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoInclusaoV167" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirInclusaoSeducEducacaoEspecialV167()">
+                    <span class="seduc-ee-numero-v161">6</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Processo de Inclusão no Ensino Regular</strong>
+                        <small>Acesso • permanência • participação • classe comum • AEE • barreiras • apoios • equidade • família • colaboração</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>
+            `);
+        }
+
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function"){
+            window.ordenarTopicosSeducEducacaoEspecialV165();
+        }
+    }
+
+    function instalarV167(){
+        garantirTelaMapaInclusaoV167();
+        atualizarMenuInclusaoV167();
+        if(typeof bancoQuestoes !== "undefined") bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    window.abrirInclusaoSeducEducacaoEspecialV167 = function(){
+        instalarV167();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaInclusaoV167");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+
+    window.voltarTopicosSeducEducacaoEspecialV167 = function(){
+        atualizarMenuInclusaoV167();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesInclusaoSeducV167 = function(){
+        const check = document.getElementById("confirmacaoMapaInclusaoV167");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 6 antes de iniciar as questões.");
+            return;
+        }
+
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const abrirDisciplinaAntesV167 = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAntesV167.apply(this, arguments);
+            if(nome === DISCIPLINA){
+                setTimeout(atualizarMenuInclusaoV167, 0);
+            }
+            return retorno;
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const abrirAssuntoAntesV167 = abrirAssunto;
+        abrirAssunto = function(assunto){
+            if(assunto === ASSUNTO){
+                window.abrirInclusaoSeducEducacaoEspecialV167();
+                return;
+            }
+            return abrirAssuntoAntesV167.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const voltarParaAssuntosAntesV167 = voltarParaAssuntos;
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === ASSUNTO || disciplinaAtual === ASSUNTO){
+                atualizarMenuInclusaoV167();
+                if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+                return;
+            }
+            return voltarParaAssuntosAntesV167.apply(this, arguments);
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV167);
+    if(document.readyState !== "loading") instalarV167();
+})();
+
+/* ==========================================================
+   FAROL V168 — SEDUC-PA 2026 / FGV
+   Professor Classe I — Educação Especial
+   Bloco 7: Tendências Pedagógicas na Prática da Educação Especial
+   Integrada ao Currículo
+   Fluxo: mapa mental -> 25 questões inéditas -> feedback específico.
+========================================================== */
+(function integrarTendenciasCurriculoSeducEducacaoEspecialV168(){
+    "use strict";
+
+    const TRILHA = "seducProfessorEducacaoEspecial";
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialTendenciasCurriculo";
+    const TELA_MAPA = "seducMapaTendenciasCurriculoV168";
+
+    const banco = Array.isArray(window.seducEducacaoEspecialTendenciasCurriculo2026)
+        ? window.seducEducacaoEspecialTendenciasCurriculo2026
+        : [];
+
+    if(typeof bancoQuestoes !== "undefined"){
+        bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    if(typeof mapasMentaisPorAssunto !== "undefined"){
+        mapasMentaisPorAssunto[ASSUNTO] = {
+            titulo: "🧠 Mapa 7 — Tendências Pedagógicas na Educação Especial Integrada ao Currículo",
+            imagem: "imagens/mapas/seduc/educacao-especial/TendenciasPedagogicasEducacaoEspecialCurriculo.png"
+        };
+    }
+
+    if(typeof trilhasPreparacaoFarol !== "undefined" && trilhasPreparacaoFarol[TRILHA]){
+        trilhasPreparacaoFarol[TRILHA].descricao =
+            "Preparação SEDUC-PA 2026 para Educação Especial, com mapas mentais e questões no estilo FGV organizados por tópico do edital.";
+    }
+
+    function garantirTelaMapaTendenciasV168(){
+        if(document.getElementById(TELA_MAPA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA_MAPA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-painel-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducEducacaoEspecialV168()">
+                    ⬅ Voltar aos tópicos
+                </button>
+
+                <span class="seduc-ee-selo-v161">SEDUC-PA 2026 • FGV • BLOCO 7</span>
+                <h2>🧠 Tendências Pedagógicas na Prática da Educação Especial Integrada ao Currículo</h2>
+                <p class="seduc-ee-instrucao-mapa-v161">
+                    Este bloco não trata as tendências como uma lista para decorar. A FGV costuma apresentar uma prática concreta
+                    e exigir que o candidato reconheça a concepção pedagógica, o papel do professor e do estudante e, principalmente,
+                    as consequências dessa escolha para currículo, participação, avaliação e inclusão.
+                </p>
+
+                <div class="seduc-ee-aviso-v161" style="margin:16px 0;">
+                    <strong>⚠️ Distinção conceitual importante para a FGV</strong>
+                    <p>
+                        <strong>Tradicional, renovadora, tecnicista, libertadora, libertária e crítico-social dos conteúdos</strong>
+                        aparecem em classificações de tendências pedagógicas. Já <strong>constructivismo e sociointeracionismo</strong>
+                        são referenciais/concepções de aprendizagem e desenvolvimento que influenciam práticas, mas não devem ser
+                        confundidos mecanicamente com a taxonomia clássica das tendências.
+                    </p>
+                    <p>
+                        A perspectiva inclusiva atual não determina uma "metodologia única". O critério é se a prática assegura
+                        <strong>acesso ao currículo comum, participação, aprendizagem, equidade, acessibilidade e eliminação de barreiras</strong>.
+                        O Decreto nº 12.686/2025 explicita que BNCC e Diretrizes Curriculares aplicam-se aos estudantes público da
+                        Educação Especial.
+                    </p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/TendenciasPedagogicasEducacaoEspecialCurriculo.png" alt="Mapa mental — Tendências Pedagógicas na Educação Especial Integrada ao Currículo">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/educacao-especial/TendenciasPedagogicasEducacaoEspecialCurriculo.png','_blank')">
+                        🔍 Ampliar mapa
+                    </button>
+                </div>
+
+                <div class="seduc-ee-mapa-web-v161">
+                    <div class="seduc-ee-mapa-web-centro-v161">
+                        <strong>🎯 RADAR FGV — TEORIA + SITUAÇÃO DE SALA DE AULA</strong>
+                        <small>A banca pode usar uma metodologia aparentemente moderna como distrator. Projeto, grupo, tecnologia ou atividade ativa só são inclusivos quando todos participam do objetivo de aprendizagem com acessibilidade e apoios adequados.</small>
+                    </div>
+                    <div class="seduc-ee-ramos-v161">
+                        <article><strong>🏛️ Tradicional</strong><span>Transmissão, centralidade docente, memorização e disciplina. Cuidado: valorizar conteúdo não torna uma prática automaticamente tradicional.</span></article>
+                        <article><strong>⚙️ Tecnicista</strong><span>Eficiência, objetivos operacionais, padronização e controle de resultados. Tecnologia, sozinha, não significa tecnicismo.</span></article>
+                        <article><strong>🌱 Renovadora</strong><span>Experiência, atividade do estudante, problema e aprender fazendo. Metodologia ativa não garante inclusão por si só.</span></article>
+                        <article><strong>💬 Libertadora</strong><span>Diálogo, problematização, conscientização e transformação da realidade. Não confundir com libertária.</span></article>
+                        <article><strong>👥 Libertária</strong><span>Autogestão, experiência grupal, participação coletiva e crítica às estruturas autoritárias.</span></article>
+                        <article><strong>📚 Crítica</strong><span>Conhecimento sistematizado, mediação e relação com a prática social. Inclusão também é garantir acesso ao conhecimento escolar.</span></article>
+                        <article><strong>🧩 Sociointeracionismo</strong><span>Mediação, linguagem e interação social. É referencial de aprendizagem, não mera subcategoria de Libâneo.</span></article>
+                        <article><strong>♿ Inclusão</strong><span>Currículo comum + acessibilidade + diversificação + participação + altas expectativas + avaliação formativa + colaboração.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaTendenciasV168">
+                    Li e revisei o Mapa 7 e a distinção conceitual do Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesTendenciasSeducV168()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>
+        `;
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuTendenciasV168(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return;
+
+        const resumo = tela.querySelector(".seduc-ee-resumo-v161");
+        if(resumo){
+            resumo.innerHTML = `
+                <span><strong>185</strong> questões em 7 blocos</span>
+                <span><strong>5</strong> alternativas com feedback individual</span>
+                <span><strong>FGV</strong> distratores competitivos e sem pista de tamanho</span>
+            `;
+        }
+
+        const lista = tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoTendenciasV168")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoTendenciasV168" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirTendenciasSeducEducacaoEspecialV168()">
+                    <span class="seduc-ee-numero-v161">7</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Tendências Pedagógicas na Prática da Educação Especial Integrada ao Currículo</strong>
+                        <small>Tradicional • tecnicista • renovadora • progressistas • mediação • currículo comum • avaliação • inclusão</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>
+            `);
+        }
+
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function"){
+            window.ordenarTopicosSeducEducacaoEspecialV165();
+        }
+    }
+
+    function instalarV168(){
+        garantirTelaMapaTendenciasV168();
+        atualizarMenuTendenciasV168();
+        if(typeof bancoQuestoes !== "undefined") bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    window.abrirTendenciasSeducEducacaoEspecialV168 = function(){
+        instalarV168();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaTendenciasV168");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+
+    window.voltarTopicosSeducEducacaoEspecialV168 = function(){
+        atualizarMenuTendenciasV168();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesTendenciasSeducV168 = function(){
+        const check = document.getElementById("confirmacaoMapaTendenciasV168");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 7 antes de iniciar as questões.");
+            return;
+        }
+
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const abrirDisciplinaAntesV168 = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAntesV168.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(atualizarMenuTendenciasV168, 0);
+            return retorno;
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const abrirAssuntoAntesV168 = abrirAssunto;
+        abrirAssunto = function(assunto){
+            if(assunto === ASSUNTO){
+                window.abrirTendenciasSeducEducacaoEspecialV168();
+                return;
+            }
+            return abrirAssuntoAntesV168.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const voltarParaAssuntosAntesV168 = voltarParaAssuntos;
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === ASSUNTO || disciplinaAtual === ASSUNTO){
+                atualizarMenuTendenciasV168();
+                if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+                return;
+            }
+            return voltarParaAssuntosAntesV168.apply(this, arguments);
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV168);
+    if(document.readyState !== "loading") instalarV168();
+})();
+
+
+/* ==========================================================
+   FAROL V169 — LIMPEZA DA TELA DO ALUNO / SEDUC-PA
+   Remove indicadores técnicos de produção e mantém apenas
+   informações úteis para estudo.
+========================================================== */
+(function limparTelaAlunoSeducEducacaoEspecialV169(){
+    "use strict";
+
+    const DISCIPLINA = "seducEducacaoEspecial";
+
+    function limpar(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return;
+
+        const resumoTecnico = tela.querySelector(".seduc-ee-resumo-v161");
+        if(resumoTecnico) resumoTecnico.remove();
+
+        const texto = tela.querySelector(".seduc-ee-cabecalho-v161 p");
+        if(texto){
+            texto.innerHTML = 'Escolha um tópico abaixo. Primeiro revise o <strong>mapa mental</strong> e depois responda às questões para fixar o conteúdo e identificar o que ainda precisa revisar.';
+        }
+
+        const aviso = tela.querySelector(".seduc-ee-aviso-v161");
+        if(aviso){
+            aviso.innerHTML = '<strong>📚 Como estudar</strong><p>Revise o mapa mental, responda às questões e use o caderno de erros para retomar os pontos em que teve dificuldade.</p>';
+        }
+    }
+
+    if(typeof abrirDisciplina === "function"){
+        const abrirDisciplinaAntesV169 = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAntesV169.apply(this, arguments);
+            if(nome === DISCIPLINA){
+                setTimeout(limpar, 1);
+                setTimeout(limpar, 25);
+            }
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", () => setTimeout(limpar, 25));
+    if(document.readyState !== "loading") setTimeout(limpar, 25);
+})();

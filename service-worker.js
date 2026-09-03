@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v162-2026-09-01-seduc-educacao-especial-bloco2";
+const CACHE_VERSION = "farol-v169-2026-09-02-seduc-tela-aluno";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -14,8 +14,18 @@ const APP_SHELL = [
   "./offline.html",
   "./dados/seduc/educacao-especial/fundamentosEducacaoEspecial.js",
   "./dados/seduc/educacao-especial/planejamentoEducacaoEspecial.js",
+  "./dados/seduc/educacao-especial/legislacaoEducacaoEspecial.js",
+  "./dados/seduc/educacao-especial/diretrizesNacionaisEducacaoEspecial.js",
+  "./dados/seduc/educacao-especial/curriculoAdaptadoAprendizagemDeficiencia.js",
+  "./dados/seduc/educacao-especial/processoInclusaoEnsinoRegular.js",
+  "./dados/seduc/educacao-especial/tendenciasPedagogicasEducacaoEspecialCurriculo.js",
   "./imagens/mapas/seduc/educacao-especial/FundamentosEducacaoEspecial.png",
   "./imagens/mapas/seduc/educacao-especial/PlanejamentoEducacaoEspecial.png",
+  "./imagens/mapas/seduc/educacao-especial/LegislacaoEducacaoEspecial.png",
+  "./imagens/mapas/seduc/educacao-especial/DiretrizesNacionaisEducacaoEspecial.png",
+  "./imagens/mapas/seduc/educacao-especial/CurriculoAdaptadoAprendizagemDeficiencia.png",
+  "./imagens/mapas/seduc/educacao-especial/ProcessoInclusaoEnsinoRegular.png",
+  "./imagens/mapas/seduc/educacao-especial/TendenciasPedagogicasEducacaoEspecialCurriculo.png",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/icon-maskable-512.png"
