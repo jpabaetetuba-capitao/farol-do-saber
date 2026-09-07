@@ -49956,3 +49956,754 @@ limparArenaLocalFarol = function(){
     document.addEventListener("DOMContentLoaded", () => setTimeout(limpar, 25));
     if(document.readyState !== "loading") setTimeout(limpar, 25);
 })();
+
+
+/* ==========================================================
+   FAROL V171 — SEDUC-PA 2026 / FGV
+   EDUCAÇÃO ESPECIAL — BLOCO 8
+   AEE PARA ALUNOS COM DEFICIÊNCIA INTELECTUAL
+========================================================== */
+(function(){
+    "use strict";
+
+    const TRILHA = "seducProfessorEducacaoEspecial";
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialAeeDeficienciaIntelectual";
+    const TELA_MAPA = "seducMapaAeeDeficienciaIntelectualV171";
+    const banco = Array.isArray(window.seducEducacaoEspecialAeeDeficienciaIntelectual2026)
+        ? window.seducEducacaoEspecialAeeDeficienciaIntelectual2026
+        : [];
+
+    function registrarMapaV171(){
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "🧠 AEE para Alunos com Deficiência Intelectual",
+                imagem: "imagens/mapas/seduc/educacao-especial/AeeDeficienciaIntelectual.png"
+            };
+        }
+    }
+
+    function garantirTelaMapaAeeDiV171(){
+        if(document.getElementById(TELA_MAPA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA_MAPA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosAeeDiSeducV171()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">MAPA 8</span>
+                    <h2>Atendimento Educacional Especializado para alunos com Deficiência Intelectual</h2>
+                    <p>Revise finalidade do AEE, estudo de caso, PAEE/PEI, estratégias, recursos, avaliação, autonomia e participação na classe comum.</p>
+                </div>
+
+                <div class="seduc-ee-alerta-v161">
+                    <strong>📌 Atualização normativa 2026</strong>
+                    <p>Para estudantes com Deficiência Intelectual, o AEE é <strong>complementar</strong> à escolarização. O estudo de caso fundamenta <strong>PAEE e PEI</strong>, e a oferta do AEE <strong>não pode ser condicionada a laudo médico</strong>. Documentos de saúde, quando existentes, podem subsidiar a análise pedagógica.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/AeeDeficienciaIntelectual.png"
+                         alt="Mapa mental AEE para alunos com Deficiência Intelectual"
+                         class="seduc-ee-mapa-imagem-v161"
+                         loading="eager">
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — o que mais confunde</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>DI ≠ nota baixa</strong><span>Baixo rendimento isolado não define Deficiência Intelectual. Considere funcionamento adaptativo, contexto, barreiras, potencialidades e apoios.</span></article>
+                        <article><strong>AEE ≠ reforço</strong><span>O AEE complementa a escolarização; organiza recursos, estratégias e acessibilidade e não repete simplesmente a aula comum.</span></article>
+                        <article><strong>Classe comum</strong><span>É o espaço de escolarização. Separar sistematicamente o estudante ou oferecer currículo paralelo reduz participação e expectativas.</span></article>
+                        <article><strong>PAEE + PEI</strong><span>Derivam do estudo de caso e orientam classe comum, AEE, colaboração, acompanhamento e articulação intersetorial.</span></article>
+                        <article><strong>Laudo</strong><span>Pode subsidiar, mas não é condição para o estudo de caso, para o AEE ou para a organização pedagógica dos apoios.</span></article>
+                        <article><strong>Autonomia</strong><span>Não significa “fazer sozinho”. Significa ampliar escolhas, comunicação, funcionalidade e participação com apoios graduados.</span></article>
+                        <article><strong>Recursos</strong><span>Material concreto, apoio visual, CAA e Tecnologia Assistiva só fazem sentido quando respondem à barreira e ao objetivo pedagógico.</span></article>
+                        <article><strong>Avaliação</strong><span>Diversifique meios de resposta sem abandonar o objetivo de aprendizagem; use evidências para acompanhar e replanejar.</span></article>
+                    </div>
+                </div>
+
+                <div class="seduc-ee-alerta-v161">
+                    <strong>📝 Padrão observado nas provas FGV</strong>
+                    <p>Vitória/2024 cobrou individualidade do estudante, áreas cognitivas a potencializar, planejamento não restrito à SRM, autonomia, tecnologia e aprendizagem colaborativa. A SEDUC-SP/2026 cobrou estudante com DI na classe comum, AEE complementar, Tecnologia Assistiva, CAA e rejeição de tarefas separadas e expectativas reduzidas.</p>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaAeeDiV171">
+                    Li e revisei o Mapa 8 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesAeeDiSeducV171()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>
+        `;
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuAeeDiV171(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return;
+
+        const lista = tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoAeeDiV171")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoAeeDiV171" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirAeeDiSeducEducacaoEspecialV171()">
+                    <span class="seduc-ee-numero-v161">8</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Atendimento Educacional Especializado para alunos com Deficiência Intelectual</strong>
+                        <small>DI • AEE • estudo de caso • PAEE/PEI • autonomia • estratégias • recursos • avaliação • classe comum</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>
+            `);
+        }
+
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function"){
+            window.ordenarTopicosSeducEducacaoEspecialV165();
+        }
+    }
+
+    function instalarV171(){
+        registrarMapaV171();
+        garantirTelaMapaAeeDiV171();
+        atualizarMenuAeeDiV171();
+        if(typeof bancoQuestoes !== "undefined") bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    window.abrirAeeDiSeducEducacaoEspecialV171 = function(){
+        instalarV171();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaAeeDiV171");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+
+    window.voltarTopicosAeeDiSeducV171 = function(){
+        atualizarMenuAeeDiV171();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesAeeDiSeducV171 = function(){
+        const check = document.getElementById("confirmacaoMapaAeeDiV171");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 8 antes de iniciar as questões.");
+            return;
+        }
+
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const abrirDisciplinaAntesV171 = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAntesV171.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(atualizarMenuAeeDiV171, 0);
+            return retorno;
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const abrirAssuntoAntesV171 = abrirAssunto;
+        abrirAssunto = function(assunto){
+            if(assunto === ASSUNTO){
+                window.abrirAeeDiSeducEducacaoEspecialV171();
+                return;
+            }
+            return abrirAssuntoAntesV171.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const voltarParaAssuntosAntesV171 = voltarParaAssuntos;
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === ASSUNTO || disciplinaAtual === ASSUNTO){
+                atualizarMenuAeeDiV171();
+                if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+                return;
+            }
+            return voltarParaAssuntosAntesV171.apply(this, arguments);
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV171);
+    if(document.readyState !== "loading") instalarV171();
+})();
+
+
+/* ==========================================================
+   FAROL V172 — SEDUC-PA 2026 / FGV
+   EDUCAÇÃO ESPECIAL — BLOCO 9
+   DEFICIÊNCIA VISUAL: BAIXA VISÃO E CEGUEIRA
+========================================================== */
+(function(){
+    "use strict";
+
+    const TRILHA = "seducProfessorEducacaoEspecial";
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialDeficienciaVisual";
+    const TELA_MAPA = "seducMapaDeficienciaVisualV172";
+    const banco = Array.isArray(window.seducEducacaoEspecialDeficienciaVisual2026)
+        ? window.seducEducacaoEspecialDeficienciaVisual2026
+        : [];
+
+    function registrarMapaV172(){
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "👁️ Deficiência Visual — Baixa Visão e Cegueira",
+                imagem: "imagens/mapas/seduc/educacao-especial/DeficienciaVisualBaixaVisaoCegueira.png"
+            };
+        }
+    }
+
+    function garantirTelaMapaDeficienciaVisualV172(){
+        if(document.getElementById(TELA_MAPA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA_MAPA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosDeficienciaVisualSeducV172()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">MAPA 9</span>
+                    <h2>Deficiência Visual — Baixa Visão e Cegueira</h2>
+                    <p>Revise funcionamento visual, acessibilidade, Braille, recursos ópticos e não ópticos, tecnologia assistiva, audiodescrição, orientação e mobilidade, avaliação e participação na classe comum.</p>
+                </div>
+
+                <div class="seduc-ee-alerta-v161">
+                    <strong>📌 Atualização normativa 2026</strong>
+                    <p>O AEE para estudantes com deficiência visual é <strong>complementar</strong> à escolarização e não substitui a classe comum. O estudo de caso é pedagógico e <strong>não depende de laudo médico</strong>. A Lei nº 15.388/2026, novo PNE, reforça recursos de acessibilidade, profissionais com conhecimento do Sistema Braille, tecnologia assistiva e materiais acessíveis.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/DeficienciaVisualBaixaVisaoCegueira.png"
+                         alt="Mapa mental Deficiência Visual — Baixa Visão e Cegueira"
+                         class="seduc-ee-mapa-imagem-v161"
+                         loading="eager">
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — pontos de maior cobrança</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Baixa visão ≠ cegueira</strong><span>A resposta educacional considera funcionamento visual, tarefa e recursos. Não se decide apenas pela acuidade ou pelo diagnóstico.</span></article>
+                        <article><strong>Resíduo visual</strong><span>Visão funcional pode ser potencializada com ampliação, contraste, iluminação e outros recursos. Não se deve impor uma solução universal.</span></article>
+                        <article><strong>Braille</strong><span>Sistema tátil de leitura e escrita. A FGV já cobrou estrutura, grafia e aplicações; neste bloco, fixe os fundamentos.</span></article>
+                        <article><strong>Ópticos × não ópticos</strong><span>Lupas/lentes/telescópios são ópticos; contraste, iluminação, fonte ampliada e pauta ampliada são exemplos não ópticos.</span></article>
+                        <article><strong>Audiodescrição</strong><span>Traduz informação visual relevante em palavras. Não confunda audiodescrição com leitor de tela.</span></article>
+                        <article><strong>Tecnologia assistiva</strong><span>Leitor de tela, linha Braille e ampliação digital devem ser escolhidos pela funcionalidade na atividade real.</span></article>
+                        <article><strong>Orientação e mobilidade</strong><span>Busca deslocamento seguro, independente e autônomo; não substitui a obrigação de remover barreiras do ambiente.</span></article>
+                        <article><strong>Currículo comum</strong><span>Acessibilidade modifica o meio de acesso, não autoriza redução automática de conteúdo nem atividade paralela como regra.</span></article>
+                    </div>
+                </div>
+
+                <div class="seduc-ee-alerta-v161">
+                    <strong>📝 Como a FGV já cobrou Deficiência Visual</strong>
+                    <p>Na prova de Vitória/2024 para Educação Especial — Deficiência Visual, a banca cobrou baixa visão e cegueira, audiodescrição, orientação e mobilidade, atribuições do AEE, sorobã, Grafia Braille, acessibilidade e produção de textos em Braille. O banco do Farol reproduz <strong>o estilo de raciocínio e de distratores</strong>, mas com questões inéditas.</p>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaDeficienciaVisualV172">
+                    Li e revisei o Mapa 9 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesDeficienciaVisualSeducV172()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>
+        `;
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuDeficienciaVisualV172(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return;
+
+        const lista = tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoDeficienciaVisualV172")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoDeficienciaVisualV172" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirDeficienciaVisualSeducEducacaoEspecialV172()">
+                    <span class="seduc-ee-numero-v161">9</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Deficiência Visual — Baixa Visão e Cegueira</strong>
+                        <small>baixa visão • cegueira • Braille • recursos ópticos/não ópticos • TA • audiodescrição • OM • avaliação</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>
+            `);
+        }
+
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function"){
+            window.ordenarTopicosSeducEducacaoEspecialV165();
+        }
+    }
+
+    function instalarV172(){
+        registrarMapaV172();
+        garantirTelaMapaDeficienciaVisualV172();
+        atualizarMenuDeficienciaVisualV172();
+        if(typeof bancoQuestoes !== "undefined") bancoQuestoes[ASSUNTO] = banco;
+    }
+
+    window.abrirDeficienciaVisualSeducEducacaoEspecialV172 = function(){
+        instalarV172();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaDeficienciaVisualV172");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+
+    window.voltarTopicosDeficienciaVisualSeducV172 = function(){
+        atualizarMenuDeficienciaVisualV172();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesDeficienciaVisualSeducV172 = function(){
+        const check = document.getElementById("confirmacaoMapaDeficienciaVisualV172");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 9 antes de iniciar as questões.");
+            return;
+        }
+
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const abrirDisciplinaAntesV172 = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAntesV172.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(atualizarMenuDeficienciaVisualV172, 0);
+            return retorno;
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const abrirAssuntoAntesV172 = abrirAssunto;
+        abrirAssunto = function(assunto){
+            if(assunto === ASSUNTO){
+                window.abrirDeficienciaVisualSeducEducacaoEspecialV172();
+                return;
+            }
+            return abrirAssuntoAntesV172.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const voltarParaAssuntosAntesV172 = voltarParaAssuntos;
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === ASSUNTO || disciplinaAtual === ASSUNTO){
+                atualizarMenuDeficienciaVisualV172();
+                if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+                return;
+            }
+            return voltarParaAssuntosAntesV172.apply(this, arguments);
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV172);
+    if(document.readyState !== "loading") instalarV172();
+})();
+
+
+/* ==========================================================
+   FAROL V173 — SEDUC-PA 2026 / FGV
+   EDUCAÇÃO ESPECIAL — BLOCO 10
+   ABORDAGEM BILÍNGUE NA ESCOLARIZAÇÃO DE PESSOAS COM SURDEZ
+========================================================== */
+(function(){
+    "use strict";
+
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialEducacaoBilingueSurdez";
+    const TELA_MAPA = "seducMapaEducacaoBilingueSurdezV173";
+    const banco = Array.isArray(window.seducEducacaoEspecialEducacaoBilingueSurdez2026)
+        ? window.seducEducacaoEspecialEducacaoBilingueSurdez2026
+        : [];
+
+    function registrarMapaV173(){
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "🤟 Abordagem Bilíngue na Escolarização de Pessoas com Surdez",
+                imagem: "imagens/mapas/seduc/educacao-especial/EducacaoBilingueSurdez.png"
+            };
+        }
+    }
+
+    function garantirTelaMapaV173(){
+        if(document.getElementById(TELA_MAPA)) return;
+        const tela=document.createElement("section");
+        tela.id=TELA_MAPA;
+        tela.className="tela";
+        tela.innerHTML=`
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosEducacaoBilingueSurdezV173()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">MAPA 10</span>
+                    <h2>Abordagem Bilíngue na Escolarização de Pessoas com Surdez</h2>
+                    <p>Revise Libras como L1 e língua de instrução, português escrito como L2, público da modalidade, profissionais, avaliação, AEE bilíngue, identidade e cultura surda.</p>
+                </div>
+
+                <div class="seduc-ee-alerta-v161">
+                    <strong>📌 Atualização 2026</strong>
+                    <p>O novo PNE (Lei nº 15.388/2026) criou metas e estratégias específicas para a Educação Bilíngue de Surdos. O Inep também reforçou em 2026 que <strong>turma curricular bilíngue não é a mesma coisa que turma de AEE</strong> e que a modalidade não se reduz à presença de intérprete.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/EducacaoBilingueSurdez.png"
+                         alt="Mapa mental Abordagem Bilíngue na Escolarização de Pessoas com Surdez"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — onde a banca aperta</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Libras L1</strong><span>Não é mero recurso visual: na modalidade bilíngue, ocupa função de instrução, interação, comunicação e ensino.</span></article>
+                        <article><strong>Português escrito L2</strong><span>A legislação fala em modalidade escrita. Não confunda educação bilíngue com oralismo ou português sinalizado.</span></article>
+                        <article><strong>Intérprete ≠ professor</strong><span>Tradução/interpretação é função distinta da docência; a presença de TILS não transforma sozinha uma classe em turma bilíngue.</span></article>
+                        <article><strong>Turma bilíngue ≠ AEE</strong><span>A primeira é escolarização curricular; o AEE bilíngue é apoio especializado quando necessário.</span></article>
+                        <article><strong>Avaliação</strong><span>Português L2 exige critérios coerentes; conhecimentos podem ser expressos em Libras e registrados em vídeo/meios tecnológicos.</span></article>
+                        <article><strong>Escolha</strong><span>A modalidade não elimina a prerrogativa de matrícula regular conforme decisão do estudante ou responsáveis.</span></article>
+                        <article><strong>PNE 2026</strong><span>Meta 10.d: alfabetização em Libras L1 até o 1º ano e em português escrito L2 até o final do 2º ano.</span></article>
+                        <article><strong>FGV Vitória/2024</strong><span>A banca cobrou história da educação de surdos, legislação, Libras, AEE, profissionais e situações pedagógicas contextualizadas.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaEducacaoBilingueSurdezV173">
+                    Li e revisei o Mapa 10 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesEducacaoBilingueSurdezV173()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuV173(){
+        const tela=document.getElementById(DISCIPLINA);
+        if(!tela) return;
+        const lista=tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoEducacaoBilingueSurdezV173")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoEducacaoBilingueSurdezV173" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirEducacaoBilingueSurdezV173()">
+                    <span class="seduc-ee-numero-v161">10</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Abordagem Bilíngue na Escolarização de Pessoas com Surdez</strong>
+                        <small>Libras L1 • português escrito L2 • legislação • profissionais • avaliação • AEE bilíngue • PNE 2026</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>`);
+        }
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function") window.ordenarTopicosSeducEducacaoEspecialV165();
+    }
+
+    function instalarV173(){
+        registrarMapaV173();
+        garantirTelaMapaV173();
+        atualizarMenuV173();
+        if(typeof bancoQuestoes !== "undefined") bancoQuestoes[ASSUNTO]=banco;
+    }
+
+    window.abrirEducacaoBilingueSurdezV173=function(){
+        instalarV173();
+        assuntoAtual=ASSUNTO; disciplinaAtual=ASSUNTO;
+        const c=document.getElementById("confirmacaoMapaEducacaoBilingueSurdezV173"); if(c) c.checked=false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+    window.voltarTopicosEducacaoBilingueSurdezV173=function(){
+        atualizarMenuV173(); if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+    window.iniciarQuestoesEducacaoBilingueSurdezV173=function(){
+        const c=document.getElementById("confirmacaoMapaEducacaoBilingueSurdezV173");
+        if(!c || !c.checked){ if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 10 antes de iniciar as questões."); return; }
+        assuntoAtual=ASSUNTO; disciplinaAtual=ASSUNTO;
+        const cp=document.getElementById("confirmacaoMapa"); if(cp) cp.checked=true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const ant=abrirDisciplina; abrirDisciplina=function(nome){ const r=ant.apply(this,arguments); if(nome===DISCIPLINA) setTimeout(atualizarMenuV173,0); return r; };
+    }
+    if(typeof abrirAssunto === "function"){
+        const ant=abrirAssunto; abrirAssunto=function(assunto){ if(assunto===ASSUNTO){ window.abrirEducacaoBilingueSurdezV173(); return; } return ant.apply(this,arguments); };
+    }
+    if(typeof voltarParaAssuntos === "function"){
+        const ant=voltarParaAssuntos; voltarParaAssuntos=function(){ if(assuntoAtual===ASSUNTO || disciplinaAtual===ASSUNTO){ atualizarMenuV173(); if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA); return; } return ant.apply(this,arguments); };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV173);
+    if(document.readyState !== "loading") instalarV173();
+})();
+
+
+/* ==========================================================
+   FAROL V174 — SEDUC-PA 2026 / FGV
+   EDUCAÇÃO ESPECIAL — BLOCO 11
+   SURDOCEGUEIRA E DEFICIÊNCIA MÚLTIPLA
+========================================================== */
+(function(){
+    "use strict";
+
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialSurdocegueiraDeficienciaMultipla";
+    const TELA_MAPA = "seducMapaSurdocegueiraDeficienciaMultiplaV174";
+    const banco = Array.isArray(window.seducEducacaoEspecialSurdocegueiraDeficienciaMultipla2026)
+        ? window.seducEducacaoEspecialSurdocegueiraDeficienciaMultipla2026
+        : [];
+
+    function registrarMapaV174(){
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "🧩 Surdocegueira e Deficiência Múltipla",
+                imagem: "imagens/mapas/seduc/educacao-especial/SurdocegueiraDeficienciaMultipla.png"
+            };
+        }
+    }
+
+    function garantirTelaMapaV174(){
+        if(document.getElementById(TELA_MAPA)) return;
+        const tela=document.createElement("section");
+        tela.id=TELA_MAPA;
+        tela.className="tela";
+        tela.innerHTML=`
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSurdocegueiraDeficienciaMultiplaV174()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">MAPA 11</span>
+                    <h2>Surdocegueira e Deficiência Múltipla</h2>
+                    <p>Revise condição única, deficiência múltipla, comunicação tátil/multimodal, guia-intérprete, orientação e mobilidade, AEE, CAA, avaliação funcional e inclusão.</p>
+                </div>
+
+                <div class="seduc-ee-alerta-v161">
+                    <strong>📌 Atualização 2026</strong>
+                    <p>O Inep registra <strong>surdocegueira como tipo próprio de deficiência</strong>; já a deficiência múltipla é identificada automaticamente no Educacenso quando mais de uma deficiência é declarada. A Lei nº 14.951/2024 prevê bengala <strong>vermelha e branca</strong> para surdocegueira.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/SurdocegueiraDeficienciaMultipla.png"
+                         alt="Mapa mental Surdocegueira e Deficiência Múltipla"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — onde a banca aperta</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Condição única</strong><span>Surdocegueira não é simples soma de surdez + cegueira; comunicação, informação e mobilidade exigem leitura integrada.</span></article>
+                        <article><strong>Comunicação</strong><span>Libras tátil, campo reduzido, alfabeto manual tátil, Tadoma, Braille, CAA e outros recursos dependem do perfil funcional.</span></article>
+                        <article><strong>FGV 2014</strong><span>A banca já cobrou adaptação do espaço de sinalização, acesso tátil aos sinais e Tadoma.</span></article>
+                        <article><strong>Guia-intérprete</strong><span>Media comunicação, informação e mobilidade quando necessário; não assume regência nem decide pelo estudante.</span></article>
+                        <article><strong>Deficiência múltipla</strong><span>Associação de duas ou mais deficiências; pedagogicamente, não se reduz à soma de diagnósticos.</span></article>
+                        <article><strong>AEE</strong><span>É complementar para estudantes com deficiência e pode articular CAA, Braille, OM e TA, sem substituir a classe comum.</span></article>
+                        <article><strong>Censo 2026</strong><span>Surdocegueira é campo próprio; múltipla é resultado automático quando há mais de uma deficiência declarada.</span></article>
+                        <article><strong>Bengala</strong><span>Lei 14.951/2024: branca = cegueira; verde = baixa visão; vermelha + branca = surdocegueira.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaSurdocegueiraDeficienciaMultiplaV174">
+                    Li e revisei o Mapa 11 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesSurdocegueiraDeficienciaMultiplaV174()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuV174(){
+        const tela=document.getElementById(DISCIPLINA);
+        if(!tela) return;
+        const lista=tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoSurdocegueiraDeficienciaMultiplaV174")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoSurdocegueiraDeficienciaMultiplaV174" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirSurdocegueiraDeficienciaMultiplaV174()">
+                    <span class="seduc-ee-numero-v161">11</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Surdocegueira e Deficiência Múltipla</strong>
+                        <small>condição única • comunicação tátil • guia-intérprete • deficiência múltipla • OM • CAA • AEE • Censo 2026</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>`);
+        }
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function") window.ordenarTopicosSeducEducacaoEspecialV165();
+    }
+
+    function instalarV174(){
+        registrarMapaV174();
+        garantirTelaMapaV174();
+        atualizarMenuV174();
+        if(typeof bancoQuestoes !== "undefined") bancoQuestoes[ASSUNTO]=banco;
+    }
+
+    window.abrirSurdocegueiraDeficienciaMultiplaV174=function(){
+        instalarV174();
+        assuntoAtual=ASSUNTO; disciplinaAtual=ASSUNTO;
+        const c=document.getElementById("confirmacaoMapaSurdocegueiraDeficienciaMultiplaV174"); if(c) c.checked=false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+    window.voltarTopicosSurdocegueiraDeficienciaMultiplaV174=function(){
+        atualizarMenuV174(); if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+    window.iniciarQuestoesSurdocegueiraDeficienciaMultiplaV174=function(){
+        const c=document.getElementById("confirmacaoMapaSurdocegueiraDeficienciaMultiplaV174");
+        if(!c || !c.checked){ if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 11 antes de iniciar as questões."); return; }
+        assuntoAtual=ASSUNTO; disciplinaAtual=ASSUNTO;
+        const cp=document.getElementById("confirmacaoMapa"); if(cp) cp.checked=true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const ant=abrirDisciplina; abrirDisciplina=function(nome){ const r=ant.apply(this,arguments); if(nome===DISCIPLINA) setTimeout(atualizarMenuV174,0); return r; };
+    }
+    if(typeof abrirAssunto === "function"){
+        const ant=abrirAssunto; abrirAssunto=function(assunto){ if(assunto===ASSUNTO){ window.abrirSurdocegueiraDeficienciaMultiplaV174(); return; } return ant.apply(this,arguments); };
+    }
+    if(typeof voltarParaAssuntos === "function"){
+        const ant=voltarParaAssuntos; voltarParaAssuntos=function(){ if(assuntoAtual===ASSUNTO || disciplinaAtual===ASSUNTO){ atualizarMenuV174(); if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA); return; } return ant.apply(this,arguments); };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV174);
+    if(document.readyState !== "loading") instalarV174();
+})();
+
+
+/* ==========================================================
+   FAROL V175 — SEDUC-PA 2026 / FGV
+   EDUCAÇÃO ESPECIAL — BLOCO 12
+   RECURSOS PEDAGÓGICOS ACESSÍVEIS E COMUNICAÇÃO AUMENTATIVA E ALTERNATIVA (CAA)
+========================================================== */
+(function(){
+    "use strict";
+
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialRecursosPedagogicosAcessiveisCAA";
+    const TELA_MAPA = "seducMapaRecursosPedagogicosAcessiveisCAAV175";
+    const banco = Array.isArray(window.seducEducacaoEspecialRecursosPedagogicosAcessiveisCAA2026)
+        ? window.seducEducacaoEspecialRecursosPedagogicosAcessiveisCAA2026 : [];
+
+    function registrarMapaV175(){
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "💬 Recursos Pedagógicos Acessíveis e CAA",
+                imagem: "imagens/mapas/seduc/educacao-especial/RecursosPedagogicosAcessiveisCAA.png"
+            };
+        }
+    }
+
+    function garantirTelaMapaV175(){
+        if(document.getElementById(TELA_MAPA)) return;
+        const tela=document.createElement("section");
+        tela.id=TELA_MAPA; tela.className="tela";
+        tela.innerHTML=`
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosRecursosAcessiveisCAAV175()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">MAPA 12</span>
+                    <h2>Recursos Pedagógicos Acessíveis e Comunicação Aumentativa e Alternativa (CAA)</h2>
+                    <p>Revise CAA, baixa e alta tecnologia, pictogramas, pranchas, vocalizadores, formas de acesso, parceiros de comunicação, generalização, AEE e acessibilidade comunicacional.</p>
+                </div>
+
+                <div class="seduc-ee-alerta-v161">
+                    <strong>📌 Correção normativa importante do mapa visual</strong>
+                    <p>No quadro “Base legal”, onde a imagem menciona <strong>Lei nº 14.126/2021 como política de CAA</strong>, considere a referência correta: <strong>Lei nº 15.249/2025</strong>. Essa lei alterou a Lei de Acessibilidade e a LBI para tratar expressamente de pessoas com necessidades complexas de comunicação e de sistemas de CAA de baixa tecnologia, inclusive no AEE.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/RecursosPedagogicosAcessiveisCAA.png"
+                         alt="Mapa mental Recursos Pedagógicos Acessíveis e Comunicação Aumentativa e Alternativa"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — cobrança real em 2026</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Etapas da CAA</strong><span>A FGV/SEDUC-SP 2026 cobrou avaliação inicial → escolha do sistema → treinamento dos parceiros → integração nos contextos.</span></article>
+                        <article><strong>Parceiros</strong><span>Professor, família, cuidadores e equipe precisam modelar o sistema, aguardar respostas e criar oportunidades de comunicação.</span></article>
+                        <article><strong>Generalização</strong><span>CAA não deve ficar somente no AEE: precisa circular por sala comum, recreio, alimentação e demais rotinas.</span></article>
+                        <article><strong>Baixa tecnologia</strong><span>Pranchas e cartões impressos também são CAA e Tecnologia Assistiva; não confunda TA com equipamento sofisticado.</span></article>
+                        <article><strong>Lei 15.249/2025</strong><span>Nova previsão literal na LBI: CAA de baixa tecnologia no AEE para estudantes com necessidades complexas de comunicação.</span></article>
+                        <article><strong>Acesso</strong><span>Apontar com o dedo é só uma forma. Pode haver seleção pelo olhar, varredura, acionadores e outras adaptações.</span></article>
+                        <article><strong>Vocabulário</strong><span>Não limite comunicação a pedir água/banheiro. O estudante precisa comentar, perguntar, negar, participar e expressar conhecimento.</span></article>
+                        <article><strong>AEE</strong><span>Organiza recursos de acessibilidade e ensina seu uso, mas não substitui classe comum nem cria currículo paralelo.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaRecursosAcessiveisCAAV175">
+                    Li e revisei o Mapa 12, a correção normativa e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesRecursosAcessiveisCAAV175()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuV175(){
+        const tela=document.getElementById(DISCIPLINA); if(!tela) return;
+        const lista=tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoRecursosAcessiveisCAAV175")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoRecursosAcessiveisCAAV175" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirRecursosAcessiveisCAAV175()">
+                    <span class="seduc-ee-numero-v161">12</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Recursos Pedagógicos Acessíveis e Comunicação Aumentativa e Alternativa (CAA)</strong>
+                        <small>CAA • pranchas • pictogramas • baixa/alta tecnologia • parceiros • acesso • AEE • Lei 15.249/2025</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>`);
+        }
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function") window.ordenarTopicosSeducEducacaoEspecialV165();
+    }
+
+    function instalarV175(){
+        registrarMapaV175(); garantirTelaMapaV175(); atualizarMenuV175();
+        if(typeof bancoQuestoes !== "undefined") bancoQuestoes[ASSUNTO]=banco;
+    }
+
+    window.abrirRecursosAcessiveisCAAV175=function(){
+        instalarV175(); assuntoAtual=ASSUNTO; disciplinaAtual=ASSUNTO;
+        const c=document.getElementById("confirmacaoMapaRecursosAcessiveisCAAV175"); if(c) c.checked=false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+    window.voltarTopicosRecursosAcessiveisCAAV175=function(){ atualizarMenuV175(); if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA); };
+    window.iniciarQuestoesRecursosAcessiveisCAAV175=function(){
+        const c=document.getElementById("confirmacaoMapaRecursosAcessiveisCAAV175");
+        if(!c || !c.checked){ if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 12 antes de iniciar as questões."); return; }
+        assuntoAtual=ASSUNTO; disciplinaAtual=ASSUNTO;
+        const cp=document.getElementById("confirmacaoMapa"); if(cp) cp.checked=true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const ant=abrirDisciplina; abrirDisciplina=function(nome){ const r=ant.apply(this,arguments); if(nome===DISCIPLINA) setTimeout(atualizarMenuV175,0); return r; };
+    }
+    if(typeof abrirAssunto === "function"){
+        const ant=abrirAssunto; abrirAssunto=function(assunto){ if(assunto===ASSUNTO){ window.abrirRecursosAcessiveisCAAV175(); return; } return ant.apply(this,arguments); };
+    }
+    if(typeof voltarParaAssuntos === "function"){
+        const ant=voltarParaAssuntos; voltarParaAssuntos=function(){ if(assuntoAtual===ASSUNTO || disciplinaAtual===ASSUNTO){ atualizarMenuV175(); if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA); return; } return ant.apply(this,arguments); };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV175);
+    if(document.readyState !== "loading") instalarV175();
+})();
