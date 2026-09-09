@@ -50707,3 +50707,418 @@ limparArenaLocalFarol = function(){
     document.addEventListener("DOMContentLoaded", instalarV175);
     if(document.readyState !== "loading") instalarV175();
 })();
+
+
+/* ==========================================================
+   FAROL V176 — SEDUC-PA 2026 / FGV
+   EDUCAÇÃO ESPECIAL — BLOCO 13
+   ORIENTAÇÃO E MOBILIDADE, ADEQUAÇÃO POSTURAL E ACESSIBILIDADE ESPACIAL
+========================================================== */
+(function(){
+    "use strict";
+
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialOrientacaoMobilidadePosturalAcessibilidade";
+    const TELA_MAPA = "seducMapaOrientacaoMobilidadePosturalAcessibilidadeV176";
+    const banco = Array.isArray(window.seducEducacaoEspecialOrientacaoMobilidadePosturalAcessibilidade2026)
+        ? window.seducEducacaoEspecialOrientacaoMobilidadePosturalAcessibilidade2026 : [];
+
+    function registrarMapaV176(){
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "♿ Orientação e Mobilidade, Adequação Postural e Acessibilidade Espacial",
+                imagem: "imagens/mapas/seduc/educacao-especial/OrientacaoMobilidadeAdequacaoPosturalAcessibilidade.png"
+            };
+        }
+    }
+
+    function garantirTelaMapaV176(){
+        if(document.getElementById(TELA_MAPA)) return;
+        const tela=document.createElement("section");
+        tela.id=TELA_MAPA; tela.className="tela";
+        tela.innerHTML=`
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosOrientacaoMobilidadePosturalAcessibilidadeV176()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">MAPA 13</span>
+                    <h2>Orientação e Mobilidade, Adequação Postural e Acessibilidade Espacial</h2>
+                    <p>Revise O&amp;M, guia vidente, pistas ambientais, autonomia, adequação postural, mobiliário, rotas acessíveis, desenho universal, barreiras arquitetônicas e trabalho colaborativo.</p>
+                </div>
+
+                <div class="seduc-ee-alerta-v161">
+                    <strong>📌 Atualização normativa 2026 — atenção ao mapa</strong>
+                    <p>O mapa visual ainda cita o <strong>Decreto nº 7.611/2011</strong>. Em 2026, considere a atualização correta: esse decreto foi <strong>revogado expressamente pelo art. 23 do Decreto nº 12.686/2025</strong>. Para o AEE e a Política Nacional de Educação Especial Inclusiva, use o Decreto nº 12.686/2025, com as alterações do Decreto nº 12.773/2025.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/OrientacaoMobilidadeAdequacaoPosturalAcessibilidade.png"
+                         alt="Mapa mental Orientação e Mobilidade, Adequação Postural e Acessibilidade Espacial"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — cobrança real da banca</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>O&amp;M</strong><span>FGV/Vitória 2024 cobrou técnica do guia vidente e procedimentos de orientação e mobilidade em formato V/F.</span></article>
+                        <article><strong>Guia vidente</strong><span>A pessoa cega participa ativamente da técnica; não deve ser puxada ou conduzida passivamente.</span></article>
+                        <article><strong>Adequação postural</strong><span>A FGV já cobrou diretamente esse ramo da Tecnologia Assistiva, ligado à avaliação, indicação de recursos e funcionalidade.</span></article>
+                        <article><strong>Barreiras</strong><span>Rampa isolada não basta. A banca pode testar circulação, portas, mobiliário, sanitários, laboratórios e uso real da rota acessível.</span></article>
+                        <article><strong>Desenho Universal</strong><span>Na LBI, é regra geral; adaptação razoável entra quando o desenho universal comprovadamente não puder ser empreendido.</span></article>
+                        <article><strong>TA</strong><span>Mobilidade, adequação postural e acessibilidade arquitetônica integram o campo da Tecnologia Assistiva aplicada à escola.</span></article>
+                        <article><strong>Funcionalidade</strong><span>O recurso deve melhorar o que o estudante consegue fazer na atividade, não apenas aproximar seu corpo ou comportamento de um padrão.</span></article>
+                        <article><strong>Atualização 2026</strong><span>Decreto 7.611/2011 foi revogado; o marco federal atual é o Decreto 12.686/2025, alterado pelo 12.773/2025.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaOrientacaoMobilidadePosturalAcessibilidadeV176">
+                    Li e revisei o Mapa 13, a atualização normativa e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesOrientacaoMobilidadePosturalAcessibilidadeV176()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuV176(){
+        const tela=document.getElementById(DISCIPLINA); if(!tela) return;
+        const lista=tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoOrientacaoMobilidadePosturalAcessibilidadeV176")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoOrientacaoMobilidadePosturalAcessibilidadeV176" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirOrientacaoMobilidadePosturalAcessibilidadeV176()">
+                    <span class="seduc-ee-numero-v161">13</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Orientação e Mobilidade, Adequação Postural e Acessibilidade Espacial</strong>
+                        <small>O&amp;M • guia vidente • adequação postural • mobiliário • rota acessível • desenho universal • TA • FGV</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>`);
+        }
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function") window.ordenarTopicosSeducEducacaoEspecialV165();
+    }
+
+    function instalarV176(){
+        registrarMapaV176(); garantirTelaMapaV176(); atualizarMenuV176();
+        if(typeof bancoQuestoes !== "undefined") bancoQuestoes[ASSUNTO]=banco;
+    }
+
+    window.abrirOrientacaoMobilidadePosturalAcessibilidadeV176=function(){
+        instalarV176(); assuntoAtual=ASSUNTO; disciplinaAtual=ASSUNTO;
+        const c=document.getElementById("confirmacaoMapaOrientacaoMobilidadePosturalAcessibilidadeV176"); if(c) c.checked=false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+    window.voltarTopicosOrientacaoMobilidadePosturalAcessibilidadeV176=function(){ atualizarMenuV176(); if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA); };
+    window.iniciarQuestoesOrientacaoMobilidadePosturalAcessibilidadeV176=function(){
+        const c=document.getElementById("confirmacaoMapaOrientacaoMobilidadePosturalAcessibilidadeV176");
+        if(!c || !c.checked){ if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 13 antes de iniciar as questões."); return; }
+        assuntoAtual=ASSUNTO; disciplinaAtual=ASSUNTO;
+        const cp=document.getElementById("confirmacaoMapa"); if(cp) cp.checked=true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const ant=abrirDisciplina; abrirDisciplina=function(nome){ const r=ant.apply(this,arguments); if(nome===DISCIPLINA) setTimeout(atualizarMenuV176,0); return r; };
+    }
+    if(typeof abrirAssunto === "function"){
+        const ant=abrirAssunto; abrirAssunto=function(assunto){ if(assunto===ASSUNTO){ window.abrirOrientacaoMobilidadePosturalAcessibilidadeV176(); return; } return ant.apply(this,arguments); };
+    }
+    if(typeof voltarParaAssuntos === "function"){
+        const ant=voltarParaAssuntos; voltarParaAssuntos=function(){ if(assuntoAtual===ASSUNTO || disciplinaAtual===ASSUNTO){ atualizarMenuV176(); if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA); return; } return ant.apply(this,arguments); };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV176);
+    if(document.readyState !== "loading") instalarV176();
+})();
+
+
+/* ==========================================================
+   FAROL V177 — SEDUC-PA 2026 / FGV
+   EDUCAÇÃO ESPECIAL — BLOCO 14
+   LIVRO ACESSÍVEL E INFORMÁTICA ACESSÍVEL
+========================================================== */
+(function(){
+    "use strict";
+
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialLivroInformaticaAcessivel";
+    const TELA_MAPA = "seducMapaLivroInformaticaAcessivelV177";
+    const banco = Array.isArray(window.seducEducacaoEspecialLivroInformaticaAcessivel2026)
+        ? window.seducEducacaoEspecialLivroInformaticaAcessivel2026 : [];
+
+    function registrarMapaV177(){
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "📚 Livro Acessível e Informática Acessível",
+                imagem: "imagens/mapas/seduc/educacao-especial/LivroAcessivelInformaticaAcessivel.png"
+            };
+        }
+    }
+
+    function garantirTelaMapaV177(){
+        if(document.getElementById(TELA_MAPA)) return;
+        const tela=document.createElement("section");
+        tela.id=TELA_MAPA; tela.className="tela";
+        tela.innerHTML=`
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosLivroInformaticaAcessivelV177()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">MAPA 14</span>
+                    <h2>Livro Acessível e Informática Acessível</h2>
+                    <p>Revise formatos acessíveis, Braille, fonte ampliada, audiodescrição, livros digitais, leitores e ampliadores de tela, DOSVOX, navegação por teclado, documentos acessíveis e autonomia digital.</p>
+                </div>
+
+                <div class="seduc-ee-alerta-v161">
+                    <strong>📌 Correção normativa importante do mapa visual</strong>
+                    <p>No quadro “Base legal”, desconsidere a indicação <strong>Lei nº 14.126/2021 como política de CAA</strong>. A Lei nº 14.126/2021 trata da <strong>visão monocular</strong>. Para este bloco, a referência central sobre livros em formatos acessíveis é a <strong>Lei Brasileira de Inclusão, art. 68</strong>. A Lei nº 15.249/2025, já estudada no Bloco 12, trata de CAA de baixa tecnologia.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/LivroAcessivelInformaticaAcessivel.png"
+                         alt="Mapa mental Livro Acessível e Informática Acessível"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — como a banca já cobrou</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Leitor de tela</strong><span>A FGV já cobrou sua função com voz sintetizada e acesso às informações da tela.</span></article>
+                        <article><strong>Ampliador</strong><span>Também cobrou zoom, contraste e ajustes visuais voltados ao uso da visão residual.</span></article>
+                        <article><strong>DOSVOX</strong><span>FGV/Macaé 2024 perguntou diretamente a que público essa tecnologia assistiva se destina.</span></article>
+                        <article><strong>Audiodescrição</strong><span>A banca já distinguiu audiodescrição de legenda, Braille e outros recursos de comunicação.</span></article>
+                        <article><strong>Recursos de informática</strong><span>FGV já associou teclado com colmeia, acionador, mouse adaptado e lupa eletrônica às respectivas funcionalidades.</span></article>
+                        <article><strong>Livro acessível</strong><span>LBI art. 68: arquivo deve funcionar com TA e permitir voz sintetizada, ampliação, contraste e impressão em Braille.</span></article>
+                        <article><strong>Barreira digital</strong><span>Ter leitor de tela não basta se PDF, botões, formulários ou ordem de navegação continuam inacessíveis.</span></article>
+                        <article><strong>Atualização 2026</strong><span>MEC/FNDE concluíram em julho a postagem dos livros didáticos Braille-tinta previstos para 2026.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaLivroInformaticaAcessivelV177">
+                    Li e revisei o Mapa 14, a correção normativa e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesLivroInformaticaAcessivelV177()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuV177(){
+        const tela=document.getElementById(DISCIPLINA); if(!tela) return;
+        const lista=tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoLivroInformaticaAcessivelV177")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoLivroInformaticaAcessivelV177" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirLivroInformaticaAcessivelV177()">
+                    <span class="seduc-ee-numero-v161">14</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Livro Acessível e Informática Acessível</strong>
+                        <small>Braille • fonte ampliada • livro digital • audiodescrição • leitor/ampliador de tela • DOSVOX • teclado • acessibilidade digital</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>`);
+        }
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function") window.ordenarTopicosSeducEducacaoEspecialV165();
+    }
+
+    function instalarV177(){
+        registrarMapaV177(); garantirTelaMapaV177(); atualizarMenuV177();
+        if(typeof bancoQuestoes !== "undefined") bancoQuestoes[ASSUNTO]=banco;
+    }
+
+    window.abrirLivroInformaticaAcessivelV177=function(){
+        instalarV177(); assuntoAtual=ASSUNTO; disciplinaAtual=ASSUNTO;
+        const c=document.getElementById("confirmacaoMapaLivroInformaticaAcessivelV177"); if(c) c.checked=false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+    window.voltarTopicosLivroInformaticaAcessivelV177=function(){ atualizarMenuV177(); if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA); };
+    window.iniciarQuestoesLivroInformaticaAcessivelV177=function(){
+        const c=document.getElementById("confirmacaoMapaLivroInformaticaAcessivelV177");
+        if(!c || !c.checked){ if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 14 antes de iniciar as questões."); return; }
+        assuntoAtual=ASSUNTO; disciplinaAtual=ASSUNTO;
+        const cp=document.getElementById("confirmacaoMapa"); if(cp) cp.checked=true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const ant=abrirDisciplina; abrirDisciplina=function(nome){ const r=ant.apply(this,arguments); if(nome===DISCIPLINA) setTimeout(atualizarMenuV177,0); return r; };
+    }
+    if(typeof abrirAssunto === "function"){
+        const ant=abrirAssunto; abrirAssunto=function(assunto){ if(assunto===ASSUNTO){ window.abrirLivroInformaticaAcessivelV177(); return; } return ant.apply(this,arguments); };
+    }
+    if(typeof voltarParaAssuntos === "function"){
+        const ant=voltarParaAssuntos; voltarParaAssuntos=function(){ if(assuntoAtual===ASSUNTO || disciplinaAtual===ASSUNTO){ atualizarMenuV177(); if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA); return; } return ant.apply(this,arguments); };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV177);
+    if(document.readyState !== "loading") instalarV177();
+})();
+
+
+/* ==========================================================
+   FAROL V178 — SEDUC-PA / EDUCAÇÃO ESPECIAL
+   Correção: "Continuar de onde parei" nos mapas próprios da rota.
+   Os mapas SEDUC são telas customizadas e não exibiam o botão
+   genérico #btnContinuar, embora iniciarQuestoesAssunto() orientasse
+   o aluno a usá-lo quando já existia progresso salvo.
+========================================================== */
+(function corrigirContinuarSeducEducacaoEspecialV178(){
+    "use strict";
+
+    const MAPA_ASSUNTO = {
+        seducMapaFundamentosV161: "seducEducacaoEspecialFundamentos",
+        seducMapaPlanejamentoV162: "seducEducacaoEspecialPlanejamento",
+        seducMapaLegislacaoV163: "seducEducacaoEspecialLegislacao",
+        seducMapaDiretrizesNacionaisV164: "seducEducacaoEspecialDiretrizesNacionais",
+        seducMapaCurriculoAdaptadoV166: "seducEducacaoEspecialCurriculoAdaptado",
+        seducMapaInclusaoRegularV167: "seducEducacaoEspecialInclusaoRegular",
+        seducMapaTendenciasCurriculoV168: "seducEducacaoEspecialTendenciasCurriculo",
+        seducMapaAeeDeficienciaIntelectualV171: "seducEducacaoEspecialAeeDeficienciaIntelectual",
+        seducMapaDeficienciaVisualV172: "seducEducacaoEspecialDeficienciaVisual",
+        seducMapaEducacaoBilingueSurdezV173: "seducEducacaoEspecialEducacaoBilingueSurdez",
+        seducMapaSurdocegueiraDeficienciaMultiplaV174: "seducEducacaoEspecialSurdocegueiraDeficienciaMultipla",
+        seducMapaRecursosPedagogicosAcessiveisCAAV175: "seducEducacaoEspecialRecursosPedagogicosAcessiveisCAA",
+        seducMapaOrientacaoMobilidadePosturalAcessibilidadeV176: "seducEducacaoEspecialOrientacaoMobilidadePosturalAcessibilidade",
+        seducMapaLivroInformaticaAcessivelV177: "seducEducacaoEspecialLivroInformaticaAcessivel"
+    };
+
+    function totalDoAssuntoV178(assunto){
+        if(typeof obterTotalRodadaAssunto === "function"){
+            const total = Number(obterTotalRodadaAssunto(assunto));
+            if(Number.isFinite(total) && total > 0) return total;
+        }
+        return (
+            typeof bancoQuestoes !== "undefined" &&
+            Array.isArray(bancoQuestoes[assunto])
+        ) ? bancoQuestoes[assunto].length : 0;
+    }
+
+    function progressoDoAssuntoV178(assunto){
+        if(typeof progressoAssuntos === "undefined" || !progressoAssuntos){
+            return 0;
+        }
+        return Math.max(0, Number(progressoAssuntos[assunto] || 0));
+    }
+
+    function botaoIniciarDaTelaV178(tela){
+        if(!tela) return null;
+        return Array.from(tela.querySelectorAll("button")).find(botao => {
+            const onclick = String(botao.getAttribute("onclick") || "");
+            return /^iniciarQuestoes/i.test(onclick) ||
+                botao.classList.contains("seduc-ee-btn-iniciar-v161");
+        }) || null;
+    }
+
+    function removerContinuarV178(tela){
+        tela?.querySelectorAll(".seduc-ee-continuar-v178,.seduc-ee-progresso-v178")
+            .forEach(el => el.remove());
+    }
+
+    function atualizarMapaSeducV178(idTela){
+        const tela = document.getElementById(idTela);
+        const assunto = MAPA_ASSUNTO[idTela];
+        if(!tela || !assunto) return;
+
+        // Garante que o botão continue exatamente o tópico cuja tela está aberta.
+        assuntoAtual = assunto;
+        disciplinaAtual = assunto;
+
+        const total = totalDoAssuntoV178(assunto);
+        const progresso = progressoDoAssuntoV178(assunto);
+        const temProgresso = total > 0 && progresso > 0 && progresso < total;
+        const btnIniciar = botaoIniciarDaTelaV178(tela);
+
+        removerContinuarV178(tela);
+
+        if(btnIniciar){
+            if(!btnIniciar.dataset.textoOriginalV178){
+                btnIniciar.dataset.textoOriginalV178 = btnIniciar.textContent.trim();
+            }
+            btnIniciar.textContent = temProgresso
+                ? `🔄 Reiniciar ${total} questões do zero`
+                : btnIniciar.dataset.textoOriginalV178;
+        }
+
+        if(!temProgresso) return;
+
+        const status = document.createElement("div");
+        status.className = "seduc-ee-progresso-v178";
+        status.style.cssText = [
+            "max-width:520px",
+            "margin:14px auto 8px",
+            "padding:10px 14px",
+            "border-radius:12px",
+            "background:#eef8f3",
+            "border:1px solid #b9dfcc",
+            "color:#145c3d",
+            "font-weight:700",
+            "text-align:center"
+        ].join(";");
+        status.textContent = `Progresso salvo: ${progresso} de ${total} questões concluídas.`;
+
+        const continuar = document.createElement("button");
+        continuar.type = "button";
+        continuar.className = "seduc-ee-continuar-v178";
+        continuar.style.cssText = [
+            "display:block",
+            "width:min(520px,100%)",
+            "margin:8px auto 0",
+            "background:#087f5b",
+            "color:#fff",
+            "font-weight:900",
+            "min-height:52px"
+        ].join(";");
+        continuar.textContent = `▶ Continuar da questão ${progresso + 1} de ${total}`;
+        continuar.addEventListener("click", () => {
+            assuntoAtual = assunto;
+            disciplinaAtual = assunto;
+            if(typeof continuarQuestoes === "function"){
+                continuarQuestoes();
+            }else if(typeof mostrarToast === "function"){
+                mostrarToast("Não foi possível restaurar o progresso deste tópico.");
+            }
+        });
+
+        if(btnIniciar){
+            btnIniciar.insertAdjacentElement("afterend", continuar);
+            continuar.insertAdjacentElement("beforebegin", status);
+        }else{
+            const card = tela.querySelector(".card") || tela;
+            card.appendChild(status);
+            card.appendChild(continuar);
+        }
+    }
+
+    window.atualizarContinuarSeducEducacaoEspecialV178 = function(){
+        const ativa = document.querySelector('.tela.ativa[id^="seducMapa"]');
+        if(ativa && MAPA_ASSUNTO[ativa.id]){
+            atualizarMapaSeducV178(ativa.id);
+        }
+    };
+
+    window.continuarTopicoSeducEducacaoEspecialV178 = function(idTela){
+        if(MAPA_ASSUNTO[idTela]) atualizarMapaSeducV178(idTela);
+    };
+
+    if(typeof mostrarTela === "function"){
+        const mostrarTelaAntesV178 = mostrarTela;
+        mostrarTela = function(idTela){
+            const retorno = mostrarTelaAntesV178.apply(this, arguments);
+            if(MAPA_ASSUNTO[idTela]){
+                setTimeout(() => atualizarMapaSeducV178(idTela), 0);
+            }
+            return retorno;
+        };
+    }
+
+    // Cobre restauração de tela ao recarregar o PWA.
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            window.atualizarContinuarSeducEducacaoEspecialV178();
+        }, 250);
+    });
+})();

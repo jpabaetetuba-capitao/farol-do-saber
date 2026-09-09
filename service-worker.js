@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v175-2026-09-05-seduc-ee-recursos-caa";
+const CACHE_VERSION = "farol-v178-2026-09-09-seduc-ee-continuar-progresso";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -24,6 +24,8 @@ const APP_SHELL = [
   "./dados/seduc/educacao-especial/educacaoBilingueSurdez.js",
   "./dados/seduc/educacao-especial/surdocegueiraDeficienciaMultipla.js",
   "./dados/seduc/educacao-especial/recursosPedagogicosAcessiveisCAA.js",
+  "./dados/seduc/educacao-especial/orientacaoMobilidadeAdequacaoPosturalAcessibilidade.js",
+  "./dados/seduc/educacao-especial/livroAcessivelInformaticaAcessivel.js",
   "./imagens/mapas/seduc/educacao-especial/FundamentosEducacaoEspecial.png",
   "./imagens/mapas/seduc/educacao-especial/PlanejamentoEducacaoEspecial.png",
   "./imagens/mapas/seduc/educacao-especial/LegislacaoEducacaoEspecial.png",
@@ -36,6 +38,8 @@ const APP_SHELL = [
   "./imagens/mapas/seduc/educacao-especial/EducacaoBilingueSurdez.png",
   "./imagens/mapas/seduc/educacao-especial/SurdocegueiraDeficienciaMultipla.png",
   "./imagens/mapas/seduc/educacao-especial/RecursosPedagogicosAcessiveisCAA.png",
+  "./imagens/mapas/seduc/educacao-especial/OrientacaoMobilidadeAdequacaoPosturalAcessibilidade.png",
+  "./imagens/mapas/seduc/educacao-especial/LivroAcessivelInformaticaAcessivel.png",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/icon-maskable-512.png"
