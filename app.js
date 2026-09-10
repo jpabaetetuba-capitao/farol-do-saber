@@ -52071,7 +52071,7 @@ limparArenaLocalFarol = function(){
             .seduc-ee-leis-cab-v182 h2{margin:0 0 8px;font-size:clamp(1.45rem,3vw,2.15rem);}
             .seduc-ee-leis-cab-v182 p{margin:5px 0;line-height:1.55;color:#eef7ff;}
             .seduc-ee-leis-grupo-v182{margin:24px 0;}
-            .seduc-ee-leis-grupo-v182 h3{margin:0 0 12px;color:#123f70;font-size:1.18rem;}
+            .seduc-ee-leis-grupo-v182 h3{margin:0 0 12px;color:#fff;font-size:1.18rem;font-weight:800;display:inline-block;background:rgba(8,47,82,.94);padding:8px 14px;border-radius:11px;box-shadow:0 4px 12px rgba(0,0,0,.22);text-shadow:0 1px 2px rgba(0,0,0,.35);}
             .seduc-ee-leis-grid-v182{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;}
             .seduc-ee-lei-v182{display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #d6e4f1;border-radius:16px;padding:16px;box-shadow:0 5px 16px rgba(18,63,112,.07);}
             .seduc-ee-lei-v182.revogada{border-color:#efb0b0;background:#fff9f9;}
