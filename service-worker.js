@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v178-2026-09-09-seduc-ee-continuar-progresso";
+const CACHE_VERSION = "farol-v181-2026-09-09-seduc-ee-etica-profissional";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -26,6 +26,9 @@ const APP_SHELL = [
   "./dados/seduc/educacao-especial/recursosPedagogicosAcessiveisCAA.js",
   "./dados/seduc/educacao-especial/orientacaoMobilidadeAdequacaoPosturalAcessibilidade.js",
   "./dados/seduc/educacao-especial/livroAcessivelInformaticaAcessivel.js",
+  "./dados/seduc/educacao-especial/tgdTea.js",
+  "./dados/seduc/educacao-especial/altasHabilidadesSuperdotacao.js",
+  "./dados/seduc/educacao-especial/eticaProfissional.js",
   "./imagens/mapas/seduc/educacao-especial/FundamentosEducacaoEspecial.png",
   "./imagens/mapas/seduc/educacao-especial/PlanejamentoEducacaoEspecial.png",
   "./imagens/mapas/seduc/educacao-especial/LegislacaoEducacaoEspecial.png",
@@ -40,6 +43,9 @@ const APP_SHELL = [
   "./imagens/mapas/seduc/educacao-especial/RecursosPedagogicosAcessiveisCAA.png",
   "./imagens/mapas/seduc/educacao-especial/OrientacaoMobilidadeAdequacaoPosturalAcessibilidade.png",
   "./imagens/mapas/seduc/educacao-especial/LivroAcessivelInformaticaAcessivel.png",
+  "./imagens/mapas/seduc/educacao-especial/TgdTea.png",
+  "./imagens/mapas/seduc/educacao-especial/AltasHabilidadesSuperdotacao.png",
+  "./imagens/mapas/seduc/educacao-especial/EticaProfissional.png",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/icon-maskable-512.png"

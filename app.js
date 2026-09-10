@@ -50983,7 +50983,10 @@ limparArenaLocalFarol = function(){
         seducMapaSurdocegueiraDeficienciaMultiplaV174: "seducEducacaoEspecialSurdocegueiraDeficienciaMultipla",
         seducMapaRecursosPedagogicosAcessiveisCAAV175: "seducEducacaoEspecialRecursosPedagogicosAcessiveisCAA",
         seducMapaOrientacaoMobilidadePosturalAcessibilidadeV176: "seducEducacaoEspecialOrientacaoMobilidadePosturalAcessibilidade",
-        seducMapaLivroInformaticaAcessivelV177: "seducEducacaoEspecialLivroInformaticaAcessivel"
+        seducMapaLivroInformaticaAcessivelV177: "seducEducacaoEspecialLivroInformaticaAcessivel",
+        seducMapaTgdTeaV179: "seducEducacaoEspecialTgdTea",
+        seducMapaAltasHabilidadesV180: "seducEducacaoEspecialAltasHabilidades",
+        seducMapaEticaProfissionalV181: "seducEducacaoEspecialEticaProfissional"
     };
 
     function totalDoAssuntoV178(assunto){
@@ -51121,4 +51124,626 @@ limparArenaLocalFarol = function(){
             window.atualizarContinuarSeducEducacaoEspecialV178();
         }, 250);
     });
+})();
+
+
+/* ==========================================================
+   FAROL V179 — SEDUC-PA 2026 / FGV
+   EDUCAÇÃO ESPECIAL — BLOCO 15
+   TRANSTORNO GLOBAL DO DESENVOLVIMENTO (TGD) / TEA
+========================================================== */
+(function(){
+    "use strict";
+
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialTgdTea";
+    const TELA_MAPA = "seducMapaTgdTeaV179";
+    const banco = Array.isArray(window.seducEducacaoEspecialTgdTea2026)
+        ? window.seducEducacaoEspecialTgdTea2026 : [];
+
+    function registrarMapaV179(){
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "🧩 Transtorno Global do Desenvolvimento (TGD) / Transtorno do Espectro Autista (TEA)",
+                imagem: "imagens/mapas/seduc/educacao-especial/TgdTea.png"
+            };
+        }
+    }
+
+    function garantirTelaMapaV179(){
+        if(document.getElementById(TELA_MAPA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA_MAPA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosTgdTeaV179()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">MAPA 15</span>
+                    <h2>Transtorno Global do Desenvolvimento (TGD) / Transtorno do Espectro Autista (TEA)</h2>
+                    <p>Revise terminologia normativa, características do TEA, níveis de suporte, comunicação, CAA, aspectos sensoriais, observação, mediação, AEE, profissional de apoio, família e inclusão na classe comum.</p>
+                </div>
+
+                <div class="seduc-ee-alerta-v161">
+                    <strong>📌 Atualização normativa 2026 — TGD × TEA</strong>
+                    <p>
+                        O edital e a <strong>LDB</strong> ainda utilizam a expressão <strong>“transtornos globais do desenvolvimento”</strong>.
+                        Já a <strong>PNEEI — Decreto nº 12.686/2025</strong> e as orientações atuais do <strong>Inep</strong> identificam
+                        expressamente o <strong>Transtorno do Espectro Autista (TEA)</strong> como público da Educação Especial.
+                        Em prova, observe sempre <strong>qual norma o enunciado cita</strong>: não apague a literalidade da LDB e não trate TGD e TEA
+                        como equivalência clínica universal.
+                    </p>
+                    <p>
+                        Outro ponto quente: <strong>nível de suporte não define potencial de aprendizagem</strong>. O planejamento educacional
+                        deve analisar funcionalidade, barreiras, interesses, comunicação e apoios necessários no contexto escolar.
+                    </p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/TgdTea.png"
+                         alt="Mapa mental Transtorno Global do Desenvolvimento e Transtorno do Espectro Autista"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/educacao-especial/TgdTea.png','_blank')">
+                        🔍 Ampliar mapa
+                    </button>
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — cobrança real sobre TEA</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>FGV 2026 — níveis de suporte</strong><span>A banca cobrou que o nível de suporte não deve ser usado para fixar potencial de aprendizagem nem conteúdos permanentes.</span></article>
+                        <article><strong>FGV 2026 — observação</strong><span>Observação sistemática, potencialidades, necessidades e formas de aprendizagem aparecem como base para planejar a intervenção.</span></article>
+                        <article><strong>FGV 2026 — avaliação</strong><span>Comparar o estudante com os colegas como padrão de desenvolvimento foi usado como afirmação incorreta.</span></article>
+                        <article><strong>FGV 2026 — comunicação</strong><span>A prova trabalhou comunicação funcional em contextos naturais, motivadores e vinculados à interação.</span></article>
+                        <article><strong>FGV 2026 — CAA</strong><span>A banca cobrou avaliação inicial, escolha do sistema, treinamento de parceiros e integração da CAA em todos os contextos escolares.</span></article>
+                        <article><strong>FGV 2026 — aprendizagem</strong><span>Atividades com sentido, retorno positivo e duração adequada foram valorizadas; tarefas longas e descontextualizadas apareceram como distratores.</span></article>
+                        <article><strong>FGV 2023 — AEE</strong><span>A função do AEE foi cobrada em relação ao TEA, com articulação à comunidade escolar e rejeição da atuação restrita à sala de recursos.</span></article>
+                        <article><strong>FGV histórica — TGD</strong><span>Provas antigas cobraram TEACCH e programas de comunicação; use-as para entender o estilo, mas atualize conceitos e legislação para 2026.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaTgdTeaV179">
+                    Li e revisei o Mapa 15, a atualização TGD × TEA e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesTgdTeaV179()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>
+        `;
+
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuV179(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return;
+
+        const lista = tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoTgdTeaV179")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoTgdTeaV179" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirTgdTeaV179()">
+                    <span class="seduc-ee-numero-v161">15</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Transtorno Global do Desenvolvimento (TGD) / TEA</strong>
+                        <small>TGD × TEA • legislação • níveis de suporte • comunicação • CAA • sensorial • AEE • apoio • família • inclusão</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>
+            `);
+        }
+
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function"){
+            window.ordenarTopicosSeducEducacaoEspecialV165();
+        }
+    }
+
+    function instalarV179(){
+        registrarMapaV179();
+        garantirTelaMapaV179();
+        atualizarMenuV179();
+        if(typeof bancoQuestoes !== "undefined"){
+            bancoQuestoes[ASSUNTO] = banco;
+        }
+    }
+
+    window.abrirTgdTeaV179 = function(){
+        instalarV179();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaTgdTeaV179");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+
+    window.voltarTopicosTgdTeaV179 = function(){
+        atualizarMenuV179();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesTgdTeaV179 = function(){
+        const check = document.getElementById("confirmacaoMapaTgdTeaV179");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Leia e revise o Mapa 15 antes de iniciar as questões.");
+            }
+            return;
+        }
+
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+
+        if(typeof iniciarQuestoesAssunto === "function"){
+            iniciarQuestoesAssunto();
+        }
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const anterior = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const retorno = anterior.apply(this, arguments);
+            if(nome === DISCIPLINA){
+                setTimeout(atualizarMenuV179, 0);
+            }
+            return retorno;
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const anterior = abrirAssunto;
+        abrirAssunto = function(assunto){
+            if(assunto === ASSUNTO){
+                window.abrirTgdTeaV179();
+                return;
+            }
+            return anterior.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const anterior = voltarParaAssuntos;
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === ASSUNTO || disciplinaAtual === ASSUNTO){
+                atualizarMenuV179();
+                if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+                return;
+            }
+            return anterior.apply(this, arguments);
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV179);
+    if(document.readyState !== "loading") instalarV179();
+})();
+
+
+/* ==========================================================
+   FAROL V180 — SEDUC-PA 2026 / FGV
+   EDUCAÇÃO ESPECIAL — BLOCO 16
+   ALTAS HABILIDADES OU SUPERDOTAÇÃO (AH/SD)
+========================================================== */
+(function(){
+    "use strict";
+
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialAltasHabilidades";
+    const TELA_MAPA = "seducMapaAltasHabilidadesV180";
+    const banco = Array.isArray(window.seducEducacaoEspecialAltasHabilidades2026)
+        ? window.seducEducacaoEspecialAltasHabilidades2026 : [];
+
+    function registrarMapaV180(){
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "🌟 Altas Habilidades ou Superdotação (AH/SD)",
+                imagem: "imagens/mapas/seduc/educacao-especial/AltasHabilidadesSuperdotacao.png"
+            };
+        }
+    }
+
+    function garantirTelaMapaV180(){
+        if(document.getElementById(TELA_MAPA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA_MAPA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosAltasHabilidadesV180()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">MAPA 16</span>
+                    <h2>Altas Habilidades ou Superdotação (AH/SD)</h2>
+                    <p>Revise concepções contemporâneas, Renzulli, áreas de manifestação, identificação, dupla excepcionalidade, AEE suplementar, enriquecimento, diferenciação, aceleração, progressão flexível, planejamento individualizado, equidade e inclusão.</p>
+                </div>
+
+                <div class="seduc-ee-alerta-v161">
+                    <strong>🚨 Atualização normativa central de 2026 — Lei nº 15.436/2026</strong>
+                    <p>
+                        O mapa visual foi produzido como síntese pedagógica, mas a norma mais nova e específica deste bloco é a
+                        <strong>Lei nº 15.436, de 17 de junho de 2026</strong>, que instituiu a
+                        <strong>Política Nacional para Estudantes com Altas Habilidades ou Superdotação</strong>.
+                        Para a prova, memorize essa lei como referência atual prioritária.
+                    </p>
+                    <p>
+                        A Lei nº 15.436/2026 define AH/SD como <strong>condição do neurodesenvolvimento</strong>, define
+                        <strong>dupla excepcionalidade</strong>, prevê planejamento educacional individualizado, AEE com
+                        <strong>enriquecimento, diferenciação ou aprofundamento curricular, aceleração e agrupamentos por interesse</strong>,
+                        admite <strong>progressão acelerada parcial por disciplina/área</strong> e integral, cria
+                        <strong>centros de referência</strong> e o <strong>Cadastro Nacional de Estudantes com AH/SD</strong>.
+                    </p>
+                    <p>
+                        Outra pegadinha: o <strong>Decreto nº 12.686/2025</strong> estabelece que o AEE é
+                        <strong>suplementar</strong> para AH/SD. A ausência de laudo de saúde não deve bloquear a identificação educacional
+                        nem o acesso ao AEE. As áreas apresentadas no mapa são referências pedagógicas e
+                        <strong>não devem ser tratadas como uma taxonomia legal fechada</strong>.
+                    </p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/AltasHabilidadesSuperdotacao.png"
+                         alt="Mapa mental Altas Habilidades ou Superdotação"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/educacao-especial/AltasHabilidadesSuperdotacao.png','_blank')">
+                        🔍 Ampliar mapa
+                    </button>
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — o que a banca realmente cobrou</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>FGV-SP 2026 — conceito</strong><span>AH/SD foi tratada como fenômeno dinâmico, multidimensional e contextual, superando a visão centrada apenas no QI.</span></article>
+                        <article><strong>FGV-SP 2026 — Renzulli</strong><span>A banca cobrou diretamente os Três Anéis: habilidade acima da média, criatividade e comprometimento com a tarefa.</span></article>
+                        <article><strong>FGV-SP 2026 — socioemocional</strong><span>Rapidez de aprendizagem e interesse intenso foram articulados a desafio intelectual, aprofundamento e apoio socioemocional.</span></article>
+                        <article><strong>FGV-SP 2026 — áreas</strong><span>Capacidade intelectual geral, aptidão acadêmica específica, pensamento criativo/produtivo e liderança apareceram em associação de situações.</span></article>
+                        <article><strong>FGV Vitória 2024 — diversidade</strong><span>A prova rejeitou a ideia de que superdotação se restrinja a QI ou desempenho acadêmico e reconheceu talentos em diferentes áreas.</span></article>
+                        <article><strong>FGV Vitória 2024 — AEE</strong><span>Enriquecimento curricular, tecnologias e planejamento individualizado foram cobrados como meios de desenvolver potencialidades.</span></article>
+                        <article><strong>Lei 15.436/2026 — novidade</strong><span>Dupla excepcionalidade, progressão flexível, centros de referência e Cadastro Nacional são pontos novos com alta chance de cobrança literal.</span></article>
+                        <article><strong>FGV — distratores</strong><span>Fique atento a “QI obrigatório”, “notas altas em tudo”, “aceleração automática”, “AEE substitutivo” e “laudo como condição”.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaAltasHabilidadesV180">
+                    Li e revisei o Mapa 16, a atualização da Lei nº 15.436/2026 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesAltasHabilidadesV180()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>
+        `;
+
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuV180(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return;
+
+        const lista = tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoAltasHabilidadesV180")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoAltasHabilidadesV180" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirAltasHabilidadesV180()">
+                    <span class="seduc-ee-numero-v161">16</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Altas Habilidades ou Superdotação (AH/SD)</strong>
+                        <small>Lei 15.436/2026 • Renzulli • identificação • dupla excepcionalidade • AEE • enriquecimento • aceleração • equidade</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>
+            `);
+        }
+
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function"){
+            window.ordenarTopicosSeducEducacaoEspecialV165();
+        }
+    }
+
+    function instalarV180(){
+        registrarMapaV180();
+        garantirTelaMapaV180();
+        atualizarMenuV180();
+
+        if(typeof bancoQuestoes !== "undefined"){
+            bancoQuestoes[ASSUNTO] = banco;
+        }
+    }
+
+    window.abrirAltasHabilidadesV180 = function(){
+        instalarV180();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+
+        const check = document.getElementById("confirmacaoMapaAltasHabilidadesV180");
+        if(check) check.checked = false;
+
+        if(typeof mostrarTela === "function"){
+            mostrarTela(TELA_MAPA);
+        }
+
+        if(typeof window.atualizarContinuarSeducEducacaoEspecialV178 === "function"){
+            setTimeout(window.atualizarContinuarSeducEducacaoEspecialV178, 0);
+        }
+    };
+
+    window.voltarTopicosAltasHabilidadesV180 = function(){
+        atualizarMenuV180();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesAltasHabilidadesV180 = function(){
+        const check = document.getElementById("confirmacaoMapaAltasHabilidadesV180");
+
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Leia e revise o Mapa 16 e a atualização normativa antes de iniciar as questões.");
+            }
+            return;
+        }
+
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+
+        if(typeof iniciarQuestoesAssunto === "function"){
+            iniciarQuestoesAssunto();
+        }
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const anterior = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const retorno = anterior.apply(this, arguments);
+            if(nome === DISCIPLINA){
+                setTimeout(atualizarMenuV180, 0);
+            }
+            return retorno;
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const anterior = abrirAssunto;
+        abrirAssunto = function(assunto){
+            if(assunto === ASSUNTO){
+                window.abrirAltasHabilidadesV180();
+                return;
+            }
+            return anterior.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const anterior = voltarParaAssuntos;
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === ASSUNTO || disciplinaAtual === ASSUNTO){
+                atualizarMenuV180();
+                if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+                return;
+            }
+            return anterior.apply(this, arguments);
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV180);
+    if(document.readyState !== "loading") instalarV180();
+})();
+
+
+/* ==========================================================
+   FAROL V181 — SEDUC-PA 2026 / FGV
+   EDUCAÇÃO ESPECIAL — BLOCO 17
+   ÉTICA PROFISSIONAL
+========================================================== */
+(function(){
+    "use strict";
+
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducEducacaoEspecialEticaProfissional";
+    const TELA_MAPA = "seducMapaEticaProfissionalV181";
+    const banco = Array.isArray(window.seducEducacaoEspecialEticaProfissional2026)
+        ? window.seducEducacaoEspecialEticaProfissional2026 : [];
+
+    function registrarMapaV181(){
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "⚖️ Ética Profissional",
+                imagem: "imagens/mapas/seduc/educacao-especial/EticaProfissional.png"
+            };
+        }
+    }
+
+    function garantirTelaMapaV181(){
+        if(document.getElementById(TELA_MAPA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA_MAPA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosEticaProfissionalV181()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">MAPA 17</span>
+                    <h2>Ética Profissional</h2>
+                    <p>Revise dignidade, não discriminação, deveres do servidor, sigilo e proteção de dados, limites profissionais, equidade, trabalho colaborativo, proteção de crianças e adolescentes e responsabilidade funcional.</p>
+                </div>
+
+                <div class="seduc-ee-alerta-v161">
+                    <strong>🚨 Atualização normativa 2026 — cuidado com norma revogada</strong>
+                    <p>
+                        A <strong>Portaria nº 05/2026-GS/SEDUC</strong> chegou a instituir um Código de Conduta e Ética da SEDUC-PA em janeiro,
+                        mas foi <strong>expressamente revogada pela Portaria nº 19/2026-GS/SEDUC</strong>, de 20/01/2026.
+                        O ato revogador determinou que o Código e seu Anexo Único <strong>deixassem de produzir efeitos</strong>.
+                        Portanto, em setembro de 2026, não memorize a Portaria nº 05/2026 como código vigente.
+                    </p>
+                    <p>
+                        Para este edital, “Ética profissional” deve ser estudada em articulação com a
+                        <strong>Constituição Federal</strong>, a <strong>LDB</strong>, o <strong>ECA</strong>, a <strong>LBI</strong>,
+                        a <strong>LGPD</strong>, a política atual de Educação Especial e, no serviço público estadual,
+                        a <strong>Lei nº 5.810/1994</strong>. Esta lei exige, entre outros pontos, urbanidade, discrição,
+                        observância de princípios éticos e legais, recusa de ordem manifestamente ilegal e representação contra irregularidades.
+                    </p>
+                    <p>
+                        <strong>Sigilo não é absoluto.</strong> Informações protegidas não devem ser expostas nem compartilhadas sem necessidade,
+                        mas deveres legais de proteção continuam válidos. O ECA, por exemplo, exige comunicação de suspeita ou confirmação de maus-tratos
+                        aos canais competentes.
+                    </p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/educacao-especial/EticaProfissional.png"
+                         alt="Mapa mental de Ética Profissional na Educação Especial"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/educacao-especial/EticaProfissional.png','_blank')">
+                        🔍 Ampliar mapa
+                    </button>
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — como estudar Ética Profissional</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>FGV Canaã/PA 2025 — alteridade</strong><span>A banca relacionou empatia, dignidade humana e inclusão do outro como parte intrínseca do processo educativo.</span></article>
+                        <article><strong>FGV — casos concretos</strong><span>Espere situações de escola em que uma alternativa parece “protetiva”, mas produz segregação, exposição ou tratamento discriminatório.</span></article>
+                        <article><strong>FGV — literalidade legal</strong><span>Direitos do ECA, deveres da LDB, princípios constitucionais e regras do estatuto podem aparecer com uma palavra alterada para tornar o item falso.</span></article>
+                        <article><strong>Sigilo × dever de proteção</strong><span>Não caia nos extremos: nem exposição indiscriminada, nem promessa de segredo absoluto diante de situação que exige encaminhamento legal.</span></article>
+                        <article><strong>Igualdade × equidade</strong><span>“Tratar todos exatamente igual” pode ser distrator quando a barreira exige adaptação razoável ou recurso de acessibilidade.</span></article>
+                        <article><strong>Limite profissional</strong><span>Professor observa, registra e planeja; não transforma hipótese pedagógica em diagnóstico clínico.</span></article>
+                        <article><strong>RJU-PA</strong><span>Urbanidade, discrição, ordem manifestamente ilegal, revelação de fato sigiloso, vantagem pessoal e responsabilidades civil, penal e administrativa merecem atenção.</span></article>
+                        <article><strong>Atualização 2026</strong><span>Portaria 05/2026 instituiu um código; Portaria 19/2026 revogou-o. A norma revogada é uma pegadinha excelente de prova.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaEticaProfissionalV181">
+                    Li e revisei o Mapa 17, a atualização normativa e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesEticaProfissionalV181()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>
+        `;
+
+        document.body.appendChild(tela);
+    }
+
+    function atualizarMenuV181(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return;
+
+        const lista = tela.querySelector(".seduc-ee-topicos-v161");
+        if(lista && !document.getElementById("seducEeTopicoEticaProfissionalV181")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeTopicoEticaProfissionalV181" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirEticaProfissionalV181()">
+                    <span class="seduc-ee-numero-v161">17</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Ética Profissional</strong>
+                        <small>CF art. 37 • LDB • ECA • LBI • LGPD • Lei 5.810/1994 • sigilo • equidade • dignidade • responsabilidade</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                </button>
+            `);
+        }
+
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function"){
+            window.ordenarTopicosSeducEducacaoEspecialV165();
+        }
+    }
+
+    function instalarV181(){
+        registrarMapaV181();
+        garantirTelaMapaV181();
+        atualizarMenuV181();
+
+        if(typeof bancoQuestoes !== "undefined"){
+            bancoQuestoes[ASSUNTO] = banco;
+        }
+    }
+
+    window.abrirEticaProfissionalV181 = function(){
+        instalarV181();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+
+        const check = document.getElementById("confirmacaoMapaEticaProfissionalV181");
+        if(check) check.checked = false;
+
+        if(typeof mostrarTela === "function"){
+            mostrarTela(TELA_MAPA);
+        }
+
+        if(typeof window.atualizarContinuarSeducEducacaoEspecialV178 === "function"){
+            setTimeout(window.atualizarContinuarSeducEducacaoEspecialV178, 0);
+        }
+    };
+
+    window.voltarTopicosEticaProfissionalV181 = function(){
+        atualizarMenuV181();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesEticaProfissionalV181 = function(){
+        const check = document.getElementById("confirmacaoMapaEticaProfissionalV181");
+
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Leia e revise o Mapa 17 e a atualização normativa antes de iniciar as questões.");
+            }
+            return;
+        }
+
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+
+        if(typeof iniciarQuestoesAssunto === "function"){
+            iniciarQuestoesAssunto();
+        }
+    };
+
+    if(typeof abrirDisciplina === "function"){
+        const anterior = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const retorno = anterior.apply(this, arguments);
+            if(nome === DISCIPLINA){
+                setTimeout(atualizarMenuV181, 0);
+            }
+            return retorno;
+        };
+    }
+
+    if(typeof abrirAssunto === "function"){
+        const anterior = abrirAssunto;
+        abrirAssunto = function(assunto){
+            if(assunto === ASSUNTO){
+                window.abrirEticaProfissionalV181();
+                return;
+            }
+            return anterior.apply(this, arguments);
+        };
+    }
+
+    if(typeof voltarParaAssuntos === "function"){
+        const anterior = voltarParaAssuntos;
+        voltarParaAssuntos = function(){
+            if(assuntoAtual === ASSUNTO || disciplinaAtual === ASSUNTO){
+                atualizarMenuV181();
+                if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+                return;
+            }
+            return anterior.apply(this, arguments);
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV181);
+    if(document.readyState !== "loading") instalarV181();
 })();
