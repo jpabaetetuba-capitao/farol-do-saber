@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v181-2026-09-09-seduc-ee-etica-profissional";
+const CACHE_VERSION = "farol-v182-2026-09-09-seduc-ee-leis-normas-oficiais";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 

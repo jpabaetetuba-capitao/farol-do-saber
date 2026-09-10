@@ -51377,7 +51377,7 @@ limparArenaLocalFarol = function(){
                         <strong>centros de referência</strong> e o <strong>Cadastro Nacional de Estudantes com AH/SD</strong>.
                     </p>
                     <p>
-                        Outra pegadinha: o <strong>Decreto nº 12.686/2025</strong> estabelece que o AEE é
+                        Outra pegadinha: no quadro “Base legal e documentos atuais” da imagem, onde aparece <strong>Decreto nº 12.666/2025</strong>, leia <strong>Decreto nº 12.686/2025</strong>. É esse Decreto nº 12.686/2025 que estabelece que o AEE é
                         <strong>suplementar</strong> para AH/SD. A ausência de laudo de saúde não deve bloquear a identificação educacional
                         nem o acesso ao AEE. As áreas apresentadas no mapa são referências pedagógicas e
                         <strong>não devem ser tratadas como uma taxonomia legal fechada</strong>.
@@ -51746,4 +51746,439 @@ limparArenaLocalFarol = function(){
 
     document.addEventListener("DOMContentLoaded", instalarV181);
     if(document.readyState !== "loading") instalarV181();
+})();
+
+
+/* ==========================================================
+   FAROL V182 — SEDUC-PA 2026 / FGV
+   EDUCAÇÃO ESPECIAL — CONSULTA DE LEIS E NORMAS OFICIAIS
+   Não é um novo bloco de conteúdo: é uma biblioteca de consulta.
+========================================================== */
+(function instalarBibliotecaLegislacaoSeducV182(){
+    "use strict";
+
+    const DISCIPLINA = "seducEducacaoEspecial";
+    const TELA = "seducEeLeisNormasOficiaisV182";
+
+    const grupos = [
+        {
+            titulo: "Base constitucional, direitos e inclusão",
+            itens: [
+                {
+                    nome: "Constituição Federal de 1988 — texto compilado",
+                    sobre: "Direito à educação, igualdade, não discriminação, AEE e princípios da Administração Pública.",
+                    topicos: "1, 3, 4, 6 e 17",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
+                },
+                {
+                    nome: "Decreto nº 6.949/2009 — Convenção sobre os Direitos das Pessoas com Deficiência",
+                    sobre: "Sistema educacional inclusivo, acessibilidade, adaptações razoáveis, participação e igualdade de oportunidades.",
+                    topicos: "1, 3, 6, 13 e 17",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d6949.htm"
+                },
+                {
+                    nome: "Lei nº 9.394/1996 — LDB, texto compilado",
+                    sobre: "Educação Especial, AEE, público previsto na LDB, Educação Bilíngue de Surdos, currículo, avaliação e deveres docentes.",
+                    topicos: "1, 3, 4, 6, 10, 15, 16 e 17",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/leis/l9394compilado.htm"
+                },
+                {
+                    nome: "Lei nº 8.069/1990 — ECA, texto compilado",
+                    sobre: "Dignidade, respeito, imagem, proteção integral, direito à educação e dever de comunicação em situações de violência.",
+                    topicos: "17",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/leis/l8069compilado.htm"
+                },
+                {
+                    nome: "Lei nº 13.146/2015 — Lei Brasileira de Inclusão (LBI)",
+                    sobre: "Educação inclusiva, barreiras, acessibilidade, adaptações razoáveis, tecnologia assistiva, formatos acessíveis e não discriminação.",
+                    topicos: "1, 3, 5, 6 e 8 a 17",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm"
+                },
+                {
+                    nome: "Lei nº 13.709/2018 — LGPD",
+                    sobre: "Proteção de dados pessoais e dados sensíveis de estudantes, crianças e adolescentes; sigilo e uso responsável de informações.",
+                    topicos: "17",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+                }
+            ]
+        },
+        {
+            titulo: "Acessibilidade, comunicação, deficiência visual e surdez",
+            itens: [
+                {
+                    nome: "Lei nº 10.098/2000 — Lei da Acessibilidade",
+                    sobre: "Normas gerais de acessibilidade, eliminação de barreiras, comunicação e acesso aos espaços e serviços.",
+                    topicos: "12, 13 e 14",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/leis/l10098.htm"
+                },
+                {
+                    nome: "Lei nº 10.436/2002 — Lei de Libras",
+                    sobre: "Reconhecimento da Libras como meio legal de comunicação e expressão.",
+                    topicos: "3 e 10",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm"
+                },
+                {
+                    nome: "Decreto nº 5.626/2005 — Regulamentação da Libras",
+                    sobre: "Formação, ensino e uso da Libras, Português escrito como segunda língua, profissionais e acesso educacional de pessoas surdas.",
+                    topicos: "3 e 10",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/decreto/d5626.htm"
+                },
+                {
+                    nome: "Lei nº 14.191/2021 — Educação Bilíngue de Surdos",
+                    sobre: "Altera a LDB e institui a modalidade de Educação Bilíngue de Surdos, com Libras como L1 e Português escrito como L2.",
+                    topicos: "3 e 10",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14191.htm"
+                },
+                {
+                    nome: "Lei nº 14.126/2021 — Visão monocular",
+                    sobre: "Classifica a visão monocular como deficiência sensorial do tipo visual. Atenção: não é uma lei de CAA.",
+                    topicos: "9 e 14",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14126.htm"
+                },
+                {
+                    nome: "Lei nº 14.951/2024 — Cores da bengala longa",
+                    sobre: "Bengala branca para cegueira, verde para baixa visão e vermelha/branca para surdocegueira.",
+                    topicos: "9, 11 e 13",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14951.htm"
+                },
+                {
+                    nome: "Lei nº 15.249/2025 — Comunicação Aumentativa e Alternativa de baixa tecnologia",
+                    sobre: "Altera a Lei de Acessibilidade e a LBI para prever sistemas de CAA de baixa tecnologia e ampliar a acessibilidade comunicacional.",
+                    topicos: "8, 12 e 14",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15249.htm"
+                }
+            ]
+        },
+        {
+            titulo: "TEA e Altas Habilidades/Superdotação",
+            itens: [
+                {
+                    nome: "Lei nº 12.764/2012 — Lei Berenice Piana",
+                    sobre: "Política Nacional de Proteção dos Direitos da Pessoa com TEA; pessoa com TEA é pessoa com deficiência para todos os efeitos legais.",
+                    topicos: "3 e 15",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12764.htm"
+                },
+                {
+                    nome: "Decreto nº 8.368/2014 — Regulamenta a Lei do TEA",
+                    sobre: "Regulamenta a Lei nº 12.764/2012, inclusive aspectos de inclusão escolar e acompanhante especializado.",
+                    topicos: "15",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/decreto/d8368.htm"
+                },
+                {
+                    nome: "Lei nº 15.131/2025 — Atualização da Lei do TEA",
+                    sobre: "Altera a Lei Berenice Piana e atualiza dispositivos relativos à pessoa com TEA; a Lei nº 12.764/2012 deve ser lida em sua versão compilada.",
+                    topicos: "15",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15131.htm"
+                },
+                {
+                    nome: "Lei nº 15.436/2026 — Política Nacional para Estudantes com AH/SD",
+                    sobre: "Identificação, AEE, dupla excepcionalidade, enriquecimento, aceleração, centros de referência e Cadastro Nacional de estudantes com AH/SD.",
+                    topicos: "16",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15436.htm"
+                }
+            ]
+        },
+        {
+            titulo: "Política Nacional de Educação Especial Inclusiva — normas atuais",
+            itens: [
+                {
+                    nome: "Decreto nº 12.686/2025 — PNEEI e Reneei",
+                    sobre: "Norma central atual da Educação Especial Inclusiva: público, sistema inclusivo, AEE, estudo de caso, apoios, PAEE, PEI e participação.",
+                    topicos: "1, 2, 3 e 5 a 17",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12686.htm"
+                },
+                {
+                    nome: "Decreto nº 12.773/2025 — altera o Decreto nº 12.686/2025",
+                    sobre: "Atualiza dispositivos da PNEEI; deve ser lido em conjunto com o Decreto nº 12.686/2025.",
+                    topicos: "1, 2, 3, 6, 8 e 13",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12773.htm"
+                },
+                {
+                    nome: "Portaria MEC nº 421/2026 — implementação da PNEEI/Reneei",
+                    sobre: "Detalha a implementação da política, AEE, estudo de caso, PAEE, PEI, rede de apoio e organização da Reneei.",
+                    topicos: "1, 2, 3, 5, 8, 9, 11, 12, 15, 16 e 17",
+                    fonte: "MEC Normas",
+                    url: "https://mecnormas.mec.gov.br/pesquisa/detalhar/11240"
+                },
+                {
+                    nome: "Portaria MEC nº 550/2026 — altera a Portaria MEC nº 421/2026",
+                    sobre: "Atualização da Portaria nº 421/2026; consulte a versão consolidada para conferir a redação vigente.",
+                    topicos: "1, 2 e 3",
+                    fonte: "MEC Normas",
+                    url: "https://mecnormas.mec.gov.br/pesquisa/detalhar/12723"
+                },
+                {
+                    nome: "Portaria MEC nº 572/2026 — Centros de Formação em Educação Especial Inclusiva",
+                    sobre: "Implementa 27 centros de formação continuada e em serviço, um por unidade da Federação, no âmbito da Reneei.",
+                    topicos: "1 e 3",
+                    fonte: "MEC Normas",
+                    url: "https://mecnormas.mec.gov.br/pesquisa/detalhar/12919"
+                },
+                {
+                    nome: "Lei nº 15.388/2026 — Plano Nacional de Educação (PNE)",
+                    sobre: "Novo PNE, com metas e estratégias para educação inclusiva, AEE, acessibilidade, Educação Bilíngue de Surdos e AH/SD.",
+                    topicos: "3, 9, 10, 13, 14 e 16",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15388.htm"
+                }
+            ]
+        },
+        {
+            titulo: "Diretrizes do Conselho Nacional de Educação",
+            itens: [
+                {
+                    nome: "Resolução CNE/CEB nº 2/2001 — Diretrizes Nacionais para a Educação Especial",
+                    sobre: "Diretrizes Nacionais para a Educação Especial na Educação Básica.",
+                    topicos: "3 e 4",
+                    fonte: "MEC/CNE",
+                    url: "https://portal.mec.gov.br/cne/arquivos/pdf/CEB0201.pdf"
+                },
+                {
+                    nome: "Resolução CNE/CEB nº 4/2009 — Diretrizes Operacionais do AEE",
+                    sobre: "Organização e função do Atendimento Educacional Especializado na Educação Básica.",
+                    topicos: "3, 4, 5, 6, 7 e 9",
+                    fonte: "MEC/CNE",
+                    url: "https://www.gov.br/mec/pt-br/cne/pdf/resolucoes-do-cne/ceb/2009/rceb004_09.pdf"
+                },
+                {
+                    nome: "Resolução CNE/CEB nº 5/2009 — Diretrizes Curriculares da Educação Infantil",
+                    sobre: "Currículo, criança como sujeito histórico e de direitos, interações, brincadeira e avaliação na Educação Infantil.",
+                    topicos: "4",
+                    fonte: "MEC/CNE",
+                    url: "https://www.gov.br/mec/pt-br/cne/pdf/normas-classificadas-por-assunto/diretrizes-para-a-educacao-basica/rceb005_09.pdf"
+                },
+                {
+                    nome: "Resolução CNE/CEB nº 4/2010 — Diretrizes Curriculares Nacionais Gerais da Educação Básica",
+                    sobre: "Diretrizes gerais da Educação Básica e transversalidade da Educação Especial.",
+                    topicos: "4",
+                    fonte: "MEC/CNE",
+                    url: "https://www.gov.br/mec/pt-br/cne/pdf/normas-classificadas-por-assunto/diretrizes-para-a-educacao-basica/rceb004_10.pdf"
+                },
+                {
+                    nome: "Resolução CNE/CEB nº 7/2010 — Diretrizes do Ensino Fundamental de 9 anos",
+                    sobre: "Organização do Ensino Fundamental, avaliação e Educação Especial no currículo e no PPP.",
+                    topicos: "4",
+                    fonte: "MEC/CNE",
+                    url: "https://portal.mec.gov.br/dmdocuments/rceb007_10.pdf"
+                },
+                {
+                    nome: "Resolução CNE/CEB nº 1/2024 — Qualidade e Equidade na Educação Infantil",
+                    sobre: "Diretrizes Operacionais Nacionais de Qualidade e Equidade para a Educação Infantil.",
+                    topicos: "4",
+                    fonte: "MEC/CNE",
+                    url: "https://www.gov.br/mec/pt-br/cne/resolucoes-ceb-2024"
+                },
+                {
+                    nome: "Resolução CNE/CEB nº 3/2025 — Diretrizes Operacionais da EJA",
+                    sobre: "Diretrizes nacionais atuais da Educação de Jovens e Adultos, incluindo acesso e participação do público da Educação Especial.",
+                    topicos: "4",
+                    fonte: "MEC/CNE",
+                    url: "https://www.gov.br/mec/pt-br/cne/2025/abril/rceb003_25.pdf"
+                },
+                {
+                    nome: "Resolução CNE/CEB nº 6/2025 — altera a Resolução nº 3/2025 da EJA",
+                    sobre: "Atualiza as Diretrizes Operacionais Nacionais para a EJA e disciplina período de transição.",
+                    topicos: "4",
+                    fonte: "MEC/CNE",
+                    url: "https://www.gov.br/mec/pt-br/cne/2025/julho-2025/rceb006_25.pdf"
+                },
+                {
+                    nome: "Resolução CD/FNDE nº 27/2012 — Programa Escola Acessível",
+                    sobre: "Recursos para acessibilidade arquitetônica, mobiliário acessível e tecnologia assistiva em escolas públicas.",
+                    topicos: "13",
+                    fonte: "FNDE",
+                    url: "https://www.gov.br/fnde/pt-br/acesso-a-informacao/legislacao/resolucoes/2012/resolucao-cd-fnde-no-27-de-27-de-julho-de-2012"
+                }
+            ]
+        },
+        {
+            titulo: "Pará — ética e regime do servidor",
+            itens: [
+                {
+                    nome: "Lei Estadual nº 5.810/1994 — Regime Jurídico Único dos Servidores do Pará",
+                    sobre: "Deveres, proibições, responsabilidade funcional, urbanidade, discrição e disciplina dos servidores públicos estaduais.",
+                    topicos: "17",
+                    fonte: "Legis-PA",
+                    url: "https://www.sistemas.pa.gov.br/sisleis/legislacao/954"
+                },
+                {
+                    nome: "Portaria nº 19/2026-GS/SEDUC — revoga o Código de Ética criado pela Portaria nº 05/2026",
+                    sobre: "Ato vigente de revogação: a Portaria nº 05/2026 e seu Código de Conduta e Ética deixaram de produzir efeitos.",
+                    topicos: "17",
+                    fonte: "IOEPA — DOE 21/01/2026",
+                    url: "https://www.ioepa.com.br/pages/2026/2026.01.21.DOE.pdf"
+                }
+            ]
+        },
+        {
+            titulo: "Normas históricas ou revogadas — atenção à prova",
+            itens: [
+                {
+                    nome: "Decreto nº 7.611/2011 — REVOGADO",
+                    sobre: "Antiga regulamentação de Educação Especial e AEE. Foi expressamente revogado pelo Decreto nº 12.686/2025; use apenas para contexto histórico.",
+                    topicos: "2, 3 e 13 — histórico",
+                    fonte: "Planalto",
+                    url: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7611.htm",
+                    revogada: true
+                },
+                {
+                    nome: "Portaria nº 05/2026-GS/SEDUC — REVOGADA",
+                    sobre: "Instituiu por poucos dias um Código de Conduta e Ética da SEDUC-PA; foi revogada pela Portaria nº 19/2026-GS/SEDUC.",
+                    topicos: "17 — histórico/pegadinha",
+                    fonte: "IOEPA — DOE 09/01/2026",
+                    url: "https://www.ioepa.com.br/pages/2026/2026.01.09.DOE.pdf",
+                    revogada: true
+                }
+            ]
+        }
+    ];
+
+    function escaparHtmlV182(valor){
+        return String(valor == null ? "" : valor)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    function estilosV182(){
+        if(document.getElementById("seducEeLeisNormasStyleV182")) return;
+        const style = document.createElement("style");
+        style.id = "seducEeLeisNormasStyleV182";
+        style.textContent = `
+            .seduc-ee-leis-v182{max-width:1180px;margin:0 auto;padding:22px;}
+            .seduc-ee-leis-cab-v182{background:linear-gradient(135deg,#0b4f8a,#123c68);color:#fff;border-radius:22px;padding:24px;margin:14px 0 20px;box-shadow:0 12px 32px rgba(0,0,0,.12);}
+            .seduc-ee-leis-cab-v182 h2{margin:0 0 8px;font-size:clamp(1.45rem,3vw,2.15rem);}
+            .seduc-ee-leis-cab-v182 p{margin:5px 0;line-height:1.55;color:#eef7ff;}
+            .seduc-ee-leis-grupo-v182{margin:24px 0;}
+            .seduc-ee-leis-grupo-v182 h3{margin:0 0 12px;color:#123f70;font-size:1.18rem;}
+            .seduc-ee-leis-grid-v182{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;}
+            .seduc-ee-lei-v182{display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #d6e4f1;border-radius:16px;padding:16px;box-shadow:0 5px 16px rgba(18,63,112,.07);}
+            .seduc-ee-lei-v182.revogada{border-color:#efb0b0;background:#fff9f9;}
+            .seduc-ee-lei-v182 strong{color:#123f70;line-height:1.35;}
+            .seduc-ee-lei-v182.revogada strong{color:#9c2626;}
+            .seduc-ee-lei-v182 .sobre{font-size:.94rem;line-height:1.45;color:#394b5d;}
+            .seduc-ee-lei-v182 .topicos{font-size:.86rem;color:#526779;}
+            .seduc-ee-lei-v182 a{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;font-weight:700;background:#0b7a53;color:#fff;padding:10px 12px;border-radius:10px;}
+            .seduc-ee-lei-v182 a:hover{filter:brightness(.94);}
+            .seduc-ee-lei-v182.revogada a{background:#a63a3a;}
+            .seduc-ee-consulta-topico-v182{border-color:#bdd9ef!important;background:linear-gradient(90deg,#f8fcff,#eef7ff)!important;}
+            .seduc-ee-consulta-topico-v182 .seduc-ee-numero-v161{font-size:1.3rem;}
+            @media(max-width:620px){.seduc-ee-leis-v182{padding:12px}.seduc-ee-leis-grid-v182{grid-template-columns:1fr}.seduc-ee-leis-cab-v182{padding:18px}}
+        `;
+        document.head.appendChild(style);
+    }
+
+    function renderizarItemV182(item){
+        const classe = item.revogada ? "seduc-ee-lei-v182 revogada" : "seduc-ee-lei-v182";
+        return `
+            <article class="${classe}">
+                <strong>${escaparHtmlV182(item.nome)}</strong>
+                <div class="sobre">${escaparHtmlV182(item.sobre)}</div>
+                <div class="topicos"><b>Tópico(s):</b> ${escaparHtmlV182(item.topicos)}</div>
+                <a href="${escaparHtmlV182(item.url)}" target="_blank" rel="noopener noreferrer">
+                    Abrir no site oficial — ${escaparHtmlV182(item.fonte)} ↗
+                </a>
+            </article>
+        `;
+    }
+
+    function garantirTelaV182(){
+        if(document.getElementById(TELA)) return;
+        estilosV182();
+        const section = document.createElement("section");
+        section.id = TELA;
+        section.className = "tela";
+        section.innerHTML = `
+            <div class="seduc-ee-leis-v182">
+                <button type="button" class="btn-voltar" onclick="voltarLeisNormasSeducV182()">← Voltar aos tópicos</button>
+                <div class="seduc-ee-leis-cab-v182">
+                    <h2>⚖️ Leis e Normas Oficiais — Educação Especial</h2>
+                    <p>Consulta rápida das normas utilizadas nos 17 blocos de Conhecimentos Específicos. Os links levam ao Planalto, MEC/CNE, FNDE ou órgãos oficiais do Pará para você ler o texto e conferir atualizações.</p>
+                    <p><strong>Revisado em 09/09/2026.</strong> Normas revogadas aparecem separadas e identificadas.</p>
+                </div>
+                ${grupos.map(grupo => `
+                    <section class="seduc-ee-leis-grupo-v182">
+                        <h3>${escaparHtmlV182(grupo.titulo)}</h3>
+                        <div class="seduc-ee-leis-grid-v182">
+                            ${grupo.itens.map(renderizarItemV182).join("")}
+                        </div>
+                    </section>
+                `).join("")}
+            </div>
+        `;
+        document.body.appendChild(section);
+    }
+
+    function atualizarMenuV182(){
+        const tela = document.getElementById(DISCIPLINA);
+        if(!tela) return;
+        const lista = tela.querySelector(".seduc-ee-topicos-v161");
+        if(!lista) return;
+
+        if(!document.getElementById("seducEeLeisNormasV182")){
+            lista.insertAdjacentHTML("beforeend", `
+                <button id="seducEeLeisNormasV182" type="button" class="seduc-ee-topico-v161 publicado seduc-ee-consulta-topico-v182" onclick="abrirLeisNormasSeducV182()">
+                    <span class="seduc-ee-numero-v161">⚖️</span>
+                    <span class="seduc-ee-topico-texto-v161">
+                        <strong>Leis e Normas Oficiais — Consulta</strong>
+                        <small>Constituição • LDB • LBI • ECA • TEA • Libras • PNEEI • CNE • PNE 2026 • AH/SD • normas do Pará</small>
+                    </span>
+                    <span class="seduc-ee-status-v161">Abrir legislação →</span>
+                </button>
+            `);
+        }
+        if(typeof window.ordenarTopicosSeducEducacaoEspecialV165 === "function"){
+            window.ordenarTopicosSeducEducacaoEspecialV165();
+        }
+    }
+
+    window.abrirLeisNormasSeducV182 = function(){
+        garantirTelaV182();
+        if(typeof mostrarTela === "function") mostrarTela(TELA);
+        window.scrollTo({top:0, behavior:"smooth"});
+    };
+
+    window.voltarLeisNormasSeducV182 = function(){
+        atualizarMenuV182();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    function instalarV182(){
+        estilosV182();
+        garantirTelaV182();
+        atualizarMenuV182();
+    }
+
+    if(typeof abrirDisciplina === "function"){
+        const anterior = abrirDisciplina;
+        abrirDisciplina = function(nome){
+            const retorno = anterior.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(atualizarMenuV182, 0);
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV182);
+    if(document.readyState !== "loading") instalarV182();
 })();
