@@ -693,7 +693,7 @@
         "dicaBanca": "FGV pode misturar ação de acessibilidade com medida assistencial ou segregadora. Observe se a alternativa remove barreiras do ambiente comum.",
         "pegadinha": "Escola Acessível não é apenas Sala de Recursos acessível.",
         "memorizar2026": "Acessibilidade escolar envolve arquitetura + mobiliário + sinalização + recursos/TA.",
-        "fonte": "FNDE — Programa Escola Acessível; Resolução CD/FNDE nº 27/2011."
+        "fonte": "FNDE — Programa Escola Acessível; Resolução CD/FNDE nº 27/2012."
     },
     {
         "id": "SEDUC-EE-OMA-025",
