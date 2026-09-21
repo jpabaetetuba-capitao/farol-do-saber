@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v183-2026-09-09-seduc-ee-leis-titulos-legiveis";
+const CACHE_VERSION = "farol-v194-2026-09-20-seduc-lp-organizacao-sintatica";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -29,6 +29,28 @@ const APP_SHELL = [
   "./dados/seduc/educacao-especial/tgdTea.js",
   "./dados/seduc/educacao-especial/altasHabilidadesSuperdotacao.js",
   "./dados/seduc/educacao-especial/eticaProfissional.js",
+  "./dados/seduc/conhecimentos-basicos/interpretacaoCompreensaoTexto.js",
+  "./dados/seduc/conhecimentos-basicos/organizacaoEstruturalTextos.js",
+  "./dados/seduc/conhecimentos-basicos/marcasTextualidadeCoesaoCoerenciaIntertextualidade.js",
+  "./dados/seduc/conhecimentos-basicos/modosOrganizacaoDiscursiva.js",
+  "./dados/seduc/conhecimentos-basicos/tiposTextuaisLiterariosNaoLiterarios.js",
+  "./dados/seduc/conhecimentos-basicos/tipologiaFrasePortuguesa.js",
+  "./dados/seduc/conhecimentos-basicos/estruturaFraseOperacoes.js",
+  "./dados/seduc/conhecimentos-basicos/problemasEstruturaisFrases.js",
+  "./dados/seduc/conhecimentos-basicos/normaCulta.js",
+  "./dados/seduc/conhecimentos-basicos/pontuacaoSinaisGraficos.js",
+  "./dados/seduc/conhecimentos-basicos/organizacaoSintaticaTermosOracoes.js",
+  "./imagens/mapas/seduc/conhecimentos-basicos/InterpretacaoCompreensaoTexto.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/OrganizacaoEstruturalTextos.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/MarcasTextualidadeCoesaoCoerenciaIntertextualidade.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/ModosOrganizacaoDiscursiva.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/TiposTextuaisLiterariosNaoLiterarios.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/TipologiaFrasePortuguesa.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/EstruturaFraseOperacoes.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/ProblemasEstruturaisFrases.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/NormaCulta.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/PontuacaoSinaisGraficos.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/OrganizacaoSintaticaTermosOracoes.jpg",
   "./imagens/mapas/seduc/educacao-especial/FundamentosEducacaoEspecial.png",
   "./imagens/mapas/seduc/educacao-especial/PlanejamentoEducacaoEspecial.png",
   "./imagens/mapas/seduc/educacao-especial/LegislacaoEducacaoEspecial.png",

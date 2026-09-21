@@ -52182,3 +52182,1614 @@ limparArenaLocalFarol = function(){
     document.addEventListener("DOMContentLoaded", instalarV182);
     if(document.readyState !== "loading") instalarV182();
 })();
+
+/* ==========================================================
+   FAROL V184 — SEDUC-PA 2026 / FGV
+   CONHECIMENTOS BÁSICOS — LÍNGUA PORTUGUESA
+   BLOCO 1: INTERPRETAÇÃO E COMPREENSÃO DE TEXTO
+========================================================== */
+(function integrarSeducPortuguesInterpretacaoV184(){
+    "use strict";
+
+    const CONCURSO = "seducpa2026";
+    const TRILHA = "seducProfessorEducacaoEspecial";
+    const DISCIPLINA = "seducLinguaPortuguesa";
+    const DISCIPLINA_ESPECIFICA = "seducEducacaoEspecial";
+    const ASSUNTO = "seducLinguaPortuguesaInterpretacaoCompreensao";
+    const TELA_MAPA = "seducMapaInterpretacaoCompreensaoV184";
+
+    const banco = Array.isArray(window.seducLinguaPortuguesaInterpretacaoCompreensao2026)
+        ? window.seducLinguaPortuguesaInterpretacaoCompreensao2026
+        : [];
+
+    function registrarV184(){
+        if(typeof bancoQuestoes !== "undefined"){
+            bancoQuestoes[ASSUNTO] = banco;
+        }
+
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "🧠 Português — Interpretação e Compreensão de Texto",
+                imagem: "imagens/mapas/seduc/conhecimentos-basicos/InterpretacaoCompreensaoTexto.jpg"
+            };
+        }
+
+        if(typeof disciplinasTrilhaFarol !== "undefined"){
+            disciplinasTrilhaFarol[DISCIPLINA] = {
+                nome: "Língua Portuguesa — Conhecimentos Básicos",
+                icone: "📖",
+                descricao: "Conteúdo do edital SEDUC-PA 2026 no padrão FGV. Primeiro tópico: Interpretação e Compreensão de Texto."
+            };
+        }
+
+        if(typeof trilhasPreparacaoFarol !== "undefined" && trilhasPreparacaoFarol[TRILHA]){
+            const trilha = trilhasPreparacaoFarol[TRILHA];
+            const atuais = Array.isArray(trilha.disciplinas) ? trilha.disciplinas : [];
+            trilha.disciplinas = [DISCIPLINA, ...atuais.filter(item => item !== DISCIPLINA)];
+            if(!trilha.disciplinas.includes(DISCIPLINA_ESPECIFICA)){
+                trilha.disciplinas.push(DISCIPLINA_ESPECIFICA);
+            }
+            trilha.descricao = "Preparação SEDUC-PA 2026 para Professor Classe I — Educação Especial, reunindo Conhecimentos Básicos e Conhecimentos Específicos no padrão FGV.";
+        }
+
+        if(window.concursosFarol && window.concursosFarol[CONCURSO]){
+            window.concursosFarol[CONCURSO].descricao = "Preparação para Professor Classe I — Educação Especial, com Conhecimentos Básicos e Específicos, mapas mentais e questões no padrão FGV.";
+        }
+    }
+
+    function garantirTelaDisciplinaV184(){
+        if(document.getElementById(DISCIPLINA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = DISCIPLINA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-painel-v161">
+                <button type="button" class="btn-voltar" onclick="voltarRotaSeducPortuguesV184()">
+                    ⬅ Voltar para o cargo
+                </button>
+
+                <div class="seduc-ee-cabecalho-v161">
+                    <span class="seduc-ee-selo-v161">SEDUC-PA 2026 • FGV • CONHECIMENTOS BÁSICOS</span>
+                    <h2>📖 Língua Portuguesa</h2>
+                    <p>
+                        Estude os tópicos na ordem do edital. Em cada bloco, revise o <strong>mapa mental</strong>
+                        e depois resolva as questões com feedback por alternativa.
+                    </p>
+                </div>
+
+                <div class="seduc-ee-topicos-v161">
+                    <button id="seducLpTopicoInterpretacaoV184" type="button" class="seduc-ee-topico-v161 publicado" onclick="abrirInterpretacaoCompreensaoSeducV184()">
+                        <span class="seduc-ee-numero-v161">1</span>
+                        <span class="seduc-ee-topico-texto-v161">
+                            <strong>Interpretação e Compreensão de Texto</strong>
+                            <small>Informação explícita • inferência • ideia central • finalidade • implícitos • ironia • paráfrase • leitura crítica</small>
+                        </span>
+                        <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+                    </button>
+                </div>
+
+                <div class="seduc-ee-aviso-v161">
+                    <strong>🎯 Estratégia FGV</strong>
+                    <p>Leia primeiro o comando, volte ao texto para confirmar a evidência e desconfie de alternativas que ampliem, reduzam ou absolutizem o que foi dito.</p>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(tela);
+    }
+
+    function garantirTelaMapaV184(){
+        if(document.getElementById(TELA_MAPA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA_MAPA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducPortuguesV184()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">PORTUGUÊS • MAPA 1</span>
+                    <h2>Interpretação e Compreensão de Texto</h2>
+                    <p>Foco em leitura fiel, inferência controlada e identificação das principais armadilhas que a FGV utiliza nas alternativas.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/conhecimentos-basicos/InterpretacaoCompreensaoTexto.jpg"
+                         alt="Mapa mental — Interpretação e Compreensão de Texto"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/conhecimentos-basicos/InterpretacaoCompreensaoTexto.jpg','_blank')">
+                        🔍 Ampliar mapa
+                    </button>
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — Interpretação</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Explícito × implícito</strong><span>Localize o que está escrito e separe do que pode ser inferido com base em pistas concretas.</span></article>
+                        <article><strong>Tema × ideia central</strong><span>Tema é o assunto; ideia central é a afirmação principal feita sobre esse assunto.</span></article>
+                        <article><strong>Inferência ≠ invenção</strong><span>Uma resposta plausível no mundo real não basta; precisa ser sustentada pelo texto.</span></article>
+                        <article><strong>Absolutizações</strong><span>Desconfie de “sempre”, “todos”, “somente”, “nunca” quando o texto usa formulações moderadas.</span></article>
+                        <article><strong>Paráfrase</strong><span>A alternativa pode trocar palavras e continuar correta; o que não pode mudar é a relação lógica original.</span></article>
+                        <article><strong>Ironia e contexto</strong><span>O sentido literal pode ser invertido pelo contexto. Leia a frase dentro do conjunto.</span></article>
+                        <article><strong>Intensidade</strong><span>“Pode”, “deve”, “ainda”, “apenas”, “alguns” e “todos” alteram o alcance da afirmação.</span></article>
+                        <article><strong>FGV</strong><span>Distratores fortes costumam conter uma parte verdadeira e um exagero, causa indevida ou conclusão além do texto.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaInterpretacaoV184">
+                    Li e revisei o Mapa 1 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesInterpretacaoSeducV184()">
+                    🚀 Iniciar 25 questões FGV
+                </button>
+            </div>
+        `;
+        document.body.appendChild(tela);
+    }
+
+    function instalarV184(){
+        registrarV184();
+        garantirTelaDisciplinaV184();
+        garantirTelaMapaV184();
+    }
+
+    window.abrirInterpretacaoCompreensaoSeducV184 = function(){
+        instalarV184();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaInterpretacaoV184");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_MAPA);
+    };
+
+    window.voltarTopicosSeducPortuguesV184 = function(){
+        instalarV184();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.voltarRotaSeducPortuguesV184 = function(){
+        if(typeof mostrarTela === "function") mostrarTela("inicio");
+        if(typeof renderizarTrilhaEstudo === "function"){
+            setTimeout(() => renderizarTrilhaEstudo(TRILHA), 0);
+        }
+    };
+
+    window.iniciarQuestoesInterpretacaoSeducV184 = function(){
+        const check = document.getElementById("confirmacaoMapaInterpretacaoV184");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function"){
+                mostrarToast("Leia e revise o Mapa 1 e o Radar FGV antes de iniciar as questões.");
+            }
+            return;
+        }
+
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    const abrirDisciplinaAnteriorV184 = typeof abrirDisciplina === "function" ? abrirDisciplina : null;
+    if(abrirDisciplinaAnteriorV184){
+        abrirDisciplina = function(nome){
+            if(nome === DISCIPLINA){
+                instalarV184();
+                disciplinaAtual = DISCIPLINA;
+                if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+                return;
+            }
+            return abrirDisciplinaAnteriorV184.apply(this, arguments);
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", instalarV184);
+    if(document.readyState !== "loading") instalarV184();
+})();
+
+
+/* ==========================================================
+   FAROL V186 — SEDUC-PA 2026 / FGV
+   CONHECIMENTOS BÁSICOS — LÍNGUA PORTUGUESA
+   BLOCO 2: ORGANIZAÇÃO ESTRUTURAL DOS TEXTOS
+   BLOCO 3: MARCAS DE TEXTUALIDADE — COESÃO, COERÊNCIA E INTERTEXTUALIDADE
+========================================================== */
+(function integrarSeducPortuguesBlocos2e3V186(){
+    "use strict";
+
+    const DISCIPLINA = "seducLinguaPortuguesa";
+    const ASSUNTO_ORG = "seducLinguaPortuguesaOrganizacaoEstrutural";
+    const ASSUNTO_TXT = "seducLinguaPortuguesaMarcasTextualidade";
+    const TELA_ORG = "seducMapaOrganizacaoEstruturalV186";
+    const TELA_TXT = "seducMapaMarcasTextualidadeV186";
+
+    const bancoOrg = Array.isArray(window.seducLinguaPortuguesaOrganizacaoEstrutural2026)
+        ? window.seducLinguaPortuguesaOrganizacaoEstrutural2026 : [];
+    const bancoTxt = Array.isArray(window.seducLinguaPortuguesaMarcasTextualidade2026)
+        ? window.seducLinguaPortuguesaMarcasTextualidade2026 : [];
+
+    function registrarV186(){
+        if(typeof bancoQuestoes !== "undefined"){
+            bancoQuestoes[ASSUNTO_ORG] = bancoOrg;
+            bancoQuestoes[ASSUNTO_TXT] = bancoTxt;
+        }
+
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO_ORG] = {
+                titulo: "🧠 Português — Organização Estrutural dos Textos",
+                imagem: "imagens/mapas/seduc/conhecimentos-basicos/OrganizacaoEstruturalTextos.jpg"
+            };
+            mapasMentaisPorAssunto[ASSUNTO_TXT] = {
+                titulo: "🧠 Português — Coesão, Coerência e Intertextualidade",
+                imagem: "imagens/mapas/seduc/conhecimentos-basicos/MarcasTextualidadeCoesaoCoerenciaIntertextualidade.jpg"
+            };
+        }
+
+        if(typeof disciplinasTrilhaFarol !== "undefined" && disciplinasTrilhaFarol[DISCIPLINA]){
+            disciplinasTrilhaFarol[DISCIPLINA].descricao =
+                "SEDUC-PA 2026 • FGV: Interpretação e Compreensão; Organização Estrutural; Coesão, Coerência e Intertextualidade.";
+        }
+    }
+
+    function garantirBotoesV186(){
+        const telaDisciplina = document.getElementById(DISCIPLINA);
+        if(!telaDisciplina) return false;
+        const lista = telaDisciplina.querySelector(".seduc-ee-topicos-v161");
+        if(!lista) return false;
+
+        if(!document.getElementById("seducLpTopicoOrganizacaoV186")){
+            const botao = document.createElement("button");
+            botao.id = "seducLpTopicoOrganizacaoV186";
+            botao.type = "button";
+            botao.className = "seduc-ee-topico-v161 publicado";
+            botao.setAttribute("onclick","abrirOrganizacaoEstruturalSeducV186()");
+            botao.innerHTML = `
+                <span class="seduc-ee-numero-v161">2</span>
+                <span class="seduc-ee-topico-texto-v161">
+                    <strong>Organização Estrutural dos Textos</strong>
+                    <small>macroestrutura • introdução • desenvolvimento • conclusão • parágrafos • progressão • hierarquia das informações</small>
+                </span>
+                <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+            `;
+            lista.appendChild(botao);
+        }
+
+        if(!document.getElementById("seducLpTopicoTextualidadeV186")){
+            const botao = document.createElement("button");
+            botao.id = "seducLpTopicoTextualidadeV186";
+            botao.type = "button";
+            botao.className = "seduc-ee-topico-v161 publicado";
+            botao.setAttribute("onclick","abrirMarcasTextualidadeSeducV186()");
+            botao.innerHTML = `
+                <span class="seduc-ee-numero-v161">3</span>
+                <span class="seduc-ee-topico-texto-v161">
+                    <strong>Marcas de Textualidade: Coesão, Coerência e Intertextualidade</strong>
+                    <small>referenciação • conectivos • elipse • coerência local/global • progressão temática • citação • paráfrase • paródia</small>
+                </span>
+                <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+            `;
+            lista.appendChild(botao);
+        }
+        return true;
+    }
+
+    function garantirTelaOrganizacaoV186(){
+        if(document.getElementById(TELA_ORG)) return;
+        const tela = document.createElement("section");
+        tela.id = TELA_ORG;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducPortuguesV186()">← Voltar aos tópicos</button>
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">PORTUGUÊS • MAPA 2</span>
+                    <h2>Organização Estrutural dos Textos</h2>
+                    <p>Observe a função das partes, a progressão, a hierarquia das informações e a relação entre introdução, desenvolvimento e conclusão.</p>
+                </div>
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/conhecimentos-basicos/OrganizacaoEstruturalTextos.jpg"
+                         alt="Mapa mental — Organização Estrutural dos Textos"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/conhecimentos-basicos/OrganizacaoEstruturalTextos.jpg','_blank')">🔍 Ampliar mapa</button>
+                </div>
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — Organização textual</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Macroestrutura</strong><span>Identifique o desenho global: apresentação do tema/problema, desenvolvimento e fecho.</span></article>
+                        <article><strong>Função do parágrafo</strong><span>Um parágrafo pode definir, explicar, exemplificar, contrastar, argumentar, sintetizar ou concluir.</span></article>
+                        <article><strong>Hierarquia</strong><span>Separe ideia central de dados, exemplos e detalhes que a sustentam.</span></article>
+                        <article><strong>Progressão</strong><span>O texto precisa avançar: informação nova deve se apoiar no que já foi apresentado.</span></article>
+                        <article><strong>Título/subtítulo</strong><span>Eles orientam o recorte, mas não substituem a leitura da tese e do desenvolvimento.</span></article>
+                        <article><strong>Reordenação</strong><span>Respeite pronomes, conectores, causa/consequência e dependências entre as frases.</span></article>
+                        <article><strong>Ruptura</strong><span>Trecho verdadeiro pode ser inadequado se não cumprir função no eixo temático.</span></article>
+                        <article><strong>FGV</strong><span>A banca troca função de trecho, ordem lógica e peso das informações para construir distratores.</span></article>
+                    </div>
+                </div>
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaOrganizacaoV186">
+                    Li e revisei o Mapa 2 e o Radar FGV.
+                </label>
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesOrganizacaoSeducV186()">🚀 Iniciar 25 questões FGV</button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function garantirTelaTextualidadeV186(){
+        if(document.getElementById(TELA_TXT)) return;
+        const tela = document.createElement("section");
+        tela.id = TELA_TXT;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducPortuguesV186()">← Voltar aos tópicos</button>
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">PORTUGUÊS • MAPA 3</span>
+                    <h2>Marcas de Textualidade: Coesão, Coerência e Intertextualidade</h2>
+                    <p>Foco em referentes, mecanismos de ligação, relações lógicas, unidade de sentido, progressão temática e diálogo entre textos.</p>
+                </div>
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/conhecimentos-basicos/MarcasTextualidadeCoesaoCoerenciaIntertextualidade.jpg"
+                         alt="Mapa mental — Coesão, Coerência e Intertextualidade"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/conhecimentos-basicos/MarcasTextualidadeCoesaoCoerenciaIntertextualidade.jpg','_blank')">🔍 Ampliar mapa</button>
+                </div>
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — Textualidade</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Coesão referencial</strong><span>Localize o referente de pronomes, expressões nominais, sinônimos, hiperônimos e elipses.</span></article>
+                        <article><strong>Coesão sequencial</strong><span>Determine a relação lógica do conectivo: adição, oposição, causa, consequência, condição, conclusão ou concessão.</span></article>
+                        <article><strong>Troca de conectivo</strong><span>A substituição só é válida se preservar a relação de sentido no contexto.</span></article>
+                        <article><strong>Coerência</strong><span>Um texto pode estar coeso e ainda ser incoerente. Verifique compatibilidade entre as informações.</span></article>
+                        <article><strong>Progressão temática</strong><span>Continuidade não é repetição vazia: o texto deve acrescentar informação nova sem perder o fio.</span></article>
+                        <article><strong>Intertextualidade</strong><span>Reconheça citação, alusão, paráfrase e paródia, explícitas ou implícitas.</span></article>
+                        <article><strong>Referente ambíguo</strong><span>Pronomes sem antecedente claro são uma armadilha frequente em questões de reescrita.</span></article>
+                        <article><strong>FGV</strong><span>A banca cobra muito a função contextual do elemento, não apenas sua classificação gramatical.</span></article>
+                    </div>
+                </div>
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaTextualidadeV186">
+                    Li e revisei o Mapa 3 e o Radar FGV.
+                </label>
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesTextualidadeSeducV186()">🚀 Iniciar 25 questões FGV</button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function instalarV186(){
+        registrarV186();
+        if(typeof window.abrirInterpretacaoCompreensaoSeducV184 === "function"){
+            // A tela da disciplina é criada pelo bloco 1.
+        }
+        garantirBotoesV186();
+        garantirTelaOrganizacaoV186();
+        garantirTelaTextualidadeV186();
+    }
+
+    window.abrirOrganizacaoEstruturalSeducV186 = function(){
+        instalarV186();
+        assuntoAtual = ASSUNTO_ORG;
+        disciplinaAtual = ASSUNTO_ORG;
+        const check = document.getElementById("confirmacaoMapaOrganizacaoV186");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_ORG);
+    };
+
+    window.abrirMarcasTextualidadeSeducV186 = function(){
+        instalarV186();
+        assuntoAtual = ASSUNTO_TXT;
+        disciplinaAtual = ASSUNTO_TXT;
+        const check = document.getElementById("confirmacaoMapaTextualidadeV186");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA_TXT);
+    };
+
+    window.voltarTopicosSeducPortuguesV186 = function(){
+        instalarV186();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesOrganizacaoSeducV186 = function(){
+        const check = document.getElementById("confirmacaoMapaOrganizacaoV186");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 2 e o Radar FGV antes de iniciar as questões.");
+            return;
+        }
+        assuntoAtual = ASSUNTO_ORG;
+        disciplinaAtual = ASSUNTO_ORG;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    window.iniciarQuestoesTextualidadeSeducV186 = function(){
+        const check = document.getElementById("confirmacaoMapaTextualidadeV186");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 3 e o Radar FGV antes de iniciar as questões.");
+            return;
+        }
+        assuntoAtual = ASSUNTO_TXT;
+        disciplinaAtual = ASSUNTO_TXT;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    const abrirDisciplinaAnteriorV186 = typeof abrirDisciplina === "function" ? abrirDisciplina : null;
+    if(abrirDisciplinaAnteriorV186){
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAnteriorV186.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(instalarV186, 0);
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){ setTimeout(instalarV186, 0); });
+    if(document.readyState !== "loading") setTimeout(instalarV186, 0);
+})();
+
+
+/* ==========================================================
+   FAROL V187 — SEDUC-PA 2026 / FGV
+   CONHECIMENTOS BÁSICOS — LÍNGUA PORTUGUESA
+   BLOCO 4: MODOS DE ORGANIZAÇÃO DISCURSIVA
+   DESCRIÇÃO • NARRAÇÃO • EXPOSIÇÃO • ARGUMENTAÇÃO • INJUNÇÃO
+========================================================== */
+(function integrarSeducPortuguesModosDiscursivosV187(){
+    "use strict";
+
+    const DISCIPLINA = "seducLinguaPortuguesa";
+    const ASSUNTO = "seducLinguaPortuguesaModosOrganizacaoDiscursiva";
+    const TELA = "seducMapaModosOrganizacaoDiscursivaV187";
+
+    const banco = Array.isArray(window.seducLinguaPortuguesaModosOrganizacaoDiscursiva2026)
+        ? window.seducLinguaPortuguesaModosOrganizacaoDiscursiva2026 : [];
+
+    function registrarV187(){
+        if(typeof bancoQuestoes !== "undefined"){
+            bancoQuestoes[ASSUNTO] = banco;
+        }
+
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "🧠 Português — Modos de Organização Discursiva",
+                imagem: "imagens/mapas/seduc/conhecimentos-basicos/ModosOrganizacaoDiscursiva.jpg"
+            };
+        }
+
+        if(typeof disciplinasTrilhaFarol !== "undefined" && disciplinasTrilhaFarol[DISCIPLINA]){
+            disciplinasTrilhaFarol[DISCIPLINA].descricao =
+                "SEDUC-PA 2026 • FGV: Interpretação; Organização Estrutural; Textualidade; Modos de Organização Discursiva.";
+        }
+    }
+
+    function garantirBotaoV187(){
+        const telaDisciplina = document.getElementById(DISCIPLINA);
+        if(!telaDisciplina) return false;
+        const lista = telaDisciplina.querySelector(".seduc-ee-topicos-v161");
+        if(!lista) return false;
+
+        if(!document.getElementById("seducLpTopicoModosV187")){
+            const botao = document.createElement("button");
+            botao.id = "seducLpTopicoModosV187";
+            botao.type = "button";
+            botao.className = "seduc-ee-topico-v161 publicado";
+            botao.setAttribute("onclick","abrirModosOrganizacaoDiscursivaSeducV187()");
+            botao.innerHTML = `
+                <span class="seduc-ee-numero-v161">4</span>
+                <span class="seduc-ee-topico-texto-v161">
+                    <strong>Modos de Organização Discursiva</strong>
+                    <small>descrição • narração • exposição • argumentação • injunção • características específicas e predominância</small>
+                </span>
+                <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+            `;
+            lista.appendChild(botao);
+        }
+        return true;
+    }
+
+    function garantirTelaV187(){
+        if(document.getElementById(TELA)) return;
+        const tela = document.createElement("section");
+        tela.id = TELA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducPortuguesV187()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">PORTUGUÊS • MAPA 4</span>
+                    <h2>Modos de Organização Discursiva</h2>
+                    <p>Descrição, narração, exposição, argumentação e injunção: identifique a função predominante, as marcas linguísticas e a forma como cada modo organiza as informações.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/conhecimentos-basicos/ModosOrganizacaoDiscursiva.jpg"
+                         alt="Mapa mental — Modos de Organização Discursiva"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/conhecimentos-basicos/ModosOrganizacaoDiscursiva.jpg','_blank')">🔍 Ampliar mapa</button>
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — Modos Discursivos</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Descrição</strong><span>Caracteriza seres, objetos, ambientes e estados. Observe atributos, localização, percepção e organização espacial.</span></article>
+                        <article><strong>Narração</strong><span>Organiza acontecimentos no tempo. Procure agentes, ações, mudança de estado e progressão temporal.</span></article>
+                        <article><strong>Exposição</strong><span>Apresenta e esclarece conhecimento por definição, explicação, classificação, comparação, enumeração ou exemplificação.</span></article>
+                        <article><strong>Argumentação</strong><span>Defende uma tese. Separe posição central, argumentos, evidências, concessões, contra-argumentos e refutações.</span></article>
+                        <article><strong>Injunção</strong><span>Orienta a conduta do destinatário por ordem, instrução, conselho ou recomendação. Observe a finalidade diretiva.</span></article>
+                        <article><strong>Predominância</strong><span>Um texto pode combinar vários modos. Classifique o trecho pela função que predomina no segmento analisado.</span></article>
+                        <article><strong>Sequência de ações</strong><span>Narração relata o que acontece; injunção prescreve o que o destinatário deve fazer.</span></article>
+                        <article><strong>FGV</strong><span>Evite classificações automáticas: adjetivo não garante descrição, dado não garante exposição e imperativo isolado não define o texto inteiro.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaModosV187">
+                    Li e revisei o Mapa 4 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesModosSeducV187()">🚀 Iniciar 25 questões FGV</button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function instalarV187(){
+        registrarV187();
+        garantirBotaoV187();
+        garantirTelaV187();
+    }
+
+    window.abrirModosOrganizacaoDiscursivaSeducV187 = function(){
+        instalarV187();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaModosV187");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA);
+    };
+
+    window.voltarTopicosSeducPortuguesV187 = function(){
+        instalarV187();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesModosSeducV187 = function(){
+        const check = document.getElementById("confirmacaoMapaModosV187");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 4 e o Radar FGV antes de iniciar as questões.");
+            return;
+        }
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    const abrirDisciplinaAnteriorV187 = typeof abrirDisciplina === "function" ? abrirDisciplina : null;
+    if(abrirDisciplinaAnteriorV187){
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAnteriorV187.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(instalarV187, 0);
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){ setTimeout(instalarV187, 0); });
+    if(document.readyState !== "loading") setTimeout(instalarV187, 0);
+})();
+
+
+/* ==========================================================
+   FAROL V188 — SEDUC-PA 2026 / FGV
+   CONHECIMENTOS BÁSICOS — LÍNGUA PORTUGUESA
+   BLOCO 5: TIPOS TEXTUAIS • TEXTOS LITERÁRIOS E NÃO LITERÁRIOS
+========================================================== */
+(function integrarSeducPortuguesTiposTextuaisV188(){
+    "use strict";
+
+    const DISCIPLINA = "seducLinguaPortuguesa";
+    const ASSUNTO = "seducLinguaPortuguesaTiposTextuaisLiterariosNaoLiterarios";
+    const TELA = "seducMapaTiposTextuaisV188";
+
+    const banco = Array.isArray(window.seducLinguaPortuguesaTiposTextuaisLiterariosNaoLiterarios2026)
+        ? window.seducLinguaPortuguesaTiposTextuaisLiterariosNaoLiterarios2026 : [];
+
+    function registrarV188(){
+        if(typeof bancoQuestoes !== "undefined"){
+            bancoQuestoes[ASSUNTO] = banco;
+        }
+
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "🧠 Português — Tipos Textuais e Textos Literários/Não Literários",
+                imagem: "imagens/mapas/seduc/conhecimentos-basicos/TiposTextuaisLiterariosNaoLiterarios.jpg"
+            };
+        }
+
+        if(typeof disciplinasTrilhaFarol !== "undefined" && disciplinasTrilhaFarol[DISCIPLINA]){
+            disciplinasTrilhaFarol[DISCIPLINA].descricao =
+                "SEDUC-PA 2026 • FGV: Interpretação; Organização Estrutural; Textualidade; Modos Discursivos; Tipos Textuais e Textos Literários/Não Literários.";
+        }
+    }
+
+    function garantirBotaoV188(){
+        const telaDisciplina = document.getElementById(DISCIPLINA);
+        if(!telaDisciplina) return false;
+        const lista = telaDisciplina.querySelector(".seduc-ee-topicos-v161");
+        if(!lista) return false;
+
+        if(!document.getElementById("seducLpTopicoTiposV188")){
+            const botao = document.createElement("button");
+            botao.id = "seducLpTopicoTiposV188";
+            botao.type = "button";
+            botao.className = "seduc-ee-topico-v161 publicado";
+            botao.setAttribute("onclick","abrirTiposTextuaisSeducV188()");
+            botao.innerHTML = `
+                <span class="seduc-ee-numero-v161">5</span>
+                <span class="seduc-ee-topico-texto-v161">
+                    <strong>Tipos Textuais e Textos Literários / Não Literários</strong>
+                    <small>informativo • publicitário • propagandístico • normativo • didático • divinatório • literariedade e predominância</small>
+                </span>
+                <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+            `;
+            lista.appendChild(botao);
+        }
+        return true;
+    }
+
+    function garantirTelaV188(){
+        if(document.getElementById(TELA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducPortuguesV188()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">PORTUGUÊS • MAPA 5</span>
+                    <h2>Tipos Textuais e Textos Literários / Não Literários</h2>
+                    <p>Reconheça a finalidade predominante do texto e diferencie tipo textual, gênero, modo discursivo e tratamento literário da linguagem.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/conhecimentos-basicos/TiposTextuaisLiterariosNaoLiterarios.jpg"
+                         alt="Mapa mental — Tipos Textuais e Textos Literários e Não Literários"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/conhecimentos-basicos/TiposTextuaisLiterariosNaoLiterarios.jpg','_blank')">🔍 Ampliar mapa</button>
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — Tipos Textuais e Literariedade</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Finalidade primeiro</strong><span>Antes de classificar, pergunte o que o texto pretende fazer: informar, promover, difundir ideias, regular, ensinar ou prever.</span></article>
+                        <article><strong>Publicidade x propaganda</strong><span>Publicidade tende a promover produto, serviço ou marca; propaganda tende a difundir ideias, valores, causas ou comportamentos.</span></article>
+                        <article><strong>Informativo x didático</strong><span>O informativo prioriza dados e fatos; o didático organiza explicações, exemplos e atividades para favorecer aprendizagem.</span></article>
+                        <article><strong>Normativo x injuntivo</strong><span>Normativo é função textual de regular condutas; injuntivo é modo de organização que orienta ou ordena ações.</span></article>
+                        <article><strong>Divinatório</strong><span>Falar do futuro não basta. A previsão divinatória se apoia em sistemas interpretativos não científicos.</span></article>
+                        <article><strong>Literário</strong><span>Observe finalidade estética, expressividade, conotação e plurissignificação. Prosa também pode ser literária e literatura não é sinônimo de ficção.</span></article>
+                        <article><strong>Não literário</strong><span>Prioriza função prática ou referencial, mas pode empregar metáforas, humor, ritmo e outros recursos expressivos.</span></article>
+                        <article><strong>FGV: predominância</strong><span>Textos reais são híbridos. Uma marca isolada não decide a classificação: considere finalidade, contexto, destinatário e conjunto das marcas.</span></article>
+                    </div>
+                </div>
+
+                <div class="seduc-ee-aviso-v161">
+                    <strong>📌 Nota de banca</strong>
+                    <span>O edital da SEDUC-PA cobra genericamente “tipos textuais”. A enumeração informativo, publicitário, propagandístico, normativo, didático e divinatório é usada aqui porque aparece de forma recorrente em outros editais da própria FGV.</span>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaTiposV188">
+                    Li e revisei o Mapa 5 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesTiposSeducV188()">🚀 Iniciar 25 questões FGV</button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function instalarV188(){
+        registrarV188();
+        garantirBotaoV188();
+        garantirTelaV188();
+    }
+
+    window.abrirTiposTextuaisSeducV188 = function(){
+        instalarV188();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaTiposV188");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA);
+    };
+
+    window.voltarTopicosSeducPortuguesV188 = function(){
+        instalarV188();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesTiposSeducV188 = function(){
+        const check = document.getElementById("confirmacaoMapaTiposV188");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 5 e o Radar FGV antes de iniciar as questões.");
+            return;
+        }
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    const abrirDisciplinaAnteriorV188 = typeof abrirDisciplina === "function" ? abrirDisciplina : null;
+    if(abrirDisciplinaAnteriorV188){
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAnteriorV188.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(instalarV188, 0);
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){ setTimeout(instalarV188, 0); });
+    if(document.readyState !== "loading") setTimeout(instalarV188, 0);
+})();
+
+
+
+/* ==========================================================
+   FAROL V189 — SEDUC-PA 2026 / FGV
+   CONHECIMENTOS BÁSICOS — LÍNGUA PORTUGUESA
+   BLOCO 6: TIPOLOGIA DA FRASE PORTUGUESA
+========================================================== */
+(function integrarSeducPortuguesTipologiaFraseV189(){
+    "use strict";
+
+    const DISCIPLINA = "seducLinguaPortuguesa";
+    const ASSUNTO = "seducLinguaPortuguesaTipologiaFrasePortuguesa";
+    const TELA = "seducMapaTipologiaFraseV189";
+
+    const banco = Array.isArray(window.seducLinguaPortuguesaTipologiaFrase2026)
+        ? window.seducLinguaPortuguesaTipologiaFrase2026 : [];
+
+    function registrarV189(){
+        if(typeof bancoQuestoes !== "undefined"){
+            bancoQuestoes[ASSUNTO] = banco;
+        }
+
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "🧠 Português — Tipologia da Frase Portuguesa",
+                imagem: "imagens/mapas/seduc/conhecimentos-basicos/TipologiaFrasePortuguesa.jpg"
+            };
+        }
+
+        if(typeof disciplinasTrilhaFarol !== "undefined" && disciplinasTrilhaFarol[DISCIPLINA]){
+            disciplinasTrilhaFarol[DISCIPLINA].descricao =
+                "SEDUC-PA 2026 • FGV: Interpretação; Organização Estrutural; Textualidade; Modos Discursivos; Tipos Textuais; Tipologia da Frase Portuguesa.";
+        }
+    }
+
+    function garantirBotaoV189(){
+        const telaDisciplina = document.getElementById(DISCIPLINA);
+        if(!telaDisciplina) return false;
+        const lista = telaDisciplina.querySelector(".seduc-ee-topicos-v161");
+        if(!lista) return false;
+
+        if(!document.getElementById("seducLpTopicoFraseV189")){
+            const botao = document.createElement("button");
+            botao.id = "seducLpTopicoFraseV189";
+            botao.type = "button";
+            botao.className = "seduc-ee-topico-v161 publicado";
+            botao.setAttribute("onclick","abrirTipologiaFraseSeducV189()");
+            botao.innerHTML = `
+                <span class="seduc-ee-numero-v161">6</span>
+                <span class="seduc-ee-topico-texto-v161">
+                    <strong>Tipologia da Frase Portuguesa</strong>
+                    <small>declarativa • interrogativa • exclamativa • injuntiva • optativa • nominal/verbal • total/parcial • direta/indireta</small>
+                </span>
+                <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+            `;
+            lista.appendChild(botao);
+        }
+        return true;
+    }
+
+    function garantirTelaV189(){
+        if(document.getElementById(TELA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducPortuguesV189()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">PORTUGUÊS • MAPA 6</span>
+                    <h2>Tipologia da Frase Portuguesa</h2>
+                    <p>Classifique a frase pela intenção comunicativa e refine a análise: declaração, pergunta, exclamação, injunção ou desejo; interrogativa total/parcial, direta/indireta; frase nominal ou verbal.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/conhecimentos-basicos/TipologiaFrasePortuguesa.jpg"
+                         alt="Mapa mental — Tipologia da Frase Portuguesa"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/conhecimentos-basicos/TipologiaFrasePortuguesa.jpg','_blank')">🔍 Ampliar mapa</button>
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — Tipologia da Frase</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Declarativa</strong><span>Formula uma declaração. Pode ser afirmativa ou negativa e também pode trazer modalizadores como talvez, provavelmente e certamente.</span></article>
+                        <article><strong>Interrogativa</strong><span>Formula pergunta. A FGV diferencia direta/indireta e, nas diretas, total (sim/não), parcial (pede um dado) e alternativa.</span></article>
+                        <article><strong>Injuntiva</strong><span>Expressa ordem, proibição, pedido, conselho ou recomendação. Pode surgir até sob forma interrogativa: “Você pode fechar a porta?”.</span></article>
+                        <article><strong>Exclamativa</strong><span>Exterioriza emoção, reação, avaliação ou intensidade. O ponto de exclamação é pista, mas não basta sozinho.</span></article>
+                        <article><strong>Optativa</strong><span>Expressa desejo, voto ou esperança: “Tomara que...”, “Oxalá...”, “Que você tenha...”. Não confunda com simples exclamação.</span></article>
+                        <article><strong>Nominal x verbal</strong><span>Frase nominal não possui verbo; frase verbal possui verbo ou locução verbal. Essa classificação pode coexistir com a modalidade.</span></article>
+                        <article><strong>Forma x intenção</strong><span>A estrutura gramatical e o ato de fala podem divergir. Uma pergunta formal pode funcionar como pedido; uma frase nominal pode funcionar como ordem.</span></article>
+                        <article><strong>FGV</strong><span>Não classifique apenas pelo sinal final. Observe sentido, finalidade, contexto e só então use a pontuação como confirmação.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaFraseV189">
+                    Li e revisei o Mapa 6 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesTipologiaFraseSeducV189()">🚀 Iniciar 25 questões FGV</button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function instalarV189(){
+        registrarV189();
+        garantirBotaoV189();
+        garantirTelaV189();
+    }
+
+    window.abrirTipologiaFraseSeducV189 = function(){
+        instalarV189();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaFraseV189");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA);
+    };
+
+    window.voltarTopicosSeducPortuguesV189 = function(){
+        instalarV189();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesTipologiaFraseSeducV189 = function(){
+        const check = document.getElementById("confirmacaoMapaFraseV189");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 6 e o Radar FGV antes de iniciar as questões.");
+            return;
+        }
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    const abrirDisciplinaAnteriorV189 = typeof abrirDisciplina === "function" ? abrirDisciplina : null;
+    if(abrirDisciplinaAnteriorV189){
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAnteriorV189.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(instalarV189, 0);
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){ setTimeout(instalarV189, 0); });
+    if(document.readyState !== "loading") setTimeout(instalarV189, 0);
+})();
+
+/* ==========================================================
+   FAROL V190 — SEDUC-PA 2026 / FGV
+   CONHECIMENTOS BÁSICOS — LÍNGUA PORTUGUESA
+   BLOCO 7: ESTRUTURA DA FRASE PORTUGUESA
+   Operações de deslocamento, substituição, modificação e correção
+========================================================== */
+(function integrarSeducPortuguesEstruturaFraseV190(){
+    "use strict";
+
+    const DISCIPLINA = "seducLinguaPortuguesa";
+    const ASSUNTO = "seducLinguaPortuguesaEstruturaFraseOperacoes";
+    const TELA = "seducMapaEstruturaFraseV190";
+
+    const banco = Array.isArray(window.seducLinguaPortuguesaEstruturaFraseOperacoes2026)
+        ? window.seducLinguaPortuguesaEstruturaFraseOperacoes2026 : [];
+
+    function registrarV190(){
+        if(typeof bancoQuestoes !== "undefined"){
+            bancoQuestoes[ASSUNTO] = banco;
+        }
+
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "🧠 Português — Estrutura da Frase: operações de reescritura",
+                imagem: "imagens/mapas/seduc/conhecimentos-basicos/EstruturaFraseOperacoes.jpg"
+            };
+        }
+
+        if(typeof disciplinasTrilhaFarol !== "undefined" && disciplinasTrilhaFarol[DISCIPLINA]){
+            disciplinasTrilhaFarol[DISCIPLINA].descricao =
+                "SEDUC-PA 2026 • FGV: Interpretação; Organização Estrutural; Textualidade; Modos Discursivos; Tipos Textuais; Tipologia da Frase; Estrutura da Frase e operações de reescritura.";
+        }
+    }
+
+    function garantirBotaoV190(){
+        const telaDisciplina = document.getElementById(DISCIPLINA);
+        if(!telaDisciplina) return false;
+        const lista = telaDisciplina.querySelector(".seduc-ee-topicos-v161");
+        if(!lista) return false;
+
+        if(!document.getElementById("seducLpTopicoEstruturaFraseV190")){
+            const botao = document.createElement("button");
+            botao.id = "seducLpTopicoEstruturaFraseV190";
+            botao.type = "button";
+            botao.className = "seduc-ee-topico-v161 publicado";
+            botao.setAttribute("onclick","abrirEstruturaFraseSeducV190()");
+            botao.innerHTML = `
+                <span class="seduc-ee-numero-v161">7</span>
+                <span class="seduc-ee-topico-texto-v161">
+                    <strong>Estrutura da Frase: deslocamento, substituição, modificação e correção</strong>
+                    <small>reescritura • posição e escopo • pronomes • conectivos • modalização • paralelismo • clareza • preservação de sentido</small>
+                </span>
+                <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+            `;
+            lista.appendChild(botao);
+        }
+        return true;
+    }
+
+    function garantirTelaV190(){
+        if(document.getElementById(TELA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducPortuguesV190()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">PORTUGUÊS • MAPA 7</span>
+                    <h2>Estrutura da Frase Portuguesa</h2>
+                    <p>Treine as operações que a FGV explora em reescrituras: mover constituintes, substituir formas, modificar alcance e corrigir estruturas sem perder o sentido original.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/conhecimentos-basicos/EstruturaFraseOperacoes.jpg"
+                         alt="Mapa mental — Estrutura da Frase Portuguesa: deslocamento, substituição, modificação e correção"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/conhecimentos-basicos/EstruturaFraseOperacoes.jpg','_blank')">🔍 Ampliar mapa</button>
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — Estrutura e Reescritura</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Deslocamento</strong><span>Mover um termo ou oração pode exigir nova pontuação. O bloco deslocado precisa permanecer estruturalmente íntegro.</span></article>
+                        <article><strong>Escopo</strong><span>Com “só”, “somente”, “até”, “também” e semelhantes, a posição pode mudar exatamente qual termo recebe foco ou restrição.</span></article>
+                        <article><strong>Substituição</strong><span>Pronomes, sinônimos, hiperônimos, adjetivos e conectivos só são válidos se preservarem referência, função e relação de sentido.</span></article>
+                        <article><strong>Modificação</strong><span>Modalizadores, intensificadores, negação e restritores mudam certeza, intensidade, polaridade ou alcance da afirmação.</span></article>
+                        <article><strong>Correção</strong><span>Ajuste paralelismo, ambiguidade, redundância, pontuação e relação lógica sem “corrigir” uma frase às custas do significado.</span></article>
+                        <article><strong>Ordem</strong><span>Uma frase pode ser gramatical e pouco clara. Reordenar termos pode eliminar dupla leitura ou destacar uma informação.</span></article>
+                        <article><strong>Reescritura</strong><span>Compare sempre quatro coisas: conteúdo, relação lógica, referente e escopo. Se uma delas mudar, a equivalência pode desaparecer.</span></article>
+                        <article><strong>FGV</strong><span>A banca costuma oferecer uma alternativa gramaticalmente aceitável que altera discretamente o sentido. É aí que mora a pegadinha.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaEstruturaFraseV190">
+                    Li e revisei o Mapa 7 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesEstruturaFraseSeducV190()">🚀 Iniciar 25 questões FGV</button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function instalarV190(){
+        registrarV190();
+        garantirBotaoV190();
+        garantirTelaV190();
+    }
+
+    window.abrirEstruturaFraseSeducV190 = function(){
+        instalarV190();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaEstruturaFraseV190");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA);
+    };
+
+    window.voltarTopicosSeducPortuguesV190 = function(){
+        instalarV190();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesEstruturaFraseSeducV190 = function(){
+        const check = document.getElementById("confirmacaoMapaEstruturaFraseV190");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 7 e o Radar FGV antes de iniciar as questões.");
+            return;
+        }
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    const abrirDisciplinaAnteriorV190 = typeof abrirDisciplina === "function" ? abrirDisciplina : null;
+    if(abrirDisciplinaAnteriorV190){
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAnteriorV190.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(instalarV190, 0);
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){ setTimeout(instalarV190, 0); });
+    if(document.readyState !== "loading") setTimeout(instalarV190, 0);
+})();
+
+
+
+/* ==========================================================
+   FAROL V191 — SEDUC-PA 2026 / FGV
+   CONHECIMENTOS BÁSICOS — LÍNGUA PORTUGUESA
+   BLOCO 8: PROBLEMAS ESTRUTURAIS DAS FRASES
+========================================================== */
+(function integrarSeducPortuguesProblemasEstruturaisV191(){
+    "use strict";
+
+    const DISCIPLINA = "seducLinguaPortuguesa";
+    const ASSUNTO = "seducLinguaPortuguesaProblemasEstruturaisFrases";
+    const TELA = "seducMapaProblemasEstruturaisV191";
+
+    const banco = Array.isArray(window.seducLinguaPortuguesaProblemasEstruturaisFrases2026)
+        ? window.seducLinguaPortuguesaProblemasEstruturaisFrases2026 : [];
+
+    function registrarV191(){
+        if(typeof bancoQuestoes !== "undefined"){
+            bancoQuestoes[ASSUNTO] = banco;
+        }
+
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "🧠 Português — Problemas Estruturais das Frases",
+                imagem: "imagens/mapas/seduc/conhecimentos-basicos/ProblemasEstruturaisFrases.jpg"
+            };
+        }
+
+        if(typeof disciplinasTrilhaFarol !== "undefined" && disciplinasTrilhaFarol[DISCIPLINA]){
+            disciplinasTrilhaFarol[DISCIPLINA].descricao =
+                "SEDUC-PA 2026 • FGV: Interpretação; Organização Estrutural; Textualidade; Modos Discursivos; Tipos Textuais; Tipologia da Frase; Estrutura da Frase; Problemas Estruturais das Frases.";
+        }
+    }
+
+    function garantirBotaoV191(){
+        const telaDisciplina = document.getElementById(DISCIPLINA);
+        if(!telaDisciplina) return false;
+        const lista = telaDisciplina.querySelector(".seduc-ee-topicos-v161");
+        if(!lista) return false;
+
+        if(!document.getElementById("seducLpTopicoProblemasEstruturaisV191")){
+            const botao = document.createElement("button");
+            botao.id = "seducLpTopicoProblemasEstruturaisV191";
+            botao.type = "button";
+            botao.className = "seduc-ee-topico-v161 publicado";
+            botao.setAttribute("onclick","abrirProblemasEstruturaisSeducV191()");
+            botao.innerHTML = `
+                <span class="seduc-ee-numero-v161">8</span>
+                <span class="seduc-ee-topico-texto-v161">
+                    <strong>Problemas estruturais das frases</strong>
+                    <small>ambiguidade • paralelismo • coordenação • comparação • fragmentos • redundância • clareza • reescritura corretiva</small>
+                </span>
+                <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+            `;
+            lista.appendChild(botao);
+        }
+        return true;
+    }
+
+    function garantirTelaV191(){
+        if(document.getElementById(TELA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducPortuguesV191()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">PORTUGUÊS • MAPA 8</span>
+                    <h2>Problemas Estruturais das Frases</h2>
+                    <p>Treine os defeitos de construção que a FGV explora em frases contextualizadas: ambiguidade, referência pouco clara, falta de paralelismo, comparações defeituosas, redundâncias e estruturas truncadas.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/conhecimentos-basicos/ProblemasEstruturaisFrases.jpg"
+                         alt="Mapa mental — Problemas Estruturais das Frases"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/conhecimentos-basicos/ProblemasEstruturaisFrases.jpg','_blank')">🔍 Ampliar mapa</button>
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — Problemas Estruturais</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Ambiguidade</strong><span>Localize pronomes, adjuntos e elipses que podem se ligar a mais de um termo. A frase pode estar correta e ainda permitir duas leituras.</span></article>
+                        <article><strong>Paralelismo</strong><span>Em enumerações e correlações, compare a forma dos membros. Infinitivo deve dialogar com infinitivo; nome com nome; oração com oração.</span></article>
+                        <article><strong>Coordenação</strong><span>A conjunção não salva uma série mal construída. Os itens coordenados precisam exercer funções equivalentes e manter compatibilidade semântica.</span></article>
+                        <article><strong>Comparação</strong><span>Compare grandezas equivalentes: desempenho com desempenho, índice com índice, estado atual com estado anterior.</span></article>
+                        <article><strong>Redundância</strong><span>Diferencie ênfase legítima de repetição inútil. “Há três anos atrás” e “entrar para dentro” são modelos clássicos de pleonasmo vicioso.</span></article>
+                        <article><strong>Fragmentos</strong><span>Frase nominal pode ser completa; oração subordinada isolada pode ficar estruturalmente suspensa. Não use a presença de verbo como único critério.</span></article>
+                        <article><strong>Referência</strong><span>Se um pronome puder retomar duas pessoas ou coisas, nomeie o referente. Em texto formal, clareza supera a obsessão por evitar repetição.</span></article>
+                        <article><strong>FGV recente</strong><span>A banca contextualiza: o defeito costuma aparecer em comunicado, frase de autor, anúncio ou situação concreta, não como definição solta.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaProblemasEstruturaisV191">
+                    Li e revisei o Mapa 8 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesProblemasEstruturaisSeducV191()">🚀 Iniciar 25 questões FGV</button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function instalarV191(){
+        registrarV191();
+        garantirBotaoV191();
+        garantirTelaV191();
+    }
+
+    window.abrirProblemasEstruturaisSeducV191 = function(){
+        instalarV191();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaProblemasEstruturaisV191");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA);
+    };
+
+    window.voltarTopicosSeducPortuguesV191 = function(){
+        instalarV191();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesProblemasEstruturaisSeducV191 = function(){
+        const check = document.getElementById("confirmacaoMapaProblemasEstruturaisV191");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 8 e o Radar FGV antes de iniciar as questões.");
+            return;
+        }
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    const abrirDisciplinaAnteriorV191 = typeof abrirDisciplina === "function" ? abrirDisciplina : null;
+    if(abrirDisciplinaAnteriorV191){
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAnteriorV191.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(instalarV191, 0);
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){ setTimeout(instalarV191, 0); });
+    if(document.readyState !== "loading") setTimeout(instalarV191, 0);
+})();
+
+
+/* ==========================================================
+   FAROL V192 — SEDUC-PA 2026 / FGV
+   CONHECIMENTOS BÁSICOS — LÍNGUA PORTUGUESA
+   BLOCO 9: NORMA CULTA
+========================================================== */
+(function integrarSeducPortuguesNormaCultaV192(){
+    "use strict";
+
+    const DISCIPLINA = "seducLinguaPortuguesa";
+    const ASSUNTO = "seducLinguaPortuguesaNormaCulta";
+    const TELA = "seducMapaNormaCultaV192";
+
+    const banco = Array.isArray(window.seducLinguaPortuguesaNormaCulta2026)
+        ? window.seducLinguaPortuguesaNormaCulta2026 : [];
+
+    function registrarV192(){
+        if(typeof bancoQuestoes !== "undefined"){
+            bancoQuestoes[ASSUNTO] = banco;
+        }
+
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "🧠 Português — Norma Culta",
+                imagem: "imagens/mapas/seduc/conhecimentos-basicos/NormaCulta.jpg"
+            };
+        }
+
+        if(typeof disciplinasTrilhaFarol !== "undefined" && disciplinasTrilhaFarol[DISCIPLINA]){
+            disciplinasTrilhaFarol[DISCIPLINA].descricao =
+                "SEDUC-PA 2026 • FGV: Interpretação; Organização Estrutural; Textualidade; Modos Discursivos; Tipos Textuais; Tipologia da Frase; Estrutura da Frase; Problemas Estruturais; Norma Culta.";
+        }
+    }
+
+    function garantirBotaoV192(){
+        const telaDisciplina = document.getElementById(DISCIPLINA);
+        if(!telaDisciplina) return false;
+        const lista = telaDisciplina.querySelector(".seduc-ee-topicos-v161");
+        if(!lista) return false;
+
+        if(!document.getElementById("seducLpTopicoNormaCultaV192")){
+            const botao = document.createElement("button");
+            botao.id = "seducLpTopicoNormaCultaV192";
+            botao.type = "button";
+            botao.className = "seduc-ee-topico-v161 publicado";
+            botao.setAttribute("onclick","abrirNormaCultaSeducV192()");
+            botao.innerHTML = `
+                <span class="seduc-ee-numero-v161">9</span>
+                <span class="seduc-ee-topico-texto-v161">
+                    <strong>Norma culta</strong>
+                    <small>registro formal • concordância • regência • verbos impessoais • pronomes • formas verbais • adequação</small>
+                </span>
+                <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+            `;
+            lista.appendChild(botao);
+        }
+        return true;
+    }
+
+    function garantirTelaV192(){
+        if(document.getElementById(TELA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducPortuguesV192()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">PORTUGUÊS • MAPA 9</span>
+                    <h2>Norma Culta</h2>
+                    <p>Treine a adequação ao registro formal com o perfil recente da FGV: concordância, regência, verbos impessoais, formas pronominais, colocação e formas verbais — sempre dentro de frases e situações de uso.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/conhecimentos-basicos/NormaCulta.jpg"
+                         alt="Mapa mental — Norma Culta"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/conhecimentos-basicos/NormaCulta.jpg','_blank')">🔍 Ampliar mapa</button>
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — Norma Culta</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Adequação</strong><span>A banca diferencia uso informal de erro. Em documento, prova ou comunicação institucional, procure a construção mais clara, monitorada e compatível com o registro formal.</span></article>
+                        <article><strong>Concordância</strong><span>Localize primeiro o sujeito. Atenção a sujeito posposto, verbos pessoais como “existir” e formas nominais como “anexo”, “obrigado” e “necessário”.</span></article>
+                        <article><strong>Haver e fazer</strong><span>“Haver” = existir e “fazer” = tempo decorrido são impessoais: houve problemas; deve haver vagas; faz dois anos; vai fazer dois anos.</span></article>
+                        <article><strong>Regência</strong><span>A FGV explora verbos como assistir, obedecer, preferir, chegar e informar. O sentido do verbo pode alterar a preposição exigida.</span></article>
+                        <article><strong>Pronomes</strong><span>Observe a função: para eu fazer; entre mim e você; comigo. Evite resolver apenas pela palavra que aparece antes do pronome.</span></article>
+                        <article><strong>Colocação</strong><span>Palavras negativas e certos pronomes/advérbios atraem o pronome átono. Não presuma que a ênclise é sempre a opção “mais formal”.</span></article>
+                        <article><strong>Formas verbais</strong><span>FGV gosta de verbos irregulares: se eu vir (ver), quando eu vier (vir), se mantiver, intervirá. Identifique o verbo-base.</span></article>
+                        <article><strong>FGV recente</strong><span>Prefira treino contextualizado: comunicados, frases de autores, situações escolares e reescrituras. A regra aparece dentro do uso real.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaNormaCultaV192">
+                    Li e revisei o Mapa 9 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesNormaCultaSeducV192()">🚀 Iniciar 25 questões FGV</button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function instalarV192(){
+        registrarV192();
+        garantirBotaoV192();
+        garantirTelaV192();
+    }
+
+    window.abrirNormaCultaSeducV192 = function(){
+        instalarV192();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaNormaCultaV192");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA);
+    };
+
+    window.voltarTopicosSeducPortuguesV192 = function(){
+        instalarV192();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesNormaCultaSeducV192 = function(){
+        const check = document.getElementById("confirmacaoMapaNormaCultaV192");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 9 e o Radar FGV antes de iniciar as questões.");
+            return;
+        }
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    const abrirDisciplinaAnteriorV192 = typeof abrirDisciplina === "function" ? abrirDisciplina : null;
+    if(abrirDisciplinaAnteriorV192){
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAnteriorV192.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(instalarV192, 0);
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){ setTimeout(instalarV192, 0); });
+    if(document.readyState !== "loading") setTimeout(instalarV192, 0);
+})();
+
+
+/* ==========================================================
+   FAROL V193 — SEDUC-PA 2026 / FGV
+   CONHECIMENTOS BÁSICOS — LÍNGUA PORTUGUESA
+   BLOCO 10: PONTUAÇÃO E SINAIS GRÁFICOS
+========================================================== */
+(function integrarSeducPortuguesPontuacaoV193(){
+    "use strict";
+
+    const DISCIPLINA = "seducLinguaPortuguesa";
+    const ASSUNTO = "seducLinguaPortuguesaPontuacaoSinaisGraficos";
+    const TELA = "seducMapaPontuacaoSinaisGraficosV193";
+
+    const banco = Array.isArray(window.seducLinguaPortuguesaPontuacaoSinaisGraficos2026)
+        ? window.seducLinguaPortuguesaPontuacaoSinaisGraficos2026 : [];
+
+    function registrarV193(){
+        if(typeof bancoQuestoes !== "undefined"){
+            bancoQuestoes[ASSUNTO] = banco;
+        }
+
+        if(typeof mapasMentaisPorAssunto !== "undefined"){
+            mapasMentaisPorAssunto[ASSUNTO] = {
+                titulo: "🧠 Português — Pontuação e Sinais Gráficos",
+                imagem: "imagens/mapas/seduc/conhecimentos-basicos/PontuacaoSinaisGraficos.jpg"
+            };
+        }
+
+        if(typeof disciplinasTrilhaFarol !== "undefined" && disciplinasTrilhaFarol[DISCIPLINA]){
+            disciplinasTrilhaFarol[DISCIPLINA].descricao =
+                "SEDUC-PA 2026 • FGV: Interpretação; Organização Estrutural; Textualidade; Modos Discursivos; Tipos Textuais; Tipologia da Frase; Estrutura da Frase; Problemas Estruturais; Norma Culta; Pontuação e Sinais Gráficos.";
+        }
+    }
+
+    function garantirBotaoV193(){
+        const telaDisciplina = document.getElementById(DISCIPLINA);
+        if(!telaDisciplina) return false;
+        const lista = telaDisciplina.querySelector(".seduc-ee-topicos-v161");
+        if(!lista) return false;
+
+        if(!document.getElementById("seducLpTopicoPontuacaoV193")){
+            const botao = document.createElement("button");
+            botao.id = "seducLpTopicoPontuacaoV193";
+            botao.type = "button";
+            botao.className = "seduc-ee-topico-v161 publicado";
+            botao.setAttribute("onclick","abrirPontuacaoSeducV193()");
+            botao.innerHTML = `
+                <span class="seduc-ee-numero-v161">10</span>
+                <span class="seduc-ee-topico-texto-v161">
+                    <strong>Pontuação e sinais gráficos</strong>
+                    <small>vírgula • dois-pontos • ponto e vírgula • travessão • parênteses • aspas • reticências • discurso direto</small>
+                </span>
+                <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>
+            `;
+            lista.appendChild(botao);
+        }
+        return true;
+    }
+
+    function garantirTelaV193(){
+        if(document.getElementById(TELA)) return;
+
+        const tela = document.createElement("section");
+        tela.id = TELA;
+        tela.className = "tela";
+        tela.innerHTML = `
+            <div class="card seduc-ee-mapa-card-v161">
+                <button type="button" class="btn-voltar" onclick="voltarTopicosSeducPortuguesV193()">← Voltar aos tópicos</button>
+
+                <div class="seduc-ee-mapa-cabecalho-v161">
+                    <span class="seduc-ee-etiqueta-v161">PORTUGUÊS • MAPA 10</span>
+                    <h2>Pontuação e Sinais Gráficos</h2>
+                    <p>Treine como a FGV usa a pontuação para organizar a sintaxe e produzir efeitos de sentido: vírgula, dois-pontos, ponto e vírgula, travessão, parênteses, aspas, reticências e sinais de interrogação/exclamação.</p>
+                </div>
+
+                <div class="seduc-ee-mapa-imagem-wrap-v161">
+                    <img src="imagens/mapas/seduc/conhecimentos-basicos/PontuacaoSinaisGraficos.jpg"
+                         alt="Mapa mental — Pontuação e Sinais Gráficos"
+                         class="seduc-ee-mapa-imagem-v161" loading="eager">
+                    <button type="button" onclick="window.open('imagens/mapas/seduc/conhecimentos-basicos/PontuacaoSinaisGraficos.jpg','_blank')">🔍 Ampliar mapa</button>
+                </div>
+
+                <div class="seduc-ee-radar-v161">
+                    <h3>🎯 Radar FGV — Pontuação e Sinais Gráficos</h3>
+                    <div class="seduc-ee-radar-grid-v161">
+                        <article><strong>Vírgula</strong><span>Não decore por “pausa”. Identifique vocativo, aposto, termos deslocados, orações adverbiais e explicativas. Cuidado: não separe sujeito e verbo nem verbo e complemento.</span></article>
+                        <article><strong>Sentido</strong><span>A banca gosta de comparar versões com e sem vírgula. Restritiva x explicativa, vocativo e escopo podem mudar completamente a interpretação.</span></article>
+                        <article><strong>Dois-pontos</strong><span>Introduzem algo anunciado: explicação, enumeração, fala ou especificação. Não devem separar arbitrariamente verbo e complemento.</span></article>
+                        <article><strong>Ponto e vírgula</strong><span>Organiza blocos relativamente autônomos e enumerações complexas que já possuem vírgulas internas.</span></article>
+                        <article><strong>Travessão e parênteses</strong><span>Podem isolar informações intercaladas. A troca por vírgulas pode preservar a gramática, mas alterar o grau de destaque.</span></article>
+                        <article><strong>Aspas e reticências</strong><span>Aspas podem marcar citação, destaque ou ironia; reticências sugerem suspensão, hesitação ou continuidade. FGV cobra o efeito no contexto.</span></article>
+                        <article><strong>Discurso direto</strong><span>Observe a combinação de dois-pontos, travessão e aspas. O sinal deve ser compatível com a estrutura narrativa e com a fala reproduzida.</span></article>
+                        <article><strong>Estratégia FGV</strong><span>Teste a alternativa inteira: uma vírgula correta não salva outra pontuação errada. Prefira a versão que mantém sintaxe, clareza e sentido.</span></article>
+                    </div>
+                </div>
+
+                <label class="seduc-ee-confirmacao-v161">
+                    <input type="checkbox" id="confirmacaoMapaPontuacaoV193">
+                    Li e revisei o Mapa 10 e o Radar FGV.
+                </label>
+
+                <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesPontuacaoSeducV193()">🚀 Iniciar 25 questões FGV</button>
+            </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function instalarV193(){
+        registrarV193();
+        garantirBotaoV193();
+        garantirTelaV193();
+    }
+
+    window.abrirPontuacaoSeducV193 = function(){
+        instalarV193();
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const check = document.getElementById("confirmacaoMapaPontuacaoV193");
+        if(check) check.checked = false;
+        if(typeof mostrarTela === "function") mostrarTela(TELA);
+    };
+
+    window.voltarTopicosSeducPortuguesV193 = function(){
+        instalarV193();
+        if(typeof mostrarTela === "function") mostrarTela(DISCIPLINA);
+    };
+
+    window.iniciarQuestoesPontuacaoSeducV193 = function(){
+        const check = document.getElementById("confirmacaoMapaPontuacaoV193");
+        if(!check || !check.checked){
+            if(typeof mostrarToast === "function") mostrarToast("Leia e revise o Mapa 10 e o Radar FGV antes de iniciar as questões.");
+            return;
+        }
+        assuntoAtual = ASSUNTO;
+        disciplinaAtual = ASSUNTO;
+        const checkPadrao = document.getElementById("confirmacaoMapa");
+        if(checkPadrao) checkPadrao.checked = true;
+        if(typeof iniciarQuestoesAssunto === "function") iniciarQuestoesAssunto();
+    };
+
+    const abrirDisciplinaAnteriorV193 = typeof abrirDisciplina === "function" ? abrirDisciplina : null;
+    if(abrirDisciplinaAnteriorV193){
+        abrirDisciplina = function(nome){
+            const retorno = abrirDisciplinaAnteriorV193.apply(this, arguments);
+            if(nome === DISCIPLINA) setTimeout(instalarV193, 0);
+            return retorno;
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){ setTimeout(instalarV193, 0); });
+    if(document.readyState !== "loading") setTimeout(instalarV193, 0);
+})();
+
+
+/* ==========================================================
+   FAROL V194 — SEDUC-PA 2026 / FGV
+   CONHECIMENTOS BÁSICOS — LÍNGUA PORTUGUESA
+   BLOCO 11: ORGANIZAÇÃO SINTÁTICA DAS FRASES
+   TERMOS E ORAÇÕES • ORDEM DIRETA E INVERSA
+========================================================== */
+(function integrarSeducPortuguesOrganizacaoSintaticaV194(){
+    "use strict";
+    const DISCIPLINA = "seducLinguaPortuguesa";
+    const ASSUNTO = "seducLinguaPortuguesaOrganizacaoSintatica";
+    const TELA = "seducMapaOrganizacaoSintaticaV194";
+    const banco = Array.isArray(window.seducLinguaPortuguesaOrganizacaoSintatica2026)
+        ? window.seducLinguaPortuguesaOrganizacaoSintatica2026 : [];
+
+    function registrarV194(){
+        if(typeof bancoQuestoes !== "undefined") bancoQuestoes[ASSUNTO] = banco;
+        if(typeof mapasMentaisPorAssunto !== "undefined") mapasMentaisPorAssunto[ASSUNTO] = {
+            titulo: "🧠 Português — Organização Sintática: Termos e Orações",
+            imagem: "imagens/mapas/seduc/conhecimentos-basicos/OrganizacaoSintaticaTermosOracoes.jpg"
+        };
+        if(typeof disciplinasTrilhaFarol !== "undefined" && disciplinasTrilhaFarol[DISCIPLINA]){
+            disciplinasTrilhaFarol[DISCIPLINA].descricao =
+                "SEDUC-PA 2026 • FGV: Interpretação; Organização Estrutural; Textualidade; Modos Discursivos; Tipos Textuais; Tipologia da Frase; Estrutura da Frase; Problemas Estruturais; Norma Culta; Pontuação; Organização Sintática.";
+        }
+    }
+
+    function garantirBotaoV194(){
+        const telaDisciplina=document.getElementById(DISCIPLINA);
+        if(!telaDisciplina) return false;
+        const lista=telaDisciplina.querySelector(".seduc-ee-topicos-v161");
+        if(!lista) return false;
+        if(!document.getElementById("seducLpTopicoOrganizacaoSintaticaV194")){
+            const b=document.createElement("button");
+            b.id="seducLpTopicoOrganizacaoSintaticaV194"; b.type="button";
+            b.className="seduc-ee-topico-v161 publicado";
+            b.setAttribute("onclick","abrirOrganizacaoSintaticaSeducV194()");
+            b.innerHTML=`
+                <span class="seduc-ee-numero-v161">11</span>
+                <span class="seduc-ee-topico-texto-v161">
+                    <strong>Organização sintática das frases: termos e orações</strong>
+                    <small>sujeito • predicado • complementos • predicativos • aposto/vocativo • coordenação/subordinação • ordem direta e inversa</small>
+                </span>
+                <span class="seduc-ee-status-v161">Mapa + 25 questões →</span>`;
+            lista.appendChild(b);
+        }
+        return true;
+    }
+
+    function garantirTelaV194(){
+        if(document.getElementById(TELA)) return;
+        const tela=document.createElement("section"); tela.id=TELA; tela.className="tela";
+        tela.innerHTML=`
+        <div class="card seduc-ee-mapa-card-v161">
+          <button type="button" class="btn-voltar" onclick="voltarTopicosSeducPortuguesV194()">← Voltar aos tópicos</button>
+          <div class="seduc-ee-mapa-cabecalho-v161">
+            <span class="seduc-ee-etiqueta-v161">PORTUGUÊS • MAPA 11</span>
+            <h2>Organização Sintática das Frases — Termos e Orações</h2>
+            <p>Analise as funções dos termos e das orações antes de decorar rótulos. O bloco inclui ordem direta e inversa, sujeito posposto, complementos deslocados e efeitos de reordenação.</p>
+          </div>
+          <div class="seduc-ee-mapa-imagem-wrap-v161">
+            <img src="imagens/mapas/seduc/conhecimentos-basicos/OrganizacaoSintaticaTermosOracoes.jpg" alt="Mapa mental — Organização Sintática das Frases" class="seduc-ee-mapa-imagem-v161" loading="eager">
+            <button type="button" onclick="window.open('imagens/mapas/seduc/conhecimentos-basicos/OrganizacaoSintaticaTermosOracoes.jpg','_blank')">🔍 Ampliar mapa</button>
+          </div>
+          <div class="seduc-ee-radar-v161">
+            <h3>🎯 Radar FGV — Organização Sintática</h3>
+            <div class="seduc-ee-radar-grid-v161">
+              <article><strong>Sujeito</strong><span>Não procure apenas antes do verbo. A FGV explora sujeito posposto, oracional, indeterminado e orações sem sujeito.</span></article>
+              <article><strong>Complementos</strong><span>Reconstrua a relação com o verbo: objeto direto, indireto, predicativos e agente da passiva. Posição não determina função.</span></article>
+              <article><strong>Nomes</strong><span>Complemento nominal x adjunto adnominal exige relação semântica: alvo/paciente x agente/posse/caracterização.</span></article>
+              <article><strong>Relativo</strong><span>O pronome “que” liga orações e exerce função dentro da subordinada. Reponha o antecedente para descobrir essa função.</span></article>
+              <article><strong>Orações</strong><span>Primeiro descubra a função: substantiva, adjetiva ou adverbial; depois identifique a subclassificação.</span></article>
+              <article><strong>Coordenação</strong><span>Observe independência sintática e relação lógica: adição, oposição, conclusão, explicação ou alternância.</span></article>
+              <article><strong>Ordem direta</strong><span>Estrutura prototípica: sujeito + verbo + complementos + adjuntos. A FGV já cobra diretamente sua identificação.</span></article>
+              <article><strong>Ordem inversa</strong><span>Deslocar sujeito, objeto ou oração não muda automaticamente a função. Reordene mentalmente antes de responder.</span></article>
+            </div>
+          </div>
+          <label class="seduc-ee-confirmacao-v161"><input type="checkbox" id="confirmacaoMapaOrganizacaoSintaticaV194"> Li e revisei o Mapa 11 e o Radar FGV.</label>
+          <button type="button" class="seduc-ee-btn-iniciar-v161" onclick="iniciarQuestoesOrganizacaoSintaticaSeducV194()">🚀 Iniciar 25 questões FGV</button>
+        </div>`;
+        document.body.appendChild(tela);
+    }
+
+    function instalarV194(){ registrarV194(); garantirBotaoV194(); garantirTelaV194(); }
+    window.abrirOrganizacaoSintaticaSeducV194=function(){ instalarV194(); assuntoAtual=ASSUNTO; disciplinaAtual=ASSUNTO; const c=document.getElementById("confirmacaoMapaOrganizacaoSintaticaV194"); if(c)c.checked=false; if(typeof mostrarTela==="function")mostrarTela(TELA); };
+    window.voltarTopicosSeducPortuguesV194=function(){ instalarV194(); if(typeof mostrarTela==="function")mostrarTela(DISCIPLINA); };
+    window.iniciarQuestoesOrganizacaoSintaticaSeducV194=function(){ const c=document.getElementById("confirmacaoMapaOrganizacaoSintaticaV194"); if(!c||!c.checked){ if(typeof mostrarToast==="function")mostrarToast("Leia e revise o Mapa 11 e o Radar FGV antes de iniciar as questões."); return; } assuntoAtual=ASSUNTO; disciplinaAtual=ASSUNTO; const p=document.getElementById("confirmacaoMapa"); if(p)p.checked=true; if(typeof iniciarQuestoesAssunto==="function")iniciarQuestoesAssunto(); };
+    const anterior=typeof abrirDisciplina==="function"?abrirDisciplina:null;
+    if(anterior){ abrirDisciplina=function(nome){ const r=anterior.apply(this,arguments); if(nome===DISCIPLINA)setTimeout(instalarV194,0); return r; }; }
+    document.addEventListener("DOMContentLoaded",function(){setTimeout(instalarV194,0);});
+    if(document.readyState!=="loading")setTimeout(instalarV194,0);
+})();
