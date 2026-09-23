@@ -1,4 +1,4 @@
-const CACHE_VERSION = "farol-v194-2026-09-20-seduc-lp-organizacao-sintatica";
+const CACHE_VERSION = "farol-v204-2026-09-22-seduc-lp-vocabulario";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -40,6 +40,16 @@ const APP_SHELL = [
   "./dados/seduc/conhecimentos-basicos/normaCulta.js",
   "./dados/seduc/conhecimentos-basicos/pontuacaoSinaisGraficos.js",
   "./dados/seduc/conhecimentos-basicos/organizacaoSintaticaTermosOracoes.js",
+  "./dados/seduc/conhecimentos-basicos/tiposDiscurso.js",
+  "./dados/seduc/conhecimentos-basicos/registrosLinguagem.js",
+  "./dados/seduc/conhecimentos-basicos/funcoesLinguagem.js",
+  "./dados/seduc/conhecimentos-basicos/elementosAtosComunicacao.js",
+  "./dados/seduc/conhecimentos-basicos/estruturaFormacaoPalavras.js",
+  "./dados/seduc/conhecimentos-basicos/formasAbreviacao.js",
+  "./dados/seduc/conhecimentos-basicos/classesPalavrasAspectosModalizadores.js",
+  "./dados/seduc/conhecimentos-basicos/semantica.js",
+  "./dados/seduc/conhecimentos-basicos/dicionariosTiposVerbetes.js",
+  "./dados/seduc/conhecimentos-basicos/vocabularioNeologismosArcaismosEstrangeirismosLatinismos.js",
   "./imagens/mapas/seduc/conhecimentos-basicos/InterpretacaoCompreensaoTexto.jpg",
   "./imagens/mapas/seduc/conhecimentos-basicos/OrganizacaoEstruturalTextos.jpg",
   "./imagens/mapas/seduc/conhecimentos-basicos/MarcasTextualidadeCoesaoCoerenciaIntertextualidade.jpg",
@@ -51,6 +61,16 @@ const APP_SHELL = [
   "./imagens/mapas/seduc/conhecimentos-basicos/NormaCulta.jpg",
   "./imagens/mapas/seduc/conhecimentos-basicos/PontuacaoSinaisGraficos.jpg",
   "./imagens/mapas/seduc/conhecimentos-basicos/OrganizacaoSintaticaTermosOracoes.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/TiposDiscurso.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/RegistrosLinguagem.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/FuncoesLinguagem.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/ElementosAtosComunicacao.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/EstruturaFormacaoPalavras.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/FormasAbreviacao.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/ClassesPalavrasModalizadores.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/Semantica.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/DicionariosTiposVerbetes.jpg",
+  "./imagens/mapas/seduc/conhecimentos-basicos/VocabularioNeologismosArcaismosEstrangeirismosLatinismos.jpg",
   "./imagens/mapas/seduc/educacao-especial/FundamentosEducacaoEspecial.png",
   "./imagens/mapas/seduc/educacao-especial/PlanejamentoEducacaoEspecial.png",
   "./imagens/mapas/seduc/educacao-especial/LegislacaoEducacaoEspecial.png",
